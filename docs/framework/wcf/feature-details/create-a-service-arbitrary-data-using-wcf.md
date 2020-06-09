@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: a1c30491f6c5b0a91f93a6f26417f9dc2b996a48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d908651f7815c102b45ea106f5bec4c07d869950
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601341"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="f313b-102">Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma</span><span class="sxs-lookup"><span data-stu-id="f313b-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
-<span data-ttu-id="f313b-103">Bazen geliştiriciler, veri hizmeti işleminden döndürülen nasıl tam denetimi olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="f313b-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="f313b-104">Bir hizmet işlemi, verileri bir biçimde byWCF desteklenmiyor döndürmelidir olduğunda bu durum geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="f313b-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="f313b-105">Bu konuda, rastgele verileri alan bir hizmet oluşturmak için WCF REST programlama modeli kullanarak anlatılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="f313b-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="ffd8c-102">Nasıl yapılır: WCF REST Programlama Modeli Kullanarak Rastgele Verileri Kabul Eden Bir Hizmet Oluşturma</span><span class="sxs-lookup"><span data-stu-id="ffd8c-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
+<span data-ttu-id="ffd8c-103">Bazen geliştiricilerin, bir hizmet işleminden verilerin nasıl döndürüldüğünden tam denetime sahip olmaları gerekir.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="ffd8c-104">Bu durum, bir hizmet işleminin verileri desteklenmeyen bir biçimde döndürmesi gereken bir biçimde (WCF), bu durumdur.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-104">This is the case when a service operation must return data in a format not supported byWCF.</span></span> <span data-ttu-id="ffd8c-105">Bu konuda, rastgele veri alan bir hizmet oluşturmak için WCF REST programlama modelinin kullanımı ele alınmaktadır.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-105">This topic discusses using the WCF REST Programming Model to create a service that receives arbitrary data.</span></span>  
   
-### <a name="to-implement-the-service-contract"></a><span data-ttu-id="f313b-106">Hizmet sözleşmesini uygulama</span><span class="sxs-lookup"><span data-stu-id="f313b-106">To implement the service contract</span></span>  
+### <a name="to-implement-the-service-contract"></a><span data-ttu-id="ffd8c-106">Hizmet sözleşmesini uygulamak için</span><span class="sxs-lookup"><span data-stu-id="ffd8c-106">To implement the service contract</span></span>  
   
-1. <span data-ttu-id="f313b-107">Hizmet sözleşmesini tanımlamaktır.</span><span class="sxs-lookup"><span data-stu-id="f313b-107">Define the service contract.</span></span> <span data-ttu-id="f313b-108">Rastgele veri aldığında işlem türünde bir parametresi olmalıdır <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="f313b-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="f313b-109">Ayrıca, bu parametre istek gövdesinde geçirilen tek parametresi olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="f313b-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="f313b-110">Bu örnekte açıklanan işlem, ayrıca bir filename parametresi alır.</span><span class="sxs-lookup"><span data-stu-id="f313b-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="f313b-111">Bu parametre, istek URL'si içinde iletilir.</span><span class="sxs-lookup"><span data-stu-id="f313b-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="f313b-112">Parametre URL'sini belirterek geçirilen belirtebileceğiniz bir <xref:System.UriTemplate> içinde <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="f313b-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="f313b-113">URI çağırmak için kullanılan bu durumda bu yöntem, "UploadFile/bazı-dosya adı" sona erer.</span><span class="sxs-lookup"><span data-stu-id="f313b-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="f313b-114">URI şablonu "{filename}" kısmı, işlemi için dosya adı parametresi işlemi çağırmak için kullanılan URI içinde geçirildiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="f313b-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
+1. <span data-ttu-id="ffd8c-107">Hizmet sözleşmesini tanımlayın.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-107">Define the service contract.</span></span> <span data-ttu-id="ffd8c-108">Rastgele verileri alan işlem türünde bir parametreye sahip olmalıdır <xref:System.IO.Stream> .</span><span class="sxs-lookup"><span data-stu-id="ffd8c-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="ffd8c-109">Ayrıca, bu parametre isteğin gövdesinde geçirilen tek parametre olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="ffd8c-110">Bu örnekte açıklanan işlem de bir filename parametresi alır.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="ffd8c-111">Bu parametre isteğin URL 'SI içinde geçirilir.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="ffd8c-112">İçinde bir parametre belirterek parametrenin URL içinde geçtiğini belirtebilirsiniz <xref:System.UriTemplate> <xref:System.ServiceModel.Web.WebInvokeAttribute> .</span><span class="sxs-lookup"><span data-stu-id="ffd8c-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="ffd8c-113">Bu durumda, bu yöntemi çağırmak için kullanılan URI "UploadFile/some-filename" içinde sona erer.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="ffd8c-114">URI şablonunun "{filename}" kısmı, işlem için dosya adı parametresinin işlemi çağırmak için kullanılan URI içinde geçtiğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +25,7 @@ ms.locfileid: "64614792"
     }  
     ```  
   
-2. <span data-ttu-id="f313b-115">Hizmet sözleşmesini uygulama.</span><span class="sxs-lookup"><span data-stu-id="f313b-115">Implement the service contract.</span></span> <span data-ttu-id="f313b-116">Sözleşme yalnızca bir yöntem olan `UploadFile` , rastgele veriler dosyası bir akışa alır.</span><span class="sxs-lookup"><span data-stu-id="f313b-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="f313b-117">İşlemin bayt sayısını sayma stream okuyun ve ardından dosya adı ve okunan bayt sayısını görüntüler okur.</span><span class="sxs-lookup"><span data-stu-id="f313b-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
+2. <span data-ttu-id="ffd8c-115">Hizmet sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-115">Implement the service contract.</span></span> <span data-ttu-id="ffd8c-116">Sözleşmede bir `UploadFile` akışta rastgele veri dosyası alan yalnızca bir yöntemi vardır.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="ffd8c-117">Bu işlem, okunan bayt sayısını sayarak akışı okur ve sonra dosya adını ve okunan bayt sayısını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -44,9 +44,9 @@ ms.locfileid: "64614792"
     }  
     ```  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="f313b-118">Ana bilgisayar hizmeti</span><span class="sxs-lookup"><span data-stu-id="f313b-118">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="ffd8c-118">Hizmeti barındırmak için</span><span class="sxs-lookup"><span data-stu-id="ffd8c-118">To host the service</span></span>  
   
-1. <span data-ttu-id="f313b-119">Hizmeti barındırmak için bir konsol uygulaması oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f313b-119">Create a console application to host the service.</span></span>  
+1. <span data-ttu-id="ffd8c-119">Hizmeti barındırmak için bir konsol uygulaması oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-119">Create a console application to host the service.</span></span>  
   
     ```csharp  
     class Program  
@@ -57,47 +57,47 @@ ms.locfileid: "64614792"
     }  
     ```  
   
-2. <span data-ttu-id="f313b-120">İçinde hizmet için temel adresini tutacak bir değişken oluşturma `Main` yöntemi.</span><span class="sxs-lookup"><span data-stu-id="f313b-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
+2. <span data-ttu-id="ffd8c-120">Yöntemi içindeki hizmetin temel adresini tutacak bir değişken oluşturun `Main` .</span><span class="sxs-lookup"><span data-stu-id="ffd8c-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3. <span data-ttu-id="f313b-121">Oluşturma bir <xref:System.ServiceModel.ServiceHost> hizmet sınıfı ve taban adresini belirten bir hizmet örneği.</span><span class="sxs-lookup"><span data-stu-id="f313b-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
+3. <span data-ttu-id="ffd8c-121">Hizmet <xref:System.ServiceModel.ServiceHost> sınıfı ve temel adresi belirten bir örnek oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4. <span data-ttu-id="f313b-122">Sözleşme belirten bir uç nokta ekleyin <xref:System.ServiceModel.WebHttpBinding>, ve <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="f313b-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
+4. <span data-ttu-id="ffd8c-122">, Ve sözleşmesini belirten bir uç nokta ekleyin <xref:System.ServiceModel.WebHttpBinding> <xref:System.ServiceModel.Description.WebHttpBehavior> .</span><span class="sxs-lookup"><span data-stu-id="ffd8c-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5. <span data-ttu-id="f313b-123">Hizmet ana bilgisayarı açın.</span><span class="sxs-lookup"><span data-stu-id="f313b-123">Open the service host.</span></span> <span data-ttu-id="f313b-124">Hizmet isteklerini almak artık hazırdır.</span><span class="sxs-lookup"><span data-stu-id="f313b-124">The service is now ready to receive requests.</span></span>  
+5. <span data-ttu-id="ffd8c-123">Hizmet konağını açın.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-123">Open the service host.</span></span> <span data-ttu-id="ffd8c-124">Hizmet artık istekleri almaya hazırdır.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-124">The service is now ready to receive requests.</span></span>  
   
     ```csharp  
     host.Open();  
     Console.WriteLine("Host opened");  
     ```  
   
-### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="f313b-125">Program aracılığıyla hizmeti çağırmak için</span><span class="sxs-lookup"><span data-stu-id="f313b-125">To call the service programmatically</span></span>  
+### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="ffd8c-125">Hizmeti programlı olarak çağırmak için</span><span class="sxs-lookup"><span data-stu-id="ffd8c-125">To call the service programmatically</span></span>  
   
-1. <span data-ttu-id="f313b-126">Oluşturma bir <xref:System.Net.HttpWebRequest> hizmeti çağırmak için kullanılan URI ile.</span><span class="sxs-lookup"><span data-stu-id="f313b-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="f313b-127">Bu kodda, temel adresi ile birleştirilir `"/UploadFile/Text"`.</span><span class="sxs-lookup"><span data-stu-id="f313b-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="f313b-128">`"UploadFile"` URI kısmı aranacak işlem belirtir.</span><span class="sxs-lookup"><span data-stu-id="f313b-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="f313b-129">`"Test.txt"` URI kısmı belirtir geçirilecek filename parametresi `UploadFile` işlemi.</span><span class="sxs-lookup"><span data-stu-id="f313b-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="f313b-130">Bu öğelerinin her ikisini de eşlemek <xref:System.UriTemplate> da işlem anlaşması için uygulanır.</span><span class="sxs-lookup"><span data-stu-id="f313b-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
+1. <span data-ttu-id="ffd8c-126"><xref:System.Net.HttpWebRequest>Hizmeti çağırmak için kullanılan URI ile bir oluşturun.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="ffd8c-127">Bu kodda, temel adres ile birleştirilir `"/UploadFile/Text"` .</span><span class="sxs-lookup"><span data-stu-id="ffd8c-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="ffd8c-128">`"UploadFile"`URI 'nin bölümü çağrılacak işlemi belirtir.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="ffd8c-129">`"Test.txt"`URI 'nin bölümü, işleme geçirilecek filename parametresini belirtir `UploadFile` .</span><span class="sxs-lookup"><span data-stu-id="ffd8c-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="ffd8c-130">Bu öğelerin her ikisi de <xref:System.UriTemplate> işlem sözleşmesine uygulanan ile eşlenir.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2. <span data-ttu-id="f313b-131">Ayarlama <xref:System.Net.HttpWebRequest.Method%2A> özelliği <xref:System.Net.HttpWebRequest> için `POST` ve <xref:System.Net.HttpWebRequest.ContentType%2A> özelliğini `"text/plain"`.</span><span class="sxs-lookup"><span data-stu-id="f313b-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="f313b-132">Bu kod, veri göndermek ve bu veriler düz metin olarak yapılır hizmet bildirir.</span><span class="sxs-lookup"><span data-stu-id="f313b-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
+2. <span data-ttu-id="ffd8c-131"><xref:System.Net.HttpWebRequest.Method%2A> <xref:System.Net.HttpWebRequest> `POST` Ve <xref:System.Net.HttpWebRequest.ContentType%2A> özelliğinin özelliğini olarak ayarlayın `"text/plain"` .</span><span class="sxs-lookup"><span data-stu-id="ffd8c-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="ffd8c-132">Bu, hizmete kodun veri gönderdiğini ve verilerin düz metin olduğunu söyler.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3. <span data-ttu-id="f313b-133">Çağrı <xref:System.Net.HttpWebRequest.GetRequestStream%2A> İstek akışını almak için veri göndermek, bu veri isteği akışa yazmak ve akış Kapat oluşturun.</span><span class="sxs-lookup"><span data-stu-id="f313b-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
+3. <span data-ttu-id="ffd8c-133"><xref:System.Net.HttpWebRequest.GetRequestStream%2A>İstek akışını almak için çağrısı yapın, gönderecek verileri oluşturun, bu verileri istek akışına yazın ve akışı kapatın.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -110,21 +110,21 @@ ms.locfileid: "64614792"
     reqStream.Close();  
     ```  
   
-4. <span data-ttu-id="f313b-134">Çağırarak hizmetten yanıt alma <xref:System.Net.HttpWebRequest.GetResponse%2A> ve konsola yanıt verileri görüntüler.</span><span class="sxs-lookup"><span data-stu-id="f313b-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
+4. <span data-ttu-id="ffd8c-134"><xref:System.Net.HttpWebRequest.GetResponse%2A>Yanıt verilerini çağırarak ve konsola görüntüleyerek hizmetten gelen yanıtı alın.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
     Console.WriteLine("Client: Receive Response HTTP/{0} {1} {2}", resp.ProtocolVersion, (int)resp.StatusCode, resp.StatusDescription);  
     ```  
   
-5. <span data-ttu-id="f313b-135">Hizmet ana bilgisayarını kapatın.</span><span class="sxs-lookup"><span data-stu-id="f313b-135">Close the service host.</span></span>  
+5. <span data-ttu-id="ffd8c-135">Hizmet konağını kapatın.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-135">Close the service host.</span></span>  
   
     ```csharp  
     host.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="f313b-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="f313b-136">Example</span></span>  
- <span data-ttu-id="f313b-137">Bu örnek için kod tam listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="f313b-137">The following is a complete listing of the code for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="ffd8c-136">Örnek</span><span class="sxs-lookup"><span data-stu-id="ffd8c-136">Example</span></span>  
+ <span data-ttu-id="ffd8c-137">Aşağıda bu örnek için kodun tamamen bir listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-137">The following is a complete listing of the code for this example.</span></span>  
   
 ```csharp  
 using System;  
@@ -189,12 +189,12 @@ namespace ReceiveRawData
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f313b-138">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="f313b-138">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ffd8c-138">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="ffd8c-138">Compiling the Code</span></span>  
   
-- <span data-ttu-id="f313b-139">Kod başvurusu System.ServiceModel.dll ve System.ServiceModel.Web.dll derlenirken</span><span class="sxs-lookup"><span data-stu-id="f313b-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
+- <span data-ttu-id="ffd8c-139">System. ServiceModel. dll ve System. ServiceModel. Web. dll kod başvurusunu derlerken</span><span class="sxs-lookup"><span data-stu-id="ffd8c-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f313b-140">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f313b-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffd8c-140">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ffd8c-140">See also</span></span>
 
-- [<span data-ttu-id="f313b-141">UriTemplate ve UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="f313b-141">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [<span data-ttu-id="f313b-142">WCF Web HTTP Programlama Modeli</span><span class="sxs-lookup"><span data-stu-id="f313b-142">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [<span data-ttu-id="f313b-143">WCF Web HTTP Programlama Modeli Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="f313b-143">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [<span data-ttu-id="ffd8c-141">UriTemplate ve UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="ffd8c-141">UriTemplate and UriTemplateTable</span></span>](uritemplate-and-uritemplatetable.md)
+- [<span data-ttu-id="ffd8c-142">WCF Web HTTP Programlama Modeli</span><span class="sxs-lookup"><span data-stu-id="ffd8c-142">WCF Web HTTP Programming Model</span></span>](wcf-web-http-programming-model.md)
+- [<span data-ttu-id="ffd8c-143">WCF Web HTTP Programlama Modeli Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="ffd8c-143">WCF Web HTTP Programming Model Overview</span></span>](wcf-web-http-programming-model-overview.md)

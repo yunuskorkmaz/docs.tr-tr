@@ -2,21 +2,21 @@
 title: Microsoft.Transactions.TransactionBridge.ProtocolInitialized
 ms.date: 03/30/2017
 ms.assetid: 166dfa2d-10de-447a-b76f-3b64752a2967
-ms.openlocfilehash: 98bb4e5910fa31ef4985e708d154380d203cca31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 862ef7debd1e634e2f1a6124df9d56d96ec107d8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997638"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594328"
 ---
-# <a name="microsofttransactionstransactionbridgeprotocolinitialized"></a><span data-ttu-id="f857d-102">Microsoft.Transactions.TransactionBridge.ProtocolInitialized</span><span class="sxs-lookup"><span data-stu-id="f857d-102">Microsoft.Transactions.TransactionBridge.ProtocolInitialized</span></span>
-<span data-ttu-id="f857d-103">WS-Atomic işlem protokol hizmeti başlatıldı.</span><span class="sxs-lookup"><span data-stu-id="f857d-103">The WS-Atomic Transaction protocol service was initialized.</span></span>  
+# <a name="microsofttransactionstransactionbridgeprotocolinitialized"></a><span data-ttu-id="ff138-102">Microsoft.Transactions.TransactionBridge.ProtocolInitialized</span><span class="sxs-lookup"><span data-stu-id="ff138-102">Microsoft.Transactions.TransactionBridge.ProtocolInitialized</span></span>
+<span data-ttu-id="ff138-103">WS Atomik Işlem protokolü hizmeti başlatıldı.</span><span class="sxs-lookup"><span data-stu-id="ff138-103">The WS-Atomic Transaction protocol service was initialized.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f857d-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f857d-104">Description</span></span>  
- <span data-ttu-id="f857d-105">Hangi protokolün başarıyla başlatıldı belirtmek için işlem yöneticisi başlatma sırasında izlenen.</span><span class="sxs-lookup"><span data-stu-id="f857d-105">Traced during Transaction Manager startup to indicate which protocol has been successfully initialized.</span></span>  
+## <a name="description"></a><span data-ttu-id="ff138-104">Açıklama</span><span class="sxs-lookup"><span data-stu-id="ff138-104">Description</span></span>  
+ <span data-ttu-id="ff138-105">Hangi protokolün başarıyla başlatıldığını göstermek için Işlem yöneticisi başlatması sırasında izleniyor.</span><span class="sxs-lookup"><span data-stu-id="ff138-105">Traced during Transaction Manager startup to indicate which protocol has been successfully initialized.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f857d-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f857d-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff138-106">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ff138-106">See also</span></span>
 
-- [<span data-ttu-id="f857d-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="f857d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="f857d-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="f857d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="f857d-109">Yönetim ve Tanılama</span><span class="sxs-lookup"><span data-stu-id="f857d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="ff138-107">İzleme</span><span class="sxs-lookup"><span data-stu-id="ff138-107">Tracing</span></span>](index.md)
+- [<span data-ttu-id="ff138-108">Uygulamanızda Sorun Giderme için İzleme Kullanma</span><span class="sxs-lookup"><span data-stu-id="ff138-108">Using Tracing to Troubleshoot Your Application</span></span>](using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="ff138-109">Yönetim ve tanılama</span><span class="sxs-lookup"><span data-stu-id="ff138-109">Administration and Diagnostics</span></span>](../index.md)
