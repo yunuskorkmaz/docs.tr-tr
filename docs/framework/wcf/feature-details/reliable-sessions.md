@@ -9,32 +9,32 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 910ad952192243c6aa8a79417ad711d8c2a4ba2e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991165"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590546"
 ---
 # <a name="reliable-sessions"></a>Güvenilir oturumlar
 
-Bu bölümde, hangi bir Windows Communication Foundation (güvenilir oturum WCF), ne, nasıl kullanıldığı ve ne zaman kullanmak için hangi bağlama yapılandırmaları destekliyorsa ve işaretçilerde en iyi uygulamalar açıklanmaktadır. Önemli noktaları ve bu bölümdeki ilgili konular hakkında ayrıntıları aşağıdaki tabloda özetlenmiştir.
+Bu bölümde, bir Windows Communication Foundation (WCF) güvenilir oturumunun ne olduğu, ne için kullanıldığı, ne zaman ve nasıl kullanılacağı, hangi bağlama yapılandırmalarının desteklediği ve en iyi yöntemlere yönelik işaretçiler açıklanmaktadır. Aşağıdaki tabloda, bu bölümdeki temel noktalara ve ilgili konulara ilişkin ayrıntılar özetlenmektedir.
 
-Güvenilir oturum WCF uç noktaları arasında gönderilen iletilerin SOAP veya aktarım aracılar arasında aktarılır ve yalnızca bir kez ve isteğe bağlı olarak, hangi gönderildikleri sırayla teslim sağlama özellikleri sağlar.
+Güvenilir oturum WCF, uç noktalar arasında gönderilen iletilerin SOAP veya aktarım aracıları arasında aktarılmasını ve yalnızca bir kez ve isteğe bağlı olarak, gönderildikleri sırada gönderilmesini sağlayan özellikler sunar.
 
-Güvenilir oturum WCF uygulamayla kullanmak için varsayılan olarak veya isteğe bağlı olarak bir güvenilir oturum destekleyen sistem tarafından sağlanan bağlamalar wcf'de birini kullanın veya oturumu destekler, kendi özel bağlama oluşturabilirsiniz.
+WCF uygulamasıyla güvenilir bir oturum kullanmak için, varsayılan olarak veya bir seçenek olarak güvenilir bir oturumu destekleyen WCF 'de sistem tarafından belirtilen bağlamalardan birini kullanın veya oturumu destekleyen kendi özel bağlamalarınızı oluşturun.
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Güvenilir oturumlar genel bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md) güvenilir oturumlar açıklar bunların güvenilir oturumları destekleyen farklı bağlamaları ne zaman kullanılacağı ve nasıl çalıştıkları.
+[Güvenilir oturumlara genel bakış](reliable-sessions-overview.md) Güvenilir oturumları, ne zaman kullanılacağını, güvenilir oturumları destekleyen farklı bağlamaları ve bunların nasıl çalıştığını açıklar.
 
-[Nasıl yapılır: Exchange ileti içinde bir güvenilir oturum](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md) yapılandırmasında belirtilen özel bir bağlama kullanarak HTTP üzerinden bir güvenilir oturum oluşturmayı açıklar.
+[Nasıl yapılır: güvenilir bir oturum Içindeki Iletileri değiştirme](how-to-exchange-messages-within-a-reliable-session.md) Yapılandırmada belirtilen özel bir bağlama kullanılarak HTTP üzerinden güvenilir bir oturumun nasıl oluşturulacağını açıklar.
 
-[Nasıl yapılır: Güvenilir oturumlar iletilerinde güvenli](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md) güvenilir oturum güvenliğinin nasıl sağlanacağını açıklar.
+[Nasıl yapılır: güvenilir oturumlarda Iletileri güvenli hale getirme](how-to-secure-messages-within-reliable-sessions.md) Güvenilir bir oturumun nasıl güvence altına alınacağını açıklar.
 
-[Nasıl yapılır: HTTPS ile özel güvenilir oturum bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md) HTTPS üzerinden bir güvenilir oturum oluşturmayı açıklar.
+[Nasıl yapılır: https Ile özel bir güvenilir oturum bağlama oluşturma](how-to-create-a-custom-reliable-session-binding-with-https.md) HTTPS üzerinden güvenilir bir oturumun nasıl oluşturulacağını açıklar.
 
-[En iyi uygulamalar için güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md) bazı güvenilir oturum kullanmayla ilişkili en iyi uygulamalar açıklanmaktadır.
+[Güvenilir Oturumlar Için En Iyi uygulamalar](best-practices-for-reliable-sessions.md) Güvenilir bir oturum kullanımıyla ilişkili en iyi uygulamalardan bazılarını açıklar.
 
 ## <a name="reference"></a>Başvuru
 
@@ -42,5 +42,5 @@ Güvenilir oturum WCF uygulamayla kullanmak için varsayılan olarak veya isteğ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kuyruklar ve Güvenilir Oturumlar](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)
-- [Oturumlar, Örnek Oluşturma ve Eşzamanlılık](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
+- [Kuyruklar ve Güvenilir Oturumlar](queues-and-reliable-sessions.md)
+- [Oturumlar, Örnek Oluşturma ve Eşzamanlılık](sessions-instancing-and-concurrency.md)

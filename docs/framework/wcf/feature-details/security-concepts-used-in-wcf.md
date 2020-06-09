@@ -2,12 +2,12 @@
 title: WCF'de Kullanılan Güvenlik Kavramları
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: faf7b44c0ff1b207a7b017163ad2b032f26199b8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f852ba4e1100103289bc5fd879b19ebd40443b8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743883"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595186"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF'de Kullanılan Güvenlik Kavramları
 Windows Communication Foundation (WCF) güvenliği, daha önce kullanılan ve çeşitli güvenlik altyapılarında dağıtılan kavramlar üzerine kurulmuştur.  
@@ -31,7 +31,7 @@ Ortak anahtar altyapısı (PKI), genel anahtar şifrelemesi kullanılarak elektr
  X. 509.440 sertifikaları, güvenlik uygulamalarında kullanılan birincil kimlik bilgileri biçimidir. X. 509.440 sertifikaları hakkında daha fazla bilgi için bkz. [x. 509.440 ortak anahtar sertifikaları](/windows/win32/seccertenroll/about-x-509-public-key-certificates). X. 509.440 sertifikaları bir sertifika deposunda depolanır. Windows çalıştıran bir bilgisayarda, her biri farklı bir amaca sahip birkaç tür sertifika deposu vardır. Farklı mağazalar hakkında daha fazla bilgi için bkz. [sertifika depoları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10)).  
   
 ## <a name="web-services-security-specifications"></a>Web Hizmetleri Güvenliği belirtimleri  
- Sistem tanımlı bağlamalar, yaygın olarak kullanılan birçok Web hizmeti güvenlik belirtimini destekler. Sistem tarafından sunulan bağlamaların tam listesi ve destekledikleri Web Hizmetleri belirtimleri için bkz: [sistem tarafından sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ Sistem tanımlı bağlamalar, yaygın olarak kullanılan birçok Web hizmeti güvenlik belirtimini destekler. Sistem tarafından sunulan bağlamaların tam listesi ve destekledikleri Web Hizmetleri belirtimleri için bkz: [sistem tarafından sunulan birlikte çalışabilirlik bağlamaları tarafından desteklenen Web Hizmetleri protokolleri](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
   
 ## <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları  
  WCF, bir hizmet veya işleme erişimi denetlemek için çeşitli yollar sağlar. Aralarında  
@@ -46,9 +46,9 @@ Ortak anahtar altyapısı (PKI), genel anahtar şifrelemesi kullanılarak elektr
   
 5. Kimlik modeli  
   
- Bu konular hakkında daha fazla bilgi için bkz. [Access Control mekanizmaları](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
+ Bu konular hakkında daha fazla bilgi için bkz. [Access Control mekanizmaları](access-control-mechanisms.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Güvenliğe genel bakış](security-overview.md)
 - [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -1,74 +1,74 @@
 ---
-title: 'Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
+title: 'Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-ms.openlocfilehash: 69db887bf8e7b51c4450c04bd1a08d3d952e84f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 10d6db63368ee55040f85f922b9483982e8ff264
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643566"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596974"
 ---
-# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
-X.509 sertifikası ile bir hizmeti güvenli hale getirme çoğu bağlamaları Windows Communication Foundation (WCF) kullanan temel bir tekniktir. Bu konuda bir X.509 sertifikası ile şirket içinde barındırılan bir hizmet yapılandırma adımlarını açıklar.  
+# <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Nasıl Yapılır: X.509 Sertifikası ile Bir Hizmeti Güvenli Hale Getirme
+Bir hizmetin bir X. 509.440 sertifikası ile güvenliğini sağlamak, Windows Communication Foundation (WCF) ' deki bağlamaların çoğu tarafından kullanılan temel bir tekniktir. Bu konu, bir X. 509.952 sertifikasıyla şirket içinde barındırılan bir hizmeti yapılandırma adımlarında size yol gösterir.  
   
- Sunucunun kimliğini doğrulamak için kullanılan geçerli bir sertifika önkoşuldur. Sertifika sunucusu için bir güvenilen sertifika yetkilisi tarafından verilmiş olması gerekir. Sertifika geçerli değilse, hizmeti kullanmaya çalışırken herhangi bir istemci hizmeti güvenmeyecek ve bağlantı sonuç olarak yapılacaktır. Sertifikaları kullanma hakkında daha fazla bilgi için bkz. [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+ Önkoşul, sunucunun kimliğini doğrulamak için kullanılabilecek geçerli bir sertifikadır. Sertifika, güvenilen bir sertifika yetkilisi tarafından sunucuya verilmelidir. Sertifika geçerli değilse, hizmeti kullanmaya çalışan tüm istemciler hizmete güvenmez ve bu nedenle hiçbir bağlantı yapılmaz. Sertifikaları kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md).  
   
-### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Kod kullanarak bir sertifika ile bir hizmeti yapılandırmak için  
+### <a name="to-configure-a-service-with-a-certificate-using-code"></a>Kodu kullanarak bir hizmeti sertifikayla yapılandırmak için  
   
-1. Hizmet sözleşmesi ve uygulanan hizmeti oluşturun. Daha fazla bilgi için [Hizmetleri Tasarlama ve uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md).  
+1. Hizmet sözleşmesini ve uygulanan hizmeti oluşturun. Daha fazla bilgi için bkz. [Hizmetleri tasarlama ve uygulama](../designing-and-implementing-services.md).  
   
-2. Bir örneğini oluşturmak <xref:System.ServiceModel.WSHttpBinding> sınıfı ve kendi güvenlik modunu ayarlama <xref:System.ServiceModel.SecurityMode.Message>aşağıdaki kodda gösterildiği gibi.  
+2. <xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.SecurityMode.Message> Aşağıdaki kodda gösterildiği gibi, sınıfının bir örneğini oluşturun ve güvenlik modunu olarak ayarlayın.  
   
      [!code-csharp[C_SecureWithCertificate#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#1)]
      [!code-vb[C_SecureWithCertificate#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#1)]  
   
-3. İki <xref:System.Type> değişkenler, her biri için anlaşma türü ve aşağıdaki kodda gösterildiği uygulanan sözleşme.  
+3. <xref:System.Type>Aşağıdaki kodda gösterildiği gibi, her biri anlaşma türü ve uygulanan sözleşme için olmak üzere iki değişken oluşturun.  
   
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4. Bir örneğini oluşturmak <xref:System.Uri> hizmetin taban adresine sınıfı. Çünkü `WSHttpBinding` kullanan HTTP aktarımı Tekdüzen Kaynak Tanımlayıcısı (URI) bu şemasıyla başlamalı ve Windows Communication Foundation (WCF) hizmet açıldığında bir özel durum oluşturur.  
+4. <xref:System.Uri>Hizmetin temel adresi için sınıfının bir örneğini oluşturun. , `WSHttpBinding` Http taşımasını kullandığından, Tekdüzen Kaynak tanımlayıcısı (URI) bu şemayla başlamalıdır veya Windows Communication Foundation (WCF) hizmet açıldığında bir özel durum oluşturur.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  
   
-5. Yeni bir örneğini oluşturma <xref:System.ServiceModel.ServiceHost> uygulanan sözleşme türü değişkeni ve URI ile sınıfı.  
+5. <xref:System.ServiceModel.ServiceHost>Uygulanan anlaşma türü değişkeni ve URI ile sınıfın yeni bir örneğini oluşturun.  
   
      [!code-csharp[C_SecureWithCertificate#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#4)]
      [!code-vb[C_SecureWithCertificate#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#4)]  
   
-6. Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> kullanarak hizmet <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> yöntemi. Sözleşmeyi, bağlamayı ve uç nokta adresi oluşturucuya, aşağıdaki kodda gösterildiği şekilde geçirin.  
+6. <xref:System.ServiceModel.Description.ServiceEndpoint>Yöntemini kullanarak hizmetine bir ekleyin <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> . Aşağıdaki kodda gösterildiği gibi, sözleşmeyi, bağlamayı ve bir uç nokta adresini oluşturucuya geçirin.  
   
      [!code-csharp[C_SecureWithCertificate#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#5)]
      [!code-vb[C_SecureWithCertificate#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#5)]  
   
-7. İsteğe bağlı. Yeni bir oluşturma hizmeti meta verilerini almak için <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ayarlayın ve nesne <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini `true`.  
+7. İsteğe bağlı. Hizmetten meta verileri almak için yeni bir <xref:System.ServiceModel.Description.ServiceMetadataBehavior> nesne oluşturun ve <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini olarak ayarlayın `true` .  
   
      [!code-csharp[C_SecureWithCertificate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#6)]
      [!code-vb[C_SecureWithCertificate#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#6)]  
   
-8. Kullanım <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> yöntemi <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> hizmetine geçerli sertifika eklemek için sınıfı. Yöntemi, bir sertifika bulmak için birkaç yöntemden birini kullanabilirsiniz. Bu örnekte <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> sabit listesi. Sabit sağlanan değer sertifikanın verildiği kişi varlığı adını belirtir.  
+8. <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> Geçerli sertifikayı hizmete eklemek için sınıfının yöntemini kullanın. Yöntemi, bir sertifikayı bulmak için birkaç yöntemden birini kullanabilir. Bu örnek, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> sabit listesini kullanır. Sabit listesi, sağlanan değerin sertifikanın verildiği varlığın adı olduğunu belirtir.  
   
      [!code-csharp[C_SecureWithCertificate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#7)]
      [!code-vb[C_SecureWithCertificate#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#7)]  
   
-9. Çağrı <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> dinleme hizmeti başlatmak için yöntemi. Bir konsol uygulaması oluşturuyorsanız, çağrı <xref:System.Console.ReadLine%2A> hizmet dinleme durumda tutmak için yöntemi.  
+9. <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>Hizmeti dinlemeye başlamak için yöntemini çağırın. Konsol uygulaması oluşturuyorsanız, <xref:System.Console.ReadLine%2A> hizmeti dinleme durumunda tutmak için yöntemini çağırın.  
   
      [!code-csharp[C_SecureWithCertificate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#8)]
      [!code-vb[C_SecureWithCertificate#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#8)]  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> bir X.509 sertifikası ile bir hizmeti yapılandırmak için yöntemi.  
+ Aşağıdaki örnek, <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A> X. 509.440 sertifikasıyla bir hizmeti yapılandırmak için yöntemini kullanır.  
   
  [!code-csharp[C_SecureWithCertificate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#9)]
  [!code-vb[C_SecureWithCertificate#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Aşağıdaki ad alanlarını, kodu derlemek için gereklidir:  
+ Kodu derlemek için aşağıdaki ad alanları gereklidir:  
   
 - <xref:System>  
   
@@ -84,4 +84,4 @@ X.509 sertifikası ile bir hizmeti güvenli hale getirme çoğu bağlamaları Wi
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Sertifikalarla Çalışma](working-with-certificates.md)
