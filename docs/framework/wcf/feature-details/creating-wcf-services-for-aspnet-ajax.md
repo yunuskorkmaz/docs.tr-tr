@@ -2,12 +2,12 @@
 title: ASP.NET AJAX için WCF Hizmetleri Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: 2ec4d2f1f2fb3a6a184a524ed0134360407b4649
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8c82d4c61b32572fd1ad7d8f19e939273cc2280b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599314"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>ASP.NET AJAX için WCF Hizmetleri Oluşturma
 
@@ -21,15 +21,15 @@ Visual Studio kullanıyorsanız, ASP.NET Web siteleri veya Web uygulamaları ile
 
 Visual Studio şablonlarını kullanmıyorsanız, ASP.NET AJAX uç noktası oluşturmanın iki yolu vardır:
 
-- Herhangi bir yapılandırma kullanmadan dinamik ana bilgisayar etkinleştirmesini kullanarak uç nokta oluşturun. Bu, WCF yapılandırma sistemini tanımıyorsanız en temel yaklaşımdır. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma kullanmadan ASP.NET AJAX uç noktası ekleme](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).
+- Herhangi bir yapılandırma kullanmadan dinamik ana bilgisayar etkinleştirmesini kullanarak uç nokta oluşturun. Bu, WCF yapılandırma sistemini tanımıyorsanız en temel yaklaşımdır. Daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma kullanmadan ASP.NET AJAX uç noktası ekleme](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).
 
-- Yapılandırma kullanarak bir WCF hizmetine AJAX özellikli bir uç nokta ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktası eklemek Için yapılandırma kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).
+- Yapılandırma kullanarak bir WCF hizmetine AJAX özellikli bir uç nokta ekleyin. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktası eklemek Için yapılandırma kullanma](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).
 
-[WCF Web http programlama modeli genel bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md) bölümünde açıklanan Web programlama modeli, ASP.NET AJAX hizmetleriyle birlikte kullanılabilir. Özellikle:
+[WCF Web http programlama modeli genel bakış](wcf-web-http-programming-model-overview.md) bölümünde açıklanan Web programlama modeli, ASP.NET AJAX hizmetleriyle birlikte kullanılabilir. Daha ayrıntılı şekilde belirtmek gerekirse:
 
-- <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> özniteliklerini kullanarak HTTP GET ve HTTP POST fiilleri arasından seçim yapabilirsiniz. Doğru şekilde kullanılırsa, bu, uygulamanızın performansını önemli ölçüde iyileştirebilecek. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktaları IÇIN http post ve http get istekleri arasında seçim yapma](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).
+- <xref:System.ServiceModel.Web.WebGetAttribute>Ve <xref:System.ServiceModel.Web.WebInvokeAttribute> ÖZNITELIKLERINI kullanarak http get ve http post fiilleri arasından seçim yapabilirsiniz. Doğru şekilde kullanılırsa, bu, uygulamanızın performansını önemli ölçüde iyileştirebilecek. Daha fazla bilgi için bkz. [nasıl yapılır: ASP.NET AJAX uç noktaları IÇIN http post ve http get istekleri arasında seçim yapma](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md).
 
-- <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> ve <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> özelliklerini, hizmetinizin varsayılan JavaScript Nesne Gösterimi (JSON) yerine XML verisi döndürmesini sağlamak için kullanabilirsiniz. Bunu ASP.NET AJAX çerçevesiyle yapmak, JavaScript istemcisinin bir XML DOM nesnesi almasına neden olur.
+- <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A>Ve <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> özelliklerini, hizmetinizin varsayılan JAVASCRIPT nesne GÖSTERIMI (JSON) yerine XML verisi döndürmesini sağlamak için kullanabilirsiniz. Bunu ASP.NET AJAX çerçevesiyle yapmak, JavaScript istemcisinin bir XML DOM nesnesi almasına neden olur.
 
   > [!WARNING]
   > Bu işlemin çalışması için işlem, içerik türünü Text/XML olarak ayarlamış olmalıdır. Aksi halde, JavaScript istemcisi XML DOM nesnesi yerine XML içeren bir dize alır.
@@ -48,19 +48,19 @@ Visual Studio şablonlarını kullanmıyorsanız, ASP.NET AJAX uç noktası olu�
   }
   ```
 
-- ASP.NET AJAX ile uyumluluk gerekliyse <xref:System.ServiceModel.Web.WebGetAttribute> ve <xref:System.ServiceModel.Web.WebInvokeAttribute> özniteliklerinin başka hiçbir özelliği değiştirilemez. ASP.NET AJAX çağırma kuralları ihlal olmadığı sürece web programlama modelinin diğer yönleri de kullanılabilir.
+- <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> ASP.NET AJAX ile uyumluluk gerekliyse, ve özniteliklerinde başka hiçbir özellik değiştirilemez. ASP.NET AJAX çağırma kuralları ihlal olmadığı sürece web programlama modelinin diğer yönleri de kullanılabilir.
 
  Daha gelişmiş senaryolar, WCF 'de AJAX desteğinin bazı ek ayrıntılarının anlaşılması gerekir:
 
-- JavaScript kullanılarak verilerin AJAX sayfa istemcisi ile WCF hizmeti arasında nasıl aktarılacağını anlamak ve .NET Framework türlerin JavaScript türleriyle nasıl eşlendikleri hakkında ayrıntılar için bkz. [JSON ve diğer veri aktarımı biçimleri Için destek](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md).
+- JavaScript kullanılarak verilerin AJAX sayfa istemcisi ile WCF hizmeti arasında nasıl aktarılacağını anlamak ve .NET Framework türlerin JavaScript türleriyle nasıl eşlendikleri hakkında ayrıntılar için bkz. [JSON ve diğer veri aktarımı biçimleri Için destek](support-for-json-and-other-data-transfer-formats.md).
 
 - ASP.NET özelliklerinden yararlanmak için, örneğin, URL tabanlı kimlik doğrulaması ve ASP.NET oturum bilgisine erişme, yapılandırma yoluyla ASP.NET uyumluluk modunu etkinleştirmek isteyebilirsiniz.
 
-WCF 'deki AJAX uç noktaları, ASP.NET AJAX Framework olmadan da tüketilebilir. Bunun yapılması, WCF 'de AJAX desteğinin destek mimarisinin anlaşılmasını gerektirir. Bu mimarinin bir açıklaması için bkz. [WCF Web http programlama nesne modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Bu yaklaşımı gösteren bir kod örneği için bkz. [JSON ve XML Ile AJAX Hizmeti](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).
+WCF 'deki AJAX uç noktaları, ASP.NET AJAX Framework olmadan da tüketilebilir. Bunun yapılması, WCF 'de AJAX desteğinin destek mimarisinin anlaşılmasını gerektirir. Bu mimarinin bir açıklaması için bkz. [WCF Web http programlama nesne modeli](wcf-web-http-programming-object-model.md). Bu yaklaşımı gösteren bir kod örneği için bkz. [JSON ve XML Ile AJAX Hizmeti](../samples/ajax-service-with-json-and-xml-sample.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
-- [Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
-- [Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+- [WCF Web HTTP Programlama Modeli](wcf-web-http-programming-model.md)
+- [Nasıl yapılır: Yapılandırma Kullanmadan ASP.NET AJAX Uç Noktası Ekleme](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
+- [Nasıl yapılır: ASP.NET AJAX Uç Noktası Eklemek için Yapılandırma Kullanma](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma](http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

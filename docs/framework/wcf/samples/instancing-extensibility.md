@@ -2,25 +2,25 @@
 title: Örnek Oluşturma Genişletilebilirliği
 ms.date: 03/30/2017
 ms.assetid: 7a2f8b51-472b-4b71-8602-d3dbc6e1cb07
-ms.openlocfilehash: 4e04b45f385ca466dee81f24fd63a57d68be4d32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da599acfb8f227a24ac5c7581d07beab6d6949be
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923038"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599964"
 ---
 # <a name="instancing-extensibility"></a>Örnek Oluşturma Genişletilebilirliği
-Bu bölüm, özel depolamasına gösteren örnekler içerir.  
+Bu bölüm özel örnek oluşturmayı gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Dayanıklı Örnek Bağlamı](../../../../docs/framework/wcf/samples/durable-instance-context.md)  
- Dayanıklı örnek bağlamı etkinleştirmek için WCF çalıştırma zamanı özelleştirmek nasıl gösterir.  
+ [Dayanıklı Örnek Bağlamı](durable-instance-context.md)  
+ Dayanıklı örnek bağlamlarını etkinleştirmek için WCF çalışma zamanının nasıl özelleştirileceğini gösterir.  
   
- [Özel Yaşam Süresi](../../../../docs/framework/wcf/samples/custom-lifetime.md)  
- WCF uzantısı Paylaşılan WCF hizmet örneklerine yönelik özel yaşam süresi hizmetleri sağlamak için yazma işlemini göstermektedir.  
+ [Özel Yaşam Süresi](custom-lifetime.md)  
+ Paylaşılan WCF hizmet örnekleri için özel ömür hizmetleri sağlamak üzere bir WCF uzantısının nasıl yazılacağını gösterir.  
   
- [Örnek Oluşturmayı Başlatma](../../../../docs/framework/wcf/samples/instancing-initialization.md)  
- Bir nesnenin başlatma özelleştirmek nasıl gösterir.  
+ [Başlatmayı Örneklendirme](instancing-initialization.md)  
+ Bir nesnenin başlatılmasının nasıl özelleştirileceğini gösterir.  
   
- [Biriktirme](../../../../docs/framework/wcf/samples/pooling.md)  
- Windows Communication Foundation (WCF), nesne havuzu desteklemek için genişletmek gösterilmektedir.
+ [Biriktirme](pooling.md)  
+ Nesne biriktirmesini desteklemek için Windows Communication Foundation (WCF) genişletmeyi gösterir.

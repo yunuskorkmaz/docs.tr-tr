@@ -4,35 +4,35 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: ad2f0922afbd94e1699b383cf2fc9762771b637d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184324"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576024"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 
-Bu makalede, aktarım güvenliği kullanırken sunucu ve istemci kimlik doğrulaması için X.509 sertifikaları nın kullanılması anlatılmaktadır. X.509 sertifikaları hakkında daha fazla bilgi için [Bkz. X.509 Ortak Anahtar Sertifikaları.](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates) Sertifikalar, genellikle sertifikaların üçüncü taraf vereni olan bir sertifika yetkilisi tarafından verilmelidir. Bir Windows Server etki alanında, Etkin Dizin Sertifika Hizmetleri etki alanında istemci bilgisayarlara sertifika vermek için kullanılabilir. Bu senaryoda, hizmet Güvenli Soketkatmanı (SSL) ile yapılandırılan Internet Information Services (IIS) altında barındırılır. Hizmet, istemcilerin sunucunun kimliğini doğrulamasına olanak sağlamak için bir SSL (X.509) sertifikası ile yapılandırılır. İstemci ayrıca, hizmetin istemcinin kimliğini doğrulamasına olanak tanıyan bir X.509 sertifikasıyla da yapılandırılır. Sunucunun sertifikası istemci tarafından güvenilmeli ve istemcinin sertifikası sunucu tarafından güvenilmelidir. Hizmetin ve istemcinin birbirlerinin kimliğini doğrulama sının gerçek mekaniği bu makalenin kapsamı dışındadır. Daha fazla bilgi için Wikipedia'da [Dijital İmza'ya](https://en.wikipedia.org/wiki/Digital_signature) bakın.
+Bu makalede, aktarım güvenliği kullanılırken sunucu ve istemci kimlik doğrulaması için X. 509.440 sertifikalarının kullanımı ele alınmaktadır. X. 509.440 sertifikaları hakkında daha fazla bilgi için bkz. [x. 509.440 ortak anahtar sertifikaları](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Sertifikalar, genellikle bir üçüncü taraf sertifika veren olan bir sertifika yetkilisi tarafından verilmelidir. Bir Windows Server etki alanında Active Directory Sertifika Hizmetleri, etki alanındaki istemci bilgisayarlara sertifika vermek için kullanılabilir. Bu senaryoda, hizmet Güvenli Yuva Katmanı (SSL) ile yapılandırılan Internet Information Services (IIS) altında barındırılır. Hizmet, istemcilerin sunucu kimliğini doğrulamasına izin vermek için bir SSL (X. 509.440) sertifikası ile yapılandırılır. İstemci Ayrıca hizmetin istemci kimliğini doğrulamasına izin veren bir X. 509.440 sertifikası ile yapılandırılır. Sunucu sertifikası istemci tarafından güvenilir olmalıdır ve istemcinin sertifikasına sunucu tarafından güvenilmelidir. Hizmetin ve istemcinin her birinin kimliğini nasıl doğrulayadığına ilişkin gerçek bir mekanizması, bu makalenin kapsamı dışındadır. Daha fazla bilgi için bkz. Vikipde [dijital imza](https://en.wikipedia.org/wiki/Digital_signature) .
   
- Bu senaryo, aşağıdaki diyagramda gösterildiği gibi bir istek/yanıt iletisi deseni uygular.  
+ Bu senaryo, aşağıdaki diyagramda gösterildiği gibi bir istek/yanıt iletisi deseninin bir listesini uygular.  
   
- ![Sertifikaları kullanarak güvenli aktarım](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
+ ![Sertifikaları kullanarak güvenli aktarım](media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899F-4538-a9e8-0eaa872a291c")  
   
- Hizmetli bir sertifika kullanma hakkında daha fazla bilgi için bkz: [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) ve [Nasıl Yapılandırılabilen: SSL Sertifikası olan bir Bağlantı Noktasını Yapılandırma.](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md) Aşağıdaki tabloda senaryonun çeşitli özellikleri açıklanmaktadır.  
+ Hizmeti olan bir sertifika kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md) ve bir [SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md). Aşağıdaki tabloda senaryonun çeşitli özellikleri açıklanmaktadır.  
   
 |Özellik|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik Modu|Aktarım|  
-|Birlikte çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleri ile.|  
-|Kimlik Doğrulama (Sunucu)<br /><br /> Kimlik Doğrulama (İstemci)|Evet (SSL sertifikası kullanarak)<br /><br /> Evet (X.509 sertifikası kullanarak)|  
-|Veri Bütünlüğü|Evet|  
-|Veri Gizliliği|Evet|  
+|Güvenlik modu|Aktarım|  
+|Birlikte çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle.|  
+|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet (bir SSL sertifikası kullanarak)<br /><br /> Evet (bir X. 509.440 sertifikası kullanarak)|  
+|Veri bütünlüğü|Yes|  
+|Veri gizliliği|Yes|  
 |Aktarım|HTTPS|  
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="configure-the-service"></a>Hizmeti Yapılandırma  
- Bu senaryodaki hizmet IIS altında barındırıldığından, bir web.config dosyasıyla yapılandırılır. Aşağıdaki web.config taşıma güvenliği ve <xref:System.ServiceModel.WSHttpBinding> X.509 istemci kimlik bilgilerini kullanmak için nasıl yapılandırılabildiğini gösterir.  
+## <a name="configure-the-service"></a>Hizmeti yapılandırma  
+ Bu senaryodaki hizmet IIS altında barındırıldığından, Web. config dosyası ile yapılandırılır. Aşağıdaki Web. config, <xref:System.ServiceModel.WSHttpBinding> ' ın Transport Security ve X. 509.440 istemci kimlik bilgilerini kullanacak şekilde nasıl yapılandırılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -62,8 +62,8 @@ Bu makalede, aktarım güvenliği kullanırken sunucu ve istemci kimlik doğrula
 </configuration>  
 ```  
   
-## <a name="configure-the-client"></a>İstemciyi Yapılandırma  
- İstemci kod veya app.config dosyasında yapılandırılabilir. Aşağıdaki örnekte, istemcinin kod da nasıl yapılandırılabildiğini gösterilmektedir.  
+## <a name="configure-the-client"></a>Istemciyi yapılandırma  
+ İstemci kodda veya bir App. config dosyasında yapılandırılabilir. Aşağıdaki örnek, kodda istemcisinin nasıl yapılandırılacağını gösterir.  
   
 ```csharp
 // Create the binding.  
@@ -97,7 +97,7 @@ Console.WriteLine(cc.Add(100, 1111));
 cc.Close();  
 ```  
   
- Alternatif olarak, istemciyi aşağıdaki örnekte gösterildiği gibi bir App.config dosyasında yapılandırabilirsiniz:  
+ Alternatif olarak, aşağıdaki örnekte gösterildiği gibi, istemcisini bir App. config dosyasında yapılandırabilirsiniz:  
   
 ```xml  
 <configuration>  
@@ -140,5 +140,5 @@ cc.Close();
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric için Güvenlik Modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Güvenliğe genel bakış](security-overview.md)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

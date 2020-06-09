@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320209"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600860"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF), hizmet yönelimli uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri bir hizmet uç noktasından diğerine zaman uyumsuz iletiler olarak gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan bir sürekli kullanılabilir hizmetin parçası olabilir veya bir uygulamada barındırılan bir hizmet olabilir. Uç nokta, hizmet uç noktasından veri isteyen bir hizmetin istemcisi olabilir. İletiler, tek bir karakter veya bir kelime olarak bir XML olarak gönderilebilir ya da ikili veri akışı gibi karmaşık olabilir. Birkaç örnek senaryo şunlardır:
@@ -50,11 +50,11 @@ WCF aşağıdaki özellik kümesini içerir. Daha fazla bilgi için bkz. [WCF ö
 
      WCF, WSDL, XML Schema ve WS-Policy gibi sektör standartlarında belirtilen biçimleri kullanarak hizmet meta verilerini yayımlamayı destekler. Bu meta veriler, WCF hizmetlerine erişim için istemcileri otomatik olarak oluşturmak ve yapılandırmak üzere kullanılabilir. Meta veriler HTTP ve HTTPS üzerinden yayımlanabilir veya Web hizmeti meta veri değişimi standardı kullanılarak yapılandırılabilir. Daha fazla bilgi için bkz. [meta veriler](./feature-details/metadata.md).
 
-- **Veri Anlaşmaları**
+- **Veri Sözleşmeleri**
 
-     WCF .NET Framework kullanılarak oluşturulduğundan, zorlamak istediğiniz sözleşmeleri sağlamaya yönelik kod kullanımı kolay yöntemler de içerir. Evrensel türdeki sözleşmeler, veri sözleşmelerinden biridir. Temelde, Visual C# veya Visual Basic kullanarak hizmetinizi kodlarınızda, verileri işlemenin en kolay yolu, veri varlığına ait özelliklerle bir veri varlığını temsil eden sınıflar oluşturmaktır. WCF, verilerle bu kolay şekilde çalışmaya yönelik kapsamlı bir sistem içerir. Verileri temsil eden sınıfları oluşturduktan sonra hizmetiniz, tasarlanan veri türleriyle uyumlu olmasını sağlayan meta verileri otomatik olarak oluşturur. Daha fazla bilgi için bkz. [Veri Sözleşmelerini Kullanma](../../../docs/framework/wcf/feature-details/using-data-contracts.md).
+     WCF .NET Framework kullanılarak oluşturulduğundan, zorlamak istediğiniz sözleşmeleri sağlamaya yönelik kod kullanımı kolay yöntemler de içerir. Evrensel türdeki sözleşmeler, veri sözleşmelerinden biridir. Temelde, Visual C# veya Visual Basic kullanarak hizmetinizi kodlarınızda, verileri işlemenin en kolay yolu, veri varlığına ait özelliklerle bir veri varlığını temsil eden sınıflar oluşturmaktır. WCF, verilerle bu kolay şekilde çalışmaya yönelik kapsamlı bir sistem içerir. Verileri temsil eden sınıfları oluşturduktan sonra hizmetiniz, tasarlanan veri türleriyle uyumlu olmasını sağlayan meta verileri otomatik olarak oluşturur. Daha fazla bilgi için bkz. [Veri Sözleşmelerini Kullanma](feature-details/using-data-contracts.md).
 
-- **Security**
+- **Güvenlik**
 
      Gizli iletiler, gizliliği korumak için şifrelenebilir ve kullanıcıların ileti almasına izin verilmeden önce kimlik doğrulamasından geçmesini zorunlu kılabilirsiniz. Güvenlik, SSL veya WS-SecureConversation gibi iyi bilinen standartlar kullanılarak uygulanabilir. Daha fazla bilgi için bkz. [güvenlik](./feature-details/security.md).
 
@@ -72,7 +72,7 @@ WCF aşağıdaki özellik kümesini içerir. Daha fazla bilgi için bkz. [WCF ö
 
 - **İşlemler**
 
-     WCF Ayrıca üç işlem modelinden birini kullanarak işlemleri destekler: WS-AtomicTransactions, <xref:System.Transactions> ad alanındaki API 'Ler ve Microsoft Dağıtılmış İşlem Düzenleyicisi. WCF 'de işlem desteği hakkında daha fazla bilgi için bkz. [işlemler](./feature-details/transactions-in-wcf.md).
+     WCF Ayrıca üç işlem modelinden birini kullanarak işlemleri destekler: WS-AtomicTransactions, <xref:System.Transactions> ad alanındaki API 'ler ve Microsoft Dağıtılmış işlem Düzenleyicisi. WCF 'de işlem desteği hakkında daha fazla bilgi için bkz. [işlemler](./feature-details/transactions-in-wcf.md).
 
 - **AJAX ve REST desteği**
 

@@ -2,18 +2,18 @@
 title: Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: b9884c11-8011-4763-bc2c-c526b80175d0
-ms.openlocfilehash: 934b04b51b9954cf943f57f33250951048e5671b
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 59eaecb7e34b9105bc694f444d98c13c036d552f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597559"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma
-Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her birini kısaca açıklar ve bunları nasıl yapılandıracağınıza ait örnekler gösterir. Her bölümü takip her alan hakkında daha derinlemesine belgeler için bir bağlantı olacaktır.  
+Bulma sırasında kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her birini kısaca betimleyen ve bunların nasıl yapılandırılacağını gösteren örnekler gösterecektir. Her bölüm için, her alanla ilgili daha ayrıntılı bir belge bağlantısı olacaktır.  
   
-## <a name="behavior-configuration"></a>Davranış Yapılandırması  
- Bulma, hizmet davranışları ve uç nokta davranışları kullanır. Davranış, <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> bir hizmetin tüm uç noktalarının bulunmasını sağlar ve duyuru uç noktalarını belirtmenize olanak tanır.  Aşağıdaki örnekte, bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> duyuru bitiş noktasının nasıl ekleyeceğinive belirtin.  
+## <a name="behavior-configuration"></a>Davranış yapılandırması  
+ Bulma hizmeti davranışlarını ve uç nokta davranışlarını kullanır. <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>Davranış, bir hizmetin tüm uç noktaları için bulmayı sağlar ve duyuru uç noktalarını belirtmenize olanak tanır.  Aşağıdaki örnek, ' nin nasıl ekleneceğini <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> ve bir duyuru uç noktasının nasıl ekleneceğini gösterir.  
   
 ```xml  
 <behaviors>  
@@ -29,7 +29,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </behaviors>  
 ```  
   
- Davranışı belirttikten sonra, aşağıdaki örnekte gösterildiği gibi <`service`> öğesinden başvurun.  
+ Davranışı belirttikten sonra, `service` Aşağıdaki örnekte gösterildiği gibi bir <> öğesinden başvuru yapın.  
   
 ```xml  
 <system.serviceModel>  
@@ -46,9 +46,9 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </system.serviceModel>  
 ```  
   
- Bir hizmetin bulunabilmesi için, bir keşif bitiş noktası da eklemeniz <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> gerekir, yukarıdaki örnek standart bir bitiş noktası ekler.  
+ Bir hizmetin bulunabilir olması için, bir bulma uç noktası da eklemeniz gerekir, yukarıdaki örnek <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> Standart bir uç nokta ekler.  
   
- Duyuru bitiş noktaları eklediğinizde, aşağıdaki örnekte gösterildiği gibi `services` <> öğesine bir duyuru dinleyici hizmeti de eklemeniz gerekir.  
+ Duyuru uç noktaları eklediğinizde, `services` Aşağıdaki örnekte gösterildiği gibi <> öğesine bir duyuru dinleyicisi hizmeti de eklemeniz gerekir.  
   
 ```xml  
 <services>  
@@ -67,7 +67,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </services>
 ```  
   
- Davranış, <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> belirli bir bitiş noktasının keşfini etkinleştirmek veya devre dışı etmek için kullanılır.  Aşağıdaki örnek, biri bulma etkinleştirilmiş, diğeri de bulma devre dışı bırakılmış iki uygulama uç noktası olan bir hizmeti yapılandırır. Her bitiş noktası <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> için bir davranış eklenir.  
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>Davranış, belirli bir uç noktanın bulunmasını etkinleştirmek veya devre dışı bırakmak için kullanılır.  Aşağıdaki örnek, bir hizmeti bulma etkin ve diğeri de bulma devre dışı olan iki uygulama uç noktası ile yapılandırır. Her bitiş noktası için bir <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> davranış eklenir.  
   
 ```xml  
 <system.serviceModel>  
@@ -108,7 +108,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </system.serviceModel>  
 ```  
   
- Davranış, <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> hizmet tarafından döndürülen uç nokta meta verilerine özel meta veri eklemek için de kullanılabilir. Aşağıdaki örnekte, bunun nasıl yapılacağını gösterilmektedir.  
+ Bu <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> davranış, hizmet tarafından döndürülen uç nokta meta verilerine özel meta veri eklemek için de kullanılabilir. Aşağıdaki örnek bunun nasıl yapılacağını göstermektedir.  
   
 ```xml  
 <behavior name="ep4Behavior">  
@@ -124,7 +124,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </behavior>  
 ```  
   
- Bu <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> davranış, istemcilerin hizmetleri aramak için kullandığı kapsamları ve türleri eklemek için de kullanılabilir. Aşağıdaki örnek, istemci tarafı yapılandırma dosyasında bunun nasıl yapılacağını gösterir.  
+ <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>Bu davranış, istemcilerin Hizmetleri aramak için kullandığı kapsamları ve türleri eklemek için de kullanılabilir. Aşağıdaki örnek, bir istemci tarafı yapılandırma dosyasında bunun nasıl yapılacağını gösterir.  
   
 ```xml  
 <behavior name="ep2Behavior">  
@@ -141,10 +141,10 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </behavior>  
 ```  
   
- Hakkında <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> daha fazla <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bilgi için ve [WCF Discovery Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)bakın.  
+ Hakkında daha fazla bilgi <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> için <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> bkz. [WCF bulmaya genel bakış](wcf-discovery-overview.md).  
   
-## <a name="binding-element-configuration"></a>Bağlama Öğesi Yapılandırması  
- Bağlama öğesi yapılandırması istemci tarafında en ilginç. Bir WCF istemci uygulamasından hizmetleri bulmak için kullanılan bulma ölçütlerini belirtmek için yapılandırmayı kullanabilirsiniz.  Aşağıdaki örnek, <xref:System.ServiceModel.Discovery.DiscoveryClient> kanalla özel bir bağlama oluşturur ve bir tür ve kapsam içeren bul ölçütlerini belirtir. Buna ek olarak, özellikleri <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> ve <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> değerleri belirtir.  
+## <a name="binding-element-configuration"></a>Bağlama öğesi yapılandırması  
+ Bağlama öğesi yapılandırması, istemci tarafında en ilginç bir öğedir. Bir WCF istemci uygulamasından hizmetleri bulmak için kullanılan bulma ölçütlerini belirtmek için yapılandırma kullanabilirsiniz.  Aşağıdaki örnek, kanalla birlikte özel bir bağlama oluşturur <xref:System.ServiceModel.Discovery.DiscoveryClient> ve bir tür ve kapsam içeren bulma ölçütünü belirtir. Ayrıca, ve özellikleri için değerleri belirtir <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> .  
   
 ```xml  
 <bindings>  
@@ -172,7 +172,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </bindings>  
 ```  
   
- Bu özel bağlama yapılandırması istemci bitiş noktası ile başvurulmalıdır:  
+ Bu özel bağlama yapılandırmasına bir istemci uç noktası tarafından başvurulmalıdır:  
   
 ```xml  
 <client>  
@@ -183,10 +183,10 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </client>  
 ```  
   
- Bulma ölçütleri hakkında daha fazla bilgi için [Bkz. Bulma Ve Bulma Kriterleri.](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md) Bulma ve bağlama öğeleri hakkında daha fazla bilgi için bkz: [WCF Discovery Overview](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ Bulma ölçütü hakkında daha fazla bilgi için bkz. [bulma bulma ve FindCriteria](discovery-find-and-findcriteria.md). Bulma ve bağlama öğeleri hakkında daha fazla bilgi için bkz. [WCF bulgu genel bakış](wcf-discovery-overview.md)  
   
-## <a name="standard-endpoint-configuration"></a>Standart Bitiş Noktası Yapılandırması  
- Standart uç noktaları, bir veya daha fazla özellik (adres, bağlama veya sözleşme) veya değiştirilemeyen bir veya daha fazla özellik değerleri için varsayılan değerlere sahip önceden tanımlanmış uç noktalarıdır. .NET 4 gemi ile 3 keşif <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>ilgili <xref:System.ServiceModel.Discovery.DynamicEndpoint>standart uç noktaları: , , ve .  UdP <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> çok noktaya yayın bağlama üzerinde bulma işlemleri için önceden yapılandırılan standart bir uç noktadır. UdP <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> bağlama üzerinden duyuru iletileri göndermek için önceden yapılandırılan standart bir bitiş noktasıdır. Keşfedilen <xref:System.ServiceModel.Discovery.DynamicEndpoint> bir hizmetin bitiş noktası adresini çalışma zamanında dinamik olarak bulmak için keşfedilmeyi kullanan standart bir uç noktadır.  Standart bağlamalar, eklenecek `endpoint` standart bitiş noktası türünü belirten tür özniteliği içeren <bir> öğesiyle belirtilir. Aşağıdaki örnekte, a <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>a' nın nasıl eklendirilir  
+## <a name="standard-endpoint-configuration"></a>Standart uç nokta yapılandırması  
+ Standart uç noktalar bir veya daha fazla Özellik (adres, bağlama veya sözleşme) veya değiştirebir veya daha fazla özellik değeri için varsayılan değerlere sahip önceden tanımlanmış uç noktalardır. .NET 4, 3 bulma ile ilgili standart uç noktaları ile birlikte gelir: <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> , <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> , ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  , <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> BIR UDP çok noktaya yayın bağlaması üzerinde bulma işlemleri için önceden yapılandırılmış standart bir uç noktasıdır. , <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> BIR UDP bağlaması üzerinden duyuru iletileri gönderecek şekilde önceden yapılandırılmış standart bir uç noktasıdır. , <xref:System.ServiceModel.Discovery.DynamicEndpoint> Bulma kullanan standart bir uç noktadır ve bulunan bir hizmetin uç nokta adresini çalışma zamanında dinamik olarak bulur.  Standart bağlamalar, `endpoint` eklenecek standart uç nokta türünü belirtilen tür özniteliğini içeren bir <> öğesiyle belirtilir. Aşağıdaki örnek, ve ' nin nasıl ekleneceğini gösterir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> .  
   
 ```xml  
 <services>  
@@ -200,7 +200,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </services>  
 ```  
   
- Standart uç noktalar <`standardEndpoints`> öğesi olarak yapılandırılır. Aşağıdaki örnekte, <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> "ve <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>.  
+ Standart uç noktalar bir <`standardEndpoints`> öğesinde yapılandırılır. Aşağıdaki örnek, ve ' nin nasıl yapılandırılacağını gösterir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> .  
   
 ```xml  
 <standardEndpoints>  
@@ -233,7 +233,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </standardEndpoints>
 ```  
   
- Standart bitiş noktası yapılandırmasını ekledikten sonra, aşağıdaki `endpoint` örnekte gösterildiği gibi, her bitiş noktası için <> öğesindeki yapılandırmaya başvurun.  
+ Standart uç nokta yapılandırmasını ekledikten sonra, `endpoint` Aşağıdaki örnekte gösterildiği gibi her bir uç nokta için <> öğesindeki yapılandırmaya başvurun.  
   
 ```xml  
 <services>  
@@ -247,7 +247,7 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </services>  
 ```  
   
- Keşifte kullanılan diğer standart uç noktaların aksine, <xref:System.ServiceModel.Discovery.DynamicEndpoint>bir bağlama ve sözleşme belirtirsiniz. Aşağıdaki örnekte, bir <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
+ Bulma sırasında kullanılan diğer standart uç noktaların aksine, için bir bağlama ve sözleşme belirtirsiniz <xref:System.ServiceModel.Discovery.DynamicEndpoint> . Aşağıdaki örnek, ' nin nasıl ekleneceğini ve yapılandırılacağını gösterir <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  
   
 ```xml  
 <system.serviceModel>  
@@ -276,4 +276,4 @@ Keşifte kullanılan dört ana yapılandırma ayarı grubu vardır. Bu konu, her
 </system.ServiceModel>  
 ```  
   
- Standart uç noktaları hakkında daha fazla bilgi için [Bkz. Standart Uç Noktaları.](standard-endpoints.md)
+ Standart uç noktalar hakkında daha fazla bilgi için bkz. [standart uç noktalar](standard-endpoints.md).

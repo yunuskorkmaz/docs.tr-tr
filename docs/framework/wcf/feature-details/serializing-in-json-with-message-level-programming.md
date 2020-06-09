@@ -2,24 +2,24 @@
 title: İleti Düzeyi Programlama ile JSON Seri Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
-ms.openlocfilehash: 36459dbc0ddee883678a98a27f9abb74fde78e86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 854f03e94510b7f02bb1b7660f1e5108fd8faed8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184492"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600406"
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>İleti Düzeyi Programlama ile JSON Seri Hale Getirme
-WCF, JSON formatında verileri seri hale getirmeyi destekler. Bu konu, WCF'ye türlerinizi seri <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>hale getirmek için nasıl söyleyeceğiniz açıklanır.  
+WCF, JSON biçimindeki verilerin serileştirilmesinin kullanılmasını destekler. Bu konuda, WCF 'yi kullanarak türlerinizi serileştirmek için nasıl söyleyeceğinizi açıklanmaktadır <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .  
   
-## <a name="typed-message-programming"></a>Yazılı İleti Programlama  
- Bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> hizmet işlemine <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> uygulandığında kullanılır. Bu özniteliklerin her ikisi `RequestFormat` `ResponseFormat`de belirtmek için izin verir ve . İstek ler ve yanıtlar için JSON'u kullanmak için. her ikisini de `WebMessageFormat.Json`.  JSON'u kullanmak <xref:System.ServiceModel.WebHttpBinding>için, otomatik olarak yapılandırılan <xref:System.ServiceModel.Description.WebHttpBehavior>. WCF serileştirme hakkında daha fazla bilgi için [serileştirme ve deserialization'a](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)bakın. JSON ve WCF hakkında daha fazla bilgi için Service [Station - WCF ile RESTful Hizmetlere Giriş](https://docs.microsoft.com/archive/msdn-magazine/2009/january/service-station-an-introduction-to-restful-services-with-wcf)' e bakın.  
+## <a name="typed-message-programming"></a>Yazılan Ileti programlama  
+ , <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <xref:System.ServiceModel.Web.WebGetAttribute> Veya <xref:System.ServiceModel.Web.WebInvokeAttribute> bir hizmet işlemine uygulandığında kullanılır. Bu özniteliklerin her ikisi de belirtmenizi sağlar `RequestFormat` `ResponseFormat` . İstekleri ve yanıtları için JSON kullanmak. her ikisini de olarak ayarlayın `WebMessageFormat.Json` .  JSON kullanmak için, <xref:System.ServiceModel.WebHttpBinding> ' yi otomatik olarak yapılandıran öğesini kullanmanız gerekir <xref:System.ServiceModel.Description.WebHttpBehavior> . WCF serileştirme hakkında daha fazla bilgi için bkz. [serileştirme ve seri durumundan çıkarma](serialization-and-deserialization.md). JSON ve WCF hakkında daha fazla bilgi için bkz. [hizmet istasyonu-WCF Ile yeniden hizmet vermek Için bir giriş](https://docs.microsoft.com/archive/msdn-magazine/2009/january/service-station-an-introduction-to-restful-services-with-wcf).  
   
 > [!IMPORTANT]
-> JSON'un kullanılması, SOAP iletişiminin <xref:System.ServiceModel.WebHttpBinding> kullanılmasını gerektirir ve <xref:System.ServiceModel.Description.WebHttpBehavior> bu iletişimi desteklemez. Hizmet <xref:System.ServiceModel.WebHttpBinding> meta verilerini açığa çıkarmakla iletişim kuramayan hizmetler, istemci tarafı proxy'si oluşturmak için Visual Studio'nun Hizmet Başvurusu Ekle işlevini veya svcutil komut satırı aracını kullanamazsınız. Kullanan hizmetleri programlı olarak nasıl arayabilirsiniz <xref:System.ServiceModel.WebHttpBinding>hakkında daha fazla bilgi için [WCF ile REST Hizmetlerinin Nasıl Tüketilir'e](https://docs.microsoft.com/archive/blogs/pedram/how-to-consume-rest-services-with-wcf)bakınız.  
+> JSON kullanımı, <xref:System.ServiceModel.WebHttpBinding> <xref:System.ServiceModel.Description.WebHttpBehavior> SOAP iletişimini desteklemeyen ve kullanımını gerektirir. İle iletişim kuran hizmetler, <xref:System.ServiceModel.WebHttpBinding> hizmet meta verilerinin sunulmasını desteklemez; böylece, istemci tarafı proxy oluşturmak Için Visual Studio 'nun hizmet başvurusu Ekle işlevselliğini veya Svcutil komut satırı aracını kullanamazsınız. Tarafından kullanılan Hizmetleri programlı olarak nasıl çağırabilmeniz hakkında daha fazla bilgi için <xref:System.ServiceModel.WebHttpBinding> bkz. [WCF Ile Rest hizmetlerini kullanma](https://docs.microsoft.com/archive/blogs/pedram/how-to-consume-rest-services-with-wcf).  
   
-## <a name="untyped-message-programming"></a>Yazılmamış İleti Programlama  
- Doğrudan yazılmamış İleti nesneleri ile çalışırken, json olarak serihale getirmek için yazılmamış iletideki özellikleri açıkça ayarlamanız gerekir. Aşağıdaki kod parçacığı bunun nasıl yapılacağını gösterir.  
+## <a name="untyped-message-programming"></a>Türsüz Ileti programlama  
+ Türsüz Ileti nesneleriyle doğrudan çalışırken, türsüz iletideki özellikleri JSON olarak seri hale getirmek için açıkça ayarlamanız gerekir. Aşağıdaki kod parçacığında bunun nasıl yapılacağı gösterilmektedir.  
   
 ```csharp
  Message response = Message.CreateMessage(  
@@ -33,6 +33,6 @@ WCF, JSON formatında verileri seri hale getirmeyi destekler. Bu konu, WCF'ye t�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AJAX Tümleştirme ve JSON Desteği](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)
-- [Bağımsız JSON Seri Hale Getirme](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)
-- [JSON Seri Hale Getirme](../../../../docs/framework/wcf/samples/json-serialization.md)
+- [AJAX Tümleştirme ve JSON Desteği](ajax-integration-and-json-support.md)
+- [Bağımsız JSON Seri Hale Getirme](stand-alone-json-serialization.md)
+- [JSON serileştirme](../samples/json-serialization.md)

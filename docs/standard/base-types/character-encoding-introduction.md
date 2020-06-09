@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288049"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599873"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde karakter kodlaması
 
@@ -107,9 +107,9 @@ Unicode standart 1.100.000 ' den fazla [kod noktasını](https://www.unicode.org
 
 Aşağıda göründükleri Unicode grafiklerine yönelik bağlantılarla birlikte kod noktası atamalarından oluşan bazı örnekler verilmiştir:
 
-|Ondalık|Onaltılık       |Örnek|Description|
+|Ondalık|Onaltılık       |Örnek|Açıklama|
 |------:|----------|-------|-----------|
-|10     | `U+000A` |Yok| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|10     | `U+000A` |YOK| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |65     | `U+0061` | a | [LATIN KÜÇÜK HARF A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LATIN BÜYÜK HARF Y WITH MACRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [ESKI TÜRKIC LETTER ORKHON](https://www.unicode.org/charts/PDF/U10C00.pdf) |
@@ -250,7 +250,7 @@ Tek bir karakter, birden çok kod noktasının birleşiminden kaynaklanabilir. b
 
 * string"Á", "á" ile aynı görünür, ancak iki skaler değerle temsil edilir ve iki örnek içerir `char` .
 
-  * `U+0065 LATIN SMALL LETTER A`
+  * `U+0061 LATIN SMALL LETTER A`
   * `U+0301 COMBINING ACUTE ACCENT`
 
 * Son olarak, string " `👩🏽‍🚒` " dört skaler değer ile temsil edilir ve yedi `char` örnek içerir.

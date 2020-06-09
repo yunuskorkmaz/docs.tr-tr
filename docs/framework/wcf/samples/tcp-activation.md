@@ -2,16 +2,16 @@
 title: TCP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 3487d84a63b2838dc1b55fdf3f41b410fcfc2e63
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0fa737adbdc7acc51511557877799c89849149bc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094884"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598664"
 ---
 # <a name="tcp-activation"></a>TCP Etkinleştirme
 
-Bu örnekte, net. TCP protokolü üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme Hizmetleri 'ni (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)' i temel alır.
+Bu örnekte, net. TCP protokolü üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme Hizmetleri 'ni (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -21,13 +21,13 @@ Bu örnekte, net. TCP protokolü üzerinden iletişim kuran bir hizmeti etkinle�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`
 
 Örnek, bir istemci konsol programından (. exe) ve tarafından etkinleştirilen bir çalışan işlemde barındırılan bir hizmet kitaplığından (. dll) oluşur. İstemci etkinliği konsol penceresinde görünür.
 
-Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, aşağıdaki örnek kodda gösterildiği gibi matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculator` arabirimi tarafından tanımlanır:
+Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, `ICalculator` Aşağıdaki örnek kodda gösterildiği gibi matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır:
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
 
 1. IIS 7,0 'nin yüklü olduğundan emin olun. WAS etkinleştirmesi için IIS 7,0 gereklidir.
 
-2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
     Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:
 
@@ -176,11 +176,11 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > Bu komut, tek satırlık bir metin. Bu komut,/servicemodelsamples uygulamasına hem `http://localhost/servicemodelsamples` hem de `net.tcp://localhost/servicemodelsamples`kullanılarak erişilmesini sağlar.
+        > Bu komut, tek satırlık bir metin. Bu komut, hem hem de kullanılarak/servicemodelsamples uygulamasına erişilmesini sağlar `http://localhost/servicemodelsamples` `net.tcp://localhost/servicemodelsamples` .
 
-4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-5. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+5. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
     Bu örnek için eklemiş olduğunuz net. TCP site bağlamasını kaldırın.
 

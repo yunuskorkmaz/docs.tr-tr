@@ -6,33 +6,33 @@ helpviewer_keywords:
 - digital signatures [WCF], encryption
 - digital signatures [WCF]
 ms.assetid: 0868866d-40b4-4341-8e42-eee3b7f15b69
-ms.openlocfilehash: ea53a575802f1e7903a66c2eda466c8937fb02f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41094b2eee50e97cf60887cfa29f8110f2895bfa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597403"
 ---
 # <a name="encryption-of-digital-signatures"></a>Dijital İmzaların Şifrelenmesi
-Varsayılan olarak, bir ileti imzalanacak ve şifrelenecek ve imza dijital olarak şifrelenir. Bu örneği ile özel bir bağlama oluşturarak denetim <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ve ardından ayarlar `MessageProtectionOrder` özelliği için ya da sınıfın bir <xref:System.ServiceModel.Security.MessageProtectionOrder> numaralandırma değeri. Varsayılan, <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature> değeridir. Bu işlem, yüzde 10 40'ı için basitçe imzalama ve şifreleme daha uzun sürer. Şifreleme imzası devre dışı bırakıldığında, ancak iletinin içeriğini tahmin etmek bir saldırgan sağlayabilir. İmza öğesi düz metin iletisi imzalı her bölümü karma kodunu içerdiğinden, bu mümkündür. Örneğin, ileti gövdesi, varsayılan olarak şifrelenmiş olsa da, şifrelenmemiş imza karma kodunu ileti gövdesi içeriyor. İleti küçükse, bir saldırganın içeriği türetme mümkün olabilir. Şifreleme imzası küçültür veya bu olanağına ortadan kaldırır.  
+Varsayılan olarak, bir ileti imzalanır ve şifrelenir ve imza dijital olarak şifrelenir. Ya da bir örneği ile özel bir bağlama oluşturarak <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ve ardından `MessageProtectionOrder` her iki sınıfın özelliğini bir <xref:System.ServiceModel.Security.MessageProtectionOrder> sabit listesi değeri olarak ayarlayarak bunu kontrol edebilirsiniz. Varsayılan değer: <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Bu işlem, yalnızca imzalama ve şifreleme için 10 ila %40 sürer. Bununla birlikte imza şifrelemesini devre dışı bırakmak, bir saldırganın iletinin içeriğini tahmin etmesini sağlayabilir. Bu mümkündür çünkü imza öğesi iletideki her imzalı parçanın düz metnin karma kodunu içerir. Örneğin, ileti gövdesi varsayılan olarak şifrelense de şifrelenmemiş imza, ileti gövdesinin karma kodunu içerir. İleti küçükse, bir saldırgan içerikleri verebilir. İmzanın şifrelenmesi bu olasılığı azaltır veya ortadan kaldırır.  
   
- Bu nedenle, şifreleme imzası yalnızca içeriğin değerinin düşük olduğu ve performans gibi hiçbir güvenlikle ilgili etkileri olan büyük ikili dosyaları gönderirken önemli olacaktır devre dışı bırakın.  
+ Bu nedenle, yalnızca içeriğin değeri düşük olduğunda imza şifrelemesini devre dışı bırakın ve örneğin güvenlik etkilerine sahip olmayan büyük ikili dosyalar gönderilirken performans kazancı önemli olur.  
   
-### <a name="to-disable-digital-signing"></a>Dijital imzasını devre dışı bırakmak için  
+### <a name="to-disable-digital-signing"></a>Dijital imzalamayı devre dışı bırakmak için  
   
-1. Oluşturma bir <xref:System.ServiceModel.Channels.CustomBinding>. Daha fazla bilgi için [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+1. Oluşturun <xref:System.ServiceModel.Channels.CustomBinding> . Daha fazla bilgi için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
-2. Ekleyin ya da bir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> bağlama koleksiyonuna.  
+2. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>Bağlama koleksiyonuna bir veya a ekleyin <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> .  
   
-3. Ayarlama <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
+3. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType>Özelliğini olarak ayarlayın <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> veya <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> özelliğini olarak ayarlayın <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt> .  
   
- Özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [Creating User-Defined bağlamaları](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Özel kimlik doğrulama modu için özel bir bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Özel Bağlamalar Oluşturma hakkında daha fazla bilgi için bkz. [Kullanıcı Tanımlı Bağlamalar Oluşturma](../extending/creating-user-defined-bindings.md). Belirli bir kimlik doğrulama modu için özel bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: belirtilen bir kimlik doğrulama modu Için SecurityBindingElement oluşturma](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Security.MessageProtectionOrder>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [Nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Kullanıcı Tanımlı Bağlamalar Oluşturma](../extending/creating-user-defined-bindings.md)
+- [Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

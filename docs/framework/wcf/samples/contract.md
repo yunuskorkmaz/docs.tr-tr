@@ -2,32 +2,32 @@
 title: WCF sözleşmesi örnekleri
 ms.date: 03/30/2017
 ms.assetid: 305eeb65-a52f-459e-9aa8-0ef071eade16
-ms.openlocfilehash: 051a6fc1af7483c5b7c512de6a47afe0b39ae3ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f191046738bd16a9c839bbb627e00cf21dd16fd4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002449"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575413"
 ---
 # <a name="contract"></a>Sözleşme
 
-Bu bölüm, Windows Communication Foundation (WCF) sözleşmeleri gösteren örnekler içerir.  
+Bu bölüm Windows Communication Foundation (WCF) içindeki sözleşmeleri gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Veri Anlaşmaları](../../../../docs/framework/wcf/samples/data-contracts.md)  
- WCF'de veri sözleşmeleri gösterir.  
+ [Veri Sözleşmeleri](data-contracts.md)  
+ WCF 'de veri sözleşmelerini gösterir.  
   
- [İleti Anlaşmaları](../../../../docs/framework/wcf/samples/message-contracts.md)  
- WCF'de ileti sözleşmeleri gösterir.  
+ [İleti Sözleşmeleri](message-contracts.md)  
+ WCF 'deki ileti sözleşmelerini gösterir.  
   
- [Hizmet Sözleşmeleri](../../../../docs/framework/wcf/samples/service-contracts.md)  
- WCF'de Hizmet sözleşmeleri gösterir.  
+ [Hizmet Sözleşmeleri](service-contracts.md)  
+ WCF 'de hizmet sözleşmelerini gösterir.  
   
- [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
- Kullanarak serileştirme ve seri durumundan çıkarma işlemleri nasıl özelleştirilebilir gösterir <xref:System.Runtime.Serialization.DataContractResolver> sınıfı.  
+ [DataContractResolver](datacontractresolver.md)  
+ Serileştirme ve seri kaldırma işlemlerinin sınıfı kullanılarak nasıl özelleştirilebileceğini gösterir <xref:System.Runtime.Serialization.DataContractResolver> .  
   
- [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
- Serileştirme ve seri durumundan çıkarma sırasında bilinen türleri dinamik olarak ekleme işlemi gösterilmektedir.  
+ [KnownAssemblyAttribute](knownassemblyattribute.md)  
+ Serileştirme ve seri durumundan çıkarma sırasında bilinen türlerin dinamik olarak nasıl ekleneceğini gösterir.  
   
- [NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma](../../../../docs/framework/wcf/samples/datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
- Nasıl kullanılacağını gösteren <xref:System.Runtime.Serialization.DataContractSerializer> uygun bir <xref:System.Runtime.Serialization.DataContractResolver> aynı işlevselliği sağlar <xref:System.Runtime.Serialization.NetDataContractSerializer>.
+ [NetDataContractSerializer İşlevselliğini Sağlamak için DataContractSerializer ve DataContractResolver Kullanma](datacontractserializer-datacontractresolver-netdatacontractserializer.md)  
+ İle nasıl kullanılacağını gösterir <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.DataContractResolver> , ile aynı işlevleri sağlar <xref:System.Runtime.Serialization.NetDataContractSerializer> .

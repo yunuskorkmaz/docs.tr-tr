@@ -1,5 +1,6 @@
 ---
 title: Öznitelikleri Kullanarak Meta Verileri Genişletme
+description: .NET 'teki öznitelikleri kullanarak meta verileri genişletmeyi öğrenin. Öznitelikler, türler ve alanlar gibi programlama öğelerine açıklama eklemek için anahtar sözcük benzeri açıklayıcı bildirimlerdir.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: d27dc3d77a8f72123f23d9f5a893d144bacee662
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c77de970c5550bd896e83854414592d70eb9dc48
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276276"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598638"
 ---
 # <a name="extending-metadata-using-attributes"></a>Öznitelikleri Kullanarak Meta Verileri Genişletme
 Ortak dil çalışma zamanı, türler, alanlar, Yöntemler ve özellikler gibi programlama öğelerine açıklama eklemek için öznitelikler olarak adlandırılan anahtar sözcük benzeri açıklayıcı bildirimler eklemenize olanak tanır. Çalışma zamanı için kodunuzu derlerken, Microsoft ara dili 'ne (MSIL) dönüştürülür ve derleyici tarafından oluşturulan meta verilerle birlikte taşınabilir bir çalıştırılabilir (PE) dosyası içine konur. Öznitelikleri, çalışma zamanı yansıma Hizmetleri kullanılarak ayıklanabilen meta verilere fazladan açıklayıcı bilgiler yerleştirmenizi sağlar. Derleyici, sınıfından türetilen özel sınıfların örneklerini bildirdiğinizde öznitelikler oluşturur <xref:System.Attribute?displayProperty=nameWithType> .  

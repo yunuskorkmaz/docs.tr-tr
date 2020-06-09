@@ -2,20 +2,20 @@
 title: Adres Ayarlama
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 55bb30ba3df80e41986b1337f8732dd8ad3231ff
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 3221a12a21aebe20e0f6822554937623dc3fbb8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463763"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575972"
 ---
 # <a name="addressing"></a>Adres Ayarlama
-Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerini gösterir. Örnek [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)dayanmaktadır. Bu örnekte hizmet kendi kendine barındırılır. Hem hizmet hem de istemci konsol uygulamalarıdır. Hizmet, göreli ve mutlak uç nokta adreslerinin bir birleşimini kullanarak birden çok uç nokta tanımlar.  
+Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerini gösterir. Örnek, [Başlarken](getting-started-sample.md)' i temel alır. Bu örnekte, hizmet kendiliğinden barındırılır. Hem hizmet hem de istemci konsol uygulamalardır. Hizmet, göreli ve mutlak uç nokta adreslerinden oluşan bir birleşimi kullanarak birden fazla uç nokta tanımlar.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hizmet yapılandırma dosyası nda bir temel adres ve dört uç nokta belirtilir. Temel adres, aşağıdaki örnek yapılandırmada gösterildiği gibi hizmet/ana bilgisayar/baseAddresss altında ekle öğesi kullanılarak belirtilir.  
+ Hizmet yapılandırma dosyası bir temel adres ve dört uç nokta belirtir. Temel adres, aşağıdaki örnek yapılandırmada gösterildiği gibi, Service/Host/baseAddresses altında add öğesi kullanılarak belirtilir.  
   
 ```xml  
 <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -28,7 +28,7 @@ Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerin
 </service>  
 ```  
   
- Aşağıdaki örnek yapılandırmada gösterilen ilk uç nokta tanımı göreceli bir adres belirtir, bu da bitiş noktası adresinin temel adres ile URI kompozisyonunun kurallarını izleyen göreli adresin birleşimi olduğu anlamına gelir.  
+ Aşağıdaki örnek yapılandırmada gösterilen ilk uç nokta tanımı, bir göreli adresi belirtir. Bu, uç nokta adresinin temel adresin bir birleşimi ve URI bileşimi kurallarından sonraki göreli adres olduğu anlamına gelir.  
   
 ```xml
 <!-- Empty relative address specified:   
@@ -40,9 +40,9 @@ Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Bu durumda, göreli adres boş (""), bu nedenle bitiş noktası adresi temel adresle aynıdır. Gerçek bitiş noktası `http://localhost:8000/servicemodelsamples/service`adresi .
+ Bu durumda, göreli adres boş ("") olduğundan, uç nokta adresi taban adresle aynı olur. Gerçek uç nokta adresi `http://localhost:8000/servicemodelsamples/service` .
   
- İkinci uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi göreli bir adres de belirtir.  
+ İkinci uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi göreli bir adresi de belirtir.  
   
 ```xml  
 <!-- The relative address specified: use the base address -->  
@@ -53,9 +53,9 @@ Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Göreli adres, "test", temel adrese eklenir. Gerçek bitiş noktası `http://localhost:8000/servicemodelsamples/service/test`adresi .
+ Göreli adres "test", temel adrese eklenir. Gerçek uç nokta adresi `http://localhost:8000/servicemodelsamples/service/test` .
   
- Üçüncü uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi mutlak bir adres belirtir.  
+ Üçüncü uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi mutlak bir adresi belirtir.  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -63,9 +63,9 @@ Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Temel adres adreste hiçbir rol oynamaz. Gerçek bitiş noktası `http://localhost:8001/hello/servicemodelsamples`adresi .
+ Taban adresi adreste hiçbir rol oynamıyor. Gerçek uç nokta adresi `http://localhost:8001/hello/servicemodelsamples` .
   
- Dördüncü uç nokta adresi mutlak bir adres ve farklı bir aktarım belirtir—TCP. Temel adres adreste hiçbir rol oynamaz. Gerçek bitiş noktası `net.tcp://localhost:9000/servicemodelsamples/service`adresi .
+ Dördüncü uç nokta adresi, bir mutlak adresi ve farklı bir aktarımı (TCP) belirtir. Taban adresi adreste hiçbir rol oynamıyor. Gerçek uç nokta adresi `net.tcp://localhost:9000/servicemodelsamples/service` .
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -78,9 +78,9 @@ Adresleme örneği, uç nokta adreslerinin çeşitli yönlerini ve özelliklerin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- İstemci dört hizmet uç noktasından yalnızca birine erişir, ancak dördü de yapılandırma dosyasında tanımlanır. İstemci `CalculatorProxy` nesneyi oluştururken bir bitiş noktası seçer. Yapılandırma adını `CalculatorEndpoint1` buradan `CalculatorEndpoint4`değiştirerek, uç noktaların her birini egzersiz yapabilirsiniz.  
+ İstemci, dört hizmet uç noktasından yalnızca birine erişir, ancak tüm dördü yapılandırma dosyasında tanımlanır. İstemci, nesneyi oluşturduğunda bir uç nokta seçer `CalculatorProxy` . Yapılandırma adını `CalculatorEndpoint1` aracılığıyla değiştirerek `CalculatorEndpoint4` , uç noktaların her birini uygulayabilirsiniz.  
   
- Örneği çalıştırdığınızda, hizmet, bitiş noktalarının her biri için adresi, bağlama adını ve sözleşme adını diziler. Meta veri değişimi (MEX) bitiş noktası, ServiceHost'un bakış açısından yalnızca başka bir bitiş noktasıdır, bu nedenle listede gösterir.  
+ Örneği çalıştırdığınızda hizmet, her bitiş noktası için adresi, bağlama adını ve sözleşme adını numaralandırır. Meta veri değişimi (MEX) uç noktası, ServiceHost 'un perspektifinden, listede görünmesi için yalnızca başka bir uç nokta olduğunu gösterir.  
   
 ```console  
 Service endpoints:  
@@ -104,7 +104,7 @@ The service is ready.
 Press <ENTER> to terminate service.  
 ```  
   
- İstemciyi çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsolu pencerelerinde görüntülenir. Hizmeti ve istemciyi kapatmak için her konsol penceresinde ENTER tuşuna basın.  
+ İstemcisini çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -115,22 +115,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!NOTE]
-    > Bu örnek için yapılandırmayı yeniden oluşturmak için Svcutil.exe kullanıyorsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinden emin olun.  
+    > Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil. exe ' yi kullanırsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  

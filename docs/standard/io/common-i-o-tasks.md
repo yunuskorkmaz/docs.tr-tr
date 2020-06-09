@@ -1,16 +1,17 @@
 ---
 title: Ortak G/Ç Görevleri
+description: .NET 'teki System.IO ad alanındaki sınıflar & yöntemleri kullanarak ortak dizin görevlerini & ortak dosya görevlerinin nasıl yapılacağını öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - I/O, common tasks
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
-ms.openlocfilehash: 9474d6c0340583e285a6dc47933c602f799f121d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4b97b4e464622e482a9ef45e143865ee82e6b5d4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287434"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598612"
 ---
 # <a name="common-io-tasks"></a>Ortak G/Ç Görevleri
 <xref:System.IO>Ad alanı, dosyalar, dizinler ve akışlar üzerinde gerçekleştirilen okuma ve yazma gibi çeşitli eylemlere izin veren birkaç sınıf sağlar. Daha fazla bilgi için bkz. [dosya ve akış g/ç](index.md).  

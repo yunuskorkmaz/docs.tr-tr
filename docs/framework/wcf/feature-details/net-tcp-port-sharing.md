@@ -5,52 +5,52 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598768"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
-Windows Communication Foundation (WCF), yüksek performanslı iletişim için yeni TCP tabanlı ağ protokolü (net.tcp://) sağlar. WCF da yeni bir sistem bileşeni olan birden çok kullanıcı süreçler arasında paylaşılacak net.tcp bağlantı noktası sağlayan Net.TCP bağlantı noktası paylaşma hizmeti tanıtılmaktadır.  
+Windows Communication Foundation (WCF), yüksek performanslı iletişim için yeni bir TCP tabanlı Ağ Protokolü (net. TCP://) sağlar. WCF Ayrıca, net. TCP bağlantı noktalarının birden çok kullanıcı işlemi arasında paylaşılmasını sağlayan net. TCP bağlantı noktası paylaşma hizmeti olan yeni bir sistem bileşeni de sunar.  
   
-## <a name="background-and-motivation"></a>Arka plan ve motivasyon  
- TCP/IP Protokolü ilk olarak sunulmuştur, yalnızca az sayıda uygulama protokolleri yapılan bunu kullanın. TCP/IP bağlantı noktası numaralarını her uygulama protokolü için bir benzersiz 16 bit bağlantı noktası numarası atayarak uygulamaları birbirinden ayırmak için kullanılır. Örneğin, HTTP trafiğini 80 numaralı TCP bağlantı noktasını kullanmak için bugün standartlaştırılmıştır, SMTP 25 numaralı TCP bağlantı noktasını kullanır ve FTP 20 ve 21 TCP bağlantı noktalarını kullanır. Aktarım olarak TCP kullanarak diğer uygulamaları başka bir kullanılabilir bağlantı noktası numarası, kural tarafından ya da resmi Standardizasyon üzerinden seçebilirsiniz.  
+## <a name="background-and-motivation"></a>Arka plan ve Mosyon  
+ TCP/IP Protokolü ilk kez sunulmasıyla, yalnızca az sayıda uygulama protokolü tarafından kullanılır. Her uygulama protokolüne benzersiz bir 16-bit bağlantı noktası numarası atayarak uygulamalar arasında ayrım yapmak için TCP/IP kullanılan bağlantı noktası numaraları. Örneğin, günümüzde HTTP trafiği TCP bağlantı noktası 80 ' ü kullanmak için standartlaştırılmış, SMTP TCP bağlantı noktası 25 ' i ve FTP ise 20 ve 21 numaralı TCP bağlantı noktalarını kullanır. Aktarım olarak TCP kullanan diğer uygulamalar, kural veya biçimsel standartlaşma aracılığıyla başka bir kullanılabilir bağlantı noktası numarası seçebilir.  
   
- Uygulamalar arasında ayrım yapmak için bağlantı noktası numaralarını kullanarak güvenlik sorunlarını vardı. Güvenlik duvarları, genellikle bir standart olmayan bağlantı noktasını kullanan bir uygulamayı dağıtma genellikle karmaşık ya da Kurumsal ve kişisel güvenlik duvarları varlığı nedeniyle olanaksız bile, bu nedenle, bazı iyi bilinen bir giriş noktaları dışında tüm bağlantı noktalarındaki TCP trafiği engellemek için yapılandırılır. Zaten izin verilen standart, iyi bilinen bağlantı noktaları üzerinden iletişim kurabilen uygulamaları dış saldırı yüzeyini azaltın. Birçok ağ uygulamaları HTTP yararlanması çoğu Güvenlik Duvarı varsayılan olarak 80 numaralı TCP bağlantı noktasında trafiğe izin verecek şekilde yapılandırıldığından protokol.  
+ Uygulamalar arasında ayrım yapmak için bağlantı noktası numaralarını kullanmak güvenlik sorunlarıyla karşılaştı. Güvenlik duvarları genellikle, birkaç iyi bilinen giriş noktası dışındaki tüm bağlantı noktalarında TCP trafiğini engelleyecek şekilde yapılandırılmıştır. bu nedenle, kurumsal ve kişisel güvenlik duvarlarının varlığı nedeniyle standart olmayan bir bağlantı noktası kullanan bir uygulamanın dağıtımı genellikle karmaşık veya hatta imkansız olur. Zaten izin verilen standart, iyi bilinen bağlantı noktaları üzerinden iletişim kurabilen uygulamalar, dış saldırı yüzeyini azaltır. Birçok ağ uygulaması HTTP protokolünü kullanır, çünkü çoğu güvenlik duvarı varsayılan olarak TCP bağlantı noktası 80 ' de trafiğe izin verecek şekilde yapılandırılır.  
   
- HTTP. Trafiği birçok farklı HTTP uygulamaları için tek bir TCP bağlantı noktası üzerinde çoğaltıldı SYS modeli Windows platformunda standart haline gelmiştir. Bu güvenlik duvarı için ortak bir denetim noktası sağlar yapabileceğiniz yeni uygulamalar oluşturmak dağıtım maliyeti en aza indirmek, uygulama geliştiricilerinin sağlarken Yöneticiler ağ kullanın.  
+ HTTP. Birçok farklı HTTP uygulamasının trafiğinin tek bir TCP bağlantı noktasında çoğullanmış olduğu SYS modeli, Windows platformunda standart hale gelmiştir. Bu, güvenlik duvarı yöneticileri için ortak bir denetim noktası sağlar, böylece uygulama geliştiricilerinin, ağı kullanan yeni uygulamalar oluşturma maliyetini en aza indirmesine izin verir.  
   
- Birden çok uygulamada HTTP bağlantı noktası paylaşma olanağı, uzun bir özellik Internet Information Services (IIS) kaldırıldı. Ancak, yalnızca HTTP sunulmasıyla birlikte idi. Bu altyapı tam olarak genelleştirilmiş IIS 6.0 ile SYS (çekirdek modu HTTP protokolü dinleyici). Aslında, HTTP. SYS TCP bağlantı noktası HTTP trafiğine ayrılmış paylaşmak rastgele kullanıcı işlemleri sağlar. Bu özellik, ayrı, yalıtılmış işlemlerde aynı fiziksel makinede gönderin ve TCP bağlantı noktası 80 üzerinden trafiği almak için gereken ağ altyapısını paylaşırken bulunabilmesi birçok HTTP uygulamaları tanır. Net.TCP bağlantı noktası paylaşma hizmeti aynı türde uygulamalar için net.tcp bağlantı noktası sağlar.  
+ Birden çok HTTP uygulamasında bağlantı noktası paylaşma özelliği, büyük bir Internet Information Services (IIS) özelliğidir. Ancak, yalnızca HTTP 'nin tanıtılmasıyla karşılaşıldı. Bu altyapının tamamen Genelleştirilmiş olduğunu ISS 6,0 ile SYS (çekirdek modu HTTP protokol dinleyicisi). Aslında HTTP. SYS, rastgele kullanıcı işlemlerinin HTTP trafiğine adanmış TCP bağlantı noktalarını paylaşmasına izin verir. Bu özellik, çok sayıda HTTP uygulamasının aynı fiziksel makinede, TCP bağlantı noktası 80 üzerinden trafik göndermek ve almak için gereken ağ altyapısını paylaşırken ayrı, yalıtılmış süreçler üzerinde birlikte bulunmasını sağlar. Net. TCP bağlantı noktası paylaşma hizmeti, net. TCP uygulamaları için aynı bağlantı noktası paylaşımı türünü sunar.  
   
-## <a name="port-sharing-architecture"></a>Bağlantı noktası paylaşımı mimarisi  
- Wcf'de bağlantı noktası paylaşımı mimari üç ana bileşene sahiptir:  
+## <a name="port-sharing-architecture"></a>Bağlantı noktası paylaşma mimarisi  
+ WCF 'deki bağlantı noktası paylaşma mimarisi üç ana bileşene sahiptir:  
   
-- Bir çalışan işlemi: Paylaşılan bağlantı noktalarını kullanarak net.tcp:// iletişim kuran herhangi bir işlem.  
+- Çalışan Işlemi: net. TCP://üzerinde iletişim kuran tüm işlemler paylaşılan bağlantı noktalarını kullanıyor.  
   
-- WCF TCP taşıma: Net.tcp:// Protokolü uygular.  
+- WCF TCP taşıması: net. TCP://protokolünü uygular.  
   
-- Net.TCP bağlantı noktası Paylaşımı hizmeti: Çok sayıda çalışan işlemine aynı TCP bağlantı noktasını paylaşmasına izin verir.  
+- Net. TCP bağlantı noktası paylaşma hizmeti: birçok çalışan işleminin aynı TCP bağlantı noktasını paylaşmasına Izin verir.  
   
- Net.TCP bağlantı noktası paylaşma hizmeti üzerinden bağlanan çalışan işlemleri adına net.tcp:// bağlantılarını kabul eden bir kullanıcı modu Windows hizmetidir. Bir yuva bağlantısı geldiğinde, hizmet bağlantı noktası hedef adresini almak için gelen ileti akışı inceler. Bu adresini temel alan, hizmet bağlantı noktası, sonuçta işlediği uygulamaya veri akışını yönlendirebilirsiniz.  
+ Net. TCP bağlantı noktası paylaşım hizmeti, üzerinden bağlanan çalışan süreçler adına net. TCP://bağlantılarını kabul eden bir Kullanıcı modu Windows hizmetidir. Bir yuva bağlantısı geldiğinde, bağlantı noktası Paylaşımı hizmeti gelen ileti akışını inceleyerek hedef adresini elde eder. Bağlantı noktası paylaşım hizmeti, bu adrese göre veri akışını son işleyen uygulamaya yönlendirebilir.  
   
- Açılır net.tcp:// bağlantı noktası kullanan bir WCF hizmeti, WCF TCP taşıma altyapısını doğrudan bir TCP yuva uygulama işleminde açılmaz. Bunun yerine, aktarım altyapısı Net.TCP bağlantı noktası paylaşma hizmeti hizmetin taban adresi Tekdüzen Kaynak Tanımlayıcısı (URI) kaydeder ve onun adına iletileri dinlemek için hizmet bağlantı noktası bekler.  Hizmet bağlantı noktası geldikçe uygulama hizmetine gönderilen iletiler gönderir.  
+ Net. TCP://bağlantı noktası Paylaşımı kullanan bir WCF hizmeti açıldığında, WCF TCP Aktarım altyapısı uygulama sürecinde doğrudan bir TCP yuvası açmaz. Bunun yerine, taşıma altyapısı, hizmetin temel adres Tekdüzen Kaynak tanımlayıcısı 'nı (URI) net. TCP bağlantı noktası paylaşım hizmeti ile kaydeder ve bağlantı noktası paylaşım hizmeti 'nin adına iletileri dinlemesi için bekler.  Bağlantı noktası paylaşım hizmeti, uygulama hizmetine ulaşan iletileri geldikçe gönderir.  
   
-## <a name="installing-port-sharing"></a>Bağlantı noktası paylaşımı yükleme  
- Net.TCP bağlantı noktası paylaşma hizmeti WinFX destekleyen tüm işletim sistemlerinde kullanılabilir, ancak hizmet varsayılan olarak etkin değildir. Bir güvenlik önlemi olarak yönetici Net.TCP bağlantı noktası paylaşma hizmeti ilk kullanım önce el ile etkinleştirmeniz gerekir. Net.TCP bağlantı noktası paylaşma hizmeti bağlantı noktası paylaşma hizmeti tarafından sahip olunan ağ yuvaları çeşitli özelliklerini değiştirmenize izin veren bir yapılandırma seçenekleri sunar. Daha fazla bilgi için [nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).  
+## <a name="installing-port-sharing"></a>Bağlantı noktası Paylaşımı yükleniyor  
+ Net. TCP bağlantı noktası paylaşma hizmeti, WinFX 'i destekleyen tüm işletim sistemlerinde kullanılabilir, ancak hizmet varsayılan olarak etkinleştirilmemiştir. Bir güvenlik önlemi olarak, yöneticinin ilk kullanımdan önce net. TCP bağlantı noktası paylaşım hizmetini el ile etkinleştirmesi gerekir. Net. TCP bağlantı noktası paylaşım hizmeti, bağlantı noktası paylaşım hizmeti 'nin sahip olduğu ağ yuvalarının çeşitli özelliklerini değiştirmenize olanak sağlayan yapılandırma seçeneklerini sunar. Daha fazla bilgi için bkz. [nasıl yapılır: net. TCP bağlantı noktası paylaşım hizmetini etkinleştirme](how-to-enable-the-net-tcp-port-sharing-service.md).  
   
-## <a name="using-nettcp-port-sharing-in-an-application"></a>NET.TCP bir uygulamaya bağlantı noktası kullanma  
- Kullanarak bir hizmeti kullanıma sunmak için WCF uygulamanızı net.tcp:// bağlantı noktası kullanmak için en kolay yolu olan <xref:System.ServiceModel.NetTcpBinding> Net.TCP bağlantı noktası paylaşım hizmetini kullanarak etkinleştirmek için sonra da <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> özelliği.  
+## <a name="using-nettcp-port-sharing-in-an-application"></a>Bir uygulamada net. TCP bağlantı noktası paylaşımını kullanma  
+ WCF uygulamanızda net. TCP://bağlantı noktası paylaşımını kullanmanın en kolay yolu, kullanarak bir hizmeti kullanıma sunmak <xref:System.ServiceModel.NetTcpBinding> ve sonra özelliği kullanarak net. TCP bağlantı noktası paylaşma hizmetini etkinleştirmek için kullanılır <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> .  
   
- Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bağlantı noktası paylaşımı kullanarak bir WCF hizmetini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md).  
+ Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: WCF hizmetini bağlantı noktası Paylaşımı kullanmak Için yapılandırma](how-to-configure-a-wcf-service-to-use-port-sharing.md).  
   
-## <a name="security-implications-of-port-sharing"></a>Bağlantı noktası paylaşımı, güvenlikle ilgili etkileri  
- Net.TCP bağlantı noktası paylaşma hizmeti bir katman uygulamalar ve ağ arasındaki işleme sağlasa da, ağ üzerinde doğrudan dinleme gibi bağlantı noktası Paylaşımı kullanan uygulamalar yine de sağlanmalıdır. Özellikle, bağlantı noktası Paylaşımı kullanan uygulamalar, altında çalıştığı işlem ayrıcalıklarını değerlendirmelidir. Ağ iletişimi için gerekli işlem ayrıcalıklarını en az sayıda çalıştırır yerleşik ağ hizmeti hesabı kullanarak uygulamanızı çalıştırmayı göz önünde bulundurun.  
+## <a name="security-implications-of-port-sharing"></a>Bağlantı noktası paylaşımının güvenlik etkileri  
+ Net. TCP bağlantı noktası paylaşım hizmeti, uygulamalar ve ağ arasında bir işleme katmanı sağlasa da, bağlantı noktası Paylaşımı kullanan uygulamaların yine de ağı dinlemiş gibi güvenli hale getirilmesi gerekir. Özellikle, bağlantı noktası Paylaşımı kullanan uygulamalar çalıştıkları işlem ayrıcalıklarını değerlendirmelidir. Ağ iletişimi için gereken en düşük işlem ayrıcalıkları kümesiyle çalışan yerleşik ağ hizmeti hesabını kullanarak uygulamanızı çalıştırmayı göz önünde bulundurun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
-- [Barındırma](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Nasıl yapılır: Bağlantı noktası paylaşımı kullanarak bir WCF hizmetini yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
-- [Nasıl yapılır: Net.TCP bağlantı noktası hizmetini etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](configuring-the-net-tcp-port-sharing-service.md)
+- [Hosting](hosting.md)
+- [Nasıl yapılır: Bağlantı Noktası Paylaşımı Kullanarak Bir WCF Hizmetini Yapılandırma](how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [Nasıl yapılır: Net.TCP Bağlantı Noktası Paylaşım Hizmetini Etkinleştirme](how-to-enable-the-net-tcp-port-sharing-service.md)

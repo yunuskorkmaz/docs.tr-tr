@@ -5,45 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184309"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598703"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows Kimlik Doğrulama ile Taşıma Güvenliği
-Aşağıdaki senaryo, Windows Security tarafından güvenli bir Windows Communication Foundation (WCF) istemcisi ve hizmetini gösterir. Programlama hakkında daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
+Aşağıdaki senaryoda Windows güvenliği tarafından güvenliği sağlanmış bir Windows Communication Foundation (WCF) istemcisi ve hizmeti gösterilmektedir. Programlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows kimlik bilgileriyle hizmeti güvenli hale getirme](../how-to-secure-a-service-with-windows-credentials.md).  
   
- Bir intranet Web hizmeti insan kaynakları bilgilerini görüntüler. İstemci bir Windows Form uygulamasıdır. Uygulama, etki alanını koruyan bir Kerberos denetleyicisi olan bir etki alanında dağıtılır.  
+ Bir intranet Web hizmeti insan kaynakları bilgilerini görüntüler. İstemci bir Windows form uygulamasıdır. Uygulama, etki alanının güvenliğini sağlamak üzere Kerberos denetleyicisi olan bir etki alanına dağıtılır.  
   
- ![Windows kimlik doğrulaması ile taşıma güvenliği](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
+ ![Windows kimlik doğrulama ile aktarım güvenliği](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |Özellik|Açıklama|  
 |--------------------|-----------------|  
-|Güvenlik Modu|Aktarım|  
+|Güvenlik modu|Aktarım|  
 |Birlikte çalışabilirlik|Yalnızca WCF|  
-|Kimlik Doğrulama (Sunucu)<br /><br /> Kimlik Doğrulama (İstemci)|Evet (Windows tümleşik kimlik doğrulamakullanarak)<br /><br /> Evet (Windows tümleşik kimlik doğrulamakullanarak)|  
-|Bütünlük|Evet|  
-|Gizlilik|Evet|  
-|Aktarım|Net. Tcp|  
+|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet (Windows tümleşik kimlik doğrulaması kullanarak)<br /><br /> Evet (Windows tümleşik kimlik doğrulaması kullanarak)|  
+|Bütünlük|Yes|  
+|Gizlilik|Yes|  
+|Aktarım|NET. TCP|  
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmak içindir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
-- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamayın.  
+- Sağlanan yapılandırmayı kullanarak bir hizmet oluşturun, ancak herhangi bir uç nokta tanımlamaz.  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod, Windows güvenliği kullanan bir hizmet bitiş noktasının nasıl oluşturulurunun gösteriş olduğunu gösterir.  
+ Aşağıdaki kod, Windows güvenliği kullanan bir hizmet uç noktasının nasıl oluşturulacağını göstermektedir.  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- Hizmet bitiş noktasını ayarlamak için kod yerine aşağıdaki yapılandırma kullanılabilir:  
+ Hizmet uç noktasını ayarlamak için kod yerine aşağıdaki yapılandırma kullanılabilir:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -74,23 +74,23 @@ Aşağıdaki senaryo, Windows Security tarafından güvenli bir Windows Communic
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışmak içindir. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
   
-- Kodu (ve istemci kodunu) kullanarak tek başına bir istemci oluşturun.  
+- Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
   
-- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucuyu kullanın. Örnek:  
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örnek:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Kod  
- Aşağıdaki kod istemciyi oluşturur. Bağlama, TCP aktarımını ve istemci kimlik bilgisi türünü Windows'a ayarlı olarak aktarım modu güvenliğini kullanacak şekilde yapılandırılır.  
+ Aşağıdaki kod istemcisini oluşturur. Bağlama, istemci kimlik bilgisi türü Windows olarak ayarlanmış şekilde TCP aktarımından aktarım modu güvenliğini kullanacak şekilde yapılandırılmıştır.  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
 ### <a name="configuration"></a>Yapılandırma  
- İstemciyi oluşturmak için kod yerine aşağıdaki yapılandırma kullanılabilir.  
+ Aşağıdaki yapılandırma, istemci oluşturmak için kod yerine kullanılabilir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -119,6 +119,6 @@ Aşağıdaki senaryo, Windows Security tarafından güvenli bir Windows Communic
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server App Fabric için Güvenlik Modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Güvenliğe genel bakış](security-overview.md)
+- [Nasıl yapılır: Windows Kimlik Bilgileri ile Bir Hizmeti Güvenli Hale Getirme](../how-to-secure-a-service-with-windows-credentials.md)
+- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -2,15 +2,15 @@
 title: WCF Web HTTP Hizmeti Yardım Sayfası
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 8d798c8080bf1afee87305cd00a27db2ece7e970
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ef42457dea8bfe12a3e5054c5eacdf5a2964fdc7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975934"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600172"
 ---
 # <a name="wcf-web-http-service-help-page"></a>WCF Web HTTP Hizmeti Yardım Sayfası
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], WCF WEB HTTP Hizmetleri için bir otomatik yardım sayfası sağlar. Bu Yardım sayfasında her bir işlemin, istek ve yanıt biçimlerinin ve şemaların açıklaması listelenir. Bu işlev varsayılan olarak kapalıdır. Kullanıcı bir WCF WEB HTTP hizmetine gözadığında ve URL 'nin sonuna "/Help" ekler; örneğin `http://localhost:8000/Customers/Help`, aşağıdaki gibi bir yardım sayfası görüntülenir.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]WCF WEB HTTP Hizmetleri için bir otomatik yardım sayfası sağlar. Bu Yardım sayfasında her bir işlemin, istek ve yanıt biçimlerinin ve şemaların açıklaması listelenir. Bu işlev varsayılan olarak kapalıdır. Kullanıcı bir WCF WEB HTTP hizmetine gözadığında ve URL 'nin sonuna "/Help" ekler; örneğin `http://localhost:8000/Customers/Help` , aşağıdaki gibi bir yardım sayfası görüntülenir.  
   
  ![WCF REST yardım sayfası açık bir tarayıcı.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
@@ -19,7 +19,7 @@ ms.locfileid: "73975934"
  ![GetCustomers yönteminin açık olması için WCF REST yardım sayfası ayrıntılarına sahip bir tarayıcı.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>WCF Web HTTP Yardım sayfasını kullanma  
- WCF WEB HTTP Yardım sayfası, <xref:System.ComponentModel.DescriptionAttribute>kullanarak bir tane belirttiğinizde her bir işlem için kısa bir açıklama görüntüler. Bu öznitelik, uygulandığı işlemin kısa bir açıklamasını içeren bir dize alır. Örneğin, aşağıdaki kod, kısa bir açıklama sağlamak için <xref:System.ComponentModel.DescriptionAttribute> nasıl kullanacağınızı gösterir.  
+ WCF WEB HTTP Yardım sayfası, kullanarak bir tane belirttiğinizde her bir işlem için kısa bir açıklama görüntüler <xref:System.ComponentModel.DescriptionAttribute> . Bu öznitelik, uygulandığı işlemin kısa bir açıklamasını içeren bir dize alır. Örneğin, aşağıdaki kod, <xref:System.ComponentModel.DescriptionAttribute> kısa bir açıklama sağlamak için ' nin nasıl kullanılacağını göstermektedir.  
   
 ```csharp
 [OperationContract]  
@@ -28,7 +28,7 @@ ms.locfileid: "73975934"
 SyndicationFeedFormatter GetTemplate1();  
 ```  
   
- WCF WEB HTTP Yardım sayfasını açmak için hizmetinizin uç noktalarına bir uç nokta davranışı eklemeniz gerekir. Bu, yapılandırma veya kod içinde yapılabilir. Yapılandırmada WCF WEB HTTP Yardım yaşı 'nı etkinleştirmek için, `<webHttp>` bir öğesi olan bir uç nokta davranışı ekleyin, `enableHelp` `true`olarak ayarlayın ve bir uç nokta ekleyin ve bunu uç nokta davranışını kullanacak şekilde yapılandırın. Aşağıdaki yapılandırma kodu bunun nasıl yapılacağını gösterir.  
+ WCF WEB HTTP Yardım sayfasını açmak için hizmetinizin uç noktalarına bir uç nokta davranışı eklemeniz gerekir. Bu, yapılandırma veya kod içinde yapılabilir. Yapılandırmada WCF WEB HTTP Yardım yaşı 'nı etkinleştirmek için, bir öğesi olan bir uç nokta davranışı ekleyin, `<webHttp>` `enableHelp` olarak ayarlayın `true` ve bir uç nokta ekleyin ve uç nokta davranışını kullanacak şekilde yapılandırın. Aşağıdaki yapılandırma kodu bunun nasıl yapılacağını gösterir.  
   
 ```xml  
 <endpointBehaviors>  
@@ -45,7 +45,7 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Kodda WCF Web HTTP Yardım sayfasını etkinleştirmek için bir hizmet uç noktası ekleyin ve uç nokta ayarına <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> `true`<xref:System.ServiceModel.Description.WebHttpBehavior> ekleyin. Aşağıdaki kod bunun nasıl yapılacağını gösterir.  
+ Kodda WCF Web HTTP Yardım sayfasını etkinleştirmek için bir hizmet uç noktası ekleyin ve <xref:System.ServiceModel.Description.WebHttpBehavior> uç nokta ayarına <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> öğesine ekleyin `true` . Aşağıdaki kod bunun nasıl yapılacağını gösterir.  
   
 ```csharp
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
@@ -56,7 +56,7 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 }  
 ```  
   
- Yardım sayfası, sayfanın farklı kısımlarını tanımlayan işaretle temel alınarak XHTML 'dir. Bu, istemcilerin <xref:System.Xml.Linq.XElement> veya diğer Xlınq API 'Lerini kullanarak sayfaya programlı bir şekilde erişmesini sağlar.  
+ Yardım sayfası, sayfanın farklı kısımlarını tanımlayan işaretle temel alınarak XHTML 'dir. Bu, istemcilerin sayfaya <xref:System.Xml.Linq.XElement> veya diğer Xlınq API 'lerini kullanarak programlı bir şekilde erişmesini sağlar.  
   
 ## <a name="schemas-used-in-the-wcf-web-http-service-help-page"></a>WCF Web HTTP hizmeti Yardım sayfasında kullanılan şemalar  
  Aşağıdaki şemalar WCF Web HTTP hizmeti Yardım sayfasında kullanılır.  
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Veri sözleşmesi serileştirme şeması hakkında daha fazla bilgi için bkz. [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Veri sözleşmesi serileştirme şeması hakkında daha fazla bilgi için bkz. [veri sözleşmesi şema başvurusu](data-contract-schema-reference.md).

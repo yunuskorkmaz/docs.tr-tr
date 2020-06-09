@@ -2,37 +2,37 @@
 title: Davranışlar
 ms.date: 03/30/2017
 ms.assetid: b0885b65-4e74-4bc9-bbf0-eb7ebe566da1
-ms.openlocfilehash: 949c56ea44162166f32eefec013b490a49272f7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79cc9af5a2050ccee4da3239fa89d704b6378d04
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944111"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575570"
 ---
 # <a name="behaviors"></a>Davranışlar
-Bu bölüm, Windows Communication Foundation (WCF) hizmet davranışlarını gösteren örnekler içerir.  
+Bu bölüm Windows Communication Foundation (WCF) hizmet davranışlarını gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Eşzamanlılık](../../../../docs/framework/wcf/samples/concurrency.md)  
- Kullanmayı gösterir <xref:System.ServiceModel.ServiceBehaviorAttribute> ile <xref:System.ServiceModel.ConcurrencyMode> sabit listesi bir hizmet örneği sırayla veya aynı anda iletileri işleyen olup olmadığını denetler.  
+ [Eşzamanlılık](concurrency.md)  
+ , <xref:System.ServiceModel.ServiceBehaviorAttribute> <xref:System.ServiceModel.ConcurrencyMode> Bir hizmet örneğinin iletileri sıralı veya eşzamanlı olarak işleme gerekmediğini denetleyen numaralandırma ile kullanımını gösterir.  
   
- [Varsayılan Hizmet Davranışı](../../../../docs/framework/wcf/samples/default-service-behavior.md)  
- Hizmet davranışı ayarları nasıl yapılandırılabileceğini göstermektedir.  
+ [Varsayılan Hizmet Davranışı](default-service-behavior.md)  
+ Hizmet davranışı ayarlarının nasıl yapılandırılabileceğini gösterir.  
   
- [Örnek Oluşturma](../../../../docs/framework/wcf/samples/instancing.md)  
- İstemci isteklerine yanıt olarak bir hizmet sınıfı örneğini nasıl oluşturulduğunu denetimleri örneklemesini davranışı ayarını gösterir.  
+ [Örnek Oluşturma](instancing.md)  
+ İstemci isteklerine yanıt olarak bir hizmet sınıfı örneklerinin nasıl oluşturulduğunu denetleyen örnek oluşturma davranış ayarını gösterir.  
   
- [Meta Veri Yayımlama Davranışı](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)  
- Meta veri yayımlama bir hizmetin özelliklerini denetlemek nasıl gösterir.  
+ [Meta Veri Yayımlama Davranışı](metadata-publishing-behavior.md)  
+ Bir hizmetin meta veri yayımlama özelliklerinin nasıl kontrol leceğini gösterir.  
   
- [Hizmet İşlem Davranışı](../../../../docs/framework/wcf/samples/service-transaction-behavior.md)  
- İstemci eşgüdümlü bir işlem kullanımı ve ayarlarını gösterir <xref:System.ServiceModel.ServiceBehaviorAttribute> ve <xref:System.ServiceModel.OperationBehaviorAttribute> denetim hizmet işlem davranışı için.  
+ [Hizmet İşlem Davranışı](service-transaction-behavior.md)  
+ İstemci ile eşgüdümlü bir işlemin kullanımını ve <xref:System.ServiceModel.ServiceBehaviorAttribute> <xref:System.ServiceModel.OperationBehaviorAttribute> hizmet işlem davranışının denetim için ve ayarlarını gösterir.  
   
- [Hizmet Hata Ayıklama Davranışı](../../../../docs/framework/wcf/samples/service-debug-behavior.md)  
- Hizmet hata ayıklama davranışı ayarları nasıl yapılandırılabileceğini göstermektedir.  
+ [Hizmet Hata Ayıklama Davranışı](service-debug-behavior.md)  
+ Hizmet hata ayıklama davranışı ayarlarının nasıl yapılandırılabileceğini gösterir.  
   
- [Sınırlama](../../../../docs/framework/wcf/samples/throttling.md)  
- Azaltma denetimleri kullanımını gösterir.  
+ [Azaltma](throttling.md)  
+ Daraltma denetimlerinin kullanımını gösterir.  
   
- [Davranış Güvenliği](../../../../docs/framework/wcf/samples/behavior-security.md)  
- Yapılandırma hizmeti davranış güvenliği gösterir.
+ [Davranış Güvenliği](behavior-security.md)  
+ Hizmet davranışı güvenliğini yapılandırmayı gösterir.

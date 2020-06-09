@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 0d7b952382b50daae0291ed6afb22bb612447670
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: abd81b5e7bf611fc6b4f446a82628b83130f2d54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920154"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599210"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista, Windows Server 2003 ve Windows XP'de Kuyruğa Alma Özelliği Arasındaki Farklar
 Bu konu, Windows Vista, Windows Server 2003 ve Windows XP arasındaki Windows Communication Foundation (WCF) kuyrukları özelliğindeki farklılıkları özetler.  
   
 ## <a name="application-specific-dead-letter-queue"></a>Uygulamaya özgü atılacak mektup kuyruğu  
- Alıcı uygulama bunları zamanında okuyacaksa, sıradaki iletiler süresiz olarak kuyrukta kalabilir. İletiler zamana duyarlı ise bu davranış önerilmez. Zamana duyarlı iletilerde sıraya alınmış bağlamada ayarlanmış bir `TimeToLive` özelliği vardır. Bu özellik, iletilerin süreleri dolmadan önce kuyrukta ne kadar süreyle kalabileceğini gösterir. Süre dolmayan iletiler, teslim edilemeyen ileti sırası adlı özel bir kuyruğa gönderilir. Bir ileti ayrıca, bir kuyruk kotasının aşılması veya bir kimlik doğrulama hatası yaşaması gibi diğer nedenlerden dolayı atılacak bir sıraya göre de sona çıkabilir.  
+ Alıcı uygulama bunları zamanında okuyacaksa, sıradaki iletiler süresiz olarak kuyrukta kalabilir. İletiler zamana duyarlı ise bu davranış önerilmez. Zamana duyarlı iletilerde `TimeToLive` sıraya alınmış bağlamada bir özellik ayarlanmış. Bu özellik, iletilerin süreleri dolmadan önce kuyrukta ne kadar süreyle kalabileceğini gösterir. Süre dolmayan iletiler, teslim edilemeyen ileti sırası adlı özel bir kuyruğa gönderilir. Bir ileti ayrıca, bir kuyruk kotasının aşılması veya bir kimlik doğrulama hatası yaşaması gibi diğer nedenlerden dolayı atılacak bir sıraya göre de sona çıkabilir.  
   
  Genellikle, bir kuyruk yöneticisini paylaşan tüm sıraya alınmış uygulamalar için sistem genelinde tek bir atılacak ileti sırası vardır. Her uygulama için atılacak bir sıra, bu uygulamaların uygulamaya özel atılacak ileti kuyruğunu belirtmesini sağlayarak bir kuyruk yöneticisini paylaşan sıraya alınmış uygulamalar arasında daha iyi yalıtımı sağlar. Diğer uygulamalarla teslim edilemeyen bir ileti sırasını paylaşan bir uygulamanın, kendisine uygulanabilen iletileri bulmak için kuyruğa gözatmaları vardır. Uygulamaya özel bir atılacak ileti kuyruğu ile uygulama, atılacak ileti sırasındaki tüm iletilerin uygulanabilir olduğundan emin olabilir.  
   
@@ -26,9 +26,9 @@ Bu konu, Windows Vista, Windows Server 2003 ve Windows XP arasındaki Windows Co
   
  Windows Vista, Windows Server 2003 ve Windows XP 'deki Message Queuing (MSMQ) ile, zehirli işleme uygun olan önemli farklılıklar şunlardır:  
   
-- Windows Vista 'da MSMQ alt sıraları destekler, ancak Windows Server 2003 ve Windows XP alt sıraları desteklemez. Alt sıralar, zehirli ileti işlemede kullanılır. Yeniden deneme kuyrukları ve zarar sırası, zarar iletisi işleme ayarlarına göre oluşturulan uygulama kuyruğu için alt çizglardır. `MaxRetryCycles`, kaç yeniden deneme alt için oluşturulacağını belirler. Bu nedenle, Windows Server 2003 veya Windows XP 'de çalışırken `MaxRetryCycles` yok sayılır ve `ReceiveErrorHandling.Move` izin verilmez.  
+- Windows Vista 'da MSMQ alt sıraları destekler, ancak Windows Server 2003 ve Windows XP alt sıraları desteklemez. Alt sıralar, zehirli ileti işlemede kullanılır. Yeniden deneme kuyrukları ve zarar sırası, zarar iletisi işleme ayarlarına göre oluşturulan uygulama kuyruğu için alt çizglardır. , `MaxRetryCycles` Oluşturulacak yeniden deneme alt sıraların sayısını belirler. Bu nedenle, Windows Server 2003 veya Windows XP 'de çalışırken `MaxRetryCycles` yok sayılır ve `ReceiveErrorHandling.Move` buna izin verilmez.  
   
-- Windows Vista 'da MSMQ negatif bildirimi destekler, ancak Windows Server 2003 ve Windows XP desteklemez. Alma kuyruğu yöneticisinin olumsuz bir bildirimi, gönderme kuyruğu yöneticisinin reddedilen iletiyi atılacak ileti kuyruğuna yerleştirmesini sağlar. Bu nedenle, Windows Server 2003 ve Windows XP 'de `ReceiveErrorHandling.Reject` izin verilmez.  
+- Windows Vista 'da MSMQ negatif bildirimi destekler, ancak Windows Server 2003 ve Windows XP desteklemez. Alma kuyruğu yöneticisinin olumsuz bir bildirimi, gönderme kuyruğu yöneticisinin reddedilen iletiyi atılacak ileti kuyruğuna yerleştirmesini sağlar. Bu nedenle, `ReceiveErrorHandling.Reject` Windows Server 2003 ve WINDOWS XP 'de buna izin verilmez.  
   
 - Windows Vista 'da MSMQ, ileti tesliminin denenme sayısı sayısını tutan bir ileti özelliğini destekler. Bu Abort Count özelliği Windows Server 2003 ve Windows XP 'de kullanılamaz. WCF, iptal sayısını bellekte tutar, bu nedenle aynı ileti bir Web grubunda birden fazla WCF hizmeti tarafından okunabildiği zaman bu özelliğin doğru bir değer içermemesi olasıdır.  
   
@@ -37,5 +37,5 @@ Bu konu, Windows Vista, Windows Server 2003 ve Windows XP arasındaki Windows Co
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [Zehirli İleti İşleme](poison-message-handling.md)

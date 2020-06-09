@@ -2,49 +2,49 @@
 title: Basic2
 ms.date: 03/30/2017
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-ms.openlocfilehash: 72540a1a36a8807a1644c10448210ddc8bf15b75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6c1dcfaebd74e7cc401b555e834bca2ac8da856
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575686"
 ---
 # <a name="basic"></a>Temel
-Bu bölümde, temel Windows Communication Foundation (WCF) işlevlerini gösteren örnekler bölümlerini içerir.  
+Bu bölüm, temel Windows Communication Foundation (WCF) işlevlerini gösteren örneklerin bölümlerini içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)  
- Tipik bir hizmeti ve WCF kullanarak tipik bir istemci uygulama gösterilmiştir.  
+ [Başlarken](getting-started-sample.md)  
+ WCF kullanılarak tipik bir hizmetin ve tipik bir istemcinin nasıl uygulanacağını gösterir.  
   
- [AJAX](../../../../docs/framework/wcf/samples/ajax.md)  
+ [AJAX](ajax.md)  
  Zaman uyumsuz JavaScript ve XML gösterir.  
   
- [Bağlama](../../../../docs/framework/wcf/samples/binding.md)  
- Bir uç nokta öğesinin bağlama özniteliği kullanmayı gösterir.  
+ [Bağlama](binding.md)  
+ Bir uç nokta öğesinin Binding özniteliğini kullanmayı gösterir.  
   
- [İstemci](../../../../docs/framework/wcf/samples/client.md)  
- WCF istemci uygulamalarının gösterir.  
+ [İstemci](client.md)  
+ WCF istemci uygulamalarını gösterir.  
   
- [Anlaşma](../../../../docs/framework/wcf/samples/contract.md)  
- Veri sözleşmeleri gösterir.  
+ [Sözleşme](contract.md)  
+ Veri Sözleşmelerini gösterir.  
   
- [Bulma](../../../../docs/framework/wcf/samples/discovery-samples.md)  
- WCF bulma gösterir.  
+ [Keşfini](discovery-samples.md)  
+ WCF bulmayı gösterir.  
   
- [Yönetim](../../../../docs/framework/wcf/samples/management.md)  
- WCF yönetim gösterir.  
+ [Yönetim](management.md)  
+ WCF yönetimini gösterir.  
   
- [Yönlendirme Hizmetleri](../../../../docs/framework/wcf/samples/routing-services.md)  
- WCF yönlendirme hizmetleri gösterir.  
+ [Yönlendirme Hizmetleri](routing-services.md)  
+ WCF yönlendirme hizmetlerini gösterir.  
   
- [Güvenlik](../../../../docs/framework/wcf/samples/security-in-wcf.md)  
- WCF güvenlik gösterir.  
+ [Güvenlik](security-in-wcf.md)  
+ WCF güvenliğini gösterir.  
   
- [Hizmetler](../../../../docs/framework/wcf/samples/services.md)  
- WCF hizmetleri gösterir.  
+ [Hizmetler](services.md)  
+ WCF hizmetlerini gösterir.  
   
- [Dağıtım](../../../../docs/framework/wcf/samples/syndication.md)  
- DemonstratesWCF dağıtım.  
+ [Dağıtım](syndication.md)  
+ Demonstratejik Swcf dağıtımı.  
   
- [Web](../../../../docs/framework/wcf/samples/web.md)  
- WCF Web barındırma gösterir.
+ [Web](web.md)  
+ WCF 'de Web barındırma gösterir.

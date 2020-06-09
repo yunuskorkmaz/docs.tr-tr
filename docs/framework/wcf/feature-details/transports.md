@@ -6,42 +6,42 @@ helpviewer_keywords:
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 077d63d8038b245a68083611897c1e6c68971071
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933737"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598677"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation'da Taşımalar
-Kanal yığının en düşük düzey aktarım katmanıdır. Windows Communication Foundation (WCF) kullanılan ana taşımalar, HTTP, HTTPS, TCP ve adlandırılmış kanallar ' dir. Bu bölümdeki konular arasında bu taşımaları seçme, aktarım yapılandırma ve ayarlama özellikleri ayarlama açıklanmaktadır.  
+Aktarım katmanı, kanal yığınının en düşük düzeyindedir. Windows Communication Foundation (WCF) ' de kullanılan ana aktarımlar HTTP, HTTPS, TCP ve adlandırılmış kanallardır. Bu bölümdeki konular, bu aktarımlar arasında seçim yapma, taşımayı yapılandırma ve ayarlama özelliklerini ayarlama hakkında tartışın.  
   
- WCF ek taşımalar içerir. Message Queuing (MSMQ olarak da bilinir) taşıma hakkında daha fazla bilgi için bkz. [kuyruklar ve güvenilir oturumlar](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md). Eşler arası taşıma hakkında daha fazla bilgi için bkz. [eşler arası ağ](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ WCF ek aktarımlar içerir. Message Queuing (MSMQ olarak da bilinir) taşıma hakkında daha fazla bilgi için bkz. [Kuyruklar ve güvenilir oturumlar](queues-and-reliable-sessions.md). Eşler arası aktarım hakkında daha fazla bilgi için bkz. eşler [arası ağ iletişimi](peer-to-peer-networking.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Taşıma Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- Üç ana aktarımları ve bir seçerken konularını açıklar.  
+ [Taşıma Seçme](choosing-a-transport.md)  
+ Üç ana aktarım ve seçim ile ilgili dikkat edilmesi gerekenler açıklanmaktadır.  
   
- [İleti Kodlayıcı Seçme](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
- Bir ileti kodlama bağlama öğesi seçerken dikkate alınması gereken faktörler açıklanmaktadır.  
+ [İleti Kodlayıcı Seçme](choosing-a-message-encoder.md)  
+ İleti kodlama bağlama öğesi seçerken göz önünde bulundurmanız gereken faktörleri açıklar.  
   
- [İleti Aktarma Akışı](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)  
- Akış yapmak için Aktarım katmanı yapılandırılması açıklanmaktadır.  
+ [İleti Aktarma Akışı](streaming-message-transfer.md)  
+ Akış yapmak için aktarım katmanının nasıl yapılandırılacağını açıklar.  
   
- [HTTP ve HTTPS Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
- HTTP ve HTTPS aktarım bağlama öğelerinin yapılandırılması açıklanmaktadır.  
+ [HTTP ve HTTPS Yapılandırma](configuring-http-and-https.md)  
+ HTTP ve HTTPS aktarım bağlama öğelerinin nasıl yapılandırılacağını açıklar.  
   
- [Nasıl yapılır: WCF URL ayırmayı kısıtlı ayırma ile değiştirme](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- Kısıtlı WCFURL ayırmaları kullanmayı açıklar.  
+ [Nasıl yapılır: WCF URL Ayırmayı Kısıtlı Ayırma ile Değiştirme](how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ WCFURL kısıtlı ayırmaları kullanmayı açıklar.  
   
- [Taşıma Kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
- Aktarım katmanında kullanılabilir kotaları ayarlama konuları açıklanmaktadır.  
+ [Taşıma Kotaları](transport-quotas.md)  
+ Aktarım katmanında kullanılabilir kotaları ayarlamayla ilgili önemli noktaları açıklar.  
   
- [NAT ve Güvenlik Duvarlarıyla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)  
- Aktarım katmanı gönderilen ya da bir güvenlik duvarının arkasındaki veya ağ adresi çevirisi (NAT) olduğunda alınan iletileri yapılandırılması açıklanmaktadır.  
+ [NAT ve Güvenlik Duvarlarıyla Çalışma](working-with-nats-and-firewalls.md)  
+ Bir güvenlik duvarının arkasında veya ağ adresi çevirisi (NAT) olduğunda iletiler gönderildiğinde veya alındığında aktarım katmanının nasıl yapılandırılacağını açıklar.  
   
- [Net.TCP Bağlantı Noktası Paylaşımı](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- Net.TCP bağlantı noktası paylaşımı bileşen WCF kullanmayı açıklar.  
+ [Net.TCP Bağlantı Noktası Paylaşımı](net-tcp-port-sharing.md)  
+ WCF 'nin net. TCP bağlantı noktası paylaşma bileşeninin nasıl kullanılacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
@@ -53,6 +53,6 @@ Kanal yığının en düşük düzey aktarım katmanıdır. Windows Communicatio
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)  
+ [Bağlamalar](bindings.md)  
   
- [Bağlamaları Genişletme](../../../../docs/framework/wcf/extending/extending-bindings.md)
+ [Bağlamaları Genişletme](../extending/extending-bindings.md)

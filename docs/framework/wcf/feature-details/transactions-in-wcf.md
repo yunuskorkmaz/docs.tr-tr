@@ -5,34 +5,34 @@ helpviewer_keywords:
 - WCF, using transactions
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
-ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e743cd14d2a601f52baaf6769e96503dcd3701d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933139"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600704"
 ---
 # <a name="transactions-in-wcf"></a>WCF 'de İşlemler
-Windows Communication Foundation (WCF) işlem özelliği, bir veri işlemi eşzamanlı olarak katılmak çeşitli bileşenleri sağlar. Bu bölümdeki konularda ayrıntılı özellik inceleyin.  
+Windows Communication Foundation (WCF) işlemler özelliği, çeşitli bileşenlerin bir veri işlemine eşzamanlı olarak katılmasına olanak sağlar. Bu bölümdeki konular, özelliği ayrıntılı olarak inceler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Communication Foundation İşlemleri Genel Bakış](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
- WCF tarafından sağlanan işlemler özelliğine genel bakış.  
+ [Windows Communication Foundation İşlemleri Genel Bakış](transactions-overview.md)  
+ WCF tarafından sunulan işlemler özelliğine genel bakış.  
   
- [İşlem Modelleri](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
- Microsoft tarafından sağlanan çeşitli işlem programlama modelleri karşılaştırır.  
+ [İşlem Modelleri](transaction-models.md)  
+ Microsoft tarafından sunulan çeşitli işlem programlama modellerini karşılaştırır.  
   
- [WS-AtomicTransaction Kullanma](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
- WS-AtomicTransaction (WS-AT) WCF'de uygulanan bir birlikte çalışabilen bir işlem yayma protokolü açıklar.  
+ [WS-AtomicTransaction Kullanma](using-ws-atomictransaction.md)  
+ WCF 'de uygulanan, birlikte çalışabilen bir işlem yayma protokolü olan WS-AtomicTransaction (WS-AT) açıklanmaktadır.  
   
- [System.ServiceModel İşlemsel Desteği](../../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
- WCF tarafından sağlanan işlem işlevlerini açıklar.  
+ [System.ServiceModel İşlemsel Desteği](transactional-support-in-system-servicemodel.md)  
+ WCF tarafından sunulan işlem işlevlerini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Temel WCF Programlama](../basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenilir Oturumlara Genel Bakış](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [Güvenilir Oturumlar Genel Bakış](reliable-sessions-overview.md)

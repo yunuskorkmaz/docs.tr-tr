@@ -2,23 +2,23 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: ce21d9d099d893015ea828bdc3b136ab83f6d8e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b2b4d9b22f654fa433c7473160444b41a5adfa4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183426"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575164"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-OperationContextScope örneği, üstbilgileri kullanarak Windows Communication Foundation (WCF) araması hakkında nasıl ek bilgi gönderilebildiğini gösterir. Bu örnekte, hem sunucu hem de istemci konsol uygulamalarıdır.  
+OperationContextScope örneği, üst bilgiler kullanılarak Windows Communication Foundation (WCF) çağrısıyla nasıl ek bilgi gönderileceğini gösterir. Bu örnekte, hem sunucu hem de istemci konsol uygulamalardır.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnek, istemcinin <xref:System.ServiceModel.Channels.MessageHeader> kullanarak <xref:System.ServiceModel.OperationContextScope>nasıl ek bilgi gönderebileceğini gösterir. Bir <xref:System.ServiceModel.OperationContextScope> nesne bir kanala kapsam alabilmek için oluşturulur. Uzak hizmete çevrilmesi gereken üstbilgi <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> koleksiyona eklenebilir. Bu koleksiyona eklenen başlıklar erişerek hizmetten <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>alınabilir. Onun aramaları birden çok kanalda yapılır ve daha sonra istemciye eklenen üstbilgi yalnızca <xref:System.ServiceModel.OperationContextScope>oluşturmak için kullanılan kanal için geçerlidir.  
+ Örnek, bir istemcinin kullanarak nasıl ek bilgi gönderebileceğinizi gösterir <xref:System.ServiceModel.Channels.MessageHeader> <xref:System.ServiceModel.OperationContextScope> . Bir <xref:System.ServiceModel.OperationContextScope> nesne, bir kanalda tanımlayarak oluşturulur. Uzak hizmete çevrilmesi gereken üstbilgiler <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> koleksiyona eklenebilir. Bu koleksiyona eklenen üst bilgiler, hizmetine erişerek hizmetten alınabilir <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> . Çağrıları birden çok kanalda yapılır ve ardından istemciye eklenen üstbilgiler yalnızca oluşturmak için kullanılan kanala uygulanır <xref:System.ServiceModel.OperationContextScope> .  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
- Bu, istemciden bir ileti alan ve <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> koleksiyondaki üstbilgiyi aramaya çalışan örnek hizmettir. İstemci üstbilgide gönderdiği GUID'i geçer ve hizmet özel üstbilgi alır ve varsa istemci tarafından bağımsız değişken olarak geçirilen GUID ile karşılaştırır.  
+ Bu, istemciden bir ileti alan ve koleksiyondaki üstbilgiyi aramaya çalışan örnek hizmettir <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> . İstemci, üst bilgiyle gönderilen GUID 'YI geçirir ve hizmet özel üstbilgiyi alır ve varsa, bunu istemci tarafından bağımsız değişken olarak geçirilen GUID ile karşılaştırır.  
   
 ```csharp
 public bool RetrieveHeader(string guid)  
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Bu, uzak hizmetle iletişim kurmak için [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan proxy'yi kullanan istemci uygulamasıdır. İlk olarak iki proxy nesnesi `MessageHeaderReaderClient`oluşturur.  
+ Bu, uzak hizmetle iletişim kurmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan proxy 'yi kullanan istemci uygulamasıdır. İlk olarak iki proxy nesnesi oluşturur `MessageHeaderReaderClient` .  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- İstemci daha sonra bir OperationContextScope `client1`oluşturur ve ''ye göre' yi . Her iki <xref:System.ServiceModel.Channels.MessageHeader> <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> istemciye de bir çağrı ekler ve çağırır. Üstbilginin, aramadan gelen iade `client1` değerini `client2` kontrol ederek yalnızca açmave açmama olarak gönderilmesini `RetrieveHeader` sağlar.  
+ İstemci daha sonra bir OperationContextScope oluşturur ve bunu ile kapsamlar `client1` . <xref:System.ServiceModel.Channels.MessageHeader> <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> Her iki istemcide bir çağrı ekler ve çağırır. `client1` `client2` Çağrının dönüş değeri denetleyerek, üstbilginin yalnızca üzerinde gönderilmesini sağlar `RetrieveHeader` .  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -90,7 +90,7 @@ using (new OperationContextScope(client1.InnerChannel))
 }  
 ```  
   
- Bu örnek kendi kendine barındırılır. Numunenin çalıştırılışından elde edilen aşağıdaki örnek çıktı sağlanır:  
+ Bu örnek kendi kendine barındırılır. Örnek çalıştırmanın aşağıdaki örnek çıktısı verilmiştir:  
   
 ```console  
 Prompt> Service.exe  
@@ -113,19 +113,19 @@ Did server retrieve the header? : Actual: False, Expected: False
 Press <ENTER> to terminate client.  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

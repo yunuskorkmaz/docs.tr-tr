@@ -2,76 +2,76 @@
 title: İşlem Biçimlendirici ve İşlem Seçici
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 9d1bc0afa54f89e064eab3f3e45da60c8d10de38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d3122d03e89a7f20e391db49005d0e085dfa6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144285"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575179"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>İşlem Biçimlendirici ve İşlem Seçici
-Bu örnek, Windows Communication Foundation (WCF) genişletilebilirlik noktalarının, ileti verilerine WCF'nin beklediğinden farklı bir biçimde izin vermek için nasıl kullanılabileceğini göstermektedir. Varsayılan olarak, WCF formatters yöntem parametrelerinin `soap:body` öğenin altına dahil olmasını bekler. Örnek, parametre verilerini bir HTTP GET sorgu dizesinden ayrıştıran ve bu verileri kullanarak yöntemler çağıran özel bir işlem formatter'ın nasıl uygulanacağını gösterir.  
+Bu örnek, WCF 'nin beklediği farklı biçimdeki ileti verilerine izin vermek için Windows Communication Foundation (WCF) genişletilebilirlik noktalarının nasıl kullanılabileceğini gösterir. Varsayılan olarak, WCF biçimleri öğesi altına eklenecek yöntem parametrelerini bekler `soap:body` . Örnek, bunun yerine bir HTTP GET sorgu dizesinden parametre verilerini çözümleyen ve bu verileri kullanarak yöntemleri çağıran özel bir işlem biçimlendiricinin nasıl uygulanacağını gösterir.  
   
- Örnek, hizmet sözleşmesini uygulayan [Başlarken'e](../../../../docs/framework/wcf/samples/getting-started-sample.md) `ICalculator` dayanır. İletileri Ekle, Çıkar, Çarpve Böl'ün istemciden sunucuya istekler için HTTP GET'i ve sunucudan istemciye yanıtlar için POX iletileriyle HTTP POST'u kullanmak üzere nasıl değiştirilebileceğini gösterir.  
+ Örnek, hizmet sözleşmesini uygulayan [kullanmaya](getting-started-sample.md)Başlarken ' i temel alır `ICalculator` . Ekleme, çıkarma, çarpma ve bölme iletilerinin, sunucudan istemciye yanıtlara yönelik POX iletileri ile istemci-sunucu istekleri ve HTTP POST için HTTP GET kullanmak üzere nasıl değiştirileceğini gösterir.  
   
- Bunu yapmak için, örnek aşağıdakileri sağlar:  
+ Bunu yapmak için örnek şunları sağlar:  
   
-- `QueryStringFormatter`, sırasıyla <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> istemci ve sunucu için uygular ve sorgu dizesindeki verileri işler.  
+- `QueryStringFormatter`, <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> sırasıyla istemci ve sunucu uygulayan ve sorgu dizesindeki verileri işleyen.  
   
-- `UriOperationSelector`, GET <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> isteğindeki işlem adına göre işlem gönderme gerçekleştirmek için sunucuda uygular.  
+- `UriOperationSelector`Bu, <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> Get isteğindeki işlem adına göre işlem gönderimi gerçekleştirmek için sunucusunu kullanır.  
   
-- `EnableHttpGetRequestsBehavior`çalışma süresine gerekli işlem seçicisini ekleyen uç nokta davranışı (ve buna karşılık gelen yapılandırma).  
+- `EnableHttpGetRequestsBehavior`gerekli işlem seçiciyi çalışma zamanına ekleyen uç nokta davranışı (ve karşılık gelen yapılandırma).  
   
-- Çalışma süresine yeni bir işlem için nasıl ekilir gösterir.  
+- Çalışma zamanına nasıl yeni bir işlem biçimlendirici ekleneceğini gösterir.  
   
-- Bu örnekte, hem istemci hem de hizmet konsol uygulamaları (.exe) vardır.  
+- Bu örnekte, hem istemci hem de hizmet konsol uygulamalardır (. exe).  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="key-concepts"></a>Önemli Kavramlar  
- `QueryStringFormatter`- Formatter işlemi, WCF'de bir iletiyi parametre nesnelerine ve bir dizi parametre nesnesine bir iletiye dönüştürmekten sorumlu olan bileşendir. Bu <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> arabirim kullanılarak istemci ve <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> arabirim ile sunucuda yapılır. Bu arabirimler, kullanıcıların istek ve yanıt `Serialize` iletilerini `Deserialize` yöntem ve yöntemlerden almalarını sağlar.  
+ `QueryStringFormatter`-İşlem biçimlendirici, bir iletiyi bir parametre nesneleri dizisine ve bir dizi parametre nesnesine dönüştürmekten sorumlu olan WCF 'deki bileşendir. Bu, <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> arabirimi kullanılarak ve arabirimi ile sunucusunda yapılır <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> . Bu arabirimler, kullanıcıların ve yöntemlerinden istek ve yanıt iletilerini almasını sağlar `Serialize` `Deserialize` .  
   
- Bu örnekte, `QueryStringFormatter` bu arabirimlerin her ikisini de uygular ve istemci ve sunucu üzerinde uygulanır.  
+ Bu örnekte, `QueryStringFormatter` Bu arabirimlerin her ikisini de uygular ve istemci ve sunucu üzerinde uygulanır.  
   
  İstek:  
   
-- Örnek, istek <xref:System.ComponentModel.TypeConverter> iletisindeki parametre verilerini dizeleri dizeleri ve dizeleri dönüştürmek için sınıfı kullanır. Belirli <xref:System.ComponentModel.TypeConverter> bir tür için a kullanılamıyorsa, örnek madde bir özel durum oluşturur.  
+- Örnek, <xref:System.ComponentModel.TypeConverter> istek iletisindeki parametre verilerini dizeden ve dizeden dönüştürmek için sınıfını kullanır. Belirli bir <xref:System.ComponentModel.TypeConverter> tür için kullanılabilir değilse, örnek biçimlendirici bir özel durum oluşturur.  
   
-- İstemci `IClientMessageFormatter.SerializeRequest` üzerindeki yöntemde, formatter uygun Adres ile bir URI oluşturur ve bir sonek olarak işlem adı ekler. Bu ad, sunucudaki uygun işlemi göndermek için kullanılır. Daha sonra parametre nesneleri dizialır ve parametre adları ve <xref:System.ComponentModel.TypeConverter> sınıf tarafından dönüştürülen değerleri kullanarak URI sorgu dizepara verileri serileştirir. Ve <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> özellikleri daha sonra bu URI ayarlanır. <xref:System.ServiceModel.Channels.MessageProperties><xref:System.ServiceModel.Channels.Message.Properties%2A> tesis üzerinden erişilir.  
+- `IClientMessageFormatter.SerializeRequest`İstemci üzerindeki yönteminde, biçimlendirici uygun BIR URI oluşturur ve işlem adını bir sonek olarak ekler. Bu ad, sunucuda uygun işleme göndermek için kullanılır. Daha sonra parametre nesnelerinin dizisini alır ve parametre adlarını ve sınıf tarafından dönüştürülen değerleri kullanarak parametre verilerini URI sorgu dizesine dizleştirir <xref:System.ComponentModel.TypeConverter> . <xref:System.ServiceModel.Channels.MessageHeaders.To%2A>Ve <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> ÖZELLIKLERI bu URI 'ye ayarlanır. <xref:System.ServiceModel.Channels.MessageProperties>özelliği aracılığıyla erişilir <xref:System.ServiceModel.Channels.Message.Properties%2A> .  
   
-- Sunucudaki `IDispatchMessageFormatter.DeserializeRequest` yöntemde, formatter gelen istek `Via` iletisi özelliklerinde URI'yi alır. URI sorgu dizesindeki ad-değer çiftlerini parametre adları ve değerleri olarak parlar ve yönteme geçirilen parametre dizisini doldurmak için parametre adlarını ve değerlerini kullanır. Bu yöntemde işlem adı sonek lerinin yoksayıldığını unutmayın.  
+- `IDispatchMessageFormatter.DeserializeRequest`Sunucusundaki yönteminde, biçimlendirici `Via` gelen istek iletisi özelliklerindeki URI 'yi alır. URI sorgu dizesindeki ad-değer çiftlerini parametre adları ve değerleri olarak ayrıştırır ve yönteme geçirilen parametrelerin dizisini doldurmak için parametre adlarını ve değerlerini kullanır. İşlem dağıtımının zaten gerçekleştiğini, bu nedenle işlem adı son ekinin bu yöntemde yoksayıldığını unutmayın.  
   
  Yanıt:  
   
-- Bu örnekte, HTTP GET yalnızca istek için kullanılır. Formatter, xml iletisi oluşturmak için kullanılan orijinal maddeye yanıt gönderilmesini delege eder. Bu örneğin amaçlarından biri, böyle bir yasal maddenin nasıl uygulanabileceğini göstermektir.  
+- Bu örnekte, HTTP GET yalnızca istek için kullanılır. Biçimlendirici, yanıtın bir XML iletisi oluşturmak için kullanılan özgün biçimlendirici öğesine gönderilmesini destekler. Bu örneğin hedeflerinden biri, bu tür bir temsilci seçme biçimlendiricisi nasıl uygulankullanabileceğinizi gösterir.  
   
-### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSeçici Sınıf  
- Arabirim, <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> kullanıcıların belirli bir iletinin gönderilmesi için kendi mantıklarını uygulamalarını sağlar.  
+### <a name="uripathsuffixoperationselector-class"></a>Urıthsonson Fixoperationselector sınıfı  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>Arabirim, kullanıcıların belirli bir ileti dağıtılması için kendi mantığını uygulamasına olanak sağlar.  
   
- Bu örnekte, işlem adı iletide bir eylem üstbilgisi yerine HTTP GET URI'ye dahil olduğundan, `UriPathSuffixOperationSelector` uygun işlemi seçmek için sunucuda uygulanması gerekir. Örnek, yalnızca büyük/küçük harf duyarlı işlem adlarına izin verecek şekilde ayarlanmıştır.  
+ Bu örnekte, `UriPathSuffixOperationSelector` işlem adı iletideki bir eylem üst bilgisi yerıne http get URI 'sine dahil edildiğinden, uygun işlemi seçmek için sunucuda uygulanması gerekir. Örnek yalnızca büyük/küçük harf duyarsız işlem adlarına izin verecek şekilde ayarlanır.  
   
- Yöntem `SelectOperation` gelen iletiyi alır ve `Via` ileti özelliklerinde URI'yi arar. URI'den işlem adı soneki ayıklar, iletinin gönderilmesi gereken işlem adını almak için dahili bir tabloya bakar ve bu işlem adını döndürür.  
+ `SelectOperation`Yöntemi gelen iletiyi alır ve `Via` kendi ileti özelliklerinde URI 'yi arar. URI 'den işlem adı sonekini ayıklar, iletinin dağıtılması gereken işlem adını almak için bir iç tablo arar ve bu işlem adını döndürür.  
   
-### <a name="enablehttpgetrequestsbehavior-class"></a>EnablehttpGetRequestsBehavior Sınıfı  
- Bileşen `UriPathSuffixOperationSelector` programlı olarak veya bir bitiş noktası davranışı ile ayarlanabilir. Örnek, hizmetin `EnableHttpGetRequestsBehavior` uygulama yapılandırma dosyasında belirtilen davranışı uygular.  
+### <a name="enablehttpgetrequestsbehavior-class"></a>EnableHttpGetRequestsBehavior sınıfı  
+ `UriPathSuffixOperationSelector`Bileşen program aracılığıyla veya bir uç nokta davranışı aracılığıyla ayarlanabilir. Örnek, `EnableHttpGetRequestsBehavior` hizmetin uygulama yapılandırma dosyasında belirtilen davranışı uygular.  
   
- Sunucuda:  
+ Sunucusunda:  
   
- Uygulama <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> için <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> ayarlanır.  
+ , <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A> Uygulama olarak ayarlanır <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> .  
   
- Varsayılan olarak, WCF tam eşleme adresi filtresi kullanır. Gelen iletideki URI, parametre verileri içeren bir sorgu dizesi tarafından izlenen bir işlem adı eki içerir, bu nedenle bitiş noktası davranışı adres filtresini önek eşleme filtresi olarak da değiştirir. Bu amaç için<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> WCF kullanır.  
+ Varsayılan olarak, WCF tam eşleşme adresi filtresi kullanır. Gelen iletideki URI, bir işlem adı soneki ve ardından parametre verilerini içeren bir sorgu dizesi içerir, bu nedenle uç nokta davranışı da adres filtresini önek eşleşme filtresi olacak şekilde değiştirir. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>Bu amaçla WCF 'yi kullanır.  
   
-### <a name="installing-operation-formatters"></a>Formatters operasyonun yüklenmesi  
- Formatters belirten işlem davranışları benzersizdir. Bu tür davranışlardan biri, her işlem için varsayılan olarak, gerekli işlemi oluşturmak için her zaman uygulanır. Ancak, bu davranışlar sadece başka bir işlem davranışı gibi görünür; başka bir öznitelik tarafından tanımlanabilir değildir. Bir yedek davranış yüklemek için, uygulama varsayılan olarak WCF türü yükleyici tarafından yüklenen belirli madde davranışları aramak gerekir ve ya değiştirmek ya da varsayılan davranış tan sonra çalıştırmak için uyumlu bir davranış eklemek.  
+### <a name="installing-operation-formatters"></a>İşlem formatlayıcıları yükleniyor  
+ Formatlayıcıları belirten işlem davranışları benzersizdir. Bu tür bir davranış, her zaman gerekli işlem biçimlendirici oluşturmak için her işlem için varsayılan olarak uygulanır. Ancak, bu davranışlar yalnızca başka bir işlem davranışı gibi görünür; Bunlar başka bir öznitelik tarafından tanımlanabilir değildir. Değiştirme davranışı yüklemek için, uygulamanın varsayılan olarak WCF türü yükleyici tarafından yüklenen belirli biçimlendirici davranışlarını araması ve bunu değiştirmesi ya da varsayılan davranışından sonra çalışacak uyumlu bir davranış eklemesi gerekir.  
   
- Bu işlem formatters davranışları çağırmadan <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> önce veya varsayılan bir sonra yürütülen bir işlem davranışı belirterek programlı olarak ayarlanabilir. Ancak, davranış modeli bir davranışın diğer davranışları değiştirmesine veya açıklama ağacını başka bir şekilde değiştirmesine izin vermedığından, bir bitiş noktası davranışı (ve bu nedenle yapılandırma) tarafından kolayca ayarlanamaz.  
+ Bu işlem biçimlendiricileri davranışları, çağrılmadan önce <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> veya varsayılan bir işlemden sonra yürütülen bir işlem davranışı belirtilerek program aracılığıyla ayarlanabilir. Ancak, davranış modeli bir davranışın diğer davranışları değiştirmesine izin vermediğinden veya açıklama ağacını değiştiremediğinden, bir uç nokta davranışı (ve dolayısıyla yapılandırmaya göre) kolayca ayarlanamaz.  
   
- İstemci üzerinde:  
+ İstemcide:  
   
- Uygulama, <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> istekleri HTTP GET isteklerine dönüştürebilmek ve yanıtlar için orijinal maddeye temsilci olarak uygulayabilmesi için uygulanmalıdır. Bu `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` yardımcı yöntemi çağırarak yapılır.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>Uygulamanın ISTEKLERI http get isteklerine dönüştürebilmesi ve yanıtlar için özgün biçimlendirici için temsilci olarak uygulanması gerekir. Bu, yardımcı yöntemi çağırarak yapılır `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` .  
   
- Bu aramadan `CreateChannel`önce yapılmalıdır.  
+ Çağrılmadan önce bunun yapılması gerekir `CreateChannel` .  
   
 ```csharp  
 void ReplaceFormatterBehavior(OperationDescription operationDescription, EndpointAddress address)  
@@ -92,18 +92,18 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 }  
 ```  
   
- Sunucuda:  
+ Sunucusunda:  
   
-- Arayüz, <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> HTTP GET isteklerini okuyabilmesi ve yanıt ları yazmak için orijinal formatter'a temsilci olarak uygulanmalıdır. Bu, istemciyle aynı `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` yardımcı yöntemi ni arayarak yapılır (önceki kod örneğine bakın).  
+- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>ARABIRIMIN http get isteklerini okuyabilmesi ve yanıtları yazmak için özgün biçimlendirici için temsilci olarak uygulanması gerekir. Bu, `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` istemcisiyle aynı yardımcı yöntemi çağırarak yapılır (önceki kod örneğine bakın).  
   
-- Bu çağrılmadan <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> önce yapılmalıdır. Bu örnekte, formatter'ı aramadan <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>önce el ile nasıl değiştirildiğini gösteririz. Aynı şeyi elde etmenin başka bir yolu <xref:System.ServiceModel.ServiceHost> da, açmadan `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` önce aramaları yapan bir sınıf elde etmektir (lütfen örnekler için barındırma belgelerine ve örneklerine bakın).  
+- Çağrılmadan önce bunun yapılması gerekir <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> . Bu örnekte, bir biçimlendirici çağrılmadan önce el ile nasıl değiştirildiğini gösteririz <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> . Aynı şeyi elde etmenin bir diğer yolu da, <xref:System.ServiceModel.ServiceHost> açmadan önce çağrıları yapan öğesinden bir sınıf türetmektir `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` (lütfen bkz. barındırma belgeleri ve örnekler için örnekler).  
   
-### <a name="user-experience"></a>Kullanıcı deneyimleri  
- Sunucuda:  
+### <a name="user-experience"></a>Kullanıcı deneyimi  
+ Sunucusunda:  
   
-- Sunucu `ICalculator` uygulamasının değişmesi gerekmez.  
+- Sunucu `ICalculator` uygulamasının değiştirilmesi gerekmez.  
   
-- Hizmet için App.config `messageVersion` `textMessageEncoding` öğenin özniteliğini ayarlayan özel bir POX bağlama kullanmanız `None`gerekir.  
+- Hizmetin App. config `messageVersion` öğesinin özniteliğini olarak ayarlayan özel bır POX bağlaması kullanması gerekir `textMessageEncoding` `None` .  
   
     ```xml  
     <bindings>  
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
-- Hizmet için App.config de davranış `EnableHttpGetRequestsBehavior` uzantıları bölümüne ekleyerek ve kullanarak özel belirtmelidir.  
+- Hizmetin App. config dosyası, `EnableHttpGetRequestsBehavior` davranış uzantıları bölümüne ekleyerek ve onu kullanarak özel olarak belirtilmelidir.  
   
     ```xml  
     <behaviors>  
@@ -136,13 +136,13 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </extensions>  
     ```  
   
-- Aramadan <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>önce işlem formatters ekleyin.  
+- Çağrılmadan önce işlem formatlayıcıları ekleyin <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> .  
   
- İstemci üzerinde:  
+ İstemcide:  
   
-- İstemci uygulamasının değişmesi gerekmez.  
+- İstemci uygulamasının değiştirilmesi gerekmez.  
   
-- İstemci için `messageVersion` `textMessageEncoding` App.config, öğenin özniteliğini ayarlayan özel `None`bir POX bağlama sı kullanmalıdır. Hizmetten bir fark, giden To adresinin değiştirilebilmesini sağlamak için istemcinin el ile ele alınmasını sağlaması dır.  
+- İstemci için App. config `messageVersion` öğesinin özniteliğini olarak ayarlayan özel bır POX bağlaması kullanması gerekir `textMessageEncoding` `None` . Hizmetin bir farkı, istemcinin el ile adreslemeyi etkinleştirmek zorunda olduğundan, giden adresinin değiştirilmesini sağlar.  
   
     ```xml  
     <bindings>  
@@ -155,25 +155,25 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
-- İstemci için App.config sunucu `EnableHttpGetRequestsBehavior` ile aynı özel belirtmelidir.  
+- İstemci için App. config, sunucu ile aynı özel öğesini belirtmelidir `EnableHttpGetRequestsBehavior` .  
   
-- Aramadan <xref:System.ServiceModel.ChannelFactory%601.CreateChannel>önce işlem formatters ekleyin.  
+- Çağrılmadan önce işlem formatlayıcıları ekleyin <xref:System.ServiceModel.ChannelFactory%601.CreateChannel> .  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Dört işlem (Ekle, Çıkar, Çarp ve Böl) başarılı olmalıdır.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Dört işlemin tümü (Ekle, çıkart, çarp ve Böl) başarılı olmalıdır.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+##### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: baf13af39fe575a75f1304b21f3b4ad70dd370ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919361"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597325"
 ---
 # <a name="host-in-internet-information-services"></a>Internet Information Services 'de barındırma
 
@@ -23,7 +23,7 @@ WCF aşağıdaki işletim sistemlerinde IIS 'nin aşağıdaki sürümlerinde bar
 
 - Windows Server 2003 üzerinde IIS 6,0. IIS 6,0, geliştirilmiş ölçeklenebilirlik, güvenilirlik ve uygulama yalıtımı sunan gelişmiş bir işlem modeli sağlar. Bu ortam, yalnızca HTTP iletişimini kullanan WCF hizmetlerinin üretim dağıtımı için uygundur.
 
-- Windows Vista ve Windows Server 2008 üzerinde IIS 7,0. IIS 7,0, IIS 6,0 ile aynı gelişmiş işlem modelini sağlar, ancak Windows Işlem etkinleştirme hizmeti 'ni (WAS) HTTP dışındaki protokollerde etkinleştirme ve ağ iletişimine olanak tanımak için kullanır. Bu ortam, WCF tarafından desteklenen herhangi bir ağ protokolü üzerinden iletişim kuran WCF Hizmetleri geliştirmesi için uygundur (HTTP, net. TCP, net. pipe ve net. MSMQ dahil). WAS hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmetinde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).
+- Windows Vista ve Windows Server 2008 üzerinde IIS 7,0. IIS 7,0, IIS 6,0 ile aynı gelişmiş işlem modelini sağlar, ancak Windows Işlem etkinleştirme hizmeti 'ni (WAS) HTTP dışındaki protokollerde etkinleştirme ve ağ iletişimine olanak tanımak için kullanır. Bu ortam, WCF tarafından desteklenen herhangi bir ağ protokolü üzerinden iletişim kuran WCF Hizmetleri geliştirmesi için uygundur (HTTP, net. TCP, net. pipe ve net. MSMQ dahil). WAS hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmetinde barındırma](hosting-in-windows-process-activation-service.md).
 
 - [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) ve [AppFabric barındırma kavramları](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).
 
@@ -39,7 +39,7 @@ WCF hizmetlerinin IIS 'de barındırılması birkaç avantaj sunar:
 
 - IIS 'de barındırılan WCF Hizmetleri, barındırılan hizmetlerin geliştirilmesini ve dağıtılmasını kolaylaştıran ASP.NET 2,0 ile aynı dinamik derleme modelini kullanır.
 
-IIS 'de WCF Hizmetleri barındırmaya karar verirken IIS 5,1 ve IIS 6,0 ' nin yalnızca HTTP iletişimi ile sınırlı olduğunu unutmamak önemlidir. Barındırma ortamı seçme hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../../../../docs/framework/wcf/hosting-services.md).
+IIS 'de WCF Hizmetleri barındırmaya karar verirken IIS 5,1 ve IIS 6,0 ' nin yalnızca HTTP iletişimi ile sınırlı olduğunu unutmamak önemlidir. Barındırma ortamı seçme hakkında daha fazla bilgi için bkz. [barındırma hizmetleri](../hosting-services.md).
 
 ## <a name="deploy-an-iis-hosted-wcf-service"></a>IIS tarafından barındırılan bir WCF hizmeti dağıtma
 
@@ -55,17 +55,17 @@ IIS tarafından barındırılan bir WCF hizmetini geliştirme ve dağıtma aşa�
 
 - WCF hizmetini yapılandırın.
 
-Bu görevlerin her biri hakkında bir tartışma için bkz. [Internet Information Services barındırılan BIR WCF hizmetini dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).
+Bu görevlerin her biri hakkında bir tartışma için bkz. [Internet Information Services barındırılan BIR WCF hizmetini dağıtma](deploying-an-internet-information-services-hosted-wcf-service.md).
 
 ## <a name="wcf-services-and-aspnet"></a>WCF Hizmetleri ve ASP.NET
 
-WCF Hizmetleri, ASP.NET ile yan yana veya ASP.NET uyumluluk modunda, hizmetlerin ASP.NET Web uygulaması platformu tarafından sunulan özelliklerden tam olarak yararlanabilme biçiminde barındırılabilir. Bu özelliklerin bir açıklaması için bkz. [WCF Hizmetleri ve ASP.net](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).
+WCF Hizmetleri, ASP.NET ile yan yana veya ASP.NET uyumluluk modunda, hizmetlerin ASP.NET Web uygulaması platformu tarafından sunulan özelliklerden tam olarak yararlanabilme biçiminde barındırılabilir. Bu özelliklerin bir açıklaması için bkz. [WCF Hizmetleri ve ASP.net](wcf-services-and-aspnet.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ServiceHostFactory Kullanarak Barındırmayı Genişletme](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
-- [Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
-- [WCF Hizmetleri ve ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
-- [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
+- [ServiceHostFactory Kullanarak Barındırmayı Genişletme](../extending/extending-hosting-using-servicehostfactory.md)
+- [Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma](deploying-an-internet-information-services-hosted-wcf-service.md)
+- [WCF Hizmetleri ve ASP.NET](wcf-services-and-aspnet.md)
+- [Internet Information Services Barındırma En İyi Uygulamaları](internet-information-services-hosting-best-practices.md)
+- [Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma](configuring-iis-for-wcf.md)
 - [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

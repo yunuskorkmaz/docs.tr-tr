@@ -2,23 +2,23 @@
 title: Temel Örnek
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 2ea5af0a1c05b5632632b2619c0ee4813696d2fc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: db560ec7dea3912ecec8d84943cc9a01512d1f33
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738175"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575777"
 ---
 # <a name="basic-sample"></a>Temel Örnek
 
 Bu örnek, bir hizmetin bulunabilir hale getirme ve keşfedilebilir bir hizmeti nasıl arayılacağını gösterir. Bu örnek iki projeden oluşur: hizmet ve istemci.
 
 > [!NOTE]
-> Bu örnek kodda bulma işlemini uygular.  Yapılandırmada bulmayı uygulayan bir örnek için bkz. [yapılandırma](../../../../docs/framework/wcf/samples/configuration-sample.md).
+> Bu örnek kodda bulma işlemini uygular.  Yapılandırmada bulmayı uygulayan bir örnek için bkz. [yapılandırma](configuration-sample.md).
 
 ## <a name="service"></a>Hizmet
 
-Bu, basit bir Hesaplayıcı hizmet uygulamasıdır. Bulma ile ilgili kod, hizmet ana bilgisayarına bir <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> eklendiği ve aşağıdaki kodda gösterildiği gibi bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> eklendiği `Main` bulunabilir.
+Bu, basit bir Hesaplayıcı hizmet uygulamasıdır. Bulma ile ilgili kod, `Main` <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> hizmet ana bilgisayarına eklenen ve <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> aşağıdaki kodda gösterildiği gibi eklenen yerlerde bulunabilir.
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))
@@ -37,7 +37,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 
 ## <a name="client"></a>İstemci
 
-İstemci, hizmeti bulmak için bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> kullanır. <xref:System.ServiceModel.Discovery.DynamicEndpoint>, standart bir uç nokta, istemci açıldığında hizmetin uç noktasını çözer. Bu durumda <xref:System.ServiceModel.Discovery.DynamicEndpoint> hizmet sözleşmesini temel alan hizmeti arar. <xref:System.ServiceModel.Discovery.DynamicEndpoint>, aramayı varsayılan olarak bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> üzerinden çeker. Bir hizmet uç noktası bulduktan sonra istemci, belirtilen bağlama üzerinden bu hizmete bağlanır.
+İstemci <xref:System.ServiceModel.Discovery.DynamicEndpoint> , hizmetini bulmak için bir kullanır. <xref:System.ServiceModel.Discovery.DynamicEndpoint>Standart bir uç nokta, istemci açıldığında hizmetin uç noktasını çözer. Bu durumda, hizmet <xref:System.ServiceModel.Discovery.DynamicEndpoint> sözleşmesini temel alan hizmeti arar. <xref:System.ServiceModel.Discovery.DynamicEndpoint>Aramayı <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> Varsayılan olarak bir olarak yapar. Bir hizmet uç noktası bulduktan sonra istemci, belirtilen bağlama üzerinden bu hizmete bağlanır.
 
 ```csharp
 public static void Main()
@@ -47,7 +47,7 @@ public static void Main()
 }
 ```
 
-İstemci, hizmetleri aramak için <xref:System.ServiceModel.Discovery.DiscoveryClient> sınıfını kullanan `InvokeCalculatorService` adlı bir yöntemi tanımlar. <xref:System.ServiceModel.Discovery.DynamicEndpoint> <xref:System.ServiceModel.Description.ServiceEndpoint>devraldığından `InvokeCalculatorService` yöntemine geçirilebilir. Örnek daha sonra bir `CalculatorServiceClient` örneği oluşturmak için <xref:System.ServiceModel.Discovery.DynamicEndpoint> kullanır ve Hesaplayıcı hizmetinin çeşitli işlemlerini çağırır.
+İstemci, `InvokeCalculatorService` <xref:System.ServiceModel.Discovery.DiscoveryClient> Hizmetleri aramak için sınıfını kullanan adlı bir yöntemi tanımlar. , <xref:System.ServiceModel.Discovery.DynamicEndpoint> Öğesinden devralır <xref:System.ServiceModel.Description.ServiceEndpoint> , bu nedenle yöntemine geçirilebilirler `InvokeCalculatorService` . Örnek daha sonra <xref:System.ServiceModel.Discovery.DynamicEndpoint> örneğini oluşturmak için öğesini kullanır `CalculatorServiceClient` ve hesap makinesi hizmetinin çeşitli işlemlerini çağırır.
 
 ```csharp
 static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
@@ -100,6 +100,6 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`

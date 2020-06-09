@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 7bfef2c3fa5d0d3c6dafad5a6015eb9f5ca2b5c6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921312"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575192"
 ---
 # <a name="getting-started-sample"></a>Başlarken Örneği
 
@@ -26,24 +26,24 @@ Başlarken örneği, Windows Communication Foundation (WCF) kullanılarak tipik 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
 Hizmet, bir hizmet sözleşmesinde gerçekleştirdiği işlemleri, genel olarak meta veri olarak açığa çıkardığı şekilde açıklar. Hizmet ayrıca işlemleri uygulamak için kodu içerir.
 
-İstemci, hizmet sözleşmesinin bir tanımını ve hizmete erişmek için bir proxy sınıfı içerir. Proxy kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet meta verilerinden oluşturulur.
+İstemci, hizmet sözleşmesinin bir tanımını ve hizmete erişmek için bir proxy sınıfı içerir. Proxy kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet meta verilerinden oluşturulur.
 
 Windows Vista 'da, hizmet Windows etkinleştirme hizmeti 'nde (WAS) barındırılır. Windows XP ve Windows Server 2003 ' de, Internet Information Services (IIS) ve ASP.NET tarafından barındırılır. Bir hizmetin IIS 'de barındırılması, ilk kez erişildiğinde hizmetin otomatik olarak etkinleştirilmesini sağlar.
 
 > [!NOTE]
-> Hizmeti IIS yerine bir konsol uygulamasında barındıran bir örnekle çalışmaya başlamak isterseniz, [self-Host](../../../../docs/framework/wcf/samples/self-host.md) örneğine bakın.
+> Hizmeti IIS yerine bir konsol uygulamasında barındıran bir örnekle çalışmaya başlamak isterseniz, [self-Host](self-host.md) örneğine bakın.
 
 Hizmet ve istemci, dağıtım sırasında esneklik sağlayan yapılandırma dosyası ayarları 'nda erişim ayrıntılarını belirler. Bu, bir adresi, bağlamayı ve sözleşmeyi belirten bir uç nokta tanımı içerir. Bağlama, hizmetin nasıl erişileceğini gösteren taşıma ve güvenlik ayrıntılarını belirtir.
 
 Hizmet, meta verilerini yayımlamak için bir çalışma zamanı davranışı yapılandırır.
 
-Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculator` arabirimi tarafından tanımlanır. İstemci belirli bir matematik işlemine istek yapar ve hizmet sonuçla yanıt verir. Hizmet aşağıdaki kodda tanımlanan bir `ICalculator` sözleşme uygular.
+Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, `ICalculator` matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. İstemci belirli bir matematik işlemine istek yapar ve hizmet sonuçla yanıt verir. Hizmet, `ICalculator` aşağıdaki kodda tanımlı bir sözleşme uygular.
 
 ```vb
 ' Define a service contract.
@@ -140,11 +140,11 @@ Hizmet, aşağıdaki örnek yapılandırmada gösterildiği gibi, bir yapıland�
 </services>
 ```
 
-Hizmet, uç noktayı IIS veya WAS ana bilgisayar tarafından belirtilen temel adreste kullanıma sunar. Bağlama, adresleme ve güvenlik için HTTP iletişimi ve standart Web hizmeti protokolleri sağlayan bir standart <xref:System.ServiceModel.WSHttpBinding>ile yapılandırılır. Sözleşme, hizmet tarafından uygulanan `ICalculator`.
+Hizmet, uç noktayı IIS veya WAS ana bilgisayar tarafından belirtilen temel adreste kullanıma sunar. Bağlama, <xref:System.ServiceModel.WSHttpBinding> adresleme ve güvenlik IÇIN http iletişimi ve standart Web hizmeti protokolleri sağlayan bir standart ile yapılandırılır. Sözleşme, `ICalculator` hizmet tarafından uygulanır.
 
-Yapılandırıldığı gibi, hizmete aynı bilgisayardaki bir istemci tarafından `http://localhost/servicemodelsamples/service.svc` erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişmesi için localhost yerine tam etki alanı adı belirtilmelidir.
+Yapılandırıldığı gibi, hizmete `http://localhost/servicemodelsamples/service.svc` aynı bilgisayardaki bir istemci tarafından erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişmesi için localhost yerine tam etki alanı adı belirtilmelidir.
 
-Çerçeve varsayılan olarak meta verileri kullanıma sunmaz. Bu nedenle hizmet, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> açar ve `http://localhost/servicemodelsamples/service.svc/mex`bir meta veri değişimi (MEX) uç noktasını kullanıma sunar. Aşağıdaki yapılandırma bunu gösterir.
+Çerçeve varsayılan olarak meta verileri kullanıma sunmaz. Bu nedenle hizmet, ve ' ı açar <xref:System.ServiceModel.Description.ServiceMetadataBehavior> ve bir meta veri değişimi (MEX) uç noktasını kullanıma sunar `http://localhost/servicemodelsamples/service.svc/mex` . Aşağıdaki yapılandırma bunu gösterir.
 
 ```xaml
 <system.serviceModel>
@@ -174,7 +174,7 @@ Yapılandırıldığı gibi, hizmete aynı bilgisayardaki bir istemci tarafında
 </system.serviceModel>
 ```
 
-İstemci, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan bir istemci sınıfını kullanarak belirli bir sözleşme türünü kullanarak iletişim kurar. Bu oluşturulan istemci, generatedClient.cs veya generatedClient. vb dosyasında bulunur. Bu yardımcı program belirli bir hizmet için meta verileri alır ve belirli bir sözleşme türünü kullanarak iletişim kurmak için istemci uygulaması tarafından kullanılmak üzere bir istemci oluşturur. Hizmet güncelleştirilmiş meta verileri almak için kullanıldığından, istemci kodunu oluşturmak için barındırılan hizmetin kullanılabilir olması gerekir.
+İstemci, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan bir istemci sınıfını kullanarak belirli bir sözleşme türünü kullanarak iletişim kurar. Bu oluşturulan istemci, generatedClient.cs veya generatedClient. vb dosyasında bulunur. Bu yardımcı program belirli bir hizmet için meta verileri alır ve belirli bir sözleşme türünü kullanarak iletişim kurmak için istemci uygulaması tarafından kullanılmak üzere bir istemci oluşturur. Hizmet güncelleştirilmiş meta verileri almak için kullanıldığından, istemci kodunu oluşturmak için barındırılan hizmetin kullanılabilir olması gerekir.
 
  Türü belirtilmiş proxy 'yi oluşturmak için istemci dizininde SDK komut isteminden aşağıdaki komutu çalıştırın:
 
@@ -273,17 +273,17 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
-Başlarken örneği, bir hizmet ve istemci oluşturmanın standart yolunu gösterir. Belirli ürün özelliklerini göstermek için bu örnekteki diğer [temel](../../../../docs/framework/wcf/samples/basic-sample.md) yapı.
+Başlarken örneği, bir hizmet ve istemci oluşturmanın standart yolunu gösterir. Belirli ürün özelliklerini göstermek için bu örnekteki diğer [temel](basic-sample.md) yapı.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+3. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Nasıl yapılır: IIS'de WCF Hizmeti Barındırma](../feature-details/how-to-host-a-wcf-service-in-iis.md)

@@ -2,12 +2,12 @@
 title: WSDL ve İlke
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600107"
 ---
 # <a name="wsdl-and-policy"></a>WSDL ve İlke
 Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-PolicyAttachment uygulama ayrıntılarının yanı sıra WCF tarafından sunulan ek WS-Policy onayları ve WSDL 1,1 uzantıları ele alınmaktadır.  
@@ -74,6 +74,6 @@ Bu konuda Windows Communication Foundation (WCF) WSDL 1,1, WS-Policy ve WS-Polic
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel WSDL Yayımı](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Nasıl yapılır: Özel WSDL Dışa Aktarma](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Nasıl yapılır: Özel WSDL İçe Aktarma](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Özel WSDL Yayımı](../samples/custom-wsdl-publication.md)
+- [Nasıl yapılır: Özel WSDL Dışa Aktarma](../extending/how-to-export-custom-wsdl.md)
+- [Nasıl yapılır: Özel WSDL İçe Aktarma](../extending/how-to-import-custom-wsdl.md)

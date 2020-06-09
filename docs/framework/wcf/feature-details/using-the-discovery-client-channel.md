@@ -2,35 +2,35 @@
 title: Keşif İstemcisi Kanalını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: 2d9dd68d233541f4d8cb3185adc1023cd5a19de1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a74d0ba77977e158a6c6e469a9b6a88c8d1aac82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184260"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84575985"
 ---
 # <a name="using-the-discovery-client-channel"></a>Keşif İstemcisi Kanalını Kullanma
-Bir WCF istemci uygulaması yazarken aradığınız hizmetin bitiş noktası adresini bilmeniz gerekir. Çoğu durumda, bir hizmetin bitiş noktası adresi önceden bilinmemektedir veya hizmetin adresi zaman içinde değişir. Discovery Client Channel bir WCF istemci uygulaması yazmanızı, aramak istediğiniz hizmeti açıklamanızı sağlar ve istemci kanalı otomatik olarak bir sonda isteği gönderir. Bir hizmet yanıt verdiğinde, bulma istemcisi kanalı sonda yanıtından hizmetin bitiş noktası adresini alır ve hizmeti aramak için kullanır.  
+Bir WCF istemci uygulaması yazarken, aradığınız hizmetin uç nokta adresini bilmeniz gerekir. Birçok durumda, bir hizmetin uç nokta adresi önceden bilinmiyor veya zaman içinde hizmet değişikliklerinin adresi. Bulma Istemci kanalı, bir WCF istemci uygulaması yazmanızı, çağırmak istediğiniz hizmeti açıklamanıza ve istemci kanalının otomatik olarak bir araştırma isteği göndermesi için izin verir. Bir hizmet yanıt verdiğinde, bulma istemci kanalı, araştırma yanıtından hizmet için uç nokta adresini alır ve hizmeti çağırmak için onu kullanır.  
   
 ## <a name="using-the-discovery-client-channel"></a>Keşif İstemcisi Kanalını Kullanma  
- Bulma İstemci Kanalı'nı kullanmak <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> için istemci kanal yığınınıza bir örnek ekleyin. Alternatif olarak kullanabilirsiniz <xref:System.ServiceModel.Discovery.DynamicEndpoint> ve <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> bir otomatik olarak zaten mevcut değilse bağlama eklenir.  
+ Bulma Istemci kanalını kullanmak için, <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> istemci kanal yığınınıza bir örneği ekleyin. Alternatif olarak, <xref:System.ServiceModel.Discovery.DynamicEndpoint> <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> zaten mevcut değilse ' a ve Bağlamalarınızın otomatik olarak eklenmesini sağlayabilirsiniz.  
   
 > [!CAUTION]
-> İstemci <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> kanal yığınınızdaki en üst öğe olması önerilir. Üzerine <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> eklenen herhangi bir bağlama öğesi, doğru <xref:System.ServiceModel.ChannelFactory> adresi içermeyebileceğinden, oluşturduğu veya `Via` oluşturduğu kanalın bitiş `CreateChannel` noktası adresini veya adresini (yönteme geçirilen) kullanmadığından emin olmalıdır.  
+> <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>İstemci kanal yığınınızın en üstteki öğesi olması önerilir. Üzerine eklenen herhangi bir bağlama öğesi, <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> <xref:System.ServiceModel.ChannelFactory> `Via` `CreateChannel` doğru adresi içeremeyeceği için, oluşturduğu veya kanalın oluşturduğu veya kanalın bitiş noktası adresini veya adresini kullanmadığından emin olmalıdır.  
   
- Sınıf <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> iki ortak özellik içerir:  
+ <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>Sınıfı iki ortak özellik içerir:  
   
-1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, aramak istediğiniz hizmeti tanımlamak için kullanılır.  
+1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, çağırmak istediğiniz hizmeti tanımlamakta kullanılır.  
   
-2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>hangi keşif iletileri göndermek için keşif bitiş noktası belirtir.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>bulma iletilerinin gönderileceği bulma uç noktasını belirtir.  
   
- Özellik, <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A> aradığınız hizmet sözleşmesini, gerekli kapsam Uri'lerini ve kanalı açmaya çalışmak için gereken maksimum süreyi belirtmenize olanak tanır. Sözleşme türü yapıcı çağırılarak <xref:System.ServiceModel.Discovery.FindCriteria>belirtilir. Kapsam URI'leri <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> tesise eklenebilir. Özellik, <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> istemcinin bağlanmaya çalıştığı maksimum sonuç sayısını belirtmenize olanak tanır. Sonda yanıtı alındığı zaman istemci, sonda yanıtından uç nokta adresini kullanarak kanalı açmaya çalışır. Bir özel durum oluşursa, istemci bir sonraki sonda yanıtına geçer ve gerekirse daha fazla yanıt alınmasını bekler. Kanal başarıyla açılana veya en fazla sonuç sayısına ulaşılıncaya kadar bunu yapmaya devam ediyor. Bu ayarlar hakkında daha <xref:System.ServiceModel.Discovery.FindCriteria>fazla bilgi için bkz.  
+ <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A>Özelliği, aradığınız hizmet sözleşmesini, gerekli kapsam URI 'lerini ve kanalı açmak için en fazla süreyi belirtmenizi sağlar. Anlaşma türü, Oluşturucu çağırarak belirtilir <xref:System.ServiceModel.Discovery.FindCriteria> . Kapsam URI 'Leri <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A> özelliğine eklenebilir. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>Özelliği, istemcinin bağlanmaya çalışacağı en fazla sonuç sayısını belirtmenize olanak tanır. Bir araştırma yanıtı alındığında, istemci, araştırma yanıtından bitiş noktası adresini kullanarak kanalı açmaya çalışır. Bir özel durum oluşursa, istemci sonraki araştırma yanıtına döner ve gerekirse daha fazla yanıt alınması bekleniyor. Kanal başarıyla açılmadan veya en fazla sonuç sayısına ulaşılana kadar bunu yapmaya devam eder. Bu ayarlar hakkında daha fazla bilgi için bkz <xref:System.ServiceModel.Discovery.FindCriteria> ..  
   
- Özellik, <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> kullanılacak keşif bitiş noktasını belirtmenize olanak tanır. Normalde bu bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, ama herhangi bir geçerli bitiş noktası olabilir.  
+ <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>Özelliği, kullanılacak bulma uç noktasını belirtmenize olanak tanır. Normalde bu bir <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> , ancak geçerli bir uç nokta olabilir.  
   
- Hizmetle iletişim kurmak için kullanılacak bağlamayı oluştururken, hizmetle aynı bağlamayı kullanırken dikkatli olmalısınız. Tek fark, istemci bağlama <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> yığının üstünde bir olmasıdır. Hizmet sistem tarafından sağlanan bağlamalardan birini kullanıyorsa, <xref:System.ServiceModel.Channels.CustomBinding> <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> sistem tarafından sağlanan bağlayıcıda yeni bir geçiş oluşturun ve geçirin. Daha sonra <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> `Insert` <xref:System.ServiceModel.Channels.CustomBinding.Elements%2A> özelliği arayarak ekleyebilirsiniz.  
+ Hizmetle iletişim kurmak için kullanmak üzere bağlama oluştururken, hizmetle aynı bağlamayı kullanmaya dikkat etmeniz gerekir. Tek fark, istemci bağlamasının <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> yığının en üstünde bir ' tır. Hizmet sistem tarafından belirtilen bağlamalardan birini kullanıyorsa, <xref:System.ServiceModel.Channels.CustomBinding> oluşturucuya sistem tarafından sağlanmış bağlamayı yeni bir oluşturun ve geçirin <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> . Ardından <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> özelliğini çağırarak ekleyebilirsiniz `Insert` <xref:System.ServiceModel.Channels.CustomBinding.Elements%2A> .  
   
- Bağlamaya ekledikten <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> ve yapılandırdıktan sonra, WCF istemci sınıfının bir örneğini oluşturabilir, açabilir ve yöntemlerini çağırabilirsiniz. Aşağıdaki örnek, `ICalculator` sınıfı uygulayan (Başlangıç WCF öğreticisinde kullanılan) ve yöntemini `Add` çağıran bir WCF hizmetini bulmak için Discovery Client Channel'ı kullanır.  
+ <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>Bağlamaınıza ekledikten ve yapılandırdıktan sonra, WCF istemci sınıfının bir örneğini oluşturabilir, açabilir ve yöntemlerini çağırabilirsiniz. Aşağıdaki örnek, `ICalculator` sınıfını uygulayan (Başlarken WCF öğreticisinde kullanılır) ve yöntemini çağıran BIR WCF hizmetini bulmak Için bulma Istemci kanalını kullanır `Add` .  
   
 ```csharp
 // Create the DiscoveryClientBindingElement  
@@ -59,5 +59,5 @@ catch (EndpointNotFoundException ex)
 }  
 ```  
   
-## <a name="security-and-the-discovery-client-channel"></a>Güvenlik ve Discovery Client Channel  
- Bulma istemcisi kanalını kullanırken iki uç nokta belirtiliyor. Biri genellikle , ve diğer <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>uygulama bitiş noktası keşif iletileri için kullanılır. Güvenli bir hizmet uygularken, her iki uç noktanın da güvenliğini sağlamaya özen gerekir. Güvenlik hakkında daha fazla bilgi için, [Güvenlik Hizmetleri ve İstemciler'e](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)bakın.
+## <a name="security-and-the-discovery-client-channel"></a>Güvenlik ve bulma Istemci kanalı  
+ Bulma istemci kanalını kullanırken iki uç nokta belirtilir. Bunlardan biri, genellikle bulma iletileri için kullanılır <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ve diğeri uygulama uç noktasıdır. Güvenli bir hizmet uygularken, her iki bitiş noktasını güvenli hale getirmek için dikkatli olunmalıdır. Güvenlik hakkında daha fazla bilgi için bkz. [Hizmetleri ve Istemcileri güvenli hale getirme](securing-services-and-clients.md).

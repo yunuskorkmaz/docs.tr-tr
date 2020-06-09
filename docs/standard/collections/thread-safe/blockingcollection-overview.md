@@ -1,5 +1,6 @@
 ---
 title: BlockingCollection Genel Bakışı
+description: <T>.Net 'teki iş parçacığı açısından güvenli bir koleksiyon sınıfı olan BlockingCollection hakkında bilgi edinin. Bu sınıf, çok sayıda iş parçacığından öğelerin alınması & eş zamanlı ekleme gibi özellikler sunar.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-ms.openlocfilehash: 708ab9dc8df2ee3128036ffc71e9abc51a56e33b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fc11f6c28a551e56d3bac4c5be9c08a396c0c6b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600808"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection Genel Bakışı
 <xref:System.Collections.Concurrent.BlockingCollection%601>, aşağıdaki özellikleri sağlayan iş parçacığı güvenli bir koleksiyon sınıfıdır:  

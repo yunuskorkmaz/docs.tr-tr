@@ -2,29 +2,29 @@
 title: System.ServiceModel.MessageProcessingPaused
 ms.date: 03/30/2017
 ms.assetid: 36b5302a-93cc-478a-9bb2-8a1601fba1df
-ms.openlocfilehash: 7dcdb9fdd6a283f692897cbbb49cd1f2d1dd661e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85bec8255e0d20d6e76ea354e5b8c42b83d7d8e6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598157"
 ---
 # <a name="systemservicemodelmessageprocessingpaused"></a>System.ServiceModel.MessageProcessingPaused
 System.ServiceModel.MessageProcessingPaused  
   
 ## <a name="description"></a>Açıklama  
- İş parçacığı, bir ileti işlenirken anahtarlı.  
+ Bir ileti işlenirken iş parçacıkları değiştirildi.  
   
- İleti işleme, aşağıdaki nedenlerden duraklatılabilir:  
+ İleti işleme aşağıdaki nedenlerden dolayı duraklatılabilir:  
   
-- ConcurrencyMode tek ya da desteklemeyeceğini ve başka bir ileti işleme hizmetidir.  
+- ConcurrencyMode tek veya yer aldığı ve hizmet başka bir iletiyi işliyor.  
   
-- İşlem etkindir ve başka bir işlem işleme hizmetidir.  
+- İşlem etkin ve hizmet başka bir işlem işliyor.  
   
-- Eşitleme bağlamı geçerli değil.  
+- Eşitleme bağlamı güncel değil.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)
