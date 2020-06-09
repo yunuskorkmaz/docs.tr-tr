@@ -2,34 +2,34 @@
 title: Keşif Proxy'si Ekleme
 ms.date: 03/30/2017
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
-ms.openlocfilehash: 5d9296d8ba70d4c9e8d8339fa3a032d9c4c62826
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 382df95fef2108d338e4ea327da9185c856eca5a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047067"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579247"
 ---
 # <a name="implementing-a-discovery-proxy"></a>Keşif Proxy'si Ekleme
-Bu bölümde, Keşif proxy'si uygulama için gereken adımlar açıklanmaktadır. Keşif proxy'si bir depo hizmetleri içeren tek başına bir hizmettir. İstemciler, proxy farkındadır bulunabilirlik Hizmetleri bulmak için keşif proxy'si sorgulayabilir. Bir ara sunucu hizmetleri ile nasıl doldurulur kadar uygulayan olur. Örneğin, Keşif proxy'si mevcut bir hizmet depoya bağlanmak ve bu bilgileri bulunabilir, yönetici yönetim API'si için bir proxy bulunabilir hizmet eklemek için kullanabilirsiniz veya keşif proxy'si duyuru işlevini kullanabilirsiniz yapın İç önbelleğini güncelleştirin.  
+Bu bölümde, bulma proxy 'si uygulamak için gereken adımlar açıklanmaktadır. Bulma proxy 'si, bir hizmet deposu içeren tek başına hizmettir. İstemciler, proxy 'nin farkında olduğu keşfedilebilir hizmetleri bulmak için bir keşif proxy 'sini sorgulayabilir. Hizmetler ile bir ara sunucu nasıl doldurulur uygulayıcısı. Örneğin, bir bulma proxy 'si var olan bir hizmet deposuna bağlanabilir ve bu bilgileri bulunabilir hale getirebilir, bir yönetici bir ara sunucuya bulunabilir Hizmetleri eklemek için bir yönetim API 'SI kullanabilir veya bir keşif proxy, iç önbelleğini güncelleştirmek için duyuru işlevini kullanabilir.  
   
- WCF uygulaması, bir proxy kolayca oluşturmanıza olanak tanıyan temel sınıfları sağlar. Keşif proxy'si mevcut deponuzda üzerine oluşturmak için bu API'leri kullanabilir.  
+ WCF uygulama, kolayca bir proxy oluşturmanıza izin veren temel sınıflar sağlar. Bu API 'Leri, mevcut deponuzda bir bulma proxy 'Si oluşturmak için kullanabilirsiniz.  
   
- Ayrıca keşif proxy'si bulunabilir olmasını sağlayın ve kendi uç bulun istemciniz burada uygulanan keşif proxy'si diğer WCF hizmetleri gibi olmamasıdır.  
+ Burada uygulanan bulma proxy diğer tüm WCF Hizmetleri gibidir, bu da keşif proxy 'sini bulunabilir hale getirebilir ve istemcilerin uç noktalarını bulmasını sağlayabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Keşif proxy'si uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- Keşif proxy'si uygulama açıklar.  
+ [Nasıl yapılır: Keşif Proxy'si Uygulama](how-to-implement-a-discovery-proxy.md)  
+ Bulma proxy 'sinin nasıl uygulanacağını açıklar.  
   
- [Nasıl yapılır: Keşif proxy'sine bir bulunabilir hizmet ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)  
- Keşif proxy'sine kayıtlı bir bulunabilir WCF hizmet uygulanacağını açıklar.  
+ [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](discoverable-service-that-registers-with-the-discovery-proxy.md)  
+ Bulma proxy 'sine Kaydolmakta olan keşfedilebilir WCF hizmetinin nasıl uygulanacağını açıklar.  
   
- [Nasıl yapılır: Bir hizmet bulmak için keşif proxy'sini kullanan bir istemci uygulama](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)  
- Bir hizmet için aranacak keşif proxy'sini kullanan bir WCF istemci uygulamanın nasıl uygulanacağını açıklar.  
+ [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](client-app-discovery-proxy-to-find-a-service.md)  
+ Bir hizmeti aramak için bulma proxy 'sini kullanan bir WCF istemci uygulamasının nasıl uygulanacağını açıklar.  
   
- [Nasıl yapılır: Keşif proxy'sini test etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
- Önceki üç konularındaki yazılmış kodu test açıklar.  
+ [Nasıl yapılır: Keşif Proxy'sini Test Etme](how-to-test-the-discovery-proxy.md)  
+ Önceki üç konuda yazılan kodun nasıl test edileceğini açıklar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bulma](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [Nasıl yapılır: Bir WCF hizmeti ve istemci programlı bir şekilde Keşfedilebilirlik ekleme](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)
+- [WCF Bulma](wcf-discovery.md)
+- [Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme](how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)

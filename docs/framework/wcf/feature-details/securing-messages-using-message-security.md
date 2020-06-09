@@ -2,24 +2,24 @@
 title: İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746437"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589987"
 ---
 # <a name="securing-messages-using-message-security"></a>İleti Güveliği Kullanarak İletileri Güvenli Hale Getirme
-Bu bölümde <xref:System.ServiceModel.NetMsmqBinding>kullanılırken WCF ileti güvenliği ele alınmaktadır.  
+Bu bölümde kullanırken WCF ileti güvenliği ele alınmaktadır <xref:System.ServiceModel.NetMsmqBinding> .  
   
 > [!NOTE]
-> Bu konuyu okumadan önce [güvenlik kavramlarını](../../../../docs/framework/wcf/feature-details/security-concepts.md)okumanız önerilir.  
+> Bu konuyu okumadan önce [güvenlik kavramlarını](security-concepts.md)okumanız önerilir.  
   
  Aşağıdaki çizimde, WCF kullanılarak sıraya alınmış iletişimin kavramsal bir modeli verilmiştir. Bu çizim ve terminoloji açıklamak için kullanılır  
   
  taşıma güvenlik kavramları.  
   
- ![Kuyruğa alınmış uygulama diyagramı](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Dağıtılmış kuyruk-şekil")  
+ ![Kuyruğa alınmış uygulama diyagramı](media/distributed-queue-figure.jpg "Dağıtılmış kuyruk-şekil")  
   
  WCF kullanarak sıraya alınan iletileri gönderirken WCF iletisi Message Queuing (MSMQ) iletisinin bir gövdesi olarak eklenir. Taşıma güvenliği tüm MSMQ iletisinin güvenliğini sağlarken, ileti (veya SOAP) güvenliği yalnızca MSMQ iletisinin gövdesine güvenlik sağlar.  
   
@@ -28,9 +28,9 @@ Bu bölümde <xref:System.ServiceModel.NetMsmqBinding>kullanılırken WCF ileti 
  WCF ileti güvenliği, bir sertifika veya Kerberos protokolü gibi mevcut güvenlik altyapılarıyla tümleştirilen WCF iletisine güvenlik üstbilgileri ekler.  
   
 ## <a name="message-credential-type"></a>İleti kimlik bilgisi türü  
- Hizmet ve istemci, ileti güvenliğini kullanarak birbirlerinin kimliğini doğrulamak için kimlik bilgilerini sunabilir. <xref:System.ServiceModel.NetMsmqBinding.Security%2A> modunu `Message` veya `Both` olarak ayarlayarak ileti güvenliği seçebilirsiniz (yani, hem aktarım güvenliği hem de ileti güvenliği kullanın).  
+ Hizmet ve istemci, ileti güvenliğini kullanarak birbirlerinin kimliğini doğrulamak için kimlik bilgilerini sunabilir. Modu veya olarak ayarlayarak ileti güvenliği seçebilirsiniz <xref:System.ServiceModel.NetMsmqBinding.Security%2A> `Message` `Both` (yani, hem aktarım güvenliği hem de ileti güvenliği kullanın).  
   
- Hizmet, istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini incelemek üzere <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> özelliğini kullanabilir. Bu, hizmetin uygulamayı seçtiği daha fazla yetkilendirme denetimi için de kullanılabilir.  
+ Hizmet, <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> istemcinin kimliğini doğrulamak için kullanılan kimlik bilgilerini incelemek için özelliğini kullanabilir. Bu, hizmetin uygulamayı seçtiği daha fazla yetkilendirme denetimi için de kullanılabilir.  
   
  Bu bölümde farklı kimlik bilgisi türleri ve kuyrukların nasıl kullanılacağı açıklanmaktadır.  
   
@@ -65,7 +65,7 @@ Bu bölümde <xref:System.ServiceModel.NetMsmqBinding>kullanılırken WCF ileti 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Aktarım Güvenliği Kullanarak İletileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [Message Queuing Üzerinden İleti Güvenliği](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Taşıma Güveliği Kullanarak İletileri Güvenli Hale Getirme](securing-messages-using-transport-security.md)
+- [İleti Kuyruğa Alma ile İleti Güvenliği](../samples/message-security-over-message-queuing.md)
+- [Güvenlik kavramları](security-concepts.md)
+- [Hizmet ve İstemcileri Güvenli Hale Getirme](securing-services-and-clients.md)

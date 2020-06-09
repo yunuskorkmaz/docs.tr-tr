@@ -2,20 +2,20 @@
 title: DataContract Yedeği
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 7ef78c4361c055d7be35c03a3c8717e86aceddab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9677e3cf024e6c1e5b2f3360423ab55536748495
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183829"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600055"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Yedeği
-Bu örnek, serileştirme, deserialization, şema dışa aktarma ve şema alma gibi işlemlerin bir veri sözleşmesi vekil sınıfı kullanılarak nasıl özelleştirilebildiğini göstermektedir. Bu örnek, verilerin serihale edildiği ve Windows Communication Foundation (WCF) istemcisi (WCF) istemcisi ile hizmeti arasında aktarıldığı bir istemci ve sunucu senaryosunda bir vekilin nasıl kullanılacağını gösterir.  
+Bu örnek, bir veri sözleşmesi yedek sınıfı kullanılarak serileştirme, seri durumdan çıkarma, şema dışarı aktarma ve şema içeri aktarma gibi işlemlerin nasıl özelleştirilebileceğini gösterir. Bu örnek, verilerin serileştirildiği ve bir Windows Communication Foundation (WCF) istemci ve hizmeti arasında aktarıldığı bir istemci ve sunucu senaryosunda bir vekil 'in nasıl kullanılacağını gösterir.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnekte aşağıdaki hizmet sözleşmesi kullanır:  
+ Örnek, aşağıdaki hizmet sözleşmesini kullanır:  
   
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -30,7 +30,7 @@ public interface IPersonnelDataService
 }  
 ```  
   
- İşlem, `AddEmployee` kullanıcıların yeni çalışanlar hakkında veri `GetEmployee` eklemesine olanak tanır ve işlem, ada göre çalışan aramasını destekler.  
+ `AddEmployee`İşlem, kullanıcıların yeni çalışanlar hakkında veri eklemesine izin verir ve `GetEmployee` işlem, ad temelinde çalışanları aramayı destekler.  
   
  Bu işlemler aşağıdaki veri türünü kullanır:  
   
@@ -49,7 +49,7 @@ class Employee
 }  
 ```  
   
- `Employee` Türde, `Person` geçerli bir veri sözleşmesi sınıfı olmadığı için sınıf (aşağıdaki örnek kodda gösterilmiştir) tarafından <xref:System.Runtime.Serialization.DataContractSerializer> serileştirilemez.  
+ `Employee`Türünde, `Person` Sınıf (Aşağıdaki örnek kodda gösterilen), <xref:System.Runtime.Serialization.DataContractSerializer> geçerli bir veri sözleşmesi sınıfı olmadığından tarafından serileştirilemiyor.  
   
 ```csharp
 public class Person  
@@ -64,11 +64,11 @@ public class Person
 }  
 ```  
   
- Özniteliği <xref:System.Runtime.Serialization.DataContractAttribute> `Person` sınıfa uygulayabilirsiniz, ancak bu her zaman mümkün değildir. Örneğin, `Person` sınıf üzerinde hiçbir denetimi olmayan ayrı bir derleme tanımlanabilir.  
+ <xref:System.Runtime.Serialization.DataContractAttribute>Özniteliğini `Person` sınıfına uygulayabilirsiniz, ancak bu her zaman mümkün değildir. Örneğin, sınıfı, `Person` denetiminiz olmayan ayrı bir derlemede tanımlanabilir.  
   
- Bu kısıtlama göz önüne alındığında, `Person` sınıfı serihale etmenin bir yolu, <xref:System.Runtime.Serialization.DataContractAttribute> sınıfı işaretlenmiş başka bir sınıfla değiştirmek ve gerekli veriler üzerinden yeni sınıfa kopyalamaktır. Amaç, `Person` sınıfın Bir DataContract olarak görünmesini <xref:System.Runtime.Serialization.DataContractSerializer>sağlamaktır. Bunun veri dışı sözleşme sınıflarını seri hale getirmek için bir yol olduğunu unutmayın.  
+ Bu kısıtlama verildiğinde, sınıfı seri hale getirmenin bir yolu, öğesini `Person` ile işaretlenen başka bir sınıfla yerine <xref:System.Runtime.Serialization.DataContractAttribute> Yeni sınıfa, gerekli verilerin üzerine kopyalamasıdır. Amaç, `Person` sınıfın bir DataContract olarak görünmesini sağlar <xref:System.Runtime.Serialization.DataContractSerializer> . Bu, veri olmayan sözleşme sınıflarını serileştirmenin bir yoludur.  
   
- Örnek mantıksal olarak `Person` sınıfı farklı bir sınıf `PersonSurrogated`adlandırılmış sınıfla değiştirir.  
+ Örnek, `Person` sınıfının adlı farklı bir sınıfla mantıksal olarak yerini alır `PersonSurrogated` .  
   
 ```csharp
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -85,9 +85,9 @@ public class PersonSurrogated
 }  
 ```  
   
- Veri sözleşmesi vekil bu değiştirme elde etmek için kullanılır. Veri sözleşmesi nin sureti, <xref:System.Runtime.Serialization.IDataContractSurrogate>'yi uygulayan bir sınıftır. Bu örnekte, `AllowNonSerializableTypesSurrogate` sınıf bu arabirimi uygular.  
+ Bu değişikliği başarmak için veri sözleşmesi yedeği kullanılır. Veri anlaşması yedeği, uygulayan bir sınıftır <xref:System.Runtime.Serialization.IDataContractSurrogate> . Bu örnekte, `AllowNonSerializableTypesSurrogate` sınıfı bu arabirimi uygular.  
   
- Arabirim uygulamasında, ilk görev `Person` `PersonSurrogated`bir tür eşleme oluşturmaktır. Bu hem serileştirme zamanında hem de şema dışa aktarma zamanında kullanılır. Bu eşleme <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> yöntemi uygulanarak elde edilir.  
+ Arabirim uygulamasında ilk görev, öğesinden öğesine bir tür eşlemesi oluşturmak için kullanılır `Person` `PersonSurrogated` . Bu, hem serileştirme zamanında hem de şema dışa aktarma zamanında kullanılır. Bu eşleme yöntemi uygulayarak elde edilir <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> .  
   
 ```csharp
 public Type GetDataContractType(Type type)  
@@ -100,7 +100,7 @@ public Type GetDataContractType(Type type)
 }  
 ```  
   
- Yöntem, <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> aşağıdaki `Person` örnek `PersonSurrogated` kodda gösterildiği gibi, bir örneği serileştirme sırasındaki bir örnekle eşler.  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29>Yöntemi, `Person` `PersonSurrogated` Aşağıdaki örnek kodda gösterildiği gibi serileştirme sırasında bir örneği bir örneğe eşler.  
   
 ```csharp
 public object GetObjectToSerialize(object obj, Type targetType)  
@@ -118,7 +118,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- Yöntem, <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> aşağıdaki örnek kodda gösterildiği gibi, deserialization için ters eşleme sağlar.  
+ <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29>Yöntemi, aşağıdaki örnek kodda gösterildiği gibi, seri durumdan çıkarma için ters eşlemeyi sağlar.  
   
 ```csharp
 public object GetDeserializedObject(object obj,
@@ -137,7 +137,7 @@ Type targetType)
 }  
 ```  
   
- `PersonSurrogated` Şema alma sırasında veri `Person` sözleşmesini varolan sınıfla eşlemek <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> için, örnek aşağıdaki örnek kodda gösterildiği gibi yöntemi uygular.  
+ `PersonSurrogated`Şema içeri aktarma sırasında veri sözleşmesini varolan sınıfla eşlemek için, `Person` örneği <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> Aşağıdaki örnek kodda gösterildiği gibi yöntemini uygular.  
   
 ```csharp
 public Type GetReferencedTypeOnImport(string typeName,
@@ -156,7 +156,7 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
 }  
 ```  
   
- Aşağıdaki örnek kod <xref:System.Runtime.Serialization.IDataContractSurrogate> arabirimin uygulanmasını tamamlar.  
+ Aşağıdaki örnek kod, arabiriminin uygulamasını tamamlar <xref:System.Runtime.Serialization.IDataContractSurrogate> .  
   
 ```csharp
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
@@ -184,11 +184,11 @@ public void GetKnownCustomDataTypes(
 }  
 ```  
   
- Bu örnekte, vekil ServiceModel'de . `AllowNonSerializableTypesAttribute` Geliştiricilerin bu özniteliği, yukarıdaki hizmet sözleşmesinde `IPersonnelDataService` gösterildiği gibi hizmet sözleşmesinde uygulamaları gerekir. Bu öznitelik `IContractBehavior` uygular ve kendi `ApplyClientBehavior` ve `ApplyDispatchBehavior` yöntemleri işlemleri üzerinde vekil kurar.  
+ Bu örnekte, yedek, ServiceModel içinde adlı bir öznitelik tarafından etkinleştirilir `AllowNonSerializableTypesAttribute` . Geliştiricilerin, yukarıdaki hizmet sözleşmesinde gösterildiği gibi bu özniteliği hizmet sözleşmelerine uygulaması gerekir `IPersonnelDataService` . Bu öznitelik `IContractBehavior` , ve yöntemlerinde işlemleri uygular ve üzerinde yedek ayarlar `ApplyClientBehavior` `ApplyDispatchBehavior` .  
   
- Bu durumda öznitelik gerekli değildir - bu örnekte gösteri amacıyla kullanılır. Kullanıcılar alternatif olarak benzer `IContractBehavior`bir madde ekleyerek `IEndpointBehavior` veya `IOperationBehavior` kodu kullanarak veya yapılandırmayı kullanarak bir vekil etkinleştirebilir.  
+ Bu örnekte öznitelik gerekli değildir-bu örnekteki tanıtım amaçlarıyla kullanılır. Kullanıcılar ayrıca, el ile benzer `IContractBehavior` `IEndpointBehavior` veya `IOperationBehavior` kod kullanarak ya da yapılandırma kullanarak bir yedeği etkinleştirebilir.  
   
- Uygulama, `IContractBehavior` `DataContractSerializerOperationBehavior` kayıtlı olup olmadıklarını denetleyerek DataContract kullanan işlemleri arar. Eğer yaparlarsa, `DataContractSurrogate` bu davranış özelliği ayarlar. Aşağıdaki örnek kod, bunun nasıl yapıldığını gösterir. Bu işlem davranışı üzerinde vekil ayarı serileştirme ve deserialization için sağlar.  
+ `IContractBehavior`Uygulama, kayıtlı olup olmadığını denetleyerek DataContract kullanan işlemlere bakar `DataContractSerializerOperationBehavior` . Bu durumda, `DataContractSurrogate` özelliği o davranışa ayarlar. Aşağıdaki örnek kod, bunun nasıl yapıldığını göstermektedir. Bu işlem davranışında yedeği ayarlamak, serileştirme ve seri durumdan çıkarma için izin vermez.  
   
 ```csharp
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
@@ -218,9 +218,9 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
 }  
 ```  
   
- Meta veri oluşturma sırasında kullanılmak üzere vekil takmak için ek adımlar atılması gerekir. Bunu yapmak için bir mekanizma, bu örnek ne gösterir bir `IWsdlExportExtension` sağlamaktır. Başka bir yolu `WsdlExporter` doğrudan değiştirmektir.  
+ Meta veri oluşturma sırasında kullanılmak üzere yedeği eklemek için ek adımların alınması gerekir. Bunu yapmak için bir mekanizma, `IWsdlExportExtension` Bu örneğin gösterdiği şeydir. Başka bir yol da doğrudan değiştirmektir `WsdlExporter` .  
   
- Öznitelik `AllowNonSerializableTypesAttribute` uygular `IWsdlExportExtension` ve `IContractBehavior`. Uzantı bir `IContractBehavior` veya `IEndpointBehavior` bu durumda olabilir. Yöntem `IWsdlExportExtension.ExportContract` uygulaması, DataContract için şema `XsdDataContractExporter` üretimi sırasında kullanılana ekleyerek vekilin kullanılmasını sağlar. Aşağıdaki kod parçacığı bunun nasıl yapılacağını gösterir.  
+ `AllowNonSerializableTypesAttribute`Özniteliği ve uygular `IWsdlExportExtension` `IContractBehavior` . Uzantı ya da `IContractBehavior` `IEndpointBehavior` Bu durumda olabilir. `IWsdlExportExtension.ExportContract`Yöntem uygulama, `XsdDataContractExporter` DataContract için şema oluşturma sırasında kullanılan öğesine ekleyerek yedeği sağlar. Aşağıdaki kod parçacığında bunun nasıl yapılacağı gösterilmektedir.  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- Örneği çalıştırdığınızda, istemci AddEmployee'ı çağırır ve ardından ilk çağrının başarılı olup olmadığını kontrol etmek için GetEmployee çağrısını alır. GetEmployee işlem isteğinin sonucu istemci konsol penceresinde görüntülenir. GetEmployee işlemi, çalışanBulma ve "bulunan" yazdırma başarılı olmalıdır.  
+ Örneği çalıştırdığınızda, istemci, ilk çağrının başarılı olup olmadığını denetlemek için bir GetEmployee çağrısı tarafından izlenen AddEmployee öğesini çağırır. GetEmployee işlem isteğinin sonucu istemci konsol penceresinde görüntülenir. GetEmployee işlemi, çalışanı bulma ve "Found" Yazdırma işleminde başarılı olmalıdır.  
   
 > [!NOTE]
-> Bu örnek, serihale, deserialize ve meta veri üretimi için bir vekil nasıl takTı gösterilmektedir. Meta verilerden kod oluşturma için bir vekilnasıl takılsüreceğini göstermez. Bir vekilin istemci kodu oluşturmaya takmak için nasıl kullanılabileceğini görmek için [Özel WSDL Yayın](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md) örneğine bakın.  
+> Bu örnek, seri hale getirme, seri durumdan çıkarma ve meta veri oluşturma için bir vekil nasıl ekleneceğini gösterir. Meta verilerden kod üretimi için bir yedeği nasıl bir fişe ekleneceğini göstermez. Bir vekil 'in istemci kod üretimini eklemek için nasıl kullanılabileceği hakkında bir örnek görmek için bkz. [özel wsdl yayınlama](custom-wsdl-publication.md) örneği.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümün C# sürümünü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümün C# sürümünü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

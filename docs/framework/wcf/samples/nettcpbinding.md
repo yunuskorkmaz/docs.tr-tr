@@ -2,19 +2,19 @@
 title: NetTCPBinding
 ms.date: 03/30/2017
 ms.assetid: 1690b42f-acfd-4bb3-8f0d-0b17cd5ca36c
-ms.openlocfilehash: bab4f89d197f18a5294c6d48998f2ae6e905151a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0b1c288abddfb1707728e61e774618399a8b24c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584148"
 ---
 # <a name="nettcpbinding"></a>NetTCPBinding
-Bu bölüm, Windows Communication Foundation (WCF) TCP bağlaması kullanımını gösteren örnekleri içerir.  
+Bu bölüm Windows Communication Foundation (WCF) içinde TCP bağlamayı kullanmayı gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Varsayılan NetTcpBinding](../../../../docs/framework/wcf/samples/default-nettcpbinding.md)  
- Kullanımını gösteren <xref:System.ServiceModel.NetTcpBinding> bağlama.  
+ [Varsayılan NetTcpBinding](default-nettcpbinding.md)  
+ Bağlamanın kullanımını gösterir <xref:System.ServiceModel.NetTcpBinding> .  
   
- [Net.TCP Bağlantı Noktası Paylaşımı Örneği](../../../../docs/framework/wcf/samples/net-tcp-port-sharing-sample.md)  
- WCF'de TCP bağlantı noktası gösterir.
+ [Net.TCP Bağlantı Noktası Paylaşımı Örneği](net-tcp-port-sharing-sample.md)  
+ WCF 'de TCP bağlantı noktası paylaşımını gösterir.

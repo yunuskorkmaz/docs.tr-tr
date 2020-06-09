@@ -1,5 +1,6 @@
 ---
 title: .NET 'te g/ç hatalarını işleme
+description: .NET ' te g/ç hatalarını nasıl işleyeceğinizi öğrenin. Hata kodlarını özel durumlara eşleyin, g/ç işlemlerinde özel durumları işleyin ve IOException 'ı işleyin.
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 45f3951b727d3b615d8384541ff169e8840acab0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599808"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET 'te g/ç hatalarını işleme
 
@@ -54,7 +55,7 @@ Bu, işletim sistemine güvendiğimiz için, aynı özel durum koşulları (örn
 | <xref:System.IO.PathTooLongException> | Yes | Yes |
 | <xref:System.OperationCanceledException> | Yes | Yes |
 | <xref:System.UnauthorizedAccessException> | Yes | Yes |
-| <xref:System.ArgumentException> | .NET Core 2,0 ve öncesi| Yes |
+| <xref:System.ArgumentException> | .NET Core 2,0 ve öncesi| Evet |
 | <xref:System.NotSupportedException> | Hayır | Evet |
 | <xref:System.Security.SecurityException> | Hayır | Yalnızca sınırlı güven |
 
@@ -71,7 +72,7 @@ Ayrıca, .NET Core 2,1 ' den itibaren doğrulama, yolun doğruluğunu denetler (
 
 Bir durumda <xref:System.IO.IOException> , [IOException. HRESULT](xref:System.Exception.HResult) özelliğinden ek hata bilgileri alabilirsiniz. HResult değerini bir Win32 hata koduna dönüştürmek için 32 bitlik değerin üst 16 bitini bir adım adım. Aşağıdaki tabloda, içine kaydırılmış olabilecek hata kodları listelenmektedir <xref:System.IO.IOException> .
 
-| HResult | Sabit | Description |
+| HResult | Sabit | Açıklama |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Dosya adı eksik veya dosya ya da Dizin kullanımda. |
 | ERROR_FILE_EXISTS | 80 | Dosya zaten var. |
