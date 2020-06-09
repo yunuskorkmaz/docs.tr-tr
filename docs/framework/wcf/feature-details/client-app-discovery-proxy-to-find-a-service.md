@@ -2,32 +2,32 @@
 title: "Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma"
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185379"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587020"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma
-Bu konu, bir keşif proxy nasıl uygulanacağını tartışAn üç konunun üçüncüsüdür. Önceki konu, [Nasıl: Discovery Proxy ile kaydeder bir Keşfedilebilir Hizmet uygulayın](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), bulma proxy ile kendini kaydeden bir WCF hizmeti uyguladı. Bu konuda, WCF hizmetini bulmak için bulma proxy'sini kullanan bir WCF istemcisi oluşturursunuz.  
+Bu konu, bulma proxy 'nin nasıl uygulanacağını ele alan üçüncü üç konudan oluşur. Önceki konu başlığında, [nasıl yapılır: bulma proxy 'Sine kaydolduktan sonra keşfedilebilir bir hizmeti uygulama](discoverable-service-that-registers-with-the-discovery-proxy.md), kendisini bulma proxy 'sine KAYDEDEN bir WCF hizmeti uyguladık. Bu konuda, WCF hizmetini bulmak için keşif proxy 'sini kullanan bir WCF istemcisi oluşturursunuz.  
   
 ### <a name="implement-the-client"></a>İstemciyi uygulama  
   
-1. `DiscoveryProxyExample` Çözüme yeni bir konsol uygulama `Client`projesi ekleyin.  
+1. Adlı çözüme yeni bir konsol uygulama projesi ekleyin `DiscoveryProxyExample` `Client` .  
   
 2. Aşağıdaki derlemelere başvurular ekleyin:  
   
-    1. System.ServiceModel  
+    1. System. ServiceModel  
   
-    2. System.ServiceModel.Discovery  
+    2. System. ServiceModel. Discovery  
   
-3. Bu konunun alt kısmında bulunan GeneratedClient.cs projeye ekleyin.  
+3. Bu konunun en altında bulunan GeneratedClient.cs ' i projeye ekleyin.  
   
     > [!NOTE]
-    > Bu dosya genellikle Svcutil.exe gibi bir araç kullanılarak oluşturulur. Bu konu, görevi basitleştirmek için sağlanır.  
+    > Bu dosya genellikle Svcutil. exe gibi bir araç kullanılarak oluşturulur. Bu, görevi basitleştirmek için bu konuda verilmiştir.  
   
-4. Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin. Bu yöntem bir bitiş noktası adresi alır ve hizmet istemcisi (proxy) başharflerini almak için kullanır.  
+4. Program.cs dosyasını açın ve aşağıdaki yöntemi ekleyin. Bu yöntem bir uç nokta adresi alır ve hizmet istemcisini (proxy) başlatmak için onu kullanır.  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -101,10 +101,10 @@ Bu konu, bir keşif proxy nasıl uygulanacağını tartışAn üç konunun üç�
     }  
     ```  
   
- İstemci uygulamasını uygulamayı tamamladınız. Nasıl devam [edin: Discovery Proxy test edin.](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)  
+ İstemci uygulamasını uygulamayı tamamladınız. [Nasıl yapılır: keşif proxy 'Sini test etme](how-to-test-the-discovery-proxy.md).  
   
 ## <a name="example"></a>Örnek  
- Bu, bu konu için tam kod listesidir.  
+ Bu, bu konunun tam kod listesidir.  
   
 ```csharp  
 // GeneratedClient.cs  
@@ -283,6 +283,6 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Keşif Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Nasıl yapılır: Keşif Proxy'si Uygulama](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [WCF Keşif Genel Bakış](wcf-discovery-overview.md)
+- [Nasıl yapılır: Keşif Proxy'si Uygulama](how-to-implement-a-discovery-proxy.md)
+- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](discoverable-service-that-registers-with-the-discovery-proxy.md)

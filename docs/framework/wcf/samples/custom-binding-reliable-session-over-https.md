@@ -2,12 +2,12 @@
 title: HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: c31f8a5b4e3771f6c6e8de41e6b098474c34cf77
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: ab2dd4725879ba969afdae8a6423a920a9786125
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144870"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585304"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS Üzerinden Özel Bağlama Güvenli Oturum
 Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını gösterir. Güvenilir Oturumlar, WS-güvenilir mesajlaşma protokolünü uygular. Güvenilir Oturumlar üzerinde WS-Security oluşturarak güvenli bir güvenilir oturumunuz olabilir. Ancak bazen, SSL ile HTTP Transport Security kullanmayı tercih edebilirsiniz.  
@@ -24,7 +24,7 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
  SSL, paketlerin kendilerine güvenmesini sağlar. Bu, WS-Secure konuşması kullanılarak güvenilir oturumu güvenli hale getirmenin farklı olduğunu unutmamak önemlidir.  
   
- HTTPS üzerinden güvenilir oturum kullanmak için özel bir bağlama oluşturmanız gerekir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum bağlama öğesi ve kullanılarak özel bir bağlama oluşturulur [\<httpsTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md) . Aşağıdaki yapılandırma özel bağlamadır.  
+ HTTPS üzerinden güvenilir oturum kullanmak için özel bir bağlama oluşturmanız gerekir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum bağlama öğesi ve kullanılarak özel bir bağlama oluşturulur [\<httpsTransport>](../../configure-apps/file-schema/wcf/httpstransport.md) . Aşağıdaki yapılandırma özel bağlamadır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +70,7 @@ Bu örnek, SSL Aktarım güvenliği 'nin güvenilir oturumlarla kullanımını g
 </configuration>  
 ```  
   
- Örnekteki program kodu, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) hizmetindekilerle aynıdır. Örneği oluşturmadan önce bir sertifika oluşturmalı ve Web sunucusu Sertifika sihirbazını kullanarak atamanız gerekir. Yapılandırma dosyası ayarlarındaki uç nokta tanımı ve bağlama tanımı, istemci için aşağıdaki örnek yapılandırmada gösterildiği gibi özel bağlamanın kullanımını etkinleştirir.  
+ Örnekteki program kodu, [Başlarken](getting-started-sample.md) hizmetindekilerle aynıdır. Örneği oluşturmadan önce bir sertifika oluşturmalı ve Web sunucusu Sertifika sihirbazını kullanarak atamanız gerekir. Yapılandırma dosyası ayarlarındaki uç nokta tanımı ve bağlama tanımı, istemci için aşağıdaki örnek yapılandırmada gösterildiği gibi özel bağlamanın kullanımını etkinleştirir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -128,10 +128,10 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. [Internet Information Services (IIS) sunucu sertifikası yükleme yönergelerini](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)gerçekleştirdiğinizden emin olun.  
+3. [Internet Information Services (IIS) sunucu sertifikası yükleme yönergelerini](iis-server-certificate-installation-instructions.md)gerçekleştirdiğinizden emin olun.  
   
-4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-5. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+5. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  

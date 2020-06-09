@@ -1,31 +1,32 @@
 ---
 title: Asenkron programlama desenleri
+description: Görev tabanlı zaman uyumsuz model (TAP), olay tabanlı zaman uyumsuz model (EAP), .NET 'te & zaman uyumsuz programlama modeli (APM) hakkında bilgi edinin.
 ms.date: 10/16/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd4d44d8de8a64be82e9ce6af593a86719b59fcf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160059"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583511"
 ---
 # <a name="asynchronous-programming-patterns"></a>Asenkron programlama desenleri
 
-.NET, eşzamanlı işlemler gerçekleştirmek için üç desen sağlar:  
+.NET, zaman uyumsuz işlemleri gerçekleştirmek için üç model sağlar:  
 
-- **Görev tabanlı Eşenkron Desen (TAP),** bir eşzamanlı işlemin başlatılmasını ve tamamlanmasını temsil etmek için tek bir yöntem kullanır. TAP ,.NET Framework 4'te tanıtıldı. **.NET'te eşzamanlı programlamaiçin önerilen yaklaşımdır.** C# [ve](../../csharp/language-reference/keywords/async.md) Visual Basic'teki [Async](../../visual-basic/language-reference/modifiers/async.md) ve [Await](../../visual-basic/language-reference/operators/await-operator.md) işleçleri, [await](../../csharp/language-reference/operators/await.md) TAP için dil desteği ekler. Daha fazla bilgi için [Görev Tabanlı Eşzamanlı Desen (TAP)](task-based-asynchronous-pattern-tap.md)'ye bakın.  
+- Zaman uyumsuz bir işlemin başlatılması ve tamamlanmasını temsil etmek için tek bir yöntem kullanan **görev tabanlı zaman uyumsuz model (TAP)**. .NET Framework 4 ' te dokunma eklendi. **.NET ' te zaman uyumsuz programlama için önerilen yaklaşımdır.** C# ' deki [Async](../../csharp/language-reference/keywords/async.md) ve [await](../../csharp/language-reference/operators/await.md) anahtar sözcükleri ve Visual Basic ' deki [Async](../../visual-basic/language-reference/modifiers/async.md) ve [await](../../visual-basic/language-reference/operators/await-operator.md) işleçleri, TAP için dil desteği Ekle ' ye tıklayın. Daha fazla bilgi için bkz. [görev tabanlı zaman uyumsuz model (TAP)](task-based-asynchronous-pattern-tap.md).  
 
-- **Olay tabanlı Asynchronous Pattern (EAP)**, asynchronous davranış sağlamak için olay tabanlı eski modeldir. `Async` Soneki ve bir veya daha fazla olay, olay işleyicisi `EventArg`temsilci türleri ve -türetilmiş türleri olan bir yöntem gerektirir. EAP .NET Framework 2.0'da tanıtıldı. Artık yeni bir gelişme için tavsiye edilmez. Daha fazla bilgi için olay [tabanlı Eşzamanlı Desen (EAP)](event-based-asynchronous-pattern-eap.md)bakın.  
+- Zaman uyumsuz davranış sağlamaya yönelik olay tabanlı eski model olan **olay tabanlı zaman uyumsuz model (EAP)**. `Async`Son ek ve bir veya daha fazla olay, olay işleyicisi temsilci türleri ve-türetilmiş türler içeren bir yöntem gerektirir `EventArg` . EAP .NET Framework 2,0 ' de tanıtılmıştı. Artık yeni geliştirme için önerilmez. Daha fazla bilgi için bkz. [olay tabanlı zaman uyumsuz model (EAP)](event-based-asynchronous-pattern-eap.md).  
 
-- **Asynchronous Programming Model (APM)** <xref:System.IAsyncResult> deseni (desen olarak da adlandırılır), asynchronous davranış sağlamak için <xref:System.IAsyncResult> arabirimi kullanan eski modeldir. Bu desende, senkron `Begin` işlemler `End` gerektirir ve `BeginWrite` yöntemleri `EndWrite` (örneğin, ve bir eşzamanlı yazma işlemi uygulamak için). Bu desen artık yeni geliştirme için önerilmez. Daha fazla bilgi için, [Asynchronous Programming Model (APM)](asynchronous-programming-model-apm.md)bakın.  
+- Zaman uyumsuz davranış sağlamak için arabirimi kullanan eski model olan **zaman uyumsuz programlama modeli (APM)** modeli (Ayrıca, model olarak da bilinir <xref:System.IAsyncResult> ) <xref:System.IAsyncResult> . Bu düzende, zaman uyumlu işlemler `Begin` ve `End` yöntemleri gerektirir (örneğin, `BeginWrite` ve `EndWrite` bir zaman uyumsuz yazma işlemi uygulamak için). Bu model artık yeni geliştirme için önerilmez. Daha fazla bilgi için bkz. [zaman uyumsuz programlama modeli (APM)](asynchronous-programming-model-apm.md).  
   
-## <a name="comparison-of-patterns"></a>Desenlerin karşılaştırılması
+## <a name="comparison-of-patterns"></a>Desenlerin karşılaştırması
 
-Üç modelin eşzamanlı işlemleri nasıl modellediğinin hızlı `Read` bir karşılaştırması için, belirli bir ofsetten başlayarak sağlanan bir arabellekte belirli miktarda veriyi okuyan bir yöntemi düşünün:  
+Üç desenin zaman uyumsuz işlemlerin nasıl modellendiği hakkında hızlı bir karşılaştırma için, `Read` belirtilen bir uzaklığa göre belirtilen bir veri miktarını belirtilen bir arabellekte okuyan bir yöntemi göz önünde bulundurun:  
   
 ```csharp  
 public class MyClass  
@@ -34,7 +35,7 @@ public class MyClass
 }  
 ```  
 
-Bu yöntemin TAP karşılığı aşağıdaki `ReadAsync` tek yöntemi ortaya çıkarır:  
+Bu yöntemin karşılık gelen DOKUNMASı, aşağıdaki tek yöntemi kullanıma sunar `ReadAsync` :  
   
 ```csharp
 public class MyClass  
@@ -43,7 +44,7 @@ public class MyClass
 }  
 ```
 
-EAP muadili aşağıdaki tür ve üye kümesini ortaya çıkar:  
+EAP karşılığı aşağıdaki tür ve üye kümesini kullanıma sunar:  
   
 ```csharp  
 public class MyClass  
@@ -53,7 +54,7 @@ public class MyClass
 }  
 ```  
   
-APM muadili `BeginRead` ve `EndRead` yöntemleri ortaya çıkaracak:  
+APM karşılığı, `BeginRead` ve yöntemlerini kullanıma sunar `EndRead` :  
   
 ```csharp  
 public class MyClass  
@@ -67,7 +68,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Derinlemesine Async](../async-in-depth.md)
-- [C'de asynchronous programlama #](../../csharp/async.md)
-- [F'de Async Programlama #](../../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Async ve Await ile Asynchronous Programlama (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)
+- [Zaman uyumsuz, derinlemesine](../async-in-depth.md)
+- [C 'de zaman uyumsuz programlama #](../../csharp/async.md)
+- [F 'de zaman uyumsuz programlama #](../../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

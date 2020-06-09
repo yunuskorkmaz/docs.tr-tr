@@ -1,5 +1,6 @@
 ---
 title: 'Normal İfade Örneği: HREF Tarama'
+description: .NET 'teki normal ifadeler örneğine bakın. Örnek, bir giriş dizesini arar ve tüm href öznitelik değerlerini ve konumlarını görüntüler.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: 47364aef49bb0f43b79b805e2adf305c549d7340
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 36273901ac9afb762ac70ee5d6dcd80ff0ede11d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276167"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583498"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Normal İfade Örneği: HREF Tarama
 Aşağıdaki örnek bir giriş dizesini arar ve tüm href = "..." değerler ve dizedeki konumları.  
@@ -36,7 +37,7 @@ Aşağıdaki örnek bir giriş dizesini arar ve tüm href = "..." değerler ve d
   
  Normal ifade deseninin `href\s*=\s*(?:["'](?<1>[^"']*)["']|(?<1>\S+))` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`href`|"Href" değişmez dizesini eşleştirin. Eşleşme büyük/küçük harfe duyarsızdır.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  

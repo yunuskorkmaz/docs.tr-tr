@@ -2,22 +2,22 @@
 title: İleti Denetçileri
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 705401a182d5d816bc2682f5f21ff09ca95f21c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a5519e815a6714e087a77c69e943a3a8c65db68
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144454"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585084"
 ---
 # <a name="message-inspectors"></a>İleti Denetçileri
-Bu örnek, istemci ve hizmet iletisi denetçilerinin nasıl uygulanacağını ve yapılandırılabildiğini gösterir.  
+Bu örnek, istemci ve hizmet ileti denetçilerini nasıl uygulanacağını ve yapılandırılacağını gösterir.  
   
- İleti denetçisi, hizmet modelinin istemci çalışma zamanında ve gönderme çalışma saatinde veya yapılandırma yoluyla kullanılabilecek ve iletileri alındıktan sonra veya gönderilmeden önce inceleyip değiştirebilen bir genişletilebilirlik nesnesidir.  
+ İleti denetçisi, hizmet modelinin istemci çalışma zamanı ve dağıtım çalışma zamanında programlama yoluyla veya yapılandırma aracılığıyla kullanılabilen ve iletileri alındıktan sonra veya gönderilmeden önce incelemenize ve değiştirebilecek bir genişletilebilirlik nesnesidir.  
   
- Bu örnek, gelen iletileri yapılandırılabilir XML Şema belgelerine karşı doğrulayan temel bir istemci ve hizmet iletisi doğrulama mekanizması uygular. Bu örnek her işlem için iletileri doğrulamaz unutmayın. Bu kasıtlı bir basitleştirmedir.  
+ Bu örnek, bir dizi yapılandırılabilir XML şema belgelerine karşı gelen iletileri doğrulayan temel bir istemci ve hizmet iletisi doğrulama mekanizmasını uygular. Bu örnekte her işlem için iletileri doğrulamayacağını unutmayın. Bu, bilerek basitleştirmesi.  
   
-## <a name="message-inspector"></a>İleti Denetçisi  
- İstemci ileti <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> denetçileri arabirimi uygular <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> ve hizmet iletisi denetmenleri arabirimi uygular. Uygulamalar, her iki taraf için de çalışan bir ileti denetçisi oluşturmak için tek bir sınıfa birleştirilebilir. Bu örnek böyle bir leştirilmiş ileti denetçisi uygular. Denetçi, gelen ve giden iletilerin doğrulandığı bir dizi şema da oluşturulur ve geliştiricinin gelen veya giden iletilerin doğrulanıp doğrulanmadığını ve denetçinin sevk veya istemci modunda olup olmadığını belirlemesine olanak tanır, bu konunun daha sonra tartışılan hata işleme etkiler.  
+## <a name="message-inspector"></a>İleti denetçisi  
+ İstemci ileti Inspectors <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> arabirimini ve hizmet iletisi denetçilerini uygulayan <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> arabirimi uygular. Uygulamalar, her iki taraf için de çalışacak bir ileti denetçisi oluşturmak için tek bir sınıfta birleştirilebilir. Bu örnek, bu tür bir Birleşik ileti denetçisi uygular. Inspector, gelen ve giden iletilerin doğrulandığı bir şema kümesi ile oluşturulur ve geliştiricinin gelen veya giden mesajların doğrulanıp onaylanmadığını ve Inspector 'ın gönderim veya istemci modunda olup olmadığını belirtmesini sağlar ve bu konunun ilerleyen kısımlarında açıklanan hata işlemeyi etkiler.  
   
 ```csharp
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
@@ -39,9 +39,9 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
     }  
 ```  
   
- Herhangi bir hizmet (sevk irsaliyesi) ileti denetçisi iki <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> yöntem <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> ve <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
+ Herhangi bir hizmet (dağıtıcı) ileti denetçisi iki <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> yöntemi ve uygulamalıdır <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> .  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>bir ileti alındığı, kanal yığını tarafından işlendiği ve bir hizmete atandığı, ancak seri çözülmeden ve bir işleme gönderilmeden önce sevk eden tarafından çağrılır. Gelen ileti şifrelenmişse, ileti denetçisi ne zaman ulaşırsa iletinin şifresi zaten çözülür. Yöntem, iletinin `request` denetlenmesini, işlenmesini veya gerektiği gibi değiştirilmesine olanak tanıyan bir başvuru parametresi olarak iletinin geçirilmesini sağlar. İade değeri herhangi bir nesne olabilir ve hizmet geçerli iletiye <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> bir yanıt verdiğinde geçirilen bir korelasyon durumu nesnesi olarak kullanılır. Bu örnekte, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> iletinin denetimini (doğrulanmasını) özel, `ValidateMessageBody` yerel yönteme devreder ve hiçbir korelasyon durumu nesnesini döndürür. Bu yöntem, hizmete geçersiz iletilerin geçmemesini sağlar.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, bir ileti alındığında, kanal yığını tarafından işlendiğinde ve bir hizmete atandığında,, seri durumdan çıkarılmadan ve bir işleme dağıtılmadan önce dağıtıcı tarafından çağrılır. Gelen ileti şifrelendiyse, ileti denetçisine ulaştığında iletinin şifresi zaten çözülür. Yöntemi, `request` bir başvuru parametresi olarak geçirilen iletiyi alır, bu da iletinin gerekli olduğu şekilde incelen, değiştirilmesine veya değiştirilmesine izin verir. Dönüş değeri herhangi bir nesne olabilir ve <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> hizmet geçerli iletiye bir yanıt döndürdüğünde geçirilen bir bağıntı durumu nesnesi olarak kullanılır. Bu örnekte, <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> iletinin denetlemesini (doğrulaması) Private, yerel yöntemine devreder `ValidateMessageBody` ve bağıntı durumu nesnesi döndürmez. Bu yöntem, hizmete hiçbir geçersiz ileti geçmemesini sağlar.  
   
 ```csharp  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,9 +56,9 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>bir yanıt istemciye geri gönderilmeye hazır olduğunda veya gelen ileti işlendiğinde tek yönlü iletiler söz konusu olduğunda çağrılır. Bu uzantıları ne olursa olsun MEP, simetrik olarak adlandırılan saymak için izin verir. Olduğu <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>gibi, ileti bir başvuru parametresi olarak geçirilir ve denetlenebilir, değiştirilebilir veya değiştirilebilir. Bu örnekte gerçekleştirilen iletinin doğrulaması yine `ValidMessageBody` yönteme devredilir, ancak doğrulama hatalarının işlenmesi bu durumda biraz farklıdır.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>bir yanıt istemciye geri gönderilmek üzere olduğunda veya tek yönlü iletiler söz konusu olduğunda gelen ileti işlendiğinde çağrılır. Bu, uzantılarından bağımsız olarak, uzantıların simetrik olarak çağrıldığından sayımına izin verir. İle olduğu gibi <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> , ileti başvuru parametresi olarak geçirilir ve incelenebilir, değiştirilebilir veya değiştirilebilir. Bu örnekte gerçekleştirilen iletinin doğrulanması, yöntemi için yeniden temsilci olarak oluşturulur `ValidMessageBody` , ancak doğrulama hatalarının işlenmesi bu durumda biraz farklıdır.  
   
- Hizmette bir doğrulama hatası oluşursa, `ValidateMessageBody` <xref:System.ServiceModel.FaultException>yöntem türetilmiş özel durumlar atar. Bu <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>istisnalar, otomatik olarak SOAP hatalarına dönüştürülüp istemciye aktarılan servis modeli altyapısına konulabilir. Hizmet <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> <xref:System.ServiceModel.FaultException> tarafından atılan hata özel durumlarının dönüşümü ileti denetçisi çağrılmadan önce oluştuğundan, özel durumlar altyapıya konulmamalıdır. Bu nedenle, aşağıdaki `ReplyValidationFault` uygulama bilinen özel durumu yakalar ve yanıt iletisi açık bir hata iletisi ile değiştirir. Bu yöntem, hizmet uygulaması tarafından geçersiz iletilerin döndürülmesini sağlar.  
+ Hizmette bir doğrulama hatası oluşursa, `ValidateMessageBody` yöntemi <xref:System.ServiceModel.FaultException> -türetilmiş özel durumlar oluşturur. <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>' De, bu özel durumlar, otomatik olarak SOAP hatalarına dönüştürülebileceği ve istemciye geçirildikleri hizmet modeli altyapısına yerleştirilebilir. ' De <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> , <xref:System.ServiceModel.FaultException> hizmet tarafından oluşturulan hata özel durumlarının dönüşümü ileti denetçisi çağrılmadan önce gerçekleştiği için özel durumlar altyapıya yerleştirilmemelidir. Bu nedenle, aşağıdaki uygulama bilinen `ReplyValidationFault` özel durumu yakalar ve yanıt iletisini açık bir hata iletisiyle değiştirir. Bu yöntem, hizmet uygulamasının hiçbir geçersiz ileti döndürülmemesini sağlar.  
   
 ```csharp  
 void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
@@ -80,13 +80,13 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
     }  
 ```  
   
- İstemci ileti denetçisi çok benzer. Uygulanması gereken iki yöntem <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> ve <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> . <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>  
+ İstemci ileti denetçisi çok benzerdir. ' Den uygulanması gereken iki yöntem <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> ve ' dir <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> .  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>ileti istemci uygulaması veya işlem formatter tarafından oluşturulduğunda çağrılır. Sevk irsaliyesi ileti denetçilerinde olduğu gibi, ileti sadece denetlenebilir veya tamamen değiştirilebilir. Bu örnekte, denetçi, gönderme iletisi denetçileri için de kullanılan aynı yerel `ValidateMessageBody` yardımcı yöntemini devreder.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>ileti, istemci uygulaması ya da işlem biçimlendirici tarafından oluşturulduğunda çağrılır. Dağıtıcı ileti denetçiler itibariyle, ileti yalnızca incelenebilir veya tamamen değiştirilebilir. Bu örnekte, Inspector `ValidateMessageBody` dağıtım iletisi denetçisi için de kullanılan aynı yerel yardımcı yöntemine temsilci atar.  
   
- İstemci ve hizmet doğrulaması arasındaki davranış farkı (oluşturucuda belirtildiği gibi), istemci doğrulamasının bir hizmet hatası nedeniyle değil, yerel olarak oluştukları için kullanıcı koduna konulan yerel özel durumlar atmasıdır. Genel olarak, kural, servis sevk irsaliyesi müfettişleri hataları atmak ve istemci müfettişleri özel durumlar atmak olduğunu.  
+ İstemci ve hizmet doğrulaması arasındaki davranış farkı (oluşturucuda belirtildiği gibi), istemci doğrulamasının bir hizmet hatası nedeniyle yerel olarak gerçekleştiğinden, Kullanıcı koduna yerleştirilen yerel özel durumları yaratmaktır. Genellikle kural, hizmet dağıtıcılarının hata oluşturması ve istemci denetçlarının özel durumlar oluşturması şeklindedir.  
   
- Bu <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> uygulama, hizmete geçersiz ileti gönderilmemesini sağlar.  
+ Bu <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> uygulama, hizmete geçersiz ileti gönderilmesini sağlar.  
   
 ```csharp  
 object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
@@ -99,7 +99,7 @@ object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channel
 }  
 ```  
   
- Uygulama, `AfterReceiveReply` hizmetten alınan geçersiz iletilerin istemci kullanıcı koduna iletilmesini sağlar.  
+ `AfterReceiveReply`Uygulama, hizmetten alınan geçersiz iletilerin istemci kullanıcı koduna geçirilmemesini sağlar.  
   
 ```csharp  
 void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
@@ -111,9 +111,9 @@ void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.
 }  
 ```  
   
- Bu özel mesaj denetçisinin `ValidateMessageBody` kalbi yöntemdir. Çalışmasını gerçekleştirmek için, geçirilen iletinin <xref:System.Xml.XmlReader> gövde içeriği alt ağacının etrafına doğrulayan bir sarar. Okuyucu, ileti denetçisinin tuttuğu şema kümesiyle doldurulur ve doğrulama geri araması, bu yöntemin yanında tanımlanana atıfta bulunan `InspectionValidationHandler` bir temsilciye ayarlanır. Doğrulamayı gerçekleştirmek için ileti okunur ve bellek akışı destekli bir alana <xref:System.Xml.XmlDictionaryWriter>biriktirilir. İşlemde bir doğrulama hatası veya uyarı oluşursa, geri arama yöntemi çağrılır.  
+ Bu özel ileti denetçisinin kalp `ValidateMessageBody` yöntemidir. Çalışmasını gerçekleştirmek için, <xref:System.Xml.XmlReader> geçirilen iletinin gövde içeriği alt ağacı etrafında bir doğrulama sarmalar. Okuyucu, ileti denetçisinin tuttuğu şemalar kümesi ile doldurulur ve doğrulama geri çağırması, `InspectionValidationHandler` Bu yöntemin yanı sıra tanımlanan öğesine başvuran bir temsilciye ayarlanır. Doğrulama işlemini gerçekleştirmek için ileti daha sonra okuyup bir bellek akışı ile desteklenir <xref:System.Xml.XmlDictionaryWriter> . İşlemde bir doğrulama hatası veya uyarı oluşursa, geri çağırma yöntemi çağrılır.  
   
- Hata oluşmaz, özellikleri ve üstbilgileri özgün iletiden kopyalayan ve bellek akışında şimdi doğrulanmış bilgi kümesini kullanan ve bir <xref:System.Xml.XmlDictionaryReader> iletiyi sarıp değiştirilen iletiye eklenen yeni bir ileti oluşturulur.  
+ Herhangi bir hata oluşursa, özgün iletiden özellikleri ve başlıkları kopyalayan ve bir ile kaydırılan <xref:System.Xml.XmlDictionaryReader> ve değiştirme iletisine eklenen bir bellek akışında şimdi doğrulanan bilgi kümesini kullanan yeni bir ileti oluşturulur.  
   
 ```csharp  
 void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool isRequest)  
@@ -156,11 +156,11 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 }  
 ```  
   
- Yöntem, `InspectionValidationHandler` şema doğrulama <xref:System.Xml.XmlReader> hatası veya uyarısı oluştuğunda doğrulama tarafından çağrılır. Aşağıdaki uygulama yalnızca hatalarla çalışır ve tüm uyarıları yok sayar.  
+ `InspectionValidationHandler`Yöntemi, <xref:System.Xml.XmlReader> bir şema doğrulama hatası veya uyarı oluştuğunda doğrulama tarafından çağırılır. Aşağıdaki uygulama yalnızca hatalarla birlikte çalışarak tüm uyarıları yoksayar.  
   
- İlk olarak, ileti denetçisi ile <xref:System.Xml.XmlReader> iletiye doğrulama enjekte etmek ve ileti işlenirken ve iletiyi arabelleğe almadan doğrulamanın gerçekleşmesine izin vermek mümkün görünebilir. Ancak bu, bu geri aramanın doğrulama özel durumlarını hizmet modeli altyapısına veya geçersiz XML düğümleri algılanırken kullanıcı koduna bir yere attığı ve öngörülemeyen davranışlara yol açacağı anlamına gelir. Arabelleğe alma yaklaşımı, kullanıcı kodunu geçersiz iletilerden tamamen korur.  
+ İlk bakışta ileti <xref:System.Xml.XmlReader> denetçisi ile iletiye bir doğrulama eklemek ve ileti işlendiğinde ve iletiyi arabelleğe almadan doğrulamanın gerçekleşmesini sağlamak mümkün görünebilir. Bununla birlikte, bu geri aramanın, doğrulama özel durumlarını hizmet modeli altyapısında veya geçersiz XML düğümleri algılandığı için Kullanıcı kodu olduğu anlamına gelir, ancak öngörülemeyen davranışlara neden olur. Arabelleğe alma yaklaşımı, Kullanıcı kodunu geçersiz iletilerden tamamen kalkan.  
   
- Daha önce de ele alındığı gibi, işleyici tarafından atılan özel durumlar istemci ve hizmet arasında farklılık gösterir. Hizmette, özel <xref:System.ServiceModel.FaultException>durumlar, istemcide istisnalar düzenli özel özel durumlardır.  
+ Daha önce anlatıldığı gibi işleyici tarafından oluşturulan özel durumlar, istemci ve hizmet arasında farklılık gösterir. Hizmette, özel durumlar ' dan türetilir <xref:System.ServiceModel.FaultException> , istemci üzerindeki özel durumlar normal özel istisnalardır.  
   
 ```csharp  
         void InspectionValidationHandler(object sender, ValidationEventArgs e)  
@@ -202,9 +202,9 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>Davranış  
- İleti denetçileri istemci çalışma zamanı veya sevk çalışma zamanı uzantıları vardır. Bu tür uzantılar *davranışlar*kullanılarak yapılandırılır. Davranış, varsayılan yapılandırmayı değiştirerek veya uzantılar (ileti baslayışları gibi) ekleyerek hizmet modelinin çalışma zamanı davranışını değiştiren bir sınıftır.  
+ İleti denetçiler, istemci çalışma zamanına veya dağıtım çalışma zamanına yönelik uzantılardır. Bu tür uzantılar *davranışlar*kullanılarak yapılandırılır. Davranış, varsayılan yapılandırmayı değiştirerek veya uzantıları (ileti denetçiler gibi) ekleyerek hizmet modeli çalışma zamanının davranışını değiştiren bir sınıftır.  
   
- Aşağıdaki `SchemaValidationBehavior` sınıf, bu örneğin ileti denetçisini istemciye veya sevk çalışma süresine eklemek için kullanılan davranıştır. Uygulama her iki durumda da oldukça basittir. Içinde <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>ve , ileti denetçisi <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> oluşturulur ve ilgili çalışma zamanı nın koleksiyonuna eklenir.  
+ Aşağıdaki `SchemaValidationBehavior` sınıf, bu örneğin ileti denetçisini istemciye veya dağıtım çalışma zamanına eklemek için kullanılan davranıştır. Uygulama, her iki durumda da temel değildir. <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A>Ve <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> ' de, ileti denetçisi oluşturulur ve <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> ilgili çalışma zamanının koleksiyonuna eklenir.  
   
 ```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
@@ -256,10 +256,10 @@ public class SchemaValidationBehavior : IEndpointBehavior
 ```  
   
 > [!NOTE]
-> Bu özel davranış bir öznitelik olarak iki katına çıkmaz ve bu nedenle bir hizmet türünün sözleşme türüne bildirimsel olarak eklenemez. Şema koleksiyonu bir öznitelik bildirimine yüklenemediği ve bu öznitelikte fazladan bir yapılandırma konumuna (örneğin uygulama ayarlarına) atıfta bulunulduğu için bu, bir yapılandırma öğesi oluşturma anlamına geldiği için alınan bir yan tasarım kararıdır. hizmet modeli yapılandırmasının geri kalanıyla tutarlı değildir. Bu nedenle, bu davranış yalnızca zorunlu olarak kod ve hizmet modeli yapılandırma uzantısı yoluyla eklenebilir.  
+> Bu belirli davranış bir öznitelik olarak Double değildir ve bu nedenle bir hizmet türünün anlaşma türüne bildirimli olarak eklenemez. Şema koleksiyonu bir öznitelik bildiriminde yüklenemeyeceği ve bu öznitelikteki ek bir yapılandırma konumuna (örneğin uygulama ayarlarına) başvuru yapıldığından, hizmet modeli yapılandırmasının geri kalanı ile tutarlı olmayan bir yapılandırma öğesi oluşturulması gerektiği için, bu bir tasarım tarafından yapılan bir karardır. Bu nedenle, bu davranış yalnızca kod üzerinden ve bir hizmet modeli yapılandırma uzantısı aracılığıyla imperatively eklenebilir.  
   
-## <a name="adding-the-message-inspector-through-configuration"></a>Yapılandırma yoluyla İleti Denetçisi ekleme  
- Uygulama yapılandırma dosyasındaki bir bitiş noktasında özel bir davranışı yapılandırmak için, hizmet modeli uygulayıcıların türetilen <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>bir sınıf tarafından temsil edilen bir yapılandırma uzantısı *öğesi* oluşturmasını gerektirir. Bu uzantı, bu bölümde açıklanan aşağıdaki uzantıda gösterildiği gibi uzantılar için hizmet modelinin yapılandırma bölümüne eklenmelidir.  
+## <a name="adding-the-message-inspector-through-configuration"></a>Yapılandırma yoluyla Ileti denetçisi ekleme  
+ Uygulama yapılandırma dosyasındaki bir uç noktada özel bir davranışı yapılandırmak için, hizmet modeli, ımplemenondan türetilmiş bir sınıf tarafından temsil edilen bir yapılandırma *uzantısı öğesi* oluşturmasını gerektirir <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> . Bu uzantı, bu bölümde açıklanan aşağıdaki uzantı için gösterildiği gibi, uzantılar için hizmet modelinin yapılandırma bölümüne eklenmelidir.  
   
 ```xml  
 <system.serviceModel>  
@@ -273,9 +273,9 @@ public class SchemaValidationBehavior : IEndpointBehavior
 </system.serviceModel>  
 ```  
   
- Uzantılar, en yaygın seçenek olan uygulama veya ASP.NET yapılandırma dosyasına veya makine yapılandırma dosyasına eklenebilir.  
+ Uzantılar, en yaygın seçim olan veya makine yapılandırma dosyasında bulunan uygulama veya ASP.NET yapılandırma dosyasına eklenebilir.  
   
- Uzantı yapılandırma kapsamına eklendiğinde, davranış aşağıdaki kodda gösterildiği gibi davranış yapılandırmasına eklenebilir. Davranış yapılandırmaları, gerektiğinde birden çok uç noktaya uygulanabilen yeniden kullanılabilir öğelerdir. Burada yapılandırılacak belirli bir davranış <xref:System.ServiceModel.Description.IEndpointBehavior>uygulandığından, yalnızca yapılandırma dosyasındaki ilgili yapılandırma bölümünde geçerlidir.  
+ Uzantı bir yapılandırma kapsamına eklendiğinde, davranış aşağıdaki kodda gösterildiği gibi bir davranış yapılandırmasına eklenebilir. Davranış yapılandırması, gerektiğinde birden çok uç noktaya uygulanabilen yeniden kullanılabilir öğelerdir. Burada yapılandırılacak belirli davranış uyguladığı için <xref:System.ServiceModel.Description.IEndpointBehavior> , yapılandırma dosyasındaki ilgili yapılandırma bölümünde yalnızca geçerli olur.  
   
 ```xml  
 <system.serviceModel>  
@@ -295,9 +295,9 @@ public class SchemaValidationBehavior : IEndpointBehavior
 </system.serviceModel>  
 ```  
   
- İleti `<schemaValidator>` denetçisini yapılandıran öğe `SchemaValidationBehaviorExtensionElement` sınıf tarafından desteklenir. Sınıf adlı `ValidateRequest` iki Boolean ortak `ValidateReply`özellikleri ortaya çıkarır ve . Bunların her ikisi de <xref:System.Configuration.ConfigurationPropertyAttribute>bir . Bu öznitelik, önceki XML yapılandırma öğesinde görülebilen kod özellikleri ile XML öznitelikleri arasındaki bağlantıyı oluşturur. Sınıf ayrıca ek `Schemas` olarak işaretlenmiş <xref:System.Configuration.ConfigurationCollectionAttribute> bir özelliği vardır ve `SchemaCollection`türü , aynı zamanda bu örneğin bir parçası olan ancak kısalık için bu belgeden atlanan. Bu özellik, koleksiyon ve koleksiyon `SchemaConfigElement` öğesi sınıfıyla birlikte önceki yapılandırma snippet'indeki öğeyi `<schemas>` geri verir ve doğrulama kümesine şema koleksiyonu eklemeye olanak tanır.  
+ `<schemaValidator>`İleti denetçisini yapılandıran öğe, sınıfı tarafından desteklenir `SchemaValidationBehaviorExtensionElement` . Sınıfı, ve adlı iki Boole ortak özelliği kullanıma sunar `ValidateRequest` `ValidateReply` . Bunların her ikisi de ile işaretlenir <xref:System.Configuration.ConfigurationPropertyAttribute> . Bu öznitelik, önceki XML yapılandırma öğesinde görünebileceğiniz kod özellikleri ve XML öznitelikleri arasındaki bağlantıyı oluşturur. Sınıfı ayrıca `Schemas` , ile birlikte işaretlenmiş ve bu örneğin bir parçası olan <xref:System.Configuration.ConfigurationCollectionAttribute> `SchemaCollection` ancak bu örnek, kısaltma için bu belgeden atlanan bir özelliğe sahiptir. Koleksiyon ve koleksiyon öğesi sınıfıyla birlikte bu özellik, `SchemaConfigElement` `<schemas>` önceki yapılandırma parçacığındaki öğesini yedekler ve doğrulama kümesine bir şema koleksiyonu eklenmesine izin verir.  
   
- Geçersiz kılınan `CreateBehavior` yöntem, çalışma zamanı bir istemci veya bitiş noktası oluştururken yapılandırma verilerini değerlendirirken yapılandırma verilerini davranış nesnesine dönüştürür.  
+ Geçersiz kılınan `CreateBehavior` Yöntem, bir istemci veya uç nokta oluştururken, çalışma zamanı yapılandırma verilerini değerlendirirken, yapılandırma verilerini bir davranış nesnesine dönüştürür.  
   
 ```csharp
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
@@ -366,8 +366,8 @@ public bool ValidateRequest
 }  
 ```  
   
-## <a name="adding-message-inspectors-imperatively"></a>Zorunlu Olarak İleti Denetçisi Ekleme  
- Öznitelikler (daha önce atıfta bulunulan nedenlerle bu örnekte desteklenmeyen) ve yapılandırma dışında, davranışlar zorunlu kod kullanılarak istemci ve hizmet çalışma süresine kolayca eklenebilir. Bu örnekte, bu istemci ileti denetçisi sınamak için istemci uygulamasında yapılır. <xref:System.ServiceModel.ClientBase%601>Sınıf, `GenericClient` uç nokta yapılandırmasını kullanıcı koduna gösteren türetilmiştir. İstemci örtülü olarak açılmadan önce, örneğin aşağıdaki kodda gösterildiği gibi davranışlar eklenerek uç nokta yapılandırması değiştirilebilir. Hizmetteki davranışın eklenmesi büyük ölçüde burada gösterilen istemci tekniğine eşdeğerdir ve hizmet ana bilgisayarı açılmadan önce gerçekleştirilmesi gerekir.  
+## <a name="adding-message-inspectors-imperatively"></a>Ileti Inspectors Imperatively ekleme  
+ Öznitelikleri (daha önce, bu örnekte, daha önce alıntı yapılan nedenler için desteklenmez) ve yapılandırma dışında, davranışları, zorunlu kod kullanarak istemci ve hizmet çalışma zamanına oldukça kolay bir şekilde eklenebilir. Bu örnekte, istemci uygulamasında istemci ileti denetçisini test etmek için bu yapılır. `GenericClient`Sınıfı öğesinden türetilir <xref:System.ServiceModel.ClientBase%601> ve bu, uç nokta yapılandırmasını Kullanıcı koduna sunar. İstemci örtük olarak açılmadan önce, aşağıdaki kodda gösterildiği gibi davranışları ekleyerek uç nokta yapılandırması değiştirilebilir. Hizmetin davranışını eklemek burada gösterilen istemci tekniğinden büyük ölçüde eşdeğerdir ve hizmet ana bilgisayarı açılmadan önce gerçekleştirilmesi gerekir.  
   
 ```csharp  
 try  
@@ -396,19 +396,19 @@ catch (Exception e)
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

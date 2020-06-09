@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 0665ce331492a5322fdfde9e91fc1dae5b8e7ea8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 95101b8ec4f5a7fc60d0233ab6685b5c6851b44e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584993"
 ---
 # <a name="message-security-anonymous"></a>İleti Güvenliği Anonim
-Ileti güvenliği anonim örneği, istemci kimlik doğrulaması olmadan ileti düzeyinde güvenlik kullanan, ancak sunucunun X. 509.440 kullanarak sunucu kimlik doğrulaması gerektiren bir Windows Communication Foundation (WCF) uygulamasının nasıl uygulanacağını gösterir. Sertifika. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Bu örnek, [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) örneğine dayalıdır. Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir istemci konsol programından (. exe) ve hizmet kitaplığından (. dll) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular.
+Ileti güvenliği anonim örneği, istemci kimlik doğrulaması olmadan ileti düzeyinde güvenlik kullanan ancak sunucunun X. 509.440 sertifikasını kullanarak sunucu kimlik doğrulaması gerektiren bir Windows Communication Foundation (WCF) uygulamasının nasıl uygulanacağını gösterir. İstemci ve sunucu arasındaki tüm uygulama iletileri imzalanır ve şifrelenir. Bu örnek, [WSHttpBinding](wshttpbinding.md) örneğine dayalıdır. Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir istemci konsol programından (. exe) ve hizmet kitaplığından (. dll) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
- Bu örnek, istemci kimlik doğrulamasından geçirilmediğinden `True` döndüren Hesaplayıcı arabirimine yeni bir işlem ekler.
+ Bu örnek, `True` istemci kimlik doğrulamasından geçirilmediğinden döndüren Hesaplayıcı arabirimine yeni bir işlem ekler.
 
 ```csharp
 public class CalculatorService : ICalculator
@@ -31,7 +31,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
- Hizmet, bir yapılandırma dosyası (Web. config) kullanılarak tanımlanan, hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama `wsHttpBinding` bağlama ile yapılandırılır. `wsHttpBinding` bağlamanın varsayılan güvenlik modu `Message`. `clientCredentialType` özniteliği `None`olarak ayarlanır.
+ Hizmet, bir yapılandırma dosyası (Web. config) kullanılarak tanımlanan, hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama bir bağlama ile yapılandırılır `wsHttpBinding` . Bağlama için varsayılan güvenlik modu `wsHttpBinding` `Message` . `clientCredentialType`Özniteliği olarak ayarlanır `None` .
 
 ```xml
 <system.serviceModel>
@@ -57,7 +57,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- Hizmet kimlik doğrulaması için kullanılacak kimlik bilgileri [\<davranış >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)belirtilir. Sunucu sertifikası, aşağıdaki örnek kodda gösterildiği gibi, `findValue` özniteliği için belirtilen değer olarak `SubjectName` için aynı değeri içermelidir.
+ Hizmet kimlik doğrulaması için kullanılacak kimlik bilgileri içinde belirtilir [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) . Sunucu sertifikası, `SubjectName` `findValue` Aşağıdaki örnek kodda gösterildiği gibi, özniteliği için belirtilen değer olarak aynı değeri içermelidir.
 
 ```xml
 <behaviors>
@@ -78,7 +78,7 @@ public class CalculatorService : ICalculator
 </behaviors>
 ```
 
- İstemci uç noktası yapılandırması, hizmet uç noktası, bağlama ve sözleşme için mutlak bir adresten oluşur. `wsHttpBinding` bağlamasının istemci güvenlik modu `Message`. `clientCredentialType` özniteliği `None`olarak ayarlanır.
+ İstemci uç noktası yapılandırması, hizmet uç noktası, bağlama ve sözleşme için mutlak bir adresten oluşur. Bağlama için istemci güvenlik modu `wsHttpBinding` `Message` . `clientCredentialType`Özniteliği olarak ayarlanır `None` .
 
 ```xml
 <system.serviceModel>
@@ -106,9 +106,9 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- Örnek, hizmet sertifikasının kimliğini doğrulamak için <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> olarak ayarlar. Bu işlem, `behaviors` bölümündeki istemcisinin App. config dosyasında yapılır. Bu, sertifika kullanıcının güvenilir kişiler depoluiyorsa, sertifikanın veren zincirinin doğrulanması yapılmadan güvenilir hale gelir. Bu ayar, örneğin bir sertifika yetkilisi (CA) tarafından verilen sertifikalara gerek kalmadan çalıştırılabilmesi için kolaylık sağlamak amacıyla burada kullanılır. Bu ayar varsayılan, ChainTrust değerinden daha az güvenlidir. Bu ayarın güvenlik etkileri, üretim kodunda `PeerOrChainTrust` kullanılmadan önce dikkatle düşünülmelidir.
+ Örnek, <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> hizmet sertifikasının kimliğini doğrulamak için öğesini olarak ayarlar. Bu, bölümündeki istemcisinin App. config dosyasında yapılır `behaviors` . Bu, sertifika kullanıcının güvenilir kişiler depoluiyorsa, sertifikanın veren zincirinin doğrulanması yapılmadan güvenilir hale gelir. Bu ayar, örneğin bir sertifika yetkilisi (CA) tarafından verilen sertifikalara gerek kalmadan çalıştırılabilmesi için kolaylık sağlamak amacıyla burada kullanılır. Bu ayar varsayılan, ChainTrust değerinden daha az güvenlidir. Bu ayarın güvenlik etkileri, üretim kodunda kullanılmadan önce dikkatle düşünülmelidir `PeerOrChainTrust` .
 
- İstemci uygulama, `IsCallerAnonymous` yöntemine bir çağrı ekler ve aksi halde [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) örneğinden farklı değildir.
+ İstemci uygulama yöntemine bir çağrı ekler ve bu `IsCallerAnonymous` nedenle [WSHttpBinding](wshttpbinding.md) örneğinden farklı değildir.
 
 ```csharp
 // Create a client with a client endpoint configuration.
@@ -144,7 +144,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
- Ileti güvenliği anonim örneğine eklenen Setup. bat toplu iş dosyası, sertifika tabanlı güvenlik gerektiren bir barındırılan uygulamayı çalıştırmak için sunucuyu ilgili sertifikayla yapılandırmanızı sağlar. Toplu iş dosyası iki modda çalıştırılabilir. Toplu iş dosyasını tek bilgisayar modunda çalıştırmak için komut satırına `setup.bat` yazın. Hizmet modunda çalıştırmak için `setup.bat service`yazın. Örneği bilgisayarlar arasında çalıştırırken bu modu kullanın. Ayrıntılar için bu konunun sonundaki Kurulum yordamına bakın.
+ Ileti güvenliği anonim örneğine eklenen Setup. bat toplu iş dosyası, sertifika tabanlı güvenlik gerektiren bir barındırılan uygulamayı çalıştırmak için sunucuyu ilgili sertifikayla yapılandırmanızı sağlar. Toplu iş dosyası iki modda çalıştırılabilir. Toplu iş dosyasını tek bilgisayar modunda çalıştırmak için `setup.bat` komut satırına yazın. Hizmet modunda çalıştırmak için yazın `setup.bat service` . Örneği bilgisayarlar arasında çalıştırırken bu modu kullanın. Ayrıntılar için bu konunun sonundaki Kurulum yordamına bakın.
 
  Aşağıdakiler, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sağlar:
 
@@ -162,7 +162,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     % SERVER_NAME% değişkeni sunucu adını belirtiyor. Sertifika, LocalMachine deposunda depolanır. Kurulum toplu iş dosyası bir hizmet bağımsız değişkeniyle (örneğin `setup.bat service`) çalışıyorsa% SUNUCU_ADı% bilgisayarın tam etki alanı adını içerir. Aksi takdirde, varsayılan olarak localhost olur.
+     % SERVER_NAME% değişkeni sunucu adını belirtiyor. Sertifika, LocalMachine deposunda depolanır. Kurulum Batch dosyası bir hizmet bağımsız değişkeniyle (örneğin `setup.bat service` ,) çalışıyorsa% SERVER_NAME% bilgisayarın tam etki alanı adını içerir. Aksi takdirde, varsayılan olarak localhost olur.
 
 - Sunucu sertifikasını istemcinin güvenilen sertifika deposuna yükleme.
 
@@ -191,9 +191,9 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
     > [!NOTE]
     > Kurulum toplu iş dosyası, Visual Studio için bir Geliştirici Komut İstemi çalıştırılmak üzere tasarlanmıştır. PATH ortam değişkeninin, SDK 'nın yüklü olduğu dizine işaret olmasını gerektirir. Bu ortam değişkeni, Visual Studio için bir Geliştirici Komut İstemi içinde otomatik olarak ayarlanır.  
   
-3. Adresi `http://localhost/servicemodelsamples/service.svc`girerek bir tarayıcı kullanarak hizmete erişimi doğrulayın.  
+3. Adresi girerek bir tarayıcı kullanarak hizmete erişimi doğrulayın `http://localhost/servicemodelsamples/service.svc` .  
   
 4. \Client\bin. adresinden Client. exe ' yi Başlat İstemci etkinliği istemci konsol uygulamasında görüntülenir.  
   
@@ -220,9 +220,9 @@ Press <ENTER> to terminate client.
   
 4. İstemci programı dosyalarını istemci bilgisayardaki istemci dizinine kopyalayın. Ayrıca Setup. bat, Cleanup. bat ve ImportServiceCert. bat dosyalarını istemciye kopyalayın.  
   
-5. Sunucusunda, yönetici ayrıcalıklarıyla açılmış bir Visual Studio Geliştirici Komut İstemi `setup.bat service` çalıştırın. `setup.bat` `service` bağımsız değişkeniyle çalıştırmak, bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.  
+5. Sunucusunda, `setup.bat service` yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut istemi çalıştırın. `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `service` bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.  
   
-6. Web. config dosyasını, yeni sertifika adını ( [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), bilgisayarın tam etki alanı adıyla aynı olacak şekilde (`findValue` özniteliğinde) yansıtacak şekilde düzenleyin.  
+6. Web. config dosyasını, `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) bilgisayarın tam etki alanı adıyla aynı olan yeni sertifika adını (içindeki özniteliğinde) yansıtacak şekilde düzenleyin.  
   
 7. Service. cer dosyasını hizmet dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.  
   
@@ -237,4 +237,4 @@ Press <ENTER> to terminate client.
 - Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın.  
   
 > [!NOTE]
-> Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
+> Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

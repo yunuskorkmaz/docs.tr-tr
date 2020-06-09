@@ -2,12 +2,12 @@
 title: Oturumlar ve Kuyruklar
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: ce8cdd08f9bc34d03a014b253024a2b756d4c82a
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 425135b533b898cbc75464f50ce8a5e8f6550755
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728461"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584174"
 ---
 # <a name="sessions-and-queues"></a>Oturumlar ve kuyruklar
 
@@ -21,7 +21,7 @@ Bu örnek, Message Queuing (MSMQ) taşıması üzerinden sıraya alınmış ilet
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (wcf) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
@@ -31,7 +31,7 @@ Bu örnek, Message Queuing (MSMQ) taşıması üzerinden sıraya alınmış ilet
   
  Örnekte, istemci tek bir işlem kapsamındaki bir oturumun parçası olarak hizmete bir dizi ileti gönderir.  
   
- Hizmet sözleşmesi `IOrderTaker`, kuyruklarla birlikte kullanılmak üzere uygun tek yönlü bir hizmeti tanımlar. Aşağıdaki <xref:System.ServiceModel.SessionMode> örnek kodda gösterilen sözleşmede kullanılan, iletilerin oturumun bir parçası olduğunu gösterir.  
+ Hizmet sözleşmesi, `IOrderTaker` kuyruklarla birlikte kullanılmak üzere uygun tek yönlü bir hizmeti tanımlar. <xref:System.ServiceModel.SessionMode>Aşağıdaki örnek kodda gösterilen sözleşmede kullanılan, iletilerin oturumun bir parçası olduğunu gösterir.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
@@ -48,7 +48,7 @@ public interface IOrderTaker
 }  
 ```
 
- Hizmet, hizmet işlemlerini ilk işlemin bir işlemde listelediğinden ancak işlemi otomatik olarak tamamladığı şekilde tanımlar. Sonraki işlemler aynı işlemde de listelenmez, ancak otomatik olarak tamamlanmaz. Oturumdaki son işlem işlemi otomatik olarak tamamlar. Bu nedenle, hizmet sözleşmesindeki birkaç işlem etkinleştirmeleri için aynı işlem kullanılır. İşlemlerden herhangi biri bir özel durum oluşturduktan sonra işlem geri alınır ve oturum kuyruğa geri konur. Son işlemin başarıyla tamamlanmasından sonra işlem kaydedilir. Hizmet, <xref:System.ServiceModel.InstanceContextMode> aynı `PerSession` hizmetin aynı örneğindeki bir oturumdaki tüm iletileri almak için olarak kullanır.  
+ Hizmet, hizmet işlemlerini ilk işlemin bir işlemde listelediğinden ancak işlemi otomatik olarak tamamladığı şekilde tanımlar. Sonraki işlemler aynı işlemde de listelenmez, ancak otomatik olarak tamamlanmaz. Oturumdaki son işlem işlemi otomatik olarak tamamlar. Bu nedenle, hizmet sözleşmesindeki birkaç işlem etkinleştirmeleri için aynı işlem kullanılır. İşlemlerden herhangi biri bir özel durum oluşturduktan sonra işlem geri alınır ve oturum kuyruğa geri konur. Son işlemin başarıyla tamamlanmasından sonra işlem kaydedilir. Hizmet `PerSession` , <xref:System.ServiceModel.InstanceContextMode> aynı hizmetin aynı örneğindeki bir oturumdaki tüm iletileri almak için olarak kullanır.  
 
 ```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
@@ -84,7 +84,7 @@ public class OrderTakerService : IOrderTaker
 }  
 ```
 
- Hizmet kendi kendine barındırılır. MSMQ aktarımını kullanırken kullanılan kuyruğun önceden oluşturulması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte hizmet, sıranın varlığını denetlemek <xref:System.Messaging> için kod içerir ve gerekirse oluşturur. Sıra adı, <xref:System.Configuration.ConfigurationManager.AppSettings%2A> sınıfı kullanılarak yapılandırma dosyasından okundu.  
+ Hizmet kendi kendine barındırılır. MSMQ aktarımını kullanırken kullanılan kuyruğun önceden oluşturulması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte hizmet, <xref:System.Messaging> sıranın varlığını denetlemek için kod içerir ve gerekirse oluşturur. Sıra adı, sınıfı kullanılarak yapılandırma dosyasından okundu <xref:System.Configuration.ConfigurationManager.AppSettings%2A> .  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -139,7 +139,7 @@ public static void Main()
 </system.serviceModel>  
 ```  
   
- İstemci bir işlem kapsamı oluşturur. Oturumdaki tüm iletiler, işlem kapsamındaki sıraya gönderilir ve tüm iletilerin başarılı veya başarısız olduğu atomik bir birim olarak değerlendirilmesine neden olur. İşlem çağırarak <xref:System.Transactions.TransactionScope.Complete%2A>işlenir.  
+ İstemci bir işlem kapsamı oluşturur. Oturumdaki tüm iletiler, işlem kapsamındaki sıraya gönderilir ve tüm iletilerin başarılı veya başarısız olduğu atomik bir birim olarak değerlendirilmesine neden olur. İşlem çağırarak işlenir <xref:System.Transactions.TransactionScope.Complete%2A> .  
 
 ```csharp
 //Create a transaction scope.  
@@ -208,17 +208,17 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 ### <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma  
   
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümün C#, C++ veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.  
+2. Çözümün C#, C++ veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
- Varsayılan <xref:System.ServiceModel.NetMsmqBinding>olarak, taşıma güvenliği etkindir. MSMQ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> aktarım güvenliği için iki ilgili özellik vardır ve <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` varsayılan olarak, kimlik doğrulama modu olarak `Windows` ayarlanır ve koruma düzeyi olarak `Sign`ayarlanır. Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ için, bir etki alanının parçası olması ve MSMQ için Active Directory tümleştirme seçeneğinin yüklü olması gerekir. Bu örneği bu ölçütlere uygun olmayan bir bilgisayarda çalıştırırsanız bir hata alırsınız.  
+ Varsayılan olarak, <xref:System.ServiceModel.NetMsmqBinding> taşıma güvenliği etkindir. MSMQ aktarım güvenliği için iki ilgili özellik vardır <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> ve varsayılan olarak, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` kimlik doğrulama modu olarak ayarlanır `Windows` ve koruma düzeyi olarak ayarlanır `Sign` . Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ için, bir etki alanının parçası olması ve MSMQ için Active Directory tümleştirme seçeneğinin yüklü olması gerekir. Bu örneği bu ölçütlere uygun olmayan bir bilgisayarda çalıştırırsanız bir hata alırsınız.  
   
 ### <a name="run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Örneği çalışma grubuna katılmış bir bilgisayarda çalıştırın  
   
-1. Bilgisayarınız bir etki alanının parçası değilse veya Active Directory Tümleştirmesi yüklü değilse, kimlik doğrulama modunu ve koruma düzeyini aşağıdaki örnek yapılandırmada gösterildiği `None` gibi olarak ayarlayarak aktarım güvenliğini kapatın.  
+1. Bilgisayarınız bir etki alanının parçası değilse veya Active Directory Tümleştirmesi yüklü değilse, kimlik doğrulama modunu ve koruma düzeyini `None` Aşağıdaki örnek yapılandırmada gösterildiği gibi olarak ayarlayarak aktarım güvenliğini kapatın.  
   
     ```xml  
     <system.serviceModel>  
@@ -268,4 +268,4 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
 2. Örneği çalıştırmadan önce hem sunucu hem de istemci üzerinde yapılandırmayı değiştirin.  
   
     > [!NOTE]
-    > Güvenlik modunun olarak `None` ayarlanması <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>ve `Message` ile güvenliğe eşdeğerdir. `None`  
+    > Güvenlik modunun olarak ayarlanması `None` <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> , ve ile güvenliğe eşdeğerdir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `Message` `None` .  

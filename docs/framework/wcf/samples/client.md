@@ -2,34 +2,34 @@
 title: İstemci
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: e3a4852ba467f9c334157555ed9c2ffc2ff33f0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f2d93458c2bec16b737d8bfcbd423494941dc3e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943968"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585291"
 ---
 # <a name="client"></a>İstemci
-Bu bölüm, Windows Communication Foundation (WCF) istemci uygulamaları gösteren örnekler içerir.  
+Bu bölüm Windows Communication Foundation (WCF) istemci uygulamalarını gösteren örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İstemci Birlikte Çalışabilirliği](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- WCF ve diğer teknolojiler birlikte çalışabilirliği gösterir.  
+ [İstemci Birlikte Kullanılabilirliği](client-interoperability.md)  
+ WCF ve diğer teknolojiler arasında birlikte çalışabilirliği gösterir.  
   
- [Adres Üst Bilgileri](../../../../docs/framework/wcf/samples/address-headers.md)  
- İstemciler başvuru parametreleri kullanarak WCF hizmeti için nasıl geçirebilirsiniz gösterir.  
+ [Adres Üstbilgileri](address-headers.md)  
+ İstemcilerin WCF kullanarak başvuru parametrelerini bir hizmete nasıl geçirebileceğinizi gösterir.  
   
- [Kanal Fabrikası](../../../../docs/framework/wcf/samples/channel-factory.md)  
- Bir istemci uygulaması ile bir kanalı nasıl oluşturacağınızı gösteren <xref:System.ServiceModel.ChannelFactory> yerine oluşturulmuş istemci sınıfı.  
+ [Kanal Fabrikası](channel-factory.md)  
+ İstemci uygulamasının <xref:System.ServiceModel.ChannelFactory> oluşturulmuş bir istemci yerine sınıfıyla nasıl bir kanal oluşturacağını gösterir.  
   
- [Beklenen Özel Durumlar](../../../../docs/framework/wcf/samples/expected-exceptions.md)  
- Türü belirlenmiş istemci kullanırken beklenen özel durumları yakalamak nasıl gösterir.  
+ [Beklenen Özel Durumlar](expected-exceptions.md)  
+ Yazılan bir istemci kullanılırken beklenen özel durumların nasıl yakalanacağını gösterir.  
   
- [Meta Verileri Alma](../../../../docs/framework/wcf/samples/retrieve-metadata.md)  
- Dinamik olarak bir hizmet ile iletişim kurmak için bir uç noktayı seçmek için meta verileri alır bir istemci uygulama gösterilmiştir.  
+ [Meta Verileri Alma](retrieve-metadata.md)  
+ İletişim kuracak bir uç nokta seçmek için bir hizmetten meta verileri dinamik olarak alan bir istemcinin nasıl uygulanacağını gösterir.  
   
- [WCF istemci kaynakları serbest bırakmak için iptal etmek ve kapatmak kullanın](../../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)  
- Kullanmamalısınız nasıl gösterir C# "deyimi otomatik olarak bir türü belirlenmiş istemci kullanırken kaynakları temizlemek için kullanma".  
+ [Kapat ve Durdur seçeneklerini kullanarak WCF istemci kaynaklarını serbest bırakma](use-close-abort-release-wcf-client-resources.md)  
+ Yazılmış bir istemci kullanırken kaynakları otomatik olarak temizlemek için C# "Using" ifadesini nasıl kullanmamalısınız gösterir.  
   
- [Türü Belirlenmiş İstemci](../../../../docs/framework/wcf/samples/typed-client.md)  
- Tarafından oluşturulan bir türü belirlenmiş istemci bilgilerini almak nasıl gösterir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
+ [Türü Belirlenmiş İstemci](typed-client.md)  
+ [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan, yazılmış bir istemciden nasıl bilgi alınacağını gösterir.

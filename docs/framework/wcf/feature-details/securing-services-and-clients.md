@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: 719ab26198bd7b83310025e03e541fa11b109612
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: db0a0dcfbe04a7b7dbfabfed59f9b8637d0a2797
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746421"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586214"
 ---
 # <a name="securing-services-and-clients"></a>Hizmet ve İstemcileri Güvenli Hale Getirme
-Bu bölümdeki bilgiler Windows Communication Foundation (WCF) ' deki programlama güvenliği ' ne odaklanır. Genellikle, bu, uygun bir sistem tarafından sağlanmış bağlamayı seçmeyi, Güvenlik öğesinin özelliklerini ayarlamayı ve ardından hizmet davranışlarının, kimlik bilgilerinin hizmet veya istemci tarafından kullanılmak üzere nasıl alındığını belirleyen özellikler ayarlanmasını içerir. Bu teknikler, [yaygın güvenlik senaryolarında](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)gösterildiği gibi çoğu senaryonun çoğu kullanıcının güvenlik gereksinimlerini kapsar. Senaryonuz daha fazla özellik gerektiriyorsa, önce [özel bağlamalarla güvenlik özelliklerine](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)bakın; bir çözüm görünmüyorsa bkz. [güvenliği genişletme](../../../../docs/framework/wcf/extending/extending-security.md). Zengin talepler kullanan bir sistem oluşturuyorsanız (veya ile birlikte çalışıyorsanız), [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)' de yer alan konulara bakın.  
+Bu bölümdeki bilgiler Windows Communication Foundation (WCF) ' deki programlama güvenliği ' ne odaklanır. Genellikle, bu, uygun bir sistem tarafından sağlanmış bağlamayı seçmeyi, Güvenlik öğesinin özelliklerini ayarlamayı ve ardından hizmet davranışlarının, kimlik bilgilerinin hizmet veya istemci tarafından kullanılmak üzere nasıl alındığını belirleyen özellikler ayarlanmasını içerir. Bu teknikler, [yaygın güvenlik senaryolarında](common-security-scenarios.md)gösterildiği gibi çoğu senaryonun çoğu kullanıcının güvenlik gereksinimlerini kapsar. Senaryonuz daha fazla özellik gerektiriyorsa, önce [özel bağlamalarla güvenlik özelliklerine](security-capabilities-with-custom-bindings.md)bakın; bir çözüm görünmüyorsa bkz. [güvenliği genişletme](../extending/extending-security.md). Zengin talepler kullanan bir sistem oluşturuyorsanız (veya ile birlikte çalışıyorsanız), [Yetkilendirme](authorization-in-wcf.md)' de yer alan konulara bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WCF Güvenliğini Programlama](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
+ [WCF Güvenliğini Programlama](programming-wcf-security.md)  
  İletileri güvenli hale getirmek için kullanılan programlama modeline genel bakış.  
   
- [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
+ [Aktarım Güvenliğine Genel Bakış](transport-security-overview.md)  
  Aktarım katmanı üzerinden iletilerin güvenliğini sağlama konusuna genel bakış.  
   
- [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [İleti Güvenliği](message-security-in-wcf.md)  
  Windows Communication Foundation (WCF) ' de ileti düzeyi güvenliği kullanma nedenlerini özetler.  
   
- [Güvenli Oturumlar](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
+ [Güvenli Oturumlar](secure-sessions.md)  
  Bir WCF oturumunun güvenliğini sağlarken gereken önemli noktalar hakkında bir tartışma.  
   
- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Sertifikalarla Çalışma](working-with-certificates.md)  
  X. 509.440 sertifikaları kullanılırken gereken bazı yaygın görevlerden oluşan bir açıklama.  
   
 ## <a name="reference"></a>Başvuru  
@@ -38,21 +38,21 @@ Bu bölümdeki bilgiler Windows Communication Foundation (WCF) ' deki programlam
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
+ [Güvenlik kavramları](security-concepts.md)  
   
- [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Güvenliği Genişletme](../extending/extending-security.md)  
   
- [Ortak Güvenlik Senaryoları](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
+ [Ortak Güvenlik Senaryoları](common-security-scenarios.md)  
   
- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Bağlamalar ve Güvenlik](bindings-and-security.md)  
   
- [Özel Bağlamalarla Güvenlik Özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
+ [Özel Bağlamalarla Güvenlik Özellikleri](security-capabilities-with-custom-bindings.md)  
   
- [Güvenliği Genişletme](../../../../docs/framework/wcf/extending/extending-security.md)  
+ [Güvenliği Genişletme](../extending/extending-security.md)  
   
- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Yetkilendirme](authorization-in-wcf.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel WCF Programlama](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Temel WCF Programlama](../basic-wcf-programming.md)
 - [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

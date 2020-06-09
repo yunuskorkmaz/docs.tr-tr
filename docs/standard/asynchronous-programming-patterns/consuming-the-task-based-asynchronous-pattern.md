@@ -1,5 +1,6 @@
 ---
 title: Görev Tabanlı Zaman Uyumsuz Desen Kullanma
+description: Zaman uyumsuz işlemlerle çalışırken görev tabanlı zaman uyumsuz model (dokunarak) kullanmayı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 64a9b963ce6a8554a581f9d5d0f77cf4edfa71b4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2553a573a9827b8f9232ddab132bd9331586a0f1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289466"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583836"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
