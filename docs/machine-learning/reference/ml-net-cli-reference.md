@@ -1,268 +1,341 @@
 ---
-title: ML.NET CLI Komut Başvurusu
-description: ML.NET CLI aracındaki otomatik tren komutu için genel bakış, örnekler ve başvuru.
-ms.date: 12/18/2019
+title: ML.NET CLı komut başvurusu
+description: ML.NET CLı aracında otomatik eğitme komutuna genel bakış, örnekler ve başvuru.
+ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78848931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594549"
 ---
-# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="86a63-103">cli komut başvurusu ML.NET</span><span class="sxs-lookup"><span data-stu-id="86a63-103">The ML.NET CLI command reference</span></span>
+# <a name="the-mlnet-cli-command-reference"></a><span data-ttu-id="02a99-103">ML.NET CLı komut başvurusu</span><span class="sxs-lookup"><span data-stu-id="02a99-103">The ML.NET CLI command reference</span></span>
 
-<span data-ttu-id="86a63-104">Komut, `auto-train` cli aracının ML.NET tarafından sağlanan ana komutdur.</span><span class="sxs-lookup"><span data-stu-id="86a63-104">The `auto-train` command is the main command provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="86a63-105">Komut, otomatik makine öğrenimi (AutoML) yanı sıra bu modeli çalıştırmak / puan için örnek C# kodu kullanarak iyi bir kaliteli ML.NET modeli oluşturmanıza olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="86a63-105">The command allows you to generate a good quality ML.NET model using automated machine learning (AutoML) as well as the example C# code to run/score that model.</span></span> <span data-ttu-id="86a63-106">Buna ek olarak, modeli eğitmek için C# kodu, modelin algoritmasını ve ayarlarını araştırmanız için oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="86a63-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
+<span data-ttu-id="02a99-104">`classification`, `regression` Ve komutları, `recommendation` ml.net CLI aracı tarafından sunulan ana komutlardır.</span><span class="sxs-lookup"><span data-stu-id="02a99-104">The `classification`, `regression`, and `recommendation` commands are the main commands provided by the ML.NET CLI tool.</span></span> <span data-ttu-id="02a99-105">Bu komutlar otomatik makine öğrenimi (Otomatikml) kullanarak sınıflandırma, regresyon ve öneri modelleri için iyi kaliteli ML.NET modelleri oluşturmanızı ve bu modeli çalıştırmak/skor yapmak için örnek C# kodunu oluşturmanızı sağlar.</span><span class="sxs-lookup"><span data-stu-id="02a99-105">These commands allow you to generate good quality ML.NET models for classification, regression, and recommendation models using automated machine learning (AutoML) as well as the example C# code to run/score that model.</span></span> <span data-ttu-id="02a99-106">Ayrıca, modeli eğitmek için C# kodu, modelin algoritmasını ve ayarlarını araştırmanız için oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="02a99-106">In addition, the C# code to train the model is generated for you to research the algorithm and settings of the model.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="86a63-107">Bu konu, şu anda Önizleme'de olan cli ve ML.NET AutoML'ML.NET anlamına gelir ve malzeme değişebilir.</span><span class="sxs-lookup"><span data-stu-id="86a63-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
+> <span data-ttu-id="02a99-107">Bu konu, şu anda önizleme aşamasında olan ML.NET CLı ve ML.NET oto ml 'ye başvurur ve malzemeler değişebilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-107">This topic refers to ML.NET CLI and ML.NET AutoML, which are currently in Preview, and material may be subject to change.</span></span>
 
-## <a name="overview"></a><span data-ttu-id="86a63-108">Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="86a63-108">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="02a99-108">Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="02a99-108">Overview</span></span>
 
-<span data-ttu-id="86a63-109">Örnek kullanım: </span><span class="sxs-lookup"><span data-stu-id="86a63-109">Example usage:</span></span>
-
-```console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
-```
-
-<span data-ttu-id="86a63-110">Komut `mlnet auto-train` aşağıdaki varlıkları oluşturur:</span><span class="sxs-lookup"><span data-stu-id="86a63-110">The `mlnet auto-train` command generates the following assets:</span></span>
-
-- <span data-ttu-id="86a63-111">Serileştirilmiş bir model .zip ("en iyi model") kullanıma hazır.</span><span class="sxs-lookup"><span data-stu-id="86a63-111">A serialized model .zip ("best model") ready to use.</span></span>
-- <span data-ttu-id="86a63-112">C# kodu modeli oluşturulan çalıştırmak / puan.</span><span class="sxs-lookup"><span data-stu-id="86a63-112">C# code to run/score that generated model.</span></span>
-- <span data-ttu-id="86a63-113">Bu modeli oluşturmak için kullanılan eğitim kodu ile C# kodu.</span><span class="sxs-lookup"><span data-stu-id="86a63-113">C# code with the training code used to generate that model.</span></span>
-
-<span data-ttu-id="86a63-114">İlk iki varlık, modelle ilgili öngörülerde bulunmak için doğrudan son kullanıcı uygulamalarınızda (ASP.NET Core web uygulaması, hizmetler, masaüstü uygulaması ve daha fazlası) kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="86a63-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
-
-<span data-ttu-id="86a63-115">Üçüncü varlık, eğitim kodu, oluşturulan modeli eğitmek için CLI tarafından ML.NET API kodunun ne ML.NET kullanıldığını gösterir, böylece modelin belirli algoritmasını ve ayarlarını inceleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="86a63-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
-
-## <a name="examples"></a><span data-ttu-id="86a63-116">Örnekler</span><span class="sxs-lookup"><span data-stu-id="86a63-116">Examples</span></span>
-
-<span data-ttu-id="86a63-117">İkili sınıflandırma sorunu için en basit CLI komutu (AutoML, sağlanan verilerden yapılandırmanın çoğunu çıkartır):</span><span class="sxs-lookup"><span data-stu-id="86a63-117">The simplest CLI command for a binary classification problem (AutoML infers most of the configuration from the provided data):</span></span>
+<span data-ttu-id="02a99-109">Örnek kullanım: </span><span class="sxs-lookup"><span data-stu-id="02a99-109">Example usage:</span></span>
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet regression --dataset "cars.csv" --label-col price
 ```
 
-<span data-ttu-id="86a63-118">Bir gerileme sorunu için başka bir basit CLI komutu:</span><span class="sxs-lookup"><span data-stu-id="86a63-118">Another simple CLI command for a regression problem:</span></span>
+<span data-ttu-id="02a99-110">`mlnet`Ml görev komutları ( `classification` , `regression` , ve `recommendation` ) aşağıdaki varlıkları oluşturur:</span><span class="sxs-lookup"><span data-stu-id="02a99-110">The `mlnet` ML task commands (`classification`, `regression`, and `recommendation`) generate the following assets:</span></span>
+
+- <span data-ttu-id="02a99-111">Seri hale getirilmiş bir model. zip ("en iyi model") kullanıma hazırlanıyor.</span><span class="sxs-lookup"><span data-stu-id="02a99-111">A serialized model .zip ("best model") ready to use.</span></span>
+- <span data-ttu-id="02a99-112">Oluşturulan modeli çalıştırmak/öğrenmek için C# kodu.</span><span class="sxs-lookup"><span data-stu-id="02a99-112">C# code to run/score that generated model.</span></span>
+- <span data-ttu-id="02a99-113">Bu modeli oluşturmak için kullanılan eğitim koduna sahip C# kodu.</span><span class="sxs-lookup"><span data-stu-id="02a99-113">C# code with the training code used to generate that model.</span></span>
+
+<span data-ttu-id="02a99-114">İlk iki varlık, model ile tahmine dayalı hale getirmek için Son Kullanıcı uygulamalarınızda (ASP.NET Core Web uygulaması, hizmetler, masaüstü uygulaması ve daha fazlası) doğrudan kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-114">The first two assets can directly be used in your end-user apps (ASP.NET Core web app, services, desktop app and more) to make predictions with the model.</span></span>
+
+<span data-ttu-id="02a99-115">Eğitim kodu olan üçüncü varlık, CLı tarafından oluşturulan modeli eğitemek için hangi ML.NET API kodunun kullanıldığını gösterir. böylece modelin belirli algoritmasını ve ayarlarını araştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="02a99-115">The third asset, the training code, shows you what ML.NET API code was used by the CLI to train the generated model, so you can investigate the specific algorithm and settings of the model.</span></span>
+
+## <a name="examples"></a><span data-ttu-id="02a99-116">Örnekler</span><span class="sxs-lookup"><span data-stu-id="02a99-116">Examples</span></span>
+
+<span data-ttu-id="02a99-117">Bir sınıflandırma sorunu için en basit CLı komutu (Oto ml 'nin, belirtilen verilerden çoğu yapılandırmanın çoğunu):</span><span class="sxs-lookup"><span data-stu-id="02a99-117">The simplest CLI command for a classification problem (AutoML infers most of the configuration from the provided data):</span></span>
+
+```console
+mlnet classification --dataset "customer-feedback.tsv" --label-col Sentiment
+```
+
+<span data-ttu-id="02a99-118">Gerileme sorunu için başka bir basit CLı komutu:</span><span class="sxs-lookup"><span data-stu-id="02a99-118">Another simple CLI command for a regression problem:</span></span>
 
 ``` console
-mlnet auto-train --task regression --dataset "cars.csv" --label-column-name Price
+mlnet regression --dataset "cars.csv" --label-col Price
 ```
 
-<span data-ttu-id="86a63-119">Bir tren veri kümesi, test veri kümesi ve daha fazla özelleştirme açık bağımsız değişkenleri ile bir ikili sınıflandırma modeli oluşturun ve train:</span><span class="sxs-lookup"><span data-stu-id="86a63-119">Create and train a binary-classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
+<span data-ttu-id="02a99-119">Bir eğitim veri kümesi, test veri kümesi ve daha fazla özelleştirme açık bağımsız değişkenlerle bir sınıflandırma modeli oluşturun ve eğitme:</span><span class="sxs-lookup"><span data-stu-id="02a99-119">Create and train a classification model with a train dataset, a test dataset, and further customization explicit arguments:</span></span>
 
 ```console
-mlnet auto-train --task binary-classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-column-name "InsuranceRisk" --cache on --max-exploration-time 600
+mlnet classification --dataset "/MyDataSets/Population-Training.csv" --test-dataset "/MyDataSets/Population-Test.csv" --label-col "InsuranceRisk" --cache on --train-time 600
 ```
 
-## <a name="command-options"></a><span data-ttu-id="86a63-120">Komut seçenekleri</span><span class="sxs-lookup"><span data-stu-id="86a63-120">Command options</span></span>
+## <a name="command-options"></a><span data-ttu-id="02a99-120">Komut seçenekleri</span><span class="sxs-lookup"><span data-stu-id="02a99-120">Command options</span></span>
 
-<span data-ttu-id="86a63-121">`mlnet auto-train`sağlanan veri kümesine göre birden çok modeli eğitir ve son olarak en iyi modeli seçer, serileştirilmiş .zip dosyası olarak kaydeder artı puanlama ve eğitim için ilgili C# kodu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="86a63-121">`mlnet auto-train` trains multiple models based on the provided dataset and finally selects the best model, saves it as a serialized .zip file plus generates related C# code for scoring and training.</span></span>
+<span data-ttu-id="02a99-121">`mlnet`Ml görev komutları ( `classification` , `regression` ve), `recommendation` belirtilen VERI kümesi ve ml.net CLI seçeneklerine göre birden çok modeli eğitme.</span><span class="sxs-lookup"><span data-stu-id="02a99-121">The `mlnet` ML task commands (`classification`, `regression`, and `recommendation`) train multiple models based on the provided dataset and ML.NET CLI options.</span></span> <span data-ttu-id="02a99-122">Bu komutlar Ayrıca en iyi modeli seçer, modeli serileştirilmiş bir. zip dosyası olarak kaydeder ve Puanlama ve eğitim için ilgili C# kodu oluşturur.</span><span class="sxs-lookup"><span data-stu-id="02a99-122">These commands also select the best model, save the model as a serialized .zip file, and generate related C# code for scoring and training.</span></span>
+
+### <a name="classification-options"></a><span data-ttu-id="02a99-123">Sınıflandırma seçenekleri</span><span class="sxs-lookup"><span data-stu-id="02a99-123">Classification options</span></span>
+
+<span data-ttu-id="02a99-124">Çalışan `mlnet classification` bir sınıflandırma modelini eğitecektir.</span><span class="sxs-lookup"><span data-stu-id="02a99-124">Running `mlnet classification` will train a classification model.</span></span> <span data-ttu-id="02a99-125">ML modelinin verileri 2 veya daha fazla sınıfa (ör. yaklaşım Analizi) sınıflandırmasına istiyorsanız bu komutu seçin.</span><span class="sxs-lookup"><span data-stu-id="02a99-125">Choose this command if you want an ML Model to categorize data into 2 or more classes (e.g. sentiment analysis).</span></span>
 
 ```console
-mlnet auto-train
+mlnet classification
 
---task | --mltask | -T <value>
+--dataset <path> (REQUIRED)
 
---dataset | -d <value>
+--label-col <col> (REQUIRED)
 
-[
- [--validation-dataset | -v <value>]
-  --test-dataset | -t <value>
-]
+--cache <option>
 
---label-column-name | -n <value>
-|
---label-column-index | -i <value>
+--has-header (Default: true)
 
-[--ignore-columns | -I <value>]
+--ignore-cols <cols>
 
-[--has-header | -h <value>]
+--log-file-path <path>
 
-[--max-exploration-time | -x <value>]
+--name <name>
 
-[--verbosity | -V <value>]
+-o, --output <path>
 
-[--cache | -c <value>]
+--test-dataset <path>
 
-[--name | -N <value>]
+--train-time <time> (Default: 30 minutes, in seconds)
 
-[--output-path | -o <value>]
+--validation-dataset <path>
 
-[--help | -h]
+-v, --verbosity <v>
+
+-?, -h, --help
 
 ```
 
-<span data-ttu-id="86a63-122">Geçersiz giriş seçenekleri, CLI aracının geçerli girdilerin ve bir hata iletisinin listesini yarayabmasını neden olur.</span><span class="sxs-lookup"><span data-stu-id="86a63-122">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
+### <a name="regression-options"></a><span data-ttu-id="02a99-126">Regresyon seçenekleri</span><span class="sxs-lookup"><span data-stu-id="02a99-126">Regression options</span></span>
 
-## <a name="task"></a><span data-ttu-id="86a63-123">Görev</span><span class="sxs-lookup"><span data-stu-id="86a63-123">Task</span></span>
+<span data-ttu-id="02a99-127">Çalıştırmak `mlnet regression` , regresyon modeli eğitecektir.</span><span class="sxs-lookup"><span data-stu-id="02a99-127">Running `mlnet regression` will train a regression model.</span></span> <span data-ttu-id="02a99-128">Bir ML modelinin sayısal bir değer (örn. fiyat tahmini) tahmin etmek istiyorsanız bu komutu seçin.</span><span class="sxs-lookup"><span data-stu-id="02a99-128">Choose this command if you want an ML Model to predict a numeric value (e.g. price prediction).</span></span>
 
-<span data-ttu-id="86a63-124">`--task | --mltask | -T`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-124">`--task | --mltask | -T` (string)</span></span>
+```console
+mlnet classification
 
-<span data-ttu-id="86a63-125">Ml sorunu çözmek için sağlayan tek bir dize.</span><span class="sxs-lookup"><span data-stu-id="86a63-125">A single string providing the ML problem to solve.</span></span> <span data-ttu-id="86a63-126">Örneğin, aşağıdaki görevlerden herhangi biri (CLI sonunda AutoML'de desteklenen tüm görevleri destekler):</span><span class="sxs-lookup"><span data-stu-id="86a63-126">For instance, any of the following tasks (The CLI will eventually support all tasks supported in AutoML):</span></span>
+--dataset <path> (REQUIRED)
 
-- <span data-ttu-id="86a63-127">`regression`- ML Modeli'nin sayısal bir değeri tahmin etmek için kullanIlip kullanılmeyeceğini seçin</span><span class="sxs-lookup"><span data-stu-id="86a63-127">`regression` - Choose if the ML Model will be used to predict a numeric value</span></span>
-- <span data-ttu-id="86a63-128">`binary-classification`- ML Model sonucunun iki olası kategorik boolean değeri (0 veya 1) olup olmadığını seçin.</span><span class="sxs-lookup"><span data-stu-id="86a63-128">`binary-classification` - Choose if the ML Model result has two possible categorical boolean values (0 or 1).</span></span>
-- <span data-ttu-id="86a63-129">`multiclass-classification`- ML Model sonucunun birden çok kategorik olası değeri olup olmadığını seçin.</span><span class="sxs-lookup"><span data-stu-id="86a63-129">`multiclass-classification` - Choose if the ML Model result has multiple categorical possible values.</span></span>
+--label-col <col> (REQUIRED)
 
-<span data-ttu-id="86a63-130">Bu bağımsız değişkende yalnızca bir ML görevi sağlanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-130">Only one ML task should be provided in this argument.</span></span>
+--cache <option>
 
-## <a name="dataset"></a><span data-ttu-id="86a63-131">Veri kümesi</span><span class="sxs-lookup"><span data-stu-id="86a63-131">Dataset</span></span>
+--has-header (Default: true)
 
-<span data-ttu-id="86a63-132">`--dataset | -d`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-132">`--dataset | -d` (string)</span></span>
+--ignore-cols <cols>
 
-<span data-ttu-id="86a63-133">Bu bağımsız değişken, aşağıdaki seçeneklerden birine dosya yolunu sağlar:</span><span class="sxs-lookup"><span data-stu-id="86a63-133">This argument provides the filepath to either one of the following options:</span></span>
+--log-file-path <path>
 
-- <span data-ttu-id="86a63-134">*C: Tüm veri kümesi dosyası:* Bu seçeneği kullanarak ve kullanıcı `--test-dataset` sağmıyorsa `--validation-dataset`ve sonra çapraz doğrulama (k-fold, vb) veya otomatik veri bölme yaklaşımları modeli doğrulamak için dahili olarak kullanılacaktır.</span><span class="sxs-lookup"><span data-stu-id="86a63-134">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="86a63-135">Bu durumda, kullanıcının yalnızca veri kümesi dosya yolunu sağlaması gerekir.</span><span class="sxs-lookup"><span data-stu-id="86a63-135">In that case, the user will just need to provide the dataset filepath.</span></span>
+--name <name>
 
-- <span data-ttu-id="86a63-136">*B: Eğitim veri seti dosyası:* Kullanıcı ayrıca model doğrulama (kullanarak `--test-dataset` ve isteğe bağlı `--validation-dataset`olarak) `--dataset` için veri kümeleri sağlıyorsa, bağımsız değişken yalnızca "eğitim veri kümesine" sahip olmak anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="86a63-136">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="86a63-137">Örneğin, modelin kalitesini doğrulamak ve doğruluk ölçümleri elde etmek için %80 - %20'lik bir yaklaşım kullanırken, "eğitim veri kümesi" verilerin %80'ine ve "test veri kümesi" verilerin %20'sine sahip olacaktır.</span><span class="sxs-lookup"><span data-stu-id="86a63-137">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
+-o, --output <path>
 
-## <a name="test-dataset"></a><span data-ttu-id="86a63-138">Test veri kümesi</span><span class="sxs-lookup"><span data-stu-id="86a63-138">Test dataset</span></span>
+--test-dataset <path>
 
-<span data-ttu-id="86a63-139">`--test-dataset | -t`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-139">`--test-dataset | -t` (string)</span></span>
+--train-time <time> (Default: 30 minutes, in seconds)
 
-<span data-ttu-id="86a63-140">Doğruluk ölçümleri elde etmek için düzenli doğrulama yaparken örneğin %80 - %20'lik bir yaklaşım kullanırken, test veri kümesi dosyasını gösteren dosya yolu.</span><span class="sxs-lookup"><span data-stu-id="86a63-140">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
+--validation-dataset <path>
 
-<span data-ttu-id="86a63-141">Kullanıyorsanız, `--test-dataset` `--dataset` o zaman da gereklidir.</span><span class="sxs-lookup"><span data-stu-id="86a63-141">If using `--test-dataset`, then `--dataset` is also required.</span></span>
+-v, --verbosity <v>
 
-<span data-ttu-id="86a63-142">--doğrulama-veri kümesi kullanılmadığı sürece `--test-dataset` bağımsız değişken isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-142">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="86a63-143">Bu durumda, kullanıcı üç bağımsız değişkeni kullanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-143">In that case, the user must use the three arguments.</span></span>
+-?, -h, --help
 
-## <a name="validation-dataset"></a><span data-ttu-id="86a63-144">Doğrulama veri kümesi</span><span class="sxs-lookup"><span data-stu-id="86a63-144">Validation dataset</span></span>
+```
 
-<span data-ttu-id="86a63-145">`--validation-dataset | -v`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-145">`--validation-dataset | -v` (string)</span></span>
+### <a name="recommendation-options"></a><span data-ttu-id="02a99-129">Öneri seçenekleri</span><span class="sxs-lookup"><span data-stu-id="02a99-129">Recommendation options</span></span>
 
-<span data-ttu-id="86a63-146">Doğrulama veri kümesi dosyasını gösteren dosya yolu.</span><span class="sxs-lookup"><span data-stu-id="86a63-146">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="86a63-147">Doğrulama veri kümesi her durumda isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-147">The validation dataset is optional, in any case.</span></span>
+<span data-ttu-id="02a99-130">Çalışan `mlnet recommendation` bir öneri modeli eğitecektir.</span><span class="sxs-lookup"><span data-stu-id="02a99-130">Running `mlnet recommendation` will train a recommendation model.</span></span>  <span data-ttu-id="02a99-131">Bir ML modelinin derecelendirmelere göre kullanıcılara (örn. ürün önerisi) öğe önermesini istiyorsanız bu komutu seçin.</span><span class="sxs-lookup"><span data-stu-id="02a99-131">Choose this command if you want an ML Model to recommend items to users based on ratings (e.g. product recommendation).</span></span>
 
-<span data-ttu-id="86a63-148">Bir `validation dataset`kullanıyorsanız, davranış olmalıdır:</span><span class="sxs-lookup"><span data-stu-id="86a63-148">If using a `validation dataset`, the behavior should be:</span></span>
+```console
+mlnet classification
 
-- <span data-ttu-id="86a63-149">Ve `test-dataset` `--dataset` bağımsız değişkenler de gereklidir.</span><span class="sxs-lookup"><span data-stu-id="86a63-149">The `test-dataset` and `--dataset` arguments are also required.</span></span>
+--dataset <path> (REQUIRED)
 
-- <span data-ttu-id="86a63-150">Veri `validation-dataset` kümesi, model seçimi için tahmin hatasını tahmin etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="86a63-150">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
+--item-col <col> (REQUIRED)
 
-- <span data-ttu-id="86a63-151">Son `test-dataset` seçilen modelin genelleme hatasının değerlendirilmesi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="86a63-151">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="86a63-152">İdeal olarak, test seti bir "kasada" tutulmalı ve yalnızca veri analizinin sonunda çıkarılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-152">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
+--rating-col <col> (REQUIRED)
 
-<span data-ttu-id="86a63-153">Temel olarak, `validation dataset` bir `test dataset`artı kullanırken , doğrulama aşaması iki bölüme ayrılır:</span><span class="sxs-lookup"><span data-stu-id="86a63-153">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
+--user-col <col> (REQUIRED)
 
-1. <span data-ttu-id="86a63-154">İlk bölümde, sadece modelleribakmak ve doğrulama verileri (= doğrulama) kullanarak en iyi performans yaklaşım seçin</span><span class="sxs-lookup"><span data-stu-id="86a63-154">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
-2. <span data-ttu-id="86a63-155">Daha sonra seçili yaklaşımın (=test) doğruluğunu tahmin emzebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="86a63-155">Then you estimate the accuracy of the selected approach (=test).</span></span>
+--cache <option>
 
-<span data-ttu-id="86a63-156">Bu nedenle, veri ayırma 80/10/10 veya 75/15/10 olabilir.</span><span class="sxs-lookup"><span data-stu-id="86a63-156">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="86a63-157">Örnek:</span><span class="sxs-lookup"><span data-stu-id="86a63-157">For example:</span></span>
+--has-header (Default: true)
 
-- <span data-ttu-id="86a63-158">`training-dataset`dosya verilerin% 75 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-158">`training-dataset` file should have 75% of the data.</span></span>
-- <span data-ttu-id="86a63-159">`validation-dataset`dosya verilerin% 15 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-159">`validation-dataset` file should have 15% of the data.</span></span>
-- <span data-ttu-id="86a63-160">`test-dataset`dosya verilerin% 10 olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-160">`test-dataset` file should have 10% of the data.</span></span>
+--log-file-path <path>
 
-<span data-ttu-id="86a63-161">Her durumda, bu yüzdeler zaten bölünmüş dosyaları sağlayacak CLI kullanarak kullanıcı tarafından karar verilecektir.</span><span class="sxs-lookup"><span data-stu-id="86a63-161">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
+--name <name>
 
-## <a name="label-column-name"></a><span data-ttu-id="86a63-162">Etiket sütun adı</span><span class="sxs-lookup"><span data-stu-id="86a63-162">Label column name</span></span>
+-o, --output <path>
 
-<span data-ttu-id="86a63-163">`--label-column-name | -n`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-163">`--label-column-name | -n` (string)</span></span>
+--test-dataset <path>
 
-<span data-ttu-id="86a63-164">Bu bağımsız değişkenle, belirli bir hedef/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin üstbilgisinde sütunun ad kümesi kullanılarak belirtilebilir.</span><span class="sxs-lookup"><span data-stu-id="86a63-164">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header.</span></span>
+--train-time <time> (Default: 30 minutes, in seconds)
 
-<span data-ttu-id="86a63-165">Bu bağımsız değişken yalnızca *sınıflandırma sorunu*gibi denetlenen ML görevleri için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="86a63-165">This argument is used only for supervised ML tasks such as a *classification problem*.</span></span> <span data-ttu-id="86a63-166">*Kümeleme*gibi denetimsiz ML Görevleri için kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="86a63-166">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+--validation-dataset <path>
 
-## <a name="label-column-index"></a><span data-ttu-id="86a63-167">Etiket sütun dizini</span><span class="sxs-lookup"><span data-stu-id="86a63-167">Label column index</span></span>
+-v, --verbosity <v>
 
-<span data-ttu-id="86a63-168">`--label-column-index | -i`(int)</span><span class="sxs-lookup"><span data-stu-id="86a63-168">`--label-column-index | -i` (int)</span></span>
+-?, -h, --help
 
-<span data-ttu-id="86a63-169">Bu bağımsız değişkenle, belirli bir hedef/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin dosyasındaki sütunun sayısal dizini kullanılarak belirtilebilir (Sütun dizin değerleri 1'den başlar).</span><span class="sxs-lookup"><span data-stu-id="86a63-169">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's numeric index in the dataset's file (The column index values start at 1).</span></span>
+```
 
-<span data-ttu-id="86a63-170">*Not:* Kullanıcı da `--label-column-name`kullanıyorsa, `--label-column-name` kullanılan biridir.</span><span class="sxs-lookup"><span data-stu-id="86a63-170">*Note:* If the user is also using the `--label-column-name`, the `--label-column-name` is the one being used.</span></span>
+<span data-ttu-id="02a99-132">Geçersiz giriş seçenekleri, CLı aracının geçerli girişlerin bir listesini ve bir hata iletisini yaymasına neden olur.</span><span class="sxs-lookup"><span data-stu-id="02a99-132">Invalid input options cause the CLI tool to emit a list of valid inputs and an error message.</span></span>
 
-<span data-ttu-id="86a63-171">Bu bağımsız değişken yalnızca bir sınıflandırma *sorunu*gibi denetlenen ML görevi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="86a63-171">This argument is used only for supervised ML task such as a *classification problem*.</span></span> <span data-ttu-id="86a63-172">*Kümeleme*gibi denetimsiz ML Görevleri için kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="86a63-172">It cannot be used for unsupervised ML Tasks such as *clustering*.</span></span>
+## <a name="dataset"></a><span data-ttu-id="02a99-133">Veri kümesi</span><span class="sxs-lookup"><span data-stu-id="02a99-133">Dataset</span></span>
 
-## <a name="ignore-columns"></a><span data-ttu-id="86a63-173">Sütunları yoksay</span><span class="sxs-lookup"><span data-stu-id="86a63-173">Ignore columns</span></span>
+<span data-ttu-id="02a99-134">`--dataset | -d`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-134">`--dataset | -d` (string)</span></span>
 
-<span data-ttu-id="86a63-174">`--ignore-columns | -I`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-174">`--ignore-columns | -I` (string)</span></span>
+<span data-ttu-id="02a99-135">Bu bağımsız değişken, FilePath öğesini aşağıdaki seçeneklerden birine sağlar:</span><span class="sxs-lookup"><span data-stu-id="02a99-135">This argument provides the filepath to either one of the following options:</span></span>
 
-<span data-ttu-id="86a63-175">Bu bağımsız değişkenle, veri kümesi dosyasındaki varolan sütunları, eğitim işlemleri tarafından yüklenmedikleri ve kullanılmaması için yok sayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="86a63-175">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
+- <span data-ttu-id="02a99-136">Y *: tüm veri kümesi dosyası:* Bu seçenek kullanılıyorsa ve Kullanıcı ve sağlamadıysanız `--test-dataset` `--validation-dataset` çapraz doğrulama (k-katlama, vb.) veya otomatik veri bölme yaklaşımları, modeli doğrulamak için dahili olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-136">*A: The whole dataset file:* If using this option and the user is not providing `--test-dataset` and `--validation-dataset`, then cross-validation (k-fold, etc.) or automated data split approaches will be used internally for validating the model.</span></span> <span data-ttu-id="02a99-137">Bu durumda, kullanıcının DataSet FilePath 'i sağlaması yeterlidir.</span><span class="sxs-lookup"><span data-stu-id="02a99-137">In that case, the user will just need to provide the dataset filepath.</span></span>
 
-<span data-ttu-id="86a63-176">Yoksaymak istediğiniz sütun adlarını belirtin.</span><span class="sxs-lookup"><span data-stu-id="86a63-176">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="86a63-177">Birden çok sütun adını ayırmak için ',' (boşlukla virgül) veya ' ' (boşluk) kullanın.</span><span class="sxs-lookup"><span data-stu-id="86a63-177">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="86a63-178">Beyaz boşluk içeren sütun adları için tırnak işaretleri kullanabilirsiniz (örn. "oturum açmış").</span><span class="sxs-lookup"><span data-stu-id="86a63-178">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
+- <span data-ttu-id="02a99-138">*B: eğitim veri kümesi dosyası:* Kullanıcı ayrıca model doğrulaması için ( `--test-dataset` ve isteğe bağlı olarak) veri kümeleri sağladıysanız `--validation-dataset` , `--dataset` bağımsız değişken yalnızca "eğitim veri kümesi" olması anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="02a99-138">*B: The training dataset file:* If the user is also providing datasets for model validation (using `--test-dataset` and optionally `--validation-dataset`), then the `--dataset` argument means to only have the "training dataset".</span></span> <span data-ttu-id="02a99-139">Örneğin, modelin kalitesini doğrulamak ve doğruluk ölçümlerini elde etmek için %80-%20 yaklaşımını kullanırken, "eğitim veri kümesi" verilerin %80 ' sini alacak ve "test veri kümesi" verilerin %20 ' sini alacak.</span><span class="sxs-lookup"><span data-stu-id="02a99-139">For example, when using an 80% - 20% approach to validate the quality of the model and to obtain accuracy metrics, the "training dataset" will have 80% of the data and the "test dataset" would have 20% of the data.</span></span>
 
-<span data-ttu-id="86a63-179">Örnek:</span><span class="sxs-lookup"><span data-stu-id="86a63-179">Example:</span></span>
+## <a name="test-dataset"></a><span data-ttu-id="02a99-140">Test veri kümesi</span><span class="sxs-lookup"><span data-stu-id="02a99-140">Test dataset</span></span>
+
+<span data-ttu-id="02a99-141">`--test-dataset | -t`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-141">`--test-dataset | -t` (string)</span></span>
+
+<span data-ttu-id="02a99-142">Test veri kümesi dosyasına işaret eden dosya yolu; Örneğin, doğruluk ölçümlerini elde etmek için düzenli doğrulamalar yaparken %80-%20 yaklaşım kullanma.</span><span class="sxs-lookup"><span data-stu-id="02a99-142">File path pointing to the test dataset file, for example when using an 80% - 20% approach when making regular validations to obtain accuracy metrics.</span></span>
+
+<span data-ttu-id="02a99-143">Kullanılıyorsa `--test-dataset` , `--dataset` de gereklidir.</span><span class="sxs-lookup"><span data-stu-id="02a99-143">If using `--test-dataset`, then `--dataset` is also required.</span></span>
+
+<span data-ttu-id="02a99-144">`--test-dataset`--Validation-DataSet kullanılmadığı müddetçe bağımsız değişken isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="02a99-144">The `--test-dataset` argument is optional unless the --validation-dataset is used.</span></span> <span data-ttu-id="02a99-145">Bu durumda, kullanıcının üç bağımsız değişkenini kullanması gerekir.</span><span class="sxs-lookup"><span data-stu-id="02a99-145">In that case, the user must use the three arguments.</span></span>
+
+## <a name="validation-dataset"></a><span data-ttu-id="02a99-146">Doğrulama veri kümesi</span><span class="sxs-lookup"><span data-stu-id="02a99-146">Validation dataset</span></span>
+
+<span data-ttu-id="02a99-147">`--validation-dataset | -v`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-147">`--validation-dataset | -v` (string)</span></span>
+
+<span data-ttu-id="02a99-148">Doğrulama veri kümesi dosyasına işaret eden dosya yolu.</span><span class="sxs-lookup"><span data-stu-id="02a99-148">File path pointing to the validation dataset file.</span></span> <span data-ttu-id="02a99-149">Doğrulama veri kümesi, her durumda isteğe bağlıdır.</span><span class="sxs-lookup"><span data-stu-id="02a99-149">The validation dataset is optional, in any case.</span></span>
+
+<span data-ttu-id="02a99-150">Bir kullanıyorsanız `validation dataset` , davranış şu şekilde olmalıdır:</span><span class="sxs-lookup"><span data-stu-id="02a99-150">If using a `validation dataset`, the behavior should be:</span></span>
+
+- <span data-ttu-id="02a99-151">`test-dataset`Ve `--dataset` bağımsız değişkenleri de gereklidir.</span><span class="sxs-lookup"><span data-stu-id="02a99-151">The `test-dataset` and `--dataset` arguments are also required.</span></span>
+
+- <span data-ttu-id="02a99-152">`validation-dataset`Veri kümesi, model seçimine yönelik tahmin hatasını tahmin etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-152">The `validation-dataset` dataset is used to estimate prediction error for model selection.</span></span>
+
+- <span data-ttu-id="02a99-153">, `test-dataset` Seçili son modeldeki Genelleştirme hatası değerlendirmesi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-153">The `test-dataset` is used for assessment of the generalization error of the final chosen model.</span></span> <span data-ttu-id="02a99-154">İdeal olarak, test kümesinin bir "kasa" içinde tutulması ve yalnızca veri analizinin sonunda getirilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="02a99-154">Ideally, the test set should be kept in a “vault,” and be brought out only at the end of the data analysis.</span></span>
+
+<span data-ttu-id="02a99-155">Temel olarak, bir `validation dataset` artı kullandığınızda `test dataset` , doğrulama aşaması iki parçaya ayrılır:</span><span class="sxs-lookup"><span data-stu-id="02a99-155">Basically, when using a `validation dataset` plus the `test dataset`, the validation phase is split into two parts:</span></span>
+
+1. <span data-ttu-id="02a99-156">İlk bölümde, modellerinize göz atadınız ve doğrulama verilerini kullanarak en iyi şekilde gerçekleştirdiğiniz yaklaşımı seçersiniz (= doğrulama)</span><span class="sxs-lookup"><span data-stu-id="02a99-156">In the first part, you just look at your models and select the best performing approach using the validation data (=validation)</span></span>
+2. <span data-ttu-id="02a99-157">Ardından seçili yaklaşımın doğruluğunu tahmin edersiniz (= test).</span><span class="sxs-lookup"><span data-stu-id="02a99-157">Then you estimate the accuracy of the selected approach (=test).</span></span>
+
+<span data-ttu-id="02a99-158">Bu nedenle, verilerin ayrımı 80/10/10 veya 75/15/10 olabilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-158">Hence, the separation of data could be 80/10/10 or 75/15/10.</span></span> <span data-ttu-id="02a99-159">Örnek:</span><span class="sxs-lookup"><span data-stu-id="02a99-159">For example:</span></span>
+
+- <span data-ttu-id="02a99-160">`training-dataset`Dosya, verilerin %75 ' i olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="02a99-160">`training-dataset` file should have 75% of the data.</span></span>
+- <span data-ttu-id="02a99-161">`validation-dataset`Dosya, verilerin %15 ' i olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="02a99-161">`validation-dataset` file should have 15% of the data.</span></span>
+- <span data-ttu-id="02a99-162">`test-dataset`Dosya, verilerin %10 ' a sahip olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="02a99-162">`test-dataset` file should have 10% of the data.</span></span>
+
+<span data-ttu-id="02a99-163">Herhangi bir durumda, bu yüzdeleri Kullanıcı tarafından zaten bölünmüş dosyaları sağlayacak CLı kullanarak kararlanacaktır.</span><span class="sxs-lookup"><span data-stu-id="02a99-163">In any case, those percentages will be decided by the user using the CLI who will provide the files already split.</span></span>
+
+## <a name="label-column"></a><span data-ttu-id="02a99-164">Etiket sütunu</span><span class="sxs-lookup"><span data-stu-id="02a99-164">Label column</span></span>
+
+<span data-ttu-id="02a99-165">`--label-col`(int veya String)</span><span class="sxs-lookup"><span data-stu-id="02a99-165">`--label-col` (int or string)</span></span>
+
+<span data-ttu-id="02a99-166">Bu bağımsız değişkenle, belirli bir amaç/hedef sütunu (tahmin etmek istediğiniz değişken) veri kümesinin üstbilgisinde veya sütunun veri kümesinin dosyasındaki sayısal dizininde bulunan sütunun adı kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).</span><span class="sxs-lookup"><span data-stu-id="02a99-166">With this argument, a specific objective/target column (the variable that you want to predict) can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="02a99-167">Bu bağımsız değişken, *Sınıflandırma* ve *gerileme* sorunları için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-167">This argument is used for *classification* and *regression* problems.</span></span>
+
+## <a name="item-column"></a><span data-ttu-id="02a99-168">Öğe sütunu</span><span class="sxs-lookup"><span data-stu-id="02a99-168">Item column</span></span>
+
+<span data-ttu-id="02a99-169">`--item-col`(int veya String)</span><span class="sxs-lookup"><span data-stu-id="02a99-169">`--item-col` (int or string)</span></span>
+
+<span data-ttu-id="02a99-170">Öğe sütunu, kullanıcıların hızaldığı öğelerin listesini içerir (öğeler kullanıcılara önerilir).</span><span class="sxs-lookup"><span data-stu-id="02a99-170">The item column has the list of items that users rate (items are recommended to users).</span></span> <span data-ttu-id="02a99-171">Bu sütun, veri kümesinin üstbilgisinde sütun adı kümesi veya veri kümesinin dosyasında sütunun sayısal dizini kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).</span><span class="sxs-lookup"><span data-stu-id="02a99-171">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="02a99-172">Bu bağımsız değişken yalnızca *öneri* görevi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-172">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="rating-column"></a><span data-ttu-id="02a99-173">Derecelendirme sütunu</span><span class="sxs-lookup"><span data-stu-id="02a99-173">Rating column</span></span>
+
+<span data-ttu-id="02a99-174">`--rating-col`(int veya String)</span><span class="sxs-lookup"><span data-stu-id="02a99-174">`--rating-col` (int or string)</span></span>
+
+<span data-ttu-id="02a99-175">Derecelendirme sütunu kullanıcılara göre öğelere verilen derecelendirmelerin listesini içerir.</span><span class="sxs-lookup"><span data-stu-id="02a99-175">The rating column has the list of ratings that are given to items by users.</span></span> <span data-ttu-id="02a99-176">Bu sütun, veri kümesinin üstbilgisinde sütun adı kümesi veya veri kümesinin dosyasında sütunun sayısal dizini kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).</span><span class="sxs-lookup"><span data-stu-id="02a99-176">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="02a99-177">Bu bağımsız değişken yalnızca *öneri* görevi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-177">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="user-column"></a><span data-ttu-id="02a99-178">Kullanıcı sütunu</span><span class="sxs-lookup"><span data-stu-id="02a99-178">User column</span></span>
+
+<span data-ttu-id="02a99-179">`--user-col`(int veya String)</span><span class="sxs-lookup"><span data-stu-id="02a99-179">`--user-col` (int or string)</span></span>
+
+<span data-ttu-id="02a99-180">Kullanıcı sütunu, öğelere derecelendirme veren kullanıcıların listesini içerir.</span><span class="sxs-lookup"><span data-stu-id="02a99-180">The user column has the list of users that give ratings to items.</span></span> <span data-ttu-id="02a99-181">Bu sütun, veri kümesinin üstbilgisinde sütun adı kümesi veya veri kümesinin dosyasında sütunun sayısal dizini kullanılarak belirtilebilir (sütun dizini değerleri 0 ' dan başlar).</span><span class="sxs-lookup"><span data-stu-id="02a99-181">This column can be specified by using the column's name set in the dataset's header or the column's numeric index in the dataset's file (the column index values start at 0).</span></span>
+
+<span data-ttu-id="02a99-182">Bu bağımsız değişken yalnızca *öneri* görevi için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-182">This argument is used only for the *recommendation* task.</span></span>
+
+## <a name="ignore-columns"></a><span data-ttu-id="02a99-183">Sütunları yoksay</span><span class="sxs-lookup"><span data-stu-id="02a99-183">Ignore columns</span></span>
+
+<span data-ttu-id="02a99-184">`--ignore-columns`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-184">`--ignore-columns` (string)</span></span>
+
+<span data-ttu-id="02a99-185">Bu bağımsız değişkenle, veri kümesi dosyasında var olan sütunları yoksayabilirsiniz ve bu sayede eğitim işlemleriyle birlikte kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="02a99-185">With this argument, you can ignore existing columns in the dataset file so they are not loaded and used by the training processes.</span></span>
+
+<span data-ttu-id="02a99-186">Yoksaymak istediğiniz sütun adlarını belirtin.</span><span class="sxs-lookup"><span data-stu-id="02a99-186">Specify the columns names that you want to ignore.</span></span> <span data-ttu-id="02a99-187">Birden çok sütun adını ayırmak için ', ' (boşluk ile virgül) veya ' ' (boşluk) kullanın.</span><span class="sxs-lookup"><span data-stu-id="02a99-187">Use ', ' (comma with space) or ' ' (space) to separate multiple column names.</span></span> <span data-ttu-id="02a99-188">Boşluk içeren sütun adları için tırnak işareti kullanabilirsiniz (örneğin, "oturum açmış").</span><span class="sxs-lookup"><span data-stu-id="02a99-188">You can use quotes for column names containing whitespace (e.g. "logged in").</span></span>
+
+<span data-ttu-id="02a99-189">Örnek:</span><span class="sxs-lookup"><span data-stu-id="02a99-189">Example:</span></span>
 
 `--ignore-columns email, address, id, logged_in`
 
-## <a name="has-header"></a><span data-ttu-id="86a63-180">Üstbilgi var</span><span class="sxs-lookup"><span data-stu-id="86a63-180">Has header</span></span>
+## <a name="has-header"></a><span data-ttu-id="02a99-190">Üst bilgisi vardır</span><span class="sxs-lookup"><span data-stu-id="02a99-190">Has header</span></span>
 
-<span data-ttu-id="86a63-181">`--has-header | -h`(bool)</span><span class="sxs-lookup"><span data-stu-id="86a63-181">`--has-header | -h` (bool)</span></span>
+<span data-ttu-id="02a99-191">`--has-header`bool</span><span class="sxs-lookup"><span data-stu-id="02a99-191">`--has-header` (bool)</span></span>
 
-<span data-ttu-id="86a63-182">Veri kümesi dosyasının üstbilgi satırı olup olmadığını belirtin.</span><span class="sxs-lookup"><span data-stu-id="86a63-182">Specify if the dataset file(s) have a header row.</span></span>
-<span data-ttu-id="86a63-183">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="86a63-183">Possible values are:</span></span>
+<span data-ttu-id="02a99-192">Veri kümesi dosyalarının bir üst bilgi satırına sahip olup olmadığını belirtin.</span><span class="sxs-lookup"><span data-stu-id="02a99-192">Specify if the dataset file(s) have a header row.</span></span>
+<span data-ttu-id="02a99-193">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="02a99-193">Possible values are:</span></span>
 
 - `true`
 - `false`
 
-<span data-ttu-id="86a63-184">Varsayılan değer, `true` bu bağımsız değişkenin kullanıcı tarafından belirtilmemiş olmasıdır.</span><span class="sxs-lookup"><span data-stu-id="86a63-184">The by default value is `true` if this argument is not specified by the user.</span></span>
+<span data-ttu-id="02a99-194">Bu bağımsız değişken Kullanıcı tarafından belirtilmemişse, ML.NET CLı bu özelliği algılamaya çalışır.</span><span class="sxs-lookup"><span data-stu-id="02a99-194">The ML.NET CLI will try to detect this property if this argument is not specified by the user.</span></span>
 
-<span data-ttu-id="86a63-185">Bağımsız değişkeni `--label-column-name` kullanmak için, veri kümesi dosyasında bir üstbilgi nin olması ve `--has-header` `true` (varsayılan olarak) ayarlanabilmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="86a63-185">In order to use the `--label-column-name` argument, you need to have a header in the dataset file and `--has-header` set to `true` (which is by default).</span></span>
+## <a name="train-time"></a><span data-ttu-id="02a99-195">Eğitim süresi</span><span class="sxs-lookup"><span data-stu-id="02a99-195">Train time</span></span>
 
-## <a name="max-exploration-time"></a><span data-ttu-id="86a63-186">Maksimum arama süresi</span><span class="sxs-lookup"><span data-stu-id="86a63-186">Max exploration time</span></span>
+<span data-ttu-id="02a99-196">`--train-time`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-196">`--train-time` (string)</span></span>
 
-<span data-ttu-id="86a63-187">`--max-exploration-time | -x`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-187">`--max-exploration-time | -x` (string)</span></span>
+<span data-ttu-id="02a99-197">Varsayılan olarak, en fazla araştırma/tren süresi 30 dakikadır.</span><span class="sxs-lookup"><span data-stu-id="02a99-197">By default, the maximum exploration / train time is 30 minutes.</span></span>
 
-<span data-ttu-id="86a63-188">Varsayılan olarak, maksimum arama süresi 30 dakikadır.</span><span class="sxs-lookup"><span data-stu-id="86a63-188">By default, the maximum exploration time is 30 minutes.</span></span>
+<span data-ttu-id="02a99-198">Bu bağımsız değişken, birden fazla taş ve yapılandırmayı araştırmak için işlem için en uzun süreyi (saniye cinsinden) ayarlar.</span><span class="sxs-lookup"><span data-stu-id="02a99-198">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="02a99-199">Belirtilen süre çok kısaysa (2 saniye), tek bir yineleme için yapılandırılan saat kesilebilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-199">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="02a99-200">Bu durumda, gerçek süre, tek bir yinelemede tek bir model yapılandırması üretmek için gereken süredir.</span><span class="sxs-lookup"><span data-stu-id="02a99-200">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
 
-<span data-ttu-id="86a63-189">Bu bağımsız değişken, işlemin birden çok eğitmeni ve yapılandırmayı keşfetmesi için en fazla zamanı (saniye cinsinden) ayarlar.</span><span class="sxs-lookup"><span data-stu-id="86a63-189">This argument sets the maximum time (in seconds) for the process to explore multiple trainers and configurations.</span></span> <span data-ttu-id="86a63-190">Sağlanan süre tek bir yineleme için çok kısaysa (örneğin 2 saniye) yapılandırılan süre aşılabilir.</span><span class="sxs-lookup"><span data-stu-id="86a63-190">The configured time may be exceeded if the provided time is too short (say 2 seconds) for a single iteration.</span></span> <span data-ttu-id="86a63-191">Bu durumda, gerçek zaman tek bir yinelemede bir model yapılandırması üretmek için gerekli zamandır.</span><span class="sxs-lookup"><span data-stu-id="86a63-191">In this case, the actual time is the required time to produce one model configuration in a single iteration.</span></span>
+<span data-ttu-id="02a99-201">Yinelemeler için gereken süre, veri kümesinin boyutuna bağlı olarak farklılık gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-201">The needed time for iterations can vary depending on the size of the dataset.</span></span>
 
-<span data-ttu-id="86a63-192">Yinelemeler için gereken süre, veri kümesinin boyutuna bağlı olarak değişebilir.</span><span class="sxs-lookup"><span data-stu-id="86a63-192">The needed time for iterations can vary depending on the size of the dataset.</span></span>
+## <a name="cache"></a><span data-ttu-id="02a99-202">Önbellek</span><span class="sxs-lookup"><span data-stu-id="02a99-202">Cache</span></span>
 
-## <a name="cache"></a><span data-ttu-id="86a63-193">Önbellek</span><span class="sxs-lookup"><span data-stu-id="86a63-193">Cache</span></span>
+<span data-ttu-id="02a99-203">`--cache`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-203">`--cache` (string)</span></span>
 
-<span data-ttu-id="86a63-194">`--cache | -c`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-194">`--cache | -c` (string)</span></span>
+<span data-ttu-id="02a99-204">Önbelleğe alma kullanırsanız, tüm eğitim veri kümesi bellek içinde yüklenir.</span><span class="sxs-lookup"><span data-stu-id="02a99-204">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
 
-<span data-ttu-id="86a63-195">Önbelleğe alma kullanırsanız, tüm eğitim veri kümesi bellekte yüklenir.</span><span class="sxs-lookup"><span data-stu-id="86a63-195">If you use caching, the whole training dataset will be loaded in-memory.</span></span>
+<span data-ttu-id="02a99-205">Küçük ve orta ölçekli veri kümelerinde, önbelleğin kullanılması eğitim performansını önemli ölçüde iyileştirebilir, bu da eğitim süresi önbelleği kullanmadığınız zamandan daha kısa olabilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-205">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
 
-<span data-ttu-id="86a63-196">Küçük ve orta veri kümeleri için önbellek kullanmak eğitim performansını önemli ölçüde artırabilir, bu da eğitim süresinin önbelleği kullanmadığınız zamankinden daha kısa olabileceği anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="86a63-196">For small and medium datasets, using cache can drastically improve the training performance, meaning the training time can be shorter than when you don't use cache.</span></span>
+<span data-ttu-id="02a99-206">Ancak, büyük veri kümeleri için bellekteki tüm verilerin yüklenmesi, bellek yetersiz olduğundan olumsuz etkileyebilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-206">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="02a99-207">Büyük veri kümesi dosyalarıyla eğitim yaparken ve önbellek kullanmayan ML.NET, eğitim sırasında daha fazla veri yüklemesi gerektiğinde sürücüdeki veri öbeklerini akışa alabilir.</span><span class="sxs-lookup"><span data-stu-id="02a99-207">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
 
-<span data-ttu-id="86a63-197">Ancak, büyük veri kümeleri için bellekteki tüm verilerin yüklenmesi, bellekten çıkabileceğiniz için olumsuz etki gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="86a63-197">However, for large datasets, loading all the data in memory can impact negatively since you might get out of memory.</span></span> <span data-ttu-id="86a63-198">Büyük veri kümesi dosyalarıyla eğitim alırken ve önbellek kullanmazken, ML.NET, eğitim sırasında daha fazla veri yüklemesi gerektiğinde sürücüden veri yığınları akışı olacaktır.</span><span class="sxs-lookup"><span data-stu-id="86a63-198">When training with large dataset files and not using cache, ML.NET will be streaming chunks of data from the drive when it needs to load more data while training.</span></span>
+<span data-ttu-id="02a99-208">Aşağıdaki değerleri belirtebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="02a99-208">You can specify the following values:</span></span>
 
-<span data-ttu-id="86a63-199">Aşağıdaki değerleri belirtebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="86a63-199">You can specify the following values:</span></span>
+<span data-ttu-id="02a99-209">`on`: Eğitim sırasında önbelleğin kullanılmasına zorlar.</span><span class="sxs-lookup"><span data-stu-id="02a99-209">`on`: Forces cache to be used when training.</span></span>
+<span data-ttu-id="02a99-210">`off`: Eğitim sırasında önbelleğin kullanılmasına izin vermez.</span><span class="sxs-lookup"><span data-stu-id="02a99-210">`off`: Forces cache not to be used when training.</span></span>
+<span data-ttu-id="02a99-211">`auto`: Bu, oto ml buluşsal türüne bağlı olarak, önbellek kullanılır veya değildir.</span><span class="sxs-lookup"><span data-stu-id="02a99-211">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="02a99-212">Genellikle, küçük/orta veri kümeleri önbelleği kullanır ve büyük veri kümeleri seçeneği kullanırsanız önbelleği kullanmaz `auto` .</span><span class="sxs-lookup"><span data-stu-id="02a99-212">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
 
-<span data-ttu-id="86a63-200">`on`: Eğitim de kullanılacak önbelleği zorlar.</span><span class="sxs-lookup"><span data-stu-id="86a63-200">`on`: Forces cache to be used when training.</span></span>
-<span data-ttu-id="86a63-201">`off`: Eğitim de kullanılmaması için önbelleği zorlar.</span><span class="sxs-lookup"><span data-stu-id="86a63-201">`off`: Forces cache not to be used when training.</span></span>
-<span data-ttu-id="86a63-202">`auto`: AutoML sezgisel bağlı olarak, önbellek kullanılacak veya kullanılmaz.</span><span class="sxs-lookup"><span data-stu-id="86a63-202">`auto`: Depending on AutoML heuristics, the cache will be used or not.</span></span> <span data-ttu-id="86a63-203">Genellikle, küçük/orta veri kümeleri önbellek kullanır ve `auto` seçimi kullanırsanız büyük veri kümeleri önbellek kullanmaz.</span><span class="sxs-lookup"><span data-stu-id="86a63-203">Usually, small/medium datasets will use cache and large datasets won't use cache if you use the `auto` choice.</span></span>
+<span data-ttu-id="02a99-213">`--cache`Parametresini belirtmezseniz, `auto` Varsayılan olarak önbellek yapılandırması kullanılacaktır.</span><span class="sxs-lookup"><span data-stu-id="02a99-213">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
 
-<span data-ttu-id="86a63-204">Parametreyi `--cache` belirtmezseniz, önbellek `auto` yapılandırması varsayılan olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="86a63-204">If you don't specify the `--cache` parameter, then the cache `auto` configuration will be used by default.</span></span>
+## <a name="name"></a><span data-ttu-id="02a99-214">Name</span><span class="sxs-lookup"><span data-stu-id="02a99-214">Name</span></span>
 
-## <a name="name"></a><span data-ttu-id="86a63-205">Adı</span><span class="sxs-lookup"><span data-stu-id="86a63-205">Name</span></span>
+<span data-ttu-id="02a99-215">`--name`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-215">`--name` (string)</span></span>
 
-<span data-ttu-id="86a63-206">`--name | -N`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-206">`--name | -N` (string)</span></span>
+<span data-ttu-id="02a99-216">Oluşturulan çıkış projesinin veya çözümünün adı.</span><span class="sxs-lookup"><span data-stu-id="02a99-216">The name for the created output project or solution.</span></span> <span data-ttu-id="02a99-217">Ad belirtilmemişse, ad `sample-{mltask}` kullanılır.</span><span class="sxs-lookup"><span data-stu-id="02a99-217">If no name is specified, the name `sample-{mltask}` is used.</span></span>
 
-<span data-ttu-id="86a63-207">Oluşturulan çıktı projesinin veya çözümün adı.</span><span class="sxs-lookup"><span data-stu-id="86a63-207">The name for the created output project or solution.</span></span> <span data-ttu-id="86a63-208">Ad belirtilmemişse, `sample-{mltask}` ad kullanılır.</span><span class="sxs-lookup"><span data-stu-id="86a63-208">If no name is specified, the name `sample-{mltask}` is used.</span></span>
+<span data-ttu-id="02a99-218">ML.NET model dosyası (. ZIP dosyası) de aynı adı alır.</span><span class="sxs-lookup"><span data-stu-id="02a99-218">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
 
-<span data-ttu-id="86a63-209">ML.NET modeli dosyası (. ZIP dosyası) de aynı adı alırsınız.</span><span class="sxs-lookup"><span data-stu-id="86a63-209">The ML.NET model file (.ZIP file) will get the same name, as well.</span></span>
+## <a name="output-path"></a><span data-ttu-id="02a99-219">Çıkış yolu</span><span class="sxs-lookup"><span data-stu-id="02a99-219">Output path</span></span>
 
-## <a name="output-path"></a><span data-ttu-id="86a63-210">Çıkış yolu</span><span class="sxs-lookup"><span data-stu-id="86a63-210">Output path</span></span>
+<span data-ttu-id="02a99-220">`--output-path | -o`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-220">`--output-path | -o` (string)</span></span>
 
-<span data-ttu-id="86a63-211">`--output-path | -o`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-211">`--output-path | -o` (string)</span></span>
+<span data-ttu-id="02a99-221">Oluşturulan çıkışın yerleştirileceği kök konumu/klasörü.</span><span class="sxs-lookup"><span data-stu-id="02a99-221">Root location/folder to place the generated output.</span></span> <span data-ttu-id="02a99-222">Geçerli dizin varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="02a99-222">The default is the current directory.</span></span>
 
-<span data-ttu-id="86a63-212">Oluşturulan çıktıyı yerleştirmek için kök konumu/klasörü.</span><span class="sxs-lookup"><span data-stu-id="86a63-212">Root location/folder to place the generated output.</span></span> <span data-ttu-id="86a63-213">Geçerli dizin varsayılandır.</span><span class="sxs-lookup"><span data-stu-id="86a63-213">The default is the current directory.</span></span>
+## <a name="verbosity"></a><span data-ttu-id="02a99-223">Ayrıntı Düzeyi</span><span class="sxs-lookup"><span data-stu-id="02a99-223">Verbosity</span></span>
 
-## <a name="verbosity"></a><span data-ttu-id="86a63-214">Ayrıntı Düzeyi</span><span class="sxs-lookup"><span data-stu-id="86a63-214">Verbosity</span></span>
+<span data-ttu-id="02a99-224">`--verbosity | -v`dizisinde</span><span class="sxs-lookup"><span data-stu-id="02a99-224">`--verbosity | -v` (string)</span></span>
 
-<span data-ttu-id="86a63-215">`--verbosity | -V`(dize)</span><span class="sxs-lookup"><span data-stu-id="86a63-215">`--verbosity | -V` (string)</span></span>
+<span data-ttu-id="02a99-225">Standart çıkışın ayrıntı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="02a99-225">Sets the verbosity level of the standard output.</span></span>
 
-<span data-ttu-id="86a63-216">Standart çıktının ayrıntılı düzeyini ayarlar.</span><span class="sxs-lookup"><span data-stu-id="86a63-216">Sets the verbosity level of the standard output.</span></span>
-
-<span data-ttu-id="86a63-217">İzin verilen değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="86a63-217">Allowed values are:</span></span>
+<span data-ttu-id="02a99-226">İzin verilen değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="02a99-226">Allowed values are:</span></span>
 
 - `q[uiet]`
-- <span data-ttu-id="86a63-218">`m[inimal]`(varsayılan olarak)</span><span class="sxs-lookup"><span data-stu-id="86a63-218">`m[inimal]`  (by default)</span></span>
-- <span data-ttu-id="86a63-219">`diag[nostic]`(günlük bilgi düzeyi)</span><span class="sxs-lookup"><span data-stu-id="86a63-219">`diag[nostic]` (logging information level)</span></span>
+- <span data-ttu-id="02a99-227">`m[inimal]`(varsayılan olarak)</span><span class="sxs-lookup"><span data-stu-id="02a99-227">`m[inimal]`  (by default)</span></span>
+- <span data-ttu-id="02a99-228">`diag[nostic]`(günlük bilgisi düzeyi)</span><span class="sxs-lookup"><span data-stu-id="02a99-228">`diag[nostic]` (logging information level)</span></span>
 
-<span data-ttu-id="86a63-220">Varsayılan olarak, CLI aracı çalışırken, çalıştığını ve mümkünse ne kadar zaman kaldığını veya %ne kadar Zaman'ın tamamlandığını belirtmek gibi bazı minimum geri bildirimleri (minimal) göstermelidir.</span><span class="sxs-lookup"><span data-stu-id="86a63-220">By default, the CLI tool should show some minimum feedback (minimal) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
+<span data-ttu-id="02a99-229">Varsayılan olarak, CLı aracı çalışırken en az geri bildirim ( `minimal` ), çalışıp çalışmadığını ve ne kadar süre kaldığını veya sürenin% ne kadar tamamlandığını gösterir.</span><span class="sxs-lookup"><span data-stu-id="02a99-229">By default, the CLI tool should show some minimum feedback (`minimal`) when working, such as mentioning that it is working and if possible how much time is left or what % of the time is completed.</span></span>
 
-## <a name="help"></a><span data-ttu-id="86a63-221">Yardım</span><span class="sxs-lookup"><span data-stu-id="86a63-221">Help</span></span>
+## <a name="help"></a><span data-ttu-id="02a99-230">Yardım</span><span class="sxs-lookup"><span data-stu-id="02a99-230">Help</span></span>
 
-`-h|--help`
+`-h |--help`
 
-<span data-ttu-id="86a63-222">Her komutun parametresi için bir açıklama içeren komut için yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="86a63-222">Prints out help for the command with a description for each command's parameter.</span></span>
+<span data-ttu-id="02a99-231">Komut için, her komutun parametresi için bir açıklama içeren yardımı yazdırır.</span><span class="sxs-lookup"><span data-stu-id="02a99-231">Prints out help for the command with a description for each command's parameter.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="86a63-223">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="86a63-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="02a99-232">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="02a99-232">See also</span></span>
 
-- [<span data-ttu-id="86a63-224">ML.NET CLI aracı nasıl yüklenir?</span><span class="sxs-lookup"><span data-stu-id="86a63-224">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
-- [<span data-ttu-id="86a63-225">ML.NET CLI'ye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="86a63-225">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
-- [<span data-ttu-id="86a63-226">Öğretici: CLI ML.NET kullanarak duyguları analiz edin</span><span class="sxs-lookup"><span data-stu-id="86a63-226">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
-- [<span data-ttu-id="86a63-227">ML.NET CLI'de telemetri</span><span class="sxs-lookup"><span data-stu-id="86a63-227">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)
+- [<span data-ttu-id="02a99-233">ML.NET CLı aracını yüklemek</span><span class="sxs-lookup"><span data-stu-id="02a99-233">How to install the ML.NET CLI tool</span></span>](../how-to-guides/install-ml-net-cli.md)
+- [<span data-ttu-id="02a99-234">ML.NET CLı 'ye Genel Bakış</span><span class="sxs-lookup"><span data-stu-id="02a99-234">Overview of the ML.NET CLI</span></span>](../automate-training-with-cli.md)
+- [<span data-ttu-id="02a99-235">Öğretici: ML.NET CLı kullanarak yaklaşımı çözümleme</span><span class="sxs-lookup"><span data-stu-id="02a99-235">Tutorial: Analyze sentiment using the ML.NET CLI</span></span>](../tutorials/sentiment-analysis-cli.md)
+- [<span data-ttu-id="02a99-236">ML.NET CLı 'de telemetri</span><span class="sxs-lookup"><span data-stu-id="02a99-236">Telemetry in ML.NET CLI</span></span>](../resources/ml-net-cli-telemetry.md)
