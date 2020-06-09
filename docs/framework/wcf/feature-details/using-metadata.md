@@ -2,26 +2,26 @@
 title: Meta Verileri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
-ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac28de954c3754fba3763e40270d6427fb31566e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933627"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600250"
 ---
-# <a name="using-metadata"></a><span data-ttu-id="d725a-102">Meta Verileri Kullanma</span><span class="sxs-lookup"><span data-stu-id="d725a-102">Using Metadata</span></span>
-<span data-ttu-id="d725a-103">Hizmet meta verileri, makine tarafından okunabilir hizmet açıklamasını içerir.</span><span class="sxs-lookup"><span data-stu-id="d725a-103">Service metadata contains a machine-readable description of the service.</span></span> <span data-ttu-id="d725a-104">Hizmet meta verileri, hizmet uç noktaları, bağlamaları, sözleşmeler, operations ve iletileri açıklamalarını içerir.</span><span class="sxs-lookup"><span data-stu-id="d725a-104">Service metadata includes descriptions of the service endpoints, bindings, contracts, operations, and messages.</span></span> <span data-ttu-id="d725a-105">Hizmet meta verileri, çeşitli amaçlarla, otomatik olarak kullanan hizmet, hizmet açıklaması uygulama ve bir istemci için bağlama dinamik olarak güncelleştirmek için bir istemci oluşturma da dahil olmak üzere kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="d725a-105">You can use service metadata for a variety of purposes, including automatically generating a client for consuming the service, implementing the service description, and dynamically updating the binding for a client.</span></span>  
+# <a name="using-metadata"></a><span data-ttu-id="625f4-102">Meta Verileri Kullanma</span><span class="sxs-lookup"><span data-stu-id="625f4-102">Using Metadata</span></span>
+<span data-ttu-id="625f4-103">Hizmet meta verileri, hizmetin makine tarafından okunabilen bir açıklamasını içerir.</span><span class="sxs-lookup"><span data-stu-id="625f4-103">Service metadata contains a machine-readable description of the service.</span></span> <span data-ttu-id="625f4-104">Hizmet meta verileri, hizmet uç noktalarının, bağlamaların, sözleşmelerin, işlemlerin ve mesajların açıklamalarını içerir.</span><span class="sxs-lookup"><span data-stu-id="625f4-104">Service metadata includes descriptions of the service endpoints, bindings, contracts, operations, and messages.</span></span> <span data-ttu-id="625f4-105">Hizmet meta verilerini hizmeti tüketmek için bir istemciyi otomatik olarak oluşturma, hizmet açıklamasını uygulama ve bir istemcinin bağlamasını dinamik olarak güncelleştirme dahil olmak üzere çeşitli amaçlar için kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="625f4-105">You can use service metadata for a variety of purposes, including automatically generating a client for consuming the service, implementing the service description, and dynamically updating the binding for a client.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d725a-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="d725a-106">In This Section</span></span>  
- [<span data-ttu-id="d725a-107">Oluşturulmuş İstemci Kodlarını Anlama</span><span class="sxs-lookup"><span data-stu-id="d725a-107">Understanding Generated Client Code</span></span>](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- <span data-ttu-id="d725a-108">Farklı sınıfları açıklar ve aracının oluşturduğu Svcutil.exe arabirimleri.</span><span class="sxs-lookup"><span data-stu-id="d725a-108">Describes the different classes and interfaces the Svcutil.exe tool generates.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="625f4-106">Bu Bölümde</span><span class="sxs-lookup"><span data-stu-id="625f4-106">In This Section</span></span>  
+ [<span data-ttu-id="625f4-107">Oluşturulmuş İstemci Kodlarını Anlama</span><span class="sxs-lookup"><span data-stu-id="625f4-107">Understanding Generated Client Code</span></span>](understanding-generated-client-code.md)  
+ <span data-ttu-id="625f4-108">Svcutil. exe aracının oluşturduğu farklı sınıfları ve arabirimleri açıklar.</span><span class="sxs-lookup"><span data-stu-id="625f4-108">Describes the different classes and interfaces the Svcutil.exe tool generates.</span></span>  
   
- [<span data-ttu-id="d725a-109">Nasıl yapılır: Meta veri alma ve uyumlu bir hizmet ekleme</span><span class="sxs-lookup"><span data-stu-id="d725a-109">How to: Retrieve Metadata and Implement a Compliant Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
- <span data-ttu-id="d725a-110">Svcutil.exe kullanarak meta verileri alma ve uyumlu bir hizmet ekleme işlemi gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="d725a-110">Demonstrates how to retrieve metadata using Svcutil.exe and implement a compliant service.</span></span>  
+ [<span data-ttu-id="625f4-109">Nasıl yapılır: Meta Verileri Alma ve Uyumlu Bir Hizmet Ekleme</span><span class="sxs-lookup"><span data-stu-id="625f4-109">How to: Retrieve Metadata and Implement a Compliant Service</span></span>](how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ <span data-ttu-id="625f4-110">Svcutil. exe kullanarak meta verilerin nasıl alınacağını ve uyumlu bir hizmetin nasıl uygulanacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="625f4-110">Demonstrates how to retrieve metadata using Svcutil.exe and implement a compliant service.</span></span>  
   
- [<span data-ttu-id="d725a-111">Hizmet Meta Verilerinden WCF İstemcisi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="d725a-111">Generating a WCF Client from Service Metadata</span></span>](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  
- <span data-ttu-id="d725a-112">Svcutil.exe kullanarak meta verilerini almak ve bir Windows Communication Foundation (WCF) istemci oluşturabileceğiniz gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="d725a-112">Demonstrates how to retrieve metadata using Svcutil.exe and generate a Windows Communication Foundation (WCF) client.</span></span>  
+ [<span data-ttu-id="625f4-111">Hizmet Meta Verilerinden WCF İstemcisi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="625f4-111">Generating a WCF Client from Service Metadata</span></span>](generating-a-wcf-client-from-service-metadata.md)  
+ <span data-ttu-id="625f4-112">Svcutil. exe kullanarak meta verilerin nasıl alınacağını ve bir Windows Communication Foundation (WCF) istemcisi nasıl oluşturulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="625f4-112">Demonstrates how to retrieve metadata using Svcutil.exe and generate a Windows Communication Foundation (WCF) client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d725a-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d725a-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="625f4-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="625f4-113">See also</span></span>
 
-- [<span data-ttu-id="d725a-114">Meta Veriler</span><span class="sxs-lookup"><span data-stu-id="d725a-114">Metadata</span></span>](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [<span data-ttu-id="625f4-114">Meta Veriler</span><span class="sxs-lookup"><span data-stu-id="625f4-114">Metadata</span></span>](metadata.md)
