@@ -2,19 +2,19 @@
 title: Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 36c35fe0590ad9fc728641313d4175a432d7ccaa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 17c3d2167d3f98017c5f366ab0d700d9fb889f82
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69951572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600146"
 ---
 # <a name="web-hosting-a-queued-application"></a>Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma
 Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (WCF) hizmetlerini barındıran uygulamalar içeren çalışan işlemlerinin etkinleştirilmesini ve ömrünü yönetir. WAS işlem modeli http sunucusu için IIS 6,0 işlem modelini genelleştirir ve HTTP 'nin bağımlılığını ortadan kaldırır. Bu, WCF hizmetlerinin, ileti tabanlı etkinleştirmeyi destekleyen ve belirli bir bilgisayarda çok sayıda uygulamayı barındırma olanağı sunan bir barındırma ortamında net. MSMQ ve MSMQ. formatname gibi HTTP ve HTTP olmayan protokolleri kullanmasına izin verir.  
   
  , Uygulama tarafından kullanılan kuyruklardan birine bir veya daha fazla ileti yerleştirildiğinde sıraya alınmış uygulamayı etkinleştiren bir Message Queuing (MSMQ) etkinleştirme hizmeti içermektedir. MSMQ etkinleştirme hizmeti, varsayılan olarak otomatik olarak başlatılan bir NT hizmetidir.  
   
- WAS ve avantajları hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmeti 'Nde barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). MSMQ hakkında daha fazla bilgi için bkz. [kuyruklara genel bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md).
+ WAS ve avantajları hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmeti 'Nde barındırma](hosting-in-windows-process-activation-service.md). MSMQ hakkında daha fazla bilgi için bkz. [kuyruklara genel bakış](queues-overview.md).
   
 ## <a name="queue-addressing-in-was"></a>WAS içinde sıra adresleme  
  WAS uygulamalarında Tekdüzen Kaynak tanımlayıcısı (URI) adresleri var. Uygulama adresleri iki bölümden oluşur: temel URI öneki ve uygulamaya özgü, göreli adres (yol). Bu iki bölüm, birlikte katıldığında bir uygulamanın dış adresini sağlar. Temel URI öneki site bağlamalarından oluşturulur ve site altındaki tüm uygulamalar (örneğin, "net. MSMQ:/localhost", "MSMQ. FormatName:/localhost" veya "net. TCP:/localhost") için kullanılır. Uygulama adresleri bundan sonra uygulamaya özel yol parçaları ("/applicationOne" gibi) alınarak oluşturulur ve bunları tam uygulama URI 'sine (örneğin, "net. MSMQ://localhost/applicationOne") ulaşmak için temel URI önekine ekler.  
@@ -43,5 +43,5 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (W
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
-- [Hizmet Uç Noktaları ve Kuyruk İşleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)
+- [Zehirli İleti İşleme](poison-message-handling.md)
+- [Hizmet Uç Noktaları ve Kuyruk İşleme](service-endpoints-and-queue-addressing.md)

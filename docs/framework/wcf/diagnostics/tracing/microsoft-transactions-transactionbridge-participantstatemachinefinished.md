@@ -2,21 +2,21 @@
 title: Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished
 ms.date: 03/30/2017
 ms.assetid: 54b677f7-03ad-40f2-9c5d-297a8ad9bf90
-ms.openlocfilehash: 7f37cb5d9ee3d2d9d56519f785388f278b3333b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0652b3b76c155431b68c5ee0dc8f83977f9845a5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997886"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594367"
 ---
 # <a name="microsofttransactionstransactionbridgeparticipantstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.ParticipantStateMachineFinished
-Katılımcı bir listesi için durum makinesinin tamamlandı durumuna girdi.  
+Katılımcı listesi için durum makinesi tamamlandı durumuna girdi.  
   
 ## <a name="description"></a>Açıklama  
- Bağımlı bir katılımcı listesi 2pc işlemeyi tamamlandığında izlenen. Liste için sonuç, kabul edilen veya iptal edildi olabilir. Herhangi bir katılımcı salt okunur hazırlama sırasında oyları, ayrıca izleneceğini.  
+ Bir alt katılımcı kaydı 2PC işlemesini tamamladığında izleniyor. Kayıt için sonuç kaydedilmiş veya durdurulmuş olabilir. Ayrıca, hazırlama sırasında herhangi bir katılımcının salt okunur olarak oylaması halinde de izlenebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

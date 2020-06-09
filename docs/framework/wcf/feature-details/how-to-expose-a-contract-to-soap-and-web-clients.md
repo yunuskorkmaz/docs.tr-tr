@@ -5,102 +5,102 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-ms.openlocfilehash: 303367c85e311ac5c07c11b849b5586354980a3c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: fa02260976c710401a05cce3d723cc0f66804c6e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636151"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593139"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma
 
-Varsayılan olarak, Windows Communication Foundation (WCF) uç noktalar yalnızca SOAP istemcilerin kullanımına sunuyor. İçinde [nasıl yapılır: Temel bir WCF Web HTTP hizmeti oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), bir uç nokta SOAP olmayan istemciler için kullanılabilir hale getirilir. Aynı anlaşmaya her iki yönde bir Web uç noktası ve bir SOAP uç noktası olarak kullanılabilir hale getirmek istediğinizde zamanlar olabilir. Bu konuda bir örnek bunun nasıl yapılacağı gösterilmektedir.
+Varsayılan olarak, Windows Communication Foundation (WCF) uç noktaları yalnızca SOAP istemcileri için kullanılabilir hale getirir. [Nasıl yapılır: temel BIR WCF Web http hizmeti oluşturma](how-to-create-a-basic-wcf-web-http-service.md)bölümünde, soap olmayan istemciler için bir uç nokta kullanılabilir hale getirilir. Aynı sözleşmeyi bir Web uç noktası ve bir SOAP uç noktası olarak her iki şekilde de kullanılabilir hale getirmek istediğiniz zamanlar olabilir. Bu konu, bunun nasıl yapılacağını gösteren bir örnek gösterir.
 
-## <a name="to-define-the-service-contract"></a>Hizmet sözleşmesini tanımlama
+## <a name="to-define-the-service-contract"></a>Hizmet sözleşmesini tanımlamak için
 
-1. İle işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesini tanımlama <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.Web.WebInvokeAttribute> ve <xref:System.ServiceModel.Web.WebGetAttribute> , aşağıdaki kodda gösterildiği gibi öznitelikleri:
+1. <xref:System.ServiceModel.ServiceContractAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> Aşağıdaki kodda gösterildiği gibi, ve öznitelikleri ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın <xref:System.ServiceModel.Web.WebGetAttribute> :
 
     [!code-csharp[htSoapWeb#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#0)]
     [!code-vb[htSoapWeb#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#0)]
 
     > [!NOTE]
-    > Varsayılan olarak <xref:System.ServiceModel.Web.WebInvokeAttribute> işlemi POST çağrısına eşler. Ancak, belirterek işlemi eşleştirmek için yöntemini belirtebilirsiniz bir "yöntemi =" parametresi. <xref:System.ServiceModel.Web.WebGetAttribute> olmayan bir "yöntemi =" parametresi ve yalnızca eşlemeler GET hizmet işlemine çağırır.
+    > Varsayılan olarak <xref:System.ServiceModel.Web.WebInvokeAttribute> , işleme yapılan çağrıları eşler. Bununla birlikte, bir "method =" parametresi belirterek, işleme eşlemek için yöntemi belirleyebilirsiniz. <xref:System.ServiceModel.Web.WebGetAttribute>"method =" parametresine sahip değildir ve yalnızca hizmet işlemine yapılan çağrıları eşler.
 
-2. Hizmet sözleşmesi, aşağıdaki kodda gösterildiği şekilde uygulayın:
+2. Aşağıdaki kodda gösterildiği gibi hizmet sözleşmesini uygulayın:
 
      [!code-csharp[htSoapWeb#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#1)]
      [!code-vb[htSoapWeb#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#1)]
 
-## <a name="to-host-the-service"></a>Ana bilgisayar hizmeti
+## <a name="to-host-the-service"></a>Hizmeti barındırmak için
 
-1. Oluşturma bir <xref:System.ServiceModel.ServiceHost> aşağıdaki kodda gösterildiği gibi nesne:
+1. <xref:System.ServiceModel.ServiceHost>Aşağıdaki kodda gösterildiği gibi bir nesne oluşturun:
 
      [!code-csharp[htSoapWeb#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#2)]
      [!code-vb[htSoapWeb#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#2)]
 
-2. Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.BasicHttpBinding> aşağıdaki kodda gösterildiği gibi SOAP uç noktası için:
+2. <xref:System.ServiceModel.Description.ServiceEndpoint> <xref:System.ServiceModel.BasicHttpBinding> SOAP uç noktası için aşağıdaki kodda gösterildiği gibi bir ile ekleyin:
 
      [!code-csharp[htSoapWeb#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#3)]
      [!code-vb[htSoapWeb#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#3)]
 
-3. Ekleme bir <xref:System.ServiceModel.Description.ServiceEndpoint> ile <xref:System.ServiceModel.WebHttpBinding> olmayan SOAP uç noktası için ve ekleme <xref:System.ServiceModel.Description.WebHttpBehavior> aşağıdaki kodda gösterildiği gibi uç:
+3. <xref:System.ServiceModel.Description.ServiceEndpoint> <xref:System.ServiceModel.WebHttpBinding> SOAP olmayan uç nokta için bir ile ekleyin ve <xref:System.ServiceModel.Description.WebHttpBehavior> aşağıdaki kodda gösterildiği gibi uç noktaya ekleyin:
 
      [!code-csharp[htSoapWeb#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#4)]
      [!code-vb[htSoapWeb#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#4)]
 
-4. Çağrı `Open()` üzerinde bir <xref:System.ServiceModel.ServiceHost> örneği, hizmet ana bilgisayarı, aşağıdaki kodda gösterildiği gibi açın:
+4. `Open()` <xref:System.ServiceModel.ServiceHost> Aşağıdaki kodda gösterildiği gibi, hizmet ana bilgisayarını açmak için bir örneği çağırın:
 
      [!code-csharp[htSoapWeb#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#5)]
      [!code-vb[htSoapWeb#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#5)]
 
-## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer'da GET eşlenen hizmet işlemlerini aramak üzere
+## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer 'da almak üzere eşlenmiş hizmet işlemlerini çağırmak için
 
-1. Internet Explorer ve tür açın "`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`" ve ENTER tuşuna basın. Hizmetin taban adresi URL içerir (`http://localhost:8000/`), ilgili uç nokta adresi (""), hizmet işlemine çağrı ("EchoWithGet") yanı sıra, bir soru işareti ve işareti tarafından ayrılmış, adlandırılan parametrelerin bir listesi ve ardından (&).
+1. Internet Explorer 'ı açın ve " `http://localhost:8000/Web/EchoWithGet?s=Hello, world!` " yazın ve ENTER tuşuna basın. URL, hizmetin temel adresini ( `http://localhost:8000/` ), uç noktanın göreli adresini (""), çağrı yapılacak hizmet işlemini ("yankı \ al") ve ardından bir ve işareti (&) ile ayrılmış adlandırılmış parametrelerin bir listesini içerir.
 
-## <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>Web uç noktasında hizmet işlemleri çağırmak için
+## <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>Koddaki Web uç noktasında hizmet işlemlerini çağırmak için
 
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.Web.WebChannelFactory%601> içinde bir `using` , aşağıdaki kodda gösterildiği gibi engelleyin.
+1. <xref:System.ServiceModel.Web.WebChannelFactory%601>Aşağıdaki kodda gösterildiği gibi bir blok içinde öğesinin bir örneğini oluşturun `using` .
 
      [!code-csharp[htSoapWeb#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#6)]
      [!code-vb[htSoapWeb#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#6)]
 
 > [!NOTE]
-> `Close()` Kanal sonunda otomatik olarak çağrılır `using` blok.
+> `Close()`, blok sonundaki kanalda otomatik olarak çağrılır `using` .
 
-1. Kanalı oluşturun ve aşağıdaki kodda gösterildiği gibi hizmetin çağırın.
+1. Aşağıdaki kodda gösterildiği gibi kanalı oluşturun ve hizmeti çağırın.
 
      [!code-csharp[htSoapWeb#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#8)]
      [!code-vb[htSoapWeb#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#8)]
 
-## <a name="to-call-service-operations-on-the-soap-endpoint"></a>SOAP uç noktasında hizmet işlemlerini aramak üzere
+## <a name="to-call-service-operations-on-the-soap-endpoint"></a>SOAP uç noktasındaki hizmet işlemlerini çağırmak için
 
-1. Bir örneğini oluşturmak <xref:System.ServiceModel.ChannelFactory> içinde bir `using` , aşağıdaki kodda gösterildiği gibi engelleyin.
+1. <xref:System.ServiceModel.ChannelFactory>Aşağıdaki kodda gösterildiği gibi bir blok içinde öğesinin bir örneğini oluşturun `using` .
 
     [!code-csharp[htSoapWeb#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#10)]
     [!code-vb[htSoapWeb#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#10)]
 
-2. Kanalı oluşturun ve aşağıdaki kodda gösterildiği gibi hizmetin çağırın.
+2. Aşağıdaki kodda gösterildiği gibi kanalı oluşturun ve hizmeti çağırın.
 
     [!code-csharp[htSoapWeb#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#11)]
     [!code-vb[htSoapWeb#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#11)]
 
-## <a name="to-close-the-service-host"></a>Hizmet ana bilgisayarı kapatmak için
+## <a name="to-close-the-service-host"></a>Hizmet konağını kapatmak için
 
-1. Aşağıdaki kodda gösterildiği gibi hizmet konağı kapatın.
+1. Aşağıdaki kodda gösterildiği gibi hizmet ana bilgisayarını kapatın.
 
     [!code-csharp[htSoapWeb#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#9)]
     [!code-vb[htSoapWeb#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#9)]
 
 ## <a name="example"></a>Örnek
 
-Bu konu için listeleme tam kod aşağıda verilmiştir:
+Aşağıda, bu konunun tam kod listesi verilmiştir:
 
 [!code-csharp[htSoapWeb#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#13)]
 [!code-vb[htSoapWeb#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#13)]
 
 ## <a name="compiling-the-code"></a>Kod derleme
 
- Adını da derlenirken System.ServiceModel.dll ve System.ServiceModel.Web.dll başvuru.
+ Service.cs derlenirken, System. ServiceModel. dll ve System. ServiceModel. Web. dll dosyasına başvurun.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -110,4 +110,4 @@ Bu konu için listeleme tam kod aşağıda verilmiştir:
 - <xref:System.ServiceModel.Web.WebServiceHost>
 - <xref:System.ServiceModel.ChannelFactory>
 - <xref:System.ServiceModel.Description.WebHttpBehavior>
-- [WCF Web HTTP Programlama Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [WCF Web HTTP Programlama Modeli](wcf-web-http-programming-model.md)

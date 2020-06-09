@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.HttpChannelMessageReceiveFailed
 ms.date: 03/30/2017
 ms.assetid: 9eb311da-fdcc-4dd3-9d85-05b3280dfdda
-ms.openlocfilehash: b848963caff706ff8a886c1e358ad6688e9611c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11b376924ee74e5d0d67da0cac59af41655dc44
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666696"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594081"
 ---
 # <a name="systemservicemodelchannelshttpchannelmessagereceivefailed"></a>System.ServiceModel.Channels.HttpChannelMessageReceiveFailed
-Bir HTTP kanalı üzerinden ileti alma başarısız oldu.  
+HTTP kanalı üzerinden bir ileti alınamadı.  
   
 ## <a name="description"></a>Açıklama  
- Bu izleme, bir uyarı veya hata yayılabilir. Her iki durumda da, uyumlu bir dinleyici için gelen HTTP isteği bulunamadı ve HTTP isteği göz ardı edilir olduğunda izleme yayınlanır. Bu, isteğin HTTP fiili herhangi bir HTTP dinleyicisi tarafından tanınmıyor ya da dinleyici yok adresinde dinlemede olduğundan isteği için hedeflenen nedeniyle gerçekleşebilir. Hizmet IIS'de barındırılıyorsa, şirket içinde barındırılan durumda bir uyarı ve hata izleme yayınlanır.  
+ Bu izleme bir uyarı veya hata olarak dağıtılabilir. Her iki durumda da, gelen HTTP isteği için uyumlu bir dinleyici bulunamadığında ve HTTP isteği atıldığı zaman, izleme yayınlanır. Bu durum, isteğin HTTP fiilinin herhangi bir HTTP dinleyicisi tarafından tanınamadığı veya isteğin hedeflediği adreste bir dinleyici dinlediği için meydana gelebilir. İzleme, şirket içinde barındırılan durumda ve hizmet IIS 'de barındırıldığında bir hata olarak bir uyarı olarak yayınlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

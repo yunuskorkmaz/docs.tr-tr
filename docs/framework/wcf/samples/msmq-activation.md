@@ -2,16 +2,16 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 805ab78908b4d1146cce94cac5357bafbb35c832
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0dbd24a612d56c0fe88066f625be2a8369b7df5b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744796"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602550"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 
-Bu örnek, Windows Işlem etkinleştirme hizmeti 'nde (WAS) bir ileti sırasından okunan uygulamaların nasıl barındırılacağını gösterir. Bu örnek `netMsmqBinding` kullanır ve [Iki yönlü iletişim](../../../../docs/framework/wcf/samples/two-way-communication.md) örneğine dayalıdır. Bu durumda hizmet, Web 'de barındırılan bir uygulamadır ve istemci, gönderilen satın alma siparişlerinin durumunu gözlemleyecek şekilde kendi kendine barındırılır ve konsola çıkış verir.
+Bu örnek, Windows Işlem etkinleştirme hizmeti 'nde (WAS) bir ileti sırasından okunan uygulamaların nasıl barındırılacağını gösterir. Bu örnek, `netMsmqBinding` ve [Iki yönlü iletişim](two-way-communication.md) örneğine göre ' nı kullanır. Bu durumda hizmet, Web 'de barındırılan bir uygulamadır ve istemci, gönderilen satın alma siparişlerinin durumunu gözlemleyecek şekilde kendi kendine barındırılır ve konsola çıkış verir.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -19,11 +19,11 @@ Bu örnek, Windows Işlem etkinleştirme hizmeti 'nde (WAS) bir ileti sırasınd
 > [!NOTE]
 > Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
-> InstallDrive > \<: \ WF_WCF_Samples
+> \<InstallDrive>: \ WF_WCF_Samples
 >
-> Bu dizin yoksa, tüm WCF ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm WCF ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
-> InstallDrive > \<: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive>: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
 Windows Server 2008 için yeni işlem etkinleştirme mekanizması olan Windows Işlem etkinleştirme hizmeti (WAS), daha önce yalnızca HTTP tabanlı uygulamalar tarafından HTTP tabanlı olmayan protokolleri kullanan uygulamalara sunulan IIS benzeri özellikler sağlar. Windows Communication Foundation (WCF), TCP, adlandırılmış kanallar ve MSMQ gibi WCF tarafından desteklenen HTTP olmayan protokoller üzerinden alınan etkinleştirme isteklerini iletmek için dinleyici bağdaştırıcısı arabirimini kullanır. HTTP olmayan protokoller üzerinden istek alma işlevselliği, SMSvcHost. exe ' de çalışan yönetilen Windows Hizmetleri tarafından barındırılır.
 
@@ -31,7 +31,7 @@ Net. MSMQ dinleyicisi bağdaştırıcısı hizmeti (Netmsmqetkinleştirici) kuyr
 
 İstemci, bir işlemin kapsamı içinde hizmete satın alma siparişleri gönderir. Hizmet, siparişleri bir işlem içinde alır ve işler. Bu hizmet daha sonra istemciyi siparişin durumuyla geri çağırır. İki yönlü iletişimi kolaylaştırmak için, istemci ve hizmetin her ikisi de, satın alma siparişlerinin ve sipariş durumunun kuyruğa alınması için kuyrukları kullanır.
 
-Hizmet sözleşmesi `IOrderProcessor`, sıraya alma ile çalışan tek yönlü hizmet işlemlerini tanımlar. Hizmet işlemi, istemciye sıra durumları göndermek için yanıt uç noktasını kullanır. Yanıt uç noktasının adresi, sipariş durumunu istemciye geri göndermek için kullanılan kuyruğun URI 'sidir. Sipariş işleme uygulaması bu sözleşmeyi uygular.
+Hizmet sözleşmesi, `IOrderProcessor` sıraya alma ile çalışan tek yönlü hizmet işlemlerini tanımlar. Hizmet işlemi, istemciye sıra durumları göndermek için yanıt uç noktasını kullanır. Yanıt uç noktasının adresi, sipariş durumunu istemciye geri göndermek için kullanılan kuyruğun URI 'sidir. Sipariş işleme uygulaması bu sözleşmeyi uygular.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -54,7 +54,7 @@ public interface IOrderStatus
 }
 ```
 
-Hizmet işlemi gönderilen satın alma siparişini işler. <xref:System.ServiceModel.OperationBehaviorAttribute>, sıradaki iletiyi almak ve hizmet işleminin tamamlanmasından sonra işlemin otomatik olarak tamamlanması için kullanılan işlemde otomatik kayıt belirtmek üzere hizmet işlemine uygulanır. `Orders` sınıfı sıra işleme işlevselliğini Kapsüller. Bu durumda, satın alma sırasını bir sözlüğe ekler. Hizmet işleminin kayıtlı olduğu işlem, `Orders` sınıfındaki işlemler için kullanılabilir.
+Hizmet işlemi gönderilen satın alma siparişini işler. , <xref:System.ServiceModel.OperationBehaviorAttribute> Sıradaki iletiyi almak ve hizmet işleminin tamamlanmasından sonra işlemin otomatik olarak tamamlanması için kullanılan işlemde otomatik kayıt belirtmek üzere hizmet işlemine uygulanır. `Orders`Sınıfı sipariş işleme işlevselliğini Kapsüller. Bu durumda, satın alma sırasını bir sözlüğe ekler. İçindeki hizmet işleminin kayıtlı olduğu işlem, sınıftaki işlemler için kullanılabilir `Orders` .
 
 Hizmet işlemi, gönderilen satın alma siparişinin işlenmesine ek olarak, siparişin durumu hakkında istemciye geri yanıt verir.
 
@@ -90,7 +90,7 @@ MSMQ kuyruğu adı, yapılandırma dosyasının bir appSettings bölümünde bel
 
 WAS ' de hizmet kodunu barındırmak için sınıf adına sahip bir. svc dosyası kullanılır.
 
-Service. svc dosyası, `OrderProcessorService`oluşturmak için bir yönerge içerir.
+Service. svc dosyasının kendisi oluşturmak için bir yönerge içerir `OrderProcessorService` .
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
@@ -98,7 +98,7 @@ Service. svc dosyası, System. Transactions. dll ' nin yüklü olduğundan emin 
 
 `<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
-İstemci bir işlem kapsamı oluşturur. Hizmet ile iletişim, işlemin kapsamı içinde gerçekleşirken, tüm iletilerin başarılı veya başarısız olduğu atomik bir birim olarak işlenmesine neden olur. İşlem, işlem kapsamındaki `Complete` çağırarak işlenir.
+İstemci bir işlem kapsamı oluşturur. Hizmet ile iletişim, işlemin kapsamı içinde gerçekleşirken, tüm iletilerin başarılı veya başarısız olduğu atomik bir birim olarak işlenmesine neden olur. İşlem, işlem kapsamında çağırarak yürütülür `Complete` .
 
 ```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
@@ -153,7 +153,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     }
 ```
 
-İstemci kodu, hizmetten sipariş durumunu almak için `IOrderStatus` sözleşmesini uygular. Bu durumda, sipariş durumunu yazdırır.
+İstemci kodu, `IOrderStatus` hizmetten sipariş durumunu almak için sözleşmeyi uygular. Bu durumda, sipariş durumunu yazdırır.
 
 ```csharp
 [ServiceBehavior]
@@ -214,7 +214,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 1. WAS etkinleştirmesi için gerekli olduğundan, IIS 7,0 ' nin yüklü olduğundan emin olun.
 
-2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun. Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun. Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:
 
     1. **Başlat** menüsünde, **Denetim Masası**' nı seçin.
 
@@ -226,13 +226,13 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     5. **Microsoft .NET Framework 3,0** düğümünü genişletin ve **Windows Communication Foundation HTTP olmayan etkinleştirme** özelliğini denetleyin.
 
-3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
 4. Bir komut penceresinden Client. exe ' yi yürüterek istemciyi çalıştırın. Bu, kuyruğu oluşturur ve ona bir ileti gönderir. İletiyi okurken hizmetin sonucunu görmek için istemciyi çalışır durumda bırakın
 
 5. MSMQ etkinleştirme hizmeti varsayılan olarak ağ hizmeti olarak çalışır. Bu nedenle, uygulamayı etkinleştirmek için kullanılan sıranın ağ hizmeti için alma ve göz atma izinlerine sahip olması gerekir. Bu, Message Queuing MMC kullanılarak eklenebilir:
 
-    1. **Başlat** menüsünde **Çalıştır**' a tıklayın ve ardından `Compmgmt.msc` yazın ve ENTER tuşuna basın.
+    1. **Başlat** menüsünde **Çalıştır**' a tıklayın `Compmgmt.msc` ve yazın ve ENTER tuşuna basın.
 
     2. **Hizmetler ve uygulamalar**altında **Message Queuing**' ı genişletin.
 
@@ -267,11 +267,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         > Bu komut, tek satırlık bir metin.
 
-        Bu komut, `http://localhost/servicemodelsamples` ve `net.msmq://localhost/servicemodelsamples`kullanılarak/servicemodelsamples uygulamasına erişilmesini sağlar.
+        Bu komut, ve kullanarak/servicemodelsamples uygulamasına erişilmesini sağlar `http://localhost/servicemodelsamples` `net.msmq://localhost/servicemodelsamples` .
 
-7. Daha önce yapmadıysanız, MSMQ etkinleştirme hizmeti 'nin etkinleştirildiğinden emin olun. **Başlat** menüsünde **Çalıştır**' a tıklayın ve `Services.msc`yazın. **Net. MSMQ dinleyicisi bağdaştırıcısı**için Hizmetler listesinde arama yapın. Sağ tıklayın ve **Özellikler**’i seçin. **Başlangıç türünü** **Otomatik**olarak ayarlayın, **Uygula** ' ya tıklayın ve **Başlat** düğmesine tıklayın. Bu adım yalnızca, net. MSMQ dinleyicisi bağdaştırıcısı hizmetinin ilk kullanımından önce bir kez yapılmalıdır.
+7. Daha önce yapmadıysanız, MSMQ etkinleştirme hizmeti 'nin etkinleştirildiğinden emin olun. **Başlat** menüsünde **Çalıştır**' a tıklayın ve yazın `Services.msc` . **Net. MSMQ dinleyicisi bağdaştırıcısı**için Hizmetler listesinde arama yapın. Sağ tıklayın ve **Özellikler**' i seçin. **Başlangıç türünü** **Otomatik**olarak ayarlayın, **Uygula** ' ya tıklayın ve **Başlat** düğmesine tıklayın. Bu adım yalnızca, net. MSMQ dinleyicisi bağdaştırıcısı hizmetinin ilk kullanımından önce bir kez yapılmalıdır.
 
-8. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin. Ayrıca, satın alma siparişi gönderen istemcideki kodu, satın alma siparişi gönderilirken kuyruğun URI 'sindeki bilgisayar adını yansıtacak şekilde değiştirin. Aşağıdaki kodu kullanın:
+8. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin. Ayrıca, satın alma siparişi gönderen istemcideki kodu, satın alma siparişi gönderilirken kuyruğun URI 'sindeki bilgisayar adını yansıtacak şekilde değiştirin. Aşağıdaki kodu kullanın:
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -302,7 +302,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     > [!WARNING]
     > Toplu iş dosyasını çalıştırmak, .NET Framework sürüm 2,0 kullanılarak çalıştırılacak DefaultAppPool öğesini sıfırlar.
 
-`netMsmqBinding` bağlama taşıması ile varsayılan olarak güvenlik etkindir. İki özellik, `MsmqAuthenticationMode` ve `MsmqProtectionLevel`birlikte taşıma güvenliği türünü belirleme. Varsayılan olarak, kimlik doğrulama modu `Windows` olarak ayarlanır ve koruma düzeyi `Sign`olarak ayarlanır. Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ 'nun bir etki alanının parçası olması gerekir. Bu örneği bir etki alanının parçası olmayan bir bilgisayarda çalıştırırsanız, şu hata alınır: "kullanıcının iç Message Queuing sertifikası yok".
+Varsayılan olarak `netMsmqBinding` , bağlama aktarımında güvenlik etkindir. İki özellik `MsmqAuthenticationMode` ve `MsmqProtectionLevel` , birlikte taşıma güvenliği türü belirlenir. Varsayılan olarak, kimlik doğrulama modu olarak ayarlanır `Windows` ve koruma düzeyi olarak ayarlanır `Sign` . Kimlik doğrulama ve imzalama özelliğini sağlamak için MSMQ 'nun bir etki alanının parçası olması gerekir. Bu örneği bir etki alanının parçası olmayan bir bilgisayarda çalıştırırsanız, şu hata alınır: "kullanıcının iç Message Queuing sertifikası yok".
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Örneği çalışma grubuna katılmış bir bilgisayarda çalıştırmak için
 
@@ -321,7 +321,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 2. Örneği çalıştırmadan önce hem sunucu hem de istemci üzerinde yapılandırmayı değiştirin.
 
     > [!NOTE]
-    > `security mode` `None` ayarlanması `MsmqAuthenticationMode`, `MsmqProtectionLevel` ve `Message` güvenlik `None`ayarı ile eşdeğerdir.
+    > Ayarı `security mode` `None` `MsmqAuthenticationMode` , ayarına `MsmqProtectionLevel` ve güvenliğine eşdeğerdir `Message` `None` .
 
 3. Bir çalışma grubuna katılmış bir bilgisayarda etkinleştirmeyi etkinleştirmek için, hem etkinleştirme hizmeti hem de çalışan işleminin belirli bir kullanıcı hesabıyla çalıştırılması gerekir (her ikisi için de aynı olmalıdır) ve kuyruğun belirli kullanıcı hesabı için ACL 'Leri olmalıdır.
 
@@ -329,7 +329,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     1. Inetmgr. exe ' yi çalıştırın.
 
-    2. **Uygulama havuzları**altında, **AppPool** öğesine sağ tıklayın (genellikle **DefaultAppPool**) ve **uygulama havuzu varsayılanlarını ayarla..** . seçeneğini belirleyin.
+    2. **Uygulama havuzları**altında, **AppPool** öğesine sağ tıklayın (genellikle **DefaultAppPool**) ve **uygulama havuzu varsayılanlarını ayarla..**. seçeneğini belirleyin.
 
     3. Kimlik özelliklerini belirli kullanıcı hesabını kullanacak şekilde değiştirin.
 

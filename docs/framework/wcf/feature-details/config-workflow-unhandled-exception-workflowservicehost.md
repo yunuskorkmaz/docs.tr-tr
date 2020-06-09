@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-ms.openlocfilehash: 69c6b1ce11d735181390a0c67df2f8dbea4f906c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3881d1af21dcc0c211c6738162360e522648d949
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185318"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593600"
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma
-Bu <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> davranış, 'de barındırılan bir iş akışı içinde işlenmemiş bir özel <xref:System.ServiceModel.Activities.WorkflowServiceHost>durum oluşursa yapılacak eylemi belirtmenizi sağlayan bir davranıştır. Bu konu, yapılandırma dosyasında bu davranışın nasıl yapılandırılabildiğini gösterir.  
+, <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> İçinde barındırılan bir iş akışında işlenmeyen bir özel durum oluşursa gerçekleştirilecek eylemi belirtmenizi sağlayan bir davranıştır <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Bu konu, bir yapılandırma dosyasında bu davranışın nasıl yapılandırılacağını gösterir.  
   
-### <a name="to-configure-workflowunhandledexceptionbehavior"></a>İş Akışını yapılandırmak içinUnhandledExceptionBehavior  
+### <a name="to-configure-workflowunhandledexceptionbehavior"></a>WorkflowUnhandledExceptionBehavior 'ı yapılandırmak için  
   
-1. <`serviceBehaviors`> `workflowUnhandledException` öğesi içindeki `behavior` <> öğesine, işlenmemiş `action` bir özel durum aşağıdaki örnekte gösterildiği gibi meydana geldiğinde yapılacak eylemi belirtmek için özniteliği kullanarak <bir> öğesi ekleyin.  
+1. `workflowUnhandledException` `behavior` `serviceBehaviors` `action` Aşağıdaki örnekte gösterildiği gibi işlenmeyen bir özel durum oluştuğunda gerçekleştirilecek eylemi belirtmek için özniteliğini kullanarak bir <> öğesi içindeki bir <> öğesine bir <> öğesi ekleyin.  
   
     ```xml  
     <behaviors>  
@@ -27,31 +27,31 @@ Bu <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBe
     ```  
   
     > [!NOTE]
-    > Önceki yapılandırma örneği basitleştirilmiş yapılandırma kullanıyor. Daha fazla bilgi için Bkz. [Basitleştirilmiş Yapılandırma.](../../../../docs/framework/wcf/simplified-configuration.md)  
+    > Önceki yapılandırma örneği Basitleştirilmiş yapılandırma kullanıyor. Daha fazla bilgi için bkz. [Basitleştirilmiş yapılandırma](../simplified-configuration.md).  
   
-     Bu davranış, aşağıdaki örnekte gösterildiği gibi kod olarak yapılandırılabilir.  
+     Bu davranış, aşağıdaki örnekte gösterildiği gibi, kodda yapılandırılabilir.  
   
     ```csharp  
     host.Description.Behaviors.Add(new WorkflowUnhandledExceptionBehavior { Action = WorkflowUnhandledExceptionAction.AbandonAndSuspend });  
     ```  
   
-     <`action` `workflowUnhandledException`> öğesinin özniteliği aşağıdaki değerlerden birine ayarlanabilir:  
+     `action`<`workflowUnhandledException`> öğesinin özniteliği aşağıdaki değerlerden birine ayarlanabilir:  
   
-     **Terk**  
+     **iptal**  
      Kalıcı örnek durumuna dokunmadan bellekteki örneği iptal eder (diğer bir deyişle, son kalıcı noktaya geri dön).  
   
-     **abandonAndSuspend**  
-     Bellekteki örneği iptal eder ve askıya alınması için kalıcı örneği güncelleştirir.  
+     **Terk Andsusbeklet**  
+     Bellekte örneği iptal eder ve kalıcı örneği askıya alınmış olarak güncelleştirir.  
   
      **İptal**  
-     Örnek için iptal işleyicilerini çağırır ve ardından örnek mağazadan kaldırabilecek şekilde bellekteki örneği tamamlar  
+     Örnek için iptal işleyicileri çağırır ve sonra örnek deposundan da kaldırabilen örneği bellekte tamamlar  
   
-     **Sonlandır**  
-     Bellekteki örneği tamamlar ve örnek deposundan kaldırır.  
+     **sonlandırmayı**  
+     Örneği bellekte tamamlar ve örnek deposundan kaldırır.  
   
-     Hakkında <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>daha fazla bilgi için Bkz. [İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği.](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
+     Hakkında daha fazla bilgi için <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> bkz. [Iş akışı hizmeti konak genişletilebilirliği](workflow-service-host-extensibility.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
-- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [İş Akışı Hizmeti Ana Bilgisayar Genişletilebilirliği](workflow-service-host-extensibility.md)
+- [İş Akışı Hizmetleri](workflow-services.md)

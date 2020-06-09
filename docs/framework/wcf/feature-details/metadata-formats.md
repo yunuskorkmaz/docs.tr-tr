@@ -2,12 +2,12 @@
 title: Meta Veri Biçimleri
 ms.date: 03/30/2017
 ms.assetid: baad1e68-28fc-4a6a-8a43-75e47e7fa871
-ms.openlocfilehash: e7208a8d5fd6d100ac2a2c4fb1369a571c63e7fc
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: a74a57843beaba09b969678a34cad3ad8bed7050
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212179"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598846"
 ---
 # <a name="metadata-formats"></a>Meta Veri Biçimleri
 Windows Communication Foundation (WCF), aşağıdaki tablodaki meta veri biçimlerini destekler.  
@@ -25,5 +25,5 @@ Windows Communication Foundation (WCF), aşağıdaki tablodaki meta veri biçiml
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
-- [WSDL ve İlke](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)
+- [Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)
+- [WSDL ve İlke](wsdl-and-policy.md)

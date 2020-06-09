@@ -6,37 +6,37 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed0f018e0151e68afeb9a4747bf8a260faa184b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000772"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601042"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF'de Güvenlik Değerlendirmeleri
-Bu bölümdeki konularda, Windows Communication Foundation (WCF) bir uygulama tasarlanırken dikkate alınması gereken çeşitli güvenlikle ilgili öğeleri listelenir.  
+Bu bölümdeki konularda, Windows Communication Foundation (WCF) uygulaması tasarlarken göz önünde bulundurmanız gereken güvenlikle ilgili çeşitli öğeler listelenir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Bilgilerin Açığa Çıkması](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
- Çeşitli yollarla bilgi ifşa veya Saldırıya uğrayan dikkat ve bunu azaltmak nasıl ele alır.  
+ [Bilgileri Açıklama](information-disclosure.md)  
+ Bilgilerin açıklanmasında veya saldırıya neden olabilecek çeşitli yollar ve bunun nasıl azaltılacağını ele alınmaktadır.  
   
- [Ayrıcalıkların Yükseltilmesi](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
- Başlangıçta verilen ötesinde bir saldırgan yetkilendirme izni ve bunu azaltmak nasıl etkilerini açıklar.  
+ [Ayrıcalıkların Yükseltilmesi](elevation-of-privilege.md)  
+ Başlangıçta verilen ve bu sorunu hafifletmenin ötesinde bir saldırgan yetkilendirme izinleri verme etkilerini açıklar.  
   
- [Hizmet Reddi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
- Ne olacağını açıklar bir sistemde iletilerin uygun şekilde işleyemedi olduğunda ve nasıl önlenebileceğini.  
+ [Hizmet Reddi](denial-of-service.md)  
+ Bir sistem iletileri uygun şekilde işleyemezse ne olduğunu ve bunun nasıl azaltılacağını açıklar.  
   
- [İzinsiz Değişiklik](../../../../docs/framework/wcf/feature-details/tampering.md)  
- İletileri veya iletileri ve nasıl önlenebileceğini teslimini değiştirmeyi anlatır.  
+ [İzinsiz Değişiklik](tampering.md)  
+ İletilerin değiştirilmesini veya iletilerin teslimini ve bunun nasıl azaltılacağını ele alır.  
   
- [Yeniden Yürütme Saldırıları](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
- Bir saldırganın kopyalarken arasında iki ileti akışı taraflarla ve bir veya daha fazla taraflar akışa başlayarak yeniden oynatılır ne olur ve bu durumu iyileştirmek nasıl ele alır.  
+ [Yeniden Yürütme Saldırıları](replay-attacks.md)  
+ Bir saldırgan bir ileti akışını iki taraf arasında kopyaladığında ne olduğunu ve akışın bir veya daha fazla tarafın akışını yeniden oynadığını ve bunun nasıl azaltılacağını açıklar.  
   
- [Güvenli Oturumlar için Güvenlikle İlgili Önemli Noktalar](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)  
- Güvenli oturumlar uygularken güvenliğini etkileyen aşağıdaki öğeleri açıklanır.  
+ [Güvenli Oturumlar için Güvenlikli İlgili Önemli Noktalar](security-considerations-for-secure-sessions.md)  
+ Güvenli oturumları uygularken güvenliği etkileyen aşağıdaki öğeleri açıklar.  
   
- [Desteklenmeyen Senaryolar](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)  
- Belirli bir güvenlik durumuyla desteklemez ve önlenmiş veya kabul çeşitli senaryolar listelenmiştir.  
+ [Desteklenmeyen Senaryolar](unsupported-scenarios.md)  
+ Belirli güvenlik yönlerini desteklemeyen çeşitli senaryolar listeler ve kaçınılması veya dikkate alınmamalıdır.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.IdentityModel.Tokens>  
@@ -48,8 +48,8 @@ Bu bölümdeki konularda, Windows Communication Foundation (WCF) bir uygulama ta
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Güvenlik Kılavuzu ve En İyi Uygulamalar](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Güvenlik Kılavuzu ve En İyi Uygulamalar](security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik](../../../../docs/framework/wcf/feature-details/security.md)
+- [Güvenlik](security.md)

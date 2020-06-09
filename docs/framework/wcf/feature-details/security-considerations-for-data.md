@@ -5,259 +5,259 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591524"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601068"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 
-Windows Communication Foundation (WCF) verilerle ilgilenirken, bir dizi tehdit kategorileri dikkate almanız gerekir. Veri işleme ile ilgili en önemli tehdit sınıfları aşağıdaki tabloda listelenmektedir. WCF bu tehditleri azaltmak için araçlar sağlar.
+Windows Communication Foundation (WCF) içindeki verilerle ilgilenirken, bir dizi tehdit kategorisini göz önünde bulundurmanız gerekir. Aşağıdaki tabloda, veri işlemeyle ilgili en önemli tehdit sınıfları listelenmektedir. WCF, bu tehditleri hafifletmek için araçlar sağlar.
 
-Güvenilir olmayan verileri alırken, hizmet reddi, verileri uzun hesaplamalar neden olarak orantısız miktarda bellek, iş parçacıkları, kullanılabilir bağlantılar veya işlemci döngülerinin gibi çeşitli kaynaklara erişim için alma tarafında neden olabilir. Bir sunucuya karşı bir hizmet reddi saldırısı kilitlenme ve yasal, diğer istemcilerinden gelen iletileri işleyemez neden olabilir.
+Hizmet reddi güvenilir olmayan verileri alırken, veriler, alıcı tarafın bellek, iş parçacıkları, kullanılabilir bağlantılar veya işlemci döngüleri gibi uzun hesaplamalar oluşmasına neden olacak şekilde orantısız bir miktar kaynağa erişmesini sağlayabilir. Bir sunucuya yönelik bir hizmet reddi saldırısı, çökmesine ve diğer, meşru istemcilerden gelen iletileri işleyememesine neden olabilir.
 
-Gelen kodu çalıştırmak için alma tarafında veri neden güvenilmeyen kötü amaçlı kod yürütme, istediniz değil.
+Kötü amaçlı kod yürütme gelen güvenilmeyen veriler, alıcı tarafın kendisine ait olmadığı kodu çalıştırmasına neden olur.
 
-Bilgilerin açığa çıkması uzak saldırgan, amaçlayan daha fazla bilgi ifşa şekilde kendi isteklerini yanıtlamak için alıcı tarafın zorlar.
+Bilgilerin açıklanması uzak saldırgan, alıcı tarafın taleplerine göre daha fazla bilgi açığa çıkarmasına benzer şekilde isteklerine yanıt vermesini zorlamasına olanak sağlar.
 
-## <a name="user-provided-code-and-code-access-security"></a>Kullanıcı tarafından sağlanan kodu ve kod erişimi güvenliği
+## <a name="user-provided-code-and-code-access-security"></a>Kullanıcı tarafından sağlanmış kod ve kod erişim güvenliği
 
-Bir Windows Communication Foundation (WCF) altyapı basamak sayısı, kullanıcı tarafından sağlanan kodu çalıştırın. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> serileştirme motoruna kullanıcı tarafından sağlanan özellik çağırıp `set` erişimcileri ve `get` erişimcileri. WCF kanalı altyapı da kullanıcı tarafından sağlanan türetilen sınıflara çağırabilir <xref:System.ServiceModel.Channels.Message> sınıfı.
+Kullanıcı tarafından temin edilen Windows Communication Foundation (WCF) altyapı çalıştırma kodu içindeki çeşitli konumlar. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> serileştirme altyapısı Kullanıcı tarafından belirtilen özellik `set` erişimcileri ve `get` erişimcileri çağırabilir. WCF kanal altyapısı, sınıfının Kullanıcı tarafından sağlanmış türetilmiş sınıflarına da çağrı gösterebilir <xref:System.ServiceModel.Channels.Message> .
 
-Hiçbir güvenlik açıklarını bulunduğundan emin olmak için bir kod yazar sorumluluğundadır. Örneğin, oluşturursanız, bir veri anlaşması türü Tamsayı türünde ve içinde bir veri üyesi özelliği ile `set` erişimci uygulama özellik değerine göre bir dizi ayırmak, bir kötü amaçlı, hizmet reddi saldırısı olasılığını kullanıma sunma ileti, bu veri üyesi için son derece büyük bir değer içeriyor. Genel olarak, herhangi bir ayırma göre gelen verileri veya kullanıcı tarafından sağlanan kodu işleme (özellikle uzun işleme küçük bir gelen veri miktarına göre neden olabilir) uzun kaçının. Kullanıcı tarafından sağlanan kod güvenlik analizi gerçekleştirirken, tüm hata koşulları (burada özel durumlar diğer bir deyişle, tüm kod dallarını) de dikkate alınması gereken emin olun.
+Bu, herhangi bir güvenlik açığının mevcut olmadığından emin olmak için kod yazarının sorumluluğundadır. Örneğin, tamsayı türünde bir veri üyesi özelliği olan bir veri sözleşmesi türü oluşturursanız ve `set` erişimci uygulamasında özellik değerini temel alan bir dizi ayırdıysanız, kötü amaçlı bir ileti bu veri üyesine yönelik son derece büyük bir değer içeriyorsa hizmet reddi saldırısı olasılığını açığa çıkarır. Genel olarak, gelen verileri temel alan veya Kullanıcı tarafından belirtilen koddaki uzun işleme dayalı herhangi bir ayırmaktan kaçının (özellikle uzun işleme, daha az sayıda gelen veri olabilir). Kullanıcı tarafından sağlanmış kodun güvenlik analizini gerçekleştirirken, tüm hata durumlarını (yani, özel durumların oluşturulduğu tüm kod dallarını) göz önünde bulundurduğunuzdan emin olun.
 
-Son kullanıcı tarafından sağlanan kod örneği, hizmet uygulamanız için her bir işlem içinde kodudur. Hizmet uygulamanızın güvenlik sizin sorumluluğunuzdur. Yanlışlıkla hizmet reddi güvenlik açıklarına neden olabilir, güvenli olmayan işlem uygulamaları oluşturmak kolay bir işlemdir. Örneğin, o dizeyi bir dize alır ve müşterilerin listesini veritabanından adını döndürür. bir işlem başlatır. Büyük bir veritabanı ile çalışıyorsanız ve yalnızca tek bir harftir geçirilen bir dize ise, kodunuzun tüm hizmetin başarısız olmasına neden olan tüm kullanılabilir belleği daha büyük bir ileti oluşturma girişiminde bulunabilir. (Bir <xref:System.OutOfMemoryException> .NET Framework'teki kurtarılabilir değil ve her zaman, uygulamanızın sonlandırılmasıyla sonuçlanır.)
+Kullanıcı tarafından sağlanmış kodun en son örneği, her işlem için hizmet uygulamanızın içindeki koddur. Hizmet uygulamanızın güvenliği sizin sorumluluğunuzdadır. Yanlışlıkla hizmet reddi açıklarına neden olabilecek güvenli olmayan bir işlem uygulamaları oluşturmak kolaydır. Örneğin, bir dize alan ve adı bu dizeyle başlayan bir veritabanındaki müşterilerin listesini döndüren bir işlem. Büyük bir veritabanıyla çalışıyorsanız ve geçirilmekte olan dize yalnızca tek bir harfle fazlaysa, kodunuz tüm kullanılabilir bellekten daha büyük bir ileti oluşturmayı deneyebilir ve tüm hizmetin başarısız olmasına neden olabilir. ( <xref:System.OutOfMemoryException> .NET Framework bir kurtarılabilir değildir ve her zaman uygulamanızın sonlandırmasına neden olur.)
 
-Kötü amaçlı bir kodun için çeşitli genişletilebilirlik noktaları takılı emin olmanız gerekir. Bu kısmen güvenilen derlemelerden türleriyle ilgili ya da kısmen güvenilen kod tarafından kullanılabilir bileşenleri oluşturma kısmi güven altında çalışırken özellikle geçerlidir. Daha fazla bilgi için "Kısmi güven tehditleri" bir sonraki bölüme bakın.
+Çeşitli genişletilebilirlik noktalarına hiçbir kötü amaçlı kod takılı olmadığından emin olmanız gerekir. Bu durum özellikle kısmi güven altında çalışırken, kısmen güvenilen derlemelerin türleriyle ilgilenirken veya kısmen güvenilen kod tarafından kullanılabilir bileşenleri oluştururken ilgilidir. Daha fazla bilgi için sonraki bölümde "kısmi güven tehditleri" bölümüne bakın.
 
-Kısmi güvende çalışan, veri sözleşme seri hale getirme altyapısı veri sözleşme programlama modelinin - Örneğin, özel veri üyeleri yalnızca sınırlı bir alt destekler veya türleri kullanarak unutmayın <xref:System.SerializableAttribute> öznitelik desteklenmez. Daha fazla bilgi için [kısmi güven](../../../../docs/framework/wcf/feature-details/partial-trust.md).
+Kısmi güvende çalışırken, veri sözleşmesi serileştirme altyapısının yalnızca veri sözleşmesi programlama modelinin sınırlı bir alt kümesini desteklediğini unutmayın; Örneğin, özel veri üyeleri veya özniteliğini kullanan türler <xref:System.SerializableAttribute> desteklenmez. Daha fazla bilgi için bkz. [kısmi güven](partial-trust.md).
 
-## <a name="avoiding-unintentional-information-disclosure"></a>Yanlışlıkla bilgilerin açığa çıkması kaçınma
+## <a name="avoiding-unintentional-information-disclosure"></a>Yanlışlıkla bilginin açıklanmasını önleme
 
-Güvenlikten ödün Serializable türler tasarlarken, bilgi ifşası olası bir konudur.
+Güvenliği göz önünde bulundurularak serileştirilebilir türler tasarlarken, bilgilerin açıklanması olası bir konudur.
 
 Aşağıdaki noktaları göz önünde bulundurun:
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> Türün veya derlemenin serileştirme sırasında dışında özel ve iç verilerin açığa programlama modeli sağlar. Ayrıca, bir tür şeklini şema dışarı aktarma sırasında sunulabilir. Türün seri hale getirme projeksiyon anladığınızdan emin olun. Kullanıma sunulan herhangi bir şey istemiyorsanız, seri hale getirme devre dışı bırak (örneğin, uygulanmıyor tarafından <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği bir veri anlaşması söz konusu olduğunda).
+- <xref:System.Runtime.Serialization.DataContractSerializer>Programlama modeli, serileştirme sırasında tür veya derleme dışındaki özel ve iç verilerin açığa çıkmasına izin verir. Ek olarak, bir türün şekli, şema dışarı aktarma işlemi sırasında açığa çıkabilir. Türün serileştirme projeksiyonunu anladığınızdan emin olun. Ortaya çıkmayı istemiyorsanız, (örneğin, <xref:System.Runtime.Serialization.DataMemberAttribute> bir veri sözleşmesi durumunda özniteliği uygulamadan) serileştirilmesi devre dışı bırakın.
 
-- Aynı türde kullanımda seri hale getirici bağlı olarak birden fazla seri hale getirme projeksiyonlar olabileceğini unutmayın. Aynı türü ile kullanıldığında veri kümesi getirebilir <xref:System.Runtime.Serialization.DataContractSerializer> ve başka bir dizi ile kullanıldığında veri <xref:System.Xml.Serialization.XmlSerializer>. Yanlışlıkla yanlış seri hale getirici kullanarak, bilgi açığa çıkmasına neden olabilir.
+- Aynı türde birden çok serileştirme projeksiyonuna sahip olabileceğini ve kullanımda olan serileştiriciye bağlı olduğunu unutmayın. Aynı tür, ile <xref:System.Runtime.Serialization.DataContractSerializer> birlikte kullanıldığında ve başka bir veri kümesiyle birlikte kullanıldığında bir veri kümesini açığa çıkabilir <xref:System.Xml.Serialization.XmlSerializer> . Yanlışlıkla yanlış serileştirici kullanılması bilgilerin açığa çıkmasına neden olabilir.
 
-- Kullanarak <xref:System.Xml.Serialization.XmlSerializer> içinde eski uzak yordam çağrısı (RPC) / kodlanmış modu alıcı tarafına Gönderen tarafında Nesne grafiğini şekli yanlışlıkla açığa.
+- <xref:System.Xml.Serialization.XmlSerializer>Eski uzak yordam çağrısı (RPC)/Encoded modunun kullanımı, gönderme tarafındaki nesne grafiğinin şeklini istenmeden alma tarafına gösterebilir.
 
-## <a name="preventing-denial-of-service-attacks"></a>Hizmet reddi saldırılarını önleme
+## <a name="preventing-denial-of-service-attacks"></a>Hizmet reddi saldırılarını engelleme
 
 ### <a name="quotas"></a>Kotalar
 
-Önemli miktarda bellek ayırmak için alma tarafında neden olası bir hizmet reddi saldırısını olur. Bu bölümde büyük iletilerden kaynaklanan bellek tüketimi sorunlar yoğunlaşır olsa da, diğer saldırıları ortaya çıkabilir. Örneğin, ileti işleme süresi orantısız miktarda kullanabilir.
+Alıcı tarafın önemli miktarda bellek ayırmasına neden olma olasılığı, olası bir hizmet reddi saldırıdır. Bu bölüm, büyük iletilerden kaynaklanan bellek tüketimi sorunlarını ele alırken diğer saldırılar meydana gelebilir. Örneğin, iletiler bir orantısız miktarı işlem süresi kullanıyor olabilir.
 
-Hizmet reddi saldırılarını kullanarak kotalar genellikle azalır. Bir sınır aşıldığında, bir <xref:System.ServiceModel.QuotaExceededException> özel durumu normal olarak oluşturulur. Kotası olmadan, sonuçta kötü amaçlı bir ileti erişilmek üzere tüm kullanılabilir bellek neden bir <xref:System.OutOfMemoryException> özel durum ya da erişilebilmesi için kullanılabilir tüm yığınları içinde elde edilen bir <xref:System.StackOverflowException>.
+Hizmet reddi saldırıları genellikle kotalar kullanılarak azaltılmıştır. Bir kota aşıldığında, <xref:System.ServiceModel.QuotaExceededException> normalde bir özel durum oluşturulur. Kota olmadan kötü amaçlı bir ileti, kullanılabilir tüm belleğe erişilmesine, bir <xref:System.OutOfMemoryException> özel duruma veya tüm kullanılabilir yığınlara erişilmesine neden olabilir ve buna yol açar <xref:System.StackOverflowException> .
 
-Kota aşıldı senaryo kurtarılamaz.; çalışan bir hizmette, aldıysanız, o anda işlenmekte olan ileti atılır ve hizmet çalışmaya devam eder ve daha fazla iletileri işler. Bellek yetersiz ve yığın taşması senaryoları, ancak herhangi bir .NET Framework kurtarılabilir değildir; Bu tür özel durumların karşılaşırsa, hizmet sonlandırır.
+Kota aşıldı senaryosu kurtarılabilir; çalışan bir hizmette karşılaşılırsa, şu anda işlenen ileti atılır ve hizmet çalışmaya devam eder ve daha fazla ileti işler. Ancak, bellek dışı ve yığın taşması senaryoları, .NET Framework her yerde kurtarılamaz; hizmet böyle özel durumlarla karşılaşırsa sonlandırır.
 
-Wcf'de kotaları tüm ön ayırması içermeyen. Örneğin, varsa <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> kota (çeşitli sınıflarında bulunur), 128 KB olarak ayarlanır, 128 KB, her ileti için otomatik olarak tahsis edilen gelmez. Ayrılan gerçek gerçek gelen ileti boyutuna bağlıdır.
+WCF 'de kotalar ön tahsisi içermez. Örneğin, <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> Kota (çeşitli sınıflarda bulunan) 128 KB olarak ayarlandıysa, her ileti için 128 KB 'nin otomatik olarak ayrıldığı anlamına gelmez. Ayrılan gerçek miktar, gerçek gelen ileti boyutuna bağlıdır.
 
-Birçok kotalarını, aktarım katmanında kullanılabilir. Bu, belirli taşıma kanalının (HTTP, TCP vb.) kullanımda tarafından uygulanan kotalar vardır. Bu konuda bu kotalar bazıları ele alınmıştır, ancak bu kotalar ayrıntılı olarak açıklanan [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).
+Birçok kota, aktarım katmanında kullanılabilir. Bunlar, kullanımdaki belirli aktarım kanalı tarafından zorlanan kotalardır (HTTP, TCP, vb.). Bu konu, bu kotaların bazılarını ele alırken, bu kotalar [Aktarım kotalarıyla](transport-quotas.md)ayrıntılı olarak açıklanmıştır.
 
 ### <a name="hashtable-vulnerability"></a>Hashtable güvenlik açığı
 
-Veri sözleşmeleri hashtable'da veya koleksiyonları içerdiğinde bir güvenlik açığı var. Çok sayıda değeri bir karma tablosunda eklediyseniz burada bu değerleri çok sayıda aynı karma değeri üretmek sorun oluşur. Bu bir DOS saldırısı kullanılabilir.  Bu güvenlik açığını MaxReceivedMessageSize bağlama kota ayarlayarak azaltılabilir. Bu tür saldırıları önlemek için bu kota ayarlarken dikkatli olunması gerekir. Bu kota, üst sınır WCF ileti boyutuna göre yerleştirir. Ayrıca, veri sözleşmelerinizi hashtable'da veya koleksiyonları kullanmaktan kaçının.
+Veri sözleşmeleri diyez tabloları veya koleksiyonlar içerdiğinde bir güvenlik açığı oluşur. Bu sorun, çok sayıda değerin aynı karma değeri oluşturabileceği bir Hashtable 'a çok sayıda değer eklenirse oluşur. Bu, DOS saldırısı olarak kullanılabilir.  Bu güvenlik açığı, MaxReceivedMessageSize bağlama kotasının ayarlanarak azaltılabilir. Bu tür saldırıları engellemek için bu kota ayarlanırken dikkatli olunmalıdır. Bu kota, WCF iletisi boyutunun üst sınırını koyar. Ayrıca, veri sözleşmelerinizi kullanarak tablolularıyla veya koleksiyonlar kullanmaktan kaçının.
 
-## <a name="limiting-memory-consumption-without-streaming"></a>Akış olmadan bellek tüketimini sınırlamak
+## <a name="limiting-memory-consumption-without-streaming"></a>Bellek tüketimini akış olmadan sınırlandırma
 
-Güvenlik modeli büyük iletiler çevresinde akış kullanımda olmasına göre değişir. Temel, akışa olmayan durumda belleğe iletiler arabelleğe alınır. Bu durumda <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> kotası <xref:System.ServiceModel.Channels.TransportBindingElement> veya erişmek için en büyük ileti boyutunu sınırlayarak büyük iletiler karşı korumak için sistem tarafından sağlanan bağlamalar. Bir hizmet birden çok ileti aynı anda işliyor olabilir, bu durumda tüm bellekte olduklarını unutmayın. Bu tehdidi azaltmak için azaltma özelliğini kullanın.
+Büyük iletiler etrafında güvenlik modeli, akışın kullanımda olup olmamasına bağlıdır. Temel, akışlı olmayan bir durumda, mesajların belleği arabelleğe alınır. Bu durumda, <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> <xref:System.ServiceModel.Channels.TransportBindingElement> en büyük ileti boyutunu erişecek şekilde sınırlayarak büyük iletilere karşı korumak için sistem tarafından belirtilen bağlamalarda veya üzerinde bulunan kotayı kullanın. Bir hizmetin aynı anda birden çok ileti işliyor olabileceğini ve bu durumda bunların hepsi bellekte olduğunu unutmayın. Bu tehdidi azaltmak için daraltma özelliğini kullanın.
 
-Ayrıca `MaxReceivedMessageSize` bir üst sınır, ileti başına bellek tüketimi yerleştirmez ancak için sabit bir faktör içinde sınırlar. Örneğin, varsa `MaxReceivedMessageSize` 1 MB ve 1 MB'lık bir ileti alındığında ve ardından seri durumdan, ek bellek toplam bellek tüketimini kutusu üzerinde 1 MB kaynaklanan seri durumdan çıkarılmış Nesne grafiği içerecek biçimde gereklidir. Bu nedenle, önemli bellek tüketimi kadar gelen veri olmadan sonuçlanabilir, seri hale getirilebilir türler oluşturmamaya özen gösterin. Örneğin, "MyContract" 50 isteğe bağlı veri üyesi alanları ve ek bir 100 özel alanlar XML oluşturucuyla örneği bir veri anlaşması "\<MyContract / >". Bu XML 150 alanlar için erişilen bellek sonuçlanır. Veri üyeleri varsayılan olarak isteğe bağlı olduğunu unutmayın. Böyle bir türü bir dizinin parçası olduğunda sorun karmaşıklaşır.
+Ayrıca `MaxReceivedMessageSize` , ileti başına bellek tüketimine bir üst sınır yerleştirmediğini, ancak bunu sabit bir faktör içinde sınırlandırmadığını unutmayın. Örneğin, `MaxReceivedMessageSize` 1 MB ve 1 MB 'lık bir ileti alınıp sonra seri durumdan çıkarılmışsa, seri durumdan çıkarılan nesne grafiğini içermesi için ek bellek gerekir ve bu da 1 MB 'tan fazla toplam bellek tüketimi elde edilir. Bu nedenle, çok fazla gelen veriler olmadan önemli miktarda bellek tüketimine neden olabilecek serileştirilebilir türler oluşturmaktan kaçının. Örneğin, 50 isteğe bağlı veri üyesi alanları ve ek 100 özel alanları olan "MyContract" veri sözleşmesi "" XML yapımı ile oluşturulabilir \<MyContract/> . Bu XML, 150 alanları için belleğe erişilmeye sonuçlanıyor. Veri üyelerinin varsayılan olarak isteğe bağlı olduğunu unutmayın. Böyle bir tür bir dizinin parçasıysa sorun oluşur.
 
-`MaxReceivedMessageSize` tek başına tüm hizmet reddi saldırılarını önlemek yeterli değil. Örneğin, seri durumdan çıkarıcı bir iç içe geçmiş Nesne grafiği (henüz başka bir vb. içeren başka bir nesne içeren bir nesne) seri durumdan çıkarılacak gelen iletiyi tarafından zorlanabilir. Hem <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> yöntemleri gibi grafikler seri durumdan çıkarılacak iç içe geçmiş bir şekilde çağırın. Yöntem çağrılarının derin iç içe geçme kurtarılamaz bir neden <xref:System.StackOverflowException>. Bu tehdit ayarlayarak kalktıktan <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> kota, XML iç içe geçme düzeyini "Güvenle XML kullanarak" bölümünde bu konunun ilerleyen bölümlerinde açıklandığı gibi sınırlamak için.
+`MaxReceivedMessageSize`Tüm hizmet reddi saldırılarını engellemek için tek başına yeterli değildir. Örneğin, seri hale getirici, iç içe geçmiş bir nesne grafiğinin serisini kaldırmak için (bir başka nesne içeren bir nesne, ancak başka bir nesneyi içeren bir nesne) gelen bir ileti tarafından kaldırılabilir. Hem <xref:System.Runtime.Serialization.DataContractSerializer> hem de <xref:System.Xml.Serialization.XmlSerializer> çağrı yöntemleri, bu tür grafiklerin serisini kaldırmak için iç içe bir yoldur. Yöntem çağrılarının derin iç içe geçirilmesi kurtarılamaz bir sonuç verebilir <xref:System.StackOverflowException> . Bu tehdit, <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement.MaxDepth%2A> konusunun devamındaki "XML güvenli kullanımı" bölümünde açıklandığı gibi, XML iç içe geçme düzeyini sınırlamak üzere kota ayarlanarak azalmıştır.
 
-Ek kotalar ayarını `MaxReceivedMessageSize` ikili XML encoding kullanıldığında özellikle önemlidir. İkili kodlama kullanılarak sıkıştırma biraz eşdeğer: çok fazla veri bayt gelen iletideki küçük bir grubu temsil edebilir. Bu nedenle, bir ileti içine sığdırma bile `MaxReceivedMessageSize` sınırı sürebilir çok daha fazla bellek tam olarak genişletilmiş biçiminde. Bu tür özel XML tehditleri azaltmak için tüm XML okuyucusu kotalar "Güvenle XML kullanarak" bölümünde bu konunun ilerleyen bölümlerinde açıklandığı gibi doğru şekilde ayarlanması gerekir.
+Ek kotalar `MaxReceivedMessageSize` , IKILI XML kodlaması kullanılırken özellikle önemlidir. İkili kodlamanın kullanılması, sıkıştırmaya biraz eşdeğerdir: gelen iletideki küçük bir bayt grubu çok fazla veri temsil edebilir. Bu nedenle, sınıra bir ileti ekleme bile `MaxReceivedMessageSize` tam genişletilmiş biçimde daha fazla bellek alabilir. XML 'e özgü bu tehditleri azaltmak için, bu konunun devamındaki "XML güvenli kullanımı" bölümünde anlatıldığı gibi tüm XML okuyucu kotaları doğru ayarlanmalıdır.
 
-## <a name="limiting-memory-consumption-with-streaming"></a>Bellek tüketimi akış ile sınırlama
+## <a name="limiting-memory-consumption-with-streaming"></a>Bellek tüketimini akış ile sınırlama
 
-Akış, bir küçük kullanabilir `MaxReceivedMessageSize` hizmet reddi saldırılarına karşı korumaya yönelik ayarı. Ancak, daha karmaşık senaryolarda, akış ile mümkündür. Örneğin, bir dosya karşıya yükleme hizmeti, tüm kullanılabilir bellekten daha büyük dosyaları kabul eder. Bu durumda, `MaxReceivedMessageSize` son derece büyük bir değere doğrudan diske akışları neredeyse hiçbir veri bellek ve iletiyi arabelleğe alınıp bekleniyor. Kötü amaçlı bir ileti şekilde WCF yerine bu durumda, akış verilerini arabelleğe zorlayabilirsiniz varsa `MaxReceivedMessageSize` artık tüm kullanılabilir bellek erişim iletiye karşı korur.
+Akış sırasında `MaxReceivedMessageSize` hizmet reddi saldırılarına karşı korumak için küçük bir ayar kullanabilirsiniz. Ancak, akışta daha karmaşık senaryolar mümkündür. Örneğin, bir dosya karşıya yükleme hizmeti kullanılabilir tüm bellekten daha büyük dosyaları kabul eder. Bu durumda, ' yi `MaxReceivedMessageSize` son derece büyük bir değere ayarlayın, neredeyse hiçbir verinin bellekte arabelleğe alınmadığını ve ileti doğrudan diske akışını bekliyor. Kötü amaçlı bir ileti, WCF 'yi bu durumda akışa almak yerine bu verileri arabelleğe alarak zorlayabilir `MaxReceivedMessageSize`
 
-Bu tehdidi azaltmak için belirli bir kota ayarları, çeşitli WCF veri işleme bileşenlerini sınırı arabelleğe alma mevcut. Bunların en önemlisi `MaxBufferSize` çeşitli aktarım bağlama öğeleriyle ve standart bağlamalar özelliği. Akış, bu kota en fazla ileti ettiğinizi bellek miktarını dikkate alarak ayarlamanız gerekir. Olduğu gibi `MaxReceivedMessageSize`, ayar bir mutlak en büyük bellek tüketimi koymaz, ancak yalnızca için sabit bir faktör içinde sınırlar. Ayrıca, olarak ile `MaxReceivedMessageSize`, birden çok ileti aynı anda işlenmekte olan olasılığını unutmayın.
+Bu tehdidi azaltmak için, arabelleğe almayı sınırlayan çeşitli WCF veri işleme bileşenlerinde belirli Kota ayarları vardır. Bunların en önemlisi, `MaxBufferSize` çeşitli taşıma bağlama öğelerinde ve standart bağlamalarda bulunan özelliktir. Akışta, bu kotanın ileti başına ayırmak istediğiniz en fazla bellek miktarını hesaba katmak üzere ayarlanması gerekir. ' De olduğu gibi `MaxReceivedMessageSize` , ayar bellek tüketimine mutlak bir en yüksek değer yerleştirmez, ancak yalnızca sabit bir faktör içinde bu değeri kısıtlar. Ayrıca, ' de olduğu gibi `MaxReceivedMessageSize` , aynı anda birden çok ileti işleme olasılığının farkında olun.
 
 ### <a name="maxbuffersize-details"></a>MaxBufferSize ayrıntıları
 
-`MaxBufferSize` Sınırlar arabelleğe alma WCF mu herhangi bir toplu özellik. Örneğin, WCF her zaman bir ileti aktarım en iyi duruma getirme mekanizması (MTOM) iletisi doğal okuma düzeninde olmaması bulunan herhangi bir MIME bölümü yanı sıra SOAP üstbilgileri ve SOAP hataları arabelleğe alır. Bu ayar tüm durumlarda arabelleğe alma miktarını sınırlar.
+`MaxBufferSize`Özelliği, toplu arabelleğe alma WCF 'nin her birini sınırlandırır. Örneğin, WCF her zaman SOAP üst bilgilerini ve SOAP hatalarını ve bir Ileti Iletimi Iyileştirme mekanizması (MTOM) iletisindeki doğal okuma düzeninde olmayan tüm MIME parçalarını arabelleğe alır. Bu ayar tüm bu durumlarda arabelleğe alma miktarını sınırlandırır.
 
-WCF gerçekleştirir bu geçirerek `MaxBufferSize` arabellek çeşitli bileşenleri için değer. Örneğin, bazı <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> , aşırı <xref:System.ServiceModel.Channels.Message> sınıfındaki oluşturucuların bir `maxSizeOfHeaders` parametresi. WCF geçirir `MaxBufferSize` SOAP üstbilgi arabelleğe alma tutarını sınırlamak için bu parametre için değer. Bu parametreyi kullanırken ayarlamak önemlidir <xref:System.ServiceModel.Channels.Message> doğrudan sınıf. Genel olarak, bir bileşen kota parametreleri alan WCF'de kullanırken, bu parametreleri güvenlik etkilerini anlamanıza ve doğru şekilde ayarlanması önemlidir.
+WCF bu `MaxBufferSize` değeri, arabelleği olabilecek çeşitli bileşenlere geçirerek gerçekleştirir. Örneğin, sınıfın bazı <xref:System.ServiceModel.Channels.Message.CreateMessage%2A> aşırı yüklemeleri <xref:System.ServiceModel.Channels.Message> bir `maxSizeOfHeaders` parametre alır. WCF, `MaxBufferSize` SOAP üst bilgisi arabelleğe alma miktarını sınırlamak için değeri bu parametreye geçirir. Sınıfı doğrudan kullanılırken bu parametrenin ayarlanması önemlidir <xref:System.ServiceModel.Channels.Message> . Genel olarak, WCF 'de kota parametreleri alan bir bileşen kullanırken, bu parametrelerin güvenlik etkilerine ilişkin etkilerini anlamak ve doğru şekilde ayarlamak önemlidir.
 
-MTOM ileti Kodlayıcı de sahip bir `MaxBufferSize` ayarı. Standart bağlamaları kullanırken, bu aktarım düzeyi için otomatik olarak ayarlanır `MaxBufferSize` değeri. Ancak, MTOM ileti Kodlayıcı bağlama öğesi, özel bir bağlama oluşturmak için kullanırken ayarlamak önemlidir `MaxBufferSize` güvenli bir değere akışı yapılırken kullanılır.
+MTOM ileti Kodlayıcısı da bir ayara sahiptir `MaxBufferSize` . Standart bağlamaları kullanırken, bu otomatik olarak aktarım düzeyi `MaxBufferSize` değerine ayarlanır. Ancak, özel bir bağlama oluşturmak için MTOM ileti Kodlayıcısı bağlama öğesi kullanılırken, `MaxBufferSize` akış kullanıldığında özelliği güvenli bir değere ayarlamanız önemlidir.
 
-## <a name="xml-based-streaming-attacks"></a>XML-tabanlı akış saldırıları
+## <a name="xml-based-streaming-attacks"></a>XML tabanlı akış saldırıları
 
-`MaxBufferSize` tek başına WCF akış beklendiğinde arabelleğe içine zorlanamıyor emin olmak yeterli değil. Örneğin, WCF XML okuyucular her zaman tüm XML öğenin başlangıç etiketinde yeni bir öğe okunacak başlatırken arabellek. Bu ad alanları ve özniteliklerini düzgün bir şekilde işlenir böylece gerçekleştirilir. Varsa `MaxReceivedMessageSize` yapılandırılır (doğrudan disk büyük dosya senaryo akış etkinleştirmek için örneğin,) büyük olması için kötü amaçlı bir ileti tüm ileti gövdesi, büyük bir XML öğesi başlangıç etiketi bulunduğu oluşturulabilir. Dosyayı okuma girişimi sonuçlanır bir <xref:System.OutOfMemoryException>. Bu, tüm XML okuyucusu kotaları, bu konunun ilerleyen bölümlerindeki "Güvenle XML kullanarak" bölümünde açıklanan kullanılarak azaltılabilir sayıda olası XML tabanlı hizmet reddi saldırı biridir. Akış, tüm bu kotalar ayarlamak özellikle önemlidir.
+`MaxBufferSize`Hala, WCF 'nin akış beklenirken arabelleğe alma işlemine zorlanamadığından emin olmak için yeterli değildir. Örneğin, WCF XML okuyucuları her zaman yeni bir öğeyi okumaya Başlarken tüm XML öğesi başlangıç etiketini arabelleğe alın. Bu işlem, ad alanlarının ve özniteliklerin düzgün şekilde işlenmesini sağlayacak şekilde yapılır. `MaxReceivedMessageSize`Büyük olacak şekilde yapılandırıldıysa (örneğin, doğrudan diske büyük dosya akışı senaryosunu etkinleştirmek için), tüm ileti gövdesinin büyük BIR XML öğesi başlangıç etiketi olduğu durumlarda kötü amaçlı bir ileti oluşturulabilir. Bir ile sonuçları okumaya çalışır <xref:System.OutOfMemoryException> . Bu, bu konunun ilerleyen kısımlarında "XML güvenli kullanımı" bölümünde ele alınan XML okuyucu kotaları kullanılarak tamamen azaltılan, XML tabanlı birçok hizmet reddi saldırısından biridir. Akış sırasında, bu kotaların tümünü ayarlamak özellikle önemlidir.
 
-### <a name="mixing-streaming-and-buffering-programming-models"></a>Akış ve programlama modellerini arabelleğe alma karıştırma
+### <a name="mixing-streaming-and-buffering-programming-models"></a>Akış ve arabelleğe alma programlama modellerini karıştırma
 
-Birçok olası saldırıları, akış ve akış dışı programlama modelleri aynı hizmetteki karıştırma alanından ortaya çıkar. Bir hizmet sözleşmesini iki işlem ile olduğunu varsayın: alır bir <xref:System.IO.Stream> ve başka bazı özel bir tür dizisini alır. Ayrıca varsayın `MaxReceivedMessageSize` büyük akışları işlemek ilk işlemi etkinleştirmek için büyük bir değere ayarlanır. Ne yazık ki, bu işlemi çağrılmadan önce büyük iletiler şimdi de ikinci işlem ve bellek seri durumdan çıkarıcının arabellekler verileri bir dizi olarak gönderilmesini anlamına gelir. Olası bir hizmet reddi saldırısını budur: `MaxBufferSize` kota, ileti gövdesi boyutu sınırlamaz olduğu seri durumdan çıkarıcı ile çalışır.
+Aynı hizmette akış ve akış olmayan programlama modellerini karıştırarak birçok olası saldırı oluşur. İki işlem içeren bir hizmet sözleşmesi olduğunu varsayalım: biri bir alır <xref:System.IO.Stream> ve başka bir özel türün dizisini alır. Ayrıca, `MaxReceivedMessageSize` ilk işlemin büyük akışları işlemesini sağlamak için büyük bir değere ayarlandığını varsayalım. Ne yazık ki bu, büyük iletilerin artık ikinci işleme de gönderilebileceği anlamına gelir ve seri hale getirici, işlem çağrılmadan önce, bellekteki verileri bir dizi olarak arabelleğe alır. Bu, olası bir hizmet reddi saldırıdır: kota, seri `MaxBufferSize` hale getiricinin birlikte çalıştığı ileti gövdesinin boyutunu sınırlamaz.
 
-Bu nedenle, aynı sözleşme akış tabanlı ve veri akışı işlemlerinde karıştırmayın. Kesinlikle iki programlama modellerini karıştırmak gerekir, aşağıdaki önlemleri kullanın:
+Bu nedenle, aynı sözleşmede akış tabanlı ve akış olmayan işlemleri karıştırmaktan kaçının. İki programlama modelini kesinlikle karıştırdıysanız, aşağıdaki önlemleri kullanın:
 
-- Devre dışı <xref:System.Runtime.Serialization.IExtensibleDataObject> özelliğini ayarlayarak <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> özelliği <xref:System.ServiceModel.ServiceBehaviorAttribute> için `true`. Bu sözleşmenin bir parçası olan üyeleri seri sağlar.
+- <xref:System.Runtime.Serialization.IExtensibleDataObject>Özelliğini olarak ayarlayarak özelliği kapatın <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> <xref:System.ServiceModel.ServiceBehaviorAttribute> `true` . Bu, yalnızca sözleşmenin bir parçası olan üyelerin seri durumdan çıkarılmasını sağlar.
 
-- Ayarlama <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> özelliği <xref:System.Runtime.Serialization.DataContractSerializer> güvenli bir değer. Bu kota de kullanılabilir <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliği veya yapılandırma yoluyla. Bu kota, bir seri durumundan çıkarma bölümde durumdan nesne sayısını sınırlar. Normalde, her işlem parametresi veya ileti Gövde bölümünün bir ileti anlaşması içinde bir bölümde seri durumda. Her dizi girişi, diziler seri durumdan çıkarılırken zaman ayrı bir nesne kabul edilir.
+- <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A>Öğesinin özelliğini <xref:System.Runtime.Serialization.DataContractSerializer> güvenli bir değere ayarlayın. Bu kota, <xref:System.ServiceModel.ServiceBehaviorAttribute> özniteliğinde veya yapılandırma aracılığıyla da kullanılabilir. Bu kota, bir seri kaldırma bölümünde Serisi kaldırılan nesne sayısını sınırlar. Normalde, bir ileti sözleşmesinin her bir işlem parametresi veya ileti gövdesi bölümü bir bölümde seri durumdan çıkarılmış olur. Dizilerin serisi kaldırılırken, her dizi girişi ayrı bir nesne olarak sayılır.
 
-- Tüm XML okuyucusu kotalar güvenli değerlere ayarlayın. Dikkat <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>, <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>, ve <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> ve akış dışı işlemler dizelerde kaçının.
+- Tüm XML okuyucu kotalarını güvenli değerlere ayarlayın. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>Akış olmayan işlemlerde, ve ' a dikkat edin <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> ve dizeleri önleyin.
 
-- Bilinen türler, herhangi bir zamanda herhangi biri oluşturulabilir aklınızda tutma listesini gözden geçirin (Bu konunun ilerleyen bölümlerindeki "Önleme istenmeyen türleri gelen yüklenme" bölümüne bakın).
+- Bilinen türlerin listesini gözden geçirin ve bunlardan herhangi birinin herhangi bir zamanda örneklendirildiğini aklınızda bulundurun (Bu konunun ilerleyen kısımlarında yer alan "Istenmeyen türlerin yüklenmesini koruma" bölümüne bakın).
 
-- Uygulayan türler kullanmayın <xref:System.Xml.Serialization.IXmlSerializable> çok fazla veri arabellek arabirimi. Bu türler, bilinen türler listesine eklemeyin.
+- <xref:System.Xml.Serialization.IXmlSerializable>Çok miktarda veriyi arabelleğe alan arabirimi uygulayan herhangi bir tür kullanmayın. Bu tür türleri bilinen türler listesine eklemeyin.
 
-- Kullanmayın <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlNode> diziler <xref:System.Byte> diziler veya türleri uygulayan <xref:System.Runtime.Serialization.ISerializable> sözleşmesindeki.
+- <xref:System.Xml.XmlElement> <xref:System.Xml.XmlNode> <xref:System.Byte> Bir sözleşmede uygulayan, diziler, diziler veya türler kullanmayın <xref:System.Runtime.Serialization.ISerializable> .
 
-- Kullanmayın <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlNode> diziler <xref:System.Byte> diziler veya türleri uygulayan <xref:System.Runtime.Serialization.ISerializable> bilinen türler listesine.
+- <xref:System.Xml.XmlElement> <xref:System.Xml.XmlNode> <xref:System.Byte> Bilinen türler listesinde öğesini uygulayan, diziler, diziler veya türler kullanmayın <xref:System.Runtime.Serialization.ISerializable> .
 
-Akış işlemi kullandığında önceki önlemler uygulamak <xref:System.Runtime.Serialization.DataContractSerializer>. Akış dışı programlama modelleri aynı hizmetini kullanıyorsanız ve hiç akış karıştırmak <xref:System.Xml.Serialization.XmlSerializer>, korumasını olmadığından <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> kota.
+Akış olmayan işlem ' i kullandığında önceki önlemler geçerlidir <xref:System.Runtime.Serialization.DataContractSerializer> . , Kota korumasına sahip olmadığından, aynı hizmette akış ve akış olmayan programlama modellerini hiçbir şekilde karıştırmayın <xref:System.Xml.Serialization.XmlSerializer> <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.MaxItemsInObjectGraph%2A> .
 
-### <a name="slow-stream-attacks"></a>Yavaş Stream saldırıları
+### <a name="slow-stream-attacks"></a>Yavaş akış saldırıları
 
-Akış hizmet reddi saldırılarını sınıfının bellek tüketimi gerektirmez. Bunun yerine, saldırı yavaş gönderen veya alıcı veri içerir. Gönderilen veya alınan verilerin beklenirken, iş parçacıkları ve kullanılabilir ağ bağlantıları gibi kaynakları tükendi. Bu durum kötü amaçlı saldırı sonucunda ya da yasal bir gönderen/alıcı yavaş ağ bağlantısı üzerinde meydana gelebilecek.
+Akış hizmeti reddi saldırılarının bir sınıfı, bellek tüketimi içermez. Bunun yerine, saldırı yavaş bir göndereni veya veri alıcısını içerir. Verilerin gönderilmesi veya alınması beklenirken, iş parçacıkları ve kullanılabilir bağlantılar gibi kaynaklar tükenmiştir. Bu durum kötü amaçlı bir saldırının veya yavaş bir ağ bağlantısındaki meşru bir gönderenden/alıcının sonucu olarak ortaya çıkabilir.
 
-Bu saldırıları azaltmak için Aktarım zaman aşımları doğru şekilde ayarlayın. Daha fazla bilgi için [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md). İkincisi, hiçbir zaman zaman uyumlu kullanmayın `Read` veya `Write` WCF akış ile çalışırken operations.
+Bu saldırıları azaltmak için taşıma zaman aşımlarını doğru olarak ayarlayın. Daha fazla bilgi için bkz. [Aktarım kotaları](transport-quotas.md). İkinci olarak, `Read` `Write` WCF 'de akışlarla çalışırken hiçbir zaman zaman uyumlu veya işlem kullanmayın.
 
-## <a name="using-xml-safely"></a>XML kullanarak güvenli bir şekilde
+## <a name="using-xml-safely"></a>XML 'i güvenle kullanma
 
 > [!NOTE]
-> Bu bölüm hakkında daha fazla XML olsa da, bilgi JavaScript nesne gösterimi (JSON) belgeler için de geçerlidir. Kotalar kullanarak benzer şekilde, iş [arasında eşleme JSON ve XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).
+> Bu bölüm XML hakkında olsa da, bilgiler JavaScript Nesne Gösterimi (JSON) belgeleri için de geçerlidir. Kotalar, [JSON ve XML arasında eşleme](mapping-between-json-and-xml.md)kullanarak benzer şekilde çalışır.
 
-### <a name="secure-xml-readers"></a>XML okuyucular güvenliğini sağlama
+### <a name="secure-xml-readers"></a>Güvenli XML okuyucuları
 
-XML bilgi kümesi tüm ileti işleme WCF'de temelini oluşturur. XML verilerini birkaç olasılık mevcut azaltılması gereken hizmet reddi saldırısı güvenilmeyen bir kaynaktan kabul ederken. WCF özel, güvenli XML okuyucular sağlar. Bu okuyucular, standart Kodlamalar birini WCF (metin, ikili veya MTOM) kullanırken otomatik olarak oluşturulur.
+XML bilgi kümesi, WCF 'deki tüm ileti işlemenin temelini oluşturur. Güvenilmeyen bir kaynaktan XML verileri kabul edildiğinde, azaltılmalıdır olması gereken birkaç hizmet reddi saldırısı olasılığı vardır. WCF, özel, güvenli XML okuyucuları sağlar. Bu okuyucular, WCF 'de standart kodlamalardan biri (metin, ikili veya MTOM) kullanılırken otomatik olarak oluşturulur.
 
-Bazı güvenlik özellikleri bu okuyucular her zaman etkindir. Örneğin, okuyucular, olası bir hizmet reddi saldırılarını kaynağı olan ve hiçbir zaman yasal SOAP iletilerini görünmesi gereken belge türü tanımları (DTD'ler) hiçbir zaman işleyin. Yapılandırılmalıdır, okuyucu kotalar aşağıdaki bölümde açıklanan diğer güvenlik özellikleri içerir.
+Bu okuyucular üzerindeki bazı güvenlik özellikleri her zaman etkindir. Örneğin, okuyucular asla bir hizmet reddi saldırısı kaynağı olan ve meşru SOAP iletilerinde hiçbir şekilde görünmemesi gereken belge türü tanımlarını (DTD 'Ler) işlemez. Diğer güvenlik özellikleri, aşağıdaki bölümde açıklanan, yapılandırılması gereken okuyucu kotalarını içerir.
 
-Doğrudan XML okuyucularıyla çalışırken (gibi kendi özel bir kodlayıcı yazarken veya doğrudan ile çalışırken <xref:System.ServiceModel.Channels.Message> sınıfı), bir güvenilir olmayan verileri ile çalışma olasılığı olduğunda WCF güvenli okuyucular her zaman kullanın. Güvenli okuyucular çağıran bir statik fabrika tarafından yöntemi aşırı yüklemeleri oluşturma <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>, veya <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> üzerinde <xref:System.Xml.XmlDictionaryReader> sınıfı. Bir okuyucu oluşturulurken güvenli kota değerlerini geçirirsiniz. Çağırmayın `Create` yöntemi aşırı yüklemeleri. Bu, bir WCF okuyucu oluşturmayın. Bunun yerine, bu bölümde açıklanan güvenlik özellikleri tarafından korunmayan bir okuyucu oluşturulur.
+Doğrudan XML okuyucularıyla (kendi özel kodlayıcıınızı yazarken veya sınıfla doğrudan çalışırken <xref:System.ServiceModel.Channels.Message> ) çalışırken, güvenilmeyen verilerle çalışma şansı olduğunda her zaman WCF güvenli okuyucularını kullanın. , Veya sınıfındaki statik fabrika yöntemi aşırı yüklemelerinin birini çağırarak güvenli okuyucular oluşturun <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A> <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A> <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> <xref:System.Xml.XmlDictionaryReader> . Bir okuyucu oluştururken güvenli kota değerlerini geçirin. `Create`Yöntem aşırı yüklerini çağırmayın. Bunlar bir WCF okuyucu oluşturmaz. Bunun yerine, bu bölümde açıklanan güvenlik özellikleriyle korunmayan bir okuyucu oluşturulur.
 
 ### <a name="reader-quotas"></a>Okuyucu kotaları
 
-Güvenli XML okuyucular beş yapılandırılabilir kotalar vardır. Bunlar kullanarak normal şekilde yapılandırılır `ReaderQuotas` özelliği kodlama bağlama öğeleri veya standart bağlamaları veya kullanılarak bir <xref:System.Xml.XmlDictionaryReaderQuotas> bir okuyucusu oluşturulurken nesnesi geçirildi.
+Güvenli XML okuyucuları için beş yapılandırılabilir kota vardır. Bunlar normalde, `ReaderQuotas` kodlama bağlama öğelerinde veya standart bağlamalarda özelliği kullanılarak veya <xref:System.Xml.XmlDictionaryReaderQuotas> okuyucu oluştururken geçirilen bir nesne kullanılarak yapılandırılır.
 
 #### <a name="maxbytesperread"></a>MaxBytesPerRead
 
-Bu kotayı tek bir okunan bayt sayısını sınırlayan `Read` etiketini ve onun özniteliklerini öğe okurken işlemi başlatın. (Akış olmayan durumlarda, öğe adı kotaya dahil edilmez.) <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> aşağıdaki nedenlerle önemlidir:
+Bu kota, `Read` öğe başlangıç etiketi ve özniteliklerini okurken tek bir işlemde okunan bayt sayısını sınırlar. (Akış olmayan durumlarda, öğe adının kendisi kotaya karşı sayılmaz.) <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>aşağıdaki nedenlerle önemlidir:
 
-- Her zaman, okunan, öğe adı ve özniteliklerini bellekte arabelleğe alınır. Bu nedenle, akış modunda akış beklendiğinde aşırı arabelleğe almayı önlemek için bu kotayı doğru şekilde ayarlanması önemlidir. Bkz: `MaxDepth` gerçekleşmeden gerçek miktarını arabelleğe alma hakkında bilgi için kota bölümüne.
+- Okuma sırasında, öğe adı ve öznitelikleri her zaman bellekte arabelleğe alınır. Bu nedenle, akış beklendiğinde aşırı arabelleğe almayı engellemek için bu kotayı akış modunda doğru şekilde ayarlamanız önemlidir. Gerçekleşen `MaxDepth` gerçek arabelleğe alma miktarı hakkında daha fazla bilgi için kota bölümüne bakın.
 
-- Benzersizlik için denetlenecek öznitelik adları olduğundan çok fazla XML özniteliklere sahip orantısız işleme zamanı kullanıyor olabilir. `MaxBytesPerRead` Bu tehdidi azaltır.
+- Öznitelik adlarının benzersizlik için denetlenmesi gerektiğinden, çok fazla XML özniteliği orantısız işleme süresi kullanabilir. `MaxBytesPerRead`Bu tehdidi azaltır.
 
 #### <a name="maxdepth"></a>MaxDepth
 
-Bu kota, XML öğeleri en fazla iç içe geçme derinliği sınırlar. Örneğin, belge "\<A >\<B >\<C / >\</B >\</A >" üç iç içe geçme derinliği vardır. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> Aşağıdaki nedenlerle önemlidir:
+Bu kota, XML öğelerinin en fazla iç içe geçme derinliğini sınırlandırır. Örneğin, " \<A> \<B> \<C/> \</B> \</A> " belgesinin iç içe geçmiş derinliği üç. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>Aşağıdaki nedenlerle önemlidir:
 
-- `MaxDepth` etkileşime `MaxBytesPerRead`: en yüksek bellek tüketimi Okuyucu için bu iki ayar çarpımını orantılı, bu nedenle okuyucu her zaman veri bellekte geçerli öğenin ve tüm alt öğelerinden tutar.
+- `MaxDepth`ile etkileşimde `MaxBytesPerRead` bulunur: okuyucu, her zaman geçerli öğe ve tüm üst öğelerinden verileri bellekte tutar, böylece okuyucunun maksimum bellek tüketimi bu iki ayar ürünüyle orantılıdır.
 
-- Bir iç içe geçmiş Nesne grafiği işlenirken, seri durumdan çıkarıcı tüm yığını erişip kurtarılamaz bir throw zorlanır <xref:System.StackOverflowException>. XML iç içe geçirme ve nesnenin iç içe her ikisi için de arasında doğrudan bağıntı var. <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Xml.Serialization.XmlSerializer>. Kullanım `MaxDepth` bu tehdidi azaltmak için.
+- Derin iç içe geçmiş bir nesne grafiğinin serisi kaldırılırken, seri hale getirici yığının tamamına erişmeye zorlanır ve kurtarılamaz bir değer oluşturur <xref:System.StackOverflowException> . Hem hem de için içe geçen XML iç içe ve nesne arasında doğrudan bağıntı bulunur <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Xml.Serialization.XmlSerializer> . `MaxDepth`Bu tehdidi azaltmak için kullanın.
 
 #### <a name="maxnametablecharcount"></a>MaxNameTableCharCount
 
-Bu kota boyutu okuyucunun sınırlar *ad tablosu*. Ad tablosu, bir XML belgesi işleme sırasında karşılaşılan belirli dizeleri (örneğin, ad alanlarını ve önekleri) içerir. Bu dizeler bellekte arabelleğe alınan gibi akış beklendiğinde aşırı arabelleğe almayı önlemek için bu kotayı ayarlayın.
+Bu kota, okuyucunun *NameTable*boyutunu sınırlandırır. NameTable, bir XML belgesi işlenirken karşılaşılan belirli dizeleri (ad alanları ve ön ekler gibi) içerir. Bu dizelerin bellekte ara belleğe alındığından, akış beklendiğinde aşırı arabelleğe almayı engellemek için bu kotayı ayarlayın.
 
 #### <a name="maxstringcontentlength"></a>MaxStringContentLength
 
-Bu kota, XML okuyucusu döndüren maksimum dize boyutu sınırlar. Bu kota, XML okuyucusu bellek tüketimini sınırlamaz, ancak okuyucu kullanan bileşen. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli bir okuyucu kullanan <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>, dizeleri bu kotayı daha büyük serisini değil. Kullanırken <xref:System.Xml.XmlDictionaryReader> doğrudan bu kota, ancak yalnızca dizeleri gibi okumak için özel olarak tasarlanmış yöntemleri tüm yöntemleri saygı sınıf <xref:System.Xml.XmlDictionaryReader.ReadContentAsString%2A> yöntemi. <xref:System.Xml.XmlReader.Value%2A> Okuyucu özelliği bu kota tarafından etkilenmez ve bu kotayı sağlar koruma gerekli olduğunda, bu nedenle kullanılmamalıdır.
+Bu kota, XML okuyucunun döndürdüğü en büyük dize boyutunu sınırlandırır. Bu kota, XML okuyucusu içindeki bellek tüketimini, ancak okuyucu kullanan bileşende sınırlamaz. Örneğin,, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli hale getirilmiş bir okuyucu kullandığında <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> , bu kotadan daha büyük dizelerin serisini kaldırmaz. <xref:System.Xml.XmlDictionaryReader>Sınıfı doğrudan kullanıldığında, tüm yöntemler bu kotaya uymaz, ancak yalnızca, yöntemi gibi dizeleri okumak için tasarlanan Yöntemler <xref:System.Xml.XmlDictionaryReader.ReadContentAsString%2A> . <xref:System.Xml.XmlReader.Value%2A>Okuyucudaki özelliği bu kotadan etkilenmez ve bu nedenle bu kotanın sağladığı koruma gerekli olduğunda kullanılmamalıdır.
 
 #### <a name="maxarraylength"></a>MaxArrayLength
 
-Bu kota, bir XML okuyucusu döndüren bayt dizileri de dahil olmak üzere temel elemanlar dizisinde en büyük boyutu sınırlar. Bu kota, XML okuyucusu bellek tüketimini sınırlamaz, ancak okuyucu kullanarak hangi bileşeni. Örneğin, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli bir okuyucu kullanan <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, bayt dizileri bu kotayı daha büyük serisini değil. Tek bir sözleşmede akış ve arabelleğe alınan programlama modellerini karıştırmak çalışırken bu kota ayarlamak önemlidir. Aklınızda kullanırken <xref:System.Xml.XmlDictionaryReader> doğrudan, yalnızca rastgele boyutunu belirli ilkel türler, dizileri gibi okumak için özel olarak tasarlanmış yöntemleri sınıf <xref:System.Xml.XmlDictionaryReader.ReadInt32Array%2A>, bu kotayı uyup.
+Bu kota, bayt dizileri dahil olmak üzere XML okuyucunun döndürdüğü temel elemanların bir dizisinin maksimum boyutunu sınırlandırır. Bu kota, XML okuyucusu üzerinde bellek tüketimini sınırlamaz, ancak okuyucu kullanan herhangi bir bileşende. Örneğin,, <xref:System.Runtime.Serialization.DataContractSerializer> ile güvenli hale getirilmiş bir okuyucu kullandığında <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A> , bu kotadan daha büyük olan bayt dizilerinin serisini kaldırmaz. Tek bir sözleşmede akış ve arabellekli programlama modellerini karıştırmaya çalışırken bu kotayı ayarlamanız önemlidir. <xref:System.Xml.XmlDictionaryReader>Sınıfı doğrudan kullanırken, yalnızca belirli temel türlerin (örneğin,) yalnızca rastgele boyutu dizileri okumak için özel olarak tasarlanan yöntemleri, bu kotanın dikkate alınması gerektiğini aklınızda bulundurun <xref:System.Xml.XmlDictionaryReader.ReadInt32Array%2A> .
 
-## <a name="threats-specific-to-the-binary-encoding"></a>İkili kodlama için özel tehditler
+## <a name="threats-specific-to-the-binary-encoding"></a>Ikili kodlamaya özgü tehditler
 
-WCF destekler kodlama ikili XML'si içeren bir *sözlük dizeleri* özelliği. Büyük bir dize kullanarak yalnızca birkaç bayt kodlanmış. Bu, önemli ölçüde performans kazanımı sağlar, ancak azaltılması gereken yeni hizmet reddi tehditlerine tanıtır.
+İkili XML kodlaması WCF, bir *Sözlük dizeleri* özelliği içerir. Büyük bir dize yalnızca birkaç bayt kullanılarak kodlanmayabilir. Bu, önemli ölçüde performans artışı sağlar, ancak hafiflemesinin azaltılması gereken yeni hizmet reddi tehditleri sunar.
 
-Sözlükler iki tür vardır: *statik* ve *dinamik*. Statik sözlükte ikili kodlama kısa bir kod kullanılarak temsil edilebilir uzun dizeler yerleşik bir listesidir. Bu dize listesi sabit okuyucu oluşturulduğunda ve değiştirilemez. WCF varsayılan olarak kullandığı statik sözlükte dizeleri hiçbiri, sözlük genişletme saldırısını hala kullanılabilir olsa da önemli bir hizmet reddi tehdit teşkil yeterli büyüklükte değil. Statik sözlüğünüz Burada sağladığınız Gelişmiş senaryolarda büyük sözlük dizeleri giriş oluştururken dikkatli olun.
+İki tür sözlük vardır: *statik* ve *dinamik*. Statik sözlük, ikili kodlamada kısa bir kod kullanılarak gösterilebilen uzun dizelerin yerleşik bir listesidir. Bu dizeler listesi okuyucu oluşturulduğunda ve değiştirilemediği zaman sabittir. Statik sözlükte WCF 'nin varsayılan olarak kullandığı dizelerin hiçbiri, önemli bir hizmet reddi tehdidi oluşturma konusunda yeterince büyük değildir, ancak yine de sözlük genişletme saldırısında kullanılabilir. Kendi statik sözlüğünüzü sağladığınız Gelişmiş senaryolarda, büyük sözlük dizeleri oluştururken dikkatli olun.
 
-Dinamik sözlük özelliği, kendi dizeleri tanımlayın ve kısa kodları ile ilişkilendirmek iletileri sağlar. Sonraki ileti dizelerini yeniden başlatmanız gerekmez ve önceden tanımlanmış kodlarını kullanabilir Bu dize kod eşlemeleri tüm iletişimin oturumu sırasında bellekte tutulur. Bu dizeler rastgele uzunlukta olması ve bu nedenle statik sözlükte olanlardan daha ciddi bir tehdit teşkil olabilir.
+Dinamik sözlükler özelliği, iletilerin kendi dizelerini tanımlamasına ve bunları kısa kodlarla ilişkilendirilmesine izin verir. Bu dizeden koda eşlemeler tüm iletişim oturumu sırasında bellekte tutulur, örneğin sonraki iletiler dizelerin yeniden gönderilmesini gerektirmez ve önceden tanımlanmış kodlardan yararlanabilir. Bu dizeler rastgele uzunlukta olabilir ve bu nedenle statik sözlükten daha ciddi bir tehdit oluşturabilir.
 
-Azaltılması gereken ilk tehdit çok büyük boyutlu hale gelmesini dinamik sözlüğün (dize kod eşlemesinin tablo) bir olasılıktır. Bu sözlük birkaç ileti kursunda genişletilebilir ve böylece `MaxReceivedMessageSize` kota yalnızca her ileti için ayrı olarak uygulandığından koruma sunar. Bu nedenle, ayrı <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A> özelliği var. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> , sözlük boyutu sınırlar.
+Azaltılması gereken ilk tehdit, dinamik sözlüğün (dizeden koda eşleme tablosu) çok büyük hale gelmesine olanak sağlar. Bu sözlük birkaç ileti kursu üzerine genişletilebilir ve bu nedenle `MaxReceivedMessageSize` yalnızca her bir ileti için ayrı olarak uygulandığı için kota hiçbir koruma gerektirmez. Bu nedenle, içinde <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A> sözlüğün boyutunu sınırlayan ayrı bir özellik bulunur <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> .
 
-Diğer çoğu kotalar, bu kotayı iletiler yazarken geçerlidir. Bir ileti okurken aşılırsa `QuotaExceededException` zamanki oluşturulur. Bir ileti yazarken aşılırsa kotanın aşılmasına neden herhangi bir dize olarak yazılır-, dinamik sözlük özelliği olmadan kullanmaktır.
+Diğer kotaların aksine bu kota, ileti yazarken de geçerlidir. İleti okunurken aşılırsa, `QuotaExceededException` her zamanki gibi oluşturulur. İleti yazılırken aşılırsa, kotanın aşılmasına neden olan dizeler, Dinamik sözlükler özelliği kullanılmadan olduğu gibi yazılır.
 
-### <a name="dictionary-expansion-threats"></a>Sözlük genişletme tehditler
+### <a name="dictionary-expansion-threats"></a>Sözlük genişletme tehditleri
 
-İkili özgü saldırı önemli sınıfı sözlük genişletme ortaya çıkar. Dize sözlükleri özellik kapsamlı kullanımını yaparsa küçük bir ikili biçimini iletisinde tam olarak genişletilmiş metin biçiminde çok büyük bir iletiye kapatabilir. Dinamik sözlük dizeleri için genişletme faktörü sınırlıdır <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A> kotası, hiçbir dinamik sözlük dizesinde tüm sözlük en büyük boyutu aştığından.
+Sözlük genişletmesinden sonra, ikili özel saldırıların önemli bir sınıfı. İkili biçimdeki küçük bir ileti, dize sözlükleri özelliğinin yoğun bir şekilde kullanılmasını sağlayan tam olarak genişletilmiş metin biçiminde çok büyük bir ileti açabilir. Dinamik sözlük dizeleri için genişleme faktörü, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A> Tüm sözlüğün en büyük boyutunu aştığından, kota tarafından sınırlandırılır.
 
-<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>, `MaxStringContentLength`, Ve `MaxArrayLength` özellikleri yalnızca bellek tüketimini sınırlamak. Bellek kullanımı tarafından zaten sınırlı olduğundan tüm tehditleri akışa olmayan kullanımı gerekmez normalde `MaxReceivedMessageSize`. Ancak, `MaxReceivedMessageSize` öncesi genişletme bayt sayısı. İkili kodlama kullanımda olmadığında bellek tüketimi potansiyel olarak ötesine geçip `MaxReceivedMessageSize`, yalnızca faktörüyle sınırlı <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>. Bu nedenle, her zaman tüm okuyucu kotalar ayarlamak önemlidir (özellikle <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>) kullanırken ikili kodlama.
+<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>, `MaxStringContentLength` Ve `MaxArrayLength` özellikleri yalnızca bellek tüketimini sınırlar. Bellek kullanımı zaten sınırlı olduğundan, akış olmayan kullanımdaki tehditleri hafifletmek genellikle gerekmez `MaxReceivedMessageSize` . Ancak, `MaxReceivedMessageSize` ön genişletme baytlarını sayar. İkili kodlama kullanımda olduğunda, bellek tüketimi büyük olasılıkla `MaxReceivedMessageSize` yalnızca bir faktörle sınırlı olabilir <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A> . Bu nedenle, ikili kodlama kullanılırken her zaman okuyucu kotaları (özellikle) ayarlanması önemlidir <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A> .
 
-İle birlikte ikili kodlama kullanırken <xref:System.Runtime.Serialization.DataContractSerializer>, `IExtensibleDataObject` arabirimi yanlış bir sözlük genişletme saldırısı. Bu arabirim, temelde sözleşmesinin bir parçası değil, rastgele veriler için sınırsız depolama sağlar. Kotalar yaratmayacağı ayarlanamaz, şekilde `MaxSessionSize` çarpılmasıyla `MaxReceivedMessageSize` değil bir sorun teşkil, devre dışı bırakma `IExtensibleDataObject` özelliğini kullanırken ikili kodlama. Ayarlama `IgnoreExtensionDataObject` özelliğini `true` üzerinde `ServiceBehaviorAttribute` özniteliği. Alternatif olarak, uygulamayın `IExtensibleDataObject` arabirimi. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).
+İkili kodlama ile birlikte kullanıldığında, <xref:System.Runtime.Serialization.DataContractSerializer> `IExtensibleDataObject` bir sözlük genişletme saldırısı bağlamak için arabirim kötüye kullanılabilir. Bu arabirim temelde, sözleşmenin bir parçası olmayan rastgele veriler için sınırsız depolama alanı sağlar. Kotalar, bir sorun ortaya çıkaran gibi yeterince düşük bir şekilde ayarlanmıyorsa `MaxSessionSize` `MaxReceivedMessageSize` , `IExtensibleDataObject` ikili kodlamayı kullanırken özelliği devre dışı bırakın. `IgnoreExtensionDataObject`Özelliği özniteliğinde olarak ayarlayın `true` `ServiceBehaviorAttribute` . Alternatif olarak, `IExtensibleDataObject` arabirimini uygulamayın. Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](forward-compatible-data-contracts.md).
 
-### <a name="quotas-summary"></a>Kotalar özeti
+### <a name="quotas-summary"></a>Kotalar Özeti
 
-Aşağıdaki tabloda kotaları hakkında kılavuz bilgileri özetlenmektedir.
+Aşağıdaki tabloda kotalar hakkında rehberlik özetlenmektedir.
 
-|Koşul|Önemli kotalar ayarlamak için|
+|Koşul|Ayarlanacak önemli kotalar|
 |---------------|-----------------------------|
-|Akış veya küçük iletileri, metin veya MTOM kodlama akış|`MaxReceivedMessageSize`, `MaxBytesPerRead`, ve `MaxDepth`|
-|Akış veya küçük iletileri, ikili akış kodlama|`MaxReceivedMessageSize`, `MaxSessionSize`ve tüm `ReaderQuotas`|
-|Akış büyük iletiler, metin ya da MTOM kodlama|`MaxBufferSize` ve tüm `ReaderQuotas`|
-|Akış büyük iletiler, ikili kodlama|`MaxBufferSize`, `MaxSessionSize`ve tüm `ReaderQuotas`|
+|Akış veya akış küçük iletileri, metin veya MTOM kodlaması yok|`MaxReceivedMessageSize`, `MaxBytesPerRead` ve`MaxDepth`|
+|Akış veya akış küçük iletileri, ikili kodlama|`MaxReceivedMessageSize`, `MaxSessionSize` , ve tümü`ReaderQuotas`|
+|Büyük ileti, metin veya MTOM kodlamasını akışa alma|`MaxBufferSize`ve tümü`ReaderQuotas`|
+|Büyük iletileri akışa alma, ikili kodlama|`MaxBufferSize`, `MaxSessionSize` , ve tümü`ReaderQuotas`|
 
-- Aktarım düzeyi zaman aşımları, her zaman ayarlanmalıdır ve akış olup büyük veya küçük ileti akışı bağımsız olarak kullanımda olduğunda hiçbir zaman zaman uyumlu okuma/yazma kullanın.
+- Aktarım düzeyi zaman aşımları her zaman ayarlanmalıdır ve büyük veya küçük iletiler akışı yapıp görmediğine bakılmaksızın, akış kullanımda olduğunda zaman uyumlu okuma/yazma işlemleri kullanmayın.
 
-- Emin olamadığınız durumlarda bir kota hakkında güvenli bir değer yerine açık bırakarak ayarlayın.
+- Bir kota hakkında şüpheli olduğunda, açık bırakmak yerine güvenli bir değere ayarlayın.
 
-## <a name="preventing-malicious-code-execution"></a>Kötü amaçlı kod yürütmesini engelleme
+## <a name="preventing-malicious-code-execution"></a>Kötü amaçlı kod yürütmeyi önler
 
-Aşağıdaki genel sınıfları tehdit kod yürütebilir ve sahip istenmeyen etkilere:
+Aşağıdaki genel tehdit sınıfları kodu yürütebilir ve istenmeyen etkilere sahip olabilir:
 
-- Kötü amaçlı, güvenli olmayan veya güvenlik açısından duyarlı bir türü seri durumdan çıkarıcı yükler.
+- Seri hale getirici, kötü amaçlı, güvenli olmayan veya güvenliğe duyarlı bir tür yükler.
 
-- Normalde güvenli bir tür gibi olarak bir örneğini oluşturmak seri durumdan çıkarıcının gelen iletiyi neden olan bir şekilde istenmeyen sonuçları.
+- Gelen bir ileti, seri hale getiricinin, olağan dışı sonuçlara sahip olacak şekilde normal bir şekilde güvenli türde bir örnek oluşturmasına neden olur.
 
-Aşağıdaki bölümlerde bu sınıfların tehditleri daha ayrıntılı açıklanmaktadır.
+Aşağıdaki bölümlerde bu tehdit sınıfları daha fazla ele alınmaktadır.
 
 ## <a name="datacontractserializer"></a>DataContractSerializer
 
-(Güvenlik hakkında bilgi için <xref:System.Xml.Serialization.XmlSerializer>, ilgili belgelerine bakın.) İçin güvenlik modeli <xref:System.Xml.Serialization.XmlSerializer> ilkesindekine benzer <xref:System.Runtime.Serialization.DataContractSerializer>ve çoğunlukla ayrıntıları farklıdır. Örneğin, <xref:System.Xml.Serialization.XmlIncludeAttribute> yerine türü eklemek için kullanılan öznitelik <xref:System.Runtime.Serialization.KnownTypeAttribute> özniteliği. Ancak, bazı tehditler için benzersiz <xref:System.Xml.Serialization.XmlSerializer> bu konunun ilerleyen bölümlerinde ele alınmıştır.
+(Hakkında güvenlik bilgileri için <xref:System.Xml.Serialization.XmlSerializer> ilgili belgelere bakın.) İçin güvenlik modeli, <xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> ile benzerdir ve genellikle ayrıntılarda farklılık gösterir. Örneğin, <xref:System.Xml.Serialization.XmlIncludeAttribute> özniteliği özniteliği yerine tür içerme için kullanılır <xref:System.Runtime.Serialization.KnownTypeAttribute> . Ancak, öğesine özgü bazı tehditler <xref:System.Xml.Serialization.XmlSerializer> Bu konunun ilerleyen kısımlarında ele alınmıştır.
 
-### <a name="preventing-unintended-types-from-being-loaded"></a>Tür istenmeyen yüklenmesini engelleyen
+### <a name="preventing-unintended-types-from-being-loaded"></a>Istenmeyen türlerin yüklenmesini önler
 
-Tür istenmeyen yüklenirken önemli sonuçlar olabilir, bu türü kötü amaçlı ya da yalnızca güvenlik açısından duyarlı bir yan etkisi yok. Bir tür açıklardan güvenlik açığı içeren, kendi oluşturucu veya sınıf oluşturucusu içinde güvenlik duyarlı eylemleri gerçekleştirmek, hizmet reddi saldırılarını kolaylaştıran veya kurtarılamaz bir özel durum oluşturabildiğini varsaymasını büyük bellek ayak izine sahip. Türleri türü yüklendikten hemen sonra ve herhangi bir örneği oluşturulmadan önce çalıştıran sınıf oluşturucuları olabilir. Bu nedenlerle, seri durumdan çıkarıcı yükleyebilir türleri denetlemek önemlidir.
+İstenmeden türlerin yüklenmesi, türün kötü amaçlı olup olmadığı veya yalnızca güvenliğe duyarlı yan etkileri olan önemli sonuçlara sahip olabilir. Bir tür, açıktan yararlanma güvenlik açığı içerebilir, kurucuya da sınıf oluşturucusunda güvenliğe duyarlı eylemler gerçekleştirebilir, hizmet reddi saldırılarını kolaylaştıran büyük bir bellek parmak izine sahip olabilir veya kurtarılamaz özel durumlar oluşturabilir. Türler, türü yüklendikten hemen sonra ve herhangi bir örnek oluşturulmadan önce çalışan sınıf oluşturuculara sahip olabilir. Bu nedenlerden dolayı, seri hale getiricinin yükleyebileceği tür kümesini denetlemek önemlidir.
 
-<xref:System.Runtime.Serialization.DataContractSerializer> Gevşek bir şekilde seri durumdan çıkarır. Hiçbir ortak dil çalışma zamanı (CLR) türü ve derleme adları gelen verileri okur. Bu davranıştır benzer <xref:System.Xml.Serialization.XmlSerializer>, ancak davranışından farklıdır <xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Uzak saldırgan bu tür iletisinde adlandırarak yüklemek için rastgele bir tür belirttiğinden gevşek bağlantı güvenliği, derecesini tanıtır.
+, <xref:System.Runtime.Serialization.DataContractSerializer> Gevşek olarak bağlanmış bir şekilde seri hale getirir. Ortak dil çalışma zamanı (CLR) türünü ve gelen verilerden derleme adlarını hiçbir şekilde okumazlar. Bu, öğesinin davranışına benzerdir, ancak,, <xref:System.Xml.Serialization.XmlSerializer> ve ' nin davranışından farklıdır <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Gevşek bir güvenlik derecesi, uzak saldırgan yalnızca iletideki türü adlandırarak, yüklenecek rastgele bir tür belirtemediği için bir güvenlik derecesi sunar.
 
-<xref:System.Runtime.Serialization.DataContractSerializer> Sözleşmenin göre şu anda beklenen bir tür yüklemeyi her zaman izin verilir. Örneğin, bir veri anlaşması türü veri üyesine sahip `Customer`, <xref:System.Runtime.Serialization.DataContractSerializer> yüklenmesine izin `Customer` yazın, bu veri üyesi seri durumdan çıkarır.
+<xref:System.Runtime.Serialization.DataContractSerializer>Her zaman sözleşmeye göre beklenen bir tür yüklemeye izin verilir. Örneğin, bir veri sözleşmesinin türünde bir veri üyesi varsa `Customer` , <xref:System.Runtime.Serialization.DataContractSerializer> `Customer` Bu veri üyesini serileştirtiğinde türü yüklemesine izin verilir.
 
-Ayrıca, <xref:System.Runtime.Serialization.DataContractSerializer> çok biçimlilik destekler. Bir veri üyesi olarak bildirilebilir <xref:System.Object>, ancak gelen veri içerebilir bir `Customer` örneği. Bu yalnızca `Customer` türü sağlandıktan "bilinen" için seri durumdan çıkarıcı bu mekanizmalardan biri yoluyla:
+Ayrıca, çok <xref:System.Runtime.Serialization.DataContractSerializer> biçimliliği destekler. Veri üyesi olarak bildirilebilecek <xref:System.Object> , ancak gelen veriler bir örnek içeriyor olabilir `Customer` . Bu, yalnızca `Customer` tür "bilinen" Bu mekanizmalardan biri aracılığıyla seri hale getirici 'e "bilindiğinde" yapılabilir.
 
-- <xref:System.Runtime.Serialization.KnownTypeAttribute> öznitelik bir türe uygulandı.
+- <xref:System.Runtime.Serialization.KnownTypeAttribute>bir türe uygulanan öznitelik.
 
-- `KnownTypeAttribute` türlerinin bir listesini döndüren bir yöntem belirten özniteliği.
+- `KnownTypeAttribute`bir tür listesi döndüren bir yöntemi belirten öznitelik.
 
-- `ServiceKnownTypeAttribute` özniteliği.
+- `ServiceKnownTypeAttribute`özniteliğe.
 
-- `KnownTypes` Yapılandırma bölümü.
+- `KnownTypes`Yapılandırma bölümü.
 
-- Geçirilecek açıkça bilinen türlerinin bir listesini <xref:System.Runtime.Serialization.DataContractSerializer> seri hale getirici doğrudan kullanıyorsanız, oluşturma sırasında.
+- Serileştirici doğrudan kullanılıyorsa, oluşturma sırasında açıkça kendisine geçirilen bilinen türlerin listesi <xref:System.Runtime.Serialization.DataContractSerializer> .
 
-Bu mekanizmaların her biri, seri durumdan çıkarıcı yükleyebilir ve daha fazla türdeki sunarak yüzey alanını artırır. Hiçbir kötü amaçlı veya istenmeyen türü bilinen türler listesine eklendiğinden emin olmak için Bu mekanizmaların her biri denetler.
+Bu mekanizmaların her biri, seri hale getiricinin yükleyemekte olduğu daha fazla tür sunarak yüzey alanını artırır. Bilinen türler listesine kötü amaçlı veya istenmeyen türlerin eklenmemesini sağlamak için bu mekanizmaların her birini denetleyin.
 
-Bilinen türü kapsamında olduğunda, dilediğiniz zaman yüklenebilir ve gerçekte kullandığı sözleşmeye engelliyor olsa bile tür örneklerinin oluşturulabilir. Örneğin, "MyDangerousType" Yukarıdaki mekanizmalarını kullanarak bilinen türler listesine eklenen türü varsayalım. Bunun anlamı:
+Bilinen bir tür kapsam içinde olduğunda, bu, herhangi bir zamanda yüklenebilir ve anlaşma gerçekten onu kullanıyor olsa bile, türün örnekleri oluşturulabilir. Örneğin, yukarıdaki mekanizmalardan birini kullanarak "MyDangerousType" türünün bilinen türler listesine eklendiğini varsayalım. Bunun anlamı:
 
-- `MyDangerousType` yüklenir ve kendi sınıf oluşturucu döngülerinden.
+- `MyDangerousType`yüklenir ve sınıf oluşturucusu çalışır.
 
-- Hatta bir dize veri üyesi olan bir veri anlaşması seri durumdan çıkarılırken zaman kötü amaçlı bir ileti örneği yine de neden olabilir `MyDangerousType` oluşturmak için. Kod `MyDangerousType`, özellik ayarlayıcılarına gibi çalışabilir. Bunu yaptıktan sonra seri durumdan çıkarıcı bu örneğin dize veri üyesine atamak ve bir özel durumla başarısız dener.
+- Bir veri sözleşmesinin dize veri üyesine serisi kaldırılırken bile kötü amaçlı bir ileti bir örneğinin oluşturulmasına neden olabilir `MyDangerousType` . İçindeki `MyDangerousType` özellik ayarlayıcıları gibi kod çalıştırılabilir. Bu yapıldıktan sonra, seri hale getirici bu örneği dize veri üyesine atamayı dener ve bir özel durumla başarısız olur.
 
-Bilinen türlerinin bir listesini döndüren bir yöntem yazarken veya bir liste doğrudan geçerken <xref:System.Runtime.Serialization.DataContractSerializer> oluşturucusu, listenin hazırlar kod güvenlidir ve yalnızca güvenilen veriler üzerinde çalışıyor olun.
+Bilinen türlerin bir listesini döndüren veya bir listeyi doğrudan oluşturucuya geçirirken bir yöntemi yazarken <xref:System.Runtime.Serialization.DataContractSerializer> , listeyi hazırlayan kodun güvenli olduğundan ve yalnızca güvenilir veriler üzerinde çalıştığından emin olun.
 
-Yapılandırmada bilinen türleri belirtme yapılandırma dosyası güvenli olduğundan emin olun. Güçlü adlar (tür bulunduğu imzalanmış derlemenin ortak anahtar belirterek), her zaman yapılandırmasında kullanmasına rağmen türün yüklenecek sürümü belirtmez. Yükleyici türü en son sürümü, mümkünse otomatik olarak seçer. Belirli bir sürüm yapılandırması belirtirseniz, aşağıdaki risk çalıştırın: Bir türe gelecekte yayımlanacak bir sürümde giderilen bir güvenlik açığına sahip olabilir, ancak savunmasız sürüm yapılandırmasında açıkça belirtilmediği için yine de yükler.
+Yapılandırmada bilinen türleri belirtirken, yapılandırma dosyasının güvenli olduğundan emin olun. Yapılandırmada her zaman tanımlayıcı adlar kullanın (türün bulunduğu imzalı derlemenin ortak anahtarını belirterek), ancak yüklenecek türün sürümünü belirtmeyin. Tür yükleyicisi, mümkünse en son sürümü otomatik olarak seçer. Yapılandırmada belirli bir sürümü belirtirseniz, aşağıdaki riski çalıştırırsınız: bir tür, gelecekteki bir sürümde düzeltilebilecek bir güvenlik güvenlik açığına sahip olabilir, ancak yapılandırmada açık bir şekilde belirtildiğinden, savunmasız sürüm hala yüklenir.
 
-Çok fazla bilinen türüne sahip olan başka bir klona sahiptir: <xref:System.Runtime.Serialization.DataContractSerializer> Seri hale getirmek ve seri durumdan gerekir her tür için bir giriş ile uygulama etki alanındaki bir önbellek serileştirme/seri durumundan çıkarma kod oluşturur. Bu önbellek, uygulama etki alanı çalıştığı sürece hiçbir zaman kaldırılır. Bu nedenle, bir uygulamanın birçok bilinen türleri kullandığı farkındadır bir saldırganın bir orantısız miktarda bellek kullanmak önbellek neden tüm bu tür, seri durumundan çıkarma neden olabilir.
+Çok sayıda bilinen türün başka bir sonucu vardır:, <xref:System.Runtime.Serialization.DataContractSerializer> uygulama etki alanında serileştirme ve seri durumdan çıkarma gereken her tür için bir giriş içeren bir serileştirme/seri hale getirme kodu önbelleği oluşturur. Bu önbellek, uygulama etki alanı çalıştığı sürece hiçbir zaman temizlenmez. Bu nedenle, bir uygulamanın birçok bilinen türü kullandığını algılayan bir saldırgan bu türlerin serisini kaldırma, önbelleğin orantısız büyük miktarda belleği kullanmasına neden olabilir.
 
-### <a name="preventing-types-from-being-in-an-unintended-state"></a>Tür istenmeyen bir durumda olmasını önleyen
+### <a name="preventing-types-from-being-in-an-unintended-state"></a>Türlerin ISTENMEDEN bir durumda olmasını önlemek
 
-Bir tür uygulanmasını gerektiren iç tutarlılık kısıtlamaları olabilir. Bu kısıtlamalar seri durumundan çıkarma sırasında bozmayı önlemek için dikkatli olunması gerekir.
+Bir tür, Zorlanmış olması gereken iç tutarlılık kısıtlamalarına sahip olabilir. Seri durumdan çıkarma sırasında bu kısıtlamaların kesilmesini önlemek için dikkatli olunmalıdır.
 
-Aşağıdaki örnek bir türün bir spacecraft üzerinde bir hava kilidi durumunu temsil eder ve hem iç hem de dış kapılar aynı anda açılamıyor kısıtlamayı zorlar.
+Aşağıdaki bir tür örneği, bir spaceckft üzerindeki Airlock 'un durumunu temsil eder ve hem iç hem de dış kapıların aynı anda açık olmadığı kısıtlamayı zorlar.
 
 [!code-csharp[DataContractAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/datacontractattribute/cs/overview.cs#3)]
 [!code-vb[DataContractAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#3)]
 
-Bir saldırganın gibi bu, kötü amaçlı bir ileti gönderebilir, kısıtlamaları geçici olarak almak ve sahip geçersiz bir durum nesnesi alınırken istenmeyen ve beklenmeyen sonuçlar.
+Bir saldırgan bunun gibi kötü amaçlı bir ileti gönderebilir ve bu, kısıtlamaları ve nesneyi geçersiz duruma getirmeye karşı istenmeyen ve öngörülemeyen sonuçlara yol açabilir.
 
 ```xml
 <SpaceStationAirlock>
@@ -266,125 +266,125 @@ Bir saldırganın gibi bu, kötü amaçlı bir ileti gönderebilir, kısıtlamal
 </SpaceStationAirlock>
 ```
 
-Bu durum, aşağıdaki noktaları farkına varmadan tarafından önlenebilir:
+Bu durumun aşağıdaki noktalara dikkat ederek kaçınılabilir:
 
-- Zaman <xref:System.Runtime.Serialization.DataContractSerializer> çoğu sınıf, Oluşturucular çalıştırma seri durumdan çıkarır. Bu nedenle, oluşturucuda yapılan herhangi bir durumu yönetim güvenmeyin.
+- <xref:System.Runtime.Serialization.DataContractSerializer>Çoğu sınıfı seri hale geldiğinde, oluşturucular çalışmaz. Bu nedenle, oluşturucuda gerçekleştirilen herhangi bir durum yönetimine güvenmeyin.
 
-- Geri çağırmaları nesne geçerli bir durumda olduğundan emin olmak için kullanın. Geri çağırma ile işaretlenen <xref:System.Runtime.Serialization.OnDeserializedAttribute> seri durumundan çıkarma tamamlandı ve incelemek ve genel durumu düzeltmek için bir fırsat sonra çalıştığından özniteliği özellikle yararlıdır. Daha fazla bilgi için [sürüme dayanıklı serileştirme geri çağırmaları](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).
+- Nesnenin geçerli bir durumda olduğundan emin olmak için geri çağırmaları kullanın. Özniteliği ile işaretlenen geri çağırma <xref:System.Runtime.Serialization.OnDeserializedAttribute> işlemi, seri durumdan çıkarma tamamlandıktan sonra çalıştığı ve genel durumu İnceleme ve düzeltme şansı varsa özellikle yararlıdır. Daha fazla bilgi için bkz. [Sürüm dayanıklı serileştirme geri çağırmaları](version-tolerant-serialization-callbacks.md).
 
-- Veri sözleşmesi türleri hangi özellik ayarlayıcı çağrılmalıdır belirli bir sıraya üzerinde yararlanmayı tasarlamayın.
+- Veri anlaşması türlerini, özellik ayarlayıcılarının çağrılması gereken belirli bir sıraya göre tasarlamayın.
 
-- Eski türleri ile işaretlenen kullanarak ilgileniriz <xref:System.SerializableAttribute> özniteliği. Çoğu .NET Framework uzaktan iletişim kullanmak güvenilir verilerle çalışmak için tasarlanmıştır. Varolan türleri bu özniteliği ile işaretlenmiş ile durum güvenlik düşünülerek tasarlanmıştır değil.
+- Özniteliğiyle işaretlenmiş eski türleri kullanarak dikkatli yapın <xref:System.SerializableAttribute> . Bunların birçoğu yalnızca güvenilir verilerle kullanılmak üzere .NET Framework uzaktan iletişim için tasarlanmıştır. Bu öznitelikle işaretlenen mevcut türler, durum güvenliği göz önünde bulundurularak tasarlanmayabilir.
 
-- Güvenmeyin <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> özelliği <xref:System.Runtime.Serialization.DataMemberAttribute> durumu güvenliği açısından kadar veri sağlamak için özniteliği. Verileri her zaman olabilir `null`, `zero`, veya `invalid`.
+- <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> <xref:System.Runtime.Serialization.DataMemberAttribute> Durum güvenliği açısından verilerin varlığını güvence altına almak için özniteliğinin özelliğine güvenmeyin. Veriler her zaman, `null` `zero` veya olabilir `invalid` .
 
-- Hiçbir zaman ilk önce doğrulamadan bir güvenilmeyen bir veri kaynağından bir nesne grafiğinin seri durumdan güven. Her ayrı nesneyi tam olmayabilir tutarlı bir duruma, ancak nesne grafiğini olabilir. Ayrıca, Nesne grafiği koruma modu devre dışı bırakılmış olsa bile, seri durumdan çıkarılmış grafik aynı nesneye birden çok başvuruya sahip veya döngüsel başvurulara sahip. Daha fazla bilgi için [serileştirme ve seri durumundan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+- Güvenilmeyen bir veri kaynağından Serisi kaldırılan bir nesne grafiğine hiçbir şekilde güvenmez. Tek tek her nesne tutarlı bir durumda olabilir, ancak nesne grafı bir bütün olarak olmayabilir. Ayrıca, nesne grafik koruma modu devre dışı olsa bile, serisi kaldırılan grafikte aynı nesneye birden fazla başvuru olabilir veya döngüsel başvurular olabilir. Daha fazla bilgi için bkz. [serileştirme ve seri durumundan çıkarma](serialization-and-deserialization.md).
 
-### <a name="using-the-netdatacontractserializer-securely"></a>NetDataContractSerializer güvenli bir şekilde kullanma
+### <a name="using-the-netdatacontractserializer-securely"></a>NetDataContractSerializer 'ı güvenli kullanma
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> Türlerine sıkı eşleştirme kullanan bir seri hale getirme altyapısı. Bu benzer <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>. Diğer bir deyişle, .NET Framework derlemesi ve tür adı, gelen verileri okuyarak örneklemek için tür belirler. WCF bir parçası olmasına rağmen bu serileştirme motoruna takma, sağlanan bir yolu yoktur; özel kod için yazılmış olmalıdır. `NetDataContractSerializer` Öncelikle .NET Framework remoting wcf'ye geçiş kolaylaştırmak için sağlanır. Daha fazla bilgi için bkz ilgili bölümde [serileştirme ve seri durumundan çıkarma](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
+, <xref:System.Runtime.Serialization.NetDataContractSerializer> Türlerine sıkı biçimde kullanan bir serileştirme altyapısıdır. Bu, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve ' a benzerdir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Diğer bir deyişle, gelen verilerden .NET Framework derlemeyi ve tür adını okuyarak hangi türün örneklendirilecek olduğunu belirler. WCF 'nin bir parçası olsa da, bu serileştirme altyapısını takma yöntemi değildir; özel kod yazılması gerekir. , `NetDataContractSerializer` Öncelikle .NET Framework uzaktan iletişim IÇIN WCF 'e geçiş kolaylığı sağlar. Daha fazla bilgi için [serileştirme ve seri durumundan çıkarma](serialization-and-deserialization.md)bölümündeki ilgili bölüme bakın.
 
-İleti, her türlü yüklenebilir, işaret edebilir çünkü <xref:System.Runtime.Serialization.NetDataContractSerializer> mekanizması doğası gereği güvenli değil ve yalnızca güvenilir verilerle kullanılmalıdır. Güvenli yalnızca güvenli türler yüklemeye izin veren bir güvenli, tür sınırlaması türü bağlayıcı yazarak hale mümkündür (kullanarak <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> özelliği).
+İletinin kendisi herhangi bir tür yüklenebildiğinden, <xref:System.Runtime.Serialization.NetDataContractSerializer> mekanizma doğal olarak güvenli değildir ve yalnızca güvenilir verilerle kullanılmalıdır. Yalnızca güvenli türlerin yüklenmesine izin veren güvenli, tür sınırlaması bir tür bağlayıcı yazarak güvenli hale getirmek mümkündür ( <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> özelliğini kullanarak).
 
-Bile güvenilir verilerle kullanıldığında, gelen veri yeterince türü yüklemek için özellikle de belirtebilir <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> özelliği <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple>. Uygulamanın dizine veya genel derleme önbelleği erişimi olan herkes, kötü amaçlı bir türü yüklemek için gereken bir yerine yerine kullanabilirsiniz. Her zaman doğru izinleri ayarlayarak uygulamanızın dizinine ve Genel Derleme Önbelleği güvenlik emin olun.
+Güvenilen verilerle birlikte kullanıldığında, gelen veriler, özellikle özelliği olarak ayarlandıysa, yüklenecek türü yeterince belirleyebilir <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> . Uygulamanın dizinine veya genel derleme önbelleğine erişimi olan herkes, yüklenmesi beklenen kötü amaçlı bir türü yerine getirebilir. İzinleri doğru şekilde ayarlayarak uygulamanızın dizininin ve genel derleme önbelleğinin güvenliğinin her zaman emin olun.
 
-Genel olarak kısmen güvenilen kod erişime izin verirseniz, `NetDataContractSerializer` örneği veya aksi halde vekil seçici denetimi (<xref:System.Runtime.Serialization.ISurrogateSelector>) veya serileştirme Bağlayıcısı (<xref:System.Runtime.Serialization.SerializationBinder>), kod üzerinde denetim büyük ölçüde madde Serileştirme/seri durumdan çıkarma işlemi. Örneğin, bunu rastgele türler ekleme, bilginin açığa çıkmasına neden, elde edilen Nesne grafiği veya serileştirilmiş veriler ile değiştirmesine veya sonuç seri hale getirilmiş akış taşması.
+Genel olarak, örneğinize kısmen güvenilen kod erişimine izin verirseniz `NetDataContractSerializer` veya yedek seçiciyi ( <xref:System.Runtime.Serialization.ISurrogateSelector> ) veya seri hale getirme cildi () kontrol ediyorsanız <xref:System.Runtime.Serialization.SerializationBinder> , kod serileştirme/seri kaldırma işlemi üzerinde harika bir denetim uygulayabilir. Örneğin, rastgele türler ekleyebilir, bilgilerin açığa çıkmasına, sonuçta ortaya çıkan nesne grafı veya serileştirilmiş verilerle oynanmasına ya da sonuç olarak seri hale getirilmiş akış taşmasına yol açabilir.
 
-İle ilgili başka bir güvenlik sorunu `NetDataContractSerializer` hizmeti, kötü amaçlı kod yürütme tehdit reddi. Kullanırken `NetDataContractSerializer`, her zaman ayarlanan <xref:System.Runtime.Serialization.NetDataContractSerializer.MaxItemsInObjectGraph%2A> kotası için güvenli bir değer. Tarafından bu kota boyutu sınırlı nesne dizisini ayırır küçük, kötü amaçlı bir ileti oluşturmak daha kolaydır.
+İle ilgili başka bir güvenlik, `NetDataContractSerializer` kötü amaçlı kod yürütme tehdidi değil, hizmet reddine neden olur. Kullanırken `NetDataContractSerializer` , her zaman <xref:System.Runtime.Serialization.NetDataContractSerializer.MaxItemsInObjectGraph%2A> kotayı güvenli bir değer olarak ayarlayın. Boyutu yalnızca bu kotayla sınırlı olan bir nesne dizisini ayıran küçük bir kötü amaçlı ileti oluşturmak kolaydır.
 
-### <a name="xmlserializer-specific-threats"></a>XmlSerializer özgü tehditler
+### <a name="xmlserializer-specific-threats"></a>XmlSerializer 'a özgü tehditler
 
-<xref:System.Xml.Serialization.XmlSerializer> Güvenlik modeli benzer <xref:System.Runtime.Serialization.DataContractSerializer>. Ancak, birkaç tehditler için benzersiz <xref:System.Xml.Serialization.XmlSerializer>.
+<xref:System.Xml.Serialization.XmlSerializer>Güvenlik modeli, ile benzerdir <xref:System.Runtime.Serialization.DataContractSerializer> . Ancak, birkaç tehdit için benzersizdir <xref:System.Xml.Serialization.XmlSerializer> .
 
-<xref:System.Xml.Serialization.XmlSerializer> Oluşturur *serileştirme derlemelerinin* gerçekten serileştirir ve seri durumdan çıkarır; kodu içeren çalışma zamanında bu derlemeleri bir geçici dosyalar dizininde oluşturulur. Başka bir işlem veya kullanıcı bu dizine erişim hakkı varsa, serileştirme/seri durumundan çıkarma kod ile rastgele kod yazabilir. <xref:System.Xml.Serialization.XmlSerializer> Sonra güvenlik bağlamı, serileştirme/seri kaldırma yerine kodla bu kod çalışır. İzinleri, bunu önlemek için geçici dosyalar dizini üzerinde doğru şekilde ayarlandığından emin olun.
+, <xref:System.Xml.Serialization.XmlSerializer> Çalışma zamanında *serileştirme derlemeleri* oluşturur ve bunları seri hale getirir ve onları yeniden çıkarır; bu derlemeler geçici dosyalar dizininde oluşturulur. Başka bir işlem veya kullanıcının bu dizine erişim hakları varsa, bu, rastgele kodla serileştirme/seri kaldırma kodunun üzerine yazabilir. <xref:System.Xml.Serialization.XmlSerializer>Ardından, serileştirme/seri durumdan çıkarma kodu yerine bu kodu güvenlik bağlamını kullanarak çalıştırır. Bunun oluşmasını engellemek için izinlerin geçici dosyalar dizininde doğru ayarlandığından emin olun.
 
-<xref:System.Xml.Serialization.XmlSerializer> Ayrıca hangi kullandığı önceden oluşturulan serileştirme derlemeleri çalışma zamanında üretmek yerine bir moda sahiptir. Bu mod tetiklenen her <xref:System.Xml.Serialization.XmlSerializer> uygun serileştirme derlemesi bulabilirsiniz. <xref:System.Xml.Serialization.XmlSerializer> Seri hale getirme derlemesi türleri serileştirilen içeren derleme imzalamak için kullanılan aynı anahtarla oturumu olup olmadığını denetler. Serileştirme bütünleştirilmiş kodları gösterebilecek kötü amaçlı derlemelerden koruma sunar. Serializable türler içeren derleme değilse, ancak, imzalı <xref:System.Xml.Serialization.XmlSerializer> doğru ada sahip derlemeler kullanır ve bu denetimi gerçekleştiremezsiniz. Kötü amaçlı kod çalıştıran bu mümkün kılar. Her zaman, serializable türler içeren derlemeler oturum veya uygulamanızın dizinine ve kötü amaçlı derlemelerin giriş önlemek için Genel Derleme Önbelleği erişimi sıkı bir şekilde denetlemenizi sağlar.
+<xref:System.Xml.Serialization.XmlSerializer>Ayrıca, çalışma zamanında oluşturmak yerine önceden oluşturulmuş serileştirme derlemelerinin kullanıldığı bir moda sahiptir. Bu mod <xref:System.Xml.Serialization.XmlSerializer> uygun bir serileştirme derlemesini her bulabileceği zaman tetiklenir. <xref:System.Xml.Serialization.XmlSerializer>Serileştirme derlemesinin seri hale getirilen türleri içeren derlemeyi imzalamak için kullanılan anahtarla imzalanmış olup olmadığını denetler. Bu, kötü amaçlı derlemelerden serileştirme derlemeleri olarak yürütülen koruma sunar. Ancak, serileştirilebilir türlerinizi içeren derleme imzalanmamışsa, <xref:System.Xml.Serialization.XmlSerializer> Bu denetimi gerçekleştiremez ve doğru ada sahip herhangi bir derlemeyi kullanır. Bu, kötü amaçlı kod çalışmasını mümkün hale getirir. Yalnızca serileştirilebilir türlerinizi içeren derlemeleri veya kötü amaçlı derlemelerin giriş durumunu engellemek için uygulamanızın dizinine ve genel derleme önbelleğine erişimi sıkı bir şekilde denetleyin.
 
-<xref:System.Xml.Serialization.XmlSerializer> Bir hizmet reddi saldırısı tabi olabilir. <xref:System.Xml.Serialization.XmlSerializer> Sahip olmadığı bir `MaxItemsInObjectGraph` kota (kullanılabilir olduğu <xref:System.Runtime.Serialization.DataContractSerializer>). Bu nedenle, nesneler, yalnızca ileti boyutuyla sınırlı miktarda bir rastgele çıkarır.
+<xref:System.Xml.Serialization.XmlSerializer>Hizmet reddi saldırısına tabi olabilir. <xref:System.Xml.Serialization.XmlSerializer>Bir `MaxItemsInObjectGraph` kotası yoktur (üzerinde olduğu gibi <xref:System.Runtime.Serialization.DataContractSerializer> ). Bu nedenle, yalnızca ileti boyutuyla sınırlı olan, rastgele bir nesne miktarını serileştirir.
 
-### <a name="partial-trust-threats"></a>Kısmi güven tehditler
+### <a name="partial-trust-threats"></a>Kısmi güven tehditleri
 
-Kısmi güven ile çalışan kod için ilgili tehditleri ile ilgili aşağıdaki sorunlar unutmayın. Bu tehditler, diğer saldırı senaryoları (belirli bir dizeyi ve ardından seri durumdan çıkarılırken oluşturan örneğin kısmen güvenilen kodu) ile birlikte kötü amaçlı kod kısmen güvenilen yanı sıra kötü amaçlı kısmen güvenilen kod içerir.
+Kısmi güvenle çalışan kodla ilgili tehditlere ilişkin aşağıdaki kaygılara dikkat edin. Bu tehditler, kötü amaçlı kısmen güvenilen kodun yanı sıra diğer saldırı senaryolarıyla birlikte kötü amaçlı kısmen güvenilen kod içerir (örneğin, belirli bir dizeyi oluşturan ve serisini kaldırma kısmen güvenilen kod).
 
-- Hiçbir zaman herhangi bir seri hale getirme bileşeni kullanırken, bu tür bir kullanımdan önce herhangi bir izni bile, onay kapsamında tüm serileştirme senaryodur ve herhangi bir güvenilir olmayan verileri veya nesneleri ile ilgili olmayan onay. Konusu kullanımları, güvenlik açıklarına neden olabilir.
+- Herhangi bir serileştirme bileşeni kullanırken, tüm serileştirme senaryosu sizin onay kapsamı içinde olsa bile, bu kullanımdan önce hiçbir izni hiçbir zaman onaylama, ancak güvenilmeyen herhangi bir veri veya nesne ile ilgilenmeyin. Bu tür kullanımlar güvenlik açıklarına neden olabilir.
 
-- Kısmen güvenilen kod genişletilebilirlik noktaları (yedekleri) serileştirilmekte olan tür veya başka bir yolla yoluyla seri hale getirme işlemi üzerinde denetime sahip olduğu durumlarda kısmen güvenilen kod büyük miktarda çıktısını almak seri hale getirici neden olabilir Hizmet Reddi (DoS) bu akışın alıcısına neden olabilecek serileştirilmiş akış verileri. DoS tehditlere karşı duyarlı bir hedef yönelik verileri seri hale getirme değil kısmen güvenilen türleri serileştirmek veya aksi kısmen güvenilen kod denetim serileştirme izin.
+- Kısmen güvenilen kodun, serileştirme süreci üzerinde, genişletilebilirlik noktaları (yedeklerin kapıları), serileştirildiği türler veya diğer yollarla denetimi olduğu durumlarda, kısmen güvenilen kod seri hale getiricinin büyük miktarda verinin serileştirilmiş akışa çıkış olmasına neden olabilir ve bu da bu akışın alıcısından hizmet reddi (DoS) oluşmasına neden olabilir. DoS tehditleri açısından duyarlı olan bir hedef için tasarlanan verileri serileştirdiyseniz kısmen güvenilen türler serileştirmeyin veya kısmen güvenilen kod denetimi serileştirmesine izin vermeyin.
 
-- Kısmen güvenilen kod erişime izin verirseniz, <xref:System.Runtime.Serialization.DataContractSerializer> örneği veya aksi halde denetim [veri anlaşması yedekleri](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), serileştirme/seri durumdan çıkarma işlemi üzerinde denetim büyük ölçüde çalışma. Örneğin, bunu rastgele türler ekleme, bilginin açığa çıkmasına neden, elde edilen Nesne grafiği veya serileştirilmiş veriler ile değiştirmesine veya sonuç seri hale getirilmiş akış taşması. Eşdeğer <xref:System.Runtime.Serialization.NetDataContractSerializer> tehdit "Kullanarak NetDataContractSerializer güvenli bir şekilde" bölümünde açıklanmıştır.
+- Örneğiniz için kısmen güvenilen kod erişimine izin verirseniz <xref:System.Runtime.Serialization.DataContractSerializer> veya [veri sözleşmesinin yedeklerin kapılarını](../extending/data-contract-surrogates.md)kontrol ediyorsanız, serileştirme/seri kaldırma işlemi üzerinde çok fazla denetim uygulanabilir. Örneğin, rastgele türler ekleyebilir, bilgilerin açığa çıkmasına, sonuçta ortaya çıkan nesne grafı veya serileştirilmiş verilerle oynanmasına ya da sonuç olarak seri hale getirilmiş akış taşmasına yol açabilir. Eşdeğer <xref:System.Runtime.Serialization.NetDataContractSerializer> tehdit, "NetDataContractSerializer güvenli kullanımı" bölümünde açıklanmaktadır.
 
-- Varsa <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği bir türe uygulandı (veya türü olarak işaretlenmiş <xref:System.SerializableAttribute> ancak <xref:System.Runtime.Serialization.ISerializable>), seri durumdan çıkarıcı, genel olmayan ya da talepleri tarafından korunan tüm oluşturucular olsa bile, böyle bir türü örneği oluşturabilirsiniz.
+- <xref:System.Runtime.Serialization.DataContractAttribute>Öznitelik bir türe uygulanmışsa (veya olarak işaretlenen tür olarak işaretlenmiş <xref:System.SerializableAttribute> ancak yoksa <xref:System.Runtime.Serialization.ISerializable> ), tüm oluşturucular genel olmayan veya taleplerine göre korunsa bile, seri hale getirici böyle bir türün bir örneğini oluşturabilir.
 
-- Hiçbir zaman seri durumundan çıkarma sonucu verileri seri durumdan güvenilir değilse ve tüm bilinen türler güvendiğiniz türleri olan güvenin. Bilinen türler uygulama yapılandırma dosyasından yüklenen değildir (ancak bilgisayar yapılandırma dosyasından yüklenir) unutmayın kısmi güvende çalışan.
+- Seri durumdan çıkarılacak veriler güvenilir olmadığından ve bilinen tüm türlerin güvendiğiniz türler olduğundan emin değilseniz, seri durumdan çıkarma sonucuna hiçbir şekilde güvenmeyin. Bilinen türlerin, kısmi güvende çalışırken uygulama yapılandırma dosyasından yüklenmediğini (ancak bilgisayar yapılandırma dosyasından yüklendiğini) unutmayın.
 
-- Geçirirseniz bir <xref:System.Runtime.Serialization.DataContractSerializer> örneği ile bir vekil eklenen kısmen güvenilen kod için kod, tüm bu yedek değiştirilebilir ayarlarını değiştirebilirsiniz.
+- <xref:System.Runtime.Serialization.DataContractSerializer>Kısmen güvenilen koda eklenen bir yedek içeren bir örnek geçirirseniz, kod o vekil üzerinde değiştirilebilir tüm ayarları değiştirebilir.
 
-- Bir seri durumdan çıkarılmış nesne için XML okuyucusu (veya veri sıralamadaki) gelen kısmen güvenilen koddan elde edilen seri durumdan çıkarılmış nesne güvenilir olmayan verileri işle.
+- Seri durumdan çıkarılmış bir nesne için, XML okuyucu (veya içindeki veriler) kısmen güvenilen koddan geliyorsa, sonuçta elde edilen seri durumdan çıkarılmış nesneyi güvenilmeyen veriler olarak değerlendirin.
 
-- Olgu, <xref:System.Runtime.Serialization.ExtensionDataObject> türünde hiçbir Genel üyeler içerdiği verilerin güvenli olduğunu gelmez. Örneğin, bazı verilerin bulunduğu, kısmen güvenilen kod, nesne sonra elle bir nesneye bir ayrıcalıklı veri kaynağından seri durumdan, kısmen güvenilen kod verileri okuyabilir `ExtensionDataObject` nesneyi seri hale getirme tarafından. Ayarlamayı düşünün <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> için `true` ne zaman ayrıcalıklı bir veri kaynağından daha sonraki bir nesnede seri durumdan çıkarılırken izin ver geçirilen kısmen güvenilen kodu.
+- <xref:System.Runtime.Serialization.ExtensionDataObject>Türün ortak üyesi olmaması aslında, içindeki verilerin güvenli olduğu anlamına gelmez. Örneğin, ayrıcalıklı bir veri kaynağından bazı verilerin bulunduğu bir nesne olarak seri durumdan çıkardıysanız ve bu nesneyi kısmen güvenilen koda verirseniz, kısmen güvenilen kod `ExtensionDataObject` nesneyi serileştirerek içindeki verileri okuyabilir. <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> `true` Ayrıcalıklı bir veri kaynağından, daha sonra kısmen güvenilen koda geçirilen bir nesneye ne zaman seri durumdan çıkarılırken, öğesini olarak ayarlamayı göz önünde bulundurun.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tam güvende seri hale getirilmesini özel, korumalı, dahili ve genel üyeleri destekler. Ancak, yalnızca Genel üyeler kısmi güvende serileştirilebilir. A <xref:System.Security.SecurityException> uygulamanın genel olmayan üye bir'seri hale getirme girişiminde bulunursa oluşturulur.
+- <xref:System.Runtime.Serialization.DataContractSerializer>ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tam güvende özel, korunan, iç ve ortak üyelerin serileştirmesini destekler. Ancak kısmi güvende yalnızca ortak üyeler seri hale getirilebilir. Bir <xref:System.Security.SecurityException> uygulama genel olmayan bir üyeyi serileştirmek istediğinde, oluşturulur.
 
-    İç izin vermek veya kısmi güvende seri hale için iç korumalı üyeler <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme özniteliği. Bu öznitelik, iç üyelerini bazı diğer derlemeye görünür olduğunu bildirmek bir derleme sağlar. Bu durumda, iç üyelerini seri olmasını isteyen bir derleme iç üyelerini System.Runtime.Serialization.dll için görünür olduğunu bildirir.
+    İç veya korumalı iç üyelerin kısmi güvende serileştirilmesine izin vermek için <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme özniteliğini kullanın. Bu öznitelik, bir derlemenin iç üyelerinin diğer bir derlemede görünür olduğunu bildirmesine izin verir. Bu durumda, iç üyelerinin serileştirilmesi isteyen bir derleme, iç üyelerinin System. Runtime. Serialization. dll ' ye görünür olduğunu bildirir.
 
-    Bu yaklaşımın avantajı, bir yükseltilmiş kod oluşturma yolu gerektirmez olmasıdır.
+    Bu yaklaşımın avantajı, yükseltilmiş kod oluşturma yolu gerektirmemelidir.
 
-    Aynı anda iki ana dezavantajları vardır.
+    Aynı zamanda, iki önemli olumsuz de vardır.
 
-    İlk dezavantajı, katılım özelliğidir <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme genelinde bir özniteliktir. Diğer bir deyişle, yalnızca belirli bir sınıfı serileştirilmiş iç üyeleri olduğunu belirtemezsiniz. Elbette, yine de belirli bir iç üyeyi basitçe değil ekleyerek serileştirilecek değil seçebileceğiniz bir <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği bu üye için. Benzer şekilde, bir geliştirici, özel veya korumalı, hafif görünürlük kaygıları yerine bir üye iç yapmak de seçebilirsiniz.
+    Birinci dezavantajı, özniteliğin kabul etme özelliğinin <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> bütünleştirilmiş kod genelinde bir özelliktir. Diğer bir deyişle, yalnızca belirli bir sınıfın iç üyeleri seri hale getirilebilir olduğunu belirtemezsiniz. Kuşkusuz, belirli bir iç üyeyi seri hale getirmeniz gerekmez, yalnızca bu üyeye bir öznitelik eklememeyi seçebilirsiniz <xref:System.Runtime.Serialization.DataMemberAttribute> . Benzer şekilde, bir geliştirici, hafif görünürlük sorunları ile özel veya korumalı bir üye oluşturmak da tercih edebilir.
 
-    İkinci dezavantajı, hala özel veya korumalı üyeler desteklemediğini ' dir.
+    İkinci dezavantajı, hala özel veya korumalı üyeleri desteklemezler.
 
-    Kullanımını göstermek için <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> kısmi güvende öznitelik, aşağıdaki program göz önünde bulundurun:
+    Kısmi güvende özniteliğin kullanımını göstermek için <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> aşağıdaki programı göz önünde bulundurun:
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    Yukarıdaki örnekte `PermissionsHelper.InternetZone` karşılık gelen <xref:System.Security.PermissionSet> kısmi güven için. Şimdi, olmadan <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> özniteliği, uygulama başarısız olur, özel durum atma bir <xref:System.Security.SecurityException> gösteren genel olmayan üyelere kısmi güvende serileştirilemiyor.
+    Yukarıdaki örnekte, `PermissionsHelper.InternetZone` <xref:System.Security.PermissionSet> kısmi güven için öğesine karşılık gelir. Artık, özniteliği olmadan <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> uygulama başarısız olur, <xref:System.Security.SecurityException> genel olmayan üyelerin kısmi güvende serileştirilmediğini belirten bir.
 
-    Ancak, aşağıdaki satırı için kaynak dosyası eklerseniz program başarıyla çalışır.
+    Ancak, kaynak dosyaya aşağıdaki satırı eklediğimiz takdirde program başarıyla çalıştırılır.
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#2)]
 
 ## <a name="other-state-management-concerns"></a>Diğer durum yönetimi konuları
 
-Nesne durumu yönetimi ile ilgili bazı sorunları söz şunlardır:
+Nesne durumu yönetimiyle ilgili diğer konular aşağıda yer alınır:
 
-- Akış tabanlı programlama modeli ile bir akış aktarma kullanırken, bir ileti gelirse iletisinin işlenmesi oluşur. İletiyi gönderen, daha fazla içerik bekleniyorsa kodunuzu beklenmeyen bir durumda bırakır. akış ortasında gönderme işlemini iptal. Genel olarak, eksiksiz olmasının akışta güvenmeyin ve herhangi bir iş akışı geri iptal edildi durumunda, alınamaz akış tabanlı bir işlemde gerçekleştirmeyin. Bu durum burada bir ileti olabilir hatalı biçimlendirilmiş akış gövdeden sonra durum için de geçerlidir (örneğin, SOAP Zarfı için bir bitiş etiketi eksik olabilir veya ikinci bir ileti gövdesi olabilir).
+- Akış temelli programlama modelini bir akış taşımasıyla kullanırken ileti geldiğinde ileti işleme oluşur. İletiyi gönderen, akışın ortasında Gönder işlemini iptal edebilir ve daha fazla içerik bekleniyorsa kodunuzu öngörülemeyen bir durumda bırakır. Genel olarak, akışın tamamlanmamakta olmaması ve akışın durdurulduğu durumlarda geri alınamaz bir akış tabanlı işlemde herhangi bir iş gerçekleştirmeyin. Bu durum, akış gövdesinden sonra bir iletinin hatalı biçimlendirilmiş olabileceği durumlar için de geçerlidir (örneğin, SOAP Zarfı için bir bitiş etiketi eksik olabilir veya ikinci bir ileti gövdesi olabilir).
 
-- Kullanarak `IExtensibleDataObject` özellik derleyicisindeki hassas verileri neden olabilir. Güvenilmeyen bir kaynaktan gelen veriler ile veri sözleşmeleri içine kabul ettiğiniz, `IExtensibleObjectData` ve daha sonra bu iletileri oturumunuz nereden güvenli bir kanal üzerinde yeniden yayma, büyük olasılıkla bildiğiniz bir şey hakkında veriler için özgün olduğunu belgelemekten. Ayrıca, genel durumu gönderdiğiniz veri bilinen ve bilinmeyen parçalarını dikkate alın, geçersiz olabilir. Ya da seçmeli olarak uzantısı data özelliğini ayarlayarak bu durumdan kaçınmak `null` veya seçmeli olarak devre dışı bırakarak `IExtensibleObjectData` özelliği.
+- Özelliği kullanmak `IExtensibleDataObject` gizli verilerin oluşturulmasına neden olabilir. Güvenilmeyen bir kaynaktan veri sözleşmeleri içeren verileri kabul ediyorsanız `IExtensibleObjectData` ve daha sonra iletilerin imzalandığı bir güvenli kanalda yeniden yaydıysanız, hiçbir şeyi bildiğiniz veriler için büyük olasılıkla vouching olursunuz. Ayrıca, gönderdiğiniz genel durum hem bilinen hem de bilinmeyen veri parçalarını hesaba aldıysanız geçersiz olabilir. Uzantı verisi özelliğini seçerek `null` veya özelliği seçmeli olarak devre dışı bırakarak bu durumdan kaçının `IExtensibleObjectData` .
 
-## <a name="schema-import"></a>Şema içeri aktarma
+## <a name="schema-import"></a>Şemayı Içeri aktarma
 
-Normalde, türleri oluşturmak için Şemayı içeri aktarma işlemi yalnızca tasarım zamanında, örneğin, kullanırken gerçekleşir [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) istemci sınıfı oluşturmak için bir Web hizmeti. Ancak, daha gelişmiş senaryolarda, çalışma zamanında şema işleyebilir. Bunun yapılması hizmet reddi riskleri kullanıma sunabileceğiniz dikkat edin. Bazı şema içeri aktarılacak uzun sürebilir. Hiçbir zaman kullanmayın <xref:System.Xml.Serialization.XmlSerializer> şema içeri aktarma bileşen şemaları büyük olasılıkla güvenilmeyen bir kaynaktan gelip gelmediğine senaryolarda.
+Normalde, türleri oluşturmak için şemayı içeri aktarma işlemi yalnızca tasarım zamanında gerçekleşir, örneğin, bir Web hizmetindeki [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , bir istemci sınıfı oluşturmak için. Ancak, daha Gelişmiş senaryolarda, çalışma zamanında şemayı işleyebilirsiniz. Bunu yapmanın, hizmet reddi risklerine maruz bırakacağına dikkat edin. Bazı şemanın içeri aktarılması uzun zaman alabilir. <xref:System.Xml.Serialization.XmlSerializer>Şemalar muhtemelen güvenilmeyen bir kaynaktan geliyorsa, bu senaryolarda hiçbir şekilde şema içeri aktarma bileşenini kullanmayın.
 
-## <a name="threats-specific-to-aspnet-ajax-integration"></a>ASP.NET AJAX tümleştirme özgü tehditler
+## <a name="threats-specific-to-aspnet-ajax-integration"></a>ASP.NET AJAX tümleştirmesine özgü tehditler
 
-Kullanıcı ne zaman uygulayan <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> veya <xref:System.ServiceModel.Description.WebHttpBehavior>, WCF, hem XML hem de JSON iletileri kabul edebilen bir uç noktasını kullanıma sunar. Ancak, hem XML okuyucusu ve JSON okuyucu tarafından kullanılan okuyucu kotaları, yalnızca bir dizi yoktur. Bazı kota ayarları bir okuyucu için uygun ancak diğer çok büyük olabilir.
+Kullanıcı veya uyguladığı zaman <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> <xref:System.ServiceModel.Description.WebHttpBehavior> , WCF hem XML hem de JSON iletilerini kabul edebilecek bir uç nokta gösterir. Ancak, hem XML okuyucu hem de JSON okuyucusu tarafından kullanılan tek bir okuyucu kotaları kümesi vardır. Bazı Kota ayarları bir okuyucu için uygun olabilir ancak diğeri için çok büyük olabilir.
 
-Uygularken `WebScriptEnablingBehavior`, kullanıcı uç noktasında bir JavaScript proxy'si kullanıma sunmak için olanağına sahiptir. Aşağıdaki güvenlik sorunları dikkate alınmalıdır:
+Uygularken `WebScriptEnablingBehavior` , kullanıcının uç noktada bir JavaScript proxy 'si sunma seçeneği vardır. Aşağıdaki güvenlik sorunları göz önünde bulundurulmalıdır:
 
-- JavaScript proxy'si inceleyerek (işlem adları, parametre adları vb.) hizmeti hakkında bilgi elde edilebilir.
+- Hizmet hakkındaki bilgiler (işlem adları, parametre adları vb.), JavaScript proxy 'si incelenerek elde edilebilir.
 
-- JavaScript uç noktası kullanırken, hassas ve özel bilgileri istemci Web tarayıcısının önbelleğine saklanması gerekir.
+- JavaScript uç noktası kullanılırken, hassas ve özel bilgiler istemci Web tarayıcısı önbelleğinde tutulabilir.
 
-## <a name="a-note-on-components"></a>Not bileşenleri
+## <a name="a-note-on-components"></a>Bileşenlere bir göz
 
-WCF esnek ve özelleştirilebilir bir sistemdir. Bu konunun içeriği en yaygın WCF kullanım senaryoları üzerinde odaklanın. Ancak, birçok farklı şekilde WCF sağlayan bileşenleri oluşturmak mümkündür. Her bir bileşenini kullanarak güvenlik etkilerini anlamak önemlidir. Özellikle:
+WCF esnek ve özelleştirilebilir bir sistemdir. Bu konunun içeriklerinin çoğu, en yaygın WCF kullanımı senaryolarına odaklanmaktadır. Ancak, WCF bileşenleri oluşturmak için birçok farklı yol vardır. Her bileşeni kullanmanın güvenlik etkilerine ilişkin etkileri anlamak önemlidir. Özellikle:
 
-- XML okuyucular kullanmalısınız okuyucular kullanarak <xref:System.Xml.XmlDictionaryReader> sınıfı, aksine başka bir okuyucu sağlar. Güvenli okuyucular kullanılarak oluşturulur <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A>, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A>, veya <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> yöntemleri. Kullanmayın <xref:System.Xml.XmlReader.Create%2A> yöntemi. Her zaman okuyucular güvenli kotaları yapılandırın. Yalnızca WCF güvenli XML okuyucular ile kullanıldığında, WCF serileştirme motorlarında güvenlidir.
+- XML okuyucuları kullanmanız gerektiğinde, <xref:System.Xml.XmlDictionaryReader> sınıfının diğer okuyucuların aksine sağladığı okuyucuları kullanın. Güvenli okuyucular <xref:System.Xml.XmlDictionaryReader.CreateTextReader%2A> ,, <xref:System.Xml.XmlDictionaryReader.CreateBinaryReader%2A> veya yöntemleri kullanılarak oluşturulur <xref:System.Xml.XmlDictionaryReader.CreateMtomReader%2A> . <xref:System.Xml.XmlReader.Create%2A>Yöntemini kullanmayın. Okuyucuları her zaman güvenli kotalar ile yapılandırın. WCF 'deki serileştirme motorları yalnızca WCF 'den güvenli XML okuyucuları ile birlikte kullanıldığında güvenlidir.
 
-- Kullanırken <xref:System.Runtime.Serialization.DataContractSerializer> potansiyel olarak güvenilir olmayan verileri seri durumdan çıkarılacak her zaman ayarlamak <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> özelliği.
+- , <xref:System.Runtime.Serialization.DataContractSerializer> Güvenilir olmayan verileri seri durumdan çıkarmak için kullanırken, her zaman <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A> özelliği ayarlayın.
 
-- Bir ileti oluştururken şu ayarları yapın `maxSizeOfHeaders` parametresi varsa `MaxReceivedMessageSize` yeterli koruma sağlamaz.
+- Bir ileti oluştururken, `maxSizeOfHeaders` `MaxReceivedMessageSize` yeterli koruma sunmıyorsa parametresini ayarlayın.
 
-- Bir kodlayıcı oluştururken, her zaman ilgili kotalar gibi yapılandırma `MaxSessionSize` ve `MaxBufferSize`.
+- Kodlayıcı oluştururken, ve gibi ilgili kotaları her zaman yapılandırın `MaxSessionSize` `MaxBufferSize` .
 
-- Bir XPath İleti Filtresi kullanırken ayarlayın <xref:System.ServiceModel.Dispatcher.XPathMessageFilter.NodeQuota%2A> filtre ziyaret eder XML düğümüyle miktarını sınırlamak için. Birçok düğüm ziyaret etmenize gerek kalmadan işlem uzun sürebilir XPath ifadeleri kullanmayın.
+- Bir XPath ileti filtresi kullanırken, <xref:System.ServiceModel.Dispatcher.XPathMessageFilter.NodeQuota%2A> filtrenin ziyaret ettığı XML düğümü miktarını sınırlamak için öğesini ayarlayın. Çok sayıda düğüm ziyaret etmeden hesaplanması uzun süren XPath ifadeleri kullanmayın.
 
-- Genel olarak, bir kota kabul eden herhangi bir bileşeni kullanırken, kendi güvenlik etkilerini anlamak ve güvenli bir değere ayarlayın.
+- Genel olarak, kota kabul eden herhangi bir bileşeni kullanırken, güvenlik etkilerini anlayın ve güvenli bir değere ayarlayın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Veri Anlaşması Bilinen Türler](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Veri Anlaşması Bilinen Türler](data-contract-known-types.md)

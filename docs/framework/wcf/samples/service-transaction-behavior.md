@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 38ad03d64d95e0653fba8018c59c62db9a698096
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 0be5bf0dbe6416febb898fb5150c5a516c8b0969
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715103"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591533"
 ---
 # <a name="service-transaction-behavior"></a>Hizmet İşlem Davranışı
 
-Bu örnek, hizmet işlem davranışını denetlemek için istemci ile eşgüdümlü bir işlemin ve ServiceBehaviorAttribute ve OperationBehaviorAttribute ayarlarının kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md) Başlarken hizmetini temel alır, ancak bir veritabanı tablosunda gerçekleştirilen işlemlerin sunucu günlüğünü ve Hesaplayıcı işlemleri için durum bilgisi olan bir çalışan toplamı korumak üzere genişletilir. Sunucu günlüğü tablosuna kalıcı yazma işlemleri, istemci ile eşgüdümlü bir işlemin sonucuna bağımlıdır. istemci işlemi tamamlanmazsa, Web hizmeti işlemi veritabanı güncelleştirmelerinin yürütülmemesini sağlar.
+Bu örnek, hizmet işlem davranışını denetlemek için istemci ile eşgüdümlü bir işlemin ve ServiceBehaviorAttribute ve OperationBehaviorAttribute ayarlarının kullanımını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır, ancak bir veritabanı tablosunda gerçekleştirilen işlemlerin sunucu günlüğünü ve Hesaplayıcı işlemleri için durum bilgisi olan bir çalışan toplamı korumak üzere genişletilir. Sunucu günlüğü tablosuna kalıcı yazma işlemleri, istemci ile eşgüdümlü bir işlemin sonucuna bağımlıdır. istemci işlemi tamamlanmazsa, Web hizmeti işlemi veritabanı güncelleştirmelerinin yürütülmemesini sağlar.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -40,7 +40,7 @@ public interface ICalculator
 }
 ```
 
-Gelen işlem akışını etkinleştirmek için hizmet, transactionFlow özniteliği `true`olarak ayarlanan sistem tarafından sağlanmış wsHttpBinding ile yapılandırılır. Bu bağlama, birlikte çalışabilen WSAtomicTransactionOctober2004 protokolünü kullanır:
+Gelen işlem akışını etkinleştirmek için hizmet, transactionFlow özniteliği olarak ayarlanmış sistem tarafından sağlanmış wsHttpBinding ile yapılandırılır `true` . Bu bağlama, birlikte çalışabilen WSAtomicTransactionOctober2004 protokolünü kullanır:
 
 ```xml
 <bindings>
@@ -93,25 +93,25 @@ client.Close();
 
 Hizmette, hizmet işlem davranışını etkileyen üç öznitelik vardır ve bunu aşağıdaki yollarla yapabilirler:
 
-- `ServiceBehaviorAttribute`:
+- Üzerinde `ServiceBehaviorAttribute` :
 
-  - `TransactionTimeout` özelliği, bir işlemin tamamlaması gereken zaman dilimini belirtir. Bu örnekte, 30 saniyeye ayarlanır.
+  - `TransactionTimeout`Özelliği, bir işlemin tamamlaması gereken zaman dilimini belirtir. Bu örnekte, 30 saniyeye ayarlanır.
 
-  - `TransactionIsolationLevel` özelliği, hizmetin desteklediği yalıtım düzeyini belirtir. İstemcinin yalıtım düzeyini eşleştirmek için bu gereklidir.
+  - `TransactionIsolationLevel`Özelliği, hizmetin desteklediği yalıtım düzeyini belirtir. İstemcinin yalıtım düzeyini eşleştirmek için bu gereklidir.
 
-  - `ReleaseServiceInstanceOnTransactionComplete` özelliği, bir işlem tamamlandığında hizmet örneğinin geri dönüştürülüp dönüştürülmeyeceğini belirtir. Hizmet, `false`olarak ayarlanarak, işlem istekleri genelinde aynı hizmet örneğini tutar. Bu, toplam çalışma sağlamak için gereklidir. `true`olarak ayarlanırsa, tamamlanan her eylemden sonra yeni bir örnek oluşturulur.
+  - `ReleaseServiceInstanceOnTransactionComplete`Özelliği, bir işlem tamamlandığında hizmet örneğinin geri dönüştürülüp dönüştürülmeyeceğini belirtir. Hizmet, olarak ayarlanarak `false` , işlem istekleri genelinde aynı hizmet örneğini tutar. Bu, toplam çalışma sağlamak için gereklidir. Olarak ayarlanırsa `true` , tamamlanan her eylemden sonra yeni bir örnek oluşturulur.
 
-  - `TransactionAutoCompleteOnSessionClose` özelliği, oturum kapandığında bekleyen işlemlerin tamamlanıp tamamlanmadığını belirtir. `false`olarak ayarlayarak, tek tek işlemler, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> özelliğini `true` olarak veya işlemleri tamamlamaya yönelik <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> yöntemine açıkça bir çağrı gerektirecek şekilde ayarlamanız gerekir. Bu örnekte her iki yaklaşım da gösterilmektedir.
+  - `TransactionAutoCompleteOnSessionClose`Özelliği, oturum kapandığında bekleyen işlemlerin tamamlanıp tamamlanmadığını belirtir. `false`' I ' a ayarlayarak, tek tek işlemler, <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete?displayProperty=nameWithType> özelliği, `true` işlemleri tamamlamaya yönelik bir yönteme çağrı yapmak ya da açıkça gerektirmek için gerekir <xref:System.ServiceModel.OperationContext.SetTransactionComplete?displayProperty=nameWithType> . Bu örnekte her iki yaklaşım da gösterilmektedir.
 
-- `ServiceContractAttribute`:
+- Üzerinde `ServiceContractAttribute` :
 
-  - `SessionMode` özelliği, hizmetin uygun istekleri mantıksal bir oturumla nasıl ilişkili olduğunu belirtir. Bu hizmet, OperationBehaviorAttribute TransactionAutoComplete özelliğinin `false` (çarp ve Böl) olarak ayarlandığı işlemleri içerdiğinden, `SessionMode.Required` belirtilmesi gerekir. Örneğin, çarpma işlemi, işlemini tamamlamaz ve bunun yerine `SetTransactionComplete` yöntemi kullanılarak tamamlamaya bölmek için sonraki bir çağrıya bağımlıdır. hizmet, bu işlemlerin aynı oturum içinde gerçekleştiğini belirleyebilmelidir.
+  - `SessionMode`Özelliği, hizmetin uygun istekleri mantıksal bir oturumla karşılıklı olarak içerip içermediğini belirtir. Bu hizmet, OperationBehaviorAttribute TransactionAutoComplete özelliğinin `false` (çarp ve Böl) olarak ayarlandığı işlemleri içerdiğinden, `SessionMode.Required` belirtilmesi gerekir. Örneğin, çarpma işlemi, işlemini tamamlamaz ve bunun yerine yöntemi kullanılarak tamamlamaya bölmek için daha sonraki bir çağrıya bağımlıdır `SetTransactionComplete` ; hizmet, bu işlemlerin aynı oturum içinde gerçekleştiğini belirleyebilmelidir.
 
-- `OperationBehaviorAttribute`:
+- Üzerinde `OperationBehaviorAttribute` :
 
-  - `TransactionScopeRequired` özelliği, işlemin işlemlerinin bir işlem kapsamı içinde yürütülüp yürütülmeyeceğini belirtir. Bu, bu örnekteki tüm işlemler için `true` olarak ayarlanır ve istemci, işlemini tüm işlemlere akdığı için, bu istemci işleminin kapsamında eylemler oluşur.
+  - `TransactionScopeRequired`Özelliği işlemin işlemlerinin bir işlem kapsamı içinde yürütülüp yürütülmeyeceğini belirtir. Bu, `true` Bu örnekteki tüm işlemler için olarak ayarlanır ve istemci, işlemini tüm işlemlere akdığı için, bu istemci işleminin kapsamında eylemler oluşur.
 
-  - `TransactionAutoComplete` özelliği, işlenmeyen özel durumlar oluşursa yöntemin yürütme işleminin otomatik olarak tamamlanıp tamamlanmadığını belirtir. Daha önce açıklandığı gibi, bu, ekleme ve çıkarma işlemleri için `true`, çarpma ve bölme işlemleri için `false` olarak ayarlanır. Ekleme ve çıkarma işlemleri, eylemlerini otomatik olarak tamamlar, bölme kendi eylemlerini `SetTransactionComplete` yöntemine açık bir çağrı aracılığıyla tamamlar ve çarpma işlemleri kendi eylemlerini tamamlamaz ve bunun yerine, eylemleri tamamlamaya yönelik daha sonraki bir çağrı gerektirir.
+  - `TransactionAutoComplete`Özelliği, işlenmeyen özel durumlar oluşursa yöntemin yürütme işleminin otomatik olarak tamamlanıp tamamlanmadığını belirtir. Daha önce açıklandığı gibi, bu, `true` Ekle ve çıkart işlemleri için, `false` çarpma ve bölme işlemleri için olarak ayarlanır. Ekleme ve çıkarma işlemleri, eylemlerini otomatik olarak tamamlar, bölme kendi eylemlerini yöntemine açık bir çağrı aracılığıyla tamamlar `SetTransactionComplete` ve çarpma işlemleri eylemlerini tamamlamaz ve bunun yerine, eylemleri tamamlamaya yönelik daha sonraki bir çağrı gerektirir.
 
 Öznitelikli hizmet uygulamasını aşağıdaki gibidir:
 
@@ -194,7 +194,7 @@ Creating new service instance...
 
 Hesaplamaların toplam çalışma sayısını tutmanın yanı sıra hizmetin örneklerin oluşturulmasını (Bu örnek için bir örnek) raporluyor ve işlem isteklerinin bir veritabanına günlüğe kaydettiği unutulmamalıdır. Tüm istekler istemcinin işlemini Flow için, bu işlemi tamamlamamaya yönelik herhangi bir hata, tüm veritabanı işlemlerinin geri alınmasına neden olur. Bu, çeşitli yollarla gösterilmiştir:
 
-- İstemcinin `tx.Complete`() ve yeniden çalıştırma çağrısını () ve işlemi tamamlamadan işlem kapsamından çıkılıyor.
+- İstemcinin `tx.Complete` () çağrısı yapın ve yeniden çalıştırın. Bu, istemcinin işlemini tamamlamadan işlem kapsamından çıkılıyor.
 
 - Ayırma hizmeti işlemine çağrı yap-bu sonuçlar, çarpma işlemi tarafından başlatılan eylemin tamamlanmasını önler ve bu nedenle istemcinin işleminin sonunda da tamamlanamamasına neden olur.
 
@@ -207,13 +207,13 @@ Bunlardan herhangi birinin sonucu, bu kapsamda gerçekleştirilen işlemlerin hi
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. SQL Server 2005 Express Sürüm veya SQL Server 2005 ' i yüklediğinizden emin olun. Hizmetin App. config dosyasında, veritabanı `connectionString` ayarlanabilir veya appSettings `usingSql` değeri `false`olarak ayarlanarak veritabanı etkileşimleri devre dışı bırakılabilir.
+1. SQL Server 2005 Express Sürüm veya SQL Server 2005 ' i yüklediğinizden emin olun. Hizmetin App. config dosyasında, veritabanı `connectionString` ayarlanabilir veya appSettings değeri olarak ayarlanarak veritabanı etkileşimleri devre dışı bırakılabilir `usingSql` `false` .
 
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
-Örneği makinelerde çalıştırırsanız, ağ işlem akışını etkinleştirmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırmanız ve Windows Communication Foundation (WCF) işlemleri ağını etkinleştirmek için WsatConfig. exe aracını kullanmanız gerekir support.
+Örneği makinelerde çalıştırırsanız, ağ işlem akışını etkinleştirmek için Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırmanız ve Windows Communication Foundation (WCF) işlemleri ağ desteğini etkinleştirmek için WsatConfig. exe aracını kullanmanız gerekir.
 
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) hizmetini makineler genelinde çalıştırmayı destekleyecek şekilde yapılandırmak için
 
@@ -229,7 +229,7 @@ Bunlardan herhangi birinin sonucu, bu kapsamda gerçekleştirilen işlemlerin hi
 
     5. MS DTC hizmetini yeniden başlatmak için **Evet** ' e tıklayın ve ardından **Tamam**' a tıklayın.
 
-    6. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.
+    6. **Tamam**’a tıklayarak iletişim kutusunu kapatın.
 
 2. Hizmet makinesi ve istemci makinesinde, Windows Güvenlik Duvarı 'nı, hariç tutulan uygulamalar listesine Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) içerecek şekilde yapılandırın:
 
@@ -255,13 +255,13 @@ Bunlardan herhangi birinin sonucu, bu kapsamda gerçekleştirilen işlemlerin hi
 
     5. MS DTC hizmetini yeniden başlatmak için **Evet** ' e tıklayın ve ardından **Tamam**' a tıklayın.
 
-    6. İletişim kutusunu kapatmak için **Tamam** 'ı tıklatın.
+    6. **Tamam**’a tıklayarak iletişim kutusunu kapatın.
 
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`

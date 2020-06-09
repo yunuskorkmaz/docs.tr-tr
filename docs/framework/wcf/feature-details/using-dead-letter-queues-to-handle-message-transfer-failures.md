@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f07397b4c10ffec4902dbde37b622978d00f5b63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921148"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594991"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>İleti Aktarımı Hatalarını İşlemek için Teslim Edilemeyen İletiler Sırası Kullanma
 Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler, teslim edilemeyen bir sıraya kaydedilir. Başarısız teslimat, ağ hataları, silinen bir kuyruk, tam sıra, kimlik doğrulama hatası veya zaman içinde teslim etme hatası gibi nedenlerle neden olabilir.  
@@ -19,7 +19,7 @@ Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler,
   
  Genellikle, uygulamalar teslim edilemeyen ileti sırasından ve hata nedenlerinden iletileri okumak için maaş mantığı yazar. Dengeleme mantığı, hatanın nedenine bağlıdır. Örneğin, kimlik doğrulama hatası durumunda iletiyle bağlantılı sertifikayı düzeltebilir ve iletiyi yeniden gönderebilirsiniz. Hedef kuyruk kotasına ulaşıldığından, teslim başarısız olursa, kota sorununun çözümlendiğini umuyoruz.  
   
- Çoğu sıraya alma sisteminde, bu sistemdeki tüm başarısız iletilerin depolandığı sistem genelinde bir atılacak ileti sırası vardır. Message Queuing (MSMQ), iki sistem genelinde atılacak ileti sırası sağlar: işlem kuyruğuna teslim edilemeyen iletileri ve depolama olmayan sistem genelinde bir atılacak ileti kuyruğunu depolayan, sistem genelinde özel bir atılacak mektup kuyruğu işlemsel olmayan sıraya teslim edilemedi iletileri. İki istemci iki farklı hizmete ileti gönderiyorsa ve bu nedenle WCF 'deki farklı kuyruklar, göndermek için aynı MSMQ hizmetini paylaşılıyorsa, sistem teslim edilemeyen ileti kuyruğunda ileti karışımı olması mümkündür. Bu her zaman en uygun değildir. Birkaç durumda (güvenlik, örneğin), bir istemcinin eski ileti sırasından başka bir istemcinin iletilerini okumasını istemeyebilirsiniz. Paylaşılan bir atılacak ileti sırası, istemcilerin gönderdikleri bir iletiyi bulmak için kuyruğa gözatmasını ve teslim edilemeyen ileti sırasındaki ileti sayısına bağlı olarak yüksek maliyetli olabilecek bir şekilde canlı olarak yapılmasını gerektirir. Bu nedenle, WCF`NetMsmqBinding`, Windows Vista 'da `MsmqIntegrationBinding,` ve MSMQ özel bir atılacak ileti sırası (bazen uygulamaya özel atılacak mektup kuyruğu olarak adlandırılır) sağlar.  
+ Çoğu sıraya alma sisteminde, bu sistemdeki tüm başarısız iletilerin depolandığı sistem genelinde bir atılacak ileti sırası vardır. Message Queuing (MSMQ), iki sistem genelinde atılacak ileti sırası sağlar: işlemsel sıraya teslim edilemeyen iletileri depolayan ve işlemsel olmayan sıraya teslim edilemeyen iletileri depolayan, sistem genelinde çok sayıda atılacak bir sıra olmayan bir işlem sistem genelinde atılacak mektup kuyruğu. İki istemci iki farklı hizmete ileti gönderiyorsa ve bu nedenle WCF 'deki farklı kuyruklar, göndermek için aynı MSMQ hizmetini paylaşılıyorsa, sistem teslim edilemeyen ileti kuyruğunda ileti karışımı olması mümkündür. Bu her zaman en uygun değildir. Birkaç durumda (güvenlik, örneğin), bir istemcinin eski ileti sırasından başka bir istemcinin iletilerini okumasını istemeyebilirsiniz. Paylaşılan bir atılacak ileti sırası, istemcilerin gönderdikleri bir iletiyi bulmak için kuyruğa gözatmasını ve teslim edilemeyen ileti sırasındaki ileti sayısına bağlı olarak yüksek maliyetli olabilecek bir şekilde canlı olarak yapılmasını gerektirir. Bu nedenle, WCF `NetMsmqBinding` `MsmqIntegrationBinding,` ve Windows VISTA 'da MSMQ, özel bir atılacak mektup kuyruğu (bazen uygulamaya özgü atılacak mektup kuyruğu olarak adlandırılır) sağlar.  
   
  Özel atılacak mektup kuyruğu, iletileri göndermek için aynı MSMQ hizmetini paylaşan istemciler arasında yalıtım sağlar.  
   
@@ -41,19 +41,19 @@ Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler,
   
 - Bir sistem işlem dışı teslim edilemeyen ileti sırasından iletileri okumak için URI şu biçimde olmalıdır: net. MSMQ://localhost/System $;D eadLetter.  
   
-- Özel bir atılacak ileti sırasından iletileri okumak için URI şu biçimde olmalıdır: net. MSMQ://localhost/private/\<*Custom-DLQ-name*>; burada *Custom-DLQ-Name* özel atılacak ileti sırasının adıdır.  
+- Özel bir atılacak ileti sırasından iletileri okumak için URI şu biçimde olmalıdır: net. MSMQ://localhost/private/ \<*custom-dlq-name*> burada *Custom-DLQ-Name* özel atılacak ileti sırasının adıdır.  
   
- Kuyrukların nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [hizmet uç noktaları ve sıra adresleme](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Kuyrukların nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [hizmet uç noktaları ve sıra adresleme](service-endpoints-and-queue-addressing.md).  
   
- Alıcının WCF yığını, hizmetin iletideki adresle dinlediği adreslerle eşleşir. Adresler eşleşiyorsa ileti gönderilir; Aksi takdirde ileti gönderilir. Bu, atılacak ileti sırasındaki iletiler genellikle teslim edilemeyen ileti sırası hizmetine değil hizmete değinilmesi nedeniyle, atılacak ileti sırasından okurken soruna neden olabilir. Bu nedenle, atılacak ileti sırasından okuma hizmeti, yığının, kümeden bağımsız olarak kuyruktaki tüm iletilerle eşleşmesini sağlayan bir adres filtresi `ServiceBehavior` yüklemelidir. Özellikle, teslim edilemeyen ileti sırasındaki iletileri okumak için <xref:System.ServiceModel.AddressFilterMode.Any> parametresine sahip bir `ServiceBehavior` eklemeniz gerekir.  
+ Alıcının WCF yığını, hizmetin iletideki adresle dinlediği adreslerle eşleşir. Adresler eşleşiyorsa ileti gönderilir; Aksi takdirde ileti gönderilir. Bu, atılacak ileti sırasındaki iletiler genellikle teslim edilemeyen ileti sırası hizmetine değil hizmete değinilmesi nedeniyle, atılacak ileti sırasından okurken soruna neden olabilir. Bu nedenle, atılacak ileti sırasından okuma hizmeti, yığının, kümeden `ServiceBehavior` bağımsız olarak kuyruktaki tüm iletileri eşleşmesini sağlayan bir adres filtresi yüklemelidir. Özellikle, `ServiceBehavior` <xref:System.ServiceModel.AddressFilterMode.Any> atılacak ileti sırasından iletileri okumak için parametresi ile bir olarak eklemeniz gerekir.  
   
 ## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Atılacak Ileti sırasından zarar Iletisi Işleme  
- Zarar iletisi işleme, bazı koşullarla, atılacak ileti sıralarında kullanılabilir. Sistem kuyruklarından alt kuyruklar oluşturamadığı için, sistem atılacak ileti sırasından okurken `ReceiveErrorHandling` `Move`olarak ayarlanamaz. Özel bir teslim edilemeyen ileti sırasından okuyorsanız, alt kuyruklara sahip olabilirsiniz ve bu nedenle `Move`, zarar iletisi için geçerli bir değerlendirme olduğunu unutmayın.  
+ Zarar iletisi işleme, bazı koşullarla, atılacak ileti sıralarında kullanılabilir. Sistem kuyruklarından alt sıralar oluşturabilmeniz için, sistem atılacak ileti sırasından okurken `ReceiveErrorHandling` olarak ayarlanamaz `Move` . Özel bir atılacak mektup sırasından okuyorsanız, alt kuyruklara sahip olabilirsiniz ve bu nedenle, `Move` zarar iletisi için geçerli bir değerlendirme olduğunu unutmayın.  
   
- `ReceiveErrorHandling` `Reject`olarak ayarlandığında, özel geçersiz ileti sırasından okurken, zarar iletisi sistem atılacak ileti kuyruğuna konur. Sistem teslim edilemeyen ileti sırasından okurken ileti bırakılır (temizlendi). MSMQ 'da bir sistem atılacak ileti sırasından reddetme, iletiyi bırakır (temizler).  
+ `ReceiveErrorHandling`, Olarak ayarlandığında `Reject` , özel atılacak mektup sırasından okurken, zarar iletisi sistem atılacak ileti kuyruğuna konur. Sistem teslim edilemeyen ileti sırasından okurken ileti bırakılır (temizlendi). MSMQ 'da bir sistem atılacak ileti sırasından reddetme, iletiyi bırakır (temizler).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir atılacak ileti sırasının nasıl oluşturulduğunu ve süre sonu iletileri işlemek için nasıl kullanılacağını gösterir. Örnek, [nasıl yapılır: WCF uç noktaları Ile sıraya alınmış Iletileri Exchange ile](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)ilgili örneğe dayanır. Aşağıdaki örnek, her bir uygulama için bir atılacak ileti sırası kullanan sipariş işleme hizmetine istemci kodunun nasıl yazılacağını gösterir. Örnek ayrıca, teslim edilemeyen ileti sırasından iletileri nasıl işleyeceğini gösterir.  
+ Aşağıdaki örnek, bir atılacak ileti sırasının nasıl oluşturulduğunu ve süre sonu iletileri işlemek için nasıl kullanılacağını gösterir. Örnek, [nasıl yapılır: WCF uç noktaları Ile sıraya alınmış Iletileri Exchange ile](how-to-exchange-queued-messages-with-wcf-endpoints.md)ilgili örneğe dayanır. Aşağıdaki örnek, her bir uygulama için bir atılacak ileti sırası kullanan sipariş işleme hizmetine istemci kodunun nasıl yazılacağını gösterir. Örnek ayrıca, teslim edilemeyen ileti sırasından iletileri nasıl işleyeceğini gösterir.  
   
  Aşağıda, her bir uygulama için atılacak ileti sırası belirten bir istemcinin kodu verilmiştir.  
   
@@ -71,6 +71,6 @@ Sıraya alınan iletiler teslim başarısız olabilir. Bu başarısız iletiler,
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kuyruklara Genel Bakış](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [Zehirli İleti İşleme](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [Kuyruklar Genel Bakış](queues-overview.md)
+- [Nasıl yapılır: WCF Uç Noktaları ile Kuyruğa Alınan İletileri Gönderme ve Alma](how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Zehirli İleti İşleme](poison-message-handling.md)

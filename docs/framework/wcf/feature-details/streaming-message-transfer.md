@@ -2,50 +2,50 @@
 title: İleti Aktarma Akışı
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 6f16ab16235c9fcbe0a151d5c404df96080192c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 462144856750a1b8726b574fdc82746da2d72ff7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64585936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594796"
 ---
 # <a name="streaming-message-transfer"></a>İleti Aktarma Akışı
-Windows Communication Foundation (WCF) taşımalar iletileri aktarmak için iki modu destekler:  
+Windows Communication Foundation (WCF) aktarımları, iletileri aktarmaya yönelik iki modu destekler:  
   
-- Arabelleğe alınan aktarımları aktarma işlemi tamamlanana kadar tüm ileti içinde bir bellek arabelleğini basılı tutun. Bir alıcı okumadan önce bir arabelleğe alınan ileti tamamen teslim edilmelidir.  
+- Arabelleğe alınan aktarımlar, aktarım tamamlanana kadar tüm iletiyi bir bellek arabelleğine tutar. Bir alıcının okuyabilmesi için, arabelleğe alınmış bir iletinin tamamen teslim edilmesi gerekir.  
   
-- Akış aktarımları ileti akışı olarak kullanıma sunar. Alıcı, tamamen teslim edilmeden önce iletiyi işlemeyi başlatır.  
+- Akışlı aktarımlar, iletiyi bir akış olarak kullanıma sunar. Alıcı, tamamen teslim edilmeden önce iletiyi işlemeye başlar.  
   
-- Akış aktarımları, büyük bellek arabelleği gereksinimini ortadan kaldırarak hizmet ölçeklenebilirliği artırabilirsiniz. Aktarım modunu değiştirme ölçeklenebilirliği iyileştirdi olmadığını aktarılan iletileri boyutuna bağlıdır. Büyük ileti boyutları, akış aktarımları kullanarak favor.  
+- Akışlı aktarımlar, büyük bellek arabelleklerinin gereksinimini ortadan kaldırarak bir hizmetin ölçeklenebilirliğini iyileştirebilir. Aktarım modunun değiştirilmesi, ölçeklenebilirliği artırmak için, aktarılmakta olan iletilerin boyutuna bağlıdır. Büyük ileti boyutları akan aktarımları kullanmayı tercih eder.  
   
- Varsayılan olarak HTTP, TCP/IP'yi ve adlandırılmış kanal taşıma arabelleğe alınan aktarımları kullanır. Bu belge, bu bir arabelleğe alınan taşımalar geçmek açıklar akış aktarım modu ve böylece sonuçlarını.  
+ Varsayılan olarak, HTTP, TCP/IP ve adlandırılmış kanal aktarımları, arabelleğe alınmış aktarımları kullanır. Bu belgede, Bu aktarımların arabelleğe alınan aktarım modundan akışlı aktarım moduna nasıl değiştirileceği ve bunu yapmanın sonuçları açıklanmaktadır.  
   
-## <a name="enabling-streamed-transfers"></a>Akış aktarımları etkinleştirme  
- Arabelleğe alınan ve akış aktarma modları arasında seçerek aktarım bağlama öğesi üzerindeki gerçekleştirilir. Bağlama öğesi olan bir <xref:System.ServiceModel.TransferMode> ayarlanabilir özelliği `Buffered`, `Streamed`, `StreamedRequest`, veya `StreamedResponse`. Aktarım Modu ayarını `Streamed` akış çift yönlü iletişimi sağlar. Aktarım Modu ayarını `StreamedRequest` veya `StreamedResponse` akış belirtilen yönde yalnızca iletişimi etkinleştirir.  
+## <a name="enabling-streamed-transfers"></a>Akışlı aktarımları etkinleştirme  
+ Arabelleğe alınan ve akış aktarım modları arasında seçim yapmak, taşımanın bağlama öğesinde yapılır. Binding öğesi,,, <xref:System.ServiceModel.TransferMode> veya olarak ayarlanabilir bir özelliğine sahiptir `Buffered` `Streamed` `StreamedRequest` `StreamedResponse` . Aktarım modunun, `Streamed` her iki yönde de akış iletişimini sağlamak üzere ayarlanması. Aktarım modunu `StreamedRequest` `StreamedResponse` yalnızca belirtilen yönde veya akış iletişimini için olarak ayarlama.  
   
- <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.NetTcpBinding>, Ve <xref:System.ServiceModel.NetNamedPipeBinding> bağlamaları sunmaya <xref:System.ServiceModel.TransferMode> özelliği. Diğer aktarımı için aktarım modu ayarlamak için özel bir bağlama oluşturmanız gerekir.  
+ <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.NetTcpBinding> Ve <xref:System.ServiceModel.NetNamedPipeBinding> bağlamaları özelliğini kullanıma sunar <xref:System.ServiceModel.TransferMode> . Diğer aktarımlar için, aktarım modunu ayarlamak üzere özel bir bağlama oluşturmanız gerekir.  
   
- Arabelleğe alınan ya da akış aktarımları karar, uç noktanın yerel bir karardır. HTTP taşımaları için bir bağlantı üzerinden ya da sunucuları ve diğer aracılar için aktarım modunu dağıtılmaz. Hizmet arabirimi açıklamasında aktarım modunu ayarlama yansıtılmaz. Hizmet istemci sınıf oluşturduktan sonra akış aktarımları ile modu ayarlamak için kullanılması hedeflenen hizmetler için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımlar, aktarım modu İlkesi onaylama olarak yayılır.  
+ Ara belleğe alınmış veya akış aktarımları kullanma kararı, uç noktanın yerel bir karardır. HTTP aktarımları için, aktarım modu bir bağlantı veya sunuculara ve diğer aracılar arasında yayılmaz. Aktarım modunun ayarlanması, hizmet arabiriminin açıklamasına yansıtılmaz. Bir hizmet için istemci sınıfı oluşturduktan sonra, modu ayarlamak için akışlı aktarımlarla kullanılması amaçlanan hizmetler için yapılandırma dosyasını düzenlemeniz gerekir. TCP ve adlandırılmış kanal aktarımları için, aktarım modu bir ilke onaylama işlemi olarak dağıtılır.  
   
- Kod örnekleri için bkz. [nasıl yapılır: Akışı etkinleştir](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md).  
+ Kod örnekleri için bkz. [nasıl yapılır: akışı etkinleştirme](how-to-enable-streaming.md).  
   
-## <a name="enabling-asynchronous-streaming"></a>Zaman uyumsuz akış'ı etkinleştirme  
- Zaman uyumsuz akış etkinleştirmek için eklemeniz <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> kümesini ve hizmet ana bilgisayarı için uç nokta davranışı, <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini `true`.  
+## <a name="enabling-asynchronous-streaming"></a>Zaman uyumsuz akışı etkinleştirme  
+ Zaman uyumsuz akışı etkinleştirmek için, <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> uç nokta davranışını hizmet konağına ekleyin ve <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini olarak ayarlayın `true` .  
   
- WCF bu sürüm ayrıca adde doğru zaman uyumsuz gönderme tarafında akış yeteneği. Bu senaryolarda bazıları okuma yavaş olan birden çok istemciye iletileri burada akış hizmetinin ölçeklenebilirliği artırır; büyük olasılıkla Ağ Tıkanıklığı veya olan nedeniyle hiç okunmuyor. Bu senaryolarda WCF istemci başına hizmetine tek tek iş parçacığı artık engeller. Bu, hizmet birden çok daha fazla istemci böylece hizmetinin ölçeklenebilirliği artırma işleminin olmasını sağlar.  
+ WCF 'nin bu sürümü, gönderme tarafında gerçek zaman uyumsuz akış özelliğini de de de ektir. Bu, hizmetin bir kısmını okurken yavaş olan birden çok istemciye akış yaptığı senaryolarda hizmetin ölçeklenebilirliğini geliştirir; büyük olasılıkla ağ tıkanıklığı nedeniyle veya hiç okunmayan. Bu senaryolarda, WCF artık istemci başına hizmette bireysel iş parçacıklarını engeller. Bu, hizmetin daha fazla istemciyi işleyebilmesini sağlar ve bu sayede hizmetin ölçeklenebilirliğini geliştirir.  
   
-## <a name="restrictions-on-streamed-transfers"></a>Akış aktarımları kısıtlamaları  
- Akış aktarım modunu kullanarak ek kısıtlamalar uygulamak çalışma zamanı neden olur.  
+## <a name="restrictions-on-streamed-transfers"></a>Akış aktarımları için kısıtlamalar  
+ Akan aktarım modunun kullanılması, çalışma süresinin ek kısıtlamalar zorlamasına neden olur.  
   
- Bir akış taşıma arasında gerçekleşen işlem, giriş veya çıkış en fazla bir parametre ile bir sözleşme olabilir. Bu parametre tüm ileti gövdesi ile karşılık gelir ve olmalıdır bir <xref:System.ServiceModel.Channels.Message>, bir türü türetilmiş <xref:System.IO.Stream>, veya bir <xref:System.Xml.Serialization.IXmlSerializable> uygulaması. Bir işlem için dönüş değeri bir output parametresi olmakla eşdeğerdir.  
+ Akışlı bir aktarımda oluşan işlemler, en fazla bir giriş veya çıkış parametresi olan bir sözleşmeye sahip olabilir. Bu parametre ileti gövdesinin tamamına karşılık gelir ve bir <xref:System.ServiceModel.Channels.Message> , türetilmiş türü <xref:System.IO.Stream> veya bir uygulama olmalıdır <xref:System.Xml.Serialization.IXmlSerializable> . Bir işlem için dönüş değeri olması, çıkış parametresine sahip olmaya eşdeğerdir.  
   
- İletilerin aktarımları için arabelleğe işlemleri ve SOAP ileti düzeyi güvenliği, güvenilir Mesajlaşma gibi bazı WCF özellikleri kullanır. Bu özellikleri kullanmaya azaltın veya akış kullanılarak elde edilen performans avantajlarını ortadan kaldırır. Bir akış taşıma güvenliğini sağlamak için aktarım düzeyi güvenlik yalnızca kullanın veya aktarma düzeyinde güvenliğin yanı sıra yalnızca kimlik doğrulaması ileti güvenliği kullanın.  
+ Güvenilir Mesajlaşma, işlemler ve SOAP ileti düzeyi güvenliği gibi bazı WCF özellikleri, iletimlere yönelik arabelleğe alma iletilerini kullanır. Bu özelliklerin kullanılması, akış kullanılarak kazanılan performans avantajlarını azaltabilir veya ortadan kaldırabilir. Akışlı bir taşımanın güvenliğini sağlamak için yalnızca aktarım düzeyi güvenlik kullanın veya aktarım düzeyi güvenlik ' i ve yalnızca kimlik doğrulama iletisi güvenliği ' ni kullanın.  
   
- Hatta aktarım modunu akış ayarlandığında SOAP üstbilgileri her zaman, arabelleğe alınır. Bir ileti için üstbilgiler boyutunu aşamaz `MaxBufferSize` aktarım kotası. Bu ayar hakkında daha fazla bilgi için bkz. [taşıma kotaları](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
+ Aktarım modu akış olarak ayarlandığında bile SOAP üstbilgileri her zaman arabelleğe alınır. İleti üstbilgileri, `MaxBufferSize` Aktarım kotasının boyutunu aşmamalıdır. Bu ayar hakkında daha fazla bilgi için bkz. [Aktarım kotaları](transport-quotas.md).  
   
-## <a name="differences-between-buffered-and-streamed-transfers"></a>Arabelleğe alınan ve akış aktarımları arasındaki farklar  
- Akış için arabelleğe alınan aktarma modundan değiştirme, TCP ve adlandırılmış kanal taşıma yerel kanal şeklini değiştirir. Arabelleğe alınan aktarımları için yerel kanal şekildir <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Yerel kanal akış aktarımları için olan <xref:System.ServiceModel.Channels.IRequestChannel> ve <xref:System.ServiceModel.Channels.IReplyChannel>. Doğrudan bu kullanan mevcut bir uygulamayı aktarım modu değiştirme taşır (diğer bir deyişle, bir hizmet sözleşmesini üzerinden değil) beklenen kanal şekli için kanal fabrikaları ve dinleyicileri değiştirilmesi gerekir.  
+## <a name="differences-between-buffered-and-streamed-transfers"></a>Arabellekli ve akışlı aktarımlar arasındaki farklılıklar  
+ Aktarım modunun arabelleğe alınıp akışlı olarak değiştirilmesi, TCP ve adlandırılmış kanal taşımalarının yerel kanal şeklini de değiştirir. Arabelleğe alınan aktarımlar için, yerel kanal şekli olur <xref:System.ServiceModel.Channels.IDuplexSessionChannel> . Akışlı aktarımlar için, yerel kanallar ve ' <xref:System.ServiceModel.Channels.IRequestChannel> dir <xref:System.ServiceModel.Channels.IReplyChannel> . Bu taşımaları doğrudan kullanan mevcut bir uygulamada (bir hizmet sözleşmesi aracılığıyla değil) aktarım modunun değiştirilmesi, kanal fabrikaları ve dinleyicileri için beklenen kanal şeklinin değiştirilmesini gerektirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Akışı etkinleştir](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Nasıl yapılır: Akışı Etkinleştirme](how-to-enable-streaming.md)

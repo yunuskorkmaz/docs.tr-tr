@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: f31f24cfc18f2c56539fe2b4623d54fe77a27797
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e4ce1fa7b494c2317a1bddc57ee6b150c84b9a96
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950604"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593152"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>Nasıl yapılır: Bir Akışı Hem Atom Hem de RSS Olarak Kullanıma Sunma
-Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu, hem Atom 1,0 hem de RSS 2,0 kullanarak bir dağıtım akışı sunan bir dağıtım hizmeti oluşturmayı açıklamaktadır. Bu hizmet, bir dağıtım biçimi döndüren bir uç noktayı kullanıma sunar. Basitlik için, bu örnekte kullanılan hizmetin kendine barındırıldığı yer vardır. Üretim ortamında, bu türde bir hizmet IIS veya WAS altında barındırılır. Farklı WCF barındırma seçenekleri hakkında daha fazla bilgi için bkz. [barındırma](../../../../docs/framework/wcf/feature-details/hosting.md).  
+Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet oluşturmanıza olanak sağlar. Bu konu, hem Atom 1,0 hem de RSS 2,0 kullanarak bir dağıtım akışı sunan bir dağıtım hizmeti oluşturmayı açıklamaktadır. Bu hizmet, bir dağıtım biçimi döndüren bir uç noktayı kullanıma sunar. Basitlik için, bu örnekte kullanılan hizmetin kendine barındırıldığı yer vardır. Üretim ortamında, bu türde bir hizmet IIS veya WAS altında barındırılır. Farklı WCF barındırma seçenekleri hakkında daha fazla bilgi için bkz. [barındırma](hosting.md).  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Temel bir dağıtım hizmeti oluşturmak için  
   
-1. <xref:System.ServiceModel.Web.WebGetAttribute> Özniteliği ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın. Bir dağıtım akışı olarak sunulan her işlem, bir <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> nesnesi döndürür. İçin parametreleri aklınızda edin <xref:System.ServiceModel.Web.WebGetAttribute>. `UriTemplate`Bu hizmet işlemini çağırmak için kullanılan URL 'YI belirtir. Bu parametre için dize, sabit değer ve küme ayracı ({*Format*}) içinde bir değişken içerir. Bu değişken, hizmet işleminin `format` parametresine karşılık gelir. Daha fazla bilgi için bkz. <xref:System.UriTemplate>. `BodyStyle`Bu hizmet işleminin gönderdiği ve aldığı iletilerin nasıl yazıldığını etkiler. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare>Bu hizmet işlemine gönderilen ve bu hizmetten gönderilen verilerin altyapı tanımlı XML öğeleri tarafından kaydırılmayacağı belirtir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
+1. Özniteliği ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın <xref:System.ServiceModel.Web.WebGetAttribute> . Bir dağıtım akışı olarak sunulan her işlem, bir nesnesi döndürür <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> . İçin parametreleri aklınızda edin <xref:System.ServiceModel.Web.WebGetAttribute> . `UriTemplate`Bu hizmet işlemini çağırmak için kullanılan URL 'YI belirtir. Bu parametre için dize, sabit değer ve küme ayracı ({*Format*}) içinde bir değişken içerir. Bu değişken, hizmet işleminin parametresine karşılık gelir `format` . Daha fazla bilgi için bkz. <xref:System.UriTemplate>. `BodyStyle`Bu hizmet işleminin gönderdiği ve aldığı iletilerin nasıl yazıldığını etkiler. <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare>Bu hizmet işlemine gönderilen ve bu hizmetten gönderilen verilerin altyapı tanımlı XML öğeleri tarafından kaydırılmayacağı belirtir. Daha fazla bilgi için bkz. <xref:System.ServiceModel.Web.WebMessageBodyStyle>.  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
   
     > [!NOTE]
-    > Bu arabirimdeki hizmet işlemleri tarafından döndürülen türleri belirtmek içinöğesinikullanın.<xref:System.ServiceModel.ServiceKnownTypeAttribute>  
+    > <xref:System.ServiceModel.ServiceKnownTypeAttribute>Bu arabirimdeki hizmet işlemleri tarafından döndürülen türleri belirtmek için öğesini kullanın.  
   
 2. Hizmet sözleşmesini uygulayın.  
   
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet
      [!code-csharp[htAtomRss#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#3)]
      [!code-vb[htAtomRss#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#3)]  
   
-5. <xref:System.ServiceModel.Syndication.SyndicationItem> Nesneleri akışa ekleyin.  
+5. <xref:System.ServiceModel.Syndication.SyndicationItem>Nesneleri akışa ekleyin.  
   
      [!code-csharp[htAtomRss#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#4)]
      [!code-vb[htAtomRss#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#4)]  
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet
   
 ### <a name="to-host-the-service"></a>Hizmeti barındırmak için  
   
-1. Bir <xref:System.ServiceModel.Web.WebServiceHost> nesne oluşturun. Kod <xref:System.ServiceModel.Web.WebServiceHost> veya yapılandırmada belirtilmemişse, sınıf otomatik olarak hizmetin temel adresinde bir uç nokta ekler. Bu örnekte, varsayılan uç noktanın açığa çıkarılması için uç nokta belirtilmedi.  
+1. Bir <xref:System.ServiceModel.Web.WebServiceHost> nesne oluşturun. <xref:System.ServiceModel.Web.WebServiceHost>Kod veya yapılandırmada belirtilmemişse, sınıf otomatik olarak hizmetin temel adresinde bir uç nokta ekler. Bu örnekte, varsayılan uç noktanın açığa çıkarılması için uç nokta belirtilmedi.  
   
      [!code-csharp[htAtomRss#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#6)]
      [!code-vb[htAtomRss#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#6)]  
@@ -64,23 +64,23 @@ Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Getblogi HTTP GET ile çağırmak için  
   
-1. Internet Explorer 'ı açın, aşağıdaki URL 'yi yazın ve ENTER tuşuna basın `http://localhost:8000/BlogService/GetBlog`:.
+1. Internet Explorer 'ı açın, aşağıdaki URL 'yi yazın ve ENTER tuşuna basın: `http://localhost:8000/BlogService/GetBlog` .
   
-     URL, hizmetin temel adresini (`http://localhost:8000/BlogService`), bitiş noktasının göreli adresini ve çağrılacak hizmet işlemini içerir.  
+     URL, hizmetin temel adresini ( `http://localhost:8000/BlogService` ), bitiş noktasının göreli adresini ve çağrılacak hizmet işlemini içerir.  
   
 ### <a name="to-call-getblog-from-code"></a>Koddan GetBlog () çağırmak için  
   
-1. Temel adresi <xref:System.Xml.XmlReader> ve aradığınız yöntemi içeren bir oluşturun.  
+1. <xref:System.Xml.XmlReader>Temel adresi ve aradığınız yöntemi içeren bir oluşturun.  
   
      [!code-csharp[htAtomRss#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#9)]
      [!code-vb[htAtomRss#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#9)]  
   
-2. Yeni oluşturduğunuz ' <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> ı geçirerek <xref:System.Xml.XmlReader> statik yöntemi çağırın.  
+2. <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29>Yeni oluşturduğunuz ' ı geçirerek statik yöntemi çağırın <xref:System.Xml.XmlReader> .  
   
      [!code-csharp[htAtomRss#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#10)]
      [!code-vb[htAtomRss#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#10)]  
   
-     Bu, hizmet işlemini çağırır ve hizmet işleminden döndürülen <xref:System.ServiceModel.Syndication.SyndicationFeed> biçimlendirici ile yeni bir doldurur.  
+     Bu, hizmet işlemini çağırır ve <xref:System.ServiceModel.Syndication.SyndicationFeed> hizmet işleminden döndürülen biçimlendirici ile yeni bir doldurur.  
   
 3. Akış nesnesine erişin.  
   

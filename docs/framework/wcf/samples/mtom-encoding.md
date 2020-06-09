@@ -2,26 +2,26 @@
 title: MTOM Kodlama
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: 83dbe9e51da1cc9e55bfffb862e2601d70fc7695
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf048e1e6b2e2785accc1bde0336f07e3d84ae5e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144389"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602547"
 ---
 # <a name="mtom-encoding"></a>MTOM Kodlama
-Bu örnek, Bir WSHttpBinding ile kodlama İleti Aktarım Optimizasyonu Mekanizması (MTOM) iletisinin kullanımını gösterir. MTOM, büyük ikili ekleri SOAP iletileri ile ham bayt olarak iletmek için bir mekanizmadır ve daha küçük iletilere olanak sağlar.  
+Bu örnek, bir WSHttpBinding ile Ileti Iletimi Iyileştirme mekanizması (MTOM) ileti kodlamasının kullanımını gösterir. MTOM, SOAP iletileri olan büyük ikili ekleri ham bayt olarak iletme ve daha küçük iletilere izin veren bir mekanizmadır.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
- Varsayılan olarak, WSHttpBinding gönderir ve normal metin XML olarak iletileri aldı. MTOM iletilerinin gönderilmesini ve alınmasını `messageEncoding` etkinleştirmek için, özniteliği bağlama yapılandırmasına (aşağıdaki örnek kodda olduğu `MessageEncoding` gibi) veya özelliği kullanarak doğrudan bağlamaya ayarlayın. Hizmet veya istemci artık MTOM iletileri gönderip alabilir.  
+ Varsayılan olarak, WSHttpBinding iletileri normal metin XML olarak gönderir ve gönderir. MTOM iletilerinin gönderilmesini ve alınmasını etkinleştirmek için, `messageEncoding` bağlama yapılandırmasındaki özniteliği (Aşağıdaki örnek kodda olduğu gibi) veya doğrudan bağlama üzerinde özelliğini kullanarak ayarlayın `MessageEncoding` . Hizmet veya istemci artık MTOM iletileri gönderebilir ve alabilir.  
   
 ```xml  
 <wsHttpBinding>  
@@ -29,7 +29,7 @@ Bu örnek, Bir WSHttpBinding ile kodlama İleti Aktarım Optimizasyonu Mekanizma
 </wsHttpBinding>  
 ```  
   
- MTOM kodlayıcısı bayt ve akış dizilerini optimize edebilir. Bu örnekte, işlem `Stream` bir parametre kullanır ve bu nedenle en iyi duruma getirilebilir.  
+ MTOM Kodlayıcısı, bayt ve akış dizilerini iyileştirebilirler. Bu örnekte, işlem bir `Stream` parametre kullanır ve bu nedenle en iyi duruma getirilebilir.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -40,7 +40,7 @@ Bu örnek, Bir WSHttpBinding ile kodlama İleti Aktarım Optimizasyonu Mekanizma
   }  
 ```
   
- Bu örnek için seçilen sözleşme, ikili verileri hizmete iletir ve iade değeri olarak yüklenen bayt sayısını alır. Hizmet yüklendiğinde ve istemci çalıştırıldığında, 1000 baytın tamamının alındığını gösteren 1000 sayısını yazdırır. Çıktının geri kalanı, çeşitli yükler için en iyi duruma getirilmiş ve optimize edilmeyen ileti boyutlarını listeler.  
+ Bu örnek için seçilen sözleşme, ikili verileri hizmete aktarır ve dönüş değeri olarak karşıya yüklenen bayt sayısını alır. Hizmet yüklendiğinde ve istemci çalıştırıldığında, tüm 1000 baytlarının alındığını belirten 1000 sayısını yazdırır. Çıktının geri kalanı, çeşitli yükleri için iyileştirilmiş ve en iyi duruma getirilmemiş ileti boyutlarını listeler.  
   
 ```console
 Output:  
@@ -64,18 +64,18 @@ MTOM encoding with a 1000000 byte payload: 1001080
 Press <ENTER> to terminate client.  
 ```  
   
- MTOM'u kullanmanın amacı, büyük ikili yüklerin iletimini optimize etmektir. MTOM kullanarak soap iletisi göndermek, küçük ikili yükler için gözle görülür bir yüke sahiptir, ancak birkaç bin baytın üzerinde büyüdüklerinde büyük bir tasarruf sağlar. Bunun nedeni, normal metin XML'in her üç bayt için dört karakter gerektiren Base64 kullanarak ikili verileri kodlaması ve verilerin boyutunu üçte bir oranında artırmasıdır. MTOM, ikili verileri ham bayt olarak iletebilir, kodlama/çözme süresini kaydeder ve ortaya çıkan iletiler daha küçüktür. Birkaç bin bayt eşiği bugünün iş belgeleri ve dijital fotoğraflar ile karşılaştırıldığında küçüktür.  
+ MTOM kullanmanın amacı, büyük ikili yüklerin iletimini en iyi hale getirsağlamaktır. MTOM kullanarak bir SOAP iletisi gönderdiğinizde küçük ikili yükleri için fark edilebilir bir ek yük vardır, ancak birkaç bin baytlık büyürken harika bir tasarruf olur. Bunun nedeni, normal metin XML 'nin ikili verileri her üç bayt için dört karakter gerektiren Base64 kullanarak kodlayacağı ve verilerin boyutunu bir üçüncü artırır. MTOM, ikili verileri ham bayt olarak aktarabilir, kodlama/kod çözme süresini ve sonuç olarak daha küçük mesajlar elde edebilir. Bugünün iş belgelerinin ve dijital fotoğraflarına kıyasla birkaç bin baytlık eşik değeri küçüktür.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Aşağıdaki komutu kullanarak 4.0 ASP.NET yükleyin.  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-4. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
