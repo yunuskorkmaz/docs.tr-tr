@@ -2,23 +2,23 @@
 title: System.ServiceModel.Channels.PeerMaintainerActivity
 ms.date: 03/30/2017
 ms.assetid: ef28d086-d7fb-4e81-82e9-45a54647783b
-ms.openlocfilehash: ea4c8110a8f820e0c6204fbd22b3d5b747709fba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce97eaa2ad5c9dbd5f4d6f81186960c489eb4b85
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950468"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596083"
 ---
 # <a name="systemservicemodelchannelspeermaintaineractivity"></a>System.ServiceModel.Channels.PeerMaintainerActivity
-PeerMaintainer modülü, belirli bir işlemi (ayrıntıları izleme iletisi gövdesi içinde yer alan) gerçekleştiriyor.  
+Peerbakımcı modülü belirli bir işlemi gerçekleştiriyor (izleme iletisi gövdesinde bulunan Ayrıntılar).  
   
 ## <a name="description"></a>Açıklama  
- Bu izleme, çeşitli PeerMaintainer işlemleri sırasında gerçekleşir.  
+ Bu izleme, çeşitli Peerbakımcı işlemleri sırasında oluşur.  
   
- PeerMaintainer PeerNode iç bir bileşenidir. Dakika başı veya alınan her 32 ileti LinkUtility iletisi Komşuları istatistiklerle kaç mesajları hakkında ve ne kadar yararlı (olmayan-untampered yinelemeleri) gönderir. Bu, belirli bir komşunun bağlantısı yardımcı programı belirlenmesine yardımcı olur. Yaklaşık beş dakikada, Bakımcı komşu bağlantı durumunu denetler. Komşu bağlantı sayısını ideal miktarı aşarsa, Bakımcı az yararlı bağlantıları ayıklar. Yeterli bağlantı yoksa, yeni bağlantılar Bakımcı devralır.  
+ Peerbakımcı, bir PeerNode iç bileşenidir. Her dakika veya alınan her 32 ileti, komşunlarına kaç tane ileti değiştirildiğini ve kaç tane yararlı olduğunu (yinelenmeyen, değiştirilmemiş) gösteren istatistiklerle bir LinkUtility iletisi gönderir. Bu, belirli bir komşunun bağlantı yardımcı programını belirlemesine yardımcı olur. Her beş dakikada bir, bakımcı, komşu bağlantıların sistem durumunu denetler. Komşu bağlantı sayısı ideal miktarı aşarsa, bakımcı en az faydalı bağlantıları ayıklar. Yeterli bağlantı yoksa, bakımcı yeni bağlantıları alır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

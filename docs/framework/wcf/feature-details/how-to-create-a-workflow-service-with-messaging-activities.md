@@ -2,95 +2,95 @@
 title: 'Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: f5bb8df5936be1890bf744300daa7ccb68e341e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4991fc9f8a6c45cae3943f1506247c42ed2b30b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597130"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma
-Bu konuda, Mesajlaşma etkinlikleri kullanarak basit bir iş akışı hizmeti oluşturma işlemini açıklamaktadır. Bu konu, burada yalnızca Mesajlaşma etkinlikleri hizmet oluşan bir iş akışı hizmeti oluşturma mekanizması üzerinde odaklanır. Gerçek hizmetinde, diğer birçok etkinlik iş akışı içerir. Hizmet, bir dize alır ve dize çağırana döner, Echo adlı bir işlem uygular. Bu konu, ilk iki konuda serisinin yöneliktir. Bir sonraki konu [nasıl yapılır: Bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) Bu konu başlığında oluşturduğunuz hizmeti çağıran bir iş akışı uygulamasının nasıl oluşturulacağını açıklar.  
+Bu konuda, mesajlaşma etkinlikleri kullanılarak basit bir iş akışı hizmetinin nasıl oluşturulacağı açıklanmaktadır. Bu konu, hizmetin yalnızca mesajlaşma etkinliklerinden oluşan bir iş akışı hizmeti oluşturma mekanizması üzerinde odaklanır. Gerçek dünyada bir hizmette, iş akışı birçok farklı etkinlik içerir. Hizmet, bir dizeyi alıp çağrıyı yapana döndüren Echo adlı bir işlem uygular. Bu konu, iki konu serisinin ilk ilkisidir. Sonraki konuda [nasıl yapılır: bir Iş akışı uygulamasından bir hizmete erişme](how-to-access-a-service-from-a-workflow-application.md) , bu konuda oluşturulan hizmeti çağırabileceği bir iş akışı uygulamasının nasıl oluşturulduğunu açıklar.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Bir iş akışı hizmeti projesi oluşturmak için  
   
-1. Visual Studio 2012 başlatın.  
+1. Visual Studio 2012 ' i başlatın.  
   
-2. Tıklayın **dosya** menüsünde **yeni**, ardından **proje** görüntülenecek **yeni proje iletişim kutusu**. Seçin **iş akışı** yüklü şablonlar listesinden ve **WCF iş akışı hizmeti uygulaması** proje türleri listesinden. Projeyi adlandırın `MyWFService` ve aşağıdaki çizimde gösterildiği gibi varsayılan konumu kullanın.  
+2. **Yeni proje Iletişim kutusunu**göstermek için **Dosya** menüsüne tıklayın, **Yeni**' yi ve ardından **Proje** ' yi seçin. Proje türleri listesinden yüklü şablonlar ve **WCF Iş akışı hizmeti uygulaması** listesinden **iş akışı** ' nı seçin. Projeyi adlandırın `MyWFService` ve aşağıdaki çizimde gösterildiği gibi varsayılan konumu kullanın.  
   
-     Tıklayın **Tamam** kapatmak için düğme **yeni proje iletişim kutusu**.  
+     **Yeni proje Iletişim kutusunu**kapatmak için **Tamam** düğmesine tıklayın.  
   
-3. Proje oluşturulduğunda Service1.xamlx dosya Tasarımcısı'nda aşağıdaki çizimde gösterildiği gibi açılır.  
+3. Proje oluşturulduğunda, Service1. xamlx dosyası, aşağıdaki çizimde gösterildiği gibi tasarımcıda açılır.  
   
-     ![Ekran Tasarımcısı'nda Service1.xamlx Dosya Aç gösterir.](./media/how-to-create-a-workflow-service-with-messaging-activities/default-workflow-service.jpg)  
+     ![Ekran görüntüsü tasarımcıda Open Service1. xamlx dosyasını gösterir.](./media/how-to-create-a-workflow-service-with-messaging-activities/default-workflow-service.jpg)  
   
-     Etiketli etkinliğe sağ tıklayın **sıralı hizmeti** seçip **Sil**.  
+     **Sıralı hizmet** etiketli etkinliğe sağ tıklayın ve **Sil**' i seçin.  
   
-### <a name="to-implement-the-workflow-service"></a>İş akışı hizmeti uygulamak için  
+### <a name="to-implement-the-workflow-service"></a>İş akışı hizmetini uygulamak için  
   
-1. Seçin **araç kutusu** raptiyeyi pencereyi açık tutun ve araç kutusunu görüntülemek için ekranın sol tarafındaki sekmesi. Genişletin **Mesajlaşma** bölümü aşağıdaki çizimde gösterildiği gibi Mesajlaşma etkinlikleri ve mesajlaşma etkinlik şablonları görüntülemek için araç kutusu.  
+1. Araç kutusunu göstermek için ekranın sol tarafındaki **araç kutusu** sekmesini seçin ve pencereyi açık tutmak için raptiye ' ye tıklayın. Aşağıdaki çizimde gösterildiği gibi, ileti etkinliklerini ve mesajlaşma etkinliği şablonlarını göstermek için araç kutusu ' nın **mesajlaşma** bölümünü genişletin.  
   
-     ![İleti bölümü olan araç kutusunu gösteren ekran görüntüsü genişletildi.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
+     ![Iletişim kutusu ile genişletilmiş Iletişim kutusu bölümü gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
   
-2. Sürükle ve bırak bir **ReceiveAndSendReply** iş akışı Tasarımcısı şablonu. Bu oluşturur bir <xref:System.Activities.Statements.Sequence> etkinliği ile bir **alma** etkinliği tarafından izlenen bir <xref:System.ServiceModel.Activities.SendReply> aşağıdaki çizimde gösterildiği gibi etkinlik.  
+2. Bir **ReceiveAndSendReply** şablonunu sürükleyip iş akışı tasarımcısına bırakın. Bu <xref:System.Activities.Statements.Sequence> **Receive** <xref:System.ServiceModel.Activities.SendReply> , aşağıdaki çizimde gösterildiği gibi, alma etkinliği ve sonrasında etkinlik gelen bir etkinlik oluşturur.  
   
-     ![ReceiveAndSendReply şablon gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
+     ![ReceiveAndSendReply şablonunu gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
   
-     Dikkat <xref:System.ServiceModel.Activities.SendReply> etkinliğin <xref:System.ServiceModel.Activities.SendReply.Request%2A> özelliği `Receive`, adını <xref:System.ServiceModel.Activities.Receive> hangi etkinlik <xref:System.ServiceModel.Activities.SendReply> etkinlik yanıtlama.  
+     <xref:System.ServiceModel.Activities.SendReply>Etkinliğin <xref:System.ServiceModel.Activities.SendReply.Request%2A> özelliğinin olarak ayarlanmış olduğuna `Receive` , etkinliğin <xref:System.ServiceModel.Activities.Receive> yanıtlanıyor olduğu etkinliğin adına <xref:System.ServiceModel.Activities.SendReply> dikkat edin.  
   
-3. İçinde <xref:System.ServiceModel.Activities.Receive> etkinlik türü `Echo` etiketli metin kutusu içine **OperationName**. Bu hizmetin işlem adını tanımlar uygular.  
+3. <xref:System.ServiceModel.Activities.Receive>Etkinlik türü ' nde `Echo` , **OperationName**etiketli metin kutusuna yazın. Bu, hizmetin uyguladığı işlemin adını tanımlar.  
   
-     ![İşlem adı belirtmek nereye gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
+     ![İşlem adının nerede belirtildiğinin gösterildiği ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
   
-4. İle <xref:System.ServiceModel.Activities.Receive> seçili etkinlik Özellikler penceresini açmak tıklayarak açık değilse **görünümü** menü ve seçerek **Özellikler penceresi**. İçinde **Özellikler penceresi** görene kadar aşağı kaydırın **CanCreateInstance** ve aşağıdaki çizimde gösterildiği gibi onay kutusuna tıklayın. Bu ayar, bir ileti alındığında (gerekirse) hizmetinin yeni bir örneğini oluşturmak iş akışı hizmeti konağı sağlar.  
+4. <xref:System.ServiceModel.Activities.Receive>Etkinlik seçiliyken, zaten açık değilse **Görünüm** menüsüne tıklayıp **Özellikler penceresi**' ni seçerek Özellikler penceresini açın. **Özellikler penceresinde** , **CanCreateInstance** ' ı görene kadar aşağı kaydırın ve aşağıdaki çizimde gösterildiği gibi onay kutusuna tıklayın. Bu ayar, iş akışı hizmet ana bilgisayarının bir ileti alındığında hizmetin yeni bir örneğini (gerekirse) oluşturmasını sağlar.  
   
-     ![CanCreateInstance özelliği gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
+     ![CanCreateInstance özelliğini gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
   
-5. Seçin <xref:System.Activities.Statements.Sequence> etkinliği ve tıklatın **değişkenleri** tasarımcının sol alt köşedeki düğmesi. Bu değişkenler Düzenleyicisi'ni görüntüler. Tıklayın **değişkeni oluşturma** işleme gönderilen dize depolamak için bir değişken eklemek için bağlantı. Değişken adı `msg` ve kendi **değişkeni** aşağıdaki çizimde gösterildiği gibi dize olarak yazın.  
+5. Etkinliği seçin <xref:System.Activities.Statements.Sequence> ve tasarımcının sol alt köşesindeki **değişkenler** düğmesine tıklayın. Bu, değişkenler düzenleyicisini görüntüler. İşleme gönderilen dizeyi depolayacak bir değişken eklemek için **değişken Oluştur** bağlantısına tıklayın. Değişkenini adlandırın `msg` ve aşağıdaki çizimde gösterildiği gibi **değişken** türünü String olarak ayarlayın.  
   
-     ![Bir değişken eklemek gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/add-variable-msg-string.jpg)  
+     ![Nasıl değişken ekleneceğini gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/add-variable-msg-string.jpg)  
   
-     Tıklayın **değişkenleri** yeniden değişkenleri Düzenleyicisi'ni kapatmak için düğme.  
+     Değişkenler düzenleyicisini kapatmak için **değişkenler** düğmesine tekrar tıklayın.  
   
-6. Tıklayın **tanımlayın...** bağlantısını **içerik** metin kutusu <xref:System.ServiceModel.Activities.Receive> görüntülemek için etkinliği **içerik tanımı** iletişim. Seçin **parametreleri** radyo düğmesini'a tıklayın **yeni parametre Ekle** yazın, bağlantı `inMsg` içinde **adı** metin kutusunda **dize**içinde **türü** liste kutusu ve tür açılan `msg` içinde **atamak** aşağıdaki çizimde gösterildiği gibi metin kutusu.  
+6. **Tanımla** ' ya tıklayın. **Content** <xref:System.ServiceModel.Activities.Receive> **İçerik tanımı** Iletişim kutusunu göstermek için etkinliğin içerik metin kutusunda bağlantısını yapın. **Parametreler** radyo düğmesini seçin, **yeni parametre Ekle** bağlantısına tıklayın, `inMsg` **ad** metin kutusunu yazın, **tür** açılan liste kutusunda **dize** ' yi seçin ve `msg` Aşağıdaki çizimde gösterildiği gibi **ata** metin kutusuna yazın.  
   
-     ![Parametre içerik ekleme gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
+     ![Parametre içeriği eklemeyi gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
-     Bu alma etkinliğini dize parametresi alan ve verilerin bağlandığı belirtir `msg` değişkeni. Tıklayın **Tamam** kapatmak için **içerik tanımı** iletişim.  
+     Bu, alma etkinliğinin dize parametresini alacağını ve verilerin değişkene bağlandığını belirtir `msg` . **Içerik tanımı** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-7. Tıklayın **tanımlayın...**  bağlantısını **içerik** kutusunda <xref:System.ServiceModel.Activities.SendReply> görüntülemek için etkinliği **içerik tanımı** iletişim. Seçin **parametreleri** ye radyo düğmesini **yeni parametre Ekle** bağlantı, yazın `outMsg` içinde **adı** metin seçin **dize**içinde **türü** açılan liste kutusunda ve `msg` içinde **değer** aşağıdaki çizimde gösterildiği gibi metin kutusu.  
+7. Içerik tanımı iletişim kutusunu göstermek için etkinliğin **içerik** kutusunda **tanımla...** bağlantısına tıklayın <xref:System.ServiceModel.Activities.SendReply> . **Content Definition** **Parametreler** radyo düğmesini seçin, **yeni parametre Ekle** bağlantısına tıklayın, `outMsg` **ad** metin kutusunu yazın, **tür** açılan liste kutusunda **dize** ' yi seçin ve `msg` **değer** metin kutusunda aşağıdaki çizimde gösterildiği gibi yazın.  
   
-     ![OutMsg parametre eklemek gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
+     ![OutMsg parametresinin nasıl ekleneceğini gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   
-     Bu belirten <xref:System.ServiceModel.Activities.SendReply> etkinlik, bir ileti ya da ileti anlaşması türü gönderir ve bu verilere bağlı `msg` değişkeni. Bu olduğundan bir <xref:System.ServiceModel.Activities.SendReply> etkinlik, başka bir deyişle verilerde `msg` etkinlik istemciye geri gönderir ileti doldurmak için kullanılır. Tıklayın **Tamam** kapatmak için **içerik tanımı** iletişim.  
+     Bu, <xref:System.ServiceModel.Activities.SendReply> etkinliğin bir ileti veya ileti sözleşmesi türü göndereceğini ve verilerin değişkene bağlandığını belirtir `msg` . Bu bir etkinlik olduğu <xref:System.ServiceModel.Activities.SendReply> için bu, içindeki verilerin, `msg` etkinliğin istemciye geri gönderdiği iletiyi doldurmak için kullanıldığı anlamına gelir. **Içerik tanımı** iletişim kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-8. Kaydet ve tıklayarak çözüm oluşturun **derleme** menü ve seçerek **Çözümü Derle**.  
+8. **Build** menüsüne tıklayıp Build **Solution**' ı seçerek çözümü kaydedin ve oluşturun.  
   
-## <a name="configure-the-workflow-service-project"></a>İş akışı hizmeti projesi yapılandırma  
- Tam iş akışı hizmetidir. Bu bölümde, barındırma ve çalıştırma kolaylaştırmak için iş akışı hizmeti çözümün nasıl yapılandırılacağını açıklar. Bu çözüm, ASP.NET Geliştirme Sunucusu hizmeti barındırmak için kullanır.  
+## <a name="configure-the-workflow-service-project"></a>Iş akışı hizmeti projesini yapılandırma  
+ İş akışı hizmeti tamamlanmıştır. Bu bölümde, barındırmak ve çalıştırmak kolay hale getirmek için iş akışı hizmeti çözümünün nasıl yapılandırılacağı açıklanmaktadır. Bu çözüm, hizmeti barındırmak için ASP.NET geliştirme sunucusunu kullanır.  
   
 #### <a name="to-set-project-start-up-options"></a>Proje başlangıç seçeneklerini ayarlamak için  
   
-1. İçinde **Çözüm Gezgini**, sağ **MyWFService** seçip **özellikleri** görüntülenecek **proje özellikleri** iletişim.  
+1. **Çözüm Gezgini**, **MyWFService** ' e sağ tıklayın ve **Özellikler** ' i seçerek **Proje özellikleri** iletişim kutusunu görüntüleyin.  
   
-2. Seçin **Web** sekmenize **belirli sayfa** altında **başlatma eylemi** ve türü `Service1.xamlx` metin kutusunda aşağıdaki çizimde gösterildiği gibi.  
+2. **Web** sekmesini seçin ve **Başlangıç eylemi** altında **belirli sayfa** ' yı seçin ve `Service1.xamlx` Aşağıdaki çizimde gösterildiği gibi metin kutusuna yazın.  
   
-     ![Proje Özellikleri iletişim kutusu gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/project-properties-dialog.jpg)  
+     ![Proje Özellikleri iletişim kutusunu gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/project-properties-dialog.jpg)  
   
-     Bu, Service1.xamlx ASP.NET geliştirme sunucusu içinde tanımlanan hizmet barındırır.  
+     Bu, ASP.NET geliştirme sunucusunda Service1. xamlx içinde tanımlanan hizmeti barındırır.  
   
-3. Hizmeti başlatmak için Ctrl + F5 tuşlarına basın. ASP.NET Geliştirme Sunucusu simge, aşağıdaki görüntüde gösterildiği gibi daha düşük sağ tarafında bulunan masaüstü görüntülenir.  
+3. Hizmeti başlatmak için CTRL + F5 tuşlarına basın. Aşağıdaki görüntüde gösterildiği gibi, ASP.NET geliştirme sunucusu simgesi masaüstünün sağ alt tarafında görüntülenir.  
   
-     ![ASP.NET Geliştirici sunucu simgesini gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/asp-net-dev-server-icon.jpg)  
+     ![ASP.NET Developer Server simgesini gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/asp-net-dev-server-icon.jpg)  
   
-     Ayrıca, WCF hizmeti Yardım Sayfası'hizmeti için Internet Explorer görüntüler.  
+     Ayrıca, Internet Explorer hizmet için WCF hizmeti yardım sayfasını görüntüler.  
   
-     ![WCF hizmet Yardım sayfasını gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/wcf-service-help-page.jpg)  
+     ![WCF hizmeti yardım sayfasını gösteren ekran görüntüsü.](./media/how-to-create-a-workflow-service-with-messaging-activities/wcf-service-help-page.jpg)  
   
-4. Geçin [nasıl yapılır: Bir hizmet bir iş akışı uygulamanın erişim](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) bu hizmetine çağrı yapan bir iş akışı istemcisi oluşturmak için konu.  
+4. Bu hizmeti çağıran bir iş akışı istemcisi oluşturmak için [nasıl yapılır: bir Iş akışı uygulamasından hizmete erişme](how-to-access-a-service-from-a-workflow-application.md) konusuna geçin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [Mesajlaşma Etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
+- [İş Akışı Hizmetleri](workflow-services.md)
+- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](hosting-workflow-services-overview.md)
+- [Mesajlaşma Etkinlikleri](messaging-activities.md)

@@ -2,38 +2,38 @@
 title: 'Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 0f7a221d1fd14b4a978683f008858e35cbd2df19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15d7ad43ce9120e97aba9119aff6a6c1a19f301f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184751"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596922"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Nasıl yapılır: ASP.NET AJAX Uç Noktaları için HTTP POST ve HTTP GET İstekleri Arasında Seçim Yapma
 
-Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten çağrılabilen AJAX özellikli ASP.NET bir bitiş noktasını ortaya çıkaran bir hizmet oluşturmanıza olanak tanır. Bu tür hizmetleri oluşturmak için temel yordamlar [nasıl tartışılır: ASP.NET bir AJAX Bitiş Noktası Eklemek için Yapılandırmayı Kullanın](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) ve Nasıl [Yapılır: Yapılandırmayı Kullanmadan ASP.NET bir AJAX Bitiş Noktası Ekleyin.](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)  
+Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript 'ten çağrılabilen ASP.NET AJAX özellikli bir uç nokta sunan bir hizmet oluşturmanıza olanak sağlar. Bu tür hizmetleri oluşturmaya yönelik temel yordamlar, [nasıl yapılır: ASP.NET AJAX uç noktası eklemek Için yapılandırma kullanma](how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) ve [nasıl yapılır: yapılandırma kullanmadan ASP.NET AJAX uç noktası ekleme](how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)konusunda ele alınmıştır.  
   
- ASP.NET AJAX, HTTP POST ve HTTP GET fiillerini kullanan işlemleri destekler ve http post varsayılan dır. Hiçbir yan etkisi olmayan ve nadiren veya hiç değişmeyen verileri döndüren bir işlem oluştururken, bunun yerine HTTP GET'i kullanın. GET işlemlerinin sonuçları önbelleğe alınabilir, bu da aynı işlemi birden çok aramanın hizmetinize yalnızca bir istekle sonuçlanabileceği anlamına gelir. Önbelleğe alma WCF tarafından yapılmaz, ancak herhangi bir düzeyde (kullanıcının tarayıcısında, proxy sunucusunda ve diğer düzeylerde) gerçekleşebilir. Hizmet performansını artırmak istiyorsanız önbelleğe alma avantajlıdır, ancak veriler sık sık değişirse veya işlem bazı eylemlergerçekleştirirse kabul edilebilir olmayabilir.  
+ ASP.NET AJAX, HTTP POST ve HTTP GET fiillerini kullanan işlemleri destekler, varsayılan olarak HTTP POST. Yan etkileri olmayan ve nadiren veya hiç değişmesiz verileri döndüren bir işlem oluştururken bunun yerine HTTP GET kullanın. ALMA işlemlerinin sonuçları önbelleğe alınabilir. Bu, aynı işleme yapılan birden çok çağrının hizmetinize yalnızca bir istek oluşmasına neden olabileceği anlamına gelir. Önbelleğe alma, WCF tarafından yapılmaz, ancak herhangi bir düzeyde (bir kullanıcının tarayıcısında, bir ara sunucuda ve diğer düzeylerde) gerçekleşebilir. Hizmet performansını artırmak istiyorsanız önbelleğe alma avantajlıdır, ancak veriler sık sık değişirse veya işlem bazı eylemler gerçekleştirdiğinde kabul edilebilir olmayabilir.  
   
- Örneğin, bir kullanıcının müzik kitaplığını yönetmek için hizmet tasarlıyorsanız, bir albümün başlığına göre sanatçıyı arayan bir işlem GET'i kullanmanın avantajlarından yararlanır, ancak kullanıcının kişisel koleksiyonuna albüm ekleyen bir işlem POST'u kullanmalıdır.  
+ Örneğin, bir kullanıcının müzik kitaplığını yönetmek için hizmet tasarlıyorsanız, sanatçı 'yı kullanarak bir albümün başlık avantajına bağlı olarak sanatçıların bulunduğu bir işlem, ancak kullanıcının kişisel koleksiyonuna bir albüm ekleyen bir işlemin POST kullanması gerekir.  
   
- Önbelleğin kullanım ömrünü denetlemek <xref:System.ServiceModel.Web.OutgoingWebResponseContext> için türü kullanın. Örneğin, hava durumu tahminlerini saatlik olarak güncelleştiren bir hizmet tasarlarken, HIZMET kullanıcılarının eski verilere erişmesini önlemek için GET'i ancak önbellek süresini bir saat veya daha az ile sınırlandırırsınız.  
+ Önbelleğin ömrünü denetlemek için <xref:System.ServiceModel.Web.OutgoingWebResponseContext> türü kullanın. Örneğin, hava durumu tahminlerini saat olarak güncelleştiren bir hizmet tasarlarken, hizmet kullanıcılarının eski verilere erişmesini engellemek için önbellek süresini bir saat veya daha az olacak şekilde Al ' ı kullanın.  
   
- Komut Dosyası Yöneticisi denetimini kullanan ASP.NET bir AJAX sayfasından gelen hizmetleri kullanırken, işlemin GET veya POST'u kullanıp kullanmadığı fark etmez - komut dosyası yöneticisi mekanizması doğru istek türünün verilmesini sağlar.  
+ Betik Yöneticisi denetimini kullanan bir ASP.NET AJAX sayfasından hizmetleri kullanırken, komut dosyası Yöneticisi mekanizması işlemin GET veya POST işlemini kullanıp kullanmadığını fark etmeksizin, doğru istek türünün verilmemesini sağlar.  
   
- HTTP GET işlemleri, karmaşık veri sözleşmesi türleri de dahil olmak üzere POST işlemleri tarafından desteklenen tüm giriş parametrelerini kullanır. Ancak, çoğu durumda önbelleğe alma verimliliğini azalttığı için GET işlemlerinde çok karmaşık olan çok fazla parametre veya parametreden kaçınmak önerilir.  
+ HTTP GET işlemleri, karmaşık veri sözleşmesi türleri de dahil olmak üzere POST işlemleri tarafından desteklenen tüm giriş parametrelerini kullanır. Ancak çoğu durumda, alma işlemleri için çok karmaşık olan çok fazla parametre veya parametre kullanmaktan kaçınmak, çünkü önbelleğe alma verimliliğini düşürür.  
   
- Bu konu, hizmet sözleşmesindeki ilgili işlemlere <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> veya öznitelikleri ekleyerek GET ve POST arasında nasıl seçim yapılacağını gösterir. Hizmeti çalıştırmak için gereken diğer adımlar (hizmeti uygulamak, yapılandırmak ve barındırmak için), WCF'deki herhangi bir ASP.NET AJAX hizmeti tarafından kullanılanlara benzer.  
+ Bu konu başlığı altında, <xref:System.ServiceModel.Web.WebGetAttribute> <xref:System.ServiceModel.Web.WebInvokeAttribute> hizmet sözleşmesindeki ilgili işlemlere veya ÖZNITELIKLERINI ekleyerek al ve postala arasında nasıl seçim yapılacağı gösterilmektedir. Hizmeti çalıştırmak için gerekli diğer adımlar (hizmeti uygulamak, yapılandırmak ve barındırmak), WCF 'de herhangi bir ASP.NET AJAX hizmeti tarafından kullanılanlarla benzerdir.  
   
- <xref:System.ServiceModel.Web.WebGetAttribute> Her zaman GET isteği yle işaretlenmiş bir işlem kullanır. <xref:System.ServiceModel.Web.WebInvokeAttribute>'ile işaretlenmiş veya iki özetmenle işaretlenmemiş bir işlem, bir POST isteği kullanır. Özellik <xref:System.ServiceModel.Web.WebInvokeAttribute> aracılığıyla <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> GET ve POST (PUT ve DELETE gibi) dışındaki diğer HTTP fiillerinin kullanımına izin verir. Ancak bu fiiller ASP.NET AJAX tarafından desteklenmemektedir. Komut Dosyası Yöneticisi denetimini kullanarak ASP.NET sayfadaki hizmeti kullanmak <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> istiyorsanız, özelliği kullanmayın.  
+ İle işaretlenen bir işlem, <xref:System.ServiceModel.Web.WebGetAttribute> her zaman BIR get isteği kullanır. Ya da iki özniteliği ile işaretlenmemiş bir işlem, <xref:System.ServiceModel.Web.WebInvokeAttribute> BIR post isteği kullanır. , <xref:System.ServiceModel.Web.WebInvokeAttribute> Özelliği aracılığıyla al ve postala (put ve DELETE gibi) dışında DIĞER http fiillerinin kullanılmasına izin verir <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> . Ancak, bu fiiller ASP.NET AJAX tarafından desteklenmez. Hizmeti betik Yöneticisi denetimini kullanarak ASP.NET sayfalarından kullanmayı düşünüyorsanız, <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> özelliğini kullanmayın.  
   
- GET'e geçiş için çalışan bir örnek için [Temel AJAX Hizmeti](../../../../docs/framework/wcf/samples/basic-ajax-service.md) örneğine bakın.  
+ GET 'e geçiş yapma örneği için bkz. [Temel AJAX Hizmeti](../samples/basic-ajax-service.md) örneği.  
   
- POST kullanan bir örnek [için, HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) örneğini kullanarak AJAX Hizmeti'ne bakın.  
+ POST kullanan bir örnek için bkz. [http post örneği kullanılarak AJAX Hizmeti](../samples/ajax-service-using-http-post.md) .  
   
 ## <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>HTTP GET veya HTTP POST isteklerine yanıt veren bir WCF hizmeti oluşturmak için
   
-1. Öznitelik ile işaretlenmiş bir arabirim ile <xref:System.ServiceModel.ServiceContractAttribute> temel bir WCF hizmet sözleşmesi tanımlayın. Her işlemi <xref:System.ServiceModel.OperationContractAttribute>. <xref:System.ServiceModel.Web.WebGetAttribute> Bir işlemin HTTP GET isteklerine yanıt vermesi gerektiğini şart koşturacak özniteliği ekleyin. Ayrıca, HTTP <xref:System.ServiceModel.Web.WebInvokeAttribute> POST'u açıkça belirtmek için öznitelik ekleyebilir veya HTTP POST varsayılan bir öznitelik belirtemezsiniz.
+1. Özniteliği ile işaretlenmiş bir arabirimle birlikte temel bir WCF hizmeti sözleşmesi tanımlayın <xref:System.ServiceModel.ServiceContractAttribute> . Her işlemi ile işaretleyin <xref:System.ServiceModel.OperationContractAttribute> . <xref:System.ServiceModel.Web.WebGetAttribute>Bir işlemin http get isteklerine yanıt vermesi gereken belirtmek özniteliğini ekleyin. Ayrıca, http post <xref:System.ServiceModel.Web.WebInvokeAttribute> ' ı varsayılan olarak belirtmek için özniteliğini veya bir özniteliği belirtmeyeceğinizi de ekleyebilirsiniz.
   
     ```csharp
     [ServiceContract]  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
     }  
     ```  
   
-2. Bir `IMusicService` `MusicService`ile hizmet sözleşmesi uygulayın.
+2. `IMusicService`Hizmet sözleşmesini bir ile uygulayın `MusicService` .
   
     ```csharp
     public class MusicService : IMusicService  
@@ -73,7 +73,7 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
     }  
     ```  
   
-3. Uygulamada .svc uzantısı bulunan hizmet adlı yeni bir dosya oluşturun. Hizmet için uygun [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi bilgilerini ekleyerek bu dosyayı düzenleyin. <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> ASP.NET bir AJAX bitiş noktasını otomatik olarak yapılandırmak için [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) yönergesinde kullanılacağını belirtin.  
+3. Uygulamada. svc uzantısıyla yeni bir dosya adlı hizmet oluşturun. Hizmet için uygun [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) yönergesi bilgilerini ekleyerek bu dosyayı düzenleyin. <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>ASP.NET AJAX uç noktasını otomatik olarak yapılandırmak için [ \@ ServiceHost](../../configure-apps/file-schema/wcf-directive/servicehost.md) yönergesinde kullanılacağını belirtin.  
   
     ```
     <%@ServiceHost
@@ -84,13 +84,13 @@ Windows Communication Foundation (WCF), istemci Web sitesinde JavaScript'ten ça
     %>  
     ```  
   
-## <a name="to-call-the-service"></a>Hizmeti aramak için  
+## <a name="to-call-the-service"></a>Hizmeti çağırmak için  
   
-1. Tarayıcıyı kullanarak hizmetinizin GET işlemlerini herhangi bir istemci kodu olmadan test edebilirsiniz. Örneğin, hizmetiniz `http://example.com/service.svc` adreste yapılandırılırsa, `http://example.com/service.svc/LookUpArtist?album=SomeAlbum` tarayıcı adresi çubuğuna yazmak hizmeti çağırır ve yanıtın indirilmesine veya görüntülenmesine neden olur.
+1. Hizmetini, tarayıcıyı kullanarak, herhangi bir istemci kodu olmadan hizmetinizin Al işlemlerini test edebilirsiniz. Örneğin, hizmetiniz `http://example.com/service.svc` adreste yapılandırılmışsa, `http://example.com/service.svc/LookUpArtist?album=SomeAlbum` tarayıcı adres çubuğuna yazarak hizmeti çağırır ve yanıt İndirilme veya görüntülenmesine neden olur.
   
-2. GET işlemlerindeki hizmetleri, ASP.NET AJAX Script Manager denetiminin Scripts koleksiyonuna hizmet URL'sini girerek, diğer ASP.NET AJAX hizmetleriyle aynı şekilde kullanabilirsiniz. Örneğin, [Temel AJAX Hizmeti'ne](../../../../docs/framework/wcf/samples/basic-ajax-service.md)bakın.
+2. GET Operations ile hizmetleri diğer ASP.NET AJAX hizmetleriyle aynı şekilde kullanabilirsiniz. hizmet URL 'sini ASP.NET AJAX betik Yöneticisi denetiminin betikler koleksiyonuna girerek. Bir örnek için bkz. [Temel AJAX Hizmeti](../samples/basic-ajax-service.md).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET AJAX için WCF Hizmetleri Oluşturma](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [ASP.NET AJAX için WCF Hizmetleri Oluşturma](creating-wcf-services-for-aspnet-ajax.md)
+- [Nasıl yapılır: AJAX Etkinleştirilmiş ASP.NET Web Hizmetlerini WCF'ye Taşıma](how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

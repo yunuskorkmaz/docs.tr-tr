@@ -2,12 +2,12 @@
 title: HTTP Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 4bd3fbfd39538eee4344ef0a8ca4fe61b372ab70
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212141"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592729"
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 Aktarım olarak HTTP kullanırken güvenlik, bir Güvenli Yuva Katmanı (SSL) uygulamasıyla sağlanır. SSL, bir istemcide bir hizmetin kimliğini doğrulamak ve ardından kanala Gizlilik (şifreleme) sağlamak için Internet 'te yaygın olarak kullanılır. Bu konuda, SSL 'nin nasıl çalıştığı ve Windows Communication Foundation (WCF) ' de nasıl uygulandığı açıklanmaktadır.  
@@ -51,9 +51,9 @@ Sertifikaları IIS 7,0 ile kullanmak üzere yapılandırmak için bkz. [ııs 7,
 
  Kendi kendine barındırılan bir WCF uygulaması oluşturuyorsanız, [Httpcfg. exe](/windows/win32/http/httpcfg-exe) aracını kullanın.
   
- X. 509.952 sertifikasıyla bir bağlantı noktası ayarlamak için HttpCfg. exe aracını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ X. 509.952 sertifikasıyla bir bağlantı noktası ayarlamak için HttpCfg. exe aracını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Aktarım Güvenliği](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [Aktarım Güvenliği](transport-security.md)
+- [İleti Güvenliği](message-security-in-wcf.md)

@@ -2,52 +2,52 @@
 title: Internet Information Services Barındırma En İyi Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 3be9d4c81f891ad898099ba9041a09b16388b7e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e62fed4f6a711ecc317b8f758d4948a477d136e1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184711"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595277"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Internet Information Services Barındırma En İyi Uygulamaları
-Bu konu, Windows Communication Foundation (WCF) hizmetlerini barındırmak için en iyi uygulamaları özetlemektedir.  
+Bu konuda Windows Communication Foundation (WCF) Hizmetleri barındırmak için bazı en iyi yöntemler özetlenmektedir.  
   
-## <a name="implementing-wcf-services-as-dlls"></a>WCF Hizmetlerinin DL olarak uygulanması  
- Bir WCF hizmetini, bir Web uygulamasının \bin dizinine dağıtılan bir DLL olarak uygulamak, hizmeti Web uygulama modelinin dışında( örneğin, Internet Information Services (IIS) dağıtılmayan bir test ortamında yeniden kullanmanıza olanak tanır.  
+## <a name="implementing-wcf-services-as-dlls"></a>WCF hizmetlerini dll olarak uygulama  
+ Bir Web uygulamasının \bin dizinine dağıtılan bir DLL olarak bir WCF hizmeti uygulamak, hizmeti Web uygulaması modelinin dışında (örneğin, Internet Information Services (IIS) dağıtılan bir test ortamında yeniden kullanmanıza olanak tanır.  
   
-## <a name="service-hosts-in-iis-hosted-applications"></a>IIS Tarafından Barındırılan Uygulamalarda Hizmet Barındıran Sunucular  
- Zorunlu kendi barındırma API'lerini, IIS barındırma ortamı tarafından yerel olarak desteklenmeyen ağ aktarımlarında dinleyen yeni hizmet barındıran ları oluşturmak için kullanmayın (Örneğin, TCP iletişimi IIS 6.0'da yerel olarak desteklenmediği için IIS 6.0 TCP hizmetlerini barındırmak için). Bu yaklaşım önerilmez. Zorunlu olarak oluşturulan hizmet ana bilgisayarları IIS barındırma ortamında bilinmemektedir. Kritik nokta, barındırma uygulama havuzunun boşta olup olmadığını belirlerken zorunlu olarak oluşturulan hizmetler tarafından yapılan işlemlerin IIS tarafından muhasebelemediğidir. Sonuç olarak, bu tür zorunlu olarak oluşturulan hizmet ana bilgisayarları olan uygulamaların, IIS ana bilgisayar süreçlerini agresif bir şekilde bertaraf eden bir IIS barındırma ortamına sahip olmasıdır.  
+## <a name="service-hosts-in-iis-hosted-applications"></a>IIS tarafından barındırılan uygulamalarda hizmet ana bilgisayarları  
+ IIS barındırma ortamı tarafından yerel olarak desteklenmeyen ağ taşımalarını dinleyen yeni hizmet Konakları oluşturmak için zorunlu Self-Host API 'Lerini kullanmayın (örneğin, TCP iletişimi IIS 6,0 ' de yerel olarak desteklenmediğinden, TCP hizmetlerini barındırmak için IIS 6,0). Bu yaklaşım önerilmez. İmperatively oluşturulan hizmet ana bilgisayarları IIS barındırma ortamı içinde bilinmiyor. Kritik nokta, imperatively tarafından oluşturulan hizmetler tarafından gerçekleştirilen işleme, barındırma uygulama havuzunun boşta olup olmadığını belirlediğinde IIS tarafından hesaba katılmaz. Sonuç olarak, imperatively tarafından oluşturulan hizmet Konakları olan uygulamalarda IIS ana bilgisayar işlemlerinin ortadan kaldırılmış bir IIS barındırma ortamı vardır.  
   
-## <a name="uris-and-iis-hosted-endpoints"></a>URI'ler ve IIS Tarafından Barındırılan Uç Noktalar  
- IIS tarafından barındırılan bir hizmetin bitiş noktaları, mutlak adresler kullanılarak değil, göreli Tekdüzen Kaynak Tanımlayıcıları (URI'ler) kullanılarak yapılandırılmalıdır. Bu, bitiş noktası adresinin barındırma uygulamasına ait URI adresleri kümesine düştüğünü garanti eder ve ileti tabanlı etkinleştirmenin beklendiği gibi gerçekleşmesini sağlar.  
+## <a name="uris-and-iis-hosted-endpoints"></a>URI 'Ler ve IIS tarafından barındırılan uç noktalar  
+ IIS tarafından barındırılan bir hizmetin uç noktaları, mutlak adresler değil göreli Tekdüzen Kaynak tanımlayıcıları (URI) kullanılarak yapılandırılmalıdır. Bu, uç nokta adresinin barındırma uygulamasına ait olan URI adresleri kümesi içinde olmasını güvence altına alır ve ileti tabanlı etkinleştirmenin beklenen şekilde gerçekleşmesini sağlar.  
   
-## <a name="state-management-and-process-recycling"></a>Devlet Yönetimi ve Süreç Geri Dönüşümü  
- IIS barındırma ortamı, bellekte yerel durumu korumayan hizmetler için optimize edilebiyi raydır. IIS, çeşitli dış ve iç olaylara yanıt olarak ana bilgisayar işlemini geri dönüştürür ve yalnızca bellekte depolanan geçici durumların kaybolmasına neden olur. IIS'de barındırılan hizmetler, durumlarını işlemin dışında (örneğin, bir veritabanında) veya bir uygulama geri dönüştürme olayı oluşursa kolayca yeniden oluşturulabilecek bir bellek önbelleğinde depolamalıdır.  
+## <a name="state-management-and-process-recycling"></a>Durum yönetimi ve Işlem geri dönüştürme  
+ IIS barındırma ortamı, bellekteki yerel durumu korumayan hizmetler için en iyi duruma getirilmiştir. IIS, çeşitli dış ve iç olaylara yanıt olarak ana bilgisayar işlemini geri dönüştürür ve yalnızca bellekte depolanan geçici durumun kaybolmasına neden olur. IIS 'de barındırılan hizmetler, bir uygulamanın (örneğin, bir veritabanında) veya bir uygulama geri dönüşüm olayı gerçekleştiğinde kolayca yeniden oluşturulabilen bir bellek içi önbellekte yer almalıdır.  
   
 > [!NOTE]
-> WCF'nin ileti katmanı güvenilirliği ve güvenliği için kullandığı protokoller, geçici bellek içi durumu kullanır. WCF güvenilir oturumları ve güvenlik oturumları, uygulama geri dönüşümleri nedeniyle beklenmedik bir şekilde sona erebilir. Bu protokollerden yararlanan IIS barındırılan uygulamalar, uygulama katmanı durumunu ilişkilendirme (örneğin, uygulama katmanı yapısı veya özel korelasyon üstbilgisi) için WCF tarafından sağlanan oturum anahtarından başka bir şeye bağlı olmalı veya devre dışı Barındırılan uygulama için IIS proses geri dönüşümü.  
+> WCF protokolleri ileti katmanı güvenilirliği ve güvenliği için kullanılan protokoller, geçici bellek içi durumu kullanır. WCF güvenilir oturumlar ve güvenlik oturumları, uygulama geri dönüştürme nedeniyle beklenmedik bir şekilde sonlandırılabilir. Bu protokollerin kullanıldığı IIS tarafından barındırılan uygulamalar, uygulama katmanı durumunun (örneğin, bir uygulama katmanı yapısı veya özel bağıntı üstbilgisi) bağıntısı için, WCF tarafından sağlanmış oturum anahtarı dışında bir şeye bağlı olmalıdır veya barındırılan uygulama için IIS işlem geri dönüşümünü devre dışı bırakır.  
   
-## <a name="optimizing-performance-in-middle-tier-scenarios"></a>Orta Katman Senaryolarda Performansı Optimize Etme  
- Gelen iletilere yanıt olarak diğer hizmetlere sesilen bir hizmet olan *orta katman senaryosunda*en iyi performans için, WCF hizmet istemcisini bir kez uzak hizmete anında iletin ve birden çok gelen istekarasında yeniden kullanın. WCF hizmet istemcilerini anında algılamak, önceden varolan bir istemci örneğinde bir hizmet çağrısı yapmaya göre pahalı bir işlemdir ve orta katman senaryoları istekler arasında uzak istemcileri önbelleğe alarak farklı performans kazançları üretir. WCF hizmet istemcileri iş parçacığı için güvenlidir, bu nedenle birden çok iş parçacığı arasında bir istemciye erişimi eşitlemek gerekli değildir.  
+## <a name="optimizing-performance-in-middle-tier-scenarios"></a>Orta katman senaryolarında performansı en iyi duruma getirme  
+ *Orta katman senaryosunda*en iyi performansı elde etmek için, gelen iletilere yanıt olarak diğer hizmetlere çağrı yapan bir hizmet olan bir kez, WCF hizmeti istemcisini uzak hizmete bir kez oluşturun ve birden çok gelen istek genelinde yeniden kullanın. WCF hizmeti istemcilerini örnekleme, önceden var olan bir istemci örneğinde hizmet çağrısı yapmaya yönelik maliyetli bir işlemdir ve orta katmanlı senaryolar uzak istemcileri istekler arasında önbelleğe alarak ayrı performans kazançları üretir. WCF hizmeti istemcileri iş parçacığı açısından güvenlidir, bu nedenle birden çok iş parçacığında bir istemciye erişimi eşitlemeniz gerekmez.  
   
- Orta katman senaryoları da `svcutil /a` seçenek tarafından oluşturulan eşzamanlı API'ler kullanarak performans kazançları üretir. Bu `/a` seçenek, [ServiceModel Metadata Utility Tool'un (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) her hizmet işlemi için yöntemler oluşturmasına `BeginXXX/EndXXX` neden olur ve bu da uzak hizmetlere uzun süreli aramaların arka plan iş parçacıkları üzerinde yapılmasına olanak tanır.  
+ Orta katman senaryoları, seçeneği tarafından oluşturulan zaman uyumsuz API 'Leri kullanarak da performans kazançları üretir `svcutil /a` . `/a`Bu seçenek, [ServiceModel meta veri yardımcı programı aracının (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) `BeginXXX/EndXXX` her bir hizmet işlemi için yöntemler oluşturmasına neden olur ve bu da arka plan iş parçacıklarında uzak hizmetlere uzun süreli çağrılar yapılmasına izin verir.  
   
-## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>Çok Homed veya Çok adlı senaryolarda WCF  
- WCF hizmetlerini, bir bilgisayar kümesinin ortak bir dış adı paylaştığı `http://www.contoso.com`(örneğin) ancak farklı ana bilgisayar adlarıyla tek tek `http://www.contoso.com` ele alınan bir IIS `http://machine1.internal.contoso.com` Web çiftliğinin içinde dağıtabilirsiniz (örneğin, trafiği iki farklı makineye yönlendirebilir ve). `http://machine2.internal.contoso.com` Bu dağıtım senaryosu tamamen WCF tarafından desteklenir, ancak hizmetin meta verilerinde (Web Hizmetleri Açıklama Dili) doğru (harici) ana bilgisayar adını görüntülemek için WCF hizmetlerini barındıran IIS Web sitesinin özel yapılandırmasını gerektirir.  
+## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>Çoklu bağlantılı veya çok adlı senaryolarda WCF  
+ Bir bilgisayar kümesinin ortak bir dış adı (örneğin `http://www.contoso.com` ,) paylaştığı ancak farklı ana bilgisayar adları tarafından tek tek adreslendiği BIR IIS Web grubunun IÇINDE WCF Hizmetleri dağıtabilirsiniz (örneğin, `http://www.contoso.com` trafiği, ve adlı iki farklı makineye yönlendirebilir `http://machine1.internal.contoso.com` `http://machine2.internal.contoso.com` ). Bu dağıtım senaryosu WCF tarafından tam olarak desteklenir, ancak hizmet meta verilerinde doğru (harici) ana bilgisayar adını (Web Hizmetleri Açıklama Dili) göstermek için WCF hizmetleri barındıran IIS Web sitesinin özel yapılandırmasını gerektirir.  
   
- WCF'nin oluşturduğu hizmet meta verilerinde doğru ana bilgisayar adının görünmesini sağlamak için, WCF hizmetlerini barındıran IIS Web sitesinin varsayılan kimliğini açık bir ana bilgisayar adı kullanacak şekilde yapılandırın. Örneğin, çiftliğin `www.contoso.com` içinde ikamet eden bilgisayarlar HTTP için *:80:www.contoso.com ve \*HTTPS için :443:www.contoso.com ciltleme iIS sitesi kullanmalıdır.  
+ Hizmet meta verileri WCF 'nin oluşturduğu doğru ana bilgisayar adının göründüğünden emin olmak için, WCF hizmetlerini barındıran IIS Web sitesinin varsayılan kimliğini açık bir ana bilgisayar adı kullanacak şekilde yapılandırın. Örneğin, grubun içinde bulunan bilgisayarlar için `www.contoso.com` BIR IIS site bağlaması *: 80: www. contoso. com for http ve \* : 443: www. contoso. com for https.  
   
- IIS Microsoft Yönetim Konsolu (MMC) snap-in'i kullanarak IIS Web sitesi bağlamalarını yapılandırabilirsiniz.  
+ IIS Web sitesi bağlamalarını IIS Microsoft Yönetim Konsolu (MMC) ek bileşenini kullanarak yapılandırabilirsiniz.  
   
-## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Farklı Kullanıcı Bağlamlarında Çalışan Uygulama Havuzları Geçici Klasördeki Diğer Hesaplardan Derlemeleri Üzerine Yazar  
- Farklı kullanıcı bağlamlarında çalışan uygulama havuzlarının geçici ASP.NET dosyaları klasöründeki diğer hesaplardan derlemelerin üzerine yazamamasını sağlamak için, farklı uygulamalar için farklı kimlikler ve geçici klasörler kullanın. Örneğin, iki sanal uygulamanız varsa /Application1 ve / Application2, iki farklı kimlikle A ve B olmak üzere iki Uygulama havuzu oluşturabilirsiniz. Uygulama havuzu A bir kullanıcı kimliği (user1) altında çalışırken, B uygulama havuzu başka bir kullanıcı kimliği (user2) altında çalıştırılabilir ve /Application1'i B kullanmak için A ve /Application2'yi kullanacak şekilde yapılandırabilir.  
+## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Farklı Kullanıcı bağlamlarında çalışan uygulama havuzları, geçici klasördeki diğer hesaplardan derlemelerin üzerine yazar  
+ Farklı Kullanıcı bağlamlarında çalışan uygulama havuzlarının geçici ASP.NET dosyaları klasöründeki diğer hesaplardan derlemelerin üzerine yazamayacağını sağlamak için farklı kimlikler ve farklı uygulamalar için geçici klasörler kullanın. Örneğin,/Application1 ve/application2 iki sanal uygulamanız varsa iki farklı kimlik ile iki uygulama havuzu (A ve B) oluşturabilirsiniz. A uygulama havuzu bir kullanıcı kimliği (Kullanıcı1) altında, uygulama havuzu B başka bir kullanıcı kimliği (kullanıcı2) altında çalışabilir ve/Application1 ' i bir ve/application2 kullanarak B 'yi kullanacak şekilde yapılandırabilirler.  
   
- Web.config'de, geçici klasörü> \< system.web/compilation/@tempFolder kullanarak yapılandırabilirsiniz. /Application1 için "c:\tempForUser1" ve uygulama2 için "c:\tempForUser2" olabilir. İki kimlik için bu klasörlere karşılık gelen yazma izni verir.  
+ Web. config dosyasında, kullanarak geçici klasörü yapılandırabilirsiniz \<system.web/compilation/@tempFolder> . /Application1 için, "c:\tempForUser1" olabilir ve application2 için "c:\tempForUser2" olabilir. Bu klasörlere ilgili yazma iznini iki kimlik için verin.  
   
- Sonra user2 /application2 için kod oluşturma klasörünü değiştiremez (c:\tempForUser1 altında).  
+ Sonra kullanıcı2,/Application2 (c:\tempForUser1 altında) kod oluşturma klasörünü değiştiremez.  
   
-## <a name="enabling-asynchronous-processing"></a>Eşzamanlı işlemeyi etkinleştirme  
- Varsayılan olarak, IIS 6.0 ve daha önce barındırılan bir WCF hizmetine gönderilen iletiler eşzamanlı bir şekilde işlenir. ASP.NET wcf içine kendi iş parçacığı (ASP.NET alt iş parçacığı) aramaları ve WCF isteği işlemek için başka bir iş parçacığı kullanır. WCF, işleme işlemini tamamlayana kadar ASP.NET alt iş parçacığına tutunrabilir. Bu, isteklerin eşzamanlı olarak işlenmesine yol açar. İstekleri işleme, isteği işlemek için gereken iş parçacığı sayısını azalttığı için daha fazla ölçeklenebilirlik sağlar –WCF isteği işlerken ASP.NET iş parçacığına tutunmaz. Sunucuyu *Hizmet Reddi* (DOS) saldırılarına açan gelen istekleri azaltmanın bir yolu olmadığından, IIS 6.0 çalıştıran makineler için eşsenkronize davranış kullanılması önerilmez. IIS 7.0 ile başlayarak, eşzamanlı bir istek azaltma `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`tanıtıldı: . Bu yeni gaz ile asynchronous işleme kullanmak güvenlidir.  Varsayılan olarak IIS 7.0'da, eşzamanlı işleyici ve modül kaydedilir. Bu kapatılmışsa, uygulamanızın Web.config dosyasındaki isteklerin eşsenkronize olarak işlenmesini el ile etkinleştirebilirsiniz. Kullandığınız ayarlar ayarınıza `aspNetCompatibilityEnabled` bağlıdır. `aspNetCompatibilityEnabled` Ayarladıysanız, aşağıdaki yapılandırma snippet'inde gösterildiği `System.ServiceModel.Activation.ServiceHttpModule` gibi yapılandırın. `false`  
+## <a name="enabling-asynchronous-processing"></a>Zaman uyumsuz işlemeyi etkinleştirme  
+ Varsayılan olarak, IIS 6,0 ve önceki sürümlerde barındırılan bir WCF hizmetine gönderilen iletiler, zaman uyumlu bir şekilde işlenir. ASP.NET, kendi iş parçacığında (ASP.NET Worker iş parçacığı) WCF 'ye çağrılar sağlar ve WCF, isteği işlemek için başka bir iş parçacığı kullanır. WCF, işlemesini tamamlayana kadar ASP.NET Worker iş parçacığı üzerinde tutulur. Bu, isteklerin zaman uyumlu olarak işlenmesine yol açar. İstekleri zaman uyumsuz olarak işlemek, isteği işlemek için gereken iş parçacığı sayısını azalttığından daha fazla ölçeklenebilirlik sağlar-WCF, isteği işlerken ASP.NET iş parçacığına açık tutmaz. Sunucu *hizmet reddi* (DOS) saldırılarını açan gelen istekleri kısıtlama yolu OLMADıĞıNDAN, IIS 6,0 çalıştıran makineler için zaman uyumsuz davranışın kullanılması önerilmez. IIS 7,0 ' den itibaren, eşzamanlı bir istek kısıtlaması sunuldu: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu` . Bu yeni kısıtlama sayesinde zaman uyumsuz işlemenin kullanılması güvenlidir.  IIS 7,0 ' de varsayılan olarak, zaman uyumsuz işleyici ve modül kaydedilir. Bu kapatılmışsa, uygulamanızın Web. config dosyasındaki isteklerin zaman uyumsuz işlemesini el ile etkinleştirebilirsiniz. Kullandığınız ayarlar ayarlarınıza bağlıdır `aspNetCompatibilityEnabled` . `aspNetCompatibilityEnabled`Olarak ayarlarsanız `false` , `System.ServiceModel.Activation.ServiceHttpModule` aşağıdaki yapılandırma parçacığında gösterildiği gibi öğesini yapılandırın.  
   
 ```xml  
 <system.serviceModel>  
@@ -63,7 +63,7 @@ Bu konu, Windows Communication Foundation (WCF) hizmetlerini barındırmak için
     </system.webServer>  
 ```  
   
- `aspNetCompatibilityEnabled` Eğer `true`ayarladıysanız, aşağıdaki config snippet gösterildiği `System.ServiceModel.Activation.ServiceHttpHandlerFactory` gibi yapılandırın.  
+ `aspNetCompatibilityEnabled`Olarak ayarlarsanız, `true` `System.ServiceModel.Activation.ServiceHttpHandlerFactory` aşağıdaki yapılandırma parçacığında gösterildiği gibi öğesini yapılandırın.  
   
 ```xml  
 <system.serviceModel>  
@@ -83,5 +83,5 @@ Bu konu, Windows Communication Foundation (WCF) hizmetlerini barındırmak için
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmet Barındırma Örnekleri](../samples/hosting.md)
-- [Windows Server App Kumaş Barındırma Özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Hizmet barındırma örnekleri](../samples/hosting.md)
+- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

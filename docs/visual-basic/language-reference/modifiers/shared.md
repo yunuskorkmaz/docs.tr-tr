@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: 000cc13bc6e80914e9a21b6ee60e91127809ee08
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307091"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579118"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -26,13 +26,13 @@ Bir veya daha fazla bildirilmemiş programlama öğesinin, bir sınıf veya yap�
 
 Bir sınıfın veya yapının bir üyesinin paylaşılması, her örneğin kendi kopyasını sakladığı, *paylaşılmayan*değil, her örnek için kullanılabilir hale getirir. Örneğin, bir değişkenin değeri uygulamanın tamamına geçerliyse, bu yararlıdır. Bu değişkenin olduğunu bildirirseniz `Shared` , tüm örnekler aynı depolama konumuna erişir ve bir örnek değişkenin değerini değiştirirse, tüm örnekler güncelleştirilmiş değere erişir.
 
-Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üyesi paylaşılabilir ve özel (yalnızca sınıftan erişilebilir) veya paylaşılmayan ve genel olabilir. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üyesi paylaşılabilir ve özel (yalnızca sınıftan erişilebilir) veya paylaşılmayan ve genel olabilir. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
 
 ## <a name="rules"></a>Kurallar
 
 - **Bildirim bağlamı.** `Shared`Yalnızca modül düzeyinde kullanabilirsiniz. Diğer bir deyişle, bir öğe için bildirim bağlamı `Shared` bir sınıf veya yapı olmalıdır ve kaynak dosya, ad alanı veya yordam olamaz.
 
-- **Birleşik değiştiriciler.** `Shared`Aynı bildirimde [geçersiz kılmalar](../../../visual-basic/language-reference/modifiers/overrides.md), geçersiz [kılınabilir](../../../visual-basic/language-reference/modifiers/overridable.md), [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md), [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)veya [static](../../../visual-basic/language-reference/modifiers/static.md) ile birlikte belirtemezsiniz.
+- **Birleşik değiştiriciler.** `Shared`Aynı bildirimde [geçersiz kılmalar](overrides.md), geçersiz [kılınabilir](overridable.md), [NotOverridable](notoverridable.md), [MustOverride](mustoverride.md)veya [static](static.md) ile birlikte belirtemezsiniz.
 
 - **Erişme.** Bir paylaşılan öğeye, sınıfının veya yapısının belirli bir örneğinin değişken adıyla değil, sınıf veya yapı adıyla niteleyerek erişebilirsiniz. Paylaşılan üyelerine erişmek için bir sınıf veya yapının örneğini oluşturmanız da gerekmez.
 
@@ -42,7 +42,7 @@ Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üye
      If Double.IsNaN(result) Then Console.WriteLine("Result is mathematically undefined.")
      ```
 
-- **Örtük paylaşım.** `Shared`Bir [const ifadesinde](../../../visual-basic/language-reference/statements/const-statement.md)değiştirici kullanamazsınız, ancak sabitler örtülü olarak paylaşılır. Benzer şekilde, bir modülün veya arabirimin bir üyesini `Shared` değil, örtülü olarak paylaşılırlar.
+- **Örtük paylaşım.** `Shared`Bir [const ifadesinde](../statements/const-statement.md)değiştirici kullanamazsınız, ancak sabitler örtülü olarak paylaşılır. Benzer şekilde, bir modülün veya arabirimin bir üyesini `Shared` değil, örtülü olarak paylaşılırlar.
 
 ## <a name="behavior"></a>Davranış
 

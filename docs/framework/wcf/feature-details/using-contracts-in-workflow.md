@@ -2,18 +2,18 @@
 title: İş Akışında Sözleşmeleri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 939c64e9-e7cc-4abc-b41e-27cfce1d7e50
-ms.openlocfilehash: 9f967d75a8e9d24fcfac8b7376a3d4840fba52f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: def100f9483ea9ac8bf1aa3285d76edccffb030a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184268"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595017"
 ---
 # <a name="using-contracts-in-workflow"></a>İş Akışında Sözleşmeleri Kullanma
-Bir hizmeti uygularken, hizmeti ve gönderdiği ve aldığı verileri açıklayan bir dizi sözleşme tanımlarsınız. Veriler veri sözleşmeleri ve ileti sözleşmeleri olarak temsil edilir; hem WCF hem de iş akışı hizmetleri, hizmet açıklamalarının bir parçası olarak veri sözleşmesi ve ileti sözleşmesi tanımlarını kullanır. Hizmetin kendisi, hizmetin işlemlerini açıklamak için meta verileri (WSDL biçiminde) ortaya çıkarır. WCF'de hizmet sözleşmeleri ve işletme sözleşmeleri hizmeti ve desteklediği işlemleri tanımlar. Ancak, bir iş akışı hizmetinde, bu sözleşmeler iş sürecinin bir parçasıdır; sözleşme çıkarımı adı verilen bir işlemle meta verilerde ortaya çıkarlar.  
+Bir hizmet uygularken, hizmeti ve gönderdiği verileri tanımlayan bir dizi sözleşme tanımlarsınız. Veriler veri sözleşmeleri ve ileti sözleşmeleri olarak temsil edilir; WCF ve Workflow Hizmetleri, hizmet açıklamalarının parçası olarak veri sözleşmesi ve ileti sözleşmesi tanımlarını kullanır. Hizmet, hizmetin işlemlerini anlatmak için meta verileri (WSDL biçiminde) kullanıma sunar. WCF 'de hizmet sözleşmeleri ve işlem sözleşmeleri, hizmeti ve desteklediği işlemleri tanımlar. Ancak, bir iş akışı hizmetinde, bu sözleşmeler iş sürecinin bir parçasıdır; Bunlar, anlaşma çıkarımı adlı bir işlem tarafından meta verilerde kullanıma sunulur.  
   
-## <a name="contract-inference"></a>Sözleşme Çıkarımı  
- İş akışı hizmeti kullanılarak <xref:System.ServiceModel.Activities.WorkflowServiceHost>barındırıldığında, iş akışı tanımı incelenir ve iş akışında bulunan ileti etkinlikleri kümesine göre bir sözleşme oluşturulur. Özellikle aşağıdaki faaliyetler ve özellikler sözleşme oluşturmak için kullanılır:  
+## <a name="contract-inference"></a>Sözleşme çıkarımı  
+ Bir iş akışı hizmeti kullanılarak barındırıldığı zaman, iş akışı <xref:System.ServiceModel.Activities.WorkflowServiceHost> tanımı incelenir ve iş akışında bulunan mesajlaşma etkinlikleri kümesine göre bir sözleşme oluşturulur. Aşağıdaki etkinlikler ve özellikler, sözleşmeyi oluşturmak için kullanılır:  
   
  <xref:System.ServiceModel.Activities.Receive>Etkinlik  
   
@@ -29,11 +29,11 @@ Bir hizmeti uygularken, hizmeti ve gönderdiği ve aldığı verileri açıklaya
   
  <xref:System.ServiceModel.Activities.TransactedReceiveScope>Etkinlik  
   
- Sözleşme çıkarımının sonucu, WCF hizmeti ve işlem sözleşmeleri ile aynı veri yapılarını kullanan hizmetin açıklamasıdır. Bu bilgiler daha sonra iş akışı hizmeti için WSDL'yi ortaya çıkarmak için kullanılır.  
+ Sözleşme çıkarımı nihai sonucu, WCF hizmeti ve işlem sözleşmeleri ile aynı veri yapılarını kullanan hizmetin bir açıklamasıdır. Bu bilgiler daha sonra iş akışı hizmeti için WSDL 'yi göstermek üzere kullanılır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Mesajlaşma Etkinlikleri](../../../../docs/framework/wcf/feature-details/messaging-activities.md)
-- [Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Nasıl yapılır: Var olan hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)
+- [İş Akışı Hizmetleri](workflow-services.md)
+- [Mesajlaşma Etkinlikleri](messaging-activities.md)
+- [Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma](how-to-create-a-workflow-service-with-messaging-activities.md)
+- [Nasıl yapılır: Var olan hizmet anlaşmasını kullanan iş akışı hizmeti oluşturma](../../windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)

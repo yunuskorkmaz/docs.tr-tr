@@ -2,28 +2,28 @@
 title: Eş Kanal Senaryoları
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4c24a0bafa4f73760d02de6242a9ed438d7d60e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046390"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596883"
 ---
 # <a name="peer-channel-scenarios"></a>Eş Kanal Senaryoları
-Eş kanal API'leri aşağıdaki geliştirme senaryolarını destekler.  
+Eş kanal API 'Leri aşağıdaki geliştirme senaryolarını destekler.  
   
-## <a name="publicationsubscription-messaging"></a>Yayımlama/abonelik Mesajlaşma  
- Yayımlama/abonelik uygulamalar (örneğin, yürütebilmektedir ve haber başlıklarını yayımcıları Spor puanları ve hava durumu raporları) derleme şirketler eş kanalı sunucusuz uygulamalar için kullanabilirsiniz. Örneğin, kullanıcılar bir ortak ağ (veya grup istemciler) katılarak en son Spor puanlarını almak ve güncel oyun verilerini, büyük bir miktarını, sunucu iş yükü artırmadan yayar. Bu, sunucu tabanlı teknolojiler yatırım artırmadan önemli ölçüde daha yüksek kalitede hizmet vermek için veri sağlayıcısı yardımcı olur.  
+## <a name="publicationsubscription-messaging"></a>Yayın/abonelik mesajlaşma  
+ Yayın/abonelik uygulamaları oluşturan şirketler (örneğin, hisse senetleri ve haber başlıkları, spor puanları ve hava durumu raporlarının yayımcıları), eş kanalını sunucu-daha az uygulamalar için kullanabilir. Örneğin, kullanıcılar ortak bir ağı (veya istemci grubunu) birleştirerek en son spor puanlarını edinebilir ve sunucu yükünü arttırmadan büyük miktarda güncel oyun verisi yayabilir. Bu, veri sağlayıcısının sunucu tabanlı teknolojilerde yatırımları önemli ölçüde arttırmadan daha yüksek hizmet kalitesi vermesini sağlar.  
   
 ## <a name="collaboration"></a>İş Birliği  
- Bağımsız yazılım satıcılarına (ISV), kişilere eşler arası etkinlikleri katılım için sıkı grupları oluşturma uygulamalar oluşturabilirsiniz. Örneğin, bu resmi paylaşım arkadaşlar, diğer planlama etkinlikleri ve daha fazla arasında işbirliğine dayalı projeler üzerinde çalışan ekipler içerebilir. Geleneksel olarak, bu etkinlikler, sunucular her zaman içerir; Ancak, eş kanaldan maliyet açısından daha verimli bir şekilde kolayca geleneksel sunucusu istemci modeli altında uygulanmaz ve çevrimdışı erişimi senaryoları etkinleştirerek bunu bir yol sağlar.  
+ Bağımsız yazılım satıcıları (ISV 'Ler), insanların eşler arası etkinliklere katılım için sıkı gruplar oluşturmalarına olanak sağlayan uygulamalar oluşturabilir. Örneğin, bu, işbirliğine dayalı projelerde çalışan takımları, arkadaşlar arasında resim paylaşımı, parti planlama etkinlikleri ve daha fazlasını içerebilir. Geleneksel olarak, bu etkinlikler her zaman sunucular içerir; Bununla birlikte, eş kanal, geleneksel bir sunucu istemci modeli altında kolayca uygulanmayan çevrimdışı erişim senaryolarını etkinleştirerek bunu daha uygun maliyetli bir şekilde yapmanın bir yolunu sunar.  
   
-## <a name="distributed-processing-and-compute-clusters"></a>Dağıtılan işleme ve hesaplama kümeleri  
- Genellikle işlem kümeleri ve dağıtılan işleme finansal/modelleme ve İnsan DNA kod çözme hava durumu gibi büyük ölçekli hesaplamalar için kullanılır. Genellikle, bu sunucuları hesaplama Kümeye katılan tüm istemcileri tek tek Görevler atayın sağlanarak gerçekleştirilir. Bu sunucular, ek taleplerin da olabilir; Örneğin, tüm görevler, belirli bir süre içinde her görev için birden fazla makine gerektiren tamamlanmış olması gerekebilir. Ayrıca, bir görevi çalıştırma herhangi bir istemci kalırsa, başka bir istemci, görev alabilir ve üzerinde çalışmayı gerçekleştirmek mümkün olması gerekir. Benzer şekilde, birden fazla istemci, tutarlı sonuçlar alınması aynı görevi çalıştırmanız gerekebilir. Bu tür bir istemci koordinasyon sunucuları çalıştırabilirsiniz, ancak burada bir görev bağımsız olarak alma istemciler görev geçici sunucu gereksinimleri belirlemek ve işlem kafes bu görevin nasıl tamamlanacağını belirlemek için bir eşler arası çözüm oluşturabilirsiniz.  
+## <a name="distributed-processing-and-compute-clusters"></a>Dağıtılmış Işlem ve Işlem kümeleri  
+ İşlem kümeleri ve dağıtılmış işleme genellikle finansal/Hava durumu modelleme ve insan DNA kodu çözme gibi büyük ölçekli hesaplamalar için kullanılır. Genellikle bu işlem, sunucuların hesaplama kümesine katılan tüm istemcilere ayrı ayrı görev atamasını sağlar. Bu sunucularda ek talepler de olabilir; Örneğin, tüm görevlerin belirli bir süre içinde tamamlanması gerekebilir ve her görev için birden fazla makine gerekir. Ayrıca, bir görevi çalıştıran herhangi bir istemci kapalıysa, başka bir istemci bu görevi ele alabilmeli ve üzerinde iş gerçekleştirebilir. Benzer şekilde, birden fazla istemcinin tutarlı sonuçlar sağlamak için aynı görevi çalıştırması gerekebilir. Sunucular bu tür istemci koordinasyonunu çalıştırabilse de, bir görevi alan istemcilerin, görevin bir yanındaki sunucu gereksinimlerini ve bu görevi nasıl tamamlayacağınızı anlamak için bir işlem ağı kullanmasını sağlayan bir eşler arası çözüm oluşturabilirsiniz.  
   
 ## <a name="gaming"></a>Oyun  
- Eş kanalı kullanarak, uygulama geliştiricilerin sunucusuz oyun taşır burada ve için gönderilen bir eşler arası mekanizması yerine bir merkezi sunucu üzerinden diğer ouyncularla eşitlenmiş oyunlarını sürümleri oluşturabilirsiniz. Küçük ISV'ler için bu dağıtımı, Bakımı ve merkezi sunucuların bakımı ile ilgili işletim maliyetlerini kaldırmaya yardımcı olur. Eşler arası mimari kullanılarak yazılmış oyunlar, Internet üzerinden veya kablolu veya kablosuz yerel ağ çalınabilir. Giriş ve oyun içi sohbet gibi ikincil oyun etkinlikleri bir eşler arası ağ ile geliştirilmiş olmalıdır.  
+ Eş kanal kullanarak, uygulama geliştiricileri, oyunlarının bir merkezi sunucu yerine eşler arası bir mekanizmaya iletilmesi ve diğer oyunculara aktarılmasıyla eşitlenmesi durumunda sunucu tarafından daha az sürümlerini oluşturabilir. Küçük ISV 'Ler için bu, merkezi sunucuları dağıtma, sürdürme ve hizmet verme ile ilişkili işletimsel maliyetlerin kaldırılmasına yardımcı olur. Eşler arası mimari kullanılarak yazılan Oyunlar Internet 'te veya kablolu veya kablosuz yerel ağlarda çalınabilir. Giriş ve oyun içi sohbet gibi ikincil oyun etkinlikleri, eşler arası bir ağ kullanılarak geliştirilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eş Kanal Kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Eş Kanal Kavramları](peer-channel-concepts.md)

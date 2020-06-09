@@ -1,14 +1,14 @@
 ---
 title: ML.NET CLı ile model eğitimi otomatikleştirin
 description: Komut satırından en iyi modeli otomatik olarak eğiteiçin ML.NET CLı aracının nasıl kullanılacağını öğrenin.
-ms.date: 12/17/2019
+ms.date: 06/03/2020
 ms.custom: how-to, mlnet-tooling
-ms.openlocfilehash: 2e8bade898adfc3fc4af92c880b62c646343eb2f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d7c6102c2257be1daa613fde0edabce83d04b414
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83212418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589674"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLı ile model eğitimi otomatikleştirin
 
@@ -27,30 +27,30 @@ ML.NET CLı, bir [.NET Core aracıdır](../core/tools/global-tools.md). Yüklend
 
 Aşağıdaki şekilde gösterildiği gibi, bu modeli çalıştırmak/skor için yüksek kaliteli bir ML.NET modeli (serileştirilmiş model. zip dosyası) ve örnek C# kodu oluşturmak kolaydır. Ayrıca, bu modeli oluşturmak/eğitebilmek için C# kodu da oluşturulur. böylece, bu oluşturulan "en iyi model" için kullanılan algoritmayı ve ayarları araştırıp yineleyebilirsiniz.
 
-![görüntüyle](media/automate-training-with-cli/cli-high-level-process.png "ML.NET CLı içinde çalışan oto ml altyapısı")
+![image](media/automate-training-with-cli/cli-high-level-process.png "ML.NET CLı içinde çalışan oto ml altyapısı")
 
 Kendi veri kümelerinizde, sizin tarafınızdan kodlamadan bu varlıkları oluşturabilirsiniz. bu sayede, ML.NET zaten tanıyor olsanız bile üretkenliğinizi de artırır.
 
 Şu anda, ML.NET CLı tarafından desteklenen ML görevleri şunlardır:
 
-- `binary-classification`
-- `multiclass-classification`
-- `regression`
-- Gelecekte:,,,,,,,,,,,,, `recommendation` `ranking` `anomaly-detection``clustering`
+- Sınıflandırma (ikili ve çok sınıf)
+- regresyon
+- Önerilen
+- Gelecekte: görüntü sınıflandırması, derecelendirme, anomali algılama, kümeleme gibi diğer makine öğrenimi görevleri
 
-Kullanım örneği:
+Kullanım örneği (sınıflandırma senaryosu):
 
 ```console
-mlnet auto-train --task binary-classification --dataset "customer-feedback.tsv" --label-column-name Sentiment
+mlnet classification --dataset "yelp_labelled.txt" --label-col 1 --has-header false --train-time 10
 ```
 
-![image](media/automate-training-with-cli/cli-model-generation.gif)
+![image](media/automate-training-with-cli/mlnet-classification-powershell.gif)
 
 *Windows PowerShell*, *MacOS/Linux Bash*veya *Windows cmd*' de aynı şekilde çalıştırabilirsiniz. Ancak, tablo otomatik tamamlama (parametre önerileri) *WINDOWS cmd*'de çalışmaz.
 
 ## <a name="output-assets-generated"></a>Oluşturulan çıkış varlıkları
 
-CLı `auto-train` komutu, çıkış klasöründe aşağıdaki varlıkları oluşturur:
+CLı 'deki ML görev komutları, çıkış klasöründe aşağıdaki varlıkları oluşturur:
 
 - Bir seri hale getirilmiş model. zip ("en iyi model"), tahminleri çalıştırmak için kullanıma uygun.
 - İle C# çözümü:
@@ -68,23 +68,15 @@ CLı aracıyla ' en iyi model ' oluşturduğunuzda, hedeflediğiniz ML görevi i
 
 Burada, otomatik olarak oluşturulan ' en iyi modellerinizin kalitesini anlayabilmeniz için bu ölçümler ML görevine göre gruplandırılır.
 
-### <a name="metrics-for-binary-classification-models"></a>Ikili sınıflandırma modelleriyle ilgili ölçümler
+### <a name="metrics-for-classification-models"></a>Sınıflandırma modelleriyle ilgili ölçümler
 
-Aşağıda, CLı tarafından bulunan en iyi beş modelin ikili sınıflandırma ML görev ölçümleri listesi görüntülenir:
-
-![image](media/automate-training-with-cli/cli-binary-classification-metrics.png)
-
-Doğruluk, sınıflandırma sorunları için popüler bir ölçümdür, ancak doğruluk, aşağıdaki başvurularda açıklanacak şekilde en iyi modeli seçmek için her zaman en iyi ölçüm değildir. Ek ölçümler ile modelinizin kalitesini değerlendirmeniz gereken durumlar vardır.
-
-CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [ikili sınıflandırma Için değerlendirme ölçümleri](resources/metrics.md#evaluation-metrics-for-binary-classification).
-
-### <a name="metrics-for-multi-class-classification-models"></a>Çok sınıflı sınıflandırma modelleriyle ilgili ölçümler
-
-Aşağıda, CLı tarafından bulunan en iyi beş model için çok sınıf sınıflandırma ML görev ölçümleri listesi görüntülenir:
+Aşağıda, CLı tarafından bulunan ilk beş modelin sınıflandırma ölçümleri listesi görüntülenir:
 
 ![image](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [birden çok Lass sınıflandırması Için değerlendirme ölçümleri](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
+ Doğruluk, sınıflandırma sorunları için popüler bir ölçümdür, ancak doğruluk, aşağıdaki başvurularda açıklanacak şekilde en iyi modeli seçmek için her zaman en iyi ölçüm değildir. Ek ölçümler ile modelinizin kalitesini değerlendirmeniz gereken durumlar vardır.
+
+CLı tarafından çıktı olan ölçümleri araştırmak ve anlamak için bkz. [Sınıflandırma Için değerlendirme ölçümleri](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
 ### <a name="metrics-for-regression-and-recommendation-models"></a>Gerileme ve öneri modelleriyle ilgili ölçümler
 

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim'
+title: 'Nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc42792b827b49265a0b1addf959de2fa1a041e3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855146"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597221"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a>Nasıl yapılır: Çift yönlü sözleşme ile hizmetlere erişim
+# <a name="how-to-access-services-with-a-duplex-contract"></a>Nasıl yapılır: çift yönlü sözleşme ile hizmetlere erişme
 
-Bir Windows Communication Foundation (WCF) çift yönlü bir Mesajlaşma deseni kullanan bir hizmet oluşturma yeteneği özelliğidir. Bu düzen, bir geri çağırma aracılığıyla istemcisi ile iletişim kurmak bir hizmet sağlar. Bu konuda, geri arama arabirimini uygulayan bir istemci sınıfta bir WCF istemcisi oluşturma adımları gösterilmektedir.
+Windows Communication Foundation (WCF) özelliğinin bir özelliği, çift yönlü mesajlaşma modelini kullanan bir hizmet oluşturma olanağıdır. Bu model, bir hizmetin geri çağırma yoluyla istemciyle iletişim kurmasına olanak tanır. Bu konuda, geri çağırma arabirimini uygulayan bir istemci sınıfında bir WCF istemcisi oluşturma adımları gösterilmektedir.
 
-İkili bir bağlama hizmeti için istemci IP adresi sunar. İstemci, yalnızca Hizmetleri için güvenleri bağladığı emin olmak için güvenlik kullanmanız gerekir.
+İkili bağlama, istemcinin IP adresini hizmete gösterir. İstemci, yalnızca güvendiği hizmetlere bağlanmasını sağlamak için güvenliği kullanmalıdır.
 
-Temel WCF hizmeti ve istemci oluşturmaya ilişkin öğretici için bkz: [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md).
+Temel bir WCF hizmeti ve istemcisi oluşturmaya yönelik bir öğretici için bkz. [Başlangıç Öğreticisi](../getting-started-tutorial.md).
 
-## <a name="to-access-a-duplex-service"></a>Çift yönlü bir hizmete erişmek için
+## <a name="to-access-a-duplex-service"></a>Çift yönlü hizmete erişmek için
 
-1. İki arabirim içeren bir hizmet oluşturursunuz. İlk arabirim hizmet için ikinci için geri çağırma. Çift yönlü bir hizmet oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).
+1. İki arabirim içeren bir hizmet oluşturun. İlk arabirim hizmet içindir, ikincisi geri arama içindir. Çift yönlü hizmet oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: çift yönlü sözleşme oluşturma](how-to-create-a-duplex-contract.md).
 
-2. Hizmet çalıştırın.
+2. Hizmeti çalıştırın.
 
-3. Kullanım [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) sözleşmelerinin (arabirimleri) istemcisi oluşturmak için. Bunun nasıl yapılacağı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Bir istemci oluşturmanız](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).
+3. İstemci için sözleşmeler (arabirimler) oluşturmak üzere [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın. Bunun nasıl yapılacağı hakkında bilgi için bkz. [nasıl yapılır: Istemci oluşturma](../how-to-create-a-wcf-client.md).
 
-4. Geri arama arabirimini istemci sınıfında, aşağıdaki örnekte gösterildiği gibi uygulayın.
+4. Aşağıdaki örnekte gösterildiği gibi, istemci sınıfında geri çağırma arabirimini uygulayın.
 
     ```csharp
     public class CallbackHandler : ICalculatorDuplexCallback
@@ -58,7 +58,7 @@ Temel WCF hizmeti ve istemci oluşturmaya ilişkin öğretici için bkz: [başla
     End Class
     ```
 
-5. Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.InstanceContext> sınıfı. Oluşturucu istemci sınıfının bir örneğini gerektirir.
+5. Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.InstanceContext> sınıfı. Oluşturucu, istemci sınıfının bir örneğini gerektirir.
 
     ```csharp
     InstanceContext site = new InstanceContext(new CallbackHandler());
@@ -68,7 +68,7 @@ Temel WCF hizmeti ve istemci oluşturmaya ilişkin öğretici için bkz: [başla
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
     ```
 
-6. Gerektiren oluşturucuyu kullanarak WCF istemci örneği oluşturun bir <xref:System.ServiceModel.InstanceContext> nesne. İkinci oluşturucu parametresi yapılandırma dosyasında bulunan bir uç nokta adıdır.
+6. Bir nesne gerektiren oluşturucuyu kullanarak WCF istemcisinin bir örneğini oluşturun <xref:System.ServiceModel.InstanceContext> . Oluşturucunun ikinci parametresi, yapılandırma dosyasında bulunan bir uç noktanın adıdır.
 
     ```csharp
     CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
@@ -78,19 +78,19 @@ Temel WCF hizmeti ve istemci oluşturmaya ilişkin öğretici için bkz: [başla
     Dim wcfClient As New CalculatorDuplexClient(site, "default")
     ```
 
-7. WCF istemcisi gerektiği gibi'nin yöntemlerini çağırabilirsiniz.
+7. WCF istemcisinin yöntemlerini gereken şekilde çağırın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği, çift yönlü sözleşme erişen istemci sınıf oluşturma işlemini gösterir.
+Aşağıdaki kod örneği, çift yönlü bir sözleşmeye erişen bir istemci sınıfının nasıl oluşturulacağını göstermektedir.
 
 [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
 [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [ServiceModel Meta Veri Yardımcı Programı Aracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Nasıl yapılır: Bir istemci oluşturma](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Nasıl yapılır: ChannelFactory kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Başlangıç Öğreticisi](../getting-started-tutorial.md)
+- [Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma](how-to-create-a-duplex-contract.md)
+- [ServiceModel Meta Veri Yardımcı Programracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Nasıl yapılır: İstemci Oluşturma](../how-to-create-a-wcf-client.md)
+- [Nasıl yapılır: ChannelFactory Kullanma](how-to-use-the-channelfactory.md)

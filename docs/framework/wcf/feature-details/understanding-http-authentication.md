@@ -2,41 +2,41 @@
 title: HTTP Kimlik Doğrulamasını Anlama
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: ebfb5920fcd5c1a8faac8780dc1c32c92f9f6255
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a31c9f96185364c59dca1ff26251a30f5d7a88bc
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614811"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595095"
 ---
 # <a name="understanding-http-authentication"></a>HTTP Kimlik Doğrulamasını Anlama
-Kimlik doğrulaması, bir istemcinin bir kaynağa erişmek uygun olup olmadığını belirleme işlemi şeklindedir. HTTP protokolü anlaşması güvenli kaynak erişimi için bir araç olarak kimlik doğrulamasını destekler.  
+Kimlik doğrulaması, bir istemcinin bir kaynağa erişmeye uygun olup olmadığını belirleme işlemidir. HTTP protokolü, güvenli bir kaynağa erişim anlaşması için bir yol olarak kimlik doğrulamasını destekler.  
   
- İstemciden gelen ilk istek, genellikle tüm kimlik doğrulama bilgilerini içermeyen bir anonim istek değildir. HTTP sunucu uygulamaları, söz konusu kimlik doğrulamasını gösteren çalışırken anonim istek gereklidir reddedebilirsiniz. Sunucu uygulaması, desteklenen kimlik doğrulama şemasını göstermek için WWW kimlik doğrulama üst bilgileri gönderir. Bu belge, çeşitli kimlik doğrulama düzeni için HTTP açıklar ve Windows Communication Foundation (WCF) destek açıklanır.  
+ İstemciden gelen ilk istek, herhangi bir kimlik doğrulama bilgisi içermeyen, genellikle anonim bir istek olur. HTTP sunucusu uygulamaları, kimlik doğrulamasının gerekli olduğunu belirten anonim isteği reddedebilir. Sunucu uygulaması, desteklenen kimlik doğrulama düzenlerini belirtmek için WWW-Authentication üst bilgilerini gönderir. Bu belge, HTTP için çeşitli kimlik doğrulama düzenlerini açıklar ve Windows Communication Foundation (WCF) desteğini açıklar.  
   
-## <a name="http-authentication-schemes"></a>HTTP kimlik doğrulama şeması  
- Sunucu, aralarından seçim yapabileceğiniz istemcisi için birden çok kimlik doğrulama düzeni belirtebilirsiniz. Aşağıdaki tabloda Windows uygulamalarında yaygın olarak bulunan kimlik doğrulama düzenleri bazılarını açıklar.  
+## <a name="http-authentication-schemes"></a>HTTP kimlik doğrulama şemaları  
+ Sunucu, istemcinin arasından seçim yapmak için birden çok kimlik doğrulama düzeni belirtebilir. Aşağıdaki tabloda, Windows uygulamalarında yaygın olarak bulunan bazı kimlik doğrulama düzenleri açıklanmaktadır.  
   
 |Kimlik doğrulama düzeni|Açıklama|  
 |---------------------------|-----------------|  
-|Anonim|Bir anonim istek tüm kimlik doğrulama bilgilerini içermiyor. Bunun eşdeğeri olan kaynağa erişim herkesin izni verme.|  
-|Temel|Temel kimlik doğrulaması için istemci kullanıcı adı ve parola içeren bir Base64 ile kodlanmış dize gönderir. Base64 şifreleme bir biçimde değil ve aynı kullanıcı adı ve parola düz metin olarak gönderme olarak düşünülmelidir. Bir kaynak korunması gereken kesin temel kimlik doğrulaması dışındaki bir kimlik doğrulama düzeni kullanmayı düşünün.|  
-|Özet|Özet kimlik doğrulaması temel kimlik doğrulaması değiştirmeye yönelik bir sınama yanıtı düzenidir. Sunucu, bir dize olarak adlandırılan rastgele veri gönderir. bir *nonce* istemciye bir karşılıklı olarak. İstemci, kullanıcı adı, parola ve ek bilgiler arasında nonce içeren karma ile yanıt verir. Bu exchange tanıtır karmaşıklığı ve verilerin karması bu kimlik doğrulama düzeni ile kullanıcının kimlik bilgilerini çalıp daha zor hale getirir.<br /><br /> Özet kimlik doğrulaması, Windows etki alanı hesaplarının kullanılmasını gerektirir. Özet *bölge* Windows etki alanı adıdır. Bu nedenle, Windows gibi etki alanları Windows XP Home Edition, Özet kimlik doğrulaması ile desteklemeyen bir işletim sistemini çalıştıran bir sunucu kullanamazsınız. Buna karşılık, istemci, Windows etki alanları desteklemeyen bir işletim sisteminde çalıştığında, bir etki alanı hesabı açıkça kimlik doğrulaması sırasında belirtilmelidir.|  
-|NTLM|NT LAN Manager (NTLM) kimlik doğrulamasını, Özet kimlik doğrulaması securer çeşididir bir sınama yanıtı düzenidir. NTLM, kodlanmamış kullanıcı adı ve parola yerine sınama verileri dönüştürmek için Windows kimlik bilgilerini kullanır. NTLM kimlik doğrulaması, istemci ve sunucu arasında birden çok değişimleri gerektirir. Sunucu ve tüm müdahil proxy'leri başarılı kimlik doğrulamalarını tamamlamak için kalıcı bağlantılar desteklemesi gerekir.|  
-|Anlaşma|Anlaşma kimlik doğrulama durumuna bağlı olarak NTLM kimlik doğrulaması ve Kerberos protokolü arasında otomatik olarak seçer. Varsa Kerberos protokolü kullanılır; Aksi takdirde, NTLM denenir. Kerberos kimlik doğrulaması, NTLM üzerinde önemli ölçüde artırır. Kerberos kimlik doğrulaması, hem de NTLM daha hızlıdır ve karşılıklı kimlik doğrulaması ve kimlik bilgilerini uzak makinelere temsili sağlar.|  
-|Windows Live ID|Temel alınan Windows HTTP hizmet Federasyon protokollerini kullanarak kimlik doğrulaması içerir. Ancak, standart HTTP taşımaları wcf'de gibi Microsoft Windows Live ID, Federasyon kimlik doğrulama düzenleri kullanımını desteklemez Bu özellik için destek, kullanılarak ileti güvenliği şu anda kullanılabilir. Daha fazla bilgi için [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|Anonim|Anonim bir istek herhangi bir kimlik doğrulama bilgisi içermiyor. Bu, herkese kaynağa erişim izni vermeye eşdeğerdir.|  
+|Temel|Temel kimlik doğrulaması, istemci için Kullanıcı adı ve parola içeren Base64 kodlamalı bir dize gönderir. Base64 bir şifreleme formu değildir ve Kullanıcı adı ve parolayı şifresiz metin olarak göndermekle aynı olarak düşünülmelidir. Bir kaynağın korunması gerekiyorsa, temel kimlik doğrulaması dışında bir kimlik doğrulama düzeni kullanmayı kesin olarak düşünün.|  
+|Bilgisi|Özet kimlik doğrulaması, temel kimlik doğrulamanın yerini alacak bir sınama yanıt düzenidir. Sunucu, bir sınama olarak istemciye *nonce* adlı bir rastgele veri dizesi gönderir. İstemci, ek bilgiler arasında Kullanıcı adı, parola ve nonce içeren bir karmayla yanıt verir. Bu değişim tanıtıldığı ve veri karmaşasından bu kimlik doğrulama düzeniyle kullanıcının kimlik bilgilerini çalmak ve yeniden kullanmak daha zor hale gelir.<br /><br /> Özet kimlik doğrulaması için Windows etki alanı hesaplarının kullanılması gerekir. Özet *bölgesi* Windows etki alanı adıdır. Bu nedenle, Windows XP Home Edition gibi Windows etki alanlarını desteklemeyen bir işletim sisteminde çalıştıran bir sunucuyu Özet kimlik doğrulaması ile kullanamazsınız. Buna karşılık, istemci Windows etki alanlarını desteklemeyen bir işletim sisteminde çalıştırıldığında, kimlik doğrulaması sırasında açık bir etki alanı hesabı belirtilmelidir.|  
+|NTLM|NT LAN Manager (NTLM) kimlik doğrulaması, Özet kimlik doğrulamasının Securer çeşitlemesi olan bir sınama yanıt şemadır. NTLM, kodlanmış Kullanıcı adı ve parola yerine, sınama verilerini dönüştürmek için Windows kimlik bilgilerini kullanır. NTLM kimlik doğrulaması, istemci ve sunucu arasında birden çok değişim gerektirir. Sunucu ve aradaki tüm proxy 'ler, kimlik doğrulamasını başarıyla tamamlamaya yönelik kalıcı bağlantıları desteklemelidir.|  
+|Anlaşma|Negotiate kimlik doğrulaması, kullanılabilirliğine bağlı olarak Kerberos protokolü ve NTLM kimlik doğrulaması arasında otomatik olarak seçilir. Kullanılabilir olduğunda Kerberos protokolü kullanılır; Aksi takdirde, NTLM denenir. Kerberos kimlik doğrulaması, NTLM üzerinde önemli ölçüde gelişir. Kerberos kimlik doğrulaması, NTLM 'den daha hızlıdır ve uzak makinelerde kimlik bilgilerinin karşılıklı kimlik doğrulaması ve temsilciliğini kullanılmasına izin verir.|  
+|Windows Live ID|Temel alınan Windows HTTP hizmeti, Federasyon protokollerini kullanarak kimlik doğrulaması içerir. Ancak, WCF 'deki standart HTTP aktarımları, Microsoft Windows Live ID gibi federal kimlik doğrulama şemaları kullanımını desteklemez. Bu özellik için destek, şu anda ileti güvenliği kullanılarak sunulmaktadır. Daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](federation-and-issued-tokens.md).|  
   
-## <a name="choosing-an-authentication-scheme"></a>Bir kimlik doğrulama düzeni seçme  
- Olası kimlik doğrulama düzeni için HTTP sunucusu seçerken dikkate alınması gereken birkaç öğe şunları içerir:  
+## <a name="choosing-an-authentication-scheme"></a>Kimlik doğrulama düzeni seçme  
+ Bir HTTP sunucusu için olası kimlik doğrulama düzenlerini seçerken, dikkate alınması gereken birkaç öğe şunlardır:  
   
-- Kaynak korunması gerekip gerekmediğini düşünün. HTTP kimlik doğrulaması kullanarak daha fazla veri aktarımı gerektirir ve istemciler ile birlikte çalışabilirlik sınırlayabilirsiniz. Korunması gerekmez kaynakları anonim erişime izin verin.  
+- Kaynağın korunması gerekip gerekmediğini göz önünde bulundurun. HTTP kimlik doğrulamasının kullanılması, daha fazla veri iletilmesi gerektirir ve istemcilerle birlikte çalışabilirliği sınırlayabilir. Korunması gerekmeyen kaynaklara anonim erişime izin verin.  
   
-- Kaynak korunması gerekiyorsa, hangi kimlik doğrulama düzenleri gerekli düzeyde güvenlik sağladığını göz önünde bulundurun. Burada tartışılan zayıf standart kimlik doğrulama düzeni, temel kimlik doğrulaması kullanılır. Temel kimlik doğrulaması, kullanıcının kimlik bilgilerini korumaz. En güçlü standart kimlik doğrulama Anlaşma kimlik doğrulaması, Kerberos protokolü kaynaklanan kullanılır.  
+- Kaynağın korunması gerekiyorsa, hangi kimlik doğrulama düzenlerinin gerekli güvenlik düzeyini sağlamasını düşünün. Burada ele alınan en zayıf standart kimlik doğrulama şeması, temel kimlik doğrulamadır. Temel kimlik doğrulaması, kullanıcının kimlik bilgilerini korumaz. En güçlü standart kimlik doğrulama şeması, Negotiate kimlik doğrulamadır ve Kerberos protokolüne yol açar.  
   
-- Bir sunucu (WWW kimlik denetimi üst bilgilerinde) herhangi sunmalıdır değil değil Düzen hazır kabul etmek ya da, yeterince korumalı kaynağa güvenliğini sağlamaz. İstemciler sunucusu kimlik doğrulama düzeni arasında seçim ücretsizdir. Bazı istemciler varsayılan bir zayıf bir kimlik doğrulama düzeni ya da sunucu listesindeki ilk kimlik doğrulaması düzeni.  
+- Bir sunucu, kabul etmek için hazırlanmadığı veya korunan kaynağı yeterince güvenli hale desteklemediği herhangi bir düzen (WWW-Authentication üst bilgilerinde) sunmamalıdır. İstemciler, sunucunun sunduğu herhangi bir kimlik doğrulama şeması arasından seçim yapmak için ücretsizdir. Bazı istemciler, zayıf bir kimlik doğrulama şemasına veya sunucu listesindeki ilk kimlik doğrulama şemasına varsayılan olarak verilebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Aktarım Güvenliğine Genel Bakış](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
-- [Aktarım Güvenliği ile Kimliğe Bürünme Kullanma](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
-- [Temsilcilik ve Kimliğe Bürünme](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
+- [Aktarım Güvenliğine Genel Bakış](transport-security-overview.md)
+- [Taşıma Güvenliği ile Kimliğe Bürünme Kullanma](using-impersonation-with-transport-security.md)
+- [Temsilcilik ve Kimliğe Bürünme](delegation-and-impersonation-with-wcf.md)

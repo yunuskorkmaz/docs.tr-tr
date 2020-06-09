@@ -1,5 +1,6 @@
 ---
 title: Bütünleştirilmiş Kod ve DLL Adları
+description: Adlandırma derlemeleri ve dinamik bağlantı kitaplıkları (dll 'Ler) için kılavuz bilgi edinin. Bir derleme bir veya daha fazla dosyaya yayılabilir, ancak genellikle bir DLL ile bire bir eşler.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-ms.openlocfilehash: 138ae8154b0d10fb813f0c98ceb7c58a2471b780
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: de7ce3ee774d4598521d7156d0d660c3fe30154c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594484"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Bütünleştirilmiş Kod ve DLL Adları
 Derleme, yönetilen kod programlarının dağıtım ve kimlik birimidir. Derlemeler bir veya daha fazla dosyaya yayılabilse de, genellikle bir derleme DLL ile bire bir eşler. Bu nedenle, bu bölümde yalnızca DLL adlandırma kuralları açıklanmakta ve bu daha sonra derleme adlandırma kurallarına eşlenebilir.
@@ -26,7 +27,7 @@ Derleme, yönetilen kod programlarının dağıtım ve kimlik birimidir. Derleme
 
  `<Company>.<Component>.dll`
 
- Burada `<Component>` bir veya daha fazla noktayla ayrılmış yan tümce bulunur. Örneğin:
+ Burada `<Component>` bir veya daha fazla noktayla ayrılmış yan tümce bulunur. Örnek:
 
  `Litware.Controls.dll`.
 

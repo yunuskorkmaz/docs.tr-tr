@@ -2,67 +2,67 @@
 title: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3e87021c3dce1172250f33fd302916920af74d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597234"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma
-Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hizmeti kurmak açıklar. HTTP aktarım güvenliği bir SSL sertifikası, IIS ile kayıtlı olması gerekir. Bir SSL sertifikası yoksa, IIS bir test sertifikası oluşturmak için kullanabilirsiniz. Sonraki web sitesine bir SSL bağlaması ekleyin ve web sitesinin kimlik doğrulaması özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
+Bu konuda, IIS tarafından barındırılan bir WCF hizmetinin HTTP aktarım güvenliği kullanmak üzere nasıl ayarlanacağı açıklanır. HTTP aktarım güvenliği, IIS 'ye bir SSL sertifikası kaydedilmesini gerektirir. Bir SSL sertifikanız yoksa, bir test sertifikası oluşturmak için IIS kullanabilirsiniz. Daha sonra Web sitesine bir SSL bağlaması eklemeniz ve Web sitesinin kimlik doğrulama özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
   
-### <a name="creating-a-self-signed-certificate"></a>Otomatik olarak imzalanan sertifika oluşturma  
+### <a name="creating-a-self-signed-certificate"></a>Otomatik olarak Imzalanan sertifika oluşturma  
   
-1. Internet Information Services Manager (inetmgr.exe) açın ve sol taraftaki ağaç görünümü'nde, bilgisayar adını seçin. Ekranın sağ tarafında sunucu sertifikası seç  
+1. Internet Information Services Yöneticisi 'Ni (inetmgr. exe) açın ve sol ağaç görünümünde bilgisayarınızın adını seçin. Ekranın sağ tarafında sunucu sertifikaları ' nı seçin.  
   
-     ![IIS Manager giriş ekranı](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
+     ![IIS Yöneticisi giriş ekranı](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2. Sunucu sertifikaları pencerede **otomatik olarak imzalanan sertifika oluştur...** bağlantı.  
+2. Sunucu sertifikaları penceresinde **otomatik olarak Imzalanan sertifika oluştur...** öğesine tıklayın. Bağlantısının.  
   
-     ![Bir kendi kendini oluşturma&#45;IIS sertifikayla imzalanan](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![IIS ile kendinden&#45;imzalı bir sertifika oluşturma](media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3. Otomatik olarak imzalanan sertifika için bir kolay ad girin ve tıklayın **Tamam**.  
+3. Otomatik olarak imzalanan sertifika için kolay bir ad girin ve **Tamam 'a**tıklayın.  
   
-     ![Kendi kendine oluşturmak&#45;imzalı sertifika iletişim kutusu](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Kendinden&#45;Imzalı sertifika Iletişim kutusu oluştur](media/mg-mycert.jpg "mg_MyCert")  
   
-     Yeni oluşturulan kendinden imzalı bir sertifika ayrıntılarını artık gösterilen **sunucu sertifikaları** penceresi.  
+     Yeni oluşturulan otomatik olarak imzalanan sertifika ayrıntıları artık **sunucu sertifikaları** penceresinde gösteriliyor.  
   
-     ![Sunucu sertifikası penceresi](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
+     ![Sunucu sertifikası penceresi](media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
-     Oluşturulan sertifika, güvenilen kök sertifika yetkilileri deposunda yüklü depolayın.  
+     Oluşturulan sertifika, güvenilen kök sertifika yetkilileri deposuna yüklenir.  
   
 ### <a name="add-ssl-binding"></a>SSL bağlaması Ekle  
   
-1. Hala Internet Bilgi Hizmetleri Yöneticisi'nde genişletin **siteleri** klasörünü ve ardından **varsayılan Web sitesi** ekranın sol tarafındaki ağaç görünümünde klasörü.  
+1. Hala Internet Information Services Manager 'da, **siteler** klasörünü ve ardından ekranın sol tarafındaki ağaç görünümünde bulunan **varsayılan Web sitesi** klasörünü genişletin.  
   
-2. Tıklayın **bağlamaları...** Bağlantısını **eylemleri** pencerenin sağ üst taraftaki bölümünde bölümünde.  
+2. **Bağlamalar...** öğesine tıklayın. Pencerenin sağ üst kısmında bulunan **Eylemler** bölümündeki bağlantı.  
   
-     ![Bir SSL bağlaması ekleniyor](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
+     ![SSL bağlaması ekleme](media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
-3. Site bağlamaları pencerede **Ekle** düğmesi.  
+3. Site bağlamaları penceresinde **Ekle** düğmesine tıklayın.  
   
-     ![Site bağlamaları iletişim](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
+     ![Site bağlamaları Iletişim kutusu](media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4. İçinde **Site bağlaması Ekle** türü ve kolay adı, tam otomatik olarak imzalanan sertifika için select https iletişim kutusunda, oluşturulan.  
+4. **Site Bağlaması Ekle** iletişim kutusunda, türü için https ' yi ve yeni oluşturduğunuz otomatik olarak imzalanan sertifikanın kolay adını seçin.  
   
-     ![Site bağlama örnek](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
+     ![Site bağlama örneği](media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
-### <a name="configure-virtual-directory-for-ssl"></a>SSL için sanal dizin Yapılandır  
+### <a name="configure-virtual-directory-for-ssl"></a>SSL için sanal dizini yapılandırma  
   
-1. Hala Internet Bilgi Hizmetleri Yöneticisi'nde güvenli WCF hizmetinizi içeren sanal dizini seçin.  
+1. Hala Internet Information Services Manager 'da, WCF güvenli hizmetinizi içeren sanal dizini seçin.  
   
-2. Pencerenin Orta bölmede seçin **SSL ayarları** IIS bölümünde.  
+2. Pencerenin orta bölmesinde IIS bölümünde **SSL ayarları** ' nı seçin.  
   
-     ![Sanal dizin için SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
+     ![Sanal dizin için SSL ayarları](media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3. SSL ayarları bölmesinde seçin **SSL iste** onay kutusunu tıklatıp **Uygula** bağlantısını **eylemleri** ekranın sağ tarafındaki bölümü.  
+3. SSL ayarları bölmesinde, **SSL gerektir** onay kutusunu seçin ve ekranın sağ tarafındaki **Eylemler** bölümünde **Uygula** bağlantısına tıklayın.  
   
-     ![Sanal dizin SSL ayarları](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
+     ![Sanal Dizin SSL ayarları](media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
-### <a name="configure-wcf-service-for-http-transport-security"></a>HTTP aktarım güvenliği için WCF hizmetini yapılandırma  
+### <a name="configure-wcf-service-for-http-transport-security"></a>HTTP taşıma güvenliği için WCF hizmetini yapılandırma  
   
-1. WCF'de hizmetin web.config aşağıdaki XML'de gösterildiği aktarım güvenliği kullanılacak HTTP bağlama yapılandırın.  
+1. WCF hizmetinin Web. config dosyasında, HTTP bağlamasını aşağıdaki XML 'de gösterildiği gibi aktarım güvenliği kullanacak şekilde yapılandırın.  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hiz
     </bindings>  
     ```  
   
-2. Aşağıdaki XML dosyasında gösterildiği gibi hizmet ve hizmet uç noktası belirtin.  
+2. Aşağıdaki XML 'de gösterildiği gibi hizmetinizi ve hizmet uç noktasını belirtin.  
   
     ```xml  
     <services>  
@@ -94,7 +94,7 @@ Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hiz
     ```  
   
 ## <a name="example"></a>Örnek  
- HTTP aktarım güvenliği kullanarak bir WCF hizmeti için web.config dosyasının tam bir örnek verilmiştir  
+ Aşağıda, HTTP aktarım güvenliği kullanan bir WCF hizmeti için Web. config dosyasının tamamı bir örneği verilmiştir  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -146,7 +146,7 @@ Bu konu, HTTP aktarım güvenliği kullanılacak bir IIS barındırılan WCF hiz
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Internet Information Services'te Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
-- [Internet Information Service Barındırma Yönergeleri](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)
-- [Internet Information Services Barındırma En İyi Uygulamaları](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [Satır İçi Kod Kullanarak IIS Barındırma](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+- [Internet Information Services'te Barındırma](hosting-in-internet-information-services.md)
+- [Internet Information Service Barındırma Yönergeleri](../samples/internet-information-service-hosting-instructions.md)
+- [Internet Information Services Barındırma En İyi Uygulamaları](internet-information-services-hosting-best-practices.md)
+- [Satır İçi Kod Kullanarak IIS Barındırma](../samples/iis-hosting-using-inline-code.md)
