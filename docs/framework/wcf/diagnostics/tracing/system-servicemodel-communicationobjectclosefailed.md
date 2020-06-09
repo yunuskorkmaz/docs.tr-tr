@@ -2,21 +2,21 @@
 title: System.ServiceModel.CommunicationObjectCloseFailed
 ms.date: 03/30/2017
 ms.assetid: 60270eab-6f57-4136-bec5-62d3edd23880
-ms.openlocfilehash: 5ff21b10bf886d4134a8222d5938b2617328a924
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 680b58e49ce0e8fd104116e032c5689b16048230
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968369"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84581470"
 ---
 # <a name="systemservicemodelcommunicationobjectclosefailed"></a>System.ServiceModel.CommunicationObjectCloseFailed
-İletişim nesnesi, kapatmak başarısız oldu.  
+İletişim nesnesi kapatılamadı.  
   
 ## <a name="description"></a>Açıklama  
- İletişim nesnesi, kapatma yönteminin yürütülmesi sırasında bir özel durum oluştu çünkü kapatmak başarısız oldu. İzleme yakındaki başka bir özel durumun ayrıntılarını içerebilir.  
+ Close yönteminin yürütülmesi sırasında bir özel durum oluşturulduğu için bir iletişim nesnesi kapatılamadı. Başka bir yakın izleme özel durumla ilgili ayrıntıları içerebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

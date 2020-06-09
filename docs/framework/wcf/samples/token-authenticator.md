@@ -2,12 +2,12 @@
 title: Belirteç Kimlik Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 835a158ba668a3aef749602c73fd9157e8d83a40
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4b49edd3b5a2cecd203feed713c7694450f7497
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425028"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596558"
 ---
 # <a name="token-authenticator"></a>Belirteç Kimlik Doğrulayıcı
 Bu örnek, bir özel belirteç kimlik doğrulayıcısının nasıl uygulanacağını gösterir. Windows Communication Foundation (WCF) ' deki bir belirteç kimlik doğrulayıcısı, iletiyle kullanılan belirteci doğrulamak, kendinden tutarlı olduğunu doğrulamak ve belirteçle ilişkili kimliğin kimlik doğrulamasını yapmak için kullanılır.
@@ -30,7 +30,7 @@ Bu örnek, bir özel belirteç kimlik doğrulayıcısının nasıl uygulanacağ�
 
  Bu örnek ayrıca, özel belirteç kimlik doğrulama işleminden sonra arayanın kimliğinin WCF 'den nasıl erişilebilir olduğunu gösterir.
 
- Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, güvenlik modunun ileti olarak ayarlandığı bir standart `wsHttpBinding`ile yapılandırılır, `wsHttpBinding`varsayılan moddur. Bu örnek, istemci Kullanıcı adı kimlik doğrulamasını kullanmak için standart `wsHttpBinding` ayarlar. Hizmet ayrıca `serviceCredentials` davranışını kullanarak hizmet sertifikasını yapılandırır. `securityCredentials` davranışı, bir hizmet sertifikası belirtmenize olanak tanır. Hizmet sertifikası, istemci tarafından hizmetin kimliğini doğrulamak ve ileti koruması sağlamak için kullanılır. Aşağıdaki yapılandırma, aşağıdaki kurulum yönergelerinde açıklandığı gibi örnek kurulum sırasında yüklü olan localhost sertifikasına başvurur.
+ Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, `wsHttpBinding` güvenlik modunun ileti olarak ayarlandığı bir standart ile yapılandırılır. varsayılan modu `wsHttpBinding` . Bu örnek, standart `wsHttpBinding` istemci Kullanıcı adı kimlik doğrulamasını kullanmak için standardı ayarlar. Hizmet, davranışı kullanarak hizmet sertifikasını da yapılandırır `serviceCredentials` . `securityCredentials`Davranış, bir hizmet sertifikası belirtmenize olanak tanır. Hizmet sertifikası, istemci tarafından hizmetin kimliğini doğrulamak ve ileti koruması sağlamak için kullanılır. Aşağıdaki yapılandırma, aşağıdaki kurulum yönergelerinde açıklandığı gibi örnek kurulum sırasında yüklü olan localhost sertifikasına başvurur.
 
 ```xml
 <system.serviceModel>
@@ -81,7 +81,7 @@ Bu örnek, bir özel belirteç kimlik doğrulayıcısının nasıl uygulanacağ�
   </system.serviceModel>
 ```
 
- İstemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama, uygun `Mode` ve `clientCredentialType`ile yapılandırılır.
+ İstemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama, uygun ve ile yapılandırılır `Mode` `clientCredentialType` .
 
 ```xml
 <system.serviceModel>
@@ -123,7 +123,7 @@ static void Main()
 
 1. Özel bir belirteç kimlik doğrulayıcısı yazın.
 
-     Örnek, Kullanıcı adının geçerli bir e-posta biçimine sahip olduğunu doğrulayan bir özel belirteç Authenticator uygular. <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>türetir. Bu sınıftaki en önemli Yöntem <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. Bu yöntemde, Authenticator Kullanıcı adının biçimini doğrular ve ana bilgisayar adının sahte bir etki alanından olmaması gerekir. Her iki koşul de karşılanıyorsa, daha sonra Kullanıcı adı belirtecinin içinde depolanan bilgileri temsil eden talepler sağlamak için kullanılan <xref:System.IdentityModel.Policy.IAuthorizationPolicy> örneklerinin salt okunurdur bir koleksiyonunu döndürür.
+     Örnek, Kullanıcı adının geçerli bir e-posta biçimine sahip olduğunu doğrulayan bir özel belirteç Authenticator uygular. Türetir <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator> . Bu sınıftaki en önemli Yöntem <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29> . Bu yöntemde, Authenticator Kullanıcı adının biçimini doğrular ve ana bilgisayar adının sahte bir etki alanından olmaması gerekir. Her iki koşul de karşılanıyorsa, daha sonra <xref:System.IdentityModel.Policy.IAuthorizationPolicy> Kullanıcı adı belirtecinin içinde depolanan bilgileri temsil eden talepler sağlamak için kullanılan, salt okunurdur bir örnek koleksiyonu döndürür.
 
     ```csharp
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
@@ -142,7 +142,7 @@ static void Main()
 
 2. Özel belirteç kimlik doğrulayıcısı tarafından döndürülen bir yetkilendirme ilkesi sağlayın.
 
-     Bu örnek, Oluşturucusu içinde kendisine geçirilen talepler ve kimlikler kümesi döndüren `UnconditionalPolicy` adlı <xref:System.IdentityModel.Policy.IAuthorizationPolicy> kendi uygulamasını sağlar.
+     Bu örnek, <xref:System.IdentityModel.Policy.IAuthorizationPolicy> `UnconditionalPolicy` Oluşturucusu içinde kendisine geçirilmiş talepler ve kimlikler kümesi döndüren çağrılan öğesinin kendi uygulamasını sağlar.
 
     ```csharp
     class UnconditionalPolicy : IAuthorizationPolicy
@@ -212,7 +212,7 @@ static void Main()
 
 3. Özel bir güvenlik belirteci Yöneticisi yazın.
 
-     <xref:System.IdentityModel.Selectors.SecurityTokenManager>, `CreateSecurityTokenAuthenticator` yönteminde kendisine geçirilen belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> nesneleri için bir <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> oluşturmak üzere kullanılır. Güvenlik belirteci Yöneticisi ayrıca belirteç sağlayıcıları ve belirteç serileştiricileri oluşturmak için kullanılır, ancak bunlar bu örnek tarafından kapsanmaz. Bu örnekte, özel güvenlik belirteci Yöneticisi <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sınıfından devralır ve geçilen belirteç gereksinimleri Kullanıcı adı Doğrulayıcı 'nın istendiğini gösteriyorsa, Özel Kullanıcı adı belirteci kimlik doğrulamasını döndürmek için `CreateSecurityTokenAuthenticator` yöntemini geçersiz kılar.
+     , <xref:System.IdentityModel.Selectors.SecurityTokenManager> <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> Yöntemi içinde kendisine geçirilen belirli nesneler için bir oluşturmak için kullanılır `CreateSecurityTokenAuthenticator` . Güvenlik belirteci Yöneticisi ayrıca belirteç sağlayıcıları ve belirteç serileştiricileri oluşturmak için kullanılır, ancak bunlar bu örnek tarafından kapsanmaz. Bu örnekte, özel güvenlik belirteci Yöneticisi <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> sınıfından devralır ve `CreateSecurityTokenAuthenticator` geçilen belirteç gereksinimleri Kullanıcı adı Doğrulayıcı 'nın istendiğini gösteriyorsa özel Kullanıcı adı belirteç kimlik doğrulayıcısı döndürecek şekilde yöntemi geçersiz kılar.
 
     ```csharp
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
@@ -268,7 +268,7 @@ static void Main()
 
 5. Hizmeti özel hizmet kimlik bilgilerini kullanacak şekilde yapılandırın.
 
-     Hizmetin özel hizmet kimlik bilgisini kullanabilmesi için varsayılan hizmet kimlik bilgilerinde önceden yapılandırılmış hizmet sertifikasını yakaladıktan sonra varsayılan hizmet kimlik bilgisi sınıfını siler ve yeni hizmet kimlik bilgilerini yapılandırır önceden yapılandırılmış hizmet sertifikalarını kullanmak için örnek ve bu yeni hizmet kimlik bilgileri örneğini hizmet davranışlarına ekleyin.
+     Hizmetin özel hizmet kimlik bilgisini kullanabilmesi için varsayılan hizmet kimlik bilgilerinde önceden yapılandırılmış hizmet sertifikasını yakaladıktan sonra varsayılan hizmet kimlik bilgisi sınıfını siler ve yeni hizmet kimlik bilgisi örneğini önceden yapılandırılmış hizmet sertifikalarını kullanacak şekilde yapılandırır ve bu yeni hizmet kimlik bilgileri örneğini hizmet davranışlarına ekler.
 
     ```csharp
     ServiceCredentials sc = serviceHost.Credentials;
@@ -279,7 +279,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);
     ```
 
- Arayanın bilgilerini göstermek için aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> kullanabilirsiniz. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>, geçerli çağıran ile ilgili talep bilgilerini içerir.
+ Arayanın bilgilerini göstermek için <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> aşağıdaki kodda gösterildiği gibi kullanabilirsiniz. , <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> Geçerli çağıran ile ilgili talep bilgilerini içerir.
 
 ```csharp
 static void DisplayIdentityInformation()
@@ -299,7 +299,7 @@ static void DisplayIdentityInformation()
 
 - Sunucu sertifikası oluşturuluyor.
 
-     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. `%SERVER_NAME%` değişkeni sunucu adını belirtir. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasındaki varsayılan değer localhost 'tur.
+     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. `%SERVER_NAME%`Değişken, sunucu adını belirtir. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Bu toplu iş dosyasındaki varsayılan değer localhost 'tur.
 
     ```console
     echo ************
@@ -324,9 +324,9 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve derlemek için
 
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2. Hizmet programı dosyalarını hizmet bilgisayarındaki hizmet dizinine kopyalayın. Ayrıca Setup. bat ve Cleanup. bat dosyalarını da hizmet bilgisayarına kopyalayın.  
   
-3. Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikasına sahip olmanız gerekir. Service App. config dosyasının bu yeni sertifika adını yansıtması için güncelleştirilmeleri gerekir. `%SERVER_NAME%` değişkenini Hizmetin çalıştırılacağı bilgisayarın tam ana bilgisayar adı olarak ayarlarsanız Setup. bat kullanarak bir tane oluşturabilirsiniz. Setup. bat dosyasının, yönetici ayrıcalıklarıyla açılan bir Visual Studio için Geliştirici Komut İstemi çalıştırılması gerektiğini unutmayın.  
+3. Bilgisayarın tam etki alanı adını içeren konu adına sahip bir sunucu sertifikasına sahip olmanız gerekir. Service App. config dosyasının bu yeni sertifika adını yansıtması için güncelleştirilmeleri gerekir. `%SERVER_NAME%`Değişkenini Hizmetin çalıştırılacağı bilgisayarın tam ana bilgisayar adı olarak ayarlarsanız Setup. bat kullanarak bir tane oluşturabilirsiniz. Setup. bat dosyasının, yönetici ayrıcalıklarıyla açılan bir Visual Studio için Geliştirici Komut İstemi çalıştırılması gerektiğini unutmayın.  
   
 4. Sunucu sertifikasını istemcinin CurrentUser-Trustedkişilerim deposuna kopyalayın. Sunucu sertifikasının, istemci güvenilir veren tarafından verildiği durumlar dışında bunu yapmanız gerekmez.  
   

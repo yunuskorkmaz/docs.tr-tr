@@ -2,12 +2,12 @@
 title: Kullanıcı AdıParola Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: e66188cfe1874c4d4097f3f842fd19cfdd4c79f1
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 5fbca30ef2dff0aebc13bda12c06adfd1989ea20
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596519"
 ---
 # <a name="user-name-password-validator"></a>Kullanıcı AdıParola Doğrulayıcı
 Bu örnek, nasıl özel bir UserNamePassword doğrulayıcısı uygulanacağını gösterir. Bu, yerleşik UserNamePassword doğrulama modlarından hiçbirinin uygulamanın gereksinimlerine uygun olmadığı durumlarda faydalıdır; Örneğin, Kullanıcı adı/parola çiftleri bir veritabanı gibi bazı dış depoda depolanır. Bu örnek, iki belirli Kullanıcı adı/parola çiftini denetleyen özel bir doğrulayıcısı olan bir hizmeti gösterir. İstemci, hizmette kimlik doğrulamak için böyle bir Kullanıcı adı/parola çifti kullanır.
@@ -17,7 +17,7 @@ Bu örnek, nasıl özel bir UserNamePassword doğrulayıcısı uygulanacağını
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örnekleri indirmek için [Windows Communication Foundation (wcf) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin. Bu örnek, aşağıdaki dizinde bulunur.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ Bu örnek, nasıl özel bir UserNamePassword doğrulayıcısı uygulanacağını
 
 - Sunucunun sunucu X. 509.440 sertifikası kullanılarak kimlik doğrulaması yapılır.
 
- Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, varsayılan olarak WS-güvenlik `wsHttpBinding` ve Kullanıcı adı kimlik doğrulamasını kullanan bir standart ile yapılandırılır. Hizmet davranışı, istemci kullanıcı `Custom` adı/parola çiftlerini Doğrulayıcı sınıfının türüyle birlikte doğrulama modunu belirtir. Davranışı, `serviceCertificate` öğesini kullanarak sunucu sertifikasını da belirtir. Sunucu sertifikasının, `SubjectName` [ \<ServiceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)için `findValue` aynı değeri içermesi vardır.
+ Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, `wsHttpBinding` Varsayılan olarak WS-güvenlik ve Kullanıcı adı kimlik doğrulamasını kullanan bir standart ile yapılandırılır. Hizmet davranışı, `Custom` istemci Kullanıcı adı/parola çiftlerini Doğrulayıcı sınıfının türüyle birlikte doğrulama modunu belirtir. Davranışı, öğesini kullanarak sunucu sertifikasını da belirtir `serviceCertificate` . Sunucu sertifikasının, içindeki ile için aynı değeri içermesi vardır `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
 <system.serviceModel>
@@ -88,7 +88,7 @@ Bu örnek, nasıl özel bir UserNamePassword doğrulayıcısı uygulanacağını
 </system.serviceModel>
 ```
 
- İstemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama uygun mod ve iletiyle `clientCredentialType`yapılandırılır.
+ İstemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama uygun mod ve iletiyle yapılandırılır `clientCredentialType` .
 
 ```xml
 <system.serviceModel>
@@ -197,7 +197,7 @@ try
 }
 ```
 
- Bu örnek, Kullanıcı adı/parola çiftlerini doğrulamak için özel bir UserNamePasswordValidator kullanır. Örnek `CustomUserNamePasswordValidator`, öğesinden <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>türetilir. Daha fazla bilgi <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> için belgelerine bakın. Bu özel Doğrulayıcı örneği, `Validate` aşağıdaki kodda gösterildiği gibi iki belirli Kullanıcı adı/parola çiftini kabul etmek için yöntemini uygular.
+ Bu örnek, Kullanıcı adı/parola çiftlerini doğrulamak için özel bir UserNamePasswordValidator kullanır. Örnek `CustomUserNamePasswordValidator` , öğesinden türetilir <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> . <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>Daha fazla bilgi için belgelerine bakın. Bu özel Doğrulayıcı örneği, `Validate` aşağıdaki kodda gösterildiği gibi iki belirli Kullanıcı adı/parola çiftini kabul etmek için yöntemini uygular.
 
 ```csharp
 public class CustomUserNameValidator : UserNamePasswordValidator
@@ -279,7 +279,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve derlemek için
 
-1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.
+1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.
 
 2. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için aşağıdaki yönergeleri kullanın.
 

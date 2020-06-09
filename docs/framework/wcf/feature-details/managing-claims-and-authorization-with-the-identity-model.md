@@ -8,156 +8,156 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586357"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
-Yetkilendirme hangi varlıkları değiştirmek, görüntülemek veya aksi halde bir bilgisayar kaynağına erişmek için izne sahip belirleme işlemidir. Örneğin, bir iş ortamında, yalnızca Yöneticiler çalışanlarına dosyalara erişmek için izin. Windows Communication Foundation (WCF), Yetkilendirme işlemi gerçekleştirmek için iki mekanizmayı destekler. İlk mekanizması, var olan ortak dil çalışma zamanı (CLR) yapıları kullanarak Yetkilendirme denetlemenize olanak tanıyor. İkinci olarak bilinen bir beyana dayalı modelidir *kimlik modeli*. WCF gelen istenmeyen iletilere talep oluşturmak için kimlik modeli kullanır; Kimlik modeli sınıfları için özel yetkilendirme düzenleri yeni talep türlerini destekleyecek şekilde genişletilebilir. Bu konuda özelliğini kullanan en önemli sınıflar listesini yanı sıra, başlıca programlama kavramları kimlik modeli özelliğinin genel bir bakış sunulmaktadır.  
+Yetkilendirme, bir bilgisayar kaynağını değiştirme, görüntüleme veya başka bir şekilde erişme iznine sahip olan varlıkları belirleme işlemidir. Örneğin, bir işletmede, çalışanlarının dosyalarına yalnızca yöneticilerin erişmesine izin verilebilir. Windows Communication Foundation (WCF), yetkilendirme işlemi gerçekleştirmek için iki mekanizmayı destekler. İlk mekanizma, mevcut ortak dil çalışma zamanı (CLR) yapılarını kullanarak yetkilendirmeyi denetlemenize olanak sağlar. İkincisi, *kimlik modeli*olarak bilinen talep tabanlı bir modeldir. WCF, gelen iletilerden talepler oluşturmak için kimlik modelini kullanır; Kimlik modeli sınıfları, özel yetkilendirme şemaları için yeni talep türlerini destekleyecek şekilde genişletilebilir. Bu konu, kimlik modeli özelliğinin ana programlama kavramlarının yanı sıra özelliğin kullandığı en önemli sınıfların bir listesini sunmaktadır.  
   
 ## <a name="identity-model-scenarios"></a>Kimlik modeli senaryoları  
- Aşağıdaki senaryolarda temsil eden kimlik modeli kullanın.  
+ Aşağıdaki senaryolar kimlik modelinin kullanımını temsil eder.  
   
-### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Senaryo 1: Kimlik, rol ve grup talepleri destekleme  
- Kullanıcılar, bir Web hizmetine iletileri gönderir. Web hizmeti erişim denetimi gereksinimleri, kimlik, roller veya gruplar kullanın. İletiyi gönderenin bir rol veya grup kümesine eşlenir. Rol veya grup bilgilerini erişim denetimleri gerçekleştirmek için kullanılır.  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>Senaryo 1: kimlik, rol ve grup taleplerini destekleme  
+ Kullanıcılar bir Web hizmetine iletiler gönderir. Web hizmetinin erişim denetimi gereksinimleri kimlik, rol veya grupları kullanır. İleti gönderici bir rol veya grup kümesiyle eşlenir. Rol veya grup bilgileri, erişim denetimleri gerçekleştirmek için kullanılır.  
   
-### <a name="scenario-2-supporting-rich-claims"></a>Senaryo 2: Zengin talep destekleme  
- Kullanıcılar, bir Web hizmetine iletileri gönderir. Web hizmeti erişim denetimi gereksinimleri, kimlik, roller veya gruplar daha zengin bir modeli gerektirir. Web hizmeti, belirli bir kullanıcının zengin beyana dayalı modeli kullanarak belirli bir korumalı kaynağa erişimi olup olmadığını belirler. Örneğin, bir kullanıcı, diğer kullanıcılara erişim olmaması maaş bilgilerini gibi belirli bilgileri okuyabilir olabilir.  
+### <a name="scenario-2-supporting-rich-claims"></a>Senaryo 2: zengin talepler destekleme  
+ Kullanıcılar bir Web hizmetine iletiler gönderir. Web hizmetinin erişim denetimi gereksinimleri, kimlik, roller veya gruplardan daha zengin bir model gerektirir. Web hizmeti, belirli bir kullanıcının zengin talep tabanlı modeli kullanarak belirli bir korumalı kaynağa erişip erişemeyeceğini belirler. Örneğin, bir Kullanıcı, diğer kullanıcıların erişimi olmayan ücret bilgileri gibi belirli bilgileri okuyabilir.  
   
-### <a name="scenario-3-mapping-disparate-claims"></a>Senaryo 3: Birbirinden farklı talep eşleme  
- Bir kullanıcı, bir Web hizmetine bir ileti gönderir. Kullanıcı kimlik bilgilerini bir dizi farklı yolla belirtebilirsiniz: X.509 Sertifika, kullanıcı adı belirteci veya Kerberos belirteci. Web hizmeti erişim denetimi kontrolleri aynı şekilde, kullanıcı kimlik bilgisi türü ne olursa olsun gerçekleştirmek için gereklidir. Zaman içinde ek bir kimlik bilgisi türlerinin destekleniyorsa, sistem buna uygun olarak değişime uğramaktadır.  
+### <a name="scenario-3-mapping-disparate-claims"></a>Senaryo 3: farklı talepler eşleme  
+ Bir Kullanıcı bir Web hizmetine ileti gönderir. Kullanıcı kimlik bilgilerini çeşitli şekillerde belirtebilir: X. 509.440 sertifikası, Kullanıcı adı belirteci veya Kerberos belirteci. Web hizmeti, Kullanıcı kimlik bilgisi türünden bağımsız olarak, erişim denetimi denetimlerini aynı şekilde gerçekleştirmek için gereklidir. Zaman içinde ek kimlik bilgisi türleri destekleniyorsa, sistem buna uygun şekilde gelişmelidir.  
   
-### <a name="scenario-4-determining-access-to-multiple-resources"></a>Senaryo 4: Birden çok kaynaklarına erişimi belirleme  
- Bir Web hizmeti, birden çok kaynağa erişmeyi dener. Hizmet kaynağa erişmek için talepleri kullanıcıyla ilişkili talep karşılaştırarak, belirli bir kullanıcının erişimi olan hangi korunan kaynaklara gerekli belirler.  
+### <a name="scenario-4-determining-access-to-multiple-resources"></a>Senaryo 4: birden fazla kaynağa erişimi belirleme  
+ Bir Web hizmeti birden fazla kaynağa erişmeye çalışır. Hizmet, Kullanıcı ile ilişkili talepleri, kaynağa erişmek için gereken taleplerle karşılaştırarak, belirli bir kullanıcının hangi korumalı kaynaklara erişimi olduğunu belirler.  
   
-## <a name="identity-model-terms"></a>Kimlik modeli koşulları  
- Aşağıdaki listede, kimlik modeli kavramları açıklamak için kullanılan anahtar terimlerini tanımlar.  
+## <a name="identity-model-terms"></a>Kimlik modeli terimleri  
+ Aşağıdaki liste, kimlik modeli kavramlarını anlatmak için kullanılan anahtar terimleri tanımlar.  
   
- Yetkilendirme İlkesi  
- Çıkış talep kümesine giriş talep kümesi eşleme kuralları kümesi. Değerlendirme bağlamı ve daha sonra bir yetkilendirme bağlamı eklenen kümeleri değerlendirilirken yetkilendirme ilkesi sonuçlarında talep.  
+ Yetkilendirme ilkesi  
+ Bir giriş talepleri kümesini bir çıkış talepleri kümesiyle eşlemek için bir kurallar kümesi. Talep kümelerinin bir değerlendirme bağlamına ve daha sonra bir yetkilendirme bağlamına eklendiği yetkilendirme ilkesi sonuçları değerlendiriliyor.  
   
  Yetkilendirme bağlamı  
- Talep kümeleri kümesini ve sıfır veya daha fazla özellik. Bir veya daha fazla yetkilendirme ilkelerini değerlendirme sonucu.  
+ Bir talep kümesi ve sıfır veya daha fazla özellik kümesi. Bir veya daha fazla yetkilendirme ilkesini değerlendirme sonucu.  
   
- Talep  
- Sağa bir talep türü ve değeri birleşimi.  
+ İste  
+ Bir talep türü, sağ ve bir değer birleşimi.  
   
  Talep kümesi  
- Belirli bir veren tarafından verilen bir talepler kümesi.  
+ Belirli bir veren tarafından verilen talepler kümesi.  
   
  Talep türü  
- Talep türü. Talep kimlik modeli API tarafından tanımlanan özellikleridir <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> sınıfı. Sistem tarafından sağlanan talep türlerinin örnekleridir <xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Email%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Sid%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Spn%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.System%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, <xref:System.IdentityModel.Claims.ClaimTypes.Uri%2A>, ve <xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A>.  
+ Bir talep türü. Kimlik modeli API 'SI tarafından tanımlanan talepler, <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> sınıfının özellikleridir. Sistem tarafından sunulan talep türleri örnekleri,,,,, <xref:System.IdentityModel.Claims.ClaimTypes.Dns%2A> <xref:System.IdentityModel.Claims.ClaimTypes.Email%2A> <xref:System.IdentityModel.Claims.ClaimTypes.Hash%2A> <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> <xref:System.IdentityModel.Claims.ClaimTypes.Sid%2A> , <xref:System.IdentityModel.Claims.ClaimTypes.Spn%2A> , <xref:System.IdentityModel.Claims.ClaimTypes.System%2A> , <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A> , <xref:System.IdentityModel.Claims.ClaimTypes.Uri%2A> , ve <xref:System.IdentityModel.Claims.ClaimTypes.X500DistinguishedName%2A> .  
   
  Değerlendirme bağlamı  
- Bir yetkilendirme ilkesi değerlendirilme bir bağlamı. Özellikler ve talep kümeleri içerir. Değerlendirme tamamlandıktan sonra kimlik doğrulama bağlamını temel haline gelir.  
+ Yetkilendirme ilkesinin değerlendirildiği bir bağlam. Özellikler ve talep kümelerini içerir. Değerlendirme tamamlandıktan sonra yetkilendirme bağlamının temeli olur.  
   
- Kimliği talebi  
- Bir talep, sağ kimliğidir.  
+ Kimlik talebi  
+ Hakkı kimlik olan bir talep.  
   
  Veren  
- Talep kümesini talep kümesi en az bir kimlik talebi içeren ve başka yayımlandı olarak değerlendirilir.  
+ En az bir kimlik talebi içeren ve başka bir talep kümesi veren bir talep kümesi.  
   
  Özellikler  
- Bir değerlendirme bağlamı veya bağlam yetkilendirme ile ilişkili bilgileri kümesi.  
+ Bir değerlendirme bağlamı veya yetkilendirme içeriğiyle ilişkili bir bilgi kümesi.  
   
  Korumalı kaynak  
- Yalnızca kullanılan sistemdeki bir sorun erişilen veya belirli gereksinimleri karşılanırsa, aksi takdirde yönetilebilir.  
+ Sisteme yalnızca belirli gereksinimlerin karşılanması durumunda yalnızca kullanılabilecek, erişilebilen veya başka şekilde işlenebilen bir şey.  
   
  Sağ  
- Bir kaynak üzerinde bir özelliği. Kimlik modeli API tarafından tanımlanan özelliklerini haklarıdır <xref:System.IdentityModel.Claims.Rights> sınıfı. Sistem tarafından sağlanan haklarına örnekler <xref:System.IdentityModel.Claims.Rights.Identity%2A> ve <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>.  
+ Kaynak üzerinde bir özellik. Kimlik modeli API 'SI tarafından tanımlanan haklar, <xref:System.IdentityModel.Claims.Rights> sınıfının özellikleridir. Sistem tarafından belirtilen hakların örnekleri <xref:System.IdentityModel.Claims.Rights.Identity%2A> ve <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> .  
   
  Değer  
- Bir şey üzerine bir hak iddia.  
+ Bir hakkı talep eden bir şey.  
   
-## <a name="claims"></a>Talep  
- Kimlik modeli beyana dayalı bir sistemdir. Talepler, genellikle bir kullanıcı, sistemin bir sistemde bazı varlıkla ilişkili özellikleri açıklanmaktadır. Belirli bir varlıkla ilişkilendirilen talep kümesi, bir anahtar olarak düşünülebilir. Belirli bir talep benzer şekilde bir kapısının kilidi açmak için kullanılan bir fiziksel anahtar, anahtar şeklini tanımlar. Talep kaynaklarına erişmek için kullanılır. Belirli bir korumalı kaynağa erişim izni varlık çalışırken erişim ile ilişkili talep ile bu kaynağa erişmek için gereken talepleri karşılaştırma tarafından belirlenir.  
+## <a name="claims"></a>Talepler  
+ Kimlik modeli, talep tabanlı bir sistemdir. Talepler, sistem içindeki bazı varlıkla ilişkili özellikleri (genellikle bu sistemin bir kullanıcısı) anlatmaktadır. Belirli bir varlıkla ilişkili talepler kümesi, anahtar olarak düşünülebilir. Belirli talepler, bir kapıda kilit açmak için kullanılan bir fiziksel anahtarla benzer şekilde bu anahtarın şeklini tanımlar. Talepler, kaynaklara erişim kazanmak için kullanılır. Verilen korumalı bir kaynağa erişim, erişim girişiminde bulunan varlıkla ilişkili taleplerle ilgili kaynağa erişmek için gereken talepler karşılaştırılmasıyla belirlenir.  
   
- Bir talep belirli bir değere göre bir sağ ifadesidir. "Okuma", "Yazma" veya "Yürütme" gibi bir hak bir şey olabilir Bir değer, bir veritabanı, bir dosya, posta kutusu veya bir özelliği olabilir. Talepler bir talep türü de var. Talep türü ve sağ birleşimi, değere göre özelliklerini belirtmek için bir mekanizma sağlar. Örneğin, bir talep türü "Dosya" değer "Biography.doc" üzerinde doğru "Okuma" ile böyle bir talep ilişkili olduğu varlık Biography.doc dosya için okuma erişimi olduğunu gösterir. Bir talep türü "Name" değeri "Martin" üzerinde doğru "PossessProperty" ile böyle bir talep ilişkili olduğu varlık "Martin" değerine sahip bir Name özelliğine sahip olduğunu gösterir.  
+ Talep, belirli bir değere göre doğru bir ifadedir. Bir hak, "okuma", "yazma" veya "yürütme" gibi bir şey olabilir. Bir değer bir veritabanı, dosya, posta kutusu veya özellik olabilir. Taleplerde de bir talep türü vardır. Talep türü ve sağ birleşimi, değere göre özellikleri belirtme mekanizmasını sağlar. Örneğin, "biyograf. doc" değeri üzerinde "Read" doğru "dosya" türünde bir talep, bu tür bir talebin ilişkilendirildiği varlığın biografi. doc dosyasına okuma erişimi olduğunu gösterir. "Marsessproperty" değerine sahip "ad" türünde bir talep, "Marsessproperty" değeri üzerinde "Marsessproperty" olan bir talep, bu tür bir talebin ilişkili olduğu varlığın "MARI" değerine sahip bir ad özelliği olduğunu gösterir.  
   
- Çeşitli talep türlerini ve hakları kimlik modelinin bir parçası tanımlansa da, ek talep türlerini ve hakları gerekli olarak tanımlamak için kimlik modeli altyapısının en üstünde oluşturmaya çeşitli sistemler sağlayan genişletilebilir bir sistemdir.  
+ Çeşitli talep türleri ve hakları kimlik modelinin bir parçası olarak tanımlandığından, sistem Genişletilebilir, bu da kimlik modeli altyapısının üzerine binen üst, ek talep türleri ve haklar tanımlamak için çeşitli sistemlere izin verir.  
   
 ### <a name="identity-claims"></a>Kimlik talepleri  
- Belirli bir hak kimlik olmasıdır. Bu hakka sahip talep kimliği bir deyimi varlık olun. Örneğin, bir talep türü "kullanıcı asıl adı" (UPN) değerini "someone@example.com" ve kimlik sağındaki belirli bir etki alanındaki belirli bir kimlik belirtir.  
+ Belirli bir hak, kimliğin bir sağdır. Bu hakka sahip talepler, varlığın kimliği hakkında bir bildirim yapar. Örneğin, "" değerine sahip "Kullanıcı asıl adı" (UPN) türünde bir talep someone@example.com ve kimlik hakkı, belirli bir etki alanındaki belirli bir kimliği gösterir.  
   
-#### <a name="system-identity-claim"></a>Sistem Kimliği talebi  
- Bir kimlik talebi kimlik modeli tanımlar: Sistemi. Sistem kimlik talebi, varlığın geçerli uygulama veya sistem olduğunu gösterir.  
+#### <a name="system-identity-claim"></a>Sistem kimliği talebi  
+ Kimlik modeli bir kimlik talebi tanımlar: sistem. Sistem kimlik talebi, bir varlığın geçerli uygulama veya sistem olduğunu gösterir.  
   
-### <a name="sets-of-claims"></a>Talep kümesi  
- Talepleri her zaman sistemdeki bazı varlık tarafından verilen bu varlığın bazı kavramı, sonuçta olsa bile kimlik temsil eden talep modelinin önemlidir, çünkü "kendisi". Talepler bir küme olarak birlikte gruplanır ve bir veren her ayarlanmış. Bir veren yalnızca bir talepler kümesidir. Böyle bir özyinelemeli ilişki sonunda bitmelidir ve kendi veren olarak ayarlandığında herhangi talep.  
+### <a name="sets-of-claims"></a>Talep kümeleri  
+ Talepler, bu varlık son olarak "Self" kavramsa bile, her zaman sistemdeki bazı varlıklar tarafından her zaman verildiği için, kimliği temsil eden talepler modeli önemlidir. Talepler bir küme olarak birlikte gruplandırılır ve her bir küme bir veren içerir. Veren yalnızca bir talepler kümesidir. Bu tür bir özyinelemeli ilişki sonunda sona bitmeli ve herhangi bir talep kümesi kendi verenler olabilir.  
   
- Aşağıdaki şekilde, bir talepler kümesi, sertifikayı veren talepler, talep kümesine verenini olarak sistem sırayla sahip başka bir dizi sahip olduğu üç talep kümesi örneği gösterilmektedir. Bu nedenle, talep kümesi derinliklerde bir hiyerarşi oluşturur.  
+ Aşağıdaki şekilde, tek bir talepler kümesinin, veren olarak başka bir talep kümesi olduğu ve bu da sertifika veren tarafından sistem talebi ayarlanmış olan farklı bir talep kümesi olduğu üç talep kümesi örneği gösterilmektedir. Bu nedenle, talep kümesi, yoğun bir şekilde derinlemesine olabilecek bir hiyerarşi oluşturur.  
   
- ![Hiyerarşi içinde talep kümesi.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
+ ![Hiyerarşi içindeki talepler kümesi.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Aynı talep kümesine, aşağıdaki resimde gösterildiği gibi veren birden çok talep kümesi içerebilir:
+ Birden çok talep kümesi, aşağıdaki şekilde gösterildiği gibi aynı verme talep kümesine sahip olabilir:
   
- ![Birden fazla aynı verme ile talep kümesini talep.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
+ ![Aynı veren talep kümesine sahip birden çok talep kümesi.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
- Kendi veren bir talep kümesi dışında kimlik modeli bir döngü oluşturmak talep kümeleri için herhangi bir destek sağlamaz. Bu nedenle talep kümesi A kendisi bir talep kümesi tarafından verilmiş olan talep kümesi tarafından B, burada verilen bir durumla hiçbir zaman ortaya çıkabilir. Ayrıca, kimlik modeli birden çok verenler talep kümeleri için herhangi bir destek sağlamaz. Ardından belirli bir talep kümesi iki veya daha fazla veren dağıtmalı, her aynı talepleri içeren, ancak farklı verenler sahip birden çok talep kümesi kullanmanız gerekir.  
+ Kendi veren bir talep kümesi dışında, kimlik modeli bir döngü oluşturmak için talep kümeleri için herhangi bir destek sağlamaz. Bu nedenle, talep kümesi B tarafından, talep kümesi tarafından verilen ve kendisi tarafından verilen talep kümesi tarafından verilen bir durum, hiçbir şekilde gerçekleşmeyebilir. Ayrıca, kimlik modeli birden çok veren talep kümesi için herhangi bir destek sağlamaz. İki veya daha fazla veren 'in belirli bir talep kümesini vermesi gerekiyorsa, her biri aynı talepleri içeren, ancak farklı verenler olan birden çok talep kümesi kullanmanız gerekir.  
   
 ### <a name="the-origin-of-claims"></a>Taleplerin kaynağı  
- Talepler, çeşitli kaynaklardan gelebilir. Bir ortak talep bir kullanıcı tarafından örneğin bir Web hizmetine gönderilen bir iletinin bir parçası olarak sunulan kimlik bilgilerini kaynağıdır. Bu tür talepler sistem doğrular ve kullanıcıyla ilişkili talep kümesinin bir parçası haline gelmeden. Diğer sistem bileşenlerini dahil ancak bunlarla sınırlı olmamak, işletim sistemi, ağ yığını, çalışma zamanı ortamı veya uygulama iddialara kaynakları da olabilir. Ayrıca, uzak hizmetleri talep kaynağı da olabilir.  
+ Talepler, çeşitli kaynaklardan gelebilir. Bir genel talep kaynağı, bir kullanıcı tarafından sunulan ve örneğin bir Web hizmetine gönderilen iletinin bir parçası gibi kimlik bilgileridir. Sistem bu talepleri doğrular ve Kullanıcı ile ilişkili bir talepler kümesinin bir parçası haline gelir. Diğer sistem bileşenleri Ayrıca, işletim sistemi, ağ yığını, çalışma zamanı ortamı veya uygulama dahil, ancak bunlarla sınırlı olmamak üzere talepler kaynakları da olabilir. Ayrıca, uzak hizmetler bir talepler kaynağı da olabilir.  
   
 ### <a name="authorization-policies"></a>Yetkilendirme İlkeleri  
- Kimlik modelinde, talep yetkilendirme ilkesini değerlendirme işleminin bir parçası olarak oluşturulur. Bir yetkilendirme ilkesi (büyük olasılıkla boş) mevcut talepler kümesini inceleyen ve talep zaten mevcut ve tüm olanaklarına ek bilgileri temel alarak ek talep eklemek tercih edebilirsiniz. Bu talep arasındaki eşlemeyi temelini sağlar. Varlığı veya yokluğu talep sistemdeki ek talep ekler olup olmadığı ile ilgili bir yetkilendirme ilkesi davranışını etkiler.  
+ Kimlik modelinde talepler, yetkilendirme ilkesini değerlendirme sürecinin bir parçası olarak oluşturulur. Yetkilendirme ilkesi, mevcut talepler kümesini (muhtemelen boş) inceler ve zaten mevcut olan talebe ve aktiften çıkarılma ek bilgilere göre ek talepler eklemeyi seçebilir. Bu, talepler arasındaki eşlemenin temelini sağlar. Sistemdeki taleplerin varlığı veya yokluğu, bir yetkilendirme ilkesinin, ek talepler eklemesine göre davranışını etkiler.  
   
- Örneğin, yetkilendirme ilkesi birthdates sistemini kullanarak çeşitli varlıklar içeren bir veritabanına erişimi vardır. Yetkilendirme İlkesi, bir "Over18" talep içeriği eklemek için bu bilgileri kullanır. Bu Over18 talep 18 yıl üzerinden olduğu gerçeği dışında varlık hakkında herhangi bir bilgi açıklamaz unutmayın. Yorumu 'Over18' talep, talep semantiği anlamaya bağlı olduğunu unutmayın. Bu semantiği düzeyde talep eklenen yetkilendirme ilkesi farkındadır. Sonradan neden ilke değerlendirmesinden gelen talepleri inceler kod Ayrıca bu semantiği bilginizi artırın.  
+ Örneğin, yetkilendirme ilkesi, sistemi kullanan çeşitli varlıkların Doğum tarihleri içeren bir veritabanına erişebilir. Yetkilendirme ilkesi, içeriğe bir "Over18" talebi eklemek için bu bilgileri kullanır. Bu Over18 talebinin, yaklaşık 18 yaşından fazla olan varlıkla ilgili hiçbir bilgiyi açıklamadığını unutmayın. ' Over18 ' talebinin yorumlamasının, bu talebin semantiğinin anlaşıldığına bağlı olduğunu unutmayın. Talebi ekleyen yetkilendirme ilkesi, bu semantikleri bir düzeyde anlamıştır. Daha sonra ilke değerlendirmesinden kaynaklanan talepleri inceleyerek bu semantiklerden de haberdar olur.  
   
- Belirtilen yetkilendirme ilkesi, diğer yetkilendirme ilkeleri talep ekledikçe daha fazla talep henüz bu yetkilendirme ilkesi ekleyebilirsiniz olduğundan, birden çok kez hesaplanacak gerektirebilir. Kimlik modeli, daha fazla talep herhangi biriyle zorla Yetkilendirme İlkeleri bağlamına eklenene kadar değerlendirmeye devam etmek için tasarlanmıştır. Bu sürekli değerlendirme, Yetkilendirme İlkeleri Yetkilendirme İlkeleri ile ilgili herhangi bir belirli değerlendirme sırada zorlamak için gereksinim engeller; herhangi bir sırada değerlendirilebilir. İlke bir talep B eklediyseniz ilke X yalnızca talep Z eklerse, X ilk olarak değerlendirildiği taktirde, ardından, başlangıçta talep Z eklemez. Sonuç olarak, bir değerlendirilir ve talep b X ardından ikinci bir kez değerlendirilir ve isteğe bağlı olarak bu süre talep Z ekler ekler.  
+ Belirli bir yetkilendirme ilkesi, diğer yetkilendirme ilkeleri talep içerdiğinden, bu yetkilendirme ilkesi henüz daha fazla talep ekleyebileceğinden, birden çok kez değerlendirilmesini gerektirebilir. Kimlik modeli, zordaki herhangi bir yetkilendirme ilkesi tarafından daha fazla talep eklenene kadar değerlendirmeye devam etmek için tasarlanmıştır. Yetkilendirme ilkelerinin sürekli değerlendirilmesi, yetkilendirme ilkelerine göre belirli bir değerlendirme sırasını zorunlu kılmak için gereksinimi önler; Bunlar herhangi bir sırada değerlendirilebilirler. Örneğin, Policy X yalnızca talep ekle B talebini eklerse, bu, ilk olarak X olarak değerlendiriliyorsa, başlangıçta Z talebini eklemez. Daha sonra, bir değerlendirilir ve B. X talebi eklendiğinde ikinci bir kez değerlendirilir ve bu süre bu kez Claim Z değerini ekler.  
   
- Belirli bir sistem çok sayıda yetkilendirme ilkelerini yürürlüğe olabilir.  
+ Belirli bir sistem, zorlamalı olarak birçok yetkilendirme ilkesine sahip olabilir.  
   
-### <a name="a-key-making-machine"></a>Bir anahtar yapımı makine  
- Bir grup ilişkili yetkilendirme ilkeleri değerlendirme anahtarları sağlayan bir makine gibi kullanmaktır. Yetkilendirme İlkeleri şunlardır: her değerlendirilir ve anahtarın şekli oluşturan oluşturmaya talep kümesi oluşturulur. Anahtar şeklini tamamlandıktan sonra bazı kilit açmak için kullanılabilir. Anahtar şeklini "bir Yetkilendirme Yöneticisi tarafından oluşturulan bir yetkilendirme bağlamı" depolanır.  
+### <a name="a-key-making-machine"></a>Anahtar oluşturma makinesi  
+ Bir grup ilişkili yetkilendirme ilkesini değerlendirmek, anahtar yapan bir makine kullanma gibidir. Yetkilendirme ilkeleri her biri değerlendirilir ve talepler kümesi oluşturulur ve anahtarın şeklini oluşturur. Anahtarın şekli tamamlandığında, bazı kilitleri açmayı denemek için kullanılabilir. Anahtarın şekli, bir Yetkilendirme Yöneticisi tarafından oluşturulan bir "yetkilendirme bağlamında" saklanır.  
   
 ### <a name="authorization-context"></a>Yetkilendirme bağlamı  
- Açıklandığı gibi çeşitli kimlik doğrulama ilkelerini bir Yetkilendirme Yöneticisi'ni değerlendirir ve sonucu olan bir kimlik doğrulama bağlamını (talep kümeleri ve ilişkili bazı özellikler kümesi). Yetkilendirme bağlamında hangi talepleri çeşitli dayandırabilmektedir (örneğin, sertifika veren talep kümesi) arasındaki ilişkileri bu bağlamda mevcut olduğunu belirlemek ve sonuçta bunların erişim karşılamalıdır bazı gereksinimler karşı karşılaştırma incelenebilir bir Kaynak.  
+ Yetkilendirme Yöneticisi, farklı yetkilendirme ilkelerini açıklandığı şekilde değerlendirir ve sonuç bir yetkilendirme bağlamıdır (bir talep kümesi ve bazı ilişkili özellikler kümesi). Yetkilendirme bağlamı, bu bağlamda hangi taleplerin bulunduğunu belirlemek için incelenebilir, bu çeşitli talepler arasındaki ilişkiler (örneğin, veren talep kümesi) ve sonuç olarak bunları bir kaynağa erişmek için uyması gereken bazı gereksinimlere göre karşılaştırın.  
   
 ### <a name="locks"></a>Kilitler  
- Bir yetkilendirme bağlam (talepler kümesi) bir anahtar ise, belirli bir korumalı kaynağa erişim izni vermek için karşılanması gereken gereksinimleri anahtar uymalı kilit oluşturur. Kimlik modeli bu gereksinimleri nasıl ifade resmileştirin değil, ancak bunlar, sistemin talebe dayalı gereği bazı gerekli talepler kümesi karşı yetkilendirme bağlamında talepleri karşılaştırma içeren.  
+ Bir yetkilendirme bağlamı (bir talepler kümesi) bir anahtarlık ise, belirli bir korumalı kaynağa erişim verilmesi için karşılanması gereken gereksinimler, anahtarın sığması gereken kilidi oluşturur. Kimlik modeli, bu tür gereksinimlerin nasıl ifade edireceğini değil, ancak sistemin talep tabanlı doğası verildiğinde, yetkilendirme bağlamındaki talepleri bazı gerekli talepler kümesiyle karşılaştırmayı içerir.  
   
-### <a name="a-recap"></a>Bir özeti  
- Kimlik modeli geçici olarak talep kavramını temel alır. Talep kümeleri halinde gruplandırılır ve bir yetkilendirme bağlamında toplanır. Bir kimlik doğrulama bağlamını talepler kümesi içeriyor ve bir Yetkilendirme Yöneticisi ile ilişkili bir veya daha fazla yetkilendirme ilkelerini değerlendirme sonucu. Bu talep, ayarlar, erişim gereksinimleri karşıladığınızdan olmadığını belirlemek için incelenebilir. Aşağıdaki şekilde bu çeşitli kimlik modeli kavramlar arasındaki ilişkiler gösterilmektedir.  
+### <a name="a-recap"></a>Bir recap  
+ Kimlik modeli, talepler kavramını temel alarak. Talepler kümeler halinde gruplandırılır ve bir yetkilendirme bağlamında toplanır. Yetkilendirme bağlamı bir talepler kümesi içerir ve bir Yetkilendirme Yöneticisi ile ilişkili bir veya daha fazla yetkilendirme ilkesini değerlendirme sonucudur. Bu talep kümeleri, erişim gereksinimlerinin karşılanıp karşılanmadığını belirlemede incelenebilir. Aşağıdaki şekilde, bu çeşitli kimlik modeli kavramları arasındaki ilişkiler gösterilmektedir.  
   
- ![Talep ve yetkilendirmeyi yönetme](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
+ ![Talepleri ve Yetkilendirmeyi Yönetme](media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF ve kimlik modeli  
- WCF, yetkilendirme gerçekleştirmek için temel olarak kimlik modeli altyapısı kullanır. Wcf'de, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> sınıfı belirtmenize olanak verir *yetkilendirme* ilkeleri bir hizmetin parçası olarak. Bu tür Yetkilendirme İlkeleri olarak da bilinir *Dış kimlik doğrulama ilkelerini*, ve temel alarak yerel ilke veya uzak bir hizmetle etkileşim tarafından talep işleme gerçekleştirirler. Tarafından temsil edilen Yetkilendirme Yöneticisi <xref:System.ServiceModel.ServiceAuthorizationManager> sınıfı dış Yetkilendirme İlkeleri (belirteçler) türlerini çeşitli kimlik bilgisi tanımak Yetkilendirme İlkeleri ile birlikte değerlendirir ve ne çağrılır dolduran bir  *Yetkilendirme bağlamında* talepleri bir gelen iletiyi uygun ile. Yetkilendirme bağlamında tarafından temsil edilen <xref:System.IdentityModel.Policy.AuthorizationContext> sınıfı.  
+ WCF kimlik modeli altyapısını yetkilendirme gerçekleştirme temeli olarak kullanır. WCF 'de, <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> sınıf, bir hizmetin parçası olarak *Yetkilendirme* ilkelerini belirtmenizi sağlar. Bu tür yetkilendirme ilkeleri, *dış yetkilendirme ilkeleri*olarak bilinir ve yerel ilke temelinde veya uzak bir hizmetle etkileşime girerek talep işleme gerçekleştirebilir. Sınıfı tarafından temsil edilen Yetkilendirme Yöneticisi, <xref:System.ServiceModel.ServiceAuthorizationManager> dış yetkilendirme ilkelerini çeşitli kimlik bilgisi türlerini (belirteçleri) tanıyan yetkilendirme ilkeleriyle birlikte değerlendirir ve gelen iletiye uygun taleplerle *Yetkilendirme bağlamı* olarak adlandırılan öğeleri doldurur. Yetkilendirme bağlamı sınıf tarafından temsil edilir <xref:System.IdentityModel.Policy.AuthorizationContext> .  
   
-## <a name="identity-model-programming"></a>Kimlik programlama modeli  
- Aşağıdaki tabloda, program kimlik modeli uzantıları için kullanılan nesne modelini açıklar. Bu sınıfların tümü ya da mevcut <xref:System.IdentityModel.Policy> veya <xref:System.IdentityModel.Claims> ad alanları.  
+## <a name="identity-model-programming"></a>Kimlik modeli programlama  
+ Aşağıdaki tabloda, Identity model uzantıları 'nı programlamak için kullanılan nesne modeli açıklanmaktadır. Bu sınıfların hepsi <xref:System.IdentityModel.Policy> ya da <xref:System.IdentityModel.Claims> ad alanlarında bulunur.  
   
-|örneği|Açıklama|  
+|Sınıf|Açıklama|  
 |-----------|-----------------|  
-|Yetkilendirme bileşeni|Uygulayan bir kimlik modeli sınıf <xref:System.IdentityModel.Policy.IAuthorizationComponent> arabirimi.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Tek bir salt okunur dize özelliği sağlayan bir arabirimi: Kimliği. Bu özelliğin değeri bu arabirimi uygulayan bir sistemde her örneği için benzersizdir.|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|Bir *yetkilendirme bileşen* bir dizi içeren `ClaimSet` sıfır veya daha fazla özellik örnekleriyle; bir veya daha fazla yetkilendirme ilkelerini değerlendirme sonucu.|  
-|<xref:System.IdentityModel.Claims.Claim>|Bir talep türü, sağa ve değer birleşimi. Sağa ve değer bölümleri talep türüne göre kısıtlanır.|  
-|<xref:System.IdentityModel.Claims.ClaimSet>|Soyut bir temel sınıf. Bir koleksiyonu `Claim` örnekleri.|  
-|<xref:System.IdentityModel.Claims.DefaultClaimSet>|Korumalı bir sınıf. Uygulanışı `ClaimSet` sınıfı.|  
-|<xref:System.IdentityModel.Policy.EvaluationContext>|Soyut bir temel sınıf. Bir yetkilendirme ilkesi için ilke değerlendirmesi sırasında geçirildi.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|Türetilmiş bir arabirim `IAuthorizationComponent` ve yetkilendirme ilkesi sınıfları tarafından uygulanır.|  
-|<xref:System.IdentityModel.Claims.Rights>|Önceden tanımlanmış doğru değerleri içeren bir statik sınıf.|  
+|Yetkilendirme bileşeni|Arabirimi uygulayan bir kimlik modeli sınıfı <xref:System.IdentityModel.Policy.IAuthorizationComponent> .|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Tek bir salt okunurdur dize özelliği sağlayan bir arabirim: ID. Bu özelliğin değeri, bu arabirimi uygulayan sistemdeki her bir örnek için benzersizdir.|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|Sıfır veya daha fazla özelliği olan bir örnek kümesi içeren bir *Yetkilendirme bileşeni* `ClaimSet` ; bir veya daha fazla yetkilendirme ilkesini değerlendirme sonucu.|  
+|<xref:System.IdentityModel.Claims.Claim>|Talep türü, sağ ve değer birleşimi. Sağ ve değer parçaları talep türü tarafından kısıtlanıyor.|  
+|<xref:System.IdentityModel.Claims.ClaimSet>|Soyut temel sınıf. `Claim`Örnek koleksiyonu.|  
+|<xref:System.IdentityModel.Claims.DefaultClaimSet>|Sealed bir sınıf. `ClaimSet`Sınıfının uygulanması.|  
+|<xref:System.IdentityModel.Policy.EvaluationContext>|Soyut temel sınıf. İlke değerlendirmesi sırasında bir yetkilendirme ilkesine geçirilir.|  
+|<xref:System.IdentityModel.Policy.IAuthorizationPolicy>|`IAuthorizationComponent`Yetkilendirme İlkesi sınıfları tarafından türetilmiş ve uygulanan arabirim.|  
+|<xref:System.IdentityModel.Claims.Rights>|Önceden tanımlanmış sağ değerleri içeren bir statik sınıf.|  
   
- Aşağıdaki sınıflar kimlik programlama modeli için de kullanılır, ancak içinde bulunamadı <xref:System.IdentityModel.Policy> veya <xref:System.IdentityModel.Claims> ad alanları.  
+ Aşağıdaki sınıflar, kimlik modeli programlama için de kullanılır, ancak <xref:System.IdentityModel.Policy> veya <xref:System.IdentityModel.Claims> ad alanlarında bulunamaz.  
   
-|örneği|Açıklama|  
+|Sınıf|Açıklama|  
 |-----------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager>|Bir yöntem sağlayan bir sınıf — <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>— talep tabanlı yetkilendirme gerçekleştirmek için her bir işlemde bir hizmet denetler. Sınıfından türetilir ve yöntemini geçersiz kılmanız gerekir.|  
-|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|Bir hizmet olarak davranışını ilgili çeşitli özellikler sağlayan korumalı sınıf için yetkilendirme ile ilgilidir.|  
-|<xref:System.ServiceModel.ServiceSecurityContext>|Güvenlik bağlamı, kimlik doğrulama bağlamını, şu anda çalıştırmak için (veya yaklaşık çalıştırmak için) dahil olmak üzere sağlayan bir sınıf işlemi. Bu sınıfın bir örneğinin parçası olduğu <xref:System.ServiceModel.OperationContext>.|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager>|Bir <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> hizmet içindeki her işlem için talep tabanlı yetkilendirme denetimleri gerçekleştirmek üzere — yöntemi sağlayan bir sınıf. Sınıfından türetmeniz ve metodunu geçersiz kılmanız gerekir.|  
+|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|Yetkilendirmeyle ilgili bir hizmetin davranışına ilişkin çeşitli özellikler sağlayan Sealed bir sınıf.|  
+|<xref:System.ServiceModel.ServiceSecurityContext>|Şu anda çalışan (veya çalıştırmak üzere) işlemi için, yetkilendirme bağlamı da dahil olmak üzere güvenlik bağlamı sağlayan bir sınıf. Bu sınıfın bir örneği, öğesinin bir parçasıdır <xref:System.ServiceModel.OperationContext> .|  
   
-### <a name="significant-members"></a>Önemli üyeleri  
- Aşağıdaki üyeleri yeni talep türleri oluşturmak için yaygın olarak kullanılır.  
+### <a name="significant-members"></a>Önemli Üyeler  
+ Aşağıdaki Üyeler genellikle yeni talep türleri oluşturmak için kullanılır.  
   
 |Üye|Açıklama|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Türetilen sınıflar, hizmet işlemleri çalıştırılmadan önce talep tabanlı erişim denetimleri gerçekleştirmek için bu yöntemi uygular. Sağlanan tüm bilgileri <xref:System.ServiceModel.OperationContext>, veya başka bir yerde karar denetleyin erişim yaparken incelenebilir. Varsa <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> döndürür `true`, ardından erişim verilir ve çalıştırmak için işleme izin verilir. Varsa `CheckAccessCore` döndürür `false`, sonra erişim reddedildi ve işlemi çalışmaz. Bir örnek için bkz [nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
-|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Döndürür <xref:System.ServiceModel.ServiceAuthorizationManager> hizmeti. <xref:System.ServiceModel.ServiceAuthorizationManager> Yetkilendirme kararları sorumludur.|  
-|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Hizmet için belirtilen özel Yetkilendirme İlkeleri koleksiyonu. Bu ilkeler, gelen iletileri kimlik bilgileri ile ilgili bu ilkelere ek olarak değerlendirilir.|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Türetilmiş sınıflar, bir hizmette işlemleri çalıştırmadan önce talep tabanlı erişim denetimleri gerçekleştirmek için bu yöntemi uygular. <xref:System.ServiceModel.OperationContext>Erişim denetimi kararı verirken, sağlanan veya başka bir yerde bulunan tüm bilgiler incelenebilir. <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>Dönerse `true` , erişim verilir ve işlemin çalışmasına izin verilir. `CheckAccessCore`Dönerse `false` , erişim reddedilir ve işlem çalıştırılmaz. Bir örnek için bkz. [nasıl yapılır: bir hizmet Için özel Yetkilendirme Yöneticisi oluşturma](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
+|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|<xref:System.ServiceModel.ServiceAuthorizationManager>Hizmeti için döndürür. , <xref:System.ServiceModel.ServiceAuthorizationManager> Yetkilendirme kararları getirmekten sorumludur.|  
+|<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Hizmet için belirtilen özel yetkilendirme ilkelerinin koleksiyonu. Bu ilkeler, gelen iletilerdeki kimlik bilgileriyle ilişkili ilkelere ek olarak değerlendirilir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -171,12 +171,12 @@ Yetkilendirme hangi varlıkları değiştirmek, görüntülemek veya aksi halde 
 - <xref:System.IdentityModel.Policy>
 - <xref:System.IdentityModel.Tokens>
 - <xref:System.IdentityModel.Selectors>
-- [Talepler ve Belirteçler](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
-- [Talepler ve Kaynaklara Erişimi Reddetme](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
-- [Talep Oluşturma ve Kaynak Değerleri](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Nasıl yapılır: Özel talep oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Nasıl yapılır: Talepleri karşılaştırma](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Nasıl yapılır: Özel yetkilendirme ilkesi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [Nasıl yapılır: Bir hizmet için özel Yetkilendirme Yöneticisi oluşturma](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Yetkilendirme](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Talepler ve Belirteçler](claims-and-tokens.md)
+- [Beyanlar ve Kaynaklara Erişimi Reddetme](claims-and-denying-access-to-resources.md)
+- [Beyan Oluşturma ve Kaynak Değerleri](claim-creation-and-resource-values.md)
+- [Nasıl yapılır: Özel Beyan Oluşturma](../extending/how-to-create-a-custom-claim.md)
+- [Nasıl yapılır: Talepleri Karşılaştırma](../extending/how-to-compare-claims.md)
+- [Nasıl yapılır: Özel Yetkilendirme İlkesi Oluşturma](../extending/how-to-create-a-custom-authorization-policy.md)
+- [Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Güvenliğe genel bakış](security-overview.md)
+- [Yetkilendirme](authorization-in-wcf.md)

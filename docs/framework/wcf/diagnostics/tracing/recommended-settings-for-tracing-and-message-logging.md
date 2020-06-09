@@ -2,18 +2,18 @@
 title: İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 604aae2c0a0c5390428e7f1a2c99e17e90ee76a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185724"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578922"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar
-Bu konu, farklı çalışma ortamları için önerilen izleme ve ileti günlüğe kaydetme ayarlarını açıklar.  
+Bu konuda, farklı işletim ortamları için önerilen izleme ve ileti günlüğü ayarları açıklanmaktadır.  
   
-## <a name="recommended-settings-for-a-production-environment"></a>Üretim Ortamı Için Önerilen Ayarlar  
- Bir üretim ortamı için, WCF izleme kaynakları `switchValue` kullanıyorsanız, Uyarı'yı ayarlayın. WCF `System.ServiceModel` izleme kaynağını `switchValue` kullanıyorsanız, özniteliği `Warning` ve `propagateActivity` özniteliği ' `true`ye ayarlayın. Kullanıcı tanımlı bir izleme kaynağı kullanıyorsanız, `switchValue` özniteliği . `Warning, ActivityTracing` Bu Configuration Editor Aracı [(SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)kullanılarak el ile yapılabilir. Performansta bir isabet beklemiyorsanız, özniteliği `switchValue` `Information` daha önce bahsedilen tüm durumlarda ayarlayabilirsiniz ve bu da oldukça büyük miktarda izleme verisi oluşturur. Aşağıdaki örnek, önerilen bu ayarları gösterir.  
+## <a name="recommended-settings-for-a-production-environment"></a>Üretim ortamı için önerilen ayarlar  
+ Bir üretim ortamında, WCF izleme kaynaklarını kullanıyorsanız, `switchValue` uyarı olarak ayarlayın. WCF `System.ServiceModel` izleme kaynağını kullanıyorsanız, `switchValue` özniteliğini `Warning` ve `propagateActivity` özniteliğini olarak ayarlayın `true` . Kullanıcı tanımlı bir izleme kaynağı kullanıyorsanız, `switchValue` özniteliğini olarak ayarlayın `Warning, ActivityTracing` . Bu işlem, [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)kullanılarak el ile yapılabilir. Performans için bir isabet tahmin ediyorsanız, `switchValue` özniteliğini `Information` daha önce bahsedilen tüm durumlarda olarak ayarlayabilirsiniz. Bu, çok büyük miktarda izleme verisi üretir. Aşağıdaki örnek, önerilen bu ayarları gösterir.  
   
 ```xml  
 <configuration>  
@@ -47,10 +47,10 @@ Bu konu, farklı çalışma ortamları için önerilen izleme ve ileti günlüğ
 </configuration>  
 ```  
   
-## <a name="recommended-settings-for-deployment-or-debugging"></a>Dağıtım veya Hata Ayıklama için Önerilen Ayarlar  
- Dağıtım veya hata ayıklama ortamı `Information` `Verbose`için, `ActivityTracing` kullanıcı tarafından tanımlanan veya `System.ServiceModel` izleme kaynağı için seçin veya birlikte. Hata ayıklamayı geliştirmek için, ileti günlüğe`System.ServiceModel.MessageLogging`kaydetmeyi etkinleştirmek için yapılandırmaya ek bir izleme kaynağı () eklemeniz gerekir. Özniteliğin `switchValue` bu izleme kaynağı üzerinde hiçbir etkisi olmadığına dikkat edin.  
+## <a name="recommended-settings-for-deployment-or-debugging"></a>Dağıtım veya hata ayıklama için önerilen ayarlar  
+ Dağıtım veya hata ayıklama ortamında, `Information` `Verbose` `ActivityTracing` Kullanıcı tanımlı ya da izleme kaynağı için ile birlikte veya seçin `System.ServiceModel` . Hata ayıklamayı geliştirmek için, Ayrıca, `System.ServiceModel.MessageLogging` ileti günlüğe kaydetmeyi etkinleştirmek üzere yapılandırmaya ek bir izleme kaynağı () eklemeniz gerekir. `switchValue`Özniteliğin bu izleme kaynağını üzerinde hiçbir etkisi olmadığına dikkat edin.  
   
- Aşağıdaki örnekte, paylaşılan bir dinleyici kullanılarak önerilen ayarları `XmlWriterTraceListener`gösterir.  
+ Aşağıdaki örnek, tarafından kullanılan paylaşılan bir dinleyiciyi kullanarak önerilen ayarları gösterir `XmlWriterTraceListener` .  
   
 ```xml  
 <configuration>  
@@ -96,17 +96,17 @@ Bu konu, farklı çalışma ortamları için önerilen izleme ve ileti günlüğ
 </configuration>  
 ```  
   
-## <a name="using-wmi-to-modify-settings"></a>Ayarları Değiştirmek için WMI kullanma  
- Çalışma zamanında yapılandırma ayarlarını değiştirmek için WMI'yi `wmiProviderEnabled` kullanabilirsiniz (daha önceki yapılandırma örneğinde gösterildiği gibi yapılandırmadaki özniteliği etkinleştirerek). Örneğin, çalışma zamanında Izleme kaynağı düzeylerini Uyarı'dan Bilgiye değiştirmek için CIM Studio içindeki WMI'yi kullanabilirsiniz. Bu şekilde canlı hata ayıklama performans maliyeti çok yüksek olabilir farkında olmalıdır. WMI kullanma hakkında daha fazla bilgi için [Tanılama için Windows Yönetim Aracını Kullanma konusuna](../../../../../docs/framework/wcf/diagnostics/wmi/index.md) bakın.  
+## <a name="using-wmi-to-modify-settings"></a>Ayarları değiştirmek için WMI kullanma  
+ WMI 'yi, çalışma zamanındaki yapılandırma ayarlarını değiştirmek için kullanabilirsiniz ( `wmiProviderEnabled` daha önce yapılandırma örneğinde gösterildiği gibi, yapılandırmadaki özniteliğini etkinleştirerek). Örneğin, Trace kaynak düzeylerini, çalışma zamanında bilgi olarak uyarı olarak değiştirmek için CıM Studio içinde WMI kullanabilirsiniz. Bu şekilde, canlı hata ayıklama performans maliyetinin çok yüksek olduğunu bilmelisiniz. WMI kullanma hakkında daha fazla bilgi için [Tanılama için Windows Yönetim araçları kullanma](../wmi/index.md) konusuna bakın.  
   
-## <a name="enable-correlated-events-in-aspnet-tracing"></a>ASP.NET İzlemede İlişkili Olayları Etkinleştirme  
- ASP.NET olaylar, ASP.NET olay izleme açık olmadığı sürece korelasyon kimliğini (ActivityID) ayarlamaz. Korelasyonlu olayları düzgün görmek için, komut konsolundaki aşağıdaki komutu kullanarak ASP.NET olayları takip ederek açmanız gerekir, bu komut konsoluna giderek çağrılabilir **,** **Çalıştır** ve **cmd**yazın ,  
+## <a name="enable-correlated-events-in-aspnet-tracing"></a>ASP.NET Izlemede bağıntılı olayları etkinleştirme  
+ ASP.NET olayları, ASP.NET olay izleme açık değilse bağıntı KIMLIĞINI (ActivityId) ayarlamayın. Bağıntılı olayları doğru şekilde görmek için, komut konsolunda aşağıdaki komutu kullanarak ASP.NET olayları izlemeyi açmanız gerekir. Bu, **Başlat**, **Çalıştır** **ve yaz komutları**kullanılarak çağrılabilir.  
   
 ```console  
 logman start mytrace -pf logman.providers -o test.etl –ets  
 ```  
   
- ASP.NET olaylarının izini kapatmak için aşağıdaki komutu kullanın,  
+ ASP.NET olaylarının izlenmesini devre dışı bırakmak için aşağıdaki komutu kullanın,  
   
 ```console
 logman stop mytrace -ets  
@@ -114,4 +114,4 @@ logman stop mytrace -ets
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tanılama için Windows Yönetim İzlemesini Kullanma](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Tanılama için Windows Yönetim Araçları kullanma](../wmi/index.md)
