@@ -2,18 +2,18 @@
 title: Keşif İstemci Kanalıyla Özel Bağlama Kullanma
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 5f3f5fe24d1f19ce503b793d9aad870d882c7971
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49983c3ab303d3839350af72b1aa4821c071fe99
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184284"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595043"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Keşif İstemci Kanalıyla Özel Bağlama Kullanma
-Özel bir bağlama kullanırken <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>, <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> örnekleri oluşturan bir tanımlamalısınız.  
+İle özel bir bağlama kullanılırken <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> , örnek oluşturan bir ' i tanımlamanız gerekir <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> .  
   
-## <a name="creating-a-discoveryendpointprovider"></a>DiscoveryEndpointProvider Oluşturma  
- Talep <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> üzerine örnekler <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> oluşturmaktan sorumludur. Bir bulma bitiş noktası sağlayıcısı tanımlamak için, bir sınıf türetmek <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> ve <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> yöntemi geçersiz kılmak ve yeni bir bulma bitiş noktası döndürün. Aşağıdaki örnekte, bir bulma bitiş noktası sağlayıcısının nasıl oluşturulacak olduğu gösterilmektedir.  
+## <a name="creating-a-discoveryendpointprovider"></a>Bir DiscoveryEndpointProvider oluşturma  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> İstek üzerine örneklerin oluşturulmasından sorumludur. Bir bulma uç noktası sağlayıcısı tanımlamak için, öğesinden bir sınıf türetebilir <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> ve <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider.GetDiscoveryEndpoint%2A> yöntemi geçersiz kılın ve yeni bir bulma uç noktası döndürün. Aşağıdaki örnek, bulma uç noktası sağlayıcısının nasıl oluşturulacağını göstermektedir.  
   
 ```csharp
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -28,7 +28,7 @@ public class UdpDiscoveryEndpointProvider : DiscoveryEndpointProvider
 }  
 ```  
   
- Bulma uç noktası sağlayıcısını tanımladıktan sonra özel bir <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>bağlama oluşturabilir ve aşağıdaki örnekte gösterildiği gibi bulma bitiş noktası sağlayıcısına başvuran , bir ekleme yapabilirsiniz.  
+ Bulma uç noktası sağlayıcısını tanımladıktan sonra özel bir bağlama oluşturabilir ve <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> Aşağıdaki örnekte gösterildiği gibi bulma uç noktası sağlayıcısına başvuran öğesini ekleyebilirsiniz.  
   
 ```csharp
 DiscoveryClientBindingElement discoveryBindingElement = new DiscoveryClientBindingElement();  
@@ -43,9 +43,9 @@ CustomBinding customBinding = new CustomBinding(new NetTcpBinding());
 customBinding.Elements.Insert(0, discoveryBindingElement);  
 ```  
   
- Bulma istemcisi kanalını kullanma hakkında daha fazla bilgi için Bkz. [Discovery Client Channel'ı kullanma.](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+ Bulma istemci kanalını kullanma hakkında daha fazla bilgi için bkz. [bulma Istemci kanalını kullanma](using-the-discovery-client-channel.md).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Keşif Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
+- [WCF Keşif Genel Bakış](wcf-discovery-overview.md)
+- [Keşif İstemcisi Kanalını Kullanma](using-the-discovery-client-channel.md)

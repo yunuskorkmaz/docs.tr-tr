@@ -2,22 +2,22 @@
 title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 9ded0886920f9f0b3d2f9b441061253b42a1c567
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 84b10b507f9fdaa7c53cf937bb132c8cc0aac33f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591650"
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 
-Bu örnek, bir Message Queuing (MSMQ) uygulamasının bir Windows Communication Foundation (WCF) hizmetine nasıl MSMQ iletisi gönderebileceğinizi ve iletilerin istek/yanıt senaryosunda gönderici ve alıcı uygulamaları arasında nasıl bağıntılı olduğunu gösterir. Bu örnek MsmqIntegrationBinding bağlamasını kullanır. Bu durumda hizmet, sıraya alınan iletileri alan hizmeti gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır. ek
+Bu örnek, bir Message Queuing (MSMQ) uygulamasının bir Windows Communication Foundation (WCF) hizmetine nasıl MSMQ iletisi gönderebileceğinizi ve iletilerin istek/yanıt senaryosunda gönderici ve alıcı uygulamaları arasında nasıl bağıntılı olduğunu gösterir. Bu örnek MsmqIntegrationBinding bağlamasını kullanır. Bu durumda hizmet, sıraya alınan iletileri alan hizmeti gözlemlemeye olanak sağlayan, kendinden konak bir konsol uygulamasıdır. k
 
- Hizmet gönderenden alınan iletiyi işler ve gönderene bir yanıt iletisi gönderir. Gönderen yanıtı, aldığı isteği ilk gönderdiği istek ile ilişkilendirir. İletinin `MessageID` ve `CorrelationID` özellikleri, istek ve yanıt iletilerini ilişkilendirmek için kullanılır.
+ Hizmet gönderenden alınan iletiyi işler ve gönderene bir yanıt iletisi gönderir. Gönderen yanıtı, aldığı isteği ilk gönderdiği istek ile ilişkilendirir. `MessageID`İletinin ve `CorrelationID` Özellikleri, istek ve yanıt iletilerini ilişkilendirmek için kullanılır.
 
- `IOrderProcessor` hizmet sözleşmesi, sıraya alma ile kullanım için uygun tek yönlü bir hizmet işlemi tanımlar. Bir MSMQ iletisinde eylem üst bilgisi yok, bu nedenle farklı MSMQ iletilerini işlem sözleşmelerine otomatik olarak eşlemek mümkün değildir. Bu nedenle, bu durumda yalnızca bir işlem sözleşmesi olabilir. Hizmette daha fazla işlem sözleşmesi tanımlamak istiyorsanız, uygulamanın hangi işlem sözleşmesinin gönderileceğine karar vermek için MSMQ iletisindeki hangi üstbilginin (örneğin, etiket veya correlationID) kullanılabileceği bilgisini sağlaması gerekir.
+ `IOrderProcessor`Hizmet sözleşmesi, sıraya alma ile kullanılmak üzere uygun tek yönlü bir hizmet işlemi tanımlar. Bir MSMQ iletisinde eylem üst bilgisi yok, bu nedenle farklı MSMQ iletilerini işlem sözleşmelerine otomatik olarak eşlemek mümkün değildir. Bu nedenle, bu durumda yalnızca bir işlem sözleşmesi olabilir. Hizmette daha fazla işlem sözleşmesi tanımlamak istiyorsanız, uygulamanın hangi işlem sözleşmesinin gönderileceğine karar vermek için MSMQ iletisindeki hangi üstbilginin (örneğin, etiket veya correlationID) kullanılabileceği bilgisini sağlaması gerekir.
 
- MSMQ iletisi ayrıca, hangi üst bilgilerin işlem sözleşmesinin farklı parametreleriyle eşlendiği bilgisini içermez. Bu nedenle, işlem sözleşmesinde yalnızca bir parametre olabilir. Parametresi, temeldeki MSMQ iletisini içeren <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>türüdür. `MsmqMessage<T>` sınıfında "T" türü, MSMQ ileti gövdesinde seri hale getirilen verileri temsil eder. Bu örnekte, `PurchaseOrder` türü MSMQ ileti gövdesinde serileştirilir.
+ MSMQ iletisi ayrıca, hangi üst bilgilerin işlem sözleşmesinin farklı parametreleriyle eşlendiği bilgisini içermez. Bu nedenle, işlem sözleşmesinde yalnızca bir parametre olabilir. Parametresi <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> , TEMELDEKI MSMQ iletisini içeren türüdür. Sınıftaki "T" türü, `MsmqMessage<T>` MSMQ ileti gövdesinde seri hale getirilen verileri temsil eder. Bu örnekte, `PurchaseOrder` tür MSMQ ileti gövdesinde serileştirilir.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -29,7 +29,7 @@ public interface IOrderProcessor
 }
 ```
 
- Hizmet işlemi, satın alma siparişini işler ve hizmet konsolu penceresinde satın alma siparişinin içeriğini ve durumunu görüntüler. <xref:System.ServiceModel.OperationBehaviorAttribute>, işlemi sıraya sahip bir işlemde Enlist olarak yapılandırır ve işlem geri döndüğünde işlemin tamamlandığını işaretler. `PurchaseOrder`, hizmet tarafından işlenmesi gereken sipariş ayrıntılarını içerir.
+ Hizmet işlemi, satın alma siparişini işler ve hizmet konsolu penceresinde satın alma siparişinin içeriğini ve durumunu görüntüler. , <xref:System.ServiceModel.OperationBehaviorAttribute> İşlemi sıraya sahip bir işlemde Enlist olarak yapılandırır ve işlem geri döndüğünde işlemin tamamlandığını işaretler. , `PurchaseOrder` Hizmet tarafından işlenmesi gereken sipariş ayrıntılarını içerir.
 
 ```csharp
 // Service class that implements the service contract.
@@ -66,9 +66,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- Hizmet, MSMQ iletisini sıraya göndermek için özel bir istemci `OrderResponseClient` kullanır. İletiyi alan ve işleyen uygulama bir WCF uygulaması değil bir MSMQ uygulaması olduğundan, iki uygulama arasında örtük bir hizmet sözleşmesi yoktur. Bu senaryoda, Bu senaryodaki Svcutil. exe aracını kullanarak bir ara sunucu oluşturmuyoruz.
+ Hizmet, `OrderResponseClient` MSMQ iletisini sıraya göndermek için özel bir istemci kullanır. İletiyi alan ve işleyen uygulama bir WCF uygulaması değil bir MSMQ uygulaması olduğundan, iki uygulama arasında örtük bir hizmet sözleşmesi yoktur. Bu senaryoda, Bu senaryodaki Svcutil. exe aracını kullanarak bir ara sunucu oluşturmuyoruz.
 
- Özel proxy temelde, ileti göndermek için `msmqIntegrationBinding` bağlamasını kullanan tüm WCF uygulamaları için aynıdır. Diğer proxy 'lerin aksine, bir dizi hizmet işlemi içermez. Yalnızca bir ileti gönder işlemidir.
+ Özel proxy temelde, `msmqIntegrationBinding` ileti göndermek için bağlamayı kullanan tüm WCF uygulamaları için aynıdır. Diğer proxy 'lerin aksine, bir dizi hizmet işlemi içermez. Yalnızca bir ileti gönder işlemidir.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -100,7 +100,7 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
 }
 ```
 
- Hizmet kendi kendine barındırılır. MSMQ tümleştirme taşıyıcısı kullanılırken kullanılan sıranın önceden oluşturulması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte hizmet, sıranın varlığını denetlemek ve gerekirse oluşturmak için <xref:System.Messaging> kodu içerir. Sıra adı yapılandırma dosyasından okundu.
+ Hizmet kendi kendine barındırılır. MSMQ tümleştirme taşıyıcısı kullanılırken kullanılan sıranın önceden oluşturulması gerekir. Bu, el ile veya kod aracılığıyla yapılabilir. Bu örnekte hizmet, <xref:System.Messaging> sıranın varlığını denetlemek ve gerekirse oluşturmak için kod içerir. Sıra adı yapılandırma dosyasından okundu.
 
 ```csharp
 public static void Main()
@@ -165,7 +165,7 @@ public static void Main()
 </system.serviceModel>
 ```
 
- İstemci uygulaması, kuyruğa dayanıklı ve işlemsel bir ileti göndermek için <xref:System.Messaging> kullanır. İletinin gövdesinde satınalma siparişi bulunur.
+ İstemci uygulaması, <xref:System.Messaging> kuyruğa dayanıklı ve işlemsel bir ileti göndermek için kullanır. İletinin gövdesinde satınalma siparişi bulunur.
 
 ```csharp
 static void PlaceOrder()
@@ -222,7 +222,7 @@ static void PlaceOrder()
 </appSettings>
 ```
 
- İstemci uygulaması, hizmete gönderdiği sipariş isteği iletisinin `messageID` kaydeder ve hizmetten bir yanıt bekler. Bir yanıt kuyruğa ulaştığında, istemci onu iletinin `correlationID` özelliğini kullanarak gönderdiği sipariş iletisiyle ilişkilendirir ve bu, istemcinin hizmete ilk gönderdiği sipariş iletisinin `messageID` içerir.
+ İstemci uygulaması, `messageID` hizmetine gönderdiği sipariş isteği iletisini kaydeder ve hizmetten bir yanıt bekler. Bir yanıt kuyruğa ulaştığında, istemci, `correlationID` `messageID` istemcinin hizmete ilk olarak gönderdiği sipariş iletisini içeren ileti özelliğini kullanarak gönderdiği sipariş iletisiyle ilişkilendirir.
 
 ```csharp
 static void DisplayOrderStatus()
@@ -272,7 +272,7 @@ static void DisplayOrderStatus()
 
 ## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
 
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
 2. Önce hizmet çalıştırıldığında, sıranın mevcut olduğundan emin olmak için kontrol edilir. Sıra yoksa, hizmet bir tane oluşturur. Kuyruğu oluşturmak için önce hizmeti çalıştırabilir veya MSMQ kuyruğu Yöneticisi aracılığıyla bir tane oluşturabilirsiniz. Windows 2008 ' de bir sıra oluşturmak için aşağıdaki adımları izleyin.
 
@@ -284,11 +284,11 @@ static void DisplayOrderStatus()
 
     4. **İşlem** kutusunu işaretleyin.
 
-    5. Yeni kuyruğun adı olarak `ServiceModelSamplesTransacted` girin.
+    5. `ServiceModelSamplesTransacted`Yeni kuyruğun adı olarak girin.
 
-3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-4. Örneği tek bilgisayarlı bir yapılandırmada çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+4. Örneği tek bilgisayarlı bir yapılandırmada çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 ## <a name="run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırma
 
@@ -309,11 +309,11 @@ static void DisplayOrderStatus()
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF'de Kuyruğa Alma](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [WCF'de Kuyruğa Alma](../feature-details/queuing-in-wcf.md)
 - [Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

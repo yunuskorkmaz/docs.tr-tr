@@ -2,22 +2,22 @@
 title: "Nasıl yapılır: Keşif Proxy'si Uygulama"
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
-ms.openlocfilehash: dafd5e25f998f2dda3f736caeea51cd534ce8e5e
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: ca7ab2ee434aef7649d71cbfc33273f48020788f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351568"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597078"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>Nasıl yapılır: Keşif Proxy'si Uygulama
 
-Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Communication Foundation (WCF) içindeki bulma özelliği hakkında daha fazla bilgi için bkz. [WCF bulma 'Ya genel bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md). Bir bulma proxy 'si, <xref:System.ServiceModel.Discovery.DiscoveryProxy> soyut sınıfını genişleten bir sınıf oluşturularak uygulanabilir. Bu örnekte tanımlanmış ve kullanılan çeşitli destek sınıfları vardır. `OnResolveAsyncResult`, `OnFindAsyncResult`ve `AsyncResult`. Bu sınıflar <xref:System.IAsyncResult> arabirimini uygular. <xref:System.IAsyncResult> hakkında daha fazla bilgi için bkz. [System. IAsyncResult arabirimi](xref:System.IAsyncResult).
+Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Communication Foundation (WCF) içindeki bulma özelliği hakkında daha fazla bilgi için bkz. [WCF bulma 'Ya genel bakış](wcf-discovery-overview.md). Bir bulma proxy 'si, soyut sınıfı genişleten bir sınıf oluşturularak uygulanabilir <xref:System.ServiceModel.Discovery.DiscoveryProxy> . Bu örnekte tanımlanmış ve kullanılan çeşitli destek sınıfları vardır. `OnResolveAsyncResult`, `OnFindAsyncResult` ve `AsyncResult` . Bu sınıflar, <xref:System.IAsyncResult> arabirimini uygular. Daha fazla bilgi için <xref:System.IAsyncResult> bkz. [System. IAsyncResult arabirimi](xref:System.IAsyncResult).
 
  Keşif proxy 'si uygulamak, bu konunun üç ana bölümüne bölünür:
 
-- Bir veri deposu içeren bir sınıf tanımlayın ve soyut <xref:System.ServiceModel.Discovery.DiscoveryProxy> sınıfını genişletir.
+- Bir veri deposu içeren ve soyut sınıfı genişleten bir sınıf tanımlayın <xref:System.ServiceModel.Discovery.DiscoveryProxy> .
 
-- Yardımcı `AsyncResult` sınıfını uygulayın.
+- Yardımcı sınıfını uygulayın `AsyncResult` .
 
 - Bulma proxy 'sini barındırın.
 
@@ -25,7 +25,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
 
 1. Visual Studio 2012 ' i başlatın.
 
-2. Yeni bir konsol uygulaması projesi oluşturun. Projeyi `DiscoveryProxy` ve çözüm `DiscoveryProxyExample`adlandırın.
+2. Yeni bir konsol uygulama projesi oluşturun. Projeyi `DiscoveryProxy` ve çözümü adlandırın `DiscoveryProxyExample` .
 
 3. Aşağıdaki başvuruları projeye ekleyin
 
@@ -50,7 +50,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     using System.Xml;
     ```
 
-3. `DiscoveryProxyService` <xref:System.ServiceModel.Discovery.DiscoveryProxy>türetirsiniz. Aşağıdaki örnekte gösterildiği gibi `ServiceBehavior` özniteliğini sınıfa uygulayın.
+3. `DiscoveryProxyService`Öğesinden türet <xref:System.ServiceModel.Discovery.DiscoveryProxy> . `ServiceBehavior`Aşağıdaki örnekte gösterildiği gibi özniteliğini sınıfına uygulayın.
 
     ```csharp
     // Implement DiscoveryProxy by extending the DiscoveryProxy class and overriding the abstract methods
@@ -60,7 +60,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-4. `DiscoveryProxy` sınıfının içinde kayıtlı Hizmetleri tutacak bir sözlük tanımlayın.
+4. Sınıfının içinde `DiscoveryProxy` kayıtlı Hizmetleri tutacak bir sözlük tanımlayın.
 
     ```csharp
     // Repository to store EndpointDiscoveryMetadata.
@@ -78,7 +78,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
 
 ### <a name="to-define-the-methods-used-to-update-the-discovery-proxy-cache"></a>Bulma proxy önbelleğini güncelleştirmek için kullanılan yöntemleri tanımlamak için
 
-1. Önbelleğe hizmet eklemek için `AddOnlineservice` yöntemini uygulayın. Bu, proxy 'nin bir duyuru iletisi aldığı her seferinde çağrılır.
+1. `AddOnlineservice`Önbelleğe hizmet eklemek için yöntemini uygulayın. Bu, proxy 'nin bir duyuru iletisi aldığı her seferinde çağrılır.
 
     ```csharp
     void AddOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -92,7 +92,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-2. Önbellekteki Hizmetleri kaldırmak için kullanılan `RemoveOnlineService` yöntemini uygulayın.
+2. `RemoveOnlineService`Önbellekten Hizmetleri kaldırmak için kullanılan yöntemi uygulayın.
 
     ```csharp
     void RemoveOnlineService(EndpointDiscoveryMetadata endpointDiscoveryMetadata)
@@ -109,7 +109,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-3. Sözlükteki bir hizmetle bir hizmeti eşleştirmeye çalışacak `MatchFromOnlineService` yöntemlerini uygulayın.
+3. `MatchFromOnlineService`Sözlük içindeki bir hizmetle eşleşen bir hizmeti eşleştirmeye çalışacak yöntemleri uygulayın.
 
     ```csharp
     void MatchFromOnlineService(FindRequestContext findRequestContext)
@@ -145,7 +145,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-4. Kullanıcıya bulma proxy 'sinin yaptığı işlemin konsol metni çıkışını sağlayan `PrintDiscoveryMetadata` yöntemini uygulayın.
+4. `PrintDiscoveryMetadata`Kullanıcıya bulma proxy 'sinin yaptığı işlemin konsol metni çıkışını sağlayan yöntemini uygulayın.
 
     ```csharp
     void PrintDiscoveryMetadata(EndpointDiscoveryMetadata endpointDiscoveryMetadata, string verb)
@@ -226,7 +226,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
 
 ### <a name="to-define-the-methods-that-implement-the-discovery-proxy-functionality"></a>Bulma proxy işlevlerini uygulayan yöntemleri tanımlamak için
 
-1. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy 'si bir çevrimiçi duyuru iletisi aldığında bu yöntem çağrılır.
+1. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOnlineAnnouncement%2A?displayProperty=nameWithType> . Keşif proxy 'si bir çevrimiçi duyuru iletisi aldığında bu yöntem çağrılır.
 
     ```csharp
     // OnBeginOnlineAnnouncement method is called when a Hello message is received by the Proxy
@@ -237,7 +237,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-2. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Keşif proxy 'si bir duyuru iletisini işlemeyi bitirdiğinde, bu yöntem çağrılır.
+2. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOnlineAnnouncement%2A?displayProperty=nameWithType> . Keşif proxy 'si bir duyuru iletisini işlemeyi bitirdiğinde, bu yöntem çağrılır.
 
     ```csharp
     protected override void OnEndOnlineAnnouncement(IAsyncResult result)
@@ -246,7 +246,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-3. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, bulma proxy 'si ile birlikte çağrıldığında bir çevrimdışı duyuru iletisi alır.
+3. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginOfflineAnnouncement%2A?displayProperty=nameWithType> . Bu yöntem, bulma proxy 'si ile birlikte çağrıldığında bir çevrimdışı duyuru iletisi alır.
 
     ```csharp
     // OnBeginOfflineAnnouncement method is called when a Bye message is received by the Proxy
@@ -257,7 +257,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-4. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, bulma proxy 'si bir çevrimdışı duyuru iletisini işlemeyi bitirdiğinde çağrılır.
+4. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndOfflineAnnouncement%2A?displayProperty=nameWithType> . Bu yöntem, bulma proxy 'si bir çevrimdışı duyuru iletisini işlemeyi bitirdiğinde çağrılır.
 
     ```csharp
     protected override void OnEndOfflineAnnouncement(IAsyncResult result)
@@ -266,7 +266,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-5. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> yöntemi. Bulma proxy 'si bir bulma isteği aldığında bu yöntem çağrılır.
+5. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A?displayProperty=nameWithType> . Bulma proxy 'si bir bulma isteği aldığında bu yöntem çağrılır.
 
     ```csharp
     // OnBeginFind method is called when a Probe request message is received by the Proxy
@@ -285,7 +285,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-6. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> yöntemi. Bulma proxy 'si bir bul isteğini işlemeyi bitirdiğinde, bu yöntem çağrılır.
+6. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A?displayProperty=nameWithType> . Bulma proxy 'si bir bul isteğini işlemeyi bitirdiğinde, bu yöntem çağrılır.
 
     ```csharp
     protected override void OnEndFind(IAsyncResult result)
@@ -294,7 +294,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-7. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> yöntemi. Keşif proxy 'si bir çözüm iletisi aldığında bu yöntem çağrılır.
+7. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginResolve%2A?displayProperty=nameWithType> . Keşif proxy 'si bir çözüm iletisi aldığında bu yöntem çağrılır.
 
     ```csharp
     // OnBeginFind method is called when a Resolve request message is received by the Proxy
@@ -311,7 +311,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-8. Geçersiz kılma <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> yöntemi. Bu yöntem, bulma proxy 'sinin bir Resolve iletisini işlemeyi bitirdiğinde çağrılır.
+8. Yöntemini geçersiz kılın <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndResolve%2A?displayProperty=nameWithType> . Bu yöntem, bulma proxy 'sinin bir Resolve iletisini işlemeyi bitirdiğinde çağrılır.
 
     ```csharp
     protected override EndpointDiscoveryMetadata OnEndResolve(IAsyncResult result)
@@ -320,7 +320,7 @@ Bu konuda, bulma proxy 'nin nasıl uygulanacağı açıklanmaktadır. Windows Co
     }
     ```
 
-Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı sağlar. Örneğin <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> ve <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> yöntemleri bulma proxy 'si için Find mantığını uygular. Bulma proxy 'si bir araştırma iletisi aldığında, istemciye yanıt göndermek için bu yöntemler yürütülür. Find mantığını istediğiniz gibi değiştirebilirsiniz. Örneğin, bul işleminin bir parçası olarak algoritmalara veya uygulamaya özgü XML meta verileri ayrıştırmaya göre özel kapsam eşleştirmeyi birleştirebilirsiniz.
+Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı sağlar. Örneğin, <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnBeginFind%2A> ve <xref:System.ServiceModel.Discovery.DiscoveryProxy.OnEndFind%2A> yöntemleri bulma proxy 'si için Find mantığını uygular. Bulma proxy 'si bir araştırma iletisi aldığında, istemciye yanıt göndermek için bu yöntemler yürütülür. Find mantığını istediğiniz gibi değiştirebilirsiniz. Örneğin, bul işleminin bir parçası olarak algoritmalara veya uygulamaya özgü XML meta verileri ayrıştırmaya göre özel kapsam eşleştirmeyi birleştirebilirsiniz.
 
 ### <a name="to-implement-the-asyncresult-class"></a>AsyncResult sınıfını uygulamak için
 
@@ -495,7 +495,7 @@ Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı s
     using System.ServiceModel.Discovery;
     ```
 
-3. `Main()` yöntemi içinde aşağıdaki kodu ekleyin. Bu, `DiscoveryProxy` sınıfının bir örneğini oluşturur.
+3. Yöntemi içinde `Main()` aşağıdaki kodu ekleyin. Bu, sınıfının bir örneğini oluşturur `DiscoveryProxy` .
 
     ```csharp
     Uri probeEndpointAddress = new Uri("net.tcp://localhost:8001/Probe");
@@ -546,7 +546,7 @@ Onbegın.. /OnEnd.. Yöntemler, sonraki bulma işlemlerine yönelik mantığı s
     }
     ```
 
-Bulma proxy 'sini uygulamayı tamamladınız. [Nasıl yapılır: bulma proxy 'Sine kaydolduktan sonra bulunabilir bir hizmeti uygulama](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md).
+Bulma proxy 'sini uygulamayı tamamladınız. [Nasıl yapılır: bulma proxy 'Sine kaydolduktan sonra bulunabilir bir hizmeti uygulama](discoverable-service-that-registers-with-the-discovery-proxy.md).
 
 ## <a name="example"></a>Örnek
 
@@ -975,7 +975,7 @@ namespace Microsoft.Samples.Discovery
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [Nasıl yapılır: Keşif Proxy'sini Test Etme](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [WCF Keşif Genel Bakış](wcf-discovery-overview.md)
+- [Nasıl yapılır: Keşif Proxy'sine Kayıtlı Bir Bulunabilir Hizmet Ekleme](discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Nasıl yapılır: Hizmet Bulmak için Keşif Proxy'si Kullanan Bir İstemci Uygulaması Kullanma](client-app-discovery-proxy-to-find-a-service.md)
+- [Nasıl yapılır: Keşif Proxy'sini Test Etme](how-to-test-the-discovery-proxy.md)

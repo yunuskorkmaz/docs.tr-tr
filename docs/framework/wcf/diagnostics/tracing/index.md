@@ -2,43 +2,43 @@
 title: İzleme
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
-ms.openlocfilehash: 3520d2aca07f988c45d65d5d8113d05292a37638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 569a97dc21a434cd711ad4c735f828df588f3af7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664955"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578987"
 ---
 # <a name="tracing"></a>İzleme
-Windows Communication Foundation (WCF), hata izleme ve analiz için uygulama izleme ve tanılama verilerini sağlar. Bir hata ayıklayıcı yerine izleme, bir uygulamanın nasıl davrandığını veya neden hataları anlamak için kullanabilirsiniz. Hataları ve işleme bir uçtan uca deneyim sağlamak üzere bileşenlerinde ilişkilendirebilirsiniz.  
+Windows Communication Foundation (WCF), hata izleme ve analiz için uygulama izleme ve Tanılama verileri sağlar. Bir uygulamanın nasıl davrandığına veya neden hata hatalarıyla karşılaşma anlamak için bir hata ayıklayıcı yerine izlemeyi kullanabilirsiniz. Ayrıca, uçtan uca bir deneyim sağlamak için bileşenler arasındaki hataları ve işlemleri de ilişkilendirebilir.  
   
- WCF aşağıdaki tanılama izleme verilerini çıkarır:  
+ WCF, Tanılama izleme için aşağıdaki verileri verir:  
   
-- İzlemeler işlem çağrıları gibi uygulamaların tüm bileşenleri arasında işlem kilometre taşları için özel durumlar, uyarılar ve diğer önemli işlem yüküyle olayları kod."  
+- İşlem çağrıları, kod özel durumları, uyarılar ve diğer önemli işleme olayları gibi uygulamaların tüm bileşenleri genelinde işlem kilometre taşları için izlemeler. "  
   
-- Windows hata olaylarını izleme özelliği yanlış olduğunda.  
+- İzleme özelliğinin düzgün çalışmamasına zaman Windows hata olayları.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [İzlemeyi Yapılandırma](configuring-tracing.md)  
   
- Bu konuda, izlemeyi belirli gereksinimlerinize uyacak şekilde, farklı düzeylerde nasıl yapılandırabileceğiniz açıklanmaktadır.  
+ Bu konu başlığı altında, farklı düzeylerde izlemeyi özel gereksinimlerinize uyacak şekilde nasıl yapılandırabileceğiniz açıklanmaktadır.  
   
- [Uçtan Uca İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [Uçtan Uca İzleme](end-to-end-tracing.md)  
   
- Bu bölümde, hata ayıklama yardımcı olmak için etkinlik izleme ve uçtan uca bağıntı yayması nasıl kullanabileceğinizi açıklar.  
+ Bu bölümde, hata ayıklamaya yardımcı olmak üzere uçtan uca bağıntı için etkinlik Izlemeyi ve yaymayı nasıl kullanabileceğiniz açıklanmaktadır.  
   
- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)  
   
- Bu bölümde, nasıl izleme uygulamanızda hata ayıklamak için kullanabileceğiniz açıklanmaktadır.  
+ Bu bölümde, uygulamanızda hata ayıklamak için izlemeyi nasıl kullanabileceğiniz açıklanmaktadır.  
   
- [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](../../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)  
+ [İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları](security-concerns-and-useful-tips-for-tracing.md)  
   
- Bu konuda, WebHost kullanırken faydalı ipuçları yanı sıra açıklanmasını hassas bilgileri nasıl Koruyabileceğiniz açıklanmaktadır.  
+ Bu konu başlığı altında, gizli bilgilerin sunulanlarından nasıl koruyabileceğiniz ve WebHost kullanırken yararlı olan ipuçları açıklanmaktadır.  
   
- [İzleme Başvuruları](../../../../../docs/framework/wcf/diagnostics/tracing/traces-reference.md)  
+ [İzleme Başvuruları](traces-reference.md)  
   
- Bu konu, WCF tarafından oluşturulan tüm izlemeleri listeler.  
+ Bu konuda, WCF tarafından oluşturulan tüm izlemeler listelenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 8937ef8b4007253b06444e59b292395084e4df2f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607925"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596364"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Nasıl yapılır: Windows hizmetlerini yükleme ve kaldırma
 
@@ -26,7 +26,7 @@ ms.locfileid: "81607925"
 > [!WARNING]
 > Bilgisayarınızdan bir hizmeti kaldırmak istiyorsanız, bu makaledeki adımları izleyin. Bunun yerine, hizmeti hangi programın veya yazılım paketinin yüklendiğini öğrenin ve ardından bu programı kaldırmak için ayarlar ' da **uygulamalar** ' ı seçin. Birçok hizmetin Windows 'un ayrılmaz parçaları olduğunu unutmayın; Bunları kaldırırsanız, sistem kararsızlığına neden olabilirsiniz.
 
-Bu makaledeki adımları kullanmak için, önce Windows hizmetinize bir hizmet Yükleyicisi eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: Windows hizmet uygulaması oluşturma](../windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
+Bu makaledeki adımları kullanmak için, önce Windows hizmetinize bir hizmet Yükleyicisi eklemeniz gerekir. Daha fazla bilgi için bkz. [Izlenecek yol: Windows hizmet uygulaması oluşturma](walkthrough-creating-a-windows-service-application-in-the-component-designer.md).
 
 F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme ortamından çalıştıramazsınız. Projeyi çalıştırmadan önce, hizmeti projeye yüklemelisiniz.
 
@@ -35,7 +35,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
 
 ### <a name="install-your-service-manually-using-installutilexe-utility"></a>InstallUtil. exe yardımcı programını kullanarak hizmetinizi el ile yükleme
 
-1. **Başlat** menüsünde, **Visual Studio \< *Sürüm* > ** dizinini ve sonra **vs \< *sürümü*>için geliştirici komut istemi**öğesini seçin.
+1. **Başlat** menüsünde **Visual Studio \<*version*> ** dizinini seçin ve ardından ** \<*version*> vs için geliştirici komut istemi **seçin.
 
      Visual Studio için Geliştirici Komut İstemi görüntülenir.
 
@@ -47,15 +47,15 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
     installutil <yourproject>.exe
     ```
 
-     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil. exe* dosyası sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64\\ ]<framework_version\>*.NET Framework ile yüklenir.
+     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil. exe* dosyası sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\<framework_version \> *.NET Framework ile yüklenir.
 
-     Örneğin:
+     Örnek:
      - .NET Framework 4 veya 4,5 ' nin 32 bit sürümü ve sonrasında, Windows yükleme dizininiz *C:\Windows*ise, varsayılan yol *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*' dir.
      - .NET Framework 4 veya 4,5 ve sonraki sürümlerin 64 bit sürümü için varsayılan yol *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*' dir.
 
 ### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>InstallUtil. exe yardımcı programını kullanarak hizmetinizi el ile kaldırın
 
-1. **Başlat** menüsünde, **Visual Studio \< *Sürüm* > ** dizinini ve sonra **vs \< *sürümü*>için geliştirici komut istemi**öğesini seçin.
+1. **Başlat** menüsünde **Visual Studio \<*version*> ** dizinini seçin ve ardından ** \<*version*> vs için geliştirici komut istemi **seçin.
 
      Visual Studio için Geliştirici Komut İstemi görüntülenir.
 
@@ -97,7 +97,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows hizmet uygulamalarına giriş](../windows-services/introduction-to-windows-service-applications.md)
-- [Nasıl yapılır: Windows Hizmetleri oluşturma](../windows-services/how-to-create-windows-services.md)
-- [Nasıl yapılır: hizmet uygulamanıza yükleyiciler ekleme](../windows-services/how-to-add-installers-to-your-service-application.md)
+- [Windows hizmet uygulamalarına giriş](introduction-to-windows-service-applications.md)
+- [Nasıl yapılır: Windows Hizmetleri oluşturma](how-to-create-windows-services.md)
+- [Nasıl yapılır: hizmet uygulamanıza yükleyiciler ekleme](how-to-add-installers-to-your-service-application.md)
 - [Installutil.exe (Yükleme aracı)](../tools/installutil-exe-installer-tool.md)

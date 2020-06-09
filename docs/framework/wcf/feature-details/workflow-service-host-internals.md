@@ -2,59 +2,59 @@
 title: İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
 ms.date: 03/30/2017
 ms.assetid: af44596f-bf6a-4149-9f04-08d8e8f45250
-ms.openlocfilehash: b95a59b0e1715b3cc18ccfea44d6c4ccd04ca5ad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7b47293211ee8143b1ce713c64ff1d5b22161b45
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594887"
 ---
 # <a name="workflow-service-host-internals"></a>İş Akışı Hizmeti Ana Bilgisayar Dahili Bileşenleri
-<xref:System.ServiceModel.WorkflowServiceHost>iş akışı hizmetleri için bir ana bilgisayar sağlar. Gelen iletileri dinlemekten ve bunları uygun iş akışı hizmeti örneğine yönlendirmekten sorumludur, boşta kalan iş akışlarının boşaltılmasını ve kalıcı hale getirinve daha fazlasını denetler. Bu konu, WorkflowServiceHost'un gelen iletileri nasıl işlediğini açıklar.  
+<xref:System.ServiceModel.WorkflowServiceHost>iş akışı hizmetleri için bir konak sağlar. Gelen iletileri dinlemeden ve bunları uygun iş akışı hizmeti örneğine yönlendirmekten sorumludur, boşta iş akışlarının kaldırılmasını ve kalıcı olarak kaldırılmasını ve daha fazlasını denetler. Bu konuda, WorkflowServiceHost 'ın gelen iletileri nasıl işlediği açıklanmaktadır.  
   
-## <a name="workflowservicehost-overview"></a>İş AkışıServiceHost Genel Bakış  
+## <a name="workflowservicehost-overview"></a>WorkflowServiceHost genel bakış  
 
-Sınıf, <xref:System.ServiceModel.WorkflowServiceHost> iş akışı hizmetlerini barındırmak için kullanılır. Gelen iletileri dinler ve bunları uygun servis örneğine yönlendirir, yeni örnekler oluşturur veya gerektiğinde dayanıklı depolamadan varolan örnekleri yükler. Aşağıdaki diyagram, nasıl <xref:System.ServiceModel.WorkflowServiceHost> çalıştığını yüksek düzeyde göstermektedir:
+<xref:System.ServiceModel.WorkflowServiceHost>Sınıfı, iş akışı hizmetlerini barındırmak için kullanılır. Gelen iletileri dinler ve bunları uygun hizmet örneğine yönlendirir, yeni örnekler oluşturuyor ya da gerektiğinde dayanıklı depolama alanından mevcut örnekleri yüklüyor. Aşağıdaki diyagramda, üst düzey nasıl çalıştığı aşağıda gösterilmektedir <xref:System.ServiceModel.WorkflowServiceHost> :
   
- ![İş Akışı Hizmeti Ana Bilgisayarı'na genel bir bakış gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
+ ![Iş akışı hizmeti ana bilgisayarına genel bakış gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-high-level-overview.gif)  
   
- Bu diyagram, <xref:System.ServiceModel.WorkflowServiceHost> .xamlx dosyalarından iş akışı hizmeti tanımlarını yükler ve yapılandırma dosyalarından yapılandırma bilgilerini yükler gösterir. Ayrıca izleme profilinden izleme yapılandırmasını yükler. <xref:System.ServiceModel.WorkflowServiceHost>denetim işlemlerini iş akışı örneklerine göndermenize olanak tanıyan bir iş akışı denetimi bitiş noktasını ortaya çıkarır.  Daha fazla bilgi için Bkz. [İş Akışı Denetimi Bitiş Noktası örneği.](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
+ Bu diyagramda, <xref:System.ServiceModel.WorkflowServiceHost> . xamlx dosyalarından iş akışı hizmeti tanımlarının yüklendiği ve yapılandırma bilgileri bir yapılandırma dosyasından yüklendiği gösterilmektedir. İzleme profilinden izleme yapılandırmasını da yükler. <xref:System.ServiceModel.WorkflowServiceHost>iş akışı örneklerine denetim işlemleri göndermenizi sağlayan bir iş akışı denetim uç noktası sunar.  Daha fazla bilgi için bkz. [Workflow Control Endpoint Sample](workflow-control-endpoint.md).  
   
- <xref:System.ServiceModel.WorkflowServiceHost>ayrıca gelen uygulama iletilerini dinleyen uygulama uç noktalarını da ortaya çıkarır. Gelen bir ileti geldiğinde, ilgili iş akışı hizmeti örneğine gönderilir (şu anda yüklenmişse). Gerekirse yeni bir iş akışı örneği oluşturulur. Veya varolan bir örnek kalıcı hale geçmişse, kalıcılık deposundan yüklenir.  
+ <xref:System.ServiceModel.WorkflowServiceHost>Ayrıca, gelen uygulama iletilerini dinleyen uygulama uç noktalarını da kullanıma sunar. Gelen bir ileti geldiğinde ilgili iş akışı hizmet örneğine (o anda yüklenmişse) gönderilir. Gerekirse, yeni bir iş akışı örneği oluşturulur. Ya da var olan bir örnek kalıcıda bulunursa kalıcılık deposundan yüklenir.  
   
-## <a name="workflowservicehost-details"></a>İş AkışıServiceHost Detayları  
- Aşağıdaki diyagram, <xref:System.ServiceModel.WorkflowServiceHost> iletileri biraz daha ayrıntılı olarak nasıl işleyeceğini gösterir:  
+## <a name="workflowservicehost-details"></a>WorkflowServiceHost ayrıntıları  
+ Aşağıdaki diyagramda, <xref:System.ServiceModel.WorkflowServiceHost> iletilerin bir bit daha detaylı şekilde nasıl işlediği gösterilmektedir:  
   
- ![İş Akışı Hizmeti Ana Bilgisayar ileti akışını gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
+ ![Iş akışı hizmeti ana bilgisayar ileti akışını gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-message-flow.gif)  
   
- Bu diyagram üç farklı uç nokta, bir uygulama bitiş noktası, bir iş akışı denetimi bitiş noktası ve bir iş akışı barındırma bitiş noktasını gösterir. Uygulama bitiş noktası, belirli bir iş akışı örneği için bağlı iletileri alır. İş akışı denetimi uç noktası denetim işlemleri için dinler. Uç noktayı barındıran iş akışı, hizmet <xref:System.ServiceModel.WorkflowServiceHost> dışı iş akışlarını yüklemeye ve yürütmeye neden olan iletileri dinler. Diyagramda gösterildiği gibi tüm iletiler WCF çalışma süresi boyunca işlenir.  İş akışı hizmeti örnek azaltma <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> özelliği kullanılarak elde edilir. Bu özellik eşzamanlı iş akışı hizmeti örneklerinin sayısını sınırlandıracaktır. Bu gaz yeni iş akışı hizmeti örnekleri için ek istekler aşıldığında veya kalıcı iş akışı örneklerini etkinleştirme istekleri sıraya alınır. Sıralanan istekler, yeni bir örnek veya çalışan, kalıcı bir örnek için istek olup olmadıklarına bakılmaksızın FIFO sırasına göre işlenir. İşlenmemiş özel durumların nasıl ele alınılacağını ve boşta kalan iş akışı hizmetlerinin nasıl boşaltılacağını ve kalıcı olduğunu belirleyen ana bilgisayar ilkesi bilgileri yüklenir. Bu konular hakkında daha fazla bilgi [için bkz: İş Akışı İş Akışı İşlenmemiş Özel Durum Davranışını İş Akışı Hizmeti Host ile Yapılandırın](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md) ve [Nasıl Yapılır: Boşta Kalan Davranışı WorkflowServiceHost ile yapılandırma.](../../../../docs/framework/wcf/feature-details/how-to-configure-idle-behavior-with-workflowservicehost.md) İş akışı örnekleri ana bilgisayar ilkelerine göre kalıcıdır ve gerektiğinde yeniden yüklenir. İş akışı kalıcılığı hakkında daha fazla bilgi için [bkz: Nasıl: İş AkışıServiceHost ile Kalıcılığı Yapılandırma,](../../../../docs/framework/wcf/feature-details/how-to-configure-persistence-with-workflowservicehost.md) [Uzun süren Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)ve İş Akışı [Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md).  
+ Bu diyagramda üç farklı uç nokta, bir uygulama uç noktası, iş akışı denetim uç noktası ve bir iş akışı barındırma uç noktası gösterilmektedir. Uygulama uç noktası, belirli bir iş akışı örneği için bağlanan iletileri alır. İş akışı denetim uç noktası denetim işlemlerini dinler. İş akışı barındırma uç noktası, <xref:System.ServiceModel.WorkflowServiceHost> hizmet dışı iş akışlarını yüklemeye ve yürütmeye neden olan iletileri dinler. Diyagramda gösterildiği gibi, tüm iletiler WCF çalışma zamanı aracılığıyla işlenir.  İş akışı hizmeti örneği azaltma özelliği kullanılarak elde edilir <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> . Bu özellik, eşzamanlı iş akışı hizmeti örneklerinin sayısını sınırlandırır. Bu kısıtlama, yeni iş akışı hizmet örnekleri veya kalıcı iş akışı örneklerinin etkinleştirilme istekleri için ek istek aşıldığında sıraya alınır. Sıraya alınan istekler, yeni bir örnek veya çalışan, kalıcı bir örnek için istek olup olmadıklarından bağımsız olarak, FıFO sırasında işlenir. İşlenmemiş özel durumların nasıl ele alınacağını ve boşta iş akışı hizmetlerinin nasıl kaldırılacağına ve kalıcı olduğunu belirleyen konak ilkesi bilgileri yüklenir. Bu konular hakkında daha fazla bilgi için bkz. [nasıl yapılır: Iş akışı Işlenmemiş özel durum davranışını WorkflowServiceHost ile](config-workflow-unhandled-exception-workflowservicehost.md) yapılandırma ve [nasıl yapılır: WorkflowServiceHost Ile boşta davranışı yapılandırma](how-to-configure-idle-behavior-with-workflowservicehost.md). İş akışı örnekleri, ana bilgisayar ilkelerine göre kalıcı hale getirilir ve gerektiğinde yeniden yüklenir. İş akışı kalıcılığı hakkında daha fazla bilgi için bkz. [nasıl yapılır: WorkflowServiceHost Ile kalıcılığı yapılandırma](how-to-configure-persistence-with-workflowservicehost.md), [uzun süre çalışan bir iş akışı hizmeti oluşturma](creating-a-long-running-workflow-service.md)ve [iş akışı kalıcılığı](../../windows-workflow-foundation/workflow-persistence.md).  
   
- Aşağıdaki resimde WorkflowServiceHost.Open çağrıldığında akış gösterir:  
+ Aşağıdaki çizimde, WorkflowServiceHost. Open çağrıldığında akış gösterilmektedir:  
   
- ![WorkflowServiceHost.Open çağrıldığında akışı gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
+ ![WorkflowServiceHost. Open çağrıldığında akışı gösteren diyagram.](./media/workflow-service-host-internals/workflow-service-host-open.gif)  
   
- İş akışı XAML'den yüklenir ve etkinlik ağacı oluşturulur. <xref:System.ServiceModel.WorkflowServiceHost>etkinlik ağacını yürüer ve hizmet açıklamasını oluşturur. Yapılandırma ana bilgisayara uygulanır. Son olarak ev sahibi gelen iletileri dinlemeye başlar.  
+ İş akışı XAML 'den yüklenir ve etkinlik ağacı oluşturulur. <xref:System.ServiceModel.WorkflowServiceHost>Etkinlik ağacını açıklar ve hizmet açıklamasını oluşturur. Yapılandırma konağa uygulandı. Son olarak, ana bilgisayar gelen iletileri dinlemeye başlar.  
   
- Aşağıdaki resimde, CanCreateInstance olarak ayarlanmış bir Alma etkinliği için bağlı bir ileti aldığında ne <xref:System.ServiceModel.WorkflowServiceHost> yaptığı `true`gösterilmektedir:  
+ Aşağıdaki çizimde, <xref:System.ServiceModel.WorkflowServiceHost> CanCreateInstance 'ya ayarlanmış bir alma etkinliği için bir ileti aldığında ne olduğu gösterilmektedir `true` :  
   
- ![WFS Ana Bilgisayar tarafından bir ileti aldığında ve CanCreateInstance doğru olduğunda kullanılan karar ağacı.](./media/workflow-service-host-internals/workflow-service-host-receive-message-cancreateinstance.gif)  
+ ![WFS ana bilgisayarı tarafından bir ileti alındığında kullanılan karar ağacı ve CanCreateInstance doğru.](./media/workflow-service-host-internals/workflow-service-host-receive-message-cancreateinstance.gif)  
   
- İleti gelir ve WCF kanal yığını tarafından işlenir. Throttles denetlenir ve korelasyon sorguları yürütülür. İleti varolan bir örneğe bağlıysa ileti teslim edilir. Yeni bir örnek oluşturulması gerekiyorsa, Al etkinliğinin CanCreateInstance özelliği denetlenir. Doğru olarak ayarlanırsa, yeni bir örnek oluşturulur ve ileti teslim edilir.  
+ İleti ulaşır ve WCF kanal yığını tarafından işlenir. Kısıtlar ve bağıntı sorguları yürütülür. İleti, mevcut bir örnek için bağlıysa ileti teslim edilir. Yeni bir örneğin oluşturulması gerekiyorsa, alma etkinliğinin CanCreateInstance özelliği denetlenir. True olarak ayarlanırsa, yeni bir örnek oluşturulur ve ileti teslim edilir.  
   
- Aşağıdaki resimde, CanCreateInstance'ı yanlış olarak ayarlanmış bir Alma etkinliği için bağlı bir ileti aldığında ne <xref:System.ServiceModel.WorkflowServiceHost> yaptığı gösterilmektedir.  
+ Aşağıdaki çizimde, <xref:System.ServiceModel.WorkflowServiceHost> CanCreateInstance değeri false olarak ayarlanmış bir alma etkinliği için bir ileti aldığında ne olduğu gösterilmektedir.  
   
- ![WFS Ana Bilgisayar tarafından bir ileti aldığında ve CanCreateInstance yanlış olduğunda kullanılan karar ağacı.](./media/workflow-service-host-internals/workflow-service-host-receive-message.gif)  
+ ![WFS ana bilgisayarı tarafından bir ileti alındığında kullanılan karar ağacı ve CanCreateInstance yanlış.](./media/workflow-service-host-internals/workflow-service-host-receive-message.gif)  
   
- İleti gelir ve WCF kanal yığını tarafından işlenir. Throttles denetlenir ve korelasyon sorguları yürütülür. İleti varolan bir örneğe bağlanır (CanCreateInstance yanlış olduğundan) böylece örnek kalıcılık deposundan yüklenir, yer imi devam ettirilir ve iş akışı yürütülür.  
+ İleti ulaşır ve WCF kanal yığını tarafından işlenir. Kısıtlar ve bağıntı sorguları yürütülür. İleti, var olan bir örneğe bağlanır (CanCreateInstance yanlış olduğu için) Örneğin kalıcılık deposundan yüklenmesi durumunda, yer işareti sürdürülür ve iş akışı yürütülür.  
   
 > [!WARNING]
-> SQL Server yalnızca AdPipe protokolünde dinleyecek şekilde yapılandırılırsa, İş Akışı Hizmeti Ana Bilgisayarı açılmaz.  
+> SQL Server, yalnızca NamedPipe protokolünü dinlemek üzere yapılandırılmışsa, iş akışı hizmeti ana bilgisayarı açılmaz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [İş Akışı Hizmetlerini Barındırma](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)
-- [İş Akışı Denetim Uç Noktası](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)
-- [Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)
-- [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
-- [İş Akışı Kalıcılığı](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
+- [İş Akışı Hizmetleri](workflow-services.md)
+- [İş Akışı Hizmetlerini Barındırma](hosting-workflow-services.md)
+- [İş Akışı Denetim Uç Noktası](workflow-control-endpoint.md)
+- [Nasıl yapılır: WorkflowServiceHost ile İş Akışı Tarafından İşlenmeyen Özel Durum Davranışını Yapılandırma](config-workflow-unhandled-exception-workflowservicehost.md)
+- [Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma](creating-a-long-running-workflow-service.md)
+- [İş Akışı Kalıcılığı](../../windows-workflow-foundation/workflow-persistence.md)

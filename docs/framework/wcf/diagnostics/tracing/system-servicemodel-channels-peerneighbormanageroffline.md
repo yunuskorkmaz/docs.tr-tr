@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.PeerNeighborManagerOffline
 ms.date: 03/30/2017
 ms.assetid: 15b19e0f-cee5-49ff-8498-f404c39b712f
-ms.openlocfilehash: e41a24101c8224cdaa69c842b4f2720afb3bfb90
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea461dba433cf6607b972696220c88bd27e5664b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950365"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596057"
 ---
 # <a name="systemservicemodelchannelspeerneighbormanageroffline"></a>System.ServiceModel.Channels.PeerNeighborManagerOffline
-Çevrimdışı Komşuları bağlı olmadığından şu anda belirten artık PeerNode olur.  
+Şu anda bağlı olan komşular olduğunu belirten PeerNode çevrimdışı.  
   
 ## <a name="description"></a>Açıklama  
- Bu izleme, bir komşu kaldırıldıktan sonra yerel düğümün komşu listeden oluşur.  
+ Bu izleme, yerel düğümün komşu listesinden bir komşunun kaldırılması durumunda oluşur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

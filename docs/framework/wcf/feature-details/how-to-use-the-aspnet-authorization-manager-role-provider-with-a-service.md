@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol Sağlayıcısını Bir Hizmetle Kullanma'
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: 009b96defdf27591ddb98afaa684745b5fcbe0d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c1076671512b33f115950cad684fba0b514abe9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184806"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595342"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol Sağlayıcısını Bir Hizmetle Kullanma
-ASP.NET bir Web hizmeti barındırdığında, hizmete yetki sağlamak için Yetkilendirme Yöneticisi'ni uygulamaya entegre edebilirsiniz. Yetkilendirme Yöneticisi, bir uygulama geliştiricisinin görevleri oluşturmak için birlikte gruplandırılabilen tek tek işlemleri tanımlamasını sağlar. Yönetici daha sonra rolleri belirli görevleri veya tek tek işlemleri gerçekleştirmek için yetkilendirebilir. Yetkilendirme Yöneticisi rolleri, görevleri, işlemleri ve kullanıcıları yönetmek için Microsoft Yönetim Konsolu (MMC) snap-in olarak bir yönetim aracı sağlar. Yöneticiler, Bir XML dosyasında, Etkin Dizin'de veya Etkin Dizin Uygulama Modu (ADAM) deposunda bir Yetkilendirme Yöneticisi ilkesi deposunu yapılandırır.  
+ASP.NET bir Web hizmeti barındırdığınızda, hizmete yetkilendirme sağlamak için Yetkilendirme Yöneticisini uygulamayla tümleştirebilirsiniz. Yetkilendirme Yöneticisi, bir uygulama geliştiricisinin, görevleri biçimlendirmek için birlikte gruplandırılabilen bireysel işlemleri tanımlamasına olanak sağlar. Yönetici daha sonra belirli görevleri veya bağımsız işlemleri gerçekleştirmek için rolleri yetkilendirebilirler. Yetkilendirme Yöneticisi, rolleri, görevleri, işlemleri ve kullanıcıları yönetmek için bir Microsoft Yönetim Konsolu (MMC) ek bileşeni olarak bir yönetim aracı sağlar. Yöneticiler bir XML dosyasında, Active Directory veya Active Directory uygulama modu (ADAM) deposunda bir Yetkilendirme Yöneticisi ilke deposu yapılandırır.  
   
- Yetkilendirme Yöneticisi, Web hizmetini barındıran ASP.NET uygulama için Yetkilendirme Yöneticisi ASP.NET rol sağlayıcısını yapılandırarak uygulamaya entegre edilir. Diğer ASP.NET rol sağlayıcıları gibi, Yetkilendirme Yöneticisi ASP.NET rol `providers` sağlayıcısı da <> öğesi kullanılarak yapılandırılır.  
+ Yetkilendirme Yöneticisi, Web hizmetini barındıran ASP.NET uygulaması için Authorization Manager ASP.NET rol sağlayıcısı yapılandırılarak uygulamayla tümleştirilir. Diğer ASP.NET rol sağlayıcıları gibi, Yetkilendirme Yöneticisi ASP.NET rol sağlayıcısı da <> öğesi kullanılarak yapılandırılır `providers` .  
   
- Aşağıdaki kod örneği, Yetkilendirme Yöneticisi'ni uygulamaya entegre eden bir Web hizmeti için yapılandırma dosyasının bir bölümüdür.  
+ Aşağıdaki kod örneği, Yetkilendirme Yöneticisi 'Ni uygulamayla tümleştiren bir Web hizmeti yapılandırma dosyasının bir parçasıdır.  
   
 ```xml  
 <system.web>  
@@ -29,8 +29,8 @@ ASP.NET bir Web hizmeti barındırdığında, hizmete yetki sağlamak için Yetk
 </system.web>  
 ```  
   
- Bir ASP.NET rol sağlayıcısını WCF uygulamasıyla tümleştirme hakkında daha fazla bilgi için bkz [ASP.NET.](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md) Yetkilendirme Yöneticisi'ni ASP.NET kullanma hakkında daha fazla bilgi için bkz [ASP.NET.](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10))  
+ Bir ASP.NET rol sağlayıcısını bir WCF uygulamasıyla tümleştirme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir hizmetle ASP.NET rol sağlayıcısını kullanma](how-to-use-the-aspnet-role-provider-with-a-service.md). ASP.NET ile Yetkilendirme Yöneticisi 'ni kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Yetkilendirme Yöneticisi 'ni (AzMan) ASP.NET 2,0 ile](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10))kullanma.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma](how-to-use-the-aspnet-role-provider-with-a-service.md)

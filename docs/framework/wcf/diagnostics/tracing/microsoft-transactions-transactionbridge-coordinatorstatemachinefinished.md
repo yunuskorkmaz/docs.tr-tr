@@ -2,21 +2,21 @@
 title: Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
 ms.date: 03/30/2017
 ms.assetid: 16cb428d-d886-4789-a961-6fded4b0dbba
-ms.openlocfilehash: bffaed4976d82202eaea9ce50f6d389548fdabfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b9a3703e49c3932f62fcfb6994c9028b074bbe8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998016"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594419"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
-Bir düzenleyici kaydı için durum makinesinin tamamlandı durumuna girdi.  
+Bir düzenleyici kaydı için durum makinesi tamamlandı durumuna girdi.  
   
 ## <a name="description"></a>Açıklama  
- Üstün düzenleyici listelemesi 2pc işlemeyi tamamladığı yerel hareket yöneticisi inanmaktadır yaparken izlenen. Liste için sonuç, kabul edilen veya iptal edildi veya unutulan olabilir. Yerel hareket yöneticisi hazırlama sırasında salt okunur oyları, ayrıca izleneceğini.  
+ Yerel Işlem yöneticisi bir üstün düzenleyici kaydı olduğunu düşündüğü zaman, 2PC işlemini tamamladı. Kayıt için sonuç kaydedilmiş veya durdurulmuş ya da unutulmuş olabilir. Ayrıca, yerel Işlem yöneticisinin hazırlama sırasında salt okunur olarak oylaması halinde de izlenebilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

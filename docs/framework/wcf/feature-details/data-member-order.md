@@ -7,26 +7,26 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 2a5d7430953bdc31644e92b9207cd2865209cce5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 717d7014f4c4a56249ead0c839cf05f4f83a6f5f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185194"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593470"
 ---
 # <a name="data-member-order"></a>Veri Üye Sırası
-Bazı uygulamalarda, çeşitli veri üyelerinden gelen verilerin gönderilme veya alınmasının beklendiği (serileştirilmiş XML'de verilerin göründüğü sıra gibi) sırasını bilmek yararlıdır. Bazen bu sırayı değiştirmek gerekebilir. Bu konu, sıralama kurallarını açıklar.  
+Bazı uygulamalarda, çeşitli veri üyelerinden gelen verilerin gönderilme sırasını veya alınması beklenmekte olan (örneğin, serileştirilmiş XML 'de verilerin bulunduğu sıra) veya alınması beklenen sırayı bilmek yararlı olur. Bazen bu sıranın değiştirilmesi gerekebilir. Bu konuda sıralama kuralları açıklanmaktadır.  
   
-## <a name="basic-rules"></a>Temel Kurallar  
- Veri sıralama için temel kurallar şunlardır:  
+## <a name="basic-rules"></a>Temel kurallar  
+ Veri sıralamasına yönelik temel kurallar şunlardır:  
   
-- Bir veri sözleşmesi türü devralma hiyerarşisinin bir parçasıysa, temel türlerinin veri üyeleri her zaman sırada ilk sıradadır.  
+- Bir veri anlaşması türü, devralma hiyerarşisinin bir parçasıysa, temel türlerinin veri üyeleri her zaman sırayla ilk kez olur.  
   
-- Sırada, alfabetik sırada öznitelik kümesi özelliği <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> <xref:System.Runtime.Serialization.DataMemberAttribute> olmayan geçerli tür veri üyeleri yer alıyor.  
+- Sırasıyla bir sonraki, öznitelik kümesi özelliğine sahip olmayan geçerli türün veri üyeleridir <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> ( <xref:System.Runtime.Serialization.DataMemberAttribute> alfabetik sırada).  
   
-- Sonraki öznitelik kümesi özelliği <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> <xref:System.Runtime.Serialization.DataMemberAttribute> olan tüm veri üyeleri vardır. Bunlar, belirli `Order` bir değerin `Order` birden fazla üyesi varsa, önce özelliğin değerine, sonra da alfabetik olarak sıralanır. Sipariş değerleri atlanabilir.  
+- Next, <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> öznitelik kümesi özelliğine sahip herhangi bir veri üyesidir <xref:System.Runtime.Serialization.DataMemberAttribute> . Bunlar, ilk olarak özelliğin değerine göre sıralanır `Order` ve belirli bir değerin birden fazla üyesi varsa alfabetik olarak `Order` . Sıra değerleri atlanabilir.  
   
- Alfabetik sıra <xref:System.String.CompareOrdinal%2A> yöntemi çağırarak kurulur.  
+ Alfabetik sıralama yöntemi çağırarak belirlenir <xref:System.String.CompareOrdinal%2A> .  
   
 ## <a name="examples"></a>Örnekler  
  Aşağıdaki kodu göz önünde bulundurun.  
@@ -34,7 +34,7 @@ Bazı uygulamalarda, çeşitli veri üyelerinden gelen verilerin gönderilme vey
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]
  [!code-vb[C_DataContractNames#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#4)]  
   
- Üretilen XML aşağıdakine benzer.  
+ Oluşturulan XML aşağıdaki gibidir.  
   
 ```xml  
 <DerivedType>  
@@ -65,5 +65,5 @@ Bazı uygulamalarda, çeşitli veri üyelerinden gelen verilerin gönderilme vey
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [Veri Sözleşmesi Eşitliği](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Veri Anlaşmalarını Kullanma](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmesi Eşitliği](data-contract-equivalence.md)
+- [Veri Anlaşmalarını Kullanma](using-data-contracts.md)

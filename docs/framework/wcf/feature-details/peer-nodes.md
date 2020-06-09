@@ -2,20 +2,20 @@
 title: Eş Düğümleri
 ms.date: 03/30/2017
 ms.assetid: 0732b314-6006-4ec6-999d-ec9476c9e5bb
-ms.openlocfilehash: 821de4a4fb2b9ed95213589fc1852f16747286fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 998629b889f43e77e181fc4c0bc07fc6be005fae
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046249"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596818"
 ---
 # <a name="peer-nodes"></a>Eş Düğümleri
-Eş kanal kafes tek bir uç nokta PeerNode var. Bir uygulamanın farklı kafesleri içinde yer alan birden çok eş düğümleri olabilir. Örneğin, bir eşler arası sohbet uygulaması iki ayrı kafesleri parçası olabilir: Lise arkadaşlarınızla; sohbet için bir ağ ve diğer iş arkadaşlarınızla sohbet için.  
+PeerNode, eş kanal kafesinde tek bir uç noktasıdır. Bir uygulamanın farklı kafeslere katılan birden çok eş düğümü olabilir. Örneğin, eşler arası sohbet uygulaması iki ayrı kafesin parçası olabilir: yüksek okullar ile sohbet için bir ağ; iş arkadaşlarınızla sohbet etmek için de başka bir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.PeerNode>  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Eşdüzey Ağ Yapısı](../../../../docs/framework/wcf/feature-details/peer-meshes.md)
-- [Eş Kanal Kavramları](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
+- [Eşdüzey Ağ Yapısı](peer-meshes.md)
+- [Eş Kanal Kavramları](peer-channel-concepts.md)

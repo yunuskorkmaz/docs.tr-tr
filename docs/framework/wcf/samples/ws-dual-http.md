@@ -2,16 +2,16 @@
 title: WS İkili Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 1f1592598c0ed148f06c0a99ccdb8a8347175d8f
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 4acf2491c242099f6c8b6c9c01dc18e9c99c9934
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716782"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589740"
 ---
 # <a name="ws-dual-http"></a>WS İkili Http
 
-Çift http örneği, `WSDualHttpBinding` bağlamanın nasıl yapılandırılacağını gösterir. Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir istemci konsol programından (. exe) ve hizmet kitaplığından (. dll) oluşur. Hizmet bir çift yönlü sözleşme uygular. Sözleşme, matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculatorDuplex` arabirimi tarafından tanımlanır. Bu örnekte, `ICalculatorDuplex` arabirimi istemcinin, oturum üzerinde çalışan bir sonucu hesaplamak için matematik işlemleri gerçekleştirmesini sağlar. Bağımsız olarak, hizmet `ICalculatorDuplexCallback` arabirimindeki sonuçları döndürür. Bir çift yönlü sözleşme, istemci ve hizmet arasında gönderilen ileti kümesiyle ilişkilendirilmesi için bir bağlam kurulması gerektiğinden oturum gerektirir. `WSDualHttpBinding` bağlama çift yönlü iletişimi destekler.
+Çift http örneği, bağlamanın nasıl yapılandırılacağını gösterir `WSDualHttpBinding` . Bu örnek, Internet Information Services (IIS) tarafından barındırılan bir istemci konsol programından (. exe) ve hizmet kitaplığından (. dll) oluşur. Hizmet bir çift yönlü sözleşme uygular. Sözleşme, `ICalculatorDuplex` matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. Bu örnekte `ICalculatorDuplex` arabirim, istemcinin, oturum üzerinde çalışan bir sonucu hesaplamak için matematik işlemleri gerçekleştirmesini sağlar. Bağımsız olarak, hizmet sonuçları `ICalculatorDuplexCallback` arayüzde döndürür. Bir çift yönlü sözleşme, istemci ve hizmet arasında gönderilen ileti kümesiyle ilişkilendirilmesi için bir bağlam kurulması gerektiğinden oturum gerektirir. `WSDualHttpBinding`Bağlama çift yönlü iletişimi destekler.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -21,11 +21,11 @@ ms.locfileid: "74716782"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
-`WSDualHttpBinding`bir hizmet uç noktası yapılandırmak için uç nokta yapılandırmasındaki bağlamayı gösterildiği gibi belirtin.
+İle bir hizmet uç noktası yapılandırmak için `WSDualHttpBinding` , uç nokta yapılandırmasındaki bağlamayı gösterildiği gibi belirtin.
 
 ```xml
 <endpoint address=""
@@ -81,14 +81,14 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
     > [!IMPORTANT]
-    > İstemciyi bir siteler arası yapılandırmada çalıştırırken, [WSDualHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) [uç noktası > hem \<client > öğesinin\<](../../configure-apps/file-schema/wcf/endpoint-of-client.md) `address` hem de `clientBaseAddress` [bağlama\<](../../configure-apps/file-schema/wcf/bindings.md) öğesinin > özniteliği ve aşağıda gösterildiği gibi uygun makine adı ile birlikte localhost 'u değiştirdiğinizden emin olun:
+    > İstemciyi bir çapraz makine yapılandırmasında çalıştırırken, yerel `address` olarak hem öğenin özniteliğinde [ \<endpoint> \<client> hem de öğesi öğesinin](../../configure-apps/file-schema/wcf/endpoint-of-client.md) `clientBaseAddress` özniteliği [\<binding>](../../configure-apps/file-schema/wcf/bindings.md) [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md) gösterildiği gibi uygun makinenin adı ile aynı şekilde değiştirdiğinizden emin olun:
 
     ```xml
     <client>

@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3f33bf5a78c575237ee4bc609a482a81fd30fc53
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964553"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597156"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektiren özel bir güvenlik şeması olması mümkündür. Örneğin, bir hizmet istemciden yalnızca bir Kullanıcı adı ve parola değil, aynı zamanda istemciyi karşılayan bir kimlik bilgisinin 18 yaşına göre talep edebilir. İkinci kimlik bilgisi destekleyici bir *kimlik bilgileridir*. Bu konuda Windows Communication Foundation (WCF) istemcisinde bu kimlik bilgilerinin nasıl uygulanacağı açıklanmaktadır.  
@@ -31,11 +31,11 @@ Birden fazla kimlik bilgisi gerektiren özel bir güvenlik şeması olması müm
 |-------------|-----------------|  
 |İmza|Destekleyici belirteç güvenlik başlığına dahildir ve ileti imzası tarafından imzalanır.|  
 |Onaylanan|*Onaylama belirteci* , ileti imzasını imzalar.|  
-|İmzalı ve onaylama|İmzalı, onaylama belirteçleri ileti imzadan oluşturulan tüm `ds:Signature` öğesini imzalar ve kendi bu ileti imzası tarafından imzalanır; diğer bir deyişle, her iki belirteç (ileti imzası ve imzalı onaylama belirteci için kullanılan belirteç) birbirini imzalayacaksıdır.|  
-|İmzalanmış ve şifreleme|İmzalı, şifrelenmiş destekleme belirteçleri, `wsse:SecurityHeader`göründükleri zaman da şifrelenmiş destekleyici belirteçlerdir.|  
+|İmzalı ve onaylama|İmzalı, onaylama belirteçleri, `ds:Signature` ileti imzadan üretilen tüm öğeyi imzalar ve kendi kendine bu ileti imzası tarafından imzalanır; Yani, her iki belirteç (ileti imzası için kullanılan belirteç ve imzalı onaylama belirteci) birbirini imzalayın.|  
+|İmzalanmış ve şifreleme|İmzalı, şifrelenmiş destekleme belirteçleri, içinde göründükleri zaman da şifrelenmiş destekleyici belirteçlerdir `wsse:SecurityHeader` .|  
   
 ## <a name="programming-supporting-credentials"></a>Destekleyici kimlik bilgilerini programlama  
- Destekleyici belirteçleri kullanan bir hizmet oluşturmak için bir [\<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)oluşturmanız gerekir. (Daha fazla bilgi için, bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Destekleyici belirteçleri kullanan bir hizmet oluşturmak için, oluşturmanız gerekir [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md) . (Daha fazla bilgi için, bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
   
  Özel bağlama oluştururken ilk adım, üç türden biri olabilen bir güvenlik bağlama öğesi oluşturmaktır:  
   
@@ -45,7 +45,7 @@ Birden fazla kimlik bilgisi gerektiren özel bir güvenlik şeması olması müm
   
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- Tüm sınıflar, dört ilgili özelliği içeren <xref:System.ServiceModel.Channels.SecurityBindingElement>devralınır:  
+ Tüm sınıflar, <xref:System.ServiceModel.Channels.SecurityBindingElement> dört ilgili özelliği de içeren öğesinden devralınır.  
   
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
@@ -68,18 +68,18 @@ Birden fazla kimlik bilgisi gerektiren özel bir güvenlik şeması olması müm
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>Destekleyici kimlik bilgilerini içeren özel bir bağlama oluşturmak için  
   
-1. Bir güvenlik bağlama öğesi oluşturun. Aşağıdaki örnek, `UserNameForCertificate` kimlik doğrulama moduyla bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oluşturur. <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> yöntemini kullanın.  
+1. Bir güvenlik bağlama öğesi oluşturun. Aşağıdaki örnek <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> , `UserNameForCertificate` kimlik doğrulama modu ile bir oluşturur. <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> yöntemini kullanın.  
   
-2. Destekleyici parametreyi, uygun Özellik (`Endorsing`, `Signed`, `SignedEncrypted`veya `SignedEndorsed`) tarafından döndürülen türlerin koleksiyonuna ekleyin. <xref:System.ServiceModel.Security.Tokens> ad alanındaki türler, <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>gibi yaygın olarak kullanılan türleri içerir.  
+2. Destekleyici parametreyi, uygun özelliğin ( `Endorsing` ,, `Signed` `SignedEncrypted` veya) döndürdüğü türlerin koleksiyonuna ekleyin `SignedEndorsed` . Ad alanındaki türler, gibi <xref:System.ServiceModel.Security.Tokens> yaygın olarak kullanılan türleri içerir <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters> .  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> bir örneğini oluşturur ve <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> sınıfının bir örneğini, döndürülen onaylama özelliğinin koleksiyonuna ekler.  
+ Aşağıdaki örnek öğesinin bir örneğini oluşturur ve bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfının bir örneğini, tarafından <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> verilen onaylama özelliği olan koleksiyona ekler.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md)

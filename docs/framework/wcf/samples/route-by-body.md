@@ -2,22 +2,22 @@
 title: Gövdeye göre Yönlendir
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: c3f4b19e646a6a9716d2264a3969b339208c60a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 146baf806f4922f5e3ddd92a762772786e61d443
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144194"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594601"
 ---
 # <a name="route-by-body"></a>Gövdeye göre Yönlendir
-Bu örnek, herhangi bir SOAP eylemi ile ileti nesneleri kabul eden bir hizmetin nasıl uygulanacağını gösterir. Bu örnek, bir hesap makinesi hizmeti uygulayan [Başlarken'e](../../../../docs/framework/wcf/samples/getting-started-sample.md) dayanır. Hizmet, istek `Calculate` <xref:System.ServiceModel.Channels.Message> parametresini kabul eden ve yanıt <xref:System.ServiceModel.Channels.Message> döndüren tek bir işlem uygular.  
+Bu örnek, herhangi bir SOAP eylemiyle ileti nesnelerini kabul eden bir hizmetin nasıl uygulanacağını gösterir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır. Hizmet, `Calculate` <xref:System.ServiceModel.Channels.Message> istek parametresini kabul eden ve bir yanıt döndüren tek bir işlem uygular <xref:System.ServiceModel.Channels.Message> .  
   
- Bu örnekte, istemci bir konsol uygulamasıdır (.exe) ve hizmet IIS'de barındırılır.  
+ Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet IIS 'de barındırılır.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnek, gövde içeriğine dayalı ileti göndermeyi gösterir. Yerleşik Windows Communication Foundation (WCF) hizmet modeli ileti gönderme mekanizması ileti Eylemleri'ni temel alır. Ancak, tüm işlemlerini Action="" ile tanımlayan birçok varolan Web hizmeti vardır. Eylem bilgilerine dayalı istek iletileri göndermeye devam eden WSDL tabanlı bir hizmet oluşturmak mümkün değildir. Bu örnek, WSDL'yi temel alan bir hizmet sözleşmesi gösterir (WSDL, örnekle birlikte service.wsdl'de bulunur). Hizmet sözleşmesi, [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)kullanılana benzer olan Hesap Makinesi'dir. Ancak `[OperationContract]` tüm işlemler `Action=""` için belirtir.  
+ Örnek, gövde içeriğine göre ileti gönderimi gösterir. Yerleşik Windows Communication Foundation (WCF) hizmet modeli ileti gönderme mekanizması ileti eylemlerini temel alır. Ancak, eylem = "" ile tüm işlemlerini tanımlayan birçok mevcut Web hizmeti vardır. Eylem bilgilerine göre istek iletilerinin dağıtımını tutan WSDL 'yi temel alan bir hizmet derlemek olanaksızdır. Bu örnek, WSDL 'yi temel alan bir hizmet sözleşmesini gösterir (WSDL, örnekle birlikte gelen Service. wsdl ' de bulunur). Hizmet sözleşmesinin, [Başlarken](getting-started-sample.md)' de kullanılan bir hesap hesaplayıcısı. Ancak, `[OperationContract]` `Action=""` tüm işlemleri belirtir.  
   
 ```csharp  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),
@@ -35,17 +35,17 @@ Bu örnek, herhangi bir SOAP eylemi ile ileti nesneleri kabul eden bir hizmetin 
     }  
 ```  
   
- Bir sözleşme göz önüne alındığında, `DispatchByBodyBehavior` bir hizmet iletilerin işlemler arasında gönderilmesine izin vermek için özel gönderme davranışı gerektirir. Bu gönderme davranışı, `DispatchByBodyElementOperationSelector` ilgili sarıcı öğelerinin QName tarafından anahtarlanmış işlem adlarının bir tablosuyla özel işlem seçicisini devreye ait hale sağlar. `DispatchByBodyElementOperationSelector`Gövdenin ilk çocuğunun başlangıç etiketine bakar ve daha önce bahsedilen tabloyu kullanarak işlemi seçer.  
+ Bir sözleşme verildiğinde, bir hizmet, `DispatchByBodyBehavior` işlemler arasında iletilerin dağıtılması için özel dağıtım davranışı gerektirir. Bu dağıtım davranışı, `DispatchByBodyElementOperationSelector` özel işlem seçiciyi, ilgili sarmalayıcı öğelerinin QName tarafından anahtarlanan işlem adlarından oluşan bir tabloyla başlatır. `DispatchByBodyElementOperationSelector`, gövdenin ilk alt öğesinin başlangıç etiketine bakar ve daha önce bahsedilen tabloyu kullanarak işlemi seçer.  
   
- İstemci [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)kullanarak hizmet tarafından dışa aktarılan WSDL'den otomatik olarak oluşturulan bir proxy kullanır.  
+ İstemci, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet tarafından DıŞARıYA aktarılmış WSDL 'den otomatik olarak oluşturulan bir proxy kullanır.  
   
 ```console  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  
 ```  
   
- Otomatik oluşturulan proxy'deki Eylem parametreleri dışında, tüm işlemlerin eylemlerinin boş olması istemci kodu üzerinde hiçbir etkiye sahip değildir.  
+ Tüm işlemlerin eylemlerinin boş olması, otomatik olarak oluşturulan ara sunucu 'daki eylem parametreleri dışında, istemci kodunda hiçbir etkiye sahip değildir.  
   
- İstemci kodu çeşitli hesaplamalar gerçekleştirir. Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ İstemci kodu birkaç hesaplama gerçekleştirir. Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console
 Add(100, 15.99) = 115.99  
@@ -56,19 +56,19 @@ Divide(22, 7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  

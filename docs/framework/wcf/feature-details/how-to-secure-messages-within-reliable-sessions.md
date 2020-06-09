@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme'
 ms.date: 03/30/2017
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-ms.openlocfilehash: edff27fe9649387c1922c34e72ef59d615e52b90
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 306d0f96b5163fe5c24d270b4b9a7c1d3f499e7e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141670"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596961"
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>Nasıl yapılır: Güvenli Oturumlarla İletileri Güvenli Hale Getirme
 
@@ -21,34 +21,34 @@ Bu yordam aşağıdaki üç temel görevden oluşur:
 
 1. İstemcinin, hizmette kimlik doğrulaması yapmak için kullanması gereken istemci kimlik bilgisi türünü belirtin.
 
-Uç nokta yapılandırma öğesinin, adlı bir bağlama yapılandırmasına (Bu örnekte `MessageSecurity`) başvuran bir `bindingConfiguration` özniteliği içerdiği ilk görevde önemlidir. [ **\<bağlama >** ](../../configure-apps/file-schema/wcf/bindings.md) yapılandırma öğesi, [ **\<reliablesession >** ](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) öğesinin `enabled` özniteliğini `true`olarak ayarlayarak güvenilir oturumları etkinleştirmek için bu ada başvurur. `ordered` özniteliğini `true`olarak ayarlayarak, sıralı teslimat güvenlerini güvenilir bir oturum dahilinde kullanılabilir olmasını zorunlu kılabilirsiniz.
+Uç nokta yapılandırma öğesinin adlı bir bağlama yapılandırmasına başvuran bir öznitelik içerdiği ilk görevde `bindingConfiguration` (Bu örnekte) önemlidir `MessageSecurity` . [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)Sonra yapılandırma öğesi, `enabled` öğesinin özniteliğini olarak ayarlayarak güvenilir oturumları etkinleştirmek için bu ada başvurur [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) `true` . Özniteliğini olarak ayarlayarak, sıralı teslimat güveninin güvenilir bir oturum dahilinde kullanılabilir olmasını zorunlu kılabilirsiniz `ordered` `true` .
 
-Bu yapılandırma yordamının temel aldığı örnek kaynak kopyası için, bkz. [WS güvenilir oturumu](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
+Bu yapılandırma yordamının temel aldığı örnek kaynak kopyası için, bkz. [WS güvenilir oturumu](../samples/ws-reliable-session.md).
 
-İkinci görevin temel öğeleri, istemci ve hizmetin **\<binding >** öğesinde bulunan **\<security >** öğesinin `mode` özniteliği `Message`' a ayarlanarak gerçekleştirilir.
+İkinci görevin temel öğeleri, `mode` **\<security>** **\<binding>** istemci ve hizmetin öğesinde bulunan öğesinin özniteliği olarak ayarlanarak gerçekleştirilir `Message` .
 
-Üçüncü görevin temel öğeleri, istemci ve hizmetin **\<güvenlik >** öğesinde bulunan **\<message >** öğesinin `clientCredentialType` özniteliği `Certificate`olarak ayarlanarak gerçekleştirilir.
+Üçüncü görevin temel öğeleri, `clientCredentialType` **\<message>** **\<security>** istemci ve hizmetin öğesinde bulunan öğesinin özniteliği ayarlanarak gerçekleştirilir `Certificate` .
 
 > [!NOTE]
 > Güvenilir oturumlarla ileti güvenliği kullanılırken, ilk hata durumunda özel durum oluşturmak yerine bir zaman aşımı gerçekleşene kadar, güvenilir mesajlaşma kimliği doğrulanmamış bir istemcinin kimliğini doğrulamaya çalışır.
 
 ### <a name="configure-the-service-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenli bir oturum kullanmak için bir WSHttpBinding ile hizmeti yapılandırma
 
-Bu yordam, [nasıl yapılır: güvenilir bir oturumda Ileti alışverişi konusunda](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)açıklanmaktadır.
+Bu yordam, [nasıl yapılır: güvenilir bir oturumda Ileti alışverişi konusunda](how-to-exchange-messages-within-a-reliable-session.md)açıklanmaktadır.
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Güvenli bir oturum kullanmak için istemciyi bir WSHttpBinding ile yapılandırma
 
-Bu yordam, [nasıl yapılır: güvenilir bir oturumda Ileti alışverişi konusunda](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)açıklanmaktadır.
+Bu yordam, [nasıl yapılır: güvenilir bir oturumda Ileti alışverişi konusunda](how-to-exchange-messages-within-a-reliable-session.md)açıklanmaktadır.
 
 ### <a name="set-the-mode-and-clientcredentialtype-in-configuration"></a>Yapılandırmada Mode ve ClientCredentialType ayarla
 
-1. Yapılandırma dosyasının [ **\<bindings >** ](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) öğesine uygun bir bağlama öğesi ekleyin. Aşağıdaki örnek [ **\<wsHttpBinding >** ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) öğesi ekler.
+1. Yapılandırma dosyasının öğesine uygun bir bağlama öğesi ekleyin [**\<bindings>**](../../configure-apps/file-schema/wcf/bindings.md) . Aşağıdaki örnek bir öğesi ekler [**\<wsHttpBinding>**](../../configure-apps/file-schema/wcf/wshttpbinding.md) .
 
-1. **\<bağlama >** öğesi ekleyin ve `name` özniteliğini uygun bir değere ayarlayın. Örnek, `MessageSecurity`adını kullanır.
+1. Bir **\<binding>** öğesi ekleyin ve `name` özniteliğini uygun bir değere ayarlayın. Örnek, adını kullanır `MessageSecurity` .
 
-1. \<bir **güvenlik >** öğesi ekleyin ve `mode` özniteliğini `Message`olarak ayarlayın.
+1. Bir **\<security>** öğesi ekleyin ve `mode` özniteliğini olarak ayarlayın `Message` .
 
-1. **\<security >** öğesi içinde, bir **\<ileti >** öğesi ekleyin ve `clientCredentialType` özniteliğini `Certificate`olarak ayarlayın.
+1. Öğesi içinde **\<security>** , bir öğesi ekleyin **\<message>** ve `clientCredentialType` özniteliğini olarak ayarlayın `Certificate` .
 
 ```xml
 <wsHttpBinding>

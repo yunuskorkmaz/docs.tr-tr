@@ -2,24 +2,24 @@
 title: JSONP Kullanma
 ms.date: 03/30/2017
 ms.assetid: f386718c-b4ba-4931-a610-40c27a46672a
-ms.openlocfilehash: 622fbdbf2674aea552cfd57f528d7cc5168cfda8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82290319b5d8b58708f0b2ebf40522ee76127b84
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932840"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594965"
 ---
 # <a name="using-jsonp"></a>JSONP Kullanma
 
-JSON doldurma (JSONP), Web tarayıcıları siteler arası betik oluşturma desteği sağlayan bir mekanizmadır. JSONP geçerli yüklenen belge alınan bir siteden diğerine farklı betikleri yüklemek için Web tarayıcıları yeteneğini geçici olarak tasarlanmıştır. Kullanıcı tanımlı geri çağırma işlevi adlı bir JSON yükü doldurarak mekanizması aşağıdaki örnekte gösterildiği gibi çalışır.
+JSON dolgusu (JSONP), Web tarayıcılarında siteler arası betik oluşturma desteğini sağlayan bir mekanizmadır. JSONP, Web tarayıcıları tarafından geçerli yüklenen belgenin alındığı bilgisayardan farklı bir siteden betikleri yükleme yeteneği etrafında tasarlanmıştır. Mekanizma, aşağıdaki örnekte gösterildiği gibi, JSON yükünün Kullanıcı tanımlı geri çağırma işlevi adıyla doldurmasını gerçekleştirerek çalışır.
 
 ```javascript
 callback({"a" = \\"b\\"});
 ```
 
-JSON yükü, yukarıdaki örnekte `{"a" = \\"b\\"}`, bir işlev çağrısında sarmalandıktan `callback`. Geri çağırma işlevi geçerli bir Web sayfasında zaten tanımlanmış olmalıdır. Bir JSONP yanıtın içerik türü `application/javascript`.
+Önceki örnekte JSON yükü, `{"a" = \\"b\\"}` bir işlev çağrısında sarmalanır `callback` . Geri çağırma işlevi, geçerli Web sayfasında zaten tanımlanmış olmalıdır. Bir JSONP yanıtının içerik türü `application/javascript` .
 
-JSONP otomatik olarak etkin değildir. Bunu etkinleştirmek için ayarlanmış `javascriptCallbackEnabled` özniteliğini `true` HTTP standart uç noktaları birinde (<xref:System.ServiceModel.Description.WebHttpEndpoint> veya <xref:System.ServiceModel.Description.WebScriptEndpoint>), aşağıdaki örnekte gösterildiği gibi.
+JSONP otomatik olarak etkinleştirilmez. Bunu etkinleştirmek için, `javascriptCallbackEnabled` `true` <xref:System.ServiceModel.Description.WebHttpEndpoint> <xref:System.ServiceModel.Description.WebScriptEndpoint> Aşağıdaki örnekte GÖSTERILDIĞI gibi, özniteliğini http standart uç noktalarından birinde (veya) olarak ayarlayın.
 
 ```xml
 <system.serviceModel>
@@ -31,17 +31,17 @@ JSONP otomatik olarak etkin değildir. Bunu etkinleştirmek için ayarlanmış `
 </system.serviceModel>
 ```
 
-Geri arama işlevinin adını şu URL'ye gösterildiği gibi bir geri çağırma adında bir sorgu değişkeni belirtilebilir.
+Geri çağırma işlevinin adı, aşağıdaki URL 'de gösterildiği gibi, geri çağırma adlı bir sorgu değişkeninde belirtilebilir.
 
 `http://baseaddress/Service/RestService?callback=functionName`
 
-Hizmet, çağrıldığında, aşağıdakine benzer bir yanıt gönderir.
+Çağrıldığında, hizmet aşağıdakine benzer bir yanıt gönderir.
 
 ```javascript
 functionName({"root":"Something"});
 ```  
 
-Uygulayarak geri çağırma işlevi adı belirtebilirsiniz <xref:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute> hizmet sınıfına aşağıdaki örnekte gösterildiği gibi.
+Ayrıca, <xref:System.ServiceModel.Web.JavascriptCallbackBehaviorAttribute> Aşağıdaki örnekte gösterildiği gibi, hizmet sınıfına uygulayarak geri çağırma işlev adını da belirtebilirsiniz.
 
 ```csharp
 [ServiceContract]
@@ -60,7 +60,7 @@ Daha önce gösterilen hizmet için bir istek aşağıdaki gibi görünür.
 
 `http://baseaddress/Service/RestService?$callback=anotherFunction`
 
-Çağrıldığında, hizmet aşağıdakiler ile yanıt verir.
+Çağrıldığında, hizmet aşağıdaki ile yanıt verir.
 
 ```javascript
 anotherFunction ({"root":"Something"});
@@ -68,22 +68,22 @@ anotherFunction ({"root":"Something"});
 
 ## <a name="http-status-codes"></a>HTTP durum kodları
 
-HTTP durum kodları dışındaki 200 JSONP yanıtları aşağıdaki örnekte gösterildiği gibi sayısal gösterimini HTTP durum kodu ile ikinci bir parametre içerir.
+200 dışındaki HTTP durum kodlarına sahip JSONP yanıtları, aşağıdaki örnekte gösterildiği gibi HTTP durum kodunun sayısal gösterimine sahip ikinci bir parametre içerir.
 
 ```javascript
 anotherFunction ({"root":"Something"}, 201);
 ```
 
-## <a name="validations"></a>Doğrulamaları
+## <a name="validations"></a>Doğrulamalar
 
-JSONP'nin etkin olduğunda, aşağıdaki Doğrulamalar gerçekleştirilir:
+JSONP etkinleştirildiğinde aşağıdaki doğrulamalar gerçekleştirilir:
 
-- WCF altyapı bir özel durum oluşturur `javascriptCallback` olan etkin bir geri çağırma sorgu dizesi parametresi istekte mevcut olduğundan ve yanıt biçimi JSON olarak ayarlanır.
+- WCF altyapısı, etkinleştirilirse bir özel durum oluşturur `javascriptCallback` , istekte bir geri çağırma sorgusu dize parametresi bulunur ve yanıt BIÇIMI JSON olarak ayarlanır.
 
-- İstek geri çağırma sorgu dizesi parametresi içeriyor, ancak bir HTTP GET işlemi değil, geri çağırma parametresi yok sayıldı.
+- İstek geri arama sorgu dizesi parametresini içeriyorsa, ancak işlem bir HTTP GET değilse, geri çağırma parametresi yok sayılır.
 
-- Callback adı ise `null` ya da boş dize yanıt JSONP biçimlendirilmemiş.
+- Geri çağırma adı `null` veya boş dize ise yanıt JSONP olarak biçimlendirilmez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP Programlama Modeli Genel Bakış](wcf-web-http-programming-model-overview.md)

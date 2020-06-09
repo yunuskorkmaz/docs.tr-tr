@@ -2,37 +2,37 @@
 title: Yayma
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: ab8b6c003f9e483dccd7b9c7b2687a409f27fdc3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 732ae5cb1ce311b78728f8d5de0fd9102bf32499
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600026"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578961"
 ---
 # <a name="propagation"></a>Yayma
-Bu konu, Windows Communication Foundation (WCF) izleme modelinde Etkinlik yayma açıklar.  
+Bu konu, Windows Communication Foundation (WCF) izleme modelinde etkinlik yaymayı açıklamaktadır.  
   
-## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Uç noktalar genelinde etkinliklerini ilişkilendirmek için yayma kullanma  
- Hata doğrudan bağıntı kullanıcıyla aynı işlem birimini için uygulama uç noktalar genelinde, örneğin, bir istek izler yayılmasını sağlar. Farklı uç noktada aynı işlem birimini için yayılan hataları bile uygulama etki alanları arasında aynı etkinliğinde gruplandırılır. Bu, ileti üst bilgilerinde etkinlik kimliği yayma aracılığıyla gerçekleştirilir. Bu nedenle, sunucu bir iç hata nedeniyle istemci zaman aşımına uğrarsa, her iki hata doğrudan bağıntı aynı etkinliği görüntülenir.  
+## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>Uç noktalar genelinde etkinlikleri Ilişkilendirmek için yayılmayı kullanma  
+ Yayma, kullanıcıya, örneğin bir istek gibi uygulama uç noktaları genelinde aynı işleme birimi için hata izlemelerinin doğrudan bağıntısını sağlar. Aynı işleme birimi için farklı uç noktalara yayılan hatalar, uygulama etki alanları arasında bile aynı etkinlik halinde gruplandırılır. Bu, ileti üst bilgilerindeki etkinlik KIMLIĞI yayması aracılığıyla yapılır. Bu nedenle, sunucuda bir iç hata nedeniyle istemci zaman aşımına uğrarsa, her iki hata da doğrudan bağıntı için aynı etkinlikte görünür.  
   
- Bunu yapmak için `ActivityTracing` önceki örnekte gösterildiği gibi ayarlar. Buna ek olarak, `propagateActivity` özniteliğini `System.ServiceModel` tüm uç noktaları, izleme kaynağı.  
+ Bunu yapmak için, `ActivityTracing` Önceki örnekte gösterildiği gibi ayarını kullanın. Ayrıca, `propagateActivity` `System.ServiceModel` tüm uç noktalarında izleme kaynağı için özniteliğini ayarlayın.  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Etkinlik yayma TLS üzerinde etkinlik kimliği içeren giden iletiler için bir başlık eklemek WCF neden olan yapılandırılabilir bir özelliktir. Bu sunucu tarafında sonraki izlemeleri üzerinde dahil ederek, istemci ve sunucu etkinlikleri ilişkilendirebilirsiniz.  
+ Etkinlik yayma, WCF 'nin, TLS üzerindeki etkinlik KIMLIĞINI içeren giden iletilere üst bilgi eklemesine neden olan yapılandırılabilir bir özelliktir. Bunu sunucu tarafındaki izleyen izlemelere ekleyerek, istemci ve sunucu etkinliklerini ilişkilendirebiliriz.  
   
 ## <a name="propagation-definition"></a>Yayma tanımı  
- Aşağıdaki koşulların tümü uygularsanız N etkinliği için etkinlik M'ın gAId yayılır.  
+ Aşağıdaki koşulların tümü geçerliyse, etkinliğin gAId 'si etkinlik N 'ye yayılır.  
   
-- N, M nedeniyle oluşturulur  
+- N, d nedeniyle oluşturuldu  
   
-- N-M'ın gAId bilinir  
+- E 'nin gAId 'si N olarak bilinir  
   
-- N'ın gAId M'ın gAId için eşittir.  
+- N 'nin gAId 'si, 8 ' in gAId değerine eşit.  
   
- Aşağıdaki XML şemada gösterildiği gibi gAId ActivityID ileti üst bilgisi dağıtılır.  
+ GAId, aşağıdaki XML şemasında gösterildiği gibi ActivityId ileti üst bilgisi aracılığıyla dağıtılır.  
   
 ```xml  
 <xsd:element name="ActivityId" type="integer" minOccurs="0">  
@@ -40,7 +40,7 @@ Bu konu, Windows Communication Foundation (WCF) izleme modelinde Etkinlik yayma 
 </xsd:element>  
 ```  
   
- İleti üst bilgisi bir örnek verilmiştir.  
+ Aşağıda ileti üstbilgisinin bir örneği verilmiştir.  
   
 ```xml  
 <MessageLogTraceRecord>  
@@ -70,15 +70,15 @@ Bu konu, Windows Communication Foundation (WCF) izleme modelinde Etkinlik yayma 
 </MessageLogTraceRecord>  
 ```  
   
-## <a name="propagation-and-activity-boundaries"></a>Doldurma ve etkinlik sınırları  
- Etkinlik Kimliği uç noktalar genelinde yayıldığında, ileti alıcısı yayan bir başlatma ve durdurma izler, (yayılan) etkinlik kimliği ile Bu nedenle, her izleme kaynağından o gAId ile başlatma ve durdurma bir izleme yoktur. Uç noktalar aynı işlem içinde ve izleme kaynak adının aynısını kullanın, birden fazla başlatma ve durdurma aynı düzenlenir (aynı gAId, aynı izleme kaynağı, aynı işlemde) ile oluşturulur.  
+## <a name="propagation-and-activity-boundaries"></a>Yayma ve etkinlik sınırları  
+ Etkinlik KIMLIĞI uç noktalar arasında yayıldığında, ileti alıcısı bu (yayılan) etkinlik KIMLIĞIYLE bir başlangıç ve durdurma izlemeleri yayar. Bu nedenle, her bir izleme kaynağından bu gAId ile bir başlatma ve durdurma izlemesi vardır. Uç noktalar aynı işlemden ve aynı izleme kaynağı adını kullanıyorsa aynı şekilde aynı (aynı gAId, aynı izleme kaynağı, aynı işleme) ile birden çok başlatma ve durdurma oluşturulur.  
   
 ## <a name="synchronization"></a>Eşitleme  
- Olaylar farklı makinelerde çalışan uç noktalar arasında eşitlemek için bir bağıntı kimliği iletilerinde yayılır ActivityID üst bilgi eklenir. Araçları olayları makineler arasında saat tutarsızlık ile eşitlemek için bu kodu kullanabilirsiniz. Özellikle, hizmet izleme Görüntüleyicisi aracı, uç noktalar arasında ileti akışları göstermek için bu kimliği kullanır.  
+ Olayları farklı makinelerde çalışan uç noktalar arasında senkronize etmek için, ileti içine yayılan ActivityId üstbilgisine bir Bağıntıkimliği eklenir. Araçlar, saat tutarsızlığı olan makineler arasında olayları eşleştirmek için bu KIMLIĞI kullanabilir. Özellikle, hizmet Izleme Görüntüleyicisi Aracı, uç noktalar arasındaki ileti akışlarını göstermek için bu KIMLIĞI kullanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzlemeyi Yapılandırma](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Uçtan Uca İzleme Senaryoları](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [İzlemeyi Yapılandırma](configuring-tracing.md)
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma ](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Uçtan Uca İzleme Senaryoları](end-to-end-tracing-scenarios.md)
+- [Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

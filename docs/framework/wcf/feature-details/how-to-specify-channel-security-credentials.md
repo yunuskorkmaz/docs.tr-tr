@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: 72fdcd18fba2eabe8255f73acd240e12e57d56ea
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 45a13460ce94cbacae0465fede4b455a2833ce81
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144714"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596948"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Nasıl yapılır: Kanal Güvenliği Kimlik Bilgilerini Belirtme
 Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarının WCF hizmetlerini çağırmasını sağlar. Çoğu WCF hizmeti, istemcinin kimlik doğrulama ve yetkilendirme için kimlik bilgilerini belirtmesini gerektirir. WCF istemcisinden bir WCF hizmetini çağırırken bu kimlik bilgilerini yönetilen kodda veya bir uygulama yapılandırma dosyasında belirtebilirsiniz. Bir WCF hizmetini bir COM uygulamasından çağırırken, <xref:System.ServiceModel.ComIntegration.IChannelCredentials> kimlik bilgilerini belirtmek için arabirimini kullanabilirsiniz. Bu konu, arabirimi kullanarak kimlik bilgilerini belirtmek için çeşitli yollar gösterir <xref:System.ServiceModel.ComIntegration.IChannelCredentials> .  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
 > [!NOTE]
 > <xref:System.ServiceModel.ComIntegration.IChannelCredentials>, IDispatch tabanlı bir arabirimdir ve Visual Studio ortamında IntelliSense işlevselliği almaz.  
   
- Bu makalede [Ileti güvenliği örneğinde](../../../../docs/framework/wcf/samples/message-security-sample.md)tanımlanan WCF hizmeti kullanılacaktır.  
+ Bu makalede [Ileti güvenliği örneğinde](../samples/message-security-sample.md)tanımlanan WCF hizmeti kullanılacaktır.  
   
 ### <a name="to-specify-a-client-certificate"></a>İstemci sertifikası belirtmek için  
   
@@ -115,7 +115,7 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 ### <a name="to-specify-an-issue-token"></a>Bir sorun belirteci belirtmek için  
   
-1. Sorun belirteçleri yalnızca Federe güvenlik kullanan uygulamalar için kullanılır. Federasyon güvenliği hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md) ve [Federasyon örneği](../../../../docs/framework/wcf/samples/federation-sample.md).  
+1. Sorun belirteçleri yalnızca Federe güvenlik kullanan uygulamalar için kullanılır. Federasyon güvenliği hakkında daha fazla bilgi için bkz. [Federasyon ve verilen belirteçler](federation-and-issued-tokens.md) ve [Federasyon örneği](../samples/federation-sample.md).  
   
      Aşağıdaki Visual Basic kod örneği, yönteminin nasıl çağrılacağını göstermektedir <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29> :  
   
@@ -133,8 +133,8 @@ Windows Communication Foundation (WCF) hizmet bilinen adı, COM uygulamalarını
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Federasyon](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Nasıl yapılır: Federe İstemci Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [İleti Güvenliği](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Federasyon](federation.md)
+- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Federe İstemci Oluşturma](how-to-create-a-federated-client.md)
+- [İleti Güvenliği](message-security-in-wcf.md)
+- [Bağlamalar ve Güvenlik](bindings-and-security.md)

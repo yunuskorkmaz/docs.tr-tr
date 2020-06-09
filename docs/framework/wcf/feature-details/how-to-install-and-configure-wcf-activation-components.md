@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: e71664b4361ba28a50b29499585b20a8adbaefd2
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: f7a846b076691394cb855e4978e890cdcac76eb2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964460"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597039"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma
 
@@ -19,7 +19,7 @@ Bu konuda, Windows Vista 'da HTTP ağ protokolleri üzerinden iletişim kurmayan
 
 - ' İ HTTP olmayan bir protokolü destekleyecek şekilde yapılandırın. Aşağıdaki yordam, TCP Etkinleştirmesi için Windows Vista 'Yı yapılandırır.
 
-WAS 'yi yükledikten ve yapılandırdıktan sonra, ile ilgili HTTP olmayan bir uç nokta sunan bir WCF hizmeti oluşturma yordamları için bkz. [nasıl yapılır: ' de BIR WCF hizmetini barındırma](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) .
+WAS 'yi yükledikten ve yapılandırdıktan sonra, ile ilgili HTTP olmayan bir uç nokta sunan bir WCF hizmeti oluşturma yordamları için bkz. [nasıl yapılır: ' de BIR WCF hizmetini barındırma](how-to-host-a-wcf-service-in-was.md) .
 
 ## <a name="to-install-the-wcf-non-http-activation-components"></a>WCF HTTP olmayan etkinleştirme bileşenlerini yüklemek için
 
@@ -52,7 +52,7 @@ WAS 'yi yükledikten ve yapılandırdıktan sonra, ile ilgili HTTP olmayan bir u
     ```
 
     > [!NOTE]
-    > Bu komut, tek satırlık bir metin. Bu komut/\<*WCF uygulaması*> uygulamasına hem `http://localhost/<WCF Application>` hem de `net.tcp://localhost/<WCF Application>`kullanılarak erişilmesine izin vermez.
+    > Bu komut, tek satırlık bir metin. Bu komut,/ \<*WCF Application*> uygulamasına hem hem de kullanılarak erişilmesini sağlar `http://localhost/<WCF Application>` `net.tcp://localhost/<WCF Application>` .
 
      Bu örnek için eklemiş olduğunuz net. TCP site bağlamasını kaldırın.
 
@@ -103,7 +103,7 @@ WAS 'yi yükledikten ve yapılandırdıktan sonra, ile ilgili HTTP olmayan bir u
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [TCP Etkinleştirme](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [MSMQ Etkinleştirme](../../../../docs/framework/wcf/samples/msmq-activation.md)
-- [NamedPipe Etkinleştirme](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
+- [TCP Etkinleştirme](../samples/tcp-activation.md)
+- [MSMQ Etkinleştirme](../samples/msmq-activation.md)
+- [NamedPipe Etkinleştirme](../samples/namedpipe-activation.md)
 - [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

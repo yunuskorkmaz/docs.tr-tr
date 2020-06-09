@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: 47841b23dc3259aeb233192f396397745864d7ba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b3a0f1b52afce495ca41a426ebc9e57314d8254
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79145170"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592534"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Özel Bağlama Taşıma ve Kodlama
-Özel bir bağlama, ayrık bağlama öğelerinin sıralı bir listesi yle tanımlanır. Bu örnek, çeşitli aktarım ve ileti kodlama öğeleriyle özel bir bağlamanın nasıl yapılandırılabildiğini gösterir.  
+Özel bağlama, farklı bağlama öğelerinin sıralı bir listesi tarafından tanımlanır. Bu örnek, çeşitli taşıma ve ileti kodlama öğeleriyle özel bağlamanın nasıl yapılandırılacağını gösterir.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek [Self-Host'a](../../../../docs/framework/wcf/samples/self-host.md)dayanır ve http, TCP ve NamedPipe aktarımlarını özel bağlamalarla desteklemek için üç uç noktayı yapılandırmak üzere değiştirilmiştir. İstemci yapılandırması benzer şekilde değiştirildi ve istemci kodu üç uç noktanın her biriyle iletişim kurmak için değiştirildi.  
+ Bu örnek, [kendi kendine ana bilgisayar](self-host.md)tabanlıdır ve özel BAĞLAMALARLA http, TCP ve NamedPipe aktarımlarını desteklemek üzere üç uç nokta yapılandırmak üzere değiştirilmiştir. İstemci yapılandırması benzer şekilde değiştirilmiştir ve istemci kodu üç uç noktanın her biriyle iletişim kuracak şekilde değiştirilmiştir.  
   
- Örnek, belirli bir aktarım ve ileti kodlamasını destekleyen özel bir bağlamanın nasıl yapılandırılabildiğini gösterir. Bu, `binding` öğe için bir aktarım ve ileti kodlaması yapılandırılarak gerçekleştirilir. Bağlama öğelerinin sıralanması, özel bir bağlama tanımlamada önemlidir, çünkü her biri kanal yığınındaki bir katmanı temsil eder (bkz. [Özel Bağlamalar).](../../../../docs/framework/wcf/extending/custom-bindings.md) Bu örnek üç özel bağlamayı yapılandırır: metin kodlaması içeren bir HTTP aktarım, metin kodlaması içeren bir TCP aktarım ve ikili kodlama içeren bir NamedPipe aktarım.  
+ Örnek, belirli bir aktarımı ve ileti kodlamasını destekleyen bir özel bağlamanın nasıl yapılandırılacağını gösterir. Bu, bir taşıma ve öğe için ileti kodlaması yapılandırılarak gerçekleştirilir `binding` . Bağlama öğelerinin sıralaması, her biri kanal yığınındaki bir katmanı temsil ettiğinden (bkz. [Özel Bağlamalar](../extending/custom-bindings.md)) özel bir bağlama tanımlamak açısından önemlidir. Bu örnek üç özel bağlamayı yapılandırır: metin kodlamalı HTTP taşıması, metin kodlamalı bir TCP taşıması ve ikili kodlamalı bir NamedPipe taşıması.  
   
  Hizmet yapılandırması özel bağlamaları aşağıdaki gibi tanımlar:  
   
@@ -44,9 +44,9 @@ ms.locfileid: "79145170"
 </bindings>  
 ```  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsol penceresinde görüntülenir. İstemci üç uç noktanın her biriyle iletişim kurar ve önce HTTP, sonra TCP ve son olarak NamedPipe'a erişir. Hizmeti ve istemciyi kapatmak için her konsol penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları hem hizmet hem de istemci konsolu penceresinde görüntülenir. İstemci, birinci HTTP, ardından TCP ve son olarak NamedPipe 'a erişerek üç uç noktanın her biriyle iletişim kurar. Hizmeti ve istemciyi kapatmak için her bir konsol penceresinde ENTER tuşuna basın.  
   
- `namedPipeTransport` Bağlama, makineden makineye işlemleri desteklemez. Yalnızca aynı makinede iletişim için kullanılır. Bu nedenle, örneği makineler arası bir senaryoda çalıştırırken, istemci kodu dosyasında aşağıdaki satırları yorumlayın:  
+ `namedPipeTransport`Bağlama, makineden makineye işlemleri desteklemiyor. Yalnızca aynı makine üzerindeki iletişim için kullanılır. Bu nedenle, örneği bir çapraz makine senaryosunda çalıştırırken, istemci kod dosyasında aşağıdaki satırları açıklama olarak kodlayın:  
   
 ```csharp  
 CalculatorClient client = new CalculatorClient("default");  
@@ -67,21 +67,21 @@ client.Close()
 ```  
   
 > [!NOTE]
-> Bu örnek için yapılandırmayı yeniden oluşturmak için Svcutil.exe kullanıyorsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinden emin olun.  
+> Bu örneğe yönelik yapılandırmayı yeniden oluşturmak için Svcutil. exe ' yi kullanırsanız, istemci yapılandırmasındaki uç nokta adını istemci koduyla eşleşecek şekilde değiştirdiğinizden emin olun.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümün C#, C++veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation Örneklerini Oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümün C#, C++ veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  
