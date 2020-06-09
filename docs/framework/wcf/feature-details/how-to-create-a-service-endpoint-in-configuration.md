@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma'
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 5935f798004de3ec049b9c9f0300675e1660f462
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 56b29da0c147eb9e73a08e2875e33e384da729ed
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464125"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598924"
 ---
-# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="273c1-102">Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="273c1-102">How to: Create a Service Endpoint in Configuration</span></span>
-<span data-ttu-id="273c1-103">Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmetinin sunduğu işlevsellik lere erişim sağlar.</span><span class="sxs-lookup"><span data-stu-id="273c1-103">Endpoints provide clients with access to the functionality a Windows Communication Foundation (WCF) service offers.</span></span> <span data-ttu-id="273c1-104">Bir hizmet için bir veya daha fazla uç nokta, göreli ve mutlak uç nokta adreslerinin bir birleşimini kullanarak veya herhangi bir hizmet bitiş noktası tanımlamazsanız, çalışma süresi varsayılan olarak sizin için bazı sağlar.</span><span class="sxs-lookup"><span data-stu-id="273c1-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="273c1-105">Bu konu, hem göreceli hem de mutlak adresleri içeren bir yapılandırma dosyasını kullanarak uç noktaların nasıl ekleyeceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="273c1-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
+# <a name="how-to-create-a-service-endpoint-in-configuration"></a><span data-ttu-id="db8cc-102">Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="db8cc-102">How to: Create a Service Endpoint in Configuration</span></span>
+<span data-ttu-id="db8cc-103">Uç noktalar, istemcilere Windows Communication Foundation (WCF) hizmet tekliflerini erişimi sağlar.</span><span class="sxs-lookup"><span data-stu-id="db8cc-103">Endpoints provide clients with access to the functionality a Windows Communication Foundation (WCF) service offers.</span></span> <span data-ttu-id="db8cc-104">Bir hizmet için bir veya daha fazla uç noktası, göreli ve mutlak uç nokta adreslerinin birleşimini kullanarak tanımlayabilir veya herhangi bir hizmet uç noktası tanımlamadıysanız, çalışma zamanı sizin için varsayılan olarak bir değer sağlar.</span><span class="sxs-lookup"><span data-stu-id="db8cc-104">You can define one or more endpoints for a service by using a combination of relative and absolute endpoint addresses, or if you do not define any service endpoints, the runtime provides some by default for you.</span></span> <span data-ttu-id="db8cc-105">Bu konu, hem göreli hem de mutlak adresler içeren bir yapılandırma dosyası kullanarak uç noktaların nasıl ekleneceğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-105">This topic shows how to add endpoints using a configuration file that contain both relative and absolute addresses.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="273c1-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="273c1-106">Example</span></span>  
- <span data-ttu-id="273c1-107">Aşağıdaki hizmet yapılandırması bir temel adres ve beş uç nokta belirtir.</span><span class="sxs-lookup"><span data-stu-id="273c1-107">The following service configuration specifies a base address and five endpoints.</span></span>  
+## <a name="example"></a><span data-ttu-id="db8cc-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="db8cc-106">Example</span></span>  
+ <span data-ttu-id="db8cc-107">Aşağıdaki hizmet yapılandırması, bir temel adresi ve beş uç noktasını belirtir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-107">The following service configuration specifies a base address and five endpoints.</span></span>  
   
 ```xml  
 <configuration>  
@@ -67,8 +67,8 @@ ms.locfileid: "81464125"
 </configuration>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="273c1-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="273c1-108">Example</span></span>  
- <span data-ttu-id="273c1-109">Temel adres, aşağıdaki `add` örnekte gösterildiği gibi hizmet/ana bilgisayar/baseAddresss altında öğe kullanılarak belirtilir.</span><span class="sxs-lookup"><span data-stu-id="273c1-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="db8cc-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="db8cc-108">Example</span></span>  
+ <span data-ttu-id="db8cc-109">Temel adres, `add` Aşağıdaki örnekte gösterildiği gibi hizmet/ana bilgisayar/baseAddresses altında öğesi kullanılarak belirtilir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-109">The base address is specified using the `add` element, under service/host/baseAddresses, as shown in the following sample.</span></span>  
   
 ```xml  
 <service
@@ -80,8 +80,8 @@ ms.locfileid: "81464125"
   </host>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="273c1-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="273c1-110">Example</span></span>  
- <span data-ttu-id="273c1-111">Aşağıdaki örnekte gösterilen ilk uç nokta tanımı göreceli bir adres belirtir, bu da bitiş noktası adresinin temel adres ve Tekdüzen Kaynak Tanımlayıcı (URI) kompozisyonunun kurallarını izleyen göreli adresin birleşimi olduğu anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="273c1-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="273c1-112">Göreli adres boş (""), bu nedenle bitiş noktası adresi temel adresle aynıdır.</span><span class="sxs-lookup"><span data-stu-id="273c1-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="273c1-113">Gerçek bitiş noktası `http://localhost:8000/servicemodelsamples/service`adresi .</span><span class="sxs-lookup"><span data-stu-id="273c1-113">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service`.</span></span>  
+## <a name="example"></a><span data-ttu-id="db8cc-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="db8cc-110">Example</span></span>  
+ <span data-ttu-id="db8cc-111">Aşağıdaki örnekte gösterilen ilk uç nokta tanımı göreli bir adresi belirtir. Bu, uç nokta adresinin temel adresin bir birleşimi ve Tekdüzen Kaynak tanımlayıcısı (URI) kompozisyonunun kurallarından sonraki göreli adres olduğu anlamına gelir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-111">The first endpoint definition shown in the following sample specifies a relative address, which means the endpoint address is a combination of the base address and the relative address following the rules of Uniform Resource Identifier (URI) composition.</span></span> <span data-ttu-id="db8cc-112">Göreli adres boş ("") olduğundan, uç nokta adresi taban adresle aynı olur.</span><span class="sxs-lookup"><span data-stu-id="db8cc-112">The relative address is empty (""), so the endpoint address is the same as the base address.</span></span> <span data-ttu-id="db8cc-113">Gerçek uç nokta adresi `http://localhost:8000/servicemodelsamples/service` .</span><span class="sxs-lookup"><span data-stu-id="db8cc-113">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service`.</span></span>  
   
 ```xml  
 <endpoint address=""
@@ -89,8 +89,8 @@ ms.locfileid: "81464125"
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="273c1-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="273c1-114">Example</span></span>  
- <span data-ttu-id="273c1-115">İkinci uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi göreli bir adres de belirtir.</span><span class="sxs-lookup"><span data-stu-id="273c1-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="273c1-116">Göreli adres, "test", temel adrese eklenir.</span><span class="sxs-lookup"><span data-stu-id="273c1-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="273c1-117">Gerçek bitiş noktası `http://localhost:8000/servicemodelsamples/service/test`adresi .</span><span class="sxs-lookup"><span data-stu-id="273c1-117">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service/test`.</span></span>  
+## <a name="example"></a><span data-ttu-id="db8cc-114">Örnek</span><span class="sxs-lookup"><span data-stu-id="db8cc-114">Example</span></span>  
+ <span data-ttu-id="db8cc-115">İkinci uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi göreli bir adresi de belirtir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-115">The second endpoint definition also specifies a relative address, as shown in the following sample configuration.</span></span> <span data-ttu-id="db8cc-116">Göreli adres "test", temel adrese eklenir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-116">The relative address, "test", is appended to the base address.</span></span> <span data-ttu-id="db8cc-117">Gerçek uç nokta adresi `http://localhost:8000/servicemodelsamples/service/test` .</span><span class="sxs-lookup"><span data-stu-id="db8cc-117">The actual endpoint address is `http://localhost:8000/servicemodelsamples/service/test`.</span></span>  
   
 ```xml  
 <endpoint address="/test"  
@@ -98,8 +98,8 @@ ms.locfileid: "81464125"
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="273c1-118">Örnek</span><span class="sxs-lookup"><span data-stu-id="273c1-118">Example</span></span>  
- <span data-ttu-id="273c1-119">Üçüncü uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi mutlak bir adres belirtir.</span><span class="sxs-lookup"><span data-stu-id="273c1-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="273c1-120">Temel adres adreste hiçbir rol oynamaz.</span><span class="sxs-lookup"><span data-stu-id="273c1-120">The base address plays no role in the address.</span></span> <span data-ttu-id="273c1-121">Gerçek bitiş noktası `http://localhost:8001/hello/servicemodelsamples`adresi .</span><span class="sxs-lookup"><span data-stu-id="273c1-121">The actual endpoint address is `http://localhost:8001/hello/servicemodelsamples`.</span></span>  
+## <a name="example"></a><span data-ttu-id="db8cc-118">Örnek</span><span class="sxs-lookup"><span data-stu-id="db8cc-118">Example</span></span>  
+ <span data-ttu-id="db8cc-119">Üçüncü uç nokta tanımı, aşağıdaki örnek yapılandırmada gösterildiği gibi mutlak bir adresi belirtir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-119">The third endpoint definition specifies an absolute address, as shown in the following sample configuration.</span></span> <span data-ttu-id="db8cc-120">Taban adresi adreste hiçbir rol oynamıyor.</span><span class="sxs-lookup"><span data-stu-id="db8cc-120">The base address plays no role in the address.</span></span> <span data-ttu-id="db8cc-121">Gerçek uç nokta adresi `http://localhost:8001/hello/servicemodelsamples` .</span><span class="sxs-lookup"><span data-stu-id="db8cc-121">The actual endpoint address is `http://localhost:8001/hello/servicemodelsamples`.</span></span>  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  
@@ -107,8 +107,8 @@ ms.locfileid: "81464125"
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="273c1-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="273c1-122">Example</span></span>  
- <span data-ttu-id="273c1-123">Dördüncü uç nokta adresi mutlak bir adres ve farklı bir aktarım belirtir—TCP.</span><span class="sxs-lookup"><span data-stu-id="273c1-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="273c1-124">Temel adres adreste hiçbir rol oynamaz.</span><span class="sxs-lookup"><span data-stu-id="273c1-124">The base address plays no role in the address.</span></span> <span data-ttu-id="273c1-125">Gerçek bitiş noktası adresi net.tcp://localhost:9000/servicemodelsamples/service olduğunu.</span><span class="sxs-lookup"><span data-stu-id="273c1-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
+## <a name="example"></a><span data-ttu-id="db8cc-122">Örnek</span><span class="sxs-lookup"><span data-stu-id="db8cc-122">Example</span></span>  
+ <span data-ttu-id="db8cc-123">Dördüncü uç nokta adresi, bir mutlak adresi ve farklı bir aktarımı (TCP) belirtir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-123">The fourth endpoint address specifies an absolute address and a different transport—TCP.</span></span> <span data-ttu-id="db8cc-124">Taban adresi adreste hiçbir rol oynamıyor.</span><span class="sxs-lookup"><span data-stu-id="db8cc-124">The base address plays no role in the address.</span></span> <span data-ttu-id="db8cc-125">Gerçek uç nokta adresi net. TCP:/localhost: 9000/servicemodelsamples/service ' dir.</span><span class="sxs-lookup"><span data-stu-id="db8cc-125">The actual endpoint address is net.tcp://localhost:9000/servicemodelsamples/service.</span></span>  
   
 ```xml  
 <endpoint address="net.tcp://localhost:9000/servicemodelsamples/service"  
@@ -116,8 +116,8 @@ ms.locfileid: "81464125"
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
-## <a name="example"></a><span data-ttu-id="273c1-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="273c1-126">Example</span></span>  
- <span data-ttu-id="273c1-127">Çalışma zamanı tarafından sağlanan varsayılan uç noktaları kullanmak için, kod veya yapılandırma dosyasında herhangi bir hizmet uç noktası belirtmeyin.</span><span class="sxs-lookup"><span data-stu-id="273c1-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="273c1-128">Bu örnekte, hizmet açıldığında çalışma süresi varsayılan uç noktaları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="273c1-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> <span data-ttu-id="273c1-129">Varsayılan uç noktalar, bağlamalar ve davranışlar hakkında daha fazla bilgi için wcf hizmetleri için [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve [Basitleştirilmiş Yapılandırma'ya](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="273c1-129">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="db8cc-126">Örnek</span><span class="sxs-lookup"><span data-stu-id="db8cc-126">Example</span></span>  
+ <span data-ttu-id="db8cc-127">Çalışma zamanı tarafından belirtilen varsayılan uç noktaları kullanmak için, kodda veya yapılandırma dosyasında herhangi bir hizmet uç noktası belirtmeyin.</span><span class="sxs-lookup"><span data-stu-id="db8cc-127">To use the default endpoints provided by the runtime, do not specify any service endpoints in either the code or the configuration file.</span></span> <span data-ttu-id="db8cc-128">Bu örnekte, çalışma zamanı, hizmet açıldığında varsayılan uç noktaları oluşturur.</span><span class="sxs-lookup"><span data-stu-id="db8cc-128">In this example, the runtime creates the default endpoints when the service is opened.</span></span> <span data-ttu-id="db8cc-129">Varsayılan uç noktalar, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../simplified-configuration.md) ve Basitleştirilmiş yapılandırma.</span><span class="sxs-lookup"><span data-stu-id="db8cc-129">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../simplified-configuration.md) and [Simplified Configuration for WCF Services](../samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
 ```xml  
 <configuration>  
