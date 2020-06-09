@@ -2,16 +2,16 @@
 title: NamedPipe Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a562ec51d35af08f49e89b652670e9a57b0f00c2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 8d9a10b94c52514db611144352653b911d109056
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837863"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602472"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Etkinleştirme
 
-Bu örnekte, ad kanalları üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme hizmeti (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) ' e dayalıdır ve Windows Vista 'nın çalışmasını gerektirir.
+Bu örnekte, ad kanalları üzerinden iletişim kuran bir hizmeti etkinleştirmek için Windows Işlem etkinleştirme hizmeti (WAS) kullanan bir hizmetin barındırılması gösterilmektedir. Bu örnek [Başlarken](getting-started-sample.md) ' e dayalıdır ve Windows Vista 'nın çalışmasını gerektirir.
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
@@ -21,7 +21,7 @@ Bu örnekte, ad kanalları üzerinden iletişim kuran bir hizmeti etkinleştirme
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`
 
@@ -29,7 +29,7 @@ Bu örnekte, ad kanalları üzerinden iletişim kuran bir hizmeti etkinleştirme
 
 Örnek, bir istemci konsol programından (. exe) ve Windows Işlem etkinleştirme Hizmetleri (WAS) tarafından etkinleştirilen bir çalışan işleminde barındırılan bir hizmet kitaplığından (. dll) oluşur. İstemci etkinliği konsol penceresinde görünür.
 
-Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, aşağıdaki örnek kodda gösterildiği gibi matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan `ICalculator` arabirimi tarafından tanımlanır.
+Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, `ICalculator` Aşağıdaki örnek kodda gösterildiği gibi matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -71,7 +71,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Örnek, değiştirilen `netNamedPipeBinding` bağlamasını güvenlik olmadan kullanır. Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Hizmetin bağlama türü, aşağıdaki örnek yapılandırmada gösterildiği gibi Endpoint öğesinin `binding` özniteliğinde belirtilir.
+Örnek, bir `netNamedPipeBinding` güvenlik olmadan değiştirilmiş bağlamayı kullanır. Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Hizmetin bağlama türü, `binding` Aşağıdaki örnek yapılandırmada gösterildiği gibi Endpoint öğesinin özniteliğinde belirtilir.
 
 Güvenli adlandırılmış kanal bağlamayı kullanmak istiyorsanız, sunucunun güvenlik modunu istediğiniz güvenlik ayarıyla değiştirin ve güncelleştirilmiş bir istemci yapılandırma dosyası almak için istemci üzerinde Svcutil. exe dosyasını yeniden çalıştırın.
 
@@ -161,7 +161,7 @@ Press <ENTER> to terminate client.
 
 1. IIS 7,0 'nin yüklü olduğundan emin olun. WAS etkinleştirmesi için IIS 7,0 gereklidir.
 
-2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
     Ayrıca, WCF HTTP olmayan etkinleştirme bileşenlerini yüklemelisiniz:
 
@@ -198,9 +198,9 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Bu komut, tek satırlık bir metin.
 
-        Bu komut,/servicemodelsamples uygulamasına hem `http://localhost/servicemodelsamples` hem de `net.tcp://localhost/servicemodelsamples`kullanılarak erişilmesini sağlar.
+        Bu komut, hem hem de kullanılarak/servicemodelsamples uygulamasına erişilmesini sağlar `http://localhost/servicemodelsamples` `net.tcp://localhost/servicemodelsamples` .
 
-4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+4. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
 5. Bu örnek için eklemiş olduğunuz net. pipe site bağlamasını kaldırın.
 

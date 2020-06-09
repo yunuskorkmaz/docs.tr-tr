@@ -2,146 +2,146 @@
 title: İşlem Protokolleri
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 8f16f7a6c13ca557ce4160d927ef6f075a79b4c8
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 17131c4cd10d9441ec65f9da4137147a703eb87c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600990"
 ---
 # <a name="transaction-protocols"></a>İşlem Protokolleri
-Windows Communication Foundation (WCF), WS-Atomik İşlem ve WS-Koordinasyon protokollerini uygular.  
+Windows Communication Foundation (WCF), WS Atomik Işlem ve WS-koordinasyon protokolleri uygular.  
   
-|Belirtim/Belge|Sürüm|Bağlantı|  
+|Belirtim/belge|Sürüm|Bağlantı|  
 |-----------------------------|-------------|----------|  
-|WS-Koordinasyon|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
+|WS koordinasyonu|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
 |WS-AtomicTransaction|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
   
- Bu protokol belirtimleri üzerinde birlikte çalışabilirlik iki düzeyde gereklidir: uygulamalar arasında ve işlem yöneticileri arasında (aşağıdaki şekilden bakın). Belirtimler, her iki birlikte çalışabilirlik düzeyi için ileti biçimlerini ve ileti alışverişini ayrıntılı olarak açıklar. Uygulama-uygulama değişimi için belirli güvenlik, güvenilirlik ve kodlamalar, düzenli uygulama değişimi için olduğu gibi geçerlidir. Ancak, işlem yöneticileri arasında başarılı birlikte çalışabilirlik, genellikle kullanıcı tarafından yapılandırılmadığından, belirli bağlama üzerinde anlaşma gerektirir.  
+ Bu protokol belirtimlerinde birlikte çalışabilirlik iki düzeyde gereklidir: uygulamalar arasında ve işlem yöneticileri arasında (aşağıdaki şekle bakın). Özellikler, her iki birlikte çalışabilirlik düzeyi için İleti biçimlerini ve ileti değişimini harika ayrıntılarla anlatmaktadır. Uygulamadan uygulamaya Exchange 'e yönelik belirli güvenlik, güvenilirlik ve kodlamalar, düzenli uygulama alışverişi için olduğu gibi uygulanır. Ancak, işlem yöneticileri arasında başarılı birlikte çalışabilirlik, genellikle kullanıcı tarafından yapılandırılmadığı için belirli bir bağlamada anlaşma gerektirir.  
   
- Bu konu, WS-Atomic Transaction (WS-AT) belirtiminin güvenlikle ilgili bir bileşimini açıklar ve işlem yöneticileri arasında iletişim için kullanılan güvenli bağlamayı açıklar. Bu belgede açıklanan yaklaşım, IBM, IONA, Sun Microsystems ve diğerleri de dahil olmak üzere WS-AT ve WS-Coordination'un diğer uygulamalarıyla başarıyla test edilmiştir.  
+ Bu konu, güvenlik ile WS Atomik Işlem (WS-AT) belirtiminin bir oluşumunu açıklar ve işlem yöneticileri arasında iletişim için kullanılan güvenli bağlamayı açıklar. Bu belgede açıklanan yaklaşım IBM, ıLONA, Sun Microsystems ve diğerleri dahil olmak üzere WS-AT ve WS-koordinasyon uygulamalarıyla başarıyla test edilmiştir.  
   
- Aşağıdaki şekil, iki işlem yöneticisi, İşlem Yöneticisi 1 ve İşlem Yöneticisi 2 ve iki uygulama, Uygulama 1 ve Uygulama 2 arasındaki birlikte çalışabilirliği gösterir:  
+ Aşağıdaki şekilde iki işlem yöneticisi, Işlem Yöneticisi 1 ve Işlem yöneticisi 2 ile iki uygulama, uygulama 1 ve uygulama 2 arasındaki birlikte çalışabilirlik gösterilmektedir:  
   
- ![Hareket yöneticileri arasındaki etkileşimi gösteren ekran görüntüsü.](./media/transaction-protocols/transaction-managers-flow.gif)  
+ ![İşlem yöneticileri arasındaki etkileşimi gösteren ekran görüntüsü.](./media/transaction-protocols/transaction-managers-flow.gif)  
   
- Bir Başlatıcı (I) ve bir Katılımcı (P) ile tipik bir WS-Coordination/WS-Atomic Transaction senaryosudüşünün. Hem Başlatıcı hem de Katılımcı'nın Işlem Yöneticileri (sırasıyla ITM ve PTM) vardır. İki aşamalı taahhüt bu konuda 2PC olarak adlandırılır.  
+ Tek bir başlatıcı (I) ve bir katılımcı (P) ile tipik bir WS-koordinasyon/WS-Atomik Işlem senaryosu düşünün. Hem Başlatıcı hem de katılımcı Işlem yöneticilerine (sırasıyla ıSTREAM ve PTM) sahiptir. İki aşamalı yürütmeye bu konuda 2PC adı verilir.  
   
 |||  
 |-|-|  
-|1. CreateCoordinationContext|12. Uygulama Mesajı Yanıtı|  
-|2. CreateCoordinationContextResponse|13. Taahhüt (Tamamlama)|  
-|3. Kayıt (Tamamlama)|14. Hazırlayın (2PC)|  
-|4. RegisterResponse|15. Hazırlayın (2PC)|  
-|5. Uygulama Mesajı|16. Hazırlanan (2PC)|  
-|6. Bağlam ile Koordinasyon Bağlamı Oluşturma|17. Hazırlanan (2PC)|  
-|7. Kayıt (Dayanıklı)|18. Taahhüt (Tamamlama)|  
-|8. RegisterResponse|19. Taahhüt (2PC)|  
-|9. CreateCoordinationContextResponse|20. Taahhüt (2PC)|  
-|10. Kayıt (Dayanıklı)|21. Taahhüt (2PC)|  
-|11. RegisterResponse|22. Taahhüt (2PC)|  
+|1. Createkoordinattioncontext|12. uygulama Iletisi yanıtı|  
+|2. Createkoordinattioncontextresponse|13. COMMIT (tamamlama)|  
+|3. yazmaç (tamamlama)|14. Prepare (2PC)|  
+|4. RegisterResponse|15. hazırlama (2PC)|  
+|5. uygulama Iletisi|16. hazırlandı (2PC)|  
+|6. Createkoordinattioncontext WITH bağlamı|17. hazırlandı (2PC)|  
+|7. Kayıt (dayanıklı)|18. taahhüt (tamamlama)|  
+|8. RegisterResponse|19. COMMIT (2PC)|  
+|9. Createkoordinattioncontextresponse|20. COMMIT (2PC)|  
+|10. Kayıt (dayanıklı)|21. taahhüt (2PC)|  
+|11. RegisterResponse|22. taahhüt (2PC)|  
   
- Bu belge, WS-AtomicTransaction belirtiminin güvenlikle ilgili bir bileşimini açıklar ve işlem yöneticileri arasında iletişim için kullanılan güvenli bağlamayı açıklar. Bu belgede açıklanan yaklaşım, WS-AT ve WS-Coordination'un diğer uygulamalarıyla başarıyla test edilmiştir.  
+ Bu belge, güvenlik ile WS-AtomicTransaction belirtiminin bir oluşumunu açıklar ve işlem yöneticileri arasında iletişim için kullanılan güvenli bağlamayı açıklar. Bu belgede açıklanan yaklaşım, WS-AT ve WS-koordinasyonun diğer uygulamalarıyla başarıyla test edilmiştir.  
   
- Şekil ve tablo, güvenlik açısından dört ileti sınıfını gösterir:  
+ Şekil ve tablo, güvenlik açısından görüş açısından dört ileti sınıfını gösterir:  
   
-- Etkinleştirme iletileri (CreateCoordinationContext ve CreateCoordinationContextResponse).  
+- Etkinleştirme iletileri (Createkoordinattioncontext ve Createkoordinattioncontextresponse).  
   
-- Kayıt mesajları (Kayıt ve Kayıt Yanıtı)  
+- Kayıt iletileri (Register ve RegisterResponse)  
   
-- Protokol iletileri (Hazırla, Geri Alma, Commit, İptal vb.)  
+- Protokol iletileri (hazırlama, geri alma, tamamlama, Iptal etme vb.).  
   
 - Uygulama iletileri.  
   
- İlk üç ileti sınıfı İşlem Yöneticisi iletileri olarak kabul edilir ve bağlama yapılandırmaları daha sonra bu konunun "Uygulama İletisi Değişimi"nde açıklanır. Dördüncü sınıf ileti, uygulama iletilerine uygulamadır ve daha sonra bu konunun "İleti Örnekleri" bölümünde açıklanmıştır. Bu bölümde, WCF tarafından bu sınıfların her biri için kullanılan protokol bağlamaları açıklanmaktadır.  
+ İlk üç ileti sınıfı, Işlem yöneticisi iletileri olarak kabul edilir ve bağlama yapılandırması bu konunun ilerleyen kısımlarında "uygulama Ileti değişimi" bölümünde açıklanmaktadır. Dördüncü ileti sınıfı, uygulama iletileri için uygulamadır ve bu konunun ilerleyen kısımlarında "Ileti örnekleri" bölümünde açıklanmaktadır. Bu bölümde, bu sınıfların her biri için WCF tarafından kullanılan protokol bağlamaları açıklanmaktadır.  
   
- Bu belge boyunca aşağıdaki XML Ad Alanları ve ilişkili önekleri kullanılır.  
+ Aşağıdaki XML ad alanları ve ilişkili ön ekler Bu belge boyunca kullanılır.  
   
-|Ön ek|Sürüm|Namespace URI|  
+|Ön ek|Sürüm|Ad alanı URI 'SI|  
 |------------|-------------|-------------------|  
 |s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
-|Wsa|1.0 Öncesi<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  
+|WSA|1,0 öncesi<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  
 |wscoor|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
-|wsat|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
-|t|1.3'ün öncesi<br /><br /> 1.3|<http://schemas.xmlsoap.org/ws/2005/02/trust/><br /><br /> <https://docs.oasis-open.org/ws-sx/ws-trust/200512>|  
+|WSAT|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
+|t|1,3 öncesi<br /><br /> 1.3|<http://schemas.xmlsoap.org/ws/2005/02/trust/><br /><br /> <https://docs.oasis-open.org/ws-sx/ws-trust/200512>|  
 |o||<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd>|  
-|Xsd||<https://www.w3.org/2001/XMLSchema>|  
+|yapamadı||<https://www.w3.org/2001/XMLSchema>|  
   
-## <a name="transaction-manager-bindings"></a>İşlem Yöneticisi Bağlamaları  
- R1001: WS-AT 1.0 işlemine katılan işlem yöneticileri, WS-Atomik İşlem ve WS-Koordinasyon ileti alışverişi için SOAP 1.1 ve WS-Addressing 2004/08'i kullanmalıdır.  
+## <a name="transaction-manager-bindings"></a>İşlem Yöneticisi bağlamaları  
+ R1001: WS-AT 1,0 işlemine katılan Işlem yöneticileri, WS-Atomik Işlem ve WS-koordinasyon ileti alışverişi için SOAP 1,1 ve WS-Addressing 2004/08 kullanmalıdır.  
   
- R1002: WS-AT 1.1 işlemine katılan işlem yöneticileri, WS-Atomik İşlem ve WS-Koordinasyon ileti alışverişi için SOAP 1.1 ve WS-Addressing 2005/08'i kullanmalıdır.  
+ R1002: WS-AT 1,1 işlemine katılan Işlem yöneticileri, WS-Atomik Işlem ve WS-koordinasyon ileti alışverişi için SOAP 1,1 ve WS-Addressing 2005/08 kullanmalıdır.  
   
- Uygulama iletileri bu bağlamalarla sınırlandırılmamıştır ve daha sonra açıklanır.  
+ Uygulama iletileri bu bağlamalarla sınırlı değildir ve daha sonra açıklanır.  
   
-### <a name="transaction-manager-https-binding"></a>İşlem Yöneticisi HTTPS Ciltleme  
- İşlem yöneticisi HTTPS bağlama, güvenliği sağlamak ve hareket ağacındaki her gönderen-alıcı çifti arasında güven oluşturmak için yalnızca aktarım güvenliğine dayanır.  
+### <a name="transaction-manager-https-binding"></a>İşlem Yöneticisi HTTPS bağlama  
+ İşlem Yöneticisi HTTPS bağlaması, güvenlik elde etmek ve işlem ağacındaki her gönderici alıcısı çifti arasında güven sağlamak için yalnızca taşıma güvenliğine dayanır.  
   
-#### <a name="https-transport-configuration"></a>HTTPS Aktarım Yapılandırması  
- X.509 sertifikaları İşlem Yöneticisi Kimliğini oluşturmak için kullanılır. İstemci/sunucu kimlik doğrulaması gereklidir ve istemci/sunucu yetkilendirmesi bir uygulama ayrıntısı olarak bırakılır:  
+#### <a name="https-transport-configuration"></a>HTTPS aktarım yapılandırması  
+ X. 509.440 sertifikaları, Işlem yöneticisi kimliğini oluşturmak için kullanılır. İstemci/sunucu kimlik doğrulaması gereklidir ve istemci/sunucu yetkilendirmesi uygulama ayrıntısı olarak bırakılır:  
   
-- R1111: Tel üzerinde sunulan X.509 sertifikaları, kaynak makinenin tam nitelikli alan adı (FQDN) eşleşen bir konu adı olmalıdır.  
+- R1111: tel üzerinden sunulan X. 509.440 sertifikalarının, kaynak makinenin tam etki alanı adı (FQDN) ile eşleşen bir konu adı olması gerekir.  
   
-- B1112: DNS, x.509 konu adı denetimleri için sistemdeki her gönderen-alıcı çifti arasında işlevsel olmalıdır.  
+- B1112: X. 509.440 konu adı denetimlerinin başarılı olması için sistemdeki her gönderici alıcısı çifti arasında DNS işlevsel olmalıdır.  
   
-#### <a name="activation-and-registration-binding-configuration"></a>Etkinleştirme ve Kayıt Bağlama Yapılandırması  
- WCF, HTTPS üzerinden korelasyon içeren istek/yanıt çift yönlü bağlama gerektirir. (İstek/yanıt iletisi değişim şekillerinin korelasyon ve açıklamaları hakkında daha fazla bilgi için bkz.  
+#### <a name="activation-and-registration-binding-configuration"></a>Etkinleştirme ve kayıt bağlama yapılandırması  
+ WCF, HTTPS üzerinden bağıntı ile istek/yanıt çift yönlü bağlamayı gerektirir. (İstek/yanıt iletisi değişim desenlerinin bağıntısı ve açıklamaları hakkında daha fazla bilgi için bkz. WS Atomik Işlem, Bölüm 8.)  
   
-#### <a name="2pc-protocol-binding-configuration"></a>2PC Protokol Bağlama Yapılandırması  
- WCF, HTTPS üzerinden tek yönlü (datagram) iletileri destekler. İletiler arasındaki korelasyon bir uygulama ayrıntısı olarak bırakılır.  
+#### <a name="2pc-protocol-binding-configuration"></a>2PC protokol bağlama yapılandırması  
+ WCF, HTTPS üzerinden tek yönlü (Datagram) iletileri destekler. İletiler arasındaki bağıntı uygulama ayrıntısı olarak kalır.  
   
- B1131: WCF'nin 2PC iletilerinin korelasyonuna ulaşmak için uygulamalar WS-Addressing'de açıklandığı şekilde desteklenmelidir. `wsa:ReferenceParameters`  
+ B1131: uygulamalar `wsa:ReferenceParameters` , WCF 2PC iletilerinin bağıntısını elde etmek IÇIN ws-Addressing bölümünde açıklandığı gibi desteklemelidir.  
   
-### <a name="transaction-manager-mixed-security-binding"></a>İşlem Yöneticisi Karışık Güvenlik Bağlama  
- Bu, kimlik kuruluş amaçları için WS-Koordinasyon Verilen Belirteç modeliyle birlikte taşıma güvenliğini kullanan alternatif (karma mod) bağlayıcıdır. Etkinleştirme ve Kayıt, iki bağlama arasında farklılık gösteren tek öğelerdir.  
+### <a name="transaction-manager-mixed-security-binding"></a>Transaction Manager karışık güvenlik bağlama  
+ Bu, kimlik oluşturma amacıyla WS koordinasyonu verilen belirteç modeliyle birleştirilmiş aktarım güvenliği kullanan alternatif (karışık mod) bağlamadır. Etkinleştirme ve kayıt, iki bağlama arasında farklı olan tek öğelerdir.  
   
-#### <a name="https-transport-configuration"></a>HTTPS Aktarım Yapılandırması  
- X.509 sertifikaları İşlem Yöneticisi Kimliğini oluşturmak için kullanılır. İstemci/Sunucu kimlik doğrulaması gereklidir ve istemci/sunucu yetkilendirmesi bir uygulama ayrıntısı olarak bırakılır.  
+#### <a name="https-transport-configuration"></a>HTTPS aktarım yapılandırması  
+ X. 509.440 sertifikaları, Işlem yöneticisi kimliğini oluşturmak için kullanılır. İstemci/sunucu kimlik doğrulaması gereklidir ve istemci/sunucu yetkilendirmesi uygulama ayrıntısı olarak bırakılır.  
   
-#### <a name="activation-message-binding-configuration"></a>Etkinleştirme İleti bağlama yapılandırması  
- Etkinleştirme İletileri genellikle bir uygulama ve yerel İşlem Yöneticisi arasında meydana geldiğinden, genellikle birlikte çalışabilirlik katılmaz.  
+#### <a name="activation-message-binding-configuration"></a>Etkinleştirme Iletisi bağlama yapılandırması  
+ Etkinleştirme Iletileri genellikle bir uygulama ve kendi yerel Işlem yöneticisi arasında gerçekleştiğinden birlikte çalışabilirliğe katılmaz.  
   
- B1221: WCF, Etkinleştirme iletileri için çift yönlü HTTPS bağlama [(Mesajlaşma Protokolleri'nde](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)açıklanan) kullanır. İstek ve Yanıt iletileri WS-At 1.0 için WS-Adresleme 2004/08 ve WS-AT 1.1 için WS-Addressing 2005/08 kullanılarak ilişkilidir.  
+ B1221: WCF etkinleştirme iletileri için çift yönlü HTTPS bağlamasını ( [mesajlaşma protokollerinde](messaging-protocols.md)açıklanmıştır) kullanır. İstek ve yanıt iletileri WS-AT 1,0 için ws-Addressing 2004/08 ve WS-AT 1,1 için ws-Addressing 2005/08 kullanılarak bağıntılı.  
   
- WS-Atomik İşlem belirtimi, Bölüm 8, korelasyon ve ileti alışverişi desenleri hakkında daha fazla ayrıntı açıklar.  
+ WS Atomik Işlem belirtimi, Bölüm 8, bağıntı ve ileti değişimi desenleri hakkında daha fazla ayrıntı açıklamaktadır.  
   
-- R1222: Bir `CreateCoordinationContext`aldıktan sonra, Koordinatör `SecurityContextToken` ilişkili bir `STx`sır ile bir sorunu olmalıdır. Bu belirteç, `t:IssuedTokens` WS-Trust belirtimini izleyen bir üstbilgi içinde döndürülür.  
+- R1222: bir aldıktan sonra `CreateCoordinationContext` , düzenleyicinin bir `SecurityContextToken` ilişkili gizli anahtar ile vermesi gerekir `STx` . Bu belirteç, `t:IssuedTokens` WS-Trust belirtiminin sonraki bir üst bilgi içinde döndürülür.  
   
-- R1223: Etkinleştirme varolan bir Koordinasyon Bağlamı içinde `SecurityContextToken` gerçekleşirse, varolan `CreateCoordinationContext` Bağlam ile ilişkili `t:IssuedTokens` üstbilginin iletiüzerinde akması gerekir.  
+- R1223: etkinleştirme var olan bir düzenleme bağlamında gerçekleşirse, var olan `t:IssuedTokens` `SecurityContextToken` bağlamla ilişkili üst bilginin ileti üzerinde akışı olmalıdır `CreateCoordinationContext` .  
   
- Giden `wscoor:CreateCoordinationContextResponse` `t:IssuedTokens` iletiye iliştirmek için yeni bir üstbilgi oluşturulmalıdır.  
+ `t:IssuedTokens`Giden iletiye ekleme için yeni bir üst bilgi oluşturulmalıdır `wscoor:CreateCoordinationContextResponse` .  
   
-#### <a name="registration-message-binding-configuration"></a>Kayıt İletisi Bağlama Yapılandırması  
- B1231: WCF çift yönlü HTTPS bağlama kullanır [(Mesajlaşma Protokolleri'nde](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)açıklanmıştır). İstek ve Yanıt iletileri WS-At 1.0 için WS-Adresleme 2004/08 ve WS-AT 1.1 için WS-Addressing 2005/08 kullanılarak ilişkilidir.  
+#### <a name="registration-message-binding-configuration"></a>Kayıt Iletisi bağlama yapılandırması  
+ B1231: WCF çift yönlü HTTPS bağlamasını kullanır ( [mesajlaşma protokollerinde](messaging-protocols.md)açıklanmıştır). İstek ve yanıt iletileri WS-AT 1,0 için ws-Addressing 2004/08 ve WS-AT 1,1 için ws-Addressing 2005/08 kullanılarak bağıntılı.  
   
- WS-AtomicTransaction, Bölüm 8, korelasyon ve ileti alışverişi desenleri açıklamaları hakkında daha fazla bilgi açıklar.  
+ WS-AtomicTransaction, Bölüm 8, ileti değişim desenlerinin bağıntı ve açıklamaları hakkında daha fazla ayrıntı açıklamaktadır.  
   
- R1232: Giden `wscoor:Register` iletiler Güvenlik `IssuedTokenOverTransport` [Protokolleri'nde](../../../../docs/framework/wcf/feature-details/security-protocols.md)açıklanan kimlik doğrulama modunu kullanmalıdır.  
+ R1232: giden `wscoor:Register` Iletilerin `IssuedTokenOverTransport` [Güvenlik protokollerinde](security-protocols.md)açıklanan kimlik doğrulama modunu kullanması gerekir.  
   
- `SecurityContextToken STx` Öğe, `wsse:Timestamp` verilen kullanılarak imzalanmalıdır. Bu imza, belirli bir işlemle ilişkili belirteç sahibi olduğunun kanıtıdır ve harekette kaydolan bir katılımcının kimliğini doğrulamak için kullanılır. RegistrationResponse iletisi HTTPS üzerinden geri gönderilir.  
+ `wsse:Timestamp`Öğe, verilen kullanılarak imzalanmalıdır `SecurityContextToken STx` . Bu imza, belirli bir işlemle ilişkili belirtecin bir kanıtıdır ve işlemde bir katılımcı listesini doğrulamak için kullanılır. RegistrationResponse iletisi HTTPS üzerinden geri gönderilir.  
   
-#### <a name="2pc-protocol-binding-configuration"></a>2PC Protokol Bağlama Yapılandırması  
- WCF, HTTPS üzerinden tek yönlü (datagram) iletileri destekler. İletiler arasındaki korelasyon bir uygulama ayrıntısı olarak bırakılır.  
+#### <a name="2pc-protocol-binding-configuration"></a>2PC protokol bağlama yapılandırması  
+ WCF, HTTPS üzerinden tek yönlü (Datagram) iletileri destekler. İletiler arasındaki bağıntı uygulama ayrıntısı olarak kalır.  
   
- B1241: WCF'nin 2PC iletilerinin korelasyonuna ulaşmak için uygulamalar WS-Addressing'de açıklandığı şekilde desteklenmelidir. `wsa:ReferenceParameters`  
+ B1241: uygulamalar `wsa:ReferenceParameters` , WCF 2PC iletilerinin bağıntısını elde etmek IÇIN ws-Addressing bölümünde açıklandığı gibi desteklemelidir.  
   
-## <a name="application-message-exchange"></a>Uygulama İletisi Değişimi  
- Uygulamalar, aşağıdaki güvenlik gereksinimlerini karşıladığı sürece, uygulamadan uygulamaya iletiler için belirli bir bağlamayı kullanmakta serbesttir:  
+## <a name="application-message-exchange"></a>Uygulama Iletisi değişimi  
+ Bağlama aşağıdaki güvenlik gereksinimlerini karşıladığı sürece, uygulamalar uygulamadan uygulamaya iletiler için herhangi bir bağlamayı kullanabilir.  
   
-- R2001: Uygulama dan uygulama iletileri `t:IssuedTokens` üstbilgi ile `CoordinationContext` birlikte iletinin üstbilgi de akmalıdır.  
+- R2001: uygulamadan uygulamaya iletiler `t:IssuedTokens` , iletinin üstbilgisindeki üst bilgisini ile birlikte akmalıdır `CoordinationContext` .  
   
-- R2002: Bütünlük ve gizlilik `t:IssuedToken` sağlanmalıdır.  
+- R2002: bütünlük ve gizliliği `t:IssuedToken` sağlanmalıdır.  
   
- Üstbilgi. `CoordinationContext` `wscoor:Identifier` Tanımı hem `xsd:AnyURI` mutlak hem de göreceli URI kullanımına izin `wscoor:Identifiers`verirken, WCF yalnızca mutlak URI'leri destekler.  
+ `CoordinationContext`Üst bilgi içerir `wscoor:Identifier` . Tanımı `xsd:AnyURI` mutlak ve göreli URI 'lerin kullanılmasına izin verdiğinden, WCF yalnızca `wscoor:Identifiers` mutlak URI 'leri destekler.  
   
- B2003: `wscoor:Identifier` Göreceli uri `wscoor:CoordinationContext` ise, hatalar işlemsel WCF hizmetlerinden iade edilecektir.  
+ B2003: `wscoor:Identifier` öğesinin `wscoor:CoordinationContext` değeri GÖRELI bir URI ise, hatalar işlem WCF hizmetlerinden döndürülür.  
   
-## <a name="message-examples"></a>İleti Örnekleri  
+## <a name="message-examples"></a>İleti örnekleri  
   
-### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext İstek/Yanıt İletileri  
- Aşağıdaki iletiler bir istek/yanıt deseni izler.  
+### <a name="createcoordinationcontext-requestresponse-messages"></a>Createkoordinattioncontext Isteği/yanıt Iletileri  
+ Aşağıdaki iletiler bir istek/yanıt modelini izler.  
   
-#### <a name="createcoordinationcontext-with-wscoor-10"></a>WSCoor 1.0 ile CreateCoordinationContext  
+#### <a name="createcoordinationcontext-with-wscoor-10"></a>WSCoor 1,0 ile Createkoordinattioncontext  
   
 ```xml  
 <s:Envelope>  
@@ -167,7 +167,7 @@ Windows Communication Foundation (WCF), WS-Atomik İşlem ve WS-Koordinasyon pro
 </s11:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontext-with-wscoor-11"></a>WSCoor 1.1 ile CreateCoordinationContext  
+#### <a name="createcoordinationcontext-with-wscoor-11"></a>WSCoor 1,1 ile Createkoordinattioncontext  
   
 ```xml  
 <s:Envelope>
@@ -193,7 +193,7 @@ Windows Communication Foundation (WCF), WS-Atomik İşlem ve WS-Koordinasyon pro
 </s11:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontextresponse-with-trust-pre-13-and-wscoor-10"></a>Güven Pre-1.3 ve WSCoor 1.0 ile CreateCoordinationContextResponse  
+#### <a name="createcoordinationcontextresponse-with-trust-pre-13-and-wscoor-10"></a>Trust-1,3 ve Wscoveya 1,0 ile Createkoordinattioncontextresponse  
   
 ```xml  
 <s:Envelope>  
@@ -275,7 +275,7 @@ Windows Communication Foundation (WCF), WS-Atomik İşlem ve WS-Koordinasyon pro
 </s:Envelope>  
 ```  
   
-#### <a name="createcoordinationcontextresponse-with-trust-13-and-wscoor-11"></a>Güven 1.3 ve WSCoor 1.1 ile KoordinasyonBağlam Yanıtı Oluşturma  
+#### <a name="createcoordinationcontextresponse-with-trust-13-and-wscoor-11"></a>Trust 1,3 ve WSCoor 1,1 ile Createkoordinattioncontextresponse  
   
 ```xml  
 <s:Envelope>  
@@ -351,10 +351,10 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 </s:Envelope>  
 ```  
   
-### <a name="registration-messages"></a>Kayıt Mesajları  
- Aşağıdaki iletiler kayıt iletileridir.  
+### <a name="registration-messages"></a>Kayıt Iletileri  
+ Aşağıdaki iletiler kayıt mesajlardır.  
   
-#### <a name="register-with-wscoor-10"></a>WSCoor 1.0 ile kaydolun  
+#### <a name="register-with-wscoor-10"></a>WSCoor 1,0 ile kaydolun  
   
 ```xml  
 <s:Envelope>  
@@ -415,7 +415,7 @@ xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
 </s:Envelope>  
 ```  
   
-#### <a name="register-with-wscoor-11"></a>WSCoor 1.1 ile kaydolun  
+#### <a name="register-with-wscoor-11"></a>WSCoor 1,1 ile kaydolun  
   
 ```xml  
 <s:Envelope>  
@@ -474,7 +474,7 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-10"></a>WSCoor 1.0 ile Yanıt Kaydol  
+#### <a name="register-response-with-wscoor-10"></a>WSCoor 1,0 ile yanıtı kaydetme  
   
 ```xml  
 <s:Envelope>  
@@ -510,7 +510,7 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-11"></a>WSCoor 1.1 ile Yanıt Kaydol  
+#### <a name="register-response-with-wscoor-11"></a>WSCoor 1,1 ile yanıtı kaydetme  
   
 ```xml  
 <s:Envelope>  
@@ -541,10 +541,10 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 </s:Envelope>  
 ```  
   
-### <a name="two-phase-commit-protocol-messages"></a>İki Aşamalı Commit Protokol İletileri  
- Aşağıdaki ileti, iki aşamalı commit (2PC) protokolü ile ilgilidir.  
+### <a name="two-phase-commit-protocol-messages"></a>İki aşamalı tamamlama Protokolü Iletisi  
+ Aşağıdaki ileti, iki aşamalı tamamlama (2PC) protokolüyle ilişkilidir.  
   
-#### <a name="commit-with-wsat-10"></a>WSAT 1.0 ile işleme  
+#### <a name="commit-with-wsat-10"></a>WSAT 1,0 ile Yürüt  
   
 ```xml  
 <s:Envelope>  
@@ -567,7 +567,7 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 </s:Envelope>  
 ```  
   
-#### <a name="commit-with-wsat-11"></a>WSAT 1.1 ile işleme  
+#### <a name="commit-with-wsat-11"></a>WSAT 1,1 ile Yürüt  
   
 ```xml  
 <s:Envelope>  
@@ -590,10 +590,10 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 </s:Envelope>  
 ```  
   
-### <a name="application-messages"></a>Uygulama Mesajları  
- Aşağıdaki iletiler uygulama iletileridir.  
+### <a name="application-messages"></a>Uygulama Iletileri  
+ Aşağıdaki iletiler uygulama mesajlardır.  
   
-#### <a name="application-message-request"></a>Uygulama mesajı-İstek  
+#### <a name="application-message-request"></a>Uygulama iletisi-Istek  
   
 ```xml  
 <s:Envelope>  

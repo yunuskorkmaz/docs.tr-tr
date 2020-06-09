@@ -2,48 +2,48 @@
 title: Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-ms.openlocfilehash: cc60ee32efcbe1e6ac1ce620fa1c17504db5197f
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 9b0a3535282a1fcc1103651f5601459e80d3d8d4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601107"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Genişletilmiş Koruma Kimlik Doğrulama için Beni Oku Örnek
 
-Genişletilmiş koruma, bir saldırgan ("adam-in--middle") istemci kimlik bilgileri yakalar ve bunları istemcinin hedeflenen sunucusundaki güvenli kaynaklara erişmek için kullandığı adam-de-adam (MITM) saldırılarına karşı korumak için bir güvenlik girişimidir.
+Genişletilmiş koruma, bir saldırganın ("ortadaki adam") bir istemcinin kimlik bilgilerini aldığı ve istemcinin hedeflenen sunucusundaki güvenli kaynaklara erişmek için bunları kullandığı, ortadaki adam (MITı) saldırılarına karşı koruma sağlayan bir güvenlik girişimidir.
 
-Daha fazla bilgi için [kimlik doğrulamasına genel bakış için genişletilmiş koruma](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).
+Daha fazla bilgi için bkz. [kimlik doğrulaması için genişletilmiş koruma genel bakış](extended-protection-for-authentication-overview.md).
 
 > [!NOTE]
-> Bu örnek yalnızca IIS üzerinde barındırıldığında çalışır. HTTPS desteklemediği için Visual Studio geliştirme sunucusu üzerinde çalışmaz.
+> Bu örnek yalnızca IIS üzerinde barındırıldığında geçerlidir. Bu, HTTPS 'yi desteklemediğinden, Visual Studio geliştirme sunucusu üzerinde çalışmaz.
 
-## <a name="to-set-up-build-and-run-the-sample"></a>Ayarlamak için derleme ve örneği çalıştırma
+## <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. IIS üzerinde Program Ekle/Kaldır makineden yükleme -> Windows özelliklerini.
+1. Program Ekle/Kaldır-> Windows Özellikleri ' nden makineye IIS 'yi yükler.
 
-2. Windows kimlik doğrulamasını Windows özelliklerini aç: Internet Information Services World Wide Web -> hizmetler -> Güvenlik Windows kimlik doğrulaması ->.
+2. Windows özelliklerinde Windows kimlik doğrulamasını aç: Internet Information Services > World Wide Web Hizmetleri-> güvenlik-> Windows kimlik doğrulaması.
 
-3. HTTP etkinleştirmesini Windows özelliklerini aç: Microsoft .NET Framework 3.5.1 -> Windows Communication Foundation HTTP etkinleştirme.
+3. Windows özelliklerinde HTTP etkinleştirmesini aç: Microsoft .NET Framework 3.5.1-> Windows Communication Foundation HTTP etkinleştirmesi.
 
-4. İstemcinin sunucuyla güvenli bir kanal oluşturmak için bu örneği gerektirir ve bu nedenle, Internet Information Services (IIS) Yöneticisi'nden yüklenebilecek bir sunucu sertifikası varlığını gerektirir.
+4. Bu örnek, istemcisinin sunucu ile güvenli bir kanal kurmasını ve bu nedenle Internet Information Services (IIS) yöneticisinden yüklenebilen bir sunucu sertifikası olması gerekir.
 
-    1. Açık IIS Yöneticisi -> sunucu sertifikaları (sekmesinden özelliği Görünüm).
+    1. IIS Yöneticisi-> sunucusu sertifikalarını açın (Özellik görünümü sekmesinden).
 
-    2. Bu örnek sınama amacıyla bir otomatik olarak imzalanan sertifika oluşturabilirsiniz. (Internet Explorer'ı güvenli olmadığı hakkında sertifika istemek için istemiyorsanız, güvenilen kök sertifika yetkilisi depolarında yükleyebilirsiniz).
+    2. Bu örneği test etmek amacıyla kendinden imzalı bir sertifika oluşturabilirsiniz. (Internet Explorer 'ın sertifikayı güvenli hale getirmek için size sormasını istemiyorsanız, güvenilir sertifika kök yetkilisi deposuna yükleyebilirsiniz).
 
-5. Varsayılan Web sitesi için Eylemler bölmesine gidin. Düzenle düğmesine Site bağlamaları ->. Bir tür olarak HTTPS henüz varsa, bağlantı noktası numarası 443 ve Yukarıdaki adımda oluşturulan SSL sertifika atama ekleyin.
+5. Varsayılan Web sitesi için eylemler bölmesine gidin. Site > bağlamalarını Düzenle ' ye tıklayın. Zaten mevcut değilse HTTPS 'yi bir tür olarak ekleyin, bağlantı noktası numarası 443 ve yukarıdaki adımda oluşturulan SSL sertifikasını atayın.
 
-6. Derleme hizmeti. Bu sanal dizini IIS içinde sizin için (post yapı eylemi proje özelliklerinde belirtilen) oluşturur ve barındırılan Web olması için bir hizmet için gerektiği şekilde dll, .svc ve yapılandırma dosyalarını kopyalar.
+6. Hizmeti oluşturun. Bu, IIS 'de sizin için bir sanal dizin oluşturur (proje özelliklerinde belirtilen derleme sonrası eyleminden) ve bir hizmetin Web 'de barındırılması için gerektiğinde dll,. svc ve yapılandırma dosyalarını kopyalar.
 
-7. IIS Yöneticisi'ni açın. Önceki adımda oluşturduğunuz sanal dizini (ExtendedProtection) sağ tıklayın ve uygulama Dönüştür'ı seçin.
+7. IIS Yöneticisi 'Ni açın. Önceki adımda oluşturduğunuz sanal dizine (ExtendedProtection) sağ tıklayın ve uygulamaya Dönüştür ' ü seçin.
 
-8. Kimlik doğrulama modülünü, bu sanal dizin için IIS Yöneticisi'nde açın ve Windows kimlik doğrulamasını etkinleştirin.
+8. Bu sanal dizin için IIS Yöneticisi 'nde kimlik doğrulama modülünü açın ve Windows kimlik doğrulamasını etkinleştirin.
 
-9. Gelişmiş ayarları için Windows kimlik doğrulaması için bu sanal dizin açın ve aşağıdaki örnekte, her zaman ilgili ExtendedProtection ayarı ayarlandığından, gerekli ayarlayın.
+9. Bu sanal dizin için Windows kimlik doğrulaması için Gelişmiş ayarlar ' ı açın ve gerekli olarak ayarlayın, çünkü örnekte ilgili ExtendedProtection ayarı her zaman olarak ayarlanır.
 
-10. Hizmet URL'sini bir tarayıcı penceresinden erişerek test edebilirsiniz. Bu URL'yi bir çapraz makineden erişmek istiyorsanız, güvenlik duvarı tüm gelen HTTP ve HTTPS bağlantıları için açık olduğundan emin olun.
+10. Bir tarayıcı penceresinden URL 'ye erişerek hizmeti test edebilirsiniz. Bu URL 'YI bir çapraz makineden erişmek istiyorsanız, tüm gelen HTTP ve HTTPS bağlantıları için güvenlik duvarının açık olduğundan emin olun.
 
-11. İstemci yapılandırma dosyasını açın ve sağlamak için tam makine adı \<istemci >- \<uç noktası >-adresi özniteliği değiştirerek \<full_machine_name >.
+11. İstemci yapılandırma dosyasını açın ve \<client>  -  \<endpoint> yerine-address özniteliği için tam makine adı girin \<full_machine_name> .
 
-12. İstemciyi çalıştırın. İstemci hizmete güvenli bir kanal oluşturma ve arka planda altında genişletilmiş koruma kullanarak iletişim kurar.
+12. İstemcisini çalıştırın. İstemci, güvenli bir kanal kurarak ve bunların altında genişletilmiş koruma kullanarak hizmetle iletişim kurar.

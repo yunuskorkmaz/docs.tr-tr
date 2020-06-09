@@ -2,102 +2,102 @@
 title: Güvenilir Oturumlar Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-ms.openlocfilehash: 6dd90ef800daf236d77c419d48c0857ac2d78aa2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a85a34c5e2ec7928c01586e4b01cdf5e90e896a7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962663"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601094"
 ---
 # <a name="reliable-sessions-overview"></a>Güvenilir Oturumlar Genel Bakış
 
-Windows Communication Foundation (WCF) SOAP Güvenilir Mesajlaşma SOAP uç noktalar arasında uçtan uca ileti aktarım güvenilirlik sağlar. Bunu aktarım hataları üstesinden ve SOAP ileti düzeyi hataları tarafından güvenilmeyen ağlarda yapar. Özellikle, SOAP veya aktarım aracılar arasında gönderilen iletiler için oturum tabanlı, tek ve (isteğe bağlı olarak) sıralı teslim sağlar. İsteğe bağlı iletilerin sıralama ile bir oturumda iletileri gruplandırma için oturum tabanlı teslim sağlar.
+Windows Communication Foundation (WCF) SOAP ile güvenilir mesajlaşma, SOAP uç noktaları arasında uçtan uca ileti aktarım güvenilirliği sağlar. Bu, çok fazla aktarım hatalarıyla ve SOAP ileti düzeyi hatalarıyla güvenilir olmayan ağlarda bunu yapar. Özellikle, SOAP veya aktarım aracıları arasında gönderilen iletiler için oturum tabanlı, tek ve (isteğe bağlı) sıralı teslim sağlar. Oturum tabanlı teslim, iletilerin isteğe bağlı sıralamasına sahip bir oturumdaki iletileri gruplandırmak için sağlar.
 
-Bu konu, güvenilir oturumlar nasıl açıklar ve bunların ne zaman kullanılacağı ve bunların güvenliğini sağlama.
+Bu konuda güvenilir oturumlar, nasıl ve ne zaman kullanılacağı ve bunların nasıl güvenliği sağlanacağı açıklanmaktadır.
 
 ## <a name="wcf-reliable-sessions"></a>WCF güvenilir oturumlar
 
-SOAP WS-ReliableMessaging protokolü tarafından tanımlandığı gibi Mesajlaşma güvenilir uygulaması WCF güvenilir oturumlar var.
+WCF güvenilir oturumlar, WS-ReliableMessaging protokolü tarafından tanımlanan SOAP Güvenilir Mesajlaşma 'nın bir uygulamasıdır.
 
-WCF SOAP Güvenilir Mesajlaşma için Mesajlaşma son noktalarını ayrı aracılar türü ve numarası bağımsız olarak iki uç noktalar arasında uçtan uca bir güvenilir oturum sağlar. Bu, SOAP (örneğin, HTTP proxy) kullanmayan herhangi bir aktarım aracılar içerir veya akış uç noktaları arasında iletileri için gerekli olan SOAP (örneğin, SOAP tabanlı yönlendiriciler veya köprüler) kullanan aracılar. Güvenilir oturum kanalı destekleyen *etkileşimli* iletişim böyle bir kanal tarafından bağlı hizmetleri aynı anda çalışmasını ve oldukça düşük gecikme süresi, diğer bir deyişle, koşulları altında exchange ve işlem iletileri içindeki kısa zaman aralıkları. Bunlar arasında sağlanan yalıtımsız olduğundan bu bağlantı bu bileşenler birlikte ilerlemekte veya birlikte, yük anlamına gelir.
+WCF SOAP Güvenilir Mesajlaşma, mesajlaşma uç noktalarını ayıran aracıların sayısından veya türünden bağımsız olarak iki uç nokta arasında uçtan uca güvenilir bir oturum sağlar. Bu, uç noktalar arasında akışı yapılan iletiler için gereken SOAP (örneğin, SOAP tabanlı yönlendiriciler veya köprüler) kullanan tüm aktarım aracıları içerir. Güvenilir bir oturum kanalı, bu tür bir kanalla bağlanan hizmetlerin aynı anda ve Exchange ve iletileri düşük gecikme süresi (görece kısa bir süre içinde) altında işlemesini sağlayacak şekilde *etkileşimli* iletişimi destekler. Bu, bu bileşenlerin birlikte ilerlemesini veya birlikte başarısız olduğunu, bu nedenle aralarında yalıtımsız olduğunu gösterir.
 
-Güvenilir oturum iki tür hatalardan maskeleri:
+Güvenilir oturum maskeleri iki tür başarısızlık:
 
-- Kayıp veya yinelenen iletileri ve gelen iletileri içinde gönderildikleri sırayla ile farklı sırada içeren SOAP ileti düzeyi hataları.
+- Kayıp veya yinelenen iletileri ve gönderildikleri sırada farklı bir sıraya ulaşan iletileri içeren SOAP ileti düzeyindeki hatalar.
 
-- Hataları taşıma.
+- Aktarım sorunları.
 
-Güvenilir oturum WS-ReliableMessaging protokolü ve bir bellek içi aktarımı penceresine maskesi SOAP ileti düzeyi hataları uygular ve aktarım hatası durumunda bağlantıları yeniden oluşturur.
+Güvenilir bir oturum, SOAP ileti düzeyindeki hataların maskesini yapmak ve aktarım hatalarının oluşması durumunda bağlantıları yeniden eklemek için WS-ReliableMessaging protokolünü ve bellek içi Aktarım penceresini uygular.
 
-Güvenilir oturum için SOAP iletilerini, TCP IP paketleri için sağlanan korumanın sağlar. TCP yuvası bağlantısı sağlayan bir tekil sırayla düğümleri arasında IP paketlerini aktarımı. Güvenilir Aktarım aynı türde güvenilir bir kanal sağlar, ancak aşağıdaki yollarla TCP yuva güvenilirlik farklıdır:
+Güvenilir bir oturum, TCP 'nin IP paketleri için sağladığı SOAP iletilerine yöneliktir. TCP yuvası bağlantısı, düğümler arasında IP paketlerinin tekil, sıralı bir aktarımını sağlar. Güvenilir kanal aynı türde güvenilir aktarım sağlar, ancak aşağıdaki yollarla TCP yuvası güveninden farklıdır:
 
-- Güvenilirlik en SOAP ileti düzeyi, bayt değil rasgele boyutlu bir paket için.
+- Güvenilirlik, rastgele boyutlu bir bayt paketi için değil, SOAP ileti düzeyidir.
 
-- Güvenilirlik, yalnızca TCP üzerinden aktarım için Aktarım konumlandırılıp.
+- Güvenilirlik, yalnızca TCP üzerinden aktarım için değil, aktarım açısından tarafdır.
 
-- Güvenilirlik, belirli bir aktarım oturumu (örneğin, oturum TCP bağlantısı sağlar) bağlı değildir ve eşzamanlı olarak ya da sıralı olarak bir güvenilir oturum yaşam süresi boyunca birden çok aktarım oturumu kullanabilirsiniz.
+- Güvenilirlik, belirli bir aktarım oturumuna bağlı değildir (örneğin, bir TCP bağlantısının sağladığı oturum) ve eşzamanlı olarak veya güvenilir oturumun kullanım ömrü boyunca ardışık olarak birden çok aktarım oturumu kullanabilir.
 
-- Güvenilir oturum gönderen ve alıcı arasında taşıma bağlantılarıyla bunları arasında bağlantı kurmak için gerekli sayısından bağımsız olarak SOAP uç noktası olan. Kısacası, TCP güvenilirlik güvenilir oturum uçtan uca güvenilirlik sağlarken Aktarım bağlantısı, sona ereceği sona erer.
+- Güvenilir oturum, gönderen ve alıcı SOAP uç noktaları arasındadır, aralarında bağlantı için gereken aktarım bağlantısı sayısı ne olursa olsun. Kısacası, güvenli bir oturum uçtan uca güvenilirlik sağladığından, aktarım bağlantısının bittiği yerde TCP güvenilirliği sona erer.
 
-## <a name="reliable-sessions-and-bindings"></a>Güvenilir oturumlar ve bağlamaları
+## <a name="reliable-sessions-and-bindings"></a>Güvenilir Oturumlar ve bağlamalar
 
-Daha önce bahsedildiği gibi bir güvenilir oturum aktarımı nötr ' dir. Ayrıca, istek-yanıt ya da çift yönlü gibi çok sayıda ileti exchange düzenleri üzerinden bir güvenilir oturum kurabilirsiniz. Bir WCF güvenilir oturum bağlama bir dizi özelliği olarak kullanıma sunulur.
+Daha önce belirtildiği gibi, güvenilir bir oturum taşıma taraflıdır. Ayrıca, istek-yanıt veya çift yönlü gibi birçok ileti değişim deseninden güvenilir bir oturum kurabilirsiniz. WCF güvenilir oturumu bir bağlama kümesinin özelliği olarak sunulur.
 
-Güvenilir oturum kullanan uç noktalarda kullanın:
+Kullanan uç noktalarda güvenilir bir oturum kullanın:
 
-- HTTP tabanlı taşıma standart bağlamaları:
+- HTTP tabanlı Aktarım standart bağlamaları:
 
-  - `WsHttpBinding` ve istek-yanıt ya da tek yönlü sözleşmeler kullanıma sunar.
+  - `WsHttpBinding`ve istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
 
-  - Güvenilir oturum, istek-yanıt ya da basit tek yönlü hizmet sözleşmesi üzerinden kullanırken.
+  - İstek-yanıt veya basit tek yönlü hizmet sözleşmesi üzerinde güvenilir oturum kullanırken.
 
-  - `WsDualHttpBinding` ve çift yönlü, istek-yanıt ya da tek yönlü sözleşmeler kullanıma sunar.
+  - `WsDualHttpBinding`ve çift yönlü, istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
 
-  - `WsFederationHttpBinding` ve istek-yanıt ya da tek yönlü sözleşmeler kullanıma sunar.
+  - `WsFederationHttpBinding`ve istek-yanıt veya tek yönlü sözleşmeleri kullanıma sunar.
 
-- TCP tabanlı taşıma standart bağlamaları:
+- TCP tabanlı Aktarım standart bağlamaları:
 
-  - `NetTcpBinding` ve çift yönlü, istek yanıt veya tek yönlü sözleşmeler kullanıma sunar.
+  - `NetTcpBinding`ve çift yönlü, istek yanıtı veya tek yönlü sözleşmeleri kullanıma sunar.
 
-Güvenilir oturum HTTPS gibi özel bir bağlama oluşturarak diğer bağlamalarda kullanın (sorunları hakkında daha fazla bilgi için bkz. <a href="#reliable-sessions-and-security">güvenilir oturumlar ve güvenlik</a>) veya bir adlandırılmış kanal bağlama.
+HTTPS gibi özel bir bağlama oluşturarak (sorunlar hakkında daha fazla bilgi için bkz. <a href="#reliable-sessions-and-security">Güvenilir Oturumlar ve güvenlik</a>) veya adlandırılmış bir kanal bağlamasında güvenilir bir oturum kullanın.
 
-Arka plandaki kanal farklı güvenilir bir oturumda yığınlayabilir ve sonuçta elde edilen güvenilir oturum kanal şekli değişir. Hem istemci hem de sunucu desteklenen güvenilir oturum kanal türünü kullanılan temel alınan kanal türüne bağlıdır. Aşağıdaki tabloda, istemcide bir arka plandaki kanal türü işlevi olarak desteklenen oturum kanalları türlerini listeler.
+Farklı temel alınan kanal türlerinde güvenilir bir oturum yığabilirsiniz ve sonuçta elde edilen güvenilir oturum kanalı şekli farklılık gösterir. Hem istemcide hem de sunucuda, desteklenen güvenilir oturum kanalının türü, kullanılan temeldeki kanalın türüne bağlıdır. Aşağıdaki tabloda, istemci üzerinde temel alınan kanal türünün bir işlevi olarak desteklenen oturum kanalının türleri listelenmektedir.
 
-| Güvenilir oturum kanalı türleri desteklenir&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Desteklenen güvenilir oturum kanalı türleri&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
-| `IOutputSessionChannel`                         | Evet               | Evet                      | Evet              | Evet                     |
-| `IRequestSessionChannel`                        | Evet               | Evet                      | Hayır               | Hayır                      |
-| `IDuplexSessionChannel`                         | Hayır                | Hayır                       | Evet              | Evet                     |
+| `IOutputSessionChannel`                         | Yes               | Yes                      | Yes              | Yes                     |
+| `IRequestSessionChannel`                        | Yes               | Yes                      | Hayır               | Hayır                      |
+| `IDuplexSessionChannel`                         | Hayır                | Hayır                       | Yes              | Yes                     |
 
-&#8224;Desteklenen kanal türleri için genel kullanılabilir değerler: `TChannel` yöntemlere geçirilen parametre değeri <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> yöntemi.
+Desteklenen kanal türleri &#8224;, `TChannel` metoduna geçirilen genel parametre değeri için kullanılabilir değerlerdir <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29> .
 
-Aşağıdaki tabloda, sunucuda desteklenen bir arka plandaki kanal türü işlevi olarak oturum kanalları türlerini listeler.
+Aşağıdaki tabloda, sunucuda, temel alınan kanal türünün bir işlevi olarak desteklenen oturum kanalı türleri listelenmektedir.
 
-| Güvenilir oturum kanalı türleri desteklenir&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| Desteklenen güvenilir oturum kanalı türleri&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
-| `IInputSessionChannel`                          | Evet             | Evet                    | Evet              | Evet                     |
-| `IReplySessionChannel`                          | Evet             | Evet                    | Hayır               | Hayır                      |
-| `IDuplexSessionChannel`                         | Hayır              | Hayır                     | Evet              | Evet                     |
+| `IInputSessionChannel`                          | Yes             | Yes                    | Yes              | Yes                     |
+| `IReplySessionChannel`                          | Yes             | Yes                    | Hayır               | Hayır                      |
+| `IDuplexSessionChannel`                         | Hayır              | Hayır                     | Yes              | Yes                     |
 
-&#8225;Desteklenen kanal türleri için genel kullanılabilir değerler: `TChannel` yöntemlere geçirilen parametre değeri <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> yöntemi.
+Desteklenen kanal türleri &#8225;, `TChannel` metoduna geçirilen genel parametre değeri için kullanılabilir değerlerdir <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29> .
 
-## <a name="reliable-sessions-and-security"></a>Güvenilir oturumlar ve güvenlik
+## <a name="reliable-sessions-and-security"></a>Güvenilir Oturumlar ve güvenlik
 
-Güvenilir oturum güvenli hale getirme (hizmet ve istemci) iletişim kuran taraflar doğrulanır ve oturumda alınıp verilen iletileri ile değiştirilmiş olmayan sağlamak önemlidir. Ayrıca, tek tek her güvenilir oturum bütünlüğünü sağlamak önemlidir. Güvenilir oturum, temsil ve güvenlik oturum kanalı tarafından yönetilen bir güvenlik bağlamı bağlayarak güvenli hale getirilir. Güvenlik kanalı güvenlik oturumu sağlar. Oturum kurulması sırasında değiştirilen güvenlik belirteçleri, daha sonra güvenilir bir oturumda iletileri güvenli hale getirmek için kullanılır.
+Güvenilir bir oturumun güvenli hale getirilmesi, iletişim tarafların (hizmet ve istemci) kimliğinin doğrulanmasını ve oturumda değiştirilen iletilerin üzerinde oynanmamasını sağlamak açısından önemlidir. Ayrıca, her bireysel güvenilir oturumun bütünlüğünden emin olmak önemlidir. Güvenilir bir oturum, güvenlik oturumu kanalı tarafından temsil edilen ve yönetilen bir güvenlik bağlamına bağlayarak güvenli hale getirilir. Güvenlik kanalı bir güvenlik oturumu sağlar. Oturum oluşturma sırasında değiş tokuş edilen güvenlik belirteçleri, güvenilir oturumdaki iletilerin güvenliğini sağlamak için kullanılır.
 
-TCP-S üzerinden bir güvenilir oturum olduğunda, TCP oturumu için güvenilir oturum bağlıdır. Bu nedenle, güvenlik için güvenilir oturum bağlıdır aktarım güvenliği sağlar. Bu durumda, bağlantının yeniden kurulması kapalıdır.
+Güvenilir bir oturum TCP-S üzerinden olduğunda, TCP oturumu güvenilir oturuma bağlanır. Bu nedenle, taşıma güvenliği güvenliğin güvenilir oturuma da bağlı olmasını sağlar. Bu durumda, bağlantı yeniden kurma kapalıdır.
 
-HTTPS kullanarak tek özel durum andır. Güvenli Yuva Katmanı (SSL) oturum güvenilir oturuma bağlı değil. Bir güvenlik bağlamı (SSL oturumu) paylaşımı oturumları birbirinden korunmayan çünkü bu bir tehdit uygular; Bu işlem sonrasında veya uygulamaya bağlı olarak gerçek bir tehdit olabilir.
+Tek özel durum HTTPS kullanılırken olur. Güvenli Yuva Katmanı (SSL) oturumu güvenilir oturumla bağlantılı değil. Bu, bir güvenlik bağlamını (SSL oturumu) paylaşan oturumlar birbirinden korunmadığı için bir tehdit getirir; Bu, uygulamaya bağlı olarak gerçek bir tehdit olabilir veya olmayabilir.
 
-## <a name="using-reliable-sessions"></a>Güvenilir oturumlar kullanma
+## <a name="using-reliable-sessions"></a>Güvenilir oturumları kullanma
 
-WCF güvenilir oturumlar kullanmak için bir uç nokta destekleyen bir güvenilir oturum bağlama ile oluşturun. WCF ile güvenilir oturum sağlar sistem tarafından sağlanan bağlamalar birini kullanın, etkin veya bunu kendi özel bir bağlama oluşturun.
+WCF güvenilir oturumlarını kullanmak için, güvenilir bir oturumu destekleyen bağlama ile bir uç nokta oluşturun. Güvenilir oturum etkinken WCF 'nin sağladığı sistem tarafından sağlanan bağlamalardan birini kullanın veya bunu yapan kendi özel bağlamalarınızı oluşturun.
 
-Destekleyen ve bir güvenilir oturum varsayılan olarak etkin sistem tanımlı bağlamalar şunlardır:
+Varsayılan olarak güvenilir bir oturumu destekleyen ve etkinleştiren sistem tarafından tanımlanan bağlamalar şunları içerir:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
-İsteğe bağlı olarak bir güvenilir oturum destekleyen ancak bir varsayılan olarak etkinleştirme sistem tarafından sağlanan bağlamalar şunlardır:
+Bir seçenek olarak güvenilir bir oturumu destekleyen ancak varsayılan olarak bir tane etkinleştirmeyin sistem tarafından sağlanmış bağlamalar şunları içerir:
 
 - <xref:System.ServiceModel.WSHttpBinding>
 
@@ -105,19 +105,19 @@ Destekleyen ve bir güvenilir oturum varsayılan olarak etkin sistem tanımlı b
 
 - <xref:System.ServiceModel.NetTcpBinding>
 
-Özel bağlama oluşturma örneği için bkz: [nasıl yapılır: HTTPS ile özel bir güvenilir oturum bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md).
+Özel bağlamanın nasıl oluşturulacağı hakkında bir örnek için bkz. [nasıl yapılır: https Ile özel güvenilir oturum bağlama oluşturma](how-to-create-a-custom-reliable-session-binding-with-https.md).
 
-Güvenilir oturumlar destekleyen WCF bağlamaları için bkz [System-Provided bağlamaları](../../../../docs/framework/wcf/system-provided-bindings.md).
+Güvenilir oturumları destekleyen WCF bağlamalarıyla ilgili bir tartışma için bkz. [sistem tarafından sunulan bağlamalar](../system-provided-bindings.md).
 
-## <a name="when-to-use-reliable-sessions"></a>Güvenilir oturumlar kullanıldığı durumlar
+## <a name="when-to-use-reliable-sessions"></a>Güvenilir oturumlar ne zaman kullanılır?
 
-Güvenilir oturumlar kullanmak ne zaman anlamak önemlidir. WCF aynı anda etkin ve etkin uç noktalar arasında güvenilir oturumları destekler. Uygulamanız uç noktalardan biri gerektiriyorsa bir süre için kullanılamaz ve güvenilirlik elde etmek için sıraları kullanın.
+Uygulamanızda güvenilir oturumların ne zaman kullanılacağını anlamak önemlidir. WCF, etkin ve canlı uç noktalar arasındaki güvenilir oturumları aynı anda destekler. Uygulamanız bir süre için uç noktalardan birini gerektiriyorsa, güvenilirlik elde etmek için kuyrukları kullanın.
 
-Senaryo iki uç nokta TCP üzerinden bağlı gerektiriyorsa, TCP güvenilir ileti alışverişlerinde sağlamak için yeterli olabilir. TCP sağlar bu yana bir güvenilir oturum kullanmak için gerekli olmasa da, paketleri sırasını ve yalnızca bir kez ulaşır.
+Senaryo TCP üzerinden bağlı iki uç nokta gerektiriyorsa, TCP güvenilir ileti alışverişi sağlamak için yeterli olabilir. TCP, paketlerin sırayla ve yalnızca bir kez ulaşmasını gerektirdiğinden, güvenilir bir oturum kullanılması gerekli değildir.
 
-Senaryonuz herhangi biri aşağıdaki özelliklere sahip, ardından ciddi bir güvenilir oturum kullanmayı düşünmeniz gerekir.
+Senaryonuz aşağıdaki özelliklerden herhangi birini içeriyorsa güvenilir bir oturum kullanmayı göz önünde bulundurmanız gerekir.
 
-- SOAP yönlendiriciler gibi SOAP aracıları
+- SOAP yönlendiricileri gibi SOAP aracıları
 
 - Proxy aracıları veya aktarım köprüleri
 
@@ -127,5 +127,5 @@ Senaryonuz herhangi biri aşağıdaki özelliklere sahip, ardından ciddi bir g�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [WS Güvenilir Oturum](../../../../docs/framework/wcf/samples/ws-reliable-session.md)
+- [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](../using-bindings-to-configure-services-and-clients.md)
+- [WS Güvenilir Oturum](../samples/ws-reliable-session.md)

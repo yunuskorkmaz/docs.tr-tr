@@ -6,22 +6,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 6751513b72f732bd7392de11a203467a9ead1bce
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a07d7c6da71f4195cb1641ae8ac7585b4158ed63
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743349"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600977"
 ---
 # <a name="wcf-security-terminology"></a>WCF Güvenlik Terimleri
 Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir. Bu konu, bazı güvenlik koşullarının kısa açıklamalarını sağlar, ancak her öğe için kapsamlı belgeler sağlamaya yönelik değildir.  
   
- Windows Communication Foundation (WCF) belgelerinde kullanılan terimler hakkında daha fazla bilgi için bkz. [temel Windows Communication Foundation kavramlar](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Windows Communication Foundation (WCF) belgelerinde kullanılan terimler hakkında daha fazla bilgi için bkz. [temel Windows Communication Foundation kavramlar](../fundamental-concepts.md).  
   
  erişim denetim listesi (ACL)  
  Bir nesne için geçerli olan güvenlik korumalarının listesi. (Bir nesne bir dosya, işlem, olay veya bir güvenlik tanımlayıcısına sahip başka bir şey olabilir.) ACL 'deki bir giriş bir erişim denetimi girişi (ACE). İki tür ACL vardır: isteğe bağlı ve sistem.  
   
- kimlik doğrulama  
+ kimlik doğrulaması  
  Bir kullanıcının, bilgisayarın, hizmetin veya işlemin ne olduğunu doğrulama süreci.  
   
  yetkilendirme  
@@ -36,18 +36,18 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  sertifika  
  Bir varlık ve varlığın ortak anahtarı hakkında bilgi içeren, bu iki bilgi parçasını birbirine bağlayan dijital imzalı bir ifade. Sertifika, yetkili varlığın kim olduğunu doğruladıktan sonra, sertifika yetkilisi olarak adlandırılan güvenilir bir kuruluş (veya varlık) tarafından verilir.  
   
- Sertifikalar, farklı veri türleri içerebilir. Örneğin, bir X. 509.440 sertifikası, sertifika biçimini, sertifikanın seri numarasını, sertifikayı imzalamak için kullanılan algoritmayı, sertifikayı veren CA 'nın adını, sertifikayı isteyen varlığın adını ve ortak anahtarını içerir ve CA imzası.  
+ Sertifikalar, farklı veri türleri içerebilir. Örneğin, bir X. 509.440 sertifikası, sertifika biçimini, sertifikanın seri numarasını, sertifikayı imzalamak için kullanılan algoritmayı, sertifikayı veren CA 'nın adını, sertifikayı isteyen varlığın adını ve ortak anahtarını ve CA imzasını içerir.  
   
  sertifika deposu  
  Genellikle, sertifikaların, sertifika iptal listelerinin (CRL 'Ler) ve sertifika güven listelerinin (CTL) depolandığı kalıcı bir depolama alanı. Ancak, kalıcı depolamaya koymak zorunda olmayan sertifikalarla çalışırken yalnızca bellekte bir sertifika deposu oluşturmak ve açmak mümkündür.  
   
- claims  
+ belirt  
  Bir varlıktan gönderenin kimliğini oluşturmak için kullanılan başka bir varlığa geçirilen bilgiler. Örneğin, bir Kullanıcı adı ve parola belirteci ya da bir X. 509.440 sertifikası.  
   
  istemci sertifikası  
  Web sunucusunda bir Web tarayıcısının kimlik doğrulaması gibi, istemci kimlik doğrulaması için kullanılan bir sertifikaya başvurur. Bir Web tarayıcısı istemcisi güvenli bir Web sunucusuna erişmeyi denediğinde, istemci, istemcinin kimliğini doğrulamasına izin vermek için sertifikasını sunucuya gönderir.  
   
- Credentials  
+ Kimlik bilgileri  
  Bir güvenlik sorumlusunun parola veya Kerberos protokol bileti gibi kendi kimliğini oluşturmak için kullandığı önceden kimliği doğrulanmış oturum açma verileri. Kimlik bilgileri, kaynaklara erişimi denetlemek için kullanılır.  
   
  oluşan veriler  
@@ -74,8 +74,8 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Yerel güvenlik yetkilisi (LSA)  
  Kullanıcıları kimlik doğrulaması yapan ve yerel sistemde oturum açan korumalı bir alt sistem. LSA ayrıca, sistemin yerel güvenlik ilkesi olarak bilinen bir sistemdeki tüm yerel güvenlik özellikleri hakkında bilgi de sağlar.  
   
- 'Nin  
- Güvenlik desteği sağlayıcısı arabirimi (SSPI) ve diğer SSPs 'ler arasında bir uygulama katmanı görevi gören bir güvenlik desteği sağlayıcısı (SSP). Bir uygulama bir ağda oturum açmak için SSPI 'e çağırdığında, isteği işlemek için bir SSP belirtebilir. Uygulama `Negotiate`belirtiyorsa, isteği analiz `Negotiate` ve müşterinin yapılandırdığı güvenlik ilkesine göre isteği işlemek için en iyi SSP 'yi seçer.  
+ Anlaşma  
+ Güvenlik desteği sağlayıcısı arabirimi (SSPI) ve diğer SSPs 'ler arasında bir uygulama katmanı görevi gören bir güvenlik desteği sağlayıcısı (SSP). Bir uygulama bir ağda oturum açmak için SSPI 'e çağırdığında, isteği işlemek için bir SSP belirtebilir. Uygulama belirtiyorsa `Negotiate` , `Negotiate` isteği analiz eder ve müşterinin yapılandırdığı güvenlik ilkesine göre isteği işlemek için en iyi SSP 'yi seçer.  
   
  nonce  
  "Yeniden yürütme" saldırılarını erteetmek için kullanılan rastgele oluşturulmuş bir değer.  
@@ -137,13 +137,13 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
  Güvenlik desteği sağlayıcısı arabirimi (SSPI)  
  Microsoft Uzak yordam çağrısı (RPC) gibi aktarım düzeyi uygulamalar ve Windows dağıtılmış güvenlik gibi güvenlik sağlayıcıları arasındaki ortak bir arabirim. SSPI, bir aktarım uygulamasının kimliği doğrulanmış bir bağlantı almak için çeşitli güvenlik sağlayıcılarından birini çağırmasını sağlar. Bu çağrılar güvenlik protokolünün ayrıntıları hakkında kapsamlı bilgi gerektirmez.  
   
- Güvenlik belirteci hizmeti  
+ güvenlik belirteci hizmeti  
  Çoklu hizmet senaryosunda özel güvenlik belirteçleri (verilen belirteçler) vermek ve yönetmek için tasarlanan hizmetler. Özel belirteçler genellikle özel bir kimlik bilgisi içeren güvenlik onaylama işlemi biçimlendirme dili (SAML) belirteçleridir.  
   
  sunucu sertifikası  
  Sunucu kimlik doğrulaması için kullanılan bir sertifikaya başvurur, örneğin bir Web sunucusunun Web tarayıcısında doğrulanması. Bir Web tarayıcısı istemcisi güvenli bir Web sunucusuna erişmeyi denediğinde, sunucu, sunucunun kimliğini doğrulamasına izin vermek için sertifikasını tarayıcıya gönderir.  
   
- oturumuna  
+ oturum  
  Tek bir anahtarlama malzemesinin korunmasından daha fazla ileti alışverişi. Örneğin, SSL oturumları, bu anahtar altında birden fazla iletiyi ileri ve geri göndermek için tek bir anahtar kullanır.  
   
  oturum anahtarı  
@@ -183,6 +183,6 @@ Güvenliği tartışmak için kullanılan bazı terminoloji tanıdık gelebilir.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temel Windows Communication Foundation Kavramları](../../../../docs/framework/wcf/fundamental-concepts.md)
-- [Güvenlik Kavramları](../../../../docs/framework/wcf/feature-details/security-concepts.md)
+- [Temel Windows Communication Foundation Kavramları](../fundamental-concepts.md)
+- [Güvenlik kavramları](security-concepts.md)
 - [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

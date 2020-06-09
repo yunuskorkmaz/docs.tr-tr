@@ -2,22 +2,22 @@
 title: ETW İzleme
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 07379a464e6635a3de10c08647dbc769a5885e4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bdbf6699a0cfa3dce58abda4c989fb25d764459
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183698"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600574"
 ---
 # <a name="etw-tracing"></a>ETW İzleme
-Bu örnek, Windows için Olay İzleme (ETW) `ETWTraceListener` ve bu örnekle sağlanan Ları kullanarak Uçlardan Uca (E2E) izlemenin nasıl uygulanacağını göstermektedir. Örnek [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md) dayanmaktadır ve ETW izleme içerir.  
+Bu örnek, Windows için olay Izleme (ETW) ve `ETWTraceListener` Bu örnekle birlikte sunulan uçtan uca (e2e) izlemenin nasıl uygulanacağını gösterir. Örnek, [Başlarken](getting-started-sample.md) ' i temel alır ve ETW izleme içerir.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek, İzleme ve [İleti Günlüğe Kaydetme'ye](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)aşina olduğunuzu varsayar.  
+ Bu örnek, [izleme ve Ileti günlüğe kaydetme](tracing-and-message-logging.md)hakkında bilgi sahibi olduğunuzu varsayar.  
   
- İzleme modelindeki <xref:System.Diagnostics> her izleme kaynağı, verilerin nerede ve nasıl izleyeceğini belirleyen birden çok izleme dinleyicisi olabilir. Dinleyici türü, izleme verilerinin günlüğe kaydedildiği biçimi tanımlar. Aşağıdaki kod örneği, dinleyicinin yapılandırmaya nasıl ekleyeceğini gösterir.  
+ İzleme modelindeki her izleme kaynağı, <xref:System.Diagnostics> verilerin nerede ve nasıl izlendiğinizi tespit eden birden fazla izleme dinleyicilerine sahip olabilir. Dinleyici türü, izleme verilerinin günlüğe kaydedildiği biçimi tanımlar. Aşağıdaki kod örneği, bir dinleyicinin yapılandırmaya nasıl ekleneceğini gösterir.  
   
 ```xml  
 <system.diagnostics>  
@@ -47,20 +47,20 @@ Bu örnek, Windows için Olay İzleme (ETW) `ETWTraceListener` ve bu örnekle sa
 </system.diagnostics>  
 ```  
   
- Bu dinleyiciyi kullanmadan önce bir ETW İzleme Oturumu başlatılmalıdır. Bu oturum Logman.exe veya Tracelog.exe kullanılarak başlatılabilir. Bir SetupETW.bat dosyası oturumu kapatmak ve günlük dosyasını tamamlamak için bir CleanupETW.bat dosyası ile birlikte ETW İzleme Oturumu ayarlayabilirsiniz, böylece bu örnek ile birlikte dahildir.  
+ Bu dinleyiciyi kullanmadan önce, bir ETW Izleme oturumunun başlatılmış olması gerekir. Bu oturum, Logman. exe veya tracelog. exe kullanılarak başlatılabilir. Bu örneğe eklenen bir SetupETW. bat dosyası, oturumu kapatmak ve günlük dosyasını tamamlamak için bir CleanupETW. bat dosyası ile birlikte ETW Izleme oturumunu ayarlayabilmeniz için eklenmiştir.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır. Bu araçlar hakkında daha fazla bilgi için bkz.<https://go.microsoft.com/fwlink/?LinkId=56580>  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur. Bu araçlar hakkında daha fazla bilgi için bkz.<https://go.microsoft.com/fwlink/?LinkId=56580>  
   
- ETWTraceListener kullanırken, izlemeler ikili .etl dosyalarında günlüğe kaydedilir. ServiceModel izleme açıkken, oluşturulan tüm izlemeler aynı dosyada görünür. .etl ve .svclog günlük dosyalarını görüntülemek için [Service Trace Viewer Aracı'nı (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) kullanın. Görüntüleyici, kaynağından hedefine ve tüketim noktasına kadar bir iletiyi izlemeyi mümkün kılan sistemin uçtan uca görünümünü oluşturur.  
+ ETWTraceListener kullanılırken izlemeler ikili. etl dosyalarında günlüğe kaydedilir. ServiceModel izleme açık olduğunda, oluşturulan tüm izlemeler aynı dosyada görünür. . Etl ve. svclog dosyalarını görüntülemek için [hizmet Izleme Görüntüleyicisi aracı 'nı (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) kullanın. Görüntüleyici, bir iletiyi kaynağından hedefine ve tüketim noktasına izlemeyi olanaklı kılan sistemin uçtan uca bir görünümünü oluşturur.  
   
- ETW Trace Listener dairesel günlüğe kaydetmeyi destekler. Bu özelliği etkinleştirmek için **Başlat,** `cmd` **Çalıştır'a** gidin ve komut konsolunu başlatmak için yazın. Aşağıdaki komutta, parametreyi `<logfilename>` günlük dosyanızın adı ile değiştirin.  
+ ETW Izleme dinleyicisi döngüsel günlüğe yazmayı destekler. Bu özelliği etkinleştirmek için **Başlat**, **Çalıştır** ve yazın ' a giderek `cmd` bir komut konsolu başlatın. Aşağıdaki komutta, `<logfilename>` parametresini günlük dosyanızın adıyla değiştirin.  
   
 ```console  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
- Ve `-f` `-max` anahtarları isteğe bağlıdır. Onlar ikili dairesel biçim ve 1000MB sırasıyla maksimum günlük boyutunu belirtir. Geçiş, `-p` izleme sağlayıcısını belirtmek için kullanılır. Örneğimizde, `"{411a0819-c24b-428c-83e2-26b41091702e}"` "XML ETW Örnek Sağlayıcı" için GUID'dir.  
+ `-f`Ve `-max` anahtarları isteğe bağlıdır. İkili dairesel biçimi ve en fazla 1000MB günlük boyutunu belirtir. `-p`Anahtar, izleme sağlayıcısını belirtmek için kullanılır. Örneğimizde, `"{411a0819-c24b-428c-83e2-26b41091702e}"` "XML ETW örnek sağlayıcısı" IÇIN GUID kullanılır.  
   
  Oturumu başlatmak için aşağıdaki komutu yazın.  
   
@@ -68,44 +68,44 @@ logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b4109170
 logman start Wcf  
 ```  
   
- Günlüğe kaydetmeyi bitirdikten sonra aşağıdaki komutla oturumu durdurabilirsiniz.  
+ Günlüğe kaydetmeyi bitirdikten sonra, aşağıdaki komutla oturumu durdurabilirsiniz.  
   
 ```console  
 logman stop Wcf  
 ```  
   
- Bu işlem, [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) veya Tracerpt dahil olmak üzere seçtiğiniz araçla işleyebileceğiniz ikili dairesel günlükler oluşturur.  
+ Bu işlem, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) veya tracerpt dahil olmak üzere seçim aracınkiyle işleyebilmeniz gereken ikili dairesel Günlükler oluşturur.  
   
- Ayrıca dairesel günlük gerçekleştirmek için alternatif bir dinleyici hakkında daha fazla bilgi için [Dairesel İzleme](../../../../docs/framework/wcf/samples/circular-tracing.md) örneğini inceleyebilirsiniz.  
+ Ayrıca, döngüsel günlük kaydı gerçekleştirmek üzere alternatif bir dinleyici hakkında daha fazla bilgi için [dairesel izleme](circular-tracing.md) örneğini inceleyebilirsiniz.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinden emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
     > [!NOTE]
-    > RegisterProvider.bat, SetupETW.bat ve CleanupETW.bat komutlarını kullanmak için yerel bir yönetici hesabı altında çalışmanız gerekir. Windows Vista veya daha sonra kullanıyorsanız, komut istemini yüksek ayrıcalıklarla da çalıştırmanız gerekir. Bunu yapmak için komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır'ı**tıklatın.  
+    > RegisterProvider. bat, SetupETW. bat ve CleanupETW. bat komutlarını kullanmak için bir yerel yönetici hesabı altında çalıştırmanız gerekir. Windows Vista veya sonraki bir sürümü kullanıyorsanız, komut istemi ' ni yükseltilmiş ayrıcalıklarla da çalıştırmanız gerekir. Bunu yapmak için, komut istemi simgesine sağ tıklayın ve ardından **yönetici olarak çalıştır**' a tıklayın.  
   
-3. Örneği çalıştırmadan önce, istemci ve sunucuda RegisterProvider.bat çalıştırın. Bu, Service Trace Viewer tarafından okunabilen izlemeler oluşturmak için ortaya çıkan ETWTracingSampleLog.etl dosyasını ayarlar. Bu dosya C:\logs klasöründe bulunabilir. Bu klasör yoksa, oluşturulmalı veya hiçbir iz oluşturulmamalıdır. Ardından, ETW İzleme Oturumu'nu başlatmak için istemci ve sunucu bilgisayarlarında SetupETW.bat çalıştırın. SetupETW.bat dosyası CS\Client klasörü altında bulunabilir.  
+3. Örneği çalıştırmadan önce, istemci ve sunucuda RegisterProvider. bat dosyasını çalıştırın. Bu, hizmet Izleme Görüntüleyicisi tarafından okunabilen izlemeler üretmek için elde edilen ETWTracingSampleLog. etl dosyasını ayarlar. Bu dosya C:\logs klasöründe bulunabilir. Bu klasör yoksa, oluşturulması veya bir izleme üretilmemelidir. Ardından, ETW Izleme oturumunu başlatmak için istemci ve sunucu bilgisayarlarında SetupETW. bat dosyasını çalıştırın. SetupETW. bat dosyası CS\Client klasörü altında bulunabilir.  
   
-4. Örneği tek veya bilgisayar lar arası yapılandırmada çalıştırmak [için, Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+4. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-5. Örnek tamamlandığında, ETWTracingSampleLog.etl dosyasının oluşturulmasını tamamlamak için CleanupETW.bat'ı çalıştırın.  
+5. Örnek tamamlandığında, ETWTracingSampleLog. etl dosyası oluşturma işleminin tamamlanması için CleanupETW. bat dosyasını çalıştırın.  
   
-6. ETWTracingSampleLog.etl dosyasını Service Trace Viewer içinden açın. İkili biçimlendirilmiş dosyayı .svclog dosyası olarak kaydetmeniz istenir.  
+6. Hizmet Izleme Görüntüleyicisi içinden ETWTracingSampleLog. etl dosyasını açın. İkili biçimli dosyayı bir. svclog dosyası olarak kaydetmeniz istenecektir.  
   
-7. ETW ve ServiceModel izlerini görüntülemek için Service Trace Viewer içinden yeni oluşturulan .svclog dosyasını açın.  
+7. ETW ve ServiceModel izlemelerini görüntülemek için hizmet Izleme Görüntüleyicisi içinden yeni oluşturulan. svclog dosyasını açın.  
   
 > [!IMPORTANT]
-> Örnekler bilgisayarınıza zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric İzleme Örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

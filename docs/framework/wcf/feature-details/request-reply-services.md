@@ -7,17 +7,17 @@ helpviewer_keywords:
 - WCF [WCF], request-reply services
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
-ms.openlocfilehash: f58da6f1cdaad1b976659ee2e9febe12cc07726f
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: df42f3fa8f5a15572987b0d4859856c7f838e632
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991137"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586240"
 ---
 # <a name="request-reply-services"></a>İstek-Yanıt Hizmetleri
-İstek-yanıt Hizmetleri, Windows Communication Foundation (WCF) ' de varsayılan işlem anlaşması türüdür. İstemciler hizmet işlemlerine çağrı yapar ve hizmetten bir yanıt bekler. İstemci, hizmetten veya çağrı sürelerinin bir yanıtını alana kadar engellediği veya zaman uyumsuz olarak, istemcinin hizmet işlemine bir çağrı yaptığı, çalışmaya devam ettiği ve bunu aldığı zaman uyumsuz olarak bir hizmet işlemine çağrı yapabilirsiniz. başka bir iş parçacığında hizmetten yanıt.  
+İstek-yanıt Hizmetleri, Windows Communication Foundation (WCF) ' de varsayılan işlem anlaşması türüdür. İstemciler hizmet işlemlerine çağrı yapar ve hizmetten bir yanıt bekler. İstemci, hizmetten veya çağrı sürelerinin bir yanıtını alana kadar engellediği veya zaman uyumsuz olarak, istemcinin hizmet işlemine bir çağrı yaptığı, çalışmaya devam ettiği ve diğer bir iş parçacığında hizmetten gelen yanıtı aldığı zaman uyumsuz olarak bir hizmet işlemine çağrı gerçekleştirebilirsiniz.  
   
- İstek-yanıt hizmet sözleşmesi oluşturmak için, hizmet sözleşmenizi tanımlayın ve aşağıdaki örnek kodda gösterildiği <xref:System.ServiceModel.OperationContractAttribute> gibi her bir işleme sınıfı uygulayın.  
+ İstek-yanıt hizmet sözleşmesi oluşturmak için, hizmet sözleşmenizi tanımlayın ve <xref:System.ServiceModel.OperationContractAttribute> Aşağıdaki örnek kodda gösterildiği gibi her bir işleme sınıfı uygulayın.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -28,9 +28,9 @@ public interface IRequestReplyCalculator
 }  
 ```  
   
- Bu varsayılan davranış olduğundan, <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini olarak `false` ayarlamanız gerekmez.  
+ <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>Bu varsayılan davranış olduğundan, özelliğini olarak ayarlamanız gerekmez `false` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tek Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/one-way-services.md)
-- [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Tek Yönlü Hizmetler](one-way-services.md)
+- [Çift Yönlü Hizmetler](duplex-services.md)

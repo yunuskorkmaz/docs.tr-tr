@@ -2,18 +2,18 @@
 title: WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1874963573a6ec12939bd12b79574f1e2c889bfd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932693"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600224"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF ile Birden Fazla Kimlik Doğrulama Şeması Kullanma
-WCF artık tek bir uç noktada birden çok kimlik doğrulama düzenleri belirtmenizi sağlar. Ayrıca barındırılan web hizmetleri doğrudan IIS kimlik doğrulaması ayarlarını devralabilir. Şirket içinde barındırılan hizmetler, hangi kimlik doğrulama düzenleri kullanılabilir belirtebilirsiniz. IIS kimlik doğrulaması ayarlarını ayarlama hakkında daha fazla bilgi için bkz. [IIS kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=232458)  
+WCF artık tek bir uç noktada birden çok kimlik doğrulama düzeni belirtmenize olanak tanır. Ayrıca, Web 'de barındırılan hizmetlerin kimlik doğrulama ayarlarını doğrudan IIS 'den devralmasını sağlayabilirsiniz. Şirket içinde barındırılan hizmetler, hangi kimlik doğrulama düzenlerinin kullanılabileceğini belirtebilir. IIS 'de kimlik doğrulama ayarlarını ayarlama hakkında daha fazla bilgi için bkz. [IIS kimlik doğrulaması](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
-## <a name="iis-hosted-services"></a>IIS barındırılan hizmetler  
- IIS barındırılan hizmetler için IIS içinde kullanmak istediğiniz kimlik doğrulama şeması ayarlayın. Ardından hizmetinizin web.config dosyasında bağlama Yapılandırması'nda clientCredential türü "InheritedFromHost" olarak aşağıdaki XML kod parçacığında gösterildiği gibi belirtin:  
+## <a name="iis-hosted-services"></a>IIS tarafından barındırılan hizmetler  
+ IIS tarafından barındırılan hizmetler için, IIS 'de kullanmak istediğiniz kimlik doğrulama düzenlerini ayarlayın. Ardından, hizmetinizin Web. config dosyasında, bağlama yapılandırmanızda, aşağıdaki XML kod parçacığında gösterildiği gibi clientCredential türünü "ınheritedfromhost" olarak belirtin:  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ WCF artık tek bir uç noktada birden çok kimlik doğrulama düzenleri belirtme
     </bindings>  
 ```  
   
- Yalnızca bir alt kümesini ServiceAuthenticationBehavior kullanarak hizmetinize kullanılacak kimlik doğrulama düzenleri istediğinizi belirtin veya \<serviceAuthenticationManager > öğesi. Bu kodda yapılandırırken ServiceAuthenticationBehavior aşağıdaki kod parçacığında gösterildiği gibi kullanın.  
+ ServiceAuthenticationBehavior veya öğesini kullanarak hizmetinize yalnızca bir kimlik doğrulama şemaları alt kümesinin kullanılmasını istediğinizi belirtebilirsiniz \<serviceAuthenticationManager> . Bu kodda yapılandırırken, aşağıdaki kod parçacığında gösterildiği gibi ServiceAuthenticationBehavior kullanın.  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- Bu yapılandırma dosyasında yapılandırırken, kullandığınız \<serviceAuthenticationManager > aşağıdaki XML kod parçacığında gösterildiği gibi bir öğe.  
+ Bunu bir yapılandırma dosyasında yapılandırırken, \<serviceAuthenticationManager> AŞAĞıDAKI XML kod parçacığında gösterildiği gibi öğesini kullanın.  
   
 ```xml  
 <behaviors>  
@@ -60,10 +60,10 @@ else
     </behaviors>  
 ```  
   
- Bu, yalnızca bir alt kümesini burada listelenen kimlik doğrulama düzenleri IIS'de ne seçili olursa bağlı olarak, hizmet uç noktasında uygulamak için kabul edilir garanti eder. Bir geliştirici hariç tutabilirsiniz Bunun anlamı serviceAuthenticationManager listeden gt;(yok) listeden temel kimlik doğrulaması deyin ve IIS'de etkin olsa bile, bu hizmet uç noktasında uygulanmaz  
+ Bu, IIS 'de neyin seçildiğine bağlı olarak, burada listelenen kimlik doğrulama düzenlerinin yalnızca bir alt kümesinin hizmet uç noktasına uygulanması için değerlendirildiğinden emin olur. Bu, bir geliştiricinin, serviceAuthenticationManager listesinden devre dışı bırakarak ve IIS 'de etkinleştirilmiş olsa bile, bir geliştiricinin temel kimlik doğrulaması 'nı hariç bırakabileceği anlamına gelir, hizmet uç noktasına uygulanmaz  
   
-## <a name="self-hosted-services"></a>Şirket içinde barındırılan hizmetleri  
- Ayarları devralmak için hiçbir IIS olduğundan şirket içinde barındırılan hizmetler biraz farklı bir şekilde yapılandırılır. Burada kullandığınız \<serviceAuthenticationManager > öğesi veya ServiceAuthenticationBehavior devralınır kimlik doğrulama ayarlarını belirtmek için. Kod şöyle görünür:  
+## <a name="self-hosted-services"></a>Şirket içinde barındırılan hizmetler  
+ Ayarları devraldığı bir IIS olmadığından, şirket içinde barındırılan hizmetler biraz farklı şekilde yapılandırılır. Burada, \<serviceAuthenticationManager> devralınacak kimlik doğrulama ayarlarını belirtmek için öğesini veya ServiceAuthenticationBehavior öğesini kullanın. Kodda şöyle görünür:  
   
 ```csharp  
 // ...  
@@ -83,7 +83,7 @@ else
 // ...  
 ```  
   
- Yapılandırmada şöyle görünür:  
+ Yapılandırma bölümünde şöyle görünür:  
   
 ```xml  
 <behaviors>  
@@ -96,7 +96,7 @@ else
     </behaviors>  
 ```  
   
- ' İ tıklatın ve sonra aşağıdaki XML kod parçacığında gösterildiği gibi bağlama ayarlarında InheritFromHost belirtebilirsiniz.  
+ Daha sonra, aşağıdaki XML kod parçacığında gösterildiği gibi, bağlama ayarlarınızda ınherfromhost belirtebilirsiniz.  
   
 ```xml  
 <bindings>  
@@ -110,7 +110,7 @@ else
     </bindings>  
 ```  
   
- Alternatif olarak, özel bir bağlama kimlik doğrulama düzeni belirtebilirsiniz, ayarlayarak kimlik doğrulama düzeni HTTP bağlama öğesi aşağıdaki yapılandırma kod parçacığında gösterildiği gibi taşıma.  
+ Alternatif olarak, aşağıdaki yapılandırma parçacığında gösterildiği gibi, HTTP taşıma bağlama öğesinde kimlik doğrulama düzenlerini ayarlayarak özel bir bağlamada kimlik doğrulama düzenlerini belirtebilirsiniz.  
   
 ```xml  
 <binding name="multipleBinding">  
@@ -121,9 +121,9 @@ else
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Uç noktalar: Adresleri, bağlamalar ve sözleşmeler](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Özel Bağlamalarla Güvenlik Özellikleri](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [Bağlamalar ve Güvenlik](bindings-and-security.md)
+- [Uç Noktalar: Adresler, Bağlamalar ve Anlaşmalar](endpoints-addresses-bindings-and-contracts.md)
+- [Sistem Tarafından Sağlanan Bağlamaları Yapılandırma](configuring-system-provided-bindings.md)
+- [Özel Bağlamalarla Güvenlik Özellikleri](security-capabilities-with-custom-bindings.md)
+- [Bağlamalar](bindings.md)
+- [Özel Bağlamalar](../extending/custom-bindings.md)

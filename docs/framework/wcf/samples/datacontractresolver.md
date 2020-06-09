@@ -2,18 +2,18 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 716bcb2bb43656051beffb15da9c7a988942ecd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2a2afaa450e9abe17b62f6be07a2dc41459ca20
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183790"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600029"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
-Bu örnek, serileştirme ve deserialization işlemlerinin <xref:System.Runtime.Serialization.DataContractResolver> sınıf kullanılarak nasıl özelleştirilebildiğini gösterir. Bu örnek, bir xsi:serileştirme ve deserialization sırasında tür gösterimi için CLR türlerini eşlemek için bir DataContractResolver'ın nasıl kullanılacağını gösterir.
+Bu örnek, serileştirme ve seri kaldırma işlemlerinin sınıfı kullanılarak nasıl özelleştirilebileceğini gösterir <xref:System.Runtime.Serialization.DataContractResolver> . Bu örnek, serileştirme ve seri durumundan çıkarma sırasında CLR türlerini bir xsi: tür gösterimine eşlemek için bir DataContractResolver 'ın nasıl kullanılacağını gösterir.
 
 ## <a name="sample-details"></a>Örnek Ayrıntılar
- Örnek aşağıdaki CLR türlerini tanımlar.
+ Örnek, aşağıdaki CLR türlerini tanımlar.
 
 ```csharp
 using System;
@@ -47,13 +47,13 @@ namespace Types
 }
 ```
 
- Örnek, montajı yükler, bu türlerin her birini ayıklar ve seri hale getirerek deserialize eder. Aşağıdaki <xref:System.Runtime.Serialization.DataContractResolver> örnekte gösterildiği <xref:System.Runtime.Serialization.DataContractResolver>gibi, türemiş sınıfın bir örneğini <xref:System.Runtime.Serialization.DataContractSerializer> oluşturucuya geçirerek serileştirme işlemine takılır.
+ Örnek, derlemeyi yükler, bu türlerin her birini ayıklar ve sonra bunları seri hale getirir ve onları yeniden sıralar. , <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer> Aşağıdaki örnekte gösterildiği gibi, türetilmiş sınıfın bir örneğini oluşturucuya geçirerek serileştirme işlemine takılır.
 
 ```csharp
 this.serializer = new DataContractSerializer(typeof(Object), null, int.MaxValue, false, true, null, new MyDataContractResolver(assembly));
 ```
 
- Örnek daha sonra aşağıdaki kod örneğinde gösterildiği gibi CLR türlerini serihale eder.
+ Örnek, aşağıdaki kod örneğinde gösterildiği gibi CLR türlerini seri hale getirir.
 
 ```csharp
 Assembly assembly = Assembly.Load(new AssemblyName("Types"));
@@ -82,7 +82,7 @@ public void serialize(Type type)
 }
 ```
 
- Örnek daha sonra aşağıdaki kod örneğinde gösterildiği gibi xsi:türleri deserialize.
+ Örnek, aşağıdaki kod örneğinde gösterildiği gibi xsi: Types öğesini de kaldırır.
 
 ```csharp
 public void deserialize(Type type)
@@ -97,9 +97,9 @@ public void deserialize(Type type)
 }
 ```
 
- Özel <xref:System.Runtime.Serialization.DataContractResolver> <xref:System.Runtime.Serialization.DataContractSerializer> oluşturucuya geçirildiği için, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> bir CLR türünü eşdeğerbir `xsi:type`şekilde eşlemek için serileştirme sırasında çağrılır. Benzer şekilde <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> eşdeğer bir CLR türüne eşlemek `xsi:type` için deserialization sırasında denir. Bu örnekte, <xref:System.Runtime.Serialization.DataContractResolver> aşağıdaki örnekte gösterildiği gibi tanımlanır.
+ Özel, <xref:System.Runtime.Serialization.DataContractResolver> oluşturucuya geçirildiğinden, <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> SERILEŞTIRME sırasında bir clr türünü eşdeğer olarak eşlemek için çağrılır `xsi:type` . Benzer şekilde, <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> `xsi:type` BIR eşdeğer clr türüne eşlemek için seri durumundan çıkarma sırasında çağrılır. Bu örnekte, <xref:System.Runtime.Serialization.DataContractResolver> Aşağıdaki örnekte gösterildiği gibi tanımlanmıştır.
 
- Aşağıdaki kod örneği, 'den <xref:System.Runtime.Serialization.DataContractResolver>türeyen bir sınıftır.
+ Aşağıdaki kod örneği, öğesinden türetilen bir sınıftır <xref:System.Runtime.Serialization.DataContractResolver> .
 
 ```csharp
 class MyDataContractResolver : DataContractResolver
@@ -148,23 +148,23 @@ class MyDataContractResolver : DataContractResolver
 }
 ```
 
- Örneğin bir parçası olarak, Türler projesi bu örnekte kullanılan tüm türleri ile derleme oluşturur. Seri hale getirilecek türleri eklemek, kaldırmak veya değiştirmek için bu projeyi kullanın.
+ Örneğin, Types projesi, derlemeyi Bu örnekte kullanılan tüm türlerle oluşturur. Bu projeyi, serileştirilecek türleri eklemek, kaldırmak veya değiştirmek için kullanın.
 
 #### <a name="to-use-this-sample"></a>Bu örneği kullanmak için
 
-1. Visual Studio 2012'yi kullanarak DCRSample.sln çözüm dosyasını açın.
+1. Visual Studio 2012 kullanarak DCRSample. sln çözüm dosyasını açın.
 
-2. Çözümü çalıştırmak için F5 tuşuna basın
+2. Çözümü çalıştırmak için F5 'e basın
 
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Sözleşmesi Çözücü Kullanma](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
+- [Veri Sözleşmesi Çözücü Kullanma](../feature-details/using-a-data-contract-resolver.md)

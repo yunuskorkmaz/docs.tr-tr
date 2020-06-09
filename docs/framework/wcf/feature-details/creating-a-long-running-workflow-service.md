@@ -2,18 +2,18 @@
 title: Uzun Süre Çalışan Bir İş Akışı Hizmeti Oluşturma
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 3e422c138b49fa19aa29e4fa1488d61a2c9bc2f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4ae01201230bf848c045158424db60097d8dd767
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599353"
 ---
 # <a name="create-a-long-running-workflow-service"></a>Uzun süre çalışan bir Iş akışı hizmeti oluşturma
 
 Bu konuda, uzun süre çalışan bir iş akışı hizmetinin nasıl oluşturulacağı açıklanmaktadır. Uzun süre çalışan iş akışı hizmetleri uzun süreler için çalıştırılabilir. Bazı bir noktada iş akışı, bazı ek bilgiler için bekleyen boşta kalabilir. Bu gerçekleştiğinde, iş akışı bir SQL veritabanında kalıcı hale getirilir ve bellekten kaldırılır. Ek bilgiler kullanılabilir hale geldiğinde, iş akışı örneği belleğe geri yüklenir ve yürütülmeye devam eder.  Bu senaryoda, çok basitleştirilmiş bir sıralama sistemi uygulıyız.  İstemci sıraya başlamak için iş akışı hizmetine bir başlangıç iletisi gönderir. İstemciye bir sıra KIMLIĞI döndürür. Bu noktada, iş akışı hizmeti istemciden başka bir ileti bekliyor ve boşta durumuna geçiyor ve bir SQL Server veritabanına kalıcı hale getirildi.  İstemci bir öğeyi sipariş etmek için bir sonraki iletiyi gönderdiğinde, iş akışı hizmeti belleğe geri yüklenir ve siparişi işlemeyi sonlandırır. Kod örneğinde, öğenin sıraya eklendiğini belirten bir dize döndürür. Kod örneği, teknolojinin gerçek bir dünya uygulaması değil, uzun süre çalışan iş akışı hizmetlerini gösteren basit bir örnektir. Bu konu başlığı altında, Visual Studio 2012 projeleri ve çözümleri oluşturmayı bildiğiniz varsayılmaktadır.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması gerekir:
 
@@ -21,7 +21,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
 2. Visual Studio 2012
 
-3. Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. MICROSOFT[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4. WCF ve Visual Studio 2012 hakkında bilgi sahibisiniz ve proje/çözüm oluşturma hakkında bilgi sahibi olabilirsiniz.
 
@@ -31,7 +31,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
 2. SQL Server örneğine oturum açmak için **Bağlan** düğmesine tıklayın
 
-3. Ağaç görünümünde **veritabanları** ' na sağ tıklayın ve **Yeni veritabanı** ' nı seçin. `SQLPersistenceStore`adlı yeni bir veritabanı oluşturmak için.
+3. Ağaç görünümünde **veritabanları** ' na sağ tıklayın ve **Yeni veritabanı** ' nı seçin. adlı yeni bir veritabanı oluşturun `SQLPersistenceStore` .
 
 4. Gerekli veritabanı şemalarını ayarlamak için Sqlpersistenınstancestore veritabanındaki C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en dizininde bulunan SqlWorkflowInstanceStoreSchema. SQL komut dosyasını çalıştırın.
 
@@ -39,13 +39,13 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
 ## <a name="create-the-web-hosted-workflow-service"></a>Web 'de barındırılan Iş akışı hizmeti oluşturma
 
-1. Boş bir Visual Studio 2012 çözümü oluşturun, `OrderProcessing`adlandırın.
+1. Boş bir Visual Studio 2012 çözümü oluşturun, adlandırın `OrderProcessing` .
 
-2. Çözüme `OrderService` adlı yeni bir WCF Iş akışı hizmeti uygulama projesi ekleyin.
+2. Çözüme adlı yeni bir WCF Iş akışı hizmeti uygulama projesi ekleyin `OrderService` .
 
 3. Proje Özellikleri iletişim kutusunda **Web** sekmesini seçin.
 
-    1. **Başlatma eylemi** altında **belirli sayfa** ' yı seçin ve `Service1.xamlx`belirtin.
+    1. **Başlatma eylemi** altında **belirli sayfa** ' yı seçin ve belirtin `Service1.xamlx` .
 
         ![İş akışı hizmeti projesi Web Özellikleri](./media/creating-a-long-running-workflow-service/start-action-specific-page-option.png "Web 'de barındırılan iş akışı hizmeti 'ne özgü sayfa seçeneğini oluşturma")
 
@@ -58,7 +58,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         Bu iki adım, iş akışı hizmeti projesini IIS tarafından barındırılacak şekilde yapılandırır.
 
-4. Zaten açık değilse `Service1.xamlx` açın ve var olan **ReceiveRequest** ve **SendResponse** etkinliklerini silin.
+4. `Service1.xamlx`Henüz açık değilse açın ve var olan **ReceiveRequest** ve **SendResponse** etkinliklerini silin.
 
 5. **Sıralı hizmet** etkinliğini seçin ve **değişkenler** bağlantısına tıklayın ve aşağıdaki çizimde gösterilen değişkenleri ekleyin. Bunu yapmak, daha sonra iş akışı hizmetinde kullanılacak bazı değişkenleri ekler.
 
@@ -73,9 +73,9 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         ![Alma etkinliği özelliklerini ayarla](./media/creating-a-long-running-workflow-service/set-receive-activity-properties.png "Alma etkinliği özelliklerini ayarlayın.")
 
-        DisplayName özelliği, tasarımcıda alma etkinliği için görünen adı ayarlar. ServiceContractName ve OperationName özellikleri, alma etkinliği tarafından uygulanan hizmet sözleşmesinin ve işlemin adını belirtir. Iş akışı hizmetlerinde sözleşmelerin nasıl kullanıldığı hakkında daha fazla bilgi için bkz. [Iş akışında sözleşmeleri kullanma](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).
+        DisplayName özelliği, tasarımcıda alma etkinliği için görünen adı ayarlar. ServiceContractName ve OperationName özellikleri, alma etkinliği tarafından uygulanan hizmet sözleşmesinin ve işlemin adını belirtir. Iş akışı hizmetlerinde sözleşmelerin nasıl kullanıldığı hakkında daha fazla bilgi için bkz. [Iş akışında sözleşmeleri kullanma](using-contracts-in-workflow.md).
 
-    2. **ReceiveStartOrder** etkinliğinde **define...** bağlantısına tıklayın ve aşağıdaki çizimde gösterilen özellikleri ayarlayın.  **Parametreler** radyo düğmesinin seçili olduğunu, `p_customerName` adlı bir parametrenin `customerName` değişkenine bağlandığını unutmayın. Bu, **alma** etkinliğini bazı verileri alacak şekilde yapılandırır ve bu verileri yerel değişkenlere bağlar.
+    2. **ReceiveStartOrder** etkinliğinde **define...** bağlantısına tıklayın ve aşağıdaki çizimde gösterilen özellikleri ayarlayın.  **Parametreler** radyo düğmesinin seçili olduğuna, adlı parametrenin `p_customerName` değişkenine bağlandığını unutmayın `customerName` . Bu, **alma** etkinliğini bazı verileri alacak şekilde yapılandırır ve bu verileri yerel değişkenlere bağlar.
 
         ![Alma etkinliği tarafından alınan verileri ayarlama](./media/creating-a-long-running-workflow-service/set-properties-for-receive-content.png "Alma etkinliği tarafından alınan veriler için özellikleri ayarlayın.")
 
@@ -83,7 +83,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         ![SendReply etkinliğinin özelliklerini ayarlama](./media/creating-a-long-running-workflow-service/set-properties-for-reply-activities.png "SetReplyProperties")
 
-    4. **SendReplyToStartOrder** etkinliğinde **define...** bağlantısına tıklayın ve aşağıdaki çizimde gösterilen özellikleri ayarlayın. **Parametreler** radyo düğmesinin seçili olduğuna dikkat edin; `p_orderId` adlı bir parametre `orderId` değişkenine bağlanır. Bu ayar, SendReplyToStartOrder etkinliğinin çağırana String türünde bir değer döndürmesini belirtir.
+    4. **SendReplyToStartOrder** etkinliğinde **define...** bağlantısına tıklayın ve aşağıdaki çizimde gösterilen özellikleri ayarlayın. **Parametreler** radyo düğmesinin seçili olduğuna dikkat edin; adlı bir parametre `p_orderId` `orderId` değişkenine bağlanır. Bu ayar, SendReplyToStartOrder etkinliğinin çağırana String türünde bir değer döndürmesini belirtir.
 
         ![SendReply etkinlik içerik verilerini yapılandırma](./media/creating-a-long-running-workflow-service/setreplycontent-for-sendreplytostartorder-activity.png "SetReplyToStartOrder etkinliğinin ayarını yapılandırın.")
 
@@ -93,7 +93,7 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         Bu, yeni bir sipariş KIMLIĞI oluşturur ve değeri OrderID değişkenine koyar.
 
-    6. **ReplyToStartOrder** etkinliğini seçin. Özellikler penceresinde, **Correlationbaşlatıcıları**için üç nokta düğmesine tıklayın. **Başlatıcı Ekle** bağlantısını seçin, başlatıcı metin kutusunda `orderIdHandle` girin, bağıntı türü için sorgu bağıntı Başlatıcısı ' nı SEÇIN ve XPath sorguları açılan kutusu altında p_orderId ' ı seçin. Bu ayarlar aşağıdaki çizimde gösterilmiştir. **Tamam**'ı tıklatın.  Bu, istemci ile iş akışı hizmetinin bu örneği arasında bir bağıntı başlatır. Bu sipariş KIMLIĞINI içeren bir ileti alındığında, iş akışı hizmetinin bu örneğine yönlendirilir.
+    6. **ReplyToStartOrder** etkinliğini seçin. Özellikler penceresinde, **Correlationbaşlatıcıları**için üç nokta düğmesine tıklayın. **Başlatıcı Ekle** bağlantısını seçin, `orderIdHandle` Başlatıcı metin kutusunda girin, bağıntı türü için sorgu bağıntı Başlatıcısı ' nı seçin ve XPath sorguları açılan kutusu altında p_orderId ' yi seçin. Bu ayarlar aşağıdaki çizimde gösterilmiştir. **Tamam**'a tıklayın.  Bu, istemci ile iş akışı hizmetinin bu örneği arasında bir bağıntı başlatır. Bu sipariş KIMLIĞINI içeren bir ileti alındığında, iş akışı hizmetinin bu örneğine yönlendirilir.
 
         ![Bağıntı başlatıcısı ekleme](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Bağıntı başlatıcısı ekleyin.")
 
@@ -103,42 +103,42 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
         ![Yeni değişkenler ekleme](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "ItemId değişkenini ekleyin.")
 
-        Ayrıca, `Sequence` kapsamında **dize** olarak `orderResult` ekleyin.
+        Ayrıca `orderResult` , kapsama **dize** olarak ekleyin `Sequence` .
 
     2. **Alma** etkinliğini seçin ve aşağıdaki çizimde gösterilen özellikleri ayarlayın:
 
         ![Alma etkinliği özelliklerini ayarla](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "Alma etkinlikleri özelliklerini ayarlayın.")
 
         > [!NOTE]
-        > **ServiceContractName** alanını `../IAddItem`değiştirmeyi unutmayın.
+        > **ServiceContractName** alanını ile değiştirmeyi unutmayın `../IAddItem` .
 
     3. **ReceiveAddItem** etkinliğinde **define...** bağlantısına tıklayın ve aşağıdaki çizimde gösterilen parametreleri ekleyin: Bu, Receive etkinliğini iki parametreyi kabul edecek şekılde yapılandırır, sipariş KIMLIĞI ve sıralanan öğenin kimliği.
 
         ![İkinci alım için parametreleri belirtme](./media/creating-a-long-running-workflow-service/add-receive-two-parameters.png "Alma etkinliğini iki parametre alacak şekilde yapılandırın.")
 
-    4. **CorrelateOn** üç nokta düğmesine tıklayın ve `orderIdHandle`girin. **XPath sorguları**altında aşağı açılan oka tıklayın ve `p_orderId`' yi seçin. Bu, ikinci alma etkinliğinde bağıntıyı yapılandırır. Bağıntı hakkında daha fazla bilgi için bkz. [bağıntı](../../../../docs/framework/wcf/feature-details/correlation.md).
+    4. **CorrelateOn** üç nokta düğmesine tıklayın ve girin `orderIdHandle` . **XPath sorguları**altında aşağı açılan oka tıklayın ve öğesini seçin `p_orderId` . Bu, ikinci alma etkinliğinde bağıntıyı yapılandırır. Bağıntı hakkında daha fazla bilgi için bkz. [bağıntı](correlation.md).
 
         ![CorrelatesOn özelliğini ayarlama](./media/creating-a-long-running-workflow-service/correlateson-setting.png "CorrelatesOn özelliğini ayarlayın.")
 
     5. Bir **IF** etkinliğini **receiveaddidıtem** etkinliğinden hemen sonra sürükleyin ve bırakın. Bu etkinlik tıpkı bir if bildirisi gibi davranır.
 
-        1. **Koşul** özelliğini `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)` olarak ayarlayın
+        1. **Koşul** özelliğini olarak ayarlayın`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`
 
         2. ' A bir **atama** etkinliğini sürükleyip **daha sonra** , aşağıdaki çizimde gösterildiği gibi, başka bir şekilde **atama** etkinliklerinin özelliklerini **Ayarla bölümüne bırakın** .
 
             ![Hizmet çağrısının sonucunu atama](./media/creating-a-long-running-workflow-service/assign-result-of-service-call.png "Hizmet çağrısının sonucunu atayın.")
 
-            Koşul `true` **, Bölüm yürütülür** . Koşul `false` **Else** bölümü yürütülür.
+            Koşul ise, `true` bölüm yürütülür **Then** . Koşul `false` **Else** bölümü yürütülür.
 
         3. **SendReplyToReceive** etkinliğini seçin ve aşağıdaki çizimde gösterilen **DisplayName** özelliğini ayarlayın.
 
             ![SendReply etkinlik özelliklerini ayarlama](./media/creating-a-long-running-workflow-service/send-reply-activity-property.png "SendReply etkinlik özelliğini ayarlayın.")
 
-        4. **Setreplytoaddidıtem** etkinliğinde **define...** bağlantısına tıklayın ve aşağıdaki çizimde gösterildiği gibi yapılandırın. Bu, `orderResult` değişkeninde değeri döndürecek **SendReplyToAddItem** etkinliğini yapılandırır.
+        4. **Setreplytoaddidıtem** etkinliğinde **define...** bağlantısına tıklayın ve aşağıdaki çizimde gösterildiği gibi yapılandırın. Bu, değişkende değeri döndürecek **SendReplyToAddItem** etkinliğini yapılandırır `orderResult` .
 
             ![SendReply etkinliği için veri bağlamayı ayarlama](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "Sendreplytoaddidıtem etkinliğinin özelliğini ayarlayın.")
 
-8. Web. config dosyasını açın ve iş akışı kalıcılığını etkinleştirmek için \<davranış > bölümüne aşağıdaki öğeleri ekleyin.
+8. Web. config dosyasını açın ve \<behavior> iş akışı kalıcılığını etkinleştirmek için bölümüne aşağıdaki öğeleri ekleyin.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -148,21 +148,21 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
     > [!WARNING]
     > Önceki kod parçacığında ana bilgisayarınızı ve SQL Server örnek adınızı değiştirdiğinizden emin olun.
 
-9. Çözümü oluşturun.
+9. Çözümü derleyin.
 
 ## <a name="create-a-client-application-to-call-the-workflow-service"></a>Iş akışı hizmetini çağırmak için bir Istemci uygulaması oluşturma
 
-1. Çözüme `OrderClient` adlı yeni bir konsol uygulaması projesi ekleyin.
+1. Çözüme adlı yeni bir konsol uygulaması projesi ekleyin `OrderClient` .
 
-2. `OrderClient` projesine aşağıdaki derlemelere başvurular ekleyin
+2. Projeye aşağıdaki derlemelere başvurular ekleyin `OrderClient`
 
     1. System.ServiceModel.dll
 
     2. System. ServiceModel. Activities. dll
 
-3. İş akışı hizmetine bir hizmet başvurusu ekleyin ve ad alanı olarak `OrderService` belirtin.
+3. İş akışı hizmetine bir hizmet başvurusu ekleyin ve `OrderService` ad alanı olarak belirtin.
 
-4. İstemci projesinin `Main()` yönteminde aşağıdaki kodu ekleyin:
+4. `Main()`İstemci projesi yönteminde aşağıdaki kodu ekleyin:
 
     ```csharp
     static void Main(string[] args)
@@ -207,4 +207,4 @@ Bu yönergeyi kullanabilmeniz için aşağıdaki yazılımların yüklü olması
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İş Akışı Hizmetleri](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [İş Akışı Hizmetleri](workflow-services.md)

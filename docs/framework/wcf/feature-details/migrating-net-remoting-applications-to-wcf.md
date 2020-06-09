@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ',NET remoting [WCF]'
 ms.assetid: 24793465-65ae-4308-8c12-dce4fd12a583
-ms.openlocfilehash: 1d7edab8ad89660f3384d0ccf556384175c4d5db
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: d12583904e4a025a8de1103f0fb48f4656d6855e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212157"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598781"
 ---
 # <a name="migrating-net-remoting-applications-to-wcf"></a>.NET Uzaktan İletişim Uygulamalarını WCF'ye Taşıma
 **Bu konu, mevcut uygulamalarla geriye dönük uyumluluk için saklanan eski bir teknolojiye özgüdür ve yeni geliştirme için önerilmez. Dağıtılmış uygulamalar artık WCF kullanılarak geliştirilebilmelidir.**  
@@ -18,4 +18,4 @@ ms.locfileid: "76212157"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kavramsal Genel Bakış](../../../../docs/framework/wcf/conceptual-overview.md)
+- [Kavramsal genel bakış](../conceptual-overview.md)

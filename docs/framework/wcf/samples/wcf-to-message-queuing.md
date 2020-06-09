@@ -2,12 +2,12 @@
 title: Windows Communication Foundation'dan İleti Kuyruğuna
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: beb4382d61804e9b9ea12e1d191f3e96a637f871
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 872632dc7d0a8a94f8829ffb3fe8eea2607697c8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094806"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602355"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation'dan İleti Kuyruğuna
 
@@ -33,7 +33,7 @@ static void Main(string[] args)
 }
 ```
 
- Kuyrukta bir ileti alındığında, ileti işleyicisi `ProcessOrder` çağrılır.
+ Kuyrukta bir ileti alındığında ileti işleyicisi `ProcessOrder` çağrılır.
 
 ```csharp
 public static void ProcessOrder(Object source,
@@ -62,7 +62,7 @@ public static void ProcessOrder(Object source,
 }
 ```
 
- Hizmet, MSMQ ileti gövdesinden `ProcessOrder` ayıklar ve siparişi işler.
+ Hizmet `ProcessOrder` MSMQ ileti gövdesinden ayıklar ve siparişi işler.
 
  MSMQ kuyruğu adı, aşağıdaki örnek yapılandırmada gösterildiği gibi, yapılandırma dosyasının bir appSettings bölümünde belirtilmiştir.
 
@@ -99,7 +99,7 @@ client.Close();
 
  İstemci, MSMQ iletisini sıraya göndermek için özel bir istemci sırayla kullanır. İletiyi alan ve işleyen uygulama bir WCF uygulaması değil bir MSMQ uygulaması olduğundan, iki uygulama arasında örtük bir hizmet sözleşmesi yoktur. Bu nedenle, bu senaryoda Svcutil. exe aracını kullanarak bir ara sunucu oluşturmuyoruz.
 
- Özel istemci temelde, ileti göndermek için `MsmqIntegration` bağlamasını kullanan tüm WCF uygulamaları için aynıdır. Diğer istemcilerin aksine, bir dizi hizmet işlemi içermez. Yalnızca bir ileti gönder işlemidir.
+ Özel istemci temelde, `MsmqIntegration` ileti göndermek için bağlamayı kullanan tüm WCF uygulamaları için aynıdır. Diğer istemcilerin aksine, bir dizi hizmet işlemi içermez. Yalnızca bir ileti gönder işlemidir.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -135,7 +135,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 
 ## <a name="set-up-build-and-run-the-sample"></a>Örneği kurma, oluşturma ve çalıştırma
 
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
 2. Önce hizmet çalıştırıldığında, sıranın mevcut olduğundan emin olmak için kontrol edilir. Sıra yoksa, hizmet bir tane oluşturur. Kuyruğu oluşturmak için önce hizmeti çalıştırabilir veya MSMQ kuyruğu Yöneticisi aracılığıyla bir tane oluşturabilirsiniz. Windows 2008 ' de bir sıra oluşturmak için aşağıdaki adımları izleyin.
 
@@ -143,15 +143,15 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 
     2. **Özellikler** sekmesini genişletin.
 
-    3. **Özel Ileti sıraları**' na sağ tıklayın ve ardından **Yeni** > **özel kuyruk**' u seçin.
+    3. **Özel ileti sıraları**' na sağ tıklayın ve ardından **Yeni**  >  **özel kuyruk**' ı seçin.
 
     4. **İşlem** kutusunu işaretleyin.
 
-    5. Yeni kuyruğun adı olarak `ServiceModelSamplesTransacted` girin.
+    5. `ServiceModelSamplesTransacted`Yeni kuyruğun adı olarak girin.
 
-3. Çözümün C# veya Visual Basic sürümünü derlemek Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+3. Çözümün C# veya Visual Basic sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.
 
-4. Örneği tek bilgisayarlı bir yapılandırmada çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+4. Örneği tek bilgisayarlı bir yapılandırmada çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 ## <a name="run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırma
 
@@ -170,11 +170,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Nasıl yapılır: WCF Uç Noktaları ve İleti Kuyruğa Alma Uygulamaları ile İleti Alma ve Gönderme](../feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

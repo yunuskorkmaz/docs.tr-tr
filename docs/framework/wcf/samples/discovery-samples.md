@@ -2,34 +2,34 @@
 title: Keşif (Örnekler)
 ms.date: 03/30/2017
 ms.assetid: 522a00b4-a789-4e8c-b8d7-a4c3d863a182
-ms.openlocfilehash: bf01e3fec15ddae0d0901b3c2dc91d3d6109fc97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb5471db6f4feb61798926ae1466a3bebac7e959
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600587"
 ---
 # <a name="discovery-samples"></a>Keşif (Örnekler)
-Bu bölüm bulma özelliğini ilgili örnekleri içerir.  
+Bu bölüm bulma özelliğiyle ilgili örnekleri içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Duyurular](../../../../docs/framework/wcf/samples/announcements-sample.md)  
- Bulma özelliği olan duyuruları nasıl yapılacağı açıklanır.  
+ [Duyurular](announcements-sample.md)  
+ Bulma özelliği ile duyuruları nasıl kullanacağınızı gösterir.  
   
- [Temel](../../../../docs/framework/wcf/samples/basic-sample.md)  
- Hizmet bu hizmeti kullanmak için program aracılığıyla arama yanı sıra bulunabilir hale getirme gösterir <xref:System.ServiceModel.Discovery.DynamicEndpoint>.  
+ [Temel](basic-sample.md)  
+ Hizmetini kullanarak bir hizmetin nasıl keşfedilebilir olduğunu ve bu hizmeti aramanızı gösterir <xref:System.ServiceModel.Discovery.DynamicEndpoint> .  
   
- [Yapılandırma](../../../../docs/framework/wcf/samples/configuration-sample.md)  
- Hizmet bulunabilir hale getirmek için bir yapılandırma dosyası kullanmayı ve bunun yanı sıra nasıl kullanılacağını gösteren bir <xref:System.ServiceModel.Discovery.DynamicEndpoint> aramak için bu hizmeti için yapılandırma.  
+ [Yapılandırma](configuration-sample.md)  
+ Bir hizmetin keşfedilmesini sağlamak için bir yapılandırma dosyası kullanmayı ve <xref:System.ServiceModel.Discovery.DynamicEndpoint> Bu hizmeti aramak için nasıl bir yapılandırma kullanacağınızı gösterir.  
   
- [Kapsamlarla Bulma](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- Bulunabilirlik uç noktaları da nasıl kullanılacağını olarak sınıflandırmak için kapsamları kullanmayı gösteren <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktaları için zaman uyumsuz bir arama gerçekleştirmek için.  
+ [Kapsamlarla Bulma](discovery-with-scopes-sample.md)  
+ Bulunabilecek uç noktaları kategorilere ayırmak için kapsamların nasıl kullanılacağını ve <xref:System.ServiceModel.Discovery.DiscoveryClient> uç noktalar için zaman uyumsuz arama yapmayı gösterir.  
   
- [Özel Bulma Ölçütleri](../../../../docs/framework/wcf/samples/custom-find-criteria.md)  
- Mantığı kullanarak özel kapsam eşleşme oluşturma ve bir özel bulma hizmeti uygulamak nasıl gösterir.  
+ [Özel Bulma Ölçütleri](custom-find-criteria.md)  
+ Mantığı kullanarak özel kapsam eşleşmesi oluşturmayı ve özel bulma hizmetinin nasıl uygulanacağını gösterir.  
   
- [İş Akışı Bulma Örneği](../../../../docs/framework/wcf/samples/workflow-discovery-sample.md)  
- Bir iş akışı hizmeti bulunabilir hale getirme ve belirli bir hizmet için arayan bir özel kod etkinliği yazmak nasıl gösterir.  
+ [İş Akışı Keşif Örneği](workflow-discovery-sample.md)  
+ Bir iş akışı hizmetinin bulunabilir hale getirme ve belirli bir hizmeti arayan özel kod etkinliğinin nasıl yazıldığını gösterir.  
   
- [Bulma Yönlendirme Hizmeti](../../../../docs/framework/wcf/samples/discovery-router-service.md)  
- Başka bir uç nokta bulma iletileri iletecek şekilde gösterilmektedir.
+ [Keşif Yönlendirme Hizmeti](discovery-router-service.md)  
+ Bulma iletilerinin başka bir uç noktaya nasıl iletileceğini gösterir.

@@ -2,39 +2,39 @@
 title: Orta Katman İstemci Uygulamaları
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c50223a55765f211dae710f96bffa7716ce36b32
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877466"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598820"
 ---
 # <a name="middle-tier-client-applications"></a>Orta Katman İstemci Uygulamaları
-Bu konu, Windows Communication Foundation (WCF) kullanan Orta katman istemci uygulamaları için belirli çeşitli sorunlar ele alınmıştır.  
+Bu konuda Windows Communication Foundation (WCF) kullanan orta katman istemci uygulamalarına özgü çeşitli sorunlar ele alınmaktadır.  
   
-## <a name="increasing-middle-tier-client-performance"></a>Orta katman istemci performansını artırma  
- ASP.NET kullanarak Web Hizmetleri gibi önceki iletişimi teknolojilerine kıyasla bir WCF istemcisi örneği oluşturulmasını WCF zengin özellik kümesi nedeniyle daha karmaşık olabilir. Örneğin, bir <xref:System.ServiceModel.ChannelFactory%601> nesnesinin açıldığı güvenli bir oturum hizmetiyle istemci örneği için başlangıç süresini artıran bir yordam oluşturabilirsiniz. WCF istemcisini çeşitli çağrılar yapar ve ardından kapatır genellikle, bu ek özellik yetenekleri istemci uygulamaları önemli ölçüde etkilemez.  
+## <a name="increasing-middle-tier-client-performance"></a>Orta katman Istemci performansını artırma  
+ ASP.NET kullanan Web Hizmetleri gibi önceki iletişim teknolojilerine kıyasla, WCF istemci örneğinin oluşturulması, zengin özellik WCF kümesi nedeniyle daha karmaşık olabilir. Örneğin, bir <xref:System.ServiceModel.ChannelFactory%601> nesne açıldığında, hizmet ile güvenli bir oturum oluşturabilir ve istemci örneği için başlama süresini artıran bir yordamdır. Genellikle, bu ek özellik özellikleri, WCF istemcisi çeşitli çağrılar yaptığından, istemci uygulamalarını önemli ölçüde etkilemez ve sonra kapatır.  
   
- Orta katman istemci uygulamaları, ancak birçok WCF istemci nesne hızlı bir şekilde oluşturabilir ve, sonuç olarak, artan başlatma gereksinimleri karşılaşırsınız. Hizmetleri çağırırken orta katman uygulamalarının performansını artırmak için iki ana yaklaşım vardır:  
+ Ancak, orta katman istemci uygulamaları hızlı bir şekilde birçok WCF istemci nesnesi oluşturabilir ve sonuç olarak, daha fazla başlatma gereksinimini ortadan kaldırabilirsiniz. Hizmetleri çağırırken orta katman uygulamaların performansını arttırmaya yönelik iki ana yaklaşım vardır:  
   
-- WCF istemci nesnesini önbelleğe ve mümkün olduğunda sonraki çağrılar için indirilebilir.  
+- WCF istemci nesnesini önbelleğe alarak mümkün olduğunda sonraki çağrılar için yeniden kullanın.  
   
-- Oluşturma bir <xref:System.ServiceModel.ChannelFactory%601> nesne ve o nesnenin kanal nesneler her çağrı için yeni bir WCF istemcisi oluşturmak için kullanın.  
+- Bir <xref:System.ServiceModel.ChannelFactory%601> nesne oluşturun ve ardından bu nesneyi kullanarak her çağrı için yenı WCF istemci kanalı nesneleri oluşturun.  
   
- Bu yaklaşımların kullanırken dikkat etmeniz gereken sorunlar şunlardır:  
+ Bu yaklaşımların kullanılması sırasında göz önünde bulundurulması gereken sorunlar şunlardır:  
   
-- Hizmet istemci özel durumu bir oturumu kullanarak koruma, hizmet durumu, orta katman istemci bağlı olmadığından birden çok istemci katmanı isteklerle orta katman WCF istemcisini yeniden kullanamazsınız.  
+- Hizmet, bir oturum kullanarak istemciye özgü bir durumu yaşalıyorsa, hizmetin durumu orta katman istemciye bağlı olduğundan, orta katman WCF istemcisini birden çok istemci katmanı isteği ile yeniden kullanamazsınız.  
   
-- Hizmet istemci başına temelinde kimlik doğrulaması gerçekleştirmesi gerekiyorsa, çünkü orta katman WCF istemcisi (veya WCF istemci kanal nesnesi) yeniden kullanmak yerine orta katman her gelen istek için yeni bir istemci oluşturmalısınız orta katman istemci kimlik bilgileri WCF istemcisi sonra değiştirilemez (veya <xref:System.ServiceModel.ChannelFactory%601>) oluşturuldu.  
+- Hizmetin, istemci başına kimlik doğrulaması gerçekleştirmesi gerekiyorsa, orta katman WCF istemcisini (veya WCF istemci kanalı nesnesini) yeniden kullanmak yerine orta katmandaki her gelen istek için yeni bir istemci oluşturmanız gerekir, çünkü ortadaki katmanın istemci kimlik bilgileri, WCF istemcisi (veya) oluşturulduktan sonra değiştirilemez <xref:System.ServiceModel.ChannelFactory%601> .  
   
-- Kanallar ve istemcilerin kanalları tarafından oluşturulan iş parçacığı açısından güvenli olsa da, bunlar için kablo, eşzamanlı olarak birden fazla ileti yazma desteklemiyor olabilir. Büyük iletileri gönderiyorsanız, özellikle akış, gönderme işlemi tamamlamak başka bir göndermek için bekleme engelleyebilir. Bu iki tür sorunlara neden olur: bir eşzamanlılık ve denetim akışını kanal yeniden hizmete döndürürse kilitlenme olasılığını eksikliği (diğer bir deyişle, paylaşılan istemci bir hizmet olan kod yolu sonuçları paylaşılan istemciye bir geri çağırma içinde çağırır). Bu yeniden WCF istemci türü ne olursa olsun doğrudur.  
+- Kanallar tarafından oluşturulan kanallar ve istemciler iş parçacığı açısından güvende olsa da, aynı anda hatta birden fazla ileti yazmayı desteklemeyebilir. Büyük iletiler gönderiyorsanız, özellikle akış ise, gönderme işlemi başka bir göndermenin tamamlanmasını beklemeyi engelleyebilir. Bu, iki tür soruna neden olur: denetim akışı kanalı yeniden kullanan hizmete geri dönerse, eşzamanlılık olmaması ve kilitlenme olasılığını (yani, paylaşılan istemci, kod yolu paylaşılan istemciye geri çağrıya neden olan bir hizmet çağırır) sağlar. Bu, yeniden kullandığınız WCF istemcisi türünden bağımsız olarak geçerlidir.  
   
-- Kanal paylaştığınız bağımsız olarak hatalı kanal işlemesi gerekir. Kanalları yeniden kullanılır, ancak hatalı kanal birden fazla bekleyen istek aşağı olması ya da gönderebilir.  
+- Kanalı paylaşıp paylaşmadığına bakılmaksızın hatalı kanalları işlemeniz gerekir. Ancak, kanallar yeniden kullanıldığında, hatalı bir kanal birden fazla bekleyen istek veya gönderme işlemi gerçekleştirebilir.  
   
- Bir istemci birden çok istek için yeniden kullanmak için en iyi yöntemleri gösteren bir örnek için bkz: [bir ASP.NET istemcisinde veri bağlama](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md).  
+ Bir istemciyi birden çok istek için yeniden kullanmak üzere en iyi yöntemleri gösteren bir örnek için bkz. [ASP.net Istemcisinde veri bağlama](../samples/data-binding-in-an-aspnet-client.md).  
   
- Ayrıca, seri hale getirilebilir kullanarak veri türleri kullanan bu istemciler için başlatma performansını artırabilir <xref:System.Xml.Serialization.XmlSerializer> oluşturmak ve yavaş başlatma performansı düşürebilir çalışma zamanında bu veri türleri için serileştirme kodu derleyin. [ServiceModel meta veri yardımcı Programracı (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) derlenmiş bütünleştirilmiş uygulama için gerekli serileştirme kod oluşturarak bu uygulamaları için başlatma performansını geliştirebilir. Daha fazla bilgi için [nasıl yapılır: Başlangıç zamanı, istemci XmlSerializer kullanarak WCF uygulamalarının geliştirilmesine](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
+ Ek olarak, <xref:System.Xml.Serialization.XmlSerializer> çalışma zamanında bu veri türleri için Oluştur ve derle serileştirme kodu kullanarak seri hale getirilebilir veri türlerini kullanan istemciler için başlangıç performansını artırabilirsiniz ve bu da yavaş başlangıç performansına yol açabilir. [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , uygulama için derlenmiş derlemelerden gerekli serileştirme kodunu oluşturarak bu uygulamalar için başlangıç performansını iyileştirebilir. Daha fazla bilgi için bkz. [nasıl yapılır: XmlSerializer kullanarak WCF Istemci uygulamalarının başlangıç zamanını geliştirme](startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WCF İstemcisi Kullanarak Hizmetlere Erişme](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)
+- [WCF İstemcisi Kullanarak Hizmetlere Erişme](accessing-services-using-a-client.md)

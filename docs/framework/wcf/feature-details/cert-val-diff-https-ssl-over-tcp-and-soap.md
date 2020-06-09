@@ -7,42 +7,42 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185401"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599340"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
-Windows Communication Foundation'daki (WCF) ileti katmanı (SOAP) güvenliğine sahip sertifikaları, HTTP (HTTPS) veya TCP üzerinden taşıma katmanı güvenliğine (TLS) ek olarak kullanabilirsiniz. Bu konu, bu tür sertifikaların doğrulanma şeklindeki farklılıkları açıklar.  
+HTTP (HTTPS) veya TCP üzerinden Aktarım Katmanı Güvenliği (TLS) ek olarak, ileti katmanı (SOAP) güvenliği ile Windows Communication Foundation (WCF) içindeki sertifikaları kullanabilirsiniz. Bu konu, bu tür sertifikaların doğrulanması için farkları açıklar.  
   
-## <a name="validation-of-https-client-certificates"></a>HTTPS İstemci Sertifikalarının Doğrulanması  
- İstemci ve hizmet arasında iletişim kurmak için HTTPS kullanırken, istemcinin hizmete kimlik doğrulamak için kullandığı sertifika zincir güvenini desteklemelidir. Diğer bir süre, güvenilir bir kök sertifika yetkilisine zincirleme olmalıdır. Değilse, HTTP katmanı "Uzak sunucu bir hata döndü: (403) Yasak" iletisi ile yükseltir. <xref:System.Net.WebException> WCF bu istisnayı <xref:System.ServiceModel.Security.MessageSecurityException>bir .  
+## <a name="validation-of-https-client-certificates"></a>HTTPS Istemci sertifikalarının doğrulanması  
+ İstemci ile bir hizmet arasında iletişim kurmak için HTTPS kullanılırken, istemcinin hizmette kimlik doğrulamak için kullandığı sertifikanın zincir güvenini desteklemesi gerekir. Diğer bir deyişle, güvenilen bir kök sertifika yetkilisine zincirlenmelidir. Aksi takdirde, HTTP katmanı bir <xref:System.Net.WebException> "uzak sunucu bir hata döndürdü: (403) yasak iletisi ile bir oluşturur. WCF bu özel durumu bir olarak gösterir <xref:System.ServiceModel.Security.MessageSecurityException> .  
   
-## <a name="validation-of-https-service-certificates"></a>HTTPS Hizmet Sertifikalarının Doğrulanması  
- İstemci ve hizmet arasında iletişim kurmak için HTTPS kullanırken, sunucunun kimlik doğrulaması yaptığı sertifika varsayılan olarak zincir güvenini desteklemelidir. Diğer bir süre, güvenilir bir kök sertifika yetkilisine zincirleme olmalıdır. Sertifikanın iptal edilip edilmediğine dair çevrimiçi denetim yapılmaz. Aşağıdaki kodda gösterildiği gibi bir <xref:System.Net.Security.RemoteCertificateValidationCallback> geri arama kaydederek bu davranışı geçersiz kılabilirsiniz.  
+## <a name="validation-of-https-service-certificates"></a>HTTPS hizmet sertifikalarının doğrulanması  
+ İstemci ile bir hizmet arasında iletişim kurmak için HTTPS kullanılırken, sunucunun kimlik doğrulaması yaptığı sertifikanın varsayılan olarak zincir güvenini desteklemesi gerekir. Diğer bir deyişle, güvenilen bir kök sertifika yetkilisine zincirlenmelidir. Sertifikanın iptal edilip edilmediğini görmek için çevrimiçi denetim gerçekleştirilmez. <xref:System.Net.Security.RemoteCertificateValidationCallback>Aşağıdaki kodda gösterildiği gibi, bir geri çağırma kaydederek bu davranışı geçersiz kılabilirsiniz.  
   
  [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)]
  [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  
   
- için `ValidateServerCertificate` imza aşağıdaki gibi olduğu yer:  
+ imzası `ValidateServerCertificate` aşağıdaki gibidir:  
   
  [!code-csharp[c_CertificateValidationDifferences#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#2)]
  [!code-vb[c_CertificateValidationDifferences#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#2)]  
   
- Uygulama, `ValidateServerCertificate` istemci uygulama geliştiricisinin hizmet sertifikasını doğrulamak için gerekli gördüğü denetimleri gerçekleştirebilir.  
+ Uygulama, `ValidateServerCertificate` istemci uygulama geliştiricisi tarafından hizmet sertifikasını doğrulamak için gerekli olan tüm denetimleri gerçekleştirebilir.  
   
-## <a name="validation-of-client-certificates-in-ssl-over-tcp-or-soap-security"></a>SSL'deki Müşteri Sertifikalarının TCP veya SOAP Security üzerinden doğrulanması  
- TCP veya ileti (SOAP) güvenliği üzerinden Güvenli Soketkatmanı (SSL) kullanırken, <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> istemci sertifikaları <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> sınıfın özellik değerine göre doğrulanır. Özellik <xref:System.ServiceModel.Security.X509CertificateValidationMode> değerlerden birine ayarlanır. İptal denetimi <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> sınıfın özellik değeri değerlerine göre gerçekleştirilir. Özellik <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> değerlerden birine ayarlanır.  
+## <a name="validation-of-client-certificates-in-ssl-over-tcp-or-soap-security"></a>TCP veya SOAP Güvenliği üzerinden SSL 'de Istemci sertifikalarının doğrulanması  
+ TCP veya ileti (SOAP) güvenliği üzerinden Güvenli Yuva Katmanı (SSL) kullanırken, istemci sertifikaları, <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> sınıfının özellik değerine göre onaylanır <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> . Özelliği değerlerden birine ayarlanır <xref:System.ServiceModel.Security.X509CertificateValidationMode> . İptal denetimi, <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.RevocationMode%2A> sınıfının özellik değerinin değerlerine göre gerçekleştirilir <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> . Özelliği değerlerden birine ayarlanır <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> .  
   
  [!code-csharp[c_CertificateValidationDifferences#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#3)]
  [!code-vb[c_CertificateValidationDifferences#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#3)]  
   
-## <a name="validation-of-service-certificate-in-ssl-over-tcp-and-soap-security"></a>SSL'de Hizmet Belgesinin TCP ve SOAP Security üzerinden doğrulanması  
- TCP veya (SOAP) ileti güvenliği üzerinden SSL kullanırken, hizmet <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> sertifikaları <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> sınıfın özellik değerine göre doğrulanır. Özellik <xref:System.ServiceModel.Security.X509CertificateValidationMode> değerlerden birine ayarlanır.  
+## <a name="validation-of-service-certificate-in-ssl-over-tcp-and-soap-security"></a>TCP ve SOAP Güvenliği üzerinden SSL 'de hizmet sertifikası doğrulaması  
+ TCP veya (SOAP) ileti güvenliği üzerinden SSL kullanırken, hizmet sertifikaları, <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> sınıfının özellik değerine göre onaylanır <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> . Özelliği değerlerden birine ayarlanır <xref:System.ServiceModel.Security.X509CertificateValidationMode> .  
   
- İptal denetimi <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode%2A> <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> sınıfın özellik değeri değerlerine göre gerçekleştirilir. Özellik <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> değerlerden birine ayarlanır.  
+ İptal denetimi, <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.RevocationMode%2A> sınıfının özellik değerinin değerlerine göre gerçekleştirilir <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> . Özelliği değerlerden birine ayarlanır <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> .  
   
  [!code-csharp[c_CertificateValidationDifferences#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#4)]
  [!code-vb[c_CertificateValidationDifferences#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#4)]  
@@ -50,4 +50,4 @@ Windows Communication Foundation'daki (WCF) ileti katmanı (SOAP) güvenliğine 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Sertifikalarla Çalışma](working-with-certificates.md)

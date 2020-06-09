@@ -2,31 +2,31 @@
 title: Hizmet Sözleşmeleri
 ms.date: 03/30/2017
 ms.assetid: 9e34b694-aa56-45b3-8dd1-2616705b4fc5
-ms.openlocfilehash: e6e4deaf3c5023f28f76983e6b7dfe2e24182c11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4487ac693b93a27b11fb69b1c663285ebcdc107
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967589"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599899"
 ---
 # <a name="service-contracts"></a>Hizmet Sözleşmeleri
-Bu bölüm, Windows Communication Foundation (WCF) hizmet sözleşmelerini gösteren örnekler içerir.  
+Bu bölüm Windows Communication Foundation (WCF) içindeki hizmet sözleşmelerini gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Çift Yönlü](../../../../docs/framework/wcf/samples/duplex.md)  
- Çift yönlü Sözleşme tanımlaması ve gösterilmektedir.  
+ [Çift Yönlü](duplex.md)  
+ Bir çift yönlü sözleşmenin nasıl tanımlanacağını ve uygulanacağını gösterir.  
   
- [Hatalı Anlaşma](../../../../docs/framework/wcf/samples/fault-contract.md)  
- Bir istemci bir hizmet sağlayıcısından hata bilgiler iletmek nasıl gösterir.  
+ [Hatalı Sözleşme](fault-contract.md)  
+ Bir hizmetten istemciye hata bilgilerini nasıl ileteceğinizi gösterir.  
   
- [Tek Yönlü](../../../../docs/framework/wcf/samples/one-way.md)  
- Bir hizmet sözleşmesi ile tek yönlü hizmet işlemleri gösterilmektedir.  
+ [Tek Yönlü](one-way.md)  
+ Tek yönlü hizmet işlemlerine sahip bir hizmet kişışını gösterir.  
   
- [Oturum](../../../../docs/framework/wcf/samples/session.md)  
- Bir oturum gerektiren bir sözleşmesini uygulama gösterilmiştir.  
+ [Oturum](session.md)  
+ Oturum gerektiren bir sözleşmenin nasıl uygulanacağını gösterir.  
   
- [Akış](../../../../docs/framework/wcf/samples/stream.md)  
- Akış aktarım modu iletişimi kullanımını gösterir.  
+ [Akış](stream.md)  
+ Akış aktarım modu iletişiminin kullanımını gösterir.  
   
- [XmlSerializer Hataları](../../../../docs/framework/wcf/samples/xmlserializer-faults.md)  
- Hizmet hata bilgileri kullanarak istemci iletişim kurmak gösterilmiştir <xref:System.Xml.Serialization.XmlSerializer>.
+ [XmlSerializer Hataları](xmlserializer-faults.md)  
+ Kullanarak bir hizmetten bir istemciye hata bilgilerini nasıl ileteceğinizi gösterir <xref:System.Xml.Serialization.XmlSerializer> .

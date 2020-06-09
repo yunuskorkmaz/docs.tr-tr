@@ -1,5 +1,6 @@
 ---
 title: Semafor ve SemaphoreSlim
+description: Semafor & SemaphoreSlim hakkında bilgi edinin. Sınıf semaforu, Win32 semafor nesnesinin etrafında ince bir sarmalayıcıdır. SemaphoreSlim sınıfı hızlı bir hafif semaforun.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-ms.openlocfilehash: 9a18a6517548bb402e1e3b9ac02e95aae32a8f4a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 21f0d7e3fb446a7b750c45cfe8ef3f087a77888a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600457"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semafor ve SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType>Sınıf, adlandırılmış (systemwide) veya yerel semaforu temsil eder. Bu, Win32 semafor nesnesinin etrafında ince bir sarmalayıcıdır. Win32 semaforları, bir kaynak havuzuna erişimi denetlemek için kullanılabilen semafor sayısını saymaktadır.  

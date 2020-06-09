@@ -2,15 +2,15 @@
 title: İşlem Protokolleri sürüm 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: f725361b9a90c9336b763cc7f292ae043e445966
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598716"
 ---
 # <a name="transaction-protocols-version-10"></a>İşlem Protokolleri sürüm 1.0
-Windows Communication Foundation (WCF) sürüm 1, WS Atomik Işlem ve WS-koordinasyon protokollerinin 1,0 sürümünü uygular. Sürüm 1,1 hakkında daha fazla bilgi için bkz. [Işlem protokolleri](../../../../docs/framework/wcf/feature-details/transaction-protocols.md).  
+Windows Communication Foundation (WCF) sürüm 1, WS Atomik Işlem ve WS-koordinasyon protokollerinin 1,0 sürümünü uygular. Sürüm 1,1 hakkında daha fazla bilgi için bkz. [Işlem protokolleri](transaction-protocols.md).  
   
 |Belirtim/belge|Bağlantı|  
 |-----------------------------|----------|  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) sürüm 1, WS Atomik Işlem ve WS-koordin
 #### <a name="activation-message-binding-configuration"></a>Etkinleştirme Iletisi bağlama yapılandırması  
  Etkinleştirme Iletileri genellikle bir uygulama ve kendi yerel Işlem yöneticisi arasında gerçekleştiğinden birlikte çalışabilirliğe katılmaz.  
   
- B1221: WCF etkinleştirme iletileri için çift yönlü HTTPS bağlamasını ( [mesajlaşma protokollerinde](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)açıklanmıştır) kullanır. İstek ve yanıt iletisi, WS-Addressing 2004/08 kullanılarak bağıntılı.  
+ B1221: WCF etkinleştirme iletileri için çift yönlü HTTPS bağlamasını ( [mesajlaşma protokollerinde](messaging-protocols.md)açıklanmıştır) kullanır. İstek ve yanıt iletisi, WS-Addressing 2004/08 kullanılarak bağıntılı.  
   
  WS Atomik Işlem belirtimi, Bölüm 8, bağıntı ve ileti değişimi desenleri hakkında daha fazla ayrıntı açıklamaktadır.  
   
@@ -110,11 +110,11 @@ Windows Communication Foundation (WCF) sürüm 1, WS Atomik Işlem ve WS-koordin
  `t:IssuedTokens`Giden iletiye ekleme için yeni bir üst bilgi oluşturulmalıdır `wscoor:CreateCoordinationContextResponse` .  
   
 #### <a name="registration-message-binding-configuration"></a>Kayıt Iletisi bağlama yapılandırması  
- B1231: WCF çift yönlü HTTPS bağlamasını kullanır ( [mesajlaşma protokollerinde](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)açıklanmıştır). İstek ve yanıt iletisi, WS-Addressing 2004/08 kullanılarak bağıntılı.  
+ B1231: WCF çift yönlü HTTPS bağlamasını kullanır ( [mesajlaşma protokollerinde](messaging-protocols.md)açıklanmıştır). İstek ve yanıt iletisi, WS-Addressing 2004/08 kullanılarak bağıntılı.  
   
  WS-AtomicTransaction, Bölüm 8, ileti değişim desenlerinin bağıntı ve açıklamaları hakkında daha fazla ayrıntı açıklamaktadır.  
   
- R1232: giden `wscoor:Register` Iletilerin `IssuedTokenOverTransport` [Güvenlik protokollerinde](../../../../docs/framework/wcf/feature-details/security-protocols.md)açıklanan kimlik doğrulama modunu kullanması gerekir.  
+ R1232: giden `wscoor:Register` Iletilerin `IssuedTokenOverTransport` [Güvenlik protokollerinde](security-protocols.md)açıklanan kimlik doğrulama modunu kullanması gerekir.  
   
  `wsse:Timestamp`Öğe, verilen kullanılarak imzalanmalıdır `SecurityContextToken STx` . Bu imza, belirli bir işlemle ilişkili belirtecin bir kanıtıdır ve işlemde bir katılımcı listesini doğrulamak için kullanılır. RegistrationResponse iletisi HTTPS üzerinden geri gönderilir.  
   

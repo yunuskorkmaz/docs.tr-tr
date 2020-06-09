@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 7bc628952d4a7198f0b5545014ae931bbf73dab3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 70d7e9ff45616f832597ebc48db00198967935c6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601146"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Nasıl yapılır: WSDL Sözleşmeleriyle Hizmet Bilinen Adı Kullanma
 Tamamen kendi kendine bağımsız bir COM birlikte çalışma istemcisine sahip olmak isteyebileceğiniz durumlar vardır. Çağırmak istediğiniz hizmet bir MEX uç noktası açığa sunmayabilir ve WCF istemci DLL 'SI COM birlikte çalışması için kaydedilmemiş olabilir. Bu durumlarda, hizmeti açıklayan bir WSDL dosyası oluşturabilir ve bunu WCF hizmeti bilinen adına geçirebilirsiniz. Bu konu, bir WCF WSDL bilinen adı kullanılarak Başlarken WCF örneğinin nasıl çağrılacağını açıklar.  
@@ -16,7 +16,7 @@ Tamamen kendi kendine bağımsız bir COM birlikte çalışma istemcisine sahip 
   
 1. GettingStarted örnek çözümünü açın ve oluşturun.  
   
-2. Internet Explorer 'ı açın ve hizmetin `http://localhost/ServiceModelSamples/Service.svc` çalıştığından emin olmak için öğesine gidin.  
+2. Internet Explorer 'ı açın ve `http://localhost/ServiceModelSamples/Service.svc` hizmetin çalıştığından emin olmak için öğesine gidin.  
   
 3. Service.cs dosyasında, Hesaplatorservice sınıfına aşağıdaki özniteliği ekleyin:  
   
@@ -24,7 +24,7 @@ Tamamen kendi kendine bağımsız bir COM birlikte çalışma istemcisine sahip 
   
 4. Service App. config dosyasına bir bağlama ad alanı ekleyin:  
 
-5. Uygulamanın okuması için bir WSDL dosyası oluşturun. Ad alanları 3 ve 4. adımlarda eklendiğinden, ' a giderek hizmetin `http://localhost/ServiceModelSamples/Service.svc?wsdl`WSDL açıklamasının TAMAMıNı sorgulamak için IE kullanabilirsiniz. Dosyayı daha sonra serviceWSDL. xml olarak Internet Explorer 'dan kaydedebilirsiniz. Adım 3 ve 4 ' te ad alanlarını belirtmezseniz, yukarıdaki URL 'yi sorgulamadan döndürülen WSDL belgesi, WSDL 'nin tamamını belirtmeyecektir. Döndürülen WSDL belgesi, diğer WSDL belgelerini içeri aktaracak birkaç içeri aktarma deyimi içerir. Her bir içeri aktarma ekstresini ilerlemenize ve WSDL 'yi içeri aktarılan wsdl ile birleştiren WSDL belgesinin tamamını derlemeniz gerekir.  
+5. Uygulamanın okuması için bir WSDL dosyası oluşturun. Ad alanları 3 ve 4. adımlarda eklendiğinden, ' a giderek hizmetin WSDL açıklamasının tamamını sorgulamak için IE kullanabilirsiniz `http://localhost/ServiceModelSamples/Service.svc?wsdl` . Dosyayı daha sonra serviceWSDL. xml olarak Internet Explorer 'dan kaydedebilirsiniz. Adım 3 ve 4 ' te ad alanlarını belirtmezseniz, yukarıdaki URL 'yi sorgulamadan döndürülen WSDL belgesi, WSDL 'nin tamamını belirtmeyecektir. Döndürülen WSDL belgesi, diğer WSDL belgelerini içeri aktaracak birkaç içeri aktarma deyimi içerir. Her bir içeri aktarma ekstresini ilerlemenize ve WSDL 'yi içeri aktarılan wsdl ile birleştiren WSDL belgesinin tamamını derlemeniz gerekir.  
   
 6. Visual Basic 6,0 ' i açın ve yeni bir standart. exe dosyası oluşturun. Forma bir düğme ekleyin ve tıklama işleyicisine aşağıdaki kodu eklemek için düğmeye çift tıklayın:  
   
@@ -50,11 +50,11 @@ Tamamen kendi kendine bağımsız bir COM birlikte çalışma istemcisine sahip 
     ```  
   
     > [!NOTE]
-    > Bilinen ad hatalı biçimlendirilmiş veya hizmet kullanılamıyorsa `GetObject` , "geçersiz söz dizimi" belirten bir hata döndürür.  Bu hatayı alırsanız, kullanmakta olduğunuz bilinen adın doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
+    > Bilinen ad hatalı biçimlendirilmiş veya hizmet kullanılamıyorsa, `GetObject` "geçersiz söz dizimi" belirten bir hata döndürür.  Bu hatayı alırsanız, kullanmakta olduğunuz bilinen adın doğru olduğundan ve hizmetin kullanılabilir olduğundan emin olun.  
   
 7. Visual Basic uygulamasını çalıştırın. Çıkarma çağrısı sonuçlarıyla birlikte bir ileti kutusu görüntülenir (145, 76,54).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlarken](../../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [COM Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+- [Başlarken](../samples/getting-started-sample.md)
+- [COM Uygulamaları ile Tümleştirme Genel Bakış](integrating-with-com-applications-overview.md)

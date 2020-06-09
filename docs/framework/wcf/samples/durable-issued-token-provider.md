@@ -2,41 +2,41 @@
 title: Dayanıklı Verilen Belirteç Sağlayıcısı
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 08c6837f45ba1c422cdc3df2c884aa81b50a7f2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fed5f44e6cc40cfe2ca963077b6371c14b3b086a
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144753"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600572"
 ---
 # <a name="durable-issued-token-provider"></a>Dayanıklı Verilen Belirteç Sağlayıcısı
 Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının nasıl uygulanacağını gösterir.  
   
 ## <a name="discussion"></a>Tartışma  
- Windows Communication Foundation'daki (WCF) bir belirteç sağlayıcısı, güvenlik altyapısına kimlik bilgileri sağlamak için kullanılır. Genel olarak belirteç sağlayıcısı, güvenlik altyapısının iletiyi güvence altına alabilmesi için hedefi inceler ve uygun kimlik bilgilerini sorunları sağlar. Bir CardSpace belirteç sağlayıcısı ile WCF gemi. Özel belirteç sağlayıcıları aşağıdaki durumlarda yararlıdır:  
+ Güvenlik altyapısına kimlik bilgilerini sağlamak için Windows Communication Foundation (WCF) içindeki bir belirteç sağlayıcısı kullanılır. Genel içindeki belirteç sağlayıcısı hedefi inceler ve güvenlik altyapısının iletiyi güvenli hale getirmek için uygun kimlik bilgilerini verir. WCF, bir CardSpace belirteç sağlayıcısıyla birlikte gelir. Özel belirteç sağlayıcıları aşağıdaki durumlarda faydalıdır:  
   
-- Yerleşik belirteç sağlayıcısının çalışamadığı bir kimlik deponuz varsa.  
+- Yerleşik belirteç sağlayıcısının birlikte çalışamamasının bir kimlik bilgisi deposu varsa.  
   
-- Kullanıcının ayrıntıları wcf istemcisi kimlik bilgilerini kullandığı noktaya kadar dönüştürmek için kendi özel mekanizmasağlamak istiyorsanız.  
+- Kullanıcı, WCF istemcisi kimlik bilgilerini kullandığında, kimlik bilgilerini bir noktadan dönüştürmek için kendi özel mekanizmanızı sağlamak istiyorsanız.  
   
 - Özel bir belirteç oluşturuyorsanız.  
   
- Bu örnek, bir Güvenlik Belirteç Hizmeti (STS) tarafından verilen belirteçleri önbelleğe alan özel bir belirteç sağlayıcısının nasıl oluşturulabildiğini gösterir.  
+ Bu örnek, bir güvenlik belirteci hizmeti (STS) tarafından verilen belirteçleri önbelleğe alan özel bir belirteç sağlayıcısı oluşturmayı gösterir.  
   
- Özetlemek gerekirse, bu örnek aşağıdakileri gösterir:  
+ Özetlemek gerekirse, bu örnek şunları gösterir:  
   
-- Bir istemcinin özel bir belirteç sağlayıcısıyla nasıl yapılandırılabildiği.  
+- Bir istemcinin özel bir belirteç sağlayıcısıyla nasıl yapılandırılabileceğini.  
   
-- Verilen belirteçler nasıl önbelleğe alınabilir ve WCF istemcisine sağlanabilir.  
+- Verilen belirteçlerin önbelleğe alınıp WCF istemcisine sağlanması.  
   
-- Sunucunun X.509 sertifikasını kullanarak sunucunun istemci tarafından nasıl doğrulanır.  
+- Sunucunun, sunucunun X. 509.440 sertifikasını kullanarak istemci tarafından nasıl doğrulandığını.  
   
- Bu örnek bir istemci konsol programı (Client.exe), bir güvenlik belirteç hizmet konsolu programı (Securitytokenservice.exe) ve bir hizmet konsolu programı (Service.exe) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, matematik işlemlerini `ICalculator` (ekleme, çıkarma, çoğaltma ve bölme) ortaya çıkaran arabirim tarafından tanımlanır. İstemci, Güvenlik Belirteci Hizmeti'nden (STS) bir güvenlik belirteci alır ve belirli bir matematik işlemi için hizmete eşzamanlı isteklerde bulunduruyor ve sonuçla birlikte hizmet yanıtları veriyor. İstemci etkinliği konsol penceresinde görünür.  
+ Bu örnek, bir istemci konsol programından (Client. exe), bir güvenlik belirteci hizmeti konsol programı (SecurityTokenService. exe) ve bir hizmet konsolu programından (Service. exe) oluşur. Hizmet, istek-yanıt iletişim modelini tanımlayan bir sözleşme uygular. Sözleşme, `ICalculator` matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) sunan arabirim tarafından tanımlanır. İstemci, güvenlik belirteci hizmetinden (STS) bir güvenlik belirteci alır ve belirli bir matematik işlemi için hizmete zaman uyumlu istekler sağlar ve hizmet sonuçla yanıt verir. İstemci etkinliği konsol penceresinde görünür.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bu örnek [ \<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)kullanarak ICalculator sözleşme ortaya çıkarır. İstemci için bu bağlama yapılandırması aşağıdaki kodda gösterilir.  
+ Bu örnek, kullanarak Icalbir sözleşmeyi kullanıma sunar [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md) . İstemci üzerindeki bu bağlamanın yapılandırması aşağıdaki kodda gösterilmiştir.  
   
 ```xml  
 <bindings>
@@ -54,9 +54,9 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
 </bindings>  
 ```  
   
- Öğe `security` üzerinde , `mode` değer yapılandırmahangi güvenlik modu kullanılmalıdır. `wsFederationHttpBinding` Bu örnekte, iletiler güvenlik kullanılıyor, bu `message` nedenle `wsFederationHttpBinding` öğenin `security` öğesi `wsFederationHttpBinding`içinde belirtilir. İç `issuer` öğenin `wsFederationHttpBinding` `message` öğesi, `wsFederationHttpBinding` istemcinin Hesap Makinesi hizmetine kimlik doğrulaması yapabilmesi için istemciye bir güvenlik belirteci veren Güvenlik Belirteci Hizmeti için adresi ve bağlamayı belirtir.  
+ `security`Öğesinde `wsFederationHttpBinding` , `mode` değeri hangi güvenlik modunun kullanılması gerektiğini yapılandırır. Bu örnekte, ' ın öğesinin öğesinin `message` `wsFederationHttpBinding` öğesi içinde belirtildiğinde, ileti güvenliği kullanılıyor `security` `wsFederationHttpBinding` . `issuer` `wsFederationHttpBinding` Öğesi içindeki öğesi, `message` `wsFederationHttpBinding` istemcisinin Hesaplayıcı hizmetinde kimlik doğrulaması yapabilmesi için istemciye bir güvenlik belirteci veren güvenlik belirteci hizmetinin adresini ve bağlamasını belirtir.  
   
- Hizmet için bu bağlama yapılandırması aşağıdaki kodda gösterilir.  
+ Hizmette Bu bağlamanın yapılandırması aşağıdaki kodda gösterilmiştir.  
   
 ```xml  
 <bindings>
@@ -80,9 +80,9 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
 </bindings>  
 ```  
   
- Öğe `security` üzerinde , `mode` değer yapılandırmahangi güvenlik modu kullanılmalıdır. `wsFederationHttpBinding` Bu örnekte, iletiler güvenlik kullanılıyor, bu `message` nedenle `wsFederationHttpBinding` öğenin `security` öğesi `wsFederationHttpBinding`içinde belirtilir. İç `issuerMetadata` `wsFederationHttpBinding` öğenin `message` öğesi, `wsFederationHttpBinding` Güvenlik Belirteci Hizmeti için meta verileri almak için kullanılabilecek bir bitiş noktası için adres ve kimlik belirtir.  
+ `security`Öğesinde `wsFederationHttpBinding` , `mode` değeri hangi güvenlik modunun kullanılması gerektiğini yapılandırır. Bu örnekte, ' ın öğesinin öğesinin `message` `wsFederationHttpBinding` öğesi içinde belirtildiğinde, ileti güvenliği kullanılıyor `security` `wsFederationHttpBinding` . `issuerMetadata` `wsFederationHttpBinding` Öğesi içindeki öğesi, `message` `wsFederationHttpBinding` güvenlik belirteci hizmeti için meta verileri almak üzere kullanılabilecek bir uç noktanın adresini ve kimliğini belirtir.  
   
- Hizmetin davranışı aşağıdaki kodda gösterilir.  
+ Hizmet davranışı aşağıdaki kodda gösterilmiştir.  
   
 ```xml  
 <behavior name="ServiceBehavior">
@@ -105,20 +105,20 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
 </behavior>  
 ```  
   
- Öğenin `issuedTokenAuthentication` `serviceCredentials` içindeki öğe, hizmetin müşterilerin kimlik doğrulama sırasında sunmasına izin verdiği belirteçler üzerindeki kısıtlamaları belirtmesine olanak tanır. Bu yapılandırma, Özne Adı CN=STS olan bir sertifika tarafından imzalanan belirteçlerin hizmet tarafından kabul edildiğini belirtir.  
+ `issuedTokenAuthentication`Öğesi içindeki öğesi, `serviceCredentials` hizmetinin kimlik doğrulaması sırasında istemcilerin sunmalarına izin verdiği belirteçlerde kısıtlamalar belirtmesini sağlar. Bu yapılandırma, konu adı CN = STS olan bir sertifika tarafından imzalanmış belirteçlerin hizmet tarafından kabul edildiğini belirtir.  
   
- Güvenlik Belirteç Hizmeti standart wsHttpBinding kullanarak tek bir uç noktası ortaya çıkarır. Güvenlik Belirteç Hizmeti, istemcilerin belirteçleri isteğine yanıt verir ve istemcinin bir Windows hesabı kullanarak kimlik doğrulaması vermesi koşuluyla, verilen belirteçte talep olarak istemcinin kullanıcı adını içeren bir belirteç verir. Belirteci oluşturmanın bir parçası olarak, Güvenlik Belirteci Hizmeti CN=STS sertifikasıile ilişkili özel anahtarı kullanarak belirteci imzalar. Buna ek olarak, simetrik bir anahtar oluşturur ve CN=localhost sertifikası ile ilişkili ortak anahtarı kullanarak şifreler. Belirteci istemciye döndürürken, Güvenlik Belirteci Hizmeti de simetrik anahtarı döndürür. İstemci, verilen belirteci Hesap Makinesi hizmetine sunar ve iletiyi bu anahtarla imzalayarak simetrik anahtarı bildiğini kanıtlar.  
+ Güvenlik belirteci hizmeti, standart wsHttpBinding kullanarak tek bir uç nokta gösterir. Güvenlik belirteci hizmeti istemcilerden gelen istek için yanıt verir ve istemcinin bir Windows hesabı kullanarak kimlik doğrulaması yaptığı belirtilen belirteçte, istemcinin kullanıcı adını içeren bir belirteç yayınlar. Belirteç oluşturmanın bir parçası olarak, güvenlik belirteci hizmeti, CN = STS sertifikasıyla ilişkili özel anahtarı kullanarak belirteci imzalar. Ayrıca, bir simetrik anahtar oluşturur ve CN = localhost sertifikasıyla ilişkili ortak anahtarı kullanarak şifreler. Belirteci istemciye döndürürken, güvenlik belirteci hizmeti simetrik anahtarı da döndürür. İstemci, verilen belirteci Hesaplayıcı hizmetine sunar ve iletiyi bu anahtarla imzalayarak simetrik anahtarı bilir olduğunu kanıtlar.  
   
-## <a name="custom-client-credentials-and-token-provider"></a>Özel İstemci Kimlik Bilgileri ve Belirteç Sağlayıcısı  
- Aşağıdaki adımlar, verilen belirteçleri önbelleğe alan ve WCF ile tümleştiren özel bir belirteç sağlayıcısının nasıl geliştirilebildiğini gösterir: güvenlik.  
+## <a name="custom-client-credentials-and-token-provider"></a>Özel Istemci kimlik bilgileri ve belirteç sağlayıcısı  
+ Aşağıdaki adımlarda, verilen belirteçleri önbelleğe alan ve WCF: Security ile tümleştiren özel bir belirteç sağlayıcısının nasıl geliştirilmesi gösterilmektedir.  
   
 ### <a name="to-develop-a-custom-token-provider"></a>Özel bir belirteç sağlayıcısı geliştirmek için  
   
 1. Özel bir belirteç sağlayıcısı yazın.  
   
-     Örnek, önbellekten alınan bir güvenlik belirteci döndüren özel bir belirteç sağlayıcısı uygular.  
+     Örnek, bir önbellekten alınan güvenlik belirtecini döndüren özel bir belirteç sağlayıcısı uygular.  
   
-     Bu görevi gerçekleştirmek için, özel belirteç <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sağlayıcısı sınıfı <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> türeter ve yöntemi geçersiz kılar. Bu yöntem önbellekten bir belirteç almaya çalışır veya önbellekte bir belirteç bulunamıyorsa, temel sağlayıcıdan bir belirteç alır ve sonra bu belirteç önbelleğe alır. Her iki durumda da `SecurityToken`yöntem bir .  
+     Bu görevi gerçekleştirmek için özel belirteç sağlayıcısı <xref:System.IdentityModel.Selectors.SecurityTokenProvider> sınıfı türetir ve yöntemini geçersiz kılar <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> . Bu yöntem önbellekten bir belirteç almaya çalışır veya önbellekte bir belirteç bulunamazsa, temeldeki sağlayıcıdan bir belirteç alır ve ardından bu belirteci önbelleğe alır. Her iki durumda da yöntemi bir döndürür `SecurityToken` .  
   
     ```csharp  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -133,9 +133,9 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
     }  
     ```  
   
-2. Özel güvenlik belirteç yöneticisi yazın.  
+2. Özel güvenlik belirteci Yöneticisi yazın.  
   
-     Yöntemde <xref:System.IdentityModel.Selectors.SecurityTokenManager> `CreateSecurityTokenProvider` ona geçirilen <xref:System.IdentityModel.Selectors.SecurityTokenProvider> belirli <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> bir a oluşturmak için kullanılır. Güvenlik belirteç yöneticisi, belirteç kimlik doğrulayıcıları ve belirteç serileştiricileri oluşturmak için de kullanılır, ancak bunlar bu örnek tarafından karşılanmaz. Bu örnekte, özel güvenlik belirteç <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> yöneticisi sınıftan `CreateSecurityTokenProvider` devralır ve geçirilen belirteç gereksinimleri verilmiş bir belirteç istendiğini gösterdiğinde özel belirteç sağlayıcısını döndürmek için yöntemi geçersiz kılar.  
+     , <xref:System.IdentityModel.Selectors.SecurityTokenManager> <xref:System.IdentityModel.Selectors.SecurityTokenProvider> <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> Yöntemi içinde kendisine geçirilen belirli bir için oluşturmak için kullanılır `CreateSecurityTokenProvider` . Güvenlik belirteci Yöneticisi ayrıca belirteç kimlik doğrulayıcılar ve belirteç serileştiricileri oluşturmak için kullanılır, ancak bunlar bu örnek tarafından kapsanmaz. Bu örnekte, özel güvenlik belirteci Yöneticisi <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> sınıfından devralır ve `CreateSecurityTokenProvider` geçirilen belirteç gereksinimleri verilen belirtecin istendiğini gösteriyorsa özel belirteç sağlayıcısını döndürmek için yöntemi geçersiz kılar.  
   
     ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
@@ -164,7 +164,7 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
   
 3. Özel bir istemci kimlik bilgisi yazın.  
   
-     İstemci kimlik bilgileri sınıfı, istemci proxy için yapılandırılan kimlik bilgilerini temsil etmek için kullanılır ve belirteç kimlik doğrulayıcıları, belirteç sağlayıcıları ve belirteç serileştiricileri elde etmek için kullanılan güvenlik belirteci yöneticisioluşturur.  
+     İstemci ara sunucusu için yapılandırılan kimlik bilgilerini temsil eden istemci kimlik bilgileri sınıfı kullanılır ve belirteç kimlik doğrulaması, belirteç sağlayıcıları ve belirteç serileştiricileri elde etmek için kullanılan güvenlik belirteci yöneticisini oluşturur.  
   
     ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
@@ -204,7 +204,7 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
     }  
     ```  
   
-4. Belirteç önbelleğini uygulayın. Örnek uygulama, belirli bir belirteç önbelleğinin tüketicilerinin önbellekle etkileşimde bulunduğu soyut bir taban sınıf kullanır.  
+4. Belirteç önbelleğini uygulayın. Örnek uygulama, belirli bir belirteç önbelleğinin tüketicilerinin önbellek ile etkileşimde bulunduğu bir soyut temel sınıf kullanır.  
   
     ```csharp
     public abstract class IssuedTokenCache  
@@ -215,7 +215,7 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
     // Configure the client to use the custom client credential.  
     ```  
   
-     İstemcinin özel istemci kimlik bilgilerini kullanması için, örnek varsayılan istemci kimlik bilgilerini siler ve yeni istemci kimlik bilgilerini sağlar.  
+     İstemcinin özel istemci kimlik bilgisini kullanması için, örnek varsayılan istemci kimlik bilgisi sınıfını siler ve yeni istemci kimlik bilgisi sınıfını sağlar.  
   
     ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
@@ -226,30 +226,30 @@ Bu örnek, özel bir istemci tarafından verilen belirteç sağlayıcısının n
     ```  
   
 ## <a name="running-the-sample"></a>Örneği çalıştırma  
- Örneği çalıştırmak için aşağıdaki yönergeleri izleyin. Örneği çalıştırdığınızda, güvenlik belirteci isteği Güvenlik Belirteci Hizmeti konsolpenceresinde gösterilir. İşlem istekleri ve yanıtları istemci ve servis konsolu pencerelerinde görüntülenir. Uygulamayı kapatmak için konsol pencerelerinden herhangi birinde ENTER tuşuna basın.  
+ Örneği çalıştırmak için aşağıdaki yönergelere bakın. Örneği çalıştırdığınızda, güvenlik belirteci isteği güvenlik belirteci hizmeti konsol penceresinde gösterilir. İşlem istekleri ve yanıtları istemci ve hizmet konsolu penceresinde görüntülenir. Uygulamayı kapatmak için konsol pencerelerinin herhangi birinde ENTER tuşuna basın.  
   
-## <a name="the-setupcmd-batch-file"></a>Setup.cmd Toplu Dosya  
- Bu örnekte yer alan Setup.cmd toplu iş dosyası, sunucu ve güvenlik belirteci hizmetini kendi barındırılan bir uygulamayı çalıştırmak için ilgili sertifikalarla yapılandırmanıza olanak tanır. Toplu iş dosyası, CurrentUser/TrustedPeople sertifika deposunda iki sertifika oluşturur. İlk sertifika CN=STS özne adı vardır ve güvenlik belirteçleri tarafından istemciye verdiği güvenlik belirteçlerini imzalamak için kullanılır. İkinci sertifika CN=localhost özne adı vardır ve hizmetin şifresini çözebilmek için bir sırrı şifrelemek için Güvenlik Belirteci Hizmeti tarafından kullanılır.  
+## <a name="the-setupcmd-batch-file"></a>Setup. cmd toplu Iş dosyası  
+ Bu örneğe eklenen Setup. cmd toplu iş dosyası, şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucu ve güvenlik belirteci hizmetini ilgili sertifikalarla yapılandırmanıza olanak tanır. Toplu iş dosyası, her ikisi de CurrentUser/Trustedkişileri sertifika deposunda iki sertifika oluşturur. İlk sertifika, CN = STS 'nin konu adına sahiptir ve güvenlik belirteci hizmeti tarafından, istemciye verdiği güvenlik belirteçlerini imzalamak için kullanılır. İkinci sertifika, CN = localhost konu adına sahiptir ve güvenlik belirteci hizmeti tarafından, hizmetin şifresini çözebilmesi için bir gizli dizi şifrelemek üzere kullanılır.  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Gerekli sertifikaları oluşturmak için Setup.cmd dosyasını çalıştırın.  
+1. Gerekli sertifikaları oluşturmak için Setup. cmd dosyasını çalıştırın.  
   
-2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin. Çözümdeki tüm projelerin (Paylaşılan, RSTRSTR, Service, SecurityTokenService ve Client) inşa edildiklerinin sağlanması.  
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin. Çözümdeki tüm projelerin oluşturulduğundan emin olun (paylaşılan, RSTRSTR, hizmet, SecurityTokenService ve Istemci).  
   
-3. Service.exe ve SecurityTokenService.exe'nin her ikisinin de yönetici ayrıcalıklarıyla birlikte çalışmasını sağlayın.  
+3. Service. exe ve SecurityTokenService. exe ' nin her ikisinin de yönetici ayrıcalıklarıyla çalıştığından emin olun.  
   
-4. Client.exe'yi çalıştırın.  
+4. Client. exe ' yi çalıştırın.  
   
 ### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   
-1. Örneği çalıştırmayı bitirdikten sonra örnekler klasöründe Cleanup.cmd'yi çalıştırın.  
+1. Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. cmd ' i çalıştırın.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

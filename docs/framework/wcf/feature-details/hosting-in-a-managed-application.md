@@ -2,29 +2,29 @@
 title: Yönetilen Bir Uygulamada Barındırma
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 1895f6622f7c528979badd741f5994970bbd1a8c
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 759257edf89d1af5c453bb98f41361b54cf113ae
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597351"
 ---
 # <a name="hosting-in-a-managed-application"></a>Yönetilen Bir Uygulamada Barındırma
-Windows Communication Foundation (WCF) Hizmetleri, herhangi bir .NET Framework uygulamasında barındırılabilir. Dağıtmak için en az bir altyapı gerektirdiğinden kendi kendine barındırma hizmetleri en esnek barındırma seçenektir. Yönetilen uygulamalar, Gelişmiş barındırma ve yönetim özellikleri, WCF, Internet Information Services (IIS) ve Windows Hizmetleri gibi diğer barındırma seçenekleri sağlamaz ancak ayrıca en az sağlam barındırma seçeneği olmasıdır.  
+Windows Communication Foundation (WCF) Hizmetleri, herhangi bir .NET Framework uygulamasında barındırılabilir. Dağıtım için en az altyapıyı gerektirdiğinden, kendi kendine barındırma hizmetleri en esnek barındırma seçeneğidir. Bununla birlikte, yönetilen uygulamalar Internet Information Services (IIS) ve Windows Hizmetleri gibi WCF 'deki diğer barındırma seçeneklerinin gelişmiş barındırma ve yönetim özelliklerini sağlamadığı için de en az güçlü barındırma seçeneğidir.  
   
- Şirket içinde barındırılan bir hizmet oluşturmak için oluşturma ve bir örneğini açın <xref:System.ServiceModel.ServiceHost>, iletileri dinleyen bir hizmeti başlatır. Daha fazla bilgi için [nasıl yapılır: Yönetilen bir uygulamada bir WCF Hizmeti barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md).  
+ Şirket içinde barındırılan bir hizmet oluşturmak için, <xref:System.ServiceModel.ServiceHost> ileti dinleme yapan bir hizmet Başlatan bir örneğini oluşturun ve açın. Daha fazla bilgi için bkz. [nasıl yapılır: yönetilen bir uygulamada BIR WCF hizmeti barındırma](../how-to-host-a-wcf-service-in-a-managed-application.md).  
   
- Yönetilen bir uygulama içinde bir hizmet ana sözleşme tanımlamasına ve sözleşmesini uygulama konusunda tam bir örnek için bkz. [başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md) ve [barındırma](../../../../docs/framework/wcf/samples/self-host.md).  
+ Bir sözleşmenin nasıl tanımlanacağı, sözleşmenin nasıl uygulanacağı ve bir hizmetin yönetilen bir uygulamanın içinde barındırılamadığına ilişkin tam bir örnek için, [Başlangıç öğreticisine](../getting-started-tutorial.md) ve [self-Host](../samples/self-host.md)' a bakın.  
   
- Aşağıdaki bölümlerde bu barındırma seçeneği kullanmak yaygın senaryolar açıklanmaktadır.  
+ Aşağıdaki bölümlerde, bu barındırma seçeneğini kullanan yaygın senaryolar açıklanır.  
   
 ## <a name="console-applications"></a>Konsol uygulamaları  
- Kendi kendine barındırma sağlayan ortak senaryolar konsol uygulamaları içinde çalışan WCF hizmetleri verilmiştir. Bir konsol uygulaması içinde bir WCF Hizmeti barındırma hizmeti geliştirme aşamasında genellikle yararlı olur. Bu bunları hata ayıklamak kolay, uygulama içinde neler olup bittiğine bulmak için izleme bilgilerini almak kolay ve bunları yeni konumlara kopyalayarak yerleri daha kolay hale getirir.  
+ Kendini barındıran yaygın senaryolar, konsol uygulamaları içinde çalışan WCF hizmetlerdir. Bir WCF hizmetini bir konsol uygulaması içinde barındırmak, genellikle hizmetin geliştirme aşamasında yararlıdır. Bu, uygulamanın içinde neler olduğunu öğrenmek ve yeni konumlara kopyalayarak kolayca geçiş yapmak için, ' den izleme bilgilerinin oluşmasını kolay bir şekilde oluşturmanızı kolaylaştırır.  
   
-## <a name="rich-client-applications"></a>Zengin istemci uygulamaları  
- Kendi kendine barındırma sağlayan diğer yaygın senaryoları Windows Presentation Foundation (WPF) veya Windows Forms (WinForms) göre gibi zengin istemci uygulamalarının ' dir. Bu barındırma seçeneği ayrıca, dış dünya ile iletişim kurmak için WPF ve WinForms uygulamaları gibi zengin istemci uygulamaları için kolaylaştırır. Örneğin, WPF için kullanıcı arabirimi kullanan ve ayrıca diğer istemcilerin kendisine bağlanıp bilgi paylaşmak bir WCF hizmetini barındıran bir eşler arası işbirliği istemci.  
+## <a name="rich-client-applications"></a>Zengin Istemci uygulamaları  
+ Kendi kendini barındıran yaygın senaryolar, Windows Presentation Foundation (WPF) veya Windows Forms (WinForms) tabanlı olanlar gibi zengin istemci uygulamalardır. Bu barındırma seçeneği Ayrıca, WPF ve WinForms uygulamaları gibi zengin istemci uygulamalarının dış dünya ile iletişim kurmasını kolaylaştırır. Örneğin, Kullanıcı arabirimi için WPF kullanan eşler arası işbirliği istemcisi ve ayrıca diğer istemcilerin bu sunucuya bağlanmasına ve bilgi paylaşmasına izin veren bir WCF hizmeti barındırır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)
-- [Başlangıç Öğreticisi](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Barındırma Hizmetleri](../hosting-services.md)
+- [Başlangıç Öğreticisi](../getting-started-tutorial.md)

@@ -1,29 +1,29 @@
 ---
-title: 'Nasıl yapılır: Temel Bir RSS Akışı Oluşturma'
+title: 'Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 9a07754e8fdad700bd5488f392f80b5c5f907f6e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 872fe325a6705e79d026cd7f6e1f7cfef5145307
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968440"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599028"
 ---
-# <a name="how-to-create-a-basic-rss-feed"></a>Nasıl yapılır: Temel Bir RSS Akışı Oluşturma
+# <a name="how-to-create-a-basic-rss-feed"></a>Nasıl Yapılır: Temel Bir RSS Akışı Oluşturma
 Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet oluşturmanıza olanak sağlar. Bu konuda, RSS dağıtım akışını kullanıma sunan bir dağıtım hizmeti oluşturma konusu ele alınmaktadır.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Temel bir dağıtım hizmeti oluşturmak için  
   
-1. <xref:System.ServiceModel.Web.WebGetAttribute> Özniteliği ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın. Bir dağıtım akışı olarak sunulan her işlem bir <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> nesne döndürmelidir.  
+1. Özniteliği ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın <xref:System.ServiceModel.Web.WebGetAttribute> . Bir dağıtım akışı olarak sunulan her işlem bir <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> nesne döndürmelidir.  
   
      [!code-csharp[htRssBasic#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#0)]
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    > <xref:System.ServiceModel.Web.WebGetAttribute> Özniteliğini uygulayan tüm hizmet işlemleri http get istekleri ile eşleştirilir. İşleminizi farklı bir http yöntemiyle eşlemek için, <xref:System.ServiceModel.Web.WebInvokeAttribute> bunun yerine kullanın. Daha fazla bilgi için [nasıl yapılır: Temel bir WCF Web HTTP hizmeti](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)oluşturun.  
+    > Özniteliğini uygulayan tüm hizmet işlemleri <xref:System.ServiceModel.Web.WebGetAttribute> http get istekleri ile eşleştirilir. İşleminizi farklı bir HTTP yöntemiyle eşlemek için, <xref:System.ServiceModel.Web.WebInvokeAttribute> bunun yerine kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: temel BIR WCF Web http hizmeti oluşturma](how-to-create-a-basic-wcf-web-http-service.md).  
   
 2. Hizmet sözleşmesini uygulayın.  
   
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet
      [!code-csharp[htRssBasic#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#3)]
      [!code-vb[htRssBasic#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#3)]  
   
-5. <xref:System.ServiceModel.Syndication.SyndicationItem> ' İ akışa ekleyin.  
+5. ' İ <xref:System.ServiceModel.Syndication.SyndicationItem> akışa ekleyin.  
   
      [!code-csharp[htRssBasic#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#4)]
      [!code-vb[htRssBasic#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#4)]  
@@ -64,21 +64,21 @@ Windows Communication Foundation (WCF), bir dağıtım akışı sunan bir hizmet
   
 ### <a name="to-call-getblog-with-an-http-get"></a>HTTP GET ile GetBlog () çağırmak için  
   
-1. Internet Explorer 'ı açın, aşağıdaki URL 'yi yazın ve ENTER tuşuna basın `http://localhost:8000/BlogService/GetBlog`:. URL, hizmetin temel adresini (`http://localhost:8000/BlogService`), bitiş noktasının göreli adresini ve çağrılacak hizmet işlemini içerir.  
+1. Internet Explorer 'ı açın, aşağıdaki URL 'yi yazın ve ENTER tuşuna basın: `http://localhost:8000/BlogService/GetBlog` . URL, hizmetin temel adresini ( `http://localhost:8000/BlogService` ), bitiş noktasının göreli adresini ve çağrılacak hizmet işlemini içerir.  
   
 ### <a name="to-call-getblog-from-code"></a>Koddan GetBlog () çağırmak için  
   
-1. Temel adresi <xref:System.Xml.XmlReader> ve aradığınız yöntemi içeren bir oluşturun.  
+1. <xref:System.Xml.XmlReader>Temel adresi ve aradığınız yöntemi içeren bir oluşturun.  
   
      [!code-csharp[htRssBasic#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/snippets.cs#9)]
      [!code-vb[htRssBasic#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#9)]  
   
-2. Yeni oluşturduğunuz ' <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> ı geçirerek <xref:System.Xml.XmlReader> statik yöntemi çağırın.  
+2. <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29>Yeni oluşturduğunuz ' ı geçirerek statik yöntemi çağırın <xref:System.Xml.XmlReader> .  
   
      [!code-csharp[htRssBasic#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/snippets.cs#10)]
      [!code-vb[htRssBasic#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#10)]  
   
-     Bu, hizmet işlemini çağırır ve hizmet işleminden döndürülen <xref:System.ServiceModel.Syndication.SyndicationFeed> biçimlendirici ile yeni bir doldurur.  
+     Bu, hizmet işlemini çağırır ve <xref:System.ServiceModel.Syndication.SyndicationFeed> hizmet işleminden döndürülen biçimlendirici ile yeni bir doldurur.  
   
 3. Akış nesnesine erişin.  
   

@@ -2,17 +2,17 @@
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600393"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve hizmet uç noktalarının kuyrukların nasıl eşlenme açıklanmaktadır. Bir anımsatıcı olarak, aşağıdaki çizimde, klasik Windows Communication Foundation (WCF) sıraya alınmış uygulama dağıtımı gösterilmektedir.  
   
- ![Kuyruğa alınmış uygulama diyagramı](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Dağıtılmış kuyruk-şekil")  
+ ![Kuyruğa alınmış uygulama diyagramı](media/distributed-queue-figure.jpg "Dağıtılmış kuyruk-şekil")  
   
  İstemcinin iletiyi hizmete gönderebilmesi için istemci, hedef sıraya iletiyi adresleyen. Hizmetin kuyruktaki iletileri okuyabilmesi için dinleme adresini hedef sıraya ayarlar. WCF 'de adresleme Tekdüzen Kaynak tanımlayıcısı (URI) tabanlı, Message Queuing (MSMQ) sıra adları URI tabanlı değil. Bu nedenle, WCF kullanarak MSMQ 'da oluşturulan sıraların nasıl ele alınacağını anlamak önemlidir.  
   
@@ -46,7 +46,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  Kuyruk adresi, iletileri okumak için dinleyici tarafından dinleme URI 'SI olarak kullanılır. Diğer bir deyişle, kuyruk adresi TCP yuvasının dinleme bağlantı noktasına eşdeğerdir.  
   
- Sıradan okuyan bir uç nokta, ServiceHost açılırken daha önce belirtilen düzeni kullanarak sıranın adresini belirtmelidir. Örnekler için bkz. [net MSMQ bağlama](../../../../docs/framework/wcf/samples/net-msmq-binding.md).  
+ Sıradan okuyan bir uç nokta, ServiceHost açılırken daha önce belirtilen düzeni kullanarak sıranın adresini belirtmelidir. Örnekler için bkz. [net MSMQ bağlama](../samples/net-msmq-binding.md).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Kuyruktaki birden çok sözleşme  
  Kuyruktaki mesajlar farklı sözleşmeler uygulayabilir. Bu durumda, tüm iletileri başarıyla okumak ve işlemek için aşağıdakilerden birinin doğru olması önemlidir:  
@@ -89,7 +89,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  net. MSMQ://localhost/[private/] \<*custom-dead-letter-queue-name*> .  
   
- Bir WCF hizmeti, aldığı tüm iletilerin dinlediği belirli bir kuyruğa geldiğini doğrular. İletinin hedef kuyruğu içinde bulunduğu kuyrukla eşleşmiyorsa, hizmet iletiyi işlemez. Bu, atılacak ileti sırasındaki herhangi bir iletinin başka bir yere teslim edileceği için, atılacak bir sırayı dinleyen hizmetlerin adreslenmesi gereken bir sorundur. İletileri bir atılacak ileti sırasından veya bir zarar sırasından okumak için `ServiceBehavior` parametresi ile birlikte <xref:System.ServiceModel.AddressFilterMode.Any> kullanılması gerekir. Bir örnek için bkz. [atılacak Ileti sıraları](../../../../docs/framework/wcf/samples/dead-letter-queues.md).  
+ Bir WCF hizmeti, aldığı tüm iletilerin dinlediği belirli bir kuyruğa geldiğini doğrular. İletinin hedef kuyruğu içinde bulunduğu kuyrukla eşleşmiyorsa, hizmet iletiyi işlemez. Bu, atılacak ileti sırasındaki herhangi bir iletinin başka bir yere teslim edileceği için, atılacak bir sırayı dinleyen hizmetlerin adreslenmesi gereken bir sorundur. İletileri bir atılacak ileti sırasından veya bir zarar sırasından okumak için `ServiceBehavior` parametresi ile birlikte <xref:System.ServiceModel.AddressFilterMode.Any> kullanılması gerekir. Bir örnek için bkz. [atılacak Ileti sıraları](../samples/dead-letter-queues.md).  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding ve hizmet adresleme  
  `MsmqIntegrationBinding`Geleneksel MSMQ uygulamalarıyla iletişim için kullanılır. Mevcut bir MSMQ uygulamasıyla birlikte çalışabilirliği kolaylaştırmak için, WCF yalnızca biçim adı adreslemeyi destekler. Bu nedenle, bu bağlama kullanılarak gönderilen iletilerin URI şemasına uygun olması gerekir:  
@@ -106,4 +106,4 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [Kuyruğa Alınan Bir Uygulamayı Web'de Barındırma](web-hosting-a-queued-application.md)

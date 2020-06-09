@@ -2,17 +2,17 @@
 title: ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 41810d8044e4b7ff3193950a914edbf1e61cffb1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f38209ffe2161e58528a108b29e730665a65da37
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464087"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598872"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web Hizmetleri ile Birlikte Çalışabilirlik
-ASP.NET Web hizmetleri ile Windows Communication Foundation (WCF) Web hizmetleri arasında birlikte çalışabilirlik, her iki teknoloji kullanılarak uygulanan hizmetlerin WS-I Temel Profil 1.1 belirtimine uygun olmasını sağlayarak elde edilebilir. WS-I Temel Profil 1.1'e uygun ASP.NET Web hizmetleri, <xref:System.ServiceModel.BasicHttpBinding>WCF sistemi tarafından sağlanan bağlama kullanılarak WCF istemcileri ile birlikte çalışabilir.  
+ASP.NET Web Hizmetleri ve Windows Communication Foundation (WCF) Web Hizmetleri arasında birlikte çalışabilirlik, her iki teknolojiyi kullanarak uygulanan hizmetlerin WS-ı temel profil 1,1 belirtimine uyduğundan emin olarak elde edilebilir. WS-ı temel profil 1,1 ile uyumlu olan ASP.NET Web Hizmetleri, WCF sistem tarafından sunulan bağlama kullanılarak WCF istemcileriyle birlikte çalışabilir <xref:System.ServiceModel.BasicHttpBinding> .  
   
- ASP.NET 2.0 seçeneğini kullanarak <xref:System.Web.Services.WebService> <xref:System.Web.Services.WebMethodAttribute> sınıfyerine arabirime ve öznitelikleri ekleme ve aşağıdaki örnek kodda gösterildiği gibi arabirimi uygulamak için bir sınıf yazma seçeneğini kullanın.  
+ <xref:System.Web.Services.WebService> <xref:System.Web.Services.WebMethodAttribute> Aşağıdaki örnek kodda gösterildiği gibi, ve özniteliklerini bir sınıf yerine arabirime eklemek için ASP.NET 2,0 seçeneğini kullanın ve arabirimi uygulamak için bir sınıf yazmak.  
   
 ```csharp
 [WebService]  
@@ -32,22 +32,22 @@ public class Service : IEcho
 }  
 ```  
   
- Öznitelik ile <xref:System.Web.Services.WebService> arabirim farklı şekillerde aynı sözleşmeyi uygulayabilir çeşitli sınıflar ile yeniden kullanılabilir hizmet tarafından gerçekleştirilen işlemler için bir sözleşme oluşturduğundan, bu seçeneğin kullanılması tercih edilir.  
+ Bu seçeneğin kullanılması tercih edilir çünkü özniteliğe sahip arabirim, <xref:System.Web.Services.WebService> hizmet tarafından gerçekleştirilen işlemler için, aynı sözleşmeyi farklı yollarla uygulayabilecek çeşitli sınıflarla yeniden kullanılabilen işlemler için bir sözleşme oluşturur.  
   
- İletilerin <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute> `SOAPAction` HTTP üstbilgiyerine SOAP iletisinin gövde öğesinin tam nitelikli adını temel alan yöntemlere yönlendirilmiş olması için özniteliği kullanmaktan kaçının. WCF iletileri yönlendirme için `SOAPAction` HTTP üstbilgisini kullanır.  
+ <xref:System.Web.Services.Protocols.SoapDocumentServiceAttribute>Http üstbilgisi yerıne soap iletisinin gövde öğesinin tam adı temelinde yöntemlere yönlendirilmek için özniteliğini kullanmaktan kaçının `SOAPAction` . WCF, `SOAPAction` iletileri yönlendirme için http üstbilgisini kullanır.  
   
- Bir türü varsayılan <xref:System.Xml.Serialization.XmlSerializer> olarak serileştiren XML, XML'in ad alanının açıkça tanımlanması koşuluyla, bir türü <xref:System.Runtime.Serialization.DataContractSerializer> serileştirdiği XML ile anlamsal olarak aynıdır. WCF'yi benimseme beklentisiyle ASP.NETWeb hizmetlerinde kullanılmak üzere bir veri türü tanımlarken aşağıdakileri yapın:  
+ <xref:System.Xml.Serialization.XmlSerializer>Bir türü varsayılan olarak seri hale getirilen XML, bir türü seri hale getirilen XML ile aynıdır, bu, <xref:System.Runtime.Serialization.DataContractSerializer> XML için ad alanı açıkça tanımlanmış olarak belirtilmelidir. WCF 'yi benimseme olasılığına içinde ASP. NETWeb Hizmetleri ile kullanmak için bir veri türü tanımlarken, aşağıdakileri yapın:  
   
-- XML Şeması yerine .NET Framework sınıflarını kullanarak türü tanımlayın.  
+- Türü, XML şeması yerine .NET Framework sınıfları kullanarak tanımlayın.  
   
-- Türü için <xref:System.SerializableAttribute> ad <xref:System.Xml.Serialization.XmlRootAttribute> alanını açıkça tanımlamak için ikincisini kullanarak yalnızca ve sınıfa ekleyin. .NET Framework sınıfının <xref:System.Xml.Serialization> XML'e nasıl çevrileceğini denetlemek için ad alanından ek öznitelikler eklemeyin.  
+- <xref:System.SerializableAttribute> <xref:System.Xml.Serialization.XmlRootAttribute> Türü için ad alanını açıkça tanımlamak için, ikincisini kullanarak yalnızca ve öğesini sınıfına ekleyin. <xref:System.Xml.Serialization>.NET Framework SıNıFıNıN XML 'e nasıl çevrileceğini denetlemek için ad alanından ek öznitelikler eklemeyin.  
   
-- Bu yaklaşımı benimseyerek, .NET sınıflarını daha sonra veri sözleşmelerine ekleyerek <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> ve sınıfların iletim için seri hale getirildiği XML'yi önemli ölçüde değiştirmeden yapabilmeniz gerekir. ASP.NET Web hizmetleri tarafından iletilerde kullanılan türler, WCF uygulamaları tarafından veri sözleşmeleri olarak işlenebilir ve wcf uygulamalarında diğer avantajların yanı sıra daha iyi performans sağlar.  
+- Bu yaklaşımı benimseerek, daha sonra, <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> sınıflarının iletilmek üzere SERILEŞTIRILDIĞI XML 'yi önemli ölçüde değiştirmeksizin, .NET sınıflarını daha sonra ve ' nin eklenmesiyle veri sözleşmeleri halinde yapabilmelisiniz. ASP.NET Web hizmetlerine göre iletilerde kullanılan türler, WCF uygulamalarında veri sözleşmeleri, diğer avantajlar ve WCF uygulamalarında daha iyi performans gibi işlenebilir.  
   
- Internet Information Services (IIS) tarafından sağlanan kimlik doğrulama seçeneklerini kullanmaktan kaçının. WCF istemcileri bunları desteklemez. Bir hizmetin güvence altına alınması gerekiyorsa, bu seçenekler sağlam olduğundan ve standart protokollere dayandığından WCF tarafından sağlanan seçenekleri kullanın.  
+ Internet Information Services (IIS) tarafından sunulan kimlik doğrulama seçeneklerini kullanmaktan kaçının. WCF istemcileri bunları desteklemez. Bir hizmetin güvenliğinin sağlanması gerekiyorsa WCF tarafından sağlanan seçenekleri kullanın, çünkü bu seçenekler sağlam ve standart protokolleri temel alır.  
   
-## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>ServiceModel HttpModule'in yüklenmesinden kaynaklanan performans etkisi  
- .NET Framework 3.0'da, `HttpModule` WCF root Web.config dosyasına her ASP.NET uygulamanın WCF etkin olduğunu yüklenmiş. Bu performansı etkileyebilir, böylece `ServiceModel` aşağıdaki örnekte gösterildiği gibi Web.config dosyası için kaldırabilirsiniz.  
+## <a name="performance-impact-caused-by-loading-the-servicemodel-httpmodule"></a>ServiceModel HttpModule yüklemesi nedeniyle performans etkisi  
+ .NET Framework 3,0 ' de, WCF, `HttpModule` kök Web. config dosyasında her ASP.net UYGULAMASıNıN WCF etkin olduğu gibi yüklenmiştir. Bu, `ServiceModel` Aşağıdaki örnekte gösterildiği gibi Web. config dosyasını kaldırabilmeniz için performansı etkileyebilir.  
   
 ```xml  
 <httpModules>  
@@ -57,4 +57,4 @@ public class Service : IEcho
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+- [Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma](config-wcf-service-with-aspnet-web-service.md)

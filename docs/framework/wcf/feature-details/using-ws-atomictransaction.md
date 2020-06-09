@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
-ms.openlocfilehash: e01f5b683bebe1f4cdf282c56aa3049b6da794ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 71090efbb096bc3b7b3d6bcf40ff496b78ac6252
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600691"
 ---
 # <a name="using-ws-atomictransaction"></a>WS-AtomicTransaction Kullanma
-WS-AtomicTransaction (WS-AT) bir birlikte çalışabilen işlem protokolüdür. Web hizmeti iletileri kullanarak dağıtılmış işlemler akış ve birlikte çalışabilen bir biçimde heterojen işlem altyapılar arasında koordine olanak tanır. WS-AT arasında dağıtılmış uygulamalar, işlem yöneticileri ve kaynak yöneticileri sonucu atomik sürücü için iki aşamalı tamamlama protokolü kullanır.  
+WS-AtomicTransaction (WS-AT), birlikte çalışabilen bir işlem protokolüdür. Web hizmeti iletilerini kullanarak dağıtılmış işlemleri Flow ve heterojen işlem altyapıları arasında birlikte çalışabilen bir şekilde koordine etmenize olanak sağlar. WS-AT, dağıtılmış uygulamalar, işlem yöneticileri ve kaynak yöneticileri arasında atomik bir sonucu sağlamak için iki aşamalı tamamlama protokolünü kullanır.  
   
- Windows Communication Foundation (WCF) sağlar WS-AT uygulanmasını Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) hareket yöneticisi ile oluşturulmuş bir protokolü hizmeti içerir. WCF uygulamaları WS-AT kullanarak, üçüncü taraf teknolojisi kullanılarak oluşturulan birlikte çalışabilen Web Hizmetleri gibi diğer uygulamaları hareketleri akabilir.  
+ WS-AT uygulama Windows Communication Foundation (WCF), Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) işlem yöneticisi 'nde yerleşik olarak bulunan bir protokol hizmeti içerir. WS-AT kullanıldığında, WCF uygulamaları, üçüncü taraf teknoloji kullanılarak oluşturulan birlikte çalışabilen Web hizmetleri de dahil olmak üzere işlemleri diğer uygulamalara akabilir.  
   
- Bir istemci uygulaması ve bir sunucu uygulaması arasında bir işlem zaman, kullanılan işlem protokolü sunucu seçilen istemci uç noktada sunan bağlama tarafından belirlenir. Belirleme için bazı WCF sistem tarafından sağlanan bağlamalar varsayılan `OleTransactions` protokolü olarak ederken diğerleri WS-AT belirtmeye varsayılan işlem yayma biçimi. Verilen bağlama içindeki işlem protokolü, tercih ettiğiniz programlama yoluyla da değiştirebilirsiniz.  
+ İstemci uygulaması ve sunucu uygulaması arasında bir işlem akışı yaparken kullanılan işlem protokolü, sunucunun seçilen uç noktada belirlediği bağlama tarafından belirlenir. Bazı WCF sistem tarafından sunulan bağlamalar `OleTransactions` , varsayılan olarak, varsayılan olarak ws-at belirtmek üzere protokol belirtmek için varsayılan olarak Protokolü işlem yayma biçimi olarak belirtmektir. Ayrıca, belirli bir bağlama içinde işlem protokolü seçimini programlı bir şekilde değiştirebilirsiniz.  
   
- Protokol etkiler Seçimi:  
+ Protokol seçimi şunları etkiler:  
   
-- İstemciden sunucuya işlem akışı için kullanılan ileti üstbilgilerini biçimi.  
+- İşlemin istemciden sunucuya akışını sağlamak için kullanılan ileti üstbilgilerinin biçimi.  
   
-- Hareketin sonucu çözmek için iki aşamalı tamamlama protokolü işlem yöneticisi istemcinin ve sunucunun işlem arasında çalıştırmak için kullanılan ağ protokolüdür.  
+- İşlemin sonucunu çözümlemek için istemcinin işlem yöneticisi ve sunucunun işlemi arasında iki aşamalı tamamlama protokolünü çalıştırmak için kullanılan ağ protokolü.  
   
- WCF kullanarak sunucu ve istemci yazılır, WS-AT kullanmanız gerekmez. Bunun yerine, varsayılan ayarları kullanabilirsiniz `NetTcpBinding` ile `TransactionFlow` kullanacağı etkin, öznitelik `OleTransactions` yerine protokol. Daha fazla bilgi için [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md). Aksi takdirde, Web Hizmetleri, üçüncü taraf teknolojileri üzerine kurulmuş hareketleri akışa alındığından, WS-AT kullanmanız gerekir.  
+ Sunucu ve istemci WCF kullanılarak yazılmışsa, WS-AT kullanmanız gerekmez. Bunun yerine, varsayılan ayarlarını, `NetTcpBinding` `TransactionFlow` özelliğini kullanacak olan özniteliğiyle birlikte kullanabilirsiniz `OleTransactions` . Daha fazla bilgi için bkz. [\<netTcpBinding>](../../configure-apps/file-schema/wcf/nettcpbinding.md). Aksi halde, üçüncü taraf teknolojiler üzerinde oluşturulmuş Web Hizmetleri için işlem yapıyorsanız, WS-AT kullanmanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WS-Atomic İşlem Desteğini Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [WS-Atomic İşlem Desteğini Yapılandırma](configuring-ws-atomic-transaction-support.md)

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: 9428fe13e529c3ce8feb59c0a3c5afc5f23c0229
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f007d153a04117df872ea2fcdc68af38c57b53b3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143843"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600873"
 ---
 # <a name="throttling"></a>Azaltma
-Azaltma örneği, azaltma denetimlerinin kullanımını gösterir. Azaltma denetimleri, kaynakların aşırı tüketimini önlemek için eşzamanlı arama, örnek veya oturum sayısına sınırlar yer. Azaltma davranışı hizmet yapılandırma dosya ayarlarında belirtilir. Bu örnek, bir hesap makinesi hizmeti uygulayan [Başlarken'e](../../../../docs/framework/wcf/samples/getting-started-sample.md) dayanır.  
+Daraltma örneği, azaltma denetimlerinin kullanımını gösterir. Azaltma denetimleri, kaynakların aşırı kullanımını önlemeye yönelik eşzamanlı çağrı, örnek veya oturum sayısına yönelik sınırlar yerleştirir. Daraltma davranışı hizmet yapılandırma dosyası ayarları ' nda belirtilmiştir. Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır.  
   
- Bu örnekte, istemci bir konsol uygulamasıdır (.exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
+ Bu örnekte, istemci bir konsol uygulaması (. exe) ve hizmet Internet Information Services (IIS) tarafından barındırılır.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Hizmet yapılandırma dosyası, aşağıdaki örnek yapılandırmada gösterildiği gibi, bir [ \<serviceThrottling>](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)azaltma denetimleri belirtir.  
+ Hizmet yapılandırma dosyası [\<serviceThrottling>](../../configure-apps/file-schema/wcf/servicethrottling.md) , aşağıdaki örnek yapılandırmada gösterildiği gibi, bir üzerinde azaltma denetimlerini belirtir.  
   
 ```xml  
 <behaviors>  
@@ -36,9 +36,9 @@ Azaltma örneği, azaltma denetimlerinin kullanımını gösterir. Azaltma denet
 </behaviors>  
 ```  
   
- Yapılandırıldığı gibi, hizmet en fazla eşzamanlı çağrıyı 2 ile ve en fazla eşzamanlı örnek sayısını 10 ile sınırlar.  
+ Yapılandırıldığı şekilde, hizmet en fazla eş zamanlı çağrıları 2 ' ye ve en fazla eşzamanlı örnek sayısını 10 ' a sınırlandırır.  
   
- Azaltmayı göstermek için hizmet yöntemlerinde bir uyku süresi tanımlıyoruz:  
+ Azaltmayı göstermek için, hizmet yöntemlerinde şu şekilde bir uyku süresi tanımladık:  
   
 ```csharp
 public double Add(double n1, double n2)  
@@ -48,7 +48,7 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Ekle ve Çıkar metotları aynı anda yürütülür ve Çarpın ve Böl yöntemleri aynı anda yürütülür ve 2'den fazla yöntemin aynı anda yürütülmeyeceğini kanıtlayan şekilde daraltma gösterilebilir.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. Add ve çıkart yöntemleri aynı anda yürütülür ve çarpma ve bölme yöntemleri, aynı anda 2 ' den fazla yöntem yürütülebileceğinden, azaltmayı gösteren eşzamanlı olarak yürütülür.  
   
 ```console  
 Press <ENTER> to terminate client.  
@@ -65,19 +65,19 @@ Divide Result: 3.14285714285714
 Press any key to continue . . .  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  

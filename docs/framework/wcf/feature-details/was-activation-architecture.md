@@ -2,45 +2,45 @@
 title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 67ddcd97ac75ddeb0765c38bb9ce7b5e8f039272
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184246"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600678"
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
-Bu konu, Windows Process Etkinleştirme Hizmeti'nin (WAS olarak da bilinir) bileşenlerini ayrıntılı olarak bildirir ve tartışır.  
+Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS olarak da bilinir) bileşenleri ele alınmaktadır ve açıklanmaktadır.  
   
-## <a name="activation-components"></a>Etkinleştirme Bileşenleri  
- WAS çeşitli mimari bileşenlerden oluşur:  
+## <a name="activation-components"></a>Etkinleştirme bileşenleri  
+ , Birkaç mimari bileşenden oluşur:  
   
-- Dinleyici adaptörleri. Belirli ağ protokollerinde ileti alan ve gelen iletileri doğru alt işleme yönlendirmek için WAS ile iletişim sağlayan Windows hizmetleri.  
+- Dinleyici bağdaştırıcıları. Belirli ağ protokollerine ileti alan ve ile iletişim kuran Windows Hizmetleri, gelen iletileri doğru çalışan sürecine yönlendirmelidir.  
   
-- ÖYLEYDI. Alt işlemlerin oluşturulmasını ve kullanım ömrünü yöneten Windows hizmeti.  
+- Bulunamadı. Çalışan işlemlerinin oluşturulmasını ve yaşam süresini yöneten Windows hizmeti.  
   
-- Genel alt işlem çalıştırılabilir (w3wp.exe).  
+- Genel çalışan işlemi yürütülebilir dosya (W3wp. exe).  
   
-- Başvuru yöneticisi. Alt işlem içinde uygulamaları barındıran uygulama etki alanlarının oluşturulmasını ve kullanım ömrünü yönetir.  
+- Uygulama Yöneticisi. Çalışan işlemi içinde uygulamaları barındıran uygulama etki alanlarının oluşturulmasını ve ömrünü yönetir.  
   
-- Protokol işleyicileri. Alt işlemde çalışan ve alt işlem ile tek tek dinleyici bağdaştırıcıları arasındaki iletişimi yöneten protokole özgü bileşenler. İki tür iletişim kuralı işleyicisi vardır: işlem protokolü işleyicileri ve AppDomain iletişim kuralı işleyicileri.  
+- Protokol işleyicileri. Çalışan işleminde çalışan ve çalışan işlem ile ayrı dinleyici bağdaştırıcıları arasındaki iletişimi yöneten protokole özgü bileşenler. İki tür protokol işleyicisi vardır: işlem protokol işleyicileri ve AppDomain protokol işleyicileri.  
   
- WAS bir alt işlem örneğini etkinleştirdiğinde, gerekli işlem protokolü işleyicilerini alt işleme yükler ve uygulamayı barındıracak bir uygulama etki alanı oluşturmak için uygulama yöneticisini kullanır. Uygulama etki alanı, uygulamanın kodunu ve uygulama tarafından kullanılan ağ protokollerinin gerektirdiği AppDomain protokol işleyicilerini yükler.  
+ , Bir çalışan işlem örneğini etkinleştirdiğinde, çalışan işlemine gereken işlem protokol işleyicilerini yükler ve uygulamayı barındırmak üzere uygulama etki alanı oluşturmak için uygulama yöneticisini kullanır. Uygulama etki alanı, uygulamanın kodunun yanı sıra uygulama tarafından kullanılan ağ protokollerinin gerektirdiği AppDomain protokol işleyicilerini yükler.  
   
  ![WAS mimarisini gösteren ekran görüntüsü.](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
-### <a name="listener-adapters"></a>Dinleyici Adaptörleri  
- Dinleyici bağdaştırıcıları, dinledikleri ağ iletişimini kullanarak ileti leri almak için kullanılan ağ iletişimi mantığını uygulayan tek tek Windows hizmetleridir. Aşağıdaki tabloda Windows Communication Foundation (WCF) protokolleri için dinleyici bağdaştırıcıları listelenir.  
+### <a name="listener-adapters"></a>Dinleyici bağdaştırıcıları  
+ Dinleyici bağdaştırıcıları, dinleyeceği ağ protokolünü kullanarak ileti almak için kullanılan ağ iletişim mantığını uygulayan tek bir Windows hizmetidir. Aşağıdaki tabloda Windows Communication Foundation (WCF) protokolleri için dinleyici bağdaştırıcıları listelenmektedir.  
   
-|Dinleyici bağdaştırıcı hizmet adı|Protokol|Notlar|  
+|Dinleyici bağdaştırıcısı hizmet adı|Protokol|Notlar|  
 |-----------------------------------|--------------|-----------|  
-|W3svc|http|Hem IIS 7.0 hem de WCF için HTTP etkinleştirme sağlayan ortak bileşen.|  
-|NetTcpActivator|net.tcp|NetTcpPortSharing hizmetine bağlıdır.|  
-|NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|WCF tabanlı İleti Sıraya uygulamaları ile kullanım için.|  
-|NetMsmqActivator|msmq.formatname|Varolan İleti Sıralaması uygulamalarıyla geriye dönük uyumluluk sağlar.|  
+|ÇALıŞTıRıN|http|Hem IIS 7,0 hem de WCF için HTTP etkinleştirmesi sağlayan ortak bileşen.|  
+|Nettcpetkinleştirici|net.tcp|NetTcpPortSharing hizmetine bağlıdır.|  
+|Netpipeetkinleştirici|net.pipe||  
+|Netmsmqetkinleştirici|net. MSMQ|WCF tabanlı Message Queuing uygulamalarıyla kullanım için.|  
+|Netmsmqetkinleştirici|MSMQ. formatname|Mevcut Message Queuing uygulamalarla geriye dönük uyumluluk sağlar.|  
   
- Belirli protokoller için dinleyici bağdaştırıcıları aşağıdaki XML örneğinde gösterildiği gibi applicationHost.config dosyasında yükleme sırasında kaydedilir.  
+ Belirli protokoller için dinleyici bağdaştırıcıları, aşağıdaki XML örneğinde gösterildiği gibi applicationHost. config dosyasına yükleme sırasında kaydedilir.  
   
 ```xml  
 <system.applicationHost>  
@@ -58,8 +58,8 @@ Bu konu, Windows Process Etkinleştirme Hizmeti'nin (WAS olarak da bilinir) bile
 </system.applicationHost>  
 ```  
   
-### <a name="protocol-handlers"></a>Protokol Handleyicileri  
- Belirli protokoller için Işlem ve AppDomain protokol işleyicileri makine düzeyinde Web.config dosyasında kaydedilir.  
+### <a name="protocol-handlers"></a>Protokol Işleyicileri  
+ Belirli protokoller için işlem ve AppDomain protokol işleyicileri makine düzeyinde Web. config dosyasına kaydedilir.  
   
 ```xml  
 <system.web>  
@@ -87,5 +87,5 @@ Bu konu, Windows Process Etkinleştirme Hizmeti'nin (WAS olarak da bilinir) bile
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WAS'ı WCF ile Kullanmak için Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Windows Server App Kumaş Barındırma Özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [WAS'ı WCF ile Kullanmak için Yapılandırma](configuring-the-wpa--service-for-use-with-wcf.md)
+- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

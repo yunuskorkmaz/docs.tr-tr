@@ -2,26 +2,26 @@
 title: Özel İleti Filtresi
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 896407a218073eba53676baa4bcbd125593c80ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e4da0f2283fd537afe3cacdddfb36c327cfd3b4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183884"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600050"
 ---
 # <a name="custom-message-filter"></a>Özel İleti Filtresi
-Bu örnek, Windows Communication Foundation(WCF) iletiyi uç noktalara göndermek için kullandığı ileti filtrelerinin nasıl değiştirilebildiğini gösterir.  
+Bu örnek, Windows Communication Foundation (WCF) tarafından uç noktalara ileti göndermek için kullanılan ileti filtrelerinin nasıl değiştirileceğini gösterir.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Bir kanaldaki ilk ileti sunucuya ulaştığında, sunucunun uri ile ilişkili uç noktaların hangisini (varsa) alması gerektiğini belirlemesi gerekir. Bu işlem, <xref:System.ServiceModel.Dispatcher.MessageFilter> <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>bağlı nesneler tarafından denetlenir.  
+ Bir kanaldaki ilk ileti sunucuya ulaştığında, sunucu bu URI ile ilişkili uç noktaların (varsa) iletiyi alacağını belirlemelidir. Bu işlem <xref:System.ServiceModel.Dispatcher.MessageFilter> öğesine eklenen nesneler tarafından denetlenir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> .  
   
- Bir hizmetin her bitiş <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>noktasının tek bir bitiş noktası vardır. Hem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> bir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> hem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>de bir. Bu iki filtrenin birleşimi, bu uç nokta için kullanılan ileti filtresidir.  
+ Bir hizmetin her uç noktası tek bir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> . , <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> Hem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> a hem de içerir <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> . Bu iki filtrenin birleşimi, bu uç nokta için kullanılan ileti filtresidir.  
   
- Varsayılan olarak, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> uç nokta, hizmet bitiş noktasının 'kiyle <xref:System.ServiceModel.EndpointAddress>eşleşen bir adrese gönderilen tüm iletilerle eşleşir. Varsayılan olarak, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> bir uç nokta için gelen iletinin eylemini inceler ve herhangi bir iletiyi hizmet bitiş noktası sözleşmesinin işlemlerinden birine karşılık gelen bir eylemle eşleşir (yalnızca `IsInitiating` = `true` eylemler dikkate alınır). Sonuç olarak, varsayılan olarak, bitiş noktası filtresi yalnızca iletinin To başlığı bitiş <xref:System.ServiceModel.EndpointAddress> noktasının ve iletinin eyleminin bitiş noktası işleminin eylemlerinden biriyle eşleşiyorsa eşleşir.  
+ Varsayılan olarak, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> bir uç nokta için hizmet uç noktası ile eşleşen bir adrese yönelik olan herhangi bir iletiyle eşleşir <xref:System.ServiceModel.EndpointAddress> . Varsayılan olarak, <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> bir uç nokta için gelen ileti eylemini inceler ve hizmet uç noktası sözleşmesinin işlemlerindeki eylemlerden birine karşılık gelen bir eylemle eşleşen herhangi bir iletiyle eşleşir (yalnızca `IsInitiating` = `true` Eylemler göz önünde bulundurululur). Sonuç olarak, varsayılan olarak, bir uç nokta için filtre yalnızca, uç noktanın üst bilgisi ise <xref:System.ServiceModel.EndpointAddress> ve ileti eylemi uç nokta işleminin eylemleriyle eşleştiğinde eşleşir.  
   
- Bu filtreler bir davranış kullanılarak değiştirilebilir. Örnekte, hizmet, <xref:System.ServiceModel.Description.IEndpointBehavior> aşağıdakilerin yerine aşağıdakileri <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>  
+ Bu filtreler bir davranış kullanılarak değiştirilebilir. Örnekte, hizmet, <xref:System.ServiceModel.Description.IEndpointBehavior> ve ' nin yerini aldığı bir oluşturur <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> :  
   
 ```csharp
 class FilteringEndpointBehavior : IEndpointBehavior
@@ -30,7 +30,7 @@ class FilteringEndpointBehavior : IEndpointBehavior
 }
 ```  
   
- İki adres filtresi tanımlanır:  
+ İki adres filtresi tanımlanmıştır:  
   
 ```csharp
 // Matches any message whose To address contains the letter 'e'  
@@ -39,13 +39,13 @@ class MatchEAddressFilter : MessageFilter { }
 class MatchNoEAddressFilter : MessageFilter { }  
 ```  
   
- Bu `FilteringEndpointBehavior` yapılandırılabilir yapılır ve iki farklı varyasyonları sağlar.  
+ `FilteringEndpointBehavior`Yapılandırılabilir hale getirilir ve iki farklı çeşitlemeye izin verir.  
   
 ```csharp
 public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement { }
 ```  
   
- Varyasyon 1 yalnızca 'e' (ancak herhangi bir Eylemi olan) içeren adreslerle eşleşirken, Varyasyon 2 yalnızca 'e' olmayan adreslerle eşleşir:  
+ Çeşitleme 1 yalnızca bir ' e ' (herhangi bir eylem) içeren adreslerle eşleşir, ancak değişim 2 yalnızca ' e ' olmayan adreslerle eşleşir:  
   
 ```csharp
 if (Variation == 1)  
@@ -56,7 +56,7 @@ else
         new MatchNoEAddressFilter(), new MatchAllMessageFilter());  
 ```  
   
- Yapılandırma dosyasında, hizmet yeni davranışı kaydeder:  
+ Yapılandırma dosyasında hizmet yeni davranışı kaydeder:  
   
 ```xml  
 <extensions>  
@@ -66,7 +66,7 @@ else
 </extensions>
 ```  
   
- Ardından hizmet, `endpointBehavior` her varyasyon için yapılandırmalar oluşturur:  
+ Ardından hizmet `endpointBehavior` Her değişim için yapılandırma oluşturur:  
   
 ```xml  
 <endpointBehaviors>  
@@ -79,7 +79,7 @@ else
 </endpointBehaviors>  
 ```  
   
- Son olarak, hizmetin bitiş noktası `behaviorConfigurations`başvurularından biri:  
+ Son olarak, hizmetin uç noktası aşağıdakilerden birine başvurur `behaviorConfigurations` :  
   
 ```xml  
 <endpoint address=""  
@@ -90,7 +90,7 @@ else
         behaviorConfiguration="endpoint2" />  
 ```  
   
- İstemci uygulamasının uygulanması basittir; hizmetin URI'sine iki kanal oluşturur (bu değeri ikinci (`via`) parametresi olarak geçirerek <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> ve her kanalda tek bir ileti gönderir, ancak her kanal için farklı uç nokta adresleri kullanır. Sonuç olarak, istemciden gelen giden iletiler farklı To belirtmelerine sahiptir ve sunucu, istemcinin çıktısından gösterildiği gibi buna göre yanıt verir:  
+ İstemci uygulaması uygulaması basittir; hizmetin URI 'sine iki kanal oluşturur (Bu değeri ikinci ( `via` ) parametresi olarak geçirerek <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> her kanalda tek bir ileti gönderir, ancak her biri için farklı uç nokta adresleri kullanır. Sonuç olarak, istemciden gelen giden iletilerin belirlemeleri farklıdır ve sunucu, istemcinin çıkışıyla gösterildiği gibi buna uygun şekilde yanıt verir:  
   
 ```console  
 Sending message to urn:e...  
@@ -100,7 +100,7 @@ Sending message to urn:a...
 Hello  
 ```  
   
- Sunucunun yapılandırma dosyasındaki varyasyonun değiştirilmesi filtrenin değiştirilmesine neden olur ve istemci ters `urn:e` davranışı görür (ileti `urn:a` başarılı olurken, ileti başarısız olur).  
+ Sunucunun yapılandırma dosyasındaki varyasyonın değiştirilmesi filtrenin değişmesine neden olur ve istemci karşı davranışı görür ( `urn:e` ileti başarısız olur, bu durum `urn:a` başarısız olur).  
   
 ```xml  
 <endpoint address=""  
@@ -112,27 +112,27 @@ Hello
 ```  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-2. Örneği tek makineyapılandırmasında çalıştırmak [için, Windows Communication Foundation Samples'i çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+2. Örneği tek makineli bir yapılandırmada çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
-3. Örneği makineler arası yapılandırmada çalıştırmak [için, Windows Communication Foundation Samples'ı çalıştır'daki](../../../../docs/framework/wcf/samples/running-the-samples.md) yönergeleri izleyin ve Client.cs aşağıdaki satırı değiştirin.  
+3. Örneği bir çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md) bölümündeki yönergeleri izleyin ve Client.cs içinde aşağıdaki satırı değiştirin.  
   
     ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
-     Localhost'u sunucu adı ile değiştirin.  
+     Localhost değerini sunucu adıyla değiştirin.  
   
     ```csharp
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  

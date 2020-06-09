@@ -2,31 +2,31 @@
 title: Sözleşmeleri Yönlendirme
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-ms.openlocfilehash: 660652caa804b8c19f6dd18bcba51bf4abc3ba12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69dff2c82f67a16d51e11a92052c59672a054e04
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601081"
 ---
 # <a name="routing-contracts"></a>Sözleşmeleri Yönlendirme
-Yönlendirme sözleşmeleri yönlendirme hizmeti işleyebileceği ileti desenlerini tanımlayın.  Her sözleşme türsüz ve ileti Şeması veya eylem bilgisi olmadan bir ileti almak hizmet verir. Bu, genel temel alınan iletileri yönlendirilmek özellikleri için ek yapılandırma olmadan iletileri yönlendirmek yönlendirme hizmeti sağlar.  
+Yönlendirme sözleşmeleri, yönlendirme hizmetinin işleyebildiğiniz ileti düzenlerini tanımlar.  Her sözleşme türsüz olur ve hizmetin ileti Şeması veya eylem bilgisine sahip olmayan bir ileti almasına izin verir. Bu, yönlendirme hizmetinin yönlendirmekte olan temeldeki iletilerin özellikleri için ek yapılandırma gerektirmeden iletileri genel olarak yol açmasına olanak sağlar.  
   
 ## <a name="routing-contracts"></a>Sözleşmeleri Yönlendirme  
- Yönlendirme hizmeti, genel bir WCF ileti nesnesi kabul ettiğinden, sözleşme seçerken en önemli konu istemcileri ve Hizmetleri ile iletişim kurarken kullanılacak kanal şekildir. Yönlendirme hizmeti iletilerini işlerken simetrik ileti pompalara böylece genellikle gelen sözleşme şeklini giden sözleşme şeklini eşleşmelidir kullanır. Ancak, hizmet modelin dağıtıcı zaman dağıtıcı istek-yanıt kanala çift yönlü kanalı dönüştürür veya gibi gerekli değildir ve (yani kullanılmayan bir kanaldan oturum desteği kaldırır şekilleri, burada değiştirebilirsiniz durumlar vardır zaman **SessionMode.Allowed**, dönüştürme bir **IInputSessionChannel** içine bir **IInputChannel**).  
+ Yönlendirme hizmeti genel bir WCF Ileti nesnesini kabul ettiğinden, bir sözleşmeyi seçerken en önemli nokta, istemciler ve hizmetlerle iletişim kurarken kullanılacak kanalın şekilidir. İletileri işlerken, yönlendirme hizmeti simetrik ileti pumps kullanır, bu nedenle genellikle gelen sözleşmenin şeklinin giden sözleşmenin şekliyle eşleşmesi gerekir. Ancak, hizmet modeli dağıtıcısında, dağıtıcı bir çift yönlü kanalı bir istek-yanıt kanalına dönüştürdüğünde veya **gerekmediği zaman bir**kanaldan oturum desteğini kaldıran (yani, bir **IInputSessionChannel** bir **IInputChannel**'a dönüştürülürken), bu şekilde şekilleri değiştirebilecekleri durumlar vardır.  
   
- Bu ileti pompalara desteklemek için sözleşmeleri yönlendirme hizmeti sağlayan <xref:System.ServiceModel.Routing> ad alanı yönlendirme hizmeti tarafından kullanılan hizmet uç noktaları tanımlarken kullanılmalıdır. Bu sözleşmeler türsüz, herhangi bir ileti türü veya eylem giriş sağlar ve belirli bir ileti şema bilgisi olmadan iletileri işlemek yönlendirme hizmeti sağlar. Yönlendirme hizmeti tarafından kullanılan sözleşmeleri hakkında daha fazla bilgi için bkz. [sözleşmeleri yönlendirme](../../../../docs/framework/wcf/feature-details/routing-contracts.md).  
+ Bu ileti pumps 'leri desteklemek için, yönlendirme hizmeti, <xref:System.ServiceModel.Routing> yönlendirme hizmeti tarafından kullanılan hizmet uç noktaları tanımlanırken kullanılması gereken ad alanı içinde sözleşmeler sağlar. Bu sözleşmeler, herhangi bir ileti türü veya eyleminin alınabileceği ve yönlendirme hizmetinin belirli ileti şeması hakkında bilgi sahibi olmayan iletileri işlemesine izin veren türsüz bir işlemdir. Yönlendirme hizmeti tarafından kullanılan sözleşmeler hakkında daha fazla bilgi için bkz. [yönlendirme sözleşmeleri](routing-contracts.md).  
   
- Yönlendirme hizmeti tarafından sağlanan sözleşmeleri bulunan <xref:System.ServiceModel.Routing> çalıştırdığınız ve ad alanı aşağıdaki tabloda açıklanan.  
+ Yönlendirme hizmeti tarafından sunulan sözleşmeler <xref:System.ServiceModel.Routing> ad alanında bulunur ve aşağıdaki tabloda açıklanmıştır.  
   
 |Sözleşme|Şekil|Kanal şekli|  
 |--------------|-----------|-------------------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode SessionMode.Allowed =<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputChannel IOutputChannel ->|  
-|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|Sessionmode'u SessionMode.Required =<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true|IInputSessionChannel IOutputSessionChannel ->|  
-|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode SessionMode.Allowed =<br /><br /> AsyncPattern = true|IReplyChannel IRequestChannel ->|  
-|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|Da IDuplexSessionChannel öğelerini da IDuplexSessionChannel öğelerini ->|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode = SessionMode. Allowed<br /><br /> Asyncmodel = true<br /><br /> IsOneWay = true|IInputChannel-> IOutputChannel|  
+|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode = SessionMode. Required<br /><br /> Asyncmodel = true<br /><br /> IsOneWay = true|IInputSessionChannel-> IOutputSessionChannel|  
+|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode = SessionMode. Allowed<br /><br /> Asyncmodel = true|IReplyChannel destekleyen desteklenecektir-> IRequestChannel|  
+|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode = SessionMode. Required<br /><br /> CallbackContract = typeof (ısımplexsession)<br /><br /> Asyncmodel = true<br /><br /> IsOneWay = true<br /><br /> TransactionFlow (TransactionFlowOption. Allowed)|IDuplexSessionChannel-> IDuplexSessionChannel|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yönlendirme Hizmeti](../../../../docs/framework/wcf/feature-details/routing-service.md)
-- [Yönlendirme Tanıtımı](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+- [Yönlendirme Hizmeti](routing-service.md)
+- [Yönlendirme Tanıtımı](routing-introduction.md)
