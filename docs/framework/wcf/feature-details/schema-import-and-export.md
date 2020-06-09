@@ -9,60 +9,60 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: a14ee9e5916133be3979650055cf3e57899a4cca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 942ade69d92d8a213f65a3a2e463b6924e2f986e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591803"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84590221"
 ---
 # <a name="schema-import-and-export"></a>Şema İçeri ve Dışarı Aktarma
-Windows Communication Foundation (WCF) içeren yeni bir serileştirme motoruna <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` .NET Framework nesneleri ve XML arasında (her iki yönde) çevirir. Serileştirici kendisini ek olarak, WCF, ilişkili şema içeri ve dışarı aktarma mekanizması şema içerir. *Şema* seri hale getirici üretir veya seri durumdan çıkarıcı erişip XML şeklini resmi, kesin ve makine tarafından okunabilir bir açıklaması. WCF World Wide Web Consortium (W3C) XML Şeması Tanım Dili (XSD) çok sayıda üçüncü taraf platformlarıyla çalışabilen yaygın olarak, şema gösterimi olarak kullanır.  
+Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içerir, <xref:System.Runtime.Serialization.DataContractSerializer> . `DataContractSerializer`.NET Framework nesneleri Ile XML arasında çevirir (her iki yönde). Seri hale getirici 'nin buna ek olarak WCF, ilişkili şema içeri aktarma ve şema dışa aktarma mekanizmalarını içerir. *Şema* , seri hale getiricinin oluşturduğu veya seri hale GETIRICININ erişebileceği XML şeklinin resmi, kesin ve makine tarafından okunabilen bir açıklamasıdır. WCF, World Wide Web Konsorsiyumu (W3C) XML şeması tanım dili (XSD) kullanır ve bu, çok sayıda üçüncü taraf platformda yaygın olarak birlikte çalışabilir.  
   
- Şema içeri aktarma bileşen <xref:System.Runtime.Serialization.XsdDataContractImporter>oluşturur ve bir XSD şema belgesi alır .NET Framework sınıfları (normalde veri sözleşme sınıflar) sağlayacak şekilde serileştirilmiş forms belirtilen şemaya karşılık gelir.  
+ Şema içeri aktarma bileşeni, <xref:System.Runtime.Serialization.XsdDataContractImporter> BIR xsd şema belgesi alır ve seri hale getirilmiş formlar verilen şemaya karşılık gelen .NET Framework sınıfları (normalde veri sözleşme sınıfları) oluşturur.  
   
  Örneğin, aşağıdaki şema parçası:  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
- (daha iyi okunabilirlik açısından biraz Basitleştirilmiş) aşağıdaki türü oluşturur.  
+ Aşağıdaki türü üretir (daha iyi okunabilirlik için biraz Basitleştirilmiş).  
   
  [!code-csharp[c_SchemaImportExport#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#1)]
  [!code-vb[c_SchemaImportExport#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#1)]  
   
- Oluşturulan tür birkaç veri sözleşme en iyi izlediğini unutmayın (bulunan [en iyi uygulamalar: Veri sözleşmesi sürümü oluşturma](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)):  
+ Oluşturulan türün çeşitli veri sözleşmesi en iyi uygulamaları ( [En Iyi uygulamalar: veri sözleşmesi sürümü oluşturma](../best-practices-data-contract-versioning.md)) takip edin:  
   
-- Türün uyguladığı <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi. Daha fazla bilgi için [İleri uyumlu veri sözleşmeleri](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md).  
+- Türü, arabirimini uygular <xref:System.Runtime.Serialization.IExtensibleDataObject> . Daha fazla bilgi için bkz. [Ileri uyumlu veri sözleşmeleri](forward-compatible-data-contracts.md).  
   
-- Veri üyeleri, özel alanlar sarmalayan genel özellikleri olarak uygulanır.  
+- Veri üyeleri özel alanları kaydırmak için ortak özellikler olarak uygulanır.  
   
-- Kısmi bir sınıf sınıftır ve eklemeler oluşturulan kodu değiştirmeden yapılabilir.  
+- Sınıfı kısmi bir sınıftır ve oluşturulan kod değiştirilerek eklemeler yapılabilir.  
   
- <xref:System.Runtime.Serialization.XsdDataContractExporter> Ters yapmanıza olanak tanır; ile seri hale getirilebilir bir tür `DataContractSerializer` ve bir XSD şema belgesi oluşturabilirsiniz.  
+ , <xref:System.Runtime.Serialization.XsdDataContractExporter> , İle seri hale getirilebilir `DataContractSerializer` ve bir xsd şeması belgesi üreten türler alma işlemini yapmanızı sağlar.  
   
-## <a name="fidelity-is-not-guaranteed"></a>Güvenilirlik garanti edilmez  
- Bu şema veya türleri toplam doğruluk ile gidiş dönüş yapmak kesin değildir. (A *gidiş dönüş* bir şema sınıfları kümesi oluşturun ve sonucu bir şema oluşturmayı yeniden dışarı aktarmayı anlamına gelir.) Aynı şemaya döndürülemez. İşlemi ters da uygunluğunu korumak için garanti edilmez. (Şemasına üretmek için bir türünü dışarı aktarın ve sonra türü geri alın. Bu aynı türü döndürülür düşüktür.)  
+## <a name="fidelity-is-not-guaranteed"></a>Uygunluk garantisi garanti edilmez  
+ Şemanın veya türlerin toplam uygunluk ile gidiş dönüş yaptığı garanti edilmez. ( *Gidiş dönüş* , bir sınıf kümesi oluşturmak için şemayı içeri aktarma ve bir şemayı yeniden oluşturmak için sonucu dışarı aktarma anlamına gelir.) Aynı şema döndürülmeyebilir. İşlemi ters çevirme, uygunluğu korumak için de garanti edilmez. (Şemasını oluşturmak için bir türü dışarı aktarın ve ardından türü geri alın. Aynı tür döndürülmemiş olabilir.)  
   
 ## <a name="supported-types"></a>Desteklenen türler  
- Veri sözleşmesi modeli yalnızca sınırlı bir alt kümesini WC3 şemayı destekler. Bu alt kümesine uymayan herhangi bir şema içeri aktarma işlemi sırasında bir özel durum neden olur. Örneğin, bir veri anlaşması veri üyesi bir XML özniteliği olarak seri olduğunu belirtmek için hiçbir yolu yoktur. Bu nedenle, XML öznitelikleri kullanımını zorunlu şemaları desteklenmez ve bir veri anlaşması doğru XML projeksiyon ile oluşturmak olanaksız olduğundan içeri aktarma sırasında özel durumlar neden olur.  
+ Veri anlaşması modeli, WC3 şemasının yalnızca sınırlı bir alt kümesini destekler. Bu alt kümeyle uyumlu olmayan herhangi bir şema, içeri aktarma işlemi sırasında bir özel duruma neden olur. Örneğin, bir veri sözleşmesinin veri üyesinin bir XML özniteliği olarak serileştirilmesi gerektiğini belirtmenin bir yolu yoktur. Bu nedenle, XML özniteliklerinin kullanılmasını gerektiren şemalar desteklenmez ve doğru XML projeksiyonu ile bir veri sözleşmesi oluşturmak imkansız olduğundan içeri aktarma sırasında özel durumlara neden olur.  
   
- Örneğin, aşağıdaki şema parçası kullanarak varsayılan ayarları içeri aktarılamaz.  
+ Örneğin, aşağıdaki şema parçası varsayılan içeri aktarma ayarları kullanılarak içeri aktarılamaz.  
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- Daha fazla bilgi için [veri sözleşmesi şema başvurusu](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Bir şema veri sözleşme kuralları için uygun değil, farklı serileştirme motoruna kullanın. Örneğin, <xref:System.Xml.Serialization.XmlSerializer> kendi ayrı şema içeri aktarma mekanizması kullanır. Ayrıca, bir özel içeri aktarma modu, desteklenen şema aralığını genişletilir yoktur. Bölüm oluşturma hakkında daha fazla bilgi için bkz. <xref:System.Xml.Serialization.IXmlSerializable> türlerini [sınıfları oluşturmak için şema alma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Daha fazla bilgi için bkz. [veri sözleşmesi şema başvurusu](data-contract-schema-reference.md). Bir şema veri sözleşmesi kurallarına uygun değilse, farklı bir serileştirme altyapısı kullanın. Örneğin, <xref:System.Xml.Serialization.XmlSerializer> kendi ayrı şema içeri aktarma mekanizmasını kullanır. Ayrıca, desteklenen şemanın aralığının genişletildiği özel bir içeri aktarma modu vardır. Daha fazla bilgi için, <xref:System.Xml.Serialization.IXmlSerializable> [sınıfları oluşturmak Için şema içeri aktarma](importing-schema-to-generate-classes.md)bölümünde türleri oluşturma hakkında bölümüne bakın.  
   
- `XsdDataContractExporter` İle seri hale getirilebilir herhangi bir .NET Framework türlerini destekler `DataContractSerializer`. Daha fazla bilgi için [veri sözleşme seri hale getirici tarafından desteklenen türleri](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Bu şema kullanılarak oluşturulan unutmayın `XsdDataContractExporter` normalde geçerli veriler, `XsdDataContractImporter` kullanabilirsiniz (sürece <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> şema özelleştirmek için kullanılır).  
+ , `XsdDataContractExporter` İle serileştirileolabilecek .NET Framework türlerini destekler `DataContractSerializer` . Daha fazla bilgi için bkz. [veri sözleşmesi serileştiricisi tarafından desteklenen türler](types-supported-by-the-data-contract-serializer.md). Kullanılarak oluşturulan şemanın, `XsdDataContractExporter` genellikle `XsdDataContractImporter` kullanabileceği ( <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> Şemayı özelleştirmek için kullanılmadıkları takdirde) geçerli veriler olduğunu unutmayın.  
   
- Kullanma hakkında daha fazla bilgi için <xref:System.Runtime.Serialization.XsdDataContractImporter>, bkz: [sınıfları oluşturmak için şema alma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Kullanma hakkında daha fazla bilgi için <xref:System.Runtime.Serialization.XsdDataContractImporter> bkz. [sınıfları oluşturmak Için şemayı içeri aktarma](importing-schema-to-generate-classes.md).  
   
- Kullanma hakkında daha fazla bilgi için <xref:System.Runtime.Serialization.XsdDataContractExporter>, bkz: [sınıflardan Şemaları dışarı aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
+ Kullanma hakkında daha fazla bilgi için <xref:System.Runtime.Serialization.XsdDataContractExporter> bkz. [sınıflardan şemaları dışarı aktarma](exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
-- [Sınıf Oluşturmak için Şemayı İçeri Aktarma](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)
-- [Sınıflardan Şemaları Dışarı Aktarma](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)
+- [Sınıf Oluşturmak için Şemayı İçe Aktarma](importing-schema-to-generate-classes.md)
+- [Sınıflardan Şemaları Dışarı Aktarma](exporting-schemas-from-classes.md)

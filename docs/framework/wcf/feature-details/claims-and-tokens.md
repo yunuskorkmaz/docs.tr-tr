@@ -4,72 +4,72 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 6d148bca56cfa4e28c2d3e6c0d9fcb564861a7cd
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: cbc97f2224bce640757e1cef88fe325db477cfd7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663455"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587033"
 ---
 # <a name="claims-and-tokens"></a>Beyanlar ve Belirteçler
 
-Bu konu, Windows Communication Foundation (WCF) desteklediği varsayılan belirteçleri oluşturan çeşitli talep türlerini açıklar.
+Bu konuda Windows Communication Foundation (WCF) tarafından desteklenen varsayılan belirteçlerden oluşturulan çeşitli talep türleri açıklanmaktadır.
 
-Kullanarak bir istemci kimlik bilgileri taleplerini inceleyebilirsiniz <xref:System.IdentityModel.Claims.ClaimSet> ve <xref:System.IdentityModel.Claims.Claim> sınıfları. `ClaimSet` Koleksiyonunu içeren `Claim` nesneleri. Her `Claim` aşağıdaki önemli üyeleri içerir:
+Ve sınıflarını kullanarak bir istemci kimlik bilgisinin taleplerini inceleyebilirsiniz <xref:System.IdentityModel.Claims.ClaimSet> <xref:System.IdentityModel.Claims.Claim> . `ClaimSet`Bir nesne koleksiyonu içerir `Claim` . Her biri `Claim` aşağıdaki önemli üyelere sahiptir:
 
-- <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> Özelliği yapılan talep türünü belirten bir Tekdüzen Kaynak Tanımlayıcısı (URI) döndürür. Örneğin, bir talep türü URI durumda olduğu bir sertifika parmak izi olabilir `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.
+- <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>Özelliği, yapılan talep türünü belirten bir Tekdüzen Kaynak tanımlayıcısı (URI) döndürür. Örneğin, bir talep türü bir sertifikanın parmak izi olabilir, bu durumda URI olur `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint` .
 
-- <xref:System.IdentityModel.Claims.Claim.Right%2A> Özelliği talep sağındaki belirten bir URI döndürür. Önceden tanımlanmış hakları bulunur <xref:System.IdentityModel.Claims.Rights> sınıfı (<xref:System.IdentityModel.Claims.Rights.Identity%2A>, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>).
+- <xref:System.IdentityModel.Claims.Claim.Right%2A>Özelliği, talebin sağına belirten BIR URI döndürür. Önceden tanımlanmış haklar <xref:System.IdentityModel.Claims.Rights> sınıfında ( <xref:System.IdentityModel.Claims.Rights.Identity%2A> , <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> ) bulunur.
 
-- <xref:System.IdentityModel.Claims.Claim.Resource%2A> Taleple ilişkili kaynak özelliğini döndürür.
+- <xref:System.IdentityModel.Claims.Claim.Resource%2A>Özelliği, talep ile ilişkili kaynağı döndürür.
 
-Her <xref:System.IdentityModel.Claims.ClaimSet> de sahip bir <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> temsil eden özellik <xref:System.IdentityModel.Claims.ClaimSet> , `Issuer`.
+Her birinin, <xref:System.IdentityModel.Claims.ClaimSet> <xref:System.IdentityModel.Claims.ClaimSet.Issuer%2A> ' ı temsil eden bir özelliği de vardır <xref:System.IdentityModel.Claims.ClaimSet> `Issuer` .
 
 ## <a name="windows-accounts"></a>Windows hesapları
 
-İstemci kimlik bilgilerini ortaya çıkan bir Windows kullanıcı hesabı için burada eşler <xref:System.IdentityModel.Claims.ClaimSet> aşağıdaki değerlere sahip:
+İstemci kimlik bilgilerinin bir Windows kullanıcı hesabıyla eşlendiği yerde, sonuç <xref:System.IdentityModel.Claims.ClaimSet> aşağıdaki değerlere sahiptir:
 
-- `Issuer` Statik Windows özelliği tarafından döndürülen değer <xref:System.IdentityModel.Claims.ClaimSet> sınıfı.
+- , `Issuer` Sınıfının statik Windows özelliği tarafından döndürülen değerdir <xref:System.IdentityModel.Claims.ClaimSet> .
 
-- Koleksiyon Taleplerde şunlardır:
+- Koleksiyondaki talepler şunlardır:
 
-  - A <xref:System.IdentityModel.Claims.Claim> ile bir <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> güvenlik tanımlayıcısı (SID) değerini bir <xref:System.IdentityModel.Claims.Claim.Right%2A> özelliği değerinin `Identity`ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> gerçek SID değerini döndürür. SID, her kullanıcı için etki alanı denetleyicisi sorunları benzersiz bir değerdir. SID, Windows Güvenlik ile etkileşim içinde kullanıcıyı tanımlamak için kullanılır.
+  - <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> Güvenlik tanımlayıcısı (SID) değerine sahip bir, bir <xref:System.IdentityModel.Claims.Claim.Right%2A> özellik değeri `Identity` , ve, <xref:System.IdentityModel.Claims.Claim.Resource%2A> gerçek SID değerini döndüren bir. SID, etki alanı denetleyicisinin her kullanıcıya verdiği benzersiz bir değerdir. SID, kullanıcıyı Windows güvenliğiyle etkileşimler halinde tanımlamak için kullanılır.
 
-  - A <xref:System.IdentityModel.Claims.Claim> ile bir <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> SID, değeri bir <xref:System.IdentityModel.Claims.Claim.Right%2A> , `PossessProperty`ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> SID değeri.
+  - SID değerine sahip bir, <xref:System.IdentityModel.Claims.Claim> ve SID değeri olan bir <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> <xref:System.IdentityModel.Claims.Claim.Right%2A> `PossessProperty` <xref:System.IdentityModel.Claims.Claim.Resource%2A> .
 
-  - A <xref:System.IdentityModel.Claims.Claim> ile bir <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> , <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A>, <xref:System.IdentityModel.Claims.Claim.Right%2A> , `PossessProperty` ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> kullanıcı adını (örneğin, "MYMACHINE\Bob") içeren bir dize.
+  - , ' In <xref:System.IdentityModel.Claims.Claim> <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> ' a ve ' a ait <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> <xref:System.IdentityModel.Claims.Claim.Right%2A> `PossessProperty` <xref:System.IdentityModel.Claims.Claim.Resource%2A> Kullanıcı adını içeren bir dize (örneğin, "mymachınebob").
 
-  - Ek SID taleplerinden ile <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> kullanıcının ait olduğu için çeşitli gruplar.
+  - <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>Kullanıcının ait olduğu çeşitli gruplar için ile ek SID talepleri.
 
 ## <a name="certificates"></a>Sertifikalar
 
-İstemci kimlik bilgileri elde edilen, bir sertifika olduğu <xref:System.IdentityModel.Claims.ClaimSet> aşağıdaki değerlere sahip:
+İstemci kimlik bilgileri bir sertifika olduğunda, sonuç <xref:System.IdentityModel.Claims.ClaimSet> aşağıdaki değerlere sahiptir:
 
-- Şirket içinde verilen sertifikalara `Issuer` olduğu <xref:System.IdentityModel.Claims.ClaimSet> kendisi. <xref:System.IdentityModel.Claims.ClaimSet> Döndürür bir <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> , <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A>, <xref:System.IdentityModel.Claims.Claim.Right%2A> , `Identity`ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> değeri olan bir <xref:System.Byte> sertifikanın parmak izini içeren bir dizi.
+- Kendi kendine verilen sertifikalar için, kendi `Issuer` <xref:System.IdentityModel.Claims.ClaimSet> kendisidir. , ' A <xref:System.IdentityModel.Claims.ClaimSet> <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> <xref:System.IdentityModel.Claims.ClaimTypes.Thumbprint%2A> , ' a <xref:System.IdentityModel.Claims.Claim.Right%2A> `Identity` ve <xref:System.IdentityModel.Claims.Claim.Resource%2A> <xref:System.Byte> sertifikanın parmak izini içeren bir dizi değeri döndürür.
 
-- Sertifikayı veren sertifika yetkilisi tarafından verilmiş bir sertifika için olan `ClaimSet` sertifika yetkilisinin sertifikayı temsil eden.
+- Sertifika yetkilisi tarafından verilen bir sertifika için sertifikayı veren sertifika `ClaimSet` yetkilisinin sertifikasını temsil eder.
 
-- `Claims` Koleksiyona dahil:
+- `Claims`Koleksiyondaki öğesine şunlar dahildir:
 
-  - A `Claim` ile bir `ClaimType` parmak izi, bir `Right` PossessProperty, ve `Resource` diğer bir deyişle sertifikanın parmak izini içeren bir bayt dizisi
+  - `Claim` `ClaimType` Parmak izi olan a, `Right` PossessProperty ve `Resource` sertifikanın parmak izini içeren bir bayt dizisidir
 
-  - Ek PossessProperty talep X500DistinguishedName, Dns, ad, Upn ve Rsa, dahil olmak üzere çeşitli türlerde sertifikanın çeşitli özelliklerini temsil eder. Sertifikanın ortak anahtarı için Rsa talep kaynaktır. **Not** istemci kimlik bilgisi türü için bir Windows hizmet eşlemeleri bir sertifika olduğu hesap, iki `ClaimSet` nesneleri oluşturulur. İlk Windows hesapla ilgili tüm talepleri içeren ve ikinci sertifikayı ilgili tüm talepleri içerir.
+  - X500DistinguishedName, DNS, Name, UPN ve RSA gibi çeşitli türlerde ek PossessProperty talepleri, sertifikanın çeşitli özelliklerini temsil eder. RSA talebinin kaynağı sertifikayla ilişkili ortak anahtardır. **Göz önünde** İstemci kimlik bilgileri türü, hizmetin bir Windows hesabıyla eşlendiği bir sertifika olduğunda, iki `ClaimSet` nesne oluşturulur. İlki Windows hesabıyla ilgili tüm talepleri içerir ve ikincisi sertifikayla ilgili tüm talepleri içerir.
 
 ## <a name="user-namepassword"></a>Kullanıcı adı/parola
 
-İstemci kimlik bilgilerini bir kullanıcı adı/parola (veya eşdeğeri) olduğu, eşlenmiyor ortaya çıkan bir Windows hesabı `ClaimSet` statik tarafından verilen <xref:System.IdentityModel.Claims.ClaimSet.System%2A> özelliği `ClaimSet` sınıfı. `ClaimSet` İçeren bir `Identity` türü talep <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> istemci kullanıcı adı, kaynak sağlar. Karşılık gelen bir talep sahip bir `Right` , `PossessProperty`.
+İstemci kimlik bilgisinin bir Windows hesabıyla eşleşmeyen bir Kullanıcı adı/parolası (veya eşdeğeri) olduğu durumlarda, sonuç `ClaimSet` sınıfın statik özelliği tarafından verilir <xref:System.IdentityModel.Claims.ClaimSet.System%2A> `ClaimSet` . , `ClaimSet` `Identity` <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> Kaynağı istemcinin sağladığı Kullanıcı adı olan bir tür talebi içerir. Karşılık gelen bir talep, öğesine sahiptir `Right` `PossessProperty` .
 
 ## <a name="rsa-keys"></a>RSA anahtarları
 
-Bir sertifika ile ilişkili olmayan bir RSA anahtarı kullanıldığı ortaya çıkan `ClaimSet` Self verilir ve içeren bir `Identity` türü talep <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> RSA anahtarı olan bir kaynaktır. Karşılık gelen bir talep sahip bir `Right` , `PossessProperty`.
+Bir sertifika ile ilişkilendirilmemiş bir RSA anahtarı kullanıldığında, sonuçta elde edilen `ClaimSet` kendi kendine verilir ve `Identity` kaynağı RSA anahtarı olan bir tür talebi içerir <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> . Karşılık gelen bir talep, öğesine sahiptir `Right` `PossessProperty` .
 
 ## <a name="saml"></a>SAML
 
-İstemci güvenlik onaylama işaretleme dili (SAML) belirteci elde edilen bir burada kimlik doğrulaması `ClaimSet` genellikle SAML belirtecinde verilen güvenlik belirteci hizmeti (STS) sertifikasını SAML belirteci imzalayan varlık tarafından verilir. `ClaimSet` SAML belirtecinde bulunan çeşitli talepleri içerir. SAML belirteci içerirse bir `SamlSubject` sahip olmayan bir`null` adını ardından bir `Identity` talep türü ile <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> ve kaynak türü <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> oluşturulur.
+İstemci bir güvenlik onaylama işlemi Işaretleme dili (SAML) belirteciyle kimlik doğruladığında, sonuç olarak `ClaimSet` SAML belirtecini imzalayan varlık tarafından verilir, genellıkle SAML belirtecini veren güvenlik belirteci hizmeti (STS) sertifikasıdır. `ClaimSet`SAML belirtecinde bulunan çeşitli talepler içerir. SAML belirteci adı olmayan bir içeriyorsa `SamlSubject` `null` , `Identity` türü <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> ve kaynak türü olan bir talep <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> oluşturulur.
 
-## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Kimlik talepleri ve ServiceSecurityContext.IsAnonymous
+## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Kimlik talepleri ve ServiceSecurityContext. ıanonymous
 
-Hiçbiri `ClaimSet` istemci kimlik bilgileri kaynaklanan nesneleri içeren bir talep ile bir `Right` , `Identity,` sonra <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> özelliği döndürür `true`. Bir veya daha fazla tür talep varsa `IsAnonymous` özelliği döndürür `false`.
+`ClaimSet`İstemci kimlik bilgilerinden kaynaklanan nesnelerden hiçbiri, ' ın ' a sahip bir talep içermiyorsa `Right` `Identity,` , <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> özelliği döndürülür `true` . Bir veya daha fazla talep varsa, `IsAnonymous` özelliği döndürür `false` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -77,4 +77,4 @@ Hiçbiri `ClaimSet` istemci kimlik bilgileri kaynaklanan nesneleri içeren bir t
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)

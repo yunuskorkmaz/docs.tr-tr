@@ -2,29 +2,29 @@
 title: NetHttpBinding Kullanma
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 82222dbfa3f35ed00d0173f2bc927c32e9e98470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac6fc658731d032051f2dfd4058397f9b9a55828
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585642"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding Kullanma
-<xref:System.ServiceModel.NetHttpBinding>HTTP veya WebSocket hizmetlerini tüketmek için tasarlanmış bir bağlayıcıdır ve varsayılan olarak ikili kodlama kullanır. <xref:System.ServiceModel.NetHttpBinding>bir istek yanıtlama sözleşmesi veya çift yönlü sözleşme ile kullanılıp kullanılmadığını algılar ve davranışını eşleşecek şekilde değiştirir - bu istek yanıtlama sözleşmeleri için HTTP ve çift yönlü sözleşmeler için WebSockets kullanır. Bu davranış <xref:System.ServiceModel.Channels.WebSocketTransportUsage> ayarı kullanılarak geçersiz kılınabilir:  
+<xref:System.ServiceModel.NetHttpBinding>, HTTP veya WebSocket hizmetlerini kullanmak için tasarlanan bir bağlamadır ve varsayılan olarak ikili kodlama kullanır. <xref:System.ServiceModel.NetHttpBinding>, istek-yanıt sözleşmesi veya çift yönlü sözleşmeyle birlikte kullanılıp kullanılmayacağını algılar ve davranışını eşleşecek şekilde değiştirin-bu, istek-yanıt sözleşmeleri için HTTP ve çift yönlü sözleşmeler için WebSockets kullanır. Bu davranış ayarı kullanılarak geçersiz kılınabilir <xref:System.ServiceModel.Channels.WebSocketTransportUsage> :  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>- Bu, WebSockets'i istek-yanıt sözleşmeleri için bile kullanılmaya zorlar.  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>-Bu WebSockets, istek-yanıt sözleşmeleri için bile kullanılmasına zorlar.  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>- Bu, WebSockets'in kullanılmasını engeller. Bu ayarile çift yönlü bir sözleşme kullanmaya çalışmak bir özel durumla sonuçlanır.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>-Bu, WebSockets kullanılmasını önler. Bu ayarla bir çift yönlü sözleşme kullanılmaya çalışılması bir özel durumla sonuçlanır.  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>- Bu varsayılan değerdir ve yukarıda açıklandığı gibi şekilde işlem yapılır.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>-Bu varsayılan değerdir ve yukarıda açıklandığı gibi davranır.  
   
- <xref:System.ServiceModel.NetHttpBinding>hem HTTP modunda hem de WebSocket modunda güvenilir oturumları destekler. WebSocket modunda oturumlar aktarım tarafından sağlanır.  
+ <xref:System.ServiceModel.NetHttpBinding>hem HTTP modunda hem de WebSocket modunda güvenilir oturumları destekler. WebSocket modundaki oturumlarda, taşıma tarafından sağlanır.  
   
 > [!WARNING]
-> Bağlamanın <xref:System.ServiceModel.NetHttpBinding> Aktarım Modu'nu ve Aktarım Mode'u Kullanarak TransferMode.Streamed olarak ayarlanırsa, büyük akışlar bir kilitlenmeye neden olabilir ve arama zaman alacaktır. Bu sorunu çözmek için daha küçük iletiler gönderin veya Aktarım Modu.Arabelleğe Alma'yı kullanın.  
+> <xref:System.ServiceModel.NetHttpBinding>Ve bağlamanın TransferMode değeri TransferMode. akışlı olarak ayarlandığında, büyük akışlar kilitlenmeye neden olabilir ve çağrının zaman aşımına uğrayacaktır. Bu sorunu geçici olarak çözmek için daha küçük mesajlar gönderin veya TransferMode. arabellekli kullanın.  
   
-## <a name="configuring-a-service-to-use-nethttpbinding"></a>Bir Hizmeti Net'i kullanacak şekilde yapılandırmaHttpBinding  
- Diğer <xref:System.ServiceModel.NetHttpBinding> bağlama ile aynı şekilde yapılandırılabilir. Aşağıdaki yapılandırma snippet nasıl bir WCF hizmeti <xref:System.ServiceModel.NetHttpBinding>ile yapılandırılanın gösteriş gösterir.  
+## <a name="configuring-a-service-to-use-nethttpbinding"></a>NetHttpBinding kullanmak için bir hizmet yapılandırma  
+ , <xref:System.ServiceModel.NetHttpBinding> Diğer bağlamalamayla aynı şekilde yapılandırılabilir. Aşağıdaki yapılandırma kod parçacığında, ile bir WCF hizmetinin nasıl yapılandırılacağı gösterilmektedir <xref:System.ServiceModel.NetHttpBinding> .  
   
 ```xml  
 <system.serviceModel>  
@@ -49,7 +49,7 @@ ms.locfileid: "79184239"
   </system.serviceModel>  
 ```  
   
- Aşağıdaki kod snippet kodu eklemek <xref:System.ServiceModel.NetHttpBinding> için nasıl gösterir.  
+ Aşağıdaki kod parçacığı, içindeki kodun nasıl ekleneceğini gösterir <xref:System.ServiceModel.NetHttpBinding> .  
   
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  
@@ -60,7 +60,7 @@ ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmetler için Bağlamaları Yapılandırma](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
-- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [Sistem Destekli Ciltler](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Çift Yönlü Hizmetler](../../../../docs/framework/wcf/feature-details/duplex-services.md)
+- [Hizmetler için Bağlamaları Yapılandırma](../configuring-bindings-for-wcf-services.md)
+- [Bağlamalar](bindings.md)
+- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)
+- [Çift Yönlü Hizmetler](duplex-services.md)

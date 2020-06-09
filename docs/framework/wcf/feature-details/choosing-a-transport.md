@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7e1f6b2e1905fb92ebfe78be351feeaebb374c11
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964479"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587072"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma arasında seçim yapma ölçütlerini anlatmaktadır: HTTP, TCP ve adlandırılmış kanallar. WCF Ayrıca bir Message Queuing (MSMQ olarak da bilinir) taşıması içerir, ancak bu belge Message Queuing 'i kapsamaz.  
@@ -20,7 +20,7 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
   
  Var olan bir istemciye veya sunucuya bağlanmanız gerekiyorsa, belirli bir aktarımı kullanma seçeneğiniz olmayabilir. Ancak, WCF Hizmetleri, her biri farklı bir taşıma ile birden fazla uç nokta aracılığıyla erişilebilir hale getirilebilir. Tek bir taşıma hizmetinize yönelik hedef kitleyi kapsamıyorsa, hizmeti birden fazla uç nokta üzerinden kullanıma sunma seçeneğini göz önünde bulundurun. İstemci uygulamaları daha sonra kendileri için en iyi uç noktayı kullanabilir.  
   
- Bir taşıma seçtikten sonra, onu kullanan bir bağlama seçmelisiniz. Sistem tarafından sağlanmış bir bağlama (bkz. [sistem tarafından sağlanmış bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)) seçebilir veya kendi özel bağlamlarınızı oluşturabilirsiniz (bkz. [Özel Bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md)). Kendi bağlamalarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+ Bir taşıma seçtikten sonra, onu kullanan bir bağlama seçmelisiniz. Sistem tarafından sağlanmış bir bağlama (bkz. [sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)) seçebilir veya kendi özel bağlamlarınızı oluşturabilirsiniz (bkz. [Özel Bağlamalar](../extending/custom-bindings.md)). Kendi bağlamalarınızı da oluşturabilirsiniz. Daha fazla bilgi için bkz. [Kullanıcı Tanımlı Bağlamalar Oluşturma](../extending/creating-user-defined-bindings.md).  
   
 ## <a name="advantages-of-each-transport"></a>Her bir taşımanın avantajları  
  Bu bölümde, aralarında seçim yapmak üzere ayrıntılı bir karar grafiği de dahil olmak üzere üç ana aktarımdan birini seçmek için başlıca nedenler açıklanmaktadır.  
@@ -30,14 +30,14 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
   
  HTTP protokolü bağlantı tabanlı değil — yanıt gönderildikten sonra durum korunmaz. Birden çok sayfalı işlemleri işlemek için, uygulamanın gerekli tüm durumları kalıcı hale getirilmesi gerekir.  
   
- WCF 'de HTTP taşıma bağlaması, eski WCF olmayan sistemlerle birlikte çalışabilirlik için iyileştirilmiştir. İletişim kuran tüm taraflar WCF kullanıyorsa, TCP tabanlı veya adlandırılmış kanallar tabanlı bağlamalar daha hızlıdır. Daha fazla bilgi için bkz. <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding>.  
+ WCF 'de HTTP taşıma bağlaması, eski WCF olmayan sistemlerle birlikte çalışabilirlik için iyileştirilmiştir. İletişim kuran tüm taraflar WCF kullanıyorsa, TCP tabanlı veya adlandırılmış kanallar tabanlı bağlamalar daha hızlıdır. Daha fazla bilgi için <xref:System.ServiceModel.NetTcpBinding> ve <xref:System.ServiceModel.NetNamedPipeBinding> bölümlerine bakın.  
   
 ### <a name="when-to-use-the-tcp-transport"></a>TCP aktarımı ne zaman kullanılır?  
  TCP, uçtan uca hata algılama ve düzeltme ile bağlantı tabanlı, akış odaklı bir dağıtım hizmetidir. *Bağlantı tabanlı* , konaklar arasındaki bir iletişim oturumunun veri değiş tokuşu yapılmadan önce kurulması anlamına gelir. Ana bilgisayar, bir mantıksal IP adresi tarafından tanımlanan TCP/IP ağındaki herhangi bir cihazdır.  
   
  TCP, güvenilir veri teslimi ve kullanım kolaylığı sağlar. Özellikle TCP, Paket teslimi gönderisini bilgilendirir, paketlerin gönderildikleri sırada teslim edilmesini garanti eder, kayıp paketleri yeniden iletir ve veri paketlerinin çoğaltılmamasını sağlar. Bu güvenilir teslimin iki TCP/IP düğümü arasında uygulandığını ve hangi ara düğümlerin dahil ettiğine bakılmaksızın uç noktalar arasında geçerli olan *WS-ReliableMessaging*ile aynı şey olmadığını unutmayın.  
   
- WCF TCP taşıması, iletişimin her iki ucunun de WCF kullandığı senaryo için en iyi duruma getirilmiştir. Bu bağlama, farklı makineler arasında iletişim kuran senaryolar için en hızlı WCF bağlamasıdır. İleti alışverişi, iyileştirilmiş ileti aktarımı için <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> kullanır. TCP çift yönlü iletişim sağlar ve bu nedenle, istemci ağ adresi çevirisi (NAT) arkasında olsa bile çift yönlü sözleşmeleri uygulamak için kullanılabilir.  
+ WCF TCP taşıması, iletişimin her iki ucunun de WCF kullandığı senaryo için en iyi duruma getirilmiştir. Bu bağlama, farklı makineler arasında iletişim kuran senaryolar için en hızlı WCF bağlamasıdır. İleti alışverişi, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> iyileştirilmiş ileti aktarımı için kullanır. TCP çift yönlü iletişim sağlar ve bu nedenle, istemci ağ adresi çevirisi (NAT) arkasında olsa bile çift yönlü sözleşmeleri uygulamak için kullanılabilir.  
   
 ### <a name="when-to-use-the-named-pipe-transport"></a>Adlandırılmış kanal taşıması ne zaman kullanılır?  
  Adlandırılmış kanal, Windows işletim sistemi çekirdekte, işlemlerin iletişim için kullanabileceği paylaşılan belleğin bir bölümü gibi bir nesnedir. Adlandırılmış kanal bir ada sahiptir ve tek bir makinedeki süreçler arasındaki tek yönlü veya çift yönlü iletişim için kullanılabilir.  
@@ -45,18 +45,18 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
  Tek bilgisayardaki farklı WCF uygulamaları arasında iletişim gerektiğinde ve başka bir makineden gelen iletişimi engellemek istediğinizde, adlandırılmış kanallar aktarımını kullanın. Ek bir kısıtlama, yükseltilmiş ayrıcalıklara sahip olmadıkları müddetçe Windows Uzak Masaüstü ile çalışan işlemlerin aynı Windows Uzak Masaüstü oturumuyla sınırlı olabileceğini de sağlar.  
   
 > [!WARNING]
-> IIS 'de barındırılan birden çok sitede zayıf bir joker karakter ile adlandırılmış kanal aktarımını kullanırken şu hata oluşabilir: ' 2 ' sitesini dinlemeye çalışırken ' net. pipe ' protokolünün ' Netpipeactivation ' etkinleştirme hizmetinde bir hata oluştu, Bu nedenle, protokol site için geçici olarak devre dışı bırakılır. Daha fazla ayrıntı için özel durum iletisine bakın. URL: WeakWildcard: net. pipe:/\<makine adı >/durum: ConflictingRegistration özel durumu: Işlem adı: SMSvcHost Işlem KIMLIĞI: 1076 \  
+> IIS 'de barındırılan birden çok sitede zayıf bir joker karakterli URL ayırması ile adlandırılmış kanal aktarımını kullanırken şu hata oluşabilir: ' 2 ' sitesini dinlemeye çalışırken ' net. pipe ' protokolünün ' Netpipeactivation ' etkinleştirme hizmetinde bir hata oluştu, bu nedenle protokol site için geçici olarak devre dışı bırakıldı. Daha fazla ayrıntı için özel durum iletisine bakın. URL: WeakWildcard: net. pipe:/ \<machine name> /durum: ConflictingRegistration özel durumu: Işlem adı: SMSvcHost Işlem kimliği: 1076 \  
   
 ## <a name="decision-points-for-choosing-a-transport"></a>Taşıma seçme için karar noktaları  
  Aşağıdaki tabloda, bir taşıma seçmek için kullanılan yaygın karar noktaları açıklanmaktadır. Uygulamanıza uygulanan ek öznitelikleri ve taşımaları göz önünde bulundurmanız gerekir. Uygulamanız için önemli olan öznitelikleri belirleyin, favorably ilişkilendirmekte olan taşımaları belirleyin ve ardından öznitelik kümesi ile en iyi şekilde çalışan taşımaları seçin.  
   
 |Öznitelik|Açıklama|Sık sık kırmızı aktarımlar|  
 |---------------|-----------------|------------------------|  
-|Tanılamalar|Tanılama, aktarım bağlantı sorunlarını otomatik olarak algılamanıza olanak tanır. Tüm aktarımlar, bağlantıyı açıklayan hata bilgilerini geri gönderme olanağını destekler. Ancak, WCF ağ sorunlarını araştırmak için tanılama araçları içermez.|Yok.|  
-|Barındırma|Tüm WCF uç noktaları, bir uygulama içinde barındırılmalıdır. IIS 6,0 ve önceki sürümler yalnızca HTTP taşımasını kullanan uygulamaları destekler. Windows Vista 'da, TCP ve adlandırılmış kanallar dahil olmak üzere tüm WCF taşımalarını barındırmak için destek eklenmiştir. Daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmetinde](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md) [barındırma Internet Information Services](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) ve barındırma.|HTTP|  
+|Tanılama|Tanılama, aktarım bağlantı sorunlarını otomatik olarak algılamanıza olanak tanır. Tüm aktarımlar, bağlantıyı açıklayan hata bilgilerini geri gönderme olanağını destekler. Ancak, WCF ağ sorunlarını araştırmak için tanılama araçları içermez.|Yok|  
+|Hosting|Tüm WCF uç noktaları, bir uygulama içinde barındırılmalıdır. IIS 6,0 ve önceki sürümler yalnızca HTTP taşımasını kullanan uygulamaları destekler. Windows Vista 'da, TCP ve adlandırılmış kanallar dahil olmak üzere tüm WCF taşımalarını barındırmak için destek eklenmiştir. Daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmetinde](hosting-in-windows-process-activation-service.md) [barındırma Internet Information Services](hosting-in-internet-information-services.md) ve barındırma.|HTTP|  
 |İncelemesi|İnceleme, iletim sırasında iletilerden bilgi ayıklama ve işleme olanağıdır. HTTP protokolü, Yönlendirme ve denetim bilgilerini verilerden ayırır, böylece iletileri denetleyen ve çözümleyen araçların oluşturulması kolaylaşır. İncelemesi kolay olan aktarımlar, ağ gereçlerinde daha az işlem gücü gerektirebilir. Kullanılan güvenlik düzeyi, iletilerin incelenemeyeceğini etkiler.|HTTP|  
-|Gecikme|Gecikme süresi, bir ileti alışverişinin tamamlanışında gereken en kısa süredir. Tüm ağ işlemleri, taşıma seçimine bağlı olarak daha fazla veya daha az gecikme süresine sahiptir. Yerel ileti değişimi deseninin istek-Yanıtla (HTTP gibi) istek yanıtı olduğu bir aktarımla çift yönlü veya tek yönlü iletişim kullanmak, iletilerin zorla bağıntısı nedeniyle ek gecikmeye neden olabilir. Bu durumda, yerel ileti değişimi deseninin TCP gibi çift yönlü olduğu bir taşıma kullanmayı düşünün.|TCP, adlandırılmış<br /><br /> Kapatıldığı|  
-|Reach|Bir taşımanın bağlantısı, taşımanın diğer sistemlerle ne kadar uyumlu olduğunu yansıtır. Adlandırılmış kanal aktarımında çok az erişim vardır; yalnızca aynı makinede çalışan hizmetlere bağlanabilir. TCP ve HTTP aktarımları için her ikisi de mükemmel bir erişime sahiptir ve bazı NAT ve güvenlik duvarı yapılandırmalarına sızma edebilir. Daha fazla bilgi için bkz. [NAT ve güvenlik duvarları Ile çalışma](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
+|Gecikme süresi|Gecikme süresi, bir ileti alışverişinin tamamlanışında gereken en kısa süredir. Tüm ağ işlemleri, taşıma seçimine bağlı olarak daha fazla veya daha az gecikme süresine sahiptir. Yerel ileti değişimi deseninin istek-Yanıtla (HTTP gibi) istek yanıtı olduğu bir aktarımla çift yönlü veya tek yönlü iletişim kullanmak, iletilerin zorla bağıntısı nedeniyle ek gecikmeye neden olabilir. Bu durumda, yerel ileti değişimi deseninin TCP gibi çift yönlü olduğu bir taşıma kullanmayı düşünün.|TCP, adlandırılmış<br /><br /> Kapatıldığı|  
+|Reach|Bir taşımanın bağlantısı, taşımanın diğer sistemlerle ne kadar uyumlu olduğunu yansıtır. Adlandırılmış kanal aktarımında çok az erişim vardır; yalnızca aynı makinede çalışan hizmetlere bağlanabilir. TCP ve HTTP aktarımları için her ikisi de mükemmel bir erişime sahiptir ve bazı NAT ve güvenlik duvarı yapılandırmalarına sızma edebilir. Daha fazla bilgi için bkz. [NAT ve güvenlik duvarları Ile çalışma](working-with-nats-and-firewalls.md).|HTTP, TCP|  
 |Güvenlik|Güvenlik, gizlilik, bütünlük veya kimlik doğrulaması sağlayarak aktarım sırasında iletileri koruma yeteneğidir. Gizlilik bir iletinin incelenmeden korunmasını, bütünlüğünden bir iletinin değiştirilmesini koruduğunu ve kimlik doğrulamasının, iletinin göndereni veya alıcısı hakkında bilgi verir.<br /><br /> WCF, hem ileti düzeyinde hem de Aktarım düzeyinde aktarım güvenliğini destekler. İleti güvenliği, aktarım, arabelleğe alınmış bir aktarım modunu destekliyorsa bir aktarımla birlikte oluşturur. Taşıma güvenliği için destek, seçilen aktarıma göre farklılık gösterir. HTTP, TCP ve adlandırılmış kanal aktarımları, aktarım güvenliği için desteğiyle makul bir eşliği vardır.|Tümü|  
 |Aktarım hızı|Verimlilik, belirli bir süre içinde iletilebilecek ve işlenebileceğiniz veri miktarını ölçer. Gecikme süresi gibi, seçilen aktarım hizmeti işlemleri için aktarım hızını etkileyebilir. Bir taşımanın aktarım hızını en üst düzeye çıkarmak, içerik iletme yükünün yanı sıra ileti alışverişinin tamamlanması için beklerken geçen süreyi en aza indirmenizi gerektirir. Hem TCP hem de adlandırılmış kanal aktarımları, ileti gövdesine çok fazla yük ekler ve ileti yanıtlarının beklenme şeklini azaltan yerel bir çift yönlü şekli destekler.|TCP, adlandırılmış kanal|  
 |Araçlar|Tooling, geliştirme, tanılama, barındırma ve diğer etkinlikler için bir protokol için üçüncü taraf uygulama desteğini temsil eder. HTTP protokolüyle birlikte çalışmak için araç ve yazılım geliştirme, özellikle büyük bir yatırım anlamına gelir.|HTTP|  
@@ -72,6 +72,6 @@ Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 - <xref:System.ServiceModel.NetNamedPipeBinding>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
-- [Bağlamalar](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Kullanıcı Tanımlı Bağlamalar Oluşturma](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+- [Bağlamalar](bindings.md)
+- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)
+- [Kullanıcı Tanımlı Bağlamalar Oluşturma](../extending/creating-user-defined-bindings.md)

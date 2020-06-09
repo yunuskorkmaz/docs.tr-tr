@@ -8,44 +8,44 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 6f44ae5e3615df7f529a25f4097ef042feba544d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 9423922753efee7aac32e430f97307c715e43464
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425432"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586929"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Nasıl yapılır: İmza Onayı Ayarlama
 
-*İmza onayı* alınan yanıtı gönderen kişinin orijinal iletiye yanıt olarak oluşturulan emin olmak bir ileti Başlatıcı bir mekanizmadır. İmza onayı WS-güvenlik 1.1 belirtiminde tanımlanır. Bir uç nokta WS-güvenlik 1.0 destekliyorsa, imza onayını kullanamazsınız.
+*İmza onaylama* bir ileti başlatıcısının, gönderenin özgün iletisine yanıt olarak alınan bir yanıtın oluşturulduğundan emin olmak için bir mekanizmadır. İmza onayı WS-Security 1,1 belirtiminde tanımlanmıştır. Bir uç nokta WS-Security 1,0 ' i destekliyorsa, imza onayını kullanamazsınız.
 
-Nasıl imza onayı kullanarak etkinleştirmek aşağıdaki yordamları belirtin bir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Yordamın aynısını ile kullanabileceğiniz bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Bulunan temel adımları sırasında yordamı yapılar [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).
+Aşağıdaki yordamlar, kullanarak imza onayını etkinleştirmeyi belirtir <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> . İle aynı yordamı kullanabilirsiniz <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> . Yordamı, [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md)bölümünde bulunan temel adımların üzerine oluşturulur.
 
-### <a name="to-enable-signature-confirmation-in-code"></a>İmza onayı kodda etkinleştirmek için
+### <a name="to-enable-signature-confirmation-in-code"></a>Kodda imza onayını etkinleştirmek için
 
 1. Öğesinin bir örneğini oluşturur <xref:System.ServiceModel.Channels.BindingElementCollection> sınıfı.
 
-2. Bir örneğini oluşturmak <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfı.
+2. Sınıfının bir örneğini oluşturun <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> .
 
-3. Ayarlama <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> için `true`.
+3. Öğesini <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> olarak ayarlayın `true` .
 
-4. Güvenlik öğesinin bağlama koleksiyona ekleyin.
+4. Bağlama koleksiyonuna güvenlik öğesi ekleyin.
 
-5. Belirtilen özel bir bağlama oluşturma [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).
+5. [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md)bölümünde belirtildiği gibi özel bir bağlama oluşturun.
 
-### <a name="to-enable-signature-confirmation-in-configuration"></a>İmza onayı yapılandırması etkinleştirmek için
+### <a name="to-enable-signature-confirmation-in-configuration"></a>Yapılandırmada imza onayını etkinleştirmek için
 
-1. Ekleme bir `<customBinding>` öğesine `<bindings>` yapılandırma dosyasının.
+1. `<customBinding>` `<bindings>` Yapılandırma dosyasının bölümüne bir öğesi ekleyin.
 
-2. Ekleme bir `<binding>` öğesi ve küme adı özniteliği için uygun bir değer.
+2. Bir `<binding>` öğesi ekleyin ve Name özniteliğini uygun bir değere ayarlayın.
 
-3. Uygun bir kodlama öğesi ekleyin. Aşağıdaki örnek ekler bir `<TextMessageEncoding>` öğesi.
+3. Uygun bir kodlama öğesi ekleyin. Aşağıdaki örnek bir öğesi ekler `<TextMessageEncoding>` .
 
-4. Ekleme bir `<security>` alt öğesi ve kümesi `requireSignatureConfirmation` özniteliğini `true`.
+4. Bir `<security>` alt öğesi ekleyin ve `requireSignatureConfirmation` özniteliğini olarak ayarlayın `true` .
 
-5. İsteğe bağlı. Önyükleme sırasında imza Onayı etkinleştirmek için eklemeniz bir [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) alt öğesi ve kümesi `requireSignatureConfirmation` özniteliğini `true`.
+5. İsteğe bağlı. Önyükleme sırasında imza onayını etkinleştirmek için bir [\<secureConversationBootstrap>](../../configure-apps/file-schema/wcf/secureconversationbootstrap.md) alt öğe ekleyin ve `requireSignatureConfirmation` özniteliğini olarak ayarlayın `true` .
 
-6. Uygun aktarma öğesini ekleyin. Aşağıdaki örnek ekler bir [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):
+6. Uygun bir taşıma öğesi ekleyin. Aşağıdaki örnek şunu ekler [\<httpTransport>](../../configure-apps/file-schema/wcf/httptransport.md) :
 
     ```xml
     <bindings>
@@ -63,7 +63,7 @@ Nasıl imza onayı kullanarak etkinleştirmek aşağıdaki yordamları belirtin 
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneği oluşturur <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ve ayarlar <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> özelliğini `true`. Bu örnekte kullanmaz Not `<secureConversationBootstrap>` yukarıdaki örnekte gösterildiği gibi. Bu örnek, bir Windows (Kerberos protokolü) belirteci kullanıldığında imza onayı gösterir. Bu durumda, imza istemcinin hizmetinden alınan tüm yanıtları döndürülür ve istemci tarafından onaylanır.
+Aşağıdaki kod öğesinin bir örneğini oluşturur <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ve <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> özelliğini olarak ayarlar `true` . Bu örneğin, `<secureConversationBootstrap>` Önceki örnekte gösterilen öğesini kullanmadığını unutmayın. Bu örnekte, bir Windows (Kerberos protokolü) belirteci kullanılırken imza onayı gösterilmektedir. Bu durumda, istemcinin imzası hizmetten gelen tüm yanıtlardan döndürülür ve istemci tarafından onaylanır.
 
 [!code-csharp[c_SignatureConfirmation#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_signatureconfirmation/cs/source.cs#1)]
 [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]
@@ -73,5 +73,5 @@ Aşağıdaki kod örneği oluşturur <xref:System.ServiceModel.Channels.Symmetri
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
-- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
