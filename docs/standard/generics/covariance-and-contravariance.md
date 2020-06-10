@@ -1,5 +1,6 @@
 ---
 title: Genel Türlerde Kovaryans ve Kontravaryans
+description: Daha fazla türetilmiş bir tür kullanmanıza olanak tanıyan Kovaryans hakkında bilgi edinin ve .NET genel türleri 'nde daha az türetilmiş bir tür kullanmanıza olanak tanıyan değişken varyans.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 12de1554bb6e33b69d0d2bba24001e7e4c2d8a65
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287564"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663050"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Genel Türlerde Kovaryans ve Kontravaryans
 Kovaryans ve değişken Varyans, başlangıçta belirtilenden daha fazla türetilmiş bir tür (daha fazla özel) veya daha az türetilmiş bir tür (daha az özel) kullanma olanağına işaret eden terimlerdir. Genel tür parametreleri, genel türleri atamakta ve kullanmakta daha fazla esneklik sağlamak için birlikte değişme ve değişken karşıtlığını destekler. Bir tür sisteminden söz ederken, birlikte değişme, değişken karşıtlığı ve değişmezlik terimlerinin tanımları aşağıdaki gibidir. Örneklerde adlı bir temel sınıf `Base` ve adlı türetilmiş bir sınıf varsayılır `Derived` .  
@@ -126,7 +127,7 @@ Kovaryans ve değişken Varyans, başlangıçta belirtilenden daha fazla türeti
  .NET Framework 4 ' ten başlayarak, Visual Basic ve C# ' nin genel tür parametrelerini birlikte değişken veya değişken karşıtı olarak işaretlemenizi sağlayan anahtar kelimeleridir.  
   
 > [!NOTE]
-> .NET Framework sürüm 2.0 ile başlayarak, genel dil çalışma zamanı, genel tür parametrelerinde değişken açıklamalarını destekler. .NET Framework 4 ' ten önce, bu ek açıklamaları içeren genel bir sınıf tanımlamanın tek yolu, sınıfı [Ilasm. exe (Il Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) ile derleyerek veya dinamik bir derlemede yayarak Microsoft ara dili 'NI (MSIL) kullanmaktır.  
+> .NET Framework sürüm 2.0 ile başlayarak, genel dil çalışma zamanı, genel tür parametrelerinde değişken açıklamalarını destekler. .NET Framework 4 ' ten önce, bu ek açıklamaları içeren genel bir sınıf tanımlamanın tek yolu, sınıfı [Ilasm.exe (Il Assembler)](../../framework/tools/ilasm-exe-il-assembler.md) ile derleyerek veya dinamik bir derlemede yayarak Microsoft ara dili 'NI (MSIL) kullanmaktır.  
   
  Birlikte değişken tür parametresi, `out` MSIL derleyicisi için Visual Basic anahtar sözcüğüyle `Out` (anahtar sözcüğüyle `+` ) işaretlenir. [MSIL Assembler](../../framework/tools/ilasm-exe-il-assembler.md) Birlikte değişken türünde bir parametreyi, bir arabirime ait olan bir yöntemin dönüş değeri olarak veya bir temsilcinin dönüş türü olarak kullanabilirsiniz. Birlikte değişken türünde bir parametreyi, arabirim yöntemleri için genel türde bir kısıtlayıcı olarak kullanamazsınız.  
   

@@ -1,123 +1,125 @@
 ---
 title: Geleneksel web uygulamaları ile tek sayfa uygulamaları arasında seçim yapma
-description: Web uygulamaları yaparken geleneksel web uygulamaları ve tek sayfalı uygulamalar (SPA) arasında nasıl seçim yapabileceğinizi öğrenin.
+description: Web uygulamaları oluştururken geleneksel web uygulamaları ve tek sayfalı uygulamalar (maça 'Lar) arasından seçim yapmayı öğrenin.
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450114"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662712"
 ---
-# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web Uygulamaları ve Tek Sayfauygulamaları (SPA' lar) arasında seçim yapın
+# <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web Apps ve tek sayfalı uygulamalar (maça 'Lar) arasında seçim yapın
 
-> "Atwood Yasası: JavaScript yazılabilir herhangi bir uygulama, sonunda JavaScript yazılacaktır."  
+> "Atwood 'ın yasaları: JavaScript 'te yazılabilen tüm uygulamalar, sonunda JavaScript 'e yazılır."  
 > _\-Jeff Atwood_
 
-Bugün web uygulamaları oluşturmak için iki genel yaklaşım vardır: sunucuda uygulama mantığının çoğunu gerçekleştiren geleneksel web uygulamaları ve bir web tarayıcısında kullanıcı arabirimi mantığının çoğunu gerçekleştiren tek sayfalı uygulamalar (SPA'lar), öncelikle web API'leri kullanarak web sunucusu ile iletişim. Bir hibrid yaklaşım da mümkündür, daha büyük bir geleneksel web uygulaması içinde bir veya daha fazla zengin SPA benzeri alt uygulamalar barındırmak en basit olmak.
+Günümüzde web uygulamaları oluşturmaya yönelik iki genel yaklaşım vardır: sunucuda uygulama mantığının çoğunu gerçekleştiren geleneksel web uygulamaları ve bir Web tarayıcısında Kullanıcı arabirimi mantığının çoğunu gerçekleştiren tek sayfalı uygulamalar (maça 'Lar), Web API 'Lerini kullanarak Web sunucusuyla iletişim kurmaya yöneliktir. Karma yaklaşım da mümkündür, en basit, daha büyük bir geleneksel Web uygulaması içinde bir veya daha fazla zengin SPA benzeri alt pplicAtions barındırmakta.
 
-Şu anda geleneksel web uygulamalarını kullanın:
+Şu durumlarda geleneksel web uygulamaları kullanın:
 
-- Uygulamanızın istemci tarafı gereksinimleri basit veya salt okunur.
+- Uygulamanızın istemci tarafı gereksinimleri basit veya hatta salt okunurdur.
 
 - Uygulamanızın JavaScript desteği olmayan tarayıcılarda çalışması gerekir.
 
-- Ekibiniz JavaScript veya TypeScript geliştirme tekniklerini bilmiyor.
+- Takımınız JavaScript veya TypeScript geliştirme tekniklerini tanımıyor.
 
-Spa'yı şu zaman kullanın:
+Şu durumlarda SPA kullanın:
 
-- Uygulamanız birçok özelliğe sahip zengin bir kullanıcı arabirimini ortaya çıkarmalıdır.
+- Uygulamanız çok sayıda özelliği olan zengin bir kullanıcı arabirimi kullanıma sunmalıdır.
 
-- Ekibiniz JavaScript ve/veya TypeScript geliştirmesini biliyor.
+- Takımınız JavaScript ve/veya TypeScript geliştirmeyi biliyor.
 
-- Uygulamanız, diğer (dahili veya genel) istemciler için zaten bir API sunmalıdır.
+- Uygulamanız zaten diğer (iç veya genel) istemciler için bir API 'YI kullanıma sunmalıdır.
 
-Ayrıca, SPA çerçeveleri daha fazla mimari ve güvenlik uzmanlığı gerektirir. Onlar geleneksel web uygulamaları daha sık güncellemeleri ve yeni çerçeveler nedeniyle daha fazla karmaşa deneyim. Otomatik oluşturma ve dağıtım süreçlerini yapılandırmak ve kapsayıcılar gibi dağıtım seçeneklerini kullanmak, SPA uygulamalarında geleneksel web uygulamalarına göre daha zor olabilir.
+Ayrıca, SPA çerçeveleri daha fazla mimari ve güvenlik uzmanlığı gerektirir. Geleneksel Web uygulamalarından daha sık güncelleştirmeler ve yeni çerçeveler nedeniyle daha fazla karmaşıklık yaşar. Otomatik derleme ve dağıtım süreçlerini yapılandırmak ve kapsayıcılar gibi dağıtım seçeneklerinin kullanılması geleneksel Web uygulamalarından daha fazla SPA uygulamalarıyla daha zor olabilir.
 
-SPA yaklaşımı ile kullanıcı deneyiminde yapılan iyileştirmeler bu hususlara göre tartılmalıdır.
+SPA yaklaşımı tarafından mümkün kılınan Kullanıcı deneyimindeki iyileştirmeler, bu noktalara karşı Ücretlendirilebilir.
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 blazor denilen zengin, interaktif ve composable UI oluşturmak için yeni bir model tanıttı. Blazor sunucu tarafı geliştiricilerin sunucuda Razor ile Kullanıcı Arabirimi oluşturmasına ve bu kodun tarayıcıya teslim edilmesine ve [WebAssembly'i](https://webassembly.org/)kullanarak istemci tarafından yürütülmesine olanak tanır. Blazor sunucu tarafı core 3.0 veya daha sonra ASP.NET ile artık kullanılabilir. Blazor istemci tarafı 2020 yılında satışa sunulmalıdır.
+ASP.NET Core 3,0, Blazor adlı zengin, etkileşimli ve birleştirilebilir Kullanıcı arabirimi oluşturmak için yeni bir model sunar. Blazor sunucu tarafı, geliştiricilerin sunucuda C# ve Razor ile Kullanıcı arabirimi oluşturmalarına ve Kullanıcı arabiriminin kalıcı bir SignalR bağlantısı kullanarak gerçek zamanlı olarak tarayıcıya bağlanmasını sağlar.
 
-Blazor, tamamen sunucu tarafından işlenmiş bir web uygulaması mı yoksa SPA mı oluşturulmasını değerlendirirken göz önünde bulundurması gereken yeni, üçüncü bir seçenek sunar. Önemli bir JavaScript geliştirmesi için gerek kalmadan Blazor kullanarak zengin, SPA benzeri istemci tarafı davranışları oluşturabilirsiniz. Blazor uygulamaları veri istemek veya sunucu tarafı işlemleri gerçekleştirmek için API'leri arayabilir.
+Blazor WebAssembly Blazor uygulamaları için başka bir seçenek sunarak, bu uygulamaların WebAssembly kullanarak tarayıcıda çalışmasına izin verir. WebAssembly üzerinde çalışan gerçek .NET olduğundan, uygulamanızın sunucu tarafı bölümlerinden kod ve kitaplıkları yeniden kullanabilirsiniz.
 
-Web uygulamanızı Blazor ile oluşturmayı düşünün:
+Blazor, tamamen sunucu tarafından işlenmiş bir Web uygulaması veya SPA oluşturmayı değerlendirirken göz önünde bulundurmanız gereken yeni, üçüncü bir seçenek sağlar. Önemli bir JavaScript geliştirmeye gerek duymadan Blazor kullanarak zengin, SPA benzeri istemci tarafı davranışları oluşturabilirsiniz. Blazor uygulamaları, veri istemek veya sunucu tarafı işlemleri gerçekleştirmek için API 'Leri çağırabilir.
 
-- Uygulamanız zengin bir kullanıcı arabirimini ortaya çıkarmalıdır
+Şu durumlarda Web uygulamanızı Blazor ile oluşturmayı düşünün:
 
-- Ekibiniz .NET geliştirme ile JavaScript veya TypeScript geliştirmeden daha rahattır
+- Uygulamanız, zengin bir kullanıcı arabirimini kullanıma sunmalıdır
 
-Blazor hakkında daha fazla bilgi için bkz: [Blazor ile başlayın.](https://blazor.net/docs/get-started.html)
+- Takımınız JavaScript veya TypeScript geliştirmeden .NET geliştirme konusunda daha rahat
 
-## <a name="when-to-choose-traditional-web-apps"></a>Geleneksel web uygulamaları ne zaman seçilir?
+Blazor hakkında daha fazla bilgi için bkz. [Blazor ile çalışmaya başlama](https://blazor.net/docs/get-started.html).
 
-Aşağıda geleneksel web uygulamaları seçmek için daha önce belirtilen nedenleri daha ayrıntılı bir açıklamadır.
+## <a name="when-to-choose-traditional-web-apps"></a>Geleneksel Web uygulamalarını seçme
 
-**Uygulamanız basit, muhtemelen salt okunur, istemci tarafı gereksinimlerine sahiptir**
+Aşağıda, geleneksel web uygulamaları çekmeye yönelik daha önce belirtilen nedenlerden daha ayrıntılı bir açıklama verilmiştir.
 
-Birçok web uygulamaları öncelikle kullanıcılarının büyük çoğunluğu tarafından bir okuma sadece moda tüketilir. Salt okunur (veya çoğunlukla okuma) uygulamaları, büyük bir devleti koruyan ve manipüle eden uygulamalardan çok daha basit olma eğilimindedir. Örneğin, arama motoru, metin kutusu olan tek bir giriş noktasından ve arama sonuçlarını görüntülemek için ikinci bir sayfadan oluşabilir. Anonim kullanıcılar kolayca istekte bulunabilir ve istemci tarafı mantığına çok az ihtiyaç vardır. Aynı şekilde, bir blog veya içerik yönetim sisteminin genel kullanıma yönelik uygulaması genellikle istemci tarafı olmayan içeriklerden oluşur. Bu tür uygulamalar, web sunucusunda mantık gerçekleştiren ve HTML'nin tarayıcıda görüntülenmesini sağlayan geleneksel sunucu tabanlı web uygulamaları olarak kolayca oluşturulur. Sitenin her benzersiz sayfasının arama motorları tarafından yer işaretli ve dizine eklenebilir kendi URL'si olması (varsayılan olarak, bunu uygulamanın ayrı bir özelliği olarak eklemek zorunda kalmadan) bu tür senaryolarda da açık bir avantajdır.
+**Uygulamanızda basit, muhtemelen salt okunurdur, istemci tarafı gereksinimleri vardır**
+
+Birçok Web uygulaması öncelikle kullanıcılarının büyük bir tarafında salt okunurdur. Salt okuma (veya salt okuma) uygulamaları, büyük bir durum yaşlanmakla ve bunlarla çok daha basit olmaya eğilimlidir. Örneğin, bir arama altyapısı, arama sonuçlarını görüntülemek için bir TextBox ve ikinci bir sayfa içeren tek bir giriş noktası içerebilir. Anonim kullanıcılar kolayca istek yapabilir ve istemci tarafı mantığı için çok az gereksinim vardır. Benzer şekilde, bir blog veya içerik yönetim sisteminin herkese açık uygulaması genellikle çok sayıda istemci tarafı davranışına sahip içerikten oluşur. Bu tür uygulamalar, Web sunucusunda Logic ve tarayıcıda görüntülenmek üzere işleme HTML 'i gerçekleştiren geleneksel sunucu tabanlı Web uygulamaları olarak kolayca oluşturulmuştur. Sitenin her benzersiz sayfasının, arama motorları tarafından yer işareti eklenen ve dizini oluşturulmuş bir URL 'SI vardır (varsayılan olarak, bunu uygulamanın ayrı bir özelliği olarak eklemek zorunda kalmadan), bu senaryolarda de net bir avantajdır.
 
 **Uygulamanızın JavaScript desteği olmayan tarayıcılarda çalışması gerekiyor**
 
-Sınırlı veya hiç JavaScript desteği olmayan tarayıcılarda çalışması gereken Web uygulamaları geleneksel web uygulaması iş akışları kullanılarak yazılmalıdır (veya en azından bu tür davranışlara geri dönebilmelidir). SCA'ların çalışabilmesi için istemci tarafındaki JavaScript gerekir; mevcut değilse, SPA'lar iyi bir seçim değildir.
+Sınırlı veya olmayan bir JavaScript desteği olan tarayıcılarda çalışması gereken Web uygulamaları, geleneksel Web uygulaması iş akışları kullanılarak yazılmalıdır (veya en azından bu davranışa geri dönebilmelidir). Maça işlevinin çalışması için istemci tarafı JavaScript gerekir; kullanılabilir değilse, maça iyi bir seçenek değildir.
 
-**Ekibiniz JavaScript veya TypeScript geliştirme tekniklerine aşina değil**
+**Takımınız JavaScript veya TypeScript geliştirme tekniklerini tanımıyor**
 
-Ekibiniz JavaScript veya TypeScript'e aşina değilse, ancak sunucu tarafındaki web uygulaması geliştirmesini biliyorsa, büyük olasılıkla geleneksel bir web uygulamasını SPA'dan daha hızlı bir şekilde sunabilirler. SSPA'ları programlamayı öğrenmek bir hedef olmadığı veya SPA tarafından sağlanan kullanıcı deneyimi gerekli olmadığı sürece, geleneksel web uygulamaları bunları oluşturmaya zaten aşina olan ekipler için daha üretken bir seçimdir.
+Takımınız JavaScript veya TypeScript 'i tanımıyor, ancak sunucu tarafı Web uygulaması geliştirmeyi öğreniyor, büyük olasılıkla geleneksel bir Web uygulamasını bir SPA 'dan daha hızlı bir şekilde sunabilir. Program, maça 'Ları öğrenmeye yönelik bir amaç veya bir SPA tarafından sağlanan kullanıcı deneyimi gerekli değilse, geleneksel Web Apps, bunları oluşturmaya alışkın olan takımlar için daha üretken bir seçimdir.
 
-## <a name="when-to-choose-spas"></a>SP'ler ne zaman seçilir?
+## <a name="when-to-choose-spas"></a>Maça ne zaman seçlik
 
-Aşağıda, web uygulamanız için tek sayfalı uygulamalar geliştirme stilinin ne zaman seçileceklerine ilişkin daha ayrıntılı bir açıklama yer aınızverilmiştir.
+Aşağıda, Web uygulamanız için tek sayfalı uygulamalar için geliştirme stili seçme konusunda daha ayrıntılı bir açıklama verilmiştir.
 
-**Uygulamanız birçok özelliğe sahip zengin bir kullanıcı arabirimini ortaya çıkarmalıdır**
+**Uygulamanız çok sayıda özelliği olan zengin bir kullanıcı arabirimi kullanıma sunmalıdır**
 
-SP'ler, kullanıcılar işlem yaptıklarında veya uygulamanın alanları arasında gezinirken sayfanın yeniden yüklenmesi gerektirmeyen zengin istemci tarafı işlevselliğini destekleyebilir. SCA'lar arka planda veri getirerek daha hızlı yüklenebilir ve tam sayfa yeniden yüklemeleri nadir olduğundan tek tek kullanıcı eylemleri daha duyarlıdır. SCA'lar, kullanıcının form göndermek için bir düğmeyi tıklatması gerekmeden kısmen tamamlanmış formları veya belgeleri kaydederek artımlı güncelleştirmeleri destekleyebilir. SCA'lar, sürükle ve bırak gibi zengin istemci tarafı davranışlarını geleneksel uygulamalardan çok daha kolay destekleyebilir. SBA'lar bağlantısı kesilen bir modda çalışacak şekilde tasarlanabilir ve bağlantı yeniden kurulduktan sonra sunucuya yeniden eşitlenen istemci tarafındaki bir modelde güncelleştirmeler yapılabilir. Uygulamanızın gereksinimleri, tipik HTML formlarının sunduklarının ötesine giden zengin işlevselliği içeriyorsa, SPA tarzı bir uygulama seçin.
+Maça, kullanıcılar eylem gerçekleştirirken veya uygulamanın bölgeleri arasında gezinirken sayfayı yeniden yüklemeyi gerektirmeyen zengin istemci tarafı işlevleri destekleyebilir. Maça daha hızlı yükleyebilir, arka planda veri alabilir ve tam sayfa yeniden yükleme nadir olduğundan tek tek kullanıcı eylemleri daha fazla yanıt verir. Maça, kullanıcının form göndermek için bir düğmeye tıklamasına gerek kalmadan, kısmen tamamlanmış formları veya belgeleri kaydederek Artımlı güncelleştirmeleri destekleyebilir. Maça, sürükle ve bırak gibi zengin istemci tarafı davranışlarını, geleneksel uygulamalardan çok daha kolay bir şekilde destekleyebilir. Maça bağlantısı kesik modda çalışacak şekilde tasarlanabilir ve bir bağlantı yeniden kurulduktan sonra sonunda sunucuya geri eşitlenen bir istemci tarafı modelinde güncelleştirmeler yapılır. Uygulamanızın gereksinimleri, tipik HTML formlarının sunduğu özellikleri kapsayan zengin işlevselliği içeriyorsa, SPA stili bir uygulama seçin.
 
-Sık sık, SP'lerin geçerli işlemi yansıtan adres çubuğunda anlamlı bir URL görüntülemek (ve kullanıcıların bu URL'ye geri dönmek için yer imi veya derin bağlantı sağlamasına izin vermek) gibi geleneksel web uygulamalarında yerleşik özellikleri uygulaması gerekir. SCA'lar ayrıca kullanıcıların tarayıcının ileri ve geri düğmelerini sürpriz yapmayacak sonuçlarla kullanmasına izin vermelidir.
+Genellikle, maça 'ın geçerli işlemi yansıtan adres çubuğunda anlamlı bir URL görüntüleme (ve bu URL 'ye dönmek için kullanıcıların yer işaretine veya derin bağlantı kurmasına izin verme gibi) geleneksel Web uygulamalarına yerleşik özellikler uygulaması gerekir. Ayrıca, kullanıcıların tarayıcı geri ve İleri düğmelerini Istenmeyen sonuçlarla kullanmasına izin vermeleri gerekir.
 
-**Ekibiniz JavaScript ve/veya TypeScript geliştirmesini biliyor**
+**Takımınız JavaScript ve/veya TypeScript geliştirmeyi biliyor**
 
-SP'ler yazmak, JavaScript ve/veya TypeScript ve istemci tarafı programlama teknikleri ve kitaplıklarına aşinalık gerektirir. Ekibiniz Açısal gibi bir SPA çerçevesi kullanarak modern JavaScript yazma konusunda yetkili olmalıdır.
+Maça yazmak için JavaScript ve/veya TypeScript ile istemci tarafı programlama teknikleri ve kitaplıkları hakkında daha fazla ihtiyaç vardır. Takımınız, angular gibi bir SPA çerçevesi kullanarak modern JavaScript yazma konusunda uzmanlı olmalıdır.
 
-> ### <a name="references--spa-frameworks"></a>Referanslar – SPA Çerçeveleri
+> ### <a name="references--spa-frameworks"></a>Başvurular – SPA çerçeveleri
 >
 > - **Angular**  
 >   <https://angular.io>
-> - **Tepki**
+> - **Tıkla**
 >   <https://reactjs.org/>
-> - **JavaScript Çerçevelerinin Karşılaştırılması**  
+> - **JavaScript çerçeveleri karşılaştırması**  
 >   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
-**Başvurunuz, diğer (dahili veya genel) istemciler için zaten bir API ortaya çıkarmalıdır**
+**Uygulamanız zaten diğer (iç veya genel) istemciler için bir API 'YI kullanıma sunmalıdır**
 
-Bir web API'sini zaten diğer istemciler tarafından kullanılmak üzere destekliyorsanız, bu API'lerden yararlanan bir SPA uygulaması oluşturmak için sunucu tarafındaki mantığı çoğaltmak yerine daha az çaba gerektirebilir. SP'ler, kullanıcılar uygulamayla etkileşimde bulununarak verileri sorgulamak ve güncellemek için web API'lerini kapsamlı bir şekilde kullanır.
+Web API 'sini zaten başka istemciler tarafından kullanılmak üzere destekliyorsanız, sunucu tarafı formundaki mantığı yeniden oluşturmak yerine bu API 'lerden yararlanan bir SPA uygulamasının oluşturulması daha az çaba gerektirebilir. Maça, kullanıcılar uygulamayla etkileşime geçerek verileri sorgulamak ve güncelleştirmek için Web API 'lerinin kapsamlı bir şekilde kullanılmasını sağlar.
 
-## <a name="when-to-choose-blazor"></a>Blazor ne zaman seçilir?
+## <a name="when-to-choose-blazor"></a>Ne zaman Blazor seçin
 
-Aşağıda web uygulamanız için Blazor'u ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama yer aınızvededi.
+Aşağıda, Web uygulamanız için Blazor ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama verilmiştir.
 
-**Uygulamanız zengin bir kullanıcı arabirimini ortaya çıkarmalıdır**
+**Uygulamanız, zengin bir kullanıcı arabirimini kullanıma sunmalıdır**
 
-JavaScript tabanlı SCA'lar gibi Blazor uygulamaları da sayfa yeniden yüklemesi olmadan zengin istemci davranışını destekleyebilir. Bu uygulamalar kullanıcılara daha duyarlıdır ve belirli bir kullanıcı etkileşimine yanıt vermek için yalnızca gereken verileri (veya HTML)'yi getirir. Düzgün tasarlanmış, sunucu tarafı Blazor uygulamaları bu özellik desteklendikten sonra en az değişiklik ile istemci tarafı Blazor uygulamaları olarak çalışacak şekilde yapılandırılabilir.
+JavaScript tabanlı maça 'Lar gibi Blazor uygulamalar, sayfa yeniden yüklemeden zengin istemci davranışını destekleyebilir. Bu uygulamalar kullanıcılara daha hızlı yanıt verir, yalnızca belirli bir kullanıcı etkileşimine yanıt vermek için gereken verileri (veya HTML) getirme. Düzgün şekilde tasarlanan sunucu tarafı Blazor uygulamaları, bu özellik desteklendiğinde en az değişiklikle istemci tarafı Blazor uygulamaları olarak çalışacak şekilde yapılandırılabilir.
 
-**Ekibiniz .NET geliştirme ile JavaScript veya TypeScript geliştirmeden daha rahattır**
+**Takımınız JavaScript veya TypeScript geliştirmeden .NET geliştirme konusunda daha rahat**
 
-Birçok geliştirici .NET ve Razor ile JavaScript veya TypeScript gibi istemci tarafındaki dillerden daha üretkendir. Uygulamanın sunucu tarafı zaten .NET ile geliştirilmekte olduğundan, Blazor'un kullanılması takımdaki her .NET geliştiricisinin uygulamanın ön ucunun davranışını anlamasını ve oluşturmasını sağlar.
+Birçok geliştirici, JavaScript veya TypeScript gibi istemci tarafı dillerle .NET ve Razor ile daha üretken değildir. Uygulamanın sunucu tarafı zaten .NET ile geliştirildiği için, Blazor kullanımı, ekibin her bir .NET geliştiricisinin uygulamanın ön ucundaki davranışı anlayabilmesini ve potansiyel olarak oluşturmasını sağlar.
 
 ## <a name="decision-table"></a>Karar tablosu
 
-Aşağıdaki karar tablosu, geleneksel bir web uygulaması, SPA veya Blazor uygulaması arasında seçim yaparken göz önünde bulundurulması gereken temel faktörlerden bazılarını özetlemektedir.
+Aşağıdaki karar tablosu, geleneksel bir Web uygulaması, SPA veya Blazor uygulaması arasında seçim yaparken göz önünde bulundurmanız gereken bazı temel faktörleri özetler.
 
-| **Faktörü**                                           | **Geleneksel Web Uygulaması** | **Tek Sayfa Uygulaması** | **Blazor Uygulaması**  |
+| **Çarpan**                                           | **Geleneksel Web uygulaması** | **Tek sayfalı uygulama** | **Blazor uygulaması**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
-| JavaScript/TypeScript ile Gerekli Takım Aşinalığı | **En az**             | **Gerekli**                | **En az**     |
-| Komut Dosyası Olmadan Tarayıcıları Destekleyin                   | **Desteklenen**           | **Desteklenmiyor**           | **Desteklenen**   |
-| En Az İstemci Tarafı Uygulama Davranışı             | **Uygun**         | **Overkill**                | **Uygun**      |
-| Zengin, Karmaşık Kullanıcı Arabirimi Gereksinimleri            | **Sınırlı**             | **Uygun**             | **Uygun** |
+| JavaScript/TypeScript ile gerekli takım hakkında benzerlik | **En az**             | **Gerekli**                | **En az**     |
+| Betik olmadan destek tarayıcıları                   | **Destek**           | **Desteklenmiyor**           | **Destek**   |
+| En az Istemci tarafı uygulama davranışı             | **İyi uygun**         | **Gereğinden fazla**                | **Uygun**      |
+| Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Sınırlı**             | **İyi uygun**             | **İyi uygun** |
 
 >[!div class="step-by-step"]
->[Önceki](modern-web-applications-characteristics.md)
->[Sonraki](architectural-principles.md)
+>[Önceki](modern-web-applications-characteristics.md) 
+> [Sonraki](architectural-principles.md)

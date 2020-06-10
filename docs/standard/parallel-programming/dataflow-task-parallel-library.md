@@ -1,5 +1,6 @@
 ---
 title: Veri Akışı (Görev Paralel Kitaplığı)
+description: Eşzamanlılık özellikli uygulamaların sağlamlığını artırmak için görev paralel kitaplığı 'nda (TPL) veri akışı bileşenlerini nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-ms.openlocfilehash: e1d4dc596f57a4c75c11806f95099ee5593c6c03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2c7bbc9bf935159ab66bd2a61a60b9484e67018a
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84285540"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662556"
 ---
 # <a name="dataflow-task-parallel-library"></a>Veri Akışı (Görev Paralel Kitaplığı)
 Görev paralel kitaplığı (TPL), eşzamanlılık özellikli uygulamaların sağlamlığını artırmaya yardımcı olmak için veri akışı bileşenleri sağlar. Bu veri akışı bileşenleri, her toplu olarak *TPL veri akışı kitaplığı*olarak adlandırılır. Bu veri akışı modeli, büyük parçalı veri akışı ve ardışık düzen oluşturma görevleri için işlem içi ileti geçirme sağlayarak aktör temelli programlamayı teşvik eder. Veri akışı bileşenleri, TPL 'nin türler ve Zamanlama altyapısında derleyin ve zaman uyumsuz programlama için C#, Visual Basic ve F # dil desteğiyle tümleştirilir. Bu veri akışı bileşenleri, birbirleriyle zaman uyumsuz olarak iletişim kurması gereken birden fazla işleminiz varsa veya verileri elde ettikçe işlemek istiyorsanız kullanışlıdır. Örneğin, web kamerasından gelen görüntü verilerini işleyen bir uygulamayı düşünün. Veri akışı modelini kullanarak, uygulama görüntü karelerini kullanılabilir oldukça işleyebilir. Uygulama görüntü çerçevelerini iyileştirdiği gibi, örneğin, hafif düzeltme veya kırmızı göz azaltma gerçekleştirerek, veri akışı bileşenleri için bir işlem *hattı* oluşturabilirsiniz. Ardışık düzenin her aşaması, görüntüyü dönüştürmek için TPL tarafından sağlanan işlevsellik gibi daha büyük parçalı paralellik işlevlerini kullanabilir.  

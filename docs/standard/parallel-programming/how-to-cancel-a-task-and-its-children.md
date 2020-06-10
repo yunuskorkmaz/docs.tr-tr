@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme'
+description: .NET 'teki bir görevi ve alt öğelerini iptal etme örneklerine bakın. Örnekler, iptal edilebilir görev oluşturma işleminden, görevin iptal edildiğini fark eden adımları kapsar.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-ms.openlocfilehash: ca6b5f10840d935aa45cb660da86685d1c90554b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 66daf00680b65aace1ce6367761e3ed81596d33b
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290038"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662686"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme
 Bu örnekler, aşağıdaki görevlerin nasıl gerçekleştirildiğini gösterir:  

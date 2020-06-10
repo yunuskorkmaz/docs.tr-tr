@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: dizinleri ve dosyaları numaralandırma'
+description: .NET 'teki dizilere kıyasla daha iyi performans sağlayabilen, sıralanabilir Koleksiyonlar kullanarak dizinleri ve dosyaları listelemeye nasıl bilgi alabileceğinizi öğrenin.
 ms.date: 12/27/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-ms.openlocfilehash: bcb10426175c1f2cabeec6d8d4f8d2ed74e5e3b4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 276668f4a3eee89610a81b1256820770d1f72dc3
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291883"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662582"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Nasıl yapılır: dizinleri ve dosyaları numaralandırma
 Sıralanabilir koleksiyonlar, büyük dizin ve dosya koleksiyonlarıyla çalışırken dizilerden daha iyi performans sağlar. Dizinleri ve dosyaları numaralandırmak için dizin veya dosya adlarının veya bunların veya nesnelerinin sıralanabilir bir koleksiyonunu döndüren yöntemleri kullanın <xref:System.IO.DirectoryInfo> <xref:System.IO.FileInfo> <xref:System.IO.FileSystemInfo> .  

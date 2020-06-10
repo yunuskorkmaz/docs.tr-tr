@@ -1,5 +1,6 @@
 ---
-title: .NET'te özel durumları işleme ve atma
+title: .NET 'te özel durumları işleme ve atma
+description: .NET ' te özel durumları nasıl işleyeceğinizi ve oluşturacağınızı öğrenin. Özel durumlar, .NET işlemlerinin uygulamalarda başarısız olduğunu gösterir.
 ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,54 +12,54 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89d88e3128917125d1a09466ed4e230604d6978c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741349"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662777"
 ---
-# <a name="handling-and-throwing-exceptions-in-net"></a>.NET'te özel durumları işleme ve atma
+# <a name="handling-and-throwing-exceptions-in-net"></a>.NET 'te özel durumları işleme ve atma
 
-Uygulamalar yürütme sırasında oluşan hataları tutarlı bir şekilde işleyebilmelidir. .NET, uygulamaları tek tip bir şekilde bildirmek için bir model sağlar: .NET işlemleri özel durumlar atarak başarısızlığı gösterir.
+Uygulamalar, yürütme sırasında oluşan hataları tutarlı bir şekilde işleyebilmelidir. .NET, hataların uygulamalarda tutarlı bir şekilde bildirimde bulunmak için bir model sağlar: .NET işlemleri özel durumlar oluşturarak hatanın başarısız olduğunu gösterir.
 
 ## <a name="exceptions"></a>Özel durumlar
 
-Özel durum, yürütme programı tarafından karşılaşılan herhangi bir hata koşulu veya beklenmeyen davranıştır. Özel durumlar, kodunuzdaki bir hata dan veya (paylaşılan kitaplık gibi), kullanılamayan işletim sistemi kaynakları, çalışma zamanının karşılaştığı beklenmeyen koşullar (doğrulanamayan kod gibi) vb. olarak adlandırdığınız koddaki bir hata nedeniyle atılabilir. Uygulamanız bu koşullardan bazılarını kurtarabilir, ancak diğerlerinden kurtaramaz. Çoğu uygulama özel durumlarından kurtarabilirsiniz, ancak çoğu çalışma zamanı özel durumlarını kurtaramazsınız.
+Bir özel durum, çalıştırılan bir program tarafından karşılaşılan herhangi bir hata durumu veya beklenmedik davranıştır. Kodunuzda veya çağırdığınız kodda (örneğin, paylaşılan bir kitaplık), kullanılamayan işletim sistemi kaynaklarıyla, çalışma zamanının karşılaştığı beklenmeyen koşullar (doğrulanamayan kod gibi) veya benzeri bir hata nedeniyle özel durumlar oluşturulabilir. Uygulamanız bu koşullardan bazılarını kurtarabilir, ancak başkalarından daha fazlasını yapabilir. Çoğu uygulama özel durumundan kurtarabilseniz de, çoğu çalışma zamanı özel durumu ' nu kurtaramazsınız.
 
-.NET'te özel <xref:System.Exception?displayProperty=nameWithType> durum, sınıftan devralan bir nesnedir. Bir özel durum, bir sorunun oluştuğu bir kod alanından atılır. Özel durum, uygulama işlenine veya program sonlandırına kadar yığına aktarılır.
+.NET ' te, özel durum sınıfından devralan bir nesnedir <xref:System.Exception?displayProperty=nameWithType> . Bir sorunun oluştuğu bir kod alanından bir özel durum oluşur. Özel durum, uygulama onu işleyene veya program sonlanana kadar yığını iletilir.
 
-## <a name="exceptions-vs-traditional-error-handling-methods"></a>Özel durumlar ve geleneksel hata işleme yöntemleri
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>Özel durumlar ve geleneksel hata işleme yöntemleri karşılaştırması
 
-Geleneksel olarak, bir dilin hata işleme modeli, dilin hataları algılama ve bunlar için işleyicileri bulma benzersiz bir şekilde veya işletim sistemi tarafından sağlanan hata işleme mekanizması dayanıyordu. .NET'in özel durum işlemeyi uygulama şekli aşağıdaki avantajları sağlar:
+Geleneksel olarak, bir dilin hata işleme modeli, hataların hataları tespit etme ve işleyicileri bulma ve işletim sistemi tarafından sunulan hata işleme mekanizması üzerinde, dilin benzersiz yolunu ortadan kaldırabilir. .NET özel durum işlemeyi uygulayan yol aşağıdaki avantajları sağlar:
 
-- Özel durum atma ve işleme .NET programlama dilleri için aynı çalışır.
+- Özel durum oluşturma ve işleme, .NET programlama dilleri için aynı şekilde geçerlidir.
 
 - Özel durumları işlemek için belirli bir dil sözdizimi gerektirmez, ancak her dilin kendi sözdizimini tanımlamasına izin verir.
 
-- Özel durumlar proses ve hatta makine sınırları arasında atılabilir.
+- Özel durumlar işlem ve hatta makine sınırları arasında oluşturulabilir.
 
-- Program güvenilirliğini artırmak için bir uygulamaya özel durum işleme kodu eklenebilir.
+- Özel durum işleme kodu, program güvenilirliğini artırmak için bir uygulamaya eklenebilir.
 
-Özel durumlar, iade kodları gibi diğer hata bildirim yöntemlerine göre avantajlar sunar. Bir özel durum atılırsa ve bunu işlemezseniz, çalışma zamanı uygulamanızı sonlandırdığından, hatalar fark edilmez. Geçersiz değerler, hata iade kodunu denetlemede başarısız olan bir kod sonucunda sistem de yayılmaya devam etmez.
+Özel durumlar, dönüş kodları gibi diğer hata bildirimi yöntemlerine ilişkin avantajlar sunar. Bir özel durum oluşursa ve bu işlemi işlemezseniz, çalışma zamanı uygulamanızı sonlandırır. Geçersiz değerler, hata dönüş kodu denetimi başarısız olan kodun bir sonucu olarak sisteme yayılmaya devam eder.
 
 ## <a name="common-exceptions"></a>Sık karşılaşılan özel durumlar
 
-Aşağıdaki tabloda, bunlara neyin neden olabileceğine dair örnekleriçeren bazı yaygın özel durumlar listelenebilmektedir.
+Aşağıdaki tablo, bazı yaygın özel durumları, bunlara neden olabilecek örneklere örnek olarak listelemektedir.
 
 | Özel durum türü | Açıklama | Örnek |
 | -------------- | ----------- | ------- |
-| <xref:System.Exception> | Tüm özel durumlar için taban sınıf. | Yok (bu özel durum türetilmiş bir sınıf kullanın). |
-| <xref:System.IndexOutOfRangeException> | Yalnızca bir dizi yanlış dizieklendiğinde çalışma zamanı tarafından atılır. | Bir diziyi geçerli aralığının dışında dizidizileme: <br /> `arr[arr.Length+1]` |
-| <xref:System.NullReferenceException> | Yalnızca null nesne başvurulduğunda çalışma zamanı tarafından atılır. | `object o = null;` <br /> `o.ToString();` |
-| <xref:System.InvalidOperationException> | Geçersiz bir durumdayken yöntemlerle atılır. | Bir `Enumerator.MoveNext()` öğeyi temel koleksiyondan kaldırdıktan sonra arama. |
-| <xref:System.ArgumentException> | Tüm bağımsız değişken özel durumları için taban sınıf. | Yok (bu özel durum türetilmiş bir sınıf kullanın). |
-| <xref:System.ArgumentNullException> | Bir bağımsız değişkenin null olmasını izin vermez yöntemler tarafından atılır. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
-| <xref:System.ArgumentOutOfRangeException> | Bağımsız değişkenlerin belirli bir aralıkta olduğunu doğrulayan yöntemlertarafından atılır. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
+| <xref:System.Exception> | Tüm özel durumlar için temel sınıf. | Hiçbiri (Bu özel durumun türetilmiş bir sınıfını kullanın). |
+| <xref:System.IndexOutOfRangeException> | Çalışma zamanı tarafından yalnızca bir dizi yanlış dizin oluşturulduğunda oluşturulur. | Dizinin geçerli aralığının dışında dizin oluşturma: <br /> `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | Çalışma zamanı tarafından yalnızca null bir nesneye başvuruluyorsa oluşturulur. | `object o = null;` <br /> `o.ToString();` |
+| <xref:System.InvalidOperationException> | Geçersiz bir durumda olan yöntemler tarafından oluşturuldu. | `Enumerator.MoveNext()`Temel alınan koleksiyondan bir öğe kaldırıldıktan sonra çağrılıyor. |
+| <xref:System.ArgumentException> | Tüm bağımsız değişken özel durumları için temel sınıf. | Hiçbiri (Bu özel durumun türetilmiş bir sınıfını kullanın). |
+| <xref:System.ArgumentNullException> | Bağımsız değişkenin null olması için izin verilmeyen yöntemler tarafından oluşturuldu. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
+| <xref:System.ArgumentOutOfRangeException> | Bağımsız değişkenlerin belirli bir aralıkta olduğunu doğrulayan yöntemler tarafından oluşturulur. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Özel Durumu Sınıfı ve Özellikleri](exception-class-and-properties.md)
+- [Özel durum sınıfı ve özellikleri](exception-class-and-properties.md)
 - [Nasıl yapılır: Özel Durumları Yakalamak için Try-Catch Bloğu Kullanma](how-to-use-the-try-catch-block-to-catch-exceptions.md)
 - [Nasıl yapılır: Bir Catch Bloğunda Belirli Özel Durumları Kullanma](how-to-use-specific-exceptions-in-a-catch-block.md)
 - [Nasıl yapılır: Açıkça Özel Durumlar Oluşturma](how-to-explicitly-throw-exceptions.md)
@@ -67,4 +68,4 @@ Aşağıdaki tabloda, bunlara neyin neden olabileceğine dair örnekleriçeren b
 - [Nasıl yapılır: Finally Bloklarını Kullanma](how-to-use-finally-blocks.md)
 - [COM Birlikte Çalışması Özel Durumlarını İşleme](handling-com-interop-exceptions.md)
 - [Özel Durumlar için En İyi Yöntemler](best-practices-for-exceptions.md)
-- [Her Dev'in Çalışma ZamanındaKi İstisnalar Hakkında Bilmesi Gerekenler](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)
+- [Çalışma zamanındaki özel durumları öğrenmek için her dev gerekir](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)

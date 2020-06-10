@@ -1,17 +1,18 @@
 ---
 title: XPath Gezintisi Kullanarak Düğüm Seçme
+description: .NET 'te XML düğümleri seçme hakkında bilgi edinin. DOM bilgilerini sorgulamak için XML Path Language (XPath) gezintisini kullanmanıza izin veren Belge Nesne Modeli (DOM) yöntemlerini kullanın.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-ms.openlocfilehash: 85f3ae9ec9f3b4d0949a893dd1e59fbbda139066
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aa8b6d93e25d974a0e1b53ae8be9868f6bf64be6
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291467"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662517"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>XPath Gezintisi Kullanarak Düğüm Seçme
 XML Belge Nesne Modeli (DOM), DOM 'daki sorgu bilgilerini kullanarak XML yol dili (XPath) gezintisini kullanmanıza imkan tanıyan yöntemler içerir. XPath 'i tek, belirli bir düğüm bulmak veya bazı ölçütlerle eşleşen tüm düğümleri bulmak için kullanabilirsiniz.  
@@ -19,7 +20,7 @@ XML Belge Nesne Modeli (DOM), DOM 'daki sorgu bilgilerini kullanarak XML yol dil
 ## <a name="xpath-select-methods"></a>XPath seçme yöntemleri  
  DOM sınıfları XPath seçimi için iki yöntem sağlar: <xref:System.Xml.XmlNode.SelectSingleNode%2A> yöntemi ve <xref:System.Xml.XmlNode.SelectNodes%2A> yöntemi. <xref:System.Xml.XmlNode.SelectSingleNode%2A>Yöntemi, seçim ölçütleriyle eşleşen ilk düğümü döndürür. <xref:System.Xml.XmlNode.SelectNodes%2A>Yöntemi, <xref:System.Xml.XmlNodeList> eşleşen düğümleri içeren bir döndürür.  
   
- Aşağıdaki örnek, <xref:System.Xml.XmlNode.SelectSingleNode%2A> `book` yazarın en son adının belirtilen ölçütlere uyan ilk düğümü seçmek için yöntemini kullanır. Bu konunun sonunda belirtilen kitaplığı. xml dosyası, giriş dosyası olarak kullanılır.  
+ Aşağıdaki örnek, <xref:System.Xml.XmlNode.SelectSingleNode%2A> `book` yazarın en son adının belirtilen ölçütlere uyan ilk düğümü seçmek için yöntemini kullanır. bookstore.xml dosyası (Bu konunun sonunda verilmiştir) giriş dosyası olarak kullanılır.  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -54,7 +55,7 @@ XmlNode node = root.SelectSingleNode(
 Console.WriteLine(node.InnerXml);  
 ```  
   
- Sonraki örnekte, <xref:System.Xml.XmlNode.SelectNodes%2A> fiyatın belirtilen miktardan daha büyük olduğu tüm kitap düğümlerini seçmek için yöntemi kullanılmaktadır. Seçili listedeki her bir kitabın fiyatı, daha sonra program aracılığıyla yüzde on oranında azaltılır. Son olarak, güncelleştirilmiş dosya konsola yazılır. Bu konunun sonunda belirtilen kitaplığı. xml dosyası, giriş dosyası olarak kullanılır.  
+ Sonraki örnekte, <xref:System.Xml.XmlNode.SelectNodes%2A> fiyatın belirtilen miktardan daha büyük olduğu tüm kitap düğümlerini seçmek için yöntemi kullanılmaktadır. Seçili listedeki her bir kitabın fiyatı, daha sonra program aracılığıyla yüzde on oranında azaltılır. Son olarak, güncelleştirilmiş dosya konsola yazılır. bookstore.xml dosyası (Bu konunun sonunda verilmiştir) giriş dosyası olarak kullanılır.  
   
 ```vb  
 ' Load the document and set the root element.  
@@ -122,13 +123,13 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > Temel alınan belge değiştirildiğinde, seçimi yeniden çalıştırmanız önerilir. Değiştirilen düğüm, düğüm listesine daha önce olmadığında veya düğüm listesinden kaldırılmasına neden olacak şekilde, düğüm listesinin artık doğru olduğundan emin olmak için bir değer olarak değiştirilmiştir.  
   
 ## <a name="namespaces-in-xpath-expressions"></a>XPath Ifadelerinde ad alanları  
- XPath ifadeleri ad alanı içerebilir. Ad alanı çözümlemesi, kullanılarak desteklenir <xref:System.Xml.XmlNamespaceManager> . XPath ifadesi bir ön ek içeriyorsa, önek ve ad alanı URI çiftinin öğesine eklenmelidir <xref:System.Xml.XmlNamespaceManager> ve, <xref:System.Xml.XmlNamespaceManager> <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> veya <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> yöntemine geçirilir. Yukarıdaki kod örneklerinin, <xref:System.Xml.XmlNamespaceManager> Kitaplığı. xml belgesinin ad alanını çözümlemek için öğesini kullandığına dikkat edin.  
+ XPath ifadeleri ad alanı içerebilir. Ad alanı çözümlemesi, kullanılarak desteklenir <xref:System.Xml.XmlNamespaceManager> . XPath ifadesi bir ön ek içeriyorsa, önek ve ad alanı URI çiftinin öğesine eklenmelidir <xref:System.Xml.XmlNamespaceManager> ve, <xref:System.Xml.XmlNamespaceManager> <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> veya <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29> yöntemine geçirilir. Yukarıdaki kod örneklerinin, <xref:System.Xml.XmlNamespaceManager> bookstore.xml belgenin ad alanını çözümlemek için öğesini kullandığına dikkat edin.  
   
 > [!NOTE]
 > XPath ifadesi bir ön ek içermiyorsa, ad alanı Tekdüzen Kaynak tanımlayıcısı 'nın (URI) boş ad alanı olduğu varsayılır. XML 'niz bir varsayılan ad alanı içeriyorsa, ' a bir ön ek ve ad alanı URI 'SI eklemeniz gerekir <xref:System.Xml.XmlNamespaceManager> ; Aksi takdirde hiçbir düğüm seçilmeyecektir.  
   
 #### <a name="input-file"></a>Giriş Dosyası  
- Aşağıda, bu konudaki örneklerde bulunan giriş dosyası olarak kullanılan kitaplığı. xml dosyası verilmiştir:  
+ Aşağıda, bu konudaki örneklerde giriş dosyası olarak kullanılan bookstore.xml dosyası verilmiştir:  
   
 ```xml  
 <?xml version='1.0'?>  

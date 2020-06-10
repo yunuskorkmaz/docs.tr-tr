@@ -1,5 +1,6 @@
 ---
 title: PLINQ'e Giriş
+description: .NET 'te PLıNQ kullanarak sorguları paralel hale getirme hakkında bilgi edinin. PLıNQ, paralel dil ile tümleşik sorgu (LINQ) için temsil eder.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-ms.openlocfilehash: e50b2bf15d9a627f70ff01616bf2c72c70d7ff33
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9dbc4fde3f72d01aee91978ed5cb0baf0895de26
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290687"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662465"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ'e Giriş
 
@@ -35,7 +36,7 @@ Bu makalenin geri kalanı, ana PLıNQ sınıflarına genel bir bakış sağlar v
 
 ## <a name="the-parallelenumerable-class"></a>ParallelEnumerable Sınıfı
 
-<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>Sınıfı, neredeyse tüm PLıNQ işlevlerini gösterir. Bu ve <xref:System.Linq?displayProperty=nameWithType> ad alanı türlerinin geri kalanı System. Core. dll derlemesine derlenir. Visual Studio 'daki varsayılan C# ve Visual Basic projeleri derlemeye başvurur ve ad alanını içeri aktarır.
+<xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType>Sınıfı, neredeyse tüm PLıNQ işlevlerini gösterir. Bu ve <xref:System.Linq?displayProperty=nameWithType> ad alanı türlerinin geri kalanı System.Core.dll derlemesine derlenir. Visual Studio 'daki varsayılan C# ve Visual Basic projeleri derlemeye başvurur ve ad alanını içeri aktarır.
 
 <xref:System.Linq.ParallelEnumerable>her birini paralel hale getirmek denemese de, LINQ to Objects desteklediği tüm standart sorgu işleçlerinin uygulamalarını içerir. LINQ hakkında bilginiz yoksa LINQ ['A giriş (C#)](../../csharp/programming-guide/concepts/linq/index.md) ve [LINQ (Visual Basic) uygulamasına giriş](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)konusuna bakın.
 

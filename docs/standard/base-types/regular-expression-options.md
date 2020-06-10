@@ -1,5 +1,6 @@
 ---
 title: Normal İfade Seçenekleri
+description: Büyük/küçük harfe duyarsız eşleştirme, çok satırlı mod ve sağdan sola mod gibi normal ifade seçeneklerini .NET 'te nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: 8c742c855234bfd9653bb57036c41e7ccce66295
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 268e05c2212539b030ccc3c7195f618bb3afa707
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289297"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662881"
 ---
 # <a name="regular-expression-options"></a>Normal İfade Seçenekleri
 
 Varsayılan olarak, bir giriş dizesinin normal ifade deseninin herhangi bir sabit karakter ile karşılaştırılması büyük/küçük harfe duyarlıdır, bir normal ifade deseninin boşluk değeri değişmez boşluk karakterleri olarak yorumlanır ve normal bir ifadede yakalama grupları örtük olarak ve açıkça adlandırılmaktadır. Normal ifade seçeneklerini belirterek, varsayılan normal ifade davranışının bu ve diğer birçok yönlerini değiştirebilirsiniz. Aşağıdaki tabloda listelenen bu seçenekler, normal ifade deseninin bir parçası olarak satır içi olarak dahil edilebilir veya bir <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> sınıf oluşturucusuna veya statik model eşleştirme yöntemine bir <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> numaralandırma değeri olarak sağlanabilir.
 
-|RegexOptions üyesi|Satır içi karakter|Etki|
+|RegexOptions üyesi|Satır içi karakter|Efekt|
 |-------------------------|----------------------|------------|
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|Kullanılamaz|Varsayılan davranışı kullanın. Daha fazla bilgi için bkz. [varsayılan seçenekler](#default-options).|
 |<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|Büyük küçük harf duyarlı eşleme kullanın. Daha fazla bilgi için bkz. [büyük/küçük harfe duyarsız eşleşme](#case-insensitive-matching).|
@@ -264,7 +265,7 @@ Ancak, aşağıdaki durumlarda, seçeneğini kullansanız bile normal bir ifaded
 
 - Köşeli ayraç içinde `{` *n* `}` , `{` *n* `,}` ve `{` *n* `,` *e* `}` gibi bir nicelik süresi içinde boşluk bulunamaz. Örneğin, normal ifade deseninin bir boşluk `\d{1, 3}` karakteri içerdiği için, bir veya daha fazla basamaklı bir sayı dizisi ile üç basamağa eşleşmesi başarısız olur.
 
-- Dil öğesi tanıtan bir karakter dizisi içinde boşluk kullanılamaz. Örneğin:
+- Dil öğesi tanıtan bir karakter dizisi içinde boşluk kullanılamaz. Örnek:
 
   - Language öğesi alt `(?:` *ifadesi* `)` yakalama olmayan bir grubu temsil eder ve `(?:` öğenin bölümünde gömülü boşluk bulunamaz. `(? :` *subexpression* `)` <xref:System.ArgumentException> Normal ifade altyapısı, stili ayrıştıramadığından ve alt ifadesi alt `( ?:` *subexpression* `)` *ifade*ile eşleşmediğinden, bu, bir çalışma zamanı oluşturur.
 

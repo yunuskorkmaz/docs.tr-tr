@@ -1,5 +1,6 @@
 ---
 title: Sınıf ile Yapı Arasında Seçim Yapma
+description: Bir türün bir sınıf olarak tasarlanıp tasarlanmayacağına veya bir türü struct olarak tasarlamasına nasıl karar vereceğiniz hakkında bilgi edinin. Başvuru türlerinin ve değer türlerinin .NET 'teki farklı olduğunu anlayın.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280367"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662608"
 ---
 # <a name="choosing-between-class-and-struct"></a>Sınıf ile Yapı Arasında Seçim Yapma
 Temel tasarım kararlarından biri olan her çerçeve tasarlayıcı, bir türü Sınıf (başvuru türü) veya yapı (değer türü) olarak tasarlamayacağındır. Bu seçimi yapmak için başvuru türleri ve değer türleri davranışlarındaki farkları iyi anlamak çok önemlidir.

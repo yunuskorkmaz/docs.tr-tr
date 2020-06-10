@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma'
+description: .NET 'teki belirli bir tarih için haftanın sıralı gününü belirlemeyi öğrenin. Belirli bir tarih için yerelleştirilmiş iş günü adını görüntülemeyi öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - DateTimeOffset.ToString method
 - full weekday names
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
-ms.openlocfilehash: 128ff4887601431f75981f13b51a11469e65d65c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fa0eb6c36b88594543d08680af104b5408c295f9
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290480"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662621"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Nasıl yapılır: Belirli bir Tarihten Haftanın Gününü Çıkarma
 .NET Framework belirli bir tarih için haftanın sıralı gününü belirlemeyi ve belirli bir tarih için yerelleştirilmiş iş günü adını görüntülemeyi kolaylaştırır. Belirli bir tarihe karşılık gelen haftanın gününü gösteren numaralandırılmış bir değer <xref:System.DateTime.DayOfWeek%2A> veya <xref:System.DateTimeOffset.DayOfWeek%2A> özellikten kullanılabilir. Buna karşılık, hafta içi adının alınması, tarih ve saat değerinin yöntemi ya da yöntemi gibi bir biçimlendirme yöntemi çağırarak gerçekleştirilebilecek biçimlendirme işlemidir `ToString` <xref:System.String.Format%2A?displayProperty=nameWithType> . Bu konuda, bu biçimlendirme işlemlerinin nasıl gerçekleştirileceği gösterilmektedir.  

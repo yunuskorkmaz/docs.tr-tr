@@ -1,5 +1,6 @@
 ---
 title: .NET sınıf kitaplığına genel bakış
+description: .NET sınıf kitaplığı hakkında bilgi edinin. .NET uygulamaları, sistem işlevlerine erişim sağlamak için sınıflar, arabirimler, temsilciler ve değer türlerini içerir.
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289258"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662933"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -89,7 +90,7 @@ ms.locfileid: "84289258"
 |Tamsayı|<xref:System.Byte>|8 bit işaretsiz tamsayı.|**Bayt**|**bayt**|**unsigned char**|**bayt**|  
 ||<xref:System.SByte>|8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değildir.|**SByte**|**SByte**|**char**<br /> -veya-<br /> **işaretli** **karakter**|**SByte**|  
 ||<xref:System.Int16>|16 bit işaretli tamsayı.|**Kısadır**|**short**|**short**|**Int16**|  
-||<xref:System.Int32>|32 bitlik işaretli tamsayı.|**Gir**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 bitlik işaretli tamsayı.|**Tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 bitlik işaretli tamsayı.|**Kalacağını**|**long**|**__int64**|**tutulamaz**|  
 ||<xref:System.UInt16>|16 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UShort**|**ushort**|**imzasız short**|**Int16**|  
 ||<xref:System.UInt32>|32 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UInteger**|**u**|**unsigned int**<br /> -veya-<br /> **imzasız long**|**Int32**|  
@@ -112,4 +113,4 @@ ms.locfileid: "84289258"
 
 - [Ortak tür sistemi](base-types/common-type-system.md)
 - [.NET API tarayıcısı](../../api/index.md)
-- [Genel Bakış](../framework/get-started/overview.md)
+- [Genel bakış](../framework/get-started/overview.md)

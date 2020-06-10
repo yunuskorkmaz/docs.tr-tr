@@ -1,40 +1,38 @@
 ---
-title: Desen eşleştirme ve is ve operatörler olarak kullanarak güvenli bir şekilde döküm nasıl
-description: Değişkenleri güvenli bir şekilde farklı bir türe atmak için desen eşleştirme tekniklerini kullanmayı öğrenin. Türleri güvenli bir şekilde dönüştürmek için desen eşleştirme yanı sıra ve operatörler olarak kullanabilirsiniz.
+title: Desenler ve as işleçlerini kullanarak güvenli bir şekilde atama
+description: Değişkenleri farklı bir türe güvenle dönüştürmek için model eşleştirme tekniklerini kullanmayı öğrenin. Türleri güvenli bir şekilde dönüştürmek için model eşleştirmeyi ve as işleçlerini da kullanabilirsiniz.
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 9f5690e6840098f94360dba89f09fb23b258b782
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f10ce837057cc61b84130f237a13af708849dfc5
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739042"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662972"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Desen eşleştirme ve is ve operatörler olarak kullanarak güvenli bir şekilde döküm nasıl
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Desenler ve as işleçlerini kullanarak güvenli bir şekilde atama
 
-Nesneler çok morfik olduğundan, taban sınıf [türünden](../programming-guide/types/index.md)bir değişkenin türetilmiş bir türü tutması mümkündür. Türetilen türün örnek üyelerine erişmek için, değeri türetilmiş türe geri [atmak](../programming-guide/types/casting-and-type-conversions.md) gerekir. Ancak, bir döküm atma <xref:System.InvalidCastException>riski oluşturur. C# yalnızca başarılı olduğunda koşullu olarak bir döküm gerçekleştiren [desen eşleştirme](../pattern-matching.md) deyimleri sağlar. C# ayrıca [bir](../language-reference/operators/type-testing-and-cast.md#is-operator) değerin belirli bir türde olup olmadığını test etmek için is ve [operatörler olarak](../language-reference/operators/type-testing-and-cast.md#as-operator) sağlar.
+Nesneler çok biçimli olduğundan, bir taban sınıf türü değişkeni türetilmiş bir [türü](../programming-guide/types/index.md)tutmak mümkündür. Türetilmiş türün örnek üyelerine erişmek için değeri türetilmiş türe [dönüştürmek](../programming-guide/types/casting-and-type-conversions.md) gerekir. Ancak, bir atama bir oluşturma riskini oluşturur <xref:System.InvalidCastException> . C#, yalnızca başarılı olacağı zaman bir tür dönüştürme gerçekleştiren [desenler ile eşleşen](../pattern-matching.md) deyimler sağlar. C# Ayrıca, bir değerin belirli bir türde olup olmadığını test etmek için [,](../language-reference/operators/type-testing-and-cast.md#is-operator) [ve işlecini de](../language-reference/operators/type-testing-and-cast.md#as-operator) sağlar.
 
-Aşağıdaki örnek, desen eşleştirme `is` deyiminin nasıl kullanılacağını gösterir:
+Aşağıdaki örnek, model eşleştirme ifadesinin nasıl kullanılacağını gösterir `is` :
 
-[!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs" id="PatternMatchingIs":::
 
-Önceki örnek, desen eşleşen sözdizimi birkaç özelliklerini gösterir. Deyim, `if (a is Mammal m)` testi bir başlatma atamasıyla birleştirir. Atama yalnızca test başarılı olduğunda oluşur. Değişken `m` yalnızca atandığı katıştırılmış `if` deyimin kapsamıdır. Daha sonra `m` aynı yöntemle erişemezsiniz. Önceki örnek, bir nesneyi belirli bir türe dönüştürmek için [ `as` işlecinin](../language-reference/operators/type-testing-and-cast.md#as-operator) nasıl kullanılacağını da gösterir.
+Önceki örnekte, model eşleştirme sözdiziminin birkaç özelliği gösterilmektedir. `if (a is Mammal m)`İfade, testi bir başlatma ataması ile birleştirir. Atama yalnızca test başarılı olduğunda gerçekleşir. Değişken, `m` yalnızca atandığı katıştırılmış ifadede kapsam içinde yer `if` alabilir. `m`Aynı yöntemde daha sonra erişemezsiniz. Yukarıdaki örnek ayrıca, bir nesneyi belirtilen bir türe dönüştürmek için [ `as` işlecinin](../language-reference/operators/type-testing-and-cast.md#as-operator) nasıl kullanılacağını gösterir.
 
-Aşağıdaki örnekte gösterildiği [gibi, nullable değer türü](../language-reference/builtin-types/nullable-value-types.md) bir değer varsa, sınama için aynı sözdizimini de kullanabilirsiniz:
+Aşağıdaki örnekte gösterildiği gibi, [null yapılabilir bir değer türünün](../language-reference/builtin-types/nullable-value-types.md) bir değere sahip olup olmadığını test etmek için aynı sözdizimini de kullanabilirsiniz:
 
-[!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs" id="PatternMatchingNullable":::
 
-Önceki örnek, dönüşümlerle kullanmak üzere eşleşen desen diğer özelliklerini gösterir. `null` Değeri özel olarak denetleyerek null deseni için bir değişkeni sınayabilirsiniz. Değişkenin çalışma zamanı değeri `null`olduğunda, `is` bir tür için `false`bir deyim her zaman döndürür. Desen eşleştirme `is` deyimi gibi boşatılabilir bir değer `int?` türüne izin `Nullable<int>`vermez, ancak başka bir değer türü için sınama yapabilirsiniz. Önceki `is` örnekteki desenler nullable değer türleri ile sınırlı değildir. Ayrıca, başvuru türünden bir değişkenin bir değeri olup olmadığını veya `null`.
+Önceki örnek, dönüşümlerle kullanılacak olan diğer model eşleme özelliklerini gösterir. Değeri özel olarak denetleyerek null deseninin bir değişkenini test edebilirsiniz `null` . Değişkeninin çalışma zamanı değeri olduğunda `null` , `is` her zaman bir tür için denetim kümesi döndürülür `false` . Model eşleştirme `is` deyimleri, veya gibi null yapılabilir değer türüne izin vermez `int?` `Nullable<int>` , ancak diğer değer türleri için test edebilirsiniz. `is`Yukarıdaki örnekteki desenler Nullable değer türleriyle sınırlı değildir. Bu desenleri, bir başvuru türü değişkeninin bir değere sahip olup olmadığını test etmek için de kullanabilirsiniz `null` .
 
-Önceki örnek, değişkenin birçok farklı türden `switch` biri olabileceği bir deyimdeki tür deseni nasıl kullandığınızı da gösterir.
+Yukarıdaki örnek ayrıca, `switch` değişkenin birçok farklı türden biri olabileceği bir ifadede tür deseninin nasıl kullanıldığını gösterir.
 
-Bir değişkenin belirli bir tür olup olmadığını sınamak, ancak yeni bir değişkene `is` `as` atamamak istiyorsanız, başvuru türleri ve nullable değer türleri için ve işleçleri kullanabilirsiniz. Aşağıdaki kod, bir `is` değişkenin `as` belirli bir türde olup olmadığını sınamak için desen eşleştirmesi kullanılmadan önce C# dilinin bir parçası olan ifadelerin nasıl kullanılacağını gösterir:
+Bir değişkenin verilen bir tür olup olmadığını test etmek istiyorsanız, ancak bunu yeni bir değişkene atamadıysanız, `is` `as` başvuru türleri ve null yapılabilir değer türleri için ve işleçlerini kullanabilirsiniz. Aşağıdaki kod, `is` `as` bir değişken belirli bir türde ise test 'e, model dilinin bir parçası olan ve deyimlerinin nasıl kullanıldığını gösterir:
 
-[!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
+:::code language="csharp" source="../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs" id="IsAndAs":::
 
-Bu kodu desen eşleştirme koduyla karşılaştırarak görebileceğiniz gibi, desen eşleştirme sözdizimi, testi ve atamayı tek bir deyimde birleştirerek daha sağlam özellikler sağlar. Deseni eşleştirme sözdizimini mümkün olduğunca kullanın.
-
-Bu örnekleri [GitHub depomuzdaki](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast)koda bakarak deneyebilirsiniz. Veya bir zip [dosyası olarak](../../../samples/snippets/csharp/how-to/safelycast.zip)örnekleri indirebilirsiniz.
+Bu kodu model eşleştirme koduyla karşılaştırarak görebileceğiniz gibi, model eşleştirme sözdizimi, testi ve atamayı tek bir bildirimde birleştirerek daha sağlam özellikler sağlar. Mümkün olan her seferinde model eşleştirme sözdizimini kullanın.

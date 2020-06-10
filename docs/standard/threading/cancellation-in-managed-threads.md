@@ -1,5 +1,6 @@
 ---
 title: Yönetilen İş Parçacıklarında İptal
+description: Yönetilen iş parçacıklarında iptali anlayın. Zaman uyumsuz veya uzun süreli zaman uyumlu işlemler için birlikte çalışırken iptal belirteçleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - cancellation in .NET, overview
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
-ms.openlocfilehash: e56d0f71afdc9281271b7d15316a133e7c720bd0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9af4a64e50eff65023d5ed5bda868af2f8323a96
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277888"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662842"
 ---
 # <a name="cancellation-in-managed-threads"></a>Yönetilen İş Parçacıklarında İptal
 .NET Framework 4 ' te başlayarak, .NET Framework zaman uyumsuz veya uzun süre çalışan zaman uyumlu işlemler için bir birleştirilmiş model kullanır. Bu model, iptal belirteci adlı hafif bir nesneyi temel alır. Bir veya daha fazla iptal edilebilen işlemi çağıran nesne (örneğin, yeni iş parçacıkları veya görevler oluşturarak) belirteci her bir işleme geçirir. Tek tek işlemler, belirtecin kopyalarını diğer işlemlere geçirebilir. Daha sonra, belirteci oluşturan nesne, işlemin ne yaptığını durdurmasını istemek için bunu kullanabilir. Yalnızca istenen nesne iptal isteğini verebilir ve her dinleyici, isteği yaşıyorsanız ve uygun ve zamanında yanıt verecek şekilde sorumludur.  
