@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8bd0d21be1d87d536eb6f943e782fc4da352a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185151"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597195"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="d160f-102">Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme</span><span class="sxs-lookup"><span data-stu-id="d160f-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
-<span data-ttu-id="d160f-103">Aşağıdaki yordamlar, tek yönlü bir sözleşme ve istek yanıtlama sözleşmesi tanımlayan ve çift yönlü iletişim deseni kullanmayan bir Windows Communication Foundation (WCF) hizmetine nasıl erişilir açıklanmıştır.</span><span class="sxs-lookup"><span data-stu-id="d160f-103">The following procedures describe how to access a Windows Communication Foundation (WCF) service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a><span data-ttu-id="d4a9d-102">Nasıl yapılır: Tek Yönlü ve İstek-Yanıt Sözleşmeleriyle WCF Hizmetlerine Erişme</span><span class="sxs-lookup"><span data-stu-id="d4a9d-102">How to: Access WCF Services with One-Way and Request-Reply Contracts</span></span>
+<span data-ttu-id="d4a9d-103">Aşağıdaki yordamlarda, tek yönlü bir sözleşmeyi ve bir istek-yanıt sözleşmesini tanımlayan ve çift yönlü iletişim modelini kullanmayan bir Windows Communication Foundation (WCF) hizmetine nasıl erişebileceğiniz açıklanır.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-103">The following procedures describe how to access a Windows Communication Foundation (WCF) service that defines a one-way contract and a request-reply contract and that does not use the duplex communication pattern.</span></span>  
   
-### <a name="to-define-the-service"></a><span data-ttu-id="d160f-104">Hizmeti tanımlamak için</span><span class="sxs-lookup"><span data-stu-id="d160f-104">To define the service</span></span>  
+### <a name="to-define-the-service"></a><span data-ttu-id="d4a9d-104">Hizmeti tanımlamak için</span><span class="sxs-lookup"><span data-stu-id="d4a9d-104">To define the service</span></span>  
   
-1. <span data-ttu-id="d160f-105">Hizmet sözleşmesini bildirin.</span><span class="sxs-lookup"><span data-stu-id="d160f-105">Declare the service contract.</span></span> <span data-ttu-id="d160f-106">Tek yönlü olması gereken `IsOneWay` `true` <xref:System.ServiceModel.OperationContractAttribute>işlemler, 'nin içinde ayarlanmış olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="d160f-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="d160f-107">`IOneWayCalculator` Aşağıdaki `Add`kod, , , , `Subtract` `Multiply`ve `Divide`.</span><span class="sxs-lookup"><span data-stu-id="d160f-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="d160f-108">Ayrıca, '. adı verilen `SayHello`bir istek yanıt işlemi tanımlar.</span><span class="sxs-lookup"><span data-stu-id="d160f-108">It also defines a request response operation called `SayHello`.</span></span>  
+1. <span data-ttu-id="d4a9d-105">Hizmet sözleşmesini bildirin.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-105">Declare the service contract.</span></span> <span data-ttu-id="d4a9d-106">Tek yönlü olması gereken işlemler `IsOneWay` içinde olarak ayarlanmalıdır `true` <xref:System.ServiceModel.OperationContractAttribute> .</span><span class="sxs-lookup"><span data-stu-id="d4a9d-106">The operations that are to be one-way must have `IsOneWay` set to `true` within the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="d4a9d-107">Aşağıdaki kod,,, `IOneWayCalculator` ve için tek yönlü işlemleri olan sözleşmeyi bildirir `Add` `Subtract` `Multiply` `Divide` .</span><span class="sxs-lookup"><span data-stu-id="d4a9d-107">The following code declares the `IOneWayCalculator` contract that has one-way operations for `Add`, `Subtract`, `Multiply`, and `Divide`.</span></span> <span data-ttu-id="d4a9d-108">Ayrıca, adlı bir istek yanıt işlemi tanımlar `SayHello` .</span><span class="sxs-lookup"><span data-stu-id="d4a9d-108">It also defines a request response operation called `SayHello`.</span></span>  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ ms.locfileid: "79185151"
     }  
     ```  
   
-2. <span data-ttu-id="d160f-109">Hizmet sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="d160f-109">Implement the service contract.</span></span> <span data-ttu-id="d160f-110">Aşağıdaki kod `IOnewayCalculator` arabirimi uygular.</span><span class="sxs-lookup"><span data-stu-id="d160f-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
+2. <span data-ttu-id="d4a9d-109">Hizmet sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-109">Implement the service contract.</span></span> <span data-ttu-id="d4a9d-110">Aşağıdaki kod, arabirimini uygular `IOnewayCalculator` .</span><span class="sxs-lookup"><span data-stu-id="d4a9d-110">The following code implements the `IOnewayCalculator` interface.</span></span>  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ ms.locfileid: "79185151"
     }  
     ```  
   
-3. <span data-ttu-id="d160f-111">Hizmeti bir konsol uygulamasında barındırın.</span><span class="sxs-lookup"><span data-stu-id="d160f-111">Host the service in a console application.</span></span> <span data-ttu-id="d160f-112">Aşağıdaki kod, hizmetin nasıl barındırılabildiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="d160f-112">The following code shows how to host the service.</span></span>  
+3. <span data-ttu-id="d4a9d-111">Hizmeti bir konsol uygulamasında barındırın.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-111">Host the service in a console application.</span></span> <span data-ttu-id="d4a9d-112">Aşağıdaki kod hizmetin nasıl barındıralınacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-112">The following code shows how to host the service.</span></span>  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -107,9 +107,9 @@ ms.locfileid: "79185151"
     }  
     ```  
   
-### <a name="to-access-the-service"></a><span data-ttu-id="d160f-113">Hizmete erişmek için</span><span class="sxs-lookup"><span data-stu-id="d160f-113">To access the service</span></span>  
+### <a name="to-access-the-service"></a><span data-ttu-id="d4a9d-113">Hizmete erişmek için</span><span class="sxs-lookup"><span data-stu-id="d4a9d-113">To access the service</span></span>  
   
-1. <span data-ttu-id="d160f-114">[ServiceModel Metadata Utility Tool 'u (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki komut satırını kullanarak hizmet için istemci sınıfını oluşturmak için meta veri değişimi bitiş noktası adresini kullanarak çalıştırın: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki örnek kodda gösterildiği gibi bir dizi arabirim ve sınıf oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d160f-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
+1. <span data-ttu-id="d4a9d-114">Aşağıdaki komut satırını kullanarak hizmetin istemci sınıfını oluşturmak için meta veri değişimi uç noktası adresini kullanarak [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın: `Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aşağıdaki örnek kodda gösterildiği gibi bir dizi arabirim ve sınıf oluşturur.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-114">Run the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) using the metadata exchange endpoint address to create the client class for the service using the following command line: `Svcutil http://localhost:8000/Service` The [ServiceModel Metadata Utility Tool (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) generates a set of interfaces and classes, as shown in the following sample code.</span></span>  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -194,9 +194,9 @@ ms.locfileid: "79185151"
     }  
     ```  
   
-     <span data-ttu-id="d160f-115">`IOneWayCalculator` Arabirimde tek yönlü hizmet işlemlerinin <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> öznitelik ayarladığını `true` ve istek yanıt hizmeti işleminin varsayılan değere ayarlanan özniteliği olduğunu `false`bildirir.</span><span class="sxs-lookup"><span data-stu-id="d160f-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="d160f-116">Ayrıca sınıf `OneWayCalculatorClient` ala.</span><span class="sxs-lookup"><span data-stu-id="d160f-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="d160f-117">Bu, hizmeti aramak için kullanacağınız sınıftır.</span><span class="sxs-lookup"><span data-stu-id="d160f-117">This is the class that you will use to call the service.</span></span>  
+     <span data-ttu-id="d4a9d-115">`IOneWayCalculator`Arabirimde tek yönlü hizmet işlemlerinin <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özniteliği olarak ayarlanmış olduğunu `true` ve istek-yanıtlama hizmeti işleminin özniteliğe varsayılan değer olarak ayarlanmış olduğunu fark edin `false` .</span><span class="sxs-lookup"><span data-stu-id="d4a9d-115">Notice in the `IOneWayCalculator` interface that the one-way service operations have the <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> attribute set to `true` and the request-reply service operation has the attribute set to the default value, `false`.</span></span> <span data-ttu-id="d4a9d-116">Ayrıca, sınıfına de dikkat edin `OneWayCalculatorClient` .</span><span class="sxs-lookup"><span data-stu-id="d4a9d-116">Also notice the `OneWayCalculatorClient` class.</span></span> <span data-ttu-id="d4a9d-117">Bu, hizmeti çağırmak için kullanacağınız sınıftır.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-117">This is the class that you will use to call the service.</span></span>  
   
-2. <span data-ttu-id="d160f-118">İstemci nesnesini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d160f-118">Create the client object.</span></span>  
+2. <span data-ttu-id="d4a9d-118">İstemci nesnesini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-118">Create the client object.</span></span>  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ ms.locfileid: "79185151"
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3. <span data-ttu-id="d160f-119">Servis işlemlerini arayın.</span><span class="sxs-lookup"><span data-stu-id="d160f-119">Call service operations.</span></span>  
+3. <span data-ttu-id="d4a9d-119">Çağrı hizmeti işlemleri.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-119">Call service operations.</span></span>  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,15 +239,15 @@ ms.locfileid: "79185151"
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4. <span data-ttu-id="d160f-120">Bağlantıları kapatmak ve kaynakları temizlemek için istemciyi kapatın.</span><span class="sxs-lookup"><span data-stu-id="d160f-120">Close the client to close connections and clean up resources.</span></span>  
+4. <span data-ttu-id="d4a9d-120">Bağlantıları kapatmak ve kaynakları temizlemek için istemciyi kapatın.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-120">Close the client to close connections and clean up resources.</span></span>  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
     client.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="d160f-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="d160f-121">Example</span></span>  
- <span data-ttu-id="d160f-122">Aşağıda, bu konuda kullanılan kodun tam listesi vereme mi edilir.</span><span class="sxs-lookup"><span data-stu-id="d160f-122">The following is a complete listing of the code used  in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="d4a9d-121">Örnek</span><span class="sxs-lookup"><span data-stu-id="d4a9d-121">Example</span></span>  
+ <span data-ttu-id="d4a9d-122">Aşağıda, bu konuda kullanılan kodun tamamen bir listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-122">The following is a complete listing of the code used  in this topic.</span></span>  
   
 ```csharp  
 // Service.cs  
@@ -400,6 +400,6 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d160f-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d160f-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4a9d-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d4a9d-123">See also</span></span>
 
-- [<span data-ttu-id="d160f-124">Tek Yönlü Hizmetler</span><span class="sxs-lookup"><span data-stu-id="d160f-124">One-Way Services</span></span>](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [<span data-ttu-id="d4a9d-124">Tek Yönlü Hizmetler</span><span class="sxs-lookup"><span data-stu-id="d4a9d-124">One-Way Services</span></span>](one-way-services.md)
