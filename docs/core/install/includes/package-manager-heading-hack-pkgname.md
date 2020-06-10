@@ -1,41 +1,41 @@
 ---
-ms.openlocfilehash: 4340ed7444681b4601dea50c93926b0ee0c07eec
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 7723892a33bf7dd8e475b2f696db5d9ab287e182
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134100"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602994"
 ---
 
-Paket yöneticisi beslemelerine eklenen paketler hacklenebilir bir biçimde adlandırılır: `{product}-{type}-{version}`.
+Paket Yöneticisi akışlarına eklenen paketler, uyumlu olmayan biçimde adlandırılır: `{product}-{type}-{version}` .
 
-- **Ürün**\
-Yüklenmesi gereken .NET ürün türü. Geçerli seçenekler şunlardır:
+- **ürünüyle**\
+Yüklenecek .NET Ürün türü. Geçerli seçenekler şunlardır:
 
   - dotnet
   - aspnetcore
 
-- **Türü**\
-SDK'yı veya çalışma saatini seçer. Geçerli seçenekler şunlardır:
+- **türüyle**\
+SDK 'Yı veya çalışma zamanını seçer. Geçerli seçenekler şunlardır:
 
   - sdk
   - çalışma zamanı
 
 - **Sürüm**\
-SDK sürümü veya yüklemek için çalışma zamanı. Bu makalede, her zaman en son desteklenen sürümü için talimatlar verecektir. Geçerli seçenekler, şu lar gibi serbest bırakılmış sürümlerdir:
+Yüklenecek SDK veya çalışma zamanının sürümü. Bu makale her zaman desteklenen en son sürüme yönelik yönergelere sahip olur. Geçerli seçenekler, şu gibi yayınlanmış bir sürümdür:
 
-  - 3.1
-  - 3,0
+  - 3,1
+  - 3.0
   - 2.1
 
-  İndirmeye çalıştığınız SDK/runtime'ın Linux dağıtımınız için kullanılamaması mümkündür. Desteklenen dağıtımların listesi için [bkz.](../dependencies.md?pivots=os-linux)
+  İndirmeyi denediğiniz SDK/çalışma zamanı Linux dağıtım için kullanılamıyor olabilir. Desteklenen dağıtımların listesi için bkz. [.NET Core Dependencies ve Requirements](../linux.md).
 
 ### <a name="examples"></a>Örnekler
 
-- Core 3.1 çalışma süresini ASP.NET yükleyin:`aspnetcore-runtime-3.1`
-- .NET Core 2.1 çalışma süresini yükleyin:`dotnet-runtime-2.1`
-- .NET Core 3.1 SDK'yı yükleyin:`dotnet-sdk-3.1`
+- ASP.NET Core 3,1 çalışma zamanını yükler:`aspnetcore-runtime-3.1`
+- .NET Core 2,1 çalışma zamanını yükler:`dotnet-runtime-2.1`
+- .NET Core 3,1 SDK 'sını yükler:`dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>Paket eksik
 
-Paket sürüm birleşimi çalışmıyorsa, kullanılamıyor. Örneğin, ASP.NET Core SDK yoktur, SDK bileşenleri .NET Core SDK ile birlikte verilir. Değer `aspnetcore-sdk-2.2` yanlıştır ve `dotnet-sdk-2.2`. .NET Core tarafından desteklenen Linux dağıtımlarının listesi [için](../dependencies.md?pivots=os-linux)bkz.
+Paket sürümü birleşimi işe yaramazsa, kullanılabilir değildir. Örneğin, ASP.NET Core SDK yoktur, SDK bileşenleri .NET Core SDK eklenir. Değer `aspnetcore-sdk-2.2` yanlış ve olmalıdır `dotnet-sdk-2.2` . .NET Core tarafından desteklenen Linux dağıtımların listesi için bkz. [.NET Core Dependencies ve Requirements](../linux.md).

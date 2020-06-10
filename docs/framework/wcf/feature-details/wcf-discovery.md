@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], discovery
 - discovery [WCF]
 ms.assetid: 462c4913-f388-45a9-9042-28ae96a4e735
-ms.openlocfilehash: 175f79096d2bbda81a602d38e027d5a6d871fa12
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63c6589cb2ecff9f0a5e7c8bb61b454f6516c98c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768699"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600185"
 ---
 # <a name="wcf-discovery"></a>WCF Keşfetme
-Windows Communication Foundation (WCF) WS bulma protokolünü kullanarak birlikte çalışabilir bir şekilde çalışma zamanında bulunabilir olması hizmetleri etkinleştirmek için destek sağlar. WCF hizmetleri, çok noktaya yayın ileti kullanarak ağ veya bulma proxy sunucu duyurmaktan. İstemci uygulamaları, ağ veya bir dizi kriteri karşılayan Hizmetleri bulmak için bulma proxy sunucusu arama yapabilirsiniz. Bu bölümdeki konular, genel bir bakış sağlar ve ayrıntılı bu özellik için programlama modelini açıklar.  
+Windows Communication Foundation (WCF), WS-Discovery protokolünü kullanarak birlikte çalışabilen bir şekilde hizmetlerin çalışma zamanında keşfedilmesini sağlamak için destek sağlar. WCF Hizmetleri, çok noktaya yayın iletisi veya bulma proxy sunucusu kullanarak ağ üzerinde kullanılabilirlik durumunu duyurur. İstemci uygulamaları, bir dizi ölçütü karşılayan hizmetleri bulmak için ağda veya bulma proxy sunucusunda arama yapabilir. Bu bölümdeki konularda bir genel bakış sağlanır ve bu özelliğin programlama modeli ayrıntılı olarak açıklanır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WCF Bulmaya Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- WCF tarafından sağlanan WS-bulma desteği'ne genel bakış sağlar.  
+ [WCF Keşif Genel Bakış](wcf-discovery-overview.md)  
+ WCF tarafından sağlanan WS-Discovery desteğine genel bir bakış sağlar.  
   
- [WCF Bulma Nesne Modeli](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)  
- Nesne modeli ve genişletilebilirlik WS-bulma destek sınıfları açıklar.  
+ [WCF Keşif Nesnesi Modeli](wcf-discovery-object-model.md)  
+ Nesne modelindeki sınıfları ve WS-Discovery desteğinin genişletilebilirliğini açıklar.  
   
- [Nasıl yapılır: Bir WCF hizmeti ve istemci programlı bir şekilde Keşfedilebilirlik ekleme](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
- Bir Windows Communication Foundation (WCF) hizmeti bulunabilir hale gösterilmektedir.  
+ [Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme](how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)  
+ Windows Communication Foundation (WCF) hizmetini nasıl bulunabilir hale getirmek istediğinizi gösterir.  
   
- [Keşif Proxy'si Ekleme](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)  
- Keşif proxy'si, Keşif proxy'sine kayıtlı bir bulunabilir hizmet ve keşfedilebilir hizmeti bulmak için keşif proxy'sini kullanan bir istemci uygulamak için gereken adımlar açıklanmaktadır.  
+ [Keşif Proxy'si Ekleme](implementing-a-discovery-proxy.md)  
+ Bulma proxy 'si uygulamak için gereken adımları, bulma proxy 'sine kaydeden keşfedilebilir bir hizmeti ve keşfedilebilir hizmeti bulmak için bulma proxy 'sini kullanan bir istemciyi açıklar.  
   
- [Keşif Sürümü Oluşturma](../../../../docs/framework/wcf/feature-details/discovery-versioning.md)  
- Bazı yeni bulma özelliklerinin bir prototip uygulamasını kısa bir genel bakış sağlar. Ayrıca bulma sürümün kullanılacağını seçme hakkında genel bir bakış sağlar.  
+ [Keşif Sürümü Oluşturma](discovery-versioning.md)  
+ Bazı yeni keşif özelliklerinin prototip uygulamasına kısa bir genel bakış sağlar. Ayrıca, kullanılacak bulma sürümünün nasıl kullanılacağına ilişkin bir genel bakış sunar.  
   
- [Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)  
- Yapılandırmada bulma yapılandırma işlemi gösterilmektedir.  
+ [Yapılandırma Dosyasındaki Bir Keşfi Yapılandırma](configuring-discovery-in-a-configuration-file.md)  
+ Yapılandırmada bulmanın nasıl yapılandırılacağını gösterir.  
   
- [Keşif İstemcisi Kanalını Kullanma](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
- WCF istemci uygulaması yazarken keşif istemcisi kanalını kullanma işlemi gösterilmektedir.
+ [Keşif İstemcisi Kanalını Kullanma](using-the-discovery-client-channel.md)  
+ Bir WCF istemci uygulaması yazarken bulma Istemci kanalının nasıl kullanılacağını gösterir.

@@ -1,38 +1,38 @@
 ---
-title: 'Nasıl yapılır: (WCF) imzaları doğrulamak için kullanılan sertifika yetkilendirme sertifika zincirini belirtme'
+title: 'Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme (WCF)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 664d0e1a3f59ce391bb055dcded5cfc1b8fff115
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 103d68d4ccb4cc243d28037260c1f9f380485ff6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586160"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600315"
 ---
-# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Nasıl yapılır: (WCF) imzaları doğrulamak için kullanılan sertifika yetkilendirme sertifika zincirini belirtme
-Windows Communication Foundation (WCF) bir X.509 sertifikası ile imzalanmış bir SOAP ileti aldığında, varsayılan olarak, X.509 Sertifika bir güvenilen sertifika yetkilisi tarafından verildiğini doğrular. Bu sertifika deposunda aramak ve sertifikayı, sertifika yetkilisi olarak belirlendi güvenilen belirleme gerçekleştirilir. Bunun belirlenmesi WCF için sırada doğru sertifika deposunda sertifika yetkilendirme sertifika zincirini yüklenmesi gerekir.  
+# <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Nasıl yapılır: İmzaları Doğrulamak için Kullanılan Sertifika Yetkilendirme Sertifika Zincirini Belirtme (WCF)
+Windows Communication Foundation (WCF) bir X. 509.952 sertifikası kullanılarak imzalanmış bir SOAP iletisi aldığında, varsayılan olarak X. 509.440 sertifikasının güvenilen bir sertifika yetkilisi tarafından verildiğini doğrular. Bu, bir sertifika deposuna bakarak ve bu sertifika yetkilisinin sertifikasının güvenilir olarak belirlenmiş olup olmadığı belirlenerek yapılır. WCF 'nin bu belirleme yapması için, sertifika yetkilisi sertifika zincirinin doğru sertifika deposuna yüklenmesi gerekir.  
   
-### <a name="to-install-a-certification-authority-certificate-chain"></a>Bir sertifika yetkilendirme sertifika zincirini yüklemek için  
+### <a name="to-install-a-certification-authority-certificate-chain"></a>Sertifika yetkilisi sertifika zinciri yüklemek için  
   
-- SOAP ileti alıcısı güven amaçlayan her sertifika yetkilisi, verilen X.509 sertifikalarının yükleyin sertifika yetkilendirme sertifika zincirini sertifika deposuna WCF X.509 sertifikaları almak için yapılandırılır.  
+- Bir SOAP ileti alıcısının, ' den çıkarılan X. 509.952 sertifikalarına güvenmesini amaçlayan her bir sertifika yetkilisi için, sertifika yetkilisi sertifika zincirini WCF 'nin from X. 509.952 sertifikalarını almak üzere yapılandırıldığı sertifika deposuna yükler.  
   
-     Örneğin, bir SOAP ileti alıcısı, Microsoft tarafından verilen X.509 sertifikalarının güven vermeyi planlıyorsa Microsoft Sertifika Yetkilendirme sertifika zincirini X.509 sertifikasından aramak için WCF ayarlayın sertifika deposunda yüklenmelidir. X.509 sertifikalarını WCF aradığı sertifika deposu, kod veya yapılandırma belirtilebilir. Örneğin, bu kodu kullanarak belirtilebilir <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi veya yapılandırma dahil olmak üzere birkaç yolu [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .  
+     Örneğin, bir SOAP ileti alıcısı Microsoft tarafından verilen X. 509.440 sertifikalarına güvenmeyi amaçladığında, Microsoft için sertifika yetkilisi sertifika zinciri, WCF 'nin ' den X. 509.952 sertifikalarını aramak üzere ayarlandığı sertifika deposunda yüklü olmalıdır. WCF 'nin X için aradığı sertifika depolama alanı, kod veya yapılandırmada bir. 509.440 sertifikası belirtilebilir. Örneğin, bu kod, <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> yöntemi kullanılarak veya yapılandırma içinde, dahil olmak üzere birkaç yolla belirtilebilir [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .  
   
-     Windows varsayılan sertifika zincirleri güvenilen sertifika yetkilileri için bir dizi ile birlikte gelen çünkü tüm sertifika yetkilileri sertifika zincirinin yüklemek için gerekli olmayabilir.  
+     Windows, güvenilen sertifika yetkilileri için bir dizi varsayılan sertifika zinciriyle birlikte geldiği için, sertifika zincirini tüm sertifika yetkilileri için yüklemek gerekli olmayabilir.  
   
-    1. Sertifika Yetkilendirme sertifika zincirini dışarı aktarın.  
+    1. Sertifika yetkilisi sertifika zincirini dışarı aktarın.  
   
-         Tam olarak nasıl yapıldığını sertifika yetkilisinde bağlıdır. Sertifika yetkilisi Microsoft Sertifika Hizmetleri çalıştırıyorsa seçin **bir CA sertifikası, sertifika zinciri veya CRL indir**ve ardından **CA sertifikasını indir**.  
+         Bu işlem, sertifika yetkilisine göre tam olarak nasıl yapılır? Sertifika yetkilisi Microsoft Sertifika Hizmetleri çalıştırıyorsa, **CA sertifikası, sertifika zinciri veya CRL indir**' i seçin ve ardından **CA sertifikasını indir**' i seçin.  
   
-    2. Sertifika Yetkilendirme sertifika zincirini içeri aktarın.  
+    2. Sertifika yetkilisi sertifika zincirini içeri aktarın.  
   
-         Microsoft Yönetim Konsolu (MMC)'da, Sertifikalar ek bileşenini açın. Sertifika deposu için WCF, arasından seçim X.509 sertifikaları almak için yapılandırılmış **güvenilen kök** **sertifika yetkilileri** klasör. Altında **güvenilen kök sertifika yetkilileri** klasörü sağ tıklatın **sertifikaları** klasörünü **tüm görevler**ve ardından **içeri aktarma** . Adımda dışarı aktardığınız dosya sağlayan bir.  
+         Microsoft Yönetim Konsolu 'nda (MMC), Sertifikalar ek bileşenini açın. WCF 'nin içinden X. 509.952 sertifikalarını almak üzere yapılandırıldığı sertifika deposunda, **Güvenilen kök** **sertifika yetkilileri** klasörünü seçin. **Güvenilen kök sertifika yetkilileri** klasörü altında, **Sertifikalar** klasörüne sağ tıklayın, **Tüm görevler**' ın üzerine gelin ve ardından **içeri aktar**' a tıklayın. A adımında dosyaya aktarılmış dosyayı sağlayın.  
   
-         Sertifikalar ek bileşenini MMC ile kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: MMC ek bileşeni ile sertifikaları görüntüleme](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+         MMC ile Sertifikalar ek bileşenini kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sertifikalarla Çalışma](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Sertifikalarla Çalışma](working-with-certificates.md)

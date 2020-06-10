@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-ms.openlocfilehash: cc777da65ce1c0d425404b1cc8d47e8189684a7f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42c056c9b56ed1245290cd66833cc6565f517b66
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039412"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593457"
 ---
 # <a name="how-to-create-a-one-way-contract"></a>Nasıl yapılır: Tek Yönlü Sözleşme Oluşturma
-Bu konu, tek yönlü sözleşme kullanan yöntemleri oluşturmak için temel adımları gösterir. Bu tür yöntemler, istemciden gelen Windows Communication Foundation (WCF) hizmet işlemleri çağırma ancak yanıt beklemiyoruz. Bu sözleşme türü, örneğin, bildirimler birçok abonelerine yayımlamak için kullanılabilir. Tek yönlü sözleşmeler, istemciler ve sunucular ya da diğer çağrıları başlatabilir, böylece birbiriyle bağımsız olarak iletişim kurmasına izin veren bir çift yönlü (iki yönlü) sözleşmesi oluştururken de kullanabilirsiniz. Bu, özellikle, tek yönlü istemci olaylar olarak davranabileceğiniz istemci çağrı yapmak sunucu izin verebilirsiniz. Tek yönlü yöntemlerin belirtme hakkında ayrıntılı bilgi için bkz: <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliği ve <xref:System.ServiceModel.OperationContractAttribute> sınıfı.  
+Bu konuda tek yönlü bir sözleşme kullanan Yöntemler oluşturmak için temel adımlar gösterilmektedir. Bu tür yöntemler bir istemciden Windows Communication Foundation (WCF) hizmetinde işlemleri çağırır ancak yanıt beklemez. Bu tür bir sözleşme, örneğin, birçok aboneye bildirim yayımlamak için kullanılabilir. Ayrıca, bir çift yönlü (çift yönlü) sözleşme oluştururken, istemcilerin ve sunucuların birbirleriyle yapılan çağrıları başlatabilmeleri için birbirinden bağımsız olarak birbirleriyle iletişim kurmasına olanak sağlayan tek yönlü sözleşmeleri de kullanabilirsiniz. Bu, özellikle sunucunun istemci için istemcinin olay olarak kabul edebilir tek yönlü çağrılar yapmasına izin verebilir. Tek yönlü yöntemler belirtme hakkında ayrıntılı bilgi için, bkz <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> . özelliği ve <xref:System.ServiceModel.OperationContractAttribute> sınıfı.  
   
- Bir istemci uygulaması için çift yönlü sözleşme oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: Erişim Hizmetleri tek yönlü ve istek-yanıt sözleşmeleriyle](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Çalışma örnek için bkz: [tek yönlü](../../../../docs/framework/wcf/samples/one-way.md) örnek.  
+ Bir çift yönlü sözleşme için istemci uygulaması oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: tek yönlü ve istek-yanıt sözleşmeleriyle hizmetlere erişme](how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md). Çalışan bir örnek için bkz. [tek yönlü](../samples/one-way.md) örnek.  
   
-### <a name="to-create-a-one-way-contract"></a>Tek yönlü anlaşma oluşturma  
+### <a name="to-create-a-one-way-contract"></a>Tek yönlü bir sözleşme oluşturmak için  
   
-1. Hizmet sözleşmesi uygulayarak oluşturma <xref:System.ServiceModel.ServiceContractAttribute> hizmetidir uygulanacak yöntemleri tanımlar arabirimi sınıfı.  
+1. <xref:System.ServiceModel.ServiceContractAttribute>Sınıfı, hizmetin uygulanacağı yöntemleri tanımlayan arabirime uygulayarak hizmet sözleşmesini oluşturun.  
   
-2. Hangi yöntemlerin arabiriminde bir istemci uygulama tarafından çağrılan belirtebilirsiniz <xref:System.ServiceModel.OperationContractAttribute> onlara sınıfı.  
+2. Bir istemcinin Arabirim içindeki hangi yöntemlerin bu sınıfa uygulama tarafından çağrılabileceğini belirtin <xref:System.ServiceModel.OperationContractAttribute> .  
   
-3. Hiçbir çıktı olmalıdır işlemlerini belirleyin (değer döndürmez ve herhangi bir çıkış veya ref parametreleri) tek yönlü olarak ayarlayarak <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliğini `true`. İşlemleri gerçekleştirmek Not <xref:System.ServiceModel.OperationContractAttribute> sınıfının çünkü bu bir istek-yanıt sözleşmesi varsayılan olarak karşılaması <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> özelliği `false` varsayılan olarak. Öznitelik özelliği olacak şekilde değeri açıkça belirtmeniz gerekir böylece `true` yöntemi için tek yönlü sözleşme istiyorsanız.  
+3. Özelliğini olarak ayarlayarak çıkış olmaması gereken (dönüş değeri yok ve out veya ref parametreleri olmayan) işlemleri tek yönlü olarak belirleyin <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> `true` . <xref:System.ServiceModel.OperationContractAttribute>Özelliği varsayılan olarak olduğu için, sınıfı taşıyan işlemlerin varsayılan olarak bir istek-yanıt sözleşmesini karşıladığına unutmayın <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> `false` . Bu nedenle `true` , yöntemi için tek yönlü bir anlaşma istiyorsanız, öznitelik özelliğinin değerini açıkça belirtmeniz gerekir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, tek yönlü çeşitli yöntemler içeren bir hizmet için bir sözleşmeyi tanımlar. Tek yönlü sözleşmeler dışındaki tüm yöntemleri sahip `Equals`, varsayılan olarak istek-yanıt ve bir sonuç döndürür.  
+ Aşağıdaki kod örneği, birkaç tek yönlü Yöntem içeren bir hizmet için bir sözleşme tanımlar. Tüm yöntemlerin tek yönlü sözleşmeleri vardır `Equals` ve bu, varsayılan olarak istek-yanıt verir ve bir sonuç döndürür.  
   
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
@@ -35,7 +35,7 @@ Bu konu, tek yönlü sözleşme kullanan yöntemleri oluşturmak için temel ad�
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Hizmetleri Tasarlama ve Uygulama](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [Nasıl yapılır: Bir hizmet sözleşmesini tanımlama](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Oturum](../../../../docs/framework/wcf/samples/session.md)
-- [Nasıl yapılır: Çift yönlü sözleşme oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Hizmetleri Tasarlama ve Uygulama](../designing-and-implementing-services.md)
+- [Nasıl yapılır: Bir Hizmet Anlaşması Tanımlama](../how-to-define-a-wcf-service-contract.md)
+- [Oturum](../samples/session.md)
+- [Nasıl yapılır: Çift Yönlü Sözleşme Oluşturma](how-to-create-a-duplex-contract.md)

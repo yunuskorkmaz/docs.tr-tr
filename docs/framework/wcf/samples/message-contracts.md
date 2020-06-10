@@ -2,28 +2,28 @@
 title: İleti Sözleşmeleri
 ms.date: 03/30/2017
 ms.assetid: e3df7c11-c653-4796-be47-26b09c35b691
-ms.openlocfilehash: 5483c75bfe7f72b2c6155d978c006fc2050c1e2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5467ee9ff807bca79330054c30ad424ea479a6a3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756370"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591689"
 ---
 # <a name="message-contracts"></a>İleti Sözleşmeleri
-Bu bölüm, Windows Communication Foundation (WCF) ileti sözleşmeleri gösteren örnekler içerir.  
+Bu bölüm Windows Communication Foundation (WCF) ' de ileti sözleşmelerini gösteren örnekler içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Varsayılan İleti Anlaşması](../../../../docs/framework/wcf/samples/default-message-contract.md)  
- Kullanıcı tanımlı özel bir ileti için ve hizmet işlemlerine geçirildiği hizmet gösterir.  
+ [Varsayılan İleti Sözleşmesi](default-message-contract.md)  
+ Hizmet işlemlerine yönelik özel kullanıcı tanımlı bir iletinin geçirildiği bir hizmeti gösterir.  
   
- Yazılmamış istek-yanıt  
- İleti sınıfını kullanma işlemi sözleşmelerini tanımlamak nasıl gösterir.  
+ Türsüz Istek-yanıt  
+ Ileti sınıfını kullanan işlem sözleşmelerinin nasıl tanımlanacağını gösterir.  
   
- [Açılmamış İletiler](../../../../docs/framework/wcf/samples/unwrapped-messages.md)  
- Açılmamış iletiler gösterir. Varsayılan olarak, ileti gövdesi, bir hizmet işlemi parametreleri sarmalanmış şekilde biçimlendirilir.  
+ [Açılmamış İletiler](unwrapped-messages.md)  
+ Sarmalanmamış iletileri gösterir. Varsayılan olarak, ileti gövdesi bir hizmet işlemine ait parametrelerin sarmalanması için biçimlendirilir.  
   
- [Kullanım ve Stil Özelliklerini Ayarlama](../../../../docs/framework/wcf/samples/setting-the-use-and-style-properties.md)  
- Üzerinde kullanım ve stil özelliklerini kullanmayı gösteren <xref:System.ServiceModel.XmlSerializerFormatAttribute> ve <xref:System.ServiceModel.DataContractFormatAttribute>.  
+ [Kullanım ve Stil Özelliklerini Ayarlama](setting-the-use-and-style-properties.md)  
+ Ve ' de kullanımı ve stil özelliklerinin nasıl kullanılacağını gösterir <xref:System.ServiceModel.XmlSerializerFormatAttribute> <xref:System.ServiceModel.DataContractFormatAttribute> .  
   
- [XmlReader Örneği](../../../../docs/framework/wcf/samples/xmlreader-sample.md)  
- Kullanarak bir ileti gövdesi işleme gösteren bir <xref:System.Xml.XmlReader>.
+ [XmlReader Örneği](xmlreader-sample.md)  
+ Kullanılarak ileti gövdesinin işlenme işlemini gösterir <xref:System.Xml.XmlReader> .

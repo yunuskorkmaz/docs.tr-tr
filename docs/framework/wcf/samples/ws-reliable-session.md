@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: 8898dfedc6ba7deceb5a6e6856b7c7e6ad79d047
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68123ba9a273bf2c1eaa7b3747930ebca386064b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143505"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589701"
 ---
 # <a name="ws-reliable-session"></a>WS Güvenilir Oturum
-Bu örnek, güvenilir oturumların kullanımını göstermektedir. Güvenilir oturumlar, güvenilir mesajlaşma ve oturumlar için destek sağlar. Güvenilir ileti, iletişimi başarısızlığa göre yeniden dener ve iletilerin sırayla gelmesi gibi teslimat güvencelerinin belirtilmesini sağlar. Oturumlar, istemciler için aramalar arasındaki durumu korur. Örnek, istemci durumunu korumak için oturumlar uygular ve sipariş içi teslimat güvencelerini belirtir.  
+Bu örnek, güvenilir oturumların kullanımını gösterir. Güvenilir Oturumlar, güvenilir mesajlaşma ve oturumlar için destek sağlar. Güvenilir Mesajlaşma, hata durumunda iletişim kurmayı yeniden dener ve mesajların, iletilerin sıralı gelişmesi gibi belirli bir şekilde belirtilmesini sağlar. Oturumlar, çağrılar arasındaki istemciler için durumu korur. Örnek, istemci durumunun sürdürülmesi için oturumları uygular ve sıralı teslim bildirimlerini belirtir.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsReliableSession`  
   
- Bu örnek, bir hesap makinesi hizmeti uygulayan [Başlarken'e](../../../../docs/framework/wcf/samples/getting-started-sample.md) dayanır. Güvenilir oturum özellikleri etkinleştirilir ve istemci ve hizmet için uygulama yapılandırma dosyalarında yapılandırılır.  
+ Bu örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md) Başlarken hizmetini temel alır. Güvenilir oturum özellikleri, istemci ve hizmet için uygulama yapılandırma dosyalarında etkinleştirilir ve yapılandırılır.  
   
- Bu örnekte, hizmet Internet Information Services (IIS) barındırılır ve istemci bir konsol uygulamasıdır (.exe).  
+ Bu örnekte, hizmet Internet Information Services (IIS) içinde barındırılır ve istemci bir konsol uygulaması (. exe).  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
- Örnek `wsHttpBinding`kullanır. Bağlama, hem istemci hem de hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, aşağıdaki örnek yapılandırmada `binding` gösterildiği gibi uç nokta öğesi özniteliği belirtilir.  
+ Örnek öğesini kullanır `wsHttpBinding` . Bağlama, hem istemci hem de hizmet için yapılandırma dosyalarında belirtilir. Bağlama türü, `binding` Aşağıdaki örnek yapılandırmada gösterildiği gibi Endpoint öğesinin özniteliğinde belirtilir.  
   
 ```xml  
 <endpoint address=""  
@@ -39,7 +39,7 @@ Bu örnek, güvenilir oturumların kullanımını göstermektedir. Güvenilir ot
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Uç nokta, `bindingConfiguration` "Binding1" adlı bağlayıcı yapılandırmaya başvuran bir öznitelik içerir. Bağlama `enabled` [ \<yapılandırması, güvenilir Session>](../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md) özniteliğini `true`'ne ayarlayarak güvenilir oturumlar sağlar. Sipariş edilen oturumlar için teslimat güvenceleri, sipariş `true` edilen `false`özniteliği ayarlayarak veya . Varsayılan değer: `true`.  
+ Uç nokta, `bindingConfiguration` "Binding1" adlı bağlama yapılandırmasına başvuran bir öznitelik içeriyor. Bağlama yapılandırması `enabled` , öğesinin özniteliğini olarak ayarlayarak güvenilir oturumlara olanak sağlar [\<reliableSession>](../../configure-apps/file-schema/wcf/reliablesession.md) `true` . Sıralı oturumlar için teslim kesintileri, sıralanmış özniteliği veya olarak ayarlanarak denetlenir `true` `false` . Varsayılan değer: `true`.  
   
 ```xml  
 <bindings>  
@@ -51,7 +51,7 @@ Bu örnek, güvenilir oturumların kullanımını göstermektedir. Güvenilir ot
 </bindings>  
 ```  
   
- Hizmet uygulama sınıfı, <xref:System.ServiceModel.InstanceContextMode.PerSession> aşağıdaki örnek kodda gösterildiği gibi, her istemci için ayrı bir sınıf örneği korumak için instancing uygular.  
+ Hizmet uygulama sınıfı, <xref:System.ServiceModel.InstanceContextMode.PerSession> Aşağıdaki örnek kodda gösterildiği gibi her istemci için ayrı bir sınıf örneği tutmak üzere örnek oluşturma uygular.  
 
 ```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)] public class CalculatorService : ICalculator  
@@ -60,7 +60,7 @@ Bu örnek, güvenilir oturumların kullanımını göstermektedir. Güvenilir ot
 }  
 ```
   
- Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemciyi kapatmak için istemci penceresinde ENTER tuşuna basın.  
+ Örneği çalıştırdığınızda, işlem istekleri ve yanıtları istemci konsol penceresinde görüntülenir. İstemcisini kapatmak için istemci penceresinde ENTER tuşuna basın.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -71,16 +71,16 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Aşağıdaki komutu kullanarak 4.0 ASP.NET yükleyin.  
+1. Aşağıdaki komutu kullanarak ASP.NET 4,0 ' ü yükler.  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+2. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-4. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+4. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  

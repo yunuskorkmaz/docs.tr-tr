@@ -2,19 +2,19 @@
 title: 'Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: d420ac8fcb98ddec195093be8ae25be37443da4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5aade8e3fb2049521ed06f5f1a148be2e4636e36
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597117"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Nasıl yapılır: WebSockets Üzerinden İletişim Kuran Bir WCF Hizmeti Oluşturma
-WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref:System.ServiceModel.NetHttpBinding> bağlama kullanabilirsiniz.  WebSockets hizmet sözleşmesi <xref:System.ServiceModel.NetHttpBinding> bir geri arama sözleşmesi tanımlar belirler zaman kullanılır. Bu konu, WebSockets üzerinden iletişim kurmak <xref:System.ServiceModel.NetHttpBinding> için kullanan bir WCF hizmeti nin ve istemcinin nasıl uygulanacağını açıklar.  
+WCF Hizmetleri ve istemcileri, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için bağlamayı kullanabilir.  WebSockets, <xref:System.ServiceModel.NetHttpBinding> hizmet sözleşmesinin bir geri çağırma anlaşması tanımladığını belirlediğinde kullanılır. Bu konuda, <xref:System.ServiceModel.NetHttpBinding> WebSockets üzerinden iletişim kurmak için kullanan BIR WCF hizmeti ve istemcisinin nasıl uygulanacağı açıklanmaktadır.  
   
-### <a name="define-the-service"></a>Hizmeti Tanımla  
+### <a name="define-the-service"></a>Hizmeti tanımlama  
   
-1. Geri arama sözleşmesi tanımlama  
+1. Bir geri çağırma sözleşmesi tanımlama  
   
     ```csharp  
     [ServiceContract]  
@@ -25,9 +25,9 @@ WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref
         }  
     ```  
   
-     Bu sözleşme, hizmetin istemciye ileti göndermesine izin vermek için istemci uygulaması tarafından uygulanacaktır.  
+     Bu sözleşme, hizmetin istemciye geri ileti göndermesini sağlamak için istemci uygulaması tarafından uygulanır.  
   
-2. Hizmet sözleşmesini tanımlayın `IStockQuoteCallback` ve arabirimi geri arama sözleşmesi olarak belirtin.  
+2. Hizmet sözleşmesini tanımlayın ve `IStockQuoteCallback` arabirimi geri çağırma sözleşmesi olarak belirtin.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -59,7 +59,7 @@ WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref
     }  
     ```  
   
-     Hizmet işlemi `StartSendingQuotes` eşzamanlı çağrı olarak uygulanır. Geri arama kanalını `OperationContext` kullanarak geri alma kanalını alıyoruz ve kanal açıksa, geri arama kanalında bir async araması yapıyoruz.  
+     Hizmet işlemi `StartSendingQuotes` zaman uyumsuz bir çağrı olarak uygulanır. Kullanarak geri çağırma kanalını alıyoruz `OperationContext` ve kanal açıksa geri çağırma kanalında zaman uyumsuz bir çağrı yaptık.  
   
 4. Hizmeti yapılandırma  
   
@@ -90,11 +90,11 @@ WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref
     </configuration>  
     ```  
   
-     Hizmetin yapılandırma dosyası WCF'nin varsayılan uç noktalarına dayanır. Bölüm, `<protocolMapping>` oluşturulan varsayılan uç `NetHttpBinding` noktalar için kullanılması gerektiğini belirtmek için kullanılır.  
+     Hizmetin yapılandırma dosyası WCF 'nin varsayılan uç noktalarını kullanır. `<protocolMapping>`Bölümü, `NetHttpBinding` oluşturulan varsayılan uç noktalar için kullanılması gerektiğini belirtmek için kullanılır.  
   
-### <a name="define-the-client"></a>İstemciyi Tanımla  
+### <a name="define-the-client"></a>Istemciyi tanımlama  
   
-1. Geri arama sözleşmesini uygulayın.  
+1. Geri çağırma sözleşmesini uygulayın.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -106,7 +106,7 @@ WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref
             }  
     ```  
   
-     Geri arama sözleşmesi işlemi eşzamanlı bir yöntem olarak uygulanır.  
+     Geri arama sözleşmesi işlemi, zaman uyumsuz bir yöntem olarak uygulanır.  
   
     1. İstemci kodunu uygulayın.  
   
@@ -131,7 +131,7 @@ WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref
         }  
         ```  
   
-         CallbackHandler burada netlik için tekrarlanır. İstemci uygulaması yeni bir Örnek Bağlam oluşturur ve geri arama arabiriminin uygulanmasını belirtir. Daha sonra, yeni oluşturulan InstanceContext'a başvuru gönderen proxy sınıfının bir örneğini oluşturur. İstemci hizmeti aradığında, hizmet belirtilen geri arama sözleşmesini kullanarak istemciyi arar.  
+         CallbackHandler, açıklık açısından tekrarlanıyor. İstemci uygulaması yeni bir InstanceContext oluşturur ve geri çağırma arabiriminin uygulamasını belirtir. Ardından, yeni oluşturulan InstanceContext öğesine bir başvuru gönderen proxy sınıfının bir örneğini oluşturur. İstemci hizmeti çağırdığında hizmet, belirtilen geri çağırma sözleşmesini kullanarak istemciyi çağırır.  
   
     2. İstemciyi yapılandırma  
   
@@ -158,10 +158,10 @@ WCF hizmetleri ve istemcileri WebSockets üzerinden iletişim kurmak için <xref
         </configuration>  
         ```  
   
-         İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, sadece `NetHttpBinding`istemci yan uç noktasını kullanarak belirtin.  
+         İstemci yapılandırmasında yapmanız gereken özel bir şey yoktur, kullanarak istemci tarafı uç noktasını belirtmeniz yeterlidir `NetHttpBinding` .  
   
 ## <a name="example"></a>Örnek  
- Bu konuda kullanılan kodun tamamı aşağıda veda edilebedilir.  
+ Bu konuda kullanılan kodun tamamı aşağıda verilmiştir.  
   
 ```csharp  
 // IStockQuoteService.cs  
@@ -320,5 +320,5 @@ namespace Client
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Zaman Uyumlu ve Zaman Uyumsuz İşlemler](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
-- [NetHttpBinding Kullanma](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+- [Zaman Uyumlu ve Zaman Uyumsuz İşlemler](../synchronous-and-asynchronous-operations.md)
+- [NetHttpBinding Kullanma](using-the-nethttpbinding.md)

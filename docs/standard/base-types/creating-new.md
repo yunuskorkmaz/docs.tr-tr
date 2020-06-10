@@ -1,5 +1,6 @@
 ---
 title: .NET ' te yeni dizeler oluşturma
+description: Birkaç dizeyi, dize dizilerini veya .NET içindeki nesneleri birleştiren atama, sınıf oluşturucuları veya System. String yöntemlerini kullanarak dizeler oluşturmayı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-ms.openlocfilehash: a5dfe6429ac135202874f0524a252a7af900bd8d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b44d0f8e1717ead72e28f0be644644961d1482b6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279018"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596454"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET ' te yeni dizeler oluşturma
 .NET Framework, dizelerin basit atama kullanılarak oluşturulmasına izin verir ve ayrıca bir dizi farklı parametre kullanarak dize oluşturmayı desteklemek için bir sınıf oluşturucusunu aşırı yükler. .NET Framework Ayrıca <xref:System.String?displayProperty=nameWithType> birkaç dizeyi, dize dizilerini veya nesneleri birleştirerek yeni dize nesneleri oluşturan sınıfta çeşitli yöntemler sağlar.  

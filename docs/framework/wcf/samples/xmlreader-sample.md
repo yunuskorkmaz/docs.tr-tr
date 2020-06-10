@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: bb1cd02a60ec0ba62e1d0d9aa3560bbba0aaf668
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 470a3ad0d3241e51676928b77dd93e5d31249515
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714535"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594822"
 ---
 # <a name="xmlreader-sample"></a>XmlReader Örneği
 
-XmlReader örneği bir <xref:System.Xml.XmlReader>kullanarak bir ileti gövdesinin işlenmesini gösterir. Örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](../../../../docs/framework/wcf/samples/getting-started-sample.md)Başlarken ' i temel alır. Birlikte eklenecek bir değer dizisini içeren bir iletiyi kabul eden `Sum`ek bir hizmet işlemi eklenmiştir. Hizmet, <xref:System.Xml.XmlReader>kullanarak iletiyi okur.
+XmlReader örneği, kullanarak bir ileti gövdesinin işlenmesini gösterir <xref:System.Xml.XmlReader> . Örnek, bir Hesaplayıcı hizmeti uygulayan [kullanmaya](getting-started-sample.md)Başlarken ' i temel alır. `Sum`Birlikte eklenecek bir değer dizisini içeren bir iletiyi kabul eden ek bir hizmet işlemi eklenmiştir. Hizmet, kullanarak iletiyi okur <xref:System.Xml.XmlReader> .
 
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.
 
-Hesaplayıcı arabirimi, aşağıdaki örnek kodda gösterildiği gibi <xref:System.ServiceModel.Channels.Message> parametresini kabul eden `Sum` adlı bir hizmet işlemi içerir.
+Hesaplayıcı arabirimi, `Sum` <xref:System.ServiceModel.Channels.Message> Aşağıdaki örnek kodda gösterildiği gibi, parametresini kabul eden adlı bir hizmet işlemi içerir.
 
 ```csharp
 public interface ICalculator
@@ -36,7 +36,7 @@ public interface ICalculator
 }
 ```
 
-İstemci, önce bir tamsayı değerleri dizisi oluşturup sonra diziden bir ileti oluşturup sonra oluşturulan iletiyi kullanarak aşağıdaki örnek kodda gösterildiği gibi `Sum` yöntemini çağırarak `Sum` erişir.
+İstemci ilk olarak `Sum` bir tamsayı değerleri dizisi oluşturup diziden bir ileti oluşturur ve ardından `Sum` Aşağıdaki örnek kodda gösterildiği gibi oluşturulan iletiyi kullanarak yöntemi çağırır.
 
 ```csharp
 CalculatorClient client = new CalculatorClient();
@@ -54,7 +54,7 @@ using (new OperationContextScope(client.InnerChannel))
 }
 ```
 
-Hizmette, hizmet işleminin uygulanması `Sum` Sum değerleri arasında ilerlemek için bir <xref:System.Xml.XmlReader> nesnesi kullanarak ileti gövdesine erişir. <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> yöntemi, aşağıdaki örnek kodda gösterildiği gibi ileti gövdesine erişmek için çağrılır.
+Hizmette, hizmet işleminin uygulanması, `Sum` <xref:System.Xml.XmlReader> toplanacak değerleri yinelemek için bir nesnesi kullanarak ileti gövdesine erişir. <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>Yöntemi, aşağıdaki örnek kodda gösterildiği gibi ileti gövdesine erişmek için çağrılır.
 
 ```csharp
 public int Sum(Message message)
@@ -95,17 +95,17 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için
 
-1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.
 
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak Için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)konusundaki yönergeleri izleyin.
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](../../../../docs/framework/wcf/samples/running-the-samples.md)bölümündeki yönergeleri izleyin.
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.
 
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve [!INCLUDE[wf1](../../../../includes/wf1-md.md)] örneklerini indirmek üzere [.NET Framework 4 için Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek, aşağıdaki dizinde bulunur.
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`

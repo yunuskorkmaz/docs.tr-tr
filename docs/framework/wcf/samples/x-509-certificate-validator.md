@@ -2,12 +2,12 @@
 title: X.509 Sertifika Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ba73381bb6211dcbd1ddad1457f9ae8611008d43
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141208"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594835"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Sertifika Doğrulayıcı
 
@@ -23,7 +23,7 @@ Note: herkes kendi kendine verilen bir sertifika yapılandırabileceğinden, hiz
 
 - Sunucunun sunucu X. 509.440 sertifikası kullanılarak kimlik doğrulaması yapılır.
 
-Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, varsayılan olarak ve istemci sertifikası `wsHttpBinding` kimlik doğrulamasını kullanan `WSSecurity` bir standart ile yapılandırılır. Hizmet davranışı, istemci X. 509.440 sertifikalarını doğrulama sınıfının türüyle birlikte doğrulamak için özel modu belirtir. Davranış, serviceCertificate öğesini kullanarak sunucu sertifikasını da belirtir. Sunucu sertifikasının, `SubjectName` [ \<ServiceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)için `findValue` aynı değeri içermesi vardır.
+Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, `wsHttpBinding` Varsayılan olarak `WSSecurity` ve istemci sertifikası kimlik doğrulamasını kullanan bir standart ile yapılandırılır. Hizmet davranışı, istemci X. 509.440 sertifikalarını doğrulama sınıfının türüyle birlikte doğrulamak için özel modu belirtir. Davranış, serviceCertificate öğesini kullanarak sunucu sertifikasını da belirtir. Sunucu sertifikasının, içindeki ile için aynı değeri içermesi vardır `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
   <system.serviceModel>
@@ -95,7 +95,7 @@ Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle i
       </system.serviceModel>
 ```
 
-İstemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama uygun mod ve iletiyle `clientCredentialType`yapılandırılır.
+İstemci uç noktası yapılandırması, bir yapılandırma adından, hizmet uç noktası için mutlak bir adresten, bağlamaya ve sözleşmeyle oluşur. İstemci bağlama uygun mod ve iletiyle yapılandırılır `clientCredentialType` .
 
 ```xml
 <system.serviceModel>
@@ -199,7 +199,7 @@ catch (Exception e)
 }
 ```
 
-Bu örnek, sertifikaları doğrulamak için özel bir X509CertificateValidator kullanır. Örnek, öğesinden <xref:System.IdentityModel.Selectors.X509CertificateValidator>türetilmiş CustomX509CertificateValidator uygular. Daha fazla bilgi <xref:System.IdentityModel.Selectors.X509CertificateValidator> için belgelerine bakın. Bu özel Doğrulayıcı örneği, aşağıdaki kodda gösterildiği gibi kendi kendine yayınlanan herhangi bir X. 509.952 sertifikasını kabul etmek için Validate metodunu uygular.
+Bu örnek, sertifikaları doğrulamak için özel bir X509CertificateValidator kullanır. Örnek, öğesinden türetilmiş CustomX509CertificateValidator uygular <xref:System.IdentityModel.Selectors.X509CertificateValidator> . <xref:System.IdentityModel.Selectors.X509CertificateValidator>Daha fazla bilgi için belgelerine bakın. Bu özel Doğrulayıcı örneği, aşağıdaki kodda gösterildiği gibi kendi kendine yayınlanan herhangi bir X. 509.952 sertifikasını kabul etmek için Validate metodunu uygular.
 
 ```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator
@@ -305,7 +305,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 #### <a name="to-set-up-and-build-the-sample"></a>Örneği ayarlamak ve derlemek için
 
-1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](../../../../docs/framework/wcf/samples/building-the-samples.md)bölümündeki yönergeleri izleyin.
+1. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.
 
 2. Örneği tek veya bir çoklu bilgisayar yapılandırmasında çalıştırmak için aşağıdaki yönergeleri kullanın.
 
@@ -332,13 +332,13 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 4. İstemci programı dosyalarını istemci bilgisayardaki istemci dizinine kopyalayın. Ayrıca Setup. bat, Cleanup. bat ve ImportServiceCert. bat dosyalarını istemciye kopyalayın.
 
-5. Sunucusunda, yönetici ayrıcalıklarıyla açılan `setup.bat service` bir Visual Studio için geliştirici komut istemi çalıştırın. `service` Bağımsız değişkeniyle birlikte çalıştırmak `setup.bat` , bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.
+5. Sunucusunda, `setup.bat service` yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut istemi çalıştırın. `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `service` bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.
 
-6. Service. exe. config dosyasını, bilgisayarın tam etki alanı adıyla aynı olan yeni `findValue` sertifika adını ( [ \<ServiceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)özniteliğinde) yansıtacak şekilde düzenleyin. Ayrıca, \<Service>/\<BaseAddresses> öğesindeki bilgisayar adını localhost 'dan tam olarak tam adı olacak şekilde değiştirin.
+6. Service. exe. config dosyasını `findValue` , [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) bilgisayarın tam etki alanı adıyla aynı olan yeni sertifika adını (içindeki özniteliğinde) yansıtacak şekilde düzenleyin. Ayrıca, \<service> / \<baseAddresses> öğesindeki öğe adını localhost 'dan, hizmet bilgisayarınızın tam adına değiştirin.
 
 7. Service. cer dosyasını hizmet dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.
 
-8. İstemcisinde, yönetici ayrıcalıklarıyla açılan `setup.bat client` bir Visual Studio için geliştirici komut istemi çalıştırın. Bağımsız `setup.bat` değişkeniyle birlikte `client` çalıştırmak, Client.com adlı bir istemci sertifikası oluşturur ve istemci sertifikasını Client. cer adlı bir dosyaya aktarır.
+8. İstemcisinde, `setup.bat client` yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut istemi çalıştırın. `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `client` Client.com adlı bir istemci sertifikası oluşturur ve Istemci sertifikasını Client. cer adlı bir dosyaya aktarır.
 
 9. İstemci bilgisayardaki Client. exe. config dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. Localhost 'u sunucunun tam etki alanı adıyla değiştirerek bunu yapın.
 
@@ -357,4 +357,4 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 1. Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın. Bu, sunucu ve istemci sertifikalarını sertifika deposundan kaldırır.
 
 > [!NOTE]
-> Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` örneğin:. `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`
+> Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .

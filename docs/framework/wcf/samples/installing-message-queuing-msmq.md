@@ -2,12 +2,12 @@
 title: İleti Kuyruğa Alma Yükleme (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 1bf79ed5dbcb9f2ace903260cc440e77df3aef09
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921098"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592300"
 ---
 # <a name="installing-message-queuing-msmq"></a>İleti Kuyruğa Alma Yükleme (MSMQ)
 Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl yükleneceği gösterilmektedir.  
@@ -31,7 +31,7 @@ Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>Windows 7 veya Windows Vista 'da Message Queuing 4,0 yüklemek için  
   
-1. **Denetim Masası**'nı açın.  
+1. **Denetim Masası 'nı**açın.  
   
 2. **Programlar** ' a ve ardından **Programlar ve Özellikler**' ın altında, **Windows özelliklerini aç ve Kapat**' a tıklayın.  
   
@@ -41,13 +41,13 @@ Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl
   
     - MSMQ HTTP desteği.  
   
-4. **Tamam**'ı tıklatın.  
+4. **Tamam**'a tıklayın.  
   
 5. Bilgisayarı yeniden başlatmanız istenirse, yüklemeyi gerçekleştirmek için **Tamam** ' ı tıklatın.  
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>Message Queuing 3,0 ' i Windows XP ve Windows Server 2003 ' ye yüklemek için  
   
-1. **Denetim Masası**'nı açın.  
+1. **Denetim Masası 'nı**açın.  
   
 2. **Program Ekle Kaldır** ' a ve ardından **Windows Bileşenleri Ekle**' ye tıklayın.  
   
@@ -64,4 +64,4 @@ Aşağıdaki yordamlarda Message Queuing 4,0 ve Message Queuing 3,0 ' nin nasıl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Kurulum Yönergeleri](../../../../docs/framework/wcf/samples/set-up-instructions.md)
+- [Kurulum Yönergeleri](set-up-instructions.md)

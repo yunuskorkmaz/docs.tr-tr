@@ -2,24 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 2194292d-bf5f-4aef-9336-cd3c4795cb71
-ms.openlocfilehash: d8acdb2f94e752860025ee2963aa78682b43b079
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 50dd3070525bbc6d36956b25dee587ec7864d3ff
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997899"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594315"
 ---
 # <a name="microsofttransactionstransactionbridgepreparedmessageretry"></a>Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
-Yanıt vermeyen bir düzenleyiciye hazırlıklı ileti yeniden gönderildi.  
+Hazırlanmış bir ileti yeniden denemesi, yanıt vermeyen bir düzenleyiciye gönderildi.  
   
 ## <a name="description"></a>Açıklama  
- Yerel hareket yöneticisi belirli bir süre içinde bir yanıt almadığı için üstün bir düzenleyici için hazırlanmış bir iletisini yeniden göndermeniz gerekirse izlenen /  
+ Yerel Işlem yöneticisinin belirli bir süre içinde yanıt almadığı için hazırlanmış bir iletiyi bir üstün düzenleyiciye yeniden göndermesi gerekiyorsa izleniyor  
   
 ## <a name="troubleshooting"></a>Sorun giderme  
- Olası ağ veya tarihte teslim edilen gelen yanıt engelleyen ürün sorunları araştırın.  Bu iletiler birçoğu görülürse, altyapı sorunları veya aşırı uzun yanıt süreleri belirtebilirsiniz. Her iki sorun sistemi içinde işlemlerinin aktarım hızını ciddi ölçüde düşürüyor.  
+ Yanıtın zamanında teslim edilmesini önleyen olası ağ veya ürün sorunlarını araştırın.  Bu mesajların birçoğu görülemiyorsa, altyapı sorunları veya anormal bir şekilde uzun yanıt süreleri belirtebilir. Her iki sorun da sistem içindeki işlemlerin verimini büyük ölçüde azaltır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

@@ -2,41 +2,41 @@
 title: Seri Hale Getirilebilir Türler
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e65fcb93c5c36bb289b825cef58b3adc6f5155f5
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591666"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586110"
 ---
 # <a name="serializable-types"></a>Seri Hale Getirilebilir Türler
-Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> tüm herkese görünür türler seri hale getirir. Tüm ortak okuma/yazma özellikleri ve türünde alanlar serileştirilir.  
+Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> tüm herkese açık görünen türler seri hale getirir. Türün tüm genel okuma/yazma özellikleri ve alanları serileştirilir.  
   
- Uygulayarak, varsayılan davranışı değiştirebilirsiniz <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> öznitelikleri türler ve üyeler için bu özellik, denetiminde değildir ve öznitelikler eklemek için değiştirilemez türlerine sahip durumlarda yararlı olabilir. <xref:System.Runtime.Serialization.DataContractSerializer> "İşaretsiz" gibi türlerini tanır.  
+ <xref:System.Runtime.Serialization.DataContractAttribute>Ve <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliklerini türlerine ve üyelerine uygulayarak varsayılan davranışı değiştirebilirsiniz. Bu özellik, denetiminizin altında olmayan türlerinizin bulunduğu durumlarda yararlı olabilir ve öznitelik eklemek için değiştirilemez. <xref:System.Runtime.Serialization.DataContractSerializer>Bu tür "işaretsiz" türleri tanır.  
   
 ## <a name="serialization-defaults"></a>Serileştirme Varsayılanları  
- Uygulayabileceğiniz <xref:System.Runtime.Serialization.DataContractAttribute> ve <xref:System.Runtime.Serialization.DataMemberAttribute> açıkça denetlemek veya tür ve üyelerinin seri hale getirme özelleştirmek için öznitelikleri. Ayrıca, özel alanları bu öznitelikleri uygulayabilirsiniz. Ancak, bu öznitelikleri ile işaretlenmemiş türler bile serileştirilmiş seri durumdan ve. Aşağıdaki kurallar ve özel durumlar geçerlidir:  
+ <xref:System.Runtime.Serialization.DataContractAttribute> <xref:System.Runtime.Serialization.DataMemberAttribute> Türlerin ve üyelerin serileştirmesini açıkça denetlemek veya özelleştirmek için ve özniteliklerini uygulayabilirsiniz. Ayrıca, bu öznitelikleri özel alanlara de uygulayabilirsiniz. Ancak, bu özniteliklerle işaretlenmeyen türler bile serileştirilir ve seri durumdan çıkarılamaz. Aşağıdaki kurallar ve özel durumlar geçerlidir:  
   
-- <xref:System.Runtime.Serialization.DataContractSerializer> Öznitelikleri yeni oluşturulan türlerinin varsayılan özelliklerini kullanarak bir veri anlaşması türlerinden algılar.  
+- , <xref:System.Runtime.Serialization.DataContractSerializer> Yeni oluşturulan türlerin varsayılan özelliklerini kullanarak öznitelikleri olmayan türlerden bir veri sözleşmesini ele anlar.  
   
-- Tüm genel alanlar ve Özellikler ortak `get` ve `set` yöntemleri serileştirilme, uyguladığınız sürece <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> özniteliği bu üye için.  
+- `get` `set` Özniteliği bu üyeye uygulamadığınız takdirde ortak ve yöntemlere sahip tüm genel alanlar ve Özellikler sıralanır <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> .  
   
-- Serileştirme semantiği gereksinimlerine benzer <xref:System.Xml.Serialization.XmlSerializer>.  
+- Serileştirme semantiği ile benzerdir <xref:System.Xml.Serialization.XmlSerializer> .  
   
-- Yalnızca genel tür parametreleri olmayan oluşturucular ile işaretlenmemiş türlerinde serileştirilir. Bu kuralın istisnası <xref:System.Runtime.Serialization.ExtensionDataObject> ile kullanılan <xref:System.Runtime.Serialization.IExtensibleDataObject> arabirimi.  
+- İşaretsiz türlerde, yalnızca parametreleri olmayan oluşturuculara sahip ortak türler serileştirilir. Bu kuralın özel durumu <xref:System.Runtime.Serialization.ExtensionDataObject> arabirimle birlikte kullanılır <xref:System.Runtime.Serialization.IExtensibleDataObject> .  
   
-- Salt okunur alanlar, özellikler olmadan bir `get` veya `set` yöntemi ve iç veya özel özelliklerle `set` veya `get` yöntemleri seri değildir. Bu tür özelliklerini göz ardı edilir ve hiçbir özel durum, söz konusu olduğunda salt alma koleksiyon hariç.  
+- Salt okuma alanları, or yöntemi olmayan özellikler `get` `set` ve iç ya da özel `set` veya yöntemlerle Özellikler `get` serileştirilmez. Bu tür özellikler yok sayılır ve salt al koleksiyonlar olması dışında hiçbir özel durum oluşturulmaz.  
   
-- <xref:System.Xml.Serialization.XmlSerializer> öznitelikler (gibi `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`, vb.) göz ardı edilir.  
+- <xref:System.Xml.Serialization.XmlSerializer>Öznitelikler (örneğin,,,, vb `XmlElement` `XmlAttribute` `XmlIgnore` `XmlInclude` .) yoksayılır.  
   
-- Geçerli <xref:System.Runtime.Serialization.DataContractAttribute> verilen tür, seri hale getirici özniteliği bu türün herhangi bir üyesi yok sayar <xref:System.Runtime.Serialization.DataMemberAttribute> özniteliği uygulanır.  
+- <xref:System.Runtime.Serialization.DataContractAttribute>Özniteliği belirli bir türe uygulamazsanız, seri hale getirici özniteliğin uygulandığı bu türdeki herhangi bir üyeyi yoksayar <xref:System.Runtime.Serialization.DataMemberAttribute> .  
   
-- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A> Özelliği ile işaretlenmemiş türlerinde desteklenir <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği. Buna aşağıdakilerin desteklenmesi dahildir <xref:System.Runtime.Serialization.KnownTypeAttribute> işaretsiz türleri özniteliği.  
+- <xref:System.Runtime.Serialization.DataContractSerializer.KnownTypes%2A>Özelliği, özniteliğiyle işaretlenmemiş türlerde desteklenir <xref:System.Runtime.Serialization.DataContractAttribute> . Bu, <xref:System.Runtime.Serialization.KnownTypeAttribute> işaretsiz türlerde özniteliği için destek içerir.  
   
-- "Seri hale getirme işlemi Genel üyeler, özellikler veya alanlar için geri çevirmek için", geçerli <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> özniteliği bu üye için.  
+- Ortak Üyeler, özellikler veya alanlar için serileştirme işleminin "kabul etmek" için, <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> Bu üyeye özniteliğini uygulayın.  
   
 ## <a name="inheritance"></a>Devralma  
- İşaretsiz türleri (olmadan türleri <xref:System.Runtime.Serialization.DataContractAttribute> özniteliği) bu özniteliği olan türlerinden devraldığına; ancak tersi izin verilmez: öznitelik türleriyle işaretsiz türlerden devralamaz. Bu kural, öncelikli olarak .NET Framework'ün önceki sürümlerinde yazılan kod ile geriye dönük uyumluluk sağlamak için zorlanır.  
+ İşaretsiz türler (özniteliği olmayan türler <xref:System.Runtime.Serialization.DataContractAttribute> ), bu özniteliğe sahip olan türlerden devralınabilir; ancak, ters izin verilmez: özniteliği olan türler işaretsiz türlerden devralınabilir. Bu kural öncelikle .NET Framework önceki sürümlerinde yazılmış kodla geriye dönük uyumluluk sağlamak için zorlanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
@@ -44,4 +44,4 @@ Varsayılan olarak, <xref:System.Runtime.Serialization.DataContractSerializer> t
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Veri Anlaşması Seri Hale Getirici Tarafından Desteklenen Türler](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](types-supported-by-the-data-contract-serializer.md)

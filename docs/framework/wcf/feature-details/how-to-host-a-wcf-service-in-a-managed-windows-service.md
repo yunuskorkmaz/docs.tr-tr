@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: 698a5134683341fedf2a37f7d6383770e14c232c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964798"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593184"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma
 
@@ -18,7 +18,7 @@ Bu konuda, bir Windows hizmeti tarafından barındırılan Windows Communication
 
 Windows Hizmetleri, Microsoft Yönetim Konsolu 'nda (MMC) Microsoft. ManagementConsole. Snapın ile yönetilebilir ve sistem önyüklendiğinde otomatik olarak başlayacak şekilde yapılandırılabilir. Bu barındırma seçeneği, hizmet işlem ömrünün Windows Hizmetleri için hizmet denetimi Yöneticisi (SCM) tarafından denetlenmesi için bir WCF hizmetini yönetilen bir Windows hizmeti olarak barındıran uygulama etki alanını (AppDomain) kaydetmeden oluşur.
 
-Hizmet kodu, hizmet sözleşmesinin bir hizmet uygulamasını, bir Windows hizmeti sınıfını ve bir yükleyici sınıfını içerir. Hizmet uygulama sınıfı `CalculatorService`, bir WCF hizmetidir. `CalculatorWindowsService` bir Windows hizmetidir. Bir Windows hizmeti olarak nitelendirmek için, sınıf `ServiceBase` devralır ve `OnStart` ve `OnStop` yöntemlerini uygular. `OnStart`, `CalculatorService` türü için <xref:System.ServiceModel.ServiceHost> oluşturulur ve açılır. `OnStop`, hizmet durdurulur ve bırakıldı. Ana bilgisayar Ayrıca, uygulama ayarlarında yapılandırılan hizmet ana bilgisayarı için bir temel adres sağlamaktan da sorumludur. <xref:System.Configuration.Install.Installer>devralan Yükleyici sınıfı, programın InstallUtil. exe aracı tarafından bir Windows hizmeti olarak yüklenmesine izin verir.
+Hizmet kodu, hizmet sözleşmesinin bir hizmet uygulamasını, bir Windows hizmeti sınıfını ve bir yükleyici sınıfını içerir. Hizmet uygulama sınıfı, `CalculatorService` BIR WCF hizmetidir. , `CalculatorWindowsService` Bir Windows hizmetidir. Bir Windows hizmeti olarak nitelendirmek için, sınıfı öğesinden devralır `ServiceBase` ve `OnStart` ve yöntemlerini uygular `OnStop` . İçinde `OnStart` , <xref:System.ServiceModel.ServiceHost> türü için oluşturulur `CalculatorService` ve açılır. `OnStop`' De, hizmet durdurulur ve bırakıldı. Ana bilgisayar Ayrıca, uygulama ayarlarında yapılandırılan hizmet ana bilgisayarı için bir temel adres sağlamaktan da sorumludur. Öğesinden devralan Yükleyici sınıfı, <xref:System.Configuration.Install.Installer> programın InstallUtil. exe aracı tarafından bir Windows hizmeti olarak yüklenmesine izin verir.
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>Hizmeti oluşturun ve barındırma kodunu sağlayın
 
@@ -26,7 +26,7 @@ Hizmet kodu, hizmet sözleşmesinin bir hizmet uygulamasını, bir Windows hizme
 
 2. Program.cs olarak yeniden adlandırın.
 
-3. Ad alanını `Microsoft.ServiceModel.Samples`değiştirin.
+3. Ad alanını olarak değiştirin `Microsoft.ServiceModel.Samples` .
 
 4. Aşağıdaki derlemelere başvurular ekleyin:
 
@@ -41,37 +41,37 @@ Hizmet kodu, hizmet sözleşmesinin bir hizmet uygulamasını, bir Windows hizme
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]
 
-6. Aşağıdaki kodda gösterildiği gibi `ICalculator` hizmet sözleşmesini tanımlayın.
+6. `ICalculator`Hizmet sözleşmesini aşağıdaki kodda gösterildiği gibi tanımlayın.
 
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]
 
-7. Hizmet sözleşmesini, aşağıdaki kodda gösterildiği gibi `CalculatorService` adlı bir sınıfta uygulayın.
+7. Hizmet sözleşmesini `CalculatorService` aşağıdaki kodda gösterildiği gibi adlı bir sınıfta uygulayın.
 
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8. <xref:System.ServiceProcess.ServiceBase> sınıfından devralan `CalculatorWindowsService` adlı yeni bir sınıf oluşturun. <xref:System.ServiceModel.ServiceHost> örneğine başvurmak için `serviceHost` adlı bir yerel değişken ekleyin. `ServiceBase.Run(new CalculatorWindowsService)` çağıran `Main` yöntemi tanımlayın
+8. Sınıfından devralan adlı yeni bir sınıf oluşturun `CalculatorWindowsService` <xref:System.ServiceProcess.ServiceBase> . Örneğe başvurmak için adlı bir yerel değişken ekleyin `serviceHost` <xref:System.ServiceModel.ServiceHost> . `Main`Çağıran yöntemi tanımlayın`ServiceBase.Run(new CalculatorWindowsService)`
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]
 
-9. Aşağıdaki kodda gösterildiği gibi yeni bir <xref:System.ServiceModel.ServiceHost> örneği oluşturup açarak <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> yöntemini geçersiz kılın.
+9. <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>Aşağıdaki kodda gösterildiği gibi yeni bir örnek oluşturup açarak yöntemi geçersiz kılın <xref:System.ServiceModel.ServiceHost> .
 
      [!code-csharp[c_HowTo_HostInNTService#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#4)]
      [!code-vb[c_HowTo_HostInNTService#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#4)]
 
-10. Aşağıdaki kodda gösterildiği gibi <xref:System.ServiceModel.ServiceHost> kapatan <xref:System.ServiceProcess.ServiceBase.OnStop%2A> yöntemini geçersiz kılın.
+10. <xref:System.ServiceProcess.ServiceBase.OnStop%2A>Aşağıdaki kodda gösterildiği gibi, öğesini kapatan yöntemini geçersiz kılın <xref:System.ServiceModel.ServiceHost> .
 
      [!code-csharp[c_HowTo_HostInNTService#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#5)]
      [!code-vb[c_HowTo_HostInNTService#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#5)]
 
-11. <xref:System.Configuration.Install.Installer> devralan ve `true`<xref:System.ComponentModel.RunInstallerAttribute> ayarlanmış olarak işaretlenen `ProjectInstaller` adlı yeni bir sınıf oluşturun. Bu, Windows hizmetinin InstallUtil. exe aracı tarafından yüklenmesine izin verir.
+11. `ProjectInstaller`' Den devralan ve ' den ' a işaretlenmiş olarak işaretlenen yeni bir sınıf oluşturun <xref:System.Configuration.Install.Installer> <xref:System.ComponentModel.RunInstallerAttribute> `true` . Bu, Windows hizmetinin InstallUtil. exe aracı tarafından yüklenmesine izin verir.
 
      [!code-csharp[c_HowTo_HostInNTService#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#6)]
      [!code-vb[c_HowTo_HostInNTService#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#6)]
 
-12. Projeyi oluştururken oluşturulan `Service` sınıfını kaldırın.
+12. `Service`Projeyi oluştururken oluşturulan sınıfı kaldırın.
 
 13. Projeye bir uygulama yapılandırma dosyası ekleyin. Dosyanın içeriğini aşağıdaki yapılandırma XML ile değiştirin.
 
@@ -112,17 +112,17 @@ Hizmet kodu, hizmet sözleşmesinin bir hizmet uygulamasını, bir Windows hizme
 
      **Çözüm Gezgini** App. config dosyasına sağ tıklayın ve **Özellikler**' i seçin. **Çıkış Dizinine Kopyala** ' nın altında **, daha yeniyse kopyala**' yı seçin.
 
-     Bu örnek, yapılandırma dosyasındaki uç noktaları açıkça belirtir. Hizmete herhangi bir uç nokta eklemediğiniz takdirde, çalışma zamanı sizin için varsayılan uç noktaları ekler. Bu örnekte, hizmet `true`olarak ayarlanmış <xref:System.ServiceModel.Description.ServiceMetadataBehavior> sahip olduğundan, hizmetiniz yayımlama meta verilerini de etkinleştirdi. Varsayılan uç noktalar, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.
+     Bu örnek, yapılandırma dosyasındaki uç noktaları açıkça belirtir. Hizmete herhangi bir uç nokta eklemediğiniz takdirde, çalışma zamanı sizin için varsayılan uç noktaları ekler. Bu örnekte, hizmetin <xref:System.ServiceModel.Description.ServiceMetadataBehavior> olarak ayarlanmış olması nedeniyle `true` hizmetinize yayımlama meta verileri de etkinleştirilmiştir. Varsayılan uç noktalar, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../simplified-configuration.md) ve Basitleştirilmiş yapılandırma.
 
 ## <a name="install-and-run-the-service"></a>Hizmeti yükleyip çalıştırın
 
-1. `Service.exe` çalıştırılabiliri oluşturmak için çözümü oluşturun.
+1. Yürütülebilir dosyayı oluşturmak için çözümü oluşturun `Service.exe` .
 
-2. Visual Studio için Geliştirici Komut İstemi açın ve proje dizinine gidin. Windows hizmetini yüklemek için komut istemine `installutil bin\service.exe` yazın.
+2. Visual Studio için Geliştirici Komut İstemi açın ve proje dizinine gidin. `installutil bin\service.exe`Windows hizmetini yüklemek için komut istemine yazın.
 
-     Service Control Manager 'a (SCM) erişmek için komut istemine `services.msc` yazın. Windows hizmeti hizmetlerde "WCFWindowsServiceSample" olarak görünmelidir. WCF hizmeti yalnızca Windows hizmeti çalışıyorsa istemcilere yanıt verebilir. Hizmeti başlatmak için SCM 'de sağ tıklayın ve "Başlat" ı seçin veya komut istemine **net start WCFWindowsServiceSample** yazın.
+     `services.msc`Service Control Manager 'a (SCM) erişmek için komut istemine yazın. Windows hizmeti hizmetlerde "WCFWindowsServiceSample" olarak görünmelidir. WCF hizmeti yalnızca Windows hizmeti çalışıyorsa istemcilere yanıt verebilir. Hizmeti başlatmak için SCM 'de sağ tıklayın ve "Başlat" ı seçin veya komut istemine **net start WCFWindowsServiceSample** yazın.
 
-3. Hizmette değişiklik yaparsanız, önce onu durdurup kaldırmanız gerekir. Hizmeti durdurmak için SCM 'de hizmete sağ tıklayın ve "Durdur" seçeneğini belirleyin veya komut istemine **net stop WCFWindowsServiceSample yazın** . Windows hizmetini durdurup bir istemciyi çalıştırırsanız, istemci hizmete erişmeyi denediğinde bir <xref:System.ServiceModel.EndpointNotFoundException> özel durum oluştuğunu unutmayın. Windows hizmet türü **InstallUtil/u bin\service.exe** komutunu komut istemine kaldırmak için.
+3. Hizmette değişiklik yaparsanız, önce onu durdurup kaldırmanız gerekir. Hizmeti durdurmak için SCM 'de hizmete sağ tıklayın ve "Durdur" seçeneğini belirleyin veya komut istemine **net stop WCFWindowsServiceSample yazın** . Windows hizmetini durdurup bir istemciyi çalıştırırsanız, <xref:System.ServiceModel.EndpointNotFoundException> istemci hizmete erişmeye çalıştığında bir özel durum oluşur. Windows hizmet türü **InstallUtil/u bin\service.exe** komutunu komut istemine kaldırmak için.
 
 ## <a name="example"></a>Örnek
 
@@ -135,7 +135,7 @@ Aşağıda, bu konunun kullandığı kodun tamamen bir listesi verilmiştir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)
-- [Yönetilen Bir Uygulamada Barındırma](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
-- [Barındırma Hizmetleri](../../../../docs/framework/wcf/hosting-services.md)
+- [Basitleştirilmiş Yapılandırma](../simplified-configuration.md)
+- [Yönetilen Bir Uygulamada Barındırma](hosting-in-a-managed-application.md)
+- [Barındırma Hizmetleri](../hosting-services.md)
 - [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

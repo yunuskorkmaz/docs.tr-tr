@@ -2,17 +2,17 @@
 title: WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: f3c4df5ae3fe5426c8b26142807f16b60db001c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61720fff957bfe7a13da1d7498487342b2ee234c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183349"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584109"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF Hizmetleri için Basitleştirilmiş Yapılandırma
-Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin ve istemcinin nasıl uygulanacağını ve yapılandırılabildiğini gösterir. Bu örnek, diğer tüm temel teknoloji örneklerinin temelini oluşturur.  
+Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin ve istemcinin nasıl uygulanacağını ve yapılandırılacağını gösterir. Bu örnek, diğer tüm temel teknoloji örnekleri için temeldir.  
   
- Hizmetle iletişim kurmak için bir bitiş noktası ortaya çıkaran bu hizmet, .NET Framework 4'teki basitleştirilmiş yapılandırmayı kullanır. .NET Framework 4'ten önce, bitiş noktası genellikle aşağıdaki örnek yapılandırma kodunda gösterildiği gibi bir yapılandırma dosyasında (Web.config) tanımlanır.  
+ Hizmetle iletişim kurmak için bir uç nokta sunan bu hizmet, .NET Framework 4 ' te Basitleştirilmiş yapılandırmayı kullanır. .NET Framework 4 ' ten önce, uç nokta genellikle aşağıdaki örnek yapılandırma kodunda gösterildiği gibi bir yapılandırma dosyasında (Web. config) tanımlanmıştır.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -37,7 +37,7 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin 
 </configuration>  
 ```  
   
- .NET Framework 4'te `<service>` öğe isteğe bağlıdır. Bir hizmet herhangi bir uç nokta tanımlamadığında, uygulanan her temel adres ve sözleşme için bir bitiş noktası hizmete eklenir. Temel adres bitiş noktasını belirlemek için sözleşme adına eklenir ve bağlama adres düzeni tarafından belirlenir. Aşağıdaki kod örneği basitleştirilmiş bir yapılandırma dosyasını gösterir. Yapılandırıldıkça, hizmete aynı bilgisayardaki bir istemci `http://localhost/servicemodelsamples/service.svc` tarafından erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişebilmek için localhost yerine tam nitelikli bir etki alanı adı belirtilmesi gerekir. Hizmet varsayılan olarak meta verileri göstermez. Bu nedenle, hizmet <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı açar.  
+ .NET Framework 4 ' te, `<service>` öğesi isteğe bağlıdır. Bir hizmet herhangi bir uç nokta tanımlamıyorsa, uygulanan her temel adres ve sözleşme için bir uç nokta hizmete eklenir. Bitiş noktasını ve bağlamanın adres düzeni tarafından belirlendiği temel adres, sözleşmenin adına eklenir. Aşağıdaki kod örneği, Basitleştirilmiş bir yapılandırma dosyasını göstermektedir. Yapılandırıldığı gibi, hizmete `http://localhost/servicemodelsamples/service.svc` aynı bilgisayardaki bir istemci tarafından erişilebilir. Uzak bilgisayarlardaki istemcilerin hizmete erişmesi için localhost yerine tam etki alanı adı belirtilmelidir. Hizmet varsayılan olarak meta verileri kullanıma sunmaz. Bu nedenle hizmet, <xref:System.ServiceModel.Description.ServiceMetadataBehavior> davranışı etkinleştirir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -57,28 +57,28 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin 
   
 ### <a name="to-use-this-sample"></a>Bu örneği kullanmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümü oluşturmak için, Windows [Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümü derlemek için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 3. Aşağıdaki adımları izleyerek örneği çalıştırın:  
   
-    1. **Hizmet** projesine sağ tıklayın ve **Başlangıç projesi olarak Ayarla'yı**seçin, ardından **Ctrl+F5 tuşuna**basın.  
+    1. **Hizmet** projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin ve ardından **CTRL + F5**tuşlarına basın.  
   
-    2. Hizmetin çalışır durumda olduğunu onaylayan konsol çıktısını bekleyin.  
+    2. Hizmetin çalışır olduğunu onaylayan konsol çıkışının tamamlanmasını bekleyin.  
   
-    3. **İstemci** projesini sağ tıklatın ve **Başlangıç projesi olarak Ayarla'yı**seçin, ardından **Ctrl+F5 tuşuna**basın.  
+    3. **İstemci** projesine sağ tıklayın ve **Başlangıç projesi olarak ayarla**' yı seçin ve ardından **CTRL + F5**tuşlarına basın.  
   
 > [!IMPORTANT]
-> Örnekler bilgisayarınıza zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Yönetim Örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383405(v=azure.10))
-- [Basitleştirilmiş Yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md)
+- [AppFabric yönetim örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383405(v=azure.10))
+- [Basitleştirilmiş Yapılandırma](../simplified-configuration.md)
