@@ -2,29 +2,29 @@
 title: Özel WSDL Yayımı
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: ae6d5fdf243d5000090e993bd3353c6180d0ccaa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79145065"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596701"
 ---
 # <a name="custom-wsdl-publication"></a>Özel WSDL Yayımı
-Bu örnek nasıl gösteriş yapılacağını gösterir:  
+Bu örnekte nasıl yapılacağı gösterilmektedir:  
   
-- WSDL ek <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> açıklamaları olarak öznitelik özellikleri dışa aktarmak için özel bir öznitelik <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> bir uygulayın.  
+- <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> ÖZNITELIK özelliklerini WSDL ek açıklamaları olarak dışarı aktarmak için özel bir özniteliğe uygulayın.  
   
-- Özel <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> WSDL ek açıklamalarını almak için uygulayın.  
+- <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>Özel wsdl ek açıklamalarını içeri aktarmak için uygulayın.  
   
-- İthal <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> edilen sözleşme ve işlem için CodeDom'da yorum olarak içe aktarılan ek açıklamaları yazmak için, sırasıyla özel bir sözleşme davranışı ve özel bir işlem davranışı uygulayın. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType>  
+- İçeri <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> aktarılan <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> ek açıklamaları, içeri aktarılan sözleşme ve Işlem için CodeDOM içinde açıklama olarak yazmak üzere özel bir sözleşme davranışını ve sırasıyla özel bir işlem davranışını uygulayın.  
   
-- Özel <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> WSDL içe aktarıcısını kullanarak WSDL'yi almak <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> için WSDL'yi ve WSDL ek açıklamalarını wsdl ek açıklamaları yla birlikte Windows Communication Foundation (WCF) istemci kodunu oluşturmak <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> için C# ve Visual Basic'teki ''' yorumlarını indirmek için kullanın.  
+- WSDL <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 'yi indirmek için, <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> özel wsdl İçeri Aktarıcı 'Yı kullanarak WSDL 'yi içeri aktarmak üzere, ve <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> WSDL ek açıklamaları ile bırlıkte Windows Communication Foundation (WCF) istemci kodu oluşturmak Için ve C# ve Visual Basic ' ' ' açıklamaları kullanın.  
   
 > [!NOTE]
-> Bu örnek için kurulum yordamı ve yapı yönergeleri bu konunun sonunda yer alır.  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
   
 ## <a name="service"></a>Hizmet  
- Bu örnekteki hizmet iki özel öznitelikile işaretlenir. İlk, `WsdlDocumentationAttribute`, oluşturucu bir dize kabul eder ve kullanımını açıklayan bir dize ile bir sözleşme arabirimi veya işlem sağlamak için uygulanabilir. İkinci,, `WsdlParamOrReturnDocumentationAttribute`işlemde bu değerleri açıklamak için değerleri veya parametreleri döndürmek için uygulanabilir. Aşağıdaki örnek, bu öznitelikleri kullanılarak açıklanan bir hizmet sözleşmesi `ICalculator`gösterir.  
+ Bu örnekteki hizmet iki özel öznitelikle işaretlenir. İlki, `WsdlDocumentationAttribute` oluşturucuda bir dizeyi kabul eder ve bir sözleşme arabirimi ya da kullanımını açıklayan bir dize içeren bir işlem sağlamak için uygulanabilir. İkinci, `WsdlParamOrReturnDocumentationAttribute` ,, işlem içindeki değerleri betimleyen değerleri veya parametreleri döndürmek için uygulanabilir. Aşağıdaki örnek, `ICalculator` Bu öznitelikler kullanılarak açıklanan bir hizmet sözleşmesini gösterir.  
   
 ```csharp  
 // Define a service contract.
@@ -67,9 +67,9 @@ public interface ICalculator
 }  
 ```  
   
- Uygular `WsdlDocumentationAttribute` <xref:System.ServiceModel.Description.IContractBehavior> ve <xref:System.ServiceModel.Description.IOperationBehavior>, böylece öznitelik örnekleri ilgili <xref:System.ServiceModel.Description.ContractDescription> veya <xref:System.ServiceModel.Description.OperationDescription> hizmet açıldığında eklenir. Öznitelik de <xref:System.ServiceModel.Description.IWsdlExportExtension>uygular. Çağrıldığında, <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> <xref:System.ServiceModel.Description.WsdlExporter> meta verileri dışa aktarmak için <xref:System.ServiceModel.Description.WsdlContractConversionContext> kullanılan ve hizmet açıklaması nesneleri içeren dışa aktarılan meta verilerin modifikasyonuna olanak tanıyan parametreler olarak geçirilir.  
+ , `WsdlDocumentationAttribute` <xref:System.ServiceModel.Description.IContractBehavior> Ve uygular <xref:System.ServiceModel.Description.IOperationBehavior> , bu nedenle öznitelik örnekleri karşılık gelen <xref:System.ServiceModel.Description.ContractDescription> veya <xref:System.ServiceModel.Description.OperationDescription> hizmet açıldığında eklenir. Özniteliği de uygular <xref:System.ServiceModel.Description.IWsdlExportExtension> . <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>Çağrıldığında, <xref:System.ServiceModel.Description.WsdlExporter> meta verileri dışarı aktarmak için kullanılan ve <xref:System.ServiceModel.Description.WsdlContractConversionContext> hizmet açıklaması nesnelerini içeren ve, dışarı aktarılan meta verilerin değiştirilmesini sağlayan parametre olarak geçirilir.  
   
- Bu örnekte, dışa aktarma bağlam nesnesinin <xref:System.ServiceModel.Description.OperationDescription>metin özelliği kullanılarak öznitelikten bir <xref:System.ServiceModel.Description.ContractDescription> yorum alınıp alınmadığına bağlı olarak aşağıdaki kodda gösterildiği gibi WSDL ek açıklama öğesine eklenir.  
+ Bu örnekte, dışa aktarma bağlamı nesnesinin bir veya ' a sahip olmasına bağlı olarak <xref:System.ServiceModel.Description.ContractDescription> <xref:System.ServiceModel.Description.OperationDescription> , metin özelliği kullanılarak öznitelikten bir açıklama ayıklanır ve aşağıdaki kodda GÖSTERILDIĞI gibi WSDL Annotation öğesine eklenir.  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)
@@ -108,7 +108,7 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }
 ```  
   
- Bir işlem dışa aktarılıyorsa, örnek `WsdlParamOrReturnDocumentationAttribute` parametreler ve iade değerleri için herhangi bir değer elde etmek için yansımayı kullanır ve bunları aşağıdaki gibi bu işlem için WSDL ek açıklama öğelerine ekler.  
+ Bir işlem aktarılıyorsa, örnek, parametreler ve dönüş değerleri için herhangi bir değer elde etmek üzere yansıma kullanır `WsdlParamOrReturnDocumentationAttribute` ve bu işlem için aşağıdaki gıbı WSDL ek açıklama öğelerine ekler.  
   
 ```csharp
 // Get returns information  
@@ -140,7 +140,7 @@ for (int i = 0; i < args.Length; i++)
 }  
 ```  
   
- Örnek daha sonra aşağıdaki yapılandırma dosyasını kullanarak meta verileri standart şekilde yayımlar.  
+ Örnek, aşağıdaki yapılandırma dosyasını kullanarak meta verileri standart şekilde yayımlar.  
   
 ```xml  
 <services>  
@@ -170,12 +170,12 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Svcutil istemcisi  
- Bu örnek Svcutil.exe kullanmaz. Sözleşme, örnek özel WSDL alma ve kod oluşturma yı gösterdikten sonra hizmetin çağrılabilmesi için generatedClient.cs dosyasında sağlanır. Bu örnek için aşağıdaki özel WSDL aktarıcısını kullanmak için, Svcutil.exe'yi çalıştırabilir ve `/svcutilConfig` bu örnekte kullanılan `WsdlDocumentation.dll` ve kitaplıkla başvuran istemci yapılandırma dosyasına yol vererek seçeneği belirtebilirsiniz. `WsdlDocumentationImporter`Ancak, Svuctil.exe'yi yüklemek için `WsdlDocumentation.dll` kitaplığı bulabilmesi ve yükleyebilmesi gerekir, bu da genel montaj önbelleğinde, yolda kayıtlı olduğu veya Svcutil.exe ile aynı dizinde olduğu anlamına gelir. Bu gibi temel bir örnek için, yapılacak en kolay şey Svcutil.exe ve istemci yapılandırma `WsdlDocumentation.dll` dosyası aynı dizin içine kopyalamak ve oradan çalıştırın.  
+ Bu örnek Svcutil. exe kullanmaz. Sözleşme, generatedClient.cs dosyasında sağlanır, böylece örnek özel WSDL içeri aktarma ve kod oluşturmayı gösterir, hizmet çağrılabilir. Bu örnek için aşağıdaki özel WSDL İçeri Aktarıcı 'yı kullanmak için, Svcutil. exe ' yi çalıştırabilir ve `/svcutilConfig` Bu örnekte kullanılan istemci yapılandırma dosyasının yolunu vererek kitaplığa başvuruda bulunan bu seçeneği belirtebilirsiniz `WsdlDocumentation.dll` . Bununla birlikte, yüklemek için, `WsdlDocumentationImporter` Svuctil. exe ' nin kitaplığı bulması ve yüklemesi gerekir, bu da `WsdlDocumentation.dll` genel derleme önbelleğinde, yoldaki veya Svcutil. exe ile aynı dizinde olduğu anlamına gelir. Bunun gibi basit bir örnek için en kolay şey, Svcutil. exe ' yi ve istemci yapılandırma dosyasını aynı dizine kopyalamak `WsdlDocumentation.dll` ve oradan çalıştırmak içindir.  
   
-## <a name="the-custom-wsdl-importer"></a>Özel WSDL İthalatçı  
- Özel <xref:System.ServiceModel.Description.IWsdlImportExtension> nesne `WsdlDocumentationImporter` de <xref:System.ServiceModel.Description.IContractBehavior> uygular <xref:System.ServiceModel.Description.IOperationBehavior> ve içe aktarılan ServiceEndpoints <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> eklenecek ve sözleşme veya işlem kodu oluşturulurken kod oluşturma değiştirmek için çağrılacak.  
+## <a name="the-custom-wsdl-importer"></a>Özel WSDL Içeri aktarıcı  
+ Özel <xref:System.ServiceModel.Description.IWsdlImportExtension> nesne `WsdlDocumentationImporter` Ayrıca <xref:System.ServiceModel.Description.IContractBehavior> <xref:System.ServiceModel.Description.IOperationBehavior> içeri aktarılan hizmet uç noktalarına eklenmek üzere ve <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> anlaşma ya da işlem kodu oluşturulurken kod oluşturmayı değiştirmek için çağrılabilir.  
   
- İlk olarak, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> yöntemde, örnek WSDL ek açıklama sözleşme veya işlem düzeyinde olup olmadığını belirler ve içe aktarılan ek açıklama metnini oluşturucuya geçirerek kendisini uygun kapsamda bir davranış olarak ekler.  
+ İlk olarak, <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> yönteminde, WSDL ek açıklamanın anlaşma ya da işlem düzeyinde olup olmadığını ve kendisini uygun kapsamda bir davranış olarak ekleyerek içeri aktarılan ek açıklama metnini oluşturucuya geçirerek, örnek.  
   
 ```csharp
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -202,7 +202,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
 }  
 ```  
   
- Daha sonra, kod oluşturulduğunda, sistem <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> uygun <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> bağlam bilgilerini geçirerek, yöntemleri ve yöntemleri çağırır. Örnek, özel WSDL ek açıklamalarını biçimlendiriyor ve CodeDom'a yorum olarak ekler.  
+ Ardından, kod oluşturulduğunda, sistem <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> ve <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> yöntemlerini, uygun bağlam bilgilerini geçirerek çağırır. Örnek, özel WSDL ek açıklamalarını biçimlendirir ve bunları CodeDom öğesine açıklama olarak ekler.  
   
 ```csharp
 public void GenerateContract(ServiceContractGenerationContext context)  
@@ -218,8 +218,8 @@ public void GenerateOperation(OperationContractGenerationContext context)
 }  
 ```  
   
-## <a name="the-client-application"></a>İstemci Başvurusu  
- İstemci uygulaması, uygulama yapılandırma dosyasında belirterek özel WSDL içe aktarıcısını yükler.  
+## <a name="the-client-application"></a>Istemci uygulaması  
+ İstemci uygulaması, uygulama yapılandırma dosyasında belirterek özel WSDL İçeri Aktarıcı yükler.  
   
 ```xml  
 <client>  
@@ -234,7 +234,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Özel içe aktarıcı belirtildikten sonra, WCF meta veri sistemi <xref:System.ServiceModel.Description.WsdlImporter> özel içe aktarıcıyı bu amaç için oluşturulan herhangi bir aygıta yükler. Bu örnek <xref:System.ServiceModel.Description.MetadataExchangeClient> meta verileri indirmek için <xref:System.ServiceModel.Description.WsdlImporter> kullanır, örnek oluşturur özel içe aktarmacı kullanarak meta veri <xref:System.ServiceModel.Description.ServiceContractGenerator> almak için düzgün yapılandırılmış ve görsel temel ve C# istemci kodu hem De görsel studio intellisense desteklemek için kullanılabilir veya XML belgelerine derlenmiş değiştirilmiş sözleşme bilgilerini derlemek için.  
+ Özel İçeri Aktarıcı belirtildiğinde, WCF meta veri sistemi özel İçeri Aktarıcı 'yı <xref:System.ServiceModel.Description.WsdlImporter> Bu amaçla oluşturulan herhangi bir için yükler. Bu örnek, <xref:System.ServiceModel.Description.MetadataExchangeClient> meta verileri indirmek için, örnek tarafından <xref:System.ServiceModel.Description.WsdlImporter> oluşturulan özel içe aktarıcı kullanılarak meta verileri içeri aktarmak üzere yapılandırılan doğru şekilde yapılandırılmış ve <xref:System.ServiceModel.Description.ServiceContractGenerator> değiştirilen sözleşme BILGILERINI IntelliSense veya XML belgelerine derlenmiş şekilde Visual Studio 'da kullanılabilecek Visual Basic ve C# istemci koduna derlemek için kullanır.  
   
 ```csharp
 /// From WSDL Documentation:  
@@ -290,19 +290,19 @@ public interface ICalculator
 }  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, oluşturmak ve çalıştırmak için  
+#### <a name="to-set-up-build-and-run-the-sample"></a>Örneği ayarlamak, derlemek ve çalıştırmak için  
   
-1. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizi emin olun.  
+1. [Windows Communication Foundation Örnekleri Için tek seferlik Kurulum yordamını](one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak [için, Windows Communication Foundation Samples'i oluştururken](../../../../docs/framework/wcf/samples/building-the-samples.md)yönergeleri izleyin.  
+2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](../../../../docs/framework/wcf/samples/running-the-samples.md)yönergeleri izleyin.  
+3. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

@@ -2,56 +2,56 @@
 title: Özel Bağlamalarla Güvenlik Özellikleri
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 25d203fa706eeb0d0ccf1eaf4367ffa5bd7b83aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48d17543f2b133c74bcfa82cfe1a2a0de28b1d01
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990931"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595199"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Özel Bağlamalarla Güvenlik Özellikleri
-Sistem tarafından sağlanan bağlamalar birini kullanarak en yaygın güvenlik görevlerini gerçekleştirebilirsiniz. Daha fazla denetime ihtiyacınız varsa, ancak ile özel bir bağlama oluşturabilirsiniz bir <xref:System.ServiceModel.Channels.SecurityBindingElement>, bu konu başlıklarında açıklandığı gibi. Özel bağlamalar hakkında daha fazla bilgi için bkz: [özel bağlamalar](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+Sistem tarafından belirtilen bağlamalardan birini kullanarak en yaygın güvenlik görevlerini gerçekleştirebilirsiniz. Ancak, daha fazla denetime ihtiyacınız varsa, <xref:System.ServiceModel.Channels.SecurityBindingElement> Bu konularda açıklandığı gibi, ile özel bir bağlama oluşturabilirsiniz. Özel Bağlamalar hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../extending/custom-bindings.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [SecurityBindingElement Kimlik Doğrulama Modları](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
- Özel bağlama ile olası kimlik doğrulama modları açıklanır.  
+ [SecurityBindingElement Kimlik Doğrulama Modları](securitybindingelement-authentication-modes.md)  
+ Özel bir bağlama ile mümkün olan kimlik doğrulama modlarını açıklar.  
   
- [Nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- Özel bağlama güvenliği öğeyle oluşturmaya yönelik temel adımlar açıklanmıştır.  
+ [Nasıl yapılır: SecurityBindingElement Kullanarak Özel Bağlama Oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ Bir güvenlik öğesiyle özel bağlama oluşturmaya yönelik temel adımları açıklar.  
   
- [Nasıl yapılır: Belirtilen kimlik doğrulama modu için SecurityBindingElement oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
- Belirtilen kimlik doğrulama modu için bir güvenlik öğesi oluşturmayı açıklar.  
+ [Nasıl yapılır: Belirtilen Bir Kimlik Doğrulama Modu için SecurityBindingElement Oluşturma](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ Belirtilen bir kimlik doğrulama modu için bir güvenlik öğesinin nasıl oluşturulacağını açıklar.  
   
- [Nasıl yapılır: WSFederationHttpBinding güvenli oturumlarını devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
- Güvenli oturumlarını devre dışı bırakma açıklayan bir Federasyon Hizmeti oluşturma.  
+ [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ Federasyon Hizmeti oluştururken güvenli oturumların nasıl devre dışı bırakılacağını açıklar.  
   
- [Nasıl yapılır: İleti yeniden yürütme algılamayı etkinleştirme](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
- Yeniden yürütme saldırı gerçekleştiğinde belirlemeye açıklar.  
+ [Nasıl yapılır: İleti Yeniden Yürütme Algılamayı Etkinleştirme](how-to-enable-message-replay-detection.md)  
+ Bir yeniden yürütme saldırısının ne zaman gerçekleşeceğini nasıl belirleyebileceğinizi açıklar.  
   
- [Nasıl yapılır: Destekleyici bir kimlik bilgisi oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
- Hizmet gerektiriyorsa bir hizmete destekleyen bir kimlik bilgisi sağlamak üzere nasıl açıklar.  
+ [Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma](how-to-create-a-supporting-credential.md)  
+ Hizmeti gerektiriyorsa, bir hizmete destekleyici kimlik bilgisi sağlamayı açıklar.  
   
- [Nasıl yapılır: Bir imza onayı ayarlama](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
- İletileri imzalanırken dijital imzaları doğrulamak için gereken adımlar açıklanmaktadır.  
+ [Nasıl yapılır: İmza Onayı Ayarlama](how-to-set-up-a-signature-confirmation.md)  
+ İletileri dijital olarak imzalarken imzaları onaylama adımlarını açıklar.  
   
- [Nasıl yapılır: Maksimum saat eğriltme ayarlama](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
- Bir hizmet ve istemci arasındaki izin verilen en uzun süreyi fark ayarlama işlemi açıklanmaktadır.  
+ [Nasıl yapılır: Maksimum Saat Eğriltme Ayarlama](how-to-set-a-max-clock-skew.md)  
+ Bir hizmet ve istemci arasında izin verilen en uzun zaman farkının nasıl ayarlanacağını açıklar.  
   
- [Nasıl yapılır: Dijital imzaların şifrelenmesini devre dışı bırak](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
- Dijital imzaların şifrelenmesini devre dışı bırakılması performans avantajı nasıl olabilir açıklar.  
+ [Nasıl yapılır: Dijital İmzaların Şifrelenmesini Devre Dışı Bırakma](how-to-disable-encryption-of-digital-signatures.md)  
+ Dijital imzaların şifrelenmesini devre dışı bırakmanın performans avantajına sahip olabilir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
- [\<Güvenlik >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
+ [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Koruma Düzeylerini Anlama](../../../../docs/framework/wcf/understanding-protection-level.md)  
+ [Koruma Düzeylerini Anlama](../understanding-protection-level.md)  
   
- [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Hizmet ve İstemcileri Güvenli Hale Getirme](securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bağlamalar ve Güvenlik](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Güvenliğe Genel Bakış](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Sistem Tarafından Sağlanan Bağlamalar](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Bağlamalar ve Güvenlik](bindings-and-security.md)
+- [Güvenliğe genel bakış](security-overview.md)
+- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)

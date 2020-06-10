@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: db6bca8728789879f9bfea40904bfc80352d1dbe
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9239e8bd9b85986d41006c4b2a21b6f2304e8275
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601237"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Nasıl yapılır: Kod Kullanarak Bir Hizmet için Meta Verileri Yayımlama
 Bu, bir Windows Communication Foundation (WCF) hizmeti için yayımlama meta verilerini tartışan iki nasıl yapılır konuktan biridir. Bir hizmetin bir yapılandırma dosyası kullanarak ve kod kullanarak meta verileri nasıl yayımlayacağınızı belirten iki yol vardır. Bu konu, kod kullanarak bir hizmet için meta verilerin nasıl yayımlanacağını göstermektedir.  
   
 > [!CAUTION]
-> Bu konuda, meta verilerin güvensiz bir şekilde nasıl yayımlanacağı gösterilmektedir. Tüm istemciler, hizmetten meta verileri alabilir. Hizmetinizin meta verileri güvenli bir şekilde yayımlamasını istiyorsanız. bkz. [özel güvenli meta veri uç noktası](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+> Bu konuda, meta verilerin güvensiz bir şekilde nasıl yayımlanacağı gösterilmektedir. Tüm istemciler, hizmetten meta verileri alabilir. Hizmetinizin meta verileri güvenli bir şekilde yayımlamasını istiyorsanız. bkz. [özel güvenli meta veri uç noktası](../samples/custom-secure-metadata-endpoint.md).  
   
- Bir yapılandırma dosyasında meta verileri yayımlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma dosyası kullanarak bir hizmet Için meta verileri yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md). Meta veri yayımlama, istemcilerin bir WS-transfer GET isteği veya sorgu dizesini kullanarak bir HTTP/GET isteği kullanarak meta verileri almasına izin verir `?wsdl` . Kodun çalıştığından emin olmak için temel bir WCF hizmeti oluşturmanız gerekir. Aşağıdaki kodda temel bir kendini barındıran hizmet sağlanır.  
+ Bir yapılandırma dosyasında meta verileri yayımlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: yapılandırma dosyası kullanarak bir hizmet Için meta verileri yayımlama](how-to-publish-metadata-for-a-service-using-a-configuration-file.md). Meta veri yayımlama, istemcilerin bir WS-transfer GET isteği veya sorgu dizesini kullanarak bir HTTP/GET isteği kullanarak meta verileri almasına izin verir `?wsdl` . Kodun çalıştığından emin olmak için temel bir WCF hizmeti oluşturmanız gerekir. Aşağıdaki kodda temel bir kendini barındıran hizmet sağlanır.  
   
  [!code-csharp[htPublishMetadataCode#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#0)]
  [!code-vb[htPublishMetadataCode#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#0)]  
@@ -69,7 +69,7 @@ Bu, bir Windows Communication Foundation (WCF) hizmeti için yayımlama meta ver
      [!code-vb[htPublishMetadataCode#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#9)]  
   
     > [!NOTE]
-    > Hizmete herhangi bir uç nokta eklemediğiniz takdirde, çalışma zamanı sizin için varsayılan uç noktaları ekler. Bu örnekte, hizmetin <xref:System.ServiceModel.Description.ServiceMetadataBehavior> olarak ayarlanmış olması nedeniyle `true` , hizmette yayımlama meta verileri etkindir. Varsayılan uç noktalar hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../../../../docs/framework/wcf/simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
+    > Hizmete herhangi bir uç nokta eklemediğiniz takdirde, çalışma zamanı sizin için varsayılan uç noktaları ekler. Bu örnekte, hizmetin <xref:System.ServiceModel.Description.ServiceMetadataBehavior> olarak ayarlanmış olması nedeniyle `true` , hizmette yayımlama meta verileri etkindir. Varsayılan uç noktalar hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
   
 9. Hizmet konağını açın ve gelen çağrıları bekleyin. Kullanıcı ENTER tuşuna bastığında hizmet konağını kapatın.  
   
@@ -88,8 +88,8 @@ Bu, bir Windows Communication Foundation (WCF) hizmeti için yayımlama meta ver
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Kendini Barındırma](../../../../docs/framework/wcf/samples/self-host.md)
-- [Meta Veri Mimarisi Genel Bakış](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
-- [Meta Verileri Kullanma](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Nasıl yapılır: Yönetilen Bir Uygulamada Bir WCF Hizmeti Barındırma](../how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Kendini Barındırma](../samples/self-host.md)
+- [Meta Veri Mimarisi Genel Bakış](metadata-architecture-overview.md)
+- [Meta Verileri Kullanma](using-metadata.md)
+- [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

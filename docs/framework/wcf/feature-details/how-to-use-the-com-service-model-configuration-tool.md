@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 67bacade0435f1c63bc79b3282f6bded55b67304
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f9e761bafd84726b51a2010a932c68c67c37f899
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595290"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Nasıl yapılır: COM+ Hizmet Modeli Yapılandırma Aracı'nı Kullanma
 Uygun bir barındırma modu seçtikten sonra, Web Hizmetleri olarak kullanıma sunulacak uygulama arabirimlerini yapılandırmak için COM+ hizmet modeli yapılandırma komut satırı aracını (ComSvcConfig. exe) kullanın.  
@@ -33,57 +33,57 @@ Uygun bir barındırma modu seçtikten sonra, Web Hizmetleri olarak kullanıma s
   
 ## <a name="to-add-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-com-hosting-mode"></a>Web Hizmetleri olarak sunulan arabirimler kümesine, COM+ barındırma modunu kullanarak bir arabirim eklemek için  
   
-- Aşağıdaki örnekte gösterildiği gibi, `/install` ve `/hosting:complus` seçeneklerini kullanarak ComSvcConfig komutunu çalıştırın.  
+- `/install`Aşağıdaki örnekte gösterildiği gibi, ve seçeneklerini kullanarak ComSvcConfig komutunu çalıştırın `/hosting:complus` .  
   
     ```console  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
     ```  
   
-     Komut, `IFinances` `ItemOrders.IFinancial` bileşen arabirimini (onlinesbir com+ uygulamasından) Web Hizmetleri olarak kullanıma sunulacak arabirimler kümesine ekler. Hizmet COM+ barındırma modunu kullanır ve bu nedenle açık uygulama etkinleştirmesi gerektirir.  
+     Komut, `IFinances` `ItemOrders.IFinancial` bileşen arabirimini (ONLINESBIR com+ uygulamasından) Web Hizmetleri olarak kullanıma sunulacak arabirimler kümesine ekler. Hizmet COM+ barındırma modunu kullanır ve bu nedenle açık uygulama etkinleştirmesi gerektirir.  
   
-     Bir Web hizmeti olarak yalnızca\*seçili işlevselliği göstermek isteyebileceğiniz için, joker karakter yıldız () karakteri bileşen ve arabirim için kullanılabilir ancak kullanmaktan kaçının. Bu bileşenin gelecek bir sürümüyle çalıştırırsanız, joker karakteri kullanmak, yapılandırma sözdizimi belirleniyorsa, yanlışlıkla mevcut olmayan arabirimler sunabilir.  
+     \*Bir Web hizmeti olarak yalnızca seçili işlevselliği göstermek isteyebileceğiniz için, joker karakter yıldız () karakteri bileşen ve arabirim için kullanılabilir ancak kullanmaktan kaçının. Bu bileşenin gelecek bir sürümüyle çalıştırırsanız, joker karakteri kullanmak, yapılandırma sözdizimi belirleniyorsa, yanlışlıkla mevcut olmayan arabirimler sunabilir.  
   
      /Verbose seçeneği, aracının hatalara ek olarak uyarıları görüntülemesini sağlar.  
   
-     Gösterilen hizmet sözleşmesi, `IFinances` arabirimdeki tüm yöntemleri içerir.  
+     Gösterilen hizmet sözleşmesi, arabirimdeki tüm yöntemleri içerir `IFinances` .  
   
 ## <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-com-hosting-mode"></a>Bir arabirimden, Web Hizmetleri olarak sunulan arabirimler kümesine, COM+ barındırma modunu kullanarak yalnızca belirli yöntemler eklemek için  
   
-- Aşağıdaki örnekte gösterildiği gibi, gerekli `/install` yöntemlerin `/hosting:complus` açık adlandırması ile ve seçeneklerini kullanarak ComSvcConfig komutunu çalıştırın.  
+- `/install` `/hosting:complus` Aşağıdaki örnekte gösterildiği gibi, gerekli yöntemlerin açık adlandırması ile ve seçeneklerini kullanarak ComSvcConfig komutunu çalıştırın.  
   
     ```console  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
     ```  
   
-     Komutu, sunulan hizmet sözleşmesine `Credit` yalnızca `Debit` işlemler olarak `IFinances` arabirimden ve yöntemlerini ekler. Arabirimdeki diğer tüm yöntemler sözleşmede atlanacak ve Web hizmeti istemcilerinden çağrılabilir olmayacaktır.  
+     Komutu, `Credit` `Debit` `IFinances` sunulan hizmet sözleşmesine yalnızca işlemler olarak arabirimden ve yöntemlerini ekler. Arabirimdeki diğer tüm yöntemler sözleşmede atlanacak ve Web hizmeti istemcilerinden çağrılabilir olmayacaktır.  
   
 ## <a name="to-add-an-interface-to-the-set-of-interfaces-exposed-as-web-services-using-the-web-hosting-mode"></a>Web hizmeti olarak sunulan arabirimler kümesine Web barındırma modunu kullanarak arabirim ekleme  
   
-- Aşağıdaki örnekte gösterildiği gibi `/install` seçeneğini `/hosting:was` ve seçeneğini kullanarak ComSvcConfig komutunu çalıştırın.  
+- `/install`Aşağıdaki örnekte gösterildiği gibi seçeneğini ve seçeneğini kullanarak ComSvcConfig komutunu çalıştırın `/hosting:was` .  
   
     ```console  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
     ```  
   
-     Bu komut, `ItemInventory.Warehouse` bileşeni `IStockLevels` bileşenini (OnlineWarehouse com+ uygulamasından) Web Hizmetleri olarak kullanıma sunulacak arabirim kümesine ekler. Hizmet, COM+ yerine IIS 'nin OnlineWarehouse sanal dizininde barındırılır ve bu nedenle uygulama gerektiği şekilde otomatik olarak etkinleştirilir.  
+     Bu komut, `IStockLevels` `ItemInventory.Warehouse` bileşeni bileşenini (OnlineWarehouse com+ uygulamasından) Web Hizmetleri olarak kullanıma sunulacak arabirim kümesine ekler. Hizmet, COM+ yerine IIS 'nin OnlineWarehouse sanal dizininde barındırılır ve bu nedenle uygulama gerektiği şekilde otomatik olarak etkinleştirilir.  
   
      Web 'de barındırılan işlem içi yapılandırmayı kullanmak için COM+ uygulaması, Bileşen Hizmetleri yönetim konsolunu kullanarak bir sunucu uygulaması yerine bir kitaplık uygulaması olarak çalışacak şekilde yapılandırılmalıdır. Sunucu uygulamaları olarak yapılandırılan uygulamalar, standart Web 'de barındırılan modu kullanır ve her isteği işlemek için bir işlem atlaması sağlar.  
   
-     `/mex` Seçeneği, hizmetten bir sözleşme tanımı almak isteyen istemcileri desteklemek için uygulamanın hizmet uç noktasıyla aynı aktarımı kullanan bir ek meta veri değişimi (MEX) hizmet uç noktası ekler.  
+     `/mex`Seçeneği, hizmetten bir sözleşme tanımı almak isteyen istemcileri desteklemek için uygulamanın hizmet uç noktasıyla aynı aktarımı kullanan bir ek meta veri değişimi (MEX) hizmet uç noktası ekler.  
   
 ## <a name="to-remove-a-web-service-for-a-specified-interface"></a>Belirtilen bir arabirim için bir Web hizmetini kaldırmak için  
   
-- Aşağıdaki örnekte gösterildiği gibi `/uninstall` seçeneğini kullanarak ComSvcConfig komutunu çalıştırın.  
+- Aşağıdaki örnekte gösterildiği gibi seçeneğini kullanarak ComSvcConfig komutunu çalıştırın `/uninstall` .  
   
     ```console  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
     ```  
   
-     Komut, `ItemOrders.Financial` bileşen üzerindeki `IFinances` arabirimini kaldırır (onlines, com+ uygulamasından).  
+     Komut, `IFinances` Bileşen üzerindeki arabirimini kaldırır `ItemOrders.Financial` (onlines, com+ uygulamasından).  
   
 ## <a name="to-list-currently-exposed-interfaces"></a>Şu anda gösterilen arabirimleri listelemek için  
   
-- Aşağıdaki örnekte gösterildiği gibi `/list` seçeneğini kullanarak ComSvcConfig komutunu çalıştırın.  
+- Aşağıdaki örnekte gösterildiği gibi seçeneğini kullanarak ComSvcConfig komutunu çalıştırın `/list` .  
   
     ```console  
     ComSvcConfig.exe /list  
@@ -93,7 +93,7 @@ Uygun bir barındırma modu seçtikten sonra, Web Hizmetleri olarak kullanıma s
   
 ## <a name="to-list-specific-currently-exposed-interfaces"></a>Şu anda kullanıma sunulan belirli arabirimleri listelemek için  
   
-- Aşağıdaki örnekte gösterildiği gibi `/list` seçeneğini kullanarak ComSvcConfig komutunu çalıştırın.  
+- Aşağıdaki örnekte gösterildiği gibi seçeneğini kullanarak ComSvcConfig komutunu çalıştırın `/list` .  
   
     ```console  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
@@ -111,4 +111,4 @@ Uygun bir barındırma modu seçtikten sonra, Web Hizmetleri olarak kullanıma s
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [COM+ Uygulamaları ile Tümleştirme Genel Bakış](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
+- [COM+ uygulamaları ile tümleştirme genel bakış](integrating-with-com-plus-applications-overview.md)

@@ -8,98 +8,98 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: a9213d8cbbafaaa1fffa3a1db0d6936c2fc6544f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47e59452edfff74daf17d94a058ce8b12af7867c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185038"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593548"
 ---
 # <a name="how-to-create-a-federated-client"></a>Nasıl yapılır: Federe İstemci Oluşturma
-Windows Communication Foundation'da (WCF), *federe hizmet* için bir istemci oluşturmak üç ana adımdan oluşur:  
+Windows Communication Foundation (WCF) ' de, *Federasyon Hizmeti* için bir istemci oluşturmak üç ana adımdan oluşur:  
   
-1. [ \<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya benzer özel bağlama yı yapılandırın. Uygun bir bağlama oluşturma hakkında daha fazla bilgi için [bkz: WSFederationHttpBinding oluşturun.](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md) Alternatif olarak, federe hizmet ve bir veya daha fazla güvenlik belirteç hizmetleri ile iletişim için bir yapılandırma dosyası oluşturmak için federe hizmet meta veri bitiş noktasına karşı [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
+1. [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)Veya benzer bir özel bağlama yapılandırın. Uygun bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturma WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Alternatif olarak, Federasyon Hizmeti ve bir veya daha fazla güvenlik belirteci hizmeti ile iletişim kurmak için bir yapılandırma dosyası oluşturmak üzere, Federasyon Hizmeti 'nin meta veri uç noktasına karşı [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
   
-2. Bir güvenlik belirteci hizmeti ile istemcinin etkileşiminin çeşitli yönlerini denetleyen özellikleri <xref:System.ServiceModel.Security.IssuedTokenClientCredential> ayarlayın.  
+2. Bir <xref:System.ServiceModel.Security.IssuedTokenClientCredential> güvenlik belirteci hizmeti ile istemci etkileşiminin çeşitli yönlerini denetleyen öğesinin özelliklerini ayarlayın.  
   
-3. Güvenlik belirteci <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>hizmetleri gibi verilen uç noktalarla güvenli bir şekilde iletişim kurmak için gereken sertifikaların özelliklerini ayarlayın.  
+3. İçin gerekli olan sertifikaların, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> güvenlik belirteci Hizmetleri gibi belirli uç noktalarla güvenli bir şekilde iletişim kurmasına olanak sağlayan öğesinin özelliklerini ayarlayın.  
   
 > [!NOTE]
-> İstemci, kimliği <xref:System.Security.Cryptography.CryptographicException> meslelenmi, <xref:System.ServiceModel.WSFederationHttpBinding> bağlama veya özel olarak verilmiş bir belirteç ve asimetrik anahtarlar kullandığında a atılabilir. Asimetrik tuşlar, <xref:System.ServiceModel.WSFederationHttpBinding> sırasıyla ve özellikleri nin ayarlandığında, bağlama <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> ve <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> özel <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey>olarak verilen belirteçlerle birlikte kullanılır. İstemci <xref:System.Security.Cryptography.CryptographicException> ileti göndermeye çalıştığında ve istemcinin taklit ettiği kimlik için kullanıcı profili olmadığında atılır. Bu sorunu azaltmak için, ileti göndermeden önce `LoadUserProfile` istemci bilgisayarda oturum açın veya arayın.  
+> <xref:System.Security.Cryptography.CryptographicException>İstemci kimliğe bürünülmüş kimlik bilgileri, <xref:System.ServiceModel.WSFederationHttpBinding> bağlama veya özel olarak verilen bir belirteç ve asimetrik anahtarlar kullandığında bu durum oluşabilir. Asimetrik anahtarlar, <xref:System.ServiceModel.WSFederationHttpBinding> <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> ve <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> özellikleri sırasıyla olarak ayarlandığında bağlama ve özel verilen belirteçlerle kullanılır <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> . <xref:System.Security.Cryptography.CryptographicException>İstemci bir ileti göndermek istediğinde oluşturulur ve istemcinin kimliğine bürünerek kimliği için bir kullanıcı profili mevcut değildir. Bu sorunu azaltmak için, iletiyi göndermeden önce istemci bilgisayarda oturum açın veya çağrı yapın `LoadUserProfile` .  
   
- Bu konu, bu yordamlar hakkında ayrıntılı bilgi sağlar. Uygun bir bağlama oluşturma hakkında daha fazla bilgi için [bkz: WSFederationHttpBinding oluşturun.](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md) Federe hizmetin nasıl çalıştığı hakkında daha fazla bilgi için [Federasyon'a](../../../../docs/framework/wcf/feature-details/federation.md)bakın.  
+ Bu konu, bu yordamlar hakkında ayrıntılı bilgi sağlar. Uygun bağlama oluşturma hakkında daha fazla bilgi için bkz. [nasıl yapılır: oluşturma WSFederationHttpBinding](how-to-create-a-wsfederationhttpbinding.md). Federe bir hizmetin nasıl çalıştığı hakkında daha fazla bilgi için bkz. [Federasyon](federation.md).  
   
-### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Federe hizmet için yapılandırmaoluşturmak ve incelemek  
+### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>Federasyon Hizmeti için yapılandırma oluşturmak ve incelemek için  
   
-1. [ServiceModel Metadata Utility Tool'u (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) hizmetin meta veri URL'sinin adresiyle komut satırı parametresi olarak çalıştırın.  
+1. Bir komut satırı parametresi olarak hizmetin meta veri URL 'SI adresiyle [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
   
 2. Oluşturulan yapılandırma dosyasını uygun bir düzenleyicide açın.  
   
-3. Oluşturulan [ \<herhangi](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) bir verenin ve verenin>ve [ \<verenMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) öğelerinin özniteliklerini ve içeriğini inceleyin. Bunlar [ \<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya özel bağlama öğeleri için [ \<güvenlik>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) öğeleri içinde yer alır. Adreslerin beklenen alan adı veya diğer adres bilgilerini içerdiğinden emin olun. İstemci bu adresleri doğruladığı ve kullanıcı adı/parola çiftleri gibi bilgileri ifşa edebileceğinden, bu bilgileri denetlemek önemlidir. Adres beklenen adres değilse, bu durum istenmeyen bir alıcıya bilgi ifşasına neden olabilir.  
+3. Oluşturulan ve öğelerinin özniteliklerini ve içeriğini inceleyin [\<issuer>](../../configure-apps/file-schema/wcf/issuer.md) [\<issuerMetadata>](../../configure-apps/file-schema/wcf/issuermetadata.md) . Bunlar [\<security>](../../configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md) veya özel bağlamalar öğeleri için öğeler içinde bulunur. Adreslerin beklenen etki alanı adlarını veya diğer adres bilgilerini içerdiğinden emin olun. İstemci bu adreslere kimlik doğrulaması yaptığından ve Kullanıcı adı/parola çiftleri gibi bilgileri açığa çıkarabileceğinden, bu bilgilerin denetlenmesi önemlidir. Adres beklenen adres değilse, bu, istenmeyen bir alıcıya bilgilerin açığa çıkmasına neden olabilir.  
   
-4. Yorumlanan <`alternativeIssuedTokenParameters`> öğesi içindeki ek [ \<verilen TokenParametreleri>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) öğeleri inceleyin. Federe bir hizmet için yapılandırma oluşturmak için Svcutil.exe aracını kullanırken, federe hizmet veya herhangi bir ara güvenlik belirteci hizmetleri bir ihraççı adresi belirtmiyorsa, daha çok bir güvenlik belirteci hizmeti için bir meta veri adresi belirtin birden çok uç nokta, ortaya çıkan yapılandırma dosyası ilk bitiş noktasına başvurur. Yapılandırma dosyasında,> öğeleri <yorumlanan <`alternativeIssuedTokenParameters` ek uç noktalar bulunmaktadır.  
+4. [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md)Açıklamalı <> öğesi içindeki ek öğeleri inceleyin `alternativeIssuedTokenParameters` . Bir Federasyon Hizmeti için yapılandırma oluşturmak üzere Svcutil. exe aracını kullanırken, Federasyon Hizmeti veya herhangi bir ara güvenlik belirteci hizmeti bir veren adresi belirtmez, ancak birden fazla uç nokta sunan bir güvenlik belirteci hizmeti için meta veri adresi belirtirseniz, sonuçta elde edilen yapılandırma dosyası ilk uç noktayı ifade eder. Ek uç noktalar, yapılandırma dosyasında,> öğeleri olarak yorumlanma <`alternativeIssuedTokenParameters` .  
   
-     Bu <`issuedTokenParameters`> biri yapılandırmada zaten mevcut olana tercih edilip> belirleyin. Örneğin, istemci bir kullanıcı adı/parola çifti yerine Windows CardSpace belirteci kullanarak bir güvenlik belirteci hizmetine kimlik doğrulaması yapmayı tercih edebilir.  
+     Bu <`issuedTokenParameters`> yapılandırmanın yapılandırmada zaten mevcut olan bir tercih edilip edilmeyeceğini saptayın. Örneğin, istemci bir güvenlik belirteci hizmetinde kimlik doğrulaması yapmayı tercih edebilir veya bir Kullanıcı adı/parola çifti yerine bir Windows CardSpace belirteci kullanın.  
   
     > [!NOTE]
-    > Hizmetle iletişim kurmadan önce birden çok güvenlik belirteci hizmetinin geçmesi gerektiğinde, bir ara güvenlik belirteci hizmetinin istemciyi yanlış bir güvenlik belirteci hizmetine yönlendirmesi mümkündür. Bu nedenle, [ \<verilen TokenParametreleri>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) güvenlik belirteci hizmeti için bitiş noktası nın bilinmeyen bir güvenlik belirteci hizmeti değil, beklenen güvenlik belirteci hizmeti olduğundan emin olun.  
+    > Hizmet ile iletişim kurmadan önce birden çok güvenlik belirteci hizmetine çapraz bir güvenlik belirteci hizmeti gönderilmesi gerektiği, bir ara güvenlik belirteci hizmetinin istemciyi yanlış bir güvenlik belirteci hizmetine yönlendirme olasılığı vardır. Bu nedenle, içindeki güvenlik belirteci hizmeti uç noktasının, [\<issuedTokenParameters>](../../configure-apps/file-schema/wcf/issuedtokenparameters.md) bilinmeyen bir güvenlik belirteci hizmeti değil, beklenen güvenlik belirteci hizmeti olduğundan emin olun.  
   
-### <a name="to-configure-an-issuedtokenclientcredential-in-code"></a>IssuedTokenClientCredential kodolarak yapılandırmak için  
+### <a name="to-configure-an-issuedtokenclientcredential-in-code"></a>Kodda bir IssuedTokenClientCredential yapılandırmak için  
   
-1. <xref:System.ServiceModel.Security.IssuedTokenClientCredential> Aşağıdaki örnek <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> kodda <xref:System.ServiceModel.Description.ClientCredentials> gösterildiği gibi sınıfın <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> özelliğine <xref:System.ServiceModel.ClientBase%601> (sınıfın özelliği <xref:System.ServiceModel.ChannelFactory> tarafından döndürülen veya sınıf aracılığıyla) erişin.  
+1. <xref:System.ServiceModel.Security.IssuedTokenClientCredential> <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> <xref:System.ServiceModel.Description.ClientCredentials> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> <xref:System.ServiceModel.ClientBase%601> Aşağıdaki örnek kodda gösterildiği gibi, sınıfının özelliği aracılığıyla öğesine (sınıfının özelliği tarafından döndürülen veya sınıfı aracılığıyla) erişin <xref:System.ServiceModel.ChannelFactory> .  
   
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-2. Belirteç önbelleğe alınması gerekli <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> değilse, özelliği 'ye `false`ayarlayın. Özellik, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> bir güvenlik belirteci hizmetindeki bu tür belirteçlerin önbelleğe alınıp alınmadığını denetler. Bu özellik `false`ayarlanmışsa, istemci, önceki bir belirteç hala geçerli olup olmadığına bakılmaksızın kendisini federated hizmetine yeniden doğrulaması gerektiğinde, güvenlik belirteci hizmetinden yeni bir belirteç ister. Bu özellik `true`ayarlanmışsa, istemci varolan bir belirteci, kendisini federe hizmete yeniden doğrulaması gerektiğinde yeniden kullanır (belirteç süresi dolmamış sayılsa). Varsayılan değer: `true`.  
+2. Belirteç önbelleğe alma gerekmiyorsa, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> özelliğini olarak ayarlayın `false` . <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A>Özelliği, bir güvenlik belirteci hizmetinden bu tür belirteçlerin önbelleğe alınıp alınmayacağını denetler. Bu özellik olarak ayarlandıysa `false` , istemci, önceki belirtecin hala geçerli olup olmamasından bağımsız olarak, kendisini federe hizmette yeniden kimlik doğrulamasından geçen her seferinde, güvenlik belirteci hizmetinden yeni bir belirteç ister. Bu özellik olarak ayarlandıysa `true` , istemci, Federasyon hizmetine kendisini yeniden kimlik doğrulamasından erdiğinde (belirtecin süresi dolmamışsa), mevcut bir belirteci yeniden kullanır. Varsayılan değer: `true`.  
   
-3. Önbelleğe alınmış belirteçlerde bir zaman sınırı <xref:System.ServiceModel.Security.IssuedTokenClientCredential.MaxIssuedTokenCachingTime%2A> gerekiyorsa, <xref:System.TimeSpan> özelliği bir değere ayarlayın. Özellik, bir belirteci nin önbelleğe alınabileceğini belirtir. Belirtilen süre dolduktan sonra belirteç istemci önbelleğinden kaldırılır. Varsayılan olarak, belirteçler süresiz olarak önbelleğe alınır. Aşağıdaki örnekte, zaman aralığı 10 dakika olarak ayarlanır.  
+3. Önbelleğe alınmış belirteçlerde bir zaman sınırı gerekliyse, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.MaxIssuedTokenCachingTime%2A> özelliği bir değer olarak ayarlayın <xref:System.TimeSpan> . Özelliği, belirtecin ne kadar süreyle önbelleğe alınacağını belirtir. Belirtilen süre geçtikten sonra, belirteç istemci önbelleğinden kaldırılır. Belirteçler, varsayılan olarak süresiz olarak önbelleğe alınır. Aşağıdaki örnekte zaman aralığı 10 dakikaya ayarlanır.  
   
      [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
      [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
   
-4. İsteğe bağlı. Yüzdeyi <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> ayarlayın. Varsayılan değer 60 'dir (yüzde). Özellik, belirteç geçerlilik süresinin bir yüzdesini belirtir. Örneğin, verilen belirteç 10 saat boyunca <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> geçerliyse ve 80 olarak ayarlanmışsa, belirteç sekiz saat sonra yenilenir. Aşağıdaki örnekte değeri yüzde 80 olarak ayarlar.  
+4. İsteğe bağlı. <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A>Değerini bir yüzde olarak ayarlayın. Varsayılan değer 60 ' dir (yüzde). Özelliği, belirtecin geçerlilik döneminin yüzdesini belirtir. Örneğin, verilen belirteç 10 saat için geçerliyse ve <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A> 80 olarak ayarlanırsa, belirteç sekiz saat sonra yenilenir. Aşağıdaki örnek, değeri yüzde 80 olarak ayarlar.  
   
      [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
      [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
   
-     Önbelleğe alma süresinin yenileme eşiği `IssuedTokenRenewalThresholdPercentage` süresinden daha kısa `MaxIssuedTokenCachingTime` olduğu durumlarda, belirteç geçerlilik süresine göre belirlenen yenileme aralığı ve değer değer tarafından geçersiz kılınır. Örneğin, ürün `IssuedTokenRenewalThresholdPercentage` ve belirteç süresi sekiz saat ve `MaxIssuedTokenCachingTime` değeri 10 dakika ise, istemci her 10 dakikada bir güncelleştirilmiş bir belirteç için güvenlik belirteci hizmetiyle bağlantı kurur.  
+     Belirteç geçerlilik süresi tarafından belirlenen yenileme aralığı ve `IssuedTokenRenewalThresholdPercentage` değer, `MaxIssuedTokenCachingTime` önbellek saatinin yenileme eşiği süresinden daha kısa olduğu durumlarda değer tarafından geçersiz kılınır. Örneğin, ürününün `IssuedTokenRenewalThresholdPercentage` ve belirtecinin süresi sekiz saat ise ve `MaxIssuedTokenCachingTime` değer 10 dakikadır ise, istemci, her 10 dakikada bir güncelleştirilmiş belirteç için güvenlik belirteci hizmetiyle iletişim kurar.  
   
-5. İleti güvenliği veya ileti kimlik <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> bilgileriyle aktarım güvenliği kullanmayan bir bağlama üzerinde gerekenin dışında bir anahtar entropi modu gerekiyorsa (örneğin. bağlama, <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> özelliği uygun bir değere ayarlamalıdır. *Entropi* modu, simetrik tuşların <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> özelliği kullanılarak denetlenip denetlenemeyeceğini belirler. Bu varsayılan, hem istemci hem de belirteç verenin gerçek anahtarı oluşturmak için birleştirilen verileri sağladığı değerdir. <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> Diğer değerler <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy>ve , tüm anahtarı istemci veya sunucu tarafından sırasıyla belirtilir anlamına gelir. Aşağıdaki örnek, anahtarın yalnızca sunucu verilerini kullanacak özelliği ayarlar.  
+5. İleti <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> güvenlik veya ileti kimlik bilgileriyle aktarım güvenliği kullanmayan bir bağlamada bir anahtar entropi modu gerekliyse (örneğin,. bağlama bir öğesine sahip değil <xref:System.ServiceModel.Channels.SecurityBindingElement> ), <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> özelliği uygun bir değere ayarlayın. *Entropi* modu, simetrik anahtarların özelliği kullanılarak denetlenemeyeceğini belirler <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> . Bu varsayılan, <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.CombinedEntropy> hem istemci hem de belirteç verenin gerçek anahtarı oluşturmak için birleştirilen verileri sağladığı yerdir. Diğer değerler <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ClientEntropy> ve <xref:System.ServiceModel.Security.SecurityKeyEntropyMode.ServerEntropy> ' dir. Bu, tüm anahtarın, sırasıyla istemci veya sunucu tarafından belirtilme anlamına gelir. Aşağıdaki örnek, özelliğini yalnızca anahtar için sunucu verilerini kullanacak şekilde ayarlar.  
   
      [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
      [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
   
     > [!NOTE]
-    > Bir <xref:System.ServiceModel.Channels.SecurityBindingElement> güvenlik belirteci hizmetinde veya hizmet <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> bağlamada <xref:System.ServiceModel.Security.IssuedTokenClientCredential> a varsa, <xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> ayarlanan `SecurityBindingElement`özellik .  
+    > Bir <xref:System.ServiceModel.Channels.SecurityBindingElement> güvenlik belirteci hizmetinde veya hizmet bağlamasında varsa, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> üzerinde kümesi <xref:System.ServiceModel.Security.IssuedTokenClientCredential> , özelliği tarafından geçersiz kılınır <xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> `SecurityBindingElement` .  
   
-6. Herhangi bir verene özgü uç nokta davranışlarını <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A> özellik tarafından döndürülen koleksiyona ekleyerek yapılandırın.  
+6. Verenle özel uç nokta davranışlarını, özelliği tarafından döndürülen koleksiyona ekleyerek yapılandırın <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A> .  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
   
-### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>IssuedTokenClientCredential yapılandırmasını yapılandırmak için  
+### <a name="to-configure-the-issuedtokenclientcredential-in-configuration"></a>Yapılandırmada IssuedTokenClientCredential yapılandırmak için  
   
-1. Bir bitiş noktası [ \<davranışında, verilen Token>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) öğesinin alt öğesi olarak verilmiş bir [ \<Token>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) öğesi oluşturun.  
+1. Bir [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) [\<issuedToken>](../../configure-apps/file-schema/wcf/issuedtoken.md) uç nokta davranışında öğesinin alt öğesi olarak bir öğesi oluşturun.  
   
-2. Belirteç önbelleğe alınması gerekli `cacheIssuedTokens` değilse, özniteliği `issuedToken` (<`false`> öğesi) olarak ayarlayın.  
+2. Belirteç önbelleğe alma gerekmiyorsa, `cacheIssuedTokens` (<`issuedToken`> öğesinin) özniteliğini olarak ayarlayın `false` .  
   
-3. Önbelleğe alınmış belirteçlerde bir zaman sınırı `maxIssuedTokenCachingTime` gerekiyorsa, <`issuedToken`> öğesindeki özniteliği uygun bir değere ayarlayın. Örnek:  
+3. Önbelleğe alınmış belirteçlerde bir zaman sınırı gerekliyse, `maxIssuedTokenCachingTime` <`issuedToken`> öğesindeki özniteliği uygun bir değere ayarlayın. Örnek:  
     `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
   
-4. Varsayılan değer dışında bir değer tercih `issuedTokenRenewalThresholdPercentage` edilirse, <`issuedToken`> öğesindeki özniteliği uygun bir değere ayarlayın:  
+4. Varsayılan değerin dışında bir değer tercih edilirse, `issuedTokenRenewalThresholdPercentage` <`issuedToken`> öğesindeki özniteliği uygun bir değere ayarlayın, örneğin:  
   
     ```xml  
     <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
     ```  
   
-5. İleti güvenliği veya ileti kimlik `CombinedEntropy` bilgileriyle aktarım güvenliği kullanmayan bir bağlama üzerinde yse (örneğin, bağlamanın `SecurityBindingElement`bir `defaultKeyEntropyMode` özelliği yok), `<issuedToken>` öğedeki `ServerEntropy` özniteliği bir ya da `ClientEntropy` gerektiği gibi ayarlayın.  
+5. İleti `CombinedEntropy` kimlik bilgileriyle ileti güvenliği veya aktarım güvenliği kullanmayan bir bağlamada dışında bir anahtar entropi modu varsa (örneğin, bağlamanın bir değeri yoksa `SecurityBindingElement` ), `defaultKeyEntropyMode` öğe üzerinde özniteliğini `<issuedToken>` `ServerEntropy` veya gereken şekilde ayarlayın `ClientEntropy` .  
   
     ```xml  
     <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
     ```  
   
-6. İsteğe bağlı. <`issuedToken`> öğesinin bir alt öğesi olarak `issuerChannelBehaviors` <> öğesi oluşturarak herhangi bir verene özgü özel bitiş noktası davranışını yapılandırın. Her davranış için, `add` <`issuerChannelBehaviors`> öğesinin bir alt öğesi olarak <bir> öğesi oluşturun. Özniteliği <`issuerAddress` `add`> öğesine ayarlayarak davranışın veren adresini belirtin. <`behaviorConfiguration` `add`> öğesi özniteliği ayarlayarak davranışın kendisini belirtin.  
+6. İsteğe bağlı. `issuerChannelBehaviors`<> öğesinin bir alt öğesi olarak bir <> öğesi oluşturarak, verenle özgü özel uç nokta davranışlarını yapılandırın `issuedToken` . Her davranış için, `add` <> öğesinin bir alt öğesi olarak bir <> öğesi oluşturun `issuerChannelBehaviors` . `issuerAddress`<> öğesindeki özniteliği ayarlayarak davranışın veren adresini belirtin `add` . `behaviorConfiguration`<> öğesindeki özniteliğini ayarlayarak davranışı belirtin `add` .  
   
     ```xml  
     <issuerChannelBehaviors>  
@@ -107,28 +107,28 @@ Windows Communication Foundation'da (WCF), *federe hizmet* için bir istemci olu
     </issuerChannelBehaviors>  
     ```  
   
-### <a name="to-configure-an-x509certificaterecipientclientcredential-in-code"></a>X509CertificateRecipientClientCredential kodolarak yapılandırmak için  
+### <a name="to-configure-an-x509certificaterecipientclientcredential-in-code"></a>Kodda bir X509CertificateRecipientClientCredential yapılandırmak için  
   
-1. <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Sınıfın veya <xref:System.ServiceModel.ChannelFactory> mülkün özelliğinden erişin. <xref:System.ServiceModel.ClientBase%601>  
+1. Sınıfının veya özelliğin özelliği aracılığıyla öğesine erişin <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A> <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> <xref:System.ServiceModel.ClientBase%601> <xref:System.ServiceModel.ChannelFactory> .  
   
      [!code-csharp[c_CreateSTS#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#18)]
      [!code-vb[c_CreateSTS#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#18)]  
   
-2. Belirli <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> bir bitiş noktası için sertifika için bir <xref:System.Collections.Generic.ICollection%601.Add%2A> örnek varsa, özellik <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> tarafından döndürülen koleksiyon yöntemini kullanın.  
+2. <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>Belirli bir uç nokta için sertifika için kullanılabilir bir örnek varsa, <xref:System.Collections.Generic.ICollection%601.Add%2A> özelliği tarafından döndürülen koleksiyonun yöntemini kullanın <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> .  
   
      [!code-csharp[c_CreateSTS#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#19)]
      [!code-vb[c_CreateSTS#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#19)]  
   
-3. Bir <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> örnek kullanılamıyorsa, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> aşağıdaki örnekte gösterildiği gibi sınıfın yöntemini <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> kullanın.  
+3. Bir <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> örnek yoksa, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> Aşağıdaki örnekte gösterildiği gibi sınıfının yöntemini kullanın.  
   
      [!code-csharp[c_CreateSTS#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#20)]
      [!code-vb[c_CreateSTS#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#20)]  
   
-### <a name="to-configure-an-x509certificaterecipientclientcredential-in-configuration"></a>Bir X509CertificateRecipientClientCredential yapılandırmasını yapılandırmak için  
+### <a name="to-configure-an-x509certificaterecipientclientcredential-in-configuration"></a>Yapılandırmada bir X509CertificateRecipientClientCredential yapılandırmak için  
   
-1. Bir bitiş noktası davranışında [ \<istemci kimlik](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) bilgileri>öğesinin kendisi olan [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) öğesinin bir alt öğesi olarak [ \<kapsamlı Sertifikalar>](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) öğesi oluşturun.  
+1. Bir [\<scopedCertificates>](../../configure-apps/file-schema/wcf/scopedcertificates-element.md) [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) [\<clientCredentials>](../../configure-apps/file-schema/wcf/clientcredentials.md) uç nokta davranışında öğesinin bir alt öğesi olan öğesinin bir alt öğesi olarak bir öğesi oluşturun.  
   
-2. `<add>` Öğenin `<scopedCertificates>` bir alt öğesi olarak bir öğe oluşturun. Uygun sertifikaya `storeLocation` `storeName`başvurmak `x509FindType`için `findValue` , , ve öznitelikler için değerleri belirtin. `targetUri` Özniteliği, aşağıdaki örnekte gösterildiği gibi, sertifikanın kullanılacağı bitiş noktasının adresini sağlayan bir değere ayarlayın.  
+2. Öğesinin `<add>` alt öğesi olarak bir öğesi oluşturun `<scopedCertificates>` . `storeLocation` `storeName` `x509FindType` İlgili sertifikaya başvuracak,,, ve `findValue` özniteliklerinin değerlerini belirtin. `targetUri`Aşağıdaki örnekte gösterildiği gibi, özniteliğini, sertifikanın kullanılacağı bitiş noktasının adresini sağlayan bir değere ayarlayın.  
   
     ```xml  
     <scopedCertificates>  
@@ -141,31 +141,31 @@ Windows Communication Foundation'da (WCF), *federe hizmet* için bir istemci olu
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, koddaki <xref:System.ServiceModel.Security.IssuedTokenClientCredential> sınıfın bir örneğini yapılandırır.  
+ Aşağıdaki kod örneği, kodda sınıfının bir örneğini yapılandırır <xref:System.ServiceModel.Security.IssuedTokenClientCredential> .  
   
  [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
  [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Olası bilgilerin açıklanmasını önlemek için, federe uç noktalardan meta verileri işlemek için Svcutil.exe aracını çalıştıran istemciler, ortaya çıkan güvenlik belirteç hizmet adreslerinin bekledikleri gibi olduğundan emin olmalıdır. Svcutil.exe aracı, istemcinin kullanması gereken ilk bitiş noktasını kullanmak için ortaya çıkan yapılandırma dosyasını oluşturduğundan, bir güvenlik belirteci hizmeti birden çok uç noktayı ortaya çıkardığında bu özellikle önemlidir.  
+ Olası bilgilerin açıklanmasını engellemek için, Svcutil. exe aracını çalıştıran istemciler, Federasyon uç noktalarından meta verileri işlemek için, sonuçta elde edilen güvenlik belirteci hizmeti adreslerinin bekledikleri gibi olduğundan emin olmalıdır. Bu durum, bir güvenlik belirteci hizmeti birden çok bitiş noktası kullanıma sunduğundan önemlidir, çünkü Svcutil. exe aracı, istemcinin kullanılması gereken ilk uç noktayı kullanmak için ortaya çıkan yapılandırma dosyasını oluşturur.  
   
-## <a name="localissuer-required"></a>LocalIssuer Gerekli  
- İstemcilerin her zaman yerel bir veren kullanması bekleniyorsa, aşağıdakileri unutmayın: Svcutil.exe'nin varsayılan çıktısı, zincirdeki sondan ikinci güvenlik belirteci hizmeti bir veren adresi veya veren meta veri adresi belirtmişse yerel ihraççının kullanılmamasıyla sonuçlanır.  
+## <a name="localissuer-required"></a>LocalIssuer gerekli  
+ İstemcilerin her zaman yerel bir veren kullanması bekleniyorsa aşağıdakileri aklınızda yapın: zincirde bulunan ikinci-son güvenlik belirteci hizmeti bir veren adresi veya verenin meta veri adresini belirtiyorsa, Svcutil. exe ' nin varsayılan çıktısı yerel veren 'in kullanılmasına neden olur.  
   
- Sınıfın <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, ve <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> özelliklerinin <xref:System.ServiceModel.Security.IssuedTokenClientCredential> ayarlanması hakkında daha fazla bilgi için [bkz.](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ Sınıfının,, ve özelliklerini ayarlama hakkında daha fazla bilgi için <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> <xref:System.ServiceModel.Security.IssuedTokenClientCredential> bkz. [nasıl yapılır: yerel veren yapılandırma](how-to-configure-a-local-issuer.md).  
   
-## <a name="scoped-certificates"></a>Kapsamlı Sertifikalar  
- Hizmet sertifikalarının güvenlik belirteci hizmetlerinden herhangi biriyle iletişim kurmak için belirtilmesi gerekiyorsa, genellikle sertifika <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> anlaşması kullanılmadığından, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> sınıfın özelliği kullanılarak belirtilebilir. Yöntem <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> a <xref:System.Uri> ve <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> a parametreleri olarak alır. Belirtilen sertifika, belirtilen URI'deki uç noktalarla iletişim kurarken kullanılır. Alternatif olarak, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> özellik tarafından döndürülen koleksiyona sertifika eklemek için yöntemi kullanabilirsiniz.  
+## <a name="scoped-certificates"></a>Kapsamlı sertifikalar  
+ Hizmet sertifikalarının herhangi bir güvenlik belirteci hizmeti ile iletişim kurmak için belirtilmesi gerekiyorsa, genellikle sertifika anlaşması kullanılmadığından, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> sınıfının özelliği kullanılarak belirtilebilir <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> . <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A>Yöntemi bir <xref:System.Uri> ve bir <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> as parametresi alır. Belirtilen URI 'de uç noktalarla iletişim kurulurken belirtilen sertifika kullanılıyor. Alternatif olarak, <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> özelliği tarafından döndürülen koleksiyona bir sertifika eklemek için yöntemini kullanabilirsiniz <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> .  
   
 > [!NOTE]
-> Belirli bir URI kapsamına giren sertifikaların istemci fikri yalnızca bu ÜRB'lerde uç noktaları ortaya çıkaran hizmetlere giden çağrılar yapan uygulamalar için geçerlidir. Sınıfın döndürüldettiği koleksiyondaki sunucuda yapılandırılanlar gibi, verilen belirteçleri imzalamak için kullanılan <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> sertifikalar için geçerli değildir. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> Daha fazla bilgi için [bkz: Federasyon Hizmetinde Kimlik Bilgilerini Yapılandırma.](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+> Belirli bir URI ile kapsamdaki sertifikaların istemci fikri yalnızca, bu URI 'Ler üzerinde uç noktaları sunan hizmetlere giden çağrılar yapan uygulamalar için geçerlidir. Bu, sınıfının tarafından döndürülen koleksiyondaki sunucuda yapılandırılmış olanlar gibi, verilen belirteçleri imzalamak için kullanılan sertifikalara uygulanmaz <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> . Daha fazla bilgi için bkz. [nasıl yapılır: Federasyon Hizmeti kimlik bilgilerini yapılandırma](how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Federasyon Örneği](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Nasıl yapılır: WSFederationHttpBinding Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Meta Veriler Hakkında Güvenlik Konuları](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+- [Federasyon Örneği](../samples/federation-sample.md)
+- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: WSFederationHttpBinding Oluşturma](how-to-create-a-wsfederationhttpbinding.md)
+- [Nasıl yapılır: Federe Bir Hizmette Kimlik Bilgilerini Yapılandırma](how-to-configure-credentials-on-a-federation-service.md)
+- [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](how-to-configure-a-local-issuer.md)
+- [Meta Veriler Hakkında Güvenlik Konuları](security-considerations-with-metadata.md)
+- [Nasıl yapılır: Meta Veri Uç Noktalarını Güvenli Hale Getirme](how-to-secure-metadata-endpoints.md)

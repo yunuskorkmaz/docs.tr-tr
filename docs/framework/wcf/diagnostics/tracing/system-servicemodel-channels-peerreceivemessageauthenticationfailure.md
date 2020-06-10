@@ -2,21 +2,21 @@
 title: System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: 420e50fd-017c-4e06-bc13-320d4e0dc534
-ms.openlocfilehash: c542cabe49246f8a452f10d95043d363c1c5f3c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dea5130dc802bb237474043b6647337af2315c0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766447"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84577025"
 ---
 # <a name="systemservicemodelchannelspeerreceivemessageauthenticationfailure"></a>System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure
-İleti kaynak kimliği doğrulanamadı  
+İleti kaynağının kimliği doğrulanamadı  
   
 ## <a name="description"></a>Açıklama  
- Bu izleme, gelen iletileri ve ileti kimlik doğrulama kimlik doğrulamaya bağlama üzerindeki etkinken gerçekleşir.  
+ Bu izleme, gelen iletilerin kimlik doğrulaması yapılmaya çalışılırken ve bağlamada ileti kimlik doğrulamasının etkinleştirildiği sırada oluşur.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İzleme](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Uygulamanızda Sorun Giderme için İzleme Kullanma](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [Yönetim ve Tanılama](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [İzleme](index.md)
+- [Uygulamanızda Sorun Giderme için İzleme Kullanma](using-tracing-to-troubleshoot-your-application.md)
+- [Yönetim ve tanılama](../index.md)

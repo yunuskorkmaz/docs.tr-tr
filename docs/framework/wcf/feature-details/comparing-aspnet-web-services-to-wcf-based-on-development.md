@@ -2,12 +2,12 @@
 title: ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c5a2145a6d7b631a666df94eb0c1fc53cbc3c55f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c6e83bb234751dc477776f0fa540ffa8688dc667
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202258"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597598"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>ASP.NET Web Hizmetlerini Geliştirmeye Göre WCF ile Karşılaştırma
 
@@ -201,7 +201,7 @@ public class LineItem
 }
 ```
 
-Windows yazılım geliştirme seti (SDK), [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)adlı bir komut satırı aracı içerir. ASP.NET Web hizmetleriyle kullanılan xsd. exe aracı gibi, Svcutil. exe, XML şemasından .NET veri türlerinin tanımlarını oluşturabilir. Türler, XML <xref:System.Runtime.Serialization.DataContractSerializer> şeması tarafından tanımlanan BIÇIMDE XML yayıyorsa, veri sözleşmelerdir; Aksi takdirde, kullanılarak serileştirme amaçlıdır <xref:System.Xml.Serialization.XmlSerializer> . Svcutil. exe, kendi anahtarını kullanarak veri sözleşmelerinden bir XML şeması da oluşturabilir `dataContractOnly` .
+Windows yazılım geliştirme seti (SDK), [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)adlı bir komut satırı aracı içerir. ASP.NET Web hizmetleriyle kullanılan xsd. exe aracı gibi, Svcutil. exe, XML şemasından .NET veri türlerinin tanımlarını oluşturabilir. Türler, XML <xref:System.Runtime.Serialization.DataContractSerializer> şeması tarafından tanımlanan BIÇIMDE XML yayıyorsa, veri sözleşmelerdir; Aksi takdirde, kullanılarak serileştirme amaçlıdır <xref:System.Xml.Serialization.XmlSerializer> . Svcutil. exe, kendi anahtarını kullanarak veri sözleşmelerinden bir XML şeması da oluşturabilir `dataContractOnly` .
 
 > [!NOTE]
 > ASP.NET Web Hizmetleri tarafından kullanılsa da WCF <xref:System.Xml.Serialization.XmlSerializer> ASP.NET uyumluluk modu, WCF hizmetleri ASP.NET Web hizmetlerinin davranışını taklit etse de ASP.NET uyumluluk seçeneği, bir ile kullanımını kısıtlamaz <xref:System.Xml.Serialization.XmlSerializer> . Bunlardan biri, <xref:System.Runtime.Serialization.DataContractSerializer> ASP.NET uyumluluk modunda çalışan hizmetlerini kullanmaya devam edebilir.
@@ -293,7 +293,7 @@ Bir sonraki adım, bir adresi ve bağlamayı bir hizmet türüyle ilişkilendirm
 
 Bağlama, uygulamayla iletişim kurmak için protokoller kümesini belirtir. Aşağıdaki tabloda, genel seçenekleri temsil eden sistem tarafından sunulan bağlamalar listelenmektedir.
 
-|Adı|Amaç|
+|Name|Amaç|
 |----------|-------------|
 |Kullanmayı|WS-BasicProfile 1,1 ve temel güvenlik profili 1,0 ' i destekleyen Web Hizmetleri ve istemcilerle birlikte çalışabilirlik.|
 |WSHttpBinding|HTTP üzerinden WS-* protokollerini destekleyen Web Hizmetleri ve istemcilerle birlikte çalışabilirlik.|
@@ -320,7 +320,7 @@ Gibi bazı davranışlar <xref:System.ServiceModel.ServiceBehaviorAttribute> öz
 
 Programlama hizmeti türlerinde, sınıfının sık kullanılan kullanımı yapılır <xref:System.ServiceModel.OperationContext> . Statik <xref:System.ServiceModel.OperationContext.Current%2A> özelliği, bir işlemin çalıştığı bağlam hakkındaki bilgilere erişim sağlar. <xref:System.ServiceModel.OperationContext>, <xref:System.Web.HttpContext> ve <xref:System.EnterpriseServices.ContextUtil> sınıflarına benzerdir.
 
-## <a name="hosting"></a>Barındırma
+## <a name="hosting"></a>Hosting
 
 ASP.NET Web Hizmetleri bir sınıf kitaplığı derlemesine derlenir. Service File adlı bir dosya,. asmx uzantısına sahiptir ve `@ WebService` hizmet için kodu ve bulunduğu derlemeyi içeren sınıfı tanımlayan bir yönerge içerir.
 
@@ -418,9 +418,9 @@ Yalnızca IIS veya WAS 'da barındırılan ve yalnızca Aktarım Protokolü olar
 
 ## <a name="client-development"></a>İstemci Geliştirme
 
-ASP.NET Web Hizmetleri için istemciler,. asmx dosyasının URL 'sini girdi olarak sağlayan WSDL. exe komut satırı aracı kullanılarak oluşturulur. WCF tarafından sunulan ilgili araç [ServiceModel meta veri yardımcı programı aracıdır (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Hizmet sözleşmesinin tanımına ve bir WCF istemci sınıfının tanımına sahip bir kod modülü oluşturur. Ayrıca, hizmetin adresi ve bağlamasını içeren bir yapılandırma dosyası da oluşturur.
+ASP.NET Web Hizmetleri için istemciler,. asmx dosyasının URL 'sini girdi olarak sağlayan WSDL. exe komut satırı aracı kullanılarak oluşturulur. WCF tarafından sunulan ilgili araç [ServiceModel meta veri yardımcı programı aracıdır (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md). Hizmet sözleşmesinin tanımına ve bir WCF istemci sınıfının tanımına sahip bir kod modülü oluşturur. Ayrıca, hizmetin adresi ve bağlamasını içeren bir yapılandırma dosyası da oluşturur.
 
-Uzak bir hizmetin istemcisinin programlama aşamasında, genellikle zaman uyumsuz bir modele göre programlanması önerilir. WSDL. exe aracı tarafından oluşturulan kod her zaman hem zaman uyumlu hem de zaman uyumsuz bir model için varsayılan olarak sağlar. [ServiceModel meta veri yardımcı programı (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kod, her iki model için de sağlayabilir. Varsayılan olarak zaman uyumlu model sağlar. Araç, anahtarla yürütülürse `/async` , oluşturulan kod zaman uyumsuz model için sağlar.
+Uzak bir hizmetin istemcisinin programlama aşamasında, genellikle zaman uyumsuz bir modele göre programlanması önerilir. WSDL. exe aracı tarafından oluşturulan kod her zaman hem zaman uyumlu hem de zaman uyumsuz bir model için varsayılan olarak sağlar. [ServiceModel meta veri yardımcı programı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından oluşturulan kod, her iki model için de sağlayabilir. Varsayılan olarak zaman uyumlu model sağlar. Araç, anahtarla yürütülürse `/async` , oluşturulan kod zaman uyumsuz model için sağlar.
 
 ASP tarafından oluşturulan WCF istemci sınıflarında adların garantisi yoktur. NET ' in WSDL. exe aracı, varsayılan olarak, Svcutil. exe aracı tarafından oluşturulan WCF istemci sınıflarında adları eşleştirin. Özellikle, kullanılarak serileştirilmesi gereken sınıfların özelliklerinin adları, <xref:System.Xml.Serialization.XmlSerializer> Varsayılan olarak, WSDL. exe aracında bir durum olmayan Svcutil. exe aracı tarafından oluşturulan koddaki sonek özelliği verilirler.
 
@@ -765,4 +765,4 @@ ASP.NET yapılandırma dili, tek tek hizmetler için kültürü belirtmenize ola
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [ASP.NET Web Hizmetlerini Amaç ve Kullanılan Standartları Temel Alarak WCF ile Karşılaştırma](comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

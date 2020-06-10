@@ -6,40 +6,40 @@ helpviewer_keywords:
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd9cc282750e59e5ccbfec428c7252ab9689395f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498016"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589857"
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP Programlama Modeli
-Windows Communication Foundation (WCF) Web HTTP programlama modeli, geliştiricilerin WCF Hizmeti işlemlerini olmayan SOAP uç noktalara kullanıma olanak tanır. Bu bölümdeki konularda ayrıntılı özelliğini inceleyin.  
+Windows Communication Foundation (WCF) Web HTTP programlama modeli, geliştiricilerin WCF hizmet işlemlerini SOAP olmayan uç noktalara sunmasına olanak tanır. Bu bölümdeki konular, özelliği ayrıntılı olarak inceler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [WCF Web HTTP Programlama Modeli Genel Bakış](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- Windows Communication Foundation (WCF) Web HTTP programlama modeli genel bir bakış sağlar.  
+ [WCF Web HTTP Programlama Modeli Genel Bakış](wcf-web-http-programming-model-overview.md)  
+ Windows Communication Foundation (WCF) Web HTTP programlama modeline genel bir bakış sağlar.  
   
- [WCF Web HTTP Programlama Nesnesi Modeli](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- Windows Communication Foundation (WCF) Web HTTP programlama modeli ve nasıl çalıştığı açıklanmaktadır.  
+ [WCF Web HTTP Programlama Nesnesi Modeli](wcf-web-http-programming-object-model.md)  
+ Windows Communication Foundation (WCF) Web HTTP programlama modelini ve nasıl çalıştığını açıklar.  
   
- [Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
- SOAP olmayan uç noktasını kullanıma sunar temel bir hizmet yazma açıklar.  
+ [Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma](how-to-create-a-basic-wcf-web-http-service.md)  
+ SOAP olmayan bir uç nokta sunan temel bir hizmetin nasıl yazılacağını açıklar.  
   
- [Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)  
- SOAP ve SOAP olmayan istemciler için aynı sözleşme sunan bir temel hizmeti yazılacağını açıklar.  
+ [Nasıl yapılır: Bir Sözleşmeyi SOAP ve Web İstemcilerine Sunma](how-to-expose-a-contract-to-soap-and-web-clients.md)  
+ Hem SOAP hem de SOAP olmayan istemcilere aynı sözleşmeyi sunan temel bir hizmetin nasıl yazılacağını açıklar.  
   
- [UriTemplate ve UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- URI'ler kullanarak denetlemek açıklar <xref:System.UriTemplate> ve <xref:System.UriTemplateTable>.  
+ [UriTemplate ve UriTemplateTable](uritemplate-and-uritemplatetable.md)  
+ Ve kullanarak URI 'Lerin nasıl kontrol edileceğini açıklar <xref:System.UriTemplate> <xref:System.UriTemplateTable> .  
   
- [WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği](../../../../docs/framework/wcf/feature-details/caching-support-for-wcf-web-http-services.md)  
- WCF Web HTTP hizmeti için önbelleğe alma davranışını belirtmek açıklar.  
+ [WCF Web HTTP Hizmetleri için Önbelleğe Alma Desteği](caching-support-for-wcf-web-http-services.md)  
+ Bir WCF Web HTTP hizmeti için önbelleğe alma davranışının nasıl belirtileceğini açıklar.  
   
- [WCF Web HTTP Biçimlendirme](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)  
- WCF Web HTTP hizmetinden gelen yanıtın biçimini belirtmek açıklar.  
+ [WCF Web HTTP Biçimlendirme](wcf-web-http-formatting.md)  
+ Bir WCF Web HTTP hizmetinden yanıt biçiminin nasıl belirtileceğini açıklar.  
   
- [WCF Web HTTP Hata İşleme](../../../../docs/framework/wcf/feature-details/wcf-web-http-error-handling.md)  
- HTTP durum kodları ve kullanıcı tanımlı ek hata verileri de dahil olmak üzere WCF Web istemciler için hataları döndürmeyi açıklar.  
+ [WCF Web HTTP Hata İşleme](wcf-web-http-error-handling.md)  
+ HTTP durum kodları ve Kullanıcı tanımlı ek hata verileri dahil olmak üzere WCF Web istemcilerine nasıl hata döndürülbileceğinizi açıklar.  
   
- [Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma](../../../../docs/framework/wcf/feature-details/calling-a-rest-style-service-from-a-wcf-service.md)  
- Bir WCF hizmeti içinde bir REST stili hizmetini çağırmak açıklar.
+ [Bir WCF hizmetinden REST tarzı bir hizmete çağrı yapma](calling-a-rest-style-service-from-a-wcf-service.md)  
+ Bir WCF hizmetinin içinden REST stili bir hizmetin nasıl çağrılacağını açıklar.
