@@ -1,21 +1,22 @@
 ---
-title: XML ekseni yöntemine LINQ nasıl yazılır (C#)
+title: LINQ to XML Axis yöntemi yazma (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 7810afd1a181523fb30f6702993bc0ad469f66aa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf1542471f44115bd787e7be6c8ffb836a842a4f
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168550"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662452"
 ---
-# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="122ba-102">XML ekseni yöntemine LINQ nasıl yazılır (C#)</span><span class="sxs-lookup"><span data-stu-id="122ba-102">How to write a LINQ to XML axis method (C#)</span></span>
-<span data-ttu-id="122ba-103">Bir XML ağacından koleksiyon almak için kendi eksen yöntemlerinizi yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="122ba-103">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="122ba-104">Bunu yapmanın en iyi yollarından biri, öğeler veya özniteliklerin bir koleksiyonunu döndüren bir uzantı yöntemi yazmaktır.</span><span class="sxs-lookup"><span data-stu-id="122ba-104">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="122ba-105">Uygulamanızın gereksinimlerine bağlı olarak belirli öğe alt kümelerini veya öznitelikleri döndürmek için uzantı yönteminizi yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="122ba-105">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
+# <a name="how-to-write-a-linq-to-xml-axis-method-c"></a><span data-ttu-id="241ba-102">LINQ to XML Axis yöntemi yazma (C#)</span><span class="sxs-lookup"><span data-stu-id="241ba-102">How to write a LINQ to XML axis method (C#)</span></span>
+
+<span data-ttu-id="241ba-103">XML [ekseni yöntemi](linq-to-xml-axes-overview.md) bir XML belgesinden veya üst öğeden XML öğelerinin koleksiyonunu alır.</span><span class="sxs-lookup"><span data-stu-id="241ba-103">An XML [axis method](linq-to-xml-axes-overview.md) retrieves a collection of XML elements from an XML document or ancestor element.</span></span> <span data-ttu-id="241ba-104">Bir XML ağacından koleksiyonları almak için kendi eksen yöntemlerinizi yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="241ba-104">You can write your own axis methods to retrieve collections from an XML tree.</span></span> <span data-ttu-id="241ba-105">Bunu gerçekleştirmenin en iyi yöntemlerinden biri, öğe veya özniteliklerin bir koleksiyonunu döndüren bir genişletme yöntemi yazmaktır.</span><span class="sxs-lookup"><span data-stu-id="241ba-105">One of the best ways to do this is to write an extension method that returns a collection of elements or attributes.</span></span> <span data-ttu-id="241ba-106">Uygulamanızın gereksinimlerine bağlı olarak, öğelerin veya özniteliklerin belirli alt kümelerini döndürmek için uzantı yönteminizi yazabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="241ba-106">You can write your extension method to return specific subsets of elements or attributes, based on the requirements of your application.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="122ba-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="122ba-106">Example</span></span>  
- <span data-ttu-id="122ba-107">Aşağıdaki örnekte iki uzantı yöntemi kullanır.</span><span class="sxs-lookup"><span data-stu-id="122ba-107">The following example uses two extension methods.</span></span> <span data-ttu-id="122ba-108">İlk uzantı `GetXPath`yöntemi, <xref:System.Xml.Linq.XObject>üzerinde çalışır ve değerlendirildiğinde düğümü veya özniteliği döndürecek bir XPath ifadesi döndürür.</span><span class="sxs-lookup"><span data-stu-id="122ba-108">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="122ba-109">İkinci uzatma yöntemi, `Find`üzerinde <xref:System.Xml.Linq.XElement>çalışır.</span><span class="sxs-lookup"><span data-stu-id="122ba-109">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="122ba-110">Bazı belirtilen metin <xref:System.Xml.Linq.XAttribute> içeren <xref:System.Xml.Linq.XElement> nesneler ve nesnelerin bir koleksiyon döndürür.</span><span class="sxs-lookup"><span data-stu-id="122ba-110">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
+## <a name="example"></a><span data-ttu-id="241ba-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="241ba-107">Example</span></span>  
+ <span data-ttu-id="241ba-108">Aşağıdaki örnekte iki genişletme yöntemi kullanılmaktadır.</span><span class="sxs-lookup"><span data-stu-id="241ba-108">The following example uses two extension methods.</span></span> <span data-ttu-id="241ba-109">İlk genişletme yöntemi, `GetXPath` , üzerinde çalışır <xref:System.Xml.Linq.XObject> ve değerlendirilen bir XPath ifadesi döndürür ve değerlendirildiğinde düğüm veya öznitelik döndürülür.</span><span class="sxs-lookup"><span data-stu-id="241ba-109">The first extension method, `GetXPath`, operates on <xref:System.Xml.Linq.XObject>, and returns an XPath expression that when evaluated will return the node or attribute.</span></span> <span data-ttu-id="241ba-110">İkinci uzantı yöntemi `Find` üzerinde çalışır <xref:System.Xml.Linq.XElement> .</span><span class="sxs-lookup"><span data-stu-id="241ba-110">The second extension method, `Find`, operates on <xref:System.Xml.Linq.XElement>.</span></span> <span data-ttu-id="241ba-111"><xref:System.Xml.Linq.XAttribute>Belirli bir metni içeren nesne ve nesnelerin bir koleksiyonunu döndürür <xref:System.Xml.Linq.XElement> .</span><span class="sxs-lookup"><span data-stu-id="241ba-111">It returns a collection of <xref:System.Xml.Linq.XAttribute> objects and <xref:System.Xml.Linq.XElement> objects that contain some specified text.</span></span>  
   
- <span data-ttu-id="122ba-111">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="122ba-111">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="241ba-112">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="241ba-112">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 public static class MyExtensions  
@@ -278,7 +279,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="122ba-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="122ba-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="241ba-113">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="241ba-113">This code produces the following output:</span></span>  
   
 ```output  
 /PurchaseOrders/PurchaseOrder[1]/@OrderDate  
