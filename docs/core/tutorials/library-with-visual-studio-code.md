@@ -1,24 +1,21 @@
 ---
-title: Visual Studio Code .NET Standard sınıf kitaplığı oluşturma
+title: Visual Studio Code kullanarak .NET Standard sınıf kitaplığı oluşturma
 description: Visual Studio Code kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
-ms.date: 05/29/2020
-ms.openlocfilehash: 5720ac374d50ef27a07d463e57af1bd95a352d83
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 06/08/2020
+ms.openlocfilehash: f7d2319bcea58f63ca40e43ba39745bdf1b394ce
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446958"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701805"
 ---
-# <a name="tutorial-create-a-net-standard-library-in-visual-studio-code"></a>Öğretici: Visual Studio Code .NET Standard kitaplığı oluşturma
-
-Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,0 ' i hedefleyen bir sınıf kitaplığı, kitaplığınızın bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasının çağrılmasına izin verir. Sınıf kitaplığınızı bitirdiğinizde, bir NuGet paketi olarak dağıtmak mı yoksa bir veya daha fazla uygulamayla paketlenmiş bir bileşen olarak eklemek mi istediğinize karar verebilirsiniz.
-
-> [!NOTE]
-> .NET Standard sürümlerinin ve destekledikleri platformların listesi için bkz. [.NET Standard](../../standard/net-standard.md).
+# <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma
 
 Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir yardımcı program kitaplığı oluşturacaksınız. Bunu, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulamalısınız <xref:System.String> .
 
-## <a name="prerequisites"></a>Ön koşullar
+Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,0 ' i hedefleyen bir sınıf kitaplığı, kitaplığınızın bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasının çağrılmasına izin verir. Sınıf kitaplığınızı bitirdiğinizde, bir üçüncü taraf bileşen olarak veya bir veya daha fazla uygulamayla paketlenmiş bileşen olarak dağıtabilirsiniz.
+
+## <a name="prerequisites"></a>Önkoşullar
 
 1. [C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yüklü [Visual Studio Code](https://code.visualstudio.com/) . Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 2. [.NET Core 3,1 SDK veya üzeri](https://dotnet.microsoft.com/download)
@@ -27,9 +24,11 @@ Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir yardımcı prog
 
 ' De Sınıf Kitaplığı projesini yerleştirmek için boş bir çözüm oluşturarak başlayın. Bir çözüm, bir veya daha fazla proje için kapsayıcı görevi görür. Aynı çözüme ek ve ilgili projeler ekleyeceksiniz.
 
-1. Visual Studio Code'u açın.
+1. Visual Studio Code başlatın.
 
-1. **Dosya**  >  **Aç klasör**aç... ' ı seçin, / **Open...** ana menüden bir *classlibraryprojects* klasörü oluşturun ve klasör aç **Seç**' e tıklayın / **Open**.
+1. Ana menüden **Dosya**  >  **açma klasörünü** (MacOS üzerinde**Open...** ) seçin
+
+1. **Klasörü aç** iletişim kutusunda bir *classlibraryprojects* klasörü oluşturun ve **Klasör Seç** ' e tıklayın (MacOS üzerinde**açın** ).
 
 1. Ana menüden **Terminal görünümü ' nu** seçerek **View**Visual Studio Code açın  >  **Terminal** .
 
@@ -156,7 +155,21 @@ Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullan
    Project `ShowCase\ShowCase.csproj` added to the solution.
    ```
 
-1. Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez. Sınıf kitaplığındaki yöntemleri çağırmasına izin vermek için aşağıdaki komutu çalıştırarak sınıf kitaplığı projesine bir proje başvurusu oluşturun:
+1. *Gösterimi/program. cs* ' i açın ve kodun tümünü aşağıdaki kodla değiştirin.
+
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
+
+   Kod, `row` konsol penceresine yazılan veri satırlarının sayısını korumak için değişkenini kullanır. 25 ' e eşit veya daha büyük olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
+
+   Program kullanıcıdan bir dize girmesini ister. Dizenin büyük harfle başlatılıp başlatılmayacağını gösterir. Kullanıcı bir dize girmeden <kbd>ENTER</kbd> tuşuna basarsa, uygulama sonlanır ve konsol penceresi kapanır.
+
+1. Yaptığınız değişiklikleri kaydedin.
+
+## <a name="add-a-project-reference"></a>Proje başvurusu Ekle
+
+Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez. Sınıf kitaplığındaki yöntemleri çağırmasına izin vermek için, sınıf kitaplığı projesine bir proje başvurusu oluşturun.
+
+1. Şu komutu çalıştırın:
 
    ```dotnetcli
    dotnet add ShowCase/Showcase.csproj reference StringLibrary/StringLibrary.csproj
@@ -168,17 +181,9 @@ Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullan
    Reference `..\StringLibrary\StringLibrary.csproj` added to the project.
    ```
 
-1. *Gösterimi/program. cs* ' i açın ve kodun tümünü aşağıdaki kodla değiştirin.
+## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/ShowCase/Program.cs":::
-
-   Kod, `row` konsol penceresine yazılan veri satırlarının sayısını korumak için değişkenini kullanır. 25 ' e eşit veya daha büyük olduğunda, kod konsol penceresini temizler ve kullanıcıya bir ileti görüntüler.
-
-   Program kullanıcıdan bir dize girmesini ister. Dizenin büyük harfle başlatılıp başlatılmayacağını gösterir. Kullanıcı bir dize girmeden ENTER tuşuna basarsa, uygulama sonlanır ve konsol penceresi kapanır.
-
-1. Yaptığınız değişiklikleri kaydedin.
-
-1. Programı çalıştırın.
+1. Terminalde aşağıdaki komutu çalıştırın:
 
    ```dotnetcli
    dotnet run --project ShowCase/ShowCase.csproj
@@ -203,10 +208,11 @@ Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullan
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [.NET Core CLI ile Kitaplıklar geliştirin](libraries.md)
+* [.NET Standard sürümleri ve destekledikleri platformlar](../../standard/net-standard.md).
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
 Bu öğreticide, bir çözüm oluşturdunuz, bir kitaplık projesi eklediniz ve kitaplığı kullanan bir konsol uygulaması projesi ekledik. Sonraki öğreticide, çözüme bir birim testi projesi eklersiniz.
 
 > [!div class="nextstepaction"]
-> [.NET Standard kitaplığı Visual Studio Code .NET Core ile test etme](testing-library-with-visual-studio-code.md)
+> [Visual Studio Code kullanarak .NET Core ile .NET Standard kitaplığı test etme](testing-library-with-visual-studio-code.md)

@@ -1,44 +1,48 @@
 ---
-title: Visual Studio Code kullanarak .NET Core ile bir konsol uygulaması oluşturma
+title: Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma
 description: Visual Studio Code ve .NET Core CLI kullanarak .NET Core konsol uygulaması oluşturmayı öğrenin.
 ms.date: 05/22/2020
-ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6d8f9adb2f77dbfd2d1cf54c80f1cdea582b1d96
+ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201702"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84717516"
 ---
-# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Core ile bir konsol uygulaması oluşturma
+# <a name="tutorial-create-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma
 
-Bu öğreticide, Visual Studio Code ve .NET Core CLI kullanılarak .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir. Proje oluşturma, derleme ve çalıştırma gibi proje görevleri CLı kullanılarak yapılır, bu nedenle bu öğreticiyi bir kod Düzenleyicisi ile izleyebilir ve tercih ediyorsanız komutları terminalde çalıştırabilirsiniz.
+Bu öğreticide, Visual Studio Code ve .NET Core CLI kullanılarak .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir. Proje oluşturma, derleme ve çalıştırma gibi proje görevleri, .NET Core CLI kullanılarak yapılır. Bu öğreticiyi, farklı bir kod Düzenleyicisi ile izleyebilir ve tercih ediyorsanız komutları terminalde çalıştırabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 1. [C# uzantısı](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) yüklü [Visual Studio Code](https://code.visualstudio.com/) . Visual Studio Code uzantıları nasıl yükleyeceğiniz hakkında daha fazla bilgi için bkz. [vs Code uzantısı marketi](https://code.visualstudio.com/docs/editor/extension-gallery).
 2. [.NET Core 3,1 SDK veya üzeri](https://dotnet.microsoft.com/download)
 
 ## <a name="create-the-app"></a>Uygulama oluşturma
 
-1. Visual Studio Code'u açın.
+"HelloWorld" adlı bir .NET Core konsol uygulaması projesi oluşturun.
 
-1. Bir proje oluşturun.
+1. Visual Studio Code başlatın.
 
-   1. **Dosya**  >  **Aç klasör**aç... ' ı seçin, / **Open...** ana menüden bir *HelloWorld* klasörü oluşturun ve klasör aç **Seç**' e tıklayın / **Open**.
+1. Ana menüden **Dosya**  >  **açma klasörünü** (**File**  >  MacOS üzerinde dosya**Aç...** ) seçin.
 
-      Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur. Daha sonra, proje ad alanının olduğunu varsayan öğreticide kod ekleyeceksiniz `HelloWorld` .
+1. **Klasörü aç** iletişim kutusunda bir *HelloWorld* klasörü oluşturun ve **Klasör Seç** ' e tıklayın (MacOS üzerinde**açın** ).
 
-   1. Ana menüden **Terminal görünümü ' nu** seçerek **View**Visual Studio Code açın  >  **Terminal** .
+   Klasör adı, varsayılan olarak proje adı ve ad alanı adı olur. Daha sonra, proje ad alanının olduğunu varsayan öğreticide kod ekleyeceksiniz `HelloWorld` .
 
-      **Terminal** , *HelloWorld* klasöründe komut istemiyle açılır.
+1. Ana menüden **Terminal görünümü ' nu** seçerek **View**Visual Studio Code açın  >  **Terminal** .
 
-   1. **Terminalde**aşağıdaki komutu girin:
+   **Terminal** , *HelloWorld* klasöründe komut istemiyle açılır.
 
-      ```dotnetcli
-      dotnet new console
-      ```
+1. **Terminalde**aşağıdaki komutu girin:
 
-.NET Core konsol uygulaması şablonu, `Program` `Main` bağımsız değişken olarak bir dizi alan tek bir yöntemle bir sınıfını tanımlar <xref:System.String> . *Program.cs* dosyası aşağıdaki koda sahiptir:
+   ```dotnetcli
+   dotnet new console
+   ```
+
+Şablon basit bir "Merhaba Dünya" uygulaması oluşturur. <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>"Merhaba Dünya!" öğesini göstermek için yöntemini çağırır Konsol penceresinde.
+
+Şablon kodu, `Program` `Main` bağımsız değişken olarak bir diziyi alan tek bir yöntemi olan sınıfını tanımlar <xref:System.String> :
 
 ```csharp
 using System;
@@ -56,8 +60,6 @@ namespace HelloWorld
 ```
 
 `Main`uygulama giriş noktası, uygulamayı başlattığında çalışma zamanı tarafından otomatik olarak çağrılan yöntemdir. Uygulama başlatıldığında sağlanan herhangi bir komut satırı bağımsız değişkeni, *args* dizisinde kullanılabilir.
-
-Şablon, <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> "Merhaba Dünya!" öğesini göstermek için yöntemi çağıran basit bir uygulama oluşturur. Konsol penceresinde.
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
@@ -85,11 +87,11 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
    ![Eksik varlıklar için istem](media/with-visual-studio-code/missing-assets.png)
 
-1. `Main`Aşağıdaki kodla, şu anda yalnızca çağıran satırı olan *program.cs*içindeki yönteminin içeriğini değiştirin `Console.WriteLine` :
+1. `Main`Aşağıdaki kodla, çağıran satır olan *program.cs*içindeki yönteminin içeriğini değiştirin `Console.WriteLine` :
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="1":::
 
-   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından **ENTER** tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` . Son olarak, bu değerleri konsol penceresinde görüntüler.
+   Bu kod "adınız nedir?" görüntüler Konsol penceresinde ve ardından <kbd>ENTER</kbd> tuşuna basarak Kullanıcı bir dize girene kadar bekler. Bu dizeyi adlı bir değişkende depolar `name` . Ayrıca <xref:System.DateTime.Now?displayProperty=nameWithType> , geçerli yerel saati içeren özelliğinin değerini alır ve bunu adlı bir değişkene atar `date` . Son olarak, bu değerleri konsol penceresinde görüntüler.
 
    `\n`Bir yeni satır karakterini temsil eder.
 
@@ -106,7 +108,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
    dotnet run
    ```
 
-1. Bir ad girip **ENTER** tuşuna basarak istemi yanıtlayın.
+1. Bir ad girip <kbd>ENTER</kbd> tuşuna basarak istemi yanıtlayın.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="Değiştirilen program çıkışındaki Terminal penceresi":::
 
@@ -118,7 +120,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir .NET Core uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
+Bu öğreticide, bir .NET Core konsol uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
 
 > [!div class="nextstepaction"]
 > [Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio-code.md)

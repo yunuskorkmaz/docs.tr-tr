@@ -1,43 +1,43 @@
 ---
-title: Visual Studio Code ile bir .NET Core konsol uygulamasında hata ayıklama
-description: Visual Studio Code bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
+title: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
+description: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 05/26/2020
-ms.openlocfilehash: 82b2798397d702aa2a50c04bf6e4d569b97e3666
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241519"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702133"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
 Bu öğreticide, .NET Core uygulamalarıyla çalışmak üzere Visual Studio Code sağlanan hata ayıklama araçları tanıtılmaktadır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Bu öğretici, [Visual Studio Code bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="use-debug-build-configuration"></a>Hata ayıklama derleme yapılandırmasını kullan
 
-*Hata ayıklama* ve *yayın* , .NET Core 'un derleme yapılandırmalarının ikýdýr. Hata ayıklama oluşturma yapılandırması hata ayıklama için ve son sürüm dağıtımı için sürüm yapılandırması ' nı kullanırsınız.
+*Hata ayıklama* ve *yayın* .NET Core 'un yerleşik derleme yapılandırmalarıdır. Hata ayıklama oluşturma yapılandırması hata ayıklama için ve son sürüm dağıtımı için sürüm yapılandırması ' nı kullanırsınız.
 
 Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bilgileriyle derlenir ve iyileştirmesi yoktur. Kaynak kodu ve oluşturulan yönergeler arasındaki ilişki daha karmaşık olduğundan iyileştirme, hata ayıklamayı karmaşıklaştırır. Bir programın yayın yapılandırmasında sembolik hata ayıklama bilgisi yoktur ve tamamen iyileştirilmiştir.
 
- Varsayılan olarak, Visual Studio Code hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
+Varsayılan olarak, Visual Studio Code başlatma ayarları hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
+
+1. Visual Studio Code başlatın.
+
+1. [Visual Studio Code .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz projenin klasörünü açın.
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
-Kesme noktası, kesme noktası olan satır yürütülmeden *önce* uygulamanın yürütülmesini geçici olarak keser.
-
-1. Visual Studio Code'u açın.
-
-1. [Visual Studio Code .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz *HelloWorld* proje klasörünü açın.
+Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın yürütülmesini geçici olarak keser.
 
 1. *Program.cs* dosyasını açın.
 
-1. Kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için başka bir yol ise imleci kod satırına yerleştirip <kbd>F9</kbd>tuşuna basarak olur.
+1. Kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için diğer yollar <kbd>F9</kbd> tuşuna basarak veya **Run**  >  kod satırı seçiliyken menüden**geçiş kesme noktası** Çalıştır ' i seçmekle belirlenir.
 
-   Aşağıdaki görüntüde gösterildiği gibi, Visual Studio Code sol kenar boşluğunda kırmızı bir nokta görüntüleyerek kesme noktasının ayarlandığı satırı gösterir.
+   Visual Studio Code, sol kenar boşluğunda kırmızı bir nokta görüntüleyerek kesme noktasının ayarlandığı satırı gösterir.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-set.png" alt-text="Kesme noktası kümesi":::
 
@@ -45,7 +45,7 @@ Kesme noktası, kesme noktası olan satır yürütülmeden *önce* uygulamanın 
 
 Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **Hata ayıklama konsolu** çalışan bir program için Terminal girişini kabul etmez. Hata ayıklarken Terminal girişini işlemek için tümleşik Terminal (Visual Studio Code Windows) veya harici bir terminalde kullanabilirsiniz. Bu öğreticide, tümleşik Terminal kullanılır.
 
-1. *. Vscode/Launch. JSON*dosyasını açın.
+1. *. Vscode/launch.js*açın.
 
 1. `console`Ayarını olarak değiştirin `integratedTerminal` .
 
@@ -69,7 +69,7 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Visual Studio Code hata ayıkla sekmesini açın":::
 
-1. **.NET Core başlatma (konsol)** yanındaki bölmenin üst kısmındaki yeşil oku seçerek hata ayıklamayı başlatın.  Hata ayıklamayı başlatmak için başka bir yol da <kbd>F5</kbd>'e basılarak yapılır.
+1. Bölmenin üst kısmındaki yeşil oku seçerek **.NET Core başlatma (konsol)**' nin yanına tıklayın. Programı hata ayıklama modunda başlatmak için başka bir yöntem de **Run**  >  menüden**hata ayıklamayı Başlat** Çalıştır ' i seçmektir.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Hata ayıklamayı Başlat":::
 
@@ -83,7 +83,7 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
    :::image type="content" source="media/debugging-with-visual-studio-code/breakpoint-hit.png" alt-text="Yerelleri gösteren kesme noktası isabet":::
 
-## <a name="change-variable-values"></a>Değişken değerlerini Değiştir
+## <a name="use-the-debug-console"></a>Hata ayıklama konsolunu kullanma
 
 **Hata ayıklama konsolu** penceresi, hata ayıkladığınızda uygulamayla etkileşime girebilmenizi sağlar. Programınızı nasıl etkileyeceğini görmek için değişkenlerin değerini değiştirebilirsiniz.
 
@@ -127,7 +127,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
    Kesme noktası her isabet edildiğinde, hata ayıklayıcı `String.IsNullOrEmpty(name)` yöntemini çağırır ve yalnızca Yöntem çağrısı döndürürse bu satırı keser `true` .
 
-   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı*veya iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak bu tür özniteliklere dayalı olarak program yürütmeyi kesen bir *filtre koşulu*belirtebilirsiniz.
+   Koşullu bir ifade yerine, bir deyim belirtilen sayıda yürütülmeden önce program yürütmeyi kesen bir *isabet sayısı*belirtebilirsiniz. Diğer bir seçenek de bir *filtre koşulu*belirtmektir. Bu, iş parçacığı tanımlayıcısı, işlem adı veya iş parçacığı adı olarak bu tür özniteliklere dayalı olarak program yürütmeyi keser.
 
 1. <kbd>F5</kbd>'e basarak programı hata ayıklama ile başlatın.
 
@@ -149,7 +149,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
 1. **Terminal** sekmesini seçin ve herhangi bir tuşa basarak programdan çıkın ve hata ayıklamayı durdurun.
 
-1. Kod penceresinin sol kenarındaki noktaya tıklayarak kesme noktasını temizleyin. Bir kesme noktasını temizlemek için başka bir yol ise kod satırı seçiliyken <kbd>F9</kbd> tuşuna basmakla belirlenir.
+1. Kod penceresinin sol kenarındaki noktaya tıklayarak kesme noktasını temizleyin. Bir kesme noktasını temizlemek için diğer yollar, kod satırı seçiliyken <kbd>F9</kbd> tuşuna basarak veya menüden **kesme noktası** ' nı seçerek >.
 
 1. Kesme noktası koşulunun kaybolacağını belirten bir uyarı alırsanız, **kesme noktasını kaldır**' ı seçin.
 
@@ -165,17 +165,17 @@ Visual Studio Code Ayrıca, bir program aracılığıyla satır içine girerek v
 
    Bu noktada, **değişkenler** penceresi `args` dizinin boş olduğunu ve `name` `date` varsayılan değerlere sahip olduğunu gösterir.
 
-1. **Adımla** ' yı seçin veya <kbd>F11</kbd>tuşuna basın.
+1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-into.png" alt-text="Adımla düğmesi":::
 
    Visual Studio Code sonraki satırı vurgular.
 
-1. **Adımla** ' yı seçin veya <kbd>F11</kbd>tuşuna basın.
+1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
    Visual Studio Code, `Console.WriteLine` ad istemi için öğesini yürütür ve sonraki yürütme satırını vurgular. Sonraki satır, `Console.ReadLine` içindir `name` . **Değişkenler** penceresi değiştirilmez ve **Terminal** sekmesi "adınız nedir?" olarak gösterilir. isteme.
 
-1. **Adımla** ' yı seçin veya <kbd>F11</kbd>tuşuna basın.
+1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
    Visual Studio, `name` değişken atamasını vurgular. **Değişkenler** penceresi hala olduğunu gösterir `name` `null` .
 
@@ -183,19 +183,19 @@ Visual Studio Code Ayrıca, bir program aracılığıyla satır içine girerek v
 
    **Terminal** sekmesi, girerken girdiğiniz dizeyi görüntülemeyebilir, ancak <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> Yöntem girişinizi yakalar.
 
-1. **Adımla** ' yı seçin veya <kbd>F11</kbd>tuşuna basın.
+1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
    Visual Studio Code, `date` değişken atamasını vurgular. **Değişkenler** penceresi, yöntemine yapılan çağrı tarafından döndürülen değeri gösterir <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> . **Terminal** sekmesi, istemde girdiğiniz dizeyi görüntüler.
 
-1. **Adımla** ' yı seçin veya <kbd>F11</kbd>tuşuna basın.
+1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
    **Değişkenler** penceresi, `date` özelliğinden atamadan sonraki değişkenin değerini gösterir <xref:System.DateTime.Now?displayProperty=nameWithType> .
 
-1. **Adımla** ' yı seçin veya <kbd>F11</kbd>tuşuna basın.
+1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
    Visual Studio Code yöntemini çağırır <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> . Konsol penceresi biçimlendirilen dizeyi görüntüler.
 
-1. **Atla** ' yı seçin veya <kbd>SHIFT</kbd> + <kbd>F11</kbd>tuşuna basın.
+1. **Çalışma adımını Çalıştır**' ı seçin  >  **Step Out** veya <kbd>SHIFT</kbd> + <kbd>F11</kbd>tuşuna basın.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/step-out.png" alt-text="Adımla düğmesi":::
 
@@ -205,7 +205,7 @@ Visual Studio Code Ayrıca, bir program aracılığıyla satır içine girerek v
 
 1. Programdan çıkmak için herhangi bir tuşa basın.
 
-## <a name="select-release-build-configuration"></a>Yayın derleme yapılandırmasını seçin
+## <a name="use-release-build-configuration"></a>Yayın derleme yapılandırmasını kullan
 
 Uygulamanızın hata ayıklama sürümünü sınadıktan sonra yayın sürümünü derleyip test etmeniz gerekir. Yayın sürümü, bir uygulamanın davranışını etkileyebilecek derleyici iyileştirmeleri içerir. Örneğin, performansı artırmak için tasarlanan derleyici iyileştirmeleri, çok iş parçacıklı uygulamalarda yarış koşulları oluşturabilir.
 

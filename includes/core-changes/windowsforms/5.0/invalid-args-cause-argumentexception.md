@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f1fc70075ef09a4f036c69788342c07ee51d72ce
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: aab7d8538c875e35c832acc2a6c64beb84d4fb47
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702495"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702459"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>WinForms yöntemleri artık ArgumentException oluşturur
 
@@ -19,12 +19,13 @@ Daha önce, beklenmeyen veya yanlış bir türün bağımsız değişkenlerini b
 Aşağıdaki tabloda etkilenen Yöntemler ve parametreler listelenmektedir:
 
 | Yöntem | Parametre adı | Koşul | Sürüm eklendi |
-|-|-|-|
+|-|-|-|-|
 | <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | Bağımsız değişken türünde değil <xref:System.Windows.Forms.TabPage> . | 5,0 Preview 1 |
+| <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName> | `format` | Bağımsız değişken `null` , <xref:System.String.Empty?displayProperty=nameWithType> veya boşluk. | 5,0 Preview 5 |
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
-.NET 5,0 Preview 1
+.NET 5,0
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
@@ -38,11 +39,13 @@ Windows Forms
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
 - <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName>
+- <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName>
 
 <!-- 
 
 #### Affected APIs
 
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`
+- `M:System.Windows.Forms.DataFormats.GetFormat(System.String)`
 
 -->

@@ -2,12 +2,12 @@
 title: Windows Forms son değişiklikler
 description: .NET Core için Windows Forms 'deki son değişiklikleri listeler.
 ms.date: 01/08/2020
-ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: bd87e438ecf9930bfcd5377f9a3799d5f3693f49
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158443"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84702474"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 'deki değişiklikler kesiliyor
 
@@ -20,21 +20,22 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [Durum çubuğu denetimleri kaldırıldı](#removed-status-bar-controls) | 5.0 |
 | [WinForms yöntemleri artık ArgumentException oluşturur](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [WinForms yöntemleri şimdi ArgumentNullException oluşturur](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
-| [Kaldırılan denetimler](#removed-controls) | 3.1 |
-| [Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
-| [Control. DefaultFont Segoe UI 9 nk olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt) | 3,0 |
-| [FolderBrowserDialog 'u modernleştirme](#modernization-of-the-folderbrowserdialog) | 3,0 |
-| [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types) | 3,0 |
-| [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3,0 |
-| [DomainUpDown. UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3,0 |
-| [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3,0 |
-| [Donotsupportselectallshortcutınmultilinetextbox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3,0 |
-| [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3,0 |
-| [EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3,0 |
-| [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3,0 |
-| [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3,0 |
-| [Erişilebilir nesne. Runtimeıdfirtıtem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3,0 |
-| [Yinelenen API 'Ler Windows Forms kaldırıldı](#duplicated-apis-removed-from-windows-forms) | 3,0 |
+| [WinForms özellikleri artık ArgumentOutOfRangeException oluşturur](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
+| [Kaldırılan denetimler](#removed-controls) | 3,1 |
+| [Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3,1 |
+| [Control. DefaultFont Segoe UI 9 nk olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
+| [FolderBrowserDialog 'u modernleştirme](#modernization-of-the-folderbrowserdialog) | 3.0 |
+| [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
+| [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3.0 |
+| [DomainUpDown. UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
+| [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3.0 |
+| [Donotsupportselectallshortcutınmultilinetextbox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
+| [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
+| [EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
+| [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
+| [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
+| [Erişilebilir nesne. Runtimeıdfirtıtem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
+| [Yinelenen API 'Ler Windows Forms kaldırıldı](#duplicated-apis-removed-from-windows-forms) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5,0
 
@@ -47,6 +48,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 ***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentoutofrangeexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentoutofrangeexception.md)]
 
 ***
 

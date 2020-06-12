@@ -1,45 +1,41 @@
 ---
-title: Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
+title: Mac için Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 description: .NET Core sınıf kitaplığı için bir birim test projesi oluşturun. .NET Core sınıf kitaplığının birim testleriyle düzgün çalıştığını doğrulayın.
 ms.date: 06/08/2020
-dev_langs:
-- csharp
-- vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: f20b089fd22794d5aaeff34502e960fe41a565e1
+ms.openlocfilehash: a183049623df44cbb8c4abd47ce6e78d91adae12
 ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 06/11/2020
-ms.locfileid: "84700975"
+ms.locfileid: "84713611"
 ---
-# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
+# <a name="test-a-net-standard-class-library-with-net-core-using-visual-studio"></a>Visual Studio kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 
 Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otomatikleştirilmesi gösterilmektedir.
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio 'da .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
+- Bu öğretici, [Mac için Visual Studio içinde .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
 Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sağlar. [MSTest](https://github.com/Microsoft/testfx-docs) , aralarından seçim yapabileceğiniz üç test çerçevelerinden biridir. Diğerleri [xUnit](https://xunit.net/) ve [NUnit](https://nunit.org/)' dir.
 
-1. Visual Studio’yu çalıştırın.
+1. Mac için Visual Studio başlatın.
 
-1. `ClassLibraryProjects` [Visual Studio 'da .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümü açın.
+1. `ClassLibraryProjects` [Mac için Visual Studio içinde .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)bölümünde oluşturduğunuz çözümü açın.
 
-1. Çözüme "StringLibraryTest" adlı yeni bir birim test projesi ekleyin.
+1. **Çözüm** panelinde, çözüme <kbd>CTRL</kbd>-tıklayın `ClassLibraryProjects` ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
 
-   1. **Çözüm Gezgini** çözüme sağ tıklayın ve **Add**  >  **Yeni proje**Ekle ' yi seçin.
+1. **Yeni proje** iletişim kutusunda, **Web ve konsol** düğümünden **testler** ' i seçin. **MSTest projesini** ve ardından Ileri ' **yi**seçin.
 
-   1. **Yeni Proje Ekle** sayfasında, arama kutusuna **MSTest** yazın. Dil listesinden **C#** veya **Visual Basic** seçin ve ardından platform listesinden **tüm platformlar** ' ı seçin.
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-project.png" alt-text="Visual Studio Mac yeni proje iletişim kutusu test projesi oluşturma":::
 
-   1. **MSTest test projesi (.NET Core)** şablonunu seçin ve ardından **İleri**' yi seçin.
+1. **.NET Core 3,1**' u seçin. "StringLibraryTest" adlı yeni projeyi adlandırın ve **Oluştur**' u seçin.
 
-   1. **Yeni projenizi yapılandırın** sayfasında, **Proje adı** kutusuna **stringlibrarytest** girin. Ardından **Oluştur**’u seçin.
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-new-project-name.png" alt-text="Proje adı sağlayan Visual Studio Mac yeni proje iletişim kutusu":::
 
-1. Visual Studio projeyi oluşturur ve kod penceresinde aşağıdaki kodla sınıf dosyasını açar. Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçicisini değiştirin.
+   Visual Studio aşağıdaki kodla bir sınıf dosyası oluşturur:
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -57,37 +53,23 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
    }
    ```
 
-   ```vb
-   Imports Microsoft.VisualStudio.TestTools.UnitTesting
-
-   Namespace StringLibraryTest
-       <TestClass>
-       Public Class UnitTest1
-           <TestMethod>
-           Sub TestSub()
-
-           End Sub
-       End Class
-   End Namespace
-   ```
-
    Birim testi şablonu tarafından oluşturulan kaynak kodu aşağıdakileri yapar:
 
    - <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>Birim testi için kullanılan türleri içeren ad alanını içeri aktarır.
    - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>Özniteliği `UnitTest1` sınıfına uygular.
-   - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> `TestMethod1` C# veya Visual Basic içinde tanımlamak için özniteliğini uygular `TestSub` .
+   - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>Özniteliğini öğesine uygular `TestMethod1` .
 
    [ [TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) ile etiketlenmiş bir test sınıfında [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) etiketli her bir yöntem, birim testi çalıştırıldığında otomatik olarak yürütülür.
 
 ## <a name="add-a-project-reference"></a>Proje başvurusu Ekle
 
-Test projesinin sınıfla çalışması için `StringLibrary` , **Stringlibrarytest** projesinde projeye bir başvuru ekleyin `StringLibrary` .
+Test projesinin sınıfla çalışması için `StringLibrary` projeye bir başvuru ekleyin `StringLibrary` .
 
-1. **Çözüm Gezgini**, **stringlibrarytest** projesinin **Bağımlılıklar** düğümüne sağ tıklayın ve bağlam menüsünden **proje başvurusu Ekle** ' yi seçin.
+1. **Çözüm** panelinde, **stringlibrarytest**altındaki **Bağımlılıklar** ' a <kbd>CTRL tuşuna</kbd>tıklayın. Bağlam menüsünden **Başvuru Ekle** ' yi seçin.
 
-1. **Başvuru Yöneticisi** iletişim kutusunda, **Projeler** düğümünü genişletin ve **StringLibrary**' ın yanındaki kutuyu seçin. Derlemeye başvuru eklemek `StringLibrary` derleyicinin **Stringlibrarytest** projesini derlerken **StringLibrary** yöntemlerini bulmasını sağlar.
+1. **Başvurular** Iletişim kutusunda **StringLibrary** projesini seçin. **Tamam**’ı seçin.
 
-1. **Tamam**’ı seçin.
+      :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-edit-references.png" alt-text="Visual Studio Mac başvuruları Düzenle iletişim kutusu":::
 
 ## <a name="add-and-run-unit-test-methods"></a>Birim testi yöntemleri ekleme ve çalıştırma
 
@@ -112,31 +94,31 @@ Her biri <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> bir dize diz
 
 Test yöntemleri oluşturmak için:
 
-1. *UnitTest1.cs* veya *UnitTest1. vb* kodu penceresinde, kodu aşağıdaki kodla değiştirin:
+1. *UnitTest1.cs* dosyasını açın ve kodu şu kodla değiştirin:
 
    :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibraryTest/UnitTest1.cs":::
-   :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibraryTest/UnitTest1.vb":::
 
    Yöntemdeki büyük harfli karakterlerin testi, `TestStartsWithUpper` Yunanca Büyük Harf Alpha (u + 0391) ve Kiril Büyük harf em (u + 041C) içerir. Yöntemdeki küçük harfli karakterlerin testi `TestDoesNotStartWithUpper` Yunanca Küçük Harf Alpha (u + 03B1) ve Kiril Küçük harf GHE (u + 0433) içerir.
 
-1. Menü çubuğunda **Dosya**  >  **Kaydet UnitTest1.cs as** veya **Dosya**  >  **Kaydet UnitTest1. vb**' yi seçin. **Dosyayı farklı kaydet** Iletişim kutusunda **Kaydet** düğmesinin yanındaki oku seçin ve **kodlamayla kaydet**' i seçin.
+1. Menü çubuğunda **Dosya**  >  **farklı kaydet**' i seçin. İletişim kutusunda, **kodlamanın** **UNICODE (UTF-8)** olarak ayarlandığından emin olun.
 
-   > [!div class="mx-imgBorder"]
-   > ![Visual Studio dosyayı farklı Kaydet iletişim kutusu](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/save-file-as-dialog.png" alt-text="Visual Studio dosyayı farklı Kaydet iletişim kutusu":::
 
-1. **Farklı kaydet** iletişim kutusunda, dosyayı kaydetmek için **Evet** düğmesini seçin.
-
-1. **Gelişmiş kaydetme seçenekleri** iletişim kutusunda, **kodlama** açılan LISTESINDEN **Unicode (imzayla UTF-8)-kod sayfası 65001** ' i seçin ve **Tamam**' ı seçin.
-
-   > [!div class="mx-imgBorder"]
-   > ![Visual Studio Gelişmiş kaydetme seçenekleri iletişim kutusu](./media/testing-library-with-visual-studio/advanced-save-options.png)
+1. Var olan dosyayı değiştirmek isteyip istemediğiniz sorulduğunda **Değiştir**' i seçin.
 
    Kaynak kodunuzu UTF8 kodlu bir dosya olarak kaydedemeyebilirsiniz, Visual Studio bunu bir ASCII dosyası olarak kaydedebilir. Söz konusu olduğunda, çalışma zamanı, ASCII aralığının dışında UTF8 karakterlerinin kodunu doğru şekilde çözmez ve test sonuçları doğru olmayacaktır.
 
-1. Menü çubuğunda, **Test**  >  **Çalıştır tüm testler**' i seçin. **Test Gezgini** penceresi açılmazsa **Test**  >  **Test Gezgini**' ni seçerek açın. **Geçen testler** bölümünde üç test listelenir ve **Özet** bölümü Test çalıştırmasının sonucunu raporlar.
+1. Ekranın sağ tarafındaki **birim testleri** panelini açın. Menüden **View**  >  **Testleri** görüntüle ' yi seçin.
 
-   > [!div class="mx-imgBorder"]
-   > ![Testleri geçirerek test Gezgini penceresi](./media/testing-library-with-visual-studio/test-explorer-window.png)
+1. Paneli açık tutmak için **Yerleştir** simgesine tıklayın.
+
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-dock-icon.png" alt-text="Mac için Visual Studio birim testleri bölmesi yerleştirme simgesi":::
+
+1. **Tümünü Çalıştır** düğmesine tıklayın.
+
+   Tüm testler geçer.
+
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-pass.png" alt-text="Beklenen test geçişleri Mac için Visual Studio":::
 
 ## <a name="handle-test-failures"></a>Test başarısızlıklarını işle
 
@@ -149,23 +131,17 @@ Test odaklı geliştirme (TDD) yapıyorsanız, önce testleri yazarsınız ve il
                       "1234", ".", ";", " " };
    ```
 
-   ```vb
-   Dim words() As String = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
-                      "1234", ".", ";", " " }
+1. Testleri yeniden çalıştırın.
 
-   ```
+   Bu kez, **Test Gezgini** penceresi iki testin başarılı olduğunu ve bir başarısız olduğunu gösterir.
 
-1. Test Çalıştır **Test**  >  **tüm testleri** menü çubuğundan Çalıştır öğesini seçerek testi çalıştırın. **Test Gezgini** penceresi, iki testin başarılı olduğunu ve bir başarısız olduğunu gösterir.
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/failed-test-window.png" alt-text="Başarısız testlerle test Gezgini penceresi":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Başarısız testlerle test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-window.png)
+1. <kbd>CTRL tuşuna</kbd>basıp başarısız teste tıklayın `TestDoesNotStartWithUpper` ve bağlam menüsünden **sonuçlar panelini göster** ' i seçin.
 
-1. Başarısız testi seçin `TestDoesNotStartWith` .
+   **Sonuç** panelinde, "onay. IsFalse başarısız oldu" onay tarafından oluşturulan ileti görüntülenir. ' Error ' bekleniyor: false; gerçek: true ". Hata nedeniyle "hata" sonunda dizide hiçbir dize sınanmadı.
 
-   **Test Gezgini** penceresi onay tarafından oluşturulan iletiyi görüntüler: "onaylama. IsFalse başarısız oldu. ' Error ' bekleniyor: false; gerçek: true ". Hata nedeniyle "hata" sonunda dizide hiçbir dize sınanmadı.
-
-   > [!div class="mx-imgBorder"]
-   > ![IsFalse onaylama hatasını gösteren test Gezgini penceresi](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-mac-unit-test-failure.png" alt-text="IsFalse onaylama hatasını gösteren test Gezgini penceresi":::
 
 1. Adım 1 ' de eklediğiniz "Error" dizesini kaldırın. Testi ve test geçişini yeniden çalıştırın.
 
@@ -177,19 +153,22 @@ Yayın derlemesini test etmek için:
 
 1. Visual Studio araç çubuğunda, derleme yapılandırmasını **Debug** iken **Release**olarak değiştirin.
 
-   > [!div class="mx-imgBorder"]
-   > ![Yayın derlemesi vurgulanmış Visual Studio araç çubuğu](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/visual-studio-toolbar-release.png" alt-text="Yayın derlemesi vurgulanmış Visual Studio araç çubuğu":::
 
-1. **Çözüm Gezgini**, **StringLibrary** projesine sağ tıklayın ve kitaplığı yeniden derlemek için bağlam menüsünden **Oluştur** ' u seçin.
+1. **Çözüm** panelinde, **StringLibrary** projesine <kbd>CTRL</kbd>-tıklayın ve bağlam menüsünden **Oluştur** ' u seçerek kitaplığı yeniden derleyin.
 
-   > [!div class="mx-imgBorder"]
-   > ![Build komutuyla StringLibrary bağlam menüsü](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   :::image type="content" source="media/testing-library-with-visual-studio-mac/build-library-context-menu.png" alt-text="Build komutuyla StringLibrary bağlam menüsü":::
 
-1. **Test Run**  >  Menü çubuğundan**tüm testleri** Çalıştır test ' i seçerek birim testlerini çalıştırın. Testler geçer.
+1. Birim testlerini yeniden çalıştırın.
+
+   Testler geçer.
+
+## <a name="debug-tests"></a>Hata ayıklama testleri
+
+Öğreticide gösterilen aynı süreci kullanabilirsiniz: birim test projenizi kullanarak kodun hatalarını ayıklamak için [Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklayın](debugging-with-visual-studio-mac.md) . Gösterimi uygulama projesini başlatmak yerine **Stringlibrarytests** projesine <kbd>CTRL tuşunu basılı</kbd>ve bağlam menüsünde **proje hata ayıklamayı Başlat** ' ı seçin. Visual Studio, hata ayıklayıcı ekli olarak test projesi başlatır. Yürütme, test projesine veya temeldeki kitaplık koduna eklediğiniz herhangi bir kesme noktasında durur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-* [Birim testi temelleri-Visual Studio](/visualstudio/test/unit-test-basics)
 * [.NET Core ve .NET Standard birim testi](../testing/index.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
@@ -197,14 +176,14 @@ Yayın derlemesini test etmek için:
 Bu öğreticide, birim bir sınıf kitaplığı test edilmiştir. Bir paket olarak [NuGet](https://nuget.org) 'e yayımlayarak, kitaplığı başkaları için kullanılabilir hale getirebilirsiniz. Nasıl yapılacağını öğrenmek için bir NuGet öğreticisini izleyin:
 
 > [!div class="nextstepaction"]
-> [Visual Studio kullanarak bir NuGet paketi oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli)
+> [Paket (dotnet CLI) oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)
 
 Bir kitaplığı bir NuGet paketi olarak yayımlarsanız, diğerleri onu yükleyebilir ve kullanabilir. Nasıl yapılacağını öğrenmek için bir NuGet öğreticisini izleyin:
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da paket yükleyip kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+> [Mac için Visual Studio bir paketi yükleyip kullanma](/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 Bir kitaplığın paket olarak dağıtılması gerekmez. Onu kullanan bir konsol uygulamasıyla paketlenmiş olabilir. Bir konsol uygulamasını yayımlamayı öğrenmek için bu serideki önceki öğreticiye bakın:
 
 > [!div class="nextstepaction"]
-> [Visual Studio ile bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio.md)
+> [Mac için Visual Studio bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-mac.md)

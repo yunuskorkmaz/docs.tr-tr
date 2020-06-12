@@ -1,15 +1,15 @@
 ---
-title: Visual Studio Code .NET Core ile .NET Standard sınıf kitaplığı test etme
+title: Visual Studio Code kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 description: .NET Core sınıf kitaplığı için bir birim test projesi oluşturun. .NET Core sınıf kitaplığının birim testleriyle düzgün çalıştığını doğrulayın.
-ms.date: 05/29/2020
-ms.openlocfilehash: be227453bd441028cc6ce348c00fad944140238f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 06/08/2020
+ms.openlocfilehash: a61fd952eea2dec0d5a9f351d3f3d01c738e8fad
+ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292191"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84701039"
 ---
-# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio-code"></a>Öğretici: Visual Studio Code .NET Core ile .NET Standard kitaplığı test etme
+# <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 
 Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otomatikleştirilmesi gösterilmektedir.
 
@@ -19,7 +19,9 @@ Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otom
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
-1. Visual Studio Code'u açın.
+Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sağlar. Bu öğreticide kullandığınız test çerçevesi MSTest. [MSTest](https://github.com/Microsoft/testfx-docs) , aralarından seçim yapabileceğiniz üç test çerçevelerinden biridir. Diğerleri [xUnit](https://xunit.net/) ve [NUnit](https://nunit.org/)' dir.
+
+1. Visual Studio Code başlatın.
 
 1. `ClassLibraryProjects` [Visual Studio 'da .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümü açın.
 
@@ -55,16 +57,17 @@ Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otom
 
    [ [TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) ile etiketlenmiş bir test sınıfında [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) etiketli her bir yöntem, birim testi çalıştırıldığında otomatik olarak yürütülür.
 
-   > [!NOTE]
-   > MSTest, aralarından seçim yapabileceğiniz üç test çerçevelerinden biridir. Diğerleri xUnit ve nUnit ' dir.
-
 1. Çözüme test projesi ekleyin.
 
    ```dotnetcli
    dotnet sln add StringLibraryTest/StringLibraryTest.csproj
    ```
 
-1. Aşağıdaki komutu çalıştırarak sınıf kitaplığı projesine bir proje başvurusu oluşturun:
+## <a name="add-a-project-reference"></a>Proje başvurusu Ekle
+
+Test projesinin sınıfla çalışması için projeye `StringLibrary` bir başvuru ekleyin `StringLibraryTest` `StringLibrary` .
+
+1. Şu komutu çalıştırın:
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -89,7 +92,7 @@ Yöntemi test ederken `StringLibrary.StartsWithUpper` , büyük harf karakteriyl
 
 Kitaplık yönteminiz dizeleri yaptığından, ayrıca [boş bir dizeyi ( `String.Empty` )](xref:System.String.Empty) ve ve bir dizeyi başarılı bir şekilde işlediğinden emin olmak istersiniz `null` . Boş bir dize, karakteri olmayan ve 0 olan bir dizedir <xref:System.String.Length> . Bir `null` dize başlatılmamış bir dizedir. `StartsWithUpper`Doğrudan statik bir yöntem olarak çağırabilir ve tek bir <xref:System.String> bağımsız değişken geçirebilirsiniz. Ya da `StartsWithUpper` öğesine atanan bir değişkende bir genişletme yöntemi olarak çağırabilirsiniz `string` `null` .
 
-Her biri bir <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> dize dizisindeki her öğe için bir yöntemi tekrar tekrar çağıran üç yöntem tanımlayacaksınız. İlk hatayı bulduğunda test yöntemi başarısız olduğundan, yöntem çağrısında kullanılan dize değerini gösteren bir dize geçirmenize izin veren bir yöntem aşırı yüklemesi çağıracaksınız.
+Her biri <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> bir dize dizisindeki her öğe için bir yöntem çağıran üç yöntem tanımlayacaksınız. Test hatası durumunda görüntülenecek bir hata iletisi belirtmenize imkan tanıyan bir yöntem aşırı yüklemesi çağıracaksınız. İleti, hataya neden olan dizeyi tanımlar.
 
 Test yöntemleri oluşturmak için:
 
@@ -122,7 +125,7 @@ Test yöntemleri oluşturmak için:
 
 ## <a name="handle-test-failures"></a>Test başarısızlıklarını işle
 
-Test odaklı geliştirme (TDD) yapıyorsanız, önce testleri yazarsınız ve ilk kez çalıştırdığınızda başarısız olur. Sonra, uygulamayı başarılı hale getiren uygulamaya kod eklersiniz. Bu durumda, doğrulaması yaptığı uygulama kodunu yazdıktan sonra test başarısız olduğunu görmediyseniz testi oluşturdunuz. Başarısız olması beklendiğinde testin başarısız olduğunu doğrulamak için, test girişine geçersiz bir değer ekleyin.
+Test odaklı geliştirme (TDD) yapıyorsanız, önce testleri yazarsınız ve ilk kez çalıştırdığınızda başarısız olur. Sonra, uygulamayı başarılı hale getiren uygulamaya kod eklersiniz. Bu öğreticide, doğrulaması yaptığı uygulama kodunu yazdıktan sonra test başarısız olduğunu görmediyseniz testi oluşturdunuz. Başarısız olması beklendiğinde testin başarısız olduğunu doğrulamak için, test girişine geçersiz bir değer ekleyin.
 
 1. `words`Yöntemdeki diziyi, `TestDoesNotStartWithUpper` "Error" dizesini içerecek şekilde değiştirin.
 
@@ -137,7 +140,7 @@ Test odaklı geliştirme (TDD) yapıyorsanız, önce testleri yazarsınız ve il
    dotnet test StringLibraryTest/StringLibraryTest.csproj
    ```
 
-   Terminal çıktısı bir testin başarısız olduğunu gösterir ve başarısız test için bir hata iletisi sağlar.
+   Terminal çıktısı bir testin başarısız olduğunu gösterir ve başarısız test için bir hata iletisi sağlar: "onaylama. IsFalse başarısız oldu. ' Error ' bekleniyor: false; gerçek: true ". Hata nedeniyle "hata" sonunda dizide hiçbir dize sınanmadı.
 
    ```
    Starting test execution, please wait...
@@ -157,11 +160,11 @@ Test odaklı geliştirme (TDD) yapıyorsanız, önce testleri yazarsınız ve il
    Total time: 1.7825 Seconds
    ```
 
-1. Adım 1 ' de yaptığınız değişikliği geri alın ve "hata" dizesini kaldırın. Testi ve test geçişini yeniden çalıştırın.
+1. Adım 1 ' de eklediğiniz "Error" dizesini kaldırın. Testi ve test geçişini yeniden çalıştırın.
 
 ## <a name="test-the-release-version-of-the-library"></a>Kitaplığın yayın sürümünü test etme
 
-Artık, kitaplığın hata ayıklama sürümünü çalıştırırken testlerin başarılı olduğuna göre, bu testleri kitaplığın yayın derlemesi için ek bir zaman çalıştırın. Derleyici iyileştirmeleri dahil olmak üzere bir dizi etken bazen hata ayıklama ve yayın yapıları arasında farklı davranışlar üretebilir.
+Artık, kitaplığın hata ayıklama derlemesini çalıştırırken testlerin başarılı olduğuna göre, bu testleri kitaplığın yayın derlemesi için ek bir zaman çalıştırın. Derleyici iyileştirmeleri dahil olmak üzere bir dizi etken bazen hata ayıklama ve yayın yapıları arasında farklı davranışlar üretebilir.
 
 1. Testleri yayın yapı yapılandırmasıyla çalıştırın:
 
@@ -173,7 +176,7 @@ Artık, kitaplığın hata ayıklama sürümünü çalıştırırken testlerin b
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- [.NET Core ve .NET Standard birim testi](../testing/index.md)
+* [.NET Core ve .NET Standard birim testi](../testing/index.md)
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
