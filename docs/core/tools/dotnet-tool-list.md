@@ -1,78 +1,84 @@
 ---
-title: dotnet araç listesi komutu
-description: Dotnet araç listesi komutu, makinenize yüklenen .NET Core araçlarını listeler.
+title: DotNet araç listesi komutu
+description: DotNet araç listesi komutu, makinenizde yüklü olan .NET Core araçlarını listeler.
 ms.date: 02/14/2020
-ms.openlocfilehash: 28f9155407d1238f8b0960b69b34ea329ca0e8e6
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7ca894ab0f5daf0118ff92fb39e0118b952b3d83
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463355"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768280"
 ---
-# <a name="dotnet-tool-list"></a><span data-ttu-id="c4fad-103">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="c4fad-103">dotnet tool list</span></span>
+# <a name="dotnet-tool-list"></a><span data-ttu-id="6592b-103">dotnet tool list</span><span class="sxs-lookup"><span data-stu-id="6592b-103">dotnet tool list</span></span>
 
-<span data-ttu-id="c4fad-104">**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler</span><span class="sxs-lookup"><span data-stu-id="c4fad-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
+<span data-ttu-id="6592b-104">**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri</span><span class="sxs-lookup"><span data-stu-id="6592b-104">**This article applies to:** ✔️ .NET Core 2.1 SDK and later versions</span></span>
 
-## <a name="name"></a><span data-ttu-id="c4fad-105">Adı</span><span class="sxs-lookup"><span data-stu-id="c4fad-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="6592b-105">Name</span><span class="sxs-lookup"><span data-stu-id="6592b-105">Name</span></span>
 
-<span data-ttu-id="c4fad-106">`dotnet tool list`- Şu anda makinenizde yüklü olan belirtilen türdeki tüm [.NET Core araçlarını](global-tools.md) listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-106">`dotnet tool list` - Lists all [.NET Core tools](global-tools.md) of the specified type currently installed on your machine.</span></span>
+<span data-ttu-id="6592b-106">`dotnet tool list`-Makinenizde yüklü olan belirtilen türdeki tüm [.NET Core araçlarını](global-tools.md) listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-106">`dotnet tool list` - Lists all [.NET Core tools](global-tools.md) of the specified type currently installed on your machine.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="c4fad-107">Özet</span><span class="sxs-lookup"><span data-stu-id="c4fad-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="6592b-107">Özeti</span><span class="sxs-lookup"><span data-stu-id="6592b-107">Synopsis</span></span>
 
 ```dotnetcli
 dotnet tool list -g|--global
 
 dotnet tool list --tool-path <PATH>
 
+dotnet tool list --local
+
 dotnet tool list
 
 dotnet tool list -h|--help
 ```
 
-## <a name="description"></a><span data-ttu-id="c4fad-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="c4fad-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="6592b-108">Açıklama</span><span class="sxs-lookup"><span data-stu-id="6592b-108">Description</span></span>
 
-<span data-ttu-id="c4fad-109">Komut, `dotnet tool list` makinenizde yüklü olan tüm .NET Core global, araç yolu veya yerel Araçları listele etmeniz için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="c4fad-109">The `dotnet tool list` command provides a way for you to list all .NET Core global, tool-path, or local Tools installed on your machine.</span></span> <span data-ttu-id="c4fad-110">Komut, paket adını, yüklenen sürümü ve araç komutunu listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-110">The command lists the package name, version installed, and the tool command.</span></span>  <span data-ttu-id="c4fad-111">Komutu kullanmak için aşağıdakilerden birini belirtin:</span><span class="sxs-lookup"><span data-stu-id="c4fad-111">To use the command, you specify one of the following:</span></span>
+<span data-ttu-id="6592b-109">Bu `dotnet tool list` komut, makinenizde yüklü olan tüm .NET Core genel, araç yolu veya yerel araçlarını listeetmeniz için bir yol sağlar.</span><span class="sxs-lookup"><span data-stu-id="6592b-109">The `dotnet tool list` command provides a way for you to list all .NET Core global, tool-path, or local tools installed on your machine.</span></span> <span data-ttu-id="6592b-110">Komut, paket adını, yüklü sürümü ve araç komutunu listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-110">The command lists the package name, version installed, and the tool command.</span></span>  <span data-ttu-id="6592b-111">Komutunu kullanmak için aşağıdakilerden birini belirtin:</span><span class="sxs-lookup"><span data-stu-id="6592b-111">To use the command, you specify one of the following:</span></span>
 
-* <span data-ttu-id="c4fad-112">Varsayılan konuma yüklenen genel bir araç.</span><span class="sxs-lookup"><span data-stu-id="c4fad-112">A global tool installed in the default location.</span></span> <span data-ttu-id="c4fad-113">`--global` Seçeneği kullanma</span><span class="sxs-lookup"><span data-stu-id="c4fad-113">Use the `--global` option</span></span>
-* <span data-ttu-id="c4fad-114">Özel bir konuma yüklenen genel bir araç.</span><span class="sxs-lookup"><span data-stu-id="c4fad-114">A global tool installed in a custom location.</span></span> <span data-ttu-id="c4fad-115">`--tool-path` Seçeneği kullanın.</span><span class="sxs-lookup"><span data-stu-id="c4fad-115">Use the `--tool-path` option.</span></span>
-* <span data-ttu-id="c4fad-116">Yerel bir araç.</span><span class="sxs-lookup"><span data-stu-id="c4fad-116">A local tool.</span></span> <span data-ttu-id="c4fad-117">Ve `--tool-path` seçenekleri `--global` atla.</span><span class="sxs-lookup"><span data-stu-id="c4fad-117">Omit the `--global` and `--tool-path` options.</span></span>
+* <span data-ttu-id="6592b-112">Varsayılan konumda yüklü olan küresel araçları listelemek için, `--global` seçeneğini kullanın</span><span class="sxs-lookup"><span data-stu-id="6592b-112">To list global tools installed in the default location, use the `--global` option</span></span>
+* <span data-ttu-id="6592b-113">Özel bir konumda yüklü olan küresel araçları listelemek için `--tool-path` seçeneğini kullanın.</span><span class="sxs-lookup"><span data-stu-id="6592b-113">To list global tools installed in a custom location, use the `--tool-path` option.</span></span>
+* <span data-ttu-id="6592b-114">Yerel araç olan yerel araçları listelemek için.</span><span class="sxs-lookup"><span data-stu-id="6592b-114">To list local tools, A local tool.</span></span> <span data-ttu-id="6592b-115">seçeneğini kullanın `--local` veya `--global` , `--tool-path` ve `--local` seçeneklerini atlayın.</span><span class="sxs-lookup"><span data-stu-id="6592b-115">use the `--local` option or omit the `--global`, `--tool-path`, and `--local` options.</span></span>
 
-<span data-ttu-id="c4fad-118">**Yerel araçlar .NET Core SDK 3.0 ile başlayarak kullanılabilir.**</span><span class="sxs-lookup"><span data-stu-id="c4fad-118">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
+<span data-ttu-id="6592b-116">**Yerel araçlar .NET Core SDK 3,0 ' den başlayarak kullanılabilir.**</span><span class="sxs-lookup"><span data-stu-id="6592b-116">**Local tools are available starting with .NET Core SDK 3.0.**</span></span>
 
-## <a name="options"></a><span data-ttu-id="c4fad-119">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="c4fad-119">Options</span></span>
+## <a name="options"></a><span data-ttu-id="6592b-117">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="6592b-117">Options</span></span>
 
 - **`-g|--global`**
 
-  <span data-ttu-id="c4fad-120">Kullanıcı çapında genel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-120">Lists user-wide global tools.</span></span> <span data-ttu-id="c4fad-121">`--tool-path` Seçenekle birleştirilemeyiz.</span><span class="sxs-lookup"><span data-stu-id="c4fad-121">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="c4fad-122">Her ikisini `--global` de `--tool-path` atlayarak yerel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-122">Omitting both `--global` and `--tool-path` lists local tools.</span></span>
+  <span data-ttu-id="6592b-118">Kullanıcı genelindeki genel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-118">Lists user-wide global tools.</span></span> <span data-ttu-id="6592b-119">`--tool-path`Seçeneğiyle birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="6592b-119">Can't be combined with the `--tool-path` option.</span></span> <span data-ttu-id="6592b-120">Her ikisini de atlama `--global` ve `--tool-path` yerel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-120">Omitting both `--global` and `--tool-path` lists local tools.</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="c4fad-123">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="c4fad-123">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="6592b-121">Komut için kısa bir yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="6592b-121">Prints out a short help for the command.</span></span>
+
+- **`--local`**
+
+  <span data-ttu-id="6592b-122">Geçerli dizin için yerel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-122">Lists local tools for the current directory.</span></span> <span data-ttu-id="6592b-123">`--global`Veya `--tool-path` seçenekleriyle birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="6592b-123">Can't be combined with the `--global` or `--tool-path` options.</span></span> <span data-ttu-id="6592b-124">Belirtilmemiş olsa bile, her ikisini de atlama `--global` ve `--tool-path` yerel araçları listeler `--local` .</span><span class="sxs-lookup"><span data-stu-id="6592b-124">Omitting both `--global` and `--tool-path` lists local tools even if `--local` is not specified.</span></span>
 
 - **`--tool-path <PATH>`**
 
-  <span data-ttu-id="c4fad-124">Genel araçları bulabileceğiniz özel bir konum belirtir.</span><span class="sxs-lookup"><span data-stu-id="c4fad-124">Specifies a custom location where to find global tools.</span></span> <span data-ttu-id="c4fad-125">PATH mutlak veya göreceli olabilir.</span><span class="sxs-lookup"><span data-stu-id="c4fad-125">PATH can be absolute or relative.</span></span> <span data-ttu-id="c4fad-126">`--global` Seçenekle birleştirilemeyiz.</span><span class="sxs-lookup"><span data-stu-id="c4fad-126">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="c4fad-127">Her ikisini `--global` de `--tool-path` atlayarak yerel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-127">Omitting both `--global` and `--tool-path` lists local tools.</span></span>
+  <span data-ttu-id="6592b-125">Genel araçların bulunacağı bir özel konum belirtir.</span><span class="sxs-lookup"><span data-stu-id="6592b-125">Specifies a custom location where to find global tools.</span></span> <span data-ttu-id="6592b-126">YOL mutlak veya göreli olabilir.</span><span class="sxs-lookup"><span data-stu-id="6592b-126">PATH can be absolute or relative.</span></span> <span data-ttu-id="6592b-127">`--global`Seçeneğiyle birleştirilemez.</span><span class="sxs-lookup"><span data-stu-id="6592b-127">Can't be combined with the `--global` option.</span></span> <span data-ttu-id="6592b-128">Her ikisini de atlama `--global` ve `--tool-path` yerel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-128">Omitting both `--global` and `--tool-path` lists local tools.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="c4fad-128">Örnekler</span><span class="sxs-lookup"><span data-stu-id="c4fad-128">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="6592b-129">Örnekler</span><span class="sxs-lookup"><span data-stu-id="6592b-129">Examples</span></span>
 
 - **`dotnet tool list -g`**
 
-  <span data-ttu-id="c4fad-129">Makinenizde kullanıcı çapında yüklenen tüm genel araçları listeler (geçerli kullanıcı profili).</span><span class="sxs-lookup"><span data-stu-id="c4fad-129">Lists all global tools installed user-wide on your machine (current user profile).</span></span>
+  <span data-ttu-id="6592b-130">Makinenizde Kullanıcı genelinde yüklenen tüm genel araçları listeler (geçerli kullanıcı profili).</span><span class="sxs-lookup"><span data-stu-id="6592b-130">Lists all global tools installed user-wide on your machine (current user profile).</span></span>
 
 - **`dotnet tool list --tool-path c:\global-tools`**
 
-  <span data-ttu-id="c4fad-130">Belirli bir Windows dizinindeki genel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-130">Lists the global tools from a specific Windows directory.</span></span>
+  <span data-ttu-id="6592b-131">Belirli bir Windows dizininden küresel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-131">Lists the global tools from a specific Windows directory.</span></span>
 
 - **`dotnet tool list --tool-path ~/bin`**
 
-  <span data-ttu-id="c4fad-131">Belirli bir Linux/macOS dizinindeki genel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-131">Lists the global tools from a specific Linux/macOS directory.</span></span>
+  <span data-ttu-id="6592b-132">Belirli bir Linux/macOS dizininden küresel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-132">Lists the global tools from a specific Linux/macOS directory.</span></span>
 
-- **`dotnet tool list`**
+- <span data-ttu-id="6592b-133">**`dotnet tool list`** veya**`dotnet tool list --local`**</span><span class="sxs-lookup"><span data-stu-id="6592b-133">**`dotnet tool list`** or **`dotnet tool list --local`**</span></span>
 
-  <span data-ttu-id="c4fad-132">Geçerli dizinde bulunan tüm yerel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="c4fad-132">Lists all local tools available in the current directory.</span></span>
+  <span data-ttu-id="6592b-134">Geçerli dizinde bulunan tüm yerel araçları listeler.</span><span class="sxs-lookup"><span data-stu-id="6592b-134">Lists all local tools available in the current directory.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c4fad-133">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="c4fad-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6592b-135">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6592b-135">See also</span></span>
 
-- [<span data-ttu-id="c4fad-134">.NET Çekirdek araçları</span><span class="sxs-lookup"><span data-stu-id="c4fad-134">.NET Core tools</span></span>](global-tools.md)
-- [<span data-ttu-id="c4fad-135">Öğretici: .NET Core CLI'yi kullanarak bir .NET Core global aracı yükleyin ve kullanın</span><span class="sxs-lookup"><span data-stu-id="c4fad-135">Tutorial: Install and use a .NET Core global tool using the .NET Core CLI</span></span>](global-tools-how-to-use.md)
-- [<span data-ttu-id="c4fad-136">Öğretici: .NET Core CLI'yi kullanarak bir .NET Core yerel aracı nı yükleyin ve kullanın</span><span class="sxs-lookup"><span data-stu-id="c4fad-136">Tutorial: Install and use a .NET Core local tool using the .NET Core CLI</span></span>](local-tools-how-to-use.md)
+- [<span data-ttu-id="6592b-136">.NET Core araçları</span><span class="sxs-lookup"><span data-stu-id="6592b-136">.NET Core tools</span></span>](global-tools.md)
+- [<span data-ttu-id="6592b-137">Öğretici: .NET Core CLI kullanarak .NET Core küresel aracı 'nı yükleyip kullanın</span><span class="sxs-lookup"><span data-stu-id="6592b-137">Tutorial: Install and use a .NET Core global tool using the .NET Core CLI</span></span>](global-tools-how-to-use.md)
+- [<span data-ttu-id="6592b-138">Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın</span><span class="sxs-lookup"><span data-stu-id="6592b-138">Tutorial: Install and use a .NET Core local tool using the .NET Core CLI</span></span>](local-tools-how-to-use.md)
