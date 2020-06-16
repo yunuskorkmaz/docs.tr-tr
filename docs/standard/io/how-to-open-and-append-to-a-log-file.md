@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: günlük dosyasını açma ve ekleme'
+description: .NET 'teki StreamWriter ve StreamReader sınıflarını kullanarak bir günlük dosyası açın ve akışlara karakterler yazıp buradan karakter okur.
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,15 +12,15 @@ helpviewer_keywords:
 - log files, appending to
 - I/O [.NET Framework], log files
 ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
-ms.openlocfilehash: 025c35344b9262e1f2fa6da87b68e46e21a54222
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a66dadd24cc327824e91df733f11a23112cd384a
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291831"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769177"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>Nasıl yapılır: günlük dosyasını açma ve ekleme
-<xref:System.IO.StreamWriter>ve <xref:System.IO.StreamReader> akışlardan karakter yazıp karakterleri okur. Aşağıdaki kod örneği, giriş için *log. txt* dosyasını açar veya yoksa oluşturur ve günlük bilgilerini dosyanın sonuna ekler. Örnek daha sonra dosyanın içeriğini görüntüleme için standart çıktıya yazar.
+<xref:System.IO.StreamWriter>ve <xref:System.IO.StreamReader> akışlardan karakter yazıp karakterleri okur. Aşağıdaki kod örneği, giriş için *log.txt* dosyasını açar veya yoksa oluşturur ve günlük bilgilerini dosyanın sonuna ekler. Örnek daha sonra dosyanın içeriğini görüntüleme için standart çıktıya yazar.
 
 Bu örneğe alternatif olarak, bilgileri tek bir dize veya dize dizisi olarak saklayabilir ve <xref:System.IO.File.WriteAllText%2A?displayProperty=nameWithType> <xref:System.IO.File.WriteAllLines%2A?displayProperty=nameWithType> aynı işlevselliğe ulaşmak için veya yöntemini kullanabilirsiniz.  
   

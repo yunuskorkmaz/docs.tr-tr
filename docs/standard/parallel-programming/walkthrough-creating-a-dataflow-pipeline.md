@@ -1,5 +1,6 @@
 ---
 title: 'İzlenecek yol: Veri Akışı Ardışık Düzeni Oluşturma'
+description: Bir dizi bileşen veya veri akışı bloğu olan bir veri akışı işlem hattı oluşturun. Veri akışı bloğu, belirli bir görevin daha büyük bir hedefe katkıda bulunmasını sağlar.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: cfe3296815dc344b0d9d1f7bad1ab4a130380e2b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7fe12b63b04d403334e4b64a421b105550467ca4
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84284617"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767877"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>İzlenecek yol: Veri Akışı Ardışık Düzeni Oluşturma
 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> Kaynak bloklarında ileti almak için,, ve yöntemlerini kullanabilseniz de, bir *veri akışı işlem hattı*oluşturmak için ileti bloklarını da bağlayabilirsiniz. Veri akışı işlem hattı, her biri daha büyük bir hedefe katkıda bulunan belirli bir görevi gerçekleştiren bir dizi bileşenden veya *veri akışı bloklarıdır*. Bir veri akışı ardışık düzeninde bulunan her veri akışı bloğu, başka bir veri akışı bloğundan bir ileti aldığında iş gerçekleştirir. Buna bir benzerleme vurguladı, otomobil üretimi için bir derleme satırdır. Her bir araç derleme satırından geçtiğinde, bir istasyon çerçeveyi ayrıştırır, bir sonraki altyapı altyapıyı yüklerse ve bu şekilde devam eder. Bir derleme çizgisi birden çok taşıtın aynı anda birleştirilmesini sağladığından, her seferinde bir tane olmak üzere tüm araçlar derlenenden daha iyi bir aktarım hızı sağlar.
@@ -34,7 +35,7 @@ ms.locfileid: "84284617"
   
 6. İşlem hattının tüm işleri tamamlamasını bekleyin.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
  Bu yönergeyi başlamadan önce [veri akışını](dataflow-task-parallel-library.md) okuyun.  
   
 ## <a name="creating-a-console-application"></a>Konsol Uygulaması Oluşturma  
@@ -53,7 +54,7 @@ ms.locfileid: "84284617"
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|Üye|Tür|Description|  
+|Üye|Tür|Açıklama|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Web 'den kitap metnini indirir.|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Kitap metnini bir sözcük dizisine ayırır.|  

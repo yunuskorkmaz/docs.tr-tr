@@ -1,5 +1,6 @@
 ---
 title: Standart TimeSpan biçim dizeleri
+description: .NET 'teki bir TimeSpan değerinin metin temsilini tanımlamak için tek bir biçim belirticisi kullanan standart TimeSpan Biçim dizelerini gözden geçirin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 2ed9ca7337e40b5520ddbfc92925c5bedb45f701
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 31e4158d42d794e830d9acfe666729846c43a1ee
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289284"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768124"
 ---
 # <a name="standard-timespan-format-strings"></a>Standart TimeSpan biçim dizeleri
 
@@ -40,7 +41,7 @@ Standart <xref:System.TimeSpan> Biçim dizesi, <xref:System.TimeSpan> biçimlend
   
 Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmektedir.  
   
-|Biçim belirteci|Name|Description|Örnekler|  
+|Biçim belirteci|Name|Açıklama|Örnekler|  
 |----------------------|----------|-----------------|--------------|  
 |,|Sabit (Sabit) biçim|Bu tanımlayıcı kültüre duyarlı değildir. Formu alır `[-][d'.']hh':'mm':'ss['.'fffffff]` .<br /><br /> ("T" ve "T" biçim dizeleri aynı sonuçları üretir.)<br /><br /> Daha fazla bilgi: [sabit ("c") Biçim belirleyicisi](#the-constant-c-format-specifier).|`TimeSpan.Zero`-> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)`-> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)`-> 3.17:25:30.5000000|  
 |"g"|Genel kısa biçim|Bu belirtici yalnızca gerekli olanları verir. Kültüre duyarlıdır ve formu alır `[-][d':']h':'mm':'ss[.FFFFFFF]` .<br /><br /> Daha fazla bilgi: [genel kısa ("g") Biçim belirleyicisi](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)`-> 1:3: 16:50, 5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)`-> 1:3: 16:50599 (fr-FR)|  
@@ -53,7 +54,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. Nokta (.) ve iki nokta (:) değişmez simgeler. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
 |*TID*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
@@ -79,7 +80,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. İki nokta (:) sabit bir simgedir. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
 |*TID*|Önünde sıfır olmayan, isteğe bağlı gün sayısı.|  
@@ -103,7 +104,7 @@ Aşağıdaki tabloda standart zaman aralığı biçim belirticileri listelenmekt
   
  Köşeli ayraçlar ([ve]) içindeki öğeler isteğe bağlıdır. İki nokta (:) sabit bir simgedir. Aşağıdaki tabloda kalan öğeler açıklanmaktadır.  
   
-|Öğe|Description|  
+|Öğe|Açıklama|  
 |-------------|-----------------|  
 |*-*|Negatif bir zaman aralığını belirten isteğe bağlı bir eksi işareti.|  
 |*TID*|Önünde sıfır olmayan gün sayısı.|  

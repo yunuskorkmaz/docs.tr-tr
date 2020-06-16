@@ -1,5 +1,6 @@
 ---
 title: Büyük/Küçük Harf Kuralları
+description: Tanımlayıcılar, bileşik sözcükler ve genel terimler için büyük harfe çevirme kuralları uygulayın. .NET 'ta büyük/küçük harf duyarlılığı 'nın nasıl çalıştığını anlayın.
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280406"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767799"
 ---
 # <a name="capitalization-conventions"></a>Büyük/Küçük Harf Kuralları
 Bu bölümdeki yönergeler, tutarlı bir şekilde uygulandığında, türler, Üyeler ve parametreler için tanımlayıcıların kolay okunmasını sağlamak üzere basit bir yöntem sağlar.

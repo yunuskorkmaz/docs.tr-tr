@@ -1,5 +1,6 @@
 ---
 title: Yönetilen İş Parçacıklarında Özel Durumlar
+description: İşlenmemiş özel durumların .NET 'te nasıl işlendiğini görün. .NET sürüm 2,0 ile, işlenmemiş iş parçacığı özel durumları doğal olarak devam edecek ve uygulama sonlandırmasına neden olacak.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2facb68c77815de7a6fb97ab8f2ee683ffbad724
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279704"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767890"
 ---
 # <a name="exceptions-in-managed-threads"></a>Yönetilen İş Parçacıklarında Özel Durumlar
 .NET Framework sürüm 2,0 ' den başlayarak, ortak dil çalışma zamanı, iş parçacıklarında birçok işlenmemiş özel durumun doğal olarak devam etmesine izin verir. Çoğu durumda bu, işlenmeyen özel durumun uygulamanın sonlandırılmasına neden olduğu anlamına gelir.  

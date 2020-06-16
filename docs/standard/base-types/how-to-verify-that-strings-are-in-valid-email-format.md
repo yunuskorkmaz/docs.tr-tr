@@ -1,5 +1,6 @@
 ---
 title: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
+description: Normal bir ifadenin, dizelerin .NET 'teki geçerli bir e-posta biçiminde olduğunu nasıl doğrulayadığına ilişkin bir örnek okuyun.
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 360ed985575358dd9603a55fc2d5d6c297621ec8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 47ef4dedd20a2b885abaabf72c26de5f3312c66f
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290428"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768969"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
 
@@ -35,7 +36,7 @@ Aşağıdaki örnek bir dizenin geçerli e-posta biçiminde olduğunu doğrulama
 
 E-posta adresinin geçerli olduğunu doğrulamak için yöntemi, `IsValidEmail` <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> `(@)(.+)$` etki alanı adını e-posta adresinden ayırmak üzere normal ifade düzeniyle yöntemi çağırır. Üçüncü parametre, <xref:System.Text.RegularExpressions.MatchEvaluator> eşleşen metni işleyen ve değiştiren yöntemi temsil eden bir temsilcisidir. Normal ifade deseninin aşağıdaki şekilde yorumlanması.
 
-|Desen|Description|
+|Desen|Açıklama|
 |-------------|-----------------|
 |`(@)`|@ Karakteriyle eşleştirin. Bu ilk yakalama grubudur.|
 |`(.+)`|Herhangi bir karakterin bir veya daha fazla tekrarı ile eşleştirin. Bu ikinci yakalama grubudur.|

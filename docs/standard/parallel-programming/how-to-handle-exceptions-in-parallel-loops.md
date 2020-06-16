@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme'
+description: .NET 'teki paralel Döngülerde özel durumları nasıl işleyeceğinizi öğrenin. Bir System. AggregateException içindeki döngüden tüm özel durumların nasıl sarılacağını gösteren bir örnek görürsünüz.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 61c22d6e82282f8aeb54818c813d4489e3bc9641
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278538"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768982"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>Ve <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> aşırı yüklemelerin, oluşturulan özel durumları işlemek için özel bir mekanizması yoktur. Bu şekilde, düzenli `for` ve `foreach` döngülere ( `For` ve `For Each` Visual Basic) benzeirler; işlenmeyen bir özel durum, çalışmakta olan tüm yinelemeler sona erdiğinde döngünün sonlandırılmasına neden olur.

@@ -1,6 +1,6 @@
 ---
 title: Ortak Tür Sistemi
-description: .NET 'teki tür sistemi hakkında bilgi edinin.
+description: .NET 'teki tür sistemini keşfedebilir. .NET 'teki türler (değer türleri veya başvuru türleri), tür tanımı, tür üyeleri ve tür üye özellikleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: a1aa244d470402823fc22e12cb5e32bbbdcd87fe
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: db0ecd59f122228d33b74be6dec51371413d68b3
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289349"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767838"
 ---
 # <a name="common-type-system"></a>Ortak tür sistemi
 
@@ -49,7 +49,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 - [Yapılar](#structures)  
   
-- [Numaralandırmalar](#enumerations)  
+- [Listelemeler](#enumerations)  
   
 - [Arabirimler](#interfaces)  
   
@@ -61,7 +61,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Aşağıdaki tabloda bir sınıfın sahip olabileceği bazı özellikler açıklanmaktadır. Çalışma zamanını destekleyen her dil, bir sınıf veya sınıf üyesinin bu özelliklerden birini veya daha fazlasını olduğunu göstermek için bir yol sağlar. Ancak, .NET ' i hedefleyen bireysel programlama dilleri, bu özelliklerin tümünü kullanabilir hale gelebilir.  
   
-|Özellik|Description|  
+|Özellik|Açıklama|  
 |--------------------|-----------------|  
 |sealed|Başka bir sınıfın bu türden türetilemeyeceğini belirtir.|  
 |uygulamalar|Sınıfın, arabirim üyesi uygulamalar sunarak bir veya daha fazla arabirim kullandığını gösterir.|  
@@ -86,7 +86,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
  Her değer türü için ortak dil çalışma zamanı, değer türüyle aynı durum ve davranışa sahip bir sınıf olan, karşılık gelen paketlenmiş bir tür sağlar. Değer türünün bir örneği, türünde bir parametre kabul eden bir yönteme geçirildiğinde paketlenmelidir <xref:System.Object?displayProperty=nameWithType> . Denetim kutulanır (yani, bir sınıfın örneğinden bir değer türünün örneğine dönüştürülür) denetim, bir değer türünü başvuru parametresi olarak kabul eden bir yöntem çağrısından geri döndüğünde. Bazı diller kutulanmış tür gerektiğinde özel sözdizimi kullanmanızı gerektirir; diğerleri gerektiğinde kutulanmış türü otomatik olarak kullanır. Bir değer türü tanımladığınızda, hem paketlenmiş hem de kutulanmamış türü tanımlarsınız.  
   
-### <a name="enumerations"></a>Numaralandırmalar
+### <a name="enumerations"></a>Listelemeler
 
  Sabit Listesi doğrudan öğesinden devralan <xref:System.Enum?displayProperty=nameWithType> ve temel bir temel türün değerleri için alternatif adlar sağlayan bir değer türüdür. Sabit listesi türü, yerleşik imzalı veya işaretsiz tamsayı türlerinden biri olması gereken temel bir tür olan bir ada sahiptir (örneğin <xref:System.Byte> , <xref:System.Int32> , veya <xref:System.UInt64> ) ve bir alan kümesi. Alanlar, her biri bir sabiti temsil eden statik sabit değerli alanlardır. Aynı değer birden çok alana atanabilir. Bu gerçekleştiğinde, bir değerden birini yansıma ve dize dönüştürmesi için birincil numaralandırma değeri olarak işaretlemeniz gerekir.  
   
@@ -178,7 +178,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 ### <a name="type-accessibility"></a>Tür erişilebilirliği  
  Tüm türlerin, diğer türlerden erişilebilirliğini yöneten bir değiştiricisi vardır. Aşağıdaki tabloda, çalışma zamanı tarafından desteklenen tür erişilebilirlik türleri açıklanmaktadır.  
   
-|Erişilebilirlik|Description|  
+|Erişilebilirlik|Açıklama|  
 |-------------------|-----------------|  
 |public|Türe tüm derlemeler tarafından erişilebilir.|  
 |derleme|Türe yalnızca kendi derlemesi içinden erişilebilir.|  
@@ -279,7 +279,7 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
 
  Ortak tür sistemi, tür üyelerinin çeşitli özelliklere sahip olmasına olanak sağlar; Ancak, dillerin tüm bu özellikleri desteklemesi gerekmez. Aşağıdaki tabloda üye özellikleri açıklanmaktadır.  
   
-|Özellik|Uygulanabilir|Description|  
+|Özellik|Uygulanabilir|Açıklama|  
 |--------------------|------------------|-----------------|  
 |abstract|Yöntemler, Özellikler ve olaylar|Tür, yöntemin uygulamasını sağlamaz. Soyut yöntemleri devraldığı veya uygulayan türler, yöntemi için bir uygulama sağlamalıdır. Tek özel durum, türetilmiş türün bir soyut tür olduğu durumdur. Tüm soyut yöntemler sanal.|  
 |Özel, Aile, derleme, Aile ve derleme, Aile veya derleme ya da ortak|Tümü|Üyenin erişilebilirliğini tanımlar:<br /><br /> private<br /> Yalnızca üyeyle aynı tür içinden veya iç içe yerleştirilmiş bir tür içinde erişilebilir.<br /><br /> aile<br /> Üyeyle aynı tür içinden ve ondan kalıtımla alan türetilmiş türlerden erişilebilir.<br /><br /> derleme<br /> Yalnızca türün tanımlandığı derlemede erişilebilir.<br /><br /> Aile ve derleme<br /> Yalnızca aile ve derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> Aile veya derleme<br /> Yalnızca aile veya derleme erişimi için uygun olan türlerden erişilebilir.<br /><br /> public<br /> Herhangi bir türden erişilebilir.|  
@@ -306,6 +306,6 @@ Ortak tür sistemi, türlerin ortak dil çalışma zamanında nasıl bildirildi�
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET API tarayıcısı](/dotnet/api)
+- [.NET API Browser](/dotnet/api)
 - [Ortak Dil Çalışma Zamanı](../clr.md)
 - [.NET 'te tür dönüştürme](type-conversion.md)

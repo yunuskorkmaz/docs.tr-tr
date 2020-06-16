@@ -1,16 +1,17 @@
 ---
 title: İş Parçacığı Koleksiyonları
+description: .NET ' te iş parçacığı açısından güvenli ve ölçeklenebilir koleksiyon sınıfları içeren System. Collections. eşzamanlı ad alanını kullanarak iş parçacığı açısından güvenli Koleksiyonlar ile çalışmaya başlayın.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 7af59cf0fdbe8d5c7d7d586b4b86992ae1dc7601
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3a252124ade4c43961c06697367bbc4ca5d0c9cb
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290376"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768592"
 ---
 # <a name="thread-safe-collections"></a>İş Parçacığı Koleksiyonları
 .NET Framework 4, <xref:System.Collections.Concurrent?displayProperty=nameWithType> hem iş parçacığı güvenli hem de ölçeklenebilir olan birkaç koleksiyon sınıfını içeren ad alanını tanıtır. Birden çok iş parçacığı, Kullanıcı kodunda ek eşitlemeye gerek duymadan, bu koleksiyonlardan öğeleri güvenle ve etkili bir şekilde ekleyebilir veya kaldırabilir. Yeni kod yazdığınızda, birden çok iş parçacığının koleksiyona aynı anda yazılacağı her seferinde eşzamanlı koleksiyon sınıflarını kullanın. Yalnızca paylaşılan bir koleksiyondan okuyorsanız <xref:System.Collections.Generic?displayProperty=nameWithType> ad alanındaki sınıfları kullanabilirsiniz. .NET Framework 1.1 veya önceki çalışma zamanı sürümünü hedeflemeniz gerekmedikçe 1.0 koleksiyon sınıflarını kullanmamanızı öneririz.  

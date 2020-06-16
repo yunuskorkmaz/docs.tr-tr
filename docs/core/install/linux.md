@@ -4,12 +4,12 @@ description: Linux 'ta .NET Core 'u yüklemeyi destekleyen Linux dağıtımları
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fec3cf9e99c2db5d7312280f676bc2a3344f1ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fbb057825395d4e024f99e1abbd1a6e65ba1dce7
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602896"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768359"
 ---
 # <a name="install-net-core-on-linux"></a>Linux 'ta .NET Core 'u yükler
 
@@ -28,6 +28,26 @@ Aşağıdaki .NET Core sürümleri ❌ artık desteklenmemektedir. Bunlara yöne
 - 2.0
 
 Bu desteklenmeyen sürümler aşağıdaki bölümlerde ayrıntılandırılmıştır ve bu sürümü yüklemeye çalışırsanız mesafmeniz farklılık gösterebilir.
+
+## <a name="alpine"></a>Alpine
+
+Alp için yükleyiciler yok. [Install betiğini](linux-alpine.md#scripted-install) kullanmanız veya [el ile Install](linux-alpine.md#manual-install) yönergelerini izlemeniz gerekir.
+
+Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve ' de desteklendiği alp sürümlerinin bir listesi verilmiştir. Bu sürümler, [.NET Core 'un sürümü destek sonuna ulaşana](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya [alçam sürümü yaşam sonuna ulaştığında](https://wiki.alpinelinux.org/wiki/Alpine_Linux:Releases)desteklenene kadar desteklenmeye devam eder.
+
+- ✔️, alp veya .NET Core sürümünün hala desteklendiğini gösterir.
+- A ❌ , alp veya .NET Core sürümünün bu Alu sürümünde desteklenmediğini belirtir.
+- Hem alp hem de bir .NET Core sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
+
+| Alpine                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
+|-----------------------------|---------------|---------------|----------------|
+| ✔️ [3,12](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+| ✔️ [3,11](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+| ✔️ [3,10](linux-alpine.md)  | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+| ✔️ [3,9](linux-alpine.md)   | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+| ❌[3,8](linux-alpine.md)   | ✔️ 2,1        | ❌3,1        | ❌5,0 Önizleme |
+
+Daha fazla bilgi için bkz. [alp 'de .NET Core 'U yüklemeye](linux-alpine.md).
 
 ## <a name="centos"></a>CentOS
 
@@ -56,7 +76,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [10](linux-debian.md#debian-10-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
-| ❌[8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌5,0 Önizleme |
+| ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌5,0 Önizleme |
 
 ## <a name="fedora"></a>Fedora
 

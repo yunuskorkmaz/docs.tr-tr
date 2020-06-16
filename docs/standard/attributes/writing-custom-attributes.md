@@ -1,5 +1,6 @@
 ---
 title: Özel Öznitelikler Yazma
+description: .NET ' te kendi özel öznitelerinizi tasarlayın. Özel öznitelikler temelde doğrudan veya dolaylı olarak System. Attribute 'dan türetilmiş sınıflardır.
 ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3cae8de9b76aa9953b21ad2e23ad003e97555aa9
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276172"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768488"
 ---
 # <a name="writing-custom-attributes"></a>Özel Öznitelikler Yazma
 Kendi özel öznitelerinizi tasarlamak için çok sayıda yeni kavram oluşturmanız gerekmez. Nesne odaklı programlama hakkında bilgi sahibiyseniz ve sınıfların nasıl tasarlanacağını biliyorsanız, daha fazla bilgiye sahip olmanız gerekir. Özel öznitelikler temelde doğrudan veya dolaylı olarak türetilmiş geleneksel sınıflardır <xref:System.Attribute?displayProperty=nameWithType> . Geleneksel sınıflar gibi özel öznitelikler ise verileri depolayan ve alan yöntemler içerir.  

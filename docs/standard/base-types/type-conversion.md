@@ -1,5 +1,6 @@
 ---
 title: .NET Framework'te Tür Dönüştürme
+description: .NET ' te tür dönüştürmesi hakkında bilgi edinmek için, eski türün değerine denk gelen yeni bir tür değeri oluşturur, ancak özgün kimliğini saklayamayabilir.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 11345081610459dbf053d846aa04369301010732
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291662"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769229"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework'te Tür Dönüştürme
 Her değerin, değere ayrılan alan miktarı, sahip olduğu olası değer aralığı ve kullanılabilir olduğu Üyeler gibi öznitelikleri tanımlayan ilişkili bir türü vardır. Birçok değer, tek bir türden fazlası olarak ifade edilebilir. Örneğin, 4 değeri bir tamsayı olarak veya bir kayan nokta değeri olarak ifade edilebilir. Tür dönüştürme, eski bir türün değerine eşit olan, yeni türde bir değer oluşturur, fakat özgün nesnenin kimliğini (veya tam değerini) koruması gerekmez.  

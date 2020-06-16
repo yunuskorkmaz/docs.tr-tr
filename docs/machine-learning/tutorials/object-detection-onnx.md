@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: b4f6457c4fab8549b3efec2e25f7c23213698414
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144753"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767786"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET 'de ONNX kullanarak nesneleri algılama
 
@@ -19,7 +19,7 @@ Görüntülerdeki nesneleri saptamak için ML.NET ' de önceden eğitilen bir ON
 
 Bir nesne algılama modelini sıfırdan eğitmek için milyonlarca parametre, büyük miktarda etiketli eğitim verisi ve çok miktarda bilgi işlem kaynağı (yüzlerce GPU saati) ayarlanması gerekir. Önceden eğitilen bir modelin kullanılması, eğitim sürecini kısayola etmenizi sağlar.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Sorunu anlama
@@ -94,7 +94,7 @@ Artık ONNX 'in ne olduğuna ve küçük YOLOv2 nasıl çalıştığına ilişki
     - Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml**için arama yapın.
     - **Install** düğmesini seçin.
     - **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
-    - **Microsoft. ml. ımageanalytics** ve **Microsoft. ml. OnnxTransformer**için bu adımları tekrarlayın.
+    - **Microsoft. ml. ımageanalytics**, **Microsoft. ml. OnnxTransformer** ve **Microsoft. ml. onnxruntime**için bu adımları tekrarlayın.
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>Verilerinizi hazırlayın ve önceden eğitilen modeli
 

@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: dosyaları sıkıştırma ve ayıklama'
+description: System. ıO. Compression kullanarak dosyaları ayıkla & ayıklayın. ZipFile, ZipArchive, ZipArchiveEntry, DeflateStream & GZipStream kullanan örneklere bakın.
 ms.date: 01/14/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 28f9a0baa73f58b0a5c7f93a4b0b3ece3b87c3a5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c13f464432aa6f67136d3a844bdeda256e7ab9b6
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288569"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769242"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Nasıl yapılır: dosyaları sıkıştırma ve ayıklama
 
@@ -30,7 +31,7 @@ ms.locfileid: "84288569"
 Aşağıdaki örneklerde, sıkıştırılmış dosyalarla gerçekleştirebileceğiniz bazı işlemler gösterilmektedir. Bu örnekler, projenize aşağıdaki NuGet paketlerinin eklenmesini gerektirir:
 
 - [System. ıO. Compression](https://www.nuget.org/packages/System.IO.Compression)
-- [System. ıO. Compression. ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
+- [System.IO.Compression.Zipdosyası](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
 
 .NET Framework kullanıyorsanız, projenize bu iki kitaplıklara başvurular ekleyin:
 
@@ -50,7 +51,7 @@ Aşağıdaki örnek, sınıfını kullanarak sıkıştırılmış bir *. zip* do
 
 Sonraki örnek, var olan bir *. zip* dosyasının içeriği boyunca yinelenir ve *. txt* uzantısına sahip dosyaları ayıklar. <xref:System.IO.Compression.ZipArchive>ZIP 'e erişmek için sınıfını ve <xref:System.IO.Compression.ZipArchiveEntry> tek tek girişleri incelemek için sınıfını kullanır. Nesnesinin genişletme yöntemi <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> <xref:System.IO.Compression.ZipArchiveEntry> <xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> sınıfında kullanılabilir.
 
-Örneği çalıştırmak için program klasörünüze *Result. zip* adlı bir *. zip* dosyası yerleştirin. İstendiğinde, ' a Ayıklanacak bir klasör adı belirtin.
+Örneği çalıştırmak için program klasörünüze *result.zip* adlı bir *. zip* dosyası yerleştirin. İstendiğinde, ' a Ayıklanacak bir klasör adı belirtin.
 
 > [!IMPORTANT]
 > Dosyaları kaldırdığınızda, geri yüklediğiniz dizinden çıkmak için kötü amaçlı dosya yolları araması yapmanız gerekir. Bu, yol çapraz geçişi saldırısı olarak bilinir. Aşağıdaki örnek, kötü amaçlı dosya yollarının nasıl denetleyeceğinizi ve sıkıştırmayı açmak için güvenli bir yol sağlar.

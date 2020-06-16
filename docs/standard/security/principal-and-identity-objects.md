@@ -1,5 +1,6 @@
 ---
 title: Asıl ve Kimlik Nesneleri
+description: .NET 'teki kullanıcıları temsil eden Identity Objects hakkında bilgi edinin. Ayrıca, bir rolün & bir kimlik nesnesini kapsülleyen Principal nesneleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: cece51370fb269121e776e865275cd464c1af095
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5fd3f1c80f22c1ebe7b2c10653ee137f00321de8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291233"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768852"
 ---
 # <a name="principal-and-identity-objects"></a>Asıl ve Kimlik Nesneleri
 Yönetilen kod, bir <xref:System.Security.Principal.IPrincipal> nesneye yönelik bir başvuru içeren bir nesne aracılığıyla bir Sorumlunun kimliğini veya rolünü bulabilir <xref:System.Security.Principal.IIdentity> . Kimlik ve asıl nesneleri kullanıcı ve grup hesapları gibi tanıdık kavramlarla karşılaştırmak faydalı olabilir. Çoğu ağ ortamında, Kullanıcı hesapları kişileri veya programları temsil ederken grup hesapları bazı kullanıcı kategorilerini ve sahip oldukları hakları temsil eder. Benzer şekilde, .NET Framework kimlik nesneleri kullanıcıları temsil ederken, roller üyelikleri ve güvenlik bağlamlarını temsil eder. .NET Framework, Principal nesnesi hem bir kimlik nesnesini hem de bir rolü kapsar. .NET Framework uygulamalar, kimlik veya daha yaygın olarak rolün üyeliği temelinde sorumlu için haklar verir.  

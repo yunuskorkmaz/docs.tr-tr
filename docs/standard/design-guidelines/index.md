@@ -1,5 +1,6 @@
 ---
 title: Çerçeve Tasarım Yönergeleri
+description: API tutarlılığı ve kullanım kolaylığını sağlamak üzere .NET ile genişleyen ve etkileşime geçen kitaplıklar tasarlamak için bkz. çerçeve tasarım yönergeleri.
 titleSuffix: ''
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 5a4edca70844a2b2a3972381b34efe85664f353d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 17998adb1d18579f6763a80a82944e742e284e4e
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276042"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769073"
 ---
 # <a name="framework-design-guidelines"></a>Çerçeve Tasarım Yönergeleri
 Bu bölüm, .NET Framework genişleten ve etkileşime geçen kitaplıklar tasarlamak için yönergeler sağlar. Amaç, geliştirme için kullanılan programlama dilinden bağımsız bir Birleşik programlama modeli sunarak, kitaplık tasarımcılarının API tutarlılığını ve kullanım kolaylığını sağladığından yardım sağlamaktır. .NET Framework genişleten sınıfları ve bileşenleri geliştirirken bu tasarım kılavuzlarını izlemenizi öneririz. Tutarsız kitaplık tasarımı, geliştirici üretkenliğini ve etkilenmeden benimsemesini olumsuz etkiler.  

@@ -1,5 +1,6 @@
 ---
 title: Zaman Uyumsuz Programlama Modeli (APM)
+description: .NET 'te zaman uyumsuz programlama modeli (APM) hakkında bilgi edinin. Zaman uyumsuz bir işlemin nasıl başlayıp sonlandıralınacağını öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 96ad18e613d68ee97f4e5666afe77febadc6f991
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5ab5d15d24aac80ef4a31c039f7af9dacce4a8d8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289986"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769190"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Zaman Uyumsuz Programlama Modeli (APM)
 Tasarım modelini kullanan zaman uyumsuz bir işlem, <xref:System.IAsyncResult> adlı `BeginOperationName` ve `EndOperationName` sırasıyla zaman uyumsuz işlem *OperationName* ' i başlayan ve biten iki yöntem olarak uygulanır. Örneğin, <xref:System.IO.FileStream> sınıfı <xref:System.IO.FileStream.BeginRead%2A> <xref:System.IO.FileStream.EndRead%2A> bir dosyadan zaman uyumsuz olarak okunan baytları ve yöntemleri sağlar. Bu yöntemler, yönteminin zaman uyumsuz sürümünü uygular <xref:System.IO.FileStream.Read%2A> .  
@@ -29,7 +30,7 @@ Tasarım modelini kullanan zaman uyumsuz bir işlem, <xref:System.IAsyncResult> 
 ## <a name="beginning-an-asynchronous-operation"></a>Zaman uyumsuz bir Işlem başlatılıyor  
  `BeginOperationName`Yöntemi zaman uyumsuz Işlem *OperationName* ' i başlatır ve arabirimi uygulayan bir nesne döndürür <xref:System.IAsyncResult> . <xref:System.IAsyncResult>nesneler, zaman uyumsuz bir işlemle ilgili bilgileri depolar. Aşağıdaki tabloda bir zaman uyumsuz işlemle ilgili bilgiler gösterilmektedir.  
   
-|Üye|Description|  
+|Üye|Açıklama|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Zaman uyumsuz işlem hakkında bilgi içeren, uygulamaya özel isteğe bağlı bir nesne.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|<xref:System.Threading.WaitHandle>Zaman uyumsuz işlem tamamlanana kadar uygulama yürütmeyi engellemek için kullanılabilir.|  

@@ -1,5 +1,6 @@
 ---
 title: Normal İfadelerdeki Değişimler
+description: .NET 'teki normal ifadeler kullanılarak eşleşen metni değiştirmek için değişimler yapın. Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ab2ed6ff87f2d50d0f518ac64188bf8b5c98351c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288010"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768111"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Normal İfadelerdeki Değişimler
 Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. Giriş dizesinde eşleşen metnin yerini alacak metnin tümünü veya bir kısmını tanımlamak için normal bir ifade deseni kullanırlar. Değiştirme deseni, değişmez karakterlerin yanı sıra bir veya birden çok değiştirmeden oluşabilir. Değiştirme desenleri, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> bir `replacement` parametresi ve yöntemine sahip olan metodun aşırı yüklemeleri için sağlanır <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . Yöntemler, eşleşen deseninin parametresi tarafından tanımlanan desenli yerini alır `replacement` .  
   
  .NET Framework, aşağıdaki tabloda listelenen değişim öğelerini tanımlar.  
   
-|Değiştirme|Description|  
+|Değiştirme|Açıklama|  
 |------------------|-----------------|  
 |$ *sayısından*|*Sayı*ile tanımlanan yakalama grubuyla eşleşen son alt dizeyi içerir; burada *sayı* , değiştirme dizesinde bir ondalık değerdir. Daha fazla bilgi için bkz. [numaralandırılmış bir grubu değiştirme](#substituting-a-numbered-group).|  
 |$ { *Name* }|`(?<`Değiştirme dizesinde *ada* göre belirlenen adlandırılmış grupla eşleşen son alt dizeyi içerir `> )` . Daha fazla bilgi için bkz. [adlandırılmış bir grubu değiştirme](#substituting-a-named-group).|  
@@ -60,7 +61,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Sıfır veya daha fazla para birimi simgesi karakterini eşleştirin.|  
 |`\s?`|Sıfır veya bir beyaz boşluk karakterini eşleştirin.|  
@@ -83,7 +84,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Sıfır veya daha fazla para birimi simgesi karakterini eşleştirin.|  
 |`\s?`|Sıfır veya bir beyaz boşluk karakterini eşleştirin.|  
@@ -102,7 +103,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `\b(\d+)(\.(\d+))?` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Eşleştirmeyi bir sözcük sınırının başlangıcında başlatın.|  
 |`(\d+)`|Bir veya daha fazla ondalık basamağı eşleştirin. Bu ilk yakalama grubudur.|  
@@ -120,7 +121,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `^(\w+\s?)+$` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Eşlemeyi giriş dizesinin başından başlatın.|  
 |`(\w+\s?)+`|Bir veya birden çok sözcük karakteri desenini, ardından sıfır veya bir beyaz alan karakteri bir veya birden çok kez gelecek şekilde eşleştirin.|  
@@ -174,7 +175,7 @@ Değiştirmeler yalnızca değiştirme desenlerinde tanınan dil öğeleridir. G
   
  Normal ifade deseninin, `\b(\w+)\s\1\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  

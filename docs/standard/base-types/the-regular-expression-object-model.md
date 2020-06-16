@@ -1,5 +1,6 @@
 ---
 title: Normal İfade Nesnesi Modeli
+description: .NET 'teki normal ifade nesne modelini inceleyin. & nesneleri & eşleşen, gruplama & yakalama ile ilgili koleksiyonlar olan normal ifade altyapısından çalışın.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43672b85ecb64a15179881ec23c7fadd13d64868
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290908"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768059"
 ---
 # <a name="the-regular-expression-object-model"></a>Normal İfade Nesnesi Modeli
 <a name="introduction"></a>Bu konuda, .NET normal ifadelerle çalışırken kullanılan nesne modeli açıklanmaktadır. Aşağıdaki bölümleri içerir:  
@@ -89,7 +90,7 @@ ms.locfileid: "84290908"
   
  Normal ifade deseninin `^\d{3}-\d{2}-\d{4}$` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başlangıcını eşleştirin.|  
 |`\d{3}`|Üç ondalık basamakla eşleş.|  
@@ -107,7 +108,7 @@ ms.locfileid: "84290908"
   
  Normal ifade deseninin `\b(\w+)\W+(\1)\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Eşleşmeyi bir sözcük sınırında başlatın.|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  
@@ -129,7 +130,7 @@ ms.locfileid: "84290908"
   
  Normal ifade deseninin `\b\d+\.\d{2}\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
@@ -152,7 +153,7 @@ ms.locfileid: "84290908"
   
  Normal ifade deseninin `\b\d{1,2}\.\s` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\d{1,2}`|Bir veya iki ondalık basamağı eşleştirin.|  
@@ -215,7 +216,7 @@ ms.locfileid: "84290908"
   
  Normal ifade deseninin, `\b\d+(,\d{3})*\.\d{2}\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
@@ -246,7 +247,7 @@ ms.locfileid: "84290908"
   
  Normal ifade deseninin, `\b(\w+)\s(\d{1,2}),\s(\d{4})\b` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu ilk yakalama grubudur.|  
@@ -275,7 +276,7 @@ ms.locfileid: "84290908"
   
  Normal ifade deseninin, `^(?<name>\w+):(?<value>\w+)` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş dizesinin başında eşleşmeye başla.|  
 |`(?<name>\w+)`|Bir veya daha fazla sözcük karakteri eşleştir. Bu yakalama grubunun adı `name` .|  
@@ -339,7 +340,7 @@ ms.locfileid: "84290908"
   
  Normal ifade aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|  
 |`(\s\w+)*`|Boşluk karakterinin sıfır veya daha fazla tekrarlamalarını ve ardından bir veya daha fazla sözcük karakterini eşleştirin. Bu model, çok sözcüklü şehir adlarıyla eşleşir. Bu, üçüncü yakalama grubudur.|  

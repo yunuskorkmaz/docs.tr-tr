@@ -1,5 +1,6 @@
 ---
 title: Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
+description: Çok iş parçacıklı uygulamaların avantajlarından faydalanmalarını sağlayan ancak bazı tasarım karmaşıklıklarını gizleyecek olan, .NET 'teki olay tabanlı zaman uyumsuz desenleri (EAP 'ler) gözden geçirin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f4aac5afbb13cafa7bb0e9c1eb6bbd92ac41bf8c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289427"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768865"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt veren uygulamalar, genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading>Ad alanı, yüksek performanslı çok iş parçacıklı uygulamalar oluşturmak için gereken tüm araçları sağlar, ancak bu araçların kullanılması çok iş parçacıklı yazılım mühendisliğinde önemli bir deneyim gerektirir. Oldukça basit çok iş parçacıklı uygulamalar için, <xref:System.ComponentModel.BackgroundWorker> bileşen basit bir çözüm sağlar. Daha karmaşık zaman uyumsuz uygulamalarda, olay tabanlı zaman uyumsuz düzene uygun bir sınıf uygulamayı düşünün.  
