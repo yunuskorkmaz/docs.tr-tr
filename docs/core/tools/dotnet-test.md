@@ -2,12 +2,12 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: cbe9e7cce1722efb808c68ee49bb9012be6dcff7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594458"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803162"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -90,7 +90,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  `dotnet`Test ikilileri için veya .NET Framework test ana bilgisayarının kullanımını zorlar. Bu seçenek yalnızca kullanılacak ana bilgisayar türünü belirler. Kullanılacak gerçek çerçeve sürümü test projesinin *runtimeconfig. JSON* tarafından belirlenir. Belirtilmediğinde, [TargetFramework derleme özniteliği](/dotnet/api/system.runtime.versioning.targetframeworkattribute) konak türünü belirlemekte kullanılır. Bu öznitelik *. dll*' den çıkarılır .NET Framework ana bilgisayar kullanılır.
+  `dotnet`Test ikilileri için veya .NET Framework test ana bilgisayarının kullanımını zorlar. Bu seçenek yalnızca kullanılacak ana bilgisayar türünü belirler. Kullanılacak gerçek Framework sürümü, Test projesindeki *runtimeconfig.js* tarafından belirlenir. Belirtilmediğinde, [TargetFramework derleme özniteliği](/dotnet/api/system.runtime.versioning.targetframeworkattribute) konak türünü belirlemekte kullanılır. Bu öznitelik *. dll*' den çıkarılır .NET Framework ana bilgisayar kullanılır.
 
 - **`--filter <EXPRESSION>`**
 
@@ -134,7 +134,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  `.runsettings`Testleri çalıştırmak için kullanılacak dosya. `TargetPlatform`Öğesinin (x86 | x64) için bir etkisi yoktur `dotnet test` . X86 'yı hedefleyen testleri çalıştırmak için .NET Core 'un x86 sürümünü yükler. Yoldaki *DotNet. exe* ' nin bit genişliği, testleri çalıştırmak için kullanılacak şeydir. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
+  `.runsettings`Testleri çalıştırmak için kullanılacak dosya. `TargetPlatform`Öğesinin (x86 | x64) için bir etkisi yoktur `dotnet test` . X86 'yı hedefleyen testleri çalıştırmak için .NET Core 'un x86 sürümünü yükler. Yoldaki *dotnet.exe* bit genişliği, testleri çalıştırmak için kullanılacak şeydir. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   - [Birim testlerini bir dosya kullanarak yapılandırın `.runsettings` .](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
   - [Test çalıştırması yapılandırma](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
@@ -175,7 +175,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
   dotnet test --logger trx
   ```
 
-- Projedeki testleri geçerli dizinde çalıştırın ve bir kod kapsamı dosyası ( [Kapak](https://github.com/tonerdo/coverlet/blob/master/README.md)' i yükledikten sonra) oluşturun:
+- Projedeki testleri geçerli dizinde çalıştırın ve bir kod kapsamı dosyası oluşturun ( [Kapak Let](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md) toplayıcılarını yükledikten sonra):
 
   ```dotnetcli
   dotnet test --collect:"XPlat Code Coverage"

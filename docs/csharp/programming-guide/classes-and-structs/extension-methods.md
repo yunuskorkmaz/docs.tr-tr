@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 0f9c0f053e531a44640084a35dc5d8e844ee0b46
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241415"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803184"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 
@@ -54,7 +54,7 @@ Genel olarak, büyük olasılıkla kendi uygulamanızı uygulamaktan çok daha s
 using System.Linq;
 ```
 
-(System. Core. dll dosyasına da bir başvuru eklemeniz gerekebilir.) Standart sorgu işleçlerinin artık, çoğu tür için kullanılabilen ek yöntemler olarak IntelliSense 'de göründüğünü fark edeceksiniz <xref:System.Collections.Generic.IEnumerable%601> .
+(System.Core.dll için de bir başvuru eklemeniz gerekebilir.) Standart sorgu işleçlerinin artık, çoğu tür için kullanılabilen ek yöntemler olarak IntelliSense 'de göründüğünü fark edeceksiniz <xref:System.Collections.Generic.IEnumerable%601> .
 
 ## <a name="binding-extension-methods-at-compile-time"></a>Derleme Zamanında Uzantı Yöntemleri Bağlama
 
@@ -80,7 +80,7 @@ Geçmişte, <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nam
 
 Çoklu kare mimarisi veya diğer katmanlı uygulama tasarımı kullanırken, bir dizi etki alanı varlığı veya uygulama sınırları genelinde iletişim kurmak için kullanılabilecek nesneleri Veri Aktarımı. Bu nesneler genellikle hiçbir işlevsellik içermez veya yalnızca uygulamanın tüm katmanları için geçerli olan minimum işlevleri içerir. Uzantı yöntemleri, nesneleri gerekli olmayan yöntemlerle yüklemeden veya diğer katmanlarda istemeden, her uygulama katmanına özgü işlevselliği eklemek için kullanılabilir.
 
-```aspx-csharp
+```csharp
 public class DomainEntity
 {
     public int Id { get; set; }

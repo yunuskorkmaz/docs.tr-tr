@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: ffa5372678362e47eb59d8b041da55c79bf8475d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e78b920eb6a1eae870a425b91711ac9d87b6530
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447049"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84811676"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Kategorilere Göre Listelenen C# Derleyici Seçenekleri
 
@@ -30,7 +30,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |------------|-------------|
 |[-deterministic](deterministic-compiler-option.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
 |[-doc](doc-compiler-option.md)|İşlenen belge yorumlarının yazılacağı bir XML dosyası belirtir.|
-|[-out](out-compiler-option.md)|Çıkış dosyasını belirtir.|
+|[-Out](out-compiler-option.md)|Çıkış dosyasını belirtir.|
 |[-pathmap](pathmap-compiler-option.md)|Derleyici tarafından çıkış kaynak yolu adları için bir eşleme belirtin|
 |[-pdb](pdb-compiler-option.md)|Dosya adını ve. pdb dosyasının konumunu belirtir.|
 |[-Platform](platform-compiler-option.md)|Çıkış platformunu belirtin.|
@@ -49,7 +49,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |[-keycontainer](keycontainer-compiler-option.md)|Şifreleme anahtarı kapsayıcısının adını belirtir.|
 |[-keyfile](keyfile-compiler-option.md)|Şifreleme anahtarını içeren dosya adını belirtir.|
 |[-lib](lib-compiler-option.md)|[Başvuru](reference-compiler-option.md)aracılığıyla başvurulan derlemelerin konumunu belirtir.|
-|[-nostdlib](nostdlib-compiler-option.md)|Derleyiciye standart kitaplığı (mscorlib. dll) içeri aktarmamasını söyler.|
+|[-nostdlib](nostdlib-compiler-option.md)|Derleyiciye standart kitaplığı (mscorlib.dll) içeri aktarmamasını söyler.|
 |[-publicsign](publicsign-compiler-option.md)|Derlemeyi imzalamadan ortak anahtar uygulayın, ancak derlemenin imzalandığını belirten derlemede bit ayarlayın.|
 |[-başvuru](reference-compiler-option.md)|Derleme içeren bir dosyadan meta verileri içeri aktarır.|
 |-çözümleyici|Bu derlemeden çözümleyiciler çalıştırın (kısa biçim:/a)|
@@ -63,11 +63,11 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |------------|-------------|
 |[-bugreport](bugreport-compiler-option.md)|Bir hatayı rapor etmelerini kolaylaştıran bilgiler içeren bir dosya oluşturur.|
 |[-checked](checked-compiler-option.md)|Veri türü sınırlarının dışına taşan tamsayı aritmetiğinin çalışma zamanında bir özel duruma neden olup olmayacağını belirtir.|
-|[-Hata Ayıkla](debug-compiler-option.md)|Derleyiciye hata ayıklama bilgilerini yaymasını bildirin.|
+|[-debug](debug-compiler-option.md)|Derleyiciye hata ayıklama bilgilerini yaymasını bildirin.|
 |[-errorreport](errorreport-compiler-option.md)|Hata raporlama davranışını ayarlar.|
 |[-fullpaths](fullpaths-compiler-option.md)|Derleyici çıkışında dosyanın mutlak yolunu belirtir.|
 |[-nowarn](nowarn-compiler-option.md)|Derleyicinin belirtilen uyarıların oluşturulmasını engeller.|
-|[-Nullable](nullable-compiler-option.md)|Nullable bağlam seçeneğini belirtir.|
+|[-nullable](nullable-compiler-option.md)|Nullable bağlam seçeneğini belirtir.|
 |[-warn](warn-compiler-option.md)|Uyarı düzeyini ayarlar.|
 |[-warnaserror](warnaserror-compiler-option.md)|Hatalara yönelik uyarıları yükseltir.|
 |RuleSet\<file>|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|
@@ -107,7 +107,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |[-unsafe](unsafe-compiler-option.md)|[Unsafe](../keywords/unsafe.md) anahtar sözcüğünü kullanan kodun derlemesini sunar.|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 kodlamasını kullanarak derleyici çıkışını görüntüler.|
 |-Parallel [+&#124;-]|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|
-|-checksumalgorithm:\<alg>|PDB 'de depolanan kaynak dosyası sağlama toplamını hesaplamak için algoritmayı belirtin.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256.<br>SHA1 ile ilgili çakışma sorunları nedeniyle Microsoft SHA256 önerir.|
+|-checksumalgorithm:\<alg>|PDB 'de depolanan kaynak dosyası sağlama toplamını hesaplamak için algoritmayı belirtin.  Desteklenen değerler şunlardır: SHA256 (varsayılan) veya SHA1.<br>SHA1 ile ilgili çakışma sorunları nedeniyle Microsoft SHA256 önerir.|
 
 ## <a name="obsolete-options"></a>Eski seçenekler
 

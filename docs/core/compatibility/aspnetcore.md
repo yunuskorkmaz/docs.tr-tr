@@ -2,15 +2,15 @@
 title: ASP.NET Core son değişiklikler
 titleSuffix: ''
 description: ASP.NET Core 'deki son değişiklikleri listeler.
-ms.date: 04/29/2020
+ms.date: 06/11/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2e89a14c948365da1e7a04fc8d5ca4008842f8d8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446983"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803280"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -21,7 +21,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 - [Kullanılmayan Antiforgery, CORS, tanılama, MVC ve yönlendirme API 'Leri kaldırıldı](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Kimlik doğrulaması: Google + kullanımdan kaldırma](#authentication-google-deprecated-and-replaced)
 - [Kimlik doğrulaması: HttpContext. Authentication özelliği kaldırıldı](#authentication-httpcontextauthentication-property-removed)
-- [Kimlik doğrulaması: Newtonsoft. JSON türleri değişti](#authentication-newtonsoftjson-types-replaced)
+- [Kimlik doğrulaması: değiştirilmekte olan türler üzerinde Newtonsoft.Js](#authentication-newtonsoftjson-types-replaced)
 - [Kimlik doğrulaması: OAuthHandler ExchangeCodeAsync imzası değişti](#authentication-oauthhandler-exchangecodeasync-signature-changed)
 - [Yetkilendirme: Addaduthorleştirme aşırı yüklemesi farklı bir derlemeye taşındı](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Yetkilendirme: ıallowanonymous, AuthorizationFilterContext. Filters öğesinden kaldırıldı](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
@@ -50,7 +50,9 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 - [Kimlik: Signınasync kimliği doğrulanmamış kimlik için özel durum oluşturur](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [Kimlik: SignInManager Oluşturucusu yeni parametreyi kabul ediyor](#identity-signinmanager-constructor-accepts-new-parameter)
 - [Kimlik: UI statik Web varlıkları özelliğini kullanır](#identity-ui-uses-static-web-assets-feature)
+- [Kestrel: çalışma zamanında varsayılan olarak algılanan yapılandırma değişiklikleri](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: bağlantı bağdaştırıcıları kaldırıldı](#kestrel-connection-adapters-removed)
+- [Kestrel: desteklenen varsayılan TLS protokol sürümleri değiştirildi](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: boş HTTPS derlemesi kaldırıldı](#kestrel-empty-https-assembly-removed)
 - [Kestrel: yeni koleksiyona taşınan artbilgisi üstbilgileri ıste](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: aktarım soyutlama katmanı değişiklikleri](#kestrel-transport-abstractions-removed-and-made-public)
@@ -98,7 +100,14 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 ***
 
-[!INCLUDE [Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
+[!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
+
+***
+[!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
 
 ***
 

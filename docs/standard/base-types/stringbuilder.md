@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-ms.openlocfilehash: b10d1c4579f10ca4fb84797ee67342825aaa9c32
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 83d4b9327b55c511e2a46486e519e3cd0c77b1a3
+ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662946"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84803219"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET 'teki StringBuilder sınıfını kullanma
 <xref:System.String>Nesne sabittir. Sınıfındaki yöntemlerden birini her kullandığınızda <xref:System.String?displayProperty=nameWithType> , bellekte yeni bir boş alan alanı gerektiren yeni bir dize nesnesi oluşturursunuz. Bir dizeye yinelenen değişiklikler gerçekleştirmeniz gereken durumlarda, yeni bir nesne oluşturmayla ilişkili ek yük <xref:System.String> maliyetli olabilir. <xref:System.Text.StringBuilder?displayProperty=nameWithType>Sınıfı, yeni bir nesne oluşturmadan bir dizeyi değiştirmek istediğinizde kullanılabilir. Örneğin, <xref:System.Text.StringBuilder> sınıfını kullanmak bir döngüde birçok dizeyi birlikte birleştirirken performansı artırabilir.  
@@ -67,7 +67,7 @@ ms.locfileid: "84662946"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Bir dizede geçirilen biçim belirticisini biçimli metinle değiştirir.|  
 |<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Geçerli **StringBuilder**'ın belirtilen dizinine bir dize veya nesne ekler.|  
 |<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Geçerli **StringBuilder**'dan belirtilen sayıda karakteri kaldırır.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Belirtilen bir dizindeki belirtilen karakteri değiştirir.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Geçerli **StringBuilder** 'daki belirtilen bir karakter veya dizenin tüm oluşumlarını, belirtilen başka bir karakter veya dizeyle değiştirir.|  
   
 ### <a name="append"></a>Ekle  
  **Append** yöntemi, geçerli **StringBuilder**tarafından temsil edilen bir dizenin sonuna bir nesnenin metin veya dize gösterimini eklemek için kullanılabilir. Aşağıdaki örnek, bir **StringBuilder** 'ı "Merhaba Dünya" olarak başlatır ve sonra nesnenin sonuna bir metin ekler. Boşluk gerektiğinde otomatik olarak ayrılır.  
