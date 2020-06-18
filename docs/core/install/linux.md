@@ -4,12 +4,12 @@ description: Linux 'ta .NET Core 'u yüklemeyi destekleyen Linux dağıtımları
 author: thraka
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: fbb057825395d4e024f99e1abbd1a6e65ba1dce7
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: e668ad733481c2d9b73994b6344b38768f5851fe
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768359"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903382"
 ---
 # <a name="install-net-core-on-linux"></a>Linux 'ta .NET Core 'u yükler
 
@@ -78,6 +78,8 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 | ✔️ [9](linux-debian.md#debian-9-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ❌ [8](linux-debian.md#debian-8-)       | ✔️ 2,1        | ❌3,1        | ❌5,0 Önizleme |
 
+Daha fazla bilgi için bkz. [.NET Core 'U depon 'A yüklemeyin](linux-debian.md).
+
 ## <a name="fedora"></a>Fedora
 
 Fedora, Paket Yöneticisi olarak DNF 'yi kullanır.
@@ -113,6 +115,8 @@ Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET Core sür�
 |----------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-opensuse.md#opensuse-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 
+Daha fazla bilgi için bkz. [openSUSE 'e .NET Core 'U yüklemeyin](linux-opensuse.md).
+
 ## <a name="red-hat"></a>Red Hat
 
 Red Hat Enterprise Linux (RHEL) paket yöneticisi olarak yıum (RHEL 7) ve DNF (RHEL 8) kullanır.
@@ -128,6 +132,8 @@ Aşağıdaki tabloda, hem RHEL 7 hem de RHEL 8 üzerinde şu anda desteklenen .N
 | ✔️ [8](linux-rhel.md#rhel-8-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ✔️ [7](linux-rhel.md#rhel-7-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 
+Daha fazla bilgi için bkz. [RHEL üzerinde .NET Core 'U yükler](linux-rhel.md).
+
 ## <a name="sles"></a>SLES
 
 SLES, Paket Yöneticisi olarak zypper kullanır.
@@ -142,6 +148,8 @@ Aşağıdaki tabloda, hem SLES 12 SP2 hem de SLES 15 üzerinde şu anda destekle
 |------------------------|---------------|---------------|----------------|
 | ✔️ [15](linux-sles.md#sles-15-)     | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ✔️ [12 SP2](linux-sles.md#sles-12-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+
+Daha fazla bilgi için bkz. [SLES 'e .NET Core 'U yüklemeyin](linux-sles.md).
 
 ## <a name="ubuntu"></a>Ubuntu
 

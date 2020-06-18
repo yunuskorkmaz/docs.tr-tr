@@ -4,12 +4,12 @@ description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuz
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 7fe5aafe1ad8bf87883ebe27f2aa4fb102a01e45
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903616"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -32,9 +32,6 @@ Visual Studio 'da .NET taşınabilirlik Çözümleyicisi 'ni kullanmaya başlama
 ![Taşınabilirlik Çözümleyicisi 'nin ekran görüntüsü.](./media/portability-analyzer/portability-screenshot.png)
 
 Ayrıca, ApiPort konsol uygulamasını da kullanabilir, [apiport deposundan](https://aka.ms/apiportdownload)indirebilirsiniz. `listTargets`Kullanılabilir hedef listesini göstermek için komut seçeneğini kullanabilirsiniz, ardından `-t` veya komut seçeneğini belirterek hedef platformları seçebilirsiniz `--target` .
-
-> [!IMPORTANT]
-> Aracı çalıştırırken sonuç yoksa, varsayılan hedefler kullanılamayabilir. Bu sorunla karşılaşırsanız, lütfen açık hedefleri eklemediğinizden emin olun.
 
 ### <a name="solution-wide-view"></a>Çözüm genelinde görünüm
 

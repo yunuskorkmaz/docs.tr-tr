@@ -18,16 +18,16 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 9ffb2e2f426e2d2d97998a89a3e8d306de4f29ca
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84583667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904383"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 
-Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız, [olay tabanlı zaman uyumsuz düzene genel bakış](event-based-asynchronous-pattern-overview.md)uygulayarak zaman uyumsuz işlevsellik vermeyi düşünün.
+Fark edilebilir gecikme olabilecek bazı işlemlerle bir sınıf yazıyorsanız, [olay tabanlı zaman uyumsuz model](event-based-asynchronous-pattern-overview.md)uygulayarak bu zaman uyumsuz işlevselliği vermeyi düşünün.
 
 Olay tabanlı zaman uyumsuz model, zaman uyumsuz özellikleri olan bir sınıfı paketlemek için standartlaştırılmış bir yol sağlar. Gibi yardımcı sınıflarla uygulanmışsa <xref:System.ComponentModel.AsyncOperationManager> , sınıfınız ASP.net, konsol uygulamaları ve Windows Forms uygulamalar dahil olmak üzere herhangi bir uygulama modelinde doğru şekilde çalışır.
 
