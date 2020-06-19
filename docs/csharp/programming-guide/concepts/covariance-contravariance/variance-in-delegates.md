@@ -2,12 +2,12 @@
 title: Temsilcilerde varyans (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: d41c0d3d54df96031fc7989e0fdc78e9f358a40a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7370813179040f54e65adf3b568a1fd914223f1d
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990032"
 ---
 # <a name="variance-in-delegates-c"></a>Temsilcilerde varyans (C#)
 .NET Framework 3,5, C# ' deki tüm Temsilcilerde temsilci türleriyle eşleşen yöntem imzaları için fark desteğini kullanıma sunmuştur. Bu, yalnızca eşleşen imzalara sahip yöntemlerin değil, aynı zamanda daha fazla türetilmiş tür (Kovaryans) döndüren veya temsilci türü tarafından belirtilenden daha az türetilmiş tür (değişken varyans) içeren parametreleri kabul eden yöntemler için atama yaptığınız anlamına gelir. Bu hem genel hem de genel olmayan temsilcileri içerir.  
@@ -158,7 +158,8 @@ dvariant("test");
 ```  
   
 ### <a name="combining-variant-generic-delegates"></a>Değişken genel temsilcileri birleştirme  
- Değişken temsilcileri birleştirmemelisiniz. <xref:System.Delegate.Combine%2A>Yöntem, değişken temsilci dönüştürmeyi desteklemez ve temsilcilerin tamamen aynı türde olmasını bekler. Bu, <xref:System.Delegate.Combine%2A> `+` Aşağıdaki kod örneğinde gösterildiği gibi, veya işlecini kullanarak temsilcileri birleştirdiğinizde bir çalışma zamanı özel durumuna yol açabilir.  
+
+Değişken temsilcileri birleştirmeyin. <xref:System.Delegate.Combine%2A>Yöntem, değişken temsilci dönüştürmeyi desteklemez ve temsilcilerin tamamen aynı türde olmasını bekler. Bu, <xref:System.Delegate.Combine%2A> `+` Aşağıdaki kod örneğinde gösterildiği gibi, veya işlecini kullanarak temsilcileri birleştirdiğinizde bir çalışma zamanı özel durumuna yol açabilir.  
   
 ```csharp  
 Action<object> actObj = x => Console.WriteLine("object: {0}", x);  

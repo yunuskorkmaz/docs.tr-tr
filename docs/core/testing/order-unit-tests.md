@@ -1,17 +1,17 @@
 ---
-title: Birim testlerini Sırala
+title: Birim testlerini düzenleme
 description: .NET Core ile birim testlerini sipariş etme hakkında bilgi edinin.
 author: IEvangelist
 ms.date: 05/18/2020
 zone_pivot_groups: unit-testing-framework-set-one
-ms.openlocfilehash: ce0d01c924075ffcc9ad49ef8aca49222c10c921
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 3400ae440a828054624d67c14807ee72783e466a
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83704561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989256"
 ---
-# <a name="order-unit-tests"></a>Birim testlerini Sırala
+# <a name="order-unit-tests"></a>Birim testlerini düzenleme
 
 Bazen, birim testlerinin belirli bir sırada çalıştırılmasını isteyebilirsiniz. İdeal olarak, birim testlerinin çalıştırıldığı sıra, birim testlerini _not_ sıralamayı önlemek için [en iyi uygulamadır](unit-testing-best-practices.md) . Ne olursa olsun, bunu yapmanız gerekebilir. Bu durumda, bu makalede test çalıştırmalarını sıralama gösterilmektedir.
 
@@ -84,4 +84,4 @@ Testleri açıkça sıralamak için NUnit bir sağlar [`OrderAttribute`](https:/
 ## <a name="next-steps"></a>Sonraki Adımlar
 
 > [!div class="nextstepaction"]
-> [Birim testi en iyi deneyimler](unit-testing-best-practices.md)
+> [Birim testi kod kapsamı](unit-testing-code-coverage.md)

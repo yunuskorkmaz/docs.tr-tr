@@ -2,12 +2,12 @@
 title: Async ve await ile görev zaman uyumsuz programlama modeli (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: d575a369a3c9766938e3996c527e27539e3e62e2
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 90bee745a393ac35ac968e9f4f6b6c83ad8fbb46
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990080"
 ---
 # <a name="task-asynchronous-programming-model"></a>Zaman uyumsuz görev programlama modeli
 
@@ -40,7 +40,7 @@ Zaman uyumsuz tabanlı yaklaşım otomatik bir iletimin eşdeğerini, zaman uyum
 
 Async [ve](../../../language-reference/keywords/async.md) [await](../../../language-reference/operators/await.md) anahtar sözcükleri, zaman uyumsuz programlamanın kalbidir. Bu iki anahtar sözcüğü kullanarak, bir zaman uyumlu Yöntem oluştururken neredeyse kolayca zaman uyumsuz bir yöntem oluşturmak için .NET Framework, .NET Core veya Windows Çalışma Zamanı içindeki kaynakları kullanabilirsiniz. Anahtar sözcüğünü kullanarak tanımladığınız zaman uyumsuz yöntemler, `async` *zaman uyumsuz yöntemler*olarak adlandırılır.
 
-Aşağıdaki örnekte zaman uyumsuz bir yöntem gösterilmektedir. Kodda yer alan hemen hemen her şey size tamamen tanıdık gelmiş olmalıdır.
+Aşağıdaki örnekte zaman uyumsuz bir yöntem gösterilmektedir. Koddaki neredeyse her şey size tanıdık gelmelidir.
 
 Bu konunun sonunda bir Windows Presentation Foundation (WPF) örnek dosyası bulabilirsiniz ve örneği [zaman uyumsuz örnek: "Async ve await Ile zaman uyumsuz programlama" kaynağından](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs/)indirebilirsiniz.
 
@@ -234,7 +234,7 @@ Windows Çalışma Zamanı programlamadaki zaman uyumsuz API 'Ler, görevlerle b
 
 ## <a name="naming-convention"></a><a name="BKMK_NamingConvention"></a>Adlandırma kuralı
 
-Kurala göre, yaygın olarak kullanılan türleri (ör.,,, `Task` ) döndüren `Task<T>` yöntemlerin `ValueTask` `ValueTask<T>` "Async" ile biten adları olmalıdır. Zaman uyumsuz bir işlem Başlatan ancak bir awasever türü döndürmeyen Yöntemler, "Async" ile biten adlara sahip olmamalıdır, ancak bu yöntemin işlemin sonucunu döndürmeyeceğini veya oluşturmadığını önermek için "BEGIN", "Start" ya da başka bir fiil ile başlayabilir.
+Kurala göre, yaygın olarak kullanılan türleri (örneğin,,,,,,,) döndüren yöntemlerin `Task` `Task<T>` `ValueTask` `ValueTask<T>` "Async" ile biten adları olmalıdır. Zaman uyumsuz bir işlem Başlatan ancak bir awasever türü döndürmeyen Yöntemler, "Async" ile biten adlara sahip olmamalıdır, ancak bu yöntemin işlemin sonucunu döndürmeyeceğini veya oluşturmadığını önermek için "BEGIN", "Start" ya da başka bir fiil ile başlayabilir.
 
 Bir olay, taban sınıf veya arabirim sözleşmesi farklı bir ad öneriyorsa kuralı yoksayabilirsiniz. Örneğin, gibi yaygın olay işleyicilerini yeniden adlandırmamanız gerekir `Button1_Click` .
 

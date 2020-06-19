@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared [elements VB]
 - elements [Visual Basic], shared
 ms.assetid: 2bf7cf2c-b0dd-485e-8749-b5d674dab4cd
-ms.openlocfilehash: d8c9879ea2f62bfbeaa378d0aaee806623ea1c55
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b51c88e1af3a720912af8ba6aaf8ae4016af9cfa
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990193"
 ---
 # <a name="shared-visual-basic"></a>Shared (Visual Basic)
 
@@ -24,7 +24,7 @@ Bir veya daha fazla bildirilmemiş programlama öğesinin, bir sınıf veya yap�
 
 ## <a name="when-to-use-shared"></a>Paylaşılan ne zaman kullanılır
 
-Bir sınıfın veya yapının bir üyesinin paylaşılması, her örneğin kendi kopyasını sakladığı, *paylaşılmayan*değil, her örnek için kullanılabilir hale getirir. Örneğin, bir değişkenin değeri uygulamanın tamamına geçerliyse, bu yararlıdır. Bu değişkenin olduğunu bildirirseniz `Shared` , tüm örnekler aynı depolama konumuna erişir ve bir örnek değişkenin değerini değiştirirse, tüm örnekler güncelleştirilmiş değere erişir.
+Bir sınıfın veya yapının bir üyesinin paylaşılması, her örneğin kendi kopyasını sakladığı, *paylaşılmayan*değil, her örnek için kullanılabilir hale getirir. Örneğin, bir değişkenin değeri uygulamanın tamamına geçerliyse, paylaşım yararlı olur. Bu değişkenin olduğunu bildirirseniz `Shared` , tüm örnekler aynı depolama konumuna erişir ve bir örnek değişkenin değerini değiştirirse, tüm örnekler güncelleştirilmiş değere erişir.
 
 Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üyesi paylaşılabilir ve özel (yalnızca sınıftan erişilebilir) veya paylaşılmayan ve genel olabilir. Daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md).
 
@@ -50,7 +50,7 @@ Paylaşım, üyenin erişim düzeyini değiştirmez. Örneğin, bir sınıf üye
 
 - **Örnek değişkenine erişme.** Kendi sınıfının veya yapısının belirli bir örneğini içeren bir değişkenin adı ile niteleyerek paylaşılan bir öğeye erişmek mümkündür. Bu, genellikle beklenen şekilde çalışsa da, derleyici bir uyarı mesajı oluşturur ve değişken yerine sınıf veya yapı adıyla erişimi yapar.
 
-- **Örnek Ifadesiyle erişme.** Sınıfının veya yapısının bir örneğini döndüren bir ifade aracılığıyla paylaşılan bir öğeye eriştiğinizde, derleyici, ifadeyi değerlendirmek yerine sınıf veya yapı adı üzerinden erişim sağlar. Bu, ifadenin diğer eylemleri gerçekleştirmesini ve örneği döndürmesini amaçlıyorsanız beklenmedik sonuçlar üretir. Aşağıdaki örnek bunu göstermektedir.
+- **Örnek Ifadesiyle erişme.** Sınıfının veya yapısının bir örneğini döndüren bir ifade aracılığıyla paylaşılan bir öğeye eriştiğinizde, derleyici, ifadeyi değerlendirmek yerine sınıf veya yapı adı üzerinden erişim sağlar. Bu erişim, ifadenin diğer eylemleri gerçekleştirmesini ve örneği döndürmesini amaçlıyorsanız beklenmedik sonuçlar üretir. Aşağıdaki örnekte bu durum gösterilmektedir.
   
     ```vb
     Sub Main()

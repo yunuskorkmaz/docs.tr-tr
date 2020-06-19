@@ -5,12 +5,12 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990229"
 ---
 # <a name="background-garbage-collection"></a>Arka plan atık toplama
 
@@ -57,7 +57,7 @@ Aşağıdaki çizimde, ayrı ve adanmış iş parçacıklarında gerçekleştiri
 
 İş istasyonu veya sunucu çöp toplama bölümünde, iş parçacıklarının, koleksiyon süresince büyük bir süre için çöp toplamayı gerçekleştiren adanmış bir iş parçacığıyla eşzamanlı olarak çalışmasını sağlayan [eşzamanlı atık toplamayı etkinleştirebilirsiniz](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md). Bu seçenek, kuşak 2 ' de yalnızca çöp koleksiyonlarını etkiler; nesil 0 ve 1 her zaman eşzamanlı değildir çünkü hızlı bir şekilde tamamlanır.
 
-Eşzamanlı atık toplama, bir koleksiyon için duraklamaları en aza indirerek etkileşimli uygulamaların daha fazla yanıt vermesini sağlar. Yönetilen iş parçacıkları, eşzamanlı atık toplama iş parçacığı çalışırken çoğu zaman çalışmaya devam edebilir. Çöp toplama işlemi gerçekleşirken bu, daha kısa duraklamalar oluşur.
+Eşzamanlı atık toplama, bir koleksiyon için duraklamaları en aza indirerek etkileşimli uygulamaların daha fazla yanıt vermesini sağlar. Yönetilen iş parçacıkları, eşzamanlı atık toplama iş parçacığı çalışırken çoğu zaman çalışmaya devam edebilir. Bu tasarım, bir çöp toplama işlemi sırasında daha kısa duraklamalar elde edilir.
 
 Eş zamanlı çöp toplama, adanmış bir iş parçacığında gerçekleştirilir. Varsayılan olarak, CLR hem tek işlemci hem de çok işlemcili bilgisayarlarda eşzamanlı çöp toplama özellikli iş istasyonu çöp toplamayı çalıştırır.
 

@@ -2,12 +2,12 @@
 title: VARIANT genel arabirimleri oluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: a8e3e010c0e5d5490aee35603cad4fd6c1dc29e0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990054"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>VARIANT genel arabirimleri oluşturma (C#)
 
@@ -144,9 +144,9 @@ interface ICovariant<out T> { }
 
 ### <a name="avoiding-ambiguity"></a>Belirsizlik önleme
 
-VARIANT genel arabirimleri uyguladığınızda, fark bazen belirsizliğe neden olabilir. Bunun kaçınılması gerekir.
+VARIANT genel arabirimleri uyguladığınızda, fark bazen belirsizliğe neden olabilir. Bu belirsizlik kaçınılmalıdır.
 
-Örneğin, tek bir sınıfta farklı genel tür parametreleriyle aynı Varyant genel arabirimini açıkça uygularsanız, belirsizlik oluşturabilir. Derleyici bu durumda bir hata oluşturmaz, ancak çalışma zamanında hangi arabirim uygulamasının seçilme belirtilecektir. Bu, kodunuzda hafif hatalara neden olabilir. Aşağıdaki kod örneğini inceleyin.
+Örneğin, tek bir sınıfta farklı genel tür parametreleriyle aynı Varyant genel arabirimini açıkça uygularsanız, belirsizlik oluşturabilir. Derleyici bu durumda bir hata oluşturmaz, ancak çalışma zamanında hangi arabirim uygulamasının seçilme belirtilecektir. Bu belirsizlik kodunuzda hafif hatalara yol açabilir. Aşağıdaki kod örneğini inceleyin.
 
 ```csharp
 // Simple class hierarchy.

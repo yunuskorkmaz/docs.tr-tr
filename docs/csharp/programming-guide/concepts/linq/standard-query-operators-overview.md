@@ -2,17 +2,17 @@
 title: Standart sorgu Işleçlerine genel bakış (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 2327ed84734e4f4ad826e02ed4e30b8784a59716
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990009"
 ---
 # <a name="standard-query-operators-overview-c"></a>Standart sorgu Işleçlerine genel bakış (C#)
 *Standart sorgu IŞLEÇLERI* LINQ deseninin bulunduğu yöntemlerdir. Bu yöntemlerin çoğu diziler üzerinde çalışır, burada bir sıra, türü arabirimini veya arabirimi uygulayan bir nesnedir <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . Standart sorgu işleçleri filtreleme, yansıtma, toplama, sıralama ve daha fazlasını içeren sorgu özellikleri sağlar.  
   
- Türü nesneler üzerinde çalışan diğeri türü nesneler üzerinde çalışan iki LINQ standart sorgu işleci kümesi vardır <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . Her kümeyi oluşturan Yöntemler <xref:System.Linq.Enumerable> sırasıyla ve sınıflarının statik üyeleridir <xref:System.Linq.Queryable> . Bunlar üzerinde çalıştıkları türün *Uzantı yöntemleri* olarak tanımlanmıştır. Uzantı yöntemleri, statik yöntem sözdizimi veya örnek yöntemi sözdizimi kullanılarak çağrılabilir.  
+ LINQ standart sorgu işleçlerinin iki kümesi vardır: türü nesneler üzerinde çalışan diğeri <xref:System.Collections.Generic.IEnumerable%601> , türündeki nesneler üzerinde çalışır <xref:System.Linq.IQueryable%601> . Her kümeyi oluşturan Yöntemler <xref:System.Linq.Enumerable> sırasıyla ve sınıflarının statik üyeleridir <xref:System.Linq.Queryable> . Bunlar üzerinde çalıştıkları türün *Uzantı yöntemleri* olarak tanımlanmıştır. Uzantı yöntemleri, statik yöntem sözdizimi veya örnek yöntemi sözdizimi kullanılarak çağrılabilir.  
   
  Ayrıca, birkaç standart sorgu işleci yöntemi, veya tabanlı olanlar dışındaki türler üzerinde çalışır <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . <xref:System.Linq.Enumerable>Türü, her ikisi de türündeki nesneler üzerinde çalışan iki yöntemi tanımlar <xref:System.Collections.IEnumerable> . Bu yöntemler <xref:System.Linq.Enumerable.Cast%60%601%28System.Collections.IEnumerable%29> ve <xref:System.Linq.Enumerable.OfType%60%601%28System.Collections.IEnumerable%29> , parametreli olmayan veya genel olmayan BIR koleksiyonun LINQ düzeninde sorgulanmasını etkinleştirmenizi sağlar. Bunu, türü kesin belirlenmiş bir nesne koleksiyonu oluşturarak yapabilirler. <xref:System.Linq.Queryable>Sınıfı, <xref:System.Linq.Queryable.Cast%60%601%28System.Linq.IQueryable%29> ve <xref:System.Linq.Queryable.OfType%60%601%28System.Linq.IQueryable%29> türündeki nesneler üzerinde çalışan iki benzer yöntemi tanımlar <xref:System.Linq.Queryable> .  
   
@@ -20,7 +20,7 @@ ms.locfileid: "84287432"
   
  Bellek içi koleksiyonlar üzerinde çalışan yöntemler için, diğer bir deyişle, <xref:System.Collections.Generic.IEnumerable%601> döndürülen sıralanabilir nesne, metoduna geçirilen bağımsız değişkenleri yakalar. Bu nesne numaralandırıldıktan sonra, sorgu işlecinin mantığı işe alınır ve sorgu sonuçları döndürülür.  
   
- Buna karşılık, genişleyen Yöntemler <xref:System.Linq.IQueryable%601> herhangi bir sorgulama davranışı uygulamaz, ancak gerçekleştirilecek sorguyu temsil eden bir ifade ağacı oluşturur. Sorgu işleme, kaynak nesne tarafından işlenir <xref:System.Linq.IQueryable%601> .  
+ Buna karşılık, genişleyen Yöntemler <xref:System.Linq.IQueryable%601> herhangi bir sorgulama davranışı uygulamaz. Bunlar gerçekleştirilecek sorguyu temsil eden bir ifade ağacı oluşturur. Sorgu işleme, kaynak nesne tarafından işlenir <xref:System.Linq.IQueryable%601> .  
   
  Sorgu yöntemlerine yapılan çağrılar tek bir sorgu içinde birbirine zincirlenebilir ve bu da sorguların rastgele karmaşık olmasını sağlar.  
   
@@ -73,7 +73,7 @@ foreach (var obj in query)
  Hedef etki alanınız veya teknolojiniz için uygun olan alana özgü Yöntemler oluşturarak standart sorgu işleçleri kümesini daha da getirebilirsiniz. Standart sorgu işleçlerini, uzaktan değerlendirme, sorgu çevirisi ve iyileştirme gibi ek hizmetler sağlayan kendi uygulamalarınız ile de değiştirebilirsiniz. <xref:System.Linq.Enumerable.AsEnumerable%2A>Bir örnek için bkz..  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- Aşağıdaki bağlantılar, işlevleri temel alan çeşitli standart sorgu işleçleri hakkında ek bilgiler sağlayan konulara götürür.  
+ Aşağıdaki bağlantılar, işlevleri temel alan çeşitli standart sorgu işleçleri hakkında ek bilgiler sağlayan makalelere götürür.  
   
  [Verileri sıralama (C#)](./sorting-data.md)  
   
