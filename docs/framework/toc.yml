@@ -464,16 +464,22 @@
       href: additional-apis/index.md
     - name: Microsoft.SqlServer.Server
       items:
-        - name: SmiOrderProperty.Item
-          href: additional-apis/microsoft.sqlserver.server.smiorderproperty.item.md
+        - name: SmiOrderProperty sınıfı
+          items:
+            - name: Öğe özelliği
+              href: additional-apis/microsoft.sqlserver.server.smiorderproperty.item.md
     - name: Sistem
       items:
-        - name: Exception.PrepForRemoting yöntemi
-          href: additional-apis/system.exception.prepforremoting.md
+        - name: Özel durum sınıfı
+          items:
+            - name: PrepForRemoting yöntemi
+              href: additional-apis/system.exception.prepforremoting.md
     - name: System.Data.SqlTypes
       items:
-        - name: SqlChars.Stream özelliği
-          href: additional-apis/system.data.sqltypes.sqlchars.stream.md
+        - name: SqlChars sınıfı
+          items:
+            - name: Stream özelliği
+              href: additional-apis/system.data.sqltypes.sqlchars.stream.md
         - name: SqlStreamChars sınıfı
           items:
             - name: SqlStreamChars oluşturucusu
@@ -500,10 +506,14 @@
               href: additional-apis/system.data.sqltypes.sqlstreamchars.write.md
     - name: System.IO
       items:
-        - name: MemoryStream.InternalGetOriginAndLength yöntemi
-          href: additional-apis/system.io.memorystream.internalgetoriginandlength.md
+        - name: MemoryStream sınıfı
+          items:
+            - name: InternalGetOriginAndLength yöntemi
+              href: additional-apis/system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
+        - name: ComNetOS sınıfı
+          href: additional-apis/system.net.comnetos.md
         - name: Connection sınıfı
           href: additional-apis/connection.md
           items:
@@ -514,8 +524,10 @@
           items:
             - name: m_ConnectionList alanı
               href: additional-apis/m_connectionlist.md
-        - name: ConnectStream.Connection özelliği
-          href: additional-apis/system.net.connectstream.connection.md
+        - name: ConnectStream sınıfı
+          items:
+            - name: Bağlantı özelliği
+              href: additional-apis/system.net.connectstream.connection.md
         - name: CoreResponseData sınıfı
           href: additional-apis/coreresponsedata.md
           items:
@@ -523,6 +535,10 @@
               href: additional-apis/coreresponsedata_m_responseheaders.md
             - name: m_StatusCode alanı
               href: additional-apis/coreresponsedata_m_statuscode.md
+        - name: ExceptionHelper sınıfı
+          href: additional-apis/system.net.exceptionhelper.md
+        - name: HttpStatusDescription sınıfı
+          href: additional-apis/system.net.httpstatusdescription.md
         - name: HttpWebRequest sınıfı
           items:
             - name: _AutoRedirects alanı
@@ -531,22 +547,46 @@
               href: additional-apis/httpwebrequest__coreresponse.md
             - name: _HttpResponse alanı
               href: additional-apis/_httpresponse.md
-        - name: PooledStream.NetworkStream özelliği
-          href: additional-apis/system.net.pooledstream.networkstream.md
+        - name: Logging sınıfı
+          href: additional-apis/system.net.logging.md
+        - name: MailAddressParser sınıfı
+          href: additional-apis/system.net.mail.mailaddressparser.md
+        - name: MailBnfHelper sınıfı
+          href: additional-apis/system.net.mime.mailbnfhelper.md
+        - name: PooledStream sınıfı
+          items:
+            - name: NetworkStream özelliği
+              href: additional-apis/system.net.pooledstream.networkstream.md
+        - name: QuotedPairReader sınıfı
+          href: additional-apis/system.net.mail.quotedpairreader.md
         - name: RtcState sınıfı
           href: additional-apis/system.net.rtcstate.md
         - name: ServicePoint sınıfı
           items:
             - name: m_ConnectionGroupList alanı
               href: additional-apis/m_connectiongrouplist.md
+        - name: ServicePointManager sınıfı
+          items:
+            - name: CloseConnectionGroups yöntemi
+              href: additional-apis/system.net.servicepointmanager.closeconnectiongroups.md
             - name: s_ServicePointTable alanı
               href: additional-apis/s_servicepointtable.md
-        - name: TlsStream.m_Worker alanı
-          href: additional-apis/system.net.tlsstream.m_worker.md
+        - name: TlsStream sınıfı
+          items:
+            - name: m_Worker alanı
+              href: additional-apis/system.net.tlsstream.m_worker.md
+        - name: UnsafeNclNativeMethods sınıfı
+          href: additional-apis/system.net.unsafenclnativemethods.md
+        - name: WebHeaderCollection sınıfı
+          items:
+            - name: AddInternal yöntemi
+              href: additional-apis/system.net.webheadercollection.addinternal.md
     - name: System.Net.Security
       items:
-        - name: SslState.SslProtocol özelliği
-          href: additional-apis/system.net.security.sslstate.sslprotocol.md
+        - name: SslState sınıfı
+          items:
+            - name: SslProtocol özelliği
+              href: additional-apis/system.net.security.sslstate.sslprotocol.md
     - name: System.ServiceModel.Channels
       items:
         - name: Message sınıfı
@@ -557,8 +597,10 @@
               href: additional-apis/system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
-        - name: VisualDiagnostics.s_isDebuggerCheckDisabledForTestPurposes
-          href: additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md
+        - name: VisualDiagnostics sınıfı
+          items:
+            - name: s_isDebuggerCheckDisabledForTestPurposes alanı
+              href: additional-apis/s-isdebuggercheckdisabledfortestpurposes-field.md
     - name: System.Windows.Forms.Design
       items:
         - name: DataMemberFieldEditor sınıfı
@@ -567,7 +609,7 @@
           href: additional-apis/datamemberlisteditor-class.md
     - name: System.Windows.Xps
       items:
-        - name: XpsDocumentWriter
+        - name: XpsDocumentWriter sınıfı
           items:
             - name: raise__WritingCancelled metodu
               href: additional-apis/xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
@@ -585,8 +627,10 @@
               href: additional-apis/xpsdocumentwriter-writingprogresschanged-event-system-windows-xps.md
     - name: System.Xml
       items:
-        - name: XmlReader.CreateSqlReader metodu
-          href: additional-apis/system.xml.xmlreader.createsqlreader.md
+        - name: XmlReader sınıfı
+          items:
+            - name: CreateSqlReader yöntemi
+              href: additional-apis/system.xml.xmlreader.createsqlreader.md
     - name: adodb ad alanı
       items:
         - name: Bağlantı arabirimi
@@ -601,16 +645,22 @@
           href: additional-apis/stdole.dispparams.md
         - name: EXCEPINFO yapısı
           href: additional-apis/stdole.excepinfo.md
-        - name: IFont.Name özelliği
-          href: additional-apis/stdole.ifont.name.md
+        - name: IFont sınıfı
+          items:
+            - name: Name özelliği
+              href: additional-apis/stdole.ifont.name.md
         - name: IFontDisp arabirimi
           href: additional-apis/stdole.ifontdisp.md
-        - name: IPicture.Handle özelliği
-          href: additional-apis/stdole.ipicture.handle.md
+        - name: IPicture sınıfı
+          items:
+            - name: Handle özelliği
+              href: additional-apis/stdole.ipicture.handle.md
         - name: IPictureDisp arabirimi
           href: additional-apis/stdole.ipicturedisp.md
-        - name: IPictureDisp.Handle özelliği
-          href: additional-apis/stdole.ipicturedisp.handle.md
+        - name: IPictureDisp sınıfı
+          items:
+            - name: Handle özelliği
+              href: additional-apis/stdole.ipicturedisp.handle.md
         - name: StdFont arabirimi
           href: additional-apis/stdole.stdfont.md
         - name: StdPicture arabirimi
