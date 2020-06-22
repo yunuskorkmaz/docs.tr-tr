@@ -29,6 +29,8 @@ items:
             href: install/linux.md
           - name: Ubuntu
             href: install/linux-ubuntu.md
+          - name: Alpine
+            href: install/linux-alpine.md
           - name: CentOS
             href: install/linux-centos.md
           - name: Debian
@@ -403,25 +405,25 @@ items:
         href: testing/unit-testing-best-practices.md
       - name: xUnit
         items:
-          - name: 'C# birim testi'
+          - name: C# birim testi
             href: testing/unit-testing-with-dotnet-test.md
-          - name: 'F# birim testi'
+          - name: F# birim testi
             href: testing/unit-testing-fsharp-with-dotnet-test.md
           - name: Visual Basic birim testi
             href: testing/unit-testing-visual-basic-with-dotnet-test.md
       - name: NUnit
         items:
-          - name: 'C# birim testi'
+          - name: C# birim testi
             href: testing/unit-testing-with-nunit.md
-          - name: 'F# birim testi'
+          - name: F# birim testi
             href: testing/unit-testing-fsharp-with-nunit.md
           - name: Visual Basic birim testi
             href: testing/unit-testing-visual-basic-with-nunit.md
       - name: MSTest
         items:
-          - name: 'C# birim testi'
+          - name: C# birim testi
             href: testing/unit-testing-with-mstest.md
-          - name: 'F# birim testi'
+          - name: F# birim testi
             href: testing/unit-testing-fsharp-with-mstest.md
           - name: Visual Basic birim testi
             href: testing/unit-testing-visual-basic-with-mstest.md
@@ -429,6 +431,8 @@ items:
         href: testing/selective-unit-tests.md
       - name: Birim testlerini düzenleme
         href: testing/order-unit-tests.md
+      - name: Birim testi kod kapsamı
+        href: testing/unit-testing-code-coverage.md
       - name: Birim testi yayımlanmış çıktısı
         href: testing/unit-testing-published-output.md
       - name: Visual Studio ile .NET Core projelerinde canlı birim testi
