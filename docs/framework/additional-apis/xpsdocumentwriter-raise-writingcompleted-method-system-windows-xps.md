@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingCompleted Yöntemi (System.Windows.Xps)
+title: XpsDocumentWriter. raise__WritingCompleted yöntemi (System. Windows. XPS)
+description: .NET 'teki bir XML Kağıt Belirtimi (XPS) belgesi için WritingCompleted olayını başlatan XpsDocumentWriter. raise__WritingCompleted yöntemini anlayın.
 TOCTitle: raise__WritingCompleted Method
 ms.date: 12/12/2007
 api_location:
@@ -10,18 +11,18 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 5d4c11b20624b543ee5c366f5da15afb573fb22d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287fa2286c7acd5061672453c5be11c3ff34ca80
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155680"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105231"
 ---
-# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter.raise\_\_WritingCompleted Method
+# <a name="xpsdocumentwriterraise__writingcompleted-method"></a>XpsDocumentWriter. Raise \_ \_ WritingCompleted yöntemi
 
-Olayı <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted> yükseltir.
+Olayını oluşturur <xref:System.Windows.Xps.XpsDocumentWriter.WritingCompleted> .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```csharp
 public void raise__WritingCompleted (object value0,
@@ -40,6 +41,6 @@ public void raise__WritingCompleted (object value0,
 
 **Ad alanı:**<xref:System.Windows.Xps>
 
-**Montaj:** System.Printing (system.printing.dll içinde)
+**Bütünleştirilmiş kod:** System. Printing (system.printing.dll)
 
-**.NET Çerçeve sürümleri:** 3.0
+**.NET Framework sürümleri:** 3,0

@@ -1,5 +1,6 @@
 ---
 title: Genel Derleme Önbelleği
+description: .NET için ortak dil çalışma zamanının yüklendiği bilgisayar genelindeki bir kod önbelleği olan genel derleme önbelleğini anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - global assembly cache, about
 - access control lists [.NET Framework]
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
-ms.openlocfilehash: 22adf103ce38e189a277405af220880d5ce0b1db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f08bb4cf279924b12432f259dae8ce5a8474285
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119925"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104909"
 ---
 # <a name="global-assembly-cache"></a>Genel Derleme Önbelleği
 Ortak dil çalışma zamanının yüklü olduğu her bilgisayarda, genel derleme önbelleği olarak adlandırılan makine genelindeki bir kod önbelleği bulunur. Genel bütünleştirilmiş kod önbelleği, bilgisayardaki çeşitli uygulamalar tarafından paylaşılmak üzere özel olarak belirlenmiş derlemeleri depolar.  
@@ -29,7 +30,7 @@ Ortak dil çalışma zamanının yüklü olduğu her bilgisayarda, genel derleme
   
 - Genel derleme önbelleği ile çalışmak için tasarlanan bir yükleyici kullanın. Bu, bütünleştirilmiş kodları genel derleme önbelleğine yüklemek için tercih edilen seçenektir.  
   
-- Windows SDK tarafından verilen [genel derleme önbelleği aracı (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md)adlı bir geliştirici aracı kullanın.  
+- Windows SDK tarafından verilen [genel derleme önbelleği aracı (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)adlı bir geliştirici aracı kullanın.  
   
     > [!NOTE]
     > Dağıtım senaryolarında, bütünleştirilmiş kodları genel derleme önbelleğine yüklemek için Windows Installer kullanın. Genel bütünleştirilmiş kod önbelleği aracını yalnızca geliştirme senaryolarında kullanın, çünkü bu, Windows Installer kullanılırken belirtilen derleme başvuru sayma ve diğer özellikleri sağlamıyor.  

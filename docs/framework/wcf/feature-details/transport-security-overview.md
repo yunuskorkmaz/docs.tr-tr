@@ -1,16 +1,17 @@
 ---
 title: Taşıma Güvenliği Genel Bakış
+description: WCF sistem tarafından belirtilen bağlamalarda önemli taşıma güvenlik mekanizmaları hakkında bilgi edinin. Bu güvenlik mekanizmaları, kullanılan bağlama ve aktarıma bağımlıdır.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 5c6b6389122b32ed8db701020a8c13ba17225867
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6302a949e8d0a041446b75dd3769b8ba2d1fc2b5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585694"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244835"
 ---
 # <a name="transport-security-overview"></a>Taşıma Güvenliği Genel Bakış
 Windows Communication Foundation (WCF) içindeki taşıma güvenliği mekanizmaları, kullanılan bağlama ve aktarıma bağlıdır. Örneğin, <xref:System.ServiceModel.WSHttpBinding> sınıfı kullanılırken aktarım http olur ve aktarımı güvenli hale getirmek için birincil MEKANIZMA http üzerinden genellıkle https olarak adlandırılır Güvenli Yuva Katmanı (SSL). Bu konuda, WCF sistem tarafından belirtilen bağlamalarda kullanılan önemli aktarım güvenliği mekanizmaları ele alınmaktadır.  
@@ -62,7 +63,7 @@ Windows Communication Foundation (WCF) içindeki taşıma güvenliği mekanizmal
  Bu, Kerberos Protokolü başarısız olursa sunucunun kimlik doğrulaması için NTLM kullanmasını sağlar. IIS 6,0 ' de IIS 'yi yapılandırma hakkında daha fazla bilgi için bkz. [NTLM kimlik doğrulamasını zorlama](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10)). IIS 7,0 için Windows kimlik doğrulaması, NTLM kimlik doğrulaması içerir. Daha fazla bilgi için bkz. [IIS 7 ' de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding>Sınıfı, WS-* belirtimlerini uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır. Bu bağlama için taşıma güvenliği HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL). SSL kullanan bir WCF uygulaması oluşturmak için, uygulamayı barındırmak üzere IIS kullanın. Alternatif olarak, kendi kendine barındırılan bir uygulama oluşturuyorsanız, bir X. 509.440 sertifikasını bir bilgisayardaki belirli bir bağlantı noktasına bağlamak için HttpCfg. exe aracını kullanın. Bağlantı noktası numarası, WCF uygulamasının bir parçası olarak bir uç nokta adresi olarak belirtilir. Aktarım modunu kullanırken, uç nokta adresi HTTPS protokolünü içermeli veya çalışma zamanında bir özel durum oluşturulur. Daha fazla bilgi için bkz. [http aktarım güvenliği](http-transport-security.md).  
+ <xref:System.ServiceModel.WSHttpBinding>Sınıfı, WS-* belirtimlerini uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır. Bu bağlama için taşıma güvenliği HTTP veya HTTPS üzerinden Güvenli Yuva Katmanı (SSL). SSL kullanan bir WCF uygulaması oluşturmak için, uygulamayı barındırmak üzere IIS kullanın. Alternatif olarak, şirket içinde barındırılan bir uygulama oluşturuyorsanız, bir X. 509.440 sertifikasını bir bilgisayardaki belirli bir bağlantı noktasına bağlamak için HttpCfg.exe aracını kullanın. Bağlantı noktası numarası, WCF uygulamasının bir parçası olarak bir uç nokta adresi olarak belirtilir. Aktarım modunu kullanırken, uç nokta adresi HTTPS protokolünü içermeli veya çalışma zamanında bir özel durum oluşturulur. Daha fazla bilgi için bkz. [http aktarım güvenliği](http-transport-security.md).  
   
  İstemci kimlik doğrulaması için, <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> <xref:System.ServiceModel.HttpTransportSecurity> sınıfının özelliğini <xref:System.ServiceModel.HttpClientCredentialType> sabit listesi değerlerinden birine ayarlayın. Numaralandırma değerleri, için istemci kimlik bilgisi türleriyle aynıdır <xref:System.ServiceModel.BasicHttpBinding> ve IIS hizmetleriyle barındırılmak üzere tasarlanmıştır.  
   

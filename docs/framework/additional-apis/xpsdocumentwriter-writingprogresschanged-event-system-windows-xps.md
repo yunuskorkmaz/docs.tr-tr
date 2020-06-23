@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter._WritingProgressChanged Olay (System.Windows.Xps)
+title: XpsDocumentWriter. _WritingProgressChanged olayı (System. Windows. XPS)
+description: XML Kağıt Belirtimi (XPS) belge yazıcısı, .NET 'teki ilerlemesini güncelleştirdiğinde oluşan XpsDocumentWriter. _WritingProgressChanged olayını gözden geçirin.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,18 +12,18 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a54f1fbc04d7f1ada6bf893f2e8bfb9d98d372df
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155589"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105059"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>Xpsdocumentwriter. \_Yazılarİlerleme Etkinliği
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>XpsDocumentWriter. \_ WritingProgressChanged olayı
 
-İlerlemesini <xref:System.Windows.Xps.XpsDocumentWriter> güncellerdiğinde oluşur.
+<xref:System.Windows.Xps.XpsDocumentWriter>İlerleme durumunu güncelleştiren zaman gerçekleşir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ``` csharp
 internal event WritingProgressChangedEventHandler _WritingProgressChanged
@@ -32,6 +33,6 @@ internal event WritingProgressChangedEventHandler _WritingProgressChanged
 
 **Ad alanı:**<xref:System.Windows.Xps>
 
-**Montaj:** System.Printing (system.printing.dll içinde)
+**Bütünleştirilmiş kod:** System. Printing (system.printing.dll)
 
-**.NET Framework sürümleri:** 3.0'dan beri mevcut
+**.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir

@@ -1,5 +1,6 @@
 ---
 title: Derlemeler ve Genel Derleme Önbelleği ile Çalışma
+description: Derlemeler ve .NET 'te genel derleme önbelleği (GAC) ile çalışın. GAC 'de bir derlemeyi yüklemek isteyebileceğiniz nedenleri gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 16cfd9faf02d5b58acad1cc0cf19be61c9814d35
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645413"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105151"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Derlemeler ve Genel Derleme Önbelleği ile Çalışma
 
@@ -45,14 +46,14 @@ Bir derlemeyi genel bütünleştirilmiş kod önbelleğine yüklemek istemeniz i
  Bir derlemeyi genel bütünleştirilmiş kod önbelleğine açıkça yüklemek istemeyeceğiniz senaryolar olduğuna dikkat edin. Eğer bir uygulamayı oluşturan derlemelerden birini genel bütünleştirilmiş kod önbelleğine yerleştirirseniz, uygulama dizinini kopyalamak için XCOPY'i kullanarak uygulamayı artık çoğaltamaz veya yükleyemezsiniz. Bu durumda, derlemeyi de genel bütünleştirilmiş kod önbelleğine taşımanız gerekir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
-[Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğine Yükleme](install-assembly-into-gac.md)  
+[Nasıl yapılır: bir derlemeyi genel derleme önbelleğine yüklemek](install-assembly-into-gac.md)  
 Bir derlemeyi genel bütünleştirilmiş kod belleğine yükleme yöntemlerini açıklar.  
   
 [Nasıl yapılır: Genel Derleme Önbelleğinin İçeriğini Görüntüleme](how-to-view-the-contents-of-the-gac.md)  
-Küresel derleme önbelleğinin içeriğini görüntülemek için [Gacutil. exe ' nin (genel bütünleştirilmiş kod önbelleği aracı)](../tools/gacutil-exe-gac-tool.md) nasıl kullanılacağını açıklar.  
+Genel derleme önbelleğinin içeriğini görüntülemek için [Gacutil.exe (genel bütünleştirilmiş kod önbelleği aracı)](../tools/gacutil-exe-gac-tool.md) ' nin nasıl kullanılacağını açıklar.  
   
 [Nasıl yapılır: Bir Derlemeyi Genel Derleme Önbelleğinden Kaldırma](how-to-remove-an-assembly-from-the-gac.md)  
-Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırmak için [Gacutil. exe ' nin (genel bütünleştirilmiş kod önbelleği aracı)](../tools/gacutil-exe-gac-tool.md) nasıl kullanılacağını açıklar.  
+Bir derlemeyi genel bütünleştirilmiş kod önbelleğinden kaldırmak için [Gacutil.exe (genel bütünleştirilmiş kod önbelleği aracı)](../tools/gacutil-exe-gac-tool.md) ' nin nasıl kullanılacağını açıklar.  
   
 [Genel Derleme Önbelleği ile Hizmet Verilen Bileşenleri Kullanma](use-serviced-components-with-the-gac.md)  
 Hizmet verilen bileşenlerin (yönetilen COM+ bileşenleri) neden genel bütünleştirilmiş kod önbelleğine yerleştirilmesi gerektiğini açıklar.  
@@ -66,7 +67,7 @@ Derleme oluşturmaya genel bir bakış sağlar.
 Genel bütünleştirilmiş kod önbelleğini açıklar.  
   
 [Nasıl yapılır: Derleme İçeriklerini Görüntüleme](../../standard/assembly/view-contents.md)  
-Bir derlemede Microsoft ara dili (MSIL) bilgilerini görüntülemek için [ıldadsm. exe ' nin (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) nasıl kullanılacağını açıklar.  
+Bir derlemede Microsoft ara dili (MSIL) bilgilerini görüntülemek için [Ildasm.exe (IL Disassembler)](../tools/ildasm-exe-il-disassembler.md) kullanmayı açıklar.  
   
 [Çalışma Zamanının Derlemelerin Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)  
 Ortak dil çalışma zamanının uygulamanızı oluşturan derlemeleri nasıl konumlandırdığını ve yüklediğini açıklar.  

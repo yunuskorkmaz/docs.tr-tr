@@ -1,17 +1,18 @@
 ---
 title: Uygulama Etki Alanlarını Kullanma
+description: Ortak dil çalışma zamanı (CLR) için bir yalıtım birimi sağlayan uygulama etki alanlarını kullanın. Uygulama etki alanları bir işlem içinde oluşturulur ve çalıştırılır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application domains, about
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: df2a63716904ebfc6ee163121a1f07e53aa07514
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645435"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105178"
 ---
 # <a name="using-application-domains"></a>Uygulama Etki Alanlarını Kullanma
 
@@ -33,20 +34,20 @@ Uygulama etki alanı yapılandırmaya bir giriş sağlar.
 [Bir Uygulama Etki Alanından Kurulum Bilgilerini Alma](retrieve-setup-information.md)  
 Bir uygulama etki alanından kurulum bilgilerinin nasıl alınacağını açıklar.  
   
-[Nasıl yapılır: Uygulama Etki Alanına Bütünleştirilmiş Kodlar Yükleme](how-to-load-assemblies-into-an-application-domain.md)  
+[Nasıl yapılır: Uygulama Etki Alanına Derlemeler Yükleme](how-to-load-assemblies-into-an-application-domain.md)  
 Bir derlemenin uygulama etki alanına nasıl yükleneceğini açıklar.  
   
 [Nasıl yapılır: Bir Derlemeden Tür ve Üye Bilgilerini Alma](../reflection-and-codedom/get-type-member-information.md)  
 Bir derleme hakkında bilgilerin nasıl alınacağını açıklar.  
   
-[Gölge Kopyalama Bütünleştirilmiş Kodları](shadow-copy-assemblies.md)  
+[Gölge Kopyalama Derlemeleri](shadow-copy-assemblies.md)  
 Gölge kopyalamanın, kullanıldıkları sırada derlemeler için güncelleştirmelerin nasıl izin verdiğini ve gölge kopyalamayı nasıl yapılandıracağınızı açıklar.  
   
 [Nasıl yapılır: İlk Fırsat Özel Durum Bildirimleri Alma](how-to-receive-first-chance-exception-notifications.md)  
 Ortak dil çalışma zamanı özel durum işleyicilerini aramaya başlamadan önce bir özel durumun oluşturulduğu bildirimini nasıl alacağınızı açıklar.  
   
 [Derleme Yüklerini Çözme](../../standard/assembly/resolve-loads.md)  
-Derleme yükleme başarısızlıklarını çözümlemek için <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> olayı kullanma hakkında rehberlik sağlar.  
+<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>Derleme yükleme başarısızlıklarını çözümlemek için olayı kullanma hakkında rehberlik sağlar.  
   
 ## <a name="reference"></a>Başvuru  
 

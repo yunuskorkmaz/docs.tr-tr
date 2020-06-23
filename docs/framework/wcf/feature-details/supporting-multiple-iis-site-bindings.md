@@ -1,22 +1,23 @@
 ---
 title: Birden Fazla IIS Site Bağlamasını Destekleme
+description: IIS 'de bir WCF hizmeti barındırırken aynı sitede aynı protokolü kullanan birden fazla temel adres sağlamayı öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
-ms.openlocfilehash: e364be55687323d3059c4a7e084818e3f7d54d5f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 290dca03dbed7d0a7442a3903b735eb189929ed1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743436"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244874"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>Birden Fazla IIS Site Bağlamasını Destekleme
-Internet Information Services (IIS) 7,0 altında bir Windows Communication Foundation (WCF) hizmeti barındırdığında aynı sitede aynı protokolü kullanan birden fazla temel adres sağlamak isteyebilirsiniz. Bu, aynı hizmetin bir dizi farklı URI 'ye yanıt vermesini sağlar. Bu, `http://www.contoso.com` ve `http://contoso.com`dinleyen bir hizmet barındırmak istediğinizde yararlıdır. Ayrıca, iç kullanıcılar için temel adresi ve dış kullanıcılara ayrı bir temel adres olan bir hizmet oluşturmak da yararlıdır. Örneğin: `http://internal.contoso.com` ve `http://www.contoso.com`.  
+Internet Information Services (IIS) 7,0 altında bir Windows Communication Foundation (WCF) hizmeti barındırdığında aynı sitede aynı protokolü kullanan birden fazla temel adres sağlamak isteyebilirsiniz. Bu, aynı hizmetin bir dizi farklı URI 'ye yanıt vermesini sağlar. Bu, ve üzerinde dinleme yapan bir hizmeti barındırmak istediğinizde yararlıdır `http://www.contoso.com` `http://contoso.com` . Ayrıca, iç kullanıcılar için temel adresi ve dış kullanıcılara ayrı bir temel adres olan bir hizmet oluşturmak da yararlıdır. Örneğin: `http://internal.contoso.com` ve `http://www.contoso.com`.  
   
 > [!NOTE]
 > Bu işlevsellik yalnızca HTTP protokolü kullanılarak kullanılabilir.  
   
 ## <a name="multiple-base-addresses"></a>Birden çok temel adres  
- Bu özellik yalnızca IIS altında barındırılan WCF Hizmetleri için kullanılabilir. Bu özellik varsayılan olarak etkin değildir. Bunu etkinleştirmek için, Web. config dosyanızdaki <`serviceHostingEnvironment`> öğesine `multipleSiteBindingsEnabled` özniteliğini eklemeniz ve aşağıdaki örnekte gösterildiği gibi `true`olarak ayarlamanız gerekir.  
+ Bu özellik yalnızca IIS altında barındırılan WCF Hizmetleri için kullanılabilir. Bu özellik varsayılan olarak etkin değildir. Bunu etkinleştirmek için, `multipleSiteBindingsEnabled` `serviceHostingEnvironment` `true` Aşağıdaki örnekte gösterildiği gibi, özniteliğini Web.config dosyanızdaki <> öğesine eklemeniz ve olarak ayarlamanız gerekir.  
   
 ```xml  
 <serviceHostingEnvironment multipleSiteBindingsEnabled="true"/>  

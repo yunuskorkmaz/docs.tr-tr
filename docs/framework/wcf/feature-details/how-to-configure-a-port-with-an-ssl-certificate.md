@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
+description: Bir bağlantı noktasını, bir X. 509.952 sertifikası ile birlikte kullanarak, bir şirket içinde barındırılan WCF hizmeti için, taşıma güvenliği kullanan WSHttpBinding sınıfına sahip bir bağlantı noktasını nasıl yapılandıracağınızı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 30b24c4ff06cc7249d3ddb6d95549a574e313f52
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579624"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247188"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 
@@ -22,22 +23,22 @@ Aktarım güvenliği kullanan sınıfla şirket içinde barındırılan bir Wind
   
  Bir bağlantı noktasını yapılandırmak için, kullandığınız araç makinenizde çalışan işletim sistemine bağlıdır.  
   
- Windows Server 2003 çalıştırıyorsanız, HttpCfg. exe aracını kullanın. Windows Server 2003 ' de bu araç yüklüdür. Daha fazla bilgi için bkz. [Httpcfg Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). [Windows Destek Araçları belgeleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) , Httpcfg. exe aracının sözdizimini açıklar.  
+ Windows Server 2003 çalıştırıyorsanız HttpCfg.exe aracını kullanın. Windows Server 2003 ' de bu araç yüklüdür. Daha fazla bilgi için bkz. [Httpcfg Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). [Windows Destek Araçları belgeleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) Httpcfg.exe aracının sözdizimini açıklar.  
   
- Windows Vista çalıştırıyorsanız, zaten yüklü olan Netsh. exe aracını kullanın.
+ Windows Vista çalıştırıyorsanız, zaten yüklü olan Netsh.exe aracını kullanın.
   
 > [!NOTE]
 > Bilgisayarda depolanan sertifikaların değiştirilmesi için yönetici ayrıcalıkları gerekir.  
   
 ## <a name="determine-how-ports-are-configured"></a>Bağlantı noktalarının nasıl yapılandırıldığını belirleme  
   
-1. Windows Server 2003 veya Windows XP 'de, aşağıdaki örnekte gösterildiği gibi, **sorgu** ve **SSL** anahtarlarını kullanarak geçerli bağlantı noktası yapılandırmasını görüntülemek için Httpcfg. exe aracını kullanın.  
+1. Windows Server 2003 veya Windows XP 'de, aşağıdaki örnekte gösterildiği gibi, **sorgu** ve **SSL** anahtarlarını kullanarak geçerli bağlantı noktası yapılandırmasını görüntülemek için HttpCfg.exe aracını kullanın.  
   
     ```console
     httpcfg query ssl  
     ```  
   
-2. Windows Vista 'da, aşağıdaki örnekte gösterildiği gibi geçerli bağlantı noktası yapılandırmasını görüntülemek için Netsh. exe aracını kullanın.  
+2. Windows Vista 'da, aşağıdaki örnekte gösterildiği gibi, geçerli bağlantı noktası yapılandırmasını görüntülemek için Netsh.exe aracını kullanın.  
   
     ```console  
     netsh http show sslcert  
@@ -55,7 +56,7 @@ Aktarım güvenliği kullanan sınıfla şirket içinde barındırılan bir Wind
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number"></a>Bir bağlantı noktası numarasına SSL sertifikası bağlama  
   
-1. Windows Server 2003 veya Windows XP 'de, sertifikayı bir bağlantı noktası numarasına bağlamak için Güvenli Yuva Katmanı (SSL) deposundaki "küme" modunda HttpCfg. exe aracını kullanın. Araç, aşağıdaki örnekte gösterildiği gibi sertifikayı tanımlamak için parmak izini kullanır.  
+1. Windows Server 2003 veya Windows XP 'de, sertifikayı bir bağlantı noktası numarasına bağlamak için Güvenli Yuva Katmanı (SSL) deposundaki "ayarla" modunda HttpCfg.exe aracını kullanın. Araç, aşağıdaki örnekte gösterildiği gibi sertifikayı tanımlamak için parmak izini kullanır.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -65,7 +66,7 @@ Aktarım güvenliği kullanan sınıfla şirket içinde barındırılan bir Wind
   
     - **-H** anahtarı, sertifikanın parmak izini belirtir.  
   
-2. Windows Vista 'da, aşağıdaki örnekte gösterildiği gibi Netsh. exe aracını kullanın.  
+2. Windows Vista 'da, aşağıdaki örnekte gösterildiği gibi Netsh.exe aracını kullanın.  
   
     ```console  
     netsh http add sslcert ipport=0.0.0.0:8000 certhash=0000000000003ed9cd0c315bbb6dc1c08da5e6 appid={00112233-4455-6677-8899-AABBCCDDEEFF}
@@ -73,19 +74,19 @@ Aktarım güvenliği kullanan sınıfla şirket içinde barındırılan bir Wind
   
     - **Sunucunuzda certhash** parametresi, sertifikanın parmak izini belirtir.  
   
-    - **Ipport** PARAMETRESI, IP adresini ve bağlantı noktasını ve yalnızca ' i r. exe aracının **-ı** anahtarı gibi işlevleri belirtir.  
+    - **Ipport** PARAMETRESI, IP adresini ve bağlantı noktasını ve işlevleri açıklanan Httpcfg.exe aracının **-ı** anahtarı gibi işlevlerini belirtir.  
   
     - **AppID** parametresi, sahip olan uygulamayı tanımlamak için KULLANıLABILEN bir GUID 'dir.  
   
 ## <a name="bind-an-ssl-certificate-to-a-port-number-and-support-client-certificates"></a>Bir bağlantı noktası numarasına SSL sertifikası bağlama ve istemci sertifikalarını destekleme  
   
-1. Windows Server 2003 veya Windows XP 'de, aktarım katmanında X. 509.440 sertifikalarıyla kimlik doğrulayan istemcileri desteklemek için, önceki yordamı izleyin, ancak aşağıdaki örnekte gösterildiği gibi, HttpCfg. exe ' ye ek bir komut satırı parametresi geçirin.  
+1. Windows Server 2003 veya Windows XP 'de, aktarım katmanında X. 509.440 sertifikalarıyla kimlik doğrulayan istemcileri desteklemek için önceki yordamı izleyin, ancak aşağıdaki örnekte gösterildiği gibi HttpCfg.exe ek bir komut satırı parametresi geçirin.  
   
     ```console  
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     **-F** anahtarı, `n` n 'nin 1 ile 7 arasında bir sayı olduğu sözdizimidir. 2 değeri, yukarıdaki örnekte gösterildiği gibi, aktarım katmanında istemci sertifikalarına izin vermez. 3 değeri, istemci sertifikalarını sağlar ve bu sertifikaları bir Windows hesabıyla eşleştirir. Diğer değerlerin davranışı için bkz. HttpCfg. exe yardımı.  
+     **-F** anahtarı, `n` n 'nin 1 ile 7 arasında bir sayı olduğu sözdizimidir. 2 değeri, yukarıdaki örnekte gösterildiği gibi, aktarım katmanında istemci sertifikalarına izin vermez. 3 değeri, istemci sertifikalarını sağlar ve bu sertifikaları bir Windows hesabıyla eşleştirir. Diğer değerlerin davranışı için HttpCfg.exe yardımına bakın.  
   
 2. Windows Vista 'da, aktarım katmanında X. 509.440 sertifikalarıyla kimlik doğrulayan istemcileri desteklemek için, aşağıdaki örnekte gösterildiği gibi önceki yordamı, ek bir parametre ile izleyin.  
   
@@ -95,19 +96,19 @@ Aktarım güvenliği kullanan sınıfla şirket içinde barındırılan bir Wind
   
 ## <a name="delete-an-ssl-certificate-from-a-port-number"></a>Bir bağlantı noktası numarasından SSL sertifikası silme  
   
-1. Bilgisayardaki tüm bağlamaların bağlantı noktalarını ve parmak izlerini görmek için HttpCfg. exe veya Netsh. exe aracını kullanın. Bilgileri diske yazdırmak için aşağıdaki örnekte gösterildiği gibi ">" yeniden yönlendirme karakterini kullanın.  
+1. Bilgisayardaki tüm bağlamaların bağlantı noktalarını ve parmak izlerini görmek için HttpCfg.exe veya Netsh.exe aracını kullanın. Bilgileri diske yazdırmak için aşağıdaki örnekte gösterildiği gibi ">" yeniden yönlendirme karakterini kullanın.  
   
     ```console  
     httpcfg query ssl>myMachinePorts.txt  
     ```
   
-2. Windows Server 2003 veya Windows XP 'de, **Delete** ve **SSL** anahtar sözcükleriyle Httpcfg. exe aracını kullanın. **-i** `IP` `port` Parmak izini belirtmek için: Number ve **-h** anahtarını belirtmek için-ı anahtarını kullanın.  
+2. Windows Server 2003 veya Windows XP 'de, **Delete** ve **ssl** anahtar sözcükleriyle HttpCfg.exe aracını kullanın. **-i** `IP` `port` Parmak izini belirtmek için: Number ve **-h** anahtarını belirtmek için-ı anahtarını kullanın.  
   
     ```console  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-3. Windows Vista 'da, aşağıdaki örnekte gösterildiği gibi Netsh. exe aracını kullanın.  
+3. Windows Vista 'da, aşağıdaki örnekte gösterildiği gibi Netsh.exe aracını kullanın.  
   
     ```console  
     Netsh http delete sslcert ipport=0.0.0.0:8005  

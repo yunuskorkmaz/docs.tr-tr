@@ -1,5 +1,6 @@
 ---
 title: Veri Sözleşmelerini Kullanma
+description: Her bir parametre ya da dönüş türü için, bir WCF istemcisi ve sunucusu arasında hangi verilerin değiştirildiğini tanımlayan bir veri sözleşmesi hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: 0d11b48d3021bf0d92d74ab67bc18c2bdd2bdd0e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 80ea2a8bd67c627fbe11ee07e640704c1a41ef7b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595004"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244731"
 ---
 # <a name="using-data-contracts"></a>Veri Sözleşmelerini Kullanma
 *Veri anlaşması* , bir hizmet ile bir istemci arasındaki, alışverişe yönelik verileri tanımlayan resmi bir anlaşmadır. Diğer bir deyişle, iletişim için, istemci ve hizmetin aynı türleri paylaşması gerekmez, yalnızca aynı veri sözleşmeleri vardır. Bir veri sözleşmesi, her bir parametre veya dönüş türü için, hangi verilerin (XML 'e açıktır) değiş tokuş edilecek şekilde tam olarak tanımlar.  

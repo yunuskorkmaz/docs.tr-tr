@@ -1,16 +1,17 @@
 ---
 title: Yeniden oluşturulmuş bağlama yeniden yönlendirmelerini etkinleştir veya devre dışı bırak
+description: Otomatik bağlama yeniden yönlendirmesini etkinleştirme veya devre dışı bırakma konusunu okuyun. Bu özellik, .NET 4.5.1 veya üstünü hedefleyen masaüstü uygulamalarını ve Web uygulamalarını etkiler.
 ms.date: 10/30/2018
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: 178d5070dd7018bbc0fce474cdd0b31ba3d17f77
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: edee95f6c3b2c2d74c4f1b68e0a65e5cb0e85f54
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69913040"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105397"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma
 
@@ -18,7 +19,7 @@ Visual Studio 'da .NET Framework 4.5.1 ve sonraki sürümleri hedefleyen uygulam
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Masaüstü uygulamalarında otomatik bağlama yeniden yönlendirmelerini devre dışı bırak
 
-Otomatik bağlama yeniden yönlendirmeleri, .NET Framework 4.5.1 ve sonraki sürümleri hedefleyen Windows Masaüstü uygulamaları için varsayılan olarak etkindir. Bağlama yeniden yönlendirmeleri, uygulama derlendikten sonra çıkış yapılandırması (**app. config**) dosyasına eklenir ve başka bir şekilde gerçekleşmekte olan derleme birleşme işlemini geçersiz kılar. Kaynak **app. config** dosyası değiştirilmez. Uygulama için proje dosyasını değiştirerek veya Visual Studio 'daki proje özelliklerinde bir onay kutusunun seçimini kaldırarak bu özelliği devre dışı bırakabilirsiniz.
+Otomatik bağlama yeniden yönlendirmeleri, .NET Framework 4.5.1 ve sonraki sürümleri hedefleyen Windows Masaüstü uygulamaları için varsayılan olarak etkindir. Bağlama yeniden yönlendirmeleri, uygulama derlendikten sonra çıkış yapılandırması (**app.config**) dosyasına eklenir ve başka bir şekilde gerçekleşmiş olabilecek derleme birleşme işlemini geçersiz kılar. Kaynak **app.config** dosyası değiştirilmedi. Uygulama için proje dosyasını değiştirerek veya Visual Studio 'daki proje özelliklerinde bir onay kutusunun seçimini kaldırarak bu özelliği devre dışı bırakabilirsiniz.
 
 ### <a name="disable-through-project-properties"></a>Proje özellikleri aracılığıyla devre dışı bırak
 
@@ -85,9 +86,9 @@ Visual Studio 2017 sürüm 15,7 veya sonraki bir sürümü varsa, projenin özel
 
 ## <a name="enable-automatic-binding-redirects-in-web-apps"></a>Web uygulamalarında otomatik bağlama yeniden yönlendirmelerini etkinleştirme
 
-Otomatik bağlama yeniden yönlendirmeleri, web uygulamaları için farklı şekilde uygulanır. Kaynak yapılandırma (**Web. config**) dosyasının Web uygulamaları için değiştirilmesi gerektiğinden, bağlama yeniden yönlendirmeleri yapılandırma dosyasına otomatik olarak eklenmez. Ancak Visual Studio, bağlama çakışmalarını size bildirir ve çakışmaları çözümlemek için bağlama yeniden yönlendirmeleri ekleyebilirsiniz. Her zaman bağlama yeniden yönlendirmeleri eklemeniz istentiğinden, bir Web uygulaması için bu özelliği açıkça devre dışı bırakmanız gerekmez.
+Otomatik bağlama yeniden yönlendirmeleri, web uygulamaları için farklı şekilde uygulanır. Kaynak yapılandırma (**web.config**) dosyasının Web uygulamaları için değiştirilmesi gerektiğinden, bağlama yeniden yönlendirmeleri yapılandırma dosyasına otomatik olarak eklenmez. Ancak Visual Studio, bağlama çakışmalarını size bildirir ve çakışmaları çözümlemek için bağlama yeniden yönlendirmeleri ekleyebilirsiniz. Her zaman bağlama yeniden yönlendirmeleri eklemeniz istentiğinden, bir Web uygulaması için bu özelliği açıkça devre dışı bırakmanız gerekmez.
 
-Bir **Web. config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
+Bir **web.config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
 
 1. Visual Studio'da uygulamayı derleyin ve yapı uyarılarını denetleyin.
 
@@ -95,7 +96,7 @@ Bir **Web. config** dosyasına bağlama yeniden yönlendirmeleri eklemek için:
 
 2. Derleme bağlama çakışmaları varsa bir uyarı görüntülenir. Uyarıya çift tıklayın veya uyarıyı seçin ve **ENTER**tuşuna basın.
 
-   Kaynak **Web. config** dosyasına gerekli bağlama yeniden yönlendirmelerini otomatik olarak eklemenize olanak sağlayan bir iletişim kutusu görüntülenir.
+   Kaynak **web.config** dosyasına gerekli bağlama yeniden yönlendirmelerini otomatik olarak eklemenize olanak sağlayan bir iletişim kutusu görüntülenir.
 
    ![Bağlama yeniden yönlendirme izni iletişim kutusu](./media/clr-addbindingredirect.png "CLR_AddBindingRedirect")
 

@@ -1,16 +1,17 @@
 ---
 title: 'Nasıl yapılır: WCF Hizmeti İşlemlerini Zaman Uyumsuz Olarak Çağırma'
+description: Olay odaklı zaman uyumsuz çağrı modelini kullanarak bir hizmet işlemine zaman uyumsuz olarak erişebilen bir WCF istemcisi oluşturmayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 400ed8e5ee8b236e9d0f843f27b7c2112ec28861
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aa31f64473111800f4cd01907a0446c94f368456
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601263"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247240"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Nasıl yapılır: WCF Hizmeti İşlemlerini Zaman Uyumsuz Olarak Çağırma
 
@@ -23,7 +24,7 @@ Bu makalede, bir istemcinin bir hizmet işlemine zaman uyumsuz olarak nasıl eri
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>WCF hizmeti işlemlerini zaman uyumsuz olarak çağırma  
   
-1. Aşağıdaki komutta gösterildiği gibi, hem hem de komut seçenekleriyle birlikte [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aracını çalıştırın `/async` `/tcv:Version35` .  
+1. Aşağıdaki komutta gösterildiği gibi, hem hem de komut seçenekleriyle birlikte [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aracını çalıştırın `/async` `/tcv:Version35` .  
   
     ```console
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
@@ -31,17 +32,17 @@ Bu makalede, bir istemcinin bir hizmet işlemine zaman uyumsuz olarak nasıl eri
   
      Bu, zaman uyumlu ve standart temsilci tabanlı zaman uyumsuz işlemlere ek olarak şunları içeren bir WCF istemci sınıfı oluşturur:  
   
-    - `operationName` > `Async` Olay tabanlı zaman uyumsuz çağırma yaklaşımıyla birlikte kullanmak için iki <işlemi. Örnek:  
+    - `operationName` > `Async` Olay tabanlı zaman uyumsuz çağırma yaklaşımıyla birlikte kullanmak için iki <işlemi. Örneğin:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    - `operationName` > `Completed` Olay tabanlı zaman uyumsuz çağırma yaklaşımıyla kullanılmak üzere <form işlem tamamlandı olayları. Örnek:  
+    - `operationName` > `Completed` Olay tabanlı zaman uyumsuz çağırma yaklaşımıyla kullanılmak üzere <form işlem tamamlandı olayları. Örneğin:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    - <xref:System.EventArgs?displayProperty=nameWithType>`operationName` > `CompletedEventArgs` olay tabanlı zaman uyumsuz çağırma yaklaşımıyla kullanılmak üzere her bir işlemin (form <) türleri. Örnek:  
+    - <xref:System.EventArgs?displayProperty=nameWithType>`operationName` > `CompletedEventArgs` olay tabanlı zaman uyumsuz çağırma yaklaşımıyla kullanılmak üzere her bir işlemin (form <) türleri. Örneğin:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
@@ -51,7 +52,7 @@ Bu makalede, bir istemcinin bir hizmet işlemine zaman uyumsuz olarak nasıl eri
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3. İşlem çağrılmadan önce, <xref:System.EventHandler%601?displayProperty=nameWithType> `operationName` > `EventArgs` <olayına işleyici yöntemini (önceki adımda oluşturulan) eklemek için <`operationName` > türünde yeni bir genel kullanın `Completed` . Sonra <yöntemini çağırın `operationName` > `Async` . Örnek:  
+3. İşlem çağrılmadan önce, <xref:System.EventHandler%601?displayProperty=nameWithType> `operationName` > `EventArgs` <olayına işleyici yöntemini (önceki adımda oluşturulan) eklemek için <`operationName` > türünde yeni bir genel kullanın `Completed` . Sonra <yöntemini çağırın `operationName` > `Async` . Örneğin:  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  

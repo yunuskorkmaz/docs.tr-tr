@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingCancelled Yöntemi (System.Windows.Xps)
+title: XpsDocumentWriter. raise__WritingCancelled yöntemi (System. Windows. XPS)
+description: .NET 'teki bir XML Kağıt Belirtimi (XPS) belgesi için Writingiptal olayını başlatan XpsDocumentWriter. raise__WritingCancelled yöntemini anlayın.
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,18 +10,18 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 8cede25e9041d99ac3c601000e4afbef666a897c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5436be347792209780c4b3b617f26f731d98ac90
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155729"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105254"
 ---
-# <a name="xpsdocumentwriterraise__writingcancelled-method"></a>XpsDocumentWriter.raise\_\_WritingCancelled Yöntemi
+# <a name="xpsdocumentwriterraise__writingcancelled-method"></a>XpsDocumentWriter. Raise \_ \_ writingiptal etme yöntemi
 
-Olayı <xref:System.Windows.Xps.XpsDocumentWriter.WritingCancelled> yükseltir.
+Olayını oluşturur <xref:System.Windows.Xps.XpsDocumentWriter.WritingCancelled> .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```csharp
 public void raise__WritingCancelled (object value0,
@@ -39,6 +40,6 @@ public void raise__WritingCancelled (object value0,
 
 **Ad alanı:**<xref:System.Windows.Xps>
 
-**Montaj:** System.Printing (system.printing.dll içinde)
+**Bütünleştirilmiş kod:** System. Printing (system.printing.dll)
 
-**.NET Çerçeve sürümleri:** 3.0
+**.NET Framework sürümleri:** 3,0

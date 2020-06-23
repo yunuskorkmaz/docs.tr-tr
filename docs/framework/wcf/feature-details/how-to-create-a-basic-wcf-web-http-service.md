@@ -1,16 +1,17 @@
 ---
 title: 'Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma'
+description: WCF 'de Web uç noktası sunan bir hizmetin nasıl oluşturulacağını öğrenin. Web uç noktaları, XML veya JSON kullanarak veri gönderir. SOAP Zarfı yok.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: e9646235f9423f2a4df9cfe09a5e83a91dcdcace
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 7481367f27d973ba809dff5ca1c4a4f168fbbb98
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895184"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247110"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Nasıl yapılır: Temel Bir WCF Web HTTP Hizmeti Oluşturma
 
@@ -21,7 +22,7 @@ Windows Communication Foundation (WCF), bir Web uç noktası sunan bir hizmet ol
 
 ## <a name="to-create-a-web-endpoint"></a>Web uç noktası oluşturmak için
 
-1. <xref:System.ServiceModel.Web.WebInvokeAttribute> <xref:System.ServiceModel.ServiceContractAttribute> Ve<xref:System.ServiceModel.Web.WebGetAttribute> öznitelikleri ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi tanımlayın.
+1. Ve öznitelikleri ile işaretlenmiş bir arabirim kullanarak bir hizmet sözleşmesi <xref:System.ServiceModel.ServiceContractAttribute> tanımlayın <xref:System.ServiceModel.Web.WebInvokeAttribute> <xref:System.ServiceModel.Web.WebGetAttribute> .
 
      [!code-csharp[htBasicService#0](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#0)]
      [!code-vb[htBasicService#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#0)]
@@ -41,7 +42,7 @@ Windows Communication Foundation (WCF), bir Web uç noktası sunan bir hizmet ol
      [!code-csharp[htBasicService#2](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#2)]
      [!code-vb[htBasicService#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#2)]
 
-2. İle bir <xref:System.ServiceModel.Description.ServiceEndpoint>ekleyin. <xref:System.ServiceModel.Description.WebHttpBehavior>
+2. İle bir ekleyin <xref:System.ServiceModel.Description.ServiceEndpoint> <xref:System.ServiceModel.Description.WebHttpBehavior> .
 
      [!code-csharp[htBasicService#3](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#3)]
      [!code-vb[htBasicService#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#3)]
@@ -65,7 +66,7 @@ Windows Communication Foundation (WCF), bir Web uç noktası sunan bir hizmet ol
      [!code-csharp[htBasicService#5](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/snippets.cs#5)]
      [!code-vb[htBasicService#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/snippets.vb#5)]
 
-     Bu örnek, bir konsol uygulamasıyla bir Web stili hizmetin nasıl barındırılacağını gösterir. Bu hizmeti IIS içinde de barındırabilirsiniz. Bunu yapmak için, aşağıdaki kodda <xref:System.ServiceModel.Activation.WebServiceHostFactory> gösterildiği gibi bir. svc dosyasında sınıfını belirtin.
+     Bu örnek, bir konsol uygulamasıyla bir Web stili hizmetin nasıl barındırılacağını gösterir. Bu hizmeti IIS içinde de barındırabilirsiniz. Bunu yapmak için, <xref:System.ServiceModel.Activation.WebServiceHostFactory> aşağıdaki kodda gösterildiği gibi bir. svc dosyasında sınıfını belirtin.
 
     ```text
     <%ServiceHost
@@ -77,16 +78,16 @@ Windows Communication Foundation (WCF), bir Web uç noktası sunan bir hizmet ol
 
 ## <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>Internet Explorer 'da almak üzere eşlenmiş hizmet işlemlerini çağırmak için
 
-1. Internet Explorer 'ı açın ve "`http://localhost:8000/EchoWithGet?s=Hello, world!`" yazın ve ENTER tuşuna basın. URL, hizmetin temel adresini (`http://localhost:8000/`), uç noktanın göreli adresini (""), çağrı yapılacak hizmet işlemini ("yankı \ al") ve ardından bir ve işareti (&) ile ayrılmış adlandırılmış parametrelerin bir listesini içerir.
+1. Internet Explorer 'ı açın ve " `http://localhost:8000/EchoWithGet?s=Hello, world!` " yazın ve ENTER tuşuna basın. URL, hizmetin temel adresini ( `http://localhost:8000/` ), uç noktanın göreli adresini (""), çağrı yapılacak hizmet işlemini ("yankı \ al") ve ardından bir ve işareti (&) ile ayrılmış adlandırılmış parametrelerin bir listesini içerir.
 
 ## <a name="to-call-service-operations-in-code"></a>Koddaki hizmet işlemlerini çağırmak için
 
-1. <xref:System.ServiceModel.ChannelFactory%601> Bir`using` blok içinde bir örnek oluşturun.
+1. <xref:System.ServiceModel.ChannelFactory%601>Bir blok içinde bir örnek oluşturun `using` .
 
      [!code-csharp[htBasicService#6](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#6)]
      [!code-vb[htBasicService#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#6)]
 
-2. Çağrıları uç noktaya ekleyin <xref:System.ServiceModel.Description.WebHttpBehavior>. <xref:System.ServiceModel.ChannelFactory%601>
+2. <xref:System.ServiceModel.Description.WebHttpBehavior>Çağrıları uç noktaya ekleyin <xref:System.ServiceModel.ChannelFactory%601> .
 
      [!code-csharp[htBasicService#7](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#7)]
      [!code-vb[htBasicService#7](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#7)]
@@ -96,7 +97,7 @@ Windows Communication Foundation (WCF), bir Web uç noktası sunan bir hizmet ol
      [!code-csharp[htBasicService#8](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#8)]
      [!code-vb[htBasicService#8](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#8)]
 
-4. Öğesini kapatın <xref:System.ServiceModel.Web.WebServiceHost>.
+4. Öğesini kapatın <xref:System.ServiceModel.Web.WebServiceHost> .
 
      [!code-csharp[htBasicService#9](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#9)]
      [!code-vb[htBasicService#9](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#9)]
@@ -108,9 +109,9 @@ Bu örnek için tam kod listesi aşağıda verilmiştir.
 [!code-csharp[htBasicService#10](~/samples/snippets/csharp/VS_Snippets_CFX/htbasicservice/cs/service.cs#10)]
 [!code-vb[htBasicService#10](~/samples/snippets/visualbasic/VS_Snippets_CFX/htbasicservice/vb/service.vb#10)]
 
-## <a name="compiling-the-code"></a>Kodu derleme
+## <a name="compiling-the-code"></a>Kod derleme
 
-System. ServiceModel. dll ve System. ServiceModel. Web. dll Service.cs başvurusunu derlerken.
+Service.cs başvurusunu derlerken System.ServiceModel.dll ve System.ServiceModel.Web.dll.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

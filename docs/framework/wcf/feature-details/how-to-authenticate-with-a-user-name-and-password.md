@@ -1,15 +1,16 @@
 ---
 title: 'Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama'
+description: Örnek kodla bir Windows etki alanı Kullanıcı adı ve parolası kullanarak bir istemcinin kimliğini doğrulamak için bir WCF hizmetini nasıl etkinleştirebileceğinizi öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1f938f8041b2577b3705266948f29b42f23a6fd7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601289"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247253"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Nasıl yapılır: Kullanıcı Adı ve Parolayla Kimlik Doğrulama
 
@@ -32,7 +33,7 @@ Windows etki alanı Kullanıcı adı ve parolaları kullanarak istemcilerinin ki
     // ...
     ```
 
-2. Kablo üzerinden gönderilen Kullanıcı adı ve parola bilgilerini şifrelemek için kullanılan sunucu sertifikasını belirtin. Bu kod, yukarıdaki kodu hemen izlemelidir. Aşağıdaki örnek, [Ileti güvenliği Kullanıcı adı](../samples/message-security-user-name.md) örneğindeki Setup. bat dosyası tarafından oluşturulan sertifikayı kullanır:
+2. Kablo üzerinden gönderilen Kullanıcı adı ve parola bilgilerini şifrelemek için kullanılan sunucu sertifikasını belirtin. Bu kod, yukarıdaki kodu hemen izlemelidir. Aşağıdaki örnek [Ileti güvenliği Kullanıcı adı](../samples/message-security-user-name.md) örneğindeki setup.bat dosyası tarafından oluşturulan sertifikayı kullanır:
 
     ```csharp
     // ...
@@ -40,7 +41,7 @@ Windows etki alanı Kullanıcı adı ve parolaları kullanarak istemcilerinin ki
     // ...
     ```
 
-    Kendi sertifikanızı kullanabilirsiniz, kodunuzu yalnızca sertifikanıza başvuracak şekilde değiştirirsiniz. Sertifika oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md). Sertifikanın, yerel makine için güvenilir kişiler sertifika deposunda olduğundan emin olun. Bunu, MMC. exe ' yi çalıştırarak ve **Dosya**, **ek bileşen Ekle/Kaldır...** menü öğesini seçerek yapabilirsiniz. **Ek bileşenleri Ekle veya Kaldır** Iletişim kutusunda **Sertifikalar ek bileşenini** seçin ve **Ekle**' ye tıklayın. Sertifikalar ek bileşeni iletişim kutusunda **bilgisayar hesabı**' nı seçin. Varsayılan olarak, Ileti güvenliği Kullanıcı adı örneğinden oluşturulan sertifika Kişisel/Sertifikalar klasöründe yer alır.  Bu işlem, MMC penceresindeki verilen sütununda "localhost" olarak listelenecektir. Sertifikayı sürükleyip **güvenilir kişiler** klasörüne bırakın. Bu, WCF 'nin kimlik doğrulama gerçekleştirirken sertifikayı güvenilir bir sertifika olarak ele almasını sağlar.
+    Kendi sertifikanızı kullanabilirsiniz, kodunuzu yalnızca sertifikanıza başvuracak şekilde değiştirirsiniz. Sertifika oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md). Sertifikanın, yerel makine için güvenilir kişiler sertifika deposunda olduğundan emin olun. Bunu mmc.exe çalıştırarak ve **Dosya**, **ek bileşen Ekle/Kaldır...** menü öğesini seçerek yapabilirsiniz. **Ek bileşenleri Ekle veya Kaldır** Iletişim kutusunda **Sertifikalar ek bileşenini** seçin ve **Ekle**' ye tıklayın. Sertifikalar ek bileşeni iletişim kutusunda **bilgisayar hesabı**' nı seçin. Varsayılan olarak, Ileti güvenliği Kullanıcı adı örneğinden oluşturulan sertifika Kişisel/Sertifikalar klasöründe yer alır.  Bu işlem, MMC penceresindeki verilen sütununda "localhost" olarak listelenecektir. Sertifikayı sürükleyip **güvenilir kişiler** klasörüne bırakın. Bu, WCF 'nin kimlik doğrulama gerçekleştirirken sertifikayı güvenilir bir sertifika olarak ele almasını sağlar.
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>Kullanıcı adını ve parolayı geçen hizmeti çağırmak için
 
