@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 43e896bfe267299d3b0cb12a8f71e42fe2c87a88
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 184c9f61fd8456b22e8ecb262c131793160b49b0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280796"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244016"
 ---
 # <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
@@ -108,7 +108,7 @@ public class Program
 
 Gördüğünüz gibi, temsilcinin gövdesi, diğer tüm temsilciler gibi yalnızca bir ifade kümesidir. Ancak, ayrı bir tanım olmak yerine, yönteme yönelik Çağrımızda bir _ad_ tanıdık <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> .
 
-Ancak, bu yaklaşımda bile, fırladığımız çok fazla kod vardır. Bu, *lambda ifadelerinin* oynatma içine geldiği yerdir. Lambda ifadeleri veya Short için yalnızca "Lambdalar", dil ile tümleşik sorgu (LINQ) temel yapı taşlarından biri olarak C# 3,0 ' de tanıtılmıştı. Temsilciler kullanmanın yalnızca daha uygun bir sözdizimi vardır. Bir temsilciye atanmadıkları takdirde, bir imza ve Yöntem gövdesi bildirir, ancak kendi biçimsel kimliği yoktur. Temsilcilerden farklı olarak, doğrudan olay kaydının sol tarafı olarak veya çeşitli LINQ yan tümceleri ve yöntemleri olarak atanabilir.
+Ancak, bu yaklaşımda bile, fırladığımız çok fazla kod vardır. Bu, *lambda ifadelerinin* oynatma içine geldiği yerdir. Lambda ifadeleri veya Short için yalnızca "Lambdalar", dil ile tümleşik sorgu (LINQ) temel yapı taşlarından biri olarak C# 3,0 ' de tanıtılmıştı. Temsilciler kullanmanın yalnızca daha uygun bir sözdizimi vardır. Bir temsilciye atanmadıkları takdirde, bir imza ve Yöntem gövdesi bildirir, ancak kendi biçimsel kimliği yoktur. Temsilcilerden farklı olarak, doğrudan olay kaydının sağ tarafı olarak veya çeşitli LINQ yan tümceleri ve yöntemleri olarak atanabilir.
 
 Lambda ifadesi bir temsilci belirtmenin yalnızca başka bir yolu olduğundan, yukarıdaki örneği anonim bir temsilci yerine bir lambda ifadesi kullanacak şekilde yeniden yazamayacak.
 

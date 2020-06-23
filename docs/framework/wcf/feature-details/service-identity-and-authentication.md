@@ -1,5 +1,6 @@
 ---
 title: Kimlik Doğrulama ile Hizmet Kimliği
+description: Service WSDL 'den oluşturulan ve WCF 'nin hizmetin kimliğini doğrulamak için kullandığı bir değer olan bir hizmetin uç nokta kimliği hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 6c12c3aadf53f9fddef2f0b0124994db15565cb5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ae217b4a2c3432321c7ef2e663922a87b82acbea
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600380"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246577"
 ---
 # <a name="service-identity-and-authentication"></a>Kimlik Doğrulama ile Hizmet Kimliği
 Hizmetin *uç nokta kimliği* , hizmet Web Hizmetleri Açıklama DILI (wsdl) tarafından oluşturulan bir değerdir. Bu değer, herhangi bir istemciye yayılan, hizmetin kimliğini doğrulamak için kullanılır. İstemci bir uç noktaya iletişim başlattıktan ve hizmet istemcinin kimliğini doğruladıktan sonra, uç nokta kimlik değerini, uç nokta kimlik doğrulama işleminin döndürdüğü gerçek değer ile karşılaştırır. Eşleşiyorlarsa, istemci beklenen hizmet uç noktasıyla iletişim kurduysa emin olur. Bu, bir istemcinin kötü amaçlı bir hizmet tarafından barındırılan bir uç noktaya yeniden yönlendirilmesini önlemek yoluyla *kimlik avına* karşı koruma olarak çalışır.  
@@ -32,7 +33,7 @@ Hizmetin *uç nokta kimliği* , hizmet Web Hizmetleri Açıklama DILI (wsdl) tar
   
  İstemci üzerindeki kimlik işleme, hizmette istemci kimlik doğrulamasına benzer. Güvenli bir hizmet, istemci kimlik bilgilerinin kimliği doğrulanana kadar kodu çalıştırmaz. Benzer şekilde, istemci, hizmet kimlik bilgilerinin kimliği, hizmetin meta verilerinden öncelikli olarak bilinene kadar hizmetine ileti göndermez.  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A>Sınıfının özelliği, <xref:System.ServiceModel.EndpointAddress> istemci tarafından çağrılan hizmetin kimliğini temsil eder. Hizmeti <xref:System.ServiceModel.EndpointAddress.Identity%2A> meta verilerinde yayımlar. İstemci geliştiricisi, hizmet uç noktasında [ServiceModel meta veri yardımcı programı aracı 'nı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırdığında, oluşturulan yapılandırma hizmetin özelliğinin değerini içerir <xref:System.ServiceModel.EndpointAddress.Identity%2A> . WCF altyapısı (güvenlikle yapılandırıldıysa), hizmetin belirtilen kimliğe sahip olduğunu doğrular.  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A>Sınıfının özelliği, <xref:System.ServiceModel.EndpointAddress> istemci tarafından çağrılan hizmetin kimliğini temsil eder. Hizmeti <xref:System.ServiceModel.EndpointAddress.Identity%2A> meta verilerinde yayımlar. İstemci geliştiricisi, hizmet uç noktasında [ServiceModel meta veri yardımcı programı aracı 'nı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırdığında, oluşturulan yapılandırma hizmetin özelliğinin değerini içerir <xref:System.ServiceModel.EndpointAddress.Identity%2A> . WCF altyapısı (güvenlikle yapılandırıldıysa), hizmetin belirtilen kimliğe sahip olduğunu doğrular.  
   
 > [!IMPORTANT]
 > Meta veriler hizmetin beklenen kimliğini içerir, bu nedenle hizmet meta verilerini güvenli yollarla kullanıma sunabilmeniz önerilir, örneğin, hizmet için bir HTTPS uç noktası oluşturarak. Daha fazla bilgi için bkz. [nasıl yapılır: güvenli meta veri uç noktaları](how-to-secure-metadata-endpoints.md).  
@@ -40,14 +41,14 @@ Hizmetin *uç nokta kimliği* , hizmet Web Hizmetleri Açıklama DILI (wsdl) tar
 ## <a name="identity-types"></a>Kimlik türleri  
  Bir hizmet, altı tür kimlik sağlayabilir. Her kimlik türü, yapılandırmada öğesinin içinde yer alan bir öğeye karşılık gelir `<identity>` . Kullanılan tür senaryoya ve hizmetin güvenlik gereksinimlerine bağlıdır. Aşağıdaki tabloda her kimlik türü açıklanmaktadır.  
   
-|Kimlik türü|Açıklama|Tipik senaryo|  
+|Kimlik türü|Description|Tipik senaryo|  
 |-------------------|-----------------|----------------------|  
 |Etki Alanı Adı Sistemi (DNS)|Bu öğeyi X. 509.440 sertifikaları veya Windows hesaplarıyla kullanın. Kimlik bilgilerinde belirtilen DNS adını bu öğede belirtilen değerle karşılaştırır.|DNS denetimi, sertifikaları DNS veya konu adlarıyla kullanmanıza olanak sağlar. Bir sertifika aynı DNS veya konu adıyla yeniden kullanılıyorsa, kimlik denetimi hala geçerli olur. Bir sertifika yeniden yayımlandığında, yeni bir RSA anahtarı alır, ancak aynı DNS veya konu adını korur. Bu, istemcilerin hizmet hakkındaki kimlik bilgilerini güncelleştirmesi gerekmediği anlamına gelir.|  
 |Sertifika. Varsayılan olarak, `ClientCredentialType` sertifika olarak ayarlanır.|Bu öğe, istemcisiyle karşılaştırmak için Base64 kodlamalı bir X. 509.440 sertifika değeri belirtir.<br /><br /> Ayrıca, hizmet kimliğini doğrulamak için bir CardSpace kimlik bilgisi olarak kullanılırken bu öğeyi kullanın.|Bu öğe, kimlik doğrulamasını parmak izi değerine göre tek bir sertifikayla kısıtlar. Bu, parmak izi değerleri benzersiz olduğundan daha sıkı kimlik doğrulama imkanı sunar. Bu bir desteklenmediği uyarısıyla ile birlikte gelir: sertifika aynı konu adıyla yeniden bırakılırsa, yeni bir parmak Izi de vardır. Bu nedenle, yeni parmak izi tanınmadığı takdirde istemciler hizmeti doğrulayamayabilir. Bir sertifikanın parmak izini bulma hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir sertifikanın parmak Izini alma](how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
 |Sertifika başvurusu|Daha önce açıklanan sertifika seçeneğiyle aynı. Ancak, bu öğe, sertifikanın alınacağı bir sertifika adı ve depolama konumu belirtmenize olanak sağlar.|Daha önce açıklanan sertifika senaryosuna benzer.<br /><br /> Avantaj, sertifika depolama konumunun değişebilir.|  
 |RSA|Bu öğe, istemcisiyle Karşılaştırılacak bir RSA anahtar değeri belirtir. Bu, sertifika seçeneğine benzer, ancak sertifikanın parmak izini kullanmak yerine sertifikanın RSA anahtarı kullanılır.|Bir RSA denetimi, kimlik doğrulamasını, RSA anahtarına bağlı olarak tek bir sertifika ile kısıtlamanıza olanak sağlar. Bu, hizmet masrafına belirli bir RSA anahtarının daha sıkı şekilde doğrulanmasını sağladığından, RSA anahtar değeri değişirse artık mevcut istemcilerle birlikte çalışmaz.|  
 |Kullanıcı asıl adı (UPN). Varsayılan değer `ClientCredentialType` Windows olarak ayarlandığında ve hizmet işlemi sistem hesaplarından biri altında çalışmadığı zaman varsayılandır.|Bu öğe, hizmetin altında çalıştığı UPN 'yi belirtir. [Kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılan](../extending/overriding-the-identity-of-a-service-for-authentication.md)Kerberos protokolü ve kimlik bölümüne bakın.|Bu, hizmetin belirli bir Windows Kullanıcı hesabı altında çalıştığından emin olmanızı sağlar. Kullanıcı hesabı, geçerli oturum açmış kullanıcı veya belirli bir kullanıcı hesabı altında çalışan hizmet olabilir.<br /><br /> Bu ayar, hizmet Active Directory ortamında bir etki alanı hesabı altında çalışıyorsa Windows Kerberos güvenliğinin avantajlarından yararlanır.|  
-|Hizmet asıl adı (SPN). Varsayılan değer `ClientCredentialType` Windows olarak ayarlandığında ve hizmet işlemi sistem hesaplarından biri (LocalService, LocalSystem veya NetworkService) altında çalışıyorsa varsayılandır.|Bu öğe, hizmetin hesabıyla ilişkili SPN 'YI belirtir. [Kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılan](../extending/overriding-the-identity-of-a-service-for-authentication.md)Kerberos protokolü ve kimlik bölümüne bakın.|Bu, SPN 'nin ve SPN ile ilişkili belirli Windows hesabının hizmeti belirlemesine de sağlar.<br /><br /> Setspn. exe aracını kullanarak hizmetin Kullanıcı hesabı için bir makine hesabını ilişkilendirebilirsiniz.<br /><br /> Bu ayar, hizmet sistem hesaplarından biri altında veya bununla ilişkili bir SPN adına sahip bir etki alanı hesabı altında çalışıyorsa ve bilgisayar Active Directory ortamındaki bir etki alanının üyesiyse Windows Kerberos güvenliğinin avantajlarından yararlanır.|  
+|Hizmet asıl adı (SPN). Varsayılan değer `ClientCredentialType` Windows olarak ayarlandığında ve hizmet işlemi sistem hesaplarından biri (LocalService, LocalSystem veya NetworkService) altında çalışıyorsa varsayılandır.|Bu öğe, hizmetin hesabıyla ilişkili SPN 'YI belirtir. [Kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılan](../extending/overriding-the-identity-of-a-service-for-authentication.md)Kerberos protokolü ve kimlik bölümüne bakın.|Bu, SPN 'nin ve SPN ile ilişkili belirli Windows hesabının hizmeti belirlemesine de sağlar.<br /><br /> Setspn.exe aracını kullanarak hizmetin Kullanıcı hesabı için bir makine hesabını ilişkilendirebilirsiniz.<br /><br /> Bu ayar, hizmet sistem hesaplarından biri altında veya bununla ilişkili bir SPN adına sahip bir etki alanı hesabı altında çalışıyorsa ve bilgisayar Active Directory ortamındaki bir etki alanının üyesiyse Windows Kerberos güvenliğinin avantajlarından yararlanır.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Hizmette kimlik belirtme  
  Genellikle, bir hizmetin kimliğini ayarlamanız gerekmez, çünkü bir istemci kimlik bilgisi türü seçimi, hizmet meta verilerinde sunulan kimlik türünü belirler. Hizmet kimliğini geçersiz kılma veya belirtme hakkında daha fazla bilgi için bkz. [kimlik doğrulaması için bir hizmetin kimliğini geçersiz kılma](../extending/overriding-the-identity-of-a-service-for-authentication.md).  
@@ -64,7 +65,7 @@ Hizmetin *uç nokta kimliği* , hizmet Web Hizmetleri Açıklama DILI (wsdl) tar
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="specifying-identity-at-the-client"></a>Istemcide kimlik belirtme  
- Tasarım zamanında, istemci geliştiricisi istemci yapılandırması oluşturmak için genellikle [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanır. Oluşturulan yapılandırma dosyası (istemci tarafından kullanılmak üzere tasarlanmıştır) sunucunun kimliğini içerir. Örneğin, aşağıdaki kod, önceki örnekte gösterildiği gibi bir DNS kimliğini belirten bir hizmetten oluşturulmuştur. İstemcinin uç nokta kimliği değerinin, hizmetin ile eşleştiğini unutmayın. Bu durumda, istemci hizmetin Windows (Kerberos) kimlik bilgilerini aldığında değerin olmasını bekler `contoso.com` .  
+ Tasarım zamanında, istemci geliştiricisi istemci yapılandırması oluşturmak için genellikle [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanır. Oluşturulan yapılandırma dosyası (istemci tarafından kullanılmak üzere tasarlanmıştır) sunucunun kimliğini içerir. Örneğin, aşağıdaki kod, önceki örnekte gösterildiği gibi bir DNS kimliğini belirten bir hizmetten oluşturulmuştur. İstemcinin uç nokta kimliği değerinin, hizmetin ile eşleştiğini unutmayın. Bu durumda, istemci hizmetin Windows (Kerberos) kimlik bilgilerini aldığında değerin olmasını bekler `contoso.com` .  
 
  Windows yerine hizmet, istemci kimlik bilgileri türü olarak bir sertifika belirtiyorsa, sertifikanın DNS özelliğinin değeri olması beklenir `contoso.com` . (Veya DNS özelliği ise `null` , sertifikanın konu adı olmalıdır `contoso.com` .)  
   

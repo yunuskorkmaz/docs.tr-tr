@@ -1,5 +1,6 @@
 ---
 title: İleti Sözleşmeleri Kullanılıyor
+description: WFC 'de bir SOAP iletisinin yapısını belirten bir ileti sözleşmesi oluşturmak için ileti sözleşmesi özniteliklerini nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 1b102b97c62df0bb8b031ded0f9165a11f8a8911
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0a75298b50df74ddf15904af43a0eb62c5ba8496
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600276"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244718"
 ---
 # <a name="using-message-contracts"></a>İleti Sözleşmeleri Kullanılıyor
 Genellikle Windows Communication Foundation (WCF) uygulamaları oluştururken, geliştiriciler veri yapılarına ve serileştirme sorunlarına yakın ilgi çekici bir şekilde ödeme yapar ve verilerin gerçekleştirildiği iletilerin yapısıyla ilgilenmenize gerek kalmaz. Bu uygulamalar için, parametreler veya dönüş değerleri için veri sözleşmeleri oluşturmak basittir. (Daha fazla bilgi için bkz. [hizmet sözleşmeleri içinde veri aktarımı belirtme](specifying-data-transfer-in-service-contracts.md).)  

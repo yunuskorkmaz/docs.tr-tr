@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma'
+description: Bir XML bilgisayar yapılandırma dosyası ve DEVPATH ortam değişkeni kullanarak, paylaşılan bir derlemenin .NET 'teki birçok uygulamayla doğru şekilde çalışıp çalışmadığını test edin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-ms.openlocfilehash: 6fa864f814d6a9ce04f2bce92c61cd0075ab5145
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 50b61eedddabd660b1834565a61738f460ae9ff9
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69912994"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105375"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Nasıl yapılır: DEVPATH Kullanarak Derlemelerin Konumunu Bulma
 Geliştiriciler, oluşturmakta oldukları paylaşılan bir derlemenin birden çok uygulamayla doğru şekilde çalıştığından emin olmak isteyebilir. Geliştirici, geliştirme çevrimi sırasında derlemeyi genel bütünleştirilmiş kod önbelleğine sürekli koymak yerine, derleme için derleme çıkış dizinini işaret eden bir DEVPATH ortam değişkeni oluşturabilir.  

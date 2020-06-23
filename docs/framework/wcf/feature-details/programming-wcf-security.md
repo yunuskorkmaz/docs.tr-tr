@@ -1,5 +1,6 @@
 ---
 title: WCF Güvenliğini Programlama
+description: Kimlik doğrulama, gizlilik ve bütünlük gibi güvenli bir WCF uygulaması oluşturmayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 2b3c96e91c0d6f01fa30b3b617449e7d4a148933
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596779"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244991"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevleri açıklanmaktadır. Bu konu, toplu olarak *Aktarım güvenliği*olarak bilinen kimlik doğrulama, gizlilik ve bütünlüğü içerir. Bu konu, yetkilendirmeyi kapsamaz (kaynaklara veya hizmetlere erişimin denetimi); Yetkilendirme hakkında bilgi için bkz. [Yetkilendirme](authorization-in-wcf.md).  

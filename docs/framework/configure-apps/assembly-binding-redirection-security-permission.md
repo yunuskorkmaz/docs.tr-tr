@@ -1,16 +1,17 @@
 ---
 title: Derleme Bağlama Yönlendirmesi Güvenlik İzni
+description: .NET 'teki bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için gereken güvenlik izni hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: b59689e78f901637674c0a1df28ed74411e8e7c7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a8596bcac4efb0aea07efcfde6726d8bbf148c24
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "69921382"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105093"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Derleme Bağlama Yönlendirmesi Güvenlik İzni
 Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. <xref:System.Security.Permissions.SecurityPermissionFlag>' De bayrak ayarlanarak izin verilir <xref:System.Security.Permissions.SecurityPermission> . Yönetilen derlemelerin varsayılan olarak izinleri yoktur.  
@@ -28,7 +29,7 @@ Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlend
 |Internet Bölgesi|**DıŞıNA**|  
 |Güvenilmeyen bölgeler|**DıŞıNA**|  
   
- Bir yönetici, belirli bir bilgisayardaki belirli senaryoları desteklemek veya kısıtlamak için bu güvenlik ayarlarını değiştirebilir. Varsayılan değer olan **Bindingyönlendirmeler** bayrak ayarını değiştirmek için araç yoktur; bir yönetici, kullanıcının bilgisayarındaki Security. config dosyasını el ile düzenlemeniz gerekir.  
+ Bir yönetici, belirli bir bilgisayardaki belirli senaryoları desteklemek veya kısıtlamak için bu güvenlik ayarlarını değiştirebilir. Varsayılan değer olan **Bindingyönlendirmeler** bayrak ayarını değiştirmek için araç yoktur; bir yönetici, kullanıcının bilgisayarındaki Security.config dosyasını el ile düzenlemeniz gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

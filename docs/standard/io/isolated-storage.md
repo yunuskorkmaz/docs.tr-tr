@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 30ed8314d8045a599207cb0195474fdfde41760d
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 4ce32c766e7a454c1294eb38266a84602cf8e241
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768943"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245641"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
 <a name="top"></a>Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerle ilişkilendirmenin standartlaştırılmış yollarını tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.
@@ -105,6 +105,97 @@ Tarafından belirtilen izin verilen kullanım, <xref:System.Security.Permissions
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AssemblyIsolationByRoamingUser>|Aynı şekilde `AssemblyIsolationByUser` , ancak mağaza, dolaşım Kullanıcı profilleri etkinse ve Kotalar zorlanmadığında dolaşımını yapan bir konuma kaydedilir.|İle aynıdır `AssemblyIsolationByUser` , ancak kotalar olmadan hizmet reddi saldırısı riski artar.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser>|Kullanıcıya göre yalıtım. Genellikle yalnızca yönetici veya hata ayıklama araçları bu izin düzeyini kullanır.|Bu izinle olan erişim, kodun bir kullanıcının yalıtılmış depolama dosyalarını ve dizinlerini görüntülemesine ve silmesine olanak verir (derleme yalıtımına bakmaksızın). Riskler, bilgi sızması ve veri kaybını içerir ancak bunlarla sınırlı değildir.|
 |<xref:System.Security.Permissions.IsolatedStorageContainment.UnrestrictedIsolatedStorage>|Tüm kullanıcılar, etki alanları ve derlemelere göre yalıtım. Genellikle yalnızca yönetici veya hata ayıklama araçları bu izin düzeyini kullanır.|Bu izin tüm kullanıcılar için tüm yalıtılmış depoların açığa çıkma olasılığını oluşturur.|
+
+## <a name="safety-of-isolated-storage-components-with-regard-to-untrusted-data"></a>Güvenilir olmayan verilerle ilgili yalıtılmış depolama bileşenlerinin güvenliği
+
+__Bu bölüm aşağıdaki çerçeveler için geçerlidir:__
+
+- .NET Framework (tüm sürümler)
+- .NET Core 2.1 +
+- .NET 5.0 +
+
+.NET Framework ve .NET Core, bir Kullanıcı, uygulama veya bileşen için verileri kalıcı hale getirme mekanizması olarak [yalıtılmış depolamayı](/dotnet/standard/io/isolated-storage) sunmaktadır. Bu, öncelikli olarak kullanımdan kaldırılan kod erişimi güvenlik senaryolarında tasarlanan eski bir bileşendir.
+
+Çeşitli yalıtılmış depolama API 'Leri ve araçları, güven sınırları genelinde verileri okumak için kullanılabilir. Örneğin, makine genelindeki bir kapsamdaki verileri okumak, makinedeki diğer, muhtemelen daha az güvenilir Kullanıcı hesaplarından veri toplayabilir. Makine genelinde yalıtılmış depolama kapsamlarından okunan bileşenler veya uygulamalar, bu verileri okumayla sonuçlarının farkında olmalıdır.
+
+### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>Makine genelindeki kapsamdan okuyabilen güvenliğe duyarlı API 'Ler
+
+Makine genelindeki kapsamdan okunan aşağıdaki API 'lerden herhangi birini çağıran bileşenler veya uygulamalar:
+
+ * [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), IsolatedStorageScope. Machine bayrağını içeren bir kapsam geçiyor
+ * [IsolatedStorageFile. Getlarinesinestoreforapplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+ * [IsolatedStorageFile. Getlarinesinestoreforassembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+ * [IsolatedStorageFile. Getlarinesinestorefordomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+ * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), IsolatedStorageScope. Machine bayrağını içeren bir kapsam geçiyor
+ * [IsolatedStorageFile.](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)bayrak içeren bir kapsamı geçirerek Kaldır `IsolatedStorageScope.Machine`
+
+[Yalıtılmış depolama aracı](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) , `storeadm.exe` `/machine` aşağıdaki kodda gösterildiği gibi anahtarla çağrılırsa etkilenir:
+
+```txt
+storeadm.exe /machine [any-other-switches]
+```
+
+Yalıtılmış depolama aracı, Visual Studio ve .NET Framework SDK 'nın bir parçası olarak sağlanır.
+
+Uygulama önceki API 'lere çağrılar içermiyorsa veya iş akışı `storeadm.exe` Bu şekilde çağrıyı içermiyorsa, bu belge uygulanmaz.
+
+### <a name="impact-in-multi-user-environments"></a>Çoklu Kullanıcı ortamlarında etki
+
+Daha önce belirtildiği gibi, bu API 'lerden gelen güvenlik etkisi, bir güven ortamından yazılan verilerin farklı bir güven ortamından okunmasından kaynaklanmaktadır. Yalıtılmış depolama genellikle veri okumak ve yazmak için üç konumdan birini kullanır:
+
+1. `%LOCALAPPDATA%\IsolatedStorage\`: Örneğin, `C:\Users\<username>\AppData\Local\IsolatedStorage\` `User` kapsam için.
+2. `%APPDATA%\IsolatedStorage\`: Örneğin, `C:\Users\<username>\AppData\Roaming\IsolatedStorage\` `User|Roaming` kapsam için.
+3. `%PROGRAMDATA%\IsolatedStorage\`: Örneğin, `C:\ProgramData\IsolatedStorage\` `Machine` kapsam için.
+
+İlk iki konum Kullanıcı başına yalıtılmıştır. Windows, aynı makinedeki farklı Kullanıcı hesaplarının birbirlerine ait Kullanıcı profili klasörlerine erişememesini sağlar. Ya da mağazalarını kullanan iki farklı kullanıcı hesabı birbirlerinin `User` `User|Roaming` verilerini görmez ve birbirini engellemez.
+
+Üçüncü konum, makinedeki tüm Kullanıcı hesapları arasında paylaşılır. Farklı hesaplar bu konumdan okuyabilir ve yazabilir ve birbirlerinin verilerini görebilirler.
+
+Önceki yollar, kullanımdaki Windows sürümüne bağlı olarak farklılık gösterebilir.
+
+Şimdi, iki kayıtlı _Kullanıcı ve_ _emre_olan çok kullanıcılı bir sistem düşünün. Mallory 'nin Kullanıcı profili dizinine erişme özelliği vardır `C:\Users\Mallory\` ve paylaşılan makineye özel depolama konumuna erişebilir `C:\ProgramData\IsolatedStorage\` . Emre 'nin Kullanıcı profili dizinine erişemez `C:\Users\Bob\` .
+
+Mallory, emre 'ye saldırmak isterse, makineye özel depolama konumuna veri yazabilir ve ardından Bob 'u makine genelindeki depodan okumayı dener. Bob, bu mağazadan okuyan bir uygulama çalıştırdığında, bu uygulama burada bulunan ve emre 'nin Kullanıcı hesabı bağlamında bulunan veriler üzerinde çalışır. Bu belgenin geri kalanı çeşitli saldırı vektörlerini ve uygulamaların bu saldırılara karşı riskini en aza indirmek için neler yapabileceğini yapabilecekleri adımları sağlar.
+
+__Note:__ Bu tür bir saldırının gerçekleşmesi için Mallory şunları gerektirir:
+
+* Makinedeki bir kullanıcı hesabı.
+* Dosya sistemindeki bilinen bir konuma bir dosyayı yerleştirme özelliği.
+* Emre 'nin bir noktada bu verileri okumaya çalışan bir uygulama çalıştırması hakkında bilgi.
+
+Bunlar, ev bilgisayarları veya tek çalışan kurumsal iş istasyonları gibi standart tek kullanıcılı masaüstü ortamları için uygulanan tehdit vektörleri değildir.
+
+#### <a name="elevation-of-privilege"></a>Ayrıcalık yükselmesi
+
+Can 'ın uygulaması malın dosyasını okuduğunda __ayrıcalık yükseltme__ saldırısı oluşur ve bu yükün içeriğine göre otomatik olarak bir işlem gerçekleştirmeye çalışır. Bir başlangıç komut dosyasının içeriğini makineye özel depodan okuyan ve bu içeriği ' ye ileten bir uygulamayı düşünün `Process.Start` . Mallory, Bob 'un uygulamayı başlattığında makine genelindeki depo içine kötü amaçlı bir betik yerleştirebilir:
+
+* Uygulaması _, Bob 'un Kullanıcı profili bağlamı altında_Mallory 'nin kötü amaçlı betiğini ayrıştırır ve başlatır.
+* Mallory, yerel makinedeki Bob 'un hesabına erişim sağlar.
+
+#### <a name="denial-of-service"></a>Hizmet reddi
+
+Bob 'un uygulaması, bir __hizmet reddi__ saldırısı meydana geldi 'in dosya ve kilitlenmeleri okuyup doğru şekilde çalışmayı durdurduğunda oluşur. Daha önce bahsedilen uygulamayı, makine genelindeki depodan bir başlangıç betiğini ayrıştırmayı deneyen bir kez daha deneyin. Mallory, bir dosyayı makine genelinde depolamanın içinde hatalı biçimlendirilmiş içerikle yerleştirebilirse şunları yapabilir:
+
+* Bob 'un uygulamasının başlangıç yolunda erken bir özel durum oluşturması neden olur.
+* Özel durum nedeniyle uygulamanın başarıyla başlatılmasını engelleyin.
+
+Daha sonra emre 'yi kendi Kullanıcı hesabı altında başlatma özelliğini reddetti.
+
+#### <a name="information-disclosure"></a>Bilgilerin açığa çıkması
+
+Mallory, normalde erişimi olmayan bir dosyanın içeriğini kapatmasına ikna edebilecek bir __bilgi açıklama__ saldırısı meydana gelir. Bob 'un okumak istediği gizli bir dosya *C:\Users\Bob\secret.txt* olduğunu düşünün. Bu dosyanın yolunu bilir, ancak Windows yasaklıyor kendisi can 'ın Kullanıcı profili dizinine erişim kazanmasını sağladığından dosyayı okuyamıyor.
+
+Bunun yerine, Mallory makine genelindeki depoya sabit bir bağlantı koyar. Bu, kendi içinde herhangi bir içerik içermeyen özel bir dosya türüdür, bunun yerine diskte başka bir dosyaya işaret eder. Bunun yerine, sabit bağlantı dosyasını okumaya çalışmak, bağlantının hedeflediği dosyanın içeriğini okumacaktır. Sabit bağlantıyı oluşturduktan sonra, bağlantının hedefine () erişimi olmadığı için Mallory hala dosya içeriğini okuyamıyor `C:\Users\Bob\secret.txt` . Ancak _Bob bu dosyaya erişebilir._
+
+Bob 'un uygulaması makine genelinde depodan okuduğu zaman, dosyanın `secret.txt` Yalnızca makine genelindeki depoda olduğu gibi, dosyanın içeriğini yanlışlıkla okur. Bob 'un uygulaması çıktığında, dosyayı makine genelinde depoya yeniden kopyalamayı denerse, dosyanın gerçek bir kopyasını * C:\programdata\ısolatedstorage dizinine yerleştirmez \* . Bu dizin makinedeki herhangi bir kullanıcı tarafından okunabilir olduğundan, Mallory artık dosyanın içeriğini okuyabilir.
+
+### <a name="best-practices-to-defend-against-these-attacks"></a>Bu saldırılara karşı savunmak için en iyi uygulamalar
+
+__Önemli:__ Ortamınızda birden çok güvenilmeyen Kullanıcı varsa, API 'YI __do not__ çağırmayın `IsolatedStorageFile.GetEnumerator(IsolatedStorageScope.Machine)` veya aracı çağırmayın `storeadm.exe /machine /list` . Bunların her ikisi de, güvenilir veriler üzerinde çalıştığımız varsayılmaktadır. Bir saldırgan, makine genelindeki depoda kötü amaçlı bir yükü temel alıyorsa, bu yük, bu komutları çalıştıran kullanıcı bağlamında ayrıcalık yükselmesine neden olabilir.
+
+Çoklu Kullanıcı ortamında çalışıyorsanız, _makine_ kapsamını hedefleyen yalıtılmış depolama özelliklerinin kullanımını yeniden deneyin. Bir uygulamanın makine genelinde bir konumdan veri okuması gerekiyorsa, verileri yalnızca yönetici hesapları tarafından yazılabilir bir konumdan okumayı tercih edin. `%PROGRAMFILES%`Dizin ve `HKLM` kayıt defteri kovanı, yalnızca yöneticiler tarafından yazılabilir ve herkes tarafından okunabilen konumların örnekleridir. Bu konumlardan okunan veriler, güvenilir olarak değerlendirilir.
+
+Bir uygulamanın bir çoklu kullanıcı ortamında _makine_ kapsamını kullanması gerekiyorsa, makine genelindeki depodan okurken herhangi bir dosyanın içeriğini doğrulayın. Uygulama, nesne grafiklerinin bu dosyalardan serisini kaldırmada, `XmlSerializer` veya gibi tehlikeli serileştiriciler yerine daha güvenli serileştiriciler kullanmayı `BinaryFormatter` düşünün `NetDataContractSerializer` . Daha derin iç içe nesne grafiklerde veya dosya içeriğine göre kaynak ayırmayı gerçekleştiren nesne grafiklerde dikkatli olun.
 
 <a name="isolated_storage_locations"></a>
 

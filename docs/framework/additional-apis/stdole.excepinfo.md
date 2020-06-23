@@ -1,5 +1,6 @@
 ---
-title: EXCEPINFO yapısı (stdole)
+title: EXCEPıNFO yapısı (Stdole)
+description: .NET 'teki EXCEPıNFO yapısı hakkında başvuru bilgileri alın. Yapı, Stdole ad alanında ve Stdole derlemesinde bulunur.
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,12 +10,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 258ce5e63c9095e5a451d807d588f31512f5e5fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 714ce7e371045dfc6387030d6a7b6b020fa96684
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675292"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989524"
 ---
 # <a name="excepinfo-structure"></a>EXCEPINFO Yapısı
 
@@ -24,6 +25,6 @@ public struct EXCEPINFO
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Namespace:** `stdole`
+**Ad alanı:**`stdole`
 
-**Bütünleştirilmiş kod:** stdole (içinde stdole.dll)
+**Bütünleştirilmiş kod:** Stdole (stdole.dll)

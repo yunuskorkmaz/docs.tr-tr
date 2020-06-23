@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter.raise__WritingPrintTicketRequired Yöntemi (System.Windows.Xps)
+title: XpsDocumentWriter. raise__WritingPrintTicketRequired yöntemi (System. Windows. XPS)
+description: .NET 'teki bir XPS belgesi için Writingprintbilet gerekli olayını başlatan XpsDocumentWriter. raise__WritingPrintTicketRequired yöntemini kullanın.
 ms.date: 12/12/2007
 api_location:
 - system.printing.dll
@@ -9,18 +10,18 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 4baa5a568f73f60e2448db968283e2b7b64844c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8227c65df69107578791e532f20a1b2560366611
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155654"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105040"
 ---
-# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>XpsDocumentWriter.raise\_\_WritingPrintTicketGerekli Yöntem
+# <a name="xpsdocumentwriterraise__writingprintticketrequired-method"></a>XpsDocumentWriter. Raise \_ \_ writingprintbilet gerekli yöntemi
 
-Olayı <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> yükseltir.
+Olayını oluşturur <xref:System.Windows.Xps.XpsDocumentWriter.WritingPrintTicketRequired> .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```csharp
 public void raise__WritingPrintTicketRequired (object value0,
@@ -39,6 +40,6 @@ public void raise__WritingPrintTicketRequired (object value0,
 
 **Ad alanı:**<xref:System.Windows.Xps>
 
-**Montaj:** System.Printing (system.printing.dll içinde)
+**Bütünleştirilmiş kod:** System. Printing (system.printing.dll)
 
-**.NET Çerçeve sürümleri:** 3.0
+**.NET Framework sürümleri:** 3,0

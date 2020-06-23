@@ -1,6 +1,7 @@
 ---
 title: ComboBox, ListBox veya CheckedListBox denetiminden öğe ekleme ve kaldırma
 ms.date: 03/30/2017
+description: Veri bağlama olmadan yalnızca Windows Forms ComboBox, ListBox ve CheckedListBox denetimleri ekleme ve kaldırma hakkında bilgi edinin.
 dev_langs:
 - csharp
 - vb
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 3a83d98af42386b566b4af7bc11ff383dea8fd6b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f3701257bbe410bf03c4c21700705e87b581bf2e
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746297"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904448"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Nasıl yapılır: Bir Windows Forms ComboBox, ListBox veya CheckedListBox Denetiminde Öğe Ekleme ve Kaldırma
-Öğeler çeşitli yollarla Windows Forms Birleşik giriş kutusu, liste kutusu veya denetlenen liste kutusuna eklenebilir, çünkü bu denetimler çeşitli veri kaynaklarına bağlanabilir. Ancak, bu konuda en basit yöntem gösterilmektedir ve veri bağlama gerekmez. Görüntülenen öğeler genellikle dizelerdir; Ancak, herhangi bir nesne kullanılabilir. Denetimde görüntülenen metin, nesnenin `ToString` yöntemi tarafından döndürülen değerdir.  
+Öğeler çeşitli yollarla Windows Forms Birleşik giriş kutusu, liste kutusu veya denetlenen liste kutusuna eklenebilir, çünkü bu denetimler çeşitli veri kaynaklarına bağlanabilir. Ancak, bu konuda en basit yöntem gösterilmektedir ve veri bağlama gerekmez. Görüntülenen öğeler genellikle dizelerdir; Ancak, herhangi bir nesne kullanılabilir. Denetimde görüntülenen metin, nesnenin yönteminin döndürdüğü değerdir `ToString` .  
   
 ### <a name="to-add-items"></a>Öğe eklemek için  
   
-1. `ObjectCollection` sınıfının `Add` yöntemini kullanarak dize veya nesneyi listeye ekleyin. Koleksiyona `Items` özelliği kullanılarak başvurulur:  
+1. Sınıfının yöntemini kullanarak dize veya nesneyi listeye ekleyin `Add` `ObjectCollection` . Koleksiyonda, özelliği kullanılarak başvurulur `Items` :  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -40,9 +41,9 @@ ms.locfileid: "76746297"
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - veya -  
+     - veya  
   
-2. `Insert` yöntemi ile listedeki istenen noktada dize veya nesne ekleyin:  
+2. Listedeki istenen noktada dize veya nesneyi, yöntemiyle birlikte ekleyin `Insert` :  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -56,9 +57,9 @@ ms.locfileid: "76746297"
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - veya -  
+     - veya  
   
-3. Tüm diziyi `Items` koleksiyonuna ata:  
+3. Koleksiyona tüm diziyi atama `Items` :  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,9 +90,9 @@ ms.locfileid: "76746297"
   
 ### <a name="to-remove-an-item"></a>Bir öğeyi kaldırmak için  
   
-1. Öğeleri silmek için `Remove` veya `RemoveAt` metodunu çağırın.  
+1. `Remove` `RemoveAt` Öğeleri silmek için veya metodunu çağırın.  
   
-     `Remove` Kaldırılacak öğeyi belirten bir bağımsız değişken içeriyor.`RemoveAt` Belirtilen dizin numarasına sahip öğeyi kaldırır.  
+     `Remove`Kaldırılacak öğeyi belirten bir bağımsız değişkeni vardır.`RemoveAt` Belirtilen dizin numarasına sahip öğeyi kaldırır.  
   
     ```vb  
     ' To remove item with index 0:  
@@ -122,7 +123,7 @@ ms.locfileid: "76746297"
   
 ### <a name="to-remove-all-items"></a>Tüm öğeleri kaldırmak için  
   
-1. Koleksiyondaki tüm öğeleri kaldırmak için `Clear` yöntemini çağırın:  
+1. `Clear`Koleksiyondan tüm öğeleri kaldırmak için yöntemini çağırın:  
   
     ```vb  
     ListBox1.Items.Clear()  

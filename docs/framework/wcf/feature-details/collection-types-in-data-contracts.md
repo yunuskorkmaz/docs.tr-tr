@@ -1,5 +1,6 @@
 ---
 title: Veri Sözleşmelerinde Koleksiyon Türleri
+description: Veri anlaşması modelinin .NET Framework koleksiyonları nasıl ele aldığını ve WCF 'nin koleksiyon türleri için veri Serileştirmeyi nasıl desteklediğini öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a10b7c5295407cfbb36446581a4b75670e37bc6a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 83acf1f74bf3cb117f3f94743eda32d3f2cc4b82
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579755"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245186"
 ---
 # <a name="collection-types-in-data-contracts"></a>Veri Sözleşmelerinde Koleksiyon Türleri
 
@@ -255,7 +256,7 @@ Oluşturulacak koleksiyon türlerini seçmek için <xref:System.Runtime.Serializ
 Genel türlere başvurulduklarında, bunların tamamen açık genel türler veya tam kapalı genel türler olması gerekir.
 
 > [!NOTE]
-> Svcutil. exe aracını kullanırken, bu başvuru **/CollectionType** komut satırı anahtarı kullanılarak gerçekleştirilebilir (kısa biçim: **/CT**). Ayrıca, **/Reference** anahtarını kullanarak başvurulan koleksiyon türleri için derlemeyi belirtmeniz gerektiğini unutmayın (kısa biçim: **/r**). Tür geneldir ise, arkasından bir geri tırnak işareti ve genel parametre sayısı gelmelidir. Arka tırnak ( \` ), tek tırnak (') karakteriyle karıştırılmamalıdır. **/CollectionType** anahtarını birden çok kez kullanarak, birden fazla başvurulan koleksiyon türünü belirtebilirsiniz.
+> Svcutil.exe Aracı kullanılırken, bu başvuru **/CollectionType** komut satırı anahtarı kullanılarak gerçekleştirilebilir (kısa biçim: **/CT**). Ayrıca, **/Reference** anahtarını kullanarak başvurulan koleksiyon türleri için derlemeyi belirtmeniz gerektiğini unutmayın (kısa biçim: **/r**). Tür geneldir ise, arkasından bir geri tırnak işareti ve genel parametre sayısı gelmelidir. Arka tırnak ( \` ), tek tırnak (') karakteriyle karıştırılmamalıdır. **/CollectionType** anahtarını birden çok kez kullanarak, birden fazla başvurulan koleksiyon türünü belirtebilirsiniz.
 
 Örneğin, tüm listelerin genel olarak içeri aktarılmasını sağlamak için <xref:System.Collections.Generic.List%601> .
 

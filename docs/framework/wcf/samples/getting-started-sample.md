@@ -1,5 +1,6 @@
 ---
 title: Başlarken Örneği
+description: WCF kullanarak tipik bir hizmetin ve tipik bir istemcinin nasıl uygulanacağını öğrenin. Bu örnek, diğer tüm temel teknoloji örnekleri için temeldir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: fc4a7e9acb15f77140732638b2982dd4a9dae9ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b23be1b33f227154b916429c063ec4106229bb3c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84575192"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246239"
 ---
 # <a name="getting-started-sample"></a>Başlarken Örneği
 
@@ -32,7 +33,7 @@ Başlarken örneği, Windows Communication Foundation (WCF) kullanılarak tipik 
 
 Hizmet, bir hizmet sözleşmesinde gerçekleştirdiği işlemleri, genel olarak meta veri olarak açığa çıkardığı şekilde açıklar. Hizmet ayrıca işlemleri uygulamak için kodu içerir.
 
-İstemci, hizmet sözleşmesinin bir tanımını ve hizmete erişmek için bir proxy sınıfı içerir. Proxy kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet meta verilerinden oluşturulur.
+İstemci, hizmet sözleşmesinin bir tanımını ve hizmete erişmek için bir proxy sınıfı içerir. Proxy kodu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak hizmet meta verilerinden oluşturulur.
 
 Windows Vista 'da, hizmet Windows etkinleştirme hizmeti 'nde (WAS) barındırılır. Windows XP ve Windows Server 2003 ' de, Internet Information Services (IIS) ve ASP.NET tarafından barındırılır. Bir hizmetin IIS 'de barındırılması, ilk kez erişildiğinde hizmetin otomatik olarak etkinleştirilmesini sağlar.
 
@@ -123,7 +124,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Hizmet, aşağıdaki örnek yapılandırmada gösterildiği gibi, bir yapılandırma dosyası (Web. config) kullanılarak tanımlanan hizmetle iletişim kurmak için bir uç nokta sunar.
+Hizmet, aşağıdaki örnek yapılandırmada gösterildiği gibi bir yapılandırma dosyası (Web.config) kullanılarak tanımlanan hizmetle iletişim kurmak için bir uç nokta sunar.
 
 ```xaml
 <services>
@@ -174,7 +175,7 @@ Yapılandırıldığı gibi, hizmete `http://localhost/servicemodelsamples/servi
 </system.serviceModel>
 ```
 
-İstemci, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan bir istemci sınıfını kullanarak belirli bir sözleşme türünü kullanarak iletişim kurar. Bu oluşturulan istemci, generatedClient.cs veya generatedClient. vb dosyasında bulunur. Bu yardımcı program belirli bir hizmet için meta verileri alır ve belirli bir sözleşme türünü kullanarak iletişim kurmak için istemci uygulaması tarafından kullanılmak üzere bir istemci oluşturur. Hizmet güncelleştirilmiş meta verileri almak için kullanıldığından, istemci kodunu oluşturmak için barındırılan hizmetin kullanılabilir olması gerekir.
+İstemci, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)tarafından oluşturulan bir istemci sınıfını kullanarak belirli bir sözleşme türünü kullanarak iletişim kurar. Bu oluşturulan istemci, generatedClient.cs veya generatedClient. vb dosyasında bulunur. Bu yardımcı program belirli bir hizmet için meta verileri alır ve belirli bir sözleşme türünü kullanarak iletişim kurmak için istemci uygulaması tarafından kullanılmak üzere bir istemci oluşturur. Hizmet güncelleştirilmiş meta verileri almak için kullanıldığından, istemci kodunu oluşturmak için barındırılan hizmetin kullanılabilir olması gerekir.
 
  Türü belirtilmiş proxy 'yi oluşturmak için istemci dizininde SDK komut isteminden aşağıdaki komutu çalıştırın:
 
@@ -186,7 +187,7 @@ Visual Basic ' de istemci oluşturmak için SDK komut isteminden aşağıdakini 
 
 `Svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /l:vb /out:generatedClient.vb`
 
-İstemci, oluşturulan istemciyi kullanarak, uygun adresi ve bağlamayı yapılandırarak belirli bir hizmet uç noktasına erişebilir. Hizmet gibi istemci, iletişim kurmak istediği uç noktayı belirtmek için bir yapılandırma dosyası (App. config) kullanır. İstemci uç noktası yapılandırması, aşağıdaki örnekte gösterildiği gibi hizmet uç noktası, bağlama ve sözleşme için mutlak bir adresten oluşur.
+İstemci, oluşturulan istemciyi kullanarak, uygun adresi ve bağlamayı yapılandırarak belirli bir hizmet uç noktasına erişebilir. Hizmet gibi istemci, iletişim kurmak istediği uç noktayı belirtmek için bir yapılandırma dosyası (App.config) kullanır. İstemci uç noktası yapılandırması, aşağıdaki örnekte gösterildiği gibi hizmet uç noktası, bağlama ve sözleşme için mutlak bir adresten oluşur.
 
 ```xaml
 <client>

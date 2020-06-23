@@ -1,5 +1,6 @@
 ---
 title: XmlSerializer Sınıfını Kullanma
+description: WCF 'nin uygulamanızdaki verileri, istemciler ve hizmetler arasında aktarılan XML olarak serileştirmek için kullandığı XmlSerializer 'ı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 2ef2d0eefb571f64040fabd16fd65fdfde7a626d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f7473de3f34ba543b4fabfe93167ea267f16dda5
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600211"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246394"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer Sınıfını Kullanma
 
@@ -40,7 +41,7 @@ Birçok .NET Framework türü, son iki kategoriye girer ve bu nedenle seri hale 
 
 WCF Ayrıca sınıfını da destekler <xref:System.Xml.Serialization.XmlSerializer> . <xref:System.Xml.Serialization.XmlSerializer>Sınıf WCF için benzersiz değil. Bu, ASP.NET Web hizmetlerinin kullandığı serileştirme altyapısının aynısıdır. <xref:System.Xml.Serialization.XmlSerializer>Sınıfı, sınıftan çok daha dar bir tür kümesini destekler <xref:System.Runtime.Serialization.DataContractSerializer> , ancak sonuçta elde edilen XML üzerinde çok daha fazla denetime izin verır ve XML şeması tanım DILI (xsd) standardının çok daha fazlasını destekler. Ayrıca, seri hale getirilebilir türlerde hiçbir bildirime dayalı öznitelik gerektirmez. Daha fazla bilgi için .NET Framework belgelerindeki XML serileştirme konusuna bakın. <xref:System.Xml.Serialization.XmlSerializer>Sınıf, veri anlaşması türlerini desteklemiyor.
 
-Visual Studio 'da bir üçüncü taraf hizmeti için istemci kodu oluşturmak üzere Svcutil. exe ' yi veya **hizmet başvurusu Ekle** özelliğini kullanırken veya bir üçüncü taraf şemasına erişmek için, uygun bir seri hale getirici sizin için otomatik olarak seçilir. Şema ile uyumlu değilse, <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Xml.Serialization.XmlSerializer> seçilidir.
+Visual Studio 'da Svcutil.exe veya üçüncü taraf bir hizmet için istemci kodu oluşturmak üzere **hizmet başvurusu Ekle** özelliğini kullanırken veya bir üçüncü taraf şemasına erişmek için, uygun bir seri hale getirici sizin için otomatik olarak seçilir. Şema ile uyumlu değilse, <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Xml.Serialization.XmlSerializer> seçilidir.
 
 ## <a name="manually-switching-to-the-xmlserializer"></a>XmlSerializer 'a el ile geçiş
 
@@ -73,7 +74,7 @@ Tür, sınıfın seçildiği bir hizmet sözleşmesinde yanlışlıkla kullanıl
 
 Hizmet için kullanılan serileştirici, sözleşmenin ayrılmaz bir parçasıdır ve farklı bir bağlama seçilerek veya diğer yapılandırma ayarları değiştirilerek değiştirilemez.
 
-Sınıfına yönelik diğer önemli güvenlik konuları geçerlidir <xref:System.Xml.Serialization.XmlSerializer> . İlk olarak, sınıfını kullanan tüm WCF uygulamalarının <xref:System.Xml.Serialization.XmlSerializer> , açıklanmasından korunmuş bir anahtarla imzalanmış olması önemle tavsiye edilir. Bu öneri her ikisi de için el ile yapılan bir geçiş gerçekleştirildiğinde <xref:System.Xml.Serialization.XmlSerializer> ve bir otomatik anahtar gerçekleştirildiğinde (Svcutil. exe, hizmet başvurusu Ekle veya benzer bir araçla) geçerlidir. Bunun nedeni, <xref:System.Xml.Serialization.XmlSerializer> serileştirme altyapısının uygulamayla aynı anahtarla İmzalandıkları sürece *önceden oluşturulmuş serileştirme derlemelerinin* yüklenmesini desteklemesinden kaynaklanır. İmzasız bir uygulama, uygulama klasörüne veya genel derleme önbelleğine yerleştirilmiş önceden oluşturulmuş serileştirme derlemesinin beklenen adıyla eşleşen kötü amaçlı bir derleme olasılığa karşı tamamen korumasız olur. Tabii ki, bu eylemi denemek için bir saldırganın öncelikle bu iki konumdan birine yazma erişimi edinilmesi gerekir.
+Sınıfına yönelik diğer önemli güvenlik konuları geçerlidir <xref:System.Xml.Serialization.XmlSerializer> . İlk olarak, sınıfını kullanan tüm WCF uygulamalarının <xref:System.Xml.Serialization.XmlSerializer> , açıklanmasından korunmuş bir anahtarla imzalanmış olması önemle tavsiye edilir. Bu öneri her ikisi de için el ile yapılan bir geçiş gerçekleştirildiğinde <xref:System.Xml.Serialization.XmlSerializer> ve bir otomatik anahtar gerçekleştirildiğinde (Svcutil.exe, hizmet başvurusu Ekle veya benzer bir araçla) geçerlidir. Bunun nedeni, <xref:System.Xml.Serialization.XmlSerializer> serileştirme altyapısının uygulamayla aynı anahtarla İmzalandıkları sürece *önceden oluşturulmuş serileştirme derlemelerinin* yüklenmesini desteklemesinden kaynaklanır. İmzasız bir uygulama, uygulama klasörüne veya genel derleme önbelleğine yerleştirilmiş önceden oluşturulmuş serileştirme derlemesinin beklenen adıyla eşleşen kötü amaçlı bir derleme olasılığa karşı tamamen korumasız olur. Tabii ki, bu eylemi denemek için bir saldırganın öncelikle bu iki konumdan birine yazma erişimi edinilmesi gerekir.
 
 Her kullanışınızda <xref:System.Xml.Serialization.XmlSerializer> , sistem geçici klasörüne yazma erişimiyle ilgili olan başka bir tehdit vardır. <xref:System.Xml.Serialization.XmlSerializer>Serileştirme altyapısı, bu klasörde geçici *serileştirme derlemeleri* oluşturur ve kullanır. Geçici klasöre yazma erişimi olan herhangi bir işlemin, bu serileştirme derlemelerinin kötü amaçlı kodla üzerine yazamayacağını bilmelisiniz.
 
@@ -173,9 +174,9 @@ Türlerden oluşturulan bir şemayı içeri aktarırken `IXmlSerializable` birka
 
 - Oluşturulan şema, [veri sözleşmesi şema başvurusunda](data-contract-schema-reference.md)açıklandığı gibi geçerli bir veri anlaşması şeması olabilir. Bu durumda, her zamanki gibi şema içeri aktarılabilir ve normal veri anlaşması türleri oluşturulur.
 
-- Oluşturulan şema geçerli bir veri anlaşması şeması olmayabilir. Örneğin, şema sağlayıcınız yönteminiz, veri anlaşması modelinde desteklenmeyen XML özniteliklerini içeren bir şema üretebilir. Bu durumda, şemayı türler olarak içeri aktarabilirsiniz `IXmlSerializable` . Bu içeri aktarma modu varsayılan olarak açık değildir, ancak örneğin, `/importXmlTypes` [ServiceModel meta veri yardımcı programı aracına (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)komut satırı anahtarı ile birlikte kolayca etkinleştirilebilir. Bu, [sınıfları oluşturmak Için Içeri aktarma şemasında](importing-schema-to-generate-classes.md)ayrıntılı olarak açıklanmıştır. Doğrudan tür örneklerinizin XML ile birlikte çalışmanız gerektiğini unutmayın. Ayrıca, daha geniş bir şema aralığını destekleyen farklı bir serileştirme teknolojisi kullanmayı da düşünebilirsiniz; bkz. kullanma konusu `XmlSerializer` .
+- Oluşturulan şema geçerli bir veri anlaşması şeması olmayabilir. Örneğin, şema sağlayıcınız yönteminiz, veri anlaşması modelinde desteklenmeyen XML özniteliklerini içeren bir şema üretebilir. Bu durumda, şemayı türler olarak içeri aktarabilirsiniz `IXmlSerializable` . Bu içeri aktarma modu varsayılan olarak açık değildir ancak örneğin, `/importXmlTypes` [ServiceModel meta veri yardımcı programı aracına (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)komut satırı anahtarı ile birlikte kolayca etkinleştirilebilir. Bu, [sınıfları oluşturmak Için Içeri aktarma şemasında](importing-schema-to-generate-classes.md)ayrıntılı olarak açıklanmıştır. Doğrudan tür örneklerinizin XML ile birlikte çalışmanız gerektiğini unutmayın. Ayrıca, daha geniş bir şema aralığını destekleyen farklı bir serileştirme teknolojisi kullanmayı da düşünebilirsiniz; bkz. kullanma konusu `XmlSerializer` .
 
-- Mevcut `IXmlSerializable` türlerinizi yeni bir oluşturma yerine proxy 'de yeniden kullanmak isteyebilirsiniz. Bu durumda, tür oluşturmak için şemayı Içeri aktarma konu başlığı altında açıklanan Başvurulmuş türler özelliği, yeniden kullanılacak türü belirtmek için kullanılabilir. Bu `/reference` , yeniden kullanılacak türleri içeren derlemeyi belirten Svcutil. exe ' de anahtarı kullanmaya karşılık gelir.
+- Mevcut `IXmlSerializable` türlerinizi yeni bir oluşturma yerine proxy 'de yeniden kullanmak isteyebilirsiniz. Bu durumda, tür oluşturmak için şemayı Içeri aktarma konu başlığı altında açıklanan Başvurulmuş türler özelliği, yeniden kullanılacak türü belirtmek için kullanılabilir. Bu, `/reference` yeniden kullanılacak türleri içeren derlemeyi belirten svcutil.exe üzerinde anahtarı kullanmaya karşılık gelir.
 
 ### <a name="xmlserializer-legacy-behavior"></a>XmlSerializer eski davranışı
 

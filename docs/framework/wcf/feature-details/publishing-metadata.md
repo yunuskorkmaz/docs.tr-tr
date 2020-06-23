@@ -1,15 +1,16 @@
 ---
 title: Meta Verileri Yayımlama
+description: WCF hizmetlerinin bir veya daha fazla meta veri uç noktası yayımlayarak meta verileri nasıl yayımlacağınızı öğrenin ve meta verileri standart protokoller kullanılarak kullanılabilir hale getirir
 ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 456eecde88fec182d3234c20a4f01971fd045bb8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2aa6d877db4e5b09b4c594e6e87b63fb6c04703b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596766"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244965"
 ---
 # <a name="publishing-metadata"></a>Meta Verileri Yayımlama
 Windows Communication Foundation (WCF) Hizmetleri bir veya daha fazla meta veri uç noktası yayımlayarak meta verileri yayımlar. Yayımlama hizmeti meta verileri, WS-MetadataExchange (MEX) ve HTTP/GET istekleri gibi standartlaştırılmış protokoller kullanılarak meta verilerin kullanılabilmesini sağlar. Meta veri uç noktaları, bir adrese, bağlamaya ve sözleşmeye sahip oldukları diğer hizmet uç noktalarına benzer ve yapılandırma veya kesinlik temelli kod aracılığıyla bir hizmet ana bilgisayarına eklenebilirler.  
@@ -22,7 +23,7 @@ Windows Communication Foundation (WCF) Hizmetleri bir veya daha fazla meta veri 
  , <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> <xref:System.ServiceModel.Description.ServiceMetadataExtension> Hizmet ana bilgisayarınıza uzantı olarak bir örnek ekler. , <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> Meta veri yayımlama protokolleri için uygulama sağlar. Ayrıca, <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> özelliğine erişerek hizmetin meta verilerini çalışma zamanında almak için öğesini de kullanabilirsiniz <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A?displayProperty=nameWithType> .  
   
 ### <a name="mex-metadata-endpoints"></a>MEX meta veri uç noktaları  
- MEX protokolünü kullanan meta veri uç noktaları eklemek için hizmet sözleşmesini kullanan hizmet ana bilgisayarınıza hizmet uç noktaları ekleyin `IMetadataExchange` . WCF <xref:System.ServiceModel.Description.IMetadataExchange> , WCF programlama modelinin bir parçası olarak kullanabileceğiniz bu hizmet sözleşmesi adına sahip bir arabirim içerir. WS-MetadataExchange uç noktaları veya MEX uç noktaları, statik fabrika yöntemlerinin, <xref:System.ServiceModel.Description.MetadataExchangeBindings> Svcutil. exe gıbı WCF araçları tarafından kullanılan varsayılan bağlamaları eşleştirmek için sınıfında kullanıma sunabileceğiniz dört varsayılan bağlamalardan birini kullanabilir. Ayrıca, kendi özel bağlamalarınızı kullanarak MEX meta veri uç noktalarını yapılandırabilirsiniz.  
+ MEX protokolünü kullanan meta veri uç noktaları eklemek için hizmet sözleşmesini kullanan hizmet ana bilgisayarınıza hizmet uç noktaları ekleyin `IMetadataExchange` . WCF <xref:System.ServiceModel.Description.IMetadataExchange> , WCF programlama modelinin bir parçası olarak kullanabileceğiniz bu hizmet sözleşmesi adına sahip bir arabirim içerir. WS-MetadataExchange uç noktaları veya MEX uç noktaları, statik fabrika yöntemlerinin, <xref:System.ServiceModel.Description.MetadataExchangeBindings> Svcutil.exe gıbı WCF araçları tarafından kullanılan varsayılan bağlamaları eşleştirmek için sınıfında kullanıma sunabileceğiniz dört varsayılan bağlamalardan birini kullanabilir. Ayrıca, kendi özel bağlamalarınızı kullanarak MEX meta veri uç noktalarını yapılandırabilirsiniz.  
   
 ### <a name="http-get-metadata-endpoints"></a>HTTP GET meta veri uç noktaları  
  HTTP/GET isteklerine yanıt veren hizmetinize bir meta veri uç noktası eklemek için, <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> özelliğini <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> olarak ayarlayın `true` . Ayrıca <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> , üzerinde özelliğini olarak AYARLAYARAK https kullanan bir meta veri uç noktası da yapılandırabilirsiniz <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> `true` .  

@@ -1,20 +1,21 @@
 ---
 title: 'Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma'
+description: IIS ile barındırılan bir WCF hizmetini, IIS 'ye kayıtlı bir sertifika gerektiren HTTP aktarım güvenliği 'ni kullanmak üzere ayarlamayı öğrenin.
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: fb3e87021c3dce1172250f33fd302916920af74d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8dc4692863d93e407a122c0ba93ae38323b8b213
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597234"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245264"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Nasıl yapılır: IIS Tarafından Barındırılan Bir WCF Hizmetini SSL ile Yapılandırma
 Bu konuda, IIS tarafından barındırılan bir WCF hizmetinin HTTP aktarım güvenliği kullanmak üzere nasıl ayarlanacağı açıklanır. HTTP aktarım güvenliği, IIS 'ye bir SSL sertifikası kaydedilmesini gerektirir. Bir SSL sertifikanız yoksa, bir test sertifikası oluşturmak için IIS kullanabilirsiniz. Daha sonra Web sitesine bir SSL bağlaması eklemeniz ve Web sitesinin kimlik doğrulama özelliklerini yapılandırmanız gerekir. Son olarak, WCF hizmetini HTTPS kullanacak şekilde yapılandırmanız gerekir.  
   
 ### <a name="creating-a-self-signed-certificate"></a>Otomatik olarak Imzalanan sertifika oluşturma  
   
-1. Internet Information Services Yöneticisi 'Ni (inetmgr. exe) açın ve sol ağaç görünümünde bilgisayarınızın adını seçin. Ekranın sağ tarafında sunucu sertifikaları ' nı seçin.  
+1. Internet Information Services Yöneticisi 'Ni açın (inetmgr.exe) ve sol taraftaki ağaç görünümünde bilgisayarınızın adını seçin. Ekranın sağ tarafında sunucu sertifikaları ' nı seçin.  
   
      ![IIS Yöneticisi giriş ekranı](media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
@@ -62,7 +63,7 @@ Bu konuda, IIS tarafından barındırılan bir WCF hizmetinin HTTP aktarım güv
   
 ### <a name="configure-wcf-service-for-http-transport-security"></a>HTTP taşıma güvenliği için WCF hizmetini yapılandırma  
   
-1. WCF hizmetinin Web. config dosyasında, HTTP bağlamasını aşağıdaki XML 'de gösterildiği gibi aktarım güvenliği kullanacak şekilde yapılandırın.  
+1. WCF hizmetinin web.config, HTTP bağlamasını aşağıdaki XML 'de gösterildiği gibi aktarım güvenliği kullanacak şekilde yapılandırın.  
   
     ```xml  
     <bindings>  
@@ -94,7 +95,7 @@ Bu konuda, IIS tarafından barındırılan bir WCF hizmetinin HTTP aktarım güv
     ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıda, HTTP aktarım güvenliği kullanan bir WCF hizmeti için Web. config dosyasının tamamı bir örneği verilmiştir  
+ Aşağıda, HTTP aktarım güvenliği kullanan bir WCF hizmeti için web.config dosyasına ait bir örnek verilmiştir  
   
 ```xml  
 <?xml version="1.0"?>  

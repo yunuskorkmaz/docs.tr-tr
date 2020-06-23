@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 20fc1b9d-e228-4107-bd76-53934c1724b9
 topic_type:
 - apiref
-ms.openlocfilehash: 0a5a87c71bea603073c35dd851e443ca8c497523
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: acf490895db35af1c5d0d1e7fe7e3de5ae2a16b6
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904292"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>ICorDebugHeapSegmentEnum Arabirimi
 Yönetilen yığının bellek bölgeleri için bir numaralandırıcı sağlar. Bu arabirim, ıcordebuggenum arabiriminin bir alt sınıfıdır.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Açıklama|  
+|Yöntem|Description|  
 |------------|-----------------|  
-|[Next Yöntemi](icordebugheapsegmentenum-next-method.md)|Yönetilen yığının bölgeleri hakkında bilgi içeren [cor_heapobject](cor-heapobject-structure.md) örneklerinin belirtilen sayısını alır.|  
+|[Next Yöntemi](icordebugheapsegmentenum-next-method.md)|Yönetilen yığının bölgeleri hakkında bilgi içeren [cor_segment](cor-segment-structure.md) örneklerinin belirtilen sayısını alır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  `ICorDebugHeapSegmentEnum`Arabirim ıcorı, Genum arabirimini uygular.  
   
- `ICorDebugHeapSegmentEnum` [ICorDebugProcess5:: Enumerateheapregion](icordebugprocess5-enumerateheapregions-method.md) yöntemi çağırarak bir örnek [cor_heapobject](cor-heapobject-structure.md) örneklerle doldurulur. Koleksiyondaki [cor_heapobject](cor-heapobject-structure.md) nesneleri [ICorDebugHeapSegmentEnum:: Next](icordebugheapsegmentenum-next-method.md) yöntemi çağırarak Numaralandırılabilir.  
+ `ICorDebugHeapSegmentEnum` [ICorDebugProcess5:: Enumerateheapregion](icordebugprocess5-enumerateheapregions-method.md) yöntemi çağırarak bir örnek [cor_segment](cor-segment-structure.md) örneklerle doldurulur. Koleksiyondaki [cor_segment](cor-segment-structure.md) nesneleri [ICorDebugHeapSegmentEnum:: Next](icordebugheapsegmentenum-next-method.md) yöntemi çağırarak Numaralandırılabilir.  
   
  Bir `ICorDebugHeapSegmentEnum` koleksiyon nesnesi, yönetilen nesneler içerebilen tüm bellek bölgelerini numaralandırır, ancak yönetilen nesnelerin gerçekten bu bölgelerde yer aldığı garanti etmez. Boş veya ayrılmış bellek bölgeleri hakkında bilgi içerebilir.  
   

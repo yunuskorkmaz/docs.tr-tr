@@ -1,17 +1,18 @@
 ---
 title: Windows Communication Foundation Mimarisi
+description: Sözleşmeler, hizmet çalışma zamanı, mesajlaşma ve etkinleştirme & barındırma dahil Windows Communication Foundation mimarisinin ana katmanları hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a07d5c4be2e36b8123e39a0a04d841797e34212b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320832"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245576"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation Mimarisi
 Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisinin ana katmanları gösterilmektedir.  
@@ -20,7 +21,7 @@ Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisinin ana kat
  ![WCF mimarisi](./media/wcf-architecture.gif "WCF_Architecture")  
   
 ### <a name="contracts-and-descriptions"></a>Sözleşmeler ve açıklamalar  
- Sözleşmeler, ileti sisteminin çeşitli yönlerini tanımlar. Veri sözleşmesi, bir hizmetin oluşturabileceğiniz veya tüketebileceği her iletiyi oluşturan her parametreyi açıklar. İleti parametreleri, XML şeması tanım dili (XSD) belgeleri tarafından tanımlanır ve belgeyi işlemek için XML 'yi anlayan tüm sistemleri etkinleştirir. İleti anlaşması, SOAP protokollerini kullanarak belirli ileti parçalarını tanımlar ve birlikte çalışabilirlik bu tür duyarlık taleplerini daha ayrıntılı olarak kontrol etmenizi sağlar. Hizmet sözleşmesi, hizmetin gerçek Yöntem imzalarını belirtir ve Visual Basic veya görsel C#gibi desteklenen programlama dillerinden birinde bir arabirim olarak dağıtılır.  
+ Sözleşmeler, ileti sisteminin çeşitli yönlerini tanımlar. Veri sözleşmesi, bir hizmetin oluşturabileceğiniz veya tüketebileceği her iletiyi oluşturan her parametreyi açıklar. İleti parametreleri, XML şeması tanım dili (XSD) belgeleri tarafından tanımlanır ve belgeyi işlemek için XML 'yi anlayan tüm sistemleri etkinleştirir. İleti anlaşması, SOAP protokollerini kullanarak belirli ileti parçalarını tanımlar ve birlikte çalışabilirlik bu tür duyarlık taleplerini daha ayrıntılı olarak kontrol etmenizi sağlar. Hizmet sözleşmesi, hizmetin gerçek Yöntem imzalarını belirtir ve Visual Basic veya Visual C# gibi desteklenen programlama dillerinden birinde bir arabirim olarak dağıtılır.  
   
  İlkeler ve bağlamalar, bir hizmetle iletişim kurmak için gereken koşulları ifade edin.  Örneğin, bağlama (en azından), kullanılan taşıma (örneğin, HTTP veya TCP) ve bir kodlama belirtir. İlkeler, güvenlik gereksinimlerini ve hizmet ile iletişim kurmak için karşılanması gereken diğer koşulları içerir.  
   
@@ -29,7 +30,7 @@ Aşağıdaki grafikte Windows Communication Foundation (WCF) mimarisinin ana kat
   
  Genişletilebilirlik, çalışma zamanı işlemlerinin özelleştirilmesine izin vermez. Örneğin, ileti incelemesi bir iletinin parçalarını inceleme özelliğindedir ve parametre filtrelemesi, ileti üstbilgilerinde çalışan filtrelere göre önceden ayarlanmış eylemlerin oluşmasına olanak sağlar.  
   
-### <a name="messaging"></a>İleti  
+### <a name="messaging"></a>Mesajlaşma  
  Mesajlaşma katmanı, *kanallardan*oluşur. Kanal, bir iletiyi bir ileti kimlik doğrulaması ile, örneğin, bir şekilde işleyen bir bileşendir. Kanal kümesi, *kanal yığını*olarak da bilinir. Kanallar iletiler ve ileti üstbilgilerinde çalışır. Bu, özellikle ileti gövdelerinin içeriklerinin işlenmesiyle ilgili olan hizmet çalışma zamanı katmanından farklıdır.  
   
  İki tür kanal vardır: taşıma kanalları ve protokol kanalları.  

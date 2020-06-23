@@ -1,13 +1,14 @@
 ---
 title: 'Özel İleti Kodlayıcısı: Özel Metin Kodlayıcısı'
+description: WCF kullanarak özel bir metin ileti Kodlayıcısı uygulamak için bu örneği kullanın. Bu kodlayıcı, birlikte çalışabilirlik için platformun desteklediği tüm karakter kodlamalarını destekler.
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: b60fa2a84520ad208d435a0c9284c19b5de8e989
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 88ddc79e6cc1df654aea851cedb0e60c6fbcd017
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600613"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246278"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Özel İleti Kodlayıcısı: Özel Metin Kodlayıcısı
 
@@ -214,14 +215,14 @@ CustomBinding binding = new CustomBinding(bindingElements);
 
 Öğesinden türetilen herhangi bir tür, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> hizmet için oluşturulan wsdl BELGESINDE SOAP bağlamanın sürümünü güncelleştirmekten sorumludur. Bu, `ExportEndpoint` yöntemi arabirim üzerinde uygulayarak <xref:System.ServiceModel.Description.IWsdlExportExtension> ve sonra oluşturulan wsdl 'nin değiştirilerek yapılır. Bu örnekte, ' `CustomTextMessageBindingElement` den WSDL dışarı aktarma mantığını kullanır `TextMessageEncodingBindingElement` .
 
-Bu örnek için, istemci yapılandırması el ile yapılandırılmıştır. `CustomTextMessageBindingElement`Davranışını tanımlayacak bir ilke onayını dışarı aktarmadığından, istemci yapılandırmasını oluşturmak Için Svcutil. exe ' yi kullanamazsınız. <xref:System.ServiceModel.Description.IPolicyExportExtension>Bağlama öğesi tarafından uygulanan davranışı veya özelliği açıklayan özel bir ilke onayını dışarı aktarmak için genellikle bir özel bağlama öğesi üzerinde arabirimini uygulamalısınız. Özel bağlama öğesi için bir ilke onayını dışarı aktarmanın bir örneği için bkz. [Transport: UDP](transport-udp.md) Sample.
+Bu örnek için, istemci yapılandırması el ile yapılandırılmıştır. `CustomTextMessageBindingElement`Davranışını tanımlayacak bir ilke onayını dışarı aktarmadığından, istemci yapılandırmasını oluşturmak için Svcutil.exe kullanamazsınız. <xref:System.ServiceModel.Description.IPolicyExportExtension>Bağlama öğesi tarafından uygulanan davranışı veya özelliği açıklayan özel bir ilke onayını dışarı aktarmak için genellikle bir özel bağlama öğesi üzerinde arabirimini uygulamalısınız. Özel bağlama öğesi için bir ilke onayını dışarı aktarmanın bir örneği için bkz. [Transport: UDP](transport-udp.md) Sample.
 
 ## <a name="message-encoding-binding-configuration-handler"></a>İleti kodlama bağlama yapılandırma Işleyicisi
 Önceki bölümde özel metin iletisi kodlayıcının programlı olarak nasıl kullanılacağı gösterilmektedir. , `CustomTextMessageEncodingBindingSection` Bir yapılandırma dosyası içinde özel bir metin iletisi Kodlayıcısı kullanımını belirtmenize olanak tanıyan bir yapılandırma işleyicisi uygular. `CustomTextMessageEncodingBindingSection`Sınıf sınıfından türetilir <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> . `BindingElementType`Özelliği, bu bölüm için oluşturulacak bağlama öğesi türünün yapılandırma sistemine bildirir.
 
 Tarafından tanımlanan tüm ayarlar `CustomTextMessageBindingElement` , içindeki özellikler olarak gösterilir `CustomTextMessageEncodingBindingSection` . <xref:System.Configuration.ConfigurationPropertyAttribute>Yapılandırma öğesi özniteliklerini özelliklerine eşleme ve özniteliği ayarlanmamışsa varsayılan değerleri ayarlama konusunda yardımcı olur. Yapılandırma değerleri yüklenip, türün özelliklerine uygulandıktan sonra, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> özelliği bir bağlama öğesinin somut örneğine dönüştüren yöntemi çağırılır.
 
-Bu yapılandırma işleyicisi, hizmet veya istemcinin App. config veya Web. config dosyasında aşağıdaki gösterimiyle eşleşir.
+Bu yapılandırma işleyicisi, hizmet veya istemci için App.config ya da Web.config aşağıdaki gösterimiyle eşlenir.
 
 ```xml
 <customTextMessageEncoding encoding="utf-8" contentType="text/xml" messageVersion="Soap11Addressing1" />

@@ -1,18 +1,19 @@
 ---
 title: WCF Test İstemcisi (WcfTestClient.exe)
+description: WCF hizmeti ana bilgisayarı ile birleştirildiğinde sorunsuz hizmet testi sağlayan WCF test Istemcisi hakkında bilgi edinin. İstemci sınama değerlerini gönderme ve hizmet yanıtlarını görüntüleme.
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: ac89b234dfafe3f87f1423a04ce8e4dd6b44b991
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 4f636698c538809f89ee356159839a37b73adb57
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321183"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245667"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF Test İstemcisi (WcfTestClient.exe)
-Windows Communication Foundation (WCF) test Istemcisi (WcfTestClient. exe), kullanıcıların test parametreleri girmesini, bu girişi hizmete göndermesini ve hizmetin geri gönderdiği yanıtı görüntülemesini sağlayan bir GUI aracıdır. WCF hizmet ana bilgisayarı ile birleştirildiğinde sorunsuz bir hizmet testi deneyimi sağlar.
+Windows Communication Foundation (WCF) test Istemcisi (WcfTestClient.exe), kullanıcıların test parametreleri girmesini, bu girişi hizmete göndermesini ve hizmetin geri gönderdiği yanıtı görüntülemesini sağlayan bir GUI aracıdır. WCF hizmet ana bilgisayarı ile birleştirildiğinde sorunsuz bir hizmet testi deneyimi sağlar.
 
-Genellikle WCF test Istemcisini (WcfTestClient. exe) şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` topluluk, hangi Visual Studio düzeyine bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir.
+Genellikle WCF test Istemcisini (WcfTestClient.exe) şu konumda bulabilirsiniz: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` -topluluk, hangi Visual Studio düzeyine bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir.
 
 ## <a name="scenarios-for-using-test-client"></a>Test Istemcisi kullanma senaryoları
 
@@ -30,9 +31,9 @@ Ayrıca, birden çok hizmet içeren bir hizmet projesinde hata ayıklamanıza ya
 
 ### <a name="outside-visual-studio"></a>Visual Studio 'Nun dışında
 
-Ayrıca, Internet 'te rastgele bir hizmeti test etmek için Visual Studio dışında WCF test Istemcisini (WcfTestClient. exe) çağırabilirsiniz. Aracı bulmak için şu konuma gidin:
+Ayrıca, Internet 'te rastgele bir hizmeti test etmek için Visual Studio dışında WCF test Istemcisini (WcfTestClient.exe) çağırabilirsiniz. Aracı bulmak için şu konuma gidin:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (topluluk, makinede hangi Visual Studio düzeyine yüklü olduğuna bağlı olarak "Kurumsal", "profesyonel" veya "topluluk" olabilir)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`(Bu, topluluk "Kurumsal", "profesyonel" veya "topluluk" olabilir ve makinede hangi Visual Studio düzeyinin yüklü olduğuna bağlı olarak)
 
 Aracı kullanmak için dosya adına çift tıklayarak bu konumdan açın veya bir komut satırından başlatın.
 
@@ -40,7 +41,7 @@ WCF test Istemcisi, komut satırı bağımsız değişkenleri olarak rastgele sa
 
 `wcfTestClient.exe URI1 URI2 …`
 
-WCF test Istemcisi penceresi açıldıktan sonra **dosya**->**Hizmet Ekle**' ye tıklayın ve açmak istediğiniz hizmetin uç nokta adresini girin.
+WCF Test istemcisi penceresi açıldıktan sonra **Dosya** -> **Ekle hizmeti**' ne tıklayın ve açmak istediğiniz hizmetin uç nokta adresini girin.
 
 ## <a name="wcf-test-client-user-interface"></a>WCF test Istemcisi Kullanıcı arabirimi
 
@@ -60,7 +61,7 @@ Test parametrelerini görüntülemek için, sağ bölmede açmak üzere bir işl
 
 İletinin XML 'sini görüntülemek için **XML**' ye tıklayın. Onları hizmete göndermek için **çağır**' a tıklayın.
 
-Bir veri kümesi parametresi için **.** . düğme, Düzenle ' nin yanında **...** DataGrid ' i gösteren yeni bir pencerede düzenlemek için. **Veri kümesini Kopyala** ve **veri kümesini Yapıştır** düğmelerinin görünümüne dikkat edin. DataSet nesnesinin şeması ilk düzenleme sonrasında bilinmiyorsa, DataGrid boştur. DataGrid içindeki geçerli nesneye aynı şemaya sahip bir veri kümesi nesnesi yapıştırmanız gerekir. (Yapıştırma işleminden önce şemayı başka bir yerde kopyalamanız gerektiğini unutmayın.) Ayrıca, **veri kümesini Kopyala** düğmesine tıklayarak gelecekteki kullanımlar Için bir veri kümesi nesnesi kopyalayabilirsiniz.
+Bir veri kümesi parametresi için **.** .. düğme, Düzenle ' nin yanında **...** DataGrid ' i gösteren yeni bir pencerede düzenlemek için. **Veri kümesini Kopyala** ve **veri kümesini Yapıştır** düğmelerinin görünümüne dikkat edin. DataSet nesnesinin şeması ilk düzenleme sonrasında bilinmiyorsa, DataGrid boştur. DataGrid içindeki geçerli nesneye aynı şemaya sahip bir veri kümesi nesnesi yapıştırmanız gerekir. (Yapıştırma işleminden önce şemayı başka bir yerde kopyalamanız gerektiğini unutmayın.) Ayrıca, **veri kümesini Kopyala** düğmesine tıklayarak gelecekteki kullanımlar Için bir veri kümesi nesnesi kopyalayabilirsiniz.
 
 Hizmetin yanıtı test parametrelerinin altında görünür.
 
@@ -87,13 +88,13 @@ Sol bölmedeki **yapılandırma dosyası** ' na sağ tıklayın ve **SvcConfigEd
 
 Dosyayı hizmet yapılandırma düzenleyicisine kaydettikten sonra, WCF test Istemcisi, dosyanın dışında değiştirildiğini bildiren bir uyarı iletisi görüntüler ve yeniden yüklemek isteyip istemediğinizi sorar.
 
-**Evet**' i seçerseniz, "Client. dll. config" sekmesindeki yapılandırma içeriği düzenleyicide yaptığınız değişiklikleri yansıtır.
+**Evet**' i seçerseniz, "Client.dll.config" sekmesindeki yapılandırma içeriği düzenleyicide yaptığınız değişiklikleri yansıtır.
 
-**Hayır**' ı seçerseniz, "Client. dll. config" sekmesindeki yapılandırma içeriği değişmeden kalır ve değiştirilen içerik otomatik olarak kaynak dosyasına kaydedilir.
+**Hayır**' ı seçerseniz, "Client.dll.config" sekmesindeki yapılandırma içeriği değişmeden kalır ve değiştirilen içerik otomatik olarak kaynak dosyasına kaydedilir.
 
 #### <a name="restore-to-default-configuration"></a>Varsayılan yapılandırmaya geri yükle
 
-Tüm değişiklikleri iptal etmek ve varsayılan istemci yapılandırmasına geri yüklemek istiyorsanız sol bölmedeki **yapılandırma dosyası** ' na sağ tıklayın ve bağlam menüsünü **varsayılan yapılandırmaya geri yükle**' yi seçin. Varsayılan yapılandırma değeri yüklendi ve "Client. dll. config" sekmesindeki İçerik geri yüklendi.
+Tüm değişiklikleri iptal etmek ve varsayılan istemci yapılandırmasına geri yüklemek istiyorsanız sol bölmedeki **yapılandırma dosyası** ' na sağ tıklayın ve bağlam menüsünü **varsayılan yapılandırmaya geri yükle**' yi seçin. Varsayılan yapılandırma değeri yüklendi ve "Client.dll.config" sekmesindeki İçerik geri yüklendi.
 
 #### <a name="validate-changes"></a>Değişiklikleri doğrula
 
@@ -103,16 +104,16 @@ Ara sunucu oluşturma, ikili derleme veya hizmet çağırma sırasında, düzenl
 
 #### <a name="persist-client-configuration"></a>Istemci yapılandırmasını kalıcı yap
 
-**Araçlar**->**Seçenekler**->**istemci yapılandırması** sekmesi, varsayılan olarak etkinleştirilen hizmetler seçeneği **başlatılırken her zaman yeniden oluştur yapılandırmasını** içerir. Bu seçenek, WCF test Istemcisi 'nin bir hizmeti yükleyeceği her seferinde, en son hizmet sözleşmesi ve Service App. config dosyalarına göre bir yapılandırma dosyasını yeniden oluşturur.
+**Araçlar** -> **Seçenekler** -> **istemci yapılandırması** sekmesi, varsayılan olarak etkinleştirilen **Hizmetler seçeneği başlatılırken her zaman yeniden oluştur yapılandırmasını** içerir. Bu seçenek, WCF test Istemcisinin bir hizmeti yükleyeceği her seferinde, en son hizmet sözleşmesi ve hizmet App.config dosyalarına göre bir yapılandırma dosyasını yeniden oluşturur.
 
-WCF hizmetiniz için istemci yapılandırmasını düzenlediyseniz ve hizmetinize hata ayıklamak için her zaman bu güncelleştirilmiş dosyayı kullanmak istiyorsanız, yeniden **Oluştur** seçeneğinin işaretini kaldırabilirsiniz. Bunu yaparak, hizmeti güncelleştirdiğinizde ve WCF test Istemcisini yeniden açtığınızda bile, güncelleştirilmiş hizmete bağlı olarak bir yeniden üretilme yerine, Client. dll. config dosyası önceden güncelleştirmiş olursunuz.
+WCF hizmetiniz için istemci yapılandırmasını düzenlediyseniz ve hizmetinize hata ayıklamak için her zaman bu güncelleştirilmiş dosyayı kullanmak istiyorsanız, yeniden **Oluştur** seçeneğinin işaretini kaldırabilirsiniz. Bunu yaparak, hizmeti güncelleştirdiğinizde ve WCF test Istemcisini yeniden açtığınızda bile, Client.dll.config dosyası, güncelleştirilmiş hizmete bağlı olarak bir yeniden üretilerek, daha önce güncelleştirmiş olduğunuz bir dosyadır.
 
 Ancak, yeniden üretilen ara sunucu ile tutarlı olması için yapılandırma dosyasını düzenlemeniz gerekebilir. Güncelleştirilmiş bir hizmet nedeniyle yeniden üretilen proxy ve yapılandırma dosyası uyuşiyorsa, hizmet çağrıldığında hatalar oluşur.
 
 > [!CAUTION]
 > İstemci yapılandırma dosyasını değiştirdiyseniz ve gelecekte yeniden kullanmayı seçerseniz, dosyayı aşağıdaki konumda bulabilirsiniz:
 >
-> \Documents and Settings\\[Kullanıcı hesabı] \Belgelerim\test Istemci projeleri.
+> \Documents and Settings \\ [Kullanıcı hesabı] \Belgelerim\test Istemci projeleri.
 >
 > İstemci yapılandırma dosyasına depolanan güncelleştirilmiş kimlik bilgileri, bu klasörün Access Control listesi (ACL) tarafından korunur.
 
@@ -120,7 +121,7 @@ Ancak, yeniden üretilen ara sunucu ile tutarlı olması için yapılandırma do
 
 #### <a name="add-service"></a>Hizmet Ekle
 
-WCF test Istemcisine bir hizmet eklemek için **dosya**->**Hizmet Ekle** ' ye tıklayın. Daha sonra eklenecek hizmetin URI 'sini (uç nokta adresi) yazmanız gerekir. Hizmetin adresi bir MEX adresi veya WSDL adresi olabilir.
+**File** -> WCF test istemcisine bir hizmet eklemek için dosya**ekleme hizmeti** ' ne tıklayın. Daha sonra eklenecek hizmetin URI 'sini (uç nokta adresi) yazmanız gerekir. Hizmetin adresi bir MEX adresi veya WSDL adresi olabilir.
 
 **Son hizmetler** alt menüsünde son eklenen 10 hizmet uç noktalarının listesini de bulabilirsiniz. Bunlardan birini seçerseniz, belirtilen hizmet WCF test Istemcisine eklenir.
 
@@ -144,11 +145,11 @@ Ara sunucu oluşturma, ikili derleme veya hizmet çağırma sırasında, bir hiz
 
 Varsayılan olarak, WCF test Istemcisi oluşturulan istemci kodunu ve yapılandırma dosyalarını "%appdata%\Local\temp\Test Istemci projeleri" klasöründe depolar. Bu klasör, WCF test Istemcisi çıktıktan sonra silinir. Bir yapılandırma dosyası WCF test Istemcisinde değiştirilirse ve **Hizmetler başlatılırken her zaman** yapılandırmayı yeniden oluştur seçeneği devre dışı bırakılmışsa, değiştirilen dosya, dizin olarak eşleme (meta veri-adres-dosya adı) XML dosyası olan "gizli dizi testi istemci Projelerim" altındaki "CachedConfig" klasörüne kopyalanır.
 
-Ayrıca, WCF test Istemcisini bir komut satırında başlatabilir, oluşturulan dosyaları depolamak için yeni bir yol belirtmek üzere `/ProjectPath` anahtarını kullanabilir veya varsayılan konumu geri yüklemek için `/RestoreProjectPath` anahtarını kullanabilirsiniz. Sözdizimi aşağıdaki gibidir:
+Ayrıca, WCF test Istemcisini bir komut satırında başlatabilir, `/ProjectPath` oluşturulan dosyaları depolamak için istenen yeni bir yol belirtmek için anahtarını kullanabilir veya `/RestoreProjectPath` varsayılan konumu geri yüklemek için anahtarını kullanabilirsiniz. Söz dizimi aşağıdaki gibidir:
 
 `wcfTestClient.exe /ProjectPath [desired location]`
 
-Bu komutun çalıştırılması WCF test Istemcisi 'ni açmaz. Yalnızca klasör konumu değişir. Bu komutu, WCF test Istemcisinin çalışıp çalışmadığını, çalıştırabilirsiniz. WCF test Istemcisi yeniden başlatıldığında yeni konum uygulanır. Konum bilgileri kayıt defterine veya "%appdata%\Local\temp\Test Istemci projeleri" klasöründeki WcfTestClient. exe. Option dosyasına kaydedilebilir.
+Bu komutun çalıştırılması WCF test Istemcisi 'ni açmaz. Yalnızca klasör konumu değişir. Bu komutu, WCF test Istemcisinin çalışıp çalışmadığını, çalıştırabilirsiniz. WCF test Istemcisi yeniden başlatıldığında yeni konum uygulanır. Konum bilgileri kayıt defterine veya "%appdata%\Local\temp\Test Istemci projeleri" klasöründeki WcfTestClient.exe. seçenek dosyasına kaydedilebilir.
 
 ## <a name="features-supported-by-wcf-test-client"></a>WCF test Istemcisi tarafından desteklenen özellikler
 
@@ -156,7 +157,7 @@ WCF test Istemcisi tarafından desteklenen özelliklerin listesi aşağıda veri
 
 - Hizmet çağrısı: Istek/yanıt ve tek yönlü ileti.
 
-- Bağlamalar: Svcutil. exe tarafından desteklenen tüm bağlamalar.
+- Bağlamalar: Svcutil.exe tarafından desteklenen tüm bağlamalar.
 
 - Oturum denetleniyor.
 
@@ -166,7 +167,7 @@ WCF test Istemcisi tarafından desteklenen özelliklerin listesi aşağıda veri
 
 WCF test Istemcisi tarafından desteklenmeyen özelliklerin listesi aşağıda verilmiştir:
 
-- Türler: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, ilgili <xref:System.Xml.Serialization.IXmlSerializable> özniteliği ve <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> ve <xref:System.Xml.Linq.XDocument> türleri ve ADO.NET <xref:System.Xml.Linq.XElement> türü de dahil olmak üzere <xref:System.Data.DataTable> arabirimini uygulayan türler.
+- Türler: <xref:System.IO.Stream> , <xref:System.ServiceModel.Channels.Message> ,,, <xref:System.Xml.XmlElement> <xref:System.Xml.XmlAttribute> <xref:System.Xml.XmlNode> , <xref:System.Xml.Serialization.IXmlSerializable> ilişkili <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> özniteliği ve <xref:System.Xml.Linq.XDocument> ve <xref:System.Xml.Linq.XElement> ADO.net <xref:System.Data.DataTable> türü dahil olmak üzere arabirimi uygulayan türler.
 
 - Çift yönlü sözleşme.
 

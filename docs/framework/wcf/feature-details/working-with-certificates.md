@@ -1,5 +1,6 @@
 ---
 title: Sertifikalarla Çalışma
+description: X. 509.952 dijital sertifika özellikleri ve bunların WCF 'de nasıl kullanılacağı hakkında bilgi edinin. Bu makaledeki kaynaklar, bu kavramları daha ayrıntılı bir şekilde açıklayabilir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: e61437efd87c30758c36d642bb9269ad2966c951
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8090e84b33e2a6f442d387c7012e6ccdc2900dd1
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600120"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246408"
 ---
 # <a name="working-with-certificates"></a>Sertifikalarla Çalışma
 
@@ -57,7 +58,7 @@ Bir sertifikanın depolanacağı yeri seçme, hizmet veya istemcinin nasıl ve n
 
 ### <a name="accessing-stores"></a>Mağazalara erişme
 
-Depolar, tıpkı bir bilgisayardaki klasörler gibi erişim denetim listeleriyle (ACL 'Ler) korunur. Internet Information Services (IIS) tarafından barındırılan bir hizmet oluştururken ASP.NET işlemi ASP.NET hesabı altında çalışır. Bu hesabın, bir hizmetin kullandığı sertifikaları içeren mağazaya erişimi olmalıdır. Ana mağazaların her biri varsayılan bir erişim listesiyle korunur, ancak listeler değiştirilebilir. Bir depoya erişmek için ayrı bir rol oluşturursanız, bu rol erişim iznini vermeniz gerekir. WinHttpCertConfig. exe aracını kullanarak erişim listesini değiştirme hakkında bilgi edinmek için bkz. [nasıl yapılır: geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md).
+Depolar, tıpkı bir bilgisayardaki klasörler gibi erişim denetim listeleriyle (ACL 'Ler) korunur. Internet Information Services (IIS) tarafından barındırılan bir hizmet oluştururken ASP.NET işlemi ASP.NET hesabı altında çalışır. Bu hesabın, bir hizmetin kullandığı sertifikaları içeren mağazaya erişimi olmalıdır. Ana mağazaların her biri varsayılan bir erişim listesiyle korunur, ancak listeler değiştirilebilir. Bir depoya erişmek için ayrı bir rol oluşturursanız, bu rol erişim iznini vermeniz gerekir. WinHttpCertConfig.exe aracını kullanarak erişim listesini değiştirme hakkında bilgi edinmek için bkz. [nasıl yapılır: geliştirme sırasında kullanılmak üzere geçici sertifikalar oluşturma](how-to-create-temporary-certificates-for-use-during-development.md).
 
 ## <a name="chain-trust-and-certificate-authorities"></a>Zincir güveni ve sertifika yetkilileri
 

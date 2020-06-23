@@ -1,16 +1,17 @@
 ---
 title: İleti Sınıfını Kullanma
+description: WCF için temel olan Ileti sınıfı hakkında bilgi edinin. Ileti sınıfını doğrudan yalnızca bazı Gelişmiş senaryolarda programla programlama yapmanız gerekir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 142578ef76a70fed27dc0137378b59e228cd25c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f806e257cfd3ccc5118a5783e2eda48eef4ba0bf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84585655"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246499"
 ---
 # <a name="using-the-message-class"></a>İleti Sınıfını Kullanma
 <xref:System.ServiceModel.Channels.Message>Sınıfı Windows Communication Foundation (WCF) için temel bir sınıftır. İstemciler ve hizmetler arasındaki tüm iletişimler, sonuçta <xref:System.ServiceModel.Channels.Message> gönderilen ve alınan örneklerin sonucu olarak sonuçlanır.  

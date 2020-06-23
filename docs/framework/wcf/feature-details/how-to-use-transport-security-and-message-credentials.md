@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma'
+description: WCF 'de aktarım ve Ileti güvenlik modlarını en iyi şekilde sunan ileti kimlik bilgileriyle aktarım güvenliğini nasıl uygulayacağınızı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: f49c0eb46141081b91100a5ae1869cbcf556e353
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f632a4389eafc155cedcae94707c9418b6696f2c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579390"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246655"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma
 Hem aktarım hem de ileti kimlik bilgileriyle bir hizmetin güvenliğini sağlamak, Windows Communication Foundation (WCF) içinde hem aktarım hem de Ileti güvenliği modlarından en iyi şekilde yararlanır. Sum olarak, aktarım katmanı güvenliği bütünlük ve gizlilik sağlar, ancak ileti katmanı güvenliği, katı taşıma güvenlik mekanizmalarıyla mümkün olmayan çeşitli kimlik bilgileri sağlar. Bu konuda, ve bağlamaları kullanılarak ileti kimlik bilgileriyle taşıma uygulamak için temel adımlar <xref:System.ServiceModel.WSHttpBinding> gösterilmektedir <xref:System.ServiceModel.NetTcpBinding> . Güvenlik modunu ayarlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: güvenlik modunu ayarlama](../how-to-set-the-security-mode.md).  
@@ -25,7 +26,7 @@ Hem aktarım hem de ileti kimlik bilgileriyle bir hizmetin güvenliğini sağlam
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Taşıma güvenliği için bir sertifikayla WSHttpBinding 'i kullanmak için (kodda)  
   
-1. Bir SSL sertifikasını makinedeki bir bağlantı noktasına bağlamak için HttpCfg. exe aracını kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).  
+1. Bir SSL sertifikasını makinedeki bir bağlantı noktasına bağlamak için HttpCfg.exe aracını kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2. Sınıfının bir örneğini oluşturun <xref:System.ServiceModel.WSHttpBinding> ve <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> özelliğini olarak ayarlayın <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential> .  
   

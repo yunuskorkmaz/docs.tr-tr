@@ -1,16 +1,17 @@
 ---
 title: Windows Kimlik Doğrulama ile Taşıma Güvenliği
+description: Windows güvenliği tarafından güvenliği sağlanmış bir WCF istemcisi/hizmeti gösteren bu senaryoyu inceleyin. Bu örnekte, bir intranet hizmeti insan kaynakları bilgilerini görüntüler.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b6134d4cbdff0c1adea704a7f3aaff7e40fd75ec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598703"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244770"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows Kimlik Doğrulama ile Taşıma Güvenliği
 Aşağıdaki senaryoda Windows güvenliği tarafından güvenliği sağlanmış bir Windows Communication Foundation (WCF) istemcisi ve hizmeti gösterilmektedir. Programlama hakkında daha fazla bilgi için bkz. [nasıl yapılır: Windows kimlik bilgileriyle hizmeti güvenli hale getirme](../how-to-secure-a-service-with-windows-credentials.md).  
@@ -19,7 +20,7 @@ Aşağıdaki senaryoda Windows güvenliği tarafından güvenliği sağlanmış 
   
  ![Windows kimlik doğrulama ile aktarım güvenliği](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|Aktarım|  
 |Birlikte çalışabilirlik|Yalnızca WCF|  
@@ -30,7 +31,7 @@ Aşağıdaki senaryoda Windows güvenliği tarafından güvenliği sağlanmış 
 |Bağlama|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
   
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
@@ -74,11 +75,11 @@ Aşağıdaki senaryoda Windows güvenliği tarafından güvenliği sağlanmış 
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
   
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
   
-- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örnek:  
+- Herhangi bir uç nokta adresi tanımlamayan bir istemci oluşturun. Bunun yerine, yapılandırma adını bağımsız değişken olarak alan istemci oluşturucusunu kullanın. Örneğin:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

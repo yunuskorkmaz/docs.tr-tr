@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme'
+title: 'Nasıl yapılır: Birden çok dosyalı derleme oluşturma'
+description: Yordamın her adımını göstermek için örnek kod kullanarak .NET 'te çok dosyalı bir derleme derlemeyi (oluşturmayı) öğrenin.
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,14 +18,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4c298284950ba2989bb73e6d3383b3c4024e6e7
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429560"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85104950"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: çok dosyalı bütünleştirilmiş kod derleme
+# <a name="how-to-build-a-multifile-assembly"></a>Nasıl yapılır: Birden çok dosyalı derleme oluşturma
 
 Bu makalede, çok dosyalı bir derlemenin nasıl oluşturulacağı ve yordamdaki her adımın gösterildiği kod nasıl kullanılacağı açıklanmaktadır.
 
@@ -35,7 +36,7 @@ Bu makalede, çok dosyalı bir derlemenin nasıl oluşturulacağı ve yordamdaki
 
 1. Derlemedeki diğer modüller tarafından kod modüllerine başvuruda bulunulan ad alanlarını içeren tüm dosyaları derleyin. Kod modülleri için varsayılan uzantı *. netmodule*'dir.
 
-   Örneğin, `Stringer` dosyada adlı bir sınıf içeren bir ad alanı `myStringer`olduğunu varsayalım. `Stringer` `Stringer` Sınıfı, konsola tek bir satır `StringerMethod` yazan adlı bir yöntemi içerir.
+   Örneğin, dosyada adlı bir `Stringer` sınıf içeren bir ad alanı olduğunu varsayalım `myStringer` `Stringer` . `Stringer`Sınıfı, `StringerMethod` konsola tek bir satır yazan adlı bir yöntemi içerir.
 
    ```cpp
    // Assembly building example in the .NET Framework.
@@ -99,7 +100,7 @@ Bu makalede, çok dosyalı bir derlemenin nasıl oluşturulacağı ve yordamdaki
 
 3. Kodda başvurulan diğer modülleri göstermek için gerekli derleyici seçeneklerini kullanarak diğer tüm modülleri derleyin. Bu adım, **/addmodule** derleyici seçeneğini kullanır.
 
-   Aşağıdaki örnekte, *istemci* adlı bir kod modülünün, 1. adımda oluşturulan `Main` *strger. dll* modülündeki bir yönteme başvuran bir giriş noktası yöntemi vardır.
+   Aşağıdaki örnekte, *istemci* adlı bir kod modülünün, `Main` 1. adımda oluşturulan *Stringer.dll* modülündeki bir yönteme başvuran bir giriş noktası yöntemi vardır.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -205,25 +206,25 @@ Bu makalede, çok dosyalı bir derlemenin nasıl oluşturulacağı ve yordamdaki
    >   vbc /out:Client.exe Client.vb /out:Stringer.netmodule Stringer.vb
    >   ```
 
-5. Derleme bildirimini içeren çıktı dosyasını oluşturmak için [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md) kullanın. Bu dosya, derlemenin parçası olan tüm modüller veya kaynaklar için başvuru bilgileri içerir.
+5. Derleme bildirimini içeren çıktı dosyasını oluşturmak için [derleme Bağlayıcısı 'nı (Al.exe)](../tools/al-exe-assembly-linker.md) kullanın. Bu dosya, derlemenin parçası olan tüm modüller veya kaynaklar için başvuru bilgileri içerir.
 
     Komut isteminde aşağıdaki komutu yazın:
 
-    **Al** \< *Modül*> adı\<*Modül adı*>... **/Main:**\<*Yöntem adı*> **/Out:**\<*dosya adı*> **/target:**\<*Assembly dosya türü*>
+    **Al** \<*module name*> \<*module name*>... **/Main:** \<*method name*> **/Out:** \<*file name*> **/target:**\<*assembly file type*>
 
     Bu komutta, *Modül adı* bağımsız değişkenleri derlemeye dahil edilecek her modülün adını belirtir. **/Main:** seçeneği derlemenin giriş noktası olan yöntem adını belirtir. **/Out:** seçeneği, derleme meta verilerini içeren çıkış dosyasının adını belirtir. **/Target:** seçeneği, derlemenin bir konsol uygulaması yürütülebilir (*. exe*) dosyası, bir Windows yürütülebilir (*. Win*) dosyası veya bir kitaplık (*. lib*) dosyası olduğunu belirtir.
 
-    Aşağıdaki örnekte, *al. exe* , *MyAssembly. exe*adlı bir konsol uygulaması yürütülebilir dosyası olan bir derleme oluşturur. Uygulama, *istemci. netmodule* ve *strger. netmodule*adlı iki modülden oluşur ve yalnızca derleme meta verilerini içeren *MyAssembly. exe*adlı yürütülebilir dosyadır. Derlemenin giriş noktası, sınıfının `Main` `MainClientApp` *Client. dll*dosyasında bulunan yöntemi olur.
+    Aşağıdaki örnekte, *Al.exe* *myAssembly.exe*adlı konsol uygulaması yürütülebilir dosyası olan bir derleme oluşturur. Uygulama, *istemci. netmodule* ve *strger. netmodule*adlı iki modülden ve yalnızca derleme meta verilerini içeren *myAssembly.exe*adlı yürütülebilir dosya ile oluşur. Derlemenin giriş noktası, `Main` sınıfındaki, `MainClientApp` *Client.dll*bulunan yöntemdir.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
     ```
 
-    Bir derlemenin içeriğini incelemek veya bir dosyanın derleme veya modülle olduğunu anlamak için [MSIL Disassembler (ıldadsm. exe)](../tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
+    Bir derlemenin içeriğini incelemek veya bir dosyanın derleme ya da modülle olduğunu anlamak için [MSIL Disassembler (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Derleme oluşturma](../../standard/assembly/create.md)
 - [Nasıl yapılır: derleme içeriğini görüntüleme](../../standard/assembly/view-contents.md)
 - [Çalışma zamanının derlemeleri nasıl konumlandırır](../deployment/how-the-runtime-locates-assemblies.md)
-- [Çoklu dosya derlemeleri](multifile-assemblies.md)
+- [Birden çok dosyalı derlemeler](multifile-assemblies.md)

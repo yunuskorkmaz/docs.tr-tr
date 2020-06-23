@@ -1,13 +1,14 @@
 ---
 title: İstemci Yapılandırması
+description: Bir hizmete bağlanmak için kullanılan bir uç nokta için adresi, bağlamayı, davranışı ve sözleşmeyi belirtmek üzere WCF istemci yapılandırmasını nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 2d17438095e65ccf922061c03e406bab35b07c5d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c3e3d4904bad39e951e8ba69013ac95894130489
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593665"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245381"
 ---
 # <a name="client-configuration"></a>İstemci Yapılandırması
 İstemcilerin hizmet uç noktalarına bağlanmak için kullanacağı istemci uç noktasının "ABC" özelliklerini, adresi, bağlamayı, davranışı ve sözleşmeyi belirtmek için Windows Communication Foundation (WCF) istemci yapılandırmasını kullanabilirsiniz. [\<client>](../../configure-apps/file-schema/wcf/client.md)Öğesi, [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md) özniteliklerini yapılandırmak için öznitelikleri kullanılan bir öğesi içeriyor. Bu öznitelikler, [uç noktaları yapılandırma](#configuring-endpoints) bölümünde ele alınmıştır.  
@@ -15,7 +16,7 @@ ms.locfileid: "84593665"
  [\<endpoint>](../../configure-apps/file-schema/wcf/endpoint-of-client.md)Öğesi Ayrıca, [\<metadata>](../../configure-apps/file-schema/wcf/metadata.md) verileri içeri ve dışarı aktarmaya yönelik ayarları belirtmek için kullanılan bir öğesi, [\<headers>](../../configure-apps/file-schema/wcf/headers.md) özel adres üst bilgileri koleksiyonu içeren bir öğesi ve bir [\<identity>](../../configure-apps/file-schema/wcf/identity.md) uç noktanın, ileti alışverişi yapan diğer uç noktalara göre kimlik doğrulamasını sağlayan bir öğesi de içerir. [\<headers>](../../configure-apps/file-schema/wcf/headers.md)Ve [\<identity>](../../configure-apps/file-schema/wcf/identity.md) öğeleri ' ın bir parçasıdır <xref:System.ServiceModel.EndpointAddress> ve [adresler](endpoint-addresses.md) makalesinde ele alınmıştır. Meta veri uzantılarının kullanımını açıklayan konuların bağlantıları, [meta verileri yapılandırma](#configuring-metadata) bölümünde verilmiştir.  
   
 ## <a name="configuring-endpoints"></a>Uç noktaları yapılandırma  
- İstemci yapılandırması, istemcinin her biri kendi adı, adresi ve sözleşmesine sahip olan bir veya daha fazla uç nokta belirtmesini sağlamak üzere tasarlanmıştır [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) ve [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Bu uç noktayı yapılandırmak için kullanılacak istemci yapılandırmasındaki ve öğelerine başvurmalıdır. WCF çalışma zamanının beklediği ad olduğundan, istemci yapılandırma dosyası "App. config" olarak adlandırılmalıdır. Aşağıdaki örnekte bir istemci yapılandırma dosyası gösterilmektedir.  
+ İstemci yapılandırması, istemcinin her biri kendi adı, adresi ve sözleşmesine sahip olan bir veya daha fazla uç nokta belirtmesini sağlamak üzere tasarlanmıştır [\<bindings>](../../configure-apps/file-schema/wcf/bindings.md) ve [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) Bu uç noktayı yapılandırmak için kullanılacak istemci yapılandırmasındaki ve öğelerine başvurmalıdır. WCF çalışma zamanının beklediği ad olduğundan, istemci yapılandırma dosyası "App.config" olarak adlandırılmalıdır. Aşağıdaki örnekte bir istemci yapılandırma dosyası gösterilmektedir.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

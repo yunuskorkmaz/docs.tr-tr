@@ -1,5 +1,6 @@
 ---
 title: WCF ile Temsilcilik ve Kimliğe Bürünme
+description: Bir hizmet etki alanının kaynaklarına istemci erişimini kısıtlamak için WCF tarafından kullanılan kimliğe bürünme ve temsil etme yöntemleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: e491925fdbe8d44df8e0c64b563eb92569453e35
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599262"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245082"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
 *Kimliğe bürünme* , hizmetlerin, istemci erişimini bir hizmet etki alanı kaynaklarına kısıtlamak için kullandığı yaygın bir tekniktir. Hizmet etki alanı kaynakları, yerel dosyalar (kimliğe bürünme) gibi makine kaynakları ya da başka bir makinedeki bir dosya paylaşma (temsili) gibi bir kaynak olabilir. Örnek bir uygulama için bkz. [Istemcinin kimliğine bürünme](../samples/impersonating-the-client.md). Kimliğe bürünme özelliğinin nasıl kullanılacağına ilişkin bir örnek için bkz. [nasıl yapılır: bir hizmette Istemcinin kimliğine bürünme](../how-to-impersonate-a-client-on-a-service.md).  
@@ -114,13 +115,13 @@ ms.locfileid: "84599262"
 |`AllowedImpersonationLevel`deeri|Hizmet,`SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç`ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonim|Yes|yok|Kimliğe bürünme|  
-|Anonim|Hayır|yok|Kimlik|  
+|Anonim|No|yok|Kimlik|  
 |Kimlik|yok|yok|Kimlik|  
 |Kimliğe bürünme|Yes|yok|Kimliğe bürünme|  
-|Kimliğe bürünme|Hayır|yok|Kimlik|  
+|Kimliğe bürünme|No|yok|Kimlik|  
 |Temsilci|Yes|Yes|Temsilci|  
-|Temsilci|Evet|Hayır|Kimliğe bürünme|  
-|Temsilci|Hayır|yok|Kimlik|  
+|Temsilci|Evet|No|Kimliğe bürünme|  
+|Temsilci|No|yok|Kimlik|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Kullanıcı adı kimlik bilgilerinden alınan kimliğe bürünme düzeyi ve önbelleğe alınmış belirteç kimliğe bürünme  
  Bir istemci, hizmetin Kullanıcı adı ve parolasını geçirerek, özelliğin özelliği olarak ayarlanmasına eşdeğer olan kullanıcının bu kullanıcı olarak oturum açmasına olanak sağlar `AllowedImpersonationLevel` <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> . ( `AllowedImpersonationLevel` <xref:System.ServiceModel.Security.WindowsClientCredential> Ve <xref:System.ServiceModel.Security.HttpDigestClientCredential> sınıflarında kullanılabilir.) Aşağıdaki tablo, hizmet Kullanıcı adı kimlik bilgilerini aldığında elde edilen kimliğe bürünme düzeyini sağlar.  
@@ -128,16 +129,16 @@ ms.locfileid: "84599262"
 |`AllowedImpersonationLevel`|Hizmet,`SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç`ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |yok|Yes|Yes|Temsilci|  
-|yok|Evet|Hayır|Kimliğe bürünme|  
-|yok|Hayır|yok|Kimlik|  
+|yok|Evet|No|Kimliğe bürünme|  
+|yok|No|yok|Kimlik|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U tabanlı kimliğe bürünme 'den edinilen kimliğe bürünme düzeyi  
   
 |Hizmet,`SeTcbPrivilege`|Hizmet,`SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç`ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Yes|Yes|yok|Kimliğe bürünme|  
-|Evet|Hayır|yok|Kimlik|  
-|Hayır|yok|yok|Kimlik|  
+|Evet|No|yok|Kimlik|  
+|No|yok|yok|Kimlik|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Bir Istemci sertifikasını bir Windows hesabıyla eşleme  
  Bir istemcinin sertifikayı kullanarak bir hizmette kimliğini doğrulaması ve hizmetin istemciyi Active Directory aracılığıyla mevcut bir hesapla eşlemesini sağlamak mümkündür. Aşağıdaki XML, sertifikayı eşlemek için hizmetin nasıl yapılandırılacağını gösterir.  
@@ -180,7 +181,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |Kimliğe bürünme düzeyi|Hizmet, işlemler arası temsili gerçekleştirebilir|Hizmet, makineler arası temsili gerçekleştirebilir|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Hayır|Hayır|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Evet|Hayır|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Evet|No|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Yes|  
   
  Aşağıdaki kod örneği, temsilciyi nasıl kullanacağınızı gösterir.  

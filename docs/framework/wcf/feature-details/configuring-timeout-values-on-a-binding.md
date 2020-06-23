@@ -1,27 +1,28 @@
 ---
 title: Bağlamada Zaman Aşımı Değerlerini Yapılandırma
+description: Hizmetinizin performansını, kullanılabilirliğini ve güvenliğini geliştirmek üzere WCF bağlamaları için zaman aşımı ayarlarını yönetmeyi öğrenin.
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: 968e80bbd4b50d72d089a325f8e3fe498de2eac2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c41824a242d9b42290183cd70b9acf5b8ee59e6b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185283"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245121"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Bağlamada Zaman Aşımı Değerlerini Yapılandırma
-WCF bağlamalarında bir dizi zaman sonu ayarı vardır. Bu zaman sonu ayarlarını doğru ayarlamak yalnızca hizmetinizin performansını artırmakla kaynı yoran aynı zamanda hizmetinizin kullanılabilirliği ve güvenliğinde de rol oynayabilir. Aşağıdaki zaman zaman ekmeleri WCF bağlamaları mevcuttur:  
+WCF bağlamalarında kullanılabilir bir dizi zaman aşımı ayarı vardır. Bu zaman aşımı ayarlarının doğru ayarlanması yalnızca hizmetinizin performansını değil, hizmetinizin kullanılabilirliği ve güvenliğine ilişkin bir rol de yürütebilir. Aşağıdaki zaman aşımları WCF bağlamaları üzerinde kullanılabilir:  
   
 1. OpenTimeout  
   
-2. Yakın Zaman  
+2. CloseTimeout  
   
-3. SendTimeout  
+3. Binding üstündeki SendTimeout  
   
 4. ReceiveTimeout  
   
-## <a name="wcf-binding-timeouts"></a>WCF Bağlama Zaman Dilimleri  
- Bu konuda tartışılan ayarların her biri, kod veya yapılandırma da bağlamanın kendisi üzerinde yapılır. Aşağıdaki kod, kendi barındırılan bir hizmet bağlamında wcf bağlamaüzerinde zaman zaman larını nasıl programla ayarlanacağını gösterir.  
+## <a name="wcf-binding-timeouts"></a>WCF bağlama zaman aşımları  
+ Bu konu başlığında ele alınan ayarların her biri, kodda veya yapılandırmada bağlama sırasında yapılır. Aşağıdaki kod, şirket içinde barındırılan bir hizmet bağlamında bir WCF bağlamasında zaman aşımlarını programlı bir şekilde ayarlamayı gösterir.  
   
 ```csharp  
 public static void Main()
@@ -54,7 +55,7 @@ public static void Main()
 }
 ```  
   
- Aşağıdaki örnek, yapılandırma dosyasındaki bir bağlama üzerinde zaman aşımlarının nasıl yapılandırılabildiğini gösterir.  
+ Aşağıdaki örnek, bir yapılandırma dosyasındaki bağlamadaki zaman aşımlarının nasıl yapılandırılacağını gösterir.  
   
 ```xml  
 <configuration>
@@ -72,22 +73,22 @@ public static void Main()
 </configuration>
 ```  
   
- Bu ayarlar hakkında daha fazla bilgi <xref:System.ServiceModel.Channels.Binding> sınıf için belgelerbulunabilir.  
+ Bu ayarlar hakkında daha fazla bilgi, sınıfının belgelerinde bulunabilir <xref:System.ServiceModel.Channels.Binding> .  
   
-### <a name="client-side-timeouts"></a>İstemci tarafı Zaman Ları  
+### <a name="client-side-timeouts"></a>İstemci tarafı zaman aşımları  
  İstemci tarafında:  
   
-1. SendTimeout – bir istek/yanıt hizmeti işlemi için yanıt iletisi almak da dahil olmak üzere, ileti gönderme işleminin tüm sürecini yöneten OperationTimeout'u başlatmada kullanılır. Bu zaman alameti, geri arama sözleşmesi yönteminden yanıt iletileri gönderirken de geçerlidir.  
+1. SendTimeout – bir istek/yanıt hizmeti işlemi için yanıt iletisi alma da dahil olmak üzere bir ileti gönderme işlemini yöneten OperationTimeout 'u başlatmak için kullanılır. Bu zaman aşımı Ayrıca, bir geri çağırma sözleşmesi yönteminden yanıt iletileri gönderilirken de geçerlidir.  
   
-2. OpenTimeout – açık bir zaman aşım değeri belirtilmediğinde kanalları açarken kullanılır.  
+2. OpenTimeout: açık bir zaman aşımı değeri belirtilmediğinde kanallar açılırken kullanılır.  
   
-3. CloseTimeout – açık bir zaman aşım değeri belirtilmediğinde kanalları kapatırken kullanılır.  
+3. CloseTimeout: açık bir zaman aşımı değeri belirtilmediğinde kanallar kapatılırken kullanılır.  
   
 4. ReceiveTimeout – kullanılmaz.  
   
-### <a name="service-side-timeouts"></a>Servis tarafı Zaman Ları  
+### <a name="service-side-timeouts"></a>Hizmet tarafı zaman aşımları  
  Hizmet tarafında:  
   
-1. SendTimeout, OpenTimeout, CloseTimeout istemcide aynıdır.  
+1. SendTimeout, OpenTimeout, CloseTimeout, istemci ile aynıdır.  
   
-2. ReceiveTimeout – zamanlamadan önce bir oturumun ne kadar süreyle boşta bırakılabildiğini kontrol eden oturum boşta zamanlamasını başlatmayı başlatmak için Hizmet Çerçeve Katmanı tarafından kullanılır.
+2. ReceiveTimeout: bir oturumun zaman aşımından önce ne kadar süreyle boşta kalabileceğini denetleyen oturum boşta kalma zaman aşımını başlatmak için Service Framework katmanı tarafından kullanılır.

@@ -1,15 +1,16 @@
 ---
 title: Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
+description: Güvenlik aktarım güvenliği kullanılırken, WFC 'nin sunucu ve istemci kimlik doğrulaması için sertifikaları nasıl kullandığı hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 47322cbcddf9f33101bbfbeaa07a3fab74b9d26a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576024"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244784"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 
@@ -21,7 +22,7 @@ Bu makalede, aktarım güvenliği kullanılırken sunucu ve istemci kimlik doğr
   
  Hizmeti olan bir sertifika kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md) ve bir [SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md). Aşağıdaki tabloda senaryonun çeşitli özellikleri açıklanmaktadır.  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|Aktarım|  
 |Birlikte çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle.|  
@@ -32,7 +33,7 @@ Bu makalede, aktarım güvenliği kullanılırken sunucu ve istemci kimlik doğr
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>Hizmeti yapılandırma  
- Bu senaryodaki hizmet IIS altında barındırıldığından, Web. config dosyası ile yapılandırılır. Aşağıdaki Web. config, <xref:System.ServiceModel.WSHttpBinding> ' ın Transport Security ve X. 509.440 istemci kimlik bilgilerini kullanacak şekilde nasıl yapılandırılacağını gösterir.  
+ Bu senaryodaki hizmet IIS altında barındırıldığından, bir web.config dosyası ile yapılandırılır. Aşağıdaki web.config, <xref:System.ServiceModel.WSHttpBinding> ' nin Transport Security ve X. 509.440 istemci kimlik bilgilerini kullanacak şekilde nasıl yapılandırılacağını gösterir.  
   
 ```xml  
 <configuration>  
@@ -63,7 +64,7 @@ Bu makalede, aktarım güvenliği kullanılırken sunucu ve istemci kimlik doğr
 ```  
   
 ## <a name="configure-the-client"></a>Istemciyi yapılandırma  
- İstemci kodda veya bir App. config dosyasında yapılandırılabilir. Aşağıdaki örnek, kodda istemcisinin nasıl yapılandırılacağını gösterir.  
+ İstemci kodda veya bir app.config dosyasında yapılandırılabilir. Aşağıdaki örnek, kodda istemcisinin nasıl yapılandırılacağını gösterir.  
   
 ```csharp
 // Create the binding.  
@@ -97,7 +98,7 @@ Console.WriteLine(cc.Add(100, 1111));
 cc.Close();  
 ```  
   
- Alternatif olarak, aşağıdaki örnekte gösterildiği gibi, istemcisini bir App. config dosyasında yapılandırabilirsiniz:  
+ Alternatif olarak, aşağıdaki örnekte gösterildiği gibi bir App.config dosyasında istemcisini yapılandırabilirsiniz:  
   
 ```xml  
 <configuration>  

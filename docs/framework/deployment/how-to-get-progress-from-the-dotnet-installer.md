@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
+description: .NET 4,5 Yükleyicisinden nasıl ilerleme alabileceğinizi öğrenin. Bu .NET sürümü için uygulamalar geliştirirseniz uygulamanızın kurulumuna .NET 4,5 kurulumunu dahil edebilirsiniz.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,63 +8,63 @@ helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-ms.openlocfilehash: cd81ad83aee80341d0334cfa8caa165b25ee0564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 501fcaa7636d586ddfff8606768d4639fdc010d7
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904266"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma
 
-.NET Framework 4.5 yeniden dağıtılabilir bir çalışma süresidir. .NET Framework'ün bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun ön koşul bir parçası olarak (zincir) .NET Framework 4.5 kurulumunu ekleyebilirsiniz. Özelleştirilmiş veya birleştirilmiş bir kurulum deneyimi sunmak için ,NET Framework 4.5 kurulumunu sessizce başlatmak ve uygulamanızın kurulum ilerlemesini gösterirken ilerlemesini izlemek isteyebilirsiniz. Sessiz izlemeyi etkinleştirmek için ,NET Framework 4.5 kurulumu (izlenebilir) kurulumunuzla (izleyici veya zincirleyici) iletişim kurmak için bellek eşlenmiş Bir G/Ç (MMIO) segmenti kullanarak bir protokol tanımlar. Bu protokol, bir zincirleyicinin ilerleme bilgilerini elde etmesini, ayrıntılı sonuçlar almasını, iletileri yanıtlamasını ve .NET Framework 4.5 kurulumünü iptal etmesinin bir yolunu tanımlar.
+.NET Framework 4,5 yeniden dağıtılabilir bir çalışma zamanı. .NET Framework bu sürümü için uygulamalar geliştirirseniz, uygulamanızın kurulumunun önkoşul bir parçası olarak, (zincir) .NET Framework 4,5 kurulumunu dahil edebilirsiniz. Özelleştirilmiş veya Birleşik bir kurulum deneyimi sunmak için, .NET Framework 4,5 kurulumunu sessizce başlatmak ve uygulamanızın kurulum ilerlemesini gösterirken ilerlemesini izlemek isteyebilirsiniz. Sessiz izlemeyi etkinleştirmek için, .NET Framework 4,5 kurulumu (izlenen), kurulumla iletişim kurmak için bellek eşlemeli g/ç (MıO) kesimini kullanarak bir protokolü tanımlar (izleyici veya bağlayıcı). Bu protokol, bir Chainer 'ın ilerleme bilgilerini elde etme, ayrıntılı sonuçlar alma, iletilere yanıt verme ve .NET Framework 4,5 kurulumunu iptal etme yolunu tanımlar.
 
-- **Çağrı .** .NET Framework 4.5 kurulumunu aramak ve MMIO bölümünden ilerleme bilgilerini almak için kurulum programınız aşağıdakileri yapmalıdır:
+- **Çağırma**. .NET Framework 4,5 kurulumunu çağırmak ve MıO bölümünden ilerleme bilgileri almak için kurulum programınızın aşağıdakileri yapması gerekir:
 
-    1. .NET Framework 4.5 yeniden dağıtılabilir programı arayın:
+    1. .NET Framework 4,5 yeniden dağıtılabilir programını çağırın:
 
         `dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name`
 
-        *Bölüm adının* uygulamanızı tanımlamak için kullanmak istediğiniz herhangi bir ad olduğu yerde. .NET Framework kurulumu MMIO bölümüne eşit olarak okur ve yazar, bu nedenle bu süre içinde olayları ve mesajları kullanmayı uygun bulabilirsiniz. Örnekte, .NET Framework kurulum işlemi, her ikisi de MMIO bölümünü`TheSectionName`() ayıran ve`TheEventName`bir olayı tanımlayan bir oluşturucu tarafından oluşturulur ( ):
+        Burada *bölüm adı* uygulamanızı tanımlamak için kullanmak istediğiniz addır. .NET Framework kurulum, MıO bölümünü zaman uyumsuz olarak okur ve yazar, bu nedenle bu süre içinde olayları ve iletileri kullanmayı kullanışlı bulabilirsiniz. Örnekte, .NET Framework kurulum işlemi her ikisi de MıO bölümünü ( `TheSectionName` ) ayıran ve bir olayı () tanımlayan bir Oluşturucu tarafından oluşturulur `TheEventName` :
 
         ```cpp
         Server():ChainerSample::MmioChainer(L"TheSectionName", L"TheEventName")
         ```
 
-        Lütfen bu adları kurulum programınıza özgü adlarla değiştirin.
+        Lütfen bu adları kurulum programınızın benzersiz adlarıyla değiştirin.
 
-    2. MMIO bölümünden okuyun. .NET Framework 4.5'te, indirme ve yükleme işlemleri eş zamanlıdır: .NET Framework'ün bir bölümü yüklenirken diğer bölümü yükleniyor olabilir. Sonuç olarak, ilerleme 0'dan 255'e kadar olan iki sayı`m_downloadSoFar` `m_installSoFar`(ve ) olarak MMIO bölümüne geri gönderilir (yani yazılıdır). 255 yazıldığında ve .NET Framework çıktığında yükleme tamamlanır.
+    2. MıO bölümünden okuyun. .NET Framework 4,5 ' de, indirme ve yükleme işlemleri eşzamanlı olarak bulunur: başka bir bölüm indirilirken .NET Framework bir parçası yükleniyor olabilir. Sonuç olarak, devam eden ( `m_downloadSoFar` ve `m_installSoFar` ) 0 ile 255 arasında bir artış olan MIO bölümüne geri gönderilir. 255 yazıldığında ve .NET Framework çıktığında yükleme tamamlanır.
 
-- **Çıkış kodları.** .NET Framework 4.5 yeniden dağıtılabilir programı aramak için komuttan aşağıdaki çıkış kodları, kurulumun başarılı olup olmadığını veya başarısız olup olmadığını gösterir:
+- **Çıkış kodları**. .NET Framework 4,5 yeniden dağıtılabilir programını çağırmak için komuttan gelen aşağıdaki çıkış kodları, kurulumun başarılı veya başarısız olup olmadığını gösterir:
 
-  - 0 - Kurulum başarıyla tamamlandı.
+  - 0-Kurulum başarıyla tamamlandı.
 
-  - 3010 – Kurulum başarıyla tamamlandı; bir sistem yeniden başlatma gereklidir.
+  - 3010 – Kurulum başarıyla tamamlandı; sistemin yeniden başlatılması gerekiyor.
 
-  - 1602 - Kurulum iptal edildi.
+  - 1602 – Kurulum iptal edildi.
 
-  - Diğer tüm kodlar - Kurulum hataları karşılaştı; ayrıntılar için %geçici% olarak oluşturulan günlük dosyalarını inceleyin.
+  - Diğer tüm kodlar-kurulum hatalarla karşılaştı; Ayrıntılar için% Temp% konumunda oluşturulan günlük dosyalarını inceleyin.
 
-- **Kurulumu iptal etme.** MMIO bölümündeki `Abort` `m_downloadAbort` bayrakları ve `m_ installAbort` bayrakları ayarlamak için yöntemi kullanarak istediğiniz zaman kurulumu iptal edebilirsiniz.
+- **Kurulum Iptal ediliyor**. `Abort`, `m_downloadAbort` MIO bölümünde ve bayraklarını ayarlamak için yöntemini kullanarak istediğiniz zaman kurulumu iptal edebilirsiniz `m_ installAbort` .
 
-## <a name="chainer-sample"></a>Chainer Örnek
+## <a name="chainer-sample"></a>Chainer örneği
 
-Chainer örneği ,ilerleme gösterirken .NET Framework 4.5 kurulumlarını sessizce başlatır ve izler. Bu örnek .NET Framework 4 için sağlanan Chainer örneğine benzer. Ancak, buna ek olarak, .NET Framework 4 uygulamalarını kapatmak için ileti kutusunu işleyerek sistemin yeniden başlatılmasını önleyebilir. Bu ileti kutusu hakkında bilgi için [bkz.](reducing-system-restarts.md) Bu örneği .NET Framework 4 yükleyicisi ile kullanabilirsiniz; bu senaryoda, ileti yalnızca gönderilmez.
+Chainer örneği sessizce başlatılır ve ilerleme durumunu gösterirken .NET Framework 4,5 kurulumunu izler. Bu örnek, .NET Framework 4 için sunulan Chainer örneğine benzer. Bununla birlikte, Ayrıca, .NET Framework 4 uygulamalarını kapatmak için ileti kutusunu işleyerek sistem yeniden başlatmalarının önlenmesine engel olabilir. Bu ileti kutusu hakkında daha fazla bilgi için bkz. [.NET Framework 4,5 yüklemeleri sırasında sistem yeniden başlatmaları azaltma](reducing-system-restarts.md). Bu örneği .NET Framework 4 yükleyicisi ile birlikte kullanabilirsiniz; Bu senaryoda ileti yalnızca gönderilmez.
 
 > [!WARNING]
 > Örneği yönetici olarak çalıştırmanız gerekir.
 
-[.NET Framework 4.5 Chainer Örneği](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba) için tam Visual Studio çözümlerini MSDN Örnekleri Galerisi'nden indirebilirsiniz.
+[.NET Framework 4,5 Chainer örneği](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba) Için Visual Studio çözümünü tamamen MSDN Örnekleri Galerisi ' nden indirebilirsiniz.
 
-Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOChainer.h, ChainingdotNet4.cpp ve IProgressObserver.h.
+Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklanır: Mmıochainer. h, ChainingdotNet4. cpp ve ıprogressobserver. h.
 
-#### <a name="mmiochainerh"></a>MMIOChainer.h
+#### <a name="mmiochainerh"></a>Mmıochainer. h
 
-- MMIOChainer.h dosyası [(bkz. tam kod)](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)veri yapısı tanımını ve zincirleyici sınıfının türetilmesi gereken taban sınıfı içerir. .NET Framework 4.5, .NET Framework 4.5 yükleyicisinin ihtiyaç duyduğu verileri işlemek için MMIO veri yapısını genişletir. MMIO yapısındaki değişiklikler geriye dönük uyumludur, bu nedenle .NET Framework 4 zincirleyici stoylaştırma gerektirmeden .NET Framework 4.5 kurulumu ile çalışabilir. Ancak, bu senaryo sistem yeniden başlatmayı azaltmak için özelliği desteklemez.
+- Mmıochainer. h dosyası (bkz. [bütün kod](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)) veri yapısı tanımını ve Chainer sınıfının türettiği temel sınıfı içerir. 4,5 .NET Framework, MıO veri yapısını .NET Framework 4,5 yükleyicisinin ihtiyacı olan verileri işleyecek şekilde genişletir. MıO yapısında yapılan değişiklikler geriye dönük olarak uyumludur, bu nedenle .NET Framework 4 Chainer .NET Framework 4,5 kurulumu ile yeniden derleme gerekmeden çalışabilir. Ancak, bu senaryo sistem yeniden başlatmaları azaltma özelliğini desteklemez.
 
-    Sürüm alanı, yapı ve ileti biçimindedüzeltmeleri tanımlamanın bir aracını sağlar. .NET Framework kurulumu, dosya eşlemeboyutunu belirlemek için `VirtualQuery` işlevi arayarak zincirleyici arabiriminin sürümünü belirler. Boyut sürüm alanını sığdıracak kadar büyükse, .NET Framework kurulumu belirtilen değeri kullanır. Dosya eşleme ,.NET Framework 4'ün de geçerli olduğu gibi bir sürüm alanı içeremeyecek kadar küçükse, kurulum işlemi sürüm 0 (4) varsayar. Zincirleyici,.NET Framework kurulumunun göndermek istediği iletisürümünü desteklemiyorsa, .NET Framework kurulumu bir yoksayma yanıtı varsayar.
+    Sürüm alanı, yapı ve ileti biçimindeki düzeltmeleri tanımlamak için bir yol sağlar. .NET Framework kurulum, `VirtualQuery` Dosya eşlemesinin boyutunu belirleyen işlevi çağırarak Chainer arabiriminin sürümünü belirler. Boyut, sürüm alanına uyum sağlayacak kadar büyükse, .NET Framework Kurulum belirtilen değeri kullanır. Dosya eşlemesi, .NET Framework 4 ' te olduğu gibi bir sürüm alanı içeremeyecek kadar küçükse, kurulum işlemi 0 (4) sürümünü kabul eder. Chainer .NET Framework kurulum 'un göndermek istediği iletinin sürümünü desteklemiyorsa, .NET Framework kurulum bir yoksayma yanıtı olduğunu varsayar.
 
-    MMIO veri yapısı aşağıdaki gibi tanımlanır:
+    MıO veri yapısı aşağıdaki gibi tanımlanır:
 
     ```cpp
     // MMIO data structure for interprocess communication
@@ -92,11 +93,11 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
         };
     ```
 
-- Veri `MmioDataStructure` yapısı doğrudan kullanılmamalıdır; bunun `MmioChainer` yerine zincirleyici uygulamak için sınıf kullanın. .NET Framework `MmioChainer` 4.5 yeniden dağıtılabilir zinciriçin sınıftan türetin.
+- `MmioDataStructure`Veri yapısı doğrudan kullanılmamalıdır; `MmioChainer` Chainer 'ı uygulamak için yerine sınıfını kullanın. `MmioChainer`.NET Framework 4,5 yeniden dağıtılabilir öğesini zincirlemek için sınıftan türetirsiniz.
 
-#### <a name="iprogressobserverh"></a>IProgressObserver.h
+#### <a name="iprogressobserverh"></a>Iprogressobserver. h
 
-- IProgressObserver.h dosyası bir ilerleme gözlemcisi uygular[(tam koda bakın).](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592) Bu gözlemci indirme ve yükleme ilerleme (imzasız `char`olarak belirtilen, 0-255,% 1-100 tam gösteren) bildirilir alır. Chainee bir mesaj gönderdiğinde gözlemci ye de bildirilir ve gözlemci bir yanıt göndermelidir.
+- Iprogressobserver. h dosyası bir ilerleme gözlemci uygular ([bkz. kodun tamamı](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)). Bu gözlemci, indirme ve yükleme ilerleme durumunu (işaretsiz `char` , 0-255% 1 ' i belirten %100) bildiren bir bildirim alır. Gözlemci bir ileti gönderdiğinde ve gözlemci bir yanıt göndermesi gerektiğinde, gözlemciye de bildirilir.
 
     ```cpp
         class IProgressObserver
@@ -108,9 +109,9 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
         };
     ```
 
-#### <a name="chainingdotnet45cpp"></a>ZincirlemedotNet4.5.cpp
+#### <a name="chainingdotnet45cpp"></a>ChainingdotNet 4.5. cpp
 
-- [ChainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) dosyası, `Server` `MmioChainer` sınıftan türetilen ve ilerleme bilgilerini görüntülemek için uygun yöntemleri geçersiz kılan sınıfı uygular. MmioChainer belirtilen bölüm adı içeren bir bölüm oluşturur ve belirtilen olay adı ile zincirleyici yi alartır. Olay adı eşlenen veri yapısına kaydedilir. Bölüm ve etkinlik adlarını benzersiz hale getirmelisiniz. Aşağıdaki `Server` koddaki sınıf belirtilen kurulum programını başlatır, ilerlemesini izler ve bir çıkış kodu döndürür.
+- [Chainingdotnet 4.5. cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) dosyası, `Server` `MmioChainer` sınıfından türetilen ve ilerleme bilgilerini göstermek için uygun yöntemleri geçersiz kılan sınıfını uygular. Mmıochainer, belirtilen bölüm adına sahip bir bölüm oluşturur ve belirtilen olay adıyla Chainer 'yi başlatır. Olay adı, eşlenmiş veri yapısına kaydedilir. Bölüm ve olay adlarını benzersiz yapmalısınız. `Server`Aşağıdaki koddaki sınıfı belirtilen kurulum programını başlatır, ilerlemesini izler ve bir çıkış kodu döndürür.
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver
@@ -121,7 +122,7 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
         {}
     ```
 
-    Yükleme Ana yöntemde başlatılır.
+    Yükleme Main yönteminde başlatılır.
 
     ```cpp
     // Main entry point for program
@@ -147,7 +148,7 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
     }
     ```
 
-- Yüklemeyi başlatmadan önce, zincirleyici .NET Framework 4.5'in zaten `IsNetFx4Present`arayarak yüklü olup olmadığını kontrol eder:
+- Yüklemeyi başlatmadan önce, bağlayıcı .NET Framework 4,5 ' ı çağırarak zaten yüklü olup olmadığını denetler `IsNetFx4Present` :
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -200,7 +201,7 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
     }
     ```
 
-- `Launch` Yöntemdeki yürütülebilir (Örneğin Setup.exe) yolunu doğru konumuna işaret etmek için değiştirebilir veya konumu belirlemek için kodu özelleştirebilirsiniz. Taban `MmioChainer` sınıf, türemiş sınıfın çağırdığı bir engelleme `Run()` yöntemi sağlar.
+- Doğru konumunu işaret etmek için yöntemindeki çalıştırılabilir dosyanın yolunu (örnekteki Setup.exe) değiştirebilir `Launch` veya konumu belirleyecek kodu özelleştirebilirsiniz. `MmioChainer`Temel sınıf, `Run()` türetilen sınıfın çağırdığı bir engelleme yöntemi sağlar.
 
     ```cpp
     bool Launch(const CString& args)
@@ -228,7 +229,7 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
     }
     ```
 
-- Yöntem, `Send` iletileri yakalar ve işler. .NET Framework'ün bu sürümünde desteklenen tek ileti yakın uygulama iletisidir.
+- `Send`Yöntemi iletileri karşılar ve işler. .NET Framework bu sürümünde, tek desteklenen ileti, kapatma uygulaması iletisidir.
 
     ```cpp
             // SendMessage
@@ -282,7 +283,7 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
     };
     ```
 
-- İlerleme verileri 0 `char` (%0) arasında imzasız ve 255 (%100).
+- İlerleme verileri `char` 0 (%0) arasında işaretsiz ve 255 (100%).
 
     ```cpp
     private: // IProgressObserver
@@ -291,7 +292,7 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
        }
     ```
 
-- HRESULT `Finished` yönteme aktarılır.
+- HRESULT `Finished` yöntemine geçirilir.
 
     ```cpp
     virtual void Finished(HRESULT hr)
@@ -303,9 +304,9 @@ Aşağıdaki bölümlerde bu örnekteki önemli dosyalar açıklayınız: MMIOCh
     ```
 
     > [!IMPORTANT]
-    > .NET Framework 4.5 yeniden dağıtılabilir genellikle birçok ilerleme iletisi ve tamamlanmasını gösteren tek bir ileti yazar (zincirleyici tarafında). Ayrıca, kayıtları arıyor, `Abort` asynchronously okur. Bir `Abort` kayıt alırsa, yüklemeyi iptal eder ve yükleme iptal edildikten ve kurulum işlemleri geri alındıktan sonra verileri olarak E_ABORT ile tamamlanmış bir kayıt yazar.
+    > .NET Framework 4,5 yeniden dağıtılabilir, genellikle çok sayıda ilerleme iletisi ve tamamlanmayı belirten tek bir ileti yazar (Chainer tarafında). Ayrıca, kayıtları arayarak zaman uyumsuz olarak okur `Abort` . Bir kayıt alırsa, `Abort` yükleme işlemini iptal eder ve kurulum işlemleri geri alındıktan sonra verileri veri olarak E_ABORT bir tamamlanmış kayıt yazar.
 
-Tipik bir sunucu rasgele bir MMIO dosya adı oluşturur, dosyayı oluşturur (önceki kod örneğinde gösterildiği gibi, içinde), `Server::CreateSection`ve `CreateProcess` yöntemi `-pipe someFileSectionName` kullanarak ve seçeneği ile boru adı geçerek yeniden dağıtılabilir başlattı. Sunucu, `Send`uygulama Kullanıcı `Finished` Bira'ya özgü kod ile ve yöntemleri uygulamalıdır. `OnProgress`
+Tipik bir sunucu, rastgele bir MıO dosya adı oluşturur, dosyayı oluşturur (önceki kod örneğinde gösterildiği gibi `Server::CreateSection` ) ve yöntemini kullanarak yeniden dağıtılabilir ve `CreateProcess` yöntemi ile kanal adını geçirerek başlatır `-pipe someFileSectionName` . Sunucu `OnProgress` , `Send` `Finished` uygulama arabirimine özgü kod ile, ve yöntemleri uygulamalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

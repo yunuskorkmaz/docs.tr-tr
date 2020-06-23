@@ -1,13 +1,14 @@
 ---
 title: Büyük Veriler ve Akış Yapma
+description: İkili verilerin aktarımı dahil olmak üzere WCF XML tabanlı iletişim, kodlayıcılar ve akış verileri hakkında konular hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 21993f230b19a76020807e1f17bd6256f2ee0b1c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586331"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246590"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 
@@ -66,7 +67,7 @@ Windows Communication Foundation (WCF), XML tabanlı bir iletişim altyapısıd�
   
  Standart bağlamaların her biri, ağ * ön ekine sahip bağlamaların ikili kodlayıcısını (sınıfını dahil ederek) kullandığı, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> <xref:System.ServiceModel.BasicHttpBinding> ve <xref:System.ServiceModel.WSHttpBinding> sınıfları varsayılan olarak metin iletisi kodlayıcısını ( <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> sınıfı aracılığıyla) kullanırken, önceden yapılandırılmış bir kodlayıcı içerir.  
   
-|Kodlayıcı bağlama öğesi|Açıklama|  
+|Kodlayıcı bağlama öğesi|Description|  
 |-----------------------------|-----------------|  
 |<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|SMS mesajı Kodlayıcısı, tüm HTTP tabanlı bağlamalar için varsayılan kodlayıcıdır ve birlikte çalışabilirliği en yüksek sorun olduğu tüm özel bağlamalar için uygun seçenektir. Bu kodlayıcı, ikili veriler için özel bir işleme olmadan standart SOAP 1.1/SOAP 1,2 metin iletilerini okur ve yazar. <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>Bir iletinin özelliği olarak ayarlandıysa <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType> , SOAP Zarf sarmalayıcı çıktısından çıkarılır ve yalnızca ileti gövdesi içeriği serileştirilir.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM ileti Kodlayıcısı, ikili veriler için özel işleme uygulayan ve yalnızca büyük/küçük harfe göre iyileştirme yardımcı programı olduğu için standart bağlamalarda varsayılan olarak kullanılmayan bir metin kodlayıcıdır. İleti, MTOM kodlamasının bir avantaj sağladığı bir eşiği aşan ikili veriler içeriyorsa, veriler ileti zarfının ardından bir MIME bölümüne externalized. Bu bölümde daha sonra MTOM 'yi etkinleştirme bölümüne bakın.|  

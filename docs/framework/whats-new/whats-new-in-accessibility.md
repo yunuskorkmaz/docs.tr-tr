@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 4243599f44749e7b38ebe78ca88b8ec2a9390650
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249727"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244159"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework erişilebilirlik yenilikleri
 
@@ -78,7 +78,7 @@ Yeni erişilebilirlik özellikleri, .NET Framework 4.7.1 veya üstünü hedefley
 
 - [Windows Workflow Foundation (WF) iş akışı Tasarımcısı](#wf48)
 
-<a name="winforms48" />
+<a name="winforms48"></a>
 
 ### <a name="windows-forms"></a>Windows Forms
 
@@ -169,7 +169,7 @@ Aşağıdaki şekilde, Kullanıcı klavyeyle bir düğme seçtiğinde araç ipuc
 
 ![Kullanıcı klavyeden düğmeye gittiğinde araç ipucunun ekran görüntüsü.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
-<a name="wpf48" />
+<a name="wpf48"></a>
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
@@ -291,7 +291,7 @@ Windows 10, iki yeni UIAutomation özelliği sunmuştur `SizeOfSet` ve `Position
 
 Ayrıca, <xref:System.Windows.Controls.ItemsControl> örneklerdeki öğeler, geliştiriciden ek işlem yapılmadan bu özellikler için otomatik olarak bir değer sağlar. Bir <xref:System.Windows.Controls.ItemsControl> gruplandırılmışsa, gruplar koleksiyonu bir küme olarak temsil edilir ve her bir grup içindeki her bir öğe, bu grubun içindeki konumunu ve grubun boyutunu sunan grubun içindeki her bir öğe ile ayrı bir küme olarak sayılır. Otomatik değerler sanallaştırmadan etkilenmez. Bir öğe gerçekleştirilmese de, bu, denetimin toplam boyutuna doğru sayılır ve eşdüzey öğelerinin kümesindeki konumu etkiler.
 
-Otomatik değerler yalnızca uygulama .NET Framework 4,8 ' i hedefliyorsa sağlanır. .NET Framework önceki bir sürümünü hedefleyen uygulamalar için, `Switch.UseLegacyAccessibilityFeatures.3` [AppContext anahtarını](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)aşağıdaki App. config dosyasında gösterildiği gibi ayarlayabilirsiniz:
+Otomatik değerler yalnızca uygulama .NET Framework 4,8 ' i hedefliyorsa sağlanır. .NET Framework önceki bir sürümünü hedefleyen uygulamalar için, `Switch.UseLegacyAccessibilityFeatures.3` aşağıdaki App.config dosyasında gösterildiği gibi [AppContext anahtarını](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)ayarlayabilirsiniz:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -305,7 +305,7 @@ Otomatik değerler yalnızca uygulama .NET Framework 4,8 ' i hedefliyorsa sağla
 </configuration>
 ```
 
-<a name="wf48" />
+<a name="wf48"></a>
 
 ### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) iş akışı Tasarımcısı
 
@@ -472,11 +472,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **High contrast**
 
-.NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimlerinde yüksek karşıtlıklı geliştirmeler yapılmıştır. Artık <xref:System.Windows.SystemParameters.HighContrast%2A> Tema ayarlandığında görünür olur. Bu modüller şunlardır:
+.NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimlerinde yüksek karşıtlıklı geliştirmeler yapılmıştır. Artık <xref:System.Windows.SystemParameters.HighContrast%2A> Tema ayarlandığında görünür olur. Bu güncelleştirmeler şunlardır:
 
 - <xref:System.Windows.Controls.Expander>denetimle
 
-  Denetim için odak görseli <xref:System.Windows.Controls.Expander> artık görülebilir. <xref:System.Windows.Controls.ComboBox>, Ve denetimlerinin klavye görselleri <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.RadioButton> de görünür. Örnek:
+  Denetim için odak görseli <xref:System.Windows.Controls.Expander> artık görülebilir. <xref:System.Windows.Controls.ComboBox>, Ve denetimlerinin klavye görselleri <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.RadioButton> de görünür. Örneğin:
 
   Önce:
 
@@ -488,7 +488,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.CheckBox>ve <xref:System.Windows.Controls.RadioButton> denetimler
 
-  <xref:System.Windows.Controls.CheckBox>Ve <xref:System.Windows.Controls.RadioButton> denetimlerindeki metin artık yüksek karşıtlık temalarında seçildiğinde daha kolay görülebilir. Örnek:
+  <xref:System.Windows.Controls.CheckBox>Ve <xref:System.Windows.Controls.RadioButton> denetimlerindeki metin artık yüksek karşıtlık temalarında seçildiğinde daha kolay görülebilir. Örneğin:
 
   Önce:
 
@@ -500,7 +500,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.ComboBox>denetimle
 
-  .NET Framework 4.7.1 ile başlayarak, devre dışı bir denetimin kenarlığı <xref:System.Windows.Controls.ComboBox> devre dışı metinle aynı renktedir. Örnek:
+  .NET Framework 4.7.1 ile başlayarak, devre dışı bir denetimin kenarlığı <xref:System.Windows.Controls.ComboBox> devre dışı metinle aynı renktedir. Örneğin:
 
   Önce:
 
@@ -520,7 +520,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   ![Siyah metin ile mavi bir düğmenin, odağı bana söyleyen ekran görüntüsü.](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
-  Son olarak, .NET Framework 4,7 ve önceki sürümlerde, <xref:System.Windows.Controls.ComboBox> `Toolbar.ComboBoxStyleKey` açılır okun görünmez olması nedeniyle bir denetimin stilini ayarlama. Bu sorun, .NET Framework 4.7.1 ile başlayarak düzeltilir. Örnek:
+  Son olarak, .NET Framework 4,7 ve önceki sürümlerde, <xref:System.Windows.Controls.ComboBox> `Toolbar.ComboBoxStyleKey` açılır okun görünmez olması nedeniyle bir denetimin stilini ayarlama. Bu sorun, .NET Framework 4.7.1 ile başlayarak düzeltilir. Örneğin:
 
   Önce:
 
@@ -532,7 +532,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - <xref:System.Windows.Controls.DataGrid>denetimle
 
-  .NET Framework 4.7.1 başlayarak, denetimlerde sıralama göstergesi oku <xref:System.Windows.Controls.DataGrid> artık doğru Tema renklerini kullanır. Örnek:
+  .NET Framework 4.7.1 başlayarak, denetimlerde sıralama göstergesi oku <xref:System.Windows.Controls.DataGrid> artık doğru Tema renklerini kullanır. Örneğin:
 
   Önce:
 
@@ -577,7 +577,7 @@ Yüksek karşıtlıklı değişikliklere örnek olarak şunlar verilebilir:
 
 - Seçili <xref:System.Windows.Forms.Button> denetimdeki metin seçim rengiyle karşıttır.
 
-- Devre dışı bırakılan metin daha kolay okunabilir. Örnek:
+- Devre dışı bırakılan metin daha kolay okunabilir. Örneğin:
 
   Önce:
 
@@ -638,7 +638,7 @@ Yüksek karşıtlıklı değişikliklere örnek olarak şunlar verilebilir:
 
 ### <a name="net-sdk-tools"></a>.NET SDK Tools
 
-[Yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) ve [hizmet izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) , değişen erişilebilirlik sorunları düzeltilirken geliştirilmiştir. Bunların çoğu, bir ad tanımlanmadığında veya belirli Kullanıcı Arabirimi Otomasyonu desenlerinin doğru uygulanmadığından küçük sorunlardır. Birçok kullanıcı bu hatalı değerleri bilmez, ancak ekran okuyucular gibi yardımcı teknolojiler kullanan müşteriler bu SDK araçlarını daha erişilebilir bulacaktır.
+[Yapılandırma Düzenleyicisi aracı (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) ve [hizmet izleme görüntüleyicisi Aracı (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) , değişen erişilebilirlik sorunları düzeltilirken geliştirilmiştir. Bunların çoğu, bir ad tanımlanmadığında veya belirli Kullanıcı Arabirimi Otomasyonu desenlerinin doğru uygulanmadığından küçük sorunlardır. Birçok kullanıcı bu hatalı değerleri bilmez, ancak ekran okuyucular gibi yardımcı teknolojiler kullanan müşteriler bu SDK araçlarını daha erişilebilir bulacaktır.
 
 Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları değiştirir.
 
@@ -709,4 +709,4 @@ Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları de
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework’teki yenilikler](index.md)
+- [.NET Framework yenilikler](index.md)

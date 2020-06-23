@@ -1,13 +1,14 @@
 ---
 title: Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
+description: WCF hizmeti sorunlarını tanılamanıza, onarmanıza ve doğrulayabilmeniz için günlükteki izleme iletilerini birleştirmek, görüntülemek ve filtrelemek için hizmet Izleme Görüntüleyicisi 'ni kullanın.
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 543b0e714343cdb8078861ceb31e4f8035e20afd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0ad6094965291a965346522688a8334abbd4e6b3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321208"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244575"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Hizmet İzleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)
 
@@ -17,7 +18,7 @@ Windows Communication Foundation (WCF) hizmet Izleme Görüntüleyicisi Aracı, 
 
 Tanılama izlemeleri, uygulamanızın işlemi boyunca neler olduğunu gösteren bilgiler sağlar. Adından da anlaşılacağı gibi, işlemler kaynağından hedefe ve ara noktalara göre işlemleri izleyebilirsiniz.
 
-İzlemeyi, uygulamanın yapılandırma dosyasını (Web 'de barındırılan uygulamalar için Web. config veya şirket içinde barındırılan uygulamalar için *appname*. config) kullanarak yapılandırabilirsiniz. Aşağıda bir örnek verilmiştir:
+Uygulamanın yapılandırma dosyasını kullanarak izlemeyi, Web 'de barındırılan uygulamalar için Web.config ya da şirket içinde barındırılan uygulamalar için *appname*. config ' i kullanarak yapılandırabilirsiniz. Aşağıda bir örnek verilmiştir:
 
 ```xml
 <system.diagnostics>
@@ -36,24 +37,24 @@ Tanılama izlemeleri, uygulamanızın işlemi boyunca neler olduğunu gösteren 
 </system.diagnostics>
 ```
 
-Bu örnekte, İzleme dinleyicisinin adı ve türü belirtilir. Dinleyici `sdt` olarak adlandırılır ve standart .NET Framework İzleme dinleyicisi (System. Diagnostics. XmlWriterTraceListener) tür olarak eklenir. @No__t-0 özniteliği, bu dinleyicinin günlük dosyasının adını `SdrConfigExample.e2e` olacak şekilde ayarlamak için kullanılır. Günlük dosyası için, basit bir dosya adı için tam olarak nitelenmiş bir yol kullanabilirsiniz.
+Bu örnekte, İzleme dinleyicisinin adı ve türü belirtilir. Dinleyici adlandırılır `sdt` ve standart .NET Framework İzleme dinleyicisi (System.Diagnostics.XmlWriterTraceListener) tür olarak eklenir. `initializeData`Özniteliği, bu dinleyicinin bir günlük dosyasının adını ayarlamak için kullanılır `SdrConfigExample.e2e` . Günlük dosyası için, basit bir dosya adı için tam olarak nitelenmiş bir yol kullanabilirsiniz.
 
 Örnek, SdrConfigExample. e2e adlı kök dizinde bir dosya oluşturur. Izleme görüntüleyicisini kullanarak dosyayı "WCF Izleme dosyalarını açma ve görüntüleme" bölümünde açıklandığı gibi açtığınızda, gönderilen tüm iletileri görebilirsiniz.
 
-İzleme düzeyi `switchValue` ayarıyla denetlenir. Kullanılabilir izleme düzeyleri aşağıdaki tabloda açıklanmıştır.
+İzleme düzeyi ayar tarafından denetlenir `switchValue` . Kullanılabilir izleme düzeyleri aşağıdaki tabloda açıklanmıştır.
 
-|İzleme düzeyi|Açıklama|
+|İzleme düzeyi|Description|
 |-----------------|-----------------|
-|Kritik|-Başarısız-hızlı ve olay günlüğü girişleri ve İzleme bağıntı bilgilerini günlüğe kaydeder. Kritik düzeyini ne zaman kullanacağınızı aşağıda bulabilirsiniz:<br />-İşlenmemiş bir özel durum nedeniyle AppDomain 'e aşağı gitti.<br />-Uygulamanız başlatılamıyor.<br />-Hatanın, MyApp. exe işleminden kaynaklandı olduğunu belirten ileti.|
+|Kritik|-Başarısız-hızlı ve olay günlüğü girişleri ve İzleme bağıntı bilgilerini günlüğe kaydeder. Kritik düzeyini ne zaman kullanacağınızı aşağıda bulabilirsiniz:<br />-İşlenmemiş bir özel durum nedeniyle AppDomain 'e aşağı gitti.<br />-Uygulamanız başlatılamıyor.<br />-İşlemden kaynaklanan hata MyApp.exe ileti.|
 |Hata|-Tüm özel durumları günlüğe kaydeder. Aşağıdaki durumlarda hata düzeyini kullanabilirsiniz:<br />-Geçersiz bir tür dönüştürme özel durumu nedeniyle kodunuz kilitlendi.<br />-"Uç nokta oluşturulamadı" özel durumu, uygulamanızın başlangıçta başarısız olmasına neden oluyor.|
 |Uyarı|-Daha sonra bir hata veya kritik hata oluşmasına neden olabilecek bir koşul var. Aşağıdaki durumlarda bu düzeyi kullanabilirsiniz:<br />-Uygulama, azaltma ayarlarından izin verdiğinden daha fazla istek alıyor.<br />-Alma sırası yapılandırılmış kapasitesinin yüzde 98 ' sinden fazla.|
-|Bilgiler|-Sistem durumunu izleme ve tanılama, performansı ölçme veya profil oluşturma konularında yararlı iletiler oluşturulur. Kapasite planlama ve performans yönetimi için bu bilgilerden yararlanabilirsiniz. Aşağıdaki durumlarda bu düzeyi kullanabilirsiniz:<br />-İleti AppDomain 'e ulaştıktan ve seri durumdan çıkarıldıktan sonra bir hata oluştu.<br />-HTTP bağlaması oluşturulurken bir hata oluştu.|
+|Bilgi|-Sistem durumunu izleme ve tanılama, performansı ölçme veya profil oluşturma konularında yararlı iletiler oluşturulur. Kapasite planlama ve performans yönetimi için bu bilgilerden yararlanabilirsiniz. Aşağıdaki durumlarda bu düzeyi kullanabilirsiniz:<br />-İleti AppDomain 'e ulaştıktan ve seri durumdan çıkarıldıktan sonra bir hata oluştu.<br />-HTTP bağlaması oluşturulurken bir hata oluştu.|
 |Ayrıntılı|-Hem Kullanıcı kodu hem de bakım için hata ayıklama düzeyi izleme. Şu durumlarda bu düzeyi ayarla:<br />-Hata oluştuğunda kodunuzda hangi yöntemin çağrıldığı konusunda emin değilsiniz.<br />-Ayrılmış bir uç noktanız var ve ayırma deposundaki giriş kilitlendiğinden hizmet başlatılamadı.|
 |ActivityTracing|İşlem etkinlikleri ve bileşenleri arasındaki akış olayları.<br /><br /> Bu düzey, yöneticilerin ve geliştiricilerin aynı uygulama etki alanındaki uygulamaları ilişkilendirmelerine olanak sağlar.<br /><br /> -Etkinlik sınırları için izlemeler: Başlat/Durdur.<br />-Aktarımlar için izlemeler.|
 
- Kullanmak istediğiniz izleme dinleyicisinin adını ve türünü belirtmek için `add` ' yı kullanabilirsiniz. Örnek yapılandırmada, dinleyici `sdt` olarak adlandırılır ve standart .NET Framework İzleme dinleyicisi (`System.Diagnostics.XmlWriterTraceListener`) tür olarak eklenir. Bu dinleyicinin günlük dosyasının adını ayarlamak için `initializeData` kullanın. Buna ek olarak, basit bir dosya adı için tam nitelikli bir yol kullanabilirsiniz.
+ `add`Kullanmak istediğiniz izleme dinleyicisinin adını ve türünü belirtmek için ' i kullanabilirsiniz. Örnek yapılandırmada, dinleyici adlandırılır `sdt` ve standart .NET Framework İzleme dinleyicisi ( `System.Diagnostics.XmlWriterTraceListener` ) tür olarak eklenir. `initializeData`Bu dinleyicinin günlük dosyasının adını ayarlamak için kullanın. Buna ek olarak, basit bir dosya adı için tam nitelikli bir yol kullanabilirsiniz.
 
-.NET Framework 4,8 ' den başlayarak, bazı yüksek karşıtlık temalarında ComboBox denetimleri doğru renkte görüntülenir. *SvcTraceViewer. exe. config* dosyasından aşağıdaki ayarı kaldırarak bu değişikliği devre dışı bırakabilirsiniz:
+.NET Framework 4,8 ' den başlayarak, bazı yüksek karşıtlık temalarında ComboBox denetimleri doğru renkte görüntülenir. *svcTraceViewer.exe.config* dosyasından aşağıdaki ayarı kaldırarak bu değişikliği devre dışı bırakabilirsiniz:
 
 ```xml
 <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
@@ -75,14 +76,14 @@ Hizmet Izleme Görüntüleyicisi üç dosya türünü destekler:
 
 ##### <a name="to-open-a-trace-file"></a>Bir izleme dosyasını açmak için
 
-1. WCF yükleme konumunuza (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) gitmek için bir komut penceresi kullanarak hizmet Izleme görüntüleyicisini başlatın ve sonra `SvcTraceViewer.exe` yazın.
+1. WCF yükleme konumunuza (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin) gitmek için bir komut penceresi kullanarak hizmet Izleme görüntüleyicisini başlatın ve ardından yazın `SvcTraceViewer.exe` .
 
 > [!NOTE]
 > Hizmet Izleme Görüntüleyicisi aracı iki dosya türüyle ilişkilendirebilir:. svclog ve. stvproj. Dosya uzantılarını kaydetmek ve kaydını silmek için komut satırında iki parametre kullanabilirsiniz.
 >
-> /Register: '. svclog "ve". stvproj "dosya uzantılarının ilişkilendirmesini SvcTraceViewer. exe ile kaydedin
+> /Register: dosya uzantılarının ". svclog" ve ". stvproj" ilişkilendirmesini SvcTraceViewer.exe ile kaydedin
 >
-> /Unregister: SvcTraceViewer. exe ile ". svclog" ve ". stvproj" dosya uzantılarının ilişkilendirmesini silme
+> /Unregister: ". svclog" ve ". stvproj" dosya uzantılarının ilişkilendirmesini SvcTraceViewer.exe ile
 
 1. Hizmet Izleme Görüntüleyicisi başladığında **Dosya** ' ya tıklayın ve sonra **Aç**' a gelin. İzleme Dosyalarınızın depolandığı konuma gidin.
 
@@ -291,11 +292,11 @@ Mevcut bir izlemeye tıklayıp, izlemenin yapısına göre bir filtre oluşturab
 
 2. İzleme bölmesinin en üstünde yer alan **özel filtre oluştur** düğmesine tıklayın.
 
-3. Görüntülenen iletişim kutusunda filtreniz için bir ad girin. Bu örnekte `Thread ID` girin. Filtreniz için bir açıklama da sağlayabilirsiniz.
+3. Görüntülenen iletişim kutusunda filtreniz için bir ad girin. Bu örnekte, girin `Thread ID` . Filtreniz için bir açıklama da sağlayabilirsiniz.
 
-4. Soldaki ağaç görünümü, 1. adımda seçtiğiniz izleme kaydının yapısını görüntüler. Koşul oluşturmak istediğiniz öğeye gidin. Bu örnekte, XPath: /E2ETraceEvent/System/Execution/@ThreadID düğümünde bulunan ThreadID öğesine gidin. Ağaç görünümündeki ThreadID özniteliğine çift tıklayın. Bu, iletişim kutusunun sağ tarafındaki özniteliği için bir ifade oluşturur.
+4. Soldaki ağaç görünümü, 1. adımda seçtiğiniz izleme kaydının yapısını görüntüler. Koşul oluşturmak istediğiniz öğeye gidin. Bu örnekte, XPath: düğümünde bulunan ThreadID öğesine gidin /E2ETraceEvent/System/Execution/@ThreadID . Ağaç görünümündeki ThreadID özniteliğine çift tıklayın. Bu, iletişim kutusunun sağ tarafındaki özniteliği için bir ifade oluşturur.
 
-5. ThreadID koşulunun parametre alanını None iken ' {0} ' olarak değiştirin. Bu adım, filtre uygulandığında ThreadID değerinin yapılandırılmasını sağlar. (Filtre uygulama bölümüne bakın) En fazla dört parametre tanımlayabilirsiniz. Koşullar OR işleci kullanılarak birleştirilir.
+5. ThreadID koşulunun parametre alanını None iken ' ' olarak değiştirin {0} . Bu adım, filtre uygulandığında ThreadID değerinin yapılandırılmasını sağlar. (Filtre uygulama bölümüne bakın) En fazla dört parametre tanımlayabilirsiniz. Koşullar OR işleci kullanılarak birleştirilir.
 
 6. Filtreyi oluşturmak için **Tamam** ' ı tıklatın.
 
@@ -322,7 +323,7 @@ Mevcut bir izlemeye tıklayıp, izlemenin yapısına göre bir filtre oluşturab
 
 2. **Şimdi filtrele**' ye tıklayın ve işlemin sonucunu gözlemleyin.
 
-Filtreniz birden çok parametre kullanıyorsa, '; ' öğesini '; ' öğesini **bul** alanına ayırıcı olarak girin. Örneğin, aşağıdaki dize 3 parametre tanımlar: ' 1; findValue; Text '. Görüntüleyici, filtrenin {0} parametresine ' 1 ' uygular. ' findValue ' ve ' text ' sırasıyla {1} ve {2} ' e uygulanır.
+Filtreniz birden çok parametre kullanıyorsa, '; ' öğesini '; ' öğesini **bul** alanına ayırıcı olarak girin. Örneğin, aşağıdaki dize 3 parametre tanımlar: ' 1; findValue; Text '. Görüntüleyici, filtrenin parametresine ' 1 ' uygular {0} . ' findValue ' ve ' text ', sırasıyla öğesine {1} uygulanır {2} .
 
 ###### <a name="sharing-custom-filters"></a>Özel filtreleri paylaşma
 
@@ -449,49 +450,49 @@ Aşağıda, hizmet Izleme Görüntüleyicisi aracının, farklı öğeleri göst
 
 ### <a name="activity-tracing-traces"></a>Etkinlik Izleme Izlemeleri
 
-|Simge|Açıklama|
+|Simge|Description|
 |----------|-----------------|
 |![Uyarı izleme](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-badav-bcb27409dad58")|Uyarı izleme: uyarı düzeyine yayılan bir izleme|
 |![Hata izleme](./media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Hata izleme: hata düzeyine yayılan bir izleme.|
-|![Etkinlik başlangıcı izlemesi:](./media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4A95-AFE8-0b6acd6e0317")|Etkinlik başlangıcı izlemesi: bir etkinliğin başlangıcını işaretleyen bir izleme. Etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, işlem veya iş parçacığı başına etkinlik kimliği başına bir etkinlik başlangıç izlemesi tanımlamanız gerekir.<br /><br /> Etkinlik kimliği izleme bağıntısı için izleme kaynakları arasında yayıldığında, daha sonra aynı etkinlik kimliği (izleme kaynağı başına bir tane) için birden çok Başlat görebilirsiniz. İzleme kaynağı için ActivityTracing etkinleştirilirse başlangıç izlemesi yayınlanır.|
-|![Etkinlik durdurma izleme](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Etkinlik durdurma izlemesi: etkinliğin sonuna işaret eden bir izleme. biçimindeki telefon numarasıdır. Etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, izleme kaynağı başına etkinlik kimliği başına bir etkinlik İzlemeyi Durdur ' u tanımlamanız gerekir. İzleme süresi ayrıntı düzeyi yeterince küçük olmadığı sürece, belirli bir izleme kaynağından bir izleme kaynağı, etkinlik o izleme kaynağı tarafından, bu izleme kaynağı tarafından yayıldıktan sonra görünmez. Bu durumda, bir Dur dahil olmak üzere aynı zamana sahip iki izleme, gösterildiğinde araya eklenebilir. Etkinlik kimliği izleme bağıntısı için izleme kaynakları arasında yayıldığında aynı etkinlik kimliği (izleme kaynağı başına bir tane) için birden çok durak görebilirsiniz. İzleme kaynağı için ActivityTracing etkinleştirilirse durdurma izlemesi yayınlanır.|
-|![Etkinlik askıya alma Trace](./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Etkinlik askıya alma izlemesi: etkinliğin duraklatıldığı saati işaretleyen bir izleme. Etkinlik sürdürülene kadar askıya alınmış bir etkinlikte izleme yapılmaz. Askıya alınmış bir etkinlik, izleme kaynağı kapsamındaki bu etkinlikte hiçbir işlemin gerçekleşmediğini belirtir. Bekletme/sürdürülme izlemeleri profil oluşturma için faydalıdır. İzleme kaynağı için ActivityTracing etkinleştirilirse, askıya alma izlemesi yayınlanır.|
-|![Etkinlik özgeçmişi Trace](./media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Etkinlik devam izleme: etkinlik askıya alındıktan sonra devam eden süreyi işaretleyen bir izleme. İzlemeler, bu etkinlikte yeniden dağıtılabilir. Bekletme/sürdürülme izlemeleri profil oluşturma için faydalıdır. İzleme kaynağı için ActivityTracing etkinleştirilirse, sürdürülme izlemesi yayınlanır.|
-|![](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "B2d9850e-f362-4ae5-bb8d-9f6f3ca036a5") aktar|Aktarım: mantıksal denetim akışı bir etkinlikten diğerine aktarıldığında yayınlanan bir izleme. Aktarımın kaynaklandığı etkinlik, aktarımın gittiği etkinliğe paralel olarak iş gerçekleştirmeye devam edebilir. İzleme kaynağı için ActivityTracing etkinleştirilirse, aktarım izlemesi yayınlanır.|
-|(./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bdad741") ![konumundan aktarma]|Aktarma yeri: başka bir etkinlikten geçerli etkinliğe bir aktarımı tanımlayan bir izleme.|
-|(./media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f") !['e aktarın]|Aktar: geçerli etkinlikten başka bir etkinliğe mantıksal denetim akışının aktarımını tanımlayan bir izleme.|
+|![Etkinlik başlangıç izlemesi:](./media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4A95-AFE8-0b6acd6e0317")|Etkinlik başlangıcı izlemesi: bir etkinliğin başlangıcını işaretleyen bir izleme. Etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, işlem veya iş parçacığı başına etkinlik kimliği başına bir etkinlik başlangıç izlemesi tanımlamanız gerekir.<br /><br /> Etkinlik kimliği izleme bağıntısı için izleme kaynakları arasında yayıldığında, daha sonra aynı etkinlik kimliği (izleme kaynağı başına bir tane) için birden çok Başlat görebilirsiniz. İzleme kaynağı için ActivityTracing etkinleştirilirse başlangıç izlemesi yayınlanır.|
+|![Etkinlik durdurma izlemesi](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Etkinlik durdurma izlemesi: etkinliğin sonuna işaret eden bir izleme. . Etkinliğin adını içerir. Uygulama Tasarımcısı veya geliştirici olarak, izleme kaynağı başına etkinlik kimliği başına bir etkinlik İzlemeyi Durdur ' u tanımlamanız gerekir. İzleme süresi ayrıntı düzeyi yeterince küçük olmadığı sürece, belirli bir izleme kaynağından bir izleme kaynağı, etkinlik o izleme kaynağı tarafından, bu izleme kaynağı tarafından yayıldıktan sonra görünmez. Bu durumda, bir Dur dahil olmak üzere aynı zamana sahip iki izleme, gösterildiğinde araya eklenebilir. Etkinlik kimliği izleme bağıntısı için izleme kaynakları arasında yayıldığında aynı etkinlik kimliği (izleme kaynağı başına bir tane) için birden çok durak görebilirsiniz. İzleme kaynağı için ActivityTracing etkinleştirilirse durdurma izlemesi yayınlanır.|
+|![Etkinlik askıya alma izlemesi](./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Etkinlik askıya alma izlemesi: etkinliğin duraklatıldığı saati işaretleyen bir izleme. Etkinlik sürdürülene kadar askıya alınmış bir etkinlikte izleme yapılmaz. Askıya alınmış bir etkinlik, izleme kaynağı kapsamındaki bu etkinlikte hiçbir işlemin gerçekleşmediğini belirtir. Bekletme/sürdürülme izlemeleri profil oluşturma için faydalıdır. İzleme kaynağı için ActivityTracing etkinleştirilirse, askıya alma izlemesi yayınlanır.|
+|![Etkinlik özgeçmişi izlemesi](./media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4E0A-9988-cdc2f7030f17")|Etkinlik devam izleme: etkinlik askıya alındıktan sonra devam eden süreyi işaretleyen bir izleme. İzlemeler, bu etkinlikte yeniden dağıtılabilir. Bekletme/sürdürülme izlemeleri profil oluşturma için faydalıdır. İzleme kaynağı için ActivityTracing etkinleştirilirse, sürdürülme izlemesi yayınlanır.|
+|![Aktarma](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Aktarım: mantıksal denetim akışı bir etkinlikten diğerine aktarıldığında yayınlanan bir izleme. Aktarımın kaynaklandığı etkinlik, aktarımın gittiği etkinliğe paralel olarak iş gerçekleştirmeye devam edebilir. İzleme kaynağı için ActivityTracing etkinleştirilirse, aktarım izlemesi yayınlanır.|
+|![Aktarma yeri](./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bdad741")|Aktarma yeri: başka bir etkinlikten geçerli etkinliğe bir aktarımı tanımlayan bir izleme.|
+|![Aktarım yeri](./media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Aktar: geçerli etkinlikten başka bir etkinliğe mantıksal denetim akışının aktarımını tanımlayan bir izleme.|
 
 ### <a name="wcf-traces"></a>WCF Izlemeleri
 
-|Simge|Açıklama|
+|Simge|Description|
 |----------|-----------------|
-|![Ileti günlüğü izleme](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|İleti günlüğü izleme: `System.ServiceModel.MessageLogging` izleme kaynağı etkinleştirildiğinde, ileti günlüğü özelliği tarafından bir WCF iletisi günlüğe kaydedildiğinde yayılan bir izleme. Bu izlemeye tıkladığınızda ileti görüntülenir. İleti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: ServiceLevelSendRequest, TransportSend, TransportReceive ve ServiceLevelReceiveRequest. Bu, ileti günlüğü izlemesinde `messageSource` özniteliğiyle de belirlenebilir.|
-|![İleti Trace](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-C5DD-41EC-b1c3-ac56b4dfa35c") alındı|İleti alındı Trace: `System.ServiceModel` izleme kaynağı bilgi veya ayrıntılı düzeyde etkinleştirilmişse, bir WCF iletisi alındığında yayınlanan bir izleme. Bu izleme, etkinlik **grafiği** görünümünde ileti bağıntı okuna bakmak için gereklidir.|
-|![Ileti gönderildi Trace](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4C12-9405-677e995ac387")|İleti gönderme izlemesi: `System.ServiceModel` izleme kaynağı bilgi veya ayrıntılı düzeyde etkinleştirilmişse, bir WCF iletisi gönderildiğinde yayınlanan bir izleme. Bu izleme, etkinlik **grafiği** görünümünde ileti bağıntı okuna bakmak için gereklidir.|
+|![İleti günlüğü izleme](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|İleti günlüğü izleme: izleme kaynağı etkinleştirildiğinde, ileti günlüğü özelliği tarafından bir WCF iletisi günlüğe kaydedildiğinde yayınlanan bir izleme `System.ServiceModel.MessageLogging` . Bu izlemeye tıkladığınızda ileti görüntülenir. İleti için dört yapılandırılabilir günlüğe kaydetme noktası vardır: ServiceLevelSendRequest, TransportSend, TransportReceive ve ServiceLevelReceiveRequest. Bu, `messageSource` ileti günlüğü izlemesinde özniteliği tarafından da belirlenebilir.|
+|![İleti alındı izlemesi](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|İleti alındı izlemesi: `System.ServiceModel` izleme kaynağı bilgi veya ayrıntılı düzeyde etkinleştirilmişse, BIR WCF iletisi alındığında yayınlanan bir izleme. Bu izleme, etkinlik **grafiği** görünümünde ileti bağıntı okuna bakmak için gereklidir.|
+|![İleti gönderme izlemesi](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4C12-9405-677e995ac387")|İleti gönderildi izlemesi: `System.ServiceModel` izleme kaynağı bilgi veya ayrıntılı düzeyde etkinleştirilmişse, BIR WCF iletisi gönderildiğinde yayınlanan bir izleme. Bu izleme, etkinlik **grafiği** görünümünde ileti bağıntı okuna bakmak için gereklidir.|
 
 ### <a name="activities"></a>Etkinlikler
 
-|Simge|Açıklama|
+|Simge|Description|
 |----------|-----------------|
 |![Etkinlik](./media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Etkinlik: geçerli etkinliğin genel etkinlik olduğunu gösterir.|
 |![Kök etkinlik](./media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Kök etkinlik: bir işlemin kök etkinliğini gösterir.|
 
 ### <a name="wcf-activities"></a>WCF etkinlikleri
 
-|Simge|Açıklama|
+|Simge|Description|
 |----------|-----------------|
 |![Ortam etkinliği](./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-CF78-46e5-822d-56222fff61d1")|Ortam etkinliği: WCF konağını veya istemcisini oluşturan, açan veya kapatan bir etkinlik. Bu evreler sırasında gerçekleşen hatalar bu etkinlikte görünür.|
-|![Dinleme etkinliği](./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45D7-9913-037ab30e4c26")|Dinleme etkinliği: bir dinleyiciyle ilgili izlemeleri günlüğe kaydeden bir etkinlik. Bu etkinliğin içinde, dinleyici bilgilerini ve bağlantı isteklerini görüntüleyebiliriz.|
-|![Bayt alma etkinliği](./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45A7-925b-616c96426c0e")|Bayt alma etkinliği: iki uç nokta arasındaki bir bağlantıda gelen baytları alma ile ilgili tüm izlemeleri gruplandıran bir etkinlik. Bu etkinlik, http. sys gibi etkinlik kimliklerini yayan taşıma etkinlikleriyle ilgili bir temel öneme sahiptir. Bu etkinlikte, iptal gibi bağlantı hataları görüntülenir.|
-|![Işlem iletisi etkinliği](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|İşlem Iletisi etkinliği: bir WCF iletisi oluşturmayla ilgili izlemeleri gruplandıran bir etkinlik. Hatalı bir zarf veya hatalı biçimlendirilmiş bir ileti nedeniyle oluşan hatalar söz konusu etkinlikte görüntülenir. Bu etkinliğin içinde, çağrı kaynağından bir etkinlik kimliğinin yayıldığını görmek için ileti üstbilgilerini inceleyebilirsiniz. Bu değer true ise, Işlem eylemi etkinliğine (bir sonraki simge) aktarım yaptığımız zaman, bu etkinliğe, çağıran ve çağrılan izlemeler arasındaki bağıntı için yayılan etkinlik kimliği de atayabiliriz.|
-|![Ileti günlüğü izleme](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|İşlem eylemi etkinliği: iki uç nokta genelinde bir WCF isteğiyle ilgili tüm izlemeleri gruplandıran bir etkinlik. @No__t-0 ' ı yapılandırmanın her iki uç noktasında `true` olarak ayarlandıysa, her iki uç noktadan tüm izlemeler doğrudan bağıntı için tek bir etkinlikte birleştirilir. Bu etkinlik, taşıma veya güvenlik işleme nedeniyle, Kullanıcı kodu sınırına ve geri (bir yanıt varsa) Genişlemeden hatalar içerecektir.|
-|![Işlem iletisi etkinliği](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Kullanıcı kodunu Yürüt etkinliği: bir isteği işlemek için Kullanıcı kod izlemelerini gruplandıran bir etkinlik.|
+|![Dinleme etkinliği](./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Dinleme etkinliği: bir dinleyiciyle ilgili izlemeleri günlüğe kaydeden bir etkinlik. Bu etkinliğin içinde, dinleyici bilgilerini ve bağlantı isteklerini görüntüleyebiliriz.|
+|![Bayt alma etkinliği](./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45A7-925b-616c96426c0e")|Bayt alma etkinliği: iki uç nokta arasındaki bir bağlantıda gelen baytları alma ile ilgili tüm izlemeleri gruplandıran bir etkinlik. Bu etkinlik, http.sys gibi etkinlik kimliklerini yayan taşıma etkinlikleriyle ilgili bir temel öneme sahiptir. Bu etkinlikte, iptal gibi bağlantı hataları görüntülenir.|
+|![Iletiyi işle etkinliği](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|İşlem Iletisi etkinliği: bir WCF iletisi oluşturmayla ilgili izlemeleri gruplandıran bir etkinlik. Hatalı bir zarf veya hatalı biçimlendirilmiş bir ileti nedeniyle oluşan hatalar söz konusu etkinlikte görüntülenir. Bu etkinliğin içinde, çağrı kaynağından bir etkinlik kimliğinin yayıldığını görmek için ileti üstbilgilerini inceleyebilirsiniz. Bu değer true ise, Işlem eylemi etkinliğine (bir sonraki simge) aktarım yaptığımız zaman, bu etkinliğe, çağıran ve çağrılan izlemeler arasındaki bağıntı için yayılan etkinlik kimliği de atayabiliriz.|
+|![İleti günlüğü izleme](./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|İşlem eylemi etkinliği: iki uç nokta genelinde bir WCF isteğiyle ilgili tüm izlemeleri gruplandıran bir etkinlik. `propagateActivity` `true` Yapılandırma içindeki her iki uç nokta için olarak ayarlandıysa, her iki uç noktanın tüm izlemeleri doğrudan bağıntı için tek bir etkinlikte birleştirilir. Bu etkinlik, taşıma veya güvenlik işleme nedeniyle, Kullanıcı kodu sınırına ve geri (bir yanıt varsa) Genişlemeden hatalar içerecektir.|
+|![Iletiyi işle etkinliği](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Kullanıcı kodunu Yürüt etkinliği: bir isteği işlemek için Kullanıcı kod izlemelerini gruplandıran bir etkinlik.|
 
 ## <a name="troubleshooting"></a>Sorun giderme
 
-Kayıt defterine yazmak için izniniz yoksa, aracı kaydetmek için "`svctraceviewer /register`" komutunu kullandığınızda şu hata iletisiyle "Microsoft hizmet Izleme Görüntüleyicisi sisteme kaydedilmedi" iletisini alırsınız. Bu durumda, kayıt defterine yazma erişimi olan bir hesap kullanarak oturum açmanız gerekir.
+Kayıt defterine yazma izniniz yoksa, `svctraceviewer /register` Aracı kaydettirmek için "" komutunu kullandığınızda "Microsoft hizmet Izleme Görüntüleyicisi sisteme kaydedilmedi" hata iletisini alırsınız. Bu durumda, kayıt defterine yazma erişimi olan bir hesap kullanarak oturum açmanız gerekir.
 
-Ayrıca, hizmet Izleme Görüntüleyicisi aracı derleme klasöründeki SvcTraceViewer. exe. Settings dosyasına bazı ayarları (örneğin, özel filtreler ve filtre seçenekleri) yazar. Dosya için okuma izniniz yoksa, aracı yine de başlatabilirsiniz, ancak ayarları yükleyemezsiniz.
+Ayrıca, hizmet Izleme Görüntüleyicisi aracı derleme klasöründeki SvcTraceViewer.exe. Settings dosyasına bazı ayarları (örneğin, özel filtreler ve filtre seçenekleri) yazar. Dosya için okuma izniniz yoksa, aracı yine de başlatabilirsiniz, ancak ayarları yükleyemezsiniz.
 
 . Etl dosyasını açarken "bir veya daha fazla izleme işlenirken bilinmeyen bir hata oluştu" hata iletisini alırsanız,. etl dosyasının biçiminin geçersiz olduğu anlamına gelir.
 
@@ -499,6 +500,6 @@ Arapça bir işletim sistemi kullanılarak oluşturulmuş bir izleme günlüğü
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [İlişkilendirilmiş İzlemeleri Görüntülemek ve Sorun Gidermek için Hizmet İzleme Görüntüleyicisini Kullanma ](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [İzlemeyi Yapılandırma](./diagnostics/tracing/configuring-tracing.md)
 - [Uçtan Uca İzleme](./diagnostics/tracing/end-to-end-tracing.md)

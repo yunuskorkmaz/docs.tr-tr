@@ -1,13 +1,14 @@
 ---
 title: Oturumlar, Örnek Oluşturma ve Eşzamanlılık
+description: Oturumlar, örnek oluşturma ve eşzamanlılık, nasıl kullanılacağı ve WFC arasındaki etkileşimler hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 070e9ed25e2c0cce1309fb27e3f6a02bb01f3d2c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 41eef5a962c702eebd6b9a34607b542ec6bbd97b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600328"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246551"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Oturumlar, Örnek Oluşturma ve Eşzamanlılık
 *Oturum* , iki uç nokta arasında gönderilen tüm iletilerin bağıntısı olur. *Örnek* oluşturma, Kullanıcı tanımlı hizmet nesnelerinin ve bunlarla ilgili nesnelerin ömrünü denetlemeye başvurur <xref:System.ServiceModel.InstanceContext> . *Eşzamanlılık* , aynı anda bir içinde yürütülen iş parçacığı sayısı denetimine verilen terimdir <xref:System.ServiceModel.InstanceContext> .  

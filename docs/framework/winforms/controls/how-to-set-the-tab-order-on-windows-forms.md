@@ -1,5 +1,6 @@
 ---
 title: Denetimlerin sekme sırasını ayarla
+description: Windows Forms denetimlerin sekme sırasını ayarlamayı öğrenin. Sekme sırasını Visual Studio ile ayarlayın veya Özellikler penceresi TabIndex özelliğini kullanın.
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -13,12 +14,12 @@ ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5d53e411bda0279271e4f73e1842c52fd6d9b3a9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3d16da1ac73cc030b92bb36c4bfa3a79985339bf
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903369"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Nasıl yapılır: Windows Forms sekme sırasını ayarlama
 
@@ -28,7 +29,7 @@ Sekme sırası, bir kullanıcının odağı bir denetimden diğerine taşıdıkl
 
 1. Visual Studio 'da, **Görünüm** menüsünde **sekme sırası**' nı seçin.
 
-   Bu, formda sekme sırası seçim modunu etkinleştirir. Her denetimin sol üst köşesinde bir sayı (<xref:System.Windows.Forms.Control.TabIndex%2A> özelliğini temsil) görüntülenir.
+   Bu, formda sekme sırası seçim modunu etkinleştirir. <xref:System.Windows.Forms.Control.TabIndex%2A>Her denetimin sol üst köşesinde bir sayı (özelliği temsil eder) görünür.
 
 2. İstediğiniz sekme sırasını oluşturmak için denetimlere sırayla tıklayın.
 
@@ -38,25 +39,25 @@ Sekme sırası, bir kullanıcının odağı bir denetimden diğerine taşıdıkl
 3. İşiniz bittiğinde, sekme sırası modundan çıkmak için **Görünüm** menüsünde **sekme sırası** ' nı seçin.
 
    > [!NOTE]
-   > Devre dışı bırakılmış ve görünmeyen denetimlerin yanı sıra, odağı alamayan denetimlerin <xref:System.Windows.Forms.Control.TabIndex%2A> bir özelliği yoktur ve sekme sırasına dahil edilmez. Bir Kullanıcı Tab tuşuna bastığında, bu denetimler atlanır.
+   > Odağı alamayan ve devre dışı bırakılmış ve görünmeyen denetimlerin yanı <xref:System.Windows.Forms.Control.TabIndex%2A> sıra, özelliği olmayan ve sekme sırasına dahil olmayan denetimler. Bir Kullanıcı Tab tuşuna bastığında, bu denetimler atlanır.
 
-Alternatif olarak, sekme sırası <xref:System.Windows.Forms.Control.TabIndex%2A> özelliğini kullanarak Özellikler penceresi ayarlanabilir. Bir denetimin <xref:System.Windows.Forms.Control.TabIndex%2A> özelliği, sekme düzeninde nerede konumlandığını belirler. Varsayılan olarak, çizilen ilk denetimin değeri 0 <xref:System.Windows.Forms.Control.TabIndex%2A>, ikincisi ise 1 <xref:System.Windows.Forms.Control.TabIndex%2A> ve bu şekilde devam eder.
+Alternatif olarak, sekme sırası özelliği kullanılarak Özellikler penceresi ayarlanabilir <xref:System.Windows.Forms.Control.TabIndex%2A> . <xref:System.Windows.Forms.Control.TabIndex%2A>Bir denetimin özelliği, sekme düzeninde nerede konumlandığını belirler. Varsayılan olarak, çizilen ilk denetimin <xref:System.Windows.Forms.Control.TabIndex%2A> değeri 0, ikincisi <xref:System.Windows.Forms.Control.TabIndex%2A> 1 ' dir ve bu şekilde devam eder.
 
-Ayrıca, varsayılan olarak, bir <xref:System.Windows.Forms.GroupBox> denetimi bir tam sayı olan kendi <xref:System.Windows.Forms.Control.TabIndex%2A> değerine sahiptir. <xref:System.Windows.Forms.GroupBox> denetiminin kendisi çalışma zamanında odağa sahip olamaz. Bu nedenle, bir <xref:System.Windows.Forms.GroupBox> içindeki her denetim,. 0 ' dan başlayan kendi ondalık <xref:System.Windows.Forms.Control.TabIndex%2A> değerine sahiptir. Doğal olarak, bir <xref:System.Windows.Forms.GroupBox> denetiminin <xref:System.Windows.Forms.Control.TabIndex%2A> artdıkça, içindeki denetimler buna göre arttırılır. 5 ' ten 6 ' a <xref:System.Windows.Forms.Control.TabIndex%2A> bir değeri değiştirdiyseniz, grubundaki ilk denetimin <xref:System.Windows.Forms.Control.TabIndex%2A> değeri otomatik olarak 6,0 olarak değişir ve bu şekilde devam eder.
+Ek olarak, varsayılan olarak bir <xref:System.Windows.Forms.GroupBox> Denetim kendi değerine sahiptir <xref:System.Windows.Forms.Control.TabIndex%2A> ve bu bir tam sayıdır. Bir <xref:System.Windows.Forms.GroupBox> denetimin kendisi çalışma zamanında odağa sahip olamaz. Bu nedenle, içindeki her denetim <xref:System.Windows.Forms.GroupBox> kendi ondalık değerine sahiptir <xref:System.Windows.Forms.Control.TabIndex%2A> . 0 ile başlar. Doğal olarak, <xref:System.Windows.Forms.Control.TabIndex%2A> bir <xref:System.Windows.Forms.GroupBox> denetimin artdıkça, içindeki denetimler buna göre arttırılır. <xref:System.Windows.Forms.Control.TabIndex%2A>5 ' ten 6 ' a bir değer değiştirdiyseniz, <xref:System.Windows.Forms.Control.TabIndex%2A> grubundaki ilk denetimin değeri otomatik olarak 6,0 olarak değişir ve bu şekilde devam eder.
 
-Son olarak, formunuzda çok sayıda denetim, sekme sırasına göre atlanabilir. Genellikle, çalışma zamanında Tab 'ın her zaman başarılı olarak basılması, sekme düzeninde her bir denetimi seçer. <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini kapatarak, formun sekme düzeninde bir denetimin geçirilmesini sağlayabilirsiniz.
+Son olarak, formunuzda çok sayıda denetim, sekme sırasına göre atlanabilir. Genellikle, çalışma zamanında Tab 'ın her zaman başarılı olarak basılması, sekme düzeninde her bir denetimi seçer. <xref:System.Windows.Forms.Control.TabStop%2A>Özelliği kapatarak, formun sekme düzeninde bir denetimin geçirilmesini sağlayabilirsiniz.
 
 ## <a name="to-remove-a-control-from-the-tab-order"></a>Sekme sırasına göre bir denetimi kaldırmak için
 
-**Özellikler** penceresinde denetimin <xref:System.Windows.Forms.Control.TabStop%2A> özelliğini **false** olarak ayarlayın.
+<xref:System.Windows.Forms.Control.TabStop%2A> **Özellikler** penceresinde denetimin özelliğini **false** olarak ayarlayın.
 
-<xref:System.Windows.Forms.Control.TabStop%2A> özelliği, Tab tuşu ile denetimlerde geçiş yaptığınızda denetim atlansa bile, `false` olarak ayarlanmış bir denetim, sekme düzeninde hala konumunu korur.
+<xref:System.Windows.Forms.Control.TabStop%2A>Özelliği `false` Tab tuşu ile denetimlerde geçiş yaptığınızda denetim atlansa bile, özelliği sekme düzeninde hala devam edecek şekilde ayarlanmış olan bir denetim.
 
 > [!NOTE]
-> Radyo düğmesi grubunun çalışma zamanında tek bir sekme durağı vardır. Seçilen düğme (diğer bir deyişle, <xref:System.Windows.Forms.RadioButton.Checked%2A> özelliği `true`olarak ayarlanan düğmenin <xref:System.Windows.Forms.Control.TabStop%2A> özelliği otomatik olarak `true`olarak ayarlanır, diğer düğmelerin <xref:System.Windows.Forms.Control.TabStop%2A> özelliği `false`olarak ayarlanmıştır. Gruplandırma <xref:System.Windows.Forms.RadioButton> denetimleri hakkında daha fazla bilgi için, bkz. [küme olarak işlev yapmak için Windows Forms RadioButton denetimlerini gruplandırma](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
+> Radyo düğmesi grubunun çalışma zamanında tek bir sekme durağı vardır. Seçili düğme (diğer bir deyişle, özelliği olarak ayarlanmış olan düğme <xref:System.Windows.Forms.RadioButton.Checked%2A> `true` ) <xref:System.Windows.Forms.Control.TabStop%2A> özelliği olarak olarak ayarlanır `true` , diğer düğmelerin <xref:System.Windows.Forms.Control.TabStop%2A> özelliği olarak ayarlanır `false` . Gruplandırma denetimleri hakkında daha fazla bilgi için <xref:System.Windows.Forms.RadioButton> bkz. [bir küme olarak işlev yapmak Için Windows Forms RadioButton denetimlerini gruplandırma](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms Denetimleri](index.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms denetimleri](index.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
 - [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

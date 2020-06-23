@@ -1,16 +1,17 @@
 ---
 title: Anonim bir istemciyle aktarım güvenliği
+description: İstemcinin güvendiği bir sertifika kullanarak bir sunucunun kimliğini doğrulamak için aktarım güvenliği kullanan bu WCF senaryosunu inceleyin. İstemcinin kimliği doğrulanmadı.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 08cfb8c1a5581f17a251224430018764bed80b0f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344753"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245017"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Anonim bir istemciyle aktarım güvenliği
 
@@ -22,19 +23,19 @@ Hizmeti olan bir sertifika kullanma hakkında daha fazla bilgi için bkz. [serti
 
 ![Anonim bir istemciyle taşıma güvenliğini kullanma](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
-|Özellikler|Açıklama|
+|Özellik|Description|
 |--------------------|-----------------|
-|Güvenlik modu|Aktarma|
-|Birlikte Çalışabilirlik|Mevcut Web Hizmetleri ve istemcilerle|
-|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet<br /><br /> Uygulama düzeyi (WCF desteği yok)|
-|Bütünlük|Evet|
-|Gizlilik|Evet|
-|Aktarma|HTTPS|
+|Güvenlik modu|Aktarım|
+|Birlikte çalışabilirlik|Mevcut Web Hizmetleri ve istemcilerle|
+|Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Yes<br /><br /> Uygulama düzeyi (WCF desteği yok)|
+|Bütünlük|Yes|
+|Gizlilik|Yes|
+|Aktarım|HTTPS|
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|
 
 ## <a name="service"></a>Hizmet
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
 
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.
 
@@ -80,7 +81,7 @@ Aşağıdaki kod, yapılandırma kullanarak aynı uç noktayı ayarlar. İstemci
 
 ## <a name="client"></a>İstemci
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
 
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).
 
@@ -123,7 +124,7 @@ Hizmeti ayarlamak için aşağıdaki yapılandırma kod yerine kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliğe Genel Bakış](security-overview.md)
-- [WS Aktarım Güvenliği](../samples/ws-transport-security.md)
+- [Güvenliğe genel bakış](security-overview.md)
+- [WS Taşıma Güvenliği](../samples/ws-transport-security.md)
 - [Aktarım Güvenliğine Genel Bakış](transport-security-overview.md)
 - [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

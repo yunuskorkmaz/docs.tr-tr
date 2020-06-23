@@ -1,13 +1,14 @@
 ---
 title: HTTP Kimlik Doğrulamasını Anlama
+description: HTTP kimlik doğrulama şemaları ve bir kimlik doğrulama düzeni seçmek dahil olmak üzere WCF 'de HTTP kimlik doğrulamasına giriş konusunu gözden geçirin.
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: a31c9f96185364c59dca1ff26251a30f5d7a88bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 761ab7a92aa26ce1437eefa360e5b46df179e32d
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595095"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246525"
 ---
 # <a name="understanding-http-authentication"></a>HTTP Kimlik Doğrulamasını Anlama
 Kimlik doğrulaması, bir istemcinin bir kaynağa erişmeye uygun olup olmadığını belirleme işlemidir. HTTP protokolü, güvenli bir kaynağa erişim anlaşması için bir yol olarak kimlik doğrulamasını destekler.  
@@ -17,7 +18,7 @@ Kimlik doğrulaması, bir istemcinin bir kaynağa erişmeye uygun olup olmadığ
 ## <a name="http-authentication-schemes"></a>HTTP kimlik doğrulama şemaları  
  Sunucu, istemcinin arasından seçim yapmak için birden çok kimlik doğrulama düzeni belirtebilir. Aşağıdaki tabloda, Windows uygulamalarında yaygın olarak bulunan bazı kimlik doğrulama düzenleri açıklanmaktadır.  
   
-|Kimlik doğrulama düzeni|Açıklama|  
+|Kimlik doğrulama düzeni|Description|  
 |---------------------------|-----------------|  
 |Anonim|Anonim bir istek herhangi bir kimlik doğrulama bilgisi içermiyor. Bu, herkese kaynağa erişim izni vermeye eşdeğerdir.|  
 |Temel|Temel kimlik doğrulaması, istemci için Kullanıcı adı ve parola içeren Base64 kodlamalı bir dize gönderir. Base64 bir şifreleme formu değildir ve Kullanıcı adı ve parolayı şifresiz metin olarak göndermekle aynı olarak düşünülmelidir. Bir kaynağın korunması gerekiyorsa, temel kimlik doğrulaması dışında bir kimlik doğrulama düzeni kullanmayı kesin olarak düşünün.|  

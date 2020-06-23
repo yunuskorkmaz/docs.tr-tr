@@ -1,16 +1,17 @@
 ---
 title: Net.TCP Bağlantı Noktası Paylaşımı
+description: Yüksek performanslı iletişim için TCP tabanlı protokol ve bağlantı noktalarının WCF 'de birden çok kullanıcı işlemi arasında paylaşılmasını sağlayan hizmet hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: d9c6caa546d9f31f4e68b850dc1b1e750da2e93c
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a9579c588906f509dd835d3c9b25571495d147e0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598768"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245251"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Bağlantı Noktası Paylaşımı
 Windows Communication Foundation (WCF), yüksek performanslı iletişim için yeni bir TCP tabanlı Ağ Protokolü (net. TCP://) sağlar. WCF Ayrıca, net. TCP bağlantı noktalarının birden çok kullanıcı işlemi arasında paylaşılmasını sağlayan net. TCP bağlantı noktası paylaşma hizmeti olan yeni bir sistem bileşeni de sunar.  
@@ -20,9 +21,9 @@ Windows Communication Foundation (WCF), yüksek performanslı iletişim için ye
   
  Uygulamalar arasında ayrım yapmak için bağlantı noktası numaralarını kullanmak güvenlik sorunlarıyla karşılaştı. Güvenlik duvarları genellikle, birkaç iyi bilinen giriş noktası dışındaki tüm bağlantı noktalarında TCP trafiğini engelleyecek şekilde yapılandırılmıştır. bu nedenle, kurumsal ve kişisel güvenlik duvarlarının varlığı nedeniyle standart olmayan bir bağlantı noktası kullanan bir uygulamanın dağıtımı genellikle karmaşık veya hatta imkansız olur. Zaten izin verilen standart, iyi bilinen bağlantı noktaları üzerinden iletişim kurabilen uygulamalar, dış saldırı yüzeyini azaltır. Birçok ağ uygulaması HTTP protokolünü kullanır, çünkü çoğu güvenlik duvarı varsayılan olarak TCP bağlantı noktası 80 ' de trafiğe izin verecek şekilde yapılandırılır.  
   
- HTTP. Birçok farklı HTTP uygulamasının trafiğinin tek bir TCP bağlantı noktasında çoğullanmış olduğu SYS modeli, Windows platformunda standart hale gelmiştir. Bu, güvenlik duvarı yöneticileri için ortak bir denetim noktası sağlar, böylece uygulama geliştiricilerinin, ağı kullanan yeni uygulamalar oluşturma maliyetini en aza indirmesine izin verir.  
+ Birçok farklı HTTP uygulamasının trafiğinin tek bir TCP bağlantı noktası üzerinde çoğullanmış olduğu HTTP.SYS modeli, Windows platformunda standart hale gelmiştir. Bu, güvenlik duvarı yöneticileri için ortak bir denetim noktası sağlar, böylece uygulama geliştiricilerinin, ağı kullanan yeni uygulamalar oluşturma maliyetini en aza indirmesine izin verir.  
   
- Birden çok HTTP uygulamasında bağlantı noktası paylaşma özelliği, büyük bir Internet Information Services (IIS) özelliğidir. Ancak, yalnızca HTTP 'nin tanıtılmasıyla karşılaşıldı. Bu altyapının tamamen Genelleştirilmiş olduğunu ISS 6,0 ile SYS (çekirdek modu HTTP protokol dinleyicisi). Aslında HTTP. SYS, rastgele kullanıcı işlemlerinin HTTP trafiğine adanmış TCP bağlantı noktalarını paylaşmasına izin verir. Bu özellik, çok sayıda HTTP uygulamasının aynı fiziksel makinede, TCP bağlantı noktası 80 üzerinden trafik göndermek ve almak için gereken ağ altyapısını paylaşırken ayrı, yalıtılmış süreçler üzerinde birlikte bulunmasını sağlar. Net. TCP bağlantı noktası paylaşma hizmeti, net. TCP uygulamaları için aynı bağlantı noktası paylaşımı türünü sunar.  
+ Birden çok HTTP uygulamasında bağlantı noktası paylaşma özelliği, büyük bir Internet Information Services (IIS) özelliğidir. Ancak, bu altyapının tamamen genelleştirilmiş bir şekilde HTTP.SYS (çekirdek modu HTTP protokol dinleyicisi) yalnızca IIS 6,0 ile kullanıma sunulmaktadır. Aslında HTTP.SYS, rastgele kullanıcı işlemlerinin HTTP trafiğine adanmış TCP bağlantı noktalarını paylaşmasına izin verir. Bu özellik, çok sayıda HTTP uygulamasının aynı fiziksel makinede, TCP bağlantı noktası 80 üzerinden trafik göndermek ve almak için gereken ağ altyapısını paylaşırken ayrı, yalıtılmış süreçler üzerinde birlikte bulunmasını sağlar. Net. TCP bağlantı noktası paylaşma hizmeti, net. TCP uygulamaları için aynı bağlantı noktası paylaşımı türünü sunar.  
   
 ## <a name="port-sharing-architecture"></a>Bağlantı noktası paylaşma mimarisi  
  WCF 'deki bağlantı noktası paylaşma mimarisi üç ana bileşene sahiptir:  

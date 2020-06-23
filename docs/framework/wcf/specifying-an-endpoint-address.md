@@ -1,5 +1,6 @@
 ---
 title: Bir Uç Noktası Adresi Belirtme
+description: WCF 'de ServiceEndpoint 'in bir parçası olan bir uç nokta adresi hakkında bilgi edinin. WCF hizmeti olan tüm iletişimler uç noktaları aracılığıyla oluşur.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 5ec6432d2f9cc7bf8619f59bad470c6b2cb190e0
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: e1bd9e5a27d1bc86d2d3e04ee82221a27a4e1fa8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441025"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245992"
 ---
 # <a name="specifying-an-endpoint-address"></a>Bir Uç Noktası Adresi Belirtme
 
@@ -42,13 +43,13 @@ IIS ile barındırırken, <xref:System.ServiceModel.ServiceHost> örneği kendin
 
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Yapılandırmada uç nokta adreslerini tanımlama
 
-Bir yapılandırma dosyasında bir uç nokta tanımlamak için [ \< Endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) öğesini kullanın.
+Bir yapılandırma dosyasında bir uç nokta tanımlamak için [\<endpoint>](../configure-apps/file-schema/wcf/endpoint-element.md) öğesini kullanın.
 
 [!code-xml[S_UEHelloWorld#5](./snippets/specifying-an-endpoint-address/serviceapp2.config#5)]
 
-<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>Yöntemi çağrıldığında (yani, barındırma uygulaması hizmeti başlatmaya çalıştığında), sistem "UE" belirten bir Name özniteliğiyle birlikte bir [ \< Service>](../configure-apps/file-schema/wcf/service.md) öğesi arar. Samples. HelloService ". [ \< Hizmet>](../configure-apps/file-schema/wcf/service.md) öğesi bulunursa, sistem belirtilen sınıfı yükler ve yapılandırma dosyasında belirtilen uç nokta tanımlarını kullanarak uç noktalar oluşturur. Bu mekanizma, koddan bağlama ve adresleme bilgilerini korurken iki satırlık kodla bir hizmeti yükleyip başlatabilmeniz için izin verir. Bu yaklaşımın avantajı, bu değişikliklerin uygulamayı yeniden derlemek veya yeniden dağıtmak zorunda kalmadan yapılabilmesine neden olur.
+<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>Yöntemi çağrıldığında (yani, barındırma uygulaması hizmeti başlatmaya çalıştığında), sistem [\<service>](../configure-apps/file-schema/wcf/service.md) "UE" belirten bir ad özniteliği olan bir öğe arar. Samples. HelloService ". [\<service>](../configure-apps/file-schema/wcf/service.md)Öğe bulunursa, sistem belirtilen sınıfı yükler ve yapılandırma dosyasında belirtilen uç nokta tanımlarını kullanarak bitiş noktaları oluşturur. Bu mekanizma, koddan bağlama ve adresleme bilgilerini korurken iki satırlık kodla bir hizmeti yükleyip başlatabilmeniz için izin verir. Bu yaklaşımın avantajı, bu değişikliklerin uygulamayı yeniden derlemek veya yeniden dağıtmak zorunda kalmadan yapılabilmesine neden olur.
 
-İsteğe bağlı üstbilgiler [ \<>bir üst bilgi ](../configure-apps/file-schema/wcf/headers-element.md)olarak belirtilir. Aşağıda iki üst bilgi arasında ayrım yapan bir yapılandırma dosyasındaki bir hizmetin uç noktalarını belirtmek için kullanılan öğelerin bir örneği verilmiştir: "Gold" istemcileri, `http://tempuri1.org/` ve "standart" istemcilerinden `http://tempuri2.org/` . Bu hizmeti çağıran istemci, yapılandırma dosyasında>uygun [ \< üstbilgilere](../configure-apps/file-schema/wcf/headers-element.md) sahip olmalıdır.
+İsteğe bağlı üstbilgiler bir içinde bildirilmiştir [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) . Aşağıda iki üst bilgi arasında ayrım yapan bir yapılandırma dosyasındaki bir hizmetin uç noktalarını belirtmek için kullanılan öğelerin bir örneği verilmiştir: "Gold" istemcileri, `http://tempuri1.org/` ve "standart" istemcilerinden `http://tempuri2.org/` . Bu hizmeti çağıran istemcinin yapılandırma dosyasında uygun olması gerekir [\<headers>](../configure-apps/file-schema/wcf/headers-element.md) .
 
 [!code-xml[S_UEHelloWorld#1](./snippets/specifying-an-endpoint-address/serviceapp.config#1)]
 
@@ -91,4 +92,4 @@ Uç noktalar açık olarak sağlanmışsa, çağrılmadan önce ' de çağırara
 - <xref:System.ServiceModel.EndpointAddress>
 - [Kimlik Doğrulama ile Hizmet Kimliği](./feature-details/service-identity-and-authentication.md)
 - [Uç Noktası Oluşturma Genel Bakış](endpoint-creation-overview.md)
-- [Barındırma](./feature-details/hosting.md)
+- [Hosting](./feature-details/hosting.md)
