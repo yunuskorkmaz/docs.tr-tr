@@ -1,5 +1,6 @@
 ---
-title: HttpWebRequest._HttpResponse Alanı
+title: HttpWebRequest. _HttpResponse alanı
+description: .NET 'teki HttpWebRequest. _HttpResponse alanını anlayın. Bu alan bir HTTP isteğinden HTTP yanıt ayrıntılarını içeren bir HttpWebResponse türüdür.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-ms.openlocfilehash: 0c5bfc56299aa06dd59c2598588044e81a69933a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70058e1183abf5b6bfd172497f65a3ceb2344060
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989960"
 ---
-# <a name="httpwebrequest_httpresponse-field"></a><span data-ttu-id="0fdc8-102">httpwebrequest. \_httpResponse Alanı</span><span class="sxs-lookup"><span data-stu-id="0fdc8-102">HttpWebRequest.\_HttpResponse Field</span></span>
+# <a name="httpwebrequest_httpresponse-field"></a><span data-ttu-id="dad6a-104">HttpWebRequest. \_ HttpResponse alanı</span><span class="sxs-lookup"><span data-stu-id="dad6a-104">HttpWebRequest.\_HttpResponse Field</span></span>
 
-<span data-ttu-id="0fdc8-103">`HttpWebRequest._HttpResponse`bir <xref:System.Net.HttpWebResponse> HTTP isteğinden alınan bir HTTP yanıt ayrıntılarıdır.</span><span class="sxs-lookup"><span data-stu-id="0fdc8-103">`HttpWebRequest._HttpResponse` is an <xref:System.Net.HttpWebResponse> containing HTTP response details from an HTTP request.</span></span> <span data-ttu-id="0fdc8-104">Bir HTTP `null` yanıtı alınana kadar olabilir.</span><span class="sxs-lookup"><span data-stu-id="0fdc8-104">It can be `null` until an HTTP response is received.</span></span>
+<span data-ttu-id="dad6a-105">`HttpWebRequest._HttpResponse`, <xref:System.Net.HttpWebResponse> BIR http ISTEĞINDEN http yanıt ayrıntıları içeriyor.</span><span class="sxs-lookup"><span data-stu-id="dad6a-105">`HttpWebRequest._HttpResponse` is an <xref:System.Net.HttpWebResponse> containing HTTP response details from an HTTP request.</span></span> <span data-ttu-id="dad6a-106">`null`Http yanıtı alınana kadar olabilir.</span><span class="sxs-lookup"><span data-stu-id="dad6a-106">It can be `null` until an HTTP response is received.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="0fdc8-105">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="0fdc8-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="dad6a-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="dad6a-107">Syntax</span></span>
   
 ```csharp  
 internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> <span data-ttu-id="0fdc8-106">Alan `HttpWebRequest._HttpResponse` dahilidir ve doğrudan kodunuzda kullanılmak üzere değildir.</span><span class="sxs-lookup"><span data-stu-id="0fdc8-106">The `HttpWebRequest._HttpResponse` field is internal and not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="dad6a-108">`HttpWebRequest._HttpResponse`Alan dahili ve doğrudan kodunuzda kullanılmak üzere tasarlanmamıştır.</span><span class="sxs-lookup"><span data-stu-id="dad6a-108">The `HttpWebRequest._HttpResponse` field is internal and not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="0fdc8-107">Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="0fdc8-107">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="dad6a-109">Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.</span><span class="sxs-lookup"><span data-stu-id="dad6a-109">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="0fdc8-108">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="0fdc8-108">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="dad6a-110">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="dad6a-110">Requirements</span></span>
 
-<span data-ttu-id="0fdc8-109">**Ad alanı:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="0fdc8-109">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="dad6a-111">**Ad alanı:**<xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="dad6a-111">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="0fdc8-110">**Montaj:** Sistem (System.dll'de)</span><span class="sxs-lookup"><span data-stu-id="0fdc8-110">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="dad6a-112">**Bütünleştirilmiş kod:** Sistem (System.dll)</span><span class="sxs-lookup"><span data-stu-id="dad6a-112">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="0fdc8-111">**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.</span><span class="sxs-lookup"><span data-stu-id="0fdc8-111">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="dad6a-113">**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="dad6a-113">**.NET Framework versions:** Available since 2.0.</span></span>

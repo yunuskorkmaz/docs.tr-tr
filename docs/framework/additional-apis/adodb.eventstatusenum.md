@@ -1,5 +1,6 @@
 ---
-title: EventStatus numaralandırması (adodb)
+title: EventStatus numaralandırması (ADODB)
+description: .NET 'teki EventStatus numaralandırması hakkında bilgi alın. Bu numaralandırma, ADODB ad alanında ve ADODB derlemesinde (adodb.dll kitaplığı).
 ms.date: 03/28/2019
 topic_type:
 - apiref
@@ -9,33 +10,33 @@ api_location:
 - adodb.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 1eddac7f9b813ea76e8347deb6f4bd7548abe504
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7effa55efb104c9203e7051ef998b03ff3315e93
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989840"
 ---
-# <a name="eventstatus-enumeration"></a><span data-ttu-id="30427-102">EventStatus numaralandırması</span><span class="sxs-lookup"><span data-stu-id="30427-102">EventStatus Enumeration</span></span>
+# <a name="eventstatus-enumeration"></a><span data-ttu-id="b5e68-104">EventStatus numaralandırması</span><span class="sxs-lookup"><span data-stu-id="b5e68-104">EventStatus Enumeration</span></span>
 
 ```csharp
 [GuidAttribute("00000530-0000-0010-8000-00AA006D2EA4")]
 public enum EventStatusEnum
 ```
 
-## <a name="members"></a><span data-ttu-id="30427-103">Üyeler</span><span class="sxs-lookup"><span data-stu-id="30427-103">Members</span></span>
+## <a name="members"></a><span data-ttu-id="b5e68-105">Üyeler</span><span class="sxs-lookup"><span data-stu-id="b5e68-105">Members</span></span>
 
-| <span data-ttu-id="30427-104">Üye adı</span><span class="sxs-lookup"><span data-stu-id="30427-104">Member name</span></span>  | <span data-ttu-id="30427-105">Açıklama</span><span class="sxs-lookup"><span data-stu-id="30427-105">Description</span></span>  |
+| <span data-ttu-id="b5e68-106">Üye adı</span><span class="sxs-lookup"><span data-stu-id="b5e68-106">Member name</span></span>  | <span data-ttu-id="b5e68-107">Description</span><span class="sxs-lookup"><span data-stu-id="b5e68-107">Description</span></span>  |
 |---|---|
-|<span data-ttu-id="30427-106">adStatusOK</span><span class="sxs-lookup"><span data-stu-id="30427-106">adStatusOK</span></span>  |   |
-|<span data-ttu-id="30427-107">adStatusErrorsOccurred</span><span class="sxs-lookup"><span data-stu-id="30427-107">adStatusErrorsOccurred</span></span>  |   |
-|<span data-ttu-id="30427-108">adStatusCantDeny</span><span class="sxs-lookup"><span data-stu-id="30427-108">adStatusCantDeny</span></span>  |   |
-|<span data-ttu-id="30427-109">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="30427-109">adRsnUndoUpdate</span></span>  |   |
-|<span data-ttu-id="30427-110">adStatusCancel</span><span class="sxs-lookup"><span data-stu-id="30427-110">adStatusCancel</span></span>  |   |
-|<span data-ttu-id="30427-111">adStatusUnwantedEvent</span><span class="sxs-lookup"><span data-stu-id="30427-111">adStatusUnwantedEvent</span></span>  |   |
+|<span data-ttu-id="b5e68-108">adStatusOK</span><span class="sxs-lookup"><span data-stu-id="b5e68-108">adStatusOK</span></span>  |   |
+|<span data-ttu-id="b5e68-109">adStatusErrorsOccurred</span><span class="sxs-lookup"><span data-stu-id="b5e68-109">adStatusErrorsOccurred</span></span>  |   |
+|<span data-ttu-id="b5e68-110">adStatusCantDeny</span><span class="sxs-lookup"><span data-stu-id="b5e68-110">adStatusCantDeny</span></span>  |   |
+|<span data-ttu-id="b5e68-111">adRsnUndoUpdate</span><span class="sxs-lookup"><span data-stu-id="b5e68-111">adRsnUndoUpdate</span></span>  |   |
+|<span data-ttu-id="b5e68-112">adStatusCancel</span><span class="sxs-lookup"><span data-stu-id="b5e68-112">adStatusCancel</span></span>  |   |
+|<span data-ttu-id="b5e68-113">adStatusUnwantedEvent</span><span class="sxs-lookup"><span data-stu-id="b5e68-113">adStatusUnwantedEvent</span></span>  |   |
 
-## <a name="requirements"></a><span data-ttu-id="30427-112">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="30427-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b5e68-114">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="b5e68-114">Requirements</span></span>
 
-<span data-ttu-id="30427-113">**Namespace:** `adodb`</span><span class="sxs-lookup"><span data-stu-id="30427-113">**Namespace:** `adodb`</span></span>
+<span data-ttu-id="b5e68-115">**Ad alanı:**`adodb`</span><span class="sxs-lookup"><span data-stu-id="b5e68-115">**Namespace:** `adodb`</span></span>
 
-<span data-ttu-id="30427-114">**Bütünleştirilmiş kod:** adodb (içinde ADODB.dll dosyasını)</span><span class="sxs-lookup"><span data-stu-id="30427-114">**Assembly:** adodb (in adodb.dll)</span></span>
+<span data-ttu-id="b5e68-116">**Bütünleştirilmiş kod:** adodb (adodb.dll)</span><span class="sxs-lookup"><span data-stu-id="b5e68-116">**Assembly:** adodb (in adodb.dll)</span></span>

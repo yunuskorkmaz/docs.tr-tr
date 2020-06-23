@@ -1,5 +1,6 @@
 ---
-title: IFont.Name özelliği (stdole)
+title: IFont.Name özelliği (Stdole)
+description: .NET 'teki IFont.Name özelliği hakkında başvuru bilgileri alın. Bu okuma/yazma özelliği, Stdole ad alanında ve Stdole derlemesinde bulunur.
 ms.date: 02/22/2019
 topic_type:
 - apiref
@@ -11,25 +12,25 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: b74992174d244845e1db2b283d962f2b87071c91
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bdc773956c15554b0700d78dcdc833d8111da896
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989503"
 ---
-# <a name="ifontname-property"></a><span data-ttu-id="d2eee-102">IFont.Name Özelliği</span><span class="sxs-lookup"><span data-stu-id="d2eee-102">IFont.Name Property</span></span>
+# <a name="ifontname-property"></a><span data-ttu-id="37fa4-104">IFont.Name Özelliği</span><span class="sxs-lookup"><span data-stu-id="37fa4-104">IFont.Name Property</span></span>
 
 ```csharp
 string Name { get; set; }
 ```
 
-## <a name="property-value"></a><span data-ttu-id="d2eee-103">Özellik değeri</span><span class="sxs-lookup"><span data-stu-id="d2eee-103">Property value</span></span>
+## <a name="property-value"></a><span data-ttu-id="37fa4-105">Özellik değeri</span><span class="sxs-lookup"><span data-stu-id="37fa4-105">Property value</span></span>
 
 <xref:System.String>\
 
-## <a name="requirements"></a><span data-ttu-id="d2eee-104">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="d2eee-104">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="37fa4-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="37fa4-106">Requirements</span></span>
 
-<span data-ttu-id="d2eee-105">**Namespace:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="d2eee-105">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="37fa4-107">**Ad alanı:**`stdole`</span><span class="sxs-lookup"><span data-stu-id="37fa4-107">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="d2eee-106">**Bütünleştirilmiş kod:** stdole (içinde stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="d2eee-106">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="37fa4-108">**Bütünleştirilmiş kod:** Stdole (stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="37fa4-108">**Assembly:** stdole (in stdole.dll)</span></span>

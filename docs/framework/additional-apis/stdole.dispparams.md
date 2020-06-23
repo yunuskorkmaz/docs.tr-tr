@@ -1,5 +1,6 @@
 ---
-title: DISPPARAMS yapısı (stdole)
+title: DISPPARAMS yapısı (Stdole)
+description: .NET 'teki DISPPARAMS yapısı hakkında başvuru bilgileri alın. Yapı, Stdole ad alanında ve Stdole derlemesinde bulunur.
 ms.date: 03/16/2019
 topic_type:
 - apiref
@@ -9,21 +10,21 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 3f424dffae8c8f40bd87ab3d46a6645a31aa7fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b07d400649fda2af2035fa6a23d2a45d9b0a095
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989560"
 ---
-# <a name="dispparams-structure"></a><span data-ttu-id="34f66-102">DISPPARAMS Yapısı</span><span class="sxs-lookup"><span data-stu-id="34f66-102">DISPPARAMS Structure</span></span>
+# <a name="dispparams-structure"></a><span data-ttu-id="fa0cd-104">DISPPARAMS Yapısı</span><span class="sxs-lookup"><span data-stu-id="fa0cd-104">DISPPARAMS Structure</span></span>
 
 ```csharp
 public struct DISPPARAMS
 ```
 
-## <a name="requirements"></a><span data-ttu-id="34f66-103">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="34f66-103">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fa0cd-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="fa0cd-105">Requirements</span></span>
 
-<span data-ttu-id="34f66-104">**Namespace:** `stdole`</span><span class="sxs-lookup"><span data-stu-id="34f66-104">**Namespace:** `stdole`</span></span>
+<span data-ttu-id="fa0cd-106">**Ad alanı:**`stdole`</span><span class="sxs-lookup"><span data-stu-id="fa0cd-106">**Namespace:** `stdole`</span></span>
 
-<span data-ttu-id="34f66-105">**Bütünleştirilmiş kod:** stdole (içinde stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="34f66-105">**Assembly:** stdole (in stdole.dll)</span></span>
+<span data-ttu-id="fa0cd-107">**Bütünleştirilmiş kod:** Stdole (stdole.dll)</span><span class="sxs-lookup"><span data-stu-id="fa0cd-107">**Assembly:** stdole (in stdole.dll)</span></span>
