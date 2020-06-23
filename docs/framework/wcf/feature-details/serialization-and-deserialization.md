@@ -1,16 +1,17 @@
 ---
 title: Seri Hale Getirme ve Seri Durumdan Çıkarma
+description: Her iki yönde de .NET Framework nesneleri ve XML arasında çeviren WCF serileştirme altyapısı hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 8d62fe1cb646bfa00f3fd2e694f08d9fed297bc2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600431"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244913"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içerir, <xref:System.Runtime.Serialization.DataContractSerializer> . <xref:System.Runtime.Serialization.DataContractSerializer>.NET Framework nesneleri ve XML arasında her iki yönde çevirir. Bu konuda, serileştiricinin nasıl çalıştığı açıklanmaktadır.  

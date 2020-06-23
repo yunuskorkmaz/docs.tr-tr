@@ -1,15 +1,16 @@
 ---
 title: <netTcpBinding>
+description: Yalnızca TCP kullanan WCF çapraz makine iletişimi için tasarlanan güvenli, güvenilir ve iyileştirilmiş bir bağlamayı temsil eder. Güvenilir Mesajlaşma varsayılan olarak kapalıdır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: c43c141093c8287adb6d5a841a43ac893deefccd
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95c2c691bf328050f3d189c790d111d2fdeb1bb0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74139336"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244003"
 ---
 # \<netTcpBinding>
 
@@ -20,7 +21,7 @@ Makineler arası iletişim için güvenli, güvenilir ve iyileştirilmiş bir ba
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<netTcpBinding>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <netTcpBinding>
@@ -83,7 +84,7 @@ Makineler arası iletişim için güvenli, güvenilir ve iyileştirilmiş bir ba
   
 ### <a name="child-elements"></a>Alt öğeleri  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
 |[\<security>](security-of-nettcpbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.NetTcpSecurityElement> .|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
@@ -91,7 +92,7 @@ Makineler arası iletişim için güvenli, güvenilir ve iyileştirilmiş bir ba
   
 ### <a name="parent-elements"></a>Üst öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   

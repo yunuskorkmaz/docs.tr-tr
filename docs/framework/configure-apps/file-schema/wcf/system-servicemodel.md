@@ -1,5 +1,6 @@
 ---
 title: <system.serviceModel>
+description: WCF hizmetini ve istemci uygulamalarını yapılandırmanızı sağlayan WCF ServiceModel yapılandırma öğeleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.ServiceModel
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 2125ce00b0e23f2e93ff251549f9c1276892b16b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 567cbd2cc07ee82e795daa067b9034b2b8dc1974
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399451"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85243964"
 ---
 # \<system.serviceModel>
 Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) ServiceModel yapılandırma öğelerini içerir.  
@@ -21,7 +22,7 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
 [**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;**\<system.serviceModel>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.serviceModel>
@@ -62,13 +63,13 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
 |[\<behaviors>](behaviors.md)|Bu bölüm, ve adlı iki alt koleksiyonu tanımlar `endpointBehaviors` `serviceBehaviors` .  Her koleksiyon, sırasıyla bitiş noktaları ve hizmetler tarafından tüketilen davranış öğelerini tanımlar. Her davranış öğesi, benzersiz özniteliği tarafından tanımlanır `name` .|  
 |[\<bindings>](bindings.md)|Bu bölüm, standart ve özel bağlamaların bir koleksiyonunu içerir. Her giriş, benzersiz olarak tanımlanır `name` . Hizmetler, kullanarak bağlama yoluyla bağlamaları kullanır `name` .|  
 |[\<client>](client.md)|Bu bölüm, bir istemcinin hizmete bağlanmak için kullandığı uç noktaların listesini içerir.|  
 |[\<comContracts>](comcontracts.md)|Bu bölümde, WCF ve COM birlikte çalışma için etkinleştirilen COM sözleşmeleri tanımlanmaktadır.|  
-|[\<commonBehaviors>](commonbehaviors.md)|Bu bölüm yalnızca Machine. config dosyasında tanımlanabilir. Ve adlı iki alt koleksiyonu tanımlar `endpointBehaviors` `serviceBehaviors` .  Her koleksiyon, sırasıyla makinedeki tüm WCF uç noktaları ve Hizmetleri tarafından tüketilen davranış öğelerini tanımlar.  Bir davranış hem hem de bölümlerinde tanımlanmışsa `<commonBehaviors>` `<behaviors>` , \<behaviors> bölümdeki davranışa tercih edilir.|  
+|[\<commonBehaviors>](commonbehaviors.md)|Bu bölüm yalnızca machine.config dosyasında tanımlanabilir. Ve adlı iki alt koleksiyonu tanımlar `endpointBehaviors` `serviceBehaviors` .  Her koleksiyon, sırasıyla makinedeki tüm WCF uç noktaları ve Hizmetleri tarafından tüketilen davranış öğelerini tanımlar.  Bir davranış hem hem de bölümlerinde tanımlanmışsa `<commonBehaviors>` `<behaviors>` , \<behaviors> bölümdeki davranışa tercih edilir.|  
 |[\<diagnostics>](diagnostics.md)|Bu bölüm, WCF 'nin tanılama özelliklerinin ayarlarını içerir. Kullanıcı izlemeyi, performans sayaçlarını ve WMI sağlayıcısını etkinleştirebilir/devre dışı bırakabilir ve özel ileti filtreleri ekleyebilir.|  
 |[\<extensions>](extensions-section.md)|Bu bölüm, kullanıcının Kullanıcı tanımlı bağlamalar, davranışlar ve diğer uzantı yönlerini oluşturmalarına olanak tanıyan bir uzantı koleksiyonu içerir.|  
 |[\<protocolMapping>](protocolmapping.md)|Bu bölüm, Aktarım Protokolü şemaları (örn. http, net. TCP, net. pipe, vb.) ve WCF bağlamaları arasında bir varsayılan protokol eşlemesi kümesi tanımlar.|  
@@ -80,7 +81,7 @@ Bu yapılandırma bölümü, tüm Windows Communication Foundation (WCF) Service
 
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
 |\<configuration>|Bir .NET yapılandırma dosyasındaki tüm yapılandırma öğeleri için kök öğesi.|  
   

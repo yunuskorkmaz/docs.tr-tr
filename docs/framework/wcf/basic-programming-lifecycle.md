@@ -1,15 +1,16 @@
 ---
 title: Temel Programlama Yaşam Döngüsü
+description: Bir WCF uygulaması oluşturmak için görevler hakkında bilgi edinin. WCF, uygulamaların aynı bilgisayarda, ağlar üzerinde veya farklı uygulama platformlarında iletişim kurmasını sağlar.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c672827fff780fd263f5355520bb6ccf02bb902e
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320821"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245537"
 ---
 # <a name="basic-programming-lifecycle"></a>Temel Programlama Yaşam Döngüsü
 Windows Communication Foundation (WCF), uygulamaların aynı bilgisayarda, Internet üzerinden veya farklı uygulama platformlarında olup olmadıkları ile iletişim kurmasını sağlar. Bu konu, bir WCF uygulaması oluşturmak için gereken görevleri özetler. Çalışan bir örnek uygulama için bkz. [Başlangıç Öğreticisi](getting-started-tutorial.md).  
@@ -33,4 +34,4 @@ Windows Communication Foundation (WCF), uygulamaların aynı bilgisayarda, Inter
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hizmet Anlaşmalarını Uygulama](implementing-service-contracts.md)
+- [Hizmet Sözleşmelerini Uygulama](implementing-service-contracts.md)

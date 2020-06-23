@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter._WritingCompleted Olay (System.Windows.Xps)
+title: XpsDocumentWriter. _WritingCompleted olayı (System. Windows. XPS)
+description: .NET ' te bir XML Kağıt Belirtimi (XPS) belgesi için yazma işlemi tamamlandığında oluşan XpsDocumentWriter. _WritingCompleted olayını anlayın.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,18 +12,18 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 0c233965638217ad5b25b9792fe07fb4d73dbe18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3926630cafa2fea4e499e86d7c8b8eb707b8fd95
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155628"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105195"
 ---
-# <a name="xpsdocumentwriter_writingcompleted-event"></a>Xpsdocumentwriter. \_YazılarTamamlanan Etkinlik
+# <a name="xpsdocumentwriter_writingcompleted-event"></a>XpsDocumentWriter. \_ WritingCompleted olayı
 
-Bir yazma işlemi bittiğinde oluşur.
+Bir yazma işlemi tamamlandığında gerçekleşir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ``` csharp
 internal event WritingCompletedEventHandler _WritingCompleted
@@ -32,6 +33,6 @@ internal event WritingCompletedEventHandler _WritingCompleted
 
 **Ad alanı:**<xref:System.Windows.Xps>
 
-**Montaj:** System.Printing (system.printing.dll içinde)
+**Bütünleştirilmiş kod:** System. Printing (system.printing.dll)
 
-**.NET Framework sürümleri:** 3.0'dan beri mevcut
+**.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir

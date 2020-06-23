@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-ms.openlocfilehash: 0d462fcc92fc1be5ddbc2e76237d8436219c7295
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 8ae30b8c29dcf3aaa183ff295c7ee8592322797f
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504543"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141787"
 ---
 # <a name="proxy-element-network-settings"></a>\<proxy> Öğesi (Ağ Ayarları)
 Bir ara sunucu tanımlar.  
@@ -24,15 +24,15 @@ Bir ara sunucu tanımlar.
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<proxy>**
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <proxy
-  autoDetect="true|false|unspecified"
-  bypassonlocal="true|false|unspecified"
+  autoDetect="True|False|Unspecified"
+  bypassonlocal="True|False|Unspecified"
   proxyaddress="uriString"
   scriptLocation="uriString"
-  usesystemdefault="true|false|unspecified"
+  usesystemdefault="True|False|Unspecified"
 />
 ```  
   
@@ -43,11 +43,11 @@ Bir ara sunucu tanımlar.
   
 |**Öznitelik**|**Açıklama**|  
 |-------------------|---------------------|  
-|`autoDetect`|Proxy 'nin otomatik olarak algılanıp algılanmayacağını belirtir. Varsayılan değer: `unspecified`.|  
-|`bypassonlocal`|Yerel kaynaklar için proxy 'nin atlanıp atlanmayacağını belirtir. Yerel sunucu ( `http://localhost` , `http://loopback` , veya `http://127.0.0.1` ) ve nokta () olmayan bir URI 'yi içerir `http://webserver` . Varsayılan değer: `unspecified`.|  
+|`autoDetect`|Proxy 'nin otomatik olarak algılanıp algılanmayacağını belirtir. Varsayılan değer: `Unspecified`.|  
+|`bypassonlocal`|Yerel kaynaklar için proxy 'nin atlanıp atlanmayacağını belirtir. Yerel sunucu ( `http://localhost` , `http://loopback` , veya `http://127.0.0.1` ) ve nokta () olmayan bir URI 'yi içerir `http://webserver` . Varsayılan değer: `Unspecified`.|  
 |`proxyaddress`|Kullanılacak proxy URI 'sini belirtir.|  
 |`scriptLocation`|Yapılandırma betiğinin konumunu belirtir. `bypassonlocal`Bu öznitelikle özniteliğini kullanmayın. |  
-|`usesystemdefault`|Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir. Olarak ayarlanırsa `true` , sonraki öznitelikler Internet Explorer proxy ayarlarını geçersiz kılar. Varsayılan değer: `unspecified`.|  
+|`usesystemdefault`|Internet Explorer proxy ayarlarının kullanılıp kullanılmayacağını belirtir. Olarak ayarlanırsa `True` , sonraki öznitelikler Internet Explorer proxy ayarlarını geçersiz kılar. Varsayılan değer: `Unspecified`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -72,7 +72,7 @@ Bir ara sunucu tanımlar.
  `proxyaddress`Öznitelik geçersiz bir varsayılan proxy belirtiyorsa bir özel durum oluşur. <xref:System.Exception.InnerException%2A>Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Internet Explorer proxy 'sinin varsayılan değerlerini kullanır, proxy adresini belirtir ve yerel erişim için ara sunucuyu atlar.  
@@ -82,9 +82,9 @@ Bir ara sunucu tanımlar.
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
     </defaultProxy>  
   </system.net>  

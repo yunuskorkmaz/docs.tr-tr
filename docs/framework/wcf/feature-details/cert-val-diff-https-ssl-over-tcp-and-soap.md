@@ -1,5 +1,6 @@
 ---
 title: HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
+description: WCF 'nin HTTPS veya TCP 'ye ek olarak sunduğu ileti katmanı (SOAP) güvenliğine sahip sertifikalar hakkında bilgi edinin ve WCF 'nin bu sertifikaları nasıl doğrulayacağını öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97d51e5b65ebf20e80a69512370b68a51eeb28a7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599340"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245277"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS, TCP üzerinden SSL ve SOAP Güvenliği Arasındaki Sertifika Doğrulama Farkları
 HTTP (HTTPS) veya TCP üzerinden Aktarım Katmanı Güvenliği (TLS) ek olarak, ileti katmanı (SOAP) güvenliği ile Windows Communication Foundation (WCF) içindeki sertifikaları kullanabilirsiniz. Bu konu, bu tür sertifikaların doğrulanması için farkları açıklar.  

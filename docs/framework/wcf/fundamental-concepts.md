@@ -1,5 +1,6 @@
 ---
 title: Temel Windows Communication Foundation Kavramları
+description: Bu üst düzey açıklamayla Windows Communication Foundation (WCF) mimarisinin temelleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], concepts
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 360479a2ba17c4542d61a737856d23992296e276
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 93e75942487a1a81a8b0e8ecd8d9d666610152dc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802305"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244693"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Temel Windows Communication Foundation Kavramları
 
@@ -60,8 +61,8 @@ WCF belgelerinde kullanılan diğer kavramlar ve terimler şunları içerir:
 **Hizmet**  
  Her uç nokta bir veya daha fazla hizmet işlemini açığa çıkaran bir veya daha fazla uç nokta sunan bir yapı.
 
-**Uç nokta**  
- İletilerin gönderildiği veya alındığı bir yapı (veya her ikisi de). İletilerin nereden gönderilebileceğini tanımlayan bir konum (bir adres), iletilerin nasıl gönderilmesi gerektiğini açıklayan iletişim mekanizması (bağlama) belirtimi ve bu sırada gönderilebilecek veya alınabilecek bir ileti kümesi için tanım (veya her ikisi de) içerir. Hangi iletinin gönderilebileceklerini açıklayan konum (bir hizmet sözleşmesi).
+**Uç Nokta**  
+ İletilerin gönderildiği veya alındığı bir yapı (veya her ikisi de). İletilerin nereden gönderilebileceğini tanımlayan bir konum (bir adres), iletilerin nasıl gönderilmesi gerektiğini açıklayan iletişim mekanizması (bağlama) belirtimi ve bu konumda (veya her ikisi de), hangi iletinin gönderilebileceğini açıklayan bir dizi ileti (veya her ikisi) için bir tanım içerir.
 
 Bir WCF hizmeti, bir uç nokta koleksiyonu olarak dünyaya açıktır.
 
@@ -71,7 +72,7 @@ Bir WCF hizmeti, bir uç nokta koleksiyonu olarak dünyaya açıktır.
 **Altyapı uç noktası**  
  Bir hizmet sözleşmesiyle ilgisi olmayan hizmet tarafından gerekli veya sağlanmış işlevselliği kolaylaştırmak için altyapı tarafından açığa çıkarılan bir uç nokta. Örneğin, bir hizmette meta veri bilgileri sağlayan bir altyapı uç noktası olabilir.
 
-**Adresi**  
+**Adres**  
  İletilerin alındığı konumu belirtir. Tekdüzen Kaynak tanımlayıcısı (URI) olarak belirtilir. URI şeması bölümü, HTTP ve TCP gibi adrese ulaşmak için kullanılacak taşıma mekanizmasını adlandırır. URI 'nin hiyerarşik bölümü, biçimi aktarım mekanizmasına bağlı olan benzersiz bir konum içerir.
 
 Uç nokta adresi, bir hizmette bulunan her bir uç nokta için veya belirli koşullar altında, uç noktalar arasında bir adres paylaşmak için benzersiz uç nokta adresleri oluşturmanızı sağlar. Aşağıdaki örnek, HTTPS protokolünü varsayılan olmayan bir bağlantı noktasıyla kullanan bir adresi gösterir:
@@ -87,10 +88,10 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Bir aktarım, bir kodlama, bir altyapı düzeyi Protokolü (örneğin, WS-ReliableMessaging) veya iletişim yığınının başka bir bileşeni gibi, bağlamanın belirli bir parçasını temsil eder.
 
 **Davranışlar**  
- Bir hizmetin, bir uç noktanın, belirli bir işlemin veya bir istemcinin çeşitli çalışma zamanı yönlerini denetleyen bir bileşen. Davranışlar, kapsama göre gruplandırılır: ortak davranışlar tüm uç noktaları küresel olarak etkiler, hizmet davranışları, yalnızca hizmetle ilgili özellikleri etkiler, uç nokta davranışları yalnızca uç noktayla ilgili özellikleri etkiler ve işlem düzeyi davranışları özel olarak etkiler operasyonları. Örneğin, bir hizmet davranışı, bir hizmetin çok fazla sayıda ileti işleme yeteneklerini yoğun bir şekilde tehdit eden bir hizmetin nasıl tepki verdiğini belirten azaltmadır. Diğer yandan bir uç nokta davranışı, bir güvenlik kimlik bilgisinin nasıl ve nerede bulunacağı gibi yalnızca uç noktalarla ilgili olan yönleri denetler.
+ Bir hizmetin, bir uç noktanın, belirli bir işlemin veya bir istemcinin çeşitli çalışma zamanı yönlerini denetleyen bir bileşen. Davranışlar, kapsama göre gruplandırılır: ortak davranışlar tüm uç noktaları küresel olarak etkiler, hizmet davranışları yalnızca hizmetle ilgili özellikleri etkiler, uç nokta davranışları yalnızca uç noktayla ilgili özellikleri etkiler ve işlem düzeyi davranışlar belirli işlemleri etkiler. Örneğin, bir hizmet davranışı, bir hizmetin çok fazla sayıda ileti işleme yeteneklerini yoğun bir şekilde tehdit eden bir hizmetin nasıl tepki verdiğini belirten azaltmadır. Diğer yandan bir uç nokta davranışı, bir güvenlik kimlik bilgisinin nasıl ve nerede bulunacağı gibi yalnızca uç noktalarla ilgili olan yönleri denetler.
 
 **Sistem tarafından sağlanmış bağlamalar**  
- WCF, bir dizi sistem tarafından sağlanmış bağlamaları içerir. Bunlar, belirli senaryolar için iyileştirilmiş bağlama öğelerinin koleksiyonlarıdır. Örneğin <xref:System.ServiceModel.WSHttpBinding>, çeşitli WS-\* belirtimlerini uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır. Bu ön tanımlı bağlamalar, yalnızca belirli senaryoya doğru şekilde uygulanabilen seçenekleri sunarak zamandan tasarruf sağlar. Önceden tanımlanmış bir bağlama gereksinimlerinizi karşılamıyorsa, kendi özel bağlamalarınızı oluşturabilirsiniz.
+ WCF, bir dizi sistem tarafından sağlanmış bağlamaları içerir. Bunlar, belirli senaryolar için iyileştirilmiş bağlama öğelerinin koleksiyonlarıdır. Örneğin, <xref:System.ServiceModel.WSHttpBinding> ÇEŞITLI WS-belirtimleri uygulayan hizmetlerle birlikte çalışabilirlik için tasarlanmıştır \* . Bu ön tanımlı bağlamalar, yalnızca belirli senaryoya doğru şekilde uygulanabilen seçenekleri sunarak zamandan tasarruf sağlar. Önceden tanımlanmış bir bağlama gereksinimlerinizi karşılamıyorsa, kendi özel bağlamalarınızı oluşturabilirsiniz.
 
 **Yapılandırma ve kodlamaya karşı**  
  Bir uygulamanın denetimi, kodlama veya yapılandırma yoluyla ya da her ikisinin bir birleşimi aracılığıyla yapılabilir. Yapılandırma, geliştirici dışındaki birinin (örneğin, bir ağ yöneticisi) kod yazıldıktan ve yeniden derlenmeden sonra istemci ve hizmet parametrelerini ayarlayabilmesini sağlar. Yapılandırma yalnızca uç nokta adresleri gibi değerleri ayarlamanıza imkan tanır, ancak uç noktalar, bağlamalar ve davranışlar eklemenize olanak tanıyarak daha fazla denetime de izin verir. Kodlama, geliştiricinin hizmet veya istemcinin tüm bileşenleri üzerinde katı denetimi korumasını sağlar ve yapılandırma aracılığıyla yapılan tüm ayarlar denetlenir ve kod tarafından geçersiz kılınır.
@@ -99,10 +100,10 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Bir işlemin işlevlerini uygulayan bir hizmetin kodunda tanımlanan yordam. Bu işlem, istemcilere bir WCF istemcisinde yöntemler olarak sunulur. Yöntemi bir değer döndürebilir ve isteğe bağlı sayıda bağımsız değişken alabilir ya da hiçbir bağımsız değişkeni alabilir ve yanıt vermez. Örneğin, basit bir "Hello" olarak işlev gören bir işlem, bir istemcinin varlığına yönelik bildirim olarak kullanılabilir ve bir dizi işlem başlatabilir.
 
 **Hizmet sözleşmesi**  
- , Birden çok ilgili işlemi tek bir işlevsel birimde birleştirir. Sözleşme, hizmetin ad alanı, buna karşılık gelen bir geri çağırma anlaşması ve diğer ayarları gibi hizmet düzeyi ayarları tanımlayabilir. Çoğu durumda, sözleşme tercih ettiğiniz programlama dilinde bir arabirim oluşturularak ve <xref:System.ServiceModel.ServiceContractAttribute> özniteliği arabirime uygulanarak tanımlanır. Gerçek hizmet kodu, arabirimini uygulayarak oluşur.
+ , Birden çok ilgili işlemi tek bir işlevsel birimde birleştirir. Sözleşme, hizmetin ad alanı, buna karşılık gelen bir geri çağırma anlaşması ve diğer ayarları gibi hizmet düzeyi ayarları tanımlayabilir. Çoğu durumda, sözleşme tercih ettiğiniz programlama dilinde bir arabirim oluşturularak ve <xref:System.ServiceModel.ServiceContractAttribute> özniteliği arabirimine uygulayarak tanımlanır. Gerçek hizmet kodu, arabirimini uygulayarak oluşur.
 
 **İşlem sözleşmesi**  
- Bir işlem sözleşmesi, bir işlemin parametrelerini ve dönüş türünü tanımlar. Hizmet sözleşmesini tanımlayan bir arabirim oluştururken, sözleşmenin bir parçası olan her yöntem tanımına <xref:System.ServiceModel.OperationContractAttribute> özniteliğini uygulayarak bir işlem sözleşmesini işaret edersiniz. İşlemler tek bir ileti alarak ve tek bir ileti döndürerek veya bir tür kümesi alarak ve bir tür döndürdüğünde modellenebilir. İkinci durumda, sistem söz konusu işlem için alışverişi gereken iletilerin biçimini saptacaktır.
+ Bir işlem sözleşmesi, bir işlemin parametrelerini ve dönüş türünü tanımlar. Hizmet sözleşmesini tanımlayan bir arabirim oluştururken,, <xref:System.ServiceModel.OperationContractAttribute> sözleşmenin bir parçası olan her yöntem tanımına özniteliğini uygulayarak bir işlem sözleşmesini işaret edersiniz. İşlemler tek bir ileti alarak ve tek bir ileti döndürerek veya bir tür kümesi alarak ve bir tür döndürdüğünde modellenebilir. İkinci durumda, sistem söz konusu işlem için alışverişi gereken iletilerin biçimini saptacaktır.
 
 **İleti sözleşmesi**  
  Bir iletinin biçimini açıklar. Örneğin, ileti öğelerinin üstbilgiye ve gövdeye, hangi güvenlik düzeyinin ileti öğelerine uygulanacağını ve bu şekilde ilgili olduğunu bildirir.
@@ -113,7 +114,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 **Veri sözleşmesi**  
  Bir hizmetin kullandığı veri türlerinin meta verilerindeki açıklamalar. Bu, başkalarının hizmetle birlikte çalışabilmesine olanak sağlar. Veri türleri, bir iletinin herhangi bir bölümünde, örneğin, parametreler veya dönüş türleri olarak kullanılabilir. Hizmet yalnızca basit türler kullanıyorsa, veri sözleşmelerini açık bir şekilde kullanmaya gerek yoktur.
 
-**Barındırma**  
+**Hosting**  
  Bir hizmetin bazı süreçte barındırılması gerekir. _Ana bilgisayar_ , hizmetin ömrünü denetleyen bir uygulamadır. Hizmetler, mevcut bir barındırma işlemi tarafından kendiliğinden barındırılabilir veya yönetilebilir.
 
 **Şirket içinde barındırılan hizmet**  
@@ -132,19 +133,19 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Bağlama öğesinin somut bir uygulamasıdır. Bağlama yapılandırmayı temsil eder ve kanal bu yapılandırmayla ilişkili bir uygulama olur. Bu nedenle, her bağlama öğesiyle ilişkili bir kanal vardır. Bağlama somut uygulamasını oluşturmak için her birinin üst kısmında kanallar yığını: kanal yığını.
 
 **WCF istemcisi**  
- Hizmet işlemlerini yöntemler olarak sunan bir istemci-uygulama yapısı (Visual Basic veya görsel C#gibi tercih ettiğiniz .NET Framework programlama dilinde). Herhangi bir uygulama, bir hizmeti barındıran uygulama dahil olmak üzere bir WCF istemcisi barındırabilir. Bu nedenle, diğer hizmetlerin WCF istemcilerini içeren bir hizmet oluşturmak mümkündür.
+ Hizmet işlemlerini yöntemler olarak sunan bir istemci-uygulama yapısı (Visual Basic veya Visual C# gibi tercih ettiğiniz .NET Framework programlama dilinde). Herhangi bir uygulama, bir hizmeti barındıran uygulama dahil olmak üzere bir WCF istemcisi barındırabilir. Bu nedenle, diğer hizmetlerin WCF istemcilerini içeren bir hizmet oluşturmak mümkündür.
 
-Bir WCF istemcisi, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanılarak otomatik olarak oluşturulabilir ve meta verileri yayımlayan çalışan bir hizmete işaret edebilir.
+Bir WCF istemcisi, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanılarak otomatik olarak oluşturulabilir ve onu meta veri yayımlayan çalışan bir hizmete işaret edebilir.
 
-**Meta Veriler**  
- Bir hizmette, bir dış varlığın hizmetle iletişim kurmak için anlaşılması gereken hizmetin özelliklerini açıklar. Meta veriler, bir WCF istemcisi oluşturmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından ve bir istemci uygulamasının hizmetle etkileşimde bulunmak için kullanabileceği bir yapılandırma ile tüketilebilir.
+**Meta veri**  
+ Bir hizmette, bir dış varlığın hizmetle iletişim kurmak için anlaşılması gereken hizmetin özelliklerini açıklar. Meta veriler, bir WCF istemcisi oluşturmak için [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) tarafından ve bir istemci uygulamasının hizmetle etkileşimde bulunmak için kullanabileceği bir yapılandırma ile kullanılabilir.
 
 Hizmet tarafından kullanıma sunulan meta veriler, hizmetin veri sözleşmesini ve hizmetin yöntemlerini açıklayan WSDL belgelerini tanımlayan XML şema belgelerini içerir.
 
 Etkinleştirildiğinde hizmetin meta verileri, hizmet ve uç noktaları incelenerek WCF tarafından otomatik olarak oluşturulur. Meta verileri bir hizmetten yayımlamak için meta veri davranışını açıkça etkinleştirmeniz gerekir.
 
-**Security**  
- WCF 'de Gizlilik (gizlice dinleme işleminin önlenmesi için iletilerin şifrelenmesi), bütünlük (iletiyle birlikte izinsiz değişiklik algılama anlamına gelir), kimlik doğrulaması (sunucu ve istemci doğrulaması için yol) ve yetkilendirme (erişim denetimi) dahildir. Kaynaklar). Bu işlevler, HTTP üzerinden TLS (HTTPS olarak da bilinir) veya çeşitli WS-\* güvenlik belirtimlerinden birini uygulayarak mevcut güvenlik mekanizmalarından yararlanarak sağlanır.
+**Güvenlik**  
+ WCF 'de Gizlilik (gizlice dinleme işleminin önlenmesi için iletilerin şifrelenmesi), bütünlük (iletiyle birlikte izinsiz değişiklik algılama anlamına gelir), kimlik doğrulaması (sunucu ve istemcilerin doğrulanması için yol) ve yetkilendirme (kaynaklara erişim denetimi) dahildir. Bu işlevler, HTTP üzerinden TLS (HTTPS olarak da bilinir) veya çeşitli WS-Security belirtimlerinden birini uygulayarak mevcut güvenlik mekanizmalarından yararlanarak sağlanır \* .
 
 **Taşıma güvenlik modu**  
  Gizli, bütünlük ve kimlik doğrulamanın aktarım katmanı mekanizmaları (HTTPS gibi) tarafından sağlandığını belirtir. HTTPS gibi bir taşıma kullanırken, bu mod performansından verimli olmasının ve Internet 'teki ön sürümü nedeniyle iyi anlaşılmıştır. Bu tür güvenlik, iletişim yolundaki her bir atlama için ayrı olarak uygulanan iletişim, iletişimin "ortadaki adam" saldırısından etkilenir hale getirilmesi olur.
@@ -155,7 +156,7 @@ Etkinleştirildiğinde hizmetin meta verileri, hizmet ve uç noktaları incelene
 **İleti kimlik bilgileri güvenlik modu ile taşıma**  
  Mesajların gizlilik, kimlik doğrulaması ve bütünlüğünü sağlamak için aktarım katmanının kullanımını belirtir, ancak her ileti, ileti alıcıları için gereken birden çok kimlik bilgisi (talep) içerebilir.
 
-**WS-\***  
+**RW\***  
  WCF 'de uygulanan WS-Security, WS-ReliableMessaging, vb. gibi artan Web hizmeti (WS) belirtimleri kümesi için toplu değer.
 
 ## <a name="see-also"></a>Ayrıca bkz.

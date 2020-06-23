@@ -1,18 +1,19 @@
 ---
 title: İleti İzleme ve Kaydetme
+description: Bu WFC örneğini kullanarak izlemeleri ve ileti günlüklerini görüntülemek için hizmet Izleme Görüntüleyicisi aracı 'nı (SvcTraceViewer.exe) nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 9af50f138a2788fc7af0ce5d07e95df49d6675cb
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bb49334252c2415223b0f8f5559a6dc838d175e3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602654"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246031"
 ---
 # <a name="tracing-and-message-logging"></a>İleti İzleme ve Kaydetme
-Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini gösterir. Ortaya çıkan izlemeler ve ileti günlükleri, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır.  
+Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini gösterir. Ortaya çıkan izlemeler ve ileti günlükleri, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)kullanılarak görüntülenir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır.  
   
 > [!NOTE]
 > Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur.  
@@ -81,7 +82,7 @@ Bu örnek, izleme ve ileti günlüğe kaydetmenin nasıl etkinleştirileceğini 
   
  İleti kaydedildiğinde, izleme türü istemcide mi yoksa sunucuda mı izlenmekte olduğuna bağlıdır. Örneğin, bir istemciye gönderilen "Ekle" iletisi, istemcideki "TransportWrite" kategorisinin altında izleniyorsa, hizmette "TransportRead" kategorisinin altında aynı ileti de izlenmektedir.  
   
- Aşağıdaki kodu <xref:System.Diagnostics> Istemcinin App. config dosyasının veya hizmetin Web. config dosyasının bölümüne ekleyerek izleme dinleyicisini yapılandırın:  
+ <xref:System.Diagnostics>İstemci App.config dosyasının veya hizmetin Web.config dosyasının bölümüne aşağıdaki kodu ekleyerek izleme dinleyicisini yapılandırın:  
   
 ```xml  
 <system.diagnostics>  

@@ -1,5 +1,6 @@
 ---
 title: Bağlamalar ve Güvenlik
+description: Güvenlik gereksinimleriniz için doğru bağlamayı seçme hakkında bilgi edinin. WCF 'de bulunan sistem tarafından sağlanan bağlamalar, WCF uygulamalarını programlamak için hızlı bir yol sağlar.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], security
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 0c41f357d63158979e448c2cc36f1e80b74b18d4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587514"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245342"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 
@@ -204,10 +205,10 @@ Aşağıdaki tabloda, çeşitli mod ayarlarını destekleyen bağlamalar listele
 |-------------|----------------------------|--------------------------|--------------------------------------------|
 |`BasicHttpBinding`|Yes|Yes|Yes|
 |`WSHttpBinding`|Yes|Yes|Yes|
-|`WSDualHttpBinding`|Hayır|Evet|Hayır|
+|`WSDualHttpBinding`|No|Evet|No|
 |`NetTcpBinding`|Yes|Yes|Yes|
 |`NetNamedPipeBinding`|Yes|Hayır|Hayır|
-|`NetMsmqBinding`|Yes|Yes|Hayır|
+|`NetMsmqBinding`|Yes|Yes|No|
 |`MsmqIntegrationBinding`|Evet|Hayır|Hayır|
 |`wsFederationHttpBinding`|Hayır|Yes|Yes|
 
@@ -215,7 +216,7 @@ Aşağıdaki tabloda, çeşitli mod ayarlarını destekleyen bağlamalar listele
 
 Aşağıdaki tabloda, `BasicHttpBinding` veya aktarım güvenliği modu kullanılırken kullanılabilen istemci kimlik bilgisi türleri listelenmektedir `WSHttpBinding` .
 
-|Tür|Açıklama|
+|Tür|Description|
 |----------|-----------------|
 |Yok|İstemcinin herhangi bir kimlik bilgisi sunması gerekmediğini belirtir. Bu, anonim bir istemciyi dönüştürür.|
 |Temel|Temel kimlik doğrulaması. Daha fazla bilgi için, bkz. RFC 2617 – HTTP kimlik doğrulaması: temel ve Özet kimlik doğrulaması, adresinde bulunabilir <https://go.microsoft.com/fwlink/?LinkId=84023> .|
@@ -229,7 +230,7 @@ Aşağıdaki tabloda, `BasicHttpBinding` veya aktarım güvenliği modu kullanı
 
 Aşağıdaki tabloda, Ileti güvenliği modunda bir bağlama kullanılırken kullanılabilen istemci kimlik bilgileri türleri listelenmektedir.
 
-|Tür|Açıklama|
+|Tür|Description|
 |----------|-----------------|
 |Yok|Hizmetin anonim istemcilerle etkileşime geçmesini sağlar.|
 |Windows|Bir Windows kimlik bilgisinin kimliği doğrulanmış bağlamı altında SOAP ileti değişimlerinin yapılmasına izin verir.|

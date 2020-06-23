@@ -1,5 +1,6 @@
 ---
-title: 'Öğretici: Windows Communication Foundation istemcisi kullanma'
+title: 'Öğretici: Windows Communication Foundation istemci kullanma'
+description: Bir istemci örneği oluşturmayı, uygulamayı derlemeyi ve bir hizmet ile iletişim kurmayı, bir WCF uygulaması oluşturma hakkında bir makale serisinin parçası olarak nasıl iletişim kuracağınızı öğrenin.
 ms.date: 03/19/2019
 helpviewer_keywords:
 - WCF clients [WCF], using
@@ -7,20 +8,20 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: d2357c134aef8da204dcdb19d6c1fc93cfdc068c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c94d5f8af679580c4194aaaadeda759098953d2
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184019"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244341"
 ---
-# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Öğretici: Windows Communication Foundation istemcisi kullanma
+# <a name="tutorial-use-a-windows-communication-foundation-client"></a>Öğretici: Windows Communication Foundation istemci kullanma
 
-Bu öğretici, temel bir Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevin sonuncusunu açıklar. Öğreticilere genel bir bakış için [Bkz. Öğretici: Windows Communication Foundation uygulamalarıyla başlayın.](getting-started-tutorial.md)
+Bu öğreticide, temel Windows Communication Foundation (WCF) uygulaması oluşturmak için gereken beş görevin son açıklaması açıklanır. Öğreticilere genel bakış için bkz. [öğretici: Windows Communication Foundation uygulamalarla çalışmaya başlama](getting-started-tutorial.md).
 
-Bir Windows Communication Foundation (WCF) proxy'si oluşturduktan ve yapılandırıldıktan sonra, bir istemci örneği oluşturur ve istemci uygulamasını derlersiniz. Daha sonra WCF hizmeti ile iletişim kurmak için kullanabilirsiniz.
+Bir Windows Communication Foundation (WCF) proxy oluşturup yapılandırdıktan sonra, bir istemci örneği oluşturup istemci uygulamasını derleyebilirsiniz. Daha sonra WCF hizmeti ile iletişim kurmak için kullanabilirsiniz.
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - WCF istemcisini kullanmak için kod ekleyin.
@@ -30,11 +31,11 @@ Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
 
 İstemci kodu aşağıdaki adımları yapar:
 
-- WCF istemcisini anında karşılar.
-- Oluşturulan proxy'den hizmet işlemlerini çağırır.
+- WCF istemcisini başlatır.
+- Oluşturulan proxy 'den hizmet işlemlerini çağırır.
 - İşlem çağrısı tamamlandıktan sonra istemciyi kapatır.
 
-**GettingStartedClient** projesinden **Program.cs** veya **Module1.vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
+**GettingStartedClient** projesinden **program.cs** veya **Module1. vb** dosyasını açın ve kodunu aşağıdaki kodla değiştirin:
 
 ```csharp
 using System;
@@ -134,25 +135,25 @@ Module Module1
 End Module
 ```
 
-`using` (Visual C#) veya `Imports` (Visual Basic için) deyiminin içe aktadığına `GettingStartedClient.ServiceReference1`dikkat edin. Bu deyim, Visual Studio'nun **Hizmet Başvurusu Ekle** işleviyle oluşturduğu kodu içeri akteder. Kod, WCF proxy'sini anında alır ve hesap makinesi hizmetinin ortaya çıkardığı her hizmet işlemlerini çağırır. Daha sonra proxy kapatır ve programı sona erdirer.
+`using`İçeri aktaran (Visual C# için) veya `Imports` (for Visual Basic) bildirimine dikkat edin `GettingStartedClient.ServiceReference1` . Bu ifade, Visual Studio 'Nun **hizmet başvurusu Ekle** işleviyle oluşturduğu kodu içeri aktarır. Kod, WCF ara sunucusunu başlatır ve hesap makinesi hizmetinin sunduğu hizmet işlemlerinin her birini çağırır. Ardından, proxy 'yi kapatır ve programı sonlandırır.
 
-## <a name="test-the-wcf-client"></a>WCF istemcisini test edin
+## <a name="test-the-wcf-client"></a>WCF istemcisini test etme
 
-### <a name="test-the-application-from-visual-studio"></a>Visual Studio'dan uygulamayı test edin
+### <a name="test-the-application-from-visual-studio"></a>Uygulamayı Visual Studio 'dan test etme
 
 1. Çözümü kaydedin ve oluşturun.
 
-2. **BaşlangıçLeBaşlangıçLib** klasörünü seçin ve ardından kısayol menüsünden **Başlangıç Projesi olarak ayarla'yı** seçin.
+2. **GettingStartedLib** klasörünü seçin ve ardından kısayol menüsünde **Başlangıç projesi olarak ayarla** ' yı seçin.
 
-3. **Başlangıç**Projeleri'nden, açılan listeden **GettingStartedLib'i** seçin, ardından **Çalıştır'ı** seçin veya **F5 tuşuna**basın.
+3. **Başlangıç projeleri**' nden, açılan listeden **GettingStartedLib** ' i seçin, sonra **Çalıştır** ' ı seçin veya **F5**tuşuna basın.
 
-### <a name="test-the-application-from-a-command-prompt"></a>Uygulamayı komut isteminden test edin
+### <a name="test-the-application-from-a-command-prompt"></a>Uygulamayı bir komut isteminden test etme
 
 1. Yönetici olarak bir komut istemi açın ve ardından Visual Studio çözüm dizininize gidin.
 
 2. Hizmeti başlatmak için: *GettingStartedHost\bin\Debug\GettingStartedHost.exe*girin.
 
-3. İstemciyi başlatmak için: Başka bir komut istemi açın, Visual Studio çözüm dizininize gidin ve ardından *GettingStartedClient\bin\Debug\GettingStartedClient.exe*adresini girin.
+3. İstemcisini başlatmak için: başka bir komut istemi açın, Visual Studio çözüm dizininize gidin ve *GettingStartedClient\bin\Debug\GettingStartedClient.exe*girin.
 
    *GettingStartedHost.exe* aşağıdaki çıktıyı üretir:
 
@@ -183,15 +184,15 @@ End Module
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-WCF'deki tüm görevleri tamamladınız. Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
+Artık WCF başlangıç öğreticisindeki tüm görevleri tamamladınız. Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 
-Bu öğreticide şunların nasıl yapıldığını öğrenirsiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - WCF istemcisini kullanmak için kod ekleyin.
 > - WCF istemcisini test edin.
 
-Adımlardan herhangi birinde sorun veya hata varsa, bunları düzeltmek için sorun giderme makalesindeki adımları izleyin.
+Adımlardan birinde sorun veya hatalar varsa, bunları gidermek için sorun giderme makalesindeki adımları izleyin.
 
 > [!div class="nextstepaction"]
-> [WCF eğitimleriyle başlayın sorun giderme](troubleshooting-the-getting-started-tutorial.md)
+> [WCF öğreticileri ile çalışmaya başlama hakkında sorun giderme](troubleshooting-the-getting-started-tutorial.md)

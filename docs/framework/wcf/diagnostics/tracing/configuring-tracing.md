@@ -1,15 +1,16 @@
 ---
 title: İzlemeyi Yapılandırma
+description: İzlemeyi etkinleştirme, izleme kaynaklarını yapılandırma, Etkinlik izlemeyi ve yaymayı ayarlama ve WCF 'deki izlemelere erişim için izleme dinleyicileri ayarlama hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2fbe5b48a9405c9236923ffec268683bdf570831
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579013"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245355"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izlemeleri yaymak ve izleme düzeylerini ayarlamayı, Etkinlik izlemeyi ve yaymayı, uçtan uca izleme bağıntısını destekleyecek şekilde ayarlamayı ve izleme dinleyicilerini izlemelere erişim için ayarlamayı açıklar.  
@@ -32,7 +33,7 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
   
  Özel işlem invokers gibi WCF genişletilebilirlik noktalarını kullanırsanız, kendi izlemelerinizi yaymalısınız. Bunun nedeni, bir genişletilebilirlik noktası uyguladığınızda WCF 'nin varsayılan yolda standart izlemeleri artık yaymayacağı bir yoldur. İzlemeleri yayarak el ile izleme desteği uygulamadıysanız, beklediğinizi izlemelerinizi göremeyebilirsiniz.  
   
- Uygulamanın yapılandırma dosyasını düzenleyerek izlemeyi yapılandırabilirsiniz: Web 'de barındırılan uygulamalar için Web. config veya şirket içinde barındırılan uygulamalar için AppName. exe. config. Aşağıda bu tür bir düzenleme örneği verilmiştir. Bu ayarlar hakkında daha fazla bilgi için, "Izlemeleri kullanmak için Izleme dinleyicileri yapılandırma" bölümüne bakın.  
+ Uygulamanın yapılandırma dosyasını düzenleyerek izlemeyi yapılandırabilirsiniz — Web 'de barındırılan uygulamalar için Web.config veya şirket içinde barındırılan uygulamalar için Appname.exe.config. Aşağıda bu tür bir düzenleme örneği verilmiştir. Bu ayarlar hakkında daha fazla bilgi için, "Izlemeleri kullanmak için Izleme dinleyicileri yapılandırma" bölümüne bakın.  
   
 ```xml  
 <configuration>  
@@ -53,7 +54,7 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
 ```  
   
 > [!NOTE]
-> Visual Studio 'da bir WCF hizmeti projesinin yapılandırma dosyasını düzenlemek için uygulamanın yapılandırma dosyasına (Web 'de barındırılan uygulamalar için Web. config veya **Çözüm Gezgini**içindeki şirket içinde barındırılan uygulama için AppName. exe. config ' e tıklayın. Ardından, **WCF yapılandırma bağlamını Düzenle** menü öğesini seçin. Bu, bir grafik kullanıcı arabirimi kullanarak WCF Hizmetleri için yapılandırma ayarlarını değiştirmenize olanak sağlayan [yapılandırma Düzenleyicisi aracını (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)başlatır.  
+> Visual Studio 'da bir WCF hizmeti projesinin yapılandırma dosyasını düzenlemek için uygulamanın yapılandırma dosyasına sağ tıklayın — Web 'de barındırılan uygulamalar için Web.config veya **Çözüm Gezgini**şirket içinde barındırılan uygulama için Appname.exe.config. Ardından, **WCF yapılandırma bağlamını Düzenle** menü öğesini seçin. Bu, bir grafik kullanıcı arabirimi kullanarak WCF Hizmetleri için yapılandırma ayarlarını değiştirmenize olanak sağlayan [yapılandırma Düzenleyicisi aracını (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)başlatır.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Izlemeleri yayma için Izleme kaynaklarını yapılandırma  
  WCF her derleme için bir izleme kaynağı tanımlar. Bir derlemede oluşturulan izlemelere bu kaynak için tanımlanan dinleyiciler tarafından erişilir. Aşağıdaki izleme kaynakları tanımlanmıştır:  
@@ -152,7 +153,7 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
   
 |İzleme düzeyi|Izlenen olayların doğası|Izlenen olayların içeriği|İzlenen Olaylar|Kullanıcı hedefi|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Kapalı|YOK|YOK|Hiçbir izleme yayılmadı.|YOK|  
+|Kapalı|Yok|Yok|Hiçbir izleme yayılmadı.|Yok|  
 |Kritik|"Negatif" olaylar: beklenmeyen bir işleme veya bir hata koşulunu belirten olaylar.||Aşağıdakiler dahil işlenmemiş özel durumlar günlüğe kaydedilir:<br /><br /> -OutOfMemoryException<br />-Threadadbortexception (CLR herhangi bir Threadavbortexceptionhandler çağırır)<br />-StackOverflowException (yakalanamaz)<br />-ConfigurationErrorsException<br />-Şehir özel durumu<br />-Uygulama başlatma hataları<br />-FailFast olayları<br />-Sistem askıda kalıyor<br />-Poison iletileri: uygulamanın başarısız olmasına neden olan ileti izlemeleri.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
 |Hata|"Negatif" olaylar: beklenmeyen bir işleme veya bir hata koşulunu belirten olaylar.|Beklenmeyen işlem gerçekleşti. Uygulama beklenen şekilde bir görev gerçekleştiremedi. Ancak uygulama hala çalışır durumda kalır.|Tüm özel durumlar günlüğe kaydedilir.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  
 |Uyarı|"Negatif" olaylar: beklenmeyen bir işleme veya bir hata koşulunu belirten olaylar.|Olası bir sorun oluştu ya da olabilir, ancak uygulama hala doğru şekilde çalışır. Ancak, düzgün şekilde çalışmaya devam edemeyebilir.|-Uygulama, azaltma ayarlarının izin verenden daha fazla istek alıyor.<br />-Alma kuyruğu en yüksek yapılandırılmış kapasiteye yaklaştı.<br />-Zaman aşımı aşıldı.<br />-Kimlik bilgileri reddedilir.|Yöneticiler<br /><br /> Uygulama geliştiricileri|  

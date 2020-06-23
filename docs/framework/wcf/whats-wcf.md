@@ -1,17 +1,18 @@
 ---
 title: Windows Communication Foundation nedir?
+description: Hizmet odaklı uygulamalar oluşturmaya yönelik bir çerçeve olan Windows Communication Foundation hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600860"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245615"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF), hizmet yönelimli uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri bir hizmet uç noktasından diğerine zaman uyumsuz iletiler olarak gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan bir sürekli kullanılabilir hizmetin parçası olabilir veya bir uygulamada barındırılan bir hizmet olabilir. Uç nokta, hizmet uç noktasından veri isteyen bir hizmetin istemcisi olabilir. İletiler, tek bir karakter veya bir kelime olarak bir XML olarak gönderilebilir ya da ikili veri akışı gibi karmaşık olabilir. Birkaç örnek senaryo şunlardır:

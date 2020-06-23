@@ -1,5 +1,6 @@
 ---
-title: Bağlantı.m_WriteList Alanı
+title: Connection. m_WriteList alanı
+description: .NET 'teki Connection. m_WriteList alanı hakkında bilgi alın. Bu ArrayList alanı, HTTP üzerinden gönderilmek üzere sıralanmış olan HttpWebRequest nesnelerini içerir.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a627cb062036e3ab098c2d6e97f9a77ebfa75a33
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989601"
 ---
-# <a name="connectionm_writelist-field"></a>Connection.m\_YazmaListesi Alanı
+# <a name="connectionm_writelist-field"></a>Connection. d \_ writelist alanı
 
-`Connection.m_WriteList`http <xref:System.Collections.ArrayList> üzerinden <xref:System.Net.HttpWebRequest> gönderilmek üzere sıraya dizilmiş nesnelerin biridir.
+`Connection.m_WriteList`, <xref:System.Collections.ArrayList> <xref:System.Net.HttpWebRequest> http üzerinden gönderilmek üzere sıralanmış bir nesnedir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> Alan `Connection.m_WriteList` özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `Connection.m_WriteList`Alan özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Ad alanı:**<xref:System.Net>
 
-**Montaj:** Sistem (System.dll'de)
+**Bütünleştirilmiş kod:** Sistem (System.dll)
 
-**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

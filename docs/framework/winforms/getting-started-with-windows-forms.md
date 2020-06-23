@@ -1,5 +1,6 @@
 ---
 title: Başlarken
+description: Verileri görüntüleyen, Kullanıcı girişini işleyen ve uygulamalarınızı dağıtmanıza yardımcı olan güçlü Windows tabanlı uygulamalar oluşturmak için Windows Forms nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
-ms.openlocfilehash: c5ea75bf826aa658269ec983b60e9dd2eb520ce0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ac4f166ca264f2533c5f174273fe60dcb9622a29
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903603"
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Forms'a Başlarken
 Windows Forms sayesinde, güçlü Windows tabanlı uygulamalar oluşturabilirsiniz. Aşağıdaki konularda, verileri görüntüleme, Kullanıcı girişini işleme ve uygulamalarınızı kolayca ve gelişmiş güvenlik ile dağıtma Windows Forms gücünden yararlanın.  
@@ -31,10 +32,10 @@ Windows Forms sayesinde, güçlü Windows tabanlı uygulamalar oluşturabilirsin
  [Windows Forms Boyutunu ve Ölçeğini Ayarlama](adjusting-the-size-and-scale-of-windows-forms.md)  
  Windows Forms boyutunu ve ölçeğini ayarlamayı gösteren konuların bağlantılarını içerir.  
   
- [Windows Forms’un Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)  
+ [Windows Formlarının Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)  
  Windows Forms uygulamalarının görünümünün nasıl değiştirileceğini gösteren konuların bağlantılarını içerir.  
   
- [Windows Forms Denetimleri](./controls/index.md)  
+ [Windows Forms denetimleri](./controls/index.md)  
  Windows Forms denetimlerinin ve bileşenlerin kullanımını betimleyen ve gösteren konuların bağlantılarını içerir.  
   
  [Windows Forms'ta Kullanıcı Girdisi](user-input-in-windows-forms.md)  

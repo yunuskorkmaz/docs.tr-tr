@@ -1,15 +1,16 @@
 ---
 title: DataContractSerializer Örneği
+description: Bu örnekte, veri sözleşmesi sınıfları için genel serileştirme ve seri durumdan çıkarma hizmetleri gerçekleştiren WCF 'de DataContractSerializer gösterilmektedir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 07c6d3b10f2a0478f8fb3835f0b040668c5013ce
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c2f62c8926f09e2d4cdea1941909e7d8f59c43a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600016"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244419"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer Örneği
 DataContractSerializer örneği, <xref:System.Runtime.Serialization.DataContractSerializer> veri sözleşmesi sınıfları için genel serileştirme ve seri durumdan çıkarma hizmetlerini gerçekleştiren öğesini gösterir. Örnek, bir `Record` nesnesi oluşturur, bunu bir bellek akışına serileştirir ve ' `Record` nin kullanımını göstermek için bellek akışını başka bir nesneye geri çıkarır <xref:System.Runtime.Serialization.DataContractSerializer> . Örnek daha sonra, `Record` yazıcının Serileştirmeyi nasıl etkilediğini göstermek için bir ikili yazıcı kullanarak nesneyi serileştirir.  
@@ -130,7 +131,7 @@ Press <ENTER> to terminate client.
   
 2. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-3. Örneği çalıştırmak için client\bin\client.exeyazarak istemciyi komut isteminden başlatın.  
+3. Örneği çalıştırmak için client\bin\client.exe yazarak istemciyi komut isteminden başlatın.  
   
 > [!IMPORTANT]
 > Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  

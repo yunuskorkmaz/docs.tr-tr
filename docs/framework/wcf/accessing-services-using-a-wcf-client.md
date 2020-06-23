@@ -1,5 +1,6 @@
 ---
 title: WCF İstemcisi Kullanarak Hizmetlere Erişme
+description: WCF hizmetiniz için bir WCF istemci proxy 'si oluşturmayı öğrenin. İstemci uygulaması, hizmet ile iletişim kurmak için istemci proxy 'sini kullanır.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 462d9a3923009f0124c2b90b6fa86dfa9869a3c5
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 25446a89a0b5657d32d77e2d0d57f58f36bed71b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72316538"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245550"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF İstemcisi Kullanarak Hizmetlere Erişme
 
@@ -26,16 +27,16 @@ Bir hizmet oluşturduktan sonra, bir sonraki adım bir WCF istemci proxy 'si olu
 
 3. WCF istemci ara sunucusunu oluşturun.
 
-WCF istemci proxy 'si, hizmet modeli meta verileri yardımcı programı Aracı (SvcUtil. exe) kullanılarak el ile oluşturulabilir. daha fazla bilgi için bkz. [ServiceModel Metadata Utility aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). WCF istemci ara sunucusu, **hizmet başvurusu Ekle** özelliği kullanılarak Visual Studio içinde de oluşturulabilir. WCF istemci proxy 'sini her iki yöntemi kullanarak oluşturmak için hizmetin çalışıyor olması gerekir. Hizmet şirket içinde barındırılıyorsa, Konağı çalıştırmanız gerekir. Hizmet IIS 'de barındırılıyorsa/ise başka bir şey yapmanız gerekmez.
+WCF istemci proxy 'si, hizmet modeli meta verileri yardımcı programı Aracı (SvcUtil.exe) kullanılarak el ile oluşturulabilir. daha fazla bilgi için bkz. [ServiceModel Metadata Utility aracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). WCF istemci ara sunucusu, **hizmet başvurusu Ekle** özelliği kullanılarak Visual Studio içinde de oluşturulabilir. WCF istemci proxy 'sini her iki yöntemi kullanarak oluşturmak için hizmetin çalışıyor olması gerekir. Hizmet şirket içinde barındırılıyorsa, Konağı çalıştırmanız gerekir. Hizmet IIS 'de barındırılıyorsa/ise başka bir şey yapmanız gerekmez.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>ServiceModel meta veri yardımcı programı Aracı
- [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) meta verilerden kod oluşturmaya yönelik bir komut satırı aracıdır. Aşağıdaki kullanım, temel bir Svcutil. exe komutuna bir örnektir.
+ [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) , meta verilerden kod oluşturmaya yönelik bir komut satırı aracıdır. Aşağıdaki kullanım, temel bir Svcutil.exe komutuna bir örnektir.
 
 ```console
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 ```
 
- Alternatif olarak, dosya sisteminde Web Hizmetleri Açıklama Dili (WSDL) ve XML şema tanımlama dili (XSD) dosyaları ile Svcutil. exe ' yi kullanabilirsiniz.
+ Alternatif olarak, dosya sisteminde Web Hizmetleri Açıklama Dili (WSDL) ve XML şeması tanım dili (XSD) dosyaları ile Svcutil.exe kullanabilirsiniz.
 
 ```console
 Svcutil.exe <list of WSDL and XSD files on file system>
@@ -54,9 +55,9 @@ Svcutil.exe <file1 [,file2]>
 > [!IMPORTANT]
 > Güvenli olmayan meta veri istekleri, güvenli olmayan herhangi bir ağ isteğiyle aynı şekilde bazı riskler ortaya çıkardığında: iletişim kurduğunuz uç noktanın kim olduğunu düşünmediği kesin değilse, aldığınız bilgiler kötü amaçlı bir hizmetten meta veriler olabilir.
 
-## <a name="add-service-reference-in-visual-studio"></a>Visual Studio'da Hizmet Başvurusu ekleyin
+## <a name="add-service-reference-in-visual-studio"></a>Visual Studio 'da Hizmet Başvurusu Ekle
 
- Hizmet çalışırken, WCF istemci proxy 'sini içerecek projeye sağ tıklayın ve > **hizmet başvurusu** **Ekle** ' yi seçin. **Hizmet başvurusu Ekle Iletişim kutusunda**, çağırmak istediğiniz hizmetin URL 'sini yazın ve **Git** düğmesine tıklayın. İletişim kutusunda belirttiğiniz adreste bulunan hizmetlerin bir listesi görüntülenir. Kullanılabilir sözleşmeleri ve işlemleri görmek için hizmete çift tıklayın, oluşturulan kod için bir ad alanı belirtin ve **Tamam** düğmesine tıklayın.
+ Hizmet çalışırken, WCF istemci ara sunucusunu içerecek projeye sağ tıklayın ve **Add**  >  **hizmet başvurusu**Ekle ' yi seçin. **Hizmet başvurusu Ekle Iletişim kutusunda**, çağırmak istediğiniz hizmetin URL 'sini yazın ve **Git** düğmesine tıklayın. İletişim kutusunda belirttiğiniz adreste bulunan hizmetlerin bir listesi görüntülenir. Kullanılabilir sözleşmeleri ve işlemleri görmek için hizmete çift tıklayın, oluşturulan kod için bir ad alanı belirtin ve **Tamam** düğmesine tıklayın.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki kod örneği, bir hizmet için oluşturulan bir hizmet sözleşmesini gösterir.
@@ -82,7 +83,7 @@ Public Interface ICalculator
 End Interface
 ```
 
- ServiceModel meta veri yardımcı programı aracı ve **hizmet başvurusu Ekle** Visual Studio 'DA aşağıdaki WCF istemci sınıfını oluşturur. Sınıfı, genel <xref:System.ServiceModel.ClientBase%601> sınıfından devralır ve `ICalculator` arabirimini uygular. Araç ayrıca `ICalculator` arabirimini de oluşturur (burada gösterilmez).
+ ServiceModel meta veri yardımcı programı aracı ve **hizmet başvurusu Ekle** Visual Studio 'DA aşağıdaki WCF istemci sınıfını oluşturur. Sınıfı genel <xref:System.ServiceModel.ClientBase%601> sınıftan devralınır ve `ICalculator` arabirimini uygular. Araç ayrıca arabirimi de oluşturur `ICalculator` (burada gösterilmez).
 
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -178,11 +179,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Bir WCF istemcisi tarafından oluşturulan birçok özel durum, hizmette bir özel durum nedeniyle oluşur. Buna örnek olarak şunlar verilebilir:
 
-- <xref:System.Net.Sockets.SocketException>: varolan bir bağlantı uzak konak tarafından zorla kapatıldı.
+- <xref:System.Net.Sockets.SocketException>: Mevcut bir bağlantı uzak ana bilgisayar tarafından zorla kapatıldı.
 
-- <xref:System.ServiceModel.CommunicationException>: temeldeki bağlantı beklenmedik bir şekilde kapatıldı.
+- <xref:System.ServiceModel.CommunicationException>: Temeldeki bağlantı beklenmedik bir şekilde kapatıldı.
 
-- <xref:System.ServiceModel.CommunicationObjectAbortedException>: yuva bağlantısı iptal edildi. Bunun nedeni iletinizin işlendiği bir hata, uzak ana bilgisayar tarafından bir alma zaman aşımı veya temel alınan bir ağ kaynağı sorunu olabilir.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Yuva bağlantısı iptal edildi. Bunun nedeni iletinizin işlendiği bir hata, uzak ana bilgisayar tarafından bir alma zaman aşımı veya temel alınan bir ağ kaynağı sorunu olabilir.
 
 Bu tür özel durumlar oluştuğunda, sorunu çözmenin en iyi yolu hizmet tarafında izlemeyi açmak ve ne özel durum oluştuğunu belirlemektir. İzleme hakkında daha fazla bilgi için, [bkz. izleme ve](./diagnostics/tracing/index.md) [kullanarak uygulamanızı sorun giderme](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 

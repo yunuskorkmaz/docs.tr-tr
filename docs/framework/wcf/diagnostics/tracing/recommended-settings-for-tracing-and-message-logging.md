@@ -1,19 +1,20 @@
 ---
 title: İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar
+description: WCF 'de farklı işletim ortamları için önerilen izleme ve ileti günlüğü ayarları hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: 9d2586570a3f590735c2a8e1ca176580886c8d92
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 71067a4d6f4cec65a148a8162c40e44d82b85784
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578922"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245341"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>İzleme ve İletileri Günlüğe Kaydetme için Önerilen Ayarlar
 Bu konuda, farklı işletim ortamları için önerilen izleme ve ileti günlüğü ayarları açıklanmaktadır.  
   
 ## <a name="recommended-settings-for-a-production-environment"></a>Üretim ortamı için önerilen ayarlar  
- Bir üretim ortamında, WCF izleme kaynaklarını kullanıyorsanız, `switchValue` uyarı olarak ayarlayın. WCF `System.ServiceModel` izleme kaynağını kullanıyorsanız, `switchValue` özniteliğini `Warning` ve `propagateActivity` özniteliğini olarak ayarlayın `true` . Kullanıcı tanımlı bir izleme kaynağı kullanıyorsanız, `switchValue` özniteliğini olarak ayarlayın `Warning, ActivityTracing` . Bu işlem, [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)kullanılarak el ile yapılabilir. Performans için bir isabet tahmin ediyorsanız, `switchValue` özniteliğini `Information` daha önce bahsedilen tüm durumlarda olarak ayarlayabilirsiniz. Bu, çok büyük miktarda izleme verisi üretir. Aşağıdaki örnek, önerilen bu ayarları gösterir.  
+ Bir üretim ortamında, WCF izleme kaynaklarını kullanıyorsanız, `switchValue` uyarı olarak ayarlayın. WCF `System.ServiceModel` izleme kaynağını kullanıyorsanız, `switchValue` özniteliğini `Warning` ve `propagateActivity` özniteliğini olarak ayarlayın `true` . Kullanıcı tanımlı bir izleme kaynağı kullanıyorsanız, `switchValue` özniteliğini olarak ayarlayın `Warning, ActivityTracing` . Bu işlem, [yapılandırma Düzenleyicisi aracı (SvcConfigEditor.exe)](../../configuration-editor-tool-svcconfigeditor-exe.md)kullanılarak el ile yapılabilir. Performans için bir isabet tahmin ediyorsanız, `switchValue` özniteliğini `Information` daha önce bahsedilen tüm durumlarda olarak ayarlayabilirsiniz. Bu, çok büyük miktarda izleme verisi üretir. Aşağıdaki örnek, önerilen bu ayarları gösterir.  
   
 ```xml  
 <configuration>  

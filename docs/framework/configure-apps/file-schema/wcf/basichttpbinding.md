@@ -1,15 +1,16 @@
 ---
 title: <basicHttpBinding>
+description: Bir WCF hizmetinin WS-ı temel profili 1,1 ile uyumlu hizmetlerle iletişim kurmak üzere uç noktaları yapılandırmak ve kullanıma sunmak için kullanabileceği bir bağlamayı tanımlar.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: ab8dca7f7065d7c174e38ad3a88ea15e39351bed
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5b2ce1973966468107d7aa4de545a976c67b13ed
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84202041"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85244029"
 ---
 # \<basicHttpBinding>
 Windows Communication Foundation (WCF) hizmetinin, ASMX tabanlı Web Hizmetleri ve istemcilerle ve WS-ı temel profili 1,1 ile uyumlu diğer hizmetlerle iletişim kurabilen uç noktaları yapılandırmak ve ortaya çıkarmak için kullanabileceği bir bağlamayı temsil eder.  
@@ -19,7 +20,7 @@ Windows Communication Foundation (WCF) hizmetinin, ASMX tabanlı Web Hizmetleri 
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<basicHttpBinding>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <basicHttpBinding>
@@ -81,14 +82,14 @@ Windows Communication Foundation (WCF) hizmetinin, ASMX tabanlı Web Hizmetleri 
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
 |[\<security>](security-of-basichttpbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement> .|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
-|Öğe|Açıklama|  
+|Öğe|Description|  
 |-------------|-----------------|  
 |[\<bindings>](bindings.md)|Bu öğe, standart ve özel bağlamaların bir koleksiyonunu içerir.|  
   

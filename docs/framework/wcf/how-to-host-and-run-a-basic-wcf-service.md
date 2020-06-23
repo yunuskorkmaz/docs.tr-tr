@@ -1,5 +1,6 @@
 ---
 title: 'Öğretici: temel bir Windows Communication Foundation hizmetini barındırma ve çalıştırma'
+description: WCF uygulaması oluşturmaya başlamanıza yardımcı olan bir makale serisinin parçası olarak bir WCF hizmetini bir konsol uygulamasında nasıl barındıracağınızı öğrenin.
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 872844487578843492e05dd2abb87b50e0bec91c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5318991087e71430523681d601d3b38c4513027b
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291402"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246143"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>Öğretici: temel bir Windows Communication Foundation hizmetini barındırma ve çalıştırma
 
@@ -25,7 +26,7 @@ WCF uygulaması oluşturmaya yönelik sonraki görev bir konsol uygulamasında b
 - İstemcinin hizmetle nasıl iletişim kurması gerektiğini açıklayan bilgileri içeren bir bağlama.
 - Hizmetin istemcilerine sağladığı işlevselliği tanımlayan bir anlaşma.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - WCF hizmetini barındırmak için bir konsol uygulaması projesi oluşturun ve yapılandırın.
@@ -194,7 +195,7 @@ Kodda aşağıdaki değişiklikleri yapın:
 
 1. Çözümü derleyin ve ardından Visual Studio içinden **GettingStartedHost** konsol uygulamasını çalıştırın.
 
-    Hizmetin yönetici ayrıcalıklarıyla çalıştırılması gerekir. Visual Studio 'Yu yönetici ayrıcalıklarıyla açtığınızdan, Visual Studio 'da **GettingStartedHost** çalıştırdığınızda uygulama da yönetici ayrıcalıklarıyla çalıştırılır. Alternatif olarak, yeni bir komut istemi 'ni yönetici olarak açabilirsiniz (kısayol menüsünden **daha fazla**  >  **Çalıştır Yöneticisi** ' ni seçin) ve içinde **GettingStartedHost. exe** ' yi çalıştırın.
+    Hizmetin yönetici ayrıcalıklarıyla çalıştırılması gerekir. Visual Studio 'Yu yönetici ayrıcalıklarıyla açtığınızdan, Visual Studio 'da **GettingStartedHost** çalıştırdığınızda uygulama da yönetici ayrıcalıklarıyla çalıştırılır. Alternatif olarak, yeni bir komut istemi 'ni yönetici olarak açabilirsiniz (kısayol menüsünden **daha fazla**  >  **Çalıştır Yöneticisi** ' ni seçin) ve içinde **GettingStartedHost.exe** çalıştırabilirsiniz.
 
 2. Bir Web tarayıcısı açın ve konumundaki hizmetin sayfasına gidin `http://localhost:8000/GettingStarted/CalculatorService` .
 

@@ -1,13 +1,14 @@
 ---
 title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
+description: IIS 'de barındırılan bir WCF hizmetini geliştirmek ve dağıtmak için gereken görevler hakkında bilgi edinin ve bileşen yüklemesinin doğrulanması ile başlar
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 826a8798ada8f04173b047dc27829c384f79e2b8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599249"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245101"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -35,7 +36,7 @@ Diğer işletim sistemlerine IIS yükleme yönergeleri [Windows Vista ve Windows
 
 .NET Framework yükleme işlemi, IIS makinede zaten mevcutsa WCF 'yi IIS ile otomatik olarak kaydeder. IIS .NET Framework sonrasında yüklenirse, WCF 'yi IIS ve ASP.NET 'e kaydetmek için ek bir adım gerekir. Bunu, işletim sisteminize bağlı olarak aşağıdaki şekilde yapabilirsiniz:
 
-- Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg. exe)](../servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için, [Visual Studio için geliştirici komut istemi](../../tools/developer-command-prompt-for-vs.md) **ServiceModelReg. exe/i/x** yazın.
+- Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için, [Visual Studio Geliştirici Komut İstemi](../../tools/developer-command-prompt-for-vs.md) **ServiceModelReg.exe/i/x** yazın.
 
 - Windows 7: son olarak, ASP.NET 'in .NET Framework sürüm 4 veya üstünü kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bunu, ASPNET_Regiis aracını seçeneğiyle çalıştırarak yapabilirsiniz `–i` . Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
@@ -75,7 +76,7 @@ ASP.NET 2,0 derleme modeli hakkında daha fazla bilgi için bkz. [ASP.net derlem
 
 ## <a name="configure-the-wcf-service"></a>WCF hizmetini yapılandırma
 
-IIS tarafından barındırılan WCF Hizmetleri, yapılandırmalarını uygulamalar Web. config dosyasında depolar. IIS tarafından barındırılan hizmetler, IIS dışında barındırılan WCF Hizmetleri ile aynı yapılandırma öğelerini ve sözdizimini kullanır. Ancak, aşağıdaki kısıtlamalar IIS barındırma ortamına özgüdür:
+IIS tarafından barındırılan WCF Hizmetleri, yapılandırmalarını uygulamalar Web.config dosyasında depolar. IIS tarafından barındırılan hizmetler, IIS dışında barındırılan WCF Hizmetleri ile aynı yapılandırma öğelerini ve sözdizimini kullanır. Ancak, aşağıdaki kısıtlamalar IIS barındırma ortamına özgüdür:
 
 - IIS tarafından barındırılan hizmetlerin temel adresleri.
 

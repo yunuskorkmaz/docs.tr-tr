@@ -1,16 +1,17 @@
 ---
 title: Windows Communication Foundation 4.5'teki Yenilikler
+description: Bu makalede Windows Communication Foundation (WCF) sürüm 4,5 ' in yeni özellikleri ve ek kaynakların bağlantıları açıklanmaktadır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6ce7fe19a8d7cc00823502e322ee53a1bd0a931
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449510"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245628"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5'teki Yenilikler
 
@@ -26,13 +27,13 @@ Varsayılan olarak Hizmet Başvurusu Ekle, görev döndüren zaman uyumsuz hizme
 
 ### <a name="simplified-generated-configuration-files"></a>Basitleştirilmiş olarak oluşturulan yapılandırma dosyaları
 
-Visual Studio 'da bir hizmet başvurusu eklediğinizde veya SvcUtil. exe aracını kullandığınızda bir istemci yapılandırma dosyası oluşturulur. WCF 'nin önceki sürümlerinde bu yapılandırma dosyaları, değeri varsayılan değer olsa bile her bağlama özelliğinin değerini içerir. WCF 4,5 ' de, oluşturulan yapılandırma dosyaları yalnızca varsayılan olmayan bir değere ayarlanmış olan bağlama özelliklerini içerir.
+Visual Studio 'da bir hizmet başvurusu eklediğinizde veya SvcUtil.exe aracını kullandığınızda bir istemci yapılandırma dosyası oluşturulur. WCF 'nin önceki sürümlerinde bu yapılandırma dosyaları, değeri varsayılan değer olsa bile her bağlama özelliğinin değerini içerir. WCF 4,5 ' de, oluşturulan yapılandırma dosyaları yalnızca varsayılan olmayan bir değere ayarlanmış olan bağlama özelliklerini içerir.
 
 Daha fazla bilgi için bkz. [WCF basitleştirme özellikleri](wcf-simplification-features.md).
 
 ### <a name="contract-first-development"></a>Sözleşme-Ilk geliştirme
 
-WCF artık sözleşmenin ilk geliştirmeyi destekler. Svcutil. exe ' nin bir WSDL belgesinden hizmet ve veri sözleşmeleri üretmenize olanak tanıyan bir/serviceContract anahtarı vardır.
+WCF artık sözleşmenin ilk geliştirmeyi destekler. svcutil.exe bir WSDL belgesinden hizmet ve veri sözleşmeleri oluşturmanıza olanak sağlayan bir/serviceContract anahtarı vardır.
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Taşınabilir alt küme projesinden Hizmet Başvurusu Ekle
 
@@ -40,7 +41,7 @@ Taşınabilir alt küme projeleri, .NET derleme programcılarının tek bir kayn
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET uyumluluk modu varsayılan olarak değiştirildi
 
-WCF, geliştiricilere WCF Hizmetleri yazarken ASP.NET HTTP işlem hattının özelliklerine tam erişim sağlamak için ASP.NET uyumluluk modu sağlar. Bu modu kullanmak için, Web. config dosyasının [\<serviceHostingEnvironment >](../configure-apps/file-schema/wcf/servicehostingenvironment.md) bölümünde `aspNetCompatibilityEnabled` özniteliğini true olarak ayarlamanız gerekir. Ayrıca, bu appDomain 'deki herhangi bir hizmetin, <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> veya <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>olarak ayarlanmış `RequirementsMode` özelliğine sahip olması gerekir. Varsayılan olarak <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> artık <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>olarak ayarlanmıştır. Daha fazla bilgi için bkz. [WCF Hizmetleri ve ASP.net](./feature-details/wcf-services-and-aspnet.md).
+WCF, geliştiricilere WCF Hizmetleri yazarken ASP.NET HTTP işlem hattının özelliklerine tam erişim sağlamak için ASP.NET uyumluluk modu sağlar. Bu modu kullanmak için, `aspNetCompatibilityEnabled` web.config bölümünde özniteliğini true olarak ayarlamanız gerekir [\<serviceHostingEnvironment>](../configure-apps/file-schema/wcf/servicehostingenvironment.md) . Ayrıca, bu appDomain 'deki herhangi bir hizmetin `RequirementsMode` özelliği <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> veya olarak ayarlanmış olması gerekir <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required> . Varsayılan olarak <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> Şu şekilde ayarlanır <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> . Daha fazla bilgi için bkz. [WCF Hizmetleri ve ASP.net](./feature-details/wcf-services-and-aspnet.md).
 
 ### <a name="new-transport-default-values"></a>Yeni aktarım varsayılan değerleri
 
@@ -48,7 +49,7 @@ Yapılandırmayı basitleştirmek için, bir dizi Aktarım özelliği varsayıla
 
 ### <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 
-<xref:System.Xml.XmlDictionaryReaderQuotas>, bir ileti oluştururken kodlayıcı tarafından kullanılan bellek miktarını sınırlayan XML sözlüğü okuyucuları için yapılandırılabilir kota değerleri içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerler bir geliştiricinin bunları açıkça ayarlamak zorunda olma olasılığını azaltmak üzere değiştirilmiştir. Daha fazla bilgi için bkz. [WCF basitleştirme özellikleri](wcf-simplification-features.md).
+<xref:System.Xml.XmlDictionaryReaderQuotas>bir ileti oluştururken kodlayıcı tarafından kullanılan bellek miktarını sınırlayan, XML sözlüğü okuyucuları için yapılandırılabilir kota değerleri içerir. Bu kotalar yapılandırılabilir olsa da, varsayılan değerler bir geliştiricinin bunları açıkça ayarlamak zorunda olma olasılığını azaltmak üzere değiştirilmiştir. Daha fazla bilgi için bkz. [WCF basitleştirme özellikleri](wcf-simplification-features.md).
 
 ### <a name="wcf-configuration-validation"></a>WCF yapılandırma doğrulaması
 
@@ -82,7 +83,7 @@ Aşağıdaki tablo, değişen ayarları ve ek bilgilerin nerede bulunacağını 
 |--------------|--------|-----------------|------------------------------|
 |ChannelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 saniye|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * işlemci sayısı|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * aktarım için işlemci sayısı<br /><br /> 4 \* SMSvcHost. exe için işlemci sayısı|[net. TCP bağlantı noktası paylaşım hizmetini yapılandırma](./feature-details/configuring-the-net-tcp-port-sharing-service.md) <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A>|
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * aktarım için işlemci sayısı<br /><br /> \*SMSvcHost.exe için 4 işlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * işlemci sayısı|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|
 |receiveTimeout|SMSvcHost.exe|30 saniye|[Net.TCP Bağlantı Noktası Hizmetini Yapılandırma](./feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 
@@ -92,13 +93,13 @@ Yeni ve mevcut WCF hizmeti geliştiricilerinin hizmetlerini yapılandırmasına 
 
 ## <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma
 
-Windows Communication Foundation (WCF), geliştiricilerin yapılandırma dosyalarını veya kodu kullanarak hizmetleri yapılandırmalarına olanak tanır. Yapılandırma dosyaları, bir hizmetin dağıtıldıktan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyalarını kullanırken, bir BT uzmanı 'nın yalnızca yapılandırma dosyasını güncelleştirmesi gerekir, yeniden derleme gerekmez. Bununla birlikte yapılandırma dosyaları, karmaşık ve bakım açısından zor olabilir. Yapılandırma dosyalarını hata ayıklama desteği yoktur ve yapılandırma öğeleri, yazma yapılandırma dosyalarını hata-açık ve zor hale getiren adlara göre başvurulur. WCF Ayrıca koddaki Hizmetleri yapılandırmanıza de olanak tanır. WCF 'nin önceki sürümlerinde (4,0 ve önceki sürümler), kodda hizmetleri yapılandırmak, kendi kendine barındırılan senaryolarda kolaydır. <xref:System.ServiceModel.ServiceHost> sınıfı, ServiceHost. Open çağrılmadan önce uç noktaları ve davranışları yapılandırmanıza izin verilir. Ancak, Web 'de barındırılan senaryolarda <xref:System.ServiceModel.ServiceHost> sınıfına erişiminiz yok. Web 'de barındırılan bir hizmeti yapılandırmak için, <xref:System.ServiceModel.Activation.ServiceHostFactory> oluşturan ve gerekli tüm yapılandırmaları gerçekleştiren bir `System.ServiceModel.ServiceHostFactory` oluşturmanız gerekiyordu. WCF, .NET 4,5 ile başlayarak, kodda hem şirket içinde barındırılan hem de Web 'de barındırılan Hizmetleri yapılandırmanın daha kolay bir yolunu sunar. Daha fazla bilgi için bkz. [KODDA WCF hizmetlerini yapılandırma](configuring-wcf-services-in-code.md).
+Windows Communication Foundation (WCF), geliştiricilerin yapılandırma dosyalarını veya kodu kullanarak hizmetleri yapılandırmalarına olanak tanır. Yapılandırma dosyaları, bir hizmetin dağıtıldıktan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyalarını kullanırken, bir BT uzmanı 'nın yalnızca yapılandırma dosyasını güncelleştirmesi gerekir, yeniden derleme gerekmez. Bununla birlikte yapılandırma dosyaları, karmaşık ve bakım açısından zor olabilir. Yapılandırma dosyalarını hata ayıklama desteği yoktur ve yapılandırma öğeleri, yazma yapılandırma dosyalarını hata-açık ve zor hale getiren adlara göre başvurulur. WCF Ayrıca koddaki Hizmetleri yapılandırmanıza de olanak tanır. WCF 'nin önceki sürümlerinde (4,0 ve önceki sürümler), kodda hizmetleri yapılandırmak kendi kendine barındırılan senaryolarda kolaydır, <xref:System.ServiceModel.ServiceHost> sınıf ServiceHost. Open çağrılmadan önce uç noktaları ve davranışları yapılandırmanıza izin verilir. Ancak, Web 'de barındırılan senaryolarda sınıfına erişiminiz yok <xref:System.ServiceModel.ServiceHost> . Web 'de barındırılan bir hizmeti yapılandırmak için `System.ServiceModel.ServiceHostFactory` , oluşturmuş <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli tüm yapılandırmaları gerçekleştirmiş bir oluşturma gerekiyordu. WCF, .NET 4,5 ile başlayarak, kodda hem şirket içinde barındırılan hem de Web 'de barındırılan Hizmetleri yapılandırmanın daha kolay bir yolunu sunar. Daha fazla bilgi için bkz. [KODDA WCF hizmetlerini yapılandırma](configuring-wcf-services-in-code.md).
 
 ## <a name="channelfactory-caching"></a>ChannelFactory önbelleğe alma
 
-WCF istemci uygulamaları, bir WCF hizmeti ile iletişim kanalı oluşturmak için <xref:System.ServiceModel.ChannelFactory%601> sınıfını kullanır. <xref:System.ServiceModel.ChannelFactory%601> örneklerin oluşturulması, aşağıdaki işlemleri içerdiği için bazı ek yük doğurur:
+WCF istemci uygulamaları, <xref:System.ServiceModel.ChannelFactory%601> BIR WCF hizmeti ile iletişim kanalı oluşturmak için sınıfını kullanır. <xref:System.ServiceModel.ChannelFactory%601>Aşağıdaki işlemleri içerdiğinden örnek oluşturma bazı ek yük doğurur:
 
-1. <xref:System.ServiceModel.Description.ContractDescription> ağacını oluşturma
+1. Ağacı oluşturma <xref:System.ServiceModel.Description.ContractDescription>
 
 2. Tüm gerekli CLR türlerini yansıtma
 
@@ -110,7 +111,7 @@ Bu ek yükü en aza indirmenize yardımcı olmak için WCF istemci ara sunucusu 
 
 ## <a name="compression-and-the-binary-encoder"></a>Sıkıştırma ve Ikili kodlayıcı
 
-WCF ikili Kodlayıcısı 4,5 ile başlayarak sıkıştırma için destek ekler. Sıkıştırma türü <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> özelliği ile yapılandırılır. Hem istemci hem de hizmetin <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> özelliğini yapılandırması gerekir. Sıkıştırma, HTTP, HTTPS ve TCP protokolleri için çalışacaktır. Bir istemci sıkıştırma kullanmayı belirtirse, ancak hizmet bunu desteklemiyorsa protokol uyuşmazlığını gösteren bir protokol özel durumu oluşturulur. Daha fazla bilgi için bkz. [Ileti Kodlayıcısı seçme](./feature-details/choosing-a-message-encoder.md).
+WCF ikili Kodlayıcısı 4,5 ile başlayarak sıkıştırma için destek ekler. Sıkıştırma türü, özelliği ile yapılandırılır <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> . Hem istemci hem de hizmetin özelliği yapılandırması gerekir <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> . Sıkıştırma, HTTP, HTTPS ve TCP protokolleri için çalışacaktır. Bir istemci sıkıştırma kullanmayı belirtirse, ancak hizmet bunu desteklemiyorsa protokol uyuşmazlığını gösteren bir protokol özel durumu oluşturulur. Daha fazla bilgi için bkz. [Ileti Kodlayıcısı seçme](./feature-details/choosing-a-message-encoder.md).
 
 ## <a name="udp"></a>UDP
 
@@ -126,7 +127,7 @@ Uluslararası etki alanı adlarıyla WCF hizmetlerine izin vermek için destek e
 
 ## <a name="httpclient"></a>HttpClient
 
-HTTP istekleriyle çalışmayı çok daha kolay hale getirmek için <xref:System.Net.Http.HttpClient> adlı yeni bir sınıf eklenmiştir. Daha fazla bilgi için bkz. [Uygulamaları Sosyal ve HTTP Hizmetleri ile bağlantılı hale getirme](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) ve [http istemci örneği](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
+<xref:System.Net.Http.HttpClient>Http istekleriyle çalışmayı çok daha kolay hale getirmek için çağrılan yeni bir sınıf eklenmiştir. Daha fazla bilgi için bkz. [Uygulamaları Sosyal ve HTTP Hizmetleri ile bağlantılı hale getirme](https://channel9.msdn.com/Events/BUILD/BUILD2011/PLAT-581T) ve [http istemci örneği](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).
 
 ## <a name="configuration-intellisense"></a>Yapılandırma IntelliSense
 
@@ -150,13 +151,13 @@ Visual Studio 2010 ' de WebServiceHost, açıkça bir uç nokta belirtmeksizin o
   </appSettings>
 ```
 
-## <a name="ihttpcookiecontainermanager"></a>IHttpCookieContainerManager
+## <a name="ihttpcookiecontainermanager"></a>Ihttppişiriecontainermanager
 
-<xref:System.ServiceModel.Channels.IChannelFactory%601>tarafından sunulan bu arabirim, istemci tarafında tanımlama bilgileriyle çalışmayı çok daha kolay hale getirir. AllowCookies bağlamada true olarak ayarlandığında, aşağıdaki kodu kullanarak tanımlama bilgilerine erişebilirsiniz:
+Tarafından sunulan bu arabirim, <xref:System.ServiceModel.Channels.IChannelFactory%601> istemci tarafında tanımlama bilgileriyle çalışmayı çok daha kolay hale getirir. AllowCookies bağlamada true olarak ayarlandığında, aşağıdaki kodu kullanarak tanımlama bilgilerine erişebilirsiniz:
 
 ```csharp
 IHttpCookieContainerManager cookieManager = factory.GetProperty<IHttpCookieContainerManager>();
 System.Net.CookieContainer container = cookieManager.CookieContainer;
 ```
 
-Daha sonra <xref:System.Net.CookieContainer>tanımlama bilgilerini alabilir veya ayarlayabilirsiniz. AllowCookies false olarak ayarlandığında, <xref:System.ServiceModel.OperationContext> kullanarak tanımlama bilgilerini el ile alabilir ve başka bir <xref:System.ServiceModel.OperationContext> veya ileti denetçisi kullanarak diğer isteklere gönderebilirsiniz. Ihttpcookie ıecontainermanager arabirimi, bir hizmetin Kullanıcı kimliğini doğrulayabilmeniz ve diğer hizmetlerle kimlik doğrulaması yapmak için bu hizmet tarafından döndürülen kimlik doğrulama tanımlama bilgisini kullanmanıza olanak sağlar.
+Daha sonra içinden tanımlama bilgilerini alabilir veya ayarlayabilirsiniz <xref:System.Net.CookieContainer> . AllowCookies false olarak ayarlandığında, kullanarak tanımlama bilgilerini el ile alabilir <xref:System.ServiceModel.OperationContext> ve başka bir <xref:System.ServiceModel.OperationContext> veya ileti denetçisi kullanarak diğer isteklere gönderebilirsiniz. Ihttpcookie ıecontainermanager arabirimi, bir hizmetin Kullanıcı kimliğini doğrulayabilmeniz ve diğer hizmetlerle kimlik doğrulaması yapmak için bu hizmet tarafından döndürülen kimlik doğrulama tanımlama bilgisini kullanmanıza olanak sağlar.

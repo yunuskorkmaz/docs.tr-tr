@@ -1,27 +1,28 @@
 ---
 title: WCF Hizmetlerini Kodda Yapılandırma
+description: Self-barındırılan ve Web 'de barındırılan hizmetler için yapılandırma dosyaları yerine kodu kullanarak WCF hizmetlerini nasıl yapılandırabileceğinizi öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 4ff49b4e17ae179426cc033a955ecf2c71f2a3e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d28115236a4582fe251adf1537b9e8b3e996d611
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174816"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245420"
 ---
 # <a name="configuring-wcf-services-in-code"></a>WCF Hizmetlerini Kodda Yapılandırma
-Windows Communication Foundation (WCF), geliştiricilerin hizmetleri yapılandırma dosyalarını veya kodunu kullanarak yapılandırmalarına olanak tanır.  Yapılandırma dosyaları, bir hizmetin dağıtıldıktan sonra yapılandırılması gerektiğinde yararlıdır. Yapılandırma dosyalarını kullanırken, bt uzmanının yalnızca yapılandırma dosyasını güncelleştirmesi gerekir, yeniden derleme gerekmez. Ancak yapılandırma dosyaları karmaşık ve bakımı zor olabilir. Hata ayıklama yapılandırma dosyaları için destek yoktur ve yapılandırma öğeleri yapılandırma dosyaları yazma hata eğilimli ve zor kılan adlarla başvurur. WCF ayrıca hizmetleri kod halinde yapılandırmanıza da olanak tanır. WCF'nin önceki sürümlerinde (4.0 ve daha önceki) hizmetleri kodda yapılandırmak kendi kendine barındırılan senaryolarda kolaydı, <xref:System.ServiceModel.ServiceHost> sınıf ServiceHost.Open'ı aramadan önce uç noktaları ve davranışları yapılandırmanıza olanak sağladı. Ancak, web barındırılan senaryolarda <xref:System.ServiceModel.ServiceHost> sınıfa doğrudan erişiminiz yoktur. Web barındırılan bir hizmeti yapılandırmak `System.ServiceModel.ServiceHostFactory` için, <xref:System.ServiceModel.Activation.ServiceHostFactory> gerekli yapılandırmayı oluşturan ve gerçekleştiren bir web barındırma hizmeti oluşturmanız gerekiyordu. .NET 4.5 ile başlayarak WCF, hem kendi kendine barındırılan hem de web barındırılan hizmetleri kod halinde yapılandırmanın daha kolay bir yolunu sağlar.  
+Windows Communication Foundation (WCF), geliştiricilerin yapılandırma dosyalarını veya kodu kullanarak hizmetleri yapılandırmalarına olanak tanır.  Yapılandırma dosyaları, bir hizmetin dağıtıldıktan sonra yapılandırılması gerektiğinde faydalıdır. Yapılandırma dosyalarını kullanırken, bir BT uzmanı 'nın yalnızca yapılandırma dosyasını güncelleştirmesi gerekir, yeniden derleme gerekmez. Bununla birlikte yapılandırma dosyaları, karmaşık ve bakım açısından zor olabilir. Yapılandırma dosyalarını hata ayıklama desteği yoktur ve yapılandırma öğeleri, yazma yapılandırma dosyalarını hata-açık ve zor hale getiren adlara göre başvurulur. WCF Ayrıca koddaki Hizmetleri yapılandırmanıza de olanak tanır. WCF 'nin önceki sürümlerinde (4,0 ve önceki sürümler), kodda hizmetleri yapılandırmak kendi kendine barındırılan senaryolarda kolaydır, <xref:System.ServiceModel.ServiceHost> sınıf ServiceHost. Open çağrılmadan önce uç noktaları ve davranışları yapılandırmanıza izin verilir. Ancak, Web 'de barındırılan senaryolarda sınıfına doğrudan erişiminiz yoktur <xref:System.ServiceModel.ServiceHost> . Web 'de barındırılan bir hizmeti yapılandırmak için `System.ServiceModel.ServiceHostFactory` , oluşturmuş <xref:System.ServiceModel.Activation.ServiceHostFactory> ve gerekli tüm yapılandırmaları gerçekleştirmiş bir oluşturma gerekiyordu. WCF, .NET 4,5 ile başlayarak, kodda hem şirket içinde barındırılan hem de Web 'de barındırılan Hizmetleri yapılandırmanın daha kolay bir yolunu sunar.  
   
-## <a name="the-configure-method"></a>Yapılandırma yöntemi  
- Hizmet uygulama sınıfınızda `Configure` aşağıdaki imzayla çağrılan genel statik bir yöntem tanımlamanız yeterlidir:  
+## <a name="the-configure-method"></a>Configure yöntemi  
+ Hizmet uygulama Sınıfınıza aşağıdaki imzayla çağrılan bir ortak statik yöntem tanımlamanız yeterlidir `Configure` :  
   
 ```csharp  
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Yapılandırma yöntemi, geliştiricinin uç nokta ve davranış eklemesine olanak tanıyan bir <xref:System.ServiceModel.ServiceConfiguration> örnek alır. Bu yöntem, hizmet ana bilgisayarı açılmadan önce WCF tarafından çağrılır. Tanımlandığında, app.config veya web.config dosyasında belirtilen hizmet yapılandırma ayarları yoksayılır.  
+ Configure yöntemi <xref:System.ServiceModel.ServiceConfiguration> , geliştiricinin uç noktalar ve davranışlar eklemesini sağlayan bir örnek alır. Bu yöntem, hizmet ana bilgisayarı açılmadan önce WCF tarafından çağırılır. Tanımlandığında, bir app.config veya web.config dosyasında belirtilen herhangi bir hizmet yapılandırma ayarı yok sayılır.  
   
- Aşağıdaki kod parçacığı `Configure` yöntemi tanımlamak ve bir hizmet bitiş noktası, bir bitiş noktası davranışı ve hizmet davranışları eklemek nasıl gösteriş:  
+ Aşağıdaki kod parçacığı, yönteminin nasıl tanımlanacağını `Configure` ve bir hizmet uç noktası, bir uç nokta davranışı ve hizmet davranışı nasıl ekleneceğini göstermektedir:  
   
 ```csharp  
 public class Service1 : IService1  
@@ -56,7 +57,7 @@ public class Service1 : IService1
     }  
 ```  
   
- Bir hizmet için https gibi bir protokolü etkinleştirmek için, protokolü kullanan bir bitiş noktası nı açıkça ekleyebilirsiniz veya her temel adres için bir bitiş noktası ekleyen ServiceConfiguration.EnableProtocol(Binding) numaralı telefonu arayarak otomatik olarak uç noktaları ekleyebilirsiniz protokol ve tanımlanan her hizmet sözleşmesi ile uyumludur. Aşağıdaki kod ServiceConfiguration.EnableProtocol yönteminin nasıl kullanılacağını göstermektedir:  
+ Bir hizmet için https gibi bir protokolü etkinleştirmek için, protokolü kullanan bir uç noktayı açıkça ekleyebilirsiniz ya da her bir temel adres için bir uç nokta ekleyerek protokol ve tanımlı her hizmet sözleşmesi için bir uç nokta ekleyen ServiceConfiguration. EnableProtocol ' ı çağırarak otomatik olarak uç noktaları ekleyebilirsiniz. Aşağıdaki kod, ServiceConfiguration. EnableProtocol yönteminin nasıl kullanılacağını göstermektedir:  
   
 ```csharp  
 public class Service1 : IService1
@@ -77,7 +78,7 @@ public class Service1 : IService1
 }
 ```  
   
- <`protocolMappings`> bölümündeki ayarlar yalnızca <xref:System.ServiceModel.ServiceConfiguration> programlı olarak uygulama uç noktaları eklenmezse kullanılır. Varsayılan uygulama yapılandırma dosyasından isteğe bağlı olarak <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> hizmet yapılandırmasını arayarak yükleyebilir ve ardından ayarları değiştirebilirsiniz. Sınıf <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> ayrıca merkezi bir yapılandırma yapılandırma yüklemenize olanak sağlar. Aşağıdaki kod, bunun nasıl uygulanacağını göstermektedir:  
+ <`protocolMappings`> bölümündeki ayarlar yalnızca program aracılığıyla hiçbir uygulama uç noktası eklenmemişse kullanılır <xref:System.ServiceModel.ServiceConfiguration> . İsteğe bağlı olarak, hizmet yapılandırmasını çağırarak varsayılan uygulama yapılandırma dosyasından yükleyebilirsiniz <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ve sonra ayarları değiştirebilirsiniz. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration>Sınıfı, merkezi bir yapılandırmadan yapılandırmayı yüklemenize de olanak tanır. Aşağıdaki kod, bunun nasıl uygulanacağını göstermektedir:  
   
 ```csharp
 public class Service1 : IService1
@@ -91,7 +92,7 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> <`system.serviceModel` <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>> <`host` `service`> etiketindeki <> ayarları yok saydığını unutmayın. Kavramsal olarak, `host` <> hizmet yapılandırması ile değil, ana bilgisayar yapılandırması ile ilgilidir ve Yapılandırma yöntemi yürütülmeden önce yüklenir.  
+> <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> `host` <> <> etiketindeki <> ayarlarını yok saymadığını unutmayın `service` `system.serviceModel` . Kavramsal olarak, <`host`>, hizmet yapılandırması değil konak yapılandırması ile ilgilidir ve Configure Yöntemi yürütülmeden önce yüklenir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,6 @@
 ---
 title: TextBox denetimiyle parola metin kutusu oluşturma
+description: Bir Kullanıcı bir dize yazdığında, yer tutucu karakterleri görüntüleyen Windows Forms bir metni nasıl oluşturabileceğinizi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: ff4706a736d15f14cf437c808219e9088773dc6d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6d7e61eefa44ce3152aa77e3922bde471a4aeaf3
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904318"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Nasıl yapılır: Windows Forms TextBox Denetimi ile Parola Metin Kutusu Oluşturma
 
@@ -25,16 +26,16 @@ Parola kutusu, bir Kullanıcı bir dize yazdığında yer tutucu karakterleri g�
 
 ### <a name="to-create-a-password-text-box"></a>Parola metin kutusu oluşturmak için
 
-1. <xref:System.Windows.Forms.TextBox> denetiminin <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliğini belirli bir karakter olarak ayarlayın.
+1. <xref:System.Windows.Forms.TextBox.PasswordChar%2A> <xref:System.Windows.Forms.TextBox> Denetimin özelliğini belirli bir karakter olarak ayarlayın.
 
-    <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliği metin kutusunda gösterilecek karakteri belirtir. Örneğin, parola kutusunda yıldız işaretlerini isterseniz, Özellikler penceresi <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliği için * belirtin. Ardından, kullanıcının metin kutusunda ne kadar karakterinde olduğuna bakılmaksızın bir yıldız işareti görüntülenir.
+    <xref:System.Windows.Forms.TextBox.PasswordChar%2A>Özelliği metin kutusunda gösterilecek karakteri belirtir. Örneğin, parola kutusunda yıldız işaretlerini isterseniz, Özellikler penceresi özellik için * belirtin <xref:System.Windows.Forms.TextBox.PasswordChar%2A> . Ardından, kullanıcının metin kutusunda ne kadar karakterinde olduğuna bakılmaksızın bir yıldız işareti görüntülenir.
 
-2. Seçim <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> özelliğini ayarlayın. Özelliği, metin kutusuna kaç karakter girilebileceğini belirler. Maksimum uzunluk aşılırsa sistem bir bip sesi yayar ve metin kutusu daha fazla karakter kabul etmez. Parolayı tahmin etmeye çalışan saldırganlar için bir parolanın en fazla uzunluğu kullanım dışı olabileceğinden bunu yapmak istemediğiniz unutulmamalıdır.
+2. Seçim Özelliği ayarlayın <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> . Özelliği, metin kutusuna kaç karakter girilebileceğini belirler. Maksimum uzunluk aşılırsa sistem bir bip sesi yayar ve metin kutusu daha fazla karakter kabul etmez. Parolayı tahmin etmeye çalışan saldırganlar için bir parolanın en fazla uzunluğu kullanım dışı olabileceğinden bunu yapmak istemediğiniz unutulmamalıdır.
 
-    Aşağıdaki kod örneğinde, en fazla 14 karakter uzunluğunda bir dizeyi kabul edecek ve dize yerine yıldız işaretlerini gösteren bir metin kutusunun nasıl başlatıldığı gösterilmektedir. `InitializeMyControl` yordamı otomatik olarak yürütülmez; çağrılması gerekir.
+    Aşağıdaki kod örneğinde, en fazla 14 karakter uzunluğunda bir dizeyi kabul edecek ve dize yerine yıldız işaretlerini gösteren bir metin kutusunun nasıl başlatıldığı gösterilmektedir. `InitializeMyControl`Yordam otomatik olarak yürütülmeyecektir; çağrılmalıdır.
 
     > [!IMPORTANT]
-    > Metin kutusu üzerinde <xref:System.Windows.Forms.TextBox.PasswordChar%2A> özelliğini kullanmak, Kullanıcı tarafından giriş gözlemlerse, diğer kişilerin bir kullanıcının parolasını belirleyememesini sağlamaya yardımcı olabilir. Bu güvenlik ölçüsü, Uygulama mantığınız nedeniyle gerçekleşebileceğini herhangi bir depolama veya parola aktarımını kapsamaz. Girilen metin herhangi bir şekilde şifrelenmediğinden, diğer gizli veriler gibi davranmanız gerekir. Bu gibi görünmese de, parola hala düz metin dizesi olarak değerlendirildi (bazı ek güvenlik ölçüsü gerçekleştirmediğiniz sürece).
+    > <xref:System.Windows.Forms.TextBox.PasswordChar%2A>Özelliği metin kutusu üzerinde kullanmak, Kullanıcı tarafından giriş gözlemlerse, diğer kişilerin bir kullanıcının parolasını belirleyememesini sağlamaya yardımcı olabilir. Bu güvenlik ölçüsü, Uygulama mantığınız nedeniyle gerçekleşebileceğini herhangi bir depolama veya parola aktarımını kapsamaz. Girilen metin herhangi bir şekilde şifrelenmediğinden, diğer gizli veriler gibi davranmanız gerekir. Bu gibi görünmese de, parola hala düz metin dizesi olarak değerlendirildi (bazı ek güvenlik ölçüsü gerçekleştirmediğiniz sürece).
 
     ```vb
     Private Sub InitializeMyControl()

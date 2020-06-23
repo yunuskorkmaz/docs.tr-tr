@@ -1,5 +1,6 @@
 ---
-title: httpWebRequest._AutoRedirects Alanı
+title: HttpWebRequest. _AutoRedirects alanı
+description: .NET 'teki HttpWebRequest. _AutoRedirects alanı hakkında bilgi edinin. Bu alan, bir HTTP Web isteği için yapılan yeniden yönlendirme sayısını yansıtan bir Int32 değeridir.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-ms.openlocfilehash: ff4b9b430bdb9ebc82a945012dcb53ed83b1e48f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62c765a26424a5c0a96f291aae0a6ccdf0546d46
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989978"
 ---
-# <a name="httpwebrequest_autoredirects-field"></a>httpwebrequest. \_AutoRedirects Alanı
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest. \_ Oto yeniden yönlendirmeler alanı
 
-`HttpWebRequest._AutoRedirects`bunun <xref:System.Net.HttpWebRequest> <xref:System.Int32> için yapılan yönlendirmelerin sayısını yansıtan bir durumdur.
+`HttpWebRequest._AutoRedirects`, <xref:System.Int32> bunun için yapılan yeniden yönlendirme sayısını yansıtan bir ' tır <xref:System.Net.HttpWebRequest> .
 
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```csharp  
 private int _AutoRedirects
 ```
 
 > [!WARNING]
-> Alan `HttpWebRequest._AutoRedirects` dahilidir ve doğrudan kodunuzda kullanılmamalıdır.
+> `HttpWebRequest._AutoRedirects`Alan dahili ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Ad alanı:**<xref:System.Net>
 
-**Montaj:** Sistem (System.dll'de)
+**Bütünleştirilmiş kod:** Sistem (System.dll)
 
-**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

@@ -1,5 +1,6 @@
 ---
 title: Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
+description: Yetkilendirme gerçekleştirmeye yönelik talep tabanlı bir model olan WCF kimlik modeli için önemli programlama kavramları hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authorization [WCF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: f9138102435aab07e5c1771ce5dba85bacbcac99
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 0d5687f8ac5021c008254f0f5cc453eda5e538c7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586357"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85245134"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme
 Yetkilendirme, bir bilgisayar kaynağını değiştirme, görüntüleme veya başka bir şekilde erişme iznine sahip olan varlıkları belirleme işlemidir. Örneğin, bir işletmede, çalışanlarının dosyalarına yalnızca yöneticilerin erişmesine izin verilebilir. Windows Communication Foundation (WCF), yetkilendirme işlemi gerçekleştirmek için iki mekanizmayı destekler. İlk mekanizma, mevcut ortak dil çalışma zamanı (CLR) yapılarını kullanarak yetkilendirmeyi denetlemenize olanak sağlar. İkincisi, *kimlik modeli*olarak bilinen talep tabanlı bir modeldir. WCF, gelen iletilerden talepler oluşturmak için kimlik modelini kullanır; Kimlik modeli sınıfları, özel yetkilendirme şemaları için yeni talep türlerini destekleyecek şekilde genişletilebilir. Bu konu, kimlik modeli özelliğinin ana programlama kavramlarının yanı sıra özelliğin kullandığı en önemli sınıfların bir listesini sunmaktadır.  
@@ -75,7 +76,7 @@ Yetkilendirme, bir bilgisayar kaynağını değiştirme, görüntüleme veya ba�
 ## <a name="claims"></a>Talepler  
  Kimlik modeli, talep tabanlı bir sistemdir. Talepler, sistem içindeki bazı varlıkla ilişkili özellikleri (genellikle bu sistemin bir kullanıcısı) anlatmaktadır. Belirli bir varlıkla ilişkili talepler kümesi, anahtar olarak düşünülebilir. Belirli talepler, bir kapıda kilit açmak için kullanılan bir fiziksel anahtarla benzer şekilde bu anahtarın şeklini tanımlar. Talepler, kaynaklara erişim kazanmak için kullanılır. Verilen korumalı bir kaynağa erişim, erişim girişiminde bulunan varlıkla ilişkili taleplerle ilgili kaynağa erişmek için gereken talepler karşılaştırılmasıyla belirlenir.  
   
- Talep, belirli bir değere göre doğru bir ifadedir. Bir hak, "okuma", "yazma" veya "yürütme" gibi bir şey olabilir. Bir değer bir veritabanı, dosya, posta kutusu veya özellik olabilir. Taleplerde de bir talep türü vardır. Talep türü ve sağ birleşimi, değere göre özellikleri belirtme mekanizmasını sağlar. Örneğin, "biyograf. doc" değeri üzerinde "Read" doğru "dosya" türünde bir talep, bu tür bir talebin ilişkilendirildiği varlığın biografi. doc dosyasına okuma erişimi olduğunu gösterir. "Marsessproperty" değerine sahip "ad" türünde bir talep, "Marsessproperty" değeri üzerinde "Marsessproperty" olan bir talep, bu tür bir talebin ilişkili olduğu varlığın "MARI" değerine sahip bir ad özelliği olduğunu gösterir.  
+ Talep, belirli bir değere göre doğru bir ifadedir. Bir hak, "okuma", "yazma" veya "yürütme" gibi bir şey olabilir. Bir değer bir veritabanı, dosya, posta kutusu veya özellik olabilir. Taleplerde de bir talep türü vardır. Talep türü ve sağ birleşimi, değere göre özellikleri belirtme mekanizmasını sağlar. Örneğin, "Biography.doc" değeri üzerinde sağ "Read" içeren "File" türünde bir talep, bu tür bir talebin ilişkilendirildiği varlığın dosya Biography.doc okuma erişimine sahip olduğunu gösterir. "Marsessproperty" değerine sahip "ad" türünde bir talep, "Marsessproperty" değeri üzerinde "Marsessproperty" olan bir talep, bu tür bir talebin ilişkili olduğu varlığın "MARI" değerine sahip bir ad özelliği olduğunu gösterir.  
   
  Çeşitli talep türleri ve hakları kimlik modelinin bir parçası olarak tanımlandığından, sistem Genişletilebilir, bu da kimlik modeli altyapısının üzerine binen üst, ek talep türleri ve haklar tanımlamak için çeşitli sistemlere izin verir.  
   
@@ -130,7 +131,7 @@ Yetkilendirme, bir bilgisayar kaynağını değiştirme, görüntüleme veya ba�
 ## <a name="identity-model-programming"></a>Kimlik modeli programlama  
  Aşağıdaki tabloda, Identity model uzantıları 'nı programlamak için kullanılan nesne modeli açıklanmaktadır. Bu sınıfların hepsi <xref:System.IdentityModel.Policy> ya da <xref:System.IdentityModel.Claims> ad alanlarında bulunur.  
   
-|Sınıf|Açıklama|  
+|Sınıf|Description|  
 |-----------|-----------------|  
 |Yetkilendirme bileşeni|Arabirimi uygulayan bir kimlik modeli sınıfı <xref:System.IdentityModel.Policy.IAuthorizationComponent> .|  
 |<xref:System.IdentityModel.Policy.IAuthorizationComponent>|Tek bir salt okunurdur dize özelliği sağlayan bir arabirim: ID. Bu özelliğin değeri, bu arabirimi uygulayan sistemdeki her bir örnek için benzersizdir.|  
@@ -144,7 +145,7 @@ Yetkilendirme, bir bilgisayar kaynağını değiştirme, görüntüleme veya ba�
   
  Aşağıdaki sınıflar, kimlik modeli programlama için de kullanılır, ancak <xref:System.IdentityModel.Policy> veya <xref:System.IdentityModel.Claims> ad alanlarında bulunamaz.  
   
-|Sınıf|Açıklama|  
+|Sınıf|Description|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager>|Bir <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> hizmet içindeki her işlem için talep tabanlı yetkilendirme denetimleri gerçekleştirmek üzere — yöntemi sağlayan bir sınıf. Sınıfından türetmeniz ve metodunu geçersiz kılmanız gerekir.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>|Yetkilendirmeyle ilgili bir hizmetin davranışına ilişkin çeşitli özellikler sağlayan Sealed bir sınıf.|  
@@ -153,7 +154,7 @@ Yetkilendirme, bir bilgisayar kaynağını değiştirme, görüntüleme veya ba�
 ### <a name="significant-members"></a>Önemli Üyeler  
  Aşağıdaki Üyeler genellikle yeni talep türleri oluşturmak için kullanılır.  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
 |<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Türetilmiş sınıflar, bir hizmette işlemleri çalıştırmadan önce talep tabanlı erişim denetimleri gerçekleştirmek için bu yöntemi uygular. <xref:System.ServiceModel.OperationContext>Erişim denetimi kararı verirken, sağlanan veya başka bir yerde bulunan tüm bilgiler incelenebilir. <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>Dönerse `true` , erişim verilir ve işlemin çalışmasına izin verilir. `CheckAccessCore`Dönerse `false` , erişim reddedilir ve işlem çalıştırılmaz. Bir örnek için bkz. [nasıl yapılır: bir hizmet Için özel Yetkilendirme Yöneticisi oluşturma](../extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|<xref:System.ServiceModel.ServiceAuthorizationManager>Hizmeti için döndürür. , <xref:System.ServiceModel.ServiceAuthorizationManager> Yetkilendirme kararları getirmekten sorumludur.|  

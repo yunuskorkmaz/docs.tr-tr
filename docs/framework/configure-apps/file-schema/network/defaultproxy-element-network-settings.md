@@ -9,12 +9,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 915fdc96dbd4d417f9c9e6aa3ff96de3026491ef
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: 85004d49ce7605b050709a3019592ec696a7bada
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84504608"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141637"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy> Öğesi (Ağ Ayarları)
 Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.  
@@ -23,12 +23,12 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<defaultProxy>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <defaultProxy  
-  enabled="true|false"  
-  useDefaultCredentials="true|false">  
+  enabled="True|False"  
+  useDefaultCredentials="True|False">  
     <bypasslist>...</bypasslist>  
     <proxy>...</proxy>  
     <module>...</module>  
@@ -42,8 +42,8 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
   
 |**Dosyalarında**|**Açıklama**|  
 |-----------------|---------------------|  
-|`enabled`|Bir Web proxy 'sinin kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `true`.|  
-|`useDefaultCredentials`|Bu konak için varsayılan kimlik bilgilerinin Web proxy 'sine erişmek için kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `false`.|  
+|`enabled`|Bir Web proxy 'sinin kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `True`.|  
+|`useDefaultCredentials`|Bu konak için varsayılan kimlik bilgilerinin Web proxy 'sine erişmek için kullanılıp kullanılmayacağını belirtir. Varsayılan değer: `False`.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
   
@@ -65,7 +65,7 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
  [Modül](module-element-network-settings.md) öğesi ortak olmayan bir tür belirtiyorsa, tür sınıftan türetilmiyor <xref:System.Net.IWebProxy> , bu nesnenin parametresiz oluşturucusundan bir özel durum oluştu veya sistem tarafından belirtilen varsayılan proxy alınırken özel durum oluştu. <xref:System.Exception.InnerException%2A>Özel durum üzerindeki özelliği, hatanın kök nedeni hakkında daha fazla bilgi içermelidir.  
   
 ## <a name="configuration-files"></a>Yapılandırma Dosyaları  
- Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine. config) kullanılabilir.  
+ Bu öğe, uygulama yapılandırma dosyasında veya makine yapılandırma dosyasında (Machine.config) kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
  Aşağıdaki örnek, Internet Explorer proxy 'sinden varsayılan değerleri kullanır, proxy adresini belirtir ve yerel erişim ve contoso.com için proxy 'yi atlar.  
@@ -75,9 +75,9 @@ Köprü Metni Aktarım Protokolü (HTTP) proxy sunucusunu yapılandırır.
   <system.net>  
     <defaultProxy>  
       <proxy  
-        usesystemdefault="true"  
+        usesystemdefault="True"  
         proxyaddress="http://192.168.1.10:3128"  
-        bypassonlocal="true"  
+        bypassonlocal="True"  
       />  
       <bypasslist>  
         <add address="[a-z]+\.contoso\.com$" />  

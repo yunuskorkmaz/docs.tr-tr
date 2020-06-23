@@ -1,5 +1,6 @@
 ---
-title: ServicePoint.m_ConnectionGroupList Alanı
+title: ServicePoint. m_ConnectionGroupList alanı
+description: Her biri .NET 'teki ServicePoint URI 'SI için bir bağlantı tutan bir bağlantı grupları karma tablosu olan ServicePoint. m_ConnectionGroupList alanını anlayın.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989710"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList Alanı
+# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. d \_ connectiongrouplist alanı
 
-`ServicePoint.m_ConnectionGroupList`her <xref:System.Collections.Hashtable> biri <xref:System.Net.ServicePoint>URI için bir bağlantı tutan bir bağlantı grubudur.
+`ServicePoint.m_ConnectionGroupList`<xref:System.Collections.Hashtable>, her biri URI 'sine yönelik bir bağlantı tutan bir bağlantı gruplarıdır <xref:System.Net.ServicePoint> .
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> Alan `ServicePoint.m_ConnectionGroupList` özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `ServicePoint.m_ConnectionGroupList`Alan özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Ad alanı:**<xref:System.Net>
 
-**Montaj:** Sistem (System.dll'de)
+**Bütünleştirilmiş kod:** Sistem (System.dll)
 
-**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

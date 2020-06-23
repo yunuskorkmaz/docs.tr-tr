@@ -1,5 +1,6 @@
 ---
 title: Formu yeniden boyutlandır
+description: Boyut özelliği için yeni bir değer ayarlayarak formun yüksekliğini ve genişliğini yeniden boyutlandırmayı, ya da yükseklik veya genişlik özelliklerini ayrı ayrı ayarlamayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d6383e4d29d9407d3da97bf8b94761f06d99748
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739310"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903278"
 ---
-# <a name="how-to-resize-windows-forms"></a>Nasıl yapılır: Windows Formlarını Yeniden Boyutlandırma
+# <a name="how-to-resize-windows-forms"></a>Nasıl yapılır: Windows Forms’u Yeniden Boyutlandırma
 
-Windows formunuzun boyutunu birkaç şekilde belirtebilirsiniz. <xref:System.Windows.Forms.Form.Size%2A> özelliği için yeni bir değer ayarlayarak ya da <xref:System.Windows.Forms.Control.Height%2A> veya <xref:System.Windows.Forms.Control.Width%2A> özelliklerini ayrı ayrı ayarlayarak formun yüksekliğini ve genişliğini programlama yoluyla değiştirebilirsiniz. Visual Studio kullanıyorsanız, Windows Form Tasarımcısı kullanarak boyutunu değiştirebilirsiniz. Ayrıca bkz. [nasıl yapılır: Tasarımcıyı kullanarak Windows Forms yeniden boyutlandırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).
+Windows formunuzun boyutunu birkaç şekilde belirtebilirsiniz. Özelliği için yeni bir değer ayarlayarak <xref:System.Windows.Forms.Form.Size%2A> ya da <xref:System.Windows.Forms.Control.Height%2A> veya <xref:System.Windows.Forms.Control.Width%2A> özelliklerini ayrı ayrı ayarlayıp, formun yüksekliğini ve genişliğini programlama yoluyla değiştirebilirsiniz. Visual Studio kullanıyorsanız, Windows Form Tasarımcısı kullanarak boyutunu değiştirebilirsiniz. Ayrıca bkz. [nasıl yapılır: Tasarımcıyı kullanarak Windows Forms yeniden boyutlandırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).
 
 ## <a name="resize-a-form-programmatically"></a>Formu programlı olarak yeniden boyutlandırma
 
-Formun <xref:System.Windows.Forms.Form.Size%2A> özelliğini ayarlayarak, çalışma zamanında formun boyutunu tanımlayın.
+Formun özelliğini ayarlayarak, çalışma zamanında formun boyutunu tanımlayın <xref:System.Windows.Forms.Form.Size%2A> .
 
 Aşağıdaki kod örneği, form boyutunun 100 × 100 piksel olarak ayarlandığını gösterir.
 
@@ -40,7 +41,7 @@ Form1->Size = System::Drawing::Size(100, 100);
 
 ## <a name="change-form-width-and-height-programmatically"></a>Form genişliğini ve yüksekliğini programsal olarak değiştirme
 
-<xref:System.Windows.Forms.Form.Size%2A> tanımlandıktan sonra, <xref:System.Windows.Forms.Control.Width%2A> veya <xref:System.Windows.Forms.Control.Height%2A> özelliklerini kullanarak form yüksekliğini veya genişliğini değiştirin.
+Tanımlandıktan sonra, <xref:System.Windows.Forms.Form.Size%2A> veya özelliklerini kullanarak form yüksekliğini veya genişliğini değiştirin <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.Control.Height%2A> .
 
 Aşağıdaki kod örneği formun sol kenarından 300 piksel olarak ayarlanan formun genişliğini gösterir, ancak yükseklik sabit kalır.
 
@@ -56,11 +57,11 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
-veya
+-veya-
 
-<xref:System.Windows.Forms.Form.Size%2A> özelliğini ayarlayarak <xref:System.Drawing.Size.Width%2A> veya <xref:System.Drawing.Size.Height%2A> değiştirin.
+<xref:System.Drawing.Size.Width%2A> <xref:System.Drawing.Size.Height%2A> Özelliği ayarlayarak veya öğesini değiştirin <xref:System.Windows.Forms.Form.Size%2A> .
 
-Bununla birlikte, aşağıdaki kod örneğinde gösterildiği gibi, bu yaklaşım yalnızca <xref:System.Windows.Forms.Control.Width%2A> veya <xref:System.Windows.Forms.Control.Height%2A> özelliklerden daha kısaktan bazılarıdır.
+Ancak, aşağıdaki kod örneğinde gösterildiği gibi, bu yaklaşım yalnızca ayardan veya özelliklerden daha kısaktan bazılarıdır <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.Control.Height%2A> .
 
 ```vb
 Form1.Size = New Size(300, Form1.Size.Height)
@@ -93,7 +94,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> Her zaman bir formun boyutunu değiştirmek için <xref:System.Drawing.Size.Height%2A> veya <xref:System.Drawing.Size.Width%2A> özelliğini kullanın. Bu, <xref:System.Windows.Forms.Form.Size%2A> özelliğini yeni bir <xref:System.Drawing.Size> yapısı olarak ayarlayarak hem yükseklik hem de genişlik boyutlarını aynı anda ayarlamadığınız müddetçe. <xref:System.Windows.Forms.Form.Size%2A> özelliği, bir değer türü olan bir <xref:System.Drawing.Size> yapısı döndürür. Değer türünün özelliğine yeni bir değer atayamazsınız. Bu nedenle, aşağıdaki kod örneği derlenmeyecektir.
+> <xref:System.Drawing.Size.Height%2A> <xref:System.Drawing.Size.Width%2A> <xref:System.Windows.Forms.Form.Size%2A> Özelliği yeni bir yapıya ayarlayarak aynı anda hem yükseklik hem de genişlik boyutlarını ayarlamadığınız müddetçe, her zaman bir formun boyutunu değiştirmek için veya özelliğini kullanın <xref:System.Drawing.Size> . <xref:System.Windows.Forms.Form.Size%2A>Özelliği <xref:System.Drawing.Size> , bir değer türü olan bir yapı döndürür. Değer türünün özelliğine yeni bir değer atayamazsınız. Bu nedenle, aşağıdaki kod örneği derlenmeyecektir.
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE

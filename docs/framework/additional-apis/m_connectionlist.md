@@ -1,5 +1,6 @@
 ---
-title: ConnectionGroup.m_ConnectionList Alanı
+title: ConnectionGroup. m_ConnectionList alanı
+description: Aynı URI 'yi sunan bağlantı nesnelerini ve diğer özellikler için paylaşılan değerleri içeren, .NET 'teki ConnectionGroup. m_ConnectionList alanı hakkında bilgi edinin.
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,32 +11,32 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-ms.openlocfilehash: 8eb6f215c36e214f7095eeba90bf0aed66dfcea0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 478b2441c062e8df6f4e718bd66d7af329f20f12
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989730"
 ---
-# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup.m\_ConnectionList Alanı
+# <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup. d \_ connectionlist alanı
 
-`ConnectionGroup.m_ConnectionList`<xref:System.Collections.ArrayList> aynı URI'ye hizmet eden ve son kullanma ve kimlik doğrulama gibi diğer bazı özellikler için aynı değerleri paylaşan bağlantı nesnelerinden biridir.
+`ConnectionGroup.m_ConnectionList`<xref:System.Collections.ArrayList>, aynı URI 'yi sunan ve süre sonu ve kimlik doğrulama gibi bazı özellikler için aynı değerleri paylaşan bir bağlantı nesneleridir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
   
 ```csharp  
 private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> Alan `ConnectionGroup.m_ConnectionList` özeldir ve doğrudan kodunuzda kullanılmamalıdır.
+> `ConnectionGroup.m_ConnectionList`Alan özeldir ve doğrudan kodunuzda kullanılması amaçlıyordu.
 >
-> Microsoft, hiçbir koşulda bir üretim uygulamasında bu alanın kullanımını desteklemez.
+> Microsoft, herhangi bir koşulda bu alanın bir üretim uygulamasında kullanımını desteklemez.
 
 ## <a name="requirements"></a>Gereksinimler
 
 **Ad alanı:**<xref:System.Net>
 
-**Montaj:** Sistem (System.dll'de)
+**Bütünleştirilmiş kod:** Sistem (System.dll)
 
-**.NET Framework sürümleri:** 2.0'dan beri mevcuttur.
+**.NET Framework sürümleri:** 2,0 sürümünden itibaren kullanılabilir.

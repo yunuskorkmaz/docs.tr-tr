@@ -1,6 +1,7 @@
 ---
-title: Verileri DataGridView Denetimine bağlama
+title: Verileri DataGridView denetimine bağlama
 ms.date: 02/08/2019
+description: DataGridView denetiminin çeşitli veri kaynaklarına bağlanabilmesi için standart Windows Forms veri bağlama modelini nasıl desteklediğini öğrenin.
 dev_langs:
 - csharp
 - vb
@@ -9,38 +10,38 @@ helpviewer_keywords:
 - data binding [Windows Forms], DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 1660f69c-5711-45d2-abc1-e25bc6779124
-ms.openlocfilehash: 643dcd37cd1bb3f8b5938fedff66c67cd68278ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c3502804d1bc4a5eeffc22b4ec5f2773411ef69
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904422"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Verileri Windows Forms DataGridView denetimine bağlama
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView denetimine veri bağlama
 
-Denetim <xref:System.Windows.Forms.DataGridView> standart Windows Forms veri bağlama modelini destekler, böylece çeşitli veri kaynaklarına bağlanabilir. Genellikle, veri kaynağı <xref:System.Windows.Forms.BindingSource> ile etkileşimi yöneten bir bağbağlanırsınız. Verilerinizin <xref:System.Windows.Forms.BindingSource> konumunu seçerken veya değiştirirken size büyük esneklik sağlayan herhangi bir Windows Forms veri kaynağı olabilir. Denetimin <xref:System.Windows.Forms.DataGridView> desteklediği veri kaynakları hakkında daha fazla bilgi için [DataGridView denetimine genel bakış'a](datagridview-control-overview-windows-forms.md)bakın.  
+<xref:System.Windows.Forms.DataGridView>Denetim standart Windows Forms veri bağlama modelini destekler, bu nedenle çeşitli veri kaynaklarına bağlanabilir. Genellikle, <xref:System.Windows.Forms.BindingSource> veri kaynağıyla etkileşimi yöneten bir öğesine bağlarsınız. , <xref:System.Windows.Forms.BindingSource> Verilerinizin konumunu seçerken veya değiştirirken harika bir esneklik sağlayan herhangi bir Windows Forms veri kaynağı olabilir. Denetimin desteklediği veri kaynakları hakkında daha fazla bilgi için <xref:System.Windows.Forms.DataGridView> bkz. [DataGridView denetimine genel bakış](datagridview-control-overview-windows-forms.md).  
 
-Visual Studio, DataGridView denetimine bağlanan veriler için kapsamlı bir desteğe sahiptir. Daha fazla bilgi için [bkz: Verileri Tasarımcıyı kullanarak Windows Forms DataGridView denetimine bağla.](bind-data-to-the-datagrid-using-the-designer.md)  
+Visual Studio, DataGridView denetimine veri bağlama için kapsamlı destek içerir. Daha fazla bilgi için bkz. [nasıl yapılır: Tasarımcıyı kullanarak verileri Windows Forms DataGridView denetimine bağlama](bind-data-to-the-datagrid-using-the-designer.md).  
 
-DataGridView denetimini verilere bağlamak için:
+Bir DataGridView denetimini verilere bağlamak için:
 
-1. Verileri alma ayrıntılarını işlemek için bir yöntem uygulayın. Aşağıdaki kod örneği, `GetData` a <xref:System.Data.SqlClient.SqlDataAdapter>' yı başlýlayan bir yöntem <xref:System.Data.DataTable>uygular ve bir . Daha sonra <xref:System.Data.DataTable> bağlar <xref:System.Windows.Forms.BindingSource>.
+1. Verileri alma ayrıntılarını işlemek için bir yöntem uygulayın. Aşağıdaki kod örneği `GetData` , öğesini Başlatan bir yöntemi uygular <xref:System.Data.SqlClient.SqlDataAdapter> ve bunu doldurmak için kullanır <xref:System.Data.DataTable> . Daha sonra öğesini <xref:System.Data.DataTable> öğesine bağlar <xref:System.Windows.Forms.BindingSource> .
 
-2. Formun olay <xref:System.Windows.Forms.Form.Load> <xref:System.Windows.Forms.DataGridView> işleyicisinde, denetimi <xref:System.Windows.Forms.BindingSource>,' ye bağla `GetData` ve verileri almak için yöntemi çağırın.  
+2. Formun <xref:System.Windows.Forms.Form.Load> olay işleyicisinde, <xref:System.Windows.Forms.DataGridView> denetimini öğesine bağlayın <xref:System.Windows.Forms.BindingSource> ve `GetData` verileri almak için yöntemini çağırın.  
 
 ## <a name="example"></a>Örnek
 
-Bu tam kod örneği, Bir DataGridView denetimini Windows formunda doldurmak için veritabanından veri alır. Formda ayrıca verileri yeniden yüklemek ve veritabanına değişiklik göndermek için düğmeler de vardır.  
+Bu kod örneği, bir Windows formundaki DataGridView denetimini doldurmak için bir veritabanından veri alır. Formun Ayrıca verileri yeniden yükleme ve değişiklikleri veritabanına gönderme düğmeleri de vardır.  
 
 Bu örnek şunları gerektirir:
 
-- Northwind SQL Server örnek veritabanına erişim. Northwind örnek veritabanını yükleme hakkında daha fazla bilgi için [ADO.NET](../../data/adonet/sql/linq/downloading-sample-databases.md)bkz.
+- Northwind SQL Server örnek veritabanına erişim. Northwind örnek veritabanını yükleme hakkında daha fazla bilgi için bkz. [ADO.net Code örnekleri için örnek veritabanları edinme](../../data/adonet/sql/linq/downloading-sample-databases.md).
 
-- Sistem, System.Windows.Forms, System.Data ve System.Xml derlemelerine yapılan atıflar.  
+- Sisteme, System. Windows. Forms, System. Data ve System.Xml derlemelerine başvurular.  
 
-Bu örneği oluşturmak ve çalıştırmak için, kodu yeni bir Windows Forms projesinde *Form1* kod dosyasına yapıştırın. C# veya Visual Basic komut satırından bina hakkında bilgi için [csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [Build komut satırına](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)sahip Komut satırı binasına bakın.  
+Bu örneği derlemek ve çalıştırmak için, kodu yeni bir Windows Forms projesindeki *Form1* kod dosyasına yapıştırın. C# veya Visual Basic komut satırından oluşturma hakkında bilgi için, bkz. [komut satırı oluşturma csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) veya [komut satırından derleme](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
-Örnekteki `connectionString` değişkeni Northwind SQL Server örnek veritabanı bağlantınızın değerleriyle doldurun. Tümleşik güvenlik olarak da adlandırılan Windows Kimlik Doğrulama, veritabanına bağlanmanın bağlantı dizesinde parola depolamaktan daha güvenli bir yoldur. Bağlantı güvenliği hakkında daha fazla bilgi için [bkz.](../../data/adonet/protecting-connection-information.md)  
+`connectionString`Örnekteki değişkeni Northwind SQL Server örnek veritabanı bağlantınızın değerleriyle doldurun. Tümleşik güvenlik olarak da bilinen Windows kimlik doğrulaması, veritabanına bağlanmak için bağlantı dizesinde parola depolamadan daha güvenli bir yoldur. Bağlantı güvenliği hakkında daha fazla bilgi için bkz. [bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md).  
 
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
@@ -50,5 +51,5 @@ Bu örneği oluşturmak ve çalıştırmak için, kodu yeni bir Windows Forms pr
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
-- [Verileri Windows Forms DataGridView denetiminde görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView denetiminde verileri görüntüleme](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Bağlantı bilgilerini koruma](../../data/adonet/protecting-connection-information.md)

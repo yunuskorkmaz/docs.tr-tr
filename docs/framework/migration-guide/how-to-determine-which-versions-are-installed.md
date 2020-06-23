@@ -1,6 +1,6 @@
 ---
 title: Hangi .NET Framework sürümlerinin yüklü olduğunu belirleme
-description: Windows kayıt defterini sorgulayarak bir makineye hangi .NET Framework sürümlerinin yüklendiğini algılamak için Code, regedit. exe veya PowerShell kullanın.
+description: Windows kayıt defterini sorgulayarak bir makineye hangi .NET Framework sürümlerinin yükleneceğini algılamak için kod, regedit.exe veya PowerShell kullanın.
 ms.date: 02/03/2020
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 122441e9238fd91199aed255b0125f69081c0a8c
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84990140"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
@@ -61,7 +61,7 @@ Kayıt defterindeki **Release** REG_DWORD değeri, yüklü .NET Framework sürü
 |  .NET Framework 4.7     | Windows 10 Creators Update üzerinde: 460798<br />Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 460805 |
 | .NET Framework 4.7.1   | Windows 10 Fall Creators Update ve Windows Server, sürüm 1709:461308<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 461310 |
 |  .NET Framework 4.7.2   | Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803:461808<br/>Windows 10 Nisan 2018 güncelleştirmesi ve Windows Server, sürüm 1803 dışındaki tüm Windows işletim sistemlerinde: 461814 |
-|  .NET Framework 4.8     | Windows 10 Mayıs 2019 güncelleştirmesi ve Windows 10 Kasım 2019 güncelleştirmesi: 528040<br/>Windows 10 Mayıs 2020 güncelleştirmesi: 528209<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 528049 |
+|  .NET Framework 4.8     | Windows 10 Mayıs 2019 güncelleştirmesi ve Windows 10 Kasım 2019 güncelleştirmesi: 528040<br/>Windows 10 Mayıs 2020 güncelleştirmesi: 528372<br/>Diğer tüm Windows işletim sistemlerinde (diğer Windows 10 işletim sistemleri dahil): 528049 |
 
 ### <a name="minimum-version"></a>En düşük sürüm
 
@@ -134,8 +134,8 @@ Bu örnek sürüm denetimi için önerilen yöntemi izler:
 | ------------------ | --------------- | ----- |
 | 1.0                | **HKLM \\ Software \\ Microsoft \\ . NETFramework \\ ilkesi \\ v 1.0 \\ 3705**     | **Yüklemesi** REG_SZ eşittir`1` |
 | 1.1                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 1.1.4322**   | **Yüklemesi** REG_DWORD eşittir`1` |
-| 2,0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 2.0.50727**  | **Yüklemesi** REG_DWORD eşittir`1` |
-| 3,0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.0 \\ kurulumu** | **Installsuccess** REG_DWORD eşittir`1` |
+| 2.0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 2.0.50727**  | **Yüklemesi** REG_DWORD eşittir`1` |
+| 3.0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.0 \\ kurulumu** | **Installsuccess** REG_DWORD eşittir`1` |
 | 3,5                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5**        | **Yüklemesi** REG_DWORD eşittir`1` |
 | 4,0 istemci profili | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ istemcisi**  | **Yüklemesi** REG_DWORD eşittir`1` |
 | 4,0 tam profil   | **HKLM \\ Software \\ Microsoft \\ net Framework Kurulumu \\ NDP \\ v4 \\ dolu**    | **Yüklemesi** REG_DWORD eşittir`1` |
@@ -173,9 +173,9 @@ Aşağıdaki örnek, yüklü .NET Framework 1 ila 4 sürümü bulur:
 
 .NET Framework ile yüklenen .NET Framework CLR 'nin sürümü ayrı olarak sağlanır. .NET Framework CLR sürümünü algılamamanın iki yolu vardır:
 
-- **Clrver. exe aracı**
+- **Clrver.exe aracı**
 
-  Clr [Sürüm aracı 'nı (Clrver. exe)](../tools/clrver-exe-clr-version-tool.md) kullanarak bir bılgısayarda hangi CLR sürümlerinin yüklü olduğunu belirlersiniz. [Visual Studio için geliştirici komut istemi](../tools/developer-command-prompt-for-vs.md) açın ve girin `clrver` .
+  Clr [Sürüm aracı 'nı (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) kullanarak bir bılgısayarda hangi CLR sürümlerinin yüklü olduğunu saptayın. [Visual Studio için geliştirici komut istemi](../tools/developer-command-prompt-for-vs.md) açın ve girin `clrver` .
 
   Örnek çıktı:
 
