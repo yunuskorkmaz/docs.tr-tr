@@ -1,5 +1,6 @@
 ---
-title: XpsDocumentWriter._WritingProgressChanged Olay (System.Windows.Xps)
+title: XpsDocumentWriter. _WritingProgressChanged olayı (System. Windows. XPS)
+description: XML Kağıt Belirtimi (XPS) belge yazıcısı, .NET 'teki ilerlemesini güncelleştirdiğinde oluşan XpsDocumentWriter. _WritingProgressChanged olayını gözden geçirin.
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,27 +12,27 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a54f1fbc04d7f1ada6bf893f2e8bfb9d98d372df
+ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155589"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85105059"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a><span data-ttu-id="9d6e7-102">Xpsdocumentwriter. \_Yazılarİlerleme Etkinliği</span><span class="sxs-lookup"><span data-stu-id="9d6e7-102">XpsDocumentWriter.\_WritingProgressChanged Event</span></span>
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a><span data-ttu-id="e5071-103">XpsDocumentWriter. \_ WritingProgressChanged olayı</span><span class="sxs-lookup"><span data-stu-id="e5071-103">XpsDocumentWriter.\_WritingProgressChanged Event</span></span>
 
-<span data-ttu-id="9d6e7-103">İlerlemesini <xref:System.Windows.Xps.XpsDocumentWriter> güncellerdiğinde oluşur.</span><span class="sxs-lookup"><span data-stu-id="9d6e7-103">Occurs when the <xref:System.Windows.Xps.XpsDocumentWriter> updates its progress.</span></span>
+<span data-ttu-id="e5071-104"><xref:System.Windows.Xps.XpsDocumentWriter>İlerleme durumunu güncelleştiren zaman gerçekleşir.</span><span class="sxs-lookup"><span data-stu-id="e5071-104">Occurs when the <xref:System.Windows.Xps.XpsDocumentWriter> updates its progress.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9d6e7-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="9d6e7-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="e5071-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="e5071-105">Syntax</span></span>
 
 ``` csharp
 internal event WritingProgressChangedEventHandler _WritingProgressChanged
 ```
 
-## <a name="requirements"></a><span data-ttu-id="9d6e7-105">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="9d6e7-105">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="e5071-106">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="e5071-106">Requirements</span></span>
 
-<span data-ttu-id="9d6e7-106">**Ad alanı:**<xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="9d6e7-106">**Namespace:** <xref:System.Windows.Xps></span></span>
+<span data-ttu-id="e5071-107">**Ad alanı:**<xref:System.Windows.Xps></span><span class="sxs-lookup"><span data-stu-id="e5071-107">**Namespace:** <xref:System.Windows.Xps></span></span>
 
-<span data-ttu-id="9d6e7-107">**Montaj:** System.Printing (system.printing.dll içinde)</span><span class="sxs-lookup"><span data-stu-id="9d6e7-107">**Assembly:** System.Printing (in system.printing.dll)</span></span>
+<span data-ttu-id="e5071-108">**Bütünleştirilmiş kod:** System. Printing (system.printing.dll)</span><span class="sxs-lookup"><span data-stu-id="e5071-108">**Assembly:** System.Printing (in system.printing.dll)</span></span>
 
-<span data-ttu-id="9d6e7-108">**.NET Framework sürümleri:** 3.0'dan beri mevcut</span><span class="sxs-lookup"><span data-stu-id="9d6e7-108">**.NET Framework versions:** Available since 3.0</span></span>
+<span data-ttu-id="e5071-109">**.NET Framework sürümleri:** 3,0 sürümünden itibaren kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="e5071-109">**.NET Framework versions:** Available since 3.0</span></span>
