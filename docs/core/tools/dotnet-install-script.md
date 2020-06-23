@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 04/30/2020
-ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802717"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141249"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -28,7 +28,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
     [-SkipNonVersionedFiles] [-UncachedFeed] [-Verbose]
     [-Version <VERSION>]
 
-dotnet-install.ps1 -Help
+Get-Help ./dotnet-install.ps1
 ```
 
 Linux/macOS:
@@ -94,9 +94,9 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
   Azure akışına eklemek için sorgu dizesi olarak kullanılır. Bu, URL 'nin genel olmayan BLOB depolama hesaplarını kullanmak üzere değiştirilmesini sağlar.
 
-- **`-Help|--help`**
+- **`--help`**
 
-  Betiğe yönelik yardım yazdırır.
+  Betiğe yönelik yardım yazdırır. Yalnızca Bash betiği için geçerlidir. PowerShell için kullanın `Get-Help ./dotnet-install.ps1` .
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
@@ -104,7 +104,7 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  SDK sürümünü belirlemekte kullanılacak [Global. JSON](global-json.md) dosyasının yolunu belirtir. *Global. JSON* dosyası için bir değere sahip olmalıdır `sdk:version` .
+  SDK sürümünü belirlemekte kullanılacak bir [global.js](global-json.md) dosya için bir yol belirtir. Dosyadaki *global.js* için bir değer olmalıdır `sdk:version` .
 
 - **`-NoCdn|--no-cdn`**
 
@@ -143,7 +143,7 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  Zaten varsa *DotNet. exe*gibi sürümlenmemiş dosyaları yüklemeyi atlar.
+  Zaten varsa *dotnet.exe*sürümü bulunmayan dosyaları yüklemeyi atlar.
 
 - **`-UncachedFeed|--uncached-feed`**
 

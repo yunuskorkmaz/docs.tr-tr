@@ -4,12 +4,12 @@ description: .NET ' te Apache Spark uygulamalar için Kullanıcı tanımlı işl
 ms.date: 06/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 96597c7e2d45dfdf8406b0d3e80daad270996b97
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: fe3dec187f94f84adb1217c39ff6aabc4b4db1c5
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105603"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85142023"
 ---
 # <a name="create-user-defined-functions-udf-in-net-for-apache-spark"></a>Apache Spark için .NET 'te Kullanıcı tanımlı işlevler (UDF) oluşturun
 
@@ -61,7 +61,7 @@ UDF 'Leri nasıl uygulayacağınızı daha iyi anlamak için, [udf yardımcı i�
 
 ## <a name="udf-serialization"></a>UDF serileştirme
 
-UDF 'ler, çalışanlar üzerinde yürütülmesi gereken işlevler olduğundan, sürücüden yükün bir parçası olarak serileştirilmesi ve çalışanlara gönderilmesi gerekir. Yöntemine bir başvuru olan [temsilcinin](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/), geçerli temsilcinin örnek yöntemi çağırdığı sınıf örneği olan [hedefinin](https://docs.microsoft.com/en-us/dotnet/api/system.delegate.target?view=netframework-4.8) yanı sıra serileştirilmesi gerekir. UDF serileştirmenin nasıl yapıldığını daha iyi anlamak için [GitHub 'da Bu kod örneğini](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) inceleyin.
+UDF 'ler, çalışanlar üzerinde yürütülmesi gereken işlevler olduğundan, sürücüden yükün bir parçası olarak serileştirilmesi ve çalışanlara gönderilmesi gerekir. Yöntemine bir başvuru olan [temsilcinin](../../csharp/programming-guide/delegates/index.md), geçerli temsilcinin örnek yöntemi çağırdığı sınıf örneği olan hedefinin yanı sıra, [hedefine](xref:System.Delegate.Target%2A)da serileştirilmesi gerekir. UDF serileştirmenin nasıl yapıldığını daha iyi anlamak için [GitHub 'da Bu kod örneğini](https://github.com/dotnet/spark/blob/master/src/csharp/Microsoft.Spark/Utils/CommandSerDe.cs#L149) inceleyin.
 
 .NET Apache Spark .NET Core kullanır, bu da temsilcilerin serileştirilmesi desteklenmez. Bunun yerine, temsilcinin tanımlandığı hedefi seri hale getirmek için yansıma kullanılır. Ortak bir kapsamda birden çok temsilci tanımlandığında, serileştirme için yansıma hedefi olan bir paylaşılan kapatılmak olur.
 

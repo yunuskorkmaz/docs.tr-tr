@@ -2,12 +2,12 @@
 title: Özel öznitelikler oluşturma (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: ec959723c339a13a40fd62388421ceacb736dfca
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 3a70b738b376e52482e63f2eb9cc4d7bb62a9b35
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389553"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141624"
 ---
 # <a name="creating-custom-attributes-c"></a>Özel öznitelikler oluşturma (C#)
 Doğrudan veya dolaylı olarak sınıfından türetilmiş bir sınıf olan öznitelik sınıfını tanımlayarak kendi özel öznitelerinizi oluşturabilirsiniz <xref:System.Attribute> . Bu, meta verilerde hızlı ve kolay bir şekilde öznitelik tanımları tanımlamayı sağlar. Türleri, türünü yazan programcının adıyla etiketlemek istediğinizi varsayalım. Özel bir `Author` öznitelik sınıfı tanımlayabilirsiniz:  
@@ -16,12 +16,12 @@ Doğrudan veya dolaylı olarak sınıfından türetilmiş bir sınıf olan özni
 [System.AttributeUsage(System.AttributeTargets.Class |  
                        System.AttributeTargets.Struct)  
 ]  
-public class Author : System.Attribute  
+public class AuthorAttribute : System.Attribute  
 {  
     private string name;  
     public double version;  
   
-    public Author(string name)  
+    public AuthorAttribute(string name)  
     {  
         this.name = name;  
         version = 1.0;  
@@ -29,7 +29,7 @@ public class Author : System.Attribute
 }  
 ```  
   
- Sınıf adı özniteliğin adıdır, `Author` . Öğesinden türetilir `System.Attribute` , bu nedenle özel bir öznitelik sınıfıdır. Oluşturucunun parametreleri özel özniteliğin konumsal parametreleridir. Bu örnekte, `name` bir Konumsal parametredir. Tüm genel okuma/yazma alanları veya özellikleri parametreler olarak adlandırılır. Bu durumda, `version` tek adlandırılmış parametredir. Özniteliği `AttributeUsage` `Author` yalnızca sınıf ve bildirimlerde geçerli hale getirmek için özniteliğinin kullanımını unutmayın `struct` .  
+ Sınıf adı `AuthorAttribute` özniteliğin adı, ve `Author` `Attribute` sonektir. Öğesinden türetilir `System.Attribute` , bu nedenle özel bir öznitelik sınıfıdır. Oluşturucunun parametreleri özel özniteliğin konumsal parametreleridir. Bu örnekte, `name` bir Konumsal parametredir. Tüm genel okuma/yazma alanları veya özellikleri parametreler olarak adlandırılır. Bu durumda, `version` tek adlandırılmış parametredir. Özniteliği `AttributeUsage` `Author` yalnızca sınıf ve bildirimlerde geçerli hale getirmek için özniteliğinin kullanımını unutmayın `struct` .  
   
  Bu yeni özniteliği şu şekilde kullanabilirsiniz:  
   
@@ -48,7 +48,7 @@ class SampleClass
                        System.AttributeTargets.Struct,  
                        AllowMultiple = true)  // multiuse attribute  
 ]  
-public class Author : System.Attribute  
+public class AuthorAttribute : System.Attribute  
 ```  
   
  Aşağıdaki kod örneğinde, aynı türde birden çok öznitelik bir sınıfa uygulanır.  
