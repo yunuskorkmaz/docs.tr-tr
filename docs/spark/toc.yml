@@ -9,7 +9,7 @@
       href: what-is-apache-spark-dotnet.md
 - name: Öğreticiler
   items:
-    - name: Kullanmaya başlayın
+    - name: başlarken
       href: tutorials/get-started.md
     - name: Azure HDInsight’a dağıtma
       href: tutorials/hdinsight-deployment.md
@@ -25,6 +25,10 @@
       href: tutorials/ml-sentiment-analysis.md
 - name: Nasıl yapılır kılavuzları
   items:
+    - name: Yayın kılavuzu
+      href: how-to-guides/broadcast-guide.md
+    - name: UDF kılavuzu
+      href: how-to-guides/udf-guide.md
     - name: Uygulamanızda hata ayıklama
       href: how-to-guides/debug.md
     - name: İşleri HDInsight’a gönderme
