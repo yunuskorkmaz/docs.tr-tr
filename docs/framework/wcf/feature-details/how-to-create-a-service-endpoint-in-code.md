@@ -1,51 +1,52 @@
 ---
 title: 'Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma'
+description: Bir sınıftaki hizmeti nasıl uygulayacağınızı ve bu hizmetin uç noktasını programlama yoluyla nasıl tanımlayacağınızı öğrenin. WCF 'de, uç noktalar genellikle bir yapılandırma dosyasında tanımlanmıştır.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 25ea843df7871d730926fe7b9aac9f21d58e263e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3b2ff2a17975bc381db61edc2c0f85f67edd3325
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598937"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247058"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a><span data-ttu-id="eaa5f-102">Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="eaa5f-102">How to: Create a Service Endpoint in Code</span></span>
-<span data-ttu-id="eaa5f-103">Bu örnekte, bir `ICalculator` anlaşma Hesaplayıcı hizmeti için tanımlanmıştır, hizmet `CalculatorService` sınıfında uygulanır ve ardından uç noktası kodda tanımlanır ve burada hizmetin sınıfını kullanması gerektiği belirtilir <xref:System.ServiceModel.BasicHttpBinding> .</span><span class="sxs-lookup"><span data-stu-id="eaa5f-103">In this example, an `ICalculator` contract is defined for a calculator service, the service is implemented in the `CalculatorService` class, and then its endpoint is defined in code, where it is specified that the service must use the <xref:System.ServiceModel.BasicHttpBinding> class.</span></span>  
+# <a name="how-to-create-a-service-endpoint-in-code"></a><span data-ttu-id="16940-104">Nasıl yapılır: Kod İçinde Hizmet Uç Noktası Oluşturma</span><span class="sxs-lookup"><span data-stu-id="16940-104">How to: Create a Service Endpoint in Code</span></span>
+<span data-ttu-id="16940-105">Bu örnekte, bir `ICalculator` anlaşma Hesaplayıcı hizmeti için tanımlanmıştır, hizmet `CalculatorService` sınıfında uygulanır ve ardından uç noktası kodda tanımlanır ve burada hizmetin sınıfını kullanması gerektiği belirtilir <xref:System.ServiceModel.BasicHttpBinding> .</span><span class="sxs-lookup"><span data-stu-id="16940-105">In this example, an `ICalculator` contract is defined for a calculator service, the service is implemented in the `CalculatorService` class, and then its endpoint is defined in code, where it is specified that the service must use the <xref:System.ServiceModel.BasicHttpBinding> class.</span></span>  
   
- <span data-ttu-id="eaa5f-104">Genellikle, bağlama ve adres bilgilerini, kod içinde imperatively yerine bildirimli olarak yapılandırmaya göre belirlemek en iyi uygulamadır.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-104">It is usually the best practice to specify the binding and address information declaratively in configuration rather than imperatively in code.</span></span> <span data-ttu-id="eaa5f-105">Dağıtılmış bir hizmetin bağlamaları ve adresleri genellikle hizmet geliştirildiğinde kullanılanlardan farklı olduğundan, koddaki uç noktaların tanımlanması genellikle pratik değildir.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-105">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="eaa5f-106">Daha genel olarak, bağlama ve adresleme bilgilerini koddan tutmanın, uygulamayı yeniden derlemek veya yeniden dağıtmak zorunda kalmadan değiştirilmesine izin verir.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-106">More generally, keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
+ <span data-ttu-id="16940-106">Genellikle, bağlama ve adres bilgilerini, kod içinde imperatively yerine bildirimli olarak yapılandırmaya göre belirlemek en iyi uygulamadır.</span><span class="sxs-lookup"><span data-stu-id="16940-106">It is usually the best practice to specify the binding and address information declaratively in configuration rather than imperatively in code.</span></span> <span data-ttu-id="16940-107">Dağıtılmış bir hizmetin bağlamaları ve adresleri genellikle hizmet geliştirildiğinde kullanılanlardan farklı olduğundan, koddaki uç noktaların tanımlanması genellikle pratik değildir.</span><span class="sxs-lookup"><span data-stu-id="16940-107">Defining endpoints in code is usually not practical because the bindings and addresses for a deployed service are typically different from those used while the service is being developed.</span></span> <span data-ttu-id="16940-108">Daha genel olarak, bağlama ve adresleme bilgilerini koddan tutmanın, uygulamayı yeniden derlemek veya yeniden dağıtmak zorunda kalmadan değiştirilmesine izin verir.</span><span class="sxs-lookup"><span data-stu-id="16940-108">More generally, keeping the binding and addressing information out of the code allows them to change without having to recompile or redeploy the application.</span></span>  
   
-#### <a name="to-create-a-service-endpoint-in-code"></a><span data-ttu-id="eaa5f-107">Kodda bir hizmet uç noktası oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="eaa5f-107">To create a service endpoint in code</span></span>  
+#### <a name="to-create-a-service-endpoint-in-code"></a><span data-ttu-id="16940-109">Kodda bir hizmet uç noktası oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="16940-109">To create a service endpoint in code</span></span>  
   
-1. <span data-ttu-id="eaa5f-108">Hizmet sözleşmesini tanımlayan arabirimi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-108">Create the interface that defines the service contract.</span></span>  
+1. <span data-ttu-id="16940-110">Hizmet sözleşmesini tanımlayan arabirimi oluşturun.</span><span class="sxs-lookup"><span data-stu-id="16940-110">Create the interface that defines the service contract.</span></span>  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[c_HowTo_CodeServiceBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2. <span data-ttu-id="eaa5f-109">Adım 1 ' de tanımlanan hizmet sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-109">Implement the service contract defined in step 1.</span></span>  
+2. <span data-ttu-id="16940-111">Adım 1 ' de tanımlanan hizmet sözleşmesini uygulayın.</span><span class="sxs-lookup"><span data-stu-id="16940-111">Implement the service contract defined in step 1.</span></span>  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[c_HowTo_CodeServiceBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
   
-3. <span data-ttu-id="eaa5f-110">Barındırma uygulamasında, hizmet için temel adresi ve hizmetle kullanılacak bağlamayı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-110">In the hosting application, create the base address for the service and the binding to be used with the service.</span></span>  
+3. <span data-ttu-id="16940-112">Barındırma uygulamasında, hizmet için temel adresi ve hizmetle kullanılacak bağlamayı oluşturun.</span><span class="sxs-lookup"><span data-stu-id="16940-112">In the hosting application, create the base address for the service and the binding to be used with the service.</span></span>  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[c_HowTo_CodeServiceBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4. <span data-ttu-id="eaa5f-111"><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29?displayProperty=nameWithType>Konak için hizmet uç noktası eklemek üzere konak ve çağrı ya da diğer aşırı yüklemelerden birini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-111">Create the host and call <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29?displayProperty=nameWithType> or one of the other overloads to add the service endpoint for the host.</span></span>  
+4. <span data-ttu-id="16940-113"><xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29?displayProperty=nameWithType>Konak için hizmet uç noktası eklemek üzere konak ve çağrı ya da diğer aşırı yüklemelerden birini oluşturun.</span><span class="sxs-lookup"><span data-stu-id="16940-113">Create the host and call <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%28System.Type%2CSystem.ServiceModel.Channels.Binding%2CSystem.String%29?displayProperty=nameWithType> or one of the other overloads to add the service endpoint for the host.</span></span>  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#6)]
      [!code-vb[c_HowTo_CodeServiceBinding#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#6)]  
   
-     <span data-ttu-id="eaa5f-112">Kod içinde bağlamayı belirtmek, ancak çalışma zamanı tarafından belirtilen varsayılan uç noktaları kullanmak için, oluşturma sırasında taban adresini oluşturucuya geçirin <xref:System.ServiceModel.ServiceHost> ve çağırmayın <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="eaa5f-112">To specify the binding in code but to use the default endpoints provided by the runtime, pass the base address into the constructor when creating the <xref:System.ServiceModel.ServiceHost>, and do not call <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType>.</span></span>  
+     <span data-ttu-id="16940-114">Kod içinde bağlamayı belirtmek, ancak çalışma zamanı tarafından belirtilen varsayılan uç noktaları kullanmak için, oluşturma sırasında taban adresini oluşturucuya geçirin <xref:System.ServiceModel.ServiceHost> ve çağırmayın <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="16940-114">To specify the binding in code but to use the default endpoints provided by the runtime, pass the base address into the constructor when creating the <xref:System.ServiceModel.ServiceHost>, and do not call <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A?displayProperty=nameWithType>.</span></span>  
   
      [!code-csharp[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#7)]
      [!code-vb[c_HowTo_CodeServiceBinding#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#7)]  
   
-     <span data-ttu-id="eaa5f-113">Varsayılan uç noktalar hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../simplified-configuration.md) ve Basitleştirilmiş yapılandırma.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-113">For more information about default endpoints, see [Simplified Configuration](../simplified-configuration.md) and [Simplified Configuration for WCF Services](../samples/simplified-configuration-for-wcf-services.md).</span></span>  
+     <span data-ttu-id="16940-115">Varsayılan uç noktalar hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](../samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](../simplified-configuration.md) ve Basitleştirilmiş yapılandırma.</span><span class="sxs-lookup"><span data-stu-id="16940-115">For more information about default endpoints, see [Simplified Configuration](../simplified-configuration.md) and [Simplified Configuration for WCF Services](../samples/simplified-configuration-for-wcf-services.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eaa5f-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="eaa5f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16940-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="16940-116">See also</span></span>
 
-- [<span data-ttu-id="eaa5f-115">Nasıl yapılır: Kodda Hizmet Bağlama Belirtme</span><span class="sxs-lookup"><span data-stu-id="eaa5f-115">How to: Specify a Service Binding in Code</span></span>](../how-to-specify-a-service-binding-in-code.md)
+- [<span data-ttu-id="16940-117">Nasıl yapılır: Kodda Hizmet Bağlama Belirtme</span><span class="sxs-lookup"><span data-stu-id="16940-117">How to: Specify a Service Binding in Code</span></span>](../how-to-specify-a-service-binding-in-code.md)
