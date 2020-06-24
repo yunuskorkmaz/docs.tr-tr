@@ -16,7 +16,7 @@ WCF, Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik pr
 ## <a name="choosing-which-technology-to-use"></a>Hangi teknolojinin kullanılacağını seçme  
  Aşağıdaki tabloda her teknolojinin önemli özellikleri açıklanmaktadır.  
   
-|WCF|ASP.NET Web API'si|  
+|WCF|ASP.NET Web API|  
 |---------|---------------------|  
 |Birden çok aktarım protokolünü (HTTP, TCP, UDP ve özel aktarımları) destekleyen hizmetlerin oluşturulmasına olanak sağlar ve aralarında geçiş yapılmasına izin verir.|Yalnızca HTTP. HTTP için birinci sınıf programlama modeli. Çeşitli tarayıcıların, mobil cihazların erişimine açık ve geniş erişim olanağı sağlayan daha uygun.|  
 |Aynı ileti türünün birden çok kodlamasını (metin, MTOM ve Ikili) destekleyen ve aralarında geçiş yapmasına olanak tanıyan hizmetler oluşturmayı sağlar.|XML, JSON vb. dahil olmak üzere çok çeşitli medya türlerini destekleyen Web API 'Leri oluşturmaya izin vermez.|  
