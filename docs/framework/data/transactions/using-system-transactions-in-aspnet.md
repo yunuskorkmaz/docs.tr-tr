@@ -1,25 +1,26 @@
 ---
 title: ASP.NET’te System.Transactions kullanma
+description: Bir ASP.NET uygulamasının içindeki System. Transactions kullanın. Dağıtılmış işlem izinlerini etkinleştirin ve dinamik derleme ile çalışın.
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 2bddebc13897408839e18f42b17a9fbaefdc5b87
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 48907faf99953e34d045a1e0d79eed8a788187b5
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040418"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141650"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>ASP.NET’te System.Transactions kullanma
-Bu konu, bir ASP.NET uygulamasının içinde <xref:System.Transactions> başarıyla kullanabileceğinizi açıklar.
+Bu konu, <xref:System.Transactions> bir ASP.NET uygulamasının içinde başarıyla nasıl kullanabileceğinizi açıklar.
 
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>ASP.NET 'de DistributedTransactionPermission 'ı etkinleştir
- <xref:System.Transactions> kısmen güvenilen çağıranları destekler ve `AllowPartiallyTrustedCallers` özniteliğiyle (APTCA) işaretlenir. <xref:System.Transactions> için güven düzeyleri, <xref:System.Transactions> kullanıma sunduğu (örneğin, sistem belleği, paylaşılan işlem genelindeki kaynaklar, sistem genelinde kaynaklar ve diğer kaynaklar) temel alınarak tanımlanır ve bu kaynaklara erişmek için gerekli olan güven düzeyini kaynakların. Kısmi güven ortamında, tam olmayan bir güven derlemesi yalnızca uygulama etki alanı içindeki işlemleri kullanabilir (Bu durumda, korunan tek kaynak sistem belleğidir), çünkü <xref:System.Transactions.DistributedTransactionPermission> verilmez.
+ <xref:System.Transactions>kısmen güvenilen çağıranları destekler ve `AllowPartiallyTrustedCallers` özniteliğiyle işaretlenir (APTCA). Güven düzeyleri, <xref:System.Transactions> kaynak türleri (örneğin, sistem belleği, paylaşılan işlem genelinde kaynaklar, sistem genelinde kaynaklar ve diğer kaynaklar) temel alınarak tanımlanır <xref:System.Transactions> ve bu kaynaklara erişmek için gerekli olması gereken güven düzeyini kullanır. Kısmi güven ortamında, tam olmayan bir güven derlemesi yalnızca uygulama etki alanı içindeki işlemleri kullanabilir (Bu durumda, korunan tek kaynak sistem belleğidir), verilmediği müddetçe <xref:System.Transactions.DistributedTransactionPermission> .
 
- <xref:System.Transactions.DistributedTransactionPermission>, işlem yönetiminin Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) tarafından yönetilmek üzere ilerletilidiğinde talep edilir. Bu tür bir senaryo işlemi genelinde kaynakları ve MSDTC günlüğünde ayrılmış alandır özellikle bir genel kaynağı kullanır. Bir Web ön uç bir veritabanı veya veritabanı sağladığı hizmetler bir parçası olarak kullanan bir uygulama için bu kullanım örneğidir.
+ <xref:System.Transactions.DistributedTransactionPermission>işlem yönetiminin Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) tarafından yönetilmek üzere ilerletilidiğinde, talep edilir. Bu tür bir senaryo işlemi genelinde kaynakları ve MSDTC günlüğünde ayrılmış alandır özellikle bir genel kaynağı kullanır. Bir Web ön uç bir veritabanı veya veritabanı sağladığı hizmetler bir parçası olarak kullanan bir uygulama için bu kullanım örneğidir.
 
- ASP.NET kendi güven düzeylerine sahiptir ve ilke dosyaları aracılığıyla bu güven düzeyleriyle belirli bir izin kümesini ilişkilendirir. Daha fazla bilgi için bkz. [ASP.net Trust Levels and Policy Files](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100)). Windows SDK ilk yüklediğinizde, varsayılan ASP.NET ilke dosyalarından hiçbiri <xref:System.Transactions.DistributedTransactionPermission> ilişkilendirilmez. Bu nedenle, bir ASP.NET uygulamasındaki işleminizi MSDTC tarafından yönetilmek üzere ilerlediğinde, yükseltme işlemi <xref:System.Transactions.DistributedTransactionPermission> yoğun bir <xref:System.Security.SecurityException> ile başarısız olur. ASP.NET kısmi güven ortamında işlem yükseltme işlemini etkinleştirmek için, <xref:System.Transactions.DistributedTransactionPermission> <xref:System.Data.SqlClient.SqlClientPermission> aynı varsayılan güven düzeylerinde vermelisiniz. Bunu desteklemek için kendi özel güven düzeyinizi ve ilke dosyanızı yapılandırabilir ya da **Web_hightrust. config** ve **Web_mediumtrust. config**olan varsayılan ilke dosyalarını değiştirebilirsiniz.
+ ASP.NET kendi güven düzeylerine sahiptir ve ilke dosyaları aracılığıyla bu güven düzeyleriyle belirli bir izin kümesini ilişkilendirir. Daha fazla bilgi için bkz. [ASP.net Trust Levels and Policy Files](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100)). Windows SDK ilk yüklediğinizde, varsayılan ASP.NET ilkesi dosyalarından hiçbiri ile ilişkili değildir <xref:System.Transactions.DistributedTransactionPermission> . Bu nedenle, bir ASP.NET uygulamasındaki işlem MSDTC tarafından yönetilmek üzere ilerlediğinde, yükseltme işlemi yoğun bir şekilde başarısız olur <xref:System.Security.SecurityException> <xref:System.Transactions.DistributedTransactionPermission> . ASP.NET kısmi güven ortamında işlem yükseltmeyi etkinleştirmek için, <xref:System.Transactions.DistributedTransactionPermission> ile aynı varsayılan güven düzeylerine sahip olmanız gerekir <xref:System.Data.SqlClient.SqlClientPermission> . Bunu desteklemek için kendi özel güven düzeyinizi ve ilke dosyanızı yapılandırabilir ya da **Web_hightrust.config** ve **Web_mediumtrust.config**varsayılan ilke dosyalarını değiştirebilirsiniz.
 
- İlke dosyalarını değiştirmek için, `PolicyLevel` öğesinin altındaki `SecurityClasses` öğesine `DistributedTransactionPermission` için bir `SecurityClass` öğesi ekleyin ve System. Transactions için ASP.NET `IPermission` altına karşılık gelen bir `NamedPermissionSet` öğesi ekleyin. Aşağıdaki yapılandırma dosyası bunu gösterir.
+ İlke dosyalarını değiştirmek için, öğesinin `SecurityClass` altındaki öğesine bir öğesi ekleyin `DistributedTransactionPermission` `SecurityClasses` `PolicyLevel` ve `IPermission` `NamedPermissionSet` System. Transactions için ASP.net altına karşılık gelen bir öğe ekleyin. Aşağıdaki yapılandırma dosyası bunu gösterir.
 
 ```xml
 <SecurityClasses>
@@ -43,7 +44,7 @@ Bu konu, bir ASP.NET uygulamasının içinde <xref:System.Transactions> başarı
  ASP.NET güvenlik ilkesi hakkında daha fazla bilgi için bkz. [SecurityPolicy öğesi (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100)).
 
 ## <a name="dynamic-compilation"></a>Dinamik derleme
- Erişim üzerinde dinamik olarak derlenen bir ASP.NET uygulamasında <xref:System.Transactions> alıp kullanmak istiyorsanız, yapılandırma dosyasındaki <xref:System.Transactions> derlemesine bir başvuru yerleştirmeniz gerekir. Özellikle başvuru, varsayılan kök **Web. config** yapılandırma dosyasının `compilation/assemblies` bölümü veya belirli bir Web uygulamasının yapılandırma dosyası altına eklenmelidir. Aşağıdaki örnek bunu gösterir.
+ <xref:System.Transactions>Erişim için dinamik olarak derlenen bir ASP.NET uygulamasında içeri ve kullanmak istiyorsanız, yapılandırma dosyasındaki derlemeye bir başvuru yerleştirmeniz gerekir <xref:System.Transactions> . Özel olarak, başvuru `compilation/assemblies` varsayılan kök **Web.config** yapılandırma dosyasının bölümünün altına veya belirli bir Web uygulamasının yapılandırma dosyasına eklenmelidir. Aşağıdaki örnek bunu gösterir.
 
 ```xml
 <configuration>

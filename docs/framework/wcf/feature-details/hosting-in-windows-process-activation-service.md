@@ -1,15 +1,16 @@
 ---
 title: Windows İşlem Etkinleştirme Hizmetinde Barındırma
+description: WCF hizmetlerini barındıran uygulamalar içeren çalışan işlemlerinin etkinleştirilmesini ve ömrünü nasıl yönettiğini öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597312"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247266"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (WCF) hizmetlerini barındıran uygulamalar içeren çalışan işlemlerinin etkinleştirilmesini ve ömrünü yönetir. WAS işlem modeli http sunucusu için IIS 6,0 işlem modelini genelleştirir ve HTTP 'nin bağımlılığını ortadan kaldırır. Bu, WCF hizmetlerinin, ileti tabanlı etkinleştirmeyi destekleyen bir barındırma ortamında ve belirli bir makinede çok sayıda uygulamayı barındırma olanağı sunan, hem HTTP hem de HTTP olmayan protokolleri (net. TCP gibi) kullanmasına izin verir.  
@@ -46,7 +47,7 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (W
 - `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>WAS çalışma zamanı  
- Uygulamalar, adresleme ve yönetim amacıyla siteler halinde düzenlenir. Çalışma zamanında uygulamalar da uygulama havuzlarında birlikte gruplandırılır. Bir uygulama havuzu birçok farklı siteden birçok farklı uygulamayı barındırabilir. Bir uygulama havuzu içindeki tüm uygulamalar ortak bir çalışma zamanı özellikleri kümesini paylaşır. Örneğin, hepsi aynı ortak dil çalışma zamanı (CLR) sürümü altında çalışır ve hepsi ortak bir işlem kimliğini paylaşır. Her uygulama havuzu bir çalışan işleminin (W3wp. exe) örneğine karşılık gelir. Paylaşılan bir uygulama havuzu içinde çalışan her yönetilen uygulama, CLR AppDomain 'i aracılığıyla diğer uygulamalardan yalıtılmıştır.  
+ Uygulamalar, adresleme ve yönetim amacıyla siteler halinde düzenlenir. Çalışma zamanında uygulamalar da uygulama havuzlarında birlikte gruplandırılır. Bir uygulama havuzu birçok farklı siteden birçok farklı uygulamayı barındırabilir. Bir uygulama havuzu içindeki tüm uygulamalar ortak bir çalışma zamanı özellikleri kümesini paylaşır. Örneğin, hepsi aynı ortak dil çalışma zamanı (CLR) sürümü altında çalışır ve hepsi ortak bir işlem kimliğini paylaşır. Her uygulama havuzu bir çalışan işleminin örneğine karşılık gelir (w3wp.exe). Paylaşılan bir uygulama havuzu içinde çalışan her yönetilen uygulama, CLR AppDomain 'i aracılığıyla diğer uygulamalardan yalıtılmıştır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

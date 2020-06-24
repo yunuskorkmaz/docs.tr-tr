@@ -1,17 +1,18 @@
 ---
 title: 'Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma'
+description: ASP.NET üyelik sağlayıcısı 'nın, kullanıcıların bir Windows etki alanı hesabına sahip olmadan erişim için Kullanıcı adı ve parola oluşturmalarına izin veren Web sitelerini nasıl desteklediğini öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF and ASP.NET
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: 840e4a5d365f2adbaf335c1061a580665a39824d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d527993dcf1fc5d5cd39bf22c3e772baf60e62f
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595329"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246733"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Nasıl yapılır: ASP.NET Üyelik Sağlayıcısını Kullanma
 
@@ -28,7 +29,7 @@ Windows Communication Foundation (WCF) geliştiricileri, güvenlik amacıyla bu 
 
 ### <a name="to-configure-the-membership-provider"></a>Üyelik sağlayıcısını yapılandırmak için
 
-1. Web. config dosyasında, < `system.web` > öğesi altında, bir < `membership` > öğesi oluşturun.
+1. Web.config dosyasında, <`system.web`> öğesinin altında bir <`membership`> öğesi oluşturun.
 
 2. Öğesi altında `<membership>` bir `<providers>` öğesi oluşturun.
 

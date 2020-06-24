@@ -1,16 +1,17 @@
 ---
 title: WCF'de Kimlik Doğrulama
+description: WCF 'de, Windows kimlik doğrulaması, X. 509.440 sertifikaları ve Kullanıcı adı ve parola gibi kimlik doğrulaması sağlayan çeşitli mekanizmalar hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: b513c9713bd2c04e125915d1a0a87c86ce249666
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c3348cfb84b8571dc1f24b774ffcd691aaa5001
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597650"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247526"
 ---
 # <a name="authentication-in-wcf"></a>WCF'de Kimlik Doğrulama
 Aşağıdaki konularda, kimlik doğrulaması (örneğin, Windows kimlik doğrulaması, X. 509.440 sertifikaları ve Kullanıcı adı ve parolalar) sağlayan Windows Communication Foundation (WCF) içinde çeşitli mekanizmalar gösterilmektedir.  

@@ -1,20 +1,21 @@
 ---
 title: Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri hızlı başlangıç)
+description: Visual Studio 'da WCF Veri Hizmetleri başlatmayı ve bir tarayıcıda akış okumayı devre dışı bırakmayı öğrenin. Hizmet tanımı belgesini alın ve veri hizmeti kaynaklarına erişin.
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: d89f84cd3ea4f56bbae34cbefe0c3891df96fa8b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 713436c31bc3f622c4f44a83e33fff3fcbba1c1c
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894341"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247784"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Web tarayıcısından hizmete erişme (WCF Veri Hizmetleri hızlı başlangıç)
 
 Bu, WCF Veri Hizmetleri hızlı başlangıç görevinin ikinci görevidir. Bu görevde, Visual Studio 'dan WCF Veri Hizmetleri başlatır ve isteğe bağlı olarak Web tarayıcısında akış okumayı devre dışı bırakabilirsiniz. Daha sonra, sunulan kaynaklara bir Web tarayıcısı aracılığıyla HTTP GET istekleri göndererek hizmet tanımı belgesini alır ve veri hizmeti kaynaklarına erişebilirsiniz.
 
 > [!NOTE]
-> Varsayılan olarak, Visual Studio otomatik olarak bilgisayarınızdaki `localhost` URI 'ye bir bağlantı noktası numarası atar. Bu görev, URI örneklerde bağlantı `12345` noktası numarasını kullanır. Visual Studio projenizde belirli bir bağlantı noktası numarasının nasıl ayarlanacağı hakkında daha fazla bilgi için bkz. [veri hizmeti oluşturma](creating-the-data-service.md).
+> Varsayılan olarak, Visual Studio otomatik olarak bilgisayarınızdaki URI 'ye bir bağlantı noktası numarası atar `localhost` . Bu görev, URI örneklerde bağlantı noktası numarasını kullanır `12345` . Visual Studio projenizde belirli bir bağlantı noktası numarasının nasıl ayarlanacağı hakkında daha fazla bilgi için bkz. [veri hizmeti oluşturma](creating-the-data-service.md).
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>Internet Explorer 'ı kullanarak varsayılan hizmet belgesini istemek için
 
@@ -51,7 +52,7 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç görevinin ikinci görevidir. Bu g�
     http://localhost:12345/northwind.svc/Customers('ALFKI')
     ```
 
-     Bu, `ALFKI`belirli müşteri için bir varlık örneği döndürür.
+     Bu, belirli müşteri için bir varlık örneği döndürür `ALFKI` .
 
 3. Web tarayıcınızın adres çubuğunda aşağıdaki URI 'yi girin:
 
@@ -59,7 +60,7 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç görevinin ikinci görevidir. Bu g�
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
     ```
 
-     Bu, müşteriler ve siparişler arasındaki ilişkiyi, belirli bir müşteri `ALFKI`için tüm siparişlerin bir kümesini döndürecek şekilde inceler.
+     Bu, müşteriler ve siparişler arasındaki ilişkiyi, belirli bir müşteri için tüm siparişlerin bir kümesini döndürecek şekilde inceler `ALFKI` .
 
 4. Web tarayıcınızın adres çubuğunda aşağıdaki URI 'yi girin:
 
@@ -67,7 +68,7 @@ Bu, WCF Veri Hizmetleri hızlı başlangıç görevinin ikinci görevidir. Bu g�
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
     ```
 
-     Bu, belirtilen `OrderID` değere göre yalnızca belirli bir sipariş `ALFKI` döndürüldüğünden, belirli müşteriye ait olan siparişleri filtreler.
+     Bu, belirtilen `ALFKI` değere göre yalnızca belirli bir sipariş döndürüldüğünden, belirli müşteriye ait olan siparişleri filtreler `OrderID` .
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 

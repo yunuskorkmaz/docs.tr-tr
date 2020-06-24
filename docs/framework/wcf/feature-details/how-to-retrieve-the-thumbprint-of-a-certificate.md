@@ -1,15 +1,16 @@
 ---
 title: 'Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma'
+description: Kimlik doğrulaması için sertifikaları kullanan bir WCF uygulaması geliştirirken, bir X. 509.952 sertifikasında bulunan taleplerin nasıl belirtildiğinizi öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: f59fad86287e89b0a573a6e3ee8420f384b0bc3b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 87c696323af442021af267f0d8c523418e2234f7
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601211"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246785"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Nasıl yapılır: Bir Sertifikanın Parmak İzini Alma
 Kimlik doğrulaması için bir X. 509.440 sertifikası kullanan bir Windows Communication Foundation (WCF) uygulaması yazarken, genellikle sertifikada bulunan taleplerin belirtilmesi gerekir. Örneğin, yönteminde sabit listesini kullanırken bir parmak izi talebi sağlamalısınız <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> . Talep değerini bulmak için iki adım gerekir. İlk olarak, sertifikalar için Microsoft Yönetim Konsolu (MMC) ek bileşenini açın. (Bkz. [nasıl yapılır: MMC ek bileşeni Ile sertifikaları görüntüleme](how-to-view-certificates-with-the-mmc-snap-in.md).) İkincisi, burada açıklandığı gibi uygun bir sertifika bulun ve parmak izini (veya diğer talep değerlerini) kopyalayın.  

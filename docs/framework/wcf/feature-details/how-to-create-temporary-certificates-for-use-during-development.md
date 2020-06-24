@@ -1,20 +1,21 @@
 ---
 title: 'Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma'
+description: Bir PowerShell cmdlet 'ini kullanarak güvenli bir WCF hizmeti veya istemcisi geliştirmekte kullanılmak üzere iki geçici X. 509.952 sertifikası oluşturma hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964546"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247045"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 
-Windows Communication Foundation (WCF) kullanarak güvenli bir hizmet veya istemci geliştirirken, genellikle kimlik bilgisi olarak kullanılacak bir X. 509.440 sertifikası sağlamak gereklidir. Sertifika genellikle bilgisayarın güvenilen kök sertifika yetkilileri deposunda bulunan bir kök yetkiliyle bir Sertifika zincirinin parçasıdır. Bir sertifika zinciri olması, genellikle kök yetkilisinin kuruluşunuzun veya iş biriminden olduğu bir sertifika kümesini kapsamlamanıza olanak sağlar. Geliştirme zamanında buna öykünmek için, güvenlik gereksinimlerini karşılamak üzere iki sertifika oluşturabilirsiniz. İlki, güvenilen kök sertifika yetkilileri deposuna yerleştirilmiş otomatik olarak imzalanan bir sertifikadır ve ikinci sertifika birinciden oluşturulur ve yerel makine konumunun kişisel deposuna ya da Geçerli Kullanıcı konumu. Bu konu, PowerShell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 'ini kullanarak bu iki sertifikayı oluşturma adımlarında size kılavuzluk eder.
+Windows Communication Foundation (WCF) kullanarak güvenli bir hizmet veya istemci geliştirirken, genellikle kimlik bilgisi olarak kullanılacak bir X. 509.440 sertifikası sağlamak gereklidir. Sertifika genellikle bilgisayarın güvenilen kök sertifika yetkilileri deposunda bulunan bir kök yetkiliyle bir Sertifika zincirinin parçasıdır. Bir sertifika zinciri olması, genellikle kök yetkilisinin kuruluşunuzun veya iş biriminden olduğu bir sertifika kümesini kapsamlamanıza olanak sağlar. Geliştirme zamanında buna öykünmek için, güvenlik gereksinimlerini karşılamak üzere iki sertifika oluşturabilirsiniz. Birincisi, güvenilen kök sertifika yetkilileri deposuna yerleştirilmiş otomatik olarak imzalanan bir sertifikadır ve ikinci sertifika birinciden oluşturulur ve yerel makine konumunun kişisel deposuna ya da geçerli kullanıcı konumunun kişisel deposuna yerleştirilir. Bu konu, PowerShell [New-SelfSignedCertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 'ini kullanarak bu iki sertifikayı oluşturma adımlarında size kılavuzluk eder.
 
 > [!IMPORTANT]
 > New-SelfSignedCertificate cmdlet 'inin oluşturduğu sertifikalar yalnızca sınama amacıyla sağlanır. Bir hizmet veya istemci dağıtıldığında, bir sertifika yetkilisi tarafından sunulan uygun bir sertifikayı kullandığınızdan emin olun. Bu, kuruluşunuzdaki bir Windows Server sertifika sunucusundan veya üçüncü bir tarafa ait olabilir.
@@ -31,7 +32,7 @@ Aşağıdaki komut, geçerli kullanıcı Kişisel deposunda "RootCA" konu adına
 $rootcert = New-SelfSignedCertificate -CertStoreLocation Cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.19={text}CA=true") -KeyUsage CertSign,CrlSign,DigitalSignature
 ```
 
-Sertifikayı bir PFX dosyasına aktardığımızda, daha sonraki bir adımda gereken yere aktarılabilmesi gerekir. Özel anahtarla bir sertifika dışarı aktarılırken, bunu korumak için bir parola gerekir. Parolayı bir `SecureString` kaydeder ve sertifikayı ilişkili özel anahtarla bir PFX dosyasına aktarmak için [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 'ini kullanın. Ayrıca, [Export-Certificate](/powershell/module/pkiclient/export-certificate) cmdlet 'ini kullanarak yalnızca genel sertifikayı CRT dosyasına kaydettik.
+Sertifikayı bir PFX dosyasına aktardığımızda, daha sonraki bir adımda gereken yere aktarılabilmesi gerekir. Özel anahtarla bir sertifika dışarı aktarılırken, bunu korumak için bir parola gerekir. Parolayı bir `SecureString` öğesine kaydeder ve sertifikayı ilişkili özel anahtarla BIR PFX dosyasına aktarmak Için [Export-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet 'ini kullanın. Ayrıca, [Export-Certificate](/powershell/module/pkiclient/export-certificate) cmdlet 'ini kullanarak yalnızca genel sertifikayı CRT dosyasına kaydettik.
 
 ```powershell
 [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
@@ -42,7 +43,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Kök yetkilisi sertifikası tarafından imzalanmış yeni bir sertifika oluşturmak için
 
-Aşağıdaki komut, veren 'in özel anahtarını kullanarak "SignedByRootCA" konu adına sahip `RootCA` tarafından imzalanmış bir sertifika oluşturur.
+Aşağıdaki komut, `RootCA` veren 'in özel anahtarını kullanarak "SignedByRootCA" konu adı ile imzalanmış bir sertifika oluşturur.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert

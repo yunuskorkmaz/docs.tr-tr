@@ -1,15 +1,16 @@
 ---
 title: 'Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma'
+description: Windows Vista 'da, HTTP üzerinden iletişim kurmayan WCF hizmetlerini barındırmak için Windows Işlem etkinleştirme hizmeti 'ni (WAS) ayarlamayı öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f7a846b076691394cb855e4978e890cdcac76eb2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 84a0dcc4fed28ebd7a536bdabfcdc389be6072d8
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597039"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246889"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma
 
@@ -35,7 +36,7 @@ WAS 'yi yükledikten ve yapılandırdıktan sonra, ile ilgili HTTP olmayan bir u
 
 ## <a name="to-configure-the-was-to-support-tcp-activation"></a>Yapılandırmasını TCP etkinleştirmesini destekleyecek şekilde yapılandırmak için
 
-1. Net. TCP etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin bir net. TCP bağlantı noktasına bağlanması gerekir. Bunu, IIS 7,0 yönetim araç takımı ile yüklenen appcmd. exe ' yi kullanarak yapabilirsiniz. Yönetici düzeyinde bir komut Istemi penceresinde aşağıdaki komutu çalıştırın.
+1. Net. TCP etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin bir net. TCP bağlantı noktasına bağlanması gerekir. Bunu, IIS 7,0 yönetim araç takımı ile yüklenen Appcmd.exe kullanarak yapabilirsiniz. Yönetici düzeyinde bir komut Istemi penceresinde aşağıdaki komutu çalıştırın.
 
     ```console
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']

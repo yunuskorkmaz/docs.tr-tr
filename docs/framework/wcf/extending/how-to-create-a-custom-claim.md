@@ -1,75 +1,76 @@
 ---
 title: 'Nasıl yapılır: Özel Beyan Oluşturma'
+description: WCF 'de özel talep oluşturmayı öğrenin. WCF, çeşitli yerleşik talepleri destekler ve bazı uygulamalar özel talepler gerektirebilir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: e78f577e0fd3473575fab998e55616936212ebb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89f2b1359b48b71720db6ff38f27883745cfe612
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185612"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247552"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Nasıl yapılır: Özel Beyan Oluşturma
-Windows Communication Foundation'daki (WCF) Kimlik Modeli altyapısı, bu tür ve haklara sahip <xref:System.IdentityModel.Claims.Claim> örnekler oluşturmak için yardımcı işlevlerle birlikte yerleşik talep türleri ve hakları kümesi sağlar. Bu yerleşik talepler, WCF'nin varsayılan olarak desteklediği istemci kimlik bilgisi türlerinde bulunan bilgileri modellemek üzere tasarlanmıştır. Çoğu durumda, yerleşik talepler yeterlidir; ancak bazı uygulamalar özel talepler gerektirebilir. Talep, talep türünden, talebin geçerli olduğu kaynaktan ve bu kaynak üzerinde öne sürülenen haktan oluşur. Bu konu, özel bir talep oluşturma nın nasıl açıklanmaktadır.  
+Windows Communication Foundation (WCF) içindeki kimlik modeli altyapısı, <xref:System.IdentityModel.Claims.Claim> Bu tür ve haklara sahip örnekler oluşturmak için yardımcı işlevlerle birlikte yerleşik talep türleri ve haklar kümesi sağlar. Bu yerleşik talepler, WCF 'nin varsayılan olarak desteklediği istemci kimlik bilgileri türlerinde bulunan bilgileri modellemek üzere tasarlanmıştır. Birçok durumda, yerleşik talepler yeterlidir; Ancak bazı uygulamalar özel talepler gerektirebilir. Talep türü, talebin uygulandığı kaynak ve söz konusu kaynak üzerinde bir hak olan talep türünden oluşur. Bu konu başlığı altında, özel bir talebin nasıl oluşturulacağı açıklanmaktadır.  
   
-### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>İlkel bir veri türünü temel alan özel bir talep oluşturmak için  
+### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Temel bir veri türünü temel alan özel bir talep oluşturmak için  
   
-1. Talep türünü, kaynak değerini ve hakkı <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> oluşturucuya geçirerek özel bir talep oluşturun.  
+1. Talep türünü, kaynak değerini ve hakkını oluşturucuya geçirerek özel bir talep oluşturun <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> .  
   
     1. Talep türü için benzersiz bir değer belirleyin.  
   
-         Talep türü benzersiz bir dize tanımlayıcısır. Talep türü için kullanılan dize tanımlayıcısının benzersiz olduğundan emin olmak özel talep tasarımcısının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin listesi için <xref:System.IdentityModel.Claims.ClaimTypes> sınıfa bakın.  
+         Talep türü benzersiz bir dize tanımlayıcısıdır. Bu, talep türü için kullanılan dize tanımlayıcısının benzersiz olduğundan emin olmak için özel talep tasarımcısının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin bir listesi için, <xref:System.IdentityModel.Claims.ClaimTypes> sınıfına bakın.  
   
-    2. Kaynak için ilkel veri türünü ve değerini seçin.  
+    2. Kaynağın temel veri türünü ve değerini seçin.  
   
-         Kaynak bir nesnedir. Kaynağın CLR türü, herhangi bir serileştirilebilir <xref:System.Int32>tür gibi <xref:System.String> ilkel olabilir. Talepler WCF tarafından çeşitli noktalarda seri hale getirildığından, kaynağın CLR türü serileştirilebilir olmalıdır. İlkel türleri serileştirilebilir.  
+         Kaynak bir nesnedir. Kaynağın CLR türü veya gibi bir temel olabilir veya <xref:System.String> <xref:System.Int32> ya da serileştirilebilir herhangi bir tür olabilir. Talepler WCF tarafından farklı noktalarda serileştirildiği için kaynağın CLR türü seri hale getirilebilir olmalıdır. İlkel türler seri hale getirilebilir.  
   
-    3. WCF tarafından tanımlanan bir hakkı veya özel bir hak için benzersiz bir değer seçin.  
+    3. WCF tarafından tanımlanan bir sağ veya özel bir hak için benzersiz bir değer seçin.  
   
-         Sağ, benzersiz bir dize tanımlayıcısıdır. WCF tarafından tanımlanan haklar <xref:System.IdentityModel.Claims.Rights> sınıfta tanımlanır.  
+         Sağ, benzersiz bir dize tanımlayıcısıdır. WCF tarafından tanımlanan haklar <xref:System.IdentityModel.Claims.Rights> sınıfında tanımlanmıştır.  
   
-         Sağ için kullanılan dize tanımlayıcısının benzersiz olmasını sağlamak özel talep tasarımcısının sorumluluğundadır.  
+         Sağ tarafta kullanılan dize tanımlayıcısının benzersiz olduğundan emin olmak için özel talep tasarımcısının sorumluluğundadır.  
   
-         Aşağıdaki kod `http://example.org/claims/simplecustomclaim`örneği, adlı `Driver's License`bir kaynak için ve <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> hakkı olan bir talep türüyle özel bir talep oluşturur.  
+         Aşağıdaki kod örneği, `http://example.org/claims/simplecustomclaim` , adlı bir kaynak `Driver's License` ve sağ ile bir talep türü ile özel bir talep oluşturur <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> .  
   
      [!code-csharp[c_CustomClaim#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#4)]
      [!code-vb[c_CustomClaim#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#4)]  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-non-primitive-data-type"></a>İlkel olmayan bir veri türünü temel alan özel bir talep oluşturmak için  
   
-1. Talep türünü, kaynak değerini ve hakkı <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> oluşturucuya geçirerek özel bir talep oluşturun.  
+1. Talep türünü, kaynak değerini ve hakkını oluşturucuya geçirerek özel bir talep oluşturun <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> .  
   
     1. Talep türü için benzersiz bir değer belirleyin.  
   
-         Talep türü benzersiz bir dize tanımlayıcısır. Talep türü için kullanılan dize tanımlayıcısının benzersiz olduğundan emin olmak özel talep tasarımcısının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin listesi için <xref:System.IdentityModel.Claims.ClaimTypes> sınıfa bakın.  
+         Talep türü benzersiz bir dize tanımlayıcısıdır. Bu, talep türü için kullanılan dize tanımlayıcısının benzersiz olduğundan emin olmak için özel talep tasarımcısının sorumluluğundadır. WCF tarafından tanımlanan talep türlerinin bir listesi için, <xref:System.IdentityModel.Claims.ClaimTypes> sınıfına bakın.  
   
-    2. Kaynak için seri olarak yazılabilir ilkel olmayan bir tür seçin veya tanımlayın.  
+    2. Kaynak için seri hale getirilebilir bir temel olmayan tür seçin veya tanımlayın.  
   
-         Kaynak bir nesnedir. Talepler WCF tarafından çeşitli noktalarda seri hale getirildığından, kaynağın CLR türü serileştirilebilir olmalıdır. İlkel türleri zaten serileştirilebilir.  
+         Kaynak bir nesnedir. Talepler WCF tarafından farklı noktalarda serileştirildiği için kaynağın CLR türü seri hale getirilebilir olmalıdır. İlkel türler zaten serileştirilebilir.  
   
-         Yeni bir tür tanımlandığında, <xref:System.Runtime.Serialization.DataContractAttribute> sınıfa uygulayın. Ayrıca, <xref:System.Runtime.Serialization.DataMemberAttribute> talebin bir parçası olarak serileştirilmesi gereken yeni türün tüm üyelerine özniteliği uygulayın.  
+         Yeni bir tür tanımlandığında, <xref:System.Runtime.Serialization.DataContractAttribute> sınıfını sınıfına uygulayın. Ayrıca, <xref:System.Runtime.Serialization.DataMemberAttribute> talebin bir parçası olarak serileştirilmesi gereken yeni türün tüm üyelerine özniteliğini uygular.  
   
-         Aşağıdaki kod örneği adlı `MyResourceType`özel bir kaynak türü tanımlar.  
+         Aşağıdaki kod örneği adlı özel bir kaynak türünü tanımlar `MyResourceType` .  
   
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]
   
-    3. WCF tarafından tanımlanan bir hakkı veya özel bir hak için benzersiz bir değer seçin.  
+    3. WCF tarafından tanımlanan bir sağ veya özel bir hak için benzersiz bir değer seçin.  
   
-         Sağ, benzersiz bir dize tanımlayıcısıdır. WCF tarafından tanımlanan haklar <xref:System.IdentityModel.Claims.Rights> sınıfta tanımlanır.  
+         Sağ, benzersiz bir dize tanımlayıcısıdır. WCF tarafından tanımlanan haklar <xref:System.IdentityModel.Claims.Rights> sınıfında tanımlanmıştır.  
   
-         Sağ için kullanılan dize tanımlayıcısının benzersiz olmasını sağlamak özel talep tasarımcısının sorumluluğundadır.  
+         Sağ tarafta kullanılan dize tanımlayıcısının benzersiz olduğundan emin olmak için özel talep tasarımcısının sorumluluğundadır.  
   
-         Aşağıdaki kod `http://example.org/claims/complexcustomclaim`örneği, bir talep türü , özel bir kaynak `MyResourceType`türü ve <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> sağ ile özel bir talep oluşturur.  
+         Aşağıdaki kod örneği, bir talep türü `http://example.org/claims/complexcustomclaim` , özel kaynak türü `MyResourceType` ve sağ ile özel bir talep oluşturur <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> .  
   
          [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)]
          [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, ilkel bir kaynak türüyle özel bir talep ve ilkel olmayan bir kaynak türüne sahip özel bir talep oluşturmanın nasıl yapılacağını gösterir.  
+ Aşağıdaki kod örneği, temel olmayan bir kaynak türü ile bir basit kaynak türüne ve özel talebe sahip özel bir talebin nasıl oluşturulacağını göstermektedir.  
   
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  

@@ -1,13 +1,14 @@
 ---
 title: İşlem Gerçekleştirme
+description: .NET 'te işlem işlemeyi gözden geçirin. İşlemler, tüm işlemler başarıyla tamamlanmadığı takdirde veri odaklı kaynakların kalıcı olarak güncelleştirilmesini sağlamaktır.
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: de88247e5916ab6e080c4de361efecee0b193e18
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 30d69c55d968865cc80b8633bdbc2442f6d216de
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205913"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141919"
 ---
 # <a name="transaction-processing"></a>İşlem Gerçekleştirme
 Bir çevrimiçi bir kitaplığı defterinden satın aldığınızda, bir kitap (kredi biçiminde) karşılığında exchange. Kredi iyi ise, bir dizi ilgili operations defteri alma ve kitaplığı, para alır sağlar. Ancak, tek bir işlemde serisinde exchange sırasında başarısız olursa, tüm exchange başarısız olur. Kitap alma ve kitaplığı, para almaz.  

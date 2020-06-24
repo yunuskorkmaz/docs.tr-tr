@@ -1,15 +1,16 @@
 ---
 title: Windows Communication Foundation Bağlamaları Genel Bakış
+description: Bağlamanın öğeleri de dahil olmak üzere bir WCF hizmetine nasıl bağlanacağınızı ve hizmet uç noktası için nasıl bağlama yapılacağını belirten bağlamalar hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 8c1e44609a0a20ffcec55af43e49ee62b0842378
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: da8050c4e9aeb111de3a54315b3650bcf09f23ed
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320752"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247720"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation Bağlamaları Genel Bakış
 Bağlamalar, bir Windows Communication Foundation (WCF) hizmetinin uç noktasına bağlanmak için gereken iletişim ayrıntılarını belirtmek için kullanılan nesnelerdir. Bir WCF hizmetindeki her uç noktanın, bir bağlamanın iyi belirtilmiş olması gerekir. Bu konu, bağlamaların belirlediği iletişim ayrıntılarının türlerini, bir bağlamanın öğelerini, WCF 'de hangi bağlamaların ekleneceğini ve bir uç nokta için bir bağlamanın nasıl belirtilebileceklerini özetler.  
@@ -17,10 +18,10 @@ Bağlamalar, bir Windows Communication Foundation (WCF) hizmetinin uç noktasın
 ## <a name="what-a-binding-defines"></a>Bağlama ne tanımlar  
  Bir bağlamadaki bilgiler çok basit veya çok karmaşık olabilir. En temel bağlama, yalnızca uç noktaya bağlanmak için kullanılması gereken aktarım protokolünü (HTTP gibi) belirtir. Daha genel olarak, bir bağlamanın bir uç noktaya nasıl bağlanacağı hakkında bilgiler aşağıdaki kategorilerden birine girer:  
   
- **Ekledikten**  
+ **Protokoller**  
  Kullanılan güvenlik mekanizmasını belirler: Güvenilir Mesajlaşma özelliği ya da işlem bağlamı akış ayarları.  
   
- **Şifreleme**  
+ **Encoding**  
  İleti kodlamasını belirler (örneğin, metin veya ikili).  
   
  **Aktarım**  
@@ -34,18 +35,18 @@ Bağlamalar, bir Windows Communication Foundation (WCF) hizmetinin uç noktasın
   
 - <xref:System.ServiceModel.BasicHttpBinding>: WS-ı temel profil belirtimine uyan Web hizmetlerine bağlanmak için uygun bir HTTP protokol bağlaması (örneğin, ASP.NET Web Hizmetleri tabanlı hizmetler).  
   
-- <xref:System.ServiceModel.WSHttpBinding>: bir birlikte çalışabilen bağlama, WS-* protokollerine uygun uç noktalara bağlanmak için uygun.  
+- <xref:System.ServiceModel.WSHttpBinding>: WS-* protokollerine uygun uç noktalara bağlanmak için uygun bir birlikte çalışabilen bağlama.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: aynı makinede diğer WCF uç noktalarına bağlanmak için .NET Framework kullanır.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Aynı makinedeki diğer WCF uç noktalarına bağlanmak için .NET Framework kullanır.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: diğer WCF uç noktalarıyla sıraya alınmış ileti bağlantıları oluşturmak için .NET Framework kullanır.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Diğer WCF uç noktalarıyla sıraya alınmış ileti bağlantıları oluşturmak için .NET Framework kullanır.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Bu bağlama HTTP bağlamalarından daha yüksek performans sunar ve yerel bir ağda kullanılmak üzere idealdir.
   
  Tüm WCF tarafından sağlanmış bağlamaların açıklamaları içeren tam bir liste için bkz. [sistem tarafından sunulan bağlamalar](system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Kendi bağlamalarınızı kullanma  
- Dahil edilen sistem tarafından sağlanan bağlamalardan hiçbiri bir hizmet uygulamasının gerektirdiği özelliklerin doğru birleşimine sahip değilse, kendi bağlamalarınızı oluşturabilirsiniz. Bunu iki şekilde yapabilirsiniz. Önceden var olan bağlama öğelerinden <xref:System.ServiceModel.Channels.CustomBinding> nesnesi kullanarak yeni bir bağlama oluşturabilir veya <xref:System.ServiceModel.Channels.Binding> bağlamalarından türeterek, tümüyle Kullanıcı tanımlı bir bağlama oluşturabilirsiniz. Bu iki yaklaşımı kullanarak kendi bağlamalarınızı oluşturma hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](./extending/custom-bindings.md) ve [Kullanıcı Tanımlı Bağlamalar Oluşturma](./extending/creating-user-defined-bindings.md).  
+ Dahil edilen sistem tarafından sağlanan bağlamalardan hiçbiri bir hizmet uygulamasının gerektirdiği özelliklerin doğru birleşimine sahip değilse, kendi bağlamalarınızı oluşturabilirsiniz. Bunu yapmanın iki yolu vardır. Önceden var olan bağlama öğelerinden bir nesne kullanarak yeni bir bağlama oluşturabilir <xref:System.ServiceModel.Channels.CustomBinding> veya bağlamadan türeterek, tümüyle Kullanıcı tanımlı bir bağlama oluşturabilirsiniz <xref:System.ServiceModel.Channels.Binding> . Bu iki yaklaşımı kullanarak kendi bağlamalarınızı oluşturma hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](./extending/custom-bindings.md) ve [Kullanıcı Tanımlı Bağlamalar Oluşturma](./extending/creating-user-defined-bindings.md).  
   
 ## <a name="using-bindings"></a>Bağlamaları kullanma  
  Bağlamaları kullanmak iki temel adımı kapsar:  

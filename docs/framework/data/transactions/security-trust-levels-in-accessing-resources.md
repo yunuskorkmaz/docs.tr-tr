@@ -1,22 +1,23 @@
 ---
 title: Kaynaklara Erişimde Güvenlik Güven Düzeyleri
+description: .NET 'teki kaynaklara erişirken güvenlik güven düzeylerini anlayın. System. Transactions için 3 ana güven düzeyi vardır.
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 64f298460bde99181ab8dc8be13ae95aaa846299
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205876"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141958"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Kaynaklara Erişimde Güvenlik Güven Düzeyleri
-Bu konuda, erişimin <xref:System.Transactions> açığa çıkardığı kaynak türleri üzerinde nasıl sınırlandırıldığı anlatılmaktadır.  
+Bu konuda, erişimin açığa çıkardığı kaynak türleri üzerinde nasıl sınırlandırıldığı anlatılmaktadır <xref:System.Transactions> .  
   
- İçin <xref:System.Transactions>üç ana güven düzeyi vardır. Güven düzeyleri, <xref:System.Transactions> kullanıma sunan kaynak türlerine ve bu kaynaklara erişmek için gerekli olan güven düzeyine göre tanımlanır. Kaynakları, <xref:System.Transactions> erişim sağlar sistem bellek, paylaşılan işlem geniş kaynakları ve uluslararası sistem kaynakları. Düzeyleri şunlardır:  
+ İçin üç ana güven düzeyi vardır <xref:System.Transactions> . Güven düzeyleri <xref:System.Transactions> , kullanıma sunan kaynak türlerine ve bu kaynaklara erişmek için gerekli olan güven düzeyine göre tanımlanır. Kaynakları, <xref:System.Transactions> erişim sağlar sistem bellek, paylaşılan işlem geniş kaynakları ve uluslararası sistem kaynakları. Düzeyleri şunlardır:  
   
-- **Allowpartiallytrustedçağıranları** (APTCA), tek bir uygulama etki alanı içindeki işlemleri kullanan uygulamalar için.  
+- Tek bir uygulama etki alanı içindeki işlemleri kullanan uygulamalar için **Allowpartiallytrustedçağıranları** (aptca).  
   
-- **DistributedTransactionPermission** (DTP) dağıtılmış işlemler kullanan uygulamalar için.  
+- Dağıtılmış işlemler kullanan uygulamalar için **DistributedTransactionPermission** (DTP).  
   
 - Dayanıklı kaynaklar, yapılandırma yönetimi uygulamaları ve eski birlikte çalışma uygulamaları için tam güven.  
   
@@ -26,12 +27,12 @@ Bu konuda, erişimin <xref:System.Transactions> açığa çıkardığı kaynak t
 ## <a name="trust-levels"></a>Güven düzeyleri  
   
 ### <a name="aptca-partial-trust"></a>APTCA (kısmi güven)  
- , <xref:System.Transactions> **Allowpartiallytrustedçağıranlar** özniteliğiyle (aptca) işaretlendiğinden, derleme kısmen güvenilen kod tarafından çağrılabilir. Bu öznitelik, normalde her türden <xref:System.Security.Permissions.SecurityAction.LinkDemand> herkese açık olarak erişilebilen her metoda otomatik olarak eklenen **FullTrust** izin kümesi için örtük olarak kaldırılır. Ancak bazı türler ve Üyeler hala daha güçlü izinler gerektirir.  
+ , <xref:System.Transactions> **Allowpartiallytrustedçağıranlar** özniteliğiyle (aptca) işaretlendiğinden, derleme kısmen güvenilen kod tarafından çağrılabilir. Bu öznitelik, <xref:System.Security.Permissions.SecurityAction.LinkDemand> normalde her türden herkese açık olarak erişilebilen her metoda otomatik olarak eklenen **FullTrust** izin kümesi için örtük olarak kaldırılır. Ancak bazı türler ve Üyeler hala daha güçlü izinler gerektirir.  
   
  APTCA özniteliği, uygulamaların tek bir uygulama etki alanı içinde kısmi güvende işlemleri kullanmasına olanak sağlar. Bu, hatasız işlemler ve hata işleme için kullanılabilecek geçici listeler sunar. Bunun bir örneği, işlem temelli bir karma tablo ve onu kullanan bir uygulamadır. Veriler, tek bir işlem altında karma tabloya eklenebilir veya kaldırılabilir. İşlem daha sonra geri alınırsa, bu işlem altındaki karma tabloya yapılan tüm değişiklikler geri alınabilir.  
   
 ### <a name="distributedtransactionpermission-dtp"></a>DistributedTransactionPermission (DTP)  
- Bir <xref:System.Transactions> işlem MSDTC tarafından yönetilmek üzere ilerlediğinde, <xref:System.Transactions> dağıtılmış işlemi oluşturmak için <xref:System.Transactions.DistributedTransactionPermission> (DTP) taleplerini ister. Bu, işlemin ilerlemesine neden olan kodun (serileştirme veya ek dayanıklı kayıtlar gibi) DTP verilmelidir. <xref:System.Transactions> İşlemin başlangıçta oluşturduğu kodun bu izne sahip olması gerekmez.  
+ Bir <xref:System.Transactions> Işlem MSDTC tarafından yönetilmek üzere ilerlediğinde, <xref:System.Transactions> <xref:System.Transactions.DistributedTransactionPermission> Dağıtılmış işlemi oluşturmak için (DTP) taleplerini ister. Bu, işlemin ilerlemesine neden olan kodun (serileştirme veya ek dayanıklı kayıtlar gibi) DTP verilmelidir. İşlemin başlangıçta oluşturduğu kodun <xref:System.Transactions> Bu izne sahip olması gerekmez.  
   
 ### <a name="fulltrust-link-demands"></a>FullTrust bağlantı talepleri  
  Bu izin düzeyi, dayanıklı kaynaklara yazılan uygulamaları kısıtlamak için tasarlanmıştır. Hata sonrasında uygulamanın, kalıcı verileri güncelleştirebilmesi için işlemin son sonucunu belirleyebilmesi için işlem yöneticisi ile kurtarma yapabilmesi gerekir. Bu tür bir uygulama, sağlam kaynak yöneticisi olarak bilinir. Bir Klasik bu tür bir uygulama SQL örnektir.  

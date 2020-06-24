@@ -1,48 +1,49 @@
 ---
 title: İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
+description: .NET 'teki TransactionScope sınıfını kullanarak örtük bir işlem uygulayın. Bu sınıf, bir kod bloğunu bir işleme katılan olarak işaretlemek için bir yol sağlar.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: 33b51cf26a35bbdda70582d86db6ac39c22597da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48dd96dbba89a33cfce7d1b4efb776ef4ce4fada
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174400"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141932"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>İşlem Kapsamı Kullanarak Örtük İşlem Uygulama
-Sınıf, <xref:System.Transactions.TransactionScope> hareketin kendisiyle etkileşimkurmanızı gerektirmeden, bir kod bloğunu bir hareketle ilgili olarak işaretlemenin basit bir yolunu sağlar. Hareket kapsamı ortam işlemini otomatik olarak seçebilir ve yönetebilir. Kullanım kolaylığı ve verimliliği nedeniyle, bir işlem uygulaması <xref:System.Transactions.TransactionScope> geliştirirken sınıfı kullanmanız önerilir.  
+Sınıfı, bir <xref:System.Transactions.TransactionScope> kod bloğunu bir işlem içine katılımınıza, işlem kendisiyle etkileşime girmeden işaretlemek için basit bir yol sağlar. İşlem kapsamı, ortam işlemini otomatik olarak seçebilir ve yönetebilir. Kullanım kolaylığı ve verimlilik nedeniyle, <xref:System.Transactions.TransactionScope> bir işlem uygulaması geliştirirken sınıfını kullanmanız önerilir.  
   
- Ayrıca, kaynakları açıkça hareketle kaydolmanız gerekmez. Herhangi <xref:System.Transactions> bir kaynak yöneticisi (SQL Server 2005 gibi) kapsam tarafından oluşturulan bir ortam hareketinin varlığını algılayabilir ve otomatik olarak kaydolabilir.  
+ Ayrıca, işlemle birlikte listeleme kaynaklarına gerek kalmaz. Herhangi bir <xref:System.Transactions> Kaynak Yöneticisi (SQL Server 2005 gibi), kapsam tarafından oluşturulan bir ortam işleminin varlığını algılayabilir ve otomatik olarak listeleme yapabilir.  
   
-## <a name="creating-a-transaction-scope"></a>Hareket kapsamı oluşturma  
+## <a name="creating-a-transaction-scope"></a>İşlem kapsamı oluşturma  
  Aşağıdaki örnek, bir basit kullanımını gösterir <xref:System.Transactions.TransactionScope> sınıfı.  
   
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- Yeni <xref:System.Transactions.TransactionScope> bir nesne oluşturduğunuzda hareket kapsamı başlatılır.  Kod örneğinde gösterildiği gibi, bir `using` deyimle kapsam oluşturmanız önerilir. `using` İfade c# ve Visual Basic hem de mevcuttur `try`ve bir gibi çalışır ... `finally` kapsamın düzgün bir şekilde atıldığından emin olmak için blok.  
+ Yeni bir nesne oluşturduktan sonra işlem kapsamı başlatılır <xref:System.Transactions.TransactionScope> .  Kod örneğinde gösterildiği gibi, bir ifadesiyle kapsam oluşturmanız önerilir `using` . `using`İfade hem C# ' de hem de Visual Basic kullanılabilir ve `try` `finally` kapsamın doğru bir şekilde atıldığından emin olmak için... bloğu gibi çalışıyor.  
   
- <xref:System.Transactions.TransactionScope>Anında işlem yöneticisi hangi işlemin katılacağını belirler. Belirlendikten sonra, kapsam her zaman bu işlemde katılır. Karar iki faktöre dayanır: ortam işleminin mevcut olup olmadığı `TransactionScopeOption` ve oluşturucudaki parametrenin değeri. Ortam hareketi, kodunuzun yürütüldettiği harekettir. <xref:System.Transactions.Transaction> Sınıfın statik <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> özelliğini arayarak ortam hareketine başvuru alabilirsiniz. Bu parametrenin nasıl kullanıldığı hakkında daha fazla bilgi için, bu konunun [TransactionScopeOption](#ManageTxFlow) bölümünü kullanarak Yönetim hareket akışına bakın.  
+ Örneğini oluşturduğunuzda <xref:System.Transactions.TransactionScope> , işlem Yöneticisi hangi hareketin katılacağı belirler. Belirlendikten sonra, kapsam her zaman bu işleme katılır. Karar iki etkene dayanır: bir ortam işleminin mevcut olup olmadığı ve `TransactionScopeOption` oluşturucudaki parametre değeri. Çevresel işlem, kodunuzun çalıştırıldığı işlemdir. Sınıfının statik özelliğini çağırarak çevresel işleme bir başvuru elde edebilirsiniz <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> <xref:System.Transactions.Transaction> . Bu parametrenin nasıl kullanıldığı hakkında daha fazla bilgi için, bu konunun [TransactionScopeOption kullanılarak işlem akışını yönetme](#ManageTxFlow) bölümüne bakın.  
   
-## <a name="completing-a-transaction-scope"></a>Hareket kapsamını tamamlama  
- Uygulamanız bir işlemde gerçekleştirmek istediği tüm işi tamamladığında, <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> işlem yöneticisine hareketi gerçekleştirmenin kabul edilebilir olduğunu bildirmek için yöntemi yalnızca bir kez aramalısınız. Bu <xref:System.Transactions.TransactionScope.Complete%2A> `using` blokta son ifade olarak arama koymak için çok iyi bir uygulamadır.  
+## <a name="completing-a-transaction-scope"></a>İşlem kapsamını tamamlama  
+ Uygulamanız bir işlemde gerçekleştirmek istediği tüm işleri tamamladığında, işlem <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWithType> yöneticisini işlem yürütmek için kabul edilebilir olduğunu bildirmek üzere yöntemi yalnızca bir kez çağırmanız gerekir. Çağrısını bloktaki son ifadeye koymak çok iyi bir uygulamadır <xref:System.Transactions.TransactionScope.Complete%2A> `using` .  
   
- İşlem yöneticisi bunu bir sistem hatası veya işlem kapsamında atılan bir özel durum olarak yorumladığı için, bu yöntemin çağrılmaması hareketi iptal eder. Ancak, bu yöntemi çağırmak, işlemin solunan bir söz olduğunu garanti etmez. Bu yalnızca işlem yöneticisine durumunuzu bildirmenin bir yoludur. <xref:System.Transactions.TransactionScope.Complete%2A> Yöntemi aradıktan sonra, <xref:System.Transactions.Transaction.Current%2A> özelliği kullanarak ortam hareketine artık erişemezsiniz ve bunu yapmaya çalışmak bir özel durum atılmasına neden olur.  
+ İşlem yöneticisi bunu bir sistem hatası olarak yorumladığı ya da işlemin kapsamında oluşturulan bir özel durumla eşdeğer olduğundan, bu yöntemi çağıramaması işlemi iptal eder. Ancak, bu yöntemin çağrılması, işlem WIL 'nin uygulanabileceğini garanti etmez. Yalnızca durumlarınızın işlem yöneticisini bilgilendiren bir yoldur. Yöntemini çağırdıktan sonra, <xref:System.Transactions.TransactionScope.Complete%2A> özelliği kullanarak çevresel işleme <xref:System.Transactions.Transaction.Current%2A> erişemeyecektir ve bunu yapmaya çalıştığınızda bir özel durum oluşturulması neden olur.  
   
- <xref:System.Transactions.TransactionScope> Nesne hareketi başlangıçta oluşturduysa, hareket yöneticisi tarafından hareketi gerçekleştirmenin gerçek işi `using` bloktaki son kod satırından sonra gerçekleşir. İşlemi oluşturmadıysa, <xref:System.Transactions.CommittableTransaction.Commit%2A> <xref:System.Transactions.CommittableTransaction> nesnenin sahibi tarafından çağrıldığında commit oluşur. Bu noktada işlem yöneticisi kaynak yöneticilerini çağırır ve yöntemin <xref:System.Transactions.TransactionScope.Complete%2A> <xref:System.Transactions.TransactionScope> nesneye çağrılıp çağrılmadığına bağlı olarak kaynak yöneticilerini çağırır ve onları işleme veya geri alma konusunda bilgilendirir.  
+ <xref:System.Transactions.TransactionScope>Nesneyi başlangıçta oluşturmadıysa, işlemi işlem yöneticisi tarafından yürütmek için gerçek iş, bloktaki kodun son satırından sonra oluşur `using` . İşlem oluşturamadığında, işleme <xref:System.Transactions.CommittableTransaction.Commit%2A> nesnenin sahibi tarafından her çağrıldığında gerçekleşir <xref:System.Transactions.CommittableTransaction> . Bu noktada, işlem yöneticisi kaynak yöneticilerini çağırır ve <xref:System.Transactions.TransactionScope.Complete%2A> yöntemin nesne üzerinde çağrılıp çağrılmayacağı temelinde bunları COMMIT veya Rollback olarak bilgilendirir <xref:System.Transactions.TransactionScope> .  
   
- Deyim, `using` bir özel <xref:System.Transactions.TransactionScope.Dispose%2A> durum <xref:System.Transactions.TransactionScope> oluşsa bile nesnenin yönteminin çağrılmasını sağlar. Yöntem, <xref:System.Transactions.TransactionScope.Dispose%2A> hareket kapsamının sonunu işaretler. Bu yöntemi aradıktan sonra oluşan özel durumlar hareketi etkilemeyebilir. Bu yöntem, ortam işlemini önceki durumuna da geri yükler.  
+ `using`İfade, <xref:System.Transactions.TransactionScope.Dispose%2A> <xref:System.Transactions.TransactionScope> bir özel durum gerçekleşse bile nesne yönteminin çağrılması sağlar. <xref:System.Transactions.TransactionScope.Dispose%2A>Yöntemi, işlem kapsamının sonunu işaretler. Bu yöntemi çağırdıktan sonra oluşan özel durumlar işlemi etkilemeyebilir. Bu yöntem aynı zamanda çevresel işlemi önceki durumuna geri yükler.  
   
- Kapsam <xref:System.Transactions.TransactionAbortedException> hareketi oluşturursa ve hareket iptal edilirse a atılır. Hareket <xref:System.Transactions.TransactionInDoubtException> yöneticisi Commit kararına ulaşamıyorsa a atılır. Hareket işlenirse özel durum atılmaz.  
+ , <xref:System.Transactions.TransactionAbortedException> Kapsam işlemi oluşturduğunda oluşturulur ve işlem iptal edilir. <xref:System.Transactions.TransactionInDoubtException>İşlem yöneticisi bir işleme kararına ulaşamadıysanız, oluşturulur. İşlem yürütüldüğünden hiçbir özel durum oluşturulmaz.  
   
-## <a name="rolling-back-a-transaction"></a>Bir hareketi geri alma  
- Bir hareketi geri almak istiyorsanız, <xref:System.Transactions.TransactionScope.Complete%2A> yöntemin işlem kapsamı içinde çağrılmaması gerekir. Örneğin, kapsam içinde bir özel durum. Katıldığı işlem geri alınır.  
+## <a name="rolling-back-a-transaction"></a>Bir işlem geri alınıyor  
+ Bir işlemi geri almak istiyorsanız, <xref:System.Transactions.TransactionScope.Complete%2A> yöntemi işlem kapsamı içinde çağırmamalıdır. Örneğin, kapsam içinde bir özel durum. İçindeki katıldığı işlem geri alınacaktır.  
   
 ## <a name="managing-transaction-flow-using-transactionscopeoption"></a><a name="ManageTxFlow"></a>TransactionScopeOption kullanarak işlem akışını yönetme  
- İşlem kapsamı, aşağıdaki örnekte olduğu gibi, <xref:System.Transactions.TransactionScope> `RootMethod` kendi kapsamını kullanan bir yöntem içinden a kullanan bir yöntem çağırarak iç içe olabilir,  
+ İşlem kapsamı, <xref:System.Transactions.TransactionScope> `RootMethod` yöntemi aşağıdaki örnekte olduğu gibi, kendi kapsamını kullanan bir yöntemin içinden öğesini kullanan bir yöntemi çağırarak iç içe olabilir.  
   
 ```csharp  
 void RootMethod()
@@ -65,36 +66,36 @@ void SomeMethod()
 }
 ```  
   
- En çok işlem kapsamı kök kapsamı olarak adlandırılır.  
+ En üst işlem kapsamı kök kapsamı olarak adlandırılır.  
   
- Sınıf, <xref:System.Transactions.TransactionScope> kapsamın işlem davranışını tanımlayan türün <xref:System.Transactions.TransactionScopeOption>numaralandırmasını kabul eden birkaç aşırı yüklü oluşturucu sağlar.  
+ <xref:System.Transactions.TransactionScope>Sınıfı, <xref:System.Transactions.TransactionScopeOption> kapsamın işlem davranışını tanımlayan, türün bir listesini kabul eden birkaç aşırı yüklenmiş Oluşturucu sağlar.  
   
  Bir <xref:System.Transactions.TransactionScope> nesnenin üç seçenek vardır:  
   
-- Ortam işlemine katılın veya yoksa yeni bir işlem oluşturun.  
+- Ortam işlemine katılır veya bir tane yoksa yeni bir tane oluşturun.  
   
-- Yeni bir kök kapsam, yani, yeni bir işlem başlatmak ve bu işlem kendi kapsamı içinde yeni ortam hareketi olmak olun.  
+- Yeni bir kök kapsamı olun, yani yeni bir işlem başlatın ve bu işlemin kendi kapsamı içinde yeni çevresel işlem olmasını sağlayabilirsiniz.  
   
-- Bir işlemde yer almamak. Sonuç olarak ortam hareketi yoktur.  
+- Bir işlemde bir işlem olmaz. Sonuç olarak ortam işlemi yoktur.  
   
- Kapsam <xref:System.Transactions.TransactionScopeOption.Required>ile anında ve ortam hareketi varsa, kapsam bu hareketi birleştirir. Diğer taraftan, ortam hareketi yoksa, kapsam yeni bir işlem oluşturur ve kök kapsam haline gelir. Varsayılan değer budur. Kullanıldığında, <xref:System.Transactions.TransactionScopeOption.Required> kapsam içindeki kodun kök olsun veya sadece ortam işlemine katılarak farklı davranması gerekmez. Her iki durumda da aynı şekilde çalışması.  
+ Kapsamı ile örneği varsa <xref:System.Transactions.TransactionScopeOption.Required> ve bir ortam işlemi mevcutsa, kapsam bu işlemi birleştirir. Diğer taraftan, ortam işlemi yoksa, kapsam yeni bir işlem oluşturur ve kök kapsamı olur. Varsayılan değer budur. Kullanıldığında <xref:System.Transactions.TransactionScopeOption.Required> , kapsamın içindeki kodun kök olup olmadığı veya yalnızca ortam hareketine katılması gibi farklı davranması gerekmez. Her iki durumda da aynı şekilde çalışması.  
   
- Kapsamı ile örneği varsa <xref:System.Transactions.TransactionScopeOption.RequiresNew>, her zaman bir kök kapsam olur. Yeni bir işlem başlatır ve hareketi kapsam içindeki yeni ortam hareketi olur.  
+ Kapsamı ile örneği varsa <xref:System.Transactions.TransactionScopeOption.RequiresNew>, her zaman bir kök kapsam olur. Yeni bir işlem başlatır ve işlem, kapsam içindeki yeni çevresel işlem haline gelir.  
   
- Kapsam, <xref:System.Transactions.TransactionScopeOption.Suppress>ortam hareketinin mevcut olup olmadığına bakılmaksızın hiçbir zaman bir işlemde yer almaz. Bu değerle anında birleştirilmiş bir `null` kapsam, ortam hareketi olarak her zaman vardır.  
+ Kapsamı ile örneği varsa, bir <xref:System.Transactions.TransactionScopeOption.Suppress> ortam işleminin mevcut olup olmamasına bakılmaksızın hiçbir zaman bir işlemde yer almıyor. Bu değerle örneklenmiş bir kapsam, her zaman `null` çevresel işlem olarak sahip olmalıdır.  
   
  Yukarıdaki seçenekleri aşağıdaki tabloda özetlenmiştir.  
   
-|TransactionScopeOption|Ortam İşlemi|Kapsam bölümü alır|  
+|TransactionScopeOption|Çevresel Işlem|Kapsam bölümü alır|  
 |----------------------------|-------------------------|-----------------------------|  
-|Gerekli|Hayır|Yeni İşlem (kök olacak)|  
-|Yeni gerektirir|Hayır|Yeni İşlem (kök olacak)|  
-|Önle|Hayır|İşlem Yok|  
-|Gerekli|Evet|Ortam İşlemi|  
-|Yeni gerektirir|Evet|Yeni İşlem (kök olacak)|  
-|Önle|Evet|İşlem Yok|  
+|Gerekli|No|Yeni Işlem (kök olacaktır)|  
+|Yeni gerektirir|No|Yeni Işlem (kök olacaktır)|  
+|Önle|No|Işlem yok|  
+|Gerekli|Yes|Çevresel Işlem|  
+|Yeni gerektirir|Yes|Yeni Işlem (kök olacaktır)|  
+|Önle|Yes|Işlem yok|  
   
- Bir <xref:System.Transactions.TransactionScope> nesne varolan bir ortam hareketine katıldığında, kapsam nesnesinin atılması, kapsam hareketi iptal etmediği sürece hareketi sonlandıramaz. Ortam hareketi bir kök kapsamı tarafından oluşturulduysa, yalnızca kök kapsamı atıldığında, hareket <xref:System.Transactions.CommittableTransaction.Commit%2A> çağrıldı. Hareket el ile oluşturulduysa, hareket iptal edildiğinde veya oluşturucusu tarafından işlendiğinde sona erer.  
+ Bir <xref:System.Transactions.TransactionScope> nesne var olan bir ortam işlemine katıldığında kapsam nesnesini elden atma işlemi, kapsam işlemi iptal etmediği takdirde işlemi sonlandırmayabilir. Ortam işlemi bir kök kapsam tarafından oluşturulduysa, yalnızca kök kapsamı bırakıldığında, <xref:System.Transactions.CommittableTransaction.Commit%2A> işlem üzerinde çağırılır. İşlem el ile oluşturulduysa, işlem iptal edildiğinde ya da Oluşturucusu tarafından işlendiği zaman sona erer.  
   
  Aşağıdaki örnekte gösterildiği bir <xref:System.Transactions.TransactionScope> üç iç içe kapsamlı nesneler, farklı bir her örneklenen oluşturan nesne <xref:System.Transactions.TransactionScopeOption> değeri.  
   
@@ -119,13 +120,13 @@ using(TransactionScope scope1 = new TransactionScope())
 }
 ```  
   
- Örnek, herhangi bir ortam hareketi oluşturmadan bir kod`scope1`bloğu <xref:System.Transactions.TransactionScopeOption.Required>gösterir ( ) ile . `scope1` Kapsam, yeni bir hareket (Hareket A) oluşturur ve Hareket A'yı ortam hareketi yapar gibi bir kök kapsamdır. `Scope1`Daha sonra her farklı bir ile üç daha fazla nesne oluşturur <xref:System.Transactions.TransactionScopeOption> değeri. Örneğin, `scope2` 'ile <xref:System.Transactions.TransactionScopeOption.Required>oluşturulur ve bir ortam hareketi olduğundan, '' tarafından `scope1`oluşturulan ilk işlem birleştirir. Yeni `scope3` bir işlemin kök kapsamı olduğunu ve `scope4` ortam hareketi olmadığını unutmayın.  
+ Örnek, ile yeni bir kapsam () oluşturan herhangi bir ortam işlemini içermeyen bir kod bloğunu gösterir `scope1` <xref:System.Transactions.TransactionScopeOption.Required> . Kapsam, `scope1` Yeni bir işlem (Işlem a) oluşturduğu ve işlemi çevresel işlem yapan bir kök kapsamdır. `Scope1`Daha sonra her farklı bir ile üç daha fazla nesne oluşturur <xref:System.Transactions.TransactionScopeOption> değeri. Örneğin, `scope2` ile oluşturulur <xref:System.Transactions.TransactionScopeOption.Required> ve bir ortam işlemi olduğundan, tarafından oluşturulan ilk işlemi birleştirir `scope1` . Bu `scope3` , yeni bir işlemin kök kapsamı ve `scope4` ortam işlemi olmadığını unutmayın.  
   
  Değerini varsayılan ve en sık kullanılan olsa da <xref:System.Transactions.TransactionScopeOption> olan <xref:System.Transactions.TransactionScopeOption.Required>, her diğer değerlerinin benzersiz amacı vardır.  
 
-### <a name="non-transactional-code-inside-a-transaction-scope"></a>Hareket kapsamı içinde işlem kodu olmayan
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>İşlem kapsamı içinde işlem olmayan kod
 
- <xref:System.Transactions.TransactionScopeOption.Suppress>kod bölümü tarafından gerçekleştirilen işlemleri korumak istediğinizde ve işlemler başarısız olursa ortam işlemini iptal etmek istemediğiniz zaman yararlıdır. Örneğin, günlüğe kaydetme veya denetleme işlemleri gerçekleştirmek istediğinizde veya ortam işleminizin taahhüt edilip edilmediğine veya iptal edilmediğine bakılmaksızın olayları abonelere yayınlamak istediğinizde. Bu değer, aşağıdaki örnekte gösterildiği gibi, bir işlem kapsamı içinde işlem dışı bir kod bölümüne sahip olmak sağlar.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress>kod bölümü tarafından gerçekleştirilen işlemleri korumak istediğinizde ve işlemler başarısız olursa ortam işlemini durdurmak istemediğinizde yararlıdır. Örneğin, günlüğe kaydetme veya denetim işlemleri gerçekleştirmek istediğinizde ya da çevresel işleminizi yürütmelerden veya iptal etmeksizin bağımsız olarak abonelere yayımlamak istediğinizde. Bu değer, aşağıdaki örnekte gösterildiği gibi işlem kapsamı içinde işlem olmayan bir kod bölümüne sahip etmenize olanak tanır.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())
@@ -146,26 +147,26 @@ using(TransactionScope scope1 = new TransactionScope())
 ```  
   
 ### <a name="voting-inside-a-nested-scope"></a>İç içe bir kapsam içinde oylama  
- İç içe bir kapsam kök kapsamının ortam hareketine <xref:System.Transactions.TransactionScope.Complete%2A> katılabilse de, iç içe olan kapsamdaki aramanın kök kapsamı üzerinde hiçbir etkisi yoktur. Yalnızca, kök kapsamdan işlem için son iç içe geçen kapsama kadar tüm kapsamlar oylanırsa, işlem işlenir. Ortam <xref:System.Transactions.TransactionScope.Complete%2A> hareketi hemen iptal edilince, iç içe bir kapsamda aramamak kök kapsamı etkileyecektir.  
+ İç içe bir kapsam kök kapsamın çevresel hareketine katılabilse de, <xref:System.Transactions.TransactionScope.Complete%2A> iç içe kapsamda çağırma, kök kapsamı üzerinde hiçbir etkisi olmaz. Yalnızca kök kapsamdaki en son iç içe kapsama kadar olan tüm kapsamlar işlemi yürütmek için oy alırsanız işlem kaydedilir. <xref:System.Transactions.TransactionScope.Complete%2A>İç içe bir kapsamda çağrılmayan ortam işlemi hemen iptal edilecek şekilde kök kapsamı etkiler.  
   
-## <a name="setting-the-transactionscope-timeout"></a>TransactionScope zaman ayarı  
- Aşırı yüklü yapıcıların bazıları, <xref:System.Transactions.TransactionScope> hareketin zaman <xref:System.TimeSpan>aşımını denetlemek için kullanılan bir tür değerini kabul eder. Sıfır olarak ayarlanmış bir zaman aşımı sonsuz bir zaman aşımı anlamına gelir. Sonsuz zaman aşımı, kodunuzda adım atarak iş mantığınızdaki bir sorunu yalıtmak istediğinizde ve hatayı ayıklama işleminin sorunu bulmaya çalışırken zaman dışarı etmesini istemiyorsanız, hata ayıklama için çoğunlukla hata ayıklama için yararlıdır. İşlem kilitlenmelerine karşı korumaları geçersiz kıldığı için, diğer tüm durumlarda sonsuz zaman kaybı değerini kullanırken son derece dikkatli olun.  
+## <a name="setting-the-transactionscope-timeout"></a>TransactionScope zaman aşımını ayarlama  
+ Öğesinin <xref:System.Transactions.TransactionScope> <xref:System.TimeSpan> zaman aşımını denetlemek için kullanılan, türünde bir değer kabul etmenin bazı aşırı yüklenmiş oluşturucularından bazıları. Sıfır olarak ayarlanmış bir zaman aşımı sonsuz bir zaman aşımı anlamına gelir. Sonsuz zaman aşımı genellikle hata ayıklama için yararlıdır, kodunuzda adım adım ilerleyerek iş mantığınızdaki bir sorunu yalıtmak istediğinizde ve sorunu bulmaya çalışırken hata ayıklama işlemini zaman aşımına uğratın. Tüm diğer durumlarda sonsuz zaman aşımı değerini kullanırken son derece dikkatli olun, çünkü işlem kilitlenmeleri için korumaları geçersiz kılar.  
   
- Genellikle ayarlanabilir <xref:System.Transactions.TransactionScope> zaman aşımına uğramak üzere iki durumda da varsayılan dışındaki değerler. İlki, uygulamanızın iptal edilen hareketleri işleme şeklini test etmek istediğiniz geliştirme sırasındadır. Zaman aşışını küçük bir değere (bir milisaniye gibi) ayarlayarak, işleminizin başarısız olması için sorun alabilirsiniz ve böylece hata işleme kodunuzu gözlemleyebilirsiniz. Kapsam içinde kaynak talebi, söz konusu kilitlenmeleri kaynaklanan düşünüyorsanız, varsayılan zaman aşımı değerinden bir değere ayarlamanız ikinci durumdur. Bu durumda, hareketi mümkün olan en kısa sürede iptal etmek ve varsayılan zaman aşımısüresinin dolmasını beklememek istiyorsunuz.  
+ Genellikle ayarlanabilir <xref:System.Transactions.TransactionScope> zaman aşımına uğramak üzere iki durumda da varsayılan dışındaki değerler. Birincisi geliştirme sırasında, uygulamanızın durdurulan işlemleri işleme biçimini test etmek istediğinizde olur. Zaman aşımını küçük bir değere (örneğin bir milisaniyelik) ayarlayarak, işlem başarısız olur ve bu nedenle hata işleme kodunuzu gözlemleyebilirsiniz. Kapsam içinde kaynak talebi, söz konusu kilitlenmeleri kaynaklanan düşünüyorsanız, varsayılan zaman aşımı değerinden bir değere ayarlamanız ikinci durumdur. Bu durumda, işlemi en kısa sürede iptal etmek ve varsayılan zaman aşımı süresinin dolmasını beklemek istemezsiniz.  
   
- Bir kapsam ortam hareketine katıldığında ancak ortam hareketinin ayarlandığından daha küçük bir zaman aşımı belirttiğinde, <xref:System.Transactions.TransactionScope> nesne üzerinde yeni, daha kısa zaman aşımı zorlanır ve kapsam belirtilen iç içe geçen süre içinde sona ermeli veya işlem otomatik olarak iptal edilir. İç içe geçme süresi ortam hareketinden daha fazlaysa, hiçbir etkisi yoktur.  
+ Bir kapsam bir ortam işlemini birleşdiğinde, ancak ortam işleminin ayarlandığı değerden daha küçük bir zaman aşımı belirttiğinde, yeni, daha kısa zaman aşımı nesne üzerinde zorlanır <xref:System.Transactions.TransactionScope> ve kapsamın iç içe geçen süre içinde bitmesi gerekir, aksi halde işlem otomatik olarak iptal edilir. İç içe geçmiş kapsamın zaman aşımı çevresel işlemden daha büyükse, hiçbir etkisi olmaz.  
   
 ## <a name="setting-the-transactionscope-isolation-level"></a>TransactionScope yalıtım düzeyini ayarlama  
- Zaman aşma değerine ek <xref:System.Transactions.TransactionScope> olarak yalıtım düzeyi <xref:System.Transactions.TransactionOptions> belirtmek için aşırı yüklü yapıyı kabul eden aşırı yüklü yapıcılardan bazıları. Varsayılan olarak, hareket yalıtım düzeyi <xref:System.Transactions.IsolationLevel.Serializable>olarak ayarlanmış yürütülür. Başka bir yalıtım düzeyi seçme <xref:System.Transactions.IsolationLevel.Serializable> yaygın olarak okuma yoğun sistemleri için kullanılır. Bu, işlem işleme teorisive işlemin kendisinin anlambiliminin, eşzamanlılık sorunlarının ve sistem tutarlılığının sonuçlarının sağlam bir şekilde anlaşılmasını gerektirir.  
+ Bir <xref:System.Transactions.TransactionScope> <xref:System.Transactions.TransactionOptions> zaman aşımı değerine ek olarak bir yalıtım düzeyi belirtmek için türünde bir yapıyı kabul etmenin bazı aşırı yüklenmiş oluşturucularından bazıları. Varsayılan olarak, işlem yalıtım düzeyi olarak ayarlanmış şekilde yürütülür <xref:System.Transactions.IsolationLevel.Serializable> . Başka bir yalıtım düzeyi seçme <xref:System.Transactions.IsolationLevel.Serializable> yaygın olarak okuma yoğun sistemleri için kullanılır. Bunun için işlem işleme teorisi ve işlem semantiğinin, ilgili eşzamanlılık sorunlarının ve sistem tutarlılığı sonuçlarının bir katı şekilde anlaşılması gerekir.  
   
- Buna ek olarak, tüm kaynak yöneticileri tüm yalıtım düzeylerini desteklemez ve yapılandırılandan daha yüksek bir düzeyde işlemde yer almayı seçebilirler.  
+ Ayrıca, tüm kaynak yöneticileri tüm yalıtım düzeylerini desteklemez ve bu işlem, bir şekilde, yapılandırılmış olandan daha yüksek bir düzeyde bir parça almak isteyebilir.  
   
- Aynı bilgilere <xref:System.Transactions.IsolationLevel.Serializable> erişen diğer işlemlerden kaynaklanan tutarsızlığa karşı her yalıtım düzeyi de açıktır. Farklı yalıtım düzeyleri arasındaki farkı biçiminde okunur ve yazma kilitler kullanılır. Kilit yalnızca işlem kaynak yöneticisindeki verilere eriştığında veya hareket işlenene veya iptal edilene kadar tutulabilir. Eski verimlilik, tutarlılık ikincisi için iyidir. Kilit iki tür ve işlemleri (okuma/yazma) iki tür dört temel yalıtım düzeyi verin. Daha fazla bilgi edinmek için bkz. <xref:System.Transactions.IsolationLevel>.  
+ Her yalıtım düzeyi, <xref:System.Transactions.IsolationLevel.Serializable> aynı bilgilere erişen diğer işlemlerden kaynaklanan tutarsızlığa açıktır. Farklı yalıtım düzeyleri arasındaki farkı biçiminde okunur ve yazma kilitler kullanılır. Bir kilit, yalnızca işlem Resource Manager 'daki verilere eriştiğinde tutulabilir veya işlem tamamlanana ya da durduruluncaya kadar tutulabilirler. Eski verimlilik, tutarlılık ikincisi için iyidir. Kilit iki tür ve işlemleri (okuma/yazma) iki tür dört temel yalıtım düzeyi verin. Daha fazla bilgi edinmek için bkz. <xref:System.Transactions.IsolationLevel>.  
   
- İç içe <xref:System.Transactions.TransactionScope> geçen nesneler kullanılırken, ortam hareketine katılmak istiyorlarsa, iç içe geçen tüm kapsamların tam olarak aynı yalıtım düzeyini kullanacak şekilde yapılandırılması gerekir. İç içe <xref:System.Transactions.TransactionScope> bir nesne ortam işlemine katılmaya çalışırsa, ancak farklı bir <xref:System.ArgumentException> yalıtım düzeyi belirtirse, bir atılır.  
+ İç içe <xref:System.Transactions.TransactionScope> nesneler kullanılırken, tüm iç içe kapsamlar çevresel işleme katmak istediklerinde tam olarak aynı yalıtım düzeyini kullanacak şekilde yapılandırılmalıdır. Yuvalanmış bir <xref:System.Transactions.TransactionScope> nesne, ortam işlemine katılmayı denediğinde farklı bir yalıtım düzeyi belirtir, bir oluşturulur <xref:System.ArgumentException> .  
   
 ## <a name="interop-with-com"></a>COM + ile birlikte çalışma  
- Yeni <xref:System.Transactions.TransactionScope> bir örnek oluşturduğunuzda, <xref:System.Transactions.EnterpriseServicesInteropOption> com+ ile nasıl etkileşimde kullanılacağını belirtmek için yapı oluşturuculardan birinde numaralandırmayı kullanabilirsiniz. Bu konuda daha fazla bilgi için, [Kurumsal Hizmetler ve COM+ İşlemleriyle Birlikte Çalışabilirlik'e](interoperability-with-enterprise-services-and-com-transactions.md)bakın.  
+ Yeni bir <xref:System.Transactions.TransactionScope> örnek oluşturduğunuzda, <xref:System.Transactions.EnterpriseServicesInteropOption> com+ ile nasıl etkileşim kuracağınızı belirtmek için oluşturuculardan birindeki sabit listesini kullanabilirsiniz. Bu konuda daha fazla bilgi için bkz. [Enterprise Services ve com+ işlemleri Ile birlikte çalışabilirlik](interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

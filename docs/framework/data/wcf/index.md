@@ -1,22 +1,23 @@
 ---
 title: WCF Veri Hizmetleri 4.5
+description: REST semantiğini kullanarak verileri kullanıma sunmak ve kullanmak için hizmetleri destekleyen bir .NET Framework bileşeni olan WCF Veri Hizmetleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: aace683b1a105445b5a3ba3de0a6a671859588b5
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937440"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247758"
 ---
 # <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
 
 WCF Veri Hizmetleri (eskiden "ADO.NET Data Services" olarak bilinirdi), [temsili durum aktarımı (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)semantiğini kullanarak Web veya intranet üzerinden veri sunmak ve kullanmak Için açık veri Protokolü 'Nü (OData) kullanan hizmetler oluşturmanızı sağlayan bir .NET Framework bileşenidir. OData, verileri URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunar. Al, koy, POST ve DELETE için standart HTTP fiilleri kullanılarak verilere erişilir ve değiştirilir. OData, kaynakları ilişkilendirmeler ile ilgili varlık kümeleri olarak göstermek için [varlık veri modeli](../adonet/entity-data-model.md) varlık ilişkisi kurallarını kullanır.
 
-WCF Veri Hizmetleri, kaynakları adresleme ve güncelleştirme için OData protokolünü kullanır. Bu şekilde, bu hizmetlere OData destekleyen herhangi bir istemciden erişebilirsiniz. OData, iyi bilinen aktarım biçimlerini kullanarak kaynaklara istek yapmanızı ve veri yazmanızı sağlar: Atom, verileri XML olarak değiştirme ve güncelleştirme için bir standartlar kümesi ve JavaScript Nesne Gösterimi (JSON), AJAX 'ta yaygın olarak kullanılan metin tabanlı veri değişim biçimi uygulamaları.
+WCF Veri Hizmetleri, kaynakları adresleme ve güncelleştirme için OData protokolünü kullanır. Bu şekilde, bu hizmetlere OData destekleyen herhangi bir istemciden erişebilirsiniz. OData, iyi bilinen aktarım biçimlerini kullanarak kaynaklara istek yapmanızı ve veri yazmanızı sağlar: Atom, verileri XML olarak değiştirme ve güncelleştirme için bir standartlar kümesi ve AJAX uygulamalarında yaygın olarak kullanılan metin tabanlı veri değişim biçimi JavaScript Nesne Gösterimi (JSON).
 
 WCF Veri Hizmetleri, çeşitli kaynaklardan kaynaklanan verileri OData akışları olarak kullanıma sunar. Visual Studio Araçları, bir ADO.NET Entity Framework veri modeli kullanarak OData tabanlı bir hizmet oluşturmanızı kolaylaştırır. Ayrıca, ortak dil çalışma zamanı (CLR) sınıflarını ve hatta geç bağlı veya yazılmamış verileri temel alan OData akışları da oluşturabilirsiniz.
 
@@ -28,13 +29,13 @@ WCF Veri Hizmetleri ayrıca, biri genel .NET Framework istemci uygulamaları ve 
 
 Hemen hızlı bir şekilde geçmek istiyorum...
 
-- [Hızlı başlangıç](quickstart-wcf-data-services.md)
+- [Hızlı Başlangıç](quickstart-wcf-data-services.md)
 
 - [Başlarken](getting-started-with-wcf-data-services.md)
 
 Yalnızca bana bir kod göster...
 
-- [Hızlı başlangıç](quickstart-wcf-data-services.md)
+- [Hızlı Başlangıç](quickstart-wcf-data-services.md)
 
 - [Nasıl yapılır: Veri Hizmeti Sorguları Yürütme](how-to-execute-data-service-queries-wcf-data-services.md)
 
@@ -61,9 +62,9 @@ Visual Studio ile nasıl tümleştirilir?
 
 Bununla ne yapabilirim?
 
-- [Genel bakış](wcf-data-services-overview.md)
+- [Genel Bakış](wcf-data-services-overview.md)
 
-- [Uygulama Senaryoları](application-scenarios-wcf-data-services.md)
+- [Uygulama senaryoları](application-scenarios-wcf-data-services.md)
 
 LINQ kullanmak istiyorum...
 
@@ -81,7 +82,7 @@ Hala daha fazla bilgi gerekiyor...
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Genel bakış](wcf-data-services-overview.md)
+[Genel Bakış](wcf-data-services-overview.md)
 
 WCF Veri Hizmetleri ' de kullanılabilen özellikler ve işlevlere genel bir bakış sağlar.
 

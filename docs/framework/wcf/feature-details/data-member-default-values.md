@@ -1,5 +1,6 @@
 ---
 title: Veri Üyesi Varsayılan Değerler
+description: .NET Framework bir varsayılan değere sahip olduğunda serileştirilmiş verilerden bir veri üyesini nasıl atleyeceğinizi öğrenin. WCF, Varsayılanı serileştirmez performansı iyileştirebilir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: e4eaaec880ecfcff24d9d5b4e8347a84738e070b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 97946a6b7da14efdcb5229b4cc5d0799eb8d7723
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593492"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247383"
 ---
 # <a name="data-member-default-values"></a>Veri Üyesi Varsayılan Değerler
 .NET Framework, türlerin *varsayılan değer*kavramıdır. Örneğin, herhangi bir başvuru türü için varsayılan değer `null` , ve bir tamsayı türü için sıfırdır. Zaman zaman, varsayılan değerine ayarlandığında serileştirilmiş verilerden bir veri üyesini atlamak tercih edilir. Üyenin varsayılan bir değeri olduğundan, gerçek değerin serileştirilmesi gerekmez; Bunun bir performans avantajı vardır.  

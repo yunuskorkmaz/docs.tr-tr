@@ -1,15 +1,16 @@
 ---
 title: Taşıma Seçme
+description: 'WCF tarafından sunulan ana aktarımlar arasında seçim yapma ölçütü hakkında bilgi edinin: HTTP, TCP ve adlandırılmış kanallar.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 7e1f6b2e1905fb92ebfe78be351feeaebb374c11
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e1a92203de25aa399316eea91a758802768442a0
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84587072"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247500"
 ---
 # <a name="choosing-a-transport"></a>Taşıma Seçme
 Bu konu, Windows Communication Foundation (WCF) ' de yer alan üç ana taşıma arasında seçim yapma ölçütlerini anlatmaktadır: HTTP, TCP ve adlandırılmış kanallar. WCF Ayrıca bir Message Queuing (MSMQ olarak da bilinir) taşıması içerir, ancak bu belge Message Queuing 'i kapsamaz.  

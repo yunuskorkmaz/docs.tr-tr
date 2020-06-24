@@ -1,13 +1,14 @@
 ---
 title: 'Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama'
+description: Bir yapılandırma dosyası kullanarak bir WCF hizmeti için meta verileri yayımlamayı öğrenin. Yayımlama, istemcilerin bu meta verileri bir GET veya HTTP/GET isteği kullanarak almasına izin verir.
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 976e1e0bb2c6479f7599165a1c6fe83bae4e17c1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: d5d425be7f02a204476c4f6e81441aca9ea39fcc
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596987"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85246824"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama
 Bu, bir Windows Communication Foundation (WCF) hizmeti için meta verileri yayımlamayı gösteren iki nasıl yapılır konuktan biridir. Bir hizmetin bir yapılandırma dosyası kullanarak ve kod kullanarak meta verileri nasıl yayımlayacağınızı belirten iki yol vardır. Bu konuda bir yapılandırma dosyası kullanarak bir hizmet için meta verilerin nasıl yayımlanacağı gösterilmektedir.  
@@ -92,7 +93,7 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Bir WCF hizmeti için meta verileri bir uygulama yapılandırma dosyası kullanarak yayımlamak için  
   
-1. App. config dosyası içinde, kapanış `</services>` öğesinden sonra bir `<behaviors>` öğesi oluşturun.  
+1. App.config dosyası içinde, kapanış `</services>` öğesinden sonra bir `<behaviors>` öğesi oluşturun.  
 
 2. Öğesi içinde `<behaviors>` , bir öğesi ekleyin `<serviceBehaviors>` .  
 

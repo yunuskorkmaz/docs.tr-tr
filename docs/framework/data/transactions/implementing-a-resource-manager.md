@@ -1,20 +1,21 @@
 ---
 title: Kaynak Yöneticisi uygulama
+description: .NET ' te bir Resource Manager uygulayın. Kaynak Yöneticisi işlemlerde kullanılan kaynakları yönetir. İşlem Yöneticisi, Resource Manager eylemlerini koordine eder.
 ms.date: 03/30/2017
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-ms.openlocfilehash: f64a729f49d546dd16c25a2be1f9bd64a2ca8f63
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: bf40c6eaee35a5a548c6de4a286e46c4d4a66aca
+ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205956"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141855"
 ---
 # <a name="implementing-a-resource-manager"></a>Kaynak Yöneticisi uygulama
 Bir işlemde kullanılan her kaynak, eylemleri bir işlem yöneticisi tarafından koordine edilen bir kaynak yöneticisi tarafından yönetilir. Kaynak yöneticileri, uygulamayı kararlılık ve yalıtıma garantisi sağlamak için işlem yöneticisiyle birlikte çalışır. Microsoft SQL Server, kalıcı ileti sıraları, bellek içi karma tabloları kaynak yöneticilerinin tüm örnekleri mevcuttur.  
   
- Kalıcı veya geçici Veri Kaynağı Yöneticisi yönetir. Süreklilik (veya tersine volatility) kaynak yöneticisi kaynak yöneticisi hatası kurtarma destekleyip başvuruyor. Bir Kaynak Yöneticisi hata kurtarmayı destekliyorsa, Aşama 1 sırasında verileri dayanıklı depolamaya (hazırla) devam ettirir. Bu, Resource Manager kapalıysa, kurtarma sonrasında işlemde yeniden listeleme ve bildirimlere göre uygun eylemleri gerçekleştirmenize olanak sağlar işlem yöneticisinden alındı. Genel olarak, geçici kaynak yöneticileri bellek içi veri yapısı (örneğin, bellek içi bir işlem Hashtable) gibi geçici kaynakları yönetir ve dayanıklı kaynak yöneticileri, daha kalıcı bir yedekleme deposuna sahip kaynakları yönetir (örneğin, yedekleme deposu disk olan veritabanı).  
+ Kalıcı veya geçici Veri Kaynağı Yöneticisi yönetir. Süreklilik (veya tersine volatility) kaynak yöneticisi kaynak yöneticisi hatası kurtarma destekleyip başvuruyor. Bir Kaynak Yöneticisi hata kurtarmayı destekliyorsa, Aşama 1 sırasında verileri dayanıklı depolamaya (hazırla) devam ettirir. Bu, Resource Manager kapalıysa, kurtarma sonrasında işlemi yeniden listeleme ve işlem yöneticisi 'nden alınan bildirimlere göre uygun eylemleri gerçekleştirmenize olanak sağlar. Genel olarak, geçici kaynak yöneticileri bellek içi veri yapısı (örneğin, bellek içi bir işlem Hashtable) gibi geçici kaynakları yönetir ve dayanıklı kaynak yöneticileri, daha kalıcı bir yedekleme deposuna sahip kaynakları (örneğin, yedekleme deposu disk olan bir veritabanı) yönetir.  
   
- Bir kaynağın bir işleme katılmasını sağlamak için, işlem içinde listelenmesi gerekir. Sınıfı <xref:System.Transactions.Transaction> , bu işlevselliği sağlayan, adları **Listeleme** ile başlayan bir yöntemler kümesini tanımlar. Farklı **Listeleme** yöntemleri, bir kaynak yöneticisi 'nin sahip olabileceği farklı kayıt türlerine karşılık gelir. Özellikle, kullandığınız <xref:System.Transactions.Transaction.EnlistVolatile%2A> geçici kaynaklar için yöntemleri ve <xref:System.Transactions.Transaction.EnlistDurable%2A> kalıcı kaynaklar için yöntem. Kullanılacak karar sonra kolaylık <xref:System.Transactions.Transaction.EnlistDurable%2A> veya <xref:System.Transactions.Transaction.EnlistVolatile%2A> , kaynağın süreklilik desteğini tabanlı yöntemi, iki aşaması yürütme içinde (2PC) uygulayarak katılmak için kaynak listeleme <xref:System.Transactions.IEnlistmentNotification> , kaynak yöneticisi için arabirim. 2PC hakkında daha fazla bilgi için bkz. [tek aşamalı ve çok aşamalı bir işlem](committing-a-transaction-in-single-phase-and-multi-phase.md)yürütme.  
+ Bir kaynağın bir işleme katılmasını sağlamak için, işlem içinde listelenmesi gerekir. <xref:System.Transactions.Transaction>Sınıfı, bu işlevselliği sağlayan, adları **Listeleme** ile başlayan bir yöntemler kümesini tanımlar. Farklı **Listeleme** yöntemleri, bir kaynak yöneticisi 'nin sahip olabileceği farklı kayıt türlerine karşılık gelir. Özellikle, kullandığınız <xref:System.Transactions.Transaction.EnlistVolatile%2A> geçici kaynaklar için yöntemleri ve <xref:System.Transactions.Transaction.EnlistDurable%2A> kalıcı kaynaklar için yöntem. Kullanılacak karar sonra kolaylık <xref:System.Transactions.Transaction.EnlistDurable%2A> veya <xref:System.Transactions.Transaction.EnlistVolatile%2A> , kaynağın süreklilik desteğini tabanlı yöntemi, iki aşaması yürütme içinde (2PC) uygulayarak katılmak için kaynak listeleme <xref:System.Transactions.IEnlistmentNotification> , kaynak yöneticisi için arabirim. 2PC hakkında daha fazla bilgi için bkz. [tek aşamalı ve çok aşamalı bir işlem](committing-a-transaction-in-single-phase-and-multi-phase.md)yürütme.  
   
  Kaynak Yöneticisi, işlem tamamlandığında veya durdurulduğunda işlem yöneticisinden geri çağırmaları almasını sağlar. Bir örneği yok <xref:System.Transactions.IEnlistmentNotification> başına liste. Genellikle, işlem başına bir kayıt vardır ancak bir kaynak yöneticisi aynı işlemde birden çok kez Listeleme işlemini seçebilir.  
   
@@ -49,7 +50,7 @@ Bir işlemde kullanılan her kaynak, eylemleri bir işlem yöneticisi tarafında
   
  [Kaynaklara Erişimde Güvenlik Güven Düzeyleri](security-trust-levels-in-accessing-resources.md)  
   
- System. Transactions için üç güven düzeyinin, <xref:System.Transactions> kullanıma sunan kaynak türleri üzerinde erişimi nasıl kısıtlayabileceğini açıklar.  
+ System. Transactions için üç güven düzeyinin, kullanıma sunan kaynak türleri üzerinde erişimi nasıl kısıtlayabileceğini açıklar <xref:System.Transactions> .  
   
  [Tek Aşamalı İşleme ve Yükseltilebilir Tek Aşamalı Bildirim kullanarak en iyi duruma getirme](optimization-spc-and-promotable-spn.md)  
   

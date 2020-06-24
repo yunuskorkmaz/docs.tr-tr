@@ -1,24 +1,25 @@
 ---
 title: Windows Communication Foundation Hizmetleri için Bağlamaları Yapılandırma
+description: Sistem altındaki öğeleri düzenleyerek bir WCF uygulaması için dağıtım zamanında bağlamaları yapılandırma hakkında bilgi edinin. ServiceModel öğesi.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: e7ee1a8ce358c77e46db39af67bd9dc20114fb3b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2bb396e65722726e54cd315e931eea933386659
+ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174829"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85247634"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation Hizmetleri için Bağlamaları Yapılandırma
-Bir uygulama oluştururken, genellikle uygulamanın dağıtımından sonra kararları yöneticiye ertelemek istersiniz. Örneğin, genellikle bir hizmet adresinin veya Tek düzen kaynak tanımlayıcısının (URI) ne olacağını önceden bilmenin bir yolu yoktur. Bir adresi zor kodlamak yerine, bir hizmet oluşturduktan sonra yöneticinin bunu yapmasına izin vermek tercih edilir. Bu esneklik yapılandırma ile gerçekleştirilir.  
+Uygulama oluştururken genellikle, uygulamanın dağıtımıyla sonra kararları yöneticiye erteleyebilirsiniz. Örneğin, bir hizmet adresinin veya Tekdüzen kaynak tanımlayıcısının (URI) ne kadar ilerlediğinin bilmesinin bir yolu yoktur. Bir adresi sabit kodlamak yerine, bir hizmet oluşturduktan sonra yöneticinin bunu yapmasına izin vermek tercih edilir. Bu esneklik yapılandırma aracılığıyla gerçekleştirilir.  
   
 > [!NOTE]
-> Hızlı yapılandırma dosyaları oluşturmak için `/config` geçiş ile [ServiceModel Metadata Utility Tool (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın.  
+> Yapılandırma dosyalarını hızlı bir şekilde oluşturmak için [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) anahtarla birlikte kullanın `/config` .  
   
-## <a name="major-sections"></a>Ana Bölümler  
- Windows Communication Foundation (WCF) yapılandırma şeması aşağıdaki`serviceModel`üç `bindings`ana `services`bölümü içerir ( , , ve):  
+## <a name="major-sections"></a>Ana bölümler  
+ Windows Communication Foundation (WCF) yapılandırma şeması, aşağıdaki üç ana bölümü içerir ( `serviceModel` , `bindings` ve `services` ):  
   
 ```xml  
 <configuration>  
@@ -33,19 +34,19 @@ Bir uygulama oluştururken, genellikle uygulamanın dağıtımından sonra karar
 </configuration>  
 ```  
   
-### <a name="servicemodel-elements"></a>ServiceModel Elemanları  
- Bir hizmet türünü bir veya `system.ServiceModel` daha fazla uç noktayla ve bir hizmet ayarlarını yapılandırmak için öğeyle sınırlanan bölümü kullanabilirsiniz. Her bitiş noktası daha sonra bir adres, bir sözleşme ve bir bağlama ile yapılandırılabilir. Uç noktalar hakkında daha fazla bilgi için Bkz. [Endpoint Oluşturma Genel Bakışı.](endpoint-creation-overview.md) Uç nokta belirtilmemişse, çalışma süresi varsayılan uç noktaları ekler. Varsayılan uç noktalar, bağlamalar ve davranışlar hakkında daha fazla bilgi için wcf hizmetleri için [Basitleştirilmiş Yapılandırma](simplified-configuration.md) ve [Basitleştirilmiş Yapılandırma'ya](./samples/simplified-configuration-for-wcf-services.md)bakın.  
+### <a name="servicemodel-elements"></a>ServiceModel öğeleri  
+ Bir hizmet `system.ServiceModel` türünü bir veya daha fazla uç nokta ile ve bir hizmetin ayarlarını yapılandırmak için, öğesiyle sınırlanan bölümü kullanabilirsiniz. Her uç nokta daha sonra bir adresle, sözleşmeyle ve bağlamasıyla yapılandırılabilir. Uç noktalar hakkında daha fazla bilgi için bkz. [Endpoint oluşturmaya genel bakış](endpoint-creation-overview.md). Hiçbir uç nokta belirtilmemişse, çalışma zamanı varsayılan uç noktaları ekler. Varsayılan uç noktalar, bağlamalar ve davranışları hakkında daha fazla bilgi için bkz. [WCF Hizmetleri Için](./samples/simplified-configuration-for-wcf-services.md) [Basitleştirilmiş yapılandırma](simplified-configuration.md) ve Basitleştirilmiş yapılandırma.  
   
- Bağlayıcı, aktarımları (HTTP, TCP, pipes, Message Queuing) ve protokolleri (Güvenlik, Güvenilirlik, İşlem akışları) belirtir ve her biri bir uç noktanın dünyayla nasıl iletişim kurduğunu gösteren bağlayıcı öğelerden oluşur.  
+ Bir bağlama, aktarımları (HTTP, TCP, kanallar, Message Queuing) ve protokolleri (güvenlik, güvenilirlik, Işlem akışları) belirtir ve her biri bir uç noktanın dünya ile nasıl iletişim kuracağını belirten bağlama öğelerinden oluşur.  
   
- Örneğin, [ \<temel HttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md) öğesini belirterek, bir bitiş noktası için aktarım olarak HTTP'nin kullanılacağını belirtir. Bu, bu bitiş noktasını kullanan hizmet in çalışma zamanında bitiş noktasını kablolamak için kullanılır.  
+ Örneğin, öğesinin belirtilmesi, [\<basicHttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md) bir uç nokta için taşıma olarak http kullanacağınızı gösterir. Bu uç noktayı kullanan hizmet açıldığında bitiş noktasını çalışma zamanında bağlamak için kullanılır.  
   
- İki tür bağlama vardır: önceden tanımlanmış ve özel. Önceden tanımlanmış bağlamalar, ortak senaryolarda kullanılan öğelerin yararlı birleşimlerini içerir. WCF'nin sağladığı önceden tanımlanmış bağlama türlerinin listesi için [bkz.](system-provided-bindings.md) Önceden tanımlanmış bağlama koleksiyonu, bir hizmet uygulamasının gereksinim duyduğu özelliklerin doğru birleşimine sahip değilse, uygulamagereksinimlerini karşılamak için özel bağlamalar oluşturabilirsiniz. Özel bağlamalar hakkında daha fazla bilgi için [ \<>bkz. ](../configure-apps/file-schema/wcf/custombinding.md)  
+ İki tür bağlama vardır: önceden tanımlanmış ve özel. Önceden tanımlanmış bağlamalar, yaygın senaryolarda kullanılan öğelerin yararlı birleşimlerini içerir. WCF 'nin sağladığı önceden tanımlanmış bağlama türlerinin bir listesi için bkz. [sistem tarafından sağlanan bağlamalar](system-provided-bindings.md). Önceden tanımlanmış bağlama koleksiyonu, bir hizmet uygulamasının ihtiyacı olan özelliklerin doğru birleşimine sahip değilse, uygulamanın gereksinimlerini karşılamak için özel bağlamalar oluşturabilirsiniz. Özel Bağlamalar hakkında daha fazla bilgi için bkz [\<customBinding>](../configure-apps/file-schema/wcf/custombinding.md) ..  
   
- Aşağıdaki dört örnek, bir WCF hizmeti ayarlamak için kullanılan en yaygın bağlama yapılandırmalarını göstermektedir.  
+ Aşağıdaki dört örnekte, bir WCF hizmeti ayarlamak için kullanılan en yaygın bağlama yapılandırmalarının gösterilmektedir.  
   
-#### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Bağlama Türü Kullanmak için Bir Bitiş Noktası Belirtme  
- İlk örnek, adres, sözleşme ve bağlama yla yapılandırılan bir bitiş noktasının nasıl belirtilen şekilde belirtilir.  
+#### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>Bağlama türünü kullanmak için bir uç nokta belirtme  
+ İlk örnek, bir adres, sözleşme ve bağlama ile yapılandırılan bir uç noktanın nasıl belirtildiğini gösterir.  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -58,21 +59,21 @@ Bir uygulama oluştururken, genellikle uygulamanın dağıtımından sonra karar
 </service>  
 ```  
   
- Bu örnekte, `name` öznitelik yapılandırmaiçin hangi hizmet türü için olduğunu gösterir. Sözleşmeyle birlikte `HelloWorld` kodunuzda bir hizmet oluşturduğunuzda, örnek yapılandırmada tanımlanan tüm uç noktalarıyla baş harfe fişlenir. Derleme yalnızca bir hizmet sözleşmesi uygularsa, `name` hizmet kullanılabilir tek türü kullandığından öznitelik atlanabilir. Öznitelik biçiminde olması gereken bir dize alır`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ Bu örnekte `name` öznitelik, yapılandırmanın hangi hizmet türüyle ilgili olduğunu gösterir. Sözleşmeniz ile kodunuzda bir hizmet oluşturduğunuzda `HelloWorld` , örnek yapılandırmasında tanımlanan tüm uç noktalar ile başlatılır. Derleme yalnızca bir hizmet sözleşmesi uygularsa, `name` hizmet kullanılabilir tek türü kullandığından öznitelik atlanabilir. Öznitelik, biçiminde olması gereken bir dize alır`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
- Öznitelik, `address` uri'yi diğer uç noktaların hizmetle iletişim kurmak için kullandığını belirtir. URI mutlak veya göreceli bir yol olabilir. Göreceli bir adres sağlanırsa, ana bilgisayara bağlamada kullanılan aktarım şemasına uygun bir temel adres sağlaması beklenir. Bir adres yapılandırılmamışsa, temel adresin bu bitiş noktasının adresi olduğu varsayılır.  
+ `address`Özniteliği diğer uç noktaların hizmetle iletişim kurmak için KULLANDıĞı URI 'yi belirtir. URI mutlak ya da göreli yol olabilir. Göreli bir adres sağlanmışsa, konağın bağlamada kullanılan aktarım düzeni için uygun bir temel adres sağlaması beklenir. Bir adres yapılandırılmamışsa, taban adresin bu uç noktanın adresi olduğu varsayılır.  
   
- Öznitelik, `contract` bu bitiş noktasının ortaya çıkardığı sözleşmeyi belirtir. Hizmet uygulama türü sözleşme türünü uygulamalıdır. Bir hizmet uygulaması tek bir sözleşme türü uygularsa, bu özellik atlanabilir.  
+ `contract`Öznitelik, bu uç noktanın sunduğu sözleşmeyi belirtir. Hizmet uygulaması türü, anlaşma türünü uygulamalıdır. Bir hizmet uygulamasının tek bir anlaşma türü uygularsa, bu özellik atlanabilir.  
   
- Öznitelik, `binding` bu belirli bitiş noktası için kullanmak üzere önceden tanımlanmış veya özel bir bağlama seçer. Bağlayıcıyı açıkça seçmeyen bir bitiş noktası varsayılan bağlama seçimini `BasicHttpBinding`kullanır, yani.  
+ `binding`Öznitelik, bu belirli uç nokta için kullanılmak üzere önceden tanımlanmış veya özel bir bağlama seçer. Açıkça bir bağlama olmayan bir uç nokta, varsayılan bağlama seçimini kullanır `BasicHttpBinding` .  
   
-#### <a name="modifying-a-predefined-binding"></a>Önceden Tanımlanmış Bir Bağlamayı Değiştirme  
- Aşağıdaki örnekte, önceden tanımlanmış bir bağlama değiştirilir. Daha sonra hizmetteki herhangi bir bitiş noktasını yapılandırmak için kullanılabilir. Bağlama <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> değeri 1 saniyeye ayarlayarak değiştirilir. Özelliğin bir <xref:System.TimeSpan> nesneyi döndürtettiğini unutmayın.  
+#### <a name="modifying-a-predefined-binding"></a>Önceden tanımlanmış bağlamayı değiştirme  
+ Aşağıdaki örnekte, önceden tanımlanmış bir bağlama değiştirilmiştir. Daha sonra, hizmette herhangi bir uç noktayı yapılandırmak için kullanılabilir. Bağlama <xref:System.ServiceModel.Configuration.IBindingConfigurationElement.ReceiveTimeout%2A> değeri 1 saniye olarak ayarlanarak değiştirilir. Özelliğin bir nesne döndürdüğünü unutmayın <xref:System.TimeSpan> .  
   
- Bu değiştirilmiş bağlama bağlama bölümünde bulunur. Bu değiştirilmiş bağlama artık `binding` `endpoint` öğedeki özniteliği ayarlayarak herhangi bir uç nokta oluştururken kullanılabilir.  
+ Değiştirilen bağlama bağlamalar bölümünde bulunur. Bu değiştirilmiş bağlama artık öğedeki özniteliği ayarlanarak herhangi bir uç nokta oluşturulurken kullanılabilir `binding` `endpoint` .  
   
 > [!NOTE]
-> Bağlamaya belirli bir ad verirseniz, hizmet bitiş noktasında `bindingConfiguration` belirtilen adonunla eşleşmelidir.  
+> Bağlama için belirli bir ad verirseniz, `bindingConfiguration` hizmet uç noktasında belirtilen ' ın onunla eşleşmesi gerekir.  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -88,11 +89,11 @@ Bir uygulama oluştururken, genellikle uygulamanın dağıtımından sonra karar
 </bindings>  
 ```  
   
-## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Bir Hizmete Uygulanacak Davranışı Yapılandırma  
- Aşağıdaki örnekte, hizmet türü için belirli bir davranış yapılandırılır. Öğe, `ServiceMetadataBehavior` [ServiceModel Metadata Utility Tool'un (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti sorgulamasını ve meta verilerden Web Hizmetleri Açıklama Dili (WSDL) belgelerini oluşturmasını sağlamak için kullanılır.  
+## <a name="configuring-a-behavior-to-apply-to-a-service"></a>Bir hizmete uygulanacak davranışı yapılandırma  
+ Aşağıdaki örnekte, hizmet türü için belirli bir davranış yapılandırılır. `ServiceMetadataBehavior`Öğesi, [ServiceModel meta veri yardımcı programı aracının (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) hizmeti sorgulamak ve meta verilerden Web Hizmetleri Açıklama Dili (wsdl) belgeleri oluşturmak için kullanılır.  
   
 > [!NOTE]
-> Davranışa belirli bir ad verirseniz, hizmet veya bitiş noktası bölümünde `behaviorConfiguration` belirtilen adla eşleşmesi gerekir.  
+> Davranışa belirli bir ad verirseniz, `behaviorConfiguration` hizmet veya uç nokta bölümünde belirtilen bir ad ile aynı olmalıdır.  
   
 ```xml  
 <behaviors>  
@@ -111,12 +112,12 @@ Bir uygulama oluştururken, genellikle uygulamanın dağıtımından sonra karar
 </services>  
 ```  
   
- Önceki yapılandırma, istemcinin "HelloWorld" türünde yazılan hizmetin meta verilerini aramasını ve almalarını sağlar.  
+ Önceki yapılandırma, bir istemcinin "HelloWorld" türü belirlenmiş hizmetin meta verilerini aramasını ve almasını sağlar.  
   
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
-## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Farklı Bağlama Değerleri Kullanarak İki Uç Noktası Olan Bir Hizmet Belirtme  
- Bu son örnekte, `HelloWorld` hizmet türü için iki uç nokta yapılandırılır. Her uç nokta aynı `bindingConfiguration` bağlama türünün farklı bir özelleştirilmiş özniteliği kullanır (her biri `basicHttpBinding`değiştirir).  
+## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>Farklı bağlama değerleri kullanarak Iki uç nokta içeren bir hizmet belirtme  
+ Bu son örnekte, hizmet türü için iki uç nokta yapılandırılır `HelloWorld` . Her uç nokta `bindingConfiguration` aynı bağlama türünün farklı bir özelleştirilmiş özniteliğini kullanır (her biri ' nı değiştirir `basicHttpBinding` ).  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -143,7 +144,7 @@ Bir uygulama oluştururken, genellikle uygulamanın dağıtımından sonra karar
 </bindings>  
 ```  
   
- Bir `protocolMapping` bölüm ekleyerek ve aşağıdaki örnekte gösterildiği gibi bağlamaları yapılandırarak varsayılan yapılandırmayı kullanarak aynı davranışı elde edebilirsiniz.  
+ `protocolMapping`Aşağıdaki örnekte gösterildiği gibi bir bölüm ekleyerek ve bağlamaları yapılandırarak varsayılan yapılandırmayı kullanarak aynı davranışı sağlayabilirsiniz.  
   
 ```xml  
 <protocolMapping>  
@@ -164,6 +165,6 @@ Bir uygulama oluştururken, genellikle uygulamanın dağıtımından sonra karar
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Basitleştirilmiş Yapılandırma](simplified-configuration.md)
-- [Sistem Destekli Ciltler](system-provided-bindings.md)
+- [Sistem tarafından sağlanmış bağlamalar](system-provided-bindings.md)
 - [Uç Noktası Oluşturma Genel Bakış](endpoint-creation-overview.md)
 - [Hizmetler ve İstemcileri Yapılandırmak için Bağlamaları Kullanma](using-bindings-to-configure-services-and-clients.md)
