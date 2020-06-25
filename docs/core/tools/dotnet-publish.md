@@ -2,18 +2,18 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 697746291a8b34a856433049fe7264ad0ea4af7a
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 61cfcf06586f3ac66526de69a17b8aef3cf0c795
+ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761908"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85365589"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 `dotnet publish`-Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
@@ -37,8 +37,8 @@ dotnet publish -h|--help
 `dotnet publish`uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
 - *DLL* uzantılı bir derlemede ara DIL (IL) kodu.
-- Projenin tüm bağımlılıklarını içeren bir *. Deps. JSON* dosyası.
-- Uygulamanın beklediği paylaşılan çalışma zamanını belirten *. runtimeconfig. JSON* dosyası ve çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).
+- Projenin tüm bağımlılıklarını içeren bir *.deps.js* dosyası.
+- Bir dosyada, uygulamanın beklediği paylaşılan çalışma zamanını belirten bir *.runtimeconfig.js* ve çalışma zamanına yönelik diğer yapılandırma seçenekleri (örneğin, çöp toplama türü).
 - NuGet önbelleğinden çıkış klasörüne kopyalanmış olan uygulamanın bağımlılıkları.
 
 `dotnet publish`Komutun çıktısı, yürütme için bir barındırma sistemine (örneğin, bir sunucu, PC, Mac, dizüstü bilgisayar) dağıtıma yöneliktir. Uygulamayı dağıtıma hazırlamak için tek resmi olarak desteklenen bir yoldur. Projenin belirttiği dağıtımın türüne bağlı olarak, barındırma sisteminde .NET Core paylaşılan çalışma zamanı yüklü olabilir veya olmayabilir. Daha fazla bilgi için bkz. [.NET Core CLI .NET Core Apps yayımlama](../deploying/deploy-with-cli.md).
@@ -49,7 +49,7 @@ dotnet publish -h|--help
 
 ### <a name="msbuild"></a>MSBuild
 
-`dotnet publish`Komutu, hedefi çağıran MSBuild 'i çağırır `Publish` . Öğesine geçirilen parametreler `dotnet publish` MSBuild 'e geçirilir. `-c`Ve `-o` parametreleri `Configuration` sırasıyla MSBuild ve özellikler ile eşlenir `OutputPath` .
+`dotnet publish`Komutu, hedefi çağıran MSBuild 'i çağırır `Publish` . Öğesine geçirilen parametreler `dotnet publish` MSBuild 'e geçirilir. `-c`Ve `-o` parametreleri `Configuration` sırasıyla MSBuild ve özellikler ile eşlenir `PublishDir` .
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` . Ayrıca, bir *. pubxml* dosyasına başvurarak yayınla ilgili özellikleri ayarlayabilirsiniz, örneğin:
 
@@ -63,7 +63,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [ASP.NET Core uygulama dağıtımı için Visual Studio yayımlama profilleri (. pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
 
-## <a name="arguments"></a>Bağımsız değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`PROJECT|SOLUTION`**
 
@@ -85,7 +85,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, dosyadaki *project.assets.js* silme ile aynıdır.
 
 - **`-h|--help`**
 
