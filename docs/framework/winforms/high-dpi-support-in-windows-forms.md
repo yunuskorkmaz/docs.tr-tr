@@ -1,5 +1,6 @@
 ---
 title: Yüksek DPı desteği
+description: Yaygın yüksek DPı ve dinamik DPı senaryolarında Windows Forms destek hakkında bilgi edinin. Ayrıca, yüksek DPı desteği için Windows Forms uygulamalarını yapılandırmayı öğrenin.
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a9e0766307095da447c772de5a3065c18b7b7154
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741890"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325653"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms yüksek DPı desteği
 
 .NET Framework 4,7 ' den başlayarak, Windows Forms genel yüksek DPı ve dinamik DPı senaryolarına yönelik iyileştirmeler içerir. Bu güncelleştirmeler şunlardır:
 
-- <xref:System.Windows.Forms.MonthCalendar> denetimi ve <xref:System.Windows.Forms.CheckedListBox> denetimi gibi bir dizi Windows Forms denetiminin ölçeklendirilmesine ve düzenine yönelik iyileştirmeler.
+- Denetim ve denetim gibi bir dizi Windows Forms denetiminin ölçeklendirilmesine ve düzenine yönelik iyileştirmeler <xref:System.Windows.Forms.MonthCalendar> <xref:System.Windows.Forms.CheckedListBox> .
 
 - Tek geçişli ölçekleme.  .NET Framework 4,6 ve önceki sürümlerde ölçekleme birden çok geçiş aracılığıyla gerçekleştirildi, bu da bazı denetimlerin gerekenden daha fazla ölçeklendirilmesine neden olur.
 
@@ -45,9 +46,9 @@ Ayrıca, Windows Forms uygulamanızda yüksek DPı desteğini yapılandırmak i�
   </compatibility>
   ```
 
-- *App. config* dosyasında MONITÖR başına DPI tanımayı etkinleştirin.
+- *app.config* dosyasında MONITÖR başına DPI tanımayı etkinleştirin.
 
-  Windows Forms, .NET Framework 4,7 ile başlayarak eklenen yeni özellikleri ve özelleştirmeleri desteklemek için yeni bir [`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md) öğesi sunmaktadır. Yüksek DPı 'yi destekleyen yeni özelliklerden yararlanmak için, uygulama yapılandırma dosyanıza aşağıdakini ekleyin.
+  Windows Forms [`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md) , .NET Framework 4,7 ' den başlayarak eklenen yeni özellikleri ve özelleştirmeleri desteklemek için yeni bir öğe kullanıma sunuyor. Yüksek DPı 'yi destekleyen yeni özelliklerden yararlanmak için, uygulama yapılandırma dosyanıza aşağıdakini ekleyin.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -56,9 +57,9 @@ Ayrıca, Windows Forms uygulamanızda yüksek DPı desteğini yapılandırmak i�
   ```
 
   > [!IMPORTANT]
-  > .NET Framework önceki sürümlerinde, yüksek DPı desteği eklemek için bildirimi kullandınız. Bu yaklaşım artık önerilmez, çünkü App. config dosyasında tanımlanan ayarları geçersiz kılar.
+  > .NET Framework önceki sürümlerinde, yüksek DPı desteği eklemek için bildirimi kullandınız. Bu yaklaşım artık önerilmez, çünkü app.config dosyasında tanımlanan ayarları geçersiz kılar.
 
-- Statik <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> yöntemini çağırın.
+- Statik yöntemi çağırın <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> .
 
   Bu, uygulama giriş noktandaki ilk yöntem çağrısı olmalıdır. Örneğin:
 
@@ -73,7 +74,7 @@ Ayrıca, Windows Forms uygulamanızda yüksek DPı desteğini yapılandırmak i�
 
 ## <a name="opting-out-of-individual-high-dpi-features"></a>Tek başına yüksek DPı özelliklerinden çıkma
 
-`DpiAwareness` değerini `PerMonitorV2` olarak ayarlamak, .NET Framework sürümleri tarafından desteklenen tüm yüksek DPı tanıma özelliklerinin .NET Framework 4,7 ile başlatılmasını sağlar. Genellikle, bu çoğu Windows Forms uygulama için yeterlidir. Ancak, bir veya daha fazla ayrı özelliği devre dışı bırakmak isteyebilirsiniz. Bunu yapmanın en önemli nedeni, mevcut uygulama kodunuzun bu özelliği zaten işlemektir.  Örneğin, uygulamanız otomatik ölçeklendirmeyi işlediğinde, otomatik yeniden boyutlandırma özelliğini aşağıdaki gibi devre dışı bırakmak isteyebilirsiniz:
+Değeri, `DpiAwareness` `PerMonitorV2` .NET Framework sürümleri tarafından desteklenen tüm yüksek DPI tanıma özelliklerinin .NET Framework 4,7 ' den itibaren ayarlanmasını sağlar. Genellikle, bu çoğu Windows Forms uygulama için yeterlidir. Ancak, bir veya daha fazla ayrı özelliği devre dışı bırakmak isteyebilirsiniz. Bunu yapmanın en önemli nedeni, mevcut uygulama kodunuzun bu özelliği zaten işlemektir.  Örneğin, uygulamanız otomatik ölçeklendirmeyi işlediğinde, otomatik yeniden boyutlandırma özelliğini aşağıdaki gibi devre dışı bırakmak isteyebilirsiniz:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -88,19 +89,19 @@ Tek tek anahtarların ve değerlerinin listesi için bkz. [Windows Forms Configu
 
 4,7 .NET Framework başlayarak, üç yeni olay dinamik DPı değişikliklerini programlı bir şekilde işleyebilsin:
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, bir denetimin DPı ayarı, onun üst denetimi veya formu için bir DPı değişiklik olayından sonra programlı olarak değiştirildiğinde harekete geçirilir.
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, bir denetimin DPı ayarı, onun üst denetimi veya formu için bir DPı değişiklik olayından sonra program aracılığıyla değiştirildiğinde tetiklenir.
 - <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, bir denetimin DPı ayarı, üst denetimi veya formu için bir DPı değişiklik olayından önce programlı olarak değiştirildiğinde harekete geçirilir.
-- <xref:System.Windows.Forms.Form.DpiChanged>, DPı ayarı formun görüntülenmekte olan görüntü cihazında değiştiğinde harekete geçirilir.
+- <xref:System.Windows.Forms.Form.DpiChanged>, bu, formun görüntülenmekte olan görüntü cihazında DPı ayarı değiştiğinde harekete geçirilir.
 
 ## <a name="new-helper-methods-and-properties"></a>Yeni yardımcı yöntemler ve Özellikler
 
 .NET Framework 4,7 Ayrıca, DPı ölçeklendirme hakkında bilgi sağlayan ve DPı ölçeklendirme gerçekleştirmenize olanak tanıyan bir dizi yeni yardımcı yöntem ve özellik ekler. Bu güncelleştirmeler şunlardır:
 
-- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, bir değeri mantıksal olan cihazdan cihaz pikseline dönüştürür.
+- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, bir değeri mantıksal değerinden cihaz pikseline dönüştürür.
 
 - <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, bir bit eşlem resmini bir cihaz için mantıksal DPı 'ye ölçeklendirir.
 
-- geçerli cihaz için DPı 'yi döndüren <xref:System.Windows.Forms.Control.DeviceDpi%2A>.
+- <xref:System.Windows.Forms.Control.DeviceDpi%2A>, geçerli cihaz için DPı 'yı döndürür.
 
 ## <a name="versioning-considerations"></a>Sürüm oluşturma konuları
 

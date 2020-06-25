@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
-ms.openlocfilehash: 960d328e156d66b0bdc7baf4d4e0f151fd4d543c
-ms.sourcegitcommit: f6350c2c542e6edd52d7e9d6667b96d85d810e67
+ms.openlocfilehash: f1a5070c106055b268d43751300d84269fed6a36
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84717503"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326006"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Görev Tabanlı Zaman Uyumsuz Desen Kullanma
 
@@ -109,7 +109,7 @@ var cts = new CancellationTokenSource();
 - API 'YI tüketen kod, iptal isteklerinin yayılacağı zaman uyumsuz çağırmaları seçmeli olarak belirleyebilir.
 
 ## <a name="monitoring-progress"></a>İlerlemeyi İzleme
- Bazı zaman uyumsuz yöntemler, zaman uyumsuz metoda geçirilen bir ilerleme arabirimiyle ilerlemeyi açığa çıkarır.  Örneğin, bir metin dizesini zaman uyumsuz olarak indiren bir işlevi düşünün ve bu nedenle, şu ana kadar tamamlanan indirme yüzdesini içeren ilerleme güncellemeleri yayınlar.  Böyle bir yöntem, aşağıdaki gibi bir Windows Presentation Foundation (WPF) uygulamasında tüketilebilir:
+ Bazı zaman uyumsuz yöntemler, zaman uyumsuz metoda geçirilen bir ilerleme arabirimiyle ilerlemeyi açığa çıkarır.  Örneğin, bir metin dizesini zaman uyumsuz olarak indirdiği ve bu nedenle şu ana kadar tamamlanan indirme yüzdesini içeren ilerleme güncelleştirmelerini Başlatan bir işlevi düşünün.  Böyle bir yöntem, aşağıdaki gibi bir Windows Presentation Foundation (WPF) uygulamasında tüketilebilir:
 
 ```csharp
 private async void btnDownload_Click(object sender, RoutedEventArgs e)
@@ -341,7 +341,7 @@ if (await recommendation) BuyStock(symbol);
 ```
 
 #### <a name="interleaving"></a>Araya
- Web 'den görüntü indirirken ve her görüntüyü işlerken (örneğin, bir kullanıcı arabirimi denetimine görüntü ekleme) bir durum düşünün.  İşlem arabirimini Kullanıcı arabirimi iş parçacığında sırayla yapmanız gerekir, ancak görüntüleri mümkün olduğunca eşzamanlı olarak indirmek istersiniz. Ayrıca, tümünün indirilene kadar Kullanıcı arabirimine eklemek istemezsiniz, ancak bunları tamamlandığı gibi eklemek istersiniz:
+ Web 'den görüntü indirirken ve her görüntüyü işlerken (örneğin, bir kullanıcı arabirimi denetimine görüntü ekleme) bir durum düşünün. Görüntüleri Kullanıcı arabirimi iş parçacığında sırayla işleyebilirsiniz, ancak görüntüleri mümkün olduğunca eşzamanlı olarak indirmek istersiniz. Ayrıca, tümünün indirilene kadar, Kullanıcı arabirimine de görüntü eklemek istemezsiniz. Bunun yerine, bunları tamamlanmış olarak eklemek istersiniz.
 
 ```csharp
 List<Task<Bitmap>> imageTasks =
@@ -453,7 +453,7 @@ private static async Task UntilCompletionOrCancellation(
 }
 ```
 
- Bu uygulama, zaman aşımına uğrar, ancak temeldeki zaman uyumsuz işlemleri iptal etmez, Kullanıcı arabirimini yeniden sağlar.  Diğer bir seçenek de, iptal etme isteği nedeniyle erken bitebileceği için, işlem gerçekten tamamlanana kadar Kullanıcı arabirimini yeniden kurmamaya kadar bekleyen işlemleri iptal etmek olacaktır:
+ Bu uygulama, zaman aşımına uğrar, ancak temeldeki zaman uyumsuz işlemleri iptal etmez, Kullanıcı arabirimini yeniden sağlar. Diğer bir seçenek de, işlem tamamlanana kadar Kullanıcı arabirimini yeniden yüklemeden, ancak erken sona erme isteği nedeniyle erken bitebileceği için bekleyen işlemleri iptal etmek olacaktır:
 
 ```csharp
 private CancellationTokenSource m_cts;
@@ -632,7 +632,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>Araya eklemeli Işlemler
- <xref:System.Threading.Tasks.Task.WhenAny%2A>Çok büyük görev kümeleriyle çalışırken bir araya ekleme senaryosunu desteklemek için yöntemini kullanmayla ilgili olası bir performans sorunu vardır. <xref:System.Threading.Tasks.Task.WhenAny%2A>Her bir görevde bir devamlılığın sonucunu elde etmek için her çağrı. N sayıda görev için, bu, araya ekleme işleminin ömrü boyunca oluşturulan (N<sup>2</sup>) devamlılıklar ile sonuçlanır. Büyük bir görev kümesiyle çalışıyorsanız, `Interleaved` performans sorununu gidermek için bir Combinator (aşağıdaki örnekte) kullanabilirsiniz:
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>Büyük görev kümeleriyle çalışırken bir araya ekleme senaryosunu desteklemek için yöntemini kullanmayla ilgili olası bir performans sorunu vardır. <xref:System.Threading.Tasks.Task.WhenAny%2A>Her bir görevde bir devamlılığın sonucunu elde etmek için her çağrı. N sayıda görev için, bu, araya ekleme işleminin ömrü boyunca oluşturulan (N<sup>2</sup>) devamlılıklar ile sonuçlanır. Büyük bir görev kümesiyle çalışıyorsanız, `Interleaved` performans sorununu gidermek için bir Combinator (aşağıdaki örnekte) kullanabilirsiniz:
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
@@ -696,7 +696,7 @@ public static Task<T[]> WhenAllOrFirstException<T>(IEnumerable<Task<T>> tasks)
 ```
 
 ## <a name="building-task-based-data-structures"></a>Görev tabanlı veri yapıları oluşturma
- Özel görev tabanlı kombinatör oluşturma özelliğine ek olarak, ' de bir veri yapısına sahip olmak ve <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> hem zaman uyumsuz bir işlemin sonuçlarını hem de bununla birleştirmek için gereken eşitlemeyi temsil eden, zaman uyumsuz senaryolarda kullanılacak özel veri yapılarını oluşturmak için çok güçlü bir tür yapar.
+ Özel görev tabanlı kombinatör oluşturma özelliğine ek olarak, ' de bir veri yapısına sahip olmak ve <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> hem zaman uyumsuz bir işlemin sonuçlarını hem de bununla birleştirmek için gereken eşitlemeyi temsil eden, zaman uyumsuz senaryolarda kullanılacak özel veri yapılarını oluşturmak için güçlü bir tür yapar.
 
 ### <a name="asynccache"></a>AsyncCache
  Bir görevin önemli bir yönü, birden fazla tüketiciye, hepsi tarafından bekleme, devamlılık veya özel durumları (söz konusu olduğunda) elde ettirebilir <xref:System.Threading.Tasks.Task%601> .  Bu <xref:System.Threading.Tasks.Task> , <xref:System.Threading.Tasks.Task%601> zaman uyumsuz bir önbelleğe alma altyapısında kullanılmasını sağlar ve idealdir.  Aşağıda, üzerine inşa eden küçük ancak güçlü bir zaman uyumsuz önbellek örneği verilmiştir <xref:System.Threading.Tasks.Task%601> :
@@ -752,7 +752,7 @@ private async void btnDownload_Click(object sender, RoutedEventArgs e)
 ### <a name="asyncproducerconsumercollection"></a>AsyncProducerConsumerCollection
  Ayrıca, zaman uyumsuz etkinlikleri koordine etmek üzere veri yapıları oluşturmak için görevleri de kullanabilirsiniz.  Klasik paralel tasarım desenlerinden birini göz önünde bulundurun: Producer/Consumer.  Bu düzende, üreticileri tüketiciler tarafından tüketilen verileri oluşturur ve üreticileri ve tüketiciler paralel olarak çalışabilir. Örneğin, tüketici daha önce öğe 2 ' yi üreten bir üretici tarafından oluşturulan öğe 1 ' i işler.  Üretici/tüketici düzeninde, müşteriler yeni veriler hakkında bildirim almak ve kullanılabilir olduğunda bulmak için üreticileri tarafından oluşturulan işi depolamak üzere bazı veri yapısına ihtiyacınız vardır.
 
- Aşağıda, zaman uyumsuz yöntemlerin üreticileri ve tüketiciler olarak kullanılmasını sağlayan görevlerin üzerine oluşturulmuş basit bir veri yapısı verilmiştir:
+ Aşağıda, zaman uyumsuz yöntemlerin üreticileri ve tüketiciler olarak kullanılmasını sağlayan, görevlerin üzerine inşa edilen basit bir veri yapısı verilmiştir:
 
 ```csharp
 public class AsyncProducerConsumerCollection<T>

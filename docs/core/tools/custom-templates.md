@@ -1,14 +1,14 @@
 ---
 title: DotNet New için özel şablonlar
 description: Herhangi bir .NET projesi veya dosya türü için özel şablonlar hakkında bilgi edinin.
-author: thraka
+author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 56fcbfbc168143007f0772ce8a12347f7e25e50b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005328"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324501"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>DotNet New için özel şablonlar
 
@@ -36,7 +36,7 @@ dotnet new --list
 Şablon, aşağıdaki bölümlerden oluşur:
 
 - Kaynak dosya ve klasörler.
-- Bir yapılandırma dosyası (*Template. JSON*).
+- Bir yapılandırma dosyası (*template.js*).
 
 ### <a name="source-files-and-folders"></a>Kaynak dosya ve klasörler
 
@@ -45,30 +45,30 @@ Kaynak dosya ve klasörler, şablon altyapısının komut çalıştırıldığı
 - Şablon altyapısı, projenizin kaynak koduna özel belirteçler eklemesine gerek yoktur.
 - Kod dosyaları özel dosyalar değildir veya şablon altyapısıyla çalışmak için herhangi bir şekilde değiştirilmez. Bu nedenle, genellikle projelerle çalışırken kullandığınız araçlar şablon içeriğiyle de çalışır.
 - Diğer projelerinizden herhangi biri için yaptığınız gibi şablon projelerinizi oluşturup hata ayıkladınız.
-- Projeye bir *./em Template.exe veya JSON* yapılandırma dosyası ekleyerek, var olan bir projeden hızlıca bir şablon oluşturabilirsiniz.
+- Proje için yapılandırma dosyasına bir *./.template.config/template.js* ekleyerek, varolan bir projeden hızlıca bir şablon oluşturabilirsiniz.
 
 Şablonda depolanan dosya ve klasörler, biçimsel .NET proje türleriyle sınırlı değildir. Şablon altyapısı çıkış olarak yalnızca bir dosya üretse bile, kaynak dosyalar ve klasörler, şablon kullanıldığında oluşturmak istediğiniz içerikten oluşabilir.
 
-Şablon tarafından oluşturulan dosyalar, *Template. JSON* yapılandırma dosyasında sağladığınız mantık ve ayarlara göre değiştirilebilir. Kullanıcı, seçenekleri komuta geçirerek bu ayarları geçersiz kılabilir `dotnet new <TEMPLATE>` . Özel mantığın ortak bir örneği, bir şablon tarafından dağıtılan kod dosyasındaki bir sınıf veya değişken için bir ad sağlar.
+Şablon tarafından oluşturulan dosyalar, yapılandırma dosyasında *template.js* sağladığınız mantık ve ayarlara göre değiştirilebilir. Kullanıcı, seçenekleri komuta geçirerek bu ayarları geçersiz kılabilir `dotnet new <TEMPLATE>` . Özel mantığın ortak bir örneği, bir şablon tarafından dağıtılan kod dosyasındaki bir sınıf veya değişken için bir ad sağlar.
 
-### <a name="templatejson"></a>Template. JSON
+### <a name="templatejson"></a>Üzerinde template.js
 
-*Template. JSON* dosyası, şablonun kök dizinindeki bir *. Template. config* klasörüne yerleştirilir. Dosya, şablon altyapısına yapılandırma bilgileri sağlar. En düşük yapılandırma, aşağıdaki tabloda gösterilen üyeleri gerektirir ve bu, işlevsel bir şablon oluşturmak için yeterlidir.
+Dosyadaki *template.js* , şablonun kök dizinindeki bir *.template.config* klasörüne yerleştirilir. Dosya, şablon altyapısına yapılandırma bilgileri sağlar. En düşük yapılandırma, aşağıdaki tabloda gösterilen üyeleri gerektirir ve bu, işlevsel bir şablon oluşturmak için yeterlidir.
 
-| Üye            | Tür          | Açıklama |
+| Üye            | Tür          | Description |
 | ----------------- | ------------- | ----------- |
-| `$schema`         | URI           | *Template. JSON* dosyası için JSON şeması. JSON şemalarını destekleyen düzenleyiciler, şema belirtildiğinde JSON düzenlemesi özelliklerini etkinleştirir. Örneğin, [Visual Studio Code](https://code.visualstudio.com/) IntelliSense 'i etkinleştirmek için bu üyeyi gerektirir. Değerini kullanın `http://json.schemastore.org/template` . |
+| `$schema`         | URI           | Dosyadaki *template.js* JSON şeması. JSON şemalarını destekleyen düzenleyiciler, şema belirtildiğinde JSON düzenlemesi özelliklerini etkinleştirir. Örneğin, [Visual Studio Code](https://code.visualstudio.com/) IntelliSense 'i etkinleştirmek için bu üyeyi gerektirir. Değerini kullanın `http://json.schemastore.org/template` . |
 | `author`          | string        | Şablonun yazarı. |
 | `classifications` | dizi (dize) | Bir kullanıcının, arama yaparken şablonu bulmak için kullanabileceği şablonun sıfır veya daha fazla özelliği. Sınıflandırmalar, komutu kullanılarak oluşturulan şablonlar listesinde göründüğünde *Etiketler* sütununda da görüntülenir `dotnet new -l|--list` . |
 | `identity`        | string        | Bu şablon için benzersiz bir ad. |
 | `name`            | string        | Kullanıcıların göreceği şablonun adı. |
 | `shortName`       | string        | Şablon adının Kullanıcı tarafından belirtildiği, GUI aracılığıyla seçilmemiş ortamlar için geçerli olan şablonu seçmek üzere varsayılan bir Özet adı. Örneğin, CLı komutlarıyla bir komut isteminden Şablonlar kullanılırken kısa ad yararlı olur. |
 
-*Template. JSON* dosyasının tam şeması [JSON Şema deposunda](http://json.schemastore.org/template)bulunur. *Template. JSON* dosyası hakkında daha fazla bilgi için bkz. [DotNet şablon oluşturma wiki](https://github.com/dotnet/templating/wiki).
+Dosyadaki *template.js* tam şeması [JSON Şema deposunda](http://json.schemastore.org/template)bulunur. Dosyadaki *template.js* hakkında daha fazla bilgi için bkz. [DotNet şablon oluşturma wiki](https://github.com/dotnet/templating/wiki).
 
 #### <a name="example"></a>Örnek
 
-Örneğin, burada iki içerik dosyası içeren bir şablon klasörü verilmiştir: *Console.cs* ve *README. txt*. *Template. JSON* dosyasını içeren *. Template. config* adlı gerekli klasör olduğunu unutmayın.
+Örneğin, aşağıda iki içerik dosyası içeren bir şablon klasörü verilmiştir: *Console.cs* ve *readme.txt*. Dosyasında *template.js* içeren *.template.config* adlı gerekli klasör olduğunu unutmayın.
 
 ```text
 └───mytemplate
@@ -79,7 +79,7 @@ Kaynak dosya ve klasörler, şablon altyapısının komut çalıştırıldığı
             template.json
 ```
 
-*Template. JSON* dosyası aşağıdakine benzer şekilde görünür:
+*template.js* dosyadaki dosya aşağıdaki gibi görünür:
 
 ```json
 {
@@ -144,7 +144,7 @@ Yukarıdaki tüm yönergeleri izleyen örnek bir *. csproj* dosyası aşağıda 
 </Project>
 ```
 
-Aşağıdaki örnekte, bir şablon paketi oluşturmak için *. csproj* kullanarak dosya ve klasör yapısı gösterilmektedir. *MyDotnetTemplates. csproj* dosya ve *şablonlar* klasörü, *project_folder*adlı bir dizinin kökünde bulunur. *Şablonlar* klasörü, *mytemplate1* ve *mytemplate2*olmak üzere iki şablon içerir. Her şablonda, bir *Template. JSON* yapılandırma dosyası olan içerik dosyaları ve *. Template. config* klasörü bulunur.
+Aşağıdaki örnekte, bir şablon paketi oluşturmak için *. csproj* kullanarak dosya ve klasör yapısı gösterilmektedir. *MyDotnetTemplates. csproj* dosya ve *şablonlar* klasörü, *project_folder*adlı bir dizinin kökünde bulunur. *Şablonlar* klasörü, *mytemplate1* ve *mytemplate2*olmak üzere iki şablon içerir. Her şablonda içerik dosyaları ve *template.js* yapılandırma dosyasında bir *.template.config* klasörü bulunur.
 
 ```text
 project_folder
@@ -187,7 +187,7 @@ dotnet new -i <PATH_TO_NUPKG_FILE>
 
 ### <a name="to-install-a-template-from-a-file-system-directory"></a>Bir dosya sistemi dizininden şablon yüklemek için
 
-Şablonlar, yukarıdaki örnekteki *mytemplate1* klasörü gibi bir şablon klasöründen yüklenebilir. *. Template. config* klasörünün klasör yolunu belirtin. Şablon dizini yolunun mutlak olması gerekmez. Ancak, bir klasörden yüklenen bir şablonu kaldırmak için mutlak bir yol gereklidir.
+Şablonlar, yukarıdaki örnekteki *mytemplate1* klasörü gibi bir şablon klasöründen yüklenebilir. *.template.config* klasörünün klasör yolunu belirtin. Şablon dizini yolunun mutlak olması gerekmez. Ancak, bir klasörden yüklenen bir şablonu kaldırmak için mutlak bir yol gereklidir.
 
 ```dotnetcli
 dotnet new -i <FILE_SYSTEM_DIRECTORY>
@@ -225,7 +225,7 @@ Currently installed items:
 ...
 ```
 
-Sonraki öğelerin ilk düzeyi, `Currently installed items:` bir şablonu kaldırma bölümünde kullanılan tanımlayıcılardır. Ve yukarıdaki örnekteki `Microsoft.DotNet.Common.ItemTemplates` ve `Microsoft.DotNet.Common.ProjectTemplates.3.0` listelenmiştir. Şablon bir dosya sistemi yolu kullanılarak yüklenmişse, bu tanımlayıcı *. Template. config* klasörünün klasör yolu olacaktır.
+Sonraki öğelerin ilk düzeyi, `Currently installed items:` bir şablonu kaldırma bölümünde kullanılan tanımlayıcılardır. Ve yukarıdaki örnekteki `Microsoft.DotNet.Common.ItemTemplates` ve `Microsoft.DotNet.Common.ProjectTemplates.3.0` listelenmiştir. Şablon bir dosya sistemi yolu kullanılarak yüklendiyse, bu tanımlayıcı *.template.config* klasörünün klasör yolu olacaktır.
 
 ## <a name="uninstalling-a-template"></a>Bir şablonu kaldırma
 
@@ -237,7 +237,7 @@ Paket, bir NuGet akışı veya doğrudan bir *. nupkg* dosyası tarafından yük
 dotnet new -u <NUGET_PACKAGE_ID>
 ```
 
-Paket *. Template. config* klasörü için bir yol belirtilerek yüklendiyse, paketi kaldırmak için bu **mutlak** yolu kullanın. Şablonun mutlak yolunu komut tarafından belirtilen çıkışta görebilirsiniz `dotnet new -u` . Daha fazla bilgi için yukarıdaki [yüklü şablonlar listesini al](#get-a-list-of-installed-templates) bölümüne bakın.
+Paket, *.template.config* klasörü için bir yol belirtilerek yüklenmişse, paketi kaldırmak için bu **mutlak** yolu kullanın. Şablonun mutlak yolunu komut tarafından belirtilen çıkışta görebilirsiniz `dotnet new -u` . Daha fazla bilgi için yukarıdaki [yüklü şablonlar listesini al](#get-a-list-of-installed-templates) bölümüne bakın.
 
 ```dotnetcli
 dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
@@ -257,4 +257,4 @@ dotnet new <TEMPLATE>
 - [DotNet/şablon oluşturma GitHub deposu wiki](https://github.com/dotnet/templating/wiki)
 - [DotNet/DotNet-şablon-örnek GitHub deposu](https://github.com/dotnet/dotnet-template-samples)
 - [DotNet New için kendi şablonlarınızı oluşturma](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)
-- [JSON Şema deposunda *Template. JSON* şeması](http://json.schemastore.org/template)
+- [JSON Şema deposundaki şemada *template.js*](http://json.schemastore.org/template)

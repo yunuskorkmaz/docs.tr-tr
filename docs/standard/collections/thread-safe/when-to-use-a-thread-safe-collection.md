@@ -6,30 +6,31 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: cea9c038896d07d526874e2ae4c33e479eaa3963
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 499af6d7b8de1decbcffefe0a3b1420cc548488a
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769139"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326034"
 ---
-# <a name="when-to-use-a-thread-safe-collection"></a>Bir İş Parçacığı Koleksiyonunun Ne Zaman Kullanılacağı
-.NET Framework 4, çok iş parçacıklı ekleme ve kaldırma işlemlerini desteklemek için özel olarak tasarlanan beş yeni koleksiyon türü sunar. İş parçacığı güvenliği sağlamak için, bu yeni türler çeşitli verimli kilitleme ve kilitleme ücretsiz eşitleme mekanizmalarını kullanır. Eşitleme bir işleme ek yük ekler. Ek yük miktarı, kullanılan eşitleme türüne, gerçekleştirilen işlem türüne ve koleksiyona eşzamanlı olarak erişmeye çalışan iş parçacığı sayısı gibi diğer faktörlere bağlıdır.  
+# <a name="when-to-use-a-thread-safe-collection"></a>İş parçacığı güvenli koleksiyonu ne zaman kullanılır?
+
+.NET Framework 4, çok iş parçacıklı ekleme ve kaldırma işlemlerini desteklemek için özel olarak tasarlanan beş koleksiyon türü sunmuştur. İş parçacığı güvenliği sağlamak için, bu türler çeşitli verimli kilitleme ve kilitleme ücretsiz eşitleme mekanizmalarını kullanır. Eşitleme bir işleme ek yük ekler. Ek yük miktarı, kullanılan eşitleme türüne, gerçekleştirilen işlem türüne ve koleksiyona eşzamanlı olarak erişmeye çalışan iş parçacığı sayısı gibi diğer faktörlere bağlıdır.  
   
  Bazı senaryolarda, eşitleme ek yükü göz ardı edilebilir değildir ve çok iş parçacıklı türün bir dış kilit tarafından korunurken iş parçacığı açısından güvenli olmayan eşinden daha iyi bir şekilde ölçeklenebilmesini sağlar. Diğer senaryolarda, ek yük, iş parçacığı güvenli türünün aynı veya daha yavaş bir şekilde, bu tür iş parçacığı güvenli olmayan bir sürümüne göre çalışmasını ve ölçeklendirilmesine neden olabilir.  
   
  Aşağıdaki bölümlerde, iş parçacığı güvenli bir koleksiyonun ne zaman kullanıldığı, okuma ve yazma işlemleri etrafında Kullanıcı tarafından sağlanmış bir kilit olan iş parçacığı güvenli olmayan eşdeğerine karşı genel rehberlik sağlanmaktadır. Performans birçok etkene bağlı olarak farklılık gösterebileceğinden, kılavuz özel değildir ve tüm durumlarda geçerli değildir. Performans çok önemliyse, hangi koleksiyon türünün kullanılacağını belirlemenin en iyi yolu, temsili bilgisayar yapılandırmalarına ve yüklerine göre performansı ölçmaktır. Bu belge aşağıdaki terimleri kullanır:  
   
- *Saf üretici-tüketici senaryosu*  
+ *Saf üretici-tüketici senaryosu*\
  Verilen herhangi bir iş parçacığı öğe ekliyor veya kaldırıyor, ancak her ikisine birden değil.  
   
- *Karma üretici-tüketici senaryosu*  
+ *Karma üretici-tüketici senaryosu*\
  Verilen herhangi bir iş parçacığı, öğeleri ekleme ve kaldırma.  
   
- *PLINQ 'te hızlandırmayı*  
+ *PLINQ 'te hızlandırmayı*\
  Aynı senaryodaki diğer bir türe göre daha hızlı algoritmik performansı.  
   
- *Ölçeklenebilirlik*  
+ *Sorun*\
  Performans artışı, bilgisayardaki çekirdek sayısıyla orantılıdır. Ölçeklendirilen bir algoritma, iki çekirdekden daha fazla sekiz çekirdekli daha hızlı gerçekleştirilir.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue (T) ve Queue (T) karşılaştırması  

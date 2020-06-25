@@ -2,15 +2,15 @@
 title: ASP.NET Core son değişiklikler
 titleSuffix: ''
 description: ASP.NET Core 'deki son değişiklikleri listeler.
-ms.date: 06/11/2020
+ms.date: 06/23/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: a6ddf97f907a1cba57e51d6fd516d1f94272f725
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: cf6b2eb46504c12aa670ccfc68531598dd9705a3
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803280"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325454"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -45,15 +45,18 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 - [HTTP: yanıt gövdesi altyapı değişiklikleri](#http-response-body-infrastructure-changes)
 - [HTTP: bazı tanımlama bilgisi SameSite varsayılan değerleri değiştirildi](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP: zaman uyumlu GÇ varsayılan olarak devre dışıdır](#http-synchronous-io-disabled-in-all-servers)
+- [HttpSys: Istemci sertifikası yeniden anlaşması varsayılan olarak devre dışıdır](#httpsys-client-certificate-renegotiation-disabled-by-default)
 - [Kimlik: Adddefaultuı yöntemi aşırı yüklemesi kaldırıldı](#identity-adddefaultui-method-overload-removed)
 - [Kimlik: UI önyükleme sürümü değişikliği](#identity-default-bootstrap-version-of-ui-changed)
 - [Kimlik: Signınasync kimliği doğrulanmamış kimlik için özel durum oluşturur](#identity-signinasync-throws-exception-for-unauthenticated-identity)
 - [Kimlik: SignInManager Oluşturucusu yeni parametreyi kabul ediyor](#identity-signinmanager-constructor-accepts-new-parameter)
 - [Kimlik: UI statik Web varlıkları özelliğini kullanır](#identity-ui-uses-static-web-assets-feature)
+- [IIS: URL yeniden yazma ara yazılımı sorgu dizeleri korunur](#iis-urlrewrite-middleware-query-strings-are-preserved)
 - [Kestrel: çalışma zamanında varsayılan olarak algılanan yapılandırma değişiklikleri](#kestrel-configuration-changes-at-run-time-detected-by-default)
 - [Kestrel: bağlantı bağdaştırıcıları kaldırıldı](#kestrel-connection-adapters-removed)
 - [Kestrel: desteklenen varsayılan TLS protokol sürümleri değiştirildi](#kestrel-default-supported-tls-protocol-versions-changed)
 - [Kestrel: boş HTTPS derlemesi kaldırıldı](#kestrel-empty-https-assembly-removed)
+- [Kestrel: HTTP/2 uyumsuz Windows sürümlerinde TLS üzerinden devre dışı bırakıldı](#kestrel-http2-disabled-over-tls-on-incompatible-windows-versions)
 - [Kestrel: yeni koleksiyona taşınan artbilgisi üstbilgileri ıste](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel: aktarım soyutlama katmanı değişiklikleri](#kestrel-transport-abstractions-removed-and-made-public)
 - [Yerelleştirme: kullanım dışı olarak işaretlenen API 'Ler](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
@@ -100,10 +103,22 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 ***
 
+[!INCLUDE[HttpSys: Client certificate renegotiation disabled by default](~/includes/core-changes/aspnetcore/5.0/httpsys-client-certificate-renegotiation-disabled-by-default.md)]
+
+***
+
+[!INCLUDE[IIS: UrlRewrite middleware query strings are preserved](~/includes/core-changes/aspnetcore/5.0/iis-urlrewrite-middleware-query-strings-are-preserved.md)]
+
+***
+
 [!INCLUDE[Kestrel: Configuration changes at run time detected by default](~/includes/core-changes/aspnetcore/5.0/kestrel-configuration-changes-at-run-time-detected-by-default.md)]
 
 ***
 [!INCLUDE[Kestrel: Default supported TLS protocol versions changed](~/includes/core-changes/aspnetcore/5.0/kestrel-default-supported-tls-protocol-versions-changed.md)]
+
+***
+
+[!INCLUDE[Kestrel: HTTP/2 disabled over TLS on incompatible Windows versions](~/includes/core-changes/aspnetcore/5.0/kestrel-disables-http2-over-tls.md)]
 
 ***
 

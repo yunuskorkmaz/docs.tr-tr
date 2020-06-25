@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: f5fd61452d6f83bd035b5c6930bd09673c0ded23
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 34f9f2df11f9b7c51fcec2f8475a50ccf4c5e220
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662959"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324125"
 ---
 # <a name="how-to-search-strings"></a>Dizeleri arama
 
@@ -23,11 +23,11 @@ Sınıf için bir diğer ad olan [dize](../language-reference/builtin-types/refe
 
 ## <a name="does-a-string-contain-text"></a>Dize metin içeriyor mu?
 
-<xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> Ve <xref:System.String.EndsWith%2A?displayProperty=nameWithType> yöntemleri belirli metin için bir dize arar. Aşağıdaki örnek, bu yöntemlerin ve büyük/küçük harfe duyarsız arama kullanan bir varyasyonın her birini göstermektedir:
+<xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.StartsWith%2A?displayProperty=nameWithType> Ve <xref:System.String.EndsWith%2A?displayProperty=nameWithType> yöntemleri belirli metin için bir dize arar. Aşağıdaki örnek, büyük/küçük harfe duyarsız arama kullanan bu yöntemlerin ve bir varyasyonın her birini göstermektedir:
 
 :::code language="csharp" interactive="try-dotnet-method" source="../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs" id="Snippet1":::
 
-Yukarıdaki örnekte bu yöntemlerin kullanılması için önemli bir nokta gösterilmektedir. Aramalar, varsayılan olarak **büyük/küçük harfe duyarlıdır** . <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>Büyük/küçük harfe duyarsız arama belirtmek için enum değerini kullanın.
+Yukarıdaki örnekte bu yöntemlerin kullanılması için önemli bir nokta gösterilmektedir. Aramalar, varsayılan olarak **büyük/küçük harfe duyarlıdır** . <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>Büyük/küçük harfe duyarsız bir arama belirtmek için numaralandırma değerini kullanın.
 
 ## <a name="where-does-the-sought-text-occur-in-a-string"></a>Aranan metin bir dizede nerede oluşuyor?
 
@@ -41,7 +41,7 @@ Yukarıdaki örnekte bu yöntemlerin kullanılması için önemli bir nokta gös
 
 Aşağıdaki kod örneği, bir tümcede "The" veya "onların" sözcüğünü arar, büyük/küçük harf durumunu yoksayar. Statik yöntem <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> aramayı gerçekleştirir. Aranacak dizeyi ve arama düzenlerini verirsiniz. Bu durumda, üçüncü bir bağımsız değişken büyük/küçük harfe duyarsız arama belirler. Daha fazla bilgi için bkz. <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
-Arama deseninin aranacağı metin açıklanır. Aşağıdaki tabloda, arama deseninin her bir öğesi açıklanmaktadır. (Aşağıdaki tablo, `\` bir C# dizesinde olduğu gibi kaçılması gereken tek kullanır `\\` ).
+Arama deseninin aranacağı metin açıklanır. Aşağıdaki tabloda, arama deseninin her bir öğesi açıklanmaktadır. (Aşağıdaki tablo, `\` bir C# dizesinde olduğu gibi kaçışlı olması gereken Single öğesini kullanır `\\` ).
 
 | Desen  | Anlamı                          |
 |----------|----------------------------------|

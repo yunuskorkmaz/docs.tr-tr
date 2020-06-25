@@ -1,5 +1,5 @@
 ---
-title: "Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma"
+title: Öğeleri Ekleme ve Bir ConcurrentDictionary'den Alma
 description: .NET 'teki ConcurrentDictionary<TKey, TValue> Collection sınıfında öğe ekleme, alma, güncelleştirme ve kaldırma hakkında bir örnek okuyun.
 ms.date: 05/04/2020
 ms.technology: dotnet-standard
@@ -9,14 +9,14 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-ms.openlocfilehash: 827eb9db984289929c591046a4713419c9587312
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 0bfc17d93ea3088a7b2e4209e25003856770b9e7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662868"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325956"
 ---
-# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary'dan Alma
+# <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Bir ConcurrentDictionary öğesinden öğe ekleme ve kaldırma
 
 Bu örnek, bir öğesinden öğe ekleme, alma, güncelleştirme ve kaldırma işlemlerinin nasıl yapılacağını gösterir <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> . Bu koleksiyon sınıfı, iş parçacığı güvenli bir uygulama. Birden çok iş parçacığının aynı anda öğelere erişmeye çalıştığı her seferinde kullanmanızı öneririz.
 
@@ -37,9 +37,9 @@ Aşağıdaki örnek, <xref:System.Threading.Tasks.Task> bazı öğeleri eşzaman
 
 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>çok iş parçacıklı senaryolar için tasarlanmıştır. Koleksiyonda öğe eklemek veya kaldırmak için kodunuzda kilit kullanmanız gerekmez. Ancak, bir iş parçacığının bir değeri alabilmesi ve aynı anahtara yeni bir değer vererek koleksiyonu hemen güncellemek için başka bir iş parçacığında her zaman mümkündür.
 
-Ayrıca, tüm yöntemleri iş parçacığı açısından güvenli olmasına rağmen, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tüm yöntemler atomik, özellikle <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> . Bu yöntemlere geçirilen kullanıcı temsilcisi sözlüğün iç kilidi dışında çağrılır (Bu işlem, bilinmeyen kodun tüm iş parçacıklarını engellemesini engellemek için yapılır). Bu nedenle, bu olay sırası oluşması mümkündür:
+Ayrıca, tüm yöntemleri iş parçacığı açısından güvenli olmasına rağmen, <xref:System.Collections.Concurrent.ConcurrentDictionary%602> tüm yöntemler atomik, özellikle <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> ve <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> . Bilinmeyen kodun tüm iş parçacıklarını engellemesini engellemek için, bu yöntemlere geçirilen kullanıcı temsilcisi sözlüğün iç kilidinin dışında çağrılır. Bu nedenle, bu olay sırası oluşması mümkündür:
 
-1. _threada_ çağrısı <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> , hiçbir öğe buluyor ve temsilciyi çağırarak eklenecek yeni bir öğe oluşturuyor `valueFactory` .
+1. _threada_ çağrıları <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> , hiçbir öğe buluyor ve temsilciyi çağırarak eklenecek yeni bir öğe oluşturuyor `valueFactory` .
 
 1. _Threadb_ <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> eşzamanlı olarak çağrılır, `valueFactory` temsilcisi çağrılır ve _tehdit_ve sonra iç kilidine ulaşır ve bu nedenle yeni anahtar-değer çifti sözlüğe eklenir.
 

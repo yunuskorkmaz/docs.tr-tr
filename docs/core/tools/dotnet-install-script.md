@@ -2,12 +2,12 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 04/30/2020
-ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141249"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324422"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -44,24 +44,47 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
-## <a name="description"></a>Açıklama
+Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
 
-`dotnet-install`Betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.
+## <a name="description"></a>Description
+
+`dotnet-install`Betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan bir yüklemesini gerçekleştirir. İki komut dosyası vardır:
+
+* Windows üzerinde çalışacak bir PowerShell betiği.
+* Linux/macOS üzerinde çalışacak bir bash betiği.
+
+### <a name="purpose"></a>Amaç
+
+ Betiklerin amaçlanan kullanımı sürekli tümleştirme (CI) senaryolarına yöneliktir; burada:
+
+* SDK 'nın Kullanıcı etkileşimi olmadan ve yönetici hakları olmadan yüklenmesi gerekir.
+* SDK yüklemesinin birden çok CI çalıştırması arasında kalıcı olması gerekmez.
+
+  Tipik olay dizisi:
+  * CI tetiklenir.
+  * CI, Bu betiklerin birini kullanarak SDK 'Yı yüklüyor.
+  * CI işini sonlandırır ve SDK yüklemesi dahil olmak üzere geçici verileri temizler.
+
+Geliştirme ortamı ayarlamak veya uygulamaları çalıştırmak için, bu betikler yerine yükleyicileri kullanın.
+
+### <a name="recommended-version"></a>Önerilen sürüm
 
 Betiklerin kararlı sürümünü kullanmanızı öneririz:
 
 - Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
 - PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
 
-Bu betiklerin temel kullanışlılığı Otomasyon senaryolarında ve yönetici olmayan yüklemelerde bulunur. İki komut dosyası vardır: biri Windows üzerinde çalışan bir PowerShell betiğtir ve diğeri de Linux/macOS üzerinde çalışan bir bash komut dosyasıdır. Her iki komut dosyası da aynı davranışa sahiptir. Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
+### <a name="script-behavior"></a>Betik davranışı
 
-Yükleme betikleri, ZIP/tarbol dosyasını CLı derleme bırakmalarından indirir ve varsayılan konuma ya da tarafından belirtilen bir konuma yüklemeye devam edebilir `-InstallDir|--install-dir` . Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler. Yalnızca paylaşılan çalışma zamanını elde etmek istiyorsanız, `-Runtime|--runtime` bağımsız değişkenini belirtin.
+Her iki komut dosyası da aynı davranışa sahiptir. Bunlar, CLı derleme bırakmalarından ZIP/tarbol dosyasını indirir ve varsayılan konuma veya tarafından belirtilen bir konuma yüklemeye devam ederler `-InstallDir|--install-dir` .
 
-Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler. Bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın `-NoPath|--no-path` .
+Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler. Yalnızca paylaşılan çalışma zamanını elde etmek istiyorsanız, `-Runtime|--runtime` bağımsız değişkenini belirtin.
+
+Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler. Bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın `-NoPath|--no-path` . Betik, `DOTNET_ROOT` ortam değişkenini ayarladı.
 
 Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/dependencies.md)yükler.
 
-Bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz `-Version|--version` . Sürüm üç bölümlü bir sürüm olarak belirtilmelidir (örneğin, `2.1.0` ). Sağlanmazsa, `latest` sürümünü kullanır.
+Bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz `-Version|--version` . Sürüm, gibi üç bölümden oluşan bir sürüm numarası olarak belirtilmelidir `2.1.0` . Sürüm belirtilmemişse, komut dosyası `latest` sürümü yüklenir.
 
 Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca daraltılmış ikilileri indirir ve bir klasöre kopyalar. Kayıt defteri anahtarı değerlerinin güncelleştirilmesini istiyorsanız .NET Core yükleyicileri ' ni kullanın.
 

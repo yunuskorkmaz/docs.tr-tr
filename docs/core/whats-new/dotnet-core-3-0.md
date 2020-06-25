@@ -3,15 +3,15 @@ title: ​.NET Core 3.0’daki yenilikler
 description: .NET Core 3,0 ' de bulunan yeni özellikler hakkında bilgi edinin.
 dev_langs:
 - csharp
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 7caeaaa834dc827998d7d1bc3a25ba4e194996f4
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378833"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324410"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -257,14 +257,14 @@ Yerel araçlar, geçerli dizininizde bir bildirim dosyası adına bağımlıdır
 
 Hem genel hem de yerel araçlar için, çalışma zamanının uyumlu bir sürümü gereklidir. Şu anda NuGet.org hedef .NET Core çalışma zamanı 2,1 ' de birçok araç. Bu araçları küresel olarak veya yerel olarak yüklemek için, hala [NET Core 2,1 çalışma zamanını](https://dotnet.microsoft.com/download/dotnet-core/2.1)yüklemeniz gerekir.
 
-### <a name="new-globaljson-options"></a>Yeni Global. JSON seçenekleri
+### <a name="new-globaljson-options"></a>Seçenekler üzerinde yeni global.js
 
-*Global. JSON* dosyası, hangi .NET Core SDK sürümünün kullanıldığını tanımlamaya çalışırken daha fazla esneklik sağlayan yeni seçeneklere sahiptir. Yeni seçenekler şunlardır:
+Dosya *global.js* , .NET Core SDK hangi sürümünün kullanıldığını tanımlamaya çalışırken daha fazla esneklik sağlayan yeni seçeneklere sahiptir. Yeni seçenekler şunlardır:
 
 - `allowPrerelease`: SDK Çözümleyicisinin kullanılacak SDK sürümünü seçerken yayın öncesi sürümlerini düşünmesinin gerekip gerekmediğini belirtir.
 - `rollForward`: Bir SDK sürümü seçerken kullanılacak yuvarlama ilkesini, belirli bir SDK sürümü eksik olduğunda geri dönüş olarak veya daha yüksek bir sürümü kullanmak için bir yönerge olarak gösterir.
 
-Varsayılan değerler, desteklenen değerler ve yeni eşleştirme kuralları gibi değişiklikler hakkında daha fazla bilgi için bkz. [Global. JSON genel bakış](../tools/global-json.md).
+Varsayılan değerler, desteklenen değerler ve yeni eşleştirme kuralları gibi değişiklikler hakkında daha fazla bilgi için bkz. [global.jsgenel bakış](../tools/global-json.md).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Daha küçük atık toplama yığın boyutları
 
@@ -319,7 +319,7 @@ Yüksek DPı modları hakkında daha fazla bilgi için bkz. [Windows 'Da yüksek
 
 Windows 'ta artık COM çağrılabilir yönetilen bileşenler oluşturabilirsiniz. Bu özellik, .NET Core 'un COM eklenti modelleriyle kullanılması ve ayrıca .NET Framework eşlik sağlanması açısından önemlidir.
 
-*Mscoree. dll* ' nin com sunucusu olarak kullanıldığı .NET Framework aksine, .NET Core, com bileşenini oluştururken *bin* dizinine yerel bir başlatıcı dll 'si ekler.
+*mscoree.dll* com sunucusu olarak kullanıldığı .NET Framework aksine, .NET Core, com bileşenini oluştururken *bin* dizinine yerel bir başlatıcı dll 'si ekler.
 
 COM bileşeni oluşturma ve kullanma hakkında bir örnek için bkz. [com tanıtımı](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo).
 
@@ -539,13 +539,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Hızlı yerleşik JSON desteği
 
-.NET Kullanıcıları [Newtonsoft. JSON](https://www.newtonsoft.com/json) ve DIĞER popüler JSON kitaplıklarına büyük ölçüde güvendi ve bu da iyi seçimler olmaya devam eder. `Newtonsoft.Json`temel veri türü olarak .NET dizelerini kullanır, bu da arada bulunan UTF-16 ' dır.
+.NET kullanıcıları büyük ölçüde [Newtonsoft.Js](https://www.newtonsoft.com/json) ve DIĞER popüler JSON kitaplıklarında büyük bir seçenek olmaya devam eder. `Newtonsoft.Json`temel veri türü olarak .NET dizelerini kullanır, bu da arada bulunan UTF-16 ' dır.
 
 Yeni yerleşik JSON desteği yüksek performanslı, düşük ayırma, UTF-8 kodlu JSON metniyle birlikte çalışıyor. Ad alanı ve türleri hakkında daha fazla bilgi için <xref:System.Text.Json> aşağıdaki makalelere bakın:
 
 * [.NET 'te JSON serileştirme-genel bakış](../../standard/serialization/system-text-json-overview.md)
 * [.Net 'TE JSON serileştirmek ve serisini kaldırma](../../standard/serialization/system-text-json-how-to.md).
-* [Newtonsoft. JSON 'dan System. Text. JSON 'a geçiş](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
+* [Newtonsoft.Jsüzerinde System.Text.Jsüzerine geçiş](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 desteği
 

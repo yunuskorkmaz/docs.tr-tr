@@ -1,15 +1,15 @@
 ---
 title: .NET Framework ve .NET Core arasındaki farklılıklar
 description: Windows Presentation Foundation (WPF) ve .NET Core WPF .NET Framework uygulama arasındaki farkları açıklar. Uygulamanızı geçirirken, bu uyumsuzlukları göz önünde bulundurmanız gerekir.
-author: thraka
+author: adegeo
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3bedc30046c36d4c5430feedf5854276ebaef8aa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82072209"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325687"
 ---
 # <a name="differences-in-wpf"></a>WPF farkları
 
@@ -25,16 +25,16 @@ Bu makalede, .NET Core ve .NET Framework Windows Presentation Foundation (WPF) a
 
 ## <a name="nuget-package-references"></a>NuGet paket başvuruları
 
-.NET Framework uygulamanız, NuGet bağımlılıklarını bir *Packages. config* dosyasında listelediğinden şu [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) biçime geçin:
+.NET Framework uygulamanız, NuGet bağımlılıklarını bir *packages.config* dosyasında listelerince şu [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) biçime geçirin:
 
 1. Visual Studio 'da **Çözüm Gezgini** bölmesini açın.
-1. WPF projenizde **Packages. config** > Packages. config 'i**packagereference**' a geçirin.
+1. WPF projenizde, **packages.config**  >  **packages.config packagereference öğesine**sağ tıklayın.
 
 ![PackageReference 'a yükseltme](media/differences-from-net-framework/package-reference-migration.png)
 
-Hesaplanan en üst düzey NuGet bağımlılıklarını gösteren bir iletişim kutusu görünür ve diğer NuGet paketlerinin en üst düzeye yükseltilmesi gerektiğini sorar. **Tamam** ' ı seçtiğinizde, *Packages. config* dosyası projeden kaldırılacak ve `<PackageReference>` öğeler proje dosyasına eklenecektir.
+Hesaplanan en üst düzey NuGet bağımlılıklarını gösteren bir iletişim kutusu görünür ve diğer NuGet paketlerinin en üst düzeye yükseltilmesi gerektiğini sorar. **Tamam** ' ı seçtiğinizde *packages.config* dosya projeden kaldırılır ve `<PackageReference>` öğeler proje dosyasına eklenir.
 
-Projeniz kullandığında `<PackageReference>`, paketler yerel olarak bir *paketler* klasöründe depolanmaz. Proje dosyasını açın ve *paketler* klasörüne başvuruda `<Analyzer>` bulunan tüm öğeleri kaldırın. Bu çözümleyiciler, NuGet paket başvurularına otomatik olarak eklenir.
+Projeniz kullandığında `<PackageReference>` , paketler yerel olarak bir *paketler* klasöründe depolanmaz. Proje dosyasını açın ve `<Analyzer>` *paketler* klasörüne başvuruda bulunan tüm öğeleri kaldırın. Bu çözümleyiciler, NuGet paket başvurularına otomatik olarak eklenir.
 
 ## <a name="code-access-security"></a>Kod Erişimi Güvenliği
 
@@ -44,9 +44,9 @@ Ortak olarak tanımlanan CA 'larla ilgili türler WPF derlemelerinden ve çekird
 
 | Kaynak derleme | Hedef derleme | Tür                |
 | --------------- | --------------- | ------------------- |
-| *WindowsBase. dll* | *System. Security. Permissions. dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
-| *System. xaml. dll* | *System. Security. Permissions. dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
-| *System. xaml. dll* | *System. Windows. Extension. dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
+| *WindowsBase.dll* | *System.Security.Permissions.dll* | <xref:System.Security.Permissions.MediaPermission> <br /> <xref:System.Security.Permissions.MediaPermissionAttribute> <br /> <xref:System.Security.Permissions.MediaPermissionAudio> <br /> <xref:System.Security.Permissions.MediaPermissionImage> <br /> <xref:System.Security.Permissions.MediaPermissionVideo> <br /> <xref:System.Security.Permissions.WebBrowserPermission> <br /> <xref:System.Security.Permissions.WebBrowserPermissionAttribute> <br /> <xref:System.Security.Permissions.WebBrowserPermissionLevel> |
+| *System.Xaml.dll* | *System.Security.Permissions.dll* | <xref:System.Xaml.Permissions.XamlLoadPermission> |
+| *System.Xaml.dll* | *System.Windows.Extension.dll*    | <xref:System.Xaml.Permissions.XamlAccessLevel><br/> |
 
 > [!NOTE]
 > Savunma savunma durumunu en aza indirmek için, aşağıdaki özelliklerle ilgili bilgileri depolama ve alma işlevleri `XamlAccessLevel` türünde tutulur.

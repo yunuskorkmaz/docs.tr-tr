@@ -1,43 +1,44 @@
 ---
 title: Yeni bir Windows Formu Oluşturma
+description: Bir Windows Forms uygulaması oluşturmaya başladığınızda anlamanız gereken temel sözlük, kılavuz ve yönergeleri sunan konuları bulun.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1ef899e46c804cb174814b0abbd9490ce6221d5
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009064"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325948"
 ---
 # <a name="creating-a-new-windows-form"></a>Yeni bir Windows Formu Oluşturma
-Bu konu, ilk Windows Forms uygulamasının nasıl oluşturulacağını açıklayan konulara bağlantılar içerir. Ayrıca, bu bölümdeki konularda, bazı temel sözlük ve bir Windows Forms uygulaması oluşturma işlemini başlattığınızda anlamanız gereken yönergeler sunar. Windows Forms uygulamaları hakkında daha fazla bilgi için bunları, olayları ve olaylarını işleme ve kullanıcı girişini işlemek nasıl kullanabileceğiniz kontrolleri ilgili konu listesine bakın.  
+Bu konu, ilk Windows Forms uygulamanızı oluşturmayı betimleyen konuların bağlantılarını içerir. Ayrıca, bu bölümdeki konular, bir Windows Forms uygulaması oluşturmaya başladığınızda anlamanız gereken temel sözlük ve yönergelerinden bazılarını tanıtmaktadır. Windows Forms uygulamalar hakkında daha fazla bilgi edinmek için, bunlar üzerinde kullanabileceğiniz denetimler, olaylar ve işleme olayları ve kullanıcıdan girişi nasıl işleyeceğinizi öğrenmek için ilgili konu listesine bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Windows Forms koordinatları](windows-forms-coordinates.md).  
- İstemci ve ekran koordinatları açıklar.  
+ [Koordinatları Windows Forms](windows-forms-coordinates.md).  
+ İstemci ve ekran koordinatlarını açıklar.  
   
- [Nasıl yapılır: Komut satırından bir Windows Forms uygulaması oluşturma](how-to-create-a-windows-forms-application-from-the-command-line.md)  
- Temel bir Windows formu oluşturun ve komut satırından derleme açıklar.  
+ [Nasıl yapılır: Komut Satırından Bir Windows Forms Uygulaması Oluşturma](how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ Temel bir Windows formu oluşturmayı ve bunu komut satırından derlemeyi açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.Form>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu sınıfı açıklar ve tüm üyelerinin bağlantılarını içerir.  
   
  <xref:System.Windows.Forms.Control>  
- Bu sınıf açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu sınıfı açıklar ve tüm üyelerinin bağlantılarını içerir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  [Kullanıcı Girişini İşleme](./controls/handling-user-input.md)  
- Kullanıcı girişi ve Windows Forms uygulamalarında işlemek nasıl açıklayan konulara bağlantılar içerir.  
+ Kullanıcı girişini tartışan konuların bağlantılarını ve Windows Forms uygulamalarında nasıl işleneceğini içerir.  
   
  [Windows Forms'ta Olay İşleyicileri Oluşturma](creating-event-handlers-in-windows-forms.md)  
- Windows Forms uygulamalarındaki olayları işlemek nasıl açıklayan konulara bağlantılar içerir.  
+ Windows Forms uygulamalarında olayların nasıl işleneceğini betimleyen konuların bağlantılarını içerir.  
   
- [Windows Forms’un Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)  
- Windows Forms uygulamaları görünüşünü değiştirme işlemini gösteren konulara bağlantılar içerir.  
+ [Windows Formlarının Görünüşünü Değiştirme](changing-the-appearance-of-windows-forms.md)  
+ Windows Forms uygulamalarının görünümünün nasıl değiştirileceğini gösteren konuların bağlantılarını içerir.  
   
  [İşleve Göre Windows Forms Denetimleri](./controls/windows-forms-controls-by-function.md)  
- Windows Forms uygulamalarında kullanabileceğiniz kontrolleri açıklayan konulara bağlantılar içerir.
+ Windows Forms uygulamalarda kullanabileceğiniz denetimleri tanımlayan konuların bağlantılarını içerir.

@@ -3,16 +3,16 @@ title: Dize içeriğini değiştirme-C# Kılavuzu
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: a32665b67cfa73aa7d4753a1427c6955827e1b86
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663011"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324172"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C 'de dize içeriğini değiştirme\#
 
-Bu makalede, var olan bir değişiklik yaparak oluşturmak için çeşitli teknikler gösterilmektedir `string` `string` . Gösterilen tüm teknikler, değişikliklerin sonucunu yeni bir nesne olarak döndürür `string` . Bunu açıkça göstermek için örneklerin hepsi, sonucu yeni bir değişkende depolar. Ardından, her bir örneği çalıştırdığınızda hem orijinali hem de `string` `string` değişikliği ortaya çıkacak şekilde inceleyebilirsiniz.
+Bu makalede, var olan bir değişiklik yaparak oluşturmak için çeşitli teknikler gösterilmektedir `string` `string` . Gösterilen tüm teknikler, değişikliklerin sonucunu yeni bir nesne olarak döndürür `string` . Orijinal ve değiştirilmiş dizelerin farklı örnekler olduğunu göstermek için, örnekleri sonucu yeni bir değişkende depolar. `string`Her bir örneği çalıştırdığınızda, özgün ve yeni ' yi inceleyebilirsiniz `string` .
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -68,7 +68,7 @@ Dizeler sabit olduğundan, önceki örneklerin tümü geçici dizeler veya karak
 
 :::code language="csharp" source="../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs" id="Snippet7":::
 
-Güvenli olmayan koda sahip sabit bir blokta bir dizeyi değiştirebilirsiniz ancak dize oluşturulduktan sonra dize içeriğinin değiştirilmesi **kesinlikle** önerilmez. Bunun yapılması, işlemleri öngörülemeyen yollarla bozacaktır. Örneğin, birisi sizinki ile aynı içeriğe sahip bir dizeyi birbirine kaydetirse, sizin kopyanızı alır ve dizenizi her zaman değiştirmenizi beklemez.
+Güvenli olmayan koda sahip sabit bir blokta bir dizeyi değiştirebilirsiniz, ancak bir dize oluşturulduktan sonra dize içeriğinin değiştirilmesi **kesinlikle** önerilmez. Bunun yapılması, işlemleri öngörülemeyen yollarla bozacaktır. Örneğin, birisi sizinki ile aynı içeriğe sahip bir dizeyi ele alıyorsa, sizin kopyanızı alır ve kendi dizesini değiştirmenizi beklemez.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

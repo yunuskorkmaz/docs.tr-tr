@@ -1,18 +1,19 @@
 ---
-title: 'Nasıl yapılır: Tasarım Zamanında Yeni Ayar Oluşturma'
+title: 'Nasıl Yapılır: Tasarım Zamanında Yeni Ayar Oluşturma'
+description: Visual Studio 'daki ayarlar tasarımcısını kullanarak tasarım zamanında yeni bir Windows Forms ayarı oluşturmayı öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: ce37b42191999e29de2f2f7f7e7abfa0ec3f4d47
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69037901"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325839"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Nasıl yapılır: Tasarım zamanında yeni bir ayar oluşturun
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Nasıl yapılır: tasarım zamanında yeni ayar oluşturma
 
 Tasarım zamanında, Visual Studio 'daki ayarlar tasarımcısını kullanarak yeni bir ayar oluşturabilirsiniz. Ayarlar Tasarımcısı, yeni ayarlar oluşturmanıza ve bu ayarlar için özellikleri belirtmenize olanak tanıyan bir kılavuz stili arabirimdir. Yeni ayarlarınız için ad, değer, tür ve kapsam belirtmeniz gerekir. Bir ayar oluşturulduktan sonra koddan erişilebilir.
 
@@ -40,4 +41,4 @@ Tasarım zamanında, Visual Studio 'daki ayarlar tasarımcısını kullanarak ye
 
 - [Uygulama Ayarları ve Kullanıcı Ayarlarını Kullanma](using-application-settings-and-user-settings.md)
 - [Uygulama Ayarlarına Genel Bakış](application-settings-overview.md)
-- [Nasıl yapılır: Tasarım zamanında mevcut bir ayarın değerini değiştirme](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Nasıl yapılır: Tasarım Zamanında Mevcut Bir Ayarın Değerini Değiştirme](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

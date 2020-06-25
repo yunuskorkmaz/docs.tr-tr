@@ -1,23 +1,23 @@
 ---
 title: Sekme tamamlamayı etkinleştirme
-description: Bu makalede, PowerShell, Bash ve zsh için .NET Core CLI için sekme tamamlamayı nasıl etkinleştirdiğinizi öğreter.
-author: thraka
+description: Bu makalede PowerShell, bash ve zsh için .NET Core CLI sekme tamamlamayı nasıl etkinleştireceğinizi öğretilir.
+author: adegeo
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 31328be14811760bc8d7fb527e0d55abfe6b1493
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 491e1ca34c20c3994a571fc2deff7392c6bdb3f2
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156757"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324384"
 ---
-# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI için TAB tamamlama nasıl etkinleştirilir?
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI için sekme tamamlamayı etkinleştirme
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 2.1 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-Bu makalede, üç kabuk, PowerShell, Bash ve zsh için sekme tamamlama yapılandırmak için nasıl açıklanır. Diğer kabuklar için sekme tamamlamanın nasıl yapılandırılabildiğini belgelemelerine bakın.
+Bu makalede, üç kabuk, PowerShell, bash ve zsh için sekme tamamlamayı yapılandırma açıklanmaktadır. Diğer kabuklar için sekme tamamlamayı yapılandırma hakkında daha fazla bilgi için belgelerine bakın.
 
-Ayarlandıktan sonra,.NET Core CLI için sekme tamamlama, kabuğuna bir `dotnet` komut yazıp TAB tuşuna basarak tetiklenir. Geçerli komut satırı komutana `dotnet complete` gönderilir ve sonuçlar kabuğunuz tarafından işlenir. Doğrudan `dotnet complete` komuta bir şey göndererek sekme tamamlamayı etkinleştirmeden sonuçları test edebilirsiniz. Örnek:
+Ayarladıktan sonra, .NET Core CLI için sekme tamamlama, `dotnet` kabuğa bir komut yazılarak ve ardından SEKME tuşuna basarak tetiklenir. Geçerli komut satırı `dotnet complete` komuta gönderilir ve sonuçlar kabuğunuz tarafından işlenir. Doğrudan komuta bir şey göndererek, sekme tamamlamayı etkinleştirmeden sonuçları test edebilirsiniz `dotnet complete` . Örneğin:
 
 ```console
 > dotnet complete "dotnet a"
@@ -28,25 +28,25 @@ migrate
 pack
 ```
 
-Bu komut çalışmıyorsa, .NET Core 2.0 SDK veya üzeri nin yüklü olduğundan emin olun. Yüklüyse, ancak bu komut hala çalışmıyorsa, komutun `dotnet` .NET Core 2.0 SDK ve üzeri bir sürüme göre çözüldüğünden emin olun. Geçerli `dotnet --version` `dotnet` yolunuzun hangi sürümüne çözüm bulmak için komutu kullanın. Daha fazla bilgi için [bkz.](../versions/selection.md)
+Bu komut işe yaramazsa, .NET Core 2,0 SDK veya üzeri 'ın yüklü olduğundan emin olun. Yüklüyse, ancak bu komut hala işe yaramazsa, `dotnet` komutun .NET Core 2,0 SDK ve üzeri bir sürüme çözümlendiğinden emin olun. `dotnet --version`Geçerli yolun hangi sürümünün çözümlenme olduğunu görmek için komutunu kullanın `dotnet` . Daha fazla bilgi için bkz. [kullanılacak .NET Core sürümünü seçme](../versions/selection.md).
 
 ### <a name="examples"></a>Örnekler
 
-Sekme tamamlamanın sağladığı bazı örnekler aşağıda verilmiştir:
+Aşağıda, hangi sekme tamamlanmasının sağladığı hakkında bazı örnekler verilmiştir:
 
-Girdi                                | Olur                                                                     | HTTPS
+Giriş                                | geldiğinde                                                                     | HTTPS
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
-`dotnet a⇥`                          | `dotnet add`                                                                 | `add`alfabetik olarak ilk alt komutudur.
-`dotnet add p⇥`                      | `dotnet add --help`                                                          | Sekme tamamlama substrings eşleşir ve `--help` ilk alfabetik olarak gelir.
-`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | Sekme ikinci kez basıldığında bir sonraki öneri gündeme getirir.
+`dotnet a⇥`                          | `dotnet add`                                                                 | `add`alfabetik olarak ilk alt komutu.
+`dotnet add p⇥`                      | `dotnet add --help`                                                          | Sekme tamamlama, alt dizeleri eşleştirir ve `--help` öncelikle alfabetik olarak gelir.
+`dotnet add p⇥⇥`                    | `dotnet add package`                                                          | İkinci kez Tab tuşlarına basmak sonraki öneriyi getirir.
 `dotnet add package Microsoft⇥`      | `dotnet add package Microsoft.ApplicationInsights.Web`                      | Sonuçlar alfabetik olarak döndürülür.
-`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | Sekme tamamlama proje dosyası nın farkındadır.
+`dotnet remove reference ⇥`          | `dotnet remove reference ..\..\src\OmniSharp.DotNet\OmniSharp.DotNet.csproj` | Sekme tamamlama proje dosyası farkınındır.
 
 ## <a name="powershell"></a>PowerShell
 
-.NET Core CLI için **PowerShell'e** sekme tamamlama eklemek için, değişkende `$PROFILE`depolanan profili oluşturun veya değiştirin. Daha fazla bilgi için [profilinizi, Profillerinizi](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) ve yürütme politikanızı nasıl oluşturabilirsiniz [abakın.](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)
+.NET Core CLI için **PowerShell** 'e sekme tamamlamayı eklemek için, değişkende depolanan profili oluşturun veya düzenleyin `$PROFILE` . Daha fazla bilgi için bkz. profil ve [profiller ve yürütme ilkeniz](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy) [oluşturma](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile) .
 
-Profilinize aşağıdaki kodu ekleyin:
+Aşağıdaki kodu profilinize ekleyin:
 
 ```powershell
 # PowerShell parameter completion shim for the dotnet CLI
@@ -60,7 +60,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
 
 ## <a name="bash"></a>bash
 
-.NET Core CLI için **bash** kabuğunuza sekme tamamlama eklemek `.bashrc` için dosyanıza aşağıdaki kodu ekleyin:
+.NET Core CLI için **Bash** kabuğunuzun sekme tamamlamayı eklemek için, dosyanıza aşağıdaki kodu ekleyin `.bashrc` :
 
 ```bash
 # bash parameter completion for the dotnet CLI
@@ -81,9 +81,9 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a>zş
+## <a name="zsh"></a>ZSH
 
-.NET Core CLI için **zsh** kabuğunuza sekme tamamlama eklemek `.zshrc` için dosyanıza aşağıdaki kodu ekleyin:
+.NET Core CLI için **ZSH** kabuğunuzun sekme tamamlamayı eklemek için, dosyanıza aşağıdaki kodu ekleyin `.zshrc` :
 
 ```zsh
 # zsh parameter completion for the dotnet CLI

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: aab59463daad30748277602b9ab1d8ca2f3fa1f5
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84767682"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85326032"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
@@ -52,7 +52,7 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core 
 
 2. `yelp_labelled.txt`Dosyayı daha önce oluşturduğunuz herhangi bir klasöre (örneğin,) kopyalayın `/cli-test` .
 
-3. Tercih ettiğiniz komut istemi ' ni açın ve veri kümesi dosyasını kopyaladığınız klasöre gidin. Örnek:
+3. Tercih ettiğiniz komut istemi ' ni açın ve veri kümesi dosyasını kopyaladığınız klasöre gidin. Örneğin:
 
     ```console
     cd /cli-test
@@ -175,7 +175,7 @@ Bu numaralandırılabilir varlıklar, öğreticinin aşağıdaki adımlarında a
         ```
 
     - Sonraki kod satırı, `ConsumeModel.Predict()` bir tahmin yapmak ve sonuçları döndürmek (ModelOutput.cs şemasına göre) için belirtilen giriş verilerinde yöntemini kullanır.
-    - Kodun son satırları, örnek verilerin (Bu örnekte açıklama) yanı sıra pozitif yaklaşım (1) ve olumsuz yaklaşım (2) için yaklaşım tahminini ve karşılık gelen puanları yazdırır.
+    - Kodun son satırları, örnek verilerin özelliklerini (Bu örnekte, yorum), yaklaşım tahminini ve olumlu yaklaşım (1) ve olumsuz yaklaşım (2) için karşılık gelen puanları yazdırır.
 
 1. Veri kümesinin ilk satırından yüklenen özgün örnek verileri kullanarak ya da kendi özel sabit kodlanmış örnek verilerinizi sağlayarak projeyi çalıştırın. Şu şekilde bir tahmin almanız gerekir:
 

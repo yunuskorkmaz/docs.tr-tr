@@ -1,35 +1,35 @@
 ---
-title: Windows, Linux ve macOS'ta yüklü .NET Core sürümlerini kontrol edin - .NET Core
-description: .NET Core'un bilgisayarınıza hangi sürümlerinin yüklendiği listelenmeyi öğrenin. Buna .NET Core çalışma zamanı ve SDK dahildir.
-author: thraka
+title: Windows, Linux ve macOS-.NET Core 'da yüklü .NET Core sürümlerini denetleyin
+description: Bilgisayarınızda hangi .NET Core sürümlerinin yüklü olduğunu nasıl listeleyeceğinizi öğrenin. Buna .NET Core çalışma zamanı ve SDK dahildir.
+author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645341"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324823"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core'un zaten yüklü olduğunu kontrol etme
+# <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core 'un zaten yüklü olduğunu denetleme
 
-Bu makalede, .NET Core çalışma zamanı ve SDK'nın hangi sürümlerinin bilgisayarınıza yüklendiği kontrol edilir. .NET core, Mac için Visual Studio veya Visual Studio gibi tümleşik bir geliştirme ortamınız varsa zaten yüklenmiş olabilir.
+Bu makalede, hangi .NET Core çalışma zamanı ve SDK sürümlerinin bilgisayarınızda yüklü olduğunu nasıl denetleriz öğretilir. Visual Studio veya Mac için Visual Studio gibi tümleşik bir geliştirme ortamınız varsa .NET Core zaten yüklü olabilir.
 
-Bir SDK yükleme ilgili çalışma süresini yükler.
+SDK yükleme, ilgili çalışma zamanını yüklenir.
 
-Bu makaledeki herhangi bir komut başarısız olursa, çalışma saatini veya SDK yüklü değil. Daha fazla bilgi için [.NET Core'u İndirve yükleyin.](index.md)
+Bu makaledeki herhangi bir komut başarısız olursa, çalışma zamanı veya SDK yüklü değildir. Daha fazla bilgi için bkz. [.NET Core 'U indirme ve yükleme](index.md).
 
-## <a name="check-sdk-versions"></a>SDK sürümlerini kontrol edin
+## <a name="check-sdk-versions"></a>SDK sürümlerini denetle
 
-.NET Core SDK'nın hangi sürümlerinin şu anda bir terminalle yüklü olduğunu görebilirsiniz. Bir terminal açın ve aşağıdaki komutu çalıştırın.
+Hangi .NET Core SDK sürümlerinin bir terminalle yüklü olduğunu görebilirsiniz. Bir Terminal açın ve aşağıdaki komutu çalıştırın.
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-Aşağıdakine benzer çıktı alırsınız.
+Aşağıdakine benzer bir çıktı alırsınız.
 
 ::: zone pivot="os-windows"
 
@@ -76,15 +76,15 @@ Aşağıdakine benzer çıktı alırsınız.
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>Çalışma zamanı sürümlerini denetleyin
+## <a name="check-runtime-versions"></a>Çalışma zamanı sürümlerini denetle
 
-.NET Core çalışma zamanının hangi sürümlerinin şu anda aşağıdaki komutla yüklenmiş olduğunu görebilirsiniz.
+Aşağıdaki komutla .NET Core çalışma zamanının hangi sürümlerinin yüklü olduğunu görebilirsiniz.
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-Aşağıdakine benzer çıktı alırsınız.
+Aşağıdakine benzer bir çıktı alırsınız.
 
 ::: zone pivot="os-windows"
 
@@ -166,56 +166,56 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ::: zone-end
 
-## <a name="check-for-install-folders"></a>Klasörleri yükle denetimini denetleme
+## <a name="check-for-install-folders"></a>Klasör yüklemeyi denetle
 
-.NET Core'un yüklü olması ancak işletim sisteminiz `PATH` veya kullanıcı profiliniz için değişkene eklenmemiş olması mümkündür. Önceki bölümlerdeki komutları çalıştırmak çalışmayabilir. Alternatif olarak, .NET Core yükleme klasörlerinin var olup olmadığını denetleyebilirsiniz.
+.NET Core 'un yüklü olması ancak `PATH` işletim sisteminizin veya Kullanıcı profilinizin değişkenine eklenmemiş olması olasıdır. Önceki bölümlerden komutlarının çalıştırılması çalışmayabilir. Alternatif olarak, .NET Core yüklemesi klasörlerinin mevcut olup olmadığını kontrol edebilirsiniz.
 
-.NET Core'u yükleyiciden veya komut dosyasından yüklediğinizde, standart bir klasöre yüklenir. .NET Core'u yüklemek için kullandığınız yükleyici veya komut dosyası çoğu zaman farklı bir klasöre yükleme seçeneği sunar. Farklı bir klasöre yüklemeyi seçerseniz, klasör yolunun başlangıcını ayarlayın.
+.NET Core 'u bir yükleyiciden veya betikten yüklediğinizde, bu bir standart klasöre yüklenir. .NET Core yüklemek için kullandığınız yükleyicinin veya betiğin çoğu zaman, farklı bir klasöre yükleme seçeneği sunar. Farklı bir klasöre yüklemeyi tercih ederseniz klasör yolunun başlangıcını ayarlayın.
 
 ::: zone pivot="os-windows"
 
-- **dotnet çalıştırılabilir**\
-_C:\\program\\dosyaları\\dotnet dotnet.exe_
+- **DotNet çalıştırılabilir**\
+_C: \\ Program Files \\ DotNet \\dotnet.exe_
 
 - **.NET SDK**\
-_C:\\program\\dosyaları\\dotnet sdk\\{sürüm}\\_
+_C: \\ Program Files \\ DotNet \\ SDK \\ {Version}\\_
 
-- **.NET Çalışma Süresi**\
-_C:\\program\\dosyaları\\dotnet paylaşılan\\{runtime-type}\\{version}\\_
+- **.NET çalışma zamanı**\
+_C: \\ Program Files \\ DotNet \\ paylaşılan \\ {Runtime-Type} \\ {Version}\\_
 
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-- **dotnet çalıştırılabilir**\
-_/home/user/share/dotnet/dotnet_
+- **DotNet çalıştırılabilir**\
+_/Home/user/Share/DotNet/DotNet_
 
 - **.NET SDK**\
-_/home/user/share/dotnet/sdk/{version}/_
+_/Home/user/Share/DotNet/SDK/{Version}/_
 
-- **.NET Çalışma Süresi**\
-_/home/user/share/dotnet/shared/{runtime-type}/{version}/_
+- **.NET çalışma zamanı**\
+_/Home/user/Share/DotNet/Shared/{Runtime-Type}/{Version}/_
 
 ::: zone-end
 
 ::: zone pivot="os-macos"
 
-- **dotnet çalıştırılabilir**\
-_/usr/local/share/dotnet/dotnet_
+- **DotNet çalıştırılabilir**\
+_/usr/local/share/DotNet/DotNet_
 
 - **.NET SDK**\
-_/usr/local/share/dotnet/sdk/{version}/_
+_/usr/local/share/DotNet/SDK/{Version}/_
 
-- **.NET Çalışma Süresi**\
-_/usr/local/share/dotnet/shared/{runtime-type}/{version}/_
+- **.NET çalışma zamanı**\
+_/usr/local/share/DotNet/Shared/{Runtime-Type}/{Version}/_
 
 ::: zone-end
 
 ## <a name="more-information"></a>Daha fazla bilgi
 
-Hem SDK sürümlerini hem de çalışma zamanı `dotnet --info`sürümlerini komutla görebilirsiniz. Ayrıca, işletim sistemi sürümü ve çalışma zamanı tanımlayıcısı (RID) gibi çevreyle ilgili diğer bilgileri de alırsınız.
+Komutuyla hem SDK sürümlerini hem de çalışma zamanı sürümlerini görebilirsiniz `dotnet --info` . Ayrıca, işletim sistemi sürümü ve çalışma zamanı tanımlayıcısı (RID) gibi diğer çevresel ilgili bilgileri de alacaksınız.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Çekirdek Çalışma Süresini yükleyin.](runtime.md)
-- [.NET Çekirdek SDK'yı yükleyin.](sdk.md)
+- [.NET Core çalışma zamanını yükler](runtime.md).
+- [.NET Core SDK 'ı yükler](sdk.md).

@@ -1,15 +1,15 @@
 ---
 title: OpenSUSE-.NET Core 'a .NET Core 'u yükler
 description: OpenSUSE üzerinde .NET Core SDK ve .NET Core çalışma zamanı yüklemesinin çeşitli yollarını gösterir.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: a642cee9ae78f81cd671d8745d5ce241be6a3b69
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84603050"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324753"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>OpenSUSE 'e .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 

@@ -1,5 +1,6 @@
 ---
 title: DataGridView Denetimindeki sütunları gizleme
+description: DataGridViewColumn. Visible özelliğini false olarak ayarlayarak Windows Forms DataGridView Denetimindeki sütunları gizlemeyi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +10,23 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 7ac6ccac5c02f014d5aa629956e51675cc60fddc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 46d7faea76098406b8e0a91d22922bf9ca391e28
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736565"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325905"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Gizleme
-Bazen, bir Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde kullanılabilir olan sütunlardan yalnızca bazılarını göstermek isteyeceksiniz. Örneğin, yönetim kimlik bilgilerine sahip kullanıcılara bir çalışan maaş sütununu diğer kullanıcılardan gizleyerek göstermek isteyebilirsiniz. Alternatif olarak, denetimi çok sayıda sütun içeren bir veri kaynağına ve yalnızca bir kısmını göstermek isteyebilirsiniz. Bu durumda, genellikle, görüntülemeden İlgilendiğiniz sütunları gizlemeniz yerine kaldıracaksınız.  
+Bazen Windows Forms denetiminde kullanılabilir olan sütunlardan yalnızca bazılarını göstermek isteyeceksiniz <xref:System.Windows.Forms.DataGridView> . Örneğin, yönetim kimlik bilgilerine sahip kullanıcılara bir çalışan maaş sütununu diğer kullanıcılardan gizleyerek göstermek isteyebilirsiniz. Alternatif olarak, denetimi çok sayıda sütun içeren bir veri kaynağına ve yalnızca bir kısmını göstermek isteyebilirsiniz. Bu durumda, genellikle, görüntülemeden İlgilendiğiniz sütunları gizlemeniz yerine kaldıracaksınız.  
   
- <xref:System.Windows.Forms.DataGridView> denetiminde, sütunun <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> Özellik değeri sütunun görüntülenip görüntülenmediğini belirler.  
+ <xref:System.Windows.Forms.DataGridView>Denetimde, <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> sütunun özellik değeri sütunun görüntülenip görüntülenmediğini belirler.  
   
  Visual Studio 'da bu görev için destek vardır.  Ayrıca bkz. [nasıl yapılır: Tasarımcıyı kullanarak Windows Forms DataGridView Denetimindeki sütunları gizleme](hide-columns-in-the-datagrid-using-the-designer.md).  
   
 ### <a name="to-hide-a-column-programmatically"></a>Bir sütunu programlı bir şekilde gizlemek için  
   
-- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> özelliğini `false`olarak ayarlayın. Veri bağlama sırasında otomatik olarak oluşturulan bir `CustomerID` sütununu gizlemek için, aşağıdaki kod örneğini bir <xref:System.Windows.Forms.DataGridView.DataBindingComplete> olay işleyicisine yerleştirin.  
+- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>Özelliğini olarak ayarlayın `false` . `CustomerID`Veri bağlama sırasında otomatik olarak oluşturulan bir sütunu gizlemek için aşağıdaki kod örneğini bir <xref:System.Windows.Forms.DataGridView.DataBindingComplete> olay işleyicisine yerleştirin.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  
@@ -33,9 +34,9 @@ Bazen, bir Windows Forms <xref:System.Windows.Forms.DataGridView> denetiminde ku
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
-- `CustomerID`adlı bir sütun içeren `dataGridView1` adlı <xref:System.Windows.Forms.DataGridView> denetim.  
+- Adında <xref:System.Windows.Forms.DataGridView> `dataGridView1` bir sütun içeren adlı bir denetim `CustomerID` .  
   
-- <xref:System?displayProperty=nameWithType> ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
+- <xref:System?displayProperty=nameWithType>Ve <xref:System.Windows.Forms?displayProperty=nameWithType> derlemelerine başvurular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

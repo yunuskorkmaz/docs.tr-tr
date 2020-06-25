@@ -1,23 +1,23 @@
 ---
-title: Protobuf mesajları - WCF geliştiricileri için gRPC
-description: Protobuf iletilerinin IDL'de nasıl tanımlandığını ve C#'da nasıl oluşturulduğunu öğrenin.
+title: Prototipsiz iletiler-WCF geliştiricileri için gRPC
+description: Prototipme iletilerinin IDL 'de nasıl tanımlandığını ve C# dilinde oluşturulduğunu öğrenin.
 ms.date: 09/09/2019
-ms.openlocfilehash: 5b3d4383de39a3785ef804fec21939a740f54669
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fc7b9c34810abaa8d674af56d1517a5cf87521b
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147990"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325043"
 ---
 # <a name="protobuf-messages"></a>Protobuf iletileri
 
-Bu bölümde, dosyalarda `.proto` Protokol Arabelleği (Protobuf) iletilerinin nasıl beyan edilebildiğini kapsar. Alan sayıları ve türlerinin temel kavramlarını açıklar ve `protoc` derleyicinin oluşturduğu C# koduna bakar.
+Bu bölümde, dosyalardaki protokol arabelleği (Protoarabelleği) iletilerinin nasıl bildirildiği ele alınmaktadır `.proto` . Alan numaralarının ve türlerinin temel kavramlarını açıklar ve derleyicinin oluşturduğu C# koduna bakar `protoc` .
 
-Bölümün geri kalanı, Farklı veri türlerinin Protobuf'ta nasıl temsil edildiğine daha ayrıntılı olarak bakacaktır.
+Bölümün geri kalanı, farklı veri türlerinin prototipte nasıl temsil edildiği konusunda daha ayrıntılı bilgi sağlayacaktır.
 
 ## <a name="declaring-a-message"></a>İleti bildirme
 
-Windows Communication Foundation'da (WCF) bir borsa işlem uygulaması `Stock` sınıfı aşağıdaki örnek gibi tanımlanabilir:
+Windows Communication Foundation (WCF) ' de, `Stock` hisse senedi Market Ticari uygulaması için bir sınıf aşağıdaki örnekte olduğu gibi tanımlanabilir:
 
 ```csharp
 namespace TraderSys
@@ -37,10 +37,10 @@ namespace TraderSys
 }
 ```
 
-Protobuf'ta eşdeğer sınıfı uygulamak için dosyada `.proto` beyan etmeniz gerekir. Derleyici `protoc` daha sonra yapı işleminin bir parçası olarak .NET sınıfını oluşturur.
+Protoarabelleğe denk sınıfı uygulamak için, `.proto` dosyayı dosyada bildirmeniz gerekir. `protoc`Derleyici daha sonra yapı sürecinin bir parçası olarak .NET sınıfını oluşturur.
 
 ```protobuf
-syntax "proto3";
+syntax = "proto3";
 
 option csharp_namespace = "TraderSys";
 
@@ -54,28 +54,28 @@ message Stock {
 }  
 ```
 
-İlk satır, kullanılan sözdizimi sürümünü bildirir. Dilin 3 sürümü 2016 yılında piyasaya sürüldü. GRPC hizmetleri için önerdiğimiz sürümdür.
+İlk satır, kullanılmakta olan sözdizimi sürümünü bildirir. Dilin sürüm 3 2016 ' de yayımlanmıştır. Bu, gRPC Hizmetleri için önerdiğimiz sürümdür.
 
-Satır, `option csharp_namespace` oluşturulan C# türleri için kullanılacak ad alanını belirtir. `.proto` Dosya diğer diller için derlendiğinde bu seçenek yoksayılır. Protobuf dosyaları genellikle birkaç dil için dile özgü seçenekler içerir.
+`option csharp_namespace`Satır, oluşturulan C# türleri için kullanılacak ad alanını belirtir. Bu seçenek, `.proto` dosya diğer diller için derlendiğinde yok sayılır. Prototip dosyaları genellikle birkaç dil için dile özgü seçenekler içerir.
 
-İleti `Stock` tanımı dört alan belirtir. Her birinin bir türü, adı ve bir alan numarası vardır.
+`Stock`İleti tanımı dört alanı belirtir. Her birinin bir türü, adı ve alan numarası vardır.
 
 ## <a name="field-numbers"></a>Alan numaraları
 
-Alan numaraları Protobuf önemli bir parçasıdır. İkili kodlanmış verilerdeki alanları tanımlamak için kullanılırlar, bu da hizmetin sürümünden sürümüne değiştirilemeyecekleri anlamına gelir. Avantajı geriye dönük uyumluluk ve ileri uyumluluk mümkün olmasıdır. İstemciler ve hizmetler, eksik değerler olasılığı işlendiği sürece, bilmedikleri alan numaralarını yok sayacaktır.
+Alan numaraları, prototipin önemli bir parçasıdır. Bunlar, ikili kodlu verilerdeki alanları tanımlamak için kullanılır. Bu, sürümden hizmetinizin sürümüne değiştiremeyeceği anlamına gelir. Bunun avantajı, geriye dönük uyumluluk ve ileriye doğru uyumluluk olanaklarından yararlanabilmektir. Eksik değer olasılığı işlendiği sürece, istemciler ve hizmetler, hakkında bilgi sahibi olmadıkları alan numaralarını yok sayacaktır.
 
-İkili biçimde, alan numarası bir tür tanımlayıcısı ile birleştirilir. 1'den 15'e kadar alan numaraları, tek bir bayt olarak kendi türüyle kodlanabilir. 16 ile 2,047 arası sayılar 2 bayt alır. Herhangi bir nedenle bir iletide 2.047'den fazla alana ihtiyacınız varsa daha yükseğe çıkabilirsiniz. 1 ile 15 arasında alan numaraları için tek bayt tanımlayıcıları daha iyi performans sunar, bu nedenle bunları en temel, en sık kullanılan alanlar için kullanmalısınız.
+İkili biçimde, alan numarası bir tür tanımlayıcısıyla birleştirilir. 1 ile 15 arasında alan numaraları, tek bir bayt olarak türlerine göre kodlanabilir. 16 ile 2.047 arasında sayılar 2 bayt sürer. Herhangi bir nedenden dolayı bir ileti üzerinde 2.047 ' den fazla alana ihtiyacınız varsa daha yüksek bir değere geçebilirsiniz. 1 ile 15 arasındaki alan numaralarının tek baytlık tanımlayıcıları daha iyi performans sağlar, bu nedenle bunları en temel, sık kullanılan alanlar için kullanmanız gerekir.
 
 ## <a name="types"></a>Türler
 
-Tür bildirimleri, [bir sonraki bölümde](protobuf-data-types.md)daha ayrıntılı olarak tartışılan Protobuf'un yerel skaler veri türlerini kullanıyor. Bu bölümün geri kalanı Protobuf'un yerleşik türlerini kapsayacak ve bunların ortak .NET türleri ile nasıl ilişkili olduğunu gösterir.
+Tür bildirimleri, [sonraki bölümde](protobuf-data-types.md)daha ayrıntılı bir şekilde ele alınan Prototiparabelleği yerel skaler veri türlerini kullanıyor. Bu bölümün geri kalanı, prototipin yerleşik türlerini kapsayacak ve bunların ortak .NET türleriyle ilişkisini göstermeyecektir.
 
 > [!NOTE]
-> Protobuf yerel olarak bir `decimal` türü desteklemez, bu nedenle `double` bunun yerine kullanılır. Tam ondalık kesinlik gerektiren uygulamalar için, bu bölümün bir sonraki bölümünde [ondalık sayılar bölümüne](protobuf-data-types.md#decimals) bakın.
+> Prototip `decimal` , bir türü yerel olarak desteklemez, `double` bunun yerine kullanılır. Tam ondalık duyarlık gerektiren uygulamalar için, bu bölümün sonraki bölümünde yer [alan Ondalıklar bölümüne](protobuf-data-types.md#decimals) bakın.
 
 ## <a name="the-generated-code"></a>Oluşturulan kod
 
-Uygulamanızı oluşturduğunuzda, Protobuf iletilerinizin her biri için sınıflar oluşturur ve yerel türlerini C# türleri ile eşler. Oluşturulan `Stock` tür aşağıdaki imzaya sahip olacaktır:
+Uygulamanızı yapılandırdığınızda, Prototipsiz iletilerinizin her biri için sınıflar oluşturur ve yerel türlerini C# türlerine eşleyerek. Oluşturulan `Stock` tür aşağıdaki imzaya sahip olacaktır:
 
 ```csharp
 public class Stock
@@ -87,12 +87,12 @@ public class Stock
 }
 ```
 
-Oluşturulan gerçek kod bundan çok daha karmaşıktır. Bunun nedeni, her sınıfın kendisini ikili tel biçimine seri hale getirmek ve deserialize etmek için gereken tüm kodu içermesidir.
+Oluşturulan gerçek kod bundan çok daha karmaşıktır. Bunun nedeni, her bir sınıfın kendisini seri hale getirmek için gereken tüm kodu ve ikili tel biçiminde seri durumdan çıkarmak için gerekli olduğunu içerir.
 
 ### <a name="property-names"></a>Özellik adları
 
-Protobuf derleyicisinin dosyada olmalarına `PascalCase` `snake_case` rağmen özellik adlarına uygulandığını `.proto` unutmayın. [Protobuf stil kılavuzu,](https://developers.google.com/protocol-buffers/docs/style) `snake_case` diğer platformlar için kod oluşturmanın kendi kuralları için beklenen örneği üretecek şekilde ileti tanımlarınızda kullanılmasını önerir.
+Prototip derleyicisinin, `PascalCase` dosyasında olmasına rağmen özellik adlarına uygulandığını unutmayın `snake_case` `.proto` . [Prototipli Stil Kılavuzu](https://developers.google.com/protocol-buffers/docs/style) , `snake_case` diğer platformlar için kod oluşturmanın, kuralları için beklenen durumu üretmeleri için ileti tanımlarınızda kullanılmasını önerir.
 
 >[!div class="step-by-step"]
->[Önceki](protocol-buffers.md)
->[Sonraki](protobuf-data-types.md)
+>[Önceki](protocol-buffers.md) 
+> [Sonraki](protobuf-data-types.md)

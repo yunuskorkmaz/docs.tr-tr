@@ -4,12 +4,12 @@ description: .NET Core ve .NET Standard projeleri için Code Quality ve esnekli�
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 9115ff69b269e3723820fd8505d1a9f8ca278d12
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a879c16e48dfde617f9cd20f58cab96039361f0
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989375"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324482"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core ve .NET Standard ile birim testi en iyi uygulamaları
 
@@ -24,7 +24,7 @@ Bu kılavuzda, testlerinizi dayanıklı ve kolay bir şekilde anlamak için biri
 ### <a name="less-time-performing-functional-tests"></a>İşlevsel testleri daha az zaman gerçekleştiriyor
 İşlevsel testler pahalıdır. Genellikle uygulamayı açıp, beklenen davranışı doğrulamak için sizin (ya da başka birinin) izlemeniz gereken bir dizi adımı gerçekleştirerek. Bu adımlar, her zaman sınayıcı tarafından bilinmeyebilir, bu da testi yürütmek için alana daha bilgili bir kişiye ulaşmaları gerektiği anlamına gelir. Kendisini test etmek, önemsiz değişiklikler için saniye veya daha büyük değişiklikler için dakikalar alabilir. Son olarak, bu işlem sistemde yaptığınız her değişiklik için tekrarlanmış olmalıdır.
 
-Diğer yandan birim testleri, diğer taraftan, bir düğmeye basarak çalıştırılabilir ve çok büyük bir sistem bilgisi gerektirmez. Testin başarılı veya başarısız olmasına bakılmaksızın, bireysel olarak değil Test Çalıştırıcısına.
+Diğer yandan birim testleri, diğer taraftan, bir düğmenin basakında çalışabilir ve çok büyük bir sistem bilgisi gerektirmez. Testin başarılı veya başarısız olmasına bakılmaksızın, bireysel olarak değil Test Çalıştırıcısına.
 
 ### <a name="protection-against-regression"></a>Gerileme karşı koruma
 Gerileme hataları, uygulamada bir değişiklik yapıldığında ortaya çıkan arızalardır. Test ediciler için, yalnızca yeni özelliklerini test etmek ve daha önce uygulanan özelliklerin beklendiği gibi çalıştığını doğrulamak için önceden varolan özellikleri test etmek yaygın bir özelliktir.
@@ -53,14 +53,14 @@ Kodunuz için yazma testleri doğal olarak kodunuzu ayırır, çünkü aksi takd
 
 Yüksek kod kapsamı yüzdesi genellikle daha yüksek bir kod kalitesiyle ilişkilendirilir. Ancak, *ölçümün kendisi kodun kalitesini belirleyemez.* Aşırı hırslı kod kapsamı yüzdesi hedefini ayarlamak, karşı üretken olabilir. Binlerce koşullu dalı olan karmaşık bir projeyi düşünün ve %95 kod kapsamının hedefini ayarlayadığınızı düşünelim. Şu anda proje %90 kod kapsamını tutar. Kalan %5 ' teki tüm uç durumlarının hesaba alınması için gereken süre, büyük ölçüde düşük bir miktar olabilir ve değer teklifi hızla azalmıştır.
 
-Yüksek kod kapsamı yüzdesi başarı göstergesi değildir ve yüksek kod kalitesini göstermez. It tist, birim testlerin kapsadığı kod miktarını temsil eder. Daha fazla bilgi için bkz. [birim testi kod kapsamı](unit-testing-code-coverage.md).
+Yüksek kod kapsamı yüzdesi başarı göstergesi değildir ve yüksek kod kalitesini göstermez. Yalnızca birim testleri kapsamındaki kod miktarını temsil eder. Daha fazla bilgi için bkz. [birim testi kod kapsamı](unit-testing-code-coverage.md).
 
 ## <a name="lets-speak-the-same-language"></a>Aynı dili konuşalım
-Test hakkında konuşurken, *sahte* terimi çok yanlış bir şekilde görülür. Aşağıda birim testlerini yazarken en yaygın *Fakes* türleri tanımlanmaktadır:
+Test hakkında konuşurken, *sahte* terimi genellikle kötüye kullanılır. Aşağıdaki noktaları, birim testlerini yazarken en yaygın *Fakes* türlerini tanımlar:
 
-*Sahte* -sahte, bir saplama ya da bir sahte nesne tanımlamakta kullanılabilecek genel bir terimdir. Bunun bir saplama veya bir sahte olup olmadığı, kullanıldığı bağlama göre değişir. Diğer bir deyişle, sahte bir saplama veya bir sahte olabilir.
+*Sahte* -sahte, bir saplama veya bir sahte nesne tanımlamakta kullanılabilecek genel bir terimdir. Bunun bir saplama veya bir sahte olup olmadığı, kullanıldığı bağlama göre değişir. Diğer bir deyişle, sahte bir saplama veya bir sahte olabilir.
 
-*Sahte nesne* , sistem içindeki bir birim testinin geçtiğini veya başarısız olduğunu belirten sahte bir nesnedir. Bir sahte, bir öne çıkana kadar sahte olarak başlatılır.
+*Sahte nesne* , sistem içindeki bir birim testinin geçtiğini veya başarısız olduğunu belirten sahte bir nesnedir. Bir sahte, buna karşılık gelene kadar sahte olarak başlatılır.
 
 *Saplama* -bir saplama, sistemdeki mevcut bir bağımlılık (veya ortak çalışan) için denetlenebilir bir değiştirme işlemi olur. Bir saplama kullanarak, doğrudan bağımlılık ile ilgilenmeden kodunuzu test edebilirsiniz. Varsayılan olarak, sahte bir saplama olarak başlatılır.
 
@@ -75,7 +75,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Bu, sahte olarak başvurulan bir saplama örneği olacaktır. Bu durumda, bir saplama olur. Siparişi, örneklendirilecek (test edilen sistem) bir yol olarak geçiriyoruz `Purchase` . Ad `MockOrder` aynı zamanda çok yanıltıcı olduğundan, sıra bir sahte değildir.
+Bu, sahte olarak başvurulan bir saplama örneği olacaktır. Bu durumda, bir saplama olur. Siparişi, örneklendirilecek (test edilen sistem) bir yol olarak geçiriyoruz `Purchase` . Ad `MockOrder` aynı zamanda yanıltıcı olduğundan, sıra bir sahte değildir.
 
 Daha iyi bir yaklaşım
 
@@ -88,7 +88,7 @@ purchase.ValidateOrders();
 Assert.True(purchase.CanBeShipped);
 ```
 
-Sınıfını olarak yeniden adlandırarak, sınıfı çok `FakeOrder` daha genel hale getirdiğiniz için sınıf, bir sahte veya saplama olarak kullanılabilir. Test çalışması için ne olursa daha iyidir. Yukarıdaki örnekte, `FakeOrder` bir saplama olarak kullanılır. `FakeOrder`Onaylama sırasında herhangi bir şekil veya formda öğesini kullanmıyoruz. `FakeOrder``Purchase`, oluşturucunun gereksinimlerini karşılamak için yalnızca sınıfa geçildi.
+Sınıfını olarak yeniden adlandırarak, sınıfı çok `FakeOrder` daha genel hale getirdiğiniz için sınıf, bir sahte veya saplama olarak kullanılabilir. Test çalışması için ne olursa daha iyidir. Yukarıdaki örnekte, `FakeOrder` bir saplama olarak kullanılır. `FakeOrder`Onaylama sırasında herhangi bir şekil veya formda öğesini kullanmıyoruz. `FakeOrder``Purchase`, oluşturucunun gereksinimlerini karşılamak için sınıfına geçildi.
 
 Bunu bir sahte olarak kullanmak için şöyle bir şey yapabilirsiniz
 
@@ -157,7 +157,7 @@ Bir birim testinde kullanılacak giriş, şu anda sınamakta olduğunuz davranı
 - Testler, kod temelinin gelecekteki değişikliklerine daha dayanıklı hale gelir.
 - Uygulama üzerinde test davranışına daha yakın.
 
-Testi geçirmek için gerekenden daha fazla bilgi içeren testlerin, teste hata ekleme şansı daha yüksektir ve testin amacını daha az net hale getirebilirsiniz. Testleri yazarken, davranışa odaklanmak istediğiniz zaman. Modellerdeki ek özellikleri ayarlama veya gerekmediği zaman sıfır olmayan değerler kullanma, yalnızca kanıtlamaya çalıştığınız kadar olan özelliklerden arının.
+Testi geçirmek için gerekenden daha fazla bilgi içeren testlerin, teste hata ekleme şansı daha yüksektir ve testin amacını daha az net hale getirebilirsiniz. Testleri yazarken davranışa odaklanmak istersiniz. Modellerdeki ek özellikleri ayarlama veya gerekmediği zaman sıfır olmayan değerler kullanma, yalnızca kanıtlamaya çalıştığınız kadar olan özelliklerden arının.
 
 #### <a name="bad"></a>Kötü:
 [!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
@@ -210,7 +210,7 @@ Testleriniz için benzer bir nesne veya durum gerekiyorsa, kurulum ve Tearı öz
 
 - Tüm kod her test içinde görünür olduğundan testleri okurken daha az karışıklık vardır.
 - Verilen test için çok fazla veya çok az olma olasılığı daha düşüktür.
-- Aralarında istenmeyen bağımlılıklar oluşturan testler arasında durum paylaşma şansı daha düşüktür.
+- Testler arasında istenmeyen bağımlılıklar oluşturan testler arasında durum paylaşma şansı daha düşüktür.
 
 Birim testi çerçeveleri ' nde, `Setup` test paketinizdeki her bir ve her birim testinin önünde çağrılır. Bazıları bunu yararlı bir araç olarak görebilir, ancak testleri okumak için genellikle önde gelen ve zor olacak şekilde sona erer. Her test, testi çalıştırmak ve çalıştırmak için genellikle farklı gereksinimlere sahip olur. Ne yazık ki, `Setup` her test için tam olarak aynı gereksinimleri kullanmanıza zorlar.
 
@@ -294,7 +294,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 Bu görüş açısından, özel bir yöntem görürseniz ortak yöntemi bulun ve testlerinizi bu yönteme göre yazın. Özel bir yöntem beklenen sonucu döndürdüğünden, sonuçta özel yöntemi çağıran sistem sonucu doğru bir şekilde kullanır.
 
 ### <a name="stub-static-references"></a>Saplama statik başvuruları
-Bir birim testinin prensipleri, test altındaki sistem üzerinde tam denetime sahip olması gerekir. Bu, üretim kodu statik başvurulara çağrı içerdiğinde (ör.) sorunlu olabilir `DateTime.Now` . Aşağıdaki kodu göz önünde bulundurun
+Bir birim testinin prensipleri, test altındaki sistem üzerinde tam denetime sahip olması gerekir. Bu, üretim kodu statik başvurulara çağrı içerdiğinde (örneğin,) sorunlu olabilir `DateTime.Now` . Aşağıdaki kodu göz önünde bulundurun
 
 ```csharp
 public int GetDiscountedPrice(int price)

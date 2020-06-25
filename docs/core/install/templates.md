@@ -1,19 +1,19 @@
 ---
 title: SDK şablonlarını yükleyip yönetme-.NET Core
 description: .NET Core şablonlarının Windows, Linux ve macOS 'a nasıl yükleneceğini öğrenin.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 04/24/2020
 zone_pivot_groups: operating-systems-set-one
 no-loc:
 - dotnet new
 - dotnet nuget add source
-ms.openlocfilehash: 0a3c8655d55bf63de1e91337ce3a2ac399b07d0f
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 09acae1409eb0492be10bd3a61b14da5be57c6c7
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200617"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324487"
 ---
 # <a name="manage-net-project-and-item-templates"></a>.NET projesi ve öğe şablonlarını yönetme
 
@@ -23,13 +23,13 @@ ms.locfileid: "82200617"
 
 ## <a name="install-template"></a>Şablonu yükler
 
-Şablonlar `-i` parametresi ile [DotNet yeni](../tools/dotnet-new.md) SDK komutu aracılığıyla yüklenir. Bir şablonun NuGet paket tanımlayıcısını ya da şablon dosyalarını içeren bir klasörü sağlayabilirsiniz.
+Şablonlar [dotnet new](../tools/dotnet-new.md) , parametresiyle SDK komutu aracılığıyla yüklenir `-i` . Bir şablonun NuGet paket tanımlayıcısını ya da şablon dosyalarını içeren bir klasörü sağlayabilirsiniz.
 
 ### <a name="nuget-hosted-package"></a>NuGet barındırılan paketi
 
 .NET CLı şablonları, geniş dağıtım için [NuGet](https://www.nuget.org/) 'e yüklenir. Şablonlar, özel bir akıştan da yüklenebilir. Bir şablonu bir NuGet akışına yüklemek yerine, [Yerel NuGet paketi](#local-nuget-package) bölümünde açıklandığı gibi *nupkg* şablon dosyaları dağıtılabilir ve el ile yüklenebilir.
 
-NuGet akışlarını yapılandırma hakkında daha fazla bilgi için bkz. [DotNet NuGet Add Source](../tools/dotnet-nuget-add-source.md).
+NuGet akışlarını yapılandırma hakkında daha fazla bilgi için bkz [dotnet nuget add source](../tools/dotnet-nuget-add-source.md) ..
 
 Varsayılan NuGet akışından bir şablon paketi yüklemek için şu `dotnet new -i {package-id}` komutu kullanın:
 
@@ -65,7 +65,7 @@ dotnet new -i ~/code/nuget-packages/Some.Templates.1.0.0.nupkg
 
 ### <a name="folder"></a>Klasör
 
-Bir *nupkg* dosyasından şablon yüklemeye alternatif olarak, bir klasörden şablonları doğrudan `dotnet new -i {folder-path}` komutuyla da yükleyebilirsiniz. Belirtilen klasör, bulunan herhangi bir şablon için şablon paketi tanımlayıcısı olarak değerlendirilir. Belirtilen klasör hiyerarşisinde bulunan tüm şablon yüklendi.
+Bir *nupkg* dosyasından şablon yüklemeye alternatif olarak, bir klasörden şablonları doğrudan komutuyla da yükleyebilirsiniz `dotnet new -i {folder-path}` . Belirtilen klasör, bulunan herhangi bir şablon için şablon paketi tanımlayıcısı olarak değerlendirilir. Belirtilen klasör hiyerarşisinde bulunan tüm şablon yüklendi.
 
 ::: zone pivot="os-windows"
 
@@ -83,7 +83,7 @@ dotnet new -i ~/code/nuget-packages/some-folder/
 
 ::: zone-end
 
-Komutta `{folder-path}` belirtilen, bulunan tüm şablonlar için şablon paketi tanımlayıcısı olur. [Liste şablonları](#list-templates) bölümünde belirtildiği gibi, `dotnet new -u` komutuyla yüklenmiş şablonların bir listesini alabilirsiniz. Bu örnekte, şablon paketi tanımlayıcısı, yüklemesi için kullanılan klasör olarak gösterilir:
+`{folder-path}`Komutta belirtilen, bulunan tüm şablonlar için şablon paketi tanımlayıcısı olur. [Liste şablonları](#list-templates) bölümünde belirtildiği gibi, komutuyla yüklenmiş şablonların bir listesini alabilirsiniz `dotnet new -u` . Bu örnekte, şablon paketi tanımlayıcısı, yüklemesi için kullanılan klasör olarak gösterilir:
 
 ::: zone pivot="os-windows"
 
@@ -127,13 +127,13 @@ Currently installed items:
 
 ## <a name="uninstall-template"></a>Şablonu kaldır
 
-Şablonlar `-u` parametresi ile [DotNet yeni](../tools/dotnet-new.md) SDK komutu aracılığıyla kaldırılır. Bir şablonun NuGet paket tanımlayıcısını ya da şablon dosyalarını içeren bir klasörü sağlayabilirsiniz.
+Şablonlar, [dotnet new](../tools/dotnet-new.md) parametresiyle SDK komutu aracılığıyla kaldırılır `-u` . Bir şablonun NuGet paket tanımlayıcısını ya da şablon dosyalarını içeren bir klasörü sağlayabilirsiniz.
 
 ### <a name="nuget-package"></a>NuGet paketi
 
 NuGet şablon paketi yüklendikten sonra, bir NuGet akışından veya *nupkg* dosyasından, NuGet paket tanımlayıcısına başvurarak uygulamayı kaldırabilirsiniz.
 
-Bir şablon paketini kaldırmak için şu `dotnet new -u {package-id}` komutu kullanın:
+Bir şablon paketini kaldırmak için şu komutu kullanın `dotnet new -u {package-id}` :
 
 ```dotnetcli
 dotnet new -u Microsoft.DotNet.Web.Spa.ProjectTemplates
@@ -143,7 +143,7 @@ dotnet new -u Microsoft.DotNet.Web.Spa.ProjectTemplates
 
 Şablonlar bir [klasör yolu](#folder)aracılığıyla yüklendiğinde, klasör yolu şablon paketi tanımlayıcısı olur.
 
-Bir şablon paketini kaldırmak için şu `dotnet new -u {package-folder-path}` komutu kullanın:
+Bir şablon paketini kaldırmak için şu komutu kullanın `dotnet new -u {package-folder-path}` :
 
 ::: zone pivot="os-windows"
 

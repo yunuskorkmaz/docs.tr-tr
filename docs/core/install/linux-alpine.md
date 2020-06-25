@@ -1,15 +1,15 @@
 ---
 title: Alp-.NET Core 'a .NET Core 'u yükler
 description: .NET Core SDK ve .NET Core çalışma zamanını alp 'ye yüklemenin çeşitli yollarını gösterir.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: bbaf4ee9020dcd33c894b5376bf04ad65db8d378
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84771505"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324833"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Alp 'de .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 

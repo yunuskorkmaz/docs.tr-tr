@@ -1,17 +1,17 @@
 ---
 title: Windows, Linux ve macOS-.NET Core 'a .NET Core çalışma zamanı 'nı yükler
 description: Windows, Linux ve macOS 'ta .NET Core 'u yüklemeyi öğrenin. .NET Core uygulamalarını çalıştırmak için gereken bağımlılıkları bulur.
-author: thraka
+author: adegeo
 ms.author: adegeo
 ms.date: 05/04/2020
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d3f7083366e2019d01884b5dff6e60d05ed565dd
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 6a0390ff1db900815628e4c7eb69e7a6c5f148a8
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768293"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324602"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core çalışma zamanını yükler
 

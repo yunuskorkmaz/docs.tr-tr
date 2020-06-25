@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 4ce32c766e7a454c1294eb38266a84602cf8e241
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245641"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85325934"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış Depolama
 <a name="top"></a>Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerle ilişkilendirmenin standartlaştırılmış yollarını tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.
@@ -122,12 +122,12 @@ __Bu bölüm aşağıdaki çerçeveler için geçerlidir:__
 
 Makine genelindeki kapsamdan okunan aşağıdaki API 'lerden herhangi birini çağıran bileşenler veya uygulamalar:
 
- * [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), IsolatedStorageScope. Machine bayrağını içeren bir kapsam geçiyor
- * [IsolatedStorageFile. Getlarinesinestoreforapplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
- * [IsolatedStorageFile. Getlarinesinestoreforassembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
- * [IsolatedStorageFile. Getlarinesinestorefordomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
- * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), IsolatedStorageScope. Machine bayrağını içeren bir kapsam geçiyor
- * [IsolatedStorageFile.](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)bayrak içeren bir kapsamı geçirerek Kaldır `IsolatedStorageScope.Machine`
+* [IsolatedStorageFile. GetEnumerator](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getenumerator), IsolatedStorageScope. Machine bayrağını içeren bir kapsam geçiyor
+* [IsolatedStorageFile. Getlarinesinestoreforapplication](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforapplication)
+* [IsolatedStorageFile. Getlarinesinestoreforassembly](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestoreforassembly)
+* [IsolatedStorageFile. Getlarinesinestorefordomain](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getmachinestorefordomain)
+* [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), IsolatedStorageScope. Machine bayrağını içeren bir kapsam geçiyor
+* [IsolatedStorageFile.](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)bayrak içeren bir kapsamı geçirerek Kaldır `IsolatedStorageScope.Machine`
 
 [Yalıtılmış depolama aracı](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) , `storeadm.exe` `/machine` aşağıdaki kodda gösterildiği gibi anahtarla çağrılırsa etkilenir:
 
