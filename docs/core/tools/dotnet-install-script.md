@@ -2,22 +2,22 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 04/30/2020
-ms.openlocfilehash: 464e6fafa1c2e661892bcb3b35ba172ca1d7e76b
-ms.sourcegitcommit: 6219b1e1feccb16d88656444210fed3297f5611e
+ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
+ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85141249"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85324422"
 ---
-# <a name="dotnet-install-scripts-reference"></a><span data-ttu-id="f9249-103">DotNet-betiklerin başvurusunu yüklemeyi</span><span class="sxs-lookup"><span data-stu-id="f9249-103">dotnet-install scripts reference</span></span>
+# <a name="dotnet-install-scripts-reference"></a><span data-ttu-id="bf60c-103">DotNet-betiklerin başvurusunu yüklemeyi</span><span class="sxs-lookup"><span data-stu-id="bf60c-103">dotnet-install scripts reference</span></span>
 
-## <a name="name"></a><span data-ttu-id="f9249-104">Name</span><span class="sxs-lookup"><span data-stu-id="f9249-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="bf60c-104">Name</span><span class="sxs-lookup"><span data-stu-id="bf60c-104">Name</span></span>
 
-<span data-ttu-id="f9249-105">`dotnet-install.ps1` | `dotnet-install.sh`-.NET Core SDK ve paylaşılan çalışma zamanını yüklemek için kullanılan betik.</span><span class="sxs-lookup"><span data-stu-id="f9249-105">`dotnet-install.ps1` | `dotnet-install.sh` - Script used to install the .NET Core SDK and the shared runtime.</span></span>
+<span data-ttu-id="bf60c-105">`dotnet-install.ps1` | `dotnet-install.sh`-.NET Core SDK ve paylaşılan çalışma zamanını yüklemek için kullanılan betik.</span><span class="sxs-lookup"><span data-stu-id="bf60c-105">`dotnet-install.ps1` | `dotnet-install.sh` - Script used to install the .NET Core SDK and the shared runtime.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="f9249-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="f9249-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="bf60c-106">Özeti</span><span class="sxs-lookup"><span data-stu-id="bf60c-106">Synopsis</span></span>
 
-<span data-ttu-id="f9249-107">Windows:</span><span class="sxs-lookup"><span data-stu-id="f9249-107">Windows:</span></span>
+<span data-ttu-id="bf60c-107">Windows:</span><span class="sxs-lookup"><span data-stu-id="bf60c-107">Windows:</span></span>
 
 ```powershell
 dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 Get-Help ./dotnet-install.ps1
 ```
 
-<span data-ttu-id="f9249-108">Linux/macOS:</span><span class="sxs-lookup"><span data-stu-id="f9249-108">Linux/macOS:</span></span>
+<span data-ttu-id="bf60c-108">Linux/macOS:</span><span class="sxs-lookup"><span data-stu-id="bf60c-108">Linux/macOS:</span></span>
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -44,192 +44,215 @@ dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
 dotnet-install.sh --help
 ```
 
-## <a name="description"></a><span data-ttu-id="f9249-109">Açıklama</span><span class="sxs-lookup"><span data-stu-id="f9249-109">Description</span></span>
+<span data-ttu-id="bf60c-109">Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="bf60c-109">The bash script also reads PowerShell switches, so you can use PowerShell switches with the script on Linux/macOS systems.</span></span>
 
-<span data-ttu-id="f9249-110">`dotnet-install`Betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan yüklemesini gerçekleştirmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f9249-110">The `dotnet-install` scripts are used to perform a non-admin installation of the .NET Core SDK, which includes the .NET Core CLI and the shared runtime.</span></span>
+## <a name="description"></a><span data-ttu-id="bf60c-110">Description</span><span class="sxs-lookup"><span data-stu-id="bf60c-110">Description</span></span>
 
-<span data-ttu-id="f9249-111">Betiklerin kararlı sürümünü kullanmanızı öneririz:</span><span class="sxs-lookup"><span data-stu-id="f9249-111">We recommend that you use the stable version of the scripts:</span></span>
+<span data-ttu-id="bf60c-111">`dotnet-install`Betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan bir yüklemesini gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-111">The `dotnet-install` scripts perform a non-admin installation of the .NET Core SDK, which includes the .NET Core CLI and the shared runtime.</span></span> <span data-ttu-id="bf60c-112">İki komut dosyası vardır:</span><span class="sxs-lookup"><span data-stu-id="bf60c-112">There are two scripts:</span></span>
 
-- <span data-ttu-id="f9249-112">Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh></span><span class="sxs-lookup"><span data-stu-id="f9249-112">Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh></span></span>
-- <span data-ttu-id="f9249-113">PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1></span><span class="sxs-lookup"><span data-stu-id="f9249-113">PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1></span></span>
+* <span data-ttu-id="bf60c-113">Windows üzerinde çalışacak bir PowerShell betiği.</span><span class="sxs-lookup"><span data-stu-id="bf60c-113">A PowerShell script that works on Windows.</span></span>
+* <span data-ttu-id="bf60c-114">Linux/macOS üzerinde çalışacak bir bash betiği.</span><span class="sxs-lookup"><span data-stu-id="bf60c-114">A bash script that works on Linux/macOS.</span></span>
 
-<span data-ttu-id="f9249-114">Bu betiklerin temel kullanışlılığı Otomasyon senaryolarında ve yönetici olmayan yüklemelerde bulunur.</span><span class="sxs-lookup"><span data-stu-id="f9249-114">The main usefulness of these scripts is in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="f9249-115">İki komut dosyası vardır: biri Windows üzerinde çalışan bir PowerShell betiğtir ve diğeri de Linux/macOS üzerinde çalışan bir bash komut dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="f9249-115">There are two scripts: one is a PowerShell script that works on Windows, and the other is a bash script that works on Linux/macOS.</span></span> <span data-ttu-id="f9249-116">Her iki komut dosyası da aynı davranışa sahiptir.</span><span class="sxs-lookup"><span data-stu-id="f9249-116">Both scripts have the same behavior.</span></span> <span data-ttu-id="f9249-117">Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f9249-117">The bash script also reads PowerShell switches, so you can use PowerShell switches with the script on Linux/macOS systems.</span></span>
+### <a name="purpose"></a><span data-ttu-id="bf60c-115">Amaç</span><span class="sxs-lookup"><span data-stu-id="bf60c-115">Purpose</span></span>
 
-<span data-ttu-id="f9249-118">Yükleme betikleri, ZIP/tarbol dosyasını CLı derleme bırakmalarından indirir ve varsayılan konuma ya da tarafından belirtilen bir konuma yüklemeye devam edebilir `-InstallDir|--install-dir` .</span><span class="sxs-lookup"><span data-stu-id="f9249-118">The installation scripts download the ZIP/tarball file from the CLI build drops and proceed to install it in either the default location or in a location specified by `-InstallDir|--install-dir`.</span></span> <span data-ttu-id="f9249-119">Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler.</span><span class="sxs-lookup"><span data-stu-id="f9249-119">By default, the installation scripts download the SDK and install it.</span></span> <span data-ttu-id="f9249-120">Yalnızca paylaşılan çalışma zamanını elde etmek istiyorsanız, `-Runtime|--runtime` bağımsız değişkenini belirtin.</span><span class="sxs-lookup"><span data-stu-id="f9249-120">If you wish to only obtain the shared runtime, specify the `-Runtime|--runtime` argument.</span></span>
+ <span data-ttu-id="bf60c-116">Betiklerin amaçlanan kullanımı sürekli tümleştirme (CI) senaryolarına yöneliktir; burada:</span><span class="sxs-lookup"><span data-stu-id="bf60c-116">The intended use of the scripts is for Continuous Integration (CI) scenarios, where:</span></span>
 
-<span data-ttu-id="f9249-121">Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler.</span><span class="sxs-lookup"><span data-stu-id="f9249-121">By default, the script adds the install location to the $PATH for the current session.</span></span> <span data-ttu-id="f9249-122">Bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın `-NoPath|--no-path` .</span><span class="sxs-lookup"><span data-stu-id="f9249-122">Override this default behavior by specifying the `-NoPath|--no-path` argument.</span></span>
+* <span data-ttu-id="bf60c-117">SDK 'nın Kullanıcı etkileşimi olmadan ve yönetici hakları olmadan yüklenmesi gerekir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-117">The SDK needs to be installed without user interaction and without admin rights.</span></span>
+* <span data-ttu-id="bf60c-118">SDK yüklemesinin birden çok CI çalıştırması arasında kalıcı olması gerekmez.</span><span class="sxs-lookup"><span data-stu-id="bf60c-118">The SDK installation doesn't need to persist across multiple CI runs.</span></span>
 
-<span data-ttu-id="f9249-123">Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/dependencies.md)yükler.</span><span class="sxs-lookup"><span data-stu-id="f9249-123">Before running the script, install the required [dependencies](../install/dependencies.md).</span></span>
+  <span data-ttu-id="bf60c-119">Tipik olay dizisi:</span><span class="sxs-lookup"><span data-stu-id="bf60c-119">The typical sequence of events:</span></span>
+  * <span data-ttu-id="bf60c-120">CI tetiklenir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-120">CI is triggered.</span></span>
+  * <span data-ttu-id="bf60c-121">CI, Bu betiklerin birini kullanarak SDK 'Yı yüklüyor.</span><span class="sxs-lookup"><span data-stu-id="bf60c-121">CI installs the SDK using one of these scripts.</span></span>
+  * <span data-ttu-id="bf60c-122">CI işini sonlandırır ve SDK yüklemesi dahil olmak üzere geçici verileri temizler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-122">CI finishes its work and clears temporary data including the SDK installation.</span></span>
 
-<span data-ttu-id="f9249-124">Bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz `-Version|--version` .</span><span class="sxs-lookup"><span data-stu-id="f9249-124">You can install a specific version using the `-Version|--version` argument.</span></span> <span data-ttu-id="f9249-125">Sürüm üç bölümlü bir sürüm olarak belirtilmelidir (örneğin, `2.1.0` ).</span><span class="sxs-lookup"><span data-stu-id="f9249-125">The version must be specified as a three-part version (for example, `2.1.0`).</span></span> <span data-ttu-id="f9249-126">Sağlanmazsa, `latest` sürümünü kullanır.</span><span class="sxs-lookup"><span data-stu-id="f9249-126">If not provided, it uses the `latest` version.</span></span>
+<span data-ttu-id="bf60c-123">Geliştirme ortamı ayarlamak veya uygulamaları çalıştırmak için, bu betikler yerine yükleyicileri kullanın.</span><span class="sxs-lookup"><span data-stu-id="bf60c-123">To set up a development environment or to run apps, use the installers rather than these scripts.</span></span>
 
-<span data-ttu-id="f9249-127">Install betikleri, Windows 'da kayıt defterini güncelleştirmez.</span><span class="sxs-lookup"><span data-stu-id="f9249-127">The install scripts do not update the registry on Windows.</span></span> <span data-ttu-id="f9249-128">Yalnızca daraltılmış ikilileri indirir ve bir klasöre kopyalar.</span><span class="sxs-lookup"><span data-stu-id="f9249-128">They just download the zipped binaries and copy them to a folder.</span></span> <span data-ttu-id="f9249-129">Kayıt defteri anahtarı değerlerinin güncelleştirilmesini istiyorsanız .NET Core yükleyicileri ' ni kullanın.</span><span class="sxs-lookup"><span data-stu-id="f9249-129">If you want registry key values to be updated, use the .NET Core installers.</span></span>
+### <a name="recommended-version"></a><span data-ttu-id="bf60c-124">Önerilen sürüm</span><span class="sxs-lookup"><span data-stu-id="bf60c-124">Recommended version</span></span>
 
-## <a name="options"></a><span data-ttu-id="f9249-130">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="f9249-130">Options</span></span>
+<span data-ttu-id="bf60c-125">Betiklerin kararlı sürümünü kullanmanızı öneririz:</span><span class="sxs-lookup"><span data-stu-id="bf60c-125">We recommend that you use the stable version of the scripts:</span></span>
+
+- <span data-ttu-id="bf60c-126">Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh></span><span class="sxs-lookup"><span data-stu-id="bf60c-126">Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh></span></span>
+- <span data-ttu-id="bf60c-127">PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1></span><span class="sxs-lookup"><span data-stu-id="bf60c-127">PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1></span></span>
+
+### <a name="script-behavior"></a><span data-ttu-id="bf60c-128">Betik davranışı</span><span class="sxs-lookup"><span data-stu-id="bf60c-128">Script behavior</span></span>
+
+<span data-ttu-id="bf60c-129">Her iki komut dosyası da aynı davranışa sahiptir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-129">Both scripts have the same behavior.</span></span> <span data-ttu-id="bf60c-130">Bunlar, CLı derleme bırakmalarından ZIP/tarbol dosyasını indirir ve varsayılan konuma veya tarafından belirtilen bir konuma yüklemeye devam ederler `-InstallDir|--install-dir` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-130">They download the ZIP/tarball file from the CLI build drops and proceed to install it in either the default location or in a location specified by `-InstallDir|--install-dir`.</span></span>
+
+<span data-ttu-id="bf60c-131">Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-131">By default, the installation scripts download the SDK and install it.</span></span> <span data-ttu-id="bf60c-132">Yalnızca paylaşılan çalışma zamanını elde etmek istiyorsanız, `-Runtime|--runtime` bağımsız değişkenini belirtin.</span><span class="sxs-lookup"><span data-stu-id="bf60c-132">If you wish to only obtain the shared runtime, specify the `-Runtime|--runtime` argument.</span></span>
+
+<span data-ttu-id="bf60c-133">Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-133">By default, the script adds the install location to the $PATH for the current session.</span></span> <span data-ttu-id="bf60c-134">Bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın `-NoPath|--no-path` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-134">Override this default behavior by specifying the `-NoPath|--no-path` argument.</span></span> <span data-ttu-id="bf60c-135">Betik, `DOTNET_ROOT` ortam değişkenini ayarladı.</span><span class="sxs-lookup"><span data-stu-id="bf60c-135">The script doesn't set the `DOTNET_ROOT` environment variable.</span></span>
+
+<span data-ttu-id="bf60c-136">Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/dependencies.md)yükler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-136">Before running the script, install the required [dependencies](../install/dependencies.md).</span></span>
+
+<span data-ttu-id="bf60c-137">Bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz `-Version|--version` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-137">You can install a specific version using the `-Version|--version` argument.</span></span> <span data-ttu-id="bf60c-138">Sürüm, gibi üç bölümden oluşan bir sürüm numarası olarak belirtilmelidir `2.1.0` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-138">The version must be specified as a three-part version number, such as `2.1.0`.</span></span> <span data-ttu-id="bf60c-139">Sürüm belirtilmemişse, komut dosyası `latest` sürümü yüklenir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-139">If the version isn't specified, the script installs the `latest` version.</span></span>
+
+<span data-ttu-id="bf60c-140">Install betikleri, Windows 'da kayıt defterini güncelleştirmez.</span><span class="sxs-lookup"><span data-stu-id="bf60c-140">The install scripts do not update the registry on Windows.</span></span> <span data-ttu-id="bf60c-141">Yalnızca daraltılmış ikilileri indirir ve bir klasöre kopyalar.</span><span class="sxs-lookup"><span data-stu-id="bf60c-141">They just download the zipped binaries and copy them to a folder.</span></span> <span data-ttu-id="bf60c-142">Kayıt defteri anahtarı değerlerinin güncelleştirilmesini istiyorsanız .NET Core yükleyicileri ' ni kullanın.</span><span class="sxs-lookup"><span data-stu-id="bf60c-142">If you want registry key values to be updated, use the .NET Core installers.</span></span>
+
+## <a name="options"></a><span data-ttu-id="bf60c-143">Seçenekler</span><span class="sxs-lookup"><span data-stu-id="bf60c-143">Options</span></span>
 
 - **`-Architecture|--architecture <ARCHITECTURE>`**
 
-  <span data-ttu-id="f9249-131">Yüklenecek .NET Core ikililerinin mimarisi.</span><span class="sxs-lookup"><span data-stu-id="f9249-131">Architecture of the .NET Core binaries to install.</span></span> <span data-ttu-id="f9249-132">Olası değerler şunlardır,,,, `<auto>` `amd64` `x64` `x86` `arm64` ve `arm` .</span><span class="sxs-lookup"><span data-stu-id="f9249-132">Possible values are `<auto>`, `amd64`, `x64`, `x86`, `arm64`, and `arm`.</span></span> <span data-ttu-id="f9249-133">Varsayılan değer `<auto>` , çalışmakta olan işletim sistemi mimarisini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f9249-133">The default value is `<auto>`, which represents the currently running OS architecture.</span></span>
+  <span data-ttu-id="bf60c-144">Yüklenecek .NET Core ikililerinin mimarisi.</span><span class="sxs-lookup"><span data-stu-id="bf60c-144">Architecture of the .NET Core binaries to install.</span></span> <span data-ttu-id="bf60c-145">Olası değerler şunlardır,,,, `<auto>` `amd64` `x64` `x86` `arm64` ve `arm` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-145">Possible values are `<auto>`, `amd64`, `x64`, `x86`, `arm64`, and `arm`.</span></span> <span data-ttu-id="bf60c-146">Varsayılan değer `<auto>` , çalışmakta olan işletim sistemi mimarisini temsil eder.</span><span class="sxs-lookup"><span data-stu-id="bf60c-146">The default value is `<auto>`, which represents the currently running OS architecture.</span></span>
 
 - **`-AzureFeed|--azure-feed`**
 
-  <span data-ttu-id="f9249-134">Yükleyicideki Azure akışına ait URL 'YI belirtir.</span><span class="sxs-lookup"><span data-stu-id="f9249-134">Specifies the URL for the Azure feed to the installer.</span></span> <span data-ttu-id="f9249-135">Bu değeri değiştirmemenizi öneririz.</span><span class="sxs-lookup"><span data-stu-id="f9249-135">We recommended that you don't change this value.</span></span> <span data-ttu-id="f9249-136">Varsayılan değer: `https://dotnetcli.azureedge.net/dotnet`.</span><span class="sxs-lookup"><span data-stu-id="f9249-136">The default value is `https://dotnetcli.azureedge.net/dotnet`.</span></span>
+  <span data-ttu-id="bf60c-147">Yükleyicideki Azure akışına ait URL 'YI belirtir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-147">Specifies the URL for the Azure feed to the installer.</span></span> <span data-ttu-id="bf60c-148">Bu değeri değiştirmemenizi öneririz.</span><span class="sxs-lookup"><span data-stu-id="bf60c-148">We recommended that you don't change this value.</span></span> <span data-ttu-id="bf60c-149">Varsayılan değer: `https://dotnetcli.azureedge.net/dotnet`.</span><span class="sxs-lookup"><span data-stu-id="bf60c-149">The default value is `https://dotnetcli.azureedge.net/dotnet`.</span></span>
 
 - **`-Channel|--channel <CHANNEL>`**
 
-  <span data-ttu-id="f9249-137">Yükleme için kaynak kanalını belirtir.</span><span class="sxs-lookup"><span data-stu-id="f9249-137">Specifies the source channel for the installation.</span></span> <span data-ttu-id="f9249-138">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="f9249-138">The possible values are:</span></span>
+  <span data-ttu-id="bf60c-150">Yükleme için kaynak kanalını belirtir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-150">Specifies the source channel for the installation.</span></span> <span data-ttu-id="bf60c-151">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="bf60c-151">The possible values are:</span></span>
 
-  - <span data-ttu-id="f9249-139">`Current`-En güncel sürüm.</span><span class="sxs-lookup"><span data-stu-id="f9249-139">`Current` - Most current release.</span></span>
-  - <span data-ttu-id="f9249-140">`LTS`-Uzun süreli destek kanalı (desteklenen en güncel sürüm).</span><span class="sxs-lookup"><span data-stu-id="f9249-140">`LTS` - Long-Term Support channel (most current supported release).</span></span>
-  - <span data-ttu-id="f9249-141">Belirli bir yayını temsil eden X. Y biçimindeki iki bölümlü sürüm (örneğin, `2.1` veya `3.0` ).</span><span class="sxs-lookup"><span data-stu-id="f9249-141">Two-part version in X.Y format representing a specific release (for example, `2.1` or `3.0`).</span></span>
-  - <span data-ttu-id="f9249-142">Dal adı: Örneğin, `release/3.1.1xx` veya `master` (gecelik yayınlar için).</span><span class="sxs-lookup"><span data-stu-id="f9249-142">Branch name: for example, `release/3.1.1xx` or `master` (for nightly releases).</span></span> <span data-ttu-id="f9249-143">Bir önizleme kanalından sürüm yüklemek için bu seçeneği kullanın.</span><span class="sxs-lookup"><span data-stu-id="f9249-143">Use this option to install a version from a preview channel.</span></span> <span data-ttu-id="f9249-144">Bir kanalın adını [yükleyiciler ve Ikili dosyalar](https://github.com/dotnet/core-sdk#installers-and-binaries)bölümünde listelendiği şekilde kullanın.</span><span class="sxs-lookup"><span data-stu-id="f9249-144">Use the name of the channel as listed in [Installers and Binaries](https://github.com/dotnet/core-sdk#installers-and-binaries).</span></span>
+  - <span data-ttu-id="bf60c-152">`Current`-En güncel sürüm.</span><span class="sxs-lookup"><span data-stu-id="bf60c-152">`Current` - Most current release.</span></span>
+  - <span data-ttu-id="bf60c-153">`LTS`-Uzun süreli destek kanalı (desteklenen en güncel sürüm).</span><span class="sxs-lookup"><span data-stu-id="bf60c-153">`LTS` - Long-Term Support channel (most current supported release).</span></span>
+  - <span data-ttu-id="bf60c-154">Belirli bir yayını temsil eden X. Y biçimindeki iki bölümlü sürüm (örneğin, `2.1` veya `3.0` ).</span><span class="sxs-lookup"><span data-stu-id="bf60c-154">Two-part version in X.Y format representing a specific release (for example, `2.1` or `3.0`).</span></span>
+  - <span data-ttu-id="bf60c-155">Dal adı: Örneğin, `release/3.1.1xx` veya `master` (gecelik yayınlar için).</span><span class="sxs-lookup"><span data-stu-id="bf60c-155">Branch name: for example, `release/3.1.1xx` or `master` (for nightly releases).</span></span> <span data-ttu-id="bf60c-156">Bir önizleme kanalından sürüm yüklemek için bu seçeneği kullanın.</span><span class="sxs-lookup"><span data-stu-id="bf60c-156">Use this option to install a version from a preview channel.</span></span> <span data-ttu-id="bf60c-157">Bir kanalın adını [yükleyiciler ve Ikili dosyalar](https://github.com/dotnet/core-sdk#installers-and-binaries)bölümünde listelendiği şekilde kullanın.</span><span class="sxs-lookup"><span data-stu-id="bf60c-157">Use the name of the channel as listed in [Installers and Binaries](https://github.com/dotnet/core-sdk#installers-and-binaries).</span></span>
 
-  <span data-ttu-id="f9249-145">Varsayılan değer: `LTS`.</span><span class="sxs-lookup"><span data-stu-id="f9249-145">The default value is `LTS`.</span></span> <span data-ttu-id="f9249-146">.NET destek kanalları hakkında daha fazla bilgi için bkz. [.net destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfası.</span><span class="sxs-lookup"><span data-stu-id="f9249-146">For more information on .NET support channels, see the [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) page.</span></span>
+  <span data-ttu-id="bf60c-158">Varsayılan değer: `LTS`.</span><span class="sxs-lookup"><span data-stu-id="bf60c-158">The default value is `LTS`.</span></span> <span data-ttu-id="bf60c-159">.NET destek kanalları hakkında daha fazla bilgi için bkz. [.net destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sayfası.</span><span class="sxs-lookup"><span data-stu-id="bf60c-159">For more information on .NET support channels, see the [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) page.</span></span>
 
 - **`-DryRun|--dry-run`**
 
-  <span data-ttu-id="f9249-147">Ayarlanırsa, betik yüklemeyi gerçekleştirmez.</span><span class="sxs-lookup"><span data-stu-id="f9249-147">If set, the script won't perform the installation.</span></span> <span data-ttu-id="f9249-148">Bunun yerine, .NET Core CLI Şu anda istenen sürümünü tutarlı bir şekilde yüklemek için kullanılacak komut satırını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="f9249-148">Instead, it displays what command line to use to consistently install the currently requested version of the .NET Core CLI.</span></span> <span data-ttu-id="f9249-149">Örneğin, sürümünü belirtirseniz `latest` , bu komutun bir yapı betiğine göre belirleyici olarak kullanılabilmesi için belirli bir sürümle birlikte bir bağlantı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="f9249-149">For example, if you specify version `latest`, it displays a link with the specific version so that this command can be used deterministically in a build script.</span></span> <span data-ttu-id="f9249-150">Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ediyorsanız ikilinin konumunu da görüntüler.</span><span class="sxs-lookup"><span data-stu-id="f9249-150">It also displays the binary's location if you prefer to install or download it yourself.</span></span>
+  <span data-ttu-id="bf60c-160">Ayarlanırsa, betik yüklemeyi gerçekleştirmez.</span><span class="sxs-lookup"><span data-stu-id="bf60c-160">If set, the script won't perform the installation.</span></span> <span data-ttu-id="bf60c-161">Bunun yerine, .NET Core CLI Şu anda istenen sürümünü tutarlı bir şekilde yüklemek için kullanılacak komut satırını görüntüler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-161">Instead, it displays what command line to use to consistently install the currently requested version of the .NET Core CLI.</span></span> <span data-ttu-id="bf60c-162">Örneğin, sürümünü belirtirseniz `latest` , bu komutun bir yapı betiğine göre belirleyici olarak kullanılabilmesi için belirli bir sürümle birlikte bir bağlantı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-162">For example, if you specify version `latest`, it displays a link with the specific version so that this command can be used deterministically in a build script.</span></span> <span data-ttu-id="bf60c-163">Ayrıca, kendiniz yüklemeyi veya indirmeyi tercih ediyorsanız ikilinin konumunu da görüntüler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-163">It also displays the binary's location if you prefer to install or download it yourself.</span></span>
 
 - **`-FeedCredential|--feed-credential`**
 
-  <span data-ttu-id="f9249-151">Azure akışına eklemek için sorgu dizesi olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f9249-151">Used as a query string to append to the Azure feed.</span></span> <span data-ttu-id="f9249-152">Bu, URL 'nin genel olmayan BLOB depolama hesaplarını kullanmak üzere değiştirilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="f9249-152">It allows changing the URL to use non-public blob storage accounts.</span></span>
+  <span data-ttu-id="bf60c-164">Azure akışına eklemek için sorgu dizesi olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="bf60c-164">Used as a query string to append to the Azure feed.</span></span> <span data-ttu-id="bf60c-165">Bu, URL 'nin genel olmayan BLOB depolama hesaplarını kullanmak üzere değiştirilmesini sağlar.</span><span class="sxs-lookup"><span data-stu-id="bf60c-165">It allows changing the URL to use non-public blob storage accounts.</span></span>
 
 - **`--help`**
 
-  <span data-ttu-id="f9249-153">Betiğe yönelik yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="f9249-153">Prints out help for the script.</span></span> <span data-ttu-id="f9249-154">Yalnızca Bash betiği için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="f9249-154">Applies only to bash script.</span></span> <span data-ttu-id="f9249-155">PowerShell için kullanın `Get-Help ./dotnet-install.ps1` .</span><span class="sxs-lookup"><span data-stu-id="f9249-155">For PowerShell, use `Get-Help ./dotnet-install.ps1`.</span></span>
+  <span data-ttu-id="bf60c-166">Betiğe yönelik yardım yazdırır.</span><span class="sxs-lookup"><span data-stu-id="bf60c-166">Prints out help for the script.</span></span> <span data-ttu-id="bf60c-167">Yalnızca Bash betiği için geçerlidir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-167">Applies only to bash script.</span></span> <span data-ttu-id="bf60c-168">PowerShell için kullanın `Get-Help ./dotnet-install.ps1` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-168">For PowerShell, use `Get-Help ./dotnet-install.ps1`.</span></span>
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  <span data-ttu-id="f9249-156">Yükleme yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="f9249-156">Specifies the installation path.</span></span> <span data-ttu-id="f9249-157">Dizin yoksa oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="f9249-157">The directory is created if it doesn't exist.</span></span> <span data-ttu-id="f9249-158">Varsayılan değer, Windows üzerinde *%LocalAppData%\microsoft\dotnet* ve Linux/MacOS üzerinde */usr/share/DotNet* değeridir.</span><span class="sxs-lookup"><span data-stu-id="f9249-158">The default value is *%LocalAppData%\Microsoft\dotnet* on Windows and */usr/share/dotnet* on Linux/macOS.</span></span> <span data-ttu-id="f9249-159">İkili dosyalar doğrudan bu dizine yerleştirilir.</span><span class="sxs-lookup"><span data-stu-id="f9249-159">Binaries are placed directly in this directory.</span></span>
+  <span data-ttu-id="bf60c-169">Yükleme yolunu belirtir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-169">Specifies the installation path.</span></span> <span data-ttu-id="bf60c-170">Dizin yoksa oluşturulur.</span><span class="sxs-lookup"><span data-stu-id="bf60c-170">The directory is created if it doesn't exist.</span></span> <span data-ttu-id="bf60c-171">Varsayılan değer, Windows üzerinde *%LocalAppData%\microsoft\dotnet* ve Linux/MacOS üzerinde */usr/share/DotNet* değeridir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-171">The default value is *%LocalAppData%\Microsoft\dotnet* on Windows and */usr/share/dotnet* on Linux/macOS.</span></span> <span data-ttu-id="bf60c-172">İkili dosyalar doğrudan bu dizine yerleştirilir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-172">Binaries are placed directly in this directory.</span></span>
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  <span data-ttu-id="f9249-160">SDK sürümünü belirlemekte kullanılacak bir [global.js](global-json.md) dosya için bir yol belirtir.</span><span class="sxs-lookup"><span data-stu-id="f9249-160">Specifies a path to a [global.json](global-json.md) file that will be used to determine the SDK version.</span></span> <span data-ttu-id="f9249-161">Dosyadaki *global.js* için bir değer olmalıdır `sdk:version` .</span><span class="sxs-lookup"><span data-stu-id="f9249-161">The *global.json* file must have a value for `sdk:version`.</span></span>
+  <span data-ttu-id="bf60c-173">SDK sürümünü belirlemekte kullanılacak bir [global.js](global-json.md) dosya için bir yol belirtir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-173">Specifies a path to a [global.json](global-json.md) file that will be used to determine the SDK version.</span></span> <span data-ttu-id="bf60c-174">Dosyadaki *global.js* için bir değer olmalıdır `sdk:version` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-174">The *global.json* file must have a value for `sdk:version`.</span></span>
 
 - **`-NoCdn|--no-cdn`**
 
-  <span data-ttu-id="f9249-162">[Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) ile indirmeyi devre dışı bırakır ve önbelleğe alınmamış akışı doğrudan kullanır.</span><span class="sxs-lookup"><span data-stu-id="f9249-162">Disables downloading from the [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) and uses the uncached feed directly.</span></span>
+  <span data-ttu-id="bf60c-175">[Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) ile indirmeyi devre dışı bırakır ve önbelleğe alınmamış akışı doğrudan kullanır.</span><span class="sxs-lookup"><span data-stu-id="bf60c-175">Disables downloading from the [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) and uses the uncached feed directly.</span></span>
 
 - **`-NoPath|--no-path`**
 
-  <span data-ttu-id="f9249-163">Ayarlanırsa, yükleme klasörü geçerli oturum için yola aktarılmaz.</span><span class="sxs-lookup"><span data-stu-id="f9249-163">If set, the installation folder isn't exported to the path for the current session.</span></span> <span data-ttu-id="f9249-164">Varsayılan olarak, komut dosyası yolu değiştirir ve bu, .NET Core CLI yüklemeden hemen sonra kullanılabilir hale getirir.</span><span class="sxs-lookup"><span data-stu-id="f9249-164">By default, the script modifies the PATH, which makes the .NET Core CLI available immediately after install.</span></span>
+  <span data-ttu-id="bf60c-176">Ayarlanırsa, yükleme klasörü geçerli oturum için yola aktarılmaz.</span><span class="sxs-lookup"><span data-stu-id="bf60c-176">If set, the installation folder isn't exported to the path for the current session.</span></span> <span data-ttu-id="bf60c-177">Varsayılan olarak, komut dosyası yolu değiştirir ve bu, .NET Core CLI yüklemeden hemen sonra kullanılabilir hale getirir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-177">By default, the script modifies the PATH, which makes the .NET Core CLI available immediately after install.</span></span>
 
 - **`-ProxyAddress`**
 
-  <span data-ttu-id="f9249-165">Ayarlanırsa, yükleyici Web istekleri yaparken proxy 'yi kullanır.</span><span class="sxs-lookup"><span data-stu-id="f9249-165">If set, the installer uses the proxy when making web requests.</span></span> <span data-ttu-id="f9249-166">(Yalnızca Windows için geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="f9249-166">(Only valid for Windows.)</span></span>
+  <span data-ttu-id="bf60c-178">Ayarlanırsa, yükleyici Web istekleri yaparken proxy 'yi kullanır.</span><span class="sxs-lookup"><span data-stu-id="bf60c-178">If set, the installer uses the proxy when making web requests.</span></span> <span data-ttu-id="bf60c-179">(Yalnızca Windows için geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="bf60c-179">(Only valid for Windows.)</span></span>
 
 - **`ProxyUseDefaultCredentials`**
 
-  <span data-ttu-id="f9249-167">Ayarlanırsa, yükleyici proxy adresini kullanırken geçerli kullanıcının kimlik bilgilerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="f9249-167">If set, the installer uses the credentials of the current user when using proxy address.</span></span> <span data-ttu-id="f9249-168">(Yalnızca Windows için geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="f9249-168">(Only valid for Windows.)</span></span>
+  <span data-ttu-id="bf60c-180">Ayarlanırsa, yükleyici proxy adresini kullanırken geçerli kullanıcının kimlik bilgilerini kullanır.</span><span class="sxs-lookup"><span data-stu-id="bf60c-180">If set, the installer uses the credentials of the current user when using proxy address.</span></span> <span data-ttu-id="bf60c-181">(Yalnızca Windows için geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="bf60c-181">(Only valid for Windows.)</span></span>
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
-  <span data-ttu-id="f9249-169">Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanını kurar.</span><span class="sxs-lookup"><span data-stu-id="f9249-169">Installs just the shared runtime, not the entire SDK.</span></span> <span data-ttu-id="f9249-170">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="f9249-170">The possible values are:</span></span>
+  <span data-ttu-id="bf60c-182">Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanını kurar.</span><span class="sxs-lookup"><span data-stu-id="bf60c-182">Installs just the shared runtime, not the entire SDK.</span></span> <span data-ttu-id="bf60c-183">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="bf60c-183">The possible values are:</span></span>
 
-  - <span data-ttu-id="f9249-171">`dotnet`- `Microsoft.NETCore.App` paylaşılan çalışma zamanı.</span><span class="sxs-lookup"><span data-stu-id="f9249-171">`dotnet` - the `Microsoft.NETCore.App` shared runtime.</span></span>
-  - <span data-ttu-id="f9249-172">`aspnetcore`- `Microsoft.AspNetCore.App` paylaşılan çalışma zamanı.</span><span class="sxs-lookup"><span data-stu-id="f9249-172">`aspnetcore` - the `Microsoft.AspNetCore.App` shared runtime.</span></span>
-  - <span data-ttu-id="f9249-173">`windowsdesktop`- `Microsoft.WindowsDesktop.App` paylaşılan çalışma zamanı.</span><span class="sxs-lookup"><span data-stu-id="f9249-173">`windowsdesktop` - the `Microsoft.WindowsDesktop.App` shared runtime.</span></span>
+  - <span data-ttu-id="bf60c-184">`dotnet`- `Microsoft.NETCore.App` paylaşılan çalışma zamanı.</span><span class="sxs-lookup"><span data-stu-id="bf60c-184">`dotnet` - the `Microsoft.NETCore.App` shared runtime.</span></span>
+  - <span data-ttu-id="bf60c-185">`aspnetcore`- `Microsoft.AspNetCore.App` paylaşılan çalışma zamanı.</span><span class="sxs-lookup"><span data-stu-id="bf60c-185">`aspnetcore` - the `Microsoft.AspNetCore.App` shared runtime.</span></span>
+  - <span data-ttu-id="bf60c-186">`windowsdesktop`- `Microsoft.WindowsDesktop.App` paylaşılan çalışma zamanı.</span><span class="sxs-lookup"><span data-stu-id="bf60c-186">`windowsdesktop` - the `Microsoft.WindowsDesktop.App` shared runtime.</span></span>
 
 - **`--runtime-id <RID>`**
 
-  <span data-ttu-id="f9249-174">Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="f9249-174">Specifies the [runtime identifier](../rid-catalog.md) for which the tools are being installed.</span></span> <span data-ttu-id="f9249-175">`linux-x64`Taşınabilir Linux için kullanın.</span><span class="sxs-lookup"><span data-stu-id="f9249-175">Use `linux-x64` for portable Linux.</span></span> <span data-ttu-id="f9249-176">(Yalnızca Linux/macOS için geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="f9249-176">(Only valid for Linux/macOS.)</span></span>
+  <span data-ttu-id="bf60c-187">Araçların yüklendiği [çalışma zamanı tanımlayıcısını](../rid-catalog.md) belirtir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-187">Specifies the [runtime identifier](../rid-catalog.md) for which the tools are being installed.</span></span> <span data-ttu-id="bf60c-188">`linux-x64`Taşınabilir Linux için kullanın.</span><span class="sxs-lookup"><span data-stu-id="bf60c-188">Use `linux-x64` for portable Linux.</span></span> <span data-ttu-id="bf60c-189">(Yalnızca Linux/macOS için geçerlidir.)</span><span class="sxs-lookup"><span data-stu-id="bf60c-189">(Only valid for Linux/macOS.)</span></span>
 
 - **`-SharedRuntime|--shared-runtime`**
 
   > [!NOTE]
-  > <span data-ttu-id="f9249-177">Bu parametre artık kullanılmıyor ve betiğin gelecekteki bir sürümünde kaldırılabilir.</span><span class="sxs-lookup"><span data-stu-id="f9249-177">This parameter is obsolete and may be removed in a future version of the script.</span></span> <span data-ttu-id="f9249-178">Önerilen alternatif, `-Runtime|--runtime` seçenektir.</span><span class="sxs-lookup"><span data-stu-id="f9249-178">The recommended alternative is the `-Runtime|--runtime` option.</span></span>
+  > <span data-ttu-id="bf60c-190">Bu parametre artık kullanılmıyor ve betiğin gelecekteki bir sürümünde kaldırılabilir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-190">This parameter is obsolete and may be removed in a future version of the script.</span></span> <span data-ttu-id="bf60c-191">Önerilen alternatif, `-Runtime|--runtime` seçenektir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-191">The recommended alternative is the `-Runtime|--runtime` option.</span></span>
 
-  <span data-ttu-id="f9249-179">Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanı bitlerini kurar.</span><span class="sxs-lookup"><span data-stu-id="f9249-179">Installs just the shared runtime bits, not the entire SDK.</span></span> <span data-ttu-id="f9249-180">Bu seçenek belirtmeye eşdeğerdir `-Runtime|--runtime dotnet` .</span><span class="sxs-lookup"><span data-stu-id="f9249-180">This option is equivalent to specifying `-Runtime|--runtime dotnet`.</span></span>
+  <span data-ttu-id="bf60c-192">Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanı bitlerini kurar.</span><span class="sxs-lookup"><span data-stu-id="bf60c-192">Installs just the shared runtime bits, not the entire SDK.</span></span> <span data-ttu-id="bf60c-193">Bu seçenek belirtmeye eşdeğerdir `-Runtime|--runtime dotnet` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-193">This option is equivalent to specifying `-Runtime|--runtime dotnet`.</span></span>
 
 - **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  <span data-ttu-id="f9249-181">Zaten varsa *dotnet.exe*sürümü bulunmayan dosyaları yüklemeyi atlar.</span><span class="sxs-lookup"><span data-stu-id="f9249-181">Skips installing non-versioned files, such as *dotnet.exe*, if they already exist.</span></span>
+  <span data-ttu-id="bf60c-194">Zaten varsa *dotnet.exe*sürümü bulunmayan dosyaları yüklemeyi atlar.</span><span class="sxs-lookup"><span data-stu-id="bf60c-194">Skips installing non-versioned files, such as *dotnet.exe*, if they already exist.</span></span>
 
 - **`-UncachedFeed|--uncached-feed`**
 
-  <span data-ttu-id="f9249-182">Bu yükleyici tarafından kullanılan önbelleğe alınmamış akışın URL 'sini değiştirmeye izin verir.</span><span class="sxs-lookup"><span data-stu-id="f9249-182">Allows changing the URL for the uncached feed used by this installer.</span></span> <span data-ttu-id="f9249-183">Bu değeri değiştirmemenizi öneririz.</span><span class="sxs-lookup"><span data-stu-id="f9249-183">We recommended that you don't change this value.</span></span>
+  <span data-ttu-id="bf60c-195">Bu yükleyici tarafından kullanılan önbelleğe alınmamış akışın URL 'sini değiştirmeye izin verir.</span><span class="sxs-lookup"><span data-stu-id="bf60c-195">Allows changing the URL for the uncached feed used by this installer.</span></span> <span data-ttu-id="bf60c-196">Bu değeri değiştirmemenizi öneririz.</span><span class="sxs-lookup"><span data-stu-id="bf60c-196">We recommended that you don't change this value.</span></span>
 
 - **`-Verbose|--verbose`**
 
-  <span data-ttu-id="f9249-184">Tanılama bilgilerini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="f9249-184">Displays diagnostics information.</span></span>
+  <span data-ttu-id="bf60c-197">Tanılama bilgilerini görüntüler.</span><span class="sxs-lookup"><span data-stu-id="bf60c-197">Displays diagnostics information.</span></span>
 
 - **`-Version|--version <VERSION>`**
 
-  <span data-ttu-id="f9249-185">Belirli bir derleme sürümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="f9249-185">Represents a specific build version.</span></span> <span data-ttu-id="f9249-186">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="f9249-186">The possible values are:</span></span>
+  <span data-ttu-id="bf60c-198">Belirli bir derleme sürümünü temsil eder.</span><span class="sxs-lookup"><span data-stu-id="bf60c-198">Represents a specific build version.</span></span> <span data-ttu-id="bf60c-199">Olası değerler şunlardır:</span><span class="sxs-lookup"><span data-stu-id="bf60c-199">The possible values are:</span></span>
 
-  - <span data-ttu-id="f9249-187">`latest`-Kanalda en son derleme ( `-Channel` seçeneğiyle kullanılır).</span><span class="sxs-lookup"><span data-stu-id="f9249-187">`latest` - Latest build on the channel (used with the `-Channel` option).</span></span>
-  - <span data-ttu-id="f9249-188">`coherent`-Kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı seçenekleriyle kullanılır `-Channel` ).</span><span class="sxs-lookup"><span data-stu-id="f9249-188">`coherent` - Latest coherent build on the channel; uses the latest stable package combination (used with Branch name `-Channel` options).</span></span>
-  - <span data-ttu-id="f9249-189">Belirli bir derleme sürümünü temsil eden X. Y. Z biçimindeki üç bölümden oluşan sürüm; seçeneğinin yerini alır `-Channel` .</span><span class="sxs-lookup"><span data-stu-id="f9249-189">Three-part version in X.Y.Z format representing a specific build version; supersedes the `-Channel` option.</span></span> <span data-ttu-id="f9249-190">Örneğin: `2.0.0-preview2-006120`.</span><span class="sxs-lookup"><span data-stu-id="f9249-190">For example: `2.0.0-preview2-006120`.</span></span>
+  - <span data-ttu-id="bf60c-200">`latest`-Kanalda en son derleme ( `-Channel` seçeneğiyle kullanılır).</span><span class="sxs-lookup"><span data-stu-id="bf60c-200">`latest` - Latest build on the channel (used with the `-Channel` option).</span></span>
+  - <span data-ttu-id="bf60c-201">`coherent`-Kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı seçenekleriyle kullanılır `-Channel` ).</span><span class="sxs-lookup"><span data-stu-id="bf60c-201">`coherent` - Latest coherent build on the channel; uses the latest stable package combination (used with Branch name `-Channel` options).</span></span>
+  - <span data-ttu-id="bf60c-202">Belirli bir derleme sürümünü temsil eden X. Y. Z biçimindeki üç bölümden oluşan sürüm; seçeneğinin yerini alır `-Channel` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-202">Three-part version in X.Y.Z format representing a specific build version; supersedes the `-Channel` option.</span></span> <span data-ttu-id="bf60c-203">Örneğin: `2.0.0-preview2-006120`.</span><span class="sxs-lookup"><span data-stu-id="bf60c-203">For example: `2.0.0-preview2-006120`.</span></span>
 
-  <span data-ttu-id="f9249-191">Belirtilmemişse, `-Version` Varsayılan olarak olur `latest` .</span><span class="sxs-lookup"><span data-stu-id="f9249-191">If not specified, `-Version` defaults to `latest`.</span></span>
+  <span data-ttu-id="bf60c-204">Belirtilmemişse, `-Version` Varsayılan olarak olur `latest` .</span><span class="sxs-lookup"><span data-stu-id="bf60c-204">If not specified, `-Version` defaults to `latest`.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="f9249-192">Örnekler</span><span class="sxs-lookup"><span data-stu-id="f9249-192">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="bf60c-205">Örnekler</span><span class="sxs-lookup"><span data-stu-id="bf60c-205">Examples</span></span>
 
-- <span data-ttu-id="f9249-193">En son uzun süreli desteklenen (LTS) sürümü varsayılan konuma yükler:</span><span class="sxs-lookup"><span data-stu-id="f9249-193">Install the latest long-term supported (LTS) version to the default location:</span></span>
+- <span data-ttu-id="bf60c-206">En son uzun süreli desteklenen (LTS) sürümü varsayılan konuma yükler:</span><span class="sxs-lookup"><span data-stu-id="bf60c-206">Install the latest long-term supported (LTS) version to the default location:</span></span>
 
-  <span data-ttu-id="f9249-194">Windows:</span><span class="sxs-lookup"><span data-stu-id="f9249-194">Windows:</span></span>
+  <span data-ttu-id="bf60c-207">Windows:</span><span class="sxs-lookup"><span data-stu-id="bf60c-207">Windows:</span></span>
 
   ```powershell
   ./dotnet-install.ps1 -Channel LTS
   ```
 
-  <span data-ttu-id="f9249-195">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="f9249-195">macOS/Linux:</span></span>
+  <span data-ttu-id="bf60c-208">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="bf60c-208">macOS/Linux:</span></span>
 
   ```bash
   ./dotnet-install.sh --channel LTS
   ```
 
-- <span data-ttu-id="f9249-196">3,1 kanaldan en son sürümü belirtilen konuma yükler:</span><span class="sxs-lookup"><span data-stu-id="f9249-196">Install the latest version from 3.1 channel to the specified location:</span></span>
+- <span data-ttu-id="bf60c-209">3,1 kanaldan en son sürümü belirtilen konuma yükler:</span><span class="sxs-lookup"><span data-stu-id="bf60c-209">Install the latest version from 3.1 channel to the specified location:</span></span>
 
-  <span data-ttu-id="f9249-197">Windows:</span><span class="sxs-lookup"><span data-stu-id="f9249-197">Windows:</span></span>
+  <span data-ttu-id="bf60c-210">Windows:</span><span class="sxs-lookup"><span data-stu-id="bf60c-210">Windows:</span></span>
 
   ```powershell
   ./dotnet-install.ps1 -Channel 3.1 -InstallDir C:\cli
   ```
 
-  <span data-ttu-id="f9249-198">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="f9249-198">macOS/Linux:</span></span>
+  <span data-ttu-id="bf60c-211">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="bf60c-211">macOS/Linux:</span></span>
 
   ```bash
   ./dotnet-install.sh --channel 3.1 --install-dir ~/cli
   ```
 
-- <span data-ttu-id="f9249-199">Paylaşılan çalışma zamanının 3.0.0 sürümünü yükler:</span><span class="sxs-lookup"><span data-stu-id="f9249-199">Install the 3.0.0 version of the shared runtime:</span></span>
+- <span data-ttu-id="bf60c-212">Paylaşılan çalışma zamanının 3.0.0 sürümünü yükler:</span><span class="sxs-lookup"><span data-stu-id="bf60c-212">Install the 3.0.0 version of the shared runtime:</span></span>
 
-  <span data-ttu-id="f9249-200">Windows:</span><span class="sxs-lookup"><span data-stu-id="f9249-200">Windows:</span></span>
+  <span data-ttu-id="bf60c-213">Windows:</span><span class="sxs-lookup"><span data-stu-id="bf60c-213">Windows:</span></span>
 
   ```powershell
   ./dotnet-install.ps1 -Runtime dotnet -Version 3.0.0
   ```
 
-  <span data-ttu-id="f9249-201">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="f9249-201">macOS/Linux:</span></span>
+  <span data-ttu-id="bf60c-214">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="bf60c-214">macOS/Linux:</span></span>
 
   ```bash
   ./dotnet-install.sh --runtime dotnet --version 3.0.0
   ```
 
-- <span data-ttu-id="f9249-202">Bir kurumsal proxy 'nin arkasında betiği alma ve 2.1.2 'yi sürümünü yüklemeye (yalnızca Windows):</span><span class="sxs-lookup"><span data-stu-id="f9249-202">Obtain script and install the 2.1.2 version behind a corporate proxy (Windows only):</span></span>
+- <span data-ttu-id="bf60c-215">Bir kurumsal proxy 'nin arkasında betiği alma ve 2.1.2 'yi sürümünü yüklemeye (yalnızca Windows):</span><span class="sxs-lookup"><span data-stu-id="bf60c-215">Obtain script and install the 2.1.2 version behind a corporate proxy (Windows only):</span></span>
 
   ```powershell
   Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1';
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- <span data-ttu-id="f9249-203">Tek bir Oluşturucu örnek .NET Core CLI betiği alın ve yüklemeyi yapın:</span><span class="sxs-lookup"><span data-stu-id="f9249-203">Obtain script and install .NET Core CLI one-liner examples:</span></span>
+- <span data-ttu-id="bf60c-216">Tek bir Oluşturucu örnek .NET Core CLI betiği alın ve yüklemeyi yapın:</span><span class="sxs-lookup"><span data-stu-id="bf60c-216">Obtain script and install .NET Core CLI one-liner examples:</span></span>
 
-  <span data-ttu-id="f9249-204">Windows:</span><span class="sxs-lookup"><span data-stu-id="f9249-204">Windows:</span></span>
+  <span data-ttu-id="bf60c-217">Windows:</span><span class="sxs-lookup"><span data-stu-id="bf60c-217">Windows:</span></span>
 
   ```powershell
   # Run a separate PowerShell process because the script calls exit, so it will end the current PowerShell session.
   &powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
   ```
 
-  <span data-ttu-id="f9249-205">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="f9249-205">macOS/Linux:</span></span>
+  <span data-ttu-id="bf60c-218">macOS/Linux:</span><span class="sxs-lookup"><span data-stu-id="bf60c-218">macOS/Linux:</span></span>
 
   ```bash
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a><span data-ttu-id="f9249-206">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f9249-206">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bf60c-219">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="bf60c-219">See also</span></span>
 
-- [<span data-ttu-id="f9249-207">.NET Core yayınları</span><span class="sxs-lookup"><span data-stu-id="f9249-207">.NET Core releases</span></span>](https://github.com/dotnet/core/releases)
-- [<span data-ttu-id="f9249-208">.NET Core çalışma zamanı ve SDK indirme Arşivi</span><span class="sxs-lookup"><span data-stu-id="f9249-208">.NET Core Runtime and SDK download archive</span></span>](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [<span data-ttu-id="bf60c-220">.NET Core yayınları</span><span class="sxs-lookup"><span data-stu-id="bf60c-220">.NET Core releases</span></span>](https://github.com/dotnet/core/releases)
+- [<span data-ttu-id="bf60c-221">.NET Core çalışma zamanı ve SDK indirme Arşivi</span><span class="sxs-lookup"><span data-stu-id="bf60c-221">.NET Core Runtime and SDK download archive</span></span>](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
