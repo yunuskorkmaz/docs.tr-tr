@@ -1,319 +1,318 @@
 ---
-title: Kesme değişiklik türleri
-description: .NET Core'un .NET sürümlerinde geliştiriciler için uyumluluğu nasıl korumaya çalıştığı ve ne tür bir değişikliğin kırılma sı olarak kabul edilir.
+title: Son değişiklik türleri
+description: .NET Core 'un .NET sürümlerindeki geliştiriciler için uyumluluk denemelerini ve ne tür bir değişikliğin Son değişiklik olduğunu öğrenin.
 ms.date: 06/10/2019
-ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bc93316141ae99d8cfedc5e6d88a9e91216f9c6e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628598"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415751"
 ---
 # <a name="changes-that-affect-compatibility"></a>Uyumluluğu etkileyen değişiklikler
 
-.NET, geçmişi boyunca sürümden sürüme ve .NET'in tatları arasında yüksek düzeyde uyumluluk sağlama girişiminde bulundu. Bu ,NET Core için doğru olmaya devam ediyor. .NET Core,.NET Framework'den bağımsız yeni bir teknoloji olarak kabul edilse de, .NET Core'un .NET Framework'den sapma yeteneğini iki ana faktör sınırlayabilirsiniz:
+.NET, geçmişi boyunca sürümden sürüme ve .NET 'in özellikleri arasında yüksek düzeyde uyumluluk tutmaya çalıştı. Bu, .NET Core için doğru olmaya devam eder. .NET Core, .NET Framework bağımsız olan yeni bir teknoloji olarak düşünülebilir, ancak iki ana etken .NET Core 'un .NET Framework arasında sınırsız olmasına izin verebilir:
 
-- Çok sayıda geliştirici başlangıçta geliştirmiştir veya .NET Framework uygulamalarını geliştirmeye devam eder. .NET uygulamaları arasında tutarlı davranış beklerler.
+- Asıl olarak çok sayıda geliştirici geliştirmiş veya .NET Framework uygulamaları geliştirmeye devam eder. .NET uygulamalarında tutarlı davranış beklentilerine sahip olurlar.
 
-- .NET Standart kitaplık projeleri, geliştiricilerin .NET Core ve .NET Framework tarafından paylaşılan ortak API'leri hedefleyen kitaplıklar oluşturmasına olanak tanır. Geliştiriciler, .NET Core uygulamasında kullanılan bir kitaplığın .NET Framework uygulamasında kullanılan kitaplığın aynı şekilde olmasını bekler.
+- .NET Standard kitaplık projeleri, geliştiricilerin .NET Core ve .NET Framework tarafından paylaşılan ortak API 'Leri hedefleyen kitaplıklar oluşturmalarına olanak tanır. Geliştiriciler .NET Core uygulamasında kullanılan bir kitaplığın, .NET Framework uygulamasında kullanılan aynı kitaplıkla aynı şekilde davranmasını bekler.
 
-.NET uygulamalarında uyumlulukla birlikte, geliştiriciler .NET Core sürümlerinde yüksek düzeyde uyumluluk beklerler. Özellikle, .NET Core'un önceki bir sürümü için yazılan kod, .NET Core'un sonraki bir sürümünde sorunsuz bir şekilde çalıştırılmalıdır. Aslında, birçok geliştirici .NET Core'un yeni yayımlanan sürümlerinde bulunan yeni API'lerin, bu API'lerin sunulduğu ön sürüm sürümleriyle de uyumlu olmasını bekleyilmiştir.
+Geliştiriciler .NET uygulamaları genelinde uyumlulukla birlikte .NET Core sürümleri arasında yüksek düzeyde uyumluluk bekler. Özellikle .NET Core 'un önceki bir sürümü için yazılan kod, daha sonraki bir .NET Core sürümünde sorunsuz çalışmalıdır. Aslında birçok geliştirici, .NET Core 'un yeni yayımlanmış sürümlerinde bulunan yeni API 'Lerin, bu API 'Lerin tanıtıldıkları yayın öncesi sürümlerle de uyumlu olmasını bekler.
 
-Bu makalede, uyumluluk değişiklikleri (veya kesme değişiklikleri) kategorileri ve .NET ekibinin bu kategorilerin her birinde değişiklikleri değerlendirme şekli özetlendi. .NET ekibinin olası kesme değişikliklerine nasıl yaklaştığını anlamak, özellikle varolan API'lerin davranışını değiştiren [dotnet/runtime](https://github.com/dotnet/runtime) GitHub deposunda çekme isteklerini açan geliştiriciler için yararlıdır.
+Bu makalede, uyumluluğu etkileyen değişiklikler ve .NET ekibinin her tür değişikliği değerlendirme yöntemi özetlenmektedir. .NET ekibinin olası son değişikliklere nasıl yaklaşılacağını anlamak, [mevcut .NET API](https://github.com/dotnet/runtime)'lerinin davranışını değiştiren çekme isteklerini açan geliştiriciler için özellikle yararlıdır.
 
-> [!NOTE]
-> İkili uyumluluk ve geriye dönük uyumluluk gibi uyumluluk kategorilerinin tanımı [için](categories.md)bkz.
-
-Aşağıdaki bölümlerde .NET Core API'lerinde yapılan değişikliklerin kategorileri ve bunların uygulama uyumluluğu üzerindeki etkileri açıklanır. Değişikliklere ✔️ izin verilir, ❌izin verilmez veya önceki davranışın ne kadar öngörülebilir, açık ve tutarlı bir şekilde ❓ bir yargı ve değerlendirme gerektirir.
+Aşağıdaki bölümlerde, .NET Core API 'Lerinde yapılan değişikliklerin kategorileri ve bunların uygulama uyumluluğuyla ilgili bir etkisi açıklanır. Değişikliklere izin verilmez ✔️, izin verilmiyor ❌ veya karartan ve önceden tahmin edilebilir, belirgin ve tutarlı bir değerlendirme, önceki davranışın ❓.
 
 > [!NOTE]
-> .NET Core kitaplıklarındaki değişikliklerin nasıl değerlendirildiği konusunda bir rehber olarak hizmet vermenin yanı sıra, kitaplık geliştiricileri bu ölçütleri birden çok .NET uygulamasını ve sürümlerini hedefleyen kitaplıklarındaki değişiklikleri değerlendirmek için de kullanabilir.
+>
+> - .NET kitaplıklarında yapılan değişikliklerin nasıl değerlendirildiğini gösteren bir kılavuz olarak, kitaplık geliştiricileri de bu ölçütleri kullanarak birden çok .NET uygulaması ve sürümü hedefleyen kitaplıklarında yapılan değişiklikleri değerlendirmek için de kullanılabilir.
+> - Uyumluluk kategorileri hakkında daha fazla bilgi için, bkz. [Uyumluluk](categories.md), ileri ve geri uyumluluk.
 
-## <a name="modifications-to-the-public-contract"></a>Kamu sözleşmesinde yapılan değişiklikler
+## <a name="modifications-to-the-public-contract"></a>Ortak Sözleşmede yapılan değişiklikler
 
-Bu kategorideki değişiklikler, bir türün ortak yüzey alanını değiştirir. Geriye *dönük uyumluluğu* ihlal ettikleri için bu kategorideki değişikliklerin çoğuna izin verilmez (bir API'nin önceki sürümüyle geliştirilen bir uygulamanın daha sonraki bir sürümde yeniden derleme olmadan yürütebilme yeteneği).
+Bu kategorideki değişiklikler bir türün genel yüzey alanını değiştirir. Bu kategorideki değişikliklerden büyük bir olasılıkla, *geriye dönük uyumluluğu* ihlal etdiklerinden (API 'nin önceki bir sürümü ile geliştirilen bir uygulamanın daha sonraki bir sürümde yeniden derleme olmadan yürütülmesi için geliştirilmiş bir uygulama özelliği) izin verilmez.
 
 ### <a name="types"></a>Türler
 
-- ✔️ **Izin verilir: Arabirim zaten bir temel türü tarafından uygulandığında bir türden arabirim uygulamasını kaldırma**
+- ✔️ **Izin verildi: arabirim bir temel tür tarafından zaten uygulandığında bir türden arabirim uygulamasını kaldırma**
 
-- ❓ **YARGI GEREKTIRIR: Bir türe yeni bir arayüz uygulaması ekleme**
+- ❓, **Bir türe yeni bir arabirim uygulama ekleme konusunda Yargıduyuyor.**
 
-  Varolan istemcileri olumsuz etkilemediği için bu kabul edilebilir bir değişikliktir. Türdeki herhangi bir değişikliğin, yeni uygulamanın kabul edilebilir kalması için burada tanımlanan kabul edilebilir değişikliklerin sınırları içinde çalışması gerekir. Bir tasarımcının veya seri göstericinin alt düzey tüketilemeyen kod veya veri oluşturma yeteneğini doğrudan etkileyen arabirimler eklerken çok dikkatli olunması gerekir. Bir örnek <xref:System.Runtime.Serialization.ISerializable> arayüzdür.
+  Bu, mevcut istemcileri olumsuz etkilemediğinden, kabul edilebilir bir değişiklik. Yeni uygulamanın kabul edilebilir olarak kalması için, bu türdeki tüm değişiklikler burada tanımlanan kabul edilebilir değişiklik sınırları içinde çalışmalıdır. Bir tasarımcının veya seri hale getiricinin alt düzey tüketilemeyecek kod veya veri oluşturma yeteneğini doğrudan etkileyen arabirimler eklenirken aşırı dikkatli olmanız gerekir. Arabirim bir örnektir <xref:System.Runtime.Serialization.ISerializable> .
 
-- ❓ **YARGI GEREKTIRIR: Yeni bir taban sınıf tanıtılması**
+- ❓, **Yeni bir temel sınıf tanıtımı gerekir**
 
-  Bir tür, yeni [soyut](../../csharp/language-reference/keywords/abstract.md) üyeler tanımazsa veya varolan türlerin anlamlarını veya davranışını değiştirmiyorsa, varolan iki tür arasında bir hiyerarşiye dönüştürülebilir. Örneğin, .NET Framework 2.0'da <xref:System.Data.Common.DbConnection> <xref:System.Data.SqlClient.SqlConnection>sınıf, daha önce doğrudan .'den <xref:System.ComponentModel.Component>türetilmiş olan yeni bir taban sınıf haline geldi.
+  Bir tür, yeni bir [soyut](../../csharp/language-reference/keywords/abstract.md) üye sunmaz veya var olan türlerin semantiğini ya da davranışını değiştirmek değilse, iki mevcut tür arasında bir hiyerarşiye tanıtılamaz. Örneğin, .NET Framework 2,0 ' de, <xref:System.Data.Common.DbConnection> sınıfı <xref:System.Data.SqlClient.SqlConnection> daha önce doğrudan öğesinden türetilmiş olan için yeni bir temel sınıf haline geldi <xref:System.ComponentModel.Component> .
 
-- **✔️ Izin verilir: Bir türbir derlemeden diğerine taşıma**
+- ✔️ **Izin verildi: bir tür bir derlemeden diğerine taşınıyor**
 
-  *Eski* derleme, yeni derlemeye işaret eden <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> noktalarla işaretlenmelidir.
+  *Eski* derlemenin, <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> yeni derlemeye işaret eden ile işaretlenmesi gerekir.
 
-- ✔️ **Izin VERILIR: [Yapı](../../csharp/language-reference/builtin-types/struct.md) türünü `readonly struct` bir türe değiştirme**
+- ✔️ **Izin verildi: bir [Yapı](../../csharp/language-reference/builtin-types/struct.md) türünü `readonly struct` tür olarak değiştirme**
 
-  Bir `readonly struct` türü bir `struct` türle değiştirmek yasaktır.
+  Tür türüne değiştirme `readonly struct` `struct` yapılmasına izin verilmez.
 
-- ✔️ **İzİn VERİlMESİ: *Erişilebilir* (ortak veya korumalı) yapıcılar olmadığında bir türe [mühürlü](../../csharp/language-reference/keywords/sealed.md) veya [soyut](../../csharp/language-reference/keywords/abstract.md) anahtar kelime ekleme**
+- ✔️ **Izin verildi: *erişilebilir* (genel veya korumalı) oluşturucular olmadığında bir türe [Sealed](../../csharp/language-reference/keywords/sealed.md) veya [abstract](../../csharp/language-reference/keywords/abstract.md) anahtar sözcüğünü ekleme**
 
-- ✔️ **IZIN VERİlDİ: Bir türün görünürlüğünü genişletme**
+- ✔️ **Izin verildi: bir türün görünürlüğünü genişletme**
 
-- ❌**ADVERİl: Bir türün ad alanını veya adını değiştirme**
+- ❌**Izin verilmiyor: bir türün ad alanını veya adını değiştirme**
 
-- ❌**ADVERİl: Genel bir türü yeniden adlandırma veya kaldırma**
+- ❌**Izin verilmiyor: ortak bir türü yeniden adlandırma veya kaldırma**
 
-   Bu, yeniden adlandırılmış veya kaldırılan türü kullanan tüm kodu kırar.
+   Bu, yeniden adlandırılan veya kaldırılan türü kullanan tüm kodları keser.
 
-- ❌**İzin VERİlMEMİş: Bir numaralandırmanın altında yatan türü değiştirme**
+- ❌**Izin verilmiyor: bir numaralandırmanın temel alınan türünü değiştirme**
 
-   Bu derleme zamanı ve davranışsal kırılma değişikliğinin yanı sıra öznitelik bağımsız değişkenlerini ayrıştırılamaz hale getirebilecek ikili bir kırılma değişikliğidir.
+   Bu bir derleme zamanı ve davranışsız değişiklik ve öznitelik bağımsız değişkenlerini ayrıştırılabilir hale getirmek için ikili bir değişiklik de yapar.
 
-- ❌**İzİn VERİlMEMİş: Daha önce mühürlenmemiş bir tür mühürleme**
+- ❌**Izin verilmiyor: daha önce korumasız bir tür mühürleme**
 
-- ❌**İzin VERİlMEMİş: Bir arabirimin temel türleri kümesine arabirim ekleme**
+- ❌**Izin verilmiyor: bir arabirimin temel türleri kümesine arabirim ekleme**
 
-   Bir arabirim daha önce uygulamadığı bir arabirim uygularsa, arabirimin özgün sürümünü uygulayan tüm türler bozulur.
+   Bir arabirim daha önce uygulanmayan bir arabirim uygularsa, arabirimin orijinal sürümünü uygulayan tüm türler bozulur.
 
-- ❓ **YARGI GEREKTIRIR: Bir sınıfı temel sınıflar kümesinden veya uygulanan arabirimler kümesinden bir arabirimden kaldırma**
+- ❓, **Bir sınıfı temel sınıflar kümesinden veya uygulanan arabirimler kümesinden bir arabirimden kaldırmak istiyor.**
 
-  Arabirim kaldırma kuralının bir istisnası vardır: kaldırılan arabirimden türeyen bir arabirim uygulamasını ekleyebilirsiniz. Örneğin, tür veya <xref:System.IDisposable> arabirim şimdi uygular <xref:System.ComponentModel.IComponent>, hangi <xref:System.IDisposable>uygular kaldırabilirsiniz.
+  Arabirim kaldırma kuralı için bir özel durum vardır: kaldırılan arabirimden türetilen bir arabirimin uygulamasını ekleyebilirsiniz. Örneğin, <xref:System.IDisposable> türü veya arabirimi ' nin uyguladığı bir şekilde, öğesini kaldırabilirsiniz <xref:System.ComponentModel.IComponent> <xref:System.IDisposable> .
 
-- ❌**İzin VERİlMEMİş: Bir `readonly struct` türbirin [yapı](../../csharp/language-reference/builtin-types/struct.md) türüne değiştirilmesi**
+- ❌**Izin verilmiyor: bir `readonly struct` türü [struct](../../csharp/language-reference/builtin-types/struct.md) türü olarak değiştirme**
 
-  Ancak, bir `struct` türün `readonly struct` bir türe değiştirilmesine izin verilir.
+  Ancak bir tür için bir türe `struct` yapılan değişikliğe `readonly struct` izin verilir.
 
-- ❌**İzin VERİlMEMİş: [Bir](../../csharp/language-reference/builtin-types/struct.md) yapı `ref struct` türünü bir türe değiştirme ve bunun tersi**
+- ❌**Izin verilmiyor: bir [Yapı](../../csharp/language-reference/builtin-types/struct.md) türünü tür olarak değiştirme `ref struct` ve tam tersi**
 
-- ❌**İzin VERİlMEMİş: Bir türün görünürlüğünü azaltmak**
+- ❌**Izin verilmiyor: bir türün görünürlüğünü azaltma**
 
    Ancak, bir türün görünürlüğünü artırmak için izin verilir.
 
 ### <a name="members"></a>Üyeler
 
-- ✔️ **Izin: [Sanal](../../csharp/language-reference/keywords/sealed.md) olmayan bir üyenin görünürlüğünü genişletme**
+- ✔️ **Izin verildi: [sanal](../../csharp/language-reference/keywords/sealed.md) olmayan bir üyenin görünürlüğünü genişletme**
 
-- ✔️ **Izin: *Erişilebilir* (ortak veya korumalı) oluşturucusu olmayan veya türü [mühürlü](../../csharp/language-reference/keywords/sealed.md) olan genel bir türe soyut bir üye ekleme**
+- ✔️ **Izin verildi: bir soyut üyeyi, *erişilebilir* (genel veya korumalı) oluşturuculara sahip olmayan bir ortak türe ekleme veya tür [mühürlü](../../csharp/language-reference/keywords/sealed.md) **
 
-  Ancak, erişilebilir (ortak veya korumalı) oluşturuculara sahip ve izin `sealed` verilmeyen bir türe soyut bir üye eklemek.
+  Ancak, erişilebilir (genel veya korumalı) oluşturuculara sahip bir türe soyut üye eklenmesine `sealed` izin verilmez.
 
-- **✔️ Izin: Türü erişilebilir (ortak veya korumalı) yapıcılar olmadığında veya türü [mühürlendiğinde](../../csharp/language-reference/keywords/sealed.md) [korunan](../../csharp/language-reference/keywords/protected.md) bir üyenin görünürlüğünü kısıtlama**
+- ✔️ **Izin verildi: tür erişilebilir olmayan (ortak veya korumalı) oluşturuculara veya tür [korumalı](../../csharp/language-reference/keywords/sealed.md) olduğunda [korumalı](../../csharp/language-reference/keywords/protected.md) bir üyenin görünürlüğünü kısıtlama**
 
-- **✔️ İzin ver: Bir üyeyi hiyerarşide kaldırıldığı türden daha yüksek bir sınıfa taşıma**
+- ✔️ **Izin verildi: bir üyeyi hiyerarşide daha yüksek bir sınıfa, onun kaldırıldığı türden daha yukarıya taşıma**
 
-- **✔️ İzNEdİlİr: Bir geçersiz kılma ekleme veya kaldırma**
+- ✔️ **Izin verilen: bir geçersiz kılma ekleme veya kaldırma**
 
-  Geçersiz kılmanın tanıtılması, önceki tüketicilerin [tabanı](../../csharp/language-reference/keywords/base.md)ararken geçersiz kılmayı atlayabına neden olabilir.
+  Bir geçersiz kılma ile tanışın, önceki tüketicilere [taban](../../csharp/language-reference/keywords/base.md)çağrılırken geçersiz kılma üzerinde atlama yapılmasına neden olabilir.
 
-- **✔️ İzİn VERİlMeSİ: Sınıfın daha önce oluşturucusu yoksa parametresiz bir yapıcı ile birlikte bir sınıfa yapıcı ekleme**
+- ✔️ **Izin verildi: sınıfın daha önce Oluşturucusu yoksa, bir sınıfa Oluşturucu Ekleme, parametresiz bir oluşturucuyla birlikte**
 
-   Ancak, parametresiz oluşturucu *eklemeden* daha önce hiçbir oluşturucusu olan bir sınıfa bir oluşturucu eklenmesine izin verilmez.
+   Ancak, parametresiz oluşturucuyu eklemeden daha önceden hiç oluşturucuya *sahip olmayan bir* sınıfa bir Oluşturucu eklemeye izin verilmez.
 
-- **✔️ Izin: Bir üyeyi [soyuttan](../../csharp/language-reference/keywords/abstract.md) [sanala](../../csharp/language-reference/keywords/virtual.md) değiştirme**
+- ✔️ **Izin verildi: bir üyeyi [soyut](../../csharp/language-reference/keywords/abstract.md) Iken [sanal](../../csharp/language-reference/keywords/virtual.md) olarak değiştirme**
 
-- **✔️ Izin: `ref readonly` A'dan `ref` dönüş değerine değiştirme (sanal yöntemler veya arabirimler hariç)**
+- ✔️ **Izin verildi: bir `ref readonly` `ref` dönüş değerine değiştirme (sanal yöntemler veya arabirimler hariç)**
 
-- ✔️ **Izin verilmeyen: Alanın statik türü mutable değer türü olmadığı sürece, [yalnızca](../../csharp/language-reference/keywords/readonly.md) bir alandan okuma kaldırma**
+- ✔️ **Izin verildi: alanın statik türü kesilebilir değer türünde değilse, bir alandan [ReadOnly](../../csharp/language-reference/keywords/readonly.md) öğesini kaldırma**
 
-- ✔️ **Izin verildi: Daha önce tanımlanmamış yeni bir olayı çağırma**
+- ✔️ **Izin verildi: daha önce tanımlanmayan yeni bir olay çağrılıyor**
 
-- ❓ **YARGI GEREKTIRIR: Bir türe yeni bir örnek alanı ekleme**
+- ❓, **Bir türe yeni bir örnek alanı ekleme konusunda Yargıduyuyor**
 
-   Bu değişiklik serileştirmeyi etkiler.
+   Bu değişiklik Serileştirmeyi etkiler.
 
-- ❌**ADİZ: Bir kamu üyesinin veya parametrenin yeniden adlandırılması veya kaldırılması**
+- ❌**Izin verilmiyor: ortak bir üyeyi veya parametreyi yeniden adlandırma veya kaldırma**
 
-   Bu, yeniden adlandırılmış veya kaldırılan üyeyi veya parametreyi kullanan tüm kodu kırar.
+   Bu, yeniden adlandırılan veya kaldırılan üyeyi veya parametreyi kullanan tüm kodları keser.
 
-   Bu, bir özellikten bir vericiyi veya ayarlayıcıyı kaldırmayı veya yeniden adlandırmayı ve numaralandırma üyelerini yeniden adlandırmayı veya kaldırmayı içerir.
+   Bu, bir alıcı veya ayarlayıcının bir özellikten kaldırılmasını veya yeniden adlandırılmasını, ayrıca sabit listesi üyelerini yeniden adlandırmayı veya kaldırmayı içerir.
 
-- ❌**İzin VERİlMESİn: Arabirime üye ekleme**
+- ❌**Izin verilmiyor: arabirime üye ekleme**
 
-- ❌**İzin VERİlMEMİş: Genel sabit veya numaralandırma üyesinin değerini değiştirme**
+- ❌**Izin verilmiyor: bir genel sabit veya numaralandırma üyesinin değerini değiştirme**
 
-- ❌**İzin VERİlMEMİş: Bir özelliğin, alanın, parametrenin veya geri dönüş değerinin türünü değiştirme**
+- ❌**Izin verilmiyor: bir özelliğin, alanın, parametrenin veya dönüş değerinin türünü değiştirme**
 
-- ❌**İzin VERİlMEMİş: Parametrelerin sırasını ekleme, kaldırma veya değiştirme**
+- ❌**Izin verilmiyor: parametre sırasını ekleme, kaldırma veya değiştirme**
 
-- ❌**İzin VERİlMEMİş: [Bir](../../csharp/language-reference/keywords/in.md)parametreden in , [out](../../csharp/language-reference/keywords/out.md) veya [ref](../../csharp/language-reference/keywords/ref.md) anahtar sözcüğü ekleme veya kaldırma**
+- ❌**Izin verilmiyor: bir parametreden [ın](../../csharp/language-reference/keywords/in.md), [Out](../../csharp/language-reference/keywords/out.md) veya [ref](../../csharp/language-reference/keywords/ref.md) anahtar sözcüğünü ekleme veya kaldırma**
 
-- ❌**ADVERİl: Bir parametreyi yeniden adlandırma (servis talebinin değiştirilmesi dahil)**
+- ❌**Izin verilmiyor: bir parametreyi yeniden adlandırma (büyük küçük harf değişikliği dahil)**
 
-  Bu iki nedenden dolayı kırma olarak kabul edilir:
+  Bunun iki nedenden dolayı bölünmesi kabul edilir:
 
-  - Visual Basic'te geç bağlama özelliği ve C#'da [dinamik](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) gibi geç giden senaryoları kırar.
+  - C# ' de Visual Basic ve [Dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) ' deki geç bağlama özelliği gibi geç bağlantılı senaryoları keser.
 
-  - Geliştiriciler [adlandırılmış bağımsız değişkenleri](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)kullandığında [kaynak uyumluluğunu](categories.md#source-compatibility) bozar.
+  - Geliştiriciler [adlandırılmış bağımsız değişkenler](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)kullandıklarında [kaynak uyumluluğunu](categories.md#source-compatibility) keser.
 
-- ❌**İzin VERİlMEMİş: `ref` İade `ref readonly` değerinden geri dönüş değerine değiştirme**
+- ❌**Izin verilmiyor: `ref` dönüş değerinden `ref readonly` dönüş değerine değiştirme**
 
-- ❌️**İzin VERİlMEMİş: Sanal bir yöntem veya arabirimde a'dan `ref readonly` `ref` geri dönüş değerine değiştirme**
+- ❌️**Izin verilmiyor: bir `ref readonly` `ref` sanal yöntem veya arabirimdeki bir dönüş değerine değiştirme**
 
-- ❌**İzİn VERİlMESİ: Bir üyeden [özet](../../csharp/language-reference/keywords/abstract.md) ekleme veya kaldırma**
+- ❌**Izin verilmiyor: bir üyeden [Özet](../../csharp/language-reference/keywords/abstract.md) ekleme veya kaldırma**
 
-- ❌**İzin VERİlMESİn: [Sanal](../../csharp/language-reference/keywords/virtual.md) anahtar kelimeyi üyeden kaldırma**
+- ❌**Izin verilmiyor: [sanal](../../csharp/language-reference/keywords/virtual.md) anahtar sözcüğü bir üyeden kaldırma**
 
-  C# derleyicisi sanal olmayan yöntemleri aramak için [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) Intermediate Language (IL) yönergeleri yağlama eğilimindedir`callvirt` çünkü bu genellikle bir kırılma değişiklik olmasa da (normal bir arama yok, null denetim gerçekleştirir), bu davranış çeşitli nedenlerle değişmez değildir:
-  - C# .NET'in hedef lemesi tek dil değildir.
+  C# derleyicisi, sanal olmayan yöntemleri çağırmak için [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) ara DIL (IL) yönergelerini yayma eğilimi gösterirken (bir `callvirt` null denetimi gerçekleştirir, normal bir çağrı olmadığında), bu davranış çeşitli nedenlerle ınvariable değildir:
+  - C#, .net 'in hedeflediği tek dil değildir.
 
-  - C# derleyicisi, `callvirt` hedef yöntem sanal olmadığında ve büyük olasılıkla null olmadığında [(?. null yayılma işleci](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)aracılığıyla erişilen bir yöntem gibi) normal bir çağrıya giderek daha fazla optimizasyon yapmaya çalışır.
+  - C# derleyicisi, `callvirt` hedef yöntem sanal olmayan ve muhtemelen null olmadığında ( [?. null yayma operatörü](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)aracılığıyla erişilen bir yöntem gibi) normal bir çağrıyı en iyi şekilde iyileştirmenize çalışır.
 
-  Bir yöntemi sanal hale getirmek, tüketici kodunun genellikle onu sanal olmayan olarak adlandırması anlamına gelir.
+  Bir yöntem sanal hale getirmek, tüketici kodunun genellikle neredeyse bir kez çağrılmasını sona erdirmek anlamına gelir.
 
-- ❌**İzin VERİlMESİn: Bir üyeye [sanal](../../csharp/language-reference/keywords/virtual.md) anahtar kelime ekleme**
+- ❌**Izin verilmiyor: bir üyeye [sanal](../../csharp/language-reference/keywords/virtual.md) anahtar sözcük ekleme**
 
-- ❌**DISALLOWED: Sanal üye soyut yapma**
+- ❌**Izin verilmiyor: bir sanal üyeyi soyut hale getirme**
 
-  [Sanal üye,](../../csharp/language-reference/keywords/virtual.md) türetilmiş bir sınıf tarafından geçersiz *kılınabilecek* bir yöntem uygulaması sağlar. Soyut bir [üye](../../csharp/language-reference/keywords/abstract.md) hiçbir uygulama sağlar ve geçersiz *kılınmalıdır.*
+  Bir [sanal üye](../../csharp/language-reference/keywords/virtual.md) , türetilmiş bir sınıf tarafından *geçersiz kılınabilen bir* Yöntem uygulamasını sağlar. [Soyut üye](../../csharp/language-reference/keywords/abstract.md) , uygulama sağlamaz ve geçersiz *kılınmalıdır* .
 
-- ❌**İzin VERİlMEMİş: Erişilebilir (ortak veya korumalı) oluşturuculara sahip ve [mühürlü](../../csharp/language-reference/keywords/sealed.md) olmayan bir genel türe soyut bir üye ekleme**
+- ❌**Izin verilmiyor: erişilebilir (genel veya korumalı) oluşturuculara ve [korumalı](../../csharp/language-reference/keywords/sealed.md) olmayan bir ortak türe soyut üye ekleme**
 
-- ❌**İZIN VERİlMESİn: [Statik](../../csharp/language-reference/keywords/static.md) anahtar kelimenin üyeden eklenmesi veya kaldırılması**
+- ❌**Izin verilmiyor: üyenin [statik](../../csharp/language-reference/keywords/static.md) anahtar sözcüğünü ekleme veya kaldırma**
 
-- ❌**İzİn VERİlMESİ: Varolan aşırı yüklemeyi engelleyen ve farklı bir davranışı tanımlayan** aşırı yük ekleme
+- ❌**Izin verilmiyor: var olan bir aşırı yüklemeyi engelleyen ve farklı bir davranışı tanımlayan bir aşırı yükleme ekleniyor**
 
-  Bu, önceki aşırı yüklemeye bağlı varolan istemcileri kırar. Örneğin, bir sınıfın bir <xref:System.UInt32>yöntemi kabul eden tek bir sürümü varsa, varolan bir tüketici bir <xref:System.Int32> değeri geçerken bu aşırı yüke başarıyla bağlanır. Ancak, yeniden derleme veya geç bağlama <xref:System.Int32>kullanırken bir , kabul eden bir aşırı yük eklerseniz, derleyici şimdi yeni aşırı yüke bağlanır. Farklı davranış sonuçları, bu bir kırılma değişikliğidir.
+  Bu, önceki aşırı yüklemeye bağlanan mevcut istemcileri keser. Örneğin, bir sınıfın bir yöntemi kabul eden tek bir sürümü varsa <xref:System.UInt32> , var olan bir tüketici bir değer geçirirken bu aşırı yüklemeye başarıyla bağlanır <xref:System.Int32> . Ancak, kabul eden bir aşırı yükleme eklerseniz <xref:System.Int32> veya geç bağlamayı kullandığınızda, derleyici artık yeni aşırı yüklemeye bağlanır. Farklı davranış sonuç alıyorsa, bu durum bir son değişiklik olur.
 
-- ❌**İzİn VERİlMEMİş: Parametresiz oluşturucueklemeden daha önce oluşturucu olmayan bir sınıfa yapıcı ekleme**
+- ❌**Izin verilmiyor: parametresiz oluşturucuyu eklemeden daha önce Oluşturucusu olmayan bir sınıfa Oluşturucu Ekleme**
 
-- ❌️**İzİn VERİlMESİn: [Yalnızca](../../csharp/language-reference/keywords/readonly.md) bir alana okuma ekleme**
+- ❌️**Izin verilmiyor: bir alana [ReadOnly](../../csharp/language-reference/keywords/readonly.md) ekleme**
 
-- ❌**İzİn VERİlMESİ: Bir üyenin görünürlüğünü azaltmak**
+- ❌**Izin verilmiyor: üyenin görünürlüğünü azaltma**
 
-   Bu, *erişilebilir* `public` ( veya `protected`) oluşturucular olduğunda ve türü [mühürlü](../../csharp/language-reference/keywords/sealed.md) *olmadığında* [korunan](../../csharp/language-reference/keywords/protected.md) bir üyenin görünürlüğünü azaltmayı içerir. Bu durumda, korunan bir üyenin görünürlüğünü azaltmak için izin verilir.
+   Bu, *erişilebilir* ( [protected](../../csharp/language-reference/keywords/protected.md) `public` veya `protected` ) oluşturucular olduğunda ve tür *not* [korumalı](../../csharp/language-reference/keywords/sealed.md)olmadığında korunan bir üyenin görünürlüğünü azaltmayı içerir. Bu durumda, korunan bir üyenin görünürlüğünü azaltmak için izin verilir.
 
-   Bir üyenin görünürlüğünün artırılmasına izin verilir.
+   Üyenin görünürlüğünü artırmak için izin verilir.
 
-- ❌**İzin VERİlMEMİş: Üye nin türünü değiştirme**
+- ❌**Izin verilmiyor: üyenin türünü değiştirme**
 
-   Bir yöntemin veya bir özellik veya alanın türündeki geri dönüş değeri değiştirilemez. Örneğin, bir <xref:System.Object> döndürür bir yöntemin imzası bir <xref:System.String>, ya da tam tersi döndürmek için değiştirilemez.
+   Bir metodun veya bir özelliğin ya da alanın dönüş değeri değiştirilemez. Örneğin, döndüren bir yöntemin imzası <xref:System.Object> , bir veya döndürmek için değiştirilemez <xref:System.String> .
 
-- ❌**İzİn VERİlMEMİş: Daha önce durumu olmayan bir yapıya alan ekleme**
+- ❌**Izin verilmiyor: daha önce durumu olmayan bir yapıya alan ekleme**
 
-  Kesin atama kuralları, değişken türü durumsuz bir yapı olduğu sürece başharflenmemiş değişkenlerin kullanımına izin verir. Yapı devlet seli yapılırsa, kod başharfe çözülmemiş verilerle sonuçlanabilir. Bu hem potansiyel bir kaynak kırma ve ikili kırma değişikliğidir.
+  Kesin atama kuralları, değişken türü durum bilgisi olmayan bir yapı olduğu sürece başlatılmamış değişkenlerin kullanılmasına izin verir. Yapı durum bilgisi olarak yapılırsa, kod başlatılmamış verilerle bitebilecek. Bu, büyük olasılıkla kaynak bölünmesi ve ikili bir değişiklik değişikliği olur.
 
-- ❌**İzİn VERİlMEMİz: Varolan bir olayı daha önce hiç ateşlemediğinde ateşlemek**
+- ❌**Izin verilmiyor: daha önce hiç tetiklendiğinde var olan bir olayı tetikleme**
 
 ## <a name="behavioral-changes"></a>Davranış değişiklikleri
 
-### <a name="assemblies"></a>Bütünleştirilmiş kodlar
+### <a name="assemblies"></a>Bütünleştirilmiş Kodlar
 
-- ✔️ **Izin VERILIR: Aynı platformlar hala desteklendiğinde montajı taşınabilir hale getirme**
+- ✔️ **Izin verildi: aynı platformlar hala desteklenmeden bir derlemeyi taşınabilir hale getirme**
 
-- ❌**İzin VERİlMEMİş: Bir derlemenin adını değiştirme**
-- ❌**İzİn VERİlMESİn: Bir derlemenin ortak anahtarını değiştirme**
+- ❌**Izin verilmiyor: bir derlemenin adını değiştirme**
+- ❌**Izin verilmiyor: bir derlemenin ortak anahtarını değiştirme**
 
-### <a name="properties-fields-parameters-and-return-values"></a>Özellikler, alanlar, parametreler ve iade değerleri
+### <a name="properties-fields-parameters-and-return-values"></a>Özellikler, alanlar, parametreler ve dönüş değerleri
 
-- **✔️ Izin verilir: Bir özelliğin, alanın, geri dönüş değerinin veya [çıkış](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresinin değerini daha türetilmiş bir türe değiştirme**
+- **Izin verilen ✔️: bir özellik, alan, dönüş değeri veya [Out](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresinin değerini daha türetilmiş bir türe değiştirme**
 
-  Örneğin, bir tür döndüren <xref:System.Object> bir <xref:System.String> yöntem bir örneği döndürebilir. (Ancak, yöntem imzası değiştirilemez.)
+  Örneğin, bir türü döndüren bir yöntem <xref:System.Object> bir <xref:System.String> örnek döndürebilir. (Ancak, yöntem imzası değiştirilemez.)
 
-- ✔️ **Izin: Üye [sanal](../../csharp/language-reference/keywords/virtual.md) değilse, bir özellik veya parametre için kabul edilen değerlerin aralığının artırılması**
+- ✔️ **Izin verildi: üye [sanal](../../csharp/language-reference/keywords/virtual.md) değilse, bir özellik veya parametre için kabul edilen değerlerin aralığını artırma**
 
-  Yönteme geçirilebilen veya üye tarafından döndürülebilen değerler aralığı genişletilebilirken, parametre veya üye türü genişletilemez. Örneğin, bir yönteme geçirilen değerler 0-124'ten 0-255'e kadar genişletilebilirken, parametre türü ' den <xref:System.Byte> ' e <xref:System.Int32>değiştirilemez.
+  Yönteme geçirilebilecek veya üye tarafından döndürülen değer aralığı genişken, parametre veya üye türü ' ni genişletebilirler. Örneğin, bir yönteme geçirilen değerler 0-124 ' den 0-255 ' e genişleyebilir, parametre türü ' dan ' a geçiş yapılamaz <xref:System.Byte> <xref:System.Int32> .
 
-- ❌**İzin VERİlMEMİş: Üye sanalsa, bir özellik veya [virtual](../../csharp/language-reference/keywords/virtual.md) parametre için kabul edilen değerlerin aralığının artırılması**
+- ❌**Izin verilmiyor: üye [sanal](../../csharp/language-reference/keywords/virtual.md) ise, bir özellik veya parametre için kabul edilen değerlerin aralığını artırma**
 
-   Bu değişiklik, genişletilmiş değerler aralığı için doğru çalışmayacak varolan geçersiz kılınmış üyeleri kırar.
+   Bu değişiklik, genişletilmiş değer aralığı için doğru şekilde çalışmayacak olan geçersiz kılınan üyeleri keser.
 
-- ❌**İzin VERİlMEMİz: Bir özellik veya parametre için kabul edilen değerlerin aralığını azaltma**
+- ❌**Izin verilmiyor: bir özellik veya parametre için kabul edilen değerlerin aralığını azaltma**
 
-- ❌**İzin VERİlMEMİş: Bir özellik, alan, geri dönüş değeri veya [çıkış](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi için döndürülen değerlerin aralığını artırma**
+- ❌**Izin verilmiyor: bir özellik, alan, dönüş değeri veya [Out](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi için döndürülen değerlerin aralığını artırma**
 
-- ❌**İzin VERİlMEMİş: Bir özellik, alan, yöntem dönüş değeri veya [çıkış](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi için döndürülen değerleri değiştirme**
+- ❌**Izin verilmiyor: bir özellik, alan, yöntem dönüş değeri veya [Out](../../csharp/language-reference/keywords/out-parameter-modifier.md) parametresi Için döndürülen değerleri değiştirme**
 
-- ❌**İzin VERİlMEMİş: Bir özelliğin, alanın veya parametrenin varsayılan değerini değiştirme**
+- ❌**Izin verilmiyor: bir özelliğin, alanın veya parametrenin varsayılan değerini değiştirme**
 
-- ❌**İzin VERİlMEMİş: Sayısal bir iade değerinin kesinliği değiştirme**
+- ❌**Izin verilmiyor: sayısal bir dönüş değerinin hassasiyetini değiştirme**
 
-- ❓ **YARGILAMA GEREKİr: Girdinin ayrıştırılmasında ve yeni istisnalar atılmasında bir değişiklik (belgelerde ayrıştırma davranışı belirtilmese bile**
+- ❓ **, Giriş ayrıştırması ve yeni özel durumlar oluşturmadaki bir değişiklik olmalıdır (ayrıştırma davranışı belgelerde belirtilmese bile).**
 
 ### <a name="exceptions"></a>Özel durumlar
 
-- **✔️ Izin verilir: Varolan bir özel durum daha türemiş bir özel durum atma**
+- ✔️ **Izin verilen: var olan bir özel durumdan daha fazla türetilmiş özel durum üretiliyor**
 
-  Yeni özel durum varolan bir özel durum bir alt sınıf olduğundan, önceki özel durum işleme kodu özel durum işlemeye devam eder. Örneğin, .NET Framework 4'te kültür oluşturma ve alma yöntemleri, eğer <xref:System.ArgumentException> kültürü bulunamazsa yerine bir <xref:System.Globalization.CultureNotFoundException> atamaya başladı. Çünkü <xref:System.Globalization.CultureNotFoundException> <xref:System.ArgumentException>türetilmiştir, bu kabul edilebilir bir değişikliktir.
+  Yeni özel durum var olan bir özel durumun alt sınıfı olduğundan, önceki özel durum işleme kodu özel durumu işlemeye devam eder. Örneğin, .NET Framework 4 ' te kültür oluşturma ve alma yöntemleri kültür bulunamazsa bir yerine bir oluşturmaya başlamıştır <xref:System.Globalization.CultureNotFoundException> <xref:System.ArgumentException> . <xref:System.Globalization.CultureNotFoundException>Öğesinden türetildiğinden <xref:System.ArgumentException> , bu kabul edilebilir bir değişiklik.
 
-- ✔️ **Izin: Daha özel <xref:System.NotSupportedException>bir <xref:System.NotImplementedException> <xref:System.NullReferenceException> istisna atma , ,**
+- ✔️ **Izin verildi: <xref:System.NotSupportedException> <xref:System.NotImplementedException> <xref:System.NullReferenceException> şundan daha özel bir özel durum üretiliyor** ,
 
-- **✔️ Izin VERİlMeDİ: Kurtarılamaz olarak kabul edilen bir özel durum atma**
+- ✔️ **Izin verildi: kurtarılamaz olarak kabul edilen bir özel durum üretiliyor**
 
-  Kurtarılamayan özel durumlar yakalanmamalı, bunun yerine üst düzey catch-all işleyicisi tarafından işlenmelidir. Bu nedenle, kullanıcıların bu açık özel durumları yakalayan bir kod olması beklenmez. Kurtarılamayan özel durumlar şunlardır:
+  Kurtarılamaz özel durumlar yakalanmamalıdır, bunun yerine üst düzey bir catch-all işleyicisi tarafından işlenmelidir. Bu nedenle, kullanıcıların bu açık özel durumları yakalayan kodun olması beklenmez. Kurtarılamaz özel durumlar şunlardır:
 
   - <xref:System.AccessViolationException>
   - <xref:System.ExecutionEngineException>
   - <xref:System.Runtime.InteropServices.SEHException>
   - <xref:System.StackOverflowException>
 
-- **✔️ Izin ver: Yeni bir kod yolunda yeni bir özel durum atma**
+- ✔️ **Izin verilen: yeni bir kod yolunda yeni bir özel durum üretiliyor**
 
-  Özel durum yalnızca yeni parametre değerleri veya durumuyla yürütülen ve önceki sürümü hedefleyen varolan kod tarafından yürütülmeyen yeni bir kod yoluna uygulanmalıdır.
+  Özel durum yalnızca yeni parametre değerleri veya durumuyla yürütülen ve önceki sürümü hedefleyen mevcut kodla yürütülemeyen yeni bir kod yolu için geçerli olmalıdır.
 
-- ✔️ **Izin: Daha sağlam davranışlar veya yeni senaryolar etkinleştirmek için bir özel durum kaldırma**
+- ✔️ **Izin verildi: daha sağlam davranışı veya yeni senaryoları etkinleştirmek için özel durumu kaldırma**
 
-  Örneğin, daha `Divide` önce yalnızca pozitif değerleri işleyen <xref:System.ArgumentOutOfRangeException> ve başka bir değer atan bir yöntem, özel durum atmadan hem negatif hem de pozitif değerleri destekleyecek şekilde değiştirilebilir.
+  Örneğin, `Divide` daha önce yalnızca pozitif değerleri işlenmiş ve başka bir şekilde oluşturulmuş bir yöntem, <xref:System.ArgumentOutOfRangeException> özel durum oluşturmadan hem negatif hem de pozitif değerleri destekleyecek şekilde değiştirilebilir.
 
-- ✔️ **İzİn VERİlMESİnE İzİn VERİlMESİnE: Hata iletisinin metnini değiştirme**
+- ✔️ **Izin verilen: hata iletisi metnini değiştirme**
 
-  Geliştiriciler, kullanıcının kültürüne bağlı olarak değişen hata iletilerinin metnine güvenmemelidir.
+  Geliştiriciler, kullanıcının kültürüne göre de değişen hata iletilerinin metnine güvenmemelidir.
 
-- ❌**İzİn VERİlMEMİz: Yukarıda listelenmemiş başka bir durumda özel durum atma**
+- ❌**Izin verilmiyor: Yukarıda listelenmeyen başka bir durumda özel durum üretiliyor**
 
-- ❌**İzİn VERİlMEMİz: Yukarıda listelenmemiş başka bir durumda bir özel durum kaldırma**
+- ❌**Izin verilmiyor: Yukarıda listelenmeyen herhangi bir özel durumu kaldırma**
 
 ### <a name="attributes"></a>Öznitelikler
 
-- ✔️ **İzİn VERİlMEMİşTİr: Gözlemlenebilir *olmayan* bir özniteliğin değerini değiştirme**
+- ✔️ **Izin verildi: observable *olmayan* bir özniteliğin değerini değiştirme**
 
-- ❌**İzin VERİlMEMİş: Gözlemlenebilir *is* bir özniteliğin değerini değiştirme**
+- ❌**Izin verilmiyor: observable olan bir özniteliğin değerini değiştirme *is* **
 
-- ❓ **YARGI GEREKTIRIR: Bir özniteliği kaldırma**
+- ❓, **Bir özniteliği kaldırmak IÇIN Yargıduyuyor**
 
-  Çoğu durumda, bir öznitelik kaldırma <xref:System.NonSerializedAttribute>(gibi) bir kesme değişikliğidir.
+  Çoğu durumda, bir özniteliği (gibi) kaldırmak, önemli <xref:System.NonSerializedAttribute> bir değişiklik olur.
 
 ## <a name="platform-support"></a>Platform desteği
 
-- ✔️ **Izin verildi: Daha önce desteklenmeyen bir platformdaki bir operasyonu desteklemek**
+- ✔️ **Izin verildi: daha önce desteklenmeyen bir platformda Işlem destekleme**
 
-- ❌**İzin VERİlMEMİş: Daha önce platformda desteklenen bir işlem için belirli bir hizmet paketini desteklememek veya şimdi gerektirmemek**
+- ❌**Izin verilmeyen: bir platformda daha önce desteklenen bir işlem için belirli bir hizmet paketini desteklemiyor veya artık gerektirmiyor**
 
-## <a name="internal-implementation-changes"></a>Dahili uygulama değişiklikleri
+## <a name="internal-implementation-changes"></a>İç uygulama değişiklikleri
 
-- ❓ **YARGI GEREKTIRIR: Bir iç tip yüzey alanı değiştirme**
+- ❓ **, Bir iç türün yüzey alanını değiştirmek Için gereken bır yargıdır.**
 
-   Özel yansımayı kırsalar da, bu tür değişikliklere genellikle izin verilir. Popüler üçüncü taraf kitaplıklarının veya çok sayıda geliştiricinin dahili API'ler'e bağlı olduğu bazı durumlarda, bu tür değişikliklere izin verilmeyebilir.
+   Bu tür değişikliklere genel olarak izin verilir, ancak özel yansımayı keser. Bazı durumlarda, popüler üçüncü taraf kitaplıklarının veya çok sayıda geliştiricinin iç API 'Lere bağlı olduğu durumlarda, bu değişikliklere izin verilmiyor olabilir.
 
-- ❓ **KARAR GEREKTIRIR: Bir üyenin iç uygulama değiştirme**
+- ❓ **, Bir üyenin iç uygulamasını değiştirme konusunda Yargıduyuyor**
 
-  Özel yansımayı kırsalar da, bu değişikliklere genellikle izin verilir. Müşteri kodunun sıklıkla özel yansımaya bağlı olduğu veya değişikliğin istenmeyen yan etkilere neden olduğu bazı durumlarda, bu değişikliklere izin verilmeyebilir.
+  Bu değişikliklere genel olarak izin verilir, ancak özel yansımayı keser. Bazı durumlarda, müşteri kodunun genellikle özel yansımaya bağlı olması veya değişikliğin istenmeyen yan etkileri sağlaması durumunda bu değişikliklere izin verilmiyor olabilir.
 
-- ✔️ **Izin: Bir operasyonun performansını artırmak**
+- ✔️ **Izin verildi: bir işlemin performansını artırma**
 
-   Bir işlemin performansını değiştirme yeteneği önemlidir, ancak bu tür değişiklikler bir işlemin geçerli hızına dayanan kodu kırabilir. Bu, özellikle eşzamanlı işlemlerin zamanlamasına bağlı olarak kod için geçerlidir. Performans değişikliğinin söz konusu API'nin diğer davranışları üzerinde hiçbir etkisi olmamalıdır; aksi takdirde, değişiklik kırılıyor olacak.
+   Bir işlemin performansını değiştirme yeteneği zorunludur, ancak bu tür değişiklikler bir işlemin geçerli hızına bağlı kodu kesebilir. Bu, özellikle de zaman uyumsuz işlemlerin zamanlamasına bağlı olan kodun bir doğrudur. Performans değişikliğinin, söz konusu API 'nin diğer davranışları üzerinde hiçbir etkisi olmamalıdır; Aksi takdirde, değişiklik koparacaktır.
 
-- **✔️ Izin: Dolaylı olarak (ve genellikle olumsuz) bir operasyonun performansını değiştirme**
+- ✔️ **Izin verildi: dolaylı (ve çoğunlukla olumsuz) bir işlemin performansını değiştirme**
 
-  Söz konusu değişiklik başka bir nedenle kırılma olarak kategorize edilmezse, bu kabul edilebilir. Genellikle, ek işlemler içerebilir veya yeni işlevsellik eklemek eylemleri alınması gerekir. Bu hemen hemen her zaman performansı etkileyecektir, ancak beklendiği gibi söz konusu API işlevi yapmak için gerekli olabilir.
+  Söz konusu değişiklik başka bir nedenden dolayı bölme olarak kategorilere ayrılmazsa, bu kabul edilebilir. Genellikle, ek işlemleri içerebilen veya yeni işlevsellik ekleyen eylemlerin alınması gerekir. Bu, neredeyse her zaman performansı etkiler ancak API 'yi soru işlevinin beklendiği gibi yapmak için gerekli olabilir.
 
-- ❌**İzin VERİlMEZ: Senkron API'yi eşzamanlı olarak değiştirme (veya tam tersi)**
+- ❌**Izin verilmiyor: zaman uyumlu bır API 'yi zaman uyumsuz (ve tam tersi) olarak değiştirme**
 
 ## <a name="code-changes"></a>Kod değişiklikleri
 
-- **✔️ İzİn VERİlMESİ: Parametreye [param](../../csharp/language-reference/keywords/params.md) ekleme**
+- ✔️ **Izin verilen: parametreye [params](../../csharp/language-reference/keywords/params.md) ekleme**
 
-- ❌**İzin VERİlMEMİş: Bir [yapıyı](../../csharp/language-reference/builtin-types/struct.md) [sınıfa](../../csharp/language-reference/keywords/class.md) değiştirme ve bunun tersi**
+- ❌**Izin verilmiyor: bir [yapıyı](../../csharp/language-reference/builtin-types/struct.md) bir [sınıfa](../../csharp/language-reference/keywords/class.md) değiştirme ve tam tersi**
 
-- ❌**İZIN VERİlMİş: [Denetlenen](../../csharp/language-reference/keywords/virtual.md) anahtar kelimeyi kod bloğuna ekleme**
+- ❌**Izin verilmiyor: [Checked](../../csharp/language-reference/keywords/virtual.md) anahtar sözcüğünü bir kod bloğuna ekleme**
 
-   Bu değişiklik, daha önce yürütülen <xref:System.OverflowException> kodun bir atamasına neden olabilir ve kabul edilemez.
+   Bu değişiklik, daha önce bir ve oluşturması için yürütülen kodun <xref:System.OverflowException> kabul edilemez olmasını sağlayabilir.
 
-- ❌**İzİn VERİlMESİ: [Parametreden paramların](../../csharp/language-reference/keywords/params.md) çıkarılması**
+- ❌**Izin verilmiyor: parametrelerin [parametreleri](../../csharp/language-reference/keywords/params.md) kaldırılıyor**
 
-- ❌**İzİn VERİlMESİ: Olayların ateşlendiği sırayı değiştirme**
+- ❌**Izin verilmiyor: olayların tetiklenme sırasını değiştirme**
 
-  Geliştiriciler makul bir şekilde olayların aynı sırada ateş etmesini bekleyebilir ve geliştirici kodu sık sık olayların ateşlendiği sıraya bağlıdır.
+  Geliştiriciler, olayların aynı sırayla tetiklenmesi makul bir şekilde bekleyebilir ve geliştirici kodu genellikle olayların tetikleneceği sıraya bağlıdır.
 
-- ❌**İzİn VERİlMEMİz: Belirli bir eylemde bir olayın yükseltilmesinin kaldırılması**
+- ❌**Izin verilmiyor: belirli bir eylemde olay oluşturma Işlemi kaldırılıyor**
 
-- ❌**İzin VERİlMEMİş: Verilen olayların kaç kez değiştirileceğinin değiştirilmesi**
+- ❌**Izin verilmiyor: verilen olayların sayısını değiştirme**
 
-- ❌**İzİn VERİlMESİn: Numaralandırma <xref:System.FlagsAttribute> türüne** ekleme
+- ❌**Izin verilmiyor: <xref:System.FlagsAttribute> bir numaralandırma türüne ekleme**

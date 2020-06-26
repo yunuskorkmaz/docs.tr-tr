@@ -1,5 +1,6 @@
 ---
 title: Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama
+description: Yönetilen hata ayıklama yardımcıları ile .NET 'teki hataları tanılayın. Mdalar, çalışma zamanı durum bilgilerini sağlamak için CLR ile birlikte çalışan hata ayıklama yardımlardır.
 ms.date: 08/14/2018
 f1_keywords:
 - EHMDA
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: ac6fdc09fb057cc55659ce076d37ab96fe2354d1
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216553"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416102"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>Yönetilen hata ayıklama yardımcıları ile hataları tanılama
 
@@ -59,16 +60,16 @@ Aşağıdaki tabloda .NET Framework ile birlikte gelen Mdalar listelenmektedir:
 |[invalidMemberDeclaration](invalidmemberdeclaration-mda.md)|[invalidOverlappedToPinvoke](invalidoverlappedtopinvoke-mda.md)|
 |[invalidVariant](invalidvariant-mda.md)|[jitCompilationStart](jitcompilationstart-mda.md)|
 |[loaderLock](loaderlock-mda.md)|[loadFromContext](loadfromcontext-mda.md)|
-|[marshalCleanupError](marshalcleanuperror-mda.md)|[marshaling](marshaling-mda.md)|
+|[marshalCleanupError](marshalcleanuperror-mda.md)|[sıralama](marshaling-mda.md)|
 |[memberInfoCacheCreation](memberinfocachecreation-mda.md)|[moduloObjectHashcode](moduloobjecthashcode-mda.md)|
 |[nonComVisibleBaseClass](noncomvisiblebaseclass-mda.md)|[notMarshalable](notmarshalable-mda.md)|
 |[openGenericCERCall](opengenericcercall-mda.md)|[overlappedFreeError](overlappedfreeerror-mda.md)|
 |[pInvokeLog](pinvokelog-mda.md)|[pInvokeStackImbalance](pinvokestackimbalance-mda.md)|
-|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[reentrancy](reentrancy-mda.md)|
+|[raceOnRCWCleanup](raceonrcwcleanup-mda.md)|[yeniden giriş](reentrancy-mda.md)|
 |[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
 |[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için bir MDA alt kümesini etkinleştirir. Visual Studio 'da varsayılan kümeyi **hata ayıklama** menüsünde **Windows** > **özel durum ayarları** ' nı seçerek ve ardından **yönetilen hata ayıklama yardımcıları** listesini genişleterek görüntüleyebilirsiniz.
+Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için bir MDA alt kümesini etkinleştirir. Visual Studio 'da varsayılan kümeyi **Windows**  >  **Hata Ayıkla** menüsündeki Windows**özel durum ayarları** ' nı seçerek ve ardından **yönetilen hata ayıklama yardımcıları** listesini genişleterek görüntüleyebilirsiniz.
 
 ![Visual Studio 'da özel durum ayarları penceresi](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
@@ -77,11 +78,11 @@ Varsayılan olarak, .NET Framework yönetilen tüm hata ayıklayıcıları için
 Bir kayıt defteri anahtarını, bir ortam değişkenini ve uygulama yapılandırma ayarlarını kullanarak MDA'leri etkinleştirebilir ve devre dışı bırakabilirsiniz. Uygulama yapılandırma ayarlarını kullanmak için kayıt defteri anahtarını veya ortam değişkenini etkinleştirmeniz gerekir.
 
 > [!TIP]
-> MDAs 'yi devre dışı bırakmak yerine, bir MDA bildirimi alındığında Visual Studio 'Nun MDA iletişim kutusunu görüntülemesini engelleyebilirsiniz. Bunu yapmak için, **hata ayıklama** menüsünde **Windows** > **özel durum ayarları** ' nı seçin, **yönetilen hata ayıklama YARDıMCıLARı** listesini genişletin ve sonra tek bir mda için **oluşturulduğunda kes** onay kutusunu seçin veya temizleyin.
+> MDAs 'yi devre dışı bırakmak yerine, bir MDA bildirimi alındığında Visual Studio 'Nun MDA iletişim kutusunu görüntülemesini engelleyebilirsiniz. Bunu yapmak için, **Windows**  >  **hata ayıklama** menüsünde Windows**özel durum ayarları** ' nı seçin, **yönetilen hata ayıklama yardımcıları** listesini genişletin ve sonra tek bir mda için **oluşturulduğunda kes** onay kutusunu seçin veya temizleyin.
 
 ### <a name="registry-key"></a>Kayıt Defteri Anahtarı
 
-MDAs 'yi etkinleştirmek için, **\ software\microsoft\\HKEY_LOCAL_MACHINE ekleyin. Windows kayıt defteri 'nde NETFramework\MDA** AltAnahtar (tür REG_SZ, değer 1). Aşağıdaki örneği *Mdadenable. reg*adlı bir metin dosyasına kopyalayın. Windows kayıt defteri Düzenleyicisi 'Ni (RegEdit. exe) açın ve **Dosya** menüsünden **içeri aktar**' ı seçin. Bu bilgisayarda MDAs 'yi etkinleştirmek için *MDAEnable. reg* dosyasını seçin. Alt anahtarı **1** ' in dize DEĞERINE (DWORD değeri **1**değil) ayarlamak, *ApplicationName. suffix*. mda. config dosyasından MDA ayarlarının okunmasına olanak sağlar. Örneğin, Notepad için MDA yapılandırma dosyası Notepad. exe. mda. config olarak adlandırılır.
+MDAs 'yi etkinleştirmek için, **\ Software\microsoft HKEY_LOCAL_MACHINE ekleyin \\ . Windows kayıt defteri 'nde NETFramework\MDA** AltAnahtar (tür REG_SZ, değer 1). Aşağıdaki örneği *Mdadenable. reg*adlı bir metin dosyasına kopyalayın. Windows kayıt defteri Düzenleyicisi 'Ni (RegEdit.exe) açın ve **Dosya** menüsünden **içeri aktar**' ı seçin. Bu bilgisayarda MDAs 'yi etkinleştirmek için *MDAEnable. reg* dosyasını seçin. Alt anahtarı, **1** ' in dize DEĞERINE (DWORD değeri **1**değil) ayarlamak, ' nin *APPLICATIONNAME. suffix*.mda.config dosyasından MDA ayarlarının okunmasına olanak sağlar. Örneğin, Notepad için MDA yapılandırma dosyası notepad.exe.mda.config olarak adlandırılır.
 
 ```text
 Windows Registry Editor Version 5.00
@@ -111,7 +112,7 @@ MDA etkinleştirmesi aynı zamanda, kayıt defteri anahtarını geçersiz kılan
 
 - `0` - Tüm MDA'leri devre dışı bırakır.
 
-- `1`- *ApplicationName*. mda. CONFIG dosyasından MDA ayarlarını okur.
+- `1`- *ApplicationName*.mda.config 'den MDA ayarlarını okur.
 
 - `managedDebugger` - Yönetilen bir yürütülebilir dosya hata ayıklayıcı altında başlatıldığında dolaylı olarak etkinleştirilmiş tüm MDA'leri açıkça etkinleştirir.
 
@@ -127,7 +128,7 @@ MDA etkinleştirmesi aynı zamanda, kayıt defteri anahtarını geçersiz kılan
 
 ### <a name="application-specific-configuration-settings"></a>Uygulamaya özgü yapılandırma ayarları
 
-Uygulamaya ait MDA yapılandırma dosyası içinde bazı yardımcıları etkinleştirebilir, devre dışı bırakabilir ve ayrı ayrı yapılandırabilirsiniz. MDA'leri yapılandırmak üzere bir uygulama yapılandırma dosyasının kullanımını etkinleştirmek için MDA kayıt defteri anahtarının veya COMPLUS_MDA ortam değişkeni ayarlanması gerekir. Uygulama yapılandırma dosyası, genellikle uygulamanın yürütülebilir (.exe) dosyası ile aynı dizinde bulunur. Dosya adı, *ApplicationName*. mda. config biçimini alır; Örneğin, Notepad. exe. mda. config. Uygulama yapılandırma dosyasında etkinleştirilen yardımcılar, bu yardımcının davranışını denetlemek için özel olarak tasarlanmış özniteliklere veya öğelere sahip olabilir.
+Uygulamaya ait MDA yapılandırma dosyası içinde bazı yardımcıları etkinleştirebilir, devre dışı bırakabilir ve ayrı ayrı yapılandırabilirsiniz. MDA'leri yapılandırmak üzere bir uygulama yapılandırma dosyasının kullanımını etkinleştirmek için MDA kayıt defteri anahtarının veya COMPLUS_MDA ortam değişkeni ayarlanması gerekir. Uygulama yapılandırma dosyası, genellikle uygulamanın yürütülebilir (.exe) dosyası ile aynı dizinde bulunur. Dosya adı, *ApplicationName*.mda.config. Örneğin, notepad.exe.mda.config. Uygulama yapılandırma dosyasında etkinleştirilen yardımcılar, bu yardımcının davranışını denetlemek için özel olarak tasarlanmış özniteliklere veya öğelere sahip olabilir.
 
 Aşağıdaki örnek, [hazırlamayı](marshaling-mda.md)nasıl etkinleştireceğinizi ve yapılandıracağınızı göstermektedir:
 
@@ -146,7 +147,7 @@ Aşağıdaki örnek, [hazırlamayı](marshaling-mda.md)nasıl etkinleştireceği
 </mdaConfig>
 ```
 
-`Marshaling` MDA, uygulamadaki her yönetilenden yönetilmeyene geçiş için bir yönetilmeyen türe sıraya koyulan yönetilen tür hakkında bilgiler verir. `Marshaling` MDA, sırasıyla **methodFilter** ve **FieldFilter** alt öğelerinde sağlanan yöntem ve yapı alanlarının adlarını da filtreleyebilirler.
+`Marshaling` MDA, uygulamadaki her yönetilenden yönetilmeyene geçiş için bir yönetilmeyen türe sıraya koyulan yönetilen tür hakkında bilgiler verir. `Marshaling`MDA, sırasıyla **methodFilter** ve **FieldFilter** alt öğelerinde sağlanan yöntem ve yapı alanlarının adlarını da filtreleyebilirler.
 
 Aşağıdaki örnek, varsayılan ayarlarını kullanarak birden çok Mdayı nasıl etkinleştireceğinizi göstermektedir:
 
@@ -168,14 +169,14 @@ Aşağıdaki örnek, varsayılan ayarlarını kullanarak birden çok Mdayı nas�
 
 Bir MDA etkinleştirildiğinde, kodunuz bir hata ayıklayıcı altında yürütülmediğinde bile etkin olur. Bir hata ayıklayıcı olmadığında bir MDA olayı oluşturulursa, işlenmemiş özel bir durum olmasa bile olay iletisi, işlenmemiş özel durum iletişim kutusunda sunulur. İletişim kutusunu önlemek için kodunuz hata ayıklama ortamında çalışmıyorken MDA etkinleştirme ayarlarını kaldırın.
 
-Kodunuz Visual Studio tümleşik geliştirme ortamında (IDE) yürütüldüğünde, belirli MDA olayları için görüntülenen özel durum iletişim kutusunu önleyebilirsiniz. Bunu yapmak için, **Hata Ayıkla** menüsünde **Windows** > **özel durum ayarları**' nı seçin. **Özel durum ayarları** penceresinde, **yönetilen hata ayıklama yardımcıları** listesini genişletin ve sonra tek bir mda için **oluşturulan** onay kutusunu temizleyin. Bu iletişim kutusunu, MDA özel durum iletişim kutularının görüntülenmesini *sağlamak* için de kullanabilirsiniz.
+Kodunuz Visual Studio tümleşik geliştirme ortamında (IDE) yürütüldüğünde, belirli MDA olayları için görüntülenen özel durum iletişim kutusunu önleyebilirsiniz. Bunu yapmak için, **Hata Ayıkla** menüsünde **Windows**  >  **özel durum ayarları**' nı seçin. **Özel durum ayarları** penceresinde, **yönetilen hata ayıklama yardımcıları** listesini genişletin ve sonra tek bir mda için **oluşturulan** onay kutusunu temizleyin. Bu iletişim kutusunu, MDA özel durum iletişim kutularının görüntülenmesini *sağlamak* için de kullanabilirsiniz.
 
 ## <a name="mda-output"></a>MDA Çıktısı
 
-MDA çıktısı, `PInvokeStackImbalance` MDA ' dan gelen çıktıyı gösteren aşağıdaki örneğe benzer:
+MDA çıktısı, MDA ' dan çıktıyı gösteren aşağıdaki örneğe benzer `PInvokeStackImbalance` .
 
 **PInvoke işlevi ' Mdadtest! ' çağrısı Mdadtest. Program:: StdCall ', yığına dengesiz. Bu, yönetilen PInvoke imzasının yönetilmeyen hedef imzasıyla eşleşmemesi nedeniyle olasıdır. PInvoke imzasının çağırma kuralı ve parametrelerinin hedef yönetilmeyen imzayla eşleşip eşleştiğinden emin olun.**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hata Ayıklama, İzleme ve Profil Oluşturma](index.md)
+- [Hata ayıklama, Izleme ve profil oluşturma](index.md)

@@ -1,5 +1,6 @@
 ---
 title: callbackOnCollectedDelegate MDA
+description: .NET 'teki callbackOnCollectedDelegate yönetilen hata ayıklama Yardımcısı 'nı (MDA) inceleyerek, temsilci atık toplandıktan sonra bir geri çağırma gerçekleşiyorsa çağrılır.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -14,39 +15,39 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-ms.openlocfilehash: d4ca777fa5b41433eec227762fe315f22ab33cf6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32f02a4e65455f11f3bfa9260caae8b4e48f494e
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174231"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416037"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
-Yönetilen `callbackOnCollectedDelegate` hata ayıklama yardımcısı (MDA), bir temsilci yönetilen koddan işlev işaretçisi olarak denetlenirse etkinleştirilir ve temsilci çöp toplandıktan sonra bu işlev işaretçisine bir geri arama yerleştirilir.  
+`callbackOnCollectedDelegate`Yönetilen hata ayıklama Yardımcısı (MDA), bir temsilci yönetilen 'den yönetilmeyen koda bir işlev işaretçisi olarak sıralanırsa ve temsilci atık toplandıktan sonra bu işlev işaretçisine bir geri çağırma yerleştirildiğinde etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Erişim ihlalleri, yönetilen temsilcilerden alınan işlev işaretçileri aracılığıyla yönetilen koda çağrı yapmaya çalışırken oluşur. Bu hatalar, yaygın dil çalışma zamanı (CLR) hataları olmasa da, erişim ihlali CLR kodunda oluştuğundan öyle görünebilir.  
+ Yönetilen temsilcilerden alınan işlev işaretçileri aracılığıyla yönetilen koda çağrı yapmaya çalışırken erişim ihlalleri oluşur. Bu hatalar, ortak dil çalışma zamanı (CLR) hataları olmadığı sürece, erişim ihlali CLR kodunda gerçekleştiği için gibi görünebilir.  
   
- Hata tutarlı değildir; bazen işlev işaretçisi üzerindeki çağrı başarılı olur ve bazen başarısız olur. Hata yalnızca ağır yük altında veya rasgele sayıda denemede oluşabilir.  
+ Hata tutarlı değil; Bazen işlev işaretçisindeki çağrı başarılı olur ve bazen başarısız olur. Hata yalnızca ağır yük altında ya da rastgele sayıda girişimde bulunabilir.  
   
 ## <a name="cause"></a>Nedeni  
- İşlev işaretçisinin oluşturulduğu ve yönetilmeyen koda maruz kalan temsilci çöp toplandı. Yönetilmeyen bileşen işlev işaretçisini çağırmaya çalıştığında, bir erişim ihlali oluşturur.  
+ İşlev işaretçisinin oluşturulduğu ve yönetilmeyen koda açık olan temsilci atık olarak toplandı. Yönetilmeyen bileşen işlev işaretçisi üzerinde çağırmayı denediğinde, bir erişim ihlali oluşturur.  
   
- Çöp toplamanın ne zaman oluştuğuna bağlı olduğundan hata rasgele görünür. Bir temsilci toplama için uygunsa, geri arama dan sonra çöp toplama oluşabilir ve arama başarılı olur. Diğer zamanlarda, çöp toplama geri arama önce oluşur, geri arama bir erişim ihlali oluşturur ve program durur.  
+ Çöp toplamanın ne zaman gerçekleşeceğini bağlı olduğundan hata rastgele görünür. Bir temsilci koleksiyon için uygun ise, çöp toplama işlemi geri aramadan sonra gerçekleşebilir ve çağrı başarılı olur. Diğer zamanlarda çöp toplama işlemi geri aramadan önce oluşur, geri arama bir erişim ihlali oluşturur ve program durur.  
   
- Hata olasılığı, temsilciyi mareşalleme ile işlev işaretçisindeki geri arama arasındaki süreye ve çöp koleksiyonlarının sıklığına bağlıdır. Temsilci yimareme ile takip eden geri arama arasındaki süre kısaysa, başarısızlık düzensizdir. İşlev işaretçisini alan yönetilmeyen yöntem işlev işaretçisini daha sonra kullanmak üzere kaydetmez, bunun yerine işlev işaretçisini geri çağırıp dönmeden önce işlemini tamamlamak için hemen geri çağırırsa, genellikle durum böyledir. Benzer şekilde, bir sistem ağır yük altında yken daha fazla çöp toplama oluşur, bu da geri çağırmadan önce bir çöp toplamanın oluşma olasılığını arttırır.  
+ Hatanın olasılığı, işlev işaretçisindeki ve geri çağırma işleminin yanı sıra çöp koleksiyonları sıklığının sıralaması arasındaki zamana bağlıdır. Temsilciyi hazırlama ve geri çağırma işlemi arasında geçen süre kısaysa hata tek tek olur. Bu genellikle, işlev işaretçisini alan yönetilmeyen yöntemin, daha sonra kullanmak üzere işlev işaretçisini kaydetmediğini, ancak döndürmeden önce işlemini tamamlaması için hemen işlev işaretçisine geri çağırması durumunda oluşur. Benzer şekilde, bir sistem ağır yük altındayken daha fazla çöp toplama meydana gelir. Bu, geri aramadan önce çöp toplamanın gerçekleşmesinin daha büyük olmasını sağlar.  
   
 ## <a name="resolution"></a>Çözüm  
- Bir temsilci yönetilmeyen bir işlev işaretçisi olarak sıralandıktan sonra, çöp toplayıcı ömrünü izleyemez. Bunun yerine, kodunuz yönetilmeyen işlev işaretçisinin ömrü boyunca temsilciye bir başvuru tutmalı. Ancak bunu yapmadan önce hangi temsilcinin toplandığını belirlemeniz gerekir. MDA etkinleştirildiğinde, temsilcinin tür adını sağlar. Bu temsilciyi yönetilmeyen koda aktaran platform çağrısı veya COM imzaları için kodunuzu aramak için bu adı kullanın. Kusurlu temsilci bu çağrı sitelerinden biri üzerinden dağıtılır. Ayrıca, MDA'nın `gcUnmanagedToManaged` her geri aramadan önce bir çöp toplamayı çalıştırma süresine zorlanmasını da sağlayabilirsiniz. Bu, çöp toplamanın her zaman geri aramadan önce oluşmasını sağlayarak çöp toplama tarafından ortaya çıkan belirsizliği ortadan kaldırır. Hangi temsilcinin toplandığını bildiğinizde, mareşal olarak yönetilmeyen işlev işaretçisinin ömrü boyunca yönetilen taraftaki temsilciye bir başvuru tutmak için kodunuzu değiştirin.  
+ Bir temsilci yönetilmeyen bir işlev işaretçisi olarak sıralandıktan sonra çöp toplayıcı ömrünü izleyemez. Bunun yerine, yönetilmeyen işlev işaretçisinin ömrü boyunca kodunuzun temsilciye bir başvuru tutması gerekir. Ancak bunu yapabilmeniz için önce hangi temsilcinin toplandığını belirlemelisiniz. MDA etkinleştirildiğinde, temsilcinin tür adını sağlar. Bu temsilciyi, bu temsilciyi yönetilmeyen koda geçiren platform çağrısı veya COM imzaları için aramak üzere kullanın. Sorunlu temsilci bu çağrı sitelerinden biri aracılığıyla geçirilir. Ayrıca, `gcUnmanagedToManaged` çalışma zamanına her geri çağırmadan önce bir çöp toplamayı zorlamak için mda ' i etkinleştirebilirsiniz. Bu, çöp toplamanın geri aramadan önce her zaman gerçekleşmesini sağlayarak çöp toplama tarafından sunulan belirsizlik kaldırır. Hangi temsilcinin toplandığını öğrendikten sonra, sıralanmış yönetilmeyen işlev işaretçisinin ömrü boyunca yönetilen tarafta bu temsilciye bir başvuru tutmak için kodunuzu değiştirin.  
   
-## <a name="effect-on-the-runtime"></a>Çalışma Süresi üzerindeki etkisi  
- Temsilciler işlev işaretçisi olarak marshaled olduğunda, çalışma zamanı yönetilmeyen den yönetilen geçiş yapan bir thunk ayırır. Bu thunk, yönetilen temsilci sonunda çağrılmadan önce yönetilmeyen kodun gerçekte çağırdığı şeydir. `callbackOnCollectedDelegate` MDA etkin olmadan, temsilci toplandığında yönetilmeyen mareşal kodu silinir. `callbackOnCollectedDelegate` MDA etkinleştirildiğinde, yönetilmeyen mareşalkodu temsilci toplandığında hemen silinmez. Bunun yerine, son 1.000 örnek varsayılan olarak canlı tutulur ve çağrıldığında MDA etkinleştirmek için değiştirilir. Thunk, 1.001 mareşal delege daha toplandıktan sonra silinir.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Temsilciler işlev işaretçileri olarak sıralandığında, çalışma zamanı Yönetilmeyenden yönetilene geçişi yapan bir dönüştürücü ayırır. Bu dönüştürücü, yönetilmeyen kodun yönetilen temsilci son olarak çağrılmadan önce ne kadar çağırıldığı şeydir. `callbackOnCollectedDelegate`MDA etkin olmadan, yönetilmeyen sıralama kodu, temsilci toplandığında silinir. `callbackOnCollectedDelegate`MDA etkinleştirildikten sonra, temsilci toplandığında yönetilmeyen sıralama kodu hemen silinmez. Bunun yerine, son 1.000 örnek varsayılan olarak etkin tutulur ve çağrıldığında MDA öğesini etkinleştirmek için değiştirilir. Dönüştürücü, 1.001 daha fazla sıralanmış temsilci toplandıktan sonra silinir.  
   
 ## <a name="output"></a>Çıktı  
- MDA, yönetilmeyen işlev işaretçisi üzerinde geri arama girişiminde bulunulmadan önce toplanan temsilcinin türünü bildirir.  
+ MDA, yönetilmeyen işlev işaretçisi üzerinde bir geri çağırma yapılmadan önce toplanan temsilcinin tür adını bildirir.  
   
 ## <a name="configuration"></a>Yapılandırma  
- Aşağıdaki örnekte uygulama yapılandırma seçenekleri gösterilmektedir. MDA'nın hayatta tuttuğu thunk sayısını 1500'e ayarlıyor. Varsayılan `listSize` değer 1.000, en az 50 ve en büyük değer 2.000'dir.  
+ Aşağıdaki örnek, uygulama yapılandırma seçeneklerini gösterir. MDA 'ın 1.500 olarak etkin kalmasını sağlar dönüştürücüler sayısını ayarlar. Varsayılan `listSize` değer 1.000, en az 50, en fazla ise 2.000.  
   
 ```xml  
 <mdaConfig>  
@@ -57,7 +58,7 @@ Yönetilen `callbackOnCollectedDelegate` hata ayıklama yardımcısı (MDA), bir
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bu MDA'yı etkinleştirebilecek bir durumu gösterir:  
+ Aşağıdaki örnekte, bu MDA ' i etkinleştirebilecek bir durum gösterilmektedir:  
   
 ```cpp
 // Library.cpp : Defines the unmanaged entry point for the DLL application.  

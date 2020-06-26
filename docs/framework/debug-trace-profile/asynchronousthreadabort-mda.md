@@ -1,5 +1,6 @@
 ---
 title: asynchronousThreadAbort MDA
+description: Bir iş parçacığı zaman uyumsuz bir iptal işlemini başka bir iş parçacığına koymaya çalıştığında, Asynchronousthreadavbort yönetilen hata ayıklama Yardımcısı 'nın (MDA) nasıl etkinleştirildiğini gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - asynchronous thread aborts
@@ -8,34 +9,34 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 469372d57d9c21198353d171fec16458691eb25d
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217587"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415673"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
-`asynchronousThreadAbort` yönetilen hata ayıklama Yardımcısı (MDA), bir iş parçacığı başka bir iş parçacığına zaman uyumsuz bir iptal yapmayı denediğinde etkinleştirilir. Zaman uyumlu iş parçacığı durdurulduğunda `asynchronousThreadAbort` MDA ' i etkinleştirmeyin.
+`asynchronousThreadAbort`Yönetilen hata ayıklama Yardımcısı (MDA), bir iş parçacığı başka bir iş parçacığına zaman uyumsuz bir iptal uygulamayı denediğinde etkinleştirilir. Zaman uyumlu iş parçacığı durdurulduğunda MDA 'ı etkinleştirmeyin `asynchronousThreadAbort` .
 
 ## <a name="symptoms"></a>Belirtiler
- Ana uygulama iş parçacığı iptal edildiğinde, bir uygulama işlenmemiş bir <xref:System.Threading.ThreadAbortException> kilitleniyor. Uygulamanın yürütülmeye devam etmesi gerekiyorsa, sonuçlar uygulama kilitlenmesinin ardından büyük olasılıkla daha fazla veri bozulmasına neden olabilir.
+ <xref:System.Threading.ThreadAbortException>Ana uygulama iş parçacığı iptal edildiğinde, bir uygulama işlenmemiş ile çöküyor. Uygulamanın yürütülmeye devam etmesi gerekiyorsa, sonuçlar uygulama kilitlenmesinin ardından büyük olasılıkla daha fazla veri bozulmasına neden olabilir.
 
- Atomik olması amaçlanan işlemler kısmen tamamlandığında kesintiye uğratıldıktan sonra, uygulama verileri öngörülemeyen bir durumda bırakılır. Bir <xref:System.Threading.ThreadAbortException>, genellikle bir özel durumun meydana gelmesi beklenmediği yerlerde kodun yürütülmesindeki düzensiz rastgele noktalardan oluşturulabilir. Kod böyle bir özel durumu işleyemeyebilir, bu durum bozuk bir duruma neden olabilir.
+ Atomik olması amaçlanan işlemler kısmen tamamlandığında kesintiye uğratıldıktan sonra, uygulama verileri öngörülemeyen bir durumda bırakılır. Bir <xref:System.Threading.ThreadAbortException> özel durumun meydana gelmesi beklenmediği yerlerde, kod yürütmesindeki düzensiz rastgele noktalarda oluşturulabilir. Kod böyle bir özel durumu işleyemeyebilir, bu durum bozuk bir duruma neden olabilir.
 
  Belirtiler, soruna bağlı rasgelelik nedeniyle büyük ölçüde farklılık gösterebilir.
 
 ## <a name="cause"></a>Nedeni
- Bir iş parçacığında, zaman uyumsuz bir iş parçacığı iptali tanıtmak için <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> yöntemi olarak adlandırılan kod. <xref:System.Threading.Thread.Abort%2A> çağrısını yapan kod, durdurma işleminin hedefinden farklı bir iş parçacığında çalıştığından iş parçacığı iptali zaman uyumsuzdur. <xref:System.Threading.Thread.Abort%2A> gerçekleştiren iş parçacığının yalnızca uygulama durumunun tutarlı olduğu güvenli bir denetim noktasında yapılması gerektiğinden, zaman uyumlu iş parçacığı iptal etmek soruna neden olmamalıdır.
+ Bir iş parçacığındaki kod, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> zaman uyumsuz bir iş parçacığı iptali tanıtmak için bir hedef iş parçacığında yöntemi olarak adlandırılır. Çağrıyı yapan kod, <xref:System.Threading.Thread.Abort%2A> durdurma işleminin hedefinden farklı bir iş parçacığında çalıştığından, iş parçacığı iptali zaman uyumsuzdur. İşlemi gerçekleştiren iş parçacığının <xref:System.Threading.Thread.Abort%2A> yalnızca uygulama durumunun tutarlı olduğu güvenli bir denetim noktasında yapılması gerektiğinden, zaman uyumlu iş parçacığı iptal noktaları soruna neden olmamalıdır.
 
- Zaman uyumsuz thread, hedef iş parçacığının yürütmesindeki öngörülemeyen noktalarda işlendiği için bir sorun oluştu. Bunu önlemek için, bu şekilde durdurulmuş olabilecek bir iş parçacığında çalışmak üzere yazılan kodun, neredeyse her kod satırında bir <xref:System.Threading.ThreadAbortException> işlemesi ve uygulama verilerinin tutarlı bir duruma geri alınmasına dikkat etmeniz gerekir. Kodun bu sorun ile yazılması veya tüm olası koşullara karşı koruyan bir kod yazmak için gerçekçi değildir.
+ Zaman uyumsuz thread, hedef iş parçacığının yürütmesindeki öngörülemeyen noktalarda işlendiği için bir sorun oluştu. Bu durumdan kaçınmak için, bu şekilde durdurulmuş olabilecek bir iş parçacığında çalışmak üzere yazılan kodun <xref:System.Threading.ThreadAbortException> , neredeyse her bir kod satırında işlenmesi ve uygulama verilerinin tutarlı bir duruma geri alınmasına dikkat etmeniz gerekir. Kodun bu sorun ile yazılması veya tüm olası koşullara karşı koruyan bir kod yazmak için gerçekçi değildir.
 
- Yönetilmeyen koda yapılan çağrılar ve `finally` blokları zaman uyumsuz olarak durdurulmayacak, ancak bu kategorilerden birinden çıkmadan hemen sonra olmayacaktır.
+ Yönetilmeyen kod ve `finally` bloklara yapılan çağrılar zaman uyumsuz olarak iptal edilmez, ancak bu kategorilerden birinden çıkış yapıldığında hemen silinir.
 
  Sorunun, soruna bağlı rastgele bir durum nedeniyle belirlenmesi zor olabilir.
 
 ## <a name="resolution"></a>Çözüm
- Zaman uyumsuz iş parçacığı iptal durumu kullanımını gerektiren kod tasarımını önleyin. <xref:System.Threading.Thread.Abort%2A>çağrısı gerektirmeyen bir hedef iş parçacığının kesintiye uğramasını sağlamak için birkaç yaklaşım daha uygundur. En güvenli, bir kesme istemek için hedef iş parçacığına işaret eden ortak bir özellik gibi bir mekanizma tanıtmaktır. Hedef iş parçacığı belirli güvenli denetim noktalarında sinyali denetler. Bir kesmenin istenmiş olduğunu fark ederseniz, düzgün bir şekilde kapatılabilir.
+ Zaman uyumsuz iş parçacığı iptal durumu kullanımını gerektiren kod tasarımını önleyin. Çağrısı gerektirmeyen bir hedef iş parçacığının kesintiye uğraması için çok sayıda yaklaşım daha uygundur <xref:System.Threading.Thread.Abort%2A> . En güvenli, bir kesme istemek için hedef iş parçacığına işaret eden ortak bir özellik gibi bir mekanizma tanıtmaktır. Hedef iş parçacığı belirli güvenli denetim noktalarında sinyali denetler. Bir kesmenin istenmiş olduğunu fark ederseniz, düzgün bir şekilde kapatılabilir.
 
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur. Yalnızca zaman uyumsuz iş parçacığı iptal eden verileri raporlar.
@@ -54,7 +55,7 @@ ms.locfileid: "77217587"
 ```
 
 ## <a name="example"></a>Örnek
- `asynchronousThreadAbort` MDA ' nin etkinleştirilmesi ayrı çalışan bir iş parçacığında yalnızca bir <xref:System.Threading.Thread.Abort%2A> çağrısı gerektirir. İş parçacığı başlatma işlevinin içerikleri, iptal tarafından herhangi bir rastgele noktada kesintiye uğramış olabilecek daha karmaşık işlemler kümesi olsaydı sonuçları göz önünde bulundurun.
+ `asynchronousThreadAbort`Mda ' ın etkinleştirilmesi <xref:System.Threading.Thread.Abort%2A> ayrı çalışan bir iş parçacığında yalnızca bir çağrısı gerektirir. İş parçacığı başlatma işlevinin içerikleri, iptal tarafından herhangi bir rastgele noktada kesintiye uğramış olabilecek daha karmaşık işlemler kümesi olsaydı sonuçları göz önünde bulundurun.
 
 ```csharp
 using System.Threading;

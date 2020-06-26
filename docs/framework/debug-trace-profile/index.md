@@ -1,5 +1,6 @@
 ---
 title: Hata Ayıklama, İzleme ve Profil Oluşturma
+description: .NET ' te hata ayıklama, izleme ve profil oluşturma hakkında bilgi edinin. Just-In-Time (JıT) hata ayıklamayı, uygulamaları izlemeyi ve ipucunu ve daha fazlasını kapsayan makalelere göz atın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging [.NET Framework]
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-ms.openlocfilehash: 1a43c7fbcb810b22ff9bc409c233d2b1da67370e
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 745f16652c02e3409e7fa7a48beacbf7e777e924
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217400"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415985"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Hata Ayıklama, İzleme ve Profil Oluşturma
-.NET Framework bir uygulamada hata ayıklamak için, derleyici ve çalışma zamanı ortamı, bir hata ayıklayıcının uygulamaya iliştirmesine ve mümkünse hem semboller hem de çizgi haritaları (mümkünse, uygulama ve karşılık gelen Microsoft ara Dil (MSIL). Yönetilen bir uygulamanın hatası ayıklandıktan sonra, performansı artırmak için profili oluşturulabilir. Profil oluşturma, en sık yürütülen kodu oluşturan kaynak kodu satırlarını ve bunların yürütülmesi için ne kadar zaman harcanduğunu değerlendirir ve tanımlar.  
+.NET Framework bir uygulamada hata ayıklamak için, derleyici ve çalışma zamanı ortamı, bir hata ayıklayıcının uygulamaya iliştirmesine ve mümkünse uygulama ve karşılık gelen Microsoft ara dili (MSIL) için, mümkün olduğunda hem semboller hem de çizgi haritaları üretmesine imkan tanımak için yapılandırılmalıdır. Yönetilen bir uygulamanın hatası ayıklandıktan sonra, performansı artırmak için profili oluşturulabilir. Profil oluşturma, en sık yürütülen kodu oluşturan kaynak kodu satırlarını ve bunların yürütülmesi için ne kadar zaman harcanduğunu değerlendirir ve tanımlar.  
   
- .NET Framework uygulamalar, birçok yapılandırma ayrıntılarını işleyen Visual Studio kullanılarak kolayca hata ayıklamalıdır. Visual Studio yüklü değilse, .NET Framework <xref:System.Diagnostics> ad alanındaki hata ayıklama sınıflarını kullanarak .NET Framework uygulamalarının performansını inceleyebilir ve geliştirebilirsiniz. Bu ad alanı, yürütme akışını izlemek için <xref:System.Diagnostics.Trace>, <xref:System.Diagnostics.Debug>ve <xref:System.Diagnostics.TraceSource> sınıflarını ve profil oluşturma kodu için <xref:System.Diagnostics.Process>, <xref:System.Diagnostics.EventLog>ve <xref:System.Diagnostics.PerformanceCounter> sınıflarını içerir.  
+ .NET Framework uygulamalar, birçok yapılandırma ayrıntılarını işleyen Visual Studio kullanılarak kolayca hata ayıklamalıdır. Visual Studio yüklü değilse, .NET Framework ad alanındaki hata ayıklama sınıflarını kullanarak .NET Framework uygulamalarının performansını inceleyebilir ve geliştirebilirsiniz <xref:System.Diagnostics> . Bu ad alanı, <xref:System.Diagnostics.Trace> <xref:System.Diagnostics.Debug> <xref:System.Diagnostics.TraceSource> izleme yürütme akışı için,, ve sınıflarını ve <xref:System.Diagnostics.Process> <xref:System.Diagnostics.EventLog> <xref:System.Diagnostics.PerformanceCounter> profil oluşturma kodu için, ve sınıflarını içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [JIT-Ekleme Hata Ayıklamayı Etkinleştirme](enabling-jit-attach-debugging.md)  
@@ -41,11 +42,11 @@ ms.locfileid: "77217400"
  [Hata Ayıklayıcı Görüntü Öznitelikleriyle Hata Ayıklamayı Geliştirme](enhancing-debugging-with-the-debugger-display-attributes.md)  
  Bir tür geliştiricisinin bir hata ayıklayıcıda görüntülendiğinde ne tür görüneceğini nasıl belirtbileceklerini açıklar.  
   
- [Performans Sayaçları](performance-counters.md)  
+ [Performans sayaçları](performance-counters.md)  
  Bir uygulamanın performansını izlemek için kullanabileceğiniz sayaçları açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Visual Studio 'da ASP.NET veya ASP.NET Core uygulamalarında hata ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
+ [Visual Studio'da ASP.NET veya ASP.NET Core uygulamalarının hatalarını ayıklama](/visualstudio/debugger/how-to-enable-debugging-for-aspnet-applications)  
  Geliştirme sırasında veya dağıtımdan sonra bir ASP.NET uygulamasında hata ayıklama için önkoşul ve yönergeler sağlar.  
   
  [Geliştirme Kılavuzu](../development-guide.md)  

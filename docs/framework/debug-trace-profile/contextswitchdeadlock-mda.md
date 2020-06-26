@@ -1,5 +1,6 @@
 ---
 title: contextSwitchDeadlock MDA
+description: Bir COM bağlam geçişi sırasında kilitlenme algılandığında etkinleştirilen, .NET 'teki Contextswitchkilitlenme yönetilen hata ayıklama Yardımcısı (MDA) hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 52db4f2c88bac4e8cac621cca989fa10acb43f94
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217552"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416024"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
-`contextSwitchDeadlock` yönetilen hata ayıklama Yardımcısı (MDA), denenen bir COM bağlam geçişi sırasında kilitlenme algılandığında etkinleştirilir.
+`contextSwitchDeadlock`Yönetilen hata ayıklama Yardımcısı (MDA), denenen BIR com bağlam geçişi sırasında bir kilitlenme algılandığında etkinleştirilir.
 
 ## <a name="symptoms"></a>Belirtiler
 
@@ -31,9 +32,9 @@ En yaygın belirti, yönetilmeyen bir COM bileşenindeki bir çağrının yönet
 
 En olası neden, tek iş parçacıklı bir apartman (STA) iş parçacığının ileti pompalama. STA iş parçacığı, pompalama iletileri olmadan bekliyor ya da uzun işlemler gerçekleştiriyor ve ileti sırasının göndericmesine izin vermiyor.
 
-Zaman içinde artan bellek kullanımı, yönetilmeyen bir COM bileşeni üzerinde `Release` çağırmaya çalışan Sonlandırıcı iş parçacığı nedeniyle oluşur ve bu bileşen dönmeyecektir.  Bu, sonlandırıcının geri kazanma diğer nesnelerden yapılmasını önler.
+Zaman içinde artan bellek kullanımı, `Release` yönetilmeyen BIR COM bileşenini çağırmaya çalışan ve bu bileşen döndürülmeyen Sonlandırıcı iş parçacığı nedeniyle oluşur.  Bu, sonlandırıcının geri kazanma diğer nesnelerden yapılmasını önler.
 
-Varsayılan olarak, Visual Basic konsol uygulamalarının ana iş parçacığı için iş parçacığı modeli STA ' dır. Bir STA iş parçacığı ortak dil çalışma zamanı veya üçüncü taraf bir denetim aracılığıyla doğrudan veya dolaylı olarak COM birlikte çalışabilirliği kullanıyorsa, bu MDA etkinleştirilir.  Bu MDA öğesini bir Visual Basic konsol uygulamasında etkinleştirmeyi önlemek için, <xref:System.MTAThreadAttribute> özniteliğini Main yöntemine uygulayın veya uygulamayı pompa iletileri olarak değiştirin.
+Varsayılan olarak, Visual Basic konsol uygulamalarının ana iş parçacığı için iş parçacığı modeli STA ' dır. Bir STA iş parçacığı ortak dil çalışma zamanı veya üçüncü taraf bir denetim aracılığıyla doğrudan veya dolaylı olarak COM birlikte çalışabilirliği kullanıyorsa, bu MDA etkinleştirilir.  Bu MDA öğesini bir Visual Basic konsol uygulamasında etkinleştirmeyi önlemek için, <xref:System.MTAThreadAttribute> özniteliği Main yöntemine uygulayın veya uygulamayı pompa iletileri olarak değiştirin.
 
 Aşağıdaki koşulların tümü karşılandığında bu MDA 'ın daha seyrek etkinleştirilmesi mümkündür:
 
@@ -74,4 +75,4 @@ Geçerli bağlamı ve hedef bağlamını açıklayan bir ileti.
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../interop/interop-marshaling.md)

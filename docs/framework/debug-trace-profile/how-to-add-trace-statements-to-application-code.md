@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme'
+description: .NET 'teki uygulama koduna izleme deyimleri eklemeyi öğrenin. İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,23 +14,23 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 9903a0357d1d8ceade21b590fd54c8cab517f134
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174751"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415894"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme
-İzleme için en sık kullanılan yöntemler dinleyicilere çıktı yazma yöntemleridir: **Write** **, WriteIf**, **WriteLine**, **WriteLineIf**, Assert , **ve** **Fail**. Bu yöntemler iki kategoriye ayrılabilir: **Yazma**, **WriteLine**, ve **Fail** tüm koşulsuz çıkış yontmak, oysa **WriteIf**, **WriteLineIf**, ve Test bir Boolean durum **assert** ve yazma veya durumun değerine göre yazmayın. **WriteIf** ve **WriteLineIf** koşul ise `true`çıktı yayıyorum ve koşul ise `false` **Assert** çıktı yayır.  
+İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **onaylama**ve **başarısız**. Bu yöntemler iki kategoriye ayrılabilir: **Write**, **WriteLine**ve **Fail** for All, on Unon, **WriteLineIf**ve **WriteIf** **onaylama** testi, Boolean koşulunu ve onay testini, koşulun değerine göre yazma veya yazma. Koşul ise, **WriteIf** ve **WriteLineIf** bir çıkış yayıyorsa `true` , **Assert** Eğer koşul ise çıkış yayar `false` .  
   
- İzleme ve hata ayıklama stratejinizi tasarlarken, çıktının nasıl görünmesini istediğinizi düşünmelisiniz. İlişkisiz bilgilerle dolu birden çok **Yazma** deyimleri, okunması zor bir günlük oluşturur. Diğer taraftan, ilgili ifadeleri ayrı satırlara koymak için **WriteLine'ı** kullanmak, hangi bilgilerin birbirine ait olduğunu ayırt etmeyi zorlaştırabilir. Genel olarak, tek bir bilgilendirici ileti oluşturmak için birden çok kaynaktan gelen bilgileri birleştirmek istediğinizde birden çok **Yazma** deyimi kullanın ve tek bir tam ileti oluşturmak istediğinizde **WriteLine** deyimini kullanın.  
+ İzleme ve hata ayıklama stratejinizi tasarlarken çıktının nasıl görünmesini istediğinizi düşünmeniz gerekir. İlişkisiz bilgilerle doldurulmuş birden fazla **yazma** deyimi, okunması zor olan bir günlük oluşturur. Diğer taraftan, ilişkili deyimleri ayrı satırlara koymak için **WriteLine** kullanmak, hangi bilgilerin birlikte olduğunu ayırt etmenizi zorlaştırır. Genel olarak, tek bir bilgilendirici ileti oluşturmak için birden fazla kaynaktaki bilgileri birleştirmek istediğinizde birden çok **yazma** ifadesi kullanın ve tek bir ileti oluşturmak istediğinizde **WriteLine** deyimini kullanın.  
   
-### <a name="to-write-a-complete-line"></a>Tam bir satır yazmak için  
+### <a name="to-write-a-complete-line"></a>Tüm satırları yazmak için  
   
 1. Arama <xref:System.Diagnostics.Trace.WriteLine%2A> veya <xref:System.Diagnostics.Trace.WriteLineIf%2A> yöntemi.  
   
-     Bir satır geri dönüşü iletinin sonuna eklenir, bu yöntem döndürür, böylece sonraki ileti **Write**, **WriteIf**, WriteLine , veya **WriteLineIf**tarafından döndürülür aşağıdaki satırda başlar: **WriteLineIf**  
+     Bu yöntemin döndürdüğü iletinin sonuna bir satır başı eklenir, böylece **Write**, **WriteIf**, **WriteLine**veya **writelinetarafından** döndürülen sonraki ileti aşağıdaki satırda başlayacaktır:  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -48,7 +49,7 @@ ms.locfileid: "79174751"
   
 1. Arama <xref:System.Diagnostics.Trace.Write%2A> veya <xref:System.Diagnostics.Trace.WriteIf%2A> yöntemi.  
   
-     Write , **WriteIf**, **WriteLine** **WriteLine**, veya **WriteLineIf** tarafından söndürülen bir sonraki ileti, **Writeif** **deyimi** tarafından söndürülen iletiyle aynı satırda başlar:  
+     Sonraki ileti bir **Write**, **WriteIf**, **WriteLine**veya **WriteLineIf** tarafından dışarı yazılır ve bu, **Write** veya **WriteIf** ifadesiyle ileti yerleştirerek aynı satırda başlayacaktır:  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -65,9 +66,9 @@ ms.locfileid: "79174751"
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Bir yöntemi yürütmeden önce veya sonra belirli koşulların mevcut olduğunu doğrulamak için  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Belirli koşulların, bir yöntemi yürütmeden önce veya sonra var olduğunu doğrulamak için  
   
-1. <xref:System.Diagnostics.Trace.Assert%2A> Yöntemi ara.  
+1. Yöntemini çağırın <xref:System.Diagnostics.Trace.Assert%2A> .  
   
     ```vb  
     Dim i As Integer = 4  
@@ -80,7 +81,7 @@ ms.locfileid: "79174751"
     ```  
   
     > [!NOTE]
-    > Hem izleme hem de hata ayıklama ile **Assert'ı** kullanabilirsiniz. Bu örnek, çağrı yığınını **Dinleyicikoleksiyonundaki** herhangi bir dinleyiciye çıkar. Daha fazla bilgi için [Yönetilen Kod'daki İddialar](/visualstudio/debugger/assertions-in-managed-code) ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
+    > Hem izleme hem de hata ayıklama ile **onaylama** kullanabilirsiniz. Bu **örnek, çağrı yığınını dinleyici koleksiyonundaki herhangi** bir dinleyiciye verir. Daha fazla bilgi için bkz. [Yönetilen koddaki Onaylamalar](/visualstudio/debugger/assertions-in-managed-code) ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,6 @@
 ---
 title: dateTimeInvalidLocalFormat MDA
+description: UTC saklı bir tarih saat değeri yalnızca yerel bir tarih saat biçimi aldığında etkinleştirilen Datetimeınvalidlocalformat yönetilen hata ayıklama Yardımcısı 'nı (MDA) gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [.NET Framework], formatting
@@ -12,18 +13,18 @@ helpviewer_keywords:
 - time formatting
 - UTC formatting
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
-ms.openlocfilehash: b01f030c474e426cb87fb907f99f241eeb76a7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d092b93af55d2cdf14e9284d8cffcdc8440cbf81
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174764"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415998"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
-`dateTimeInvalidLocalFormat` Evrensel Eşgüdümlü Zaman <xref:System.DateTime> (UTC) olarak depolanan bir örnek yalnızca yerel <xref:System.DateTime> örnekler için kullanılmak üzere tasarlanmış bir biçim kullanılarak biçimlendirildiğinde MDA etkinleştirilir. Bu MDA belirtilmeyen veya varsayılan <xref:System.DateTime> durumlar için etkinleştirilmez.  
+`dateTimeInvalidLocalFormat` <xref:System.DateTime> Evrensel Eşgüdümlü saat (UTC) olarak depolanan bir örnek, yalnızca yerel örnekler için kullanılmak üzere tasarlanan bir biçim kullanılarak biçimlendirilirken MDA etkinleştirilir <xref:System.DateTime> . Bu MDA belirtilmemiş veya varsayılan örnekler için etkinleştirilmemiş <xref:System.DateTime> .  
   
 ## <a name="symptom"></a>Belirti  
- Uygulama, yerel bir biçim kullanarak <xref:System.DateTime> bir UTC örneğini el ile serihale getirerek:  
+ Bir uygulama, bir UTC <xref:System.DateTime> örneğini yerel biçim kullanarak el ile serileştiriliyor:  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
@@ -31,28 +32,28 @@ Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffzzz"));
 ```  
   
 ### <a name="cause"></a>Nedeni  
- Yöntemin <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> 'z' biçimi, Sydney saati için "+10:00" gibi yerel saat dilimi mahsuplarını içerir. Bu nedenle, yalnızca değeri yerel <xref:System.DateTime> ise anlamlı bir sonuç üretecektir. Değer UTC saatiyse, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> yerel saat dilimi mahsupını içerir, ancak saat dilimi belirticisini görüntülemez veya ayarlamaz.  
+ Yöntemin ' z ' biçimi <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> Yerel Saat dilimi sapmasını içerir, örneğin, Sidney saati için "+ 10:00". Bu nedenle, yalnızca değerinin yerel olması durumunda anlamlı bir sonuç üretir <xref:System.DateTime> . Değer UTC zamanı ise, <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> Yerel Saat dilimi sapmasını içerir, ancak saat dilimi tanımlayıcısını görüntülemez veya ayarlamalamaz.  
   
 ### <a name="resolution"></a>Çözüm  
- UTC <xref:System.DateTime> örnekleri UTC olduklarını gösteren bir şekilde biçimlendirilmelidir. UTC süresini belirtmek için UTC zamanları için önerilen biçim :  
+ UTC <xref:System.DateTime> ÖRNEKLERININ UTC olduğunu belirten bir şekilde biçimlendirilmesi gerekir. UTC zamanının UTC zamanını belirtmek için ' Z ' kullanması için önerilen biçim:  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss.fffffffZ"));  
 ```  
   
- Örneğin yerel, UTC veya belirtilmemiş <xref:System.DateTime> olup olmadığına <xref:System.DateTime.Kind%2A> bakılmaksızın, özelliğin kullanımını seri hale getiren bir "o" biçimi de vardır:  
+ <xref:System.DateTime> <xref:System.DateTime.Kind%2A> Örneğin yerel, UTC veya belirtilmemiş olsa da doğru şekilde seri hale getirilen özelliği kullanan bir "o" biçimi de vardır:  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 Serialize(myDateTime.ToString("o"));  
 ```  
   
-## <a name="effect-on-the-runtime"></a>Çalışma Süresi üzerindeki etkisi  
- Bu MDA çalışma süresini etkilemez.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA, çalışma zamanını etkilemez.  
   
 ## <a name="output"></a>Çıktı  
- Bu MDA etkinleştirme sonucu özel bir çıkış yoktur., Ancak, çağrı yığını MDA etkinleştirilmiş <xref:System.DateTime.ToString%2A> arama konumunu belirlemek için kullanılabilir.  
+ Bu MDA ' ın etkinleştirilmesiyle ilgili özel bir çıktı yoktur. ancak, çağrı yığını, MDA ' ı etkinleştiren çağrının konumunu belirlemede kullanılabilir <xref:System.DateTime.ToString%2A> .  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -65,18 +66,18 @@ Serialize(myDateTime.ToString("o"));
 ```  
   
 ## <a name="example"></a>Örnek  
- Utc <xref:System.DateTime> değerini dolaylı olarak serileştiren bir uygulamayı <xref:System.Xml.XmlConvert> <xref:System.Data.DataSet> aşağıdaki şekilde veya sınıfı kullanarak düşünün.  
+ <xref:System.DateTime> <xref:System.Xml.XmlConvert> Aşağıdaki şekilde, veya SıNıFıNı kullanarak UTC değerini dolaylı olarak serileştirtiren bir uygulamayı düşünün <xref:System.Data.DataSet> .  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
 String serialized = XMLConvert.ToString(myDateTime);  
 ```  
   
- Ve <xref:System.Xml.XmlConvert> <xref:System.Data.DataSet> serileştirmeler varsayılan olarak serileştirme için yerel biçimleri kullanır. UTC gibi diğer değer türlerini <xref:System.DateTime> seri hale getirmek için ek seçenekler gereklidir.  
+ <xref:System.Xml.XmlConvert>Ve <xref:System.Data.DataSet> serileştirmeler varsayılan olarak serileştirme için yerel biçimler kullanır. UTC gibi diğer değer türlerini seri hale getirmek için ek seçenekler gereklidir <xref:System.DateTime> .  
   
- Bu özel örnek `XmlDateTimeSerializationMode.RoundtripKind` için, `ToString` arama `XmlConvert`yı geçin. Bu, verileri UTC zamanı olarak serihale eder.  
+ Bu belirli örnek için, çağrısına geçin `XmlDateTimeSerializationMode.RoundtripKind` `ToString` `XmlConvert` . Bu, verileri UTC saati olarak serileştirir.  
   
- Bir <xref:System.Data.DataSet>kullanıyorsanız, <xref:System.Data.DataColumn.DateTimeMode%2A> nesne üzerindeki <xref:System.Data.DataColumn> özelliği <xref:System.Data.DataSetDateTime.Utc>.  
+ Kullanıyorsanız <xref:System.Data.DataSet> , <xref:System.Data.DataColumn.DateTimeMode%2A> nesnesi üzerinde özelliğini <xref:System.Data.DataColumn> olarak ayarlayın <xref:System.Data.DataSetDateTime.Utc> .  
   
 ```csharp
 DateTime myDateTime = DateTime.UtcNow;  
