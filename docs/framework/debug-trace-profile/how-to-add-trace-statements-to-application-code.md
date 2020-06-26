@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme'
+description: .NET 'teki uygulama koduna izleme deyimleri eklemeyi öğrenin. İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,23 +14,23 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-ms.openlocfilehash: 9903a0357d1d8ceade21b590fd54c8cab517f134
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c75a8775649aabe73b02187c4604d2eb3a8435b
+ms.sourcegitcommit: a2c8b19e813a52b91facbb5d7e3c062c7188b457
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174751"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415894"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="38d49-102">Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme</span><span class="sxs-lookup"><span data-stu-id="38d49-102">How to: Add Trace Statements to Application Code</span></span>
-<span data-ttu-id="38d49-103">İzleme için en sık kullanılan yöntemler dinleyicilere çıktı yazma yöntemleridir: **Write** **, WriteIf**, **WriteLine**, **WriteLineIf**, Assert , **ve** **Fail**.</span><span class="sxs-lookup"><span data-stu-id="38d49-103">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="38d49-104">Bu yöntemler iki kategoriye ayrılabilir: **Yazma**, **WriteLine**, ve **Fail** tüm koşulsuz çıkış yontmak, oysa **WriteIf**, **WriteLineIf**, ve Test bir Boolean durum **assert** ve yazma veya durumun değerine göre yazmayın.</span><span class="sxs-lookup"><span data-stu-id="38d49-104">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="38d49-105">**WriteIf** ve **WriteLineIf** koşul ise `true`çıktı yayıyorum ve koşul ise `false` **Assert** çıktı yayır.</span><span class="sxs-lookup"><span data-stu-id="38d49-105">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
+# <a name="how-to-add-trace-statements-to-application-code"></a><span data-ttu-id="131a2-104">Nasıl yapılır: Uygulama Koduna İzleme Deyimleri Ekleme</span><span class="sxs-lookup"><span data-stu-id="131a2-104">How to: Add Trace Statements to Application Code</span></span>
+<span data-ttu-id="131a2-105">İzleme için en sık kullanılan yöntemler, dinleyicilerine çıkış yazma yöntemleridir: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **onaylama**ve **başarısız**.</span><span class="sxs-lookup"><span data-stu-id="131a2-105">The methods used most often for tracing are the methods for writing output to listeners: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, and **Fail**.</span></span> <span data-ttu-id="131a2-106">Bu yöntemler iki kategoriye ayrılabilir: **Write**, **WriteLine**ve **Fail** for All, on Unon, **WriteLineIf**ve **WriteIf** **onaylama** testi, Boolean koşulunu ve onay testini, koşulun değerine göre yazma veya yazma.</span><span class="sxs-lookup"><span data-stu-id="131a2-106">These methods can be divided into two categories: **Write**, **WriteLine**, and **Fail** all emit output unconditionally, whereas **WriteIf**, **WriteLineIf**, and **Assert** test a Boolean condition, and write or do not write based on the value of the condition.</span></span> <span data-ttu-id="131a2-107">Koşul ise, **WriteIf** ve **WriteLineIf** bir çıkış yayıyorsa `true` , **Assert** Eğer koşul ise çıkış yayar `false` .</span><span class="sxs-lookup"><span data-stu-id="131a2-107">**WriteIf** and **WriteLineIf** emit output if the condition is `true`, and **Assert** emits output if the condition is `false`.</span></span>  
   
- <span data-ttu-id="38d49-106">İzleme ve hata ayıklama stratejinizi tasarlarken, çıktının nasıl görünmesini istediğinizi düşünmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="38d49-106">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="38d49-107">İlişkisiz bilgilerle dolu birden çok **Yazma** deyimleri, okunması zor bir günlük oluşturur.</span><span class="sxs-lookup"><span data-stu-id="38d49-107">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="38d49-108">Diğer taraftan, ilgili ifadeleri ayrı satırlara koymak için **WriteLine'ı** kullanmak, hangi bilgilerin birbirine ait olduğunu ayırt etmeyi zorlaştırabilir.</span><span class="sxs-lookup"><span data-stu-id="38d49-108">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="38d49-109">Genel olarak, tek bir bilgilendirici ileti oluşturmak için birden çok kaynaktan gelen bilgileri birleştirmek istediğinizde birden çok **Yazma** deyimi kullanın ve tek bir tam ileti oluşturmak istediğinizde **WriteLine** deyimini kullanın.</span><span class="sxs-lookup"><span data-stu-id="38d49-109">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
+ <span data-ttu-id="131a2-108">İzleme ve hata ayıklama stratejinizi tasarlarken çıktının nasıl görünmesini istediğinizi düşünmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="131a2-108">When designing your tracing and debugging strategy, you should think about how you want the output to look.</span></span> <span data-ttu-id="131a2-109">İlişkisiz bilgilerle doldurulmuş birden fazla **yazma** deyimi, okunması zor olan bir günlük oluşturur.</span><span class="sxs-lookup"><span data-stu-id="131a2-109">Multiple **Write** statements filled with unrelated information will create a log that is difficult to read.</span></span> <span data-ttu-id="131a2-110">Diğer taraftan, ilişkili deyimleri ayrı satırlara koymak için **WriteLine** kullanmak, hangi bilgilerin birlikte olduğunu ayırt etmenizi zorlaştırır.</span><span class="sxs-lookup"><span data-stu-id="131a2-110">On the other hand, using **WriteLine** to put related statements on separate lines may make it difficult to distinguish what information belongs together.</span></span> <span data-ttu-id="131a2-111">Genel olarak, tek bir bilgilendirici ileti oluşturmak için birden fazla kaynaktaki bilgileri birleştirmek istediğinizde birden çok **yazma** ifadesi kullanın ve tek bir ileti oluşturmak istediğinizde **WriteLine** deyimini kullanın.</span><span class="sxs-lookup"><span data-stu-id="131a2-111">In general, use multiple **Write** statements when you want to combine information from multiple sources to create a single informative message, and use the **WriteLine** statement when you want to create a single, complete message.</span></span>  
   
-### <a name="to-write-a-complete-line"></a><span data-ttu-id="38d49-110">Tam bir satır yazmak için</span><span class="sxs-lookup"><span data-stu-id="38d49-110">To write a complete line</span></span>  
+### <a name="to-write-a-complete-line"></a><span data-ttu-id="131a2-112">Tüm satırları yazmak için</span><span class="sxs-lookup"><span data-stu-id="131a2-112">To write a complete line</span></span>  
   
-1. <span data-ttu-id="38d49-111">Arama <xref:System.Diagnostics.Trace.WriteLine%2A> veya <xref:System.Diagnostics.Trace.WriteLineIf%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="38d49-111">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
+1. <span data-ttu-id="131a2-113">Arama <xref:System.Diagnostics.Trace.WriteLine%2A> veya <xref:System.Diagnostics.Trace.WriteLineIf%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="131a2-113">Call the <xref:System.Diagnostics.Trace.WriteLine%2A> or <xref:System.Diagnostics.Trace.WriteLineIf%2A> method.</span></span>  
   
-     <span data-ttu-id="38d49-112">Bir satır geri dönüşü iletinin sonuna eklenir, bu yöntem döndürür, böylece sonraki ileti **Write**, **WriteIf**, WriteLine , veya **WriteLineIf**tarafından döndürülür aşağıdaki satırda başlar: **WriteLineIf**</span><span class="sxs-lookup"><span data-stu-id="38d49-112">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
+     <span data-ttu-id="131a2-114">Bu yöntemin döndürdüğü iletinin sonuna bir satır başı eklenir, böylece **Write**, **WriteIf**, **WriteLine**veya **writelinetarafından** döndürülen sonraki ileti aşağıdaki satırda başlayacaktır:</span><span class="sxs-lookup"><span data-stu-id="131a2-114">A carriage return is appended to the end of the message this method returns, so that the next message returned by **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the following line:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -44,11 +45,11 @@ ms.locfileid: "79174751"
        "Error in AppendData procedure.");  
     ```  
   
-### <a name="to-write-a-partial-line"></a><span data-ttu-id="38d49-113">Kısmi satır yazmak için</span><span class="sxs-lookup"><span data-stu-id="38d49-113">To write a partial line</span></span>  
+### <a name="to-write-a-partial-line"></a><span data-ttu-id="131a2-115">Kısmi satır yazmak için</span><span class="sxs-lookup"><span data-stu-id="131a2-115">To write a partial line</span></span>  
   
-1. <span data-ttu-id="38d49-114">Arama <xref:System.Diagnostics.Trace.Write%2A> veya <xref:System.Diagnostics.Trace.WriteIf%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="38d49-114">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
+1. <span data-ttu-id="131a2-116">Arama <xref:System.Diagnostics.Trace.Write%2A> veya <xref:System.Diagnostics.Trace.WriteIf%2A> yöntemi.</span><span class="sxs-lookup"><span data-stu-id="131a2-116">Call the <xref:System.Diagnostics.Trace.Write%2A> or <xref:System.Diagnostics.Trace.WriteIf%2A> method.</span></span>  
   
-     <span data-ttu-id="38d49-115">Write , **WriteIf**, **WriteLine** **WriteLine**, veya **WriteLineIf** tarafından söndürülen bir sonraki ileti, **Writeif** **deyimi** tarafından söndürülen iletiyle aynı satırda başlar:</span><span class="sxs-lookup"><span data-stu-id="38d49-115">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
+     <span data-ttu-id="131a2-117">Sonraki ileti bir **Write**, **WriteIf**, **WriteLine**veya **WriteLineIf** tarafından dışarı yazılır ve bu, **Write** veya **WriteIf** ifadesiyle ileti yerleştirerek aynı satırda başlayacaktır:</span><span class="sxs-lookup"><span data-stu-id="131a2-117">The next message put out by a **Write**, **WriteIf**, **WriteLine**, or **WriteLineIf** will begin on the same line as the message put out by the **Write** or **WriteIf** statement:</span></span>  
   
     ```vb  
     Dim errorFlag As Boolean = False  
@@ -65,9 +66,9 @@ ms.locfileid: "79174751"
     Trace.Write("Invalid value for data request");  
     ```  
   
-### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="38d49-116">Bir yöntemi yürütmeden önce veya sonra belirli koşulların mevcut olduğunu doğrulamak için</span><span class="sxs-lookup"><span data-stu-id="38d49-116">To verify that certain conditions exist either before or after you execute a method</span></span>  
+### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a><span data-ttu-id="131a2-118">Belirli koşulların, bir yöntemi yürütmeden önce veya sonra var olduğunu doğrulamak için</span><span class="sxs-lookup"><span data-stu-id="131a2-118">To verify that certain conditions exist either before or after you execute a method</span></span>  
   
-1. <span data-ttu-id="38d49-117"><xref:System.Diagnostics.Trace.Assert%2A> Yöntemi ara.</span><span class="sxs-lookup"><span data-stu-id="38d49-117">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
+1. <span data-ttu-id="131a2-119">Yöntemini çağırın <xref:System.Diagnostics.Trace.Assert%2A> .</span><span class="sxs-lookup"><span data-stu-id="131a2-119">Call the <xref:System.Diagnostics.Trace.Assert%2A> method.</span></span>  
   
     ```vb  
     Dim i As Integer = 4  
@@ -80,15 +81,15 @@ ms.locfileid: "79174751"
     ```  
   
     > [!NOTE]
-    > <span data-ttu-id="38d49-118">Hem izleme hem de hata ayıklama ile **Assert'ı** kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="38d49-118">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="38d49-119">Bu örnek, çağrı yığınını **Dinleyicikoleksiyonundaki** herhangi bir dinleyiciye çıkar.</span><span class="sxs-lookup"><span data-stu-id="38d49-119">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="38d49-120">Daha fazla bilgi için [Yönetilen Kod'daki İddialar](/visualstudio/debugger/assertions-in-managed-code) ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="38d49-120">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
+    > <span data-ttu-id="131a2-120">Hem izleme hem de hata ayıklama ile **onaylama** kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="131a2-120">You can use **Assert** with both tracing and debugging.</span></span> <span data-ttu-id="131a2-121">Bu **örnek, çağrı yığınını dinleyici koleksiyonundaki herhangi** bir dinleyiciye verir.</span><span class="sxs-lookup"><span data-stu-id="131a2-121">This example outputs the call stack to any listener in the **Listeners** collection.</span></span> <span data-ttu-id="131a2-122">Daha fazla bilgi için bkz. [Yönetilen koddaki Onaylamalar](/visualstudio/debugger/assertions-in-managed-code) ve <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="131a2-122">For more information, see [Assertions in Managed Code](/visualstudio/debugger/assertions-in-managed-code) and <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38d49-121">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="38d49-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="131a2-123">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="131a2-123">See also</span></span>
 
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="38d49-122">İzleme ve İşaretleme Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="38d49-122">Tracing and Instrumenting Applications</span></span>](tracing-and-instrumenting-applications.md)
-- [<span data-ttu-id="38d49-123">Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma</span><span class="sxs-lookup"><span data-stu-id="38d49-123">How to: Create, Initialize and Configure Trace Switches</span></span>](how-to-create-initialize-and-configure-trace-switches.md)
-- [<span data-ttu-id="38d49-124">İzleme Anahtarları</span><span class="sxs-lookup"><span data-stu-id="38d49-124">Trace Switches</span></span>](trace-switches.md)
-- [<span data-ttu-id="38d49-125">İz Dinleyicileri</span><span class="sxs-lookup"><span data-stu-id="38d49-125">Trace Listeners</span></span>](trace-listeners.md)
+- [<span data-ttu-id="131a2-124">İzleme ve İşaretleme Uygulamaları</span><span class="sxs-lookup"><span data-stu-id="131a2-124">Tracing and Instrumenting Applications</span></span>](tracing-and-instrumenting-applications.md)
+- [<span data-ttu-id="131a2-125">Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma</span><span class="sxs-lookup"><span data-stu-id="131a2-125">How to: Create, Initialize and Configure Trace Switches</span></span>](how-to-create-initialize-and-configure-trace-switches.md)
+- [<span data-ttu-id="131a2-126">İzleme Anahtarları</span><span class="sxs-lookup"><span data-stu-id="131a2-126">Trace Switches</span></span>](trace-switches.md)
+- [<span data-ttu-id="131a2-127">İz Dinleyicileri</span><span class="sxs-lookup"><span data-stu-id="131a2-127">Trace Listeners</span></span>](trace-listeners.md)
