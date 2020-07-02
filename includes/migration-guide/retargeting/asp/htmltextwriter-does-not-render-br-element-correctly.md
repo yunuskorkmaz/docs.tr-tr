@@ -1,18 +1,28 @@
 ---
-ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f03e5166e7f1f598e9bba7fb8c550809f287b82
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615742"
 ---
-### <a name="htmltextwriter-does-not-render-br-element-correctly"></a><span data-ttu-id="cdabe-101">HtmlTextWriter öğeyi `<br/>` doğru işlemez</span><span class="sxs-lookup"><span data-stu-id="cdabe-101">HtmlTextWriter does not render `<br/>` element correctly</span></span>
+### <a name="htmltextwriter-does-not-render-br-element-correctly"></a><span data-ttu-id="41c9d-101">HtmlTextWriter `<br/>` öğeyi doğru işlemiyor</span><span class="sxs-lookup"><span data-stu-id="41c9d-101">HtmlTextWriter does not render `<br/>` element correctly</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="cdabe-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="cdabe-102">Details</span></span>|<span data-ttu-id="cdabe-103">.NET Framework 4.6'dan <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> başlayarak, arama ve <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> bir <code>&lt;BR /&gt;</code> öğeyle yalnızca bir <code>&lt;BR /&gt;</code> tane (iki yerine) doğru bir şekilde ekler</span><span class="sxs-lookup"><span data-stu-id="cdabe-103">Beginning in the .NET Framework 4.6, calling <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> and <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> with a <code>&lt;BR /&gt;</code> element will correctly insert only one <code>&lt;BR /&gt;</code> (instead of two)</span></span>|
-|<span data-ttu-id="cdabe-104">Öneri</span><span class="sxs-lookup"><span data-stu-id="cdabe-104">Suggestion</span></span>|<span data-ttu-id="cdabe-105">Bir uygulama ek <code>&lt;BR /&gt;</code> etikete bağlıysa, <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ikinci kez çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="cdabe-105">If an app depended on the extra <code>&lt;BR /&gt;</code> tag, <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> should be called a second time.</span></span> <span data-ttu-id="cdabe-106">Bu davranış değişikliğinin yalnızca .NET Framework 4.6 veya sonraki leri hedefleyen uygulamaları etkilediğini unutmayın, bu nedenle başka bir seçenek de eski davranışı elde etmek için .NET Framework'ün önceki bir sürümünü hedeflemektir.</span><span class="sxs-lookup"><span data-stu-id="cdabe-106">Note that this behavior change only affects apps that target the .NET Framework 4.6 or later, so another option is to target a previous version of the .NET Framework in order to get the old behavior.</span></span>|
-|<span data-ttu-id="cdabe-107">Kapsam</span><span class="sxs-lookup"><span data-stu-id="cdabe-107">Scope</span></span>|<span data-ttu-id="cdabe-108">Edge</span><span class="sxs-lookup"><span data-stu-id="cdabe-108">Edge</span></span>|
-|<span data-ttu-id="cdabe-109">Sürüm</span><span class="sxs-lookup"><span data-stu-id="cdabe-109">Version</span></span>|<span data-ttu-id="cdabe-110">4.6</span><span class="sxs-lookup"><span data-stu-id="cdabe-110">4.6</span></span>|
-|<span data-ttu-id="cdabe-111">Tür</span><span class="sxs-lookup"><span data-stu-id="cdabe-111">Type</span></span>|<span data-ttu-id="cdabe-112">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="cdabe-112">Retargeting</span></span>|
-|<span data-ttu-id="cdabe-113">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="cdabe-113">Affected APIs</span></span>|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="41c9d-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="41c9d-102">Details</span></span>
+
+<span data-ttu-id="41c9d-103">.NET Framework 4,6 ' den başlayarak, <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ve <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> içeren bir `<BR />` öğe çağırmak doğru bir şekilde yalnızca bir tane eklenir `<BR />` (iki yerine)</span><span class="sxs-lookup"><span data-stu-id="41c9d-103">Beginning in the .NET Framework 4.6, calling <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> and <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> with a `<BR />` element will correctly insert only one `<BR />` (instead of two)</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="41c9d-104">Öneri</span><span class="sxs-lookup"><span data-stu-id="41c9d-104">Suggestion</span></span>
+
+<span data-ttu-id="41c9d-105">Bir uygulama ekstra etikete bağımlılarsa `<BR />` <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> ikinci kez çağrılmalıdır.</span><span class="sxs-lookup"><span data-stu-id="41c9d-105">If an app depended on the extra `<BR />` tag, <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> should be called a second time.</span></span> <span data-ttu-id="41c9d-106">Bu davranış değişikliğinin yalnızca .NET Framework 4,6 veya üstünü hedefleyen uygulamaları etkilediğini unutmayın. bu nedenle, eski davranışı almak için başka bir seçenek .NET Framework önceki bir sürümünü hedeflemelidir.</span><span class="sxs-lookup"><span data-stu-id="41c9d-106">Note that this behavior change only affects apps that target the .NET Framework 4.6 or later, so another option is to target a previous version of the .NET Framework in order to get the old behavior.</span></span>
+
+| <span data-ttu-id="41c9d-107">Name</span><span class="sxs-lookup"><span data-stu-id="41c9d-107">Name</span></span>    | <span data-ttu-id="41c9d-108">Değer</span><span class="sxs-lookup"><span data-stu-id="41c9d-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="41c9d-109">Kapsam</span><span class="sxs-lookup"><span data-stu-id="41c9d-109">Scope</span></span>   | <span data-ttu-id="41c9d-110">Edge</span><span class="sxs-lookup"><span data-stu-id="41c9d-110">Edge</span></span>        |
+| <span data-ttu-id="41c9d-111">Sürüm</span><span class="sxs-lookup"><span data-stu-id="41c9d-111">Version</span></span> | <span data-ttu-id="41c9d-112">4.6</span><span class="sxs-lookup"><span data-stu-id="41c9d-112">4.6</span></span>         |
+| <span data-ttu-id="41c9d-113">Tür</span><span class="sxs-lookup"><span data-stu-id="41c9d-113">Type</span></span>    | <span data-ttu-id="41c9d-114">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="41c9d-114">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="41c9d-115">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="41c9d-115">Affected APIs</span></span>
+
+- <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType>
+- <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType>

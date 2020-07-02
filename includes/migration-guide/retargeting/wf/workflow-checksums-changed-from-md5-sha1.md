@@ -1,17 +1,37 @@
 ---
-ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 72d48d1daa85b6891c122f2fcc5279642253b926
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614842"
 ---
-### <a name="workflow-checksums-changed-from-md5-to-sha1"></a><span data-ttu-id="f4240-101">İş akışı denetimleri MD5'ten SHA1'e değiştirildi</span><span class="sxs-lookup"><span data-stu-id="f4240-101">Workflow checksums changed from MD5 to SHA1</span></span>
+### <a name="workflow-checksums-changed-from-md5-to-sha1"></a><span data-ttu-id="43337-101">İş akışı sağlama toplamı, MD5 'den SHA1 'ye değişti</span><span class="sxs-lookup"><span data-stu-id="43337-101">Workflow checksums changed from MD5 to SHA1</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="f4240-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="f4240-102">Details</span></span>|<span data-ttu-id="f4240-103">Visual Studio ile hata ayıklamayı desteklemek için, İş Akışı çalışma zamanı karma algoritması kullanarak bir iş akışı örneği için bir denetim çalışması oluşturur.</span><span class="sxs-lookup"><span data-stu-id="f4240-103">To support debugging with Visual Studio, the Workflow runtime generates a checksum for a workflow instance using a hashing algorithm.</span></span> <span data-ttu-id="f4240-104">.NET Framework 4.6.2 ve önceki sürümlerinde, iş akışı denetimi karma, FIPS özellikli sistemlerde sorunlara neden olan MD5 algoritmasını kullanmıştır.</span><span class="sxs-lookup"><span data-stu-id="f4240-104">In the .NET Framework 4.6.2 and earlier versions, workflow checksum hashing used the MD5 algorithm, which caused issues on FIPS-enabled systems.</span></span> <span data-ttu-id="f4240-105">.NET Framework 4.7 ile başlayarak algoritma SHA1'dir.</span><span class="sxs-lookup"><span data-stu-id="f4240-105">Starting with the .NET Framework 4.7, the algorithm is SHA1.</span></span> <span data-ttu-id="f4240-106">Kodunuz bu denetimleri kalıcı olarak verdiyse, bunlar uyumsuz olacaktır.</span><span class="sxs-lookup"><span data-stu-id="f4240-106">If your code has persisted these checksums, they will be incompatible.</span></span>|
-|<span data-ttu-id="f4240-107">Öneri</span><span class="sxs-lookup"><span data-stu-id="f4240-107">Suggestion</span></span>|<span data-ttu-id="f4240-108">Kodunuz bir checksum hatası nedeniyle iş akışı örneklerini yükleyemiyorsa Switch.System.Activities.UseMD5ForWFDebugger'ı <code>AppContext</code> &quot;&quot; doğru ayarlamayı deneyin. Kod olarak:</span><span class="sxs-lookup"><span data-stu-id="f4240-108">If your code is unable to load workflow instances due to a checksum failure, try setting the <code>AppContext</code> switch &quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; to true.In code:</span></span><pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Activities.UseMD5ForWFDebugger&quot;, true);&#13;&#10;</code></pre><span data-ttu-id="f4240-109">Veya yapılandırmada:</span><span class="sxs-lookup"><span data-stu-id="f4240-109">Or in configuration:</span></span><pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Activities.UseMD5ForWFDebugger=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="f4240-110">Kapsam</span><span class="sxs-lookup"><span data-stu-id="f4240-110">Scope</span></span>|<span data-ttu-id="f4240-111">İkincil</span><span class="sxs-lookup"><span data-stu-id="f4240-111">Minor</span></span>|
-|<span data-ttu-id="f4240-112">Sürüm</span><span class="sxs-lookup"><span data-stu-id="f4240-112">Version</span></span>|<span data-ttu-id="f4240-113">4.7</span><span class="sxs-lookup"><span data-stu-id="f4240-113">4.7</span></span>|
-|<span data-ttu-id="f4240-114">Tür</span><span class="sxs-lookup"><span data-stu-id="f4240-114">Type</span></span>|<span data-ttu-id="f4240-115">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="f4240-115">Retargeting</span></span>|
+#### <a name="details"></a><span data-ttu-id="43337-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="43337-102">Details</span></span>
+
+<span data-ttu-id="43337-103">Visual Studio ile hata ayıklamayı desteklemek için, Iş akışı çalışma zamanı bir karma algoritması kullanarak bir iş akışı örneği için bir sağlama toplamı üretir.</span><span class="sxs-lookup"><span data-stu-id="43337-103">To support debugging with Visual Studio, the Workflow runtime generates a checksum for a workflow instance using a hashing algorithm.</span></span> <span data-ttu-id="43337-104">.NET Framework 4.6.2 ve önceki sürümlerde, iş akışı sağlama toplamı karması, FIPS özellikli sistemlerde sorun oluşmasına neden olan MD5 algoritmasını kullandı.</span><span class="sxs-lookup"><span data-stu-id="43337-104">In the .NET Framework 4.6.2 and earlier versions, workflow checksum hashing used the MD5 algorithm, which caused issues on FIPS-enabled systems.</span></span> <span data-ttu-id="43337-105">4,7 .NET Framework başlayarak algoritma SHA1 ' dır.</span><span class="sxs-lookup"><span data-stu-id="43337-105">Starting with the .NET Framework 4.7, the algorithm is SHA1.</span></span> <span data-ttu-id="43337-106">Kodunuz bu sağlama toplamlarını kalıcı hale alıyorsa, bunlar uyumsuz olur.</span><span class="sxs-lookup"><span data-stu-id="43337-106">If your code has persisted these checksums, they will be incompatible.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="43337-107">Öneri</span><span class="sxs-lookup"><span data-stu-id="43337-107">Suggestion</span></span>
+
+<span data-ttu-id="43337-108">Kodunuz, sağlama toplamı hatası nedeniyle iş akışı örneklerini yükleyememesi durumunda, `AppContext` anahtarı &quot;Switch.Sysdıtem ayarlamayı deneyin. Activities. UseMD5ForWFDebugger &quot; . Kodda:</span><span class="sxs-lookup"><span data-stu-id="43337-108">If your code is unable to load workflow instances due to a checksum failure, try setting the `AppContext` switch &quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; to true.In code:</span></span>
+
+```csharp
+System.AppContext.SetSwitch("Switch.System.Activities.UseMD5ForWFDebugger", true);
+```
+
+<span data-ttu-id="43337-109">Ya da yapılandırmada:</span><span class="sxs-lookup"><span data-stu-id="43337-109">Or in configuration:</span></span>
+
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.Activities.UseMD5ForWFDebugger=true" />
+  </runtime>
+</configuration>
+```
+
+| <span data-ttu-id="43337-110">Name</span><span class="sxs-lookup"><span data-stu-id="43337-110">Name</span></span>    | <span data-ttu-id="43337-111">Değer</span><span class="sxs-lookup"><span data-stu-id="43337-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="43337-112">Kapsam</span><span class="sxs-lookup"><span data-stu-id="43337-112">Scope</span></span>   | <span data-ttu-id="43337-113">İkincil</span><span class="sxs-lookup"><span data-stu-id="43337-113">Minor</span></span>       |
+| <span data-ttu-id="43337-114">Sürüm</span><span class="sxs-lookup"><span data-stu-id="43337-114">Version</span></span> | <span data-ttu-id="43337-115">4,7</span><span class="sxs-lookup"><span data-stu-id="43337-115">4.7</span></span>         |
+| <span data-ttu-id="43337-116">Tür</span><span class="sxs-lookup"><span data-stu-id="43337-116">Type</span></span>    | <span data-ttu-id="43337-117">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="43337-117">Retargeting</span></span> |

@@ -1,18 +1,38 @@
 ---
-ms.openlocfilehash: 1148d040aa3b292d5c37eb50224413b6ddd202e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 519de92ca4201d199941afe6382ddf9fc480fbbd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614775"
 ---
-### <a name="servicebase-doesnt-propagate-onstart-exceptions"></a><span data-ttu-id="4e132-101">ServiceBase OnStart özel durumlarını yaymaz</span><span class="sxs-lookup"><span data-stu-id="4e132-101">ServiceBase doesn't propagate OnStart exceptions</span></span>
+### <a name="servicebase-doesnt-propagate-onstart-exceptions"></a><span data-ttu-id="e4f6b-101">ServiceBase, OnStart özel durumlarını yaymıyor</span><span class="sxs-lookup"><span data-stu-id="e4f6b-101">ServiceBase doesn't propagate OnStart exceptions</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="4e132-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="4e132-102">Details</span></span>|<span data-ttu-id="4e132-103">.NET Framework 4.7 ve önceki sürümlerde, hizmet başlatmada atılan özel <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>durumlar.</span><span class="sxs-lookup"><span data-stu-id="4e132-103">In the .NET Framework 4.7 and earlier versions, exceptions thrown on service startup are not propagated to the caller of <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>.</span></span><br/><span data-ttu-id="4e132-104">.NET Framework 4.7.1'i hedefleyen uygulamalardan başlayarak, çalışma zamanı <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> başlatılamayan hizmetler için özel durumları yayır.</span><span class="sxs-lookup"><span data-stu-id="4e132-104">Starting with applications that target the .NET Framework 4.7.1, the runtime propagates exceptions to <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> for services that fail to start.</span></span>|
-|<span data-ttu-id="4e132-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="4e132-105">Suggestion</span></span>|<span data-ttu-id="4e132-106">Hizmet başlangıcında, bir özel durum varsa, bu özel durum yayılır.</span><span class="sxs-lookup"><span data-stu-id="4e132-106">On service start, if there is an exception, that exception will be propagated.</span></span> <span data-ttu-id="4e132-107">Bu, hizmetlerin başlatılamadığı durumları tanılamaya yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="4e132-107">This should help diagnose cases where services fail to start.</span></span> <br/><span data-ttu-id="4e132-108">Bu davranış istenmeyen ise, uygulama yapılandırma &lt;dosyanızın&gt; &lt;çalışma süresi&gt; bölümüne aşağıdaki AppContextSwitchOverrides öğesini ekleyerek bu davranışı devre dışı bırakmak olabilir:</span><span class="sxs-lookup"><span data-stu-id="4e132-108">If this behavior is undesirable, you can opt out of it by adding the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceProcess.DontThrowExceptionsOnStart=true&quot; /&gt;&#13;&#10;</code></pre><span data-ttu-id="4e132-109">Uygulamanız 4.7.1'den daha önceki bir sürümü hedefliyorsa ancak &lt;bu davranışı&gt; istiyorsanız, &lt;uygulama&gt; yapılandırma dosyanızın çalışma zamanı bölümüne aşağıdaki AppContextSwitchOverrides öğesini ekleyin:</span><span class="sxs-lookup"><span data-stu-id="4e132-109">If your application targets an earlier version than 4.7.1 but you want to have this behavior, add the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceProcess.DontThrowExceptionsOnStart=false&quot; /&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="4e132-110">Kapsam</span><span class="sxs-lookup"><span data-stu-id="4e132-110">Scope</span></span>|<span data-ttu-id="4e132-111">İkincil</span><span class="sxs-lookup"><span data-stu-id="4e132-111">Minor</span></span>|
-|<span data-ttu-id="4e132-112">Sürüm</span><span class="sxs-lookup"><span data-stu-id="4e132-112">Version</span></span>|<span data-ttu-id="4e132-113">4.7.1</span><span class="sxs-lookup"><span data-stu-id="4e132-113">4.7.1</span></span>|
-|<span data-ttu-id="4e132-114">Tür</span><span class="sxs-lookup"><span data-stu-id="4e132-114">Type</span></span>|<span data-ttu-id="4e132-115">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="4e132-115">Retargeting</span></span>|
-|<span data-ttu-id="4e132-116">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="4e132-116">Affected APIs</span></span>|<ul><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)?displayProperty=nameWithType></li><li><xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="e4f6b-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="e4f6b-102">Details</span></span>
+
+<span data-ttu-id="e4f6b-103">.NET Framework 4,7 ve önceki sürümlerde, hizmet başlangıcında oluşturulan özel durumlar, çağıranına yayılmaz <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="e4f6b-103">In the .NET Framework 4.7 and earlier versions, exceptions thrown on service startup are not propagated to the caller of <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>.</span></span><br/><span data-ttu-id="e4f6b-104">.NET Framework 4.7.1 ' i hedefleyen uygulamalarla başlayarak, çalışma zamanı, <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> başlatılamaz hizmetler için özel durumları yayar.</span><span class="sxs-lookup"><span data-stu-id="e4f6b-104">Starting with applications that target the .NET Framework 4.7.1, the runtime propagates exceptions to <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> for services that fail to start.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="e4f6b-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="e4f6b-105">Suggestion</span></span>
+
+<span data-ttu-id="e4f6b-106">Hizmet başlangıcı ' nde, bir özel durum varsa, bu özel durum yayılacaktır.</span><span class="sxs-lookup"><span data-stu-id="e4f6b-106">On service start, if there is an exception, that exception will be propagated.</span></span> <span data-ttu-id="e4f6b-107">Bu, hizmetlerin başlayaamadığı durumların tanılanmasına yardımcı olur.</span><span class="sxs-lookup"><span data-stu-id="e4f6b-107">This should help diagnose cases where services fail to start.</span></span> <br/><span data-ttu-id="e4f6b-108">Bu davranış istenmeyen ise, &lt; &gt; &lt; uygulama yapılandırma dosyanızın çalışma zamanı bölümüne aşağıdaki AppContextSwitchOverrides öğesini ekleyerek devre dışı bırakabilirsiniz &gt; :</span><span class="sxs-lookup"><span data-stu-id="e4f6b-108">If this behavior is undesirable, you can opt out of it by adding the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.ServiceProcess.DontThrowExceptionsOnStart=true" />
+```
+
+<span data-ttu-id="e4f6b-109">Uygulamanız 4.7.1 sürümünden önceki bir sürümü hedefliyorsa ancak bu davranışa sahip olmak istiyorsanız, &lt; &gt; &lt; uygulama yapılandırma dosyanızın Runtime bölümüne aşağıdaki AppContextSwitchOverrides öğesini ekleyin &gt; :</span><span class="sxs-lookup"><span data-stu-id="e4f6b-109">If your application targets an earlier version than 4.7.1 but you want to have this behavior, add the following &lt;AppContextSwitchOverrides&gt; element to the &lt;runtime&gt; section of your application configuration file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.ServiceProcess.DontThrowExceptionsOnStart=false" />
+```
+
+| <span data-ttu-id="e4f6b-110">Name</span><span class="sxs-lookup"><span data-stu-id="e4f6b-110">Name</span></span>    | <span data-ttu-id="e4f6b-111">Değer</span><span class="sxs-lookup"><span data-stu-id="e4f6b-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="e4f6b-112">Kapsam</span><span class="sxs-lookup"><span data-stu-id="e4f6b-112">Scope</span></span>   | <span data-ttu-id="e4f6b-113">İkincil</span><span class="sxs-lookup"><span data-stu-id="e4f6b-113">Minor</span></span>       |
+| <span data-ttu-id="e4f6b-114">Sürüm</span><span class="sxs-lookup"><span data-stu-id="e4f6b-114">Version</span></span> | <span data-ttu-id="e4f6b-115">4.7.1</span><span class="sxs-lookup"><span data-stu-id="e4f6b-115">4.7.1</span></span>       |
+| <span data-ttu-id="e4f6b-116">Tür</span><span class="sxs-lookup"><span data-stu-id="e4f6b-116">Type</span></span>    | <span data-ttu-id="e4f6b-117">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="e4f6b-117">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="e4f6b-118">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="e4f6b-118">Affected APIs</span></span>
+
+- <xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase)?displayProperty=nameWithType>
+- <xref:System.ServiceProcess.ServiceBase.Run(System.ServiceProcess.ServiceBase[])?displayProperty=nameWithType>

@@ -1,18 +1,37 @@
 ---
-ms.openlocfilehash: 5b531dc23feb311a797823dfa2a4d853859f9e18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87dc93ece10eaedbfbabddb5f857d0bcd12e05c4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615763"
 ---
-### <a name="only-tls-10-11-and-12-protocols-supported-in-systemnetservicepointmanager-and-systemnetsecuritysslstream"></a><span data-ttu-id="d8b01-101">System.Net.ServicePointManager ve System.Net.Security.SslStream'de desteklenen 1.0, 1.1 ve 1.2 protokolleri sadece TL'dir.</span><span class="sxs-lookup"><span data-stu-id="d8b01-101">Only Tls 1.0, 1.1 and 1.2 protocols supported in System.Net.ServicePointManager and System.Net.Security.SslStream</span></span>
+### <a name="only-tls-10-11-and-12-protocols-supported-in-systemnetservicepointmanager-and-systemnetsecuritysslstream"></a><span data-ttu-id="eb46b-101">System .net. ServicePointManager ve System .net. Security. SslStream içinde yalnızca TLS 1,0, 1,1 ve 1,2 protokolleri desteklenir</span><span class="sxs-lookup"><span data-stu-id="eb46b-101">Only Tls 1.0, 1.1 and 1.2 protocols supported in System.Net.ServicePointManager and System.Net.Security.SslStream</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="d8b01-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="d8b01-102">Details</span></span>|<span data-ttu-id="d8b01-103">.NET Framework 4.6 ile <xref:System.Net.ServicePointManager> başlayarak, <xref:System.Net.Security.SslStream> ve sınıfların yalnızca aşağıdaki üç protokolden birini kullanmasına izin verilir: Tls1.0, Tls1.1 veya Tls1.2.</span><span class="sxs-lookup"><span data-stu-id="d8b01-103">Starting with the .NET Framework 4.6, the <xref:System.Net.ServicePointManager> and <xref:System.Net.Security.SslStream> classes are only allowed to use one of the following three protocols: Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="d8b01-104">SSL3.0 protokolü ve RC4 şifresi desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="d8b01-104">The SSL3.0 protocol and RC4 cipher are not supported.</span></span>|
-|<span data-ttu-id="d8b01-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="d8b01-105">Suggestion</span></span>|<span data-ttu-id="d8b01-106">Önerilen azaltma, kesme tarafındaki uygulamayı Tls1.0, Tls1.1 veya Tls1.2'ye yükseltmektir.</span><span class="sxs-lookup"><span data-stu-id="d8b01-106">The recommended mitigation is to upgrade the sever-side app to Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="d8b01-107">Bu mümkün değilse veya istemci uygulamaları bozulursa, <xref:System.AppContext?displayProperty=name> sınıf bu özelliğin dışında iki şekilde devre dışı bırakmak için kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="d8b01-107">If this is not feasible, or if client apps are broken, the <xref:System.AppContext?displayProperty=name> class can be used to opt out of this feature in either of two ways:</span></span><ol><li><span data-ttu-id="d8b01-108">Programlı olarak compat anahtarları ayarlayarak <xref:System.AppContext?displayProperty=name>, [burada](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46)açıklandığı gibi .</span><span class="sxs-lookup"><span data-stu-id="d8b01-108">By programmatically setting compat switches on the <xref:System.AppContext?displayProperty=name>, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span></li><li><span data-ttu-id="d8b01-109">app.config dosyasının <code>&lt;runtime&gt;</code> bölümüne aşağıdaki satırı ekleyerek:</span><span class="sxs-lookup"><span data-stu-id="d8b01-109">By adding the following line to the <code>&lt;runtime&gt;</code> section of the app.config file:</span></span></li></ol><pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Net.DontEnableSchUseStrongCrypto=true&quot;/&gt;&#13;&#10;</code></pre>|
-|<span data-ttu-id="d8b01-110">Kapsam</span><span class="sxs-lookup"><span data-stu-id="d8b01-110">Scope</span></span>|<span data-ttu-id="d8b01-111">İkincil</span><span class="sxs-lookup"><span data-stu-id="d8b01-111">Minor</span></span>|
-|<span data-ttu-id="d8b01-112">Sürüm</span><span class="sxs-lookup"><span data-stu-id="d8b01-112">Version</span></span>|<span data-ttu-id="d8b01-113">4.6</span><span class="sxs-lookup"><span data-stu-id="d8b01-113">4.6</span></span>|
-|<span data-ttu-id="d8b01-114">Tür</span><span class="sxs-lookup"><span data-stu-id="d8b01-114">Type</span></span>|<span data-ttu-id="d8b01-115">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="d8b01-115">Retargeting</span></span>|
-|<span data-ttu-id="d8b01-116">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="d8b01-116">Affected APIs</span></span>|<ul><li><xref:System.Net.SecurityProtocolType.Ssl3?displayProperty=nameWithType></li><li><xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType></li><li><xref:System.Security.Authentication.SslProtocols.Ssl2?displayProperty=nameWithType></li><li><xref:System.Security.Authentication.SslProtocols.Ssl3?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="eb46b-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="eb46b-102">Details</span></span>
+
+<span data-ttu-id="eb46b-103">.NET Framework 4,6 ' den başlayarak, <xref:System.Net.ServicePointManager> ve <xref:System.Net.Security.SslStream> sınıflarının yalnızca şu üç protokolden birini kullanmasına izin verilir: TLS 1.0, TLS 1.1 veya TLS 1.2.</span><span class="sxs-lookup"><span data-stu-id="eb46b-103">Starting with the .NET Framework 4.6, the <xref:System.Net.ServicePointManager> and <xref:System.Net.Security.SslStream> classes are only allowed to use one of the following three protocols: Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="eb46b-104">SSL 3.0 protokol ve RC4 şifresi desteklenmez.</span><span class="sxs-lookup"><span data-stu-id="eb46b-104">The SSL3.0 protocol and RC4 cipher are not supported.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="eb46b-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="eb46b-105">Suggestion</span></span>
+
+<span data-ttu-id="eb46b-106">Önerilen risk azaltma, sunucu tarafı uygulamayı TLS 1.0, TLS 1.1 veya TLS 1.2 sürümüne yükseltmek için önerilir.</span><span class="sxs-lookup"><span data-stu-id="eb46b-106">The recommended mitigation is to upgrade the sever-side app to Tls1.0, Tls1.1, or Tls1.2.</span></span> <span data-ttu-id="eb46b-107">Bu uygun değilse veya istemci uygulamaları bozulur, <xref:System.AppContext?displayProperty=fullName> sınıfı iki şekilde bu özelliği devre dışı bırakmak için kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="eb46b-107">If this is not feasible, or if client apps are broken, the <xref:System.AppContext?displayProperty=fullName> class can be used to opt out of this feature in either of two ways:</span></span>
+
+- <span data-ttu-id="eb46b-108"><xref:System.AppContext?displayProperty=fullName> [Burada](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46)açıklandığı gibi, üzerinde uyumluluk anahtarlarını programlı olarak ayarlayarak.</span><span class="sxs-lookup"><span data-stu-id="eb46b-108">By programmatically setting compat switches on the <xref:System.AppContext?displayProperty=fullName>, as explained [here](https://devblogs.microsoft.com/dotnet/net-announcements-at-build-2015/#dotnet46).</span></span>
+- <span data-ttu-id="eb46b-109">`<runtime>`app.config dosyanın bölümüne aşağıdaki satırı ekleyerek:</span><span class="sxs-lookup"><span data-stu-id="eb46b-109">By adding the following line to the `<runtime>` section of the app.config file:</span></span>
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>
+```
+
+| <span data-ttu-id="eb46b-110">Name</span><span class="sxs-lookup"><span data-stu-id="eb46b-110">Name</span></span>    | <span data-ttu-id="eb46b-111">Değer</span><span class="sxs-lookup"><span data-stu-id="eb46b-111">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="eb46b-112">Kapsam</span><span class="sxs-lookup"><span data-stu-id="eb46b-112">Scope</span></span>   | <span data-ttu-id="eb46b-113">İkincil</span><span class="sxs-lookup"><span data-stu-id="eb46b-113">Minor</span></span>       |
+| <span data-ttu-id="eb46b-114">Sürüm</span><span class="sxs-lookup"><span data-stu-id="eb46b-114">Version</span></span> | <span data-ttu-id="eb46b-115">4.6</span><span class="sxs-lookup"><span data-stu-id="eb46b-115">4.6</span></span>         |
+| <span data-ttu-id="eb46b-116">Tür</span><span class="sxs-lookup"><span data-stu-id="eb46b-116">Type</span></span>    | <span data-ttu-id="eb46b-117">Yeniden Hedefleme</span><span class="sxs-lookup"><span data-stu-id="eb46b-117">Retargeting</span></span> |
+
+#### <a name="affected-apis"></a><span data-ttu-id="eb46b-118">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="eb46b-118">Affected APIs</span></span>
+
+- <xref:System.Net.SecurityProtocolType.Ssl3?displayProperty=nameWithType>
+- <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>
+- <xref:System.Security.Authentication.SslProtocols.Ssl2?displayProperty=nameWithType>
+- <xref:System.Security.Authentication.SslProtocols.Ssl3?displayProperty=nameWithType>
