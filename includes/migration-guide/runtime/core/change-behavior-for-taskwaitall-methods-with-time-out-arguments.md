@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 94fad6fe910da6c528c5e13f529a6db274e07d5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 52406f1e4ea4eda417909e52cf6529631cb0ae33
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620562"
 ---
-### <a name="change-in-behavior-for-taskwaitall-methods-with-time-out-arguments"></a>Zaman aşımı bağımsız değişkenleri Task.WaitAll yöntemleriyle davranışını değiştir
+### <a name="change-in-behavior-for-taskwaitall-methods-with-time-out-arguments"></a>Zaman aşımı bağımsız değişkenlerine sahip Task. WaitAll yöntemleri için davranış değişikliği
 
-|   |   |
-|---|---|
-|Ayrıntılar|<xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> davranışı Bu yöntemler tutarsız hatalı davranan .NET Framework 4 .NET Framework 4.5.In daha tutarlı olarak yapıldı. Bir veya daha fazla görev tamamlandıysa veya yöntem çağrısından önce iptal edildi, zaman aşımı süresi dolduğunda, yöntem oluşturdu bir <xref:System.AggregateException?displayProperty=name> özel durum. Hiçbir görev tamamlanmadıysa veya yöntem çağrısından önce iptal edildi, ancak bir veya daha fazla görev bu durumlara yöntem çağrısından sonra girilen zaman aşımı süresi dolduğunda, yöntem false döndürdü.<br/><br/>.NET Framework 4.5, bu yöntem aşırı yüklemeleri artık herhangi bir görev zaman aşımı aralığı sona ve oluştururlar hala çalıştırıyorsanız, return false bir <xref:System.AggregateException?displayProperty=name> (bunu önce veya sonra yöntemi olup olmadığından bağımsız olarak bir giriş görev yalnızca iptal edildiyse özel durumu Çağrı) ve diğer hiçbir görev hala çalışıyor.|
-|Öneri|Varsa bir <xref:System.AggregateException?displayProperty=name> algılama öncesinde iptal edildi bir görev olarak yakalanan <xref:System.Threading.Tasks.Task.WaitAll%2A> çağrılan kodu aracılığıyla aynı algılama yerine yapmalısınız çağrı <xref:System.Threading.Tasks.Task.IsCanceled%2A> özelliği (örneğin:. Any(t =&gt; t.IsCanceled)) olduğundan tüm beklenen görev zaman aşımı önce tamamlanırsa .NET Framework 4.6 yalnızca bu durumda durum oluşturur.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType>davranış, .NET Framework 4 ' te .NET Framework daha tutarlı yapıldı, bu yöntemler tutarsız şekilde davranmış. Zaman aşımı süresi dolduğunda, bir veya daha fazla görev tamamlandıysa veya yöntem çağrısından önce iptal edildiyse, yöntem bir <xref:System.AggregateException?displayProperty=fullName> özel durum oluşturdu. Zaman aşımı süresi dolduğunda, hiçbir görev tamamlanmadıysa veya yöntem çağrısından önce iptal edildiyse, ancak bir veya daha fazla görev bu durumlara yöntem çağrısından sonra girdiyse, yöntem false değerini döndürdü.<br/><br/>.NET Framework 4,5 ' de, bu yöntem aşırı yüklemeleri, zaman aşımı süresi dolduğunda herhangi bir görev hala çalışıyorsa yanlış döndürür ve <xref:System.AggregateException?displayProperty=fullName> yalnızca bir giriş görevi iptal edildiğinde (yöntem çağrısından önce veya sonra olup olmamasına bakılmaksızın) bir özel durum oluşturur.
+
+#### <a name="suggestion"></a>Öneri
+
+<xref:System.AggregateException?displayProperty=fullName>Çağrılan çağrıdan önce iptal edilen bir görevi tespit eden bir yol olarak yakalandıysa <xref:System.Threading.Tasks.Task.WaitAll%2A> , bu kod, özelliği aracılığıyla aynı algılamayı yapmanız gerekir <xref:System.Threading.Tasks.Task.IsCanceled%2A> (örneğin:. Herhangi biri (t = &gt; t. ısiptal)); .NET Framework 4,6, bu durumda yalnızca tüm beklenen görevler zaman aşımından önce tamamlandığında oluşturulur.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|

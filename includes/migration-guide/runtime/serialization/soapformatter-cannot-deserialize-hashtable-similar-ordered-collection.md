@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 6ed7438a7f6e7710fcce03c8260a1360143f8d93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 5a3370e71488e4f9d8d933b504d1d771c78e0385
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620658"
 ---
-### <a name="soapformatter-cannot-deserialize-hashtable-and-similar-ordered-collection-objects"></a>SoapFormatter Hashtable seri durumdan olamaz ve benzer sıralı koleksiyon nesneleri
+### <a name="soapformatter-cannot-deserialize-hashtable-and-similar-ordered-collection-objects"></a>SoapFormatter, Hashtable ve benzer sıralı koleksiyon nesneleri serisini kaldıramıyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> Nesneleri'nin altında bir .NET Framework sürümü seri hale getirilmiş garantisi başarıyla altında farklı bir sürüm serisini yapar. Özellikle, bazı koleksiyonlar sıralı (gibi <xref:System.Collections.Hashtable?displayProperty=name>) .NET Framework 4.5 ile seri hale, bu tür nesneler .NET Framework 4.0 ile seri durumdan çıkarılamıyor, üyeleri arasında 4.0 ve 4.5 eklendi. Serileştirilmiş veriler ise hem serileştirilmiş ve seri durumdan aynı .NET Framework sürümüyle sorun oluşacağını unutmayın.|
-|Öneri|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> Serileştirme yerine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> serileştirme veya <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> .NET Framework değişikliklere dayanıklı olmasını.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+, <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=fullName> Bir .NET Framework sürümünde seri hale getirilen nesnelerin farklı bir sürüm altında başarıyla seri durumdan çıkaracağının garantisi yoktur. Özellikle, bazı sıralı Koleksiyonlar (gibi <xref:System.Collections.Hashtable?displayProperty=fullName> ), bu türlerin nesnelerinin .NET Framework 4,5 ile serileştirildiği .NET Framework 4,0 ile seri durumdan çıkaramamaları için 4,0 ve 4,5 arasında Üyeler ekledi. Serileştirilmiş verilerin hem serileştirildiği hem de aynı .NET Framework sürümüyle seri durumdan çıkarılmışsa, hiçbir sorunun gerçekleşmediğini unutmayın.
+
+#### <a name="suggestion"></a>Öneri
+
+<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=fullName>serileştirme, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> .NET Framework değişiklikler için serileştirme ile değiştirilmelidir veya dayanıklı <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> olmalıdır.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Serialize(System.IO.Stream,System.Object,System.Runtime.Remoting.Messaging.Header[])?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType></li></ul>|

@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 8b2a01eb6dfdd5bd2bcbef6014d4edeb3ec82ac1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cd06fd02fadbaa9f74e40f850e688ee883454ed
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620694"
 ---
-### <a name="winforms-checkforoverflowunderflow-property-is-now-true-for-systemdrawing"></a>WinForm'ın CheckForOverflowUnderflow özelliği için System.Drawing geçerlidir
+### <a name="winforms-checkforoverflowunderflow-property-is-now-true-for-systemdrawing"></a>WinForm 'ın Checkforoverflowyetersizliği özelliği artık System. Drawing için doğru
 
-|   |   |
-|---|---|
-|Ayrıntılar|System.Drawing.dll derleme CheckForOverflowUnderflow özellik ayarlanmışsa true.|
-|Öneri|Daha önce taşmalar oluştuğunda, sonuç sessizce kesilebilir. Artık bir <xref:System.OverflowException?displayProperty=name> özel durumu oluşturulur.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+System.Drawing.dll derlemesinin Checkforoverflowyetersizliği özelliği true olarak ayarlandı.
+
+#### <a name="suggestion"></a>Öneri
+
+Daha önce taşmalar oluştuğunda, sonuç sessizce kesilebilir. Şimdi bir <xref:System.OverflowException?displayProperty=fullName> özel durum oluşturuldu.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

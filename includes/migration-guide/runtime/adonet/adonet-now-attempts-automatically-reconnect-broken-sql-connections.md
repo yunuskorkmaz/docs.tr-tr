@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 4c65cd62b2d84ef2b852d10a04e5f6ce0cc82d3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23ba6064a283b47312a66f3636c2834a7d58106e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649560"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620548"
 ---
-### <a name="adonet-now-attempts-to-automatically-reconnect-broken-sql-connections"></a>ADO.NET artık SQL bozuk bağlantılar otomatik olarak yeniden dener
+### <a name="adonet-now-attempts-to-automatically-reconnect-broken-sql-connections"></a>ADO.NET artık bozuk SQL bağlantılarını otomatik olarak yeniden bağlamaya çalışır
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5.1 başlayarak, .NET Framework bozuk SQL bağlantılar otomatik olarak yeniden dener. Bu genellikle uygulamaları daha güvenilir bir uygulama, bilmeniz gereken edge durumlar yapar ancak bazı eylemleri yeniden yararlanabilmeniz bağlantı kesildi.|
-|Öneri|Bu özellik istenmeyen uyumluluk sorunları nedeniyle ise, bu ayarı devre dışı bırakılabilir <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryCount?displayProperty=name> bir bağlantı dizesi özelliği (veya <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=name>) 0.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.5.1 başlayarak, .NET Framework bozuk SQL bağlantılarını otomatik olarak yeniden bağlamaya çalışır. Bu işlem genellikle uygulamaları daha güvenilir hale getirir, ancak bir uygulamanın yeniden bağlantıda bir işlem yapabilmesi için bağlantının kaybolduğunu bilmesi gereken uç durumlar vardır.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu özellik uyumluluk sorunları nedeniyle istenerek, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ConnectRetryCount?displayProperty=fullName> bağlantı dizesinin özelliği (veya) 0 olarak ayarlanarak devre dışı bırakılabilir <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=fullName> .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Data.IDbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Configuration.ConnectionStringSettings.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor(System.String)?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor(System.Boolean)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Data.IDbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Configuration.ConnectionStringSettings.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbConnectionStringBuilder.ConnectionString?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor></li><li><xref:System.Data.SqlClient.SqlConnectionStringBuilder.%23ctor(System.String)></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor></li><li><xref:System.Data.Common.DbConnectionStringBuilder.%23ctor(System.Boolean)></li></ul>|

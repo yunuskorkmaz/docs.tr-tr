@@ -1,5 +1,6 @@
 ---
 title: XAML tarayıcı uygulamalarına genel bakış
+description: XAML tarayıcısı uygulamalarının, Windows Presentation Foundation (WPF) içindeki Web uygulamalarının ve zengin istemci uygulamalarının özelliklerini nasıl birleştirdiğini öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 3395445dd5639e25f62aeef09d070e326704ed40
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617918"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML Tarayıcı Uygulamalarına Genel Bakış
 <a name="introduction"></a>XAML tarayıcı uygulamaları (XBAP 'ler) hem Web uygulamalarının hem de zengin istemci uygulamalarının özelliklerini birleştirir. Web uygulamaları gibi, XBAP 'ler bir Web sunucusuna dağıtılabilir ve Internet Explorer veya Firefox 'tan başlatılabilir. Zengin istemci uygulamaları gibi, XBAP 'ler WPF 'nin yeteneklerini kullanabilir. XBAP 'lerin geliştirilmesi, zengin istemci geliştirmeye de benzer. Bu konu, XBAP geliştirmeye basit, yüksek düzey bir giriş sağlar ve XBAP geliştirmenin standart zengin istemci geliştirmeden farklı olduğunu açıklar.
@@ -87,23 +88,23 @@ ms.locfileid: "77124214"
  Mage.exe -cc
  ```
 
- Bu komut, XBAP 'nizin en son sürümünün başlatılmış olmasını güvence altına alır. Visual Studio 'da uygulamanızda hata ayıklarken, XBAP 'nizin en son sürümü başlatılmalıdır. Genel olarak, her bir yapıda dağıtım sürüm numaranızı güncelleştirmeniz gerekir. Mage hakkında daha fazla bilgi için bkz. [Mage. exe (bildirim oluşturma ve düzenleme aracı)](../../tools/mage-exe-manifest-generation-and-editing-tool.md).
+ Bu komut, XBAP 'nizin en son sürümünün başlatılmış olmasını güvence altına alır. Visual Studio 'da uygulamanızda hata ayıklarken, XBAP 'nizin en son sürümü başlatılmalıdır. Genel olarak, her bir yapıda dağıtım sürüm numaranızı güncelleştirmeniz gerekir. Mage hakkında daha fazla bilgi için bkz. [Mage.exe (bildirim oluşturma ve düzenleme aracı)](../../tools/mage-exe-manifest-generation-and-editing-tool.md).
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>Ana bilgisayar Web sayfasıyla iletişim kurma
- Uygulama bir HTML çerçevesinde barındırıldığı zaman, XBAP içeren Web sayfasıyla iletişim kurabilirsiniz. Bunu, <xref:System.Windows.Interop.BrowserInteropHelper><xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> özelliğini alarak yapabilirsiniz. Bu özellik HTML penceresini temsil eden bir betik nesnesi döndürür. Daha sonra normal nokta söz dizimini kullanarak [pencere nesnesindeki](https://developer.mozilla.org/en-US/docs/Web/API/Window) özelliklere, yöntemlere ve olaylara erişebilirsiniz. Ayrıca, betik yöntemlerine ve genel değişkenlere erişebilirsiniz. Aşağıdaki örnek, komut dosyası nesnesinin nasıl alınacağını ve tarayıcının nasıl kapatılmasını gösterir.
+ Uygulama bir HTML çerçevesinde barındırıldığı zaman, XBAP içeren Web sayfasıyla iletişim kurabilirsiniz. Bunu, özelliğini alarak yapabilirsiniz <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> <xref:System.Windows.Interop.BrowserInteropHelper> . Bu özellik HTML penceresini temsil eden bir betik nesnesi döndürür. Daha sonra normal nokta söz dizimini kullanarak [pencere nesnesindeki](https://developer.mozilla.org/en-US/docs/Web/API/Window) özelliklere, yöntemlere ve olaylara erişebilirsiniz. Ayrıca, betik yöntemlerine ve genel değişkenlere erişebilirsiniz. Aşağıdaki örnek, komut dosyası nesnesinin nasıl alınacağını ve tarayıcının nasıl kapatılmasını gösterir.
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
 
 ### <a name="debugging-xbaps-that-use-hostscript"></a>HostScript kullanan XBAP 'ler hata ayıklaması
- XBAP 'niz HTML penceresiyle iletişim kurmak için <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> nesnesini kullanıyorsa, Visual Studio 'da uygulamayı çalıştırmak ve hata ayıklamak için belirtmeniz gereken iki ayar vardır. Uygulamanın kaynak sitesine erişimi olması gerekir ve uygulamayı XBAP içeren HTML sayfasıyla başlatmanız gerekir. Aşağıdaki adımlarda, bu iki ayarı nasıl denetleyen anlatılmaktadır:
+ XBAP 'niz <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> HTML penceresiyle iletişim kurmak için nesnesini kullanıyorsa, Visual Studio 'da uygulamayı çalıştırmak ve hata ayıklamak için belirtmeniz gereken iki ayar vardır. Uygulamanın kaynak sitesine erişimi olması gerekir ve uygulamayı XBAP içeren HTML sayfasıyla başlatmanız gerekir. Aşağıdaki adımlarda, bu iki ayarı nasıl denetleyen anlatılmaktadır:
 
 1. Visual Studio 'da proje özelliklerini açın.
 
-2. **Güvenlik** sekmesinde **Gelişmiş**’e tıklayın.
+2. **Güvenlik** sekmesinde **Gelişmiş**'e tıklayın.
 
-     Gelişmiş güvenlik ayarları iletişim kutusu görüntülenir.
+     Gelişmiş Güvenlik Ayarları iletişim kutusu görüntülenir.
 
 3. **Uygulamanın kaynak sitesine erişimi ver** onay kutusunun işaretli olduğundan emin olun ve ardından **Tamam**' a tıklayın.
 
@@ -128,19 +129,19 @@ ms.locfileid: "77124214"
 ## <a name="xbap-security-considerations"></a>XBAP güvenlik konuları
  XBAP 'ler genellikle Internet bölgesi izin kümesiyle kısıtlanmış bir kısmi güven güvenlik korumalı alanı içinde yürütülür. Sonuç olarak, uygulamanız Internet bölgesinde desteklenen WPF öğelerinin alt kümesini desteklemelidir veya uygulamanızın izinlerini yükselmelidir. Daha fazla bilgi için bkz. [güvenlik](../security-wpf.md).
 
- Uygulamanızda <xref:System.Windows.Controls.WebBrowser> bir denetim kullandığınızda WPF, yerel WebBrowser ActiveX denetimini dahili olarak başlatır. Uygulamanız Internet Explorer 'da çalışan bir kısmi güven XBAP olduğunda, ActiveX denetimi Internet Explorer işleminin özel bir iş parçacığında çalışır. Bu nedenle, aşağıdaki sınırlamalar geçerlidir:
+ Uygulamanızda bir denetim kullandığınızda <xref:System.Windows.Controls.WebBrowser> WPF, yerel WebBrowser ActiveX denetimini dahili olarak başlatır. Uygulamanız Internet Explorer 'da çalışan bir kısmi güven XBAP olduğunda, ActiveX denetimi Internet Explorer işleminin özel bir iş parçacığında çalışır. Bu nedenle, aşağıdaki sınırlamalar geçerlidir:
 
-- <xref:System.Windows.Controls.WebBrowser> denetimi, güvenlik kısıtlamaları da dahil olmak üzere, ana bilgisayar tarayıcısına benzer davranış sağlamalıdır. Bu güvenlik kısıtlamalarından bazıları Internet Explorer güvenlik ayarları aracılığıyla denetlenebilir. Daha fazla bilgi için bkz. [güvenlik](../security-wpf.md).
+- <xref:System.Windows.Controls.WebBrowser>Denetim, güvenlik kısıtlamaları da dahil olmak üzere, ana bilgisayar tarayıcısına benzer davranış sağlamalıdır. Bu güvenlik kısıtlamalarından bazıları Internet Explorer güvenlik ayarları aracılığıyla denetlenebilir. Daha fazla bilgi için bkz. [güvenlik](../security-wpf.md).
 
 - Bir XBAP bir HTML sayfasında etki alanları arası yüklendiğinde bir özel durum oluşur.
 
-- Giriş, WPF <xref:System.Windows.Controls.WebBrowser>ayrı bir iş parçacığında bulunur, bu nedenle klavye girişi yakalanamaz ve IME durumu paylaşılmaz.
+- Giriş, WPF 'den ayrı bir iş parçacığında bulunur <xref:System.Windows.Controls.WebBrowser> , bu nedenle klavye girişi yakalanamaz ve IME durumu paylaşılmaz.
 
 - Farklı bir iş parçacığında çalışan ActiveX denetimi nedeniyle, gezinmenin zamanlaması veya sırası farklı olabilir. Örneğin, bir sayfaya gitme işlemi, başka bir gezinti isteği başlatarak her zaman iptal edilmez.
 
 - WPF uygulaması ayrı bir iş parçacığında çalıştığından, özel bir ActiveX denetimi iletişimle ilgili sorun yaşıyor olabilir.
 
-- <xref:System.Windows.Interop.HwndHost.MessageHook>, <xref:System.Windows.Interop.HwndHost> başka bir iş parçacığında veya işlemde çalışan bir pencerenin alt sınıfını oluşturamıyor.
+- <xref:System.Windows.Interop.HwndHost.MessageHook><xref:System.Windows.Interop.HwndHost>başka bir iş parçacığında veya işlemde çalışan bir pencerenin alt sınıfı olmadığından, bu değil.
 
 ### <a name="creating-a-full-trust-xbap"></a>Tam güvenle bir XBAP oluşturma
  XBAP 'niz tam güven gerektiriyorsa, bu izni etkinleştirmek için projenizi değiştirebilirsiniz. Aşağıdaki adımlarda tam güvenin nasıl etkinleştirileceği açıklanır:
@@ -151,9 +152,9 @@ ms.locfileid: "77124214"
 
  Bu ayar aşağıdaki değişiklikleri yapar:
 
-- Proje dosyasında `<TargetZone>` öğesi değeri `Custom`olarak değiştirilir.
+- Proje dosyasında, `<TargetZone>` öğe değeri olarak değiştirilir `Custom` .
 
-- Uygulama bildiriminde (App. manifest), '<xref:System.Security.PermissionSet> öğesine bir `Unrestricted="true"` özniteliği eklenir.
+- Uygulama bildiriminde (App. manifest) bir `Unrestricted="true"` özniteliği ' <xref:System.Security.PermissionSet> öğesine eklenir.
 
     ```xml
     <PermissionSet class="System.Security.PermissionSet"

@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 7444ddbdd4a7c5f731fba8528ee2334374fc254e
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: c53fe57f3278741a927a2f00b11af6e26dafce66
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81275326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620536"
 ---
-### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC artık rota parametreleri üzerinden geçirilen dizeleri alanlarda kaçar
+### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC şimdi yol parametreleri aracılığıyla geçirilen dizelerin içindeki boşlukları çıkar
 
-|   |   |
-|---|---|
-|Ayrıntılar|RFC 2396'ya uymak için, bir rotadan eylem parametreleri doldurulurken rota yollarında boşluklar artık kaçmaktadır. Bu nedenle, <code>/controller/action/some data</code> daha önce rota <code>/controller/action/{data}</code> eşleşen <code>some data</code> ve veri parametresi olarak <code>some%20data</code> sağlamak, şimdi yerine sağlayacaktır.|
-|Öneri|Kod, bir rotadan kaçış dize parametreleri için güncelleştirilmelidir. Orijinal URI gerekirse, bu <xref:System.Net.HttpWebRequest.RequestUri>. OriginalString API.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+RFC 2396 ' e uymak için rota yollarındaki boşluklar artık bir rotadaki eylem parametreleri doldurulurken kaçışla sonuçlanır. Bu nedenle, <code>/controller/action/some data</code> daha önce rotayla eşleşmekte <code>/controller/action/{data}</code> ve <code>some data</code> veri parametresi olarak sağlayacağından, artık <code>some%20data</code> bunun yerine sağlama yapılır.
+
+#### <a name="suggestion"></a>Öneri
+
+Kod, bir rotadaki kaçış dize parametrelerine karşı güncellenmelidir. Özgün URI gerekliyse, ile erişilebilir <xref:System.Net.HttpWebRequest.RequestUri> . OriginalString API 'SI.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.5.2|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)></li></ul>|

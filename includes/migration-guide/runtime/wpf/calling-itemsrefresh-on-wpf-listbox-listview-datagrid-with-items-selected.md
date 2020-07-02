@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a14395895c6be586c862d1b49aa6bf6669e4203a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 710d1517397f423fa40cc0c4a26c3499aac6179e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68238025"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620682"
 ---
-### <a name="calling-itemsrefresh-on-a-wpf-listbox-listview-or-datagrid-with-items-selected-can-cause-duplicate-items-to-appear-in-the-element"></a>Öğeleri Arama.WPF ListBox, ListView veya DataGrid'de seçili öğelerle birlikte yinelenen öğelerin öğede görünmesine neden olabilir
+### <a name="calling-itemsrefresh-on-a-wpf-listbox-listview-or-datagrid-with-items-selected-can-cause-duplicate-items-to-appear-in-the-element"></a>Öğeleri çağırma. bir WPF ListBox, ListView veya DataGrid üzerinde seçili öğeler içeren DataGrid 'de yenileme yinelenen öğelerin öğede görünmesine neden olabilir
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5'te ListBox.Items.Refresh adlarında, öğeler <xref:System.Windows.Controls.ListBox?displayProperty=name> seçilirken koddan yenileyin, seçili öğelerin listede çoğaltılmasına neden olabilir. Benzer bir sorun <xref:System.Windows.Controls.ListView?displayProperty=name> ile <xref:System.Windows.Controls.DataGrid?displayProperty=name>oluşur ve . Bu, .NET Framework 4.6'da sabittir.|
-|Öneri|Bu sorun, çağrılmadan önce <xref:System.Windows.Data.CollectionView.Refresh?displayProperty=name> programlı bir şekilde unselecting öğeleri ve ardından arama tamamlandıktan sonra yeniden seçerek üzerinde çalışılabilir. Alternatif olarak, bu sorun .NET Framework 4.6'da giderilmiştir ve .NET Framework'ün bu sürümüne yükseltilerek giderilebilir.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,5 ' de, ListBox. Items ' ı çağırma. bir öğesinde öğeler seçildiğinde koddan Yenile <xref:System.Windows.Controls.ListBox?displayProperty=fullName> Seçili öğelerin listede yinelenmesine neden olabilir. Ve ile benzer bir sorun <xref:System.Windows.Controls.ListView?displayProperty=fullName> oluşur <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> . Bu .NET Framework 4,6 ' de düzeltilir.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu sorun, çağrılmadan önce öğeleri seçerek <xref:System.Windows.Data.CollectionView.Refresh?displayProperty=fullName> ve ardından çağrı tamamlandıktan sonra yeniden seçmeye çalışan geçici bir çözüm olabilir. Alternatif olarak, bu sorun .NET Framework 4,6 ' de düzeltilmiştir ve bu .NET Framework sürümüne yükseltilerek çözülebilir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|

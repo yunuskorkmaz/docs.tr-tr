@@ -1,5 +1,6 @@
 ---
 title: ListView denetimiyle öğe ekleme ve kaldırma
+description: Öğeyi belirterek ve içine özellikler atayarak Windows Forms ListView denetimiyle bir öğe ekleme ve kaldırma hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +10,26 @@ helpviewer_keywords:
 - list views [Windows Forms], adding list items
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-ms.openlocfilehash: bbfe99db857ebe3a80bf99926f3ce0bec38a1f3f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: db374ded69bcbd93527381d75a8ff751a1c9abe6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618096"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Nasıl yapılır: Windows Forms ListView Denetimi ile Öğe Ekleme ve Kaldırma
-Bir Windows Forms <xref:System.Windows.Forms.ListView> denetimine öğe ekleme işlemi, öncelikle öğeyi belirtmesinin ve bu öğeye özellikler atamaktan oluşur. Liste öğelerini ekleme veya kaldırma işlemi herhangi bir zamanda yapılabilir.  
+Bir Windows Forms denetimine öğe ekleme işlemi, <xref:System.Windows.Forms.ListView> öncelikle öğeyi belirtmektir ve bu öğeye özellikler atamaktan oluşur. Liste öğelerini ekleme veya kaldırma işlemi herhangi bir zamanda yapılabilir.  
   
 ### <a name="to-add-items-programmatically"></a>Program aracılığıyla öğe eklemek için  
   
-1. <xref:System.Windows.Forms.ListView.Items%2A> özelliğinin <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> yöntemini kullanın.  
+1. <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A>Özelliğin yöntemini kullanın <xref:System.Windows.Forms.ListView.Items%2A> .  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#11)]  
   
 ### <a name="to-remove-items-programmatically"></a>Öğeleri programlı olarak kaldırmak için  
   
-1. <xref:System.Windows.Forms.ListView.Items%2A> özelliğinin <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> veya <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> yöntemini kullanın. <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> yöntemi tek bir öğeyi kaldırır; <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> yöntemi listedeki tüm öğeleri kaldırır.  
+1. <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> Özelliğinin veya yöntemini kullanın <xref:System.Windows.Forms.ListView.Items%2A> . <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A>Yöntemi tek bir öğeyi kaldırır; <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> yöntemi listedeki tüm öğeleri kaldırır.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  

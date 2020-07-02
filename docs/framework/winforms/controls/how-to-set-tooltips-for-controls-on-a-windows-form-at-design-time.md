@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: Tasarım Zamanında Windows Formundaki Denetimler için ToolTips Ayarlama'
-description: Program aracılığıyla denetimleri için araç Ipuçları ayarlamayı öğrenin veya Visual Studio 'daki Windows Form Tasarımcısı.
+description: Denetimlerin araç Ipuçlarını programlama yoluyla veya Visual Studio 'daki Windows Form Tasarımcısı ayarlama hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 15134b38d11de30d0e6a2f998f6ea266affc40d7
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 144ba5b6bffb4a538e345f7b2df4a453fc6fd63d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618031"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Nasıl yapılır: tasarım zamanında Windows formundaki denetimler için araç Ipuçları ayarlama
 

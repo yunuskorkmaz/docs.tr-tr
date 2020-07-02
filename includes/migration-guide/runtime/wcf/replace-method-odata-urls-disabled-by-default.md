@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 6dc3669433804a4524c18d5a932f9879343ab508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b2fcacdb02c411c4dcb12051bf0c6759faccdea2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805246"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620664"
 ---
-### <a name="the-replace-method-in-odata-urls-is-disabled-by-default"></a>OData URL'lerinde Değiştir yöntemi varsayılan olarak devre dışıdır
+### <a name="the-replace-method-in-odata-urls-is-disabled-by-default"></a>OData URL 'Lerinde Replace yöntemi varsayılan olarak devre dışıdır
 
-|   |   |
-|---|---|
-|Ayrıntılar|OData URL'lerinde Değiştir yöntemi, .NET Framework 4. 5 ' başlayarak, varsayılan olarak devre dışıdır. OData Değiştir (şimdi varsayılan olarak) devre dışı bırakıldığında (Bu nadir) Değiştir işlevleri dahil olmak üzere herhangi bir kullanıcı isteğinin başarısız olur.|
-|Öneri|Replace yöntemi gerekiyorsa (olduğu genel olmayan), yapılandırma ayarları aracılığıyla yeniden etkin olabilir (<xref:System.Data.Services.Configuration.DataServicesFeaturesSection.ReplaceFunction?displayProperty=name>). Ancak, bir etkin Değiştir yöntemi güvenlik açıklarını açabilirsiniz ve yalnızca inceledikten sonra kullanılmalıdır.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,5 ' den başlayarak OData URL 'Lerinde Replace yöntemi varsayılan olarak devre dışıdır. OData Replace devre dışı bırakıldığında (şimdi varsayılan olarak), Replace işlevleri de dahil olmak üzere tüm Kullanıcı istekleri başarısız olur.
+
+#### <a name="suggestion"></a>Öneri
+
+Replace yöntemi gerekliyse (Bu çok nadir bir durumdur), bir yapılandırma ayarları () aracılığıyla yeniden etkinleştirilebilir <xref:System.Data.Services.Configuration.DataServicesFeaturesSection.ReplaceFunction?displayProperty=fullName> . Ancak etkin bir Replace yöntemi güvenlik açıklarını açabilir ve yalnızca dikkatli bir inceleme sonrasında kullanılmalıdır.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|

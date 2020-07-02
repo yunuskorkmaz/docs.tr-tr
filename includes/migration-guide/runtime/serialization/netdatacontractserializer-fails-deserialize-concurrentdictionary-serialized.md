@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 380f662349a8dcd04e5bf445e1479d0a32d5861f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eef5633ec8566f6d5216b7dca4387766cacb600d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620663"
 ---
-### <a name="netdatacontractserializer-fails-to-deserialize-a-concurrentdictionary-serialized-with-a-different-net-version"></a>Farklı bir .NET sürümü ile seri hale getirilmiş bir ConcurrentDictionary seri durumdan çıkarılacak NetDataContractSerializer başarısız
+### <a name="netdatacontractserializer-fails-to-deserialize-a-concurrentdictionary-serialized-with-a-different-net-version"></a>NetDataContractSerializer, farklı bir .NET sürümü ile serileştirilmiş bir ConcurrentDictionary serisini kaldıramıyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|Tasarıma göre <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> yalnızca, aynı CLR Türleri serileştirmek hem de sona erer seri durumdan çıkarılırken paylaşıyorsa kullanılır. Bu nedenle, bir .NET Framework sürümü ile seri hale getirilmiş bir nesneyi farklı bir sürümü ile seri durumdan çıkarılabiliyorsa olduğunu garanti edilmez.<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> bilinen doğru .NET Framework 4.5 veya önceki serileştirilmiş ve seri durumdan .NET Framework 4.5.1 ile seri durumdan değil veya sonraki bir türdür.|
-|Öneri|Bu sorunun olası iş geçici çözüm vardır:<ul><li>.NET Framework 4.5.1 de kullanmak için serileştirmek bilgisayar yükseltin.</li><li>Kullanım <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=name> yerine <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> gibi tam aynı CLR türleri, hem seri hale getirme hem de sona erer seri durumdan çıkarılırken beklemiyor.</li><li>Kullanım <xref:System.Collections.Generic.Dictionary%602?displayProperty=name> yerine <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=name> olduğundan, bu belirli 4.5 - gerçekleştirilmez&gt;4.5.1 bölün.</li></ul>|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Tasarıma göre <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> yalnızca serileştirme ve seri durumdan çıkarma, aynı CLR türlerini paylaşıyorsa kullanılabilir. Bu nedenle, .NET Framework bir sürümü ile seri hale getirilen bir nesnenin, farklı bir sürüm tarafından seri durumdan çıkarılacağından garanti edilmez.<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> , .NET Framework 4,5 veya daha önceki bir sürümü ile serileştirildiğinde ve .NET Framework 4.5.1 veya sonraki bir sürümüyle serisi kaldırıldığında doğru bir şekilde seri durumdan çıkarılamadı bilinen bir türdür.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu sorun için bir dizi olası iş arounds vardır:<ul><li>Serileştirme bilgisayarı, .NET Framework 4.5.1 kullanmak üzere yükseltin.</li><li><xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName>Bunun yerine kullanın <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=fullName> çünkü bu, hem serileştirilmede hem de seri durumdan çıkarılırken tam olarak aynı CLR türlerini beklemez.</li><li><xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> Bu belirli 4,5-4.5.1 kesmesini sergilemediğinden yerine kullanın &gt; .</li></ul>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|

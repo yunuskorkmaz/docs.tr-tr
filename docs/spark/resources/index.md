@@ -1,24 +1,26 @@
 ---
-title: .Net Apache Spark kaynakları için
-description: Özel veri bilimi çözümleri oluşturma ve .NET uygulamalarınıza entegrasyona yardımcı olmak için Bu .NET apache Spark kaynaklarını keşfedin.
-ms.date: 05/06/2019
-ms.openlocfilehash: 96ee1246d5322a1c62b4cbf30392010e6b4d70fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Apache Spark kaynakları için .NET
+description: .NET uygulamalarınıza yönelik özel veri bilimi çözümlerinin oluşturulması ve tümleştirilmesine yardımcı olmak için Apache Spark kaynakları için bu .NET ' i araştırın.
+ms.date: 06/25/2020
+ms.openlocfilehash: 399a90b89fd619bf7faf740b9f61b625a8f28469
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "69577031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618278"
 ---
-# <a name="net-for-apache-spark-resources"></a>.Net Apache Spark kaynakları için
+# <a name="net-for-apache-spark-resources"></a>Apache Spark kaynakları için .NET
 
-[Apache Spark](../index.yml) kaynakları için aşağıdaki .NET ,NET uygulamalarınızda Apache Spark'a erişmek için yararlı olabilir:
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-* [.NET for Apache Spark C# ve F# örnekleri,](https://github.com/dotnet/spark#samples) Dataframes ve SparkSQL, yapılandırılmış akış ve TPC-H sorguları dahil olmak üzere çeşitli analiz senaryolarını kapsayan örnekler içerir.
+Apache Spark kaynaklar [için aşağıdaki .net](../index.yml) , .net uygulamalarınızda Apache Spark erişmek için yararlı olabilir:
 
-* [Stack Overflow'daki](https://stackoverflow.com/questions/tagged/spark-dotnet) **spark-dotnet** etiketini kullanarak geliştirici topluluğuyla bağlantı kurun.
+* [Apache Spark C# ve F # örnekleri için .net](https://github.com/dotnet/spark#samples) , Dataframes ve mini SQL, yapılandırılmış AKıŞ ve TPC-H sorguları gibi çeşitli analiz senaryolarını kapsayan örnekler içerir.
 
-* Katkıda bulunmak ister misiniz? Kaynaktan nasıl inşa edilenöğrenebilirsiniz öğrenmek için [GitHub repo'yu](https://github.com/dotnet/spark) ziyaret edin.
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/spark-dotnet) **Spark-DotNet** etiketini kullanarak Geliştirici topluluğuyla bağlantı kurmak.
 
-### <a name="how-to-engage-contribute-and-provide-feedback"></a>Nasıl etkileşimde bulunur, katkıda bulunur ve geri bildirim sağlar
+* Katkıda bulunmakla ilgileniyor musunuz? Kaynaktan nasıl derleme yapılacağını öğrenmek için [GitHub](https://github.com/dotnet/spark) deposunu ziyaret edin.
 
-Apache Spark ekibinin .NET'i hem sorunlar hem de çekme istekleri şeklinde [katkıları](https://github.com/dotnet/spark/blob/master/docs/contributing.md)teşvik eder. İlk adım, katkıda bulunmak istediğiniz varolan bir [sorunu](https://github.com/dotnet/spark/issues) bulmaktır. Sorununuzun yoksa, yeni bir [sorun](https://github.com/dotnet/spark/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+)açın.
+### <a name="how-to-engage-contribute-and-provide-feedback"></a>Katılım, katkıda bulunma ve geri bildirim sağlama
+
+Apache Spark ekibi için .NET, hem sorunlar hem de çekme istekleri biçiminde [katkılarını](https://github.com/dotnet/spark/blob/master/docs/contributing.md)teşvik eder. İlk adım, katkıda bulunmak istediğiniz mevcut bir [sorunu](https://github.com/dotnet/spark/issues) bulvermektir. Sorununuz yoksa, [Yeni bir sorun](https://github.com/dotnet/spark/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+)açın.

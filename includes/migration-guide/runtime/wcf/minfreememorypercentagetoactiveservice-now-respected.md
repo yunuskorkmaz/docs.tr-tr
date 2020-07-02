@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: fa472b3a142f55f0cbdd83eabbbb00bddd9786d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8e5dee9e97956cea78b7c8ec999af1afe9ac66b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61842055"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620651"
 ---
-### <a name="minfreememorypercentagetoactiveservice-is-now-respected"></a>MinFreeMemoryPercentageToActiveService artık uyulduğundan
+### <a name="minfreememorypercentagetoactiveservice-is-now-respected"></a>Minfreememoryyüztagetoactiveservice artık dikkate alındı
 
-|   |   |
-|---|---|
-|Ayrıntılar|Bu ayar, bir WCF hizmet aktif edilmeden önce sunucuda bellek alt sınırı belirler. Önlemek üzere tasarlanmış <xref:System.OutOfMemoryException?displayProperty=name> özel durumlar. .NET Framework 4.5, bu ayarın hiçbir etkisi vardı. .NET Framework 4.5.1, ayar dikkate alınır.|
-|Öneri|Web sunucusunda kullanılabilir boş bellek yapılandırma ayarları tarafından tanımlandığı yüzdenin ise bir özel durum oluşur. Başarıyla başlatıldı ve kısıtlı bellek ortamında çalışan bazı WCF hizmetlerinde başarısız olabilir.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Bu ayar, bir WCF hizmetinin etkinleştirilmeden önce sunucuda kullanılabilir olması gereken en düşük belleği belirler. Özel durumları engellemek için tasarlanmıştır <xref:System.OutOfMemoryException?displayProperty=fullName> . .NET Framework 4,5 ' de, bu ayarın etkisi yoktur. .NET Framework 4.5.1, ayar izlenir.
+
+#### <a name="suggestion"></a>Öneri
+
+Web sunucusunda kullanılabilir boş bellek yapılandırma ayarı tarafından tanımlanan yüzdeden küçükse bir özel durum oluşur. Başarılı bir şekilde başlatılan ve kısıtlanmış bir bellek ortamında çalıştırılan bazı WCF Hizmetleri artık başarısız olabilir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Özellik Değişikliği Bildirimi Uygulama'
+description: Windows Presentation Foundation (WPF) ' de özellik değeri değiştiğinde bağlama kaynağını otomatik olarak bildirmek için özelliklerinizi etkinleştirin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +11,23 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: 4f9ff49a443577e119b0c1079abbe23bd7ede4c4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6c298930b7b1f812e94ea6add8f53c67d3453530
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620787"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Nasıl yapılır: Özellik Değişikliği Bildirimi Uygulama
-Bağlama hedefi özelliklerinin, bağlama kaynağının dinamik değişikliklerini otomatik olarak yansıtmasını sağlamak üzere <xref:System.Windows.Data.BindingMode.OneWay> veya <xref:System.Windows.Data.BindingMode.TwoWay> bağlamayı desteklemek için (örneğin, Kullanıcı bir formu düzenlediğinde Önizleme bölmesinin otomatik olarak güncelleştirilmesini sağlamak için), sınıfınızın şunu yapması gerekir uygun özellik değişmiş bildirimleri sağlayın. Bu örnek, <xref:System.ComponentModel.INotifyPropertyChanged>uygulayan bir sınıfın nasıl oluşturulacağını gösterir.  
+Bağlama <xref:System.Windows.Data.BindingMode.OneWay> <xref:System.Windows.Data.BindingMode.TwoWay> hedefi özelliklerinizi bağlama kaynağının dinamik değişikliklerini otomatik olarak yansıtacak şekilde etkinleştirmek için (örneğin, Kullanıcı bir formu düzenlediğinde Önizleme bölmesinin otomatik olarak güncelleştirilmesini sağlamak için), sınıfınızın doğru özellik değişmiş bildirimleri sağlaması gerekir. Bu örnek, uygulayan bir sınıfın nasıl oluşturulacağını gösterir <xref:System.ComponentModel.INotifyPropertyChanged> .  
   
 ## <a name="example"></a>Örnek  
- <xref:System.ComponentModel.INotifyPropertyChanged> uygulamak için <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> olayını bildirmeniz ve `OnPropertyChanged` metodunu oluşturmanız gerekir. Ardından, değişiklik bildirimlerini istediğiniz her bir özellik için, özellik güncelleştirildiğinde `OnPropertyChanged` çağırın.  
+ Uygulamak için, <xref:System.ComponentModel.INotifyPropertyChanged> <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> olayı bildirmeniz ve metodunu oluşturmanız gerekir `OnPropertyChanged` . Ardından, değişiklik bildirimlerini istediğiniz her özellik için, `OnPropertyChanged` özelliği her güncelleştirildiğinde çağırın.  
   
  [!code-csharp[SimpleBinding#PersonClass](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Person.cs#personclass)]
  [!code-vb[SimpleBinding#PersonClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Person.vb#personclass)]  
   
- `Person` sınıfının <xref:System.Windows.Data.BindingMode.TwoWay> bağlamayı desteklemek için nasıl kullanılabileceği hakkında bir örnek görmek için, bkz. [TextBox metni kaynağı güncelleştirdikleri zaman denetim](how-to-control-when-the-textbox-text-updates-the-source.md).  
+ Sınıfın bağlamayı desteklemek için nasıl kullanılabileceği hakkında bir örnek görmek için `Person` <xref:System.Windows.Data.BindingMode.TwoWay> , bkz. [TextBox metni kaynağı güncelleştirdikleri zaman denetim](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

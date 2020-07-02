@@ -1,5 +1,6 @@
 ---
 title: .NET Framework ile Windows tabanlı istemci uygulamaları geliştirme
+description: .NET ile Windows tabanlı uygulamalar geliştirin. Evrensel Windows Platformu (UWP), Windows Presentation Foundation (WPF) veya Windows Forms kullanabilirsiniz.
 ms.date: 01/09/2018
 helpviewer_keywords:
 - client application services
@@ -13,43 +14,43 @@ helpviewer_keywords:
 - Visual C#, creating applications
 - client/server applications, Windows applications
 ms.assetid: 2dfb50b7-5af2-4e12-9bbb-c5ade0e39a68
-ms.openlocfilehash: b6b5f47980e7c0c87128b9efb782e637ed7144f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920ecfae60274a8a504e4d300e531fd8b512901
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79181638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619396"
 ---
-# <a name="develop-client-applications-with-net-framework"></a>.NET Framework ile istemci uygulamaları geliştirin
+# <a name="develop-client-applications-with-net-framework"></a>.NET Framework ile istemci uygulamaları geliştirme
 
-.NET Framework ile Windows tabanlı uygulamalar geliştirmenin çeşitli yolları vardır. Bu araçlardan ve çerçevelerden herhangi birini kullanabilirsiniz:
+.NET Framework ile Windows tabanlı uygulamalar geliştirmenin birkaç yolu vardır. Bu araçlardan ve çerçevelerin herhangi birini kullanabilirsiniz:
 
 - [Evrensel Windows Platformu (UWP)](/windows/uwp/)
 - [Windows Presentation Foundation (WPF)](./wpf/index.md)
 - [Windows Forms](./winforms/index.md)
 
-Bu bölümde, Windows Sunu Temeli veya Windows Formları kullanarak Windows tabanlı uygulamaların nasıl oluşturulacaklarını açıklayan makaleler bulunmaktadır. Ancak, Microsoft Mağazası (UWP uygulamaları) aracılığıyla kullanıma sunduğunuz bilgisayarlar veya aygıtlar için .NET Framework ve istemci uygulamalarını kullanarak web uygulamaları da oluşturabilirsiniz.
+Bu bölüm, Windows Presentation Foundation veya Windows Forms kullanarak Windows tabanlı uygulamalar oluşturmayı anlatan makaleleri içerir. Ancak, Microsoft Store (UWP uygulamaları) aracılığıyla kullanıma hazır hale getirmek istediğiniz bilgisayarlar veya cihazlar için .NET Framework ve istemci uygulamalarını kullanarak Web uygulamaları da oluşturabilirsiniz.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
 [Evrensel Windows Platformu](/windows/uwp/)\
-Microsoft Mağazası aracılığıyla kullanıcıların kullanımına sunabileceğiniz UWP uygulamalarının nasıl oluşturulabileceğini açıklar.
+Microsoft Store aracılığıyla kullanıcılara kullanılabilir hale getirmek için UWP uygulamalarının nasıl oluşturulacağını açıklar.
 
 [UWP uygulamaları için .NET API](/dotnet/api/index?view=dotnet-uwp-10.0)\
 UWP uygulamalarını destekleyen .NET türleri için başvuru.
   
-[Birden Çok Platform için geliştirin](../standard/cross-platform/index.md)\
-Birden çok istemci uygulama türünü hedeflemek için .NET Framework'i kullanabileceğiniz farklı yöntemleri açıklar.
+[Birden çok platform için geliştirme](../standard/cross-platform/index.md)\
+Birden çok istemci uygulama türünü hedeflemek için .NET Framework kullanabileceğiniz farklı yöntemleri açıklar.
 
-[ASP.NET Web Sitelerine Başlayın](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
-ASP.NET kullanarak web uygulamalarını nasıl geliştirebileceğinizi açıklar.
+[ASP.NET Web siteleri 'ni kullanmaya başlama](https://dotnet.microsoft.com/apps/aspnet/web-apps)\
+ASP.NET kullanarak Web uygulamaları geliştirebileceğiniz yolları açıklanmaktadır.
 
-[.NET API Windows Phone Silverlight için](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
-Listeler .NET Framework API'leri Windows Phone Silverlight ile uygulama oluşturmak için kullanabilirsiniz.
+[Silverlight Windows Phone için .NET API](https://docs.microsoft.com/previous-versions/windows/apps/jj207211\(v=vs.105\))\
+Windows Phone Silverlight ile uygulama oluşturmak için kullanabileceğiniz .NET Framework API 'Leri listeler.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET Standard](../standard/net-standard.md)
-- [Genel bakış](./get-started/overview.md)
+- [Genel Bakış](./get-started/overview.md)
 - [Geliştirme Kılavuzu](./development-guide.md)
 - [Windows Hizmeti Uygulamaları](./windows-services/index.md)

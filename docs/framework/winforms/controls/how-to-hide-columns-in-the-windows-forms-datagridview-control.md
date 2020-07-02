@@ -1,6 +1,6 @@
 ---
 title: DataGridView Denetimindeki sütunları gizleme
-description: DataGridViewColumn. Visible özelliğini false olarak ayarlayarak Windows Forms DataGridView Denetimindeki sütunları gizlemeyi öğrenin.
+description: DataGridViewColumn. Visible özelliğini false olarak ayarlayarak Windows Forms DataGridView Denetimindeki sütunları programlama yoluyla gizlemeyi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 46d7faea76098406b8e0a91d22922bf9ca391e28
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 27e9f331151acd68d76233bc7dbb09c2d870afde
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618057"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Nasıl yapılır: Windows Forms DataGridView Denetiminde Sütunları Gizleme
 Bazen Windows Forms denetiminde kullanılabilir olan sütunlardan yalnızca bazılarını göstermek isteyeceksiniz <xref:System.Windows.Forms.DataGridView> . Örneğin, yönetim kimlik bilgilerine sahip kullanıcılara bir çalışan maaş sütununu diğer kullanıcılardan gizleyerek göstermek isteyebilirsiniz. Alternatif olarak, denetimi çok sayıda sütun içeren bir veri kaynağına ve yalnızca bir kısmını göstermek isteyebilirsiniz. Bu durumda, genellikle, görüntülemeden İlgilendiğiniz sütunları gizlemeniz yerine kaldıracaksınız.  

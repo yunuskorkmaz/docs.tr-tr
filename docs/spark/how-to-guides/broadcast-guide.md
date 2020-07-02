@@ -1,21 +1,23 @@
 ---
 title: Apache Spark için .NET 'teki yayın değişkenlerini kullanın
 description: .NET ' te yayın değişkenlerini Apache Spark uygulamalar için nasıl kullanacağınızı öğrenin.
-ms.date: 06/11/2020
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 391e32cda14a9b3186ac96800351ddcb39a3d359
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: d86b160855cc4d3f3a6502f5606d4766b7c06aa0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617862"
 ---
 # <a name="use-broadcast-variables-in-net-for-apache-spark"></a>Apache Spark için .NET 'teki yayın değişkenlerini kullanın
 
 Bu makalede, Apache Spark için .NET ' te yayın değişkenlerini nasıl kullanacağınızı öğreneceksiniz. [Apache Spark yayın değişkenleri](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) , Salt okunabilir olması amaçlanan yürüticileri genelinde değişken paylaşma mekanizmalarda bulunur. Yayın değişkenleri, bir kopyasını görevler ile göndermek yerine, her makinede önbelleğe alınmış bir değişkeni tutmanıza olanak sağlar. Her düğüme, büyük bir giriş veri kümesinin bir kopyasını verimli bir şekilde sağlamak için yayın değişkenlerini kullanabilirsiniz.
 
 Veriler yalnızca bir kez gönderildiğinden, her görevle birlikte yürüticilere gönderilen yerel değişkenlere kıyasla yayın değişkenlerinin performans avantajları vardır. Yayın değişkenlerini ve bunların neden kullanıldığının daha ayrıntılı bir şekilde anlaşılmasını sağlamak için [resmi yayın değişkeni belgelerine](https://spark.apache.org/docs/2.2.0/rdd-programming-guide.html#broadcast-variables) bakın.
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="create-broadcast-variables"></a>Yayın değişkenleri oluşturma
 

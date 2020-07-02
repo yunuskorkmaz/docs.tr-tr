@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 69b25db88c7580787bbb47fb0902b6bb072f8dde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0bd90b3d479a7e0897aaf78b7718ae156a4a239f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981646"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620551"
 ---
-### <a name="assemblies-compiled-with-regexcompiletoassembly-breaks-between-40-and-45"></a>4.0 ve 4.5 arasındaki Regex.CompileToAssembly sonları ile derlenmiş bütünleştirilmiş kodları
+### <a name="assemblies-compiled-with-regexcompiletoassembly-breaks-between-40-and-45"></a>4,0 ile 4,5 arasında Regex. CompileToAssembly sonları ile derlenen derlemeler
 
-|   |   |
-|---|---|
-|Ayrıntılar|Derlenmiş normal ifadelerin bir derleme .NET Framework 4.5 ancak hedef .NET Framework 4 ile oluşturulmuşsa, içeren derlemeyi bir sistemde .NET Framework 4 yüklü bir normal ifade kullanan bir özel durum oluşturur.|
-|Öneri|Bu sorunu çözmek için şunlardan birini yapabilirsiniz:<ul><li>.NET Framework 4 ile normal ifadeler içeren derleme.</li><li>Yorumlanan normal ifade kullanın.</li></ul>|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Derlenmiş normal ifadelerin bir derlemesi .NET Framework 4,5 ile derlenirse, ancak .NET Framework 4 ' ü hedefliyorsa, bu derlemede bulunan ve .NET Framework 4 yüklü olan bir sistemdeki normal ifadelerden birini kullanmaya çalışmak bir özel durum oluşturur.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu sorunu geçici olarak çözmek için aşağıdakilerden birini yapabilirsiniz:<ul><li>.NET Framework 4 ile normal ifadeleri içeren derlemeyi oluşturun.</li><li>Yorumlanan bir normal ifade kullanın.</li></ul>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName)?displayProperty=nameWithType></li><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName,System.Reflection.Emit.CustomAttributeBuilder[])?displayProperty=nameWithType></li><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName,System.Reflection.Emit.CustomAttributeBuilder[],System.String)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName)?displayProperty=nameWithType></li><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName,System.Reflection.Emit.CustomAttributeBuilder[])?displayProperty=nameWithType></li><li><xref:System.Text.RegularExpressions.Regex.CompileToAssembly(System.Text.RegularExpressions.RegexCompilationInfo[],System.Reflection.AssemblyName,System.Reflection.Emit.CustomAttributeBuilder[],System.String)?displayProperty=nameWithType></li></ul>|

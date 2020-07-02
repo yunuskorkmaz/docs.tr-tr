@@ -3,14 +3,14 @@ title: Apache Spark öğreticisi için .NET ile Batch işleme
 description: Apache Spark için .NET kullanarak toplu işleme yapmayı öğrenin.
 author: mamccrea
 ms.author: mamccrea
-ms.date: 12/13/2019
+ms.date: 06/25/2020
 ms.topic: tutorial
-ms.openlocfilehash: b00f560317c085058d791e17954603670fccf60f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dbc3ab5cc4bd7f438e9f3f8e5d36c764d785ce4b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618291"
 ---
 # <a name="tutorial-do-batch-processing-with-net-for-apache-spark"></a>Öğretici: Apache Spark için .NET ile Batch işleme
 
@@ -18,7 +18,7 @@ Bu öğreticide, Apache Spark için .NET kullanarak toplu işleme yapmayı öğr
 
 Toplu işleme genellikle daha fazla analiz için hazırlanması gereken büyük ve düz veri kümelerinde gerçekleştirilir. Günlük işleme ve veri ambarı, yaygın toplu işleme senaryolardır. Bu senaryoda, farklı projelerin kullanıldığı zaman sayısı veya son projelerin güncelleştirildiği süre gibi GitHub projeleri hakkındaki bilgileri analiz edersiniz.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
@@ -26,7 +26,9 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > * Verileri bir veri çerçevesine okuyun ve analiz için hazırlayın
 > * Spark SQL kullanarak verileri işleme
 
-## <a name="prerequisites"></a>Önkoşullar
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
+## <a name="prerequisites"></a>Ön koşullar
 
 Apache Spark için .NET 'i ilk kez kullanıyorsanız, ortamınızı nasıl hazırlayacağınızı ve Apache Spark uygulama için ilk .NET uygulamanızı nasıl çalıştıracağınızı öğrenmek için [.NET ile çalışmaya başlama](get-started.md) hakkında bilgi edinmek için Apache Spark öğreticisine göz atın.
 

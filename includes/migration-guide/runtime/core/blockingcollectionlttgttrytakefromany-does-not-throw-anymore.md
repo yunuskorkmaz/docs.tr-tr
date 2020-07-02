@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 9e8f9c616d5ae4ed17f35665cff21acbbacda457
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a8f51dfa1c82e3b166449d2432dfe8a9b96564b9
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620552"
 ---
-### <a name="blockingcollectionttrytakefromany-does-not-throw-anymore"></a>Blockingcollection'a\<T >. TryTakeFromAny artık oluşturmaz
+### <a name="blockingcollectionlttgttrytakefromany-does-not-throw-anymore"></a>BlockingCollection &lt; T &gt; . TryTakeFromAny artık throw
 
-|   |   |
-|---|---|
-|Ayrıntılar|Giriş koleksiyonlardan biri tamamlandı, olarak işaretlenmişse <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)> artık -1 döndürür ve <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)> artık bir özel durum oluşturur. Bu değişiklik, koleksiyonlardan biri boş veya tamamlanmış olduğunda koleksiyonlarla çalışmayı mümkün kılar, ancak diğer koleksiyonda hala alınabilecek öğeler bulunur.|
-|Öneri|Denetim akışı amacıyla durumlarda tamamlanmasını engelleyici bir koleksiyon, -1 veya TakeFromAny atma TryTakeFromAny kullanıldıysa, bu tür kod artık kullanılacak değiştirilmelidir <code>.Any(b =&gt; b.IsCompleted)</code> bu koşulunu algılamak için.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Giriş koleksiyonlarından biri tamamlandı olarak işaretlenmişse, <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)> artık-1 döndürmez ve <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)> artık özel durum oluşturmaz. Bu değişiklik, koleksiyonlardan biri boş veya tamamlanmış olduğunda koleksiyonlarla çalışmayı mümkün kılar, ancak diğer koleksiyonda hala alınabilecek öğeler bulunur.
+
+#### <a name="suggestion"></a>Öneri
+
+Bir engelleme koleksiyonunun tamamlanması durumunda denetim akışı amacıyla TryTakeFromAny döndüren-1 veya TakeFromAny oluşturma kullanılıyorsa, bu kodun artık <code>.Any(b =&gt; b.IsCompleted)</code> Bu koşulu algılaması için kullanılacak şekilde değiştirilmesi gerekir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.TimeSpan)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.TimeSpan)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.Int32)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.TimeSpan)?displayProperty=nameWithType></li><li><xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny(System.Collections.Concurrent.BlockingCollection{%600}[],%600@,System.TimeSpan)?displayProperty=nameWithType></li></ul>|

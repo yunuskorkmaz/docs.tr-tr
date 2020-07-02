@@ -4,12 +4,12 @@ description: .NET Core SDK ve .NET Core çalışma zamanını alp 'ye yüklemeni
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 92753933cbcedae28867b66293d1044f700d7baa
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0efe3bbacbe573b77eae8818ea29b5a3867e4570
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619526"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-alpine"></a>Alp 'de .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 
@@ -47,12 +47,11 @@ Alp Linux üzerinde .NET Core aşağıdaki bağımlılıkların yüklü olmasın
 
 - ICU-libs
 - krb5-libs
+- libgcc
 - libintl
 - libssl 1.1 (alp v 3.9 veya üzeri)
-- libssl 1.0 (alp v 3.8)
+- libssl 1.0 (alp v 3.8 veya Lower)
 - libstdc + +
-- lttng-ust
-- numactl (isteğe bağlı)
 - zlib
 
 ## <a name="scripted-install"></a>Komut dosyalı yüklemesi

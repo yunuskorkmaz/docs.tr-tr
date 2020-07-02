@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: ac929a8b3e9a7d56122f5699c51819ad483d1f5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 483902ff2ec54d58bfb00dd8ee7fd78868f70ab4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620646"
 ---
-### <a name="binaryformatter-can-fail-to-find-type-from-loadfrom-context"></a>BinaryFormatter LoadFrom bağlamı türünden bulmak başarısız olabilir
+### <a name="binaryformatter-can-fail-to-find-type-from-loadfrom-context"></a>BinaryFormatter, LoadFrom bağlamından tür bulamıyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5, bir dizi itibarıyla <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> kullanırken, değişiklikler seri durumundan çıkarma farklılıkları neden olabilir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> LoadFrom bağlamı yüklenen türler seri durumdan çıkarılacak. Bu değişiklikler nedeniyle yeni yöntemlerdir <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> artık farklı bir davranış neden olan bir tür yükler, bir <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> daha sonra bu türe seri durumdan çıkarmak çalışır. Bu eski XmlSerializer davranışına göre bazı durumlarda çalışmış olabilir ancak varsayılan serileştirme Bağlayıcısı LoadFrom bağlamı otomatik olarak aramaz. Farklı bir bağlamda yüklenmiş bir derlemeden bir tür yüklenirken değişiklikleri nedeniyle bir <xref:System.IO.FileNotFoundException?displayProperty=name> oluşturulabilir.|
-|Öneri|Bu özel durumun görülür, <code>Binder</code> özelliği <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> doğru türde bulduğunuz bir özel bağlayıcı için ayarlanabilir.<pre><code class="lang-csharp">var formatter = new BinaryFormatter { Binder = new TypeFinderBinder() }&#13;&#10;</code></pre>Ve ardından özel bağlayıcı:<pre><code class="lang-csharp">public class TypeFinderBinder : SerializationBinder&#13;&#10;{&#13;&#10;private static readonly string s_assemblyName = Assembly.GetExecutingAssembly().FullName;&#13;&#10;&#13;&#10;public override Type BindToType(string assemblyName, string typeName)&#13;&#10;{&#13;&#10;return Type.GetType(String.Format(CultureInfo.InvariantCulture, &quot;{0}, {1}&quot;, typeName, s_assemblyName));&#13;&#10;}&#13;&#10;}&#13;&#10;</code></pre>|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,5 itibariyle, bir dizi değişiklik, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> LoadFrom bağlamına yüklenmiş türlerin serisini kaldırmak için kullanılırken seri durumundan çıkarma farklılıklarına neden olabilir. Bu değişiklikler, yeni yollarla, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> daha sonra bu tür için seri durumdan çıkarma denemesi yapıldığında farklı davranışa neden olan bir türü yüklemeleridir. Varsayılan serileştirme Bağlayıcısı LoadFrom bağlamını otomatik olarak aramaz, ancak bu, XmlSerializer 'ın eski davranışına göre bazı koşullarda çalıştıolabilir. Değişiklikler nedeniyle, bir tür farklı bir bağlamda yüklenmiş bir derlemeden yüklenirken, bir durum oluşturulabilir <xref:System.IO.FileNotFoundException?displayProperty=fullName> .
+
+#### <a name="suggestion"></a>Öneri
+
+Bu özel durum görülecektir, <code>Binder</code> öğesinin özelliği <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=fullName> doğru türü bulacak bir özel cilde ayarlanabilir.<pre><code class="lang-csharp">var formatter = new BinaryFormatter { Binder = new TypeFinderBinder() }&#13;&#10;</code></pre>Ve ardından özel bağlayıcı:<pre><code class="lang-csharp">public class TypeFinderBinder : SerializationBinder&#13;&#10;{&#13;&#10;private static readonly string s_assemblyName = Assembly.GetExecutingAssembly().FullName;&#13;&#10;&#13;&#10;public override Type BindToType(string assemblyName, string typeName)&#13;&#10;{&#13;&#10;return Type.GetType(String.Format(CultureInfo.InvariantCulture, &quot;{0}, {1}&quot;, typeName, s_assemblyName));&#13;&#10;}&#13;&#10;}&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li><li><xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize(System.IO.Stream,System.Runtime.Remoting.Messaging.HeaderHandler)?displayProperty=nameWithType></li></ul>|

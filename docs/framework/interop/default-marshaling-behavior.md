@@ -1,5 +1,6 @@
 ---
 title: Varsayılan Sıralama Davranışı
+description: .NET ' te varsayılan sıralama davranışını öğrenin. Birlikte çalışabilirlik sıralaması ile bellek yönetimini gözden geçirin ve sınıflar, temsilciler ve değer türleri için varsayılan sıralama bölümüne bakın.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 0469874d016725eb6423bb8453e9657b2be923d4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618578"
 ---
 # <a name="default-marshaling-behavior"></a>Varsayılan Sıralama Davranışı
 Birlikte çalışabilirlik sıralaması, yöntem parametreleriyle ilişkili verilerin yönetilen ve yönetilmeyen bellek arasında geçerken nasıl davranacağını dikte eden kurallar üzerinde çalışır. Bu yerleşik kurallar, verileri veri türü dönüşümleri olarak sıralama, bir çağrılan verilerin kendisine geçirilen verileri değiştirip çağıramayacağını ve bu değişiklikleri arayana döndürmesini ve bu değişiklikleri, Sıralayıcı 'nın performans iyileştirmeleri sağladığı koşullarda değiştirmesini sağlar.  
@@ -37,9 +38,9 @@ BSTR MethodOne (BSTR b) {
 }  
 ```  
   
- Ancak, yöntemi bir platform çağırma prototipi olarak tanımlarsanız, her **BSTR** türünü bir <xref:System.String> tür ile değiştirin ve çağırın `MethodOne`, ortak dil çalışma zamanı iki kez ücretsiz `b` olarak çalışır. Sıralama davranışını <xref:System.IntPtr> **dize** türleri yerine türler kullanarak değiştirebilirsiniz.  
+ Ancak, yöntemi bir platform çağırma prototipi olarak tanımlarsanız, her **BSTR** türünü bir tür ile değiştirin <xref:System.String> ve çağırın `MethodOne` , ortak dil çalışma zamanı iki kez ücretsiz olarak çalışır `b` . Sıralama davranışını <xref:System.IntPtr> **dize** türleri yerine türler kullanarak değiştirebilirsiniz.  
   
- Çalışma zamanı, belleği boşaltmak için her zaman **CoTaskMemFree** yöntemini kullanır. Çalıştığınız bellek **CoTaskMemAlloc** yöntemiyle ayrıldıysa, bir **IntPtr** kullanmanız ve uygun yöntemi kullanarak belleği el ile boşaltmalısınız. Benzer şekilde, çekirdek belleğine bir işaretçi döndüren Kernel32. dll ' den **GetCommandLine** işlevi kullanılırken, belleğin asla boşaltılmaması gereken durumlarda otomatik bellek boşaltmasını önleyebilirsiniz. Belleği el ile boşaltma hakkında ayrıntılı bilgi için bkz. [arabellekler örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
+ Çalışma zamanı, belleği boşaltmak için her zaman **CoTaskMemFree** yöntemini kullanır. Çalıştığınız bellek **CoTaskMemAlloc** yöntemiyle ayrıldıysa, bir **IntPtr** kullanmanız ve uygun yöntemi kullanarak belleği el ile boşaltmalısınız. Benzer şekilde, çekirdek belleğine bir işaretçi döndüren Kernel32.dll **GetCommandLine** işlevini kullanırken, belleğin asla boşaltılmaması gereken durumlarda otomatik bellek boşaltmasını önleyebilirsiniz. Belleği el ile boşaltma hakkında ayrıntılı bilgi için bkz. [arabellekler örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Sınıflar için varsayılan sıralama  
  Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve her zaman arabirim olarak sıralanır. Bazı durumlarda, sınıfı sıralamak için kullanılan arabirim sınıf arabirimi olarak bilinir. Sınıf arabirimini tercih ettiğiniz bir arabirimle geçersiz kılma hakkında daha fazla bilgi için bkz. [sınıf arabirimine giriş](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
@@ -73,16 +74,16 @@ BSTR MethodOne (BSTR b) {
   
 - Platform çağırma için bir temsilci varsayılan olarak yönetilmeyen bir işlev işaretçisi olarak sıralanır.  
   
-- COM birlikte çalışması için bir temsilci, varsayılan olarak **_Delegate** türünde bir com arabirimi olarak sıralanır. **_Delegate** arabirimi mscorlib. tlb tür kitaplığında tanımlanmıştır ve temsilcinin başvurduğu yöntemi çağırabilmenizi sağlayan <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> yöntemini içerir.  
+- COM birlikte çalışması için bir temsilci, varsayılan olarak **_Delegate** türünde bir com arabirimi olarak sıralanır. **_Delegate** arabirimi mscorlib. tlb tür kitaplığında tanımlanmıştır ve <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> temsilcinin başvurduğu yöntemi çağırabilmenizi sağlayan yöntemini içerir.  
   
- Aşağıdaki tabloda, yönetilen temsilci veri türü için sıralama seçenekleri gösterilmektedir. Özniteliği <xref:System.Runtime.InteropServices.MarshalAsAttribute> , temsilcileri sıralamak <xref:System.Runtime.InteropServices.UnmanagedType> için birkaç numaralandırma değeri sağlar.  
+ Aşağıdaki tabloda, yönetilen temsilci veri türü için sıralama seçenekleri gösterilmektedir. <xref:System.Runtime.InteropServices.MarshalAsAttribute>Özniteliği, <xref:System.Runtime.InteropServices.UnmanagedType> temsilcileri sıralamak için birkaç numaralandırma değeri sağlar.  
   
 |Sabit listesi türü|Yönetilmeyen biçimin açıklaması|  
 |----------------------|-------------------------------------|  
 |**UnmanagedType. FunctionPtr**|Yönetilmeyen bir işlev işaretçisi.|  
 |**UnmanagedType. Interface**|Mscorlib. tlb ' de tanımlandığı şekilde **_Delegate**türünde bir arabirim.|  
   
- Yöntemlerinin `DelegateTestInterface` bir com tür kitaplığına aktarılması için aşağıdaki örnek kodu göz önünde bulundurun. Yalnızca **ref** (veya **ByRef**) anahtar sözcüğüyle Işaretlenen temsilcilerin ın/out parametrelerine geçtiğini unutmayın.  
+ Yöntemlerinin `DelegateTestInterface` BIR com tür kitaplığına aktarılması için aşağıdaki örnek kodu göz önünde bulundurun. Yalnızca **ref** (veya **ByRef**) anahtar sözcüğüyle Işaretlenen temsilcilerin ın/out parametrelerine geçtiğini unutmayın.  
   
 ```csharp  
 using System;  
@@ -112,12 +113,12 @@ interface DelegateTest : IDispatch {
   
  Bir işlev işaretçisine, diğer yönetilmeyen işlev işaretçilerine başvurulanlar gibi başvurulmalıdır.  
 
-Bu örnekte, iki temsilci olarak <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>sıralandığınızda, sonuç bir `int` ve bir işaretçisidir. `int` Temsilci türleri sıralanmakta olduğundan, `int` bu, bellekteki temsilcinin adresi olan void (`void*`) için bir işaretçi temsil eder. Diğer bir deyişle, bu sonuç 32 bitlik Windows sistemlerine özgüdür, `int` bu nedenle işlev işaretçisinin boyutunu temsil eder.
+Bu örnekte, iki temsilci olarak sıralandığınızda <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType> , sonuç bir `int` ve bir işaretçisidir `int` . Temsilci türleri sıralanmakta olduğundan, `int` `void*` Bu, bellekteki temsilcinin adresi olan void () için bir işaretçi temsil eder. Diğer bir deyişle, bu sonuç 32 bitlik Windows sistemlerine özgüdür, bu nedenle `int` işlev işaretçisinin boyutunu temsil eder.
 
 > [!NOTE]
 > Yönetilmeyen kod tarafından tutulan yönetilen bir temsilciye yönelik işlev işaretçisine yönelik bir başvuru, ortak dil çalışma zamanının yönetilen nesnede çöp toplama gerçekleştirmesini engellemez.  
   
- `cb` Örneğin, `SetChangeHandler` yöntemine geçirilen nesneye yapılan başvuru, `cb` `Test` yöntemin ömrünün ötesinde etkin olmadığından, aşağıdaki kod yanlış. `cb` Nesne çöp topladıktan sonra, geçirilen işlev işaretçisi artık geçerli `SetChangeHandler` değildir.  
+ Örneğin, `cb` yöntemine geçirilen nesneye yapılan başvuru, `SetChangeHandler` `cb` yöntemin ömrünün ötesinde etkin olmadığından, aşağıdaki kod yanlış `Test` . `cb`Nesne çöp topladıktan sonra, geçirilen işlev işaretçisi `SetChangeHandler` artık geçerli değildir.  
   
 ```csharp  
 public class ExternalAPI {  
@@ -140,7 +141,7 @@ internal class DelegateTest {
 }  
 ```  
   
- Beklenmedik atık toplamayı dengelemek için çağıran, yönetilmeyen işlev işaretçisi kullanımda olduğu sürece `cb` nesnenin canlı tutulduğundan emin olmalıdır. İsteğe bağlı olarak, aşağıdaki örnekte gösterildiği gibi, işlev işaretçisine artık ihtiyaç duyulmadığında, yönetilmeyen kodun yönetilen koda bildirilmesini sağlayabilirsiniz.  
+ Beklenmedik atık toplamayı dengelemek için çağıran, `cb` yönetilmeyen işlev işaretçisi kullanımda olduğu sürece nesnenin canlı tutulduğundan emin olmalıdır. İsteğe bağlı olarak, aşağıdaki örnekte gösterildiği gibi, işlev işaretçisine artık ihtiyaç duyulmadığında, yönetilmeyen kodun yönetilen koda bildirilmesini sağlayabilirsiniz.  
   
 ```csharp  
 internal class DelegateTest {  
@@ -170,7 +171,7 @@ internal class DelegateTest {
   
  Bu konuda, biçimlendirilen türlerin açıklanmasına ek olarak, olağan dışı sıralama davranışına sahip [Sistem değeri türleri](#system-value-types) tanımlanmaktadır.  
   
- Biçimlendirilen bir tür, içindeki üyelerinin doğrudan, bellekteki yerleşimini açıkça denetleyen bilgiler içeren karmaşık bir türdür. Üye düzen bilgileri, <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliği kullanılarak sağlanır. Düzen aşağıdaki <xref:System.Runtime.InteropServices.LayoutKind> sabit listesi değerlerinden biri olabilir:  
+ Biçimlendirilen bir tür, içindeki üyelerinin doğrudan, bellekteki yerleşimini açıkça denetleyen bilgiler içeren karmaşık bir türdür. Üye düzen bilgileri, özniteliği kullanılarak sağlanır <xref:System.Runtime.InteropServices.StructLayoutAttribute> . Düzen aşağıdaki <xref:System.Runtime.InteropServices.LayoutKind> sabit listesi değerlerinden biri olabilir:  
   
 - **LayoutKind. Auto**  
   
@@ -182,7 +183,7 @@ internal class DelegateTest {
   
 - **LayoutKind. Explicit**  
   
-     Üyelerin her alanla <xref:System.Runtime.InteropServices.FieldOffsetAttribute> sağlanan öğesine göre düzenlendiğini gösterir.  
+     Üyelerin her alanla sağlanan öğesine göre düzenlendiğini gösterir <xref:System.Runtime.InteropServices.FieldOffsetAttribute> .  
   
 ### <a name="value-types-used-in-platform-invoke"></a>Platform çağırmada kullanılan değer türleri  
  Aşağıdaki örnekte, `Point` ve `Rect` türleri **StructLayoutAttribute**kullanarak üye düzen bilgilerini sağlar.  
@@ -218,7 +219,7 @@ public struct Rect {
 }  
 ```  
   
- Yönetilmeyen koda sıralandığınızda, bu biçimli türler C stili yapılar olarak sıralanır. Bu, yapı bağımsız değişkenlerine sahip yönetilmeyen bir API çağırmanın kolay bir yolunu sağlar. Örneğin, `POINT` ve `RECT` yapıları Microsoft Windows API **ptinrect** işlevine aşağıdaki gibi geçirilebilir:  
+ Yönetilmeyen koda sıralandığınızda, bu biçimli türler C stili yapılar olarak sıralanır. Bu, yapı bağımsız değişkenlerine sahip yönetilmeyen bir API çağırmanın kolay bir yolunu sağlar. Örneğin, `POINT` ve `RECT` yapıları MICROSOFT Windows API **ptinrect** işlevine aşağıdaki gibi geçirilebilir:  
   
 ```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -241,17 +242,17 @@ internal static class NativeMethods
 }
 ```
   
- Yönetilmeyen `Rect` API, işleve geçirilecek bir işaretçi beklediği için `RECT` değer türü başvuruya göre geçirilmelidir. Yönetilmeyen `Point` API 'nin `POINT` yığına geçirilmesini beklediği için değer türü değere göre geçirilir. Bu hafif fark çok önemlidir. Başvurular yönetilmeyen koda işaretçiler olarak geçirilir. Değerler yığında yönetilmeyen koda geçirilir.  
+ `Rect`YÖNETILMEYEN API, işleve geçirilecek bir işaretçi beklediği için değer türü başvuruya göre geçirilmelidir `RECT` . `Point`YÖNETILMEYEN API 'nin yığına geçirilmesini beklediği için değer türü değere göre geçirilir `POINT` . Bu hafif fark çok önemlidir. Başvurular yönetilmeyen koda işaretçiler olarak geçirilir. Değerler yığında yönetilmeyen koda geçirilir.  
   
 > [!NOTE]
 > Biçimlendirilen bir tür yapı olarak sıralanmışsa, yalnızca tür içindeki alanlara erişilebilir. Türün yöntemleri, özellikleri veya olayları varsa, bunlar yönetilmeyen koddan erişilmez.  
   
- Sınıflar, Ayrıca, sabit üye düzenine sahip olmaları şartıyla, yönetilmeyen koda C stili yapılar olarak sıralanabilir. Bir sınıf için üye düzen bilgileri de <xref:System.Runtime.InteropServices.StructLayoutAttribute> özniteliğiyle birlikte sağlanır. Sabit düzen ve sınıflar ile değer türleri arasındaki temel fark, yönetilmeyen kod için sıralandıkları yoldur. Değer türleri değeri (yığında) ile geçirilir ve sonuç olarak, aranan tarafından türün üyelerinde yapılan değişiklikler arayan tarafından görülmez. Başvuru türleri başvuruya göre geçirilir (türe bir başvuru yığına geçirilir); Sonuç olarak, aranan tarafından bir türün blittable-Type üyelerinde yapılan tüm değişiklikler arayan tarafından görülür.  
+ Sınıflar, Ayrıca, sabit üye düzenine sahip olmaları şartıyla, yönetilmeyen koda C stili yapılar olarak sıralanabilir. Bir sınıf için üye düzen bilgileri de özniteliğiyle birlikte sağlanır <xref:System.Runtime.InteropServices.StructLayoutAttribute> . Sabit düzen ve sınıflar ile değer türleri arasındaki temel fark, yönetilmeyen kod için sıralandıkları yoldur. Değer türleri değeri (yığında) ile geçirilir ve sonuç olarak, aranan tarafından türün üyelerinde yapılan değişiklikler arayan tarafından görülmez. Başvuru türleri başvuruya göre geçirilir (türe bir başvuru yığına geçirilir); Sonuç olarak, aranan tarafından bir türün blittable-Type üyelerinde yapılan tüm değişiklikler arayan tarafından görülür.  
   
 > [!NOTE]
 > Bir başvuru türünde blittable olmayan türlerde Üyeler varsa, dönüştürme iki kez gereklidir: bir bağımsız değişkenin yönetilmeyen tarafa geçirilmesi ve çağrıdan ikinci kez döndürülmesinin ilk zamanı. Bu eklenen ek yük nedeniyle, çağıran tarafından yapılan değişiklikleri görmek istiyorsa, ın/out parametreleri açıkça bir bağımsız değişkene uygulanmalıdır.  
   
- Aşağıdaki örnekte, `SystemTime` sınıfı sıralı üye düzenine sahiptir ve Windows API **GetSystemTime** işlevine geçirilebilir.  
+ Aşağıdaki örnekte, `SystemTime` sınıfı sıralı üye düzenine sahiptir ve WINDOWS API **GetSystemTime** işlevine geçirilebilir.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -303,9 +304,9 @@ internal static class NativeMethods
 }
 ```
   
- `SystemTime` Bağımsız değişkenin bir başvuru bağımsız değişkeni `SystemTime` olarak yazılmadığından, bir değer türü değil bir sınıf olduğundan emin olun. Değer türlerinin aksine, sınıflar her zaman başvuruya göre geçirilir.  
+ `SystemTime`Bağımsız değişkenin bir başvuru bağımsız değişkeni olarak yazılmadığından `SystemTime` , bir değer türü değil bir sınıf olduğundan emin olun. Değer türlerinin aksine, sınıflar her zaman başvuruya göre geçirilir.  
   
- Aşağıdaki kod örneği, adlı `Point` `SetXY`bir yöntemi olan farklı bir sınıfı gösterir. Türün sıralı düzeni olduğundan, yönetilmeyen koda geçirilebilir ve bir yapı olarak sıralanmış olabilir. Ancak, nesne `SetXY` başvuru ile geçirilse bile, yönetilmeyen koddan üye çağrılabilir değildir.  
+ Aşağıdaki kod örneği, `Point` adlı bir yöntemi olan farklı bir sınıfı gösterir `SetXY` . Türün sıralı düzeni olduğundan, yönetilmeyen koda geçirilebilir ve bir yapı olarak sıralanmış olabilir. Ancak, `SetXY` nesne başvuru ile geçirilse bile, yönetilmeyen koddan üye çağrılabilir değildir.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class Point  
@@ -329,7 +330,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>COM birlikte çalışabilirliğine kullanılan değer türleri  
- Biçimlendirilen türler, COM birlikte çalışma yöntemi çağrılarına de geçirilebilir. Aslında, bir tür kitaplığına aktarıldığında, değer türleri otomatik olarak yapılara dönüştürülür. Aşağıdaki örnekte gösterildiği gibi, `Point` değer türü adıyla `Point`bir tür tanımı (typedef) olur. Tür kitaplığının başka bir `Point` yerinde değer türüne yapılan tüm başvurular `Point` typedef ile değiştirilmiştir.  
+ Biçimlendirilen türler, COM birlikte çalışma yöntemi çağrılarına de geçirilebilir. Aslında, bir tür kitaplığına aktarıldığında, değer türleri otomatik olarak yapılara dönüştürülür. Aşağıdaki örnekte gösterildiği gibi, `Point` değer türü adıyla bir tür tanımı (typedef) olur `Point` . `Point`Tür kitaplığının başka bir yerinde değer türüne yapılan tüm başvurular typedef ile değiştirilmiştir `Point` .  
   
  **Tür kitaplığı temsili**  
   
@@ -346,13 +347,13 @@ interface _Graphics {
 }  
 ```  
   
- Değerleri ve platform çağırma çağrılarına başvuruları sıralamak için kullanılan kurallar, COM arabirimleri üzerinden sıralama yapılırken kullanılır. Örneğin, `Point` değer türünün bir ÖRNEĞI .NET Framework com `Point` 'a geçirildiğinde, değeri tarafından geçirilir. `Point` Değer türü başvuruya göre geçirilirse, yığına bir `Point` işaretçisi geçirilir. Birlikte çalışma sıralayıcısı, iki yönde de daha yüksek yöneltme (**nokta** \* \*) düzeylerini desteklemez.  
+ Değerleri ve platform çağırma çağrılarına başvuruları sıralamak için kullanılan kurallar, COM arabirimleri üzerinden sıralama yapılırken kullanılır. Örneğin, `Point` değer türünün bir örneği .NET Framework com 'a geçirildiğinde, `Point` değeri tarafından geçirilir. `Point`Değer türü başvuruya göre geçirilirse, yığına bir işaretçisi `Point` geçirilir. Birlikte çalışma sıralayıcısı,**Point** \* \* iki yönde de daha yüksek yöneltme (nokta) düzeylerini desteklemez.  
   
 > [!NOTE]
-> <xref:System.Runtime.InteropServices.LayoutKind> Sabit listesi değeri **Açık** olarak ayarlanmış olan yapılar, içe aktarılmış tür kitaplığı açık bir düzen ifade ettiğinden, com birlikte çalışma içinde kullanılamaz.  
+> <xref:System.Runtime.InteropServices.LayoutKind>Sabit listesi değeri **Açık** olarak ayarlanmış olan yapılar, içe aktarılmış tür kitaplığı açık bir düzen Ifade ettiğinden, com birlikte çalışma içinde kullanılamaz.  
   
 ### <a name="system-value-types"></a>Sistem değer türleri  
- <xref:System> Ad alanı, çalışma zamanı temel türlerinin paketlenmiş formunu temsil eden çeşitli değer türlerine sahiptir. Örneğin, değer türü <xref:System.Int32?displayProperty=nameWithType> yapısı, **ELEMENT_TYPE_I4**kutulanmış biçimini temsil eder. Bu türleri yapılar olarak sıralamak yerine, diğer biçimlendirilen türler olduğu gibi, bunları kendi temel türleriyle aynı şekilde sıralamanız gerekir. Bu nedenle **System. Int32** , **Long**türünde tek bir üye içeren bir yapı olarak değil **ELEMENT_TYPE_I4** olarak sıralanır. Aşağıdaki tablo, temel türlerin kutulanmış temsilleri olan **sistem** ad alanındaki değer türlerinin bir listesini içerir.  
+ <xref:System>Ad alanı, çalışma zamanı temel türlerinin paketlenmiş formunu temsil eden çeşitli değer türlerine sahiptir. Örneğin, değer türü yapısı, <xref:System.Int32?displayProperty=nameWithType> **ELEMENT_TYPE_I4**kutulanmış biçimini temsil eder. Bu türleri yapılar olarak sıralamak yerine, diğer biçimlendirilen türler olduğu gibi, bunları kendi temel türleriyle aynı şekilde sıralamanız gerekir. Bu nedenle **System. Int32** , **Long**türünde tek bir üye içeren bir yapı olarak değil **ELEMENT_TYPE_I4** olarak sıralanır. Aşağıdaki tablo, temel türlerin kutulanmış temsilleri olan **sistem** ad alanındaki değer türlerinin bir listesini içerir.  
   
 |Sistem değer türü|Öğe türü|  
 |-----------------------|------------------|  
@@ -405,7 +406,7 @@ typedef struct tagGUID {
 } GUID;  
 ```  
   
- Aşağıdaki kod, yönetilen `IValueTypes` arabirimde karşılık gelen tanımları gösterir.  
+ Aşağıdaki kod, yönetilen arabirimde karşılık gelen tanımları gösterir `IValueTypes` .  
   
 ```vb  
 Public Interface IValueTypes  

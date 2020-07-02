@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 1654d58651bf14b0e7c21de2afa827634b7db858
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 1d7dc808d5b514acc582675d6ccdbd5778314624
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235900"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620591"
 ---
-### <a name="systemuri-escaping-now-supports-rfc-3986"></a>System.Uri kaçış artık RFC 3986 destekler
+### <a name="systemuri-escaping-now-supports-rfc-3986"></a>System. Uri kaçış artık RFC 3986 ' i desteklemektedir
 
-|   |   |
-|---|---|
-|Ayrıntılar|URI kaçış desteklemek için .NET Framework 4.5 içinde değiştirilmemiş [RFC 3986](https://tools.ietf.org/html/rfc3986). Özel değişiklikler şunlardır:<ul><li><xref:System.Uri.EscapeDataString(System.String)?displayProperty=name> kaçış karakterleri RFC 3986'ya dayalı ayrılmış karakterleri kaçırır.</li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=name> ayrılmış karakterleri kaçırmaz.</li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=name> Geçersiz bir kaçış dizisi ile karşılaşırsa, bir özel durum oluşturmaz.</li><li>Ayrılmamış kaçış karakterleri, kaçılmamış durumdadır.</li></ul>|
-|Öneri|<ul><li>Dayanan olmayan uygulamaları güncelleştirme <xref:System.Uri.UnescapeDataString(System.String)?displayProperty=name> söz konusu olduğunda geçersiz kaçış dizisi oluşturmak için. Tür dizilerini doğrudan artık algılanabilmesi gerekir.</li><li>Benzer şekilde, Escaped ve Atlanmayan URI ve veri dizeleri .NET Framework 4.0 ve .NET Framework 4.5 değişebilir ve .NET sürümleri arasında doğrudan karşılaştırılmalıdır değil bekler. Bunun yerine, ayrıştırılır ve tüm karşılaştırmalar yapılmadan önce tek bir .NET sürümde normalleştirilmiş.</li></ul>|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,5 ' de, [RFC 3986](https://tools.ietf.org/html/rfc3986)' i desteklemek için URI kaçış değeri değişti. Belirli değişiklikler şunları içerir:<ul><li><xref:System.Uri.EscapeDataString(System.String)?displayProperty=fullName>RFC 3986 ' i temel alarak ayrılmış karakterleri çıkar.</li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=fullName>ayrılmış karakterlerden kaçış yapmaz.</li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=fullName>geçersiz bir kaçış dizisiyle karşılaşırsa özel durum oluşturmaz.</li><li>Ayrılmamış kaçış karakterleri, kaçılmamış durumdadır.</li></ul>
+
+#### <a name="suggestion"></a>Öneri
+
+<ul><li>Uygulamaları <xref:System.Uri.UnescapeDataString(System.String)?displayProperty=fullName> , geçersiz bir kaçış sırası durumunda throw 'e dayanmayan olarak güncelleştirin. Bu tür diziler doğrudan hemen algılanmalıdır.</li><li>Benzer şekilde, kaçış ve kaçışsız URI ve veri dizelerinin .NET Framework 4,0 ve .NET Framework 4,5 ' den değişebildiğinden ve .NET sürümleri arasında doğrudan karşılaştırılmamalıdır. Bunun yerine, karşılaştırmalar yapılmadan önce bunların tek bir .NET sürümünde ayrıştırılıp normalleştirilmeleri gerekir.</li></ul>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Uri.EscapeDataString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Uri.EscapeDataString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.EscapeUriString(System.String)?displayProperty=nameWithType></li><li><xref:System.Uri.UnescapeDataString(System.String)?displayProperty=nameWithType></li></ul>|

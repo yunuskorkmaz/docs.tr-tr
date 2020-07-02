@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: f9fbda5cc4517db40c4b5b543eb7e8c6c71292d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee12ccdfb95cc576cd35815b895c6041c08a0353
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620622"
 ---
-### <a name="entityframework-60-loads-very-slowly-in-apps-launched-from-visual-studio"></a>EntityFramework 6.0 Visual Studio'dan başlatılan uygulamalarında çok yavaş yükleniyor.
+### <a name="entityframework-60-loads-very-slowly-in-apps-launched-from-visual-studio"></a>EntityFramework 6,0, Visual Studio 'dan başlatılan uygulamalarda çok yavaş yükleniyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|EntityFramework 6.0 kullanan Visual Studio 2013'ten bir uygulamayı başlatma çok yavaş olabilir.|
-|Öneri|Bu sorun 6.0.2 EntityFramework içinde düzeltilmiştir. Performans sorununu önlemektir EntityFramework güncelleştirin.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+Visual Studio 2013 EntityFramework 6,0 kullanan bir uygulamanın başlatılması çok yavaş olabilir.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu sorun EntityFramework 6.0.2 içinde düzeltilmiştir. Performans sorununu önlemek için EntityFramework 'Ü güncelleştirin.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

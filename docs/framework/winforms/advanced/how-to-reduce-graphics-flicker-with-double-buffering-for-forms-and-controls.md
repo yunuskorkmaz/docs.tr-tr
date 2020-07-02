@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma'
+description: Windows Forms için çift arabelleğe alma ile grafik titreşimini azaltmayı öğrenin ve boyama işlemleriyle ilişkili titreşim sorunlarını gidermek için denetimleri kullanın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,28 +9,28 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: d143d7ec87a214a900264e069b329ea28a92c3e9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f7c0425729f8a1a780124621788a1c49e06e0c4e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618135"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Nasıl yapılır: Formlar ve Denetimler için İki Kez Arabelleğe Alma ile Grafik Titreşimini Azaltma
-İki kez arabelleğe almayı bellek arabelleği birden çok Boya işlemleriyle ilişkili titreşimini sorunları ele almak için kullanır. İki kez arabelleğe alma etkinleştirildiğinde, tüm Boya işlemleri ilk ekranda çizim yüzeyi yerine bir arabelleğe işlenir. Tüm Boya işlemleri tamamlandıktan sonra doğrudan ilişkili çizim yüzeyi ara belleğe kopyalanır. Yalnızca bir grafik işlem ekranda gerçekleştirildiğinden, karmaşık boyama işlemleriyle ilişkili görüntü titremeyi ortadan kalkar. Çoğu uygulama için varsayılan çift .NET Framework tarafından sağlanan arabelleğe alma işlemini en iyi sonuçlar sağlar. Standart Windows Forms denetimleri, varsayılan olarak arabelleğe çift. Varsayılan arabelleğe almayı formlarınızı sıfırladığınızdan çift etkinleştirebilirsiniz ve iki yolla denetimleri yazıldı. Kümelerden yapabilirsiniz <xref:System.Windows.Forms.Control.DoubleBuffered%2A> özelliğini `true`, veya çağırabilirsiniz <xref:System.Windows.Forms.Control.SetStyle%2A> ayarlanacak yöntemi <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> bayrak `true`. Her iki yöntem de, varsayılan çift form veya denetim için arabelleğe almayı etkinleştir ve titreşimsiz grafik işleme sağlar. Çağırma <xref:System.Windows.Forms.Control.SetStyle%2A> yöntemi için yazdığınız tüm işleme kodu yalnızca fazla özel denetimler için önerilir.  
+Çift arabelleğe alma, birden çok boyama işlemiyle ilişkili titreşim sorunlarını gidermek için bir bellek arabelleği kullanır. Çift arabelleğe alma etkinleştirildiğinde, tüm boyama işlemleri, ekranda çizim yüzeyi yerine öncelikle bir bellek arabelleğine işlenir. Tüm boyama işlemleri tamamlandıktan sonra, bellek arabelleği doğrudan onunla ilişkili çizim yüzeyine kopyalanır. Ekranda yalnızca bir grafik işlemi gerçekleştirildiğinden, karmaşık boyama işlemleriyle ilişkili görüntü titreşmesini ortadan kaldırmıştır. Çoğu uygulama için, .NET Framework tarafından belirtilen varsayılan çift arabelleğe alma en iyi sonuçları sağlayacaktır. Standart Windows Forms denetimleri varsayılan olarak iki kez arabelleğe alınır. Formlarınızın ve yazılan denetimlerde varsayılan çift arabelleğe almayı iki şekilde etkinleştirebilirsiniz. <xref:System.Windows.Forms.Control.DoubleBuffered%2A>Özelliğini olarak ayarlayabilir `true` ya da <xref:System.Windows.Forms.Control.SetStyle%2A> bayrağını olarak ayarlamak için yöntemini çağırabilirsiniz <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> `true` . Her iki yöntem de, formunuz veya denetiminiz için varsayılan çift arabelleğe almayı etkinleştirir ve titreşimsiz grafik işleme sağlar. Yöntemi çağırmak <xref:System.Windows.Forms.Control.SetStyle%2A> yalnızca tüm işleme kodunu yazdığınız özel denetimler için önerilir.  
   
- Animasyon veya gelişmiş bellek yönetimi gibi daha gelişmiş çift arabelleğe alma senaryoları için kendi çift arabelleğe alma mantığını uygulayabilir. Daha fazla bilgi için [nasıl yapılır: Arabelleğe alınan grafikleri elle yönetme](how-to-manually-manage-buffered-graphics.md).  
+ Animasyon veya gelişmiş bellek yönetimi gibi daha gelişmiş çift arabelleğe alma senaryolarında kendi çift arabelleğe alma mantığınızı uygulayabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: arabelleğe alınan grafikleri elle yönetme](how-to-manually-manage-buffered-graphics.md).  
   
 ### <a name="to-reduce-flicker"></a>Titreşimi azaltmak için  
   
-- Ayarlama <xref:System.Windows.Forms.Control.DoubleBuffered%2A> özelliğini `true`.  
+- <xref:System.Windows.Forms.Control.DoubleBuffered%2A>Özelliğini olarak ayarlayın `true` .  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#31)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#31)]  
   
- \- veya -  
+ \-veya  
   
-- Çağrı <xref:System.Windows.Forms.Control.SetStyle%2A> ayarlanacak yöntemi <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> bayrak `true`.  
+- <xref:System.Windows.Forms.Control.SetStyle%2A>Bayrağını ayarlamak için yöntemini çağırın <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> `true` .  
   
      [!code-csharp[System.Windows.Forms.LegacyBufferedGraphics#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/CS/Class1.cs#32)]
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  

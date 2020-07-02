@@ -4,12 +4,12 @@ description: Ubuntu üzerinde .NET Core SDK ve .NET Core çalışma zamanı yük
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: eef724138f2b908bf8601a509d298a06e55fb13e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324734"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619435"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu üzerinde .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 
@@ -201,16 +201,17 @@ sudo apt-get update; \
 
 Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET Core 'u el ile yüklüyorsanız veya kendi kendine içerilen bir uygulama yayımlarsanız, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
 
-- liblttng-ust0
-- libcurl3 (14. x ve 16. x için)
-- libcurl4 (18. x için)
-- libssl 1.0.0
-- libkrb5-3
-- zlib1g
+- libc6
+- libgcc1
+- libgssapı-krb5-2
 - libicu52 (14. x için)
 - libicu55 (16. x için)
-- libicu57 (17. x için)
 - libicu60 (18. x için)
+- libicu66 (20. x için)
+- libssl 1.0.0 (14. x, 16. x için)
+- libssl 1.1 (18. x için 20. x için)
+- libstdc + + 6
+- zlib1g
 
 *System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
 

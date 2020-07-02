@@ -1,17 +1,18 @@
 ---
 title: Birlikte Çalışma Hazırlama
+description: Yöntem bağımsız değişkenlerinde verilerin nasıl geçtiğini ve çağrılar sırasında yönetilen ve yönetilmeyen bellek arasında değer döndürme şeklini yöneten birlikte çalışma hazırlamayı kullanmaya başlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: 70514811a9d236dc485f64fc34297cdb057a1512
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124283"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618980"
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 
@@ -42,12 +43,12 @@ COM Ayrıca, verileri COM apartmanları veya farklı COM işlemleri arasında s�
 
 ### <a name="com-clients-and-managed-servers"></a>COM Istemcileri ve yönetilen sunucular
 
-[Regasm. exe (derleme kayıt aracı)](../tools/regasm-exe-assembly-registration-tool.md) tarafından kaydedilmiş bir tür kitaplığına sahip, aktarılmış bir yönetilen sunucuda, olarak `ThreadingModel` `Both`ayarlanmış bir kayıt defteri girişi vardır. Bu değer, sunucunun tek iş parçacıklı bir grupta (STA) veya çok iş parçacıklı grupta (MTA) etkinleştiribileceğini belirtir. Sunucu nesnesi, aşağıdaki tabloda gösterildiği gibi çağıranı ile aynı grupta oluşturulur:
+[Regasm.exe (derleme kayıt aracı)](../tools/regasm-exe-assembly-registration-tool.md) tarafından kaydedilmiş bir tür kitaplığına sahip aktarılmış bir yönetilen sunucunun, `ThreadingModel` olarak ayarlanmış bir kayıt defteri girişi vardır `Both` . Bu değer, sunucunun tek iş parçacıklı bir grupta (STA) veya çok iş parçacıklı grupta (MTA) etkinleştiribileceğini belirtir. Sunucu nesnesi, aşağıdaki tabloda gösterildiği gibi çağıranı ile aynı grupta oluşturulur:
 
 |COM istemcisi|.NET Server|Hazırlama gereksinimleri|
 |----------------|-----------------|-----------------------------|
 |A|`Both`STA olur.|Aynı apartman sıralaması.|
-|SıRAYA|`Both`MTA olur.|Aynı apartman sıralaması.|
+|MTA|`Both`MTA olur.|Aynı apartman sıralaması.|
 
 İstemci ve sunucu aynı grupta olduğundan, birlikte çalışma hazırlama hizmeti tüm veri sıralamasını otomatik olarak işler. Aşağıdaki çizimde, aynı COM stili apartman içinde yönetilen ve yönetilmeyen Heap 'ler arasında çalışan birlikte çalışma sıralama hizmeti gösterilmektedir.
 
@@ -57,14 +58,14 @@ Yönetilen bir sunucuyu dışarı aktarmayı planlıyorsanız, COM istemcisinin 
 
 ### <a name="managed-clients-and-com-servers"></a>Yönetilen Istemciler ve COM sunucuları
 
-Yönetilen istemci apartmanları için varsayılan ayar MTA ' dır; Ancak, .NET istemcisinin uygulama türü varsayılan ayarı değiştirebilir. Örneğin, Visual Basic istemci grubu ayarı STA ' dır. Yönetilen bir istemcinin grup <xref:System.STAThreadAttribute?displayProperty=nameWithType>ayarını incelemek <xref:System.MTAThreadAttribute?displayProperty=nameWithType>ve değiştirmek <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> için,, özelliğini <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> veya özelliğini kullanabilirsiniz.
+Yönetilen istemci apartmanları için varsayılan ayar MTA ' dır; Ancak, .NET istemcisinin uygulama türü varsayılan ayarı değiştirebilir. Örneğin, Visual Basic istemci grubu ayarı STA ' dır. <xref:System.STAThreadAttribute?displayProperty=nameWithType> <xref:System.MTAThreadAttribute?displayProperty=nameWithType> <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> Yönetilen bir istemcinin Grup ayarını incelemek ve değiştirmek için,, özelliğini veya özelliğini kullanabilirsiniz.
 
 Bileşenin yazarı bir COM sunucusunun iş parçacığı benzeşimini ayarlar. Aşağıdaki tabloda .NET istemcileri ve COM sunucuları için Grup ayarları birleşimleri gösterilmektedir. Ayrıca, kombinasyonlar için elde edilen sıralama gereksinimlerini gösterir.
 
 |.NET istemcisi|COM sunucusu|Hazırlama gereksinimleri|
 |-----------------|----------------|-----------------------------|
-|MTA (varsayılan)|SıRAYA<br /><br /> A|Birlikte çalışma hazırlama.<br /><br /> Birlikte çalışabilirlik ve COM sıralaması.|
-|A|SıRAYA<br /><br /> A|Birlikte çalışabilirlik ve COM sıralaması.<br /><br /> Birlikte çalışma hazırlama.|
+|MTA (varsayılan)|MTA<br /><br /> A|Birlikte çalışma hazırlama.<br /><br /> Birlikte çalışabilirlik ve COM sıralaması.|
+|A|MTA<br /><br /> A|Birlikte çalışabilirlik ve COM sıralaması.<br /><br /> Birlikte çalışma hazırlama.|
 
 Yönetilen bir istemci ve yönetilmeyen sunucu aynı Apartment ise, birlikte çalışma hazırlama hizmeti tüm veri sıralamasını işler. Ancak, istemci ve sunucu farklı apartmanlar halinde başlatıldığında COM sıralaması de gereklidir. Aşağıdaki çizimde bir gruplar arası çağrının öğeleri gösterilmektedir:
 

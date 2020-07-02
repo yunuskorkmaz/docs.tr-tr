@@ -1,5 +1,6 @@
 ---
 title: Nesneler için Varsayılan Hazırlama
+description: Nesneler için varsayılan hazırlamayı anlayın. Sıralama seçeneklerini gözden geçirin. Nesneleri arabirimlere veya çeşitlere, çeşitlere ve ByRef çeşitlere göre sıralama.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: e0de715a3ed33eedf212fc3e0e9930c9cbaa0a38
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618460"
 ---
 # <a name="default-marshaling-for-objects"></a>Nesneler için Varsayılan Hazırlama
 
-Olarak <xref:System.Object?displayProperty=nameWithType> yazılan parametreler ve alanlar, aşağıdaki türlerden biri olarak yönetilmeyen koda gösterilebilir:
+Olarak yazılan parametreler ve alanlar <xref:System.Object?displayProperty=nameWithType> , aşağıdaki türlerden biri olarak yönetilmeyen koda gösterilebilir:
 
 - Nesne bir parametre olduğunda bir değişken.
 
@@ -27,7 +28,7 @@ Yalnızca COM birlikte çalışması nesne türleri için sıralama destekler. V
 
 ## <a name="marshaling-options"></a>Sıralama seçenekleri
 
-Aşağıdaki tabloda, **nesne** veri türü için sıralama seçenekleri gösterilmektedir. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Özniteliği nesneleri sıralamak için <xref:System.Runtime.InteropServices.UnmanagedType> birkaç numaralandırma değeri sağlar.
+Aşağıdaki tabloda, **nesne** veri türü için sıralama seçenekleri gösterilmektedir. <xref:System.Runtime.InteropServices.MarshalAsAttribute>Özniteliği <xref:System.Runtime.InteropServices.UnmanagedType> nesneleri sıralamak için birkaç numaralandırma değeri sağlar.
 
 |Sabit listesi türü|Yönetilmeyen biçimin açıklaması|
 |----------------------|-------------------------------------|
@@ -36,7 +37,7 @@ Aşağıdaki tabloda, **nesne** veri türü için sıralama seçenekleri göster
 |**UnmanagedType. IUnknown**<br /><br /> (alanlar için varsayılan)|Bir **IUnknown** arabirimi.|
 |**UnmanagedType. IDispatch**|Bir **IDispatch** arabirimi.|
 
-Aşağıdaki örnek için `MarshalObject`yönetilen arabirim tanımını gösterir.
+Aşağıdaki örnek için yönetilen arabirim tanımını gösterir `MarshalObject` .
 
 ```vb
 Interface MarshalObject
@@ -116,7 +117,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>Nesne arabirime sıralanıyor
 
-Bir nesne bir arabirim olarak COM 'a sunulduğunda, bu arabirim yönetilen tür <xref:System.Object> için sınıf arabirimidir ( **_object** arabirimi). Bu arabirim, sonuç türü kitaplığında **IDispatch** bir IDispatch<xref:System.Runtime.InteropServices.UnmanagedType>() veya **IUnknown** (**UnmanagedType. IUnknown**) olarak yazılır. COM istemcileri yönetilen sınıfın veya **_object** arabirimi aracılığıyla türetilmiş sınıfları tarafından uygulanan herhangi bir üyenin üyelerini dinamik olarak çağırabilir. İstemci Ayrıca, yönetilen tür tarafından açıkça uygulanan başka bir arabirim elde etmek için **QueryInterface** 'i çağırabilir.
+Bir nesne bir arabirim olarak COM 'a sunulduğunda, bu arabirim yönetilen tür için sınıf arabirimidir <xref:System.Object> ( **_object** arabirimi). Bu arabirim **IDispatch** <xref:System.Runtime.InteropServices.UnmanagedType> , sonuç türü kitaplığında bir IDispatch () veya **IUnknown** (**UnmanagedType. IUnknown**) olarak yazılır. COM istemcileri yönetilen sınıfın veya **_object** arabirimi aracılığıyla türetilmiş sınıfları tarafından uygulanan herhangi bir üyenin üyelerini dinamik olarak çağırabilir. İstemci Ayrıca, yönetilen tür tarafından açıkça uygulanan başka bir arabirim elde etmek için **QueryInterface** 'i çağırabilir.
 
 ## <a name="marshaling-object-to-variant"></a>Nesne varyanta sıralanıyor
 
@@ -126,11 +127,11 @@ Bir nesne bir varyanta sıralanışında, iç varyant türü çalışma zamanın
 
 - Nesne, aşağıdaki tabloda listelenen herhangi bir türde bir örnek ise, sonuçta elde edilen varyant türü Sıralayıcı içinde yerleşik olan ve tabloda gösterilen kurallara göre belirlenir.
 
-- Sıralama davranışını açıkça kontrol etmeniz gereken diğer nesneler <xref:System.IConvertible> arabirimi uygulayabilir. Bu durumda, değişken türü <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> yönteminden döndürülen tür koduna göre belirlenir. Aksi takdirde, nesne **VT_UNKNOWN**türünde bir değişken olarak sıralanır.
+- Sıralama davranışını açıkça kontrol etmeniz gereken diğer nesneler <xref:System.IConvertible> arabirimi uygulayabilir. Bu durumda, değişken türü yönteminden döndürülen tür koduna göre belirlenir <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> . Aksi takdirde, nesne **VT_UNKNOWN**türünde bir değişken olarak sıralanır.
 
 ### <a name="marshaling-system-types-to-variant"></a>Sistem türlerini varyanta sıralama
 
-Aşağıdaki tabloda, yönetilen nesne türleri ve bunlara karşılık gelen COM Variant türleri gösterilmektedir. Bu türler yalnızca çağrılan metodun imzası tür <xref:System.Object?displayProperty=nameWithType>olduğunda dönüştürülür.
+Aşağıdaki tabloda, yönetilen nesne türleri ve bunlara karşılık gelen COM Variant türleri gösterilmektedir. Bu türler yalnızca çağrılan metodun imzası tür olduğunda dönüştürülür <xref:System.Object?displayProperty=nameWithType> .
 
 |Nesne türü|COM varyant türü|
 |-----------------|----------------------|
@@ -159,7 +160,7 @@ Aşağıdaki tabloda, yönetilen nesne türleri ve bunlara karşılık gelen COM
 |<xref:System.UIntPtr?displayProperty=nameWithType>|**VT_UINT**|
 |<xref:System.Array?displayProperty=nameWithType>|**VT_ARRAY**|
 
-Önceki örnekte `MarshalObject` tanımlanan arabirimi kullanarak, aşağıdaki kod ÖRNEĞI bir com sunucusuna çeşitli çeşit çeşitlemelerini nasıl geçirebileceğinizi göstermektedir.
+`MarshalObject`Önceki örnekte tanımlanan arabirimi kullanarak, aşağıdaki kod örneği BIR com sunucusuna çeşitli çeşit çeşitlemelerini nasıl geçirebileceğinizi göstermektedir.
 
 ```vb
 Dim mo As New MarshalObject()
@@ -181,7 +182,7 @@ mo.SetVariant((single)27.0);   // Marshal as variant of type VT_R4.
 mo.SetVariant((double)27.0);   // Marshal as variant of type VT_R8.
 ```
 
-Karşılık gelen yönetilen türleri olmayan com <xref:System.Runtime.InteropServices.ErrorWrapper>türleri, <xref:System.Runtime.InteropServices.DispatchWrapper> <xref:System.Runtime.InteropServices.UnknownWrapper>,, ve <xref:System.Runtime.InteropServices.CurrencyWrapper>gibi sarmalayıcı sınıflar kullanılarak sıralanabilir. Aşağıdaki kod örneği, bir COM sunucusuna çeşitli çeşit çeşitlemelerini geçirmek için bu sarmalayıcılarını nasıl kullanacağınızı gösterir.
+Karşılık gelen yönetilen türleri olmayan com türleri,,, ve gibi sarmalayıcı sınıflar kullanılarak sıralanabilir <xref:System.Runtime.InteropServices.ErrorWrapper> <xref:System.Runtime.InteropServices.DispatchWrapper> <xref:System.Runtime.InteropServices.UnknownWrapper> <xref:System.Runtime.InteropServices.CurrencyWrapper> . Aşağıdaki kod örneği, bir COM sunucusuna çeşitli çeşit çeşitlemelerini geçirmek için bu sarmalayıcılarını nasıl kullanacağınızı gösterir.
 
 ```vb
 Imports System.Runtime.InteropServices
@@ -211,7 +212,7 @@ Sarmalayıcı sınıflar <xref:System.Runtime.InteropServices> ad alanında tan�
 
 ### <a name="marshaling-the-iconvertible-interface-to-variant"></a>Iverli arabirimini VARIANT 'a hazırlama
 
-Önceki bölümde listelenenler dışındaki türler, <xref:System.IConvertible> arabirimini uygulayarak nasıl sıralandıklarından kontrol edebilir. Nesne **Iconverli** arabirimini UYGULARSA, com Variant türü, <xref:System.TypeCode> <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> yönteminden döndürülen numaralandırmanın değeri ile çalışma zamanında belirlenir.
+Önceki bölümde listelenenler dışındaki türler, arabirimini uygulayarak nasıl sıralandıklarından kontrol edebilir <xref:System.IConvertible> . Nesne **Iconverli** arabirimini UYGULARSA, com Variant türü, <xref:System.TypeCode> yönteminden döndürülen numaralandırmanın değeri ile çalışma zamanında belirlenir <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> .
 
 Aşağıdaki tabloda, her bir değer için **TypeCode** numaralandırması ve KARŞıLıK gelen com Variant türü için olası değerler gösterilmektedir.
 
@@ -242,7 +243,7 @@ Aşağıdaki tabloda, her bir değer için **TypeCode** numaralandırması ve KA
 |Desteklenmiyor.|**VT_CY**|
 |Desteklenmiyor.|**VT_VARIANT**|
 
-COM çeşidinin değeri, **IConvertible.to** *tür* arabirimi çağırarak belirlenir **; burada** *tür* , **ıtypbleble. GetTypeCode**'dan döndürülen türe karşılık gelen dönüştürme yordamdır. Örneğin, **ıtypbleble. GetTypeCode** 'dan **TypeCode. Double** döndüren bir nesne **VT_R8**türünde bir com değişkeni olarak sıralanır. **Iverbleface** arabirimine atama yaparak ve <xref:System.IConvertible.ToDouble%2A> metodunu çağırarak, değişkenin değerini (com çeşidinin **dblVal** alanında depolanır) elde edebilirsiniz.
+COM çeşidinin değeri, **IConvertible.to** *tür* arabirimi çağırarak belirlenir **; burada** *tür* , **ıtypbleble. GetTypeCode**'dan döndürülen türe karşılık gelen dönüştürme yordamdır. Örneğin, **ıtypbleble. GetTypeCode** 'dan **TypeCode. Double** döndüren bir nesne **VT_R8**türünde bir com değişkeni olarak sıralanır. **Iverbleface** arabirimine atama yaparak ve metodunu çağırarak, değişkenin DEĞERINI (com çeşidinin **dblVal** alanında depolanır) elde edebilirsiniz <xref:System.IConvertible.ToDouble%2A> .
 
 ## <a name="marshaling-variant-to-object"></a>Değişkeni nesneye sıralama
 
@@ -276,7 +277,7 @@ Bir değişkeni bir nesneye, türü ve bazen değeri, oluşturulan değişkenin 
 |**VT_RECORD**|Karşılık gelen paketlenmiş değer türü.|
 |**VT_VARIANT**|Desteklenmiyor.|
 
-COM 'dan yönetilen koda geçirilen ve sonra COM 'a geri dönüş değişken türleri, çağrının süresi boyunca aynı varyant türünü korumayabilir. **VT_DISPATCH** türünde BIR değişken COM 'tan .NET Framework geçirildiğinde ne olacağını düşünün. Sıralama sırasında, değişken öğesine dönüştürülür <xref:System.Object?displayProperty=nameWithType>. **Nesne** daha sonra com 'a geri geçirilirse, **VT_UNKNOWN**türünde bir varyanta geri getirilir. Bir nesne yönetilen koddan COM 'a sıralandığınızda üretilen varyantın, başlangıçta nesneyi oluşturmak için kullanılan değişkenle aynı türde olacağını garanti etmez.
+COM 'dan yönetilen koda geçirilen ve sonra COM 'a geri dönüş değişken türleri, çağrının süresi boyunca aynı varyant türünü korumayabilir. **VT_DISPATCH** türünde BIR değişken COM 'tan .NET Framework geçirildiğinde ne olacağını düşünün. Sıralama sırasında, değişken öğesine dönüştürülür <xref:System.Object?displayProperty=nameWithType> . **Nesne** daha sonra com 'a geri geçirilirse, **VT_UNKNOWN**türünde bir varyanta geri getirilir. Bir nesne yönetilen koddan COM 'a sıralandığınızda üretilen varyantın, başlangıçta nesneyi oluşturmak için kullanılan değişkenle aynı türde olacağını garanti etmez.
 
 ## <a name="marshaling-byref-variants"></a>ByRef türevlerini sıralama
 
@@ -306,17 +307,17 @@ Değişiklikleri çağırana geri yaymak için, parametrelerin başvuruya göre 
   > [!CAUTION]
   > Değişken **VT_BYREF** bayrak kümesine sahip olsa bile, değer tarafından geçirilen bir değişkenin değerini değiştirme yolu yoktur.
 
-- Başvuruya göre yönetilen koda geçirilen bir değişken, değişkenin başka bir başvuru içerdiğini belirtmek için de **VT_BYREF** bayrak verebilir. Varsa, değişken başvuruya göre geçirildiğinden bir **başvuru** nesnesine göre sıralanır. Sıralayıcı, varyantın içeriğini otomatik olarak referans yapar ve çağrıyı yapmadan önce yeni oluşturulan bir nesneye kopyalar. Çağrıdan dönüşte, nesnenin değeri yalnızca nesnenin geçirildiği nesneyle aynı türde olması durumunda, özgün varyant içindeki başvuruya geri yayılır. Diğer bir deyişle, yayma **VT_BYREF** bayrak kümesiyle bir varyant türünü değiştirmez. Çağrı sırasında nesnenin türü değiştirilirse, çağrıdan döndürülen bir <xref:System.InvalidCastException> meydana gelir.
+- Başvuruya göre yönetilen koda geçirilen bir değişken, değişkenin başka bir başvuru içerdiğini belirtmek için de **VT_BYREF** bayrak verebilir. Varsa, değişken başvuruya göre geçirildiğinden bir **başvuru** nesnesine göre sıralanır. Sıralayıcı, varyantın içeriğini otomatik olarak referans yapar ve çağrıyı yapmadan önce yeni oluşturulan bir nesneye kopyalar. Çağrıdan dönüşte, nesnenin değeri yalnızca nesnenin geçirildiği nesneyle aynı türde olması durumunda, özgün varyant içindeki başvuruya geri yayılır. Diğer bir deyişle, yayma **VT_BYREF** bayrak kümesiyle bir varyant türünü değiştirmez. Çağrı sırasında nesnenin türü değiştirilirse, <xref:System.InvalidCastException> çağrıdan döndürülen bir meydana gelir.
 
 Aşağıdaki tabloda, çeşitler ve nesneler için yayma kuralları özetlenmektedir.
 
 |Başlangıç|Alıcı|Geri yayılan değişiklikler|
 |----------|--------|-----------------------------|
-|**Değişken**  *v*|**Nesne**  *o*|Hiçbir zaman|
-|**Nesne**  *o*|**Değişken**  *v*|Hiçbir zaman|
-|**Değişken**   ***\****  *BD*|**Başvuru nesnesi**  *o*|Her zaman|
-|**Başvuru nesnesi**  *o*|**Değişken**   ***\****  *BD*|Her zaman|
-|**Değişken**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**Nesne**  *o*|Hiçbir zaman|
+|**Değişken**  *v*|**Nesne**  *o*|Asla|
+|**Nesne**  *o*|**Değişken**  *v*|Asla|
+|**Değişken** ***\**** *BD*     |**Başvuru nesnesi**  *o*|Her zaman|
+|**Başvuru nesnesi**  *o*|**Değişken** ***\**** *BD*     |Her zaman|
+|**Değişken**  *v* **(VT_BYREF** *&#124;* **VT_ \* )**|**Nesne**  *o*|Asla|
 |**Değişken**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Başvuru nesnesi**  *o*|Yalnızca tür değişmemiştir.|
 
 ## <a name="see-also"></a>Ayrıca bkz.

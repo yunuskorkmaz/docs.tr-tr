@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a6f93bbdf39a1b525e2daeb12afc3a6392a66e30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: ad953a1562db407c04d7860c60eb5964fe6fe2ca
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235954"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620639"
 ---
-### <a name="deserialization-of-mailmessage-objects-serialized-under-the-net-framework-45-may-fail"></a>.NET Framework 4. 5'altında serileştirilen MailMessage nesneleri seri durumdan çıkarma işlemi başarısız olabilir
+### <a name="deserialization-of-mailmessage-objects-serialized-under-the-net-framework-45-may-fail"></a>.NET Framework 4,5 altında seri hale getirilen MailMessage nesnelerinin serisini kaldırma işlemi başarısız olabilir
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5 ile başlayarak <xref:System.Web.Mail.MailMessage> nesneleri, ASCII olmayan karakterler içerebilir. .NET Framework 4'te yalnızca ASCII karakterleri desteklenir. <xref:System.Web.Mail.MailMessage> ASCII olmayan karakterler içeren ve .NET Framework 4.5 ya da daha sonra serileştirilmiş nesneler, .NET Framework 4 altında seri durumdan çıkarılamıyor.|
-|Öneri|Kodunuzu işlenirken özel durum işleme sağladığı, bir <xref:System.Web.Mail.MailMessage> nesne.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+4,5 .NET Framework başlayarak, <xref:System.Web.Mail.MailMessage> nesneler ASCII olmayan karakterler içerebilir. .NET Framework 4 ' te yalnızca ASCII karakterleri desteklenir. <xref:System.Web.Mail.MailMessage>ASCII olmayan karakterler içeren ve .NET Framework 4,5 veya üzeri bir sürümde seri hale getirilen nesneler .NET Framework 4 altında seri durumdan çıkarılamıyor.
+
+#### <a name="suggestion"></a>Öneri
+
+Bir nesne seri durumdan çıkarılırken kodunuzun özel durum işleme sağladığından emin olun <xref:System.Web.Mail.MailMessage> .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Web.Mail.MailMessage?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Web.Mail.MailMessage?displayProperty=nameWithType></li></ul>|

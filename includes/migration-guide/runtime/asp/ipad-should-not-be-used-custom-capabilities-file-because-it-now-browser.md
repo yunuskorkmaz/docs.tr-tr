@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 84f570cbbd97be79426e117d4c97ec182a397fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af10716fe5f4c07091e8605cdf620e4a499fb1e8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379535"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620547"
 ---
-### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a>Artık bir tarayıcı özelliği olduğundan IPad özel özellikleri dosyasında kullanılmamalıdır
+### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a>IPad artık bir tarayıcı özelliği olduğundan, IPad özel özellikler dosyasında kullanılmamalıdır
 
-|   |   |
-|---|---|
-|Ayrıntılar|Özel özellikleri dosyasında kullanılmamalıdır .NET Framework 4. 5 ' başlayarak, iPad varsayılan ASP.NET tarayıcı yetenekleri dosyası bir tanımlayıcıda olduğundan|
-|Öneri|İPad özgü özellikleri gerekirse, üzerinde önceden tanımlı bir ağ geçidi refID özellikleri ayarlayarak iPad davranışını değiştirmek gerekli &quot;IPad&quot; yerine yeni bir oluşturarak &quot;IPad&quot; Kimliğine göre kullanıcı aracısı eşleşen.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+İPad .NET Framework 4,5 ' den başlayarak, varsayılan ASP.NET Browser özellikleri dosyasındaki bir tanıtıcıdır, bu nedenle özel bir yetenekler dosyasında kullanılmamalıdır
+
+#### <a name="suggestion"></a>Öneri
+
+İPad 'e özgü yetenekler gerekliyse, &quot; &quot; &quot; &quot; Kullanıcı Aracısı eşleştirmesi tarafından yeni bir iPad kimliği oluşturmak yerine önceden tanımlanmış ağ geçidi yeniden oluşturma iPad üzerinde özellikleri ayarlayarak iPad davranışını değiştirmek gerekir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

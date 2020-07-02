@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9131c91b34f4c24653dea37ea39af6be6e072287
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620633"
 ---
-### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult > döndürür, örnek her zaman önbelleğe alınmış
+### <a name="enumerableemptylttresultgt-always-returns-cached-instance"></a>Sıralanabilir. boş &lt; TResult &gt; her zaman önbelleğe alınmış örnek döndürür
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5 içinde başlayan <xref:System.Linq.Enumerable.Empty%60%601> her zaman önbelleğe alınmış bir dahili örnek döndüren <xref:System.Collections.Generic.IEnumerable%601>. Daha önce <xref:System.Linq.Enumerable.Empty%60%601> boş bir önbellek <xref:System.Collections.Generic.IEnumerable%601> API çağrıldı zaman, bazı koşullarda, yani <xref:System.Linq.Enumerable.Empty%60%601> hızlı bir şekilde ve aynı anda farklı çağrıldı türün örneklerinin farklı çağrılar için döndürülemedi API.|
-|Öneri|Önceki davranışı belirleyici olduğu için kodu bağımlı beklenmez. Ancak, boş enumerables karşılaştırıldığı ve bazen eşit olması beklenen olası durumda açık boş diziler oluşturulmalıdır (<code>new T[0]</code>) kullanmak yerine <xref:System.Linq.Enumerable.Empty%60%601>.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,5 ' den başlayarak, <xref:System.Linq.Enumerable.Empty%60%601> her zaman önbelleğe alınmış bir iç örnek döndürür <xref:System.Collections.Generic.IEnumerable%601> . Daha önce, <xref:System.Linq.Enumerable.Empty%60%601> API çağrıldığında boş önbelleğe alma işlemi <xref:System.Collections.Generic.IEnumerable%601> yapılır, yani <xref:System.Linq.Enumerable.Empty%60%601> hızlı ve eşzamanlı olarak çağrılan bazı koşullarda, API 'ye yönelik farklı çağrılar için türün farklı örnekleri döndürülebilir.
+
+#### <a name="suggestion"></a>Öneri
+
+Önceki davranış belirleyici olmadığı için kodun bağımlı olması olası değildir. Ancak, boş numaralar karşılaştırılan ve bazen eşit olmayan bir şekilde bekleniyorsa, kullanmak yerine açık boş diziler oluşturulmalıdır ( <code>new T[0]</code> ) <xref:System.Linq.Enumerable.Empty%60%601> .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Linq.Enumerable.Empty%60%601?displayProperty=nameWithType></li></ul>|

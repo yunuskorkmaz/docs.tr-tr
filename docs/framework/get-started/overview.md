@@ -1,5 +1,6 @@
 ---
 title: .NET Framework'e Genel Bakış
+description: Windows Uygulamaları ve Web Hizmetleri oluşturmayı ve çalıştırmayı destekleyen bir teknoloji olan .NET hakkında genel bakış konusunu okuyun.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application development [.NET Framework]
@@ -7,93 +8,93 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 6beedb8e3fd03049cd58ce1d2dac78d1adb820ef
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618759"
 ---
-# <a name="overview-of-net-framework"></a>.NET Framework'e Genel Bakış
+# <a name="overview-of-net-framework"></a>.NET Framework’e Genel Bakış
 
-.NET Framework, Windows uygulamaları ve web hizmetleri oluşturmayı ve çalıştırmayı destekleyen bir teknolojidir. .NET Framework aşağıdaki hedefleri gerçekleştirmek için tasarlanmıştır:
+.NET Framework, Windows Uygulamaları ve Web Hizmetleri oluşturmayı ve çalıştırmayı destekleyen bir teknolojidir. .NET Framework, aşağıdaki hedefleri yerine getirmek için tasarlanmıştır:
 
-- Nesne kodunun yerel olarak depolanıp yürütülüp yürütülmediği, yerel olarak yürütülüp yürütülmediği veya web tarafından dağıtılıp yürütülmediği veya uzaktan yürütülüp yürütülmediği tutarlı bir nesne yönelimli programlama ortamı sağlamak için.
+- Nesne kodunun yerel olarak depolandığını ve yürütüldüğünü, yerel olarak yürütüldüğünü, ancak Web 'e dağıtıldığını veya uzaktan yürütüldüğünü, tutarlı bir nesne odaklı programlama ortamı sağlamak için.
 
 - Yazılım dağıtımını ve sürüm çakışmalarını en aza indiren bir kod yürütme ortamı sağlamak için.
 
-- Bilinmeyen veya yarı güvenilen bir üçüncü taraf tarafından oluşturulan kod da dahil olmak üzere kodun güvenli bir şekilde yürütülmesini destekleyen bir kod yürütme ortamı sağlamak için.
+- Bilinmeyen veya yarı güvenilir üçüncü taraflarca oluşturulan kod dahil olmak üzere kodun güvenli yürütülmesini sağlayan kod yürütme ortamı sağlamak için.
 
-- Komut dosyası veya yorumlanan ortamların performans sorunlarını ortadan kaldıran bir kod yürütme ortamı sağlamak.
+- Betikleştirilmiş veya yorumlanan ortamların performans sorunlarını ortadan kaldıran kod yürütme ortamı sağlamak için.
 
-- Geliştirici deneyimini Windows tabanlı uygulamalar ve Web tabanlı uygulamalar gibi çok çeşitli uygulama türlerinde tutarlı hale getirmek için.
+- Geliştirici deneyimini, Windows tabanlı uygulamalar ve Web tabanlı uygulamalar gibi yaygın olarak değişen türde uygulamalar arasında tutarlı hale getirmek için.
 
-- .NET Framework'e dayalı kodun diğer kodlarla tümlağandığından emin olmak için endüstri standartlarında tüm iletişimi oluşturmak.
+- .NET Framework dayalı kodun diğer kodla tümleştirilebildiğinden emin olmak için endüstri standartları üzerinde tüm iletişimi oluşturmak için.
 
 > [!NOTE]
-> Hem kullanıcılar hem de geliştiriciler için .NET Framework'e genel bir giriş için [bkz.](index.md)
+> Hem kullanıcılar hem de geliştiriciler için .NET Framework genel bir giriş için bkz. [kullanmaya başlayın](index.md).
 
-.NET Framework ortak dil çalışma süresi (CLR) ve .NET Framework sınıf kitaplığından oluşur. Ortak dil çalışma süresi .NET Framework'ün temelidir. Çalışma zamanını yürütme sırasında kodu yöneten, bellek yönetimi, iş parçacığı yönetimi ve remoting gibi temel hizmetleri sağlayan ve aynı zamanda sıkı tür güvenliğini ve güvenliği ve sağlamlığı teşvik eden diğer kod doğruluğu biçimlerini uygulayan bir aracı olarak düşünün. Aslında, kod yönetimi kavramı çalışma zamanının temel bir ilkesidir. Çalışma saatini hedefleyen kod yönetilen kod olarak bilinirken, çalışma süresini hedeflemeyen kod yönetilmeyen kod olarak bilinir. Sınıf kitaplığı, geleneksel komut satırı veya grafik kullanıcı arabirimi (GUI) uygulamalarından, web gibi ASP.NET tarafından sağlanan en son yeniliklere dayalı uygulamalara kadar çeşitli uygulamalar geliştirmek için kullandığınız yeniden kullanılabilir türlerin kapsamlı, nesne yönelimli bir koleksiyonudur Formlar ve XML web hizmetleri.
+.NET Framework, ortak dil çalışma zamanı (CLR) ve .NET Framework sınıf kitaplığından oluşur. Ortak dil çalışma zamanı .NET Framework temelidir. Çalışma zamanını, yürütme zamanında kodu yöneten bir aracı olarak düşünün; bellek yönetimi, iş parçacığı yönetimi ve uzaktan iletişim gibi Çekirdek Hizmetleri, ayrıca katı tür güvenliği ve güvenlik ve sağlamlık düzeyini destekleyen diğer kod doğruluğu biçimlerini de zorunlu olarak sağlar. Aslında kod yönetimi kavramı, çalışma zamanının temel bir ilkesidir. Çalışma zamanını hedefleyen kod, yönetilen kod olarak bilinir, ancak çalışma zamanını hedeflemeyen kod, yönetilmeyen kod olarak bilinir. Sınıf kitaplığı, Web Forms ve XML Web Hizmetleri gibi, ASP.NET tarafından sunulan en son yenilikleri temel alan uygulamalar için geleneksel komut satırı veya grafik kullanıcı arabirimi (GUI) uygulamalarından farklı uygulamalar geliştirmek üzere kullandığınız, kapsamlı, nesne yönelimli bir tür koleksiyonudur.
 
-.NET Framework, ortak dil çalışma süresini kendi süreçlerine yükleyen ve yönetilen kodun yürütülmesini başlatan ve bu nedenle hem yönetilen hem de yönetilmeyen özelliklerden yararlanan bir yazılım ortamı oluşturan yönetilmeyen bileşenler tarafından barındırılabilir. .NET Framework yalnızca birkaç çalışma zamanı ana bilgisayar sağlamaz, aynı zamanda üçüncü taraf çalışma zamanı ana bilgisayarlarının geliştirilmesini de destekler.
+.NET Framework, ortak dil çalışma zamanını işlemlere yükleyen ve yönetilen kodun yürütülmesini Başlatan yönetilmeyen bileşenler tarafından barındırılabilir ve bu sayede hem yönetilen hem de yönetilmeyen özelliklerden yararlanan bir yazılım ortamı oluşturulur. .NET Framework yalnızca birkaç çalışma zamanı Konağı sağlamaz, ancak üçüncü taraf çalışma zamanı ana bilgisayarlarının geliştirilmesini da destekler.
 
-Örneğin, ASP.NET yönetilen kod için ölçeklenebilir, sunucu tarafı ortamı sağlamak için çalışma saatini barındırAbilir. ASP.NET, her ikisi de bu makalede daha sonra tartışılan ASP.NET uygulamaları ve XML web hizmetlerini etkinleştirmek için çalışma süresiyle doğrudan çalışır.
+Örneğin, ASP.NET, yönetilen kod için ölçeklenebilir, sunucu tarafı bir ortam sağlamak üzere çalışma zamanını barındırır. ASP.NET, her ikisi de bu makalenin ilerleyen kısımlarında açıklanan ASP.NET uygulamalarını ve XML Web hizmetlerini etkinleştirmek için doğrudan çalışma zamanına göre çalışmaktadır.
 
-Internet Explorer, çalışma zamanını barındıran (MIME türü uzantısı biçiminde) yönetilmeyen bir uygulama örneğidir. Çalışma süresini barındırmak için Internet Explorer'ı kullanmak, yönetilen bileşenleri veya Windows Formları denetimlerini HTML belgelerine gömmenize olanak tanır. Çalışma süresini bu şekilde barındırmak yönetilen mobil kodu mümkün kılar, ancak yalnızca yarı güvenilen yürütme ve yalıtılmış dosya depolama gibi kod tekliflerini yöneten önemli geliştirmelerle.
+Internet Explorer, çalışma zamanını (bir MIME türü uzantısı biçiminde) barındıran yönetilmeyen bir uygulamaya bir örnektir. Çalışma zamanını barındırmak için Internet Explorer 'ın kullanılması, yönetilen bileşenleri veya Windows Forms denetimleri HTML belgelerinde eklemenize olanak sağlar. Çalışma zamanının bu şekilde barındırılması, yönetilen mobil kodu mümkün kılar, ancak yarı güvenilen yürütme ve yalıtılmış dosya depolaması gibi yalnızca yönetilen kodun sunduğu önemli geliştirmelerle sağlanır.
 
-Aşağıdaki resimde, ortak dil çalışma zamanı ve sınıf kitaplığı ile uygulamalarınız ve genel sistem arasındaki ilişki gösterilmektedir. Resimde ayrıca yönetilen kodun daha büyük bir mimari içinde nasıl çalıştığı da gösterilmektedir.
+Aşağıdaki çizimde, ortak dil çalışma zamanının ve sınıf kitaplığının uygulamalarınıza ve genel sisteme ilişkisi gösterilmektedir. Çizimde ayrıca yönetilen kodun daha büyük bir mimari içinde nasıl çalıştığı gösterilmektedir.
 
 ![Yönetilen kodun daha büyük bir mimari içinde nasıl çalıştığını gösteren ekran görüntüsü.](./media/overview/language-runtime-class-library-relationship.gif)
 
-Aşağıdaki bölümlerde .NET Framework'ün ana özellikleri daha ayrıntılı olarak açıklayınız.
+Aşağıdaki bölümlerde .NET Framework ana özellikleri daha ayrıntılı olarak açıklanır.
 
 ## <a name="features-of-the-common-language-runtime"></a>Ortak dil çalışma zamanının özellikleri
 
-Ortak dil çalışma süresi bellek, iş parçacığı yürütme, kod yürütme, kod güvenliği doğrulama, derleme ve diğer sistem hizmetlerini yönetir. Bu özellikler, ortak dil çalışma zamanında çalışan yönetilen kodiçin içseldir.
+Ortak dil çalışma zamanı belleği, iş parçacığı yürütmeyi, kod yürütmeyi, kod güvenliği doğrulamasını, derlemeyi ve diğer sistem hizmetlerini yönetir. Bu özellikler, ortak dil çalışma zamanında çalışan yönetilen koda yönelik bir iç özelliklerdir.
 
-Güvenlikle ilgili olarak, yönetilen bileşenler, kökenlerini (Internet, kurumsal ağ veya yerel bilgisayar gibi) içeren bir dizi etkene bağlı olarak çeşitli güven derecelerine verilir. Bu, yönetilen bir bileşenin aynı etkin uygulamada kullanılsa bile dosya erişim işlemleri, kayıt defteri erişim işlemleri veya diğer hassas işlevleri gerçekleştirebileceği veya gerçekleştiremediği anlamına gelir.
+Güvenlikle ilgili olarak, yönetilen bileşenlere, bunların kaynağını (Internet, kurumsal ağ veya yerel bilgisayar gibi) içeren bir dizi etkene bağlı olarak farklı güven dereceleri dağıtılır. Bu, yönetilen bir bileşenin aynı etkin uygulamada kullanılsa bile dosya erişim işlemleri, kayıt defteri erişim işlemleri veya diğer hassas işlevleri gerçekleştiremeyeceği anlamına gelir.
 
-Çalışma süresi ayrıca, ortak tür sistemi (CTS) adı verilen katı bir tür ve kod doğrulama altyapısı uygulayarak kod sağlamlığını da zorlar. CTS, yönetilen tüm kodun kendi kendini tanımlamasını sağlar. Çeşitli Microsoft ve üçüncü taraf dil derleyicileri CTS'ye uygun yönetilen kod oluşturur. Bu, yönetilen kodun diğer yönetilen türleri ve örnekleri tüketebilirken, tür sadakatini ve tür güvenliğini sıkı bir şekilde uygulayabileceği anlamına gelir.
+Çalışma zamanı ayrıca ortak tür sistemi (CTS) adlı katı bir tür ve kod doğrulama altyapısı uygulayarak kod sağlamlığı uygular. CTS, tüm yönetilen kodların kendi kendine açıklanmasını sağlar. Çeşitli Microsoft ve üçüncü taraf dil derleyicileri, CTS 'ye uygun yönetilen kod oluşturur. Bu, yönetilen kodun diğer yönetilen türleri ve örnekleri tüketebileceği, ancak tür uygunluğa ve tür güvenliği zorlarken emin olmak anlamına gelir.
 
-Buna ek olarak, çalışma zamanının yönetilen ortamı birçok yaygın yazılım sorunlarını ortadan kaldırır. Örneğin, çalışma zamanı nesne düzenini otomatik olarak işler ve nesneleri başvuruları yönetir ve artık kullanılmadıklarında serbest bırakılır. Bu otomatik bellek yönetimi, en yaygın iki uygulama hatasını, bellek sızıntılarını ve geçersiz bellek başvurularını giderir.
+Ayrıca, çalışma zamanının yönetilen ortamı birçok yaygın yazılım sorununu ortadan kaldırır. Örneğin, çalışma zamanı nesne yerleşimini otomatik olarak işler ve nesneleri artık kullanılmadıklarında serbest bırakır ve nesneler için başvuruları yönetir. Bu otomatik bellek yönetimi, en yaygın iki uygulama hatasını, bellek sızıntılarını ve geçersiz bellek başvurularını çözümler.
 
-Çalışma süresi aynı zamanda geliştirici üretkenliğini de hızlandırır. Örneğin, programcılar uygulamalarını seçtikleri geliştirme dillerinde yazar, ancak çalışma süresi, sınıf kitaplığı ve diğer geliştiriciler tarafından diğer dillerde yazılmış bileşenlerden tam olarak yararlanır. Çalışma saatini hedeflemeyi seçen herhangi bir derleyici satıcısı bunu yapabilir. .NET Framework'ü hedefleyen dil derleyicileri,.NET Framework'ün özelliklerini o dilde yazılmış varolan koda uygun hale getirerek varolan uygulamalar için geçiş işlemini büyük ölçüde kolaylaştırır.
+Çalışma zamanı geliştirici üretkenliğini da hızlandırır. Örneğin, programcılar geliştirme dillerinde uygulamalar yazarak, çalışma zamanının, sınıf kitaplığının ve diğer geliştiriciler tarafından diğer dillerde yazılmış bileşenlerin tam avantajlarından yararlanın. Çalışma zamanını hedeflemek üzere seçen tüm derleyici satıcıları bunu yapabilir. .NET Framework hedefleyen dil derleyicileri, mevcut uygulamalar için geçiş sürecini büyük ölçüde kolaylaştırmakta olan .NET Framework özelliklerini bu dilde yazılmış mevcut kod için kullanılabilir hale getirir.
 
-Çalışma süresi geleceğin yazılımı için tasarlanmış olsa da, aynı zamanda bugünün ve dünün yazılımLarını destekler. Yönetilen ve yönetilmeyen kodlar arasında birlikte çalışabilirlik, geliştiricilerin gerekli COM bileşenlerini ve DL'leri kullanmaya devam etmesini sağlar.
+Çalışma zamanı gelecekteki yazılım için tasarlanırken, bugün ve dün yazılımlarını da destekler. Yönetilen ve yönetilmeyen kod arasında birlikte çalışabilirlik, geliştiricilerin gerekli COM bileşenlerini ve DLL 'Leri kullanmaya devam etmesine olanak sağlar.
 
-Çalışma süresi performansı artırmak için tasarlanmıştır. Ortak dil çalışma süresi birçok standart çalışma zamanı hizmeti sağlasa da, yönetilen kod hiçbir zaman yorumlanamaz. Tam zamanında (JIT) derleme adı verilen bir özellik, yönetilen tüm kodların yürütüldettiği sistemin ana makine dilinde çalışmasını sağlar. Bu arada, bellek yöneticisi parçalanmış bellek olanaklarını kaldırır ve performansı daha da artırmak için bellek yerelliğini artırır.
+Çalışma zamanı, performansı artırmak için tasarlanmıştır. Ortak dil çalışma zamanı birçok standart çalışma zamanı hizmeti sağlasa da, yönetilen kod hiçbir şekilde yorumlanmaz. Tam zamanında (JıT) derleme adlı bir özellik, tüm yönetilen kodun, yürütüldüğü sistemin yerel makine dilinde çalışmasını sağlar. Bu arada, bellek Yöneticisi parçalanmış belleğin olanaklarını ortadan kaldırır ve performansı daha da artırmak için bellek başvurularını artırır.
 
-Son olarak, çalışma süresi Microsoft SQL Server ve Internet Information Services (IIS) gibi yüksek performanslı, sunucu tarafındaki uygulamalar tarafından barındırılabilir. Bu altyapı, işletme mantığınızı yazmak için yönetilen kodu kullanmanıza olanak sağlarken, aynı zamanda çalışma zamanı barındırmayı destekleyen endüstrinin en iyi kurumsal sunucularının üstün performansının keyfini çıkarır.
+Son olarak, çalışma zamanı Microsoft SQL Server ve Internet Information Services (IIS) gibi yüksek performanslı, sunucu tarafı uygulamalar tarafından barındırılabilir. Bu altyapı, iş mantığınızı yazmak için yönetilen kod kullanmanıza olanak sağlarken, sektördeki en iyi kurumsal sunucuların çalışma zamanı barındırmayı destekleyen üstün performansından de yararlanmaya devam eder.
 
 ## <a name="net-framework-class-library"></a>.NET Framework sınıf kitaplığı
 
-.NET Framework sınıf kitaplığı, ortak dil çalışma süresiyle sıkı bir şekilde tümleşen yeniden kullanılabilir türler topluluğudur. Sınıf kitaplığı, kendi yönetilen kodunuzu işlevsellik türeten türleri sağlayan nesne yönelimlidir. Bu sadece .NET Framework türlerinin kullanımını kolaylaştırmakla kalmıyor, aynı zamanda .NET Framework'ün yeni özelliklerini öğrenmeyle ilişkili süreyi de azaltır. Buna ek olarak, üçüncü taraf bileşenleri .NET Framework'deki sınıflarla sorunsuz bir şekilde tümleşir.
+.NET Framework sınıf kitaplığı, ortak dil çalışma zamanıyla sıkı bir şekilde tümleştirilen yeniden kullanılabilir türlerin bir koleksiyonudur. Sınıf kitaplığı, kendi yönetilen kodunuzun işlevselliği türettiği türler sağlayan nesne yönelimlidir. Bu yalnızca .NET Framework türlerini kullanımı kolay hale getirir, ancak aynı zamanda .NET Framework yeni özellikleriyle ilgili süreyi de azaltır. Ayrıca, üçüncü taraf bileşenleri .NET Framework sınıflarla sorunsuz bir şekilde tümleşir.
 
-Örneğin, .NET Framework toplama sınıfları kendi koleksiyon sınıflarınızı geliştirmek için bir dizi arabirim uygular. Koleksiyon sınıflarınız .NET Framework'deki sınıflarla sorunsuz bir şekilde uyum sağlar.
+Örneğin, .NET Framework koleksiyon sınıfları kendi koleksiyon sınıflarınızı geliştirmek için bir dizi arabirim uygular. Koleksiyon sınıflarınız .NET Framework sınıflarla sorunsuz bir şekilde Blend.
 
-Nesne yönelimli sınıf kitaplığından beklediğiniz gibi,.NET Framework türleri dize yönetimi, veri toplama, veritabanı bağlantısı ve dosya erişimi gibi bir dizi ortak programlama görevini gerçekleştirmenize olanak tanır. Bu ortak görevlere ek olarak, sınıf kitaplığı çeşitli özel geliştirme senaryolarını destekleyen türleri içerir. .NET Framework'ü aşağıdaki uygulama ve hizmet türlerini geliştirmek için kullanabilirsiniz:
+Nesne yönelimli bir sınıf kitaplığından bekleeceğiniz gibi .NET Framework türleri dize yönetimi, veri toplama, veritabanı bağlantısı ve dosya erişimi gibi bir dizi ortak programlama görevini gerçekleştirmenize olanak tanır. Bu ortak görevlere ek olarak, sınıf kitaplığı çeşitli özel geliştirme senaryolarını destekleyen türler içerir. Aşağıdaki uygulama ve hizmet türlerini geliştirmek için .NET Framework kullanabilirsiniz:
 
-- Konsol uygulamaları. [Yapı Konsolu Uygulamalarına](../../standard/building-console-apps.md)bakın.
+- Konsol uygulamaları. Bkz. [konsol uygulamaları oluşturma](../../standard/building-console-apps.md).
 
-- Windows GUI uygulamaları (Windows Forms). [Bkz. Windows Formları](../winforms/index.md).
+- Windows GUI uygulamaları (Windows Forms). Bkz. [Windows Forms](../winforms/index.md).
 
-- Windows Presentation Foundation (WPF) uygulamaları. [Bkz. Windows Sunu Vakfı.](../wpf/index.md)
+- Windows Presentation Foundation (WPF) uygulamaları. Bkz. [Windows Presentation Foundation](../wpf/index.md).
 
-- ASP.NET uygulamalar. [ASP.NET ile Web Uygulamaları'na](../develop-web-apps-with-aspnet.md)bakın.
+- ASP.NET uygulamaları. Bkz. [ASP.net Ile web uygulamaları](../develop-web-apps-with-aspnet.md).
 
-- Windows hizmetleri. [Bkz. Windows Hizmet Uygulamalarına Giriş](../windows-services/introduction-to-windows-service-applications.md).
+- Windows hizmetleri. Bkz. [Windows hizmet uygulamalarına giriş](../windows-services/introduction-to-windows-service-applications.md).
 
-- Windows Communication Foundation (WCF) kullanan hizmet odaklı uygulamalar. [WCF ile Hizmet Odaklı Uygulamalara](../wcf/index.md)Bakın.
+- Windows Communication Foundation (WCF) kullanan hizmet odaklı uygulamalar. [WCF Ile hizmet odaklı uygulamalara](../wcf/index.md)bakın.
 
-- Windows İş Akışı Temeli 'ni (WF) kullanarak iş akışı etkin uygulamalar. [Bkz. Windows İş Akışı Temeli.](../windows-workflow-foundation/index.md)
+- Windows Workflow Foundation (WF) kullanan iş akışı etkin uygulamalar. Bkz. [Windows Workflow Foundation](../windows-workflow-foundation/index.md).
 
-Windows Forms sınıfları, Windows GUI geliştirmeyi büyük ölçüde basitleştiren kapsamlı bir yeniden kullanılabilir tür kümesidir. bir ASP.NET Web Formu uygulaması yazarsanız, Web Formları sınıflarını kullanabilirsiniz.
+Windows Forms sınıfları, Windows GUI geliştirmeyi basitleştirecek olan kapsamlı bir yeniden kullanılabilir türler kümesidir. Bir ASP.NET Web formu uygulaması yazarsanız Web Forms sınıflarını kullanabilirsiniz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Sistem Gereksinimleri](system-requirements.md)
 - [Yükleme kılavuzu](../install/index.md)
-- [Geliştirme rehberi](../development-guide.md)
+- [Geliştirme kılavuzu](../development-guide.md)
 - [Araçlar](../tools/index.md)
-- [.NET örnekleri ve eğitimleri](../../samples-and-tutorials/index.md)
+- [.NET örnekleri ve öğreticiler](../../samples-and-tutorials/index.md)
 - [.NET API tarayıcısı](../../../api/index.md)

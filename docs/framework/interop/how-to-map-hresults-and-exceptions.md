@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme'
+description: COM metotlarından döndürülen HRESULT değerlerini .NET yöntemleri tarafından oluşturulan özel durumlara nasıl eşleneceğini inceleyin. Çalışma zamanı, COM ve .NET arasındaki geçişi işler.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 827e79bdefcde7ae94567e5341ade76097dc8eaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181400"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619110"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme
 COM yöntemleri, HRESULTs döndüren hataları raporlar; .NET yöntemleri özel durumlar oluşturarak bunları raporlar. Çalışma zamanı, iki arasındaki geçişi işler. .NET Framework her bir özel durum sınıfı bir HRESULT ile eşlenir.  
@@ -25,11 +26,11 @@ COM yöntemleri, HRESULTs döndüren hataları raporlar; .NET yöntemleri özel 
   
  **System. Exception**'ı genişleten bir sınıf oluşturursanız, oluşturma sırasında HRESULT alanını ayarlamanız gerekir. Aksi takdirde, temel sınıf HRESULT değerini atar. Yeni özel durum sınıflarını, özel durumun oluşturucusunda değeri sağlayarak mevcut bir HRESULT ile eşleyebilirsiniz.  
   
- Çalışma zamanının bazen iş parçacığında `HRESULT` `IErrorInfo` mevcut olduğu durumlarda zaman içindeki durumları yoksaydığına unutmayın.  Bu davranış, `HRESULT` ve ' `IErrorInfo` nin aynı hatayı temsil etmediği durumlarda gerçekleşebilir.  
+ Çalışma zamanının bazen `HRESULT` iş parçacığında mevcut olduğu durumlarda zaman içindeki durumları yoksaydığına unutmayın `IErrorInfo` .  Bu davranış, `HRESULT` ve ' nin `IErrorInfo` aynı hatayı temsil etmediği durumlarda gerçekleşebilir.  
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Yeni bir özel durum sınıfı oluşturmak ve bunu bir HRESULT ile eşlemek için  
   
-1. Adlı `NoAccessException` yeni bir özel durum sınıfı oluşturmak ve bunu HRESULT `E_ACCESSDENIED`ile eşlemek için aşağıdaki kodu kullanın.  
+1. Adlı yeni bir özel durum sınıfı oluşturmak ve bunu HRESULT ile eşlemek için aşağıdaki kodu kullanın `NoAccessException` `E_ACCESSDENIED` .  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -126,7 +127,7 @@ CMyClass::MethodThatThrows
   
  COM nesnesi **IErrorInfo**'yu desteklemiyorsa, çalışma zamanı varsayılan değerlerle bir özel durum nesnesi başlatır. Aşağıdaki tabloda bir özel durum nesnesiyle ilişkili her alan listelenmekte ve COM nesnesi **IErrorInfo 'yu**desteklediğinde varsayılan bilgilerin kaynağını tanımlıyor.  
   
- Çalışma zamanının bazen iş parçacığında `HRESULT` `IErrorInfo` mevcut olduğu durumlarda zaman içindeki durumları yoksaydığına unutmayın.  Bu davranış, `HRESULT` ve ' `IErrorInfo` nin aynı hatayı temsil etmediği durumlarda gerçekleşebilir.  
+ Çalışma zamanının bazen `HRESULT` iş parçacığında mevcut olduğu durumlarda zaman içindeki durumları yoksaydığına unutmayın `IErrorInfo` .  Bu davranış, `HRESULT` ve ' nin `IErrorInfo` aynı hatayı temsil etmediği durumlarda gerçekleşebilir.  
   
 |Özel durum alanı|COM 'tan bilgi kaynağı|  
 |---------------------|------------------------------------|  
@@ -143,4 +144,4 @@ CMyClass::MethodThatThrows
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
-- [Özel durumlar](../../standard/exceptions/index.md)
+- [Özel Durumlar](../../standard/exceptions/index.md)

@@ -1,17 +1,18 @@
 ---
 title: WebBrowser Denetimi
+description: Windows Forms WebBrowser denetiminin Web sayfalarını nasıl barındırdığı ve uygulamanıza Web 'e göz atma özellikleri sağladığı hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WebBrowser control [Windows Forms]
 - Web pages [Windows Forms], hosting in applications
 - Web pages [Windows Forms], Windows Forms controls
 ms.assetid: 12667861-5b5b-46bc-8fb5-675e25264c9f
-ms.openlocfilehash: b2dc9d124623d8018356c147c34ac6bc8da82209
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3961a4071929a1688b3f9c1e9b2d30835b487f89
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619682"
 ---
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser Denetimi (Windows Forms)
 Windows Forms `WebBrowser` denetimi Web sayfalarını barındırır ve uygulamanıza Web 'e göz atma özellikleri sağlar.  
@@ -39,7 +40,7 @@ Windows Forms `WebBrowser` denetimi Web sayfalarını barındırır ve uygulaman
  Denetim tarafından barındırılan bir Web sayfasında, uygulama kodunuz ve DHTML arasında iki yönlü iletişimin nasıl ayarlanacağını açıklar.  
   
  [Yönetilen HTML Belgesi Nesne Modelini Kullanma](using-the-managed-html-document-object-model.md)  
- <xref:System.Windows.Forms.WebBrowser> denetimi tarafından barındırılan HTML sayfalarının nasıl düzenleneceğini veya oluşturulacağını betimleyen konuları sağlar.  
+ Denetim tarafından barındırılan HTML sayfalarının nasıl düzenleneceğini veya oluşturulacağını betimleyen konuları sağlar <xref:System.Windows.Forms.WebBrowser> .  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.WebBrowser> sınıfı  
@@ -80,4 +81,4 @@ Windows Forms `WebBrowser` denetimi Web sayfalarını barındırır ve uygulaman
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)

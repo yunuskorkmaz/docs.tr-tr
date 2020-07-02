@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: e7a5a95a5d13f3396d396ad0d74a19a0efa3a967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d606fbc4048421bc572cfe3db2e06bbcd4529e25
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59235836"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620604"
 ---
-### <a name="sqlvariant-data-uses-sqlvariant-collation-rather-than-database-collation"></a>Veritabanı Harmanlama yerine sql_variant harmanlama sql_variant veri kullanır.
+### <a name="sql_variant-data-uses-sql_variant-collation-rather-than-database-collation"></a>Sql_variant veriler veritabanı harmanlaması yerine sql_variant harmanlama kullanır
 
-|   |   |
-|---|---|
-|Ayrıntılar|<code>sql_variant</code> Veri kaldırmanın <code>sql_variant</code> veritabanı harmanlama yerine harmanlama.|
-|Öneri|Veritabanı harmanlaması farklı olması durumunda bu değişiklik olası veri bozulmasına çözüm <code>sql_variant</code> harmanlama. Bozulmuş verilere dayanan uygulamalar hatayla karşılaşabilir.|
-|Kapsam|Geçirgen|
+#### <a name="details"></a>Ayrıntılar
+
+<code>sql_variant</code>veriler <code>sql_variant</code> veritabanı harmanlaması yerine harmanlamayı kullanır.
+
+#### <a name="suggestion"></a>Öneri
+
+Veritabanı harmanlaması harmanlamadan farklıysa bu değişiklik olası veri bozulmasına yöneliktir <code>sql_variant</code> . Bozulmuş verilere dayanan uygulamalar hatayla karşılaşabilir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Geçirgen|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

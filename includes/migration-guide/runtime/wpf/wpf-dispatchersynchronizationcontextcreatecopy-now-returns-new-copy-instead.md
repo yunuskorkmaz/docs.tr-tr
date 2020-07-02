@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: ff4d67a1c821fc96130c4efbd88eb5c56766da06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc6066fd0b23d299158114cb397934041b99ba47
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379684"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620705"
 ---
-### <a name="wpf-dispatchersynchronizationcontextcreatecopy-now-returns-a-new-copy-instead-of-the-current-instance"></a>WPF DispatcherSynchronizationContext.CreateCopy artık geçerli örneği yerine yeni bir kopyasını döndürür
+### <a name="wpf-dispatchersynchronizationcontextcreatecopy-now-returns-a-new-copy-instead-of-the-current-instance"></a>WPF DispatcherSynchronizationContext. CreateCopy şimdi geçerli örnek yerine yeni bir kopya döndürüyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4'te <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy> öncelikle bir performans iyileştirme olarak geçerli örneğe bir başvuru döndürdü. .NET Framework 4.5, eşit başvuruların, yürütülen iş parçacığının doğru eşitleme bağlamıdır göstermesini sonuçlandırmak ilk kez mümkün hale getiren yeni bir örneğini döndürür.  Bu başvuruları kimliğini denetleyen kod etkileneceğini, beklenmez, ancak değişiklik nedeniyle, çağıran kod <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy> geçiş .NET Framework 4.5 veya sonraki bir parçası olarak test edilmelidir.|
-|Öneri|Unutmayın, <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy> artık yeni bir döndüreceği <xref:System.Threading.SynchronizationContext?displayProperty=name> nesne. Daha önce bu şekilde oluşturulan başvuruları denklik kullanılan kodu gerçekten doğru bağlamda oldu, ancak karşı .NET Framework 4.5 veya üzeri yapılandırıldığında mu olup olmadığını denetlenirken değil.  Olası sorunlara neden karşın, etkilenen kod yollarını uygulanması bu herhangi bir sorun paylaşılmamasını belirlemek için yeterli olması gerekir.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4 ' te, <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy> birincil olarak bir performans iyileştirmesi olarak geçerli örneğe bir başvuru döndürür. .NET Framework 4,5 ' de, ilk kez bu eşit başvuruları sonuçlandırma, yürütülen iş parçacığının doğru eşitleme bağlamında olduğunu belirten yeni bir örnek döndürür.  Bu başvuruların kimliğini denetleyen kodun etkileneceği, ancak değişiklik nedeniyle çağıran kod, <xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy> .NET Framework 4,5 veya daha yeni bir sürüme geçişin bir parçası olarak test edilmelidir.
+
+#### <a name="suggestion"></a>Öneri
+
+<xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy>Şimdi yeni bir nesne döndüren farkında olun <xref:System.Threading.SynchronizationContext?displayProperty=fullName> . Daha önce, bu şekilde oluşturulan başvuruların denklik olarak kullanıldığı kod gerçekten doğru bağlamda olup olmadığını denetmıyordu, ancak .NET Framework 4,5 veya üzeri bir sürümde oluşturulmuştur.  Soruna neden olma olasılığı düşüktür, etkilenen kod yollarının kullanılması bunun herhangi bir sorun olup olmadığını belirlemede yeterli olmalıdır.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Windows.Threading.DispatcherSynchronizationContext.CreateCopy?displayProperty=nameWithType></li></ul>|

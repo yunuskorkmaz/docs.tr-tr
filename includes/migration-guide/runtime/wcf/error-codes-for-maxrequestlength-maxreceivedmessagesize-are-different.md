@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: c9d6111edcfeec6852f23cc0768833de32e61022
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3aafb14b65f7c0f9e5d77927809547f9d4b96e1c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59981716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620652"
 ---
-### <a name="error-codes-for-maxrequestlength-or-maxreceivedmessagesize-are-different"></a>Hata kodları maxRequestLength veya maxReceivedMessageSize için farklıdır
+### <a name="error-codes-for-maxrequestlength-or-maxreceivedmessagesize-are-different"></a>MaxRequestLength veya maxReceivedMessageSize için hata kodları farklı
 
-|   |   |
-|---|---|
-|Ayrıntılar|Wcf'de ileti web maxRequestLength (ASP.NET'te) aşan Internet Information Services (IIS) veya ASP.NET Development Server'da barındırılan hizmetleri veya maxReceivedMessageSize (wcf'de) sahip farklı hata değişkenden HTTP durum kodu 400 (Hatalı istek değişti ) iken 413 (istek varlığı çok büyük) ve maxRequestLength veya maxReceivedMessageSize ayarını aşan iletiler throw bir <xref:System.ServiceModel.ProtocolException?displayProperty=name> özel durum. Bu, aktarım modunun akış yoluyla servis taleplerini içerir.|
-|Öneri|Bu değişiklik, burada ileti uzunluğu ASP.NET veya WCF tarafından izin verilen sınırları aştığı durumlarda hata ayıklamayı kolaylaştırır. Bir HTTP 400 durum koduna göre işleyen herhangi bir kodu değiştirmeniz gerekir.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+Internet Information Services (IIS) veya ASP.NET geliştirme sunucusunda barındırılan, maxRequestLength (ASP.NET) veya maxReceivedMessageSize (WCF 'de) ' da bulunan WCF Web hizmetlerindeki iletiler, HTTP durum kodu 400 (Hatalı Istek) ile 413 (Istek varlığı çok büyük) olarak değiştirilmiştir ve maxRequestLength veya maxReceivedMessageSize ayarını aşan iletiler bir <xref:System.ServiceModel.ProtocolException?displayProperty=fullName> özel durum oluşturur. Bu, aktarım modunun akışa alındığı durumları içerir.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklik, ileti uzunluğunun ASP.NET veya WCF tarafından izin verilen sınırları aştığı durumlarda hata ayıklamayı kolaylaştırır. HTTP 400 durum koduna göre işlem yapan tüm kodları değiştirmeniz gerekir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

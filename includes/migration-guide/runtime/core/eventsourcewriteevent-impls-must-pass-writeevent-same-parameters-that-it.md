@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 47d0aa554d88726caca35fa6bebe4d863fdc0695
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 662c140f019add66ff6605d47ad1f32c3f50d711
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61842056"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620574"
 ---
-### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>Aynı aldığı parametreleri (artı kimliği) EventSource.WriteEvent impls WriteEvent geçmelidir
+### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>EventSource. WriteEvent IMPLS 'ın aynı parametreleri aldığı aynı parametreleri (artı ID) iletmeli olması gerekir
 
-|   |   |
-|---|---|
-|Ayrıntılar|Çalışma zamanı, artık aşağıdaki belirten sözleşmenin uygular: Öğesinden türetilen bir sınıf <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> tanımlayan bir ETW olay yöntemi temel sınıf çağırmalıdır <code>EventSource.WriteEvent</code> olay kimliği yöntemiyle ETW olay yöntemine geçilen aynı bağımsız değişkenleri tarafından izlenen.|
-|Öneri|Bir <xref:System.IndexOutOfRangeException?displayProperty=name> , özel durum bir <xref:System.Diagnostics.Tracing.EventListener?displayProperty=name> okur <xref:System.Diagnostics.Tracing.EventSource?displayProperty=name> bu sözleşmeyi ihlal eden bir olay kaynağı için işlem verileri.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Çalışma zamanı şimdi aşağıdakileri belirten sözleşmeyi zorluyor: <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> BIR ETW olay yöntemi tanımlayan öğesinden türetilmiş bir sınıf, <code>EventSource.WriteEvent</code> olay kimliği ile bırlıkte, ETW olay yönteminin geçirildiği bağımsız değişkenlerle birlikte temel sınıf metodunu çağırmalıdır.
+
+#### <a name="suggestion"></a>Öneri
+
+<xref:System.IndexOutOfRangeException?displayProperty=fullName> <xref:System.Diagnostics.Tracing.EventListener?displayProperty=fullName> <xref:System.Diagnostics.Tracing.EventSource?displayProperty=fullName> Bu sözleşmeyi ihlal eden bir olay kaynağı için işlemdeki verileri okuduğunda bir özel durum oluşturulur.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.5.1|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

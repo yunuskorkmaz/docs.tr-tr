@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87013a04f7ff975e40a3c49c41c1c5acc2374066
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379592"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620676"
 ---
-### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF serileştiren Expressions.Literal\<T > tarih/saat farklı artık (özel XAML ayrıştırıcıları sonu)
+### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF deyimleri seri hale getirir. sabit değerli &lt; T &gt; DateTimeS Now (özel xaml ayrıştırıcılarını keser)
 
-|   |   |
-|---|---|
-|Ayrıntılar|İlişkili <xref:System.Windows.Markup.ValueSerializer> nesnesi bir <xref:System.DateTime?displayProperty=name> veya <xref:System.DateTimeOffset?displayProperty=name> ikinci nesnesi ve <xref:System.DateTime.Millisecond?displayProperty=name> bileşenleri sıfır olmayan ve (için bir <xref:System.DateTime?displayProperty=name> değer), <xref:System.DateTime.Kind> özelliği için özellik öğesi belirtilmeyen değil bir dize yerine söz dizimi. Bu değişiklik sağlayan <xref:System.DateTime?displayProperty=name> ve <xref:System.DateTimeOffset?displayProperty=name> değerlerinin gidiş dönüşlü olmasına olanak. Nitelik söz dizimindeki giriş XAML'inin doğru çalışmayacağını varsayan özel XAML ayrıştırıcıları.|
-|Öneri|Bu değişiklik sağlayan <xref:System.DateTime?displayProperty=name> ve <xref:System.DateTimeOffset?displayProperty=name> değerlerinin gidiş dönüşlü olmasına olanak. Nitelik söz dizimindeki giriş XAML'inin doğru çalışmayacağını varsayan özel XAML ayrıştırıcıları.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+İlişkili <xref:System.Windows.Markup.ValueSerializer> nesne, <xref:System.DateTime?displayProperty=fullName> <xref:System.DateTimeOffset?displayProperty=fullName> ikinci ve bileşenleri sıfır olmayan bir veya nesnesi <xref:System.DateTime.Millisecond?displayProperty=fullName> (bir değer için), özelliği de <xref:System.DateTime?displayProperty=fullName> <xref:System.DateTime.Kind> bir dize yerine özellik öğesi söz dizimine belirtilmemiş olarak dönüştürecek. Bu değişiklik <xref:System.DateTime?displayProperty=fullName> , ve <xref:System.DateTimeOffset?displayProperty=fullName> değerlerinin yuvarlak olarak değiştirilmesini sağlar. Nitelik söz dizimindeki giriş XAML'inin doğru çalışmayacağını varsayan özel XAML ayrıştırıcıları.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklik <xref:System.DateTime?displayProperty=fullName> , ve <xref:System.DateTimeOffset?displayProperty=fullName> değerlerinin yuvarlak olarak değiştirilmesini sağlar. Nitelik söz dizimindeki giriş XAML'inin doğru çalışmayacağını varsayan özel XAML ayrıştırıcıları.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-ms.openlocfilehash: 9eb6cbef969e51dee1a72d402c124d06f08fe5c4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 918208bb44f84988b7fe903c589e82c7bf1f59e3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620774"
 ---
 # <a name="virtual-members"></a>Sanal Üyeler
 Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değiştirilir. Bunlar, sağladıkları genişletilebilirlik açısından geri çağırmaları oldukça benzerdir ancak yürütme performansı ve bellek tüketimi açısından daha iyidir. Ayrıca, sanal Üyeler var olan türde (özelleşme) özel bir tür oluşturulmasını gerektiren senaryolarda daha doğal bir şekilde çalışır.
@@ -33,7 +33,7 @@ Sanal Üyeler geçersiz kılınabilir, böylece alt sınıfın davranışı değ
 
  Bir sınıfın ortak üyeleri, bu sınıfın doğrudan tüketicilere yönelik doğru işlevsellik kümesini sağlamalıdır. Sanal üyeler, alt sınıflarda geçersiz kılınabilecek şekilde tasarlanmıştır ve korumalı erişilebilirlik, tüm sanal genişletilebilirlik noktalarını, kullanılabilecekleri yere kapsamı için harika bir yoldur.
 
- *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
+ *Bölüm &copy; 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
  *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 

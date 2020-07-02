@@ -4,12 +4,12 @@ description: .NET Core SDK ve .NET Core çalışma zamanını de, yüklemenin ç
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ded9d2be72e8ec476d5ace752e44d92eb0ee1028
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 68a3e848b3d80806e875dfb2fb7e2cbf223f8ad5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324919"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619500"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-debian"></a>.NET Core SDK veya .NET Core çalışma zamanını Demerkezi üzerine yükler
 
@@ -127,7 +127,26 @@ sudo apt-get update; \
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET Core 'u el ile yüklüyorsanız veya kendi kendine içerilen bir uygulama yayımlarsanız, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
+
+- libc6
+- libgcc1
+- libgssapı-krb5-2
+- libicu52 (8. x için)
+- libicu57 (9. x için)
+- libicu63 (10. x için)
+- libicu67 (11. x için)
+- libssl 1.0.0 (8. x için)
+- libssl 1.1 (9. x-11. x için)
+- libstdc + + 6
+- zlib1g
+
+*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız vardır:
+
+- libgdiplus (sürüm 6.0.1 veya üzeri)
+
+  > [!WARNING]
+  > En son bir *libgdiplus* sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
 
 ## <a name="scripted-install"></a>Komut dosyalı yüklemesi
 

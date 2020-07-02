@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama'
+description: Bkz. geri çağırma işlevlerini uygulama. Bu örnekte, platform Invoke kullanan yönetilen bir uygulama, bir bilgisayardaki her pencere için tanıtıcı değerini yazdırır.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: b7aae1e70ac736d60bed1e79291235db1c220281
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 31c657372e760c8d57f9714b20178967ad85fcd3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619123"
 ---
 # <a name="how-to-implement-callback-functions"></a>Nasıl yapılır: Geri Çağırma İşlevlerini Uygulama
 Aşağıdaki yordam ve örnek, platform çağırma kullanılarak yönetilen bir uygulamanın, yerel bilgisayardaki her bir pencere için tanıtıcı değerini nasıl yazdırabileceğini göstermektedir. Özellikle, yordam ve örnek, pencere tanıtıcısının değerini yazdırmak için Windows listesini ve yönetilen bir geri çağırma işlevini (geri çağırma) adım adım almak için **EnumWindows** işlevini kullanır.  
@@ -28,7 +29,7 @@ Aşağıdaki yordam ve örnek, platform çağırma kullanılarak yönetilen bir 
   
      Bu işlevin bir geri çağırma gerektirdiğini belirten bir Clue, **Lpenumfunc** bağımsız değişkeninin varlığına sahip olur. Bir geri çağırma işlevine işaretçi alan bağımsız değişkenlerin adında, **LP** (uzun işaretçi) ön ekinin **Func** sonekiyle birleştirilmiş olması yaygındır. Win32 işlevleri hakkındaki belgeler için bkz. Microsoft Platform SDK.  
   
-2. Yönetilen geri çağırma işlevini oluşturun. Örnek, iki bağımsız değişken (**HWND** ve `CallBack` **lParam**) alan çağrılan bir temsilci türü bildirir. İlk bağımsız değişken pencerenin bir tanıtıcıdır; İkinci bağımsız değişken uygulama tanımlı. Bu sürümde, her iki bağımsız değişken de tamsayı olmalıdır.  
+2. Yönetilen geri çağırma işlevini oluşturun. Örnek, `CallBack` iki bağımsız değişken (**HWND** ve **lParam**) alan çağrılan bir temsilci türü bildirir. İlk bağımsız değişken pencerenin bir tanıtıcıdır; İkinci bağımsız değişken uygulama tanımlı. Bu sürümde, her iki bağımsız değişken de tamsayı olmalıdır.  
   
      Geri çağırma işlevleri, hatayı göstermek için genellikle sıfır dışı değerleri döndürür ve başarıyı gösterir. Bu örnek, numaralandırmaya devam etmek için return değerini açık olarak **true** olarak ayarlar.  
   

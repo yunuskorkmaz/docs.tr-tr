@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 4cc91e7c6054fdb8e96cecf7120df5b9f25de56c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 598df2121b480d411dac9c5571772a4a8d22b5ff
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620634"
 ---
-### <a name="mef-catalogs-implement-ienumerable-and-therefore-can-no-longer-be-used-to-create-a-serializer"></a>MEF katalogları IEnumerable uygulamak ve bu nedenle bundan böyle bir seri hale getirici oluşturmak için kullanılabilir
+### <a name="mef-catalogs-implement-ienumerable-and-therefore-can-no-longer-be-used-to-create-a-serializer"></a>MEF katalogları IEnumerable arabirimini uygular ve bu nedenle artık seri hale getirici oluşturmak için kullanılamaz
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5 ile başlayarak, MEF katalogları IEnumerable uygulamak ve bu nedenle bundan böyle bir seri hale getirici oluşturmak için kullanılabilir (<xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> nesne). MEF kataloğu seri hale getirilmeye çalışıldığında bir özel durum oluşur.|
-|Öneri|Artık bir seri hale getirici oluşturmak için MEF kullanabilirsiniz|
-|Kapsam|Ana|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,5 ' den başlayarak MEF katalogları IEnumerable 'ı uygular ve bu nedenle artık seri hale getirici (nesne) oluşturmak için kullanılamaz <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> . MEF kataloğu seri hale getirilmeye çalışıldığında bir özel durum oluşur.
+
+#### <a name="suggestion"></a>Öneri
+
+Bir serileştirici oluşturmak için artık MEF kullanılamıyor
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

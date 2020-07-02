@@ -8,12 +8,12 @@ helpviewer_keywords:
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-ms.openlocfilehash: ad7774fd197db80ce84b3b8a5baa4e9ee06b6cef
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4000944c3b913f71bc18462cea9062e9237ae53f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289804"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619539"
 ---
 # <a name="events-and-callbacks"></a>Etkinlikler ve Geri Aramalar
 Geri çağrılar, bir çerçevenin bir temsilci aracılığıyla Kullanıcı koduna geri çağırmasını sağlayan genişletilebilirlik noktalarıdır. Bu temsilciler genellikle bir yöntemin parametresi aracılığıyla çerçeveye geçirilir.
@@ -30,7 +30,7 @@ Geri çağrılar, bir çerçevenin bir temsilci aracılığıyla Kullanıcı kod
 
  ✔️, `Func<...>` `Action<...>` `Expression<...>` geri çağırmalar ile API 'leri tanımlarken özel temsilciler yerine yeni, veya türlerini kullanın.
 
- `Func<...>`ve `Action<...>` genel temsilcileri temsil eder. `Expression<...>`derlenebilecek ve daha sonra çalışma zamanında çağrılan ve aynı zamanda seri hale getirilebilir ve uzak işlemlere geçirilebilecek işlev tanımlarını temsil eder.
+ `Func<...>`ve `Action<...>` genel temsilcileri temsil eder. `Expression<...>`derlenebilecek ve sonra çalışma zamanında çağrılabilen ancak aynı zamanda seri hale getirilebilir ve uzak işlemlere geçirilebilecek işlev tanımlarını temsil eder.
 
  ✔️ `Expression<...>` , ve temsilcileri yerine kullanmanın performans etkilerine ilişkin etkilerini anlayın `Func<...>` `Action<...>` .
 
@@ -38,7 +38,7 @@ Geri çağrılar, bir çerçevenin bir temsilci aracılığıyla Kullanıcı kod
 
  ✔️, bir temsilciyi çağırarak, rastgele kod yürüttüğünü ve güvenlik, doğruluk ve uyumluluk repercusumu olduğunu anlamış olursunuz.
 
- *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
+ *Bölüm &copy; 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
  *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 

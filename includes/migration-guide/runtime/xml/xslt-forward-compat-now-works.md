@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 2dd97fcce13ed1ac7baf4cd02f5881d31d7a9c4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: e3b9711ac66901d69838de4c9f309d086b06fd4d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620730"
 ---
-### <a name="xslt-forward-compat-now-works"></a>Nasıl çalıştığını XSLT İleri Uyumluluk
+### <a name="xslt-forward-compat-now-works"></a>XSLT ileriye dönük uyumluluk artık çalışmaktadır
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4'te XSLT 1.0 ileriye dönük aşağıdaki sorunları vardı:<ul><li>Sürümü 2.0 değerine ayarlanmış bir stil sayfasının yüklenmesi başarısız oldu ve ayrıştırıcı tanınmayan bir XSLT 1.0 yapısıyla karşılaştı.</li><li><code>xsl:sort</code> Yapısı başarısız stil sayfası sürümü 1.1 olarak ayarlanmışsa verileri sıralayamadı.</li></ul>.NET Framework 4.5, bu sorunlar düzeltildi ve XSLT 1.0 ileriye dönük uyumluluk modu düzgün çalışır.|
-|Öneri|Sort uyulduğundan artık, verileri farklı bazı durumlarda sıralanır ancak çoğu uygulama etkilenmeyen, olmalıdır. Varsa <code>xsl:sort</code> olan 1.1 stil sayfasında kullanıldığında, uygulamaları sıralanmamış siparişin veri bağlı değil, onaylayın. Uygulamaları sıralama davranışını 4.0 güveniyorsanız, kaldırma <code>xsl:sort</code> stil sayfasından.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4 ' te, XSLT 1,0 ileri uyumluluğu aşağıdaki sorunlara sahipti:<ul><li>Sürümü 2.0 değerine ayarlanmış bir stil sayfasının yüklenmesi başarısız oldu ve ayrıştırıcı tanınmayan bir XSLT 1.0 yapısıyla karşılaştı.</li><li><code>xsl:sort</code>Stil sayfası sürümü 1,1 olarak ayarlandıysa, yapı verileri sıralayamadı.</li></ul>.NET Framework 4,5 ' de, bu sorunlar düzeltildi ve XSLT 1,0 ileri uyumluluk modu düzgün şekilde çalışmaktadır.
+
+#### <a name="suggestion"></a>Öneri
+
+Çoğu uygulama etkilenmemelidir, ancak bazı durumlarda veriler farklı sıralanacaktır çünkü artık xsl: Sort kullanılır. <code>xsl:sort</code>1,1 Stil sayfalarında kullanılırsa, uygulamaların sıralanmamış veri sırasına bağlı olmadığını onaylayın. Uygulamalar 4,0 sıralama davranışını kullanıyorsa, <code>xsl:sort</code> stil sayfasından kaldırın.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType></li></ul>|

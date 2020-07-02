@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: fcaee245e98dfe71beb4042a2664a14b64cf2398
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 241184d61d718fedfea396260e739d2dbc05c305
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620603"
 ---
-### <a name="sqlconnection-can-no-longer-connect-to-sql-server-1997-or-databases-using-the-via-adapter"></a>SqlConnection artık SQL Server 1997'den veya VIA bağdaştırıcısı kullanarak veritabanlarına bağlanabilir
+### <a name="sqlconnection-can-no-longer-connect-to-sql-server-1997-or-databases-using-the-via-adapter"></a>SqlConnection artık VıA bağdaştırıcısını kullanarak SQL Server 1997 veya veritabanlarına bağlanamaz
 
-|   |   |
-|---|---|
-|Ayrıntılar|Kullanarak SQL Server veritabanlarına bağlantı [sanal arabirim bağdaştırıcısı (VIA) protokolünü](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms191229%28v=sql.105%29) artık desteklenmemektedir. Bir SQL Server veritabanına bağlanmak için kullanılan protokol, bağlantı dizesinde görülebilir. VIA bağlantı aracılığıyla içerecek:&lt;servername&gt;. VIA dışındaki bir protokolü aracılığıyla bu uygulamaya SQL'e bağlanma, (tcp: veya np: gibi), sonra hiçbir değişiklik karşılaşıldı. Ayrıca, SQL Server 7 (1997'den) bağlantı artık desteklenmemektedir.|
-|Öneri|VIA Protokolü kullanım dışı olduğundan SQL veritabanlarına bağlanmak için alternatif bir protokolü kullanılmalıdır. En yaygın kullanılan protokol, TCP/IP'yi ' dir. TCP/IP bağlanma hakkında daha fazla bilgi için bkz. [veritabanı örneği için TCP/IP protokolünü etkinleştirin](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb909712(v=vs.90)). Veritabanı yalnızca gelen içinde intranet erişilirse, paylaşılan kanallar Protokolü'nü Ağ yavaşsa daha iyi performans sağlayabilir.|
-|Kapsam|Kenar|
+#### <a name="details"></a>Ayrıntılar
+
+[Sanal arabirim bağdaştırıcısı (VIA) protokolünü](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms191229(v=sql.105)) kullanarak SQL Server veritabanlarına bağlantı artık desteklenmemektedir. Bir SQL Server veritabanına bağlanmak için kullanılan protokol bağlantı dizesinde görünür. Bir Ile bağlantı, ile arasında şunu içerir: &lt; ServerName &gt; . Bu uygulama, SQL 'e aracılığıyla (TCP: veya NP: örneğin) dışında bir protokol aracılığıyla bağlanıyorsa, hiçbir bir değişikliğe karşı karşılaşacaktır. Ayrıca, SQL Server 7 (1997) bağlantıları artık desteklenmemektedir.
+
+#### <a name="suggestion"></a>Öneri
+
+VıA Protokolü kullanım dışıdır, bu nedenle SQL veritabanlarına bağlanmak için alternatif bir protokol kullanılmalıdır. Kullanılan en yaygın protokol TCP/IP 'dir. TCP/IP üzerinden bağlanma hakkında daha fazla bilgi için bkz. [bir veritabanı örneği IÇIN TCP/IP protokolünü etkinleştirme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb909712(v=vs.90)). Veritabanına yalnızca bir intranet içinden erişilirse, ağ yavaşsa paylaşılan kanallar Protokolü daha iyi performans sağlayabilir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String)?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String,System.Data.SqlClient.SqlCredential)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String)></li><li><xref:System.Data.SqlClient.SqlConnection.%23ctor(System.String,System.Data.SqlClient.SqlCredential)></li></ul>|

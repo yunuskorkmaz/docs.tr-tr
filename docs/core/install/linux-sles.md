@@ -4,12 +4,12 @@ description: SLES 'e .NET Core SDK ve .NET Core çalışma zamanı yüklemenin �
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: e1a2490c1d653eb07aebdd51e34e1bf462906482
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 8f64efcc8206b47855871104e5b6914570c06da0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324702"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619422"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-sles"></a>SLES 'e .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 
@@ -78,7 +78,22 @@ Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken kar�
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir. Ancak, .NET Core 'u el ile yüklüyorsanız veya kendi kendine içerilen bir uygulama yayımlarsanız, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:
+
+- krb5
+- libıu
+- libopenssl1_1
+
+Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10**yüklemeniz gerekir.
+
+Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
+
+*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:
+
+- [libgdiplus (sürüm 6.0.1 veya üzeri)](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > En son bir *libgdiplus* sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz. Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.
 
 ## <a name="scripted-install"></a>Komut dosyalı yüklemesi
 

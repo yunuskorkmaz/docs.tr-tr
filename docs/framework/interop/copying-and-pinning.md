@@ -1,5 +1,6 @@
 ---
 title: Kopyalama ve Sabitleme
+description: Birlikte çalışma sıralayıcısı 'nın sıralanmış verileri nasıl kopyalayabilir veya sabitleyebilir olduğunu gözden geçirin. Verilerin kopyalanması, verilerin bir kopyasını bir bellek konumundan başka bir konuma koyar.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-ms.openlocfilehash: f6db7d37293015911c1285d39e19bf7542a7ac59
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7931813cd5254375eda81515f388c85c78fa284
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618785"
 ---
 # <a name="copying-and-pinning"></a>Kopyalama ve Sabitleme
 
@@ -24,7 +25,7 @@ Değer tarafından geçirilen yöntem bağımsız değişkenleri, yığın üzer
 
 ![Değere ve başvuruya göre geçirilen başvuru türlerini gösteren diyagram.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)
 
-Veri sabitleme, verileri geçerli bellek konumunda geçici olarak kilitler ve bu sayede ortak dil çalışma zamanının çöp toplayıcısının yeniden konumlandırılmasını sağlar. Sıralayıcı, performansı kopyalama ve geliştirme yükünü azaltmak için verileri sabitler. Verilerin türü, sıralama işlemi sırasında kopyalanıp kopyalanmadığını veya sabitlenmeyeceğini belirler.  Sabitleme <xref:System.String>, gibi nesneler için sıralama sırasında otomatik olarak gerçekleştirilir, ancak <xref:System.Runtime.InteropServices.GCHandle> sınıfı kullanarak belleği el ile sabitleyebilirsiniz.
+Veri sabitleme, verileri geçerli bellek konumunda geçici olarak kilitler ve bu sayede ortak dil çalışma zamanının çöp toplayıcısının yeniden konumlandırılmasını sağlar. Sıralayıcı, performansı kopyalama ve geliştirme yükünü azaltmak için verileri sabitler. Verilerin türü, sıralama işlemi sırasında kopyalanıp kopyalanmadığını veya sabitlenmeyeceğini belirler.  Sabitleme, gibi nesneler için sıralama sırasında otomatik olarak gerçekleştirilir <xref:System.String> , ancak sınıfı kullanarak belleği el ile sabitleyebilirsiniz <xref:System.Runtime.InteropServices.GCHandle> .
 
 ## <a name="formatted-blittable-classes"></a>Biçimlendirilen blittable sınıfları
 
@@ -41,9 +42,9 @@ Biçimlendirilen [non-blittable](blittable-and-non-blittable-types.md) sınıfla
 
 - Blittable olmayan bir sınıf başvuruya göre sıralandıysanız, çağrılan, veri yapısının bir kopyasına yönelik bir işaretçi alır.
 
-- <xref:System.Runtime.InteropServices.InAttribute> Özniteliği ayarlandıysa, bu kopya her zaman örneğin durumuyla başlatılır ve gerektiğinde sıralama yapılır.
+- <xref:System.Runtime.InteropServices.InAttribute>Özniteliği ayarlandıysa, bu kopya her zaman örneğin durumuyla başlatılır ve gerektiğinde sıralama yapılır.
 
-- <xref:System.Runtime.InteropServices.OutAttribute> Öznitelik ayarlandıysa, durum her zaman dönüş sırasında örneğe kopyalanır ve gerektiğinde sıralama yapılır.
+- <xref:System.Runtime.InteropServices.OutAttribute>Öznitelik ayarlandıysa, durum her zaman dönüş sırasında örneğe kopyalanır ve gerektiğinde sıralama yapılır.
 
 - **InAttribute** ve **OutAttribute** öğelerinin her ikisi de ayarlanırsa, her iki kopya de gereklidir. Her iki öznitelik de atlanırsa Sıralayıcı, kopyayı ortadan kaldırarak iyileştirebilirler.
 

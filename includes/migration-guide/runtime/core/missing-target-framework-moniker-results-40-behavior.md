@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 29b8feb7959c718391b963c8402b97351b93fa49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 26a001ec2009a1a66dd9038b9bd3a42d7bcefb73
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805239"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620585"
 ---
-### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>Eksik hedef çerçeve adı 4.0 davranışla sonuçlanır.
+### <a name="missing-target-framework-moniker-results-in-40-behavior"></a>4,0 davranışında hedef Framework bilinen ad sonuçları eksik
 
-|   |   |
-|---|---|
-|Ayrıntılar|Olmadan uygulamalar bir <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=name> otomatik olarak .NET Framework 4.0 (quirks) semantiği kullanarak çalışan derleme düzeyi gerçekleştirilse uygulanır. Yüksek kaliteli emin olmak için birlikte tüm ikili dosyaları açıkça öznitelikli önerilir bir <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=name> birlikte oluşturuldukları .NET Framework sürümünü gösteren. Otomatik olarak uygulamak MSBuild proje dosyasında hedef çerçeve adı kullanarak neden olacağını unutmayın bir <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=name>.|
-|Öneri|A <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=name> doğrudan derleme veya bir hedef çerçeve belirterek öznitelik ekleme yoluyla iletilmelidir [proje dosyası veya Visual Studio Proje Özellikleri GUI](https://devblogs.microsoft.com/visualstudio/visual-studio-managed-multi-targeting-part-1-concepts-target-framework-moniker-target-framework/).|
-|Kapsam|Ana|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=fullName>Derleme düzeyinde uygulanmamış uygulamalar, .NET Framework 4,0 ' nin semantiği (olağandışı KS) kullanılarak otomatik olarak çalıştırılır. Yüksek kaliteli olduğundan emin olmak için tüm ikili dosyaların, <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=fullName> derlendikleri .NET Framework sürümünü belirten bir ile açıkça ilişkilendirilmesi önerilir. Bir proje dosyasında hedef çerçeve bilinen adının kullanılması, MSBuild 'in otomatik olarak uygulanmasına neden olacağını unutmayın <xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=fullName> .
+
+#### <a name="suggestion"></a>Öneri
+
+<xref:System.Runtime.Versioning.TargetFrameworkAttribute?displayProperty=fullName>Özniteliği doğrudan derlemeye ekleme yoluyla veya [Proje dosyasında ya da Visual Studio 'nun proje özellikleri GUI 'si aracılığıyla](https://devblogs.microsoft.com/visualstudio/visual-studio-managed-multi-targeting-part-1-concepts-target-framework-moniker-target-framework/)bir hedef çerçeve belirtilerek sağlanmalıdır.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
+|Tür|Çalışma Zamanı|

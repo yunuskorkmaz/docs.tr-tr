@@ -2,12 +2,12 @@
 title: "C 'de zaman uyumsuz programlama #"
 description: Async, await, Task ve Task kullanılarak zaman uyumsuz programlama için C# dil desteğine genel bakış<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619721"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Async ve await ile asenkron programlama
 
@@ -56,7 +56,7 @@ Yukarıdaki kodda kötü bir uygulama gösterilmektedir: zaman uyumsuz işlemler
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
 
 > [!IMPORTANT]
-> Geçen toplam süre kabaca ilk senkronizasyon sürümü ile aynıdır. Kod, bazı önemli özelliklerden zaman uyumsuz programlamanın avantajlarından faydalanır.
+> Geçen toplam süre kabaca ilk senkronizasyon sürümü ile aynıdır. Kod, zaman uyumsuz programlama için bazı temel özelliklerden yararlanmıştır.
 
 > [!TIP]
 > , Ve ' nin tüm ve sırasıyla,, ve ' ın bir bütün olarak, ve ' ı `FryEggsAsync` `FryBaconAsync` `ToastBreadAsync` döndürecek şekilde güncelleştirilmiştir `Task<Egg>` `Task<Bacon>` `Task<Toast>` . Yöntemler özgün sürümlerinden "Async" sonekini içerecek şekilde yeniden adlandırılır. Uygulamaları, bu makalenin ilerleyen bölümlerinde [son sürümün](#final-version) bir parçası olarak gösterilir.

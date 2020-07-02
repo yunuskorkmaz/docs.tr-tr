@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bir TableLayoutPanel Denetimindeki Satırları ve Sütunları Düzenleme'
+description: Windows Forms denetimlerinizin satırlarını ve sütunlarını düzenlemek için sütun ve satır stilleri iletişim kutusunu nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
@@ -8,27 +9,27 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 4473b20eea57088104a51eb1b6c080219223d214
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: cfd2ca4be5d5a2658a9a129d911f1dba9670ccfd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628650"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619357"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Nasıl yapılır: Bir TableLayoutPanel Denetimindeki Satırları ve Sütunları Düzenleme
 
-Denetimlerinizin satırlarını ve sütunlarını düzenlemek için, **sütun ve satır stilleri** iletişim kutusu olarak adlandırılan <xref:System.Windows.Forms.TableLayoutPanel> denetimin koleksiyon düzenleyicisini kullanabilirsiniz.
+<xref:System.Windows.Forms.TableLayoutPanel>Denetimlerinizin satırlarını ve sütunlarını düzenlemek için, **sütun ve satır stilleri** iletişim kutusu adlı denetimin koleksiyon düzenleyicisini kullanabilirsiniz.
 
 > [!NOTE]
-> Bir denetimin birden çok satır veya sütunu yaymasına isterseniz, denetimin `RowSpan` ve `ColumnSpan` özelliklerini ayarlayın. Daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms denetimleri bir TableLayoutPanel kullanarak düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
+> Bir denetimin birden çok satır veya sütunu yaymasına isterseniz, `RowSpan` `ColumnSpan` Denetim üzerindeki ve özelliklerini ayarlayın. Daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms denetimleri bir TableLayoutPanel kullanarak düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 >
 > Bir hücrenin içindeki bir denetimi hizalamak istiyorsanız veya bir denetimin bir hücrede Esnetme olmasını istiyorsanız denetimin <xref:System.Windows.Forms.Control.Anchor%2A> özelliğini kullanın. Daha fazla bilgi için bkz. [Izlenecek yol: Windows Forms denetimleri bir TableLayoutPanel kullanarak düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).
 
 ## <a name="to-edit-rows-and-columns"></a>Satırları ve sütunları düzenlemek için
 
-1. **Araç kutusundan** bir <xref:System.Windows.Forms.TableLayoutPanel> denetimini formunuza sürükleyin.
+1. <xref:System.Windows.Forms.TableLayoutPanel> **Araç kutusu** ' ndan formunuza bir denetim sürükleyin.
 
-2. <xref:System.Windows.Forms.TableLayoutPanel> denetimin tasarımcı eylemleri simgesine (![küçük siyah ok](./media/designer-actions-glyph.gif)) tıklayın ve **satır ve sütunları Düzenle** ' yi seçerek **sütun ve satır stilleri** iletişim kutusunu açın. Ayrıca <xref:System.Windows.Forms.TableLayoutPanel> denetimine sağ tıklayıp, kısayol menüsünden **satırları ve sütunları Düzenle** ' yi seçebilirsiniz.
+2. <xref:System.Windows.Forms.TableLayoutPanel>Denetimin tasarımcı eylemleri glifi ' ne ( ![ küçük siyah ok ](./media/designer-actions-glyph.gif) ) tıklayın ve **sütun ve satır stilleri** iletişim kutusunu açmak için **satırları ve sütunları Düzenle** ' yi seçin. Ayrıca denetime sağ tıklayıp <xref:System.Windows.Forms.TableLayoutPanel> kısayol menüsünden **satırları ve sütunları Düzenle** ' yi seçebilirsiniz.
 
 3. Sütun eklemek veya kaldırmak için **üye türü** açılan liste kutusundan **sütunlar** ' ı seçin.
 

@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 9b8f5e210c21bc516e7965f1a092cc6ff1371b8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: eafbdd2d42977381fb4d77748a3c9a2595ff2936
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805310"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620657"
 ---
-### <a name="xmlserializer-fails-while-serializing-a-type-that-hides-an-accessible-member-with-an-inaccessible-one"></a>XmlSerializer ile erişilemez bir erişilebilir bir üyeyi gizler tür serileştirirken başarısız olur.
+### <a name="xmlserializer-fails-while-serializing-a-type-that-hides-an-accessible-member-with-an-inaccessible-one"></a>XmlSerializer, erişilebilir bir üyeyi, erişilemeyen bir üyeyi gizleyen bir tür serileştirirken başarısız oluyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|Türetilmiş bir tür serileştirilirken <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> tür bir erişilemez alan veya bir alan veya özellik, daha önce erişilebilir (Genel, örneğin) aynı ada ('new' anahtar sözcüğü) temel türde gizleyen bir özellik varsa başarısız olabilir.|
-|Öneri|Yeni, gizleme üyesi için erişilebilir hale getirerek bu sorun çözülebilir <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> (göre genel, örneğin İmleme). Alternatif olarak, aşağıdaki yapılandırma ayarı için 4.0 dönecek <xref:System.Xml.Serialization.XmlSerializer?displayProperty=name> sorunu düzeltir davranışı:<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Türetilmiş bir tür serileştirilirken, <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> tür, ana tür üzerinde daha önce erişilebilen (örneğin, genel, örneğin) aynı ada sahip bir alan veya özellik içeriyorsa, erişilebilir bir alanı veya özelliği (' New ' anahtar sözcüğü aracılığıyla) içeren bir alan veya özellik içeriyorsa, bu başarısız olabilir.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu sorun, yeni bir <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> (örneğin, genel olarak işaretlenerek) tarafından erişilebilen yeni ve gizlenebildiği için çözülebilir. Alternatif olarak, aşağıdaki yapılandırma ayarı 4,0 davranışa dönüşecektir <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> , bu da sorunu düzeltir:<pre><code class="lang-xml">&lt;system.xml.serialization&gt;&#13;&#10;&lt;xmlSerializer useLegacySerializerGeneration=&quot;true&quot; /&gt;&#13;&#10;&lt;/system.xml.serialization&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Object,System.Xml.Serialization.XmlSerializationWriter)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String,System.String)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Object,System.Xml.Serialization.XmlSerializationWriter)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.Stream,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.IO.TextWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String)?displayProperty=nameWithType></li><li><xref:System.Xml.Serialization.XmlSerializer.Serialize(System.Xml.XmlWriter,System.Object,System.Xml.Serialization.XmlSerializerNamespaces,System.String,System.String)?displayProperty=nameWithType></li></ul>|

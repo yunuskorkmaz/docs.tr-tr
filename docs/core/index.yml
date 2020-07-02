@@ -1,23 +1,23 @@
 ### YamlMime:Landing
-title: .NET Çekirdek dokümantasyonu
-summary: Platformlar arası uygulamalar oluşturmak için açık kaynak kodlu, genel amaçlı bir geliştirme çerçevesi olan .NET Core hakkında bilgi edinin.
+title: .NET Core belgeleri
+summary: Platformlar arası uygulamalar oluşturmaya yönelik açık kaynaklı, genel amaçlı bir geliştirme çerçevesi olan .NET Core hakkında bilgi edinin.
 metadata:
-  title: .NET Çekirdek dokümantasyonu
-  description: .NET Core, platformlar arası uygulamalar oluşturmak için açık kaynak kodlu, genel amaçlı bir geliştirme platformudur.
+  title: .NET Core belgeleri
+  description: .NET Core, platformlar arası uygulamalar oluşturmaya yönelik açık kaynaklı, genel amaçlı bir geliştirme platformudur.
   ms.topic: landing-page
   ms.date: 03/25/2020
-  ms.openlocfilehash: b11a41587e2b9eba2df744da3d8c19baa0936fb2
-  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+  ms.openlocfilehash: 0d8e8515512068ba391a906182142eb5ee2f38c4
+  ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "80351710"
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85620761"
 landingContent:
 - title: .NET Core hakkında bilgi edinin
   linkLists:
   - linkListType: overview
     links:
-    - text: .NET Core'a Giriş
+    - text: NET Core’a giriş
       url: introduction.md
     - text: .NET Core’a genel bakış
       url: about.md
@@ -25,11 +25,13 @@ landingContent:
       url: sdk.md
   - linkListType: get-started
     links:
-    - text: .NET Core ile başlayın
+    - text: .NET Core ile çalışmaya başlama
       url: get-started.md
+    - text: ASP.NET Core kullanmaya başlayın
+      url: /aspnet/core/
   - linkListType: concept
     links:
-    - text: .NET Çekirdek destek politikası
+    - text: .NET Core destek ilkesi
       url: https://dotnet.microsoft.com/platform/support/policy/dotnet-core
   - linkListType: whats-new
     links:
@@ -45,33 +47,33 @@ landingContent:
       url: versions/selection.md
   - linkListType: download
     links:
-    - text: .NET Core indirme
+    - text: .NET Core İndirmeleri
       url: https://dotnet.microsoft.com/download/dotnet-core
   - linkListType: how-to-guide
     links:
-    - text: Install .NET Core SDK
+    - text: .NET Core SDK yüklensin
       url: install/sdk.md
-    - text: .NET Core çalışma süresini yükleme
+    - text: .NET Core çalışma zamanı 'nı yükler
       url: install/runtime.md
-    - text: Yüklemek için bir Linux paket yöneticisi kullanma
+    - text: Yüklemek için bir Linux Paket Yöneticisi kullanın
       url: install/linux-package-manager-ubuntu-1904.md
-    - text: Yüklü sürümleri denetleme
+    - text: Yüklü sürümleri denetle
       url: install/how-to-detect-installed-versions.md
   - linkListType: reference
     links:
     - text: .NET Core SDK ve çalışma zamanı bağımlılıkları
       url: install/dependencies.md
-- title: .NET Core ile başlayın
+- title: .NET Core ile çalışmaya başlama
   linkLists:
   - linkListType: video
     links:
-    - text: 'Öğretici: Alo Dünya 10 dakika içinde'
+    - text: 'Öğretici: 10 dakika içinde Merhaba Dünya'
       url: https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro
   - linkListType: tutorial
     links:
-    - text: Visual Studio Code'da Bir Merhaba Dünya uygulaması oluşturun
+    - text: Visual Studio Code Merhaba Dünya uygulama oluşturma
       url: tutorials/with-visual-studio-code.md
-    - text: Visual Studio'da Bir Merhaba Dünya uygulaması oluşturun
+    - text: Visual Studio 'da Merhaba Dünya uygulaması oluşturma
       url: tutorials/with-visual-studio.md
     - text: .NET Core uygulamasını kapsayıcılı hale getirme
       url: docker/build-container.md
@@ -79,13 +81,13 @@ landingContent:
     links:
     - text: Uygulama yayımlama
       url: deploying/index.md
-- title: .NET Framework'den geçirin
+- title: .NET Framework geçir
   linkLists:
   - linkListType: overview
     links:
     - text: .NET Framework’ten .NET Core’a taşıma
       url: porting/index.md
-- title: Komut satırından .NET Core'u kullanma
+- title: Komut satırından .NET Core kullanın
   linkLists:
   - linkListType: overview
     links:
@@ -93,7 +95,7 @@ landingContent:
       url: tools/index.md
   - linkListType: tutorial
     links:
-    - text: CLI'yi kullanmaya başlayın
+    - text: CLı 'yı kullanmaya başlama
       url: tutorials/cli-create-console-app.md
   - linkListType: deploy
     links:
@@ -113,7 +115,7 @@ landingContent:
       url: testing/index.md
   - linkListType: tutorial
     links:
-    - text: dotnet testi ve xUnit kullanarak C# kodunu test etme
+    - text: DotNet test ve xUnit kullanarak C# kodunu test etme
       url: testing/unit-testing-with-dotnet-test.md
     - text: NUnit ile birim testi
       url: testing/unit-testing-with-nunit.md
@@ -121,5 +123,5 @@ landingContent:
       url: testing/unit-testing-with-mstest.md
   - linkListType: concept
     links:
-    - text: Birim testleri yazmak için en iyi uygulamalar
+    - text: Birim testlerini yazmak için en iyi uygulamalar
       url: testing/unit-testing-best-practices.md

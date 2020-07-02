@@ -1,5 +1,6 @@
 ---
 title: Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama
+description: Bir temsilciyi bir geri çağırma yöntemi olarak sıralamakta öğrenin. Temsilci, işlev işaretçileri beklenen yönetilmeyen bir işleve nasıl geçirilebir örneğe bakın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-ms.openlocfilehash: c71c89e5797745144a2baed2d4846e3d9f9f26be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf9ef3b9d48c0869dcc96820c3a2fb6fb608479e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618954"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama
 Bu örnek, işlev işaretçileri bekleyen yönetilmeyen bir işleve temsilcilerin nasıl geçirileceğini gösterir. Bir temsilci, bir yönteme başvuru tutan ve tür kullanımı uyumlu işlev işaretçisine veya geri çağırma işlevine eşdeğer olan bir sınıftır.
@@ -24,21 +25,21 @@ Bu örnek, işlev işaretçileri bekleyen yönetilmeyen bir işleve temsilcileri
 
 Geri çağırma örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:
 
-- `TestCallBack`PInvokeLib. dll dosyasından verildi.
+- `TestCallBack`PinvokeLib.dll dışarıya verildi.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
-- `TestCallBack2`PInvokeLib. dll dosyasından verildi.
+- `TestCallBack2`PinvokeLib.dll dışarıya verildi.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);
     ```
 
-[PInvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) , daha önce listelenen işlevler için bir uygulama içeren özel bir yönetilmeyen kitaplıktır.
+[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) , önceden listelenmiş işlevlere yönelik bir uygulama içeren özel bir yönetilmeyen kitaplıktır.
 
-Bu örnekte, `NativeMethods` sınıfı `TestCallBack` ve `TestCallBack2` yöntemleri için yönetilen prototürler içerir. Her iki yöntem de bir çağrı işlevine parametre olarak bir temsilci iletir. Temsilcinin imzası, başvurduğu yöntemin imzasıyla aynı olmalıdır. Örneğin, `FPtr` ve `FPtr2` temsilcilerin `DoSomething` ve `DoSomething2` yöntemleriyle aynı olan imzaları vardır.
+Bu örnekte, `NativeMethods` sınıfı ve yöntemleri için yönetilen prototürler içerir `TestCallBack` `TestCallBack2` . Her iki yöntem de bir çağrı işlevine parametre olarak bir temsilci iletir. Temsilcinin imzası, başvurduğu yöntemin imzasıyla aynı olmalıdır. Örneğin, `FPtr` ve `FPtr2` temsilcilerin ve yöntemleriyle aynı olan imzaları vardır `DoSomething` `DoSomething2` .
 
 ## <a name="declaring-prototypes"></a>Prototipleri Bildirme
 [!code-cpp[Conceptual.Interop.Marshaling#37](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/callback.cpp#37)]

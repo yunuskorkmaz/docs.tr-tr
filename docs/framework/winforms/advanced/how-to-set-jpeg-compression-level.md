@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: JPEG Sıkıştırma Düzeyini Ayarlama'
+title: 'Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama'
+description: Windows Forms sıkıştırma düzeyini değiştirerek bir JPEG görüntüsünün kalitesini ayarlamayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f6a96e8a05fff40eb08da0ce318faa86a06cc3a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85618720"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>Nasıl yapılır: JPEG Sıkıştırma Düzeyini Ayarlama
-Dosya boyutu en aza indirmek ve yazılımınızın kalitesini iyileştirmek için diske görüntüyü kaydederken görüntü parametrelerini değiştirmek isteyebilirsiniz. Bir JPEG görüntüsünü kalitesini, sıkıştırma düzeyi değiştirerek ayarlayabilirsiniz. Bir JPEG görüntüsünü kaydettiğinizde sıkıştırma düzeyini belirtmek için oluşturmalısınız bir <xref:System.Drawing.Imaging.EncoderParameters> nesne ve geçirin <xref:System.Drawing.Image.Save%2A> yöntemi <xref:System.Drawing.Image> sınıfı. Başlatma <xref:System.Drawing.Imaging.EncoderParameters> BT'nin aşağıdakilerden birini oluşturan bir dizi bu nesne <xref:System.Drawing.Imaging.EncoderParameter>. Oluştururken <xref:System.Drawing.Imaging.EncoderParameter>, belirtin <xref:System.Drawing.Imaging.Encoder.Quality> Kodlayıcısı ve istenen sıkıştırma düzeyi.  
+# <a name="how-to-set-jpeg-compression-level"></a>Nasıl Yapılır: JPEG Sıkıştırma Düzeyini Ayarlama
+Dosya boyutunu en aza indirmek veya kalitesini artırmak için görüntüyü diske kaydettiğinizde görüntünün parametrelerini değiştirmek isteyebilirsiniz. Bir JPEG görüntüsünün kalitesini, sıkıştırma düzeyini değiştirerek ayarlayabilirsiniz. Bir JPEG görüntüsünü kaydettiğinizde sıkıştırma düzeyini belirtmek için bir <xref:System.Drawing.Imaging.EncoderParameters> nesnesi oluşturmanız ve bunu <xref:System.Drawing.Image.Save%2A> sınıfının yöntemine geçirmeniz gerekir <xref:System.Drawing.Image> . <xref:System.Drawing.Imaging.EncoderParameters>Nesnesinden oluşan bir diziye sahip olacak şekilde nesneyi başlatın <xref:System.Drawing.Imaging.EncoderParameter> . Oluştururken, <xref:System.Drawing.Imaging.EncoderParameter> <xref:System.Drawing.Imaging.Encoder.Quality> kodlayıcıyı ve istenen sıkıştırma düzeyini belirtin.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek kod oluşturur bir <xref:System.Drawing.Imaging.EncoderParameter> nesne ve üç JPEG görüntüleri kaydeder. Değiştirerek farklı kalite düzeyiyle, kaydedilen her bir JPEG görüntüsünü `long` geçirilen değer <xref:System.Drawing.Imaging.EncoderParameter> Oluşturucusu. 0 kalite düzeyini, en yüksek sıkıştırma karşılık gelir ve bir kalite düzeyi 100 için en az sıkıştırma karşılık gelir.  
+ Aşağıdaki örnek kod, bir <xref:System.Drawing.Imaging.EncoderParameter> nesnesi oluşturur ve üç JPEG görüntüsünü kaydeder. Her JPEG görüntüsü, oluşturucuya geçirilen değeri değiştirerek farklı bir kalite düzeyiyle kaydedilir `long` <xref:System.Drawing.Imaging.EncoderParameter> . 0 kalite düzeyi en büyük sıkıştırmaya karşılık gelir ve 100 kalite düzeyi en az sıkıştırmaya karşılık gelir.  
   
 ```csharp  
 private void VaryQualityLevel()  
@@ -121,16 +122,16 @@ End Function
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu örnek gerektirir:  
+ Bu örnek şunları gerektirir:  
   
 - Bir Windows Forms uygulaması.  
   
-- A <xref:System.Windows.Forms.PaintEventArgs>, parametre olduğu <xref:System.Windows.Forms.PaintEventHandler>.  
+- Parametresi olan bir <xref:System.Windows.Forms.PaintEventArgs> <xref:System.Windows.Forms.PaintEventHandler> .  
   
-- Adlı bir resim dosyası `TestPhoto.jpg` ve konumunda bulunan **c:\\**.  
+- Adlandırılmış `TestPhoto.jpg` ve **c \\ :** konumunda bulunan bir görüntü dosyası.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Nasıl yapılır: Bir kodlayıcı tarafından desteklenen parametreleri belirleme](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [Nasıl yapılır: Bir Kodlayıcı Tarafından Desteklenen Parametreleri Belirleme](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [Bit Eşlem Türleri](types-of-bitmaps.md)
 - [Yönetilen GDI+'da Görüntü Kodlayıcıları ve Kod Çözücüleri Kullanma](using-image-encoders-and-decoders-in-managed-gdi.md)
