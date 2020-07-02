@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: Windows Formunda Çizgi Çizme'
+title: 'Nasıl yapılır: Bir Windows Formunda Çizgi Çizme'
+description: Paint olayını işleyerek form üzerinde bir çizgi çizmenizi ve sonra da PaintEventArgs 'un Graphics özelliğini kullanarak çizimi gerçekleştirmeyi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,30 +13,30 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
-ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e92dc265c63413275561d0e2e3aa820eaec724
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621632"
 ---
-# <a name="how-to-draw-a-line-on-a-windows-form"></a><span data-ttu-id="292ec-102">Nasıl yapılır: Windows Formunda Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="292ec-102">How to: Draw a Line on a Windows Form</span></span>
-<span data-ttu-id="292ec-103">Bu örnek, bir form üzerinde bir çizgi çizer.</span><span class="sxs-lookup"><span data-stu-id="292ec-103">This example draws a line on a form.</span></span> <span data-ttu-id="292ec-104">Genellikle, bir form üzerinde çizdiğinizde, formun işlemek <xref:System.Windows.Forms.Control.Paint> olay ve çizim kullanarak gerçekleştirmek <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs>, bu örnekte gösterildiği gibi</span><span class="sxs-lookup"><span data-stu-id="292ec-104">Typically, when you draw on a form, you handle the form’s  <xref:System.Windows.Forms.Control.Paint> event and perform the drawing using the <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> property of the <xref:System.Windows.Forms.PaintEventArgs>, as shown in this example</span></span>  
+# <a name="how-to-draw-a-line-on-a-windows-form"></a><span data-ttu-id="58a39-103">Nasıl yapılır: Bir Windows Formunda Çizgi Çizme</span><span class="sxs-lookup"><span data-stu-id="58a39-103">How to: Draw a Line on a Windows Form</span></span>
+<span data-ttu-id="58a39-104">Bu örnek, bir form üzerinde bir çizgi çizer.</span><span class="sxs-lookup"><span data-stu-id="58a39-104">This example draws a line on a form.</span></span> <span data-ttu-id="58a39-105">Genellikle, bir form üzerinde çizim yaptığınızda formun <xref:System.Windows.Forms.Control.Paint> olayını işler ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> <xref:System.Windows.Forms.PaintEventArgs> Bu örnekte gösterildiği gibi, öğesinin özelliğini kullanarak çizimi gerçekleştirirsiniz</span><span class="sxs-lookup"><span data-stu-id="58a39-105">Typically, when you draw on a form, you handle the form’s  <xref:System.Windows.Forms.Control.Paint> event and perform the drawing using the <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> property of the <xref:System.Windows.Forms.PaintEventArgs>, as shown in this example</span></span>  
   
-## <a name="example"></a><span data-ttu-id="292ec-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="292ec-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="58a39-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="58a39-106">Example</span></span>  
  [!code-csharp[System.Drawing.UsingAPen#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="292ec-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="292ec-106">Compiling the Code</span></span>  
- <span data-ttu-id="292ec-107">Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.</span><span class="sxs-lookup"><span data-stu-id="292ec-107">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="58a39-107">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="58a39-107">Compiling the Code</span></span>  
+ <span data-ttu-id="58a39-108">Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventArgs> `e` olay işleyicisinin bir parametresi olan gerektirir <xref:System.Windows.Forms.Control.Paint> .</span><span class="sxs-lookup"><span data-stu-id="58a39-108">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="292ec-108">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="292ec-108">Robust Programming</span></span>  
- <span data-ttu-id="292ec-109">Her zaman çağırmalıdır <xref:System.IDisposable.Dispose%2A> gibi sistem kaynaklarının kullanan herhangi bir nesne üzerinde <xref:System.Drawing.Pen> nesneleri.</span><span class="sxs-lookup"><span data-stu-id="292ec-109">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> objects.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="58a39-109">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="58a39-109">Robust Programming</span></span>  
+ <span data-ttu-id="58a39-110"><xref:System.IDisposable.Dispose%2A>Nesneler gibi sistem kaynaklarını kullanan tüm nesneleri her zaman çağırmanız gerekir <xref:System.Drawing.Pen> .</span><span class="sxs-lookup"><span data-stu-id="58a39-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="292ec-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="292ec-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58a39-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="58a39-111">See also</span></span>
 
 - <xref:System.Drawing.Graphics.DrawLine%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [<span data-ttu-id="292ec-111">Grafik Programlamaya Başlarken</span><span class="sxs-lookup"><span data-stu-id="292ec-111">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="292ec-112">Çizgiler ve Şekiller Çizmek için Kalem Kullanma</span><span class="sxs-lookup"><span data-stu-id="292ec-112">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
-- [<span data-ttu-id="292ec-113">Windows Forms’da Grafikler ve Çizim</span><span class="sxs-lookup"><span data-stu-id="292ec-113">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="58a39-112">Grafik Programlamaya Başlarken</span><span class="sxs-lookup"><span data-stu-id="58a39-112">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="58a39-113">Çizgiler ve Şekiller Çizmek için Kalem Kullanma</span><span class="sxs-lookup"><span data-stu-id="58a39-113">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
+- [<span data-ttu-id="58a39-114">Windows Forms’da Grafikler ve Çizim</span><span class="sxs-lookup"><span data-stu-id="58a39-114">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)

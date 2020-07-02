@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: fc315faef750d93d914104dd568078aa3fc430d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa5cf2280cdd9535962568a6272d047d261eeba5
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72887850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621380"
 ---
-### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a><span data-ttu-id="04a3f-101">RSACng.VerifyHash şimdi herhangi bir doğrulama hatası için False döndürür</span><span class="sxs-lookup"><span data-stu-id="04a3f-101">RSACng.VerifyHash now returns False for any verification failure</span></span>
+### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a><span data-ttu-id="a0ae4-101">RSACng. VerifyHash şimdi herhangi bir doğrulama hatası için yanlış değer döndürüyor</span><span class="sxs-lookup"><span data-stu-id="a0ae4-101">RSACng.VerifyHash now returns False for any verification failure</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="04a3f-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="04a3f-102">Details</span></span>|<span data-ttu-id="04a3f-103">.NET Framework 4.6.2 ile başlayarak, imzanın kendisi kötü biçimlendirilmişse bu yöntem **False** döndürür.</span><span class="sxs-lookup"><span data-stu-id="04a3f-103">Starting with the .NET Framework 4.6.2, this method returns **False** if the signature itself is badly formatted.</span></span> <span data-ttu-id="04a3f-104">Şimdi herhangi bir doğrulama hatası için yanlış döndürür. .NET Framework 4.6 ve 4.6.1'de, <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> imzanın kendisi kötü biçimlendirilmişse yöntem bir yöntem atar.</span><span class="sxs-lookup"><span data-stu-id="04a3f-104">It now returns false for any verification failure.In the .NET Framework 4.6 and 4.6.1, the method throws a <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> if the signature itself is badly formatted.</span></span>|
-|<span data-ttu-id="04a3f-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="04a3f-105">Suggestion</span></span>|<span data-ttu-id="04a3f-106">Yürütme işleme bağlıdır herhangi bir <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> kod doğrulama başarısız olursa ve yöntem **False**döndürür yerine yürütme gerekir .</span><span class="sxs-lookup"><span data-stu-id="04a3f-106">Any code whose execution depends on handling the <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> should instead execute if validation fails and the method returns **False**.</span></span>|
-|<span data-ttu-id="04a3f-107">Kapsam</span><span class="sxs-lookup"><span data-stu-id="04a3f-107">Scope</span></span>|<span data-ttu-id="04a3f-108">İkincil</span><span class="sxs-lookup"><span data-stu-id="04a3f-108">Minor</span></span>|
-|<span data-ttu-id="04a3f-109">Sürüm</span><span class="sxs-lookup"><span data-stu-id="04a3f-109">Version</span></span>|<span data-ttu-id="04a3f-110">4.6.2</span><span class="sxs-lookup"><span data-stu-id="04a3f-110">4.6.2</span></span>|
-|<span data-ttu-id="04a3f-111">Tür</span><span class="sxs-lookup"><span data-stu-id="04a3f-111">Type</span></span>|<span data-ttu-id="04a3f-112">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="04a3f-112">Runtime</span></span>|
-|<span data-ttu-id="04a3f-113">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="04a3f-113">Affected APIs</span></span>|<ul><li><xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="a0ae4-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="a0ae4-102">Details</span></span>
+
+<span data-ttu-id="a0ae4-103">.NET Framework 4.6.2 başlayarak, bu yöntem imza hatalı biçimlendirildiyse **false** değerini döndürür.</span><span class="sxs-lookup"><span data-stu-id="a0ae4-103">Starting with the .NET Framework 4.6.2, this method returns **False** if the signature itself is badly formatted.</span></span> <span data-ttu-id="a0ae4-104">Artık herhangi bir doğrulama hatası için yanlış döndürür. .NET Framework 4,6 ve 4.6.1 içinde, <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> imza kötü biçimlenir ise Yöntem bir oluşturur.</span><span class="sxs-lookup"><span data-stu-id="a0ae4-104">It now returns false for any verification failure.In the .NET Framework 4.6 and 4.6.1, the method throws a <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> if the signature itself is badly formatted.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="a0ae4-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="a0ae4-105">Suggestion</span></span>
+
+<span data-ttu-id="a0ae4-106">Yürütmesi, <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> doğrulama başarısız olursa ve Yöntem **false**döndürürse yürütme, bunun yerine yürütülmesi gereken her türlü kod.</span><span class="sxs-lookup"><span data-stu-id="a0ae4-106">Any code whose execution depends on handling the <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> should instead execute if validation fails and the method returns **False**.</span></span>
+
+| <span data-ttu-id="a0ae4-107">Name</span><span class="sxs-lookup"><span data-stu-id="a0ae4-107">Name</span></span>    | <span data-ttu-id="a0ae4-108">Değer</span><span class="sxs-lookup"><span data-stu-id="a0ae4-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="a0ae4-109">Kapsam</span><span class="sxs-lookup"><span data-stu-id="a0ae4-109">Scope</span></span>   |<span data-ttu-id="a0ae4-110">İkincil</span><span class="sxs-lookup"><span data-stu-id="a0ae4-110">Minor</span></span>|
+|<span data-ttu-id="a0ae4-111">Sürüm</span><span class="sxs-lookup"><span data-stu-id="a0ae4-111">Version</span></span>|<span data-ttu-id="a0ae4-112">4.6.2</span><span class="sxs-lookup"><span data-stu-id="a0ae4-112">4.6.2</span></span>|
+|<span data-ttu-id="a0ae4-113">Tür</span><span class="sxs-lookup"><span data-stu-id="a0ae4-113">Type</span></span>|<span data-ttu-id="a0ae4-114">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="a0ae4-114">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="a0ae4-115">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="a0ae4-115">Affected APIs</span></span>
+
+-<xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|

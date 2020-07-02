@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 735278848cb7399e414a128afc650a0a1f882337
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 395463225e3c1f1d168dd019ea75966ad54e5a8a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621399"
 ---
-### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a><span data-ttu-id="baec9-101">TextBlock denetiminin üst öğesinin Etkinleştirilmiş özelliğinin değiştirilmesi tüm alt denetimleri etkiler</span><span class="sxs-lookup"><span data-stu-id="baec9-101">Changing the IsEnabled property of the parent of a TextBlock control affects any child controls</span></span>
+### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a><span data-ttu-id="8ae8a-101">Bir TextBlock denetiminin üst öğesinin IsEnabled özelliğini değiştirmek, tüm alt denetimleri etkiler</span><span class="sxs-lookup"><span data-stu-id="8ae8a-101">Changing the IsEnabled property of the parent of a TextBlock control affects any child controls</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="baec9-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="baec9-102">Details</span></span>|<span data-ttu-id="baec9-103">.NET Framework 4.6.2 ile başlayarak, bir <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> <xref:System.Windows.Controls.TextBlock?displayProperty=name> denetimin üst özelliğini <xref:System.Windows.Controls.TextBlock?displayProperty=name> değiştirmek, denetimin alt denetimlerini (köprüler ve düğmeler gibi) etkiler. .NET Framework 4.6.1 ve önceki sürümlerinde, a <xref:System.Windows.Controls.TextBlock?displayProperty=name> içindeki denetimler <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> her <xref:System.Windows.Controls.TextBlock?displayProperty=name> zaman ebeveynin özelliğinin durumunu yansıtmadı.</span><span class="sxs-lookup"><span data-stu-id="baec9-103">Starting with the .NET Framework 4.6.2, changing the <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> property of the parent of a <xref:System.Windows.Controls.TextBlock?displayProperty=name> control affects any child controls (such as hyperlinks and buttons) of the <xref:System.Windows.Controls.TextBlock?displayProperty=name> control.In the .NET Framework 4.6.1 and earlier versions, controls inside a <xref:System.Windows.Controls.TextBlock?displayProperty=name> did not always reflect the state of the <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> property of the <xref:System.Windows.Controls.TextBlock?displayProperty=name> parent.</span></span>|
-|<span data-ttu-id="baec9-104">Öneri</span><span class="sxs-lookup"><span data-stu-id="baec9-104">Suggestion</span></span>|<span data-ttu-id="baec9-105">Yok.</span><span class="sxs-lookup"><span data-stu-id="baec9-105">None.</span></span> <span data-ttu-id="baec9-106">Bu değişiklik, denetim içindeki denetimler <xref:System.Windows.Controls.TextBlock?displayProperty=name> için beklenen davranışa uygundur.</span><span class="sxs-lookup"><span data-stu-id="baec9-106">This change conforms to the expected behavior for controls inside a <xref:System.Windows.Controls.TextBlock?displayProperty=name> control.</span></span>|
-|<span data-ttu-id="baec9-107">Kapsam</span><span class="sxs-lookup"><span data-stu-id="baec9-107">Scope</span></span>|<span data-ttu-id="baec9-108">İkincil</span><span class="sxs-lookup"><span data-stu-id="baec9-108">Minor</span></span>|
-|<span data-ttu-id="baec9-109">Sürüm</span><span class="sxs-lookup"><span data-stu-id="baec9-109">Version</span></span>|<span data-ttu-id="baec9-110">4.6.2</span><span class="sxs-lookup"><span data-stu-id="baec9-110">4.6.2</span></span>|
-|<span data-ttu-id="baec9-111">Tür</span><span class="sxs-lookup"><span data-stu-id="baec9-111">Type</span></span>|<span data-ttu-id="baec9-112">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="baec9-112">Runtime</span></span>|
-|<span data-ttu-id="baec9-113">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="baec9-113">Affected APIs</span></span>|<ul><li><xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="8ae8a-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="8ae8a-102">Details</span></span>
+
+<span data-ttu-id="8ae8a-103">.NET Framework 4.6.2 başlayarak, <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> bir denetimin üst öğesinin özelliğini değiştirmek, <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> denetimin tüm alt denetimlerini (köprüler ve düğmeler gibi) etkiler <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> . .NET Framework 4.6.1 ve önceki sürümlerde, içindeki denetimler <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> her zaman üst öğenin özelliğinin durumunu yansıtmamaktadır <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> .</span><span class="sxs-lookup"><span data-stu-id="8ae8a-103">Starting with the .NET Framework 4.6.2, changing the <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> property of the parent of a <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> control affects any child controls (such as hyperlinks and buttons) of the <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> control.In the .NET Framework 4.6.1 and earlier versions, controls inside a <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> did not always reflect the state of the <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> property of the <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> parent.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="8ae8a-104">Öneri</span><span class="sxs-lookup"><span data-stu-id="8ae8a-104">Suggestion</span></span>
+
+<span data-ttu-id="8ae8a-105">Yok.</span><span class="sxs-lookup"><span data-stu-id="8ae8a-105">None.</span></span> <span data-ttu-id="8ae8a-106">Bu değişiklik, denetim içindeki denetimler için beklenen davranışa uyar <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> .</span><span class="sxs-lookup"><span data-stu-id="8ae8a-106">This change conforms to the expected behavior for controls inside a <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> control.</span></span>
+
+| <span data-ttu-id="8ae8a-107">Name</span><span class="sxs-lookup"><span data-stu-id="8ae8a-107">Name</span></span>    | <span data-ttu-id="8ae8a-108">Değer</span><span class="sxs-lookup"><span data-stu-id="8ae8a-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="8ae8a-109">Kapsam</span><span class="sxs-lookup"><span data-stu-id="8ae8a-109">Scope</span></span>   |<span data-ttu-id="8ae8a-110">İkincil</span><span class="sxs-lookup"><span data-stu-id="8ae8a-110">Minor</span></span>|
+|<span data-ttu-id="8ae8a-111">Sürüm</span><span class="sxs-lookup"><span data-stu-id="8ae8a-111">Version</span></span>|<span data-ttu-id="8ae8a-112">4.6.2</span><span class="sxs-lookup"><span data-stu-id="8ae8a-112">4.6.2</span></span>|
+|<span data-ttu-id="8ae8a-113">Tür</span><span class="sxs-lookup"><span data-stu-id="8ae8a-113">Type</span></span>|<span data-ttu-id="8ae8a-114">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="8ae8a-114">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="8ae8a-115">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="8ae8a-115">Affected APIs</span></span>
+
+-<xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|
