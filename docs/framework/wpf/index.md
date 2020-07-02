@@ -1,5 +1,6 @@
 ---
 title: Windows Presentation Foundation
+description: Windows 'da iş kolu masaüstü uygulamaları oluşturmak için Windows Presentation Foundation (WPF) içinde Birleşik programlama modeli hakkında bilgi edinin.
 ms.date: 01/25/2018
 applies_to:
 - Windows 10
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 078e747ab9237324aba8168b543b2347e845de81
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919363"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853403"
 ---
-# <a name="windows-presentation-foundation"></a><span data-ttu-id="abaee-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="abaee-102">Windows Presentation Foundation</span></span>
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="17fdf-103">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="17fdf-103">Windows Presentation Foundation</span></span>
 
-<span data-ttu-id="abaee-103">Windows Presentation Foundation (WPF), geliştiricilere Windows üzerinde iş kolu masaüstü uygulamaları oluşturmak için birleştirilmiş bir programlama modeli sağlar.</span><span class="sxs-lookup"><span data-stu-id="abaee-103">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
+<span data-ttu-id="17fdf-104">Windows Presentation Foundation (WPF), geliştiricilere Windows üzerinde iş kolu masaüstü uygulamaları oluşturmak için birleştirilmiş bir programlama modeli sağlar.</span><span class="sxs-lookup"><span data-stu-id="17fdf-104">Windows Presentation Foundation (WPF) provides developers with a unified programming model for building line-of-business desktop applications on Windows.</span></span>
 
-- [<span data-ttu-id="abaee-104">WPF'ye Giriş</span><span class="sxs-lookup"><span data-stu-id="abaee-104">Introduction to WPF</span></span>](introduction-to-wpf.md)
-- [<span data-ttu-id="abaee-105">Başlarken</span><span class="sxs-lookup"><span data-stu-id="abaee-105">Getting Started</span></span>](getting-started/index.md)
-- [<span data-ttu-id="abaee-106">Uygulama Geliştirme</span><span class="sxs-lookup"><span data-stu-id="abaee-106">Application Development</span></span>](app-development/index.md)
-- [<span data-ttu-id="abaee-107">Gelişmiş</span><span class="sxs-lookup"><span data-stu-id="abaee-107">Advanced</span></span>](advanced/index.md)
-- [<span data-ttu-id="abaee-108">Denetimler</span><span class="sxs-lookup"><span data-stu-id="abaee-108">Controls</span></span>](controls/index.md)
-- [<span data-ttu-id="abaee-109">Veri</span><span class="sxs-lookup"><span data-stu-id="abaee-109">Data</span></span>](data/index.md)
-- [<span data-ttu-id="abaee-110">Grafikler ve Multimedya</span><span class="sxs-lookup"><span data-stu-id="abaee-110">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
-- [<span data-ttu-id="abaee-111">Security</span><span class="sxs-lookup"><span data-stu-id="abaee-111">Security</span></span>](security-wpf.md)
-- [<span data-ttu-id="abaee-112">WPF Örnekleri</span><span class="sxs-lookup"><span data-stu-id="abaee-112">WPF Samples</span></span>](wpf-samples.md)
-- [<span data-ttu-id="abaee-113">Sınıf Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="abaee-113">Class Library</span></span>](class-library-wpf.md)
+- [<span data-ttu-id="17fdf-105">WPF'ye Giriş</span><span class="sxs-lookup"><span data-stu-id="17fdf-105">Introduction to WPF</span></span>](introduction-to-wpf.md)
+- [<span data-ttu-id="17fdf-106">Başlarken</span><span class="sxs-lookup"><span data-stu-id="17fdf-106">Getting Started</span></span>](getting-started/index.md)
+- [<span data-ttu-id="17fdf-107">Uygulama geliştirme</span><span class="sxs-lookup"><span data-stu-id="17fdf-107">Application Development</span></span>](app-development/index.md)
+- [<span data-ttu-id="17fdf-108">Gelişmiş</span><span class="sxs-lookup"><span data-stu-id="17fdf-108">Advanced</span></span>](advanced/index.md)
+- [<span data-ttu-id="17fdf-109">Denetimler</span><span class="sxs-lookup"><span data-stu-id="17fdf-109">Controls</span></span>](controls/index.md)
+- [<span data-ttu-id="17fdf-110">Veriler</span><span class="sxs-lookup"><span data-stu-id="17fdf-110">Data</span></span>](data/index.md)
+- [<span data-ttu-id="17fdf-111">Grafikler ve multimedya</span><span class="sxs-lookup"><span data-stu-id="17fdf-111">Graphics and Multimedia</span></span>](graphics-multimedia/index.md)
+- [<span data-ttu-id="17fdf-112">Güvenlik</span><span class="sxs-lookup"><span data-stu-id="17fdf-112">Security</span></span>](security-wpf.md)
+- [<span data-ttu-id="17fdf-113">WPF Örnekleri</span><span class="sxs-lookup"><span data-stu-id="17fdf-113">WPF Samples</span></span>](wpf-samples.md)
+- [<span data-ttu-id="17fdf-114">Sınıf Kitaplığı</span><span class="sxs-lookup"><span data-stu-id="17fdf-114">Class Library</span></span>](class-library-wpf.md)
