@@ -8,22 +8,12 @@ items:
   - name: Yükleme
     items:
       - name: Genel Bakış
-        href: install/index.md
-      - name: SDK yükleme
-        href: install/sdk.md
-      - name: Çalışma zamanı yükleme
-        href: install/runtime.md
-      - name: Desteklenen işletim sistemi ve bağımlılıklar
-        href: install/dependencies.md
-      - name: Eski çalışma zamanlarını ve SDK’ları kaldırma
-        href: install/remove-runtime-sdk-versions.md
-      - name: .NET şablonlarını yönetme
-        href: install/templates.md
-      - name: macOS Noter Onayı sorunları
-        href: install/macos-notarization-issues.md
-      - name: .NET Core sürümlerini denetleme
-        href: install/how-to-detect-installed-versions.md
-      - name: Linux
+        href: install/index.yml
+      - name: Windows’ta yükleme
+        href: install/windows.md
+      - name: macOS’ta yükleme
+        href: install/macos.md
+      - name: Linux'ta yükleme
         items:
           - name: Genel Bakış
             href: install/linux.md
@@ -43,6 +33,14 @@ items:
             href: install/linux-rhel.md
           - name: SLES
             href: install/linux-sles.md
+      - name: Eski çalışma zamanlarını ve SDK’ları kaldırma
+        href: install/remove-runtime-sdk-versions.md
+      - name: .NET şablonlarını yönetme
+        href: install/templates.md
+      - name: macOS Noter Onayı sorunları
+        href: install/macos-notarization-issues.md
+      - name: .NET Core sürümlerini denetleme
+        href: install/how-to-detect-installed-versions.md
       - name: Yerelleştirilmiş IntelliSense’i yükleme
         href: install/localized-intellisense.md
   - name: Kullanmaya başlayın
