@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme'
+description: Windows form 'da program aracılığıyla doldurulmuş bir dikdörtgen çizmeyi öğrenin. Ayrıca, kodunuzun derlenmesi hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ad8ec97000e29b2194a9eda713aa43d5557b44c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621645"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme
 Bu örnek, bir form üzerinde doldurulmuş bir dikdörtgen çizer.  
@@ -28,10 +29,10 @@ Bu örnek, bir form üzerinde doldurulmuş bir dikdörtgen çizer.
  [!code-vb[System.Drawing.ConceptualHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Bu yöntem çağıramazsınız <xref:System.Windows.Forms.Form.Load> olay işleyicisi. Formu yeniden boyutlandırılabilir veya başka bir form tarafından engellediği çizilen içeriği yeniden değil. İçeriğinizi otomatik olarak repaint yapmak için geçersiz kılmanız <xref:System.Windows.Forms.Control.OnPaint%2A> yöntemi.  
+ Olay işleyicisinde bu yöntemi çağrılamaz <xref:System.Windows.Forms.Form.Load> . Form başka bir form tarafından yeniden boyutlandırılmışsa veya gizlendiyse çizilen içerik yeniden çizilmez. İçeriğinizi otomatik olarak yeniden çizmeyi sağlamak için yöntemini geçersiz kılmanız gerekir <xref:System.Windows.Forms.Control.OnPaint%2A> .  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Her zaman çağırmalıdır <xref:System.IDisposable.Dispose%2A> gibi sistem kaynaklarının kullanan herhangi bir nesne üzerinde <xref:System.Drawing.Brush> ve <xref:System.Drawing.Graphics> nesneleri.  
+ <xref:System.IDisposable.Dispose%2A>Ve nesneleri gibi sistem kaynaklarını kullanan tüm nesneleri her zaman çağırmanız gerekir <xref:System.Drawing.Brush> <xref:System.Drawing.Graphics> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

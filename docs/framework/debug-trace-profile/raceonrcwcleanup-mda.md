@@ -1,5 +1,6 @@
 ---
 title: raceOnRCWCleanup MDA
+description: RCW başka bir iş parçacığında veya .NET 'teki iş parçacığı yığınında kullanılıyorsa etkinleştirilen Esrcwcleanup yönetilen hata ayıklama Yardımcısı 'nı (MDA) gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RCW
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - RaceOnRCWCleanup MDA
 - runtime callable wrappers
 ms.assetid: bee1e9b1-50a8-4c89-9cd9-7dd6b2458187
-ms.openlocfilehash: edf1fe3ee5be631f7f3c42f4a6cdb17f1be722cf
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e86ef96bebb648c7927ae5fec8b68fc4429b268b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803657"
 ---
 # <a name="raceonrcwcleanup-mda"></a>raceOnRCWCleanup MDA
-`raceOnRCWCleanup` yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR), bir çalışma zamanı çağrılabilir sarmalayıcı (RCW), <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> yöntemi gibi bir komut kullanılarak yapıldığında bir [çalışma zamanı çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) kullanımda olduğunu algıladığında etkinleştirilir.  
+`raceOnRCWCleanup`Yönetilen hata ayıklama Yardımcısı (MDA), ortak dil çalışma zamanı (CLR), bir çalışma zamanı çağrılabilir sarmalayıcı (RCW), yöntemi gibi bir komut kullanılarak yapıldığında bir [çalışma zamanında çağrılabilir sarmalayıcı](../../standard/native-interop/runtime-callable-wrapper.md) (RCW) kullanımda olduğunu algıladığında etkinleştirilir <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType> .  
   
 ## <a name="symptoms"></a>Belirtiler  
- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> veya benzer bir yöntem kullanarak bir RCW boşaltılırken veya sonrasında ihlal veya bellek bozulmasına erişin.  
+ Ya da benzer bir yöntemi kullanarak bir RCW boşaltmasından veya sonrasında ihlal veya bellek bozulmasına erişin <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> .  
   
 ## <a name="cause"></a>Nedeni  
  RCW, başka bir iş parçacığında veya boşaltma iş parçacığı yığınında kullanılıyor.  Kullanımda olan bir RCW yayımlanamaz.  
@@ -48,4 +49,4 @@ ms.locfileid: "77216191"
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../interop/interop-marshaling.md)

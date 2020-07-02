@@ -1,5 +1,6 @@
 ---
 title: pInvokeLog MDA
+description: .NET ' te yürütme sırasında kullanılan her benzersiz platform çağırma imzası için etkinleştirilen pInvokeLog Managed hata ayıklama Yardımcısı 'nı (MDA) anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - signatures, platform invoke
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 05af4e17a91f7c0d8f3576a86d3d784ef6666aed
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803696"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
-`pInvokeLog` yönetilen hata ayıklama Yardımcısı (MDA), yürütme sırasında kullanılan her bir benzersiz platform çağırma imzası için etkinleştirilir.  
+`pInvokeLog`Yönetilen hata ayıklama Yardımcısı (MDA), yürütme sırasında kullanılan her benzersiz platform çağırma imzası için etkinleştirilir.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  

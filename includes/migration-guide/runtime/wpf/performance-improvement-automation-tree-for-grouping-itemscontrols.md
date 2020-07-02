@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: c8329fbaed68fde3a63a5c589896ffcdf64b1766
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b90df72057594044458771f6824f7621a427725f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802603"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622103"
 ---
-### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>ItemsControls'u gruplandırmak için Otomasyon ağacında performans iyileştirme
+### <a name="performance-improvement-in-automation-tree-for-grouping-itemscontrols"></a>Itemscontrols gruplamak için Otomasyon ağacındaki performans iyileştirmesi
 
-|   |   |
-|---|---|
-|Ayrıntılar|Gruplandırmanın etkin olduğu ListBox <xref:System.Windows.Controls.ItemsControl>veya DataGrid gibi bir otomasyon ağacının yeniden oluşturma performansını artırdı.|
-|Kapsam|Ana|
-|Sürüm|4.8|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.Windows.Controls.ItemsControl>Gruplama etkin olan ListBox veya DataGrid gibi bir Otomasyon ağacını yeniden oluşturma performansı geliştirilmiştir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Ana|
+|Sürüm|4,8|
 |Tür|Çalışma Zamanı|

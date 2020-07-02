@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: ce8e162e11802de1b06bfbc63d5c55de67ef23df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccdf232d743c9e270b6ed21f698998eb95a97399
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857253"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621384"
 ---
-### <a name="wcf-msmqsecurehashalgorithm-default-value-is-now-sha256"></a>WCF MsmqSecureHashAlgorithm varsayılan değeri şimdi SHA256 olduğunu
+### <a name="wcf-msmqsecurehashalgorithm-default-value-is-now-sha256"></a>WCF MsmqSecureHashAlgorithm varsayılan değeri artık SHA256
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.7.1 ile başlayarak, Msmq iletileri için WCF'deki varsayılan ileti imzalama algoritması SHA256'dır. .NET Framework 4.7 ve önceki sürümlerinde varsayılan ileti imzalama algoritması SHA1'dir.|
-|Öneri|.NET Framework 4.7.1 veya sonraki düzey bu değişiklikle uyumluluk sorunlarıyla karşınıza çıkarsa, app.config <code>&lt;runtime&gt;</code>dosyanızın bölümüne aşağıdaki satırı ekleyerek değişikliği devre dışı kullanabilirsiniz:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InMsmqEncryptionAlgorithm=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.7.1 başlayarak, MSMQ iletileri için WCF 'de varsayılan ileti imzalama algoritması SHA256 ' dir. .NET Framework 4,7 ve önceki sürümlerde, varsayılan ileti imzalama algoritması SHA1 ' dır.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklik ile .NET Framework 4.7.1 veya sonraki bir sürümde uyumluluk sorunları yaşıyorsanız, app.config dosyanızın bölümüne aşağıdaki satırı ekleyerek değişikliği devre dışı bırakabilirsiniz <code>&lt;runtime&gt;</code> :<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InMsmqEncryptionAlgorithm=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.7.1|
 |Tür|Çalışma Zamanı|

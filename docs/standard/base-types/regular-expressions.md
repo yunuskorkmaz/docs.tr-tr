@@ -1,7 +1,7 @@
 ---
-title: .NET Framework Normal İfadeleri
+title: .NET normal Ifadeleri
 description: Belirli karakter düzenlerini bulmak, metni doğrulamak, metin alt dizeleriyle çalışmak & ayıklanan dizeleri .NET içindeki bir koleksiyona eklemek için normal ifadeleri kullanın.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-ms.openlocfilehash: d9505cdfb57faf586c714aa7dd537210959f50d8
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f57199c2ddf6569020554e74b6e70801844da641
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802903"
 ---
 # <a name="net-regular-expressions"></a>.NET normal ifadeleri
 
@@ -67,6 +67,8 @@ Normal ifade dili hakkında daha fazla bilgi için bkz. [normal Ifade dili-hızl
 ## <a name="regular-expression-examples"></a>Normal ifade örnekleri
 
 <xref:System.String> sınıfı, daha büyük bir dizede sabit değer dizelerini bulmak istediğiniz zaman kullanabileceğiniz dize arama ve yerleştirme yöntemlerini içerir. Normal ifadeler en çok, büyük bir dizedeki alt dizelerin birini konumlandırmak istediğinizde veya aşağıdaki örnekte gösterildiği gibi bir dizede desenleri tanımlamak istediğinizde kullanışlıdır.
+
+[!INCLUDE [regex](../../../includes/regex.md)]
 
 > [!TIP]
 > <xref:System.Web.RegularExpressions>Ad alanı, HTML, XML ve ASP.net belgelerinden dizeleri ayrıştırmak için önceden tanımlanmış normal ifade desenleri uygulayan bir dizi normal ifade nesnesi içerir. Örneğin, <xref:System.Web.RegularExpressions.TagRegex> sınıfı bir dizedeki başlangıç etiketlerini tanımlar ve <xref:System.Web.RegularExpressions.CommentRegex> sınıf ASP.net açıklamalarını bir dizede tanımlar.

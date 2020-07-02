@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: cbe1b32fa40e509f620845866c7a584e37f49a80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f955e270f709ddf6eea2e44bbcf386e372b9f6e3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621424"
 ---
-### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>Varsayılan uygulama etki alanı için TargetFrameworkName ayarlanmadığı takdirde artık null varsayılan
+### <a name="targetframeworkname-for-default-app-domain-no-longer-defaults-to-null-if-not-set"></a>Varsayılan uygulama etki alanı için TargetFrameworkName, ayarlanmamışsa artık varsayılan olarak null değerini alır
 
-|   |   |
-|---|---|
-|Ayrıntılar|Açık <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> olarak ayarlanan olmadıkça, varsayılan uygulama etki alanında daha önce null oldu. 4.6'dan başlayarak, varsayılan uygulama etki alanının <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> özelliği TargetFrameworkAttribute'tan türetilen varsayılan bir değere sahip olacaktır (varsa). Varsayılan olmayan uygulama etki alanları, <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=name> açıkça geçersiz kılınmadığı sürece varsayılan uygulama etki alanından (varsayılan olarak 4,6'da geçersiz kılınmayan) devralmaya devam eder.|
-|Öneri|Kod, <xref:System.AppDomainSetup.TargetFrameworkName> varsayılan olarak null'a bağlı olmayacak şekilde güncelleştirilmelidir. Bu özelliğin null olarak değerlendirmeye devam etmesi gerekiyorsa, açıkça bu değere ayarlanabilir.|
-|Kapsam|Edge|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=fullName>Açık olarak ayarlanmadığı takdirde, varsayılan uygulama etki alanında daha önce null idi. 4,6 ' den başlayarak, <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=fullName> Varsayılan uygulama etki alanı için özelliği TargetFrameworkAttribute öğesinden türetilen varsayılan değere sahip olacaktır (varsa). Varsayılan olmayan uygulama etki alanları, <xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=fullName> açıkça geçersiz kılınmadıkça varsayılan uygulama etki alanından (varsayılan olarak 4,6 ' de null değeri yoktur) devralma yapmaya devam edecektir.
+
+#### <a name="suggestion"></a>Öneri
+
+Kodun, <xref:System.AppDomainSetup.TargetFrameworkName> varsayılan değer olarak null değerine bağlı olmaması için güncelleştirilmeleri gerekir. Bu özelliğin NULL olarak değerlendirilmeye devam etmesi gerekiyorsa, açıkça bu değere ayarlanabilir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4.6|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.AppDomainSetup.TargetFrameworkName?displayProperty=nameWithType></li></ul>|

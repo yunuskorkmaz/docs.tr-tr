@@ -1,5 +1,6 @@
 ---
 title: Grafik Programlamaya Başlarken
+description: Windows Forms bir uygulamada GDI+ kullanmaya başlayın. Şekil ve metin çizme ve doldurma gibi çeşitli GDI+ görevlerini tamamlamayı öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [Windows Forms], getting started
@@ -7,59 +8,59 @@ helpviewer_keywords:
 - examples [Windows Forms], graphics
 - drawing
 ms.assetid: eb0f6d6f-9e52-4167-9592-ff4b82fb5869
-ms.openlocfilehash: b2a330324085f1a73418cd535f83f2b73e9721c0
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: a61c56b7db40203bbb5102c7f1703c9ab6578c18
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67503946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622698"
 ---
 # <a name="getting-started-with-graphics-programming"></a>Grafik Programlamaya Başlarken
-Bu bölümde, GDI +'da bir Windows Forms uygulamasında kullanmaya başlama işlemi gösterilmektedir. Aşağıdaki konular, çizim doldurduktan ve şekil ve metinler gibi çeşitli GDI +'da işlemleri nasıl tamamlayacağınızı gösterir.  
+Bu bölümde, Windows Forms uygulamasında GDI+ kullanmaya nasıl başlacağınız gösterilmektedir. Aşağıdaki konularda, şekil ve metin çizme ve doldurma gibi çeşitli GDI+ görevlerinin nasıl tamamlanacağı gösterilmektedir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Nasıl yapılır: Çizim için grafik nesneleri oluşturma](how-to-create-graphics-objects-for-drawing.md)  
- Nasıl oluşturulacağını gösterir bir <xref:System.Drawing.Graphics> çizim için nesne.  
+ [Nasıl yapılır: Çizim için Grafik Nesneleri Oluşturma](how-to-create-graphics-objects-for-drawing.md)  
+ Çizim için bir nesnenin nasıl oluşturulacağını gösterir <xref:System.Drawing.Graphics> .  
   
- [Nasıl yapılır: Kalem oluşturma](how-to-create-a-pen.md)  
- Kalem oluşturma işlemi gösterilmektedir.  
+ [Nasıl yapılır: Kalem Oluşturma](how-to-create-a-pen.md)  
+ Bir kalemin nasıl oluşturulacağını gösterir.  
   
- [Nasıl yapılır: Bir kalemin rengini ayarlama](how-to-set-the-color-of-a-pen.md)  
- Bir kalemin rengini ayarlama işlemi gösterilmektedir.  
+ [Nasıl yapılır: Bir Kalemin Rengini Ayarlama](how-to-set-the-color-of-a-pen.md)  
+ Bir kalemin rengini nasıl ayarlayabileceğinizi gösterir.  
   
- [Nasıl yapılır: Düz Fırça oluşturma](how-to-create-a-solid-brush.md)  
- Düz Fırça oluşturma işlemini açıklar.  
+ [Nasıl yapılır: Düz Fırça Oluşturma](how-to-create-a-solid-brush.md)  
+ Nasıl düz bir fırça oluşturulacağını açıklar.  
   
- [Nasıl yapılır: Bir Windows formunda çizgi çizme](how-to-draw-a-line-on-a-windows-form.md)  
- Bir çizgi çizmek gösterilmektedir.  
+ [Nasıl yapılır: Bir Windows Formunda Çizgi Çizme](how-to-draw-a-line-on-a-windows-form.md)  
+ Bir çizginin nasıl çizileceğini gösterir.  
   
- [Nasıl yapılır: Anahatlı şekil çizme](how-to-draw-an-outlined-shape.md)  
- Bir şekil çizme açıklar.  
+ [Nasıl yapılır: Ana Hatlı Şekil Çizme](how-to-draw-an-outlined-shape.md)  
+ Bir şeklin nasıl çizileceğini açıklar.  
   
- [Nasıl yapılır: Bir Windows formunda doldurulmuş dikdörtgen çizme](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
- Bir dikdörtgen çizmek kullanılan nasıl açıklanmaktadır.  
+ [Nasıl yapılır: Bir Windows Formunda Doldurulmuş Dikdörtgen Çizme](how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ Bir dikdörtgenin nasıl çizileceğini açıklar.  
   
- [Nasıl yapılır: Bir Windows formunda doldurulmuş elips çizme](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
- Doldurulmuş elips çizme gösterilmektedir.  
+ [Nasıl yapılır: Bir Windows Formunda Doldurulmuş Elips Çizme](how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ Dolgulu bir elipsin nasıl çizileceğini gösterir.  
   
- [Nasıl yapılır: Bir Windows formunda metin çizme](how-to-draw-text-on-a-windows-form.md)  
- Metin çizme açıklar.  
+ [Nasıl yapılır: Bir Windows Formunda Metin Çizme](how-to-draw-text-on-a-windows-form.md)  
+ Metnin nasıl çizileceğini açıklar.  
   
- [Nasıl yapılır: Bir Windows formunda dikey metin çizme](how-to-draw-vertical-text-on-a-windows-form.md)  
- Dikey metin çizme gösterilmektedir.  
+ [Nasıl yapılır: Bir Windows Formunda Dikey Metin Çizme](how-to-draw-vertical-text-on-a-windows-form.md)  
+ Dikey metnin nasıl çizileceğini gösterir.  
   
- [Nasıl yapılır: GDI + ile görüntü işleme](how-to-render-images-with-gdi.md)  
- Görüntüler çizme gösterilmektedir.  
+ [Nasıl yapılır: GDI+ ile Görüntü İşleme](how-to-render-images-with-gdi.md)  
+ Görüntülerin nasıl çizileceğini gösterir.  
   
- [Nasıl yapılır: Şekilli Windows formu oluşturma](how-to-create-a-shaped-windows-form.md)  
- Bir form şeklini değiştirmek açıklanmaktadır.  
+ [Nasıl yapılır: Şekilli Windows Formu Oluşturma](how-to-create-a-shaped-windows-form.md)  
+ Formun şeklinin nasıl değiştirileceğini açıklar.  
   
- [Nasıl yapılır: Windows Forms'da titreşimi azaltmak için piksel kopyalama](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
- Piksel bir çalışma alanından diğerine kopyalamak nasıl açıklar.  
+ [Nasıl yapılır: Windows Formlarında Titreşimi Azaltmak için Piksel Kopyalama](how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ Piksellerin bir alandan diğerine nasıl kopyalanacağını açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Drawing>  
- Bu ad alanını açıklar ve tüm üyeleri için bağlantılar içerir.  
+ Bu ad alanını açıklar ve tüm üyelerine bağlantıları vardır.  
   
  <xref:System.Windows.Forms>  
- Bu ad açıklar ve tüm üyeleri için bağlantılar içerir.
+ Bu ad alanını açıklar ve tüm üyelerine bağlantıları vardır.

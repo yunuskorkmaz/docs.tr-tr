@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803033"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
@@ -71,7 +71,7 @@ Bir veya daha fazla üçüncü taraf bağımlılığı olan çerçeveye bağlı 
 
 1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştırma sekmesini seçin ve arama **Browse** kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi**seçmeden önce projenizi seçin.
+1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştır sekmesine tıklayın ve arama **Browse** kutusuna "Newtonsoft.Json" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi**seçmeden önce projenizi seçin.
 
 1. `Newtonsoft.Json`Zaten sisteminizde yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
 
@@ -98,7 +98,7 @@ Bir üçüncü taraf bağımlılığı olmadan kendi içinde bir dağıtımı da
 
    Sabit modu etkinleştirmek için, **Çözüm Gezgini**' de projenize (çözüm değil) sağ tıklayın ve **scd. csproj Düzenle** ' yi seçin veya **scd. vbproj**' i düzenleyin. Ardından, aşağıdaki vurgulanmış satırları dosyaya ekleyin:
 
-   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=7-9)]
 
 1. Uygulamanızın hata ayıklama derlemesini oluşturun.
 
@@ -192,9 +192,9 @@ Uygulamanızın hedeflediği her platform için aşağıdakileri yapın:
 
 1. Visual Studio 'Nun uygulamanızı yayımlayıp konumunu seçin.
 
-   Yalnızca tek bir platforma yayımlıyorsanız, **klasör seçin** metin kutusunda varsayılan değeri kabul edebilirsiniz; Bu, uygulamanızın çerçeveye bağlı dağıtımını App * \< -Directory> \Bin\release\netcoreapp2,\publish* dizinine yayımlar.
+   Yalnızca tek bir platforma yayımlıyorsanız, **klasör seçin** metin kutusunda varsayılan değeri kabul edebilirsiniz; Bu, uygulamanızın çerçeveye bağlı dağıtımını * \<project-directory> \Bin\release\netcoreapp2,\publish* dizinine yayınlar.
 
-   Birden fazla platforma yayımlıyorsanız, hedef platformu tanımlayan bir dize ekleyin. Örneğin, "Linux" dizesini dosya yoluna eklerseniz, Visual Studio uygulamanızın çerçeveye bağlı dağıtımını, App * \< -Directory> \Bin\release\netcoreapp2,\publish\linux* dizinine yayımlar.
+   Birden fazla platforma yayımlıyorsanız, hedef platformu tanımlayan bir dize ekleyin. Örneğin, "Linux" dizesini dosya yoluna eklerseniz, Visual Studio uygulamanızın çerçeveye bağlı dağıtımını * \<project-directory> \Bin\release\netcoreapp2,\publish\linux* dizinine yayınlar.
 
 1. **Yayımla** düğmesinin yanındaki açılan liste simgesini seçerek profili oluşturun ve **Profil oluştur**' a seçin. Sonra profili oluşturmak için **Profil oluştur** düğmesini seçin.
 
@@ -268,7 +268,7 @@ Bir veya daha fazla üçüncü taraf bağımlılığı ile kendi içindeki bir d
 
 1. Projenize bir NuGet paketine başvuru eklemek için **NuGet paket yöneticisini** kullanın; paket sisteminizde zaten yoksa, uygulamayı da yükleyemezsiniz. Paket Yöneticisi 'ni açmak için **Araçlar**  >  **NuGet Paket Yöneticisi**  >  **çözüm için NuGet Paketlerini Yönet**' i seçin.
 
-1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştırma sekmesini seçin ve arama **Browse** kutusuna "Newtonsoft. JSON" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi**seçmeden önce projenizi seçin.
+1. Üçüncü taraf bağımlılıklarınızın (örneğin, `Newtonsoft.Json` ) sisteminizde yüklü olduğunu ve yoksa, bunları yüklemesini doğrulayın. **Yüklü** sekme, sisteminizde yüklü olan NuGet paketlerini listeler. `Newtonsoft.Json`Orada listelenmemişse, araştır sekmesine tıklayın ve arama **Browse** kutusuna "Newtonsoft.Json" yazın. `Newtonsoft.Json`Sağ bölmedeki ve ' yi seçerek, **yüklemeyi**seçmeden önce projenizi seçin.
 
 1. `Newtonsoft.Json`Zaten sisteminizde yüklüyse, **çözüm Için paketleri Yönet** sekmesinin sağ bölmesinde projenizi seçerek projenize ekleyin.
 

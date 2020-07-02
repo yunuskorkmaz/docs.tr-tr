@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: efa0efaf40e2e432d477f1659d7bde3abc98241d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a20fad5f9c95e59c14ffd91f4921cf8bfab443cd
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621375"
 ---
-### <a name="unicode-standard-version-80-categories-now-supported"></a>Unicode standart sürüm 8.0 kategorileri şimdi desteklenen
+### <a name="unicode-standard-version-80-categories-now-supported"></a>Unicode standart sürüm 8,0 kategorileri artık destekleniyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6.2'de, Unicode verileri Unicode Standard sürüm 6.3'ten sürüm 8.0'a yükseltildi.  .NET Framework 4.6.2'de Unicode karakter kategorileri istenirken, bazı sonuçlar önceki .NET Framework sürümlerindeki sonuçlarla eşleşmeyebilir.  Bu değişiklik çoğunlukla Cherokee heceleri ve Yeni Tai Lue sesli harfler işaretleri ve sesi işaretleri etkiler.|
-|Öneri|Kodu gözden geçirin ve sabit kodlanmış Unicode karakter kategorilerine bağlı olan kaldırma/değiştirme mantığı.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.6.2 ' de Unicode verileri, Unicode standart 6,3 sürümünden 8,0 sürümüne yükseltildi.  .NET Framework 4.6.2 ' de Unicode karakter kategorileri istenirken, bazı sonuçlar önceki .NET Framework sürümlerindeki sonuçlarla eşleşmeyebilir.  Bu değişiklik genellikle Çeroki heceleri ve yeni Day lü sesli işaretleri ve ses işaretlerini etkiler.
+
+#### <a name="suggestion"></a>Öneri
+
+Kodu gözden geçirin ve sabit kodlanmış Unicode karakter kategorilerine bağlı olan mantığı kaldırın/değiştirin.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6.2|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|

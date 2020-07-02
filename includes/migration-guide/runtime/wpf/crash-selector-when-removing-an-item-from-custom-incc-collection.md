@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: a573a78109036b87201b53f72aa8dba6755e7a21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6da589057cebfbf3f67a46b8d49d3a61f037c4c7
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622282"
 ---
-### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Özel bir INCC koleksiyonundan bir öğeyi kaldırırken Seçici'de kilitlenme
+### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>Özel bir ıNC koleksiyonundan öğe kaldırılırken seçicide kilitlenme
 
-|   |   |
-|---|---|
-|Ayrıntılar|Aşağıdaki <code>T:System.InvalidOperationException</code> senaryoda bir oluşabilir:<ul><li>ItemsSource için <code>T:System.Windows.Controls.Primitives.Selector</code> özel bir uygulama ile <code>T:System.Collections.Specialized.INotifyCollectionChanged</code>bir koleksiyondur.</li><li>Seçili öğe koleksiyondan kaldırılır.</li><li><code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> Has <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> = -1 (bilinmeyen bir konumu gösterir).</li></ul>Özel durum callstack System.Windows.Threading.Dispatcher.VerifyAccess() System.Windows.DependencyObject.GetValue(DependencyProperty dp) system.windows.controls.primitives.Selector.GetIsSelected(DependencyObject adresindebaşlar öğesi)Uygulamanın birden fazla Sevk irsaliyesi iş parçacığı varsa, bu özel durum .NET Framework 4.5'te oluşabilir. .NET Framework 4.7'de tek bir Sevk Irsaliyesi iş parçacığına sahip uygulamalarda da istisna oluşabilir. Sorun .NET Framework 4.7.1'de giderilmiştir.|
-|Öneri|.NET Framework 4.7.1'e yükseltin.|
-|Kapsam|İkincil|
-|Sürüm|4.7|
+#### <a name="details"></a>Ayrıntılar
+
+<code>T:System.InvalidOperationException</code>Aşağıdaki senaryoda bir durum oluşabilir:<ul><li>A için ItemSource, <code>T:System.Windows.Controls.Primitives.Selector</code> özel bir uygulamasına sahip bir koleksiyondur <code>T:System.Collections.Specialized.INotifyCollectionChanged</code> .</li><li>Seçili öğe koleksiyondan kaldırıldı.</li><li>, <code>T:System.Collections.Specialized.NotifyCollectionChangedEventArgs</code> <code>P:System.Collections.Specialized.NotifyCollectionChangedEventArgs.OldStartingIndex</code> =-1 ' dir (bilinmeyen bir konum olduğunu gösterir).</li></ul>Özel durumun çağrı yığını, System. Windows. Controls. basitler. Selector. getııselected (DependencyObject öğesi) konumundaki System. Windows. DependencyObject. Dispatcher. doğrulamaları yaccess () konumunda başlar. bu durum, uygulamanın birden fazla Dağıtıcı iş parçacığı varsa .NET Framework 4,5 ' de oluşabilir. .NET Framework 4,7 ' de, özel durum tek bir dağıtıcı iş parçacığı olan uygulamalarda da oluşabilir. Sorun .NET Framework 4.7.1 içinde düzeltildi.
+
+#### <a name="suggestion"></a>Öneri
+
+.NET Framework 4.7.1 ' ye yükseltin.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
+|Sürüm|4,7|
 |Tür|Çalışma Zamanı|

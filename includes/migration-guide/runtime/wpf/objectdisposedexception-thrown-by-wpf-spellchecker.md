@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: a3f5f512fd17ab2b076f868be24e5c73d8698c49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b836b26f3f52e9d0cc78feb764629bd2fa306657
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621835"
 ---
-### <a name="objectdisposedexception-thrown-by-wpf-spellchecker"></a>WPF yazım denetleyicisi tarafından atılan ObjectDisposedException
+### <a name="objectdisposedexception-thrown-by-wpf-spellchecker"></a>WPF yazım denetleyicisi tarafından oluşturulan ObjectDisposedException
 
-|   |   |
-|---|---|
-|Ayrıntılar|WPF uygulamaları bazen uygulama kapatma sırasında <xref:System.ObjectDisposedException?displayProperty=name> yazım denetleyicisi tarafından atılan bir ile kilitlenme. Bu, .NET Framework 4.7 WPF'de özel durumu incelikle işleyerek ve böylece uygulamaların artık olumsuz etkilenmemesini sağlayarak düzeltilir. Bir hata ayıklama altında çalışan uygulamalarda zaman zaman ilk şans istisnalarının gözlenmeye devam edeceği unutulmamalıdır.|
-|Öneri|.NET Framework 4.7'ye yükseltin|
-|Kapsam|Edge|
+#### <a name="details"></a>Ayrıntılar
+
+WPF uygulamaları <xref:System.ObjectDisposedException?displayProperty=fullName> , yazım denetleyicisi tarafından oluşturulan uygulama kapatılırken zaman zaman kilitleniyor. Bu, özel durumu düzgün şekilde işleyerek ve bu nedenle uygulamaların artık etkilenmemesi sağlanarak .NET Framework 4,7 WPF 'de düzeltilir. Bu, zaman bir hata ayıklayıcı altında çalışan uygulamalarda devam eden ilk şans özel durumların gözlemlendiği unutulmamalıdır.
+
+#### <a name="suggestion"></a>Öneri
+
+.NET Framework 4,7 ' ye yükseltin
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4.6.1|
 |Tür|Çalışma Zamanı|

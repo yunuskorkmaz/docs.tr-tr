@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: birden çok olayı tek bir olay Işleyicisine bağlama'
+description: C# ' de Özellikler penceresi olay görünümünü kullanarak birden çok olayı Windows Forms ' de tek bir olay işleyicisine bağlamayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 0591291522ab1da04fef90bf1c0a73cf33ba0518
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cca85c223b46d9a82dbc3e34e3377fb83c075959
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739599"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621892"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Nasıl yapılır: Windows Forms'ta Tek Olay İşleyicisine Birden Fazla Olay Bağlama
-Uygulama tasarımınızda, birden çok olay için tek bir olay işleyicisi kullanmak veya aynı yordamı gerçekleştirmek için birden çok olay olması gerektiğini fark edebilirsiniz. Örneğin, bir menü komutuna sahip olacak bir menü komutunun aynı işlevi, aynı işlevselliğe sahip olmaları durumunda sizin formunuzdaki bir düğmeyle oluşturması için genellikle güçlü bir zaman tasarrufu vardır. Bunu, içindeki C# Özellikler penceresi olaylar görünümünü kullanarak veya `Handles` anahtar sözcüğünü ve Visual Basic kod düzenleyicisinde **sınıf adı** ve **Yöntem adı** açılır kutularını kullanarak yapabilirsiniz.  
+Uygulama tasarımınızda, birden çok olay için tek bir olay işleyicisi kullanmak veya aynı yordamı gerçekleştirmek için birden çok olay olması gerektiğini fark edebilirsiniz. Örneğin, bir menü komutuna sahip olacak bir menü komutunun aynı işlevi, aynı işlevselliğe sahip olmaları durumunda sizin formunuzdaki bir düğmeyle oluşturması için genellikle güçlü bir zaman tasarrufu vardır. Bunu, C# ' deki Özellikler penceresi olaylar görünümünü kullanarak veya `Handles` anahtar sözcüğünü ve Visual Basic kod Düzenleyicisi 'Ndeki **sınıf adı** ve **Yöntem adı** açılır kutularını kullanarak yapabilirsiniz.  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>Birden çok olayı Visual Basic bir tek olay işleyicisine bağlamak için  
   
@@ -28,7 +29,7 @@ Uygulama tasarımınızda, birden çok olay için tek bir olay işleyicisi kulla
   
 3. **Yöntem adı** açılan kutusundan, olay işleyicisinin işlemesini istediğiniz olaylardan birini seçin.  
   
-4. Kod Düzenleyicisi, uygun olay işleyicisini ekler ve ekleme noktasını yönteminin içine yerleştirir. Aşağıdaki örnekte, <xref:System.Windows.Forms.Button> denetimi için <xref:System.Windows.Forms.Control.Click> olayıdır.  
+4. Kod Düzenleyicisi, uygun olay işleyicisini ekler ve ekleme noktasını yönteminin içine yerleştirir. Aşağıdaki örnekte, <xref:System.Windows.Forms.Control.Click> denetimin olayıdır <xref:System.Windows.Forms.Button> .  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -46,7 +47,7 @@ Uygulama tasarımınızda, birden çok olay için tek bir olay işleyicisi kulla
   
 6. Olay işleyicisine uygun kodu ekleyin.  
   
-### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Birden çok olayı C\# tek bir olay işleyicisine bağlamak için
+### <a name="to-connect-multiple-events-to-a-single-event-handler-in-c"></a>Birden çok olayı C 'de tek bir olay işleyicisine bağlamak için\#
   
 1. Bir olay işleyicisine bağlamak istediğiniz denetimi seçin.  
   

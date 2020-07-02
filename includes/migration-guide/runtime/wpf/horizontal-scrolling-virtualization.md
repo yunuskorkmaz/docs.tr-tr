@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: ac7a56dc654ef4fd966077dd25012f0c50b0fc8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14585b6de3ce02884f8be789930fc8610f73ba7d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621400"
 ---
 ### <a name="horizontal-scrolling-and-virtualization"></a>Yatay kaydırma ve sanallaştırma
 
-|   |   |
-|---|---|
-|Ayrıntılar|Bu değişiklik, ana <xref:System.Windows.Controls.ItemsControl?displayProperty=name> kaydırma yönüne ortogonal yönde kendi sanallaştırma yapan bir için geçerlidir (ana örnek&quot;&quot;EnableColumnVirtualization= True ile). <xref:System.Windows.Controls.DataGrid?displayProperty=name>  Bazı yatay kaydırma işlemlerinin sonucu, karşılaştırılabilir dikey işlemlerin sonuçlarına daha sezgisel ve daha benzer sonuçlar üretmek için değiştirildi.<p/>İşlemler, &quot;yatay&quot; &quot;kaydırma&quot;çubuğuna sağ tıklayarak elde edilen menüdeki adları kullanmak için Burada Ve Sağ Kenar'ı kaydırmayı içerir.  Bu her ikisi de bir aday <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)>ofset ve arama hesaplamak.<p/>Yeni ofset kaydırdıktan sonra, &quot;yeni&quot; &quot;sanallaştırılan içerik değerini değiştirdiği için burada veya sağ kenar&quot; kavramı değişmiş <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>olabilir.<p/>.NET Framework 4.6.2'den önce kaydırma &quot;işlemi, artık burada&quot; veya &quot;sağ kenarda&quot; olmasa bile, yalnızca aday mahsup işlemini kullanır.  Bu, en iyi &quot;örnekle gösterildiği kaydırma başparmağını zıplatma&quot; gibi etkilerle sonuçlanır. Bir'in <xref:System.Windows.Controls.DataGrid?displayProperty=name> ExtentWidth=1000 ve Width=200 olduğunu varsayalım.  Right &quot;Edge'e&quot; yapılan bir kaydırma, aday ofset 1000 - 200 = 800 kullanır.  Bu ofset kaydırma sırasında, yeni sütunlar de-sanallaştırılmış; çok geniş olduğunu varsayalım, böylece <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name> 2000 için değişiklikler.  Kaydırma HorizontalOffset=800 ile sona erer &quot;ve&quot; başparmak kaydırma çubuğunun ortasına doğru geri döner - tam olarak 800/2000 = %40'ta.<p/>Değişiklik, bu durum oluştuğunda yeni bir aday mahsup yeniden hesaplamak ve yeniden denemektir. (Dikey kaydırma zaten nasıl çalışır.) <p/>Değişiklik son kullanıcı için daha öngörülebilir ve sezgisel bir deneyim üretir, ancak aynı zamanda son <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name> kullanıcı tarafından çağrılan ya da açık bir çağrı tarafından <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)>olsun, yatay bir kaydırma sonra tam değerine bağlı herhangi bir uygulama etkileyebilir.|
-|Öneri|Öngörülen değeri kullanan bir uygulama, sanallaştırmayı de-sanallaştırma nedeniyle <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=name> <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name>değişebilecek <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=name> herhangi bir yatay kaydırmadan sonra gerçek değeri (ve değerini) almak için değiştirilmelidir.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Bu değişiklik, <xref:System.Windows.Controls.ItemsControl?displayProperty=fullName> kendi sanallaştırmasını ana kaydırılan yönle (örneğin, <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> EnableColumnVirtualization = true) yönünü gösteren bir öğesine uygular &quot; &quot; .  Belirli yatay kaydırma işlemlerinin sonucu, benzer dikey işlemlerin sonuçlarına daha sezgisel ve daha benzer sonuçlar verecek şekilde değiştirilmiştir.<p/>İşlemler &quot; &quot; &quot; &quot; , bir yatay kaydırma çubuğuna sağ tıklanarak elde edilen menüden adları kullanmak Için buraya ve sağ kenara kaydırma içerir.  Her ikisi de aday bir sapmayı ve çağrıyı hesaplar <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)> .<p/>Yeni sapmayı kaydırdıktan sonra, yeni &quot; &quot; &quot; &quot; de sanallaştırılan içerik değerini değiştirdiği için burada veya sağ kenar kavramı değişmiş olabilir <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=fullName> .<p/>.NET Framework 4.6.2 ' den önce, kaydırma işlemi, &quot; burada &quot; veya &quot; sağ kenarda &quot; daha fazla olmasa dahi, aday sapmasını kullanır.  Bu &quot; &quot; , en iyi örnek olarak gösterildiği gibi, kaydırma parmak izi sıçramasına benzer etkilere neden olur. A <xref:System.Windows.Controls.DataGrid?displayProperty=fullName> 'Nın ExtentWidth = 1000 ve Width = 200 olduğunu varsayalım.  &quot;Sağ kenara kaydır, &quot; 1000-200 = 800 aday konumunu kullanır.  Bu uzaklığa kaydırma yaparken, yeni sütunlar de sanallaştırılır; Bunun çok geniş olduğunu varsayalım, böylece <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=fullName> 2000 üzerinde değişiklik yapabilirsiniz.  Kaydırma, Horizontalkayması = 800 ile sona erer ve Thumb, &quot; kaydırma çubuğunun &quot; ortasına doğru bir şekilde geri dönerek 800/2000 = %40.<p/>Değişiklik, bu durum oluştuğunda yeni bir aday kaydırın yeniden hesaplanması ve yeniden denemeniz. (Dikey kaydırmanın zaten nasıl çalıştığı.) <p/>Değişiklik, son kullanıcı için daha öngörülebilir ve sezgisel bir deneyim üretir, ancak aynı zamanda <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=fullName> , bir yatay kaydırmanın ardından, son kullanıcı tarafından veya açık bir çağrı tarafından çağrılıp çağrılmayacağı tüm uygulamaları da etkileyebilir <xref:System.Windows.Controls.Primitives.IScrollInfo.SetHorizontalOffset(System.Double)> .
+
+#### <a name="suggestion"></a>Öneri
+
+İçin tahmin edilen bir değer kullanan bir uygulama, aynı anda <xref:System.Windows.Controls.Primitives.IScrollInfo.HorizontalOffset?displayProperty=fullName> <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=fullName> sanallaştırma nedeniyle değiştirilebilen herhangi bir yatay kaydırma sonrasında gerçek değeri (ve değerini) getirmek üzere değiştirilmelidir <xref:System.Windows.Controls.Primitives.IScrollInfo.ExtentWidth?displayProperty=fullName> .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6.2|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Windows.Controls.Primitives.IScrollInfo?displayProperty=nameWithType></li></ul>|

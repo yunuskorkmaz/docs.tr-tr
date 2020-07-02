@@ -1,5 +1,6 @@
 ---
 title: Tür Kitaplığını Derleme Olarak İçeri Aktarma
+description: Bir derleme olarak COM tür tanımlarını içeren bir tür kitaplığı içeri aktarın. Bir tür kitaplığından meta veri oluşturmanın yollarını öğrenin ve bu bir birlikte çalışma derlemesine yol açar.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-ms.openlocfilehash: e1a21175bcabc72b86a328d4f73ecec37140c304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5187e3c2ce533f25a38e93bc3715dd3e2e47c11
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622724"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Tür Kitaplığını Derleme Olarak İçeri Aktarma
 
@@ -46,13 +47,13 @@ Hedef COM türü uygulamasını içeren tür kitaplığını bulduktan sonra, t�
 
   Visual Studio, bir tür kitaplığındaki COM türlerini otomatik olarak bir derlemedeki meta verilere dönüştürür. Yönergeler için bkz. [nasıl yapılır: tür kitaplıklarına başvurular ekleme](how-to-add-references-to-type-libraries.md).
 
-- [Tür kitaplığı alma programı (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tür kitaplığı alma programı (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md)
 
   Tür kitaplığı alma programı, elde edilen birlikte çalışma dosyasındaki meta verileri ayarlamak için komut satırı seçenekleri sağlar, türleri varolan bir tür kitaplığından içeri aktarır ve bir birlikte çalışma derlemesi ve bir ad alanı oluşturur. Yönergeler için bkz. [nasıl yapılır: tür kitaplıklarından birlikte çalışma derlemeleri oluşturma](how-to-generate-interop-assemblies-from-type-libraries.md).
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> sınıfı
 
-  Bu sınıf, bir tür kitaplığındaki ortak sınıfları ve arabirimleri derleme içindeki meta verilere dönüştürmek için yöntemler sağlar. Tlbimp. exe ile aynı meta veri çıkışını üretir. Ancak, Tlbimp. exe ' den farklı <xref:System.Runtime.InteropServices.TypeLibConverter> olarak, sınıfı bellek içi bir tür kitaplığını meta verilere dönüştürebilir.
+  Bu sınıf, bir tür kitaplığındaki ortak sınıfları ve arabirimleri derleme içindeki meta verilere dönüştürmek için yöntemler sağlar. Tlbimp.exe aynı meta veri çıkışını üretir. Ancak, Tlbimp.exe aksine sınıfı, <xref:System.Runtime.InteropServices.TypeLibConverter> bellek içi bir tür kitaplığını meta verilere dönüştürebilir.
 
 - Özel sarmalayıcılar
 
@@ -75,7 +76,7 @@ Hedef COM türü uygulamasını içeren tür kitaplığını bulduktan sonra, t�
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - [COM Bileşenlerini .NET Framework'te Gösterme](exposing-com-components.md)
 - [Tür kitaplığını derlemeye dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbimp.exe (tür kitaplığı Içeri Aktarıcı)](../tools/tlbimp-exe-type-library-importer.md)
 - [Standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Yönetilen kodda COM türlerini kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Birlikte Çalışma Projesi Derleme](compiling-an-interop-project.md)

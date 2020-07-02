@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 3a82822aae281ea7e873ba649f05b1d68686ec69
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbf3c0c8f1d11f9f5997a4d1027242c4710c7107
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70997738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621826"
 ---
-### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Farklı piksel yüksekliğindeki öğelerle düz bir listeyi öğe kaydırma
+### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Öğe-farklı piksel yüksekliğinde öğeleri olan düz bir liste kaydırma
 
-|   |   |
-|---|---|
-|Ayrıntılar|Bir <xref:System.Windows.Controls.ItemsControl?displayProperty=name> koleksiyon sanallaştırma (<code>IsVirtualizing=true</code>) ve öğe kaydırma<code>ScrollUnit=Item</code>() kullanarak görüntülendiğinde ve denetim piksel yüksekliği komşularından farklı olan <xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=name> bir öğeyi görüntülemek için kaydırıldığında, bu koleksiyondaki tüm öğelerüzerinde gerçekleştirilir. UI bu yineleme sırasında yanıt vermiyor; koleksiyon büyükse, bu bir askı olarak algılanabilir. Yineleme, önceki .NET Framework sürümlerinde bile diğer durumlarda oluşur. Örneğin, piksel kaydırma (<code>ScrollUnit=Pixel</code>) farklı piksel yüksekliğine sahip bir öğeyle karşılaştığında ve madde kaydırma hiyerarşik <xref:System.Windows.Controls.TreeView?displayProperty=name> verileri <xref:System.Windows.Controls.ItemsControl?displayProperty=name> (örneğin, gruplandırma etkinleştirilmiş) komşularından farklı sayıda soyundan gelen öğeye sahip bir öğeyle karşılaştığında oluşur. Öğe kaydırma ve farklı piksel yüksekliği durumunda, hiyerarşik verilerin düzenindeki hataları düzeltmek için .NET Framework 4.6.1'de yineleme tanıtıldı.  Veriler düz (hiyerarşi yok) ve .NET Framework 4.6.2 bu durumda bunu yapmıyorsa gerekli değildir.|
-|Öneri|Yineleme .NET Framework 4.6.1'de oluşuyorsa ancak önceki sürümlerde yoksa <xref:System.Windows.Controls.ItemsControl?displayProperty=name> - yani, öğe farklı piksel yüksekliğindeki öğelerle düz bir liste kaydırma durumunda - iki çözüm vardır:<ol><li>.NET Framework 4.6.2'yi yükleyin.</li><li>.NET Framework 4.6.1 için hotfix HR 1605'i yükleyin.</li></ol>|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Bir <xref:System.Windows.Controls.ItemsControl?displayProperty=fullName> koleksiyon, sanallaştırma ( <code>IsVirtualizing=true</code> ) ve öğe kaydırma () kullanarak bir koleksiyon <code>ScrollUnit=Item</code> görüntülediğinde ve denetimin piksel cinsinden yüksekliği, komşularından farklı olan bir öğeyi görüntülemek için kaydırıldığında, <xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=fullName> koleksiyondaki tüm öğeler üzerinde dolaşır. Kullanıcı arabirimi bu yineleme sırasında yanıt vermiyor; koleksiyon büyükse, bu, askıda bir şekilde algılanır. Yineleme, önceki .NET Framework sürümlerde bile diğer koşullarda oluşur. Örneğin, piksel <code>ScrollUnit=Pixel</code> kaydırdıktan sonra (), farklı piksel yüksekliğine sahip bir öğeyle karşılaşıldığında ve öğe kaydırılırken hiyerarşik veriler (örneğin <xref:System.Windows.Controls.TreeView?displayProperty=fullName> , bir veya bir <xref:System.Windows.Controls.ItemsControl?displayProperty=fullName> gruplama etkin gibi), komşularından farklı sayıda alt öğe içeren bir öğeyle karşılaşınca meydana gelir. Öğe kaydırma ve farklı piksel yüksekliğinin olması durumunda yineleme, hiyerarşik verilerin düzeninde hataları onarmak için .NET Framework 4.6.1 ' de tanıtılmıştır.  Veriler düz (hiyerarşi yok) ise ve bu durumda .NET Framework 4.6.2 bunu yapmaz.
+
+#### <a name="suggestion"></a>Öneri
+
+Yineleme, daha önceki sürümlerde değil, .NET Framework 4.6.1 içinde oluşursa, yani <xref:System.Windows.Controls.ItemsControl?displayProperty=fullName> öğesi farklı piksel yüksekliğinin bulunduğu düz bir liste içeriyorsa, iki düzeltme vardır:<ol><li>.NET Framework 4.6.2 'yi yükler.</li><li>.NET Framework 4.6.1 için HR 1605 düzeltmesini yükler.</li></ol>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6.1|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|

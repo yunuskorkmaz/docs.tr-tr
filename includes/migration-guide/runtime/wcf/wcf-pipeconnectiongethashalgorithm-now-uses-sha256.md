@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 318609c15d2e0b9a7ee59b38463735b33ef87974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f87f9e9b87860da97ce96e18104b44ec4327c91
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621388"
 ---
-### <a name="wcf-pipeconnectiongethashalgorithm-now-uses-sha256"></a>WCF PipeConnection.GetHashAlgorithm şimdi SHA256 kullanır
+### <a name="wcf-pipeconnectiongethashalgorithm-now-uses-sha256"></a>WCF PipeConnection. GetHashAlgorithm artık SHA256 kullanıyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.7.1 ile başlayarak, Windows Communication Foundation adlandırılmış borular için rasgele adlar oluşturmak için sha256 karma kullanır. .NET Framework 4.7 ve önceki sürümlerinde SHA1 karma kullanılmıştır.|
-|Öneri|.NET Framework 4.7.1 veya sonraki düzey bu değişiklikle uyumluluk sorunuyla karşınıza çıkarsa, app.config dosyanızın <code>&lt;runtime&gt;</code> bölümüne aşağıdaki satırı ekleyerek bu değişikliği devre dışı kullanabilirsiniz:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InPipeConnectionGetHashAlgorithm=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Windows Communication Foundation .NET Framework başlayarak, adlandırılmış kanallar için rastgele adlar oluşturmak üzere bir SHA256 karması kullanır. .NET Framework 4,7 ve önceki sürümlerde, bir SHA1 karması kullandı.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklik ile .NET Framework 4.7.1 veya sonraki bir sürümde uyumluluk sorunuyla karşılaşırsanız, app.config dosyanızın bölümüne aşağıdaki satırı ekleyerek geri alabilirsiniz <code>&lt;runtime&gt;</code> :<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InPipeConnectionGetHashAlgorithm=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.7.1|
 |Tür|Çalışma Zamanı|

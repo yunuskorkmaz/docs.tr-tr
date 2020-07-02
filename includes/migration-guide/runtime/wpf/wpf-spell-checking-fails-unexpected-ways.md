@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 09e3f0e168e0dcbe79d8ee7216f2671c67bfb87e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d4f0095bc9fde98087dce528c8154d9c9ac6ddb7
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802957"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621836"
 ---
-### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>WPF Yazım Denetimi beklenmeyen şekillerde başarısız olur
+### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>WPF yazım denetimi beklenmeyen yollarla başarısız oluyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|Buna bir dizi WPF Yazım Denetleyicisi sorunları dahildir:<ul><li>WPF Yazım Denetleyicisi bazen atar<xref:System.Runtime.InteropServices.COMException?displayProperty=name></li><li>WPF Yazım Denetleyicisi, uygulamaların 'farklı kullanıcı olarak çalıştır' kullanılarak başlatıldığında başarısız olur <xref:System.UnauthorizedAccessException></li><li>WPF Yazım Denetleyicisi, Almanca'da 'Hausnummer' gibi bileşik sözcüklerdeki yazım hatalarını yanlış tanımlar.</li></ul>|
-|Öneri|Sorun #1 - Bu ,NET Framework 4.6.2 Issue #2'da düzeltildi - Uygulamalar 'farklı kullanıcı olarak çalıştır' kullanılarak başlatıldığında WPF Yazım Denetleyicisi artık desteklenmez. .NET Framework 4.6.2'den başlayarak, bu şekilde başlatılan uygulamalar artık beklenmedik bir şekilde çökmez - bunun yerine Yazım Denetleyicisi sessizce devre dışı bırakılır. Sorun #3 - Bu durum .NET Framework 4.6.2'de sabitlenmiştir.|
-|Kapsam|Edge|
+#### <a name="details"></a>Ayrıntılar
+
+Buna bir dizi WPF yazım denetleyicisi sorunu dahildir:<ul><li>WPF yazım denetleyicisi bazen<xref:System.Runtime.InteropServices.COMException?displayProperty=fullName></li><li>WPF yazım denetleyicisi <xref:System.UnauthorizedAccessException> , ' farklı kullanıcı olarak Çalıştır ' kullanılarak uygulama başlatıldığında başarısız oluyor</li><li>WPF yazım denetleyicisi, Almanya 'daki ' Hausnummer ' gibi bileşik sözcüklerdeki yazım hatalarını yanlış bir şekilde tanımlıyor.</li></ul>
+
+#### <a name="suggestion"></a>Öneri
+
+Sorun #1-Bu, .NET Framework 4.6.2 sorunu #2 düzeltildi-WPF yazım denetleyicisi, ' farklı kullanıcı olarak Çalıştır ' kullanılarak başlatıldığında artık desteklenmez. .NET Framework 4.6.2 başlatılıyor, bu şekilde başlatılan uygulamalar artık beklenmedik şekilde kilitlenmeyecektir. bunun yerine yazım denetleyicisi sessizce devre dışı bırakılır. Sorun #3-Bu, .NET Framework 4.6.2 içinde düzeltildi.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4.6.1|
 |Tür|Çalışma Zamanı|

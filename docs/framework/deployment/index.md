@@ -1,5 +1,6 @@
 ---
 title: .NET Framework ve Uygulamaları Dağıtma
+description: Uygulamanıza .NET dağıtımı ile çalışmaya başlayın. .NET, varsayılan olarak, denetlenen kod paylaşımı ve daha fazlasını etkilemez.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - deploying applications [.NET Framework], packaging
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cce888c962c9ab83c13cce4040eb9ba50270972d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75716472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803513"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework ve Uygulamaları Dağıtma
 
-Bu makale, .NET Framework'u uygulamanızla birlikte dağıtmaya başlamanıza yardımcı olur. Bilgilerin çoğu geliştiriciler, OEM'ler ve kurumsal yöneticiler için tasarlanmıştır. .NET Framework'u bilgisayarlarına yüklemek isteyen kullanıcılar [.NET Framework'ün yüklenmesini](../install/index.md)okumalıdır.
+Bu makale, .NET Framework uygulamanıza dağıtmaya başlamanıza yardımcı olur. Bilgilerin çoğu geliştiriciler, OEM 'Ler ve kuruluş yöneticileri için tasarlanmıştır. .NET Framework bilgisayarlarına yüklemek isteyen kullanıcılar [.NET Framework yüklemeyi](../install/index.md)okumalı.
 
-## <a name="key-deployment-resources"></a>Anahtar Dağıtım Kaynakları
+## <a name="key-deployment-resources"></a>Anahtar dağıtım kaynakları
 
-.NET Framework'ün dağıtımı ve servisi hakkında belirli bilgiler için diğer MSDN konularına aşağıdaki bağlantıları kullanın.
+.NET Framework dağıtma ve bakım hakkında belirli bilgiler için diğer MSDN konularına yönelik aşağıdaki bağlantıları kullanın.
 
 **Kurulum ve dağıtım**
 
@@ -30,7 +31,7 @@ Bu makale, .NET Framework'u uygulamanızla birlikte dağıtmaya başlamanıza ya
 
   - Yükleyici seçenekleri:
 
-    - [Web yükleyici](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Web Yükleyicisi](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
     - [Çevrimdışı yükleyici](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
@@ -38,101 +39,101 @@ Bu makale, .NET Framework'u uygulamanızla birlikte dağıtmaya başlamanıza ya
 
     - [Sessiz yükleme](deployment-guide-for-developers.md#chaining_custom)
 
-    - [UI görüntüleme](deployment-guide-for-developers.md#chaining_default)
+    - [Kullanıcı arabirimini görüntüleme](deployment-guide-for-developers.md#chaining_default)
 
-  - [.NET Framework 4.5 kurulumları sırasında sistem yeniden başlatmayı azaltma](reducing-system-restarts.md)
+  - [.NET Framework 4,5 yüklemeleri sırasında sistem yeniden başlatmaları azaltma](reducing-system-restarts.md)
 
   - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
-- .NET Framework'ü istemci uygulamasıyla dağıtma (geliştiriciler için):
+- .NET Framework bir istemci uygulamasıyla dağıtma (geliştiriciler için):
 
-  - Kurulum ve dağıtım projesinde [InstallShield'i kullanma](deployment-guide-for-developers.md#installshield-deployment)
+  - Kurulum ve dağıtım projesinde [InstallShield kullanma](deployment-guide-for-developers.md#installshield-deployment)
 
-  - [Visual Studio ClickOnce uygulamasını kullanma](deployment-guide-for-developers.md#clickonce-deployment)
+  - [Visual Studio ClickOnce uygulaması kullanma](deployment-guide-for-developers.md#clickonce-deployment)
 
   - [WiX yükleme paketi oluşturma](deployment-guide-for-developers.md#wix)
 
-  - [Özel yükleyici kullanma](deployment-guide-for-developers.md#chaining)
+  - [Özel bir yükleyici kullanma](deployment-guide-for-developers.md#chaining)
 
   - Geliştiriciler için [ek bilgiler](deployment-guide-for-developers.md)
 
-- .NET Framework'ün dağıtılması (OEM'ler ve yöneticiler için):
+- .NET Framework dağıtma (OEM 'Ler ve yöneticiler için):
 
   - [Windows Değerlendirme ve Dağıtım Seti (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976)
 
-  - [Yönetici kılavuzu](guide-for-administrators.md)
+  - [Yönetici Kılavuzu](guide-for-administrators.md)
 
 **Bakım**
 
-- Genel bilgi için [.NET Framework bloguna](https://devblogs.microsoft.com/dotnet/)bakın.
+- Genel bilgiler için [.NET Framework bloguna](https://devblogs.microsoft.com/dotnet/)bakın.
 
-- [Sürümleri algılama](../migration-guide/how-to-determine-which-versions-are-installed.md)
+- [Sürümler algılanıyor](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
-- [Servis paketlerini ve güncelleştirmelerini algılama](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
+- [Hizmet paketleri ve güncelleştirmeler algılanıyor](../migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
 
-## <a name="features-that-simplify-deployment"></a>Dağıtımı Basitleştiren Özellikler
+## <a name="features-that-simplify-deployment"></a>Dağıtımı basitleştiren Özellikler
 
 .NET Framework, uygulamalarınızı dağıtmayı kolaylaştıran bir dizi temel özellik sağlar:
 
-- Etkilenmez uygulamalar.
+- Etkili olmayan uygulamalar.
 
      Bu özellik uygulama yalıtımı sağlar ve DLL çakışmalarını ortadan kaldırır. Varsayılan olarak, bileşenler diğer uygulamaları etkilemez.
 
 - Varsayılan olarak özel bileşenler.
 
-     Varsayılan olarak, bileşenler uygulama dizinine dağıtılır ve yalnızca içeren uygulama tarafından görülebilir.
+     Varsayılan olarak, bileşenler uygulama dizinine dağıtılır ve yalnızca içeren uygulama için görülebilir.
 
-- Kontrollü kod paylaşımı.
+- Denetlenen kod paylaşımı.
 
-     Kod paylaşımı, varsayılan davranış olmak yerine kodu paylaşım için açıkça kullanılabilir hale getirmenizi gerektirir.
+     Kod paylaşımı, varsayılan davranış yerine kodu paylaşıma açık bir şekilde yapmanızı gerektirir.
 
-- Yan yana sürüm.
+- Yan yana sürüm oluşturma.
 
-     Bir bileşenin veya uygulamanın birden çok sürümü bir arada bulunabilir, hangi sürümleri kullanacağınızı seçebilirsiniz ve ortak dil çalışma zamanı sürüm ilkesini zorlar.
+     Bir bileşenin veya uygulamanın birden çok sürümü birlikte bulunabilir, hangi sürümlerin kullanılacağını seçebilirsiniz ve ortak dil çalışma zamanı sürüm oluşturma ilkesini zorunlu kılar.
 
 - XCOPY dağıtımı ve çoğaltma.
 
-     Kendi kendine tanımlanmış ve bağımsız bileşenler ve uygulamalar kayıt defteri girişleri veya bağımlılıkları olmadan dağıtılabilir.
+     Kendi kendine tanımlanmış ve bağımsız bileşenler ve uygulamalar kayıt defteri girişleri veya bağımlılıklar olmadan dağıtılabilir.
 
-- Anında güncellemeler.
+- Anında güncelleştirmeler.
 
-     Yöneticiler, uzak bilgisayarlarda bile program DL'lerini güncelleştirmek için ASP.NET gibi ana bilgisayarları kullanabilir.
+     Yöneticiler, uzak bilgisayarlarda bile program dll 'Lerini güncelleştirmek için ASP.NET gibi Konakları kullanabilir.
 
-- Windows Yükleyici ile tümleştirme.
+- Windows Installer ile tümleştirme.
 
-     Uygulamanızı dağıtırken reklam, yayımlama, onarım ve isteğe bağlı yükleme mevcuttur.
+     Uygulamanızı dağıttığınızda tanıtım, yayımlama, onarma ve isteğe bağlı olarak kurma kullanılabilir.
 
-- Kurumsal dağıtım.
+- Kurumsal Dağıtım.
 
-     Bu özellik, Active Directory'yi kullanmak da dahil olmak üzere kolay yazılım dağıtımı sağlar.
+     Bu özellik Active Directory kullanımı dahil olmak üzere kolay yazılım dağıtımı sağlar.
 
-- İndirme ve önbelleğe alma.
+- İndiriliyor ve önbelleğe alınıyor.
 
-     Artımlı indirmeler indirmeleri daha küçük tutar ve bileşenler yalnızca düşük etkili dağıtım uygulaması tarafından kullanılmak üzere yalıtılabilir.
+     Artımlı indirmeler İndirmeleri daha küçük tutun ve bileşenler yalnızca uygulama tarafından düşük etkili dağıtım için kullanılmak üzere yalıtılabilir.
 
 - Kısmen güvenilen kod.
 
-     Kimlik, kullanıcı yerine koda dayanır ve sertifika iletişim kutusu görünmez.
+     Kimlik, Kullanıcı yerine kodu temel alır ve sertifika iletişim kutusu görüntülenmez.
 
-## <a name="packaging-and-distributing-net-framework-applications"></a>.NET Çerçeve Uygulamalarının Paketlenmesi ve Dağıtılması
+## <a name="packaging-and-distributing-net-framework-applications"></a>.NET Framework uygulamalarını paketleme ve dağıtma
 
-.NET Framework'ün bazı paketleme ve dağıtım bilgileri belgelerin diğer bölümlerinde açıklanmıştır. Bu [bölümler,](../../standard/assembly/index.md)hiçbir kayıt defteri girişi, [güçlü adlandırılmış derlemeler](../../standard/assembly/strong-named.md), ad tekliği sağlamak ve ad sızdırma önlemek ve [derleme sürümü](../../standard/assembly/versioning.md), DLL çakışmaları ile ilişkili sorunların çoğunu giderir, derleme ler, derlemeler olarak adlandırılan kendi kendini açıklayan birimler hakkında bilgi sağlar. Aşağıdaki bölümlerde .NET Framework uygulamalarının paketlenmesi ve dağıtılması hakkında bilgi verilmiştir.
+.NET Framework yönelik paketleme ve dağıtım bilgilerinin bazıları, belgelerinin diğer bölümlerinde açıklanmıştır. Bu bölümler, hiçbir kayıt defteri girişi gerektirmeyen [derlemeler](../../standard/assembly/index.md)adlı, [tanımlayıcı ADLı derlemeler](../../standard/assembly/strong-named.md)ve DLL çakışmaları ile ilişkili birçok sorunu ele veren [derleme sürümü oluşturmayı sağlayan bütünleştirilmiş kod](../../standard/assembly/versioning.md)adı verilen, kendi kendini açıklayan birimler hakkında bilgiler sağlar. Aşağıdaki bölümlerde .NET Framework uygulamalarını paketleme ve dağıtma hakkında bilgi sağlanmaktadır.
 
 ### <a name="packaging"></a>Paketleme
 
-.NET Framework, ambalaj uygulamaları için aşağıdaki seçenekleri sunar:
+.NET Framework paketleme uygulamaları için aşağıdaki seçenekleri sağlar:
 
-- Tek bir derleme olarak veya derlemeler topluluğu olarak.
+- Tek bir derleme veya derlemelerin koleksiyonu olarak.
 
-     Bu seçenekle,..dll veya .exe dosyalarını oluşturulurken kullanmanız yeterlidir.
+     Bu seçenekle, yalnızca. dll veya. exe dosyalarını oluşturulduğu gibi kullanırsınız.
 
-- Dolap (CAB) dosyaları olarak.
+- As dolap (CAB) dosyaları.
 
-     Bu seçenekle, dağıtım yapmak veya daha az zaman alan bir şekilde indirmek için dosyaları .cab dosyalarına sıkıştırırsınız.
+     Bu seçenekle, dağıtım yapmak veya daha az zaman kullanmak için dosyaları. cab dosyalarına sıkıştırursunuz.
 
-- Windows Installer paketi olarak veya diğer yükleyici biçimlerinde.
+- Windows Installer paketi veya diğer yükleyici biçimlerinde.
 
-     Bu seçenekle, Windows Yükleyiciile kullanılmak üzere .msi dosyaları oluşturursunuz veya uygulamanızı başka bir yükleyiciyle kullanmak üzere paketlersiniz.
+     Bu seçenekle, Windows Installer ile kullanmak üzere. msi dosyaları oluşturur veya uygulamanızı başka bir yükleyiciyle kullanmak üzere paketlemenize yardımcı olursunuz.
 
 ### <a name="distribution"></a>Dağıtım
 
@@ -140,36 +141,36 @@ Bu makale, .NET Framework'u uygulamanızla birlikte dağıtmaya başlamanıza ya
 
 - XCOPY veya FTP kullanın.
 
-     Ortak dil çalışma zamanı uygulamaları kendi kendini tanımladığından ve kayıt defteri girişi gerektirmediği için, uygulamayı yalnızca uygun bir dizine kopyalamak için XCOPY veya FTP'yi kullanabilirsiniz. Uygulama daha sonra bu dizinden çalıştırılabilir.
+     Ortak dil çalışma zamanı uygulamaları kendi kendini betimleyen ve kayıt defteri girişi gerektirmeyen için, yalnızca uygulamayı uygun bir dizine kopyalamak üzere XCOPY veya FTP kullanabilirsiniz. Uygulama daha sonra bu dizinden çalıştırılabilir.
 
-- Kod karşıdan yüklemeyi kullanın.
+- Kod indirmeyi kullanın.
 
-     Uygulamanızı Internet üzerinden veya kurumsal bir intranet üzerinden dağıtıyorsanız, kodu bir bilgisayara indirebilir ve uygulamayı orada çalıştırabilirsiniz.
+     Uygulamanızı Internet üzerinden veya kurumsal bir intranet üzerinden dağıtıyorsanız, kodu bir bilgisayara indirebilir ve uygulamayı orada çalıştırmanız yeterlidir.
 
-- Windows Installer 2.0 gibi bir yükleyici programı kullanın.
+- Windows Installer 2,0 gibi bir yükleyici programı kullanın.
 
-     Windows Installer 2.0, genel derleme önbelleğinde ve özel dizinlerde .NET Framework derlemelerini yükleyebilir, onarabilir veya kaldırabilir.
+     Windows Installer 2,0, genel derleme önbelleğinde ve özel dizinlerde .NET Framework derlemeleri yükleyebilir, onarabilir veya kaldırabilir.
 
 ### <a name="installation-location"></a>Yükleme Konumu
 
-Çalışma süresine kadar bulunabilmeleri için uygulamanızın derlemelerini nereye dağıtacağınızı belirlemek için [Çalışma Zamanı Derlemeleri'ni nasıl bulur'a](how-the-runtime-locates-assemblies.md)bakın.
+Çalışma zamanı tarafından bulunabilmeleri için uygulamanızın derlemelerinin nereye dağıtılacağını öğrenmek için, bkz. [çalışma zamanı derlemeleri nasıl konumlandırır](how-the-runtime-locates-assemblies.md).
 
-Güvenlik hususları, uygulamanızı nasıl dağıtdığınızı da etkileyebilir. Güvenlik izinleri, kodun bulunduğu yere göre yönetilen koda verilir. Bir uygulamayı veya bileşeni Internet gibi çok az güven aldığı bir konuma dağıtmak, uygulamanın veya bileşenin yapabileceklerini sınırlar. Dağıtım ve güvenlik konuları hakkında daha fazla bilgi için [Kod Erişim Güvenlik Temelleri'ne](../misc/code-access-security-basics.md)bakın.
+Güvenlik konuları, uygulamanızı nasıl dağıtabileceğinizi da etkileyebilir. Güvenlik izinleri, kodun bulunduğu yere göre yönetilen koda verilir. Bir uygulama veya bileşeni Internet gibi küçük bir güven aldığı bir konuma dağıtmak, uygulamanın veya bileşenin neler yapabileceğini kısıtlar. Dağıtım ve güvenlik konuları hakkında daha fazla bilgi için bkz. [kod erişimi güvenlik temelleri](../misc/code-access-security-basics.md).
 
 ## <a name="related-topics"></a>İlgili Konular
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Çalışma Zamanının Derlemelerin Konumunu Bulması](how-the-runtime-locates-assemblies.md)|Ortak dil çalışma zamanının bağlayıcı bir isteği yerine getirmek için hangi derlemenin kullanılacağını nasıl belirlediğini açıklar.|
-|[Derleme Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)|Tür kimliği, "ve <xref:System.InvalidCastException> <xref:System.MissingMethodException>diğer hatalara" yol açabilecek sorunlardan kaçınmanın yollarını tartışır.|
-|[.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)|Mümkün olduğunda yeniden başlatmayı önleyen yeniden başlatma yöneticisini açıklar ve .NET Framework'ü yükleyen uygulamaların bundan nasıl yararlanabileceğini açıklar.|
-|[Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)|Bir sistem yöneticisinin Microsoft Endpoint Configuration Manager'ı kullanarak .NET Framework'ünü ve sistem bağımlılıklarını ağ da nasıl dağıtabileceğini açıklar.|
-|[Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)|Geliştiricilerin .NET Framework'u uygulamalarıyla birlikte kullanıcılarının bilgisayarlarına nasıl yükleyebileceğini açıklar.|
-|[Uygulamaları, Hizmetleri ve Bileşenleri Dağıtma](/visualstudio/deployment/deploying-applications-services-and-components)|Visual Studio'da ClickOnce ve Windows Installer teknolojilerini kullanarak bir uygulamayı yayımlama yönergeleri de dahil olmak üzere dağıtım seçeneklerini tartışır.|
-|[ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)|Windows Forms uygulamasını nasıl paketleyip ClickOnce ile ağdaki istemci bilgisayarlara nasıl dağıtılanın açıklar.|
-|[Kaynakları Paketleme ve Dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework'ün kaynakları paketlemek ve dağıtmak için kullandığı hub ve spoke modelini açıklar; kaynak adlandırma kuralları, geri dönüş süreci ve paketleme alternatiflerini kapsar.|
-|[Birlikte Çalışma Uygulamasını Dağıtma](../interop/deploying-an-interop-application.md)|Genellikle bir .NET Framework istemci derlemesi, farklı COM türü kitaplıklarını temsil eden bir veya daha fazla interop derlemesi ve bir veya daha fazla kayıtlı COM bileşeni içeren interop uygulamalarının nasıl gönderililip yüklenirolduğunu açıklar.|
-|[Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](how-to-get-progress-from-the-dotnet-installer.md)|Kurulum ilerlemesini kendi görünümünüz gösterirken .NET Framework kurulum işlemini sessizce nasıl başlatıp izleyeceğinizi açıklar.|
+|[Çalışma Zamanının Derlemelerin Konumunu Bulması](how-the-runtime-locates-assemblies.md)|Ortak dil çalışma zamanının, bir bağlama isteğini karşılamak için hangi derlemeyi kullanacağınızı nasıl belirlediğini açıklar.|
+|[Derleme Yükleme için En İyi Yöntemler](best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>, <xref:System.MissingMethodException> , Ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yollarını açıklar.|
+|[.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)|Mümkün olan her durumda yeniden başlatma Işlemini önleyen ve .NET Framework yükleyen uygulamaların nasıl yararlanacağı açıklanmaktadır.|
+|[Yöneticiler için Dağıtım Kılavuzu](guide-for-administrators.md)|Bir sistem yöneticisinin, Microsoft uç nokta Configuration Manager kullanarak bir ağ üzerinde .NET Framework ve sistem bağımlılıklarını nasıl dağıtabilebileceğini açıklar.|
+|[Geliştiriciler için Dağıtım Kılavuzu](deployment-guide-for-developers.md)|Geliştiricilerin kullanıcıların bilgisayarlarına uygulamalarına .NET Framework nasıl yükleyebileceğini açıklar.|
+|[Uygulamaları, Hizmetleri ve Bileşenleri Dağıtma](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce ve Windows Installer teknolojilerini kullanarak uygulama yayımlama yönergeleri de dahil olmak üzere Visual Studio 'da dağıtım seçeneklerini açıklar.|
+|[ClickOnce Uygulamalarını Yayımlama](/visualstudio/deployment/publishing-clickonce-applications)|Bir Windows Forms uygulamasının nasıl paketleneceğini ve bir ağdaki istemci bilgisayarlara ClickOnce ile nasıl dağıtılacağını açıklar.|
+|[Kaynakları Paketleme ve Dağıtma](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework, kaynakları paketlemek ve dağıtmak için kullandığı hub ve bağlı bileşen modelini açıklar; Kaynak adlandırma kurallarını, geri dönüş işlemini ve paketleme alternatiflerini içerir.|
+|[Birlikte Çalışma Uygulamasını Dağıtma](../interop/deploying-an-interop-application.md)|Genellikle bir .NET Framework istemci derlemesi, farklı COM tür kitaplıklarını temsil eden bir veya daha fazla birlikte çalışma derlemesi ve bir veya daha fazla kayıtlı COM bileşeni içeren birlikte çalışma uygulamalarının nasıl teslim edileceğini ve yükleneceğini açıklar.|
+|[Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](how-to-get-progress-from-the-dotnet-installer.md)|Kurulum ilerleme durumunun kendi görünümünü gösterirken .NET Framework kurulum işleminin sessizce nasıl başlatılmasını ve izleneceğini açıklar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

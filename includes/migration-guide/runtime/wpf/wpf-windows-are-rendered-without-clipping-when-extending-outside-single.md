@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 3b7309347c643d89a28331c6ef3cac36085a969a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d276e2bbf24c8b2389a0a8078c62c327c3729d50
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621447"
 ---
-### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a>WPF pencereler, tek bir monitörün dışına uzatıldığında kırpma olmadan işlenir
+### <a name="wpf-windows-are-rendered-without-clipping-when-extending-outside-a-single-monitor"></a>WPF pencereleri, tek bir izleyicinin dışında genişledikleri zaman kırpmadan işlenir
 
-|   |   |
-|---|---|
-|Ayrıntılar|Windows 8 ve üzeri üzerinde çalışan .NET Framework 4.6'da, çoklu monitör senaryosunda tek ekranın dışına uzandığında tüm pencere kırpma olmadan işlenir. Bu, .NET Framework'ün tek bir ekranın ötesine uzanan WPF pencerelerini kesecek önceki sürümlerinden farklıdır.|
-|Öneri|Bu davranış (klip le şaşmasın veya <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> kesilmesin), bir uygulamanın yapılandırma <code>&lt;appSettings&gt;</code> <code>EnableMultiMonitorDisplayClipping</code> dosyasındaki öğe kullanılarak veya uygulama başlangıcında özelliği ayarlayarak açıkça ayarlanabilir.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Windows 8 ve üzeri sürümlerde çalışan .NET Framework 4,6 ' de, tüm pencere, birden çok izleyici senaryosunda tek bir görüntü dışına genişlemediğinde kırpma olmadan işlenir. Bu, tek bir görüntüleme ötesinde Genişletilebilir WPF pencerelerini Clip .NET Framework önceki sürümlerinden farklıdır.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu davranış (klip veya Not) <code>&lt;EnableMultiMonitorDisplayClipping&gt;</code> <code>&lt;appSettings&gt;</code> , bir uygulamanın yapılandırma dosyasındaki öğesini kullanarak veya uygulama başlangıcında özelliği ayarlayarak açıkça ayarlanabilir <code>EnableMultiMonitorDisplayClipping</code> .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6|
 |Tür|Çalışma Zamanı|

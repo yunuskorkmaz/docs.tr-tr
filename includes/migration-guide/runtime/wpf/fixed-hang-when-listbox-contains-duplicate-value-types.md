@@ -1,16 +1,19 @@
 ---
-ms.openlocfilehash: 8b21a85ae4e745a3d71261414e79dafbf3384131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5d5423d18091545ad9d50325900f5a9a4fff6dd9
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67802713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622113"
 ---
-### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>ListBox yinelenen değer türleri içerdiğinde bir askı da düzeltildi
+### <a name="fixed-a-hang-when-listbox-contains-duplicate-value-types"></a>ListBox yinelenen değer türleri içerdiğinde asılı kalma düzeltildi
 
-|   |   |
-|---|---|
-|Ayrıntılar|Öğeler koleksiyonu yinelenen değer<xref:System.Windows.Controls.ItemsControl> türünde nesneler içerdiğinde, kaydırma sırasında sanallaştırmanın askıda kakılabileceği bir sorun giderildi.|
-|Kapsam|Ana|
-|Sürüm|4.8|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.Windows.Controls.ItemsControl>Öğe koleksiyonu yinelenen değer türünde nesneler içerdiğinde, kaydırma sırasında bir sanallaştırmanın askıda kalmasına neden olan bir sorun düzeltildi.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Ana|
+|Sürüm|4,8|
 |Tür|Çalışma Zamanı|

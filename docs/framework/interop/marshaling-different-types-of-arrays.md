@@ -1,5 +1,6 @@
 ---
 title: Farklı Dizi Türlerini Hazırlama
+description: Değer veya başvuruya göre tamsayılar, değere göre 2 boyutlu tamsayılar, değere göre dizeler ve tamsayı veya dizeler içeren yapılar gibi farklı dizi türlerini sıralama.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1473c7917189f0b36c96b2adcf20005c5fd6b48
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181361"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621502"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Farklı Dizi Türlerini Hazırlama
 Dizi, aynı türde bir veya daha fazla öğe içeren Yönetilen koddaki bir başvuru türüdür. Diziler başvuru türleri olsa da, yönetilmeyen işlevlere parametre olarak geçirilir. Bu davranış, yönetilen dizilerin ın/out parametreleri gibi yönetilen nesnelere geçirilme yöntemi ile tutarlı değildir. Daha fazla bilgi için bkz. [kopyalama ve sabitleme](copying-and-pinning.md).  
@@ -44,47 +45,47 @@ Dizi, aynı türde bir veya daha fazla öğe içeren Yönetilen koddaki bir baş
   
 - Dizeler içeren yapıların dizisi.  
   
- Bir dizi başvuruya göre açıkça sıralanmamışsa, varsayılan davranış diziyi bir ın parametresi olarak sıraladığında. <xref:System.Runtime.InteropServices.InAttribute> Ve <xref:System.Runtime.InteropServices.OutAttribute> özniteliklerini açıkça uygulayarak bu davranışı değiştirebilirsiniz.  
+ Bir dizi başvuruya göre açıkça sıralanmamışsa, varsayılan davranış diziyi bir ın parametresi olarak sıraladığında. <xref:System.Runtime.InteropServices.InAttribute>Ve özniteliklerini açıkça uygulayarak bu davranışı değiştirebilirsiniz <xref:System.Runtime.InteropServices.OutAttribute> .  
   
  Diziler örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:  
   
-- PInvokeLib. dll ' den alınan **Tebaşlangıçraylar** .  
+- PinvokeLib.dll 'den alınan **Testarrayofi** .  
   
     ```cpp
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
-- PInvokeLib. dll dosyasından **test edilmiş Testrefarray.**  
+- PinvokeLib.dll 'den dışarıya gelen **Testrefarrayoftri** .  
   
     ```cpp
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
-- PInvokeLib. dll dosyasından alınan **Testmatrixoflitre** .  
+- PinvokeLib.dll 'den dışarıya gelen **Testmatrixoflitre** .  
   
     ```cpp
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
-- **TestArrayOfStrings** , PInvokeLib. dll dosyasından verildi.  
+- **TestArrayOfStrings** PinvokeLib.dll 'dan verildi.  
   
     ```cpp
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
-- PInvokeLib. dll dosyasından aktarılmış **Testarrayofyapılar** .  
+- PinvokeLib.dll 'den dışarıya gelen **Testarrayofyapılar** .  
   
     ```cpp
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
-- **TestArrayOfStructs2** , PInvokeLib. dll dosyasından verildi.  
+- **TestArrayOfStructs2** PinvokeLib.dll dışarıya verildi.  
   
     ```cpp
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PInvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) , önceden listelenen işlevler ve iki yapı değişkeni, **myPoint** ve **MyPerson**için uygulamalar içeren özel bir yönetilmeyen kitaplıktır. Yapılar aşağıdaki öğeleri içerir:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) , önceden listelenen işlevler ve iki yapı değişkeni, **myPoint** ve **MyPerson**için uygulamalar içeren özel bir yönetilmeyen kitaplıktır. Yapılar aşağıdaki öğeleri içerir:  
   
 ```cpp
 typedef struct _MYPOINT  
@@ -100,9 +101,9 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- Bu örnekte, `MyPoint` ve `MyPerson` yapıları gömülü türler içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Özniteliği, üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak üzere ayarlanır.  
+ Bu örnekte, `MyPoint` ve `MyPerson` yapıları gömülü türler içerir. <xref:System.Runtime.InteropServices.StructLayoutAttribute>Özniteliği, üyelerin bellekte sırayla, göründükleri sırada düzenlendiğinden emin olmak üzere ayarlanır.  
   
- `NativeMethods` Sınıfı, `App` sınıfı tarafından çağrılan bir yöntemler kümesi içerir. Dizileri geçirme hakkında ayrıntılı bilgi için aşağıdaki örnekteki açıklamalara bakın. Başvuru türü olan bir dizi, varsayılan olarak bir ın parametresi olarak geçirilir. Çağıranın sonuçları alması için, **InAttribute** ve **OutAttribute** 'un, diziyi içeren bağımsız değişkene açıkça uygulanması gerekir.  
+ `NativeMethods`Sınıfı, sınıfı tarafından çağrılan bir yöntemler kümesi içerir `App` . Dizileri geçirme hakkında ayrıntılı bilgi için aşağıdaki örnekteki açıklamalara bakın. Başvuru türü olan bir dizi, varsayılan olarak bir ın parametresi olarak geçirilir. Çağıranın sonuçları alması için, **InAttribute** ve **OutAttribute** 'un, diziyi içeren bağımsız değişkene açıkça uygulanması gerekir.  
   
 ### <a name="declaring-prototypes"></a>Prototipleri Bildirme  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]

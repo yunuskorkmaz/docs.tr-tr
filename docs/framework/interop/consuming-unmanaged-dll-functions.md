@@ -1,5 +1,6 @@
 ---
 title: Yönetilmeyen DLL İşlevlerini Kullanma
+description: Yönetilmeyen DLL işlevlerini platform çağırma hizmetini kullanarak kullanın, bu, yönetilen kod çağrısı Yönetilmeyen işlevlerin DLL kitaplıklarında uygulanmasına olanak tanır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - unmanaged functions, calling
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 880cbd4701ae4aee35038f6402b3beb70e60290c
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622191"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Yönetilmeyen DLL İşlevlerini Kullanma
 Platform çağırma, yönetilen kodun, Windows API 'dakiler gibi dinamik bağlantı kitaplıkları (dll) içinde uygulanan yönetilmeyen işlevleri çağırmasına olanak sağlayan bir hizmettir. İçe aktarılmış bir işlevi bulur ve çağırır ve bağımsız değişkenlerini (tamsayılar, dizeler, diziler, yapılar vb.) gerektiğinde birlikte çalışma sınırında sıralar.  

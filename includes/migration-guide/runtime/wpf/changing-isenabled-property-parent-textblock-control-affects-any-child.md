@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 735278848cb7399e414a128afc650a0a1f882337
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 395463225e3c1f1d168dd019ea75966ad54e5a8a
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621399"
 ---
-### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a>TextBlock denetiminin üst öğesinin Etkinleştirilmiş özelliğinin değiştirilmesi tüm alt denetimleri etkiler
+### <a name="changing-the-isenabled-property-of-the-parent-of-a-textblock-control-affects-any-child-controls"></a>Bir TextBlock denetiminin üst öğesinin IsEnabled özelliğini değiştirmek, tüm alt denetimleri etkiler
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6.2 ile başlayarak, bir <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> <xref:System.Windows.Controls.TextBlock?displayProperty=name> denetimin üst özelliğini <xref:System.Windows.Controls.TextBlock?displayProperty=name> değiştirmek, denetimin alt denetimlerini (köprüler ve düğmeler gibi) etkiler. .NET Framework 4.6.1 ve önceki sürümlerinde, a <xref:System.Windows.Controls.TextBlock?displayProperty=name> içindeki denetimler <xref:System.Windows.UIElement.IsEnabled?displayProperty=name> her <xref:System.Windows.Controls.TextBlock?displayProperty=name> zaman ebeveynin özelliğinin durumunu yansıtmadı.|
-|Öneri|Yok. Bu değişiklik, denetim içindeki denetimler <xref:System.Windows.Controls.TextBlock?displayProperty=name> için beklenen davranışa uygundur.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.6.2 başlayarak, <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> bir denetimin üst öğesinin özelliğini değiştirmek, <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> denetimin tüm alt denetimlerini (köprüler ve düğmeler gibi) etkiler <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> . .NET Framework 4.6.1 ve önceki sürümlerde, içindeki denetimler <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> her zaman üst öğenin özelliğinin durumunu yansıtmamaktadır <xref:System.Windows.UIElement.IsEnabled?displayProperty=fullName> <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> .
+
+#### <a name="suggestion"></a>Öneri
+
+Yok. Bu değişiklik, denetim içindeki denetimler için beklenen davranışa uyar <xref:System.Windows.Controls.TextBlock?displayProperty=fullName> .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6.2|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Windows.UIElement.IsEnabled?displayProperty=nameWithType></li></ul>|

@@ -1,21 +1,21 @@
 ---
-title: 'Öğretici: Tahmin bisiklet kiralama talebi - zaman serisi'
-description: Bu öğretici, tek değişkenli zaman serisi analizi ve ML.NET kullanarak bir bisiklet kiralama hizmeti için talebi tahmin nasıl gösterir.
-ms.date: 11/07/2019
+title: 'Öğretici: tahmin Bisiklet Kiralama talep-süre serisi'
+description: Bu öğreticide, tek bir zaman serisi analizi ve ML.NET kullanarak bir bisiklet kiralama hizmeti için talebin nasıl tahmin yapılacağı gösterilir.
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: bceb32f4ea22ade6d3b49b3a99d7ec48a7ba168d
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803228"
 ---
-# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: Zaman serisi analizi ve ML.NET ile tahmin bisiklet kiralama hizmeti talebi
+# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
-ML.NET ile sql server veritabanında depolanan veriler üzerinde tek değişkenli zaman serisi analizini kullanarak bisiklet kiralama hizmeti talebini nasıl tahmin edebilirsiniz öğrenin.
+ML.NET ile SQL Server veritabanında depolanan veriler üzerinde bağımsız zamanlı bir zaman serisi analizi kullanarak bir bisiklet kiralama hizmeti için talebi tahmin etme hakkında bilgi edinin.
 
 Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
@@ -23,52 +23,55 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Sorunu anlama
 > * Veritabanından veri yükleme
 > * Tahmin modeli oluşturma
-> * Tahmin modelini değerlendirme
+> * Tahmin modelini değerlendir
 > * Tahmin modelini kaydetme
-> * Tahmin modeli kullanma
+> * Tahmin modeli kullan
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonrası veya Visual Studio 2017 sürümü 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" iş yükü yüklü.
+- [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri, ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
-## <a name="time-series-forecasting-sample-overview"></a>Zaman serisi tahmin örnek genel bakış
+## <a name="time-series-forecasting-sample-overview"></a>Zaman serisi tahmin örneğine genel bakış
 
-Bu örnek, Tek Spektrum Analizi olarak bilinen tek değişkenli zaman serileri analiz algoritması kullanarak bisiklet kiralama talebini tahmin eden bir **C# .NET Core konsol uygulamasıdır.** Bu örneğin kodu GitHub'daki [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulunabilir.
+Bu örnek, tek bir Spekme analizi olarak bilinen bağımsız bir zaman serisi analiz algoritmasını kullanarak bisiklet için talebi tahmin eden bir **C# .NET Core konsol uygulamasıdır** . Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulunabilir.
 
 ## <a name="understand-the-problem"></a>Sorunu anlama
 
-Verimli bir çalışma yürütmek için, envanter yönetimi önemli bir rol oynar. Stokta çok fazla ürün olması, raflarda yer alan satılmayan ürünlerin herhangi bir gelir getirmeyecek olması anlamına gelir. Çok az ürün olması, satışların kaybolmasına ve müşterilere rakiplerinden satın alma yol açar. Bu nedenle, sürekli soru, ne stok en uygun miktarda elde tutmak nedir? Zaman serisi çözümlemesi, geçmiş verilere bakarak, desenleri tanımlayarak ve gelecekte değerleri tahmin etmek için bu bilgileri kullanarak bu soruların yanıtlanmasına yardımcı olur.
+Verimli bir işlem çalıştırmak için, envanter yönetimi bir anahtar rol oynar. Ücretteki bir ürünün çok fazla olması, raflardan herhangi bir gelir üretmeden satışa açık ürünler anlamına gelir. Çok az ürün, rakiplerden satın alınan satışları ve müşterileri kaybetmeyecek. Bu nedenle, sabit soru, elinizin altında tutulacak en uygun stok miktarı nedir? Zaman serisi analizi, geçmiş verileri inceleyerek, desenleri tanımlayarak ve bu bilgileri gelecekte bir süre tahmin etmek için kullanarak bu sorulara yanıt sağlanmasına yardımcı olur.
 
-Bu öğreticide kullanılan verileri çözümleme tekniği, tek değişkenli zaman serisi çözümlemesidir. Univariate zaman serisi analizi, aylık satışlar gibi belirli aralıklarla belirli aralıklarla belirli bir zaman dilimi içinde tek bir sayısal gözleme bakar.
+Bu öğreticide kullanılan verileri çözümlemeye yönelik teknik, zaman serisi analizinden bağımsız bir yöntemdir. Tek bir zaman serisi analizi, aylık satış gibi belirli aralıklarda tek bir sayısal izlemeye göz atacağız.
 
-Bu eğitimde kullanılan algoritma [Tek Spektrum Analizi(SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf)olduğunu. SSA, bir zaman serisini bir dizi ana bileşene ayrıştarak çalışır. Bu bileşenler, bir sinyalin eğilimlere, gürültüye, mevsimselliğe ve diğer birçok faktöre karşılık gelen parçaları olarak yorumlanabilir. Daha sonra, bu bileşenler yeniden oluşturulur ve gelecekte bir süre değerleri tahmin etmek için kullanılır.
+Bu öğreticide kullanılan algoritma, [tek bir Spekme analizidir (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). SSA, bir dizi sorumlu bileşen için zaman serisini kaldırarak işe yarar. Bu bileşenler, eğilimler, gürültü, mevsimsellik ve birçok başka etkene karşılık gelen bir sinyalin parçaları olarak yorumlanamaz. Ardından, bu bileşenler yeniden yapılandırılır ve gelecekte değerleri tahmin etmek için kullanılır.
 
 ## <a name="create-console-application"></a>Konsol uygulaması oluşturma
 
-1. "BikeDemandForecasting" adlı yeni bir **C# .NET Core konsol uygulaması** oluşturun.
-1. sürüm **1.4.0** NuGet **paketini Microsoft.ML** yükleyin
-    1. Çözüm Gezgini'nde projenize sağ tıklayın ve **NuGet Paketlerini Yönet'i**seçin.
-    1. Paket kaynağı olarak "nuget.org" seçeneğini belirleyin, **Gözat** sekmesini seçin, **Microsoft.ML**arayın.
-    1. Yayın **aet'i ekle** onay kutusunu işaretleyin.
-    1. **Yükle** düğmesini seçin.
-    1. **Değişiklikler Önizleme** iletişim kutusundaki **Tamam** düğmesini seçin ve listelenen paketlerin lisans koşullarını kabul ederseniz Lisans Kabul iletişim kutusundaki **Kabul Et** düğmesini seçin.
-    1. **System.Data.SqlClient** sürüm **4.7.0** ve **Microsoft.ML.TimeSeries** sürüm **1.4.0**için bu adımları yineleyin.
+1. "Bikeisteğtahmini" adlı yeni bir **C# .NET Core konsol uygulaması** oluşturun.
+1. **Microsoft.ml** sürümü NuGet paketini yükler
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
+    1. Paket kaynağı olarak "nuget.org" öğesini seçin, **Gözden** geçirme sekmesini seçin, **Microsoft.ml**için arama yapın.
+    1. **Ön sürümü dahil et** onay kutusunu işaretleyin.
+    1. **Install** düğmesini seçin.
+    1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız Lisans Kabulü iletişim kutusunda **kabul ediyorum** düğmesini seçin.
+    1. **System. Data. SqlClient** ve **Microsoft. ml. timeseries**için bu adımları tekrarlayın.
 
 ### <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
 1. *Veri*adlı bir dizin oluşturun.
-1. [ *DailyDemand.mdf* veritabanı dosyasını](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) indirin ve *Veri* dizinine kaydedin.
+1. [ *Dailydemand. mdf* veritabanı dosyasını](https://github.com/dotnet/machinelearning-samples/raw/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Data/DailyDemand.mdf) indirin ve *veri* dizinine kaydedin.
 
 > [!NOTE]
-> Bu öğreticide kullanılan veriler [UCI Bike Sharing Dataset'ten](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)gelir. Fanaee-T, Hadi ve Gama, Joao, 'Topluluk dedektörleri ve arka plan bilgisi birleştiren olay etiketleme', İlerleme Yapay Zeka (2013): s. 1-15, Springer Berlin Heidelberg, [Web Link](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
+> Bu öğreticide kullanılan veriler, [UCI bisiklet paylaşımı veri kümesinden](http://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset)gelir. Fanaee-T, hadi ve gama, Joao, ' olay etiketleme birleştirme algılayıcıları ve arka plan bilgisi ', yapay zeka 'da Ilerleme (2013): PP. 1-15, Sprümlberg, [Web bağlantısı](https://link.springer.com/article/10.1007%2Fs13748-013-0040-3).
 
-Orijinal veri kümesi mevsimsellik ve hava koşullarına karşılık gelen birkaç sütun içerir. Kısaltma için ve bu öğreticide kullanılan algoritma yalnızca tek bir sayısal sütundaki değerleri gerektirdiğinden, özgün veri kümesi yalnızca aşağıdaki sütunları içerecek şekilde yoğunlaştırılmıştır:
+Özgün veri kümesi mevsimsellik ve hava durumu ile ilgili birkaç sütun içerir. Breçekimi ve bu öğreticide kullanılan algoritma yalnızca tek bir sayısal sütundan değer gerektirdiğinden, özgün veri kümesi yalnızca aşağıdaki sütunları içerecek şekilde yoğunlaştırılmış:
 
 - **dteday**: Gözlem tarihi.
-- **yıl**: Gözlemin kodlanmış yılı (0=2011, 1=2012).
-- **cnt**: O gün için toplam bisiklet kiralama sayısı.
+- **yıl**: gözlemin kodlanmış yılı (0 = 2011, 1 = 2012).
+- **sayisi**: o güne ait bisiklet salları toplam sayısı.
 
-Özgün veri kümesi, sql server veritabanında aşağıdaki şemaya sahip bir veritabanı tablosuna eşlenir.
+Özgün veri kümesi, bir SQL Server veritabanında aşağıdaki şemaya sahip bir veritabanı tablosuyla eşlenir.
 
 ```SQL
 CREATE TABLE [Rentals] (
@@ -78,97 +81,97 @@ CREATE TABLE [Rentals] (
 );
 ```
 
-Aşağıdaki verilerin bir örneğidir:
+Aşağıda, verilerin bir örneği verilmiştir:
 
-| Kiralama Tarihi | Yıl | Toplam Kiralama |
+| RentalDate | Yıl | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|
 |1/3/2011|0|1349|
 
-### <a name="create-input-and-output-classes"></a>Giriş ve çıktı sınıfları oluşturma
+### <a name="create-input-and-output-classes"></a>Giriş ve çıkış sınıfları oluşturma
 
-1. *Dosya Program.csyı açın* `using` ve varolan deyimleri aşağıdakilerle değiştirin:
+1. *Program.cs* dosyasını açın ve var olan `using` deyimleri şu şekilde değiştirin:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L1-L8)]
 
-1. `ModelInput` sınıfını oluşturun. `Program` Sınıfın altına aşağıdaki kodu ekleyin.
+1. `ModelInput` sınıfını oluşturun. Sınıfının altına `Program` aşağıdaki kodu ekleyin.
 
     [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L120-L127)]
 
-    Sınıf `ModelInput` aşağıdaki sütunları içerir:
+    `ModelInput`Sınıfı şu sütunları içerir:
 
-    - **Kiralama Tarihi**: Gözlem tarihi.
-    - **Yıl**: Gözlemin kodlanmış yılı (0=2011, 1=2012).
-    - **Toplam Kiralama**: O gün için toplam bisiklet kiralama sayısı.
+    - **Rentaldate**: Gözlem tarihi.
+    - **Yıl**: gözlemin kodlanmış yılı (0 = 2011, 1 = 2012).
+    - **Totalrentals**: Bu güne ait toplam Bisiklet randevu sayısı.
 
-1. Yeni `ModelOutput` oluşturulan sınıfın `ModelInput` altında sınıf oluşturun.
+1. `ModelOutput`Yeni oluşturulan sınıfın altında sınıf oluşturun `ModelInput` .
 
     [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L129-L136)]
 
-    Sınıf `ModelOutput` aşağıdaki sütunları içerir:
+    `ModelOutput`Sınıfı şu sütunları içerir:
 
-    - **Tahmini Kiralamalar**: Tahmin edilen dönem için öngörülen değerlerdir.
-    - **LowerBoundRentals**: Öngörülen dönem için öngörülen minimum değerlerdir.
-    - **UpperBoundRentals**: Tahmin edilen dönem için öngörülen maksimum değerlerdir.
+    - **ForecastedRentals**: tahmin edilen dönem için tahmin edilen değerler.
+    - **Ials Boundrentals**: tahmin edilen dönem için öngörülen minimum değerler.
+    - **Üsteboundrentals**: tahmin edilen dönem için öngörülen maksimum değer.
 
-### <a name="define-paths-and-initialize-variables"></a>Yolları tanımlayın ve değişkenleri başlatma
+### <a name="define-paths-and-initialize-variables"></a>Yolları tanımlama ve değişkenleri başlatma
 
-1. Yöntemin `Main` içinde, verilerinizin konumunu, bağlantı dizesini ve eğitilmiş modeli nerede kaydedebileceğinizi depolamak için değişkenleri tanımlayın.
+1. Yöntemi içinde `Main` , verilerinizin konumunu, Bağlantı dizenizi ve eğitilen modelin kaydedileceği yeri depolamak için değişkenleri tanımlayın.
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L16-L19)]
 
-1. Yönteme `mlContext` aşağıdaki satırı ekleyerek [`MLContext`](xref:Microsoft.ML.MLContext) değişkeni yeni bir örnekle başharfe ait hale getirmek. `Main`
+1. `mlContext` [`MLContext`](xref:Microsoft.ML.MLContext) Yöntemine aşağıdaki satırı ekleyerek değişkeni yeni bir örneğiyle başlatın `Main` .
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L21)]
 
-    Sınıf [`MLContext`](xref:Microsoft.ML.MLContext) tüm ML.NET işlemleri için bir başlangıç noktasıdır ve mlContext'ı başlatmak, model oluşturma iş akışı nesneleri arasında paylaşılabilen yeni bir ML.NET ortamı oluşturur. Kavramsal olarak Varlık Çerçevesi'ne `DBContext` benzer.
+    [`MLContext`](xref:Microsoft.ML.MLContext)Sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlContext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal olarak da benzerdir `DBContext` .
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-1. Bu `DatabaseLoader` tür `ModelInput`kayıtları yükler oluşturun.
+1. `DatabaseLoader`Bu tür kayıtları yükleyen oluşturma `ModelInput` .
 
     [!code-csharp [CreateDBLoader](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L23)]
 
-1. Veritabanından veri yüklemek için sorgu tanımlayın.
+1. Veritabanından verileri yükleyecek sorguyu tanımlayın.
 
     [!code-csharp [DefineSQLQuery](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L25)]
 
-    ML.NET algoritmaları veri türü [`Single`](xref:System.Single)olmasını bekliyoruz. Bu nedenle, tür [`Real`](xref:System.Data.SqlDbType)olmayan veritabanından gelen sayısal değerlerin , tek bir hassas kayan nokta [`Real`](xref:System.Data.SqlDbType)değerine dönüştürülmesi gerekir.
+    ML.NET algoritmaları verilerin türünde olmasını bekler [`Single`](xref:System.Single) . Bu nedenle, tek duyarlıklı kayan noktalı bir değer olan, türünde olmayan veritabanından gelen sayısal değerlerin [`Real`](xref:System.Data.SqlDbType) olarak dönüştürülmesi gerekir [`Real`](xref:System.Data.SqlDbType) .
 
-    Ve `Year` `TotalRental` sütunlar veritabanında hem de sasayı türleridir. Dahili `CAST` işlevi kullanarak, her ikisi `Real`de döküm .
+    `Year`Ve `TotalRental` sütunları, veritabanındaki tamsayı türlerdir. `CAST`Yerleşik işlevi kullanarak, her ikisi de ' a dönüştürülür `Real` .
 
-1. Veritabanına `DatabaseSource` bağlanmak için a oluşturun ve sorguyu çalıştırın.
+1. `DatabaseSource`Veritabanına bağlanmak ve sorguyu yürütmek için oluşturun.
 
     [!code-csharp [CreateDBSource](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L27-L29)]
 
-1. Verileri bir `IDataView`' ye yükleyin.
+1. Verileri bir öğesine yükleyin `IDataView` .
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. Veri kümesi iki yıllık veri içerir. Yalnızca ilk yıla ait veriler eğitim için kullanılır, ikinci yıl ise model tarafından üretilen tahminle gerçek değerleri karşılaştırmak için düzenlenir. Dönüşümü kullanarak verileri [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) filtreleyin.
+1. Veri kümesi iki yıl değer içerir. Eğitim için yalnızca ilk yılın verileri kullanılır, ikinci yıl, gerçek değerleri model tarafından üretilen tahmine göre karşılaştırmak için tutulur. Dönüştürme kullanarak verileri filtreleyin [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) .
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
-    İlk yıl için, `Year` `upperBound` parametre 1 olarak ayarlanırken yalnızca sütundaki 1'den küçük değerler seçilir. Tersine, ikinci yıl için, parametre 1'e `lowerBound` ayarlayarak 1'den büyük veya eşit değerler seçilir.
+    İlk yılda, `Year` parametre 1 olarak ayarlanarak yalnızca sütundaki değerler 1 ' den az `upperBound` olacak şekilde seçilir. Bunun tersine, ikinci yıl için 1 ' den büyük veya eşit değerler `lowerBound` parametresi 1 olarak ayarlanarak seçilir.
 
-## <a name="define-time-series-analysis-pipeline"></a>Zaman serisi analiz boru hattını tanımla
+## <a name="define-time-series-analysis-pipeline"></a>Zaman serisi analizi ardışık düzenini tanımlama
 
-1. Zaman serisi veri kümesindeki değerleri tahmin etmek için [SsaForecastingEstimator'u](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator) kullanan bir ardışık kaynak tanımlayın.
+1. Bir zaman serisi veri kümesindeki değerleri tahmin etmek için [Ssaforekılaringestimator](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator) kullanan bir işlem hattı tanımlayın.
 
     [!code-csharp [DefinePipeline](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L36-L45)]
 
-    İlk `forecastingPipeline` yıl için 365 veri puanı alır ve zaman serisi veri kümesini `seriesLength` parametrede belirtildiği şekilde 30 günlük (aylık) aralıklara böler. Bu örneklerin her biri haftalık veya 7 günlük bir süre ile analiz edilir. Bir sonraki dönem(ler) için öngörülen değerin ne olduğu belirlenirken, önceki yedi güne ait değerler tahmin yapmak için kullanılır. Model, `horizon` parametre tarafından tanımlandığı şekilde geleceğe yedi dönem tahmin etmek üzere ayarlanır. Bir tahmin bilinçli bir tahmin olduğundan, her zaman % 100 doğru değildir. Bu nedenle, üst ve alt sınırlar tarafından tanımlanan en iyi ve en kötü durum senaryolarında değerlerin aralığını bilmek iyidir. Bu durumda, alt ve üst sınırlar için güven düzeyi% 95 olarak ayarlanır. Güven düzeyi buna göre artırılabilir veya azaltılabilir. Değer ne kadar yüksekse, istenilen güven düzeyine ulaşmak için üst ve alt sınırlar arasındaki aralık da o kadar geniştir.
+    , `forecastingPipeline` İlk yıl ve örnekler için 365 veri noktası alır ya da zaman serisi veri kümesini parametre tarafından belirtilen 30 günlük (aylık) aralıklarına böler `seriesLength` . Bu örneklerin her biri haftalık veya 7 günlük bir pencere ile çözümlenir. Sonraki periyotalar için tahmin edilen değerin ne olduğu belirlenirken, önceki yedi günün değerleri bir tahmin yapmak için kullanılır. Model, daha sonra parametresi tarafından tanımlanan şekilde yedi dönemi tahmin etmek üzere ayarlanır `horizon` . Tahmin bilinçli bir tahmin olduğundan, her zaman %100 doğru değildir. Bu nedenle, üst ve alt sınırlar tarafından tanımlanan en iyi ve en kötü durum senaryolarında değer aralığını bilmemiz yararlı olur. Bu durumda, alt ve üst sınırlara yönelik güven düzeyi %95 olarak ayarlanmıştır. Güvenirlik düzeyi, uygun şekilde artırılabilir veya azaltılabilir. Değerin ne kadar yüksekse, istenen güven düzeyini elde etmek için Aralık üst ve alt sınır arasındadır.
 
-1. Modeli [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*) eğitmek ve verileri daha önce tanımlanana `forecastingPipeline`sığdırmak için yöntemi kullanın.
+1. [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*)Modeli eğitme ve verileri daha önce tanımlanan öğesine sığdırmak için yöntemini kullanın `forecastingPipeline` .
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L47)]
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Modelin gelecek yılın verilerini tahmin ederek ve gerçek değerlerle karşılaştırarak ne kadar iyi performans gösterdiğini değerlendirin.
+Sonraki yılın verilerini tahmin ederek ve gerçek değerlerle karşılaştırarak modelin ne kadar iyi performans kullandığını değerlendirin.
 
-1. Yöntemin `Main` altında, adı verilen `Evaluate`yeni bir yardımcı program yöntemi oluşturun.
+1. Yönteminin altında `Main` adlı yeni bir yardımcı program yöntemi oluşturun `Evaluate` .
 
     ```csharp
     static void Evaluate(IDataView testData, ITransformer model, MLContext mlContext)
@@ -177,54 +180,54 @@ Modelin gelecek yılın verilerini tahmin ederek ve gerçek değerlerle karşıl
     }
     ```
 
-1. Yöntemin `Evaluate` içinde, eğitilmiş model ile [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) yöntemi kullanarak ikinci yılın verilerini tahmin edin.
+1. Yöntemi içinde `Evaluate` , eğitim modeliyle yöntemi kullanarak ikinci yılın verilerini tahmin edin [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) .
 
     [!code-csharp [EvaluateForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L62)]
 
-1. [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) Yöntemi kullanarak verilerden gerçek değerleri alın.
+1. Yöntemini kullanarak verilerden gerçek değerleri alın [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) .
 
     [!code-csharp [GetActualRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L65-L67)]
 
-1. [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) Yöntemi kullanarak tahmin değerlerini alın.
+1. Yöntemini kullanarak tahmin değerlerini alın [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) .
 
     [!code-csharp [GetForecastRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L70-L72)]
 
-1. Hata olarak adanılan gerçek ve tahmin değerleri arasındaki farkı hesaplayın.
+1. Yaygın olarak hata olarak adlandırılan gerçek ve tahmin değerleri arasındaki farkı hesaplayın.
 
     [!code-csharp [CalculateError](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L75)]
 
-1. Ortalama Mutlak Hata ve Kök Ortalama Kareli Hata değerlerini hesaplayarak performansı ölçün.
+1. Ortalama mutlak hata ve kök ortalama kare hata değerlerini hesaplayarak performansı ölçün.
 
     [!code-csharp [CalculateMetrics](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L78-L79)]
 
     Performansı değerlendirmek için aşağıdaki ölçümler kullanılır:
 
-    - **Ortalama Mutlak Hata**: Tahminlerin gerçek değere ne kadar yakın olduğunu ölçer. Bu değer 0 ile sonsuzluk arasında değişir. 0'a ne kadar yakınsa, modelin kalitesi de o kadar iyi.
-    - **Kök Ortalama Kareli Hata**: Modeldeki hatayı özetler. Bu değer 0 ile sonsuzluk arasında değişir. 0'a ne kadar yakınsa, modelin kalitesi de o kadar iyi.
+    - **Mutlak ortalama hata**: kapanış tahminlerinin gerçek değere nasıl geldiğini ölçer. Bu değer 0 ile sonsuz arasında aralıklar. 0 ' a yaklaşarak modelin kalitesi daha iyidir.
+    - **Kök ortalama kare hatası**: modeldeki hatayı özetler. Bu değer 0 ile sonsuz arasında aralıklar. 0 ' a yaklaşarak modelin kalitesi daha iyidir.
 
-1. Ölçümleri konsola çıktın.
+1. Ölçümleri konsola çıkış.
 
     [!code-csharp [OutputMetrics](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L82-L85)]
 
-1. `Evaluate` Yöntem in içindeki yöntemi `Main` kullanın.
+1. Yöntemi `Evaluate` içindeki yöntemini kullanın `Main` .
 
     [!code-csharp [EvaluateModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L49)]
 
 ## <a name="save-the-model"></a>Modeli kaydetme
 
-Modelinizden memnunsanız, modelinizi diğer uygulamalarda daha sonra kullanmak üzere kaydedin.
+Modelinize memnun kaldıysanız, daha sonra diğer uygulamalarda kullanmak üzere kaydedin.
 
-1. Yöntemde, `Main` bir [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602). [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602)tek tahminler yapmak için bir kolaylık yöntemidir.
+1. `Main`Yönteminde, oluşturun [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) . [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602), tek tahminleri yapmak için kullanışlı bir yöntemdir.
 
     [!code-csharp [CreateTimeSeriesEngine](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L51)]
 
-1. Modeli daha önce tanımlanan `MLModel.zip` değişken tarafından belirtildiği `modelPath` gibi çağrılan bir dosyaya kaydedin. Modeli [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint*) kaydetmek için yöntemi kullanın.
+1. Modeli, `MLModel.zip` daha önce tanımlanan değişken tarafından belirtilen şekilde adlandırılan bir dosyaya kaydedin `modelPath` . [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint*)Modeli kaydetmek için yöntemini kullanın.
 
     [!code-csharp [SaveModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L52)]
 
-## <a name="use-the-model-to-forecast-demand"></a>Talebi tahmin etmek için modeli kullanma
+## <a name="use-the-model-to-forecast-demand"></a>Talebi tahmin etmek için modeli kullanın
 
-1. Yöntemin `Evaluate` altında, adı verilen `Forecast`yeni bir yardımcı program yöntemi oluşturun.
+1. Yönteminin altında `Evaluate` adlı yeni bir yardımcı program yöntemi oluşturun `Forecast` .
 
     ```csharp
     static void Forecast(IDataView testData, int horizon, TimeSeriesPredictionEngine<ModelInput, ModelOutput> forecaster, MLContext mlContext)
@@ -233,25 +236,25 @@ Modelinizden memnunsanız, modelinizi diğer uygulamalarda daha sonra kullanmak 
     }
     ```
 
-1. Yöntemin `Forecast` içinde, [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict*) önümüzdeki yedi gün için kiralama tahmin etmek için yöntemi kullanın.
+1. Yöntemi içinde `Forecast` , [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict*) sonraki yedi güne ait bir süre için bu yöntemi kullanın.
 
     [!code-csharp [SingleForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L91)]
 
-1. Yedi dönem için gerçek ve tahmin değerlerini hizala.
+1. Gerçek ve tahmin değerlerini yedi dönem için hizalayın.
 
     [!code-csharp [GetForecastOutput](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L93-L108)]
 
-1. Tahmin çıktısını yineleyin ve konsolda görüntüleyin.
+1. Tahmin çıktısını yineleyin ve konsolunda görüntüleyin.
 
     [!code-csharp [DisplayForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L111-L116)]
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 
-1. Yöntemin `Main` içinde, `Forecast` yöntemi arayın.
+1. Yöntemi içinde `Main` `Forecast` yöntemini çağırın.
 
     [!code-csharp [BuildForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L54)]
 
-1. Uygulamayı çalıştırın. Aşağıdakine benzer çıkış konsolda görünmelidir. Kısalık için, çıkış yoğunlaştırılmış tır.
+1. Uygulamayı çalıştırın. Aşağıdakine benzer bir çıktı konsolunda görünmelidir. Breçekimi için çıkış yoğunlaştırılmış.
 
     ```text
     Evaluation Metrics
@@ -274,17 +277,17 @@ Modelinizden memnunsanız, modelinizi diğer uygulamalarda daha sonra kullanmak 
     Upper Estimate: 3573.309
     ```
 
-Gerçek ve tahmin edilen değerlerin incelenmesi aşağıdaki ilişkileri gösterir:
+Gerçek ve tahmin edilen değerlerin incelemesinde aşağıdaki ilişkiler gösterilmektedir:
 
-![Gerçek vs Tahmin Karşılaştırması](./media/time-series-demand-forecasting/forecast.png)
+![Gerçek vs tahmini karşılaştırması](./media/time-series-demand-forecasting/forecast.png)
 
-Tahmin edilen değerler tam kiralama sayısını tahmin etmese de, bir işlemin kaynak kullanımını optimize etmesine olanak tanıyan daha dar bir değer aralığı sağlar.
+Tahmin edilen değerler tam sayı sayısını tahmin etmez, ancak bir işlemin kaynakları kullanımlarını en uygun hale getirmesine izin veren daha dar bir değer aralığı sağlarlar.
 
-Tebrikler! Şimdi başarılı bisiklet kiralama talebi tahmin etmek için bir zaman serisi makine öğrenme modeli inşa ettik.
+Tebrikler! Artık Bisiklet Kiralama talebini tahmin etmek için bir zaman serisi makine öğrenimi modelini başarıyla oluşturdunuz.
 
-Bu öğreticinin kaynak kodunu [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [ML.NET makine öğrenimi görevleri](../resources/tasks.md)
+- [ML.NET 'de makine öğrenimi görevleri](../resources/tasks.md)
 - [Model doğruluğunu artırma](../resources/improve-machine-learning-model-ml-net.md)

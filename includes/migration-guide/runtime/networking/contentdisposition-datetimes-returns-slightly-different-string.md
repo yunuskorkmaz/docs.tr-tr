@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 705bbd0e0bf80e0726d41898685a5e166e039f99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c103dff320ae30d02c12ea5c585a47b589da8237
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621423"
 ---
-### <a name="contentdisposition-datetimes-returns-slightly-different-string"></a>ContentDisposition DateTimes biraz farklı dize döndürür
+### <a name="contentdisposition-datetimes-returns-slightly-different-string"></a>ContentDisposition DateTimes biraz farklı bir dize döndürüyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|<xref:System.Net.Mime.ContentDisposition?displayProperty=name>''lerin string gösterimleri, her zaman iki basamaklı bir <xref:System.DateTime?displayProperty=name> saat bileşenini temsil edecek şekilde 4,6'dan başlayarak güncelleştirildi. Bu [RFC822 ve RFC2822](https://www.ietf.org/rfc/rfc0822.txt) uymaktır. [RFC2822](https://www.ietf.org/rfc/rfc2822.txt) Bu, <xref:System.Net.Mime.ContentDisposition.ToString> mizaç zaman öğelerinden birinin 10:00'dan önce olduğu senaryolarda 4,6'da biraz daha farklı bir dize döndürmeye neden olur. ContentDispositions bazen dizeleri dönüştürerek seri hale getirilir, <xref:System.Net.Mime.ContentDisposition.ToString> bu nedenle herhangi bir işlem, serileştirme veya GetHashCode aramaları gözden geçirilmelidir.|
-|Öneri|Farklı .NET Framework sürümlerinden ContentDispositions dize gösterimlerinin birbirleriyle doğru bir şekilde karşılaştırMasını beklemeyin. Bir karşılaştırma yapmadan önce dizeleri mümkünse ContentDispositions'a dönüştürün.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Öğesinin dize temsilleri <xref:System.Net.Mime.ContentDisposition?displayProperty=fullName> , 4,6 ' dan başlayarak, her zaman iki basamaklı bir saat bileşenini temsil edecek şekilde güncelleştirilmiştir <xref:System.DateTime?displayProperty=fullName> . Bu, [RFC822](https://www.ietf.org/rfc/rfc0822.txt) ve [RFC2822](https://www.ietf.org/rfc/rfc2822.txt)ile uyumlu değildir. Bu <xref:System.Net.Mime.ContentDisposition.ToString> , disposition 'nin zaman öğelerinden birinin 10:00 ' den önceki senaryolarda 4,6 ' de biraz farklı bir dize döndürmesine neden olur. ContentDispositions bazen dizelere dönüştürerek serileştirildiğine, böylece tüm <xref:System.Net.Mime.ContentDisposition.ToString> işlemler, serileştirme veya GetHashCode çağrılarının gözden geçirilmesi gerekir.
+
+#### <a name="suggestion"></a>Öneri
+
+Farklı .NET Framework sürümlerinden Contentdepositions dize temsilinin doğru bir şekilde karşılaştırılacağını beklememeniz beklenmez. Bir karşılaştırma yapmadan önce, mümkünse dizeleri tekrar Contentdepositions 'e dönüştürün.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Net.Mime.ContentDisposition.ToString?displayProperty=nameWithType></li><li><xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Net.Mime.ContentDisposition.ToString?displayProperty=nameWithType></li><li><xref:System.Net.Mime.ContentDisposition.GetHashCode?displayProperty=nameWithType></li></ul>|

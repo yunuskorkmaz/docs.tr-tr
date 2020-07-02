@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 65d9edc1e7377a86f8185ebf28bb5bee3a3f887d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1db9916c69c5974191eb6108fb54a0d9ff060d2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622133"
 ---
-### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection.Open, IFS Winsock BSP veya LSP olmayan windows 7'de başarısız olur
+### <a name="sqlconnectionopen-fails-on-windows-7-with-non-ifs-winsock-bsp-or-lsp-present"></a>SqlConnection. Open, ıFS olmayan Winsock BSP veya LSP içeren Windows 7 ' de başarısız oluyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|<xref:System.Data.SqlClient.SqlConnection.Open><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)> ve .NET Framework 4.5'te başarısız olup, bilgisayarda IFS Winsock BSP veya LSP olmayan bir Windows 7 makinesinde çalışıyorsanız. IFS BSP veya LSP olmayan bir öğenin yüklü <code>netsh WinSock Show Catalog</code> olup olmadığını <code>Winsock Catalog Provider Entry</code> belirlemek için komutu kullanın ve döndürülen her öğeyi inceleyin. Hizmet Bayrakları değeri bit <code>0x20000</code> kümesine sahipse, sağlayıcı IFS işlamacını kullanır ve doğru çalışır. <code>0x20000</code> Bit açıksa (ayarlı değilse), IFS BSP veya LSP olmayan bir bittir.|
-|Öneri|Bu hata .NET Framework 4.5.2'de sabitlenmiştir, böylece .NET Framework yükseltilerek önlenebilir. Alternatif olarak, yüklü olmayan IFS Winsock LSP'leri kaldırarak önlenebilir.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.Data.SqlClient.SqlConnection.Open><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)>bilgisayarda IFS olmayan Winsock BSP veya LSP içeren bir Windows 7 makinesi üzerinde çalışıyorsa 4,5 .NET Framework başarısız olur. ICıFS BSP veya LSP 'nin yüklü olup olmadığını anlamak için <code>netsh WinSock Show Catalog</code> komutunu kullanın ve <code>Winsock Catalog Provider Entry</code> döndürülen her öğeyi inceleyin. Hizmet bayrak değeri <code>0x20000</code> bit kümesine sahipse, sağlayıcı IFS tutamaçlarını kullanır ve doğru çalışacaktır. <code>0x20000</code>Bit açık (ayarlı değil) ise, CIFS BSP veya LSP olmayan bir.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu hata 4.5.2 .NET Framework düzeltildi, bu nedenle .NET Framework yükseltilerek kaçınılabilir. Alternatif olarak, yüklü ıFS olmayan Winsock LSPs 'ler kaldırılarak bu kaçınılabilir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|

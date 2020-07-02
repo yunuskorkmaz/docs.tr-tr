@@ -3,34 +3,33 @@ title: Uzantı Metotları
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-ms.openlocfilehash: 77c012d7838ae2fa1f62163bc58520db67c64ce5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 55e6a816bbec401fdb061a3394635378b2f37424
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621606"
 ---
-# <a name="extension-methods"></a>Genişletme yöntemleri
+# <a name="extension-methods"></a>Uzantı Metotları
+Uzantı yöntemleri, statik yöntemlerin örnek yöntemi çağırma sözdizimi kullanılarak çağrılmasına izin veren bir dil özelliğidir. Bu yöntemler, yöntemin üzerinde çalışacağı örneği temsil eden en az bir parametre almalıdır.
 
-Uzantı yöntemleri, statik yöntemlerin örnek yöntemi çağırma söz dizimi kullanılarak çağrılmasına izin veren bir dil özelliğidir. Bu yöntemler, yöntemin üzerinde çalışacağı örneği temsil eden en az bir parametre almalıdır.
+ Bu tür uzantı yöntemlerini tanımlayan sınıf "sponsor" sınıfı olarak adlandırılır ve statik olarak bildirilmelidir. Uzantı yöntemlerini kullanmak için, bir tane sponsor sınıfı tanımlayan ad alanını içeri aktarmanız gerekir.
 
- Bir genişletme yöntemini tanımlayan sınıf, "sponsor" sınıfı olarak adlandırılır ve olarak bildirilmelidir `static` . Uzantı yöntemlerini kullanmak için, sponsor sınıfı tanımlayan ad alanını içeri aktarmanız gerekir.
+ ❌Özellikle sahip olmadığınız türler üzerinde uzantı yöntemlerini tanımlamayı frivolously KAÇıNıN.
 
- ❌Özellikle sahip olmadığınız türler üzerinde uzantı yöntemlerinin aşırı kullanımını ÖNLEYIN.
-
- Bir türün kaynak kodunu yaptıysanız bunun yerine normal örnek yöntemleri kullanmayı düşünün. Kaynak koduna sahip değilseniz ve bir yöntem eklemek istiyorsanız, çok dikkatli olun. Uzantı yöntemlerinin serbest kullanımı, bu yöntemlere sahip olmak için tasarlanmamış türlerin karışıklık API 'Lerinin potansiyelini içerir.
+ Bir türün kaynak kodunu yaptıysanız bunun yerine normal örnek yöntemleri kullanmayı düşünün. Sahip değilseniz ve bir yöntem eklemek istiyorsanız, çok dikkatli olun. Uzantı yöntemlerinin serbest kullanımı, bu yöntemlere sahip olmak için tasarlanmamış türlerin karışıklık API 'Lerinin potansiyelini içerir.
 
  ✔️ Aşağıdaki senaryolardan birinde uzantı yöntemlerini kullanmayı göz önünde bulundurun:
 
-- Bir arabirimin her uygulamasıyla ilgili yardımcı işlevsellik sağlamak için, Eğer işlevin çekirdek arabirim açısından yazılabilmesini sağlar. Bunun nedeni, somut uygulamaların arabirime atanamadığı bir şekilde yapılamaz. Örneğin, LINQ to Objects işleçleri tüm türler için uzantı yöntemleri olarak uygulanır <xref:System.Collections.Generic.IEnumerable%601> . Bu nedenle, herhangi bir `IEnumerable<>` uygulama otomatik olarak LINQ etkindir.
+- Bir arabirimin her uygulamasıyla ilgili yardımcı işlevsellik sağlamak için, Eğer işlevin çekirdek arabirim açısından yazılabilmesini sağlar. Bunun nedeni, somut uygulamaların arabirime atanamadığı bir şekilde yapılamaz. Örneğin, `LINQ to Objects` işleçler tüm türler için uzantı yöntemleri olarak uygulanır <xref:System.Collections.Generic.IEnumerable%601> . Bu nedenle, herhangi bir `IEnumerable<>` uygulama otomatik olarak LINQ etkindir.
 
 - Bir örnek yöntemi, bazı tür için bir bağımlılık tanıtacaksa, ancak böyle bir bağımlılık, bağımlılık yönetimi kurallarını kesintiye uğratır. Örneğin, öğesinden bir bağımlılığı <xref:System.String> <xref:System.Uri?displayProperty=nameWithType> muhtemelen istenmez ve bu nedenle `String.ToUri()` döndürülen örnek yöntemi `System.Uri` bir bağımlılık yönetimi perspektifinden yanlış tasarım olacaktır. Döndüren statik bir genişletme `Uri.ToUri(this string str)` yöntemi `System.Uri` çok daha iyi bir tasarım olacaktır.
 
  ❌Uzantı yöntemlerini tanımlamaktan KAÇıNıN <xref:System.Object?displayProperty=nameWithType> .
 
- Visual Basic kullanıcılar uzantı yöntemi sözdizimini kullanarak nesne başvuruları üzerinde bu yöntemleri çağıramayacak. Visual Basic, bir başvurunun bildirilmesi, `Object` onun üzerinde tüm Yöntem çağrılarını kapanmaya zorlar (Bu, çağrılan gerçek üyenin çalışma zamanında belirlendiği anlamına gelir). Uzantı yöntemlerine bağlama, derleme zamanında (erken bağlantı) belirlenir.
+ VB kullanıcıları, uzantı yöntemi sözdizimini kullanarak nesne başvuruları üzerinde bu tür yöntemleri çağıramayacak. VB, nesne olarak bir başvuru bildirmek, bu tür yöntemlerin çağrılmasını desteklemez, çünkü VB 'de, nesne üzerinde tüm yöntem etkinleştirmeleri, geç bağlama olur (çağrılan gerçek üye çalışma zamanında belirlenir), genişletme yöntemlerine bağlamalar derleme zamanı (erken bağlantı) sırasında belirlenir.
 
- Bu kılavuz, aynı bağlama davranışının bulunduğu veya uzantı yöntemlerinin desteklenmediği diğer diller için geçerlidir.
+ Kılavuz, aynı bağlama davranışının bulunduğu ya da uzantı yöntemlerinin desteklenmediği diğer dillere uygulanacağını unutmayın.
 
  ❌Arayüzlere veya bağımlılık yönetimine Yöntemler eklenmediği sürece uzantı yöntemlerini genişletilmiş türle aynı ad alanına yerleştirmeyin.
 

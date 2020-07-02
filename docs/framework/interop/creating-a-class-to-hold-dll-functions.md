@@ -1,5 +1,6 @@
 ---
 title: DLL İşlevleri için bir Sınıf Oluşturma
+description: .NET ' te platform işlevlerinin kapsüllemeye yardımcı olan DLL işlevlerini barındırmak için yönetilen bir sınıf sarmalayıcı oluşturun.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM interop, DLL functions
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-ms.openlocfilehash: 765d4344553a6e65b930a7bf586a41144d220fc6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b8aa0361ee5213cb947a102f903d1a7a35331f17
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622178"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL İşlevleri için bir Sınıf Oluşturma
 Yönetilen bir sınıfta sık kullanılan bir DLL işlevinin sarmalanması, platform işlevlerini kapsüllemek için etkili bir yaklaşımdır. Her durumda bunu yapmak zorunlu olmasa da, DLL işlevlerinin tanımlanması çok fazla ve hataya açık olabileceğinden sınıf sarmalayıcı sağlanması kullanışlıdır. Visual Basic veya C# ' de programlıyorsanız, DLL işlevlerini bir sınıf veya Visual Basic modülü içinde bildirmeniz gerekir.  

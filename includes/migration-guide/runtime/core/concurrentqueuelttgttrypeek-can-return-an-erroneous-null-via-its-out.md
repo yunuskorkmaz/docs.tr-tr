@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a93fbbd787aa50f080337a6170cf8f56d0d24e31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02a15f6b9c02002b60c568b9e1d871af49744092
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664339"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622143"
 ---
-### <a name="concurrentqueuettrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue\<T >. TryPeek, out parametresinin hatalı bir null döndürebilir
+### <a name="concurrentqueuelttgttrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a>ConcurrentQueue &lt; T &gt; . Trtypeınfo ek, out parametresi aracılığıyla hatalı bir null döndürebilir
 
-|   |   |
-|---|---|
-|Ayrıntılar|Çok iş parçacıklı bazı senaryolarda <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> true döndürür ancak out parametresi (doğru baktı değeri) yerine null bir değerle doldurun.|
-|Öneri|.NET Framework 4.5.1 Bu sorun düzeltilmiştir. Bu çerçeve için yükseltme sorunu çözün.|
-|Kapsam|Ana|
+#### <a name="details"></a>Ayrıntılar
+
+Çok iş parçacıklı senaryolarda, <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=fullName> true döndürebilir, ancak out parametresini boş bir değerle (doğru, atılamıyor değeri yerine) doldurabilirsiniz.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu sorun .NET Framework 4.5.1 düzeltilmiştir. Bu çerçeveye yükseltmek sorunu çözmeyecektir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Ana|
 |Sürüm|4,5|
-|Tür|Çalışma zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|

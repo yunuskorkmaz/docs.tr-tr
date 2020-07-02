@@ -1,16 +1,17 @@
 ---
 title: 'Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme'
+description: Derleme kayıt aracı 'nı (Regasm.exe) kullanarak birincil birlikte çalışma derlemelerini kaydedin ve birlikte çalışma Derlemeleriyle ilgili diğer sorunlar hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a15bda7b40f160b31028c62cf7c73bdedd9541fa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85622750"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
 
@@ -22,7 +23,7 @@ Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve 
 
  Üçüncü taraf COM türlerini açığa çıkarmak için planlamasanız bile, birincil birlikte çalışma derlemesini kullanmak COM bileşenleriyle birlikte çalışma görevini kolaylaştırabilir. Ancak, bu strateji, bir satıcının birincil birlikte çalışma derlemesinde tanımlı türler üzerinde yapabildikleri değişikliklerden ayrı bir işlem sağlar. Uygulamanız bu tür yalıtımı gerektirdiğinde, birincil birlikte çalışma derlemesini kullanmak yerine kendi birlikte çalışma derlemenizi oluşturun.
 
- Visual Studio ile başvurmadan önce, satın alınan tüm birincil birlikte çalışma derlemelerini geliştirme bilgisayarınıza kaydetmeniz gerekir. Visual Studio, bir COM tür kitaplığından bir türe ilk kez başvurduğunuzda bir birincil birlikte çalışma derlemesini arar ve kullanır. Visual Studio, tür kitaplığıyla ilişkili birincil birlikte çalışma derlemesini bulamıyorsa, bunun yerine bir birlikte çalışma derlemesi oluşturmak için size veya tekliflerini almanızı ister. Benzer şekilde, [tür kitaplığı alma programı (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md) , birincil birlikte çalışma derlemelerini bulmak için kayıt defterini de kullanır.
+ Visual Studio ile başvurmadan önce, satın alınan tüm birincil birlikte çalışma derlemelerini geliştirme bilgisayarınıza kaydetmeniz gerekir. Visual Studio, bir COM tür kitaplığından bir türe ilk kez başvurduğunuzda bir birincil birlikte çalışma derlemesini arar ve kullanır. Visual Studio, tür kitaplığıyla ilişkili birincil birlikte çalışma derlemesini bulamıyorsa, bunun yerine bir birlikte çalışma derlemesi oluşturmak için size veya tekliflerini almanızı ister. Benzer şekilde, [tür kitaplığı alma programı (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) , birincil birlikte çalışma derlemelerini bulmak için kayıt defterini de kullanır.
 
  Visual Studio 'Yu kullanmayı planlamıyorsanız birincil birlikte çalışma derlemelerini kaydetmek gerekli olmasa da, kayıt iki avantaj sağlar:
 
@@ -30,7 +31,7 @@ Sınıflar yalnızca COM birlikte çalışabilirliğine göre sıralanabilir ve 
 
 - Yanlışlıkla yeni bir birlikte çalışma derlemesini oluşturmaktan ve kullanmaktan kaçınabilirsiniz. daha sonra, daha sonra, kayıtlı bir birincil birlikte çalışma derlemesine sahip olduğunuz bir türe başvurmak için Visual Studio 'Yu kullanabilirsiniz.
 
-Birincil birlikte çalışma derlemesini kaydetmek için [derleme kayıt aracı 'nı (Regasm. exe)](../tools/regasm-exe-assembly-registration-tool.md) kullanın.
+Birincil birlikte çalışma derlemesini kaydetmek için [derleme kayıt aracı 'nı (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) kullanın.
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Birincil birlikte çalışma derlemesini kaydetmek için
 
@@ -38,7 +39,7 @@ Birincil birlikte çalışma derlemesini kaydetmek için [derleme kayıt aracı 
 
      **Regasm** *AssemblyName*
 
-     Bu komutta, *AssemblyName* kayıtlı derlemenin dosya adıdır. Regasm. exe, özgün tür kitaplığıyla aynı kayıt defteri anahtarı altında birincil birlikte çalışma derlemesi için bir girdi ekler.
+     Bu komutta, *AssemblyName* kayıtlı derlemenin dosya adıdır. Regasm.exe özgün tür kitaplığıyla aynı kayıt defteri anahtarı altındaki birincil birlikte çalışma derlemesine bir girdi ekler.
 
 ## <a name="example"></a>Örnek
  Aşağıdaki örnek, `CompanyA.UtilLib.dll` birincil birlikte çalışma derlemesini kaydeder.

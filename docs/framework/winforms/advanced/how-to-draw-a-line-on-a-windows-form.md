@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: Windows Formunda Çizgi Çizme'
+title: 'Nasıl yapılır: Bir Windows Formunda Çizgi Çizme'
+description: Paint olayını işleyerek form üzerinde bir çizgi çizmenizi ve sonra da PaintEventArgs 'un Graphics özelliğini kullanarak çizimi gerçekleştirmeyi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +13,25 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
-ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e92dc265c63413275561d0e2e3aa820eaec724
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621632"
 ---
-# <a name="how-to-draw-a-line-on-a-windows-form"></a>Nasıl yapılır: Windows Formunda Çizgi Çizme
-Bu örnek, bir form üzerinde bir çizgi çizer. Genellikle, bir form üzerinde çizdiğinizde, formun işlemek <xref:System.Windows.Forms.Control.Paint> olay ve çizim kullanarak gerçekleştirmek <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> özelliği <xref:System.Windows.Forms.PaintEventArgs>, bu örnekte gösterildiği gibi  
+# <a name="how-to-draw-a-line-on-a-windows-form"></a>Nasıl yapılır: Bir Windows Formunda Çizgi Çizme
+Bu örnek, bir form üzerinde bir çizgi çizer. Genellikle, bir form üzerinde çizim yaptığınızda formun <xref:System.Windows.Forms.Control.Paint> olayını işler ve <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> <xref:System.Windows.Forms.PaintEventArgs> Bu örnekte gösterildiği gibi, öğesinin özelliğini kullanarak çizimi gerçekleştirirsiniz  
   
 ## <a name="example"></a>Örnek  
  [!code-csharp[System.Drawing.UsingAPen#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- Yukarıdaki örnekte, Windows Forms ile kullanılmak üzere tasarlanmıştır ve gerektirir <xref:System.Windows.Forms.PaintEventArgs> `e`, parametre olduğu <xref:System.Windows.Forms.Control.Paint> olay işleyicisi.  
+ Yukarıdaki örnek, Windows Forms kullanımı için tasarlanmıştır ve <xref:System.Windows.Forms.PaintEventArgs> `e` olay işleyicisinin bir parametresi olan gerektirir <xref:System.Windows.Forms.Control.Paint> .  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- Her zaman çağırmalıdır <xref:System.IDisposable.Dispose%2A> gibi sistem kaynaklarının kullanan herhangi bir nesne üzerinde <xref:System.Drawing.Pen> nesneleri.  
+ <xref:System.IDisposable.Dispose%2A>Nesneler gibi sistem kaynaklarını kullanan tüm nesneleri her zaman çağırmanız gerekir <xref:System.Drawing.Pen> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

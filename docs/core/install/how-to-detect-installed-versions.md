@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: cc4d9c6a366cd0e5da4c3446536c93efdc9f5503
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 96db0d707cefed791d9c2c01a6615e9af5168cc5
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85802994"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core 'un zaten yüklü olduğunu denetleme
 
@@ -19,7 +19,7 @@ Bu makalede, hangi .NET Core çalışma zamanı ve SDK sürümlerinin bilgisayar
 
 SDK yükleme, ilgili çalışma zamanını yüklenir.
 
-Bu makaledeki herhangi bir komut başarısız olursa, çalışma zamanı veya SDK yüklü değildir. Daha fazla bilgi için bkz. [.NET Core 'U indirme ve yükleme](index.md).
+Bu makaledeki herhangi bir komut başarısız olursa, çalışma zamanı veya SDK yüklü değildir. Daha fazla bilgi için bkz. [Windows](windows.md), [MacOS](macos.md)veya [Linux](linux.md)için Install makaleleri.
 
 ## <a name="check-sdk-versions"></a>SDK sürümlerini denetle
 

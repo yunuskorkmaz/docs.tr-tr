@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: d9e1cd8d346a48fafc89367bddf923167a620889
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c8e597310ec0b02edbf993709f931a6093b6285
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857609"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621825"
 ---
-### <a name="coerceisselectionboxhighlighted"></a>CoerceIsSelectionBoxVurgulu
+### <a name="coerceisselectionboxhighlighted"></a>CoerceIsSelectionBoxHighlighted
 
-|   |   |
-|---|---|
-|Ayrıntılar|A <xref:System.Windows.Controls.ComboBox?displayProperty=name> ve veri kaynağını içeren eylemlerin belirli dizileri bir <xref:System.NullReferenceException?displayProperty=name>.|
-|Öneri|Mümkünse .NET Framework 4.6.2'ye yükseltin.|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Ve veri kaynağını içeren bazı eylem dizileri <xref:System.Windows.Controls.ComboBox?displayProperty=fullName> , ile sonuçlanabilir <xref:System.NullReferenceException?displayProperty=fullName> .
+
+#### <a name="suggestion"></a>Öneri
+
+Mümkünse, .NET Framework 4.6.2 ' ye yükseltin.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|

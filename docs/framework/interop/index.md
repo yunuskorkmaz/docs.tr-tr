@@ -1,5 +1,6 @@
 ---
 title: Yönetilmeyen kodla birlikte çalışma
+description: Yönetilmeyen kod ile birlikte çalışabilirliği gözden geçirin. CLR, istemci ve sunuculardan, .NET bileşenlerinin nesne modellerinin ve yönetilmeyen kodun farklı bir şekilde farklılık gösterir.
 ms.date: 01/17/2018
 helpviewer_keywords:
 - unmanaged code, interoperation
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cebd75907fd202715cb337593186d248107bdbb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621879"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Yönetilmeyen kodla birlikte çalışma
 
@@ -44,7 +45,7 @@ COM birlikte çalışma ve platform çağırma için hazırlamayı açıklar.
 COM türleri için tür bilgilerinin derlemelerde nasıl gömülü olduğunu ve ortak dil çalışma zamanının gömülü COM türlerinin denklik düzeyini nasıl belirlediğini açıklar.
 
 [Nasıl yapılır: Tlbimp.exe Kullanarak Birincil Birlikte Çalışma Derlemeleri Oluşturma](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-*Tlbimp. exe* (tür kitaplığı alma) kullanarak birincil birlikte çalışma derlemelerinin nasıl oluşturulacağını açıklar.
+*Tlbimp.exe* (tür kitaplığı alma) kullanarak birincil birlikte çalışma derlemelerinin nasıl oluşturulacağını açıklar.
 
 [Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme](how-to-register-primary-interop-assemblies.md)  
 Projelerinizde başvurmadan önce birincil birlikte çalışma derlemelerinin nasıl kaydedileceği açıklanmaktadır.

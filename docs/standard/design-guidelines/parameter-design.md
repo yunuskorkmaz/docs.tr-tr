@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-ms.openlocfilehash: 46c1b8f03d054a63ea837a73fd30eeed163ab0a4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e0bc52f5679a7771d5690be9f903e677ce611605
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621593"
 ---
-# <a name="parameter-design"></a>Parametre tasarımı
+# <a name="parameter-design"></a>Parametre Tasarımı
 
 Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren bölümler dahil olmak üzere parametre tasarımı hakkında kapsamlı yönergeler sağlar. Ayrıca, [adlandırma parametrelerinde](naming-parameters.md)açıklanan yönergelere başvurmalısınız.
 
@@ -40,7 +40,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
 
  Bu, Yöntemler arasındaki ilişkiyi daha iyi bir şekilde iletir.
 
-### <a name="choose-between-enum-and-boolean-parameters"></a>Enum ve Boole parametreleri arasında seçim yapın
+### <a name="choosing-between-enum-and-boolean-parameters"></a>Enum ve Boole parametreleri arasında seçim yapma  
  ✔️, bir üyenin iki veya daha fazla Boole parametresine sahip olması halinde numaralandırmalar kullanın.
 
  ❌İki değerden daha fazla değere gerek olmadığından kesinlikle emin olmadığınız müddetçe, Boolean kullanmayın.
@@ -49,7 +49,7 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
 
  ✔️, gerçekten iki durumlu değerler olan Oluşturucu parametreleri için Boolean kullanmayı düşünün ve yalnızca Boole özelliklerini başlatmak için kullanılır.
 
-### <a name="validate-arguments"></a>Bağımsız değişkenleri doğrula
+### <a name="validating-arguments"></a>Bağımsız değişkenler doğrulanıyor
  ✔️ ortak, korumalı veya açıkça uygulanmış üyelere geçirilen bağımsız değişkenleri doğrular. <xref:System.ArgumentException?displayProperty=nameWithType>Doğrulama başarısız olursa, veya alt sınıflarından biri oluşturun.
 
  Gerçek doğrulamanın ortak veya korumalı üyenin kendisinde olması gerekmediğini unutmayın. Bu, bazı özel veya iç bir yordamın daha düşük bir düzeyinde gerçekleşecektir. Ana nokta, son kullanıcılara sunulan tüm yüzey alanının bağımsız değişkenleri denetlemesini sağlar.
@@ -66,10 +66,10 @@ Bu bölüm, bağımsız değişkenleri denetlemeye yönelik yönergeleri içeren
 
  Üye güvenliğe duyarlı ise, bir kopya yapmanız ve sonra bağımsız değişkeni doğrulamanız ve işlemesi önerilir.
 
-### <a name="pass-parameters"></a>Parametre geçirme
+### <a name="parameter-passing"></a>Parametre Geçirme
  Bir çerçeve tasarımcısının perspektifinden, üç temel parametre grubu vardır: değere göre parametreler, `ref` Parametreler ve `out` Parametreler.
 
- Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, Visual Basic ve C++ gibi en popüler CLR dilleri, parametreleri değere göre geçirmek için varsayılan değer.
+ Bir bağımsız değişken bir by değeri parametresiyle geçirildiğinde, üye geçirilen gerçek bağımsız değişkenin bir kopyasını alır. Bağımsız değişken bir değer türü ise, bağımsız değişkenin bir kopyası yığına konur. Bağımsız değişken bir başvuru türü ise, başvurunun bir kopyası yığına konur. C#, VB.NET ve C++ gibi en popüler CLR dilleri, parametreleri değere göre geçirmek için varsayılan değer.
 
  Bir bağımsız değişken bir parametre aracılığıyla geçirildiğinde `ref` , üye geçirilen gerçek bağımsız değişkene bir başvuru alır. Bağımsız değişken bir değer türü ise, yığına bağımsız değişkene bir başvuru konur. Bağımsız değişken bir başvuru türü ise, bir başvuruya başvuru, yığına konur. `Ref`Parametreler, üyenin çağıran tarafından geçirilen bağımsız değişkenleri değiştirmesine izin vermek için kullanılabilir.
 
@@ -151,7 +151,7 @@ public class String {
 
  Örneğin, başlangıç dizinini geçirmeniz gerekmez, çünkü basit işaretçi aritmetiği aynı sonucu elde etmek için kullanılabilir.
 
- *© Bölümleri 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
+ *Bölüm &copy; 2005, 2009 Microsoft Corporation. Tüm hakları saklıdır.*
 
  *, Microsoft Windows geliştirme serisinin bir parçası olarak, [.NET kitaplıkları için 2. sürüm](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) , Vazysztof Cwalina ve atacan Abk2008 MS, 4. Adım: Addison-Wesley Professional tarafından yeniden yazdırılmıştır.*
 

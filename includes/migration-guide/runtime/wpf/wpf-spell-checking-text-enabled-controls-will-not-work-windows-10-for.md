@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: abb89099c4c8a5d9c0e55ef8f357faf44e75b045
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d2e4a058008676c6ea85becebd4bb9220569ef3
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858653"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621448"
 ---
-### <a name="wpf-spell-checking-in-text-enabled-controls-will-not-work-in-windows-10-for-languages-not-in-the-oss-input-language-list"></a>Metin etkin denetimlerde WPF yazım denetimi, işletim sistemi giriş dil listesinde olmayan diller için Windows 10'da çalışmaz
+### <a name="wpf-spell-checking-in-text-enabled-controls-will-not-work-in-windows-10-for-languages-not-in-the-oss-input-language-list"></a>Metin özellikli denetimlerde WPF yazım denetimi, işletim sisteminin giriş dili listesinde olmayan diller için Windows 10 ' da çalışmaz
 
-|   |   |
-|---|---|
-|Ayrıntılar|Windows 10'da çalışırken, platform yazım denetimi yetenekleri yalnızca giriş dilleri listesinde bulunan diller için kullanılabilir olduğundan yazım denetleyicisi WPF metin etkin denetimleri için çalışmayabilir. Windows 10'da, kullanılabilir klavyeler listesine bir dil eklendiğinde, Windows yazım denetimi özellikleri sağlayan ilgili Bir İsteğe Bağlı Özellik (FOD) paketini otomatik olarak karşıdan yükler ve yükler. Giriş dilleri listesine dil eklenerek yazım denetleyicisi desteklenir.|
-|Öneri|Yazım denetimi yapılacak dil veya metnin Windows 10'da çalışmak için yazım denetimi için giriş dili olarak eklenmesi gerektiğini unutmayın.|
-|Kapsam|Edge|
+#### <a name="details"></a>Ayrıntılar
+
+Windows 10 ' da çalışırken, platform yazım denetimi özellikleri yalnızca giriş dilleri listesinde bulunan diller için kullanılabilir olduğundan, yazım denetleyicisi WPF metin özellikli denetimler için çalışmayabilir. Windows 10 ' da, kullanılabilir klavyeler listesine bir dil eklendiğinde, Windows otomatik olarak yazım denetimi özellikleri sağlayan ilgili bir Isteğe bağlı Özellik (FOD) paketini indirir ve yükler. Dili giriş dilleri listesine ekleyerek, yazım denetleyicisi desteklenecektir.
+
+#### <a name="suggestion"></a>Öneri
+
+Yazım denetimi yapılacak dilin veya metnin, Windows 10 ' da çalışmak üzere yazım denetimi yapmak için bir giriş dili olarak eklenmesi gerektiğini unutmayın.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4.6|
 |Tür|Çalışma Zamanı|

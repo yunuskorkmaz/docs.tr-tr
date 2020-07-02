@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 22c4b61b293ac2366cae1dc73e0f6805a4a5fb8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 171b7a3a962f8259e64b88f1ae893e649b5f24bb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857262"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621396"
 ---
-### <a name="chained-popups-with-staysopenfalse"></a>StaysOpen=False ile Zincirli Açılır Pencereler
+### <a name="chained-popups-with-staysopenfalse"></a>StaysOpen ile zincirleme açılan pencere = yanlış
 
-|   |   |
-|---|---|
-|Ayrıntılar|StaysOpen=False olan bir Pop-up'ın Pop-up'ın dışında tıkladığınızda kapanması gerekir. İki veya daha fazla pop-up zincirli olduğunda (yani biri diğerini içerir), aşağıdakiler de dahil olmak üzere birçok sorun vardı:<ul><li>İki düzeyleri açın, P2 dışında ama P1 içinde tıklatın.  Hiçbir şey olmuyor.</li><li>İki seviye açın, P1'in dışına tıklayın.  Her iki pop-up yakın.</li><li>İki seviyeyi açın ve kapatın.  Sonra tekrar P2 açmayı deneyin.  Hiçbir şey olmuyor.</li><li>Üç seviyeleri açmaya çalışın.  Bunu yapamazsınız.  (Tıklattığınız yere bağlı olarak, hiçbir şey olmaz veya ilk iki seviye kapanır.) Bu servis talepleri (ve diğer türevleri) artık beklendiği gibi çalışır.</li></ul>|
-|Kapsam|Edge|
+#### <a name="details"></a>Ayrıntılar
+
+Açılan pencerenin dışına tıkladığınızda StaysOpen = false içeren bir açılan pencere kapatılacak. İki veya daha fazla açılan pencere zincirleme olduğunda (yani bir diğeri içeriyorsa), aşağıdakiler dahil olmak üzere çok sayıda sorun oluştu:<ul><li>İki düzey açın, P2 dışını, ancak P1 içinde tıklayın.  Hiçbir şey olmaz.</li><li>İki düzey açın, P1 dış P1 öğesine tıklayın.  Her iki açılır pencere da kapanır.</li><li>İki düzeyi açın ve kapatın.  Sonra P2 açmayı yeniden deneyin.  Hiçbir şey olmaz.</li><li>Üç düzey açmayı deneyin.  Yapamazsınız.  (Hiçbir şey olmaz ya da ilk iki düzey, tıkladığınıza bağlı olarak kapanır.) Bu durumlar (ve diğer çeşitler) artık beklenen şekilde çalışır.</li></ul>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |Edge|
 |Sürüm|4.7.1|
-|Tür|Çalışma Zamanı|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.Primitives.Popup.StaysOpen?displayProperty=nameWithType></li></ul>|
+|Tür|Çalışma Zamanı
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+-<xref:System.Windows.Controls.Primitives.Popup.StaysOpen?displayProperty=nameWithType></li></ul>|

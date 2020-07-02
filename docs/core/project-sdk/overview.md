@@ -4,12 +4,12 @@ titleSuffix: ''
 description: .NET Core proje SDK 'Ları hakkında bilgi edinin.
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: 67dede3caabd2967adca22e7563376c761829655
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 9db62ab7774e3dd71412fa346d78ae0c62a2f81f
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144245"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803047"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core proje SDK 'Ları
 
@@ -41,7 +41,7 @@ Ayrıca kendi SDK 'nizi, NuGet aracılığıyla dağıtılabilecek şekilde yaza
 </Project>
 ```
 
-NuGet 'den gelen bir SDK belirtmek için, adın sonundaki sürümü ekleyin veya *Global. JSON* dosyasındaki adı ve sürümü belirtin.
+NuGet 'den gelen bir SDK belirtmek için, adın sonundaki sürümü ekleyin veya *global.js* dosyadaki adı ve sürümü belirtin.
 
 ```xml
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
@@ -89,9 +89,9 @@ Aşağıdaki tablo, hangi öğelerin ve hangi [genelleştirmeler](https://en.wik
 
 | Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
-| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | YOK                      |
-| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | YOK                      |
-| Yok              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx |
+| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | Yok                      |
+| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | Yok                      |
+| Hiçbiri              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx |
 
 > [!NOTE]
 > Ve `./bin` `./obj` MSBuild özellikleriyle temsil edilen ve klasörleri, `$(BaseOutputPath)` `$(BaseIntermediateOutputPath)` Varsayılan olarak genelleştirmeler 'tan çıkarılır. Dışlayarak özelliği tarafından temsil edilir `$(DefaultItemExcludes)` .
@@ -176,6 +176,6 @@ Projenizde özel bir hedef kullanmak için `PackageReference` pakete ve sürüm�
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core 'ı yükler](../install/index.md)
+- [.NET Core 'ı yükler](../install/index.yml)
 - [MSBuild proje SDK 'larını kullanma](/visualstudio/msbuild/how-to-use-project-sdk)
 - [NuGet ile özel MSBuild hedeflerini ve props paketleme](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)

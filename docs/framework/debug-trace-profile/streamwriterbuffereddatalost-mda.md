@@ -1,5 +1,6 @@
 ---
 title: streamWriterBufferedDataLost MDA
+description: Bir StreamWriter bir dosyaya son 1 – 4 KB 'lık verileri yazmazsa etkinleştirebileceğiniz streamWriterBufferedDataLost yönetilen hata ayıklama Yardımcısı 'nı (MDA) gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
@@ -10,23 +11,23 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 18b2a5a95756ed125d26b2846c0b1ddc320463ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c10ea6bb9dc0aaafa2ac1798696579af7592895
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803497"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
-Yönetilen `streamWriterBufferedDataLost` hata ayıklama yardımcısı (MDA) bir <xref:System.IO.StreamWriter> yazıldığında etkinleştirilir, ancak <xref:System.IO.StreamWriter.Flush%2A> veya <xref:System.IO.StreamWriter.Close%2A> yöntem daha sonra <xref:System.IO.StreamWriter> yok edilmeden önce çağrılmaz. Bu MDA etkinleştirildiğinde, çalışma zamanı arabelleğe alınan verilerin <xref:System.IO.StreamWriter>. Arabelleğe alınan veriler varsa, MDA etkinleştirilir. Arama <xref:System.GC.Collect%2A> ve <xref:System.GC.WaitForPendingFinalizers%2A> yöntemleri sonlandırıcılar çalıştırmak için zorlayabilir. Finalizers aksi takdirde görünüşte rasgele zamanlarda çalışacak ve muhtemelen hiç süreç çıkışında değil. Bu MDA etkinleştirilmiş olan sonlandırıcıları açıkça çalıştırmak, bu tür bir sorunun daha güvenilir bir şekilde yeniden oluşturulmasına yardımcı olacaktır.  
+`streamWriterBufferedDataLost`Yönetilen hata ayıklama Yardımcısı (MDA), <xref:System.IO.StreamWriter> öğesine yazıldığında etkinleştirilir, ancak <xref:System.IO.StreamWriter.Flush%2A> ya da <xref:System.IO.StreamWriter.Close%2A> yöntemi daha sonra örneği yok <xref:System.IO.StreamWriter> edildiğinde çağrılır. Bu MDA etkin olduğunda, çalışma zamanı, arabelleğe alınmış verilerin hala içinde varolup olmadığını belirler <xref:System.IO.StreamWriter> . Arabelleğe alınan veriler varsa, MDA etkin olur. <xref:System.GC.Collect%2A>Ve yöntemlerini çağırmak, <xref:System.GC.WaitForPendingFinalizers%2A> sonlandırıcıları çalıştırmaya zorlayabilir. Sonlandırıcılar, normalde Rastgele zamanlarda çalışır ve muhtemelen işlemden çıkılmaz. Bu MDA etkin olan sonlandırıcıları açıkça çalıştırmak, bu tür bir sorunu daha güvenilir bir şekilde yeniden oluşturmaya yardımcı olur.  
   
 ## <a name="symptoms"></a>Belirtiler  
- A, <xref:System.IO.StreamWriter> bir dosyaya son 1-4 KB veri yazmaz.  
+ A bir <xref:System.IO.StreamWriter> dosyaya son 1 – 4 KB veri yazmaz.  
   
 ## <a name="cause"></a>Nedeni  
- Arabellekteki <xref:System.IO.StreamWriter> verileri dahili olarak, <xref:System.IO.StreamWriter.Close%2A> <xref:System.IO.StreamWriter.Flush%2A> arabelleğe alınan verileri temel veri deposuna yazmak için çağrılmasını gerektiren arabellekler. Uygun <xref:System.IO.StreamWriter.Close%2A> <xref:System.IO.StreamWriter.Flush%2A> şekilde çağrılmazsa veya çağrılmazsa, <xref:System.IO.StreamWriter> örnekte arabelleğe alınan veriler beklendiği gibi yazılmayabilir.  
+ <xref:System.IO.StreamWriter>Verileri dahili olarak arabelleğe alır. Bu, <xref:System.IO.StreamWriter.Close%2A> ya da <xref:System.IO.StreamWriter.Flush%2A> yönteminin, arabelleğe alınan verileri temeldeki veri deposuna yazmak üzere çağrılması gerekir. <xref:System.IO.StreamWriter.Close%2A>Ya da <xref:System.IO.StreamWriter.Flush%2A> uygun bir şekilde çağrılmamışsa, örnekte ara belleğe alınan veriler <xref:System.IO.StreamWriter> beklenen şekilde yazılmayabilir.  
   
- Aşağıda, bu MDA'nın yakalaması gereken kötü yazılmış kod örneği verilmiştir.  
+ Aşağıda, bu MDA 'ın yakalandığı kötü yazılmış kodun bir örneği verilmiştir.  
   
 ```csharp  
 // Poorly written code.  
@@ -38,7 +39,7 @@ void Write()
 }  
 ```  
   
- Bir çöp toplama tetiklenir ve sonlandırıcılar tamamlanana kadar askıya sonra önceki kod daha güvenilir bu MDA etkinleştirmek. Bu tür bir sorunu izlemek için, hata ayıklama yapısında önceki yöntemin sonuna aşağıdaki kodu ekleyebilirsiniz. Bu güvenilir MDA etkinleştirmek için yardımcı olacaktır, ama tabii ki sorunun nedenini düzeltmek değildir.  
+ Önceki kod, bir atık toplama tetikleniyorsa ve sonlandırıcılar bitene kadar askıya alınırsa bu MDA 'ı daha güvenilir bir şekilde etkinleştirir. Bu tür bir sorunu izlemek için aşağıdaki kodu bir hata ayıklama derlemesinde önceki metodun sonuna ekleyebilirsiniz. Bu, MDA ' yi güvenilir bir şekilde etkinleştirmeye yardımcı olur, ancak elbette sorunun nedenini düzelmez.  
   
 ```csharp
 GC.Collect();  
@@ -46,7 +47,7 @@ GC.WaitForPendingFinalizers();
 ```  
   
 ## <a name="resolution"></a>Çözüm  
- Bir uygulamayı <xref:System.IO.StreamWriter.Close%2A> veya <xref:System.IO.StreamWriter.Flush%2A> bir <xref:System.IO.StreamWriter> <xref:System.IO.StreamWriter>'nin örneğini olan herhangi bir kod bloğunu kapatmadan önce veya üzerinde arama yaptığınızdan emin olun Bunu başarmak için en iyi mekanizmalardan biri, yazarın `using` yönteminin`Using` <xref:System.IO.StreamWriter.Dispose%2A> çağrılmasını sağlayacak c# bloğu (Visual Basic)'de örneği oluşturmak tır ve bu da örneğin doğru şekilde kapatılmasıyla sonuçlanır.  
+ <xref:System.IO.StreamWriter.Close%2A> <xref:System.IO.StreamWriter.Flush%2A> <xref:System.IO.StreamWriter> Bir uygulamayı veya bir örneğine sahip herhangi bir kod bloğunu kapatmadan önce veya ' de ' i çağırdığınızdan emin olun <xref:System.IO.StreamWriter> . Bunu elde etmek için en iyi mekanizmalardan biri, örneğin, `using` `Using` <xref:System.IO.StreamWriter.Dispose%2A> Yazıcı yönteminin çağrılmasını ve örneğin doğru şekilde kapatılmasını sağlamak için bir C# bloğu (Visual Basic) ile örneği oluşturmaktır.  
   
 ```csharp
 using(StreamWriter sw = new StreamWriter("file.txt"))
@@ -55,7 +56,7 @@ using(StreamWriter sw = new StreamWriter("file.txt"))
 }  
 ```  
   
- Aşağıdaki kod, `try/finally` `using`yerine kullanarak aynı çözümü gösterir.  
+ Aşağıdaki kod, yerine kullanılarak aynı çözümü gösterir `try/finally` `using` .  
   
 ```csharp
 StreamWriter sw;  
@@ -71,7 +72,7 @@ finally
 }  
 ```  
   
- Bu çözümlerden hiçbiri kullanılamıyorsa (örneğin, <xref:System.IO.StreamWriter> a statik bir değişkende depolanıyorsa ve kodu ömrünün <xref:System.IO.StreamWriter.Flush%2A> sonunda <xref:System.IO.StreamWriter> kolayca çalıştıramıyorsanız), <xref:System.IO.StreamWriter.AutoFlush%2A> son `true` kullanımdan sonra gelene çağrı yapmak veya özelliği ilk kullanımdan önce ayarlamak bu sorunu önlemelidir.  
+ Bu çözümlerin hiçbiri kullanılabilir değilse (örneğin, bir <xref:System.IO.StreamWriter> statik değişkende depolanıyorsa ve yaşam süresinin sonunda kodu kolayca çalıştıramazsınız), <xref:System.IO.StreamWriter.Flush%2A> <xref:System.IO.StreamWriter> son kullanımı bittikten sonra veya <xref:System.IO.StreamWriter.AutoFlush%2A> özelliği `true` ilk kullanılmadan önce olarak ayarlamak için bu sorundan kaçının.  
   
 ```csharp
 private static StreamWriter log;  
@@ -86,8 +87,8 @@ static WriteToFile()
 }  
 ```  
   
-## <a name="effect-on-the-runtime"></a>Çalışma Süresi üzerindeki etkisi  
- Bu MDA'nın çalışma zamanı üzerinde hiçbir etkisi yoktur.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ Bu MDA çalışma zamanı üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıktı  
  Bu ihlalin oluştuğunu belirten bir ileti.  

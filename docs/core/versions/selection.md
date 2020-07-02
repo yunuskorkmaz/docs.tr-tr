@@ -4,12 +4,12 @@ description: .NET Core 'un programınızın çalışma zamanı sürümlerini oto
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 5e855adc72f0e75e6f31643f8a8618e6d91be06e
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803124"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
 
@@ -80,13 +80,13 @@ Belirli bir SDK, birlikte geldiği çalışma zamanının hedef çerçevesine ka
 
 İle kaynağından [`dotnet run`](../tools/dotnet-run.md) , [**çerçevesine bağlı bir dağıtımdan**](../deploying/index.md#publish-runtime-dependent) [`dotnet myapp.dll`](../tools/dotnet.md#description) veya ile [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#publish-runtime-dependent) uygulama çalıştırdığınızda, `myapp.exe` `dotnet` çalıştırılabilir dosya uygulamanın **ana bilgisayarı** olur.
 
-Konak makinede yüklü en son düzeltme eki sürümünü seçer. Örneğin, `netcoreapp3.0` proje dosyanızda belirttiyseniz ve `3.0.4` en son .NET çalışma zamanı yüklüyse, `3.0.4` çalışma zamanı kullanılır.
+Konak makinede yüklü en son düzeltme eki sürümünü seçer. Örneğin, `netcoreapp3.0` proje dosyanızda belirttiyseniz ve `3.0.2` en son .NET çalışma zamanı yüklüyse, `3.0.2` çalışma zamanı kullanılır.
 
 Kabul edilebilir `3.0.*` bir sürüm bulunamazsa yeni bir `3.*` sürüm kullanılır. Örneğin, belirtilmişse `netcoreapp3.0` ve yalnızca `3.1.0` yüklüyse, uygulama `3.1.0` çalışma zamanını kullanarak çalışır. Bu davranış, "ikincil sürüm alma" olarak adlandırılır. Alt sürümler de göz önünde bulundurulmaz. Kabul edilebilir çalışma zamanı yüklü olmadığında uygulama çalıştırılmaz.
 
 Birkaç kullanım örneği, 3,0 hedefliyorsanız davranışı gösterir:
 
-- ✔️ 3,0 belirtildi. 3.0.5, en yüksek düzeltme eki sürümüdür. 3.0.5 kullanılır.
+- ✔️ 3,0 belirtildi. 3.0.3, en yüksek düzeltme eki sürümüdür. 3.0.3 kullanılır.
 - ❌3,0 belirtildi. 3,0. * sürüm yüklendi. 2.1.1, en yüksek çalışma zamanının yüklü olduğunu. Bir hata iletisi görüntülenir.
 - ✔️ 3,0 belirtildi. 3,0. * sürüm yüklendi. 3.1.0, en yüksek çalışma zamanı sürümüdür. 3.1.0 kullanılır.
 - ❌2,0 belirtildi. 2. x sürümü yüklü değil. 3.0.0, en yüksek çalışma zamanının yüklü olduğunu. Bir hata iletisi görüntülenir.
@@ -95,27 +95,27 @@ Birkaç kullanım örneği, 3,0 hedefliyorsanız davranışı gösterir:
 
 1. Uygulama, 3,0 'in gerekli olduğunu belirtir.
 2. Çalıştırıldığında, 3,0. * sürümü yüklü değildir, ancak 3.1.0. Sürüm 3.1.0 kullanılacak.
-3. Daha sonra, Kullanıcı 3.0.5 yükleyip uygulamayı yeniden çalıştırdığında 3.0.5 artık kullanılacaktır.
+3. Daha sonra, Kullanıcı 3.0.3 yükleyip uygulamayı yeniden çalıştırdığında 3.0.3 artık kullanılacaktır.
 
-Özellikle ikili verileri serileştirme gibi senaryolar için 3.0.5 ve 3.1.0 farklı şekilde davranması olasıdır.
+Özellikle ikili verileri serileştirme gibi senaryolar için 3.0.3 ve 3.1.0 farklı şekilde davranması olasıdır.
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>Kendi içindeki dağıtımlar seçili çalışma zamanını içerir
 
 Bir uygulamayı [**kendi kendine dahil**](../deploying/index.md#publish-self-contained)edilen bir dağıtım olarak yayımlayabilirsiniz. Bu yaklaşım, uygulamanızla birlikte .NET Core çalışma zamanı ve kitaplıklarını paketler. Kendi içinde olan dağıtımlar çalışma zamanı ortamlarına bağımlılığı yoktur. Çalışma zamanı sürüm seçimi yayımlama zamanında gerçekleşir, çalışma zamanı değildir.
 
-Yayımlama işlemi, belirtilen çalışma zamanı ailesinin en son düzeltme eki sürümünü seçer. Örneğin, `dotnet publish` .net core 3,0 çalışma zamanı ailesindeki en son düzeltme eki sürümledir, .NET Core 3.0.4 ' ı seçer. Hedef Framework (en son yüklenen güvenlik düzeltme ekleri dahil) uygulamayla birlikte paketlenir.
+Yayımlama işlemi, belirtilen çalışma zamanı ailesinin en son düzeltme eki sürümünü seçer. Örneğin, `dotnet publish` .net core 3,0 çalışma zamanı ailesindeki en son düzeltme eki sürümledir, .NET Core 3.0.3 ' ı seçer. Hedef Framework (en son yüklenen güvenlik düzeltme ekleri dahil) uygulamayla birlikte paketlenir.
 
 Bir uygulama için belirtilen minimum sürüm karşılanmazsa, bu bir hatadır. `dotnet publish`en son çalışma zamanı düzeltme eki sürümüne bağlar (belirli bir ana. ikincil sürüm ailesi içinde). `dotnet publish`, ' ın geri iletme semantiğini desteklemez `dotnet run` . Düzeltme ekleri ve bağımsız dağıtımlar hakkında daha fazla bilgi için .NET Core Uygulamaları Dağıtma konusundaki [çalışma zamanı düzeltme eki seçimi](../deploying/runtime-patch-selection.md) başlıklı makaleye bakın.
 
 Kendi içinde olan dağıtımlar belirli bir düzeltme eki sürümü gerektirebilir. Aşağıdaki örnekte gösterildiği gibi, proje dosyasında en düşük çalışma zamanı düzeltme eki sürümünü (daha yüksek veya daha düşük sürümlere) geçersiz kılabilirsiniz:
 
 ``` xml
-<RuntimeFrameworkVersion>3.0.4</RuntimeFrameworkVersion>
+<RuntimeFrameworkVersion>3.0.3</RuntimeFrameworkVersion>
 ```
 
 `RuntimeFrameworkVersion`Öğesi varsayılan sürüm ilkesini geçersiz kılar. Kendi içinde olan dağıtımlar için, `RuntimeFrameworkVersion` *tam* çalışma zamanı çerçevesi sürümünü belirtir. Çerçeveye bağımlı uygulamalar için `RuntimeFrameworkVersion` gereken *En düşük* çalışma zamanı çerçevesi sürümünü belirtir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core indirin ve yükleyin](../install/index.md).
+- [.NET Core indirin ve yükleyin](../install/index.yml).
 - [.NET Core çalışma zamanı ve SDK 'yı kaldırma](../install/remove-runtime-sdk-versions.md).

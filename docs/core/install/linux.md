@@ -4,14 +4,20 @@ description: Linux 'ta .NET Core 'u yüklemeyi destekleyen Linux dağıtımları
 author: adegeo
 ms.author: adegeo
 ms.date: 06/01/2020
-ms.openlocfilehash: 22c07c5a8263dd6059f415cb4d9e2915811351b0
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 06a90d7fecfe9f25d26caccb2fe3aedec0176f64
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803098"
 ---
 # <a name="install-net-core-on-linux"></a>Linux 'ta .NET Core 'u yükler
+
+> [!div class="op_single_selector"]
+>
+> - [Windows’ta yükleme](windows.md)
+> - [MacOS 'a yüklensin](macos.md)
+> - [Linux'ta yükleme](linux.md)
 
 .NET Core, farklı linux dağıtımlarıyla kullanılabilir. Çoğu Linux platformu ve dağıtımı, her yıl önemli bir sürüme sahiptir ve çoğu .NET Core 'u yüklemek için kullanılan bir paket yöneticisi sağlar. Bu makalede, şu anda desteklenen ve hangi paket yöneticisinin kullanıldığı açıklanmaktadır.
 
@@ -174,3 +180,9 @@ Aşağıdaki tablo Ubuntu ve .NET Core 'un destek durumunu temsil eder.
 | ✔️ [16,04 (LTS)](linux-ubuntu.md#1604-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 
 Daha fazla bilgi için bkz. [Ubuntu 'da .NET Core 'U kurma](linux-ubuntu.md).
+
+## <a name="next-steps"></a>Sonraki adımlar
+
+- [.NET Core 'un zaten yüklü olup olmadığını denetleme](how-to-detect-installed-versions.md?pivots=os-linux).
+- [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
+- [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.

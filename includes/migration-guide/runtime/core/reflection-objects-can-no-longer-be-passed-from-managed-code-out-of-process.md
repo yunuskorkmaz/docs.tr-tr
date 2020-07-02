@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 38c774417fc94fa080bf2b82c04d575e9068cdcb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a54b17b2002bd0f85b8b47c5e37e040470d6c494
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85621435"
 ---
 ### <a name="reflection-objects-can-no-longer-be-passed-from-managed-code-to-out-of-process-dcom-clients"></a>Yansıma nesneleri artık yönetilen koddan işlem dışı DCOM istemcilerine geçirilemez
 
-|   |   |
-|---|---|
-|Ayrıntılar|Yansıma nesneleri artık yönetilen koddan işlem dışı DCOM istemcilerine geçirilemez. Aşağıdaki türleri etkilenir:<ul><li><xref:System.Reflection.Assembly?displayProperty=name></li><li><xref:System.Reflection.MemberInfo?displayProperty=name>(ve türetilmiş türleri, <xref:System.Reflection.FieldInfo?displayProperty=name>dahil olmak üzere , <xref:System.Reflection.MethodInfo?displayProperty=name> <xref:System.Type?displayProperty=name>, , ve <xref:System.Reflection.TypeInfo?displayProperty=name>)</li><li><xref:System.Reflection.MethodBody?displayProperty=name></li><li><xref:System.Reflection.Module?displayProperty=name></li><li><xref:System.Reflection.ParameterInfo?displayProperty=name>.</li></ul>Nesne <code>IMarshal</code> nin iadesi <code>E_NOINTERFACE</code>için çağrılar.|
-|Öneri|Yansıma yanlamayan nesnelerle çalışmak için kod lama güncelleştirme|
-|Kapsam|İkincil|
+#### <a name="details"></a>Ayrıntılar
+
+Yansıma nesneleri artık yönetilen koddan işlem dışı DCOM istemcilerine geçirilemez. Aşağıdaki türler etkilenir:<ul><li><xref:System.Reflection.Assembly?displayProperty=fullName></li><li><xref:System.Reflection.MemberInfo?displayProperty=fullName>(ve,,, ve dahil olmak üzere türetilmiş türleri <xref:System.Reflection.FieldInfo?displayProperty=fullName> <xref:System.Reflection.MethodInfo?displayProperty=fullName> <xref:System.Type?displayProperty=fullName> <xref:System.Reflection.TypeInfo?displayProperty=fullName> )</li><li><xref:System.Reflection.MethodBody?displayProperty=fullName></li><li><xref:System.Reflection.Module?displayProperty=fullName></li><li><xref:System.Reflection.ParameterInfo?displayProperty=fullName>.</li></ul><code>IMarshal</code>Nesne dönüşü için öğesine çağrılar <code>E_NOINTERFACE</code> .
+
+#### <a name="suggestion"></a>Öneri
+
+Yansıtma olmayan nesnelerle çalışacak sıralama kodunu Güncelleştir
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   |İkincil|
 |Sürüm|4.6|
 |Tür|Çalışma Zamanı|
