@@ -1,0 +1,63 @@
+### YamlMime:Landing
+title: Windows, Linux ve macOS 'a .NET Core 'u yükler
+summary: Windows, Linux ve macOS sürümlerine .NET yükleme hakkında bilgi edinin. .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için gereken bağımlılıkları bulun.
+metadata:
+  title: Windows, Linux ve macOS 'a .NET Core 'u yükler
+  description: Windows, Linux ve macOS sürümlerine .NET Core 'u indirme ve yükleme hakkında bilgi edinin. .NET Core uygulamaları geliştirmek, dağıtmak ve çalıştırmak için gereken bağımlılıkları bulun.
+  ms.topic: landing-page
+  ms.date: 06/29/2020
+  ms.openlocfilehash: dbc159bc4ff2d10bf55bd0c0b4d4e07a8fc04a4a
+  ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 07/01/2020
+  ms.locfileid: "85804502"
+landingContent:
+- title: Windows
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows’ta yükleme
+      url: windows.md
+    - text: Desteklenen Windows sürümleri
+      url: windows.md#supported-releases
+    - text: Bağımlılıklar
+      url: windows.md#dependencies
+    - text: Visual Studio ile Install
+      url: windows.md#install-with-visual-studio
+    - text: Visual Studio Code birlikte yüklemeyi
+      url: windows.md#install-alongside-visual-studio-code
+- title: Mac OS
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: macOS’ta yükleme
+      url: macos.md
+    - text: Desteklenen macOS yayınları
+      url: macos.md#supported-releases
+    - text: Bağımlılıklar
+      url: macos.md#dependencies
+    - text: Visual Studio Code birlikte yüklemeyi
+      url: macos.md#install-alongside-visual-studio-code
+- title: Linux
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Linux genel bakış
+      url: linux.md
+    - text: Alpine
+      url: linux-alpine.md
+    - text: CentOS
+      url: linux-centos.md
+    - text: Debian
+      url: linux-debian.md
+    - text: Fedora
+      url: linux-fedora.md
+    - text: openSUSE
+      url: linux-opensuse.md
+    - text: Red Hat Enterprise Linux
+      url: linux-rhel.md
+    - text: SUSE Linux Enterprise Server
+      url: linux-sles.md
+    - text: Ubuntu
+      url: linux-ubuntu.md
