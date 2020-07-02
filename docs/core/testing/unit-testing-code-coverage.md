@@ -3,13 +3,13 @@ title: Birim testi için kod kapsamını kullanma
 description: .NET birim testleri için kod kapsamı özelliklerini nasıl kullanacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/16/2020
-ms.openlocfilehash: d19975283bf60e5cf3a9656c1b6f7966e12d2176
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.date: 07/01/2020
+ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105419"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853899"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Birim testi için kod kapsamını kullanma
 
@@ -18,6 +18,8 @@ Birim testleri işlevselliğin sağlanmasına yardımcı olur ve yeniden düzenl
 Bu makalede, ReportGenerator kullanarak kapak ve rapor oluşturma ile birim testi için kod kapsamının kullanımı ele alınmaktadır. Bu makale, test çerçevesi olarak C# ve xUnit 'e odaklanırken hem MSTest hem de NUnit de çalışır. Kapak, C# için platformlar arası kod kapsamı çerçevesi sağlayan [GitHub üzerinde açık kaynaklı bir projem](https://github.com/coverlet-coverage/coverlet) . [Kapak Let](https://dotnetfoundation.org/projects/coverlet) , .net Foundation 'ın bir parçasıdır. Kapak Let, rapor oluşturma için kullanılan Cobertura kapsam testi çalıştırma verilerini toplar.
 
 Ayrıca, bu makalede bir rapor oluşturmak için bir kapak Let testi çalıştırmasında toplanan kod kapsamı bilgilerinin nasıl kullanılacağı açıklanır. Rapor oluşturma, [GitHub-ReportGenerator üzerinde başka bir açık kaynak proje](https://github.com/danielpalme/ReportGenerator)kullanılarak mümkündür. ReportGenerator, Cobertura tarafından üretilen kapsam raporlarını birçok farklı biçimdeki insanlar tarafından okunabilen raporlar halinde dönüştürür.
+
+Bu makale, örnekler tarayıcısında kullanılabilen [örnek kaynak kodu projesini](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)temel alır.
 
 ## <a name="system-under-test"></a>Test altındaki sistem
 
@@ -270,7 +272,7 @@ cd XUnit.Coverlet.Collector && dotnet test --collect:"XPlat Code Coverage"
 > ```
 >
 > Elde edilen *coverage.cobertura.xml* dosyası çıktı.  
-> MSBuild tümleştirton kılavuzunu [buradan](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) izleyebilirsiniz
+> MSBuild tümleştirme kılavuzunu [buradan](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/MSBuildIntegration.md) izleyebilirsiniz
 
 ## <a name="generate-reports"></a>Rapor oluştur
 
@@ -300,6 +302,7 @@ Bu komutu çalıştırdıktan sonra, bir HTML dosyası oluşturulan raporu temsi
 - [GitHub-ReportGenerator deposu](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator proje sitesi](https://danielpalme.github.io/ReportGenerator)
 - [Test komutunu .NET Core CLI](../tools/dotnet-test.md)
+- [Örnek kaynak kodu](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 
