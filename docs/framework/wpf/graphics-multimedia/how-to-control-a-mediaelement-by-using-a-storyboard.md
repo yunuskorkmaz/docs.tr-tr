@@ -1,5 +1,6 @@
 ---
 title: "Nasıl yapılır: Görsel Taslak Kullanarak MediaElement'i Denetleme"
+description: Windows Presentation Foundation 'da (WPF) görsel taslak kullanarak medyanın yürütülmesini denetleme. Basit medya oynatıcı oluşturmak için bu örneği göz önünde bulundurun.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +12,26 @@ helpviewer_keywords:
 - media [WPF], controlling playback with Storyboards
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a5e41b9a28211495fd3374c1a51a655dd867bca
+ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032241"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85853731"
 ---
 # <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>Nasıl yapılır: Görsel Taslak Kullanarak MediaElement'i Denetleme
-Bu örnek nasıl denetleneceğini gösterir bir <xref:System.Windows.Controls.MediaElement> kullanarak bir <xref:System.Windows.Media.MediaTimeline> içinde bir <xref:System.Windows.Media.Animation.Storyboard>.  
+Bu örnek, içinde bir ile kullanılarak nasıl kontrol yapılacağını gösterir <xref:System.Windows.Controls.MediaElement> <xref:System.Windows.Media.MediaTimeline> <xref:System.Windows.Media.Animation.Storyboard> .  
   
 ## <a name="example"></a>Örnek  
- Kullandığınızda, bir <xref:System.Windows.Media.MediaTimeline> içinde bir <xref:System.Windows.Media.Animation.Storyboard> zamanlamasını denetlemek için bir <xref:System.Windows.Controls.MediaElement>, diğer işlevselliğini işlevselliği aynıdır <xref:System.Windows.Media.Animation.Timeline> animasyonları gibi nesneler. Örneğin, bir <xref:System.Windows.Media.MediaTimeline> kullanan <xref:System.Windows.Media.Animation.Timeline> gibi özellikleri <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> özelliğini başlatmak bir zaman belirtmek için bir <xref:System.Windows.Controls.MediaElement> (medya kayıttan yürütmeyi başlatın). Ayrıca kullanır <xref:System.Windows.Media.Animation.Timeline.Duration%2A> özelliği belirtmek için ne kadar süreyle <xref:System.Windows.Controls.MediaElement> etkindir (kayıttan yürütme süresi). Kullanma hakkında daha fazla bilgi için <xref:System.Windows.Media.Animation.Timeline> nesnelerini bir <xref:System.Windows.Media.Animation.Storyboard>, bkz: [görsel taslaklara genel bakış](storyboards-overview.md).  
+ Bir ' ın <xref:System.Windows.Media.MediaTimeline> ' a <xref:System.Windows.Media.Animation.Storyboard> zamanlamasını denetlemek için kullandığınızda <xref:System.Windows.Controls.MediaElement> , işlevselliği animasyonlar gibi diğer nesnelerin işlevselliğiyle aynıdır <xref:System.Windows.Media.Animation.Timeline> . Örneğin, bir, <xref:System.Windows.Media.MediaTimeline> <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Timeline.BeginTime%2A> ne zaman başlatılacağını belirlemek için özelliği gibi özellikleri kullanır <xref:System.Windows.Controls.MediaElement> (medyayı kayıttan yürütmeyi Başlat). Ayrıca <xref:System.Windows.Media.Animation.Timeline.Duration%2A> , özelliğinin ne kadar süreyle <xref:System.Windows.Controls.MediaElement> etkin olduğunu (medya kayıttan yürütme süresi) belirtmek için özelliğini kullanır. İle nesneleri kullanma hakkında daha fazla bilgi için <xref:System.Windows.Media.Animation.Timeline> <xref:System.Windows.Media.Animation.Storyboard> bkz. [Görsel Taslaklara Genel Bakış](storyboards-overview.md).  
   
- Bu örnek kullanan bir basit bir medya yürütücüsü oluşturma işlemini gösterir bir <xref:System.Windows.Media.MediaTimeline> kayıttan yürütmeyi denetlemek için. Media player, play içerir duraklatma, sürdürme ve düğmeler durdurun. Aynı zamanda oynatıcı sahip bir <xref:System.Windows.Controls.Slider> bir ilerleme çubuğu olarak davranan bir denetim.  
+ Bu örnek, <xref:System.Windows.Media.MediaTimeline> kayıttan yürütmeyi denetlemek için kullanarak bir basit medya oynatıcı oluşturmayı gösterir. Medya oynatıcı oynat, Duraklat, devam ve Durdur düğmelerini içerir. Player ayrıca <xref:System.Windows.Controls.Slider> ilerleme çubuğu olarak davranan bir denetime sahiptir.  
   
- Aşağıdaki örnek, oluşturur [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] media Player.  
+ Aşağıdaki örnek [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] medya oynatıcı için oluşturur.  
   
  [!code-xaml[MediaGallery_snip#MediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml#mediatimelineexamplewholepage)]  
   
- Aşağıdaki örnek, ilerleme çubuğu için işlevsellik oluşturur.  
+ Aşağıdaki örnek, ilerleme çubuğu için işlevselliği oluşturur.  
   
  [!code-csharp[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snip/CSharp/MediaTimelineExample.xaml.cs#codebehindmediatimelineexamplewholepage)]
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
@@ -45,4 +46,4 @@ Bu örnek nasıl denetleneceğini gösterir bir <xref:System.Windows.Controls.Me
 - [Anahtar-Çerçeve Animasyonlara Genel Bakış](key-frame-animations-overview.md)
 - [Animasyona Genel bakış](animation-overview.md)
 - [Nasıl Yapılır Konuları](audio-and-video-how-to-topics.md)
-- [Grafikler ve Multimedya](index.md)
+- [Grafikler ve multimedya](index.md)
