@@ -1,18 +1,35 @@
 ---
-ms.openlocfilehash: f5d93d76ab3409d4d4c1870cfef94cac59f9475c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53ded5ae6e5a025fc7992da099c3481587bb6f31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762645"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614899"
 ---
-### <a name="privatefontcollectionaddfontfile-method-releases-font-resources"></a>PrivateFontCollection.AddFontFile yöntemi yazı tipi kaynakları serbest bırakır.
+### <a name="privatefontcollectionaddfontfile-method-releases-font-resources"></a>PrivateFontCollection. AddFontFile yöntemi, yazı tipi kaynaklarını yayınlar
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.7.1 ve önceki sürümlerde <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> sınıfı, sonra GDI +'da yazı tipi kaynakları serbest değil <xref:System.Drawing.Text.PrivateFontCollection> için atıldı <xref:System.Drawing.Font> kullanarak bu koleksiyona eklendiğinden nesneleri <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)> yöntemi. .NET Framework'teki 4.7.2 ve daha sonra <xref:System.Drawing.Text.FontCollection.Dispose%2A> dosyaları olarak eklenen GDI +'da yazı tiplerinin serbest bırakır.|
-|Öneri|<strong>İçine veya dışına bu değişiklikleri nasıl</strong>sırada bu değişiklikleri yararlanmak bir uygulama için .NET Framework 4.7.2 çalıştırmanız gerekir veya üzeri. Uygulamaya bu değişiklikler aşağıdaki yollardan birini yararlanabilir:<ul><li>.NET Framework 4.7.2 hedefleyecek şekilde derlenmiştir. Bu, varsayılan olarak .NET Framework'ü 4.7.2 hedefleyen Windows Forms uygulamaları etkin ya da üzeri değişikliktir.</li><li>.NET Framework 4.7.1 veya önceki bir sürümünü hedefleyen ve eski erişilebilirlik davranışları dışında aşağıdakileri ekleyerek bölgedeyse [AppContext anahtar](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) için <code>&lt;runtime&gt;</code> app.config dosyası ve içinayarlamabölümünü<code>false</code>aşağıdaki örnekte gösterildiği gibi.</li></ul><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Drawing.Text.DoNotRemoveGdiFontsResourcesFromFontCollection=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>.NET Framework 4.7.2 hedefleyen uygulamalar veya sonraki bir sürümü ve eski korumak istediğiniz davranışı kabul etme yazı tipi kaynakları açıkça ayarlayarak bu AppContext anahtar sunmamayı <code>true</code>.|
-|Kapsam|Kenar|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType></li><li><xref:System.Drawing.Text.FontCollection.Dispose?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.7.1 ve önceki sürümlerde, <xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType> sınıfı, <xref:System.Drawing.Text.PrivateFontCollection> <xref:System.Drawing.Font> yöntemi kullanılarak bu koleksiyona eklenen nesneler için ATıLDıKTAN sonra GDI+ yazı tipi kaynaklarını serbest bırakmaz <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)> . .NET Framework 4.7.2 ve üzeri, <xref:System.Drawing.Text.FontCollection.Dispose%2A> koleksiyona dosya olarak eklenmiş olan GDI+ yazı tiplerini yayınlar.
+
+#### <a name="suggestion"></a>Öneri
+
+**Bu değişiklikleri kabul etme veya devre dışı bırakma** Bir uygulamanın bu değişikliklerden faydalanabilir olması için .NET Framework 4.7.2 veya sonraki bir sürümde çalışmalıdır. Uygulama, aşağıdaki yollarla bu değişikliklerden faydalanabilir:
+
+- .NET Framework 4.7.2 hedeflemek için yeniden derlenir. Bu değişiklik, .NET Framework 4.7.2 veya üstünü hedefleyen Windows Forms uygulamalarda varsayılan olarak etkinleştirilir.
+- Aşağıdaki örnekte gösterildiği gibi, .NET Framework 4.7.1 veya daha önceki bir sürümü hedefler ve eski erişilebilirlik davranışlarından yararlanarak, aşağıdaki [AppContext anahtarını](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) `<runtime>` app.config dosyasının bölümüne ekleyerek ve öğesini olarak ayarlayarak eski erişilebilirlik davranışlarından daha fazla bilgi sağlar `false` .
+
+<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Drawing.Text.DoNotRemoveGdiFontsResourcesFromFontCollection=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>
+
+.NET Framework 4.7.2 veya üstünü hedefleyen ve eski davranışı korumak isteyen uygulamalar, bu AppContext anahtarını açıkça ayarlayarak yazı tipi kaynaklarını serbest bırakmaya izin verebilir `true` .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType>
+- <xref:System.Drawing.Text.FontCollection.Dispose?displayProperty=nameWithType>

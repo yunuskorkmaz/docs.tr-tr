@@ -6,24 +6,23 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-ms.openlocfilehash: 12a67d75a5f9642408cca69b2e3764a67f101549
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3c0e1b8c20042c085d4ace996a084cbd464d3b21
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617567"
 ---
 # <a name="attributes"></a>Öznitelikler
-
 <xref:System.Attribute?displayProperty=nameWithType>, özel öznitelikler tanımlamak için kullanılan bir temel sınıftır.
 
- Öznitelikler, derlemeler, türler, Üyeler ve parametreler gibi programlama öğelerine eklenebilen ek açıklamalardır. Bunlar derlemenin meta verilerinde depolanır ve yansıma API 'Leri kullanılarak çalışma zamanında erişilebilir. Örneğin, .NET, <xref:System.ObsoleteAttribute> tür veya üyenin kullanım dışı olduğunu göstermek için bir türe veya üyeye uygulanabilecek özniteliği tanımlar.
+ Öznitelikler, derlemeler, türler, Üyeler ve parametreler gibi programlama öğelerine eklenebilen ek açıklamalardır. Bunlar derlemenin meta verilerinde depolanır ve yansıma API 'Leri kullanılarak çalışma zamanında erişilebilir. Örneğin Framework, <xref:System.ObsoleteAttribute> türün veya üyenin kullanım dışı olduğunu göstermek için bir türe veya üyeye uygulanabilen öğesini tanımlar.
 
- Öznitelikler, özniteliğiyle ilgili ek verileri taşıyan bir veya daha fazla özelliğe sahip olabilir. Örneğin, `ObsoleteAttribute` bir tür veya üyenin kullanım dışı aldığı ve eskı API 'nin yerini alan yenı API 'nin bir açıklamasıyla ilgili ek bilgiler taşıyabildi.
+ Öznitelikler, özniteliğiyle ilgili ek verileri taşıyan bir veya daha fazla özelliğe sahip olabilir. Örneğin, `ObsoleteAttribute` bir tür veya üyenin kullanım dışı aldığı ve eski API 'yi değiştiren yeni API 'lerin açıklaması hakkında daha fazla bilgi taşıyabildi.
 
  Özniteliği uygulandığında bir özniteliğin bazı özelliklerinin belirtilmesi gerekir. Bunlar, konumsal Oluşturucu parametreleri olarak temsil edildiği için gereken özellikler veya gerekli bağımsız değişkenler olarak adlandırılır. Örneğin, <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> öğesinin özelliği <xref:System.Diagnostics.ConditionalAttribute> gerekli bir özelliktir.
 
- Özniteliği uygulandığında gerekli olmayan özellikler isteğe bağlı Özellikler (veya isteğe bağlı bağımsız değişkenler) olarak adlandırılır. Bunlar ayarlanabilir özelliklerle temsil edilir. Derleyiciler, bir öznitelik uygulandığında bu özellikleri ayarlamak için özel söz dizimi sağlar. Örneğin, <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Özellik isteğe bağlı bir bağımsız değişkeni temsil eder.
+ Özniteliği uygulandığında belirtilmesi gereken özellikler isteğe bağlı Özellikler (veya isteğe bağlı bağımsız değişkenler) olarak adlandırılır. Bunlar ayarlanabilir özelliklerle temsil edilir. Derleyiciler, bir öznitelik uygulandığında bu özellikleri ayarlamak için özel söz dizimi sağlar. Örneğin, <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> Özellik isteğe bağlı bir bağımsız değişkeni temsil eder.
 
  ✔️ Özel öznitelik sınıflarını "Attribute" sonekiyle birlikte adlandırın.
 

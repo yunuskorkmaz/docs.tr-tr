@@ -1,18 +1,69 @@
 ---
-ms.openlocfilehash: e08b78b49cab88d4435d75b04bd446b413a61340
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d25c14f93da5fe8acf06269554fed30ddc6bc95d
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614751"
 ---
-### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext.Current, bir kullanım yan tümcesi çağrıldığında null dönebilir
+### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext. Current, using yan tümcesinde çağrıldığında null döndürebilir
 
-|   |   |
-|---|---|
-|Ayrıntılar|<xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>geri <code>null</code> dönebilir <xref:System.NullReferenceException> ve aşağıdaki koşulların tümü doğruysa ortaya çıkabilir:<ul><li>Bir <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>. <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> döndüren bir yöntemde özelliğin değerini alırsınız</li><li>Nesneyi <xref:System.ServiceModel.OperationContextScope> bir <code>using</code> yan tümcede anında alarsınız.</li><li>Içindeki özelliğin <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> değerini <code>using statement</code>alırsınız. Örnek:</li></ul><pre><code class="lang-csharp">using (new OperationContextScope(OperationContext.Current))&#13;&#10;{&#13;&#10;OperationContext context = OperationContext.Current;      // OperationContext.Current is null.&#13;&#10;// ...&#13;&#10;}&#13;&#10;</code></pre>|
-|Öneri|Bu sorunu gidermek için aşağıdakileri yapabilirsiniz:<ul><li>Yeni bir<code>null</code> <xref:System.ServiceModel.OperationContext.Current%2A> nesne olmayan ı anında anımsamak için kodunuzu aşağıdaki gibi değiştirin:</li></ul><pre><code class="lang-csharp">OperationContext ocx = OperationContext.Current;&#13;&#10;using (new OperationContextScope(OperationContext.Current))&#13;&#10;{&#13;&#10;OperationContext.Current = new OperationContext(ocx.Channel);&#13;&#10;// ...&#13;&#10;}&#13;&#10;</code></pre><ul><li>.NET Framework 4.6.2'ye en son güncelleştirmeyi yükleyin veya .NET Framework'ün sonraki bir sürümüne yükseltin. Bu, <xref:System.Threading.ExecutionContext> giriş <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> akışını devre dışı kılabilir ve .NET Framework 4.6.1 ve önceki sürümlerde WCF uygulamalarının davranışını geri yükler. Bu davranış yapılandırılabilir; yapılandırma dosyanıza aşağıdaki uygulama ayarını eklemeye eşdeğerdir:</li></ul><pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;true&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>Bu değişiklik istenmeyen bir durumsa ve uygulamanız işlem bağlamları arasında akan yürütme bağlamına bağlıysa, akışını aşağıdaki gibi etkinleştirebilirsiniz:<pre><code class="lang-xml">&lt;appSettings&gt;&#13;&#10;&lt;add key=&quot;Switch.System.ServiceModel.DisableOperationContextAsyncFlow&quot; value=&quot;false&quot; /&gt;&#13;&#10;&lt;/appSettings&gt;&#13;&#10;</code></pre>|
-|Kapsam|Edge|
-|Sürüm|4.6.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>`null` <xref:System.NullReferenceException> aşağıdaki koşulların tümü doğruysa dönebilir ve bir sonuç verebilir:
+
+- Özelliğinin değerini, <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> veya döndüren bir yöntemde alırsınız <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> .
+- <xref:System.ServiceModel.OperationContextScope>Bir `using` yan tümcede nesneyi örnekleyebilirsiniz.
+- İçindeki özelliğinin değerini elde edersiniz <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> `using statement` . Örneğin:
+
+```csharp
+using (new OperationContextScope(OperationContext.Current))
+{
+    // OperationContext.Current is null.
+    OperationContext context = OperationContext.Current;
+
+    // ...
+}
+```
+
+#### <a name="suggestion"></a>Öneri
+
+Bu sorunu gidermek için aşağıdakileri yapabilirsiniz:
+
+- Yeni bir nesne olmayan yeni bir nesne örneği oluşturmak için kodunuzu aşağıdaki şekilde değiştirin `null` <xref:System.ServiceModel.OperationContext.Current%2A> :
+
+    ```csharp
+    OperationContext ocx = OperationContext.Current;
+    using (new OperationContextScope(OperationContext.Current))
+    {
+        OperationContext.Current = new OperationContext(ocx.Channel);
+
+        // ...
+    }
+    ```
+
+- En son güncelleştirmeyi .NET Framework 4.6.2 veya .NET Framework daha sonraki bir sürüme yükseltin. Bu, içindeki akışını devre dışı <xref:System.Threading.ExecutionContext> bırakır <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType> ve .NET Framework 4.6.1 ve ÖNCEKI sürümlerde WCF uygulamalarının davranışını geri yükler. Bu davranış yapılandırılabilir; yapılandırma dosyanıza aşağıdaki uygulama ayarı eklenerek eşdeğerdir:
+
+    ```xml
+    <appSettings>
+      <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="true" />
+    </appSettings>
+    ```
+
+    Bu değişiklik istenene ve uygulamanız, işlem bağlamları arasındaki yürütme bağlamına bağımlıysa, akışını şu şekilde etkinleştirebilirsiniz:
+
+    ```xml
+    <appSettings>
+      <add key="Switch.System.ServiceModel.DisableOperationContextAsyncFlow" value="false" />
+    </appSettings>
+    ```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.6.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType>

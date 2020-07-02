@@ -1,18 +1,34 @@
 ---
-ms.openlocfilehash: 9ec5fa379556dedeaa7a35e34f004340ab47a39c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5a061dffa1deb66e1769d6ec70dfa2155ac6a31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615769"
 ---
-### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>CreateDefaultAuthorizationContext'ı null bağımsız değişkenle arama
+### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>CreateDefaultAuthorizationContext 'in null bir bağımsız değişkenle çağrılması değiştirildi
 
-|   |   |
-|---|---|
-|Ayrıntılar|İade edilen <xref:System.IdentityModel.Policy.AuthorizationContext?displayProperty=name> inanın null <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=name> authorizationPolicies argümanı ile birlikte uygulanması .NET Framework 4.6'daki uygulamasını değiştirmiştir.|
-|Öneri|Nadir durumlarda, özel kimlik doğrulaması kullanan WCF uygulamaları davranış farklılıkları görebilir. Bu gibi durumlarda, önceki davranış iki şekilde de geri yüklenebilir:<ol><li>.NET Framework'ün 4,6'dan daha önceki bir sürümünü hedeflemek için uygulamanızı yeniden derle. IIS tarafından barındırılan &lt;hizmetler için,.NET&quot;Framework'ün önceki bir sürümünü hedeflemek için httpRuntime targetFramework= x.x&quot;  / &gt; öğesini kullanın.</li><li>App.config dosyanızın bölümüne <code>&lt;appSettings&gt;</code> aşağıdaki satırı ekleyin:<code>&lt;add key=&quot;appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext&quot; value=&quot;true&quot; /&gt;</code></li></ol>|
-|Kapsam|İkincil|
-|Sürüm|4.6|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.IdentityModel.Policy.AuthorizationContext?displayProperty=fullName>Null authorizationPolicies bağımsız değişkeni ile öğesine yapılan bir çağrı tarafından döndürülen uygulanması, <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=fullName> .NET Framework 4,6 ' deki uygulamasını değiştirdi.
+
+#### <a name="suggestion"></a>Öneri
+
+Nadir durumlarda, özel kimlik doğrulaması kullanan WCF uygulamaları davranış farklarını görebilirler. Bu gibi durumlarda, önceki davranış iki şekilde geri yüklenebilir:
+
+- Uygulamanızı 4,6 ' den daha önceki bir .NET Framework sürümünü hedeflemek için yeniden derleyin. IIS tarafından barındırılan hizmetler için, `<httpRuntime targetFramework="x.x">` .NET Framework önceki bir sürümünü hedeflemek için öğesini kullanın.
+- app.config dosyanızın bölümüne aşağıdaki satırı ekleyin `<appSettings>` :
+
+    ```xml
+    <add key="appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext" value="true" />
+    ```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.6         |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=nameWithType>

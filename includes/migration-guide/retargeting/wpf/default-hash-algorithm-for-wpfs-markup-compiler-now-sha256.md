@@ -1,17 +1,29 @@
 ---
-ms.openlocfilehash: 14b8930044381d1d86ec7984d36a5c3588eebd81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4303b177ffe01328965c909a5a3809414fcead91
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762630"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614927"
 ---
-### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>WPF'nin biçimlendirme derleyici için varsayılan karma algoritması SHA256 sunulmuştur
+### <a name="the-default-hash-algorithm-for-wpfs-markup-compiler-is-now-sha256"></a>WPF 'in biçimlendirme derleyicisi için varsayılan karma algoritması artık SHA256
 
-|   |   |
-|---|---|
-|Ayrıntılar|WPF MarkupCompiler XAML işaretleme dosyaları için derleme hizmetleri sağlar.  .NET Framework 4.7.1 ve önceki sürümlerinde sağlaması için kullanılan varsayılan karma algoritma SHA1 oluştu. SHA1 ile en son güvenlik kaygıları nedeniyle, bu varsayılan için SHA256 değiştirildi .NET Framework ile 4.7.2 başlatılıyor.  Bu değişiklik tüm sağlama toplamı oluşturulması işaretleme dosyaları için derleme sırasında etkiler.|
-|Öneri|.NET Framework 4.7.2 hedefleyen bir geliştirici ya da daha büyük ve SHA1 karma davranışa dönmek istediği aşağıdaki AppContext bayrak ayarlamanız gerekir.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>Bir aşağıda 4.7.2 .NET framework sürümünü hedefleme kümesi SHA256 karma yararlanmak isteyen bir geliştirici AppContext bayrağı altında.  .NET Framework'ün yüklü sürümü 4.7.2 olmasına dikkat edin veya daha büyük.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=false&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|Geçirgen|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+WPF MarkupCompiler, XAML işaretleme dosyaları için derleme hizmetleri sağlar.  .NET Framework 4.7.1 ve önceki sürümlerde, sağlama toplamı için kullanılan varsayılan karma algoritma SHA1 ' dır. SHA1 ile ilgili en son güvenlik sorunları nedeniyle, bu varsayılan değer .NET Framework 4.7.2 ile başlayarak SHA256 olarak değiştirilmiştir.  Bu değişiklik, derleme sırasında biçimlendirme dosyaları için tüm sağlama toplamı üretimini etkiler.
+
+#### <a name="suggestion"></a>Öneri
+
+.NET Framework 4.7.2 veya üstünü hedefleyen ve SHA1 karma davranışına geri dönmek isteyen bir geliştirici, aşağıdaki AppContext bayrağını ayarlamış olmalıdır.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+.NET 4.7.2 'ın altında bir Framework sürümünü hedeflerken SHA256 karmasını kullanmak isteyen bir geliştirici aşağıdaki AppContext bayrağını ayarlamanız gerekir.  .NET Framework yüklü sürümünün 4.7.2 veya daha büyük olması gerektiğini unutmayın.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Markup.DoNotUseSha256ForMarkupCompilerChecksumAlgorithm=false&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Geçirgen |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |

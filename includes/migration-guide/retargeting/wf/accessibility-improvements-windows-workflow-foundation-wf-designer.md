@@ -1,17 +1,72 @@
 ---
-ms.openlocfilehash: d4f03e10d6f3dc879d80cb6de57c0a54b0ec8a2c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d420be76645fc71ac922542fa49f799a473e9a83
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74284175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614856"
 ---
-### <a name="accessibility-improvements-in-windows-workflow-foundation-wf-workflow-designer"></a>Windows İş Akışı Temeli (WF) iş akışı tasarımcısında erişilebilirlik geliştirmeleri
+### <a name="accessibility-improvements-in-windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) iş akışı tasarımcısında erişilebilirlik geliştirmeleri
 
-|   |   |
-|---|---|
-|Ayrıntılar|Windows İş Akışı Temeli (WF) iş akışı tasarımcısı, erişilebilirlik teknolojileri ile nasıl çalıştığını geliştiriyor. Bu geliştirmeler aşağıdaki değişiklikleri içerir:<ul><li>Sekme sırası bazı denetimlerde soldan sağa ve yukarıdan aşağıya değiştirilir:</li><li><xref:System.ServiceModel.Activities.InitializeCorrelation> Etkinlik için korelasyon verilerini ayarlamak için başlangıç korelasyon penceresi</li><li><xref:System.ServiceModel.Activities.Receive>, , <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply>, ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikler için içerik tanım penceresi</li><li>Klavye aracılığıyla daha fazla işlev kullanılabilir:</li><li>Bir etkinliğin özelliklerini düzenlerken, özellik grupları ilk odaklandıklarında klavye yle daraltılabilir.</li><li>Uyarı simgelerine artık klavyeyle erişilebilir.</li><li>Özellikler penceresindeki Daha Fazla Özellik düğmesine artık klavyeyle erişilebilir.</li><li>Klavye kullanıcıları artık İş Akışı Tasarımcısının Bağımsız Değişkenler ve Değişkenler bölmelerinde üstbilgi öğelerine erişebilir.</li><li>Şu anda olduğu gibi odaklanmış öğelerin daha iyi görünürlüğü:</li><li>İş Akışı Tasarımcısı ve etkinlik tasarımcıları tarafından kullanılan veri ızgaralarına satır ekleme.</li><li>Alanlarda <xref:System.ServiceModel.Activities.ReceiveReply> ve <xref:System.ServiceModel.Activities.SendReply> etkinliklerde sekme.</li><li>Değişkenler veya bağımsız değişkenler için varsayılan değerleri ayarlama</li><li>Ekran okuyucular artık doğru tanıyabilir:</li><li>İş akışı tasarımcısında ayarlanan kesme noktaları.</li><li>, <xref:System.Activities.Statements.FlowSwitch%601> <xref:System.Activities.Statements.FlowDecision>ve <xref:System.ServiceModel.Activities.CorrelationScope> aktiviteler.</li><li><xref:System.ServiceModel.Activities.Receive> Etkinliğin içeriği.</li><li><xref:System.Activities.Statements.InvokeMethod> Etkinlik için Hedef Türü.</li><li><xref:System.Activities.Statements.TryCatch> Etkinlikteki Özel Durum ve Son bölümü.</li><li>İleti Türü combobox, Korelik Aç layıcılar Ekle penceresindeki ayırıcı, İçerik Tanımı penceresi ve ileti etkinliklerindeki<xref:System.ServiceModel.Activities.Receive>CorrelatesOn Defintion penceresi ( , , <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply>, ve <xref:System.ServiceModel.Activities.ReceiveReply>).</li><li>Durum makine geçişleri ve geçişler hedefleri.</li><li>Etkinliklerle ilgili <xref:System.Activities.Statements.FlowDecision> ek açıklamalar ve bağlayıcılar.</li><li>Etkinlikler için bağlam (sağ tıklatma) menüleri.</li><li>Özellik değeri düzenleyicileri, Aramayı Temizle düğmesi, Kategoriye Ve Alfabetik sıralama düğmelerine göre ve özellikler tablosundaki İfade Düzenleyicisi iletişim kutusu.</li><li>İş Akışı Tasarımcısı'ndaki yakınlaştırma yüzdesi.</li><li>Ayırıcı ve <xref:System.Activities.Statements.Parallel> <xref:System.Activities.Statements.Pick> faaliyetleri.</li><li>Aktivite. <xref:System.Activities.Statements.InvokeDelegate></li><li>Sözlük etkinlikleri için Türleri<code>Microsoft.Activities.AddToDictionary&lt;TKey,TValue&gt;</code>Seç <code>Microsoft.Activities.RemoveFromDictionary&lt;TKey,TValue&gt;</code>penceresi (, , vb.).</li><li>Gözat ve Seç .NET Türü penceresi.</li><li>İş Akışı Tasarımcısı'ndaki ekmek kırıntıları.</li><li>Yüksek Karşıtlık temaları seçen kullanıcılar, İş Akışı Tasarımcısı'nın görünürlüğünde ve denetimlerinde, öğeler arasında daha iyi kontrast oranları ve odak elemanları için kullanılan daha belirgin seçim kutuları gibi birçok iyileştirme görür.</li></ul>|
-|Öneri|Yeniden barındırılan iş akışı tasarımcısı olan bir uygulamanız varsa, uygulamanız aşağıdaki eylemlerden birini gerçekleştirerek bu değişikliklerden yararlanabilir:<ul><li>.NET Framework 4.7.1'i hedeflemek için başvurunuzu yeniden derle. Bu erişilebilirlik değişiklikleri varsayılan olarak etkinleştirilir.</li><li>Uygulamanız .NET Framework 4.7 veya daha öncesini hedefliyorsa ancak .NET Framework 4.7.1 üzerinde çalışıyorsa, aşağıdaki [AppContext anahtarını](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) app.config <code>&lt;runtime&gt;</code> dosyasının bölümüne ekleyerek bu eski erişilebilirlik davranışlarını devre dışı bırakabilirsiniz ve aşağıdaki örnekte görüldüğü gibi bu <code>false</code>durum için ayarlayabilirsiniz.</li></ul><pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>.NET Framework 4.7.1 veya daha sonrasını hedefleyen ve eski erişilebilirlik davranışını korumak isteyen uygulamalar, bu AppContext anahtarını <code>true</code>açıkça ayarlayarak eski erişilebilirlik özelliklerinin kullanımını seçebilir.|
-|Kapsam|İkincil|
-|Sürüm|4.7.1|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+Windows Workflow Foundation (WF) iş akışı Tasarımcısı, erişilebilirlik teknolojileriyle nasıl çalıştığını geliştirir. Bu geliştirmeler aşağıdaki değişiklikleri içerir:
+
+- Sekme sırası, bazı denetimlerde soldan sağa ve yukarıdan aşağıya doğru olarak değişir:
+- Etkinlik için bağıntı verilerini ayarlamaya yönelik bağıntı Başlat penceresi <xref:System.ServiceModel.Activities.InitializeCorrelation>
+- <xref:System.ServiceModel.Activities.Receive>,, <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply> Ve <xref:System.ServiceModel.Activities.ReceiveReply> etkinlikleri için içerik tanımı penceresi
+- Klavye aracılığıyla daha fazla işlev mevcuttur:
+- Bir etkinliğin özelliklerini düzenlediğinizde, özellik grupları ilk odaklandığında klavye tarafından daraltılabilirler.
+- Uyarı simgeleri artık klavye tarafından erişilebilir.
+- Özellikler penceresi daha fazla özellik düğmesine artık klavye tarafından erişilebilir.
+- Klavye kullanıcıları artık İş Akışı Tasarımcısı bağımsız değişkenler ve değişkenler bölmelerinde üst bilgi öğelerine erişebilir.
+- Odaklanılmış öğelerin şu durumlarda geliştirilmiş görünürlüğü:
+- İş Akışı Tasarımcısı ve etkinlik tasarımcıları tarafından kullanılan veri kılavuzlarına satır ekleme.
+- <xref:System.ServiceModel.Activities.ReceiveReply>Ve etkinliklerindeki alanlar arasında sekme <xref:System.ServiceModel.Activities.SendReply> .
+- Değişkenler veya bağımsız değişkenler için varsayılan değerleri ayarlama
+- Ekran okuyucular artık doğru şekilde tanıyabilir:
+- İş akışı tasarımcısında ayarlanan kesme noktaları.
+- <xref:System.Activities.Statements.FlowSwitch%601>, <xref:System.Activities.Statements.FlowDecision> Ve <xref:System.ServiceModel.Activities.CorrelationScope> etkinlikleri.
+- <xref:System.ServiceModel.Activities.Receive>Etkinliğin içeriği.
+- Etkinliğin hedef türü <xref:System.Activities.Statements.InvokeMethod> .
+- Etkinliğin özel durum ComboBox 'ı ve finally bölümü <xref:System.Activities.Statements.TryCatch> .
+- İleti türü açılan kutusu, bağıntı başlatıcıları Ekle penceresinde, içerik tanımı penceresinde ve CorrelatesOn Defintion penceresinde, ileti etkinliklerinin ( <xref:System.ServiceModel.Activities.Receive> ,, <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.SendReply> ve) yer aldığı ayırıcı <xref:System.ServiceModel.Activities.ReceiveReply> .
+- Durum makinesi geçişleri ve geçiş hedefleri.
+- Etkinlikler üzerinde ek açıklamalar ve bağlayıcılar <xref:System.Activities.Statements.FlowDecision> .
+- Etkinlikler için bağlam (sağ tıklama) menüleri.
+- Özellik değeri düzenleyicileri, aramayı temizle düğmesi, kategoriye ve alfabetik sıralama düğmelerine göre ve Özellikler kılavuzundaki Ifade Düzenleyicisi iletişim kutusu.
+- İş Akışı Tasarımcısı yakınlaştırma yüzdesi.
+- <xref:System.Activities.Statements.Parallel>Ve <xref:System.Activities.Statements.Pick> etkinliklerindeki ayırıcı.
+- <xref:System.Activities.Statements.InvokeDelegate>Etkinlik.
+- Sözlük Etkinlikleri ( `Microsoft.Activities.AddToDictionary&lt;TKey,TValue>` , `Microsoft.Activities.RemoveFromDictionary&lt;TKey,TValue>` , vb.) Için türleri seçin penceresi.
+- .NET tür araştır ve Seç penceresi.
+- İş Akışı Tasarımcısı içerik haritaları.
+- Yüksek Karşıtlık Temaları seçen kullanıcılar, İş Akışı Tasarımcısı görünürlüğünde birçok geliştirme ve öğeler arasında daha fazla karşıtlık oranı ve odak öğeleri için kullanılan daha belirgin seçim kutuları gibi denetimler görür.
+
+#### <a name="suggestion"></a>Öneri
+
+Yeniden barındırılan bir iş akışı tasarlayıcı içeren bir uygulamanız varsa, uygulamanız bu eylemlerden birini gerçekleştirerek bu değişikliklerden faydalanabilir:
+
+- .NET Framework 4.7.1 hedeflemek için uygulamanızı yeniden derleyin. Bu erişilebilirlik değişiklikleri varsayılan olarak etkindir.
+- Uygulamanız .NET Framework 4,7 veya önceki bir sürümü hedefliyorsa ancak .NET Framework 4.7.1 üzerinde çalışıyorsa, aşağıdaki örnekte gösterildiği gibi, aşağıdaki [AppContext anahtarını](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `<runtime>` app.config dosyanın bölümüne ekleyerek ve olarak ayarlarsanız, bu eski erişilebilirlik davranışlarını devre dışı bırakabilirsiniz `false` .
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7"/>
+  </startup>
+  <runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true/false;key2=true/false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false" />
+  </runtime>
+</configuration>
+```
+
+.NET Framework 4.7.1 veya üstünü hedefleyen ve eski erişilebilirlik davranışını korumak isteyen uygulamalar, bu AppContext anahtarını açıkça olarak ayarlayarak eski erişilebilirlik özelliklerinin kullanımını kabul edebilir `true` .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.7.1       |
+| Tür    | Yeniden Hedefleme |

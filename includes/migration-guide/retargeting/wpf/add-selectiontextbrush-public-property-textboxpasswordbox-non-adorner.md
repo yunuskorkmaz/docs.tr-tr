@@ -1,18 +1,32 @@
 ---
-ms.openlocfilehash: e04134ec731c5e7bede3388621078c6518805ec2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aade03c29ff16053a97683499cf719a98ae33f3f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803525"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616311"
 ---
-### <a name="add-selectiontextbrush-public-property-to-textboxpasswordbox-non-adorner-selection"></a>TextBox/PasswordBox olmayan adorner seçimine SelectionTextBrush kamu mülkiyeti ekle
+### <a name="add-selectiontextbrush-public-property-to-textboxpasswordbox-non-adorner-selection"></a>TextBox/PasswordBox öğesine SelectionTextBrush ortak özelliği ekleme donatıcı olmayan seçim
 
-|   |   |
-|---|---|
-|Ayrıntılar|WPF uygulamalarında, kapiçin ve için <xref:System.Windows.Controls.TextBox> [adorner tabanlı metin seçimi](https://github.com/Microsoft/dotnet/blob/master/Documentation/compatibility/wpf-TextBox-PasswordBox-text-selection-does-not-follow-system-colors.md) <xref:System.Windows.Controls.PasswordBox>kullanarak, geliştiriciler artık seçili metnin işlenmesini değiştirmek için yeni eklenen SelectionTextBrush özelliğini ayarlayabilir.  Varsayılan olarak, bu <xref:System.Windows.SystemColors.HighlightTextBrushKey>renk .  Adorner tabanlı olmayan metin seçimi etkinleştirilemezse, bu özellik hiçbir şey yapmaz.|
-|Öneri|Adorner tabanlı olmayan metin seçimi etkinleştirildikten <xref:System.Windows.Controls.PasswordBox.SelectionTextBrush?displayProperty=nameWithType> sonra, seçili metnin görünümünü değiştirmek için bu özelliği ve <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush> özelliği kullanabilirsiniz. Bu XAML kullanılarak elde edilebilir:<pre><code class="lang-xaml">&lt;TextBox SelectionBrush=&quot;Red&quot; SelectionTextBrush=&quot;White&quot;  SelectionOpacity=&quot;0.5&quot;&#13;&#10;Foreground=&quot;Blue&quot; CaretBrush=&quot;Blue&quot;&gt;&#13;&#10;This is some text.&#13;&#10;&lt;/TextBox&gt;&#13;&#10;</code></pre>|
-|Kapsam|Ana|
-|Sürüm|4.8|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrushProperty?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush?displayProperty=nameWithType></li><li>[System.Windows.Controls.TextBox](xref:System.Windows.Controls.TextBox)</li><li>[System.Windows.Controls.PasswordBox](xref:System.Windows.Controls.PasswordBox)</li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+Ve için [donatıcı tabanlı olmayan metin seçimi](https://github.com/Microsoft/dotnet/blob/master/Documentation/compatibility/wpf-TextBox-PasswordBox-text-selection-does-not-follow-system-colors.md) kullanan WPF uygulamalarında <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.PasswordBox> , geliştiriciler artık seçili metnin işlemesini değiştirmek Için yeni eklenen selectiontextbrush özelliğini ayarlayabilir.  Varsayılan olarak, bu renk ile değişir <xref:System.Windows.SystemColors.HighlightTextBrushKey> .  Donatıcı olmayan tabanlı metin seçimi etkinleştirilmemişse, bu özellik hiçbir şey yapmaz.
+
+#### <a name="suggestion"></a>Öneri
+
+Donatıcı olmayan bir metin seçimi etkinleştirildikten sonra, <xref:System.Windows.Controls.PasswordBox.SelectionTextBrush?displayProperty=nameWithType> <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush> Seçilen metnin görünüşünü değiştirmek için ve özelliğini kullanabilirsiniz. Bu, XAML kullanılarak sağlanabilir:
+
+<pre><code class="lang-xaml">&lt;TextBox SelectionBrush=&quot;Red&quot; SelectionTextBrush=&quot;White&quot;  SelectionOpacity=&quot;0.5&quot;&#13;&#10;Foreground=&quot;Blue&quot; CaretBrush=&quot;Blue&quot;&gt;&#13;&#10;This is some text.&#13;&#10;&lt;/TextBox&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Ana       |
+| Sürüm | 4,8         |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrushProperty?displayProperty=nameWithType>
+- <xref:System.Windows.Controls.Primitives.TextBoxBase.SelectionTextBrush?displayProperty=nameWithType>
+- [System. Windows. Controls. TextBox](xref:System.Windows.Controls.TextBox)
+- [System. Windows. Controls. PasswordBox](xref:System.Windows.Controls.PasswordBox)

@@ -1,17 +1,49 @@
 ---
-ms.openlocfilehash: 994876457f9745de99be30e567f400f69a0192fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 04c4fb4c8e9da8c58a5e26f78a7b13aa6a0df4a0
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70259818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614690"
 ---
-### <a name="changes-in-path-normalization"></a>Yol normalleştirmesindeki değişiklikler
+### <a name="changes-in-path-normalization"></a>Yol normalleştirmede değişiklikler
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6.2'yi hedefleyen uygulamalardan başlayarak, çalışma zamanının yolları normalleştirme şekli değişti. Bir yolu normalleştirmek, hedef işletim sistemindegeçerli bir yola uyacak şekilde bir yolu veya dosyayı tanımlayan dizeyi değiştirmeyi içerir. Normalleştirme genellikle içerir:<ul><li>Bileşen ve dizin ayırıcıları canonicalizing.</li><li>Geçerli dizini göreli bir yola uygulama.</li><li>Bir yolda göreli dizini (.) veya üst dizinin (..) değerlendirilmesi.</li><li>Belirtilen karakterleri kırpma.</li></ul>.NET Framework 4.6.2'yi hedefleyen uygulamalardan başlayarak, yol normalleştirmesinde aşağıdaki değişiklikler varsayılan olarak etkinleştirilir:<ul><li>Çalışma süresi, yolları normalleştirmek için işletim sisteminin [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) işlevine erteler.</li><li>Normalleştirme artık dizin kesimlerinin sonunda (dizin adının sonundaki boşluk gibi) kırpmayı içermez.</li><li>Aygıt yolu sözdizimini tam `\\.\` güven içinde ve mscorlib.dll'deki `\\?\`dosya G/Ç API'leri için destek.</li><li>Çalışma zamanı aygıt sözdizimi yollarını doğrulamaz.</li><li>Alternatif veri akışlarına erişmek için aygıt sözdizimi kullanımı desteklenir.</li></ul>Bu değişiklikler, yöntemlerin önceden erişilemeyen yollara erişmesine izin verirken performansı artırır. .NET Framework 4.6.1 ve önceki sürümleri hedefleyen ancak .NET Framework 4.6.2 veya daha sonra ları altında çalışan uygulamalar bu değişiklikten etkilenmez.|
-|Öneri|.NET Framework 4.6.2 veya daha sonrasını hedefleyen uygulamalar bu değişikliği devre dışı bırakıp <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyasının bölümüne aşağıdakileri ekleyerek eski normalleştirmeyi kullanabilir:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.UseLegacyPathHandling=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>.NET Framework 4.6.1 veya daha öncesini hedefleyen ancak .NET Framework 4.6.2 veya sonraki bölümlerinde çalışan uygulamalar, <code>&lt;runtime&gt;</code> uygulama .configuration dosyasının bölümüne aşağıdaki satırı ekleyerek normale döndürme yolunun değiştirilmesine olanak sağlayabilir:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.IO.UseLegacyPathHandling=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
-|Sürüm|4.6.2|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, çalışma zamanının yol normalleştirme yöntemi değişti. Bir yolun normalleştirilmesi, bir yolu veya dosyayı tanımlayan dizeyi, hedef işletim sisteminde geçerli bir yola uygun olacak şekilde değiştirmeyi içerir. Normalleştirme genellikle şunları içerir:
+
+- Standart hale getirme bileşeni ve Dizin ayırıcıları.
+- Geçerli dizin göreli bir yola uygulanıyor.
+- Göreli dizin (.) veya üst dizin (..) bir yolda değerlendiriliyor.
+- Belirtilen karakterler kırpılırken.
+.NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, yol normalleştirmede aşağıdaki değişiklikler varsayılan olarak etkindir:
+  - Çalışma zamanı, yolları normalleştirmek için işletim sisteminin [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) işlevine erteler.
+- Normalleştirme artık Dizin segmentlerinin bitmesini (Dizin adının sonundaki bir boşluk gibi) kırpmasını kapsar.
+- `\\.\`mscorlib.dll ' deki dosya g/ç API 'leri için ve dahil olmak üzere tam güvende cihaz yolu söz dizimi desteği `\\?\` .
+- Çalışma zamanı, cihaz sözdizimi yollarını doğrulamaz.
+- Alternatif veri akışlarına erişmek için cihaz sözdiziminin kullanılması desteklenir.
+Bu değişiklikler, daha önce erişilemeyen yollara erişme yöntemlerinin kullanılmasına izin verirken performansı geliştirir. .NET Framework 4.6.1 ve önceki sürümlerini hedefleyen ancak .NET Framework 4.6.2 veya üzeri sürümlerde çalışan uygulamalar bu değişiklikten etkilenmez.
+
+#### <a name="suggestion"></a>Öneri
+
+.NET Framework 4.6.2 veya üstünü hedefleyen uygulamalar bu değişikliği devre dışı bırakabilirsiniz ve `<runtime>` uygulama yapılandırma dosyasının bölümüne aşağıdakini ekleyerek eski normalleştirmeyi kullanabilir:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
+</runtime>
+```
+
+.NET Framework 4.6.1 veya önceki sürümlerini hedefleyen ancak .NET Framework 4.6.2 veya üzeri sürümlerde çalışan uygulamalar, `<runtime>` uygulama. yapılandırma dosyasının bölümüne aşağıdaki satırı ekleyerek yol normalleştirmede yapılan değişiklikleri etkinleştirebilir:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.6.2       |
+| Tür    | Yeniden Hedefleme |

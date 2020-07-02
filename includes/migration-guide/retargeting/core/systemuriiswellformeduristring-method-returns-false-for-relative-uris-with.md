@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 734041f5921571cd11225a359e794526cbd8d0e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7dcf9c4c3dc7ea536ddc847769a1a30f1298bb2
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617280"
 ---
-### <a name="systemuriiswellformeduristring-method-returns-false-for-relative-uris-with-a-colon-char-in-first-segment"></a>System.Uri.IsWellFormedUriString yöntemi, bir iki nokta üst üste char ilk kesimdeki ile göreli URI'ler için false değerini döndürür
+### <a name="systemuriiswellformeduristring-method-returns-false-for-relative-uris-with-a-colon-char-in-first-segment"></a>System. Uri. ıwellformeduristring yöntemi, ilk kesimde iki nokta üst üste karakteri olan göreli URI 'Ler için false döndürür
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5 ile başlayarak <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)> ile göreli bir URI'leri değerlendirir bir <code>:</code> biçimlendirilmemiş gibi kendi ilk segment olarak. Bu farklıdır <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=name> davranış uymak için RFC3986 yapılmadan .NET Framework 4.0.|
-|Öneri|(Gibi diğer birçok URI değişiklik) Bu değişiklik, yalnızca .NET Framework 4.5 (veya sonrası) hedefleyen uygulamaları etkiler. Eski davranışı kullanmaya devam etmek için uygulamayı .NET Framework 4.0 karşı hedefleyin. Alternatif olarak, URI'ın çağırmadan önce tarama <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=name> aranırken <code>:</code> karakterler, eski davranışı arzu ise doğrulama amacıyla kaldırmak isteyebilirsiniz.|
-|Kapsam|İkincil|
-|Sürüm|4,5|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,5 ' den başlayarak, <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)> göreli URI 'leri `:` ilk segmentlerinde ile, doğru biçimlendirilmemiş olarak değerlendirir. Bu, <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=fullName> RFC3986 ile uyumlu hale getirilme .NET Framework 4,0 ' deki davranış değişikdir.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklik (diğer birçok URI değişikliği gibi) yalnızca .NET Framework 4,5 (veya üzeri) hedefleyen uygulamaları etkiler. Eski davranışı kullanmaya devam etmek için uygulamayı 4,0 .NET Framework karşı hedefleyin. Alternatif olarak, <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=fullName> `:` eski davranışı tercih ediyorsanız, doğrulama amacıyla kaldırmak isteyebileceğiniz karakterleri arayarak, URI 'yi tarayın.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4,5         |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Uri.IsWellFormedUriString(System.String,System.UriKind)?displayProperty=nameWithType>

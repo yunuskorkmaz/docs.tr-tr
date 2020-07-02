@@ -1,18 +1,36 @@
 ---
-ms.openlocfilehash: efe8a2dd98865f6a24b65ce0f08eb0c574b708f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78faa5f4008b41bac75c94ce09a58c8227e5b485
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614667"
 ---
-### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>Görevler arasında GüncelKültür ve CurrentUICulture akışı
+### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>Görevler arasında CurrentCulture ve CurrentUICulture Flow
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6'dan <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> başlayarak iş parçacığının <xref:System.Threading.ExecutionContext?displayProperty=name>, eşzamanlı işlemler boyunca akan depolanır. Bu, değişikliklerin <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> daha sonra eşzamanlı olarak çalıştırılan görevlere yansıtılacak veya yansıtılacağı anlamına gelir. Bu, önceki .NET Framework sürümlerinin (sıfırlanır <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> ve <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> tüm eşzamanlı görevlerde) davranışından farklıdır.|
-|Öneri|Bu değişiklikten etkilenen uygulamalar, istenileni <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> açıkça ayarlayarak veya <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> bir async Görevi'ndeki ilk işlem olarak geçici olarak çalışabilir. Alternatif olarak, eski davranış (akan <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> / <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name>değil) aşağıdaki uyumluluk anahtarı ayarlayarak içine tercih edilebilir:<pre><code class="lang-csharp">AppContext.SetSwitch(&quot;Switch.System.Globalization.NoAsyncCurrentCulture&quot;, true);&#13;&#10;</code></pre>Bu sorun WPF tarafından .NET Framework 4.6.2'de giderilmiştir. Ayrıca .NET Frameworks 4.6, 4.6.1 ile [KB 3139549](https://support.microsoft.com/kb/3139549)olarak sabitlenmiştir. .NET Framework 4.6 veya daha sonrasını hedefleyen uygulamalar, WPF uygulamalarında otomatik olarak doğru davranışı alır - <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> / <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name>) Dispatcher işlemleri nde korunur.|
-|Kapsam|İkincil|
-|Sürüm|4.6|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentCulture?displayProperty=nameWithType></li><li><xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=nameWithType></li><li><xref:System.Threading.Thread.CurrentUICulture?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,6 ' den başlayarak, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> <xref:System.Threading.ExecutionContext?displayProperty=fullName> zaman uyumsuz işlemler arasında akan iş parçacığında saklanır. Bu, veya üzerindeki değişikliklerin <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> , daha sonra zaman uyumsuz olarak çalıştırılan görevlerde yansıtıldığı anlamına gelir. Bu, önceki .NET Framework sürümlerinin davranışından (yani <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> , <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> tüm zaman uyumsuz görevlerde) farklıdır.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklikten etkilenen uygulamalar, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> bir zaman uyumsuz görevde istenen veya ilk işlem olarak açıkça ayarlanarak soruna geçici bir çözüm verebilir. Alternatif olarak, eski davranış (akan değil <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> / <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> ) aşağıdaki uyumluluk anahtarı ayarlanarak kabul edilebilir:
+
+```csharp
+AppContext.SetSwitch("Switch.System.Globalization.NoAsyncCurrentCulture", true);
+```
+
+Bu sorun WPF tarafından .NET Framework 4.6.2 içinde düzeltildi. Ayrıca, .NET Framework 4,6 ' de 4.6.1 ile [KB 3139549](https://support.microsoft.com/kb/3139549)arasında düzeltilmiştir. .NET Framework 4,6 veya sonraki bir sürümü hedefleyen uygulamalar, otomatik olarak WPF uygulamalarında doğru davranış alır- <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> / <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> ) dağıtıcı işlemleri genelinde korunacaktır.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.6         |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType>
+- <xref:System.Threading.Thread.CurrentCulture?displayProperty=nameWithType>
+- <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=nameWithType>
+- <xref:System.Threading.Thread.CurrentUICulture?displayProperty=nameWithType>

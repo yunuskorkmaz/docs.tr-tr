@@ -1,17 +1,37 @@
 ---
-ms.openlocfilehash: f814703e187726d3988787fac52e5049988fd4d7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 946e71f2f466664c8f9fcf4811288ce693a872eb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616295"
 ---
-### <a name="workflow-xaml-checksums-for-symbols-changed-from-sha1-to-sha256"></a>SHA1'den SHA256'ya değiştirilen semboller için iş akışı XAML kontrolleri
+### <a name="workflow-xaml-checksums-for-symbols-changed-from-sha1-to-sha256"></a>Semboller için iş akışı XAML sağlama toplamı, SHA1 'den SHA256 'e değişti
 
-|   |   |
-|---|---|
-|Ayrıntılar|Visual Studio ile hata ayıklamayı desteklemek için, İş Akışı çalışma zamanı karma algoritması kullanarak bir iş akışı XAML dosyası için bir denetim çalışması oluşturur. .NET Framework 4.6.2 ve önceki sürümlerinde, iş akışı denetimi karma, FIPS özellikli sistemlerde sorunlara neden olan MD5 algoritmasını kullanmıştır. .NET Framework 4.7 ile başlayarak varsayılan algoritma SHA1 olarak değiştirildi. .NET Framework 4.8 ile başlayarak varsayılan algoritma SHA256 olarak değiştirildi.|
-|Öneri|Kodunuz iş akışı örneklerini yükleyemiyorsa veya bir checksum hatası nedeniyle <code>AppContext</code> uygun &quot;sembolleri bulamıyorsa Switch.System.Activities.UseSHA1HashForDebuggerSymbols'ı&quot; doğru ayarlamayı deneyin. Kod olarak:<pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Activities.UseSHA1HashForDebuggerSymbols&quot;, true);&#13;&#10;</code></pre>Veya yapılandırmada:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Activities.UseSHA1HashForDebuggerSymbols=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
-|Sürüm|4.8|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+Visual Studio ile hata ayıklamayı desteklemek için, Iş akışı çalışma zamanı bir karma algoritması kullanarak bir iş akışı XAML dosyası için bir sağlama toplamı üretir. .NET Framework 4.6.2 ve önceki sürümlerde, iş akışı sağlama toplamı karması, FIPS özellikli sistemlerde sorun oluşmasına neden olan MD5 algoritmasını kullandı. 4,7 .NET Framework başlayarak, varsayılan algoritma SHA1 olarak değiştirilmiştir. 4,8 .NET Framework başlayarak, varsayılan algoritma SHA256 olarak değiştirilmiştir.
+
+#### <a name="suggestion"></a>Öneri
+
+Kodunuz iş akışı örneklerini yükleyemediğinden veya bir sağlama toplamı hatası nedeniyle uygun sembolleri bulamadı, `AppContext` "Switch.SysTItem anahtarını ayarlamayı deneyin. Activities. UseSHA1HashForDebuggerSymbols " `true` . Kod:
+
+```csharp
+System.AppContext.SetSwitch("Switch.System.Activities.UseSHA1HashForDebuggerSymbols", true);
+```
+
+Ya da yapılandırmada:
+
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.Activities.UseSHA1HashForDebuggerSymbols=true" />
+  </runtime>
+</configuration>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4,8         |
+| Tür    | Yeniden Hedefleme |

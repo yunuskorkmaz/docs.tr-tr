@@ -1,18 +1,44 @@
 ---
-ms.openlocfilehash: 2ec5224b1ab16c05f6f942f6084f1ab105b71b0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 21921156295d89aad04f3197fef9fa322f3c8c87
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614666"
 ---
-### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>System.Uri tutarlı ayrılmış karakter kümesini kullandığından emin olun
+### <a name="ensure-systemuri-uses-a-consistent-reserved-character-set"></a>System. Uri ' nin tutarlı bir ayrılmış karakter kümesi kullandığından emin olun
 
-|   |   |
-|---|---|
-|Ayrıntılar|İçinde <xref:System.Uri?displayProperty=fullName>bazı bazen çözülmüş yüzde olarak kodlanmış karakterlerin artık sol tutarlı olarak kodlanır. Bu URI'ın yol, sorgu, parça ya da UserInfo bileşenleri erişen yöntemler ve özellikleri arasında oluşur. Yalnızca aşağıdakilerin her ikisi de true olduğunda davranışı değiştirir:<ul><li>URI kodlanmış biçiminde şu ayrılmış karakterlerden herhangi birini içeriyor: <code>:</code>, <code>'</code>, <code>(</code>, <code>)</code>, <code>!</code> veya <code>*</code>.</li><li>URI içeren bir Unicode veya kodlanmış karakter ayrılmamış. Yukarıdaki her ikisi de doğruysa kodlanmış ayrılmış karakterleri sol kodlanır. Önceki .NET Framework sürümlerinde, bunlar çözülür.</li></ul>|
-|Öneri|4.7.2 ile başlayan .NET Framework sürümlerini hedefleyen uygulamalar için yeni kod çözme davranışı varsayılan olarak etkindir. Bu değişiklik, istenmeyen ise, bunu aşağıdaki ekleyerek devre dışı bırakabilirsiniz [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) geçin <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyası bölümünü:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>.NET Framework'ün önceki sürümlerini hedefleyen ancak 4.7.2 .NET Framework ile başlayarak sürümler altında çalışan uygulamalar için yeni kod çözme davranışı varsayılan olarak devre dışıdır. Aşağıdakileri ekleyerek etkinleştirebilirsiniz [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) geçin <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyası bölümünü::<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.Uri?displayProperty=fullName>' De, bazen kodu çözülmüş bazı yüzde kodlamalı karakterler artık sürekli olarak ayrıldı. Bu, URI 'nin yoluna, sorguya, parçaya veya UserInfo bileşenlerine erişen Özellikler ve Yöntemler genelinde oluşur. Davranış yalnızca aşağıdakilerin her ikisi de doğru olduğunda değişir:
+
+- URI, aşağıdaki ayrılmış karakterlerden herhangi birinin kodlanmış biçimini içerir: `:` , `'` ,, `(` `)` `!` veya `*` .
+- URI, Unicode veya kodlanmış ayrılmamış bir karakter içeriyor. Yukarıdakilerin her ikisi de doğruysa, kodlanan ayrılmış karakterler bırakılır. .NET Framework önceki sürümlerinde, bunların kodu çözülür.
+
+#### <a name="suggestion"></a>Öneri
+
+4.7.2 ile başlayan .NET Framework sürümlerini hedefleyen uygulamalar için yeni kod çözme davranışı varsayılan olarak etkindir. Bu değişiklik istenmeyen ise, [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `<runtime>` uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContextSwitchOverrides anahtarını ekleyerek devre dışı bırakabilirsiniz:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=true" />
+</runtime>
+```
+
+.NET Framework önceki sürümlerini hedefleyen ancak .NET Framework 4.7.2 ile başlayan sürümler altında çalışan uygulamalar için yeni kod çözme davranışı varsayılan olarak devre dışıdır. Aşağıdaki [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) anahtarını `<runtime>` uygulama yapılandırma dosyasının bölümüne ekleyerek etkinleştirebilirsiniz:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets=false" />
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Uri?displayProperty=nameWithType>

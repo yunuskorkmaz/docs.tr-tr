@@ -1,18 +1,43 @@
 ---
-ms.openlocfilehash: 897bb0b0650c633b87a792516c62566f491ec3fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e42a294b151d07a6fdc61308cdf92df7a31a1d6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614726"
 ---
-### <a name="deflatestream-uses-native-apis-for-decompression"></a>DeflateStream yerel API'leri için sıkıştırmayı kullanır.
+### <a name="deflatestream-uses-native-apis-for-decompression"></a>DeflateStream, açma için yerel API 'Ler kullanır
 
-|   |   |
-|---|---|
-|Ayrıntılar|4.7.2, .NET Framework içinde açma uygulamasını başlayarak <code>T:System.IO.Compression.DeflateStream</code> sınıfı, varsayılan olarak yerel Windows API'ları kullanacak şekilde değiştirildi. Genellikle, bu önemli performans geliştirmeyle sonuçlanır. .NET Framework sürümünü 4.7.2 ya da daha yüksek kullanım yerel uygulama hedefleyen tüm .NET uygulamalar. Bu değişiklik içeren bazı farklılıklar davranış, neden olabilir:<ul><li>Özel durum iletileri farklı olabilir. Ancak, özel durum türü, aynı kalır.</li><li>Bir işlemi tamamlamak için yeterli bellek olmaması gibi bazı özel durumlarda farklı şekilde ele alınabilir.</li><li>Gzip üst bilgi ayrıştırmak için farkları bilinen vardır (Not: yalnızca <code>GZipStream</code> açma etkilenen ayarlayın):</li><li>Farklı zamanlarda özel geçersiz üstbilgileri ayrıştırılırken durumlar.</li><li>Yerel uygulama için bazı değerler bayrakları gzip üst bilgisi içinde ayrılmış uygular (yani [süre](http://www.zlib.org/rfc-gzip.html#header-trailer)) geçersiz değerler burada daha önce yoksayıldı bir özel durum oluşturmasına neden olabilecek belirtimine göre ayarlanır.</li></ul>|
-|Öneri|Açma yerel API'ler ile uygulamanızın davranışını olumsuz etkilediği, bu özelliği ekleyerek seçebilirsiniz <code>Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression</code> geçin <code>runtime</code> app.config dosyanızı ve ayarlamak bölümünü <code>true</code>:<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides&#13;&#10;value=&quot;Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.IO.Compression.DeflateStream?displayProperty=nameWithType></li><li><xref:System.IO.Compression.GZipStream?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.7.2 başlayarak, sınıfında açma işlemi, `T:System.IO.Compression.DeflateStream` Varsayılan olarak yerel Windows API 'lerini kullanacak şekilde değiştirilmiştir. Genellikle bu, önemli ölçüde performans geliştirmesine neden olur. .NET Framework sürüm 4.7.2 veya üstünü hedefleyen tüm .NET uygulamaları yerel uygulamayı kullanır. Bu değişiklik davranıştaki bazı farklılıklar oluşmasına neden olur ve şunları içerir:
+
+- Özel durum iletileri farklı olabilir. Ancak, atılan özel durum türü aynı kalır.
+- Bir işlemi tamamlamaya yetecek kadar bellek olmaması gibi bazı özel durumlar farklı şekilde işlenebilir.
+- Gzip üst bilgisini ayrıştırmak için bilinen farklar vardır (Note: yalnızca `GZipStream` açma için ayarlanan) etkilenir:
+- Geçersiz üstbilgileri ayrıştırırken özel durumlar farklı zamanlarda oluşturulabilir.
+- Yerel uygulama, gzip üst bilgisindeki (yani [FLG](http://www.zlib.org/rfc-gzip.html#header-trailer)) bazı ayrılmış bayraklar için bu değerleri, daha önce geçersiz değerlerin yoksayıldığı bir özel durum oluşturulmasına neden olabilen, belirtime göre ayarlanır.
+
+#### <a name="suggestion"></a>Öneri
+
+Yerel API 'Ler ile açma, uygulamanızın davranışını olumsuz yönde etkileiyorsa, `Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression` `runtime` app.config dosyanızın bölümüne anahtarı ekleyerek ve ayarlarını yaparak bu özelliği devre dışı bırakabilirsiniz `true` :
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression=true" />
+  </runtime>
+</configuration>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.IO.Compression.DeflateStream?displayProperty=nameWithType>
+- <xref:System.IO.Compression.GZipStream?displayProperty=nameWithType>

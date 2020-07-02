@@ -1,18 +1,57 @@
 ---
-ms.openlocfilehash: f0d1bbbc6d89bf0d8c62ea65c9c450116c349d49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47d3829748deef2c7c3610816b8941bf88da7ec6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72887849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614926"
 ---
-### <a name="accessibility-improvements-in-wpf"></a>WPF'de erişilebilirlik iyileştirmeleri
+### <a name="accessibility-improvements-in-wpf"></a>WPF 'de erişilebilirlik geliştirmeleri
 
-|   |   |
-|---|---|
-|Ayrıntılar|**Yüksek Kontrastlı geliştirmeler**<br><ul><li><xref:System.Windows.Controls.Expander> Denetim için odak artık görünür. .NET Framework'ün önceki sürümlerinde değildi.</li><li>Metin ve <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.RadioButton> denetimleri zaman seçilir şimdi önceki .NET Framework sürümlerinde daha görmek daha kolaydır.</li><li>Devre dışı bırakılmış <xref:System.Windows.Controls.ComboBox> bir kenarlık artık devre dışı bırakılan metinle aynı renktedir. .NET Framework'ün önceki sürümlerinde değildi.</li><li>Devre dışı bırakılmış ve odaklanmış düğmeler artık doğru tema rengini kullanır. .NET Framework'ün önceki sürümlerinde, yapmadılar.</li><li>Bir <xref:System.Windows.Controls.ComboBox> denetimin stili <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey?displayProperty=nameWithType>,.NET Framework'ün önceki sürümlerinde ayarlandığında açılır düğme artık görünür değildir.</li><li><xref:System.Windows.Controls.DataGrid> Denetimdeki sıralama göstergesi oku artık tema renklerini kullanır. .NET Framework'ün önceki sürümlerinde, bu.</li><li>Varsayılan köprü stili artık fare üzerinde doğru tema renginde değişir. .NET Framework'ün önceki sürümlerinde, bu.</li><li>Radyo düğmelerinde Klavye odak artık görünür. .NET Framework'ün önceki sürümlerinde değildi.</li><li>Denetimin <xref:System.Windows.Controls.DataGrid> onay kutusu sütunu artık klavye odağı geri bildirimi için beklenen renkleri kullanır. .NET Framework'ün önceki sürümlerinde, bu.</li><li>Klavye odak görselleri artık <xref:System.Windows.Controls.ComboBox> görünür <xref:System.Windows.Controls.ListBox> ve denetler. .NET Framework'ün önceki sürümlerinde değildi.</p></li></ul>**Ekran okuyucu etkileşimi geliştirmeleri**<br><ul><li><xref:System.Windows.Controls.Expander>denetimler artık ekran okuyucular tarafından grup olarak (genişletme/daraltma) doğru bir şekilde duyurulur.</li><li><xref:System.Windows.Controls.DataGridCell>denetimler artık ekran okuyucular tarafından veri ızgara hücresi (yerelleştirilmiş) olarak doğru bir şekilde duyurulur.</li><li>Ekran okuyucular şimdi bir editable <xref:System.Windows.Controls.ComboBox>adını duyuracak.</li><li><xref:System.Windows.Controls.PasswordBox>denetimler artık ekran &quot;okuyucular tarafından&quot; görünümde hiçbir öğe olarak ilan edilir.</p></li></ul>**LiveRegion desteği**<br>Ekran okuyucuları gibi ekran okuyucular, genellikle kullanıcının en çok ilgilendiği öğe olduğundan, kullanıcının en çok ilgisini çeken öğe olduğundan, genellikle kullanıcının kullanıcı tarafından odaklanmış kullanıcı yla ilgili bir şeyi açıklayarak, kullanıcıların kullanıcının Kullanıcı Tarafından Kullanıcı Cabirimi içeriğini tanımasına yardımcı olur. Ancak, bir Kullanıcı Arabirimi öğesi ekranda bir yerde değişirse ve odak noktası yoksa, kullanıcı bilgilendirilmeyebilir ve önemli bilgileri kaçırabilir. LiveRegions bu sorunu çözmek içindir. Geliştirici, bunları ekran okuyucuya veya başka bir [UI Automation](~/docs/framework/ui-automation/ui-automation-overview.md) istemcisine, bir UI öğesinde önemli bir değişiklik yapıldığını bildirmek için kullanabilir. Ekran okuyucu daha sonra bu değişikliğin kullanıcıyı nasıl ve ne zaman bilgilendireceğine karar verebilir. LiveSetting özelliği, ekran okuyucuya Kullanıcı'nın Kullanıcı Bilgi Bankası'nda yapılan değişikliği bildirmenin ne kadar önemli olduğunu da bildirir.|
-|Öneri|**Bu değişiklikleri nasıl tercih edin veya çıkar**<br>Uygulamanın bu değişikliklerden yararlanabilmesi için .NET Framework 4.7.1 veya sonraki yerlerde çalışması gerekir. Uygulama aşağıdaki değişikliklerden herhangi biri yararlanabilir:<ul><li>.NET Framework 4.7.1'i hedefle. Bu, önerilen yaklaşımdır. Bu erişilebilirlik değişiklikleri, .NET Framework 4.7.1 veya sonraki lerini hedefleyen WPF uygulamalarında varsayılan olarak etkinleştirilir.</li><li>Uygulama config dosyasının <code>&lt;runtime&gt;</code> bölümüne aşağıdaki [AppContext Anahtarını](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) ekleyerek ve aşağıdaki örnekte görüldüğü gibi <code>false</code>, eski erişilebilirlik davranışlarını devre dışı bırakmaz.</li></ul><pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>.NET Framework 4.7.1 veya daha sonrasını hedefleyen ve eski erişilebilirlik davranışını korumak isteyen uygulamalar, bu AppContext anahtarını <code>true</code>açıkça ayarlayarak eski erişilebilirlik özelliklerinin kullanımını seçebilir.<br>UI otomasyonuna genel bir bakış için [UI Automation Genel Bakış](~/docs/framework/ui-automation/ui-automation-overview.md)bölümüne bakın.|
-|Kapsam|Ana|
-|Sürüm|4.7.1|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationProperties.SetLiveSetting(System.Windows.DependencyObject,System.Windows.Automation.AutomationLiveSetting)?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationProperties.GetLiveSetting(System.Windows.DependencyObject)?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+**Yüksek Karşıtlık iyileştirmeler**
+<ul><li>Denetim için odak <xref:System.Windows.Controls.Expander> artık görünür durumdadır. Önceki .NET Framework sürümlerinde değildi.
+-İçindeki metin <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimlerin seçildikleri zaman önceki .NET Framework sürümlerinden daha kolay görmek daha kolaydır.
+-Devre dışı bırakılan sınır <xref:System.Windows.Controls.ComboBox> artık devre dışı metinle aynı renktedir. Önceki .NET Framework sürümlerinde değildi.
+-Devre dışı bırakılmış ve odaklanmış düğmeler artık doğru tema rengini kullanıyor. .NET Framework önceki sürümlerinde, bu değildir.
+-Bir denetimin stili olarak ayarlandığında açılan düğme artık görünür, <xref:System.Windows.Controls.ComboBox> <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey?displayProperty=nameWithType> çünkü .NET Framework önceki sürümlerinde değildir.
+-Bir denetimdeki sıralama göstergesi oku <xref:System.Windows.Controls.DataGrid> artık Tema renklerini kullanıyor. Önceki .NET Framework sürümlerinde, değildi.
+-Varsayılan köprü stili artık fare üzerinde doğru Tema rengine göre değişir. Önceki .NET Framework sürümlerinde, değildi.
+-Radyo düğmelerindeki klavye odağı artık görülebilir. Önceki .NET Framework sürümlerinde değildi.
+-<xref:System.Windows.Controls.DataGrid>Denetimin CheckBox sütunu artık klavye odağı geri bildirimi için beklenen renkleri kullanıyor. Önceki .NET Framework sürümlerinde, değildi.
+-Klavye odak görselleri artık <xref:System.Windows.Controls.ComboBox> ve <xref:System.Windows.Controls.ListBox> denetimlerinde görünür. Önceki .NET Framework sürümlerinde değildi.</p>
+**Ekran okuyucu etkileşimi iyileştirmeleri**
+<ul><li><xref:System.Windows.Controls.Expander>denetimler artık ekran okuyucular tarafından gruplar (genişletme/daraltma) olarak doğru duyuruldu.
+- <xref:System.Windows.Controls.DataGridCell>denetimler artık ekran okuyucular tarafından veri kılavuzu hücresi (yerelleştirilmiş) olarak doğru duyuruldu.
+-Ekran okuyucular artık düzenlenebilir bir adı duyuracaktır <xref:System.Windows.Controls.ComboBox> .
+- <xref:System.Windows.Controls.PasswordBox>denetimler artık &quot; ekran okuyucular tarafından görünümde hiçbir öğe olmadığından duyurulmaz &quot; .</p>
+**Liveregion desteği** Okuyucu gibi ekran okuyucular, kullanıcıların bir uygulamanın kullanıcı ARABIRIMI içeriğini bilmesini sağlar. Bu, genellikle kullanıcıya en çok ilgilendiğiniz bir öğe olduğundan, şu anda odaklanmış kullanıcı ARABIRIMI hakkında bir şeyi tanımlar. Ancak, bir kullanıcı arabirimi öğesi ekranda bir yerde değişiklik yaptığı ve odağa sahip değilse, Kullanıcı bilinçli olmayabilir ve önemli bilgileri kaçırmayabilir. Ligegions bu sorunu çözmek için tasarlanmıştır. Geliştirici, ekran okuyucuyu veya diğer [Kullanıcı Arabirimi Otomasyonu](~/docs/framework/ui-automation/ui-automation-overview.md) istemcisini, BIR kullanıcı arabirimi öğesine önemli bir değişikliğin yapıldığını bilgilendirmek için kullanabilir. Ekran okuyucu daha sonra bu değişikliğin kullanıcısına nasıl ve ne zaman bilgi verileceğine karar verebilir. LiveSetting özelliği de ekran okuyucunun Kullanıcı ARABIRIMINDE yapılan değişikliği bilgilendirmek için ne kadar önemli olduğunu bilmesini sağlar.
+
+#### <a name="suggestion"></a>Öneri
+
+**Bu değişiklikleri kabul etme veya devre dışı bırakma** Uygulamanın bu değişikliklerden faydalanabilir olması için .NET Framework 4.7.1 veya sonraki bir sürümde çalışmalıdır. Uygulama, aşağıdaki yollarla bu değişikliklerden faydalanabilir:
+
+- .NET Framework 4.7.1 hedefleyin. Bu, önerilen yaklaşımdır. Bu erişilebilirlik değişiklikleri, .NET Framework 4.7.1 veya üstünü hedefleyen WPF uygulamalarında varsayılan olarak etkinleştirilmiştir.
+- Aşağıdaki [AppContext Switch](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `<runtime>` `false` örnekte gösterildiği gibi, uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContext anahtarını ekleyerek ve olarak ayarlayarak eski erişilebilirlik davranışlarını devre dışı bırakmak.
+
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+.NET Framework 4.7.1 veya üstünü hedefleyen ve eski erişilebilirlik davranışını korumak isteyen uygulamalar, bu AppContext anahtarını açıkça olarak ayarlayarak eski erişilebilirlik özelliklerinin kullanımını kabul edebilir `true` .
+UI Otomasyonu 'na genel bakış için bkz. [UI Otomasyonu genel bakış](~/docs/framework/ui-automation/ui-automation-overview.md).
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Ana       |
+| Sürüm | 4.7.1       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType>
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType>
+- <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType>
+- <xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType>
+- <xref:System.Windows.Automation.AutomationProperties.SetLiveSetting(System.Windows.DependencyObject,System.Windows.Automation.AutomationLiveSetting)?displayProperty=nameWithType>
+- <xref:System.Windows.Automation.AutomationProperties.GetLiveSetting(System.Windows.DependencyObject)?displayProperty=nameWithType>
+- <xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore?displayProperty=nameWithType>

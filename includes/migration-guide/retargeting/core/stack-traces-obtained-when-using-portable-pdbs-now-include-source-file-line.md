@@ -1,18 +1,43 @@
 ---
-ms.openlocfilehash: 384f8c7fa08b69c13d05edb3404787d428dad837
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7500550cd9714a9788a7dea68af04823f000f7f
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614800"
 ---
-### <a name="stack-traces-obtained-when-using-portable-pdbs-now-include-source-file-and-line-information-if-requested"></a>Taşınabilir pdb artık kullanırken alınan yığın izlemelerini istenirse kaynak dosya ve satır bilgileri içerir
+### <a name="stack-traces-obtained-when-using-portable-pdbs-now-include-source-file-and-line-information-if-requested"></a>Taşınabilir pdb 'leri kullanıldığında elde edilen yığın izlemeleri artık, istenirse kaynak dosya ve satır bilgilerini içerir
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.7.2 ile başlayarak, yığın izlemelerini taşınabilir pdb kullanırken alınan istendiğinde kaynak dosya ve satır bilgileri içerir. .NET Framework 4.7.2, kaynak dosya ve satır'dan önceki sürümlerde bilgi taşınabilir pdb açıkça istenmiş olsa bile kullanırken kullanılamaz olacaktır.|
-|Öneri|.NET Framework'ü 4.7.2 hedefleyen uygulamalar için kaynak dosya ve satır bilgileri dışında aşağıdaki ekleyerek arzu değil, taşınabilir pdb kullanırken seçebilirsiniz <code>&lt;runtime&gt;</code> bölümünü, <code>app.config</code> dosyası:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Diagnostics.IgnorePortablePDBsInStackTraces=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Hedefleyen uygulamalar için .NET Framework'ün önceki sürümlerinde .NET Framework 4.7.2 ancak çalıştırmak veya daha sonra kaynak dosya ve satır bilgileri için taşınabilir pdb aşağıdakileri ekleyerek kullanırken kabul <code>&lt;runtime&gt;</code> , bölümünü<code>app.config</code>dosyası:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Diagnostics.IgnorePortablePDBsInStackTraces=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|Kenar|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Boolean)?displayProperty=nameWithType><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Int32,System.Boolean)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.7.2 ile başlayarak, taşınabilir pdb 'leri dahil edildiğinde yığın izlemeleri, istendiğinde kaynak dosya ve satır bilgilerini içerir. .NET Framework 4.7.2 ' den önceki sürümlerde, açık bir şekilde istenmiş olsa bile taşınabilir pdb 'leri kullanılırken kaynak dosya ve satır bilgileri kullanılamaz.
+
+#### <a name="suggestion"></a>Öneri
+
+.NET Framework 4.7.2 ' i hedefleyen uygulamalar için, taşınabilir pdb 'leri kullanırken, dosyanın bölümüne aşağıdakileri ekleyerek kaynak dosya ve satır bilgilerini devre dışı bırakabilirsiniz `<runtime>` `app.config` :
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Diagnostics.IgnorePortablePDBsInStackTraces=true" />
+</runtime>
+```
+
+.NET Framework önceki sürümlerini hedefleyen, ancak .NET Framework 4.7.2 veya sonraki sürümlerde çalışan uygulamalar için, dosyanızın bölümüne aşağıdakileri ekleyerek taşınabilir pdb 'leri kullanırken kaynak dosya ve satır bilgilerini kabul edebilirsiniz `<runtime>` `app.config` :
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Diagnostics.IgnorePortablePDBsInStackTraces=false" />
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Diagnostics.StackTrace.%23ctor(System.Boolean)>
+- <xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Boolean)>
+- <xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Int32,System.Boolean)>

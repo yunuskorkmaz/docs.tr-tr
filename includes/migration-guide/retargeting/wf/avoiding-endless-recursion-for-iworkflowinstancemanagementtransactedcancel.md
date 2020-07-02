@@ -1,17 +1,27 @@
 ---
-ms.openlocfilehash: f78f31f4328a45b5ef3f25cdf6eddac1b17fb6e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daf09748e69e70ad982bcee14461b66579f3bb87
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614857"
 ---
-### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>Sonsuz özyineleme IWorkflowInstanceManagement.TransactedCancel ve IWorkflowInstanceManagement.TransactedTerminate kaçınma
+### <a name="avoiding-endless-recursion-for-iworkflowinstancemanagementtransactedcancel-and-iworkflowinstancemanagementtransactedterminate"></a>IWorkflowInstanceManagement. TransactedCancel ve IWorkflowInstanceManagement. TransactedTerminate için sonsuz özyineleme önleme
 
-|   |   |
-|---|---|
-|Ayrıntılar|Kullanırken bazı koşullarda <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedCancel%2A?displayProperty=nameWithType> veya <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedTerminate%2A?displayProperty=nameWithType> iptal etme veya bir iş akışı sonlandırılmak API'leri hizmet örneği, iş akışı örneği bir yığın taşması nedeniyle sonsuz özyineleme karşılaşabilirsiniz olduğunda <code>Workflow</code> kalıcı hale getirmek çalışma zamanı çalışır istek işlenirken bir parçası olarak hizmet örneği. Sorun iş akışı örneği tamamlamak bazı diğer bekleyen WCF için başka bir hizmete istek burada bekleyen bir durumda ise oluşur. <code>TransactedCancel</code> Ve <code>TransactedTerminate</code> iş akışı hizmet örneği için sıraya alınan iş öğeleri oluşturma işlemleri. Bu iş öğeleri işlenmesini bir parçası olarak yürütülmez <code>TransactedCancel/TransactedTerminate</code> isteği. İş akışı hizmet örneği tamamlamak diğer bekleyen WCF isteği beklerken meşgul olduğu için iş öğesi oluşturuldu kuyruğa alınmış olarak kalır. <code>TransactedCancel/TransactedTerminate</code> İşlemi tamamlandıktan ve denetim, istemciye döndürülür. İşlemin ne zaman ilişkili <code>TransactedCancel/TransactedTerminate</code> tamamlama girişiminde işlemi, bu iş akışı hizmeti örneği durumu kalıcı hale getirilmesi. Ancak yoktur çünkü bir bekleyen <code>WCF</code> istek örneği için iş akışı çalışma zamanı iş akışı hizmet örneği kalıcı yapılamıyor ve bir sonsuz özyineleme döngü için yığın taşması gidiyor. Çünkü <code>TransactedCancel</code> ve <code>TransactedTerminate</code> yalnızca bellekte bir iş öğesi oluşturun, bir işlem var olduğunu olgu herhangi bir etkisi yoktur. Bir geri alma işlemi, iş öğesini atmak değil. .NET Framework 4.7.2, başlayarak, bu sorunu gidermek için hazırladık bir <code>AppSetting</code> için eklenebilir <code>web.config/app.config</code> söyler, işlemler için yoksaymak için iş akışı hizmeti <code>TransactedCancel</code> ve <code>TransactedTerminate</code>. Bu iş akışı örneği kalıcı hale getirmek beklemenize gerek kalmadan yürütme işlemi sağlar. Bu özellik için AppSetting adlı <code>microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate</code>. Değerini <code>true</code> işlem, bu nedenle yığın taşması önleme yoksayılmalıdır olduğunu gösterir. Bu uygulama ayarı varsayılan değeri <code>false</code>, mevcut iş akışı hizmet örneklerine etkilenmez.|
-|Öneri|AppFabric veya başka bir kullanıyorsanız <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> istemci ve bu iş akışı hizmet örneği yığın taşmasına iptal veya bir iş akışı örneği sonlandırmak çalışırken karşılaşıldığında, şu şekilde ekleyebilirsiniz <code>&lt;appSettings&gt;</code> web.config/ Bölümü İş akışı hizmeti için app.config dosyasında:<pre><code class="lang-xml">&lt;add key=&quot;microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate&quot; value=&quot;true&quot;/&gt;&#13;&#10;</code></pre>Sorun karşılaşılıyorsa değil, bunu yapmak gerekmez.|
-|Kapsam|Kenar|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+<xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedCancel%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement.TransactedTerminate%2A?displayProperty=nameWithType> Bir iş alt hizmet örneğini iptal etmek veya sonlandırmak için ya da API 'leri kullanırken veya işlerken, iş akışı örneği, `Workflow` isteği işlemenin bir parçası olarak hizmet örneğini kalıcı hale getirmeye çalıştığında sonsuz özyineleme nedeniyle bir yığın taşmasıyla karşılaşabilir. Bu sorun, iş akışı örneği başka bir hizmetin tamamlanması için başka bir bekleyen WCF isteğinin beklediği bir durumdaysa oluşur. `TransactedCancel`Ve `TransactedTerminate` işlemleri, iş akışı hizmeti örneği için sıraya alınan iş öğeleri oluşturur. Bu iş öğeleri, isteğin işlenmesinin bir parçası olarak yürütülmez `TransactedCancel/TransactedTerminate` . İş akışı hizmeti örneği, diğer bekleyen WCF isteğinin tamamlanmasını beklerken meşgul olduğundan, oluşturulan iş öğesi sıraya alınır. `TransactedCancel/TransactedTerminate`İşlem tamamlanır ve denetim istemciye geri döndürülür. İşlemle ilişkili işlem `TransactedCancel/TransactedTerminate` işlemeye çalıştığında, iş akışı hizmet örneği durumunun kalıcı hale getirilmesi gerekir. Ancak `WCF` örnek için bekleyen bir istek olduğundan, Iş akışı çalışma zamanı iş akışı hizmeti örneğini sürdüremiyor ve sonsuz bir özyineleme döngüsü yığın taşmasına neden olabilir. `TransactedCancel` `TransactedTerminate` Yalnızca bellekte bir iş öğesi oluşturduğundan, bir işlemin mevcut olması herhangi bir etkiye sahip değildir. İşlemin geri alınması iş öğesini atlamaz. .NET Framework 4.7.2 ' den başlayarak bu sorunu gidermek için, `AppSetting` `web.config/app.config` iş akışı hizmetine eklenebilecek ve bu işlemi ve için işlemleri yoksaydığını bildiren bir sunduk `TransactedCancel` `TransactedTerminate` . Bu işlem, iş akışı örneğinin kalıcı hale getirilmeksizin işlemin çalışmasına izin verir. Bu özelliğin AppSetting 'i olarak adlandırılmıştır `microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate` . Değeri, `true` işlemin yoksayılması gerektiğini belirtir ve bu nedenle yığın taşmasını önler. Bu AppSetting 'in varsayılan değeri, bu `false` nedenle mevcut iş akışı hizmet örnekleri etkilenmez.
+
+#### <a name="suggestion"></a>Öneri
+
+<xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>Bir iş akışı örneğini iptal etmeyi veya sonlandırmayı denerken, AppFabric veya başka bir istemci kullanıyorsanız ve iş akışı hizmeti örneğinde bir yığın taşmasıyla karşılaşdıysanız, iş `<appSettings>` akışı hizmeti için web.config/app.config dosyasının bölümüne aşağıdakileri ekleyebilirsiniz:
+
+<pre><code class="lang-xml">&lt;add key=&quot;microsoft:WorkflowServices:IgnoreTransactionsForTransactedCancelAndTransactedTerminate&quot; value=&quot;true&quot;/&gt;&#13;&#10;</code></pre>
+
+Sorunla karşılaşmayın, bunu yapmanız gerekmez.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |

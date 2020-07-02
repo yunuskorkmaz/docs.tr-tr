@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: 3e9a1009167d8a765bc401d64a574bd123736ccd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 53d74db1a77e62cc64250658281fd3e4706fe494
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614631"
 ---
-### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>Unicode çift yönlü denetim karakterleri Urılar içinde izin ver
+### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>URI 'Lerinde Unicode çift yönlü denetim karakterlerine izin ver
 
-|   |   |
-|---|---|
-|Ayrıntılar|Metnin yönünü belirtmek için kullanılan çeşitli özel denetim karakterleri Unicode belirtir. Yüzde olarak kodlanmış biçimde yoktu bile '.NET Framework'ün önceki sürümlerinde, bu karakterler yanlış tüm bir URI'leri kesilmiş. Daha iyi izlemek için [RFC 3987](https://tools.ietf.org/html/rfc3987), artık bu karakterleri Urılar içinde izin veriyoruz. Bulunduğunda bir URI kodlanmamış, bunlar yüzde olarak kodlanmış. Yüzde olarak kodlanmış bulunduğunda bunlar olarak bırakılır-olduğu.|
-|Öneri|Unicode çift yönlü karakter, varsayılan olarak etkindir 4.7.2 ile başlayan .NET Framework'ün sürümlerini hedefleyen uygulamalar için destek. Bu değişiklik, istenmeyen ise, bunu aşağıdaki ekleyerek devre dışı bırakabilirsiniz [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) geçin <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyası bölümünü:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>.NET Framework'ün önceki sürümlerini hedefleyen ancak sürümler altında çalışan uygulamalar için .NET Framework 4.7.2, Unicode çift yönlü karakter desteği ile başlayarak varsayılan olarak devre dışıdır. Aşağıdakileri ekleyerek etkinleştirebilirsiniz [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) geçin <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyası bölümünü::<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+Unicode, metnin yönünü belirtmek için kullanılan birkaç özel denetim karakterini belirtir. .NET Framework önceki sürümlerinde bu karakterler, yüzde olarak kodlanmış biçiminde olsa bile tüm URI 'lerden yanlış şekilde kaldırıldı. [RFC 3987](https://tools.ietf.org/html/rfc3987)' i daha iyi izlemek Için artık URI 'lerinde Bu karakterlere izin veririz. URI 'de kodlanmamış olarak bulunursa, yüzde olarak kodlanır. Yüzde kodlamalı olduğunda, her zaman olduğu gibi kalır.
+
+#### <a name="suggestion"></a>Öneri
+
+4.7.2 ile başlayan .NET Framework sürümlerini hedefleyen uygulamalar için, Unicode çift yönlü karakterler için destek varsayılan olarak etkindir. Bu değişiklik istenmeyen ise, [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `<runtime>` uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContextSwitchOverrides anahtarını ekleyerek devre dışı bırakabilirsiniz:
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=true" />
+</runtime>
+```
+
+.NET Framework önceki sürümlerini hedefleyen ancak .NET Framework 4.7.2 ile başlayan sürümler altında çalışan uygulamalar için, Unicode çift yönlü karakterler için destek varsayılan olarak devre dışıdır. Aşağıdaki [AppContextSwitchOverrides](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) anahtarını `<runtime>` uygulama yapılandırma dosyasının bölümüne ekleyerek etkinleştirebilirsiniz::
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.Uri.DontKeepUnicodeBidiFormattingCharacters=false" />
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Uri?displayProperty=nameWithType>

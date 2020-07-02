@@ -1,18 +1,33 @@
 ---
-ms.openlocfilehash: f4a5911787fa5f72be1dcd15c67b3f132c3f1110
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 811b1a91169eeebfa056d9ecdb07d342d3b32d85
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615770"
 ---
-### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap, PNG çerçeveli simgeleri Bitmap nesnelerine başarıyla dönüştürür
+### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon. ToBitmap, PNG çerçevelerinden simgeleri bit eşlem nesnelerine başarıyla dönüştürür
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6'yı hedefleyen uygulamalardan <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> başlayarak, yöntem PNG çerçeveli simgeleri Başarıyla Bitmap nesnelerine dönüştürür.<p/>.NET Framework 4.5.2 ve önceki sürümleri hedefleyen <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> uygulamalarda, <xref:System.ArgumentOutOfRangeException> Simge nesnesinin PNG çerçeveleri varsa yöntem bir özel durum oluşturur.<p/>Bu değişiklik, .NET Framework 4.6'yı hedeflemek için yeniden derlenen <xref:System.ArgumentOutOfRangeException> ve bir Simge nesnesi PNG çerçevesi olduğunda atılanlar için özel işleme uygulayan uygulamaları etkiler. .NET Framework 4.6 altında çalışırken, dönüştürme başarılı <xref:System.ArgumentOutOfRangeException> olur, artık bir atılmıştır ve bu nedenle özel durum işleyicisi artık çağrılmaz.|
-|Öneri|Bu davranış istenmiyorsa, app.config dosyanızın <code>&lt;runtime&gt;</code> bölümüne aşağıdaki öğeyi ekleyerek önceki davranışı koruyabilirsiniz:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides&#13;&#10;value=&quot;Switch.System.Drawing.DontSupportPngFramesInIcons=true&quot; /&gt;&#13;&#10;</code></pre>app.config dosyası zaten öğeyi içeriyorsa, <code>AppContextSwitchOverrides</code> yeni değer aşağıdaki gibi değer özniteliği ile birleştirilmelidir:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides&#13;&#10;value=&quot;Switch.System.Drawing.DontSupportPngFramesInIcons=true;&lt;previous key&gt;=&lt;previous value&gt;&quot; /&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
-|Sürüm|4.6|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Drawing.Icon.ToBitmap?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,6 ' i hedefleyen uygulamalarla başlayarak, <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> YÖNTEMI png çerçevelerinden simgeleri bit eşlem nesnelerine başarıyla dönüştürür.<p/>.NET Framework 4.5.2 ve önceki sürümlerini hedefleyen uygulamalarda, <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> <xref:System.ArgumentOutOfRangeException> SIMGE nesnesi png çerçevelerdeyse Yöntem bir özel durum oluşturur.<p/>Bu değişiklik, .NET Framework 4,6 ' i hedefleyecek ve <xref:System.ArgumentOutOfRangeException> bir simge NESNESI png çerçevesine sahip olduğunda oluşturulan için özel işleme uygulayan uygulamaları etkiler. .NET Framework 4,6 altında çalışırken, dönüştürme başarılı olur, <xref:System.ArgumentOutOfRangeException> artık oluşturulmaz ve bu nedenle özel durum işleyicisi artık çağrılmayacaktır.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu davranış istenmez ise, app.config dosyanızın bölümüne aşağıdaki öğeyi ekleyerek önceki davranışı koruyabilirsiniz `<runtime>` :
+
+<pre><code class="lang-xml">&lt;AppContextSwitchOverrides&#13;&#10;value=&quot;Switch.System.Drawing.DontSupportPngFramesInIcons=true&quot; /&gt;&#13;&#10;</code></pre>
+
+app.config dosyası öğesi zaten içeriyorsa `AppContextSwitchOverrides` , yeni değer şöyle bir değer özniteliğiyle birleştirilmelidir:
+
+<pre><code class="lang-xml">&lt;AppContextSwitchOverrides&#13;&#10;value=&quot;Switch.System.Drawing.DontSupportPngFramesInIcons=true;&lt;previous key&gt;=&lt;previous value&gt;&quot; /&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.6         |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Drawing.Icon.ToBitmap?displayProperty=nameWithType>

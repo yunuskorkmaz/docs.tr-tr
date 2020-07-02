@@ -1,17 +1,27 @@
 ---
-ms.openlocfilehash: 190bca720504535cb54e498ca8da23fbb6634ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd656478a55856e676853e57f3e7386ea0aa0211
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614828"
 ---
-### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture WPF Dispatcher işlemleri nde korunmuyor
+### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture, WPF dağıtıcı işlemleri arasında korunmaz
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6'dan başlayarak, a'da <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> <xref:System.Windows.Threading.Dispatcher?displayProperty=name> yapılan değişiklikler, bu sevk irsaliyesi işleminin sonunda kaybolur. Benzer şekilde, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> bir <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> Dispatcher işleminde yapılan veya yapılan değişiklikler, bu işlem yürütüldüğünde yansıtılmayabilir. Pratik olarak konuşursak, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> bu, wpf kullanıcı arabirimi geri aramaları ile WPF uygulamasındaki diğer kodlar arasında akış yapamayabileceği anlamına gelir. Bunun <xref:System.Threading.ExecutionContext?displayProperty=name> nedeni, .NET Framework <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> 4.6'yı hedefleyen uygulamalardan başlayarak yürütme bağlamında depolanacak olan ve nedenlerle olan bir değişikliktir. WPF gönderici işlemleri, işlemi başlatmak ve işlem tamamlandığında önceki bağlamı geri yüklemek için kullanılan yürütme bağlamını depolar. Çünkü <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> ve şimdi bu bağlamın bir parçası olduğundan, bir sevk irsaliyesi işlemi içinde bu değişiklikler operasyon dışında kalıcı değildir.|
-|Öneri|<xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> Bu değişiklikten etkilenen uygulamalar, istenilen veya <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> bir alanda depolayarak ve doğru <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name> ve ayarlanmış tüm Sevk Çisi operasyon gövdelerini (UI olay geri arama işleyicileri dahil) kontrol ederek geçici olarak çalışabilir. Alternatif olarak, bu WPF değişikliğinin altında yatan Yürütme Bağlamı değişikliği yalnızca .NET Framework 4.6 veya daha yenisini hedefleyen uygulamaları etkilediğiiçin, .NET Framework 4.5.2.Apps'ı hedefleyen uygulamalar hedeflenerek bu kırılma önlenebilir. bunun etrafında aşağıdaki uyumluluk anahtarı ayarlayarak:<pre><code class="lang-csharp">AppContext.SetSwitch(&quot;Switch.System.Globalization.NoAsyncCurrentCulture&quot;, true);&#13;&#10;</code></pre>Bu sorun WPF tarafından .NET Framework 4.6.2'de giderilmiştir. Ayrıca .NET Frameworks 4.6, 4.6.1 ile [KB 3139549](https://support.microsoft.com/kb/3139549)olarak sabitlenmiştir. .NET Framework 4.6 veya daha sonrasını hedefleyen uygulamalar, WPF uygulamalarında otomatik olarak doğru davranışı alır - <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=name> / <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=name>) Dispatcher işlemleri nde korunur.|
-|Kapsam|İkincil|
-|Sürüm|4.6|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,6 ' den başlayarak, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> Bu dağıtıcı işleminin sonunda, bir içinde yapılan veya yapılan değişiklikler <xref:System.Windows.Threading.Dispatcher?displayProperty=fullName> kaybedilir. Benzer şekilde, <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> bir dağıtıcı işleminin dışında yapılan değişiklikler veya bu işlem yürütüldüğünde yansıtılmayabilir. Bu şekilde, bu durum <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> ve değişikliklerin WPF <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> uygulamasındaki WPF Kullanıcı arabirimi geri çağırmaları ve diğer kodlar arasında akamayacağı anlamına gelir. Bunun nedeni, bu <xref:System.Threading.ExecutionContext?displayProperty=fullName> Sebepteki bir değişiklikten <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> ve .NET Framework 4,6 ' i <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> hedefleyen uygulamalarla başlayan yürütme bağlamında depolanmasıdır. WPF dağıtıcı işlemleri, işlemi başlatmak için kullanılan yürütme bağlamını depolar ve işlem tamamlandığında önceki bağlamı geri yükler. <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName>Ve <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> artık bu bağlamın bir parçası olduğundan, bir dağıtıcı işleminin içindeki değişiklikler işlem dışında kalıcı olmaz.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklikten etkilenen uygulamalar, istenen <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> veya <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> bir alana depolayarak ve doğru ve ayarlanmış tüm dağıtıcı işlem <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> GÖVDELERININ (UI olay geri çağırma işleyicileri dahil) iade edilirken soruna geçici bir çözüm alabilir <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> . Alternatif olarak, bu WPF 'in temelindeki ExecutionContext değişikliği yalnızca .NET Framework 4,6 veya daha yeni bir sürümü hedefleyen uygulamaları etkilediği için, .NET Framework 4.5.2 hedefleyerek bu kesmeyi önlenebilir. .NET Framework 4,6 veya üzeri hedeflenen uygulamalar, aşağıdaki uyumluluk anahtarını ayarlayarak bu sorunu geçici olarak da gerçekleştirebilir:
+
+<pre><code class="lang-csharp">AppContext.SetSwitch(&quot;Switch.System.Globalization.NoAsyncCurrentCulture&quot;, true);&#13;&#10;</code></pre>
+
+Bu sorun WPF tarafından .NET Framework 4.6.2 içinde düzeltildi. Ayrıca, .NET Framework 4,6 ' de 4.6.1 ile [KB 3139549](https://support.microsoft.com/kb/3139549)arasında düzeltilmiştir. .NET Framework 4,6 veya sonraki bir sürümü hedefleyen uygulamalar, otomatik olarak WPF uygulamalarında doğru davranış alır- <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=fullName> / <xref:System.Globalization.CultureInfo.CurrentUICulture?displayProperty=fullName> ) dağıtıcı işlemleri genelinde korunacaktır.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.6         |
+| Tür    | Yeniden Hedefleme |

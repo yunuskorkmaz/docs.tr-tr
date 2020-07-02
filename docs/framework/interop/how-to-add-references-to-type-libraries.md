@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme'
+description: Visual Studio 'da veya komut satırı derlemesinde tür kitaplıklarına nasıl başvurular ekleneceğini anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-ms.openlocfilehash: 1e82a499b77cc6d1d49eaf13e243201bbdc4c5fe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3c24385c9cc7debe95aa10369b050897415bc46
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617437"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Nasıl yapılır: Tür Kitaplıklarına Başvurular Ekleme
 Visual Studio, bir tür kitaplığına bir başvuru eklediğinizde meta verileri içeren bir birlikte çalışma derlemesi oluşturur. Birincil birlikte çalışma derlemesi varsa, Visual Studio yeni bir birlikte çalışma derlemesi oluşturmadan önce mevcut derlemeyi kullanır.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Visual Studio 'da bir tür kitaplığına başvuru eklemek için  
   
-1. Bir Windows Kurulumu. exe dosyası yüklemeyi sizin için gerçekleştirmediği müddetçe COM DLL veya EXE dosyasını bilgisayarınıza yükleyebilirsiniz.  
+1. Bir Windows Setup.exe dosyası yüklemeyi sizin için gerçekleştirmediği takdirde, COM DLL veya EXE dosyasını bilgisayarınıza yükleyebilirsiniz.  
   
 2. **Proje**, **Başvuru Ekle**' yi seçin.  
   

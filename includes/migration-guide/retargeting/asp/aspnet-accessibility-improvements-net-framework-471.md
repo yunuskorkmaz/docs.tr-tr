@@ -1,17 +1,44 @@
 ---
-ms.openlocfilehash: f18b96eaeec8a6427ffb7776327517989d0225d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 418bcdca1e9a325894891d7b0e080ce035e2d1b4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72887847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614679"
 ---
-### <a name="aspnet-accessibility-improvements-in-net-framework-471"></a>ASP.NET.NET Çerçevesi 4.7.1'de Erişilebilirlik İyileştirmeleri
+### <a name="aspnet-accessibility-improvements-in-net-framework-471"></a>.NET Framework 4.7.1 'de erişilebilirlik Iyileştirmeleri ASP.NET
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.7.1 ile başlayan ASP.NET, ASP.NET müşterileri daha iyi desteklemek için ASP.NET Web Controls'ün Visual Studio'daki erişilebilirlik teknolojisiyle nasıl çalıştığını geliştirdi.  Bunlar aşağıdaki değişiklikleri içerir:<ul><li>Ayrıntılar Görünümü sihirbazındaki Alan Ekle iletişim kutusu veya ListView sihirbazının Yapılandırılmış ListView iletişim kutusu gibi denetimlerde eksik UI erişilebilirlik desenleri uygulamak için değişiklikler.</li><li>Veri Çağrı Alanı Alanları Düzenleyicisi gibi Yüksek Karşıtlık modunda ekranı geliştirmek için değişiklikler.</li><li>DataPager denetiminin Çağrı Cihazı Alanları Sihirbazı Sihirbazı sihirbazı, ObjectContext'ı Yapılandırışla iletişim kutusu veya Yapılandır Veri Kaynağı sihirbazının Yapılandır Veri Selction iletişim kutusu gibi denetimler için klavye gezintisi deneyimlerini geliştirmek için yapılan değişiklikler.</li></ul>|
-|Öneri|**Bu değişiklikleri nasıl tercih edin veya çıkar**<br>Visual Studio Tasarımcısı'nın bu değişikliklerden yararlanabilmesi için .NET Framework 4.7.1 veya sonraki yerlerde çalışması gerekir. Web uygulaması aşağıdaki şekillerden herhangi biri bu değişikliklerden yararlanabilir:<ul><li>Varsayılan olarak aşağıdaki AppContext Switch ile yeni erişilebilirlik özelliklerini destekleyen Visual Studio 2017 15.3 veya sonraki öğeleri yükleyin.</li><li>Devenv.exe.config dosyasındaki <code>Switch.UseLegacyAccessibilityFeatures</code> <code>&lt;runtime&gt;</code> bölüme AppContext anahtarını ekleyerek ve aşağıdaki örnekte görüldüğü gibi <code>false</code>, eski erişilebilirlik davranışlarını devre dışı bırakmak.</li></ul><pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;...&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false&#39;  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot; /&gt;&#13;&#10;...&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>.NET Framework 4.7.1 veya daha sonrasını hedefleyen ve eski erişilebilirlik davranışını korumak isteyen uygulamalar, bu AppContext anahtarını <code>true</code>açıkça ayarlayarak eski erişilebilirlik özelliklerinin kullanımını seçebilir.|
-|Kapsam|İkincil|
-|Sürüm|4.7.1|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+4.7.1, ASP.NET .NET Framework ile başlayarak, ASP.NET müşterilerini daha iyi desteklemek için ASP.NET Web denetimlerinin Visual Studio 'da erişilebilirlik teknolojisiyle nasıl çalıştığını geliştirmiştir.  Bunlar aşağıdaki değişiklikleri içerir:
+
+- Ayrıntılar görünümü sihirbazındaki alan Ekle iletişim kutusu ya da ListView sihirbazının ListView yapılandırma iletişim kutusu gibi denetimlerde eksik UI erişilebilirlik düzenlerini uygulamak için değişiklikler.
+- Veri sayfalayıcı alanları Düzenleyicisi gibi Yüksek Karşıtlık modunda görüntüyü geliştirmek için değişiklikler.
+- DataPager denetiminin sayfalayıcı alanlarını Düzenle Sihirbazı 'ndaki alanlar iletişim kutusu gibi denetimler için klavye gezinti deneyimlerini geliştirmek üzere yapılan değişiklikler veya veri kaynağını yapılandırma Sihirbazı 'nın veri kaynağını yapılandırma Sihirbazı ' nın veri seçimini Yapılandır iletişim kutusu.
+
+#### <a name="suggestion"></a>Öneri
+
+**Bu değişiklikleri kabul etme veya devre dışı bırakma** Visual Studio Tasarımcısı 'nın bu değişikliklerden faydalanabilir olması için .NET Framework 4.7.1 veya sonraki bir sürümde çalışmalıdır. Web uygulaması aşağıdaki yollarla bu değişikliklerden faydalanabilir:
+
+- Varsayılan olarak aşağıdaki AppContext anahtarıyla yeni erişilebilirlik özelliklerini destekleyen Visual Studio 2017 15,3 veya üstünü yükler.
+- `Switch.UseLegacyAccessibilityFeatures` `<runtime>` `false` Aşağıdaki örnekte gösterildiği gibi, appcontext anahtarını devenv.exe.config dosyasında bölümüne ekleyerek ve olarak ayarlayarak eski erişilebilirlik davranışlarını geri çevirin.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+<runtime>
+...
+<!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true/false;key2=true/false'  -->
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false" />
+...
+</runtime>
+</configuration>
+```
+
+.NET Framework 4.7.1 veya üstünü hedefleyen ve eski erişilebilirlik davranışını korumak isteyen uygulamalar, bu AppContext anahtarını açıkça olarak ayarlayarak eski erişilebilirlik özelliklerinin kullanımını kabul edebilir `true` .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.7.1       |
+| Tür    | Yeniden Hedefleme |

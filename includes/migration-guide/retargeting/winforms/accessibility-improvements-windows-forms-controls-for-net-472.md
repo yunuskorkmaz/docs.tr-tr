@@ -1,17 +1,84 @@
 ---
-ms.openlocfilehash: 4859604074ae1b5ead7a32a366244ef594a24388
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc3c2c2be179842f87be8892d057a6c4138086cb
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614871"
 ---
-### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>4.7.2 .NET için Windows Forms denetimlerinde erişilebilirlik geliştirmeleri
+### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>.NET 4.7.2 için Windows Forms Denetimlerinde erişilebilirlik geliştirmeleri
 
-|   |   |
-|---|---|
-|Ayrıntılar|Windows Formları Framework Erişilebilirlik teknolojileri daha iyi destek ile Windows Forms müşteriler şekli gelişiyor. Bunlar aşağıdaki değişiklikleri içerir:<ul><li>İyileştirmeye yönelik değişiklikler, yüksek karşıtlık modunda görüntüleyin.</li><li>DataGridView ve MenuStrip denetimlerinde klavye gezintiyi iyileştirmeye yönelik değişiklikler.</li><li>Ekran Okuyucusu etkileşime geçer.</li></ul>|
-|Öneri|<strong>İçine veya dışına bu değişiklikleri nasıl</strong>sırada bu değişiklikleri yararlanmak uygulama için .NET Framework 4.7.2 çalıştırmanız gerekir veya üzeri. Uygulamaya bu değişiklikler aşağıdaki yollardan birini yararlanabilir:<ul><li>.NET Framework 4.7.2 hedefleyecek şekilde derlenmiştir. Bu erişilebilirlik değişiklikleri etkin varsayılan olarak .NET Framework'ü 4.7.2 hedefleyen Windows Forms uygulamaları veya üzeri.</li><li>.NET Framework 4.7.1 veya önceki bir sürümünü hedefleyen ve eski erişilebilirlik davranışları dışında aşağıdakileri ekleyerek kabul eder [AppContext anahtar](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) için <code>&lt;runtime&gt;</code> uygulama yapılandırma dosyasını ve bu ayarın bölümünü <code>false</code> , aşağıdaki örnek gösterir.</li></ul><pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>.NET Framework 4.7.2 eklenen erişilebilirlik özelliklerini kabul etmek için de .NET Framework 4.7.1 de erişilebilirlik özelliklerine kabul gerekir olduğunu unutmayın. .NET Framework 4.7.2 hedefleyen uygulamalar veya üzeri ve eski korumak istiyorsanız erişilebilirlik davranışı kabul etme eski erişilebilirlik özelliklerinin kullanımı için açıkça ayarlayarak bu AppContext anahtar <code>true</code>. <strong>Yüksek karşıtlıklı Tema renkleri işletim sistemi tarafından tanımlanan kullanımı</strong><ul><li>Aşağı açılan oka tıklayın <xref:System.Windows.Forms.ToolStripDropDownButton> artık yüksek karşıtlıklı Tema renkleri işletim sistemi tarafından tanımlanan kullanır.</li><li><xref:System.Windows.Forms.Button>, <xref:System.Windows.Forms.RadioButton> ve <xref:System.Windows.Forms.CheckBox> ile denetimleri <xref:System.Windows.Forms.ButtonBase.FlatStyle> kümesine <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> veya <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> artık seçildiğinde yüksek karşıtlıklı Tema renkleri işletim sistemi tarafından tanımlanan kullanın. Daha önce metin ve arkaplan renklerini değil çakışan ve okunması zor.</li><li>Denetimleri içinde yer alan bir <xref:System.Windows.Forms.GroupBox> olan kendi <xref:System.Windows.Forms.Control.Enabled> özelliğini <code>false</code> yüksek karşıtlıklı Tema renkleri işletim sistemi tarafından tanımlanan artık kullanacaktır.</li><li><xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox>, Ve <xref:System.Windows.Forms.ToolStripDropDownButton> artan parlaklık bir Karşıtlık oranı yüksek karşıtlık modunda denetiminiz.</li><li><xref:System.Windows.Forms.DataGridViewLinkCell> Varsayılan olarak, yüksek karşıtlık modunda işletim sistemi tarafından tanımlanmış renkleri kullanıp kullanmayacağını <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor?displayProperty=nameWithType> özelliği.</li></ul>NOT: Windows 10, yüksek karşıtlık bazı sistem renkleri için değerler değişti. Windows Formları Framework Win32 altyapısını temel alır. En iyi deneyim için en son Windows sürümüne çalıştırın ve en son işletim sistemi değişiklikleri bir test uygulamasında app.manifest dosyası ekleme ve aşağıdaki kodu uncommenting kabul et:<pre><code>&lt;!-- Windows 10 --&gt;&#13;&#10;&lt;supportedOS Id=&quot;{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}&quot; /&gt;&#13;&#10;</code></pre><strong>Geliştirilmiş ekran okuyucu desteği</strong><ul><li>Okuyucu artık değerini duyuruyor <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> Duyurusu metni hareketlendiremezsiniz bir <xref:System.Windows.Forms.ToolStripMenuItem>.</li><li>Okuyucu artık gösterir ne zaman bir <xref:System.Windows.Forms.ToolStripMenuItem> sahip kendi <xref:System.Windows.Forms.Control.Enabled> özelliğini <code>false</code>.</li><li>Okuyucu artık onay kutusunun durumunu hakkında geri bildirim sağlar, <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> özelliği <code>true</code>.</li><li>Ekran Okuyucusu modunu tarama odak sipariş artık ClickOnce indirme iletişim kutusu penceresine denetimleri visual düzende tutarlıdır.</li></ul><strong>DataGridView erişilebilirlik için geliştirilmiş destek</strong><ul><li>İçindeki satırların bir <xref:System.Windows.Forms.DataGridView> klavyeyi kullanarak sıralanabilir. Artık bir kullanıcı, geçerli bir sütuna göre sıralamak için F3 tuşuna kullanabilirsiniz.</li><li>Zaman <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> ayarlanır <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType>, sütun üst bilgisinin geçerli sütunun hücre geçerli satırda aracılığıyla kullanıcı sekmeler olarak göstermek için renk değiştirir.</li><li><xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Parent?displayProperty=nameWithType> Özelliği artık doğru üst denetim döndürür.</li></ul><strong>Geliştirilmiş görsel ipuçları</strong><ul><li><xref:System.Windows.Forms.RadioButton> Ve <xref:System.Windows.Forms.CheckBox> boş denetimleriyle <xref:System.Windows.Forms.ButtonBase.Text> odak aldıklarında özelliği bir odak göstergesi artık görüntüler.</li></ul><strong>Gelişmiş özellik Kılavuzu desteği</strong><ul><li><xref:System.Windows.Forms.PropertyGrid> Alt öğeleri artık dönüş denetleyen bir <code>true</code> için <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> PropertyGrid öğe etkinleştirildiğinde özelliği.</li><li><xref:System.Windows.Forms.PropertyGrid> Alt öğeleri artık dönüş denetleyen bir <code>false</code> için <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> özelliğine yalnızca bir PropertyGrid öğesi kullanıcı tarafından değiştirilebilir.</li></ul>UI Otomasyonu genel bakış için bkz. [UI otomasyonuna genel bakış](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview).</p><strong>Geliştirilmiş klavye gezintisi</strong><ul><li><xref:System.Windows.Forms.ToolStripButton> artık içinde yer alan, odağı sağlar bir <xref:System.Windows.Forms.ToolStripPanel> olan <xref:System.Windows.Forms.ToolStripPanel.TabStop> özelliği ayarlayın <code>true</code></li></ul>|
-|Kapsam|Ana|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+Windows Forms Framework, Windows Forms müşterileri daha iyi desteklemek için erişilebilirlik teknolojileriyle nasıl çalıştığını geliştirmektir. Bunlar aşağıdaki değişiklikleri içerir:
+
+- Yüksek Karşıtlık modunda görüntülemeyi artırmak için değişiklikler.
+- DataGridView ve MenuStrip denetimlerinde klavye gezintisini geliştirmek için değişiklikler.
+- Ekran okuyucusu ile etkileşim olarak değişir.
+
+#### <a name="suggestion"></a>Öneri
+
+**Bu değişiklikleri kabul etme veya devre dışı bırakma** Uygulamanın bu değişikliklerden faydalanabilir olması için .NET Framework 4.7.2 veya sonraki bir sürümde çalışmalıdır. Uygulama, aşağıdaki yollarla bu değişikliklerden faydalanabilir:
+
+- .NET Framework 4.7.2 hedeflemek için yeniden derlenir. Bu erişilebilirlik değişiklikleri, .NET Framework 4.7.2 veya üstünü hedefleyen Windows Forms uygulamalarda varsayılan olarak etkinleştirilmiştir.
+- [AppContext Switch](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) `<runtime>` Aşağıdaki örnekte gösterildiği gibi, uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContext anahtarını ekleyerek ve ' ı ' a ayarlayarak, .NET Framework 4.7.1 veya önceki bir sürümü, eski erişilebilirlik davranışlarından daha fazla bilgi sağlar `false` .
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7"/>
+  </startup>
+  <runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true/false;key2=true/false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+  </runtime>
+</configuration>
+```
+
+.NET Framework 4.7.2 ' de eklenen erişilebilirlik özelliklerini kabul etmek için .NET Framework 4.7.1 'nin erişilebilirlik özelliklerini de kabul etmeniz gerektiğini unutmayın. .NET Framework 4.7.2 veya üstünü hedefleyen ve eski erişilebilirlik davranışını korumak isteyen uygulamalar, bu AppContext anahtarını açıkça olarak ayarlayarak eski erişilebilirlik özelliklerinin kullanımını kabul edebilir `true` .
+
+**Yüksek Karşıtlık Temaları 'nda işletim sistemi tanımlı renklerin kullanımı**
+
+- ' In aşağı açılan oku, <xref:System.Windows.Forms.ToolStripDropDownButton> yüksek karşıtlık teması içinde işletim sistemi tanımlı renkler kullanır.
+- <xref:System.Windows.Forms.Button><xref:System.Windows.Forms.RadioButton>ve, <xref:System.Windows.Forms.CheckBox> <xref:System.Windows.Forms.ButtonBase.FlatStyle> <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> Seçili olduğunda yüksek karşıtlık teması içinde işletim sistemi tanımlı renkler olarak ayarlanan veya artık kullanan denetimler. Daha önce, metin ve arka plan renkleri karşıt değildi ve okunması zor.
+- Öğesinin <xref:System.Windows.Forms.GroupBox> özelliği olarak ayarlanmış olan içindeki denetimler <xref:System.Windows.Forms.Control.Enabled> `false` artık yüksek karşıtlık teması içinde işletim sistemi tanımlı renkleri kullanacaktır.
+- <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox> Ve <xref:System.Windows.Forms.ToolStripDropDownButton> denetimleri yüksek karşıtlık modunda daha fazla parlaklık kontrast oranına sahiptir.
+- <xref:System.Windows.Forms.DataGridViewLinkCell>Varsayılan olarak, özelliği için Yüksek Karşıtlık modunda işletim sistemi tanımlı renkler kullanır <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor?displayProperty=nameWithType> .
+NOTE: Windows 10, bazı yüksek karşıtlıklı sistem renklerinin değerlerini değiştirdi. Windows Forms Framework, Win32 çerçevesini temel alır. En iyi deneyim için, Windows 'un en son sürümünde çalıştırın ve bir test uygulamasına bir App. manifest dosyası ekleyerek ve aşağıdaki kodu açıklama atamasını yaparak en son işletim sistemi değişikliklerini kabul edin:
+
+```xml
+<!-- Windows 10 -->
+<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
+```
+
+**İyileştirilmiş ekran okuyucusu desteği**
+
+- Ekran okuyucusu artık <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> , ' a ait metin duyurusu yaparken özelliğin değerini duyurur <xref:System.Windows.Forms.ToolStripMenuItem> .
+- Ekran okuyucusu artık <xref:System.Windows.Forms.ToolStripMenuItem> öğesinin <xref:System.Windows.Forms.Control.Enabled> özelliği olarak ne zaman ayarlandığını gösterir `false` .
+- Artık ekran okuyucusu, özelliği olarak ayarlandığında onay kutusunun durumu hakkında geri bildirim sağlar <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> `true` .
+- Ekran okuyucusu tarama modu odak sırası artık ClickOnce indirme iletişim kutusu penceresindeki denetimlerin görsel sırasıyla tutarlıdır.
+
+**Geliştirilmiş DataGridView erişilebilirlik desteği**
+
+- İçindeki satırlar <xref:System.Windows.Forms.DataGridView> artık klavye kullanılarak sıralanabilir. Artık bir Kullanıcı geçerli sütuna göre sıralamak için F3 tuşunu kullanabilir.
+- , <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> ' A ayarlandığında <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType> , sütun üst bilgisi, geçerli sütunu geçerli satırdaki hücreler aracılığıyla Kullanıcı sekmeleri olarak göstermek için rengi değiştirir.
+- <xref:System.Windows.Forms.DataGridViewCell.DataGridViewCellAccessibleObject.Parent?displayProperty=nameWithType>Özelliği şimdi doğru üst denetimi döndürüyor.
+
+**Geliştirilmiş görsel ipuçları**
+
+- <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.CheckBox> Boş bir özelliği olan ve denetimleri <xref:System.Windows.Forms.ButtonBase.Text> artık odak aldıklarında bir odak göstergesi görüntüleyecektir.
+
+**Geliştirilmiş özellik Kılavuzu desteği**
+
+- <xref:System.Windows.Forms.PropertyGrid>Denetim alt öğeleri artık `true` <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> yalnızca bir PropertyGrid öğesi etkinleştirildiğinde özelliği için bir döndürür.
+- <xref:System.Windows.Forms.PropertyGrid>Denetim alt öğeleri artık `false` <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> yalnızca bir PropertyGrid öğesi Kullanıcı tarafından değiştirilebiliyorsa özelliği için bir döndürür.
+UI Otomasyonu 'na genel bakış için bkz. [UI Otomasyonu genel bakış](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview).</p>**Geliştirilmiş Klavye gezintisi**
+
+- <xref:System.Windows.Forms.ToolStripButton>Artık, <xref:System.Windows.Forms.ToolStripPanel> özelliği olarak ayarlanmış olan bir içinde yer alan odağa izin verir <xref:System.Windows.Forms.ToolStripPanel.TabStop> `true` .
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Ana       |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |

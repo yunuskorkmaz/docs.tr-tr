@@ -1,18 +1,44 @@
 ---
-ms.openlocfilehash: 01c0689bbfb102f8f4d9455f9d258e8ea5515d9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d0798917b639bc90bf3f78f6fb9f19d0eaf2c71
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614815"
 ---
-### <a name="incorrect-implementation-of-memberdescriptorequals"></a>ÜyeTanımlayıcının yanlış uygulanması.Eşittir
+### <a name="incorrect-implementation-of-memberdescriptorequals"></a>MemberDescriptor. Equals için yanlış uygulama
 
-|   |   |
-|---|---|
-|Ayrıntılar|Yöntemin <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType> özgün uygulaması, karşılaştırılan nesnelerden iki farklı dize özelliğini karşılaştırır: kategori adı ve açıklama dizesi. Düzeltme, ilk <xref:System.ComponentModel.MemberDescriptor.Category> nesnenin <xref:System.ComponentModel.MemberDescriptor.Category> ikinci nesneyle, <xref:System.ComponentModel.MemberDescriptor.Description> ilkinini <xref:System.ComponentModel.MemberDescriptor.Description> ikincinesneyle karşılaştırmaktır.|
-|Öneri|Uygulamanız <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType> bazen tanımlayıcılar eşdeğer <code>false</code> olduğunda geri dönmeye bağlıysa ve .NET Framework 4.6.2 veya daha sonrasını hedefliyorsanız, birkaç seçeneğiniz vardır:<ol><li>Yöntemi çağırmanın yanı <xref:System.ComponentModel.MemberDescriptor.Category> <xref:System.ComponentModel.MemberDescriptor.Description> sıra, alanları ve alanları el ile karşılaştırmak için kod değişiklikleri yapın. <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType></li><li>App.config dosyasına aşağıdaki değeri ekleyerek bu değişikliği devre dışı bırakma:</li></ol><pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>Uygulamanız .NET Framework 4.6.1 veya daha öncesini hedefliyorsa ve .NET Framework 4.6.2 veya daha sonra <code>false</code> üzerinde çalışıyorsa ve bu değişikliğin etkin olmasını istiyorsanız, app.config dosyasına aşağıdaki değeri ekleyerek uyumluluk anahtarını ayarlayabilirsiniz:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|Edge|
-|Sürüm|4.6.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.ComponentModel.MemberDescriptor.Equals(System.Object)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+Yöntemin orijinal uygulanması <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType> karşılaştırılan nesnelerden iki farklı dize özelliklerini karşılaştırır: Kategori adı ve açıklama dizesi. Bu çözüm, <xref:System.ComponentModel.MemberDescriptor.Category> birinci nesnenin <xref:System.ComponentModel.MemberDescriptor.Category> ikincisini ikinci bir ile ve <xref:System.ComponentModel.MemberDescriptor.Description> <xref:System.ComponentModel.MemberDescriptor.Description> ikincinin birincisini karşılaştırmaktır.
+
+#### <a name="suggestion"></a>Öneri
+
+Uygulamanız <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType> bazen tanımlayıcılar eşdeğer olduğunda geri dönmesine bağımlıysa `false` ve .NET Framework 4.6.2 veya üzerini hedefliyorsanız, birkaç seçeneğiniz vardır:
+
+- <xref:System.ComponentModel.MemberDescriptor.Category> <xref:System.ComponentModel.MemberDescriptor.Description> Yöntemini çağırmaya ek olarak ve alanlarını el ile karşılaştırmak için kod değişiklikleri yapın <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=nameWithType> .
+- app.config dosyasına aşağıdaki değeri ekleyerek bu değişikliği geri çevirin:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true" />
+</runtime>
+```
+
+Uygulamanız .NET Framework 4.6.1 veya daha önceki bir sürümü hedefliyorsa ve .NET Framework 4.6.2 ya da üzerinde çalışıyorsa ve bu değişikliği etkinleştirmek istiyorsanız, `false` app.config dosyasına aşağıdaki değeri ekleyerek uyumluluk anahtarını olarak ayarlayabilirsiniz:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=false" />
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.6.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.ComponentModel.MemberDescriptor.Equals(System.Object)?displayProperty=nameWithType>

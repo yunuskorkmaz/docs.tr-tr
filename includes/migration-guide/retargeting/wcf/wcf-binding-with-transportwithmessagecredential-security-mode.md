@@ -1,18 +1,36 @@
 ---
-ms.openlocfilehash: 2359dafb9042c13ae75e644d4ea655f53c14e95e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e949cbdeda99dd7b94e919b903a21171a57f527
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614727"
 ---
-### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a>TransportWithMessageCredential güvenlik modu ile WCF bağlama
+### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a>TransportWithMessageCredential güvenlik moduyla WCF bağlama
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6.1'den başlayarak, TransportWithMessageCredential güvenlik modunu kullanan WCF bağlama, &quot;asimetrik güvenlik anahtarları için üstbilgilere&quot; imzasız iletiler alacak şekilde ayarlanabilir. Varsayılan olarak, &quot;üstbilgi için&quot; imzalanmamış .NET Framework 4.6.1'de reddedilmeye devam eder. Yalnızca switch.System.ServiceModel.AllowUnsignedToHeader yapılandırma anahtarını kullanarak bir uygulama bu yeni çalışma moduna geçerse kabul edilir.|
-|Öneri|Bu bir kabul özelliği olduğundan, varolan uygulamaların davranışını etkilememelidir.<br/>Yeni davranışın kullanılıp kullanılmadığını denetlemek için aşağıdaki yapılandırma ayarını kullanın:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.AllowUnsignedToHeader=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|Geçirgen|
-|Sürüm|4.6.1|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.BasicHttpsSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li><li><xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.6.1 ' den başlayarak, TransportWithMessageCredential güvenlik modunu kullanan WCF bağlaması, &quot; &quot; asimetrik güvenlik anahtarları için imzasız bir üst bilgiye sahip iletiler alacak şekilde ayarlanabilir. Varsayılan olarak, &quot; &quot; .NET Framework 4.6.1 ' de imzasız üst bilgiler reddedilmeye devam edecektir. Yalnızca, bir uygulama Switch.SysTItem 'ı kullanarak bu yeni işlem moduna Arsa kabul edilir. ServiceModel. AllowUnsignedToHeader yapılandırma anahtarı.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu bir kabul etme özelliği olduğundan, mevcut uygulamaların davranışını etkilememelidir.<br/>Yeni davranışın kullanılıp kullanılmadığını denetlemek için aşağıdaki yapılandırma ayarını kullanın:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.ServiceModel.AllowUnsignedToHeader=true" />
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Geçirgen |
+| Sürüm | 4.6.1       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.BasicHttpsSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>
+- <xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential?displayProperty=nameWithType>

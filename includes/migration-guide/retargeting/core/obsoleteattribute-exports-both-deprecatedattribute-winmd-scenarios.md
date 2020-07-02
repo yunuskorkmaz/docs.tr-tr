@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: e8c48c4b1031813ce62f576e5bf1f94c082dfe4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 424e8ff704b888aa3d2c1254ac712da4034f59b8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616115"
 ---
-### <a name="obsoleteattribute-exports-as-both-obsoleteattribute-and-deprecatedattribute-in-winmd-scenarios"></a>ObsoleteAttribute WinMD senaryolarda ObsoleteAttribute ve DeprecatedAttribute dışarı aktarır
+### <a name="obsoleteattribute-exports-as-both-obsoleteattribute-and-deprecatedattribute-in-winmd-scenarios"></a>Kullanımdan kaldırıldı Teattribute, WinMD senaryolarında hem kullanımdan kaldırıldı hem de kullanımdan kaldırıldı olarak dışarı aktarmalar
 
-|   |   |
-|---|---|
-|Ayrıntılar|Windows meta veri (.winmd dosyası) kitaplık oluşturduğunuzda <xref:System.ObsoleteAttribute?displayProperty=name> özniteliği, her ikisi de olarak aktarılır <xref:System.ObsoleteAttribute?displayProperty=name> ve [Windows.Foundation.DeprecatedAttribute](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.deprecatedattribute).|
-|Öneri|Yeniden derleme kullanan mevcut kaynak kodu <xref:System.ObsoleteAttribute?displayProperty=name> özniteliği, uyarılar oluşturabilir, bu kodu nereden C + tüketildiğinde +/ CX veya JavaScript.We önerilmez hem de uygulama <xref:System.ObsoleteAttribute?displayProperty=name> ve [ Windows.Foundation.DeprecatedAttribute](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.deprecatedattribute) Yönetilen derlemeler; kodunda derleme uyarıların sonuçlanabilir.|
-|Kapsam|Kenar|
-|Sürüm|4.5.1|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+Bir Windows meta veri kitaplığı (. winmd dosyası) oluşturduğunuzda, <xref:System.ObsoleteAttribute?displayProperty=fullName> öznitelik hem <xref:System.ObsoleteAttribute?displayProperty=fullName> ve [Windows. Foundation. kullanımdan](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.deprecatedattribute)kaldırıldı ' olarak verilir.
+
+#### <a name="suggestion"></a>Öneri
+
+Özniteliği kullanan mevcut kaynak kodun yeniden derlenmesi, <xref:System.ObsoleteAttribute?displayProperty=fullName> Bu kodu C++/CX veya JavaScript 'ten kullanırken uyarılar oluşturabilir. <xref:System.ObsoleteAttribute?displayProperty=fullName> yönetilen derlemelerdeki koda hem hem de [Windows. Foundation. kullanımdan kaldırıldı.](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.deprecatedattribute)
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.5.1       |
+| Tür    | Yeniden Hedefleme |

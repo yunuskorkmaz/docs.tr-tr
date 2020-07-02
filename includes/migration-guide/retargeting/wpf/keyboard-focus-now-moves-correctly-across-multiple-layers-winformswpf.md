@@ -1,17 +1,29 @@
 ---
-ms.openlocfilehash: 3bde64b80e5dcfe98bbf598700b6d7004e3c3c9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a82b720fd4e771481ea1142a88a095443afa0d5b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614941"
 ---
-### <a name="keyboard-focus-now-moves-correctly-across-multiple-layers-of-winformswpf-hosting"></a>Klavye odağı artık doğru şekilde WinForms/WPF barındırma birden çok katmanda taşır
+### <a name="keyboard-focus-now-moves-correctly-across-multiple-layers-of-winformswpf-hosting"></a>Klavye odağı artık birden çok WinForms/WPF barındırma katmanında doğru şekilde taşınıyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|WPF denetimlerini sırayla barındıran bir WinForms denetimi barındıran WPF uygulaması göz önünde bulundurun. Kullanıcılar bu katmandaki ilk veya son denetim WPF ise dışında WinForms katman sekmesinde mümkün olmayabilir <code>System.Windows.Forms.Integration.ElementHost</code>. Bu değişiklik, bu sorunu giderir ve kullanıcılar artık dışında WinForms katman sekmesinde olanağına sahip olursunuz. Hiçbir zaman WinForms katman kaçış odaklanmak otomatik uygulamaları artık beklendiği gibi çalışmayabilir.|
-|Öneri|Bu değişiklik sırasında bir aşağıda 4.7.2 .NET framework sürümünü hedefleme yararlanmak isteyen bir geliştirici false değişikliğin etkin aşağıdaki AppContext bayrakları kümesini ayarlayabilirsiniz.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>WPF uygulamaları sonraki geliştirmeleri almak için tüm erken erişilebilirlik geliştirmeleri ile mi etmeniz gerekir. Diğer bir deyişle, her ikisi de <code>Switch.UseLegacyAccessibilityFeatures</code> ve <code>Switch.UseLegacyAccessibilityFeatures.2</code> anahtarları .NET 4.7.2 hedefleyen sırasında önceki işlevselliğini gerektirir setA geliştiriciye olmalıdır veya büyük can true olması için devre dışı aşağıdaki AppContext bayrağını ayarlayın.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures.2=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|Kenar|
-|Sürüm|4.7.2|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+Bir WinForms denetimini barındıran bir WPF uygulamasını, WPF denetimlerini barındıran bir şekilde düşünün. Bu katmandaki ilk veya son denetim WPF ise, kullanıcılar WinForms katmanının dışına sekme yapamaz `System.Windows.Forms.Integration.ElementHost` . Bu değişiklik bu sorunu düzeltir ve kullanıcılar artık WinForms katmanının dışına sekme verebilir. Odaklanmayı kullanan otomatikleştirilmiş uygulamalar, WinForms katmanını hiçbir şekilde yok etmeme, artık beklendiği gibi çalışmayabilir.
+
+#### <a name="suggestion"></a>Öneri
+
+.NET 4.7.2 'in altında bir Framework sürümünü hedeflerken bu değişikliği kullanmak isteyen bir geliştirici, değişikliğin etkinleştirilmesi için aşağıdaki AppContext bayrakları kümesini false olarak ayarlayabilir.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+Daha sonraki geliştirmeleri almak için WPF uygulamalarının tüm erken erişilebilirlik geliştirmelerini kabul etmelidir. Diğer bir deyişle, ve anahtarlarının her ikisi de, `Switch.UseLegacyAccessibilityFeatures` `Switch.UseLegacyAccessibilityFeatures.2` .NET 4.7.2 veya üzerini hedeflerken önceki Işlevselliği gerektiren Seta geliştiricisi olmalıdır değişikliğin devre dışı bırakılması Için aşağıdaki AppContext bayrağını True olarak ayarlayabilir.
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures.2=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.7.2       |
+| Tür    | Yeniden Hedefleme |

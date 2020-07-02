@@ -1,15 +1,15 @@
 ---
 title: Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma
 description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağıtılacağını öğrenin.
-ms.date: 01/23/2020
+ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: edb876921030f5034d03c821051457ca111855f8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: e6b2fdd1818250c47ce6cb64439ecab58ae99ad8
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144766"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617645"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Öğretici: Azure HDInsight 'a Apache Spark uygulaması için .NET dağıtma
 
@@ -25,12 +25,14 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * HDInsight betik eylemi oluşturun ve çalıştırın.
 > * HDInsight kümesinde Apache Spark uygulaması için bir .NET çalıştırın.
 
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
+
 ## <a name="prerequisites"></a>Ön koşullar
 
 Başlamadan önce, aşağıdaki görevleri yapın:
 
 * Azure aboneliğiniz yoksa [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/)oluşturun.
-* [Azure portalında](https://portal.azure.com/) oturum açın.
+* [Azure Portal](https://portal.azure.com/) oturum açın.
 * [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)veya [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) bilgisayarınıza Azure Depolama Gezgini ' yi yükler.
 * [Apache Spark için .net ' i doldurun-10 dakikalık öğreticide kullanmaya başlayın](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 
@@ -104,7 +106,7 @@ Daha sonra, [Apache Spark için .net](https://dotnet.microsoft.com/learn/data/sp
 
    **Windows 'da:**
 
-   *MySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*dizinine gidin. Ardından, **Yayımla** klasörüne sağ tıklayıp **> sıkıştırılmış (daraltılmış) klasöre gönder**' i seçin. Yeni klasörü **Publish. zip**olarak adlandırın.
+   *MySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64*dizinine gidin. Ardından, **Yayımla** klasörüne sağ tıklayıp **> sıkıştırılmış (daraltılmış) klasöre gönder**' i seçin. Yeni klasörü **publish.zip**olarak adlandırın.
 
    **Linux 'ta aşağıdaki komutu çalıştırın:**
 
@@ -118,9 +120,9 @@ Ardından, aşağıdaki beş dosyayı kümenizin depolaması için seçtiğiniz 
 
 * Microsoft. spark. Worker
 * install-worker.sh
-* Yayımla. zip
+* publish.zip
 * Microsoft-Spark-2.3. x-0.3.0. jar
-* Input. txt.
+* input.txt.
 
 1. Azure Depolama Gezgini açın ve sol menüden depolama hesabınıza gidin. Depolama hesabınızdaki **BLOB kapsayıcıları** altındaki kümeniz için blob kapsayıcısının ayrıntılarına gidin.
 
@@ -132,13 +134,13 @@ Ardından, aşağıdaki beş dosyayı kümenizin depolaması için seçtiğiniz 
 
    Yerel bilgisayarınızı **install-Worker.sh** adlı yeni bir dosya oluşturun ve GitHub 'da bulunan [install-Worker.sh içeriğini](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) yapıştırın. Sonra, blob kapsayıcınıza *install-Worker.sh* yükleyin.
 
-4. Kümenizin, uygulamanızın yayımlanan dosyalarını içeren Publish. zip dosyasına ihtiyacı vardır. Yayınlanan klasörünüze gidin, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**ve **Publish. zip**dosyasını bulun. Sonra *Publish. zip* ' i blob kapsayıcınıza yükleyin.
+4. Kümeniz, uygulamanızın yayımlanan dosyalarını içeren publish.zip dosyasına ihtiyaç duyuyor. Yayınlanan klasörünüze gidin, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**ve **publish.zip**bulun. Sonra *publish.zip* blob kapsayıcınıza yükleyin.
 
 5. Kümeniz, bir jar dosyasına paketlenmiş uygulama koduna ihtiyaç duyuyor. Yayınlanan klasörünüze gidin, **mySparkApp/bin/Release/netcoreapp 3.0/Ubuntu. 16.04-x64**ve **Microsoft-Spark-2.3. x-0.3.0. jar**konumunu bulun. Ardından, JAR dosyasını blob kapsayıcınıza yükleyin.
 
    Birden çok. jar dosyası olabilir (örneğin, 2.3. x ve 2,4. x Spark sürümü için). Küme oluşturma sırasında seçtiğiniz Spark sürümü ile eşleşen. jar dosyasını seçmeniz gerekir. Örneğin, küme oluşturma sırasında Spark 2.3.2 ' yı seçtiyseniz *Microsoft-Spark-2.3. x-0.3.0. jar* öğesini seçin.
 
-6. Kümenizin uygulamanıza giriş yapması gerekiyor. **MySparkApp** dizininize gidin ve **input. txt dosyasını**bulun. Giriş dosyanızı blob kabınızda **Kullanıcı/sshuser** dizinine yükleyin. SSH aracılığıyla kümenize bağlanırsınız ve bu klasör, kümenizin girişi için bakacağı yerdir. *Input. txt* dosyası, belirli bir dizine yüklenen tek dosyadır.
+6. Kümenizin uygulamanıza giriş yapması gerekiyor. **MySparkApp** dizininize gidin ve **input.txt**bulun. Giriş dosyanızı blob kabınızda **Kullanıcı/sshuser** dizinine yükleyin. SSH aracılığıyla kümenize bağlanırsınız ve bu klasör, kümenizin girişi için bakacağı yerdir. *input.txt* dosyası, belirli bir dizine yüklenen tek dosyadır.
 
 ## <a name="run-the-hdinsight-script-action"></a>HDInsight betiği eylemini Çalıştır
 

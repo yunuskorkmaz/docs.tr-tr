@@ -1,19 +1,21 @@
 ---
 title: Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtma
 description: Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtmayı öğrenin.
-ms.date: 01/21/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 042f336431a1c8cad7d94cf10cbe64b72ddfce5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 672a32c430bd702167a294d2b895ac1ac90bf67e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596467"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617723"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtma
 
 Bu nasıl yapılır, Apache Spark çalışan ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtımı hakkında genel yönergeler sağlar. Ayarlanacak ortam değişkenlerinin yanı sıra uygulamaları ile başlatmak için yaygın olarak kullanılan bazı parametreleri öğrenirsiniz `spark-submit` .
+
+[!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
 ## <a name="configurations"></a>Yapılandırmalar
 Yapılandırmalarda, Apache Spark worker ve Kullanıcı tanımlı işlev ikilileri için .NET dağıtmak üzere genel ortam değişkenlerini ve parametre ayarlarını gösterir.
@@ -46,12 +48,12 @@ Spark uygulaması [paketlenmiş](https://spark.apache.org/docs/latest/submitting
 
 ## <a name="frequently-asked-questions"></a>Sık sorulan sorular
 ### <a name="when-i-run-a-spark-app-with-udfs-i-get-a-filenotfoundexception-error-what-should-i-do"></a>Bir Spark uygulamasını UDF 'ler ile çalıştırdığımda bir ' FileNotFoundException ' hatası alıyorum. Ne yapmalıyım?
-> **Hata:** [hata] [TaskRunner] [0] processstream () özel durumla başarısız oldu: System. IO. FileNotFoundException: bütünleştirilmiş kod ' MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null ' dosya bulunamadı: ' mySparkApp. dll '
+> **Hata:** [hata] [TaskRunner] [0] processstream () özel durumla başarısız oldu: System. IO. FileNotFoundException: bütünleştirilmiş kod ' MySparkApp, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = null ' dosya bulunamadı: ' mySparkApp.dll '
 
 **Cevap:** `DOTNET_ASSEMBLY_SEARCH_PATHS`Ortam değişkeninin doğru şekilde ayarlandığından emin olun. Bunu içeren yol olmalıdır `mySparkApp.dll` .
 
 ### <a name="after-i-upgraded-my-net-for-apache-spark-version-and-reset-the-dotnet_worker_dir-environment-variable-why-do-i-still-get-the-following-ioexception-error"></a>.NET My Apache Spark sürümü için yükselttikten ve ortam değişkenini sıfırladıktan sonra `DOTNET_WORKER_DIR` Neden yine de şu `IOException` hatayı alıyorum?
-> **Hata:** 0,0 (TID 24, localhost, yürütücü sürücüsü) 11,0 aşamasında görevi kayboldu: Java. IO. IOException: "Microsoft. spark. Worker. exe" programı çalıştırılamıyor: CreateProcess hatası = 2, sistem belirtilen dosyayı bulamıyor.
+> **Hata:** 0,0 (TıD 24, localhost, yürütücü sürücüsü) 11,0 aşamasında görevi kayboldu: Java. IO. IOException: program "Microsoft.Spark.Worker.exe" çalıştırılamıyor: CreateProcess hatası = 2, sistem belirtilen dosyayı bulamıyor.
 
 **Cevap:** En son ortam değişkeni değerlerini alabilmeniz için önce PowerShell pencerenizi (veya diğer komut pencerelerini) yeniden başlatmayı deneyin. Ardından programınızı başlatın.
 

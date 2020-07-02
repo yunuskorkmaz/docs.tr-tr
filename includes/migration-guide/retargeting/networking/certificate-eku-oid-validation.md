@@ -1,18 +1,41 @@
 ---
-ms.openlocfilehash: ee9bba91a2c4e11bd005fedb8adf0c2e7c7b0d3e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c996dafcf65b1fd428be908be346de603ead6e0b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85615757"
 ---
-### <a name="certificate-eku-oid-validation"></a>Sertifika EKU OID doğrulama
+### <a name="certificate-eku-oid-validation"></a>Sertifika EKU OID doğrulaması
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.6 ile <xref:System.Net.Security.SslStream> <xref:System.Net.ServicePointManager> başlayarak, veya sınıflar gelişmiş anahtar kullanımı (EKU) nesne tanımlayıcısı (OID) doğrulaması gerçekleştirir. Gelişmiş anahtar kullanımı (EKU) uzantısı, anahtarı kullanan uygulamaları gösteren nesne tanımlayıcıları (OSB) koleksiyonudur. EKU OID doğrulama, uzak sertifikanın amaçlanan amaç için doğru OSB'lere sahip olduğundan emin olmak için uzaktan sertifika geri aramalarını kullanır.|
-|Öneri|Bu değişiklik istenmiyorsa, uygulama yapılandırma dosyanızın>[ \<AppContextSwitchOverrides'e](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) [`](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) aşağıdaki anahtarı ekleyerek sertifika EKU OID doğrulaması'nı devre dışı kullanabilirsiniz:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides&#13;&#10;value=&quot;Switch.System.Net.DontCheckCertificateEKUs=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre> <blockquote> [!IMPORTANT] Bu ayar yalnızca geriye dönük uyumluluk için sağlanır. Kullanımı aksi takdirde tavsiye edilmez.</blockquote> |
-|Kapsam|İkincil|
-|Sürüm|4.6|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Net.Security.SslStream?displayProperty=nameWithType></li><li><xref:System.Net.ServicePointManager?displayProperty=nameWithType></li><li><xref:System.Net.Http.HttpClient?displayProperty=nameWithType></li><li><xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType></li><li><xref:System.Net.HttpWebRequest?displayProperty=nameWithType></li><li><xref:System.Net.FtpWebRequest?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,6 ' den başlayarak, <xref:System.Net.Security.SslStream> veya <xref:System.Net.ServicePointManager> sınıfları gelişmiş anahtar kullanımı (EKU) nesne tanımlayıcısı (OID) doğrulaması gerçekleştirir. Gelişmiş anahtar kullanımı (EKU) uzantısı, anahtarı kullanan uygulamaları belirten bir nesne tanımlayıcıları (OID) koleksiyonudur. EKU OID doğrulaması, uzak sertifikanın amaçlanan amaç için doğru OID 'ler olduğundan emin olmak için uzak sertifika geri çağırmaları kullanır.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişiklik istenmeyen ise, [\<AppContextSwitchOverrides>](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) uygulama yapılandırma dosyanızdaki öğesine aşağıdaki anahtarı ekleyerek SERTIFIKA EKU OID doğrulamasını devre dışı bırakabilirsiniz [`](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) :
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.System.Net.DontCheckCertificateEKUs=true" />
+</runtime>
+```
+
+> [!IMPORTANT]
+> Bu ayar yalnızca geriye dönük uyumluluk için sağlanır. Aksi takdirde kullanılması önerilmez.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.6         |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Net.Security.SslStream?displayProperty=nameWithType>
+- <xref:System.Net.ServicePointManager?displayProperty=nameWithType>
+- <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>
+- <xref:System.Net.FtpWebRequest?displayProperty=nameWithType>

@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f1a8af37a305ab0904801002dd99e17e8eca62e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62093631"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616128"
 ---
-### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>Bir özelliğe genel olmayan ayarlayıcı ile iki yönlü veri bağlama desteklenmiyor
+### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>Ortak olmayan bir ayarlayıcıya sahip bir özelliğe iki yönlü veri bağlama desteklenmez
 
-|   |   |
-|---|---|
-|Ayrıntılar|Genel bir Ayarlayıcısı olmadan bir özelliğine veri bağlama girişimi desteklenen bir senaryo olmamıştı. .NET Framework 4.5.1 başlayarak, bu senaryo oluşturmaz bir <xref:System.InvalidOperationException?displayProperty=name>. Bu yeni özel durum, özellikle .NET Framework 4.5.1'i hedefleyen uygulamalar için yalnızca oluşturulur unutmayın. Bir uygulamayı .NET Framework 4.5 hedefliyse, çağrı izin verilir. Uygulama belirli bir .NET Framework sürümünü hedef almıyor, bağlama tek yönlü olarak kabul edilir.|
-|Öneri|Uygulama, tek yönlü bağlamaya kullanabilir veya özelliğin Ayarlayıcısı genel olarak kullanıma sunmak için güncelleştirilmesi gerekir. Alternatif olarak, .NET Framework 4.5 hedefleyen, uygulamanın eski davranışlar neden olur.|
-|Kapsam|İkincil|
-|Sürüm|4.5.1|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+Ortak bir ayarlayıcı olmadan bir özelliğe veri bağlama girişimi hiçbir şekilde desteklenmeyen bir senaryoya sahip değildir. .NET Framework 4.5.1 başlayarak, bu senaryo bir oluşturur <xref:System.InvalidOperationException?displayProperty=fullName> . Bu yeni özel durumun yalnızca, özellikle .NET Framework 4.5.1 hedefleyen uygulamalar için oluşturulur. Bir uygulama .NET Framework 4,5 ' i hedefliyorsa, çağrıya izin verilir. Uygulama belirli bir .NET Framework sürümünü hedeflemez, bağlama tek yönlü olarak kabul edilir.
+
+#### <a name="suggestion"></a>Öneri
+
+Uygulama tek yönlü bağlama kullanacak şekilde veya özelliğin ayarlayıcısı genel olarak kullanıma sunulmalıdır. Alternatif olarak, 4,5 .NET Framework hedeflemek uygulamanın eski davranışı sergilemesine neden olur.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.5.1       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType>

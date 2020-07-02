@@ -1,18 +1,30 @@
 ---
-ms.openlocfilehash: 4892f75e4ae673d9d9cc7e9eeb6fb9b1a73f572e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c1e85941c8c6c31c7d937d0671ad955fa6490783
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859365"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614654"
 ---
-### <a name="rsacng-now-correctly-loads-rsa-keys-of-non-standard-key-size"></a>RSACng artık standart olmayan anahtar boyutundaki RSA tuşlarını doğru bir şekilde yükler
+### <a name="rsacng-now-correctly-loads-rsa-keys-of-non-standard-key-size"></a>RSACng artık standart olmayan anahtar boyutunun RSA anahtarlarını doğru şekilde yükler
 
-|   |   |
-|---|---|
-|Ayrıntılar|4.6.2'den önceki .NET Framework sürümlerinde, RSA sertifikaları için standart olmayan anahtar boyutlarına <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=name> <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=name> sahip müşteriler bu anahtarlara ve uzantı yöntemleriyle erişemez.  A <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> iletisi &quot;istenen anahtar boyutu desteklenmiyor&quot; atılır. .NET Framework 4.6.2'de bu sorun giderilmiştir. Benzer <xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)> şekilde, <xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)> ve şimdi standart olmayan anahtar boyutları <xref:System.Security.Cryptography.CryptographicException?displayProperty=name>ile bir atmadan çalışmak .|
-|Öneri|Standart olmayan anahtar boyutları kullanıldığında a'nın <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> atıldığı önceki davranışa dayanan bir özel durum işleme mantığı varsa, mantığı kaldırmayı düşünün.|
-|Kapsam|Edge|
-|Sürüm|4.6.2|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+4.6.2 ' den önceki .NET Framework sürümlerde, RSA sertifikaları için standart olmayan anahtar boyutlarına sahip müşteriler bu anahtarlara <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=fullName> ve <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=fullName> genişletme yöntemleriyle erişemez.  <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName>İleti ile &quot; İstenen anahtar boyutu desteklenmiyor &quot; . .NET Framework 4.6.2 Bu sorun düzeltildi. Benzer şekilde, <xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)> ve <xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)> Şimdi bir oluşturmadan standart olmayan anahtar boyutlarıyla çalışır <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> .
+
+#### <a name="suggestion"></a>Öneri
+
+Standart olmayan anahtar boyutları kullanıldığında, bir önceki davranışa dayanan özel durum işleme mantığı varsa <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> , mantığı kaldırmayı düşünün.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.6.2       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Security.Cryptography.RSA.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSACng.ImportParameters(System.Security.Cryptography.RSAParameters)?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)?displayProperty=nameWithType>

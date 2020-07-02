@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 141e906077748795e0360cec450a54a9fd170dc9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d3e0a61601f60a389b662f6f74934b6e6dc6e663
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614913"
 ---
-### <a name="the-default-hash-algorithm-for-wpf-packagedigitalsignaturemanager-is-now-sha256"></a>WPF PackageDigitalSignatureManager için varsayılan karma algoritması şimdi SHA256 olduğunu
+### <a name="the-default-hash-algorithm-for-wpf-packagedigitalsignaturemanager-is-now-sha256"></a>WPF PackageDigitalSignatureManager için varsayılan karma algoritması artık SHA256
 
-|   |   |
-|---|---|
-|Ayrıntılar|WPF <code>System.IO.Packaging.PackageDigitalSignatureManager</code> paketleriile ilgili olarak dijital imzalar için işlevsellik sağlar.  .NET Framework 4.7 ve önceki sürümlerde,<xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm?displayProperty=nameWithType>bir paketin bölümlerini imzalamak için kullanılan varsayılan algoritma SHA1'dir.  SHA1 ile ilgili son güvenlik endişeleri nedeniyle, bu varsayılan değer .NET Framework 4.7.1 ile başlayarak SHA256 olarak değiştirilmiştir.  Bu değişiklik, XPS belgeleri de dahil olmak üzere tüm paket imzalamayı etkiler.|
-|Öneri|.NET Framework 4.7.1'in altındaki bir çerçeve sürümünü hedefleyerek bu değişikliği kullanmak isteyen bir geliştirici veya .NET Framework 4.7.1 veya daha büyük bir alanı hedefleyerek önceki işlevselliği gerektiren bir geliştirici aşağıdaki AppContext bayrağını uygun şekilde ayarlayabilir.  True değeri SHA1'in varsayılan algoritma olarak kullanılmasına neden olur; SHA256 yanlış sonuçlar.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.MS.Internal.UseSha1AsDefaultHashAlgorithmForDigitalSignatures=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|Edge|
-|Sürüm|4.7.1|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+, `System.IO.Packaging.PackageDigitalSignatureManager` WPF paketleriyle ilgili olarak dijital imzalar için işlevsellik sağlar.  .NET Framework 4,7 ve önceki sürümlerde, <xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm?displayProperty=nameWithType> bir paketin parçalarını imzalamak için kullanılan varsayılan algoritma () SHA1 ' dir.  SHA1 ile ilgili en son güvenlik sorunları nedeniyle, bu varsayılan değer .NET Framework 4.7.1 ile başlayarak SHA256 olarak değiştirilmiştir.  Bu değişiklik, XPS belgeleri dahil olmak üzere tüm paket imzasını etkiler.
+
+#### <a name="suggestion"></a>Öneri
+
+Bu değişikliği kullanmak isteyen bir geliştirici .NET Framework 4.7.1 veya önceki işlevselliği gerektiren bir geliştirici, .NET Framework 4.7.1 ya da daha fazlasını hedeflemek için aşağıdaki AppContext bayrağını uygun şekilde ayarlayabilir.  True değeri, varsayılan algoritma olarak SHA1 kullanılmasına neden olur; SHA256 içinde yanlış sonuçlar.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.MS.Internal.UseSha1AsDefaultHashAlgorithmForDigitalSignatures=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.7.1       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.IO.Packaging.PackageDigitalSignatureManager.DefaultHashAlgorithm?displayProperty=nameWithType>

@@ -1,17 +1,29 @@
 ---
-ms.openlocfilehash: 0a3dc43ebdc58d54675f2264a8ee56d9f4358cd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c646372104457e8bc5d418744847f3ee771c8d8b
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67859211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614801"
 ---
-### <a name="wcf-message-security-now-is-able-to-use-tls11-and-tls12"></a>WCF mesaj güvenliği artık TLS1.1 ve TLS1.2'yi kullanabiliyor
+### <a name="wcf-message-security-now-is-able-to-use-tls11-and-tls12"></a>WCF ileti güvenliği artık TLS 1.1 ve TLS 1.2 kullanabiliyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.7'den başlayarak, müşteriler uygulama yapılandırma ayarları üzerinden SSL3.0 ve TLS1.0'a ek olarak WCF mesaj güvenliğinde TLS1.1 veya TLS1.2'yi yapılandırabilirler.|
-|Öneri|.NET Framework 4.7'de, WCF ileti güvenliğinde TLS1.1 ve TLS1.2 desteği varsayılan olarak devre dışı bırakılır. App.config veya web.config <code>&lt;runtime&gt;</code> dosyasıbölümüne aşağıdaki satırı ekleyerek etkinleştirebilirsiniz:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|Edge|
-|Sürüm|4.7|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,7 ' den başlayarak, müşteriler, uygulama yapılandırma ayarları aracılığıyla SSL 3.0 ve TLS 1.0 ' a ek olarak WCF ileti güvenliği 'nde TLS 1.1 veya TLS 1.2 'yi yapılandırabilir.
+
+#### <a name="suggestion"></a>Öneri
+
+.NET Framework 4,7 ' de, WCF ileti güvenliği 'nde TLS 1.1 ve TLS 1.2 desteği varsayılan olarak devre dışıdır. `<runtime>`app.config veya web.config dosyasının bölümüne aşağıdaki satırı ekleyerek etkinleştirebilirsiniz:
+
+```xml
+<runtime>
+<AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false" />
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4,7         |
+| Tür    | Yeniden Hedefleme |

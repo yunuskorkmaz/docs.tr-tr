@@ -1,18 +1,29 @@
 ---
-ms.openlocfilehash: 824d75585efd40937c1a48376ec7862cba1a8fa3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c9c4ec55143ef991e9b69a389e0f3368263bb4e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "68235558"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614843"
 ---
-### <a name="nullreferenceexception-in-exception-handling-code-from-imagesourceconverterconvertfrom"></a>NullReferenceException imageSourceConverter.ConvertFrom gelen özel durum işleme kodu
+### <a name="nullreferenceexception-in-exception-handling-code-from-imagesourceconverterconvertfrom"></a>Imaosurceconverter. Convertkaynağından özel durum işleme kodunda NullReferenceException
 
-|   |   |
-|---|---|
-|Ayrıntılar|Özel durum işleme kodundaki <xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)> bir <xref:System.NullReferenceException?displayProperty=name> hata, amaçlanan özel durum <xref:System.IO.DirectoryNotFoundException?displayProperty=name> <xref:System.IO.FileNotFoundException?displayProperty=name>(veya) yerine yanlış atılmasına neden oldu. Bu değişiklik, yöntemşimdi doğru özel durum atar, böylece bu hatayı düzeltir. <p/>Varsayılan olarak .NET Framework 4.6.2 ve daha önce <xref:System.NullReferenceException?displayProperty=name> hedefleyen tüm uygulamalar uyumluluk için atmaya devam eder. .NET Framework 4.7 ve üzerini hedefleyen geliştiriciler doğru özel durumları görmelidir.|
-|Öneri|.NET Framework 4.7 <xref:System.NullReferenceException?displayProperty=name> veya daha sonrasını hedefalırken geri dönmek isteyen geliştiriciler, uygulamalarının App.config dosyasına aşağıdakileri ekleyebilir/birleştirebilirler:<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Media.ImageSourceConverter.OverrideExceptionWithNullReferenceException=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Kapsam|Edge|
-|Sürüm|4.7|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+Özel durum işleme kodundaki bir hata, <xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)> <xref:System.NullReferenceException?displayProperty=fullName> amaçlanan özel durum yerine yanlış bir şekilde oluşturulmasına neden oldu ( <xref:System.IO.DirectoryNotFoundException?displayProperty=fullName> veya <xref:System.IO.FileNotFoundException?displayProperty=fullName> ). Bu değişiklik, yöntemin şimdi doğru özel durumu oluşturmaları için bu hatayı düzeltir. <p/>Varsayılan olarak, .NET Framework 4.6.2 ve önceki sürümleri hedefleyen tüm uygulamalar uyumluluk için throw ile devam eder <xref:System.NullReferenceException?displayProperty=fullName> . .NET Framework 4,7 ve üzeri hedefleme geliştiricilerin doğru özel durumları görmeniz gerekir.
+
+#### <a name="suggestion"></a>Öneri
+
+<xref:System.NullReferenceException?displayProperty=fullName>.NET Framework 4,7 veya sonraki bir sürümü hedeflerken almak üzere dönmek isteyen geliştiriciler aşağıdakini uygulamanın App.config dosyasına ekleyebilir/birleştirebilir:
+
+<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Media.ImageSourceConverter.OverrideExceptionWithNullReferenceException=true&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4,7         |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType>

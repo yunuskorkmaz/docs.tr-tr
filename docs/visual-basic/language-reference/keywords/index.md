@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 0de86fd8fd9aaafa238f27f56de0051d61e25176
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9e331a1ae4ca4117ab0c27fde4e04ef53ad83990
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617515"
 ---
 # <a name="keywords-visual-basic"></a>Anahtar Sözcükler (Visual Basic)
 
@@ -30,54 +30,54 @@ Aşağıdaki anahtar sözcükler *ayrılmıştır*. Bu, bunları değişkenler v
 
 |||||
 |---|---|---|---|
-|[AddHandler](../statements/addhandler-statement.md)|[AddressOf](../operators/addressof-operator.md)|[Ek](../statements/alias-clause.md)|['](../operators/and-operator.md)|  
-|[AndAlso](../operators/andalso-operator.md)|[Gerektiği](../statements/as-clause.md)|[Boole](../data-types/boolean-data-type.md)|[ByRef](../modifiers/byref.md)|  
-|[Bayt](../data-types/byte-data-type.md)|[ByVal](../modifiers/byval.md)|[Call](../statements/call-statement.md)|[Harflerini](../statements/select-case-statement.md)|  
-|[Yakalaya](../statements/try-catch-finally-statement.md)|[CBool](../functions/type-conversion-functions.md)|[CByte](../functions/type-conversion-functions.md)|[CChar](../functions/type-conversion-functions.md)|  
-|[CDate](../functions/type-conversion-functions.md)|[CDbl](../functions/type-conversion-functions.md)|[CDec](../functions/type-conversion-functions.md)|[Char](../data-types/char-data-type.md)|  
-|[CInt](../functions/type-conversion-functions.md)|[Sınıf kısıtlaması](../statements/type-list.md)|[Class Deyimi](../statements/class-statement.md)|[CLng](../functions/type-conversion-functions.md)|  
-|[Değişkenlerinde CObj](../functions/type-conversion-functions.md)|[Sabit](../statements/const-statement.md)|[Devam et](../statements/continue-statement.md)|[CSByte](../functions/type-conversion-functions.md)|  
-|[CShort](../functions/type-conversion-functions.md)|[CSng](../functions/type-conversion-functions.md)|[CStr](../functions/type-conversion-functions.md)|[CType](../functions/type-conversion-functions.md)|  
-|[CUInt](../functions/type-conversion-functions.md)|[Külda](../functions/type-conversion-functions.md)|[CUShort](../functions/type-conversion-functions.md)|[Date](../data-types/date-data-type.md)|  
-|[Kategori](../data-types/decimal-data-type.md)|[Bildirileceğini](../statements/declare-statement.md)|[Varsayılanını](../modifiers/default.md)|[Temsilci](../statements/delegate-statement.md)|  
-|[Boyutu](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Gösterme](../statements/do-loop-statement.md)|[Çift](../data-types/double-data-type.md)|  
-|[Saniyede](../statements/for-each-next-statement.md)|[Değilse](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[End ekstresi](../statements/end-statement.md)|  
-|[Erer\<keyword>](../statements/end-keyword-statement.md)|`EndIf`|[Sabit listesi](../statements/enum-statement.md)|[Silme](../statements/erase-statement.md)|  
-|[Hata](../statements/on-error-statement.md)|[Olay](../statements/event-statement.md)|[Çıkış](../statements/exit-statement.md)|[Yanlýþ](../data-types/boolean-data-type.md)|  
-|[Son olarak](../statements/try-catch-finally-statement.md)|[İçin (Için... İleri](../statements/for-next-statement.md)|[Her biri için... İleri](../statements/for-each-next-statement.md)|[Dost](../modifiers/friend.md)|  
-|[İşlev](../statements/function-statement.md)|[Al](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
-|[Genel](../../programming-guide/program-structure/namespaces.md)|`GoSub`|[Git](../statements/goto-statement.md)|[Handles](../statements/handles-clause.md)|  
-|[Kullandıysanız](../statements/if-then-else-statement.md)|[If ()](../operators/if-operator.md)|[Uygulamalar](../statements/implements-clause.md)|[Implements Deyimi](../statements/implements-statement.md)|  
-|[İçeri aktarmalar (.NET ad alanı ve türü)](../statements/imports-statement-net-namespace-and-type.md)|[İçeri aktarmalar (XML ad alanı)](../statements/imports-statement-xml-namespace.md)|[İçinde](../statements/in-clause.md)|[In (genel değiştirici)](../modifiers/in-generic-modifier.md)|  
-|[Alıp](../statements/inherits-statement.md)|[Tamsayı](../data-types/integer-data-type.md)|[Arabirim](../statements/interface-statement.md)|[Eklenir](../operators/is-operator.md)|  
-|[IsNot](../operators/isnot-operator.md)|[Atalım](../queries/let-clause.md)|[LIB](../statements/declare-statement.md)|[Like](../operators/like-operator.md)|  
-|[Kalacağını](../data-types/long-data-type.md)|[Gerçekleştirmek](../statements/do-loop-statement.md)|[Ben](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)|[Alma](../operators/mod-operator.md)|  
-|[Modül](../modifiers/module-keyword.md)|[Module Deyimi](../statements/module-statement.md)|[MustInherit](../modifiers/mustinherit.md)|[MustOverride](../modifiers/mustoverride.md)|  
-|[MyBase](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[Sınıfım](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[NameOf](../operators/nameof.md)|[Ad Alanı](../statements/namespace-statement.md)|
-|[Narrowing](../modifiers/narrowing.md)|[Yeni kısıtlama](../statements/type-list.md)|[New Işleci](../operators/new-operator.md)|[Sonraki](../statements/for-next-statement.md)|
-|[İleri (devamında)](../statements/resume-statement.md)|[Başlatılmadı](../operators/not-operator.md)|[Nothing](../nothing.md)|[NotInheritable](../modifiers/notinheritable.md)|
-|[NotOverridable](../modifiers/notoverridable.md)|[Nesne](../data-types/object-data-type.md)|[Durumunu](../statements/of-clause.md)|[Açık](../../misc/on.md)|
-|[Operatör](../statements/operator-statement.md)|[Seçeneği](../statements/option-keyword-statement.md)|[İsteğe Bağlı](../modifiers/optional.md)|[Veya](../operators/or-operator.md)|
-|[OrElse](../operators/orelse-operator.md)|[Out (genel değiştirici)](../modifiers/out-generic-modifier.md)|[Aşırı Yüklemeler](../modifiers/overloads.md)|[Overridable](../modifiers/overridable.md)|
-|[Geçersiz Kılmalar](../modifiers/overrides.md)|[ParamArray](../modifiers/paramarray.md)|[Kısmi](../modifiers/partial.md)|[Özelleştirme](../modifiers/private.md)|
-|[Özellik](../statements/property-statement.md)|[Korunamadı](../modifiers/protected.md)|[Geneldir](../modifiers/public.md)|[RaiseEvent](../statements/raiseevent-statement.md)|
-|[Özelliğinin](../modifiers/readonly.md)|[ReDim](../statements/redim-statement.md)|[MI](../statements/rem-statement.md)|[RemoveHandler](../statements/removehandler-statement.md)|
-|[Sürdür](../statements/resume-statement.md)|[Döndürülmesini](../statements/return-statement.md)|[SByte](../data-types/sbyte-data-type.md)|[Seç](../statements/select-case-statement.md)|
-[Ayarla](../statements/set-statement.md)|[Shadows](../modifiers/shadows.md)|[Shared](../modifiers/shared.md)|[Kısadır](../data-types/short-data-type.md)|
-|[Tek](../data-types/single-data-type.md)|[Se](../modifiers/static.md)|[Adım](../statements/for-next-statement.md)|[Durdur](../statements/stop-statement.md)|
-|[Dize](../data-types/string-data-type.md)|[Yapı kısıtlaması](../statements/type-list.md)|[Structure Yapısı](../statements/structure-statement.md)|[Alt](../statements/sub-statement.md)|
-|[SyncLock](../statements/synclock-statement.md)|[Ni](../statements/then-statement.md)|[Yaratır](../statements/throw-statement.md)|[Hedef](../statements/for-next-statement.md)|
-|[Değeri](../data-types/boolean-data-type.md)|[Deneme](../statements/try-catch-finally-statement.md)|[TryCast](../operators/trycast-operator.md)|[TypeOf... Eklenir](../operators/typeof-operator.md)|
-|[UInteger](../data-types/uinteger-data-type.md)|['Tur](../data-types/ulong-data-type.md)|[UShort](../data-types/ushort-data-type.md)|[Kullanarak](../statements/using-statement.md)|
-|`Variant`|`Wend`|[Oluşturulurken](../statements/try-catch-finally-statement.md)|[Edilirken](../statements/while-end-while-statement.md)|
-[Genişletme](../modifiers/widening.md)|[Kullanılarak](../statements/with-end-with-statement.md)|[WithEvents](../modifiers/withevents.md)|[WriteOnly](../modifiers/writeonly.md)|
-[XOR](../operators/xor-operator.md)|[#Const](../directives/const-directive.md)|[#Else](../directives/if-then-else-directives.md)|[#ElseIf](../directives/if-then-else-directives.md)|
-|[#End](../directives/if-then-else-directives.md)|[#If](../directives/if-then-else-directives.md)|[=](../operators/assignment-operator.md)|[&](../operators/concatenation-operator.md)|
-|[&=](../operators/and-assignment-operator.md)|[*](../operators/multiplication-operator.md)|[*=](../operators/multiplication-assignment-operator.md)|[/](../operators/floating-point-division-operator.md)|
-[/=](../operators/floating-point-division-assignment-operator.md)|[\\](../operators/integer-division-operator.md)|[\\=](../operators/integer-division-assignment-operator.md)|[^](../operators/exponentiation-operator.md)|
-|[^=](../operators/exponentiation-assignment-operator.md)|[+](../operators/addition-operator.md)|[+=](../operators/addition-assignment-operator.md)|[-](../operators/subtraction-operator.md)|
-|[-=](../operators/subtraction-assignment-operator.md)|[>> Işleci](../operators/right-shift-operator.md)|[>>= Işleci](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|
-|[<\<=](../operators/left-shift-assignment-operator.md)|
+|[`AddHandler`](../statements/addhandler-statement.md)|[`AddressOf`](../operators/addressof-operator.md)|[`Alias`](../statements/alias-clause.md)|[`And`](../operators/and-operator.md)|
+|[`AndAlso`](../operators/andalso-operator.md)|[`As`](../statements/as-clause.md)|[`Boolean`](../data-types/boolean-data-type.md)|[`ByRef`](../modifiers/byref.md)|
+|[`Byte`](../data-types/byte-data-type.md)|[`ByVal`](../modifiers/byval.md)|[`Call`](../statements/call-statement.md)|[`Case`](../statements/select-case-statement.md)|
+|[`Catch`](../statements/try-catch-finally-statement.md)|[`CBool`](../functions/type-conversion-functions.md)|[`CByte`](../functions/type-conversion-functions.md)|[`CChar`](../functions/type-conversion-functions.md)|
+|[`CDate`](../functions/type-conversion-functions.md)|[`CDbl`](../functions/type-conversion-functions.md)|[`CDec`](../functions/type-conversion-functions.md)|[`Char`](../data-types/char-data-type.md)|
+|[`CInt`](../functions/type-conversion-functions.md)|[`Class`Kısıtlaması](../statements/type-list.md)|[`Class`Ekstre](../statements/class-statement.md)|[`CLng`](../functions/type-conversion-functions.md)|
+|[`CObj`](../functions/type-conversion-functions.md)|[`Const`](../statements/const-statement.md)|[`Continue`](../statements/continue-statement.md)|[`CSByte`](../functions/type-conversion-functions.md)|
+|[`CShort`](../functions/type-conversion-functions.md)|[`CSng`](../functions/type-conversion-functions.md)|[`CStr`](../functions/type-conversion-functions.md)|[`CType`](../functions/type-conversion-functions.md)|
+|[`CUInt`](../functions/type-conversion-functions.md)|[`CULng`](../functions/type-conversion-functions.md)|[`CUShort`](../functions/type-conversion-functions.md)|[`Date`](../data-types/date-data-type.md)|
+|[`Decimal`](../data-types/decimal-data-type.md)|[`Declare`](../statements/declare-statement.md)|[`Default`](../modifiers/default.md)|[`Delegate`](../statements/delegate-statement.md)|
+|[`Dim`](../statements/dim-statement.md)|[`DirectCast`](../operators/directcast-operator.md)|[`Do`](../statements/do-loop-statement.md)|[`Double`](../data-types/double-data-type.md)|
+|[`Each`](../statements/for-each-next-statement.md)|[`Else`](../statements/else-statement.md)|[`ElseIf`](../statements/if-then-else-statement.md)|[`End`Ekstre](../statements/end-statement.md)|
+|[`End` \<keyword>](../statements/end-keyword-statement.md)|`EndIf`|[`Enum`](../statements/enum-statement.md)|[`Erase`](../statements/erase-statement.md)|
+|[`Error`](../statements/on-error-statement.md)|[`Event`](../statements/event-statement.md)|[`Exit`](../statements/exit-statement.md)|[`False`](../data-types/boolean-data-type.md)|
+|[`Finally`](../statements/try-catch-finally-statement.md)|[`For`(içinde `For…Next` )](../statements/for-next-statement.md)|[`For Each…Next`](../statements/for-each-next-statement.md)|[`Friend`](../modifiers/friend.md)|
+|[`Function`](../statements/function-statement.md)|[`Get`](../statements/get-statement.md)|[`GetType`](../operators/gettype-operator.md)|[`GetXMLNamespace`](../operators/getxmlnamespace-operator.md)|
+|[`Global`](../../programming-guide/program-structure/namespaces.md)|`GoSub`|[`GoTo`](../statements/goto-statement.md)|[`Handles`](../statements/handles-clause.md)|
+|[`If`](../statements/if-then-else-statement.md)|[`If()`](../operators/if-operator.md)|[`Implements`](../statements/implements-clause.md)|[`Implements`Ekstre](../statements/implements-statement.md)|
+|[`Imports`(.NET ad alanı ve türü)](../statements/imports-statement-net-namespace-and-type.md)|[`Imports`(XML ad alanı)](../statements/imports-statement-xml-namespace.md)|[`In`](../statements/in-clause.md)|[`In`(Genel değiştirici)](../modifiers/in-generic-modifier.md)|
+|[`Inherits`](../statements/inherits-statement.md)|[`Integer`](../data-types/integer-data-type.md)|[`Interface`](../statements/interface-statement.md)|[`Is`](../operators/is-operator.md)|
+|[`IsNot`](../operators/isnot-operator.md)|[`Let`](../queries/let-clause.md)|[`Lib`](../statements/declare-statement.md)|[`Like`](../operators/like-operator.md)|
+|[`Long`](../data-types/long-data-type.md)|[`Loop`](../statements/do-loop-statement.md)|[`Me`](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)|[`Mod`](../operators/mod-operator.md)|
+|[`Module`](../modifiers/module-keyword.md)|[`Module`Ekstre](../statements/module-statement.md)|[`MustInherit`](../modifiers/mustinherit.md)|[`MustOverride`](../modifiers/mustoverride.md)|
+|[`MyBase`](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[`MyClass`](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)|[`NameOf`](../operators/nameof.md)|[`Namespace`](../statements/namespace-statement.md)|
+|[`Narrowing`](../modifiers/narrowing.md)|[`New`Kısıtlaması](../statements/type-list.md)|[`New`İşlecinde](../operators/new-operator.md)|[`Next`](../statements/for-next-statement.md)|
+|[`Next`(içinde `Resume` )](../statements/resume-statement.md)|[`Not`](../operators/not-operator.md)|[`Nothing`](../nothing.md)|[`NotInheritable`](../modifiers/notinheritable.md)|
+|[`NotOverridable`](../modifiers/notoverridable.md)|[`Object`](../data-types/object-data-type.md)|[`Of`](../statements/of-clause.md)|[`On`](../../misc/on.md)|
+|[`Operator`](../statements/operator-statement.md)|[`Option`](../statements/option-keyword-statement.md)|[`Optional`](../modifiers/optional.md)|[`Or`](../operators/or-operator.md)|
+|[`OrElse`](../operators/orelse-operator.md)|[`Out`(Genel değiştirici)](../modifiers/out-generic-modifier.md)|[`Overloads`](../modifiers/overloads.md)|[`Overridable`](../modifiers/overridable.md)|
+|[`Overrides`](../modifiers/overrides.md)|[`ParamArray`](../modifiers/paramarray.md)|[`Partial`](../modifiers/partial.md)|[`Private`](../modifiers/private.md)|
+|[`Property`](../statements/property-statement.md)|[`Protected`](../modifiers/protected.md)|[`Public`](../modifiers/public.md)|[`RaiseEvent`](../statements/raiseevent-statement.md)|
+|[`ReadOnly`](../modifiers/readonly.md)|[`ReDim`](../statements/redim-statement.md)|[`REM`](../statements/rem-statement.md)|[`RemoveHandler`](../statements/removehandler-statement.md)|
+|[`Resume`](../statements/resume-statement.md)|[`Return`](../statements/return-statement.md)|[`SByte`](../data-types/sbyte-data-type.md)|[`Select`](../statements/select-case-statement.md)|
+[`Set`](../statements/set-statement.md)|[`Shadows`](../modifiers/shadows.md)|[`Shared`](../modifiers/shared.md)|[`Short`](../data-types/short-data-type.md)|
+|[`Single`](../data-types/single-data-type.md)|[`Static`](../modifiers/static.md)|[`Step`](../statements/for-next-statement.md)|[`Stop`](../statements/stop-statement.md)|
+|[`String`](../data-types/string-data-type.md)|[`Structure`Kısıtlaması](../statements/type-list.md)|[`Structure`Ekstre](../statements/structure-statement.md)|[`Sub`](../statements/sub-statement.md)|
+|[`SyncLock`](../statements/synclock-statement.md)|[`Then`](../statements/then-statement.md)|[`Throw`](../statements/throw-statement.md)|[`To`](../statements/for-next-statement.md)|
+|[`True`](../data-types/boolean-data-type.md)|[`Try`](../statements/try-catch-finally-statement.md)|[`TryCast`](../operators/trycast-operator.md)|[`TypeOf…Is`](../operators/typeof-operator.md)|
+|[`UInteger`](../data-types/uinteger-data-type.md)|[`ULong`](../data-types/ulong-data-type.md)|[`UShort`](../data-types/ushort-data-type.md)|[`Using`](../statements/using-statement.md)|
+|`Variant`|`Wend`|[`When`](../statements/try-catch-finally-statement.md)|[`While`](../statements/while-end-while-statement.md)|
+[`Widening`](../modifiers/widening.md)|[`With`](../statements/with-end-with-statement.md)|[`WithEvents`](../modifiers/withevents.md)|[`WriteOnly`](../modifiers/writeonly.md)|
+[`Xor`](../operators/xor-operator.md)|[`#Const`](../directives/const-directive.md)|[`#Else`](../directives/if-then-else-directives.md)|[`#ElseIf`](../directives/if-then-else-directives.md)|
+|[`#End`](../directives/if-then-else-directives.md)|[`#If`](../directives/if-then-else-directives.md)|[`=`](../operators/assignment-operator.md)|[`&`](../operators/concatenation-operator.md)|
+|[`&=`](../operators/and-assignment-operator.md)|[`*`](../operators/multiplication-operator.md)|[`*=`](../operators/multiplication-assignment-operator.md)|[`/`](../operators/floating-point-division-operator.md)|
+[`/=`](../operators/floating-point-division-assignment-operator.md)|[`\`](../operators/integer-division-operator.md)|[`\=`](../operators/integer-division-assignment-operator.md)|[`^`](../operators/exponentiation-operator.md)|
+|[`^=`](../operators/exponentiation-assignment-operator.md)|[`+`](../operators/addition-operator.md)|[`+=`](../operators/addition-assignment-operator.md)|[`-`](../operators/subtraction-operator.md)|
+|[`-=`](../operators/subtraction-assignment-operator.md)|[`>>`İşlecinde](../operators/right-shift-operator.md)|[`>>=`İşlecinde](../operators/right-shift-assignment-operator.md)|[<<](../operators/left-shift-operator.md)|
+|[`<<=`](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
 > `EndIf`, `GoSub` , `Variant` ve, `Wend` artık Visual Basic kullanılmadığından,, ve ayrılmış anahtar sözcükler olarak tutulur. `Let`Anahtar sözcüğünün anlamı değişmiştir. `Let`Artık LINQ sorgularında kullanılıyor. Daha fazla bilgi için bkz. [Let yan tümcesi](../queries/let-clause.md).
@@ -86,19 +86,19 @@ Aşağıdaki anahtar sözcükler *ayrılmıştır*. Bu, bunları değişkenler v
 
 Aşağıdaki anahtar sözcükler ayrılmamıştır, bu, programlama öğelerinizin adları olarak kullanabileceğiniz anlamına gelir. Ancak, bu, kodunuzun okunmasını zorlaştırabildiğinden ve bulmanın zor olduğu hafif hatalara yol açabildiğinden bunun yapılması önerilmez.
 
-|||||  
-|---|---|---|---|  
-|[Toplama](../queries/aggregate-clause.md)|[Ansi](../modifiers/ansi.md)|[Bütünleştirilmiş Kod](../modifiers/assembly.md)|[Eş](../modifiers/async.md)|  
-|[Otomatik](../modifiers/auto.md)|[Await](../operators/await-operator.md)|[İkili](../statements/option-compare-statement.md)|[Karşılaştır](../statements/option-compare-statement.md)|  
-|[Özel](../statements/event-statement.md)|[Ayrı](../queries/distinct-clause.md)|[Eşittir](../queries/equals-clause.md)|[Anlaşılır](../statements/option-explicit-statement.md)|  
-|[Kaynak](../queries/from-clause.md)|[Gruplandırma ölçütü](../queries/group-by-clause.md)|[Gruba ekleme](../queries/group-join-clause.md)|[Birleştirin](../statements/into-clause.md)|  
-|[IsFalse](../operators/isfalse-operator.md)|[IsTrue](../operators/istrue-operator.md)|[Iterator](../modifiers/iterator.md)|[Katıl](../queries/join-clause.md)|  
-|[Anahtar](../modifiers/key.md)|[Orta](../statements/mid-statement.md)|[Kapalı](../../misc/off.md)|[Sıralama ölçütü](../queries/order-by-clause.md)|  
-|[Koruyup](../statements/redim-statement.md)|[Atla](../queries/skip-clause.md)|[Atla](../queries/skip-while-clause.md)|[Katı](../statements/option-strict-statement.md)|  
-|[Take](../queries/take-clause.md)|[Alma sırasında](../queries/take-while-clause.md)|[Metin](../statements/option-compare-statement.md)|[Unicode](../modifiers/unicode.md)|  
-|[Until](../statements/do-loop-statement.md)|[Olmadığı](../queries/where-clause.md)|[Yield](../statements/yield-statement.md)|[#ExternalSource](../directives/externalsource-directive.md)|  
-|[#Region](../directives/region-directive.md)||||  
-  
+|||||
+|---|---|---|---|
+|[`Aggregate`](../queries/aggregate-clause.md)|[`Ansi`](../modifiers/ansi.md)|[`Assembly`](../modifiers/assembly.md)|[`Async`](../modifiers/async.md)|
+|[`Auto`](../modifiers/auto.md)|[`Await`](../operators/await-operator.md)|[`Binary`](../statements/option-compare-statement.md)|[`Compare`](../statements/option-compare-statement.md)|
+|[`Custom`](../statements/event-statement.md)|[`Distinct`](../queries/distinct-clause.md)|[`Equals`](../queries/equals-clause.md)|[`Explicit`](../statements/option-explicit-statement.md)|
+|[`From`](../queries/from-clause.md)|[`Group By`](../queries/group-by-clause.md)|[`Group Join`](../queries/group-join-clause.md)|[`Into`](../statements/into-clause.md)|
+|[`IsFalse`](../operators/isfalse-operator.md)|[`IsTrue`](../operators/istrue-operator.md)|[`Iterator`](../modifiers/iterator.md)|[`Join`](../queries/join-clause.md)|
+|[`Key`](../modifiers/key.md)|[`Mid`](../statements/mid-statement.md)|[`Off`](../../misc/off.md)|[`Order By`](../queries/order-by-clause.md)|
+|[`Preserve`](../statements/redim-statement.md)|[`Skip`](../queries/skip-clause.md)|[`Skip While`](../queries/skip-while-clause.md)|[`Strict`](../statements/option-strict-statement.md)|
+|[`Take`](../queries/take-clause.md)|[`Take While`](../queries/take-while-clause.md)|[`Text`](../statements/option-compare-statement.md)|[`Unicode`](../modifiers/unicode.md)|
+|[`Until`](../statements/do-loop-statement.md)|[`Where`](../queries/where-clause.md)|[`Yield`](../statements/yield-statement.md)|[`#ExternalSource`](../directives/externalsource-directive.md)|
+|[`#Region`](../directives/region-directive.md)||||
+
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  

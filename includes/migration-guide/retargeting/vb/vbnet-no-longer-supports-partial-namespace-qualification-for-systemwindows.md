@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: 8db115a46df3fcea103e8fa6896542d0116aa256
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cef8096c971da8ae245ff974697022f350cb9195
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67804667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85616071"
 ---
-### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a>VB.NET artık System.Windows API'leri için kısmi ad alanı niteliğini desteklemiyor
+### <a name="vbnet-no-longer-supports-partial-namespace-qualification-for-systemwindows-apis"></a>VB.NET artık System. Windows API 'Leri için kısmi ad alanı nitelemesini desteklemiyor
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.5.2'den başlayarak, VB.NET projeler system.windows API'lerini kısmen nitelikli ad boşluklarıyla belirtemez. Örneğin, atıfta başarısız <code>Windows.Forms.DialogResult</code> olur. Bunun yerine, kod tam nitelikli<xref:System.Windows.Forms.DialogResult>adı () veya belirli ad <xref:System.Windows.Forms.DialogResult?displayProperty=name>alanını alma ve yalnızca .|
-|Öneri|Kod, <code>System.Windows</code> BASIT adlarla (ve ilgili ad alanını alma) veya tam nitelikli adlarla API'lere başvurmak üzere güncelleştirilmelidir.|
-|Kapsam|İkincil|
-|Sürüm|4.5.2|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4.5.2 ' den başlayarak, VB.NET projeleri kısmen nitelenmiş ad alanları olan System. Windows API 'Lerini belirtemez. Örneğin, öğesine başvurma `Windows.Forms.DialogResult` başarısız olur. Bunun yerine, kod tam olarak nitelenmiş ada () başvurmalıdır <xref:System.Windows.Forms.DialogResult> veya belirli ad alanını içeri aktarıp yalnızca öğesine başvurmalıdır <xref:System.Windows.Forms.DialogResult?displayProperty=fullName> .
+
+#### <a name="suggestion"></a>Öneri
+
+Kod `System.Windows` , basit adlarla (ve ilgili ad alanını içeri aktararak) veya tam nitelikli adlara sahip API 'lere başvuracak şekilde güncelleştirilmelidir.
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.5.2       |
+| Tür    | Yeniden Hedefleme |

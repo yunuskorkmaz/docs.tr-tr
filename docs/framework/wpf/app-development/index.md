@@ -1,130 +1,131 @@
 ---
 title: Uygulama Geliştirme
+description: Windows Presentation Foundation (WPF) çerçevesini kullanarak çeşitli uygulamalar oluşturmayı öğrenin.
 ms.date: 01/26/2018
 helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 5ff9f58b72982f79e70b80f60c10828c3b54e5bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac4227785f2fc398217b3aa8984176844264bbaa
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85613741"
 ---
 # <a name="application-development"></a>Uygulama Geliştirme
-<a name="introduction"></a>Windows Sunu Temeli (WPF), aşağıdaki uygulama türlerini geliştirmek için kullanılabilecek bir sunu çerçevesidir:  
+<a name="introduction"></a>Windows Presentation Foundation (WPF), aşağıdaki uygulama türlerini geliştirmek için kullanılabilen bir sunum çerçevesidir:  
   
-- Bağımsız Uygulamalar (istemci bilgisayara yüklenen ve istemci bilgisayardan çalıştırılan yürütülebilir derlemeler olarak oluşturulmuş geleneksel stil Windows uygulamaları).  
+- Tek başına uygulamalar (geleneksel stil Windows uygulamaları, istemci bilgisayara yüklenmiş ve bu bilgisayardan çalıştırılan yürütülebilir derlemeler olarak oluşturulur).  
   
-- XAML tarayıcı uygulamaları (XBAPs) (yürütülebilir derlemeler olarak oluşturulan ve Microsoft Internet Explorer veya Mozilla Firefox gibi Web tarayıcıları tarafından barındırılan gezinti sayfalarından oluşan uygulamalar).  
+- XAML tarayıcı uygulamaları (XBAP 'ler) (yürütülebilir derlemeler olarak oluşturulan ve Microsoft Internet Explorer veya Mozilla Firefox gibi Web tarayıcıları tarafından barındırılan gezinti sayfalarından oluşan uygulamalar).  
   
-- Özel Denetim Kitaplıkları (yeniden kullanılabilir denetimler içeren yürütülemez derlemeler).  
+- Özel denetim kitaplıkları (yeniden kullanılabilir denetimleri içeren yürütülebilir olmayan derlemeler).  
   
-- Sınıf Kitaplıkları (yeniden kullanılabilir sınıflar içeren yürütülemeyen derlemeler).  
+- Sınıf kitaplıkları (yeniden kullanılabilir sınıfları içeren yürütülebilir olmayan derlemeler).  
   
 > [!NOTE]
-> Bir Windows hizmetinde WPF türlerinin kullanılması nın önerilmesi kuvvetle yapılır. Bu özellikleri bir Windows hizmetinde kullanmaya çalışırsanız, bunlar beklendiği gibi çalışmayabilir.  
+> Windows hizmetinde WPF türlerinin kullanılması kesinlikle önerilmez. Bu özellikleri bir Windows hizmetinde kullanmaya çalışırsanız, beklendiği gibi çalışmayabilir.  
   
- Bu uygulama kümesini oluşturmak için WPF bir dizi hizmet uygular. Bu konu, bu hizmetlere genel bir bakış sağlar ve nerede daha fazla bilgi bulabilirsiniz.  
+ Bu uygulama kümesini oluşturmak için WPF bir hizmet ana bilgisayarı uygular. Bu konuda bu hizmetlere genel bir bakış sağlanır ve daha fazla bilgi bulabilirsiniz.  
 
 <a name="Application_Management"></a>
 ## <a name="application-management"></a>Uygulama Yönetimi  
- Çalıştırılabilir WPF uygulamaları genellikle aşağıdakileri içeren bir temel işlevsellik kümesi gerektirir:  
+ Yürütülebilir WPF uygulamaları, genellikle aşağıdakileri içeren bir çekirdek işlev kümesi gerektirir:  
   
-- Ortak uygulama altyapısı oluşturma ve yönetme (sistem ve giriş iletileri almak için bir giriş noktası yöntemi ve Windows ileti döngüsü oluşturma dahil).  
+- Ortak uygulama altyapısını oluşturma ve yönetme (bir giriş noktası yöntemi ve sistem ve giriş iletilerini almak için bir Windows ileti döngüsü oluşturma dahil).  
   
-- Bir uygulamanın kullanım ömrü boyunca izleme ve etkileşimde  
+- Bir uygulamanın yaşam süresi ile izleme ve etkileşim kurma.  
   
 - Komut satırı parametrelerini alma ve işleme.  
   
-- Uygulama kapsamı özelliklerini [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ve kaynaklarını paylaşma.  
+- Uygulama kapsamı özelliklerini ve kaynaklarını paylaşma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] .  
   
-- İşlenmemiş özel durumları algılama ve işleme.  
+- İşlenmeyen özel durumları algılama ve işleme.  
   
-- Çıkış kodlarını iade ediyor.  
+- Çıkış kodları döndürülüyor.  
   
-- Bağımsız uygulamalarda pencereleri yönetme.  
+- Windows 'ı tek başına uygulamalarda yönetme.  
   
-- XAML tarayıcı uygulamalarında (XBAP' lar) gezinmeyi ve navigasyon pencerelerini ve çerçevelerini içeren bağımsız uygulamaları izleme.  
+- XAML tarayıcı uygulamalarında (XBAP) ve gezinti pencereleri ve çerçevelerle tek başına uygulamalarda gezinmeyi izleme.  
   
- Bu özellikler, *uygulama*tanımı <xref:System.Windows.Application> kullanılarak uygulamalarınıza eklediğiniz sınıf tarafından uygulanır.  
+ Bu yetenekler <xref:System.Windows.Application> , *uygulama tanımı*kullanarak uygulamalarınıza eklediğiniz sınıfı tarafından uygulanır.  
   
- Daha fazla bilgi için [Uygulama Yönetimine Genel Bakış'a](application-management-overview.md)bakın.  
+ Daha fazla bilgi için bkz. [uygulama yönetimine genel bakış](application-management-overview.md).  
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>
 ## <a name="wpf-application-resource-content-and-data-files"></a>WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları  
- WPF, microsoft .NET Framework'deki temel desteği, yürütülemeyen üç tür veri dosyası için destek le birlikte gömülü kaynaklar için genişletir: kaynak, içerik ve veri. Daha fazla bilgi için [Bkz. WPF Uygulama Kaynağı, İçerik ve Veri Dosyaları.](wpf-application-resource-content-and-data-files.md)  
+ WPF, ekli kaynaklar için Microsoft .NET çerçevesindeki temel desteği üç tür yürütülebilir olmayan veri dosyası desteğiyle genişletir: kaynak, içerik ve veri. Daha fazla bilgi için bkz. [WPF uygulama kaynağı, içerik ve veri dosyaları](wpf-application-resource-content-and-data-files.md).  
   
- WPF yürütülemeyen veri dosyaları için desteğin önemli bir bileşeni, bunları benzersiz bir URI kullanarak tanımlama ve yükleme yeteneğidir. Daha fazla bilgi için [WPF'deki Paket URI'leri'ne](pack-uris-in-wpf.md)bakın.  
+ WPF yürütülebilir olmayan veri dosyaları desteğinin temel bileşeni, benzersiz bir URI kullanarak bunları belirleyip yükleyebilme olanağıdır. Daha fazla bilgi için bkz. [WPF 'de paket URI 'leri](pack-uris-in-wpf.md).  
   
 <a name="Windows_and_Dialog_Boxes"></a>
-## <a name="windows-and-dialog-boxes"></a>Windows ve İletişim Kutuları  
- Kullanıcılar windows üzerinden WPF bağımsız uygulamaları ile etkileşim. Pencerenin amacı, uygulama içeriğini barındırmak ve genellikle kullanıcıların içerikle etkileşimkurmasına olanak tanıyan uygulama işlevselliğini ortaya çıkarmaktır. WPF'de <xref:System.Windows.Window> pencereler, aşağıdakileri destekleyen sınıf tarafından kapsüllenir:  
+## <a name="windows-and-dialog-boxes"></a>Pencereler ve Iletişim kutuları  
+ Kullanıcılar Windows aracılığıyla WPF tek başına uygulamalarıyla etkileşime geçer. Bir pencerenin amacı, uygulama içeriğini barındırmak ve genellikle kullanıcıların içerikle etkileşime geçmesini sağlayan uygulama işlevlerini kullanıma sunmasıdır. WPF 'de, Windows şunları destekleyen sınıfı tarafından kapsüllenir <xref:System.Windows.Window> :  
   
-- Pencereleroluşturma ve gösterme.  
+- Windows oluşturuluyor ve gösteriliyor.  
   
-- Sahip/sahip olunan pencere ilişkilerini kurma.  
+- Sahip/sahip pencere ilişkileri oluşturuluyor.  
   
 - Pencere görünümünü yapılandırma (örneğin, boyut, konum, simgeler, başlık çubuğu metni, kenarlık).  
   
-- Bir pencerenin ömrü boyunca izleme ve etkileşim.  
+- Bir pencerenin ömrü ile izleme ve etkileşim kurma.  
   
- Daha fazla bilgi için Bkz. [WPF Windows Genel Bakış.](wpf-windows-overview.md)  
+ Daha fazla bilgi için bkz. [WPF Windows 'A genel bakış](wpf-windows-overview.md).  
   
- <xref:System.Windows.Window>iletişim kutusu olarak bilinen özel bir pencere türünü oluşturma yeteneğini destekler. Hem modal hem de modeless iletişim kutuları türleri oluşturulabilir.  
+ <xref:System.Windows.Window>iletişim kutusu olarak bilinen özel bir pencere türü oluşturma yeteneğini destekler. Hem kalıcı hem de kalıcı olmayan iletişim kutusu türleri oluşturulabilir.  
   
- Kolaylık sağlamak ve yeniden kullanılabilirlik ve uygulamalar arasında tutarlı bir kullanıcı deneyiminin avantajları için WPF, <xref:Microsoft.Win32.SaveFileDialog>ortak <xref:System.Windows.Controls.PrintDialog>Windows iletişim kutularından üçünü ortaya çıkarır: <xref:Microsoft.Win32.OpenFileDialog>, ve .  
+ WPF, daha kolay ve uygulamalar arasında tutarlı bir kullanıcı deneyimi sağlamak için, yaygın Windows iletişim kutularından üçünü kullanıma sunar: <xref:Microsoft.Win32.OpenFileDialog> , <xref:Microsoft.Win32.SaveFileDialog> ve <xref:System.Windows.Controls.PrintDialog> .  
   
- İleti kutusu, kullanıcılara önemli metin bilgilerini göstermek ve basit Evet/Hayır/Tamam/İptal soruları sormak için özel bir iletişim kutusu türüdür. İleti kutuları <xref:System.Windows.MessageBox> oluşturmak ve göstermek için sınıfı kullanırsınız.  
+ İleti kutusu, kullanıcılara önemli metin bilgileri göstermek ve basit Evet/Hayır/Tamam/Iptal soruları sormak için özel bir iletişim kutusu türüdür. <xref:System.Windows.MessageBox>İleti kutuları oluşturmak ve göstermek için sınıfını kullanın.  
   
- Daha fazla bilgi için İletişim [Kutularına Genel Bakış'a](dialog-boxes-overview.md)bakın.  
+ Daha fazla bilgi için bkz. [Iletişim kutularına genel bakış](dialog-boxes-overview.md).  
   
 <a name="Navigation"></a>
 ## <a name="navigation"></a>Gezinti  
- WPF, sayfaları ( )<xref:System.Windows.Controls.Page>ve köprüleri<xref:System.Windows.Documents.Hyperlink>( ) kullanarak Web tarzı gezinmeyi destekler. Gezinme aşağıdakileri içeren çeşitli şekillerde uygulanabilir:  
+ WPF, Pages ( <xref:System.Windows.Controls.Page> ) ve köprüleri () kullanarak Web stili gezintiyi destekler <xref:System.Windows.Documents.Hyperlink> . Gezinti, aşağıdakiler dahil olmak üzere çeşitli yollarla uygulanabilir:  
   
-- Web tarayıcısında barındırılan bağımsız sayfalar.  
+- Bir Web tarayıcısında barındırılan tek başına sayfalar.  
   
-- Web tarayıcısında barındırılan bir XBAP'da derlenen sayfalar.  
+- Bir Web tarayıcısında barındırılan bir XBAP 'ye derlenen sayfalar.  
   
-- Bağımsız bir uygulamada derlenen ve gezinti penceresi<xref:System.Windows.Navigation.NavigationWindow>tarafından barındırılan sayfalar ( ).  
+- Tek başına bir uygulamada derlenen ve bir gezinti penceresi () tarafından barındırılan sayfalar <xref:System.Windows.Navigation.NavigationWindow> .  
   
-- Bağımsız bir sayfada barındırılabilen bir çerçeve (),<xref:System.Windows.Controls.Frame>veya XBAP veya bağımsız bir uygulama olarak derlenmiş bir sayfa tarafından barındırılan sayfalar.  
+- <xref:System.Windows.Controls.Frame>Tek başına bir sayfada veya BIR XBAP ya da tek başına uygulama olarak derlenen bir sayfada barındırılan bir çerçeve () tarafından barındırılan sayfalar.  
   
- Gezinmeyi kolaylaştırmak için WPF aşağıdakileri uygular:  
+ Gezintiyi kolaylaştırmak için WPF aşağıdakileri uygular:  
   
-- <xref:System.Windows.Navigation.NavigationService>, uygulama içi gezinmeyi desteklemek için <xref:System.Windows.Controls.Frame>XBAP'lar <xref:System.Windows.Navigation.NavigationWindow>ve XBAP'lar tarafından kullanılan gezinti isteklerini işlemek için paylaşılan gezinti motoru.  
+- <xref:System.Windows.Navigation.NavigationService>, <xref:System.Windows.Controls.Frame> <xref:System.Windows.Navigation.NavigationWindow> ve,, ve XBAP tarafından uygulama içi gezintiyi desteklemek için kullanılan gezinti isteklerini işlemeye yönelik paylaşılan gezinti motoru.  
   
-- Gezinmeyi başlatmak için gezinme yöntemleri.  
+- Gezinmeyi başlatmak için gezinti yöntemleri.  
   
-- Gezinme ömrünü izlemek ve bunlarla etkileşimde kalmak için gezinme olayları.  
+- Gezinti ömrünü izlemek ve bunlarla etkileşime geçmek için gezinti olayları.  
   
-- Ayrıca denetlenebilir ve manipüle edilebilir bir günlük kullanarak ileri ve geri navigasyon hatırlama.  
+- Bir günlük kullanarak geri ve ileri gezinmesini hatırlayıp, aynı zamanda incelenebilir ve işlenebilir.  
   
- Daha fazla bilgi için [Gezintiye Genel Bakış'a](navigation-overview.md)bakın.  
+ Daha fazla bilgi için bkz. [gezintiye genel bakış](navigation-overview.md).  
   
- WPF ayrıca yapılandırılmış gezinti olarak bilinen özel bir gezinti türünü de destekler. Yapılandırılmış gezinti, verileri arama işlevleriyle tutarlı yapılandırılmış ve öngörülebilir bir şekilde döndüren bir veya daha fazla sayfayı çağırmak için kullanılabilir. Bu özellik, Yapılandırılmış <xref:System.Windows.Navigation.PageFunction%601> [Gezintiye Genel Bakış'ta](structured-navigation-overview.md)daha fazla açıklanan sınıfa bağlıdır. <xref:System.Windows.Navigation.PageFunction%601>ayrıca [Navigasyon Topolojileri Genel Bakış](navigation-topologies-overview.md)açıklanan karmaşık navigasyon topolojileri, oluşturulmasını kolaylaştırmak için hizmet vermektedir.  
+ WPF, yapılandırılmış gezinti olarak bilinen özel bir gezinti türünü de destekler. Yapılandırılmış gezinti, çağırma işlevleriyle tutarlı yapılandırılmış ve öngörülebilir bir şekilde veri döndüren bir veya daha fazla sayfayı çağırmak için kullanılabilir. Bu özellik <xref:System.Windows.Navigation.PageFunction%601> , [yapılandırılmış gezintiye genel bakış](structured-navigation-overview.md)bölümünde açıklanan sınıfa bağlıdır. <xref:System.Windows.Navigation.PageFunction%601>Ayrıca, [gezinti topolojilerine genel bakış](navigation-topologies-overview.md)bölümünde açıklanan karmaşık gezinti topolojileri oluşturmayı basitleştirmeye de olanak sağlar.  
   
 <a name="Hosting"></a>
-## <a name="hosting"></a>Barındırma  
- XBAPs Microsoft Internet Explorer veya Firefox'ta barındırılabilir. Her barındırma [modeli, Barındırma](hosting-wpf-applications.md)kapsamında olan kendi değerlendirmeleri ve kısıtlamaları vardır.  
+## <a name="hosting"></a>Hosting  
+ XBAP 'ler, Microsoft Internet Explorer veya Firefox içinde barındırılabilir. Her barındırma modelinin, [barındırma](hosting-wpf-applications.md)kapsamında yer alan kendi konuları ve kısıtlamaları vardır.  
   
 <a name="Build_and_Deploy"></a>
 ## <a name="build-and-deploy"></a>Yapılandırma ve Dağıtma  
- Basit WPF uygulamaları komut satırı derleyicileri kullanılarak komut isteminden oluşturulabilse de, Geliştirme ve oluşturma işlemini basitleştiren ek destek sağlamak için WPF Visual Studio ile tümleşir. Daha fazla bilgi için [wpf uygulaması oluşturma](building-a-wpf-application-wpf.md)bilgisine bakın.  
+ Basit WPF uygulamaları komut satırı derleyicileri kullanılarak bir komut isteminden oluşturulabilir, ancak WPF geliştirme ve oluşturma sürecini basitleştirerek ek destek sağlamak için Visual Studio ile tümleşir. Daha fazla bilgi için bkz. [WPF uygulaması oluşturma](building-a-wpf-application-wpf.md).  
   
- Oluşturduğunuz uygulamatürüne bağlı olarak, aralarından seçim yapabileceğiniz bir veya daha fazla dağıtım seçeneği vardır. Daha fazla bilgi için [wpf uygulaması dağıtma'ya](deploying-a-wpf-application-wpf.md)bakın.  
+ Oluşturduğunuz uygulamanın türüne bağlı olarak, aralarından seçim yapabileceğiniz bir veya daha fazla dağıtım seçeneği vardır. Daha fazla bilgi için bkz. [WPF uygulaması dağıtma](deploying-a-wpf-application-wpf.md).  
   
 <a name="related_topics"></a>
 ## <a name="related-topics"></a>İlgili Konular  
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Uygulama Yönetimine Genel Bakış](application-management-overview.md)|Uygulama ömrü, <xref:System.Windows.Application> windows, uygulama kaynakları ve gezinmeyi yönetme dahil olmak üzere sınıfa genel bir bakış sağlar.|  
-|[WPF’de Windows](windows-in-wpf-applications.md)|Uygulamanızda sınıf ve iletişim kutularının nasıl <xref:System.Windows.Window> kullanılacağı nı içeren pencereleri yönetme ayrıntıları sağlar.|  
-|[Gezintiye Genel Bakış](navigation-overview.md)|Uygulamanızın sayfaları arasında gezinmeyi yönetmeye genel bir bakış sağlar.|  
-|[Barındırma](hosting-wpf-applications.md)|XAML tarayıcı uygulamalarına (XBAP) genel bakış sağlar.|  
-|[Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulamanızı nasıl oluşturup dağıtılacak yapılacağını açıklar.|  
-|[Visual Studio’da WPF’ye Giriş](../getting-started/introduction-to-wpf-in-vs.md)|WPF'nin temel özelliklerini açıklar.|  
-|[İzlenecek Yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Sayfa gezintisi, düzen, denetimler, resimler, stiller ve bağlama yı kullanarak wpf uygulamasının nasıl oluşturulurulur' u gösteren bir yol için.|
+|[Uygulama Yönetimine Genel Bakış](application-management-overview.md)|<xref:System.Windows.Application>Uygulama ömrü, Windows, uygulama kaynakları ve gezinmeyi yönetme dahil olmak üzere sınıfa genel bir bakış sağlar.|  
+|[WPF’de Windows](windows-in-wpf-applications.md)|Uygulamanızda, <xref:System.Windows.Window> sınıfın ve iletişim kutularının kullanımı dahil olmak üzere yönetme hakkında ayrıntılı bilgi sağlar.|  
+|[Gezintiye Genel Bakış](navigation-overview.md)|Uygulamanızın sayfaları arasında gezinmeyi yönetmeye ilişkin bir genel bakış sağlar.|  
+|[Hosting](hosting-wpf-applications.md)|XAML tarayıcı uygulamalarına (XBAP 'ler) genel bir bakış sağlar.|  
+|[Derleme ve Dağıtma](building-and-deploying-wpf-applications.md)|WPF uygulamanızı derleyip dağıtmayı açıklar.|  
+|[Visual Studio’da WPF’ye Giriş](../getting-started/introduction-to-wpf-in-vs.md)|WPF 'nin ana özelliklerini açıklar.|  
+|[İzlenecek Yol: İlk WPF masaüstü uygulamam](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Sayfa gezintisi, düzen, denetimler, görüntüler, stiller ve bağlamayı kullanarak bir WPF uygulamasının nasıl oluşturulduğunu gösteren bir izlenecek yol.|

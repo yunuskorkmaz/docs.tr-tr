@@ -1,16 +1,25 @@
 ---
-ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f78d15338aa49de5b729aca12964924a0df00ec6
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614829"
 ---
-### <a name="improved-accessibility-for-some-net-sdk-tools"></a>Bazı .NET SDK araçları için geliştirilmiş erişilebilirlik
+### <a name="improved-accessibility-for-some-net-sdk-tools"></a>Bazı .NET SDK araçları için iyileştirilmiş erişilebilirlik
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework SDK 4.7.1'de, SvcConfigEditor.exe ve SvcTraceViewer.exe araçları çeşitli erişilebilirlik sorunları nın giderilmesiyle geliştirilmiştir. Bunların çoğu tanımlanmayan bir ad veya belirli Kullanıcı Arabirimi otomasyon desenleri gibi küçük sorunlardır doğru uygulanmıyor. Birçok kullanıcı bu yanlış değerlerin farkında olmasa da, ekran okuyucular gibi yardımcı teknolojileri kullanan müşteriler bu SDK araçlarını daha erişilebilir bulur. Kesinlikle, bu düzeltmeler klavye odak sırası gibi bazı önceki davranışları değiştirir. Bu araçlardaki tüm erişilebilirlik düzeltmelerini almak için app.config dosyanıza aşağıdakileri yapabilirsiniz:<pre><code class="lang-xml">&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.UseLegacyAccessibilityFeatures=false&quot;/&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;</code></pre>|
-|Kapsam|Edge|
-|Sürüm|4.7.1|
-|Tür|Yeniden Hedefleme|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework SDK 4.7.1, SvcConfigEditor.exe ve SvcTraceViewer.exe araçları, değişen erişilebilirlik sorunlarını düzelterek geliştirilmiştir. Bunların çoğu, bir ad tanımlanmamış veya belirli UI Otomasyon desenlerinin doğru uygulanmadığını küçük sorunlardır. Birçok kullanıcı bu hatalı değerleri farkında olmasa da ekran okuyucular gibi yardımcı teknolojiler kullanan müşteriler bu SDK araçlarını daha erişilebilir bulacaktır. Kesinlikle, bu düzeltmeler klavye odağı sırası gibi önceki bazı davranışları değiştirir. Bu araçlarınızdaki tüm erişilebilirlik düzeltmelerini almak için app.config dosyanıza aşağıdaki adımları uygulayabilirsiniz:
+
+```xml
+<runtime>
+  <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false"/>
+</runtime>
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | Edge        |
+| Sürüm | 4.7.1       |
+| Tür    | Yeniden Hedefleme |

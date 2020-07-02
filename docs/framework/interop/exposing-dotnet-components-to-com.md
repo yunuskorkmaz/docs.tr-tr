@@ -1,17 +1,18 @@
 ---
 title: .NET bileşenlerini COM 'a gösterme
+description: .NET bileşenlerini COM 'a sunun. Birlikte çalışma için .NET türlerini niteleyin. Birlikte çalışma özniteliklerini uygulayın. COM için bir derlemeyi paketleyin. COM 'dan yönetilen bir tür kullanın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85617464"
 ---
 # <a name="exposing-net-components-to-com"></a>.NET bileşenlerini COM 'a gösterme
 
@@ -35,7 +36,7 @@ ms.locfileid: "73123481"
 
 1. [DERLEMELERI com Ile kaydedin](registering-assemblies-with-com.md).
 
-     Bir derlemedeki türlerin (ve tür kitaplıklarının) tasarım zamanında kayıtlı olması gerekir. Bir yükleyici derlemeyi KAYDETMEZSE, COM geliştiricilerine Regasm. exe kullanmayı söyleyin.
+     Bir derlemedeki türlerin (ve tür kitaplıklarının) tasarım zamanında kayıtlı olması gerekir. Bir yükleyici derlemeyi KAYDETMEZSE, COM geliştiricilerine Regasm.exe kullanmalarını söyleyin.
 
 2. [Com 'dan .net türlerine başvurun](how-to-reference-net-types-from-com.md).
 

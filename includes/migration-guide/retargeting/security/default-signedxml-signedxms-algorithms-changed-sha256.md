@@ -1,18 +1,42 @@
 ---
-ms.openlocfilehash: db076d6799e4de5b8610cf9c1aac79b5386a7229
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2ae329d027d605e6331afe422e550990fab1042
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67858994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85614814"
 ---
-### <a name="default-signedxml-and-signedxms-algorithms-changed-to-sha256"></a>Varsayılan İmzaXML ve İmzaXMS algoritmaları SHA256 olarak değiştirildi
+### <a name="default-signedxml-and-signedxms-algorithms-changed-to-sha256"></a>Varsayılan SignedXML ve SignedXMS algoritmaları SHA256 olarak değiştirildi
 
-|   |   |
-|---|---|
-|Ayrıntılar|.NET Framework 4.7 ve daha önceki nde, Bazı işlemler için SignedXML ve SignedCMS varsayılan SHA1'dir. .NET Framework 4.7.1 ile başlayarak, SHA256 varsayılan olarak bu işlemler için etkinleştirilir. SHA1 artık güvenli olarak kabul edilir, çünkü bu değişiklik gereklidir.|
-|Öneri|SHA1 (güvensiz) veya SHA256'nın varsayılan olarak kullanılıp kullanılmadığını denetlemek için iki yeni bağlam anahtarı değeri vardır:<ul><li>Switch.System.Security.Cryptography.Xml.UseSecureHashAlgorithms</li><li>Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms</li></ul>.NET Framework 4.7.1 ve sonraki sürümleri hedefleyen uygulamalariçin, SHA256 kullanımı istenmeyen ise, uygulama config dosyanızın [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki yapılandırma anahtarını ekleyerek varsayılanı SHA1'e geri yükleyebilirsiniz:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.UseInsecureHashAlgorithms=true;Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms=true&quot; /&gt;&#13;&#10;</code></pre>.NET Framework 4.7 ve önceki sürümleri hedefleyen uygulamalar için, uygulama config dosyanızın [çalışma süresi](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki yapılandırma anahtarını ekleyerek bu değişikliği tercih edebilirsiniz:<pre><code class="lang-xml">&lt;AppContextSwitchOverrides value=&quot;Switch.System.Security.Cryptography.Xml.UseInsecureHashAlgorithms=false;Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms=false&quot; /&gt;&#13;&#10;</code></pre>|
-|Kapsam|İkincil|
-|Sürüm|4.7.1|
-|Tür|Yeniden Hedefleme|
-|Etkilenen API’ler|<ul><li><xref:System.Security.Cryptography.Pkcs.CmsSigner?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.SignedXml?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.Reference?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a>Ayrıntılar
+
+.NET Framework 4,7 ve önceki sürümlerde, SignedXML ve SignedCMS varsayılan olarak bazı işlemler için SHA1 ' ya yöneliktir. .NET Framework 4.7.1 başlayarak, bu işlemler için SHA256 varsayılan olarak etkinleştirilir. Bu değişiklik gereklidir çünkü SHA1 artık güvenli olarak kabul edilmez.
+
+#### <a name="suggestion"></a>Öneri
+
+Varsayılan olarak SHA1 (güvensiz) veya SHA256 kullanılıp kullanılmayacağını denetlemek için iki yeni bağlam anahtarı değeri vardır:
+
+- Switch.System.Security.Cryptography.Xml. Useınsecurehashalgoritmalarını
+- Switch.SysTem. Security. Cryptography. Pkcs. Useınsecurehashalgoritmalarını .NET Framework 4.7.1 ve sonraki sürümlerini hedefleyen uygulamalar Için, SHA256 kullanımı istenmeyen bir değer değilse, uygulama yapılandırma dosyanızın [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki yapılandırma anahtarını ekleyerek varsayılan değeri SHA1 olarak geri yükleyebilirsiniz:
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.Xml.UseInsecureHashAlgorithms=true;Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms=true" />
+```
+
+.NET Framework 4,7 ve önceki sürümlerini hedefleyen uygulamalar için, uygulama yapılandırma dosyanızın [çalışma zamanı](~/docs/framework/configure-apps/file-schema/runtime/runtime-element.md) bölümüne aşağıdaki yapılandırma anahtarını ekleyerek bu değişikliği tercih edebilirsiniz:
+
+```xml
+<AppContextSwitchOverrides value="Switch.System.Security.Cryptography.Xml.UseInsecureHashAlgorithms=false;Switch.System.Security.Cryptography.Pkcs.UseInsecureHashAlgorithms=false" />
+```
+
+| Name    | Değer       |
+|:--------|:------------|
+| Kapsam   | İkincil       |
+| Sürüm | 4.7.1       |
+| Tür    | Yeniden Hedefleme |
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+- <xref:System.Security.Cryptography.Pkcs.CmsSigner?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.SignedXml?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.Xml.Reference?displayProperty=nameWithType>
