@@ -1,5 +1,6 @@
 ---
 title: openGenericCERCall MDA
+description: Bir iş parçacığı iptal edildiğinde veya bir uygulama etki alanı kaldırıldığında CER kodu çalışmazsa etkinleştirebilen openGenericCERCall yönetilen hata ayıklama Yardımcısı ' na bakın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), CER calls
@@ -10,42 +11,42 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4df33b0cdf9759edec47f02b3feb671d03284ec8
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803943"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
-Yönetilen `openGenericCERCall` hata ayıklama yardımcısı, kök yönteminde genel tür değişkenleri içeren kısıtlanmış bir yürütme bölgesi (CER) grafiğinin JIT derlemeveya yerel görüntü oluşturma zamanında işlendiğini ve genel tür değişkenlerinden en az birinin nesne başvuru türü olduğu konusunda uyarmak için etkinleştirilir.
+`openGenericCERCall`Yönetilen hata ayıklama Yardımcısı, kök yöntemde genel tür değişkenleri olan kısıtlanmış bir yürütme bölgesi (cer) GRAFIĞININ JIT derleme veya yerel görüntü oluşturma zamanında işlendiğini ve genel tür değişkenlerinden en az birinin bir nesne başvuru türü olduğunu uyarmak için etkinleştirilir.
 
 ## <a name="symptoms"></a>Belirtiler
 
-Cer kodu, iş parçacığı iptal edildiğinde veya uygulama etki alanı boşaltıldığında çalışmaz.
+Bir iş parçacığı iptal edildiğinde veya bir uygulama etki alanı kaldırıldığında CER kodu çalışmaz.
 
 ## <a name="cause"></a>Nedeni
 
-JIT derleme zamanında, bir nesne başvuru türü içeren bir anlık ileti yalnızca, elde edilen kod paylaşıldı ve nesne başvuru türü değişkenlerinin her biri herhangi bir nesne başvuru türü olabilir. Bu, bazı çalışma zamanı kaynaklarının önceden hazırlanmasını engelleyebilir.
+JıT derleme zamanında, bir nesne başvuru türü içeren bir örnekleme yalnızca temsilcisidir çünkü sonuç kodu paylaşılır ve nesne başvuru türü değişkenlerinin her biri herhangi bir nesne başvuru türü olabilir. Bu, bazı çalışma zamanı kaynaklarının zamandan önce hazırlanmasını engelleyebilir.
 
-Özellikle, genel tür değişkenleri ile yöntemler tembel arka planda kaynakları tahsis edebilirsiniz. Bunlara genel sözlük girişleri denir. Örneğin, genel bir `List<T> list = new List<T>();` `T` tür değişkeninin olduğu deyim için çalışma zamanı yukarı bakmalı ve muhtemelen çalışma `List<Object>, List<String>`zamanında tam anlık oluşturmayı, örneğin, ve saire. Bu, geliştiricinin denetimi dışında bellek tükenen çeşitli nedenlerle başarısız olabilir.
+Özellikle, genel tür değişkenlerine sahip Yöntemler geç kaynak ayırmayı arka planda alabilir. Bunlar genel sözlük girdileri olarak adlandırılır. Örneğin, `List<T> list = new List<T>();` `T` bir genel tür değişkeni olan, çalışma zamanının bakmalı olması ve muhtemelen çalışma zamanında (örneğin, vb.) tam örneklemeyi oluşturması gerekir `List<Object>, List<String>` . Bu, geliştirici denetiminin ötesinde bellek tükenme gibi çeşitli nedenlerle başarısız olabilir.
 
-Bu MDA sadece JIT derleme zamanında etkinleştirilmelidir, tam bir anlık olduğunda değil.
+Bu MDA, tam bir örnek oluşturma işlemi olmadığında değil, yalnızca JıT derleme sırasında etkinleştirilmelidir.
 
-Bu MDA etkinleştirildiğinde, olası belirtiler CEO'ların kötü anlık algılamalar için işlevsel olmadığıdır. Aslında, çalışma süresi MDA'nın etkinleştirilmesine neden olan koşullar altında bir CER uygulamaya çalışmamıştır. Bu nedenle, geliştirici CER'in paylaşılan bir anlık iletisini kullanırsa, JIT derleme hataları, genel yazı yükleme hataları veya amaçlanan CER bölgesindeki iş parçacığı iptalleri yakalanmaz.
+Bu MDA etkinleştirildiğinde, büyük ihtimalle CERs kötü örneklemelerde işlevsel değildir. Aslında, çalışma zamanı, MDA 'ın etkinleştirilmesini neden olan koşullarda bir CER uygulamayı denemedi. Böylece geliştirici, CER 'nin paylaşılan bir örneklemesini kullanıyorsa JıT derleme hataları, genel türler türü yükleme hataları veya hedeflenen CER bölgesi dahilinde iş parçacığı durdurulduğunda yakalanmaz.
 
 ## <a name="resolution"></a>Çözüm
 
-CER içerebilecek yöntemler için nesne başvuru türüne ait genel tür değişkenleri kullanmayın.
+Bir CER içerebilen yöntemler için nesne başvuru türü olan genel tür değişkenlerini kullanmayın.
 
-## <a name="effect-on-the-runtime"></a>Çalışma Süresi üzerindeki etkisi
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki
 
-Bu MDA'nın CLR üzerinde hiçbir etkisi yoktur.
+Bu MDA, CLR üzerinde hiçbir etkisi yoktur.
 
 ## <a name="output"></a>Çıktı
 
-Bu MDA çıktısının bir örneği aşağıda veda edilebistir:
+Bu MDA 'ın çıkış örneği aşağıda verilmiştir:
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
@@ -66,7 +67,7 @@ Bu MDA çıktısının bir örneği aşağıda veda edilebistir:
 
 ## <a name="example"></a>Örnek
 
-CER kodu yürütülmez.
+CER kodu yürütülmedi.
 
 ```csharp
 using System;

@@ -1,6 +1,6 @@
 ---
 title: 'Normal İfade Örneği: Tarih Biçimlerini Değiştirme'
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -13,16 +13,18 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 4290bf0d6ee9deec8129c5f4f6092eedb08345f0
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3b657ac6c88a1ee846f7f1d2156a18fd34621808
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803956"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>Normal İfade Örneği: Tarih Biçimlerini Değiştirme
 Aşağıdaki kod örneği, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> *AA* / *gg* / *yy* biçimindeki tarihleri *gg* - *AA* - *yy*olan tarihlerle değiştirmek için yöntemini kullanır.  
-  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 ## <a name="example"></a>Örnek  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#1)]  
@@ -35,7 +37,7 @@ Aşağıdaki kod örneği, <xref:System.Text.RegularExpressions.Regex.Replace%2A
 ## <a name="comments"></a>Yorumlar  
  Normal ifade deseninin `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|  
 |`(?<month>\d{1,2})`|Bir veya iki ondalık basamağı eşleştirin. Bu, `month` yakalanan gruptur.|  
@@ -47,7 +49,7 @@ Aşağıdaki kod örneği, <xref:System.Text.RegularExpressions.Regex.Replace%2A
   
  Bu model, `${day}-${month}-${year}` Aşağıdaki tabloda gösterildiği gibi değiştirme dizesini tanımlar.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`$(day)`|Yakalama grubu tarafından yakalanan dizeyi ekleyin `day` .|  
 |`-`|Kısa çizgi ekleyin.|  

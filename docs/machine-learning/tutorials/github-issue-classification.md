@@ -1,19 +1,19 @@
 ---
-title: 'Öğretici: Destek sorunlarını kategorilere ayırın - çok sınıflı sınıflandırma'
-description: ML.NET,ML.NET belirli bir alana atamak üzere GitHub sorunlarını sınıflandırmak için çok sınıflı bir sınıflandırma senaryosunda nasıl kullanacağını keşfedin.
-ms.date: 01/30/2020
+title: 'Öğretici: destek sorunlarını kategorilere ayırma-birden çok Lass sınıflandırması'
+description: Birden çok Lass sınıflandırma senaryosunda ML.NET kullanarak bunları belirli bir alana atamaya yönelik GitHub sorunlarını sınıflandırın.
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: f158b8dce81e00f652496cad4ec9217c516b3e9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 5233924dab063fd1ba0232672613f9701f637385
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739715"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803735"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Öğretici: ML.NET ile çok sınıflı sınıflandırma kullanarak destek sorunlarını kategorilere ayırın
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Öğretici: ML.NET ile birden çok Lass sınıflandırması kullanarak destek sorunlarını kategorilere ayırma
 
-Bu örnek öğretici, Visual Studio'da C# kullanarak bir .NET Core konsol uygulaması aracılığıyla GitHub sorunu için Alan etiketini sınıflandıran ve tahmin eden bir modeli eğitmek için bir GitHub sorun sınıflandırıcısı oluşturmak için ML.NET kullanılmasını göstermektedir.
+Bu örnek öğreticide, Visual Studio 'Da C# kullanarak bir GitHub sorununun alan etiketini sınıflandırdığı ve tahmin eden bir modeli eğiten bir GitHub sorunu Sınıflandırıcısı oluşturmak için ML.NET kullanımı gösterilmektedir.
 
 Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
@@ -22,115 +22,117 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Verileri dönüştürme
 > * Modeli eğitme
 > * Modeli değerlendirme
-> * Eğitimli model ile tahmin edin
-> * Yüklü bir modelle Dağıtma ve Tahmin Etme
+> * Eğitilen modelle birlikte tahmin edin
+> * Yüklü bir modelle dağıtım ve tahmin etme
 
-Bu öğreticinin kaynak kodunu [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
+Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya sonrası veya Visual Studio 2017 sürümü 15.6 veya daha sonra ".NET Core çapraz platform geliştirme" iş yükü yüklü.
-* [GitHub sorunları sekmesi ayrılmış dosya (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
-* [GitHub sorunları test sekmesi ayrılmış dosya (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
+* [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri, ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
+* [GitHub sorunları sekmeyle ayrılmış dosya (issues_train. TSV)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
+* [GitHub, test sekmeyle ayrılmış dosyası (issues_test. TSV) ile karşılaşır](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
 
 ## <a name="create-a-console-application"></a>Konsol uygulaması oluşturma
 
 ### <a name="create-a-project"></a>Proje oluşturma
 
-1. Visual Studio 2017'yi açın. Menü çubuğundan**Yeni** > **Proje** **Dosyası'nı** > seçin. Yeni **Proje** iletişim kutusunda, **.NET Core** düğümünü izleyen **Visual C#** düğümünü seçin. Ardından **Konsol Uygulaması (.NET Core)** proje şablonu'nu seçin. **Ad** metin kutusunda "GitHubIssueClassification" yazın ve **ardından Tamam** düğmesini seçin.
+1. Visual Studio 2017'yi açın. Menü çubuğundan **Dosya**  >  **Yeni**  >  **Proje** ' yi seçin. **Yeni proje** iletişim kutusunda, **Visual C#** düğümünü ve ardından **.NET Core** düğümünü seçin. Ardından **konsol uygulaması (.NET Core)** proje şablonunu seçin. **Ad** metin kutusuna "Githubıssueclassıflıve" yazın ve **Tamam** düğmesini seçin.
 
-2. Veri seti dosyalarınızı kaydetmek için projenizde *Veri* adlı bir dizin oluşturun:
+2. Veri kümesi dosyalarınızı kaydetmek için projenizde *veri* adlı bir dizin oluşturun:
 
-    **Çözüm Gezgini'nde,** projenize sağ tıklayın ve**Yeni Klasör** **Ekle'yi** > seçin. "Veri" yazın ve Enter tuşuna basın.
+    **Çözüm Gezgini**, projenize sağ tıklayın ve **Add**  >  **Yeni klasör**Ekle ' yi seçin. "Data" yazın ve ENTER tuşuna basın.
 
-3. Modelinizi kaydetmek için projenizde *Modeller* adlı bir dizin oluşturun:
+3. Modelinize kaydetmek için projenizde *modeller* adlı bir dizin oluşturun:
 
-    **Çözüm Gezgini'nde,** projenize sağ tıklayın ve**Yeni Klasör** **Ekle'yi** > seçin. "Modeller" yazın ve Enter tuşuna basın.
+    **Çözüm Gezgini**, projenize sağ tıklayın ve **Add**  >  **Yeni klasör**Ekle ' yi seçin. "Modeller" yazın ve ENTER tuşuna basın.
 
-4. Microsoft.ML **NuGet Paketini**Yükleyin:
+4. **Microsoft.ml NuGet paketini**yükler:
 
-    Çözüm Gezgini'nde projenize sağ tıklayın ve **NuGet Paketlerini Yönet'i**seçin. Paket kaynağı olarak "nuget.org" seçeneğini belirleyin, Gözat sekmesini seçin, **Microsoft.ML** arayın ve **Yükle** düğmesini seçin. **Değişiklikler Önizleme** iletişim kutusundaki **Tamam** düğmesini seçin ve listelenen paketlerin lisans koşullarını kabul ederseniz Lisans Kabul iletişim kutusundaki **Kabul** **Et** düğmesini seçin.
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
+    Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin. Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml** araması yapın ve **yüklemeyi** seçin. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
 
 ### <a name="prepare-your-data"></a>Verilerinizi hazırlama
 
-1. [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) ve [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) veri kümelerini indirin ve bunları daha önce oluşturulmuş *Veri* klasörüne kaydedin. İlk veri seti makine öğrenme modelini eğitir ve ikincisi modelinizin ne kadar doğru olduğunu değerlendirmek için kullanılabilir.
+1. [İssues_train. tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) ve [issues_test. tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) veri kümelerini indirin ve daha önce oluşturulan *veri* klasörüne kaydedin. Makine öğrenimi modelini ve ikincisini gösteren ilk veri kümesi, modelinizin ne kadar doğru olduğunu değerlendirmek için kullanılabilir.
 
-2. Çözüm Gezgini'nde \*,tsv dosyalarının her birini sağ tıklatın ve **Özellikler'i**seçin. **Gelişmiş**altında, **daha yeniyse**Kopyala'dan **Çıktı Dizini'ne Kopya** değerini değiştirin.
+2. Çözüm Gezgini,. tsv dosyalarının her birine sağ tıklayın \* ve **Özellikler**' i seçin. **Gelişmiş**' in altında, **Çıkış Dizinine Kopyala** değerini **daha yeniyse kopyala**olarak değiştirin.
 
-### <a name="create-classes-and-define-paths"></a>Sınıflar oluşturma ve yolları tanımlama
+### <a name="create-classes-and-define-paths"></a>Sınıf oluşturma ve yollar tanımlama
 
-Aşağıdaki ek `using` deyimleri *Program.cs* dosyasının üstüne ekleyin:
+Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
 
 [!code-csharp[AddUsings](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AddUsings)]
 
-En son indirilen dosyalara giden yolları tutmak için üç genel `MLContext`alan`DataView`ve `PredictionEngine`aşağıdakiler için genel değişkenler oluşturun:
+Son indirilen dosyaları ve,, ve için genel değişkenleri tutmak üzere üç genel alan oluşturun `MLContext` `DataView` `PredictionEngine` :
 
-* `_trainDataPath`modeli eğitmek için kullanılan veri kümesine giden yola sahiptir.
-* `_testDataPath`modeli değerlendirmek için kullanılan veri kümesine giden yolu vardır.
-* `_modelPath`eğitilmiş modelin kaydedildiği yola sahiptir.
-* `_mlContext`işleme <xref:Microsoft.ML.MLContext> bağlamını sağlayan dır.
-* `_trainingDataView`eğitim <xref:Microsoft.ML.IDataView> veri kümesini işlemek için kullanılır.
-* `_predEngine`tek <xref:Microsoft.ML.PredictionEngine%602> tahminler için kullanılır.
+* `_trainDataPath`, modeli eğitmek için kullanılan veri kümesinin yolunu içerir.
+* `_testDataPath`, modeli değerlendirmek için kullanılan veri kümesinin yoluna sahiptir.
+* `_modelPath`Eğitim modelinin kaydedildiği yolu içerir.
+* `_mlContext`, <xref:Microsoft.ML.MLContext> işleme bağlamı sağlar.
+* `_trainingDataView`, <xref:Microsoft.ML.IDataView> eğitim veri kümesini işlemek için kullanılır.
+* `_predEngine`, <xref:Microsoft.ML.PredictionEngine%602> tek tahminlerde kullanılır.
 
-Bu yolları ve diğer değişkenleri `Main` belirtmek için yöntemin hemen üstündeki satıra aşağıdaki kodu ekleyin:
+Aşağıdaki kodu, `Main` Bu yolları ve diğer değişkenleri belirtmek için yönteminin hemen üstüne ekleyin:
 
 [!code-csharp[DeclareGlobalVariables](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DeclareGlobalVariables)]
 
-Giriş verileriniz ve öngörüleriniz için bazı sınıflar oluşturun. Projenize yeni bir sınıf ekleyin:
+Giriş verileriniz ve tahminlerinizi için bazı sınıflar oluşturun. Projenize yeni bir sınıf ekleyin:
 
-1. **Çözüm Gezgini'nde,** projeyi sağ tıklatın ve ardından**Yeni Öğe** **Ekle'yi** > seçin.
+1. **Çözüm Gezgini**, projeye sağ tıklayın ve ardından **Add**  >  **Yeni öğe**Ekle ' yi seçin.
 
-1. Yeni **Öğe Ekle** iletişim kutusunda **Sınıf'ı** seçin ve **Ad** alanını *GitHubIssueData.cs*olarak değiştirin. Ardından **Ekle** düğmesini seçin.
+1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *GitHubIssueData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 
-    kod düzenleyicisinde *GitHubIssueData.cs* dosya açılır. GitHubIssueData.cs üstüne `using` aşağıdaki ifadeyi *GitHubIssueData.cs*ekleyin:
+    *GitHubIssueData.cs* dosyası kod düzenleyicisinde açılır. Aşağıdaki `using` ifadeyi *GitHubIssueData.cs*öğesinin en üstüne ekleyin:
 
 [!code-csharp[AddUsings](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/GitHubIssueData.cs#AddUsings)]
 
-Varolan sınıf tanımını kaldırın ve iki sınıfı `GitHubIssue` `IssuePrediction`ve *GitHubIssueData.cs* dosyasına aşağıdaki kodu ekleyin:
+Mevcut sınıf tanımını kaldırın ve iki sınıfa `GitHubIssue` ve `IssuePrediction` *GitHubIssueData.cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
 
 [!code-csharp[DeclareGlobalVariables](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/GitHubIssueData.cs#DeclareTypes)]
 
-Tahmin `label` etmek istediğiniz sütundur. Tanımlanan, `Features` Etiketi tahmin etmek için modele verdiğiniz girdilerdir.
+`label`Tahmin etmek istediğiniz sütundur. `Features`Etiketi tahmin etmek için modele verdiğiniz girişler tanımlanmıştır.
 
-Veri kümesindeki kaynak sütunların dizinlerini belirtmek için [LoadColumnAtöz'ü](xref:Microsoft.ML.Data.LoadColumnAttribute) kullanın.
+Veri kümesindeki kaynak sütunlarının dizinlerini belirtmek için [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute) kullanın.
 
-`GitHubIssue`giriş veri kümesi sınıfıdır ve <xref:System.String> aşağıdaki alanlara sahiptir:
+`GitHubIssue`, giriş veri kümesi sınıfıdır ve aşağıdaki alanlara sahiptir <xref:System.String> :
 
-* ilk sütun `ID` (GitHub Sorun Kimliği)
-* ikinci sütun `Area` (eğitim için tahmin)
-* üçüncü sütun `Title` (GitHub sorun başlığı) `feature` ilk tahmin etmek için kullanılan`Area`
-* dördüncü sütun, `Description` `feature``Area`
+* ilk sütun `ID` (GitHub sorun kimliği)
+* ikinci sütun `Area` (eğitim tahmini)
+* üçüncü sütun `Title` (GitHub sorun başlığı), şunları tahmin etmek `feature` için kullanılır`Area`
+* dördüncü sütun `Description` , şunu tahmin etmek `feature` için kullanılan ikincinin`Area`
 
-`IssuePrediction`model eğitildikten sonra tahmin için kullanılan sınıftır. Tek `string` bir (`Area`) `PredictedLabel` `ColumnName` ve bir özniteliği vardır.  Tahmin `PredictedLabel` ve değerlendirme sırasında kullanılır. Değerlendirme için, eğitim verileri, öngörülen değerler ve model ile bir giriş kullanılır.
+`IssuePrediction`, model eğitilen bir tahmin için kullanılan sınıftır. Tek bir `string` ( `Area` ) ve `PredictedLabel` `ColumnName` özniteliği vardır.  , `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme için eğitim verileri olan bir giriş, tahmin edilen değerler ve model kullanılır.
 
-Tüm ML.NET işlemleri [MLContext](xref:Microsoft.ML.MLContext) sınıfında başlar. İlk `mlContext` başlatma, model oluşturma iş akışı nesneleri arasında paylaşılabilen yeni bir ML.NET ortamı oluşturur. Kavramsal olarak `DBContext` `Entity Framework`benzer.
+Tüm ML.NET işlemleri [Mlcontext](xref:Microsoft.ML.MLContext) sınıfında başlar. Başlatma `mlContext` , model oluşturma iş akışı nesneleri genelinde paylaşılabilecek yeni bir ml.net ortamı oluşturur. Kavramsal olarak, ' de ' ye `DBContext` benzer `Entity Framework` .
 
-### <a name="initialize-variables-in-main"></a>Main'deki değişkenleri başlatma
+### <a name="initialize-variables-in-main"></a>Değişkenleri ana olarak Başlat
 
-`_mlContext` Birden çok eğitim arasında tekrarlanabilir/deterministik sonuçlar için rasgele bir tohum () `MLContext` `seed: 0`ile yeni bir örnek ile küresel değişkeni başlangıç.  `Console.WriteLine("Hello World!")` Satırı yöntemde aşağıdaki kodla `Main` değiştirin:
+`_mlContext` `MLContext` `seed: 0` Birden çok harekette tekrarlanabilir/belirleyici sonuçlar için rastgele bir çekirdek () ile birlikte, genel değişkeni yeni bir örneği ile başlatın.  Satırı, `Console.WriteLine("Hello World!")` yöntemindeki aşağıdaki kodla değiştirin `Main` :
 
 [!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreateMLContext)]
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-ML.NET, sayısal veya metin tabular verileri açıklamanın esnek ve verimli bir yolu olarak [IDataView sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView`metin dosyalarını veya gerçek zamanlı olarak yükleyebilir (örneğin, SQL veritabanı veya günlük dosyaları).
+ML.NET, sayısal veya metin tablolu verileri tanımlamaya yönelik esnek ve verimli bir yöntem olarak [ıdataview sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView`metin dosyalarını veya gerçek zamanlı olarak yükleyebilirsiniz (örneğin, SQL veritabanı veya günlük dosyaları).
 
-Ardışık `_trainingDataView` düzen için kullanmak için global değişkeni başlatmave yüklemek için, `mlContext` başlatmadan sonra aşağıdaki kodu ekleyin:
+`_trainingDataView`Genel değişkeni, işlem hattı için kullanmak üzere başlatmak ve yüklemek için, başlangıçtan sonra aşağıdaki kodu ekleyin `mlContext` :
 
 [!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#LoadTrainData)]
 
-[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) veri şemasını tanımlar ve dosyada okur. Veri yolu değişkenlerini alır ve `IDataView`bir .
+[Loadfromtextfile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) , veri şemasını ve dosyadaki okumaları tanımlar. Veri yolu değişkenlerini alır ve döndürür `IDataView` .
 
-`Main` Yöntemde bir sonraki kod satırı olarak aşağıdakileri ekleyin:
+Aşağıdaki kod satırını `Main` yöntemine ekleyin:
 
 [!code-csharp[CallProcessData](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallProcessData)]
 
-Yöntem `ProcessData` aşağıdaki görevleri yürütür:
+`ProcessData`Yöntemi aşağıdaki görevleri yürütür:
 
 * Verileri ayıklar ve dönüştürür.
-* İşleme ardışık hattını döndürür.
+* İşlem ardışık düzenini döndürür.
 
-Yöntemden `ProcessData` `Main` hemen sonra, aşağıdaki kodu kullanarak yöntemi oluşturun:
+`ProcessData`Aşağıdaki kodu kullanarak yönteminden hemen sonra yöntemini oluşturun `Main` :
 
 ```csharp
 public static IEstimator<ITransformer> ProcessData()
@@ -139,47 +141,47 @@ public static IEstimator<ITransformer> ProcessData()
 }
 ```
 
-## <a name="extract-features-and-transform-the-data"></a>Özellikleri Ayıklayın ve verileri dönüştürün
+## <a name="extract-features-and-transform-the-data"></a>Özellikleri Ayıkla ve verileri Dönüştür
 
-Bir için Alan GitHub etiketini `GitHubIssue`tahmin etmek istediğinizde, `Area` sütunu sayısal anahtar türü `Label` sütununa (sınıflandırma algoritmaları tarafından kabul edilen bir biçim) dönüştürmek ve yeni bir veri kümesi sütunu olarak eklemek için [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) yöntemini kullanın:
+' A ait GitHub etiketini tahmin etmek istediğiniz gibi `GitHubIssue` , sütunu bir sayısal anahtar türü sütununa dönüştürmek Için [Mapvaluetokey ()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) yöntemini kullanın `Area` `Label` (sınıflandırma algoritmaları tarafından kabul edilen bir biçim) ve yeni bir veri kümesi sütunu olarak ekleyin:
 
 [!code-csharp[MapValueToKey](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#MapValueToKey)]
 
-`mlContext.Transforms.Text.FeaturizeText`Ardından,`Title` metin ( ve `Description`) sütunlarını her çağrılan `TitleFeaturized` ve `DescriptionFeaturized`. Her iki sütun için de aşağıdaki kodla ardışık ardışıklaştırmayı tamamlayın:
+Sonra, `mlContext.Transforms.Text.FeaturizeText` metin ( `Title` ve `Description` ) sütunlarını, ve olarak çağrılan her bir sayısal vektöre dönüştüren çağırın `TitleFeaturized` `DescriptionFeaturized` . Aşağıdaki kodla, her iki sütun için de işlem hattına bir şekilde ekleyin:
 
 [!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#FeaturizeText)]
 
-Veri hazırlamadaki son adım, Tüm özellik sütunlarını [Concatenate()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) yöntemini kullanarak **Özellikler** sütununa birleştirir. Varsayılan olarak, bir öğrenme algoritması yalnızca **Özellikler** sütunundaki özellikleri işler. Bu dönüşümü aşağıdaki kodla ardışık ardışık olarak tamamlayın:
+Veri hazırlığında son adım, [Birleştir ()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) yöntemini kullanarak tüm özellik sütunlarını **Özellikler** sütunuyla birleştirir. Varsayılan olarak, bir öğrenme algoritması yalnızca **Özellikler** sütunundaki özellikleri işler. Aşağıdaki kodla bu dönüşümü işlem hattına ekleyin:
 
 [!code-csharp[Concatenate](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#Concatenate)]
 
- Ardından, önbelleği kullanarak verileri birden çok kez yinelediğinizde aşağıdaki kodda olduğu gibi daha iyi performans elde edilebilsin diye DataView'ı önbelleğe almak için bir <xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A> ekleyin:
+ Daha sonra, <xref:Microsoft.ML.Data.EstimatorChain%601.AppendCacheCheckpoint%2A> verileri birden çok kez yinelemek Için DataView öğesini önbelleğe almak için bir ekleyin, aşağıdaki kodda olduğu gibi daha iyi bir performans alabilir:
 
 [!code-csharp[AppendCache](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AppendCache)]
 
 > [!WARNING]
-> Eğitim süresini düşürmek için küçük/orta veri kümeleri için AppendCacheCheckpoint'i kullanın. KULLANMAYIN (kaldırın. Çok büyük veri kümelerini işlerken AppendCacheCheckpoint())
+> Eğitim süresini azaltmak için küçük/orta veri kümeleri için AppendCacheCheckpoint kullanın. Bunu kullanmayın (kaldırın. Çok büyük veri kümelerini işlerken AppendCacheCheckpoint ()).
 
-Yöntemin sonunda boru hattını `ProcessData` döndürün.
+Yöntemin sonundaki işlem hattını döndürün `ProcessData` .
 
 [!code-csharp[ReturnPipeline](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#ReturnPipeline)]
 
-Bu adım, ön işleme/featurization işler. ML.NET'da bulunan ek bileşenleri kullanmak, modelinizde daha iyi sonuçlar elde etmenizi sağlayabilir.
+Bu adım ön işleme/korleştirme gerçekleştirir. ML.NET ' de kullanılabilen ek bileşenleri kullanmak modelinize daha iyi sonuçlar verebilir.
 
-## <a name="build-and-train-the-model"></a>Modeli oluşturma ve eğitme
+## <a name="build-and-train-the-model"></a>Model oluşturma ve eğitme
 
-Yöntemde `BuildAndTrainModel`bir sonraki kod satırı olarak yönteme `Main` aşağıdaki çağrıyı ekleyin:
+Yöntemi `BuildAndTrainModel` içindeki sonraki kod satırı olarak yöntemine aşağıdaki çağrıyı ekleyin `Main` :
 
 [!code-csharp[CallBuildAndTrainModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallBuildAndTrainModel)]
 
-Yöntem `BuildAndTrainModel` aşağıdaki görevleri yürütür:
+`BuildAndTrainModel`Yöntemi aşağıdaki görevleri yürütür:
 
 * Eğitim algoritması sınıfını oluşturur.
-* Modeli eğitir.
+* Modeli TRAIN.
 * Eğitim verilerine göre alanı tahmin eder.
 * Modeli döndürür.
 
-Yöntemden `BuildAndTrainModel` `Main` hemen sonra, aşağıdaki kodu kullanarak yöntemi oluşturun:
+`BuildAndTrainModel`Aşağıdaki kodu kullanarak yönteminden hemen sonra yöntemini oluşturun `Main` :
 
 ```csharp
 public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
@@ -190,56 +192,56 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ### <a name="about-the-classification-task"></a>Sınıflandırma görevi hakkında
 
-Sınıflandırma, bir öğenin veya veri satırının kategorisini, türünü veya sınıfını **belirlemek** için verileri kullanan ve sık sık aşağıdaki türlerden biri olan bir makine öğrenimi görevidir:
+Sınıflandırma, bir öğe veya veri satırının kategorisini, türünü veya sınıfını **tespit** etmek için verileri kullanan bir makine öğrenimi görevi ve genellikle aşağıdaki türlerden biridir:
 
 * İkili: A veya B.
-* Çok sınıflı: Tek bir model kullanılarak tahmin edilebilen birden çok kategori.
+* Birden çok sınıf: tek bir model kullanılarak tahmin edilebilir birden fazla kategori.
 
-Sorun kategorisi tahmini yalnızca iki (ikili) yerine birden çok kategoriden (çok sınıflı) biri olabileceğinden, bu tür bir sorun için çok sınıflı sınıflandırma öğrenme algoritması kullanın.
+Bu tür bir sorun için, tek bir Lass sınıflandırma öğrenme algoritması kullanın, çünkü sorun kategorisi tahmininizde yalnızca iki (ikili) yerine birden çok kategori (birden çok Lass) olabilir.
 
-Makine öğrenme algoritmasını veri dönüştürme tanımlarına ilk kod satırı olarak ekleyerek `BuildAndTrainModel()`ekle:
+' Deki ilk kod satırı olarak aşağıdakileri ekleyerek makine öğrenimi algoritmasını veri dönüştürme tanımlarına ekleyin `BuildAndTrainModel()` :
 
 [!code-csharp[AddTrainer](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AddTrainer)]
 
-[SdcaMaximumEntropy](xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer) sizin çok sınıflı sınıflandırma eğitim algoritmanızdır. Bu, geçmiş `pipeline` verilerden öğrenmek için featurized`Features` `Label` `Title` ve `Description` ( ) ve giriş parametrelerini kabul eder.
+[Sdcamaximumentropi](xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer) , birden çok Lass sınıflandırma eğitim algoritmadır. Bu öğesine eklenir `pipeline` ve `Title` `Description` `Features` `Label` Geçmiş verilerden öğrenme ve () ve giriş parametrelerini kabul eder.
 
 ### <a name="train-the-model"></a>Modeli eğitme
 
-Modeli `splitTrainSet` verilere sığdırın ve yöntemde bir sonraki kod satırı olarak `BuildAndTrainModel()` aşağıdakileri ekleyerek eğitilmiş modeli döndürün:
+`splitTrainSet`Yöntemine bir sonraki kod satırı olarak aşağıdakileri ekleyerek modeli verilere sığdırın ve eğitilen modeli döndürün `BuildAndTrainModel()` :
 
 [!code-csharp[TrainModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#TrainModel)]
 
-Yöntem, `Fit()`veri kümesini dönüştürerek ve eğitimi uygulayarak modelinizi eğitiyor.
+`Fit()`Yöntemi, veri kümesini dönüştürerek ve eğitimi uygulayarak modelinizi trakla.
 
-[PredictionEngine,](xref:Microsoft.ML.PredictionEngine%602) tek bir veri örneği üzerinde bir tahmin gerçekleştirmenize ve geçiş yapmanızı sağlayan kolaylık api'sidir. `BuildAndTrainModel()` Yöntemde bir sonraki satır olarak bunu ekleyin:
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneği üzerinde bir tahmin gerçekleştirmenizi ve daha sonra bir tahmin gerçekleştirmenizi sağlayan KULLANıŞLı bir API 'dir. Bunu, yönteminin bir sonraki satırı olarak ekleyin `BuildAndTrainModel()` :
 
 [!code-csharp[CreatePredictionEngine1](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreatePredictionEngine1)]
 
-### <a name="predict-with-the-trained-model"></a>Eğitimli model ile tahmin edin
+### <a name="predict-with-the-trained-model"></a>Eğitilen modelle birlikte tahmin edin
 
-Bir örnek oluşturarak `Predict` yöntemde eğitimli modelin tahmin test etmek `GitHubIssue`için bir GitHub sorunu ekleyin:
+Bir örneği oluşturarak eğitilen modelin bir tahminini test etmek için bir GitHub sorunu ekleyin `Predict` `GitHubIssue` :
 
 [!code-csharp[CreateTestIssue1](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreateTestIssue1)]
 
-[Predict()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevini kullanma, tek bir veri satırı nda öngörüyapar:
+[Tahmin ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevini kullanın, tek bir veri satırında tahmin yapar:
 
 [!code-csharp[Predict](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#Predict)]
 
 ### <a name="using-the-model-prediction-results"></a>Modeli kullanma: tahmin sonuçları
 
-Sonuçları `GitHubIssue` paylaşmak `Area` ve buna göre hareket etmek için etiket tahminini görüntüleyin.  Aşağıdaki <xref:System.Console.WriteLine?displayProperty=nameWithType> kodu kullanarak sonuçlar için bir ekran oluşturun:
+`GitHubIssue` `Area` Sonuçları paylaşmak ve bunlara göre işlem yapmak için ilgili etiket tahminini görüntüleyin.  Aşağıdaki kodu kullanarak sonuçlar için bir görüntü oluşturun <xref:System.Console.WriteLine?displayProperty=nameWithType> :
 
 [!code-csharp[OutputPrediction](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#OutputPrediction)]
 
-### <a name="return-the-model-trained-to-use-for-evaluation"></a>Değerlendirme için kullanılmak üzere eğitilmiş modeli döndürme
+### <a name="return-the-model-trained-to-use-for-evaluation"></a>Değerlendirme için kullanılmak üzere eğitilen modeli döndürün
 
-Yöntemin sonunda modeli döndürün. `BuildAndTrainModel`
+Metodun sonundaki modeli döndürün `BuildAndTrainModel` .
 
 [!code-csharp[ReturnModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#ReturnModel)]
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
-Modeli oluşturduğunuz ve eğittiğinize göre, modeli kalite güvencesi ve doğrulama için farklı bir veri kümesiyle değerlendirmeniz gerekir. `Evaluate` Yöntemde, oluşturulan model `BuildAndTrainModel` değerlendirilmek üzere geçirilir. Aşağıdaki `Evaluate` kodda olduğu `BuildAndTrainModel`gibi, hemen sonra yöntemi oluşturun:
+Modeli oluşturup eğitildiniz, artık kalite güvencesi ve doğrulama için farklı bir veri kümesiyle değerlendirmeniz gerekir. `Evaluate`Yönteminde, içinde oluşturulan model `BuildAndTrainModel` değerlendirilmek üzere geçirilir. `Evaluate`Yöntemi `BuildAndTrainModel` aşağıdaki kodda olduğu gibi, hemen sonrasında oluşturun:
 
 ```csharp
 public static void Evaluate(DataViewSchema trainingDataViewSchema)
@@ -248,50 +250,50 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 }
 ```
 
-Yöntem `Evaluate` aşağıdaki görevleri yürütür:
+`Evaluate`Yöntemi aşağıdaki görevleri yürütür:
 
 * Test veri kümesini yükler.
-* Çok sınıflı değerlendirici oluşturur.
-* Modeli değerlendirir ve ölçümleri oluşturur.
+* Birden çok Lass değerlendirici oluşturur.
+* Modeli değerlendirir ve ölçüm oluşturur.
 * Ölçümleri görüntüler.
 
-Aşağıdaki kodu `Main` kullanarak, yöntem çağrısının `BuildAndTrainModel` hemen altında, yöntemden yeni yönteme çağrı ekleyin:
+`Main`Aşağıdaki kodu kullanarak yöntem çağrısının hemen altına, yönteminden yeni yönteme bir çağrı ekleyin `BuildAndTrainModel` :
 
 [!code-csharp[CallEvaluate](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallEvaluate)]
 
-Daha önce eğitim veri setinde yaptığınız gibi, yönteme aşağıdaki kodu ekleyerek `Evaluate` test veri kümesini yükleyin:
+Daha önce eğitim veri kümesiyle yaptığınız gibi, yöntemine aşağıdaki kodu ekleyerek test veri kümesini yükleyin `Evaluate` :
 
 [!code-csharp[LoadTestDataset](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#LoadTestDataset)]
 
-[Değerlendirme()](xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A) yöntemi, belirtilen veri kümesini kullanarak modelin kalite ölçümlerini hesaplar. Çok sınıflı sınıflandırma değerlendiriciler tarafından hesaplanan genel ölçümleri içeren bir <xref:Microsoft.ML.Data.MulticlassClassificationMetrics> nesne döndürür.
-Modelin kalitesini belirlemek için ölçümleri görüntülemek için önce bunları almanız gerekir.
-Özellikleri ve dönüş tahminlerini girdi etmek `_trainedModel` için makine öğrenme global değişkeninin (bir [ITransformer)](xref:Microsoft.ML.ITransformer) [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) yönteminin kullanımına dikkat edin. `Evaluate` Yönteme sonraki satır olarak aşağıdaki kodu ekleyin:
+[Değerlendir ()](xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A) yöntemi, belirtilen veri kümesini kullanarak model için kalite ölçümlerini hesaplar. <xref:Microsoft.ML.Data.MulticlassClassificationMetrics>Birden çok Lass Classification değerlendiricileri tarafından hesaplanan genel ölçümleri içeren bir nesne döndürür.
+Modelin kalitesini belirleme ölçümlerini göstermek için önce bunları almanız gerekir.
+[Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) `_trainedModel` Özellikleri girmek ve tahmin getirmeleri için Machine Learning genel değişkeninin (bir [ıranseski](xref:Microsoft.ML.ITransformer)) Transform () yönteminin kullanımına dikkat edin. Aşağıdaki kodu `Evaluate` yöntemine sonraki satır olarak ekleyin:
 
 [!code-csharp[Evaluate](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#Evaluate)]
 
-Aşağıdaki ölçümler çok sınıflı sınıflandırma için değerlendirilir:
+Aşağıdaki ölçümler birden çok Lass sınıflandırması için değerlendirilir:
 
-* Mikro Doğruluk - Her örnek sınıfı çifti doğruluk ölçümüne eşit katkıda bulunur.  Micro Accuracy'in mümkün olduğunca yakın olmasını istiyorsunuz.
+* Mikro doğruluk-her örnek sınıf çifti, doğruluk ölçüsüne eşit olarak katkıda bulunur.  Mikro doğruluk ' ın mümkün olduğunca yakın olmasını istiyorsunuz.
 
-* Makro Doğruluğu - Her sınıf doğruluk ölçümüne eşit katkıda bulunur. Azınlık sınıfları daha büyük sınıflar olarak eşit ağırlık verilir. Makro Doğruluğu'nun mümkün olduğunca yakın olmasını istiyorsunuz.
+* Makro doğruluğu-her sınıf, doğruluk ölçüsüne eşit olarak katkıda bulunur. Minınlık sınıflarına daha büyük sınıflar olarak eşit ağırlık verilir. Makro doğruluğunu mümkün olduğunca yakın bir şekilde tercih edebilirsiniz.
 
-* Günlük kaybı - [bkz.](../resources/glossary.md#log-loss) Log-loss'un mümkün olduğunca sıfıra yakın olmasını istiyorsunuz.
+* Günlük-kayıp- [günlük kaybını](../resources/glossary.md#log-loss)görüntüleyin. Günlük kaybını mümkün olduğunca sıfıra yakın olacak şekilde istiyorsunuz.
 
-* Günlük kaybı azaltma - 1.00'In mükemmel tahminleri olduğu ve 0'ın ortalama tahminleri gösterdiği [-inf, 1.00]'den aralıklar. Günlük kaybı azaltmanın mümkün olduğunca yakın olmasını istiyorsunuz.
+* Günlük kaybı azaltma-[-inf, 1,00] aralığından, 1,00 ' nin kusursuz tahminlerden ve 0 ' ın, ortalama tahmine dayalı olduğunu gösterir. Günlük kaybını azaltmanın mümkün olduğunca yakın olmasını istiyorsunuz.
 
-### <a name="displaying-the-metrics-for-model-validation"></a>Model doğrulama için ölçümlerin görüntülenmesi
+### <a name="displaying-the-metrics-for-model-validation"></a>Model doğrulama ölçümlerini görüntüleme
 
-Ölçümleri görüntülemek, sonuçları paylaşmak ve sonra bunlara göre hareket etmek için aşağıdaki kodu kullanın:
+Ölçümleri göstermek, sonuçları paylaşmak ve sonra bunlar üzerinde işlem yapmak için aşağıdaki kodu kullanın:
 
 [!code-csharp[DisplayMetrics](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DisplayMetrics)]
 
-### <a name="save-the-model-to-a-file"></a>Modeli bir dosyaya kaydetme
+### <a name="save-the-model-to-a-file"></a>Modeli bir dosyaya kaydet
 
-Modelinizden memnun kaldıktan sonra, daha sonra veya başka bir uygulamada öngörülerde bulunmak için dosyayı bir dosyaya kaydedin. `Evaluate` yöntemine aşağıdaki kodu ekleyin.
+Modelinize her memnun olduktan sonra, daha sonra veya başka bir uygulamada tahmine dayalı hale getirmek için dosyayı bir dosyaya kaydedin. `Evaluate` yöntemine aşağıdaki kodu ekleyin.
 
 [!code-csharp[SnippetCallSaveModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetCallSaveModel)]
 
-Yönteminizin `SaveModelAsFile` `Evaluate` altındaki yöntemi oluşturun.
+Yönteminizin `SaveModelAsFile` altında yöntemi oluşturun `Evaluate` .
 
 ```csharp
 private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
@@ -300,17 +302,17 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-Yönteminize `SaveModelAsFile` aşağıdaki kodu ekleyin. Bu kod, [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) eğitilen modeli zip dosyası olarak seri hale getirmek ve depolamak için yöntemi kullanır.
+Yöntemine aşağıdaki kodu ekleyin `SaveModelAsFile` . Bu kod, [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) eğitilen modeli seri hale getirmek ve bir ZIP dosyası olarak depolamak için yöntemini kullanır.
 
 [!code-csharp[SnippetSaveModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetSaveModel)]
 
-## <a name="deploy-and-predict-with-a-model"></a>Bir modelle Dağıtma ve Tahmin Etme
+## <a name="deploy-and-predict-with-a-model"></a>Bir modelle dağıtım ve tahmin etme
 
-Aşağıdaki kodu `Main` kullanarak, yöntem çağrısının `Evaluate` hemen altında, yöntemden yeni yönteme çağrı ekleyin:
+`Main`Aşağıdaki kodu kullanarak yöntem çağrısının hemen altına, yönteminden yeni yönteme bir çağrı ekleyin `Evaluate` :
 
 [!code-csharp[CallPredictIssue](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CallPredictIssue)]
 
-Yöntemden `PredictIssue` `Evaluate` hemen sonra (ve yöntemden `SaveModelAsFile` hemen önce) aşağıdaki kodu kullanarak yöntemi oluşturun:
+Yöntemi, `PredictIssue` `Evaluate` aşağıdaki kodu kullanarak yönteminden hemen sonra (ve yönteminden hemen önce `SaveModelAsFile` ) oluşturun:
 
 ```csharp
 private static void PredictIssue()
@@ -319,44 +321,44 @@ private static void PredictIssue()
 }
 ```
 
-Yöntem `PredictIssue` aşağıdaki görevleri yürütür:
+`PredictIssue`Yöntemi aşağıdaki görevleri yürütür:
 
 * Kaydedilen modeli yükler
-* Tek bir test verisi sorunu oluşturur.
-* Test verilerine göre Alanı tahmin eder.
-* Raporlama için test verilerini ve öngörüleri birleştirir.
-* Öngörülen sonuçları görüntüler.
+* Test verileri için tek bir sorun oluşturur.
+* Test verilerine göre alanı tahmin eder.
+* Raporlama için test verilerini ve tahminleri birleştirir.
+* Tahmin edilen sonuçları görüntüler.
 
-Yönteme aşağıdaki kodu ekleyerek kaydedilen modeli uygulamanıza yükleyin: `PredictIssue`
+Yöntemine aşağıdaki kodu ekleyerek kaydedilen modeli uygulamanıza yükleyin `PredictIssue` :
 
 [!code-csharp[SnippetLoadModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetLoadModel)]
 
-Bir örnek oluşturarak `Predict` yöntemde eğitimli modelin tahmin test etmek `GitHubIssue`için bir GitHub sorunu ekleyin:
+Bir örneği oluşturarak eğitilen modelin bir tahminini test etmek için bir GitHub sorunu ekleyin `Predict` `GitHubIssue` :
 
 [!code-csharp[AddTestIssue](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#AddTestIssue)]
 
-Daha önce yaptığınız gibi, `PredictionEngine` aşağıdaki kodu içeren bir örnek oluşturun:
+Daha önce yaptığınız gibi, `PredictionEngine` aşağıdaki kodla bir örnek oluşturun:
 
 [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreatePredictionEngine)]
 
-[PredictionEngine,](xref:Microsoft.ML.PredictionEngine%602) tek bir veri örneği üzerinde tahmin gerçekleştirmenize olanak tanıyan kolaylık api'sidir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)iş parçacığı güvenli değildir. Tek dişli veya prototip ortamlarda kullanılabilir. Üretim ortamlarında daha iyi performans ve `PredictionEnginePool` iş parçacığı güvenliği [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) için, uygulamanız boyunca kullanılmak üzere bir nesne oluşturan hizmeti kullanın. ASP.NET Core Web [API'de `PredictionEnginePool` ](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)nasıl kullanılacağı yla ilgili bu kılavuza bakın.
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
 > [!NOTE]
-> `PredictionEnginePool`hizmet uzantısı şu anda önizlemededir.
+> `PredictionEnginePool`Hizmet Uzantısı Şu anda önizleme aşamasındadır.
 
-Tahmin `PredictionEngine` `PredictIssue` yöntemine aşağıdaki kodu ekleyerek Area GitHub etiketini tahmin etmek için kullanın:
+Tahmine `PredictionEngine` yönelik yöntemine aşağıdaki kodu ekleyerek, alanı GitHub etiketini tahmin etmek için öğesini kullanın `PredictIssue` :
 
 [!code-csharp[PredictIssue](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#PredictIssue)]
 
-### <a name="using-the-loaded-model-for-prediction"></a>Tahmin için yüklenen modeli kullanma
+### <a name="using-the-loaded-model-for-prediction"></a>Yüklü modeli tahmin için kullanma
 
-Sorunu `Area` kategorilere ayırmak ve buna göre hareket etmek için görüntüleyin. Aşağıdaki <xref:System.Console.WriteLine?displayProperty=nameWithType> kodu kullanarak sonuçlar için bir ekran oluşturun:
+`Area`Sorunu kategorilere ayırarak ve buna uygun şekilde hareket etmek için görüntüleyin. Aşağıdaki kodu kullanarak sonuçlar için bir görüntü oluşturun <xref:System.Console.WriteLine?displayProperty=nameWithType> :
 
 [!code-csharp[DisplayResults](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#DisplayResults)]
 
 ## <a name="results"></a>Sonuçlar
 
-Sonuçlarınız aşağıdakilere benzer olmalıdır. Ardışık işlem olarak, iletileri görüntüler. Uyarılar veya iletileri işleme görebilirsiniz. Bu iletiler netlik için aşağıdaki sonuçlardan kaldırıldı.
+Sonuçlarınız aşağıdakine benzer olmalıdır. İşlem hattı sırasında iletileri görüntüler. Uyarıları görebilir veya iletileri işleme alabilirsiniz. Bu iletiler, açıklık açısından aşağıdaki sonuçlardan kaldırılmıştır.
 
 ```console
 =============== Single Prediction just-trained-model - Result: area-System.Net ===============
@@ -371,7 +373,7 @@ Sonuçlarınız aşağıdakilere benzer olmalıdır. Ardışık işlem olarak, i
 =============== Single Prediction - Result: area-System.Data ===============
 ```
 
-Tebrikler! Şimdi başarılı bir şekilde sınıflandırmak ve bir GitHub sorunu için bir Alan etiketi tahmin için bir makine öğrenme modeli inşa ettik. Bu öğreticinin kaynak kodunu [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
+Tebrikler! Artık bir GitHub sorunu için bir alan etiketini sınıflandırmak ve tahmin etmek üzere bir makine öğrenimi modeli oluşturdunuz. Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
@@ -382,9 +384,9 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 > * Verileri dönüştürme
 > * Modeli eğitme
 > * Modeli değerlendirme
-> * Eğitimli model ile tahmin edin
-> * Yüklü bir modelle Dağıtma ve Tahmin Etme
+> * Eğitilen modelle birlikte tahmin edin
+> * Yüklü bir modelle dağıtım ve tahmin etme
 
-Daha fazla bilgi edinmek için bir sonraki öğreticiye ilerleyin
+Daha fazla bilgi edinmek için sonraki öğreticiye ilerleyin
 > [!div class="nextstepaction"]
-> [Taksi Ücreti Tahmincisi](predict-prices.md)
+> [Taxı tarifeli havayolu Predictor](predict-prices.md)

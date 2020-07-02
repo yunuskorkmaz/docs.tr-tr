@@ -1,15 +1,15 @@
 ---
 title: "Öğretici: TensorFlow 'dan ML.NET görüntü sınıflandırma modeli"
 description: Mevcut bir TensorFlow modelinden yeni bir ML.NET görüntü sınıflandırma modeline bilgi aktarmayı öğrenin. TensorFlow modeli görüntüleri bin kategoride sınıflandırmakta eğitildi. ML.NET modeli görüntüleri daha az daha geniş kategoriler halinde sınıflandırmak için aktarım öğrenimini kullanır.
-ms.date: 01/30/2020
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 38fa349e743da54a21aeb65b76a0273a17c3fae7
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85804008"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Öğretici: önceden eğitilen bir TensorFlow modelinden ML.NET görüntü sınıflandırma modeli oluşturma
 
@@ -66,9 +66,9 @@ Görüntü sınıflandırması, görüntüleri otomatik olarak kategoriler halin
 >[!Note]
 > Önceki görüntüler Wikimedia Commons ' a aittir ve aşağıdaki gibi verilmiştir:
 >
-> * "220px-Pepperoni_pizza. jpg" genel etki alanı, <https://commons.wikimedia.org/w/index.php?curid=79505> ,
-> * [Jonık](https://commons.wikimedia.org/wiki/User:Jonik) -Self-Photo, CC BY-SA 2,0, ile "119px-Nalle_-_a_small_brown_teddy_bear. jpg" <https://commons.wikimedia.org/w/index.php?curid=48166> .
-> * "193px-Broodrooster. jpg"- [k. Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) -kendi ÇALıŞMASı, CC BY-SA 3,0,<https://commons.wikimedia.org/w/index.php?curid=27403>
+> * "220px-Pepperoni_pizza.jpg" ortak etki alanı <https://commons.wikimedia.org/w/index.php?curid=79505> ,
+> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg", [Jonık](https://commons.wikimedia.org/wiki/User:Jonik) -Self-PHOTOGRAFIĞI, CC BY-SA 2,0, <https://commons.wikimedia.org/w/index.php?curid=48166> .
+> * "193px-Broodrooster.jpg", [a. Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) -kendi Iş, CC BY-SA 3,0,<https://commons.wikimedia.org/w/index.php?curid=27403>
 
 `Inception model`Görüntüleri bin kategoride sınıflandırıp, ancak bu öğreticide, görüntüleri daha küçük bir kategori kümesinde ve yalnızca bu kategorilerden sınıflandırmanız gerekir. Parçasını girin `transfer` `transfer learning` . `Inception model`Özel görüntü sınıflandırıcınızın yeni sınırlı kategorilerine görüntü tanıma ve sınıflandırma özelliğini aktarabilirsiniz.
 
@@ -122,12 +122,14 @@ Eğitim ve test görüntüleri, bir ZIP dosyasında indirileceği varlıklar kla
 
 1. **Microsoft.ml NuGet paketini**yükler:
 
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     * Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
     * Paket kaynağı olarak "nuget.org" öğesini seçin, gözden geçirme sekmesini seçin, **Microsoft.ml**için arama yapın.
-    * **Sürüm** açılır listesine tıklayın, listeden **1.4.0** paketini seçin ve ardından **Kaldır düğmesini seçin** .
+    * **Install** düğmesini seçin.
     * **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin.
     * Listelenen paketlerin lisans koşullarını kabul ediyorsanız, **Lisans kabulü** Iletişim kutusunda **kabul ediyorum** düğmesini seçin.
-    * **Microsoft. ml. ımageanalytics v 1.4.0**, **SciSharp. TensorFlow. Redist v 1.15.0** ve **Microsoft. ml. TensorFlow v 1.4.0**için bu adımları yineleyin.
+    * **Microsoft. ml. ımageanalytics**, **SciSharp. TensorFlow. Redist** ve **Microsoft. ml. TensorFlow**için bu adımları yineleyin.
 
 ### <a name="download-assets"></a>Varlıkları indir
 

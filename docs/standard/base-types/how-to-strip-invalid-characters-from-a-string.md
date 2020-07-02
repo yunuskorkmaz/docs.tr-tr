@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: Dizeden Geçersiz Karakterleri Çıkartma'
 description: Statik Regex. Replace metodunu kullanarak bir dizeden zararlı olabilecek karakterlerin nasıl sökülmesini gösteren bir örnek okuyun.
-ms.date: 03/30/2017
+ms.date: 06/30/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -17,16 +17,18 @@ helpviewer_keywords:
 - Replace method
 - validating user input
 ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
-ms.openlocfilehash: f9d671587d174a1eb2bb6a5dac24bdd0220be3dd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5e0cd423df7fce03cdefb3da7bc192f3045e8f9c
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803995"
 ---
 # <a name="how-to-strip-invalid-characters-from-a-string"></a>Nasıl yapılır: Dizeden Geçersiz Karakterleri Çıkartma
 Aşağıdaki örnek, <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> bir dizeden geçersiz karakterleri atmak için statik yöntemi kullanır.  
-  
+
+[!INCLUDE [regex](../../../includes/regex.md)]
+
 ## <a name="example"></a>Örnek  
  `CleanInput`Kullanıcı girişini kabul eden bir metin alanına girilmiş olabilecek zararlı karakterleri birleştirmek için bu örnekte tanımlanan yöntemi kullanabilirsiniz. Bu durumda, `CleanInput` noktalar (.), semboller (@) ve tire (-) dışındaki tüm alfasayısal olmayan karakterleri kaldırır ve kalan dizeyi döndürür. Ancak, normal ifade deseninin bir giriş dizesine dahil olmaması gereken herhangi bir karakteri şeritleri için değişiklik yapabilirsiniz.  
   

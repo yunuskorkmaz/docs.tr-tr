@@ -3,15 +3,15 @@ title: 'Öğretici: aktarım öğrenimi kullanarak otomatikleştirilmiş görsel
 description: Bu öğreticide, somut yüzeylerin görüntülerini kırçıkarılan veya Kırçıkmıyor olarak sınıflandırmak için görüntü algılama API 'sini kullanarak ML.NET ' deki bir TensorFlow derin öğrenme modelini nasıl eğitecağın nasıl kullanılacağı gösterilmektedir.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803748"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
@@ -81,7 +81,10 @@ Bu öğreticide kullanılan önceden eğitilen model, kalan ağ (ResNet) v2 mode
 Aktarım öğrenimine ve görüntü sınıflandırma API 'sine ilişkin genel bir bilgiye sahip olduğunuza göre, uygulamayı derlemek zaman alabilir.
 
 1. "DeepLearning_ImageClassification_Binary" adlı bir **C# .NET Core konsol uygulaması** oluşturun.
-1. **Microsoft.ml** Version **1.4.0** NuGet paketini yükler:
+1. **Microsoft.ml** NuGet paketini yükler:
+
+    [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
+
     1. Çözüm Gezgini, projenize sağ tıklayın ve **NuGet Paketlerini Yönet**' i seçin.
     1. Paket kaynağı olarak "nuget.org" öğesini seçin.
     1. **Gözat** sekmesini seçin.
@@ -89,7 +92,7 @@ Aktarım öğrenimine ve görüntü sınıflandırma API 'sine ilişkin genel bi
     1. **Microsoft.ml**için arama yapın.
     1. **Install** düğmesini seçin.
     1. **Değişiklikleri Önizle** Iletişim kutusunda **Tamam** düğmesini seçin ve ardından listelenen paketlerin lisans koşullarını kabul ediyorsanız **Lisans kabulü** iletişim kutusunda **kabul ediyorum** düğmesini seçin.
-    1. Bu adımları **Microsoft. ml. Vision** sürümü **1.4.0**, **SciSharp. TensorFlow. Redist** sürüm **1.15.0**ve **Microsoft. ml. ımageanalytics** sürümü **1.4.0** NuGet paketleri için yineleyin.
+    1. **Microsoft. ml. Vision**, **SciSharp. TensorFlow. Redist**ve **Microsoft. ml. ımageanalytics** NuGet paketleri için bu adımları yineleyin.
 
 ### <a name="prepare-and-understand-the-data"></a>Verileri hazırlama ve anlama
 
@@ -378,7 +381,7 @@ Image: 7001-163.jpg | Actual Value: UD | Predicted Value: UD
 Image: 7001-210.jpg | Actual Value: UD | Predicted Value: UD
 ```
 
-*7001 -220. jpg* görüntüsünü incelemeden, aslında bunun kırdığını görebilirsiniz.
+*7001-220.jpg* görüntüsünü incelemeden, aslında bunun kırdığını görebilirsiniz.
 
 ![Tahmin için kullanılan SDNET2018 veri kümesi görüntüsü](./media/image-classification-api-transfer-learning/predictedimage.jpg)
 

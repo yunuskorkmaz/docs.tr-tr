@@ -1,5 +1,6 @@
 ---
 title: overlappedFreeError MDA
+description: .NET 'teki overlappedFreeError Managed hata ayıklama Yardımcısı 'nı (MDA) inceleyerek, erişim ihlallerinde veya atık toplanan yığının bozulmasıyla etkinleştirilebilir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - OverlappedFreeError MDA
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 9be33c59723ecb2743f2bc610d7fb69d24ff388c
+ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85803929"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-`overlappedFreeError` yönetilen hata ayıklama Yardımcısı (MDA), çakışan işlem tamamlanmadan önce <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> yöntemi çağrıldığında etkinleştirilir.  
+`overlappedFreeError`Yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> yöntemi örtüşen işlem tamamlanmadan önce çağrıldığında etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
  Çöp toplanmış yığının erişim ihlalleri veya bozulması.  
@@ -28,7 +29,7 @@ ms.locfileid: "77217259"
  Çakışan işlem başarıyla başlamadıysanız Bu MDA bir hata temsil edemeyebilir.  
   
 ## <a name="resolution"></a>Çözüm  
- <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> yöntemi çağrılmadan önce çakışan yapıyı kullanan g/ç işleminin tamamlandığından emin olun.  
+ Metodu çağırmadan önce çakışan yapıyı kullanan g/ç işleminin tamamlandığından emin olun <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> .  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
@@ -52,4 +53,4 @@ ms.locfileid: "77217259"
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../interop/interop-marshaling.md)
