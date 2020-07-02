@@ -4,44 +4,44 @@ description: OpenSUSE üzerinde .NET Core SDK ve .NET Core çalışma zamanı y�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 3a2ff1ca1519428f42c88048dde22aa11baaaa01
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85619474"
 ---
-# <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a><span data-ttu-id="e28c2-103">OpenSUSE 'e .NET Core SDK veya .NET Core çalışma zamanı yüklemesi</span><span class="sxs-lookup"><span data-stu-id="e28c2-103">Install .NET Core SDK or .NET Core Runtime on openSUSE</span></span>
+# <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a><span data-ttu-id="a2629-103">OpenSUSE 'e .NET Core SDK veya .NET Core çalışma zamanı yüklemesi</span><span class="sxs-lookup"><span data-stu-id="a2629-103">Install .NET Core SDK or .NET Core Runtime on openSUSE</span></span>
 
-<span data-ttu-id="e28c2-104">.NET Core, openSUSE 'de desteklenir.</span><span class="sxs-lookup"><span data-stu-id="e28c2-104">.NET Core is supported on openSUSE.</span></span> <span data-ttu-id="e28c2-105">Bu makalede, openSUSE üzerinde .NET Core 'un nasıl yükleneceği açıklanır.</span><span class="sxs-lookup"><span data-stu-id="e28c2-105">This article describes how to install .NET Core on openSUSE.</span></span>
+<span data-ttu-id="a2629-104">.NET Core, openSUSE 'de desteklenir.</span><span class="sxs-lookup"><span data-stu-id="a2629-104">.NET Core is supported on openSUSE.</span></span> <span data-ttu-id="a2629-105">Bu makalede, openSUSE üzerinde .NET Core 'un nasıl yükleneceği açıklanır.</span><span class="sxs-lookup"><span data-stu-id="a2629-105">This article describes how to install .NET Core on openSUSE.</span></span>
 
 [!INCLUDE [linux-intro-sdk-vs-runtime](includes/linux-intro-sdk-vs-runtime.md)]
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
-## <a name="supported-distributions"></a><span data-ttu-id="e28c2-106">Desteklenen dağıtımlar</span><span class="sxs-lookup"><span data-stu-id="e28c2-106">Supported distributions</span></span>
+## <a name="supported-distributions"></a><span data-ttu-id="a2629-106">Desteklenen dağıtımlar</span><span class="sxs-lookup"><span data-stu-id="a2629-106">Supported distributions</span></span>
 
-<span data-ttu-id="e28c2-107">Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET Core sürümlerinin bir listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="e28c2-107">The following table is a list of currently supported .NET Core releases on openSUSE 15.</span></span> <span data-ttu-id="e28c2-108">Bu sürümler, [.NET Core 'un sürümü destek sonuna](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya openSUSE 'un sürümü artık desteklenene kadar desteklenmeye devam eder.</span><span class="sxs-lookup"><span data-stu-id="e28c2-108">These versions remain supported until either the version of [.NET Core reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of openSUSE is no longer supported.</span></span>
+<span data-ttu-id="a2629-107">Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET Core sürümlerinin bir listesi verilmiştir.</span><span class="sxs-lookup"><span data-stu-id="a2629-107">The following table is a list of currently supported .NET Core releases on openSUSE 15.</span></span> <span data-ttu-id="a2629-108">Bu sürümler, [.NET Core 'un sürümü destek sonuna](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) veya openSUSE 'un sürümü artık desteklenene kadar desteklenmeye devam eder.</span><span class="sxs-lookup"><span data-stu-id="a2629-108">These versions remain supported until either the version of [.NET Core reaches end-of-support](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) or the version of openSUSE is no longer supported.</span></span>
 
-- <span data-ttu-id="e28c2-109">✔️, openSUSE veya .NET Core sürümünün hala desteklendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="e28c2-109">A ✔️ indicates that the version of openSUSE or .NET Core is still supported.</span></span>
-- <span data-ttu-id="e28c2-110">Bir ❌ , openSUSE veya .NET Core sürümünün bu openSUSE sürümünde desteklenmediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="e28c2-110">A ❌ indicates that the version of openSUSE or .NET Core isn't supported on that openSUSE release.</span></span>
-- <span data-ttu-id="e28c2-111">Hem openSUSE hem de .NET Core sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.</span><span class="sxs-lookup"><span data-stu-id="e28c2-111">When both a version of openSUSE and a version of .NET Core have ✔️, that OS and .NET combination are supported.</span></span>
+- <span data-ttu-id="a2629-109">✔️, openSUSE veya .NET Core sürümünün hala desteklendiğini gösterir.</span><span class="sxs-lookup"><span data-stu-id="a2629-109">A ✔️ indicates that the version of openSUSE or .NET Core is still supported.</span></span>
+- <span data-ttu-id="a2629-110">Bir ❌ , openSUSE veya .NET Core sürümünün bu openSUSE sürümünde desteklenmediğini belirtir.</span><span class="sxs-lookup"><span data-stu-id="a2629-110">A ❌ indicates that the version of openSUSE or .NET Core isn't supported on that openSUSE release.</span></span>
+- <span data-ttu-id="a2629-111">Hem openSUSE hem de .NET Core sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.</span><span class="sxs-lookup"><span data-stu-id="a2629-111">When both a version of openSUSE and a version of .NET Core have ✔️, that OS and .NET combination are supported.</span></span>
 
-| <span data-ttu-id="e28c2-112">openSUSE</span><span class="sxs-lookup"><span data-stu-id="e28c2-112">openSUSE</span></span>                   | <span data-ttu-id="e28c2-113">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="e28c2-113">.NET Core 2.1</span></span> | <span data-ttu-id="e28c2-114">.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="e28c2-114">.NET Core 3.1</span></span> | <span data-ttu-id="e28c2-115">.NET 5 Preview (yalnızca el ile yüklenir)</span><span class="sxs-lookup"><span data-stu-id="e28c2-115">.NET 5 Preview (manual install only)</span></span> |
+| <span data-ttu-id="a2629-112">openSUSE</span><span class="sxs-lookup"><span data-stu-id="a2629-112">openSUSE</span></span>                   | <span data-ttu-id="a2629-113">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="a2629-113">.NET Core 2.1</span></span> | <span data-ttu-id="a2629-114">.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="a2629-114">.NET Core 3.1</span></span> | <span data-ttu-id="a2629-115">.NET 5 Preview (yalnızca el ile yüklenir)</span><span class="sxs-lookup"><span data-stu-id="a2629-115">.NET 5 Preview (manual install only)</span></span> |
 |----------------------------|---------------|---------------|----------------|
-| <span data-ttu-id="e28c2-116">✔️ [15](#opensuse-15-)</span><span class="sxs-lookup"><span data-stu-id="e28c2-116">✔️ [15](#opensuse-15-)</span></span>     | <span data-ttu-id="e28c2-117">✔️ 2,1</span><span class="sxs-lookup"><span data-stu-id="e28c2-117">✔️ 2.1</span></span>        | <span data-ttu-id="e28c2-118">✔️ 3,1</span><span class="sxs-lookup"><span data-stu-id="e28c2-118">✔️ 3.1</span></span>        | <span data-ttu-id="e28c2-119">✔️ 5,0 Preview</span><span class="sxs-lookup"><span data-stu-id="e28c2-119">✔️ 5.0 Preview</span></span> |
+| <span data-ttu-id="a2629-116">✔️ [15](#opensuse-15-)</span><span class="sxs-lookup"><span data-stu-id="a2629-116">✔️ [15](#opensuse-15-)</span></span>     | <span data-ttu-id="a2629-117">✔️ 2,1</span><span class="sxs-lookup"><span data-stu-id="a2629-117">✔️ 2.1</span></span>        | <span data-ttu-id="a2629-118">✔️ 3,1</span><span class="sxs-lookup"><span data-stu-id="a2629-118">✔️ 3.1</span></span>        | <span data-ttu-id="a2629-119">✔️ 5,0 Preview</span><span class="sxs-lookup"><span data-stu-id="a2629-119">✔️ 5.0 Preview</span></span> |
 
-<span data-ttu-id="e28c2-120">Aşağıdaki .NET Core sürümleri artık desteklenmemektedir.</span><span class="sxs-lookup"><span data-stu-id="e28c2-120">The following versions of .NET Core are no longer supported.</span></span> <span data-ttu-id="e28c2-121">Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:</span><span class="sxs-lookup"><span data-stu-id="e28c2-121">The downloads for these still remain published:</span></span>
+<span data-ttu-id="a2629-120">Aşağıdaki .NET Core sürümleri artık desteklenmemektedir.</span><span class="sxs-lookup"><span data-stu-id="a2629-120">The following versions of .NET Core are no longer supported.</span></span> <span data-ttu-id="a2629-121">Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:</span><span class="sxs-lookup"><span data-stu-id="a2629-121">The downloads for these still remain published:</span></span>
 
-- <span data-ttu-id="e28c2-122">3.0</span><span class="sxs-lookup"><span data-stu-id="e28c2-122">3.0</span></span>
-- <span data-ttu-id="e28c2-123">2,2</span><span class="sxs-lookup"><span data-stu-id="e28c2-123">2.2</span></span>
-- <span data-ttu-id="e28c2-124">2.0</span><span class="sxs-lookup"><span data-stu-id="e28c2-124">2.0</span></span>
+- <span data-ttu-id="a2629-122">3.0</span><span class="sxs-lookup"><span data-stu-id="a2629-122">3.0</span></span>
+- <span data-ttu-id="a2629-123">2,2</span><span class="sxs-lookup"><span data-stu-id="a2629-123">2.2</span></span>
+- <span data-ttu-id="a2629-124">2.0</span><span class="sxs-lookup"><span data-stu-id="a2629-124">2.0</span></span>
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="e28c2-125">Diğer sürümleri nasıl yüklenir</span><span class="sxs-lookup"><span data-stu-id="e28c2-125">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="a2629-125">Diğer sürümleri nasıl yüklenir</span><span class="sxs-lookup"><span data-stu-id="a2629-125">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="opensuse-15-"></a><span data-ttu-id="e28c2-126">openSUSE 15 ✔️</span><span class="sxs-lookup"><span data-stu-id="e28c2-126">openSUSE 15 ✔️</span></span>
+## <a name="opensuse-15-"></a><span data-ttu-id="a2629-126">openSUSE 15 ✔️</span><span class="sxs-lookup"><span data-stu-id="a2629-126">openSUSE 15 ✔️</span></span>
 
 [!INCLUDE [linux-prep-intro-generic](includes/linux-prep-intro-generic.md)]
 
@@ -55,30 +55,45 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 
 [!INCLUDE [linux-zyp-install-31](includes/linux-install-31-zyp.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="e28c2-127">Paket yöneticisinin sorunlarını giderme</span><span class="sxs-lookup"><span data-stu-id="e28c2-127">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="a2629-127">Paket yöneticisinin sorunlarını giderme</span><span class="sxs-lookup"><span data-stu-id="a2629-127">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="e28c2-128">Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.</span><span class="sxs-lookup"><span data-stu-id="e28c2-128">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
+<span data-ttu-id="a2629-128">Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.</span><span class="sxs-lookup"><span data-stu-id="a2629-128">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="e28c2-129">Getirilemedi</span><span class="sxs-lookup"><span data-stu-id="e28c2-129">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="a2629-129">Getirilemedi</span><span class="sxs-lookup"><span data-stu-id="a2629-129">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]
 
-## <a name="snap"></a><span data-ttu-id="e28c2-130">Bileşenlerinden</span><span class="sxs-lookup"><span data-stu-id="e28c2-130">Snap</span></span>
+## <a name="snap"></a><span data-ttu-id="a2629-130">Bileşenlerinden</span><span class="sxs-lookup"><span data-stu-id="a2629-130">Snap</span></span>
 
 [!INCLUDE [linux-install-snap](includes/linux-install-snap.md)]
 
-## <a name="dependencies"></a><span data-ttu-id="e28c2-131">Bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="e28c2-131">Dependencies</span></span>
+## <a name="dependencies"></a><span data-ttu-id="a2629-131">Bağımlılıklar</span><span class="sxs-lookup"><span data-stu-id="a2629-131">Dependencies</span></span>
 
-[!INCLUDE [linux-install-dependencies](includes/linux-install-dependencies.md)]
+<span data-ttu-id="a2629-132">Bir paket yöneticisi ile yüklediğinizde, bu kitaplıklar sizin için yüklenir.</span><span class="sxs-lookup"><span data-stu-id="a2629-132">When you install with a package manager, these libraries are installed for you.</span></span> <span data-ttu-id="a2629-133">Ancak, .NET Core 'u el ile yüklüyorsanız veya kendi kendine içerilen bir uygulama yayımlarsanız, bu kitaplıkların yüklü olduğundan emin olmanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="a2629-133">But, if you manually install .NET Core or you publish a self-contained app, you'll need to make sure these libraries are installed:</span></span>
 
-## <a name="scripted-install"></a><span data-ttu-id="e28c2-132">Komut dosyalı yüklemesi</span><span class="sxs-lookup"><span data-stu-id="e28c2-132">Scripted install</span></span>
+- <span data-ttu-id="a2629-134">krb5</span><span class="sxs-lookup"><span data-stu-id="a2629-134">krb5</span></span>
+- <span data-ttu-id="a2629-135">libıu</span><span class="sxs-lookup"><span data-stu-id="a2629-135">libicu</span></span>
+- <span data-ttu-id="a2629-136">libopenssl1_0_0</span><span class="sxs-lookup"><span data-stu-id="a2629-136">libopenssl1_0_0</span></span>
+
+<span data-ttu-id="a2629-137">Hedef çalışma zamanı ortamının OpenSSL sürümü 1,1 veya daha yeniyse, **COMPAT-openssl10**yüklemeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="a2629-137">If the target runtime environment's OpenSSL version is 1.1 or newer, you'll need to install **compat-openssl10**.</span></span>
+
+<span data-ttu-id="a2629-138">Bağımlılıklar hakkında daha fazla bilgi için bkz. [kendi Içindeki Linux uygulamaları](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span><span class="sxs-lookup"><span data-stu-id="a2629-138">For more information about the dependencies, see [Self-contained Linux apps](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).</span></span>
+
+<span data-ttu-id="a2629-139">*System. Drawing. Common* derlemesini kullanan .NET Core uygulamaları için aşağıdaki bağımlılığa de ihtiyacınız olacaktır:</span><span class="sxs-lookup"><span data-stu-id="a2629-139">For .NET Core apps that use the *System.Drawing.Common* assembly, you'll also need the following dependency:</span></span>
+
+- [<span data-ttu-id="a2629-140">libgdiplus (sürüm 6.0.1 veya üzeri)</span><span class="sxs-lookup"><span data-stu-id="a2629-140">libgdiplus (version 6.0.1 or later)</span></span>](https://www.mono-project.com/docs/gui/libgdiplus/)
+
+  > [!WARNING]
+  > <span data-ttu-id="a2629-141">En son bir *libgdiplus* sürümünü sisteminize mono deposunu ekleyerek yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a2629-141">You can install a recent version of *libgdiplus* by adding the Mono repository to your system.</span></span> <span data-ttu-id="a2629-142">Daha fazla bilgi için bkz. <https://www.mono-project.com/download/stable/>.</span><span class="sxs-lookup"><span data-stu-id="a2629-142">For more information, see <https://www.mono-project.com/download/stable/>.</span></span>
+
+## <a name="scripted-install"></a><span data-ttu-id="a2629-143">Komut dosyalı yüklemesi</span><span class="sxs-lookup"><span data-stu-id="a2629-143">Scripted install</span></span>
 
 [!INCLUDE [linux-install-scripted](includes/linux-install-scripted.md)]
 
-## <a name="manual-install"></a><span data-ttu-id="e28c2-133">El ile yüklemesi</span><span class="sxs-lookup"><span data-stu-id="e28c2-133">Manual install</span></span>
+## <a name="manual-install"></a><span data-ttu-id="a2629-144">El ile yüklemesi</span><span class="sxs-lookup"><span data-stu-id="a2629-144">Manual install</span></span>
 
 [!INCLUDE [linux-install-manual](includes/linux-install-manual.md)]
 
-## <a name="next-steps"></a><span data-ttu-id="e28c2-134">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="e28c2-134">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="a2629-145">Sonraki adımlar</span><span class="sxs-lookup"><span data-stu-id="a2629-145">Next steps</span></span>
 
-- [<span data-ttu-id="e28c2-135">Öğretici: Visual Studio Code kullanarak .NET Core SDK bir konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="e28c2-135">Tutorial: Create a console application with .NET Core SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)
+- [<span data-ttu-id="a2629-146">Öğretici: Visual Studio Code kullanarak .NET Core SDK bir konsol uygulaması oluşturma</span><span class="sxs-lookup"><span data-stu-id="a2629-146">Tutorial: Create a console application with .NET Core SDK using Visual Studio Code</span></span>](../tutorials/with-visual-studio-code.md)

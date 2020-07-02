@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 6c1740df66ead271afa5f97dc125587810946bc6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0470cefc05fb5da6a6195ee0a96f04feef01fd10
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "66379600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620688"
 ---
-### <a name="flowdocument-may-show-an-extra-line-of-text"></a><span data-ttu-id="6c553-101">FlowDocument fazladan bir satır metin gösterebilir.</span><span class="sxs-lookup"><span data-stu-id="6c553-101">FlowDocument may show an extra line of text</span></span>
+### <a name="flowdocument-may-show-an-extra-line-of-text"></a><span data-ttu-id="5eba5-101">FlowDocument, ek bir metin satırı gösterebilir</span><span class="sxs-lookup"><span data-stu-id="5eba5-101">FlowDocument may show an extra line of text</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="6c553-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="6c553-102">Details</span></span>|<span data-ttu-id="6c553-103">Bazı durumlarda, bir <xref:System.Windows.Documents.FlowDocument> .NET Framework 4.5, .NET Framework 4. 0'çalıştırdığınızda görüntülenme için karşılaştırıldığında üzerinde çalışırken öğe metin fazladan bir satır görüntülenir.</span><span class="sxs-lookup"><span data-stu-id="6c553-103">In some cases, a <xref:System.Windows.Documents.FlowDocument> element will display an extra line of text when running on the .NET Framework 4.5 compared to how it displayed when run on the .NET Framework 4.0.</span></span> <span data-ttu-id="6c553-104">Hatalı veya okunaklı olmama görüntülenecek herhangi bir metin neden değişikliği bilinen çalışması yok, ancak, daha önce gelen atlandı görünmesini sağlayabilir bir <xref:System.Windows.Documents.FlowDocument>kullanıcının görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="6c553-104">There are no known cases of the change causing any text to be displayed poorly or illegibly, but it could cause text to appear that previously was omitted from a <xref:System.Windows.Documents.FlowDocument>'s view.</span></span>|
-|<span data-ttu-id="6c553-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="6c553-105">Suggestion</span></span>|<span data-ttu-id="6c553-106">Bazı durumlarda, bir görüntü öğenin PageHeight özelliği azalan önceki görüntülenen satırların sayısı geri yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="6c553-106">In some cases, decreasing the display element's PageHeight property by one can restore the previous number of displayed lines.</span></span>|
-|<span data-ttu-id="6c553-107">Kapsam</span><span class="sxs-lookup"><span data-stu-id="6c553-107">Scope</span></span>|<span data-ttu-id="6c553-108">Kenar</span><span class="sxs-lookup"><span data-stu-id="6c553-108">Edge</span></span>|
-|<span data-ttu-id="6c553-109">Sürüm</span><span class="sxs-lookup"><span data-stu-id="6c553-109">Version</span></span>|<span data-ttu-id="6c553-110">4,5</span><span class="sxs-lookup"><span data-stu-id="6c553-110">4.5</span></span>|
-|<span data-ttu-id="6c553-111">Tür</span><span class="sxs-lookup"><span data-stu-id="6c553-111">Type</span></span>|<span data-ttu-id="6c553-112">Çalışma zamanı</span><span class="sxs-lookup"><span data-stu-id="6c553-112">Runtime</span></span>|
-|<span data-ttu-id="6c553-113">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="6c553-113">Affected APIs</span></span>|<ul><li><xref:System.Windows.Documents.FlowDocument.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.Documents.FlowDocument.%23ctor(System.Windows.Documents.Block)?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.FlowDocumentReader.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.FlowDocumentPageViewer.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.DocumentPageView.%23ctor?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="5eba5-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="5eba5-102">Details</span></span>
+
+<span data-ttu-id="5eba5-103">Bazı durumlarda, bir <xref:System.Windows.Documents.FlowDocument> öğesi .NET Framework 4,5 üzerinde çalışırken, .NET Framework 4,0 ' de çalışırken nasıl görüntülenmesiyle karşılaştırıldığında ek bir metin satırı görüntüler.</span><span class="sxs-lookup"><span data-stu-id="5eba5-103">In some cases, a <xref:System.Windows.Documents.FlowDocument> element will display an extra line of text when running on the .NET Framework 4.5 compared to how it displayed when run on the .NET Framework 4.0.</span></span> <span data-ttu-id="5eba5-104">Değişikliğin bilinen bir durumu, herhangi bir metnin kötü veya okunaklı görüntülenmesine neden olur, ancak bu, metnin daha önce bir görünümden atlandığı görünmesine neden olabilir <xref:System.Windows.Documents.FlowDocument> .</span><span class="sxs-lookup"><span data-stu-id="5eba5-104">There are no known cases of the change causing any text to be displayed poorly or illegibly, but it could cause text to appear that previously was omitted from a <xref:System.Windows.Documents.FlowDocument>'s view.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="5eba5-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="5eba5-105">Suggestion</span></span>
+
+<span data-ttu-id="5eba5-106">Bazı durumlarda, görüntüleme öğesinin PageHeight özelliğini tek tek düşürmek, görüntülenen önceki satır sayısını geri yükleyebilir.</span><span class="sxs-lookup"><span data-stu-id="5eba5-106">In some cases, decreasing the display element's PageHeight property by one can restore the previous number of displayed lines.</span></span>
+
+| <span data-ttu-id="5eba5-107">Name</span><span class="sxs-lookup"><span data-stu-id="5eba5-107">Name</span></span>    | <span data-ttu-id="5eba5-108">Değer</span><span class="sxs-lookup"><span data-stu-id="5eba5-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="5eba5-109">Kapsam</span><span class="sxs-lookup"><span data-stu-id="5eba5-109">Scope</span></span>   |<span data-ttu-id="5eba5-110">Edge</span><span class="sxs-lookup"><span data-stu-id="5eba5-110">Edge</span></span>|
+|<span data-ttu-id="5eba5-111">Sürüm</span><span class="sxs-lookup"><span data-stu-id="5eba5-111">Version</span></span>|<span data-ttu-id="5eba5-112">4,5</span><span class="sxs-lookup"><span data-stu-id="5eba5-112">4.5</span></span>|
+|<span data-ttu-id="5eba5-113">Tür</span><span class="sxs-lookup"><span data-stu-id="5eba5-113">Type</span></span>|<span data-ttu-id="5eba5-114">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="5eba5-114">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="5eba5-115">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="5eba5-115">Affected APIs</span></span>
+
+-<xref:System.Windows.Documents.FlowDocument.%23ctor></li><li><xref:System.Windows.Documents.FlowDocument.%23ctor(System.Windows.Documents.Block)></li><li><xref:System.Windows.Controls.FlowDocumentReader.%23ctor></li><li><xref:System.Windows.Controls.FlowDocumentPageViewer.%23ctor></li><li><xref:System.Windows.Controls.Primitives.DocumentPageView.%23ctor></li></ul>|

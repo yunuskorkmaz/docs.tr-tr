@@ -639,6 +639,8 @@
       items:
         - name: Sınıf ile yapı arasında seçim yapma
           href: design-guidelines/choosing-between-class-and-struct.md
+        - name: Anonim ile demet türleri arasında seçim yapma
+          href: design-guidelines/choosing-between-anonymous-and-tuple.md
         - name: Soyut sınıf tasarımı
           href: design-guidelines/abstract-class.md
         - name: Statik sınıf tasarımı

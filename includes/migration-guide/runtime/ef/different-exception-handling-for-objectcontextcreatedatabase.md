@@ -1,18 +1,27 @@
 ---
-ms.openlocfilehash: 33ad1c044001e0a8d09708cc7a1f06e05cb307de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 687118157020ede200f97a0125c4740a06bf4b5e
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805293"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620615"
 ---
-### <a name="different-exception-handling-for-objectcontextcreatedatabase-and-dbproviderservicescreatedatabase-methods"></a><span data-ttu-id="71d57-101">Farklı özel durum işleme için ObjectContext.CreateDatabase ve DbProviderServices.CreateDatabase yöntemi</span><span class="sxs-lookup"><span data-stu-id="71d57-101">Different exception handling for ObjectContext.CreateDatabase and DbProviderServices.CreateDatabase methods</span></span>
+### <a name="different-exception-handling-for-objectcontextcreatedatabase-and-dbproviderservicescreatedatabase-methods"></a><span data-ttu-id="b1f9d-101">ObjectContext. CreateDatabase ve DbProviderServices. CreateDatabase metotları için farklı özel durum işleme</span><span class="sxs-lookup"><span data-stu-id="b1f9d-101">Different exception handling for ObjectContext.CreateDatabase and DbProviderServices.CreateDatabase methods</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="71d57-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="71d57-102">Details</span></span>|<span data-ttu-id="71d57-103">Veritabanı oluşturma başarısız olursa, .NET Framework 4.5 içinde başlayan <code>CreateDatabase</code> boş veritabanını bırakmak yöntemleri çalışır.</span><span class="sxs-lookup"><span data-stu-id="71d57-103">Beginning in .NET Framework 4.5, if database creation fails, <code>CreateDatabase</code> methods will attempt to drop the empty database.</span></span> <span data-ttu-id="71d57-104">Bu işlem başarılı olursa, özgün <xref:System.Data.SqlClient.SqlException?displayProperty=name> aktarılacaktır (yerine <xref:System.InvalidOperationException?displayProperty=name> , her zaman oluşturuldu .NET Framework 4. 0 ')</span><span class="sxs-lookup"><span data-stu-id="71d57-104">If that operation succeeds, the original <xref:System.Data.SqlClient.SqlException?displayProperty=name> will be propagated (instead of the <xref:System.InvalidOperationException?displayProperty=name> that was always thrown in .NET Framework 4.0)</span></span>|
-|<span data-ttu-id="71d57-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="71d57-105">Suggestion</span></span>|<span data-ttu-id="71d57-106">Yakalama sırasında bir <xref:System.InvalidOperationException?displayProperty=name> yürütülürken <xref:System.Data.Objects.ObjectContext.CreateDatabase> veya <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)>, SQLExceptions şimdi de yakalandı.</span><span class="sxs-lookup"><span data-stu-id="71d57-106">When catching an <xref:System.InvalidOperationException?displayProperty=name> while executing <xref:System.Data.Objects.ObjectContext.CreateDatabase> or <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)>, SQLExceptions should now also be caught.</span></span>|
-|<span data-ttu-id="71d57-107">Kapsam</span><span class="sxs-lookup"><span data-stu-id="71d57-107">Scope</span></span>|<span data-ttu-id="71d57-108">İkincil</span><span class="sxs-lookup"><span data-stu-id="71d57-108">Minor</span></span>|
-|<span data-ttu-id="71d57-109">Sürüm</span><span class="sxs-lookup"><span data-stu-id="71d57-109">Version</span></span>|<span data-ttu-id="71d57-110">4,5</span><span class="sxs-lookup"><span data-stu-id="71d57-110">4.5</span></span>|
-|<span data-ttu-id="71d57-111">Tür</span><span class="sxs-lookup"><span data-stu-id="71d57-111">Type</span></span>|<span data-ttu-id="71d57-112">Çalışma zamanı</span><span class="sxs-lookup"><span data-stu-id="71d57-112">Runtime</span></span>|
-|<span data-ttu-id="71d57-113">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="71d57-113">Affected APIs</span></span>|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)?displayProperty=nameWithType></li></ul>|
+#### <a name="details"></a><span data-ttu-id="b1f9d-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="b1f9d-102">Details</span></span>
+
+<span data-ttu-id="b1f9d-103">.NET Framework 4,5 ' den başlayarak, veritabanı oluşturma başarısız olursa, <code>CreateDatabase</code> Yöntemler boş veritabanını bırakmaya çalışır.</span><span class="sxs-lookup"><span data-stu-id="b1f9d-103">Beginning in .NET Framework 4.5, if database creation fails, <code>CreateDatabase</code> methods will attempt to drop the empty database.</span></span> <span data-ttu-id="b1f9d-104">Bu işlem başarılı olursa, orijinalin <xref:System.Data.SqlClient.SqlException?displayProperty=fullName> yayılacağı ( <xref:System.InvalidOperationException?displayProperty=fullName> .NET Framework 4,0 ' de her zaman oluşturulan)</span><span class="sxs-lookup"><span data-stu-id="b1f9d-104">If that operation succeeds, the original <xref:System.Data.SqlClient.SqlException?displayProperty=fullName> will be propagated (instead of the <xref:System.InvalidOperationException?displayProperty=fullName> that was always thrown in .NET Framework 4.0)</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="b1f9d-105">Öneri</span><span class="sxs-lookup"><span data-stu-id="b1f9d-105">Suggestion</span></span>
+
+<span data-ttu-id="b1f9d-106"><xref:System.InvalidOperationException?displayProperty=fullName>Ya da yürütülürken <xref:System.Data.Objects.ObjectContext.CreateDatabase> veya <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)> SqlExceptions artık yakalanmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b1f9d-106">When catching an <xref:System.InvalidOperationException?displayProperty=fullName> while executing <xref:System.Data.Objects.ObjectContext.CreateDatabase> or <xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)>, SQLExceptions should now also be caught.</span></span>
+
+| <span data-ttu-id="b1f9d-107">Name</span><span class="sxs-lookup"><span data-stu-id="b1f9d-107">Name</span></span>    | <span data-ttu-id="b1f9d-108">Değer</span><span class="sxs-lookup"><span data-stu-id="b1f9d-108">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="b1f9d-109">Kapsam</span><span class="sxs-lookup"><span data-stu-id="b1f9d-109">Scope</span></span>   |<span data-ttu-id="b1f9d-110">İkincil</span><span class="sxs-lookup"><span data-stu-id="b1f9d-110">Minor</span></span>|
+|<span data-ttu-id="b1f9d-111">Sürüm</span><span class="sxs-lookup"><span data-stu-id="b1f9d-111">Version</span></span>|<span data-ttu-id="b1f9d-112">4,5</span><span class="sxs-lookup"><span data-stu-id="b1f9d-112">4.5</span></span>|
+|<span data-ttu-id="b1f9d-113">Tür</span><span class="sxs-lookup"><span data-stu-id="b1f9d-113">Type</span></span>|<span data-ttu-id="b1f9d-114">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="b1f9d-114">Runtime</span></span>
+
+#### <a name="affected-apis"></a><span data-ttu-id="b1f9d-115">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="b1f9d-115">Affected APIs</span></span>
+
+-<xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbProviderServices.CreateDatabase(System.Data.Common.DbConnection,System.Nullable{System.Int32},System.Data.Metadata.Edm.StoreItemCollection)?displayProperty=nameWithType></li></ul>|

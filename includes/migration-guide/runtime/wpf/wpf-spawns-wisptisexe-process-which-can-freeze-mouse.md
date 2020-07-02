@@ -1,17 +1,23 @@
 ---
-ms.openlocfilehash: cbd599f7467c3b360bbe1c76a65abfdb840a1530
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e0f72d19a884087b1f0f6ebd1b6baea75bc37af4
+ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85620717"
 ---
-### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a><span data-ttu-id="aae0f-101">WPF fare dondurabilirsiniz bir wisptis.exe süreci yumurtlar</span><span class="sxs-lookup"><span data-stu-id="aae0f-101">WPF spawns a wisptis.exe process which can freeze the mouse</span></span>
+### <a name="wpf-spawns-a-wisptisexe-process-which-can-freeze-the-mouse"></a><span data-ttu-id="b70f0-101">WPF, fareyi dondurabilir wisptis.exe bir işlem</span><span class="sxs-lookup"><span data-stu-id="b70f0-101">WPF spawns a wisptis.exe process which can freeze the mouse</span></span>
 
-|   |   |
-|---|---|
-|<span data-ttu-id="aae0f-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="aae0f-102">Details</span></span>|<span data-ttu-id="aae0f-103">Fare girişini dondurabilen bir <code>wisptis.exe</code> sorun 4.5.2'de ortaya çıktı.</span><span class="sxs-lookup"><span data-stu-id="aae0f-103">An issue was introduced in 4.5.2 that causes <code>wisptis.exe</code> to be spawned that can freeze mouse input.</span></span>|
-|<span data-ttu-id="aae0f-104">Öneri</span><span class="sxs-lookup"><span data-stu-id="aae0f-104">Suggestion</span></span>|<span data-ttu-id="aae0f-105">Bu soruna yönelik bir düzeltme,.NET Framework 4.5.2 (düzeltme toplama 3026376) bir servis sürümünde veya .NET Framework 4.6'ya yükseltilerek kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="aae0f-105">A fix for this issue is available in a servicing release of the .NET Framework 4.5.2 (hotfix rollup 3026376), or by upgrading to the .NET Framework 4.6</span></span>|
-|<span data-ttu-id="aae0f-106">Kapsam</span><span class="sxs-lookup"><span data-stu-id="aae0f-106">Scope</span></span>|<span data-ttu-id="aae0f-107">Ana</span><span class="sxs-lookup"><span data-stu-id="aae0f-107">Major</span></span>|
-|<span data-ttu-id="aae0f-108">Sürüm</span><span class="sxs-lookup"><span data-stu-id="aae0f-108">Version</span></span>|<span data-ttu-id="aae0f-109">4.5.2</span><span class="sxs-lookup"><span data-stu-id="aae0f-109">4.5.2</span></span>|
-|<span data-ttu-id="aae0f-110">Tür</span><span class="sxs-lookup"><span data-stu-id="aae0f-110">Type</span></span>|<span data-ttu-id="aae0f-111">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="aae0f-111">Runtime</span></span>|
+#### <a name="details"></a><span data-ttu-id="b70f0-102">Ayrıntılar</span><span class="sxs-lookup"><span data-stu-id="b70f0-102">Details</span></span>
+
+<span data-ttu-id="b70f0-103">4.5.2 ' de, <code>wisptis.exe</code> fare girişini donduran oluşturulmasına neden olan bir sorun ortaya çıkarılmıştır.</span><span class="sxs-lookup"><span data-stu-id="b70f0-103">An issue was introduced in 4.5.2 that causes <code>wisptis.exe</code> to be spawned that can freeze mouse input.</span></span>
+
+#### <a name="suggestion"></a><span data-ttu-id="b70f0-104">Öneri</span><span class="sxs-lookup"><span data-stu-id="b70f0-104">Suggestion</span></span>
+
+<span data-ttu-id="b70f0-105">Bu soruna yönelik bir düzeltme .NET Framework 4.5.2 (düzeltme toplaması 3026376) bir bakım sürümünde veya 4,6 ' e yükselterek sunulmaktadır .NET Framework</span><span class="sxs-lookup"><span data-stu-id="b70f0-105">A fix for this issue is available in a servicing release of the .NET Framework 4.5.2 (hotfix rollup 3026376), or by upgrading to the .NET Framework 4.6</span></span>
+
+| <span data-ttu-id="b70f0-106">Name</span><span class="sxs-lookup"><span data-stu-id="b70f0-106">Name</span></span>    | <span data-ttu-id="b70f0-107">Değer</span><span class="sxs-lookup"><span data-stu-id="b70f0-107">Value</span></span>       |
+|:--------|:------------|
+| <span data-ttu-id="b70f0-108">Kapsam</span><span class="sxs-lookup"><span data-stu-id="b70f0-108">Scope</span></span>   |<span data-ttu-id="b70f0-109">Ana</span><span class="sxs-lookup"><span data-stu-id="b70f0-109">Major</span></span>|
+|<span data-ttu-id="b70f0-110">Sürüm</span><span class="sxs-lookup"><span data-stu-id="b70f0-110">Version</span></span>|<span data-ttu-id="b70f0-111">4.5.2</span><span class="sxs-lookup"><span data-stu-id="b70f0-111">4.5.2</span></span>|
+|<span data-ttu-id="b70f0-112">Tür</span><span class="sxs-lookup"><span data-stu-id="b70f0-112">Type</span></span>|<span data-ttu-id="b70f0-113">Çalışma Zamanı</span><span class="sxs-lookup"><span data-stu-id="b70f0-113">Runtime</span></span>|
