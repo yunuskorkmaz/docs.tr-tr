@@ -19,8 +19,11 @@
         - name: Kimliğe Bürünme ve Geri Alma
           href: impersonating-and-reverting.md
     - name: Şifreleme Modeli
-      href: cryptography-model.md
       items:
+        - name: Genel Bakış
+          href: cryptography-model.md
+        - name: Platformlar arası şifreleme
+          href: cross-platform-cryptography.md
         - name: Şifreleme Hizmetleri
           href: cryptographic-services.md
         - name: Şifreleme ve Şifre Çözme için Anahtarlar Oluşturma
@@ -57,7 +60,7 @@
           href: how-to-use-data-protection.md
         - name: 'Nasıl yapılır: Donanım Şifreleme Cihazlarına Erişim'
           href: how-to-access-hardware-encryption-devices.md
-        - name: 'İzlenecek Yol: Şifreleme Uygulaması Oluşturma'
+        - name: 'İzlenecek yol: Şifreleme Uygulaması Oluşturma'
           href: walkthrough-creating-a-cryptographic-application.md
     - name: Güvenli Kodlama Yönergeleri
       href: secure-coding-guidelines.md
