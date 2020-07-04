@@ -3,12 +3,12 @@ title: ML.NET CLı komut başvurusu
 description: ML.NET CLı aracında otomatik eğitme komutuna genel bakış, örnekler ve başvuru.
 ms.date: 06/03/2020
 ms.custom: mlnet-tooling
-ms.openlocfilehash: 397f6fda8554024624b3ef630856dc8eca9696b2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4c6cb1346c16f6162077d3414140d693de9e0d8c
+ms.sourcegitcommit: 182c7b6c079ebcc0e1898dfd9e921b9ef472ea2c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594549"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85946947"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLı komut başvurusu
 
@@ -207,7 +207,7 @@ Temel olarak, bir `validation dataset` artı kullandığınızda `test dataset` 
 1. İlk bölümde, modellerinize göz atadınız ve doğrulama verilerini kullanarak en iyi şekilde gerçekleştirdiğiniz yaklaşımı seçersiniz (= doğrulama)
 2. Ardından seçili yaklaşımın doğruluğunu tahmin edersiniz (= test).
 
-Bu nedenle, verilerin ayrımı 80/10/10 veya 75/15/10 olabilir. Örnek:
+Bu nedenle, verilerin ayrımı 80/10/10 veya 75/15/10 olabilir. Örneğin:
 
 - `training-dataset`Dosya, verilerin %75 ' i olmalıdır.
 - `validation-dataset`Dosya, verilerin %15 ' i olmalıdır.
@@ -299,7 +299,7 @@ Aşağıdaki değerleri belirtebilirsiniz:
 
 `--cache`Parametresini belirtmezseniz, `auto` Varsayılan olarak önbellek yapılandırması kullanılacaktır.
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 `--name`dizisinde
 
@@ -309,7 +309,7 @@ ML.NET model dosyası (. ZIP dosyası) de aynı adı alır.
 
 ## <a name="output-path"></a>Çıkış yolu
 
-`--output-path | -o`dizisinde
+`--output | -o`dizisinde
 
 Oluşturulan çıkışın yerleştirileceği kök konumu/klasörü. Geçerli dizin varsayılandır.
 
