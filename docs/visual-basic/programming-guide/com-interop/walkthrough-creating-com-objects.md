@@ -8,17 +8,16 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: bb312317b2bbcb77bed9e3966db6d9fd5db79e4c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396746"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051486"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>İzlenecek yol: Visual Basic ile COM Nesneleri Oluşturma
 Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluşturmak en iyisidir. Ancak Visual Basic Ayrıca, bir .NET Framework bileşenini COM 'da kullanıma sunmayı da kolaylaştırır. Bu, COM bileşenleri gerektiren önceki uygulama paketleri için yeni bileşenler sağlamanıza olanak sağlar. Bu izlenecek yol, .NET Framework nesnelerini com nesneleri olarak göstermek için Visual Basic, hem hem de COM sınıf şablonuyla birlikte kullanmak için nasıl kullanılacağını gösterir.  
   
- COM nesnelerini kullanıma almanın en kolay yolu COM sınıf şablonunu kullanmaktır. COM sınıfı şablonu yeni bir sınıf oluşturur ve ardından projeyi bir COM nesnesi olarak sınıf ve birlikte çalışabilirlik katmanını oluşturacak şekilde yapılandırır ve işletim sistemine kaydeder.  
+ COM nesnelerini kullanıma almanın en kolay yolu COM sınıf şablonunu kullanmaktır. Bu şablon yeni bir sınıf oluşturur, sonra projenizi bir COM nesnesi olarak birlikte çalışabilirlik katmanıyla oluşturacak şekilde yapılandırır ve işletim sistemine kaydeder.  
   
 > [!NOTE]
 > Yönetilmeyen kodun kullanması için Visual Basic bir COM nesnesi olarak oluşturulan bir sınıfı kullanıma sunabilseniz de, bu gerçek bir COM nesnesi değildir ve Visual Basic tarafından kullanılamaz. Daha fazla bilgi için bkz. [.NET Framework uygulamalarda com birlikte çalışabilirliği](com-interoperability-in-net-framework-applications.md).  

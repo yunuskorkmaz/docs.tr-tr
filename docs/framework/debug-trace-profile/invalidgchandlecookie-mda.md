@@ -1,5 +1,6 @@
 ---
 title: invalidGCHandleCookie MDA
+description: Geçersiz bir IntPtr tanımlama bilgisinden bir GCHandle dönüştürme denendiğinde etkinleştirilen ınvalidgchandtacookie yönetilen hata ayıklama Yardımcısı 'nı (MDA) gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), invalid cookies
@@ -8,24 +9,23 @@ helpviewer_keywords:
 - InvalidGCHandleCookie MDA
 - invalid cookies
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
-ms.openlocfilehash: c1d8fab863c34313c0cdb778136c6f69a64defeb
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: 1063b7be902d3063717b6639564d819ef3292c0e
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216314"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051304"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
-`invalidGCHandleCookie` yönetilen hata ayıklama Yardımcısı (MDA), geçersiz bir <xref:System.IntPtr> tanımlama bilgisinden <xref:System.Runtime.InteropServices.GCHandle> dönüştürme denendiğinde etkinleştirilir.  
+`invalidGCHandleCookie`Geçersiz bir <xref:System.IntPtr> tanımlama bilgisinden öğesine dönüştürme denendiğinde yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir <xref:System.Runtime.InteropServices.GCHandle> .  
   
 ## <a name="symptoms"></a>Belirtiler  
- <xref:System.IntPtr>bir <xref:System.Runtime.InteropServices.GCHandle> kullanmaya veya almaya çalışırken erişim ihlalleri ve bellek bozulması gibi tanımsız davranışlar.  
+ ' Dan ' i kullanmaya veya almaya çalışırken erişim ihlalleri ve bellek bozulması gibi tanımsız davranışlar <xref:System.Runtime.InteropServices.GCHandle> <xref:System.IntPtr> .  
   
 ## <a name="cause"></a>Nedeni  
- Tanımlama bilgisi büyük olasılıkla geçersiz bir <xref:System.Runtime.InteropServices.GCHandle>, zaten serbest bırakılmış olan bir <xref:System.Runtime.InteropServices.GCHandle> temsil eder, farklı bir uygulama etki alanındaki bir <xref:System.Runtime.InteropServices.GCHandle> tanımlama bilgisidir veya yerel <xref:System.Runtime.InteropServices.GCHandle> koda bir <xref:System.IntPtr>olarak geri geçirilir, ancak bir atama denendiğinde bu şekilde CLR 'ye geçirildi.  
+ Tanımlama bilgisi büyük olasılıkla bir ' dan oluşturulmadığı için geçersiz, <xref:System.Runtime.InteropServices.GCHandle> <xref:System.Runtime.InteropServices.GCHandle> zaten serbest bırakılmış olan bir tanımlama bilgisidir, <xref:System.Runtime.InteropServices.GCHandle> farklı bir uygulama etki alanındaki bir tanımlama bilgisidir veya yerel koda bir <xref:System.Runtime.InteropServices.GCHandle> atama denendiğinde, clr 'ye geri geçirilmiş <xref:System.IntPtr> .  
   
 ## <a name="resolution"></a>Çözüm  
- <xref:System.Runtime.InteropServices.GCHandle>için geçerli bir <xref:System.IntPtr> tanımlama bilgisi belirtin.  
+ İçin geçerli bir <xref:System.IntPtr> tanımlama bilgisi belirtin <xref:System.Runtime.InteropServices.GCHandle> .  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA etkinleştirildiğinde, hata ayıklayıcı artık kök nesneleri nesnelerine geri izleyemez çünkü geri geçirilen tanımlama bilgisi değerleri, MDA etkin olmadığında döndürülmeden farklı.  

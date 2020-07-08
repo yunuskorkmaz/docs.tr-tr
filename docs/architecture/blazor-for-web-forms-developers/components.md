@@ -4,12 +4,11 @@ description: Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenle
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 1a5f6b63143c4fd7a276219b9c4877e9e355c996
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
-ms.translationtype: MT
+ms.openlocfilehash: f6528b1e68b49b6ee3949baca166f4806448718b
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378314"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051458"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Blazor ile yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun
 
@@ -79,16 +78,16 @@ Aşağıdaki tabloda, Blazor içinde kullanılan çeşitli Razor yönergeleri ve
 
 |Deki    |Açıklama|Örnek|Web Forms eşdeğeri|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Yok|
+|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Hiçbiri|
 |`@code`      |Bileşene sınıf üyeleri ekler|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Belirtilen arabirimi uygular|`@implements IDisposable`|Arka plan kodu kullan|
 |`@inherits`  |Belirtilen taban sınıftan devralır|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Yok|
+|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Hiçbiri|
 |`@layout`    |Bileşen için bir düzen bileşeni belirtir|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Yok|
+|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Hiçbiri|
 |`@page`      |Bileşen için yolu belirtir|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Bileşen için genel bir tür parametresi belirtir|`@typeparam TItem`|Arka plan kodu kullan|
-|`@using`     |Kapsama getirmek için bir ad alanı belirtir|`@using MyComponentNamespace`|*Web. config* 'de ad alanı Ekle|
+|`@using`     |Kapsama getirmek için bir ad alanı belirtir|`@using MyComponentNamespace`|*web.config* ad alanı Ekle|
 
 Razor bileşenleri Ayrıca, bileşenlerin nasıl derlendiğine (olay işleme, veri bağlama, bileşen & öğe başvuruları vb.) ilişkin çeşitli yönlerini denetlemek için öğeler üzerinde *yönerge özniteliklerinin* kapsamlı bir şekilde kullanılmasını sağlar. Yönerge öznitelikleri All, parantez içindeki değerlerin isteğe bağlı olduğu ortak bir genel söz dizimini izler:
 
@@ -110,12 +109,12 @@ Blazor (,, vb.) tarafından kullanılan çeşitli yönerge öznitelikleri `@oncl
 
 *. Aspx* ve *. ascx* dosyalarında kullanılan sözdizimlerinin birçoğu Razor 'de paralel sözdizimleri vardır. ASP.NET Web Forms ve Razor için sözdizimlerinin basit bir karşılaştırması aşağıda verilmiştir.
 
-|Özellik                      |Web Forms           |Sözdizimi               |Razor         |Sözdizimi |
+|Özellik                      |Web Forms           |Syntax               |Razor         |Syntax |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Yönergeler                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Kod blokları                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
 |İfadeler<br>(HTML kodlu)|`<%: %>`            |`<%:DateTime.Now %>` |İndirgen`@`<br>Anlaşılır`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|Açıklamalar                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|Yorumlar                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Veri bağlama                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Razor bileşen sınıfına üye eklemek için `@code` yönergesini kullanın. Bu teknik, bir `<script runat="server">...</script>` ASP.NET Web Forms Kullanıcı denetiminde veya sayfasında blok kullanmaya benzer.
@@ -146,7 +145,7 @@ Normal HTML 'den başlayarak, bileşenler kendi işleme mantığının bir parç
 ASP.NET Web Forms aksine, Blazor içindeki bileşenler:
 
 - Öğe öneki kullanmayın (örneğin, `asp:` ).
-- Sayfada veya *Web. config*dosyasında kayıt gerekmez.
+- Sayfada veya *web.config*kayıt gerekmez.
 
 .NET türlerine benzer Razor bileşenleri düşünün çünkü bu, tam olarak bir şeydir. Bileşeni içeren derlemeye başvuruluyorsa, bileşen kullanılabilir. Bileşenin ad alanını kapsama getirmek için `@using` yönergesini uygulayın:
 
@@ -602,8 +601,8 @@ Bu bileşenin çıktısı şuna benzer:
 ```html
 <h1>My list</h1>
 <ul>
-    <li>The message is: message1</li>
-    <li>The message is: message2</li>
+    <li><p>The message is: message1</p></li>
+    <li><p>The message is: message2</p></li>
 <ul>
 ```
 

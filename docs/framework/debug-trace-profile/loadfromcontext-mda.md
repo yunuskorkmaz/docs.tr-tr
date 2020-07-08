@@ -1,5 +1,6 @@
 ---
 title: loadFromContext MDA
+description: .NET 'teki loadFromContext Managed hata ayıklama Yardımcısı 'nı (MDA), bir derleme LoadFrom bağlamına yüklenirse etkinleştirilir şekilde anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MDAs (managed debugging assistants), LoadFrom context
@@ -7,38 +8,37 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: d0090a0272d1c3b6175b351175689df1e1e4fdbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 8d55268f2b2106dde4e488a6f0271fd3b17349da
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181804"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051655"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
-Bir `loadFromContext` derleme `LoadFrom` içeriğe yüklenirse yönetilen hata ayıklama yardımcısı (MDA) etkinleştirilir. Bu durum arama <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya diğer benzer yöntemlerin bir sonucu olarak oluşabilir.  
+`loadFromContext`Bağlam içine bir derleme yüklenirse yönetilen hata ayıklama Yardımcısı (MDA) etkinleştirilir `LoadFrom` . Bu durum, çağırma işleminin <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> veya diğer benzer yöntemlerin sonucu olarak ortaya çıkabilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bazı yükleyici yöntemlerinin kullanımı derlemelerin `LoadFrom` bağlam içinde yüklenmesine neden olabilir. Bu bağlamın kullanımı serileştirme, döküm ve bağımlılık çözümü için beklenmeyen davranışlara neden olabilir. Genel olarak, bu sorunları önlemek için `Load` derlemelerin içeriğe yüklenmesi önerilir. Bu MDA olmadan bir derlemenin hangi içeriğe yüklendiğini belirlemek zordur.  
+ Bazı yükleyici yöntemlerinin kullanımı, derlemelerin bağlamda yüklenmesine neden olabilir `LoadFrom` . Bu bağlamın kullanılması serileştirme, atama ve bağımlılık çözümlemesi için beklenmeyen davranışlara neden olabilir. Genel olarak, `Load` Bu sorunlardan kaçınmak için derlemelerin bağlamına yüklenmesi önerilir. Bir derlemenin Bu MDA ' dan ne şekilde yüklendiğini belirlemek zordur.  
   
 ## <a name="cause"></a>Nedeni  
- Genel olarak, bir derleme `LoadFrom` `Load` bağlam dışındaki bir yoldan yüklenmişse, genel derleme önbelleği <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> veya özellik gibi içeriğe yüklenir.  
+ Genellikle, `LoadFrom` `Load` genel derleme önbelleği veya özelliği gibi bağlam dışındaki bir yoldan yüklenmişse, bir derleme bağlamına yüklenmiştir <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> .  
   
 ## <a name="resolution"></a>Çözüm  
- Çağrıların artık gerekmeyecek şekilde <xref:System.Reflection.Assembly.LoadFrom%2A> yapılandırıştırın. Bunu yapmak için aşağıdaki teknikleri kullanabilirsiniz:  
+ <xref:System.Reflection.Assembly.LoadFrom%2A>Çağrılara artık gerek duyulmayan uygulamalar için yapılandırma. Bunu yapmak için aşağıdaki teknikleri kullanabilirsiniz:  
   
-- Derlemeleri genel derleme önbelleğine yükleyin.  
+- Derlemeleri genel bütünleştirilmiş kod önbelleğine yükler.  
   
-- Derlemeleri dizinine <xref:System.AppDomainSetup.ApplicationBase%2A> <xref:System.AppDomain>yerleştirin. Varsayılan etki alanı söz konusu <xref:System.AppDomainSetup.ApplicationBase%2A> olduğunda, dizin işlemi başlatan yürütülebilir dosyayı içeren dizindir. Bu, derlemeyi taşımak <xref:System.AppDomain> için uygun değilse yeni bir oluşturma yı da gerektirebilir.  
+- Derlemeleri <xref:System.AppDomainSetup.ApplicationBase%2A> için dizinine yerleştirin <xref:System.AppDomain> . Varsayılan etki alanı durumunda <xref:System.AppDomainSetup.ApplicationBase%2A> Dizin, işlemi başlatan yürütülebilir dosyayı içeren bir dosyadır. Bu, derlemeyi taşımak uygun değilse yeni bir oluşturma işlemi de gerektirebilir <xref:System.AppDomain> .  
   
-- Uygulama yapılandırmanıza (.config) dosyanıza veya çalıştırılabilir dosyaya göre alt dizinlerde bağımlı derlemeler varsa ikincil uygulama etki adlarına bir sondalama yolu ekleyin.  
+- Bağımlı derlemeler çalıştırılabilire göre alt dizinlerde ise, uygulama yapılandırma (. config) dosyanıza veya ikincil uygulama etki alanlarına bir yoklama yolu ekleyin.  
   
- Her durumda, kod <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> yöntemi kullanmak için değiştirilebilir.  
+ Her durumda, kod yöntemini kullanacak şekilde değiştirilebilir <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> .  
   
-## <a name="effect-on-the-runtime"></a>Çalışma Süresi üzerindeki etkisi  
- MDA'nın CLR üzerinde herhangi bir etkisi yoktur. Yük isteği nin sonucu olarak kullanılan bağlamı bildirir.  
+## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
+ MDA 'nin CLR üzerinde hiçbir etkisi yoktur. Yükleme isteğinin sonucu olarak kullanılan bağlamı bildirir.  
   
 ## <a name="output"></a>Çıktı  
- MDA, derlemenin bağlam içine `LoadFrom` yüklendiğini bildirir. Bu derleme ve yol basit adını belirtir. Ayrıca `LoadFrom` bağlamı kullanmaktan kaçınmak için azaltıcı etkenler önerir.  
+ MDA, derlemenin bağlama göre yüklendiğini bildirir `LoadFrom` . Derlemenin basit adını ve yolunu belirtir. Ayrıca, bağlamını kullanmaktan kaçınmak için azaltıcı etkenleri de önerir `LoadFrom` .  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -51,7 +51,7 @@ Bir `loadFromContext` derleme `LoadFrom` içeriğe yüklenirse yönetilen hata a
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bu MDA'yı etkinleştirebilecek bir durumu gösterir:  
+ Aşağıdaki kod örneğinde, bu MDA ' i etkinleştirebilecek bir durum gösterilmektedir:  
   
 ```csharp
 using System.Reflection;  

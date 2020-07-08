@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma'
+description: .NET 'teki System. Diagnostics. BooleanSwitch ve System. Diagnostics. TraceSwitch sınıflarını kullanarak izleme anahtarları oluşturun, başlatın ve yapılandırın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,27 +12,26 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-ms.openlocfilehash: 8bf3b974ff0ef9f719274ab684b3dce85295c917
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 6a43e143abba96c841f04b7be9d482c55e78aa8f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181833"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051330"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Nasıl yapılır: İzleme Anahtarları Oluşturma ve Başlatma
-İzleme anahtarları, izleme çıktısını etkinleştirmenizi, devre dışı bırakmanızı ve filtrelemenizi sağlar.  
+İzleme anahtarları, izleme çıkışını etkinleştirmenizi, devre dışı bırakmanızı ve filtrelemenizi sağlar.  
   
 <a name="create"></a>
 ## <a name="creating-and-initializing-a-trace-switch"></a>İzleme anahtarı oluşturma ve başlatma  
- İzleme anahtarlarını kullanmak için önce bunları oluşturmanız ve kodunuza yerleştirmeniz gerekir. Anahtar nesneleri oluşturabileceğiniz önceden tanımlanmış iki sınıf vardır: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> sınıf <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> ve sınıf. Yalnızca bir <xref:System.Diagnostics.BooleanSwitch> izleme iletisi görünüp görünmediğini önemsiyorsanız kullanırsınız; izleme düzeyleri <xref:System.Diagnostics.TraceSwitch> arasında ayrım yapmak istiyorsanız kullanırsınız. Bir <xref:System.Diagnostics.TraceSwitch>, kendi hata ayıklama iletileri tanımlamak ve farklı izleme düzeyleri ile ilişkilendirmek kullanıyorsanız. Her iki anahtar türünü de izleme veya hata ayıklama ile kullanabilirsiniz. Varsayılan olarak, <xref:System.Diagnostics.BooleanSwitch> a devre <xref:System.Diagnostics.TraceSwitch> dışı bırakılır <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType>ve a düzeyine ayarlanır. İzleme anahtarları oluşturulabilir ve kodunuzun bunları kullanabilecek herhangi bir bölümüne yerleştirilebilir.  
+ İzleme anahtarlarını kullanmak için, önce bunları oluşturmanız ve kodunuza yerleştirmeniz gerekir. Anahtar nesneleri oluşturabileceğiniz önceden tanımlanmış iki sınıf vardır: <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> sınıfı ve <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> sınıfı. <xref:System.Diagnostics.BooleanSwitch>Yalnızca bir izleme iletisinin görünüp gösterilmediğini düşünüyorsanız, öğesini kullanarak <xref:System.Diagnostics.TraceSwitch> izleme düzeyleri arasında ayrım yapmak isteyebilirsiniz. Kullanıyorsanız <xref:System.Diagnostics.TraceSwitch> , kendi hata ayıklama iletilerinizi tanımlayabilir ve bunları farklı izleme düzeyleriyle ilişkilendirebilirsiniz. İzleme veya hata ayıklama ile her iki anahtar türünü de kullanabilirsiniz. Varsayılan olarak,, <xref:System.Diagnostics.BooleanSwitch> devre dışıdır ve, <xref:System.Diagnostics.TraceSwitch> düzeyi olarak ayarlanır <xref:System.Diagnostics.TraceLevel.Off?displayProperty=nameWithType> . İzleme anahtarları, kodunuzun bunları kullanan herhangi bir kısmına oluşturulabilir ve eklenebilir.  
   
- İzleme düzeylerini ve koddaki diğer yapılandırma seçeneklerini ayarlayabilirsiniz, ancak anahtarlarınızın durumunu yönetmek için yapılandırma dosyasını kullanmanızı öneririz. Bunun nedeni, yapılandırma sistemindeki anahtarlarınızın yapılandırmasını yönetmenin size daha fazla esneklik sunabileceğidir — uygulamanızı yeniden derlemeden çeşitli anahtarları açıp kapatabilir ve düzeyleri değiştirebilirsiniz.  
+ Koddaki izleme düzeylerini ve diğer yapılandırma seçeneklerini ayarlayabilmenize karşın, anahtarlarınızın durumunu yönetmek için yapılandırma dosyasını kullanmanızı öneririz. Bunun nedeni, yapılandırma sistemindeki anahtarlarınızın yapılandırılmasını yönetmenin daha fazla esneklik sağladığından, uygulamanızı yeniden derlemeden çeşitli anahtarları açıp kapamenize ve seviyelerini değiştirmenize olanak sağlar.  
   
-#### <a name="to-create-and-initialize-a-trace-switch"></a>İzleme anahtarı oluşturmak ve başlatma  
+#### <a name="to-create-and-initialize-a-trace-switch"></a>Bir izleme anahtarı oluşturmak ve başlatmak için  
   
-1. Bir anahtarı tür <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> veya <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> tür olarak tanımlayın ve anahtarın adını ve açıklamasını ayarlayın.  
+1. Tür ya da tür olarak bir anahtar tanımlayın <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> ve anahtarın adını ve açıklamasını ayarlayın.  
   
-2. İzleme anahtarınızı yapılandırın. Daha fazla bilgi için [bkz.](#configure)  
+2. İzleme anahtarını yapılandırın. Daha fazla bilgi için bkz. [izleme anahtarlarını yapılandırma](#configure).  
   
      Aşağıdaki kod, her türden biri olmak üzere iki anahtar oluşturur:  
   
@@ -50,43 +50,43 @@ ms.locfileid: "79181833"
   
 <a name="configure"></a>
 ## <a name="configuring-trace-switches"></a>İzleme anahtarlarını yapılandırma  
- Uygulamanız dağıtıldıktan sonra, uygulamanızdaki izleme anahtarlarını yapılandırarak izleme çıktısını etkinleştirebilir veya devre dışı kullanabilirsiniz. Bir anahtarı yapılandırmak, değerini baş harfe alındıktan sonra harici bir kaynaktan değiştirmek anlamına gelir. Yapılandırma dosyasını kullanarak anahtar nesnelerinin değerlerini değiştirebilirsiniz. İzleme anahtarını açıp kapatmak veya düzeyini ayarlamak için, dinleyicilere geçtiği iletimiktarını ve türünü belirlemek için yapılandırırsınız.  
+ Uygulamanız dağıtıldıktan sonra, uygulamanızdaki izleme anahtarlarını yapılandırarak izleme çıkışını etkinleştirebilir veya devre dışı bırakabilirsiniz. Bir anahtarı yapılandırmak, başlatıldıktan sonra bir dış kaynaktan değerini değiştirmenin anlamına gelir. Yapılandırma dosyasını kullanarak Switch nesnelerinin değerlerini değiştirebilirsiniz. Bir izleme anahtarını açmak ve kapatmak için ya da düzeyini ayarlamak için, dinleyicilerinin yanı sıra aktardığı iletilerin miktarını ve türünü belirlemek için yapılandırın.  
   
- Anahtarlarınız .config dosyası kullanılarak yapılandırılır. Bir Web uygulaması için bu, projeyle ilişkili Web.config dosyasıdır. Bir Windows uygulamasında, bu dosya (uygulama adı).exe.config olarak adlandırılır. Dağıtılan bir uygulamada, bu dosya yürütülebilir klasörde bulunmalıdır.  
+ Anahtarlarınız. config dosyası kullanılarak yapılandırılır. Bir Web uygulaması için bu, projeyle ilişkili Web.config dosyasıdır. Bir Windows uygulamasında, bu dosyanın adı (uygulama adı) .exe.config. Dağıtılan bir uygulamada, bu dosya çalıştırılabilirle aynı klasörde bulunmalıdır.  
   
- Uygulamanız ilk kez bir anahtar örneği oluşturan kodu çalıştırdığında, yapılandırma dosyasını adlandırılmış anahtar hakkında izleme düzeyi bilgileri için denetler. İzleme sistemi yapılandırma dosyasını belirli bir anahtar için yalnızca bir kez inceler — uygulamanız anahtarı ilk kez oluşturduğunda.  
+ Uygulamanız bir anahtarın bir örneğini ilk kez oluşturan kodu yürüttüğünde, bu, adlandırılmış anahtarla ilgili izleme düzeyi bilgileri için yapılandırma dosyasını denetler. İzleme sistemi, uygulama anahtarı ilk kez oluşturduğunda yapılandırma dosyasını belirli bir anahtar için yalnızca bir kez inceler.  
   
- Dağıtılan bir uygulamada, uygulamanız çalışmadığında anahtar nesnelerini yeniden yapılandırarak izleme kodunu etkinleştirin. Genellikle bu, anahtar nesnelerini açıp kapatmayı veya izleme düzeylerini değiştirerek ve ardından uygulamanızı yeniden başlatmayı içerir.  
+ Dağıtılmış bir uygulamada, uygulamanız çalışmadığı zaman geçiş nesnelerini yeniden yapılandırarak izleme kodunu etkinleştirirsiniz. Genellikle bu, anahtar nesnelerinin açık ve kapalı olduğunu ya da izleme düzeylerini değiştirerek ve sonra uygulamanızı yeniden başlatarak içerir.  
   
- Bir anahtar örneği oluşturduğunuzda, iki bağımsız değişken belirterek de bu anahtarın başlatılmasını da *gösterirsiniz: displayName* bağımsız değişkeni ve *açıklama* bağımsız değişkeni. *DisplayName* bağımsız değişkeni, sınıf <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> örneğinin <xref:System.Diagnostics.Switch> özelliğini ayarlar. *displayName,.config* dosyasındaki anahtarı yapılandırmak için kullanılan addır ve *açıklama* bağımsız değişkeni anahtarın ve hangi iletileri denetlemesi hakkında kısa bir açıklama döndürmelidir.  
+ Anahtarın bir örneğini oluşturduğunuzda, iki bağımsız değişken belirterek de başlatabilirsiniz: *DisplayName* bağımsız değişkeni ve bir *Açıklama* bağımsız değişkeni. Oluşturucunun *DisplayName* bağımsız değişkeni, <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Switch> sınıf örneğinin özelliğini ayarlar. *DisplayName* ,. config dosyasında anahtarı yapılandırmak için kullanılan addır ve *Açıklama* bağımsız değişkeni, anahtarın kısa bir açıklamasını ve hangi iletileri denetlediğini döndürmelidir.  
   
- Yapılandırmak için bir anahtarın adını belirtmenin yanı sıra, anahtar için bir değer de belirtmeniz gerekir. Bu değer bir Tamsayı'dır. Çünkü, <xref:System.Diagnostics.BooleanSwitch>0 değeri **Kapalı'ya**karşılık gelir ve sıfır olmayan herhangi bir değer **On'a**karşılık gelir. Için <xref:System.Diagnostics.TraceSwitch>, 0,1,2,3, ve 4 karşılık **Off**, **Hata**, **Uyarı**, **Bilgi**, ve **Verbose**, sırasıyla. 4'ten büyük herhangi bir sayı **Verbose**olarak kabul edilir ve sıfırdan küçük herhangi bir sayı **Kapalı**olarak kabul edilir.  
+ Yapılandırılacak anahtarın adını belirtmenin yanı sıra, anahtar için de bir değer belirtmeniz gerekir. Bu değer bir tamsayıdır. İçin <xref:System.Diagnostics.BooleanSwitch> , 0 değeri **kapalı**ve sıfır dışında bir değer **Açık**öğesine karşılık gelir. İçin <xref:System.Diagnostics.TraceSwitch> , 0, 1, 2, 3 ve 4 sırasıyla **kapalı**, **hata**, **Uyarı**, **bilgi**ve **ayrıntılıdır**. 4 ' ten büyük herhangi bir sayı **verbose**olarak değerlendirilir ve sıfırdan küçük herhangi bir sayı **kapalı**olarak kabul edilir.  
   
 > [!NOTE]
-> .NET Framework sürüm 2.0'da, bir anahtarın değerini belirtmek için metni kullanabilirsiniz. Örneğin, `true` bir <xref:System.Diagnostics.BooleanSwitch> numaralandırma değerini temsil eden bir metin `Error` veya <xref:System.Diagnostics.TraceSwitch>metin için . Satır `<add name="myTraceSwitch" value="Error" />` ' a `<add name="myTraceSwitch" value="1" />`eşdeğerdir.  
+> .NET Framework sürüm 2,0 ' de, bir anahtarın değerini belirtmek için metin kullanabilirsiniz. Örneğin, `true` bir <xref:System.Diagnostics.BooleanSwitch> veya için gibi bir numaralandırma değerini temsil eden metin için `Error` <xref:System.Diagnostics.TraceSwitch> . Satır `<add name="myTraceSwitch" value="Error" />` ile eşdeğerdir `<add name="myTraceSwitch" value="1" />` .  
   
- Son kullanıcıların bir uygulamanın izleme anahtarlarını yapılandırabilmesi için, uygulamanızdaki anahtarlar hakkında ayrıntılı belgeler sağlamanız gerekir. Hangi anahtarların neyi ve nasıl açıp kapatabileceğinizi ayrıntılı olarak anlatmalısınız. Ayrıca, son kullanıcınıza yorumlarda uygun Yardım içeren bir .config dosyası da sağlamanız gerekir.  
+ Son kullanıcıların bir uygulamanın izleme anahtarlarını yapılandırabilmesi için uygulamanızdaki anahtarlara ayrıntılı belgeler sağlamanız gerekir. Hangi anahtarların ne olduğunu, hangilerinin açıp kapanmasını kontrol edin. Ayrıca son kullanıcıya açıklamalarda uygun yardım bulunan bir. config dosyası sağlamanız gerekir.  
   
 #### <a name="to-configure-trace-switches"></a>İzleme anahtarlarını yapılandırmak için  
   
-1. İzleme anahtarlarını kullanmak için, önce bunları oluşturmanız ve izleme [anahtarı oluşturma ve başlatma](#create)bölümünde açıklandığı gibi kodunuza yerleştirmeniz gerekir.  
+1. İzleme anahtarlarını kullanmak için, önce bunları oluşturmanız ve [bir izleme anahtarı oluşturma ve başlatma](#create)bölümünde açıklandığı gibi kodunuza yerleştirmeniz gerekir.  
   
-2. Projenizde bir yapılandırma dosyası (app.config veya Web.config) yoksa, **Proje** menüsünden **Yeni Öğe Ekle'yi**seçin.  
+2. Projeniz bir yapılandırma dosyası (app.config veya Web.config) içermiyorsa, **Proje** menüsünde **Yeni öğe Ekle**' yi seçin.  
   
-    - **Görsel Temel:** Yeni **Öğe Ekle** iletişim kutusunda, **Uygulama Yapılandırma Dosyası'nı**seçin.  
+    - **Visual Basic:** **Yeni öğe Ekle** Iletişim kutusunda **uygulama yapılandırma dosyası**' nı seçin.  
   
-         Uygulama yapılandırma dosyası oluşturulur ve açılır. Bu, kök öğesi olan bir XML belgesidir`<configuration>.`  
+         Uygulama yapılandırma dosyası oluşturulup açılır. Bu, kök öğesi olan bir XML belgesidir`<configuration>.`  
   
-    - **Görsel C#:** Yeni **Öğe Ekle** iletişim kutusunda **XML Dosyası'nı**seçin. Bu **dosyaapp.config**adı . XML düzenleyicisinde, XML bildiriminden sonra aşağıdaki XML'yi ekleyin:  
+    - **Visual C#:** **Yeni öğe Ekle** Iletişim kutusunda **XML dosyası**' nı seçin. Bu dosyayı **app.config**olarak adlandırın. XML düzenleyicisinde, XML bildiriminden sonra aşağıdaki XML 'i ekleyin:  
   
         ```xml  
         <configuration>  
         </configuration>  
         ```  
   
-         Projeniz derlendiğinde, app.config dosyası proje çıktı klasörüne kopyalanır ve *uygulama adı*.exe.config olarak yeniden adlandırılır.  
+         Projeniz derlendiğinde app.config dosyası proje çıktı klasörüne kopyalanır ve *applicationname*.exe.config yeniden adlandırılır.  
   
-3. Etiketten `<configuration>` sonra ancak `</configuration>` etiketten önce, anahtarlarınızı yapılandırmak için uygun XML'i ekleyin. Aşağıdaki örnekler, **DisplayName** özelliğine `DataMessageSwitch` sahip bir **BooleanSwitch** ve **DisplayName** `TraceLevelSwitch`özelliğine sahip bir **TraceSwitch'i** göstermektedir.  
+3. Etiketinden sonra, etiketinden sonra `<configuration>` `</configuration>` , anahtarlarınızı yapılandırmak IÇIN uygun XML 'i ekleyin. Aşağıdaki örneklerde **DisplayName** özelliği olan bir **BooleanSwitch** `DataMessageSwitch` ve **DisplayName** özelliği olan bir **TraceSwitch** gösterilmektedir `TraceLevelSwitch` .  
   
     ```xml  
     <system.diagnostics>  
@@ -97,15 +97,15 @@ ms.locfileid: "79181833"
     </system.diagnostics>  
     ```  
   
-     Bu yapılandırmada, her iki anahtar da kapalıdır.  
+     Bu yapılandırmada her iki anahtar de kapalıdır.  
   
-4. Önceki örnekte gösterildiği gibi `DataMessagesSwitch` bir **BooleanSwitch'i**açmanız gerekiyorsa, **Değeri** 0'dan başka bir tamsayı ile değiştirin.  
+4. Önceki örnekte gösterildiği gibi bir **BooleanSwitch**açmanız gerekiyorsa `DataMessagesSwitch` **değeri** 0 dışında bir tamsayı olarak değiştirin.  
   
-5. Önceki örnekte gösterildiği gibi `TraceLevelSwitch` bir **TraceSwitch'i**açmanız gerekiyorsa, **Değeri** uygun düzey ayarına (1- 4) değiştirin.  
+5. Önceki örnekte gösterildiği gibi bir **TraceSwitch**açmanız gerekiyorsa `TraceLevelSwitch` **değeri** uygun düzey ayarı (1 ile 4 arasında) olarak değiştirin.  
   
-6. Son kullanıcının anahtarları uygun şekilde yapılandırmak için hangi değerleri değiştireceğini net bir şekilde anlaması için .config dosyasına yorum ekleyin.  
+6. Son kullanıcının anahtarları uygun şekilde yapılandırmak için hangi değerlerin değiştirileceği hakkında net bir şekilde anlayabilmesi için. config dosyasına Yorumlar ekleyin.  
   
-     Aşağıdaki örnek, yorumlar da dahil olmak üzere son kodun nasıl görünebileceğini gösterir:  
+     Aşağıdaki örnek, açıklamalar dahil olmak üzere son kodun nasıl görünebileceğini göstermektedir:  
   
     ```xml  
     <system.diagnostics>  

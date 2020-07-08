@@ -1,5 +1,6 @@
 ---
 title: illegalPrepareConstrainedRegion MDA
+description: İllegalPrepareConstrainedRegion Managed hata ayıklama Yardımcısı ' nı gözden geçirin ve bir PrepareConstrainedRegions çağrısının ardından bir TRY deyiminden sonra çağrılır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrepareConstrainedRegions method
@@ -8,30 +9,29 @@ helpviewer_keywords:
 - IllegalPrepareConstrainedRegions MDA
 - MDAs (managed debugging assistants), illegal PrepareConstrainedRegions
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
-ms.openlocfilehash: b80d6160876834b22e8d9d1eb7112b8b67c15fcc
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: d6a0d1d95840ebd735806c5547730ae9e0b2aace
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216472"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051291"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
-`illegalPrepareConstrainedRegion` yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> yöntemi çağrısı özel durum işleyicisinin `try` deyimiyle hemen önce olmadığında etkinleştirilir. Bu kısıtlama MSIL düzeyindedir; bu nedenle, çağrı ve `try`arasında kod oluşturma dışı kaynağa (Yorumlar gibi) izin verilir.  
+`illegalPrepareConstrainedRegion`Yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> Yöntem çağrısı `try` özel durum işleyicisinin ifadesinden hemen önce gelmediğinde etkinleştirilir. Bu kısıtlama MSIL düzeyindedir, bu nedenle çağrı ile yorum gibi kod oluşturma olmayan kaynağa izin verilir `try` .  
   
 ## <a name="symptoms"></a>Belirtiler  
- Bu şekilde hiçbir şekilde kabul edilen kısıtlı bir yürütme bölgesi (CER), ancak basit bir özel durum işleme bloğu (`finally` veya `catch`). Sonuç olarak, bölge bellek dışı bir koşul veya bir iş parçacığı iptali durumunda çalışmaz.  
+ Bu, basit bir özel durum işleme bloğu (veya) olarak hiçbir şekilde kabul edilen kısıtlı bir yürütme bölgesi (CER `finally` ) `catch` . Sonuç olarak, bölge bellek dışı bir koşul veya bir iş parçacığı iptali durumunda çalışmaz.  
   
 ## <a name="cause"></a>Nedeni  
- Bir CER için hazırlık deseninin doğru şekilde izlenmiyor.  Bu bir hata olayıdır. Özel durum işleyicilerini, `catch`/`finally`/`fault`/`filter` blokları üzerinde bir CER 'ye giriş olarak işaretlemek için kullanılan <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntemi çağrısı `try` deyimlerinden hemen önce kullanılmalıdır.  
+ Bir CER için hazırlık deseninin doğru şekilde izlenmiyor.  Bu bir hata olayıdır. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>Özel durum işleyicilerini blok içindeki bir cer ile tanışın olarak işaretlemek için kullanılan yöntem çağrısı `catch` / `finally` / `fault` / `filter` , deyimden hemen önce kullanılmalıdır `try` .  
   
 ## <a name="resolution"></a>Çözüm  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> çağrısının `try` deyimden hemen önce yapıldığından emin olun.  
+ Çağrısının <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> , deyimden hemen önce yapıldığından emin olun `try` .  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
  Bu MDA, CLR üzerinde hiçbir etkisi yoktur.  
   
 ## <a name="output"></a>Çıktı  
- MDA, <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> yöntemini çağıran yöntemin adını, MSIL sapmasını ve çağrının, try bloğunun başlangıcından hemen önce gelmediğini belirten bir ileti görüntüler.  
+ MDA, yöntemi çağıran yöntemin adını <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> , MSIL farkını ve çağrının try bloğunun başlangıcından hemen önce gelmesini belirten bir iletiyi görüntüler.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -67,4 +67,4 @@ void MethodWithInvalidPCR()
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../interop/interop-marshaling.md)

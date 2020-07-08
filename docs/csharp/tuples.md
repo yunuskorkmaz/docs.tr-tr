@@ -4,12 +4,11 @@ description: "C 'de adlandırılmamış ve adlandırılmış demet türleri hakk
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
-ms.translationtype: MT
+ms.openlocfilehash: 0fb6f043857a9932b7a86f773cce812e0fd49dcb
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374622"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051863"
 ---
 # <a name="c-tuple-types"></a>C# demet türleri
 
@@ -46,7 +45,7 @@ Bu adlar, *adlandırılmamış tanımlama grupları*için kullanabileceğiniz te
 Önceki örnekteki tanımlama grubu, değişmez sabitler kullanılarak başlatılmış ve C# 7,1 ' de *demet alan adı tahminleri* kullanılarak oluşturulan öğe adlarına sahip olmayacaktır.
 
 Ancak, bir tanımlama grubu başlattığınızda, her bir alana daha iyi adlar veren yeni dil özellikleri kullanabilirsiniz. Bunun yapılması adlandırılmış bir *tanımlama grubu*oluşturur.
-Adlandırılmış tanımlama gruplarının hala,, vb. adlı öğeleri vardır `Item1` `Item2` `Item3` .
+Adlandırılmış tanımlama gruplarının hala,,, vb. adlı öğeleri vardır `Item1` `Item2` `Item3` .
 Ancak, adlandırmış olduğunuz öğelerin herhangi biri için eş anlamlıları da vardır.
 Her öğe için ad belirterek adlandırılmış bir tanımlama grubu oluşturursunuz. Bir yol, kayıt kümesi başlatmasının parçası olarak adları belirtmektir:
 
@@ -54,7 +53,7 @@ Her öğe için ad belirterek adlandırılmış bir tanımlama grubu oluştururs
 
 Adlandırılmış tanımlama gruplarını etkin bir şekilde kullanabilmeniz için bu eş anlamlılar derleyici ve dil tarafından işlenir. Ides ve düzenleyiciler, Roslyn API 'Lerini kullanarak bu anlam adlarını okuyabilir. Adlandırılmış bir tanımlama grubunun öğelerine aynı derlemenin herhangi bir yerindeki anlam adlarıyla başvurabilirsiniz. Derleyici, `Item*` derlenmiş çıktıyı oluştururken eşdeğerleriyle tanımladığınız adların yerini alır. Derlenen Microsoft ara dili (MSIL), bu öğeleri verdiğiniz adları içermez.
 
-C# 7,1 ' den başlayarak, kayıt düzeni için alan adları, kayıt düzeni başlatmak için kullanılan değişkenlerden bulunabilir. Bu, **[demet yansıtma başlatıcıları](#tuple-projection-initializers)** olarak adlandırılır. Aşağıdaki kod `accumulation` öğeleriyle `count` (bir tamsayı) ve `sum` (bir Double) adlı bir tanımlama grubu oluşturur.
+C# 7,1 ' den başlayarak, kayıt düzeni için alan adları, kayıt düzeni başlatmak için kullanılan değişkenlerden bulunabilir. Tanımlama gruplarına alan adları sağlamak, **[demet yansıtma başlatıcıları](#tuple-projection-initializers)** olarak adlandırılır. Aşağıdaki kod `accumulation` öğeleriyle `count` (bir tamsayı) ve `sum` (bir Double) adlı bir tanımlama grubu oluşturur.
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -110,7 +109,7 @@ Son olarak, tanımlama grupları iç içe diziler içerebilir. Tanımlama grubu 
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-Farklı şekilleri olduğunda, eşitlik (veya eşitsizlik) için iki tanımlama grubunu karşılaştırmak üzere bir derleme zamanı hatası. Derleyici, iç içe geçmiş tanımlama gruplarının kendisini karşılaştırmak için denenmez.
+Farklı şekilleri olduğunda, eşitlik (veya eşitsizlik) için iki tanımlama grubunu karşılaştırmak üzere derleme zamanı hatası. Derleyici, iç içe geçmiş tanımlama gruplarının kendisini karşılaştırmak için denenmez.
 
 ## <a name="assignment-and-tuples"></a>Atama ve tanımlama grupları
 
@@ -147,7 +146,7 @@ Tanımlama grupları için en yaygın kullanımdan biri yöntem dönüş değeri
 
 > [!NOTE]
 > Bu örnekler düzeltilmeyen örnek standart sapmayı hesaplar.
-> Düzeltilen örnek standart sapma formülü, iç kare farklarının toplamını, genişletme yöntemi olduğu gibi N yerine, her ne kadar (N-1) olacak şekilde böler `Average` . Standart sapma için bu formüller arasındaki farklılıklar hakkında daha fazla ayrıntı için bir istatistik metnine danışın.
+> Düzeltilen örnek standart sapma formülü, iç kare farklarının toplamını, genişletme yöntemi olduğu gibi N yerine, her ne kadar (N-1) olacak şekilde böler `Average` .
 
 Yukarıdaki kod, standart sapma için textbook formülünü izler. Doğru yanıtı üretir ancak bu, verimsiz bir uygulama. Bu yöntem, diziyi iki kez numaralandırır: ortalamayı üretmek için bir kez ve ortalamanın farkının ortalamasının ortalamasını üretmek için bir kez.
 (LINQ sorgularının geç değerlendirildiğini unutmayın. bu nedenle, ortalama farklar ve bu farkların ortalaması yalnızca bir numaralandırma yapar.)

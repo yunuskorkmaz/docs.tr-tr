@@ -1,5 +1,6 @@
 ---
 title: memberInfoCacheCreation MDA
+description: .NET 'teki memberInfoCacheCreation Managed hata ayıklama Yardımcısı 'nı (MDA), bir MemberInfo önbelleği oluşturulduğunda etkinleştirilen şekilde anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - member info cache creation
@@ -10,32 +11,31 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), cache
 - MemberInfo cache
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
-ms.openlocfilehash: e5dbc769bd634afae06582ee614addafd611fad9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: c48be7ac8632b8072981be01e01997ee8c34b6b3
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217307"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051148"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
-`memberInfoCacheCreation` yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Reflection.MemberInfo> önbelleği oluşturulduğunda etkinleştirilir. Bu, kaynak maliyetli yansıma özelliklerini kullanan bir programın güçlü bir göstergesidir.  
+`memberInfoCacheCreation`Yönetilen hata ayıklama Yardımcısı (MDA), bir <xref:System.Reflection.MemberInfo> önbellek oluşturulduğunda etkinleştirilir. Bu, kaynak maliyetli yansıma özelliklerini kullanan bir programın güçlü bir göstergesidir.  
   
 ## <a name="symptoms"></a>Belirtiler  
  Program kaynak maliyetli yansıma kullandığından programın çalışma kümesi artar.  
   
 ## <a name="cause"></a>Nedeni  
- <xref:System.Reflection.MemberInfo> nesneleri içeren yansıma işlemleri, soğuk sayfalarda depolanan meta verileri okuması ve genel olarak programın bir tür geç bağlantılı senaryo kullandığını belirtmesi gerektiğinden kaynak maliyetli olarak değerlendirilir.  
+ Nesneleri içeren yansıma işlemleri, <xref:System.Reflection.MemberInfo> soğuk sayfalarda depolanan meta verileri okuması ve genel olarak programın bazı tür geç bağlantılı senaryolar kullandığını belirtmesi gerektiğinden kaynak maliyetli olarak değerlendirilir.  
   
 ## <a name="resolution"></a>Çözüm  
- Bu MDA ' ı etkinleştirerek ve sonra kodunuzu bir hata ayıklayıcıda çalıştırarak veya MDA etkinleştirildiğinde bir hata ayıklayıcı ile iliştirerek, yansıma programınızda nerede kullanıldığını belirleyebilirsiniz. Bir hata ayıklayıcı altında, <xref:System.Reflection.MemberInfo> önbelleğinin nerede oluşturulduğunu ve buradan, programınızın yansıma kullandığını belirleyebileceğiniz bir yığın izlemesi alacaksınız.  
+ Bu MDA ' ı etkinleştirerek ve sonra kodunuzu bir hata ayıklayıcıda çalıştırarak veya MDA etkinleştirildiğinde bir hata ayıklayıcı ile iliştirerek, yansıma programınızda nerede kullanıldığını belirleyebilirsiniz. Bir hata ayıklayıcı altında, önbelleğin nerede oluşturulduğunu gösteren bir yığın izlemesi alırsınız ve bu noktada <xref:System.Reflection.MemberInfo> programınızın yansıma kullandığını belirleyebilirsiniz.  
   
  Çözüm, kodun hedeflerine bağımlıdır. Bu MDA, programınızın geç bağlanan bir senaryoya sahip olduğunu uyarır. Erken bağlantılı bir senaryoyu değiştirebilir veya geç bağlantılı senaryonun performansını göz önünde bulundurup belirleyemeyebilirsiniz.  
   
 ## <a name="effect-on-the-runtime"></a>Çalışma zamanında etki  
- Bu MDA, oluşturulan her <xref:System.Reflection.MemberInfo> önbelleği için etkinleştirilir. Performans etkisi göz ardı edilebilir değil.  
+ Bu MDA, oluşturulan her önbellek için etkinleştirilir <xref:System.Reflection.MemberInfo> . Performans etkisi göz ardı edilebilir değil.  
   
 ## <a name="output"></a>Çıktı  
- MDA <xref:System.Reflection.MemberInfo> önbelleğinin oluşturulduğunu belirten bir ileti çıkışı verir. Programınızın yansıma kullandığını gösteren bir yığın izlemesi almak için bir hata ayıklayıcı kullanın.  
+ MDA, önbelleğin oluşturulduğunu belirten bir ileti çıkışı verir <xref:System.Reflection.MemberInfo> . Programınızın yansıma kullandığını gösteren bir yığın izlemesi almak için bir hata ayıklayıcı kullanın.  
   
 ## <a name="configuration"></a>Yapılandırma  
   
@@ -48,7 +48,7 @@ ms.locfileid: "77217307"
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek kod `memberInfoCacheCreation` MDA ' i etkinleştirir.  
+ Bu örnek kod, MDA öğesini etkinleştirececektir `memberInfoCacheCreation` .  
   
 ```csharp
 using System;  

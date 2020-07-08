@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma'
+description: .NET 'teki TraceSource sınıfını kullanarak izleme kaynaklarını oluşturun ve başlatın. Bu sınıf olayları ve verileri izlemek ve bilgilendirici izlemeler vermek için yöntemler sağlar.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,26 +10,25 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-ms.openlocfilehash: eeccad44bd2719a3cb2a721ba4e32a7bf477636f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: 55d7854bff991ba185d3f5d6e4c6e7222c9e3039
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174738"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051278"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Nasıl yapılır: İz Kaynakları Oluşturma ve Başlatma
-Sınıf, <xref:System.Diagnostics.TraceSource> uygulamayla ilişkilendirilebilen izlemeleri oluşturmak için uygulamalar tarafından kullanılır. <xref:System.Diagnostics.TraceSource>olayları kolayca izlemenize, verileri izlemenize ve bilgilendirici izlemeler vermenize olanak tanıyan izleme yöntemleri sağlar. Yapılandırma dosyaları <xref:System.Diagnostics.TraceSource> nın kullanımı yla veya kullanmadan oluşturulabilir ve başolarak başolarak oluşturulabilir. Bu konu her iki seçenek için de yönergeler sağlar. Ancak, izleme kaynakları tarafından üretilen izleme lerin çalışma zamanında yeniden yapılandırılmasını kolaylaştırmak için yapılandırma dosyalarını kullanmanızı öneririz.  
+<xref:System.Diagnostics.TraceSource>Sınıfı, uygulamalar tarafından uygulamayla ilişkilendirilebilen izlemeler üretmek için kullanılır. <xref:System.Diagnostics.TraceSource>olayları kolayca izlemenize, verileri izlemenize ve bilgilendirici izlemeler yapmanıza imkan tanıyan izleme yöntemleri sağlar. İzleme çıkışı <xref:System.Diagnostics.TraceSource> , yapılandırma dosyaları kullanılmadan veya kullanılarak oluşturulabilir ve başlatılabilir. Bu konuda her iki seçenek için de yönergeler sağlanmaktadır. Ancak, çalışma zamanında izleme kaynakları tarafından üretilen izlemelerin yeniden yapılandırılmasını kolaylaştırmak için yapılandırma dosyalarını kullanmanızı öneririz.  
   
-### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Yapılandırma dosyası kullanarak izleme kaynağı oluşturmak ve başlatma  
+### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Yapılandırma dosyası kullanarak izleme kaynağı oluşturma ve başlatma  
   
-1. Visual Studio konsol uygulama projesi (.NET Framework) oluşturun ve verilen kodu aşağıdaki kodla değiştirin. Bu kod hataları ve uyarıları günlüğe kaydeder ve bazıları konsola, bazıları da yapılandırma dosyasındaki girişler tarafından oluşturulan myListener dosyasına kaydeder.  
+1. Bir Visual Studio konsol uygulaması projesi (.NET Framework) oluşturun ve sağlanan kodu aşağıdaki kodla değiştirin. Bu kod, hataları ve uyarıları günlüğe kaydeder ve bunların bazılarını konsola ve bunlardan bazılarını yapılandırma dosyasındaki girişler tarafından oluşturulan myListener dosyasına verir.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2. Adım 1'deki kod örneğinde adı geçen `TraceSourceApp` izleme kaynağını başlatmayı sağlamak için projeye bir uygulama yapılandırma dosyası ekleyin.  
+2. 1. adımdaki kod örneğinde adlı izleme kaynağını başlatmak için projeye, yoksa bir uygulama yapılandırma dosyası ekleyin `TraceSourceApp` .  
   
-3. Varsayılan yapılandırma dosyası içeriğini, adım 1'de oluşturulan izleme kaynağı için bir konsol izleme dinleyicisi ve metin yazarı izleme dinleyicisini başlatmayı aşağıdaki ayarlarla değiştirin.  
+3. Varsayılan yapılandırma dosyası içeriğini aşağıdaki ayarlarla değiştirin ve adım 1 ' de oluşturulan izleme kaynağı için bir metin yazıcısı izleme dinleyicisi başlatın.  
   
     ```xml  
     <configuration>  
@@ -63,15 +63,15 @@ Sınıf, <xref:System.Diagnostics.TraceSource> uygulamayla ilişkilendirilebilen
     </configuration>  
     ```  
   
-     İzleme dinleyicilerini yapılandırmanın yanı sıra, yapılandırma dosyası her iki dinleyici için de filtreler oluşturur ve izleme kaynağı için bir kaynak anahtarı oluşturur. İz dinleyici eklemek için iki teknik gösterilir: dinleyiciyi doğrudan izleme kaynağına eklemek ve paylaşılan dinleyici koleksiyonuna bir dinleyici eklemek ve ardından izleme kaynağına adıyla eklemek. İki dinleyici için tanımlanan filtreler farklı kaynak düzeyleri ile başharfe alınır. Bu, bazı iletilerin iki dinleyiciden yalnızca biri tarafından yazılmasıyla sonuçlanır.  
+     Yapılandırma dosyası, izleme dinleyicilerini yapılandırmanın yanı sıra her iki dinleyici için de filtreler oluşturur ve izleme kaynağı için bir kaynak anahtarı oluşturur. İzleme dinleyicileri eklemek için iki teknik gösterilmektedir: dinleyiciyi doğrudan izleme kaynağına ekleme ve paylaşılan dinleyici koleksiyonuna bir dinleyici ekleme ve ardından bunu bir ad ile izleme kaynağına ekleme. İki dinleyici için tanımlanan filtreler farklı kaynak düzeyleriyle başlatılır. Bu, bazı iletilerin yalnızca biri iki dinleyiciyle yazılmasıyla sonuçlanır.  
   
-     Yapılandırma dosyası, uygulamanın başlatılması sırasında izleme kaynağının ayarlarını başlatır. Uygulama, kullanıcı tarafından belirtilen ayarları geçersiz kılmak için yapılandırma dosyası tarafından ayarlanan özellikleri dinamik olarak değiştirebilir. Örneğin, geçerli yapılandırma ayarlarından bağımsız olarak, kritik iletilerin her zaman bir metin dosyasına gönderilmesini sağlamak isteyebilirsiniz. Örnek kod, kritik iletilerin izleme dinleyicilerine çıktı olduğundan emin olmak için yapılandırma dosya ayarlarını nasıl geçersiz kılındığını gösterir.  
+     Yapılandırma dosyası, uygulamanın başlatıldığı sırada izleme kaynağı için ayarları başlatır. Uygulama, Kullanıcı tarafından belirtilen ayarları geçersiz kılmak için yapılandırma dosyası tarafından ayarlanan özellikleri dinamik olarak değiştirebilir. Örneğin, geçerli yapılandırma ayarlarından bağımsız olarak, kritik iletilerin her zaman bir metin dosyasına gönderilmesini sağlamak isteyebilirsiniz. Örnek kod, kritik iletilerin izleme dinleyicilerine çıkış olduğundan emin olmak için yapılandırma dosya ayarlarının nasıl geçersiz kılınacağını göstermektedir.  
   
-     Uygulama yürütülerken yapılandırma dosyası ayarlarını değiştirme, ilk ayarları değiştirmez. Ayarları değiştirmek için uygulamayı yeniden başlatmanız veya <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> yöntemi kullanarak uygulamayı programlı olarak yenilemeniz gerekir.  
+     Uygulama yürütülürken yapılandırma dosyası ayarlarının değiştirilmesi, başlangıç ayarlarını değiştirmez. Ayarları değiştirmek için, uygulamayı yeniden başlatmanız ya da yöntemini kullanarak uygulamayı programlı olarak yenilemeniz gerekir <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType> .  
   
-### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Yapılandırma dosyası olmadan izleme kaynaklarını, dinleyicileri ve filtreleri başlatma  
+### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Yapılandırma dosyası olmadan izleme kaynaklarını, dinleyicileri ve filtreleri başlatmak için  
   
-- Yapılandırma dosyası kullanmadan izleme kaynağı üzerinden izlemeyi etkinleştirmek için aşağıdaki örnek kodu kullanın. Bu önerilen bir uygulama değildir, ancak izleme sağlamak için yapılandırma dosyalarına bağımlı olmak istemediğiniz durumlar olabilir.  
+- Bir yapılandırma dosyası kullanmadan izleme kaynağı aracılığıyla izlemeyi etkinleştirmek için aşağıdaki örnek kodu kullanın. Bu önerilen bir uygulama değildir, ancak izlemeyi sağlamak için yapılandırma dosyalarına bağlı olmasını istemediğiniz durumlar olabilir.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

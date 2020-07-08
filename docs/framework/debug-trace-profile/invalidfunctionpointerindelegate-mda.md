@@ -1,5 +1,6 @@
 ---
 title: invalidFunctionPointerInDelegate MDA
+description: Temsilci oluşturmak için geçersiz bir işlev işaretçisi geçirilirse çağrılan ınvalidfunctionpointerındelegate yönetilen hata ayıklama Yardımcısı 'nı (MDA) gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - invalidFunctionPointerInDelegate MDA
@@ -11,15 +12,14 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - invalid function pointers
 ms.assetid: 99ae44f1-783e-49a9-9009-24f54bbd0f09
-ms.openlocfilehash: 723f51e14c314bde40c34d629ba7fc4f6276c633
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
-ms.translationtype: MT
+ms.openlocfilehash: a17427d117c62ba782af3c9549c84623a3013b06
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217372"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051746"
 ---
 # <a name="invalidfunctionpointerindelegate-mda"></a>invalidFunctionPointerInDelegate MDA
-`invalidFunctionPointerInDelegate` yönetilen hata ayıklama Yardımcısı (MDA), bir yerel işlev işaretçisi üzerinden temsilci oluşturmak için geçersiz bir işlev işaretçisi geçirildiğinde etkinleştirilir.  
+`invalidFunctionPointerInDelegate`Yönetilen hata ayıklama Yardımcısı (MDA), bir yerel işlev işaretçisi üzerinden temsilci oluşturmak için geçersiz bir işlev işaretçisi geçirildiğinde etkinleştirilir.  
   
 ## <a name="symptoms"></a>Belirtiler  
  Bir işlev işaretçisi üzerinde bir temsilci kullanılırken erişim ihlalleri veya beklenmedik bellek bozulması.  
@@ -50,4 +50,4 @@ ms.locfileid: "77217372"
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Yönetilen Hata Ayıklama Yardımcıları ile Hataları Tanılama](diagnosing-errors-with-managed-debugging-assistants.md)
-- [Birlikte Çalışma için Hazırlama](../interop/interop-marshaling.md)
+- [Birlikte Çalışma Hazırlama](../interop/interop-marshaling.md)
