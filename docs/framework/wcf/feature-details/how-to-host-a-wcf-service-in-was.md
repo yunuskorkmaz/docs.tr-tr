@@ -2,12 +2,11 @@
 title: "Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma"
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 1e338440b3a630840230df838e46579e3725bb60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
-ms.translationtype: MT
+ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593119"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051993"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma
 Bu konuda, Windows Işlem etkinleştirme Hizmetleri (WAS olarak da bilinir) barındırılan Windows Communication Foundation (WCF) hizmeti oluşturmak için gereken temel adımlar özetlenmektedir. , HTTP olmayan taşıma protokolleriyle çalışan Internet Information Services (IIS) özelliklerinin genelleştirilmesi olan yeni işlem etkinleştirme hizmetidir. WCF, TCP, adlandırılmış kanallar ve Message Queuing gibi WCF tarafından desteklenen HTTP olmayan protokoller üzerinden alınan etkinleştirme isteklerini iletmek için dinleyici bağdaştırıcısı arabirimini kullanır.  
@@ -47,7 +46,7 @@ Bu konuda, Windows Işlem etkinleştirme Hizmetleri (WAS olarak da bilinir) bar�
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3. <xref:System.ServiceModel.NetTcpBinding>Uç noktalar tarafından kullanılacak bağlamayı tanımlamak için bir Web. config dosyası oluşturun `CalculatorService` .  
+3. <xref:System.ServiceModel.NetTcpBinding>Uç noktalar tarafından kullanılacak bağlamayı tanımlamak için bir Web.config dosyası oluşturun `CalculatorService` .  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -66,7 +65,7 @@ Bu konuda, Windows Işlem etkinleştirme Hizmetleri (WAS olarak da bilinir) bar�
   
 4. Aşağıdaki kodu içeren bir Service. svc dosyası oluşturun.  
   
-   ```
+   ```aspx-csharp
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
   
@@ -74,7 +73,7 @@ Bu konuda, Windows Işlem etkinleştirme Hizmetleri (WAS olarak da bilinir) bar�
   
 ### <a name="to-create-a-client-to-use-the-service"></a>Hizmeti kullanmak üzere bir istemci oluşturmak için  
   
-1. Hizmet meta verilerinden kod oluşturmak için, komut satırından [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın.  
+1. Hizmet meta verilerinden kod oluşturmak için, komut satırından [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanın.  
   
     ```console
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -88,7 +87,7 @@ Bu konuda, Windows Işlem etkinleştirme Hizmetleri (WAS olarak da bilinir) bar�
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4. Tarafından kullanılan istemcinin yapılandırması, <xref:System.ServiceModel.NetTcpBinding> Svcutil. exe tarafından da oluşturulur. Visual Studio kullanılırken bu dosya App. config dosyasında adlandırılmalıdır.  
+4. Tarafından kullanılan istemcinin yapılandırması <xref:System.ServiceModel.NetTcpBinding> da Svcutil.exe tarafından oluşturulur. Visual Studio kullanılırken bu dosya App.config dosyasında adlandırılmalıdır.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]
   

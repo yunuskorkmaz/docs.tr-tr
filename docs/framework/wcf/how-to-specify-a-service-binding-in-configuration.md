@@ -6,12 +6,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 92d0834091a1f243df6be214f606fbf0093dca54
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
-ms.translationtype: MT
+ms.openlocfilehash: 3b9dd12f2a28ae2d420e82013459613cee8140f1
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244562"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051954"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Nasıl yapılır: Yapılandırmada Hizmet Bağlama Belirtme
 Bu örnekte, bir `ICalculator` anlaşma temel Hesaplayıcı hizmeti için tanımlanmıştır, hizmet `CalculatorService` sınıfında uygulanır ve ardından uç noktası, hizmetin kullandığı Web.config dosyasında yapılandırılır <xref:System.ServiceModel.BasicHttpBinding> . Bu hizmeti yapılandırma yerine kod kullanarak yapılandırma hakkında açıklama için bkz. [nasıl yapılır: kod Içinde hizmet bağlaması belirtme](how-to-specify-a-service-binding-in-code.md).  
@@ -77,7 +76,7 @@ Bu örnekte, bir `ICalculator` anlaşma temel Hesaplayıcı hizmeti için tanım
   
 4. Aşağıdaki satırı içeren bir Service. svc dosyası oluşturun ve bunu Internet Information Services (IIS) sanal dizinine yerleştirin.  
   
-    ```  
+    ```aspx-csharp
     <%@ServiceHost language=c# Service="CalculatorService" %>
     ```  
   

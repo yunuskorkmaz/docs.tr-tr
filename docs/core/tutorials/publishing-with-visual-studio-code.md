@@ -1,13 +1,12 @@
 ---
 title: Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama
 description: Yayımlama, .NET Core uygulamasını çalıştırmak için gereken dosya kümesini oluşturur.
-ms.date: 06/08/2020
-ms.openlocfilehash: 442d08c9b016407327ba30db0aae78b5cf6b6fe3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
-ms.translationtype: MT
+ms.date: 07/04/2020
+ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
+ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84701456"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86051889"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama
 
@@ -15,7 +14,7 @@ Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulam
 
 .NET Core CLI, uygulamayı yayımlamak için kullanılır, bu nedenle bu öğreticiyi Visual Studio Code dışında bir kod düzenleyicisiyle takip edebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Bu öğretici, [Visual Studio Code bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
@@ -112,4 +111,4 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 Bu öğreticide bir konsol uygulaması yayımladınız. Sonraki öğreticide, bir sınıf kitaplığı oluşturursunuz.
 
 > [!div class="nextstepaction"]
-> [Mac için Visual Studio .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)
+> [Visual Studio Code .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)
