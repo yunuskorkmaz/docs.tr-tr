@@ -1,6 +1,8 @@
 ---
-title: DisposeAsync yöntemi uygulama
+title: DisposeAsync metodu uygulama
 description: ''
+author: IEvangelist
+ms.author: dapine
 ms.date: 06/02/2020
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +10,14 @@ dev_langs:
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: c4f541d5a4f5b5fd31b344a299789d86cd78424c
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 31c4cc9136862551e02fae030e38ebd6c2916a38
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84311016"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100931"
 ---
-# <a name="implement-a-disposeasync-method"></a>DisposeAsync yöntemi uygulama
+# <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
 <xref:System.IAsyncDisposable?displayProperty=nameWithType>Arabirim, C# 8,0 'nin bir parçası olarak sunulmuştur. <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> [Bir Dispose yöntemi uygularken](implementing-dispose.md)yaptığınız gibi, kaynak temizlik gerçekleştirmeniz gerektiğinde yöntemini uygulayabilirsiniz. Ancak, bu uygulamanın zaman uyumsuz temizleme işlemlerine izin verdiği önemli farklılıklardan biridir. , <xref:System.IAsyncDisposable.DisposeAsync> <xref:System.Threading.Tasks.ValueTask> Zaman uyumsuz Dispose işlemini temsil eden bir döndürür.
 
@@ -62,7 +64,7 @@ Tüm korumalı olmayan sınıflar, devralınabileceğinden olası bir temel sın
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
-Önceki örnekte kullanılan, <xref:System.Text.Json.Utf8JsonWriter> hakkında daha fazla bilgi için, `System.Text.Json` bkz. [Newtonsoft. JSON 'Dan System. Text. JSON 'a geçiş](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md).
+Önceki örnek, <xref:System.Text.Json.Utf8JsonWriter> hakkında daha fazla bilgi için hakkında daha fazla bilgi için, `System.Text.Json` bkz. [Newtonsoft.Jsüzerinde System.Text.Js](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)' a geçiş.
 
 ## <a name="using-async-disposable"></a>Async atılabilir kullanma
 

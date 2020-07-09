@@ -1,13 +1,16 @@
 ---
 title: Anonim ve demet türleri arasında seçim yapma
 description: Anonim türler ve demet türü arasında seçim yapmak için uygun olduğunda bilgi edinin.
+author: IEvangelist
+ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2f927b59d7206dd0f405c11529f93b56a1c778a0
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
+ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052084"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86100970"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Anonim ve demet türleri arasında seçim yapma
 

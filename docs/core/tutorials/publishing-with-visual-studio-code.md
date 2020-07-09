@@ -4,6 +4,7 @@ description: Yayımlama, .NET Core uygulamasını çalıştırmak için gereken 
 ms.date: 07/04/2020
 ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86051889"
@@ -14,7 +15,7 @@ Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulam
 
 .NET Core CLI, uygulamayı yayımlamak için kullanılır, bu nedenle bu öğreticiyi Visual Studio Code dışında bir kod düzenleyicisiyle takip edebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - Bu öğretici, [Visual Studio Code bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 

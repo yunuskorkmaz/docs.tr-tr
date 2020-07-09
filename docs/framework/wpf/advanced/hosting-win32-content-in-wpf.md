@@ -8,13 +8,14 @@ helpviewer_keywords:
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
 ms.openlocfilehash: c0c62f1999feaf591c512314515f01e83fa12591
 ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86052097"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF'de Win32 İçeriği Barındırma
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bkz. [WPF ve Win32 birlikte](wpf-and-win32-interoperation.md)çalışma.
 
