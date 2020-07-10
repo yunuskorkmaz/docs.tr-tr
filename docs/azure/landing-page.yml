@@ -1,0 +1,223 @@
+### YamlMime:Landing
+title: .NET geliştiricileri için Azure
+summary: .NET geliştiricileri için bu öğreticiler ve araçlarla bulut uygulamaları geliştirmeye başlayın. Azure ❤ .NET
+metadata:
+  title: .NET geliştiricileri için Azure
+  description: .NET ve Azure ile geliştirmeye yönelik belgeler, örnekler ve bağlantılar.
+  ms.date: 06/12/2020
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.technology: azure
+  ms.service: multiple
+  ms.prod: azure-dotnet
+  ms.openlocfilehash: a7b9b909e500979750d57cc6047153123cd192e5
+  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.translationtype: MT
+  ms.contentlocale: tr-TR
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86174960"
+landingContent:
+- title: Azure 'da .NET ile çalışmaya başlama
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure ve .NET’e giriş
+      url: intro.md
+  - linkListType: get-started
+    links:
+    - text: .NET geliştirici araçları
+      url: tools.md
+    - text: Uygulamanızın kimliğini doğrulama
+      url: authentication.md
+    - text: Günlüğe kaydetme
+      url: logging.md
+    - text: SDK örneği
+      url: /samples/dotnet/samples/azure-identity-resource-management-storage/
+  - linkListType: learn
+    links:
+    - text: Azure'ın temelleri
+      url: /learn/paths/azure-fundamentals/
+  - linkListType: download
+    links:
+    - text: Örnek kod
+      url: /samples/browse/?products=azure&languages=csharp%2Caspx-csharp%2Cfsharp%2Cvb
+  - linkListType: reference
+    links:
+    - text: .NET API başvurusu için Azure kitaplıkları
+      url: /dotnet/api/overview/azure/?view=azure-dotnet
+- title: Web uygulamaları oluşturun
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: App Service
+      url: /azure/app-service/overview
+    - text: Azure İşlevleri
+      url: /azure/azure-functions/functions-overview
+  - linkListType: quickstart
+    links:
+    - text: ASP.NET web uygulaması dağıtma
+      url: /azure/app-service/app-service-web-get-started-dotnet
+    - text: Sunucusuz bir işlev oluşturma
+      url: /azure/azure-functions/functions-create-your-first-function-visual-studio
+  - linkListType: learn
+    links:
+    - text: Bir Web uygulamasını Azure App Service barındırın
+      url: /learn/modules/host-a-web-app-with-azure-app-service/
+    - text: Visual Studio ile Azure İşlevi geliştirme, test etme ve dağıtma
+      url: /learn/modules/develop-test-deploy-azure-functions-with-visual-studio/
+    - text: Azure API Management ile API'lerinizi yayımlama ve yönetme
+      url: /learn/modules/publish-manage-apis-with-azure-api-management/
+  - linkListType: tutorial
+    links:
+    - text: App Service ve Azure SQL veritabanı ile Web uygulaması ASP.NET Core
+      url: /azure/app-service/app-service-web-tutorial-dotnet-sqldatabase
+    - text: ASP.NET ve Azure SQL Veritabanı ile yönetilen kimlik
+      url: /azure/app-service/app-service-web-tutorial-connect-msi
+    - text: Azure App Service’de CORS ile Web API’si
+      url: /azure/app-service/app-service-web-tutorial-rest-api
+- title: Bulutta yerel uygulamalar oluşturun
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Kubernetes 'te bir mikro hizmeti çalıştırma ve hata ayıklama
+      url: /azure/dev-spaces/quickstart-netcore-visualstudio
+  - linkListType: learn
+    links:
+    - text: Buluta özel ASP.NET Core mikro hizmeti oluşturma ve dağıtma
+      url: /learn/modules/microservices-aspnet-core/
+  - linkListType: how-to-guide
+    links:
+    - text: Azure Container Registry için .NET Core uygulaması dağıtma
+      url: /visualstudio/containers/hosting-web-apps-in-docker
+  - linkListType: tutorial
+    links:
+    - text: Visual Studio kapsayıcı araçları ile ASP.NET Core uygulaması
+      url: /visualstudio/containers/container-tools
+    - text: AKS 'de birden çok kapsayıcıyı dağıtma ve hata ayıklama
+      url: /azure/dev-spaces/multi-service-netcore-visualstudio
+    - text: Azure Uygulama yapılandırması kullanılarak dinamik yapılandırma ve özellik bayrakları
+      url: /azure/azure-app-configuration/use-feature-flags-dotnet-core
+- title: Kimlik doğrulama ve güvenlik
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Microsoft Identity platform (Azure AD)
+      url: /azure/active-directory/develop/
+  - linkListType: learn
+    links:
+    - text: OpenID Connect ve Azure AD kullanarak uygulamanızın güvenliğini sağlama
+      url: /learn/modules/secure-app-with-oidc-and-azure-ad/
+    - text: Microsoft kimliğiyle özel API 'Leri güvenli hale getirme
+      url: /learn/modules/identity-secure-custom-api/
+    - text: ASP.NET Identity çerçevesiyle ASP.NET Core Web uygulamasının güvenliğini sağlama
+      url: /learn/modules/secure-aspnet-core-identity/
+  - linkListType: tutorial
+    links:
+    - text: Microsoft 'a bir ASP.NET Web uygulamasına oturum açma ekleme
+      url: /azure/active-directory/develop/tutorial-v2-asp-webapp
+    - text: ASP.NET Core ile Azure Key Vault kullanma
+      url: /azure/key-vault/tutorial-net-create-vault-azure-web-app
+    - text: Azure AD B2C Web API 'siyle tümleştirme
+      url: /azure/active-directory-b2c/tutorial-single-page-app-webapi
+  - linkListType: reference
+    links:
+    - text: .NET için Azure Identity istemci kitaplığı
+      url: /dotnet/api/overview/azure/identity-readme?view=azure-dotnet
+- title: Depolama & verileriyle çalışma
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Doğru veri depolama seçeneğini belirleyin
+      url: /azure/architecture/guide/technology-choices/data-store-overview
+  - linkListType: quickstart
+    links:
+    - text: .NET kullanarak bir Azure SQL veritabanını veya Azure SQL yönetilen örneğini sorgulama
+      url: /azure/azure-sql/database/connect-query-dotnet-core
+    - text: .NET kullanarak Azure PostgreSQL 'i sorgulama
+      url: /azure/postgresql/connect-csharp
+  - linkListType: learn
+    links:
+    - text: Azure SQL veritabanını sorgulayan bir ASP.NET uygulaması geliştirme ve yapılandırma
+      url: /learn/modules/develop-app-that-queries-azure-sql/
+    - text: Visual Studio Code’da Azure Cosmos DB için bir .NET Core uygulaması oluşturma
+      url: /learn/modules/build-cosmos-db-app-with-vscode/
+    - text: Azure Blob depolama ile uygulama verilerini depolama
+      url: /learn/modules/store-app-data-with-azure-blob-storage/
+    - text: Entity Framework Core ile ilişkisel verileri kalıcı hale getirme ve alma
+      url: /learn/modules/persist-data-ef-core/
+  - linkListType: tutorial
+    links:
+    - text: PostgreSQL için Azure veritabanı veritabanına bağlanma ve sorgulama
+      url: /azure/postgresql/connect-csharp
+- title: Azure 'da mesajlaşma
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure kuyrukları ile iletileri depolama
+      url: /azure/storage/queues/storage-queues-introduction
+    - text: Azure Service Bus ile uygulama içi mesajlaşma
+      url: /azure/service-bus-messaging
+    - text: Event Hubs büyük verileri akışa alma
+      url: /azure/event-hubs/event-hubs-about
+    - text: Event Grid ile olay tabanlı uygulamalar oluşturma
+      url: /azure/event-grid/overview
+  - linkListType: quickstart
+    links:
+    - text: Azure kuyruk depolamayı kullanma
+      url: /azure/storage/queues/storage-dotnet-how-to-use-queues?tabs=dotnet
+    - text: Azure Service Bus kuyruklarını kullanma
+      url: /azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues
+    - text: Azure Event Hubs ile verileri gerçek zamanlı olarak alma
+      url: /azure/event-hubs/event-hubs-dotnet-standard-getstarted-send
+    - text: Özel olayları Event Grid yönlendirin
+      url: /azure/event-grid/custom-event-quickstart
+- title: Tanılama ve izleme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure İzleyici
+      url: /azure/azure-monitor/overview
+  - linkListType: learn
+    links:
+    - text: Azure Web uygulamanızda sayfa yükleme sürelerini yakalama ve görüntüleme
+      url: /learn/modules/capture-page-load-times-application-insights/
+  - linkListType: how-to-guide
+    links:
+    - text: Azure App Service ve IIS 'de ASP.NET Core sorunlarını giderme
+      url: /aspnet/core/test/troubleshoot-azure-iis
+    - text: .NET Core ILogger ile Application Insights
+      url: /azure/azure-monitor/app/ilogger
+    - text: Çalışan hizmeti uygulamaları için Application Insights
+      url: /azure/azure-monitor/app/worker-service
+    - text: Visual Studio 'Yu kullanarak Azure App Service uygulama sorunlarını giderme
+      url: /azure/app-service/troubleshoot-dotnet-visual-studio
+- title: Geçiş
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Azure barındırma seçeneği belirleme
+      url: ./migration/choose.md
+  - linkListType: how-to-guide
+    links:
+    - text: Azure App Service’e .NET web uygulamasını veya hizmetini geçirme
+      url: ./migration/app-service.md
+    - text: Azure VM’ye ASP.NET uygulamasını geçirme
+      url: ./migration/vm.md
+    - text: Azure’a SQL Server veritabanını geçirme
+      url: ./migration/sql.md
+- title: .NET mimari kavramları
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Azure’da modern uygulamalar tasarlama
+      url: /learn/paths/architect-modern-apps/
+  - linkListType: architecture
+    links:
+    - text: '.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamalarına yönelik mimari'
+      url: /dotnet/architecture/microservices/
+    - text: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
+      url: /dotnet/architecture/modern-web-apps-azure/
+    - text: Microsoft platformu ve araçları ile kapsayıcılı Docker uygulaması yaşam döngüsü
+      url: /dotnet/architecture/containerized-lifecycle/
+    - text: Azure bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
+      url: /dotnet/architecture/modernize-with-azure-containers/
