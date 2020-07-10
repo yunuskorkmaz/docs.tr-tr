@@ -1,19 +1,20 @@
 ---
 title: TextBox Denetimi
+description: Windows Forms TextBox denetiminin, düzenlenebilir metin için kullanılması ve salt okunurdur. gibi çeşitli yönleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
-ms.openlocfilehash: 7bdca52e62b6e7b014d28478b291a1157486527b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 026f6d2653e41dabd3db7490660b6ce19846d397
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742793"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174451"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox Denetimi (Windows Forms)
-Windows Forms metin kutuları, kullanıcıdan giriş almak veya metin göstermek için kullanılır. `TextBox` denetimi genellikle düzenlenebilir metin için kullanılır, ancak salt okunabilir hale getirilebilir. Metin kutuları birden çok satır görüntüleyebilir, metni denetimin boyutuna kaydırabilirler ve temel biçimlendirme ekleyebilir. `TextBox` denetim, denetimde görünen veya girilen metin için tek bir biçime izin verir.  
+Windows Forms metin kutuları, kullanıcıdan giriş almak veya metin göstermek için kullanılır. `TextBox`Denetim genellikle düzenlenebilir metin için kullanılır, ancak salt okunabilir hale getirilebilir. Metin kutuları birden çok satır görüntüleyebilir, metni denetimin boyutuna kaydırabilirler ve temel biçimlendirme ekleyebilir. `TextBox`Denetim, denetimde görünen veya girilen metin için tek bir biçime izin verir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [TextBox Denetimine Genel Bakış](textbox-control-overview-windows-forms.md)  
@@ -42,5 +43,5 @@ Windows Forms metin kutuları, kullanıcıdan giriş almak veya metin göstermek
  Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.

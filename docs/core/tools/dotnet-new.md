@@ -1,19 +1,22 @@
 ---
 title: DotNet yeni komut
 description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projeleri oluşturur.
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 04/10/2020
-ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283981"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173126"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet new`-Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
 
@@ -30,7 +33,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
 dotnet new -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet new`Komut bir şablonu temel alan bir .NET Core projesi veya diğer yapılar oluşturur.
 
@@ -74,24 +77,24 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 | Razor sayfası                                   | [sayfasında](#page)                   | Þ         | Web/ASP. NET                           | 2.0        |
 | MVC Viewıtemts                              | [viewıtems 'lar](#namespace)       | Þ         | Web/ASP. NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | Þ         | Web/ASP. NET                           | 2.0        |
-| Blazor sunucusu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | Web/Blazor                            | 3.0        |
-| Blazor WebAssembly uygulaması                       | `blazorwasm`                    | Þ         | Web/Blazor/WebAssembly                            | 3.1.300    |
+| BlazorSunucu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | WebBlazor                            | 3.0        |
+| BlazorWebAssemblyUygulama                       | `blazorwasm`                    | Þ         | WebBlazor/WebAssembly                            | 3.1.300    |
 | ASP.NET Core boş                           | [Web](#web)                     | [C#], F #     | Web/boş                             | 1.0        |
 | ASP.NET Core Web uygulaması (Model-View-Controller) | [MVC](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web uygulaması                         | [WEBAPP, Razor](#web-options)   | Þ         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
 | Angular ile ASP.NET Core                    | [Angular](#spa)                 | Þ         | Web/MVC/SPA                           | 2.0        |
-| Tepki verme. js ile ASP.NET Core                   | [tıkla](#spa)                   | Þ         | Web/MVC/SPA                           | 2.0        |
-| Yanıt verir. js ve Redux ile ASP.NET Core         | [reactredux](#reactredux)       | Þ         | Web/MVC/SPA                           | 2.0        |
+| React.js ASP.NET Core                   | [tıkla](#spa)                   | Þ         | Web/MVC/SPA                           | 2.0        |
+| React.js ve Redux ile ASP.NET Core         | [reactredux](#reactredux)       | Þ         | Web/MVC/SPA                           | 2.0        |
 | Razor sınıf kitaplığı                          | [razorclasslib](#razorclasslib) | Þ         | Web/Razor/kitaplık/Razor sınıfı kitaplığı | 2.1        |
 | ASP.NET Core Web API'si                         | [WebApi](#webapi)               | [C#], F #     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core gRPC hizmeti                    | [GRPC](#web-others)             | Þ         | Web/gRPC                              | 3.0        |
 | DotNet gitignore dosyası                        | `gitignore`                     |              | Config                                | 3.0        |
-| Global. JSON dosyası                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
+| Dosya üzerinde global.js                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
 | NuGet yapılandırması                                 | `nugetconfig`                   |              | Config                                | 1.0        |
 | DotNet yerel araç bildirim dosyası              | `tool-manifest`                 |              | Config                                | 3.0        |
 | Web yapılandırması                                   | `webconfig`                     |              | Config                                | 1.0        |
 | Çözüm dosyası                                | `sln`                           |              | Çözüm                              | 1.0        |
-| Protokol arabelleği dosyası                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
+| Protokol arabelleği dosyası                         | [Proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>Seçenekler
 
@@ -247,7 +250,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
+  Oluşturulan şablondan *launchSettings.js* dışlar.
 
 - **`--no-restore`**
 
@@ -378,7 +381,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
+  Oluşturulan şablondan *launchSettings.js* dışlar.
 
 - **`--no-https`**
 
@@ -398,7 +401,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
+  Oluşturulan şablondan *launchSettings.js* dışlar.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -477,7 +480,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
+  Oluşturulan şablondan *launchSettings.js* dışlar.
 
 - **`--no-https`**
 
@@ -525,7 +528,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
+  Oluşturulan şablondan *launchSettings.js* dışlar.
 
 - **`--no-restore`**
 
@@ -557,7 +560,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
+  Oluşturulan şablondan *launchSettings.js* dışlar.
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -634,7 +637,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--exclude-launch-settings`**
 
-  Oluşturulan şablondan *Launchsettings. JSON* öğesini dışlar.
+  Oluşturulan şablondan *launchSettings.js* dışlar.
 
 - **`--no-https`**
 
@@ -666,7 +669,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--sdk-version <VERSION_NUMBER>`**
 
-  *Global. JSON* dosyasında kullanılacak .NET Core SDK sürümünü belirtir.
+  *global.json* dosyasında kullanılacak .NET Core SDK sürümünü belirtir.
 
 ***
 
@@ -732,7 +735,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   dotnet new -u
   ```
 
-- SDK sürümünü 3.1.101 olarak ayarlamak için geçerli dizinde *Global. JSON* oluşturun:
+- SDK sürümünü 3.1.101 olarak ayarlamak için geçerli dizinde bir *global.js* oluşturun:
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101

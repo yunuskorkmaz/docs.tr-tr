@@ -1,15 +1,17 @@
 ---
 title: Veri erişimi ve yönetimi
-description: ASP.NET Web Forms ve Blazor ' deki verilere erişme ve verileri işleme hakkında bilgi edinin.
+description: ASP.NET Web Forms ve içindeki verilere erişme ve verileri işleme hakkında bilgi edinin Blazor .
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: b9805da60722de1b5d4f91107e856f647f7564a7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446488"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173310"
 ---
 # <a name="work-with-data"></a>Verilerle çalışma
 
@@ -75,7 +77,7 @@ services.AddDbContext<MyDbContext>(options =>
     options.UseSqlServer("MY DATABASE CONNECTION STRING"));
 ```
 
-Yukarıdaki kod, belirtilen bağlantı dizesiyle bir SQL Server veritabanına bağlanır. Bağlantı dizesini *appSettings. JSON* dosyanıza, ortam değişkenlerine veya diğer yapılandırma depolama konumlarına yerleştirebilir ve bu katıştırılmış dizeyi uygun şekilde değiştirebilirsiniz.
+Yukarıdaki kod, belirtilen bağlantı dizesiyle bir SQL Server veritabanına bağlanır. Bağlantı dizesini dosya, ortam değişkenleri veya diğer yapılandırma depolama konumlarına *appsettings.js* yerleştirebilir ve bu katıştırılmış dizeyi uygun şekilde değiştirebilirsiniz.
 
 Daha sonra aşağıdaki komutları kullanarak bu sınıf için uygun olan veritabanı tablosunu oluşturabilirsiniz:
 
@@ -102,7 +104,7 @@ dotnet ef dbcontext scaffold "CONNECTION STRING" Microsoft.EntityFrameworkCore.S
 
 ## <a name="interact-with-web-services"></a>Web hizmetleriyle etkileşim kurma
 
-ASP.NET ilk kez yayımlandıysa, SOAP Hizmetleri Web sunucularının ve istemcilerinin verileri alışverişi için tercih edilen yoldur. Bu tarihten bu yana çok daha fazla değişti ve hizmetler ile tercih edilen etkileşimler, doğrudan HTTP istemci etkileşimlerine kaydırmıştır. ASP.NET Core ve Blazor ile, yapılandırmanızı `HttpClient` `Startup` sınıfının `ConfigureServices` yöntemine kaydedebilirsiniz. HTTP uç noktasıyla etkileşime ihtiyacınız olduğunda bu yapılandırmayı kullanın. Aşağıdaki yapılandırma kodunu göz önünde bulundurun:
+ASP.NET ilk kez yayımlandıysa, SOAP Hizmetleri Web sunucularının ve istemcilerinin verileri alışverişi için tercih edilen yoldur. Bu tarihten bu yana çok daha fazla değişti ve hizmetler ile tercih edilen etkileşimler, doğrudan HTTP istemci etkileşimlerine kaydırmıştır. ASP.NET Core ve ile Blazor , `HttpClient` `Startup` sınıfının yapılandırmasını sınıfının yöntemine kaydedebilirsiniz `ConfigureServices` . HTTP uç noktasıyla etkileşime ihtiyacınız olduğunda bu yapılandırmayı kullanın. Aşağıdaki yapılandırma kodunu göz önünde bulundurun:
 
 ```csharp
 services.AddHttpClient("github", client =>
@@ -115,7 +117,7 @@ services.AddHttpClient("github", client =>
 });
 ```
 
-GitHub 'dan veriye her erişmeniz gerektiğinde, adı olan bir istemci oluşturun `github` . İstemci, temel adresle yapılandırılır ve istek üst bilgileri uygun şekilde ayarlanır. `IHttpClientFactory` `@inject` Bir özelliğindeki yönergeyle veya bir özniteliğiyle Blazor bileşenlerinizi ekleyin `[Inject]` . Adlandırılmış istemcinizi oluşturun ve aşağıdaki sözdizimini kullanarak hizmetlerle etkileşim kurun:
+GitHub 'dan veriye her erişmeniz gerektiğinde, adı olan bir istemci oluşturun `github` . İstemci, temel adresle yapılandırılır ve istek üst bilgileri uygun şekilde ayarlanır. `IHttpClientFactory` Blazor `@inject` Bir özelliğindeki yönergeyle veya bir öznitelikle birlikte bileşenlerinizi ekleyin `[Inject]` . Adlandırılmış istemcinizi oluşturun ve aşağıdaki sözdizimini kullanarak hizmetlerle etkileşim kurun:
 
 ```razor
 @inject IHttpClientFactory factory

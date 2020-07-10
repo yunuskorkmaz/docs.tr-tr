@@ -1,15 +1,16 @@
 ---
 title: Görünümünü özelleştirme
+description: Kenarlık, opaklık, şekil, stil veya arka plan görüntüsü ayarlayarak Windows Forms uygulamalarınızın görünümünü özelleştirmeyi öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
-ms.openlocfilehash: c75fb1849ab9f9a07fcbbe5dd915b965f5aea05d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0aeb783873d01b27fa00717ead0e9c2f9d1d0d0c
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732370"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174646"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Windows Formlarının Görünüşünü Değiştirme
 Windows Forms uygulamalarınızın görünümünü kenarlık, opaklık, şekil, stili değiştirme veya Windows Forms uygulamanız için bir arka plan görüntüsü ayarlama gibi birçok farklı yolla özelleştirebilirsiniz.  

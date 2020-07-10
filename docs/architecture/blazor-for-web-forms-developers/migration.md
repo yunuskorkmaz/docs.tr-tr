@@ -1,28 +1,31 @@
 ---
-title: ASP.NET Web Forms 'den Blazor 'ye geçiş
-description: Mevcut bir ASP.NET Web Forms uygulamasını Blazor 'e geçirmeye nasıl yaklaşımınızı öğrenin.
+title: ASP.NET Web Forms 'den geçişBlazor
+description: Var olan bir ASP.NET Web Forms uygulamasını ' ye geçirmeye nasıl yaklaşımınızı öğrenin Blazor .
 author: twsouthwick
 ms.author: tasou
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: c70e4a4f57ddac97db4d58d9f876f7edc6aa6ce9
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 464d2f535acd3b9774fe240b4feeda1875f98022
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306987"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173152"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den Blazor 'ye geçiş
+# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den geçişBlazor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Kod tabanının ASP.NET Web Forms 'den Blazor 'e geçirilmesi, planlamayı gerektiren zaman alan bir görevdir. Bu bölümde işlem özetlenmektedir. Geçişi kolaylaştırmaya yönelik bir şey, uygulamanın, uygulama modelinde (Bu durumda Web Forms) iş mantığındaki bir *N katmanlı* mimariye uyduğundan emin olunması olabilir. Katmanlara yönelik bu mantıksal ayrım, .NET Core ve Blazor 'a ne kadar taşınabilmesini temizler.
+Bir kod tabanının ASP.NET Web Forms ' den geçirilmesi Blazor , planlama gerektiren zaman alan bir görevdir. Bu bölümde işlem özetlenmektedir. Geçişi kolaylaştırmaya yönelik bir şey, uygulamanın, uygulama modelinde (Bu durumda Web Forms) iş mantığındaki bir *N katmanlı* mimariye uyduğundan emin olunması olabilir. Katmanlara yönelik bu mantıksal ayrım, .NET Core 'a ve ne kadar taşınabilmesini temizler Blazor .
 
 Bu örnekte, [GitHub](https://github.com/dotnet-architecture/eShopOnBlazor) 'Da bulunan eShop uygulaması kullanılır. eShop, form girişi ve doğrulaması aracılığıyla CRUD özellikleri sağlayan bir katalog hizmetidir.
 
-Çalışma uygulaması neden Blazor 'e geçirilir? Birçok kez ihtiyacınız yoktur. ASP.NET Web Forms, birçok yıl boyunca desteklenmeye devam edecektir. Ancak, Blazor 'in sağladığı özelliklerin birçoğu yalnızca geçirilmiş bir uygulamada desteklenir. Bu tür özellikler şunlardır:
+Çalışma uygulaması neden geçirilecek Blazor ? Birçok kez ihtiyacınız yoktur. ASP.NET Web Forms, birçok yıl boyunca desteklenmeye devam edecektir. Ancak, tarafından sağlanan özelliklerin birçoğu Blazor yalnızca geçirilmiş bir uygulamada desteklenir. Bu tür özellikler şunlardır:
 
 - Çerçevede performans iyileştirmeleri`Span<T>`
-- WebAssembly olarak çalıştırma olanağı
+- Farklı ÇalıştırWebAssembly
 - Linux ve macOS için platformlar arası destek
 - Diğer uygulamaları etkilemeden uygulama yerel dağıtımı veya paylaşılan çerçeve dağıtımı
 
@@ -30,23 +33,23 @@ Bu veya diğer yeni özellikler yeterince etkileyici ise, uygulamayı geçirmede
 
 ## <a name="server-side-versus-client-side-hosting"></a>Sunucu tarafı ve istemci tarafı barındırma
 
-[Barındırma modelleri](hosting-models.md) bölümünde açıklandığı gibi, bir Blazor uygulaması iki farklı şekilde barındırılabilir: sunucu tarafı ve istemci tarafı. Sunucu tarafı modeli, sunucuda herhangi bir gerçek kod çalıştırırken DOM güncelleştirmelerini yönetmek için ASP.NET Core SignalR bağlantılarını kullanır. İstemci tarafı modeli bir tarayıcı içinde WebAssembly olarak çalışır ve sunucu bağlantısı gerektirmez. Belirli bir uygulama için en iyi sonucu etkileyebilecek birçok fark vardır:
+[Barındırma modelleri](hosting-models.md) bölümünde açıklandığı gibi, bir Blazor uygulama iki farklı şekilde barındırılabilir: sunucu tarafı ve istemci tarafı. Sunucu tarafı modeli, sunucuda herhangi bir gerçek kod çalıştırırken DOM güncelleştirmelerini yönetmek için ASP.NET Core SignalR bağlantılarını kullanır. İstemci tarafı modeli WebAssembly bir tarayıcı içinde olarak çalışır ve sunucu bağlantısı gerektirmez. Belirli bir uygulama için en iyi sonucu etkileyebilecek birçok fark vardır:
 
-- WebAssembly olarak çalıştırmak hala geliştirme aşamasındadır ve geçerli zamanda tüm özellikleri (iş parçacığı oluşturma gibi) desteklemeyebilir
+- Farklı çalıştırma WebAssembly hala geliştirme aşamasındadır ve geçerli zamanda tüm özellikleri (iş parçacığı oluşturma gibi) desteklemeyebilir
 - İstemci ile sunucu arasındaki geveze iletişimi, sunucu tarafı modunda gecikme sorunlarına neden olabilir
 - Veritabanlarına ve iç veya korumalı hizmetlere erişim, istemci tarafı barındırma ile ayrı bir hizmet gerektirir
 
 Yazma sırasında, sunucu tarafı modeli Web Forms daha yakından benzerdir. Bu bölümün çoğu, üretime hazırsa da sunucu tarafı barındırma modeline odaklanır.
 
-## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
+## <a name="create-a-new-project"></a>Yeni proje oluşturma
 
 Bu ilk geçiş adımı yeni bir proje oluşturmaktır. Bu proje türü, .NET Core SDK stili projelerine dayalıdır ve önceki proje biçimlerinde kullanılan ortak alanının çoğunu basitleştirir. Daha fazla ayrıntı için lütfen [Proje yapısındaki](project-structure.md)bölüme bakın.
 
-Proje oluşturulduktan sonra, önceki projede kullanılan kitaplıkları yükler. Daha eski Web Forms projelerinde, gerekli NuGet paketlerini listelemek için *Packages. config* dosyasını kullanmış olabilirsiniz. Yeni SDK stili projesinde, *Packages. config* `<PackageReference>` Proje dosyasındaki öğelerle değiştirilmiştir. Bu yaklaşımın bir avantajı, tüm bağımlılıkların geçişli olarak yüklenmesini sağlar. Yalnızca ilgilendiğiniz en üst düzey bağımlılıkları listeleyin.
+Proje oluşturulduktan sonra, önceki projede kullanılan kitaplıkları yükler. Daha eski Web Forms projelerinde, gerekli NuGet paketlerini listelemek için *packages.config* dosyasını kullanmış olabilirsiniz. Yeni SDK stili projesinde *packages.config* `<PackageReference>` Proje dosyasındaki öğelerle değiştirilmiştir. Bu yaklaşımın bir avantajı, tüm bağımlılıkların geçişli olarak yüklenmesini sağlar. Yalnızca ilgilendiğiniz en üst düzey bağımlılıkları listeleyin.
 
 Kullandığınız bağımlılıkların birçoğu .NET Core için Entity Framework 6 ve Log4net dahil olmak üzere kullanılabilir. .NET Core veya .NET Standard sürümü yoksa, .NET Framework sürüm genellikle kullanılabilir. Mesafe, farklılık gösterebilir. .NET Core 'da kullanılamayan API 'leri, çalışma zamanı hatasına neden olur. Visual Studio bu tür paketleri size bildirir. Projenin **Başvurular** düğümünde **Çözüm Gezgini**sarı bir simge görünür.
 
-Blazor tabanlı eShop projesinde, yüklü olan paketleri görebilirsiniz. Daha önce, projede kullanılan her pakette listelenen *Packages. config* dosyası, neredeyse 50 satır uzunluğuna neden olur. *Packages. config* kod parçacığı:
+BlazorTabanlı eShop projesinde, yüklü olan paketleri görebilirsiniz. Daha önce, projede kullanılan her pakette listelenen *packages.config* dosyası, neredeyse 50 satır uzunluğuna neden olur. *packages.config* bir kod parçacığı:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -74,7 +77,7 @@ Blazor tabanlı eShop projesinde, yüklü olan paketleri görebilirsiniz. Daha �
 
 `<packages>`Öğesi tüm gerekli bağımlılıkları içerir. İhtiyaç duyduğunuz bu paketlerin hangisinin dahil edileceğini belirlemek zordur. Bazı `<package>` öğeler yalnızca ihtiyaç duyduğunuz bağımlılıkların ihtiyaçlarını karşılamak için listelenir.
 
-Blazor projesi, proje dosyasındaki bir öğe içinde gerekli olan bağımlılıkları listeler `<ItemGroup>` :
+BlazorProje, proje dosyasındaki bir öğe içinde gerekli olan bağımlılıkları listeler `<ItemGroup>` :
 
 ```xml
 <ItemGroup>
@@ -88,7 +91,7 @@ Web Forms geliştiricilerin ömrünü basitleştiren bir NuGet paketi [Windows U
 
 ## <a name="enable-startup-process"></a>Başlatma işlemini etkinleştir
 
-Blazor için başlangıç işlemi Web Forms ' den değişmiştir ve diğer ASP.NET Core Hizmetleri için benzer bir kuruluma uyar. Barındırılan sunucu tarafında, Blazor bileşenleri normal ASP.NET Core uygulamasının bir parçası olarak çalıştırılır. WebAssembly ile tarayıcıda barındırıldığında, Blazor bileşenleri benzer bir barındırma modeli kullanır. Bunun farkı, bileşenlerin arka uç işlemlerinden herhangi birinden ayrı bir hizmet olarak çalıştırılmaktır. Her iki durumda da başlatma benzerdir.
+İçin başlatma işlemi Blazor Web Forms ' dan değişmiştir ve diğer ASP.NET Core Hizmetleri için benzer bir kuruluma uyar. Sunucu tarafında barındırılan Blazor Bileşenler, normal ASP.NET Core uygulamasının bir parçası olarak çalıştırılır. Tarayıcıda barındırıldığında WebAssembly , Blazor Bileşenler benzer bir barındırma modeli kullanır. Bunun farkı, bileşenlerin arka uç işlemlerinden herhangi birinden ayrı bir hizmet olarak çalıştırılmaktır. Her iki durumda da başlatma benzerdir.
 
 *Global.asax.cs* dosyası Web Forms projeler için varsayılan başlangıç sayfasıdır. EShop projesinde, bu dosya denetim (IOC) kapsayıcısının Inversion öğesini yapılandırır ve uygulamanın veya isteğin çeşitli yaşam döngüsü olaylarını işler. Bu olaylardan bazıları ara yazılım (gibi) ile işlenir `Application_BeginRequest` . Diğer olaylar, bağımlılık ekleme (dı) aracılığıyla belirli Hizmetleri geçersiz kılmayı gerektirir.
 
@@ -159,7 +162,7 @@ public class Global : HttpApplication, IContainerProviderAccessor
 }
 ```
 
-Yukarıdaki dosya, `Startup` sunucu tarafı Blazor sınıfı olur:
+Yukarıdaki dosya, `Startup` sunucu tarafında sınıfı olur Blazor :
 
 ```csharp
 public class Startup
@@ -246,13 +249,13 @@ public class Startup
 
 Web Forms fark ettiğiniz önemli bir değişiklik, dı 'nin göze çarkadır. DI, ASP.NET Core tasarımında bir temel prensibi ilkesidir. ASP.NET Core çerçevesinin neredeyse tüm yönlerini özelleştirmeyi destekler. Birçok senaryo için kullanılabilen yerleşik bir hizmet sağlayıcısı da vardır. Daha fazla özelleştirme gerekliyse, bu, çok sayıda topluluk projesi tarafından desteklenebilir. Örneğin, üçüncü taraf dı kitaplığı yatırımınızdan ileri taşıyabilirsiniz.
 
-Özgün eShop uygulamasında, oturum yönetimi için bir yapılandırma vardır. Sunucu tarafı Blazor iletişim için ASP.NET Core SignalR kullandığından, bağlantılar bir HTTP bağlamından bağımsız olarak gerçekleşemediğinden oturum durumu desteklenmez. Oturum durumunu kullanan bir uygulama, bir Blazor uygulaması olarak çalışmadan önce yeniden mimari gerektirir.
+Özgün eShop uygulamasında, oturum yönetimi için bir yapılandırma vardır. Sunucu tarafı Blazor iletişim için ASP.NET Core SignalR kullandığından, bağlantılar BIR http bağlamından bağımsız olarak gerçekleşemediğinden oturum durumu desteklenmez. Oturum durumunu kullanan bir uygulama, uygulama olarak çalışmadan önce yeniden mimari gerektirir Blazor .
 
 Uygulama başlatma hakkında daha fazla bilgi için bkz. [uygulama başlatma](app-startup.md).
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>HTTP modüllerini ve işleyicileri ara yazılıma geçirme
 
-Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule`Veya `IHttpHandler` ' i uygulayan veya gelen istekleri işleyecek sınıflar. Web Forms, *Web. config* dosyasındaki modülleri ve işleyicileri yapılandırır. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Ara yazılım, `Configure` sınıfının yöntemine kaydedilir `Startup` . Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
+Http modülleri ve işleyicileri, HTTP isteği ardışık düzenini denetlemek için Web Forms içindeki yaygın desenlerdir. `IHttpModule`Veya `IHttpHandler` ' i uygulayan veya gelen istekleri işleyecek sınıflar. Web Forms, *web.config* dosyasındaki modülleri ve işleyicileri yapılandırır. Web Forms Ayrıca uygulama yaşam döngüsü olay işlemeye bağlıdır. ASP.NET Core bunun yerine ara yazılım kullanır. Ara yazılım, `Configure` sınıfının yöntemine kaydedilir `Startup` . Ara yazılım yürütme sırası, kayıt sırasına göre belirlenir.
 
 [Başlatma Işlemini etkinleştir](#enable-startup-process) bölümünde, yöntemi olarak Web Forms bir yaşam döngüsü olayı tetiklenir `Application_BeginRequest` . Bu olay ASP.NET Core ' de kullanılamaz. Bu davranışı gerçekleştirmenin bir yolu, ara yazılımı *Startup.cs* File örneğinde görüldüğü gibi uygulamaktır. Bu ara yazılım aynı mantığı yapar ve denetimi, ara yazılım ardışık düzeninde bir sonraki işleyiciye aktarır.
 
@@ -283,9 +286,9 @@ Paketleme ve küçültmeye yönelik daha fazla bilgi için, bkz. [ASP.NET Core s
 
 ## <a name="migrate-aspx-pages"></a>ASPX sayfalarını geçirme
 
-Web Forms uygulamasındaki bir sayfa *. aspx* uzantılı bir dosyadır. Bir Web Forms sayfası, genellikle Blazor ' deki bir bileşenle eşleştirilebilir. Bir Blazor bileşeni *. Razor* uzantılı bir dosyada yazılır. EShop projesi için beş sayfa Razor sayfasına dönüştürülür.
+Web Forms uygulamasındaki bir sayfa *. aspx* uzantılı bir dosyadır. Bir Web Forms sayfası, genellikle içindeki bir bileşenle eşleştirilebilir Blazor . Bir Blazor bileşen *. Razor* uzantılı bir dosyada yazılır. EShop projesi için beş sayfa Razor sayfasına dönüştürülür.
 
-Örneğin, Ayrıntılar görünümü Web Forms projesindeki üç dosya içerir: *details. aspx*, *details.aspx.cs*ve *details.aspx.Designer.cs*. Blazor 'e dönüştürürken, arka plan kodu ve biçimlendirme *details. Razor*içinde birleştirilir. Razor derlemesi ( *. Designer.cs* dosyaları için eşdeğer) *obj* dizininde depolanır ve varsayılan olarak **Çözüm Gezgini**görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
+Örneğin, Ayrıntılar görünümü Web Forms projesindeki üç dosya içerir: *details. aspx*, *details.aspx.cs*ve *details.aspx.Designer.cs*. Blazor' A dönüştürme yaparken, arka plan kodu ve biçimlendirme *details. Razor*içinde birleştirilir. Razor derlemesi ( *. Designer.cs* dosyaları için eşdeğer) *obj* dizininde depolanır ve varsayılan olarak **Çözüm Gezgini**görüntülenebilir. Web Forms sayfası aşağıdaki biçimlendirmeden oluşur:
 
 ```aspx-csharp
 <%@ Page Title="Details" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="eShopLegacyWebForms.Catalog.Details" %>
@@ -405,7 +408,7 @@ namespace eShopLegacyWebForms.Catalog
 }
 ```
 
-Blazor ' e dönüştürüldüğünde, Web Forms sayfası aşağıdaki koda çevirir:
+' A dönüştürüldüğünde Blazor , Web Forms sayfası aşağıdaki koda çevirir:
 
 ```razor
 @page "/Catalog/Details/{id:int}"
@@ -520,11 +523,11 @@ Blazor ' e dönüştürüldüğünde, Web Forms sayfası aşağıdaki koda çevi
 }
 ```
 
-Kodun ve biçimlendirmenin aynı dosyada olduğuna dikkat edin. Gerekli hizmetlere, özniteliğiyle erişilebilir hale getirilir `@inject` . `@page`Yönergeye göre, bu sayfaya `Catalog/Details/{id}` rotada erişilebilir. Yolun `{id}` yer tutucusunun değeri bir tamsayı ile kısıtlanıyor. [Yönlendirme](pages-routing-layouts.md) bölümünde açıklandığı gibi, Web Forms aksine bir Razor bileşeni, kendi yolunu ve dahil edilen tüm parametreleri açıkça belirtir. Birçok Web Forms denetimi Blazor içinde tam karşılıklarıyla eşleşmeyebilir. Genellikle aynı amacı sunan eşdeğer bir HTML kod parçacığı vardır. Örneğin, `<asp:Label />` Denetim BIR HTML `<label>` öğesiyle değiştirilebilir.
+Kodun ve biçimlendirmenin aynı dosyada olduğuna dikkat edin. Gerekli hizmetlere, özniteliğiyle erişilebilir hale getirilir `@inject` . `@page`Yönergeye göre, bu sayfaya `Catalog/Details/{id}` rotada erişilebilir. Yolun `{id}` yer tutucusunun değeri bir tamsayı ile kısıtlanıyor. [Yönlendirme](pages-routing-layouts.md) bölümünde açıklandığı gibi, Web Forms aksine bir Razor bileşeni, kendi yolunu ve dahil edilen tüm parametreleri açıkça belirtir. Birçok Web Forms denetimi ' de tam karşılıklarıyla eşleşmeyebilir Blazor . Genellikle aynı amacı sunan eşdeğer bir HTML kod parçacığı vardır. Örneğin, `<asp:Label />` Denetim BIR HTML `<label>` öğesiyle değiştirilebilir.
 
-### <a name="model-validation-in-blazor"></a>Blazor 'de model doğrulaması
+### <a name="model-validation-in-blazor"></a>İçindeki model doğrulamasıBlazor
 
-Web Forms kodunuz doğrulamayı içeriyorsa, az sayıda değişiklik ile sahip olduğunuz kadarını aktarabilirsiniz. Blazor ' de çalıştırmanın bir avantajı, aynı doğrulama mantığının özel JavaScript gerekmeden çalıştırılmamasının bir avantajıdır. Veri ek açıklamaları kolay model doğrulamayı etkinleştirir.
+Web Forms kodunuz doğrulamayı içeriyorsa, az sayıda değişiklik ile sahip olduğunuz kadarını aktarabilirsiniz. İçinde çalıştırmanın bir avantajı, Blazor aynı doğrulama mantığının özel JavaScript gerekmeden çalıştırılmamasının bir avantajıdır. Veri ek açıklamaları kolay model doğrulamayı etkinleştirir.
 
 Örneğin, *Create. aspx* sayfasında doğrulama içeren bir veri girişi formu vardır. Örnek parçacığı şöyle görünür:
 
@@ -539,7 +542,7 @@ Web Forms kodunuz doğrulamayı içeriyorsa, az sayıda değişiklik ile sahip o
 </div>
 ```
 
-Blazor ' de, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmiştir:
+Blazor' De, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmiştir:
 
 ```razor
 <EditForm Model="_item" OnValidSubmit="@...">
@@ -557,7 +560,7 @@ Blazor ' de, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmişt
 </EditForm>
 ```
 
-`EditForm`Bağlam doğrulama desteğini içerir ve girişin etrafında sarmalanabilir. Veri ek açıklamaları, doğrulama eklemenin yaygın bir yoludur. Bu tür doğrulama desteği bileşen aracılığıyla eklenebilir `DataAnnotationsValidator` . Bu mekanizma hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor Forms and Validation](/aspnet/core/blazor/forms-validation).
+`EditForm`Bağlam doğrulama desteğini içerir ve girişin etrafında sarmalanabilir. Veri ek açıklamaları, doğrulama eklemenin yaygın bir yoludur. Bu tür doğrulama desteği bileşen aracılığıyla eklenebilir `DataAnnotationsValidator` . Bu mekanizma hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor Forms ve Validation](/aspnet/core/blazor/forms-validation).
 
 ## <a name="migrate-built-in-web-forms-controls"></a>Yerleşik Web Forms denetimlerini geçirme
 
@@ -565,11 +568,11 @@ Blazor ' de, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmişt
 
 ## <a name="migrate-configuration"></a>Yapılandırmayı geçir
 
-Web Forms bir projede, yapılandırma verileri genellikle *Web. config* dosyasında depolanır. Yapılandırma verilerine ile erişilir `ConfigurationManager` . Hizmetler genellikle nesneleri ayrıştırmak için gereklidir. .NET Framework 4.7.2 ile, ile yapılandırma için bileşim eklenmiştir `ConfigurationBuilders` . Bu oluşturucular, geliştiricilerin gerekli değerleri almak için çalışma zamanında oluşturulan yapılandırma için çeşitli kaynaklar eklemesine izin verilir.
+Web Forms projesinde, yapılandırma verileri genellikle *web.config* dosyasında depolanır. Yapılandırma verilerine ile erişilir `ConfigurationManager` . Hizmetler genellikle nesneleri ayrıştırmak için gereklidir. .NET Framework 4.7.2 ile, ile yapılandırma için bileşim eklenmiştir `ConfigurationBuilders` . Bu oluşturucular, geliştiricilerin gerekli değerleri almak için çalışma zamanında oluşturulan yapılandırma için çeşitli kaynaklar eklemesine izin verilir.
 
 ASP.NET Core, uygulamanız ve dağıtımınız tarafından kullanılan yapılandırma kaynağını veya kaynaklarını tanımlamanızı sağlayan esnek bir yapılandırma sistemi sunmuştur. `ConfigurationBuilder`Web Forms uygulamanızda kullandığınız altyapı, ASP.NET Core yapılandırma sisteminde kullanılan kavramlardan sonra modellenmiştir.
 
-Aşağıdaki kod parçacığında Web Forms eShop projesinin yapılandırma değerlerini depolamak için *Web. config* 'i nasıl kullandığı gösterilmektedir:
+Aşağıdaki kod parçacığında Web Forms eShop projesinin yapılandırma değerlerini depolamak için *web.config* nasıl kullandığı gösterilmektedir:
 
 ```xml
 <configuration>
@@ -586,7 +589,7 @@ Aşağıdaki kod parçacığında Web Forms eShop projesinin yapılandırma değ
 </configuration>
 ```
 
-Veritabanı bağlantı dizeleri, *Web. config*içinde depolanacak gizli dizileri için yaygındır. Gizli dizileri, kaynak denetimi gibi güvenli olmayan konumlarda kalıcı olarak kalıcı hale getirilir. ASP.NET Core üzerinde Blazor, önceki XML tabanlı yapılandırma aşağıdaki JSON ile değiştirilmiştir:
+Veritabanı bağlantı dizeleri gibi, *web.config*içinde depolanacak gizli dizileri yaygındır. Gizli dizileri, kaynak denetimi gibi güvenli olmayan konumlarda kalıcı olarak kalıcı hale getirilir. BlazorASP.NET Core ile, ÖNCEKI XML tabanlı yapılandırma AŞAĞıDAKI JSON ile değiştirilmiştir:
 
 ```json
 {
@@ -600,7 +603,7 @@ Veritabanı bağlantı dizeleri, *Web. config*içinde depolanacak gizli dizileri
 
 JSON varsayılan yapılandırma biçimidir; Ancak, ASP.NET Core XML gibi birçok diğer biçimi destekler. Ayrıca, topluluk tarafından desteklenen birkaç biçim vardır.
 
-Blazor projesinin sınıfındaki Oluşturucu, `Startup` `IConfiguration` Oluşturucu ekleme olarak BILINEN bir dı tekniği aracılığıyla bir örneği kabul eder:
+Projenin sınıfındaki Oluşturucu, Blazor `Startup` `IConfiguration` Oluşturucu ekleme olarak bilinen bir dı tekniği aracılığıyla bir örneği kabul eder:
 
 ```csharp
 public class Startup
@@ -615,7 +618,7 @@ public class Startup
 }
 ```
 
-Varsayılan olarak, ortam değişkenleri, JSON dosyaları (*appSettings. JSON* ve *appSettings. { Environment}. JSON*) ve komut satırı seçenekleri yapılandırma nesnesinde geçerli yapılandırma kaynakları olarak kaydedilir. Yapılandırma kaynaklarına aracılığıyla erişilebilir `Configuration[key]` . Daha gelişmiş bir teknik, yapılandırma verilerini nesnelere bağlamak için seçenekler örüntüsünün kullanılmasını sağlar. Yapılandırma ve seçenekler düzeniyle ilgili daha fazla bilgi için sırasıyla ASP.NET Core [ASP.NET Core](/aspnet/core/fundamentals/configuration/) ve [Seçenekler](/aspnet/core/fundamentals/configuration/options)düzeninde yapılandırma konusuna bakın.
+Varsayılan olarak, ortam değişkenleri, JSON dosyaları (*appsettings.js* ve *appSettings. { Environment}. JSON*) ve komut satırı seçenekleri yapılandırma nesnesinde geçerli yapılandırma kaynakları olarak kaydedilir. Yapılandırma kaynaklarına aracılığıyla erişilebilir `Configuration[key]` . Daha gelişmiş bir teknik, yapılandırma verilerini nesnelere bağlamak için seçenekler örüntüsünün kullanılmasını sağlar. Yapılandırma ve seçenekler düzeniyle ilgili daha fazla bilgi için sırasıyla ASP.NET Core [ASP.NET Core](/aspnet/core/fundamentals/configuration/) ve [Seçenekler](/aspnet/core/fundamentals/configuration/options)düzeninde yapılandırma konusuna bakın.
 
 ## <a name="migrate-data-access"></a>Veri erişimini geçirme
 
@@ -626,13 +629,13 @@ Aşağıdaki EF ile ilgili değişiklikler eShop için gereklidir:
 - .NET Framework, `DbContext` nesnesi *Name = ConnectionString* biçiminde bir dize kabul eder ve bağlantı dizesini `ConfigurationManager.AppSettings[ConnectionString]` bağlamak için kullanır. .NET Core 'da bu desteklenmez. Bağlantı dizesinin sağlanması gerekir.
 - Veritabanına zaman uyumlu bir şekilde erişildi. Bu işlem çalışsa da ölçeklenebilirlik düşebilir. Bu mantık zaman uyumsuz bir modele taşınmalıdır.
 
-Veri kümesi bağlama için aynı yerel destek olmasa da Blazor, Razor sayfasında C# desteğiyle esneklik ve güç sağlar. Örneğin, hesaplamalar yapabilir ve sonucu görüntüleyebilirsiniz. Blazor içindeki veri desenleri hakkında daha fazla bilgi için bkz. [veri erişimi](data.md) bölümü.
+Veri kümesi bağlama için aynı yerel destek olmasa da, Blazor Razor sayfasında C# desteğiyle esneklik ve güç sağlar. Örneğin, hesaplamalar yapabilir ve sonucu görüntüleyebilirsiniz. İçindeki veri desenleri hakkında daha fazla bilgi için Blazor bkz. [veri erişimi](data.md) bölümü.
 
 ## <a name="architectural-changes"></a>Mimari değişiklikler
 
-Son olarak, Blazor 'e geçiş yaparken göz önünde bulundurmanız gereken bazı önemli mimari farklılıklar vardır. Bu değişikliklerin çoğu, .NET Core veya ASP.NET Core temel alınarak herhangi bir şey için geçerlidir.
+Son olarak, ' a geçiş yaparken göz önünde bulundurmanız gereken bazı önemli mimari farklılıklar vardır Blazor . Bu değişikliklerin çoğu, .NET Core veya ASP.NET Core temel alınarak herhangi bir şey için geçerlidir.
 
-Blazor .NET Core üzerinde oluşturulduğundan, .NET Core üzerinde destek sağlamaya yönelik hususlar vardır. Bazı önemli değişikliklerden bazıları aşağıdaki özelliklerin kaldırılmasını içerir:
+Blazor, .NET Core üzerine inşa edildiğinden, .NET Core üzerinde destek sağlamaya yönelik hususlar vardır. Bazı önemli değişikliklerden bazıları aşağıdaki özelliklerin kaldırılmasını içerir:
 
 - Birden çok AppDomain
 - Uzaktan iletişim
@@ -651,7 +654,7 @@ ASP.NET Core çok sayıda işlem zaman uyumsuzdur ve g/ç bağlantılı görevle
 
 ## <a name="migration-conclusion"></a>Geçiş sonucu
 
-Bu noktada, bir Web Forms projesinin Blazor 'e taşınması hakkında birçok örnek gördünüz. Tam bir örnek için bkz. [eShopOnBlazor](https://github.com/dotnet-architecture/eShopOnBlazor) projesi.
+Bu noktada, bir Web Forms projesinin ne kadar sürdüğü hakkında birçok örnek gördünüz Blazor . Tam bir örnek için bkz. [Eshopon Blazor ](https://github.com/dotnet-architecture/eShopOnBlazor) projesi.
 
 >[!div class="step-by-step"]
 >[Önceki](security-authentication-authorization.md)

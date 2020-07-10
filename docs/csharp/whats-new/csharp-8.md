@@ -2,12 +2,12 @@
 title: C# 8,0 ' deki yenilikler-C# Kılavuzu
 description: C# 8,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: 27c2d7e2d6f0e665e7abe4fdcfb94c140224cc89
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895431"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174737"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 ' deki yenilikler
 
@@ -34,16 +34,16 @@ C# 8,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 
 C# 8,0, **.NET Core 3. x** ve **.NET Standard 2,1**' de desteklenir. Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../language-reference/configure-language-version.md).
 
-Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrıntılı makalelerin nerede kullanılabildiği, bu öğreticiler ve genel bakışların bağlantıları sağlanmıştır. `dotnet try` Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz:
+Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrıntılı makalelerin nerede kullanılabildiği, bu öğreticiler ve genel bakışların bağlantıları sağlanmıştır. Genel aracı kullanarak ortamınızdaki bu özellikleri keşfedebilirsiniz `dotnet try` :
 
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp8* alt dizinine ayarlayın.
-1. `dotnet try` öğesini çalıştırın.
+1. Şu komutu çalıştırın: `dotnet try`.
 
 ## <a name="readonly-members"></a>Salt okunur Üyeler
 
-`readonly` Değiştiricisini bir yapının üyelerine uygulayabilirsiniz. Üyenin durumu değiştirmediğini belirtir. Bu, `readonly` değiştiricinin bir bildirime uygulanmasıyla daha ayrıntılı bir `struct` hale gelir.  Aşağıdaki kesilebilir yapıyı göz önünde bulundurun:
+`readonly`Değiştiricisini bir yapının üyelerine uygulayabilirsiniz. Üyenin durumu değiştirmediğini belirtir. Bu, `readonly` değiştiricinin bir bildirime uygulanmasıyla daha ayrıntılı bir hale gelir `struct` .  Aşağıdaki kesilebilir yapıyı göz önünde bulundurun:
 
 ```csharp
 public struct Point
@@ -57,28 +57,28 @@ public struct Point
 }
 ```
 
-Çoğu yapı gibi `ToString()` Yöntem durumunu değiştirmez. Şu bildirime `readonly` değiştiricisini ekleyerek belirtebilirsiniz `ToString()`:
+Çoğu yapı gibi `ToString()` Yöntem durumunu değiştirmez. Şu `readonly` bildirime değiştiricisini ekleyerek belirtebilirsiniz `ToString()` :
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-Önceki değişiklik bir derleyici uyarısı oluşturur, çünkü `ToString` bu `Distance` özelliğe erişir, ancak şu şekilde işaretlenmez `readonly`:
+Önceki değişiklik bir derleyici uyarısı oluşturur, çünkü `ToString` `Distance` Bu özelliğe erişir, ancak şu şekilde işaretlenmez `readonly` :
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-Derleyici, savunma kopyası oluşturması gerektiğinde sizi uyarır.  `Distance` Özelliği durumu değiştirmez, bu nedenle bu uyarıyı, bildirime `readonly` değiştiricisini ekleyerek çözebilirsiniz:
+Derleyici, savunma kopyası oluşturması gerektiğinde sizi uyarır.  `Distance`Özelliği durumu değiştirmez, bu nedenle bu uyarıyı, `readonly` bildirime değiştiricisini ekleyerek çözebilirsiniz:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-`readonly` Değiştiricinin salt okunurdur özelliğinde gerekli olduğuna dikkat edin. Derleyici erişimcileri durumu değiştirmez `get` olarak kabul etmez; açıkça bildirmeniz `readonly` gerekir. Otomatik uygulanan özellikler bir özel durumdur; Derleyici, tüm otomatik uygulanan alıcıları `readonly`olarak değerlendirir, bu nedenle `readonly` değiştiriciyi `X` ve `Y` özelliklere eklemek gerekmez.
+`readonly`Değiştiricinin salt okunurdur özelliğinde gerekli olduğuna dikkat edin. Derleyici `get` erişimcileri durumu değiştirmez olarak kabul etmez; açıkça bildirmeniz gerekir `readonly` . Otomatik uygulanan özellikler bir özel durumdur; Derleyici, tüm otomatik uygulanan alıcıları olarak değerlendirir `readonly` , bu nedenle `readonly` değiştiriciyi `X` ve özelliklere eklemek gerekmez `Y` .
 
-Derleyici, `readonly` üyelerin durumu değiştirmiyor kuralını zorlar. `readonly` Değiştirici kaldırmadığınız takdirde aşağıdaki yöntem derlenmez:
+Derleyici, `readonly` üyelerin durumu değiştirmiyor kuralını zorlar. Değiştirici kaldırmadığınız takdirde aşağıdaki yöntem derlenmez `readonly` :
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -100,7 +100,7 @@ Varsayılan arabirim yöntemleri birçok senaryoyu ve dil öğelerini etkiler. �
 
 ## <a name="more-patterns-in-more-places"></a>Daha fazla yerde daha fazla desen
 
-**Model eşleştirme** , ilişkili ancak farklı veri türleri arasında şekle bağımlı işlevsellik sağlamaya yönelik araçlar sağlar. C# 7,0, [`is`](../language-reference/keywords/is.md) ifade ve [`switch`](../language-reference/keywords/switch.md) deyimi kullanılarak tür desenleri ve sabit desenler için sözdizimi sunmuştur. Bu özellikler, verileri ve işlevselliği birbirinden canlı olarak programlama paradigmalarına desteklemeye yönelik ilk belirsiz adımları temsil eder. Sektör daha fazla mikro hizmete ve diğer bulut tabanlı mimarilere doğru hareket ederken diğer dil araçları gerekir.
+**Model eşleştirme** , ilişkili ancak farklı veri türleri arasında şekle bağımlı işlevsellik sağlamaya yönelik araçlar sağlar. C# 7,0, ifade ve deyimi kullanılarak tür desenleri ve sabit desenler için sözdizimi sunmuştur [`is`](../language-reference/keywords/is.md) [`switch`](../language-reference/keywords/switch.md) . Bu özellikler, verileri ve işlevselliği birbirinden canlı olarak programlama paradigmalarına desteklemeye yönelik ilk belirsiz adımları temsil eder. Sektör daha fazla mikro hizmete ve diğer bulut tabanlı mimarilere doğru hareket ederken diğer dil araçları gerekir.
 
 C# 8,0, kodunuzda daha fazla yerde daha fazla model ifadesi kullanabilmeniz için bu sözlüğü genişletir. Verileriniz ve işlevselliklerinizin ayrı olması durumunda bu özellikleri göz önünde bulundurun. Algoritmalarınız nesnenin çalışma zamanı türü dışında bir olgusuna bağımlıysa, model eşleştirmeyi düşünün. Bu teknikler, hızlı tasarımlar için başka bir yol sağlar.
 
@@ -108,7 +108,7 @@ Yeni yerlerdeki yeni desenlere ek olarak C# 8,0 **özyinelemeli desenler**ekler.
 
 ### <a name="switch-expressions"></a>Anahtar ifadeleri
 
-Genellikle, bir [`switch`](../language-reference/keywords/switch.md) ifade `case` blokların her birinde bir değer üretir. **Anahtar ifadeleri** , daha kısa ifade sözdizimi kullanmanıza olanak sağlar. Daha az yinelenen `case` ve `break` anahtar sözcük ve daha az küme ayraçları vardır.  Örnek olarak, gökkuşağı renklerini listeleyen aşağıdaki sabit listesini göz önünde bulundurun:
+Genellikle, bir [`switch`](../language-reference/keywords/switch.md) ifade blokların her birinde bir değer üretir `case` . **Anahtar ifadeleri** , daha kısa ifade sözdizimi kullanmanıza olanak sağlar. Daha az yinelenen `case` ve `break` anahtar sözcük ve daha az küme ayraçları vardır.  Örnek olarak, gökkuşağı renklerini listeleyen aşağıdaki sabit listesini göz önünde bulundurun:
 
 ```csharp
 public enum Rainbow
@@ -123,7 +123,7 @@ public enum Rainbow
 }
 ```
 
-Uygulamanız `RGBColor` , `R` `G` ve `B` bileşenlerinden oluşturulmuş bir tür tanımlıysa, bir `Rainbow` değeri bir anahtar ifadesi içeren aşağıdaki yöntemi kullanarak RGB değerlerine dönüştürebilirsiniz:
+Uygulamanız, `RGBColor` ve bileşenlerinden oluşturulmuş bir tür tanımlıysa, bir `R` değeri `G` bir `B` `Rainbow` anahtar IFADESI içeren aşağıdaki yöntemi kullanarak RGB değerlerine dönüştürebilirsiniz:
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -143,11 +143,11 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
 Burada birkaç sözdizimi geliştirmesi vardır:
 
 - Değişkeni, `switch` anahtar sözcüğünden önce gelir. Farklı sıra, switch ifadesinin Switch deyiminin ayırt edilmesini görsel açıdan kolaylaştırır.
-- `case` Ve `:` öğeleri ile `=>`değiştirilmiştir. Daha kısa ve sezgisel.
-- Durum `default` , bir `_` atma ile değiştirilmiştir.
+- `case`Ve `:` öğeleri ile değiştirilmiştir `=>` . Daha kısa ve sezgisel.
+- `default`Durum, bir atma ile değiştirilmiştir `_` .
 - Gövdeler deyimlerdir, deyimler değildir.
 
-Klasik `switch` deyimin kullanıldığı denk kodla kontrast:
+Klasik deyimin kullanıldığı denk kodla kontrast `switch` :
 
 ```csharp
 public static RGBColor FromRainbowClassic(Rainbow colorBand)
@@ -176,7 +176,7 @@ public static RGBColor FromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>Özellik desenleri
 
-**Özellik deseninin** incelenen nesnenin özellikleriyle eşleştirmenize olanak sağlar. Alıcının adresine göre satış vergisini hesaplamak zorunda olan bir eCommerce sitesini düşünün. Bu hesaplama, bir `Address` sınıfın temel sorumluluğu değildir. Büyük olasılıkla, adres biçimi değişikliklerinden daha fazla sıklıkta değişecektir. Satış vergisi miktarı adresin `State` özelliğine bağlıdır. Aşağıdaki yöntem, adresten ve fiyattan satış vergisini hesaplamak için özellik modelini kullanır:
+**Özellik deseninin** incelenen nesnenin özellikleriyle eşleştirmenize olanak sağlar. Alıcının adresine göre satış vergisini hesaplamak zorunda olan bir eCommerce sitesini düşünün. Bu hesaplama, bir sınıfın temel sorumluluğu değildir `Address` . Büyük olasılıkla, adres biçimi değişikliklerinden daha fazla sıklıkta değişecektir. Satış vergisi miktarı `State` adresin özelliğine bağlıdır. Aşağıdaki yöntem, adresten ve fiyattan satış vergisini hesaplamak için özellik modelini kullanır:
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
@@ -194,7 +194,7 @@ Model eşleştirme, bu algoritmayı ifade etmek için kısa bir sözdizimi oluş
 
 ### <a name="tuple-patterns"></a>Demet desenleri
 
-Bazı algoritmalar birden fazla girişe bağımlıdır. **Demet desenleri** , [kayıt düzeni](../tuples.md)olarak ifade edilen birden çok değere göre geçiş yapmanıza olanak sağlar.  Aşağıdaki kod, oyun *rock, Paper, makas*için bir switch ifadesi gösterir:
+Bazı algoritmalar birden fazla girişe bağımlıdır. **Demet desenleri** , [kayıt düzeni](../language-reference/builtin-types/value-tuples.md)olarak ifade edilen birden çok değere göre geçiş yapmanıza olanak sağlar.  Aşağıdaki kod, oyun *rock, Paper, makas*için bir switch ifadesi gösterir:
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -214,7 +214,7 @@ public static string RockPaperScissors(string first, string second)
 
 ### <a name="positional-patterns"></a>Konumsal desenler
 
-Bazı türler, özelliklerini `Deconstruct` ayrı değişkenlere oluşturan bir yöntemi içerir. Bir `Deconstruct` Yöntem erişilebilir olduğunda, nesnenin özelliklerini incelemek ve bu özellikleri bir desen için kullanmak üzere **konumsal desenleri** kullanabilirsiniz.  Ve `Point` `Y`için `X` ayrık değişkenler oluşturmak üzere bir `Deconstruct` yöntemi içeren aşağıdaki sınıfı göz önünde bulundurun:
+Bazı türler `Deconstruct` , özelliklerini ayrı değişkenlere oluşturan bir yöntemi içerir. Bir `Deconstruct` Yöntem erişilebilir olduğunda, nesnenin özelliklerini incelemek ve bu özellikleri bir desen için kullanmak üzere **konumsal desenleri** kullanabilirsiniz.  `Point` `Deconstruct` Ve için ayrık değişkenler oluşturmak üzere bir yöntemi içeren aşağıdaki sınıfı göz önünde `X` bulundurun `Y` :
 
 ```csharp
 public class Point
@@ -244,7 +244,7 @@ public enum Quadrant
 }
 ```
 
-Aşağıdaki yöntem, `x` ve `y`değerlerini ayıklamak için **konumsal model** kullanır. Sonra, noktanın `Quadrant` konumunu tespit `when` etmek için bir yan tümce kullanır:
+Aşağıdaki yöntem, ve değerlerini ayıklamak için **konumsal model** kullanır `x` `y` . Sonra, `when` noktanın konumunu tespit etmek için bir yan tümce kullanır `Quadrant` :
 
 ```csharp
 static Quadrant GetQuadrant(Point point) => point switch
@@ -259,13 +259,13 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-Önceki anahtardaki atma deseninin ya `x` `y` da 0 olduğunda eşleşir ancak ikisi birden değildir. Switch ifadesinin bir değer üretmesi veya bir özel durum oluşturması gerekir. Durumlardan hiçbiri eşleşmezse, switch ifadesi bir özel durum oluşturur. Anahtar ifadenizde olası tüm durumları kapsamıyorsanız, derleyici sizin için bir uyarı oluşturur.
+Önceki anahtardaki atma deseninin ya da 0 olduğunda eşleşir `x` `y` ancak ikisi birden değildir. Switch ifadesinin bir değer üretmesi veya bir özel durum oluşturması gerekir. Durumlardan hiçbiri eşleşmezse, switch ifadesi bir özel durum oluşturur. Anahtar ifadenizde olası tüm durumları kapsamıyorsanız, derleyici sizin için bir uyarı oluşturur.
 
 Bu [Gelişmiş öğreticide, model eşleştirme](../tutorials/pattern-matching.md)tekniklerini inceleyebilirsiniz.
 
 ## <a name="using-declarations"></a>Bildirimleri kullanma
 
-**Using bildirimi** , `using` anahtar sözcüğünün önünde yer aldığı bir değişken bildirimidir. Derleyiciye, bildirildiği değişkenin kapsayan kapsamın sonunda atılmasını söyler. Örneğin, bir metin dosyası yazan aşağıdaki kodu göz önünde bulundurun:
+**Using bildirimi** , anahtar sözcüğünün önünde yer aldığı bir değişken bildirimidir `using` . Derleyiciye, bildirildiği değişkenin kapsayan kapsamın sonunda atılmasını söyler. Örneğin, bir metin dosyası yazan aşağıdaki kodu göz önünde bulundurun:
 
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
@@ -290,7 +290,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-Yukarıdaki örnekte, yöntemi için kapanış ayracı ne zaman ulaşıldığında dosya atıldı. İçinde `file` bildirildiği kapsamın sonu. Yukarıdaki kod, klasik [using ifadesini](../language-reference/keywords/using-statement.md)kullanan aşağıdaki koda eşdeğerdir:
+Yukarıdaki örnekte, yöntemi için kapanış ayracı ne zaman ulaşıldığında dosya atıldı. İçinde bildirildiği kapsamın sonu `file` . Yukarıdaki kod, klasik [using ifadesini](../language-reference/keywords/using-statement.md)kullanan aşağıdaki koda eşdeğerdir:
 
 ```csharp
 static int WriteLinesToFile(IEnumerable<string> lines)
@@ -316,15 +316,15 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 }
 ```
 
-Önceki örnekte, `using` ifadesiyle ilişkilendirilen kapanış ayracı aşıldığında dosya atıldı.
+Önceki örnekte, ifadesiyle ilişkilendirilen kapanış ayracı aşıldığında dosya atıldı `using` .
 
-Her iki durumda da derleyici çağrısını oluşturur `Dispose()`. `using` Deyimdeki ifade atılabilir değilse derleyici bir hata oluşturur.
+Her iki durumda da derleyici çağrısını oluşturur `Dispose()` . Deyimdeki ifade atılabilir değilse derleyici bir hata oluşturur `using` .
 
 ## <a name="static-local-functions"></a>Statik yerel işlevler
 
-Yerel işlevin kapsayan kapsamdaki herhangi `static` bir değişkeni yakalamamasına (başvuru) izin vermek için artık yerel işlevlere değiştiricisini ekleyebilirsiniz. Bunu yapmak `CS8421`, "statik yerel bir işlev> \<değişkenine bir başvuru içeremez."
+`static`Yerel işlevin kapsayan kapsamdaki herhangi bir değişkeni yakalamamasına (başvuru) izin vermek için artık yerel işlevlere değiştiricisini ekleyebilirsiniz. Bunu yapmak `CS8421` , "statik bir yerel işlev için başvuru içeremez \<variable> ."
 
-Aşağıdaki kodu göz önünde bulundurun. Yerel işlev `LocalFunction` , kapsayan kapsamda ( `y`yöntemi `M`) belirtilen değişkenine erişir. Bu nedenle `LocalFunction` , `static` değiştiriciyle bildirilemez:
+Aşağıdaki kodu göz önünde bulundurun. Yerel işlev, `LocalFunction` `y` kapsayan kapsamda (yöntemi) belirtilen değişkenine erişir `M` . Bu nedenle, `LocalFunction` `static` değiştiriciyle bildirilemez:
 
 ```csharp
 int M()
@@ -352,11 +352,11 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Atılabilir ref yapıları
 
-Değiştiriciyle belirtilen `struct` bir `ref` arabirim uygulayamaz, bu yüzden uygulayamaz <xref:System.IDisposable>. Bu nedenle, bir `ref struct` 'nin atılbilmesini sağlamak için erişilebilir `void Dispose()` bir yöntemi olmalıdır. Bu özellik bildirimler için `readonly ref struct` de geçerlidir.
+`struct`Değiştiriciyle belirtilen bir `ref` arabirim uygulayamaz, bu yüzden uygulayamaz <xref:System.IDisposable> . Bu nedenle, bir `ref struct` 'nin atılbilmesini sağlamak için erişilebilir bir `void Dispose()` yöntemi olmalıdır. Bu özellik bildirimler için de geçerlidir `readonly ref struct` .
 
 ## <a name="nullable-reference-types"></a>Boş değer atanabilir başvuru türleri
 
-Null olabilen bir ek açıklama bağlamında, başvuru türündeki herhangi bir değişken **null yapılamayan bir başvuru türü**olarak kabul edilir. Bir değişkenin null olabileceğini belirtmek istiyorsanız, değişkeni null olabilen bir `?` **başvuru türü**olarak bildirmek için ile tür adını eklemeniz gerekir.
+Null olabilen bir ek açıklama bağlamında, başvuru türündeki herhangi bir değişken **null yapılamayan bir başvuru türü**olarak kabul edilir. Bir değişkenin null olabileceğini belirtmek istiyorsanız, değişkeni null olabilen `?` bir **başvuru türü**olarak bildirmek için ile tür adını eklemeniz gerekir.
 
 Null yapılamayan başvuru türleri için derleyici, yerel değişkenlerin bildirildiği sırada null olmayan bir değere başlatıldığından emin olmak için akış analizini kullanır. Alanlar oluşturma sırasında başlatılmalıdır. Derleyici, değişken kullanılabilir oluşturuculardan herhangi birine veya bir başlatıcı tarafından ayarlanmamışsa bir uyarı oluşturur. Ayrıca, null olamayan başvuru türlerine null olabilecek bir değer atanamaz.
 
@@ -368,11 +368,11 @@ Null yapılabilir başvuru türleri atanmamış veya null olarak başlatılmamı
 
 C# 8,0 ' den başlayarak akışları zaman uyumsuz olarak oluşturup kullanabilirsiniz. Zaman uyumsuz akış döndüren bir yöntem üç özelliğe sahiptir:
 
-1. `async` Değiştiriciyle birlikte bildirilmiştir.
-1. Döndürür <xref:System.Collections.Generic.IAsyncEnumerable%601>.
-1. Yöntemi, zaman `yield return` uyumsuz akıştaki birbirini izleyen öğeleri döndürecek deyimleri içerir.
+1. `async`Değiştiriciyle birlikte bildirilmiştir.
+1. Döndürür <xref:System.Collections.Generic.IAsyncEnumerable%601> .
+1. Yöntemi, `yield return` zaman uyumsuz akıştaki birbirini izleyen öğeleri döndürecek deyimleri içerir.
 
-Zaman uyumsuz bir akışın kullanılması, akışın öğelerini Numaralandırdığınızda `await` `foreach` anahtar kelimeden önce anahtar sözcüğünü eklemenizi gerektirir. `await` Anahtar sözcüğü eklemek, zaman uyumsuz akışı belirten ve `async` değiştirici ile belirtilecek ve bir `async` Yöntem için izin verilen bir tür döndürecek yöntemi gerektirir. Genellikle, <xref:System.Threading.Tasks.Task> veya <xref:System.Threading.Tasks.Task%601>döndürme anlamına gelir. Ayrıca, <xref:System.Threading.Tasks.ValueTask> veya <xref:System.Threading.Tasks.ValueTask%601>olabilir. Bir yöntem, zaman uyumsuz bir akış tüketebilir ve üretebilir, yani dönecektir <xref:System.Collections.Generic.IAsyncEnumerable%601>. Aşağıdaki kod, 0 ile 19 arasında bir sıra üretir, her bir sayı üretilmeden 100 ms bekler:
+Zaman uyumsuz bir akışın kullanılması, `await` `foreach` akışın öğelerini Numaralandırdığınızda anahtar kelimeden önce anahtar sözcüğünü eklemenizi gerektirir. `await`Anahtar sözcüğü eklemek, zaman uyumsuz akışı belirten `async` ve değiştirici ile belirtilecek ve bir yöntem için izin verilen bir tür döndürecek yöntemi gerektirir `async` . Genellikle, veya döndürme anlamına <xref:System.Threading.Tasks.Task> gelir <xref:System.Threading.Tasks.Task%601> . Ayrıca, <xref:System.Threading.Tasks.ValueTask> veya olabilir <xref:System.Threading.Tasks.ValueTask%601> . Bir yöntem, zaman uyumsuz bir akış tüketebilir ve üretebilir, yani dönecektir <xref:System.Collections.Generic.IAsyncEnumerable%601> . Aşağıdaki kod, 0 ile 19 arasında bir sıra üretir, her bir sayı üretilmeden 100 ms bekler:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -385,7 +385,7 @@ public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSeq
 }
 ```
 
-Şu `await foreach` ifadeyi kullanarak sırayı numaralandırabilirsiniz:
+Şu ifadeyi kullanarak sırayı numaralandırabilirsiniz `await foreach` :
 
 ```csharp
 await foreach (var number in GenerateSequence())
@@ -398,7 +398,7 @@ Zaman uyumsuz akışları [oluşturma ve](../tutorials/generate-consume-asynchro
 
 ## <a name="asynchronous-disposable"></a>Zaman uyumsuz atılabilir
 
-C# 8,0 ile başlayarak, dil <xref:System.IAsyncDisposable?displayProperty=nameWithType> arabirimi uygulayan zaman uyumsuz atılabilir türlerini destekler. Bir `using` ifadenin işleneni ya da <xref:System.IDisposable> uygulayabilir. <xref:System.IAsyncDisposable> Bu durumda `IAsyncDisposable`, derleyici öğesinden `await` <xref:System.Threading.Tasks.Task> <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>döndürülen kodu oluşturur. Daha fazla bilgi [ `using` için, bkz..](../language-reference/keywords/using-statement.md)
+C# 8,0 ile başlayarak, dil arabirimi uygulayan zaman uyumsuz atılabilir türlerini destekler <xref:System.IAsyncDisposable?displayProperty=nameWithType> . Bir ifadenin işleneni ya `using` da uygulayabilir <xref:System.IDisposable> <xref:System.IAsyncDisposable> . Bu durumda `IAsyncDisposable` , derleyici `await` <xref:System.Threading.Tasks.Task> öğesinden döndürülen kodu oluşturur <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> . Daha fazla bilgi [ `using` için, bkz..](../language-reference/keywords/using-statement.md)
 
 ## <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
@@ -407,13 +407,13 @@ Dizinler ve aralıklar bir dizideki tek öğelere veya aralıklara erişmek içi
 Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
 - <xref:System.Index?displayProperty=nameWithType>bir dizinin dizisini temsil eder.
-- Bir dizinin sıranın sonuna göre `^`olduğunu belirten End işlecinden dizin.
+- `^`Bir dizinin sıranın sonuna göre olduğunu belirten End işlecinden dizin.
 - <xref:System.Range?displayProperty=nameWithType>bir dizinin alt aralığını temsil eder.
-- Aralık işleci `..`, bir aralığın işlenenlerinin başlangıcını ve sonunu belirtir.
+- `..`Aralık işleci, bir aralığın işlenenlerinin başlangıcını ve sonunu belirtir.
 
-Dizin kurallarıyla başlayalım. Bir dizi `sequence`düşünün. `0` Dizin, ile `sequence[0]`aynıdır. `^0` Dizin, ile `sequence[sequence.Length]`aynıdır. `sequence[^0]` Bunun gibi `sequence[sequence.Length]` bir özel durum oluşturur. Herhangi bir sayı `n`için Dizin `^n` aynı olur `sequence.Length - n`.
+Dizin kurallarıyla başlayalım. Bir dizi düşünün `sequence` . `0`Dizin, ile aynıdır `sequence[0]` . `^0`Dizin, ile aynıdır `sequence[sequence.Length]` . Bunun `sequence[^0]` gibi bir özel durum oluşturur `sequence[sequence.Length]` . Herhangi bir sayı için `n` Dizin `^n` aynı olur `sequence.Length - n` .
 
-Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralığın başlangıcı dahil, ancak aralığın sonu dışlamalı, ancak *Başlangıç* aralığa dahil değildir ancak *uç* aralığa dahil değildir. Aralık, `[0..^0]` tüm aralığı temsil eden tüm `[0..sequence.Length]` aralığı temsil eder.
+Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralığın başlangıcı dahil, ancak aralığın sonu dışlamalı, ancak *Başlangıç* aralığa dahil değildir ancak *uç* aralığa dahil değildir. Aralık, tüm aralığı temsil eden `[0..^0]` tüm aralığı temsil eder `[0..sequence.Length]` .
 
 Bazı örneklere bakalım. Başlangıç ve bitişten dizin ile açıklana ek olarak, aşağıdaki diziyi göz önünde bulundurun:
 
@@ -440,13 +440,13 @@ Console.WriteLine($"The last word is {words[^1]}");
 // writes "dog"
 ```
 
-Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. İle `words[3]`içerir `words[1]` . Öğe `words[4]` Aralık içinde değil.
+Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. İle içerir `words[1]` `words[3]` . Öğe `words[4]` Aralık içinde değil.
 
 ```csharp
 var quickBrownFox = words[1..4];
 ```
 
-Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. Ve `words[^1]`içerir `words[^2]` . Son dizin `words[^0]` dahil değildir:
+Aşağıdaki kod, "Lazy" ve "köpek" ile bir alt Aralık oluşturur. Ve içerir `words[^2]` `words[^1]` . Son dizin `words[^0]` dahil değildir:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -466,19 +466,19 @@ Aralıkları, değişkenler olarak da bildirebilirsiniz:
 Range phrase = 1..4;
 ```
 
-Aralık daha sonra `[` ve `]` karakterleri içinde kullanılabilir:
+Aralık daha sonra `[` ve karakterleri içinde kullanılabilir `]` :
 
 ```csharp
 var text = words[phrase];
 ```
 
-Yalnızca dizin ve aralıkları destekleyen diziler değil. Ayrıca, veya <xref:System.ReadOnlySpan%601> [dizesiyle](../language-reference/builtin-types/reference-types.md#the-string-type) <xref:System.Span%601>dizin ve aralıklar da kullanabilirsiniz. Daha fazla bilgi için bkz. [Dizinler ve aralıklar için destek türü](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Yalnızca dizin ve aralıkları destekleyen diziler değil. Ayrıca, veya [dizesiyle](../language-reference/builtin-types/reference-types.md#the-string-type)dizin ve aralıklar da kullanabilirsiniz <xref:System.Span%601> <xref:System.ReadOnlySpan%601> . Daha fazla bilgi için bkz. [Dizinler ve aralıklar için destek türü](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Dizinler ve [aralıklar](../tutorials/ranges-indexes.md)hakkında öğreticide dizinler ve aralıklar hakkında daha fazla bilgi bulabilirsiniz.
 
 ## <a name="null-coalescing-assignment"></a>Null birleştirme ataması
 
-C# 8,0, null birleşim atama işlecini `??=`tanıtır. Sağ işleneninin değerini `??=` , sol taraftaki işlenenin değerini yalnızca sol taraftaki işlenen olarak `null`değerlendirdiğinde atamak için işlecini kullanabilirsiniz.
+C# 8,0, null birleşim atama işlecini tanıtır `??=` . Sağ işleneninin değerini, sol taraftaki işlenenin `??=` değerini yalnızca sol taraftaki işlenen olarak değerlendirdiğinde atamak için işlecini kullanabilirsiniz `null` .
 
 ```csharp
 List<int> numbers = null;
@@ -498,7 +498,7 @@ Daha fazla bilgi için?? [ve?? = operatörler](../language-reference/operators/n
 
 C# 7,3 ve önceki sürümlerde, oluşturulmuş bir tür (en az bir tür bağımsız değişkeni içeren bir tür) [yönetilmeyen bir tür](../language-reference/builtin-types/unmanaged-types.md)olamaz. C# 8,0 ' den başlayarak, oluşturulmuş bir değer türü yalnızca yönetilmeyen türlerin alanlarını içeriyorsa yönetilmez.
 
-Örneğin, genel `Coords<T>` türün aşağıdaki tanımı verildiğinde:
+Örneğin, genel türün aşağıdaki tanımı verildiğinde `Coords<T>` :
 
 ```csharp
 public struct Coords<T>
@@ -508,7 +508,7 @@ public struct Coords<T>
 }
 ```
 
-tür `Coords<int>` , C# 8,0 ve sonraki sürümlerde yönetilmeyen bir türdür. Herhangi bir yönetilmeyen tür için olduğu gibi, bu türden bir değişkene bir işaretçi oluşturabilir veya bu türün örnekleri için [yığında bir bellek bloğu ayırabilirsiniz](../language-reference/operators/stackalloc.md) :
+`Coords<int>`tür, C# 8,0 ve sonraki sürümlerde yönetilmeyen bir türdür. Herhangi bir yönetilmeyen tür için olduğu gibi, bu türden bir değişkene bir işaretçi oluşturabilir veya bu türün örnekleri için [yığında bir bellek bloğu ayırabilirsiniz](../language-reference/operators/stackalloc.md) :
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -533,4 +533,4 @@ Console.WriteLine(ind);  // output: 1
 
 ## <a name="enhancement-of-interpolated-verbatim-strings"></a>Ara değerli tam dizelerin geliştirilmesi
 
-Birlikte bulunan tam `$` dizelerde `@` ve belirteçlerin sırası herhangi biri olabilir: her ikisi `$@"..."` de `@$"..."` geçerli bir ara tür dizelerdir. [interpolated](../language-reference/tokens/interpolated.md) Önceki C# sürümlerinde, `$` belirtecin `@` belirtecin önüne gösterilmesi gerekir.
+Birlikte bulunan tam `$` `@` dizelerde ve belirteçlerin sırası herhangi biri olabilir: her ikisi de geçerli bir ara tür [interpolated](../language-reference/tokens/interpolated.md) `$@"..."` `@$"..."` dizelerdir. Önceki C# sürümlerinde, `$` belirtecin belirtecin önüne gösterilmesi gerekir `@` .

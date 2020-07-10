@@ -1,5 +1,6 @@
 ---
 title: Uygulamaya Web tarayıcısı yetenekleri ekleme
+description: Web tarayıcısı yeteneklerini bir Windows Forms uygulamasına WebBrowser denetimiyle nasıl ekleyeceğinizi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 7cb789121f4aa9a1e7cef54f992d0697ce6dfc62
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a5a33961ac8301bda86bb5f34e65ac159308987f
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543579"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174555"
 ---
 # <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Windows Forms uygulamasına Web tarayıcısı yetenekleri ekleme
 
-<xref:System.Windows.Forms.WebBrowser> denetimiyle, uygulamanıza Web tarayıcı işlevselliği ekleyebilirsiniz. Denetim varsayılan olarak bir Web tarayıcısı gibi çalışmaktadır. <xref:System.Windows.Forms.WebBrowser.Url%2A> özelliğini ayarlayarak bir başlangıç URL 'SI yükledikten sonra, ileri ' ye tıklayarak veya gezinme geçmişinde geriye doğru ve ileri gitmek için klavye kısayollarını kullanarak gezinebilirsiniz. Varsayılan olarak, sağ tıklama kısayol menüsünde ek tarayıcı işlevlerine erişebilirsiniz. Ayrıca, denetimi üzerine bırakarak yeni belgeler açabilirsiniz. <xref:System.Windows.Forms.WebBrowser> denetim Ayrıca, Internet Explorer 'da bulunanlara benzer kullanıcı arabirimi özelliklerini uygulamak için kullanabileceğiniz çeşitli özelliklere, yöntemlere ve olaylara sahip olabilir.
+Denetim ile <xref:System.Windows.Forms.WebBrowser> uygulamanıza Web tarayıcı işlevselliği ekleyebilirsiniz. Denetim varsayılan olarak bir Web tarayıcısı gibi çalışmaktadır. Özelliği ayarlayarak bir başlangıç URL 'SI yükledikten sonra <xref:System.Windows.Forms.WebBrowser.Url%2A> , ileri ' ye tıklayarak veya gezinme geçmişi aracılığıyla geriye doğru ve ileri ilerlemek için klavye kısayollarını kullanarak gezinebilirsiniz. Varsayılan olarak, sağ tıklama kısayol menüsünde ek tarayıcı işlevlerine erişebilirsiniz. Ayrıca, denetimi üzerine bırakarak yeni belgeler açabilirsiniz. <xref:System.Windows.Forms.WebBrowser>Denetimde Ayrıca, Internet Explorer 'da bulunanlara benzer kullanıcı arabirimi özelliklerini uygulamak için kullanabileceğiniz çeşitli özellikler, Yöntemler ve olaylar bulunur.
 
 Aşağıdaki kod örneği, bir adres çubuğunu, tipik tarayıcı düğmelerini, bir **Dosya** menüsünü, bir durum çubuğunu ve geçerli sayfa başlığını görüntüleyen bir başlık çubuğunu uygular.
 
@@ -31,11 +32,11 @@ Aşağıdaki kod örneği, bir adres çubuğunu, tipik tarayıcı düğmelerini,
 [!code-csharp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CS/form1.cs#0)]
 [!code-vb[System.Windows.Forms.WebBrowser#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/VB/form1.vb#0)]
   
-## <a name="compile-the-code"></a>Kod derleme
+## <a name="compile-the-code"></a>Kodu derle
 
 Bu örnek şunları gerektirir:
 
-- `System`, `System.Drawing`ve `System.Windows.Forms` derlemelerine başvurular.
+- `System`, `System.Drawing` Ve `System.Windows.Forms` derlemelerinin başvuruları.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

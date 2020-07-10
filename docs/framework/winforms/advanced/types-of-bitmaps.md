@@ -1,5 +1,6 @@
 ---
 title: Bit Eşlem Türleri
+description: Bit eşlem türleri ve BMP, JPG, GIF, PNG ve TIFF dahil desteklenen GDI+ grafik dosya biçimleri hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - jpeg files
@@ -20,26 +21,26 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 2243c9ce2d8ba741143d301c38e8b88d7b196c98
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09b74ef476467b0bba5aac1f58db278b3898ef17
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914820"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174685"
 ---
 # <a name="types-of-bitmaps"></a>Bit Eşlem Türleri
 Bit eşlem, piksel dizisindeki her bir pikselin rengini belirleyen bir bit dizisidir. Tek bir piksele ayrılan bit sayısı, bu piksele atanabilecek renklerin sayısını belirler. Örneğin, her piksel 4 bit ile temsil edildiğinde, belirli bir piksel 16 farklı renkten biri atanabilir (2 ^ 4 = 16). Aşağıdaki tabloda, belirli bir bit sayısıyla temsil edilen bir piksel için atanabilecek renk sayısının birkaç örneği gösterilmektedir.  
   
 |Bit/piksel|Bir pikselin atanabileceği renklerin sayısı|  
 |--------------------|------------------------------------------------------|  
-|1\.|2^1 = 2|  
-|2|2^2 = 4|  
-|4|2^4 = 16|  
-|8|2^8 = 256|  
-|16|2^16 = 65,536|  
-|24|2^24 = 16,777,216|  
+|1|2 ^ 1 = 2|  
+|2|2 ^ 2 = 4|  
+|4|2 ^ 4 = 16|  
+|8|2 ^ 8 = 256|  
+|16|2 ^ 16 = 65.536|  
+|24|2 ^ 24 = 16.777.216|  
   
- Bit eşlemler depolayan disk dosyalarında genellikle piksel başına bit sayısı, her satırdaki piksel sayısı ve dizideki satır sayısı gibi bilgileri depolayan bir veya daha fazla bilgi bloğu bulunur. Böyle bir dosya aynı zamanda bir renk tablosu (bazen renk paleti olarak adlandırılır) de içerebilir. Renk tablosu, bit eşlemdeki sayıları belirli renklere eşler. Aşağıdaki çizimde, bit eşlem ve renk tablosu ile birlikte büyütülmüş bir görüntü gösterilmektedir. Her piksel 4 bitlik bir sayıyla temsil edildiğinde, renk tablosunda 2 ^ 4 = 16 renk vardır. Tablodaki her renk 24 bitlik bir sayıyla temsil edilir: Kırmızı için 8 bit, yeşil için 8 bit ve mavi için 8 bit. Sayılar onaltılık (taban 16) biçiminde gösterilir: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
+ Bit eşlemler depolayan disk dosyalarında genellikle piksel başına bit sayısı, her satırdaki piksel sayısı ve dizideki satır sayısı gibi bilgileri depolayan bir veya daha fazla bilgi bloğu bulunur. Böyle bir dosya aynı zamanda bir renk tablosu (bazen renk paleti olarak adlandırılır) de içerebilir. Renk tablosu, bit eşlemdeki sayıları belirli renklere eşler. Aşağıdaki çizimde, bit eşlem ve renk tablosu ile birlikte büyütülmüş bir görüntü gösterilmektedir. Her piksel 4 bitlik bir sayıyla temsil edildiğinde, renk tablosunda 2 ^ 4 = 16 renk vardır. Tablodaki her renk 24 bitlik bir sayıyla temsil edilir: kırmızı için 8 bit, yeşil için 8 bit ve mavi için 8 bit. Sayılar onaltılık (taban 16) biçiminde gösterilir: A = 10, B = 11, C = 12, D = 13, E = 14, F = 15.  
   
  ![Bit eşlem örneği](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
@@ -66,11 +67,11 @@ Bit eşlem, piksel dizisindeki her bir pikselin rengini belirleyen bir bit dizis
   
  JPEG görüntülerinde sıkıştırma düzeyi yapılandırılabilir, ancak daha yüksek sıkıştırma düzeyleri (daha küçük dosyalar) daha fazla bilgi kaybına neden olur. 20:1 sıkıştırma oranı genellikle insan gözünün orijinalden ayırt edilmesi zor bulduğu bir görüntü oluşturur. Aşağıdaki çizimde, bir BMP görüntüsünü ve bu BMP görüntüsünden sıkıştırılan iki JPEG görüntüsü gösterilmektedir. İlk JPEG 4:1 sıkıştırma oranına sahiptir ve ikinci JPEG 'nin 8:1 hakkında bir sıkıştırma oranı vardır.  
   
- ![Filetype örnekleri](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![FileType örnekleri](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  JPEG sıkıştırması çizgi çizimleri, düz renk blokları ve keskin sınırlar için iyi çalışmaz. Aşağıdaki çizimde, iki JPEG ve GIF ile birlikte bir BMP gösterilmektedir. JPEG 'ler ve GIF, BMP 'den sıkıştırıldı. Sıkıştırma oranı, GIF için 4:1, daha küçük JPEG için 4:1 ve daha büyük JPEG için 8:3. GIF 'in çizgiler üzerinde keskin sınırlar tuttuğunu, ancak JPEG 'ler sınırları bulanıklaştırmasını sağlar.  
   
- ![Dosya türleri](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Belirtilebilirsiniz](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG, bir dosya biçimi değil, bir sıkıştırma şemadır. JPEG dosya değişim biçimi (JıO), JPEG şemasına göre sıkıştırılan görüntüleri depolamak ve aktarmak için yaygın olarak kullanılan bir dosya biçimidir. Web tarayıcıları tarafından görüntülenmekte olan JFILES dosyaları. jpg uzantısını kullanır.  
   
@@ -90,5 +91,5 @@ Bit eşlem, piksel dizisindeki her bir pikselin rengini belirleyen bir bit dizis
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [Görüntüler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
+- [Resimler, Bit Eşlemler ve Meta Dosyaları](images-bitmaps-and-metafiles.md)
 - [Görüntüler, Bit Eşlemler, Simgeler ve Meta Dosyaları ile Çalışma](working-with-images-bitmaps-icons-and-metafiles.md)

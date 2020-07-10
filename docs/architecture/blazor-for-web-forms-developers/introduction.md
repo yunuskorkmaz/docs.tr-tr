@@ -1,17 +1,20 @@
 ---
-title: ASP.NET Web Forms geliştiricileri için Blazor 'e giriş
-description: .NET ile tam yığın Web uygulamalarına Blazor ve yazma ile ilgili bir giriş
+title: BlazorASP.NET Web Forms geliştiricilere giriş
+description: Blazor.NET ile tam yığın Web uygulamalarına giriş ve yazma
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8ef2c7d66d50abb34e536b6333e3aa68ee2bb07d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087931"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173139"
 ---
-# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>ASP.NET Web Forms geliştiricileri için Blazor 'e giriş
+# <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web Forms geliştiricilere giriş
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -34,7 +37,7 @@ Birçok modern Web çerçevesi artık açık kaynaklı ve bu da birçok avantaj 
 
 .NET Community, platformlar arası destek ve açık kaynak desteği de sunmaktadır. .NET Core, Windows, macOS ve çeşitli Linux dağıtımları dahil olmak üzere platformlar Plethora üzerinde çalışan açık kaynaklı ve platformlar arası bir uygulamasıdır. Xamarin, .NET 'in açık kaynaklı bir sürümünü mono sağlar. Android, iOS ve Watch ve akıllı TV 'ler dahil olmak üzere çeşitli form faktörlerinde mono çalıştırmaları. Microsoft, [.NET 5](https://devblogs.microsoft.com/dotnet/introducing-net-5/) ' ın .NET Core 'U ve mono 'nın her yerde kullanılabilecek ve Tekdüzen çalışma zamanı davranışları ve geliştirici deneyimleri içeren tek bir .NET çalışma zamanı ve çerçevesi olarak mutabık kılınduğunu duyurdu. "
 
-Açık kaynaklı ve platformlar arası destek ASP.NET Web Forms avantajına sahip olacak. Yanıt, ne yazık ki, Hayır veya en azından platformun geri kalanıyla aynı ölçüde değil. .NET ekibi [kısa bir süre önce](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) ASP.NET Web Forms .NET Core veya .NET 5 ' e alınmayacak. Neden?
+Açık kaynaklı ve platformlar arası destek ASP.NET Web Forms avantajına sahip olacak. Yanıt, ne yazık ki, Hayır veya en azından platformun geri kalanıyla aynı ölçüde değil. .NET ekibi [kısa bir süre önce](https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/) ASP.NET Web Forms .NET Core veya .NET 5 ' e alınmayacak. Bunun nedeni nedir?
 
 .NET Core 'un ilk günlerinde ASP.NET Web Forms bağlantı noktası için çalışmalar vardı. Gerekli olan son değişiklik sayısı çok fazla. Ayrıca, Microsoft için de bir giriş de vardır. Bu, aynı anda destekleyebileceği Web çerçevesi sayısı için bir sınır vardır. Topluluk içindeki birisi, ASP.NET Web Forms 'ın açık kaynaklı ve platformlar arası bir sürümünü oluşturma nedenine neden olur. [ASP.NET Web Forms kaynak kodu](https://github.com/microsoft/referencesource) , başvuru formunda herkese açık şekilde sunulmaktadır. Ancak, ASP.NET göründüğü için Web Forms, açık kaynaklı bir katkı modeli olmadan yalnızca Windows ' a sahip olur. Senaryolarınız için platformlar arası destek veya açık kaynak önemliyse, yeni bir şey aramanız gerekecektir.
 
@@ -50,15 +53,15 @@ Ancak, tarayıcılar çok yönlü platformlar haline geldi. Kullanıcı makinesi
 
 Ancak iki farklı platform ve ekosisteminin köprülemesi (.NET ve JavaScript) bir maliyetle birlikte gelir. Farklı diller, çerçeveler ve araçlarla iki paralel çalışma LDS 'de uzmanlık gerekir. Kod ve mantık istemci ile sunucu arasında kolayca paylaşılamaz, bu da çoğaltma ve mühendislik yüküne neden olur. Ayrıca, Breakneck hızında gelişen bir geçmişi olan JavaScript ekosistemi ile devam etmek zor olabilir. Ön uç Framework ve derleme aracı tercihleri hızla değişir. Sektör, Grönden Gulp to WebPack 'e kadar ilerlemeyi gözlemlemiştir ve bu şekilde devam eder. JQuery, altını gizleme, angular, tepki verme ve Vue gibi ön uç çerçeveleri ile aynı Restless dalgalanması oluştu. Ancak JavaScript 'in tarayıcı Monopoly 'i, bu konuyla çok az tercih vardı. Diğer bir deyişle, Web topluluğu bir araya gelene ve bir *Miracle* oluşmasına neden olur!
 
-## <a name="webassembly-fulfills-a-need"></a>WebAssembly bir ihtiyacı karşılar
+## <a name="webassembly-fulfills-a-need"></a>WebAssemblyihtiyacı karşılar
 
-2015 ' de, ana tarayıcı satıcıları bir W3C topluluk grubunda, WebAssembly adlı yeni bir açık web standardı oluşturmak için güçlendirir. WebAssembly, Web için bir bayt kodudur. Kodunuzu WebAssembly 'e derleyebiliyorsanız, daha sonra herhangi bir platformda her türlü yerel hızda herhangi bir tarayıcıda çalıştırılabilir. C/C++odaklı ilk çabalar. Sonuç, yerel 3B grafik altyapılarını eklentiler olmadan doğrudan tarayıcıda çalıştırmanın çarpıcı bir gösterimiydi. WebAssembly, tüm büyük tarayıcılarda standartlaştırılmış ve uygulanmış olduğundan bu yana.
+2015 ' de, ana tarayıcı satıcıları, bir W3C topluluk grubundaki güçleri birleştirilmiş yeni bir açık web standardı oluşturacak şekilde birleştirilir WebAssembly . WebAssemblyWeb için bir bayt kodudur. Kodunuzu ' a derleyebiliyorsanız WebAssembly , daha sonra herhangi bir platformda her türlü yerel hızda herhangi bir tarayıcıda çalıştırılabilir. C/C++ ' ya odaklanan ilk çabalar. Sonuç, yerel 3B grafik altyapılarını eklentiler olmadan doğrudan tarayıcıda çalıştırmanın çarpıcı bir gösterimiydi. WebAssembly, bu yana tüm büyük tarayıcılarda standartlaştırılmış ve uygulanmıştır.
 
-WebAssembly üzerinde .NET çalıştırmaya çalışma, geç 2017 ' de duyuruldu ve .NET 5 ' ten destek dahil olmak üzere 2020 ' de teslim edilmesi beklenmektedir. .NET kodu doğrudan tarayıcıda çalıştırma özelliği, .NET ile tam yığın Web geliştirmesini sağlar.
+Üzerinde .NET çalıştıran çalışma WebAssembly , geç 2017 ' de duyuruldu ve .NET 5 ' ten destek dahil olmak üzere 2020 ' de teslim edilmesi beklenmektedir. .NET kodu doğrudan tarayıcıda çalıştırma özelliği, .NET ile tam yığın Web geliştirmesini sağlar.
 
 ## <a name="blazor-full-stack-web-development-with-net"></a>Blazor: .NET ile tam yığın Web geliştirme
 
-Kendi başına bir tarayıcıda .NET kodu çalıştırma özelliği, istemci tarafı Web uygulamaları oluşturmak için uçtan uca bir deneyim sağlamaz. Burada Blazor geldiği yer. Blazor, JavaScript C# yerine bir istemci tarafı Web UI çerçevesidir. Blazor, WebAssembly aracılığıyla doğrudan tarayıcıda çalıştırılabilir. Tarayıcı eklentileri gerekli değildir. Alternatif olarak, Blazor Apps, .NET Core üzerinde sunucu tarafı çalıştırabilir ve tarayıcıyla gerçek zamanlı bir bağlantı üzerinden tüm kullanıcı etkileşimlerini işleyebilir.
+Kendi başına bir tarayıcıda .NET kodu çalıştırma özelliği, istemci tarafı Web uygulamaları oluşturmak için uçtan uca bir deneyim sağlamaz. Bu noktada Blazor ' de gelir. BlazorJavaScript yerine C# tabanlı bir istemci tarafı Web Kullanıcı arabirimi çerçevesidir. Blazoraracılığıyla doğrudan tarayıcıda çalıştırılabilir WebAssembly . Tarayıcı eklentileri gerekli değildir. Alternatif olarak, Blazor uygulamalar .NET Core üzerinde sunucu tarafı çalıştırabilir ve tarayıcıyla gerçek zamanlı bir bağlantı üzerinden tüm kullanıcı etkileşimlerini işleyebilir.
 
 Blazor, Visual Studio ve Visual Studio Code harika araç desteğine sahiptir. Framework Ayrıca tam bir UI bileşen modeli içerir ve aşağıdakiler için yerleşik tesislere sahiptir:
 
@@ -69,19 +72,19 @@ Blazor, Visual Studio ve Visual Studio Code harika araç desteğine sahiptir. Fr
 - Tarayıcı içi hata ayıklama
 - JavaScript ile birlikte çalışma
 
-Blazor, ASP.NET Web Forms ile ortak bir Lota sahiptir. Her iki çerçeve de bileşen tabanlı, olay odaklı, durum bilgisi olmayan kullanıcı arabirimi programlama modelleri sunmaktadır. Ana mimari farkı, ASP.NET Web Forms yalnızca sunucuda çalışır. Blazor, tarayıcıda istemcide çalıştırılabilir. Ancak, bir ASP.NET Web Forms arka planı geliyorsa, Blazor 'de tanıdık olacak bir çok şey vardır. Blazor, istemci tarafı geliştirmeden ve net ' in açık kaynaklı, platformlar arası bir yandan da yararlanabilmeniz için bir yol arayan ASP.NET Web Forms geliştiricilerin doğal bir çözümüdür.
+Blazor, ASP.NET Web Forms ile yaygın olarak çok sayıda vardır. Her iki çerçeve de bileşen tabanlı, olay odaklı, durum bilgisi olmayan kullanıcı arabirimi programlama modelleri sunmaktadır. Ana mimari farkı, ASP.NET Web Forms yalnızca sunucuda çalışır. Blazor, tarayıcıda istemci üzerinde çalışabilir. Ancak, bir ASP.NET Web Forms arka planı geliyorsa, bunun Blazor hakkında bilgi sahibi olacak bir çok şey vardır. Blazor, bir ASP.NET Web Forms geliştiricileri için, istemci tarafı geliştirmeden ve açık kaynaklı, platformlar arası bir yandan .NET tarafından yararlanabilmeniz için bir yol arayan doğal bir çözümdür.
 
-Bu kitap, özellikle ASP.NET Web Forms geliştiricilere Blazor 'e yönelik bir giriş sağlar. Her Blazor kavramı, benzer ASP.NET Web Forms özellikleri ve yöntemleri bağlamında sunulur. Bu kitabın sonuna kadar, şunları anlayacaksınız:
+Bu kitap Blazor , özellikle de ASP.NET Web Forms geliştiricilere yönelik bir giriş sağlar. Her Blazor kavram, benzer ASP.NET Web Forms özellikleri ve yöntemleri bağlamında sunulur. Bu kitabın sonuna kadar, şunları anlayacaksınız:
 
-- Blazor uygulamaları oluşturma.
-- Blazor nasıl çalıştığı.
-- .NET Core ile Blazor nasıl ilişkili.
-- Mevcut ASP.NET Web Forms uygulamalarını uygun yerlerde Blazor 'e geçirmeye yönelik makul stratejiler.
+- BlazorUygulama oluşturma.
+- Nasıl Blazor çalıştığını öğrenin.
+- Blazor.NET Core ile ilgilidir.
+- Mevcut ASP.NET Web Forms uygulamalarını uygun yerlerde geçirmeye yönelik makul stratejiler Blazor .
 
-## <a name="get-started-with-blazor"></a>Blazor kullanmaya başlama
+## <a name="get-started-with-blazor"></a>Kullanmaya başlayınBlazor
 
-Blazor kullanmaya başlamak kolaydır. <https://blazor.net> gidin ve uygun .NET Core SDK ve Blazor proje şablonlarını yüklemek için bağlantıları izleyin. Ayrıca, Visual Studio veya Visual Studio Code Blazor araçları ayarlarını ayarlamaya yönelik yönergeler de bulacaksınız.
+Kullanmaya başlamak Blazor kolaydır. Öğesine gidin <https://blazor.net> ve uygun .NET Core SDK ve proje şablonlarını yüklemek için bağlantıları izleyin Blazor . Ayrıca, Blazor Visual Studio veya Visual Studio Code araçları ayarlama yönergelerini bulacaksınız.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)
->[İleri](architecture-comparison.md)
+>[Önceki](index.md) 
+> [Sonraki](architecture-comparison.md)

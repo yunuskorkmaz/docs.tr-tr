@@ -1,5 +1,6 @@
 ---
 title: ComboBox ve ListBox
+description: Windows Forms ComboBox ve Windows Forms ListBox ' ı kullanma hakkında bilgi edinin ve bir görev için bir veya diğerinin ne zaman uygun olduğunu nasıl söyleyeceğinizi öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms], adding and removing items
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-ms.openlocfilehash: 7087760a393bb58d83d899c1741c745fb28585bb
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ca6ad6bec2dbc30128ea09808af2806687b17a8c
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739932"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174425"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>ListBox Yerine Ne Zaman Windows Forms ComboBox Kullanılır?
-<xref:System.Windows.Forms.ComboBox> ve <xref:System.Windows.Forms.ListBox> denetimleri benzer davranışlara sahiptir ve bazı durumlarda bu şekilde değiştirilebilir. Ancak, bir veya diğeri bir göreve daha uygun olduğunda zamanlar vardır.  
+<xref:System.Windows.Forms.ComboBox>Ve <xref:System.Windows.Forms.ListBox> denetimlerinin benzer davranışları vardır ve bazı durumlarda bu şekilde değiştirilebilir. Ancak, bir veya diğeri bir göreve daha uygun olduğunda zamanlar vardır.  
   
- Genellikle, bir açılan kutu, önerilen seçeneklerin bir listesi olduğunda uygundur ve girişi listede olacak şekilde sınırlamak istediğinizde bir liste kutusu uygundur. Bir Birleşik giriş kutusu metin kutusu alanı içeriyorsa, listede bulunmayan seçimler içine yazılabilir. Bu, <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> özelliğinin <xref:System.Windows.Forms.ComboBoxStyle.DropDownList>olarak ayarlandığı durumdur. Bu durumda, ilk harfini yazarsanız denetim bir öğe seçer.  
+ Genellikle, bir açılan kutu, önerilen seçeneklerin bir listesi olduğunda uygundur ve girişi listede olacak şekilde sınırlamak istediğinizde bir liste kutusu uygundur. Bir Birleşik giriş kutusu metin kutusu alanı içeriyorsa, listede bulunmayan seçimler içine yazılabilir. Özel durum, <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> özelliğin olarak ayarlandığı durumdur <xref:System.Windows.Forms.ComboBoxStyle.DropDownList> . Bu durumda, ilk harfini yazarsanız denetim bir öğe seçer.  
   
- Ayrıca, Birleşik giriş kutuları bir formdaki alanı kaydeder. Kullanıcı aşağı oka tıklaana kadar tam liste görüntülenmediği için, bir açılan kutu bir liste kutusunun uygun olmadığı küçük bir alana kolayca uyum sağlayabilir. Bir özel durum, <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> özelliğinin <xref:System.Windows.Forms.ComboBoxStyle.Simple>olarak ayarlandığı durumdur: tam liste görüntülenir ve Birleşik giriş kutusu bir liste kutusundan daha fazla yer kaplar.  
+ Ayrıca, Birleşik giriş kutuları bir formdaki alanı kaydeder. Kullanıcı aşağı oka tıklaana kadar tam liste görüntülenmediği için, bir açılan kutu bir liste kutusunun uygun olmadığı küçük bir alana kolayca uyum sağlayabilir. Bir özel durum, <xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> özelliğin olarak ayarlandığı durumdur <xref:System.Windows.Forms.ComboBoxStyle.Simple> : tam liste görüntülenir ve Birleşik giriş kutusu bir liste kutusundan daha fazla yer kaplar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -1,5 +1,6 @@
 ---
 title: Nesneleri Katmanlama
+description: Daha karmaşık kullanıcı arabirimleri oluşturmak için Windows Forms Denetimlerinde ve alt formlarda nesneleri nasıl katmanleyeceğinizi öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +16,12 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6269b09c56963fefd500b9e1e6c9d7f51f9619cf
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736343"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174516"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Nasıl yapılır: Windows Forms üzerinde katman nesneleri
 
@@ -34,9 +35,9 @@ Karmaşık bir kullanıcı arabirimi oluşturduğunuzda veya birden çok belge a
 
 ## <a name="to-layer-controls-programmatically"></a>Denetimleri programlı olarak katman halinde
 
-Denetimlerin z düzenini değiştirmek için <xref:System.Windows.Forms.Control.BringToFront%2A> ve <xref:System.Windows.Forms.Control.SendToBack%2A> yöntemlerini kullanın.
+<xref:System.Windows.Forms.Control.BringToFront%2A> <xref:System.Windows.Forms.Control.SendToBack%2A> Denetimlerin z düzenini değiştirmek için ve yöntemlerini kullanın.
 
-Örneğin, `txtFirstName`bir <xref:System.Windows.Forms.TextBox> denetimi başka bir denetimin altında ve en üstte olmasını istiyorsanız aşağıdaki kodu kullanın:
+Örneğin, bir <xref:System.Windows.Forms.TextBox> Denetim `txtFirstName` başka bir denetimin altında ise ve en üstte olmasını istiyorsanız aşağıdaki kodu kullanın:
 
 ```vb
 txtFirstName.BringToFront()
@@ -51,11 +52,11 @@ txtFirstName->BringToFront();
 ```
 
 > [!NOTE]
-> Windows Forms *Denetim kapsamayı*destekler. Denetim kapsama, bir <xref:System.Windows.Forms.GroupBox> denetimindeki birçok <xref:System.Windows.Forms.RadioButton> denetimi gibi, kapsayan bir denetim içinde çok sayıda denetim yerleştirmeyi içerir. Daha sonra, içeren denetim içindeki denetimleri katmandan yönetebilirsiniz. Grup kutusunun taşınması, içinde olduklarından, denetimleri de taşır.
+> Windows Forms *Denetim kapsamayı*destekler. Denetim kapsama, bir denetim içindeki denetim sayısı gibi, kapsayan bir denetim içinde çok sayıda denetim yerleştirmeyi içerir <xref:System.Windows.Forms.RadioButton> <xref:System.Windows.Forms.GroupBox> . Daha sonra, içeren denetim içindeki denetimleri katmandan yönetebilirsiniz. Grup kutusunun taşınması, içinde olduklarından, denetimleri de taşır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms Denetimleri](index.md)
+- [Windows Forms denetimleri](index.md)
 - [Ayrı Windows Forms Denetimlerini Etiketleme ve Kısayollarını Sunma](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
 - [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)

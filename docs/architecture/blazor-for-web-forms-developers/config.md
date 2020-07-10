@@ -1,46 +1,48 @@
 ---
 title: Uygulama yapılandırması
-description: ConfigurationManager'ı kullanmadan Blazor uygulamalarını nasıl yapılandırıştırmayı öğrenin.
+description: BlazorConfigurationManager kullanılmadan uygulamaları yapılandırmayı öğrenin.
 author: csharpfritz
 ms.author: jefritz
+no-loc:
+- Blazor
 ms.date: 04/01/2020
-ms.openlocfilehash: c780a395f72e2520af86c20c7f6618953a528ff7
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: a13f663c2c6908ba906e42cb939c3b8707b8cccd
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588243"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173321"
 ---
 # <a name="app-configuration"></a>Uygulama yapılandırması
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Web Formlar'da uygulama yapılandırmasını yüklemenin birincil yolu,&mdash;sunucudaki *web.config* dosyasındaki girişler veya *web.config*tarafından başvurulan ilgili yapılandırma dosyasıdır. Uygulama ayarları, `ConfigurationManager` veri deposu bağlantı dizeleri ve uygulamaya eklenen diğer genişletilmiş yapılandırma sağlayıcılarıyla etkileşimde kalmak için statik nesneyi kullanabilirsiniz. Aşağıdaki kodda görüldüğü gibi uygulama yapılandırmasıyla etkileşimleri görmek tipiktir:
+Web Forms ' de uygulama yapılandırmasını yüklemeye yönelik birincil yol, *web.config* &mdash; sunucuda veya *web.config*tarafından başvurulan ilgili bir yapılandırma dosyasında bulunanweb.configdosyasında yer alan girişlerdir. Statik nesneyi, uygulama `ConfigurationManager` ayarları, veri deposu bağlantı dizeleri ve uygulamaya eklenen diğer genişletilmiş yapılandırma sağlayıcıları ile etkileşim kurmak için kullanabilirsiniz. Aşağıdaki kodda görüldüğü gibi, uygulama yapılandırması ile etkileşimleri görmek normaldir:
 
 ```csharp
 var configurationValue = ConfigurationManager.AppSettings["ConfigurationSettingName"];
 var connectionString = ConfigurationManager.ConnectionStrings["MyDatabaseConnectionName"].ConnectionString;
 ```
 
-ASP.NET Core ve sunucu tarafı Blazor ile, uygulamanız bir Windows IIS sunucusunda barındırılırsa *web.config* dosyası hazır olabilir. Ancak, bu yapılandırma `ConfigurationManager` ile hiçbir etkileşim yoktur ve diğer kaynaklardan daha yapılandırılmış uygulama yapılandırması alabilirsiniz. Yapılandırmanın nasıl toplandığına ve bir *web.config* dosyasından yapılandırma bilgilerine nasıl erişebileceğinize bir göz atalım.
+ASP.NET Core ve sunucu tarafında Blazor , uygulamanız bir WINDOWS IIS sunucusunda barındırılıyorsa, *web.config* dosyası mevcut olabilir. Bununla birlikte, `ConfigurationManager` Bu yapılandırmayla etkileşim yoktur ve diğer kaynaklardan daha fazla yapılandırılmış uygulama yapılandırması da alabilirsiniz. Yapılandırmanın nasıl toplandığını ve bir *web.config* dosyasından yapılandırma bilgilerine nasıl erişekullanabileceğinizi göz atalım.
 
 ## <a name="configuration-sources"></a>Yapılandırma kaynakları
 
-ASP.NET Core, uygulamanız için kullanmak isteyebileceğin birçok yapılandırma kaynağı olduğunu kabul eder. Çerçeve varsayılan olarak bu özelliklerden en iyi şekilde sunmaya çalışır. Yapılandırma, ASP.NET Core tarafından bu çeşitli kaynaklardan okunur ve toplanır. Aynı yapılandırma anahtarı için daha sonra yüklenen değerler önceki değerlere göre önceliklidir.
+ASP.NET Core, uygulamanız için kullanmak isteyebileceğiniz birçok yapılandırma kaynağını tanır. Framework, varsayılan olarak bu özelliklerden en iyi şekilde bu özellikleri sunmaya çalışır. Yapılandırma ASP.NET Core tarafından bu çeşitli kaynaklardan okunurdur ve toplanır. Aynı yapılandırma anahtarı için daha sonra yüklenen değerler önceki değerlerden önceliklidir.
 
-ASP.NET Core, bulut bilincine duyarlı olacak ve uygulamaların yapılandırmasını hem operatörler hem de geliştiriciler için daha kolay hale getirmek üzere tasarlanmıştır. ASP.NET Core çevreye duyarlıdır ve sizin veya `Production` `Development` çevrenizde olup olmadığını bilir. Ortam göstergesi sistem ortamı `ASPNETCORE_ENVIRONMENT` değişkeninde ayarlanır. Hiçbir değer yapılandırılmamışsa, uygulama `Production` varsayılan olarak ortamda çalışmaya başlar.
+ASP.NET Core, bulut açısından uyumlu olacak şekilde tasarlanmıştır ve uygulamaların yapılandırılmasını hem operatörler hem de geliştiriciler için daha kolay hale getirir. ASP.NET Core, ortama duyarlı ve veya ortamınızda çalışıp çalışmadığını biliyor `Production` `Development` . Ortam göstergesi, `ASPNETCORE_ENVIRONMENT` Sistem ortamı değişkeninde ayarlanır. Hiçbir değer yapılandırılmamışsa, uygulamanın ortamda çalışması varsayılan olur `Production` .
 
-Uygulamanız, ortamın adına bağlı olarak çeşitli kaynaklardan yapılandırma tetikleyebilir ve ekleyebilir. Varsayılan olarak, yapılandırma listelenen sırada aşağıdaki kaynaklardan yüklenir:
+Uygulamanız, ortam adına göre çeşitli kaynaklardan yapılandırma tetikleyip ekleyebilir. Varsayılan olarak, yapılandırma aşağıdaki kaynaklardan listelenen sırayla yüklenir:
 
-1. *varsa appsettings.json* dosyası
-1. *ayarları. {ENVIRONMENT_NAME}.json* dosyası, varsa
-1. Varsa diskteki kullanıcı sırları dosyası
+1. Varsa dosyada *appsettings.js*
+1. *appSettings. {ENVIRONMENT_NAME}. JSON* dosyası varsa
+1. Varsa, diskte Kullanıcı gizli dizileri dosyası
 1. Ortam değişkenleri
 1. Komut satırı bağımsız değişkenleri
 
-## <a name="appsettingsjson-format-and-access"></a>appsettings.json formatı ve erişim
+## <a name="appsettingsjson-format-and-access"></a>Biçim ve erişim üzerinde appsettings.js
 
-*Appsettings.json* dosyası aşağıdaki JSON gibi yapılandırılmış değerlerle hiyerarşik olabilir:
+Dosyadaki *appsettings.js* , aşağıdaki JSON gibi yapılandırılmış değerlerle hiyerarşik olabilir:
 
 ```json
 {
@@ -55,40 +57,40 @@ Uygulamanız, ortamın adına bağlı olarak çeşitli kaynaklardan yapılandır
 }
 ```
 
-Önceki JSON ile sunulduğunda, yapılandırma sistemi alt değerleri düzleştirir ve tam nitelikli hiyerarşik yollarına başvurur. Bir iki`:`nokta üst üste ( ) karakter hiyerarşideki her özelliği ayırır. Örneğin, yapılandırma anahtarı `section1:key0` nesneliteral `section1` `key0` değerine erişer.
+Önceki JSON ile sunulursa, yapılandırma sistemi alt değerleri düzleştirir ve tam hiyerarşik yollara başvurur. İki nokta ( `:` ) karakteri hiyerarşideki her özelliği ayırır. Örneğin, yapılandırma anahtarı `section1:key0` `section1` nesne değişmez `key0` değerine erişir.
 
-## <a name="user-secrets"></a>Kullanıcı sırları
+## <a name="user-secrets"></a>Kullanıcı gizli dizileri
 
-Kullanıcı sırları şunlardır:
+Kullanıcı gizli dizileri şunlardır:
 
-* Uygulama geliştirme klasörünün dışında, geliştiricinin iş istasyonundaki bir JSON dosyasında depolanan yapılandırma değerleri.
-* Yalnızca `Development` çevrede çalışırken yüklenir.
-* Belirli bir uygulamayla ilişkilidir.
-* .NET Core CLI `user-secrets` komutu ile yönetilir.
+* Geliştirici iş istasyonundaki bir JSON dosyasında depolanan yapılandırma değerleri, uygulama geliştirme klasörü dışında.
+* Yalnızca ortamda çalışırken yüklenir `Development` .
+* Belirli bir uygulamayla ilişkili.
+* .NET Core CLI `user-secrets` komutuyla yönetiliyor.
 
-`user-secrets` Komutu uygulayarak uygulamanızı sırların depolanması için yapılandırın:
+Komutu yürüterek uygulamanızı gizli dizi depolaması için yapılandırın `user-secrets` :
 
 ```dotnetcli
 dotnet user-secrets init
 ```
 
-Önceki komut proje `UserSecretsId` dosyasına bir öğe ekler. Öğe, uygulama ile sırları ilişkilendirmek için kullanılan bir GUID içerir. Daha sonra `set` komutu ile bir sır tanımlayabilirsiniz. Örnek:
+Yukarıdaki komut, `UserSecretsId` proje dosyasına bir öğesi ekler. Öğesi, gizli dizileri uygulamayla ilişkilendirmek için kullanılan bir GUID içerir. Daha sonra komutuyla bir gizli dizi tanımlayabilirsiniz `set` . Örnek:
 
 ```dotnetcli
 dotnet user-secrets set "Parent:ApiKey" "12345"
 ```
 
-Önceki komut, yapılandırma `Parent:ApiKey` anahtarını bir geliştiricinin iş istasyonunda `12345`değeriyle birlikte kullanılabilir hale getirir.
+Yukarıdaki komut, `Parent:ApiKey` yapılandırma anahtarını bir geliştiricinin iş istasyonunda değeri ile kullanılabilir hale getirir `12345` .
 
-Kullanıcı sırlarını oluşturma, depolama ve yönetme hakkında daha fazla bilgi [için, ASP.NET Core belgesinde uygulama sırlarınıgeliştirmede güvenli depolama](/aspnet/core/security/app-secrets) bölümüne bakın.
+Kullanıcı parolaları oluşturma, depolama ve yönetme hakkında daha fazla bilgi için, ASP.NET Core belgesinde [geliştirme sırasında uygulama gizli dizileri 'Nin güvenli depolama](/aspnet/core/security/app-secrets) bölümüne bakın.
 
 ## <a name="environment-variables"></a>Ortam değişkenleri
 
-Uygulama yapılandırmanıza yüklenen bir sonraki değerler kümesi, sistemin ortam değişkenleridir. Sisteminizin tüm ortam değişken ayarlarına artık yapılandırma API'si aracılığıyla erişebilirsiniz. Hiyerarşik değerler, uygulamanızın içinde okunduğunda düzleştirilmiş ve iki nokta üst üste karakterlerle ayrılır. Ancak, bazı işletim sistemleri iki nokta üst üste karakter ortamı değişken adlarını izin vermez. ASP.NET Core, bu sınırlamayı, çift alt çizgiye`__`sahip değerleri erişildiğinde bir üst üste dönüştürerek gider. Yukarıdaki `Parent:ApiKey` kullanıcı sırları bölümünden değer ortam değişkeni `Parent__ApiKey`ile geçersiz kılınabilir.
+Uygulama yapılandırmanıza yüklenen sonraki değer kümesi, sistemin ortam değişkenleridir. Tüm sisteminizin ortam değişkeni ayarlarına artık Yapılandırma API 'SI aracılığıyla erişilebilir. Hiyerarşik değerler, uygulamanızın içinde okuma sırasında düz ve iki nokta üst üste karakteriyle ayrılır. Ancak bazı işletim sistemleri, iki nokta üst üste karakter ortamı değişken adlarına izin vermez. ASP.NET Core Çift alt çizgi () içeren değerleri `__` erişildiğinde iki nokta üst üste dönüştürerek bu sınırlamaya yöneliktir. `Parent:ApiKey`Yukarıdaki Kullanıcı gizli dizileri bölümünün değeri, ortam değişkeniyle geçersiz kılınabilir `Parent__ApiKey` .
 
 ## <a name="command-line-arguments"></a>Komut satırı bağımsız değişkenleri
 
-Yapılandırma, uygulamanız başlatıldığında komut satırı bağımsız değişkenleri olarak da sağlanabilir. Ayarlanacak yapılandırma değerinin`--`adını ve yapılandırılacak değeri belirtmek için çift çizgi () veya ileri çizgi ()`/`notunu kullanın. Sözdizimi aşağıdaki komutları benzer:
+Yapılandırma ayrıca uygulamanız başlatıldığında komut satırı bağımsız değişkenleri olarak da bulunabilir. `--` `/` Ayarlanacak yapılandırma değerinin adını ve yapılandırılacak değeri belirtmek için çift Dash () veya Forward-eğik çizgi () gösterimini kullanın. Söz dizimi aşağıdaki komutlara benzer:
 
 ```dotnetcli
 dotnet run CommandLineKey1=value1 --CommandLineKey2=value2 /CommandLineKey3=value3
@@ -98,7 +100,7 @@ dotnet run Parent:ApiKey=67890
 
 ## <a name="the-return-of-webconfig"></a>web.config dönüşü
 
-Uygulamanızı IIS'de Windows'a dağıttıysanız, *web.config* dosyası uygulamanızı yönetmek için IIS'yi yapılandırmaya devam eder. Varsayılan olarak, IIS ASP.NET Çekirdek Modülüne (ANCM) bir başvuru ekler. ANCM, uygulamanızı Kestrel web sunucusu yerine barındıran yerel bir IIS modülüdür. Bu *web.config* bölümü aşağıdaki XML biçimlendirmesini benzer:
+Uygulamanızı IIS 'de Windows 'a dağıttıysanız, *web.config* dosyası uygulamanızı yönetmek için yıne de IIS 'yi yapılandırır. IIS, varsayılan olarak ASP.NET Core modülüne (ANCM) bir başvuru ekler. ANCM, Kestrel Web sunucusu yerine uygulamanızı barındıran yerel bir IIS modülüdür. Bu *web.config* bölümü aşağıdaki XML biçimlendirmesine benzer:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -117,7 +119,7 @@ Uygulamanızı IIS'de Windows'a dağıttıysanız, *web.config* dosyası uygulam
 </configuration>
 ```
 
-Uygulamaya özgü `environmentVariables` `aspNetCore` yapılandırma, öğedeki bir öğeyi iç içe alarak tanımlanabilir. Bu bölümde tanımlanan değerler ASP.NET Core uygulamasına ortam değişkenleri olarak sunulur. Ortam değişkenleri, uygulama nın başlangıç segmentinde uygun şekilde yüklenir.
+Uygulamaya özel yapılandırma, öğesinde bir öğe yuvalanarak tanımlanabilir `environmentVariables` `aspNetCore` . Bu bölümde tanımlanan değerler, ASP.NET Core uygulamasına ortam değişkenleri olarak sunulur. Ortam değişkenleri, bu uygulama başlatma segmenti için uygun şekilde yüklenir.
 
 ```xml
 <aspNetCore processPath="dotnet"
@@ -134,32 +136,32 @@ Uygulamaya özgü `environmentVariables` `aspNetCore` yapılandırma, öğedeki 
 
 ## <a name="read-configuration-in-the-app"></a>Uygulamada yapılandırmayı okuma
 
-ASP.NET Core arayüz üzerinden <xref:Microsoft.Extensions.Configuration.IConfiguration> uygulama yapılandırması sağlar. Bu yapılandırma arabirimi Blazor bileşenleriniz, Blazor sayfalarınız ve yapılandırmaya erişmesi gereken diğer ASP.NET Çekirdek yönetilen sınıf tarafından istenmelidir. ASP.NET Core çerçevesi bu arabirimi daha önce yapılandırılan çözümlenmiş yapılandırmayla otomatik olarak dolduracaktır. Blazor sayfasında veya bir bileşenin Jilet biçimlendirmesinde, nesneye `IConfiguration` `@inject` *.jilet* dosyasının üst kısmındaki bir yönergeyi şu şekilde enjekte edebilirsiniz:
+ASP.NET Core arabirim aracılığıyla uygulama yapılandırması sağlar <xref:Microsoft.Extensions.Configuration.IConfiguration> . Bu yapılandırma arabirimi, Blazor bileşenlerinizde, Blazor sayfalarınızda ve yapılandırmaya erişmesi gereken diğer ASP.NET Core yönetilen bir sınıftan istenir. ASP.NET Core Framework, bu arabirimi daha önce yapılandırılan çözümlenmiş yapılandırmayla otomatik olarak doldurur. Bir Blazor sayfada veya bileşenin Razor biçimlendirmesinde, `IConfiguration` nesneyi `@inject` *. Razor* dosyasının en üstünde yer alan bir yönergeyle bu şekilde ekleyebilirsiniz:
 
 ```razor
 @inject IConfiguration Configuration
 ```
 
-Bu önceki deyim, `IConfiguration` nesneyi `Configuration` Razor şablonunun geri kalanında değişken olarak kullanılabilir hale getirir.
+Bu önceki ifade, `IConfiguration` nesneyi `Configuration` Razor şablonunun geri kalanı boyunca değişken olarak kullanılabilir hale getirir.
 
-Tek tek yapılandırma ayarları, dizinleyici parametresi olarak aranan yapılandırma ayar hiyerarşisi belirtilerek okunabilir:
+Bir dizin oluşturucu parametresi olarak aranan yapılandırma ayarı hiyerarşisi belirtilerek ayrı yapılandırma ayarları okunabilir:
 
 ```csharp
 var mySetting = Configuration["section1:key0"];
 ```
 
-Önceki örnekten bölüm1 yapılandırmasını almaya benzer <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> `GetSection("section1")` bir sözdizimi ile belirli bir konumda anahtar koleksiyonu almak için yöntemi kullanarak tüm yapılandırma bölümleri getirebilirsiniz.
+Tüm yapılandırma bölümlerini, <xref:Microsoft.Extensions.Configuration.IConfiguration.GetSection%2A> `GetSection("section1")` önceki örnekteki Section1 yapılandırmasını almak için öğesine benzer bir sözdizimi ile, belirli bir konumdaki anahtarların bir koleksiyonunu almak için yöntemini kullanarak getirebilirsiniz.
 
-## <a name="strongly-typed-configuration"></a>Güçlü bir şekilde yazılan yapılandırma
+## <a name="strongly-typed-configuration"></a>Türü kesin belirlenmiş yapılandırma
 
-Web Formları ile, <xref:System.Configuration.ConfigurationSection> tür ve ilişkili türlerden devralınan güçlü bir şekilde yazılan bir yapılandırma türü oluşturmak mümkündür. A, `ConfigurationSection` bu yapılandırma değerleri için bazı iş kurallarını ve işlemeyi yapılandırmanıza olanak sağlar.
+Web Forms, <xref:System.Configuration.ConfigurationSection> türü ve ilişkili türlerden devralınan kesin türü belirtilmiş bir yapılandırma türü oluşturmak mümkün. `ConfigurationSection`Bu yapılandırma değerleri için bazı iş kurallarını ve işlemeyi yapılandırmanıza izin verilir.
 
-ASP.NET Çekirdek'te, yapılandırma değerlerini alacak bir sınıf hiyerarşisi belirtebilirsiniz. Bu sınıflar:
+ASP.NET Core, yapılandırma değerlerini alacak bir sınıf hiyerarşisi belirtebilirsiniz. Bu sınıflar:
 
-* Bir üst sınıftan devralmanız gerekmez.
-* Yakalamak `public` istediğiniz yapılandırma yapısı için özellikleri ve tür başvuruları eşleşen özellikleri içermelidir.
+* Üst sınıftan devralması gerekmez.
+* `public`, Yakalamak istediğiniz yapılandırma yapısına yönelik özellikler ve tür başvurularıyla eşleşen özellikleri içermelidir.
 
-Önceki *appsettings.json* örneği için, değerleri yakalamak için aşağıdaki sınıfları tanımlayabilirsiniz:
+Örnek yukarıdaki *appsettings.js* , değerleri yakalamak için aşağıdaki sınıfları tanımlayabilirsiniz:
 
 ```csharp
 public class MyConfig
@@ -177,13 +179,13 @@ public class MyConfigSection
 }
 ```
 
-Bu sınıf hiyerarşisi `Startup.ConfigureServices` yönteme aşağıdaki satırı ekleyerek doldurulabilir:
+Aşağıdaki satırı yöntemine ekleyerek bu sınıf hiyerarşisi doldurulabilir `Startup.ConfigureServices` :
 
 ```csharp
 services.Configure<MyConfig>(Configuration);
 ```
 
-Uygulamanın geri kalanında, güçlü bir şekilde yazılan yapılandırma ayarlarını almak için sınıflara bir giriş parametresi veya jilet türü `@inject` `IOptions<MyConfig>` şablonlarında bir yönerge ekleyebilirsiniz. Özellik, `IOptions<MyConfig>.Value` yapılandırma `MyConfig` ayarlarından doldurulan değeri verir.
+Uygulamanın geri kalanında, `@inject` `IOptions<MyConfig>` kesin olarak belirlenmiş yapılandırma ayarlarını almak için sınıflardaki bir giriş parametresini veya Razor şablonlarındaki bir yönergeyi ekleyebilirsiniz. `IOptions<MyConfig>.Value`Özelliği, `MyConfig` yapılandırma ayarlarından doldurulmuş değeri verir.
 
 ```razor
 @inject IOptions<MyConfig> options
@@ -193,8 +195,8 @@ Uygulamanın geri kalanında, güçlü bir şekilde yazılan yapılandırma ayar
 }
 ```
 
-Seçenekler özelliği hakkında daha fazla [bilgi, ASP.NET Çekirdek belgesindeki Seçenekler deseninde](/aspnet/core/fundamentals/configuration/options#options-interfaces) bulunabilir.
+Seçenekler özelliği hakkında daha fazla bilgi [ASP.NET Core belge ' deki Seçenekler modelinde](/aspnet/core/fundamentals/configuration/options#options-interfaces) bulunabilir.
 
 >[!div class="step-by-step"]
->[Önceki](middleware.md)
->[Sonraki](security-authentication-authorization.md)
+>[Önceki](middleware.md) 
+> [Sonraki](security-authentication-authorization.md)

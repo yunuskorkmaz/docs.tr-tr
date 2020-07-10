@@ -1,20 +1,21 @@
 ---
 title: Panel Denetimi
+description: Windows Forms Panel denetimini nasıl kullanacağınızı öğrenin, özellikle de bir formu işleve göre bölümlere ayırmak için panoları kullanma.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - grouping controls
 - Panel control [Windows Forms]
 ms.assetid: 37c69803-5084-4347-b035-54cfbabdc310
-ms.openlocfilehash: 2ebf058383296db82a5451d743abd9e9fdc76085
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 58190eb740696862571e1a246a56bf5daffc2864
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744302"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174464"
 ---
 # <a name="panel-control-windows-forms"></a>Panel Denetimi (Windows Forms)
-Windows Forms `Panel` denetimleri, diğer denetimler için tanımlanabilir bir gruplandırma sağlamak üzere kullanılır. Genellikle, bir formu işleve göre bölümlere ayırmak için paneller kullanırsınız. `Panel` denetimi <xref:System.Windows.Forms.GroupBox> denetimine benzerdir; ancak yalnızca `Panel` denetimi kaydırma çubuklarına sahip olabilir ve yalnızca <xref:System.Windows.Forms.GroupBox> denetimi bir başlık görüntüler.  
+Windows Forms `Panel` denetimleri, diğer denetimler için tanımlanabilir bir gruplandırma sağlamak üzere kullanılır. Genellikle, bir formu işleve göre bölümlere ayırmak için paneller kullanırsınız. Denetim `Panel` <xref:System.Windows.Forms.GroupBox> denetime benzerdir; ancak, yalnızca `Panel` denetimde kaydırma çubukları olabilir ve yalnızca <xref:System.Windows.Forms.GroupBox> Denetim bir başlık görüntüler.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Panel Denetimine Genel Bakış](panel-control-overview-windows-forms.md)  
@@ -34,7 +35,7 @@ Windows Forms `Panel` denetimleri, diğer denetimler için tanımlanabilir bir g
  Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
  [Nasıl yapılır: Çalışma Zamanında Denetimler Koleksiyonuna Ekleme veya Kaldırma](how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md)  

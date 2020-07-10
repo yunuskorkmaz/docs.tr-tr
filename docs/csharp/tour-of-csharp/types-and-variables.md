@@ -3,12 +3,12 @@ title: C# türleri ve değişkenleri-C# dilinin turu
 description: "C 'de türleri tanımlama ve değişkenleri bildirme hakkında bilgi edinin #"
 ms.date: 04/24/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 6a3bd3dc802f0d080fd96036067f709e62faf426
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: a14291d1eec4d090b0275875326c5a580e5abe9d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141002"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174133"
 ---
 # <a name="types-and-variables"></a>Türler ve değişkenler
 
@@ -20,18 +20,18 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
 
 - [Değer türleri][ValueTypes]
   - [Basit türler][SimpleTypes]
-    - İmzalanan integral: `sbyte`, `short`, `int`,`long`
-    - İşaretsiz integral: `byte`, `ushort`, `uint`,`ulong`
+    - İmzalanan integral: `sbyte` , `short` , `int` ,`long`
+    - İşaretsiz integral: `byte` , `ushort` , `uint` ,`ulong`
     - Unicode karakterler:`char`
-    - IEEE ikili kayan nokta: `float`,`double`
+    - IEEE ikili kayan nokta: `float` ,`double`
     - Yüksek duyarlıklı ondalık kayan nokta:`decimal`
     - Boolean`bool`
   - [Sabit listesi türleri][EnumTypes]
     - Formun Kullanıcı tanımlı türleri`enum E {...}`
   - [Yapı türleri][StructTypes]
     - Formun Kullanıcı tanımlı türleri`struct S {...}`
-  - [Null yapılabilir değer türleri][NullableTypes]
-    - Bir `null` değere sahip diğer tüm değer türlerinin uzantıları
+  - [Boş değer atanabilen değer türleri][NullableTypes]
+    - Bir değere sahip diğer tüm değer türlerinin uzantıları `null`
   - [Demet değer türleri][TupleTypes]
     - Formun Kullanıcı tanımlı türleri`(T1, T2, ...)`
 - [Başvuru türleri][ReferenceTypes]
@@ -51,7 +51,7 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
-[TupleTypes]: ../tuples.md
+[TupleTypes]: ../language-reference/builtin-types/value-tuples.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
 [InterfaceTypes]: ../language-reference/keywords/interface.md
@@ -60,53 +60,53 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
 
 Sayısal türler hakkında daha fazla bilgi için bkz. [Integral türleri](../language-reference/builtin-types/integral-numeric-types.md) ve [kayan nokta türleri tablosu](../language-reference/builtin-types/floating-point-numeric-types.md).
 
-C# `bool` türü, Boole değerlerini ( `true` veya `false`olan değerler) temsil etmek için kullanılır.
+C# `bool` türü, Boole değerlerini (veya olan değerler) temsil etmek için kullanılır `true` `false` .
 
-C# ' de karakter ve dize işleme Unicode kodlaması kullanır. `char` Tür bir UTF-16 kod birimini temsil eder ve `string` tür bir UTF-16 kod birimi dizisini temsil eder.
+C# ' de karakter ve dize işleme Unicode kodlaması kullanır. `char`Tür BIR UTF-16 kod birimini temsil eder ve `string` tür bir UTF-16 kod birimi dizisini temsil eder.
 
 C# programları yeni türler oluşturmak için *tür bildirimleri* kullanır. Tür bildiriminde yeni türün adı ve üyeleri belirtilir. C# tür kategorilerinin sayısı Kullanıcı tarafından tanımlanabilir: sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri ve temsilci türleri.
 
 Bir `class` tür, veri üyeleri (alanlar) ve işlev üyeleri (Yöntemler, Özellikler ve diğerleri) içeren bir veri yapısını tanımlar. Sınıf türleri, tek devralma ve çok biçimlilik destekler, türetilmiş sınıfların temel sınıfları genişletebileceği ve özelleştireceği mekanizmalar.
 
-Bir `struct` tür, veri üyeleri ve işlev üyeleri olan bir yapıyı temsil eden bir sınıf türüne benzerdir. Ancak, sınıfların aksine yapılar değer türlerdir ve genellikle yığın ayırmayı gerektirmez. Yapı türleri Kullanıcı tarafından belirtilen devralmayı desteklemez ve tüm yapı türleri örtülü olarak türünden `object`devralınır.
+Bir `struct` tür, veri üyeleri ve işlev üyeleri olan bir yapıyı temsil eden bir sınıf türüne benzerdir. Ancak, sınıfların aksine yapılar değer türlerdir ve genellikle yığın ayırmayı gerektirmez. Yapı türleri Kullanıcı tarafından belirtilen devralmayı desteklemez ve tüm yapı türleri örtülü olarak türünden devralınır `object` .
 
-Bir `interface` tür, bir sözleşmeyi adlandırılmış bir ortak işlev üyeleri kümesi olarak tanımlar. Uygulayan `class` `interface` bir `struct` veya, arabirimin işlev üyelerinin uygulamalarını sağlamalıdır. `interface` , Birden fazla taban arabiriminden devralınabilir ve bir `class` veya `struct` birden çok arabirim uygulayabilir.
+Bir `interface` tür, bir sözleşmeyi adlandırılmış bir ortak işlev üyeleri kümesi olarak tanımlar. `class`Uygulayan bir veya `struct` `interface` , arabirimin işlev üyelerinin uygulamalarını sağlamalıdır. `interface`, Birden fazla taban arabiriminden devralınabilir ve bir `class` veya `struct` birden çok arabirim uygulayabilir.
 
 Bir `delegate` tür, belirli bir parametre listesi ve dönüş türü olan yöntemlere yapılan başvuruları temsil eder. Temsilciler, yöntemleri değişkenlere atanabilecek ve parametre olarak geçirilen varlıklar olarak işleme olanağı tanır. Temsilciler, işlevsel diller tarafından sunulan işlev türlerine benzerdir. Ayrıca, diğer bazı dillerde bulunan işlev işaretçileri kavramına de benzer. İşlev işaretçilerinden farklı olarak, temsilciler nesne odaklı ve tür açısından güvenlidir.
 
-`class` `struct`, `interface`, Ve `delegate` türleri tüm genel türleri destekler, diğer türlerle parametrelenebilir.
+`class`,, `struct` `interface` Ve `delegate` türleri tüm genel türleri destekler, diğer türlerle parametrelenebilir.
 
-Bir `enum` tür, adlandırılmış sabitleri olan ayrı bir türdür. Her `enum` türün, sekiz integral türünden biri olması gereken temel bir türü vardır. Bir `enum` türün değer kümesi, temel alınan türün değerleri kümesiyle aynıdır.
+Bir `enum` tür, adlandırılmış sabitleri olan ayrı bir türdür. Her `enum` türün, sekiz integral türünden biri olması gereken temel bir türü vardır. Bir türün değer kümesi, `enum` temel alınan türün değerleri kümesiyle aynıdır.
 
-C#, herhangi bir türdeki tek ve çok boyutlu dizileri destekler. Yukarıda listelenen türlerin aksine, kullanılmadan önce dizi türlerinin bildirilmesini gerekmez. Bunun yerine, dizi türleri Köşeli parantezlerle bir tür adı izleyerek oluşturulur. `int[]` Örneğin, tek boyutlu bir diziyse `int`, `int[,]` iki boyutlu `int`bir dizidir ve `int[][]` tek boyutlu dizi tek boyutlu bir dizidir. `int`
+C#, herhangi bir türdeki tek ve çok boyutlu dizileri destekler. Yukarıda listelenen türlerin aksine, kullanılmadan önce dizi türlerinin bildirilmesini gerekmez. Bunun yerine, dizi türleri Köşeli parantezlerle bir tür adı izleyerek oluşturulur. Örneğin, `int[]` tek boyutlu bir diziyse `int` , iki boyutlu bir dizidir ve tek boyutlu dizi tek boyutlu `int[,]` `int` bir dizidir `int[][]` `int` .
 
-Null yapılabilir değer türlerinin kullanılabilmesi için önce de bildirilmesini gerekmez. Null olamayan her değer türü `T`için, karşılık gelen bir null değer türü `T?`vardır ve bu, ek bir değer tutabilir. `null` Örneğin, `int?` 32 bitlik herhangi bir tamsayıyı veya değeri `null`tutabilecek bir türdür.
+Null yapılabilir değer türlerinin kullanılabilmesi için önce de bildirilmesini gerekmez. Null olamayan her değer türü için, `T` karşılık gelen bir null değer türü vardır ve `T?` Bu, ek bir değer tutabilir `null` . Örneğin, `int?` 32 bitlik herhangi bir tamsayıyı veya değeri tutabilecek bir türdür `null` .
 
-C# tür sistemi, herhangi bir türde bir değer olarak işlenemeyeceği şekilde birleştirilmiştir `object`. C# içindeki her tür doğrudan veya dolaylı olarak `object` sınıf türünden türetilir ve `object` tüm türlerin en son temel sınıfıdır. Başvuru türlerinin değerleri, yalnızca değerleri tür `object`olarak görüntüleyerek nesne olarak değerlendirilir. Değer türlerinin değerleri, *kutulama* ve *kutudan çıkarma işlemleri*gerçekleştirerek nesneler olarak değerlendirilir. Aşağıdaki örnekte, bir `int` değeri öğesine dönüştürülüp `object` öğesine `int`yeniden döndürülür.
+C# tür sistemi, herhangi bir türde bir değer olarak işlenemeyeceği şekilde birleştirilmiştir `object` . C# içindeki her tür doğrudan veya dolaylı olarak `object` sınıf türünden türetilir ve `object` tüm türlerin en son temel sınıfıdır. Başvuru türlerinin değerleri, yalnızca değerleri tür olarak görüntüleyerek nesne olarak değerlendirilir `object` . Değer türlerinin değerleri, *kutulama* ve *kutudan çıkarma işlemleri*gerçekleştirerek nesneler olarak değerlendirilir. Aşağıdaki örnekte, bir değeri öğesine `int` dönüştürülüp `object` öğesine yeniden döndürülür `int` .
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 
-Bir `object` başvuru için bir değer türü değeri atandığında, değeri tutmak için bir "Box" tahsis edilir. Bu kutu bir başvuru türünün örneğidir ve değer bu kutuya kopyalanır. Buna karşılık, bir `object` başvuru bir değer türüne yayınlandığınızda, başvurulan `object` öğesinin doğru değer türünün bir kutusu olduğunu belirten bir denetim yapılır. Denetim başarılı olursa, kutudaki değer değer türüne kopyalanır.
+Bir başvuru için bir değer türü değeri atandığında `object` , değeri tutmak için bir "Box" tahsis edilir. Bu kutu bir başvuru türünün örneğidir ve değer bu kutuya kopyalanır. Buna karşılık, bir `object` Başvuru bir değer türüne yayınlandığınızda, başvurulan `object` öğesinin doğru değer türünün bir kutusu olduğunu belirten bir denetim yapılır. Denetim başarılı olursa, kutudaki değer değer türüne kopyalanır.
 
-C# ' nin Birleşik tür sistemi etkin bir şekilde değer türlerinin "istek `object` üzerine" başvuru olarak işleneceği anlamına gelir. Birleşme nedeniyle, türü `object` kullanılan genel amaçlı kitaplıklar, başvuru türleri ve değer türleri dahil, öğesinden `object`türetilen tüm türlerle birlikte kullanılabilir.
+C# ' nin Birleşik tür sistemi etkin bir şekilde değer türlerinin `object` "istek üzerine" başvuru olarak işleneceği anlamına gelir. Birleşme nedeniyle, türü kullanılan genel amaçlı kitaplıklar, `object` `object` başvuru türleri ve değer türleri dahil, öğesinden türetilen tüm türlerle birlikte kullanılabilir.
 
 C# ' de alanlar, dizi öğeleri, yerel değişkenler ve parametreler gibi çeşitli türlerde *değişkenler* vardır. Değişkenler, depolama konumlarını temsil eder ve her değişken, aşağıda gösterildiği gibi, değişkende hangi değerlerin depolanabileceğini belirleyen bir tür içerir.
 
 - Null yapılamayan değer türü
   - Bu tam türden bir değer
 - Null yapılabilir değer türü
-  - `null` Bu tam türün değeri veya değeri
-- object
-  - `null` Başvuru, herhangi bir başvuru türünün nesnesine başvuru veya herhangi bir değer türünün paketlenmiş değerine başvuru
+  - `null`Bu tam türün değeri veya değeri
+- nesne
+  - `null`Başvuru, herhangi bir başvuru türünün nesnesine başvuru veya herhangi bir değer türünün paketlenmiş değerine başvuru
 - Sınıf türü
-  - `null` Başvuru, bu sınıf türünün bir örneğine başvuru veya bu sınıf türünden türetilmiş bir sınıfın örneğine başvuru
+  - `null`Başvuru, bu sınıf türünün bir örneğine başvuru veya bu sınıf türünden türetilmiş bir sınıfın örneğine başvuru
 - Arabirim türü
-  - `null` Başvuru, bu arabirim türünü uygulayan bir sınıf türü örneğine başvuru veya bu arabirim türünü uygulayan bir değer türünün paketlenmiş değerine başvuru
+  - `null`Başvuru, bu arabirim türünü uygulayan bir sınıf türü örneğine başvuru veya bu arabirim türünü uygulayan bir değer türünün paketlenmiş değerine başvuru
 - Dizi türü
-  - `null` Başvuru, bu dizi türü örneğine başvuru veya uyumlu bir dizi türü örneğine başvuru
+  - `null`Başvuru, bu dizi türü örneğine başvuru veya uyumlu bir dizi türü örneğine başvuru
 - Temsilci türü
-  - Uyumlu `null` bir temsilci türü örneğine başvuru veya başvuru
+  - `null`Uyumlu bir temsilci türü örneğine başvuru veya başvuru
 
 > [!div class="step-by-step"]
-> [Önceki](program-structure.md)
-> [İleri](expressions.md)
+> [Önceki](program-structure.md) 
+>  [Sonraki](expressions.md)

@@ -1,5 +1,6 @@
 ---
 title: DataGridView denetiminde verileri görüntüleme
+description: Çeşitli dış veri kaynaklarından verileri göstermek için Windows Forms DataGridView denetimini nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - displaying data [Windows Forms], data grids
 - DataGridView control [Windows Forms], displaying data
 ms.assetid: b170b52a-2ebd-4948-ac2f-e52d494cebb2
-ms.openlocfilehash: d02362895d75df3735d19554bd44bb8ac443c6c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a0f3e6627290521b8c10477c31459f1486e79162
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745873"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174581"
 ---
 # <a name="displaying-data-in-the-windows-forms-datagridview-control"></a>Windows Forms DataGridView Denetiminde Verileri Görüntüleme
-`DataGridView` denetimi, çeşitli dış veri kaynaklarından verileri göstermek için kullanılır. Alternatif olarak, denetime satırlar ve sütunlar ekleyebilir ve bunu verilerle el ile doldurabilirsiniz.  
+`DataGridView`Denetim, çeşitli dış veri kaynaklarından verileri göstermek için kullanılır. Alternatif olarak, denetime satırlar ve sütunlar ekleyebilir ve bunu verilerle el ile doldurabilirsiniz.  
   
  Denetimi bir veri kaynağına bağladığınızda, veri kaynağının şemasına göre sütunları otomatik olarak oluşturabilirsiniz. Bu sütunlar tıpkı istediğiniz gibi görünmezse, bunları gizleyebilir, kaldırabilir veya yeniden düzenleyebilirsiniz. Ayrıca, veri kaynağından gelmeyen ek verileri göstermek için ilişkisiz sütunlar ekleyebilirsiniz.  
   
- Ayrıca, standart biçimleri (örn. para birimi biçimi) kullanarak verilerinizi görüntüleyebilir veya görüntüleme biçimlendirmesini verilerinizi sunacak şekilde özelleştirebilirsiniz (örneğin, negatif sayıların arka plan rengini değiştirme veya dize değerlerini değiştirme gibi) ilgili görüntülerle).  
+ Ayrıca, verilerinizi standart biçimler (örn. para birimi biçimi) kullanarak görüntüleyebilir veya verilerinizi sunmak için (örneğin, negatif sayıların arka plan rengini değiştirme veya dize değerlerini karşılık gelen görüntülerle değiştirme gibi) görüntüleme biçimlendirmesini özelleştirebilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Windows Forms DataGridView Denetiminde Veri Görüntüleme Modları](data-display-modes-in-the-windows-forms-datagridview-control.md)  
@@ -32,7 +33,7 @@ ms.locfileid: "76745873"
  Denetimin verilerle el ile nasıl doldurulacağını açıklar.  
   
  [Nasıl yapılır: Windows Forms DataGridView Denetimine Veri Bağlama](how-to-bind-data-to-the-windows-forms-datagridview-control.md)  
- Bir veritabanından çekilen bilgiler içeren bir `BindingSource` bağlayarak denetimin verilerle nasıl doldurulacağını açıklar.  
+ Bir veritabanından çekilen bilgiler içeren bir öğesine bağlayarak denetimin verilerle nasıl doldurulacağını açıklar `BindingSource` .  
   
  [Nasıl yapılır: Veri Bağlantılı Windows Forms DataGridView Denetiminde Sütunları Otomatik Olarak Oluşturma](autogenerate-columns-in-a-data-bound-wf-datagridview-control.md)  
  Bağlı bir veri kaynağına göre otomatik olarak sütunların nasıl oluşturulacağını açıklar.  
@@ -53,26 +54,26 @@ ms.locfileid: "76745873"
  Denetimin belirli bir satırına bağlanacak bir nesnenin nasıl alınacağını açıklar.  
   
  [İzlenecek yol: İki Windows Forms DataGridView Denetimi Kullanarak Ana/Ayrıntı Formu Oluşturma](creating-a-master-detail-form-using-two-datagridviews.md)  
- Bir `DataGridView` denetiminde gösterilen değerlerin başka bir denetimde seçili olan satıra bağlı olması için, iki ilişkili veritabanı tablolarından verilerin nasıl görüntüleneceğini açıklar.  
+ İki ilişkili veritabanı tablolarındaki verilerin nasıl görüntüleneceğini açıklar. böylece, bir denetimde gösterilen değerlerin `DataGridView` başka bir denetimde seçili olan satıra bağlı olması sağlanır.  
   
  [Nasıl yapılır: Windows Forms DataGridView Denetiminde Veri Biçimlendirmeyi Özelleştirme](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
- Değerlerine göre hücrelerin görünümünü değiştirmek için <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> olayının nasıl işleneceğini açıklar.  
+ <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType>Değerlerine göre hücrelerin görünümünü değiştirmek için olayın nasıl işleneceğini açıklar.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView> denetimi için başvuru belgeleri sağlar.  
+ Denetim için başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView> .  
   
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DataGridView.DataSource%2A> özelliği için başvuru belgeleri sağlar.  
+ Özelliği için başvuru belgeleri sağlar <xref:System.Windows.Forms.DataGridView.DataSource%2A> .  
   
  <xref:System.Windows.Forms.BindingSource>  
- <xref:System.Windows.Forms.BindingSource> bileşeni için başvuru belgeleri sağlar.  
+ Bileşen için başvuru belgeleri sağlar <xref:System.Windows.Forms.BindingSource> .  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms DataGridView Denetiminde Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView Denetimindeki Veri Girişi](data-entry-in-the-windows-forms-datagridview-control.md)  
  Kullanıcıların denetimdeki verileri ekleme ve değiştirme biçimini nasıl değiştireceğiniz hakkında konular sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [DataGridView Denetimi](datagridview-control-windows-forms.md)
+- [DataGridView denetimi](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView Denetiminde Sütun Türleri](column-types-in-the-windows-forms-datagridview-control.md)

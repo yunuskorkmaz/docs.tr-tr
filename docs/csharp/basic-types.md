@@ -4,12 +4,12 @@ description: Tüm C# programlarında çekirdek türleri (Numerics, dizeler ve ne
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 468482bd1b4f1a5835df9d66ee483edc33c28f61
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202217"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174185"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
@@ -74,7 +74,7 @@ Daha önce belirtildiği gibi, [var](language-reference/keywords/var.md) anahtar
   
 Bazı durumlarda, yöntem sınırlarını depolamayı veya geçişi istemediğiniz ilgili değerlerin basit kümeleri için adlandırılmış bir tür oluşturmak uygun değildir. Bu amaçla *anonim türler* oluşturabilirsiniz. Daha fazla bilgi için bkz. [anonim türler](programming-guide/classes-and-structs/anonymous-types.md).
 
-Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir yöntem çağrısında birden çok değer döndüren *demet türleri* oluşturabilirsiniz. Daha fazla bilgi için bkz. [tanımlama](tuples.md)bilgileri.
+Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir yöntem çağrısında birden çok değer döndüren *demet türleri* oluşturabilirsiniz. Daha fazla bilgi için bkz. [demet türleri](language-reference/builtin-types/value-tuples.md).
 
 ## <a name="the-common-type-system"></a>Ortak tür sistemi
 

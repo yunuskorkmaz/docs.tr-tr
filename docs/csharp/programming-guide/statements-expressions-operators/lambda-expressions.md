@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: ffda4ad93451d6991aeb20ed01511f16fd3e512b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761843"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174159"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda ifadeleri (C# Programlama Kılavuzu)
 
@@ -141,7 +141,7 @@ Zaman uyumsuz yöntemlerin nasıl oluşturulacağı ve kullanılacağı hakkınd
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambda ifadeleri ve tanımlama grupları
 
-C# 7,0 ile başlayarak, C# dili [Tanımlama grupları](../../tuples.md)için yerleşik destek sağlar. Bir lambda ifadesine bağımsız değişken olarak bir tanımlama grubu sağlayabilirsiniz ve lambda ifadeniz de bir tanımlama grubu döndürebilir. Bazı durumlarda, C# derleyicisi demet bileşenleri türlerini belirlemede tür çıkarımı kullanır.
+C# 7,0 ile başlayarak, C# dili [Tanımlama grupları](../../language-reference/builtin-types/value-tuples.md)için yerleşik destek sağlar. Bir lambda ifadesine bağımsız değişken olarak bir tanımlama grubu sağlayabilirsiniz ve lambda ifadeniz de bir tanımlama grubu döndürebilir. Bazı durumlarda, C# derleyicisi demet bileşenleri türlerini belirlemede tür çıkarımı kullanır.
 
 Bir tanımlama grubu, bileşenlerinin virgülle ayrılmış bir listesini parantez içine alarak tanımlarsınız. Aşağıdaki örnek, her bir değeri iki katına çıkarır ve çarpma 'un sonucunu içeren üç bileşeni olan bir tanımlama grubu döndüren bir lambda ifadesine bir dizi sayıyı geçirmek için üç bileşeni olan tanımlama grubunu kullanır.
 
@@ -151,7 +151,7 @@ Normalde, bir tanımlama grubu alanları, `Item1` `Item2` , vb. olarak adlandır
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
-C# tanımlama bilgileri hakkında daha fazla bilgi için bkz. [C# demet türleri](../../tuples.md).
+C# tanımlama bilgileri hakkında daha fazla bilgi için bkz. [demet türleri](../../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Standart sorgu işleçleri ile Lambdalar
 

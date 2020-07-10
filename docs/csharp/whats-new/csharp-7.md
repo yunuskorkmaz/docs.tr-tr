@@ -3,12 +3,12 @@ title: C# 7,0 ' deki yenilikler-C# Kılavuzu
 description: C# dilinin sürüm 7,0 ' deki yeni özelliklere genel bakış alın.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: e78d680e19709bf3dd854531d5d9f6b7d6464f49
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 38b1afebf6d4fa69c46424c2d9a3631e8f3a8707
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392255"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174750"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 Yenilikleri
 
@@ -20,7 +20,7 @@ C# 7,0, C# diline bir dizi yeni özellik ekler:
   - Birden çok ortak alan içeren hafif, adlandırılmamış türler oluşturabilirsiniz. Derleyiciler ve IDE araçları bu türlerin semantiğini anlayın.
 - [Atılanlar](#discards)
   - Atama, atanan değer hakkında endişelenmezseniz atamalar içinde kullanılan geçici, salt yazılır değişkenlerdir. Bunlar, tanımlama grupları ve Kullanıcı tanımlı türler oluştururken ve parametreleri ile Yöntemler çağrılırken faydalıdır `out` .
-- [Desen Eşleştirme](#pattern-matching)
+- [Model eşleştirme](#pattern-matching)
   - Bu türlerin üyelerinin rastgele türlerini ve değerlerini temel alarak dallanma mantığı oluşturabilirsiniz.
 - [`ref`Yereller ve döndürür](#ref-locals-and-returns)
   - Yöntem yerel değişkenleri ve dönüş değerleri diğer depolamaya başvuru olabilir.
@@ -40,7 +40,7 @@ Bu makalenin geri kalanında her özelliğe bir genel bakış sunulmaktadır. He
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp7* alt dizinine ayarlayın.
-1. `dotnet try` öğesini çalıştırın.
+1. Şu komutu çalıştırın: `dotnet try`.
 
 ## <a name="out-variables"></a>`out`değişkenlerinin
 
@@ -88,7 +88,7 @@ Bir tanımlama grubu 'na atayarak tek tek alanları ayıklayabilirsiniz `Point` 
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
 
-Tanımlama grupları [makalesindeki](../tuples.md)tanımlama grupları hakkında ayrıntılı bilgi edinebilirsiniz.
+Daha fazla bilgi için bkz. [demet türleri](../language-reference/builtin-types/value-tuples.md).
 
 ## <a name="discards"></a>Atılanlar
 

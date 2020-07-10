@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 4ea002b690de877fd6f955c05eb8235f46e0a870
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803228"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174412"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
@@ -27,13 +27,13 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > * Tahmin modelini kaydetme
 > * Tahmin modeli kullan
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri, ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
 ## <a name="time-series-forecasting-sample-overview"></a>Zaman serisi tahmin örneğine genel bakış
 
-Bu örnek, tek bir Spekme analizi olarak bilinen bağımsız bir zaman serisi analiz algoritmasını kullanarak bisiklet için talebi tahmin eden bir **C# .NET Core konsol uygulamasıdır** . Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulunabilir.
+Bu örnek, tekil bir zaman serisi analizi analizi olarak bilinen tek değişkenli bir zaman serisi analiz algoritması kullanarak bisiklet için talebi tahmin eden bir **C# .NET Core konsol uygulamasıdır** . Bu örneğin kodu, GitHub 'daki [DotNet/machinöğrenim-örnekleri](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) deposunda bulunabilir.
 
 ## <a name="understand-the-problem"></a>Sorunu anlama
 
@@ -41,7 +41,7 @@ Verimli bir işlem çalıştırmak için, envanter yönetimi bir anahtar rol oyn
 
 Bu öğreticide kullanılan verileri çözümlemeye yönelik teknik, zaman serisi analizinden bağımsız bir yöntemdir. Tek bir zaman serisi analizi, aylık satış gibi belirli aralıklarda tek bir sayısal izlemeye göz atacağız.
 
-Bu öğreticide kullanılan algoritma, [tek bir Spekme analizidir (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). SSA, bir dizi sorumlu bileşen için zaman serisini kaldırarak işe yarar. Bu bileşenler, eğilimler, gürültü, mevsimsellik ve birçok başka etkene karşılık gelen bir sinyalin parçaları olarak yorumlanamaz. Ardından, bu bileşenler yeniden yapılandırılır ve gelecekte değerleri tahmin etmek için kullanılır.
+Bu öğreticide kullanılan algoritma tekil bir [Spekme analizidir (SSA)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf). SSA, bir dizi sorumlu bileşen için zaman serisini kaldırarak işe yarar. Bu bileşenler, eğilimler, gürültü, mevsimsellik ve birçok başka etkene karşılık gelen bir sinyalin parçaları olarak yorumlanamaz. Ardından, bu bileşenler yeniden yapılandırılır ve gelecekte değerleri tahmin etmek için kullanılır.
 
 ## <a name="create-console-application"></a>Konsol uygulaması oluşturma
 
@@ -83,7 +83,7 @@ CREATE TABLE [Rentals] (
 
 Aşağıda, verilerin bir örneği verilmiştir:
 
-| RentalDate | Yıl | TotalRentals |
+| RentalDate | Year | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|

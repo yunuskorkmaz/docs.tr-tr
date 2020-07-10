@@ -2,13 +2,13 @@
 title: Bir ASP.NET Web uygulamasını bir Azure VM 'ye geçirme
 description: Şirket içinden bir ASP.NET Web uygulamasını bir Azure sanal makinesine geçirmeyi öğrenin.
 ms.topic: how-to
-ms.date: 11/15/2017
-ms.openlocfilehash: cc9477de92e6105762636ed3a2241949e69ac8ea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.date: 06/20/2020
+ms.openlocfilehash: 5ef340d020b72bebe46fe598fe68e7d02d0c0363
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "82072125"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174250"
 ---
 # <a name="migrate-an-aspnet-web-application-to-an-azure-virtual-machine"></a>Bir ASP.NET Web uygulamasını bir Azure sanal makinesine geçirme
 
@@ -24,12 +24,12 @@ Bu öğreticiler, bir sanal makine oluşturma (veya geçirme), Web uygulamanız�
 
 - Aşağıdaki seçeneklerden birini kullanarak Azure 'da ASP.NET uygulamanız için bir sanal makine oluşturun:
   - [ASP.NET uygulamaları için yeni bir sanal makine oluşturma](https://go.microsoft.com/fwlink/?linkid=863237)
-  - [Mevcut bir şirket içi VMWare sanal makinesini geçirme](https://docs.microsoft.com/azure/migrate/tutorial-migrate-vmware)
-  - [Mevcut bir şirket içi Hyper-V sanal makinesini geçirme](https://docs.microsoft.com/azure/migrate/tutorial-migrate-hyper-v)
+  - [Mevcut bir şirket içi VMWare sanal makinesini geçirme](/azure/migrate/tutorial-migrate-vmware)
+  - [Mevcut bir şirket içi Hyper-V sanal makinesini geçirme](/azure/migrate/tutorial-migrate-hyper-v)
 - [Visual Studio 'Yu kullanarak uygulamanızı yayımlayın](https://go.microsoft.com/fwlink/?linkid=863240)
-- [VM 'niz için güvenli bir sanal ağ oluşturma](https://docs.microsoft.com/azure/virtual-network/virtual-network-get-started-vnet-subnet)
-- [Uygulamanız için bir CI/CD işlem hattı oluşturun](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
-- [Yüksek kullanılabilirlik ve ölçeklenebilirlik için bir VM Ölçek kümesine taşıma](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
+- [VM 'niz için güvenli bir sanal ağ oluşturma](/azure/virtual-network/virtual-network-get-started-vnet-subnet)
+- [Uygulamanız için bir CI/CD işlem hattı oluşturun](/vsts/build-release/apps/cd/deploy-webdeploy-iis-deploygroups)
+- [Yüksek kullanılabilirlik ve ölçeklenebilirlik için bir VM Ölçek kümesine taşıma](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app)
 
 ## <a name="considerations"></a>Dikkat edilmesi gerekenler
 
@@ -39,13 +39,13 @@ Sanal makineler, bir uygulamayı Şirket içinden buluta geçirmek için en kola
 
 ### <a name="virtual-machine-size"></a>Sanal makine boyutu
 
-İş yükünüz için en iyi duruma getirilmiş sanal makine boyutunu ve türünü seçin. Daha fazla bilgi için bkz. [Azure 'Da Windows sanal makineleri Için boyutlar](https://docs.microsoft.com/azure/virtual-machines/windows/sizes).
+İş yükünüz için en iyi duruma getirilmiş sanal makine boyutunu ve türünü seçin. Daha fazla bilgi için bkz. [Azure 'Da Windows sanal makineleri Için boyutlar](/azure/virtual-machines/windows/sizes).
 
 ### <a name="maintenance"></a>Bakım
 
-Tıpkı şirket içi bir makine gibi, sanal makine<sup>&#42;</sup>bakım ve güncelleştirme sorumluluğunuz de sorumludur. Uygulamanız, [Azure App Service](https://docs.microsoft.com/azure/app-service/) veya bir [kapsayıcıda](https://docs.microsoft.com/azure/app-service/containers/)bir hizmet olarak platform (PaaS) ortamında (Bu gereksinimi ortadan kaldıracak) çalıştırılabilir.
+Tıpkı şirket içi bir makine gibi, sanal makine<sup>&#42;</sup>bakım ve güncelleştirme sorumluluğunuz de sorumludur. Uygulamanız, [Azure App Service](/azure/app-service/) veya bir [kapsayıcıda](/azure/app-service/containers/)bir hizmet olarak platform (PaaS) ortamında (Bu gereksinimi ortadan kaldıracak) çalıştırılabilir.
 
-*<sup> </sup> [Sanal makine ölçek kümeleri için otomatik işletim sistemi yükseltmeleri](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)&#42;Şu anda bir önizleme hizmeti olarak sunulmaktadır.*
+*<sup> </sup> [Sanal makine ölçek kümeleri için otomatik işletim sistemi yükseltmeleri](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)&#42;Şu anda bir önizleme hizmeti olarak sunulmaktadır.*
 
 ### <a name="virtual-networks"></a>Sanal Ağlar
 
@@ -54,15 +54,15 @@ Azure sanal ağları şunları sağlar:
 - Denetlediğiniz bir karma altyapı oluşturun
 - Kendi IP adreslerinizi ve DNS sunucularınızı getirin
 - Uygulamalarınız için yalıtılmış ve yüksek oranda güvenli bir ortam oluşturun
-- Çeşitli [bağlantı seçeneklerinden](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti) bırını kullanarak Sanal ağınızı şirket içi ağınıza bağlayın
+- Çeşitli [bağlantı seçeneklerinden](/azure/vpn-gateway/vpn-gateway-about-vpngateways#s2smulti) bırını kullanarak Sanal ağınızı şirket içi ağınıza bağlayın
 - [ExpressRoute](https://azure.microsoft.com/services/expressroute/) kullanarak sanal makinenizi şirket içi ağınızla tümleştirin
 
-Başlamak için bkz. [sanal ağ belgeleri](https://docs.microsoft.com/azure/virtual-network/)
+Başlamak için bkz. [sanal ağ belgeleri](/azure/virtual-network/)
 
 ### <a name="active-directory"></a>Active Directory
 Birçok uygulama kimlik doğrulama ve kimlik yönetimi için Active Directory kullanır.
 
-- Azure AD Connect, şirket içi dizinlerinizi Azure Active Directory tümleştirmenizi sağlar. Başlamak için bkz. Şirket [içi dizinlerinizi Azure Active Directory tümleştirme](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- Azure AD Connect, şirket içi dizinlerinizi Azure Active Directory tümleştirmenizi sağlar. Başlamak için bkz. Şirket [içi dizinlerinizi Azure Active Directory tümleştirme](/azure/active-directory/connect/active-directory-aadconnect).
 - Alternatif olarak, [ExpressRoute](https://azure.microsoft.com/services/expressroute/) , uygulamanızın şirket içi Active Directory erişmesini sağlar.
 
 ### <a name="sql-databases"></a>SQL Veritabanları
@@ -77,10 +77,10 @@ Uygulamanız şirket içi bir veritabanı kullanıyorsa, uygulamanız varsayıla
 #### <a name="virtual-machine-scale-sets"></a>Sanal Makine Ölçek Kümeleri
 Uygulamanızın kullanılabilirliği ve ölçeklenebilirliğini artırmak için uygulamanızın yüksek oranda kullanılabilir olduğundan ve ölçekleyebilir olduğundan emin olmak istiyorsunuz, VM görüntünüzü bir Azure sanal makine ölçek kümesine geçirin. VM Ölçek Kümeleri, önceden yapılandırdığınız mevcut bir VM 'yi kullanma veya uygulamanızla bir görüntü oluşturmak için derleme işlem hattı ayarlama olanağı sağlar.
 
-Başlamak için bkz. [sanal makine ölçek kümelerinde uygulamanızı dağıtma](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
+Başlamak için bkz. [sanal makine ölçek kümelerinde uygulamanızı dağıtma](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-deploy-app).
 
 #### <a name="centralized-logging"></a>Merkezi günlük kaydı
-Uygulamanızı birden çok örnek genelinde çalıştırırken günlüklerinizi [Azure depolama](https://docs.microsoft.com/azure/storage/)gibi merkezi bir konumda depolamayı düşünün.
+Uygulamanızı birden çok örnek genelinde çalıştırırken günlüklerinizi [Azure depolama](/azure/storage/)gibi merkezi bir konumda depolamayı düşünün.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 

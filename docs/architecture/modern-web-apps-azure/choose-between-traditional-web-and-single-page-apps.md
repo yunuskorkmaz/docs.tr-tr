@@ -3,13 +3,16 @@ title: Geleneksel web uygulamaları ile tek sayfa uygulamaları arasında seçim
 description: Web uygulamaları oluştururken geleneksel web uygulamaları ve tek sayfalı uygulamalar (maça 'Lar) arasından seçim yapmayı öğrenin.
 author: ardalis
 ms.author: wiwagn
+no-loc:
+- Blazor
+- WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: 0aef42b78114a11c70456cb3122d3dcb5143f983
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662712"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174373"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web Apps ve tek sayfalı uygulamalar (maça 'Lar) arasında seçim yapın
 
@@ -38,21 +41,21 @@ Ayrıca, SPA çerçeveleri daha fazla mimari ve güvenlik uzmanlığı gerektiri
 
 SPA yaklaşımı tarafından mümkün kılınan Kullanıcı deneyimindeki iyileştirmeler, bu noktalara karşı Ücretlendirilebilir.
 
-## <a name="blazor"></a>Blazor
+## Blazor
 
-ASP.NET Core 3,0, Blazor adlı zengin, etkileşimli ve birleştirilebilir Kullanıcı arabirimi oluşturmak için yeni bir model sunar. Blazor sunucu tarafı, geliştiricilerin sunucuda C# ve Razor ile Kullanıcı arabirimi oluşturmalarına ve Kullanıcı arabiriminin kalıcı bir SignalR bağlantısı kullanarak gerçek zamanlı olarak tarayıcıya bağlanmasını sağlar.
+ASP.NET Core 3,0, adlı zengin, etkileşimli ve birleştirilebilir Kullanıcı arabirimi oluşturmak için yeni bir model sunar Blazor . Blazorsunucu tarafı, geliştiricilerin sunucuda C# ve Razor ile Kullanıcı arabirimi oluşturmalarına ve Kullanıcı arabiriminin kalıcı bir SignalR bağlantısı kullanarak gerçek zamanlı olarak tarayıcıya bağlanmasını sağlar.
 
-Blazor WebAssembly Blazor uygulamaları için başka bir seçenek sunarak, bu uygulamaların WebAssembly kullanarak tarayıcıda çalışmasına izin verir. WebAssembly üzerinde çalışan gerçek .NET olduğundan, uygulamanızın sunucu tarafı bölümlerinden kod ve kitaplıkları yeniden kullanabilirsiniz.
+BlazorWebAssemblyuygulamalar için başka bir seçenek sunarak Blazor , kullanarak tarayıcıda çalışmasına izin verir WebAssembly . Üzerinde çalışan gerçek .NET olduğundan WebAssembly , uygulamanızın sunucu tarafı bölümlerinden kod ve kitaplıkları yeniden kullanabilirsiniz.
 
-Blazor, tamamen sunucu tarafından işlenmiş bir Web uygulaması veya SPA oluşturmayı değerlendirirken göz önünde bulundurmanız gereken yeni, üçüncü bir seçenek sağlar. Önemli bir JavaScript geliştirmeye gerek duymadan Blazor kullanarak zengin, SPA benzeri istemci tarafı davranışları oluşturabilirsiniz. Blazor uygulamaları, veri istemek veya sunucu tarafı işlemleri gerçekleştirmek için API 'Leri çağırabilir.
+Blazoryalnızca sunucu tarafından işlenmiş bir Web uygulaması veya SPA 'nın oluşturulup oluşturulmayacağını değerlendirmek için göz önünde bulundurmanız gereken yeni, üçüncü bir seçenek sağlar. BlazorÖnemli bir JavaScript geliştirmeye gerek duymadan, kullanarak zengin ve Spa benzeri istemci tarafı davranışları oluşturabilirsiniz. Blazoruygulamalar, veri istemek veya sunucu tarafı işlemleri gerçekleştirmek için API 'Leri çağırabilir.
 
-Şu durumlarda Web uygulamanızı Blazor ile oluşturmayı düşünün:
+Şu durumlarda Web uygulamanızı oluşturmayı düşünün Blazor :
 
 - Uygulamanız, zengin bir kullanıcı arabirimini kullanıma sunmalıdır
 
 - Takımınız JavaScript veya TypeScript geliştirmeden .NET geliştirme konusunda daha rahat
 
-Blazor hakkında daha fazla bilgi için bkz. [Blazor ile çalışmaya başlama](https://blazor.net/docs/get-started.html).
+Hakkında daha fazla bilgi için Blazor bkz. [ Blazor ile çalışmaya başlama ](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Geleneksel Web uygulamalarını seçme
 
@@ -97,26 +100,26 @@ Maça yazmak için JavaScript ve/veya TypeScript ile istemci tarafı programlama
 
 Web API 'sini zaten başka istemciler tarafından kullanılmak üzere destekliyorsanız, sunucu tarafı formundaki mantığı yeniden oluşturmak yerine bu API 'lerden yararlanan bir SPA uygulamasının oluşturulması daha az çaba gerektirebilir. Maça, kullanıcılar uygulamayla etkileşime geçerek verileri sorgulamak ve güncelleştirmek için Web API 'lerinin kapsamlı bir şekilde kullanılmasını sağlar.
 
-## <a name="when-to-choose-blazor"></a>Ne zaman Blazor seçin
+## <a name="when-to-choose-blazor"></a>Ne zaman seçimBlazor
 
-Aşağıda, Web uygulamanız için Blazor ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama verilmiştir.
+Aşağıda, Web uygulamanız için ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama verilmiştir Blazor .
 
 **Uygulamanız, zengin bir kullanıcı arabirimini kullanıma sunmalıdır**
 
-JavaScript tabanlı maça 'Lar gibi Blazor uygulamalar, sayfa yeniden yüklemeden zengin istemci davranışını destekleyebilir. Bu uygulamalar kullanıcılara daha hızlı yanıt verir, yalnızca belirli bir kullanıcı etkileşimine yanıt vermek için gereken verileri (veya HTML) getirme. Düzgün şekilde tasarlanan sunucu tarafı Blazor uygulamaları, bu özellik desteklendiğinde en az değişiklikle istemci tarafı Blazor uygulamaları olarak çalışacak şekilde yapılandırılabilir.
+JavaScript tabanlı maça 'Lar gibi uygulamalar, Blazor sayfa yeniden yüklemeden zengin istemci davranışını destekleyebilir. Bu uygulamalar kullanıcılara daha hızlı yanıt verir, yalnızca belirli bir kullanıcı etkileşimine yanıt vermek için gereken verileri (veya HTML) getirme. Düzgün şekilde tasarlanan sunucu tarafı Blazor uygulamalar, Blazor Bu özellik desteklendiğinde en az değişiklikle istemci tarafı uygulamalar olarak çalışacak şekilde yapılandırılabilir.
 
 **Takımınız JavaScript veya TypeScript geliştirmeden .NET geliştirme konusunda daha rahat**
 
-Birçok geliştirici, JavaScript veya TypeScript gibi istemci tarafı dillerle .NET ve Razor ile daha üretken değildir. Uygulamanın sunucu tarafı zaten .NET ile geliştirildiği için, Blazor kullanımı, ekibin her bir .NET geliştiricisinin uygulamanın ön ucundaki davranışı anlayabilmesini ve potansiyel olarak oluşturmasını sağlar.
+Birçok geliştirici, JavaScript veya TypeScript gibi istemci tarafı dillerle .NET ve Razor ile daha üretken değildir. Uygulamanın sunucu tarafı zaten .NET ile geliştirildiği için, bu, Blazor Takım üzerindeki her .net geliştiricinin uygulamanın ön ucunun durumunu anlayabilmesini ve potansiyel olarak oluşturmasını sağlar.
 
 ## <a name="decision-table"></a>Karar tablosu
 
-Aşağıdaki karar tablosu, geleneksel bir Web uygulaması, SPA veya Blazor uygulaması arasında seçim yaparken göz önünde bulundurmanız gereken bazı temel faktörleri özetler.
+Aşağıdaki karar tablosu, geleneksel bir Web uygulaması, SPA veya bir uygulama arasında seçim yaparken göz önünde bulundurmanız gereken bazı temel faktörleri özetler Blazor .
 
-| **Çarpan**                                           | **Geleneksel Web uygulaması** | **Tek sayfalı uygulama** | **Blazor uygulaması**  |
+| **Çarpan**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** | **BlazorUygulamanızda**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
 | JavaScript/TypeScript ile gerekli takım hakkında benzerlik | **En az**             | **Gerekli**                | **En az**     |
-| Betik olmadan destek tarayıcıları                   | **Destek**           | **Desteklenmiyor**           | **Destek**   |
+| Betik olmadan destek tarayıcıları                   | **Desteklenir**           | **Desteklenmiyor**           | **Desteklenir**   |
 | En az Istemci tarafı uygulama davranışı             | **İyi uygun**         | **Gereğinden fazla**                | **Uygun**      |
 | Zengin, karmaşık kullanıcı arabirimi gereksinimleri            | **Sınırlı**             | **İyi uygun**             | **İyi uygun** |
 

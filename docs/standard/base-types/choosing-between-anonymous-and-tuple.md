@@ -5,12 +5,12 @@ author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9140250ad1f48501bf1d2e53a1c179e6823f19cd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 9c186133a639faf187c89d872856d860a20f5a2d
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100970"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174224"
 ---
 # <a name="choosing-between-anonymous-and-tuple-types"></a>Anonim ve demet türleri arasında seçim yapma
 
@@ -90,12 +90,7 @@ foreach (var (formatted, ticks) in
 }
 ```
 
-C#, türü ve anlamları olan tanımlama grupları için dil desteği sağlar <xref:System.ValueTuple> :
-
-- [Demet atama](../../csharp/tuples.md#assignment-and-tuples)
-- [Demet oluşturma](../../csharp/deconstruct.md) (tanımlama grupları ile sınırlı değil)
-- [Tanımlama grubu eşitlik denetimleri](../../csharp/tuples.md#equality-and-tuples)
-- [Demet projeksiyon başlatıcıları](../../csharp/tuples.md#tuple-projection-initializers)
+Tanımlama grupları hakkında daha fazla bilgi için bkz. [demet türleri (C# Başvurusu)](../../csharp/language-reference/builtin-types/value-tuples.md) veya [tanımlama grupları (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md).
 
 Önceki örneklerin hepsi işlevsel olarak eşdeğerdir; ancak kullanılabilirlik ve temel uygulamalarında hafif farklar vardır.
 
@@ -105,7 +100,7 @@ Her zaman <xref:System.ValueTuple> <xref:System.Tuple> ve anonim türleri kullan
 
 ### <a name="key-differences"></a>Temel farklılıklar
 
-| Name                     | Erişim değiştiricisi | Tür     | Özel üye adı | Oluşturmayı kaldırma desteği | İfade ağacı desteği |
+| Ad                     | Erişim değiştiricisi | Tür     | Özel üye adı | Oluşturmayı kaldırma desteği | İfade ağacı desteği |
 |--------------------------|-----------------|----------|----------------------|------------------------|-------------------------|
 | Anonim türler          | `internal`      | `class`  | ✔️                   | ❌                     | ✔️                     |
 | <xref:System.Tuple>      | `public`        | `class`  | ❌                   | ❌                     | ✔️                     |
@@ -127,5 +122,6 @@ Bir geliştirici olarak tanımlama grupları ve anonim türler arasında seçim 
 
 - [Anonim türler](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
 - [İfade ağaçları](../../csharp/expression-trees.md)
-- [Demet türleri](../../csharp/tuples.md)
+- [Demet türleri (C# Başvurusu)](../../csharp/language-reference/builtin-types/value-tuples.md)
+- [Tanımlama grupları (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/tuples.md)
 - [Tür tasarımı yönergeleri](../design-guidelines/type.md)

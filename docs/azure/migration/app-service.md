@@ -2,30 +2,30 @@
 title: .NET Web uygulamanızı veya hizmetinizi Azure App Service geçirin
 description: Bir .NET Web uygulamasını veya hizmetini Şirket içinden Azure App Service geçirme hakkında bilgi edinin.
 ms.topic: conceptual
-ms.date: 08/11/2018
-ms.openlocfilehash: 8761642469b6f3d3c93d2e2e0fa7e02dbf3de6d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.date: 07/08/2020
+ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447010"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174315"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET Web uygulamanızı veya hizmetinizi Azure App Service geçirin
 
-[App Service](https://docs.microsoft.com/azure/app-service/overview) , ölçeklenebilir Web sitelerini ve Web uygulamalarını barındırmak için optimize edilmiş, tam olarak yönetilen bir işlem platformu hizmetidir. Bu makalede, var olan bir uygulamanın Azure App Service, göz önünde bulundurulması gereken değişiklikler ve buluta geçiş için ek kaynaklar için nasıl [taşınması](https://azure.microsoft.com/migration/web-applications/)ve kaydırılabilmesi hakkında bilgiler sağlanmaktadır. Çoğu ASP.NET Web sitesi (WebForms, MVC) ve Hizmetleri (Web API 'SI, WCF), hiçbir değişiklik yapmadan doğrudan Azure App Service taşıyabilir. Bazılarında küçük değişiklikler yapmanız gerekebilir, diğerleri bazı yeniden düzenleme gerektirebilir.
+[App Service](/azure/app-service/overview) , ölçeklenebilir Web sitelerini ve Web uygulamalarını barındırmak için optimize edilmiş, tam olarak yönetilen bir işlem platformu hizmetidir. Bu makalede, var olan bir uygulamanın Azure App Service, göz önünde bulundurulması gereken değişiklikler ve buluta geçiş için ek kaynaklar için nasıl [taşınması](https://azure.microsoft.com/migration/web-applications/)ve kaydırılabilmesi hakkında bilgiler sağlanmaktadır. Çoğu ASP.NET Web sitesi (WebForms, MVC) ve Hizmetleri (Web API 'SI, WCF), hiçbir değişiklik yapmadan doğrudan Azure App Service taşıyabilir. Bazılarında küçük değişiklikler yapmanız gerekebilir, diğerleri bazı yeniden düzenleme gerektirebilir.
 
 Başlamaya hazır mısınız? [Azure App Service için ASP.NET + SQL uygulamanızı yayımlayın](https://tutorials.visualstudio.com/azure-webapp-migrate/intro).
 
-## <a name="considerations"></a>Önemli noktalar
+## <a name="considerations"></a>Dikkat edilmesi gerekenler
 
 ### <a name="on-premises-resources-including-sql-server"></a>Şirket içi kaynaklar (SQL Server dahil)
 
 Bunların geçirilmesi veya değiştirilmesi gerekebilmesi için şirket içi kaynaklara erişimi doğrulayın. Şirket içi kaynaklara erişimi azaltıcı seçenekler şunlardır:
 
-* [Azure sanal ağları](https://docs.microsoft.com/azure/app-service/web-sites-integrate-with-vnet)'nı kullanarak şirket içi kaynaklara App SERVICE bir VPN bağlantısı oluşturun.
-* [Azure Relay](https://docs.microsoft.com/azure/service-bus-relay/relay-what-is-it)kullanarak güvenlik duvarı değişiklikleri olmadan şirket içi hizmetleri güvenle buluta sunun.
+* [Azure sanal ağları](/azure/app-service/web-sites-integrate-with-vnet)'nı kullanarak şirket içi kaynaklara App SERVICE bir VPN bağlantısı oluşturun.
+* [Azure Relay](/azure/service-bus-relay/relay-what-is-it)kullanarak güvenlik duvarı değişiklikleri olmadan şirket içi hizmetleri güvenle buluta sunun.
 * [SQL veritabanı](https://go.microsoft.com/fwlink/?linkid=863217) gibi bağımlılıkları Azure 'a geçirin.
-* Bağımlılıkları azaltmak için bulutta hizmet olarak platform teklifleri kullanın. Örneğin, şirket içi posta sunucusuna bağlanmak yerine [SendGrid](https://docs.microsoft.com/azure/sendgrid-dotnet-how-to-send-email)kullanmayı düşünün.
+* Bağımlılıkları azaltmak için bulutta hizmet olarak platform teklifleri kullanın. Örneğin, şirket içi posta sunucusuna bağlanmak yerine [SendGrid](/azure/sendgrid-dotnet-how-to-send-email)kullanmayı düşünün.
 
 ### <a name="port-bindings"></a>Bağlantı noktası bağlamaları
 
@@ -33,20 +33,20 @@ Azure App Service, HTTP için 80 bağlantı noktasını ve HTTPS trafiği için 
 
 WCF için aşağıdaki bağlamalar desteklenir:
 
-Bağlama | Notlar
---------|--------
-BasicHttp |
-WSHttp |
-WSDualHttpBinding | [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir.
-NetHttpBinding | Çift yönlü sözleşmeler için [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir.
-NetHttpsBinding | Çift yönlü sözleşmeler için [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir.
-BasicHttpContextBinding |
-WebHttpBinding |
-WSHttpContextBinding |
+| Bağlama | Notlar |
+|--|--|
+| `BasicHttp` |  |
+| `WSHttp` |  |
+| `WSDualHttpBinding` | [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
+| `NetHttpBinding` | Çift yönlü sözleşmeler için [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
+| `NetHttpsBinding` | Çift yönlü sözleşmeler için [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
+| `BasicHttpContextBinding` |  |
+| `WebHttpBinding` |  |
+| `WSHttpContextBinding` |  |
 
-### <a name="authentication"></a>Kimlik Doğrulaması
+### <a name="authentication"></a>Kimlik doğrulaması
 
-Azure App Service, varsayılan olarak anonim kimlik doğrulamasını ve hedeflenen durumlarda form kimlik doğrulamasını destekler. Windows kimlik doğrulaması yalnızca Azure Active Directory ve ADFS ile tümleştirilirken kullanılabilir. [Şirket içi dizinlerinizi Azure Active Directory tümleştirme hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+Azure App Service, varsayılan olarak anonim kimlik doğrulamasını ve hedeflenen durumlarda form kimlik doğrulamasını destekler. Windows kimlik doğrulaması yalnızca Azure Active Directory ve ADFS ile tümleştirilirken kullanılabilir. [Şirket içi dizinlerinizi Azure Active Directory tümleştirme hakkında daha fazla bilgi edinin](/azure/active-directory/connect/active-directory-aadconnect).
 
 ### <a name="assemblies-in-the-gac-global-assembly-cache"></a>GAC içindeki derlemeler (genel derleme önbelleği)
 
@@ -54,11 +54,11 @@ Bu özellik desteklenmez. Gerekli derlemeleri uygulamanın *\Bin* klasörüne ko
 
 ### <a name="iis-settings"></a>IIS ayarları
 
-Uygulamanızda applicationHost. config aracılığıyla yapılandırılan her şey artık Azure portal aracılığıyla yapılandırılabilir. Bu, AppPool bit durumu için geçerlidir, WebSockets, yönetilen işlem hattı sürümü, .NET Framework sürümü (2.0/4.0) vb. için geçerlidir. [Uygulama ayarlarınızı](https://docs.microsoft.com/azure/app-service/web-sites-configure)değiştirmek için [Azure Portal](https://portal.azure.com)gidin, Web uygulamanızın dikey penceresini açın ve **uygulama ayarları** sekmesini seçin.
+Uygulamanızda applicationHost.config aracılığıyla yapılandırılan her şey artık Azure portal aracılığıyla yapılandırılabilir. Bu, AppPool bit durumu için geçerlidir, WebSockets, yönetilen işlem hattı sürümü, .NET Framework sürümü (2.0/4.0) vb. için geçerlidir. [Uygulama ayarlarınızı](/azure/app-service/web-sites-configure)değiştirmek için [Azure Portal](https://portal.azure.com)gidin, Web uygulamanızın dikey penceresini açın ve **uygulama ayarları** sekmesini seçin.
 
 #### <a name="iis5-compatibility-mode"></a>IıS5 uyumluluk modu
 
-IıS5 uyumluluk modu desteklenmez. Azure App Service, her bir Web uygulaması ve altındaki tüm uygulamalar, belirli bir [uygulama havuzları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10))kümesiyle aynı çalışan işlemde çalışır.
+IıS5 uyumluluk modu desteklenmez. Azure App Service, her bir Web uygulaması ve altındaki tüm uygulamalar, belirli bir [uygulama havuzları](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735247(v=ws.10))kümesiyle aynı çalışan işlemde çalışır.
 
 #### <a name="iis7-schema-compliance"></a>IıS7 + şema uyumluluğu
 
@@ -74,15 +74,15 @@ Azure App Service platformda COM bileşenlerinin kaydedilmesine izin vermez. Uyg
 
 ### <a name="physical-directories"></a>Fiziksel dizinler
 
-Azure App Service fiziksel sürücüye erişime izin vermez. SMB aracılığıyla dosyalara erişmek için [Azure dosyalarını](https://docs.microsoft.com/azure/storage/files/storage-files-introduction) kullanmanız gerekebilir. [Azure Blob depolama](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction) , dosyaları https üzerinden erişim için saklayabilir.
+Azure App Service fiziksel sürücüye erişime izin vermez. SMB aracılığıyla dosyalara erişmek için [Azure dosyalarını](/azure/storage/files/storage-files-introduction) kullanmanız gerekebilir. [Azure Blob depolama](/azure/storage/blobs/storage-blobs-introduction) , dosyaları https üzerinden erişim için saklayabilir.
 
 ### <a name="isapi-filters"></a>ISAPI filtreleri
 
-Azure App Service, ISAPI filtrelerinin kullanımını destekleyebilir, ancak ISAPI DLL, sitenize dağıtılmalıdır ve Web. config aracılığıyla kaydedilir.
+Azure App Service, ISAPI filtrelerinin kullanımını destekleyebilir, ancak ISAPI DLL 'nin sitenize dağıtılması ve web.config aracılığıyla kaydedilmesi gerekir.
 
 ### <a name="https-bindings-and-ssl"></a>HTTPS bağlamaları ve SSL
 
-HTTPS bağlamaları geçirilmez veya Web sitelerinizle ilişkili SSL sertifikaları değildir. Ancak, site geçişi tamamlandıktan sonra [SSL sertifikaları el ile karşıya](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-ssl) yüklenebilir.
+HTTPS bağlamaları geçirilmez veya Web sitelerinizle ilişkili SSL sertifikaları değildir. Ancak, site geçişi tamamlandıktan sonra [SSL sertifikaları el ile karşıya](/azure/app-service/app-service-web-tutorial-custom-ssl) yüklenebilir.
 
 ### <a name="sharepoint-and-frontpage"></a>SharePoint ve FrontPage
 
@@ -102,15 +102,15 @@ AAD, ücretsiz uygulamalarla çalışmaz. AAD 'yi kullanmak için uygulama SKU '
 
 ### <a name="monitoring-and-diagnostics"></a>İzleme ve tanılama
 
-İzleme ve Tanılama için geçerli şirket içi çözümlerinizin bulutta çalışması düşüktür. Ancak Azure, Web Apps ile ilgili sorunları belirleyebilmeniz ve bunların hatalarını ayıklamanıza olanak tanımak için günlüğe kaydetme, izleme ve tanılama araçları sağlar. Kendi yapılandırmasında Web uygulamanız için tanılamayı kolayca etkinleştirebilir ve Azure Application Insights kayıtlı günlükleri görüntüleyebilirsiniz. [Web Apps için tanılama günlüğünü etkinleştirme hakkında daha fazla bilgi edinin](https://docs.microsoft.com/azure/app-service/web-sites-enable-diagnostic-log).
+İzleme ve Tanılama için geçerli şirket içi çözümlerinizin bulutta çalışması düşüktür. Ancak Azure, Web Apps ile ilgili sorunları belirleyebilmeniz ve bunların hatalarını ayıklamanıza olanak tanımak için günlüğe kaydetme, izleme ve tanılama araçları sağlar. Kendi yapılandırmasında Web uygulamanız için tanılamayı kolayca etkinleştirebilir ve Azure Application Insights kayıtlı günlükleri görüntüleyebilirsiniz. [Web Apps için tanılama günlüğünü etkinleştirme hakkında daha fazla bilgi edinin](/azure/app-service/web-sites-enable-diagnostic-log).
 
 ### <a name="connection-strings-and-application-settings"></a>Bağlantı dizeleri ve uygulama ayarları
 
-Uygulamanızda kullanılan hassas bilgileri güvenli bir şekilde depolayan bir hizmet olan [Azure Keykasasını](https://docs.microsoft.com/azure/key-vault/)kullanmayı düşünün. Alternatif olarak, bu verileri bir App Service ayarı olarak da saklayabilirsiniz.
+Uygulamanızda kullanılan hassas bilgileri güvenli bir şekilde depolayan bir hizmet olan [Azure Keykasasını](/azure/key-vault/)kullanmayı düşünün. Alternatif olarak, bu verileri bir App Service ayarı olarak da saklayabilirsiniz.
 
 ### <a name="dns"></a>DNS
 
-Uygulamanızın gereksinimlerine bağlı olarak DNS yapılandırmasını güncelleştirmeniz gerekebilir. Bu DNS ayarları App Service [özel etki alanı ayarlarından](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-custom-domain)yapılandırılabilir.
+Uygulamanızın gereksinimlerine bağlı olarak DNS yapılandırmasını güncelleştirmeniz gerekebilir. Bu DNS ayarları App Service [özel etki alanı ayarlarından](/azure/app-service/app-service-web-tutorial-custom-domain)yapılandırılabilir.
 
 ## <a name="azure-app-service-with-windows-containers"></a>Windows kapsayıcıları ile Azure App Service
 

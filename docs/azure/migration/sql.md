@@ -3,40 +3,40 @@ title: Azure’a SQL Server veritabanını geçirme
 description: SQL Server veritabanını şirket içi SQL Server Azure 'a geçirmeyi öğrenin.
 ms.topic: how-to
 ms.date: 05/27/2020
-ms.openlocfilehash: ed5d6ef9395dca14d8e0ecba82d3fc18cb3d629a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 5f191cafbff3823d04e1dbd1fdf81e1157e20999
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241454"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174289"
 ---
 # <a name="migrate-a-sql-server-database-to-azure"></a>Azure’a SQL Server veritabanını geçirme
 
 Bu makalede, SQL Server veritabanını Azure 'a geçirmek için iki seçenekten oluşan kısa bir ana hat sunulmaktadır. Azure 'da bir üretim SQL Server veritabanının geçirilmesi için üç birincil seçenek bulunur. Bu makale aşağıdaki iki seçeneğe odaklanmaktadır:
 
-1. [Azure VM 'lerinde SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): Azure 'da çalışan ve hizmet olarak altyapı (IaaS) olarak da bilinen bir Windows sanal makinesinde yüklü ve barındırılan bir SQL Server örneği.
-2. [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview): hizmet olarak platform (PaaS) olarak da bilinen, tam olarak YÖNETILEN bir SQL veritabanı Azure hizmetidir.
+1. [Azure VM 'lerinde SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): Azure 'da çalışan ve hizmet olarak altyapı (IaaS) olarak da bilinen bir Windows sanal makinesinde yüklü ve barındırılan bir SQL Server örneği.
+2. [Azure SQL veritabanı](/azure/sql-database/sql-database-technical-overview): hizmet olarak platform (PaaS) olarak da bilinen, tam olarak YÖNETILEN bir SQL veritabanı Azure hizmetidir.
 
-Her ikisi de, geçirmeden önce değerlendirmeniz gereken profesyonelleri ve dezavantajlarla birlikte gelir. Üçüncü seçenek [Azure SQL veritabanı yönetilen örnekleri](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)olur.
+Her ikisi de, geçirmeden önce değerlendirmeniz gereken profesyonelleri ve dezavantajlarla birlikte gelir. Üçüncü seçenek [Azure SQL veritabanı yönetilen örnekleri](/azure/sql-database/sql-database-managed-instance)olur.
 
 ## <a name="get-started"></a>başlarken
 
 Kullandığınız hizmete bağlı olarak aşağıdaki geçiş kılavuzlarınız yararlı olacaktır:
 
-* [Bir SQL Server veritabanını Azure VM’deki SQL Server’a geçirme](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
-* [SQL Server veritabanınızı Azure SQL Veritabanına geçirme](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)
+* [Bir SQL Server veritabanını Azure VM’deki SQL Server’a geçirme](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+* [SQL Server veritabanınızı Azure SQL Veritabanına geçirme](/azure/sql-database/sql-database-migrate-your-sql-server-database)
 
 Ayrıca, kavramsal içeriğe yönelik aşağıdaki bağlantılar VM 'Leri daha iyi anlamanıza yardımcı olur:
 
-* [Azure Sanal Makineler’de SQL Server için yüksek kullanılabilirlik ve olağanüstü durum kurtarma](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
-* [Azure Sanal Makinelerde SQL Server için performansa yönelik en iyi yöntemler](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
-* [Azure Sanal Makineler'de SQL Server için Uygulama Desenleri ve Geliştirme Stratejileri](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
+* [Azure Sanal Makineler’de SQL Server için yüksek kullanılabilirlik ve olağanüstü durum kurtarma](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-high-availability-dr)
+* [Azure Sanal Makinelerde SQL Server için performansa yönelik en iyi yöntemler](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)
+* [Azure Sanal Makineler'de SQL Server için Uygulama Desenleri ve Geliştirme Stratejileri](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-app-patterns-dev-strategies)
 
 Aşağıdaki bağlantılar, Azure SQL veritabanını daha iyi anlamanıza yardımcı olacaktır:
 
-* [Azure SQL veritabanı sunucuları ve veritabanları oluşturma ve yönetme](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases)
-* [Veritabanı Işlem birimleri (DTU 'Lar) ve elastik veritabanı Işlem birimleri (eDTU)](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu)
-* [Azure SQL veritabanı kaynak limitleri](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits)
+* [Azure SQL veritabanı sunucuları ve veritabanları oluşturma ve yönetme](/azure/sql-database/sql-database-servers-databases)
+* [Veritabanı Işlem birimleri (DTU 'Lar) ve elastik veritabanı Işlem birimleri (eDTU)](/azure/sql-database/sql-database-what-is-a-dtu)
+* [Azure SQL veritabanı kaynak limitleri](/azure/sql-database/sql-database-resource-limits)
 
 ## <a name="choosing-iaas-or-paas"></a>IaaS veya PaaS seçme
 
@@ -59,12 +59,12 @@ Aşağıdaki tabloda, bir dizi senaryoya göre her bir hizmet arasındaki farkl�
 | Senaryo | Azure VM 'lerinde SQL Server | Azure SQL Veritabanı |
 |----------|-------------------------|--------------------|
 | Geçiş | Veritabanınızda minimum değişiklik yapılmasını gerektirir. | [Data Migration Yardımcısı](https://www.microsoft.com/download/details.aspx?id=53595)tarafından belirlendiği şekilde, Azure SQL 'de kullanılamayan özellikler kullanıyorsanız veya yerel olarak yüklenen yürütülebilir dosyalar gibi başka bağımlılıklara sahipseniz veritabanınızda değişiklik yapılmasını gerektirebilir.|
-| Kullanılabilirliği, kurtarmayı ve yükseltmeleri yönetme | Kullanılabilirlik ve kurtarma el ile yapılandırılır. Yükseltmeler, [VM Ölçek kümeleriyle](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)otomatikleştirilebilir. | Sizin için otomatik olarak yönetilir. |
+| Kullanılabilirliği, kurtarmayı ve yükseltmeleri yönetme | Kullanılabilirlik ve kurtarma el ile yapılandırılır. Yükseltmeler, [VM Ölçek kümeleriyle](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)otomatikleştirilebilir. | Sizin için otomatik olarak yönetilir. |
 | Temel alınan işletim sistemi yapılandırması | El ile yapılandırma. | Sizin için otomatik olarak yönetilir. |
 | Veritabanı boyutunu yönetme | SQL Server örneği başına 256 TB 'a kadar depolamayı destekler. | Yatay bölüme gerek duymadan önce 8 TB depolamayı destekler. |
-| Maliyetleri yönetme | SQL Server lisans maliyetlerini, Windows Server lisans maliyetlerini ve VM maliyetlerini (çekirdek, RAM ve depolamaya göre) yönetmeniz gerekir. | Hizmet maliyetlerini (bir elastik havuz kullanılıyorsa [eDTU 'ları veya DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu)'ları, depolamayı ve veritabanlarının sayısını temel alarak) yönetmeniz gerekir. Ayrıca, herhangi bir SLA 'nın maliyetini yönetmeniz gerekir. |
+| Maliyetleri yönetme | SQL Server lisans maliyetlerini, Windows Server lisans maliyetlerini ve VM maliyetlerini (çekirdek, RAM ve depolamaya göre) yönetmeniz gerekir. | Hizmet maliyetlerini (bir elastik havuz kullanılıyorsa [eDTU 'ları veya DTU](/azure/sql-database/sql-database-what-is-a-dtu)'ları, depolamayı ve veritabanlarının sayısını temel alarak) yönetmeniz gerekir. Ayrıca, herhangi bir SLA 'nın maliyetini yönetmeniz gerekir. |
 
-İkisi arasındaki farklar hakkında daha fazla bilgi edinmek için bkz. [Azure SQL 'de doğru dağıtım seçeneğini seçme](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
+İkisi arasındaki farklar hakkında daha fazla bilgi edinmek için bkz. [Azure SQL 'de doğru dağıtım seçeneğini seçme](/azure/sql-database/sql-database-paas-vs-sql-server-iaas).
 
 ## <a name="faq"></a>SSS
 

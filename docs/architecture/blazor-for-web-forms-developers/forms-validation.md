@@ -1,25 +1,28 @@
 ---
 title: Formlar ve doğrulama
-description: Blazor içinde istemci tarafı doğrulama ile form oluşturmayı öğrenin.
+description: İçinde istemci tarafı doğrulama ile form oluşturmayı öğrenin Blazor .
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
+- Blazor WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: c30db5e06d36a6d15301835fe782b21058a80592
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1a99719f59415872510aef051d1f3c73daf53e15
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088082"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173282"
 ---
 # <a name="forms-and-validation"></a>Formlar ve doğrulama
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-ASP.NET Web Forms Framework, bir forma (`RequiredFieldValidator`, `CompareValidator`, `RangeValidator`vb.) girilen kullanıcı girişini doğrulamayı işleyen bir doğrulama sunucusu denetimleri kümesi içerir. ASP.NET Web Forms Framework, model bağlamayı ve veri ek açıklamalarına (`[Required]`, `[StringLength]`, `[Range]`, vb.) göre modeli doğrulamayı da destekler. Doğrulama mantığı hem sunucuda hem de istemci üzerinde, kaldırma JavaScript tabanlı doğrulama kullanılarak zorlanabilir. `ValidationSummary` sunucusu denetimi, kullanıcıya doğrulama hatalarının özetini göstermek için kullanılır.
+ASP.NET Web Forms Framework, bir forma ( `RequiredFieldValidator` , `CompareValidator` , vb.) girilen kullanıcı girişini doğrulamayı işleyen bir doğrulama sunucusu denetimleri kümesi içerir `RangeValidator` . ASP.NET Web Forms Framework, model bağlamayı ve veri ek açıklamalarına (,, vb `[Required]` `[StringLength]` .) göre modeli doğrulamayı da destekler `[Range]` . Doğrulama mantığı hem sunucuda hem de istemci üzerinde, kaldırma JavaScript tabanlı doğrulama kullanılarak zorlanabilir. `ValidationSummary`Sunucu denetimi, kullanıcıya doğrulama hatalarının özetini göstermek için kullanılır.
 
 Blazor, hem istemci hem de sunucu arasında doğrulama mantığının paylaşımını destekler. ASP.NET birçok ortak sunucu doğrulamayla önceden oluşturulmuş JavaScript uygulamaları sağlar. Çoğu durumda, geliştirici uygulamaya özgü doğrulama mantığını tam olarak uygulamak için JavaScript yazmak zorunda kalır. Aynı model türleri, veri ek açıklamaları ve doğrulama mantığı hem sunucu hem de istemcide kullanılabilir.
 
-Blazor, bir giriş bileşenleri kümesi sağlar. Giriş bileşenleri, alan verilerini bir modele bağlamayı ve form gönderildiğinde kullanıcı girişini doğrulamayı işler.
+Blazorbir giriş bileşenleri kümesi sağlar. Giriş bileşenleri, alan verilerini bir modele bağlamayı ve form gönderildiğinde kullanıcı girişini doğrulamayı işler.
 
 |Giriş bileşeni|İşlenmiş HTML öğesi    |
 |---------------|-------------------------|
@@ -30,9 +33,9 @@ Blazor, bir giriş bileşenleri kümesi sağlar. Giriş bileşenleri, alan veril
 |`InputText`    |`<input>`                |
 |`InputTextArea`|`<textarea>`             |
 
-`EditForm` bileşeni, bu giriş bileşenlerini sarmalayan ve doğrulama işlemini bir `EditContext`aracılığıyla düzenler. `EditForm`oluştururken, `Model` parametresini kullanarak hangi model örneğinin bağlanılacağını belirlersiniz. Doğrulama genellikle veri ek açıklamaları kullanılarak yapılır ve genişletilebilir. Veri ek açıklaması tabanlı doğrulamayı etkinleştirmek için, `DataAnnotationsValidator` bileşenini `EditForm`alt öğesi olarak ekleyin. `EditForm` bileşeni, geçerli (`OnValidSubmit`) ve geçersiz (`OnInvalidSubmit`) gönderimlerini işlemek için uygun bir olay sağlar. Ayrıca, doğrulamayı kendiniz tetiklemenizi ve işlemenizi sağlayan daha genel `OnSubmit` bir olay da vardır.
+`EditForm`Bileşen bu giriş bileşenlerini sarmalanmış ve doğrulama sürecini bir ile düzenler `EditContext` . Bir oluştururken `EditForm` , parametresini kullanarak hangi model örneğinin bağlanılacağını belirlersiniz `Model` . Doğrulama genellikle veri ek açıklamaları kullanılarak yapılır ve genişletilebilir. Veri ek açıklaması tabanlı doğrulamayı etkinleştirmek için, `DataAnnotationsValidator` bileşenini öğesinin bir alt öğesi olarak ekleyin `EditForm` . `EditForm`Bileşen geçerli ( `OnValidSubmit` ) ve geçersiz () gönderimleri işlemek için uygun bir olay sağlar `OnInvalidSubmit` . Ayrıca `OnSubmit` , doğrulamayı kendiniz tetiklemenizi ve işlemesini sağlayan daha genel bir olay da vardır.
 
-Doğrulama hatası özetini göstermek için `ValidationSummary` bileşenini kullanın. Belirli bir giriş alanı için doğrulama iletilerini göstermek için, uygun model üyesine işaret eden `For` parametresi için bir lambda ifadesi belirterek `ValidationMessage` bileşenini kullanın.
+Doğrulama hatası özetini göstermek için `ValidationSummary` bileşenini kullanın. Belirli bir giriş alanı için doğrulama iletilerini göstermek için, `ValidationMessage` `For` uygun model üyesine işaret eden parametresi için bir lambda ifadesi belirterek bileşeni kullanın.
 
 Aşağıdaki model türü, veri ek açıklamalarını kullanarak çeşitli doğrulama kuralları tanımlar:
 
@@ -66,7 +69,7 @@ public class Starship
 }
 ```
 
-Aşağıdaki bileşen `Starship` model türüne göre Blazor içinde bir form oluşturmayı göstermektedir:
+Aşağıdaki bileşen, Blazor model türüne göre ' de bir form oluşturmayı göstermektedir `Starship` :
 
 ```razor
 <h1>New Ship Entry Form</h1>
@@ -123,12 +126,12 @@ Aşağıdaki bileşen `Starship` model türüne göre Blazor içinde bir form ol
 }
 ```
 
-Form gönderildikten sonra, model bağlantılı veriler veritabanı gibi herhangi bir veri deposuna kaydedilmez. Blazor WebAssembly uygulamasında, verilerin sunucuya gönderilmesi gerekir. Örneğin, bir HTTP POST isteği kullanma. Bir Blazor sunucu uygulamasında veriler zaten sunucuda bulunur, ancak kalıcı olması gerekir. Blazor uygulamalarında veri erişiminin yönetilmesi, [verilerle ilgilenme](data.md) konusunun konusudur.
+Form gönderildikten sonra, model bağlantılı veriler veritabanı gibi herhangi bir veri deposuna kaydedilmez. Bir Blazor WebAssembly uygulamada, verilerin sunucuya gönderilmesi gerekir. Örneğin, bir HTTP POST isteği kullanma. Sunucu uygulamasında Blazor veriler zaten sunucuda bulunur, ancak kalıcı olması gerekir. Uygulamalarda veri erişiminin yönetilmesi, Blazor [verilerle ilgilenme](data.md) konusunun konusudur.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-Blazor uygulamalarında [Formlar ve doğrulama](/aspnet/core/blazor/forms-validation) hakkında daha fazla bilgi için bkz. Blazor belgeleri.
+Uygulamalarda [Formlar ve doğrulama](/aspnet/core/blazor/forms-validation) hakkında daha fazla bilgi için Blazor Blazor belgelerine bakın.
 
 >[!div class="step-by-step"]
->[Önceki](state-management.md)
->[İleri](data.md)
+>[Önceki](state-management.md) 
+> [Sonraki](data.md)

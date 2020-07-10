@@ -2,13 +2,16 @@
 title: gRPC
 description: GRPC, bulutta yerel uygulamalardaki rolü ve HTTP ile gerçekleşen iletişimin nasıl farklı olduğunu öğrenin.
 author: robvet
+no-loc:
+- Blazor
+- Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201327"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173165"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -81,7 +84,7 @@ GRPC 'yi aşağıdaki senaryolar için tercih edin:
 - Noktadan noktaya gerçek zamanlı iletişim-gRPC, yoklama yapmadan iletileri gerçek zamanlı olarak gönderebilir ve iki yönlü akış için mükemmel destek sağlar.
 - Ağ kısıtlamalı ortamlar – ikili gRPC iletileri her zaman eşdeğer bir metin tabanlı JSON iletisinden küçüktür.
 
-Bu yazma sırasında, gRPC öncelikle arka uç hizmetleriyle birlikte kullanılır. Modern tarayıcıların çoğu, ön uç gRPC istemcisini desteklemek için gereken HTTP/2 denetimi düzeyini sağlayamaz. Yani, JavaScript veya Blazor WebAssembly teknolojileriyle oluşturulmuş tarayıcı tabanlı uygulamalardan gRPC iletişimini sağlayan [erken bir girişim](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) vardır. [.Net Için GRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) , ASP.NET Core GRPC uygulamasının tarayıcı uygulamalarında GRPC özelliklerini desteklemesini sağlar:
+Bu yazma sırasında, gRPC öncelikle arka uç hizmetleriyle birlikte kullanılır. Modern tarayıcıların çoğu, ön uç gRPC istemcisini desteklemek için gereken HTTP/2 denetimi düzeyini sağlayamaz. Yani, JavaScript veya teknolojilerle oluşturulmuş tarayıcı tabanlı uygulamalardan gRPC iletişimini sağlayan [erken bir girişim](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) vardır Blazor WebAssembly . [.Net Için GRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) , ASP.NET Core GRPC uygulamasının tarayıcı uygulamalarında GRPC özelliklerini desteklemesini sağlar:
 
 - Türü kesin belirlenmiş, kod tarafından oluşturulan istemciler
 - Küçük mesajlar

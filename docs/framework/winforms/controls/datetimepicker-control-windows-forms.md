@@ -1,5 +1,6 @@
 ---
 title: DateTimePicker Denetimi
+description: Kullanıcının tarih veya saat listesinden tek bir öğe seçmesine izin vermek için Windows Forms DateTimePicker denetimini kullanmayı öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dates [Windows Forms], choosing from a list
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms]
 - date and time picker controls
 ms.assetid: 1dac1fbd-8f67-4910-9ccb-2c5462d0d855
-ms.openlocfilehash: 22883da5dec58a6272e611b50671a8b1341d92e4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: cda7b731f6f9b6f5ff544565ab1f33870c66a6ff
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731979"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174607"
 ---
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker Denetimi (Windows Forms)
-Windows Forms `DateTimePicker` denetimi, kullanıcının tarih veya saat listesinden tek bir öğe seçmesine izin verir. Bir tarihi temsil etmek için kullanıldığında, iki bölümden oluşur: metinde temsil edilen bir tarih ve listenin yanındaki aşağı oka tıkladığınızda görüntülenen bir kılavuz.  
+Windows Forms `DateTimePicker` denetimi, kullanıcının tarih veya saat listesinden tek bir öğe seçmesine olanak sağlar. Bir tarihi temsil etmek için kullanıldığında, iki bölümden oluşur: metinde temsil edilen bir tarih ve listenin yanındaki aşağı oka tıkladığınızda görüntülenen bir kılavuz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [DateTimePicker Denetimine Genel Bakış](datetimepicker-control-overview-windows-forms.md)  
- , Kullanıcıların bir tarih veya saat listesinden tek bir öğe seçmesini sağlayan `DateTimePicker` denetiminin genel kavramlarını tanıtır.  
+ `DateTimePicker`, Kullanıcıların bir tarih veya saat listesinden tek bir öğe seçmesini sağlayan denetimin genel kavramlarını tanıtır.  
   
  [Nasıl yapılır: Windows Forms DateTimePicker Denetimi ile Özel Biçimde Tarih Görüntüleme](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)  
  Tarihleri tercih edilen biçimde göstermek için biçimlendirme dizelerinin nasıl kullanılacağını açıklar.  
@@ -28,7 +29,7 @@ Windows Forms `DateTimePicker` denetimi, kullanıcının tarih veya saat listesi
  Denetimdeki tarihi ayarlamak ve kullanıcının seçtiği tarihe erişmek için gereken adımları sağlar.  
   
  [Nasıl Yapılır: DateTimePicker Denetimiyle Zamanı Görüntüleme](how-to-display-time-with-the-datetimepicker-control.md)  
- `DateTimePicker` için adımları gösterir ve yalnızca süreleri görüntüler.  
+ `DateTimePicker`Yalnızca görüntüleme saatleri için adımları gösterir.  
   
 ## <a name="reference"></a>Başvuru  
  <xref:System.Windows.Forms.DateTimePicker>  
@@ -38,7 +39,7 @@ Windows Forms `DateTimePicker` denetimi, kullanıcının tarih veya saat listesi
  Bu sınıfı açıklar ve tüm üyelerine bağlantıları vardır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
+ [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)  
  Windows Forms denetimlerinin tüm listesini, kullanımları hakkındaki bilgilerin bağlantılarıyla birlikte sağlar.  
   
  [MonthCalendar Denetimi](monthcalendar-control-windows-forms.md)  

@@ -1,15 +1,17 @@
 ---
 title: Sayfalar, yönlendirme ve düzenler
-description: Blazor 'de sayfa oluşturmayı, istemci tarafı yönlendirme ile çalışmayı ve sayfa düzenlerini yönetmeyi öğrenin.
+description: İçinde sayfa oluşturmayı Blazor , istemci tarafı yönlendirme ile çalışmayı ve sayfa düzenlerini yönetmeyi öğrenin.
 author: danroth27
 ms.author: daroth
+no-loc:
+- Blazor
 ms.date: 09/19/2019
-ms.openlocfilehash: 693eee270a46ccb56ed5fef8fced1d4a1cf1974f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: fc1f6f9420c7149b6e67123f2f68bef75667aa0c
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520235"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173113"
 ---
 # <a name="pages-routing-and-layouts"></a>Sayfalar, yönlendirme ve düzenler
 
@@ -17,9 +19,9 @@ ms.locfileid: "72520235"
 
 ASP.NET Web Forms uygulamalar *. aspx* dosyalarında tanımlanan sayfalardan oluşur. Her sayfanın adresi, projedeki fiziksel dosya yolunu temel alır. Bir tarayıcı sayfada bir istek yaptığında, sayfanın içeriği sunucu üzerinde dinamik olarak işlenir. Sayfanın HTML işaretlemesi ve sunucu denetimleri için işleme hesapları.
 
-Blazor ' de, uygulamadaki her sayfa, genellikle bir veya daha fazla belirtilen rotasıyla bir *. Razor* dosyasında tanımlanan bir bileşendir. Yönlendirme genellikle belirli bir sunucu isteğiyle birlikte istemci tarafı olur. Tarayıcı önce uygulamanın kök adresine bir istek yapar. Blazor uygulamasındaki bir kök `Router` bileşeni daha sonra, gezinme isteklerini ve bunları doğru bileşene göre kesintiye uğratan uygular.
+' De Blazor , uygulamadaki her sayfa, genellikle bir *. Razor* dosyasında tanımlanan ve belirtilen bir veya daha fazla yol içeren bir bileşendir. Yönlendirme genellikle belirli bir sunucu isteğiyle birlikte istemci tarafı olur. Tarayıcı önce uygulamanın kök adresine bir istek yapar. `Router` Blazor Daha sonra uygulamadaki bir kök bileşen, gezinme isteklerini ve bunları doğru bileşene göre kesintiye uğratan işler.
 
-Blazor *derin bağlamayı*da destekler. Derin bağlama, tarayıcı uygulama kökü dışında belirli bir rotaya istek yaptığında oluşur. Sunucuya gönderilen derin bağlantı istekleri Blazor uygulamasına yönlendirilir ve ardından istek istemci tarafını doğru bileşene yönlendirir.
+Blazor*derin bağlamayı*da destekler. Derin bağlama, tarayıcı uygulama kökü dışında belirli bir rotaya istek yaptığında oluşur. Sunucuya gönderilen derin bağlantı istekleri Blazor uygulamaya yönlendirilir ve ardından istek istemci tarafını doğru bileşene yönlendirir.
 
 ASP.NET Web Forms basit bir sayfa aşağıdaki biçimlendirmeyi içerebilir:
 
@@ -52,7 +54,7 @@ public partial class Name : System.Web.UI.Page
 }
 ```
 
-Bir Blazor uygulamasındaki eşdeğer sayfa şöyle görünür:
+Bir uygulamadaki eşdeğer sayfa şöyle Blazor görünür:
 
 *Name. Razor*
 
@@ -84,15 +86,15 @@ Bir Blazor uygulamasındaki eşdeğer sayfa şöyle görünür:
 
 ## <a name="create-pages"></a>Sayfa oluştur
 
-Blazor içinde bir sayfa oluşturmak için bir bileşen oluşturun ve bileşen için yolu belirtmek üzere `@page` Razor yönergesini ekleyin. `@page` yönergesi, bu bileşene eklenecek yol şablonu olan tek bir parametre alır.
+İçinde bir sayfa oluşturmak için Blazor , bir bileşen oluşturun ve `@page` bileşenin yolunu belirtmek için Razor yönergesini ekleyin. `@page`Yönergesi, bu bileşene eklenecek yol şablonu olan tek bir parametre alır.
 
 ```razor
 @page "/counter"
 ```
 
-Yol şablonu parametresi gereklidir. ASP.NET Web Forms aksine, bir *Blazor bileşenine olan* yol dosyanın konumundan (gelecekte bir özellik eklenebilir olmasına rağmen) çıkarsanamıyor.
+Yol şablonu parametresi gereklidir. ASP.NET Web Forms aksine, Blazor bileşen yolu dosyanın konumundan (gelecekte eklenmiş bir özellik olabilir) *değil* .
 
-Yol şablonu sözdizimi, ASP.NET Web Forms yönlendirme için kullanılan temel sözdizimidir. Rota parametreleri, küme ayraçları kullanılarak şablonda belirtilmiştir. Blazor, yönlendirme değerlerini aynı ada (büyük/küçük harfe duyarsız) sahip bileşen parametrelerine bağlar.
+Yol şablonu sözdizimi, ASP.NET Web Forms yönlendirme için kullanılan temel sözdizimidir. Rota parametreleri, küme ayraçları kullanılarak şablonda belirtilmiştir. Blazorrota değerlerini aynı ada (büyük/küçük harfe duyarsız) sahip bileşen parametrelerine bağlayacaktır.
 
 ```razor
 @page "/product/{id}"
@@ -105,7 +107,7 @@ Yol şablonu sözdizimi, ASP.NET Web Forms yönlendirme için kullanılan temel 
 }
 ```
 
-Ayrıca, yol parametresinin değeri üzerinde kısıtlamalar belirtebilirsiniz. Örneğin, ürün KIMLIĞINI bir `int`olarak kısıtlamak için:
+Ayrıca, yol parametresinin değeri üzerinde kısıtlamalar belirtebilirsiniz. Örneğin, ürün KIMLIĞINI bir olarak kısıtlamak için `int` :
 
 ```razor
 @page "/product/{id:int}"
@@ -118,11 +120,11 @@ Ayrıca, yol parametresinin değeri üzerinde kısıtlamalar belirtebilirsiniz. 
 }
 ```
 
-Blazor tarafından desteklenen yol kısıtlamalarının tam listesi için bkz. [route kısıtlamaları](/aspnet/core/blazor/routing#route-constraints).
+Tarafından desteklenen yol kısıtlamalarının tam listesi için Blazor bkz. [route kısıtlamaları](/aspnet/core/blazor/routing#route-constraints).
 
 ## <a name="router-component"></a>Yönlendirici bileşeni
 
-Blazor ' de yönlendirme `Router` bileşeni tarafından işlenir. `Router` bileşen genellikle uygulamanın kök bileşeninde (*app. Razor*) kullanılır.
+İçindeki yönlendirme Blazor bileşen tarafından işlenir `Router` . `Router`Bileşen genellikle uygulamanın kök bileşeni (*app. Razor*) içinde kullanılır.
 
 ```razor
 <Router AppAssembly="@typeof(Program).Assembly">
@@ -137,15 +139,15 @@ Blazor ' de yönlendirme `Router` bileşeni tarafından işlenir. `Router` bile�
 </Router>
 ```
 
-`Router` bileşeni, belirtilen `AppAssembly` ve isteğe bağlı olarak belirtilen `AdditionalAssemblies`yönlendirilebilir bileşenleri bulur. Tarayıcı gezinirse, `Router` gezinmeyi keser ve bir yol adresle eşleşiyorsa `Found` parametresinin içeriğini ayıklanan `RouteData` işler, aksi takdirde `Router` `NotFound` parametresini işler.
+`Router`Bileşeni, belirtilen `AppAssembly` ve isteğe bağlı olarak belirtilen içindeki yönlendirilebilir bileşenleri bulur `AdditionalAssemblies` . Tarayıcı gezinirse, bir yol adresle eşleşiyorsa, bu,, ' ın, parametresini `Router` durdurur ve `Found` parametre içeriğini ayıklanmış ile işler `RouteData` , aksi takdirde `Router` `NotFound` parametresini işler.
 
-`RouteView` bileşeni, varsa, `RouteData` tarafından belirtilen eşleşen bileşeni, varsa düzenine göre işlemeyi işler. Eşleşen bileşenin düzeni yoksa, isteğe bağlı olarak belirtilen `DefaultLayout` kullanılır.
+`RouteView`Bileşen, varsa onunla belirtilen eşleşen bileşeni, `RouteData` varsa düzeniyle işlemeyi işler. Eşleşen bileşenin düzeni yoksa, isteğe bağlı olarak belirtilen `DefaultLayout` kullanılır.
 
-`LayoutView` bileşeni, alt içeriğini belirtilen düzen içinde işler. Bu bölümün ilerleyen kısımlarında daha sonra mizanpajlara daha ayrıntılı bir şekilde bakacağız.
+`LayoutView`Bileşen, alt içeriğini belirtilen düzen içinde işler. Bu bölümün ilerleyen kısımlarında daha sonra mizanpajlara daha ayrıntılı bir şekilde bakacağız.
 
-## <a name="navigation"></a>Gezinme
+## <a name="navigation"></a>Gezinti
 
-ASP.NET Web Forms ' de, tarayıcıya yeniden yönlendirme yanıtı döndürerek, gezintiyi farklı bir sayfaya tetiklersiniz. Örneğin:
+ASP.NET Web Forms ' de, tarayıcıya yeniden yönlendirme yanıtı döndürerek, gezintiyi farklı bir sayfaya tetiklersiniz. Örnek:
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)
@@ -154,16 +156,16 @@ protected void NavigateButton_Click(object sender, EventArgs e)
 }
 ```
 
-Blazor içinde yeniden yönlendirme yanıtı döndürülmesi genellikle mümkün değildir. Blazor, istek-yanıt modeli kullanmaz. Ancak, JavaScript ile yaptığınız gibi tarayıcı gezginlerini doğrudan tetikleyebilirsiniz.
+' De yeniden yönlendirme yanıtı döndürülmesi genellikle mümkün değildir Blazor . Blazoristek-yanıt modeli kullanmaz. Ancak, JavaScript ile yaptığınız gibi tarayıcı gezginlerini doğrudan tetikleyebilirsiniz.
 
-Blazor, şu şekilde kullanılabilecek bir `NavigationManager` hizmeti sağlar:
+BlazorŞu `NavigationManager` şekilde kullanılabilecek bir hizmet sağlar:
 
 - Geçerli tarayıcı adresini al
 - Temel adresi al
 - Tüm gezinmeler tetiklemeleri
 - Adres değiştiğinde bildirim alın
 
-Farklı bir adrese gitmek için `NavigateTo` yöntemi kullanın:
+Farklı bir adrese gitmek için `NavigateTo` yöntemini kullanın:
 
 ```razor
 @page "/"
@@ -178,11 +180,11 @@ Farklı bir adrese gitmek için `NavigateTo` yöntemi kullanın:
 }
 ```
 
-Tüm `NavigationManager` üyelerinin açıklaması için bkz. [URI ve gezinti durumu yardımcıları](/aspnet/core/blazor/routing#uri-and-navigation-state-helpers).
+Tüm üyelerin açıklaması için `NavigationManager` bkz. [URI ve gezinti durumu yardımcıları](/aspnet/core/blazor/routing#uri-and-navigation-state-helpers).
 
 ## <a name="base-urls"></a>Temel URL 'Ler
 
-Blazor uygulamanız bir temel yol altında dağıtılmışsa, iş özelliğine yönlendirme için `<base>` etiketini kullanarak temel URL 'YI sayfa meta verilerinde belirtmeniz gerekir. Uygulamanın ana bilgisayar sayfası Razor kullanılarak sunucu tarafından işlendiyse, uygulamanın temel adresini belirtmek için `~/` sözdizimini kullanabilirsiniz. Ana bilgisayar sayfası statik HTML ise, temel URL 'YI açıkça belirtmeniz gerekir.
+BlazorUygulamanız bir temel yol altında dağıtılmışsa, `<base>` iş için yönlendirme özelliği etiketini kullanarak sayfa meta verilerinde temel URL 'yi belirtmeniz gerekir. Uygulamanın ana bilgisayar sayfası Razor kullanılarak sunucu tarafından işlendiyse, `~/` uygulamanın temel adresini belirtmek için söz dizimini kullanabilirsiniz. Ana bilgisayar sayfası statik HTML ise, temel URL 'YI açıkça belirtmeniz gerekir.
 
 ```html
 <base href="~/" />
@@ -190,9 +192,9 @@ Blazor uygulamanız bir temel yol altında dağıtılmışsa, iş özelliğine y
 
 ## <a name="page-layout"></a>Sayfa düzeni
 
-ASP.NET Web Forms sayfa düzeni ana sayfalar tarafından işlenir. Ana sayfalar, bir veya daha fazla içerik yer tutucusu içeren bir şablonu tanımlar ve bu, tek tek sayfalarla sağlanabilir. Ana sayfalar *. Master* dosyalarında tanımlanır ve `<%@ Master %>` yönergesi ile başlar. *. Master* dosyalarının içeriği bir *. aspx* sayfası olarak kodlanır, ancak sayfaların içerik sağlayabileceği yerleri işaretlemek için `<asp:ContentPlaceHolder>` denetimleri eklenir.
+ASP.NET Web Forms sayfa düzeni ana sayfalar tarafından işlenir. Ana sayfalar, bir veya daha fazla içerik yer tutucusu içeren bir şablonu tanımlar ve bu, tek tek sayfalarla sağlanabilir. Ana sayfalar *. Master* dosyalarında tanımlanır ve `<%@ Master %>` yönergeyle başlar. *. Master* dosyalarının içeriği bir *. aspx* sayfası gibi kodlanır, ancak `<asp:ContentPlaceHolder>` sayfaların içerik sağlayabildiği yerleri işaretlemek için denetimler eklenir.
 
-*Site. Master*
+*Site.master*
 
 ```aspx-csharp
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
@@ -220,7 +222,7 @@ ASP.NET Web Forms sayfa düzeni ana sayfalar tarafından işlenir. Ana sayfalar,
 </html>
 ```
 
-Blazor ' de, düzen bileşenlerini kullanarak sayfa düzeni işlemiş olursunuz. Düzen bileşenleri, sayfanın içeriğini işlemek için kullanılabilecek `RenderFragment`türünde tek bir `Body` özelliğini tanımlayan `LayoutComponentBase`öğesinden devralınır.
+' De Blazor , düzen bileşenlerini kullanarak sayfa düzeni işlemiş olursunuz. Düzen bileşenleri, `LayoutComponentBase` `Body` `RenderFragment` sayfanın içeriğini işlemek için kullanılabilen, türünde tek bir özelliği tanımlayan öğesinden devralınır.
 
 *MainLayout. Razor*
 
@@ -232,7 +234,7 @@ Blazor ' de, düzen bileşenlerini kullanarak sayfa düzeni işlemiş olursunuz.
 </div>
 ```
 
-Düzen içeren sayfa işlendiğinde, sayfa, düzenin `Body` özelliğini işleyen konumdaki belirtilen düzenin içeriği içinde işlenir.
+Düzen içeren sayfa işlendiğinde, sayfa, düzenin özelliğin oluşturulduğu konumdaki belirtilen düzenin içeriği içinde işlenir `Body` .
 
 Bir sayfaya düzen uygulamak için `@layout` yönergesini kullanın:
 
@@ -242,9 +244,9 @@ Bir sayfaya düzen uygulamak için `@layout` yönergesini kullanın:
 
 Bir klasör ve alt klasörlerdeki tüm bileşenlerin yerleşimini *_Imports. Razor* dosyası kullanarak belirtebilirsiniz. Ayrıca, [yönlendirici bileşenini](#router-component)kullanarak tüm sayfalarınızın varsayılan bir yerleşimini belirtebilirsiniz.
 
-Ana sayfalar birden çok içerik yer tutucusu tanımlayabilir, ancak Blazor içindeki mizanpajlar yalnızca tek bir `Body` özelliğine sahiptir. Bu Blazor düzen bileşenleri sınırlaması, gelecek sürümlerde tamamen değinilecek.
+Ana sayfalar birden çok içerik yer tutucusu tanımlayabilir, ancak içindeki mizanpajlar Blazor yalnızca tek bir `Body` özelliğe sahiptir. Bu Blazor düzen bileşenleri sınırlaması, gelecek sürümlerde tamamen değinilmesi gerekecektir.
 
-ASP.NET Web Forms içindeki ana sayfalar iç içe olabilir. Diğer bir deyişle, ana sayfa bir ana sayfa da kullanabilir. Blazor içindeki düzen bileşenleri çok fazla iç içe olabilir. Düzen bileşenine bir düzen bileşeni uygulayabilirsiniz. İç düzenin içeriği dış düzen içinde işlenir.
+ASP.NET Web Forms içindeki ana sayfalar iç içe olabilir. Diğer bir deyişle, ana sayfa bir ana sayfa da kullanabilir. İçindeki düzen bileşenleri Blazor çok iç içe olabilir. Düzen bileşenine bir düzen bileşeni uygulayabilirsiniz. İç düzenin içeriği dış düzen içinde işlenir.
 
 *ChildLayout. Razor*
 
@@ -276,10 +278,10 @@ Sayfa için işlenmiş çıkış daha sonra şöyle olacaktır:
 </div>
 ```
 
-Blazor içindeki düzenler, genellikle bir sayfa (`<html>`, `<body>`, `<head>`vb.) için kök HTML öğelerini tanımlamaz. Kök HTML öğeleri, uygulamanın ilk HTML içeriğini işlemek için kullanılan bir Blazor uygulamasının konak sayfasında tanımlanır (bkz. [önyükleme Blazor](project-structure.md#bootstrap-blazor)). Konak sayfası, çevreleyen biçimlendirme ile uygulama için birden çok kök bileşeni işleyebilir.
+İçindeki düzenler, Blazor genellikle bir sayfa için kök HTML öğelerini tanımlamaz (,, vb `<html>` `<body>` `<head>` .). Kök HTML öğeleri, uygulamanın Blazor Ilk HTML içeriğini işlemek için kullanılan bir uygulamanın konak sayfasında tanımlanır (bkz. [ Blazor önyükleme ](project-structure.md#bootstrap-blazor)). Konak sayfası, çevreleyen biçimlendirme ile uygulama için birden çok kök bileşeni işleyebilir.
 
-Sayfalar da dahil olmak üzere Blazor içindeki bileşenler `<script>` etiketleri işleyebilir. `<script>` Etiketler bir kez yüklendiğinden ve değiştirilemediğinden bu işleme kısıtlaması vardır. Razor söz dizimi kullanarak etiketleri dinamik olarak işlemeye çalışırsanız beklenmeyen bir davranış ortaya çıkabilir. Bunun yerine, tüm `<script>` Etiketler uygulamanın ana bilgisayar sayfasına eklenmelidir.
+İçindeki Blazor , sayfalar dahil olmak üzere bileşenler, `<script>` etiketleri işleyebilir. Bu işleme kısıtlaması `<script>` , Etiketler bir kez yüklendiğinden ve değiştirilemediğinden oluşur. Razor söz dizimi kullanarak etiketleri dinamik olarak işlemeye çalışırsanız beklenmeyen bir davranış ortaya çıkabilir. Bunun yerine, tüm `<script>` Etiketler uygulamanın ana bilgisayar sayfasına eklenmelidir.
 
 >[!div class="step-by-step"]
->[Önceki](components.md)
->[İleri](state-management.md)
+>[Önceki](components.md) 
+> [Sonraki](state-management.md)

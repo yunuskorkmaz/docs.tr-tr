@@ -1,13 +1,13 @@
 ---
 title: Demetler
-description: Farklı türlerde olabilecek F# adlandırılmamış ancak sıralı değerlerin gruplandırması hakkında bilgi edinin.
+description: 'Farklı türlerde olabilecek adlandırılmamış ancak sıralı değerler gruplandırması olan F # Tuple hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a15d7e0c6c9b42118dd75066f02cbb2e05335fc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d26fd5d7ec5b4939a895a6d2a6a0d7fc6c6c733
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630233"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86173295"
 ---
 # <a name="tuples"></a>Demetler
 
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki söz diziminde her *öğe* geçerli F# bir ifade olabilir.
+Önceki söz diziminde her *öğe* geçerli bir F # ifadesi olabilir.
 
 ## <a name="examples"></a>Örnekler
 
@@ -36,7 +36,7 @@ Aşağıdaki kodda gösterildiği gibi, kayıt düzeni öğelerine erişmek ve a
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-Ayrıca bağlama yoluyla `match` `let` bir ifadenin dışındaki bir düzeni kullanarak bir tanımlama grubu oluşturabilirsiniz.
+Ayrıca bağlama yoluyla bir ifadenin dışındaki bir düzeni kullanarak bir tanımlama grubu oluşturabilirsiniz `match` `let` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
@@ -52,7 +52,7 @@ Bir başvuru kayıt kümesinden yapı grubu içine öğe kopyalamak de basittir:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L62-L66)]
 
-İşlevler `fst` ve`snd` (yalnızca başvuru tanımlama grupları), bir başlığın sırasıyla ilk ve ikinci öğelerini döndürür.
+İşlevler `fst` ve `snd` (yalnızca başvuru tanımlama grupları), bir başlığın sırasıyla ilk ve ikinci öğelerini döndürür.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L72-L73)]
 
@@ -72,7 +72,7 @@ Ayrıca, normal işlev sözdizimi tarafından kapsanan işlev bağımsız deği�
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L88-L88)]
 
-İşlevi `let sum a b = a + b` tanımlamaya yönelik olağan sözdizimi, aşağıdaki kodda gösterildiği gibi, işlevin ilk bağımsız değişkeninin kısmi uygulaması olan bir işlev tanımlamanızı sağlar.
+İşlevi tanımlamaya yönelik olağan sözdizimi, `let sum a b = a + b` aşağıdaki kodda gösterildiği gibi, işlevin ilk bağımsız değişkeninin kısmi uygulaması olan bir işlev tanımlamanızı sağlar.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L90-L94)]
 
@@ -80,17 +80,17 @@ Parametre olarak bir tanımlama grubu kullanmak, currying 'i devre dışı bıra
 
 ## <a name="names-of-tuple-types"></a>Demet türlerinin adları
 
-Tanımlama grubu olan bir türün adını yazdığınızda, öğeleri ayırmak için `*` simgesini kullanın. , `int`Gibi bir `float`,, `string`ve içeren bir tanımlama grubu için, tür şöyle yazılır. `(10, 10.0, "ten")`
+Tanımlama grubu olan bir türün adını yazdığınızda, `*` öğeleri ayırmak için simgesini kullanın. , Gibi bir,, ve içeren bir tanımlama grubu için, `int` `float` `string` `(10, 10.0, "ten")` tür şöyle yazılır.
 
 ```fsharp
 int * float * string
 ```
 
-## <a name="interoperation-with-c-tuples"></a>Tanımlama grupları C# ile birlikte çalışabilirlik
+## <a name="interoperation-with-c-tuples"></a>C# tanımlama grupları ile birlikte çalışma
 
-C#7,0 tanımlama gruplarını dile sunmuştur.  İçindeki C# tanımlama birimleri yapılar ve içindeki F#yapı tanımlama gruplarına eşdeğerdir.  İle C#birlikte çalışmanız gerekiyorsa struct tanımlama gruplarını kullanmanız gerekir.
+C# 7,0, tanımlama gruplarını dile sunmuştur.  C# ' deki diziler yapılar ve F # ' daki yapı tanımlama grupları ile eşdeğerdir.  C# ile birlikte çalışmanız gerekiyorsa struct tanımlama gruplarını kullanmanız gerekir.
 
-Bu kolay bir işlemdir.  Örneğin, bir C# sınıf için bir tanımlama grubu geçirmeniz ve sonra da bir tanımlama grubu olan sonucunu tüketmeniz gerektiğini düşünün:
+Bu kolay bir işlemdir.  Örneğin, bir tanımlama grubunu C# sınıfına geçirmeniz ve sonra da bir tanımlama grubu olan sonucunu tüketmeniz gerektiğini düşünün:
 
 ```csharp
 namespace CSharpTupleInterop
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-F# Kodunuzda, bir yapı tanımlama grubunu parametre olarak geçirebilir ve sonucu yapı grubu olarak kullanabilirsiniz.
+F # kodunuzda, bir yapı tanımlama grubunu parametre olarak geçirebilir ve sonucu bir struct demet olarak kullanabilirsiniz.
 
 ```fsharp
 open TupleInterop
@@ -118,7 +118,7 @@ Başvuru başlıkları ve yapı tanımlama gruplarının tamamen farklı bir tem
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-Tek bir kayıt düzeninde kalıp eşleşmesi gerekir ve diğer bileşenleri oluşturan parçalar ile oluşturun.  Örneğin:
+Tek bir kayıt düzeninde kalıp eşleşmesi gerekir ve diğer bileşenleri oluşturan parçalar ile oluşturun.  Örnek:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
@@ -126,13 +126,13 @@ Tek bir kayıt düzeninde kalıp eşleşmesi gerekir ve diğer bileşenleri olu�
 
 Bu bölüm, derlendikleri zaman başlıkların biçimini açıklar.  .NET Framework 3,5 veya daha düşük bir sürüm hedeflenmediğiniz müddetçe buradaki bilgiler okunmanıza gerek yoktur.
 
-Tanımlama grupları, birden fazla genel türden biri olan, parametre sayısı üzerinde aşırı `System.Tuple`yüklenmiş olan tüm adlandırılmış nesneler veya tür parametrelerinin sayısıyla derlenir. Bu formda, C# veya Visual Basic gibi başka bir dilde görüntülediğinizde ya da F# yapıların farkında olmayan bir araç kullanırken demet türleri görüntülenir. `Tuple` Türler .NET Framework 4 ' te tanıtılmıştı. .NET Framework önceki bir sürümünü hedefliyorsanız, derleyici F# çekirdek kitaplığının 2,0 sürümündeki [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) sürümlerini kullanır. Bu kitaplıktaki türler yalnızca .NET Framework 2,0, 3,0 ve 3,5 sürümlerini hedefleyen uygulamalar için kullanılır. Tür iletme, .NET Framework 2,0 ve .NET Framework 4 F# bileşenleri arasında ikili uyumluluk sağlamak için kullanılır.
+Tanımlama grupları, birden fazla genel türden biri olan, `System.Tuple` parametre sayısı üzerinde aşırı yüklenmiş olan tüm adlandırılmış nesneler veya tür parametrelerinin sayısıyla derlenir. Bu formda, C# veya Visual Basic gibi başka bir dilde görüntülediğinizde ya da F # yapıları farkında olmayan bir araç kullanırken demet türleri görüntülenir. `Tuple`Türler .NET Framework 4 ' te tanıtılmıştı. .NET Framework önceki bir sürümünü hedefliyorsanız, derleyici F # Çekirdek kitaplığının 2,0 sürümündeki [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) sürümlerini kullanır. Bu kitaplıktaki türler yalnızca .NET Framework 2,0, 3,0 ve 3,5 sürümlerini hedefleyen uygulamalar için kullanılır. Tür iletme, .NET Framework 2,0 ve .NET Framework 4 F # bileşenleri arasında ikili uyumluluk sağlamak için kullanılır.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Yapı tanımlama gruplarının derlenmiş formu
 
-Yapı tanımlama grupları (örneğin, `struct (x, y)`), başvuru dizklarından temelde farklıdır.  Bunlar <xref:System.ValueTuple> türü, parametre sayısına göre aşırı yüklendi veya tür parametrelerinin sayısı olarak derlenir.  Bunlar [ C# 7,0 tanımlama](../../csharp/tuples.md) gruplarına ve [Visual Basic 2017 tanımlama](../../visual-basic/programming-guide/language-features/data-types/tuples.md)grubuna eşdeğerdir ve birlikte çalışır.
+Yapı tanımlama grupları (örneğin, `struct (x, y)` ), başvuru dizklarından temelde farklıdır.  Bunlar <xref:System.ValueTuple> türü, parametre sayısına göre aşırı yüklendi veya tür parametrelerinin sayısı olarak derlenir.  [C# 7,0 tanımlama](../../csharp/language-reference/builtin-types/value-tuples.md) gruplarına ve [Visual Basic 2017 tanımlama](../../visual-basic/programming-guide/language-features/data-types/tuples.md)gruplarına eşdeğerdir ve birlikte çalışır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Dili Başvurusu](index.md)
+- [F # dil başvurusu](index.md)
 - [F# Türleri](fsharp-types.md)

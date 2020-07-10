@@ -1,28 +1,28 @@
 ---
-title: parametre değiştirici - C# Reference
+title: out parametre değiştiricisi-C# başvurusu
 ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
+ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805863"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86174815"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
 
-Anahtar `out` kelime bağımsız değişkenlerin başvuruyla geçirilmesine neden olur. Bu, resmi parametreyi bağımsız değişken için bir diğer ad yapar, bu da bir değişken olmalıdır. Başka bir deyişle, parametre üzerinde herhangi bir işlem bağımsız değişken üzerinde yapılır. Bu [ref](ref.md) anahtar kelime gibi, `ref` ancak bu değişken geçirilmeden önce başlatılmasını gerektirir. Ayrıca anahtar kelime [gibi,](in-parameter-modifier.md) ancak `in` bu çağrılan yöntem bağımsız değişken değerini değiştirmek için izin vermez. Bir `out` parametre kullanmak için hem yöntem tanımı hem de `out` arama yönteminin anahtar sözcüğü açıkça kullanması gerekir. Örneğin:  
+`out`Anahtar sözcüğü, bağımsız değişkenlerin başvuruya göre geçirilmesine neden olur. Bir değişken olması gereken, biçimsel parametreye bağımsız değişken için bir diğer ad oluşturur. Diğer bir deyişle, parametresindeki tüm işlemler bağımsız değişkende yapılır. [Ref](ref.md) anahtar sözcüğüne benzer, ancak bu, `ref` değişkeninin geçirilmeden önce başlatılması gerekir. Aynı zamanda [ın](in-parameter-modifier.md) anahtar sözcüğüne benzer, ancak `in` çağrılan yöntemin bağımsız değişken değerini değiştirmesine izin vermez. Bir parametre kullanmak için `out` , hem yöntem tanımı hem de çağıran yöntemi, anahtar sözcüğünü açıkça kullanmalıdır `out` . Örnek:  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 
 > [!NOTE]
-> `out` Anahtar kelime, tür parametresinin ortak olduğunu belirtmek için genel bir tür parametresi ile de kullanılabilir. Bu bağlamda `out` anahtar kelimenin kullanımı hakkında daha fazla bilgi için bkz. [out (Generic Modifier)](out-generic-modifier.md)
+> `out`Anahtar sözcüğü, tür parametresinin covaryant olduğunu belirtmek için genel bir tür parametresiyle de kullanılabilir. Anahtar sözcüğünün bu bağlamda kullanımı hakkında daha fazla bilgi için `out` bkz. [Out (genel değiştirici)](out-generic-modifier.md).
   
-Bağımsız değişkenler `out` olarak geçirilen değişkenlerin bir yöntem çağrısında geçirilmeden önce başlatılması gerekmez. Ancak, yöntem dönmeden önce bir değer atamak için çağrılan yöntem gereklidir.  
+Bağımsız değişken olarak geçirilen değişkenlerin `out` , yöntem çağrısında geçirilmeden önce başlatılması gerekmez. Ancak, yöntemi döndürmadan önce bir değer atamak için çağrılan yöntem gereklidir.  
   
-, `in` `ref`ve `out` anahtar kelimeler aşırı yük çözümlemesi amacıyla yöntem imzasının bir parçası olarak kabul edilmez. Bu nedenle, tek fark bir yöntemin bir `ref` bağımsız `in` değişken ilerlerken `out` diğerinin bir bağımsız değişken almasıysa, yöntemler aşırı yüklenemez. Örneğin, aşağıdaki kod derlenilmeyecektir:  
+`in`, `ref` Ve `out` anahtar kelimeleri, aşırı yükleme çözümlemesi amacıyla yöntem imzasının bir parçası olarak kabul edilmez. Bu nedenle, tek fark bir yöntemin bir `ref` veya bağımsız değişken alırsa `in` ve diğeri bir bağımsız değişken alırsa Yöntemler aşırı yüklenemez `out` . Aşağıdaki kod, örneğin derlenmeyecektir:  
   
 ```csharp
 class CS0663_Example
@@ -34,43 +34,43 @@ class CS0663_Example
 }
 ```
   
-Aşırı yükleme yasal, ancak, bir `ref`yöntem `in`alır `out` , , veya argüman ve diğer bu gibi bu değiştiriciler hiçbiri vardır:  
+Ancak, bir yöntem bir `ref` , `in` veya `out` bağımsız değişkeni alırsa ve diğeri bu değiştiricilerin hiçbirini içeriyorsa, bunun gibi aşırı yükleme geçerlidir:  
   
 [!code-csharp[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#2)]  
 
-Derleyici, çağrı yerindeki parametre değiştiricilerini yöntem çağrısında kullanılan parametre değiştiricileriyle eşleştirerek en iyi aşırı yüklemeyi seçer.
+Derleyici, çağrı sitesindeki parametre değiştiricilerini Yöntem çağrısında kullanılan parametre değiştiricilerine eşleyerek en iyi aşırı yüklemeyi seçer.
 
-Özellikler değişken değildir ve bu nedenle `out` parametre olarak geçirilemez.
+Özellikler değişken değildir ve bu nedenle parametre olarak geçirilemez `out` .
   
-Aşağıdaki yöntem türleri `in`için `ref`, `out` ve anahtar kelimeleri kullanamazsınız:  
+`in` `ref` `out` Aşağıdaki tür yöntemler için, ve anahtar sözcüklerini kullanamazsınız:  
   
-- Async değiştirici kullanarak tanımladığınız [async](./async.md) yöntemleri.  
+- Zaman [uyumsuz](./async.md) değiştirici kullanarak tanımladığınız zaman uyumsuz yöntemler.  
   
-- [Verim getirisi](./yield.md) veya `yield break` deyimi içeren yineleyici yöntemleri.  
+- Bir [yield return](./yield.md) veya bildiri içeren Yineleyici yöntemleri `yield break` .  
 
-Buna ek olarak, [uzantı yöntemleri](../../programming-guide/classes-and-structs/extension-methods.md) aşağıdaki kısıtlamalara sahiptir:
+Ayrıca, [genişletme yöntemleri](../../programming-guide/classes-and-structs/extension-methods.md) aşağıdaki kısıtlamalara sahiptir:
 
-- Anahtar `out` kelime, bir uzantı yönteminin ilk bağımsız değişkeninde kullanılamaz.
-- Anahtar `ref` kelime, bağımsız değişken bir yapı olmadığında veya yapı olarak sınırlandırılmamış genel bir tür olduğunda, uzantı yönteminin ilk bağımsız değişkeninde kullanılamaz.
-- İlk `in` bağımsız değişken bir yapı olmadığı sürece anahtar sözcük kullanılamaz. Anahtar `in` kelime, yapı olarak sınırlandırılsa bile, herhangi bir genel türde kullanılamaz.
+- `out`Anahtar sözcüğü, bir genişletme yönteminin ilk bağımsız değişkeninde kullanılamaz.
+- `ref`Anahtar sözcüğü, bağımsız değişken bir struct olmadığında ya da genel bir tür struct olarak kısıtlanmamışsa Genişletme yönteminin ilk bağımsız değişkeninde kullanılamaz.
+- `in`İlk bağımsız değişken bir struct olmadığı müddetçe anahtar sözcüğü kullanılamaz. `in`Anahtar sözcüğü, bir struct gibi sınırlandırsalar bile herhangi bir genel tür üzerinde kullanılamaz.
 
-## <a name="declaring-out-parameters"></a>Parametreleri `out` bildirme
+## <a name="declaring-out-parameters"></a>`out`Parametreleri bildirme
 
-Bağımsız değişkenlerle `out` bir yöntem bildirmek, birden çok değer döndürmek için klasik bir geçici çözümdür. C# 7.0 ile başlayarak, benzer senaryolar için [tuples](../../tuples.md) düşünün. Aşağıdaki örnekte, `out` tek bir yöntem çağrısıyla üç değişken i Üçüncü bağımsız değişken null atanır. Bu, yöntemlerin değerleri isteğe bağlı olarak döndürmesini sağlar.  
+Bağımsız değişkenlerle bir yöntemi bildirmek `out` , birden çok değer döndürmek için klasik bir geçici çözümdür. C# 7,0 ' den başlayarak benzer senaryolar için [değer tanımlama gruplarını](../builtin-types/value-tuples.md) göz önünde bulundurun. Aşağıdaki örnek, `out` tek bir yöntem çağrısıyla üç değişken döndürmek için kullanır. Üçüncü bağımsız değişken null öğesine atandı. Bu, yöntemlerin değerleri isteğe bağlı olarak döndürmesini sağlar.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
-## <a name="calling-a-method-with-an-out-argument"></a>Bir yöntemi `out` bağımsız değişkenle çağırma
+## <a name="calling-a-method-with-an-out-argument"></a>Bağımsız değişkenle bir yöntemi çağırma `out`
 
-C# 6 ve daha önce, bir değişkeni bağımsız değişken olarak `out` geçirmeden önce ayrı bir ifadede bildirmeniz gerekir. Aşağıdaki örnek, bir dizeyi bir sayıya dönüştürmeyi amaçlayan `number` [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) yöntemine geçirilmeden önce adlı bir değişkeni bildirir.
+C# 6 ve önceki sürümlerde, bağımsız değişken olarak geçirmeden önce bir değişkeni ayrı bir ifadede bildirmeniz gerekir `out` . Aşağıdaki örnek, `number` bir dizeyi bir sayıya dönüştürmeyi deneyen [Int32. TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) yöntemine geçirilmeden önce adlı bir değişken bildirir.
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#4)]  
 
-C# 7.0 ile başlayarak, `out` değişkeni ayrı bir değişken bildirimi yerine yöntem çağrısının bağımsız değişken listesinde bildirebilirsiniz. Bu, daha kompakt, okunabilir kod üretir ve yöntem çağrısından önce değişkene yanlışlıkla bir değer atamanızı engeller. Aşağıdaki örnek, [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) `number` yöntemine yapılan çağrıdaki değişkeni tanımlaması dışında önceki örnekteki gibidir.
+C# 7,0 ' den başlayarak `out` değişkeni ayrı bir değişken bildiriminde değil, yöntem çağrısının bağımsız değişken listesinde bildirebilirsiniz. Bu daha kompakt, okunabilir kod üretir ve ayrıca yöntem çağrısından önce değişkene yanlışlıkla bir değer atamaktan de engel olur. Aşağıdaki örnek, `number` [Int32. TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) yöntemine yapılan çağrıda değişkeni tanımladığından, önceki örneğe benzer.
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#5)]  
 
-Önceki örnekte, `number` değişken güçlü bir şekilde `int`. Aşağıdaki örnekte olduğu gibi, örtülü olarak yazılan yerel değişkeni de bildirebilirsiniz.
+Önceki örnekte, `number` değişken kesin olarak bir olarak yazılır `int` . Ayrıca, aşağıdaki örnekte olduğu gibi örtük olarak yazılmış bir yerel değişken de bildirebilirsiniz.
 
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#6)]  
 
@@ -79,7 +79,7 @@ C# 7.0 ile başlayarak, `out` değişkeni ayrı bir değişken bildirimi yerine 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](./index.md)
+- [C# anahtar sözcükleri](./index.md)
 - [Yöntem Parametreleri](./method-parameters.md)
