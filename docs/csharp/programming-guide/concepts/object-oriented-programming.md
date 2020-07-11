@@ -2,17 +2,18 @@
 title: Nesne odaklı programlama (C#)
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 98dd5147ab54375ec851ccd9b981a68098a53270
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241896"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226640"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
 
-C#, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
+C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 
+- *Soyutlama* , tür tüketicilerden gereksiz ayrıntıların gizlenmesi anlamına gelir.
 - *Kapsülleme* , ilişkili özellikler, Yöntemler ve diğer üyelerin bir grubunun tek bir birim veya nesne olarak kabul edildiği anlamına gelir.
 - *Devralma* , mevcut bir sınıfı temel alan yeni sınıflar oluşturma özelliğini açıklar.
 - Çok *biçimlilik* , her bir sınıf farklı yollarla aynı özellikleri veya yöntemleri uyguladığından bile, birbirinin yerine kullanılabilecek birden fazla sınıfa sahip olabileceği anlamına gelir.
@@ -29,7 +30,7 @@ class SampleClass
 }
 ```
 
-C# Ayrıca, devralma veya çok biçimlilik için desteğe ihtiyacınız olmadığında yararlı olan *yapılar* olarak adlandırılan türler de sağlar.
+C# Ayrıca, devralma veya çok biçimlilik için desteğe ihtiyacınız olmadığında yararlı olan *yapılar* olarak adlandırılan türler de sağlar. Daha fazla bilgi için bkz. [sınıf ve yapı arasında seçim yapma](../../../standard/design-guidelines/choosing-between-class-and-struct.md).
 
 Bir yapı tanımlamak için:
 
@@ -89,9 +90,9 @@ class SampleClass
 
 Çoğu özelliğin, özellik değerini ayarlamak ve almak için yöntemleri ya da yordamları vardır. Ancak, bunları değiştirilmesini veya okumayı kısıtlamak için salt okunurdur veya salt yazılır özellikler oluşturabilirsiniz. C# ' de, `get` veya `set` özellik yöntemini atlayabilirsiniz. Ancak otomatik uygulanan özellikler salt yazılır olamaz. Salt okuma otomatik uygulanmış özellikler, kapsayan sınıfın oluşturucuları içinde ayarlanabilir.
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz:
 
-- [get](../../language-reference/keywords/get.md)
+- [Al](../../language-reference/keywords/get.md)
 - [kurmak](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>Yöntemler
@@ -121,7 +122,7 @@ public int SampleMethod(int sampleParam) { }
 
 Çoğu durumda, bir sınıf tanımı içinde bir yöntemi bildirirsiniz. Ancak C#, sınıfın gerçek tanımının dışında mevcut bir sınıfa Yöntemler eklemenize olanak tanıyan *genişletme yöntemlerini* de destekler.
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz:
 
 - [Yöntemler](../classes-and-structs/methods.md)
 - [Uzantı Metotları](../classes-and-structs/extension-methods.md)
@@ -150,7 +151,7 @@ Sonlandırıcı, sınıf örneklerinin çıkarılması için kullanılır. .NET 
 
 .NET 'teki sonlandırıcılar ve çöp toplama hakkında daha fazla bilgi için bkz. [çöp toplama](../../../standard/garbage-collection/index.md).
 
-#### <a name="events"></a>Ekinlikler
+#### <a name="events"></a>Olaylar
 
 Olaylar, bir sınıf ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya Başlatan) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya işleyen) sınıflar *aboneler*olarak adlandırılır. Olaylar, nasıl oluşturulur ve işlenir hakkında daha fazla bilgi için bkz. [Olaylar](../../../standard/events/index.md).
 
@@ -186,8 +187,8 @@ Aşağıdaki erişim değiştiriciler kullanılabilir:
 
 | C# değiştiricisi | Tanım |
 |--|--|
-| [public](../../language-reference/keywords/public.md) | Türe veya üyeye aynı derlemedeki veya buna başvuran başka bir derlemede bir veya daha fazla kod tarafından erişilebilir. |
-| [private](../../language-reference/keywords/private.md) | Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir. |
+| [genel](../../language-reference/keywords/public.md) | Türe veya üyeye aynı derlemedeki veya buna başvuran başka bir derlemede bir veya daha fazla kod tarafından erişilebilir. |
+| [özelleştirme](../../language-reference/keywords/private.md) | Türe veya üyeye yalnızca aynı sınıftaki kodla erişilebilir. |
 | [protected](../../language-reference/keywords/protected.md) | Türe veya üyeye yalnızca aynı sınıftaki veya türetilmiş bir sınıftaki kodla erişilebilir. |
 | [internal](../../language-reference/keywords/internal.md) | Türe veya üyeye aynı derlemedeki kod tarafından erişilebilir, ancak başka bir derlemeden erişilebilir. |
 | [protected internal](../../language-reference/keywords/protected-internal.md) | Türe veya üyeye aynı derlemedeki herhangi bir kod ya da başka bir derlemedeki türetilmiş bir sınıf tarafından erişilebilir. |
@@ -223,7 +224,7 @@ var sampleObject = new SampleClass
 };
 ```
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz:
 
 - [New Işleci](../../language-reference/operators/new-operator.md)
 - [Nesne ve Koleksiyon Başlatıcıları](../classes-and-structs/object-and-collection-initializers.md)
@@ -295,7 +296,7 @@ Bir sınıfın yalnızca temel sınıf olarak kullanılabileceğini ve örneklen
 public abstract class B { }
 ```
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz:
 
 - [sealed](../../language-reference/keywords/sealed.md)
 - [Soyut](../../language-reference/keywords/abstract.md)
@@ -308,7 +309,7 @@ Varsayılan olarak, türetilmiş bir sınıf kendi temel sınıfından tüm üye
 
 | C# değiştiricisi | Tanım |
 |--|--|
-| [virtual](../../language-reference/keywords/virtual.md) | Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. |
+| [sanal](../../language-reference/keywords/virtual.md) | Bir sınıf üyesinin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. |
 | [override](../../language-reference/keywords/override.md) | Temel sınıfta tanımlanan bir sanal (geçersiz kılınabilir) üyeyi geçersiz kılar. |
 | [Soyut](../../language-reference/keywords/abstract.md) | Türetilmiş sınıfta bir sınıf üyesinin geçersiz kılınmasını gerektirir. |
 | [new Değiştiricisi](../../language-reference/keywords/new-modifier.md) | Temel sınıftan devralınan bir üyeyi gizler |
@@ -360,7 +361,7 @@ var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-Daha fazla bilgi için bkz.
+Daha fazla bilgi için bkz:
 
 - [.NET içindeki Genel Türler](../../../standard/generics/index.md)
 - [Genel türler-C# Programlama Kılavuzu](../generics/index.md)

@@ -4,27 +4,27 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: e0310f31d7becb1f79bb023a277bd565421b44fb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 378ee4e7d3a3b106b719e5da819b09f336ff218e
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350493"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226666"
 ---
 # <a name="tuples-visual-basic"></a>Tanımlama grupları (Visual Basic)
 
-Visual Basic 2017 ' den itibaren Visual Basic dili, tanımlama gruplarını oluşturmayı ve tanımlama gruplarının öğelerine erişimi kolaylaştıran tanımlama grupları için yerleşik destek sunar. Kayıt düzeni, belirli bir sayı ve değer dizisi olan basit bir veri yapısıdır. Kayıt kümesini örneklediğinizde, her bir değerin (veya öğesinin) numarasını ve veri türünü tanımlarsınız. Örneğin, 2 demet (veya çift) iki öğeye sahiptir. Birincisi bir `Boolean` değeri olabilir, ikincisi ise bir `String`. Tanımlama grupları birden çok değeri tek bir nesnede depolamayı kolaylaştırdığından, genellikle bir yöntemden birden çok değer döndürmenin hafif bir yolu olarak kullanılırlar.
+Visual Basic 2017 ' den itibaren Visual Basic dili, tanımlama gruplarını oluşturmayı ve tanımlama gruplarının öğelerine erişimi kolaylaştıran tanımlama grupları için yerleşik destek sunar. Kayıt düzeni, belirli bir sayı ve değer dizisi olan basit bir veri yapısıdır. Kayıt kümesini örneklediğinizde, her bir değerin (veya öğesinin) numarasını ve veri türünü tanımlarsınız. Örneğin, 2 demet (veya çift) iki öğeye sahiptir. İlki `Boolean` bir değer, ikincisi ise bir değer olabilir `String` . Tanımlama grupları birden çok değeri tek bir nesnede depolamayı kolaylaştırdığından, genellikle bir yöntemden birden çok değer döndürmenin hafif bir yolu olarak kullanılırlar.
 
 > [!IMPORTANT]
-> Tanımlama grubu desteği <xref:System.ValueTuple> türünü gerektirir. .NET Framework 4,7 yüklü değilse, NuGet galerisinde bulunan `System.ValueTuple`NuGet paketini eklemeniz gerekir. Bu paket olmadan şuna benzer bir derleme hatası alabilirsiniz, "önceden tanımlanmış tür ' ValueTuple (Of,,,) ' tanımlanmamış veya içeri aktarılmaz."
+> Tanımlama grubu desteği <xref:System.ValueTuple> türü gerektirir. .NET Framework 4,7 yüklü değilse, NuGet galerisinde bulunan NuGet paketini eklemeniz gerekir `System.ValueTuple` . Bu paket olmadan şuna benzer bir derleme hatası alabilirsiniz, "önceden tanımlanmış tür ' ValueTuple (Of,,,) ' tanımlanmamış veya içeri aktarılmaz."
 
 ## <a name="instantiating-and-using-a-tuple"></a>Tanımlama grubu örneği oluşturma ve kullanma
 
-Noktalı virgülle ayrılmış değerler ım ayraçları ekleyerek bir tanımlama grubu örneğini oluşturabilirsiniz. Bu değerlerin her biri, kayıt düzeni alanı haline gelir. Örneğin, aşağıdaki kod, ilk değeri olarak bir `Date`, ikincisinin `String` ve üçüncü olarak bir `Boolean` olan Üçlü (veya 3-kayıt) tanımlar.
+Virgülle ayrılmış değerleri parantez içine alarak bir tanımlama grubu örnekleyebilirsiniz. Bu değerlerin her biri, kayıt düzeni alanı haline gelir. Örneğin, aşağıdaki kod, `Date` birinci değeri,, `String` ikincisinin ve üçüncü olarak bir ile bir üçlü (veya 3-kayıt) tanımlar `Boolean` .
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#1)]
 
-Varsayılan olarak, bir tanımlama grubu içindeki her bir alanın adı dize `Item` oluşur. Bu 3 kayıt düzeni için `Date` alanı `Item1`, `String` alanı `Item2`ve `Boolean` alanı `Item3`. Aşağıdaki örnek, önceki kod satırında oluşturulan kayıt kümesi alanlarının değerlerini görüntüler
+Varsayılan olarak, bir tanımlama grubu içindeki her alanın adı, dizenin `Item` kayıt düzeninde tek tabanlı konumuyla birlikte dizeden oluşur. Bu 3 tanımlama grubu için alan, alanı `Date` `Item1` `String` `Item2` ve `Boolean` alanıdır `Item3` . Aşağıdaki örnek, önceki kod satırında oluşturulan kayıt kümesi alanlarının değerlerini görüntüler
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#2)]
 
@@ -34,7 +34,7 @@ Visual Basic bir tanımlama grubu alanları okuma-yazma; bir tanımlama grubu ö
 
 ## <a name="instantiating-and-using-a-named-tuple"></a>Adlandırılmış bir tanımlama grubu örneği oluşturma ve kullanma
 
-Bir tanımlama grubu alanları için varsayılan adları kullanmak yerine, kendi adlarınızı kayıt düzeni öğelerine atayarak *adlandırılmış bir tanımlama grubu* örneğini oluşturabilirsiniz. Kayıt düzeni alanlarına, kendilerine atanan adlarıyla *veya* varsayılan adlarıyla erişilebilir. Aşağıdaki örnek, birinci alanı `EventDate`, ikinci `Name`ve üçüncü `IsHoliday`açıkça adı dışında, daha önceden aynı 3 kayıt hattı oluşturur. Ardından alan değerlerini görüntüler, değiştirir ve alan değerlerini yeniden görüntüler.
+Bir tanımlama grubu alanları için varsayılan adları kullanmak yerine, kendi adlarınızı kayıt düzeni öğelerine atayarak *adlandırılmış bir tanımlama grubu* örneğini oluşturabilirsiniz. Kayıt düzeni alanlarına, kendilerine atanan adlarıyla *veya* varsayılan adlarıyla erişilebilir. Aşağıdaki örnek, ilk alanı `EventDate` , ikincisini ve üçüncü kez açıkça isimlendiren şekilde, daha önceden aynı 3 kayıt hattı oluşturur `Name` `IsHoliday` . Ardından alan değerlerini görüntüler, değiştirir ve alan değerlerini yeniden görüntüler.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
@@ -42,7 +42,7 @@ Bir tanımlama grubu alanları için varsayılan adları kullanmak yerine, kendi
 
 Visual Basic 15,3 ' den başlayarak, Visual Basic demet öğelerinin adlarını çıkarabilir; Bunları açıkça atamanız gerekmez. Çıkarsanan tanımlama grubu adları, bir dizi değişkenden bir tanımlama grubu başlattığınızda ve demet öğesi adının değişken adıyla aynı olmasını istediğinizde faydalıdır.
 
-Aşağıdaki örnek, açıkça adlandırılmış üç öğe, `state`, `stateName`ve `capital`içeren `stateInfo` bir tanımlama grubu oluşturur. Öğeleri adlandırırken, demet başlatma bildiriminin adlandırılmış öğeleri, aynı adlı değişkenlerin değerlerini atadığını unutmayın.
+Aşağıdaki örnek, `stateInfo` açıkça adlandırılmış üç öğe,, `state` , ve içeren bir tanımlama grubu oluşturur `stateName` `capital` . Öğeleri adlandırırken, demet başlatma bildiriminin adlandırılmış öğeleri, aynı adlı değişkenlerin değerlerini atadığını unutmayın.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
 
@@ -50,7 +50,7 @@ Aşağıdaki örnek, açıkça adlandırılmış üç öğe, `state`, `stateName
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-Gösterilen demet öğesi adlarını etkinleştirmek için, Visual Basic projenizin (\*. vbproj) dosyasında kullanmak üzere Visual Basic derleyicisinin sürümünü tanımlamanız gerekir:
+Gösterilen demet öğesi adlarını etkinleştirmek için, Visual Basic projesi ( \* . vbproj) dosyanızda kullanmak üzere Visual Basic derleyicisinin sürümünü tanımlamanız gerekir:
 
 ```xml
 <PropertyGroup>
@@ -58,21 +58,21 @@ Gösterilen demet öğesi adlarını etkinleştirmek için, Visual Basic projeni
 </PropertyGroup>
 ```
 
-Sürüm numarası, 15,3 ile başlayan Visual Basic derleyicisinin herhangi bir sürümü olabilir. Belirli bir derleyici sürümünü sabit kodlamak yerine, sisteminizde yüklü Visual Basic derleyicisinin en son sürümüyle derlemek için `LangVersion` değeri olarak "en son" i de belirtebilirsiniz.
+Sürüm numarası, 15,3 ile başlayan Visual Basic derleyicisinin herhangi bir sürümü olabilir. Belirli bir derleyici sürümünü sabit kodlamak yerine, `LangVersion` sisteminizde yüklü Visual Basic derleyicisinin en son sürümüyle derlemek için "en son" değerini de belirtebilirsiniz.
 
 Daha fazla bilgi için, [Visual Basic dil sürümünü ayarlama](../../../language-reference/configure-language-version.md)bölümüne bakın.
 
-Bazı durumlarda Visual Basic derleyici, aday adından demet öğesi adı çıkarsanamıyor ve demet alanına yalnızca varsayılan adı kullanılarak başvurulabilir (örneğin, `Item1`, `Item2`vb.). Bunlar şunları içerir:
+Bazı durumlarda Visual Basic derleyici, aday adından demet öğesi adını çıkarsamaz ve demet alanına yalnızca varsayılan adı kullanılarak başvurulabilir, örneğin, `Item1` `Item2` vb. Bunlar şunları içerir:
 
-- Aday adı, `Item3`, `Rest`veya `ToString`gibi bir demet üyesinin adı ile aynıdır.
+- Aday adı,, veya gibi bir demet üyesinin adı ile aynıdır `Item3` `Rest` `ToString` .
 
 - Aday adı kayıt düzeninde yinelenir.
 
-Alan adının çıkarımı başarısız olduğunda, Visual Basic bir derleyici hatası oluşturmaz veya çalışma zamanında oluşturulan bir özel durumdur. Bunun yerine, demet alanlarına `Item1` ve `Item2`gibi önceden tanımlanmış adlarıyla başvurulmalıdır.
+Alan adının çıkarımı başarısız olduğunda, Visual Basic bir derleyici hatası oluşturmaz veya çalışma zamanında oluşturulan bir özel durumdur. Bunun yerine, demet alanlarına, ve gibi önceden tanımlanmış adlarıyla başvurulmalıdır `Item1` `Item2` .
 
 ## <a name="tuples-versus-structures"></a>Tanımlama grupları ve yapılar
 
-Visual Basic tanımlama grubu, **System. ValueTuple** genel türlerinden birinin bir örneği olan bir değer türüdür. Örneğin, önceki örnekte tanımlanan `holiday` tanımlama grubu <xref:System.ValueTuple%603> yapısının bir örneğidir. Veriler için hafif bir kapsayıcı olacak şekilde tasarlanmıştır. Kayıt düzeni, birden fazla veri öğesiyle bir nesne oluşturmayı kolaylaştıran bir özel yapının sahip olabileceği bazı özelliklerden oluşur. Bunlar:
+Visual Basic tanımlama grubu, **System. ValueTuple** genel türlerinden birinin bir örneği olan bir değer türüdür. Örneğin, `holiday` Önceki örnekte tanımlanan kayıt düzeni yapının bir örneğidir <xref:System.ValueTuple%603> . Veriler için hafif bir kapsayıcı olacak şekilde tasarlanmıştır. Kayıt düzeni, birden fazla veri öğesiyle bir nesne oluşturmayı kolaylaştıran bir özel yapının sahip olabileceği bazı özelliklerden oluşur. Bunlar:
 
 - Özel Üyeler. Tanımlama grubu için kendi özelliklerinizi, yöntemlerinizi veya olaylarını tanımlayamazsınız.
 
@@ -84,14 +84,14 @@ Visual Basic tanımlama grubu, **System. ValueTuple** genel türlerinden birinin
 
 Visual Basic bir tanımlama grubu, değer **Etuple** türünün üyelerini devralınır. Alanlarına ek olarak, bunlar aşağıdaki yöntemleri içerir:
 
-| Üyesi | Açıklama |
+| Üye | Açıklama |
 | ---|---|
-| compareTo | Geçerli tanımlama grubunu aynı sayıda öğeye sahip başka bir tanımlama grubu ile karşılaştırır. |
+| CompareTo | Geçerli tanımlama grubunu aynı sayıda öğeye sahip başka bir tanımlama grubu ile karşılaştırır. |
 | Eşittir | Geçerli tanımlama grubunun başka bir demet veya nesneye eşit olup olmadığını belirler. |
 | GetHashCode | Geçerli örnek için karma kodu hesaplar. |
-| Yönte | Bu tanımlama grubunun dize gösterimini döndürür, burada `Item1` ve `Item2` demet 'in alanlarının değerlerini temsil eder `(Item1, Item2...)`. |
+| ToString | Bu tanımlama grubunun dize gösterimini döndürür. Bu, formunu alır `(Item1, Item2...)` `Item1` ve `Item2` kayıt düzeni alanlarının değerlerini temsil eder. |
 
-Ayrıca, **Valuetuple** türleri <xref:System.Collections.IStructuralComparable> ve <xref:System.Collections.IStructuralEquatable> arabirimlerini uygular ve bu da müşteri Karşılaştırıcılar tanımlamanızı sağlar.
+Ayrıca, **Valuetuple** türleri <xref:System.Collections.IStructuralComparable> <xref:System.Collections.IStructuralEquatable> , müşteri Karşılaştırıcılar tanımlamanızı sağlayan ve arabirimlerini uygular.
 
 ## <a name="assignment-and-tuples"></a>Atama ve tanımlama grupları
 
@@ -101,7 +101,7 @@ Visual Basic, aynı sayıda alana sahip demet türleri arasında atamayı destek
 
 - Kaynak türü için bir genişletme (veya örtük) hedef türüne dönüştürme tanımlanır.
 
-- `Option Strict` `On`ve kaynak türünün hedef türüne bir daraltma (veya açık) dönüştürmesi tanımlanmıştır. Bu dönüştürme, kaynak değer hedef türü aralığının dışındaysa bir özel durum oluşturabilir.
+- `Option Strict``On`, ve kaynak türün hedef türüne bir daraltma (veya açık) dönüştürmesi tanımlanmıştır. Bu dönüştürme, kaynak değer hedef türü aralığının dışındaysa bir özel durum oluşturabilir.
 
 Diğer dönüşümler atamalar için değerlendirilmez. Demet türleri arasında izin verilen atama türlerine bakalım.
 
@@ -109,7 +109,7 @@ Aşağıdaki örneklerde kullanılan değişkenleri göz önünde bulundurun:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-`unnamed` ve `anonymous`ilk iki değişken, alanlar için belirtilen semantik adlara sahip değildir. Alan adları varsayılan `Item1` ve `Item2`. Son iki değişken, `named` ve `differentName` semantik alan adlarına sahiptir. Bu iki tanımlama alanının alanlar için farklı adlara sahip olduğunu unutmayın.
+İlk iki değişken `unnamed` ve `anonymous` , alanlar için belirtilen semantik adlara sahip değildir. Alan adları varsayılan `Item1` ve ' dir `Item2` . Son iki değişken `named` ve `differentName` anlamsal alan adlarına sahip. Bu iki tanımlama alanının alanlar için farklı adlara sahip olduğunu unutmayın.
 
 Bu başlıkların dördü, aynı sayıda alana sahiptir (' parametre sayısı ' olarak adlandırılır) ve bu alanların türleri aynıdır. Bu nedenle, bu atamaların hepsi çalışır:
 
@@ -117,7 +117,7 @@ Bu başlıkların dördü, aynı sayıda alana sahiptir (' parametre sayısı ' 
 
 Başlıkların adlarının atanmadığından emin olun. Alanların değerleri, kayıt grubundaki alanların sırasını izleyerek atanır.
 
-Son olarak, `named` ilk alanı bir `Integer`olsa ve `conversion` ilk alanı bir `Long`olsa da, `named` tanımlama grubunu `conversion` tanımlama listesine atayabiliriz. Bu atama başarılı olur çünkü bir `Integer` `Long` dönüştürmek, genişleyen bir dönüştürmedir.
+Son olarak, `named` `conversion` ilk alanı `named` bir, `Integer` ve ' nin ilk alanı bir olan olan ' a sahip olsa da, kayıt kümesini tanımlama grubu `conversion` atayabiliriz `Long` . Bu atama başarılı oldu çünkü bir `Integer` öğesine dönüştürme `Long` , genişleyen bir dönüştürme.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
@@ -141,11 +141,11 @@ Bir yöntem yalnızca tek bir değer döndürebilir. Genellikle, bir yöntem ça
 
 - Birden çok dönüş değerini almak için basit bir çözüm sağlayan bir tanımlama grubu kullanabilirsiniz.
 
-Örneğin, .NET 'teki **Tryparo** yöntemleri ayrıştırma işleminin başarılı olup olmadığını belirten bir `Boolean` değer döndürür. Ayrıştırma işleminin sonucu, metoduna verilen başvuruya göre geçirilen bir değişkende döndürülür. Normalde, <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> gibi bir ayrıştırma yöntemine yapılan bir çağrı aşağıdaki gibi görünür:
+Örneğin, .NET 'teki **Tryparo** yöntemleri `Boolean` ayrıştırma işleminin başarılı olup olmadığını gösteren bir değer döndürür. Ayrıştırma işleminin sonucu, metoduna verilen başvuruya göre geçirilen bir değişkende döndürülür. Normalde, gibi bir ayrıştırma yöntemine yapılan bir çağrı aşağıdaki gibi <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> görünür:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#1)]
 
-Çağrısı, kendi yöntemdeki <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> yöntemine sarımızda, ayrıştırma işleminden bir tanımlama grubu döndürebiliriz. Aşağıdaki örnekte, `NumericLibrary.ParseInteger` <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> yöntemini çağırır ve iki öğesi olan adlandırılmış bir tanımlama grubu döndürür.
+Yöntemini kendi yöntemdeki yöntemine sarımızda ayrıştırma işleminden bir tanımlama grubu döndürüyoruz <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> . Aşağıdaki örnekte, `NumericLibrary.ParseInteger` <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> yöntemini çağırır ve iki öğesi olan adlandırılmış bir tanımlama grubu döndürür.
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
@@ -157,7 +157,7 @@ Daha sonra aşağıdaki gibi kodla yöntemi çağırabilirsiniz:
 
 Visual Basic tanımlama grubu, .NET Framework 4,7 ' de tanıtılan **System. ValueTuple** genel türlerinden birinin bir örneğidir. .NET Framework Ayrıca bir dizi genel **System. Tuple** sınıfı içerir. Ancak, bu sınıflar, Visual Basic tanımlama tiplerinden ve **System. ValueTuple** genel türlerinden farklı çeşitli yollarla farklılık gösterir:
 
-- **Demet** sınıflarının öğeleri `Item1`, `Item2`vb. adlı özelliklerdir. Visual Basic tanımlama tiplerinde ve **Valuetuple** türlerinde, demet öğeleri alanlardır.
+- **Demet** sınıflarının öğeleri, vb. adlı özelliklerdir `Item1` `Item2` . Visual Basic tanımlama tiplerinde ve **Valuetuple** türlerinde, demet öğeleri alanlardır.
 
 - Bir **demet** örneğinin veya bir **Valuetuple** örneğinin öğelerine anlamlı adlar atayamazsınız. Visual Basic alanların anlamını karşılayan adlar atamanıza izin verir.
 
@@ -165,7 +165,7 @@ Visual Basic tanımlama grubu, .NET Framework 4,7 ' de tanıtılan **System. Val
 
 - Genel **demet** türleri başvuru türleridir. Bu **demet** türlerinin kullanılması, nesneleri ayırmayı gösterir. Etkin yollarda bu, uygulamanızın performansı üzerinde ölçülebilir bir etkiye sahip olabilir. Visual Basic tanımlama grupları ve **Valuetuple** türleri değer türlerdir.
 
-<xref:System.TupleExtensions> sınıftaki genişletme yöntemleri, Visual Basic tanımlama grupları ve .NET **demet** nesneleri arasında dönüştürme yapmayı kolaylaştırır. **ToTuple** yöntemi bir Visual Basic tanımlama grubunu bir .net **demet** nesnesine dönüştürür ve **tovaluetuple** yöntemi bir .net **demet** nesnesini bir Visual Basic tanımlama grubu öğesine dönüştürür.
+Sınıfındaki genişletme yöntemleri <xref:System.TupleExtensions> Visual Basic tanımlama grupları ve .net **demet** nesneleri arasında dönüştürme yapmayı kolaylaştırır. **ToTuple** yöntemi bir Visual Basic tanımlama grubunu bir .net **demet** nesnesine dönüştürür ve **tovaluetuple** yöntemi bir .net **demet** nesnesini bir Visual Basic tanımlama grubu öğesine dönüştürür.
 
 Aşağıdaki örnek bir tanımlama grubu oluşturur, bunu bir .NET **demet** nesnesine dönüştürür ve Visual Basic bir tanımlama grubu geri dönüştürür. Daha sonra örnek, eşit olduklarından emin olmak için bu tanımlama grubunu orijinal bir ile karşılaştırır.
 
@@ -173,4 +173,4 @@ Aşağıdaki örnek bir tanımlama grubu oluşturur, bunu bir .NET **demet** nes
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Visual Basic Dili Başvurusu](index.md)
+- [Visual Basic dil başvurusu](index.md)

@@ -1,66 +1,66 @@
 ---
 title: .NET Compiler Platform SDK’sı (Roslyn API’leri)
-description: .NET kodunu anlamak, hataları tespit etmek ve bu hataları düzeltmek için .NET Derleyici Platformu SDK'yı (Roslyn API'leri olarak da adlandırılır) kullanmayı öğrenin.
+description: .NET kodunu anlamak, hataları belirlemek ve bu hataları onarmak için .NET Compiler Platform SDK 'sını (Roslyn API 'Leri olarak da bilinir) kullanmayı öğrenin.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 872bfd388f6974a6d99f769c43e5d341454518cc
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76742744"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226679"
 ---
-# <a name="the-net-compiler-platform-sdk"></a>.NET Derleyici Platformu SDK
+# <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK 'Sı
 
-Derleyiciler, bu kodun sözdizimini ve semantiğini doğrularken uygulama kodunun ayrıntılı bir modelini oluştururlar. Bu modeli, kaynak kodundan çalıştırılabilir çıktıoluşturmak için kullanırlar. .NET Derleyici Platformu SDK bu modele erişim sağlar. Üretkenliğimizi artırmak için IntelliSense, refactoring, akıllı yeniden adlandırma, "Tüm referansları bul" ve "Tanıma git" gibi entegre geliştirme ortamı (IDE) özelliklerine giderek daha fazla güveniyoruz. Kod kalitemizi geliştirmek için kod analiz araçlarına ve uygulama yapımına yardımcı olacak kod jeneratörlerine güveniyoruz. Bu araçlar daha akıllı hale gelince, yalnızca derleyicilerin uygulama kodunu işlerken oluşturdukları modelin daha fazlasına erişmeye ihtiyaç duyarlar. Bu Roslyn API'lerinin temel misyonudur: kara kutuları açmak ve araçların ve son kullanıcıların kodumuz hakkında sahip olduğu bilgi derleyicilerinin zenginliğini paylaşmalarına izin vermek.
-Roslyn aracılığıyla opak kaynak kodlu ve nesne kodlu çevirmenler olmak yerine, derleyiciler platform haline gelir: Araçlarınızda ve uygulamalarınızda kodla ilgili görevler için kullanabileceğiniz API'ler.
+Derleyiciler, bu kodun söz dizimini ve semantiğini doğrulayan, uygulama kodunun ayrıntılı bir modelini oluşturur. Bu model, kaynak koddan yürütülebilir çıktıyı oluşturmak için kullanılır. .NET Compiler Platform SDK bu modele erişim sağlar. Giderek, üretkenliğinizi artırmak için IntelliSense, yeniden düzenleme, akıllı yeniden adlandırma, "tüm başvuruları bul" ve "tanıma git" gibi tümleşik geliştirme ortamı (IDE) özelliklerine güveniyoruz. Kod kaliteimizi ve uygulama oluşturmaya yardımcı olmak için kod oluşturucularımızı geliştirmek üzere kod analizi araçlarına güveniyoruz. Bu araçların daha akıllı bir şekilde yararlandıkları için, uygulama kodunu işlemek üzere yalnızca derleyicilerin oluşturdukları modele daha fazla ve daha fazlasına erişmesi gerekir. Roslyn API 'Lerinin temel görevi budur: donuk kutuları açma ve araçların ve son kullanıcıların, en fazla bilgi derleyicileri, kodumuza sahip olduğu konusunda paylaşmasına izin verme.
+Roslyn aracılığıyla, opak kaynak kodu ve nesne kodu genişletme çeviricileri olması yerine, derleyiciler şu şekilde olur: Araçlar ve uygulamalarınızda kod ile ilgili görevler için kullanabileceğiniz API 'Ler.
 
-## <a name="net-compiler-platform-sdk-concepts"></a>.NET Derleyici Platformu SDK kavramları
+## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform SDK kavramları
 
-.NET Derleyici Platformu SDK, kod odaklı araçlar ve uygulamalar oluşturmak için giriş engelini önemli ölçüde düşürür. Meta programlama, kod oluşturma ve dönüştürme, C# ve Visual Basic dillerinin etkileşimli kullanımı ve etki alanına özgü dillerde C# ve Visual Basic'in katıştırma gibi alanlarda inovasyon için birçok fırsat yaratır.
+.NET Compiler Platform SDK, kod odaklı araçları ve uygulamaları oluşturmak için engel önemli ölçüde düşürür. Meta programlama, kod oluşturma ve dönüştürme, C# ve Visual Basic dillerinin etkileşimli kullanımı ve etki alanına özgü dillerde C# ve Visual Basic ekleme gibi alanlarda yenilik için birçok fırsat oluşturur.
 
-.NET Derleyici Platformu SDK, kodlama hatalarını bulan ve düzelten ***analizörler*** ve ***kod düzeltmeleri*** oluşturmanıza olanak tanır. ***Çözümleyiciler*** kodun sözdizimini ve yapısını anlar ve düzeltilmesi gereken uygulamaları algılar. ***Kod düzeltmeleri,*** çözümleyiciler tarafından bulunan kodlama hatalarını gidermek için önerilen bir veya daha fazla düzeltme sağlar. Genellikle, bir çözümleyici ve ilişkili kod düzeltmeleri tek bir projede birlikte paketlenir.
+.NET Compiler Platform SDK, kodlama hatalarını bulup düzelten ***çözümleyiciler*** ve ***kod düzeltmeleri*** oluşturmanıza olanak sağlar. ***Çözümleyiciler*** , kodun sözdizimini ve yapısını anlayıp düzeltilmesi gereken uygulamaları algılar. ***Kod düzeltmeleri*** , çözümleyiciler tarafından bulunan kodlama hatalarının adreslenmesi için bir veya daha fazla önerilen düzeltme sağlar. Genellikle, bir çözümleyici ve ilişkili kod düzeltmeleri tek bir projede birlikte paketlenir.
 
-Çözümleyiciler ve kod düzeltmeleri kodu anlamak için statik çözümleme kullanır. Kodu çalıştırmaz veya başka sınama avantajları sağlamaz. Ancak, genellikle hatalara, sürdürülemez koda veya standart kılavuz ihlaline yol açan uygulamalara işaret edebilirler.
+Çözümleyiciler ve kod düzeltmeleri kodu anlamak için statik analizler kullanır. Kodu çalıştırmaz veya diğer test avantajları sağlamaz. Ancak, genellikle hatalara, sürdürülebilir koda veya Standart Kılavuz ihlaline yol açabilecek uygulamalar ortaya çıkar.
 
-.NET Derleyici Platformu SDK, c# veya Visual Basic kod tabanını incelemenizi ve anlamanızı sağlayan tek bir API kümesi sağlar. Bu tek kod tabanını kullanabileceğiniz için,.NET Derleyici Platformu SDK tarafından sağlanan sözdizimi ve anlamsal analiz API'lerinden yararlanarak çözümleyicileri ve kod düzeltmelerini daha kolay yazabilirsiniz. Derleyici tarafından yapılan çözümlemesi çoğaltma büyük görevden kurtulmuş, bulma ve proje veya kitaplık için ortak kodlama hataları düzeltme daha odaklı görev konsantre olabilirsiniz.
+.NET Compiler Platform SDK, bir C# veya Visual Basic kod temeli incelemenizi ve anlamanıza olanak tanıyan tek bir API kümesi sağlar. Bu tek kod temelini kullanabilmeniz için, .NET Compiler Platform SDK 'Sı tarafından sunulan sözdizimsel ve anlam Analizi API 'Lerinden yararlanarak çözümleyiciler ve kod düzeltmeleri daha kolay bir şekilde yazabilirsiniz. Derleyicinin yaptığı çözümlemenin çoğaltılmasının büyük bir görevinden serbest bırakılmış olduğunda, projeniz veya kitaplığınız için ortak kodlama hatalarını bulma ve düzeltme hakkında daha odaklanmış bir göreve odaklanabilirsiniz.
 
-Daha küçük bir yararı, çözümleyicilerinizin ve kod düzeltmelerinizin daha küçük olması ve Visual Studio'ya yüklendiğinde, projedeki kodu anlamak için kendi kod tabanınızı yazmanızdan çok daha az bellek kullanmasıdır. Derleyici ve Visual Studio tarafından kullanılan aynı sınıfları kullanarak, kendi statik analiz araçları oluşturabilirsiniz. Bu, ekibinizin IDE'nin performansı üzerinde gözle görülür bir etki yaratmadan çözümleyicileri ve kod düzeltmelerini kullanabileceği anlamına gelir.
+Daha küçük bir avantaj, çözümleyicilerin ve kod düzeltmalarınızın daha küçük olması ve Visual Studio 'da yüklendiğinde bir projedeki kodu anlamak için kendi kod tabanınızı yazdığınızda çok daha az bellek kullanmasıdır. Derleyici ve Visual Studio tarafından kullanılan sınıflardan yararlanarak kendi statik analiz araçlarınızı oluşturabilirsiniz. Bu, takımınızın, IDE performansını fark etmeden bir etkisi olmadan çözümleyiciler ve kod düzeltmeleri kullanabileceği anlamına gelir.
 
 Çözümleyiciler ve kod düzeltmeleri yazmak için üç ana senaryo vardır:
 
-1. [*Ekip kodlama standartlarını uygulayın*](#enforce-team-coding-standards)
-1. [*Kütüphane paketleriyle rehberlik sağlayın*](#provide-guidance-with-library-packages)
-1. [*Genel rehberlik sağlayın*](#provide-general-guidance)
+1. [*Takım kodlama standartlarını zorla*](#enforce-team-coding-standards)
+1. [*Kitaplık paketleriyle rehberlik sağlama*](#provide-guidance-with-library-packages)
+1. [*Genel rehberlik sağlama*](#provide-general-guidance)
 
-## <a name="enforce-team-coding-standards"></a>Ekip kodlama standartlarını uygulayın
+## <a name="enforce-team-coding-standards"></a>Takım kodlama standartlarını zorla
 
-Birçok takımın, diğer ekip üyeleriyle kod incelemeleri yoluyla uygulanan kodlama standartları vardır. Çözümleyiciler ve kod düzeltmeleri bu işlemi çok daha verimli hale getirebilir. Kod incelemeleri, bir geliştirici çalışmalarını ekipteki diğer kişilerle paylaştığında gerçekleşir. Geliştirici herhangi bir yorum almadan önce yeni bir özellik tamamlamak için gerekli her zaman yatırım olacaktır. Geliştirici, takımın antrenmanlarına uymayan alışkanlıkları pekiştirirken haftalar cayabilir.
+Birçok ekibin, diğer ekip üyeleriyle kod İncelemeleri aracılığıyla zorlanan kodlama standartları vardır. Çözümleyiciler ve kod düzeltmeleri, bu işlemi çok daha verimli hale getirir. Bir geliştirici ekipte diğerleriyle birlikte çalışmalarını paylaşıyorsa, kod İncelemeleri meydana gelir. Geliştirici, herhangi bir yorum almadan önce yeni bir özelliği tamamlamaya yönelik tüm zamanı yatıracaktır. Geliştiriciler, takımın uygulamalarıyla eşleşmeyen alışkanlıkları zorlarken bu işlem tarafından değişebilir.
 
-Çözümleyiciler bir geliştirici olarak çalıştırın kod yazar. Geliştirici, kılavuzu hemen takip eden anında geri bildirim alır. Geliştirici, prototip oluşturmaya başlar başlamaz uyumlu kod yazma alışkanlıkları oluşturur. Özellik insanların incelemesi için hazır olduğunda, tüm standart kılavuz lar uygulanır.
+Çözümleyiciler geliştirici kodu yazanlar olarak çalışır. Geliştirici, Kılavuzu hemen takip eden anında geri bildirim alır. Geliştirici, prototip yazmaya başladığı anda uyumlu kod yazmak için alışkanlıkları oluşturur. Özellik insanlar tarafından incelenmek üzere hazırlandığında, tüm standart rehberlik zorlanır.
 
-Takımlar, takım kodlama uygulamalarını ihlal eden en yaygın uygulamaları arayan çözümleyiciler ve kod düzeltmeleri oluşturabilir. Bunlar, standartları uygulamak için her geliştiricinin makinesine yüklenebilir.
+Takımlar, takım kodlama uygulamalarını ihlal eden en yaygın uygulamaları bulmak için çözümleyiciler ve kod düzeltmeleri oluşturabilir. Bu, standartları zorlamak için her geliştiricinin makinesine yüklenebilir.
 
-## <a name="provide-guidance-with-library-packages"></a>Kütüphane paketleriyle rehberlik sağlayın
+## <a name="provide-guidance-with-library-packages"></a>Kitaplık paketleriyle rehberlik sağlama
 
-NuGet'de .NET geliştiricileri için çok sayıda kütüphane bulunmaktadır.
-Bunların bazıları Microsoft'tan, bazıları üçüncü taraf şirketlerden ve diğerleri topluluk üyelerinden ve gönüllülerden gelir. Bu kitaplıklar, geliştiriciler bu kitaplıklarla başarılı olduğunda daha fazla benimseme ve daha yüksek incelemeler alır.
+NuGet üzerinde .NET geliştiricileri için kullanılabilen çok sayıda kitaplık vardır.
+Bunlardan bazıları, üçüncü taraf şirketlerden bazıları ve Topluluk üyelerinden ve gönüllü teers 'tan bazıları tarafından Microsoft 'tan geliyor. Bu kitaplıklar, geliştiricilerin bu kitaplıklarla başarılı olabilmesi için daha fazla benimseme ve daha fazla inceleme alır.
 
-Belge sağlamanın yanı sıra, kitaplığınızın yaygın yanlış kullanımlarını bulan ve düzelten çözümleyiciler ve kod düzeltmeleri sağlayabilirsiniz. Bu acil düzeltmeler geliştiricilerin daha hızlı başarılı yardımcı olacaktır.
+Belge sağlamaya ek olarak, kitaplığınızın ortak yanlış kullanımlarını bulup düzelten çözümleyiciler ve kod düzeltmeleri sağlayabilirsiniz. Bu anında düzeltmeler, geliştiricilerin daha hızlı başarılı olmasını sağlayacaktır.
 
-NuGet'deki kitaplığınız ile analizörleri ve kod düzeltmelerini paketleyebilirsiniz. Bu senaryoda, NuGet paketinizi yükleyen her geliştirici çözümleyici paketini de yükler. Kitaplığınızı kullanan tüm geliştiriciler, hatalar ve önerilen düzeltmeler hakkında anında geri bildirim formunda ekibinizden hemen rehberlik alır.
+NuGet 'de çözümleyicilerin ve kod düzeltmelerinin kitaplığınızı paketleyebilir. Bu senaryoda, NuGet paketinizi yükleyen her geliştirici Çözümleyicisi paketini de yükler. Kitaplığınızı kullanan tüm geliştiriciler, hatalar ve önerilen düzeltmeler hakkında anında geri bildirim biçiminde takımınızdan hemen kılavuzluk eder.
 
-## <a name="provide-general-guidance"></a>Genel rehberlik sağlayın
+## <a name="provide-general-guidance"></a>Genel rehberlik sağlama
 
-.NET geliştirici topluluğu, iyi çalışan deneyim kalıpları ve en iyi kaçınılan desenler aracılığıyla keşfedmiştir. Bazı topluluk üyeleri, bu önerilen desenleri uygulayan çözümleyiciler oluşturmuştur. Biz daha fazla bilgi olarak, her zaman yeni fikirler için yer vardır.
+.NET geliştirici topluluğu, en iyi şekilde çalışan deneyim desenleri ve en iyi kaçınılmış desenler aracılığıyla keşfedilmiştir. Birçok topluluk üyesi, bu önerilen desenleri zorlayan çözümleyiciler oluşturmuş. Daha fazla bilgi edindiğimiz gibi, yeni fikirler için her zaman yer vardır.
 
-Bu analizörler Visual Studio [Marketplace'e](https://marketplace.visualstudio.com/vs) yüklenebilir ve Visual Studio kullanan geliştiriciler tarafından indirilebilir. Dile ve platforma yeni başlayanlar kabul edilen uygulamaları hızlı bir şekilde öğrenir ve .NET yolculuklarında daha erken üretken olurlar. Bunlar daha yaygın olarak kullanılmaya açıldıkça, toplum bu uygulamaları benimser.
+Bu çözümleyiciler [Visual Studio Market](https://marketplace.visualstudio.com/vs) yüklenebilir ve Visual Studio kullanılarak geliştiriciler tarafından indirilebilir. Yeni dile ve platforma yönelik olarak kabul edilen uygulamalar, .NET yolculuğunda daha önce kabul edilebilir ve daha önce üretken hale gelir. Bunlar daha yaygın olarak kullanıldığından, topluluk bu uygulamaları benimsemiştir.
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-.NET Derleyici Platformu SDK, kod oluşturma, analiz ve yeniden düzenleme için en son dil nesnesi modellerini içerir. Bu bölümde .NET Derleyici Platformu SDK'ya kavramsal bir genel bakış sağlanmaktadır. Daha fazla bilgi quickstarts, örnekler ve öğreticiler bölümlerinde bulunabilir.
+.NET Compiler Platform SDK, kod oluşturma, çözümleme ve yeniden düzenleme için en son dil nesne modellerini içerir. Bu bölüm .NET Compiler Platform SDK 'ya kavramsal bir genel bakış sağlar. Hızlı başlangıçlar, örnekler ve öğreticiler bölümlerinde daha fazla ayrıntı bulabilirsiniz.
 
-.NET Derleyici Platformu SDK'daki kavramlar hakkında daha fazla bilgi için bu beş konudan bilgi alabilirsiniz:
+Bu beş konuda .NET Compiler Platform SDK 'daki kavramlar hakkında daha fazla bilgi edinebilirsiniz:
 
 - [Söz dizimi görselleştiricisi ile kod bulma](syntax-visualizer.md)
 - [Derleyici API modelini anlama](compiler-api-model.md)
@@ -68,7 +68,7 @@ Bu analizörler Visual Studio [Marketplace'e](https://marketplace.visualstudio.c
 - [Semantik ile çalışma](work-with-semantics.md)
 - [Bir çalışma alanı ile çalışma](work-with-workspace.md)
 
-Başlamak için **.NET Derleyici Platformu SDK'yı**yüklemeniz gerekir:
+Başlamak için **.net Compiler Platform SDK 'sını**yüklemeniz gerekir:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 

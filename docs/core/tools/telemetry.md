@@ -1,42 +1,42 @@
 ---
-title: .NET Çekirdek SDK telemetri
-description: Analiz için kullanım bilgilerini toplayan .NET Core SDK telemetri özelliklerini, hangi verilerin toplandığını ve nasıl devre dışı kalındığını keşfedin.
+title: .NET Core SDK telemetri
+description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplandığı ve devre dışı bırakılacağı .NET Core SDK telemetri özelliklerini bulun.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: a79b791abc99331ff39f5e281ee0fdc62b258989
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
+ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507288"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86226575"
 ---
-# <a name="net-core-sdk-telemetry"></a>.NET Çekirdek SDK telemetri
+# <a name="net-core-sdk-telemetry"></a>.NET Core SDK telemetri
 
-[.NET Core SDK, .NET Core](index.md) CLI çöktüğinde kullanım verilerini ve özel durum bilgilerini toplayan bir telemetri özelliği içerir. .NET Core CLI .NET Core SDK ile birlikte gelir ve .NET Core uygulamalarınızı oluşturmanızı, test etmenizi ve yayınlamanızı sağlayan fiiller kümesidir. .NET ekibinin araçların nasıl kullanıldığını anlayıp geliştirilmelerini laması önemlidir. Hatalar la ilgili bilgiler, takımın sorunları çözmesi ve hataları düzeltmesi yardımcı olur.
+[.NET Core SDK](index.md) , .NET Core CLI çöktüğünde kullanım verilerini ve özel durum bilgilerini toplayan bir telemetri özelliği içerir. .NET Core CLI .NET Core SDK ile birlikte gelir ve .NET Core uygulamalarınızı oluşturmanızı, test etmeniz ve yayımlamanıza olanak tanıyan fiiller kümesidir. .NET ekibinin, araçların iyileştirilmesi için nasıl kullanıldığını anladığından emin olmanız önemlidir. Hatalar hakkında bilgi, takımın sorunları çözmesine ve hataları düzeltmesine yardımcı olur.
 
-Toplanan veriler anonimdir ve [Creative Commons Atıf Lisansı](https://creativecommons.org/licenses/by/4.0/)altında toplu olarak yayınlanır.
+Toplanan veriler anonimdir ve [Creative Commons Attribution Lisansı](https://creativecommons.org/licenses/by/4.0/)kapsamında toplu olarak yayımlanır.
 
 ## <a name="scope"></a>Kapsam
 
-`dotnet`uygulamaları çalıştırmak ve CLI komutlarını yürütmek için iki işlevi vardır. Bir uygulamayı aşağıdaki biçimde başlatmak `dotnet` için kullanırken telemetri *toplanmaz:*
+`dotnet`iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için. *isn't collected* `dotnet` Aşağıdaki biçimde bir uygulamayı başlatmak için kullanılırken telemetri toplanmaz:
 
 - `dotnet [path-to-app].dll`
 
-Telemetri,.NET [Core CLI komutlarından](index.md)herhangi biri (örneğin) kullanılarak *toplanır:*
+Telemetri, şöyle [.NET Core CLI komutlardan](index.md)biri kullanılarak *toplanır* :
 
 - `dotnet build`
 - `dotnet pack`
 - `dotnet run`
 
-## <a name="how-to-opt-out"></a>Nasıl devre dışı bırakmak için
+## <a name="how-to-opt-out"></a>Devre dışı bırakma
 
-.NET Core SDK telemetri özelliği varsayılan olarak etkinleştirilir. Telemetri özelliğini devre dışı bırakmak `DOTNET_CLI_TELEMETRY_OPTOUT` için `1` ortam `true`değişkenini veya '
+.NET Core SDK telemetri özelliği varsayılan olarak etkindir. Telemetri özelliğini devre dışı bırakmak için, `DOTNET_CLI_TELEMETRY_OPTOUT` ortam değişkenini veya olarak ayarlayın `1` `true` .
 
-Başarılı bir yükleme gerçekleştiğinde .NET Core SDK yükleyicisi tarafından da tek bir telemetri girişi gönderilir. Devre dışı bırakmak `DOTNET_CLI_TELEMETRY_OPTOUT` için ,.NET Core SDK'yı yüklemeden önce ortam değişkenini ayarlayın.
+Başarılı bir yükleme gerçekleştiğinde .NET Core SDK yükleyicisi tarafından tek bir telemetri girişi de gönderilir. Devre dışı bırakmak için, `DOTNET_CLI_TELEMETRY_OPTOUT` .NET Core SDK yüklemeden önce ortam değişkenini ayarlayın.
 
-## <a name="disclosure"></a>Açıklama
+## <a name="disclosure"></a>Savunmasız
 
-.NET Core SDK, [.NET Core CLI komutlarından](index.md) birini ilk çalıştırdığınızda (örneğin, `dotnet build`aşağıdakilere benzer bir metin görüntüler). Metin, çalıştırdığınız SDK sürümüne bağlı olarak biraz değişiklik gösterebilir. Bu "ilk çalıştırma" deneyimi, Microsoft'un veri toplama hakkında sizi nasıl bilgi edindiğini ortaya attırdığıdır.
+.NET Core SDK, [.NET Core CLI komutlarından](index.md) birini (örneğin,) ilk kez çalıştırdığınızda aşağıdakine benzer metni görüntüler `dotnet build` . Metin, çalıştırmakta olduğunuz SDK sürümüne bağlı olarak biraz farklılık gösterebilir. Bu "ilk çalıştırma" deneyimi, Microsoft 'un veri toplamayı nasıl bildisidir.
 
 ```console
 Telemetry
@@ -46,51 +46,51 @@ The .NET Core tools collect usage data in order to help us improve your experien
 Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
-Bu iletiyi ve .NET Core karşılama iletisini devre dışı kılabilir, ortam değişkenini `DOTNET_NOLOGO` `true`. Bu değişkenin telemetri devre dışı bırakma üzerinde hiçbir etkisi olmadığını unutmayın.
+Bu iletiyi ve .NET Core hoş geldiniz iletisini devre dışı bırakmak için, `DOTNET_NOLOGO` ortam değişkenini olarak ayarlayın `true` . Bu değişkenin telemetri geri çevirme üzerinde hiçbir etkisi olmadığını unutmayın.
 
 ## <a name="data-points"></a>Veri noktaları
 
-Telemetri özelliği, kullanıcı adları veya e-posta adresleri gibi kişisel verileri toplamaz. Kodunuzu tarayıp ad, depo veya yazar gibi proje düzeyinde veri ayıklamaz. Veriler, [Azure Monitor](https://azure.microsoft.com/services/monitor/) teknolojisini kullanarak Microsoft sunucularına güvenli bir şekilde gönderilir, sınırlı erişim altında tutulur ve güvenli [Azure Depolama](https://azure.microsoft.com/services/storage/) sistemlerinden gelen sıkı güvenlik denetimleri altında yayımlanır.
+Telemetri özelliği, Kullanıcı adları veya e-posta adresleri gibi kişisel verileri toplamaz. Kodunuzu taramaz ve ad, depo veya yazar gibi proje düzeyi verileri ayıklamaz. Veriler, [Azure izleyici](https://azure.microsoft.com/services/monitor/) teknolojisini kullanan Microsoft sunucularına güvenli bir şekilde gönderilir, sınırlı erişim altında tutulur ve güvenli [Azure depolama](https://azure.microsoft.com/services/storage/) sistemlerinden katı güvenlik denetimleri altında yayımlanır.
 
-Gizliliğinizi korumak bizim için önemlidir. Telemetrinin hassas verileri topladığından veya verilerin güvensiz veya uygunsuz şekilde işlendiğinden şüpheleniyorsanız, [dotnet/cli](https://github.com/dotnet/cli/issues) deposunda bir sorun [dotnet@microsoft.com](mailto:dotnet@microsoft.com) dosyala veya soruşturma için bir e-posta gönderin.
+Gizliliğinizi korumak bizim için önemlidir. Telemetrinin hassas verileri toplamasını veya verilerin güvenli veya uygun şekilde işlenmekte olduğunu düşünüyorsanız, [DotNet/SDK](https://github.com/dotnet/sdk/issues) deposunda bir sorun yapın veya araştırma için adresine bir e-posta gönderin [dotnet@microsoft.com](mailto:dotnet@microsoft.com) .
 
 Telemetri özelliği aşağıdaki verileri toplar:
 
-| SDK sürümleri | Veri |
+| SDK sürümleri | Veriler |
 |--------------|------|
 | Tümü          | Çağırma zaman damgası. |
-| Tümü          | Komut çağrıldı (örneğin, "inşa"), 2.1'den başlayarak haşiye. |
-| Tümü          | Coğrafi konumu belirlemek için kullanılan üç sekizli IP adresi. |
-| Tümü          | İşletim sistemi ve sürüm. |
-| Tümü          | Çalışma Zamanı Kimliği (RID) SDK üzerinde çalışıyor. |
-| Tümü          | .NET Çekirdek SDK versiyonu. |
-| Tümü          | Telemetri profili: yalnızca açık kullanıcı tercihi ile kullanılan ve Microsoft'ta dahili olarak kullanılan isteğe bağlı bir değerdir. |
-| >=2.0        | Komut bağımsız değişkenleri ve seçenekleri: çeşitli bağımsız değişkenler ve seçenekler toplanır (rasgele dizeleri değil). [Toplanan seçeneklere](#collected-options)bakın. 2.1.300'den sonra hashed. |
-| >=2.0         | SDK'nın bir kapta çalışıp çalışmadığı. |
-| >=2.0         | Hedef çerçeveler `TargetFramework` (olaydan), 2.1'den başlayan bir hadde. |
-| >=2.0         | Karma Medya Erişim Kontrolü (MAC) adresi: bir makine için şifreleme (SHA256) anonim ve benzersiz bir kimlik. |
-| >=2.0         | Hashed geçerli çalışma dizini. |
-| >=2.0         | Hashed installer exe dosya adı ile başarı raporu yükleyin. |
-| >=2.1.300     | Çekirdek versiyonu. |
-| >=2.1.300     | Libc sürümü/sürümü. |
-| >=3.0.100     | Çıktının yönlendirilip yönlendirilmediği (doğru veya yanlış). |
-| >=3.0.100     | CLI/SDK kilitlenmesinde, özel durum türü ve yığın izi (gönderilen yığın izlemesine yalnızca CLI/SDK kodu dahildir). Daha fazla bilgi için [bkz.](#net-core-clisdk-crash-exception-telemetry-collected) |
+| Tümü          | Komut çağrıldı (örneğin, "Build"), 2,1 'den başlayarak karma hale getirilmiş. |
+| Tümü          | Coğrafi konumu belirlemede kullanılan üç sekizli IP adresi. |
+| Tümü          | İşletim sistemi ve sürümü. |
+| Tümü          | SDK 'nın üzerinde çalıştığı çalışma zamanı KIMLIĞI (RID). |
+| Tümü          | .NET Core SDK sürümü. |
+| Tümü          | Telemetri profili: isteğe bağlı bir değer yalnızca açık Kullanıcı kabul etme ve Microsoft 'ta dahili olarak kullanılan bir değerdir. |
+| >= 2,0        | Komut bağımsız değişkenleri ve seçenekleri: birkaç bağımsız değişken ve seçenek toplanır (rastgele dizeler değil). [Toplanan seçeneklere](#collected-options)bakın. 2.1.300 sonrasında karma hale getirilir. |
+| >= 2,0         | SDK 'nın bir kapsayıcıda çalışıp çalışmadığını belirtir. |
+| >= 2,0         | `TargetFramework`2,1 ' den başlayarak karma hale getirilmiş hedef çerçeveler (olaydan). |
+| >= 2,0         | Karma medya Access Control (MAC) adresi: bir makine için bir şifreleme (SHA256) anonim ve benzersiz KIMLIĞI. |
+| >= 2,0         | Karma hale getirilmiş geçerli çalışma dizini. |
+| >= 2,0         | Karma yükleyici exe dosya adına sahip başarı raporunu yükleme. |
+| >= 2.1.300     | Çekirdek sürümü. |
+| >= 2.1.300     | Libc sürümü/sürümü. |
+| >= 3.0.100     | Çıktının yeniden yönlendirilme (true veya false). |
+| >= 3.0.100     | CLı/SDK kilitlenmesinde, özel durum türü ve yığın izlemesi (yalnızca CLı/SDK kodu, gönderilen yığın izlemesinde bulunur). Daha fazla bilgi için bkz. [.NET Core CLI/SDK kilitlenme özel durum telemetrisi toplandı](#net-core-clisdk-crash-exception-telemetry-collected). |
 
 ### <a name="collected-options"></a>Toplanan seçenekler
 
-Bazı komutlar ek veri gönderir. Komutların bir alt kümesi ilk bağımsız değişkeni gönderir:
+Bazı komutlar ek veriler gönderir. Bir komut alt kümesi ilk bağımsız değişkeni gönderir:
 
 | Komut               | Gönderilen ilk bağımsız değişken verileri                |
 |-----------------------|-----------------------------------------|
-| `dotnet help <arg>`   | Komut yardımı için sorgulanıyor.  |
-| `dotnet new <arg>`    | Şablon adı (hashed).             |
-| `dotnet add <arg>`    | Kelime `package` ya `reference`da .      |
-| `dotnet remove <arg>` | Kelime `package` ya `reference`da .      |
-| `dotnet list <arg>`   | Kelime `package` ya `reference`da .      |
-| `dotnet sln <arg>`    | Kelime `add`, `list`, `remove`veya .    |
-| `dotnet nuget <arg>`  | Kelime `delete`, `locals`, `push`veya . |
+| `dotnet help <arg>`   | İçin komut yardımı sorgulanırken.  |
+| `dotnet new <arg>`    | Şablon adı (karma).             |
+| `dotnet add <arg>`    | Sözcük `package` veya `reference` .      |
+| `dotnet remove <arg>` | Sözcük `package` veya `reference` .      |
+| `dotnet list <arg>`   | Sözcük `package` veya `reference` .      |
+| `dotnet sln <arg>`    | , `add` Veya sözcüğü `list` `remove` .    |
+| `dotnet nuget <arg>`  | , `delete` Veya sözcüğü `locals` `push` . |
 
-Komutların bir alt kümesi, değerleriyle birlikte kullanılırsa seçili seçenekleri gönderir:
+Bir komut alt kümesi, kullanıldıkları takdirde, değerleriyle birlikte, seçili seçenekleri gönderir:
 
 | Seçenek                  | Komutlar                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
@@ -103,15 +103,15 @@ Komutların bir alt kümesi, değerleriyle birlikte kullanılırsa seçili seçe
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |
 
-`--verbosity` .NET Core 2.1.100 SDK ile başlayan diğer tüm değerler karnedir. `--sdk-package-version`
+Ve dışında `--verbosity` `--sdk-package-version` , diğer tüm değerler .NET Core 2.1.100 SDK ile başlayarak karma hale getirilir.
 
-## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>.NET Core CLI/SDK çarpışma istisnatelemetri toplanan
+## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>.NET Core CLI/SDK kilitlenme özel durum telemetrisi toplandı
 
-.NET Core CLI/SDK çökerse, özel durum adını toplar ve CLI/SDK kodunun yığın izini toplar. Bu bilgiler, sorunları değerlendirmek ve .NET Core SDK ve CLI kalitesini artırmak için toplanır. Bu makalede, topladığımız veriler hakkında bilgi verilmektedir. Ayrıca, .NET Core SDK'nın kendi sürümünü oluşturan kullanıcıların kişisel veya hassas bilgilerin yanlışlıkla açıklanmasını nasıl önleyebildiği hakkında ipuçları da sağlar.
+.NET Core CLI/SDK kilitlenirse, CLı/SDK kodunun özel durum ve yığın izlemesinin adını toplar. Bu bilgiler, sorunları değerlendirmek ve .NET Core SDK ve CLı kalitesini geliştirmek için toplanır. Bu makalede Topladığımız veriler hakkında bilgi sağlanır. Ayrıca, kullanıcıların kendi .NET Core SDK kendi sürümünü oluşturma konusunda ipuçları, kişisel veya hassas bilgilerin yanlışlıkla açıklanmasını önleyebilir.
 
 ### <a name="types-of-collected-data"></a>Toplanan veri türleri
 
-.NET Core CLI, uygulamanızdaki istisnalar için değil, yalnızca CLI/SDK istisnaları için bilgi toplar. Toplanan veriler özel durum ve yığın izleme adını içerir. Bu yığın izi CLI/SDK koduna ait.
+.NET Core CLI, uygulamanızda özel durumlar değil yalnızca CLı/SDK özel durumları için bilgi toplar. Toplanan veriler, özel durumun ve yığın izlemenin adını içerir. Bu yığın izlemesi CLı/SDK kodudur.
 
 Aşağıdaki örnek, toplanan veri türünü gösterir:
 
@@ -130,13 +130,13 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-of-information"></a>Bilgilerin yanlışlıkla ifşa edilmesinden kaçının
+### <a name="avoid-inadvertent-disclosure-of-information"></a>Bilgilerin yanlışlıkla açıklanmasını önleyin
 
-.NET Core katılımcıları ve .NET Core SDK'nın kendi kurdukları bir sürümünü çalıştıran herkes, SDK kaynak kodlarına giden yolu göz önünde bulundurmalıdır. Özel hata ayıklama yapılı veya özel yapı simgesi dosyalarıyla yapılandırılan bir .NET Core SDK kullanırken bir kilitlenme oluşursa, yapı makinesinden Gelen SDK kaynak dosya yolu yığın izlemenin bir parçası olarak toplanır ve haşlanmadı.
+.NET Core katkıda bulunanlar ve başkalarının oluşturdukları .NET Core SDK bir sürümünü çalıştıran herkes kendi SDK kaynak kodu yolunu dikkate almalıdır. Özel hata ayıklama derlemesi olan veya özel derleme sembol dosyalarıyla yapılandırılmış bir .NET Core SDK kullanırken kilitlenme oluşursa, derleme makinesinden SDK kaynak dosyası yolu, yığın izlemenin bir parçası olarak toplanır ve karma değildir.
 
-Bu nedenle, .NET Core SDK'nın özel yapılarının, yol adları kişisel veya hassas bilgileri açığa çıkaran dizinlerde bulunmaması gerekir.
+Bu nedenle, .NET Core SDK özel derlemeleri yol adları kişisel veya hassas bilgileri sunan dizinlerde yer içermemelidir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core CLI Telemetri - 2019 S2 Verileri](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
-- [Telemetri referans kaynağı (dotnet/cli deposu)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)
+- [.NET Core CLI telemetri-2019 S2 verileri](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [Telemetri başvuru kaynağı (DotNet/SDK deposu)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)
