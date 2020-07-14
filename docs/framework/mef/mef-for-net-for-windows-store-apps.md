@@ -1,13 +1,14 @@
 ---
 title: Windows Mağazası uygulamaları için .NET için MEF
+description: Genişletilebilir Windows 8. x Mağazası uygulamaları geliştirmeye yönelik türler içeren Managed Extensibility Framework (MEF) ad alanlarını gözden geçirin.
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: 3a4c2a2f7f6096794f9ea723eec56aa74f5c44c5
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 764c42265ed7523d3581484cc9564b17e9a9b3bd
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802184"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281244"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Windows Mağazası uygulamaları için .NET için MEF
 <xref:System.Composition?displayProperty=nameWithType>ve alt ad alanlarında, Managed Extensibility Framework (MEF) ile genişletilebilir Windows 8. x Mağazası uygulamaları geliştirmeye yönelik türler bulunur. Bu ad alanları, Windows 8 işletim sistemi için Windows 8. x Mağaza uygulamaları alt kümesinin .NET bölümüdür.  

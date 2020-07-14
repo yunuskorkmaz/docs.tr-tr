@@ -1,5 +1,6 @@
 ---
 title: Sarmalayıcı Kodunun Güvenliğini Sağlama
+description: Özellikle sarmalayıcı tarafından kullanılan koddan daha yüksek bir güven varsa, özel bir güvenlik zayıflığı kümesini açan, sarmalayıcı kodunun güvenliğini nasıl önkullanacağınızı gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], wrapper code
@@ -7,52 +8,52 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 3d38a4d4fd33798cf5987f5ce67305725ad9daec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399912"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281452"
 ---
 # <a name="securing-wrapper-code"></a>Sarmalayıcı Kodunun Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Sarıcı kodu, özellikle sarıcının onu kullanan koddan daha yüksek güvene sahip olduğu durumlarda, benzersiz bir güvenlik zayıflık kümesi açabilir. Arayan adına yapılan ve arayanın sınırlı izinlerinin uygun güvenlik denetimine dahil olmadığı her şey, yararlanılacak olası bir zayıflıktır.  
+ Sarmalayıcı kodu, özellikle sarmalayıcı tarafından kullanılan koddan daha yüksek güven olduğunda, benzersiz bir güvenlik zayıflığı kümesi açabilir. Çağıranın sınırlı izinlerinin uygun güvenlik denetiminde yer aldığı bir arayan adına yapılan her şey, yararlanılacak potansiyel bir zayıftır.  
   
- Arayanın kendi kendine yapamayacağı bir şeyi sarmalayıcı aracılığıyla asla etkinleştirin. Bu, tam bir yığın yürüyüş talebinin aksine, sınırlı bir güvenlik denetimi içeren bir şey yaparken özel bir tehlikedir. Tek düzeyli denetimler söz konusu olduğunda, gerçek arayan ile söz konusu API öğesi arasında paketkodu biraraya getirmek, güvenlik denetiminin olması gerektiği zaman kolayca başarılı olmasına ve böylelikle güvenliği zayıflatmasına neden olabilir.  
+ Çağıranın kendisi tarafından yapamayacağı sarmalayıcı aracılığıyla hiçbir şey etkinleştirmeyin. Bu, tam yığın yapma isteğine karşılık sınırlı bir güvenlik denetimi içeren bir şey yaparken özel bir tehlike olur. Tek düzeyli denetimler dahil edildiğinde, gerçek arayan ve API öğesi arasındaki sarmalayıcı kodu enterpolaşmek, bu durumda olmaması durumunda güvenlik denetiminin başarılı olmasına neden olur, böylece güvenlik weakening.  
   
 ## <a name="delegates"></a>Temsilciler  
- Temsilci güvenliği .NET Framework sürümleri arasında farklılık gösterir.  Bu bölümde farklı temsilci davranışları ve ilişkili güvenlik hususları açıklanmaktadır.  
+ Temsilci güvenliği .NET Framework sürümleri arasında farklılık gösterir.  Bu bölümde, farklı temsilci davranışları ve ilişkili güvenlik konuları açıklanmaktadır.  
   
-### <a name="in-version-10-and-11-of-the-net-framework"></a>.NET Framework'ün 1.0 ve 1.1 sürümünde  
- .NET Framework sürümü 1.0 ve 1.1, bir temsilci oluşturucuve bir temsilci arayana karşı aşağıdaki güvenlik eylemlerini gerçekleştirir.  
+### <a name="in-version-10-and-11-of-the-net-framework"></a>.NET Framework sürüm 1,0 ve 1,1 ' de  
+ Sürüm 1,0 ve 1,1 .NET Framework bir temsilci Oluşturucusu ve bir temsilci çağıranına karşı aşağıdaki güvenlik eylemlerini gerçekleştirin.  
   
-- Bir temsilci oluşturulduğunda, temsilci hedef yöntemindeki güvenlik bağlantısı talepleri, temsilci oluşturucunun hibe kümesine karşı gerçekleştirilir.  Güvenlik eyleminin karşılamaması, <xref:System.Security.SecurityException>bir .  
+- Bir temsilci oluşturulduğunda, temsilci hedef yönteminde güvenlik bağlantısı talepleri, Temsilci oluşturucunun izin kümesine göre gerçekleştirilir.  Güvenlik eylemi sonucu elde etmek için bir hata oluştu <xref:System.Security.SecurityException> .  
   
-- Temsilci çağrıldığında, temsilci arayan daki varolan güvenlik talepleri gerçekleştirilir.  
+- Temsilci çağrıldığında, çağıran temsilci üzerindeki tüm mevcut güvenlik talepleri gerçekleştirilir.  
   
- Kodunuz, daha <xref:System.Delegate> az güvenilen bir koddan bu kodu çağırabilen bir kod aldığında, daha az güvenilen kodun izinlerini yükseltmesini etkinleştirmediğinizden emin olun. Bir temsilci alır ve daha sonra kullanırsanız, temsilciyi oluşturan kod çağrı yığınında değildir ve temsilcinin içinde veya altında kod korumalı bir işlem deneseydi izinleri sınanmaz. Kodunuz ve arayan kodunuz oluşturucudan daha yüksek ayrıcalıklara sahipse, oluşturucu arama yığınının bir parçası olmadan çağrı yolunu düzenleyebilir.  
+ Kodunuz <xref:System.Delegate> , çağırabilecek daha az güvenilir bir koddan her seferinde, izinlerini iletmek için daha az güvenilir kod etkinleştirdiğinizden emin olun. Bir temsilci alıp daha sonra kullanacaksanız, temsilciyi oluşturan kod çağrı yığınında değildir ve temsilci içindeki veya altındaki kod korumalı bir işlem denerse, izinleri test edilmez. Kodunuzun ve arayan kodunuzun oluşturucusunun daha yüksek bir ayrıcalıkları varsa Oluşturucu, çağrı yığınının parçası olmadan çağrı yolunu düzenleyebilir.  
   
-### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>.NET Framework sürüm 2.0 ve sonraki sürümlerinde  
- Önceki sürümlerin aksine, .NET Framework sürüm 2.0 ve sonraki sürümleri, temsilci oluşturulduğunda ve çağrıldığında temsilci oluşturucuya karşı güvenlik eylemi gerçekleştirir.  
+### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>Sürüm 2,0 ve sonraki sürümlerinde .NET Framework  
+ Önceki sürümlerden farklı olarak, sürüm 2,0 ve sonraki .NET Framework sürümleri, temsilci oluşturulup çağrıldığında temsilci Oluşturucu için güvenlik eylemi gerçekleştirir.  
   
-- Bir temsilci oluşturulduğunda, temsilci hedef yöntemindeki güvenlik bağlantısı talepleri, temsilci oluşturucunun hibe kümesine karşı gerçekleştirilir.  Güvenlik eyleminin karşılamaması, <xref:System.Security.SecurityException>bir .  
+- Bir temsilci oluşturulduğunda, temsilci hedef yönteminde güvenlik bağlantısı talepleri, Temsilci oluşturucunun izin kümesine göre gerçekleştirilir.  Güvenlik eylemi sonucu elde etmek için bir hata oluştu <xref:System.Security.SecurityException> .  
   
-- Temsilci oluşturucunun hibe kümesi de temsilci oluşturma sırasında yakalanır ve temsilci ile birlikte depolanır.  
+- Temsilci oluşturucunun izin kümesi, temsilci oluşturma sırasında da yakalanır ve temsilciyle birlikte depolanır.  
   
-- Temsilci çağrıldığında, temsilci oluşturucu ve arayan farklı derlemelere aitse, ilk olarak geçerli bağlamdaki taleplere göre delege oluşturucunun yakalanan hibe kümesi değerlendirilir.  Ardından, temsilci arayan üzerinde varolan tüm güvenlik talepleri gerçekleştirilir.  
+- Temsilci çağrıldığında, temsilci oluşturan ve çağıran farklı derlemelere ait olduğunda, Temsilci oluşturucunun yakalanan izin kümesi ilk olarak geçerli bağlamdaki tüm taleplere göre değerlendirilir.  Sonra, temsilci çağıranlarındaki tüm mevcut güvenlik talepleri gerçekleştirilir.  
   
-## <a name="link-demands-and-wrappers"></a>Bağlantı talepleri ve sarmalayıcılar  
- Güvenlik altyapısında bağlantı talepleri olan özel bir koruma durumu güçlendirilmiştir, ancak yine de kodunuzda olası bir zayıflık kaynağıdır.  
+## <a name="link-demands-and-wrappers"></a>Bağlantı taleplerini ve sarmalayıcıları  
+ Bağlantı taleplerine sahip özel bir koruma durumu güvenlik altyapısında güçlenebilir, ancak kodunuzda olası bir zayıflığın kaynağı olmaya devam etmektedir.  
   
- Tam olarak güvenilen kod, [Bir LinkDemand](link-demands.md)tarafından korunan bir özelliği, olayı veya yöntemi çağırırsa, arayan için **LinkDemand** izin denetimi karşılanırsa arama başarılı olur. Ayrıca, tam olarak güvenilen kod, bir özelliğin adını alan ve yansımayı kullanarak erişimini **alan** bir sınıfı ortaya çıkarırsa, kullanıcı kodu bu özelliğe erişme hakkına sahip olmasa **bile,** erişime erişim sağlayanı arar. Bunun **nedeni, LinkDemand'ın** yalnızca tam olarak güvenilen kod olan hemen arayanı denetler. Özünde, tam olarak güvenilen kod, kullanıcı kodunun bu aramayı yapma hakkına sahip olduğundan emin olmadan kullanıcı kodu adına ayrıcalıklı bir arama yapar.  
+ Tam güvenilir kod bir [LinkDemand](link-demands.md)tarafından korunan bir özelliği, olayı veya yöntemi çağırırsa, çağıran Için **LinkDemand** izin denetimi karşılanıyorsa çağrı başarılı olur. Ayrıca, tam olarak güvenilir kod, bir özelliğin adını alan ve yansıma kullanarak **Get** erişimcisini çağıran bir sınıfı kullanıma sunarsa, Kullanıcı kodu bu özelliğe erişim hakkına sahip olmasa bile **Get** erişimcisine çağrı başarılı olur. Bunun nedeni, **LinkDemand** 'in yalnızca hemen güvenilen kod olan hemen çağrıyı denetlediğinde. Temelde, tam olarak güvenilen kod, kullanıcı kodunun bu çağrıyı yapma hakkına sahip olduğundan emin olmadan Kullanıcı kodu adına ayrıcalıklı bir çağrı yapıyor.  
   
- Bu tür güvenlik açıklarını önlemeye yardımcı olmak için, ortak dil çalışma süresi, bir **Bağlantı Talebi**tarafından korunan bir yönteme, oluşturucuya, özelliğine veya olayına dolaylı çağrıda çeki tam bir yığın yürüyüş talebine genişletir. Bu koruma bazı performans maliyetlerine neden olursa ve güvenlik denetiminin anlambilimini değiştirir; tam yığın yürüyüşü talebi, daha hızlı, tek düzeyli denetimin geçtiği yerde başarısız olabilir.  
+ Bu tür güvenlik boşluklarını önlemeye yardımcı olmak için, ortak dil çalışma zamanı denetimi bir yönteme, oluşturucuya, özelliğe veya bir **LinkDemand**tarafından korunan olaya dolaylı çağrı üzerinde tam yığın yürüme talebine genişletir. Bu koruma, bazı performans maliyetleri doğurur ve güvenlik denetiminin semantiğini değiştirir; tam yığın ilerme isteği, daha hızlı, tek düzeyli bir denetim geçirildiğinde başarısız olabilir.  
   
-## <a name="assembly-loading-wrappers"></a>Montaj yükleme sarmalayıcıları  
- Yönetilen kodu yüklemek için kullanılan <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>çeşitli yöntemler, arayanın kanıtıyla derlemeleri yükleyin. Bu yöntemlerden herhangi birini sararsanız, güvenlik sistemi derlemeleri yüklemek için arayanın paketleyicinize verdiği izinler yerine kodunuzu izin verme yöntemini kullanabilir. Daha az güvenilen kodun, arayanın sarıcınıza verdiğinden daha yüksek izinler verilen kodu yüklemesine izin vermemelisiniz.  
+## <a name="assembly-loading-wrappers"></a>Derleme yükleme sarmalayıcıları  
+ Yönetilen kodu yüklemek için kullanılan çeşitli yöntemler, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağıran bulgu ile derlemeleri yükler. Bu yöntemlerin herhangi birini sarmaladıysanız, güvenlik sistemi, derlemeleri yüklemek için çağıranın, sarmalayıcısına olan izinlerinin yerine kodunuzun izin iznini kullanabilir. Çağıranlarınızın sarmalayıcısına göre daha yüksek izinlerle daha fazla izin verilen kodu yüklemesine izin vermeniz gerekir.  
   
- Tam güvene sahip veya potansiyel bir arayandan önemli ölçüde daha yüksek güvene sahip herhangi bir kod (Internet izinleri düzeyinde arayan dahil) bu şekilde güvenliği zayıflatabilir. Kodunuzda bir bayt dizisini alan ve **Assembly.Load'a**geçen ortak bir yöntem varsa, bu nedenle arayanın adına bir derleme oluşturmak, güvenliği bozabilir.  
+ Bir olası çağırandan (Internet izinleri düzeyi çağıran dahil) tam güvene veya önemli ölçüde daha yüksek güvene sahip olan tüm kodlar güvenliği bu şekilde zayıflatabilir. Kodunuzun, bir bayt dizisi alan ve bunu **Assembly. Load**öğesine ileten bir ortak yöntemi varsa, bunu çağıranın adına bir derleme oluşturarak güvenlik kesintiye uğramayabilir.  
   
  Bu sorun aşağıdaki API öğeleri için geçerlidir:  
   
@@ -65,39 +66,39 @@ ms.locfileid: "79399912"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Talep ve  LinkDemand  
- Bildirimsel güvenlik, benzer ancak çok farklı denetimler gerçekleştiren iki tür güvenlik denetimi sunar. Yanlış seçim zayıf güvenlik veya performans kaybına neden olabileceğinden, her iki formu da anlamalısınız.  
+ Bildirime dayalı güvenlik, benzer ancak çok farklı denetimler gerçekleştiren iki tür güvenlik denetimi sunar. Yanlış seçim zayıf güvenlik veya performans kaybıyla sonuçlanabileceğinden, her iki formu anlamalısınız.  
   
- Bildirimsel güvenlik aşağıdaki güvenlik denetimlerini sunar:  
+ Bildirime dayalı güvenlik aşağıdaki güvenlik denetimlerini sunar:  
   
-- <xref:System.Security.Permissions.SecurityAction.Demand>kod erişim güvenlik yığını yürüyüş belirtir. Yığındaki tüm arayanların geçmek için belirtilen izin veya kimliğe sahip olması gerekir. Yığın farklı arayanlar içerebilir, çünkü **talep** her aramada oluşur. Bir yöntemi tekrar tekrar çağırırsanız, bu güvenlik denetimi her seferinde gerçekleşir. **Talep,** luring saldırılarına karşı iyi bir korumadır; geçmeye çalışan yetkisiz kod algılanacaktır.  
+- <xref:System.Security.Permissions.SecurityAction.Demand>kod erişimi güvenlik yığını yürüme 'yi belirtir. Yığındaki tüm çağıranlar, geçirilecek belirtilen izne veya kimliğe sahip olmalıdır. Yığın farklı çağıranlar içerebileceğinden, her çağrıda **talep** oluşur. Bir yöntemi tekrar tekrar çağırırsanız, bu güvenlik denetimi her seferinde gerçekleşir. **Talep** , LTE saldırılarına karşı iyi bir koruma; üzerinden almaya çalışan yetkisiz kod algılanır.  
   
-- [LinkDemand](link-demands.md) tam zamanında (JIT) derleme zamanında gerçekleşir ve yalnızca hemen arayanı denetler. Bu güvenlik denetimi arayanın arayan denetlemesi değildir. Bu denetim geçtikten sonra, arayan kaç kez arayabilir olursa olsun ek güvenlik yükü yoktur. Ancak, luring saldırılarına karşı hiçbir koruma da yoktur. **LinkDemand**ile, testi geçen ve kodunuzu referans alabilecek herhangi bir kod, kötü amaçlı kodun yetkili kodu kullanarak aramasına izin vererek güvenliği bozabilir. Bu nedenle, tüm olası zayıflıkları iyice önlenebilir sürece **LinkDemand** kullanmayın.  
+- [LinkDemand](link-demands.md) tam ZAMANıNDA (JIT) derleme zamanında gerçekleşir ve yalnızca anında çağrıyı denetler. Bu güvenlik denetimi çağıranın çağıranı denetlemez. Bu denetim başarılı olduktan sonra, çağıranın kaç kez arayanına bakılmaksızın ek bir güvenlik yükü yoktur. Ancak, LTE saldırılarına karşı koruma de yoktur. **LinkDemand**ile, testi geçen ve kodunuza başvuruda bulunan tüm kodlar, kötü amaçlı kodun yetkili kodu kullanarak çağrı yapmasına izin vererek güvenlik kesintiye uğramasına yol açabilir. Bu nedenle, tüm olası zayıf yanlar tamamen önlenemez olmadığı için **LinkDemand** kullanmayın.  
   
     > [!NOTE]
-    > .NET Framework 4'te bağlantı talepleri derlemelerde <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2> öznitelik ile değiştirilmiştir. Tam <xref:System.Security.SecurityCriticalAttribute> güven için bir bağlantı talebi eşdeğerdir; ancak, aynı zamanda kalıtım kurallarını etkiler. Bu değişiklik hakkında daha fazla bilgi için Bkz. [Güvenlik Saydam Kodu, Düzey 2.](security-transparent-code-level-2.md)  
+    > .NET Framework 4 ' te, bağlantı talepleri <xref:System.Security.SecurityCriticalAttribute> <xref:System.Security.SecurityRuleSet.Level2> derlemelerdeki özniteliğiyle değiştirilmiştir. <xref:System.Security.SecurityCriticalAttribute>Tam güven için bağlantı talebine eşdeğerdir; ancak, devralma kurallarını da etkiler. Bu değişiklik hakkında daha fazla bilgi için bkz. [güvenlik-saydam kod, düzey 2](security-transparent-code-level-2.md).  
   
- **LinkDemand** kullanırken gerekli ekstra önlemler ayrı ayrı programlanmalıdır; güvenlik sistemi uygulama ile yardımcı olabilir. Herhangi bir hata bir güvenlik zafiyesi açar. Kodunuzu kullanan tüm yetkili kodlar aşağıdakileri yaparak ek güvenlik uygulamaktan sorumlu olmalıdır:  
+ **LinkDemand** kullanılırken gereken ek önlemler ayrı ayrı programlanabilir olmalıdır; güvenlik sistemi, zorlamada yardımcı olabilir. Herhangi bir hata, güvenlik zayıflılığını açar. Kodunuzu kullanan tüm yetkili kodların, aşağıdakileri yaparak ek güvenlik uygulamaktan sorumlu olması gerekir:  
   
-- Arama kodunun sınıfa veya derlemeye erişimini kısıtlama.  
+- Çağıran kodun sınıf veya derlemeye erişimini kısıtlama.  
   
-- Çağrılan kodda görünen arama koduna aynı güvenlik denetimlerini yerleştirmek ve arayanların bunu yapması zorunlu hale getirmek. Örneğin, belirtilen <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> bayrak için Bir **LinkDemand** ile korunan bir <xref:System.Security.Permissions.SecurityPermission> yöntem çağıran bir kod yazarsanız, yönteminiz de bu izin için bir **LinkDemand** (veya **Talep**, daha güçlü) yapmalıdır. Bunun istisnası, kodunuzdaki diğer güvenlik koruma mekanizmaları (talepler gibi) göz önüne alındığında, kodunuzun Güvenli olduğuna karar verdiğiniz sınırlı bir şekilde **LinkDemand**korumalı yöntemi kullanmasıdır. Bu istisnai durumda, arayan temel koddaki güvenlik korumasını zayıflatma sorumluluğunu üstleniyor.  
+- Aynı güvenlik denetimlerinin Çağrılmakta olan kodda görünen çağrı kodu üzerinde yerleştirilmesi ve bunu yapmak için çağıranları obligating. Örneğin, belirtilen bayrak ile için **LinkDemand** ile korunan bir yöntemi çağıran kodu yazarsanız <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> , yönteminiz bu izin Için aynı zamanda bir **LinkDemand** (veya daha güçlü olan **istek**) de yapar. Kodunuz, kodunuzun **talep**korumalı yöntemini, kodunuzda güvenli olduğuna, diğer güvenlik koruması mekanizmalarına (talepler gibi) verilen bir şekilde kullanıyorsa, bu özel durumdur. Bu olağanüstü durumda, çağıran kodda güvenlik korumasını weakening konusunda bir sorumluluğu alır.  
   
-- Kodunuzu arayanların, kodunuzu kendi adlarına korumalı kodu araması için kandıramamasını sağlamak. Başka bir deyişle, arayanlar yetkili kodu korumalı koda belirli parametreleri geçirmeye veya ondan sonuçları geri almaya zorlayamaz.  
+- Kodunuzun çağıranlarının kendi adına korumalı kodu çağırmak için kodunuzu veremeyeceğinden emin olma. Diğer bir deyişle, arayanlar, yetkili kodun korunan koda belirli parametreleri geçmesini veya bundan sonra sonuç almasını zorunlu hale getirilemez.  
   
-### <a name="interfaces-and-link-demands"></a>Arayüzler ve Bağlantı Talepleri  
- **LinkDemand'li** sanal bir yöntem, özellik veya olay bir taban sınıf yöntemini geçersiz kılıyorsa, etkili olabilmesi **için** taban sınıf yönteminin de geçersiz kılınması gerekir. Kötü amaçlı kodun temel türe geri dökümü ve taban sınıf yöntemini çağırması mümkündür. Ayrıca, bağlantı taleplerinin <xref:System.Security.AllowPartiallyTrustedCallersAttribute> derleme düzeyinde özniteliği olmayan derlemelere dolaylı olarak eklenebilir.  
+### <a name="interfaces-and-link-demands"></a>Arabirimler ve bağlantı talepleri  
+ **LinkDemand** ile bir sanal yöntem, özellik veya olay bir temel sınıf yöntemini geçersiz kılıyorsa, temel sınıf yönteminin etkin olması için geçersiz kılınan yöntem Için aynı **LinkDemand** öğesine sahip olması gerekir. Kötü amaçlı kodun temel türe geri dönüştürülmesi ve temel sınıf yöntemini çağırması mümkündür. Ayrıca, bağlantı taleplerinin derleme düzeyi özniteliğine sahip olmayan derlemelere örtük olarak eklenebileceğini unutmayın <xref:System.Security.AllowPartiallyTrustedCallersAttribute> .  
   
- Arayüz yöntemleri de bağlantı talepleri olduğunda bağlantı talepleri ile yöntem uygulamalarını korumak için iyi bir uygulamadır. Arayüzlerle bağlantı taleplerini kullanma hakkında aşağıdakilere dikkat edin:  
+ Arabirim yöntemlerinin bağlantı taleplerine de sahip olduğu durumlarda yöntem uygulamalarını bağlantı taleplerine karşı korumak iyi bir uygulamadır. Arabirimler ile bağlantı taleplerini kullanma hakkında aşağıdakilere göz önünde edin:  
   
-- Bir Bağlantı **İsteği'ni** arabirim yöntemini uygulayan bir sınıfın ortak yöntemine yerletirseniz, arabirime döküm yapıp yöntemi çağırırsanız, **LinkDemand** zorlanmaz. Bu durumda, arabirime karşı bağlantı nız olduğundan, yalnızca arabirimdeki **LinkDemand** onurlandırılır.  
+- Arabirim yöntemi uygulayan bir sınıfın genel yöntemine bir **LinkDemand** yerleştirirseniz, daha sonra arabirime ve yöntemini çağırdığınızda **LinkDemand** zorlanmaz. Bu durumda, arayüzle bağlantılı olduğunuzdan yalnızca arabirimdeki **LinkDemand** kabul edilir.  
   
  Güvenlik sorunları için aşağıdaki öğeleri gözden geçirin:  
   
-- Arabirim yöntemleriyle ilgili açık bağlantı talepleri. Bu bağlantı taleplerinin beklenen korumayı sunduğundan emin olun. Kötü amaçlı kod daha önce açıklandığı gibi bağlantı taleplerini aşmak için bir döküm kullanıp kullanamayacağını belirleyin.  
+- Arabirim yöntemlerinde açık bağlantı talepleri. Bu bağlantı taleplerinin beklenen korumayı sağlayıp sağlamadığından emin olun. Kötü amaçlı kodun, daha önce açıklandığı gibi bağlantı taleplerini aşmak için bir dönüştürme kullanıp kullanamayacağını belirleme.  
   
-- Bağlantı talepleri ile sanal yöntemler uygulanır.  
+- Bağlantı taleplerine uygulanan sanal yöntemler.  
   
-- Uyguladıkları türler ve arabirimler. Bunlar bağlantı taleplerini tutarlı bir şekilde kullanmalıdır.  
+- Türleri ve uygulamadıkları arabirimler. Bunlar bağlantı taleplerini sürekli olarak kullanmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

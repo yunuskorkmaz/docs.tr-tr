@@ -1,5 +1,6 @@
 ---
 title: Kayıtsız COM Birlikte Çalışma
+description: Kayıt-ücretsiz COM birlikte çalışabilirliği kullanarak, derleme bilgilerini depolamak için Windows kayıt defteri kullanmadan bir bileşeni etkinleştirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6a4dfc54152ade6136e4292bbd1c4522553d491
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124970"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281608"
 ---
 # <a name="registration-free-com-interop"></a>Kayıtsız COM Birlikte Çalışma
 Kayıtsız COM birlikte çalışması, derleme bilgilerini depolamak için Windows kayıt defteri kullanmadan bir bileşeni etkinleştirir. Dağıtım sırasında bir bileşeni bir bilgisayara kaydetmek yerine, tasarım zamanında, bağlama ve etkinleştirme hakkında bilgi içeren Win32 stili bildirim dosyaları oluşturursunuz. Kayıt defteri anahtarları yerine, bir nesnenin etkinleştirilmesini doğrudan bu bildirim dosyaları.  

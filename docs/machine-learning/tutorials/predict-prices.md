@@ -4,18 +4,18 @@ description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 0a8ab9ca07d2d83f41b40a3f5782e8e7e201976f
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 27054e28f9a4fa628f0d7348d45528b690d7da83
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803241"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281777"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile gerileme kullanarak fiyatları tahmin etme
 
 Bu öğreticide, özellikle New York City taksi Fares fiyatlarını tahmin etmek için ml.NET kullanarak bir [gerileme modelinin](../resources/glossary.md#regression) nasıl oluşturulacağı gösterilmektedir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Verileri hazırlama ve anlama
@@ -69,11 +69,11 @@ Giriş verileri ve tahminleri için sınıflar oluşturun:
 1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *TaxiTrip.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 1. Aşağıdaki `using` yönergeleri yeni dosyaya ekleyin:
 
-   [!code-csharp[AddUsings](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/TaxiTrip.cs#1 "Add necessary usings")]
+   [!code-csharp[AddUsings](./snippets/predict-prices/csharp/TaxiTrip.cs#1 "Add necessary usings")]
 
 Mevcut sınıf tanımını kaldırın ve iki sınıfa `TaxiTrip` ve `TaxiTripFarePrediction` *TaxiTrip.cs* dosyasına sahip olan aşağıdaki kodu ekleyin:
 
-[!code-csharp[DefineTaxiTrip](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
+[!code-csharp[DefineTaxiTrip](./snippets/predict-prices/csharp/TaxiTrip.cs#2 "Define the taxi trip and fare predictions classes")]
 
 `TaxiTrip`, giriş veri sınıfıdır ve veri kümesi sütunlarının her biri için tanımlar içerir. <xref:Microsoft.ML.Data.LoadColumnAttribute>Veri kümesindeki kaynak sütunlarının dizinlerini belirtmek için özniteliğini kullanın.
 
@@ -86,7 +86,7 @@ Mevcut sınıf tanımını kaldırın ve iki sınıfa `TaxiTrip` ve `TaxiTripFar
 
 Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyin:
 
-[!code-csharp[AddUsings](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#1 "Add necessary usings")]
+[!code-csharp[AddUsings](./snippets/predict-prices/csharp/Program.cs#1 "Add necessary usings")]
 
 Veri kümelerine sahip dosyaların yollarını tutmak için üç alan oluşturmanız ve modelin kaydedileceği dosyanın olması gerekir:
 
@@ -96,7 +96,7 @@ Veri kümelerine sahip dosyaların yollarını tutmak için üç alan oluşturma
 
 `Main`Bu yolları ve değişkeni belirtmek için yönteminin hemen üstüne aşağıdaki kodu ekleyin `_textLoader` :
 
-[!code-csharp[InitializePaths](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#2 "Define variables to store the data file paths")]
+[!code-csharp[InitializePaths](./snippets/predict-prices/csharp/Program.cs#2 "Define variables to store the data file paths")]
 
 Tüm ML.NET işlemleri [Mlcontext sınıfında](xref:Microsoft.ML.MLContext)başlar. Başlatma `mlContext` , model oluşturma iş akışı nesneleri genelinde paylaşılabilecek yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal olarak da benzerdir `DBContext` .
 
@@ -104,11 +104,11 @@ Tüm ML.NET işlemleri [Mlcontext sınıfında](xref:Microsoft.ML.MLContext)baş
 
 `Console.WriteLine("Hello World!")` `Main` Yöntemi bildirmek ve başlatmak için yöntemindeki satırı aşağıdaki kodla değiştirin `mlContext` :
 
-[!code-csharp[CreateMLContext](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#3 "Create the ML Context")]
+[!code-csharp[CreateMLContext](./snippets/predict-prices/csharp/Program.cs#3 "Create the ML Context")]
 
 `Main`Yöntemi çağırmak için yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin `Train` :
 
-[!code-csharp[Train](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#5 "Train your model")]
+[!code-csharp[Train](./snippets/predict-prices/csharp/Program.cs#5 "Train your model")]
 
 `Train()`Yöntemi aşağıdaki görevleri yürütür:
 
@@ -130,19 +130,19 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ML.NET, sayısal veya metin tablolu verileri tanımlamaya yönelik esnek ve verimli bir yöntem olarak [ıdataview sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView`metin dosyalarını veya gerçek zamanlı olarak yükleyebilirsiniz (örneğin, SQL veritabanı veya günlük dosyaları). Aşağıdaki kodu yönteminin ilk satırı olarak ekleyin `Train()` :
 
-[!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#6 "loading training dataset")]
+[!code-csharp[LoadTrainData](./snippets/predict-prices/csharp/Program.cs#6 "loading training dataset")]
 
 Taxı seyahat tarifeli havayolu tahmin etmek istediğiniz gibi, `FareAmount` `Label` Bu sütun tahmin ettiğiniz (modelin çıktısı) olur. `CopyColumnsEstimator`Kopyalamak için dönüştürme sınıfını kullanın `FareAmount` ve aşağıdaki kodu ekleyin:
 
-[!code-csharp[CopyColumnsEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
+[!code-csharp[CopyColumnsEstimator](./snippets/predict-prices/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
 Modeli gösteren algoritma **sayısal** Özellikler gerektirir, bu nedenle kategorik verileri ( `VendorId` , `RateCode` ve `PaymentType` ) değerlerini sayılara ( `VendorIdEncoded` ,, `RateCodeEncoded` ve `PaymentTypeEncoded` ) dönüştürmeniz gerekir. Bunu yapmak için, sütunların her birinde farklı değerlere farklı sayısal anahtar değerleri atayan [Onehotencodingtransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) dönüştürme sınıfını kullanın ve aşağıdaki kodu ekleyin:
 
-[!code-csharp[OneHotEncodingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
+[!code-csharp[OneHotEncodingEstimator](./snippets/predict-prices/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
-Veri hazırlığının son adımı, tüm özellik sütunlarını, dönüştürme sınıfını kullanarak **Özellikler** sütunuyla birleştirir `mlContext.Transforms.Concatenate` . Varsayılan olarak, bir öğrenme algoritması yalnızca **Özellikler** sütunundaki özellikleri işler. Aşağıdaki kodu ekleyin:
+Veri hazırlığının son adımı, tüm özellik sütunlarını, dönüştürme sınıfını kullanarak **Özellikler** sütunuyla birleştirir `mlContext.Transforms.Concatenate` . Varsayılan olarak, bir öğrenme algoritması yalnızca **Özellikler** sütunundaki özellikleri işler. Şu kodu ekleyin:
 
-[!code-csharp[ColumnConcatenatingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
+[!code-csharp[ColumnConcatenatingEstimator](./snippets/predict-prices/csharp/Program.cs#9 "Use the ColumnConcatenatingEstimator")]
 
 ## <a name="choose-a-learning-algorithm"></a>Bir öğrenme algoritması seçin
 
@@ -150,19 +150,19 @@ Bu sorun, New York şehrinde bir TAXI seyahat tarifeli havayolu tahmin etmeye y�
 
 Aşağıdaki kod satırı olarak aşağıdakini ekleyerek [Fasttreeregressiontrainer](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer) Machine Learning görevini veri dönüştürme tanımlarına ekleyin `Train()` :
 
-[!code-csharp[FastTreeRegressionTrainer](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#10 "Add the FastTreeRegressionTrainer")]
+[!code-csharp[FastTreeRegressionTrainer](./snippets/predict-prices/csharp/Program.cs#10 "Add the FastTreeRegressionTrainer")]
 
 ## <a name="train-the-model"></a>Modeli eğitme
 
 `dataview`Aşağıdaki kod satırını yönteme ekleyerek modeli eğitimine sığdırın ve eğitilen modeli döndürün `Train()` :
 
-[!code-csharp[TrainModel](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#11 "Train the model")]
+[!code-csharp[TrainModel](./snippets/predict-prices/csharp/Program.cs#11 "Train the model")]
 
 [Fit ()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) yöntemi, veri kümesini dönüştürerek ve eğitimi uygulayarak modelinizi eğitme.
 
 Aşağıdaki kod satırıyla eğitilen modeli döndürün `Train()` :
 
-[!code-csharp[ReturnModel](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#12 "Return the model")]
+[!code-csharp[ReturnModel](./snippets/predict-prices/csharp/Program.cs#12 "Return the model")]
 
 ## <a name="evaluate-the-model"></a>Modeli değerlendirme
 
@@ -184,15 +184,15 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 `Main`Aşağıdaki kodu kullanarak yöntem çağrısının hemen altına, yönteminden yeni yönteme bir çağrı ekleyin `Train` :
 
-[!code-csharp[CallEvaluate](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#14 "Call the Evaluate method")]
+[!code-csharp[CallEvaluate](./snippets/predict-prices/csharp/Program.cs#14 "Call the Evaluate method")]
 
 [Loadfromtextfile ()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) yöntemini kullanarak test veri kümesini yükleyin. Yöntemine aşağıdaki kodu ekleyerek bu veri kümesini bir kalite denetimi olarak kullanarak modeli değerlendirin `Evaluate` :
 
-[!code-csharp[LoadTestDataset](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#15 "Load the test dataset")]
+[!code-csharp[LoadTestDataset](./snippets/predict-prices/csharp/Program.cs#15 "Load the test dataset")]
 
 Ardından, `Test` aşağıdaki kodu öğesine ekleyerek verileri dönüştürün `Evaluate()` :
 
-[!code-csharp[PredictWithTransformer](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#16 "Predict using the Transformer")]
+[!code-csharp[PredictWithTransformer](./snippets/predict-prices/csharp/Program.cs#16 "Predict using the Transformer")]
 
 [Transform ()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemi, test veri kümesi giriş satırları için tahminleri yapar.
 
@@ -200,7 +200,7 @@ Ardından, `Test` aşağıdaki kodu öğesine ekleyerek verileri dönüştürün
 
 Modelin kalitesini belirlemede bunları göstermek için öncelikle ölçümleri almanız gerekir. Aşağıdaki kodu yönteminin sonraki satırı olarak ekleyin `Evaluate` :
 
-[!code-csharp[ComputeMetrics](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#17 "Compute Metrics")]
+[!code-csharp[ComputeMetrics](./snippets/predict-prices/csharp/Program.cs#17 "Compute Metrics")]
 
 Tahmin kümesine sahip olduktan sonra, tahmin edilen değerleri test veri kümesindeki gerçek ile karşılaştıran ve modelin nasıl çalıştığı hakkında ölçümler döndüren [değerlendir ()](xref:Microsoft.ML.RegressionCatalog.Evaluate%2A) yöntemi, modeli değerlendirir `Labels` .
 
@@ -215,11 +215,11 @@ Console.WriteLine($"*------------------------------------------------");
 
 [RKARE](../resources/glossary.md#coefficient-of-determination) , regresyon modellerinin başka bir değerlendirme ölçümdür. RKARE 0 ile 1 arasında değerleri alır. Daha yakın değeri 1 ' dir, model daha iyidir. `Evaluate`RKARE değerini göstermek için yöntemine aşağıdaki kodu ekleyin:
 
-[!code-csharp[DisplayRSquared](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#18 "Display the RSquared metric.")]
+[!code-csharp[DisplayRSquared](./snippets/predict-prices/csharp/Program.cs#18 "Display the RSquared metric.")]
 
 [RMS](../resources/glossary.md#root-of-mean-squared-error-rmse) , regresyon modelinin değerlendirme ölçümlerinden biridir. Bunun ne kadar küçük olması, modelin ne kadar iyi olduğu. `Evaluate`RMS değerini göstermek için yöntemine aşağıdaki kodu ekleyin:
 
-[!code-csharp[DisplayRMS](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#19 "Display the RMS metric.")]
+[!code-csharp[DisplayRMS](./snippets/predict-prices/csharp/Program.cs#19 "Display the RMS metric.")]
 
 ## <a name="use-the-model-for-predictions"></a>Tahmin için modeli kullanma
 
@@ -241,11 +241,11 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 `Main`Aşağıdaki kodu kullanarak yöntem çağrısının hemen altına, yönteminden yeni yönteme bir çağrı ekleyin `Evaluate` :
 
-[!code-csharp[CallTestSinglePrediction](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#20 "Call the TestSinglePrediction method")]
+[!code-csharp[CallTestSinglePrediction](./snippets/predict-prices/csharp/Program.cs#20 "Call the TestSinglePrediction method")]
 
 `PredictionEngine`Aşağıdaki kodu öğesine ekleyerek tarifeli havayolu tahmin etmek için kullanın `TestSinglePrediction()` :
 
-[!code-csharp[MakePredictionEngine](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#22 "Create the PredictionFunction")]
+[!code-csharp[MakePredictionEngine](./snippets/predict-prices/csharp/Program.cs#22 "Create the PredictionFunction")]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
@@ -254,17 +254,17 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 Bu öğretici, bu sınıf içinde bir test yolculuğu kullanır. Daha sonra, modelle denemeler yapmak için başka senaryolar da ekleyebilirsiniz. Bir örneği oluşturarak eğitilen modelin Maliyet tahminini test etmek için bir seyahat ekleyin `TestSinglePrediction()` `TaxiTrip` :
 
-[!code-csharp[PredictionData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#23 "Create test data for single prediction")]
+[!code-csharp[PredictionData](./snippets/predict-prices/csharp/Program.cs#23 "Create test data for single prediction")]
 
 Sonra, tarifeli havayolu öğesini bir taksi seyahat verisinin tek bir örneğine göre tahmin edin ve `PredictionEngine` Aşağıdaki kod satırları yöntemine ekleyerek bunu öğesine geçirin `TestSinglePrediction()` :
 
-[!code-csharp[Predict](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#24 "Create a prediction of taxi fare")]
+[!code-csharp[Predict](./snippets/predict-prices/csharp/Program.cs#24 "Create a prediction of taxi fare")]
 
 [Tahmin ()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi, verilerin tek bir örneğini tahmin eder.
 
 Belirtilen seyahati için öngörülen tarifeli havayolu 'yi göstermek için aşağıdaki kodu `TestSinglePrediction` yöntemine ekleyin:
 
-[!code-csharp[Predict](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#25 "Display the prediction.")]
+[!code-csharp[Predict](./snippets/predict-prices/csharp/Program.cs#25 "Display the prediction.")]
 
 Test çalışmanıza yönelik tahmini TAXI tarifeli havayolu görmek için programı çalıştırın.
 

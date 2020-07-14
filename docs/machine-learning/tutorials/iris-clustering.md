@@ -5,18 +5,18 @@ author: pkulikov
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 0cc42a196589a7ffe77300c9f2cd9cb28229a0a9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 8ee8b177dc9cc89c4f54956b8c0a274b1d093ece
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803982"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282092"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>Öğretici: Iris çiçekler 'i k-ML.NET Kümelemesi kullanarak kategorilere ayırın
 
 Bu öğreticide, [Iris çiçek veri kümesi](https://en.wikipedia.org/wiki/Iris_flower_data_set)için bir [kümeleme modeli](../resources/tasks.md#clustering) oluşturmak üzere ml.net 'in nasıl kullanılacağı gösterilmektedir.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > - Sorunu anlama
@@ -77,11 +77,11 @@ Giriş verileri ve tahminleri için sınıflar oluşturun:
 1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *IrisData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 1. Aşağıdaki `using` yönergeyi yeni dosyaya ekleyin:
 
-   [!code-csharp[Add necessary usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#Usings)]
+   [!code-csharp[Add necessary usings](./snippets/iris-clustering/csharp/IrisData.cs#Usings)]
 
 Mevcut sınıf tanımını kaldırın ve sınıfları `IrisData` ve `ClusterPrediction` *IrisData.cs* dosyasını tanımlayan aşağıdaki kodu ekleyin:
 
-[!code-csharp[Define data classes](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/IrisData.cs#ClassDefinitions)]
+[!code-csharp[Define data classes](./snippets/iris-clustering/csharp/IrisData.cs#ClassDefinitions)]
 
 `IrisData`, giriş veri sınıfıdır ve veri kümesindeki her bir özellik için tanımlar içerir. Veri kümesi dosyasındaki kaynak sütunlarının dizinlerini belirtmek için [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute) özniteliğini kullanın.
 
@@ -102,21 +102,21 @@ Mevcut sınıf tanımını kaldırın ve sınıfları `IrisData` ve `ClusterPred
 
 Aşağıdaki kodu, `Main` Bu yolları belirtmek için yöntemine hemen ekleyin:
 
-[!code-csharp[Initialize paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Paths)]
+[!code-csharp[Initialize paths](./snippets/iris-clustering/csharp/Program.cs#Paths)]
 
 Önceki kodu derlemek için, `using` *program.cs* dosyasının en üstüne aşağıdaki yönergeleri ekleyin:
 
-[!code-csharp[Add usings for paths](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#UsingsForPaths)]
+[!code-csharp[Add usings for paths](./snippets/iris-clustering/csharp/Program.cs#UsingsForPaths)]
 
 ## <a name="create-ml-context"></a>ML bağlamı oluştur
 
 `using` *Program.cs* dosyasının en üstüne aşağıdaki ek yönergeleri ekleyin:
 
-[!code-csharp[Add Microsoft.ML usings](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#MLUsings)]
+[!code-csharp[Add Microsoft.ML usings](./snippets/iris-clustering/csharp/Program.cs#MLUsings)]
 
 `Main`Yönteminde `Console.WriteLine("Hello World!");` satırını aşağıdaki kodla değiştirin:
 
-[!code-csharp[Create ML context](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateContext)]
+[!code-csharp[Create ML context](./snippets/iris-clustering/csharp/Program.cs#CreateContext)]
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType>Sınıfı, Machine Learning ortamını temsil eder ve veri yükleme, model eğitimi, tahmin ve diğer görevler için günlüğe kaydetme ve giriş noktaları için mekanizmalar sağlar. Bu, kavramsal olarak `DbContext` Entity Framework ' de kullanılmasına benzer.
 
@@ -124,7 +124,7 @@ Aşağıdaki kodu, `Main` Bu yolları belirtmek için yöntemine hemen ekleyin:
 
 Aşağıdaki kodu `Main` yöntemine ekleyerek verileri yükleme yolunu ayarlayın:
 
-[!code-csharp[Create text loader](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateDataView)]
+[!code-csharp[Create text loader](./snippets/iris-clustering/csharp/Program.cs#CreateDataView)]
 
 Genel [ `MLContext.Data.LoadFromTextFile` genişletme yöntemi](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) , veri kümesi şemasını belirtilen `IrisData` tür ve döndürmektedir <xref:Microsoft.ML.IDataView> . Bu, dönüştürücüler için giriş olarak kullanılabilir.
 
@@ -137,7 +137,7 @@ Bu öğreticide, kümeleme görevinin öğrenme işlem hattı aşağıdaki iki a
 
 `Main` yöntemine aşağıdaki kodu ekleyin:
 
-[!code-csharp[Create pipeline](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreatePipeline)]
+[!code-csharp[Create pipeline](./snippets/iris-clustering/csharp/Program.cs#CreatePipeline)]
 
 Kod, veri kümesinin üç kümede bölünmesi gerektiğini belirtir.
 
@@ -145,19 +145,19 @@ Kod, veri kümesinin üç kümede bölünmesi gerektiğini belirtir.
 
 Önceki bölümlerde eklenen adımlar, eğitim için işlem hattını hazırlandı, ancak hiçbiri yürütülmedi. `Main`Veri yükleme ve model eğitimi gerçekleştirmek için aşağıdaki satırı yöntemine ekleyin:
 
-[!code-csharp[Train the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#TrainModel)]
+[!code-csharp[Train the model](./snippets/iris-clustering/csharp/Program.cs#TrainModel)]
 
 ### <a name="save-the-model"></a>Modeli kaydetme
 
 Bu noktada, mevcut veya yeni .NET uygulamalarından tümleştirilebilen bir modeliniz vardır. Modelinizi bir. zip dosyasına kaydetmek için aşağıdaki kodu `Main` yöntemine ekleyin:
 
-[!code-csharp[Save the model](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#SaveModel)]
+[!code-csharp[Save the model](./snippets/iris-clustering/csharp/Program.cs#SaveModel)]
 
 ## <a name="use-the-model-for-predictions"></a>Tahmin için modeli kullanma
 
 Tahmine dayalı hale getirmek için, <xref:Microsoft.ML.PredictionEngine%602> transformatör işlem hattı aracılığıyla giriş türünün örneklerini alan sınıfı kullanın ve çıkış türünün örneklerini üretir. Aşağıdaki satırı, `Main` Bu sınıfın bir örneğini oluşturmak için yöntemine ekleyin:
 
-[!code-csharp[Create predictor](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Predictor)]
+[!code-csharp[Create predictor](./snippets/iris-clustering/csharp/Program.cs#Predictor)]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
@@ -170,15 +170,15 @@ Tahmine dayalı hale getirmek için, <xref:Microsoft.ML.PredictionEngine%602> tr
 1. **Yeni öğe Ekle** Iletişim kutusunda **sınıf** ' ı seçin ve **ad** alanını *TestIrisData.cs*olarak değiştirin. Sonra **Ekle** düğmesini seçin.
 1. Aşağıdaki örnekte olduğu gibi, sınıfı statik olacak şekilde değiştirin:
 
-   [!code-csharp[Make class static](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#Static)]
+   [!code-csharp[Make class static](./snippets/iris-clustering/csharp/TestIrisData.cs#Static)]
 
 Bu öğretici, bu sınıf içindeki bir Iris veri örneğini tanıtır. Modelle denemeler yapmak için başka senaryolar da ekleyebilirsiniz. Sınıfına aşağıdaki kodu ekleyin `TestIrisData` :
 
-[!code-csharp[Test data](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/TestIrisData.cs#TestData)]
+[!code-csharp[Test data](./snippets/iris-clustering/csharp/TestIrisData.cs#TestData)]
 
 Belirtilen öğenin ait olduğu kümeyi bulmak için, *program.cs* dosyasına dönün ve aşağıdaki kodu `Main` yöntemine ekleyin:
 
-[!code-csharp[Predict and output results](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#PredictionExample)]
+[!code-csharp[Predict and output results](./snippets/iris-clustering/csharp/Program.cs#PredictionExample)]
 
 Hangi kümenin belirtilen veri örneğini içerdiğini ve bu örnekten gelen kare uzaklıkları küme centroıd 'lerini görmek için programı çalıştırın. Sonuçlarınız aşağıdakine benzer olmalıdır:
 

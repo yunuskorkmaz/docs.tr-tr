@@ -1,5 +1,6 @@
 ---
 title: Karakter Kümesi Belirtme
+description: Dar (ANSI) veya geniş (Unicode) kodlama kullanan bir karakter kümesi belirtmeyi öğrenin. Alternatif olarak otomatik çalışma zamanı seçimini belirtebilirsiniz.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: 0db1cd8d75b45f6d718168793c873e5867028269
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a4f18431d89343a77ccf2b920edac485e7dcfca3
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125175"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282131"
 ---
 # <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
-Alan <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> , dize sıralamasını denetler ve platform çağırma IŞLEVININ bir dll 'de işlev adlarını bulmasını belirler. Bu konuda her iki davranış de açıklanmaktadır.  
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Alan, dize sıralamasını denetler ve platform çağırma işlevinin BIR DLL 'de işlev adlarını bulmasını belirler. Bu konuda her iki davranış de açıklanmaktadır.  
   
  Bazı API 'Ler dize bağımsız değişkenleri alan işlevlerin iki sürümünü dışarı aktarır: dar (ANSI) ve geniş (Unicode). Örneğin, Windows API 'SI, **MessageBox** işlevi için aşağıdaki giriş noktası adlarını içerir:  
   
@@ -31,7 +32,7 @@ Alan <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProp
      Giriş noktası adına bir "W" ile ayırt edilen 2 baytlık karakter Unicode biçimlendirmesi sağlar. **MessageBoxW** çağrıları her zaman Unicode biçiminde dizeleri sıralama.  
   
 ## <a name="string-marshaling-and-name-matching"></a>Dize hazırlama ve ad eşleştirme  
- `CharSet` Alan, aşağıdaki değerleri kabul eder:  
+ `CharSet`Alan, aşağıdaki değerleri kabul eder:  
   
  <xref:System.Runtime.InteropServices.CharSet.Ansi>(varsayılan değer)  
   
@@ -41,9 +42,9 @@ Alan <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProp
   
 - Ad eşleştirme  
   
-     <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> Alan `true`, Visual Basic varsayılan olarak olduğunda, platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox**belirtirseniz, platform çağrısı, **MessageBox** için arama yapar ve tam yazımı bulamıyorsa başarısız olur.  
+     Alan, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> Visual Basic varsayılan olarak olduğunda, `true` Platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox**belirtirseniz, platform çağrısı, **MessageBox** için arama yapar ve tam yazımı bulamıyorsa başarısız olur.  
   
-     `ExactSpelling` Alan `false`, C++ ve C# ' de varsayılan olarak olduğu gibi, platform Invoke First Unkarışmış diğer ad (**MessageBox**), daha sonra da unkarıştırılmış diğer ad bulunamazsa karıştırılmış adı (**MessageBoxA**) arar. ANSI ad eşleştirme davranışının Unicode ad eşleştirme davranışından farklı olduğuna dikkat edin.  
+     Alan, `ExactSpelling` `false` C++ ve C# ' de varsayılan olarak olduğu gibi, platform Invoke First unkarışmış diğer ad (**MessageBox**), daha sonra da unkarıştırılmış diğer ad bulunamazsa karıştırılmış adı (**MessageBoxA**) arar. ANSI ad eşleştirme davranışının Unicode ad eşleştirme davranışından farklı olduğuna dikkat edin.  
   
  <xref:System.Runtime.InteropServices.CharSet.Unicode>  
   
@@ -53,9 +54,9 @@ Alan <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProp
   
 - Ad eşleştirme  
   
-     `ExactSpelling` Alan `true`, Visual Basic varsayılan olarak olduğunda, platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox**belirtirseniz, Platform **çağırın ve tam** yazım bulamazsa başarısız olur.  
+     Alan, `ExactSpelling` Visual Basic varsayılan olarak olduğunda, `true` Platform Invoke yalnızca belirttiğiniz ad için arama yapar. Örneğin, **MessageBox**belirtirseniz, Platform **çağırın ve tam** yazım bulamazsa başarısız olur.  
   
-     `ExactSpelling` Alan `false`, C++ ve C# ' de varsayılan olarak olduğu gibi, platform Invoke önce karışmış adı arar (**MessageBoxW**), ardından karışmış ad bulunamazsa, unkarıştırılmış diğer ad (**MessageBox**). Unicode ad eşleştirme davranışının ANSI ad eşleştirme davranışından farklı olduğuna dikkat edin.  
+     Alan, `ExactSpelling` `false` C++ ve C# ' de varsayılan olarak olduğu gibi, platform Invoke önce karışmış adı arar (**MessageBoxW**), ardından karışmış ad bulunamazsa, Unkarıştırılmış diğer ad (**MessageBox**). Unicode ad eşleştirme davranışının ANSI ad eşleştirme davranışından farklı olduğuna dikkat edin.  
   
  <xref:System.Runtime.InteropServices.CharSet.Auto>  
   
@@ -89,7 +90,7 @@ End Class
 ```
   
 ## <a name="specifying-a-character-set-in-c-and-c"></a>C# ve C++ içinde bir karakter kümesi belirtme  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Alan, temel alınan karakter kümesini ANSI veya Unicode olarak tanımlar. Karakter kümesi bir yönteme dize bağımsız değişkenlerinin nasıl sıralanması gerektiğini denetler. Karakter kümesini belirtmek için aşağıdaki formlardan birini kullanın:  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Alan, temel alınan karakter KÜMESINI ANSI veya Unicode olarak tanımlar. Karakter kümesi bir yönteme dize bağımsız değişkenlerinin nasıl sıralanması gerektiğini denetler. Karakter kümesini belirtmek için aşağıdaki formlardan birini kullanın:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

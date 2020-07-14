@@ -5,18 +5,18 @@ author: briacht
 ms.date: 06/30/2020
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5445a255d32f824b1e451c828f1d46b3e1c16001
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 39c4aeef0b02a6bf47d78e6bf53cd42b4f592946
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803384"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282105"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>Öğretici: ML.NET ile matris factoru kullanarak bir film öneren oluşturma
 
 Bu öğreticide, bir .NET Core konsol uygulamasında ML.NET ile bir film öneren oluşturma yöntemi gösterilmektedir. Bu adımlarda C# ve Visual Studio 2019 kullanılır.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Makine öğrenimi algoritması seçin
@@ -62,7 +62,7 @@ Bir film listesi önermek veya ilgili ürünlerin bir listesini önermek gibi ö
 
 4. `using` *Program.cs* dosyanızın en üstüne aşağıdaki deyimleri ekleyin:
 
-    [!code-csharp[UsingStatements](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#UsingStatements "Add necessary usings")]
+    [!code-csharp[UsingStatements](./snippets/movie-recommendation/csharp/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>Verilerinizi indirin
 
@@ -129,17 +129,17 @@ using Microsoft.ML.Data;
 
 `MovieRating`Var olan sınıf tanımını kaldırarak ve *MovieRatingData.cs*içinde aşağıdaki kodu ekleyerek adlı bir sınıf oluşturun:
 
-[!code-csharp[MovieRatingClass](~/samples/snippets/machine-learning/MovieRecommendation/csharp/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
+[!code-csharp[MovieRatingClass](./snippets/movie-recommendation/csharp/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
 `MovieRating`bir giriş veri sınıfını belirtir. [Loadcolumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) özniteliği, veri kümesindeki hangi sütunların (sütun dizinine göre) yükleneceğini belirtir. `userId`Ve `movieId` sütunları `Features` (modelin tahmin edilmesine izin verilecek girişler `Label` ) ve derecelendirme sütunu, tahmin ettiğiniz ' dir `Label` (modelin çıktısı).
 
 `MovieRatingPrediction` `MovieRating` *MovieRatingData.cs*içindeki sınıftan sonra aşağıdaki kodu ekleyerek tahmin edilen sonuçları temsil eden başka bir sınıf oluşturun:
 
-[!code-csharp[PredictionClass](~/samples/snippets/machine-learning/MovieRecommendation/csharp/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
+[!code-csharp[PredictionClass](./snippets/movie-recommendation/csharp/MovieRatingData.cs#PredictionClass "Add the Movie Prediction Class")]
 
 *Program.cs*' de, öğesini `Console.WriteLine("Hello World!")` içinde aşağıdaki kodla değiştirin `Main()` :
 
-[!code-csharp[MLContext](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#MLContext "Add MLContext")]
+[!code-csharp[MLContext](./snippets/movie-recommendation/csharp/Program.cs#MLContext "Add MLContext")]
 
 [Mlcontext sınıfı](xref:Microsoft.ML.MLContext) tüm ml.NET işlemleri için bir başlangıç noktasıdır ve başlatılıyor, `mlContext` model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal olarak da benzerdir `DBContext` .
 
@@ -157,7 +157,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 Veri yolu değişkenlerinizi başlatın, \* . csv dosyalarından verileri yükleyin ve `Train` `Test` `IDataView` Aşağıdaki kod satırı olarak aşağıdakini ekleyerek nesne olarak ve verileri döndürün `LoadData()` :
 
-[!code-csharp[LoadData](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#LoadData "Load data from data paths")]
+[!code-csharp[LoadData](./snippets/movie-recommendation/csharp/Program.cs#LoadData "Load data from data paths")]
 
 ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olarak temsil edilir. `IDataView`, tablo verilerini (sayısal ve metin) tanımlamaya yönelik esnek ve verimli bir yoldur. Veriler bir metin dosyasından veya gerçek zamanlı olarak (örneğin, SQL veritabanı veya günlük dosyaları) bir `IDataView` nesneye yüklenebilir.
 
@@ -165,7 +165,7 @@ ML.NET içindeki veriler [ıdataview sınıfı](xref:Microsoft.ML.IDataView)olar
 
 Yöntemi `Main()` çağırmak `LoadData()` ve ve verilerini döndürmek için yöntemine aşağıdaki kodu ekleyin `Train` `Test` :
 
-[!code-csharp[LoadDataMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#LoadDataMain "Add LoadData method to Main")]
+[!code-csharp[LoadDataMain](./snippets/movie-recommendation/csharp/Program.cs#LoadDataMain "Add LoadData method to Main")]
 
 ## <a name="build-and-train-your-model"></a>Modelinizi derleyin ve eğitme
 
@@ -197,7 +197,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 Aşağıdaki kodu öğesine ekleyerek veri dönüşümlerini tanımlayın `BuildAndTrainModel()` :
 
-[!code-csharp[DataTransformations](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#DataTransformations "Define data transformations")]
+[!code-csharp[DataTransformations](./snippets/movie-recommendation/csharp/Program.cs#DataTransformations "Define data transformations")]
 
 , `userId` `movieId` Gerçek değerleri değil kullanıcıları ve film başlıklarını da temsil ettiğinden, her bir sayısal anahtar türü sütununa (öneri algoritmaları tarafından kabul edilen bir biçim) dönüştürmek ve bunları yeni veri kümesi sütunları olarak eklemek Için [Mapvaluetokey ()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) yöntemini kullanırsınız `userId` `movieId` `Feature` :
 
@@ -209,7 +209,7 @@ Aşağıdaki kodu öğesine ekleyerek veri dönüşümlerini tanımlayın `Build
 
 Machine Learning algoritmasını seçin ve aşağıdaki kod satırı olarak aşağıdakini ekleyerek veri dönüştürme tanımlarına ekleyin `BuildAndTrainModel()` :
 
-[!code-csharp[AddAlgorithm](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#AddAlgorithm "Add the training algorithm with options")]
+[!code-csharp[AddAlgorithm](./snippets/movie-recommendation/csharp/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
 [Matrixfactorizationtrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) , öneri eğitim algoritmanız.  [Matris](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) , kullanıcıların geçmişte ürünleri derecelendirirken, bu öğreticideki veri kümeleri için büyük/küçük bir yaklaşım olan genel bir yaklaşımdır. Farklı verilere sahip olduğunuzda kullanabileceğiniz başka öneri algoritmaları vardır (daha fazla bilgi için aşağıdaki [diğer öneri algoritmaları](#other-recommendation-algorithms) bölümüne bakın).
 
@@ -226,13 +226,13 @@ Bu durumda, `Matrix Factorization` algoritma "işbirliğine dayalı filtreleme" 
 
 `Train`Yöntemine bir sonraki kod satırı olarak aşağıdakileri ekleyerek modeli verilere sığdırın ve eğitilen modeli döndürün `BuildAndTrainModel()` :
 
-[!code-csharp[FitModel](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
+[!code-csharp[FitModel](./snippets/movie-recommendation/csharp/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
 [Fit ()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) yöntemi, modelinizi belirtilen eğitim veri kümesiyle eğliyor. Teknik olarak, `Estimator` verileri dönüştürerek ve eğitimi uygulayarak tanımları yürütür ve bir olan eğitilen modeli geri döndürür `Transformer` .
 
 `Main()` `BuildAndTrainModel()` Yönteminizi çağırmak ve eğitilen modeli döndürmek için yöntemine bir sonraki kod satırı olarak aşağıdakini ekleyin:
 
-[!code-csharp[BuildTrainModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
+[!code-csharp[BuildTrainModelMain](./snippets/movie-recommendation/csharp/Program.cs#BuildTrainModelMain "Add BuildAndTrainModel method in Main")]
 
 ## <a name="evaluate-your-model"></a>Modelinizi değerlendirme
 
@@ -249,23 +249,23 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 
 `Test`Aşağıdaki kodu öğesine ekleyerek verileri dönüştürün `EvaluateModel()` :
 
-[!code-csharp[Transform](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#Transform "Transform the test data")]
+[!code-csharp[Transform](./snippets/movie-recommendation/csharp/Program.cs#Transform "Transform the test data")]
 
 [Transform ()](xref:Microsoft.ML.ITransformer.Transform%2A) yöntemi, test veri kümesinin birden çok sağlanmış giriş satırları için tahminleri yapar.
 
 Yöntemine aşağıdaki kod satırı olarak aşağıdakini ekleyerek modeli değerlendirin `EvaluateModel()` :
 
-[!code-csharp[Evaluate](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
+[!code-csharp[Evaluate](./snippets/movie-recommendation/csharp/Program.cs#Evaluate "Evaluate the model using predictions from the test data")]
 
 Tahmin kümesine sahip olduktan sonra, tahmin edilen değerleri test veri kümesindeki gerçek ile karşılaştıran ve modelin nasıl çalıştığı hakkında ölçümler döndüren [değerlendir ()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) yöntemi, modeli değerlendirir `Labels` .
 
 Aşağıdaki kod satırını yöntemine ekleyerek değerlendirme ölçümlerinizi konsola yazdırın `EvaluateModel()` :
 
-[!code-csharp[PrintMetrics](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PrintMetrics "Print the evaluation metrics")]
+[!code-csharp[PrintMetrics](./snippets/movie-recommendation/csharp/Program.cs#PrintMetrics "Print the evaluation metrics")]
 
 `Main()`Yönteminizi çağırmak için yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin `EvaluateModel()` :
 
-[!code-csharp[EvaluateModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
+[!code-csharp[EvaluateModelMain](./snippets/movie-recommendation/csharp/Program.cs#EvaluateModelMain "Add EvaluateModel method in Main")]
 
 Şu ana kadar çıkış aşağıdaki metne benzer görünmelidir:
 
@@ -320,7 +320,7 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 `PredictionEngine`Aşağıdaki kodu öğesine ekleyerek derecelendirmeyi tahmin etmek için öğesini kullanın `UseModelForSinglePrediction()` :
 
-[!code-csharp[PredictionEngine](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PredictionEngine "Create Prediction Engine")]
+[!code-csharp[PredictionEngine](./snippets/movie-recommendation/csharp/Program.cs#PredictionEngine "Create Prediction Engine")]
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
@@ -329,7 +329,7 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 `MovieRating` `testInput` Aşağıdaki kod satırlarını yöntemine ekleyerek, çağrılan bir örneği oluşturun ve bunu tahmin altyapısına geçirin `UseModelForSinglePrediction()` :
 
-[!code-csharp[MakeSinglePrediction](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
+[!code-csharp[MakeSinglePrediction](./snippets/movie-recommendation/csharp/Program.cs#MakeSinglePrediction "Make a single prediction with the Prediction Engine")]
 
 PREDICT [()](xref:Microsoft.ML.PredictionEngine%602.Predict%2A) işlevi, tek bir veri sütunu üzerinde bir tahmin yapar.
 
@@ -337,11 +337,11 @@ Daha sonra `Score` , filmi Kullanıcı 6 ' ya Movieıd 10 ile önermek isteyip i
 
 Sonuçları yazdırmak için aşağıdaki kod satırları `UseModelForSinglePrediction()` yöntemine ekleyin:
 
-[!code-csharp[PrintResults](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PrintResults "Print the recommendation prediction results")]
+[!code-csharp[PrintResults](./snippets/movie-recommendation/csharp/Program.cs#PrintResults "Print the recommendation prediction results")]
 
 `Main()`Yönteminizi çağırmak için yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin `UseModelForSinglePrediction()` :
 
-[!code-csharp[UseModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
+[!code-csharp[UseModelMain](./snippets/movie-recommendation/csharp/Program.cs#UseModelMain "Add UseModelForSinglePrediction method in Main")]
 
 Bu yöntemin çıktısı aşağıdaki metne benzer görünmelidir:
 
@@ -365,13 +365,13 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 Aşağıdaki kodu yöntemine ekleyerek eğitilen modelinizi kaydedin `SaveModel()` :
 
-[!code-csharp[SaveModel](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#SaveModel "Save the model to a zip file")]
+[!code-csharp[SaveModel](./snippets/movie-recommendation/csharp/Program.cs#SaveModel "Save the model to a zip file")]
 
 Bu yöntem, eğitilen modelinizi, daha sonra tahmine dayalı hale getirmek için diğer .NET uygulamalarında kullanılabilecek bir. zip dosyasına ("veri" klasöründe) kaydeder.
 
 `Main()`Yönteminizi çağırmak için yöntemi içindeki sonraki kod satırı olarak aşağıdakini ekleyin `SaveModel()` :
 
-[!code-csharp[SaveModelMain](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#SaveModelMain "Create SaveModel method in Main")]
+[!code-csharp[SaveModelMain](./snippets/movie-recommendation/csharp/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
 ### <a name="use-your-saved-model"></a>Kayıtlı modelinizi kullanın
 

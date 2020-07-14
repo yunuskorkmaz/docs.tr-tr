@@ -1,17 +1,18 @@
 ---
 title: Bileşim Analiz Aracı (Mefx)
+description: .NET içinde Managed Extensibility Framework (MEF) parçaları içeren DLL ve EXE dosyalarını çözümleyen bileşim çözümleme aracı (Mefx) hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Composition Analysis Tool [MEF]
 - MEF, Composition Analysis Tool
 - Mefx [MEF], Composition Analysis Tool
 ms.assetid: c48a7f93-83bb-4a06-aea0-d8e7bd1502ad
-ms.openlocfilehash: 7d0acf16ace5aad60b32b7139a58a258fb080ee0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abb1459afc5aeb2d39ee553c62fe382bb7af58d5
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181295"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281283"
 ---
 # <a name="composition-analysis-tool-mefx"></a>Bileşim Analiz Aracı (Mefx)
 Bileşim çözümleme aracı (Mefx), kitaplık (. dll) ve Managed Extensibility Framework (MEF) parçaları içeren uygulama (. exe) dosyalarını analiz eden bir komut satırı uygulamasıdır. Mefx 'in birincil amacı, geliştiricilere, uygulamanın kendisi için ek bir izleme kodu ekleme gereksinimi olmadan MEF uygulamalarında bileşim başarısızlıklarını tanılamaya yönelik bir yol sağlamaktır. Üçüncü taraf tarafından sağlanan bir kitaplıktan parçaları anlamanıza yardımcı olmak için de kullanışlı olabilir. Bu konu, Mefx 'in nasıl kullanılacağını açıklar ve söz dizimi için bir başvuru sağlar.  
@@ -28,7 +29,7 @@ Bileşim çözümleme aracı (Mefx), kitaplık (. dll) ve Managed Extensibility 
 mefx [files and directories] [action] [options]  
 ```  
   
- İlk bağımsız değişken kümesi, analiz için parçaların yükleneceği dosyaları ve dizinleri belirtir. `/file:` Anahtarına sahip bir dosya ve `/directory:` anahtarı olan bir dizin belirtin. Aşağıdaki örnekte gösterildiği gibi birden çok dosya veya dizin belirtebilirsiniz:  
+ İlk bağımsız değişken kümesi, analiz için parçaların yükleneceği dosyaları ve dizinleri belirtir. Anahtarına sahip bir dosya `/file:` ve anahtarı olan bir dizin belirtin `/directory:` . Aşağıdaki örnekte gösterildiği gibi birden çok dosya veya dizin belirtebilirsiniz:  
   
 ```console  
 mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]  
@@ -41,7 +42,7 @@ mefx /file:MyAddIn.dll /directory:Program\AddIns [action...]
   
 <a name="listing_available_parts"></a>
 ## <a name="listing-available-parts"></a>Kullanılabilir bölümleri listeleme  
- Yüklenen dosyalarda `/parts` belirtilen tüm parçaları listelemek için eylemini kullanın. Sonuç, bölüm adlarının basit bir listesidir.  
+ `/parts`Yüklenen dosyalarda belirtilen tüm parçaları listelemek için eylemini kullanın. Sonuç, bölüm adlarının basit bir listesidir.  
   
 ```console
 mefx /file:MyAddIn.dll /parts  
@@ -49,7 +50,7 @@ MyAddIn.AddIn
 MyAddIn.MemberPart  
 ```  
   
- Bölümler hakkında daha fazla bilgi için `/verbose` seçeneğini kullanın. Bu, tüm kullanılabilir parçalar için daha fazla bilgi çıktısını alacak. Tek bir bölüm hakkında daha fazla bilgi edinmek için yerine `/type` eylemini kullanın. `/parts`  
+ Bölümler hakkında daha fazla bilgi için `/verbose` seçeneğini kullanın. Bu, tüm kullanılabilir parçalar için daha fazla bilgi çıktısını alacak. Tek bir bölüm hakkında daha fazla bilgi edinmek için `/type` yerine eylemini kullanın `/parts` .  
   
 ```console  
 mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose  
@@ -59,20 +60,20 @@ mefx /file:MyAddIn.dll /type:MyAddIn.AddIn /verbose
   
 <a name="listing_imports_and_exports"></a>
 ## <a name="listing-imports-and-exports"></a>Içeri aktarmaları ve dışarı aktarmaları listeleme  
- `/imports` Ve `/exports` eylemleri, tüm içeri aktarılan parçaları ve tüm aktarılmış parçaları sırasıyla listeedecektir. Ayrıca, `/importers` veya `/exporters` eylemlerini kullanarak belirli bir türü içeri veya dışarı aktarma bölümlerini de listeleyebilirsiniz.  
+ `/imports`Ve `/exports` eylemleri, tüm içeri aktarılan parçaları ve tüm aktarılmış parçaları sırasıyla listeedecektir. Ayrıca, veya eylemlerini kullanarak belirli bir türü içeri veya dışarı aktarma bölümlerini de listeleyebilirsiniz `/importers` `/exporters` .  
   
 ```console  
 mefx /file:MyAddIn.dll /importers:MyAddin.MemberPart  
 MyAddin.AddIn  
 ```  
   
- Bu eylemlere `/verbose` seçeneği de uygulayabilirsiniz.  
+ `/verbose`Bu eylemlere seçeneği de uygulayabilirsiniz.  
   
 <a name="finding_rejected_parts"></a>
 ## <a name="finding-rejected-parts"></a>Reddedilen parçaları bulma  
  Mevcut parçalar yüklendikten sonra, Mefx bunları oluşturmak için MEF bileşim altyapısını kullanır. Başarıyla birleştirilemeyen bölümler *reddedildi*olarak adlandırılır. Reddedilen tüm parçaları listelemek için `/rejected` eylemini kullanın.  
   
- Reddedilen bölümlerle ilgili ayrıntılı `/verbose` bilgileri yazdırmak için `/rejected` bu seçeneği kullanın. `ClassLibrary1` Aşağıdaki örnekte, dll `AddIn` , `MemberPart` ve `ChainOne` parçalarını içeri aktaran bölümünü içerir. `ChainOne`İçeri `ChainTwo`aktarmalar, `ChainTwo` ancak yok. Bu, reddedildiği `ChainOne` anlamına gelir ve bu da `AddIn` reddedilmesine neden olur.  
+ `/verbose` `/rejected` Reddedilen bölümlerle ilgili ayrıntılı bilgileri yazdırmak için bu seçeneği kullanın. Aşağıdaki örnekte, `ClassLibrary1` DLL, `AddIn` ve parçalarını içeri aktaran bölümünü içerir `MemberPart` `ChainOne` . `ChainOne`içeri aktarmalar `ChainTwo` , ancak `ChainTwo` yok. Bu, reddedildiği anlamına gelir `ChainOne` ve bu da `AddIn` reddedilmesine neden olur.  
   
 ```console  
 mefx /file:ClassLibrary1.dll /rejected /verbose  
@@ -103,22 +104,22 @@ from: ClassLibrary1.ChainOne from: AssemblyCatalog (Assembly="ClassLibrary1, Ver
    at Microsoft.ComponentModel.Composition.Diagnostics.CompositionInfo.AnalyzeImportDefinition(ExportProvider host, IEnumerable`1 availableParts, ImportDefinition id)  
 ```  
   
- İlginç bilgiler, `[Exception]` ve `[Unsuitable]` sonuçlarında yer alır. `[Exception]` Sonuç olarak bir bölümün reddedilme nedeni hakkında bilgi sağlanır. Sonuç `[Unsuitable]` , başka bir şekilde eşleşen bölümün bir içeri aktarmayı doldurmasının neden kullanılamayacağını belirtir; Bu durumda, bu bölümün kendisi eksik içeri aktarmalar için reddedildiği için.  
+ İlginç bilgiler, ve sonuçlarında yer alır `[Exception]` `[Unsuitable]` . `[Exception]`Sonuç olarak bir bölümün reddedilme nedeni hakkında bilgi sağlanır. `[Unsuitable]`Sonuç olarak, başka bir şekilde eşleşen bölümün bir içeri aktarmayı doldurması için kullanılması gerektiğini gösterir; bu durumda, bu bölümün kendisi eksik içeri aktarmalar için reddedildi.  
   
 <a name="analyzing_primary_causes"></a>
 ## <a name="analyzing-primary-causes"></a>Birincil nedenler çözümleniyor  
- Çok sayıda bölüm uzun bir bağımlılık zincirinde bağlanmışsa, en alta yakın bir bölümü içeren bir sorun, tüm zincirin reddedilmesine neden olabilir. Hatanın asıl nedeni her zaman açık olmadığından, bu sorunların tanılanması zor olabilir. Sorunu gidermek için, herhangi bir geçişli reddetme kök nedenini `/causes` bulmayı deneyen eylemini kullanabilirsiniz.  
+ Çok sayıda bölüm uzun bir bağımlılık zincirinde bağlanmışsa, en alta yakın bir bölümü içeren bir sorun, tüm zincirin reddedilmesine neden olabilir. Hatanın asıl nedeni her zaman açık olmadığından, bu sorunların tanılanması zor olabilir. Sorunu gidermek için, `/causes` herhangi bir geçişli reddetme kök nedenini bulmayı deneyen eylemini kullanabilirsiniz.  
   
- Önceki örnekte `/causes` eylemin kullanılması yalnızca `ChainOne`, doldurulmamış içeri aktarma işleminin `AddIn`reddedilme nedeni olan bilgileri listeme. `/causes` Eylem hem normal hem `/verbose` de seçeneklerde kullanılabilir.  
+ `/causes`Önceki örnekte eylemin kullanılması yalnızca `ChainOne` , doldurulmamış içeri aktarma işleminin reddedilme nedeni olan bilgileri listeme `AddIn` . `/causes`Eylem hem normal hem de `/verbose` seçeneklerde kullanılabilir.  
   
 > [!NOTE]
-> Çoğu durumda, Mefx bir basamaklı hatanın kök nedenini tanılayabilir. Ancak, parçaların bir kapsayıcıya programlı olarak eklendiği durumlarda, hiyerarşik kapsayıcılar içeren durumlar veya özel `ExportProvider` uygulamalar içeren durumlar Için Mefx, nedeni tanılayamaz. Genel olarak, daha önce açıklanan durumlar mümkün olduğunda kaçınılması gerekir, çünkü hataların genellikle tanılanması zordur.  
+> Çoğu durumda, Mefx bir basamaklı hatanın kök nedenini tanılayabilir. Ancak, parçaların bir kapsayıcıya programlı olarak eklendiği durumlarda, hiyerarşik kapsayıcılar içeren durumlar veya özel uygulamalar içeren durumlar için `ExportProvider` Mefx, nedeni tanılayamaz. Genel olarak, daha önce açıklanan durumlar mümkün olduğunda kaçınılması gerekir, çünkü hataların genellikle tanılanması zordur.  
   
 <a name="white_lists"></a>
 ## <a name="white-lists"></a>Beyaz listeler  
- Seçeneği `/whitelist` , reddedilmesi beklenen bölümleri listeleyen bir metin dosyası belirtmenize olanak sağlar. Ardından, beklenmeyen ret ler işaretlenir. Bu, tamamlanmamış bir kitaplığı veya bazı bağımlılıkları eksik olan bir alt kitaplığı çözümlediğinizde yararlı olabilir. `/whitelist` Seçeneği `/rejected` veya `/causes` eylemlerine uygulanabilir.  
+ `/whitelist`Seçeneği, reddedilmesi beklenen bölümleri listeleyen bir metin dosyası belirtmenize olanak sağlar. Ardından, beklenmeyen ret ler işaretlenir. Bu, tamamlanmamış bir kitaplığı veya bazı bağımlılıkları eksik olan bir alt kitaplığı çözümlediğinizde yararlı olabilir. `/whitelist`Seçeneği `/rejected` veya `/causes` eylemlerine uygulanabilir.  
   
- "ClassLibrary1. ChainOne" metnini içeren test. txt adlı bir dosya düşünün. `/rejected` Eylemi önceki örnekteki `/whitelist` seçeneğiyle çalıştırırsanız, aşağıdaki çıktıyı üretir:  
+ "ClassLibrary1. ChainOne" metnini içeren test.txt adlı bir dosya düşünün. `/rejected`Eylemi `/whitelist` önceki örnekteki seçeneğiyle çalıştırırsanız, aşağıdaki çıktıyı üretir:  
   
 ```console
 mefx /file:ClassLibrary1.dll /rejected /whitelist:test.txt  

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: f1ef899e46c804cb174814b0abbd9490ce6221d5
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: e9431ebad3fee4eaa1d39f4ac95a57a6d0313fc8
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325948"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281725"
 ---
 # <a name="creating-a-new-windows-form"></a>Yeni bir Windows Formu Oluşturma
 Bu konu, ilk Windows Forms uygulamanızı oluşturmayı betimleyen konuların bağlantılarını içerir. Ayrıca, bu bölümdeki konular, bir Windows Forms uygulaması oluşturmaya başladığınızda anlamanız gereken temel sözlük ve yönergelerinden bazılarını tanıtmaktadır. Windows Forms uygulamalar hakkında daha fazla bilgi edinmek için, bunlar üzerinde kullanabileceğiniz denetimler, olaylar ve işleme olayları ve kullanıcıdan girişi nasıl işleyeceğinizi öğrenmek için ilgili konu listesine bakın.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Koordinatları Windows Forms](windows-forms-coordinates.md).  
+ [Windows Forms Koordinatları](windows-forms-coordinates.md)  
  İstemci ve ekran koordinatlarını açıklar.  
   
  [Nasıl yapılır: Komut Satırından Bir Windows Forms Uygulaması Oluşturma](how-to-create-a-windows-forms-application-from-the-command-line.md)  

@@ -1,5 +1,6 @@
 ---
 title: Yöntem Erişiminin Güvenliğini Sağlama
+description: Genel kullanıma yönelik olmayan ancak hala public olması gereken yöntemler için yöntem erişimini güvenli hale getirme hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,35 +11,35 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: a9e1226483eaa02dc8dc3dfb741e3df6b2985fbe
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 287c3651be0272f1941fb2320640970d70a1bd0f
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181151"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282062"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Bazı yöntemler, rasgele güvenilmeyen kodun çağrılmasını sağlamak için uygun olmayabilir. Bu tür yöntemler çeşitli riskler oluşturmaktadır: Yöntem bazı sınırlı bilgiler sağlayabilir; ona aktarılan herhangi bir bilginin olduğuna inanabilir; parametreleri üzerinde hata denetimi yapmayabilir; veya yanlış parametrelerle arızalanabilir veya zararlı bir şey yapabilir. Bu durumların farkında olmalı ve yöntemi korumaya yardımcı olmak için harekete geçmelisiniz.  
+ Bazı yöntemler rastgele güvenilmeyen kodun çağrısına izin vermek için uygun olmayabilir. Bu tür yöntemler çeşitli riskler sunar: yöntem bazı kısıtlı bilgiler verebilir; Bu, kendisine geçirilen bilgilere benzeyebilir; parametrelerde hata denetimi yapamayabilir; ya da yanlış parametrelerle hatalı olabilir veya zararlı bir şey olabilir. Bu durumları bilmeniz ve yöntemi korumanıza yardımcı olması için işlem yapmanız gerekir.  
   
- Bazı durumlarda, genel kullanıma yönelik olmayan ancak yine de herkese açık olması gereken yöntemleri kısıtlamanız gerekebilir. Örneğin, kendi DL'leriniz arasında çağrılması gereken bir arabiriminiz olabilir ve bu nedenle herkese açık olması gerekir, ancak müşterilerin kullanmasını önlemek veya kötü amaçlı kodun bileşeninize giriş noktasını kullanmasını önlemek için bu arabirimi herkese açık hale getirmek istemezsiniz. Genel kullanım için tasarlanmamış bir yöntemi kısıtlamak için başka bir yaygın neden (ancak ortak olmalıdır) belgelemek ve çok iç arabirim olabilir desteklemek zorunda önlemektir.  
+ Bazı durumlarda, genel kullanım için tasarlanmamış ancak hala genel olması gereken yöntemleri kısıtlamanız gerekebilir. Örneğin, kendi dll 'larınız genelinde çağrılması gereken bir arayüze sahip olabilirsiniz ve bu nedenle genel olması gerekir, ancak müşterilerin bunu kullanmasını engellemek veya kötü amaçlı kodun giriş noktasını bileşeninize kötüye kullanmasını engellemek için genel kullanıma sunmak istemezsiniz. Bir yöntemi genel kullanıma yönelik amaçlanmayan (ancak genel olması gerekir) bir diğer yaygın neden, çok dahili bir arabirim olabileceğini belgelemek ve desteklemek zorunda kalmamak.  
   
- Yönetilen kod, yöntem erişimini kısıtlamanın çeşitli yollarını sunar:  
+ Yönetilen kod, yöntem erişimini kısıtlamak için çeşitli yollar sunar:  
   
-- Güvenilen sınıf, derleme veya türetilmiş sınıflar için erişilebilirlik kapsamını sınırlayın. Yöntem erişimini sınırlamanın en basit yolu budur. Türemiş sınıfların, bazı durumlarda üst sınıfın kimliğini paylaşmalarına rağmen, türedikleri sınıfların türetildiği sınıftan daha az güvenilir olabileceğini unutmayın. Özellikle, güvenlik bağlamında mutlaka kullanılmayan **korumalı**anahtar kelimeden güven çıkarmayın.  
+- Güveniliyorsa, erişilebilirlik kapsamını sınıf, derleme veya türetilmiş sınıflarla sınırlayın. Bu yöntem erişimini sınırlamanın en kolay yoludur. Genel olarak, türetilmiş sınıfların türettikleri sınıftan daha az güvenilir olabileceğini, ancak bazı durumlarda üst sınıfın kimliğini paylaştıkları unutulmamalıdır. Özellikle, güvenlik bağlamında kullanılması gerekmeyen, **korunan**anahtar kelimeden güven çıkarmayın.  
   
-- Yöntem erişimini belirli bir kimliği arayanlarla (temelde, seçtiğiniz belirli [bir kanıt,](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) yayımcı, bölge vb.) sınırlandırın.  
+- Belirli bir kimliğin çağıranlarını [(aslýnda](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) , The The Strong Name, Publisher, Zone vb.) ve seçtiğiniz bir kimliğe ait çağıranlara erişimi sınırlayın.  
   
-- Yöntem erişimini, seçtiğiniz izinlere sahip olan arayanlarla sınırlandırın.  
+- Seçtiğiniz izinlere sahip çağıranlara erişim yöntemini sınırlayın.  
   
- Benzer şekilde, bildirimsel güvenlik sınıfların devralma denetlemek için izin verir. Aşağıdakileri yapmak için **InheritanceDemand'ı** kullanabilirsiniz:  
+ Benzer şekilde, bildirime dayalı güvenlik, sınıfların devralınmasını denetlemenize olanak tanır. **InheritanceDemand** kullanarak şunları yapabilirsiniz:  
   
-- Türetilen sınıfların belirli bir kimliğe veya izne sahip olmasını zorunlu kılmasını zorunlu kınla.  
+- Türetilmiş sınıfların belirtilen kimliğe veya izne sahip olmasını gerektir.  
   
-- Belirli bir kimliğe veya izine sahip olmak için belirli yöntemleri geçersiz kılan türemiş sınıflar gerektirir.  
+- Belirli bir kimliğe veya izne sahip olacak şekilde belirli yöntemleri geçersiz kılan türetilmiş sınıflar gerektir.  
   
- Aşağıdaki örnek, arayanların belirli bir güçlü adla imzalanmasını gerekterek, sınırlı erişim için ortak bir sınıfın korunmasına nasıl yardımcı olabileceğini gösterir. Bu örnek, <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> güçlü ad için bir **Talep** ile kullanır. Güçlü bir ada sahip bir derlemenin nasıl imzalatılılabildiğini anlatan görev tabanlı bilgiler için [bkz.](../../standard/assembly/create-use-strong-named.md)  
+ Aşağıdaki örnek, çağıranların belirli bir tanımlayıcı ad ile imzalandığından emin olmak için genel bir sınıfı sınırlı erişim için nasıl koruyabileceğinizi gösterir. Bu örnek, öğesini <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute> tanımlayıcı ad için bir **talep** ile kullanır. Bir derlemeyi güçlü bir adla imzalama hakkında görev tabanlı bilgiler için, bkz. [güçlü adlandırılmış derlemeler oluşturma ve kullanma](../../standard/assembly/create-use-strong-named.md).  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -55,16 +56,16 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Güvenilmeyen Kodla Sınıfları ve Üyeleri Kullanımdan Dışlama  
- Belirli sınıfların ve yöntemlerin yanı sıra özelliklerin ve olayların kısmen güvenilen kodtarafından kullanılmasını önlemek için bu bölümde gösterilen bildirimleri kullanın. Bu bildirimleri bir sınıfa uygulayarak, korumayı tüm yöntemlerine, özelliklerine ve olaylarına uygularsınız; ancak, alan erişiminin bildirimsel güvenliktarafından etkilenmediğini unutmayın. Ayrıca, bağlantı taleplerinin yalnızca acil arayanlara karşı korunmaya yardımcı olduğunu ve yine de cezbetme saldırılarına maruz kabileceğini unutmayın.  
+ Belirli sınıfların ve yöntemlerin yanı sıra özellik ve olayların kısmen güvenilen kod tarafından kullanılmasını engellemek için bu bölümde gösterilen bildirimleri kullanın. Bu bildirimleri bir sınıfa uygulayarak, korumayı tüm yöntemlerine, özelliklerine ve olaylarına uygularsınız; Ancak, alan erişiminin bildirime dayalı güvenlik tarafından etkilenmediğini unutmayın. Ayrıca, bağlantı taleplerini yalnızca anında çağıranlara karşı korumaya yardımcı olur ve yine de söz konusu saldırı saldırılarına maruz kalabilir.  
   
 > [!NOTE]
-> .NET Framework 4'te yeni bir şeffaflık modeli tanıtıldı. [Güvenlik-Saydam Kod, Düzey 2](security-transparent-code-level-2.md) modeli öznitelik ile <xref:System.Security.SecurityCriticalAttribute> güvenli kodu tanımlar. Güvenlik açısından kritik kod, hem arayanların hem de devralanların tam olarak güvenilmesini gerektirir. Önceki .NET Framework sürümlerinden kod erişim güvenlik kuralları altında çalışan derlemeler düzey 2 derlemelerini çağırabilir. Bu durumda, güvenlik açısından kritik öznitelikler tam güven için bağlantı talepleri olarak kabul edilecektir.  
+> .NET Framework 4 ' te yeni bir saydamlık modeli sunuldu. [Güvenlik açısından saydam kod, düzey 2](security-transparent-code-level-2.md) modeli, güvenli kodu <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle tanımlar. Güvenlik açısından kritik kod, çağıranların ve herıtors 'ın tamamen güvenilir olmasını gerektirir. Önceki .NET Framework sürümlerinden kod erişimi güvenlik kuralları altında çalışan derlemeler, düzey 2 derlemelerini çağırabilir. Bu durumda, güvenlik açısından kritik öznitelikler tam güven için bağlantı talepleri olarak kabul edilir.  
   
- Güçlü adlandırılmış derlemelerde, [bir LinkDemand,](link-demands.md) bunların kullanımını tam olarak güvenilen arayanlara kısıtlamak için tüm genel olarak erişilebilen yöntemlere, özelliklere ve olaylara uygulanır. Bu özelliği devre dışı kalmak <xref:System.Security.AllowPartiallyTrustedCallersAttribute> için özniteliği uygulamanız gerekir. Bu nedenle, güvenilmeyen arayanları hariç tutmak için sınıfları açıkça işaretlemeyalnızca bu özniteliğe sahip imzalanmamış derlemeler veya derlemeler için gereklidir; bu bildirimleri, güvenilmeyen arayanlar için tasarlanmayan türlerin bir alt kümesini işaretlemek için kullanabilirsiniz.  
+ Tanımlayıcı adlı derlemelerde, bir [LinkDemand](link-demands.md) , kullanımlarını tam güvenilir çağıranlar olarak kısıtlamak için genel olarak erişilebilen tüm yöntemlere, özelliklere ve olaylara uygulanır. Bu özelliği devre dışı bırakmak için özniteliği uygulamanız gerekir <xref:System.Security.AllowPartiallyTrustedCallersAttribute> . Bu nedenle, güvenilmeyen çağıranları hariç tutmak için sınıfları açıkça işaretlemek yalnızca imzasız derlemeler veya bu özniteliğe sahip derlemeler için gereklidir; Bu bildirimleri, güvenilmeyen çağıranlar için tasarlanmamış bir tür alt kümesini işaretlemek için kullanabilirsiniz.  
   
- Aşağıdaki örnekler, sınıfların ve üyelerin güvenilmeyen kod tarafından kullanılmasını nasıl önleyeceğinizi gösterir.  
+ Aşağıdaki örneklerde, sınıfların ve üyelerin güvenilmeyen kod tarafından nasıl kullanılacağı gösterilmektedir.  
   
- Kamu mühürsüz sınıflar için:  
+ Genel korumalı olmayan sınıflar için:  
   
 ```vb  
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.InheritanceDemand, Name := "FullTrust"), _
@@ -81,7 +82,7 @@ public class CanDeriveFromMe
 }  
 ```  
   
- Kamu mühürlü sınıflar için:  
+ Genel korumalı sınıflar için:  
   
 ```vb  
 <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name := "FullTrust")>  _  
@@ -152,7 +153,7 @@ public abstract void MustOverrideMe();
 }  
 ```  
   
- Taban sınıfın tam güven gerektirmediği genel geçersiz kılma işlevleri için:  
+ Genel geçersiz kılma işlevleri için, taban sınıfının tam güven talep etmez:  
   
 ```vb  
 Class Derived  
@@ -175,7 +176,7 @@ class Derived : Base1
 }  
 ```  
   
- Taban sınıfın tam güven gerektirdiği genel geçersiz kılma işlevleri için:  
+ Temel sınıfın tam güven talep ettiği genel geçersiz kılma işlevleri için:  
   
 ```vb  
 Class Derived  
@@ -232,11 +233,11 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Sanal İç Geçersiz Kılmalar veya Geçersiz Kılınabilir Kolay Aşırı Yüklemeler  
   
 > [!NOTE]
-> Bu bölüm, bir yöntemi hem `virtual` de `internal` (Visual`Overloads` `Overridable` `Friend` Basic'te) olarak bildirirken bir güvenlik sorunu hakkında uyarır. Bu uyarı yalnızca .NET Framework sürümleri 1.0 ve 1.1 için geçerlidir, sonraki sürümler için geçerli değildir.  
+> Bu bölüm, bir yöntemi hem hem de (Visual Basic olarak) bildirirken bir güvenlik sorunuyla ilgili olarak uyarır `virtual` `internal` `Overloads` `Overridable` `Friend` . Bu uyarı yalnızca 1,0 ve 1,1 .NET Framework sürümleri için geçerlidir, sonraki sürümler için geçerli değildir.  
   
- .NET Framework sürümleri 1.0 ve 1.1'de, kodunuzu diğer derlemeler tarafından kullanılamıyorsa onaylarken tür sistemi erişilebilirliğinin bir nüansını fark etmeniz gerekir. **Sanal** ve **dahili** olarak bildirilen bir yöntem (Visual Basic'te**Overridable Friend Overloads)** üst sınıfın vtable girişini geçersiz kılabilir ve yalnızca aynı derleme nin içinden kullanılabilir, çünkü dahilidir. Ancak, geçersiz kılma için erişilebilirlik **sanal** anahtar kelime tarafından belirlenir ve bu kod sınıfın kendisine erişimi olduğu sürece başka bir derleme geçersiz kılınabilir. Geçersiz kılma olasılığı bir sorun teşkil ediyorsa, bunu düzeltmek için bildirimsel güvenliği kullanın veya kesinlikle gerekli değilse **sanal** anahtar sözcüğü kaldırın.  
+ .NET Framework sürüm 1,0 ve 1,1 ' de, kodunuzun diğer derlemeler için kullanılamadığını onaylayarak sistem erişilebilirliği türünün farkında olmanız gerekir. **Sanal** ve **iç** olarak belirtilen bir Yöntem (Visual Basic**geçersiz kılınabilir arkadaş aşırı yüklemeleri** ) üst sınıfın vtable girdisini geçersiz kılabilir ve yalnızca aynı bütünleştirilmiş kod içinden kullanılabilir çünkü iç. Ancak, geçersiz kılma için erişilebilirlik, **sanal** anahtar sözcüğü tarafından belirlenir ve bu kod, sınıfın kendine erişimi olduğu sürece başka bir derlemeden geçersiz kılınabilir. Geçersiz kılma olasılığı bir sorun sunduğunda, sorunu gidermek için bildirime dayalı güvenlik kullanın ya da kesinlikle gerekmiyorsa **sanal** anahtar sözcüğünü kaldırın.  
   
- Bir dil derleyicisi bir derleme hatası ile bu geçersiz kılmaları önlerse bile, diğer derleyicilerle yazılmış kodun geçersiz kılınmasını mümkün olduğunu unutmayın.  
+ Bir dil derleyicisi bu geçersiz kılmaları derleme hatası ile engelseler de, diğer derleyicilerle yazılmış kodların geçersiz kılınmasına olanak tanır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

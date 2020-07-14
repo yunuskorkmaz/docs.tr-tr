@@ -1,5 +1,6 @@
 ---
 title: Özel Durum İşleme Güvenliğini Sağlama
+description: .NET kodunda özel durum işlemeyi güvenli hale getirme konusuna bakın. TRY, Except, catch ve finally deyimleri varsa kodun çalıştığı sırayı gözden geçirin.
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -9,15 +10,15 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: ad27e62197f6fdaa6b5e706f4ae02c03fecae9f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 009e587c0458488db6c2aa92e13311ddc08a64b1
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181146"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86282001"
 ---
 # <a name="securing-exception-handling"></a>Özel Durum İşleme Güvenliğini Sağlama
-Visual C++ ve Visual Basic'te, bir filtre ifadesi yığının daha yukarısında herhangi bir **son** deyimi önce çalışır. Bu filtreyle ilişkili **catch** bloğu **son** deyimden sonra çalışır. Daha fazla bilgi için [bkz.](../../standard/exceptions/using-user-filtered-exception-handlers.md) Bu bölümde, bu siparişin güvenlik etkileri incelenir. Filtre deyimlerinin ve **son ifadelerin** çalışma sırasını gösteren aşağıdaki pseudocode örneğini göz önünde bulundurun.  
+Visual C++ ve Visual Basic içinde, yığın üzerinde daha fazla bir filtre ifadesi herhangi bir **finally** ifadesiyle önce çalışır. Bu filtreyle ilişkili **catch** bloğu **finally** ifadesinden sonra çalışır. Daha fazla bilgi için bkz. [Kullanıcı filtrelenmiş özel durumları kullanma](../../standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sıranın güvenlik etkileri incelenir. Filter deyimlerinin ve **finally** deyimlerinin çalışacağı sırayı gösteren aşağıdaki sözde kod örneğini göz önünde bulundurun.  
   
 ```cpp  
 void Main()
@@ -58,7 +59,7 @@ Finally
 Catch  
 ```  
   
- Filtre **son** deyimi önce çalışır, böylece güvenlik sorunları diğer kodun yürütülmesi nin yararlanabileceği bir durum değişikliği yapan herhangi bir şey tarafından tanıtılabilir. Örnek:  
+ Filtre **finally** ifadesinden önce çalışır, bu nedenle güvenlik sorunları diğer kodun yürütülmesinin avantajlarından faydalanarak bir durum değişikliği yapan herhangi bir şey tarafından tanıtılamaz. Örnek:  
   
 ```cpp  
 try
@@ -77,7 +78,7 @@ finally
 }  
 ```  
   
- Bu sözde kod, bir filtrenin yığından daha yüksek bir üste rasgele kod çalışmasına izin verir. Benzer bir etkiye sahip diğer işlemler örnekleri, başka bir kimliğin geçici olarak kimliğe bürünme, bazı güvenlik denetimini atlayan bir iç bayrak ayarı veya iş parçacığıyla ilişkili kültürü değiştirmektir. Önerilen çözüm, kodun değişikliklerini arayanların filtre bloklarından iş parçacığı durumuna yalıtmak için bir özel durum işleyicisi tanıtmaktır. Ancak, özel durum işleyicisinin düzgün bir şekilde tanıtılması veya bu sorunun giderilmemesi önemlidir. Aşağıdaki örnek, UI kültürünü değiştirir, ancak her türlü iş parçacığı durumu değişikliği benzer şekilde ortaya çıkabilir.  
+ Bu sözde kod, bir filtrenin rastgele kod çalıştırmasına izin verir. Benzer bir etkiye sahip olacak diğer işlemlere örnek olarak, başka bir kimlik kimliğe bürünme, bazı güvenlik denetimini atlayan bir iç bayrak ayarlama veya iş parçacığıyla ilişkili kültürü değiştirme. Önerilen çözüm, kodun iş parçacığı durumuna çağıranların filtre blokları üzerinde yaptığı değişiklikleri yalıtmak için bir özel durum işleyicisi tanıtmaktır. Ancak, özel durum işleyicisinin doğru bir şekilde tanıtılmasından veya bu sorunun düzeltilmeyecek olması önemlidir. Aşağıdaki örnek, UI kültürünü geçirir, ancak her türlü iş parçacığı durum değişikliği benzer şekilde açığa çıkabilir.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -114,7 +115,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- Bu durumda doğru düzeltme, varolan **try**/**bloğunu bir** **try**/**catch** bloğunda sarmaktır. Varolan **try**/**finally** bloğuna bir **yakalama atma** yan tümcesi girmek, aşağıdaki örnekte gösterildiği gibi sorunu çözmez.  
+ Bu durumda doğru düzeltme, **try** / bir **TRY**catch bloğunda var olan TRY**finally** bloğunu sarmalıdır / **catch** . Aşağıdaki örnekte gösterildiği gibi, var olan **TRY**finally bloğunun içine bir **catch-throw** yan tümcesinin oluşturulması / **finally** sorunu çözmemektedir.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -134,9 +135,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- **Bu, son** deyimi `FilterFunc` denetim alır önce çalışmadı, çünkü sorunu gidermez.  
+ **Finally** deyimleri, almadan önce çalıştırılmadığından, bu sorunu çözmez `FilterFunc` .  
   
- Aşağıdaki örnek, arayanların özel durum filtre blokları kadar bir özel durum sunmadan önce **son** yan tümcesinin yürütülmesini sağlayarak sorunu giderir.  
+ Aşağıdaki örnek, çağıran özel durum filtre blokları için bir özel durum sunmadan önce **finally** yan tümcesinin yürütüldüğünü sağlayarak sorunu düzeltir.  
   
 ```cpp  
 YourObject.YourMethod()  

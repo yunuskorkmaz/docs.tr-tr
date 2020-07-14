@@ -1,5 +1,6 @@
 ---
 title: Güvenlik ve Serileştirme
+description: Güvenlik ve serileştirme hakkında bilgi edinin. Nesne örneği verilerini görmek veya değiştirmek için belirtilen SerializationFormatter bayrağıyla SecurityPermission kullanın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +11,23 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: 634388e3920e0b9dbee85aa3ea555471cee604ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79952ceee4c8b771aaadd4fc97a547bc65136770
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181110"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281270"
 ---
 # <a name="security-and-serialization"></a>Güvenlik ve Serileştirme
-Serileştirme, başka bir kodun erişilemeyen nesne örneği verilerini görmesine veya değiştirmesine izin <xref:System.Security.Permissions.SecurityPermission> verebileceğinden, serileştirme gerçekleştiren kod için özel bir izin gereklidir: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> belirtilen bayrakla. Varsayılan ilke kapsamında, bu izin Internet tarafından indirilen veya intranet koduna verilmez; yalnızca yerel bilgisayardaki koda bu izin verilir.  
+Serileştirme diğer kodun başka bir şekilde erişilemeyen nesne örneği verilerini görmesine veya değiştirmesine izin abileceğinden, kod serileştirme: belirtilen bayrağıyla özel bir izin gerekir <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> . Varsayılan ilke altında, bu izin Internet 'Ten indirilen veya intranet koduna verilmez; yalnızca yerel bilgisayardaki koda bu izin verilir.  
   
- Normalde, bir nesne örneğinin tüm alanları seri hale getirilmiştir, bu da verilerin örnek için serileştirilmiş verilerde temsil edildiği anlamına gelir. Üyenin erişilebilirliğinden bağımsız olarak, veri değerlerinin ne olduğunu belirlemek için biçimi yorumlayabilen kod mümkündür. Benzer şekilde, deserialization serileştirilmiş gösterimverileri verileri ayıklar ve yine erişilebilirlik kurallarına bakılmaksızın nesne durumu doğrudan ayarlar.  
+ Normalde, bir nesne örneğinin tüm alanları serileştirilir ve bu, verilerin örnek için seri hale getirilmiş verilerde temsil edildiği anlamına gelir. Veri değerlerinin ne olduğunu, üyenin erişilebilirliğiyle bağımsız olarak belirlemek için biçimi yorumlayabilen kod mümkündür. Benzer şekilde, seri durumdan çıkarma, verileri serileştirilmiş gösterimden ayıklar ve doğrudan, nesne durumunu erişilebilirlik kurallarından bağımsız olarak ayarlar.  
   
- Güvenliğe duyarlı veriler içerebilecek herhangi bir nesne, mümkünse seri olarak izlenebilir hale getirilmelidir. Serileştirilebilir olması gerekiyorsa, hassas verileri seri olarak tutamayan belirli alanları yapmaya çalışın. Bu yapılamıyorsa, bu verilerin serileştirme izni olan herhangi bir koda maruz kalacağını unutmayın ve hiçbir kötü amaçlı kodun bu izni alamadığından emin olun.  
+ Güvenlik duyarlı veriler içerebilen herhangi bir nesne, mümkünse seri hale getirilebilir olmayan bir şekilde yapılmalıdır. Seri hale getirilebilir olması gerekiyorsa, gizli verileri tutan, seri hale getirilebilen belirli alanları yapmayı deneyin. Bu işlem yapılabiliyorsa, bu verilerin serileştirme izni olan herhangi bir koda sunulamadığını ve kötü amaçlı bir kodun bu izni alamazsanız emin olun.  
   
- Arabirim yalnızca <xref:System.Runtime.Serialization.ISerializable> serileştirme altyapısı tarafından kullanılmak üzere tasarlanmıştır. Ancak, korumasız sayılsa bile, hassas bilgileri serbest bırakabilir. **ISerializable**uygulayarak özel serileştirme sağlarsanız, aşağıdaki önlemleri aldığınızdan emin olun:  
+ <xref:System.Runtime.Serialization.ISerializable>Arabirim yalnızca serileştirme altyapısı tarafından kullanılmak üzere tasarlanmıştır. Ancak korumasız ise, hassas bilgileri serbest bırakabilir. **ISerializable**uygulayarak özel serileştirme sağlarsanız, aşağıdaki önlemleri aldığınızdan emin olun:  
   
-- Yöntem, <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> **Belirtilen SerializationFormatter** izni ile **SecurityPermission** talep ederek veya yöntem çıktısı ile hassas bilgi serbest bırakıldığından emin olmak tarafından açıkça güvence altına alınmalıdır. Örnek:  
+- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A>Yöntemi, **SerializationFormatter** Iznine sahip **SecurityPermission** 'ı belirtilen veya yöntem çıkışıyla hiçbir hassas bilgi yayınlanmadan emin olarak açıkça güvenli hale getirmelidir. Örnek:  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -43,7 +44,7 @@ Serileştirme, başka bir kodun erişilemeyen nesne örneği verilerini görmesi
     }  
     ```  
   
-- Serileştirme için kullanılan özel oluşturucu da kapsamlı giriş doğrulama gerçekleştirmeli ve kötü amaçlı kod tarafından kötüye karşı korunmasına yardımcı olmak için korumalı veya özel olmalıdır. Bu tür bir sınıfın bir örneğini başka yollarla elde etmek için gereken aynı güvenlik denetimlerini ve izinlerini, örneğin sınıfı açıkça oluşturma veya dolaylı olarak bir tür fabrika aracılığıyla oluşturma gibi zorlamalıdır.  
+- Serileştirme için kullanılan özel Oluşturucu ayrıca tam giriş doğrulaması gerçekleştirmeyi ve kötü amaçlı kodun kötüye kullanılmasına karşı korumaya yardımcı olmak için korumalı veya özel olmalıdır. Bu, sınıfın açıkça oluşturulması veya bir tür fabrika aracılığıyla dolaylı olarak oluşturulması gibi bazı yollarla bu tür bir sınıfın bir örneğini almak için gereken güvenlik denetimlerini ve izinlerini zorunlu kılar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 94f3db14046ad5d63975d0ca44425abed5d52062
+ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283448"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86281543"
 ---
 # <a name="whats-new-in-net-core-21"></a>​.NET Core 2.1’deki yenilikler
 
@@ -67,7 +67,7 @@ Artık .NET Core SDK bir parçası olarak, kullanılarak yalnızca proje bazınd
 
 .NET Core 2,1, *genel araçları* destekler-diğer bir deyişle, komut satırından küresel olarak kullanılabilir özel araçlar. .NET Core 'un önceki sürümlerindeki genişletilebilirlik modeli, yalnızca kullanarak bir proje temelinde bulunan özel araçları kullanıma sunulmuştur `DotnetCliToolReference` .
 
-Küresel bir araç yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın. Örneğin:
+Küresel bir araç yüklemek için [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın. Örnek:
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
@@ -77,7 +77,7 @@ Yüklendikten sonra araç, araç adı belirtilerek komut satırından çalışt�
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>Komutuyla araç yönetimi `dotnet tool`
 
-.NET Core 2,1 SDK 'da tüm araçlar işlemleri `dotnet tool` komutunu kullanır. Aşağıdaki seçenekler mevcuttur:
+.NET Core 2,1 SDK 'da tüm araçlar işlemleri `dotnet tool` komutunu kullanır. Aşağıdaki seçenekler kullanılabilir:
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md)bir araç yüklemek için.
 
@@ -106,7 +106,7 @@ Bu ayarı, üç şekilde değiştirebilirsiniz:
 
 - `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`Ortam değişkenini istenen değere ayarlayın.
 
-- Aşağıdaki satırı, istenen değeri *. runtimeconfig. JSON* dosyasına ekleyin:
+- Aşağıdaki satırı, istenen değeri *.runtimeconfig.js* dosyasına ekleyin:
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
@@ -177,17 +177,17 @@ Bu türler olmadan, bu tür öğeleri bir dizinin bir bölümü veya bir bellek 
 
 Aşağıdaki örnek, bir <xref:System.Span%601> <xref:System.Memory%601> dizi 10 öğenin sanal görünümünü sağlamak için ve örneğini kullanır.
 
-[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
+[!code-csharp[Span\<T>](./snippets/dotnet-core-2-1/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](./snippets/dotnet-core-2-1/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli sıkıştırma
 
 .NET Core 2,1, Brotli sıkıştırma ve açma için destek ekler. Brotli, [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) ' de tanımlanan ve çoğu Web tarayıcısı ve ana Web sunucusu tarafından desteklenen genel amaçlı kayıpsız bir sıkıştırma algoritmasıdır. Stream tabanlı <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> sınıfı veya yüksek performanslı yayılma tabanlı <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> ve <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> sınıfları kullanabilirsiniz. Aşağıdaki örnek, sınıfıyla sıkıştırmayı gösterir <xref:System.IO.Compression.BrotliStream> :
 
-[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
+[!code-csharp[Brotli compression](./snippets/dotnet-core-2-1/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](./snippets/dotnet-core-2-1/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream>Davranışı <xref:System.IO.Compression.DeflateStream> ve ile aynıdır ve <xref:System.IO.Compression.GZipStream> Bu API 'leri çağıran kodu dönüştürmeyi kolaylaştırır <xref:System.IO.Compression.BrotliStream> .
 
