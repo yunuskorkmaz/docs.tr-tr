@@ -1,15 +1,16 @@
 ---
 title: .NET Framework Günlük Kaydını Denetleme
+description: .NET günlüğü 'nü denetlemek ve ortak dil çalışma zamanı (CLR) olaylarını kaydetmek için Windows için olay izleme 'yi (ETW) kullanın. Logman, tracerpt ve XPerf gibi araçları kullanın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504104"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309592"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework Günlük Kaydını Denetleme
 
@@ -19,7 +20,7 @@ Ortak dil çalışma zamanı (CLR) olaylarını izlemek için Windows olay izlem
 
 - [Windows performans araç seti](/windows-hardware/test/wpt/)'Nde [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) araçları. XPerf hakkında daha fazla bilgi için [Windows performans blogu](https://docs.microsoft.com/archive/blogs/pigscanfly/)' na bakın.
 
-CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcının yüklendiğini doğrulamak için komut istemine `logman query providers` yazın. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.
+CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcının yüklendiğini doğrulamak için `logman query providers` komut istemine yazın. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.
 
 ```output
 Provider                                 GUID
@@ -27,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-CLR sağlayıcısı listede yoksa, Windows [wevtutil](/windows-server/administration/windows-commands/wevtutil) komut satırı aracını kullanarak Windows Vista ve sonraki işletim sistemlerine yükleyebilirsiniz. Yönetici olarak Komut İstemi penceresini açın. İstem dizinini .NET Framework 4 klasörü olarak değiştirin (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET sürümü > \). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:
+CLR sağlayıcısı listede yoksa, Windows [wevtutil](/windows-server/administration/windows-commands/wevtutil) komut satırı aracını kullanarak Windows Vista ve sonraki işletim sistemlerine yükleyebilirsiniz. Yönetici olarak Komut İstemi penceresini açın. İstem dizinini .NET Framework 4 klasörü olarak değiştirin (%WINDIR%\Microsoft.NET\Framework [64] \v4. \<.NET version> \ ). Bu klasör, CLE-ETW.man dosyasını içerir. Komut isteminde, CLR sağlayıcısını yüklemek için aşağıdaki komutu yazın:
 
 `wevtutil im CLR-ETW.man`
 
@@ -51,15 +52,15 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
      burada:
 
-    - `-p` parametresi, sağlayıcı GUID 'INI tanımlar.
+    - `-p`Parametresi, sağlayıcı GUID 'ini tanımlar.
 
-    - `0x1CCBD`, oluşturulacak olayların kategorilerini belirtir.
+    - `0x1CCBD`oluşturulacak olay kategorilerini belirtir.
 
-    - `0x5` günlük düzeyini (Bu durumda verbose (5)) ayarlar.
+    - `0x5`günlüğe kaydetme düzeyini (Bu durumda verbose (5)) ayarlar.
 
-    - `-ets` parametresi, Logman 'yi olay izleme oturumlarına komut gönderecek şekilde yönlendirir.
+    - `-ets`Parametresi, Logman 'yi olay izleme oturumlarına komut gönderecek şekilde bildirir.
 
-    - `-ct perf` parametresi, `QueryPerformanceCounter` işlevinin her olay için zaman damgasını günlüğe kaydetmek için kullanılacağını belirtir.
+    - `-ct perf`Parametresi, `QueryPerformanceCounter` işlevin her olay için zaman damgasını günlüğe kaydetmek için kullanılacağını belirtir.
 
 2. Olayları günlüğe kaydetmeyi durdurmak için şunu yazın:
 
@@ -73,7 +74,7 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
-     burada GUID, CLR ETW sağlayıcısı GUID 'sidir ve `0x1CCBD:5` her şeyi 5. düzey (verbose) ' de izler.
+     burada GUID, CLR ETW sağlayıcısı GUID 'sidir ve `0x1CCBD:5` 5. düzey (verbose) düzeyinde ve bu her şeyi izler.
 
 2. İzlemeyi durdurmak için aşağıdakileri yazın:
 
@@ -112,4 +113,4 @@ CLR ETW olaylarını görüntülemek için aşağıda listelenen komutları kull
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows performans araç seti](/windows-hardware/test/wpt/)
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanında ETW Olayları](etw-events-in-the-common-language-runtime.md)

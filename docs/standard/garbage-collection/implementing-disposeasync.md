@@ -10,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 31c4cc9136862551e02fae030e38ebd6c2916a38
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: 91ace1932e8bb751e8e1d85e00b3e239a01aa9ea
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100931"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309826"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
@@ -64,11 +64,11 @@ Tüm korumalı olmayan sınıflar, devralınabileceğinden olası bir temel sın
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
-Önceki örnek, <xref:System.Text.Json.Utf8JsonWriter> hakkında daha fazla bilgi için hakkında daha fazla bilgi için, `System.Text.Json` bkz. [Newtonsoft.Jsüzerinde System.Text.Js](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md)' a geçiş.
+Önceki örnekte, kullanılır <xref:System.Text.Json.Utf8JsonWriter> . Hakkında daha fazla bilgi için `System.Text.Json` bkz. [Newtonsoft.Jsüzerinde System.Text.Jsüzerine geçiş](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md).
 
 ## <a name="using-async-disposable"></a>Async atılabilir kullanma
 
-Arabirimi uygulayan bir nesneyi düzgün bir şekilde kullanmak için <xref:System.IAsyncDisposable> [await](../../csharp/language-reference/operators/await.md)kullanın ve anahtar sözcükleri birlikte kullanabilirsiniz [using](../../csharp/language-reference/keywords/using.md) . `ExampleAsyncDisposable`Sınıfının örneği oluşturulan ve sonra bir deyime kaydırılan aşağıdaki örneği göz önünde bulundurun `await using` .
+Arabirimi uygulayan bir nesneyi düzgün bir şekilde kullanmak için <xref:System.IAsyncDisposable> [await](../../csharp/language-reference/operators/await.md)kullanın ve anahtar sözcükleri birlikte kullanabilirsiniz [using](../../csharp/language-reference/keywords/using-statement.md) . Aşağıdaki örneği, `ExampleAsyncDisposable` sınıfın örneklendiği ve sonra bir deyime sarmalanmış olduğunu göz önünde bulundurun `await using` .
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 

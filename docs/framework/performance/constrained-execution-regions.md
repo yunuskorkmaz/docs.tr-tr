@@ -1,16 +1,17 @@
 ---
 title: Kısıtlı Yürütme Bölgeleri
+description: Güvenilir yönetilen kod yazmak için bir mekanizmanın parçası olan kısıtlanmış yürütme bölgelerini (CER) kullanmaya başlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-ms.openlocfilehash: 3161f77399030c287649ee5757814963b6afb7cf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: d928c9357af4a02e389d9ffd5df4ad0195edab06
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247733"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309618"
 ---
 # <a name="constrained-execution-regions"></a>Kısıtlı Yürütme Bölgeleri
 Kısıtlanmış bir yürütme bölgesi (CER), güvenilir yönetilen kod yazma mekanizmalarının bir parçasıdır. Bir CER, ortak dil çalışma zamanının (CLR), alandaki kodun tamamen yürütülmesini önleyen bant dışı özel durumlar oluşturmamaya sınırlı bir alan tanımlar. Bu bölge içinde, Kullanıcı kodu, bant dışı özel durumların oluşmasına neden olacak kodu yürütmenin kısıtlanıyor. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>Yöntem bir `try` blok ve işaret `catch` , `finally` , ve `fault` kısıtlamalı yürütme bölgesi olarak bloklara kadar önce gelmelidir. Kısıtlanmış bölge olarak işaretlendikten sonra, kod yalnızca güçlü güvenilirlik sözleşmeleri ile diğer kodu çağırmalıdır ve kod hatalara hazırlanmaya hazırlanmadığı sürece kodun hazırlanmamış veya güvenilmeyen yöntemlere sanal çağrılar yapması ya da olmaması gerekir. Bir CER içinde yürütülen kod için CLR gecikmeleri iş parçacığı iptal eder.  

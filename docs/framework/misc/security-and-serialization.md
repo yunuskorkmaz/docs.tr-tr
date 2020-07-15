@@ -11,19 +11,20 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: 79952ceee4c8b771aaadd4fc97a547bc65136770
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: f19641ad2154631b4eab5104252c12b73b9084fd
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281270"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309280"
 ---
-# <a name="security-and-serialization"></a>Güvenlik ve Serileştirme
+# <a name="security-and-serialization"></a>Güvenlik ve serileştirme
+
 Serileştirme diğer kodun başka bir şekilde erişilemeyen nesne örneği verilerini görmesine veya değiştirmesine izin abileceğinden, kod serileştirme: belirtilen bayrağıyla özel bir izin gerekir <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> . Varsayılan ilke altında, bu izin Internet 'Ten indirilen veya intranet koduna verilmez; yalnızca yerel bilgisayardaki koda bu izin verilir.  
   
  Normalde, bir nesne örneğinin tüm alanları serileştirilir ve bu, verilerin örnek için seri hale getirilmiş verilerde temsil edildiği anlamına gelir. Veri değerlerinin ne olduğunu, üyenin erişilebilirliğiyle bağımsız olarak belirlemek için biçimi yorumlayabilen kod mümkündür. Benzer şekilde, seri durumdan çıkarma, verileri serileştirilmiş gösterimden ayıklar ve doğrudan, nesne durumunu erişilebilirlik kurallarından bağımsız olarak ayarlar.  
   
- Güvenlik duyarlı veriler içerebilen herhangi bir nesne, mümkünse seri hale getirilebilir olmayan bir şekilde yapılmalıdır. Seri hale getirilebilir olması gerekiyorsa, gizli verileri tutan, seri hale getirilebilen belirli alanları yapmayı deneyin. Bu işlem yapılabiliyorsa, bu verilerin serileştirme izni olan herhangi bir koda sunulamadığını ve kötü amaçlı bir kodun bu izni alamazsanız emin olun.  
+ Güvenlik duyarlı veriler içerebilen herhangi bir nesne, mümkünse seri hale getirilebilir olmayan bir şekilde yapılmalıdır. Seri hale getirilebilir olması gerekiyorsa, gizli verileri tutan, seri hale getirilebilen belirli alanları yapmayı deneyin. Bu alanlar seri hale getirilebilir değilse, hassas veriler serileştirme iznine sahip herhangi bir koda sunulur. Kötü amaçlı bir kodun bu izni alamıyor olduğundan emin olun.  
   
  <xref:System.Runtime.Serialization.ISerializable>Arabirim yalnızca serileştirme altyapısı tarafından kullanılmak üzere tasarlanmıştır. Ancak korumasız ise, hassas bilgileri serbest bırakabilir. **ISerializable**uygulayarak özel serileştirme sağlarsanız, aşağıdaki önlemleri aldığınızdan emin olun:  
   

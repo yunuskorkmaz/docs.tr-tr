@@ -1,17 +1,18 @@
 ---
 title: Çöp Toplama ETW Olayları
+description: Çöp toplama ETW olayları hakkında ayrıntılı bilgi görüntüleyin. Kapsanan olaylar GCStart_V1, GCEnd_V1, GCHeapStats_V1, GCCreateSegment_V1 ve daha fazlasını içerir.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GC events
 - garbage collection events [.NET Framework]
 - ETW, garbage collection events (CLR)
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
-ms.openlocfilehash: 5ff214314b92796f4a4a89ddd33a976d8b1f21d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 58ad874ef6a12c18c404640aa66577c391573534
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716064"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309748"
 ---
 # <a name="garbage-collection-etw-events"></a>Çöp Toplama ETW Olayları
 
@@ -40,17 +41,17 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir. Daha fazl
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 |Olay|Olay Kimliği|Ne zaman oluşturulur|
 |-----------|--------------|-----------------|
-|`GCStart_V1`|1\.|Çöp toplama işlemi başlatıldı.|
+|`GCStart_V1`|1|Çöp toplama işlemi başlatıldı.|
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
 |Count|Win: UInt32|*N*. çöp toplama.|
 |Derinliğini|Win: UInt32|Toplanmakta olan oluşturma.|
@@ -64,7 +65,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -74,7 +75,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
 |Count|Win: UInt32|*N*. çöp toplama.|
 |Derinliğini|Win: UInt32|Toplanan nesil.|
@@ -86,23 +87,23 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
-|Olay|Olay Kimliği|Açıklama|
+|Olay|Olay Kimliği|Description|
 |-----------|--------------|-----------------|
 |`GCHeapStats_V1`|4|Her çöp toplamanın sonundaki yığın istatistiklerini gösterir.|
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
-|GenerationSize0|Win: UInt64|0\. nesil belleğin bayt cinsinden boyutu.|
+|GenerationSize0|Win: UInt64|0. nesil belleğin bayt cinsinden boyutu.|
 |TotalPromotedSize0|Win: UInt64|Nesil 0 ' dan 1 ' e yükseltilen bayt sayısı.|
-|GenerationSize1|Win: UInt64|1\. nesil belleğin bayt cinsinden boyutu.|
-|TotalPromotedSize1|Win: UInt64|1\. nesil 2 ' ye kadar yükseltilen bayt sayısı.|
-|GenerationSize2|Win: UInt64|2\. nesil belleğin bayt cinsinden boyutu.|
+|GenerationSize1|Win: UInt64|1. nesil belleğin bayt cinsinden boyutu.|
+|TotalPromotedSize1|Win: UInt64|1. nesil 2 ' ye kadar yükseltilen bayt sayısı.|
+|GenerationSize2|Win: UInt64|2. nesil belleğin bayt cinsinden boyutu.|
 |TotalPromotedSize2|Win: UInt64|Son koleksiyondan sonra 2. nesil üzerinde kalan bayt sayısı.|
 |GenerationSize3|Win: UInt64|Büyük nesne yığınının bayt cinsinden boyutu.|
 |TotalPromotedSize3|Win: UInt64|Son koleksiyondan sonra büyük nesne yığınında kalan bayt sayısı.|
@@ -119,7 +120,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -129,7 +130,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
 |Adres|Win: UInt64|Segmentin adresi.|
 |Boyut|Win: UInt64|Segmentin boyutu.|
@@ -144,7 +145,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -154,7 +155,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
 |Adres|Win: UInt64|Segmentin adresi.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
@@ -165,7 +166,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -181,11 +182,11 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
-|Olay|Olay Kimliği|Ne zaman oluşturulur|
+|Olay|Olay kimliği|Ne zaman oluşturulur|
 |-----------|--------------|-----------------|
 |`GCRestartEEEnd_V1`|3|Ortak dil çalışma zamanı askıya alma işleminden sürdürme sonlandı.|
 
@@ -197,7 +198,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -207,7 +208,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
 |Neden|Win: UInt16|0x0-diğer.<br /><br /> 0x1-çöp toplama.<br /><br /> 0x2-Uygulama etki alanı kapanıyor.<br /><br /> 0x3-kod yeniden getiriliyor.<br /><br /> 0x4-kapanıyor.<br /><br /> 0x5-Debugger.<br /><br /> çöp toplama için 0x6 hazırlığı.|
 |Count|Win: UInt32|GC sayısı (saat). Genellikle, bundan sonra sonraki bir GC başlangıç olayını görürsünüz ve çöp toplama sırasında GC dizinini artırdıkça bu sayı + 1 olur.|
@@ -219,7 +220,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -235,7 +236,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -245,13 +246,13 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
-|AllocationAmount|Win: UInt32|Bayt cinsinden ayırma boyutu. Bu değer, ULONG 'un uzunluğundan (4.294.967.295 bayt) daha az olan ayırmalar için doğrudur. Ayırma daha büyükse, bu alan kesilmiş bir değer içerir. Çok büyük ayırmalar için `AllocationAmount64` kullanın.|
+|AllocationAmount|Win: UInt32|Bayt cinsinden ayırma boyutu. Bu değer, ULONG 'un uzunluğundan (4.294.967.295 bayt) daha az olan ayırmalar için doğrudur. Ayırma daha büyükse, bu alan kesilmiş bir değer içerir. `AllocationAmount64`Çok büyük ayırmalar için kullanın.|
 |AllocationKind|Win: UInt32|0x0-küçük nesne ayırma (ayırma küçük nesne yığınında).<br /><br /> 0x1-büyük nesne ayırma (ayırma büyük nesne yığınında).|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
 |AllocationAmount64|Win: UInt64|Bayt cinsinden ayırma boyutu. Bu değer, çok büyük ayırmalar için doğrudur.|
-|TürKimliği|Win: Işaretçi|MethodTable 'ın adresi. Bu olay sırasında ayrılan çeşitli nesne türleri olduğunda, bu, ayrılan son nesneye (100 KB eşiğinin aşılmasına neden olan nesne) karşılık gelen MethodTable 'ın adresidir.|
+|Türü|Win: Işaretçi|MethodTable 'ın adresi. Bu olay sırasında ayrılan çeşitli nesne türleri olduğunda, bu, ayrılan son nesneye (100 KB eşiğinin aşılmasına neden olan nesne) karşılık gelen MethodTable 'ın adresidir.|
 |TypeName|Win: UnicodeString|Ayrılan türün adı. Bu olay sırasında ayrılan çeşitli nesne türleri varsa, bu, ayrılan son nesnenin türüdür (100 KB eşiğinin aşılmasına neden olan nesne).|
 |Heapındex|Win: UInt32|Nesnenin ayrıldığı yığın. Bu değer, iş istasyonu atık toplama ile çalıştırılırken 0 (sıfır) değeridir.|
 
@@ -261,7 +262,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -277,7 +278,7 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -287,7 +288,7 @@ Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
 Aşağıdaki tabloda olay verileri gösterilmektedir:
 
-|Alan adı|Veri türü|Açıklama|
+|Alan adı|Veri türü|Description|
 |----------------|---------------|-----------------|
 |Count|Win: UInt32|Çalıştırılan sonlandırıcılar sayısı.|
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|
@@ -298,8 +299,8 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 
@@ -315,8 +316,8 @@ Aşağıdaki tabloda anahtar sözcüğü ve düzeyi gösterilmektedir:
 
 |Olayı yükseltmek için anahtar sözcük|Düzey|
 |-----------------------------------|-----------|
-|`GCKeyword` (0x1)|Bilgilendirici (4)|
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|
+|`GCKeyword`0x1|Bilgilendirici (4)|
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|
 
 Aşağıdaki tabloda olay bilgileri gösterilmektedir:
 

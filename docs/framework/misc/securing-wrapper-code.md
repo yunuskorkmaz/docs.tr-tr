@@ -8,12 +8,12 @@ helpviewer_keywords:
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-ms.openlocfilehash: 64c5b2455882ca121a6eeb0c0bbcbc4d04ed88cd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 4338b3d0ab306501ea252407f386bdf89d191d6d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281452"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309384"
 ---
 # <a name="securing-wrapper-code"></a>Sarmalayıcı Kodunun Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -51,7 +51,7 @@ ms.locfileid: "86281452"
  Bu tür güvenlik boşluklarını önlemeye yardımcı olmak için, ortak dil çalışma zamanı denetimi bir yönteme, oluşturucuya, özelliğe veya bir **LinkDemand**tarafından korunan olaya dolaylı çağrı üzerinde tam yığın yürüme talebine genişletir. Bu koruma, bazı performans maliyetleri doğurur ve güvenlik denetiminin semantiğini değiştirir; tam yığın ilerme isteği, daha hızlı, tek düzeyli bir denetim geçirildiğinde başarısız olabilir.  
   
 ## <a name="assembly-loading-wrappers"></a>Derleme yükleme sarmalayıcıları  
- Yönetilen kodu yüklemek için kullanılan çeşitli yöntemler, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağıran bulgu ile derlemeleri yükler. Bu yöntemlerin herhangi birini sarmaladıysanız, güvenlik sistemi, derlemeleri yüklemek için çağıranın, sarmalayıcısına olan izinlerinin yerine kodunuzun izin iznini kullanabilir. Çağıranlarınızın sarmalayıcısına göre daha yüksek izinlerle daha fazla izin verilen kodu yüklemesine izin vermeniz gerekir.  
+ Yönetilen kodu yüklemek için kullanılan çeşitli yöntemler, <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> çağıran bulgu ile derlemeleri yükler. Bu yöntemlerin herhangi birini sarmaladıysanız, güvenlik sistemi, derlemeleri yüklemek için çağıranın, sarmalayıcısına olan izinlerinin yerine kodunuzun izin iznini kullanabilir. Daha az güvenilir kodun, çağıranlarınızın sarmalayıcısına göre daha yüksek izinler verdiği kodu yüklemesine izin verme.  
   
  Bir olası çağırandan (Internet izinleri düzeyi çağıran dahil) tam güvene veya önemli ölçüde daha yüksek güvene sahip olan tüm kodlar güvenliği bu şekilde zayıflatabilir. Kodunuzun, bir bayt dizisi alan ve bunu **Assembly. Load**öğesine ileten bir ortak yöntemi varsa, bunu çağıranın adına bir derleme oluşturarak güvenlik kesintiye uğramayabilir.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "86281452"
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
   
 ## <a name="demand-vs-linkdemand"></a>Talep ve  LinkDemand  
- Bildirime dayalı güvenlik, benzer ancak çok farklı denetimler gerçekleştiren iki tür güvenlik denetimi sunar. Yanlış seçim zayıf güvenlik veya performans kaybıyla sonuçlanabileceğinden, her iki formu anlamalısınız.  
+ Bildirime dayalı güvenlik, benzer ancak farklı denetimler gerçekleştiren iki tür güvenlik denetimi sunar. Yanlış seçim zayıf güvenlik veya performans kaybıyla sonuçlanabileceğinden her iki formu da anlamanız iyidir.  
   
  Bildirime dayalı güvenlik aşağıdaki güvenlik denetimlerini sunar:  
   

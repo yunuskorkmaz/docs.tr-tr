@@ -11,23 +11,23 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 287c3651be0272f1941fb2320640970d70a1bd0f
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: a7ef419cf3959cf7a3ffde874353dacd3815c81a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282062"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309397"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Bazı yöntemler rastgele güvenilmeyen kodun çağrısına izin vermek için uygun olmayabilir. Bu tür yöntemler çeşitli riskler sunar: yöntem bazı kısıtlı bilgiler verebilir; Bu, kendisine geçirilen bilgilere benzeyebilir; parametrelerde hata denetimi yapamayabilir; ya da yanlış parametrelerle hatalı olabilir veya zararlı bir şey olabilir. Bu durumları bilmeniz ve yöntemi korumanıza yardımcı olması için işlem yapmanız gerekir.  
   
- Bazı durumlarda, genel kullanım için tasarlanmamış ancak hala genel olması gereken yöntemleri kısıtlamanız gerekebilir. Örneğin, kendi dll 'larınız genelinde çağrılması gereken bir arayüze sahip olabilirsiniz ve bu nedenle genel olması gerekir, ancak müşterilerin bunu kullanmasını engellemek veya kötü amaçlı kodun giriş noktasını bileşeninize kötüye kullanmasını engellemek için genel kullanıma sunmak istemezsiniz. Bir yöntemi genel kullanıma yönelik amaçlanmayan (ancak genel olması gerekir) bir diğer yaygın neden, çok dahili bir arabirim olabileceğini belgelemek ve desteklemek zorunda kalmamak.  
+ Bazı durumlarda, genel kullanım için tasarlanmamış ancak hala genel olması gereken yöntemleri kısıtlamanız gerekebilir. Örneğin, kendi dll 'larınız genelinde çağrılması gereken bir arayüze sahip olabilirsiniz ve bu nedenle genel olması gerekir, ancak müşterilerin bunu kullanmasını engellemek veya kötü amaçlı kodun giriş noktasını bileşeninize kötüye kullanmasını engellemek için genel kullanıma sunmak istemezsiniz. Bir yöntemi genel kullanıma yönelik amaçlanmayan (ancak genel olması gereken) bir diğer yaygın nedeni, bir iç arabirim olabilecek özellikleri belgelemek ve desteklemek zorunda kalmamak.  
   
  Yönetilen kod, yöntem erişimini kısıtlamak için çeşitli yollar sunar:  
   
-- Güveniliyorsa, erişilebilirlik kapsamını sınıf, derleme veya türetilmiş sınıflarla sınırlayın. Bu yöntem erişimini sınırlamanın en kolay yoludur. Genel olarak, türetilmiş sınıfların türettikleri sınıftan daha az güvenilir olabileceğini, ancak bazı durumlarda üst sınıfın kimliğini paylaştıkları unutulmamalıdır. Özellikle, güvenlik bağlamında kullanılması gerekmeyen, **korunan**anahtar kelimeden güven çıkarmayın.  
+- Güveniliyorsa, erişilebilirlik kapsamını sınıf, derleme veya türetilmiş sınıflarla sınırlayın. Bu yöntem erişimini sınırlamanın en kolay yoludur. Genel olarak, türetilmiş sınıflar, türedikleri sınıftan daha az güvenilir olabilir, ancak bazı durumlarda üst sınıfın kimliğini paylaşırlar. Özellikle, `protected` güvenlik bağlamında kullanılması gerekmeyen anahtar sözcükten güven çıkarmayın.  
   
 - Belirli bir kimliğin çağıranlarını [(aslýnda](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) , The The Strong Name, Publisher, Zone vb.) ve seçtiğiniz bir kimliğe ait çağıranlara erişimi sınırlayın.  
   
@@ -56,7 +56,7 @@ public class Class1
 ```  
   
 ## <a name="excluding-classes-and-members-from-use-by-untrusted-code"></a>Güvenilmeyen Kodla Sınıfları ve Üyeleri Kullanımdan Dışlama  
- Belirli sınıfların ve yöntemlerin yanı sıra özellik ve olayların kısmen güvenilen kod tarafından kullanılmasını engellemek için bu bölümde gösterilen bildirimleri kullanın. Bu bildirimleri bir sınıfa uygulayarak, korumayı tüm yöntemlerine, özelliklerine ve olaylarına uygularsınız; Ancak, alan erişiminin bildirime dayalı güvenlik tarafından etkilenmediğini unutmayın. Ayrıca, bağlantı taleplerini yalnızca anında çağıranlara karşı korumaya yardımcı olur ve yine de söz konusu saldırı saldırılarına maruz kalabilir.  
+ Belirli sınıfların ve yöntemlerin yanı sıra özellik ve olayların kısmen güvenilen kod tarafından kullanılmasını engellemek için bu bölümde gösterilen bildirimleri kullanın. Bu bildirimleri bir sınıfa uygulayarak, korumayı tüm yöntemlerine, özelliklerine ve olaylarına uygularsınız. Ancak, alan erişimi bildirime dayalı güvenlik tarafından etkilenmez. Ayrıca, bağlantı taleplerini yalnızca anında çağıranlara karşı korumaya yardımcı olur ve yine de söz konusu saldırı saldırılarına maruz kalabilir.  
   
 > [!NOTE]
 > .NET Framework 4 ' te yeni bir saydamlık modeli sunuldu. [Güvenlik açısından saydam kod, düzey 2](security-transparent-code-level-2.md) modeli, güvenli kodu <xref:System.Security.SecurityCriticalAttribute> özniteliğiyle tanımlar. Güvenlik açısından kritik kod, çağıranların ve herıtors 'ın tamamen güvenilir olmasını gerektirir. Önceki .NET Framework sürümlerinden kod erişimi güvenlik kuralları altında çalışan derlemeler, düzey 2 derlemelerini çağırabilir. Bu durumda, güvenlik açısından kritik öznitelikler tam güven için bağlantı talepleri olarak kabul edilir.  
@@ -237,7 +237,7 @@ class Implemented : ICanCastToMe
   
  .NET Framework sürüm 1,0 ve 1,1 ' de, kodunuzun diğer derlemeler için kullanılamadığını onaylayarak sistem erişilebilirliği türünün farkında olmanız gerekir. **Sanal** ve **iç** olarak belirtilen bir Yöntem (Visual Basic**geçersiz kılınabilir arkadaş aşırı yüklemeleri** ) üst sınıfın vtable girdisini geçersiz kılabilir ve yalnızca aynı bütünleştirilmiş kod içinden kullanılabilir çünkü iç. Ancak, geçersiz kılma için erişilebilirlik, **sanal** anahtar sözcüğü tarafından belirlenir ve bu kod, sınıfın kendine erişimi olduğu sürece başka bir derlemeden geçersiz kılınabilir. Geçersiz kılma olasılığı bir sorun sunduğunda, sorunu gidermek için bildirime dayalı güvenlik kullanın ya da kesinlikle gerekmiyorsa **sanal** anahtar sözcüğünü kaldırın.  
   
- Bir dil derleyicisi bu geçersiz kılmaları derleme hatası ile engelseler de, diğer derleyicilerle yazılmış kodların geçersiz kılınmasına olanak tanır.  
+ Bir dil derleyicisi bu geçersiz kılmaları derleme hatası ile engelseler de, diğer derleyicilerle yazılan kodun geçersiz kılınması mümkündür.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

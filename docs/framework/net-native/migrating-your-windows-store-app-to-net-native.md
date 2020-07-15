@@ -2,16 +2,16 @@
 title: Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81389712"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309202"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows mağazası uygulamanızı .NET Native geçirin
 
-.NET Native, Windows Mağazası 'nda veya geliştiricinin bilgisayarındaki uygulamaların statik derlemesini sağlar. Bu, Windows Mağazası uygulamaları için tek seferlik (JıT) derleyici veya cihazdaki [Yerel Görüntü Oluşturucu (Ngen. exe)](../tools/ngen-exe-native-image-generator.md) tarafından gerçekleştirilen dinamik derlemeden farklıdır. Farklılıklara rağmen .NET Native, [Windows Mağazası uygulamaları için .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)ile uyumluluğu sürdürmenize çalışır. Çoğu bölümde, Windows Mağazası uygulamaları için .NET üzerinde çalışan şeyler .NET Native de çalışır.  Ancak bazı durumlarda, davranış değişiklikleriyle karşılaşabilirsiniz. Bu belgede, Windows Mağazası uygulamaları için standart .NET ve aşağıdaki alanlardaki .NET Native arasındaki farklar ele alınmaktadır:
+.NET Native, Windows Mağazası 'nda veya geliştiricinin bilgisayarındaki uygulamaların statik derlemesini sağlar. Bu, tam zamanında (JıT) derleyici veya cihazdaki [Yerel Görüntü Oluşturucu (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) tarafından Windows Mağazası uygulamaları için gerçekleştirilen dinamik derlemeden farklıdır. Farklılıklara rağmen .NET Native, [Windows Mağazası uygulamaları için .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)ile uyumluluğu sürdürmenize çalışır. Çoğu bölümde, Windows Mağazası uygulamaları için .NET üzerinde çalışan şeyler .NET Native de çalışır.  Ancak bazı durumlarda, davranış değişiklikleriyle karşılaşabilirsiniz. Bu belgede, Windows Mağazası uygulamaları için standart .NET ve aşağıdaki alanlardaki .NET Native arasındaki farklar ele alınmaktadır:
 
 - [Genel çalışma zamanı farklılıkları](#Runtime)
 
@@ -58,14 +58,14 @@ Kod, en yüksek performans için yerel koda .NET Framework kodda statik olarak b
 > [!NOTE]
 > Uygulamanızı .NET Native taşıma sırasında tüm dinamik kod yollarını iyice test etmelisiniz.
 
-.NET Native için varsayılan yapılandırma çoğu geliştirici için yeterlidir, ancak bazı geliştiriciler çalışma zamanı yönergeleri (. RD. xml) dosyası kullanarak yapılandırmalarını ince ayar yapmak isteyebilir. Ayrıca, bazı durumlarda .NET Native derleyicisi, özellikle aşağıdaki durumlarda, yansıma için hangi meta verilerin kullanılabilir olması gerektiğini belirleyemez ve ipuçlarına dayanır:
+.NET Native için varsayılan yapılandırma çoğu geliştirici için yeterlidir, ancak bazı geliştiriciler çalışma zamanı yönergeleri (.rd.xml) dosyası kullanarak yapılandırmalarını ince ayar yapmak isteyebilir. Ayrıca, bazı durumlarda .NET Native derleyicisi, özellikle aşağıdaki durumlarda, yansıma için hangi meta verilerin kullanılabilir olması gerektiğini belirleyemez ve ipuçlarına dayanır:
 
 - Ve gibi bazı <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> yapılar <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> statik olarak belirlenemez.
 
 - Derleyici örneklemeleri belirleyemediği için, üzerinde yansıtmak istediğiniz genel bir türün çalışma zamanı yönergeleri tarafından belirtilmesi gerekir. Bu, tüm kodun dahil olması gerektiğinden, ancak genel türlerde yansıma bir sonsuz döngüye (örneğin, genel bir tür üzerinde çağrıldığında genel bir yöntem çağrıldığında) sahip olduğu için bu değildir.
 
 > [!NOTE]
-> Çalışma zamanı yönergeleri, çalışma zamanı yönergeleri (. RD. xml) dosyasında tanımlanmıştır. Bu dosyayı kullanma hakkında genel bilgi için [bkz. Başlarken](getting-started-with-net-native.md). Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (RD. xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).
+> Çalışma zamanı yönergeleri, bir çalışma zamanı yönergeleri (.rd.xml) dosyasında tanımlanmıştır. Bu dosyayı kullanma hakkında genel bilgi için [bkz. Başlarken](getting-started-with-net-native.md). Çalışma zamanı yönergeleri hakkında daha fazla bilgi için bkz. [çalışma zamanı yönergeleri (rd.xml) yapılandırma dosyası başvurusu](runtime-directives-rd-xml-configuration-file-reference.md).
 
 .NET Native Ayrıca, geliştiricinin varsayılan küme dışında hangi türlerin yansıma destekleceğini belirlemesine yardımcı olan profil oluşturma araçlarını içerir.
 
@@ -187,7 +187,7 @@ Bazı ek davranış farklılıkları aşağıdaki alt bölümlerde ele alınmı�
 
 Windows Mağazası uygulamaları için .NET <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> <xref:System.Net.DecompressionMethods.Deflate> , özelliği, <xref:System.Net.DecompressionMethods.GZip> <xref:System.Net.DecompressionMethods.Deflate> ve <xref:System.Net.DecompressionMethods.GZip> ya <xref:System.Net.DecompressionMethods.None> da olarak ayarlamanıza olanak tanır.  .NET Native yalnızca <xref:System.Net.DecompressionMethods.Deflate> veya ile birlikte desteklenir <xref:System.Net.DecompressionMethods.GZip> <xref:System.Net.DecompressionMethods.None> .  <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A>Özelliği ya da <xref:System.Net.DecompressionMethods.Deflate> tek başına sessizce ayarlama girişimi, hem hem <xref:System.Net.DecompressionMethods.GZip> de olarak ayarlanır <xref:System.Net.DecompressionMethods.Deflate> <xref:System.Net.DecompressionMethods.GZip> .
 
-**Çerezler**
+**Özgü**
 
 Tanımlama bilgisi işleme, ve WinINet tarafından aynı anda gerçekleştirilir <xref:System.Net.Http.HttpClient> .  ' Dan tanımlama bilgileri, <xref:System.Net.CookieContainer> Winınet tanımlama bilgisi önbelleğindeki tanımlama bilgileriyle birleştirilir.  ' Dan bir tanımlama bilgisinin kaldırılması <xref:System.Net.CookieContainer> <xref:System.Net.Http.HttpClient> , tanımlama bilgisinin gönderilmesini engeller, ancak tanımlama bilgisi zaten Winınet tarafından görüleniyorsa ve tanımlama bilgileri Kullanıcı tarafından silinmediğinden, Winınet bunu gönderir.  <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler> , Veya API kullanarak bir tanımlama bilgisinin Winınet 'dan program aracılığıyla kaldırılması mümkün değildir <xref:System.Net.CookieContainer> .  <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType>Özelliği `false` yalnızca <xref:System.Net.Http.HttpClient> tanımlama bilgilerinin gönderilmesini durdurmasına neden olacak şekilde ayarlama; WinINet, isteğe tanımlama bilgilerini yine de dahil edebilir.
 

@@ -1,17 +1,18 @@
 ---
 title: CLR ETW Olayları
+description: 'Windows için ortak dil çalışma zamanı (CLR) olay izleme (ETW) olayları makalesine bakın. İki olay sağlayıcısı vardır: çalışma zamanı sağlayıcısı ve runaşağı sağlayıcı.'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: e879dcf385acbc522c0a3573cfa374550ea23333
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504129"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309839"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
 Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktadır. Her olayın ilişkili bir anahtar sözcüğü ve düzeyi vardır ve bu, [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md) konusunda açıklanmıştır. CLR, olaylar için iki sağlayıcıya sahiptir:  
@@ -53,7 +54,7 @@ Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktad
  [ARM Olayları](application-domain-resource-monitoring-arm-etw-events.md)  
  Bir uygulama etki alanının durumu hakkında ayrıntılı tanılama bilgilerini yakalar.  
   
- [Güvenlik Olayları](security-etw-events.md)  
+ [Güvenlik olayları](security-etw-events.md)  
  Tanımlayıcı ad ve Authenticode doğrulama hakkındaki bilgileri yakalar.  
   
  [Yığın Olayı](stack-etw-event.md)  
@@ -65,4 +66,4 @@ Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktad
 - [.NET Framework Günlük Kaydını Denetleme](controlling-logging.md)
 - [CLR ETW Sağlayıcılar](clr-etw-providers.md)
 - [CLR ETW Anahtar Sözcükleri ve Düzeyler](clr-etw-keywords-and-levels.md)
-- [Ortak Dil Çalışma Zamanı Modülünde ETW Olayları](etw-events-in-the-common-language-runtime.md)
+- [Ortak Dil Çalışma Zamanında ETW Olayları](etw-events-in-the-common-language-runtime.md)

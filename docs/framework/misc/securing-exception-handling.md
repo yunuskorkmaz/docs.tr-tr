@@ -10,15 +10,15 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 009e587c0458488db6c2aa92e13311ddc08a64b1
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282001"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309046"
 ---
 # <a name="securing-exception-handling"></a>Özel Durum İşleme Güvenliğini Sağlama
-Visual C++ ve Visual Basic içinde, yığın üzerinde daha fazla bir filtre ifadesi herhangi bir **finally** ifadesiyle önce çalışır. Bu filtreyle ilişkili **catch** bloğu **finally** ifadesinden sonra çalışır. Daha fazla bilgi için bkz. [Kullanıcı filtrelenmiş özel durumları kullanma](../../standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sıranın güvenlik etkileri incelenir. Filter deyimlerinin ve **finally** deyimlerinin çalışacağı sırayı gösteren aşağıdaki sözde kod örneğini göz önünde bulundurun.  
+Visual C++ ve Visual Basic içinde, yığın üzerinde daha fazla bir filtre ifadesi herhangi bir ifadeden önce çalışır `finally` . Bu filtreyle ilişkili **catch** bloğu `finally` deyimden sonra çalışır. Daha fazla bilgi için bkz. [Kullanıcı filtrelenmiş özel durumları kullanma](../../standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sıranın güvenlik etkileri incelenir. Filtre deyimlerinin ve deyimlerinin çalışacağı sırayı gösteren aşağıdaki sözde kod örneğini göz önünde bulundurun `finally` .  
   
 ```cpp  
 void Main()
@@ -59,7 +59,7 @@ Finally
 Catch  
 ```  
   
- Filtre **finally** ifadesinden önce çalışır, bu nedenle güvenlik sorunları diğer kodun yürütülmesinin avantajlarından faydalanarak bir durum değişikliği yapan herhangi bir şey tarafından tanıtılamaz. Örnek:  
+ Filtre deyimden önce çalışır `finally` , bu nedenle güvenlik sorunları diğer kodun yürütülmesinin avantajlarından faydalanabilen bir durum değişikliği yapan herhangi bir şey tarafından tanıtılamaz. Örnek:  
   
 ```cpp  
 try
@@ -78,7 +78,7 @@ finally
 }  
 ```  
   
- Bu sözde kod, bir filtrenin rastgele kod çalıştırmasına izin verir. Benzer bir etkiye sahip olacak diğer işlemlere örnek olarak, başka bir kimlik kimliğe bürünme, bazı güvenlik denetimini atlayan bir iç bayrak ayarlama veya iş parçacığıyla ilişkili kültürü değiştirme. Önerilen çözüm, kodun iş parçacığı durumuna çağıranların filtre blokları üzerinde yaptığı değişiklikleri yalıtmak için bir özel durum işleyicisi tanıtmaktır. Ancak, özel durum işleyicisinin doğru bir şekilde tanıtılmasından veya bu sorunun düzeltilmeyecek olması önemlidir. Aşağıdaki örnek, UI kültürünü geçirir, ancak her türlü iş parçacığı durum değişikliği benzer şekilde açığa çıkabilir.  
+ Bu sözde kod, bir filtrenin rastgele kod çalıştırmasına izin verir. Benzer bir etkiye sahip olacak diğer işlemlere örnek olarak, başka bir kimlik kimliğe bürünme, bazı güvenlik denetimini atlayan bir iç bayrak ayarlama veya iş parçacığıyla ilişkili kültürü değiştirme. Önerilen çözüm, kodun iş parçacığı durumuna çağıranların filtre blokları üzerinde yaptığı değişiklikleri yalıtmak için bir özel durum işleyicisi tanıtmaktır. Ancak, özel durum işleyicisini doğru bir şekilde tanıtmak önemlidir veya bu sorun düzeltilmez. Aşağıdaki örnek, UI kültürünü geçirir, ancak her türlü iş parçacığı durum değişikliği benzer şekilde açığa çıkabilir.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -135,9 +135,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- **Finally** deyimleri, almadan önce çalıştırılmadığından, bu sorunu çözmez `FilterFunc` .  
+ Bu, `finally` bildirim, almadan önce çalıştırılmadığından sorunu çözmez `FilterFunc` .  
   
- Aşağıdaki örnek, çağıran özel durum filtre blokları için bir özel durum sunmadan önce **finally** yan tümcesinin yürütüldüğünü sağlayarak sorunu düzeltir.  
+ Aşağıdaki örnek, `finally` çağıran özel durum filtre blokları için bir özel durum sunmadan önce yan tümcesinin yürütülmesini sağlayarak sorunu düzeltir.  
   
 ```cpp  
 YourObject.YourMethod()  

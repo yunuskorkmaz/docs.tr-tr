@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: aab7d8538c875e35c832acc2a6c64beb84d4fb47
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 9f6703c77e17ac9376aee944b891f4635dc7632e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702459"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309173"
 ---
 ### <a name="winforms-methods-now-throw-argumentexception"></a>WinForms yöntemleri artık ArgumentException oluşturur
 
@@ -16,13 +16,6 @@ Daha önce, beklenmeyen veya yanlış bir türün bağımsız değişkenlerini b
 
 <xref:System.ArgumentException>.NET çalışma zamanının davranışına uygun bir şekilde oluşturuluyor. Ayrıca, hangi bağımsız değişkenin geçersiz olduğu açıkça iletişim kurarak hata ayıklama deneyimini geliştirir.
 
-Aşağıdaki tabloda etkilenen Yöntemler ve parametreler listelenmektedir:
-
-| Yöntem | Parametre adı | Koşul | Sürüm eklendi |
-|-|-|-|-|
-| <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | Bağımsız değişken türünde değil <xref:System.Windows.Forms.TabPage> . | 5,0 Preview 1 |
-| <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName> | `format` | Bağımsız değişken `null` , <xref:System.String.Empty?displayProperty=nameWithType> veya boşluk. | 5,0 Preview 5 |
-
 #### <a name="version-introduced"></a>Sunulan sürüm
 
 .NET 5,0
@@ -32,14 +25,19 @@ Aşağıdaki tabloda etkilenen Yöntemler ve parametreler listelenmektedir:
 - Geçersiz bağımsız değişkenlerin geçirilmesini engellemek için kodu güncelleştirin.
 - Gerekirse, <xref:System.ArgumentException> yöntemini çağırırken bir işleyin.
 
-#### <a name="category"></a>Kategori
+#### <a name="category"></a>Category
 
 Windows Forms
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-- <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName>
-- <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName>
+Aşağıdaki tabloda etkilenen Yöntemler ve parametreler listelenmektedir:
+
+| Yöntem | Parametre adı | Koşul | Sürüm eklendi |
+|-|-|-|-|
+| <xref:System.Windows.Forms.TabControl.GetToolTipText(System.Object)?displayProperty=fullName> | `item` | Bağımsız değişken türünde değil <xref:System.Windows.Forms.TabPage> . | Önizleme 1 |
+| <xref:System.Windows.Forms.DataFormats.GetFormat(System.String)?displayProperty=fullName> | `format` | Bağımsız değişken `null` , <xref:System.String.Empty?displayProperty=nameWithType> veya boşluk. | Preview 5 |
+| <xref:System.Windows.Forms.InputLanguageChangedEventArgs.%23ctor(System.Globalization.CultureInfo,System.Byte)> | `culture` | `InputLanguage`Belirtilen kültür için alınamıyor. | Önizleme 7 |
 
 <!-- 
 
@@ -47,5 +45,6 @@ Windows Forms
 
 - `M:System.Windows.Forms.TabControl.GetToolTipText(System.Object)`
 - `M:System.Windows.Forms.DataFormats.GetFormat(System.String)`
+- `M:System.Windows.Forms.InputLanguageChangedEventArgs.%23ctor(System.Globalization.CultureInfo,System.Byte)`
 
 -->

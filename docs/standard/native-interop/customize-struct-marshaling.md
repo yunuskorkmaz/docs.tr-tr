@@ -1,18 +1,18 @@
 ---
 title: Yapı sıralamasını özelleştirme-.NET
-description: .NET 'in yapılarınızı yerel bir gösterimde nasıl sıraladığında nasıl özelleştireceğinizi öğrenin.
+description: .NET 'in yapıları yerel bir gösterime nasıl ele allarından nasıl özelleştireceğinizi öğrenin.
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 8248ca589f41967a9112ba61c09599b337814de7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: c82e0099c44b8033cad241d69bdd284243711a50
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84003899"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374539"
 ---
-# <a name="customizing-structure-marshaling"></a>Yapı hazırlamayı özelleştirme
+# <a name="customize-structure-marshaling"></a>Yapı hazırlamayı özelleştirme
 
 Bazen yapılar için varsayılan sıralama kuralları, ihtiyacınız olan tam değildir. .NET çalışma zamanları, yapınızın yerleşimini ve alanların nasıl sıralanmayı özelleştirmeniz için birkaç uzantı noktası sağlar.
 
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-WinRT tabanlı bir API kullanırken bir dizeyi bir olarak sıralamakta gerek olabilir `HSTRING` .  Değerini kullanarak bir <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> dizeyi bir olarak sıraaktarabilirsiniz `HSTRING` .
+WinRT tabanlı bir API kullanırken bir dizeyi bir olarak sıralamakta gerek olabilir `HSTRING` . Değerini kullanarak bir <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> dizeyi bir olarak sıraaktarabilirsiniz `HSTRING` .
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Ondalık alan sıralamasını özelleştirme
 
-Windows üzerinde çalışıyorsanız, yerel [ `CY` veya `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1) yapıyı kullanan bazı API 'lerle karşılaşabilirsiniz. Varsayılan olarak, .NET `decimal` türü yerel yapıya göre sıralar [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) . Bununla birlikte, bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> değeri yerel bir değere dönüştürmek üzere Sıralayıcı 'yı yönlendirmek için değeriyle birlikte kullanabilirsiniz `decimal` `CY` .
+Windows üzerinde çalışıyorsanız, yerel [ `CY` veya `CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy-r1) yapıyı kullanan bazı API 'lerle karşılaşabilirsiniz. Varsayılan olarak, .NET `decimal` türü yerel yapıya göre sıralar [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal-r1) . Bununla birlikte, bir <xref:System.Runtime.InteropServices.MarshalAsAttribute> <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> değeri yerel bir değere dönüştürmek üzere Sıralayıcı 'yı yönlendirmek için değeriyle birlikte kullanabilirsiniz `decimal` `CY` .
 
 ```csharp
 public struct Currency
@@ -334,7 +334,7 @@ struct Currency
 };
 ```
 
-## <a name="marshaling-systemobjects"></a>Sıralama `System.Object`
+## <a name="marshal-systemobject"></a>Sıralama`System.Object`
 
 Windows 'ta, `object` yerel koda göre türsüz alanları sıraaktarabilirsiniz. Bu alanları üç türden birine göre sıraaktarabilirsiniz:
 

@@ -4,12 +4,12 @@ description: Bu öğreticide, özellikle New York City taksi Fares fiyatlarını
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 27054e28f9a4fa628f0d7348d45528b690d7da83
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: beb48c9252b83cd693c351d39882b7ac9d08d882
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281777"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309722"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Öğretici: ML.NET ile gerileme kullanarak fiyatları tahmin etme
 
@@ -25,7 +25,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 > * Modeli değerlendirme
 > * Tahmin için modeli kullanma
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri, ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 
@@ -35,7 +35,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 1. Veri kümesi ve model dosyalarını depolamak için projenizde *veri* adlı bir dizin oluşturun.
 
-1. **Microsoft.ml** NuGet paketini yükler:
+1. **Microsoft.ml** ve **Microsoft. ml. Fasttree** NuGet paketini yükler:
 
     [!INCLUDE [mlnet-current-nuget-version](../../../includes/mlnet-current-nuget-version.md)]
 

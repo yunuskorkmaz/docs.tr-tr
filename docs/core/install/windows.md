@@ -4,26 +4,27 @@ description: .NET Core 'u hangi Windows sürümleriyle yükleyebileceğinizi ö�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: e26494de7e9246b241cb965d8d735a781aab5478
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804507"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308955"
 ---
 # <a name="install-net-core-on-windows"></a>Windows 'a .NET Core 'u yükler
 
 > [!div class="op_single_selector"]
 >
 > - [Windows’ta yükleme](windows.md)
-> - [MacOS 'a yüklensin](macos.md)
+> - [macOS’ta yükleme](macos.md)
 > - [Linux'ta yükleme](linux.md)
 
 Bu makalede, Windows 'a .NET Core yüklemeyi öğreneceksiniz. .NET Core çalışma zamanı ve SDK 'dan oluşur. Çalışma zamanı .NET Core uygulamasını çalıştırmak için kullanılır ve uygulama ile birlikte bulunmayabilir veya bulunmayabilir. SDK, .NET Core Uygulamaları ve kitaplıkları oluşturmak için kullanılır. .NET Core çalışma zamanı her zaman SDK ile birlikte yüklenir.
 
 .NET Core 'un en son sürümü 3,1 ' dir.
 
-[.NET Core indirin.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core indirin](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Desteklenen yayınlar
 
@@ -35,7 +36,7 @@ Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıd
 - Bir ❌ Windows veya .NET Core sürümünün bu Windows sürümünde desteklenmediğini belirtir.
 - Hem bir Windows sürümü hem de bir .NET Core sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| İşletim Sistemi                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
+| Operating System                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
 |-----------------------------|---------------|---------------|----------------|
 | ✔️ Windows 10, sürüm 2004 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ✔️ Windows 10, sürüm 1909 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
@@ -52,9 +53,9 @@ Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıd
 
 Aşağıdaki .NET Core sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3.0
+- 3,0
 - 2,2
-- 2.0
+- 2,0
 
 ## <a name="runtime-information"></a>Çalışma zamanı bilgileri
 
@@ -71,13 +72,15 @@ Windows için masaüstü uygulamaları Windows Forms .NET Core WPF ve .NET Core 
 *.NET Core çalışma zamanı*\
 Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET Core uygulamalarıyla en iyi uyumluluk için *ASP.NET Core çalışma zamanı* ve *Masaüstü çalışma zamanı* yüklemenizi kesinlikle öneririz.
 
-[.NET Core çalışma zamanını indirin.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK bilgileri
 
 SDK, .NET Core Uygulamaları ve kitaplıkları derlemek ve yayımlamak için kullanılır. SDK 'nın [yüklenmesi üç çalışma](#runtime-information)zamanını içerir: ASP.NET Core, masaüstü ve .NET Core.
 
-[.NET Core SDK indirin.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK indir](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
@@ -206,7 +209,7 @@ dotnet-install.ps1 -Channel Current
 | .NET Core SDK sürümü | Visual Studio sürüm                      |
 | --------------------- | ------------------------------------------ |
 | 3,1                   | Visual Studio 2019 sürüm 16,4 veya üzeri. |
-| 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
+| 3,0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
 | 2,2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
 | 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
 
@@ -218,7 +221,8 @@ Visual Studio zaten yüklüyse, aşağıdaki adımlarla sürümünüzü kontrol 
 
 Visual Studio, en son .NET Core SDK ve çalışma zamanını yükleyebilir.
 
-- [Visual Studio 'Yu indirin](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
+> [!div class="button"]
+> [Visual Studio 'Yu indirin](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019).
 
 ### <a name="select-a-workload"></a>İş yükü seçin
 

@@ -11,14 +11,15 @@ helpviewer_keywords:
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-ms.openlocfilehash: a4f18431d89343a77ccf2b920edac485e7dcfca3
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 789753742d8714e481f038e323407cbab0499f6c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282131"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309800"
 ---
-# <a name="specifying-a-character-set"></a>Karakter Kümesi Belirtme
+# <a name="specify-a-character-set"></a>Bir karakter kümesi belirtin
+
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Alan, dize sıralamasını denetler ve platform çağırma işlevinin BIR DLL 'de işlev adlarını bulmasını belirler. Bu konuda her iki davranış de açıklanmaktadır.  
   
  Bazı API 'Ler dize bağımsız değişkenleri alan işlevlerin iki sürümünü dışarı aktarır: dar (ANSI) ve geniş (Unicode). Örneğin, Windows API 'SI, **MessageBox** işlevi için aşağıdaki giriş noktası adlarını içerir:  
@@ -62,11 +63,12 @@ ms.locfileid: "86282131"
   
 - Platform çağırma, hedef platforma bağlı olarak çalışma zamanında ANSI ve Unicode biçimleri arasında seçer.  
   
-## <a name="specifying-a-character-set-in-visual-basic"></a>Visual Basic bir karakter kümesi belirtme  
- Aşağıdaki örnek, her seferinde farklı karakter kümesi davranışına sahip olan **MessageBox** işlevini üç kez bildirir. Bildirim bildirimine **Ansi**, **UNICODE**veya **Auto** anahtar sözcüğünü ekleyerek Visual Basic karakter kümesi davranışını belirtebilirsiniz.  
-  
- Karakter kümesi anahtar sözcüğünü atlarsanız, ilk bildirim ifadesinde yapıldığı gibi, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alan varsayılan olarak ANSI karakter kümesi olur. Örnekteki ikinci ve üçüncü deyimler, anahtar sözcüğü olan bir karakter kümesini açıkça belirtir.  
-  
+## <a name="specify-a-character-set-in-visual-basic"></a>Visual Basic bir karakter kümesi belirtin
+
+`Ansi` `Unicode` Bildirim bildirimine,, veya anahtar sözcüğünü ekleyerek Visual Basic karakter kümesi davranışını belirtebilirsiniz `Auto` . Karakter kümesi anahtar sözcüğünü atlarsanız, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> alan varsayılan olarak ANSI karakter kümesi olur.
+
+Aşağıdaki örnek, her seferinde farklı karakter kümesi davranışına sahip olan **MessageBox** işlevini üç kez bildirir. İlk ifade karakter kümesi anahtar sözcüğünü atlar, bu nedenle karakter kümesi varsayılan olarak ANSI olur. İkinci ve üçüncü deyimler açıkça anahtar sözcüğü olan bir karakter kümesini belirtir.
+
 ```vb
 Friend Class NativeMethods
     Friend Declare Function MessageBoxA Lib "user32.dll" (
@@ -89,8 +91,9 @@ Friend Class NativeMethods
 End Class
 ```
   
-## <a name="specifying-a-character-set-in-c-and-c"></a>C# ve C++ içinde bir karakter kümesi belirtme  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Alan, temel alınan karakter KÜMESINI ANSI veya Unicode olarak tanımlar. Karakter kümesi bir yönteme dize bağımsız değişkenlerinin nasıl sıralanması gerektiğini denetler. Karakter kümesini belirtmek için aşağıdaki formlardan birini kullanın:  
+## <a name="specify-a-character-set-in-c-and-c"></a>C# ve C++ içinde bir karakter kümesi belirtme
+
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType>Alan, temel alınan karakter KÜMESINI ANSI veya Unicode olarak tanımlar. Karakter kümesi bir yönteme dize bağımsız değişkenlerinin nasıl sıralanması gerektiğini denetler. Karakter kümesini belirtmek için aşağıdaki formlardan birini kullanın:  
   
 ```csharp
 [DllImport("DllName", CharSet = CharSet.Ansi)]

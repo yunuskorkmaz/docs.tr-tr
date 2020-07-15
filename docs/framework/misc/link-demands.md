@@ -15,19 +15,19 @@ helpviewer_keywords:
 - caller security checks
 - link demands
 ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
-ms.openlocfilehash: cd89c4ef27abb92fba567a1f3b490cb9d78fdddd
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: eaf9ee1bb5cd10c724240bacac014503685a0c8c
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282067"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309111"
 ---
 # <a name="link-demands"></a>Bağlantı Talepleri
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Bir bağlantı isteği, tam zamanında derleme sırasında bir güvenlik denetimine neden olur ve yalnızca kodunuzun hemen çağıran derlemesini denetler. Bağlama, kodunuz işlev işaretçisi başvuruları ve Yöntem çağrıları dahil olmak üzere bir tür başvurusuna bağlandığında oluşur. Çağıran derlemenin kodunuza bağlamak için yeterli izni yoksa, bağlantıya izin verilmez ve kod yüklenip çalıştırıldığında bir çalışma zamanı özel durumu oluşturulur. Bağlantı talepleri, kodunuzun devraldığı sınıflarda geçersiz kılınabilir.  
   
- Tam bir yığın ilerinin bu talep türü ile gerçekleştirilmediğini ve kodunuzun yine de en fazla saldırı saldırılarına maruz olduğunu unutmayın. Örneğin, derleme A içindeki bir yöntem bir bağlantı talebi tarafından korunuyorsa, B derlemesinde doğrudan çağıran derleme B 'nin izinlerine göre değerlendirilir.  Ancak, bağlantı isteği, derleme B içindeki yöntemi kullanarak dolaylı olarak bir derlemeyi çağıran derleme C 'deki bir yöntemi değerlendirmeyecektir. Bağlantı talebi yalnızca hemen çağıran derlemede bulunan izin doğrudan çağıranlarının kodunuza bağlanması için sahip olması gerektiğini belirtir. Tüm çağıranların kodunuzu çalıştırmak için sahip olması gereken izinleri belirtmez.  
+ Bu talep türü ile tam bir yığın yürüme gerçekleştirilmez ve kodunuzun yine de devam eden saldırılara açıktır. Örneğin, derleme A içindeki bir yöntem bir bağlantı talebi tarafından korunuyorsa, B derlemesinde doğrudan çağıran derleme B 'nin izinlerine göre değerlendirilir.  Ancak, bağlantı isteği, derleme B içindeki yöntemi kullanarak dolaylı olarak bir derlemeyi çağıran derleme C 'deki bir yöntemi değerlendirmeyecektir. Bağlantı talebi yalnızca hemen çağıran derlemede bulunan izin doğrudan çağıranlarının kodunuza bağlanması için sahip olması gerektiğini belirtir. Tüm çağıranların kodunuzu çalıştırmak için sahip olması gereken izinleri belirtmez.  
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>, <xref:System.Security.CodeAccessPermission.Deny%2A> Ve <xref:System.Security.CodeAccessPermission.PermitOnly%2A> Yığın ilerleme değiştiricileri bağlantı taleplerinin değerlendirilmesini etkilemez.  Bağlantı talepleri bir yığın ilerleme işlemi gerçekleştirmediğinden, yığın ilerleme değiştiricilerin bağlantı taleplerini etkilemez.  
   

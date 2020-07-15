@@ -3,17 +3,18 @@ title: DataSets, DataTables ve DataViews
 description: Tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimi olan ADO.NET veri kümesiyle çalışmanın birkaç yolunu öğrenin.
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: f6562452261cbc1f7ee36fb264b858646a42e4f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 53e12f701b9be1938d62f46bbeb6e63d95c03386
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286901"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374513"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSets, DataTables ve DataViews
+
 ADO.NET, <xref:System.Data.DataSet> içerdiği verilerin kaynağından bağımsız olarak tutarlı bir ilişkisel programlama modeli sağlayan verilerin bellekte yerleşik bir gösterimidir. Bir, <xref:System.Data.DataSet> verileri içeren tablolar ve tablolar arasındaki ilişkiler dahil olmak üzere tüm veri kümesini temsil eder.  
   
- Bağımsız olarak veya birleşimine uygulanabilecek bir ile çalışmanın birkaç yolu vardır <xref:System.Data.DataSet> . Seçenekleriniz şunlardır:  
+Bağımsız olarak veya birleşimine uygulanabilecek bir ile çalışmanın birkaç yolu vardır <xref:System.Data.DataSet> . Şunları yapabilirsiniz:  
   
 - Programlı olarak <xref:System.Data.DataTable> bir, <xref:System.Data.DataRelation> ve <xref:System.Data.Constraint> içinde ve <xref:System.Data.DataSet> tabloları verilerle doldurma.  
   
@@ -21,9 +22,13 @@ ADO.NET, <xref:System.Data.DataSet> içerdiği verilerin kaynağından bağıms�
   
 - XML kullanarak içerikleri yükleyin ve kalıcı hale getirin <xref:System.Data.DataSet> . Daha fazla bilgi için bkz. [veri KÜMESINDE XML kullanma](using-xml-in-a-dataset.md).  
   
- Türü kesin belirlenmiş bir <xref:System.Data.DataSet> XML Web hizmeti kullanılarak da taşıyabilirsiniz. Tasarımı, <xref:System.Data.DataSet> XML Web Hizmetleri kullanarak verileri aktarmak için ideal hale getirir. XML Web hizmetlerine genel bakış için bkz. [XML Web Hizmetleri 'Ne genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). <xref:System.Data.DataSet>XML Web hizmetinden alınan bir örnek için bkz. [XML Web hizmetinden veri kümesi](consuming-a-dataset-from-an-xml-web-service.md)kullanma.  
+Türü kesin belirlenmiş bir <xref:System.Data.DataSet> XML Web hizmeti kullanılarak da taşıyabilirsiniz. Tasarımı, <xref:System.Data.DataSet> XML Web Hizmetleri kullanarak verileri aktarmak için ideal hale getirir. XML Web hizmetlerine genel bakış için bkz. [XML Web Hizmetleri 'Ne genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100)). <xref:System.Data.DataSet>XML Web hizmetinden alınan bir örnek için bkz. [XML Web hizmetinden veri kümesi](consuming-a-dataset-from-an-xml-web-service.md)kullanma.  
   
-## <a name="in-this-section"></a>Bu Bölümde  
+## <a name="in-this-section"></a>Bu bölümde
+
+ [Güvenlik kılavuzu](security-guidance.md)  
+ Ve için Güvenlik Kılavuzu <xref:System.Data.DataSet> sağlar <xref:System.Data.DataTable> .
+
  [DataSet Oluşturma](creating-a-dataset.md)  
  Bir örneğini oluşturmak için söz dizimini açıklar <xref:System.Data.DataSet> .  
   
@@ -63,7 +68,8 @@ ADO.NET, <xref:System.Data.DataSet> içerdiği verilerin kaynağından bağıms�
  [XML Web Hizmetinden DataSet Kullanma](consuming-a-dataset-from-an-xml-web-service.md)  
  Verileri aktarmak için kullanan bir XML Web hizmeti oluşturmayı açıklar <xref:System.Data.DataSet> .  
   
-## <a name="related-sections"></a>İlgili Bölümler  
+## <a name="related-sections"></a>İlgili bölümler
+
  [ADO.NET’teki Yenilikler](../whats-new.md)  
  ADO.NET ' de yeni olan özellikleri tanıtır.  
   

@@ -2,12 +2,12 @@
 title: F# kod biçimlendirme yönergeleri
 description: 'F # kodunu biçimlendirmeye yönelik yönergeleri öğrenin.'
 ms.date: 11/04/2019
-ms.openlocfilehash: dde69c573f1ef58d398ae47676b9403f588680b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a65600a6c685929aef8582e49caded6340fb09e2
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617275"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309709"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# kod biçimlendirme yönergeleri
 
@@ -102,25 +102,34 @@ let myFunBad (a:decimal)(b)c = a + b + c
 
 ### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>Uzun üye tanımları için parametreleri yeni bir satıra yerleştir
 
-Çok uzun bir üye tanımınız varsa, parametreleri yeni satırlara yerleştirip bir kapsamı girintileyin.
+Çok uzun bir üye tanımınız varsa, parametreleri yeni satırlara yerleştirip sonraki parametrenin girintileme düzeyiyle eşleşecek şekilde Girintile.
 
 ```fsharp
 type C() =
-    member _.LongMethodWithLotsOfParameters(
-        aVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-        aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
         // ... the body of the method follows
 ```
 
 Bu, oluşturucular için de geçerlidir:
 
 ```fsharp
-type C(
-    aVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse
-    aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
+type C(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+       aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse) =
     // ... the body of the class follows
+```
+
+Açık bir dönüş türü ek açıklaması varsa, ya da `)` öncesinde `=` veya yeni bir satırda olabilir. Dönüş türünün da uzun bir adı varsa, ikinci durum tercih edilebilir.
+
+```fsharp
+type C() =
+    member _.LongMethodWithLotsOfParameters(aVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aSecondVeryLongType: AVeryLongTypeThatYouNeedToUse,
+                                            aThirdVeryLongType: AVeryLongTypeThatYouNeedToUse)
+                                            : AVeryLongReturnType =
+        // ... the body of the method follows
 ```
 
 ### <a name="type-annotations"></a>Tür ek açıklamaları

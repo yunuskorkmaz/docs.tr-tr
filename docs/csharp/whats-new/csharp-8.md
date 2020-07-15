@@ -2,12 +2,12 @@
 title: C# 8,0 ' deki yenilikler-C# Kılavuzu
 description: C# 8,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: b4a9a1be0b0b60b0abda0b1f031dc648d831b46a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174737"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309410"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8,0 ' deki yenilikler
 
@@ -398,7 +398,7 @@ Zaman uyumsuz akışları [oluşturma ve](../tutorials/generate-consume-asynchro
 
 ## <a name="asynchronous-disposable"></a>Zaman uyumsuz atılabilir
 
-C# 8,0 ile başlayarak, dil arabirimi uygulayan zaman uyumsuz atılabilir türlerini destekler <xref:System.IAsyncDisposable?displayProperty=nameWithType> . Bir ifadenin işleneni ya `using` da uygulayabilir <xref:System.IDisposable> <xref:System.IAsyncDisposable> . Bu durumda `IAsyncDisposable` , derleyici `await` <xref:System.Threading.Tasks.Task> öğesinden döndürülen kodu oluşturur <xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType> . Daha fazla bilgi [ `using` için, bkz..](../language-reference/keywords/using-statement.md)
+C# 8,0 ile başlayarak, dil arabirimi uygulayan zaman uyumsuz atılabilir türlerini destekler <xref:System.IAsyncDisposable?displayProperty=nameWithType> . `await using`Bir zaman uyumsuz atılabilir nesnesiyle çalışmak için ifadesini kullanın. Daha fazla bilgi için, bkz. [DisposeAsync yöntemi uygulama](../../standard/garbage-collection/implementing-disposeasync.md) makalesi.
 
 ## <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 

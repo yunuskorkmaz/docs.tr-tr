@@ -2,12 +2,12 @@
 title: Bulutta yerel uygulamalar için Azure güvenliği
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulamalar için Azure güvenliği
 ms.date: 05/13/2020
-ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
+ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614259"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86374500"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Bulutta yerel uygulamalar için Azure güvenliği
 
@@ -66,7 +66,7 @@ Bu, sisteme bölmek için kullanılabilecek, en düşük bir değer hedefine yö
 
 .NET Framework zaten güvenli bir çerçeve. Bu, dizilerin uçlarını yürüyerek yönetilmeyen kodların bazı bazı türlerini önler. Çalışma, keşfedildiği şekilde güvenlik boşluklarını gidermek için etkin bir şekilde yapılır. Hatta, aracıdaki sorunları bulmak ve bunları yararlanmak yerine onları raporlamak için araştırmacıları ödeyen bir [hata sıçratı programı](https://www.microsoft.com/msrc/bounty) vardır.
 
-.NET kodunu daha güvenli hale getirmek için birçok yol vardır. [.Net Için güvenli kodlama yönergeleri](https://docs.microsoft.com/dotnet/standard/security/secure-coding-guidelines) gibi yönergeler, kodun baştan sona güvendiğinden emin olmak için makul bir adımdır. [OWASP en iyi 10](https://owasp.org/www-project-top-ten/) , güvenli kod oluşturmaya yönelik başka bir değerli kılavuzdur.
+.NET kodunu daha güvenli hale getirmek için birçok yol vardır. [.Net Için güvenli kodlama yönergeleri](../../standard/security/secure-coding-guidelines.md) gibi yönergeler, kodun baştan sona güvendiğinden emin olmak için makul bir adımdır. [OWASP en iyi 10](https://owasp.org/www-project-top-ten/) , güvenli kod oluşturmaya yönelik başka bir değerli kılavuzdur.
 
 Yapı işlemi, kaynak kodundaki sorunları üretime yapmadan önce saptamak için tarama araçlarını koymak için iyi bir yerdir. Çoğu projenin diğer bazı paketlere bağımlılıkları vardır. Güncel olmayan paketleri tarayabileceğiniz bir araç, gecelik bir derlemede sorunları yakalar. Docker görüntülerini oluştururken bile, temel görüntüde bilinen güvenlik açıklarına sahip olmadığından emin olmak ve denetlemek yararlı olur. Denetlenecek başka bir şey, hiçbir kimsenin kimlik bilgilerini yanlışlıkla denetledi.
 

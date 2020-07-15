@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 029f9863ebed94805675b629be7eb10963a7b689
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281400"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309371"
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
 Uzaktan iletişim, uygulama etki alanları, süreçler veya bilgisayarlar arasında şeffaf çağrı ayarlamanıza olanak sağlar. Ancak, kod erişimi güvenlik yığını, işleme veya makine sınırları üzerinde olamaz (aynı işlemin uygulama etki alanları arasında geçerlidir).  
@@ -34,7 +34,7 @@ Uzaktan iletişim, uygulama etki alanları, süreçler veya bilgisayarlar arası
   
  Bir uygulama etki alanı, başka bir uygulama etki alanının bir derlemeyi yüklemesine ve bir proxy 'yi diğer uygulama etki alanında barındırılan bir nesneye çağırarak içinde yer alan kodu çalıştırmasına zorlayabilir. Çapraz uygulama etki alanı proxy 'si almak için, nesneyi barındıran uygulama etki alanının bir yöntem çağrısı parametresi veya dönüş değeri aracılığıyla bir tane dağıtması gerekir. Ya da uygulama etki alanı yeni oluşturulduysa, oluşturucunun varsayılan olarak nesnesine bir proxy 'si vardır <xref:System.AppDomain> . Bu nedenle, kod yalıtımının kesilmesini önlemek için, daha yüksek bir güven düzeyine sahip bir uygulama etki alanı, <xref:System.MarshalByRefObject> etki alanı içinde, daha düşük güven düzeylerine sahip uygulama etki alanları için sıralanmış başvuru nesnelerine (sınıfından türetilmiş sınıfların örnekleri) başvuruları dağıtmamalıdır.  
   
- Genellikle, varsayılan uygulama etki alanı her birinde bir denetim nesnesi olan alt uygulama etki alanlarını oluşturur. Denetim nesnesi yeni uygulama etki alanını yönetir ve ara sıra varsayılan uygulama etki alanından siparişleri alır, ancak doğrudan etki alanıyla doğrudan bağlantı kuramıyor. Bazen, varsayılan uygulama etki alanı proxy 'sini denetim nesnesine çağırır. Ancak, Denetim nesnesinin varsayılan uygulama etki alanına geri çağırması için gereken durumlar olabilir. Bu durumlarda, varsayılan uygulama etki alanı, Denetim nesnesinin oluşturucusuna başvuruya göre sıralama geri çağırma nesnesi geçirir. Bu proxy 'yi korumak için Denetim nesnesinin sorumluluğundadır. Denetim nesnesi, proxy 'yi ortak bir sınıfın ortak statik alanına yerleştirse veya proxy 'yi genel kullanıma sunacaksa, bu, diğer kodun varsayılan uygulama etki alanına geri çağırması için tehlikeli bir mekanizma açar. Bu nedenle, proxy özel tutmak için denetim nesneleri her zaman örtük olarak güvenilirdir.  
+ Genellikle, varsayılan uygulama etki alanı her birinde bir denetim nesnesi olan alt uygulama etki alanlarını oluşturur. Denetim nesnesi yeni uygulama etki alanını yönetir ve ara sıra varsayılan uygulama etki alanından siparişleri alır, ancak doğrudan etki alanıyla doğrudan bağlantı kuramıyor. Bazen, varsayılan uygulama etki alanı proxy 'sini denetim nesnesine çağırır. Ancak, Denetim nesnesinin varsayılan uygulama etki alanına geri çağırması için gereken durumlar olabilir. Bu durumlarda, varsayılan uygulama etki alanı, Denetim nesnesinin oluşturucusuna başvuruya göre sıralama geri çağırma nesnesi geçirir. Bu proxy 'yi korumak için Denetim nesnesinin sorumluluğundadır. Denetim nesnesi proxy 'yi ortak bir sınıfın ortak statik alanına yerleştirirse veya proxy 'yi herkese açık bir şekilde açıkalıyorsa, diğer kodun varsayılan uygulama etki alanına geri çağırması için tehlikeli bir mekanizma açılır. Bu nedenle, proxy özel tutmak için denetim nesneleri her zaman örtük olarak güvenilirdir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

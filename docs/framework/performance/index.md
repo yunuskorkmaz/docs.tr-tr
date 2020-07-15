@@ -1,16 +1,17 @@
 ---
 title: .NET Framework Performansı
+description: .NET uygulamalarınızda performansı tasarlayın ve planlayın. Uygulamanızın performansını ölçmek ve geliştirmeler yapmak için Microsoft tarafından sunulan araçları kullanın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-ms.openlocfilehash: 47d85ae63f0594b778523425631ff54f9f3ca32f
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee8260056bd87dfc66d96e394f9b93bb9427afd8
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504094"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309761"
 ---
 # <a name="net-framework-performance"></a>.NET Framework Performansı
 Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın başka bir özelliğini tasarladığınızda olduğu gibi, performansı tasarlamalısınız ve planlamanız gerekir. Uygulamanızın performansını ölçmek için Microsoft tarafından sunulan araçları kullanabilir ve gerekirse, bellek kullanımı, kod işleme ve yanıt verme için geliştirmeler yapabilirsiniz. Bu konu, Microsoft 'un sağladığı performans analizi araçlarını listeler ve uygulama geliştirmenin belirli alanlarının performansını kapsayan diğer konulara bağlantılar sağlar.  
@@ -28,7 +29,7 @@ Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın 
 ### <a name="performance-tools"></a>Performans araçları  
  .NET Framework uygulamalarınızla kullanabileceğiniz bazı performans araçları aşağıda verilmiştir.  
   
-|Araç|Açıklama|  
+|Araç|Description|  
 |----------|-----------------|  
 |Visual Studio performans analizi|Windows işletim sistemi çalıştıran bilgisayarlara dağıtılacak .NET Framework uygulamalarınızın CPU kullanımını çözümlemek için kullanın.<br /><br /> Bu araç, bir projeyi açtıktan sonra Visual Studio 'daki **hata ayıklama** menüsünden kullanılabilir. Daha fazla bilgi için bkz. [Performans Gezgini](/visualstudio/profiling/performance-explorer). **Note:**  Windows Phone hedeflerken uygulama analizini Windows Phone (sonraki satıra bakın) kullanın.|  
 |Uygulama analizini Windows Phone|Windows Phone uygulamalarınızda CPU ve bellek, ağ veri aktarım hızı, uygulama yanıt hızı ve pil tüketimini çözümlemek için kullanın.<br /><br /> Bu araç, [Windows Phone SDK 'sını](https://go.microsoft.com/fwlink/?LinkId=265773)yükledikten sonra Visual Studio 'da bir Windows Phone projesi Için **hata ayıklama** menüsünden kullanılabilir. Daha fazla bilgi için bkz. [Windows Phone 8 Için uygulama profili oluşturma](https://docs.microsoft.com/previous-versions/windows/apps/jj215908(v=vs.105)).|  
@@ -43,8 +44,8 @@ Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın 
   
 |Uygulama türü|Bkz.|  
 |--------------|---------|  
-|Tüm platformlar için .NET Framework uygulamalar|[Atık Toplama ve Performans](../../standard/garbage-collection/performance.md)<br /><br /> [Performans İpuçları](performance-tips.md)|  
-|C++, C#Ve Visual Basic yazılan Windows 8. x Mağazası uygulamaları|[, C++ C#Ve Visual Basic kullanarak Windows Mağazası uygulamaları için en iyi performans uygulamaları](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
+|Tüm platformlar için .NET Framework uygulamalar|[Çöp toplama ve performans](../../standard/garbage-collection/performance.md)<br /><br /> [Performans Ipuçları](performance-tips.md)|  
+|C++, C# ve Visual Basic yazılan Windows 8. x Mağazası uygulamaları|[C++, C# ve Visual Basic kullanarak Windows Mağazası uygulamaları için en iyi performans uygulamaları](https://docs.microsoft.com/previous-versions/windows/apps/hh750313%28v=win.10%29)|  
 |Windows Presentation Foundation (WPF)|[WPF performans paketi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))|  
 |ASP.NET|[ASP.NET performansına genel bakış](https://docs.microsoft.com/previous-versions/aspnet/cc668225(v=vs.100))|  
   
@@ -53,6 +54,6 @@ Harika performansa sahip uygulamalar oluşturmak istiyorsanız, uygulamanızın 
 |Başlık|Açıklama|  
 |-----------|-----------------|  
 |[.NET Framework Uygulamalarında Önbelleğe Alma](caching-in-net-framework-applications.md)|Uygulamanızdaki performansı artırmak için verileri önbelleğe alma tekniklerini açıklar.|  
-|[Geç Başlatma](lazy-initialization.md)|Özellikle uygulama başlangıcında, performansı artırmak için nesnelerin gerekli olduğu gibi nasıl başlatılacağını açıklar.|  
+|[Yavaş Başlatma](lazy-initialization.md)|Özellikle uygulama başlangıcında, performansı artırmak için nesnelerin gerekli olduğu gibi nasıl başlatılacağını açıklar.|  
 |[Güvenilirlik](reliability.md)|Bir sunucu ortamında zaman uyumsuz özel durumların önlenmesi hakkında bilgi sağlar.|  
-|[Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma](writing-large-responsive-apps.md)|Yönetilen koddaki C# ve Visual Basic derleyicilerini yeniden yazmadan toplanan performans ipuçları sağlar ve C# derleyicisinden birkaç gerçek örnek içerir.|
+|[Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma](writing-large-responsive-apps.md)|Yönetilen koddaki C# ve Visual Basic derleyicileri yeniden yazarken toplanan performans ipuçları sağlar ve C# derleyicisinden birçok gerçek örnek içerir.|

@@ -4,26 +4,27 @@ description: .NET Core 'u hangi macOS sürümlerinin yükleyebileceğinizi öğr
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: bb1a0fa24e2f6e8850cbe59378793ff846f04ba9
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85804506"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86308929"
 ---
 # <a name="install-net-core-on-macos"></a>MacOS 'ta .NET Core 'u yükler
 
 > [!div class="op_single_selector"]
 >
 > - [Windows’ta yükleme](windows.md)
-> - [MacOS 'a yüklensin](macos.md)
+> - [macOS’ta yükleme](macos.md)
 > - [Linux'ta yükleme](linux.md)
 
 Bu makalede, macOS 'ta .NET Core 'u yüklemeyi öğreneceksiniz. .NET Core çalışma zamanı ve SDK 'dan oluşur. Çalışma zamanı .NET Core uygulamasını çalıştırmak için kullanılır ve uygulama ile birlikte bulunmayabilir veya bulunmayabilir. SDK, .NET Core Uygulamaları ve kitaplıkları oluşturmak için kullanılır. .NET Core çalışma zamanı her zaman SDK ile birlikte yüklenir.
 
 .NET Core 'un en son sürümü 3,1 ' dir.
 
-[.NET Core indirin.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core indirin](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="supported-releases"></a>Desteklenen yayınlar
 
@@ -32,7 +33,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 - ✔️, .NET Core sürümünün hala desteklendiğini gösterir.
 - Bir ❌ , .NET Core sürümünün desteklenmediğini belirtir.
 
-| İşletim Sistemi          | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
+| Operating System          | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
 |---------------------------|---------------|---------------|----------------|
 | macOS 10,15 "Catalina"    | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
 | macOS 10,14 "Mojave"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
@@ -59,13 +60,15 @@ ASP.NET Core uygulamalar çalıştırır. .NET Core çalışma zamanını içeri
 *.NET Core çalışma zamanı*\
 Bu çalışma zamanı, en basit çalışma zamanı ve başka bir çalışma zamanı içermez. .NET Core uygulamalarıyla en iyi uyumluluk için *ASP.NET Core çalışma zamanı* yüklemenizi kesinlikle öneririz.
 
-[.NET Core çalışma zamanını indirin.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core çalışma zamanını indirin](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="sdk-information"></a>SDK bilgileri
 
 SDK, .NET Core Uygulamaları ve kitaplıkları derlemek ve yayımlamak için kullanılır. SDK 'Yı [yüklemek her iki](#runtime-information)çalışma zamanını içerir: ASP.NET Core ve .NET Core.
 
-[.NET Core SDK indirin.](https://dotnet.microsoft.com/download/dotnet-core)
+> [!div class="button"]
+> [.NET Core SDK indir](https://dotnet.microsoft.com/download/dotnet-core)
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
@@ -74,10 +77,10 @@ SDK, .NET Core Uygulamaları ve kitaplıkları derlemek ve yayımlamak için kul
 > [!NOTE]
 > Bir `+` sembol en düşük sürümü temsil eder.
 
-| .NET Core sürümü | Mac OS                 | Mimariler |     |
+| .NET Core sürümü | macOS                 | Mimariler |     |
 | ----------------- | --------------------- | --------------| --- |
 | 3,1               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 3,0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2,2               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
@@ -142,7 +145,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > Yukarıdaki `export` Komutlar yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
 >
 > - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
 > - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
