@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme'
+description: Bkz. System. Lazy sınıfını kullanarak nesnelerin yavaş başlatılmasını gerçekleştirme <T> . Yavaş başlatma hiçbir şekilde gerekmiyorsa nesnelerin oluşturulmayacağı anlamına gelir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dbee0d8a5c3075ad7429feb92b87a566fdd35454
+ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180592"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86309735"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="77833-102">Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="77833-102">How to: Perform Lazy Initialization of Objects</span></span>
-<span data-ttu-id="77833-103">Sınıf, <xref:System.Lazy%601?displayProperty=nameWithType> nesnelerin tembel başlatılması nı ve anlık olarak gerçekleştirme işini basitleştirir.</span><span class="sxs-lookup"><span data-stu-id="77833-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="77833-104">Nesneleri tembel bir şekilde başharfe alarak, hiç ihtiyaç duyulmamışsa bunları oluşturmak zorunda kalmaktan kaçınabilir veya ilk erişilene kadar başlatmalarını erteleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="77833-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="77833-105">Daha fazla bilgi [için, Lazy Initialization](lazy-initialization.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="77833-105">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="1e2b8-104">Nasıl yapılır: Nesnelerin Yavaş Başlatılmasını Gerçekleştirme</span><span class="sxs-lookup"><span data-stu-id="1e2b8-104">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="1e2b8-105"><xref:System.Lazy%601?displayProperty=nameWithType>Sınıfı, nesnelerin yavaş başlatılmasını ve örneklenmesini gerçekleştirme işini basitleştirir.</span><span class="sxs-lookup"><span data-stu-id="1e2b8-105">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="1e2b8-106">Nesneleri yavaş bir şekilde başlatarak, hiçbir zaman gerekli olmadıklarında bunları her türlü oluşturmak zorunda kalmaktan kaçınabilirsiniz veya ilk erişilene kadar başlatma işleminin ertelenebilmesini sağlayabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="1e2b8-106">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="1e2b8-107">Daha fazla bilgi için bkz. [yavaş başlatma](lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="1e2b8-107">For more information, see [Lazy Initialization](lazy-initialization.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="77833-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="77833-106">Example</span></span>  
- <span data-ttu-id="77833-107">Aşağıdaki örnekte, <xref:System.Lazy%601>bir değerin nasıl başlağlaştırılanın.</span><span class="sxs-lookup"><span data-stu-id="77833-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="77833-108">`someCondition` Değişkeni doğru veya yanlış olarak ayarlayan başka bir koda bağlı olarak, tembel değişkenin gerekli olmayabileceğini varsayalım.</span><span class="sxs-lookup"><span data-stu-id="77833-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e2b8-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="1e2b8-108">Example</span></span>  
+ <span data-ttu-id="1e2b8-109">Aşağıdaki örnekte, ile bir değerin nasıl başlatıldığı gösterilmektedir <xref:System.Lazy%601> .</span><span class="sxs-lookup"><span data-stu-id="1e2b8-109">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="1e2b8-110">Değişkeni true veya false olarak ayarlayan başka bir koda bağlı olarak, yavaş değişkenin gerekli olabileceğini varsayalım `someCondition` .</span><span class="sxs-lookup"><span data-stu-id="1e2b8-110">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -68,13 +69,13 @@ End Sub
   }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="77833-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="77833-109">Example</span></span>  
- <span data-ttu-id="77833-110">Aşağıdaki örnek, yalnızca geçerli <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> iş parçacığındaki geçerli nesne örneğinde görünen bir türü başlatmayı yapmak için sınıfın nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="77833-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e2b8-111">Örnek</span><span class="sxs-lookup"><span data-stu-id="1e2b8-111">Example</span></span>  
+ <span data-ttu-id="1e2b8-112">Aşağıdaki örnek, <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> yalnızca geçerli iş parçacığındaki geçerli nesne örneği için görünür olan bir türü başlatmak üzere sınıfının nasıl kullanılacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="1e2b8-112">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="77833-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="77833-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e2b8-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1e2b8-113">See also</span></span>
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [<span data-ttu-id="77833-112">Yavaş Başlatma</span><span class="sxs-lookup"><span data-stu-id="77833-112">Lazy Initialization</span></span>](lazy-initialization.md)
+- [<span data-ttu-id="1e2b8-114">Yavaş Başlatma</span><span class="sxs-lookup"><span data-stu-id="1e2b8-114">Lazy Initialization</span></span>](lazy-initialization.md)
