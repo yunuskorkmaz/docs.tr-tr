@@ -1,6 +1,8 @@
 - name: 'DataSets, DataTables ve DataViews'
   href: index.md
   items:
+    - name: Güvenlik kılavuzu
+      href: security-guidance.md
     - name: DataSet Oluşturma
       href: creating-a-dataset.md
     - name: DataSet’e DataTable Ekleme

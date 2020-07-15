@@ -435,11 +435,11 @@
             - name: Veri bağlama
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'C# kılavuzu'
+        - name: C# kılavuzu
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
-            - name: 'C# diline giriş'
+            - name: C# diline giriş
               tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
               topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
             - name: Kullanmaya başlayın
@@ -461,7 +461,7 @@
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
               items:
-                - name: 'C# programı içinde'
+                - name: C# programı içinde
                   tocHref: /dotnet/csharp/programming-guide/inside-a-program/
                   topicHref: /dotnet/csharp/programming-guide/inside-a-program/index
                 - name: Diziler
@@ -562,25 +562,25 @@
                 - name: Derleyici hataları
                   tocHref: /dotnet/csharp/language-reference/compiler-messages/
                   topicHref: /dotnet/csharp/language-reference/compiler-messages/index
-                - name: 'C# 6.0 taslak belirtimi'
+                - name: C# 6.0 taslak belirtimi
                   tocHref: /dotnet/csharp/language-reference/language-specification/
                   topicHref: /dotnet/csharp/language-reference/language-specification/index
-                - name: 'C# 7.0 dil teklifleri'
+                - name: C# 7.0 dil teklifleri
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.0/index
-                - name: 'C# 7.1 dil teklifleri'
+                - name: C# 7.1 dil teklifleri
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.1/index
-                - name: 'C# 7.2 dil teklifleri'
+                - name: C# 7.2 dil teklifleri
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.2/index
-                - name: 'C# 7.3 dil teklifleri'
+                - name: C# 7.3 dil teklifleri
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-7.3/index
-                - name: 'C# 8.0 dil teklifleri'
+                - name: C# 8.0 dil teklifleri
                   tocHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/
                   topicHref: /dotnet/csharp/language-reference/proposals/csharp-8.0/index
-        - name: 'F# kılavuzu'
+        - name: F# kılavuzu
           tocHref: /dotnet/fsharp/
           topicHref: /dotnet/fsharp/index
         - name: Visual Basic kılavuzu
@@ -699,6 +699,6 @@
           tocHref: /dotnet/azure/
           topicHref: /dotnet/azure/index
           items:
-            - name: .NET için Azure SDK
-              tocHref: /dotnet/azure/sdk/
-              topicHref: /dotnet/azure/sdk/index
+            - name: .NET geliştiricileri için Azure
+              tocHref: /dotnet/azure/
+              topicHref: /dotnet/azure/index
