@@ -3,12 +3,12 @@ title: Veri kümesi ve DataTable Güvenlik Kılavuzu
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: c6b32afeadccc3fd22d6611d282840233280440f
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
+ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86382460"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405298"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Veri kümesi ve DataTable Güvenlik Kılavuzu
 
@@ -195,7 +195,8 @@ Denetim modu etkinleştirildikten sonra, tercih ettiğiniz yerleşik _App.config
 
 Ve hakkında daha fazla bilgi için `TraceSource` `TraceListener` bkz. [nasıl yapılır: Izleme dinleyicileri Ile TraceSource ve filtreler kullanma](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
 
-**Not**: bir uygulamayı denetim modunda çalıştırmak .NET Core veya .NET 5,0 ve üzeri sürümlerde kullanılamaz.
+> [!NOTE]
+> Bir uygulamayı denetim modunda çalıştırmak .NET Core veya .NET 5,0 ve üzeri sürümlerde kullanılamaz.
 
 <a name="ratr"></a>
 
@@ -207,7 +208,7 @@ Bir uygulamanın tüm tür sınırlaması kısıtlamalarını ve ' den kaldırma
 * Kullanılabilir seçenekler, uygulamanın hedeflediği çerçeveye bağlıdır.
 
 > [!WARNING]
-> Tüm tür kısıtlamalarını kaldırmak, uygulamanın içinde bir güvenlik deliği ortaya çıkarabilir. Bu mekanizmayı kullanırken, uygulamanın **not** `DataSet` `DataTable` Güvenilmeyen girişi okuyabilmesi ya da okumadığından emin olun. Daha fazla bilgi için bkz. [CVE-2020-1147](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2020-1147) ve [güvenilir olmayan girişle ilgili olarak güvenlik](#swr)başlıklı aşağıdaki bölüm.
+> Tüm tür kısıtlamalarını kaldırmak, uygulamanın içinde bir güvenlik deliği ortaya çıkarabilir. Bu mekanizmayı kullanırken, uygulamanın **not** `DataSet` `DataTable` Güvenilmeyen girişi okuyabilmesi ya da okumadığından emin olun. Daha fazla bilgi için bkz. [CVE-2020-1147](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2020-1147) ve [güvenilir olmayan girişle ilgili olarak güvenlik](#swr)başlıklı aşağıdaki bölüm.
 
 #### <a name="through-appcontext-configuration-net-framework-46---48-net-core-21-and-later-net-50-and-later"></a>AppContext yapılandırması aracılığıyla (.NET Framework 4,6-4,8, .NET Core 2,1 ve üzeri, .NET 5,0 ve üzeri)
 
@@ -463,7 +464,8 @@ public class MyClass
 
 Güvenilmeyen bir `DataSet` `DataTable` JSON blobundan bu şekilde veya bu şekilde seri durumdan çıkarmak güvenli değildir. Bu model, hizmet reddi saldırılarına karşı savunmasızdır. Bu tür bir saldırı, uygulamayı kilitlerler veya yanıt vermemeye işleyebilir.
 
-**Not**: Microsoft, _Newtonsoft.Js_gibi üçüncü taraf kitaplıkların uygulanmasını garanti etmez veya desteklemez. Bu bilgiler, tamamlanma zamanı için sağlanır ve bu yazma zamanından itibaren doğru olur.
+> [!NOTE]
+> Microsoft, _Newtonsoft.Js_gibi üçüncü taraf kitaplıkların uygulanmasını garanti etmez veya desteklemez. Bu bilgiler, tamamlanma zamanı için sağlanır ve bu yazma zamanından itibaren doğru olur.
 
 ## <a name="deserialize-a-dataset-or-datatable-via-binaryformatter"></a>BinaryFormatter aracılığıyla DataSet veya DataTable serisini kaldırma
 
