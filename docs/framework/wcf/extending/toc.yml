@@ -75,7 +75,7 @@
         - name: Özel Kimlik Bilgileri ve Kimlik Bilgileri Doğrulaması
           href: custom-credential-and-credential-validation.md
           items:
-            - name: 'İzlenecek Yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma'
+            - name: 'İzlenecek yol: Özel İstemci ve Hizmet Kimlik Bilgileri Oluşturma'
               href: walkthrough-creating-custom-client-and-service-credentials.md
             - name: 'Nasıl yapılır: Özel Bir Sertifika Doğrulayıcı Kullanan Bir Hizmet Oluşturma'
               href: how-to-create-a-service-that-employs-a-custom-certificate-validator.md
@@ -95,17 +95,17 @@
               href: how-to-create-a-custom-authorization-policy.md
             - name: 'Nasıl yapılır: Bir Hizmet için Özel Yetkilendirme Yöneticisi Oluşturma'
               href: how-to-create-a-custom-authorization-manager-for-a-service.md
-            - name: 'Nasıl yapılır: Özel Beyan Oluşturma'
+            - name: 'Nasıl yapılır: Özel Talep Oluşturma'
               href: how-to-create-a-custom-claim.md
-            - name: 'Nasıl yapılır: Beyanları Karşılaştırma'
+            - name: 'Nasıl yapılır: Talepleri Karşılaştırma'
               href: how-to-compare-claims.md
-            - name: 'Nasıl yapılır: Özel Esas Kimlik Oluşturma'
+            - name: 'Nasıl yapılır: Özel Sorumlu Kimliği Oluşturma'
               href: how-to-create-a-custom-principal-identity.md
         - name: Bir Hizmetin Kimliğini Kimlik Doğrulama için Geçersiz Kılma
           href: overriding-the-identity-of-a-service-for-authentication.md
         - name: 'Nasıl yapılır: Özel İstemci Kimliği Doğrulayıcı Oluşturma'
           href: how-to-create-a-custom-client-identity-verifier.md
-        - name: 'Nasıl Yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma'
+        - name: 'Nasıl yapılır: İmzalama ve Şifreleme için Ayrı X.509 Sertifikaları Kullanma'
           href: how-to-use-separate-x-509-certificates-for-signing-and-encryption.md
         - name: 'Nasıl yapılır: Bir X.509 Sertifikasının Şifreleme Sağlayıcısını Değiştirme'
           href: change-cryptographic-provider-x509-certificate-private-key.md
@@ -115,18 +115,18 @@
         - name: WCF Uzantısı için Özel Meta Verileri Dışarı Aktarma
           href: exporting-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: 'Nasıl yapılır: Özel WSDL Dışa Aktarma'
+            - name: 'Nasıl yapılır: Özel WSDL Dışarı Aktarma'
               href: how-to-export-custom-wsdl.md
-            - name: 'Nasıl yapılır: Özel İlke Onaylamalarını Dışa Aktarma'
+            - name: 'Nasıl yapılır: Özel İlke Onaylamalarını Dışarı Aktarma'
               href: how-to-export-custom-policy-assertions.md
         - name: WCF Uzantısı için Özel Meta Verileri İçe Aktarma
           href: importing-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: 'Nasıl yapılır: Özel WSDL İçe Aktarma'
+            - name: 'Nasıl yapılır: Özel WSDL İçeri Aktarma'
               href: how-to-import-custom-wsdl.md
-            - name: 'Nasıl yapılır: Özel İlke Onaylamalarını İçe Aktarma'
+            - name: 'Nasıl yapılır: Özel İlke Onaylamalarını İçeri Aktarma'
               href: how-to-import-custom-policy-assertions.md
-            - name: 'Nasıl yapılır: ServiceContractGenerator için UzantıYazma'
+            - name: 'Nasıl yapılır: ServiceContractGenerator için Uzantı Yazma'
               href: how-to-write-an-extension-for-the-servicecontractgenerator.md
         - name: Özel Bağlama Üzerinden Meta Veri Yayımlama ve Alma
           href: publishing-and-retrieving-metadata-over-a-custom-binding.md

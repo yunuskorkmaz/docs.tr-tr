@@ -1,4 +1,4 @@
-- name: 'C# 6.0 Taslak Belirtimi'
+- name: C# 6.0 Taslak Belirtimi
   items:
     - name: Giriş
       href: ../../../../_csharplang/spec/introduction.md

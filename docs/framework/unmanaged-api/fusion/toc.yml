@@ -9,24 +9,24 @@
         - name: IAssemblyCache Arabirimi
           href: iassemblycache-interface.md
           items:
-            - name: CreateAssemblyCacheItem Yöntemi
+            - name: CreateAssemblyCacheItem Metodu
               href: iassemblycache-createassemblycacheitem-method.md
-            - name: CreateAssemblyScavenger Yöntemi
+            - name: CreateAssemblyScavenger Metodu
               href: iassemblycache-createassemblyscavenger-method.md
-            - name: InstallAssembly Yöntemi
+            - name: InstallAssembly Metodu
               href: iassemblycache-installassembly-method.md
-            - name: QueryAssemblyInfo Yöntemi
+            - name: QueryAssemblyInfo Metodu
               href: iassemblycache-queryassemblyinfo-method.md
-            - name: UninstallAssembly Yöntemi
+            - name: UninstallAssembly Metodu
               href: iassemblycache-uninstallassembly-method.md
         - name: IAssemblyCacheItem Arabirimi
           href: iassemblycacheitem-interface.md
           items:
-            - name: AbortItem Yöntemi
+            - name: AbortItem Metodu
               href: iassemblycacheitem-abortitem-method.md
-            - name: Commit Metodu
+            - name: Commit Yöntemi
               href: iassemblycacheitem-commit-method.md
-            - name: CreateStream Yöntemi
+            - name: CreateStream Metodu
               href: iassemblycacheitem-createstream-method.md
         - name: IAssemblyEnum Arabirimi
           href: iassemblyenum-interface.md
@@ -42,9 +42,9 @@
           items:
             - name: Clone Yöntemi
               href: iassemblyname-clone-method.md
-            - name: Finalize Yöntemi
+            - name: Finalize Metodu
               href: iassemblyname-finalize-method.md
-            - name: GetDisplayName Yöntemi
+            - name: GetDisplayName Metodu
               href: iassemblyname-getdisplayname-method.md
             - name: GetName Yöntemi
               href: iassemblyname-getname-method.md
@@ -76,7 +76,7 @@
         - name: IInstallReferenceItem Arabirimi
           href: iinstallreferenceitem-interface.md
           items:
-            - name: GetReference Metodu
+            - name: GetReference Yöntemi
               href: iinstallreferenceitem-getreference-method.md
         - name: IReferenceAppId Arabirimi
           href: ireferenceappid-interface.md

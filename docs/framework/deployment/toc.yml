@@ -10,11 +10,11 @@
           href: guide-for-administrators.md
         - name: .NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma
           href: reducing-system-restarts.md
-        - name: 'Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
+        - name: 'Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma'
           href: how-to-get-progress-from-the-dotnet-installer.md
         - name: '.NET Framework Başlatma Hataları: Kullanıcı Deneyimini Yönetme'
           href: initialization-errors-managing-the-user-experience.md
-        - name: 'Nasıl Yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama'
+        - name: 'Nasıl yapılır: CLR Etkinleştirme Sorunlarında Hata Ayıklama'
           href: how-to-debug-clr-activation-issues.md
     - name: .NET Framework Uygulamalarını Dağıtma
       href: net-framework-applications.md

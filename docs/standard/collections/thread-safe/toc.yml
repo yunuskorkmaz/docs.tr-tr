@@ -9,7 +9,7 @@
       href: how-to-add-and-take-items.md
     - name: 'Nasıl yapılır: Bir BlockingCollection''daki Öğeleri Kaldırmak için ForEach Kullanma'
       href: how-to-use-foreach-to-remove.md
-    - name: 'Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary''dan Alma'
+    - name: 'Nasıl yapılır: Öğeleri Ekleme ve Bir ConcurrentDictionary''den Alma'
       href: how-to-add-and-remove-items.md
     - name: 'Nasıl yapılır: Koleksiyona Sınırlama ve Engelleme İşlevi Ekleme'
       href: how-to-add-bounding-and-blocking.md
