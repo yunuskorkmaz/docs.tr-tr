@@ -1,7 +1,7 @@
 - name: Açık kaynak kitaplık kılavuzu
   href: index.md
   items:
-    - name: Başlangıç
+    - name: Kullanmaya başlayın
       href: get-started.md
     - name: Platformlar arası hedefleme
       href: cross-platform-targeting.md
