@@ -270,7 +270,7 @@
               href: icorprofilerinfo-getassemblyinfo-method.md
             - name: GetClassFromObject Yöntemi
               href: icorprofilerinfo-getclassfromobject-method.md
-            - name: GetClassFromToken Yöntemi
+            - name: GetClassFromToken Metodu
               href: icorprofilerinfo-getclassfromtoken-method.md
             - name: GetClassIDInfo Yöntemi
               href: icorprofilerinfo-getclassidinfo-method.md
@@ -282,7 +282,7 @@
               href: icorprofilerinfo-geteventmask-method.md
             - name: GetFunctionFromIP Yöntemi
               href: icorprofilerinfo-getfunctionfromip-method.md
-            - name: GetFunctionFromToken Yöntemi
+            - name: GetFunctionFromToken Metodu
               href: icorprofilerinfo-getfunctionfromtoken-method.md
             - name: GetFunctionInfo Yöntemi
               href: icorprofilerinfo-getfunctioninfo-method.md
@@ -292,7 +292,7 @@
               href: icorprofilerinfo-getilfunctionbody-method.md
             - name: GetILFunctionBodyAllocator Yöntemi
               href: icorprofilerinfo-getilfunctionbodyallocator-method.md
-            - name: GetILToNativeMapping Yöntemi
+            - name: GetILToNativeMapping Metodu
               href: icorprofilerinfo-getiltonativemapping-method.md
             - name: GetInprocInspectionInterface Yöntemi
               href: icorprofilerinfo-getinprocinspectioninterface-method.md

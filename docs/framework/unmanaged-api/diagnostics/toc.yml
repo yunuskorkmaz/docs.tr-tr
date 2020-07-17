@@ -1,4 +1,4 @@
-- name: Tanılama Simge Deposu
+- name: Tanılama Sembol Deposu
   href: index.md
   items:
     - name: Tanılama Sembol Deposu Arabirimleri
@@ -100,7 +100,7 @@
               href: isymunmanagedconstant-getname-method.md
             - name: GetSignature Yöntemi
               href: isymunmanagedconstant-getsignature-method.md
-            - name: GetValue Yöntemi
+            - name: GetValue Metodu
               href: isymunmanagedconstant-getvalue-method.md
         - name: ISymUnmanagedDispose Arabirimi
           href: isymunmanageddispose-interface.md
@@ -155,7 +155,7 @@
           items:
             - name: GetNamespace Yöntemi
               href: isymunmanagedmethod-getnamespace-method.md
-            - name: GetOffset Yöntemi
+            - name: GetOffset Metodu
               href: isymunmanagedmethod-getoffset-method.md
             - name: GetParameters Yöntemi
               href: isymunmanagedmethod-getparameters-method.md
@@ -171,7 +171,7 @@
               href: isymunmanagedmethod-getsequencepoints-method.md
             - name: GetSourceStartEnd Yöntemi
               href: isymunmanagedmethod-getsourcestartend-method.md
-            - name: GetToken Yöntemi
+            - name: GetToken Metodu
               href: isymunmanagedmethod-gettoken-method.md
         - name: ISymUnmanagedNamespace Arabirimi
           href: isymunmanagednamespace-interface.md
@@ -180,7 +180,7 @@
               href: isymunmanagednamespace-getname-method.md
             - name: GetNamespaces Yöntemi
               href: isymunmanagednamespace-getnamespaces-method.md
-            - name: GetVariables Yöntemi
+            - name: GetVariables Metodu
               href: isymunmanagednamespace-getvariables-method.md
         - name: ISymUnmanagedReader Arabirimi
           href: isymunmanagedreader-interface.md
@@ -252,7 +252,7 @@
               href: isymunmanagedscope-getnamespaces-method.md
             - name: GetParent Yöntemi
               href: isymunmanagedscope-getparent-method.md
-            - name: GetStartOffset Yöntemi
+            - name: GetStartOffset Metodu
               href: isymunmanagedscope-getstartoffset-method.md
         - name: ISymUnmanagedScope2 Arabirimi
           href: isymunmanagedscope2-interface.md
@@ -292,7 +292,7 @@
               href: isymunmanagedvariable-getendoffset-method.md
             - name: GetName Yöntemi
               href: isymunmanagedvariable-getname-method.md
-            - name: GetSignature Yöntemi
+            - name: GetSignature Metodu
               href: isymunmanagedvariable-getsignature-method.md
             - name: GetStartOffset Yöntemi
               href: isymunmanagedvariable-getstartoffset-method.md

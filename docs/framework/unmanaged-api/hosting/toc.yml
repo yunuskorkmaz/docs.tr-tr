@@ -205,7 +205,7 @@
                   href: icorruntimehost-enumdomains-method.md
                 - name: GetConfiguration Yöntemi
                   href: icorruntimehost-getconfiguration-method.md
-                - name: GetDefaultDomain Metodu
+                - name: GetDefaultDomain Yöntemi
                   href: icorruntimehost-getdefaultdomain-method.md
                 - name: LocksHeldByLogicalThread Yöntemi
                   href: icorruntimehost-locksheldbylogicalthread-method.md
@@ -251,17 +251,17 @@
             - name: ICLRAssemblyIdentityManager Arabirimi
               href: iclrassemblyidentitymanager-interface.md
               items:
-                - name: GetBindingIdentityFromFile Metodu
+                - name: GetBindingIdentityFromFile Yöntemi
                   href: iclrassemblyidentitymanager-getbindingidentityfromfile-method.md
-                - name: GetBindingIdentityFromStream Metodu
+                - name: GetBindingIdentityFromStream Yöntemi
                   href: iclrassemblyidentitymanager-getbindingidentityfromstream-method.md
-                - name: GetCLRAssemblyReferenceList Metodu
+                - name: GetCLRAssemblyReferenceList Yöntemi
                   href: iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md
-                - name: GetProbingAssembliesFromReference Metodu
+                - name: GetProbingAssembliesFromReference Yöntemi
                   href: iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md
                 - name: GetReferencedAssembliesFromFile Yöntemi
                   href: iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md
-                - name: GetReferencedAssembliesFromStream Metodu
+                - name: GetReferencedAssembliesFromStream Yöntemi
                   href: iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md
                 - name: IsStronglyNamed Yöntemi
                   href: iclrassemblyidentitymanager-isstronglynamed-method.md
@@ -303,14 +303,14 @@
                   href: iclrerrorreportingmanager-begincustomdump-method.md
                 - name: EndCustomDump Yöntemi
                   href: iclrerrorreportingmanager-endcustomdump-method.md
-                - name: GetBucketParametersForCurrentException Metodu
+                - name: GetBucketParametersForCurrentException Yöntemi
                   href: iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md
             - name: ICLRGCManager Arabirimi
               href: iclrgcmanager-interface.md
               items:
                 - name: Collect Yöntemi
                   href: iclrgcmanager-collect-method.md
-                - name: GetStats Metodu
+                - name: GetStats Yöntemi
                   href: iclrgcmanager-getstats-method.md
                 - name: SetGCStartupLimits Yöntemi
                   href: iclrgcmanager-setgcstartuplimits-method.md
@@ -398,9 +398,9 @@
                   href: iclrsyncmanager-createrwlockowneriterator-method.md
                 - name: DeleteRWLockOwnerIterator Yöntemi
                   href: iclrsyncmanager-deleterwlockowneriterator-method.md
-                - name: GetMonitorOwner Metodu
+                - name: GetMonitorOwner Yöntemi
                   href: iclrsyncmanager-getmonitorowner-method.md
-                - name: GetRWLockOwnerNext Metodu
+                - name: GetRWLockOwnerNext Yöntemi
                   href: iclrsyncmanager-getrwlockownernext-method.md
             - name: ICLRTask Arabirimi
               href: iclrtask-interface.md
@@ -409,7 +409,7 @@
                   href: iclrtask-abort-method.md
                 - name: ExitTask Yöntemi
                   href: iclrtask-exittask-method.md
-                - name: GetMemStats Metodu
+                - name: GetMemStats Yöntemi
                   href: iclrtask-getmemstats-method.md
                 - name: LocksHeld Yöntemi
                   href: iclrtask-locksheld-method.md
@@ -434,7 +434,7 @@
                   href: iclrtaskmanager-createtask-method.md
                 - name: GetCurrentTask Metodu
                   href: iclrtaskmanager-getcurrenttask-method.md
-                - name: GetCurrentTaskType Metodu
+                - name: GetCurrentTaskType Yöntemi
                   href: iclrtaskmanager-getcurrenttasktype-method.md
                 - name: SetLocale Yöntemi
                   href: iclrtaskmanager-setlocale-method.md
@@ -534,7 +534,7 @@
               items:
                 - name: GetAssemblyStore Yöntemi
                   href: ihostassemblymanager-getassemblystore-method.md
-                - name: GetNonHostStoreAssemblies Metodu
+                - name: GetNonHostStoreAssemblies Yöntemi
                   href: ihostassemblymanager-getnonhoststoreassemblies-method.md
             - name: IHostAssemblyStore Arabirimi
               href: ihostassemblystore-interface.md
@@ -660,7 +660,7 @@
             - name: IHostSecurityManager Arabirimi
               href: ihostsecuritymanager-interface.md
               items:
-                - name: GetSecurityContext Metodu
+                - name: GetSecurityContext Yöntemi
                   href: ihostsecuritymanager-getsecuritycontext-method.md
                 - name: ImpersonateLoggedOnUser Yöntemi
                   href: ihostsecuritymanager-impersonateloggedonuser-method.md
@@ -732,7 +732,7 @@
                   href: ihosttaskmanager-endthreadaffinity-method.md
                 - name: EnterRuntime Yöntemi
                   href: ihosttaskmanager-enterruntime-method.md
-                - name: GetCurrentTask Metodu
+                - name: GetCurrentTask Yöntemi
                   href: ihosttaskmanager-getcurrenttask-method.md
                 - name: GetStackGuarantee Yöntemi
                   href: ihosttaskmanager-getstackguarantee-method.md
@@ -759,9 +759,9 @@
               items:
                 - name: GetAvailableThreads Yöntemi
                   href: ihostthreadpoolmanager-getavailablethreads-method.md
-                - name: GetMaxThreads Metodu
+                - name: GetMaxThreads Yöntemi
                   href: ihostthreadpoolmanager-getmaxthreads-method.md
-                - name: GetMinThreads Metodu
+                - name: GetMinThreads Yöntemi
                   href: ihostthreadpoolmanager-getminthreads-method.md
                 - name: QueueUserWorkItem Yöntemi
                   href: ihostthreadpoolmanager-queueuserworkitem-method.md
@@ -772,7 +772,7 @@
             - name: IManagedObject Arabirimi
               href: imanagedobject-interface.md
               items:
-                - name: GetObjectIdentity Metodu
+                - name: GetObjectIdentity Yöntemi
                   href: imanagedobject-getobjectidentity-method.md
                 - name: GetSerializedBuffer Yöntemi
                   href: imanagedobject-getserializedbuffer-method.md
@@ -786,15 +786,15 @@
               items:
                 - name: GetAssemblyName Yöntemi
                   href: itypename-getassemblyname-method.md
-                - name: GetModifierLength Metodu
+                - name: GetModifierLength Yöntemi
                   href: itypename-getmodifierlength-method.md
                 - name: GetModifiers Yöntemi
                   href: itypename-getmodifiers-method.md
-                - name: GetNameCount Metodu
+                - name: GetNameCount Yöntemi
                   href: itypename-getnamecount-method.md
-                - name: GetNames Metodu
+                - name: GetNames Yöntemi
                   href: itypename-getnames-method.md
-                - name: GetTypeArgumentCount Metodu
+                - name: GetTypeArgumentCount Yöntemi
                   href: itypename-gettypeargumentcount-method.md
                 - name: GetTypeArguments Yöntemi
                   href: itypename-gettypearguments-method.md
@@ -828,7 +828,7 @@
             - name: ITypeNameFactory Arabirimi
               href: itypenamefactory-interface.md
               items:
-                - name: GetTypeNameBuilder Metodu
+                - name: GetTypeNameBuilder Yöntemi
                   href: itypenamefactory-gettypenamebuilder-method.md
                 - name: ParseTypeName Yöntemi
                   href: itypenamefactory-parsetypename-method.md
@@ -845,9 +845,9 @@
             - name: ICLRAppDomainResourceMonitor Arabirimi
               href: iclrappdomainresourcemonitor-interface.md
               items:
-                - name: GetCurrentAllocated Metodu
+                - name: GetCurrentAllocated Yöntemi
                   href: iclrappdomainresourcemonitor-getcurrentallocated-method.md
-                - name: GetCurrentSurvived Metodu
+                - name: GetCurrentSurvived Yöntemi
                   href: iclrappdomainresourcemonitor-getcurrentsurvived-method.md
                 - name: GetCurrentCpuTime Yöntemi
                   href: iclrappdomainresourcemonitor-getcurrentcputime-method.md
@@ -872,7 +872,7 @@
                   href: iclrmetahost-enumerateloadedruntimes-method.md
                 - name: ExitProcess Yöntemi
                   href: iclrmetahost-exitprocess-method.md
-                - name: GetRuntime Metodu
+                - name: GetRuntime Yöntemi
                   href: iclrmetahost-getruntime-method.md
                 - name: GetVersionFromFile Yöntemi
                   href: iclrmetahost-getversionfromfile-method.md
@@ -890,11 +890,11 @@
               items:
                 - name: BindAsLegacyV2Runtime Yöntemi
                   href: iclrruntimeinfo-bindaslegacyv2runtime-method.md
-                - name: GetDefaultStartupFlags Metodu
+                - name: GetDefaultStartupFlags Yöntemi
                   href: iclrruntimeinfo-getdefaultstartupflags-method.md
                 - name: GetInterface Yöntemi
                   href: iclrruntimeinfo-getinterface-method.md
-                - name: GetProcAddress Metodu
+                - name: GetProcAddress Yöntemi
                   href: iclrruntimeinfo-getprocaddress-method.md
                 - name: GetRuntimeDirectory Yöntemi
                   href: iclrruntimeinfo-getruntimedirectory-method.md
@@ -915,17 +915,17 @@
             - name: ICLRStrongName Arabirimi
               href: iclrstrongname-interface.md
               items:
-                - name: GetHashFromAssemblyFile Metodu
+                - name: GetHashFromAssemblyFile Yöntemi
                   href: iclrstrongname-gethashfromassemblyfile-method.md
                 - name: GetHashFromAssemblyFileW Yöntemi
                   href: iclrstrongname-gethashfromassemblyfilew-method.md
-                - name: GetHashFromBlob Metodu
+                - name: GetHashFromBlob Yöntemi
                   href: iclrstrongname-gethashfromblob-method.md
                 - name: GetHashFromFile Yöntemi
                   href: iclrstrongname-gethashfromfile-method.md
-                - name: GetHashFromFileW Metodu
+                - name: GetHashFromFileW Yöntemi
                   href: iclrstrongname-gethashfromfilew-method.md
-                - name: GetHashFromHandle Metodu
+                - name: GetHashFromHandle Yöntemi
                   href: iclrstrongname-gethashfromhandle-method.md
                 - name: StrongNameCompareAssemblies Yöntemi
                   href: iclrstrongname-strongnamecompareassemblies-method.md
