@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 3927c17a2548a094a63ffd95ff8a3701403de281
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244913"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444501"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içerir, <xref:System.Runtime.Serialization.DataContractSerializer> . <xref:System.Runtime.Serialization.DataContractSerializer>.NET Framework nesneleri ve XML arasında her iki yönde çevirir. Bu konuda, serileştiricinin nasıl çalıştığı açıklanmaktadır.  
@@ -20,7 +20,13 @@ Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içeri
   
  XML serisi kaldırılırken, serileştirici <xref:System.Xml.XmlReader> ve sınıflarını kullanır <xref:System.Xml.XmlWriter> . Ayrıca, <xref:System.Xml.XmlDictionaryReader> <xref:System.Xml.XmlDictionaryWriter> WCF ikili xml biçimi kullanılırken olduğu gibi bazı durumlarda iyileştirilmiş XML üretmesine olanak tanımak için ve sınıflarını destekler.  
   
- WCF Ayrıca bir yardımcı seri hale getirici içerir <xref:System.Runtime.Serialization.NetDataContractSerializer> . , <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serileştiricilerle benzerdir çünkü Ayrıca, seri hale getirilmiş verilerin bir parçası olarak .NET Framework tür adları da yayar. Aynı türler serileştirilmede paylaşıldığında ve seri durumdan çıkarma bittikten sonra kullanılır. Hem hem de, <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.NetDataContractSerializer> ortak bir temel sınıftan türet, <xref:System.Runtime.Serialization.XmlObjectSerializer> .  
+ WCF Ayrıca bir yardımcı seri hale getirici içerir <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>Şunları yapın:
+
+* Güvenli ***değil*** . Daha fazla bilgi için, bkz. [BinaryFormatter Güvenlik Kılavuzu](/dotnet/standard/serialization/binaryformatter-security-guide).
+* , <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serileştiricilerle benzerdir çünkü aynı zamanda .NET Framework tür adlarını serileştirilmiş verilerin bir parçası olarak yayar.
+* Aynı türler serileştirilmede paylaşıldığında ve seri durumdan çıkarma sona erdiğinde kullanılır.
+
+ Her ikisi de <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.NetDataContractSerializer> ortak bir temel sınıftan türetilir <xref:System.Runtime.Serialization.XmlObjectSerializer> .  
   
 > [!WARNING]
 > , <xref:System.Runtime.Serialization.DataContractSerializer> Denetim karakterlerini içeren DIZELERI xml varlıkları olarak 20 ' nin altında olan onaltılık bir değerle seri hale getirir. Bu, bir WCF hizmetine bu tür veriler gönderilirken WCF olmayan bir istemciyle ilgili soruna neden olabilir.  

@@ -1,15 +1,19 @@
 ---
 title: SerializationBinder ile Seri Hale Getirme ve Seri Halden Çıkarmayı Denetleme
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
-ms.openlocfilehash: 1101a3caf2a033b4dbbc5f45737f187c58adbef2
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5a7d0bf2aabfcdf789a77cf0fcfeb26357575806
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595576"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86444488"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>SerializationBinder ile Seri Hale Getirme ve Seri Halden Çıkarmayı Denetleme
+
+> [!WARNING]
+> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>güvenli değil ve güvenli hale ***getirilebilir.*** Daha fazla bilgi için, bkz. [BinaryFormatter Güvenlik Kılavuzu](../../../standard/serialization/binaryformatter-security-guide.md).
+
 Serileştirme sırasında, bir biçimlendirici doğru türdeki ve sürümdeki bir nesnenin örneğini oluşturmak için gereken bilgileri iletir. Bu bilgiler genellikle nesnenin tam tür adını ve derleme adını içerir. Varsayılan olarak, seri durumdan çıkarma, aynı nesnenin bir örneğini oluşturmak için bu bilgileri kullanır. Bazı kullanıcıların serileştirme ve seri durumdan çıkarılacak sınıfı, orijinal sınıfın seri durumundan çıkarma işlemi gerçekleştiren makinede olmaması, özgün sınıfın derlemeler arasında taşındığı veya sunucu ve istemcide farklı bir sınıf sürümü olması gerekebilir. Daha fazla bilgi için bkz. [serileştirme cildin kullanımı](../samples/usage-of-serialization-binder.md).  
   
 > [!WARNING]
@@ -20,5 +24,5 @@ Serileştirme sırasında, bir biçimlendirici doğru türdeki ve sürümdeki bi
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Serileştirme ve Seri Durumdan Çıkarma](serialization-and-deserialization.md)
+- [Seri Hale Getirme ve Seri Durumdan Çıkarma](serialization-and-deserialization.md)
 - [Seri Hale Getirme Bağlayıcısı Kullanımı](../samples/usage-of-serialization-binder.md)
