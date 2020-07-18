@@ -2,15 +2,15 @@
 title: ASP.NET Core son değişiklikler
 titleSuffix: ''
 description: ASP.NET Core 'deki son değişiklikleri listeler.
-ms.date: 07/14/2020
+ms.date: 07/15/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: b73492e0c2f60c2b214984d3987de1e9e6530847
-ms.sourcegitcommit: d4f7ba08f2a45a9dbef53be597eed6d4a9410f29
+ms.openlocfilehash: cea6771afdc05edc525e7d35f530f42e7b3bc1fa
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86402010"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441953"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -26,8 +26,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 - [Yetkilendirme: Addaduthorleştirme aşırı yüklemesi farklı bir derlemeye taşındı](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [Yetkilendirme: ıallowanonymous, AuthorizationFilterContext. Filters öğesinden kaldırıldı](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [Yetkilendirme: ıauthorizationpolicyprovider uygulamaları için yeni yöntem gerekir](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Yetkilendirme: uç nokta yönlendirmesinde kaynak HttpContext 'dir](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: Microsoft 'un ön eki olan Azure tümleştirme paketleri kaldırıldı](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [Blazor: derleme zamanında bileşenlerden çok önemli olan boşluk](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: NuGet paketlerinin hedef çerçevesi değiştirildi](#blazor-target-framework-of-nuget-packages-changed)
 - [Önbelleğe alma: CompactOnMemoryPressure özelliği kaldırıldı](#caching-compactonmemorypressure-property-removed)
 - [Önbelleğe alma: Microsoft. Extensions. Caching. SqlServer yeni SqlClient paketini kullanır](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [Önbelleğe alma: ResponseCaching "pubternal" türleri iç olarak değiştirildi](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -91,11 +93,19 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
 
+[!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
+
+***
+
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: Target framework of NuGet packages changed](~/includes/core-changes/aspnetcore/5.0/blazor-packages-target-framework-changed.md)]
 
 ***
 

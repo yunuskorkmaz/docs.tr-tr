@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 1dc9f3d261738a6dff0339c094c7aba5e32680ee
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 7519dce8ed17bc623173f30222296ffaa42b4341
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200060"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416072"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Geliştirme ve dağıtma WCF Veri Hizmetleri
 
@@ -28,11 +28,11 @@ Açık Veri Protokolü 'Nü (OData) destekleyen bir veri hizmeti oluşturmak iç
 
 2. **Veri hizmetini oluşturma**
 
-     En temel veri hizmeti, varlık kapsayıcısının ad alanı nitelikli adı olan <xref:System.Data.Services.DataService%601> bir tür `T` ile sınıfından devralan bir sınıfı kullanıma sunar. Daha fazla bilgi için bkz. [tanımlama WCF veri Hizmetleri](defining-wcf-data-services.md).
+     En temel veri hizmeti, <xref:System.Data.Services.DataService%601> `T` varlık kapsayıcısının ad alanı nitelikli adı olan bir tür ile sınıfından devralan bir sınıfı kullanıma sunar. Daha fazla bilgi için bkz. [tanımlama WCF veri Hizmetleri](defining-wcf-data-services.md).
 
 3. **Veri hizmetini yapılandırma**
 
-     Varsayılan olarak, WCF Veri Hizmetleri bir varlık kapsayıcısı tarafından açığa çıkarılan kaynaklara erişimi devre dışı bırakır. <xref:System.Data.Services.DataServiceConfiguration> Arabirim, kaynak ve hizmet işlemlerine erişimi yapılandırmanıza, desteklenen OData sürümünü belirtmenize ve toplu işlem davranışları ya da tek bir yanıt akışında döndürülebilecek maksimum varlık sayısı gibi diğer hizmet çapındaki davranışları tanımlamanızı sağlar. Daha fazla bilgi için bkz. [veri hizmetini yapılandırma](configuring-the-data-service-wcf-data-services.md).
+     Varsayılan olarak, WCF Veri Hizmetleri bir varlık kapsayıcısı tarafından açığa çıkarılan kaynaklara erişimi devre dışı bırakır. <xref:System.Data.Services.DataServiceConfiguration>Arabirim, kaynak ve hizmet işlemlerine erişimi yapılandırmanıza, desteklenen OData sürümünü belirtmenize ve toplu işlem davranışları ya da tek bir yanıt akışında döndürülebilecek maksimum varlık sayısı gibi diğer hizmet çapındaki davranışları tanımlamanızı sağlar. Daha fazla bilgi için bkz. [veri hizmetini yapılandırma](configuring-the-data-service-wcf-data-services.md).
 
 Bu makalede öncelikle Visual Studio kullanılarak veri hizmetlerinin geliştirilmesi ve dağıtılması ele alınmaktadır. Verilerinizi OData akışları olarak göstermek için WCF Veri Hizmetleri tarafından sağlanan esneklik hakkında daha fazla bilgi için bkz. [WCF veri Hizmetleri tanımlama](defining-wcf-data-services.md).
 
@@ -55,7 +55,7 @@ Visual Studio 2015 kullanarak bir ASP.NET uygulaması veya ASP.NET Web sitesi ol
 
     - Bu sunucuya yalnızca yerel bilgisayar üzerinde erişilebilir.
 
-    - Bu sunucu, HTTP `localhost` iletileri için varsayılan bağlantı noktası olan 80 numaralı bağlantı noktası üzerinde değil, belirli bir bağlantı noktasını dinler. Daha fazla bilgi için bkz. [ASP.NET Web projeleri Için Visual Studio 'Da Web sunucuları](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+    - Bu sunucu, `localhost` http iletileri için varsayılan bağlantı noktası olan 80 numaralı bağlantı noktası üzerinde değil, belirli bir bağlantı noktasını dinler. Daha fazla bilgi için bkz. [ASP.NET Web projeleri Için Visual Studio 'Da Web sunucuları](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
     - Bu sunucu, geçerli kullanıcı hesabınızın bağlamında veri hizmetini çalıştırır. Örneğin, yönetici düzeyi Kullanıcı olarak çalıştırıyorsanız, Visual Studio geliştirme sunucusunda çalışan bir veri hizmeti yönetici düzeyinde ayrıcalıklara sahip olur. Bu, veri hizmetinin IIS sunucusuna dağıtıldığında erişim hakkı olmayan kaynaklara erişebilmesini sağlar.
 
@@ -63,14 +63,14 @@ Visual Studio 2015 kullanarak bir ASP.NET uygulaması veya ASP.NET Web sitesi ol
 
     - Bu sunucu, veri hizmetinden büyük ikili verilere erişirken, varsayılan olarak WCF Veri Hizmetleri istemcisi tarafından gönderilen öbekli HTTP akışlarını işleyemez. Daha fazla bilgi için bkz. [Akış sağlayıcısı](streaming-provider-wcf-data-services.md).
 
-    - Bu sunucu, bu karakter anahtar değerlerinde WCF Veri Hizmetleri desteklenmesine rağmen, bir URL 'de nokta (`.`) karakterini işlemeye yönelik sorunlar içeriyor.
+    - Bu sunucu `.` , bu karakter anahtar değerlerinde WCF veri Hizmetleri desteklenmesine rağmen, BIR URL 'de nokta () karakterini işlemeye yönelik sorunlar içeriyor.
 
     > [!TIP]
     > Geliştirme sırasında veri hizmetlerinizi test etmek için Visual Studio geliştirme sunucusunu da kullanabilirsiniz, ancak bunları IIS çalıştıran bir Web sunucusuna dağıttıktan sonra yeniden sınamanız gerekir.
 
 3. **Azure geliştirme ortamı**
 
-     Visual Studio için Azure Araçları, Visual Studio 'da Azure hizmetleri geliştirmeye yönelik tümleşik bir araç kümesi içerir. Bu araçlarla, Azure 'a dağıtılabilecek bir veri hizmeti geliştirebilirsiniz ve dağıtımdan önce yerel bilgisayarda veri hizmetini test edebilirsiniz. Azure platformunda çalışan bir veri hizmeti geliştirmek için Visual Studio 'Yu kullanırken bu araçları kullanın. Araçları yükleme hakkında bilgi için bkz. [Visual Studio Için Azure araçları 2015](../../../azure/sdk/vs2015-install.md). Azure 'da çalışan bir veri hizmeti geliştirme hakkında daha fazla bilgi için bkz. [Azure 'Da OData hizmetini dağıtma](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     Visual Studio için Azure Araçları, Visual Studio 'da Azure hizmetleri geliştirmeye yönelik tümleşik bir araç kümesi içerir. Bu araçlarla, Azure 'a dağıtılabilecek bir veri hizmeti geliştirebilirsiniz ve dağıtımdan önce yerel bilgisayarda veri hizmetini test edebilirsiniz. Azure platformunda çalışan bir veri hizmeti geliştirmek için Visual Studio 'Yu kullanırken bu araçları kullanın. Araçları yükleme hakkında bilgi için bkz. [Visual Studio Için Azure araçları 2015](../../../azure/vs2015-install.md). Azure 'da çalışan bir veri hizmeti geliştirme hakkında daha fazla bilgi için bkz. [Azure 'Da OData hizmetini dağıtma](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Geliştirme İpuçları
 
@@ -80,7 +80,7 @@ Bir veri hizmeti geliştirirken aşağıdakileri göz önünde bulundurun:
 
 - HTTP inceleme programı, istek ve yanıt iletilerinin içeriğini incelemenizi sağlayarak bir veri hizmetinde hata ayıklarken yararlı olabilir. Veri hizmetine yapılan HTTP isteklerini ve veri hizmetinden alınan yanıtları denetlemek için ham paketleri görüntüleyebilen herhangi bir ağ paketi çözümleyicisi kullanılabilir.
 
-- Veri hizmetinde hata ayıklarken, normal işlem sırasında veri hizmetinden bir hata hakkında daha fazla bilgi edinmek isteyebilirsiniz. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> ' De <xref:System.Data.Services.DataServiceConfiguration> özelliğini olarak ayarlayarak `true` ve veri hizmeti sınıfındaki <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> <xref:System.ServiceModel.Description.ServiceDebugBehavior> özniteliğinin özelliğini olarak ayarlayarak veri hizmetinden ek hata bilgileri alabilirsiniz. `true` Daha fazla bilgi için bkz. Post [hata ayıklama WCF veri Hizmetleri](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Ayrıca, HTTP mesajlaşma katmanında oluşturulan özel durumları görüntülemek için WCF 'de izlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Izlemeyi yapılandırma](../../wcf/diagnostics/tracing/configuring-tracing.md).
+- Veri hizmetinde hata ayıklarken, normal işlem sırasında veri hizmetinden bir hata hakkında daha fazla bilgi edinmek isteyebilirsiniz. <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>' De özelliğini olarak ayarlayarak <xref:System.Data.Services.DataServiceConfiguration> `true` ve <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> <xref:System.ServiceModel.Description.ServiceDebugBehavior> veri hizmeti sınıfındaki özniteliğinin özelliğini olarak ayarlayarak `true` veri hizmetinden ek hata bilgileri alabilirsiniz. Daha fazla bilgi için bkz. Post [hata ayıklama WCF veri Hizmetleri](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services). Ayrıca, HTTP mesajlaşma katmanında oluşturulan özel durumları görüntülemek için WCF 'de izlemeyi etkinleştirebilirsiniz. Daha fazla bilgi için bkz. [Izlemeyi yapılandırma](../../wcf/diagnostics/tracing/configuring-tracing.md).
 
 - Bir veri hizmeti genellikle bir ASP.NET uygulama projesi olarak geliştirilir, ancak Visual Studio 'da da bir ASP.NET Web sitesi projesi olarak veri hizmeti oluşturabilirsiniz. İki tür proje arasındaki farklar hakkında daha fazla bilgi için bkz. [Web uygulaması projeleri ve Visual Studio 'Da Web sitesi projelerine karşı](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
@@ -115,7 +115,7 @@ WCF Veri Hizmeti, veri hizmetini barındıran işlemi seçmede esneklik sağlar.
 
 - **Azure**
 
-     [Visual Studio Için Azure Araçları](../../../azure/sdk/vs2015-install.md)'nı kullanarak bir veri hizmetini Azure 'a dağıtabilirsiniz. Azure 'a veri hizmeti dağıtma hakkında daha fazla bilgi için bkz. [Azure 'Da OData hizmeti dağıtma](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
+     [Visual Studio Için Azure Araçları](../../../azure/vs2015-install.md)'nı kullanarak bir veri hizmetini Azure 'a dağıtabilirsiniz. Azure 'a veri hizmeti dağıtma hakkında daha fazla bilgi için bkz. [Azure 'Da OData hizmeti dağıtma](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Dağıtım Hakkında Önemli Noktalar
 

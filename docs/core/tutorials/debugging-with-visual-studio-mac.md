@@ -2,20 +2,20 @@
 title: Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 description: Visual Studio Mac kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 06/08/2020
-ms.openlocfilehash: 4941605923a9897d481aca4ec31408ab62e873f3
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 7e2a25266fab40b5ef1d0a38b8bbf06a6843746b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713821"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416018"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
 Bu öğreticide Mac için Visual Studio bulunan hata ayıklama araçları tanıtılmaktadır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
-- Bu öğretici, [Mac için Visual Studio bir .NET Core konsol uygulaması oluşturma](using-on-mac-vs.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Mac için Visual Studio bir .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="use-debug-build-configuration"></a>Hata ayıklama derleme yapılandırmasını kullan
 
@@ -27,7 +27,7 @@ Varsayılan olarak, Visual Studio hata ayıklama derleme yapılandırmasını ku
 
 1. Mac için Visual Studio başlatın.
 
-1. [Mac için Visual Studio .NET Core konsol uygulaması oluşturma](using-on-mac-vs.md)bölümünde oluşturduğunuz projeyi açın.
+1. [Mac için Visual Studio .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz projeyi açın.
 
    Geçerli derleme yapılandırması araç çubuğunda gösterilir. Aşağıdaki araç çubuğu görüntüsünde, Visual Studio 'nun uygulamanın hata ayıklama sürümünü derlemek üzere yapılandırıldığı gösterilmektedir:
 

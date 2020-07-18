@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 367b2cbea24ac0da634051bf815c319f3679f79b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507435"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86417328"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -33,7 +33,7 @@ Bu kılavuzda, platformlar arası konsol uygulamaları oluşturmak için .NET Co
 
 Bu örnek, .NET Core CLI kullanarak .NET için kitaplıkların nasıl yazılacağını ele alır. Bu araçlar, desteklenen herhangi bir işletim sisteminde çalışan etkili ve düşük düzeyli bir deneyim sağlar. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-## <a name="aspnet-core"></a>ASP.NET Çekirdeği
+## <a name="aspnet-core"></a>ASP.NET Core
 
 [ASP.NET Core öğreticilerine](/aspnet/core/tutorials/)bakın. ASP.NET Core belgelerindeki birçok makale, bunlar için yazılan örneklere bağlantılar sağlar.
 
@@ -87,9 +87,9 @@ Bu öğreticide, LINQ özelliklerinin birçoğu ve onu destekleyen dil öğeleri
 
 Bu öğreticide, Mac için Visual Studio kullanarak basit bir .NET Core konsol uygulamasının nasıl oluşturulacağı gösterilmektedir.
 
-**[Mac için Visual Studio kullanarak macOS’ta eksiksiz bir .NET Core çözümü derleme](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[MacOS üzerinde Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma](../core/tutorials/library-with-visual-studio-mac.md)**
 
-Bu öğreticide, yeniden kullanılabilir bir kitaplık ve birim testi içeren bir .NET Core çözümü oluşturma işleminin nasıl yapılacağı gösterilmektedir.
+Bu öğretici, Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturmayı gösterir.
 
 **[Eklentileri destekleyen bir .NET Core uygulaması oluşturma](../core/tutorials/creating-app-with-plugin-support.md)**
 

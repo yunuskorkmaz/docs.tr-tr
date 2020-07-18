@@ -2,16 +2,16 @@
 title: Mac için Visual Studio kullanarak .NET Standard sınıf kitaplığı oluşturma
 description: Mac için Visual Studio kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
 ms.date: 06/08/2020
-ms.openlocfilehash: 3a107fff2fd6aef5e06d9af3eac334fbf5688fa5
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84713744"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415999"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma
 
-Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir sınıf kitaplığı oluşturacaksınız. Bunu, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulamalısınız <xref:System.String> .
+Bu öğreticide, tek bir dize işleme yöntemi içeren bir sınıf kitaplığı oluşturacaksınız. Bunu, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulamalısınız <xref:System.String> .
 
 Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,1 ' i hedefleyen bir sınıf kitaplığı, .NET Standard sürüm 2,1 ' ü destekleyen herhangi bir .NET uygulamasını hedefleyen bir uygulama tarafından kullanılabilir. Sınıf kitaplığınızı bitirdiğinizde, bir üçüncü taraf bileşen olarak veya bir veya daha fazla uygulamayla paketlenmiş bileşen olarak dağıtabilirsiniz.
 
@@ -21,7 +21,7 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
 > - Mac için Visual Studio, **Help**  >  menüden**sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalamayı sağlayan bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
 > - Öneride bulunmak için, **Help**  >  menüden**öneriler sağlama** veya hoş geldiniz ekranından [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götüren **bir öneri** sağlama ' yı seçin.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 * [Mac için Visual Studio sürüm 8,6 veya üstünü yükler](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core ' u yüklemek için seçeneği belirleyin. .NET Core geliştirmesi için Xamarin 'in yüklenmesi isteğe bağlıdır. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
@@ -39,13 +39,13 @@ Visual Studio çözümü bir veya daha fazla proje için kapsayıcı görevi gö
 
 1. **Çoklu platform** düğümünün altındaki **Yeni proje** iletişim kutusunda **kitaplık**' ı seçin, sonra **.NET Standard kitaplığı** şablonunu seçin ve **İleri**' yi seçin.
 
-   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Yeni Proje iletişim kutusu":::
+   :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project.png" alt-text="Yeni proje iletişim kutusu":::
 
 1. **Yeni .NET Standard kitaplığınızı yapılandırın** iletişim kutusunda ".NET Standard 2,1" öğesini seçin ve **İleri**' yi seçin.
 
    :::image type="content" source="media/library-with-visual-studio-mac/choose-net-std-21.png" alt-text=".NET Standard 2,1 seçin":::
 
-1. "StringLibrary" projesini ve "ClassLibraryProjects" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluştur** ' un seçili kalsın. **Oluştur**'u seçin.
+1. "StringLibrary" projesini ve "ClassLibraryProjects" çözümünü adlandırın. **Çözüm dizini içinde bir proje dizini oluştur** ' un seçili kalsın. **Oluştur**’u seçin.
 
    :::image type="content" source="media/library-with-visual-studio-mac/visual-studio-mac-new-project-options.png" alt-text="Yeni proje iletişim kutusu seçeneklerini Mac için Visual Studio":::
 

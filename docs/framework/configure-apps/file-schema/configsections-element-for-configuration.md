@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-ms.openlocfilehash: 55116f1fe6fdffffea8f26d8a4de783c7305ada3
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1e4bb7a7cfb0b140ca6d13c162708c3c30bd496d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79155355"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441693"
 ---
 # <a name="configsections-element-for-configuration"></a>\<configuration> için \<configSections> öğesi
 
@@ -22,7 +22,7 @@ Yapılandırma bölümü ve ad alanı bildirimleri içerir.
 
 ## <a name="attributes"></a>Öznitelikler
 
-Yok
+Hiçbiri
 
 ## <a name="parent-element"></a>Üst öğe
 
@@ -36,8 +36,6 @@ Yok
 | --- | ----------- |
 | [**\<section>**](section-element.md) | Bir yapılandırma bölümü bildirimi içerir. |
 | [**\<sectionGroup>**](sectiongroup-element-for-configsections.md) | Yapılandırma bölümleri için bir ad alanı tanımlar. |
-| [**\<remove>**](remove-element-for-configsections.md) | Önceden tanımlanmış bir bölümü veya bölüm grubunu kaldırır. |
-| [**\<clear>**](clear-element-for-configsections.md) | Önceden tanımlanmış tüm bölümleri ve bölüm gruplarını temizler. |
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -61,7 +59,7 @@ Aşağıdaki örnek, bir yapılandırma bölümünün nasıl tanımlanacağını
 
 ## <a name="configuration-file"></a>Yapılandırma dosyası
 
-Bu öğe uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine. config*) ve uygulama dizini düzeyinde olmayan *Web. config* dosyalarında kullanılabilir.
+Bu öğe, uygulama yapılandırma dosyasında, makine yapılandırma dosyasında (*Machine.config*) ve uygulama dizini düzeyinde olmayan *Web.config* dosyalarda kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

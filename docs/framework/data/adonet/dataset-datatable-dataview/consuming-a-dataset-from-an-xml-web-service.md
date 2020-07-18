@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: 2c8924ee3374489dded7e819ecde8e4d9da750bb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: e6dc32274cc3b0d7ec9d66a837a422c87fb2468b
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374392"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416218"
 ---
 # <a name="consume-a-dataset-from-an-xml-web-service"></a>XML Web hizmetinden veri kümesi kullanma
 
@@ -19,7 +19,7 @@ ms.locfileid: "86374392"
  Aşağıdaki örnek, ilişkisel verileri (değiştirilen veriler dahil) taşımak için **veri kümesini** kullanan bir XML Web hizmeti ve istemcisinin nasıl oluşturulacağını gösterir ve tüm güncelleştirmeleri özgün veri kaynağına geri çözümler.  
   
 > [!NOTE]
-> `DataSet` `DataTable` Girişin güvenilir OLMAMASı durumunda XML Web hizmeti çağrılarının bir parçası olarak iletilmesi veya örnekleri güvenli değildir. Daha fazla bilgi için bkz. [DataSet ve DataTable Güvenlik Kılavuzu](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
+> `DataSet` `DataTable` Girişin güvenilir OLMAMASı durumunda XML Web hizmeti çağrılarının bir parçası olarak iletilmesi veya örnekleri güvenli değildir. Daha fazla bilgi için bkz. [DataSet ve DataTable Güvenlik Kılavuzu](security-guidance.md).
 > Ayrıca, bir XML Web hizmeti oluştururken her zaman güvenlik etkilerini düşünmenizi öneririz. Bir XML Web hizmetinin güvenliğini sağlama hakkında bilgi için bkz. [ASP.NET kullanılarak oluşturulan XML Web hizmetlerinin güvenliğini sağlama](/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100)).  
   
 ## <a name="create-an-xml-web-service"></a>XML Web hizmeti oluşturma

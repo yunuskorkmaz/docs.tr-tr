@@ -1,14 +1,14 @@
 ---
 title: Çöp toplayıcı yapılandırma ayarları
 description: Çöp toplayıcının .NET Core uygulamaları için belleği nasıl yönettiğini yapılandırmak üzere çalışma zamanı ayarları hakkında bilgi edinin.
-ms.date: 01/09/2020
+ms.date: 07/10/2020
 ms.topic: reference
-ms.openlocfilehash: 0ce2f70204463c1525ef7d29de21ddf5384d0238
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 6ae5b7447fb0df4978ea9dcaa5e76fcc7a6cc4ca
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202093"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441419"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Çöp toplama için çalışma zamanı yapılandırma seçenekleri
 
@@ -20,7 +20,7 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 >
 > - Bu ayarlar ayrıca uygulama çalışırken dinamik olarak değiştirilebilir, bu nedenle ayarladığınız tüm çalışma zamanı ayarları geçersiz kılınabilir.
 > - [Gecikme düzeyi](../../standard/garbage-collection/latency.md)gibi bazı ayarlar tipik olarak yalnızca TASARıM zamanında API aracılığıyla ayarlanır. Bu tür ayarlar bu sayfadan çıkarılır.
-> - Sayı değerleri için, *runtimeconfig. JSON* dosyasındaki ayarlar için ondalık gösterimi ve ortam değişkeni ayarları için onaltılık gösterimi kullanın. Onaltılık değerler için, bunları "0x" öneki olmadan veya olmadan belirtebilirsiniz.
+> - Sayı değerleri için, dosyadaki *runtimeconfig.js* , ortam değişkeni ayarları için onaltılı gösterimdeki ayarlar için ondalık gösterimi kullanın. Onaltılık değerler için, bunları "0x" öneki olmadan veya olmadan belirtebilirsiniz.
 
 ## <a name="flavors-of-garbage-collection"></a>Çöp toplamanın türleri
 
@@ -37,14 +37,14 @@ Ayarlar bu sayfadaki gruplar halinde düzenlenir. Her grup içindeki ayarlar, be
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.Server` | `false`-iş istasyonu<br/>`true`-sunucu | .NET Core 1,0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.Server` | `false`-iş istasyonu<br/>`true`-sunucu | .NET Core 1,0 |
 | **MSBuild özelliği** | `ServerGarbageCollection` | `false`-iş istasyonu<br/>`true`-sunucu | .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_gcServer` | `0`-iş istasyonu<br/>`1`-sunucu | .NET Core 1,0 |
-| **.NET Framework için App. config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-iş istasyonu<br/>`true`-sunucu |  |
+| **.NET Framework içinapp.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-iş istasyonu<br/>`true`-sunucu |  |
 
 ### <a name="examples"></a>Örnekler
 
-*runtimeconfig. JSON* dosyası:
+*runtimeconfig.js* dosya:
 
 ```json
 {
@@ -76,14 +76,14 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.Concurrent` | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.Concurrent` | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
 | **MSBuild özelliği** | `ConcurrentGarbageCollection` | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC | .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_gcConcurrent` | `1`-arka plan GC<br/>`0`-eş zamanlı olmayan GC | .NET Core 1,0 |
-| **.NET Framework için App. config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC |  |
+| **.NET Framework içinapp.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-arka plan GC<br/>`false`-eş zamanlı olmayan GC |  |
 
 ### <a name="examples"></a>Örnekler
 
-*runtimeconfig. JSON* dosyası:
+*runtimeconfig.js* dosya:
 
 ```json
 {
@@ -123,9 +123,9 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapCount` | *ondalık değer* | .NET Core 3.0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.HeapCount` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapCount` | *onaltılık değer* | .NET Core 3.0 |
-| **.NET Framework için App. config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *ondalık değer* | .NET Framework 4.6.2 |
+| **.NET Framework içinapp.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | *ondalık değer* | .NET Framework 4.6.2 |
 
 Örnek:
 
@@ -140,7 +140,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 ```
 
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, Heap sayısını 16 ile sınırlamak için değerler JSON dosyası için 16, ortam değişkeni için 0x10 veya 10 olur.
+> *Üzerinderuntimeconfig.js*seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, Heap sayısını 16 ile sınırlamak için değerler JSON dosyası için 16, ortam değişkeni için 0x10 veya 10 olur.
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System. GC. ısıpaffinitizemask/COMPlus_GCHeapAffinitizeMask
 
@@ -151,9 +151,9 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapAffinitizeMask` | *ondalık değer* | .NET Core 3.0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.HeapAffinitizeMask` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapAffinitizeMask` | *onaltılık değer* | .NET Core 3.0 |
-| **.NET Framework için App. config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *ondalık değer* | .NET Framework 4.6.2 |
+| **.NET Framework içinapp.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | *ondalık değer* | .NET Framework 4.6.2 |
 
 Örnek:
 
@@ -178,7 +178,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.GCHeapAffinitizeRanges` | İşlemci numaralarının veya işlemci numarası aralıklarının virgülle ayrılmış listesi.<br/>UNIX örneği: "1-10, 12, 50-52, 70"<br/>Windows örnek: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.GCHeapAffinitizeRanges` | İşlemci numaralarının veya işlemci numarası aralıklarının virgülle ayrılmış listesi.<br/>UNIX örneği: "1-10, 12, 50-52, 70"<br/>Windows örnek: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapAffinitizeRanges` | İşlemci numaralarının veya işlemci numarası aralıklarının virgülle ayrılmış listesi.<br/>UNIX örneği: "1-10, 12, 50-52, 70"<br/>Windows örnek: "0:1-10, 0:12, 1:50-52, 1:70" | .NET Core 3.0 |
 
 Örnek:
@@ -205,9 +205,9 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok | Yok |
+| **Üzerinderuntimeconfig.js** | Yok | Yok | Yok |
 | **Ortam değişkeni** | `COMPlus_GCCpuGroup` | `0`-devre dışı<br/>`1`-etkin | .NET Core 1,0 |
-| **.NET Framework için App. config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-devre dışı<br/>`true`-etkin |  |
+| **.NET Framework içinapp.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-devre dışı<br/>`true`-etkin |  |
 
 > [!NOTE]
 > Ortak dil çalışma zamanını (CLR) tüm CPU grupları arasında iş parçacığı havuzundan da dağıtmak üzere yapılandırmak için, [Thread_UseAllCpuGroups öğesi](../../framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) seçeneğini etkinleştirin. .NET Core uygulamaları için, ortam değişkeninin değerini olarak ayarlayarak bu seçeneği etkinleştirebilirsiniz `COMPlus_Thread_UseAllCpuGroups` `1` .
@@ -220,9 +220,9 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false`-afze<br/>`true`-yok etme | .NET Core 3.0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.NoAffinitize` | `false`-afze<br/>`true`-yok etme | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCNoAffinitize` | `0`-afze<br/>`1`-yok etme | .NET Core 3.0 |
-| **.NET Framework için App. config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-afze<br/>`true`-yok etme | .NET Framework 4.6.2 |
+| **.NET Framework içinapp.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-afze<br/>`true`-yok etme | .NET Framework 4.6.2 |
 
 Örnek:
 
@@ -240,6 +240,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 - GC yığını ve GC booksaklanması için bayt cinsinden en fazla tamamlama boyutunu belirtir.
 - Bu ayar yalnızca 64 bitlik bilgisayarlar için geçerlidir.
+- [Nesne başına yığın sınırları](#per-object-heap-limits) yapılandırılırsa Bu ayar yoksayılır.
 - Yalnızca belirli durumlarda geçerli olan varsayılan değer, kapsayıcıdaki bellek sınırının 20 MB veya %75 ' sinden daha fazladır. Varsayılan değer şu durumlarda geçerlidir:
 
   - İşlem belirtilen bellek sınırına sahip bir kapsayıcı içinde çalışıyor.
@@ -247,7 +248,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapHardLimit` | *ondalık değer* | .NET Core 3.0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.HeapHardLimit` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapHardLimit` | *onaltılık değer* | .NET Core 3.0 |
 
 Örnek:
@@ -263,7 +264,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 ```
 
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 200 mebibytes (MIB) yığın sabit sınırı belirtmek için, değerler JSON dosyası için 209715200 ve ortam değişkeni için 0xC800000 veya C800000 olur.
+> *Üzerinderuntimeconfig.js*seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 200 mebibytes (MIB) yığın sabit sınırı belirtmek için, değerler JSON dosyası için 209715200 ve ortam değişkeni için 0xC800000 veya C800000 olur.
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System. GC. HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -271,6 +272,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 - [System. GC. HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) da ayarlandıysa, bu ayar yok sayılır.
 - Bu ayar yalnızca 64 bitlik bilgisayarlar için geçerlidir.
 - İşlem belirtilen bellek sınırına sahip bir kapsayıcı içinde çalışıyorsa, yüzde bu bellek sınırının yüzdesi olarak hesaplanır.
+- [Nesne başına yığın sınırları](#per-object-heap-limits) yapılandırılırsa Bu ayar yoksayılır.
 - Yalnızca belirli durumlarda geçerli olan varsayılan değer, kapsayıcıda bellek sınırının 20 MB veya %75 ' si kadar küçüktür. Varsayılan değer şu durumlarda geçerlidir:
 
   - İşlem belirtilen bellek sınırına sahip bir kapsayıcı içinde çalışıyor.
@@ -278,7 +280,7 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.HeapHardLimitPercent` | *ondalık değer* | .NET Core 3.0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.HeapHardLimitPercent` | *ondalık değer* | .NET Core 3.0 |
 | **Ortam değişkeni** | `COMPlus_GCHeapHardLimitPercent` | *onaltılık değer* | .NET Core 3.0 |
 
 Örnek:
@@ -294,7 +296,41 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 ```
 
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, yığın kullanımını %30 olarak sınırlandırmak için değerler JSON dosyası için 30, ortam değişkeni için 0x1E veya 1E olur.
+> *Üzerinderuntimeconfig.js*seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, yığın kullanımını %30 olarak sınırlandırmak için değerler JSON dosyası için 30, ortam değişkeni için 0x1E veya 1E olur.
+
+### <a name="per-object-heap-limits"></a>Nesne başına yığın sınırları
+
+GC 'nin izin verilen yığın kullanımını nesne başına yığın temelinde belirtebilirsiniz. Farklı sayfa@@ 'ler büyük nesne yığını (LOH), küçük nesne yığını (SoH) ve sabitlenmiş nesne yığını (POH).
+
+#### <a name="complus_gcheaphardlimitsoh-complus_gcheaphardlimitloh-complus_gcheaphardlimitpoh"></a>COMPLUS_GCHeapHardLimitSOH, COMPLUS_GCHeapHardLimitLOH, COMPLUS_GCHeapHardLimitPOH
+
+- , Veya ayarlarından herhangi biri için bir değer belirtirseniz `COMPLUS_GCHeapHardLimitSOH` `COMPLUS_GCHeapHardLimitLOH` `COMPLUS_GCHeapHardLimitPOH` , ve için bir değer de belirtmeniz gerekir `COMPLUS_GCHeapHardLimitSOH` `COMPLUS_GCHeapHardLimitLOH` . Aksi takdirde, çalışma zamanı başlatılamaz.
+- İçin varsayılan değer `COMPLUS_GCHeapHardLimitPOH` 0 ' dır. `COMPLUS_GCHeapHardLimitSOH`ve `COMPLUS_GCHeapHardLimitLOH` varsayılan değerlere sahip değildir.
+
+| | Ayar adı | Değerler | Sunulan sürüm |
+| - | - | - | - |
+| **Ortam değişkeni** | `COMPLUS_GCHeapHardLimitSOH` | *onaltılık değer* | .NET 5,0 |
+| **Ortam değişkeni** | `COMPLUS_GCHeapHardLimitLOH` | *onaltılık değer* | .NET 5,0 |
+| **Ortam değişkeni** | `COMPLUS_GCHeapHardLimitPOH` | *onaltılık değer* | .NET 5,0 |
+
+> [!TIP]
+> Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 200 mebibytes (MIB) yığın sabit sınırı belirtmek için, değer 0xC800000 veya C800000 olacaktır.
+
+#### <a name="complus_gcheaphardlimitsohpercent-complus_gcheaphardlimitlohpercent-complus_gcheaphardlimitpohpercent"></a>COMPLUS_GCHeapHardLimitSOHPercent, COMPLUS_GCHeapHardLimitLOHPercent, COMPLUS_GCHeapHardLimitPOHPercent
+
+- , Veya ayarlarından herhangi biri için bir değer belirtirseniz `COMPLUS_GCHeapHardLimitSOHPercent` `COMPLUS_GCHeapHardLimitLOHPercent` `COMPLUS_GCHeapHardLimitPOHPercent` , ve için bir değer de belirtmeniz gerekir `COMPLUS_GCHeapHardLimitSOHPercent` `COMPLUS_GCHeapHardLimitLOHPercent` . Aksi takdirde, çalışma zamanı başlatılamaz.
+- `COMPLUS_GCHeapHardLimitSOH`, `COMPLUS_GCHeapHardLimitLOH` , Ve belirtildiğinde bu ayarlar yoksayılır `COMPLUS_GCHeapHardLimitPOH` .
+- 1 değeri, GC 'nin bu nesne yığını için toplam fiziksel belleğin %1 ' i kullanması anlamına gelir.
+- Her değerin sıfırdan büyük ve 100 ' den küçük olması gerekir. Ayrıca, üç yüzde değerinin toplamı 100 ' den az olmalıdır. Aksi takdirde, çalışma zamanı başlatılamaz.
+
+| | Ayar adı | Değerler | Sunulan sürüm |
+| - | - | - | - |
+| **Ortam değişkeni** | `COMPLUS_GCHeapHardLimitSOHPercent` | *onaltılık değer* | .NET 5,0 |
+| **Ortam değişkeni** | `COMPLUS_GCHeapHardLimitLOHPercent` | *onaltılık değer* | .NET 5,0 |
+| **Ortam değişkeni** | `COMPLUS_GCHeapHardLimitPOHPercent` | *onaltılık değer* | .NET 5,0 |
+
+> [!TIP]
+> Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, yığın kullanımını %30 olarak sınırlandırmak için değer 0x1E veya 1E olur.
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System. GC. RetainVM/COMPlus_GCRetainVM
 
@@ -303,13 +339,13 @@ Bu ayarlardan bazıları hakkında daha fazla bilgi için, bkz. [iş istasyonu v
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-işletim sistemine yayın<br/>`true`-bekleme durumuna koy | .NET Core 1,0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.RetainVM` | `false`-işletim sistemine yayın<br/>`true`-bekleme durumuna koy | .NET Core 1,0 |
 | **MSBuild özelliği** | `RetainVMGarbageCollection` | `false`-işletim sistemine yayın<br/>`true`-bekleme durumuna koy | .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_GCRetainVM` | `0`-işletim sistemine yayın<br/>`1`-bekleme durumuna koy | .NET Core 1,0 |
 
 ### <a name="examples"></a>Örnekler
 
-*runtimeconfig. JSON* dosyası:
+*runtimeconfig.js* dosya:
 
 ```json
 {
@@ -343,7 +379,7 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok | Yok |
+| **Üzerinderuntimeconfig.js** | Yok | Yok | Yok |
 | **Ortam değişkeni** | `COMPlus_GCLargePages` | `0`-devre dışı<br/>`1`-etkin | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Büyük nesneler
@@ -356,9 +392,9 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok | Yok |
+| **Üzerinderuntimeconfig.js** | Yok | Yok | Yok |
 | **Ortam değişkeni** | `COMPlus_gcAllowVeryLargeObjects` | `1`-etkin<br/> `0`-devre dışı | .NET Core 1,0 |
-| **.NET Framework için App. config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`-etkin<br/> `0`-devre dışı | .NET Framework 4.5 |
+| **.NET Framework içinapp.config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1`-etkin<br/> `0`-devre dışı | .NET Framework 4.5 |
 
 ## <a name="large-object-heap-threshold"></a>Büyük nesne yığın eşiği
 
@@ -370,9 +406,9 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.LOHThreshold` | *ondalık değer* | .NET Core 1,0 |
+| **Üzerinderuntimeconfig.js** | `System.GC.LOHThreshold` | *ondalık değer* | .NET Core 1,0 |
 | **Ortam değişkeni** | `COMPlus_GCLOHThreshold` | *onaltılık değer* | .NET Core 1,0 |
-| **.NET Framework için App. config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *ondalık değer* |  .NET Framework 4.8 |
+| **.NET Framework içinapp.config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | *ondalık değer* |  .NET Framework 4.8 |
 
 Örnek:
 
@@ -387,7 +423,7 @@ Proje dosyası:
 ```
 
 > [!TIP]
-> *Runtimeconfig. JSON*içinde seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 120.000 baytlık bir eşik boyutu ayarlamak için, değerler JSON dosyası için 120000, ve ortam değişkeni için 0x1D4C0 ya da 1D4C0 olur.
+> *Üzerinderuntimeconfig.js*seçeneğini ayarlıyorsanız, bir ondalık değer belirtin. Seçeneği bir ortam değişkeni olarak ayarlıyorsanız, onaltılık bir değer belirtin. Örneğin, 120.000 baytlık bir eşik boyutu ayarlamak için, değerler JSON dosyası için 120000, ve ortam değişkeni için 0x1D4C0 ya da 1D4C0 olur.
 
 ## <a name="standalone-gc"></a>Tek başına GC
 
@@ -398,5 +434,5 @@ Proje dosyası:
 
 | | Ayar adı | Değerler | Sunulan sürüm |
 | - | - | - | - |
-| **runtimeconfig. JSON** | Yok | Yok | Yok |
+| **Üzerinderuntimeconfig.js** | Yok | Yok | Yok |
 | **Ortam değişkeni** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

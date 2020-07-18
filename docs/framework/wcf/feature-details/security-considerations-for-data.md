@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 8cb7ee2ea2418602d944c3c08cec2b9279dca3b9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 530bb54936f97f1d7460d63cfa316c760cbd449d
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601068"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441823"
 ---
 # <a name="security-considerations-for-data"></a>Veriler için Güvenlik Konuları
 
@@ -284,7 +284,7 @@ Bu durumun aşağıdaki noktalara dikkat ederek kaçınılabilir:
 
 , <xref:System.Runtime.Serialization.NetDataContractSerializer> Türlerine sıkı biçimde kullanan bir serileştirme altyapısıdır. Bu, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> ve ' a benzerdir <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> . Diğer bir deyişle, gelen verilerden .NET Framework derlemeyi ve tür adını okuyarak hangi türün örneklendirilecek olduğunu belirler. WCF 'nin bir parçası olsa da, bu serileştirme altyapısını takma yöntemi değildir; özel kod yazılması gerekir. , `NetDataContractSerializer` Öncelikle .NET Framework uzaktan iletişim IÇIN WCF 'e geçiş kolaylığı sağlar. Daha fazla bilgi için [serileştirme ve seri durumundan çıkarma](serialization-and-deserialization.md)bölümündeki ilgili bölüme bakın.
 
-İletinin kendisi herhangi bir tür yüklenebildiğinden, <xref:System.Runtime.Serialization.NetDataContractSerializer> mekanizma doğal olarak güvenli değildir ve yalnızca güvenilir verilerle kullanılmalıdır. Yalnızca güvenli türlerin yüklenmesine izin veren güvenli, tür sınırlaması bir tür bağlayıcı yazarak güvenli hale getirmek mümkündür ( <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> özelliğini kullanarak).
+İletinin kendisi herhangi bir tür yüklenebildiğinden, <xref:System.Runtime.Serialization.NetDataContractSerializer> mekanizma doğal olarak güvenli değildir ve yalnızca güvenilir verilerle kullanılmalıdır. Daha fazla bilgi için, bkz. [BinaryFormatter Güvenlik Kılavuzu](/dotnet/standard/serialization/binaryformatter-security-guide).
 
 Güvenilen verilerle birlikte kullanıldığında, gelen veriler, özellikle özelliği olarak ayarlandıysa, yüklenecek türü yeterince belirleyebilir <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> . Uygulamanın dizinine veya genel derleme önbelleğine erişimi olan herkes, yüklenmesi beklenen kötü amaçlı bir türü yerine getirebilir. İzinleri doğru şekilde ayarlayarak uygulamanızın dizininin ve genel derleme önbelleğinin güvenliğinin her zaman emin olun.
 
@@ -324,7 +324,7 @@ Kısmi güvenle çalışan kodla ilgili tehditlere ilişkin aşağıdaki kaygıl
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> tam güvende özel, korunan, iç ve ortak üyelerin serileştirmesini destekler. Ancak kısmi güvende yalnızca ortak üyeler seri hale getirilebilir. Bir <xref:System.Security.SecurityException> uygulama genel olmayan bir üyeyi serileştirmek istediğinde, oluşturulur.
 
-    İç veya korumalı iç üyelerin kısmi güvende serileştirilmesine izin vermek için <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme özniteliğini kullanın. Bu öznitelik, bir derlemenin iç üyelerinin diğer bir derlemede görünür olduğunu bildirmesine izin verir. Bu durumda, iç üyelerinin serileştirilmesi isteyen bir derleme, iç üyelerinin System. Runtime. Serialization. dll ' ye görünür olduğunu bildirir.
+    İç veya korumalı iç üyelerin kısmi güvende serileştirilmesine izin vermek için <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> derleme özniteliğini kullanın. Bu öznitelik, bir derlemenin iç üyelerinin diğer bir derlemede görünür olduğunu bildirmesine izin verir. Bu durumda, iç üyelerinin serileştirilmesi isteyen bir derleme, iç üyelerinin System.Runtime.Serialization.dll görünür olduğunu bildirir.
 
     Bu yaklaşımın avantajı, yükseltilmiş kod oluşturma yolu gerektirmemelidir.
 
@@ -354,7 +354,7 @@ Nesne durumu yönetimiyle ilgili diğer konular aşağıda yer alınır:
 
 ## <a name="schema-import"></a>Şemayı Içeri aktarma
 
-Normalde, türleri oluşturmak için şemayı içeri aktarma işlemi yalnızca tasarım zamanında gerçekleşir, örneğin, bir Web hizmetindeki [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) , bir istemci sınıfı oluşturmak için. Ancak, daha Gelişmiş senaryolarda, çalışma zamanında şemayı işleyebilirsiniz. Bunu yapmanın, hizmet reddi risklerine maruz bırakacağına dikkat edin. Bazı şemanın içeri aktarılması uzun zaman alabilir. <xref:System.Xml.Serialization.XmlSerializer>Şemalar muhtemelen güvenilmeyen bir kaynaktan geliyorsa, bu senaryolarda hiçbir şekilde şema içeri aktarma bileşenini kullanmayın.
+Normalde, türleri oluşturmak için şemayı içeri aktarma işlemi yalnızca tasarım zamanında gerçekleşir, örneğin, bir istemci sınıfı oluşturmak için bir Web hizmetindeki [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanılırken. Ancak, daha Gelişmiş senaryolarda, çalışma zamanında şemayı işleyebilirsiniz. Bunu yapmanın, hizmet reddi risklerine maruz bırakacağına dikkat edin. Bazı şemanın içeri aktarılması uzun zaman alabilir. <xref:System.Xml.Serialization.XmlSerializer>Şemalar muhtemelen güvenilmeyen bir kaynaktan geliyorsa, bu senaryolarda hiçbir şekilde şema içeri aktarma bileşenini kullanmayın.
 
 ## <a name="threats-specific-to-aspnet-ajax-integration"></a>ASP.NET AJAX tümleştirmesine özgü tehditler
 
@@ -387,4 +387,4 @@ WCF esnek ve özelleştirilebilir bir sistemdir. Bu konunun içeriklerinin çoğ
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.XmlDictionaryReader>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Veri Anlaşması Bilinen Türler](data-contract-known-types.md)
+- [Veri Sözleşmesi Bilinen Türler](data-contract-known-types.md)

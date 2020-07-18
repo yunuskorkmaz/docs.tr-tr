@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 5cfd9925f4ee93ef4ebe15ebf16febdfb98aaa9a
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325012"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416055"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core ile çalışmaya başlama
 
@@ -29,7 +29,7 @@ dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Aşağıdaki çıktıyı görmeniz gerekir:
+Aşağıdaki çıkışı görmeniz gerekir:
 
 ```console
 Hello World!
@@ -75,7 +75,7 @@ Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulamaları g
 - [Visual Studio Code kullanarak macOS üzerinde .NET Core kullanmaya başlama](./tutorials/using-on-macos.md)
 - [Komut satırını kullanarak .NET Core ile çalışmaya başlama](./tutorials/cli-create-console-app.md)
 - [Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama](./tutorials/using-on-mac-vs.md)
-- [Mac için Visual Studio kullanarak macOS 'ta kapsamlı bir .NET Core çözümü oluşturun](./tutorials/using-on-mac-vs-full-solution.md)
+- [Mac için Visual Studio kullanarak macOS 'ta .NET Standard kitaplığı oluşturma](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |
 |---|---|

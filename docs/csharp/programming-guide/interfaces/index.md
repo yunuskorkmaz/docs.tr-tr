@@ -1,72 +1,73 @@
 ---
-title: Arayüzler - C# Programlama Kılavuzu
+title: Arabirimler-C# Programlama Kılavuzu
 ms.date: 02/20/2020
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 5e39279183f7e3745c9373df246d14d69d5ff99b
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 50f2c5fc3570b6d66ed83206660caf4bd02f1f5b
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805908"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86441342"
 ---
 # <a name="interfaces-c-programming-guide"></a>Arabirimler (C# Programlama Kılavuzu)
 
-Arabirim, soyut olmayan bir [sınıfın](../../language-reference/keywords/class.md) veya [bir yapının](../../language-reference/builtin-types/struct.md) uygulaması gereken ilgili işlevler grubu için tanımlar içerir. Arabirim, `static` uygulanması gereken yöntemleri tanımlayabilir. C# 8.0 ile başlayarak, bir arabirim üyeler için varsayılan bir uygulama tanımlayabilir. Arabirim, alanlar, otomatik olarak uygulanan özellikler veya özellik benzeri olaylar gibi örnek verileri bildirmeyebilir.
+Bir arabirim, soyut olmayan bir [sınıfın](../../language-reference/keywords/class.md) veya [yapının](../../language-reference/builtin-types/struct.md) uygulanması gereken ilgili işlevler grubu için tanımlar içerir. Bir arabirim `static` , bir uygulamaya sahip olması gereken yöntemleri tanımlayabilir. C# 8,0 ' den başlayarak bir arabirim, Üyeler için varsayılan bir uygulama tanımlayabilir. Arabirim, alanlar, otomatik uygulanan özellikler ya da özellik benzeri olaylar gibi örnek verileri bildiremeyebilir.
 
-Arabirimleri kullanarak, örneğin, bir sınıftaki birden çok kaynaktan gelen davranışları ekleyebilirsiniz. Bu özellik C#'da önemlidir, çünkü dil sınıfların birden çok kalıtımını desteklemez. Ayrıca, başka bir yapı veya sınıftan devralamayacağından, yapı için kalıtım benzetimi yapmak istiyorsanız bir arabirim kullanmanız gerekir.
+Arabirimleri kullanarak, örneğin, bir sınıftaki birden çok kaynaktan davranış ekleyebilirsiniz. Dil, sınıfların birden çok devralınmasını desteklemediğinden, bu özellik C# ' de önemlidir. Bunlara ek olarak, başka bir struct veya sınıftan gerçekten devralmadıklarından yapılar için devralmayı taklit etmek istiyorsanız bir arabirim kullanmanız gerekir.
 
-Aşağıdaki örnekte görüldüğü gibi [arabirim](../../language-reference/keywords/interface.md) anahtar sözcüklerini kullanarak bir arabirim tanımlarsınız.
+Aşağıdaki örnekte gösterildiği gibi [arabirim](../../language-reference/keywords/interface.md) anahtar sözcüğünü kullanarak bir arabirim tanımlarsınız.
 
 [!code-csharp[Equatable](~/samples/snippets/csharp/objectoriented/interfaces.cs#Equatable)]
 
-Arabirimin adı geçerli bir C# [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Sözleşmeye göre, arabirim `I`adları büyük harfle başlar.
+Arabirimin adı geçerli bir C# [tanımlayıcı adı](../inside-a-program/identifier-names.md)olmalıdır. Kural gereği, arabirim adları sermaye işaretiyle başlar `I` .
 
-<xref:System.IEquatable%601> Arabirimi uygulayan herhangi bir sınıf veya yapı, arabirimin belirttiği imzayla eşleşen bir <xref:System.IEquatable%601.Equals%2A> yöntem için bir tanım içermelidir. Sonuç olarak, sınıfın bir örneğinin aynı `IEquatable<T>` sınıfın `Equals` başka bir örneğine eşit olup olmadığını belirleyebileceği bir yöntem içerecek şekilde uygulayan bir sınıfa güvenebilirsiniz.
+Arabirimi uygulayan herhangi bir sınıf veya yapının, <xref:System.IEquatable%601> <xref:System.IEquatable%601.Equals%2A> arabirimin belirttiği imzayla eşleşen bir yöntem tanımı içermesi gerekir. Sonuç olarak, `IEquatable<T>` `Equals` sınıfının bir örneğinin aynı sınıfa ait başka bir örneğe eşit olup olmadığını belirleyebildiği bir yöntemi içermesi için uygulayan bir sınıf üzerinde sayım yapabilirsiniz.
 
-Tanımı için `IEquatable<T>` `Equals`bir uygulama sağlamaz. Bir sınıf veya yapı birden çok arabirim uygulayabilir, ancak bir sınıf yalnızca tek bir sınıftan devralınabilir.
+Tanımı `IEquatable<T>` için bir uygulama sağlamaz `Equals` . Bir sınıf veya yapı birden çok arabirim uygulayabilir, ancak bir sınıf yalnızca tek bir sınıftan devralınabilir.
 
-Soyut sınıflar hakkında daha fazla bilgi için [Özet ve Mühürlü Sınıflar ve Sınıf Üyeleri'ne](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)bakın.
+Soyut sınıflar hakkında daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
-Arabirimler örnek yöntemleri, özellikleri, olaylar, dizinleyiciler veya bu dört üye türlerin herhangi bir birleşimi içerebilir. Arabirimler statik yapıcılar, alanlar, sabitler veya işleçler içerebilir. Örneklere bağlantılar için [İlgili Bölümler'e](./index.md#BKMK_RelatedSections)bakın. Arabirim örnek alanları, örnek oluşturucular veya sonlandırıcılar içeremez. Arabirim üyeleri varsayılan olarak herkese açıktır.
+Arabirimler örnek yöntemler, özellikler, olaylar, Dizin oluşturucular veya bu dört üye türlerinin herhangi bir birleşimini içerebilir. Arabirimler statik oluşturucular, alanlar, sabitler veya işleçler içerebilir. Örneklere bağlantılar için [Ilgili bölümler](./index.md#BKMK_RelatedSections)bölümüne bakın. Arabirim, örnek alanları, örnek oluşturucular veya sonlandırıcılar içeremez. Arabirim üyeleri varsayılan olarak açıktır.
 
-Bir arabirim üyesi uygulamak için, uygulama sınıfının ilgili üyesinin ortak, statik olmayan ve arabirim üyesiyle aynı ad ve imzaya sahip olması gerekir.
+Bir arabirim üyesini uygulamak için, uygulama sınıfının karşılık gelen üyesi ortak, statik değil olmalıdır ve arabirim üyesiyle aynı ada ve imzaya sahip olmalıdır.
 
-Bir sınıf veya yapı bir arabirim uyguladığında, sınıf veya yapı, arabirimin bildirdiği ancak varsayılan bir uygulama sağlamadığı tüm üyeler için bir uygulama sağlamalıdır. Ancak, bir taban sınıf bir arabirim uygularsa, taban sınıftan türetilen herhangi bir sınıf bu uygulamayı devralır.
+Bir sınıf veya yapı bir arabirim uygularsa, sınıf veya yapı birimi arabirimin bildirdiği, ancak için varsayılan bir uygulama sağlamayan Tüm üyeler için bir uygulama sağlamalıdır. Ancak, bir temel sınıf bir arabirim uygularsa, taban sınıftan türetilmiş herhangi bir sınıf bu uygulamayı devralır.
 
-Aşağıdaki örnek, <xref:System.IEquatable%601> arabirimin bir uygulamasını gösterir. Uygulama sınıfı, `Car` <xref:System.IEquatable%601.Equals%2A> yöntemin bir uygulama sağlamalıdır.
+Aşağıdaki örnek, arabiriminin bir uygulamasını gösterir <xref:System.IEquatable%601> . Uygulayan sınıfı, `Car` yönteminin bir uygulamasını sağlamalıdır <xref:System.IEquatable%601.Equals%2A> .
 
 [!code-csharp[ImplementEquatable](~/samples/snippets/csharp/objectoriented/interfaces.cs#ImplementEquatable)]
 
-Bir sınıfın özellikleri ve dizinleyicileri, arabirimde tanımlanan bir özellik veya dizinleyici için ek erişimciler tanımlayabilir. Örneğin, arabirim, [erişime sahip](../../language-reference/keywords/get.md) bir özelliği bildirebilir. Arabirimi uygulayan sınıf, hem a `get` hem de [set](../../language-reference/keywords/set.md) erişimcisi ile aynı özelliği bildirebilir. Ancak, özellik veya dizinleyici açık uygulama kullanıyorsa, erişimedenler eşleşmelidir. Açık uygulama hakkında daha fazla bilgi için açık [arabirim uygulaması](explicit-interface-implementation.md) ve [Arabirim Özellikleri'ne](../classes-and-structs/interface-properties.md)bakın.
+Bir sınıfın özellikleri ve Dizin oluşturucular, bir arabirimde tanımlı bir özellik veya Dizin Oluşturucu için ek erişimciler tanımlayabilir. Örneğin, bir arabirim bir [Get](../../language-reference/keywords/get.md) erişimcisine sahip bir özellik bildirebilir. Arabirimini uygulayan sınıf aynı özelliği hem a hem de `get` [set](../../language-reference/keywords/set.md) erişimcisi ile bildirebilir. Ancak, özellik veya Dizin Oluşturucu açık uygulama kullanıyorsa, erişimcilerinin eşleşmesi gerekir. Açık uygulama hakkında daha fazla bilgi için bkz. [Açık arabirim uygulama](explicit-interface-implementation.md) ve [arabirim özellikleri](../classes-and-structs/interface-properties.md).
 
-Arabirimler bir veya daha fazla arabirimden devralınabilir. Türetilen arabirim, üyeleri temel arabirimlerinden devralır. Türetilen arabirimi uygulayan bir sınıfın, türemiş arabirimin temel arabirimlerinin tüm üyeleri de dahil olmak üzere türemiş arabirimdeki tüm üyeleri uygulaması gerekir. Bu sınıf örtülü olarak türemiş arabirime veya temel arabirimlerinden herhangi biri olarak dönüştürülebilir. Bir sınıf, devraldığı temel sınıflar veya diğer arabirimler tarafından devralınan arabirimler aracılığıyla birden çok kez bir arabirim içerebilir. Ancak, sınıf yalnızca bir kez ve yalnızca sınıf sınıfının tanımının bir parçası olarak arabirimi`class ClassName : InterfaceName`bildirirse bir arabirim uygulaması sağlayabilir ( . Arabirimi uygulayan bir taban sınıf devraldığınız için arabirim devralılırsa, taban sınıf arabirimin inüyelerini sağlar. Ancak, türetilen sınıf, devralınan uygulamayı kullanmak yerine herhangi bir sanal arabirim üyesini yeniden uygulayabilir. Arabirimler bir yöntemin varsayılan uygulamasını bildirdiğinde, bu arabirimi uygulayan herhangi bir sınıf bu uygulamayı devralır. Arabirimlerde tanımlanan uygulamalar sanaldır ve uygulama sınıfı bu uygulamayı geçersiz kılabilir.
+Arabirimler, bir veya daha fazla arabirimden devralınabilir. Türetilmiş arabirim, üyeleri temel arabirimlerinden devralır. Türetilmiş arabirimi uygulayan bir sınıf, türetilmiş arabirimin temel arabirimlerinin tüm üyeleri dahil olmak üzere türetilmiş arabirimdeki tüm üyeleri uygulamalıdır. Bu sınıf örtük olarak türetilmiş arabirime veya temel arabirimlerinden dönüştürülebilir. Bir sınıf, devraldığı temel sınıflar veya diğer arabirimlerin devraldığı arabirimler aracılığıyla birden çok kez arabirim içerebilir. Ancak, sınıfı bir arabirimin uygulamasını yalnızca bir kez ve yalnızca sınıf, sınıfının () tanımının bir parçası olarak bildirir `class ClassName : InterfaceName` . Arabirimi uygulayan bir temel sınıf devralmış olduğunuz için arabirim devralınmışsa, taban sınıf arabirimin üyelerinin uygulanmasını sağlar. Ancak, türetilen sınıf devralınan uygulamayı kullanmak yerine herhangi bir sanal arabirim üyesini yeniden uygulayabilir. Arabirimler bir yöntemin varsayılan uygulamasını bildiriyorsa, bu arabirimi uygulayan herhangi bir sınıf bu uygulamayı devralır. Arabirimlerde tanımlı uygulamalar sanal ve uygulama sınıfı bu uygulamayı geçersiz kılabilir.
 
-Taban sınıf, sanal üyeleri kullanarak arabirim üyelerini de uygulayabilir. Bu durumda, türetilmiş bir sınıf sanal üyeleri geçersiz kılarak arabirim davranışını değiştirebilir. Sanal üyeler hakkında daha fazla bilgi için [Polymorphism'e](../classes-and-structs/polymorphism.md)bakın.
+Bir temel sınıf, sanal Üyeler kullanarak arabirim üyeleri de uygulayabilir. Bu durumda, türetilmiş bir sınıf sanal üyeleri geçersiz kılarak arabirim davranışını değiştirebilir. Sanal üyeler hakkında daha fazla bilgi için bkz. çok [biçimlilik](../classes-and-structs/polymorphism.md).
 
-## <a name="interfaces-summary"></a>Arayüzler özeti
+## <a name="interfaces-summary"></a>Arabirimler Özeti
 
-Arabirim aşağıdaki özelliklere sahiptir:
+Bir arabirim aşağıdaki özelliklere sahiptir:
 
-- Arabirim genellikle yalnızca soyut üyeleri olan soyut bir taban sınıfı gibidir. Arabirimi uygulayan herhangi bir sınıf veya yapı tüm üyelerini uygulamalıdır. İsteğe bağlı olarak, bir arabirim bazı veya tüm üyeleri için varsayılan uygulamaları tanımlayabilir.
-- Bir arayüz doğrudan anlık olamaz. Üyeleri, arabirimi uygulayan herhangi bir sınıf veya yapı tarafından uygulanır.
-- Bir sınıf veya yapı birden çok arabirim uygulayabilir. Bir sınıf bir taban sınıf devralabilir ve aynı zamanda bir veya daha fazla arabirim uygulayabilirsiniz.
+- Bir arabirim, genellikle yalnızca soyut üyelere sahip bir soyut temel sınıf gibidir. Arabirimi uygulayan herhangi bir sınıf veya yapının tüm üyelerini uygulaması gerekir. İsteğe bağlı olarak, bir arabirim, üyelerinin bazıları veya tümü için varsayılan uygulamaları tanımlayabilir. Daha fazla bilgi için bkz. [varsayılan arabirim yöntemleri](../../tutorials/default-interface-methods-versions.md).
+- Arabirim doğrudan başlatılamaz. Üyeleri, arabirimini uygulayan herhangi bir sınıf veya yapı tarafından uygulanır.
+- Bir sınıf veya yapı, birden çok arabirim uygulayabilir. Bir sınıf bir temel sınıfı devralınabilir ve ayrıca bir veya daha fazla arabirim uygulayabilir.
 
-## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>İlgili Bölümler
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>İlgili bölümler
 
 - [Arabirim Özellikleri](../classes-and-structs/interface-properties.md)  
 - [Arabirimlerdeki Dizin Oluşturucular](../indexers/indexers-in-interfaces.md)  
 - [Arabirim olaylarını uygulama](../events/how-to-implement-interface-events.md)
-- [Sınıflar ve Yapılar](../classes-and-structs/index.md)  
+- [Sınıflar ve yapılar](../classes-and-structs/index.md)  
 - [Devralma](../classes-and-structs/inheritance.md)  
+- [Arabirimler](../../language-reference/keywords/interface.md)
 - [Yöntemler](../classes-and-structs/methods.md)  
-- [Çok biçimlilik](../classes-and-structs/polymorphism.md)  
+- [Çok Biçimlilik](../classes-and-structs/polymorphism.md)  
 - [Soyut ve Korumalı Sınıflar ve Sınıf Üyeleri](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Özellikler](../classes-and-structs/properties.md)  
 - [Olaylar](../events/index.md)  
-- [Dizin Oluşturucular](../indexers/index.md)  
+- [Dizin Oluşturucular](../indexers/index.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

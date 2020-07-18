@@ -5,12 +5,12 @@ ms.date: 03/20/2020
 ms.custom: azure-sdk-dotnet
 ms.author: casoper
 author: camsoper
-ms.openlocfilehash: 5a1fb35aeca034a7cdd1caa813a3839919a5f926
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 0b255713bc9c13e0cbdaeb25a3d0fe46e91e815d
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174963"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416035"
 ---
 # <a name="logging-with-the-azure-sdk-for-net"></a>.NET için Azure SDK ile günlüğe kaydetme
 
@@ -37,7 +37,7 @@ HTTP istek günlüğü girişi:
 HTTP yanıt günlüğü girişi:
 
 - G/ç işleminin süresi (geçen süre)
-- İstek Kimliği
+- Request ID
 - HTTP durum kodu
 - HTTP neden tümceciği
 - Yanıt üst bilgileri
@@ -70,7 +70,7 @@ using AzureEventSourceListener listener = AzureEventSourceListener.CreateConsole
 
 ### <a name="log-to-diagnostic-traces"></a>Tanılama izlemelerinde günlüğe kaydet
 
-İzleme dinleyicileri uygularsanız, `CreateTraceLogger` Standart .NET olay izleme mekanizmasına () oturum açmak için yöntemini kullanabilirsiniz [`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing) . .NET 'teki olay izleme hakkında daha fazla bilgi için bkz. [Trace dinleyicileri](/dotnet/framework/debug-trace-profile/trace-listeners). Bu örnek, ayrıntılı bir günlük düzeyi belirtir:
+İzleme dinleyicileri uygularsanız, `CreateTraceLogger` Standart .NET olay izleme mekanizmasına () oturum açmak için yöntemini kullanabilirsiniz [`System.Diagnostics.Tracing`](/dotnet/api/system.diagnostics.tracing) . .NET 'teki olay izleme hakkında daha fazla bilgi için bkz. [Trace dinleyicileri](../framework/debug-trace-profile/trace-listeners.md). Bu örnek, ayrıntılı bir günlük düzeyi belirtir:
 
 ```csharp
 using AzureEventSourceListener listener = AzureEventSourceListener.CreateTraceLogger(EventLevel.Verbose);
@@ -99,4 +99,4 @@ using AzureEventSourceListener listener = new AzureEventSourceListener((e, messa
 - [Azure App Service uygulamalar için tanılama günlüğünü etkinleştirme](/azure/app-service/troubleshoot-diagnostic-logs)
 - [Azure Güvenlik günlüğü ve denetim](/azure/security/fundamentals/log-audit) seçeneklerini gözden geçirin
 - [Azure platform günlükleriyle](/azure/azure-monitor/platform/platform-logs-overview) nasıl çalışacağınızı öğrenin
-- [.NET Core günlüğe kaydetme ve izleme](/dotnet/core/diagnostics/logging-tracing) hakkında daha fazla bilgi edinin
+- [.NET Core günlüğe kaydetme ve izleme](../core/diagnostics/logging-tracing.md) hakkında daha fazla bilgi edinin

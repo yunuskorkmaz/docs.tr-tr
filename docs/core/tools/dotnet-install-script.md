@@ -2,16 +2,16 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 04/30/2020
-ms.openlocfilehash: d03877d76212f7b22de0a1075cf50fc75bd104b6
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cecfbb86c4a2863161d3df7c78201fa8057abfe5
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324422"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415926"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet-install.ps1` | `dotnet-install.sh`-.NET Core SDK ve paylaşılan çalışma zamanını yüklemek için kullanılan betik.
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet-install`Betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan bir yüklemesini gerçekleştirir. İki komut dosyası vardır:
 
@@ -82,7 +82,7 @@ Varsayılan olarak, yükleme betikleri SDK 'Yı indirir ve yükler. Yalnızca pa
 
 Komut dosyası varsayılan olarak, geçerli oturum için $PATH yüklemesi konumunu ekler. Bağımsız değişkenini belirterek bu varsayılan davranışı geçersiz kılın `-NoPath|--no-path` . Betik, `DOTNET_ROOT` ortam değişkenini ayarladı.
 
-Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/dependencies.md)yükler.
+Betiği çalıştırmadan önce gerekli [bağımlılıkları](../install/windows.md#dependencies)yükler.
 
 Bağımsız değişkenini kullanarak belirli bir sürümü yükleyebilirsiniz `-Version|--version` . Sürüm, gibi üç bölümden oluşan bir sürüm numarası olarak belirtilmelidir `2.1.0` . Sürüm belirtilmemişse, komut dosyası `latest` sürümü yüklenir.
 

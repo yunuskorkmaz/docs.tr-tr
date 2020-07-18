@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9af0bed8a779e1173f552e095f99ad7bf5123f14
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7ccd309c14b73af16487850d1785ecf9b0bb2d97
+ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "65639119"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459365"
 ---
 > [!WARNING]
-> İkili serileştirme tehlikeli olabilir. Güvenilmeyen bir kaynaktaki verileri hiçbir şekilde seri durumdan çıkarmayın ve bu verileri hiçbir şekilde hiçbir şekilde geri dönmez.
+> İkili serileştirme tehlikeli olabilir. Daha fazla bilgi için bkz. [BinaryFormatter Güvenlik Kılavuzu](../docs/standard/serialization/binaryformatter-security-guide.md).

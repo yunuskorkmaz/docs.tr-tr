@@ -19,38 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: b9915faff2593cc51868c20e1a83a05ffca9f548
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325934"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416376"
 ---
-# <a name="isolated-storage"></a>Yalıtılmış Depolama
-<a name="top"></a>Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerle ilişkilendirmenin standartlaştırılmış yollarını tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.
+# <a name="isolated-storage"></a>Yalıtılmış depolama
+
+Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerle ilişkilendirmenin standartlaştırılmış yollarını tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.
 
 > [!IMPORTANT]
 > Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, `Windows.Storage` yerel verileri ve dosyaları depolamak için WINDOWS çalışma zamanı API 'sinde bulunan ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .
-
-Bu konu aşağıdaki bölümleri içermektedir:
-
-- [Veri Bölmeleri ve Depoları](#data_compartments_and_stores)
-
-- [Ayrık Depolama Kotaları](#quotas)
-
-- [Güvenli Erişim](#secure_access)
-
-- [İzin Verilen Kullanım ve Güvenlik Riskleri](#allowed_usage)
-
-- [Ayrık Depolama Konumları](#isolated_storage_locations)
-
-- [Ayrık Depolama Birimi Oluşturma, Numaralandırma ve Silme](#isolated_storage_tasks)
-
-- [Ayrık Depolama Birimi Senaryoları](#scenarios_for_isolated_storage)
-
-- [İlgili konular](#related_topics)
-
-- [Başvuru](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -114,11 +95,11 @@ __Bu bölüm aşağıdaki çerçeveler için geçerlidir:__
 - .NET Core 2.1 +
 - .NET 5.0 +
 
-.NET Framework ve .NET Core, bir Kullanıcı, uygulama veya bileşen için verileri kalıcı hale getirme mekanizması olarak [yalıtılmış depolamayı](/dotnet/standard/io/isolated-storage) sunmaktadır. Bu, öncelikli olarak kullanımdan kaldırılan kod erişimi güvenlik senaryolarında tasarlanan eski bir bileşendir.
+.NET Framework ve .NET Core, bir Kullanıcı, uygulama veya bileşen için verileri kalıcı hale getirme mekanizması olarak yalıtılmış depolamayı sunmaktadır. Bu, öncelikli olarak kullanımdan kaldırılan kod erişimi güvenlik senaryolarında tasarlanan eski bir bileşendir.
 
 Çeşitli yalıtılmış depolama API 'Leri ve araçları, güven sınırları genelinde verileri okumak için kullanılabilir. Örneğin, makine genelindeki bir kapsamdaki verileri okumak, makinedeki diğer, muhtemelen daha az güvenilir Kullanıcı hesaplarından veri toplayabilir. Makine genelinde yalıtılmış depolama kapsamlarından okunan bileşenler veya uygulamalar, bu verileri okumayla sonuçlarının farkında olmalıdır.
 
-### <a name="security-sensitive-apis-which-can-read-from-the-machine-wide-scope"></a>Makine genelindeki kapsamdan okuyabilen güvenliğe duyarlı API 'Ler
+### <a name="security-sensitive-apis-that-can-read-from-the-machine-wide-scope"></a>Makine genelindeki kapsamdan okuyalebilecek güvenliğe duyarlı API 'Ler
 
 Makine genelindeki kapsamdan okunan aşağıdaki API 'lerden herhangi birini çağıran bileşenler veya uygulamalar:
 
@@ -129,7 +110,7 @@ Makine genelindeki kapsamdan okunan aşağıdaki API 'lerden herhangi birini ça
 * [IsolatedStorageFile. GetStore](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.getstore), IsolatedStorageScope. Machine bayrağını içeren bir kapsam geçiyor
 * [IsolatedStorageFile.](/dotnet/api/system.io.isolatedstorage.isolatedstoragefile.remove)bayrak içeren bir kapsamı geçirerek Kaldır `IsolatedStorageScope.Machine`
 
-[Yalıtılmış depolama aracı](/dotnet/framework/tools/storeadm-exe-isolated-storage-tool) , `storeadm.exe` `/machine` aşağıdaki kodda gösterildiği gibi anahtarla çağrılırsa etkilenir:
+[Yalıtılmış depolama aracı](../../framework/tools/storeadm-exe-isolated-storage-tool.md) , `storeadm.exe` `/machine` aşağıdaki kodda gösterildiği gibi anahtarla çağrılırsa etkilenir:
 
 ```txt
 storeadm.exe /machine [any-other-switches]
@@ -252,7 +233,7 @@ Yalıtılmış depolamayı aşağıdaki durumlarda kullanmamalısınız:
 
 <a name="related_topics"></a>
 
-## <a name="related-topics"></a>İlgili Konular
+## <a name="related-articles"></a>İlgili makaleler:
 
 |Başlık|Açıklama|
 |-----------|-----------------|

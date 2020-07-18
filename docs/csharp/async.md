@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/20/2020
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: b5643dd7eddefebc9cbf922ff5cce75d72dee4dd
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: bcea584ded6985a0ef166ab8e24672a19e27b0a3
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100905"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86415977"
 ---
 # <a name="asynchronous-programming"></a>Zaman uyumsuz programlama
 
@@ -207,7 +207,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 }
 ```
 
-Daha az kod olsa da, LINQ 'i zaman uyumsuz kodla karıştırdığınızda dikkatli olmanız gerekir. LINQ, ertelenmiş (geç) yürütmeyi kullandığından, `foreach` üretilen sırayı veya ' a çağrısıyla tekrarlamaya zormadığınız sürece zaman uyumsuz çağrılar bir döngüde olduğu gibi hemen gerçekleşmeyecek `.ToList()` `.ToArray()` .
+Daha az kod olsa da, LINQ 'i zaman uyumsuz kodla karıştırdığınızda dikkatli olun. LINQ, ertelenmiş (geç) yürütmeyi kullandığından, `foreach` üretilen sırayı veya ' a çağrısıyla tekrarlamaya zormadığınız sürece zaman uyumsuz çağrılar bir döngüde olduğu gibi hemen gerçekleşmeyecek `.ToList()` `.ToArray()` .
 
 ## <a name="important-info-and-advice"></a>Önemli bilgi ve öneriler
 
@@ -254,7 +254,7 @@ Ortak bir soru, "yöntemi ne zaman kullanmalıyım <xref:System.Threading.Tasks.
 
 * **Daha az durum bilgisi olan kod yazma**
 
-Genel nesnelerin durumuna veya belirli yöntemlerin yürütülmesine bağlı değildir. Bunun yerine, yalnızca yöntemlerin dönüş değerlerine göre değişir. Neden mi?
+Genel nesnelerin durumuna veya belirli yöntemlerin yürütülmesine bağlı değildir. Bunun yerine, yalnızca yöntemlerin dönüş değerlerine göre değişir. Neden?
 
 * Kodun nedeni daha kolay olacaktır.
 * Kodun test etmek daha kolay olacaktır.

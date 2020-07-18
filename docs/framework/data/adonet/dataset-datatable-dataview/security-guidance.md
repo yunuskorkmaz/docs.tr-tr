@@ -3,12 +3,12 @@ title: Veri kümesi ve DataTable Güvenlik Kılavuzu
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f78b52ede4ec76599d761e5188f39c3e9dae2a4f
-ms.sourcegitcommit: 98548968e89739a37625e72ddbd535fe1e11121e
+ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
+ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405298"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86416199"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Veri kümesi ve DataTable Güvenlik Kılavuzu
 
@@ -193,7 +193,7 @@ Denetim modu etkinleştirildikten sonra, tercih ettiğiniz yerleşik _App.config
 </configuration>
 ```
 
-Ve hakkında daha fazla bilgi için `TraceSource` `TraceListener` bkz. [nasıl yapılır: Izleme dinleyicileri Ile TraceSource ve filtreler kullanma](/dotnet/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners).
+Ve hakkında daha fazla bilgi için `TraceSource` `TraceListener` bkz. [nasıl yapılır: Izleme dinleyicileri Ile TraceSource ve filtreler kullanma](../../../debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md).
 
 > [!NOTE]
 > Bir uygulamayı denetim modunda çalıştırmak .NET Core veya .NET 5,0 ve üzeri sürümlerde kullanılamaz.
@@ -236,7 +236,7 @@ ASP.NET içinde, `<AppContextSwitchOverrides>` öğesi kullanılabilir değil. B
 </configuration>
 ```
 
-Daha fazla bilgi için, bkz [\<AppContextSwitchOverrides>](/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) . öğesi.
+Daha fazla bilgi için, bkz [\<AppContextSwitchOverrides>](../../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) . öğesi.
 
 .NET Core, .NET 5 ve ASP.NET Core, bu ayar, aşağıdaki JSON 'da gösterildiği gibi, _runtimeconfig.js_tarafından denetlenir:
 
@@ -308,7 +308,7 @@ DataSet customers = new DataSet();
 adapter.Fill(customers, "Customers");
 ```
 
-(Yukarıdaki kod örneği, [DataAdapter nesnesinden bir veri kümesini doldururken](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)bulunan daha büyük bir örneğin bir parçasıdır.)
+(Yukarıdaki kod örneği, [DataAdapter nesnesinden bir veri kümesini doldururken](../populating-a-dataset-from-a-dataadapter.md)bulunan daha büyük bir örneğin bir parçasıdır.)
 
 > Çoğu uygulama basitleşebilir ve veritabanı katmanının güvenilir olduğunu varsayabilir. Bununla birlikte, uygulamalarınızın iş [modellemesinin](https://www.microsoft.com/securityengineering/sdl/threatmodeling) bir habiti varsa, tehdit modeliniz uygulama (istemci) ile veritabanı katmanı (sunucu) arasında bir güven sınırı olduğunu göz önünde bulundurmayabilir. İstemci ve sunucu arasında [karşılıklı kimlik doğrulama](/sql/relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections) veya [AAD kimlik doğrulaması](/azure/azure-sql/database/authentication-aad-overview) kullanmak, bununla ilişkili riskleri karşılamak için bir yoldur. Bu bölümün geri kalanında güvenilmeyen sunucuya bağlanan istemcinin olası sonucu ele alınmaktadır.
 
@@ -487,4 +487,4 @@ Nesne modelini [Entity Framework](/ef)kullanacak şekilde değiştirmeyi düşü
 * Veritabanı sorgularının Entity Framework nesne modelleriniz aracılığıyla proje veritabanını kolayca sunmayı kolaylaştırmak için, veritabanı sağlayıcılarının [farklı bir ekosistemini](/ef/core/providers/) getirir.
 * Güvenilmeyen kaynaklardan veri serisini kaldırırken yerleşik korumalar sunar.
 
-`.aspx`SOAP uç noktaları kullanan uygulamalar için, bu uç noktaları [WCF](/dotnet/framework/wcf/)kullanacak şekilde değiştirmeyi göz önünde bulundurun. WCF, Web Hizmetleri için daha tam özellikli bir değiştirme işlemi `.asmx` . WCF uç noktaları, mevcut çağıranlar ile uyumluluk için [SOAP aracılığıyla gösterilebilir](/dotnet/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients) .
+`.aspx`SOAP uç noktaları kullanan uygulamalar için, bu uç noktaları [WCF](/dotnet/framework/wcf/)kullanacak şekilde değiştirmeyi göz önünde bulundurun. WCF, Web Hizmetleri için daha tam özellikli bir değiştirme işlemi `.asmx` . WCF uç noktaları, mevcut çağıranlar ile uyumluluk için [SOAP aracılığıyla gösterilebilir](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .
