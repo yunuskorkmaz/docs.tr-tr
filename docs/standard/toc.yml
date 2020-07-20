@@ -744,6 +744,8 @@
         - name: Genel Bakış
           href: serialization/binary-serialization.md
           displayName: binary serialization
+        - name: BinaryFormatter güvenlik kılavuzu
+          href: serialization/binaryformatter-security-guide.md
         - name: Serileştirme kavramları
           href: serialization/serialization-concepts.md
         - name: Temel serileştirme
