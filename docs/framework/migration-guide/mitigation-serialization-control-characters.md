@@ -1,5 +1,6 @@
 ---
-title: DataContractJsonSerializer ile kontrol karakterlerinin serileştirilmesi
+title: DataContractJsonSerializer ile denetim karakterlerinin serileştirilmesi
+description: Denetim karakterlerinin serileştirilmesi .NET Framework 4,7 ' deki ECMAScript V6 ve V8 uyumlu olacak şekilde nasıl değiştiği hakkında bilgi edinin.
 ms.date: 04/07/2017
 helpviewer_keywords:
 - .NET Framework 4.7 retargeting changes
@@ -7,30 +8,30 @@ helpviewer_keywords:
 - DataContractJsonSerializer changes
 - serialization changes
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
-ms.openlocfilehash: b60b78f9ee944552fafbe75754ecd29d60dd4093
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a317884da014097a7a60aef2cef4ec146ccb04f7
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181206"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475391"
 ---
-# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Azaltma: DataContractJsonSerializer ile kontrol karakterlerinin serileştirilmesi
+# <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>Risk azaltma: DataContractJsonSerializer ile denetim karakterlerinin serileştirilmesi
 
-.NET Framework 4.7 ile başlayarak, kontrol karakterlerinin serihale <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> getirilme şekli ECMAScript V6 ve V8'e uyacak şekilde değiştirildi.
+.NET Framework 4,7 ' den başlayarak, denetim karakterlerinin ile serileştirildiği yol <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ECMAScript V6 ve V8 ile uyumlu olarak değiştirilmiştir.
 
 ## <a name="impact"></a>Etki
 
-.NET Framework 4.6.2 ve önceki <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> sürümlerde, ECMAScript V6 `\b`ve `\f` `\t`V8 standartlarıyla uyumlu bir şekilde bazı özel kontrol karakterleri serihale getirilmiştir.
+.NET Framework 4.6.2 ve önceki sürümlerde,, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ve gibi bazı özel denetim karakterlerini `\b` `\f` `\t` ECMAScript V6 ve V8 standartlarıyla uyumlu olacak şekilde serileştirmedi.
 
-.NET Framework 4.7 ile başlayan .NET Framework sürümlerini hedefleyen uygulamalar için bu kontrol karakterlerinin serihale getirilmesi ECMAScript V6 ve V8 ile uyumludur. Aşağıdaki API'ler etkilenir:
+.NET Framework 4,7 ' den başlayarak .NET Framework sürümlerini hedefleyen uygulamalar için, bu denetim karakterlerinin serileştirilmesi ECMAScript V6 ve V8 ile uyumludur. Aşağıdaki API 'Ler etkilenir:
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
 ## <a name="mitigation"></a>Risk azaltma
 
-.NET Framework 4.7 ile başlayan .NET Framework sürümlerini hedefleyen uygulamalar için bu davranış varsayılan olarak etkinleştirilir.
+.NET Framework 4,7 ' den başlayarak .NET Framework sürümlerini hedefleyen uygulamalar için, bu davranış varsayılan olarak etkinleştirilmiştir.
 
-Bu davranış istenmiyorsa, app.config veya web.config dosyasının `<runtime>` bölümüne aşağıdaki satırı ekleyerek bu özelliği devre dışı kullanabilirsiniz:
+Bu davranış istenmediğinde, `<runtime>` app.config veya web.config dosyasının bölümüne aşağıdaki satırı ekleyerek bu özelliği devre dışı bırakabilirsiniz:
 
 ```xml
 <runtime>

@@ -1,16 +1,17 @@
 ---
 title: ETW Olaylarını JIT İzleme
+description: Tam zamanında (JıT) izleme ETW olaylarını anlayın. Bu olaylar, JıT giriş ve JıT kuyruğu çağrılarının başarısı veya başarısızlığı ile ilgili bilgiler toplar.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 568fc942cd0e2188c530d2befb6260083757ec72
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716003"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474468"
 ---
 # <a name="jit-tracing-etw-events"></a>ETW Olaylarını JIT İzleme
 Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının başarısı veya başarısızlığı ile ilgili bilgiler toplar.
@@ -22,7 +23,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -32,13 +33,13 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
 |MethodBeingCompiledNameSignature|Win: UnicodeString|Derlenmekte olan metodun imzası.|  
 |Inlinernamespace|Win: UnicodeString|JıT derleyicisinin için kod oluşturmaya çalıştığı yöntemin ad alanı.|  
-|InlinerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı. Bu, derleyicinin `InlinerName`çağrısı oluşturmak yerine satır içi koda `MethodBeingCompiledName` `MethodBeingCompiledName` ile aynı olmayabilir.|  
+|InlinerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı. Bu, `MethodBeingCompiledName` derleyicinin ' `MethodBeingCompiledName` a çağrı oluşturmak yerine satır içi kod almaya çalıştığı ile aynı olmayabilir `InlinerName` .|  
 |Inlinernamesignature|Win: UnicodeString|İnoluşturucu için imza.|  
 |Inlineenamespace|Win: UnicodeString|İnlinee ad alanı.|  
 |Inlineename|Win: UnicodeString|Derleyicinin satır içine almaya çalıştığı Yöntem (bir çağrı oluşturmaz).|  
@@ -52,7 +53,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -62,13 +63,13 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenen yöntemin adı.|  
 |MethodBeingCompiledNameSignature|Win: UnicodeString|Derlenmekte olan metodun imzası.|  
 |Inlinernamespace|Win: UnicodeString|JıT derleyicisinin için kod oluşturmaya çalışan yöntemin ad alanı.|  
-|InlinerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı. Bu, derleyicinin `InlinerName`çağrısı oluşturmak yerine satır içi koda `MethodBeingCompiledName` `MethodBeingCompiledName` ile aynı olmayabilir.|  
+|InlinerName|Win: UnicodeString|Derleyicinin kod oluşturmaya çalışan yöntemin adı. Bu, `MethodBeingCompiledName` derleyicinin ' `MethodBeingCompiledName` a çağrı oluşturmak yerine satır içi kod almaya çalıştığı ile aynı olmayabilir `InlinerName` .|  
 |Inlinernamesignature|Win: UnicodeString|İnoluşturucu için imza.|  
 |Inlineenamespace|Win: UnicodeString|İnlinee ad alanı.|  
 |Inlineename|Win: UnicodeString|Derleyicinin satır içine almaya çalıştığı Yöntem (bir çağrı oluşturmaz).|  
@@ -82,7 +83,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -92,7 +93,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  
@@ -112,7 +113,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|Verbose (5)|  
+|`JITTracingKeyword`0x10|Verbose (5)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -122,7 +123,7 @@ Bu olaylar, tam zamanında (JıT) giriş ve JıT kuyruğu çağrılarının baş
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|Win: UnicodeString|Derlenmekte olan metodun ad alanı.|  
 |MethodBeingCompiledName|Win: UnicodeString|Derlenmekte olan yöntemin adı.|  

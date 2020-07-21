@@ -1,5 +1,6 @@
 ---
 title: .NET Framework sürümünde sürüm uyumluluğu
+description: Geriye dönük uyumluluk ve yan yana yürütme dahil olmak üzere .NET Framework sürümleri arasında uyumluluk hakkında bilgi edinin.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: dfdc5a977b69af8aa3a0d33ed8b833745cf6bf11
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796008"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475508"
 ---
 # <a name="version-compatibility"></a>Sürüm uyumluluğu
 
@@ -22,7 +23,7 @@ Geriye dönük uyumluluk, bir platformun belirli bir sürümü için geliştiril
 
 Varsayılan olarak, bir uygulama için derlenildiği .NET Framework sürümü üzerinde çalışır. Bu sürüm yoksa ve uygulama yapılandırma dosyası desteklenen sürümleri tanımlamıyorsa, bir .NET Framework başlatma hatası oluşabilir. Bu durumda, uygulamayı çalıştırma denemesi başarısız olur.
 
-Uygulamanızın çalıştırıldığı belirli sürümleri tanımlamak için, uygulamanızın yapılandırma dosyasına bir veya daha fazla [ \<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) öğesi ekleyin. Her `<supportedRuntime>` öğe, ilk olarak en çok tercih edilen sürümü ve en son tercih edilen sürümü belirterek, çalışma zamanının desteklenen bir sürümünü listeler.
+Uygulamanızın çalıştırıldığı belirli sürümleri tanımlamak için, uygulamanızın yapılandırma dosyasına bir veya daha fazla [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) öğe ekleyin. Her `<supportedRuntime>` öğe, ilk olarak en çok tercih edilen sürümü ve en son tercih edilen sürümü belirterek, çalışma zamanının desteklenen bir sürümünü listeler.
 
 ```xml
 <configuration>
@@ -39,7 +40,7 @@ Daha fazla bilgi için bkz. [nasıl yapılır: uygulama yapılandırma .NET Fram
 
 Bir uygulama, üzerinde çalıştığı .NET Framework sürümünü denetleyebilir, ancak bir bileşen olamaz. Bileşenler ve sınıf kitaplıkları belirli bir uygulama bağlamında yüklenir ve bu nedenle uygulamanın üzerinde çalıştığı .NET Framework sürümünde otomatik olarak çalışır.
 
-Bu kısıtlama nedeniyle, uyumluluk garantisi özellikle bileşenler için önemlidir. .NET Framework 4 ' <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> ten başlayarak, bileşeni bu bileşene uygulayarak bir bileşenin birden çok sürüm arasında ne kadar uyumlu kalması beklendiğine yönelik dereceyi belirtebilirsiniz. Araçlar bu özniteliği, bir bileşenin gelecekteki sürümlerindeki uyumluluk garantisinin olası ihlallerini algılamak için kullanabilir.
+Bu kısıtlama nedeniyle, uyumluluk garantisi özellikle bileşenler için önemlidir. .NET Framework 4 ' ten başlayarak, bileşeni bu bileşene uygulayarak bir bileşenin birden çok sürüm arasında ne kadar uyumlu kalması beklendiğine yönelik dereceyi belirtebilirsiniz <xref:System.Runtime.Versioning.ComponentGuaranteesAttribute?displayProperty=nameWithType> . Araçlar bu özniteliği, bir bileşenin gelecekteki sürümlerindeki uyumluluk garantisinin olası ihlallerini algılamak için kullanabilir.
 
 ## <a name="backward-compatibility"></a>Geriye dönük uyumluluk
 

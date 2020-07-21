@@ -1,36 +1,37 @@
 ---
-title: Otomatik Uygulanan Özellikler - C# Programlama Kılavuzu
+title: Otomatik uygulanan özellikler-C# Programlama Kılavuzu
+description: C# ' de otomatik uygulanan bir özellik için, compteri, yalnızca özelliğin get ve set erişimcileri aracılığıyla erişilen özel, anonim bir destek alanı oluşturur.
 ms.date: 01/31/2020
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 791455c1eaef752da2b551e20187d390ca6c65e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f58f9a23f26bde7e80d834528d94e38af1231e7b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170331"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474481"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Otomatik Uygulanan Özellikler (C# Programlama Kılavuzu)
 
-C# 3.0 ve sonraki durumlarda, otomatik olarak uygulanan özellikler, özellik erişimcilerinde ek bir mantık gerekmediğinde özellik bildirimini daha kısa yapar. Ayrıca, istemci kodunun nesneler oluşturmasını da sağlarlar. Aşağıdaki örnekte gösterildiği gibi bir özelliği beyan ettiğinizde, derleyici yalnızca mülkün `get` ve `set` erişime sahip olanların aracılığıyla erişilebilen özel, anonim bir destek alanı oluşturur.
+C# 3,0 ve üzeri sürümlerde otomatik uygulanan özellikler, özellik erişimcilerinde ek bir mantık gerekmediği zaman özellik bildirimini daha kısa hale getirir. Ayrıca, istemci kodunun nesne oluşturmasını da sağlar. Aşağıdaki örnekte gösterildiği gibi bir özellik bildirdiğinizde, derleyici yalnızca özelliğin `get` ve Erişimcilerde erişilebilen özel, anonim bir destek alanı oluşturur `set` .
   
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bazı otomatik uygulanan özelliklere sahip basit bir sınıfı gösterir:  
+Aşağıdaki örnek, bazı otomatik uygulanmış özelliklere sahip basit bir sınıfı göstermektedir:  
 
 [!code-csharp[csProgGuideLINQ#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#28)]  
 
-Arabirimlerde otomatik olarak uygulanan özellikleri bildiremezsiniz. Otomatik olarak uygulanan özellikler özel örnek destek alanı bildirir ve arabirimler örnek alanlarını beyan emeyebilir. Bir gövde tanımlamadan bir arabirimde bir özelliği bildirmek, bu arabirimi uygulayan her tür tarafından uygulanması gereken erişimci bir özelliği bildirir.
+Arabirimlerde otomatik uygulanan özellikler bildiremezsiniz. Otomatik uygulanan özellikler özel bir örnek yedekleme alanı bildirir ve arabirimler örnek alanlarını bildiremeyebilir. Bir gövde tanımlamadan bir arabirimde bir özelliği bildirmek, bu arabirimi uygulayan her bir tür tarafından uygulanması gereken erişimcilere sahip bir özellik bildirir.
 
-C# 6 ve sonraki durumlarda, otomatik olarak uygulanan özellikleri alanlara benzer şekilde başharfekleyebilirsiniz:  
+C# 6 ve üzeri sürümlerde, alanlarla aynı şekilde otomatik uygulanan özellikler başlatabilirsiniz:  
 
 ```csharp  
 public string FirstName { get; set; } = "Jane";  
 ```  
 
-Önceki örnekte gösterilen sınıf mutable. İstemci kodu oluşturulduktan sonra nesnelerdeki değerleri değiştirebilir. Önemli davranış (yöntem) yanı sıra veri içeren karmaşık sınıflarda, genellikle ortak özelliklere sahip olmak gereklidir. Ancak, yalnızca bir değer kümesini (veri) kapsülleyen ve çok az veya hiç davranışı olmayan küçük sınıflar veya yapılar için, ayarlanan erişimi [özel](../../language-reference/keywords/private.md) (tüketicilere değişmez) olarak beyan ederek veya yalnızca bir erişime sahip (oluşturucu hariç her yerde değişmez) beyan ederek nesneleri değişmez hale getirmelisiniz.  Daha fazla bilgi için, [otomatik olarak uygulanan özelliklere sahip hafif bir sınıfın nasıl uygulanacağını](./how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)görün.
+Önceki örnekte gösterilen sınıf değişebilir ' dir. İstemci kodu, oluşturulduktan sonra nesnelerdeki değerleri değiştirebilir. Önemli davranışları (Yöntemler) ve verileri içeren karmaşık sınıflarda, genellikle ortak özelliklerin olması gerekir. Bununla birlikte, yalnızca bir değer kümesini (veri) kapsülleyen ve hiç davranışlarına sahip olan küçük sınıflar veya yapılar için, küme erişimcisini [Private](../../language-reference/keywords/private.md) (Sabit-tüketiciler) olarak bildirerek veya yalnızca bir get erişimcisi bildirerek (Oluşturucu dışında sabit olarak) nesneleri sabit hale getirebilirsiniz.  Daha fazla bilgi için bkz. [Otomatik uygulanan özelliklerle hafif bir sınıf uygulama](./how-to-implement-a-lightweight-class-with-auto-implemented-properties.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

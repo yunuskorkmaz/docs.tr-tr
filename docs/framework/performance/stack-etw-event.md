@@ -1,16 +1,17 @@
 ---
 title: Yığın ETW Olayı
+description: Bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak için diğer olaylarla birlikte kullanılması gereken Stack ETW olayı hakkında bilgi edinin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-ms.openlocfilehash: f3014a04ba7cacbe37b6706e2919ffd7de19aa65
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cab496615c4ef17831895b72c8987917e3c06e77
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715918"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474143"
 ---
 # <a name="stack-etw-event"></a>Yığın ETW Olayı
 Yığın olayı, bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak için diğer olaylarla birlikte kullanılmalıdır. Çalışma zamanı sağlayıcısı etkinleştirildiğinde günlüğe kaydedilir. Bu çok yüksek bir sıklık olayıdır, çünkü başka bir çalışma zamanı olayı oluşturulduğunda tetiklenir. Bu nedenle, bu olayı dikkatli kullanmanızı öneririz.  
@@ -19,7 +20,7 @@ Yığın olayı, bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`StackKeyword` (0x40000000)|LogAlways (0)|  
+|`StackKeyword`0x40000000|LogAlways (0)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -32,10 +33,10 @@ Yığın olayı, bir olay oluşturulduktan sonra yığın izlemeleri oluşturmak
 |Alan adı|Veri Türü|Açıklama|  
 |----------------|---------------|-----------------|  
 |ClrInstanceID|Win: uint16|Benzersiz çalışma zamanı tanımlayıcısı.|  
-|Reserved1|Win: UInt8|Ayrılamadı.|  
-|Reserved2|Win: UInt8|Ayrılamadı.|  
+|Reserved1|Win: UInt8|Ayrılmış.|  
+|Reserved2|Win: UInt8|Ayrılmış.|  
 |FrameCount|Win: UInt32|Yığın izlemesinde çerçeve sayısı.|  
-|Toplu İş|Win: Işaretçi|Yönerge işaretçilerinin sütunları.|  
+|Yığın|Win: Işaretçi|Yönerge işaretçilerinin sütunları.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

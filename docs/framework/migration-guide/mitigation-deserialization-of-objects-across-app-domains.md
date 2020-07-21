@@ -1,13 +1,14 @@
 ---
 title: 'Azaltma: Uygulama Etki Alanlarında Nesneleri Seri Durumdan Çıkarma'
+description: Uygulama etki alanları genelinde mantıksal çağrı bağlamındaki nesneleri seri durumdan çıkarma girişiminin özel durum oluşturduğu bir sorunu tanılamayı ve hafifletmek hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20ea0f2f0b49000b7d1993adb583a803d9f5be6c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457932"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475248"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Azaltma: Uygulama Etki Alanlarında Nesneleri Seri Durumdan Çıkarma
 Bazı durumlarda, bir uygulama farklı uygulama temeli kullanan iki veya daha fazla uygulama etki alanı kullandığında, uygulama etki alanları arasında nesnelerin mantıksal çağrı bağlamında serisini kaldırma girişimi özel bir durum oluşturur.  

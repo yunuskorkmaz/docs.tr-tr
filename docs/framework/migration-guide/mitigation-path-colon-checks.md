@@ -1,28 +1,29 @@
 ---
-title: 'Azaltma: Yol Kolon Denetimleri'
+title: 'Risk azaltma: yol Iki nokta denetimleri'
+description: Uygun sürücü ayırıcı sözdizimi (iki nokta üst üste) için denetimleri desteklemek üzere .NET Framework 4.6.2 ' de yapılan değişiklikler hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f32ee54f88bc4747fd0d8065b0dce06b151d1d9a
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181240"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475456"
 ---
-# <a name="mitigation-path-colon-checks"></a>Azaltma: Yol Kolon Denetimleri
-.NET Framework 4.6.2'yi hedefleyen uygulamalardan başlayarak, daha önce desteklenmeyen yolları (hem uzunluk hem de biçim açısından) desteklemek için bir dizi değişiklik yapıldı. Özellikle, uygun sürücü ayırıcı sözdizimi (iki nokta üst üste) için denetimler daha doğru yapıldı.  
+# <a name="mitigation-path-colon-checks"></a>Risk azaltma: yol Iki nokta denetimleri
+.NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, daha önce desteklenmeyen yolları (hem uzunluk hem de biçim bakımından) desteklemeye yönelik bir dizi değişiklik yapılmıştır. Özellikle, uygun sürücü ayırıcı söz dizimini (iki nokta üst üste) denetler.  
   
 ## <a name="impact"></a>Etki  
- Bu değişiklikler, daha <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> önce <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> desteklenen bazı URI yollarını ve yöntemleri engeller.  
+ Bu değişiklikler, <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> yöntemlerinin daha önce DESTEKLEDIĞI bazı URI yollarını engeller.  
   
 ## <a name="mitigation"></a>Risk azaltma  
- Artık <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> yöntemler ve <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> yöntemler tarafından desteklenen daha önce kabul edilebilir bir yol sorununu çözüme getirmek için aşağıdakileri yapabilirsiniz:  
+ Daha önce ve yöntemleri tarafından desteklenmeyen önceden kabul edilebilir bir yol sorununu geçici olarak çözmek için aşağıdakileri <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> yapabilirsiniz <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> :  
   
-- Düzeni bir URL'den el ile kaldırın. Örneğin, bir `file://` URL'den kaldırın.  
+- Düzeni bir URL 'den el ile kaldırın. Örneğin, `file://` BIR URL 'den kaldırın.  
   
-- URI'yi bir <xref:System.Uri> oluşturucuya geçirin ve <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> özelliğin değerini alın.  
+- URI 'yi bir oluşturucuya geçirin <xref:System.Uri> ve özelliğin değerini alın <xref:System.Uri.LocalPath%2A?displayProperty=nameWithType> .  
   
-- Anahtarı `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> `true`' ya ayarlayarak yeni yol normalleştirmesi dışında  
+- Anahtarı olarak ayarlayarak yeni yol normalleştirmesini geri çevirin `Switch.System.IO.UseLegacyPathHandling` <xref:System.AppContext> `true` .  
   
     ```xml  
     <runtime>  

@@ -1,44 +1,45 @@
 ---
-title: Sabitler - C# Programlama Kılavuzu
+title: Sabitler-C# Programlama Kılavuzu
+description: C# ' deki sabitler, derleme zamanı değişmez değerleri, program derlendikten sonra değişmez. Yalnızca C# yerleşik türleri sabitler olabilir.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 85f6684617b893bdd85eb5b530aa2481941fbc5d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd42dcd62bb46898c20f14cdc893b8f5801894f2
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093558"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474988"
 ---
 # <a name="constants-c-programming-guide"></a>Sabitler (C# Programlama Kılavuzu)
-Sabitler derleme zamanında bilinen ve programın ömrü boyunca değişmeden değişmez değerlerdir. Sabitler [const](../../language-reference/keywords/const.md) değiştirici ile bildirilir. Yalnızca C# [yerleşik türleri](../../language-reference/builtin-types/built-in-types.md) (hariç) <xref:System.Object?displayProperty=nameWithType>olarak `const`bildirilebilir. Sınıflar, structs ve diziler de dahil olmak üzere `const`kullanıcı tanımlı türleri, olamaz. Çalışma zamanında (örneğin, bir oluşturucuda) bir kez başharfe basılan ve bundan sonra değiştirilemeyen bir sınıf, yapı veya dizi oluşturmak için [yalnızca okunur](../../language-reference/keywords/readonly.md) değiştiriyi kullanın.  
+Sabitler, derleme zamanında bilinen ve programın ömrü boyunca değişmeyen sabit değerlerdir. Sabitler [const](../../language-reference/keywords/const.md) değiştiricisi ile bildirilmiştir. Yalnızca C# [yerleşik türleri](../../language-reference/builtin-types/built-in-types.md) (hariç <xref:System.Object?displayProperty=nameWithType> ) olarak bildirilebilecek `const` . Sınıflar, yapılar ve diziler dahil olmak üzere Kullanıcı tanımlı türler olamaz `const` . Çalışma zamanında bir kez başlatılan bir sınıf, yapı veya dizi oluşturmak için [salt okunur](../../language-reference/keywords/readonly.md) değiştiricisini kullanın (örneğin, bir oluşturucuda) ve bundan sonra değiştirilemez.  
   
- C# yöntemleri, `const` özellikleri veya olayları desteklemez.  
+ C#, `const` yöntemleri, özellikleri veya olayları desteklemez.  
   
- Enum türü, integral yerleşik türleri (örneğin, `int`, `uint` `long`, vb. için) adlandırılmış sabitleri tanımlamanızı sağlar. Daha fazla bilgi için [enum' a](../../language-reference/builtin-types/enum.md)bakın.  
+ Sabit listesi türü, integral yerleşik türler (örneğin,, vb.) için adlandırılmış sabitler tanımlamanızı `int` sağlar `uint` `long` . Daha fazla bilgi için bkz. [enum](../../language-reference/builtin-types/enum.md).  
   
- Sabitler beyan edildikleri gibi başharflere alınmalıdır. Örnek:  
+ Sabitler, bildirildiği için başlatılmalıdır. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#64](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#64)]  
   
- Bu örnekte, `months` sabit her zaman 12'dir ve sınıfın kendisi tarafından bile değiştirilemez. Aslında, derleyici C# kaynak kodunda sabit bir tanımlayıcıyla karşılaştığında (örneğin,), `months`gerçek değeri doğrudan ürettiği ara dil (IL) koduna ikame eder. Çalışma zamanında sabitle ilişkili değişken bir adres `const` olmadığından, alanlar başvuruyla geçirilemez ve bir ifadede l değeri olarak görüntülenemez.  
+ Bu örnekte, sabit `months` her zaman 12 ' dir ve sınıfın kendisi tarafından bile değiştirilemez. Aslında, derleyici C# kaynak kodunda bir sabit tanımlayıcıyla karşılaştığında (örneğin, `months` ), değişmez değer değerini doğrudan ürettiği ara dil (IL) koduna koyar. Çalışma zamanında bir sabitle ilişkili değişken adresi olmadığından, `const` alanlar başvuruya göre geçirilemez ve bir ifadede l değeri olarak görünemez.  
   
 > [!NOTE]
-> DL'ler gibi diğer kodlarda tanımlanan sabit değerlere atıfta bulunurken dikkatli olun. DLL'nin yeni bir sürümü sabit için yeni bir değer tanımlıyorsa, programınız yeni sürüme karşı yeniden derlenene kadar eski gerçek değeri tutmaya devam eder.  
+> Dll 'Ler gibi başka bir kodda tanımlanan sabit değerlere başvurduğunuzda dikkatli olun. Yeni bir DLL sürümü sabit için yeni bir değer tanımlıyorsa, programınız yeni sürüme yeniden derlenene kadar eski değişmez değeri de tutar.  
   
- Aynı türden birden çok sabit aynı anda bildirilebilir, örneğin:  
+ Aynı türden birden fazla sabit aynı anda bildirilebilecek, örneğin:  
   
  [!code-csharp[csProgGuideObjects#65](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#65)]  
   
- Bir sabiti başlatmak için kullanılan ifade, dairesel bir başvuru oluşturmuyorsa başka bir sabite başvurabilir. Örnek:  
+ Bir sabiti başlatmak için kullanılan ifade, döngüsel başvuru oluşturmayan başka bir sabite başvurabilir. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#66](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#66)]  
   
- Sabitler [genel,](../../language-reference/keywords/public.md) [özel,](../../language-reference/keywords/private.md) [korumalı,](../../language-reference/keywords/protected.md) [dahili,](../../language-reference/keywords/internal.md) [korumalı iç](../../language-reference/keywords/protected-internal.md) veya özel [korumalı](../../language-reference/keywords/private-protected.md)olarak işaretlenebilir. Bu erişim değiştiriciler, sınıfın kullanıcılarının sabite nasıl erişebileceğini tanımlar. Daha fazla bilgi için [Erişim Değiştiriciler'e](./access-modifiers.md)bakın.  
+ Sabitler, [genel](../../language-reference/keywords/public.md), [özel](../../language-reference/keywords/private.md), [korumalı](../../language-reference/keywords/protected.md), [dahili](../../language-reference/keywords/internal.md), [korunan iç](../../language-reference/keywords/protected-internal.md) veya [özel korumalı](../../language-reference/keywords/private-protected.md)olarak işaretlenebilir. Bu erişim değiştiricileri, sınıfın kullanıcılarının sabitine nasıl erişekullanabileceğinizi tanımlar. Daha fazla bilgi için bkz. [erişim değiştiricileri](./access-modifiers.md).  
   
- Sabitin değeri türün tüm örnekleri için aynı olduğundan, sabitlere [statik](../../language-reference/keywords/static.md) alanlarmış gibi erişilir. `static` Bunları bildirmek için anahtar sözcüğü kullanmazsınız. Sabiti tanımlayan sınıfta olmayan ifadeler, sabite erişmek için sınıf adını, bir dönemi ve sabitin adını kullanmalıdır. Örnek:  
+ Sabitlere [statik](../../language-reference/keywords/static.md) alanlar gibi erişilir çünkü sabit değeri, türün tüm örnekleri için aynı. `static`Bunları bildirmek için anahtar sözcüğünü kullanmayın. Sabiti tanımlayan sınıfta olmayan ifadeler, sabit erişim için sınıf adı, nokta ve sabitin adını kullanmalıdır. Örneğin:  
   
  [!code-csharp[csProgGuideObjects#67](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#67)]  
   
@@ -48,8 +49,8 @@ Sabitler derleme zamanında bilinen ve programın ömrü boyunca değişmeden de
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve Structs](./index.md)
+- [Sınıflar ve yapılar](./index.md)
 - [Özellikler](./properties.md)
 - [Türler](../types/index.md)
-- [Readonly](../../language-reference/keywords/readonly.md)
-- [C# Bölüm Bir'de değişmezlik: Değişmezlik Çeşitleri](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)
+- [readonly](../../language-reference/keywords/readonly.md)
+- [C# bölüm bir üzerinde Imleyici kullanılabilirliği: Imleyici kullanılabilirlik çeşitleri](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability)

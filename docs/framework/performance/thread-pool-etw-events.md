@@ -1,16 +1,17 @@
 ---
 title: İş Parçacığı Havuzu ETW Olayları
+description: .NET 'teki iş parçacıkları hakkında bilgi toplamak için iş parçacığı havuzu ETW olaylarını gözden geçirin. İş parçacığı havuzu olayları, çalışan iş parçacığı havuzu olayları veya g/ç iş parçacığı havuzu olaylardır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-ms.openlocfilehash: 249d0607ddd280bcb4e9cf3ef34b28ff8ada3b04
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: d3059cec5007c24d41a4a779939d4990f19305ca
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240499"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475209"
 ---
 # <a name="thread-pool-etw-events"></a>İş Parçacığı Havuzu ETW Olayları
 Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.  
@@ -29,7 +30,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -42,7 +43,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |ActiveWorkerThreadCount|Win: UInt32|İşleri işlemek için kullanılabilen çalışan iş parçacığı sayısı, zaten işleme işleri de dahil olmak üzere.|  
 |RetiredWorkerThreadCount|Win: UInt32|Çalışmayı işlemek için kullanılamayan, ancak daha sonra ayrılan iş parçacığı sayısı daha sonra daha fazla iş parçacığı olması gerekir.|  
@@ -56,17 +57,17 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Açıklama|  
+|Olay|Olay Kimliği|Description|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Bir örnek için bilgi toplamayı ifade eder; diğer bir deyişle, belirli bir eşzamanlılık düzeyi olan aktarım hızı, zaman içinde bir ölçümdür.|  
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |Aktarım hızı|Win: Double|Zaman birimi başına tamamlama sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
@@ -76,17 +77,17 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Açıklama|  
+|Olay|Olay Kimliği|Description|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|İş parçacığı ekleme (Hill-climbing) algoritması eşzamanlılık düzeyindeki bir değişikliğin yerinde olduğunu belirlediğinde denetimdeki bir değişikliği kaydeder.|  
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |Averageüretilen Iş|Win: Double|Ölçüm örneğinin ortalama performansı.|  
 |NewWorkerThreadCount|Win: UInt32|Yeni etkin çalışan iş parçacığı sayısı.|  
@@ -98,26 +99,26 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
-|Olay|Olay Kimliği|Açıklama|  
+|Olay|Olay Kimliği|Description|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|İş parçacığı havuzundaki verileri toplar.|  
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
-|Duration|Win: Double|Bu istatistiklerin toplandığı sürenin saniye cinsinden miktarı.|  
+|Süre|Win: Double|Bu istatistiklerin toplandığı sürenin saniye cinsinden miktarı.|  
 |Aktarım hızı|Win: Double|Bu Aralık sırasında saniye başına ortalama tamamlama sayısı.|  
-|ThreadWave|Win: Double|İç kullanım için ayrılmış.|  
-|ThroughputWave|Win: Double|İç kullanım için ayrılmış.|  
-|ThroughputErrorEstimate|Win: Double|İç kullanım için ayrılmış.|  
-|AverageThroughputErrorEstimate|Win: Double|İç kullanım için ayrılmış.|  
+|ThreadWave|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|ThroughputWave|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|ThroughputErrorEstimate|Win: Double|Dahili kullanım için ayrılmıştır.|  
+|AverageThroughputErrorEstimate|Win: Double|Dahili kullanım için ayrılmıştır.|  
 |ThroughputRatio|Win: Double|Bu zaman aralığı boyunca etkin çalışan iş parçacığı sayısında değişimler nedeniyle üretilen iş akışındaki göreli geliştirme.|  
-|Güven|Win: Double|ThroughputRatio alanının geçerlilik süresinin ölçüsü.|  
+|Güvenilirlik|Win: Double|ThroughputRatio alanının geçerlilik süresinin ölçüsü.|  
 |NewcontrolSetting|Win: Double|Etkin iş parçacığı sayısında gelecekteki Çeşitlemeler için temel olarak görev yapacak etkin çalışan iş parçacıklarının sayısı.|  
 |Newthreadwavebüyüklük|Win: UInt16|Etkin iş parçacığı sayısı ' nda gelecekteki varyasyonların büyüklüğü.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
@@ -130,7 +131,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -140,9 +141,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
-|Sayısı|Win: UInt64|Yeni oluşturulan iş parçacığı dahil olmak üzere g/ç iş parçacıklarının sayısı.|  
+|Count|Win: UInt64|Yeni oluşturulan iş parçacığı dahil olmak üzere g/ç iş parçacıklarının sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan çalışan iş parçacıklarının sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -151,7 +152,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -161,9 +162,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
-|Sayısı|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -172,7 +173,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -182,9 +183,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
-|Sayısı|Win: UInt64|Bu dahil iş parçacığı havuzundaki g/ç iş parçacıklarının sayısı.|  
+|Count|Win: UInt64|Bu dahil iş parçacığı havuzundaki g/ç iş parçacıklarının sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   
@@ -193,7 +194,7 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`ThreadingKeyword` (0x10000)|Bilgilendirici (4)|  
+|`ThreadingKeyword`(0x10000)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -203,9 +204,9 @@ Bu olaylar, çalışan ve g/ç iş parçacıkları hakkında bilgi toplar.
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
-|Sayısı|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
+|Count|Win: UInt64|İş parçacığı havuzunda kalan g/ç iş parçacığı sayısı.|  
 |Numemekli|Win: UInt64|Kullanımdan kaldırılan g/ç iş parçacığı sayısı.|  
 |ClrInstanceID|Win: UInt16|CLR veya CoreCLR örneği için benzersiz KIMLIK.|  
   

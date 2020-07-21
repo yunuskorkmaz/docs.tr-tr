@@ -1,5 +1,6 @@
 ---
 title: C# Programlama Kılavuzu
+description: C# ile .NET arasında erişilebilen temel C# dil özellikleri ve özellikleri hakkında ayrıntılı bilgi için bu kaynakları kullanın.
 ms.date: 05/02/2017
 f1_keywords:
 - cs.langref
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241662"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473883"
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 
@@ -50,7 +51,7 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
   
  [Dizin Oluşturucular](./indexers/index.md)  
   
- [Ekinlikler](./events/index.md)  
+ [Olaylar](./events/index.md)  
   
  [Genel Türler](./generics/index.md)  
   
@@ -62,7 +63,7 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
   
  [Ad alanları](./namespaces/index.md)  
   
- [Güvenli Olmayan Kod ve İşaretçiler](./unsafe-code-pointers/index.md)  
+ [Güvenli olmayan kod ve Işaretçiler](./unsafe-code-pointers/index.md)  
   
  [XML belge açıklamaları](./xmldoc/index.md)  
   
@@ -76,11 +77,11 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
   
  [Koleksiyonlar](./concepts/collections.md)  
   
- [Özel Durumlar ve Özel Durum İşleme](./exceptions/index.md)  
+ [Özel durumlar ve özel durum Işleme](./exceptions/index.md)  
   
  [Dosya Sistemi ve Kayıt Defteri (C# Programlama Kılavuzu)](./file-system/index.md)  
   
- [Birlikte Çalışabilirlik](./interop/index.md)  
+ [Birlikte çalışabilirlik](./interop/index.md)  
   
  [Yansıma](./concepts/reflection.md)  
   

@@ -1,16 +1,17 @@
 ---
 title: Güvenlik ETW Olayları
+description: .NET ' te tanımlayıcı ad doğrulama ve Authenticode doğrulaması sırasında oluşturulan güvenlik ETW olaylarını anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2fd2d450223cd16a7791b8f6c67afe6bcb954eb3
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715935"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474221"
 ---
 # <a name="security-etw-events"></a>Güvenlik ETW Olayları
 
@@ -21,7 +22,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Bilgilendirici (4)|  
+|`SecurityKeyword`(0x400)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -32,7 +33,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
 |ErrorCode|Win: UInt32|HResult hata kodu.|  
@@ -44,7 +45,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
 |Olayı yükseltmek için anahtar sözcük|Düzey|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Bilgilendirici (4)|  
+|`SecurityKeyword`(0x400)|Bilgilendirici (4)|  
   
  Aşağıdaki tabloda olay bilgileri gösterilmektedir.  
   
@@ -55,7 +56,7 @@ Güvenlik olayları, tanımlayıcı ad doğrulama ve Authenticode doğrulaması 
   
  Aşağıdaki tabloda olay verileri gösterilmektedir.  
   
-|Alan adı|Veri türü|Açıklama|  
+|Alan adı|Veri türü|Description|  
 |----------------|---------------|-----------------|  
 |Doğrulamaları ıationflags|Win: UInt32|Doğrulama bayrakları.|  
 |ErrorCode|Win: UInt32|HResult hata kodu.|  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 9765d13191f862a2e92bb00aa66a92c3a64ac303
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: eb3a591ba7b58e187eb03e65a3da6dfb47c9475c
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446945"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473987"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 
@@ -25,7 +25,7 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |-additionalfile|Kod oluşturmayı doğrudan etkilemeyen, ancak hata veya uyarı üretmek için çözümleyiciler tarafından kullanılabilen ek dosyaları adlandırır.|
 |[-addmodule](addmodule-compiler-option.md)|Belirtilen modülleri bu derlemeye bağlar|
 |-çözümleyici|Bu derlemeden çözümleyiciler çalıştırın (kısa biçim:-a)|
-|[-appconfig](appconfig-compiler-option.md)|Derleme bağlama zamanında app. config dosyasının konumunu belirtir.|
+|[-appconfig](appconfig-compiler-option.md)|Derleme bağlama zamanında app.config konumunu belirtir.|
 |[-baseaddress](baseaddress-compiler-option.md)|Oluşturulacak kitaplığın temel adresini belirtir.|
 |[-bugreport](bugreport-compiler-option.md)|' Hata raporu ' dosyası oluşturur. Bu dosya,-errorreport: Prompt veya-errorreport: Send ile kullanılırsa tüm kilitlenme bilgileriyle birlikte gönderilir.|
 |[-checked](checked-compiler-option.md)|Derleyicinin taşma denetimleri oluşturmasına neden olur.|
@@ -57,10 +57,10 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |ladı\<string>|Kaynak modülünün adını belirtin|
 |[-noconfig](noconfig-compiler-option.md)|Derleyiciye CSC 'yi otomatik olarak eklemesi talimatını verir. RSP dosyası.|
 |[-nologo](nologo-compiler-option.md)|Derleyici telif hakkı iletisini bastırır.|
-|[-nostdlib](nostdlib-compiler-option.md)|Derleyiciye standart kitaplığa (mscorlib. dll) Başvurmamasını söyler.|
+|[-nostdlib](nostdlib-compiler-option.md)|Derleyiciye standart kitaplığa (mscorlib.dll) Başvurmamasını söyler.|
 |[-nowarn](nowarn-compiler-option.md)|Belirli uyarı iletilerini devre dışı bırakır|
 |[-nowin32manifest](nowin32manifest-compiler-option.md)|Derleyicinin yürütülebilir dosyaya bir uygulama bildirimi katıştırmamasını sağlar.|
-|[-Nullable](nullable-compiler-option.md)|Nullable bağlam seçeneğini belirtir.|
+|[-nullable](nullable-compiler-option.md)|Nullable bağlam seçeneğini belirtir.|
 |[-optimize et](optimize-compiler-option.md)|İyileştirmeleri etkinleştirilir/devre dışı bırakır.|
 |[-out](out-compiler-option.md)|Çıkış dosyası adını belirtir (varsayılan: Ana sınıf veya ilk dosya ile dosyanın temel adı).|
 |-Parallel [+&#124;-]|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|
@@ -77,7 +77,7 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |[-Kaynak](resource-compiler-option.md)|Belirtilen kaynağı katıştırır.|
 |RuleSet\<file>|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir.|
-|[-target](target-compiler-option.md)|Dört seçenekten birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: Module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
+|[-target](target-compiler-option.md)|Aşağıdaki seçeneklerden birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: Module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |[-unsafe](unsafe-compiler-option.md)|[Güvenli olmayan](../keywords/unsafe.md) koda izin verir.|
 |[-utf8output](utf8output-compiler-option.md)|Derleyici iletilerini UTF-8 kodlamasında çıkarır.|
 |-sürüm|Derleyici sürüm numarasını ve çıkışı görüntüleyin.|

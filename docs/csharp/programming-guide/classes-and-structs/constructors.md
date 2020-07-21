@@ -1,52 +1,53 @@
 ---
-title: Constructors - C# Programlama Kılavuzu
+title: Oluşturucular-C# Programlama Kılavuzu
+description: Bir sınıf veya yapı oluşturulduğunda C# içindeki bir Oluşturucu çağırılır. Varsayılan değerleri ayarlamak için oluşturucuları kullanın, örnek oluşturmayı sınırlayın ve esnek, okunması kolay bir kod yazın.
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a731e648143f5e0ecf8860625962d8baa29fe26
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399793"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474910"
 ---
 # <a name="constructors-c-programming-guide"></a>Oluşturucular (C# Programlama Kılavuzu)
 
-Bir [sınıf](../../language-reference/keywords/class.md) veya [yapı](../../language-reference/builtin-types/struct.md) oluşturulduğunda, oluşturucusu çağrılır. Bir sınıf veya yapı, farklı bağımsız değişkenler alan birden çok oluşturucuya sahip olabilir. Oluşturucular, programcının varsayılan değerleri ayarlamasını, anlık değeri sınırlamasını ve esnek ve okunması kolay kod yazmasını sağlar. Daha fazla bilgi ve örnekler için, Yapı [oluşturucuları](./using-constructors.md) ve Örnek [Oluşturucuları](./instance-constructors.md)Kullanma'ya bakın.  
+Bir [sınıf](../../language-reference/keywords/class.md) veya [Yapı](../../language-reference/builtin-types/struct.md) oluşturulduğunda, Oluşturucusu çağırılır. Bir sınıf veya yapının farklı bağımsız değişkenler alan birden çok Oluşturucusu olabilir. Oluşturucular, programcının varsayılan değerleri ayarlama, örnek oluşturmayı sınırlandırma ve esnek ve okunması kolay bir kod yazma olanağı sağlar. Daha fazla bilgi ve örnek için bkz. oluşturucular ve [örnek oluşturucular](./instance-constructors.md) [kullanma](./using-constructors.md) .  
 
-## <a name="parameterless-constructors"></a>Parametresiz yapıcılar
+## <a name="parameterless-constructors"></a>Parametresiz oluşturucular
   
-Sınıfınız için bir oluşturucu sağlamazsanız, C# varsayılan olarak nesneyi anında belirleyen ve üye değişkenleri [C# türlerinin varsayılan değerlerinde](../../language-reference/builtin-types/default-values.md) listelenen varsayılan değerlere ayarlayan bir tane oluşturur. Yapınız için bir oluşturucu sağlamazsanız, C# her alanı varsayılan değerine otomatik olarak başlatması için *örtük bir parametresiz oluşturucuya* güvenir. Daha fazla bilgi ve örnekler için [Bkz. Örnek oluşturucular.](instance-constructors.md)  
+Sınıfınız için bir Oluşturucu sağlamazsanız, C#, nesneyi örnekleyen ve varsayılan olarak [C# Types](../../language-reference/builtin-types/default-values.md) makalesinde listelenen üye değişkenlerini varsayılan değerlere ayarlayan bir varsayılan olarak oluşturur. Struct için bir Oluşturucu sağlamazsanız, C# her bir alanı varsayılan değerine otomatik olarak başlatmak için *örtük parametresiz bir oluşturucuya* dayanır. Daha fazla bilgi ve örnek için bkz. [örnek oluşturucular](instance-constructors.md).  
 
-## <a name="constructor-syntax"></a>Yapıcı sözdizimi
+## <a name="constructor-syntax"></a>Oluşturucu sözdizimi
 
-Oluşturucu, adı türünün adıile aynı olan bir yöntemdir. Yöntem imzası yalnızca yöntem adını ve parametre listesini içerir; bir iade türü içermez. Aşağıdaki örnek, adlı bir sınıfın `Person`oluşturucusu gösterir.
+Oluşturucu, adı türünün adı ile aynı olan bir yöntemdir. Yöntemi imzasında yalnızca Yöntem adı ve parametre listesi bulunur; dönüş türü içermez. Aşağıdaki örnek adlı bir sınıf için oluşturucuyu gösterir `Person` .
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
 
-Bir oluşturucu tek bir deyim olarak uygulanabilirse, bir [ifade gövdesi tanımı](../statements-expressions-operators/expression-bodied-members.md)kullanabilirsiniz. Aşağıdaki örnek, oluşturucu `Location` *adı*adlı tek bir dize parametresi olan bir sınıf tanımlar. İfade gövdesi tanımı bağımsız değişkeni `locationName` alana atar.
+Bir Oluşturucu tek bir deyim olarak uygulan, bir [ifade gövdesi tanımı](../statements-expressions-operators/expression-bodied-members.md)kullanabilirsiniz. Aşağıdaki örnek, `Location` oluşturucusunun *adı*adlı tek bir dize parametresine sahip olan bir sınıfı tanımlar. İfade gövdesi tanımı, bağımsız değişkenini `locationName` alana atar.
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
-## <a name="static-constructors"></a>Statik yapıcılar
+## <a name="static-constructors"></a>Statik oluşturucular
 
-Önceki örneklerin tümü, yeni bir nesne oluşturan örnek oluşturucuları göstermiştir. Bir sınıf veya yapı, türün statik üyelerini baş harfe çeken statik bir oluşturucuya da sahip olabilir.  Statik yapıcılar parametresizdir. Statik alanları başlatmak için statik bir oluşturucu sağlamazsanız, C# derleyicisi statik alanları [C# türleri makalesinin Varsayılan değerlerinde](../../language-reference/builtin-types/default-values.md) listelenen varsayılan değerlerine amerler.
+Önceki örneklerde, yeni bir nesne oluşturan tüm gösterilen örnek oluşturucuları vardır. Bir sınıf veya yapı, türün statik üyelerini Başlatan statik bir oluşturucuya de sahip olabilir.  Statik oluşturucular parametresiz. Statik alanları başlatmak için statik bir Oluşturucu sağlamazsanız, C# derleyicisi statik alanları varsayılan değer [olan C# Types](../../language-reference/builtin-types/default-values.md) makalesinde listelendiği gibi varsayılan değerlerine başlatır.
 
-Aşağıdaki örnek, statik bir alanı başlatmak için statik bir oluşturucu kullanır.
+Aşağıdaki örnek, statik bir alanı başlatmak için statik bir Oluşturucu kullanır.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-Aşağıdaki örnekte görüldüğü gibi, ifade gövdesi tanımına sahip statik bir oluşturucu da tanımlayabilirsiniz.
+Aşağıdaki örnekte gösterildiği gibi, bir ifade gövdesi tanımıyla bir statik oluşturucu da tanımlayabilirsiniz.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
-Daha fazla bilgi ve örnekler için [Statik Oluşturucular'a](./static-constructors.md)bakın.  
+Daha fazla bilgi ve örnek için bkz. [statik oluşturucular](./static-constructors.md).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
- [Oluşturucuları Kullanma](./using-constructors.md)  
+ [Oluşturucular Kullanma](./using-constructors.md)  
   
  [Örnek Oluşturucuları](./instance-constructors.md)  
   
@@ -54,12 +55,12 @@ Daha fazla bilgi ve örnekler için [Statik Oluşturucular'a](./static-construct
   
  [Statik Oluşturucular](./static-constructors.md)  
   
- [Kopya oluşturucu nasıl yazılır?](./how-to-write-a-copy-constructor.md)  
+ [Kopya oluşturucu yazma](./how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve Structs](./index.md)
+- [Sınıflar ve yapılar](./index.md)
 - [Sonlandırıcılar](./destructors.md)
-- [Statik](../../language-reference/keywords/static.md)
-- [Neden Başharfler yapıcılar olarak Ters Sırada Çalışır? Birinci Bölüm](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [static](../../language-reference/keywords/static.md)
+- [Başlatıcılar neden oluşturucular olarak ters sırada çalışıyor? Birinci bölüm](https://docs.microsoft.com/archive/blogs/ericlippert/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

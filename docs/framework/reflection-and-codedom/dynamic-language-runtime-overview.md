@@ -1,5 +1,6 @@
 ---
 title: Dinamik dil çalışma zamanına genel bakış | Microsoft Docs
+description: .NET 'teki dinamik dil çalışma zamanına (DLR) genel bir bakış konusunu okuyun. DLR, CLR 'ye dinamik diller için bir hizmet kümesi ekleyen bir çalışma zamanı ortamıdır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dynamic language runtime
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2272bc60af35e3cdec3e1a71bbc6516565b4ec6e
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446901"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475157"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Dinamik Dil Çalışma Zamanına Genel Bakış
 
 *Dinamik dil çalışma zamanı* (DLR), ortak dil çalışma zamanına (CLR) dinamik diller için bir hizmet kümesi ekleyen bir çalışma zamanı ortamıdır. DLR, .NET Framework çalıştırmak ve statik olarak belirlenmiş dillere dinamik özellikler eklemek için dinamik dillerin geliştirmeyi kolaylaştırır.
 
-Dinamik diller, çalışma zamanında bir nesnenin türünü tanımlayabilir, ancak C# ve Visual Basic gibi statik olarak yazılmış dillerde (kullandığınızda `Option Explicit On`), tasarım zamanında nesne türlerini belirtmeniz gerekir. Dinamik dillere örnek olarak, Lizp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Coköşeli ve groovy verilebilir.
+Dinamik diller, çalışma zamanında bir nesnenin türünü tanımlayabilir, ancak C# ve Visual Basic gibi statik olarak yazılmış dillerde (kullandığınızda `Option Explicit On` ), tasarım zamanında nesne türlerini belirtmeniz gerekir. Dinamik dillere örnek olarak, Lizp, Smalltalk, JavaScript, PHP, Ruby, Python, ColdFusion, Lua, Coköşeli ve groovy verilebilir.
 
 Çoğu dinamik dil, geliştiriciler için aşağıdaki avantajları sağlar:
 
@@ -57,7 +58,7 @@ DLCı 'ler kullanılarak geliştirilmiş dillerin örnekleri şunları içerir:
  DLR aşağıdaki avantajları sağlar.
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>.NET Framework dinamik dillerin taşıma işlemini basitleştirir
- DLCı 'ler, dil uygulayıcıları, çözümleyiciler, semantik çözümleyiciler, kod oluşturucuları ve geleneksel olarak kendilerini oluşturmak zorunda oldukları diğer araçları oluşturmanızı önler. DLR 'yi kullanmak için bir dilin ağaç şeklinde bir yapıda, çalışma zamanı Yardımcısı yordamlarında ve <xref:System.Dynamic.IDynamicMetaObjectProvider> arabirimi uygulayan isteğe bağlı dinamik nesnelerde dil düzeyi kodu temsil eden *ifade ağaçları*üretmesi gerekir. DLR ve .NET Framework, çok sayıda kod analizi ve kod oluşturma görevini otomatikleştirin. Bu, dil uygulayıcıları 'nın benzersiz dil özelliklerine odaklanmalarını sağlar.
+ DLCı 'ler, dil uygulayıcıları, çözümleyiciler, semantik çözümleyiciler, kod oluşturucuları ve geleneksel olarak kendilerini oluşturmak zorunda oldukları diğer araçları oluşturmanızı önler. DLR 'yi kullanmak için bir dilin ağaç şeklinde bir yapıda, çalışma zamanı Yardımcısı yordamlarında ve arabirimi uygulayan isteğe bağlı dinamik nesnelerde dil düzeyi kodu temsil eden *ifade ağaçları*üretmesi gerekir <xref:System.Dynamic.IDynamicMetaObjectProvider> . DLR ve .NET Framework, çok sayıda kod analizi ve kod oluşturma görevini otomatikleştirin. Bu, dil uygulayıcıları 'nın benzersiz dil özelliklerine odaklanmalarını sağlar.
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Statik olarak belirlenmiş dillerdeki dinamik özellikleri sunar
  C# ve Visual Basic gibi mevcut .NET Framework diller, dinamik nesneler oluşturabilir ve bunları statik olarak yazılmış nesnelerle birlikte kullanabilir. Örneğin, C# ve Visual Basic HTML, Belge Nesne Modeli (DOM) ve .NET yansıma için dinamik nesneler kullanabilir.
@@ -80,9 +81,9 @@ DLCı 'ler kullanılarak geliştirilmiş dillerin örnekleri şunları içerir:
 
 - İfade ağaçları. DLR, dil semantiğini temsil etmek için ifade ağaçları kullanır. Bu amaçla, DLR, denetim akışını, atamayı ve diğer dil modelleme düğümlerini dahil etmek için LINQ ifade ağaçları genişletmiştir. Daha fazla bilgi için bkz. [Expression ağaçlar (C#)](../../csharp/programming-guide/concepts/expression-trees/index.md) veya [ifade ağaçları (Visual Basic)](../../visual-basic/programming-guide/concepts/expression-trees/index.md).
 
-- Site önbelleğe alma çağrısı yapın. *Dinamik bir çağrı sitesi* , kodda veya `a + b` `a.b()` dinamik nesnelerde olduğu gibi bir işlem gerçekleştirdiğiniz bir yerdir. DLR, `a` ve `b` (genellikle bu nesnelerin türleri) özelliklerini ve işlemle ilgili bilgileri önbelleğe alır. Bu tür bir işlem daha önce gerçekleştirilirse, DLR hızlı dağıtım için önbellekten tüm gerekli bilgileri alır.
+- Site önbelleğe alma çağrısı yapın. *Dinamik bir çağrı sitesi* , kodda `a + b` veya dinamik nesnelerde olduğu gibi bir işlem gerçekleştirdiğiniz bir yerdir `a.b()` . DLR, `a` ve `b` (genellikle bu nesnelerin türleri) özelliklerini ve işlemle ilgili bilgileri önbelleğe alır. Bu tür bir işlem daha önce gerçekleştirilirse, DLR hızlı dağıtım için önbellekten tüm gerekli bilgileri alır.
 
-- Dinamik nesne birlikte çalışabilirliği. DLR, dinamik nesneleri ve işlemleri temsil eden bir sınıf ve arabirim kümesi sağlar ve dinamik kitaplıkların dil uygulayıcıları ve yazarları tarafından kullanılabilir. Bu sınıflar ve arabirimler, <xref:System.Dynamic.IDynamicMetaObjectProvider> <xref:System.Dynamic.DynamicMetaObject> <xref:System.Dynamic.DynamicObject>,, ve <xref:System.Dynamic.ExpandoObject>içerir.
+- Dinamik nesne birlikte çalışabilirliği. DLR, dinamik nesneleri ve işlemleri temsil eden bir sınıf ve arabirim kümesi sağlar ve dinamik kitaplıkların dil uygulayıcıları ve yazarları tarafından kullanılabilir. Bu sınıflar ve arabirimler,,, <xref:System.Dynamic.IDynamicMetaObjectProvider> <xref:System.Dynamic.DynamicMetaObject> ve içerir <xref:System.Dynamic.DynamicObject> <xref:System.Dynamic.ExpandoObject> .
 
 DLR, yalnızca .NET Framework değil, ancak Silverlight ve COM dahil olmak üzere diğer altyapılarla ve hizmetlerle iletişim kurmak için çağıran sitelerde ciltler kullanır. Ciltler bir dilin semantiğini kapsüller ve ifade ağaçları kullanarak bir çağrı sitesinde nasıl işlem yapılacağını belirtir. Bu, bir DLR kullanan dinamik ve statik olarak belirlenmiş dillerin kitaplıklarını paylaşmak ve DLR 'nin desteklediği tüm teknolojiler için erişim elde etmenizi sağlar.
 

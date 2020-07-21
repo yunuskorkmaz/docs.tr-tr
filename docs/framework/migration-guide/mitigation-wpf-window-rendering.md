@@ -1,29 +1,30 @@
 ---
 title: 'Azaltma: WPF Penceresi İşleme'
+description: Windows 8 veya üzeri sürümlerde çalışan .NET Framework 4,6 ' de WPF pencere işleme etkisi ve hafifletme hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-ms.openlocfilehash: 42d6abf1ba6ed7c17a5a5604e98b5ee46d0c3ac2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d624478d17a4076107438f71b0a86eeb6d9f3ea4
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457772"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475339"
 ---
 # <a name="mitigation-wpf-window-rendering"></a>Azaltma: WPF Penceresi İşleme
 
-Windows 8 ve üzeri üzerinde çalışan .NET Framework 4.6'da, çoklu monitör senaryosunda tek ekranın dışına uzandığında tüm pencere kırpma olmadan işlenir.
+Windows 8 ve üzeri sürümlerde çalışan .NET Framework 4,6 ' de, tüm pencere, birden çok izleyici senaryosunda tek bir görüntü dışına genişlemediğinde kırpma olmadan işlenir.
 
 ## <a name="impact"></a>Etki
 
-Genel olarak, tüm pencereyi kırpmadan birden çok monitör arasında işlemek beklenen davranıştır. Ancak, Windows 7 ve önceki sürümlerde, pencerenin bir bölümünün ikinci monitörde işlenmesi önemli bir performans etkisi olduğundan, tek bir ekranın ötesine geçtiklerinde WPF pencereler kırpılır.
+Genel olarak, bir pencerenin tamamını kırpmadan birden çok monitörde işlemek beklenen davranıştır. Bununla birlikte, Windows 7 ve önceki sürümlerde WPF pencereleri, ikinci monitörde pencerenin bir kısmını işlemek önemli bir performans etkisi sağladığından, tek bir ekranı genişlediklerinde kırpılır.
 
-WPF pencerelerini Windows 8 ve üzeri monitörler arasında oluşturmanın kesin etkisi, çok sayıda etkene bağlı olduğundan tam olarak ölçülemez. Bazı durumlarda, özellikle grafik yoğun uygulamaları çalıştıran ve windows straddling monitörleri olan kullanıcılar için performans üzerinde istenmeyen bir etki yaratabilir. Diğer durumlarda, .NET Framework sürümlerinde tutarlı bir davranış isteyebilirsiniz.
+WPF pencerelerini Windows 8 ve üzeri sürümlerde izlemenin kesin etkileri, çok sayıda etkene bağlı olduğundan tam olarak nicelik yapamaz. Bazı durumlarda, özellikle grafik yoğun uygulamalar çalıştıran ve Windows tarafından ayarlanan izleyiciler bulunan kullanıcılar için performans üzerinde istenmeyen bir etkisi olabilir. Diğer durumlarda, .NET Framework sürümler arasında tutarlı bir davranış de isteyebilirsiniz.
 
 ## <a name="mitigation"></a>Risk azaltma
 
-Bu değişikliği devre dışı bırakıp, tek bir ekranın ötesine uzandığında WPF penceresini kırpma önceki davranışına geri dönebilirsiniz. Bunu yapmak için iki yol vardır:
+Bu değişikliği devre dışı bırakabilir ve tek bir görüntüleme ötesinde bir WPF penceresinin kırpılması için önceki davranışa geri dönebilir. Bunu yapmak için iki yol vardır:
 
-- `<EnableMultiMonitorDisplayClipping>` Uygulama yapılandırma dosyanızın `<appSettings>` bölümüne öğeyi ekleyerek, Windows 8 veya sonraki uygulamalarda bu davranışı devre dışı layabilir veya etkinleştirebilirsiniz. Örneğin, aşağıdaki yapılandırma bölümü kırpma olmadan işleme devre dışı katıyor:
+- `<EnableMultiMonitorDisplayClipping>` `<appSettings>` Uygulama yapılandırma dosyanızın bölümüne öğesi eklenerek, Windows 8 veya üzeri sürümlerde çalışan uygulamalarda bu davranışı etkinleştirebilir veya devre dışı bırakabilirsiniz. Örneğin, aşağıdaki yapılandırma bölümü kırpma olmadan işlemeyi devre dışı bırakır:
 
   ```xml
   <appSettings>
@@ -31,13 +32,13 @@ Bu değişikliği devre dışı bırakıp, tek bir ekranın ötesine uzandığı
     </appSettings>
   ```
 
-  Yapılandırma `<EnableMultiMonitorDisplayClipping>` ayarı iki değerden biri olabilir:
+  `<EnableMultiMonitorDisplayClipping>`Yapılandırma ayarı iki değerden birini içerebilir:
 
-  - `true`, işleme sırasında sınırları izlemek için pencerelerin kırpma etkinleştirmek için.
+  - `true`, işleme sırasında sınırları izlemek üzere Windows 'un kırpılmasını etkinleştirmek için.
 
-  - `false`, işleme sırasında sınırları izlemek için pencerelerin kırpma devre dışı.
+  - `false`, işleme sırasında sınırları izlemek üzere Windows 'un kırpılmasını devre dışı bırakmak için.
 
-- <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> Uygulama başlangıç `true` noktasında özelliği ayarlayarak.
+- <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A>Uygulama başlangıcında özelliğini olarak ayarlayarak `true` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

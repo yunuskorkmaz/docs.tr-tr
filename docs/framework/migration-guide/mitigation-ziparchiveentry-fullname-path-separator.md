@@ -1,5 +1,6 @@
 ---
-title: 'Azaltma: ZipArchiveEntry.FullName Yol Ayırıcı'
+title: 'Risk azaltma: ZipArchiveEntry. FullName yol ayırıcısı'
+description: ZipArchiveEntry. FullName özelliği için yol ayırıcısının, .NET Framework 4.6.1 hedeflenen uygulamalarla başlayarak nasıl değiştiğini öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application compatibility
@@ -8,26 +9,26 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 3f6c7f258fd5dbf01db4d79b73b88ddd7484f9b2
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8cd6362038ce0548681f3d3b44724f3ef9ff62cb
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102625"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475300"
 ---
-# <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Azaltma: ZipArchiveEntry.FullName Yol Ayırıcı
+# <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Risk azaltma: ZipArchiveEntry. FullName yol ayırıcısı
 
-.NET Framework 4.6.1'i hedefleyen uygulamalardan başlayarak, <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> özellikte kullanılan yol ayırıcısı .NET Framework'ün önceki sürümlerinde kullanılan ters eğik çizgiden ("/")\\ileri eğik çizgiye ("/") dönüşmüştür. <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType><xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> nesneler, yöntemin aşırı yüklerinden birini çağırarak oluşturulur.  
+.NET Framework 4.6.1 ' i hedefleyen uygulamalarla başlayarak, özellikte kullanılan yol ayırıcısı, <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> \\ önceki .NET Framework sürümlerinde kullanılan ters eğik çizgiyle ("") ("/") değiştirilmiştir. <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType>nesneler, yönteminin aşırı yüklerinden biri çağırarak oluşturulur <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> .  
   
 ## <a name="impact"></a>Etki  
- Değişiklik, .NET uygulamasını 4.4.17.1 bölümüne uygun bir şekilde [getirir. ZIP Dosya Formatı Belirtimi](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) ve sağlar. Windows olmayan sistemlerde sıkıştırılacak ZIP arşivleri.  
+ Bu değişiklik, .NET uygulamasını konusunun Bölüm 4.4.17.1 ile uyum sağlar [. ZIP dosyası biçim belirtimi](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) ve izin verir. ZIP arşivleri Windows dışı sistemlerde açılacak.  
   
- MacOS gibi Windows dışı işletim sistemlerinde .NET Framework'ün önceki bir sürümünü hedefleyen bir uygulama tarafından oluşturulan zip dosyasını sıkıştırmak dizin yapısını koruyamaz. Örneğin, MacOS'ta, dosya adı dizin yolunu, herhangi bir ters eğik çizgi ("\\") karakterini ve dosya adını oluşturan bir dosya kümesi oluşturur. Sonuç olarak, sıkıştırılmış dosyaların dizin yapısı korunmaz.  
+ MacOS gibi Windows dışı işletim sistemlerinde .NET Framework önceki bir sürümünü hedefleyen, dizin yapısını koruyamayan bir uygulama tarafından oluşturulan bir zip dosyasını açma işlemi başarısız oluyor. Örneğin, MacOS 'ta dosya adı dizin yolunu, herhangi bir ters eğik çizgi (" \\ ") karakterini ve dosya adını birleştiren bir dosya kümesi oluşturur. Sonuç olarak, açılan dosyaların dizin yapısı korunmaz.  
   
- Bu değişikliğin . .NET Framework <xref:System.IO> ad alanında API'ler tarafından Windows işletim sisteminde sıkıştırılan ZIP dosyaları en az düzeyde olmalıdır, çünkü bu API'ler\\yol ayırıcı karakteri olarak bir eğik çizgi ("/") veya ters eğik çizgi (" ") sorunsuz bir şekilde işleyebilir.  
+ Bu değişikliğin üzerinde etkisi. <xref:System.IO>Bu API 'ler, yol ayırıcı karakteri olarak eğik çizgi ("/") veya ters eğik çizgi ("") ile sorunsuz bir şekilde işleyebildiğinden, Windows işletim sisteminde .NET Framework API 'ler tarafından AÇıLAN ZIP dosyaları en az olmalıdır \\ .  
   
 ## <a name="mitigation"></a>Risk azaltma  
- Bu davranış istenmiyorsa, uygulama yapılandırma dosyanızın [ \<çalışma>](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne yapılandırma ayarı ekleyerek devre dışı kullanabilirsiniz. Aşağıda hem `<runtime>` bölümü hem de devre dışı bırakma anahtarı nı gösterilmektedir.  
+ Bu davranış istenmeyen bir durum ise, [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) uygulama yapılandırma dosyanızın bölümüne bir yapılandırma ayarı ekleyerek devre dışı bırakabilirsiniz. Aşağıda hem `<runtime>` bölümü hem de geri çevirme anahtarı gösterilmektedir.  
   
 ```xml  
 <runtime>  
@@ -35,7 +36,7 @@ ms.locfileid: "82102625"
 </runtime>  
 ```  
   
- Ayrıca, .NET Framework'ün önceki sürümlerini hedefleyen ancak .NET Framework 4.6.1 ve sonraki sürümlerde çalışan uygulamalar, uygulama yapılandırma dosyasının [ \<çalışma süresi>](../configure-apps/file-schema/runtime/runtime-element.md) bölümüne yapılandırma ayarını ekleyerek bu davranışı seçebilir. Aşağıdaki bölüm ve `<runtime>` opt-in anahtarı hem de gösterir.  
+ Ayrıca, .NET Framework önceki sürümlerini hedefleyen ancak .NET Framework 4.6.1 ve sonraki sürümlerde çalışan uygulamalar, [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) uygulama yapılandırma dosyasının bölümüne bir yapılandırma ayarı ekleyerek bu davranışı kabul edebilir. Aşağıda hem `<runtime>` bölümü hem de kabul etme anahtarı gösterilmektedir.  
   
 ```xml  
 <runtime>  

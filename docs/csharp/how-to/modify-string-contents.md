@@ -1,14 +1,15 @@
 ---
 title: Dize içeriğini değiştirme-C# Kılavuzu
+description: Yeni bir dize nesnesi döndüren C# ' de var olan dize içeriklerini değiştirmek için çeşitli tekniklerin örneklerini gözden geçirin.
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: e607a8a2e96a73f64463d75a75a2bfe3f518d118
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324172"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473974"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C 'de dize içeriğini değiştirme\#
 

@@ -1,5 +1,5 @@
 ---
-title: -hedef (C# Derleyici Seçenekleri)
+title: -target (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /target
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: ea5481810e629d911c4d5aba62e60c98d0783f34
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 80cec001b27000e71b74f380a0f33e30602c01af
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644352"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86473922"
 ---
-# <a name="-target-c-compiler-options"></a>-hedef (C# Derleyici Seçenekleri)
-**-hedef** derleyici seçeneği dört formdan birinde belirtilebilir:  
+# <a name="-target-c-compiler-options"></a>-target (C# derleyici seçenekleri)
+**-Target** derleyici seçeneği aşağıdaki biçimlerden birinde belirtilebilir:  
   
  [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- Windows 8.x Store uygulamaları için bir .exe dosyası oluşturmak için.  
+ Windows 8. x Mağazası uygulamaları için bir. exe dosyası oluşturmak için.  
   
  [-target:exe](./target-exe-compiler-option.md)  
- Bir .exe dosyası oluşturmak için.  
+ Bir. exe dosyası oluşturmak için.  
   
  [-target:library](./target-library-compiler-option.md)  
- Kod kitaplığı oluşturmak için.  
+ Bir kod kitaplığı oluşturun.  
   
  [-target:module](./target-module-compiler-option.md)  
  Bir modül oluşturmak için.  
@@ -35,19 +35,19 @@ ms.locfileid: "81644352"
  Bir Windows programı oluşturmak için.  
   
  [-target:winmdobj](./target-winmdobj-compiler-option.md)  
- Bir ara .winmdobj dosyası oluşturmak için.  
+ Ara. winmdobj dosyası oluşturmak için.  
   
- **-target:module**, -target belirtmediğiniz sürece **hedef,** bir çıktı dosyasına bir .NET Framework derleme bildiriminin yerleştirilmesine neden olur. Daha fazla bilgi için .NET ve [Ortak Özniteliklerdeki](../attributes/global.md) [Derlemeler'e](../../../standard/assembly/index.md) bakın.  
+ **-Target: Module**belirtmediğiniz takdirde **-target** bir .NET Framework derleme bildiriminin bir çıkış dosyasına yerleştirilmesine neden olur. Daha fazla bilgi için bkz. .NET ve [ortak özniteliklerde](../attributes/global.md) [derlemeler](../../../standard/assembly/index.md) .  
   
- Derleme bildirimi derlemedeki ilk .exe çıktı dosyasına veya .exe çıktı dosyası yoksa ilk DLL'ye yerleştirilir. Örneğin, aşağıdaki komut satırında, bildirim `1.exe`yerleştirilir:  
+ Derleme bildirimi, derleme içindeki ilk. exe çıkış dosyasına veya. exe çıkış dosyası yoksa ilk DLL 'de yerleştirilir. Örneğin, aşağıdaki komut satırında bildirim yerleştirilecek `1.exe` :  
   
 ```console  
 csc -out:1.exe t1.cs -out:2.netmodule t2.cs  
 ```  
   
- Derleyici derleme başına yalnızca bir derleme bildirimi oluşturur. Derlemedeki tüm dosyalar la ilgili bilgiler derleme manifestosuna yerleştirilir. **-target:module** ile oluşturulanlar dışındaki tüm çıktı dosyaları bir derleme bildirimi içerebilir. Komut satırında birden çok çıktı dosyası oluşturulurken, yalnızca bir derleme bildirimi oluşturulabilir ve komut satırında belirtilen ilk çıktı dosyasına geçmesi gerekir. İlk çıktı dosyası ne olursa olsun (**-hedef:exe**, **-target:winexe**, **-target:library** veya **-target:module**), aynı derlemede üretilen diğer çıktı dosyaları modüller olmalıdır (**-target:module**).  
+ Derleyici, derleme başına yalnızca bir derleme bildirimi oluşturur. Bir derlemedeki tüm dosyalar hakkındaki bilgiler, derleme bildirimine yerleştirilir. **-Target: Module** ile oluşturulanlar hariç tüm çıkış dosyaları bir derleme bildirimi içerebilir. Komut satırında birden çok çıkış dosyası üretilirken, yalnızca bir derleme bildirimi oluşturulabilir ve komut satırında belirtilen ilk çıkış dosyasına gitmelidir. İlk çıkış dosyasının ne olduğuna bakılmaksızın (**-target: exe**, **-target: winexe**, **-target: Library** veya **-target: Module**), aynı derlemede üretilen diğer çıkış dosyaları modüller olmalıdır (**-target: Module**).  
   
- Bir derleme oluşturursanız, kodunuzun tamamının veya bir kısmının ÖZnitelikile <xref:System.CLSCompliantAttribute> CLS uyumlu olduğunu belirtebilirsiniz.  
+ Bir derleme oluşturursanız, kodunuzun tümünün veya bir kısmının öznitelik ile CLS uyumlu olduğunu belirtebilirsiniz <xref:System.CLSCompliantAttribute> .  
   
 ```csharp  
 // target_clscompliant.cs  
@@ -60,10 +60,10 @@ public class TestClass
 }  
 ```  
   
- Bu derleyici seçeneğini programlı olarak ayarlama <xref:VSLangProj80.ProjectProperties3.OutputType%2A>hakkında daha fazla bilgi için bkz.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.OutputType%2A> ..  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
-- [-alt sistem versiyonu (C# Derleyici Seçenekleri)](./subsystemversion-compiler-option.md)
+- [-subsystemversion (C# derleyici seçenekleri)](./subsystemversion-compiler-option.md)

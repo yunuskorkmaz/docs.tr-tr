@@ -1,16 +1,17 @@
 ---
 title: Tek boyutlu diziler-C# Programlama Kılavuzu
+description: Dizi öğesi türü ve öğe sayısını belirten New işlecini kullanarak C# ' de tek boyutlu bir dizi oluşturun.
 ms.date: 06/03/2020
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: e189253eedc21fa2d51e16407f04b034610bb57b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ada01262d57cbfebc8bfa1a5fee0639a10db5a4b
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410250"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86474598"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tek Boyutlu Diziler (C# Programlama Kılavuzu)
 
@@ -26,7 +27,7 @@ Diziler, bir dizi dizeyi bildiren aşağıdaki örnek gibi, belirttiğiniz herha
 
 ## <a name="array-initialization"></a>Dizi başlatma
 
-Diziyi bildirdiğinizde dizideki öğeleri başlatabilirsiniz. Başlangıç listesindeki öğe sayısı tarafından çıkarsandığı için uzunluk belirleyicisi gerekli değildir. Örnek:
+Diziyi bildirdiğinizde dizideki öğeleri başlatabilirsiniz. Başlangıç listesindeki öğe sayısı tarafından çıkarsandığı için uzunluk belirleyicisi gerekli değildir. Örneğin:
 
 :::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="IntInitialization":::
 
@@ -38,7 +39,7 @@ Aşağıdaki kod, her dizi öğesinin bir günün adı ile başlatıldığı diz
 
 :::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="ShorthandInitialization":::
 
-Bir dizi değişkenini oluşturmadan bildirebilirsiniz, ancak `new` Bu değişkene yeni bir dizi atadığınızda işlecini kullanmanız gerekir. Örnek:
+Bir dizi değişkenini oluşturmadan bildirebilirsiniz, ancak `new` Bu değişkene yeni bir dizi atadığınızda işlecini kullanmanız gerekir. Örneğin:
 
 :::code language="csharp" source="snippets/SingleDimensionArrays.cs" id="DeclareAllocate":::
 

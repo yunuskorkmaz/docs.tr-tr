@@ -1,5 +1,6 @@
 ---
 title: Dinamik Kaynak Kodu Oluşturma ve Derleme
+description: Kod Belge Nesne Modeli (CodeDOM) ile .NET 'te dinamik kaynak kodu derleyin ve oluşturun. CodeDOM öğeleri, CodeDOM grafiği oluşturacak şekilde bağlantılıdır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Code Document Object Model
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 3cdd89ac9745f6af133ca683afff64283f2727d1
+ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544993"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86475105"
 ---
 # <a name="compile-and-generate-dynamic-source-code"></a>Derleme ve dinamik kaynak kodu oluşturma
 
@@ -23,11 +24,11 @@ ms.locfileid: "75544993"
   
 Kaynak kodunu temsil etmek için CodeDOM öğeleri birbirlerine bağlanır ve bu, bazı kaynak kodların yapısını modelleyen, CodeDOM grafiği olarak bilinen bir veri yapısı oluşturur.  
   
-Ad <xref:System.CodeDom?displayProperty=fullName> alanı, belirli bir programlama dilinden bağımsız olarak kaynak kodun mantıksal yapısını temsil eden türleri tanımlar. Ad <xref:System.CodeDom.Compiler?displayProperty=fullName> alanı, CodeDOM grafiklerinden kaynak kodu oluşturmak ve desteklenen dillerde kaynak kodu derlemesini yönetmek için türleri tanımlar. Derleyici satıcıları veya geliştiriciler desteklenen dillerin kümesini genişletebilir.  
+<xref:System.CodeDom?displayProperty=fullName>Ad alanı, belirli bir programlama dilinden bağımsız olarak kaynak kodun mantıksal yapısını temsil eden türleri tanımlar. <xref:System.CodeDom.Compiler?displayProperty=fullName>Ad alanı, CodeDOM grafiklerinden kaynak kodu oluşturmak ve desteklenen dillerde kaynak kodu derlemesini yönetmek için türleri tanımlar. Derleyici satıcıları veya geliştiriciler desteklenen dillerin kümesini genişletebilir.  
   
 Dilden bağımsız kaynak kodu modelleme, bir programın birden çok dilde veya belirsiz bir hedef dil için bir program modeli için kaynak kodu oluşturması gerektiğinde değerli olabilir. Örneğin, bazı tasarımcılar, kaynak kodu doğru programlama dilinde oluşturmak için CodeDOM 'yi bir dil soyutlama arabirimi olarak kullanır, bu dil için CodeDOM desteği kullanılabilir.  
   
-.NET Framework,, ve <xref:Microsoft.CSharp.CSharpCodeProvider> <xref:Microsoft.JScript.JScriptCodeProvider> <xref:Microsoft.VisualBasic.VBCodeProvider>için kod oluşturucuları ve kod derleyicileri içerir.  
+.NET Framework,, ve için kod oluşturucuları ve kod derleyicileri içerir <xref:Microsoft.CSharp.CSharpCodeProvider> <xref:Microsoft.JScript.JScriptCodeProvider> <xref:Microsoft.VisualBasic.VBCodeProvider> .  
   
 ## <a name="in-this-section"></a>Bu bölümde
 
@@ -37,7 +38,7 @@ Dilden bağımsız kaynak kodu modelleme, bir programın birden çok dilde veya 
   
 - [Bir CodeDOM grafiğinden kaynak kodu oluşturma ve bir programı derleme](generating-and-compiling-source-code-from-a-codedom-graph.md)  
 
-  Kaynak kodu oluşturmayı ve `System.CodeDom.Compiler` ad alanında tanımlanan sınıfları kullanarak oluşturulan kodu bir dış derleyici ile derlemeyi açıklar.  
+  Kaynak kodu oluşturmayı ve ad alanında tanımlanan sınıfları kullanarak oluşturulan kodu bir dış derleyici ile derlemeyi açıklar `System.CodeDom.Compiler` .  
   
 - [Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma](how-to-create-an-xml-documentation-file-using-codedom.md)  
 
