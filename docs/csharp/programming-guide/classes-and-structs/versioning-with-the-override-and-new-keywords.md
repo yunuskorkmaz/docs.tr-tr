@@ -1,16 +1,17 @@
 ---
 title: Geçersiz kılma ve yeni anahtar sözcüklerle sürüm oluşturma-C# Programlama Kılavuzu
+description: C# ' de temel ve türetilmiş sınıflar için sürüm oluşturma hakkında bilgi edinin ve bir yöntemin devralınmış bir yöntemi geçersiz kılmayı veya gizlemeyi amaçladığı bir yöntemi nasıl belirteceğinizi öğrenin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c2630741e1055a14dd5b9e4445d660cfd68891b0
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207945"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863870"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Geçersiz Kılma ve Yeni Anahtar Sözcüklerle Sürüm Oluşturma (C# Programlama Kılavuzu)
 C# dili, farklı kitaplıklarda [temel](../../language-reference/keywords/base.md) ve türetilmiş sınıflar arasında sürüm oluşturmanın, geriye dönük uyumluluğu geliştirebilir ve bakımını yapabilmesi için tasarlanmıştır. Bu, örneğin, türetilmiş bir sınıftaki üye ile aynı ada sahip bir temel [sınıfta](../../language-reference/keywords/class.md) yeni bir üyenin giriş C# tarafından tamamen desteklendiğinden ve beklenmeyen davranışa yol açmadığı anlamına gelir. Ayrıca, bir yöntemin devralınan bir yöntemi geçersiz kılmak için bir yöntemin açıkça veya bir yöntemin devralınmış bir adlandırılmış yöntemi gizleyen yeni bir yöntem olup olmadığı anlamına gelir.  

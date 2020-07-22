@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: CodeDOM Kullanarak XML Belge Dosyası Oluşturma'
+description: Bu ayrıntılı örnekte, bkz. Kod Belge Nesne Modeli (CodeDOM) kullanarak XML belge dosyası oluşturan kod oluşturma.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: b9e11a51048733dbfc42ff9f575e18effc80db07
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f905b996910c6cfbc62378cc4cd6bb8c0e0e6fd4
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596252"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865157"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Nasıl yapılır: CodeDOM kullanarak XML belge dosyası oluşturma
 
@@ -50,7 +51,7 @@ Aşağıdaki kod örneği, belge açıklamalarını içeren bir CodeDOM grafiği
  [!code-csharp[CodeDomHelloWorldSample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomHelloWorldSample/cs/program.cs#1)]
  [!code-vb[CodeDomHelloWorldSample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomHelloWorldSample/vb/program.vb#1)]  
   
- Kod örneği, *Helloworlddoc. xml* dosyasında aşağıdaki XML belgelerini oluşturur.  
+ Kod örneği, *HelloWorldDoc.xml* dosyasında aşağıdaki XML belgelerini oluşturur.  
   
 ```xml  
 <?xml version="1.0" ?>

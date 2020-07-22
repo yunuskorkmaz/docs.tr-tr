@@ -1,16 +1,17 @@
 ---
 title: Örtük olarak yazılan yerel değişkenler-C# Programlama Kılavuzu
+description: C# ' deki var anahtar sözcüğü, derleyicinin başlangıç deyiminin sağ tarafındaki ifadeden değişkenin türünü çıkarmasını söyler.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6badb8588dedda80227ab38bee027cf2890c8672
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240713"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864221"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Örtük olarak yazılan yerel değişkenler (C# Programlama Kılavuzu)
 
@@ -97,7 +98,7 @@ Kullanımı, `var` kodunuzun basitleştirilmesine yardımcı olur, ancak kullan�
 - [Sorgu ifadesinde türü örtük olarak belirlenmiş yerel değişkenleri ve dizileri kullanma](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Anonim Türler](anonymous-types.md)
 - [Nesne ve Koleksiyon Başlatıcıları](object-and-collection-initializers.md)
-- [l](../../language-reference/keywords/var.md)
+- [var](../../language-reference/keywords/var.md)
 - [C# üzerinde LINQ](../../linq/index.md)
 - [LINQ (dil ile tümleşik sorgu)](../../linq/index.md)
 - [:](../../language-reference/keywords/for.md)

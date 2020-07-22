@@ -1,16 +1,17 @@
 ---
 title: Çok biçimlilik-C# Programlama Kılavuzu
+description: Temel ve türetilmiş sınıflar arasındaki ilişkiyi açıklayan C# gibi nesne odaklı programlama dillerinde önemli bir kavram olan çok biçimlilik hakkında bilgi edinin.
 ms.date: 02/08/2020
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 65f5c882ec4d7f8cbcc7ec7bf535091febfba64d
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 2a1ca4c498c5885c7d34475405ac83c4cccecd6f
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662660"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864130"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 

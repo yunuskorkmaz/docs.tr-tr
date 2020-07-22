@@ -1,29 +1,30 @@
 ---
-title: Numaralandırma için yeni bir yöntem nasıl oluşturulur - C# Programlama Kılavuzu
+title: Numaralandırma için yeni bir yöntem oluşturma-C# Programlama Kılavuzu
+description: C# ' deki bir numaralandırmaya işlevsellik eklemek için uzantı yöntemlerini nasıl kullanacağınızı öğrenin. Bu örnek, notlar adlı bir numaralandırma için geçirme adlı bir genişletme yöntemi gösterir.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [C#]
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 0d8e562342239c8ac3c53e05086ede9c234d0b63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6c01a73476e98e8344a7a8dc35a5fd80384fc7a2
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705658"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864494"
 ---
-# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Numaralandırma için yeni bir yöntem nasıl oluşturulur (C# Programlama Kılavuzu)
-Belirli bir enum türüne özgü işlevsellik eklemek için uzantı yöntemlerini kullanabilirsiniz.  
+# <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Numaralandırma için yeni bir yöntem oluşturma (C# Programlama Kılavuzu)
+Belirli bir numaralandırma türüne özgü işlevselliği eklemek için uzantı yöntemlerini kullanabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `Grades` numaralandırma, bir öğrencinin bir sınıfta alabileceği olası harf notlarını temsil eder. Bu türdeki `Passing` her örneğin `Grades` artık bir geçer notu temsil edip etmediğini "bilmesi" için türe adlandırılmış bir uzantı yöntemi eklenir.  
+ Aşağıdaki örnekte, `Grades` sabit listesi bir öğrencinin bir sınıfta alabileceği olası harf çalışmalarını temsil eder. Adlandırılmış bir genişletme yöntemi `Passing` türüne eklenir, `Grades` böylece bu türün her örneği, bir geçen sınıfı temsil edip etmediğini "bilir".  
   
  [!code-csharp[csProgGuideExtensionMethods#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#2)]  
   
- `Extensions` Sınıfın dinamik olarak güncelleştirilen statik bir değişken de içerdiğini ve uzantı yönteminin dönüş değerinin bu değişkenin geçerli değerini yansıttığını unutmayın. Bu, arka planda, uzantı yöntemlerinin doğrudan tanımlandığı statik sınıfa çağrıldığını gösterir.  
+ `Extensions`Sınıfının ayrıca dinamik olarak güncellenen bir statik değişken içerdiğini ve Genişletme yönteminin dönüş değerinin o değişkenin geçerli değerini yansıttığını unutmayın. Bu, arka planda uzantı yöntemlerinin tanımlandıkları statik sınıfta doğrudan çağrılacağını gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Genişletme Yöntemleri](./extension-methods.md)
+- [Uzantı yöntemleri](./extension-methods.md)

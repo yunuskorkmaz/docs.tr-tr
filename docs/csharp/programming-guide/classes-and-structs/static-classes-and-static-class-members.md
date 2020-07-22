@@ -1,5 +1,6 @@
 ---
 title: Statik sınıflar ve statik sınıf üyeleri-C# Programlama Kılavuzu
+description: Statik sınıflar C# ' de başlatılamaz. Statik bir sınıfın üyelerine sınıf adının kendisini kullanarak erişirsiniz.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 71cbf8278b3a8092e93a8ae3d8be291540f16cc3
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990108"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863883"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 

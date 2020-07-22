@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 0f10feb0931c6d38c817fdecb925f68d439abb59
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 731e42a6d4d354b043a56dbe150bb03a693a9454
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287252"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863792"
 ---
 # <a name="see-c-programming-guide"></a>\<see>(C# Programlama Kılavuzu)
 
@@ -33,7 +33,7 @@ ms.locfileid: "84287252"
 
 ## <a name="remarks"></a>Açıklamalar
 
-`<see>`Etiketi, metnin içinden bir bağlantı belirtmenize olanak tanır. [\<seealso>](./seealso.md)Metnin Ayrıca bkz. bölümüne yerleştirilmesi gerektiğini belirtmek için kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [cref özniteliğini](./cref-attribute.md) kullanın.
+`<see>`Etiketi, metnin içinden bir bağlantı belirtmenize olanak tanır. [\<seealso>](./seealso.md)Metnin Ayrıca bkz. bölümüne yerleştirilmesi gerektiğini belirtmek için kullanın. Kod öğeleri için belge sayfalarına iç köprüler oluşturmak üzere [cref özniteliğini](./cref-attribute.md) kullanın. Ayrıca, ``href`` köprü olarak işlev sağlayacak geçerli bir özniteliktir.
 
 Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 

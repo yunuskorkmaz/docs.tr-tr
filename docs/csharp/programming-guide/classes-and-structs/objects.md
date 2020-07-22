@@ -1,16 +1,17 @@
 ---
 title: Nesneler-C# Programlama Kılavuzu
+description: C#, nesne türlerini tanımlamak için bir sınıf veya yapı tanımı kullanır. C# gibi nesne yönelimli bir dilde program, dinamik olarak etkileşimde bulunan nesnelerden oluşur.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a9411557e9177c8dbed45ec25984d574479da0de
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: b54db325c568dec702e4e50c3c265286662092fe
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241792"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864767"
 ---
 # <a name="objects-c-programming-guide"></a>Nesneler (C# Programlama Kılavuzu)
 Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibidir. Bir nesne temelde, Blueprint 'e göre ayrılan ve yapılandırılan bir bellek bloğudur. Bir program aynı sınıftan birçok nesne oluşturabilir. Nesneler de örnekler olarak adlandırılır ve adlandırılmış bir değişkende veya bir dizi ya da koleksiyonda depolanabilir. İstemci kodu, yöntemleri çağırmak ve nesnenin ortak özelliklerine erişmek için bu değişkenleri kullanan koddur. C# gibi nesne yönelimli bir dilde tipik bir program, dinamik olarak etkileşimde bulunan birden çok nesneden oluşur.  
@@ -61,7 +62,7 @@ Sınıf veya yapı tanımı, türün ne yapabileceğini belirten bir şema gibid
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [nesne](../../language-reference/builtin-types/reference-types.md)
+- [object](../../language-reference/builtin-types/reference-types.md)
 - [Devralma](./inheritance.md)
 - [sınıfı](../../language-reference/keywords/class.md)
 - [Yapı türleri](../../language-reference/builtin-types/struct.md)

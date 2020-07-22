@@ -1,5 +1,6 @@
 ---
 title: .NET uygulamalarındaki kaynaklar
+description: .NET uygulamalarında kaynakları anlayın. Kaynak, mantıksal olarak bir uygulamayla dağıtılan yürütülebilir olmayan bir veri.
 ms.date: 07/25/2018
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 0620cb16c3233f8ba2a665c9c4cb5f44bc5d5e84
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645677"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865170"
 ---
 # <a name="resources-in-net-apps"></a>.NET uygulamalarındaki kaynaklar
 
@@ -28,7 +29,7 @@ ASP.NET içindeki kaynaklar hakkında daha fazla bilgi için bkz. [ASP.NET Web s
 
 ## <a name="create-and-localize-resources"></a>Kaynakları oluşturma ve yerelleştirme
 
-Yerelleştirilmemiş bir uygulamada, özellikle aksi takdirde kaynak koddaki birden fazla konumda sabit kodlanmış olabilen dizeler için kaynak dosyalarını uygulama verilerinin bir deposu olarak kullanabilirsiniz. Genellikle, kaynakları metin (. txt) veya XML (. resx) dosyaları olarak oluşturur ve bunları ikili. resources dosyalarına derlemek için [Resgen. exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. Bu dosyalar, bir dil derleyicisi tarafından uygulamanın yürütülebilir dosyası içine gömülebilir. Kaynak oluşturma hakkında daha fazla bilgi için bkz. [kaynak dosyaları oluşturma](creating-resource-files-for-desktop-apps.md).
+Yerelleştirilmemiş bir uygulamada, özellikle aksi takdirde kaynak koddaki birden fazla konumda sabit kodlanmış olabilen dizeler için kaynak dosyalarını uygulama verilerinin bir deposu olarak kullanabilirsiniz. Genellikle, kaynakları metin (. txt) veya XML (. resx) dosyaları olarak oluşturur ve bunları ikili. resources dosyalarına derlemek için [Resgen.exe (kaynak dosya Oluşturucu)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. Bu dosyalar, bir dil derleyicisi tarafından uygulamanın yürütülebilir dosyası içine gömülebilir. Kaynak oluşturma hakkında daha fazla bilgi için bkz. [kaynak dosyaları oluşturma](creating-resource-files-for-desktop-apps.md).
 
 Aynı zamanda uygulamalarınızın kaynaklarını belirli kültürler için yerelleştirebilirsiniz. Bu, uygulamalarınızın yerelleştirilmiş (çevrilmiş) sürümlerini oluşturmanıza olanak sağlar. Yerelleştirilmiş kaynakları kullanan bir uygulama geliştirdiğinizde, kaynakları uygun kaynaklar mevcut olmadığında nötr veya geri dönüş kültürü olarak hizmet veren bir kültür belirtirsiniz. Genel olarak, nötr kültürün kaynakları uygulamanın yürütülebilir dosyasında depolanır. Yerelleştirilmiş tek kaynaklar için kalan kaynaklar tek başına uydu derlemeleri içinde depolanır. Daha fazla bilgi için bkz. [uydu derlemeleri oluşturma](creating-satellite-assemblies-for-desktop-apps.md).
 
@@ -48,11 +49,11 @@ Daha fazla bilgi için [kaynakları paketleme ve dağıtma](packaging-and-deploy
 
 - Eğer bir kültür açıkça atanmamışsa, <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> özelliğinden varsayılan iş parçacığı UI kültürünü alarak.
 
-- Varsayılan bir iş parçacığı kullanıcı arabirimi kültürü, yerel bilgisayardaki geçerli kullanıcı için kültürü alarak açıkça atanmamışsa. Windows üzerinde çalışan .NET uygulamaları, Windows [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) işlevini çağırarak bunu yapın.
+- Varsayılan bir iş parçacığı kullanıcı arabirimi kültürü, yerel bilgisayardaki geçerli kullanıcı için kültürü alarak açıkça atanmamışsa. Windows üzerinde çalışan .NET uygulamaları, Windows işlevini çağırarak bunu yapın [`GetUserDefaultUILanguage`](/windows/desktop/api/winnls/nf-winnls-getuserdefaultuilanguage) .
 
 Geçerli UI kültürünün nasıl ayarlandığı hakkında daha fazla bilgi için <xref:System.Globalization.CultureInfo> ve <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> başvuru sayfalarına bakın.
 
-Ardından, <xref:System.Resources.ResourceManager?displayProperty=nameWithType> sınıfını kullanarak geçerli UI kültürünün veya belirli bir kültürün kaynaklarını alabilirsiniz. <xref:System.Resources.ResourceManager> Sınıfı, kaynakları almak için en yaygın olarak kullanılan <xref:System.Resources?displayProperty=nameWithType> ad alanı, kaynakları almak için kullanabileceğiniz ek türler içerir. Bunlar:
+Ardından, <xref:System.Resources.ResourceManager?displayProperty=nameWithType> sınıfını kullanarak geçerli UI kültürünün veya belirli bir kültürün kaynaklarını alabilirsiniz. Sınıfı, <xref:System.Resources.ResourceManager> kaynakları almak için en yaygın olarak kullanılan <xref:System.Resources?displayProperty=nameWithType> ad alanı, kaynakları almak için kullanabileceğiniz ek türler içerir. Bunlara
 
 - Bir derlemede gömülü olan veya bir tek başına ikili .resources dosyasında depolanan kaynakları numaralandırmanızı sağlayan <xref:System.Resources.ResourceReader> sınıfı. Çalışma zamanında kullanılabilir olan kaynakların tam adını bilmediğinizde bu yararlı olur.
 

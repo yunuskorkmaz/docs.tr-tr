@@ -1,29 +1,30 @@
 ---
-title: Otomatik olarak uygulanan özelliklere sahip hafif bir sınıf nasıl uygulanır - C# Programlama Kılavuzu
+title: Otomatik uygulanan özelliklerle hafif bir sınıf uygulama-C# Programlama Kılavuzu
+description: C# ' de otomatik uygulanan özellikleri kapsülleyen sabit hafif bir sınıf oluşturmayı öğrenin. İki uygulama yaklaşımı vardır.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 6d121f6be768d41d22ea01d871662913b2daae2b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de9034772bad1f28e27abe01595309dd84ddc3e7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170279"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864572"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Otomatik olarak uygulanan özelliklere sahip hafif bir sınıf nasıl uygulanır (C# Programlama Kılavuzu)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Otomatik uygulanan özelliklerle hafif bir sınıf uygulama (C# Programlama Kılavuzu)
 
-Bu örnek, yalnızca otomatik olarak uygulanan özellikler kümesini kapsüllemek için hizmet veren değişmez bir hafif sınıfın nasıl oluşturulacağını gösterir. Başvuru türü semantik kullanmanız gerekirken yapı yerine bu tür yapıyı kullanın.
+Bu örnek, yalnızca bir otomatik uygulanan özellikler kümesini kapsüllemek için hizmet veren sabit bir basit sınıfın nasıl oluşturulacağını gösterir. Başvuru türü semantiğini kullanmanız gerektiğinde, yapı yerine bu tür yapıyı kullanın.
 
 Değişmez bir özelliği iki şekilde yapabilirsiniz:
 
-- [Ayarlanan](../../language-reference/keywords/set.md) erişimciyi [özel](../../language-reference/keywords/private.md)olarak bildirebilirsiniz.  Özellik yalnızca türü içinde ayarlanabilir, ancak tüketiciler için değişmez.
+- [Set](../../language-reference/keywords/set.md) erişimcisinin [Private](../../language-reference/keywords/private.md)olarak bildirilmesini sağlayabilirsiniz.  Özelliği yalnızca tür içinde ayarlanabilir, ancak tüketicilere sabittir.
 
-  Özel `set` bir erişimci beyan ettiğinizde, özelliği başlatmak için bir nesne baş harflerini kullanamazsınız. Bir oluşturucu veya fabrika yöntemi kullanmanız gerekir.
-- Yalnızca [get](../../language-reference/keywords/get.md) accessörünü bildirebilirsiniz, bu da özelliği türün oluşturucusu dışında her yerde değişmez hale getirir.
+  Özel bir `set` erişimci bildirdiğinizde, özelliği başlatmak için bir nesne Başlatıcısı kullanamazsınız. Bir Oluşturucu veya Factory yöntemi kullanmanız gerekir.
+- Yalnızca [Get](../../language-reference/keywords/get.md) erişimcisini bildirebilirsiniz. Bu, özelliği türün Oluşturucusu dışında her yerde sabit hale getirir.
 
-Aşağıdaki örnek, yalnızca erişim sahibi olan bir özelliğin get ve private set'li olandan nasıl farklı olduğunu gösterir.
+Aşağıdaki örnek, Get ve Private kümesi ile tek bir get erişimcisine sahip bir özelliğin nasıl farklı olduğunu gösterir.
 
 ```csharp
 class Contact
@@ -48,7 +49,7 @@ class Contact
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, otomatik olarak uygulanan özelliklere sahip değişmez bir sınıf uygulamanın iki yolunu gösterir. Her şekilde bir özel `set` ve bir `get` tek özellikleri ile özellikleri biri bildirir.  Birinci sınıf yalnızca özellikleri başlatmak için bir oluşturucu kullanır ve ikinci sınıf bir oluşturucu çağıran statik bir fabrika yöntemi kullanır.
+Aşağıdaki örnek, otomatik uygulanan özellikleri olan sabit bir sınıfı uygulamak için iki yol göstermektedir. Her bir şekilde, bir özel ve özelliklerden biri olan özelliklerden birini bildirir `set` `get` .  İlk sınıf yalnızca özellikleri başlatmak için bir Oluşturucu kullanır ve ikinci sınıf Oluşturucu çağıran bir statik fabrika yöntemi kullanır.
 
 ```csharp
 // This class is immutable. After an object is created,
@@ -143,10 +144,10 @@ public class Program
 */
 ```
 
-Derleyici, otomatik olarak uygulanan her özellik için destek alanları oluşturur. Alanlara doğrudan kaynak kodundan erişilemez.
+Derleyici, otomatik uygulanan her özellik için yedekleme alanları oluşturur. Alanlara doğrudan kaynak kodundan erişilebilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Özellikler](./properties.md)
-- [Yapı](../../language-reference/builtin-types/struct.md)
+- [sýný](../../language-reference/builtin-types/struct.md)
 - [Nesne ve Koleksiyon Başlatıcıları](./object-and-collection-initializers.md)

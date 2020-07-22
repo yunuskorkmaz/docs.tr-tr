@@ -1,41 +1,42 @@
 ---
-title: Sorguda öğe özelliklerialt kümeleri nasıl döndürülür - C# Programlama Kılavuzu
+title: Bir sorguda öğe özelliklerinin alt kümelerini döndürme-C# Programlama Kılavuzu
+description: Her bir kaynak öğesinin özelliklerinden bazılarını döndürmek Için C# içindeki bir sorgu ifadesinde anonim bir tür kullanmayı öğrenin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 882d94bc82527c14bd6c038f4bf574c2211b9089
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714865"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864377"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Sorguda öğe özelliklerialt kümeleri döndürülür (C# Programlama Kılavuzu)
-Bu koşulların her ikisi de geçerli olduğunda sorgu ifadesinde anonim bir tür kullanın:  
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Sorguda öğe özelliklerinin alt kümelerini döndürme (C# Programlama Kılavuzu)
+Bu koşulların her ikisi de geçerli olduğunda bir sorgu ifadesinde anonim bir tür kullanın:  
   
-- Her kaynak öğenin özelliklerinden yalnızca bazılarını döndürmek istiyorsunuz.  
+- Her bir kaynak öğenin özelliklerinden yalnızca bazılarını döndürmek istiyorsunuz.  
   
-- Sorgu sonuçlarını, sorgunun yürütüldedildiği yöntemin kapsamı dışında depolamanız gerekmez.  
+- Sorgu sonuçlarını sorgunun yürütüldüğü yöntemin kapsamı dışında saklamak zorunda değilsiniz.  
   
- Her kaynak öğeden yalnızca bir özellik veya alan döndürmek istiyorsanız, yan tümcedeki nokta işlecini `select` kullanabilirsiniz. Örneğin, her `ID` biri `student`yalnızca dönmek için, aşağıdaki gibi yan tümcesini `select` yazın:  
+ Her kaynak öğesinden yalnızca bir özellik veya alan döndürmek istiyorsanız, yan tümcesindeki nokta işlecini kullanabilirsiniz `select` . Örneğin, yalnızca her birini döndürmek için `ID` `student` `select` yan tümcesini aşağıdaki gibi yazın:  
   
 ```csharp  
 select student.ID;  
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, belirtilen koşulla eşleşen her kaynak öğenin özelliklerinin yalnızca bir alt kümesini döndürmek için anonim bir türün nasıl kullanılacağını gösterir.  
+ Aşağıdaki örnek, belirtilen koşulla eşleşen her bir kaynak öğenin özelliklerinin yalnızca bir alt kümesini döndürmek için anonim bir türün nasıl kullanılacağını gösterir.  
   
  [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  
   
- Ad belirtilmemişse, adsız yazının özellikleri için kaynak öğe öğesinin adlarını kullandığını unutmayın. Anonim türdeki özelliklere yeni adlar vermek `select` için deyimi aşağıdaki gibi yazın:  
+ Anonim türün, hiçbir ad belirtilmemişse, özellikleri için kaynak öğenin adlarını kullandığını unutmayın. Anonim türdeki özelliklere yeni adlar vermek için, `select` aşağıdaki gibi bir ifade yazın:  
   
 ```csharp  
 select new { First = student.FirstName, Last = student.LastName };  
 ```  
   
- Önceki örnekte bunu denerseniz, `Console.WriteLine` deyimin de değişmesi gerekir:  
+ Önceki örnekte bunu denerseniz `Console.WriteLine` deyimin de değiştirilmesi gerekir:  
   
 ```csharp  
 Console.WriteLine(student.First + " " + student.Last);  
@@ -43,7 +44,7 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-Bu kodu çalıştırmak için sınıfı System.Linq `using` yönergesi ile c# konsolu uygulamasına kopyalayıp yapıştırın.
+Bu kodu çalıştırmak için, sınıfı bir C# konsol uygulamasına kopyalayın ve bir `using` System. LINQ yönergesi ile yapıştırın.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

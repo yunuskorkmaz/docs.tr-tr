@@ -1,15 +1,16 @@
 ---
 title: Özel bir genişletme yöntemi uygulama ve çağırma-C# Programlama Kılavuzu
+description: Her türlü .NET türü için uzantı yöntemleri uygulamayı öğrenin. İstemci kodu, bir DLL 'ye başvuru ekleyerek ve bir using yönergesi ekleyerek yöntemlerinizi kullanabilir.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: f9937c4b7c6e66af0ee3bc6f6d9ef3b3b1edd530
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7856e78713648a42d1c961f50f7e83f2f7ef05b7
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241831"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865066"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Özel bir genişletme yöntemi uygulama ve çağırma (C# Programlama Kılavuzu)
 Bu konu başlığı altında, tüm .NET türleri için kendi genişletme yöntemlerinizi nasıl uygulanacağı gösterilmektedir. İstemci kodu, uzantıları içeren DLL 'ye bir başvuru ekleyerek ve uzantı yöntemlerinin tanımlandığı ad alanını belirten bir [using](../../language-reference/keywords/using-directive.md) yönergesi ekleyerek uzantı yöntemlerinizi kullanabilir.  
@@ -41,11 +42,11 @@ Bu konu başlığı altında, tüm .NET türleri için kendi genişletme yöntem
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Uzantı Metotları](./extension-methods.md)
+- [Uzantı yöntemleri](./extension-methods.md)
 - [LINQ (dil ile tümleşik sorgu)](../../linq/linq-in-csharp.md)
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](./static-classes-and-static-class-members.md)
 - [protected](../../language-reference/keywords/protected.md)
 - [internal](../../language-reference/keywords/internal.md)
-- [public](../../language-reference/keywords/public.md)
+- [genel](../../language-reference/keywords/public.md)
 - [this](../../language-reference/keywords/this.md)
 - [uzayına](../../language-reference/keywords/namespace.md)

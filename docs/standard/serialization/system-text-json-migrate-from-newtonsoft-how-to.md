@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fe370b34d311816a815f3b2d419751ac7871f013
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "83703588"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865339"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -73,13 +73,13 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 | `JsonConvert.PopulateObject` yöntemi                   | ⚠️[Desteklenmez, geçici çözüm](#populate-existing-objects) |
 | `ObjectCreationHandling`Genel ayar               | ⚠️[Desteklenmez, geçici çözüm](#reuse-rather-than-replace-properties) |
 | Ayarlayıcısız koleksiyonlara Ekle                    | ⚠️[Desteklenmez, geçici çözüm](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling`Genel ayar           | ❌ [Desteklenmiyor](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`Genel ayar                | ❌ [Desteklenmiyor](#preserve-object-references-and-handle-loops) |
-| Öznitelikler için destek `System.Runtime.Serialization` | ❌ [Desteklenmiyor](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`Genel ayar                | ❌ [Desteklenmiyor](#missingmemberhandling) |
-| Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌ [Desteklenmiyor](#json-strings-property-names-and-string-values) |
-| Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌ [Desteklenmiyor](#json-strings-property-names-and-string-values) |
-| Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌ [Desteklenmiyor](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling`Genel ayar           | ❌[Desteklenmiyor](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`Genel ayar                | ❌[Desteklenmiyor](#preserve-object-references-and-handle-loops) |
+| Öznitelikler için destek `System.Runtime.Serialization` | ❌[Desteklenmiyor](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`Genel ayar                | ❌[Desteklenmiyor](#missingmemberhandling) |
+| Tırnak işaretleri olmadan özellik adlarına izin ver                   | ❌[Desteklenmiyor](#json-strings-property-names-and-string-values) |
+| Dize değerlerinin çevresinde tek tırnak işaretlerine izin ver              | ❌[Desteklenmiyor](#json-strings-property-names-and-string-values) |
+| Dize özellikleri için dize olmayan JSON değerlerine izin ver    | ❌[Desteklenmiyor](#non-string-values-for-string-properties) |
 
 Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderileri için istenen birçok senaryo bulunur. Burada listelenen senaryolardan biri için şu anda örnek kodu olmayan bir geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın altındaki **geri bildirim** bölümünde **Bu sayfayı** seçin. Bu, bu belgenin GitHub deposunda bir sorun oluşturur ve bu sayfadaki **geri bildirim** bölümünde de listeler.
 
@@ -318,11 +318,27 @@ JSON içinde herhangi bir özellik yoksa seriyi kaldırma başarısız olması i
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-[POCO sınıfında bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) veya [dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) bu özel dönüştürücüyü kaydettirin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
+[Dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) bu özel dönüştürücüyü kaydedin <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> .
 
-Bu kalıbı izlerseniz, veya özyinelemeli olarak çağrılırken Options nesnesini geçirmeyin <xref:System.Text.Json.JsonSerializer.Serialize%2A> <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . Options nesnesi <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> koleksiyonu içerir. Veya ' a geçirirseniz, `Serialize` `Deserialize` özel dönüştürücü kendi kendine çağrı yapar ve yığın taşması özel durumuna neden olan sonsuz bir döngü sağlar. Varsayılan seçenekler uygun değilse, gereken ayarlarla seçeneklerin yeni bir örneğini oluşturun. Her yeni örnek bağımsız olarak önbelleğe aldığından bu yaklaşım yavaş olur.
+Dönüştürücüyü yinelemeli olarak çağırmanın bu deseninin <xref:System.Text.Json.JsonSerializerOptions> bir özniteliği kullanarak değil kullanarak dönüştürücüyü kaydetmesi gerekir. Dönüştürücüyü bir özniteliği kullanarak kaydettiğinizde, özel dönüştürücü özyinelemeli olarak kendine çağırır. Sonuç, yığın taşması özel durumuyla biten sonsuz bir döngüdür.
 
-Yukarıdaki dönüştürücü kodu basitleştirilmiş bir örnektir. Öznitelikleri (örneğin, [[Jsonıgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) veya farklı seçenekler (özel kodlayıcılar gibi) işlemeniz gerekiyorsa ek mantık gerekir. Ayrıca, örnek kod, oluşturucuda varsayılan bir değer ayarlanan özellikleri işlemez. Bu yaklaşım aşağıdaki senaryolar arasında ayrım yapmaz:
+Options nesnesini kullanarak dönüştürücüyü kaydettiğinizde, veya özyinelemeli bir döngüden, yinelemeli olarak veya çağrılırken Options nesnesine geçirilmeyen bir döngüden kaçının <xref:System.Text.Json.JsonSerializer.Serialize%2A> <xref:System.Text.Json.JsonSerializer.Deserialize%2A> . Options nesnesi <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> koleksiyonu içerir. Veya ' a geçirirseniz, `Serialize` `Deserialize` özel dönüştürücü kendi kendine çağrı yapar ve yığın taşması özel durumuna neden olan sonsuz bir döngü sağlar. Varsayılan seçenekler uygun değilse, gereken ayarlarla seçeneklerin yeni bir örneğini oluşturun. Her yeni örnek bağımsız olarak önbelleğe aldığından bu yaklaşım yavaş olur.
+
+Dönüştürülecek sınıfta kayıt kullanılabilecek alternatif bir model vardır `JsonConverterAttribute` . Bu yaklaşımda dönüştürücü kodu, `Serialize` `Deserialize` dönüştürülecek sınıftan türeyen bir sınıfı çağırır. Türetilmiş sınıf `JsonConverterAttribute` kendisine uygulanmış değil. Aşağıdaki örnekte, bu alternatif aşağıda verilmiştir:
+
+* `WeatherForecastWithRequiredPropertyConverterAttribute`, seri durumdan çıkarılacak ve ona uygulanmış olan sınıftır `JsonConverterAttribute` .
+* `WeatherForecastWithoutRequiredPropertyConverterAttribute`, Converter özniteliğine sahip olmayan türetilmiş sınıftır.
+* Dönüştürücüdeki kod, `Serialize` `Deserialize` `WeatherForecastWithoutRequiredPropertyConverterAttribute` sonsuz bir döngüden kaçınmak için ve öğesini çağırır. Ek bir nesne örneklemesi ve özellik değerlerinin kopyalanması nedeniyle serileştirme üzerinde bu yaklaşımın performans maliyeti vardır.
+
+`WeatherForecast*`Türler şunlardır:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecast.cs?name=SnippetWFWithReqPptyConverterAttr)]
+
+Dönüştürücü şöyledir:
+
+[!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastRequiredPropertyConverterForAttributeRegistration.cs)]
+
+Gerekli özellikler Dönüştürücüsü, [[Jsonıgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute) gibi öznitelikleri veya özel kodlayıcılar gibi farklı seçenekleri işlemeniz gerekiyorsa ek mantık gerektirir. Ayrıca, örnek kod, oluşturucuda varsayılan bir değer ayarlanan özellikleri işlemez. Bu yaklaşım aşağıdaki senaryolar arasında ayrım yapmaz:
 
 * JSON 'da bir özellik eksik.
 * Null atanamaz bir tür için bir özellik JSON içinde bulunur, ancak değer, türü için sıfır gibi varsayılan değerdir `int` .
@@ -391,7 +407,7 @@ Bu özel dönüştürücüyü [sınıfında bir özniteliği kullanarak](system-
 Önceki örneği takip eden özel bir dönüştürücü kullanıyorsanız:
 
 * `OnDeserializing`Kodun yenı POCO örneğine erişimi yok. Yeni POCO örneğini serisini kaldırma başlangıcında işlemek için, bu kodu POCO yapıcısına koyun.
-* Yinelemeli olarak veya çağrılırken Options nesnesini geçmeyin `Serialize` `Deserialize` . Options nesnesi `Converters` koleksiyonu içerir. Veya ' a geçirirseniz, `Serialize` `Deserialize` dönüştürücü kullanılır ve yığın taşması özel durumuyla sonuçlanan sonsuz bir döngü oluşturulur.
+* Özyinelemeli bir döngüden kaçınarak, Seçenekler nesnesine dönüştürücüyü kaydederek ve yinelemeli olarak ya da çağrılırken Options nesnesine geçirmekten kaçının `Serialize` `Deserialize` . Daha fazla bilgi için bu makalenin önceki bölümlerinde bulunan [gerekli özellikler](#required-properties) bölümüne bakın.
 
 ### <a name="public-and-non-public-fields"></a>Ortak ve genel olmayan alanlar
 
@@ -472,7 +488,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

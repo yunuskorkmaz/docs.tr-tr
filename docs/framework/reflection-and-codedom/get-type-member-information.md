@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl yapılır: yansıma kullanarak tür ve üye bilgilerini alma'
+title: 'Nasıl yapılır: Yansıma kullanarak tür ve üye bilgilerini alma'
+description: System. Reflection ad alanını kullanarak, yansıma ile tür ve üye bilgilerini almayı öğrenin.
 ms.date: 09/03/2019
 helpviewer_keywords:
 - reflection, obtaining member information
@@ -9,15 +10,15 @@ dev_langs:
 - cpp
 - csharp
 - vb
-ms.openlocfilehash: 9ffc173bbd0ed12eedea0c191f6d39baf181793a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fa7af39c0addb328944a03236c26982301caf722
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130211"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865326"
 ---
-# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Nasıl yapılır: yansıma kullanarak tür ve üye bilgilerini alma
-<xref:System.Reflection> Ad alanı türler ve üyeleri hakkında bilgi almak için birçok yöntem içerir. Bu makalede, <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>aşağıdaki yöntemlerden biri gösterilmektedir. Daha fazla bilgi için bkz. [yansımaya genel bakış](reflection.md).
+# <a name="how-to-get-type-and-member-information-by-using-reflection"></a>Nasıl yapılır: Yansıma kullanarak tür ve üye bilgilerini alma
+<xref:System.Reflection>Ad alanı türler ve üyeleri hakkında bilgi almak için birçok yöntem içerir. Bu makalede, aşağıdaki yöntemlerden biri gösterilmektedir <xref:System.Type.GetMembers%2A?displayProperty=nameWithType> . Daha fazla bilgi için bkz. [yansımaya genel bakış](reflection.md).
   
 ## <a name="example"></a>Örnek
 

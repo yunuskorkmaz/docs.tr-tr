@@ -1,5 +1,6 @@
 ---
 title: .NET uygulamaları için kaynak dosyaları oluşturma
+description: .NET uygulamaları için kaynak dosyaları oluşturun. Dize kaynakları, XML veya ikili dosyaları programlama yoluyla veya dize, resim veya nesne verileri içeren XML dosyaları ile metin dosyaları oluşturun.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,24 +11,24 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 4730a14e499c75176d7ba7c8378626070d5211e9
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111783"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865183"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET uygulamaları için kaynak dosyaları oluşturma
 
 Uygulamanızda kolayca kullanılabilir hale getirmek için dizeler, görüntüler ve nesneler verileri gibi kaynaklarını ekleyebilirsiniz. .NET Framework, kaynak dosyaları oluşturmak için beş yol sunar:
 
-- Dize kaynaklarını içeren bir metin dosyası oluşturun. Metin dosyasını ikili kaynak (. resources) dosyasına dönüştürmek için [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. Daha sonra bir dil derleyicisi kullanarak bir uygulama yürütülebilir dosyasına veya bir uygulama kitaplığına ikili kaynak dosyasını ekleyebilir veya [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz. Daha fazla bilgi için [metin dosyalarındaki kaynaklar](creating-resource-files-for-desktop-apps.md#TextFiles) bölümüne bakın.
+- Dize kaynaklarını içeren bir metin dosyası oluşturun. Metin dosyasını ikili kaynak (. resources) dosyasına dönüştürmek için [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. Daha sonra bir dil derleyicisi kullanarak bir uygulama yürütülebilir dosyasına veya bir uygulama kitaplığına ikili kaynak dosyasını ekleyebilir veya [derleme Bağlayıcısı (Al.exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz. Daha fazla bilgi için [metin dosyalarındaki kaynaklar](creating-resource-files-for-desktop-apps.md#TextFiles) bölümüne bakın.
 
-- Dize, resim veya nesne verilerini içeren bir XML kaynak (.resx) dosyası oluşturun. . Resx dosyasını ikili bir kaynak (. resources) dosyasına dönüştürmek için [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. Daha sonra bir dil derleyicisi kullanarak bir uygulama yürütülebilir dosyasına veya bir uygulama kitaplığına ikili kaynak dosyasını ekleyebilir veya [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz. Daha fazla bilgi için [. resx dosyaları bölümündeki kaynaklar](creating-resource-files-for-desktop-apps.md#ResxFiles) bölümüne bakın.
+- Dize, resim veya nesne verilerini içeren bir XML kaynak (.resx) dosyası oluşturun. . Resx dosyasını ikili bir kaynak dosyasına (. resources) dönüştürmek için [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. Daha sonra bir dil derleyicisi kullanarak bir uygulama yürütülebilir dosyasına veya bir uygulama kitaplığına ikili kaynak dosyasını ekleyebilir veya [derleme Bağlayıcısı (Al.exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz. Daha fazla bilgi için [. resx dosyaları bölümündeki kaynaklar](creating-resource-files-for-desktop-apps.md#ResxFiles) bölümüne bakın.
 
 - <xref:System.Resources> ad alanındaki türleri kullanarak program aracılığıyla bir XML kaynak (.resx) dosyası oluşturun . Bir .resx dosyası oluşturabilir, kaynaklarını numaralandırabilir veya belirli kaynaklarını ada göre alabilirsiniz. Daha fazla bilgi için bkz [.. resx dosyalarıyla programlama yoluyla çalışma](working-with-resx-files-programmatically.md).
 
-- Program aracılığıyla ikili bir kaynak (.resources) dosyası oluşturun. Daha sonra bir dil derleyicisi kullanarak dosyayı bir uygulama yürütülebilir dosyasına veya uygulama kitaplığına ekleyebilir veya [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz. Daha fazla bilgi için bkz [. resources Files bölümündeki Resources](creating-resource-files-for-desktop-apps.md#ResourcesFiles) .
+- Program aracılığıyla ikili bir kaynak (.resources) dosyası oluşturun. Daha sonra bir dil derleyicisi kullanarak dosyayı bir uygulama yürütülebilir dosyasına veya uygulama kitaplığına katıştırabilir veya [derleme Bağlayıcısı (Al.exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz. Daha fazla bilgi için bkz [. resources Files bölümündeki Resources](creating-resource-files-for-desktop-apps.md#ResourcesFiles) .
 
 - [Visual Studio 'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kullanarak bir kaynak dosyası oluşturun ve bu dosyayı projenize ekleyin. Visual Studio, kaynakları eklemenizi, silmenizi ve değiştirmenizi sağlayan bir kaynak düzenleyicisi sağlar. Derleme sırasında, kaynak dosyası otomatik olarak ikili bir .resources dosyasına dönüştürülür ve bir uygulama derlemesine veya uydu derlemesine gömülür. Daha fazla bilgi için bkz. [Visual Studio 'Da kaynak dosyaları](creating-resource-files-for-desktop-apps.md#VSResFiles) bölümü.
 
@@ -58,7 +59,7 @@ name2=value2
 
  .txt ve .restext dosyalarının kaynak dosya biçimi aynıdır. .restext dosya uzantısı yalnızca metin dosyalarının metin tabanlı kaynak dosyaları olarak hemen tanımlanabilmesi için hizmet verir.
 
- Dize kaynakları *ad/değer* çiftleri olarak görünür; burada *ad* kaynağı tanımlayan bir dizedir ve *değer* , gibi bir kaynak alımı *yöntemine geçirdiğinizde döndürülen* kaynak dizesidir <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>. *ad* ve *değerin* eşittir işareti (=) ile ayrılması gerekir. Örneğin:
+ Dize kaynakları *ad/değer* çiftleri olarak görünür; burada *ad* kaynağı tanımlayan bir dizedir ve *değer* , gibi bir kaynak alımı *yöntemine geçirdiğinizde döndürülen* kaynak dizesidir <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> . *ad* ve *değerin* eşittir işareti (=) ile ayrılması gerekir. Örnek:
 
 ```text
 FileMenuName=File
@@ -70,15 +71,15 @@ HelpMenuName=Help
 > [!CAUTION]
 > Şifreleri, güvenlik açısından duyarlı bilgileri veya özel verileri depolamak için kaynak dosyalarını kullanmayın.
 
- Boş dizelere (yani değeri <xref:System.String.Empty?displayProperty=nameWithType> olan bir kaynak) metin dosyalarında izin verilir. Örneğin:
+ Boş dizelere (yani değeri <xref:System.String.Empty?displayProperty=nameWithType> olan bir kaynak) metin dosyalarında izin verilir. Örnek:
 
 ```text
 EmptyString=
 ```
 
- .NET Framework 4,5 ve tüm .NET Core sürümlerinde, metin dosyaları `#ifdef` *symbol*ile koşullu derlemeyi destekler... `#endif` ve `#if !` *sembol*... `#endif` yapılar. Daha sonra sembolleri tanımlamak için `/define` [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) ile anahtarı kullanabilirsiniz. Her kaynak kendi `#ifdef` *sembolünü*gerektiriyor... `#endif` veya `#if !` *sembol*... `#endif` oluşturun. Bir `#ifdef` ifade ve *sembol* tanımlıysa, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir. Bir `#if !` ifade kullanırsanız ve *sembol* tanımlı değilse, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir.
+ .NET Framework 4,5 ve tüm .NET Core sürümlerinde, metin dosyaları `#ifdef` *symbol*... `#endif` ve `#if !` *symbol*... yapılar ile koşullu derlemeyi destekler `#endif` . Ardından, `/define` sembolleri tanımlamak Için [kaynak dosya oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) ile anahtarı kullanabilirsiniz. Her kaynak kendi `#ifdef` *simgesini*gerektiriyor... `#endif` veya `#if !` *symbol*... `#endif` yapı. Bir `#ifdef` ifade ve *sembol* kullanırsanız, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir. Bir `#if !` ifade kullanırsanız ve *sembol* tanımlı değilse, ilişkili kaynak. resources dosyasına dahil edilir; Aksi takdirde, dahil değildir.
 
- Yorumlar metin dosyalarında isteğe bağlıdır ve satır başında noktalı virgül (;) veya diyez işareti (#) ile başlanır. Yorumları içeren satırlar dosyanın herhangi bir yerine yerleştirilebilir. Açıklamalar, [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md)kullanılarak oluşturulan derlenmiş bir. resources dosyasına dahil edilmez.
+ Yorumlar metin dosyalarında isteğe bağlıdır ve satır başında noktalı virgül (;) veya diyez işareti (#) ile başlanır. Yorumları içeren satırlar dosyanın herhangi bir yerine yerleştirilebilir. Açıklamalar, [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)kullanılarak oluşturulan derlenmiş bir. resources dosyasına dahil edilmez.
 
  Metin dosyasındaki tüm boş satırlar beyaz boşluk olarak değerlendirilir ve göz ardı edilir.
 
@@ -90,15 +91,15 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- Metin dosyası, *adın*yinelenen tekrarlamalarını içeriyorsa, [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) bir uyarı görüntüler ve ikinci adı yoksayar.
+ Metin dosyası, *adın*Yinelenen oluşumlarını içeriyorsa, [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) bir uyarı görüntüler ve ikinci adı yoksayar.
 
- *değer* yeni satır karakterleri içeremez, ancak yeni bir satırı göstermek ve `\n` `\t` bir sekmeyi göstermek için gibi C dil stili kaçış karakterlerini de kullanabilirsiniz. Ayrıca, bir ters eğik çizgi karakteri (örneğin, "\\\\") ekleyebilirsiniz. Ayrıca, boş bir dizeye izin verilir.
+ *değer* yeni satır karakterleri içeremez, ancak `\n` Yeni bir satırı göstermek ve `\t` bir sekmeyi göstermek için gibi C dil stili kaçış karakterlerini de kullanabilirsiniz. Ayrıca, bir ters eğik çizgi karakteri (örneğin, " \\ \\ ") ekleyebilirsiniz. Ayrıca, boş bir dizeye izin verilir.
 
- Küçük endian veya Big-endian bayt düzeninde UTF-8 kodlaması veya UTF-16 kodlaması kullanarak, kaynakları metin dosyası biçiminde kaydedin. Ancak, bir. txt dosyasını. resources dosyasına dönüştüren [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md), dosyaları varsayılan olarak UTF-8 olarak değerlendirir. Resgen.exe'nin, UTF-16 kullanılarak kodlanmış bir dosyayı tanımasını istiyorsanız, dosyanın başına bir Unicode bayt sırası işareti (U+FEFF) eklemeniz gerekir.
+ Küçük endian veya Big-endian bayt düzeninde UTF-8 kodlaması veya UTF-16 kodlaması kullanarak, kaynakları metin dosyası biçiminde kaydedin. Ancak, bir. txt dosyasını. resources dosyasına dönüştüren [kaynak dosyası Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md), dosyaları varsayılan olarak UTF-8 olarak değerlendirir. Resgen.exe'nin, UTF-16 kullanılarak kodlanmış bir dosyayı tanımasını istiyorsanız, dosyanın başına bir Unicode bayt sırası işareti (U+FEFF) eklemeniz gerekir.
 
- Bir kaynak dosyasını bir .NET derlemesine metin biçiminde eklemek için, [kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md)kullanarak dosyayı ikili bir kaynak (. resources) dosyasına dönüştürmeniz gerekir. Daha sonra bir dil derleyicisi kullanarak. resources dosyasını bir .NET derlemesine katıştırabilir veya [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz.
+ Bir kaynak dosyasını bir .NET derlemesine metin biçiminde eklemek için, [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)kullanarak dosyayı ikili bir kaynak (. resources) dosyasına dönüştürmeniz gerekir. Daha sonra bir dil derleyicisi kullanarak. resources dosyasını bir .NET derlemesine katıştırabilir veya [derleme Bağlayıcısı (Al.exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz.
 
- Aşağıdaki örnek, basit bir "Hello World" konsol uygulaması için GreetingResources.txt adındaki metin biçimindeki bir kaynak dosyayı kullanır. Metin dosyası iki dizeyi tanımlar `prompt` ve `greeting`kullanıcıdan adını girmesini ve bir selamlama görüntülemesini ister.
+ Aşağıdaki örnek, basit bir "Hello World" konsol uygulaması için GreetingResources.txt adındaki metin biçimindeki bir kaynak dosyayı kullanır. Metin dosyası iki dizeyi tanımlar `prompt` ve `greeting` kullanıcıdan adını girmesini ve bir selamlama görüntülemesini ister.
 
 ```text
 # GreetingResources.txt
@@ -148,7 +149,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!WARNING]
 > Şifreleri, güvenlik açısından duyarlı bilgileri veya özel verileri depolamak için kaynak dosyalarını kullanmayın.
 
- Kaynak nesnelerinde **veri** etiketi, kaynağın veri türünü gösteren `type` bir özniteliği içerir. İkili verilerden oluşan nesneler için `data` etiketi, aynı zamanda ikili verilerin `mimetype` türünü gösteren bir `base64` özniteliğini içerir.
+ Kaynak nesnelerinde **veri** etiketi, `type` kaynağın veri türünü gösteren bir özniteliği içerir. İkili verilerden oluşan nesneler için `data` etiketi, aynı zamanda ikili verilerin `mimetype` türünü gösteren bir `base64` özniteliğini içerir.
 
 > [!NOTE]
 > Tüm .resx dosyaları, belirli bir tür için ikili verileri oluşturmak ve ayrıştırmak amacıyla bir ikili seri biçimlendirici kullanır. Sonuç olarak, bir nesnenin ikili serileştirme biçimi uyumsuz bir şekilde değişirse bir .resx dosyası geçersiz hale gelebilir.
@@ -175,7 +176,7 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>. Resources dosyalarındaki kaynaklar
 
-İkili bir kaynak (.resources) dosyasını program aracılığıyla doğrudan koddan oluşturmak için <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> sınıfını kullanabilirsiniz. [Kaynak dosya Oluşturucu (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) , bir metin dosyasından veya. resx dosyasından bir. resources dosyası oluşturmak için de kullanabilirsiniz. .resources dosyası, dize verilerine ek olarak ikili verileri (bayt dizileri) ve nesne verilerini içerebilir. Bir .resources dosyasının program aracılığıyla oluşturulması aşağıdaki adımları gerektirir:
+İkili bir kaynak (.resources) dosyasını program aracılığıyla doğrudan koddan oluşturmak için <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> sınıfını kullanabilirsiniz. Ayrıca, bir metin dosyasından veya. resx dosyasından bir. resources dosyası oluşturmak için [kaynak dosya Oluşturucu (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) kullanabilirsiniz. .resources dosyası, dize verilerine ek olarak ikili verileri (bayt dizileri) ve nesne verilerini içerebilir. Bir .resources dosyasının program aracılığıyla oluşturulması aşağıdaki adımları gerektirir:
 
 1. Benzersiz bir dosya adı ile bir <xref:System.Resources.ResourceWriter> nesnesi oluşturun. Bunu, bir <xref:System.Resources.ResourceWriter> sınıf yapıcısına bir dosya adı veya bir dosya akışı belirterek gerçekleştirebilirsiniz.
 
@@ -186,12 +187,12 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!NOTE]
 > Şifreleri, güvenlik açısından duyarlı bilgileri veya özel verileri depolamak için kaynak dosyalarını kullanmayın.
 
- Aşağıdaki örnek, altı dizeyi, bir simgeyi ve uygulama tanımlı iki nesneyi (iki `Automobile` nesnesi) depolayan CarResources.resources adındaki bir .resources dosyasını progam aracılığıyla oluşturur. Örnekte `Automobile` tanımlanan ve örneği oluşturulan sınıf, ikili serileştirme biçimlendiricisi tarafından kalıcı hale getirilmesini sağlayan <xref:System.SerializableAttribute> özniteliğiyle etiketlenmiştir.
+ Aşağıdaki örnek, altı dizeyi, bir simgeyi ve uygulama tanımlı iki nesneyi (iki `Automobile` nesnesi) depolayan CarResources.resources adındaki bir .resources dosyasını progam aracılığıyla oluşturur. `Automobile`Örnekte tanımlanan ve örneği oluşturulan sınıf, <xref:System.SerializableAttribute> ikili serileştirme biçimlendiricisi tarafından kalıcı hale getirilmesini sağlayan özniteliğiyle etiketlenmiştir.
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
 
- . Resources dosyasını oluşturduktan sonra, dil derleyicisinin `/resource` anahtarını ekleyerek bir çalışma zamanı yürütülebilir dosyasına veya kitaplığına eklenebilir veya [derleme Bağlayıcısı (al. exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz.
+ . Resources dosyasını oluşturduktan sonra, dil derleyicisinin anahtarını ekleyerek bir çalışma zamanı yürütülebilir dosyasına veya kitaplığına eklenebilir `/resource` veya [derleme bağlayıcısı (Al.exe)](../tools/al-exe-assembly-linker.md)kullanarak bir uydu derlemesine gömebilirsiniz.
 
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio 'da kaynak dosyaları

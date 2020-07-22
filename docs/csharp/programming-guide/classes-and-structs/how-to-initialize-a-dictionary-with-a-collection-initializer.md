@@ -1,27 +1,28 @@
 ---
-title: Bir koleksiyon başharfi ile sözlük başlatma - C# Programlama Kılavuzu
+title: Koleksiyon başlatıcısı ile bir sözlük başlatma-C# Programlama Kılavuzu
+description: Add yöntemini veya bir dizin başlatıcısı kullanarak C# ' de bir sözlüğü nasıl başlatacağınızı öğrenin. Bu örnekte her iki seçenek de gösterilmektedir.
 ms.date: 12/20/2018
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-ms.openlocfilehash: 1e6e7fac9dd49ad1943ac9046bd9e4932c383257
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f33240b02785c5c886a1ebebb8984d29c9f7795
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75741360"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865053"
 ---
-# <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Bir koleksiyon başharfi (C# Programlama Kılavuzu) ile sözlük başlatma
+# <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>Koleksiyon başlatıcısı ile bir sözlük başlatma (C# Programlama Kılavuzu)
 
-A, <xref:System.Collections.Generic.Dictionary%602> anahtar/değer çiftleri koleksiyonunu içerir. Yöntemi <xref:System.Collections.Generic.Dictionary%602.Add%2A> iki parametre, bir anahtar ve değer için bir alır. Bir veya <xref:System.Collections.Generic.Dictionary%602> `Add` yöntem birden çok parametre alan herhangi bir koleksiyonu başlatmanın bir yolu, aşağıdaki örnekte gösterildiği gibi her parametre kümesini ayraçlara bünyesine katıyor. Başka bir seçenek de aşağıdaki örnekte gösterilen bir dizin baş harflerini kullanmaktır.
+Bir <xref:System.Collections.Generic.Dictionary%602> anahtar/değer çiftleri koleksiyonu içerir. <xref:System.Collections.Generic.Dictionary%602.Add%2A>Yöntemi, biri anahtar ve diğeri değer için olmak üzere iki parametre alır. <xref:System.Collections.Generic.Dictionary%602>Ya da yöntemi birden çok parametre alan herhangi bir koleksiyonu başlatmanın bir yolu `Add` , aşağıdaki örnekte gösterildiği gibi her bir parametre kümesini küme ayraçları içine allemektir. Diğer bir seçenek de aşağıdaki örnekte gösterilen bir dizin başlatıcısı kullanmaktır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kod örneğinde, <xref:System.Collections.Generic.Dictionary%602> a türü `StudentName`örnekleri ile başharfe  İlk başlatma yöntemini `Add` iki bağımsız değişkenle kullanır. Derleyici, anahtar ve `Add` `StudentName` değer çiftlerinin her biri için bir çağrı oluşturur. `int` İkinci `Dictionary` sınıfın ortak okuma / yazma dizinleyici yöntemi kullanır:
+Aşağıdaki kod örneğinde,, <xref:System.Collections.Generic.Dictionary%602> türünde örneklerle başlatılır `StudentName` .  İlk başlatma `Add` yöntemi iki bağımsız değişkenle birlikte kullanır. Derleyici, `Add` her `int` anahtar ve değer çiftlerinin her biri için bir çağrı oluşturur `StudentName` . İkincisi, sınıfının ortak bir okuma/yazma Indexer yöntemini kullanır `Dictionary` :
 
 [!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToDictionaryInitializer.cs#HowToDictionaryInitializer)]  
 
-İlk bildirimde koleksiyonun her öğesindeki iki çift ayraç çiftine dikkat edin. En içteki parantezler `StudentName`nesne baş harflerini içine, en dıştaki parantezler `students` <xref:System.Collections.Generic.Dictionary%602>ise . Son olarak, sözlük için tüm toplama başharfleri parantez içinde kapalıdır. İkinci başharfte, atamanın sol tarafı anahtar, sağ tarafı ise değerdir, nesne başharfi kullanır. `StudentName`
+İlk bildirimde koleksiyonun her bir öğesinde iki ayraç çiftini aklınızda edin. En içteki ayraç, için nesne başlatıcısını kapsar `StudentName` ve en dıştaki küme ayraçları öğesine eklenecek anahtar/değer çifti için başlatıcıyı kapsar `students` <xref:System.Collections.Generic.Dictionary%602> . Son olarak, sözlük için tüm koleksiyon başlatıcısı küme ayraçları içine alınmıştır. İkinci başlatmada atamanın sol tarafı anahtardır ve sağ tarafta ise, için bir nesne Başlatıcısı kullanılarak değer bulunur `StudentName` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

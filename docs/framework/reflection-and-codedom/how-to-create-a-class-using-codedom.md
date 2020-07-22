@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma'
+description: Kod Belge Nesne Modeli (CodeDOM) kullanarak bir sınıfın nasıl oluşturulacağını açıklayan ayrıntılı bir örneğe bakın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +12,25 @@ helpviewer_keywords:
 - CodeDOM, creating classes
 - CodeDOM, graphs
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
-ms.openlocfilehash: ff7c9d1593c8e75f9bcaeda6577c7cb941719749
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3d7151d384402dba6fbb5da8fe54621346251f7b
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130203"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86865313"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Nasıl yapılır: CodeDOM Kullanarak Sınıf Oluşturma
 Aşağıdaki yordamlarda, iki alanı, üç özellik, bir yöntemi, oluşturucuyu ve bir giriş noktasını içeren bir sınıf üreten bir CodeDOM grafiği oluşturma ve derleme işlemleri gösterilmektedir.  
   
 1. Bir sınıf için kaynak kodu oluşturmak üzere CodeDOM kodunu kullanacak bir konsol uygulaması oluşturun.  
   
-     Bu örnekte, üretilen sınıf adlandırılır `Sample`ve oluşturulan kod, SampleCode adlı bir dosyada adlı `CodeDOMCreatedClass` bir sınıftır.  
+     Bu örnekte, üretilen sınıf adlandırılır `Sample` ve oluşturulan kod, `CodeDOMCreatedClass` SampleCode adlı bir dosyada adlı bir sınıftır.  
   
-2. Oluşturma sınıfında, CodeDOM grafiğini başlatın ve oluşturulan sınıfın üyelerini, oluşturucusunu ve giriş noktasını (`Main` yöntemini) tanımlamak için CodeDOM yöntemlerini kullanın.  
+2. Oluşturma sınıfında, CodeDOM grafiğini başlatın ve oluşturulan sınıfın üyelerini, oluşturucusunu ve giriş noktasını (yöntemini) tanımlamak için CodeDOM yöntemlerini kullanın `Main` .  
   
      Bu örnekte, oluşturulan sınıfın iki alanı, üç özelliği, bir Oluşturucu, bir yöntemi ve `Main` yöntemi vardır.  
   
-3. Oluşturma sınıfında, bir dile özgü kod sağlayıcı oluşturun ve bu kodu grafikten kodu oluşturmak <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> için metodunu çağırın.  
+3. Oluşturma sınıfında, bir dile özgü kod sağlayıcı oluşturun ve bu kodu <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> grafikten kodu oluşturmak için metodunu çağırın.  
   
 4. Kodu oluşturmak için uygulamayı derleyin ve yürütün.  
   
@@ -37,7 +38,7 @@ Aşağıdaki yordamlarda, iki alanı, üç özellik, bir yöntemi, oluşturucuyu
   
 ### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>CodeDOM kodunu yürütecek uygulamayı oluşturmak için  
   
-- CodeDOM kodunu içeren bir konsol uygulaması sınıfı oluşturun. Sınıfta (<xref:System.CodeDom.CodeCompileUnit>) ve sınıfına (<xref:System.CodeDom.CodeTypeDeclaration>) başvurmak için kullanılan genel alanları tanımlayın, oluşturulan kaynak dosyanın adını belirtin ve `Main` yöntemi bildirin.  
+- CodeDOM kodunu içeren bir konsol uygulaması sınıfı oluşturun. Sınıfta () ve sınıfına () başvurmak için kullanılan genel alanları tanımlayın <xref:System.CodeDom.CodeCompileUnit> <xref:System.CodeDom.CodeTypeDeclaration> , oluşturulan kaynak dosyanın adını belirtin ve `Main` yöntemi bildirin.  
   
      [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
      [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
@@ -51,41 +52,41 @@ Aşağıdaki yordamlarda, iki alanı, üç özellik, bir yöntemi, oluşturucuyu
   
 ### <a name="to-add-members-to-the-codedom-graph"></a>CodeDOM grafiğine üye eklemek için  
   
-- Sınıfının <xref:System.CodeDom.CodeMemberField> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> özelliğine nesneler ekleyerek CodeDOM grafiğine alanlar ekleyin.  
+- Sınıfının özelliğine nesneler ekleyerek CodeDOM grafiğine alanlar ekleyin <xref:System.CodeDom.CodeMemberField> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> .  
   
      [!code-csharp[CodeDOM Class Sample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)]
      [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
   
-- Sınıfının <xref:System.CodeDom.CodeMemberProperty> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> özelliğine nesneler ekleyerek CodeDOM grafiğine özellikler ekleyin.  
+- Sınıfının özelliğine nesneler ekleyerek CodeDOM grafiğine özellikler ekleyin <xref:System.CodeDom.CodeMemberProperty> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> .  
   
      [!code-csharp[CodeDOM Class Sample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)]
      [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
   
-- Sınıfının <xref:System.CodeDom.CodeMemberMethod> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> özelliğine bir nesne ekleyerek CodeDOM grafiğine bir yöntem ekleyin.  
+- Sınıfının özelliğine bir nesne ekleyerek CodeDOM grafiğine bir yöntem ekleyin <xref:System.CodeDom.CodeMemberMethod> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> .  
   
      [!code-csharp[CodeDOM Class Sample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)]
      [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
   
-- Sınıfının <xref:System.CodeDom.CodeConstructor> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> özelliğine bir nesne ekleyerek CodeDOM grafiğine bir Oluşturucu ekleyin.  
+- Sınıfının özelliğine bir nesne ekleyerek CodeDOM grafiğine bir Oluşturucu ekleyin <xref:System.CodeDom.CodeConstructor> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> .  
   
      [!code-csharp[CodeDOM Class Sample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)]
      [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
   
-- Sınıfının <xref:System.CodeDom.CodeEntryPointMethod> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> özelliğine bir nesne ekleyerek CodeDOM grafiğine bir giriş noktası ekleyin.  
+- Sınıfının özelliğine bir nesne ekleyerek CodeDOM grafiğine bir giriş noktası ekleyin <xref:System.CodeDom.CodeEntryPointMethod> <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> .  
   
      [!code-csharp[CodeDOM Class Sample#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)]
      [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
   
 ### <a name="to-generate-the-code-from-the-codedom-graph"></a>CodeDOM grafiğinden kodu oluşturmak için  
   
-- <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> Yöntemini çağırarak CodeDOM grafiğinden kaynak kodu oluşturun.  
+- Yöntemini çağırarak CodeDOM grafiğinden kaynak kodu oluşturun <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> .  
   
      [!code-csharp[CodeDOM Class Sample#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)]
      [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>Grafiği oluşturmak ve kodu oluşturmak için  
   
-1. Önceki adımlarda oluşturulan yöntemleri ilk adımda tanımlanan `Main` yönteme ekleyin.  
+1. Önceki adımlarda oluşturulan yöntemleri `Main` ilk adımda tanımlanan yönteme ekleyin.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  

@@ -4,12 +4,12 @@ description: Ubuntu üzerinde .NET Core SDK ve .NET Core çalışma zamanı yük
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: ed4f5b914d03cfb072ee4ba168c67262e0d40c08
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c590bd89b718a5cd31dae9f83049eac910cb4049
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619435"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86863897"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu üzerinde .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 
@@ -30,7 +30,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 | Ubuntu                   | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview (yalnızca el ile yüklenir) |
 |--------------------------|---------------|---------------|----------------|
 | ✔️ [20,04 (LTS)](#2004-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
-| ✔️ [19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
+| ❌[19,10](#1910-)       | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ❌[19,04](#1904-)       | ✔️ 2,1        | ✔️ 3,1        | ❌5,0 Önizleme |
 | ❌[18,10](#1810-)       | ✔️ 2,1        | ❌3,1        | ❌5,0 Önizleme |
 | ✔️ [18,04 (LTS)](#1804-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
@@ -41,9 +41,9 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 
 Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3.0
+- 3,0
 - 2,2
-- 2.0
+- 2,0
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
 
@@ -60,7 +60,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 
 [!INCLUDE [linux-apt-install-31](includes/linux-install-31-apt.md)]
 
-## <a name="1910-"></a>19,10 ✔️
+## <a name="1910-"></a>19,10❌
+
+[!INCLUDE [linux-not-supported](includes/linux-not-supported-ubuntu.md)]
 
 [!INCLUDE [linux-prep-intro-apt](includes/linux-prep-intro-apt.md)]
 

@@ -1,16 +1,17 @@
 ---
 title: Değer türü parametrelerini geçirme-C# Programlama Kılavuzu
+description: C# ' deki değere göre bir yönteme değer türü değişkeni geçirdiğinizde, tüm değişikliklerin özgün veriler üzerinde hiçbir etkisi olmaz. Değeri değiştirmek için başvuruya göre geçirin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: 13982254922d72337feeb502d2c84ebb42cf27bb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 84829722cfb0b7ce71aff36f27a7c97cfa07ad5e
+ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004562"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86864702"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Değer Türü Parametrelerini Geçirme (C# Programlama Kılavuzu)
 Bir [değer türü](../../language-reference/builtin-types/value-types.md) değişkeni, veri başvurusunu içeren bir [başvuru türü](../../language-reference/keywords/reference-types.md) değişkeni aksine doğrudan verilerini içerir. Değer türü bir değişkeni değere göre yönteme geçirmek, değişkenin bir kopyasının yöntemine geçirilmesi anlamına gelir. Yöntemin içinde gerçekleşen parametresindeki tüm değişiklikler, bağımsız değişken değişkeninde depolanan özgün veriler üzerinde hiçbir etkiye sahip değildir. Çağrılan yöntemin bağımsız değişkenin değerini değiştirmesini istiyorsanız [ref](../../language-reference/keywords/ref.md) veya [Out](../../language-reference/keywords/out-parameter-modifier.md) anahtar sözcüğünü kullanarak başvuruya göre geçirmeniz gerekir. Ayrıca, değerin değişmediğinden emin olmak için bir değer parametresini başvuruya göre geçirmek için [ın](../../language-reference/keywords/in-parameter-modifier.md) anahtar sözcüğünü kullanabilirsiniz. Basitlik için aşağıdaki örneklerde kullanılması gerekir `ref` .  
