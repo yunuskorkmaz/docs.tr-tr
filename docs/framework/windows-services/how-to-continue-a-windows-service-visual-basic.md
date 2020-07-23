@@ -1,5 +1,6 @@
 ---
-title: 'Nasıl Yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)'
+title: 'Nasıl yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)'
+description: Visual Basic olan yerel bir bilgisayarda bir Windows hizmetine (IIS Yönetim hizmeti gibi) devam etmek için ServiceController bileşenini nasıl kullanacağınızı okuyun.
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,15 +11,15 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: a10e05b0460608a9e67ee4527adf80be3d47438e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2a04e330ea7dc37552053b2a7915909c011727f8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053632"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925793"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl Yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)
-Bu örnek, yerel <xref:System.ServiceProcess.ServiceController> bilgisayarda IIS Yönetim hizmetine devam etmek için bileşenini kullanır.  
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Nasıl yapılır: Windows Hizmetini Devam Ettirme (Visual Basic)
+Bu örnek, <xref:System.ServiceProcess.ServiceController> Yerel bılgısayarda IIS Yönetim hizmetine devam etmek için bileşenini kullanır.  
   
 ## <a name="example"></a>Örnek  
  [!code-vb[VbRadconService#11](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#11)]  
@@ -29,14 +30,14 @@ Bu örnek, yerel <xref:System.ServiceProcess.ServiceController> bilgisayarda IIS
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
  Bu örnek şunları gerektirir:  
   
-- System. ServiceProcess. dll dosyasına bir proje başvurusu.  
+- System.serviceprocess.dll bir proje başvurusu.  
   
-- <xref:System.ServiceProcess> Ad alanının üyelerine erişin. Kodunuzda üye `Imports` adlarını tam olarak nitedıysanız bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- <xref:System.ServiceProcess>Ad alanının üyelerine erişin. `Imports`Kodunuzda üye adlarını tam olarak nitedıysanız bir ifade ekleyin. Daha fazla bilgi için bkz. [Imports açıklaması (.net ad alanı ve türü)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- <xref:System.ServiceProcess.ServiceController> Sınıfının <xref:System.ServiceProcess.ServiceController.MachineName%2A> özelliği, varsayılan olarak yerel bilgisayardır. Başka bir bilgisayardaki Windows hizmetlerine başvurmak için, <xref:System.ServiceProcess.ServiceController.MachineName%2A> özelliği bu bilgisayarın adıyla değiştirin.  
+ <xref:System.ServiceProcess.ServiceController.MachineName%2A>Sınıfının özelliği, <xref:System.ServiceProcess.ServiceController> Varsayılan olarak yerel bilgisayardır. Başka bir bilgisayardaki Windows hizmetlerine başvurmak için, <xref:System.ServiceProcess.ServiceController.MachineName%2A> özelliği bu bilgisayarın adıyla değiştirin.  
   
- Hizmet denetleyicisi durumu olana <xref:System.ServiceProcess.ServiceController.Continue%2A> kadar bir hizmette yöntemi çağrılamaz <xref:System.ServiceProcess.ServiceControllerStatus.Paused>.  
+ <xref:System.ServiceProcess.ServiceController.Continue%2A>Hizmet denetleyicisi durumu olana kadar bir hizmette yöntemi çağrılamaz <xref:System.ServiceProcess.ServiceControllerStatus.Paused> .  
   
  Aşağıdaki koşullar özel bir duruma neden olabilir:  
   
@@ -45,12 +46,12 @@ Bu örnek, yerel <xref:System.ServiceProcess.ServiceController> bilgisayarda IIS
 - Sistem API 'sine erişirken bir hata oluştu. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bilgisayardaki hizmetlerin denetimi, <xref:System.ServiceProcess.ServiceControllerPermissionAccess> <xref:System.ServiceProcess.ServiceControllerPermission> sınıftaki izinleri ayarlamak için sabit listesi kullanılarak kısıtlanabilir.  
+ Bilgisayardaki hizmetlerin denetimi, <xref:System.ServiceProcess.ServiceControllerPermissionAccess> sınıftaki izinleri ayarlamak için sabit listesi kullanılarak kısıtlanabilir <xref:System.ServiceProcess.ServiceControllerPermission> .  
   
- <xref:System.Security.Permissions.SecurityPermission> Sınıfında izinleri ayarlamak için <xref:System.Security.Permissions.PermissionState> numaralandırma kullanılarak hizmet bilgilerine erişim kısıtlanabilir.  
+ <xref:System.Security.Permissions.PermissionState>Sınıfında izinleri ayarlamak için numaralandırma kullanılarak hizmet bilgilerine erişim kısıtlanabilir <xref:System.Security.Permissions.SecurityPermission> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [Nasıl Yapılır: Windows Hizmetini Duraklatma (Visual Basic)](how-to-pause-a-windows-service-visual-basic.md)
+- [Nasıl yapılır: Windows Hizmetini Duraklatma (Visual Basic)](how-to-pause-a-windows-service-visual-basic.md)

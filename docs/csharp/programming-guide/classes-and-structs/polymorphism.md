@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 2a1ca4c498c5885c7d34475405ac83c4cccecd6f
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 59b5f5d2d5a8f274845607aeca370c316670bd68
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864130"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925455"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Çok Biçimlilik (C# Programlama Kılavuzu)
 
@@ -39,7 +39,7 @@ C# dilinde, Kullanıcı tanımlı türler dahil olmak üzere tüm türler öğes
 
 ### <a name="virtual-members"></a>Sanal üyeler
 
-Türetilmiş bir sınıf temel sınıftan devraldığında, temel sınıfın tüm yöntemlerini, alanlarını, özelliklerini ve olaylarını alır. Türetilmiş sınıfın Tasarımcısı, Sanal yöntemlerin davranışı için farklı seçeneklere sahip olabilir:
+Türetilmiş bir sınıf temel sınıftan devraldığında, temel sınıfın tüm yöntemlerini, alanlarını, özelliklerini ve olaylarını alır. Türetilmiş sınıfın Tasarımcısı, Sanal yöntemlerin davranışı için farklı seçeneklere sahiptir:
 
 - Türetilmiş sınıf, yeni davranışı tanımlayarak temel sınıftaki sanal üyeleri geçersiz kılabilir.
 - Türetilmiş sınıf, var olan davranışı koruyarak ve daha fazla türetilmiş sınıfların yöntemi geçersiz kılmasını etkinleştirerek, en yakın temel sınıf yöntemini geçersiz kılmadan devralınır.
@@ -61,7 +61,7 @@ Türetilmiş sınıfınızın bir temel sınıftaki üye ile aynı ada sahip bir
 
 [!code-csharp[New method overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#NewMethods)]
 
-Gizli temel sınıf üyelerine türetilmiş sınıfın örneğini bir temel sınıfın örneğine aktararak istemci kodundan erişilebilir. Örnek:
+Gizli temel sınıf üyelerine türetilmiş sınıfın örneğini bir temel sınıfın örneğine aktararak istemci kodundan erişilebilir. Örneğin:
 
 [!code-csharp[New method overview usage](~/samples/snippets/csharp/objectoriented/Inheritance.cs#UseNewMethods)]
 

@@ -1,13 +1,14 @@
 ---
 title: "İzlenecek yol: Async ve await kullanarak Web 'e erişme (C#)"
+description: Bu izlenecek yol, zaman uyumsuz ve await özelliklerini kullanan bir zaman uyumlu uygulamayı C# dilinde zaman uyumsuz bir çözüme dönüştürür.
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: edc45f252b75c742afe4f073ca7dd92d9784d2c4
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d643793bfcdeaaeff56dd252c510d197a45442f9
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240648"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925117"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>İzlenecek yol: Async ve await kullanarak Web 'e erişme (C#)
 

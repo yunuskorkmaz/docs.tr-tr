@@ -9,67 +9,64 @@ helpviewer_keywords:
 - threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-ms.openlocfilehash: 6ab0cc7c1ec2f7bbc633ac966dd18ab3ea7a395b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de823297540d5ce3740a26614dbb9a82881decf3
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127552"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924389"
 ---
-# <a name="managed-and-unmanaged-threading-in-windows"></a>Windows'da yönetilen ve yönetilmeyen iş parçacığı
+# <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 'da yönetilen ve yönetilmeyen iş parçacığı
 
-Tüm iş parçacıklarının yönetimi, <xref:System.Threading.Thread> ortak dil çalışma zamanı tarafından oluşturulan iş parçacıkları ve kodu yürütmek için yönetilen ortamı giren çalışma zamanı dışında oluşturulanlar da dahil olmak üzere sınıf aracılığıyla yapılır. Çalışma zamanı, işlemdeki tüm iş parçacıklarını, yönetilen yürütme ortamında hiç kod yürütmüş olan tüm iş parçacıklarını izler. Diğer iş parçacıklarını izlemez. İş parçacıkları, yönetilen yürütme ortamına COM interop üzerinden girebilir (çalışma zamanı yönetilen nesneleri COM nesnesi olarak yönetilmeyen dünyaya maruz kaldığı için), COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) işlevini ve platform çağrışımını başlatabilir.  
+Tüm iş parçacıklarının yönetimi, <xref:System.Threading.Thread> ortak dil çalışma zamanı tarafından oluşturulan iş parçacıkları ve kodu yürütmek için yönetilen ortama girerken çalışma zamanının dışında oluşturulanlar dahil olmak üzere sınıfı aracılığıyla yapılır. Çalışma zamanı, işlem sırasında yönetilen yürütme ortamında kod yürüten tüm iş parçacıklarını izler. Diğer iş parçacıklarını izlemez. İş parçacıkları, yönetilen yürütme ortamını COM birlikte çalışma aracılığıyla girebilir (çalışma zamanı yönetilen nesneleri yönetilmeyen dünyayı COM nesneleri olarak kullanıma sunduğundan), COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) işlevini ve platform çağrılmasını sağlar.  
   
- Yönetilmeyen bir iş parçacığı çalışma süresi ne zaman ,örneğin, com çağrılabilir sarıcı üzerinden girdiğinde, sistem iç <xref:System.Threading.Thread> yönetilen bir nesne aramak için iş parçacığı yerel deposunu denetler. Biri bulunursa, çalışma zamanı bu iş parçacığının zaten farkındadır. Ancak, bir tane bulamazsa, çalışma zamanı <xref:System.Threading.Thread> yeni bir nesne oluşturur ve iş parçacığının yerel deposuna yükler.  
+ Yönetilmeyen bir iş parçacığı, örneğin, COM çağrılabilir bir sarmalayıcı aracılığıyla çalışma zamanına girdiğinde, sistem, iç yönetilen bir nesneyi aramak için iş parçacığının yerel depo parçacığını denetler <xref:System.Threading.Thread> . Bir tane bulunursa, çalışma zamanı bu iş parçacığının zaten farkında olur. Ancak, bir tane bulamazsa, çalışma zamanı yeni bir <xref:System.Threading.Thread> nesne oluşturur ve bu iş parçacığının iş parçacığı yerel deposuna yüklenir.  
   
- Yönetilen iş parçacığı, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> kararlı yönetilen iş parçacığı tanımlama. İş parçacığınızın ömrü boyunca, bu değeri elde ettiğiniz uygulama etki alanından bağımsız olarak, başka bir iş parçacığının değeriyle çarpışmaz.  
-  
-> [!NOTE]
-> Yönetilen bir ana bilgisayar yönetilen ve yönetilmeyen iş parçacıkları arasındaki ilişkiyi denetleyebilir, çünkü bir işletim sistemi **ThreadId** yönetilen bir iş parçacığı için sabit bir ilişki vardır. Özellikle, gelişmiş bir ana bilgisayar, aynı işletim sistemi iş parçacığına karşı yönetilen birçok iş parçacığı zamanlamak veya yönetilen bir iş parçacığıfarklı işletim sistemi iş parçacıkları arasında taşımak için Fiber API kullanabilirsiniz.  
+ Yönetilen iş parçacığında, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> kararlı yönetilen iş parçacığı kimliğidir. İş parçacığınız kullanım ömrü boyunca, bu değeri aldığınız uygulama etki alanından bağımsız olarak diğer herhangi bir iş parçacığından elde etmeyecektir.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Win32 iş parçacığından yönetilen iş parçacığına eşleme
 
- Aşağıdaki tablo, Win32 iş parçacığı öğelerini yaklaşık çalışma süresi eşdeğerleriyle eşler. Bu eşlemenin aynı işlevselliği temsil etmediğini unutmayın. Örneğin, **TerminateThread** **son** yan tümceleri yürütmez veya kaynakları boşaltmaz ve engellenemez. Ancak, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> tüm geri alma kodunuzu yürütür, tüm kaynakları geri <xref:System.Threading.Thread.ResetAbort%2A>alır ve 'yi kullanarak reddedilebilir. İşlevsellik hakkında varsayımlarda bulunmadan önce belgeleri yakından okuduğunuzdan emin olun.  
+ Aşağıdaki tablo, Win32 iş parçacığı öğelerini yaklaşık çalışma zamanına eşit olarak eşler. Bu eşlemenin aynı işlevselliği temsil etmediği unutulmamalıdır. Örneğin, **TerminateThread** **finally** yan tümceleri çalıştırmaz veya kaynakları serbest bırakırsanız ve engellenemez. Ancak <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> tüm geri alma kodunuzu yürütür, tüm kaynakları geri kazanır ve kullanılarak reddedilebilir <xref:System.Threading.Thread.ResetAbort%2A> . İşlevlerle ilgili varsayımlar yapmadan önce belgeleri okuduğunuzdan emin olun.  
   
-|Yılında Win32|Ortak dilde çalışma süresi|  
+|Win32 'te|Ortak dil çalışma zamanında|  
 |--------------|------------------------------------|  
-|**Oluşturma İş Parçacığı**|**İplik** ve<xref:System.Threading.ThreadStart>|  
-|**Sonlandırma İş parçacığı**|<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>|  
-|**Askıya Alma İşi**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
-|**ResumeThread**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
+|**CreateThread**|**Iş parçacığının** birleşimi ve<xref:System.Threading.ThreadStart>|  
+|**TerminateThread**|<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>|  
+|**SuspendThread**|<xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>|  
+|**ResumeThread Iş parçacığı**|<xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType>|  
 |**Uyku**|<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>|  
-|Iş parçacığı kolunda **WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
-|**Çıkma İş Parçacığı**|Eşdeğeri yok|  
+|İş parçacığı tanıtıcısından **WaitForSingleObject**|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
+|**ExitThread**|Eşdeğer değil|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
 |**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
-|Eşdeğeri yok|<xref:System.Threading.Thread.Name%2A?displayProperty=nameWithType>|  
-|Eşdeğeri yok|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
-|**CoInitializeEx'e** Yakın (OLE32. DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
+|Eşdeğer değil|<xref:System.Threading.Thread.Name%2A?displayProperty=nameWithType>|  
+|Eşdeğer değil|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
+|**CoInitializeEx** 'a kapat (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
-## <a name="managed-threads-and-com-apartments"></a>Yönetilen dikiş iplikleri ve COM daireler
+## <a name="managed-threads-and-com-apartments"></a>Yönetilen iş parçacıkları ve com apartmanlar
 
-Yönetilen iş [parçacığı, tek iş parçacığı](/windows/desktop/com/single-threaded-apartments) veya çok iş [parçacığı bir](/windows/desktop/com/multithreaded-apartments) daire barındıracağını belirtmek için işaretlenebilir. (COM iş parçacığı mimarisi hakkında daha fazla bilgi için, [Bkz. Süreçler, İş Parçacıkları ve Daireler.)](/windows/desktop/com/processes--threads--and-apartments) Sınıf <xref:System.Threading.Thread.GetApartmentState%2A> <xref:System.Threading.Thread.SetApartmentState%2A>dönüş <xref:System.Threading.Thread.TrySetApartmentState%2A> ve bir <xref:System.Threading.Thread> iş parçacığının daire durumunu atama yöntemleri, ve yöntemleri. Durum ayarlanmadıysa, <xref:System.Threading.Thread.GetApartmentState%2A> döndürür. <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>  
+Yönetilen bir iş parçacığı, [tek iş parçacıklı](/windows/desktop/com/single-threaded-apartments) veya çok [iş parçacıklı](/windows/desktop/com/multithreaded-apartments) bir grubu barındıracak olduğunu göstermek için işaretlenebilir. (COM iş parçacığı mimarisi hakkında daha fazla bilgi için bkz. [süreçler, Iş parçacıkları ve apartmanlar](/windows/desktop/com/processes--threads--and-apartments).) <xref:System.Threading.Thread.GetApartmentState%2A>Sınıfının, <xref:System.Threading.Thread.SetApartmentState%2A> ve <xref:System.Threading.Thread.TrySetApartmentState%2A> yöntemleri, <xref:System.Threading.Thread> bir iş parçacığının Grup durumunu döndürür ve atar. Durum ayarlanmamışsa, <xref:System.Threading.Thread.GetApartmentState%2A> döndürür <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType> .  
   
- Özellik yalnızca iş parçacığı <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> durumdayken ayarlanabilir; bir iş parçacığı için yalnızca bir kez ayarlanabilir.  
+ Özelliği yalnızca iş parçacığı <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> durumundayken ayarlanabilir; bir iş parçacığı için yalnızca bir kez ayarlanabilir.  
   
- İş parçacığı başlatılmadan önce daire durumu ayarlanmazsa, iş parçacığı çok iş parçacığı daire (MTA) olarak başlatılır. Sonlandırıcı iş parçacığı ve kontrol <xref:System.Threading.ThreadPool> edilen tüm iş parçacıkları MTA'dır.  
+ Grup durumu, iş parçacığı başlatılmadan önce ayarlanmamışsa, iş parçacığı, çok iş parçacıklı apartman (MTA) olarak başlatılır. Sonlandırıcı iş parçacığı ve tarafından denetlenen tüm iş parçacıkları <xref:System.Threading.ThreadPool> MTA.  
   
 > [!IMPORTANT]
-> Uygulama başlangıç kodu için, daire durumunu kontrol etmenin <xref:System.MTAThreadAttribute> tek <xref:System.STAThreadAttribute> yolu giriş noktası yordamını veya .NET Framework 1.0 ve 1.1'de <xref:System.Threading.Thread.ApartmentState%2A> özellik ilk kod satırı olarak ayarlanabilir. Bu,.NET Framework 2.0'da izin verilmez.  
+> Uygulama başlangıç kodu için, grup durumunu denetlemek için tek yol, <xref:System.MTAThreadAttribute> veya öğesini <xref:System.STAThreadAttribute> giriş noktası yordamına uygulamaktır. .NET Framework 1,0 ve 1,1 ' de, <xref:System.Threading.Thread.ApartmentState%2A> özellik ilk kod satırı olarak ayarlanabilir. .NET Framework 2,0 ' de buna izin verilmez.  
   
- COM'a maruz kalan yönetilen nesneler, serbest dişli mareşalini toplamış gibi düşünür. Başka bir deyişle, herhangi bir COM daireden serbest dişli bir şekilde çağrılabilir. Bu serbest iş parçacığı davranışı sergilemeyen tek yönetilen nesneler, bu <xref:System.EnterpriseServices.ServicedComponent> nesnelerden <xref:System.Runtime.InteropServices.StandardOleMarshalObject>türeyen nesnelerdir veya.  
+ COM 'a sunulan yönetilen nesneler, serbest iş parçacıklı Sıralayıcı 'nın toplanmamış gibi davranır. Diğer bir deyişle, ücretsiz iş parçacıklı bir şekilde herhangi bir COM grubundan çağrılabilir. Bu serbest iş parçacıklı davranışı sergilemeyen tek yönetilen nesneler, veya ' den türetilen nesnelerdir <xref:System.EnterpriseServices.ServicedComponent> <xref:System.Runtime.InteropServices.StandardOleMarshalObject> .  
   
- Yönetilen dünyada, bağlamları ve içeriğe bağlı yönetilen örnekleri <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> kullanmadığınız sürece destek yoktur. Kurumsal Hizmetler kullanıyorsanız, nesnenizin türetilmiş <xref:System.EnterpriseServices.ServicedComponent> olması gerekir <xref:System.ContextBoundObject>(kendisi türetilmiştir).  
+ Yönetilen dünyada, <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> bağlamlar ve bağlam bağlantılı yönetilen örnekler kullanmadığınız durumlar için destek yoktur. Kurumsal Hizmetler kullanıyorsanız, nesnenizin ' den türetmeniz gerekir <xref:System.EnterpriseServices.ServicedComponent> (Bu, öğesinden türetilir <xref:System.ContextBoundObject> ).  
   
- Yönetilen kod COM nesnelerine seslendiğinde, her zaman COM kurallarına uyar. Başka bir deyişle, Com daire yakınlık ve COM + 1.0 bağlam sarmalayıcıları aracılığıyla OLE32 tarafından dikte çağırır.  
+ Yönetilen kod COM nesnelerine aradığında, her zaman COM kurallarını izler. Diğer bir deyişle, OLE32 tarafından dikte edildiği gibi COM apartman proxy 'leri ve COM+ 1,0 bağlam sarmalayıcıları aracılığıyla çağrı yapılır.  
   
-## <a name="blocking-issues"></a>Engelleme sorunları  
+## <a name="blocking-issues"></a>Sorunları engelleme  
 
-Bir iş parçacığı, iş parçacığının yönetilmeyen kodda iş parçacığının denetimini engelleyen işletim sistemine yönetilmeyen bir arama yaparsa, çalışma zamanı iş parçacığının denetimini almaz <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> veya <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>Runtime durumunda, çalışma süresi **Abort** için iş parçacığı işaretler ve yönetilen kodu yeniden girdiğinde bunun denetimini alır. Yönetilmeyen engelleme yerine yönetilen engellemeyi kullanmanız tercih edilir. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>, , , ve <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> benzeri <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>tüm duyarlı ve . Ayrıca, iş parçacığınız tek dişli bir dairedeyse, iş parçacığınız engellenirken tüm bu yönetilen engelleme işlemleri dairenizde doğru şekilde iletipompalar.  
+Bir iş parçacığı, yönetilmeyen koddaki iş parçacığını engelleyen işletim sistemine yönetilmeyen bir çağrı yapıyorsa, çalışma zamanı veya için denetimi almaz <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> . Durumunda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> , çalışma zamanı, iş parçacığını **iptal** için işaretler ve yönetilen kodu yeniden girdiğinde bunun denetimini alır. Yönetilmeyen engelleme yerine yönetilen engellemeyi kullanmanız tercih edilir. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,,, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType> <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType> <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> , <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> , <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> , vb <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> . tüm ve için tamamen yanıt veriyor <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> . Ayrıca, iş parçacığın tek iş parçacıklı bir apartman halinde olması halinde, iş parçacığı engellenirken tüm bu yönetilen engelleyici işlemler, ağınızdaki iletileri doğru bir şekilde kaklacaktır.  
 
-## <a name="threads-and-fibers"></a>İplikler ve lifler
+## <a name="threads-and-fibers"></a>İş parçacıkları ve fiberler
 
-.NET iş parçacığı modeli [lifleri](/windows/desktop/procthread/fibers)desteklemez. Lifler kullanılarak uygulanan herhangi bir yönetilmeyen işlevi içine çağırmak gerekir. Bu tür çağrılar .NET çalışma zamanının çökmesine neden olabilir.
+.NET iş parçacığı modeli [lifleri görmeyin](/windows/desktop/procthread/fibers)'yi desteklemez. Fibers kullanılarak uygulanan hiçbir yönetilmeyen işlevi çağırmamalıdır. Bu tür çağrılar, .NET çalışma zamanının kilitlenmesine neden olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

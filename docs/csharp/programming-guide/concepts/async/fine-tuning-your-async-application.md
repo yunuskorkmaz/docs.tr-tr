@@ -1,46 +1,47 @@
 ---
-title: Async Uygulamanızda İnce Ayar (C#)
+title: Zaman uyumsuz uygulamanızda ince ayar yapma (C#)
+description: Bu C# örnekleri, zaman uyumsuz uygulamalar üzerinde ince ayar yapmak için, CancellationToken ve Task. WhenAll ve Task. Whengibi önemli görev yöntemlerini kullanır.
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
-ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46457f889a78932e306d2bd21dca666625d744eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73970236"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925325"
 ---
-# <a name="fine-tuning-your-async-application-c"></a>Async Uygulamanızda İnce Ayar (C#)
-Async uygulamalarınız için, <xref:System.Threading.Tasks.Task> türün kullanıma sunduğu yöntemleri ve özellikleri kullanarak hassasiyet ve esneklik ekleyebilirsiniz. Bu bölümdeki konular, kullanılan <xref:System.Threading.CancellationToken> örnekleri `Task` ve <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> önemli <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>yöntemleri gösterir.  
+# <a name="fine-tuning-your-async-application-c"></a>Zaman uyumsuz uygulamanızda ince ayar yapma (C#)
+Türün kullanılabilir hale getiren yöntemleri ve özellikleri kullanarak, zaman uyumsuz uygulamalarınıza duyarlık ve esneklik ekleyebilirsiniz <xref:System.Threading.Tasks.Task> . Bu bölümdeki konularda, <xref:System.Threading.CancellationToken> ve gibi önemli Yöntemler ve kullanılan örnekler gösterilmektedir `Task` <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> .  
   
- Kullanarak `WhenAny` ve, `WhenAll`daha kolay birden çok görevi başlatabilir ve tek bir görevi izleyerek bunların tamamlanmasını bekleyebilirsiniz.  
+ Ve kullanarak `WhenAny` `WhenAll` , birden çok görevi daha kolay başlatabilir ve tek bir görevi izleyerek tamamlanmasını deneyebilirsiniz.  
   
-- `WhenAny`Bir koleksiyondaki herhangi bir görev tamamlandığında tamamlayan bir görev döndürür.  
+- `WhenAny`bir koleksiyondaki herhangi bir görev tamamlandığında tamamlanan bir görev döndürür.  
   
-     Kullanan `WhenAny`örnekler için bkz: [Bir Tamamlandıktan Sonra Kalan Async Görevlerini İptal Et (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) ve [Birden Çok Async Görevi Başlatın ve Bunları Tamamlanında İşleyin (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md).  
+     Kullanan örnekler için `WhenAny` , bkz. [kalan zaman uyumsuz görevleri bir işlem tamamlandıktan sonra iptal etme (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md) ve [birden çok zaman uyumsuz görev başlatın ve bunları tamamlarsa (c#) işler](./start-multiple-async-tasks-and-process-them-as-they-complete.md).  
   
-- `WhenAll`Bir koleksiyondaki tüm görevler tamamlandığında tamamlayan bir görev döndürür.  
+- `WhenAll`bir koleksiyondaki tüm görevler tamamlandığında tamamlanan bir görev döndürür.  
   
-     Daha fazla bilgi ve `WhenAll`kullanan bir örnek için [Task.WhenAll (C#) kullanarak async walkthrough genişletmek için nasıl](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)bakın.
+     Daha fazla bilgi ve kullanan bir örnek için `WhenAll` , bkz. [Task. WhenAll (C#) kullanarak zaman uyumsuz izlenecek yolu genişletme](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
   
- Bu bölümde aşağıdaki örnekler yer almaktadır.  
+ Bu bölüm aşağıdaki örnekleri içerir.  
   
-- [Bir Async Görevi veya Görev Listesi (C#) iptal edin.](./cancel-an-async-task-or-a-list-of-tasks.md)  
+- [Zaman uyumsuz bir görevi veya görev listesini Iptal etme (C#)](./cancel-an-async-task-or-a-list-of-tasks.md).  
   
-- [Bir Süre Sonra Async Görevlerini İptal Etme (C#)](./cancel-async-tasks-after-a-period-of-time.md)  
+- [Zaman uyumsuz görevleri bir süre sonra iptal etme (C#)](./cancel-async-tasks-after-a-period-of-time.md)  
   
-- [Bir Tamamlandıktan Sonra Kalan Async Görevlerini İptal Et (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)  
+- [Kalan zaman uyumsuz görevleri bir tane tamamlandıktan sonra iptal etme (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)  
   
-- [Birden Çok Async Görevi Başlatın ve Tamamlanındıkları Gibi İşleyin (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)  
+- [Birden çok zaman uyumsuz görev başlatma ve bunları tamamlarsa Işleme (C#)](./start-multiple-async-tasks-and-process-them-as-they-complete.md)  
   
 > [!NOTE]
-> Örnekleri çalıştırmak için Visual Studio 2012 veya daha yeni ve .NET Framework 4.5 veya daha yeni bilgisayarınıza yüklü olması gerekir.  
+> Örnekleri çalıştırmak için, bilgisayarınızda Visual Studio 2012 veya daha yeni bir sürümü ve .NET Framework 4,5 ya da daha yeni bir sürümü yüklü olmalıdır.  
   
- Projeler, aşağıdaki resimde görüldüğü gibi işlemi başlatan bir düğme ve iptal eden bir düğme içeren bir ui oluşturur. Düğmeler adlandırılmış `startButton` `cancelButton`ve .  
+ Projeler, aşağıdaki görüntüde gösterildiği gibi, işlemi başlatan bir düğme ve bunu iptal eden bir düğme içeren bir kullanıcı arabirimi oluşturur. Düğmeler ve olarak adlandırılır `startButton` `cancelButton` .  
   
- ![İptal düğmesi ile WPF penceresi](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Başlat ve Durdur düğmesi olan iletişim kutusu")  
+ ![Iptal düğmesi olan WPF penceresi](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "Başlat ve Durdur düğmesi ile iletişim kutusu")  
   
- Windows Presentation Foundation (WPF) projelerinin tamamını [Async Sample: Fine Tuning Your Application'dan](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)indirebilirsiniz.  
+ Tüm Windows Presentation Foundation (WPF) projelerini [zaman uyumsuz örnekten indirebilirsiniz: uygulamanızı hassas bir şekilde ayarlama](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Async ve await ile Asynchronous Programlama (C#)](./index.md)
+- [Async ve await ile zaman uyumsuz programlama (C#)](./index.md)

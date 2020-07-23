@@ -1,5 +1,6 @@
 ---
-title: .NET Framework'de neler geçersizdir?
+title: .NET Framework artık kullanılmıyor
+description: .NET sınıf kitaplığı 'nın üyeleri nasıl eski olarak işaretlediği hakkında bilgi alın. Kullanımdan kaldırılmış Teattribute özniteliğini, eski türleri ve üyeleri nasıl işleyeceğinizi ve daha fazlasını anlayın.
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,45 +8,45 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 7cfebfde859a95495e9d2d5e42bd034ad5d55e61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143141"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925806"
 ---
-# <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework sınıf kitaplığında geçersiz olanlar
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework sınıfı kitaplığındaki kullanım dışı Özellikler
 
-.NET zaman içinde değişir. Her yeni sürüm, yeni işlevler sağlayan yeni türler ve tür üyeleri ekler. Varolan türler ve üyeleri de zaman içinde değişir. Örneğin, destekledikleri teknoloji yeni bir teknolojiyle değiştirildikçe bazı türler daha az önem eger ve bazı yöntemlerin yerini bir şekilde üstün olan yeni yöntemler alır.
+Zamana göre .NET değişiklikleri. Her yeni sürüm yeni türler ve yeni işlevsellik sağlayan tür üyeleri ekler. Mevcut türler ve üyeleri zaman içinde de değişir. Örneğin, destekledikleri teknoloji yeni bir teknoloji ile değiştirildiklerinde bazı türler daha az önemli hale gelir ve bazı yöntemlerin yerini, bir şekilde daha yeni yöntemler almıştır.
 
-.NET Framework ve ortak dil çalışma süresi geriye dönük uyumluluğu desteklemeye çalışır (.NET Framework'ün bir sürümüyle geliştirilen uygulamaların .NET Framework'ün bir sonraki sürümünde çalışmasına izin verir). Bu, yalnızca bir türü veya bir tür üyesini kaldırmayı zorlaştırır. Bunun yerine,.NET, bir tür veya tür üyesinin artık eski veya amortismanlı olarak işaretlenerek kullanılmaması gerektiğini belirtir. Bir türü veya bir üyeyi küçümsemek, geliştiricilerin bu türün ortadan kaldırılacağını ve kaldırılmasına yanıt vermek için zamana sahip olacağının farkında olması için işaretlemeyi içerir. Ancak, türü veya üyeyi kullanan varolan kod .NET'in yeni sürümünde çalışmamaya devam eder.
+.NET Framework ve ortak dil çalışma zamanı, geriye dönük uyumluluğu desteklemeye çalışır (bir .NET Framework sürümü ile geliştirilen uygulamaların bir sonraki .NET Framework sürümünde çalışmasına izin verir). Bu, bir türü veya tür üyesini kaldırmayı zorlaştırır. Bunun yerine, .NET, bir türün veya bir tür üyesinin artık eski veya kullanım dışı olarak işaretleyerek kullanılmayacağını gösterir. Bir türün veya üyenin kullanım dışı bırakılması, geliştiricilerin göz önünde bulundurulmasını ve kaldırılmasına yanıt vermek için zaman aldığını bilmesini sağlayacak şekilde işaretlemeyi içerir. Ancak, türü veya üyeyi kullanan mevcut kod, .NET 'in yeni sürümünde çalışmaya devam eder.
 
 > [!NOTE]
-> .NET türleri ve üyelerine uygulandığında *eski* ve *amortismana uygulanan* terimler aynı anlama gelir.
+> *Kullanımdan kalktı* ve *kullanım dışı bırakılmış* koşullar, .net türlerine ve üyelerine uygulandığında aynı anlama sahiptir.
 
-## <a name="the-obsoleteattribute-attribute"></a>EskiÖz Öznitelik özniteliği
+## <a name="the-obsoleteattribute-attribute"></a>Kullanımdan kaldırma Teattribute özniteliği
 
-.NET Framework, bir tür veya tür üyesinin <xref:System.ObsoleteAttribute> öznitelik ile işaretleyerek eski olduğunu gösterir. Bir türe veya üyeye öznitelik uygulanması, bu üyeyi kullanan derlenmiş kodu bozmadan .NET Framework'ün gelecekteki bazı sürümünde tür veya üyenin kaldırılacağını gösterir.
+.NET Framework, bir tür veya tür üyesinin özniteliği ile işaretleyerek artık kullanılmıyor olduğunu gösterir <xref:System.ObsoleteAttribute> . Özniteliği bir türe veya üyeye uygulamak, türün veya üyenin, bu üyeyi kullanan derlenmiş kodu bozmadan .NET Framework sonraki bir sürümünde kaldırılacağını belirtir.
 
-Bir tür veya tür üyesinin eski olduğunu belirtmenin <xref:System.ObsoleteAttribute> yanı sıra, derleyicinin bu türü veya üyeyi içeren kaynak kodu nasıl işleyeceğini tanımlar. Derleyici kodu derleyebilir, ancak bir uyarı iletisi yatabilir veya tür veya üyenin kullanımını bir hata olarak değerlendirebilir. İlk durumda, kod başarıyla derlenebilir, ancak bir uyarı iletisi türün veya üyenin geçersiz olduğunu gösterir. İkinci durumda, derleme başarısız olur.
+Bir türün veya tür üyesinin kullanılmıyor olduğunu belirten ek olarak, <xref:System.ObsoleteAttribute> derleyicinin bu türü veya üyeyi içeren kaynak kodu nasıl işlediğini tanımlar. Derleyici kodu derleyebilir, ancak bir uyarı iletisi yayabilir veya bir hata olarak türün veya üyenin kullanımını ele alabilir. İlk durumda, kod başarıyla derleyebilir, ancak bir uyarı iletisi türün veya üyenin artık kullanılmıyor olduğunu gösterir. İkinci durumda, derleme başarısız olur.
 
-Derleme uyarı iletisi yerine bir hata <xref:System.ObsoleteAttribute> üretse bile, çalışma zamanı davranışını etkilemez. Diğer bir arada, türü veya üyeyi kullanan ve başarılı bir şekilde derlenen uygulamalar her zaman başarılı bir şekilde çalışır. Yalnızca türü veya üyeyi kullanan bir uygulamayı yeniden derleme girişimi başarısız olur.
+Derleme bir uyarı iletisi yerine bir hata üretse bile, <xref:System.ObsoleteAttribute> çalışma zamanı davranışını etkilemez. Diğer bir deyişle, türü veya üyeyi kullanan ve başarıyla derlenen uygulamalar her zaman başarıyla çalışacaktır. Yalnızca türü veya üyeyi kullanan bir uygulamayı yeniden derleme girişimi başarısız olur.
 
-## <a name="how-to-handle-obsolete-types-and-members"></a>Eski türleri ve üyeleri işlemek için nasıl
+## <a name="how-to-handle-obsolete-types-and-members"></a>Eski türleri ve üyeleri işleme
 
-Varolan kodu yükselttidiğinizde ve yeniden derlediğinizde, eski bir tür veya uygulamanızda derleyici uyarısı üreten üye yi kullanarak mükemmel bir şekilde kabul edilebilir. Ancak, uygulama kodunuzu değiştirip değiştirmemeniz gerekmediğini belirlemek için derleyici uyarı iletisini gözden geçirmelisiniz. İleti uygun bir alternatife işaret etmiyorsa, aşağıdakilerden birini yapmalısınız:
+Mevcut kodu yükselttiğinizde ve yeniden derleyeceğinden, eski bir tür veya uygulamanızda bir derleyici uyarısı üreten bir üyenin kullanılması kusursuz kabul edilebilir. Ancak, uygulama kodunuzu değiştirip değiştirmeyeceğinizi öğrenmek için derleyici uyarı iletisini gözden geçirmeniz gerekir. İleti uygun bir alternatifi işaret etmez, aşağıdakilerden birini yapmalısınız:
 
-- Mümkünse türü veya üyekullanımını kaldırarak kodunuzu değiştirin.
+- Mümkünse, türün veya üyenin kullanımını kaldırarak kodunuzu değiştirin.
 
      -veya-
 
-- Amortismana nasıl yanıt verileceksiniz belirlemek için bu teknoloji alanı için belgeleri gözden geçirin.
+- Kullanımdan kaldırma işlemine nasıl yanıt verileceğini öğrenmek için bu teknoloji alanının belgelerini gözden geçirin.
 
-Varolan kodu .NET Framework'ün sonraki bir sürümüne göre yeniden derlememeyi seçebilirsiniz. Bunun yerine, .NET Framework'ün mevcut derlenmiş kodunuzu çalıştırdığı sürümünü belirtebilirsiniz. Örneğin, .NET Framework 3.5'e karşı derlenmiş app1.exe adında bir uygulamanız olduğunu, ancak uygulamanın .NET Framework 4.5'e karşı çalışmasını istediğinizi varsayalım. Bu, aşağıdaki adımları gerektirir:
+Mevcut kodu .NET Framework sonraki bir sürümüne karşı yeniden derleyemeyebilirsiniz. Bunun yerine, mevcut derlenmiş kodunuzun çalıştığı .NET Framework sürümünü belirtebilirsiniz. Örneğin, .NET Framework 3,5 'e göre derlenen app1.exe adlı bir uygulamanız olduğunu varsayalım, ancak uygulamanın .NET Framework 4,5 ' e karşı çalıştırılmasını istiyorsunuz. Bu, aşağıdaki adımları gerektirir:
 
-1. Ana yürütülebilirliğiniz için bir yapılandırma dosyası oluşturun ve *appName*.exe.config adını ve *appName'nin* yürütülebilir uygulamanın adı olduğunu belirtin. Örneğimizde *app1.exe* adlı uygulama için *app1.exe.config*adlı bir yapılandırma dosyası oluşturursunuz.
+1. Ana yürütülebilir dosyanız için bir yapılandırma dosyası oluşturun *ve.exe.config adı* olarak adlandırın; burada *appname* , uygulamanın yürütülebilir dosyasının adıdır. Örneğimizde *app1.exe* adlı uygulama için *app1.exe.config*adlı bir yapılandırma dosyası oluşturacaksınız.
 
-2. Yapılandırma dosyasına aşağıdakileri ekleyin.
+2. Yapılandırma dosyasına aşağıdakini ekleyin.
 
     ```xml
     <configuration>
@@ -55,32 +56,32 @@ Varolan kodu .NET Framework'ün sonraki bir sürümüne göre yeniden derlememey
     </configuration>
     ```
 
-.NET Framework'ün belirli bir sürümünü hedeflemek için, `version` özniteliğe aşağıdaki dize değerlerinden birini atayın:
+.NET Framework belirli bir sürümünü hedeflemek için, aşağıdaki dize değerlerinden birini `version` özniteliğe atayın:
 
-|.NET Framework sürümü|`version`Dize|
+|.NET Framework sürümü|`version`dizisinde|
 |-|-|
-|4.8|v4.0|
-|4.7 (4.7.1 ve 4.7.2 dahil)|v4.0|
-|4.6 (4.6.1 ve 4.6.2 dahil)|v4.0|
-|4.5 (4.5.1 ve 4.5.2 dahil)|v4.0|
+|4,8|v4.0|
+|4,7 (4.7.1 ve 4.7.2 dahil)|v4.0|
+|4,6 (4.6.1 ve 4.6.2 dahil)|v4.0|
+|4,5 (4.5.1 ve 4.5.2 dahil)|v4.0|
 |4|v4.0|
-|3,5|v2.0.50727|
-|2,0|v2.0.50727|
-|1.1|v1.1.4322|
-|1.0|v1.0.3705|
+|3,5|v 2.0.50727|
+|2,0|v 2.0.50727|
+|1.1|v 1.1.4322|
+|1,0|v 1.0.3705|
 
-## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>.NET Framework 4.5 ve sonraki sürümler için eski API'ler
+## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>.NET Framework 4,5 ve üzeri sürümler için kullanılmayan API 'Ler
 
-- [Eski Türler](obsolete-types.md)
+- [Kullanılmayan türler](obsolete-types.md)
 - [Eski Üyeler](obsolete-members.md)
 
-## <a name="obsolete-apis-for-previous-versions"></a>Önceki sürümler için eski API'ler
+## <a name="obsolete-apis-for-previous-versions"></a>Önceki sürümler için kullanımdan kaldırılmış API 'Ler
 
-- [.NET Framework 4'te Eski Türler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
-- [.NET Framework 4'te Eski Üyeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
-- [.NET Framework 3.5 Eski Liste](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
-- [.NET Framework 2.0 Eski Liste](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
+- [.NET Framework 4 ' te kullanılmıyor türler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
+- [.NET Framework 4 ' te kullanılmayan Üyeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
+- [.NET Framework 3,5 listesi artık kullanılmıyor](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
+- [.NET Framework 2,0 listesi artık kullanılmıyor](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<desteklenenRuntime> Öğesi](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime>Dosyalarında](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -1,35 +1,36 @@
 ---
-title: Yansıma (C#) kullanarak Özniteliklere Erişim
+title: Yansıma kullanarak özniteliklere erişme (C#)
+description: GetCustomAttributes metodunu kullanarak C# ' deki özel özniteliklerle tanımlanan bilgileri almak için yansımayı kullanın.
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9425141d64fd061d0c1f628228693cce02f7bfa0
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595498"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925104"
 ---
-# <a name="accessing-attributes-by-using-reflection-c"></a>Yansıma (C#) kullanarak Özniteliklere Erişim
-Özel öznitelikleri tanımlayabilme ve bunları kaynak kodunuza yerleştirebilmeniz, bu bilgileri almanın ve bu bilgilerüzerinde hareket etmenin bir yolu olmadan çok az değerli olacaktır. Yansımayı kullanarak, özel özniteliklerle tanımlanan bilgileri alabilirsiniz. Anahtar `GetCustomAttributes`yöntem, kaynak kodu özniteliklerinin çalışma zamanı eşdeğerleri olan nesnelerin bir dizi döndürür. Bu yöntemin birkaç aşırı yüklenmiş sürümü vardır. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
+# <a name="accessing-attributes-by-using-reflection-c"></a>Yansıma kullanarak özniteliklere erişme (C#)
+Özel öznitelikleri tanımlayabilir ve bunları kaynak kodunuza yerleştirebilirsiniz. Bu bilgiler, bu bilgileri alma ve üzerinde işlem yapmaya gerek kalmadan çok az değer elde edebilir. Yansıma kullanarak özel özniteliklerle tanımlanan bilgileri alabilirsiniz. Anahtar yöntemi `GetCustomAttributes` , kaynak kodu özniteliklerinin çalışma zamanı eşdeğerleri olan bir nesne dizisi döndüren ' dir. Bu yöntemin birkaç aşırı yüklü sürümü vardır. Daha fazla bilgi için bkz. <xref:System.Attribute>.  
   
- Gibi bir öznitelik belirtimi:  
+ Şöyle bir öznitelik belirtimi:  
   
 ```csharp  
 [Author("P. Ackerman", version = 1.1)]  
 class SampleClass  
 ```  
   
- kavramsal olarak buna eşdeğerdir:  
+ kavramsal olarak eşdeğerdir:  
   
 ```csharp  
 Author anonymousAuthorObject = new Author("P. Ackerman");  
 anonymousAuthorObject.version = 1.1;  
 ```  
   
- Ancak, öznitelikler için `SampleClass` sorgulandırılana kadar kod yürütülmez. `GetCustomAttributes` Çağrı, `SampleClass` bir `Author` nesnenin yukarıdaki gibi oluşturulup başharfe büretilmesine neden olur. Sınıfın başka öznitelikleri varsa, diğer öznitelik nesneleri de benzer şekilde oluşturulur. `GetCustomAttributes`sonra `Author` nesne ve bir dizideki diğer öznitelik nesneleri döndürür. Daha sonra bu dizi üzerinde yineleyebilir, her dizi öğesinin türüne göre hangi özniteliklerin uygulandığını belirleyebilir ve öznitelik nesnelerinden bilgi ayıklayabilirsiniz.  
+ Ancak, kod `SampleClass` öznitelikleri için sorgulanana kadar yürütülmez. ' In çağrılması `GetCustomAttributes` `SampleClass` `Author` , bir nesnenin yukarıya oluşturulmasını ve başlatılmasını sağlar. Sınıfın başka öznitelikleri varsa, diğer öznitelik nesneleri benzer şekilde oluşturulur. `GetCustomAttributes`sonra `Author` nesneyi ve dizideki diğer öznitelik nesnelerini döndürür. Daha sonra bu dizinin üzerinde yineleyebilir, her bir dizi öğesinin türüne göre hangi özniteliklerin uygulandığını belirleyebilir ve öznitelik nesnelerinden bilgi ayıklayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- İşte tam bir örnektir. Özel bir öznitelik tanımlanır, çeşitli varlıklara uygulanır ve yansıma yoluyla alınır.  
+ Aşağıda bir örnek verilmiştir. Özel bir öznitelik tanımlanır, birkaç varlığa uygulanır ve yansıma aracılığıyla alınır.  
   
 ```csharp  
 // Multiuse attribute.  
@@ -121,4 +122,4 @@ class TestAuthorAttribute
 - [Özniteliklerde Depolanan Bilgileri Alma](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
 - [Yansıma (C#)](../reflection.md)
 - [Öznitelikler (C#)](./index.md)
-- [Özel Öznitelikler oluşturma (C#)](./creating-custom-attributes.md)
+- [Özel öznitelikler oluşturma (C#)](./creating-custom-attributes.md)

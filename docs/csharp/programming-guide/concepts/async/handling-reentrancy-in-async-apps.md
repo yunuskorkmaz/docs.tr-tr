@@ -1,13 +1,14 @@
 ---
 title: Zaman uyumsuz uygulamalarda yeniden girişi işleme (C#)
+description: Zaman uyumsuz bir işlemi, beklenmeyen sonuçlarla bitmeden önce yeniden girmeye yönelik olan C# zaman uyumsuz uygulamalarında yeniden giriş yapmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: fdd440d167b95268a5ae6de0e57a32f0fad66b7c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241818"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925247"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Zaman uyumsuz uygulamalarda yeniden girişi işleme (C#)
 

@@ -3,18 +3,18 @@ title: DotNet NuGet Push komutu
 description: DotNet NuGet Push komutu, bir paketi sunucuya gönderir ve yayınlar.
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 608cd05d94dd6b5cdc53d582cfaa0407f011ff37
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895465"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925520"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 2. x SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet nuget push`-Sunucuya bir paket gönderir ve onu yayımlar.
 
@@ -22,7 +22,7 @@ ms.locfileid: "82895465"
 
 ```dotnetcli
 dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
-    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols true]
     [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
     [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
     [-t|--timeout <TIMEOUT>]
@@ -32,11 +32,11 @@ dotnet nuget push -h|--help
 
 ## <a name="description"></a>Açıklama
 
-Komut `dotnet nuget push` , bir paketi sunucuya gönderir ve yayınlar. Push komutu, sistemin NuGet yapılandırma dosyasında veya yapılandırma dosyaları zincirinde bulunan sunucu ve kimlik bilgisi ayrıntılarını kullanır. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [NuGet davranışını yapılandırma](/nuget/consume-packages/configuring-nuget-behavior). NuGet 'in varsayılan yapılandırması, *%AppData%\NuGet\NuGet.config* (Windows) veya *$Home/PST local/share* (Linux/MacOS) yükleyerek elde edilir ve sürücü kökünden başlayıp geçerli dizinde sona ermek üzere herhangi bir *NuGet. config* veya *. nuget\nuget.exe* .
+`dotnet nuget push`Komut, bir paketi sunucuya gönderir ve yayınlar. Push komutu, sistemin NuGet yapılandırma dosyasında veya yapılandırma dosyaları zincirinde bulunan sunucu ve kimlik bilgisi ayrıntılarını kullanır. Yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [NuGet davranışını yapılandırma](/nuget/consume-packages/configuring-nuget-behavior). NuGet 'in varsayılan yapılandırması, *% AppData% \NuGet\NuGet.config* (Windows) veya *$Home/PST local/share* (Linux/MacOS) yüklenirken ve sürücü kökünden başlayıp geçerli dizinde sona ermek üzere herhangi bir *nuget.config* veya *.nuget\nuget.config* yükleyerek elde edilir.
 
-Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için kullanın [`dotnet pack`](dotnet-pack.md).
+Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için kullanın [`dotnet pack`](dotnet-pack.md) .
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`ROOT`**
 
@@ -64,7 +64,7 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
 
   Sunucu için API anahtarı.
 
-- **`-n|--no-symbols`**
+- **`-n|--no-symbols true`**
 
   Sembol (varsa bile) almaz.
 
@@ -74,7 +74,7 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
 
 - **`-s|--source <SOURCE>`**
 
-  Sunucu URL 'sini belirtir. Bu seçenek, NuGet yapılandırma `DefaultPushSource` dosyasında yapılandırma değeri ayarlanmadığı takdirde gereklidir.
+  Sunucu URL 'sini belirtir. Bu seçenek, `DefaultPushSource` NuGet yapılandırma dosyasında yapılandırma değeri ayarlanmadığı takdirde gereklidir.
 
 - **`--skip-duplicate`**
 
@@ -106,7 +106,7 @@ Komut, var olan bir paketi iter. Paket oluşturmaz. Bir paket oluşturmak için 
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * Bir API anahtarı belirterek, özel itme kaynağına `https://customsource` *foo. nupkg* gönderin:
+  * Bir API anahtarı belirterek, özel itme kaynağına *foo. nupkg* gönderin `https://customsource` :
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/

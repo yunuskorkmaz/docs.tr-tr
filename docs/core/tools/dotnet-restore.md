@@ -2,18 +2,18 @@
 title: dotnet restore komutu
 description: Dotnet restore komutuyla bağımlılıkları ve projeye özel araçları nasıl geri yükleyeceğinizi öğrenin.
 ms.date: 02/27/2020
-ms.openlocfilehash: 276fad896a6a8a647ed05a9de8c582d463d9ab8f
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 7b456e28505a07c03936c9006c8631848fd4672c
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005329"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925482"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet restore`-Bir projenin bağımlılıklarını ve araçlarını geri yükler.
 
@@ -46,12 +46,12 @@ Bazen, bu komutlarla örtük NuGet geri yüklemesini çalıştırmak kullanışl
 
 ### <a name="specify-feeds"></a>Akışları belirt
 
-Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor. Akışlar genellikle *NuGet. config* yapılandırma dosyası aracılığıyla sağlanır. .NET Core SDK yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır. Ek akışlar belirtmek için aşağıdakilerden birini yapın:
+Bağımlılıkları geri yüklemek için, NuGet paketlerin bulunduğu akışlara ihtiyaç duyuyor. Akışlar genellikle *nuget.config* yapılandırma dosyası aracılığıyla sağlanır. .NET Core SDK yüklendiğinde varsayılan bir yapılandırma dosyası sağlanır. Ek akışlar belirtmek için aşağıdakilerden birini yapın:
 
-- Proje dizininde kendi *NuGet. config* dosyanızı oluşturun. Daha fazla bilgi için bu makalenin ilerleyen kısımlarında [yaygın NuGet yapılandırmalarını](/nuget/consume-packages/configuring-nuget-behavior) ve [NuGet. config farklılıklarını](#nugetconfig-differences) inceleyin.
+- Proje dizininde kendi *nuget.config* dosyanızı oluşturun. Daha fazla bilgi için bu makalenin ilerleyen kısımlarında [yaygın NuGet yapılandırması](/nuget/consume-packages/configuring-nuget-behavior) ve [nuget.config farklılıkları](#nugetconfig-differences) bölümüne bakın.
 - Gibi `dotnet nuget` komutları kullanın [`dotnet nuget add source`](dotnet-nuget-add-source.md) .
 
-*NuGet. config* akışlarını seçeneğiyle geçersiz kılabilirsiniz `-s` .
+*nuget.config* akışlarını seçeneği ile geçersiz kılabilirsiniz `-s` .
 
 Kimliği doğrulanmış akışların nasıl kullanılacağı hakkında daha fazla bilgi için bkz. [kimliği doğrulanmış akışlardan paketleri](/nuget/consume-packages/consuming-packages-authenticated-feeds)kullanma.
 
@@ -63,9 +63,9 @@ Bağımlılıklar için, geri yükleme işlemi sırasında bağımsız değişke
 
 Projeye özgü araçlar için, `dotnet restore` önce aracın paketlenmesi gereken paketi geri yükler ve ardından, araç bağımlılıklarını proje dosyasında belirtilen şekilde geri yüklemeye devam eder.
 
-### <a name="nugetconfig-differences"></a>NuGet. config farklılıkları
+### <a name="nugetconfig-differences"></a>nuget.config farklar
 
-Komutun davranışı, varsa `dotnet restore` *NuGet. config* dosyasındaki ayarlardan etkilenir. Örneğin, `globalPackagesFolder` *NuGet. config* içindeki ayarı, geri yüklenen NuGet paketlerini belirtilen klasöre koyar. Bu seçenek, komutunda seçeneğini belirtmeye yönelik bir alternatiftir `--packages` `dotnet restore` . Daha fazla bilgi için bkz. [NuGet. config başvurusu](/nuget/schema/nuget-config-file).
+Komutun davranışı, varsa `dotnet restore` *nuget.config* dosyasındaki ayarlardan etkilenir. Örneğin,nuget.configayarlanması, `globalPackagesFolder` geri *nuget.config* yüklenen NuGet paketlerini belirtilen klasöre koyar. Bu seçenek, komutunda seçeneğini belirtmeye yönelik bir alternatiftir `--packages` `dotnet restore` . Daha fazla bilgi için [nuget.config başvurusuna](/nuget/schema/nuget-config-file)bakın.
 
 Yok sayan üç özel ayar vardır `dotnet restore` :
 
@@ -81,7 +81,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
   NuGet, güvenilen paketlerin [platformlar arası doğrulanmasını henüz desteklemediğinden](https://github.com/NuGet/Home/issues/7939) , bu ayar geçerli değildir.
 
-## <a name="arguments"></a>Bağımsız değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`ROOT`**
 
@@ -91,7 +91,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - **`--configfile <FILE>`**
 
-  Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*NuGet. config*).
+  Geri yükleme işlemi için kullanılacak NuGet yapılandırma dosyası (*nuget.config*).
 
 - **`--disable-parallel`**
 
@@ -99,7 +99,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, dosyadaki *project.assets.js* silme ile aynıdır.
 
 - **`--force-evaluate`**
 
@@ -119,7 +119,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - **`--lock-file-path <LOCK_FILE_PATH>`**
 
-  Proje kilit dosyasının yazıldığı çıkış konumu. Bu, varsayılan olarak *PROJECT_ROOT \packages.Lock.JSON*.
+  Proje kilit dosyasının yazıldığı çıkış konumu. Bu, varsayılan olarak *PROJECT_ROOT\packages.lock.js*.
 
 - **`--locked-mode`**
 
@@ -143,7 +143,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 
 - **`-s|--source <SOURCE>`**
 
-  Geri yükleme işlemi sırasında kullanılacak NuGet paket kaynağının URI 'sini belirtir. Bu ayar *NuGet. config* dosyalarında belirtilen tüm kaynakları geçersiz kılar. Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.
+  Geri yükleme işlemi sırasında kullanılacak NuGet paket kaynağının URI 'sini belirtir. Bu ayar *nuget.config* dosyalarında belirtilen tüm kaynakları geçersiz kılar. Bu seçenek birden çok kez belirtilerek birden çok kaynak sağlanarak sağlayabilirsiniz.
 
 - **`--use-lock-file`**
 
@@ -164,7 +164,7 @@ Yok sayan üç özel ayar vardır `dotnet restore` :
 - Verilen yolda bulunan projenin bağımlılıklarını ve araçlarını geri yükleyin `app1` :
 
   ```dotnetcli
-  dotnet restore ~/projects/app1/app1.csproj
+  dotnet restore ./projects/app1/app1.csproj
   ```
 
 - Kaynak olarak belirtilen dosya yolunu kullanarak geçerli dizindeki proje için bağımlılıkları ve araçları geri yükleyin:

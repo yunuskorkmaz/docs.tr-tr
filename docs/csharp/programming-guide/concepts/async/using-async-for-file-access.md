@@ -1,13 +1,14 @@
 ---
 title: Dosya erişimi için Async Kullanma (C#)
+description: Zaman uyumsuz özelliğini C# ' deki dosyalara erişmek için nasıl kullanacağınızı öğrenin. Geri çağırmaları kullanmadan veya kodlarınızı Yöntemler arasında bölmeden zaman uyumsuz yöntemlere çağrı yapabilirsiniz.
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 8e0a62c2263ed3fd11eb4accb54978ef439ac010
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: eb67bd408fe37b99e6c5ffdc2550e8f95110d7eb
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396956"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925130"
 ---
 # <a name="using-async-for-file-access-c"></a>Dosya erişimi için Async Kullanma (C#)
 Dosyalara erişmek için zaman uyumsuz özelliği kullanabilirsiniz. Async özelliğini kullanarak, geri çağırmaları kullanmadan veya kodunuzu birden çok yöntemde veya Lambda ifadelerinde bölmeden zaman uyumsuz yöntemlere çağrı yapabilirsiniz. Zaman uyumlu kodu zaman uyumsuz yapmak için, zaman uyumlu bir yöntem yerine zaman uyumsuz bir yöntem çağırır ve koda birkaç anahtar sözcük eklemeniz yeterlidir.  
@@ -78,7 +79,7 @@ await theTask;
  İlk ifade bir görev döndürür ve dosya işlemenin başlatılmasına neden olur. Await ile ikinci ifade, yönteminin hemen çıkmasına ve farklı bir görev döndürmesine neden olur. Dosya işleme daha sonra tamamlandığında, yürütme, await ' ı izleyen ifadeye geri döner. Daha fazla bilgi için bkz. [zaman uyumsuz programlarda denetim akışı (C#)](./control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Metin okuma  
- Aşağıdaki örnek bir dosyadaki metni okur. Metin, arabelleğe alınmış ve bu durumda bir öğesine yerleştirildi <xref:System.Text.StringBuilder> . Önceki örnekte aksine, await 'ın değerlendirmesi bir değer oluşturur. <xref:System.IO.Stream.ReadAsync%2A>Yöntemi bir> döndürür <xref:System.Threading.Tasks.Task> \< <xref:System.Int32> , bu nedenle await 'ın değerlendirmesi `Int32` işlem tamamlandıktan sonra bir değer ( `numRead` ) oluşturur. Daha fazla bilgi için bkz. [Async Return Types (C#)](./async-return-types.md).  
+ Aşağıdaki örnek bir dosyadaki metni okur. Metin, arabelleğe alınmış ve bu durumda bir öğesine yerleştirildi <xref:System.Text.StringBuilder> . Önceki örnekte aksine, await 'ın değerlendirmesi bir değer oluşturur. <xref:System.IO.Stream.ReadAsync%2A>Yöntemi bir> döndürür <xref:System.Threading.Tasks.Task> \<<xref:System.Int32> , bu nedenle await 'ın değerlendirmesi `Int32` işlem tamamlandıktan sonra bir değer ( `numRead` ) oluşturur. Daha fazla bilgi için bkz. [Async Return Types (C#)](./async-return-types.md).  
   
 ```csharp  
 public async Task ProcessReadAsync()  

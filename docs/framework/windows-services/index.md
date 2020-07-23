@@ -1,5 +1,6 @@
 ---
 title: Windows Hizmet Uygulamaları Geliştirme
+description: Visual Studio veya .NET SDK kullanarak Windows hizmeti uygulamaları geliştirmeyi açıklayan makalelerin bağlantılarını inceleyin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ServiceInstaller class, Windows Service applications
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: 61f969c22ac06bd6ed20ccfa9124db3bb35d0692
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed02d523c21c51df2ed886843fdb71c075c93c30
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "71053551"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925702"
 ---
 # <a name="develop-windows-service-apps"></a>Windows hizmeti uygulamaları geliştirme
 
@@ -39,7 +40,7 @@ Visual Basic ve Visual C# ' de bir hizmet oluşturmak için bir örnek sağlar.
 
 Hizmet programlamasında kullanılan dil öğelerini açıklar.
 
-[Nasıl Yapılır: Windows Hizmetleri Oluşturma](how-to-create-windows-services.md)
+[Nasıl yapılır: Windows Hizmetleri Oluşturma](how-to-create-windows-services.md)
 
 Windows hizmeti proje şablonunu kullanarak Windows hizmetlerini oluşturma ve yapılandırma sürecini açıklar.
 
@@ -47,8 +48,8 @@ Windows hizmeti proje şablonunu kullanarak Windows hizmetlerini oluşturma ve y
 
 <xref:System.ServiceProcess.ServiceBase>- <xref:System.ServiceProcess.ServiceBase> Sınıfının hizmetleri oluşturmak için kullanılan ana özelliklerini açıklar.
 
-<xref:System.ServiceProcess.ServiceProcessInstaller>-Hizmetlerinizi yüklemek ve kaldırmak için <xref:System.ServiceProcess.ServiceProcessInstaller> <xref:System.ServiceProcess.ServiceInstaller> sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceProcessInstaller>- <xref:System.ServiceProcess.ServiceProcessInstaller> <xref:System.ServiceProcess.ServiceInstaller> Hizmetlerinizi yüklemek ve kaldırmak için sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
 
-<xref:System.ServiceProcess.ServiceInstaller>-Hizmetinizi yüklemek ve kaldırmak için <xref:System.ServiceProcess.ServiceInstaller> <xref:System.ServiceProcess.ServiceProcessInstaller> sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceInstaller>- <xref:System.ServiceProcess.ServiceInstaller> <xref:System.ServiceProcess.ServiceProcessInstaller> Hizmetinizi yüklemek ve kaldırmak için sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
 
 [Şablonlardan proje oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) -bu bölümde kullanılan proje türlerini ve bunların arasından nasıl seçim yapılacağını açıklar.

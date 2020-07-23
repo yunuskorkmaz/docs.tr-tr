@@ -1,13 +1,14 @@
 ---
 title: Async ve await kullanarak birden çok web isteğini paralel hale getirme (C#)
+description: Bir görev oluşturulduğunda uygulama yerine, C# ' de await işlecini kullanarak bir görevi oluşturmayı nasıl ayıracağınızı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 0cfc1d6d1d59dc74fcf5990abb0a9d980a83d7b0
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 899dfd9165d199a67a5178bb351081ee544b231f
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241805"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925169"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Async ve await kullanarak birden çok web isteğini paralel hale getirme (C#)
 Zaman uyumsuz bir yöntemde görevler oluşturulduğunda başlatılır. [Await](../../../language-reference/operators/await.md) işleci, görev bitene kadar işlemin devam edemediği yöntemdeki noktada göreve uygulanır. Aşağıdaki örnekte gösterildiği gibi, genellikle bir görev, oluşturulduktan hemen sonra beklediğinde.  

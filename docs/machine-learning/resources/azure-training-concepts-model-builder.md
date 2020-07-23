@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289479"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924584"
 ---
 # <a name="model-builder-azure-training-resources"></a>Model Oluşturucu Azure eğitim kaynakları
 
@@ -56,7 +56,7 @@ Bir Azure Machine Learning çalışma alanı oluşturmak için aşağıdakiler g
 
 ## <a name="training"></a>Eğitim
 
-Azure eğitimi yalnızca model Oluşturucu görüntü sınıflandırma senaryosu için kullanılabilir. Bu modelleri eğmek için kullanılan algoritma, ResNet50 mimarisini temel alan derin bir sinir ağı. Eğitim süreci bir süre sürer ve zaman miktarı, seçilen işlem boyutuna ve veri miktarına bağlı olarak değişebilir. Bir modelin ilk eğitiminde, kaynakların sağlanması gerektiğinden biraz daha uzun bir eğitim süresi bekleyebilir. Visual Studio 'daki "geçerli çalışmayı Izle Azure portal" bağlantısını seçerek çalıştırmaların ilerlemesini izleyebilirsiniz.
+Azure eğitimi yalnızca model Oluşturucu görüntü sınıflandırma senaryosu için kullanılabilir. Bu modelleri eğmek için kullanılan algoritma, ResNet50 mimarisini temel alan derin bir sinir ağı. Eğitim süreci bir süre sürer ve zaman miktarı, seçilen işlem boyutuna ve veri miktarına bağlı olarak değişebilir. Visual Studio 'daki "geçerli çalışmayı Izle Azure portal" bağlantısını seçerek çalıştırmaların ilerlemesini izleyebilirsiniz.
 
 ## <a name="results"></a>Sonuçlar
 
@@ -66,8 +66,8 @@ Eğitim tamamlandıktan sonra, aşağıdaki son eklerle çözümünüze iki proj
 - *Model*: giriş ve çıkış modeli verilerinin şemasını ve aşağıdaki varlıkları tanımlayan veri modellerini içeren bir C# .NET Standard uygulaması:
 
   - en iyi model. onnx: Open sinir Network Exchange (ONNX) biçiminde modelin serileştirilmiş bir sürümü. ONNX, ML.NET, PyTorch ve TensorFlow gibi çerçeveler arasında birlikte çalışabilirliği destekleyen AI modelleri için açık bir kaynak biçimidir.
-  - en iyi modelMap. JSON: model çıkışını bir metin kategorisine eşlemek için tahminleri yaparken kullanılan kategorilerin bir listesi.
-  - MLModel. zip: ML.NET tahmin işlem hattının seri hale getirilmiş bir sürümü, tahmine dayalı hale getirmek için model *. onnx* modelinin serileştirilmiş sürümünü kullanır `bestModelMap.json` .
+  - bestModelMap.js: model çıkışını bir metin kategorisine eşlemek için tahminleri yaparken kullanılan kategorilerin listesi.
+  - MLModel.zip: ML.NET tahmin işlem hattının seri hale getirilmiş bir sürümü, tahmine dayalı hale getirmek için model *. onnx* , dosya kullanarak çıkış ve eşleme yapmak için kullanılır `bestModelMap.json` .
 
 ## <a name="use-the-machine-learning-model"></a>Machine Learning modelini kullanma
 

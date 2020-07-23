@@ -4,12 +4,12 @@ description: Databricks 'e Apache Spark uygulamasının bir .NET uygulamasını 
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e0b99b6706bf51adaa6e3795d1c81179e14cb7a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 66a5493f0084f5fa86c3eb928d2e4a4b4999e764
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618343"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924597"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Öğretici: Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı
 
@@ -26,12 +26,12 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Başlamadan önce, aşağıdaki görevleri yapın:
 
 * Azure hesabınız yoksa [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/)oluşturun.
-* [Azure Portal](https://portal.azure.com/) oturum açın.
+* [Azure portalında](https://portal.azure.com/) oturum açın.
 * [Apache Spark için .net ' i doldurun-10 dakikalık öğreticide kullanmaya başlayın](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 
 ## <a name="create-an-azure-databricks-workspace"></a>Azure Databricks çalışma alanı oluşturma
@@ -55,9 +55,9 @@ Bu bölümde Azure portalını kullanarak bir Azure Databricks çalışma alanı
     |**Kaynak grubu**     | Yeni bir kaynak grubu oluşturmayı veya mevcut bir kaynak grubunu kullanmayı seçin. Kaynak grubu, bir Azure çözümüne ilişkin kaynakları tutan bir kapsayıcıdır. Daha fazla bilgi için bkz. [Azure Kaynak Grubuna genel bakış](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Konum**     | Tercih ettiğiniz bölgeyi seçin. Kullanılabilir bölgeler hakkında daha fazla bilgi için bkz. [bölgeye göre kullanılabilir Azure hizmetleri](https://azure.microsoft.com/regions/services/).        |
     |**Fiyatlandırma Katmanı**     |  **Standart**, **Premium**veya **deneme**arasında seçim yapın. Bu katmanlar hakkında daha fazla bilgi için bkz. [Databricks fiyatlandırma sayfası](https://azure.microsoft.com/pricing/details/databricks/).       |
-    |**Sanal ağ**     |   No       |
+    |**Sanal Ağ**     |   No       |
 
-3. **Oluştur**'u seçin. Çalışma alanının oluşturulması birkaç dakika sürer. Çalışma alanı oluşturma sırasında, **Bildirimler**' de dağıtım durumunu görüntüleyebilirsiniz.
+3. **Oluştur**’u seçin. Çalışma alanının oluşturulması birkaç dakika sürer. Çalışma alanı oluşturma sırasında, **Bildirimler**' de dağıtım durumunu görüntüleyebilirsiniz.
 
 ## <a name="install-azure-databricks-tools"></a>Azure Databricks araçları 'nı yükler
 
@@ -154,7 +154,7 @@ Bu bölümde, kümenizin uygulamanızı bulutta çalıştırması için gereken 
    ```console
    databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
    databricks fs cp install-worker.sh dbfs:/spark-dotnet/install-worker.sh
-   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
+   databricks fs cp Microsoft.Spark.Worker.netcoreapp3.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
 2. Geri kalan dosyaları karşıya yüklemek için aşağıdaki komutları çalıştırın: kümenizin uygulamanızı çalıştırması gerekecektir: daraltılmış yayımlama klasörü, *input.txt*ve *Microsoft-Spark-2,4. x-0.3.1. jar*.
@@ -164,11 +164,11 @@ Bu bölümde, kümenizin uygulamanızı bulutta çalıştırması için gereken 
    databricks fs cp input.txt dbfs:/input.txt
 
    cd mySparkApp\bin\Release\netcoreapp3.1\ubuntu.16.04-x64 directory
-   databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
+   databricks fs cp publish.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
 
-## <a name="create-a-job"></a>Bir iş oluşturma
+## <a name="create-a-job"></a>İş oluşturma
 
 Uygulamanız, Apache Spark işleri için .NET çalıştırmak için kullandığınız komut olan **Spark-gönder**çalıştıran bir iş aracılığıyla Azure Databricks çalışır.
 

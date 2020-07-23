@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: Windows hizmetlerini yükleme ve kaldırma'
+description: Bkz. Windows hizmetlerini yükleme ve kaldırma. .NET ile bir Windows hizmeti geliştirmekte çalışıyorsanız InstallUtil.exe veya PowerShell kullanabilirsiniz.
 ms.date: 02/05/2019
 helpviewer_keywords:
 - Windows Service applications, deploying
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: 259b353edc269a77a51e790544018481a53af188
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5597043bb1c5af05f5f3633cba6ee6e6de1c52c1
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596364"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925611"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Nasıl yapılır: Windows hizmetlerini yükleme ve kaldırma
 
-.NET Framework ile bir Windows hizmeti geliştiriyorsanız, [*InstallUtil. exe*](../tools/installutil-exe-installer-tool.md) komut satırı yardımcı programını veya [PowerShell](/powershell/scripting/overview)'i kullanarak hizmet uygulamanızı hızlı bir şekilde yükleyebilirsiniz. Kullanıcıların yükleyebileceği ve kaldırabildiği bir Windows hizmetini yayınlamak isteyen geliştiriciler InstallShield kullanmalıdır. Daha fazla bilgi için bkz. [Yükleyici paketi oluşturma (Windows Masaüstü)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
+.NET Framework ile bir Windows hizmeti geliştiriyorsanız, [*InstallUtil.exe*](../tools/installutil-exe-installer-tool.md) komut satırı yardımcı programını veya [PowerShell](/powershell/scripting/overview)'i kullanarak hizmet uygulamanızı hızlı bir şekilde yükleyebilirsiniz. Kullanıcıların yükleyebileceği ve kaldırabildiği bir Windows hizmetini yayınlamak isteyen geliştiriciler InstallShield kullanmalıdır. Daha fazla bilgi için bkz. [Yükleyici paketi oluşturma (Windows Masaüstü)](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
 
 > [!WARNING]
 > Bilgisayarınızdan bir hizmeti kaldırmak istiyorsanız, bu makaledeki adımları izleyin. Bunun yerine, hizmeti hangi programın veya yazılım paketinin yüklendiğini öğrenin ve ardından bu programı kaldırmak için ayarlar ' da **uygulamalar** ' ı seçin. Birçok hizmetin Windows 'un ayrılmaz parçaları olduğunu unutmayın; Bunları kaldırırsanız, sistem kararsızlığına neden olabilirsiniz.
@@ -33,7 +34,7 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
 > [!TIP]
 > Hizmetinizi yüklediğinizi veya kaldırdığınızı doğrulamak için **Sunucu Gezgini** kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da Sunucu Gezgini kullanma](https://support.microsoft.com/help/316649/how-to-use-the-server-explorer-in-visual-studio-net-and-visual-studio).
 
-### <a name="install-your-service-manually-using-installutilexe-utility"></a>InstallUtil. exe yardımcı programını kullanarak hizmetinizi el ile yükleme
+### <a name="install-your-service-manually-using-installutilexe-utility"></a>InstallUtil.exe yardımcı programını kullanarak hizmetinizi el ile yükleyebilirsiniz
 
 1. **Başlat** menüsünde **Visual Studio \<*version*> ** dizinini seçin ve ardından ** \<*version*> vs için geliştirici komut istemi **seçin.
 
@@ -41,25 +42,25 @@ F5 'e basarak Windows hizmeti projelerini doğrudan Visual Studio geliştirme or
 
 2. Projenizin derlenmiş yürütülebilir dosyasının bulunduğu dizine erişin.
 
-3. Komut isteminden *InstallUtil. exe* ' yi bir parametre olarak projenizin yürütülebilir dosyası ile çalıştırın:
+3. Komut isteminden proje yürütülebiliri olarak parametre olarak *InstallUtil.exe* çalıştırın:
 
     ```console
     installutil <yourproject>.exe
     ```
 
-     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil. exe* dosyası sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\<framework_version \> *.NET Framework ile yüklenir.
+     Visual Studio için Geliştirici Komut İstemi kullanıyorsanız, *InstallUtil.exe* sistem yolunda olmalıdır. Aksi takdirde, yolu yola ekleyebilir veya tam yolu kullanarak çağırabilirsiniz. Bu araç, *%windir%\Microsoft.NET\Framework [64] \\<framework_version \> *.NET Framework ile yüklenir.
 
-     Örnek:
-     - .NET Framework 4 veya 4,5 ' nin 32 bit sürümü ve sonrasında, Windows yükleme dizininiz *C:\Windows*ise, varsayılan yol *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*' dir.
-     - .NET Framework 4 veya 4,5 ve sonraki sürümlerin 64 bit sürümü için varsayılan yol *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*' dir.
+     Örneğin:
+     - .NET Framework 4 veya 4,5 ' nin 32 bit sürümü ve sonrasında, Windows yükleme dizininiz *C:\Windows*ise, varsayılan yol *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.
+     - .NET Framework 4 veya 4,5 ve sonraki sürümlerin 64 bit sürümü için varsayılan yol *C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.
 
-### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>InstallUtil. exe yardımcı programını kullanarak hizmetinizi el ile kaldırın
+### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>InstallUtil.exe yardımcı programını kullanarak hizmetinizi el ile kaldırın
 
 1. **Başlat** menüsünde **Visual Studio \<*version*> ** dizinini seçin ve ardından ** \<*version*> vs için geliştirici komut istemi **seçin.
 
      Visual Studio için Geliştirici Komut İstemi görüntülenir.
 
-2. Komut isteminden *InstallUtil. exe* ' yi bir parametre olarak projenizin çıkışıyla çalıştırın:
+2. Komut isteminden *InstallUtil.exe* bir parametre olarak projenizin çıkışıyla çalıştırın:
 
     ```console
     installutil /u <yourproject>.exe

@@ -1,5 +1,6 @@
 ---
 title: .NET Framework erişilebilirlik yenilikleri
+description: .NET Framework 4.7.1 ile başlayarak .NET erişilebilirlik yenilikleri bölümüne bakın. Erişilebilirlik özellikleri, bir uygulamanın yardımcı teknoloji kullanıcıları için doğru deneyimi sağlamasına imkan tanır.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -7,12 +8,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 8a85614e441ba6e5782cbbbf5fe12432c053a101
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244159"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925845"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework erişilebilirlik yenilikleri
 
@@ -472,7 +473,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **High contrast**
 
-.NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimlerinde yüksek karşıtlıklı geliştirmeler yapılmıştır. Artık <xref:System.Windows.SystemParameters.HighContrast%2A> Tema ayarlandığında görünür olur. Bu güncelleştirmeler şunlardır:
+.NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimlerinde yüksek karşıtlıklı geliştirmeler yapılmıştır. Artık <xref:System.Windows.SystemParameters.HighContrast%2A> Tema ayarlandığında görünür olur. Bunlara
 
 - <xref:System.Windows.Controls.Expander>denetimle
 
@@ -709,4 +710,4 @@ Bu geliştirmeler, klavye odağı sırası gibi önceki bazı davranışları de
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework yenilikler](index.md)
+- [.NET Framework’teki yenilikler](index.md)

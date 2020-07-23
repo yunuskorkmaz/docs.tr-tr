@@ -1,5 +1,6 @@
 ---
-title: .NET Framework’teki yenilikler
+title: .NET Framework yenilikleri
+description: Çeşitli .NET Framework sürümlerindeki yenilikleri görün. Her sürümdeki önemli yeni özellik ve geliştirmelerin özetini okuyun.
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
@@ -8,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ee67e6577c5ad2486a483e3593e4d0a8ecbb0407
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244445"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925598"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework yenilikleri
 
@@ -350,7 +351,7 @@ Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen
 
 **Ek koleksiyon API 'Leri**
 
-.NET Framework 4.7.2, ve türlerine bir dizi yeni API ekler <xref:System.Collections.Generic.SortedSet%601> <xref:System.Collections.Generic.HashSet%601> . Bu güncelleştirmeler şunlardır:
+.NET Framework 4.7.2, ve türlerine bir dizi yeni API ekler <xref:System.Collections.Generic.SortedSet%601> <xref:System.Collections.Generic.HashSet%601> . Bunlara
 
 - `TryGetValue`diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişleten Yöntemler. Yöntemler şunlardır:
 
@@ -741,7 +742,7 @@ WCF, .NET Framework 4,7 ' den itibaren, varsayılan ileti güvenlik protokolü o
 
 **WCF uygulamalarının ve WCF serileştirmenin güvenilirliği geliştirildi**
 
-WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bu güncelleştirmeler şunlardır:
+WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bunlara
 
 - **SocketConnection. BeginRead** ve **SocketConnection. Read**çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
 - **Sharedconnectionlistener** ve **DuplexChannelBinder**ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
@@ -841,7 +842,7 @@ End Class
 
 Ardından, anahtar hata iletisi dizesi olan ve değeri yerelleştirilmiş hata iletisi olan DataAnnotation. yerelleştirme. fr. resx olan bir kaynak dosyası oluşturabilirsiniz. Dosyanın klasörde bulunması gerekir `App.LocalResources` . Örneğin, aşağıdaki anahtar ve değeri yerelleştirilmiş Fransızca (fr) dil hata iletisinde verilmiştir:
 
-| Name                                 | Değer                                     |
+| Ad                                 | Değer                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme 1 ile 10 arasında olmalıdır. | La Note DoIt être, diğer 1 et 10. |
 
@@ -955,7 +956,7 @@ End Function
 
 .NET Framework 4.6.2 ' de bunu çözmek için temel sınıfa aşağıdaki üç yöntem eklenmiştir <xref:System.Security.Cryptography.ECDiffieHellman> ve bu KDF yordamlarını ve bunların girişlerini daha net bir şekilde temsil eder:
 
-|Ecdıfıfiehellman yöntemi|Description|
+|Ecdıfıfiehellman yöntemi|Açıklama|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Formülü kullanarak önemli malzemeleri türetiliyor<br /><br /> Karma (secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> Karma (secretPrepend Orelo *x* Orelo secretAppend)<br /><br /> Burada *x* , EC Diffie-Hellman algoritmasının hesaplanan sonucudur.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Formülü kullanarak önemli malzemeleri türetiliyor<br /><br /> HMAC (hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC (hmacKey, secretPrepend Orelo *x* Orellsecretappend)<br /><br /> Burada *x* , EC Diffie-Hellman algoritmasının hesaplanan sonucudur.|
@@ -1308,7 +1309,7 @@ SqlClient artık otomatik olarak bir AlwaysOn kullanılabilirlik grubuna (AG) da
 
 Windows Presentation Foundation birkaç iyileştirme ve değişiklik içerir.
 
-**Geliştirilmiş performans**
+**İyileştirilmiş performans**
 
 Dokunma olaylarının tetiklendiği gecikme .NET Framework 4.6.1 düzeltildi. Ayrıca, bir <xref:System.Windows.Controls.RichTextBox> denetime yazmak hızlı giriş sırasında işleme iş parçacığını artık erişemez.
 
@@ -1795,7 +1796,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 - **Profil oluşturma geliştirmeleri.** Aşağıdaki yeni yönetilmeyen profil oluşturma API 'Leri daha sağlam profil oluşturma sağlar:
 
   - [COR_PRF_ASSEMBLY_REFERENCE_INFO Yapısı](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
-  - [COR_PRF_HIGH_MONITOR Sabit Listesi](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
+  - [COR_PRF_HIGH_MONITOR Numaralandırması](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
   - [GetAssemblyReferences Yöntemi](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
   - [GetEventMask2 Yöntemi](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
   - [SetEventMask2 Yöntemi](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)

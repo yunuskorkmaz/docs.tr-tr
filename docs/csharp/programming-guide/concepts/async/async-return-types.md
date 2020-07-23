@@ -1,13 +1,14 @@
 ---
 title: Zaman uyumsuz dönüş türleri (C#)
+description: Zaman uyumsuz yöntemlerin C# ' de sahip olduğu dönüş türleri hakkında bilgi edinmek için her tür ve ek kaynaklar için kod örneklerine sahip olabilir.
 ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2584f1e285a7ab76eb43f9a211a8d2a51c2c55e
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 954e449356819595a3a974a6dece5349e53ec88a
+ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761882"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86925390"
 ---
 # <a name="async-return-types-c"></a>Zaman uyumsuz dönüş türleri (C#)
 
@@ -21,7 +22,7 @@ Zaman uyumsuz metotlar aşağıdaki dönüş türlerine sahip olabilir:
 
 Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama (C#)](./index.md).  
   
-## <a name="tasktresult-return-type"></a>Görev \< tSonuç \> dönüş türü  
+## <a name="tasktresult-return-type"></a>Görev \<TResult\> dönüş türü  
 <xref:System.Threading.Tasks.Task%601>Dönüş türü, işleneni olan [Return](../../../language-reference/keywords/return.md) (C#) ifadesini içeren zaman uyumsuz bir yöntem için kullanılır `TResult` .  
   
 Aşağıdaki örnekte, `GetLeisureHours` Async yöntemi `return` bir tamsayı döndüren bir ifade içerir. Bu nedenle, metot bildiriminin bir dönüş türü belirtmesi gerekir `Task<int>` .  <xref:System.Threading.Tasks.Task.FromResult%2A>Async yöntemi, bir dize döndüren bir işlem için yer tutucudur.
@@ -64,7 +65,7 @@ Aşağıdaki örnek, zaman uyumsuz bir olay işleyicisinin davranışını göst
 
 :::code language="csharp" source="./snippets/async-return-types/async-returns3.cs":::
 
-## <a name="generalized-async-return-types-and-valuetasktresult"></a>Genelleştirilmiş zaman uyumsuz dönüş türleri ve ValueTask \< TResult\>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>Genelleştirilmiş zaman uyumsuz dönüş türleri ve ValueTask\<TResult\>
 
 C# 7,0 ile başlayarak, zaman uyumsuz bir yöntem erişilebilir bir yöntemi olan herhangi bir tür döndürebilir `GetAwaiter` .
 
@@ -74,7 +75,7 @@ C# 7,0 ile başlayarak, zaman uyumsuz bir yöntem erişilebilir bir yöntemi ola
   
 :::code language="csharp" source="./snippets/async-return-types/async-valuetask.cs":::
 
-## <a name="async-streams-with-iasyncenumerablet"></a>Iasyncenumerable ile zaman uyumsuz akışlar \<\>
+## <a name="async-streams-with-iasyncenumerablet"></a>Iasyncenumerable ile zaman uyumsuz akışlar\<T\>
 
 C# 8,0 ile başlayarak, zaman uyumsuz bir yöntem tarafından temsil edilen *zaman uyumsuz bir akış*döndürebilir <xref:System.Collections.Generic.IAsyncEnumerable%601> . Zaman uyumsuz akış yinelenen zaman uyumsuz çağrılarla parçalar halinde oluşturulduğunda akıştan okunan öğeleri numaralandırmak için bir yol sağlar. Aşağıdaki örnek, zaman uyumsuz akış üreten zaman uyumsuz bir yöntemi gösterir:
 
