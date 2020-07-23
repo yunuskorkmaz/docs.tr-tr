@@ -304,6 +304,10 @@ items:
         items:
           - name: Bellek sızıntısında hata ayıklama
             href: diagnostics/debug-memory-leak.md
+          - name: Yüksek CPU kullanımı hatasını ayıklama
+            href: diagnostics/debug-highcpu.md
+          - name: Çıkmaz hatasını ayıklama
+            href: diagnostics/debug-deadlock.md
   - name: .NET Core ek araçlar
     items:
       - name: Genel Bakış
