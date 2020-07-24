@@ -1,27 +1,28 @@
 ---
-title: Varsayılan Paragraf Stilini Bulma (C#)
+title: Varsayılan paragraf stilini bulma (C#)
+description: C# ' de LINQ ile WordprocessingML belgesini nasıl işleyeceğini öğrenin. Bu örnek, belgedeki paragrafların varsayılan stilini bulur.
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 8cc1f1b9df208b0b180e5fe4a50922b5ee46b480
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e18bbbdbd5b2627c9ff4c3c3eedd84d7cb166a62
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169538"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103823"
 ---
-# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="48ec8-102">Varsayılan Paragraf Stilini Bulma (C#)</span><span class="sxs-lookup"><span data-stu-id="48ec8-102">Finding the Default Paragraph Style (C#)</span></span>
-<span data-ttu-id="48ec8-103">WordprocessingML Belge öğreticisinde Bilgileri Manipüle Etme'deki ilk görev, belgedeki paragrafların varsayılan stilini bulmaktır.</span><span class="sxs-lookup"><span data-stu-id="48ec8-103">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
+# <a name="finding-the-default-paragraph-style-c"></a><span data-ttu-id="a02e6-104">Varsayılan paragraf stilini bulma (C#)</span><span class="sxs-lookup"><span data-stu-id="a02e6-104">Finding the Default Paragraph Style (C#)</span></span>
+<span data-ttu-id="a02e6-105">WordprocessingML belgesi öğreticisindeki düzenleme bilgilerinde ilk görev, belgede varsayılan paragraf stilini bullevidir.</span><span class="sxs-lookup"><span data-stu-id="a02e6-105">The first task in the Manipulating Information in a WordprocessingML Document tutorial is to find the default style of paragraphs in the document.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="48ec8-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="48ec8-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a02e6-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="a02e6-106">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="48ec8-105">Açıklama</span><span class="sxs-lookup"><span data-stu-id="48ec8-105">Description</span></span>  
- <span data-ttu-id="48ec8-106">Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesini açar, belgeve stil bölümlerini bulur ve sonra varsayılan stil adını bulan bir sorgu yürütür.</span><span class="sxs-lookup"><span data-stu-id="48ec8-106">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="48ec8-107">Office Open XML belge paketleri ve bunların oluşan bölümleri hakkında bilgi [için](./wordprocessingml-document-with-styles.md)Bkz.</span><span class="sxs-lookup"><span data-stu-id="48ec8-107">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](./wordprocessingml-document-with-styles.md).</span></span>  
+### <a name="description"></a><span data-ttu-id="a02e6-107">Açıklama</span><span class="sxs-lookup"><span data-stu-id="a02e6-107">Description</span></span>  
+ <span data-ttu-id="a02e6-108">Aşağıdaki örnek, bir Office Open XML WordprocessingML belgesi açar, paketin belge ve stil parçalarını bulur ve ardından varsayılan stil adını bulan bir sorgu yürütür.</span><span class="sxs-lookup"><span data-stu-id="a02e6-108">The following example opens an Office Open XML WordprocessingML document, finds the document and style parts of the package, and then executes a query that finds the default style name.</span></span> <span data-ttu-id="a02e6-109">Office Open XML belge paketleri ve içerdikleri parçalar hakkında daha fazla bilgi için bkz. [Office Open XML WordprocessingML belgelerinin ayrıntıları (C#)](./wordprocessingml-document-with-styles.md).</span><span class="sxs-lookup"><span data-stu-id="a02e6-109">For information about Office Open XML document packages, and the parts they consist of, see [Details of Office Open XML WordprocessingML Documents (C#)](./wordprocessingml-document-with-styles.md).</span></span>  
   
- <span data-ttu-id="48ec8-108">Sorgu, "paragraf" `w:style` değeriyle adında `w:type` bir özniteliği olan ve "1" değeriyle `w:default` de adlandırılan bir özniteliği olan bir düğüm bulur.</span><span class="sxs-lookup"><span data-stu-id="48ec8-108">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="48ec8-109">Bu özniteliklere sahip yalnızca bir XML düğümü olacağından, sorgu bir koleksiyonu singletona dönüştürmek için <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> işleci kullanır.</span><span class="sxs-lookup"><span data-stu-id="48ec8-109">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="48ec8-110">Daha sonra özniteliğin değerini adı `w:styleId`ile alır.</span><span class="sxs-lookup"><span data-stu-id="48ec8-110">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
+ <span data-ttu-id="a02e6-110">Sorgu, "paragraf" değeri ile adlandırılmış bir özniteliği olan adlı bir düğümü bulur `w:style` `w:type` ve ayrıca `w:default` "1" değerine sahip adlı bir özniteliğe sahiptir.</span><span class="sxs-lookup"><span data-stu-id="a02e6-110">The query finds a node named `w:style` that has an attribute named `w:type` with a value of "paragraph", and also has an attribute named `w:default` with a value of "1".</span></span> <span data-ttu-id="a02e6-111">Bu özniteliklere sahip yalnızca bir XML düğümü olacağı için, sorgu <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> işleci kullanarak bir koleksiyonu tek bir öğesine dönüştürür.</span><span class="sxs-lookup"><span data-stu-id="a02e6-111">Because there will be only one XML node with these attributes, the query uses the <xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType> operator to convert a collection to a singleton.</span></span> <span data-ttu-id="a02e6-112">Daha sonra, adlı özniteliğin değerini alır `w:styleId` .</span><span class="sxs-lookup"><span data-stu-id="a02e6-112">It then gets the value of the attribute with the name `w:styleId`.</span></span>  
   
- <span data-ttu-id="48ec8-111">Bu örnek, WindowsBase derlemesi sınıflarını kullanır.</span><span class="sxs-lookup"><span data-stu-id="48ec8-111">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="48ec8-112"><xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="48ec8-112">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="a02e6-113">Bu örnek, WindowsBase derlemesinden sınıfları kullanır.</span><span class="sxs-lookup"><span data-stu-id="a02e6-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="a02e6-114"><xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.</span><span class="sxs-lookup"><span data-stu-id="a02e6-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="48ec8-113">Kod</span><span class="sxs-lookup"><span data-stu-id="48ec8-113">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="a02e6-115">Kod</span><span class="sxs-lookup"><span data-stu-id="a02e6-115">Code</span></span>  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -76,14 +77,14 @@ string defaultStyle =
 Console.WriteLine("The default style is: {0}", defaultStyle);  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="48ec8-114">Yorumlar</span><span class="sxs-lookup"><span data-stu-id="48ec8-114">Comments</span></span>  
- <span data-ttu-id="48ec8-115">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="48ec8-115">This example produces the following output:</span></span>  
+### <a name="comments"></a><span data-ttu-id="a02e6-116">Yorumlar</span><span class="sxs-lookup"><span data-stu-id="a02e6-116">Comments</span></span>  
+ <span data-ttu-id="a02e6-117">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a02e6-117">This example produces the following output:</span></span>  
   
 ```output  
 The default style is: Normal  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="48ec8-116">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="48ec8-116">Next Steps</span></span>  
- <span data-ttu-id="48ec8-117">Sonraki örnekte, belgedeki tüm paragrafları ve stillerini bulan benzer bir sorgu oluşturursunuz:</span><span class="sxs-lookup"><span data-stu-id="48ec8-117">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="a02e6-118">Sonraki Adımlar</span><span class="sxs-lookup"><span data-stu-id="a02e6-118">Next Steps</span></span>  
+ <span data-ttu-id="a02e6-119">Sonraki örnekte, bir belgedeki ve stillerinin tüm paragraflarını bulan benzer bir sorgu oluşturacaksınız:</span><span class="sxs-lookup"><span data-stu-id="a02e6-119">In the next example, you'll create a similar query that finds all the paragraphs in a document and their styles:</span></span>  
   
-- [<span data-ttu-id="48ec8-118">Paragrafları ve Stillerinin Alınması (C#)</span><span class="sxs-lookup"><span data-stu-id="48ec8-118">Retrieving the Paragraphs and Their Styles (C#)</span></span>](./retrieving-the-paragraphs-and-their-styles.md)  
+- [<span data-ttu-id="a02e6-120">Paragrafları ve stillerini alma (C#)</span><span class="sxs-lookup"><span data-stu-id="a02e6-120">Retrieving the Paragraphs and Their Styles (C#)</span></span>](./retrieving-the-paragraphs-and-their-styles.md)  

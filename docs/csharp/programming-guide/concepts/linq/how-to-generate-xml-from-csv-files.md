@@ -1,21 +1,22 @@
 ---
-title: CSV dosyalarından XML nasıl üretilir (C#)
+title: CSV dosyalarından XML oluşturma (C#)
+description: C# ' de LINQ ve LINQ to XML kullanarak bir. csv dosyasından XML oluşturma hakkında bilgi edinin. Sorgu, dizeleri alan dizilerine bölmek için Let yan tümcesini kullanır.
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-ms.openlocfilehash: 643c05cb440165c4461c3e9c80e69701241ab8d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2fc9954a51fc1f2979c6cce13805ed15cdb88741
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635814"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105176"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="41e30-102">CSV dosyalarından XML nasıl üretilir (C#)</span><span class="sxs-lookup"><span data-stu-id="41e30-102">How to generate XML from CSV files (C#)</span></span>
-<span data-ttu-id="41e30-103">Bu örnek, Dil-Tümleşik Sorgu 'nun [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] (LINQ) nasıl kullanılacağını ve virgülle ayrılmış bir değer (CSV) dosyasından bir XML dosyası oluşturmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="41e30-103">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="f750b-104">CSV dosyalarından XML oluşturma (C#)</span><span class="sxs-lookup"><span data-stu-id="f750b-104">How to generate XML from CSV files (C#)</span></span>
+<span data-ttu-id="f750b-105">Bu örnek, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bir virgülle ayrılmış değer (CSV) dosyasından BIR XML dosyası oluşturmak ve dil Ile tümleşik sorgu (LINQ) kullanmayı gösterir.</span><span class="sxs-lookup"><span data-stu-id="f750b-105">This example shows how to use Language-Integrated Query (LINQ) and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="41e30-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="41e30-104">Example</span></span>  
- <span data-ttu-id="41e30-105">Aşağıdaki kod dizeleri bir dizi bir LINQ sorgusu gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="41e30-105">The following code performs a LINQ query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="f750b-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="f750b-106">Example</span></span>  
+ <span data-ttu-id="f750b-107">Aşağıdaki kod, bir dize dizisi üzerinde bir LINQ sorgusu gerçekleştirir.</span><span class="sxs-lookup"><span data-stu-id="f750b-107">The following code performs a LINQ query on an array of strings.</span></span>  
   
- <span data-ttu-id="41e30-106">Sorgu, her `let` dizeyi bir dizi alana bölmek için yan tümceyi kullanır.</span><span class="sxs-lookup"><span data-stu-id="41e30-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="f750b-108">Sorgu, `let` her dizeyi bir alan dizisine bölmek için yan tümcesini kullanır.</span><span class="sxs-lookup"><span data-stu-id="f750b-108">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +49,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="41e30-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="41e30-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="f750b-109">Bu kod şu çıkışı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="f750b-109">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  

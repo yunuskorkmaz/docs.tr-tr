@@ -1,19 +1,20 @@
 ---
-title: Dosya sisteminden bir XML ağacı nasıl doldurulur (C#)
+title: Dosya sisteminden bir XML ağacını doldurma (C#)
+description: C# içindeki dosya sisteminden bir XML ağacının nasıl doldurulacağını öğrenin. Bu örnek bir XML 'yi doldurur, sonra tüm dosyaların toplam boyutunu hesaplamak için ağacı sorgular.
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 676261656be7d306294c9912b75edcb51a31cccc
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345779"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104758"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="27266-102">Dosya sisteminden bir XML ağacı nasıl doldurulur (C#)</span><span class="sxs-lookup"><span data-stu-id="27266-102">How to populate an XML tree from the file system (C#)</span></span>
-<span data-ttu-id="27266-103">XML ağaçlarının yaygın ve yararlı bir uygulaması hiyerarşik bir ad/değer veri deposu olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="27266-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="27266-104">Bir XML ağacını hiyerarşik verilerle doldurabilir ve sorgulayabilir, dönüştürebilir ve gerekirse seri hale getirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="27266-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="27266-105">Bu kullanım senaryosunda, ad alanları ve beyaz alan davranışı gibi XML'e özgü semantiklerin çoğu önemli değildir.</span><span class="sxs-lookup"><span data-stu-id="27266-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="27266-106">Bunun yerine, XML ağacını küçük, bellekte tek kullanıcı hiyerarşik veritabanı olarak kullanıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="27266-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="2cda5-104">Dosya sisteminden bir XML ağacını doldurma (C#)</span><span class="sxs-lookup"><span data-stu-id="2cda5-104">How to populate an XML tree from the file system (C#)</span></span>
+<span data-ttu-id="2cda5-105">XML ağaçlarının ortak ve yararlı bir uygulaması, hiyerarşik ad/değer veri deposu olarak kullanılır.</span><span class="sxs-lookup"><span data-stu-id="2cda5-105">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="2cda5-106">Bir XML ağacını hiyerarşik verilerle doldurabilir ve sonra sorgulayabilir, dönüştürebilir ve gerekirse serileştirin.</span><span class="sxs-lookup"><span data-stu-id="2cda5-106">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="2cda5-107">Bu kullanım senaryosunda, ad alanları ve boşluk davranışı gibi XML 'e özgü semantik birçoğu önemli değildir.</span><span class="sxs-lookup"><span data-stu-id="2cda5-107">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="2cda5-108">Bunun yerine, XML ağacını küçük, bellekte, tek bir Kullanıcı hiyerarşik veritabanı olarak kullanıyorsunuz.</span><span class="sxs-lookup"><span data-stu-id="2cda5-108">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="27266-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="27266-107">Example</span></span>  
- <span data-ttu-id="27266-108">Aşağıdaki örnek, özyineleme kullanarak yerel dosya sisteminden bir XML ağacını doldurur.</span><span class="sxs-lookup"><span data-stu-id="27266-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="27266-109">Daha sonra, ağaçtaki tüm dosyaların boyutlarını hesaplayarak ağacı sorgular.</span><span class="sxs-lookup"><span data-stu-id="27266-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
+## <a name="example"></a><span data-ttu-id="2cda5-109">Örnek</span><span class="sxs-lookup"><span data-stu-id="2cda5-109">Example</span></span>  
+ <span data-ttu-id="2cda5-110">Aşağıdaki örnek, özyineleme kullanarak bir XML ağacını yerel dosya sisteminden doldurur.</span><span class="sxs-lookup"><span data-stu-id="2cda5-110">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="2cda5-111">Ardından ağacı sorgular ve ağaçtaki tüm dosyaların boyutlarının toplamını hesaplıyor.</span><span class="sxs-lookup"><span data-stu-id="2cda5-111">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -46,7 +47,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="27266-110">Bu örnek, aşağıdakilere benzer çıktı üretir:</span><span class="sxs-lookup"><span data-stu-id="27266-110">This example produces output similar to the following:</span></span>  
+ <span data-ttu-id="2cda5-112">Bu örnek aşağıdakine benzer bir çıktı üretir:</span><span class="sxs-lookup"><span data-stu-id="2cda5-112">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
