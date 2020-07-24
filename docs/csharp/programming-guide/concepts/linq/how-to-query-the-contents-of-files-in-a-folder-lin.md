@@ -1,16 +1,17 @@
 ---
-title: Bir klasördeki metin dosyalarının içeriği nasıl sorgulanır (LINQ) (C#)
+title: Bir klasördeki metin dosyalarının içeriğini sorgulama (LINQ) (C#)
+description: C# ' de LINQ kullanarak bir dizin ağacındaki tüm dosyaları sorgulama, her dosyayı açma ve içeriğini İnceleme hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 216edc2ee6fc43fd06a3c89b1b6b73f693f752f8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168745"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104266"
 ---
-# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Bir klasördeki metin dosyalarının içeriği nasıl sorgulanır (LINQ) (C#)
-Bu örnek, belirtilen bir dizin ağacındaki tüm dosyaların üzerinde nasıl sorgulanır, her dosyayı açın ve içeriğini nasıl inceleyikarşılarız. Bu tür bir teknik, dizin ağacının içeriğinin dizinlerini oluşturmak veya dizinleri tersine çevirmek için kullanılabilir. Bu örnekte basit bir dize araması gerçekleştirilir. Ancak, normal bir ifade yle daha karmaşık desen eşleştirme türleri gerçekleştirilebilir. Daha fazla bilgi için [LINQ sorgularını normal ifadelerle (C#) nasıl birleştirebilirsiniz'](./how-to-combine-linq-queries-with-regular-expressions.md)e bakın.  
+# <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Bir klasördeki metin dosyalarının içeriğini sorgulama (LINQ) (C#)
+Bu örnek, belirtilen bir dizin ağacındaki tüm dosyaların üzerinde nasıl sorgu yapılacağını, her bir dosyanın nasıl açılacağını ve içeriğini incelemenizi gösterir. Bu tür bir teknik, dizin ağacı içeriğinin dizinlerini veya ters dizinlerini oluşturmak için kullanılabilir. Bu örnekte basit bir dize araması gerçekleştirilir. Ancak, bir normal ifadeyle, daha karmaşık bir tür model eşleşmesi gerçekleştirilebilir. Daha fazla bilgi için bkz. [LINQ sorgularını normal ifadelerle birleştirme (C#)](./how-to-combine-linq-queries-with-regular-expressions.md).  
   
 ## <a name="example"></a>Örnek  
   
@@ -71,9 +72,9 @@ class QueryContents
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
-System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.
+`using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)
-- [Nesnelere LINQ (C#)](./linq-to-objects.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

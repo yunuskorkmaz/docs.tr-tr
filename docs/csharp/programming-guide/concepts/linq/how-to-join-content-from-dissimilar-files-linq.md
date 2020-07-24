@@ -1,21 +1,22 @@
 ---
-title: Farklı dosyalardan (LINQ) (C#) içerik birleştirme
+title: Benzer olmayan dosyalardaki (LINQ) içerik ekleme (C#)
+description: C# ' de LINQ kullanarak, virgülle ayrılmış iki dosyadan veri birleştirmeyi öğrenin. Veriler, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşır.
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 136d10ff5c0bf5f4f18998b50eb7bbee218b00a9
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169096"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104968"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Farklı dosyalardan (LINQ) (C#) içerik birleştirme
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Benzer olmayan dosyalardaki (LINQ) içerik ekleme (C#)
 
-Bu örnek, eşleşen bir anahtar olarak kullanılan ortak bir değeri paylaşan iki virgülle sınırlandırılmış dosyadaki verileri nasıl birleştirirken gösterir. Bu teknik, iki elektronik tablodan veya elektronik tablodan ve başka bir biçime sahip bir dosyadan gelen verileri yeni bir dosyada birleştirmeniz gerekiyorsa yararlı olabilir. Örneği, her türlü yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.  
+Bu örnek, eşleşen anahtar olarak kullanılan ortak bir değeri paylaşan, virgülle ayrılmış iki dosyadan verilerin nasıl birleştirileceğini gösterir. Bu teknik, iki elektronik tablodan veya bir elektronik tabloda ve başka bir biçime sahip bir dosyadan yeni bir dosyaya veri birleştirmek istiyorsanız yararlı olabilir. Örneği herhangi bir tür yapılandırılmış metinle çalışacak şekilde değiştirebilirsiniz.  
   
 ## <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için
   
-1. Aşağıdaki satırları *scores.csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya elektronik tablo verilerini temsil eder. Sütun 1 öğrencinin kimliğidir ve 2'den 5'e kadar olan sütunlar test puanlarıdır.  
+1. Aşağıdaki satırları *scores.csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, elektronik tablo verilerini temsil eder. 1. sütun, öğrencinin KIMLIĞIDIR ve 2 ile 5 arasındaki sütunlar test puanlarıdır.  
   
     ```csv  
     111, 97, 92, 81, 60  
@@ -32,7 +33,7 @@ Bu örnek, eşleşen bir anahtar olarak kullanılan ortak bir değeri paylaşan 
     122, 94, 92, 91, 91  
     ```  
   
-2. Aşağıdaki satırları *names.csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin soyadını, adını ve öğrenci kimliğini içeren bir elektronik tabloyu temsil eder.  
+2. Aşağıdaki satırları *names.csv* adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. Dosya, öğrencinin Soyadı, adı ve öğrenci KIMLIĞINI içeren bir elektronik tabloyu temsil eder.  
   
     ```csv  
     Omelchenko,Svetlana,111  
@@ -126,5 +127,5 @@ Tucker, 94, 92, 91, 91
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
-- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)

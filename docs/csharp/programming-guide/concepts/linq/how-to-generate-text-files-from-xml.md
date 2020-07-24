@@ -1,21 +1,22 @@
 ---
-title: XML 'den metin dosyaları nasıl üretilir (C#)
+title: XML 'den metin dosyaları oluşturma (C#)
+description: C# ' de bir XML dosyasından. csv dosyası oluşturmayı öğrenin. Bu örnekte Yöntem sözdizimi ve toplama işleci kullanılmaktadır.
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 9ca76cf955e07bdcc8e095b30f6fadc74edba739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6e9ce803ddfac3f1609d60a4f51661232cbb2f4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345923"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105057"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>XML 'den metin dosyaları nasıl üretilir (C#)
-Bu örnek, bir XML dosyasından virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturacağıgösterilmektedir.  
+# <a name="how-to-generate-text-files-from-xml-c"></a>XML 'den metin dosyaları oluşturma (C#)
+Bu örnek, bir XML dosyasından bir virgülle ayrılmış değerler (CSV) dosyasının nasıl oluşturulacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örneğin C# sürümü, tek bir `Aggregate` ifadede bir XML belgesinden csv dosyası oluşturmak için yöntem sözdizimini ve işleci kullanır. Daha fazla bilgi için [LINQ'da Sorgu Sözdizimi ve Yöntem Sözdizimi'ne](./query-syntax-and-method-syntax-in-linq.md)bakın.  
+ Bu örneğin C# sürümü, `Aggregate` tek bir ifadede BIR XML BELGESINDEN CSV dosyası oluşturmak için yöntem sözdizimini ve işlecini kullanır. Daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](./query-syntax-and-method-syntax-in-linq.md).  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -44,7 +45,7 @@ string csv =
 Console.WriteLine(csv);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -55,4 +56,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Projeksiyonlar ve Dönüşümler (LINQ- XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)
+- [Projeksiyonlar ve dönüşümler (LINQ to XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)

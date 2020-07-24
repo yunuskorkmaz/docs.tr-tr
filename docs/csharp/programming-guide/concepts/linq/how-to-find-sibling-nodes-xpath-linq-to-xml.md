@@ -1,25 +1,26 @@
 ---
-title: Kardeş düğümleri bulma (XPath-LINQ - XML) (C#)
+title: Eşdüzey düğümleri bulma (XPath-LINQ to XML) (C#)
+description: Bu C# örneği, belirli bir ada sahip bir düğümün tüm eşdüzey öğelerinin nasıl bulunacağı hakkında LINQ to XML XPath 'i karşılaştırır.
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: c201dcea5e6d148ae0998eb27d4e42df5b15309f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2936fc4ad088580a9644f79f1797e679fe877e00
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169213"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105221"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Kardeş düğümleri bulma (XPath-LINQ - XML) (C#)
-Belirli bir ada sahip bir düğümün tüm kardeşlerini bulmak isteyebilirsiniz. Bağlam düğümü de belirli bir ada sahipse, ortaya çıkan koleksiyon bağlam düğümü içerebilir.  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Eşdüzey düğümleri bulma (XPath-LINQ to XML) (C#)
+Belirli bir ada sahip bir düğümün tüm eşdüzey düzeylerini bulmak isteyebilirsiniz. Bağlam düğümü de belirli bir ada sahipse, sonuçta elde edilen koleksiyon bağlam düğümünü içerebilir.  
   
  XPath ifadesi:  
   
  `../Book`  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte `Book` önce bir öğe bulur ve `Book`sonra adı geçen tüm kardeş öğeleri bulur. Ortaya çıkan koleksiyon bağlam düğümiçerir.  
+ Bu örnek önce bir `Book` öğesi bulur ve sonra adlı tüm eşdüzey öğeleri bulur `Book` . Elde edilen koleksiyon, bağlam düğümünü içerir.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Kitaplar (LINQ-XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -49,7 +50,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

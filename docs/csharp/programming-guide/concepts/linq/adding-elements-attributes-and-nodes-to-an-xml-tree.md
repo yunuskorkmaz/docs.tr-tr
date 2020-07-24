@@ -1,36 +1,37 @@
 ---
-title: XML Ağacına Öğeler, Öznitelikler ve Düğümler Ekleme (C#)
+title: XML ağacına öğe, öznitelik ve düğüm ekleme (C#)
+description: Öğeler, öznitelikler, açıklamalar, işleme talimatları ve metin gibi içeriği varolan bir XML ağacına ekleme yöntemleri hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 20d8d9d9c592f5f570d7c94298dcee41763c1f1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78a84401494e2d4280799632fa42dc95574e3e10
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169581"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105551"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>XML Ağacına Öğeler, Öznitelikler ve Düğümler Ekleme (C#)
-Varolan bir XML ağacına içerik (öğeler, öznitelikler, yorumlar, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>XML ağacına öğe, öznitelik ve düğüm ekleme (C#)
+Mevcut bir XML ağacına içerik (öğe, öznitelik, yorum, işleme yönergeleri, metin ve CDATA) ekleyebilirsiniz.  
   
-## <a name="methods-for-adding-content"></a>İçerik Ekleme Yöntemleri  
- Aşağıdaki yöntemler, bir veya <xref:System.Xml.Linq.XElement> bir <xref:System.Xml.Linq.XDocument>alt içerik eklemek:  
-  
-|Yöntem|Açıklama|  
-|------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|Alt içeriğin sonuna içerik <xref:System.Xml.Linq.XContainer>ekler.|  
-|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Alt içeriğin başında içerik <xref:System.Xml.Linq.XContainer>ekler.|  
-  
- Aşağıdaki yöntemler, bir <xref:System.Xml.Linq.XNode>. Kardeş içerik eklediğiniz en yaygın <xref:System.Xml.Linq.XElement>düğüm, geçerli kardeş içeriği eklemekle birlikte diğer düğüm <xref:System.Xml.Linq.XText> türlerine veya <xref:System.Xml.Linq.XComment>.  
+## <a name="methods-for-adding-content"></a>Içerik ekleme yöntemleri  
+ Aşağıdaki yöntemler bir veya öğesine alt içerik ekler <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XDocument> :  
   
 |Yöntem|Açıklama|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Sonra içerik <xref:System.Xml.Linq.XNode>ekler.|  
-|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Önce içerik <xref:System.Xml.Linq.XNode>ekler.|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|Öğesinin alt içeriğinin sonuna içerik ekler <xref:System.Xml.Linq.XContainer> .|  
+|<xref:System.Xml.Linq.XContainer.AddFirst%2A>|Öğesinin alt içeriğinin başlangıcına içerik ekler <xref:System.Xml.Linq.XContainer> .|  
+  
+ Aşağıdaki yöntemler bir öğesinin eşdüzey düğümleri olarak içerik ekler <xref:System.Xml.Linq.XNode> . Eşdüzey içerik eklediğiniz en yaygın düğüm, <xref:System.Xml.Linq.XElement> veya gibi diğer düğüm türlerine geçerli eşdüzey içerik eklemenize olanak sağlar <xref:System.Xml.Linq.XText> <xref:System.Xml.Linq.XComment> .  
+  
+|Yöntem|Açıklama|  
+|------------|-----------------|  
+|<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|Öğesinden sonra içerik ekler <xref:System.Xml.Linq.XNode> .|  
+|<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|Öğesinden önce içerik ekler <xref:System.Xml.Linq.XNode> .|  
   
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Açıklama  
- Aşağıdaki örnek, iki XML ağacı oluşturur ve ağaçlardan birini değiştirir.  
+ Aşağıdaki örnek iki XML ağacı oluşturur ve sonra ağaçlardan birini değiştirir.  
   
 ### <a name="code"></a>Kod  
   
@@ -62,7 +63,7 @@ Console.WriteLine(xmlTree);
 ```  
   
 ### <a name="comments"></a>Yorumlar  
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```xml  
 <Root>  

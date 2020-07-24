@@ -1,13 +1,14 @@
 ---
 title: Visual Studio 'da Ifade ağaçlarında hata ayıklama (C#)
+description: Visual Studio 'da DebugView özelliği hakkında bilgi edinin. İfade ağaçlarının yapısını ve içeriğini çözümlemek için bu özelliği nasıl kullanacağınızı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 4c522f2c24cff037ff33d400c8bdfa7500fd4c32
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 5d62a5e6fa5ce537a1ea8b316e7322eb976200c0
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614388"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105647"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 'da Ifade ağaçlarında hata ayıklama (C#)
 Uygulamalarınızda hata ayıklarken ifade ağaçlarının yapısını ve içeriğini çözümleyebilirsiniz. İfade ağacı yapısına hızlı bir genel bakış almak için, `DebugView` [özel bir sözdizimi kullanarak](debugview-syntax.md)ifade ağaçlarını temsil eden özelliğini kullanabilirsiniz. ( `DebugView` Yalnızca hata ayıklama modunda kullanılabilir.)  
@@ -41,6 +42,6 @@ Alternatif olarak, şu gibi bir ifade ağaçları için [özel Görselleştirici
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İfade ağaçları (C#)](./index.md)
-- [Visual Studio’da hata ayıklama](/visualstudio/debugger/debugger-feature-tour)
+- [Visual Studio'da Hata Ayıklama](/visualstudio/debugger/debugger-feature-tour)
 - [Özel Görselleştirici Oluşturma](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [`DebugView`sözdizimi](debugview-syntax.md)

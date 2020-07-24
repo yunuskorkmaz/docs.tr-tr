@@ -1,19 +1,20 @@
 ---
-title: Dizedeki karakterler (LINQ) (C#) karakterleri sorgulama
+title: Dizedeki karakterleri sorgulama (LINQ) (C#)
+description: Bir dizeyi LINQ içindeki bir karakter dizisi olarak sorgulayabilirsiniz. Bu C# örneği, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular.
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3512be7c30843fcd8e881eab59761706a84a3ac8
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345675"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104550"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Dizedeki karakterler (LINQ) (C#) karakterleri sorgulama
-<xref:System.String> Sınıf genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi uyguladığından, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak, bu LINQ yaygın bir kullanımı değildir. Karmaşık desen eşleştirme işlemleri <xref:System.Text.RegularExpressions.Regex> için sınıfı kullanın.  
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Dizedeki karakterleri sorgulama (LINQ) (C#)
+<xref:System.String>Sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi uyguladığından, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, içerdiği sayısal basamak sayısını belirlemek için bir dize sorgular. Sorgunun ilk kez yürütüldükten sonra "yeniden kullanıldığını" unutmayın. Sorgunun kendisi herhangi bir gerçek sonuç depolamaz, çünkü bu mümkündür.  
+ Aşağıdaki örnek, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular. Sorgunun ilk kez yürütüldükten sonra "yeniden kullanılır" olduğunu unutmayın. Sorgunun kendisi gerçek sonuçları depolamadığından bu mümkündür.  
   
 ```csharp  
 class QueryAString  
@@ -55,9 +56,9 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
+ `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
 - [LINQ sorgularını normal ifadelerle birleştirme (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

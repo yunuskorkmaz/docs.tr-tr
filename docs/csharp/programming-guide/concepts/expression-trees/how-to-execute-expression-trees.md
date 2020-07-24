@@ -1,26 +1,27 @@
 ---
-title: İfade ağaçları nasıl yürütülür (C#)
+title: İfade ağaçlarını yürütme (C#)
+description: Bir değer döndürmek veya bir yöntemi çağırmak gibi bir eylem gerçekleştirmek için bir ifade ağacının nasıl yürütüleceğini öğrenin.
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e306da545ba6c6275f36b8f6dd4e98bb91ed54e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73969890"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105614"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>İfade ağaçları nasıl yürütülür (C#)
-Bu konu, bir ifade ağacını nasıl yürütültüregösterdiğinizi gösterir. Bir ifade ağacının yürütülmesi bir değer döndürebilir veya yöntem çağırmak gibi bir eylem gerçekleştirebilir.  
+# <a name="how-to-execute-expression-trees-c"></a>İfade ağaçlarını yürütme (C#)
+Bu konu başlığı altında, bir ifade ağacının nasıl yürütüleceği gösterilmektedir. Bir ifade ağacının yürütülmesi bir değer döndürebilir veya bir yöntemi çağırmak gibi yalnızca bir eylem gerçekleştirebilir.  
   
- Yalnızca lambda ifadelerini temsil eden ifade ağaçları yürütülebilir. Lambda ifadelerini temsil eden ifade <xref:System.Linq.Expressions.LambdaExpression> <xref:System.Linq.Expressions.Expression%601>ağaçları türü veya . Bu ifade ağaçlarını yürütmek <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> için, çalıştırılabilir bir temsilci oluşturmak için yöntemi çağırın ve ardından temsilciyi çağırın.  
+ Yalnızca Lambda ifadelerini temsil eden ifade ağaçları yürütülebilir. Lambda ifadelerini temsil eden ifade ağaçları <xref:System.Linq.Expressions.LambdaExpression> veya türündedir <xref:System.Linq.Expressions.Expression%601> . Bu ifade ağaçlarını yürütmek için, <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> yürütülebilir bir temsilci oluşturmak üzere yöntemini çağırın ve ardından temsilciyi çağırın.  
   
 > [!NOTE]
-> Temsilcinin türü bilinmiyorsa, yani lambda ifadesi türündedir <xref:System.Linq.Expressions.LambdaExpression> ve <xref:System.Linq.Expressions.Expression%601>değil, yöntemi <xref:System.Delegate.DynamicInvoke%2A> doğrudan çağırmak yerine temsilciye çağırmalısınız.  
+> Temsilcinin türü bilinmiyorsa, diğer bir deyişle, lambda ifadesi türündedir <xref:System.Linq.Expressions.LambdaExpression> ve değil <xref:System.Linq.Expressions.Expression%601> , <xref:System.Delegate.DynamicInvoke%2A> yöntemi doğrudan çağırmak yerine temsilci üzerinde çağırmanız gerekir.  
   
- Bir ifade ağacı lambda ifadesini temsil etmiyorsa, <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> yöntemi çağırarak özgün ifade ağacını gövdesi olarak içeren yeni bir lambda ifadesi oluşturabilirsiniz. Daha sonra, bu bölümde daha önce açıklandığı gibi lambda ifadesini çalıştırabilirsiniz.  
+ Bir ifade ağacı bir lambda ifadesini temsil etmez, yöntemini çağırarak, gövdesi olarak özgün ifade ağacını içeren yeni bir lambda ifadesi oluşturabilirsiniz <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> . Ardından, bu bölümde daha önce anlatıldığı gibi lambda ifadesini çalıştırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir lambda ifadesi oluşturup yürüterek bir sayıyı bir güce yükseltmeyi temsil eden bir ifade ağacının nasıl yürütüleceklerini gösterir. Güce yükseltilen sayıyı temsil eden sonuç görüntülenir.  
+ Aşağıdaki kod örneği, bir lambda ifadesi oluşturarak ve yürüterek bir sayıyı bir üsle yükseltmeyi temsil eden bir ifade ağacının nasıl yürütüleceğini göstermektedir. Bu, kuvvet olarak oluşturulan sayıyı temsil eden sonuç görüntülenir.  
   
 ```csharp  
 // The expression tree to execute.  
@@ -44,9 +45,9 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- System.Linq.Expressions ad alanını ekleyin.  
+- System. Linq. Ifadeler ad alanını ekleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İfade Ağaçları (C#)](./index.md)
-- [İfade ağaçları nasıl değiştirilir (C#)](./how-to-modify-expression-trees.md)
+- [İfade ağaçları (C#)](./index.md)
+- [İfade ağaçlarını değiştirme (C#)](./how-to-modify-expression-trees.md)

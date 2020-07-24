@@ -1,13 +1,14 @@
 ---
 title: Genel Arabirimlerde Varyans (C#)
+description: .NET Framework 4 ve 4,5 ' deki mevcut arabirimlerin güncelleştirilmiş bilgileri de dahil olmak üzere genel arabirimlerin fark desteği bilgilerini görüntüleyin.
 ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ea5d3d35bc9ee438263707efd16829b6217a1968
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 91218742c01eeb6e65ea26d9dc41ed7c98827377
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241337"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105637"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Genel Arabirimlerde Varyans (C#)
 
@@ -102,5 +103,5 @@ IEnumerable<Object> listObjects = new List<String>();
 
 - [Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (C#)](./using-variance-in-interfaces-for-generic-collections.md)
 - [VARIANT genel arabirimleri oluşturma (C#)](./creating-variant-generic-interfaces.md)
-- [Genel Arabirimler](../../../../standard/generics/interfaces.md)
+- [Genel arabirimler](../../../../standard/generics/interfaces.md)
 - [Temsilcilerde varyans (C#)](./variance-in-delegates.md)

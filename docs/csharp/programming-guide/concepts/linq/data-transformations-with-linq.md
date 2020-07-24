@@ -1,5 +1,6 @@
 ---
 title: LINQ ile Veri Dönüştürmeler (C#)
+description: Verileri dönüştürmek Için C# ' de LINQ sorgularını nasıl kullanacağınızı öğrenin. Sıralama ve gruplama yaparak diziyi değiştirebilir ve select yan tümcesini kullanarak yeni türler oluşturabilirsiniz.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], data transformations
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408529"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104023"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca, verileri dönüştürmek için güçlü bir araçtır. Bir LINQ sorgusu kullanarak, giriş olarak bir kaynak sırası kullanabilir ve yeni bir çıkış sırası oluşturmak için bunu birçok şekilde değiştirebilirsiniz. Sıralamayı sıralama ve gruplama yoluyla öğeleri değiştirmeden değiştirebilirsiniz. Ancak, LINQ sorgularının en güçlü özelliği de yeni türler oluşturma olanağıdır. Bu, [Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde gerçekleştirilir. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
@@ -105,7 +106,7 @@ Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca
 
 - [Dil ile tümleşik sorgu (LINQ) (C#)](./index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
-- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
+- [LINQ - DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)
 - [LINQ sorgu Ifadeleri](../../../linq/index.md)
 - [select tümcesi](../../../language-reference/keywords/select-clause.md)

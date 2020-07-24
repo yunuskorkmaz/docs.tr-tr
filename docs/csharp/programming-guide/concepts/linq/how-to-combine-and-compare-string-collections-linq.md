@@ -1,16 +1,17 @@
 ---
 title: Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)
+description: Bu örnek, metin satırları içeren dosyaları birleştirir. C# ' de LINQ içindeki satır kümelerinde basit bir birleştirme, birleşim ve bir kesişim yapmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: f73a31e109933a4b6dd0078934d89d3bb770de5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfbdb9a0a3d531b56578b242c91596d9e41b6cd6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169460"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105363"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)
-Bu örnek, metin satırları içeren dosyaların nasıl birleştirilip sonra sonuçları nasıl sıralayabildiğini gösterir. Özellikle, basit bir birleştirme, birleşim ve iki metin satırı kümesi üzerinde bir kesişim nasıl gerçekleştirilip gerçekleştirilip gerçekleştirilmeye yöneliktir.  
+Bu örnekte, metin satırları içeren dosyaların nasıl birleştiriyapılacağı ve sonuçların nasıl sıralanacağını gösterilmektedir. Özellikle, iki metin satırı kümesinde basit bir birleştirme, birleşim ve bir kesişimin nasıl gerçekleştirileceğini gösterir.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Projeyi ve metin dosyalarını ayarlamak için  
   
@@ -29,7 +30,7 @@ Bu örnek, metin satırları içeren dosyaların nasıl birleştirilip sonra son
     Garcia, Debra  
     ```  
   
-2. Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin. İki dosyanın bazı ortak adları olduğunu unutmayın.  
+2. Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin. İki dosyanın bazı adları yaygın olarak olduğunu unutmayın.  
   
     ```text  
     Liu, Jinghao  
@@ -169,9 +170,9 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
+ `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
-- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)

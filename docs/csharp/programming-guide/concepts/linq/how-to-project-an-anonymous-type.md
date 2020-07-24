@@ -1,18 +1,19 @@
 ---
-title: Anonim bir tür (C#) nasıl yansıtılatır?
+title: Anonim bir tür proje yapma (C#)
+description: C# ' de anonim bir türe sorgu projesini nasıl oluşturacağınızı öğrenin. Anonim bir türün kullanılması, yalnızca kısa bir süre kullanmak için yeni bir tür oluşturmaktan daha kolay olabilir.
 ms.date: 07/20/2015
 ms.assetid: 5cb9be13-5ac4-4373-a034-b3520a5b2dec
-ms.openlocfilehash: 7797c8bfb12943af1ce7f975b170bf002aa7d6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6598796a4ba95362340f2551b1da6ac6d857eaae
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345728"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104629"
 ---
-# <a name="how-to-project-an-anonymous-type-c"></a>Anonim bir tür (C#) nasıl yansıtılatır?
-Bazı durumlarda, bu türü yalnızca kısa bir süre için kullanacağınızı biliyor olsanız bile, sorguyabilir. Sadece projeksiyon kullanmak için yeni bir tür oluşturmak için ekstra iş bir sürü. Bu durumda daha verimli bir yaklaşım anonim bir tür proje etmektir. Anonim türler, sınıfa bir ad vermeden bir sınıf tanımlamanıza ve bu sınıfın bir nesnesini bildirmenize ve başlatmanıza olanak sağlar.  
+# <a name="how-to-project-an-anonymous-type-c"></a>Anonim bir tür proje yapma (C#)
+Bazı durumlarda, bu türü yalnızca kısa bir süre kullanacağınızı bildiğiniz halde yeni bir türe bir sorgu için proje yapmak isteyebilirsiniz. Projeksiyon içinde kullanmak için yeni bir tür oluşturmaya yönelik çok fazla iş vardır. Bu örnekte daha verimli bir yaklaşım, bir anonim türe projem değildir. Anonim türler sınıfı tanımlamanızı sağlar, sonra sınıfa bir ad vermeden bu sınıfın bir nesnesini bildirip başlatabilir.  
   
- Anonim türleri bir *tuple*matematiksel kavramının C # uygulamasıdır. Matematiksel terim tuple dizi tek, çift, üçlü, dörtlü, beşli, n-tuple kökenlidir. Her biri belirli bir türde olan sonlu bir nesne dizisini ifade eder. Bazen bu ad/değer çiftleri listesi olarak adlandırılır. Örneğin, Örnek XML Dosyasındaki bir adresin [içeriği: Tipik SatınAlma Siparişi (LINQ - XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi aşağıdaki gibi ifade edilebilir:  
+ Anonim türler, bir *tanımlama*grubunun matematik kavramının C# uygulamasıdır. Matematiksel terim tanımlama grubu, tek, Çift, Üçlü, dörtlü, quintuple, n-Tuple dizisinden kaynakdır. Belirli bir türün her biri, sınırlı bir nesne dizisine başvurur. Bazen buna ad/değer çiftleri listesi denir. Örneğin, [örnek XML dosyasındaki bir adresin içeriği: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi şu şekilde ifade edilebilir:  
   
 ```text  
 Name: Ellen Adams  
@@ -23,12 +24,12 @@ Zip: 90952
 Country: USA  
 ```  
   
- Anonim bir türbir örnek oluşturduğunuzda, bunu n sırasının bir tuple'ı oluşturmak olarak düşünmek uygundur. `select` Yan tümcede bir tuple oluşturan bir sorgu yazarsanız, sorgu bir `IEnumerable` tuple döndürür.  
+ Anonim bir türün bir örneğini oluşturduğunuzda, bunu bir sıra n grubu oluşturarak düşünmek kullanışlıdır. Yan tümcesinde bir tanımlama grubu oluşturan bir sorgu yazarsanız sorgu, `select` `IEnumerable` kayıt düzeni döndürür.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, `select` yan tümce anonim bir türü projeleri. Örnek daha `var` sonra nesneyi `IEnumerable` oluşturmak için kullanır. `foreach` Döngü içinde, yineleme değişkeni sorgu ifadesinde oluşturulan anonim türbir örneği olur.  
+ Bu örnekte `select` yan tümce, anonim bir tür. Örnek daha sonra `var` nesneyi oluşturmak için kullanır `IEnumerable` . Döngü içinde `foreach` , yineleme değişkeni sorgu ifadesinde oluşturulan anonim türün bir örneği olur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -43,7 +44,7 @@ foreach (var cust in custList)
     Console.WriteLine("{0}:{1}:{2}", cust.CustomerID, cust.CompanyName, cust.ContactName);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 GREAL:Great Lakes Food Market:Howard Snyder  

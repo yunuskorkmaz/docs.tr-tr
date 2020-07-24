@@ -1,21 +1,22 @@
 ---
-title: Dize ayrıştırma (C#)
+title: Bir dizeyi ayrıştırma (C#)
+description: C# ' de bir XML ağacı oluşturmak için bir dizeyi ayrıştırmayı öğrenin. Ayrıştırılmış XML 'inizdeki belirli verilere nasıl erişebileceğinizi öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 79821eb9e5cd7187ac3c2a93f85eaae45c5c48ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a4664e090b6a44c52c519e61b66ccdc5d59a71f1
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345807"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104811"
 ---
-# <a name="how-to-parse-a-string-c"></a>Dize ayrıştırma (C#)
+# <a name="how-to-parse-a-string-c"></a>Bir dizeyi ayrıştırma (C#)
 
-Bu konu, C#'da bir XML ağacı oluşturmak için bir dizeyi nasıl ayrıştırırın gösterir.
+Bu konu başlığı altında, C# ' de bir XML ağacı oluşturmak için bir dizeyi ayrıştırma gösterilmektedir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki C# kodu, XML dizesini nasıl ayrışdırırsa gösterir:
+Aşağıdaki C# kodu bir XML dizesinin nasıl ayrıştıralınacağını gösterir:
 
 ```csharp
 XElement contacts = XElement.Parse(
@@ -47,7 +48,7 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-Kök `Contacts` düğümünün iki `Contact` düğümü vardır. Ayrıştırılmış XML'inizdeki bazı belirli verilere erişmek için, bu durumda kök `Contacts` düğümün alt öğelerini döndüren [XElement.Elements()](xref:System.Xml.Linq.XContainer.Elements) yöntemini kullanın. Aşağıdaki örnekte konsola `Contact` ilk düğüm yazdırır:
+Kök `Contacts` düğümün iki düğümü vardır `Contact` . Ayrıştırılmış XML 'inizdeki bazı belirli verilere erişmek için, bu örnekte kök düğümün alt öğelerini döndüren [XElement. Elements ()](xref:System.Xml.Linq.XContainer.Elements) yöntemini kullanın `Contacts` . Aşağıdaki örnek, `Contact` konsola ilk düğümü yazdırır:
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
@@ -56,4 +57,4 @@ Console.WriteLine(contactNodes[0]);
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Belirli bir özniteliğe (C#) sahip bir öğe yi bulma](how-to-find-an-element-with-a-specific-attribute.md)
+- [Belirli bir özniteliğe sahip bir öğe bulma (C#)](how-to-find-an-element-with-a-specific-attribute.md)

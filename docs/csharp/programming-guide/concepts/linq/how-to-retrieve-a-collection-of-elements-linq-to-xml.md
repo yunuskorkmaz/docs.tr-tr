@@ -1,21 +1,22 @@
 ---
-title: Elementler topluluğu (LINQ - XML) (C#) nasıl alınır?
+title: Öğelerin koleksiyonunu alma (LINQ to XML) (C#)
+description: C# içindeki Elements yöntemi bir öğenin alt öğelerinin bir koleksiyonunu alır. Bu LINQ to XML örnek, bir öğenin alt öğeleri üzerinden yinelenir.
 ms.date: 07/20/2015
 ms.assetid: b849668c-7976-4974-b8e1-1cd587d34258
-ms.openlocfilehash: 89799b17115fb56a93bda5fbc144b21b334a6974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4f9b6ae4713af9ce1a4eeb5257f57cd9724f68b2
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345013"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103352"
 ---
-# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Elementler topluluğu (LINQ - XML) (C#) nasıl alınır?
-Bu konu <xref:System.Xml.Linq.XContainer.Elements%2A> yöntemi gösterir. Bu yöntem, bir öğenin alt öğelerinin bir koleksiyon alır.  
+# <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-c"></a>Öğelerin koleksiyonunu alma (LINQ to XML) (C#)
+Bu konuda yöntemi gösterilmektedir <xref:System.Xml.Linq.XContainer.Elements%2A> . Bu yöntem, bir öğesinin alt öğelerinin bir koleksiyonunu alır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, `purchaseOrder` öğenin alt öğeleri ile yineler.  
+ Bu örnek, öğesinin alt öğeleri boyunca yinelenir `purchaseOrder` .  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Tipik SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -26,7 +27,7 @@ foreach (XElement el in childElements)
     Console.WriteLine("Name: " + el.Name);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir.  
+ Bu örnek aşağıdaki çıktıyı üretir.  
   
 ```output  
 Name: Address  
@@ -37,4 +38,4 @@ Name: Items
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ - XML Eksenleri (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ to XML eksenleri (C#)](./linq-to-xml-axes-overview.md)

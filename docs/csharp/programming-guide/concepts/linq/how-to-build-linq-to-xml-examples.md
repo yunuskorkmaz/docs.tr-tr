@@ -1,19 +1,20 @@
 ---
-title: LinQ xml örnekleri (C#) oluşturmak için nasıl
+title: LINQ to XML örnekleri oluşturma (C#)
+description: Belirtilen kod parçacıklarını ve LINQ to XML örneklerini çalıştırmak Için C# derlemek için gereken kullanım yönergelerini sağlayın.
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: 289a13daed7e3c871156bf50c6fa04c113c0cd13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f54944dcb68e1fd7d00f37c9c5381f345efc820e
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141461"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103589"
 ---
-# <a name="how-to-build-linq-to-xml-examples-c"></a>LinQ xml örnekleri (C#) oluşturmak için nasıl
-Bu dokümantasyondaki çeşitli parçacıklar ve örnekler, çeşitli ad alanlarından sınıflar ve türler kullanır. C# kodunu derlerken, uygun `using` yönergeleri sağlamanız gerekir.  
+# <a name="how-to-build-linq-to-xml-examples-c"></a>LINQ to XML örnekleri oluşturma (C#)
+Bu belgelerdeki çeşitli kod parçacıkları ve örnekler çeşitli ad alanlarından sınıfları ve türleri kullanır. C# kodu derlenirken, uygun yönergeleri sağlamanız gerekir `using` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, `using` C# örneklerinin oluşturulması ve çalıştırılmasını gerektiren yönergeleri içerir. Her `using` örnek için tüm yönergeler gerekli değildir.  
+ Aşağıdaki kod, `using` C# örneklerinin derlemek ve çalıştırmak için ihtiyaç duyduğu yönergeleri içerir. `using`Her örnek için tüm yönergeler gerekli değildir.  
   
 ```csharp  
 using System;  
@@ -36,4 +37,4 @@ using System.IO.Packaging;
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ - XML Programlamaya Genel Bakış (C#)](./linq-to-xml-overview.md)
+- [LINQ to XML programlamaya genel bakış (C#)](./linq-to-xml-overview.md)

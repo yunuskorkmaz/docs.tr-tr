@@ -1,23 +1,24 @@
 ---
-title: Metnin XML'e akış dönüşümleri (C#) nasıl yapılır?
+title: Metnin XML 'e akış dönüştürmeleri gerçekleştirme (C#)
+description: Metin dosyasını tek seferde bir satır olarak akıtmak ve metin dosyasını işlemek için bir LINQ sorgusu kullanmak üzere C# ' de metin olarak XML 'e akış dönüşümü yapmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
-ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f933064be70d39b59cf7dbe51b4ee92e5226647a
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345789"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104752"
 ---
-# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Metnin XML'e akış dönüşümleri (C#) nasıl yapılır?
+# <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>Metnin XML 'e akış dönüştürmeleri gerçekleştirme (C#)
 
-Metin dosyasını işlemeye yönelik bir yaklaşım, `yield return` yapıyı kullanarak metin dosyasını bir defada bir satır adadan bir uzantı yöntemi yazmaktır. Daha sonra, metin dosyasını tembel bir şekilde işleyen bir LINQ sorgusu yazabilirsiniz. Daha sonra <xref:System.Xml.Linq.XStreamingElement> çıktı akışı için kullanırsanız, kaynak metin dosyasının boyutune bakılmaksızın, metin dosyasından XML'ye, en az miktarda bellek kullanan bir dönüşüm oluşturabilirsiniz.
+Bir metin dosyasını işlemeye yönelik bir yaklaşım, yapıyı kullanarak metin dosyasını bir kerede bir satır akışı yapan bir genişletme yöntemi yazmaktır `yield return` . Daha sonra, metin dosyasını yavaş ertelenmiş bir biçimde işleyen bir LINQ sorgusu yazabilirsiniz. Daha sonra <xref:System.Xml.Linq.XStreamingElement> çıktıyı akışa almak için öğesini kullanırsanız, kaynak metin dosyasının boyutundan bağımsız olarak en az miktarda bellek kullanan metin DOSYASıNDAN XML 'e bir dönüşüm oluşturabilirsiniz.
 
- Akış dönüşümleri ile ilgili bazı uyarılar vardır. Akış dönüşümü, tüm dosyayı bir kez işleyebilir ve satırları kaynak belgede oluşacak sırayla işleyebilirseniz, en iyi şekilde uygulanır. Dosyayı birden fazla kez işlemeniz gerekiyorsa veya satırları işlemeden önce sıralamanız gerekiyorsa, akış tekniği kullanmanın birçok avantajını kaybedersiniz.
+ Akış dönüşümleriyle ilgili bazı uyarılar vardır. Bir akış dönüştürmesi en iyi şekilde, dosyanın tamamını bir kez işleyebileceğiniz ve satırları kaynak belgede gerçekleştikleri sırada işleyebileceğiniz durumlarda en iyi şekilde uygulanır. Dosyayı birden çok kez işlemek istiyorsanız veya satırları işleyebilmeniz için öncelikle sıralama yapmanız gerekiyorsa, bir akış tekniği kullanmanın avantajlarından çoğunu kaybedersiniz.
 
 ## <a name="example"></a>Örnek
 
- Aşağıdaki metin dosyası, People.txt, bu örneğin kaynağıdır.
+ Aşağıdaki metin dosyası People.txt, bu örneğin kaynağıdır.
 
 ```text
 #This is a comment
@@ -26,7 +27,7 @@ Metin dosyasını işlemeye yönelik bir yaklaşım, `yield return` yapıyı kul
 3,David,Wright,Inventor
 ```
 
- Aşağıdaki kod, metin dosyasının satırlarını ertelenmiş bir şekilde aktaran bir uzantı yöntemi içerir.
+ Aşağıdaki kod, metin dosyasının satırlarını ertelenmiş bir biçimde akıp bir genişletme yöntemi içerir.
 
 ```csharp
 public static class StreamReaderSequence
@@ -66,7 +67,7 @@ class Program
 }
 ```
 
- Bu örnek, aşağıdaki çıktıyı üretir:
+ Bu örnek aşağıdaki çıktıyı üretir:
 
 ```xml
 <Root>

@@ -1,29 +1,30 @@
 ---
-title: Üretim İşlemleri (C#)
+title: Oluşturma Işlemleri (C#)
+description: Oluşturma yeni bir değer dizisi oluşturur. Oluşturma işlemini gerçekleştiren C# ' de LINQ içindeki standart sorgu işleci yöntemleri hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: 9fe04c34752825d45ca5bcf33051a24b72243b51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90b7913d60ced82c854f514d3644425f6ddd2571
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594242"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103641"
 ---
-# <a name="generation-operations-c"></a>Üretim İşlemleri (C#)
-Nesil, yeni bir değer dizisi oluşturmayı ifade eder.  
+# <a name="generation-operations-c"></a>Oluşturma Işlemleri (C#)
+Oluşturma, yeni bir değer dizisi oluşturma anlamına gelir.  
   
- Oluşturma gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenir.  
+ Oluşturma işlemini gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenmiştir.  
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem Adı|Açıklama|C# Sorgu İfade Sözdizimi|Daha Fazla Bilgi|  
+|Yöntem adı|Açıklama|C# sorgu Ifadesi sözdizimi|Daha Fazla Bilgi|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Defaultıfempty|Boş bir koleksiyonu varsayılan değerli singleton koleksiyonuyla değiştirir.|Geçerli değildir.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
-|Boş|Boş bir koleksiyon döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
-|Aralık|Bir sayı dizisi içeren bir koleksiyon oluşturur.|Geçerli değildir.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
-|Yinele|Yinelenen bir değer içeren bir koleksiyon oluşturur.|Geçerli değildir.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
+|Defaultıempty|Boş bir koleksiyonu varsayılan değerli Singleton koleksiyonuyla değiştirir.|Geçerli değildir.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
+|Olmamalıdır|Boş bir koleksiyon döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Aralık|Sayı dizisi içeren bir koleksiyon oluşturur.|Geçerli değildir.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Repeat|Yinelenen bir değer içeren bir koleksiyon oluşturur.|Geçerli değildir.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Linq>
-- [Standart Sorgu Operatörlerine Genel Bakış (C#)](./standard-query-operators-overview.md)
+- [Standart sorgu Işleçlerine genel bakış (C#)](./standard-query-operators-overview.md)

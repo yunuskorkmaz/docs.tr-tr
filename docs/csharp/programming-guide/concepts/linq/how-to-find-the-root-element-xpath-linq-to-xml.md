@@ -1,25 +1,26 @@
 ---
-title: Kök öğesi (XPath-LINQ - XML) (C#) nasıl bulabilirim?
+title: Kök öğeyi bulma (XPath-LINQ to XML) (C#)
+description: Bu C# örneği, örnek bir XML belgesi için kök öğe alma için XPath 'i LINQ to XML karşılaştırır.
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
-ms.openlocfilehash: 1c5526f436b5b9d88ca359ef7e0fc04c5c3cf43c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 220899823210c5cd6e9834541ca87e4d8394b4ff
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345957"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105185"
 ---
-# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Kök öğesi (XPath-LINQ - XML) (C#) nasıl bulabilirim?
-Bu konu, XPath ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+# <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Kök öğeyi bulma (XPath-LINQ to XML) (C#)
+Bu konu, XPath ve ile kök öğesinin nasıl alınacağını gösterir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .  
   
  XPath ifadesi:  
   
  `/PurchaseOrders`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, kök öğeyi bulur.  
+ Bu örnek, kök öğesini bulur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -37,7 +38,7 @@ else
 Console.WriteLine(el1.Name);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

@@ -1,21 +1,22 @@
 ---
-title: Varyans'ı Temsilcilerde Kullanma (C#)
+title: Temsilcilerde varyans kullanma (C#)
+description: Dahil edilen Kovaryans ve değişken varyans kodu örneklerini kullanarak Temsilcilerde varyansı nasıl kullanacağınızı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 83e86e760edb17f6d9ae61864c154062d41416e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62b0555ee29c5e7d2ba0954a8949d61596122cc7
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169772"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105679"
 ---
-# <a name="using-variance-in-delegates-c"></a>Varyans'ı Temsilcilerde Kullanma (C#)
-Bir temsilciye bir yöntem atadığınızda, *bir temsilci* türünü yöntem imzasıyla eşleştirmek için esneklik *sağlar.* Covariance, bir yöntemin, temsilcide tanımlanandan daha fazla türemiş iade türüne sahip olmasını izin verir. Kontravariance, temsilci türündekilerden daha az türemiş parametre türleri olan bir yönteme izin verir.  
+# <a name="using-variance-in-delegates-c"></a>Temsilcilerde varyans kullanma (C#)
+Bir temsilciye bir yöntem atadığınızda, *Kovaryans* ve *değişken varyans* , bir temsilci türünü Yöntem imzasıyla eşleştirmek için esneklik sağlar. Kovaryans, bir metodun, temsilde tanımlı olandan daha fazla türetilmiş dönüş türüne sahip olmasını sağlar. Değişken Varyans, temsilci türünden daha az türetilmiş parametre türlerine sahip bir yönteme izin verir.  
   
-## <a name="example-1-covariance"></a>Örnek 1: Tutarlılık  
+## <a name="example-1-covariance"></a>Örnek 1: Kovaryans  
   
 ### <a name="description"></a>Açıklama  
- Bu örnek, temsilci imzasındaki iade türünden türetilen dönüş türleri olan yöntemlerle temsilcilerin nasıl kullanılabileceğini gösterir. Döndürülen `DogsHandler` veri `Dogs`türü, temsilcide tanımlanan `Mammals` türden türetilmiştir.  
+ Bu örnek, temsilci imzasında dönüş türünden türetilmiş dönüş türleri olan yöntemlerle temsilcilerin nasıl kullanılabileceğini gösterir. Tarafından döndürülen veri türü `DogsHandler` `Dogs` , `Mammals` temsilde tanımlanan türden türetilen türüdür.  
   
 ### <a name="code"></a>Kod  
   
@@ -48,25 +49,25 @@ class Program
 }  
 ```  
   
-## <a name="example-2-contravariance"></a>Örnek 2: Kontrayan  
+## <a name="example-2-contravariance"></a>Örnek 2: değişken varyans  
   
 ### <a name="description"></a>Açıklama
 
-Bu örnek, damada, damaizi parametre türü taban türleri olan parametrelere sahip yöntemlerle nasıl kullanılabileceğini gösterir. Kontravariance ile, ayrı işleyicileri yerine bir olay işleyicisi kullanabilirsiniz. Aşağıdaki örnekte iki temsilci kullanılır:
+Bu örnek, temsilci imza parametre türünün temel türleri olan parametrelere sahip Yöntemler ile temsilcilerin nasıl kullanılabileceğini gösterir. Değişken varyans ile ayrı işleyiciler yerine bir olay işleyicisi kullanabilirsiniz. Aşağıdaki örnek iki temsilcinin kullanımını sağlar:
 
-- <xref:System.Windows.Forms.KeyEventHandler> [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) olayının imzasını tanımlayan bir temsilci. İmzası:
+- <xref:System.Windows.Forms.KeyEventHandler> [Button. KeyDown](xref:System.Windows.Forms.Control.KeyDown) olayının imzasını tanımlayan bir temsilci. İmzası:
 
    ```csharp
    public delegate void KeyEventHandler(object sender, KeyEventArgs e)
    ```
 
-- <xref:System.Windows.Forms.MouseEventHandler> [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) olayının imzasını tanımlayan bir temsilci. İmzası:
+- <xref:System.Windows.Forms.MouseEventHandler> [Button. MouseClick](xref:System.Windows.Forms.Control.MouseDown) olayının imzasını tanımlayan bir temsilci. İmzası:
 
    ```csharp
    public delegate void MouseEventHandler(object sender, MouseEventArgs e)
    ```
 
-Örnek, parametresi olan bir <xref:System.EventArgs> olay işleyicisini `Button.KeyDown` tanımlar ve `Button.MouseClick` hem olayları hem de olayları işlemek için kullanır. Her ikisinin <xref:System.EventArgs> de <xref:System.Windows.Forms.KeyEventArgs> bir taban türü <xref:System.Windows.Forms.MouseEventArgs>olduğu için bunu yapabilir ve .
+Örnek, parametresiyle bir olay işleyicisini tanımlar <xref:System.EventArgs> ve hem hem de olaylarını işlemek için onu kullanır `Button.KeyDown` `Button.MouseClick` . Bu, <xref:System.EventArgs> hem hem de temel türü olduğundan bunu yapabilir <xref:System.Windows.Forms.KeyEventArgs> <xref:System.Windows.Forms.MouseEventArgs> .
   
 ### <a name="code"></a>Kod  
   
@@ -94,5 +95,5 @@ public Form1()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Temsilcilerde Varyans (C#)](./variance-in-delegates.md)
-- [Func ve Action Generic Delegeler için Varyans Kullanma (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Temsilcilerde varyans (C#)](./variance-in-delegates.md)
+- [Func ve eylem genel temsilcileri için varyans kullanma (C#)](./using-variance-for-func-and-action-generic-delegates.md)

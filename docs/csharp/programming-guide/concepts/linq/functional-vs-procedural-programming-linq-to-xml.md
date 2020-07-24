@@ -1,45 +1,46 @@
 ---
-title: İşlevsel ve Yordamsal Programlama (LINQ - XML) (C#)
+title: İşlevsel ve yordamsal programlama (LINQ to XML) (C#)
+description: XML işlemek için LINQ to XML hem yordamsal, hem de bellek içi XML ağacı değişikliğini ve bildirim temelli bir yaklaşım kullanan işlevsel oluşturmayı destekler.
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: e87114d2edcda4b2df14eb2d84f62ebe9638b5eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e19f9311c56f4fe2c5e7e5f228aca6c03c6fe04d
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69594254"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103660"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>İşlevsel ve Yordamsal Programlama (LINQ - XML) (C#)
-Çeşitli XML uygulamaları vardır:  
+# <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>İşlevsel ve yordamsal programlama (LINQ to XML) (C#)
+Çeşitli türlerdeki XML uygulamaları vardır:  
   
-- Bazı uygulamalar kaynak XML belgeleri alır ve kaynak belgelerden farklı bir biçimde yeni XML belgeleri üretir.  
+- Bazı uygulamalar kaynak XML belgelerini alır ve kaynak belgelerden farklı bir şekilde yeni XML belgeleri oluşturur.  
   
-- Bazı uygulamalar kaynak XML belgeleri alır ve html veya CSV metin dosyaları gibi tamamen farklı bir biçimde sonuç belgeleri üretir.  
+- Bazı uygulamalar kaynak XML belgelerini alır ve sonuç belgelerini HTML veya CSV metin dosyaları gibi tamamen farklı bir biçimde oluşturur.  
   
-- Bazı uygulamalar kaynak XML belgelerini alır ve kayıtları veritabanına ekler.  
+- Bazı uygulamalar kaynak XML belgelerini alır ve bir veritabanına kayıt ekler.  
   
-- Bazı uygulamalar veritabanı gibi başka bir kaynaktan veri alır ve bu kaynaktan XML belgeleri oluşturur.  
+- Bazı uygulamalar, bir veritabanı gibi başka bir kaynaktan veri alır ve bundan XML belgesi oluşturur.  
   
- Bunlar XML uygulama türlerinin tümü değildir, ancak bunlar bir XML programcısının uygulamak zorunda olduğu işlevsellik türlerinin temsili kümesidir.  
+ Bunlar, XML uygulaması türlerinin hepsi değildir, ancak bunlar bir XML Programlayıcısının uygulamak zorunda olduğu işlevsellik türlerinin temsili bir kümesidir.  
   
- Bu tür uygulamaların tümlerinde, bir geliştiricinin kaldırabileceği iki zıt yaklaşım vardır:  
+ Bu tür uygulamaların tümünde, bir geliştiricinin uygulayabileceğiniz iki yaklaşım vardır:  
   
-- Bildirimsel bir yaklaşım la fonksiyonel yapı.  
+- Bildirim temelli bir yaklaşım kullanılarak işlevsel oluşturma.  
   
-- Yordam kodu kullanarak bellek tesisi XML ağaç modifikasyonu.  
+- Yordamsal kodu kullanarak bellek içi XML ağacı değişikliği.  
   
- LINQ to XML her iki yaklaşımı da destekler.  
+ LINQ to XML her iki yaklaşımı destekler.  
   
- İşlevsel yaklaşımı kullanırken, kaynak belgeleri alan ve istenen şekille tamamen yeni sonuç belgeleri oluşturan dönüşümler yazarsınız.  
+ İşlevsel yaklaşımı kullanırken, kaynak belgeleri alan ve istenen şekle sahip tamamen yeni sonuç belgeleri oluşturan dönüşümler yazarsınız.  
   
- Bir XML ağacını yerinde değiştirirken, bellek içi bir XML ağacında düğümler arasında geçiş yapan ve gezinen kod yazar, düğümleri gerektiği gibi ekler, siler ve değiştirir.  
+ Bir XML ağacını yerinde değiştirirken, düğüm içi bir XML ağacındaki düğümlerde geçen ve gezinen, düğümleri ekleme, silme ve değiştirme gibi bir kod yazın.  
   
- Her iki yaklaşımla LINQ xml kullanabilirsiniz. Aynı sınıfları ve bazı durumlarda aynı yöntemleri kullanırsınız. Ancak, iki yaklaşımın yapısı ve hedefleri çok farklıdır. Örneğin, farklı durumlarda, bir veya diğer yaklaşım genellikle daha iyi performansa sahip olacak ve daha fazla veya daha az bellek kullanır. Buna ek olarak, bir veya diğer yaklaşım yazmak ve daha sadaabilir kod verim daha kolay olacaktır.  
+ LINQ to XML iki yaklaşımla de kullanabilirsiniz. Aynı sınıfları ve bazı durumlarda aynı yöntemleri kullanırsınız. Ancak, iki yaklaşımdan oluşan yapı ve hedefler çok farklıdır. Örneğin, farklı durumlarda, bir veya diğer yaklaşım genellikle daha iyi performansa sahip olur ve daha fazla veya daha az bellek kullanır. Buna ek olarak, bir veya başka bir yaklaşım daha fazla erişilebilir kod yazmak ve sağlamak daha kolay olacaktır.  
   
- Zıt iki yaklaşımı görmek için Bellek [Içi XML Ağaç Modifikasyonu ve Fonksiyonel Yapı (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)bakın.  
+ Bu iki yaklaşımı görmek için bkz. [bellek ıçı XML ağacı değişikliği ve Işlevsel oluşturma (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
- İşlevsel dönüşümleri yazma konusunda bir öğretici için Bkz. [XML'in Saf İşlevsel Dönüşümleri (C#)](./introduction-to-pure-functional-transformations.md).  
+ İşlev dönüştürmeleri yazma hakkında bir öğretici için bkz. [XML 'In saf Işlevsel dönüştürmeleri (C#)](./introduction-to-pure-functional-transformations.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ - XML Programlamaya Genel Bakış (C#)](./linq-to-xml-overview.md)
+- [LINQ to XML programlamaya genel bakış (C#)](./linq-to-xml-overview.md)

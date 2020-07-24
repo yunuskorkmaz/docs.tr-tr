@@ -1,28 +1,29 @@
 ---
-title: Ağaçtaki tüm düğümleri listeletme (C#)
+title: Bir ağaçtaki tüm düğümleri listeleme (C#)
+description: C# ' de LINQ to XML kullanarak bir XPath ifadesi çalıştırarak bir ağaçtaki tüm düğümleri nasıl listeleyeceğinizi öğrenin. Bir yöntemin veya özelliğin ağacı nasıl etkilediğini görebilirsiniz.
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e1b37c1d0801f2924e6811e630094524331a0d86
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28400712154138fa474665a796b77572b095fe13
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345874"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104969"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Ağaçtaki tüm düğümleri listeletme (C#)
+# <a name="how-to-list-all-nodes-in-a-tree-c"></a>Bir ağaçtaki tüm düğümleri listeleme (C#)
 
-Bazen bir ağaçtaki tüm düğümleri listelemek yararlı olabilir. Bu, bir yöntemin veya özelliğin ağacı tam olarak nasıl etkilediğini öğrenirken yararlı olabilir. Tüm düğümleri metin biçiminde listelemek için bir yaklaşım, ağaçtaki herhangi bir düğümü tam olarak ve özellikle tanımlayan bir XPath ifadesi oluşturmaktır.
+Bazen bir ağaçtaki tüm düğümleri listelemek yararlı olur. Bu, bir yöntemin veya özelliğin ağacı nasıl etkilediğini tam olarak öğrenirken yararlı olabilir. Bir metinsel form içindeki tüm düğümleri listelemek için bir yaklaşım, ağaçtaki herhangi bir düğümü tam olarak ve özellikle tanımlayan bir XPath ifadesi oluşturmaktır.
 
-XPath ifadelerini kullanarak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]yürütmek özellikle yararlı değildir. XPath ifadeleri sorgulardan daha [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] düşük performansa sahiptir ve [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgular çok daha güçlüdür. Ancak, XML ağacındaki düğümleri tanımlamanın bir yolu olarak XPath iyi çalışır.
+Kullanılarak XPath ifadelerinin yürütülmesi özellikle yararlı değildir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . XPath ifadeleri sorgulardan poorer performansa sahiptir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ve sorgular çok [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] daha güçlüdür. Ancak, XML ağacındaki düğümleri belirlemenin bir yolu olarak, XPath iyi bir sonuç verir.
 
 ## <a name="example"></a>Örnek
- Bu örnek, XML ağacındaki herhangi bir düğüm için belirli bir XPath ifadesi oluşturan adlı `GetXPath` bir işlev gösterir. Düğümler ad alanında olsa bile uygun XPath ifadeleri oluşturur. XPath ifadeleri ad alanı önekleri kullanılarak oluşturulur.
+ Bu örnek `GetXPath` , XML ağacındaki herhangi bir düğüm için belirli bir XPath ifadesi oluşturan adlı bir işlevi gösterir. Düğümler bir ad alanında olduğunda bile uygun XPath ifadeleri oluşturur. XPath ifadeleri, ad alanı önekleri kullanılarak oluşturulur.
 
- Örnek daha sonra, birkaç tür düğüm örneği içeren küçük bir XML ağacı oluşturur. Daha sonra soyundan gelen düğümler aracılığıyla yineler ve her düğüm için XPath ifadesini yazdırır.
+ Örnek daha sonra birkaç düğüm türüne örnek içeren küçük bir XML ağacı oluşturur. Daha sonra alt düğümler boyunca yinelenir ve her düğüm için XPath ifadesini yazdırır.
 
- XML bildiriminin ağaçta bir düğüm olmadığını fark edeceksiniz.
+ XML bildiriminin ağaçta bir düğüm olmadığına dikkat edin.
 
- Aşağıda, çeşitli düğüm türleri içeren bir XML dosyası verilmiştir:
+ Aşağıda, çeşitli düğüm türlerini içeren bir XML dosyası verilmiştir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
@@ -38,7 +39,7 @@ XPath ifadelerini kullanarak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md
 </Root>
 ```
 
- Yukarıdaki XML ağacında XPath ifadeleri olarak ifade edilen düğümlerin listesi aşağıda veda eder:
+ Aşağıda, XPath ifadeleri olarak ifade edilen Yukarıdaki XML ağacındaki düğümlerin listesi verilmiştir:
 
 ```text
 /processing-instruction()
@@ -316,7 +317,7 @@ class Program
 }
 ```
 
- Bu örnek, aşağıdaki çıktıyı üretir:
+ Bu örnek aşağıdaki çıktıyı üretir:
 
 ```output
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>

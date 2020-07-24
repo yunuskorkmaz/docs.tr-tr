@@ -1,20 +1,21 @@
 ---
-title: İki liste (LINQ) (C#) arasındaki küme farkı nasıl bulabilirim?
+title: İki liste arasındaki küme farkını bulma (LINQ) (C#)
+description: İki dize listesini karşılaştırmak ve bir listede olan ancak diğeri içinde olmayan satırları çıkarmak Için C# ' de LINQ kullanmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 03fae5451ee395487e73ed7c38d465c3f891e0f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24509488d91f9861ee9bf84277238bea7031e5f6
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169187"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105084"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>İki liste (LINQ) (C#) arasındaki küme farkı nasıl bulabilirim?
-Bu örnek, iki dize listesini karşılaştırmak için LINQ'nin nasıl kullanılacağını ve names1.txt'de olmayan ancak names2.txt'de olmayan bu satırları niçin çıkarı elde edilmeyeceğini gösterir.  
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>İki liste arasındaki küme farkını bulma (LINQ) (C#)
+Bu örnek, iki dize listesini karşılaştırmak ve names1.txt ancak names2.txt olmayan satırları çıkarmak için LINQ 'ın nasıl kullanılacağını gösterir.  
   
 ### <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için  
   
-1. String [koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)'de gösterildiği gibi, names1.txt ve names2.txt'yi çözüm klasörünüze kopyalayın.  
+1. names1.txt ve names2.txt, [dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)bölümünde gösterildiği gibi çözüm klasörünüze kopyalayın.  
   
 ## <a name="example"></a>Örnek  
   
@@ -52,11 +53,11 @@ class CompareLists
      */  
 ```  
   
- C#'daki bazı sorgu işlemleri <xref:System.Linq.Enumerable.Except%2A>türleri <xref:System.Linq.Enumerable.Distinct%2A> <xref:System.Linq.Enumerable.Union%2A>, <xref:System.Linq.Enumerable.Concat%2A>, , ve , gibi yalnızca yöntem tabanlı sözdizimiile ifade edilebilir.  
+ C# içinde,, ve gibi bazı sorgu işlemleri türleri <xref:System.Linq.Enumerable.Except%2A> <xref:System.Linq.Enumerable.Distinct%2A> <xref:System.Linq.Enumerable.Union%2A> <xref:System.Linq.Enumerable.Concat%2A> yalnızca Yöntem tabanlı sözdiziminde ifade edilebilir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
+ `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)

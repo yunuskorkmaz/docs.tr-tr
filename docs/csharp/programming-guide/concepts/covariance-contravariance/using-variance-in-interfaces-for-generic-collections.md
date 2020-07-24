@@ -1,13 +1,14 @@
 ---
 title: Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (C#)
+description: Genel Koleksiyonlar için birlikte değişken ve değişken karşıtı arabirimleri nasıl kullanacağınızı öğrenin. Genel koleksiyonları dönüştürme ve karşılaştırma örneklerine bakın.
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
-ms.openlocfilehash: 5f5531e17a530ed840108df2cf9bf829b2beb656
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c2ce849e32520cb91422ff36173e418a010476bd
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241363"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105668"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (C#)
 Birlikte değişken arabirimi, yöntemlerinin arabirimde belirtilenden daha fazla türetilmiş tür döndürmesini sağlar. Değişken karşıtı bir arabirim, yöntemlerinin, arabirimde belirtilenden daha az türetilmiş türdeki parametreleri kabul etmesine olanak sağlar.  

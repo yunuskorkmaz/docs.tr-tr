@@ -1,20 +1,21 @@
 ---
-title: CSV metin dosyasındaki sütun değerlerini nasıl hesaplar (LINQ) (C#)
+title: Bir CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (C#)
+description: Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi C# ' de LINQ kullanarak toplam hesaplamaların nasıl gerçekleştirileceğini gösterir.
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 458950d58b15dcd572329228d76d85881043e07a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9137779f9767c8a9531489f7894ba3e69eb1faee
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169356"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87105315"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV metin dosyasındaki sütun değerlerini nasıl hesaplar (LINQ) (C#)
-Bu örnek, .csv dosyasının sütunlarında Toplam, Ortalama, Min ve Max gibi toplu hesaplamaların nasıl gerçekleştirildirilebildiğini gösterir. Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Bir CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (C#)
+Bu örnek, bir. csv dosyasının sütunlarında Sum, Average, min ve Max gibi toplam hesaplamaların nasıl gerçekleştirileceğini gösterir. Burada gösterilen örnek ilkeler diğer yapılandırılmış metin türlerine uygulanabilir.  
   
 ## <a name="to-create-the-source-file"></a>Kaynak dosyayı oluşturmak için  
   
-1. Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunun bir öğrenci kimliğini, sonraki sütunların ise dört sınavdan alınan puanları temsil ettiğini varsayalım.  
+1. Aşağıdaki satırları scores.csv adlı bir dosyaya kopyalayın ve proje klasörünüze kaydedin. İlk sütunun bir öğrenci KIMLIĞINI temsil ettiğini ve sonraki sütunlarda dört sınavın puanlarını temsil ettiğini varsayın.  
   
     ```csv
     111, 97, 92, 81, 60  
@@ -156,12 +157,12 @@ class SumColumns
  */  
 ```  
   
- Sorgu, her metin <xref:System.String.Split%2A> satırını bir diziye dönüştürmek için yöntemi kullanarak çalışır. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Dosyanız sekmeyle ayrılmış bir dosyaysa, yöntemdeki bağımsız değişkeni `Split` şu şekilde `\t`güncelleştirmeniz  
+ Sorgu, <xref:System.String.Split%2A> her metin satırını bir diziye dönüştürmek için yöntemini kullanarak işe yarar. Her dizi öğesi bir sütunu temsil eder. Son olarak, her sütundaki metin sayısal gösterimine dönüştürülür. Dosyanız sekmeyle ayrılmış bir dosya ise, yöntemindeki bağımsız değişkeni olarak güncelleştirmeniz yeterlidir `Split` `\t` .  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
- System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.  
+ `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
-- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)

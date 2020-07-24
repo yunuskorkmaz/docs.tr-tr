@@ -1,26 +1,27 @@
 ---
-title: Fonksiyonel Yapı (LINQ - XML) (C#)
+title: İşlevsel oluşturma (LINQ to XML) (C#)
+description: LINQ to XML programlama arabiriminin, C# ' de tek bir ifadede bir XML ağacı oluşturma özelliği olan işlevsel oluşturmayı nasıl sağladığını öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f209a7ef2a4597ec8eeccb3083b77223a27e7a65
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635762"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87103766"
 ---
-# <a name="functional-construction-linq-to-xml-c"></a>Fonksiyonel Yapı (LINQ - XML) (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]*fonksiyonel yapı*adı verilen XML öğeleri oluşturmak için güçlü bir yol sağlar. Fonksiyonel yapı, tek bir ifadede bir XML ağacı oluşturma yeteneğidir.  
+# <a name="functional-construction-linq-to-xml-c"></a>İşlevsel oluşturma (LINQ to XML) (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]*işlevsel oluşturma*adlı XML öğeleri oluşturmak için güçlü bir yol sağlar. İşlevsel oluşturma, tek bir bildirimde bir XML ağacı oluşturma olanağıdır.  
   
- Programlama arabiriminin [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] işlevsel yapıyı etkinleştiren birkaç temel özelliği vardır:  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Programlama arabiriminin işlevsel oluşturmayı etkinleştiren birkaç temel özelliği vardır:  
   
-- Oluşturucu <xref:System.Xml.Linq.XElement> içerik için çeşitli bağımsız değişkenler alır. Örneğin, bir alt <xref:System.Xml.Linq.XElement> öğe olur başka bir nesne, geçirebilirsiniz. Öğenin bir <xref:System.Xml.Linq.XAttribute> özniteliği haline gelen bir nesneyi geçirebilirsiniz. Veya bir dize dönüştürülür ve öğenin metin içeriği olur nesne, başka bir tür geçirebilirsiniz.  
+- <xref:System.Xml.Linq.XElement>Oluşturucu içerik için çeşitli bağımsız değişken türlerini alır. Örneğin, <xref:System.Xml.Linq.XElement> bir alt öğe haline gelen başka bir nesneyi geçirebilirsiniz. <xref:System.Xml.Linq.XAttribute>Öğesinin bir özniteliği haline gelen bir nesneyi geçirebilirsiniz. Ya da bir dizeye dönüştürülen ve öğenin metin içeriği haline gelen başka herhangi bir nesne türünü geçirebilirsiniz.  
   
-- Oluşturucu, <xref:System.Xml.Linq.XElement> istediğiniz `params` sayıda <xref:System.Object>nesneyi oluşturucuya geçirebilmeniz için bir dizi tür alır. Bu, karmaşık içeriğe sahip bir öğe oluşturmanıza olanak sağlar.  
+- <xref:System.Xml.Linq.XElement>Oluşturucuya `params` <xref:System.Object> herhangi bir sayıda nesne geçirebilmeniz için Oluşturucu türünde bir dizi alır. Bu, karmaşık içeriğe sahip bir öğe oluşturmanıza olanak sağlar.  
   
-- Bir nesne uygularsa, <xref:System.Collections.Generic.IEnumerable%601>nesnedeki koleksiyon numaralandırılır ve koleksiyondaki tüm öğeler eklenir. Koleksiyon <xref:System.Xml.Linq.XElement> içeriyorsa <xref:System.Xml.Linq.XAttribute> veya nesnelere, koleksiyondaki her öğe ayrı olarak eklenir. Bu önemlidir, çünkü bir LINQ sorgusunun sonuçlarını oluşturucuya geçirmenizi sağlar.  
+- Bir nesne uygularsa <xref:System.Collections.Generic.IEnumerable%601> , nesne içindeki koleksiyon numaralandırılır ve koleksiyondaki tüm öğeler eklenir. Koleksiyon <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> nesneler içeriyorsa, koleksiyondaki her öğe ayrı ayrı eklenir. Bir LINQ sorgusunun sonuçlarını oluşturucuya geçirmenize izin sağladığından bu önemlidir.  
   
- Bu özellikler, bir XML ağacı oluşturmak için kod yazmanızı sağlar. Aşağıda bir örnek verilmiştir:  
+ Bu özellikler bir XML ağacı oluşturmak için kod yazmanıza olanak sağlar. Aşağıda bir örnek verilmiştir:  
   
 ```csharp  
 XElement contacts =  
@@ -38,7 +39,7 @@ XElement contacts =
     );  
 ```  
   
- Bu özellikler, bir XML ağacı oluşturduğunuzda LINQ sorgularının sonuçlarını kullanan kod yazmanızı da sağlar:  
+ Bu özellikler ayrıca, bir XML ağacı oluştururken aşağıdaki gibi LINQ sorgularının sonuçlarını kullanan kodu yazmanızı de sağlar:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -58,7 +59,7 @@ XElement xmlTree = new XElement("Root",
 Console.WriteLine(xmlTree);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  

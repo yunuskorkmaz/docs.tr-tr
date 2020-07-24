@@ -1,19 +1,20 @@
 ---
-title: Nesne grafiği nasıl yansıtılatır (C#)
+title: Nesne grafiğini proje (C#)
+description: C# ' deki XML 'den bir nesne grafiğini nasıl proje veya doldurma hakkında bilgi edinin. Örnek kod, bir nesne grafiğini bir örnek XML dosyasındaki sınıflarla doldurur.
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c2ea0e06d9a46a1b19236eae021a2a153fea1d4
+ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168966"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87104618"
 ---
-# <a name="how-to-project-an-object-graph-c"></a>Nesne grafiği nasıl yansıtılatır (C#)
-Bu konu, XML'den bir nesne grafiğinin nasıl yansıtılabildiğini veya doldurulmasını gösterir.  
+# <a name="how-to-project-an-object-graph-c"></a>Nesne grafiğini proje (C#)
+Bu konu, XML 'deki bir nesne grafiğinin nasıl proje veya doldurma yapılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki `Address`kod, Örnek XML Dosyasından , ve `PurchaseOrder` `PurchaseOrderItem` sınıflarla bir nesne grafiğini doldurur: Tipik [Satınalma Siparişi (LINQ - XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.  
+ Aşağıdaki kod, bir nesne grafiğini `Address` `PurchaseOrder` örnek XML dosyasındaki,, ve `PurchaseOrderItem` sınıflarıyla doldurur [: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML belgesi.  
   
 ```csharp  
 class Address  
@@ -214,7 +215,7 @@ class Program {
 }  
 ```  
   
- Bu örnekte, LINQ sorgusunun sonucu bir <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`' nin olarak döndürülür. Sınıftaki `PurchaseOrder` <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem`öğeler. Kod, sorgunun sonuçlarından <xref:System.Linq.Enumerable.ToList%2A> <xref:System.Collections.Generic.List%601> bir koleksiyon oluşturmak için uzantı yöntemini kullanır.  
+ Bu örnekte, LINQ sorgusunun sonucu ' a döndürülür <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` . `PurchaseOrder`Sınıfındaki öğeler türündedir <xref:System.Collections.Generic.IEnumerable%601> `PurchaseOrderItem` . Kod, <xref:System.Linq.Enumerable.ToList%2A> sorgu sonuçlarından bir koleksiyon oluşturmak için genişletme yöntemini kullanır <xref:System.Collections.Generic.List%601> .  
   
  Örnek aşağıdaki çıktıyı üretir:  
   
