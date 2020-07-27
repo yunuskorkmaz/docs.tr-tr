@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: SelectedValue, SelectedValuePath ve SelectedItem Kullanma'
+description: Windows Presentation Foundation TreeView 'un Selecteditıtem için bir değer belirtmek üzere SelectedValue ve SelectedValuePath özelliklerinin nasıl kullanılacağını öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], SelectedValue properties
@@ -12,28 +13,28 @@ helpviewer_keywords:
 - Control class [WPF], SelectedValuePath properties
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
-ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddac2455dee0bf69d25307340eddd5364e43e823
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699142"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166281"
 ---
 # <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Nasıl yapılır: SelectedValue, SelectedValuePath ve SelectedItem Kullanma
-Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.TreeView.SelectedValue%2A> ve <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> için bir değer belirtmek için özellikleri <xref:System.Windows.Controls.TreeView.SelectedItem%2A> , bir <xref:System.Windows.Controls.TreeView>.  
+Bu örnek <xref:System.Windows.Controls.TreeView.SelectedValue%2A> <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> , öğesinin bir değerini belirtmek için ve özelliklerini nasıl kullanacağınızı gösterir <xref:System.Windows.Controls.TreeView.SelectedItem%2A> <xref:System.Windows.Controls.TreeView> .  
   
 ## <a name="example"></a>Örnek  
- <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> Özelliği belirtmek için bir yol sağlayan bir <xref:System.Windows.Controls.TreeView.SelectedValue%2A> için <xref:System.Windows.Controls.TreeView.SelectedItem%2A> içinde bir <xref:System.Windows.Controls.TreeView>. <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Nesneyi temsil eden <xref:System.Windows.Controls.ItemsControl.Items%2A> koleksiyonu ve <xref:System.Windows.Controls.TreeView> seçilen öğenin tek bir özelliğinin değerini görüntüler. <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> Özellik değerini belirlemek için kullanılan özellik yolunu belirtir <xref:System.Windows.Controls.TreeView.SelectedValue%2A> özelliği. Bu konudaki örnekler, bu kavramı gösterir.  
+ <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>Özelliği <xref:System.Windows.Controls.TreeView.SelectedValue%2A> , içinde için bir belirtmek için bir yol sağlar <xref:System.Windows.Controls.TreeView.SelectedItem%2A> <xref:System.Windows.Controls.TreeView> . , <xref:System.Windows.Controls.TreeView.SelectedItem%2A> Koleksiyondaki bir nesneyi temsil eder <xref:System.Windows.Controls.ItemsControl.Items%2A> ve <xref:System.Windows.Controls.TreeView> Seçili öğenin tek bir özelliğinin değerini görüntüler. <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A>Özelliği, özelliğinin değerini belirlemede kullanılan özelliğin yolunu belirtir <xref:System.Windows.Controls.TreeView.SelectedValue%2A> . Bu konudaki örneklerde bu kavram gösterilmektedir.  
   
- Aşağıdaki örnekte gösterildiği bir <xref:System.Windows.Data.XmlDataProvider> , çalışan bilgilerini içerir.  
+ Aşağıdaki örnek, <xref:System.Windows.Data.XmlDataProvider> çalışan bilgilerini içeren bir gösterir.  
   
  [!code-xaml[TreeViewSelectedValue#XMLDataProvider](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#xmldataprovider)]  
   
- Aşağıdaki örnekte tanımlayan bir <xref:System.Windows.HierarchicalDataTemplate> görüntüleyen `EmployeeName` ve `EmployeeWorkDay` , `Employee`. Unutmayın <xref:System.Windows.HierarchicalDataTemplate> belirttiğinde `EmployeeNumber` şablonunun bir parçası olarak.  
+ Aşağıdaki örnek <xref:System.Windows.HierarchicalDataTemplate> `EmployeeName` , ve ' i görüntüleyen bir tanımlar `EmployeeWorkDay` `Employee` . Öğesinin, <xref:System.Windows.HierarchicalDataTemplate> `EmployeeNumber` şablonun parçası olarak belirtmediğini unutmayın.  
   
  [!code-xaml[TreeViewSelectedValue#HierarchicalDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#hierarchicaldatatemplate)]  
   
- Aşağıdaki örnekte gösterildiği bir <xref:System.Windows.Controls.TreeView> önceden tanımlanmış kullanan <xref:System.Windows.HierarchicalDataTemplate> ve ayarlayan <xref:System.Windows.Controls.TreeView.SelectedValue%2A> özelliğini `EmployeeNumber`. Seçtiğinizde, bir `EmployeeName` içinde <xref:System.Windows.Controls.TreeView>, <xref:System.Windows.Controls.TreeView.SelectedItem%2A> özelliği döndürür `EmployeeInfo` seçili karşılık gelen bir veri öğesi `EmployeeName`. Ancak, çünkü <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> bu <xref:System.Windows.Controls.TreeView> ayarlanır `EmployeeNumber`, <xref:System.Windows.Controls.TreeView.SelectedValue%2A> ayarlanır `EmployeeNumber`.  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.TreeView> daha önce tanımlanan <xref:System.Windows.HierarchicalDataTemplate> ve özelliğini ' a ayarlayan öğesini gösterir <xref:System.Windows.Controls.TreeView.SelectedValue%2A> `EmployeeNumber` . İçinde bir seçtiğinizde `EmployeeName` <xref:System.Windows.Controls.TreeView> , <xref:System.Windows.Controls.TreeView.SelectedItem%2A> özelliği `EmployeeInfo` Seçili öğesine karşılık gelen veri öğesini döndürür `EmployeeName` . Ancak, öğesinin ' a ayarlandığı için, olarak <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> <xref:System.Windows.Controls.TreeView> `EmployeeNumber` <xref:System.Windows.Controls.TreeView.SelectedValue%2A> ayarlanır `EmployeeNumber` .  
   
  [!code-xaml[TreeViewSelectedValue#SelectedValuePath](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
   
@@ -41,5 +42,5 @@ Bu örnek nasıl kullanılacağını gösterir <xref:System.Windows.Controls.Tre
 
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [TreeView Genel Bakış](treeview-overview.md)
+- [TreeView Genel Bakışı](treeview-overview.md)
 - [Nasıl Yapılır Konuları](treeview-how-to-topics.md)

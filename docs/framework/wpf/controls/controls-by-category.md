@@ -1,20 +1,21 @@
 ---
 title: Kategoriye Göre Denetimler
+description: Benzer denetimleri karşılaştırarak uygun denetimi seçmenize yardımcı olabilecek kategoriler halinde gruplanmış Windows Presentation Foundation denetimlerini gözden geçirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 226e037dc26f817b96a5aa869565f08ee6ff6574
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636217"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166293"
 ---
 # <a name="controls-by-category"></a>Kategoriye Göre Denetimler
 Windows Presentation Foundation (WPF) denetimleri, çeşitli kategorilerde mantıksal olarak gruplandırılabilir. Bu kategoriler, hangi denetimlerin benzer kullanım desenleri veya işlevselliğine sahip olduğunu görmenizi sağlayan senaryonuz için uygun denetimi seçmek üzere kullanılabilir.  
   
-## <a name="layout"></a>Düzen  
+## <a name="layout"></a>Layout  
  Düzen denetimleri, alt öğelerin boyutunu, boyutlarını, konumunu ve yerleşimini yönetmek için kullanılır.  
   
 - <xref:System.Windows.Controls.Border>  
@@ -56,7 +57,7 @@ Windows Presentation Foundation (WPF) denetimleri, çeşitli kategorilerde mant�
 - <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="buttons"></a>Düğmeler  
- Düğmeler en temel kullanıcı arabirimi denetimlerinden biridir. Uygulamalar genellikle Kullanıcı bu kullanıcılara tıkladığında <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayda bazı görevleri gerçekleştirir.  
+ Düğmeler en temel kullanıcı arabirimi denetimlerinden biridir. Uygulamalar genellikle Kullanıcı bu kullanıcılara <xref:System.Windows.Controls.Primitives.ButtonBase.Click> tıkladığında olayda bir görev gerçekleştirir.  
   
 - <xref:System.Windows.Controls.Button>  
   
@@ -122,7 +123,7 @@ Windows Presentation Foundation (WPF) denetimleri, çeşitli kategorilerde mant�
   
 - <xref:Microsoft.Win32.SaveFileDialog>  
   
-## <a name="user-information"></a>Kullanıcı Bilgisi  
+## <a name="user-information"></a>Kullanıcı bilgileri  
  Kullanıcı bilgileri denetimleri, bağlamsal geri bildirim sağlar veya uygulamanın kullanıcı arabirimini açıklığa kavuşturun. Kullanıcı genellikle bu denetimlerle etkileşime giremezsiniz.  
   
 - <xref:System.Windows.Controls.AccessText>  
@@ -152,7 +153,7 @@ Windows Presentation Foundation (WPF) denetimleri, çeşitli kategorilerde mant�
   
 - <xref:System.Windows.Controls.StickyNoteControl>  
   
-## <a name="input"></a>Giriş  
+## <a name="input"></a>Girdi  
  Giriş denetimleri, kullanıcının metin ve diğer içerikleri girmesini sağlar.  
   
 - <xref:System.Windows.Controls.TextBox>  
@@ -161,7 +162,7 @@ Windows Presentation Foundation (WPF) denetimleri, çeşitli kategorilerde mant�
   
 - <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="media"></a>Ortam  
+## <a name="media"></a>Medya  
  WPF, hem ses hem de video içeriğini barındırmak için tümleşik destek ve en popüler görüntü biçimleri için [codec bileşenleri] içerir.  
   
 - <xref:System.Windows.Controls.Image>  

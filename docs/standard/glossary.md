@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 529b1d9142ddf7982a6712c355c10666f0414d73
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287460"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163113"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -30,7 +30,7 @@ Bazen ASP.NET, ASP.NET Core dahil olmak üzere hem ASP.NET uygulamalarına başv
 
 Bkz. [ASP.net belgeleri](/aspnet/#pivot=aspnet).
 
-## <a name="aspnet-core"></a>ASP.NET Core
+## <a name="aspnet-core"></a>ASP.NET Çekirdeği
 
 .NET Core üzerinde oluşturulan ASP.NET platformlar arası, yüksek performanslı, açık kaynaklı bir uygulama.
 
@@ -140,8 +140,6 @@ Sözcükler kitaplığı ve [Framework](#framework) genellikle terimler kullanı
 
 Kendi kitaplığı olmayan ancak yalnızca bağımlılıklar listesi olan bir NuGet paketi. Dahil edilen paketler, isteğe bağlı olarak bir hedef çerçeve için API 'YI kurabilir.
 
-Bkz. [paketler, Metapackages ve çerçeveler](../core/packages.md)
-
 ## <a name="mono"></a>Mono
 
 Mono, genellikle küçük bir çalışma zamanı gerektiğinde kullanılan açık kaynaklı, [platformlar arası](#cross-platform) bir .net uygulamasıdır. Android, Mac, iOS, tvOS ve watchOS üzerinde Xamarin uygulamalarını güçlendirir ve öncelikle küçük bir ayak izi gerektiren uygulamalara odaklanılmıştır.
@@ -174,7 +172,7 @@ Bkz. [.NET Core CLI](../core/tools/index.md).
 
 ## <a name="net-core-sdk"></a>.NET Core SDK
 
-Geliştiricilerin .NET Core Uygulamaları ve kitaplıkları oluşturmalarına izin veren bir kitaplık ve araç kümesi. Uygulamalar oluşturmaya yönelik [.NET Core CLI](#net-core-cli) , uygulamalar oluşturmak ve çalıştırmak Için .NET Core kitaplıklarını ve çalışma ZAMANıNı ve CLI komutlarını çalıştıran ve uygulamaları çalıştıran DotNet çalıştırılabilir (*DotNet. exe*) bilgilerini içerir.
+Geliştiricilerin .NET Core Uygulamaları ve kitaplıkları oluşturmalarına izin veren bir kitaplık ve araç kümesi. Uygulamalar oluşturmaya yönelik [.NET Core CLI](#net-core-cli) , uygulamalar oluşturmak ve çalıştırmak Için .NET Core kitaplıklarını ve çalışma ZAMANıNı ve CLI komutlarını çalıştıran ve uygulamaları çalıştıran DotNet çalıştırılabilir (*dotnet.exe*) bilgilerini içerir.
 
 [.NET Core SDK genel bakış](../core/sdk.md)bölümüne bakın.
 

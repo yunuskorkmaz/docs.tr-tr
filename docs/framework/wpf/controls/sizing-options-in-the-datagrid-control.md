@@ -1,89 +1,90 @@
 ---
 title: DataGrid Denetimindeki Boyutlandırma Seçenekleri
+description: Windows Presentation Foundation DataGrid denetimindeki ayrı satırları ve sütunları, içeriklerine veya belirli değerlere göre nasıl ayarlayabileceğinizi öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGrid control [WPF], sizing
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f10e385cbf18a26989614363ca6cd9f92bc83ec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970995"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164738"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>DataGrid Denetimindeki Boyutlandırma Seçenekleri
-Denetim için çeşitli seçenekler kullanılabilir nasıl <xref:System.Windows.Controls.DataGrid> kendisini boyutları. <xref:System.Windows.Controls.DataGrid>Ve bireysel içindeki satırları ve sütunları <xref:System.Windows.Controls.DataGrid>, içerikleri için otomatik olarak boyutu ayarlanabilir veya belirli değerlere ayarlayın. Varsayılan olarak, <xref:System.Windows.Controls.DataGrid> büyütme ve içerikleri sığacak şekilde küçültmek.  
+Boyutların kendisini denetlemek için çeşitli seçenekler mevcuttur <xref:System.Windows.Controls.DataGrid> . <xref:System.Windows.Controls.DataGrid>İçindeki ve tek tek satırları ve sütunları, <xref:System.Windows.Controls.DataGrid> otomatik olarak içeriklerine veya belirli değerlere ayarlanabilir şekilde ayarlanabilir. Varsayılan olarak, <xref:System.Windows.Controls.DataGrid> içeriği boyutuna sığacak şekilde büyür ve küçülecektir.  
   
-## <a name="sizing-the-datagrid"></a>DataGrid boyutlandırma  
+## <a name="sizing-the-datagrid"></a>DataGrid 'i boyutlandırma  
   
-### <a name="cautions-when-using-automatic-sizing"></a>Otomatik boyutlandırma kullanırken uyarılar  
- Varsayılan olarak, <xref:System.Windows.FrameworkElement.Height%2A> ve <xref:System.Windows.FrameworkElement.Width%2A> özelliklerini <xref:System.Windows.Controls.DataGrid> ayarlandığından <xref:System.Double.NaN?displayProperty=nameWithType> ("`Auto`" XAML içindeki) ve <xref:System.Windows.Controls.DataGrid> içeriğinin boyutunu ayarlar.  
+### <a name="cautions-when-using-automatic-sizing"></a>Otomatik boyutlandırma kullanırken dikkatli olun  
+ Varsayılan olarak, <xref:System.Windows.FrameworkElement.Height%2A> öğesinin ve <xref:System.Windows.FrameworkElement.Width%2A> ÖZELLIKLERI <xref:System.Windows.Controls.DataGrid> <xref:System.Double.NaN?displayProperty=nameWithType> (XAML 'de "") olarak ayarlanır `Auto` ve bu, <xref:System.Windows.Controls.DataGrid> içeriğinin boyutuna ayarlanır.  
   
- Alt öğeleri için boyutu gibi kısıtlamaz bir kapsayıcı içinde yerleştirildiğinde bir <xref:System.Windows.Controls.Canvas> veya <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.DataGrid> görünür kapsayıcı sınırlarının ötesine esnetir ve kaydırma çubukları gösterilmeyecek. Bu durum hem kullanılabilirliğini ve performansını etkilere sahiptir.  
+ Ya da gibi alt öğelerinin boyutunu kısıtlamayan bir kapsayıcının içine yerleştirildiğinde, <xref:System.Windows.Controls.Canvas> <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Controls.DataGrid> kapsayıcının görünür sınırlarının ötesine uzatıp, kaydırma çubukları gösterilmez. Bu koşulun kullanılabilirliği ve performans etkileri vardır.  
   
- Ne zaman, bir veri kümesine bağlı <xref:System.Windows.FrameworkElement.Height%2A> , <xref:System.Windows.Controls.DataGrid> olduğu sınırlı değil, bu bağımlı veri kümesindeki her bir veri öğesi için bir satır eklemek devam edecektir. Bu neden <xref:System.Windows.Controls.DataGrid> kaydedildikçe uygulamanızın görünür sınırların dışında kalan satırlar eklenir. <xref:System.Windows.Controls.DataGrid> Kaydırma çubukları çünkü bu durumda gösterilmez, <xref:System.Windows.FrameworkElement.Height%2A> yeni satırlar uyum sağlayacak şekilde büyümeye devam edecektir.  
+ Bir veri kümesine bağlandığında, ' <xref:System.Windows.FrameworkElement.Height%2A> nin <xref:System.Windows.Controls.DataGrid> kısıtlanmazsa, bağlantılı veri kümesindeki her bir veri öğesi için bir satır eklemeye devam eder. Bu, <xref:System.Windows.Controls.DataGrid> satır eklendikçe uygulamanızın görünür sınırlarının dışına büyümesine neden olabilir. , <xref:System.Windows.Controls.DataGrid> <xref:System.Windows.FrameworkElement.Height%2A> Yeni satırlara uyum sağlayacak şekilde büyümeye devam ettiğinden, bu durumda kaydırma çubuklarını göstermez.  
   
- Her satır için bir nesne oluşturulması <xref:System.Windows.Controls.DataGrid>. Büyük bir veri kümesiyle çalıştığınız ve izin <xref:System.Windows.Controls.DataGrid> otomatik olarak kendisini boyutlandırmak için çok sayıda nesnelerin oluşturulması, uygulamanızın performansını etkileyebilir.  
+ İçindeki her satır için bir nesne oluşturulur <xref:System.Windows.Controls.DataGrid> . Büyük bir veri kümesiyle çalışıyorsanız ve öğesinin <xref:System.Windows.Controls.DataGrid> kendisini otomatik olarak boyutlarına izin verirseniz, çok sayıda nesnenin oluşturulması uygulamanızın performansını etkileyebilir.  
   
- Büyük veri kümeleriyle çalışırken bu sorunlarla karşılaşmamak için özellikle ayarlamanız önerilir <xref:System.Windows.FrameworkElement.Height%2A> , <xref:System.Windows.Controls.DataGrid> veya kısıtlar bir kapsayıcıda yerleştir kendi <xref:System.Windows.FrameworkElement.Height%2A>, gibi bir <xref:System.Windows.Controls.Grid>. Zaman <xref:System.Windows.FrameworkElement.Height%2A> kısıtlanmıştır <xref:System.Windows.Controls.DataGrid> yalnızca belirtilen kendi içinde uygun satırları oluşturacak <xref:System.Windows.FrameworkElement.Height%2A>ve bu satırların yeni verileri görüntülemek için gerektiği gibi geri.  
+ Büyük veri kümeleriyle çalışırken bu sorunlardan kaçınmak için, ' nin özel olarak ayarlamanız <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.DataGrid> veya ' ı kısıtlayan bir kapsayıcıya yerleştirmeniz önerilir <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.Grid> . Kısıtlanmış olduğunda, <xref:System.Windows.FrameworkElement.Height%2A> <xref:System.Windows.Controls.DataGrid> yalnızca belirtilen ' ın içine sığacak satırları oluşturur <xref:System.Windows.FrameworkElement.Height%2A> ve yeni verileri göstermek için bu satırları gerektiği gibi geri dönüşüme sahip olur.  
   
 ### <a name="setting-the-datagrid-size"></a>DataGrid boyutunu ayarlama  
- <xref:System.Windows.Controls.DataGrid> Otomatik olarak belirlenen sınırlar içinde boyutu ayarlanabilir veya <xref:System.Windows.Controls.DataGrid> için belirli bir boyutu ayarlanabilir. Aşağıdaki tablo denetimi için ayarlayabileceği özelliklerini gösterir <xref:System.Windows.Controls.DataGrid> boyutu.  
+ <xref:System.Windows.Controls.DataGrid>Belirtilen sınırlar dahilinde otomatik olarak boyuta ayarlanabilir veya <xref:System.Windows.Controls.DataGrid> belirli bir boyuta ayarlanabilir. Aşağıdaki tabloda, boyutu denetlemek için ayarlanacak özellikler gösterilmektedir <xref:System.Windows.Controls.DataGrid> .  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Windows.FrameworkElement.Height%2A>|Belirli bir yükseklikte için ayarlar <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Yüksekliğini üst sınırını ayarlar <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Controls.DataGrid> Bu yükseklik ulaşana kadar dikey olarak çıkarılır.|  
-|<xref:System.Windows.FrameworkElement.MinHeight%2A>|Yüksekliği için alt sınır ayarlar <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Controls.DataGrid> Bu yükseklik ulaşana kadar dikey olarak küçülür.|  
-|<xref:System.Windows.FrameworkElement.Width%2A>|Belirli bir genişlikte için ayarlar <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.FrameworkElement.MaxWidth%2A>|Genişliğini üst sınırını ayarlar <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Controls.DataGrid> Bu genişliği ulaşana kadar yatay olarak çıkarılır.|  
-|<xref:System.Windows.FrameworkElement.MinWidth%2A>|Genişliği için alt sınır ayarlar <xref:System.Windows.Controls.DataGrid>. <xref:System.Windows.Controls.DataGrid> Bu genişliği ulaşana kadar yatay olarak küçülür.|  
+|<xref:System.Windows.FrameworkElement.Height%2A>|İçin belirli bir yükseklik ayarlar <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.FrameworkElement.MaxHeight%2A>|Yüksekliğinin üst sınırını ayarlar <xref:System.Windows.Controls.DataGrid> . , <xref:System.Windows.Controls.DataGrid> Bu yüksekliğe ulaşıncaya kadar dikey olarak büyüecektir.|  
+|<xref:System.Windows.FrameworkElement.MinHeight%2A>|Yüksekliğinin alt sınırını ayarlar <xref:System.Windows.Controls.DataGrid> . , <xref:System.Windows.Controls.DataGrid> Bu yüksekliğe ulaşıncaya kadar dikey olarak küçülecektir.|  
+|<xref:System.Windows.FrameworkElement.Width%2A>|İçin belirli bir genişlik ayarlar <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.FrameworkElement.MaxWidth%2A>|Genişliği için üst sınırı ayarlar <xref:System.Windows.Controls.DataGrid> . , <xref:System.Windows.Controls.DataGrid> Bu genişliğe ulaşana kadar yatay olarak büyüyecektir.|  
+|<xref:System.Windows.FrameworkElement.MinWidth%2A>|Genişliği için alt sınır ayarlar <xref:System.Windows.Controls.DataGrid> . <xref:System.Windows.Controls.DataGrid>Bu genişliğe ulaşıncaya kadar yatay olarak küçülecektir.|  
   
-## <a name="sizing-rows-and-row-headers"></a>Boyutlandırma satırları ve satır başlıkları  
+## <a name="sizing-rows-and-row-headers"></a>Satırları ve satır üst bilgilerini boyutlandırma  
   
 ### <a name="datagrid-rows"></a>DataGrid satırları  
- Varsayılan olarak, bir <xref:System.Windows.Controls.DataGrid> sıranın <xref:System.Windows.FrameworkElement.Height%2A> özelliği <xref:System.Double.NaN?displayProperty=nameWithType> ("`Auto`" XAML içindeki), ve satır yüksekliği içeriğini boyuta genişletir. Tüm satırların yüksekliğini <xref:System.Windows.Controls.DataGrid> ayarlayarak belirtilebilir <xref:System.Windows.Controls.DataGrid.RowHeight%2A?displayProperty=nameWithType> özelliği. Kullanıcılar, satır yüksekliğini satır üst bilgisi Bölücü sürükleyerek değiştirebilirsiniz.  
+ Varsayılan olarak, bir <xref:System.Windows.Controls.DataGrid> satırın <xref:System.Windows.FrameworkElement.Height%2A> özelliği <xref:System.Double.NaN?displayProperty=nameWithType> `Auto` xaml 'de ("") olarak ayarlanır ve satır yüksekliği içindekilerin boyutuna genişletilir. İçindeki tüm satırların yüksekliği, <xref:System.Windows.Controls.DataGrid> özelliği ayarlanarak belirtilebilir <xref:System.Windows.Controls.DataGrid.RowHeight%2A?displayProperty=nameWithType> . Kullanıcılar satır üst bilgisi bölücüleri sürükleyerek satır yüksekliğini değiştirebilir.  
   
 ### <a name="datagrid-row-headers"></a>DataGrid satır başlıkları  
- Satır üst bilgileri, görüntülenecek <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> özelliği ayarlanmalıdır <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> veya <xref:System.Windows.Controls.DataGridHeadersVisibility.All?displayProperty=nameWithType>. Varsayılan olarak, satır başlıkları görüntülenir ve bunlar kendi içeriğin sığması için otomatik olarak boyutu. Satır başlıklarının ayarlayarak belirli bir genişlikte verilebilir <xref:System.Windows.Controls.DataGrid.RowHeaderWidth%2A?displayProperty=nameWithType> özelliği.  
+ Satır üst bilgilerini göstermek için, <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> özelliğinin veya olarak ayarlanması gerekir <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> <xref:System.Windows.Controls.DataGridHeadersVisibility.All?displayProperty=nameWithType> . Varsayılan olarak, satır başlıkları görüntülenir ve otomatik olarak içeriğine uyacak şekilde boyutları vardır. Satır başlıklarına, özelliği ayarlanarak belirli bir genişlik verilebilir <xref:System.Windows.Controls.DataGrid.RowHeaderWidth%2A?displayProperty=nameWithType> .  
   
-## <a name="sizing-columns-and-column-headers"></a>Sütunları ve sütun üst bilgilerini boyutlandırma  
+## <a name="sizing-columns-and-column-headers"></a>Sütunları ve sütun üstbilgilerini boyutlandırma  
   
 ### <a name="datagrid-columns"></a>DataGrid sütunları  
- <xref:System.Windows.Controls.DataGrid> Değerleri kullanan <xref:System.Windows.Controls.DataGridLength> ve <xref:System.Windows.Controls.DataGridLengthUnitType> yapısı mutlak veya otomatik boyutlandırma modlarını belirtin.  
+ , <xref:System.Windows.Controls.DataGrid> <xref:System.Windows.Controls.DataGridLength> <xref:System.Windows.Controls.DataGridLengthUnitType> Mutlak veya otomatik boyutlandırma modlarını belirtmek için ve yapısının değerlerini kullanır.  
   
- Tarafından sağlanan değerleri aşağıdaki tabloda gösterilmektedir <xref:System.Windows.Controls.DataGridLengthUnitType> yapısı.  
+ Aşağıdaki tabloda yapı tarafından sunulan değerler gösterilmektedir <xref:System.Windows.Controls.DataGridLengthUnitType> .  
   
 |Ad|Açıklama|  
 |----------|-----------------|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|Otomatik boyutlandırma modunu boyutları varsayılan <xref:System.Windows.Controls.DataGrid> sütunları hücreleri hem de sütun başlıklarını içeriğine bağlı.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Hücre tabanlı otomatik boyutlandırma modunu boyutları <xref:System.Windows.Controls.DataGrid> sütun başlıkları dahil değil sütundaki hücrelerin içeriğinin sütunları temel.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToHeader>|Üst bilgi tabanlı otomatik boyutlandırma modunu boyutları <xref:System.Windows.Controls.DataGrid> sütunları yalnızca sütun üst bilgilerini içeriğine bağlı.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.Pixel>|Piksel tabanlı boyutlandırma modunu boyutları <xref:System.Windows.Controls.DataGrid> sütunları temel sağlanan sayısal değeri.|  
-|<xref:System.Windows.Controls.DataGridLengthUnitType.Star>|Yıldız boyutlandırma modunu ağırlıklı oranlarını tarafından kullanılabilir alanı dağıtmak için kullanılır.<br /><br /> XAML içinde yıldız değerleri n n sayısal bir değeri temsil ettiği * ifade edilir. 1\* eşdeğerdir \*. Örneğin, iki sütun bir <xref:System.Windows.Controls.DataGrid> genişlikleri vardı \* ve 2\*, ilk sütuna kadar kullanılabilir alan bir bölümü alırsınız ve ikinci sütunda kullanılabilir alanı iki bölümünü alırsınız.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|Varsayılan otomatik boyutlandırma modu <xref:System.Windows.Controls.DataGrid> sütunları hem hücrelerin hem de sütun üstbilgilerinin içeriğine göre boyutlandırır.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Hücre tabanlı otomatik boyutlandırma modu <xref:System.Windows.Controls.DataGrid> sütunları sütun başlıkları dahil değil, sütundaki hücrelerin içeriğine göre boyutlandırır.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToHeader>|Üst bilgi tabanlı otomatik boyutlandırma modu <xref:System.Windows.Controls.DataGrid> sütunları yalnızca sütun üstbilgilerinin içeriğine göre boyutlandırır.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Pixel>|Piksel tabanlı boyutlandırma modu, <xref:System.Windows.Controls.DataGrid> belirtilen sayısal değere göre sütunları boyutlandırır.|  
+|<xref:System.Windows.Controls.DataGridLengthUnitType.Star>|Yıldız boyutlandırma modu, kullanılabilir alanı ağırlıklı oranlar ile dağıtmak için kullanılır.<br /><br /> XAML 'de yıldız değerleri n * olarak ifade edilir; burada n, bir sayısal değeri temsil eder. 1 \* ile eşdeğerdir \* . Örneğin, bir içinde iki sütun <xref:System.Windows.Controls.DataGrid> genişliklerde \* ve 2 ' de varsa \* , ilk sütun kullanılabilir alanın bir kısmını alır ve ikinci sütun kullanılabilir alanın iki bölümünü alır.|  
   
- <xref:System.Windows.Controls.DataGridLengthConverter> Sınıfı, sayı veya dize değerleri arasında verileri dönüştürmek için kullanılabilir ve <xref:System.Windows.Controls.DataGridLength> değerleri.  
+ <xref:System.Windows.Controls.DataGridLengthConverter>Sınıfı, verileri sayısal veya dize değerleri ve değerleri arasında dönüştürmek için kullanılabilir <xref:System.Windows.Controls.DataGridLength> .  
   
- Varsayılan olarak, <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.DataGridLength.SizeToHeader%2A>ve <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType> özelliği <xref:System.Windows.Controls.DataGridLength.Auto%2A>. Boyutlandırma modunu ayarlandığında <xref:System.Windows.Controls.DataGridLength.Auto%2A> veya <xref:System.Windows.Controls.DataGridLength.SizeToCells%2A>, sütunları en geniş görünür içeriklerinin genişliğine büyüme. Kaydırma sırasında bu boyutlandırma modlarını içerik, genişletilecek sütunları sütun boyutunu geçerli görünüme kaydırılan daha büyük olan neden olur. İçerik görünümü dışında kaydırılan sonra sütunu Daralt değil.  
+ Varsayılan olarak, <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> özelliği olarak ayarlanır <xref:System.Windows.Controls.DataGridLength.SizeToHeader%2A> ve <xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType> özelliği olarak ayarlanır <xref:System.Windows.Controls.DataGridLength.Auto%2A> . Boyutlandırma modu veya olarak ayarlandığında <xref:System.Windows.Controls.DataGridLength.Auto%2A> <xref:System.Windows.Controls.DataGridLength.SizeToCells%2A> sütunlar, en geniş görünür içeriğinin genişliğine göre artar. Kaydırma sırasında, geçerli sütun boyutundan daha büyük olan içerik görünüme kaydırıldığında bu boyutlandırma modları sütunların genişlemesine neden olur. İçerik görünümden kaydırıldığında sütun daraltılamıyor.  
   
- Sütunlarda <xref:System.Windows.Controls.DataGrid> boyutu yalnızca belirtilen sınırlar içinde otomatik olarak da ayarlanabilir veya sütun için belirli bir boyutu ayarlanabilir. Aşağıdaki tabloda sütun boyutları denetlemek için ayarlanabilen özelliklerini gösterir.  
+ İçindeki sütunlar <xref:System.Windows.Controls.DataGrid> aynı zamanda yalnızca belirtilen sınırlar dahilinde otomatik olarak boyut olarak ayarlanabilir veya sütunlar belirli bir boyuta ayarlanabilir. Aşağıdaki tabloda, sütun boyutlarını denetlemek için ayarlanılabilecek özellikler gösterilmektedir.  
   
 |Özellik|Açıklama|  
 |--------------|-----------------|  
-|<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|Tüm sütunlar için üst sınır ayarlar <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Tek bir sütun üst sınırını ayarlar. Geçersiz kılmalar <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>.|  
-|<xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>|Tüm sütunlar için alt sınır ayarlar <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=nameWithType>|Tek bir sütun alt sınırını ayarlar. Geçersiz kılmalar <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>.|  
-|<xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>|Tüm sütunlar için belirli bir genişlikte ayarlar <xref:System.Windows.Controls.DataGrid>.|  
-|<xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType>|Tek bir sütun için belirli bir genişlikte ayarlar. Geçersiz kılmalar <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>.|  
+|<xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType>|İçindeki tüm sütunlar için üst sınırı ayarlar <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.Controls.DataGridColumn.MaxWidth%2A?displayProperty=nameWithType>|Tek bir sütun için üst sınırı ayarlar. Geçersiz kılmalar <xref:System.Windows.Controls.DataGrid.MaxColumnWidth%2A?displayProperty=nameWithType> .|  
+|<xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType>|İçindeki tüm sütunlar için alt sınır ayarlar <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.Controls.DataGridColumn.MinWidth%2A?displayProperty=nameWithType>|Tek bir sütun için alt sınır ayarlar. Geçersiz kılmalar <xref:System.Windows.Controls.DataGrid.MinColumnWidth%2A?displayProperty=nameWithType> .|  
+|<xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType>|İçindeki tüm sütunlar için belirli bir genişlik ayarlar <xref:System.Windows.Controls.DataGrid> .|  
+|<xref:System.Windows.Controls.DataGridColumn.Width%2A?displayProperty=nameWithType>|Tek bir sütun için belirli bir genişlik ayarlar. Geçersiz kılmalar <xref:System.Windows.Controls.DataGrid.ColumnWidth%2A?displayProperty=nameWithType> .|  
   
 ### <a name="datagrid-column-headers"></a>DataGrid sütun başlıkları  
- Varsayılan olarak, <xref:System.Windows.Controls.DataGrid> sütun başlıkları görüntülenir. Sütun başlıklarını gizleme <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> özelliği ayarlanmalıdır <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> veya <xref:System.Windows.Controls.DataGridHeadersVisibility.None?displayProperty=nameWithType>. Sütun üst bilgilerini görüntülendiğinde varsayılan olarak, bunlar otomatik olarak kendi İçeriği sığdırmak için boyutu. Sütun başlıklarını ayarlayarak belirli bir yükseklikte verilebilir <xref:System.Windows.Controls.DataGrid.ColumnHeaderHeight%2A?displayProperty=nameWithType> özelliği.  
+ Varsayılan olarak, <xref:System.Windows.Controls.DataGrid> sütun başlıkları görüntülenir. Sütun üstbilgilerini gizlemek için, <xref:System.Windows.Controls.DataGrid.HeadersVisibility%2A> özelliğinin veya olarak ayarlanması gerekir <xref:System.Windows.Controls.DataGridHeadersVisibility.Row?displayProperty=nameWithType> <xref:System.Windows.Controls.DataGridHeadersVisibility.None?displayProperty=nameWithType> . Varsayılan olarak, sütun başlıkları görüntülendiğinde, içeriğine uyacak şekilde otomatik olarak boyutlarlar. Sütun başlıklarına, özelliği ayarlanarak belirli bir yükseklik verilebilir <xref:System.Windows.Controls.DataGrid.ColumnHeaderHeight%2A?displayProperty=nameWithType> .  
   
-### <a name="resizing-with-the-mouse"></a>Fare ile yeniden boyutlandırma  
- Kullanıcıların yeniden boyutlandırılabilir <xref:System.Windows.Controls.DataGrid> satırları ve sütunları satır veya sütun üst bilgisi Bölücü sürükleyerek. <xref:System.Windows.Controls.DataGrid> Ayrıca otomatik satırları ve sütunları satır veya sütun başlık ayırıcıya çift tıklayarak yeniden boyutlandırılmasını destekler. Bir kullanıcı, belirli sütunları yeniden boyutlandırmasını önleyecek şekilde ayarlanmış <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> özelliğini `false` tek tek sütun. Kullanıcılar, tüm sütunları yeniden boyutlandırmasını önleyecek şekilde ayarlanmış <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> özelliğini `false`. Kullanıcılar, tüm satırları yeniden boyutlandırmasını önleyecek şekilde ayarlanmış <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> özelliğini `false`.  
+### <a name="resizing-with-the-mouse"></a>Fareyle yeniden boyutlandırma  
+ Kullanıcılar <xref:System.Windows.Controls.DataGrid> satır veya sütun üst bilgisi bölücüleri sürükleyerek satırları ve sütunları yeniden boyutlandırabilir. <xref:System.Windows.Controls.DataGrid>Ayrıca satır veya sütun üst bilgisi bölücüyü çift tıklayarak satır ve sütunların otomatik olarak yeniden boyutlandırılmasını destekler. Bir kullanıcının belirli sütunları yeniden boyutlandırmasını engellemek için, <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> `false` her sütun için özelliğini olarak ayarlayın. Kullanıcıların tüm sütunları yeniden boyutlandırmasını engellemek için <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> özelliğini olarak ayarlayın `false` . Kullanıcıların tüm satırları yeniden boyutlandırmasını engellemek için <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> özelliğini olarak ayarlayın `false` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

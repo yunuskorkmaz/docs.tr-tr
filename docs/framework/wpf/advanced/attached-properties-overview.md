@@ -1,5 +1,6 @@
 ---
 title: Ekli Özelliklere Genel Bakış
+description: Tüm nesneler üzerinde ayarlanabilir genel özellikler olan Windows Presentation Foundation eklenen özellikler hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,123 +8,123 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 993f65024fcfc4f39a408c81af43b798360e6cf6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739290"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168389"
 ---
 # <a name="attached-properties-overview"></a>Ekli Özelliklere Genel Bakış
 
-Ekli özellik XAML tarafından tanımlanan bir kavramdır. Ekli bir özellik, herhangi bir nesne üzerinde ayarlanabilir genel özellik türü olarak kullanılmak üzere tasarlanmıştır. , [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ekli özellikleri genellikle geleneksel özelliği "sarıcı" olmayan bağımlılık özelliği özel bir form olarak tanımlanır.
+İliştirilmiş özellik XAML tarafından tanımlanan bir kavramdır. İliştirilmiş bir özellik, herhangi bir nesne üzerinde ayarlanabilir bir genel özellik türü olarak kullanılmak üzere tasarlanmıştır. ' De [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , ekli özellikler genellikle geleneksel özelliği "sarmalayıcı" olmayan bir bağımlılık özelliği biçimi olarak tanımlanmıştır.
 
-## <a name="prerequisites"></a>Önkoşullar<a name="prerequisites"></a>
+## <a name="prerequisites"></a>Kaynakları<a name="prerequisites"></a>
 
-Bu makalede, bağımlılık özelliklerini sınıflardaki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] varolan bağımlılık özelliklerinin tüketici perspektifinden anladığınızı ve Bağımlılık Özellikleri Genel [Bakış'ı](dependency-properties-overview.md)okuduğunuz varsayar. Bu makaledeki örnekleri izlemek için XAML'yi anlamanız ve WPF uygulamalarının nasıl yazılabildiğini bilmeniz gerekir.
+Bu makalede, sınıflarda var olan bağımlılık özellikleri tüketicisinin perspektifinden bağımlılık özelliklerini anladığınızı [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ve [bağımlılık özelliklerine genel bakış](dependency-properties-overview.md)konusunu okuduğunuzu varsaymış olursunuz. Bu makaledeki örnekleri izlemek için XAML 'yi de anlamanız ve WPF uygulamalarının nasıl yazılacağını bilmeniz gerekir.
 
-## <a name="why-use-attached-properties"></a>Neden Ekli Özellikleri Kullanın<a name="attached_properties_usage"></a>
+## <a name="why-use-attached-properties"></a>Ekli Özellikler neden kullanılmalıdır<a name="attached_properties_usage"></a>
 
-Ekli bir özelliğin bir amacı, farklı alt öğelerin bir üst öğede tanımlanan bir özellik için benzersiz değerler belirtmesine izin vermektir. Bu senaryonun belirli bir uygulama alt öğeleri nasıl sunulması için üst [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]öğeyi bilgilendirmek olmasıdır. Bir örnek <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> özelliğidir. Özellik, <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.DockPanel> kendi yerine içinde bulunan öğeler üzerinde ayarlanacak şekilde tasarlandığından, ekli bir özellik olarak oluşturulur. Sınıf <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.DependencyProperty> adlı <xref:System.Windows.Controls.DockPanel.DockProperty>statik alanı tanımlar ve daha <xref:System.Windows.Controls.DockPanel.GetDock%2A> <xref:System.Windows.Controls.DockPanel.SetDock%2A> sonra ekli özellik için ortak erişimci olarak ve yöntemleri sağlar.
+İliştirilmiş bir özelliğin amacı, farklı alt öğelerin bir üst öğede tanımlanan bir özellik için benzersiz değerler belirtmesini sağlamaktır. Bu senaryonun belirli bir uygulaması, alt öğelerinin ' de sunulmaları için üst öğeyi bilgilendirmesini sağlar [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] . Özellik bir örnektir <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> . <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>Özelliği iliştirilmiş bir özellik olarak oluşturulur, çünkü kendisi yerine içinde yer alan öğelerde ayarlanacak şekilde tasarlanmıştır <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.DockPanel> . <xref:System.Windows.Controls.DockPanel>Sınıfı <xref:System.Windows.DependencyProperty> , adlı statik alanı tanımlar <xref:System.Windows.Controls.DockPanel.DockProperty> ve ardından <xref:System.Windows.Controls.DockPanel.GetDock%2A> ve <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntemlerini iliştirilmiş özellik için ortak erişimci olarak sağlar.
 
-## <a name="attached-properties-in-xaml"></a>XAML'de Eklenen Özellikler<a name="attached_properties_xaml"></a>
+## <a name="attached-properties-in-xaml"></a>XAML 'de Ekli Özellikler<a name="attached_properties_xaml"></a>
 
-XAML'de, bağlı özellikleri bağlı Özellik *Sağlayıcısı'nı*kullanarak ayarlarsınız. *Özellik Adı*
+XAML 'de, *AttachedPropertyProvider*söz dizimini kullanarak iliştirilmiş özellikleri ayarlarsınız. *PropertyName*
 
-Aşağıda XAML'de nasıl <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> ayarlayabildiğinize bir örnek verilmiştir:
+XAML 'de nasıl ayarlayakullanabileceğinizi gösteren bir örnek aşağıda verilmiştir <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> :
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-Kullanımı statik bir özelliğe biraz benzer; her zaman ada göre belirtilen herhangi bir örne başvurmak yerine ekli özelliğin sahibi ve kaydı olan türüne <xref:System.Windows.Controls.DockPanel> başvurursunuz.
+Kullanım biraz statik bir özelliğe benzer; her zaman <xref:System.Windows.Controls.DockPanel> , ekli özelliği ada göre belirtilen herhangi bir örneğe başvurmak yerine, sahip olan türe başvurur ve kaydettirir.
 
-Ayrıca, XAML'de eklenmiş bir özellik biçimlendirmede ayarladığınız bir özellik olduğundan, yalnızca ayarlanan işlemin herhangi bir önemi vardır. Stildeki tetikleyiciler gibi değerleri karşılaştırmak için bazı dolaylı mekanizmalar olmasına rağmen, Doğrudan XAML'de bir özellik alamazsınız (ayrıntılar için [Stil ve Templating'e](../../../desktop-wpf/fundamentals/styles-templates-overview.md)bakın).
+Ayrıca, XAML 'deki iliştirilmiş bir özellik, biçimlendirme içinde ayarladığınız bir öznitelik olduğundan, yalnızca ayarlama işleminin herhangi bir ilgisi vardır. , Stillerdeki tetikleyiciler (Ayrıntılar için bkz. [Stil oluşturma ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md)oluşturma) gibi değerleri karşılaştırmak için bazı dolaylı mekanizmalar OLMASıNA rağmen xaml 'de doğrudan bir özelliği alamaz.
 
-### <a name="attached-property-implementation-in-wpf"></a>WPF'de Ekli Özellik Uygulaması
+### <a name="attached-property-implementation-in-wpf"></a>WPF 'de ekli özellik uygulama
 
-WPF [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]türlerinde UI ile ilgili bağlı özelliklerin çoğu bağımlılık özellikleri olarak uygulanır. Ekli özellikler bir XAML kavramı, bağımlılık özellikleri ise bir WPF kavramıdır. WPF eklenmiş özellikleri bağımlılık özellikleri olduğundan, özellik meta verileri gibi bağımlılık özelliği kavramlarını ve bu özellik meta verilerinden varsayılan değerleri desteklerler.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]' De, WPF TÜRLERINDE UI ile ilgili iliştirilmiş özelliklerin çoğu bağımlılık özellikleri olarak uygulanır. İliştirilmiş özellikler bir XAML kavramıdır, ancak bağımlılık özellikleri bir WPF kavramıdır. WPF ekli özellikleri bağımlılık özellikleri olduğundan, özellik meta verileri gibi bağımlılık özelliği kavramlarını ve bu özellik meta verilerinden varsayılan değerleri destekler.
 
-## <a name="how-attached-properties-are-used-by-the-owning-type"></a>Ekli Özellikler SahipLenme Türüne Göre Nasıl Kullanılır?<a name="howused"></a>
+## <a name="how-attached-properties-are-used-by-the-owning-type"></a>Iliştirilmiş özellikler sahip olan tür tarafından nasıl kullanılır<a name="howused"></a>
 
-Ekli özellikler herhangi bir nesne üzerinde ayarlanabilir olsa da, bu otomatik olarak özelliği ayarlama nın somut bir sonuç üreteceği veya değerin başka bir nesne tarafından kullanılacağı anlamına gelmez. Genel olarak, ekli özellikler, çok çeşitli olası sınıf hiyerarşilerinden veya mantıksal ilişkilerden gelen nesnelerin her biri ortak bilgileri bağlı özelliği tanımlayan türe bildirebilmeleri için tasarlanmıştır. Ekli özelliği tanımlayan tür genellikle aşağıdaki modellerden birini izler:
+İliştirilmiş özellikler herhangi bir nesne üzerinde ayarlanabilir olsa da, özelliğin somut bir sonuç üreteceğinden veya değerin başka bir nesne tarafından kullanılmasını her zaman otomatik olarak anlamı yoktur. Genellikle, ekli özellikler, çok çeşitli olası sınıf hiyerarşileri veya mantıksal ilişkilerden gelen nesnelerin her biri, ekli özelliği tanımlayan türe ortak bilgiler raporlamasını sağlayacak şekilde tasarlanmıştır. İliştirilmiş özelliği tanımlayan tür genellikle bu modellerden birini izler:
 
-- Ekli özelliği tanımlayan tür, ekli özellik için değerleri ayarlayacak öğelerin ana öğesi olacak şekilde tasarlanmıştır. Tür daha sonra bazı nesne ağacı yapısına karşı iç mantık yoluyla alt nesneleri yineler, değerleri elde eder ve bir şekilde bu değerler üzerinde hareket eder.
+- İliştirilmiş özelliği tanımlayan tür, ekli özellik için değerler ayarlanacak öğelerin üst öğesi olabilecek şekilde tasarlanmıştır. Daha sonra tür, alt nesnelerini bazı nesne ağacı yapısına karşı iç mantık aracılığıyla yineler, değerleri edinir ve bu değerler üzerinde bir şekilde davranır.
 
-- Ekli özelliği tanımlayan tür, çeşitli olası üst öğeler ve içerik modelleri için alt öğe olarak kullanılır.
+- İliştirilmiş özelliği tanımlayan tür, bir dizi olası üst öğe ve içerik modeli için alt öğe olarak kullanılacaktır.
 
-- Ekli özelliği tanımlayan tür bir hizmeti temsil eder. Diğer türler ekli özellik için değerleri ayarlar. Daha sonra, özelliği ayarlayan öğe hizmet bağlamında değerlendirildiğinde, ekli özellik değerleri hizmet sınıfının iç mantığı yla elde edilir.
+- İliştirilmiş özelliği tanımlayan tür bir hizmeti temsil eder. Diğer türler ekli özellik için değerleri ayarlar. Ardından, özelliği ayarlanan öğe hizmet bağlamında değerlendirildiğinde, ekli özellik değerleri, hizmet sınıfının iç mantığı aracılığıyla elde edilir.
 
-### <a name="an-example-of-a-parent-defined-attached-property"></a>Üst Tanımlı Ekli Özellik Örneği
+### <a name="an-example-of-a-parent-defined-attached-property"></a>Üst tanımlı Iliştirilmiş özelliğe bir örnek
 
-WPF'nin eklenmiş bir özelliği tanımladığı en tipik senaryo, bir üst öğenin bir alt öğe koleksiyonunu desteklemesi ve ayrıca davranışın ayrıntılarının her alt öğe için ayrı ayrı raporlandığı bir davranış uygulamasıdır.
+WPF 'in iliştirilmiş bir özelliği tanımladığı en tipik senaryo, bir üst öğe bir alt öğe koleksiyonunu desteklediğinde ve ayrıca davranışın özelliklerinin her bir alt öğe için ayrı olarak bildirildiği bir davranış uygular.
 
-<xref:System.Windows.Controls.DockPanel>ekli özelliği tanımlar ve <xref:System.Windows.Controls.DockPanel> işleme mantığının bir parçası olarak sınıf düzeyi <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> kodu vardır (özellikle ve). <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A> <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Bir <xref:System.Windows.Controls.DockPanel> örnek her zaman, yakın alt öğelerinden herhangi birinin <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>. Bu durumda, bu değerler, söz konusu alt öğeye uygulanan işleme mantığı için giriş olur. İç <xref:System.Windows.Controls.DockPanel> içe geçen örneklerin her biri kendi hemen alt öğe koleksiyonlarını <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> ele alır, ancak bu davranış, işlemlerin değerlerine nasıl özel bir uygulamadır. Teorik olarak, yakın ebeveynin ötesindeki öğeleri etkileyen eklenmiş özelliklere sahip olmak mümkündür. <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> Ekli özellik, üzerinde hareket etmek için <xref:System.Windows.Controls.DockPanel> hiçbir üst öğe olan bir öğe üzerinde ayarlanmışsa, hiçbir hata veya özel durum yükseltilir. Bu sadece, genel bir özellik değerinin ayarlandığını, <xref:System.Windows.Controls.DockPanel> ancak bilgileri tüketebilecek geçerli bir üst öğesi olmadığı anlamına gelir.
+<xref:System.Windows.Controls.DockPanel><xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>iliştirilmiş özelliği tanımlar ve <xref:System.Windows.Controls.DockPanel> kendi işleme mantığının bir parçası olarak sınıf düzeyi koda sahiptir (özellikle <xref:System.Windows.Controls.DockPanel.MeasureOverride%2A> ve <xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A> ). <xref:System.Windows.Controls.DockPanel>Örnek, her zaman ilk alt öğelerinden birinin için bir değer ayarlayıp ayarlayamadığını kontrol eder <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> . Bu durumda, bu değerler söz konusu alt öğeye uygulanan işleme mantığı için giriş haline gelir. İç içe yerleştirilmiş <xref:System.Windows.Controls.DockPanel> örneklerin her biri kendi kendine kendi alt öğe koleksiyonlarını değerlendirir, ancak bu davranış, işlem değerlerine göre uygulamaya özgüdür <xref:System.Windows.Controls.DockPanel> <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> . En üst öğenin ötesinde öğeleri etkileyen iliştirilmiş özelliklerin olması teorik olarak mümkündür. <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>İliştirilmiş özellik üzerinde <xref:System.Windows.Controls.DockPanel> işlem yapacak üst öğesi olmayan bir öğede ayarlandıysa, hata veya özel durum oluşmaz. Bu, genel bir özellik değerinin ayarlandığı, ancak bu bilgileri kullanabilecek geçerli bir üst öğesi olmadığı anlamına gelir <xref:System.Windows.Controls.DockPanel> .
 
-## <a name="attached-properties-in-code"></a>Koda Ekli Özellikler<a name="attached_properties_code"></a>
+## <a name="attached-properties-in-code"></a>Koddaki Ekli Özellikler<a name="attached_properties_code"></a>
 
-WPF'deki ekli özellikler, kolay erişim/ayarla erişimi için tipik CLR "sarıcı" yöntemlerine sahip değildir. Bunun nedeni, ekli özelliğin, özelliğin ayarlandığı durumlar için CLR ad alanının mutlaka bir parçası olmamasıdır. Ancak, xaml ayrıştırıldığında bir XAML işlemci bu değerleri ayarlamak gerekir. Etkili bir ekli özellik kullanımını desteklemek için, ekli özelliğin sahibi nin **Get_PropertyName_** ve **Set_PropertyName_** şeklinde özel erişim yöntemleri uygulaması gerekir. Bu özel erişimyöntemleri, ekli özelliği kodda almak veya ayarlamak için de yararlıdır. Kod açısından bakıldığında, ekli bir özellik, özellik erişime girenler yerine yöntem erişime sahip bir destek alanına benzer ve destek alanı özel olarak tanımlanması yerine herhangi bir nesneüzerinde bulunabilir.
+WPF 'deki Ekli özellikler, kolay get/set erişimi için tipik CLR "sarmalayıcı" yöntemlerine sahip değildir. Bunun nedeni, iliştirilmiş özelliğin, özelliğin ayarlandığı örnekler için CLR ad alanının bir parçası olması değildir. Ancak, XAML ayrıştırıldığında XAML işlemcisi bu değerleri ayarlayabilmelidir. Etkin bir eklenmiş özellik kullanımını desteklemek için, iliştirilmiş özelliğin sahip türü, **Get_PropertyName_** ve **Set_PropertyName_** biçiminde adanmış erişimci yöntemleri uygulamalıdır. Bu adanmış erişimci yöntemleri, kodda ekli özelliği almak veya ayarlamak için de kullanışlıdır. Bir kod perspektifinden, iliştirilmiş bir özellik, özellik erişimcileri yerine Yöntem erişimcilerine sahip bir yedekleme alanıyla benzerdir ve bu alan, özellikle tanımlanmış olması gereken herhangi bir nesne üzerinde bulunabilir.
 
-Aşağıdaki örnek, ekli bir özelliği kodda nasıl ayarlayabildiğinizi gösterir. Bu örnekte, `myCheckBox` <xref:System.Windows.Controls.CheckBox> sınıfın bir örneğidir.
+Aşağıdaki örnek, kodda ekli bir özelliği nasıl ayarlayakullanabileceğinizi gösterir. Bu örnekte, `myCheckBox` sınıfının bir örneğidir <xref:System.Windows.Controls.CheckBox> .
 
 [!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
 [!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
-XAML örneğine benzer `myCheckBox` şekilde, dördüncü kod satırı `myDockPanel` tarafından bir alt öğe olarak zaten eklenmemiş olsaydı, beşinci kod satırı bir özel <xref:System.Windows.Controls.DockPanel> durum uyandırmaz, ancak özellik değeri bir üst öğeyle etkileşime girmez ve bu nedenle hiçbir şey yapmaz. Yalnızca <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> bir alt öğe üzerinde ayarlanmış bir <xref:System.Windows.Controls.DockPanel> değer bir üst öğenin varlığı ile birlikte işlenen uygulamada etkili bir davranış neden olur. (Bu durumda, bağlı özelliği ayarlayabilir, sonra ağaca takabilirsiniz. Ya da ağaca bağlayıp bağlı özelliği ayarlayabilirsiniz. Her iki eylem sırası da aynı sonucu sağlar.)
+XAML örneğine benzer şekilde, `myCheckBox` dördüncü kod satırı tarafından zaten bir alt öğesi olarak eklenmediyse `myDockPanel` , beşinci kod satırı bir özel durum oluşturmaz, ancak özellik değeri bir üst öğeyle etkileşime girmemelidir <xref:System.Windows.Controls.DockPanel> ve bu nedenle hiçbir şey yapmaz. Yalnızca <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> üst öğenin varlığı ile Birleşik bir alt öğe üzerinde ayarlanan bir değer, <xref:System.Windows.Controls.DockPanel> işlenen uygulamada etkin davranışa neden olur. (Bu durumda, ekli özelliği ayarlayabilir ve sonra ağaca iliştirebilirsiniz. Ya da ağaca iliştirilebilecek ve ardından ekli özelliği ayarlayabilirsiniz. Her iki eylem sırası da aynı sonucu sağlar.)
 
-## <a name="attached-property-metadata"></a>Ekli Özellik Meta verileri<a name="attached_properties_metadata"></a>
+## <a name="attached-property-metadata"></a>Ekli Özellik meta verileri<a name="attached_properties_metadata"></a>
 
-Özelliği kaydederken, <xref:System.Windows.FrameworkPropertyMetadata> özelliğin işleme, ölçüm ve benzeri etkileri olup olmadığı gibi özelliğin özelliklerini belirtmek için ayarlanır. Ekli bir özellik için meta veriler genellikle bağımlılık özelliğinden farklı değildir. Ekli özellik meta verilerine geçersiz bir geçersiz kılmada varsayılan değer belirtirseniz, bu değer geçersiz sınıf örneklerinde örtülü ekli özelliğin varsayılan değeri olur. Özellikle, meta verileri belirttiğiniz sınıfın bir örneğini belirterek ve `Get` ekteki özelliğin değeri aksi şekilde ayarlanmamışsa, bağlı bir özelliğin değeri için bazı işlem sorguları bildirilir.
+Özelliği kaydederken özelliği, özelliğin <xref:System.Windows.FrameworkPropertyMetadata> işleme, ölçüm ve benzerlerini etkilemesinin yanı sıra özelliğin özelliklerini belirtmek üzere ayarlanır. İliştirilmiş bir özelliğin meta verileri genellikle bağımlılık özelliğinden farklı değildir. İliştirilmiş özellik meta verilerinde bir geçersiz kılmada varsayılan bir değer belirtirseniz, bu değer geçersiz kılma sınıfının örneklerine örtük iliştirilmiş özelliğin varsayılan değeri olur. Özellikle, varsayılan değer, bazı bir işlem bu özelliğe ilişkin Yöntem erişimcisi aracılığıyla ekli bir özelliğin değerini sorguladığında `Get` , meta verileri belirttiğiniz sınıfın bir örneğini belirterek ve bu iliştirilmiş özelliğin değeri başka bir şekilde ayarlanmamışsa raporlanır.
 
-Bir özellik üzerinde özellik değeri devralmasını etkinleştirmek istiyorsanız, iliştirilmeyen bağımlılık özellikleri yerine ekli özellikleri kullanmanız gerekir. Ayrıntılar [için, Bkz. Özellik Değeri Devralma.](property-value-inheritance.md)
+Özellik değeri devralmayı bir özellikte etkinleştirmek istiyorsanız, eklenmemiş bağımlılık özellikleri yerine iliştirilmiş özellikleri kullanmanız gerekir. Ayrıntılar için bkz. [özellik değeri devralma](property-value-inheritance.md).
 
 ## <a name="custom-attached-properties"></a>Özel Ekli Özellikler<a name="custom"></a>
 
-### <a name="when-to-create-an-attached-property"></a>Ekli Özellik Ne Zaman Oluşturulur?<a name="create_attached_properties"></a>
+### <a name="when-to-create-an-attached-property"></a>Ekli Özellik ne zaman oluşturulur<a name="create_attached_properties"></a>
 
-Tanımlayıcı sınıf dışındaki sınıflar için özellik ayar mekanizması nın bulunması için bir neden olduğunda ekli bir özellik oluşturabilirsiniz. Bunun için en yaygın senaryo düzendir. Varolan düzen özelliklerine <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType>örnek <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>olarak , ve . Burada etkinleştirilen senaryo, düzen denetim elemanları için alt öğeler olarak var olan öğelerin, her ana aygıtın eklenmiş bir özellik olarak tanımladığı bir özellik değeri ayarlayarak, düzen üst öğelerine düzen gereksinimlerini ayrı ayrı ifade edebilmesidir.
+Tanımlama sınıfı dışındaki sınıflar için kullanılabilir bir özellik ayarı mekanizmasının nedeni olduğunda iliştirilmiş bir özellik oluşturabilirsiniz. Bunun için en yaygın senaryo düzenidir. Var olan düzen özelliklerine örnekler, <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType> <xref:System.Windows.Controls.Panel.ZIndex%2A?displayProperty=nameWithType> ve ' dir <xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType> . Burada etkinleştirilen senaryo, Düzen denetim öğeleri için alt öğe olarak var olan öğelerin, düzen gereksinimlerini düzen üst öğelerine tek tek hızlı bir şekilde ifade edebilmesidir. her biri, üst öğenin ekli bir özellik olarak tanımladığı bir özellik değeri.
 
-Ekli bir özelliği kullanmak için başka bir senaryo, sınıfınızın bir hizmeti temsil etmesi ve sınıfların hizmeti daha saydam bir şekilde tümleştirebilmesini istediğiniz zamandır.
+İliştirilmiş bir özelliği kullanmak için başka bir senaryo ise sınıfınız bir hizmeti temsil ettiğinde ve sınıfların hizmeti daha saydam bir şekilde tümleştirmesini istediğinizde.
 
-Başka bir senaryo, **Özellikler** pencere düzenleme gibi Visual Studio WPF Designer desteği almaktır. Daha fazla bilgi için [bkz.](../controls/control-authoring-overview.md)
+Ancak başka bir senaryo, **Özellikler** penceresi düzenlemesi gibi VISUAL Studio WPF tasarımcı desteğini almadır. Daha fazla bilgi için bkz. [Denetim yazma genel bakış](../controls/control-authoring-overview.md).
 
-Daha önce de belirtildiği gibi, özellik değeri devralma kullanmak istiyorsanız ekli bir özellik olarak kaydolmanız gerekir.
+Daha önce bahsedildiği gibi, özellik değeri devralmayı kullanmak istiyorsanız, ekli bir özellik olarak kaydetmeniz gerekir.
 
-### <a name="how-to-create-an-attached-property"></a>Ekli Özellik Nasıl Oluşturulur?<a name="how_do_i_create_attached_properties"></a>
+### <a name="how-to-create-an-attached-property"></a>Ekli Özellik oluşturma<a name="how_do_i_create_attached_properties"></a>
 
-Sınıfınız ekli özelliği kesinlikle diğer türlerde kullanılmak üzere tanımlıyorsa, sınıfın .'den <xref:System.Windows.DependencyObject>türemesi gerekmez. Ancak, bağlı özelliğinize <xref:System.Windows.DependencyObject> sahip olmanın genel WPF modelini takip ederseniz, bir bağımlılık özelliği de elde etmek gerekir.
+Sınıfınız, ekli özelliği başka türlerde kullanım için tamamen tanımlıyorsa, sınıfın türetilmesi gerekmez <xref:System.Windows.DependencyObject> . Ancak, <xref:System.Windows.DependencyObject> iliştirilmiş özelliğinin de bir bağımlılık özelliği olması için genel WPF modeli ' ni izlerseniz, ' den türetmeniz gerekir.
 
-Bir tür `public static readonly` <xref:System.Windows.DependencyProperty>alanı beyan ederek ekli özelliğinizi bağımlılık özelliği olarak tanımlayın. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Yöntemin geri dönüş değerini kullanarak bu alanı tanımlarsınız. Alan adı, tanımlayıcı alanları temsil ettikleri özelliklere göre `Property`adlandırma kurulu WPF deseni izlemek için dize ile eklenen, ekli özellik adı eşleşmesi gerekir. Ekli özellik sağlayıcısı da ekli özellik için aksesuar olarak statik **Get_PropertyName_** ve **Set_PropertyName_** yöntemleri sağlamalıdır; bu özelliği niçin eklenmediğinizi kullanamazsınız.
+İliştirilmiş özelliği, türünde bir alan bildirerek bağımlılık özelliği olarak tanımlayın `public static readonly` <xref:System.Windows.DependencyProperty> . Bu alanı, yönteminin dönüş değerini kullanarak tanımlarsınız <xref:System.Windows.DependencyProperty.RegisterAttached%2A> . Alan adı, eklenen özellik adı ile eşleşmelidir ve `Property` tanımlayıcı alanları adlandırdıkları özelliklere karşılık olarak adlandırılan ŞIRKET WPF modelini takip eder. İliştirilmiş özellik sağlayıcısı, ekli özellik için erişimci olarak statik **Get_PropertyName_** ve **Set_PropertyName_** yöntemleri sağlamalıdır; Bu durum, özellik sisteminde ekli özelliği kullanamayan şekilde sonuçlanır.
 
 > [!NOTE]
-> Ekli özelliğin erişime erişimini atlarsanız, özellik üzerindeki veri bağlama, Visual Studio ve Visual Studio için Blend gibi tasarım araçlarında çalışmaz.
+> İliştirilmiş özelliğin al erişimcisini atlarsanız, özelliğindeki veri bağlama Visual Studio ve Visual Studio için Blend gibi tasarım araçları 'nda çalışmaz.
 
-#### <a name="the-get-accessor"></a>Erişime Erişim
+#### <a name="the-get-accessor"></a>Get erişimcisi
 
-**Get_PropertyName_** erişimcisinin imzası aşağıdaki olmalıdır:
+**Get_PropertyName_** erişimcisinin imzası şu olmalıdır:
 
 `public static object GetPropertyName(object target)`
 
-- Nesne, `target` uygulamanızda daha özel bir tür olarak belirtilebilir. Örneğin, bağlı <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> özellik yalnızca örneklerde <xref:System.Windows.UIElement> <xref:System.Windows.UIElement> ayarlanacak şekilde tasarlandığı için yöntem parametreyi , olarak yıtipler.
+- `target`Nesne, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> yöntemi parametresi olarak, <xref:System.Windows.UIElement> iliştirilmiş özelliği yalnızca örneklere ayarlanmayacak şekilde türlenmiştir <xref:System.Windows.UIElement> .
 
-- İade değeri, uygulamanızda daha özel bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A> yöntem , değer <xref:System.Windows.Controls.Dock>yalnızca bu numaralandırmaya ayarlanabildiği için, yöntem olarak yıtürler.
+- Dönüş değeri, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.GetDock%2A> <xref:System.Windows.Controls.Dock> değeri yalnızca bu sabit listesine ayarlanabileceğinden, yöntemi olarak.
 
-#### <a name="the-set-accessor"></a>Set Erişimcisi
+#### <a name="the-set-accessor"></a>Set erişimcisi
 
-**Set_PropertyName_** erişimcisi için imza olmalıdır:
+**Set_PropertyName_** erişimcisinin imzası şu olmalıdır:
 
 `public static void SetPropertyName(object target, object value)`
 
-- Nesne, `target` uygulamanızda daha özel bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntem, ekli <xref:System.Windows.UIElement>özellik yalnızca örneklerüzerinde <xref:System.Windows.UIElement> ayarlanacak şekilde tasarlanmıştır, çünkü, olarak yı türler.
+- `target`Nesne, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, yöntemi öğesini <xref:System.Windows.Controls.DockPanel.SetDock%2A> olarak, <xref:System.Windows.UIElement> iliştirilmiş özelliği yalnızca örneklere ayarlanmış şekilde türlenmiştir <xref:System.Windows.UIElement> .
 
-- Nesne, `value` uygulamanızda daha özel bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> yöntem , değer <xref:System.Windows.Controls.Dock>yalnızca bu numaralandırmaya ayarlanabildiği için, yöntem olarak yıtürler. Bu yöntemin değerinin, işaretlemede ekli özellik kullanımında ekli özelliğinizle karşılaştığında XAML yükleyicisinden gelen giriş olduğunu unutmayın. Bu giriş, biçimlendirmede XAML öznitelik değeri olarak belirtilen değerdir. Bu nedenle, kullandığınız tür için tür dönüştürme, değer serializer veya biçimlendirme uzantısı desteği olmalıdır, böylece uygun tür öznitelik değerinden oluşturulabilir (sonuçta sadece bir dize).
+- `value`Nesne, uygulamanızda daha belirli bir tür olarak belirtilebilir. Örneğin, <xref:System.Windows.Controls.DockPanel.SetDock%2A> <xref:System.Windows.Controls.Dock> değeri yalnızca bu sabit listesine ayarlanabileceğinden, yöntemi olarak. Bu yöntemin değerinin, biçimlendirme içindeki iliştirilmiş özellik kullanımında ekli özelliğinizle karşılaştığında XAML yükleyicisindeki gelen giriş olduğunu unutmayın. Bu giriş, biçimlendirmede XAML öznitelik değeri olarak belirtilen değerdir. Bu nedenle, kullandığınız tür için tür dönüştürmesi, değer seri hale getirici veya biçimlendirme uzantısı desteğinin olması gerekir. bu şekilde, uygun tür öznitelik değerinden (sonunda yalnızca bir dize) oluşturulabilir.
 
-Aşağıdaki örnek, bağımlılık özelliği kaydının <xref:System.Windows.DependencyProperty.RegisterAttached%2A> (yöntemi kullanarak) yanı sıra **Get_PropertyName_** ve **Set_PropertyName_** erişimcileri gösterir. Örnekte, ekli özellik `IsBubbleSource`adı. Bu nedenle, erişime girenlerin adı `GetIsBubbleSource` ve `SetIsBubbleSource`.
+Aşağıdaki örnek, bağımlılık özelliği kaydını ( <xref:System.Windows.DependencyProperty.RegisterAttached%2A> yöntemi kullanılarak) ve **Get_PropertyName_** ve **Set_PropertyName_** erişimcileri gösterir. Örnekte, ekli özellik adı ' dir `IsBubbleSource` . Bu nedenle, erişimcilerinin ve olarak adlandırılması gerekir `GetIsBubbleSource` `SetIsBubbleSource` .
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
-#### <a name="attached-property-attributes"></a>Ekli Özellik Öznitelikleri
+#### <a name="attached-property-attributes"></a>İliştirilmiş özellik öznitelikleri
 
-WPF, yansıma işlemlerine eklenen özellikler ve tasarımcılar gibi tipik yansıma ve özellik bilgileri kullanıcıları hakkında bilgi sağlamayı amaçlayan birkaç .NET öznitelikleri tanımlar. Ekli özelliklerisınırsız kapsam türü olduğundan, tasarımcılar XAML kullanan belirli bir teknoloji uygulamasında tanımlanan tüm ekli özelliklerin genel bir listesi ile ezici kullanıcılar önlemek için bir yol gerekir. WPF'nin eklenmiş özellikler için tanımladığı .NET öznitelikleri, belirli bir ekli özelliğin özellikler penceresinde gösterilmesi gereken durumları kapsamak için kullanılabilir. Bu öznitelikleri kendi özel bağlı özellikleriniz için de uygulamayı düşünebilirsiniz. .NET özniteliklerinin amacı ve sözdizimi uygun başvuru sayfalarında açıklanmıştır:
+WPF, yansıma işlemlerine eklenen özellikler hakkında bilgi sağlamak için tasarlanan çeşitli .NET özniteliklerini ve tasarımcılar gibi yansıma ve özellik bilgilerinin tipik kullanıcılarını tanımlar. İliştirilmiş özelliklerde sınırsız kapsam türü olduğundan, tasarımcıların XAML kullanan belirli bir teknoloji uygulamasında tanımlanmış tüm iliştirilmiş özelliklerin genel bir listesini kullanarak kullanıcıların aşırı yük duymaması için bir yol gerekir. WPF 'nin Ekli Özellikler için tanımladığı .NET öznitelikleri, belirli bir iliştirilmiş özelliğin bir Özellikler penceresinde gösterilmesi gereken durumları kapsama almak için kullanılabilir. Kendi özel ekli özellikleri için de bu öznitelikleri uygulamayı düşünebilirsiniz. .NET özniteliklerinin amacı ve sözdizimi, uygun başvuru sayfalarında açıklanmıştır:
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
@@ -133,13 +134,13 @@ WPF, yansıma işlemlerine eklenen özellikler ve tasarımcılar gibi tipik yans
 
 - <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
-## <a name="learning-more-about-attached-properties"></a>Ekli Özellikler Hakkında Daha Fazla Bilgi Edinme<a name="more"></a>
+## <a name="learning-more-about-attached-properties"></a>Ekli Özellikler hakkında daha fazla bilgi<a name="more"></a>
 
-- Ekli bir özellik oluşturma hakkında daha fazla bilgi için [bkz.](how-to-register-an-attached-property.md)
+- Ekli Özellik oluşturma hakkında daha fazla bilgi için bkz. [ekli özelliği kaydetme](how-to-register-an-attached-property.md).
 
-- Bağımlılık özellikleri ve bağlı özellikler için daha gelişmiş kullanım senaryoları için Bkz. [Özel Bağımlılık Özellikleri.](custom-dependency-properties.md)
+- Bağımlılık özellikleri ve ekli özellikler için daha gelişmiş kullanım senaryoları için bkz. [Özel bağımlılık özellikleri](custom-dependency-properties.md).
 
-- Ayrıca, bir özelliği ekli bir özellik olarak ve bağımlılık özelliği olarak kaydedebilirsiniz, ancak sonra yine de "sarıcı" uygulamalarını ortaya çıkarabilirsiniz. Bu durumda, özellik bu öğe üzerinde veya XAML ekli özellik sözdizimi aracılığıyla herhangi bir öğe üzerinde ayarlanabilir. Hem standart hem de bağlı kullanımlar için uygun bir <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>senaryoya sahip bir özelliğin bir örneği.
+- Ayrıca bir özelliği iliştirilmiş bir özellik olarak ve bağımlılık özelliği olarak kaydedebilir, ancak yine de "sarmalayıcı" uygulamalarını kullanıma sunabilirsiniz. Bu durumda, özelliği bu öğe üzerinde ya da XAML ekli özelliği sözdizimi aracılığıyla herhangi bir öğede ayarlanabilir. Hem standart hem de ekli kullanımlar için uygun senaryoya sahip bir özellik örneği <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

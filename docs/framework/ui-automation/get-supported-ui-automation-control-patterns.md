@@ -1,5 +1,6 @@
 ---
 title: Desteklenen UI Otomasyon Denetim Düzenlerini Alma
+description: UI Otomasyon öğelerinden desteklenen denetim deseninin nesnelerinin nasıl alınacağını gösteren bir örnek okuyun.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,40 +10,40 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: b1da13cf5eb39a61f40848a5f199cfd39b16d7c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f2905b81a1af2f86c78b082f0241e2181c384d25
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435644"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164158"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Desteklenen UI Otomasyon Denetim Düzenlerini Alma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğelerinden denetim deseninin nesnelerinin nasıl alınacağını gösterir.  
+ Bu konu, öğelerinden denetim deseninin nesnelerinin nasıl alınacağını gösterir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
 ### <a name="obtain-all-control-patterns"></a>Tüm denetim desenlerini al  
   
-1. Denetim desenlerini ilgilendiğiniz <xref:System.Windows.Automation.AutomationElement> alın.  
+1. <xref:System.Windows.Automation.AutomationElement>İlgilendiğiniz denetim düzenlerini alın.  
   
-2. Öğeden tüm denetim desenlerini almak için <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> çağırın.  
+2. <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>Öğesinden tüm denetim desenlerini almak için çağırın.  
   
 > [!CAUTION]
-> İstemcinin <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>kullanmamaları önemle önerilir. Bu yöntem, var olan her denetim deseninin dahili <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> çağırdığı için performans ciddi bir şekilde etkilenebilir. Mümkünse, bir istemci ilgilendiğiniz önemli desenler için <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> çağırmalıdır.  
+> İstemcinin kullanmamaları önemle önerilir <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> . Bu yöntem, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> var olan her denetim deseninin dahili olarak çağırdığı için performans ciddi bir şekilde etkilenebilir. Mümkünse, bir istemci <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> ilgilendiğiniz önemli desenleri çağırmalıdır.  
   
 ### <a name="obtain-a-specific-control-pattern"></a>Belirli bir denetim deseninin elde edileceği  
   
-1. Denetim desenlerini ilgilendiğiniz <xref:System.Windows.Automation.AutomationElement> alın.  
+1. <xref:System.Windows.Automation.AutomationElement>İlgilendiğiniz denetim düzenlerini alın.  
   
-2. Belirli bir kalıbı sorgulamak için <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> veya <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> çağırın. Bu yöntemler benzerdir, ancak model bulunmazsa <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> bir özel durum oluşturur ve <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> `false`döndürür.  
+2. <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> Belirli bir model için bir çağrı yapın veya sorgulayın. Bu yöntemler benzerdir, ancak model bulunamazsa <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> bir özel durum oluşturur ve <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> döndürür `false` .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir liste öğesi için bir <xref:System.Windows.Automation.AutomationElement> alır ve bu öğeden bir <xref:System.Windows.Automation.SelectionItemPattern> edinir.  
+ Aşağıdaki örnek bir <xref:System.Windows.Automation.AutomationElement> liste öğesi için alır ve bu öğeden bir alır <xref:System.Windows.Automation.SelectionItemPattern> .  
   
  [!code-csharp[UIAClient_snip#103](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#103)]
  [!code-vb[UIAClient_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#103)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
+- [İstemciler İçin UI Otomasyon Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)

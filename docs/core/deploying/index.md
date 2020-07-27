@@ -1,148 +1,148 @@
 ---
 title: Uygulama yayımlama
-description: Bir .NET Core uygulamasını yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platform lar arası uygulamalar yayınlayabilir. Bir uygulamayı bağımsız veya çalışma süresine bağlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl çalıştırdığını etkiler.
+description: .NET Core uygulaması yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platformlar arası uygulamalar yayımlayabilir. Bir uygulamayı kendi içinde veya çalışma zamanına bağlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde etkiler.
 ms.date: 04/01/2020
-ms.openlocfilehash: a4e5f9fe048d40c751f582bd49732cb903202db4
-ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
+ms.openlocfilehash: 201363ad314373ec3be44eb8496f92a8e0c8e418
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665534"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164937"
 ---
-# <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayıncılığı genel bakış
+# <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayımlamaya genel bakış
 
-.NET Core ile oluşturduğunuz uygulamalar iki farklı modda yayınlanabilir ve mod, kullanıcının uygulamanızı nasıl çalıştırdığını etkiler.
+.NET Core ile oluşturduğunuz uygulamalar iki farklı modda yayımlanabilir ve bu mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde de etkili olur.
 
-Uygulamanızı *bağımsız* olarak yayımlama, .NET Core çalışma zamanı ve kitaplıkları, uygulamanızı ve bağımlılıklarını içeren bir uygulama üretir. Uygulamanın kullanıcıları bunu .NET Core çalışma zamanı yüklü olmayan bir makinede çalıştırabilir.
+Uygulamanızı *kendi içinde* yayımlamak, .NET Core çalışma zamanı ve kitaplıklarını ve uygulamanızı ve onun bağımlılıklarını içeren bir uygulama oluşturur. Uygulamanın kullanıcıları bu uygulamayı .NET Core çalışma zamanı yüklü olmayan bir makinede çalıştırabilir.
 
-Uygulamanızı *çalışma süresine bağımlı* (daha önce *çerçeveye bağımlı*olarak bilinir) olarak yayımlama, yalnızca uygulamanızın kendisini ve bağımlılıklarını içeren bir uygulama üretir. Uygulama kullanıcılarının .NET Core çalışma süresini ayrı olarak yüklemeleri gerekir.
+Uygulamanızı *çalışma zamanına bağımlı* (daha önce *çerçeveye bağlı*olarak bilinir) olarak yayımlamak, yalnızca uygulamanızın kendisini ve bağımlılıklarını içeren bir uygulama oluşturur. Uygulamanın kullanıcılarının .NET Core çalışma zamanını ayrı olarak yüklemesi gerekir.
 
-Her iki yayımlama modu varsayılan olarak platforma özgü bir yürütülebilir üretir. Runtime bağımlı uygulamalar yürütülebilir olmadan oluşturulabilir ve bu uygulamalar çapraz platformdur.
+Her iki yayımlama modu, varsayılan olarak platforma özgü bir yürütülebilir dosya oluşturur. Çalışma zamanına bağımlı uygulamalar yürütülebilir bir dosya olmadan oluşturulabilir ve bu uygulamalar platformlar arası bir platformdur.
 
-Çalıştırılabilir bir üretildiğinde, hedef platformu çalışma zamanı tanımlayıcısı (RID) ile belirtebilirsiniz. RID'ler hakkında daha fazla bilgi için [.NET Core RID Kataloğu'na](../rid-catalog.md)bakın.
+Bir yürütülebilir dosya üretildiğinde, hedef platformu bir çalışma zamanı tanımlayıcısı (RID) ile belirtebilirsiniz. RID 'Ler hakkında daha fazla bilgi için bkz. [.NET Core RID kataloğu](../rid-catalog.md).
 
-Aşağıdaki tablo, bir uygulamayı SDK sürümüne göre çalışma süresine bağlı veya bağımsız olarak yayımlamak için kullanılan komutları özetler:
+Aşağıdaki tabloda, SDK sürümü başına, bir uygulamayı çalışma zamanına bağımlı veya şirket içinde yayımlamak için kullanılan komutlar özetlenmektedir:
 
-| Tür                                                                                 | SDK 2.1 | SDK 3.x | Komut |
+| Tür                                                                                 | SDK 2.1 | SDK 3. x | Komut |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
-| geçerli platform için [çalıştırılabilir çalıştırılabilir çalıştırılabilir.](#publish-runtime-dependent) |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| belirli bir platform için [çalıştırılabilir çalıştırılabilir çalıştırılabilir.](#publish-runtime-dependent)  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
-| [runtime bağımlı çapraz platform ikili](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| [kendi kendine yeten yürütülebilir.](#publish-self-contained)                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
+| geçerli platform için [çalışma zamanına bağımlı yürütülebilir](#publish-runtime-dependent) . |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| belirli bir platform için [çalışma zamanına bağımlı yürütülebilir](#publish-runtime-dependent) .  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [çalışma zamanına bağımlı platformlar arası ikili](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [kendi kendine içerilen çalıştırılabilir](#publish-self-contained).                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-Daha fazla bilgi için [bkz.](../tools/dotnet-publish.md)
+Daha fazla bilgi için bkz. [.NET Core DotNet Publish komutu](../tools/dotnet-publish.md).
 
-## <a name="produce-an-executable"></a>Çalıştırılabilir bir ürün üretin
+## <a name="produce-an-executable"></a>Yürütülebilir bir dosya oluşturun
 
-Yürütülebilir ler çapraz platform değildir. İşletim sistemi ve CPU mimarisine özgüler. Uygulamanızı yayımlarken ve yürütülebilir bir uygulama oluştururken, uygulamayı [bağımsız](#publish-self-contained) veya [çalışma süresine bağlı](#publish-runtime-dependent)olarak yayımlayabilirsiniz. Bir uygulamayı bağımsız olarak yayınlamak, uygulamayla birlikte .NET Core çalışma süresini içerir ve uygulama kullanıcılarının uygulamayı çalıştırmadan önce .NET Core'u yükleme konusunda endişelenmelerine gerek yoktur. Çalışma süresine bağlı olarak yayınlanan uygulamalar .NET Core çalışma süresini ve kitaplıkları içermez; yalnızca uygulama ve üçüncü taraf bağımlılıkları dahildir.
+Yürütülebilir dosyalar platformlar arası değildir. Bunlar bir işletim sistemine ve CPU mimarisine özgüdür. Uygulamanızı yayımlarken ve yürütülebilir bir dosya oluştururken, uygulamayı [kendi içinde](#publish-self-contained) veya [çalışma zamanına bağlı](#publish-runtime-dependent)olarak yayımlayabilirsiniz. Bir uygulamayı kendi içinde yayımlamak uygulamayla birlikte .NET Core çalışma zamanı içerir ve uygulamanın kullanıcıları uygulamayı çalıştırmadan önce .NET Core 'u yükleme konusunda endişelenmenize gerek kalmaz. Çalışma zamanına bağlı olarak yayımlanan uygulamalar .NET Core çalışma zamanı ve kitaplıklarını içermez; yalnızca uygulama ve üçüncü taraf bağımlılıklar dahil edilir.
 
-Aşağıdaki komutlar yürütülebilir bir ürün üretir:
+Aşağıdaki komutlar yürütülebilir bir dosya üretir:
 
-| Tür                                                                                 | SDK 2.1 | SDK 3.x | Komut |
+| Tür                                                                                 | SDK 2.1 | SDK 3. x | Komut |
 | ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
-| geçerli platform için [çalıştırılabilir çalıştırılabilir çalıştırılabilir.](#publish-runtime-dependent) |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
-| belirli bir platform için [çalıştırılabilir çalıştırılabilir çalıştırılabilir.](#publish-runtime-dependent)  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
-| [kendi kendine yeten yürütülebilir.](#publish-self-contained)                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
+| geçerli platform için [çalışma zamanına bağımlı yürütülebilir](#publish-runtime-dependent) . |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| belirli bir platform için [çalışma zamanına bağımlı yürütülebilir](#publish-runtime-dependent) .  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [kendi kendine içerilen çalıştırılabilir](#publish-self-contained).                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-## <a name="produce-a-cross-platform-binary"></a>Çapraz platform ikilisi üretin
+## <a name="produce-a-cross-platform-binary"></a>Platformlar arası ikili oluşturun
 
-Uygulamanızı [çalışma süresine bağlı](#publish-runtime-dependent)olarak bir *dll* dosyası biçiminde yayımladığınızda çapraz platform ikilileri oluşturulur. *DLL* dosyası, projenizden sonra adlandırılmıştır. Örneğin, **word_reader**adında bir uygulamanız varsa, *word_reader.dll* adlı bir dosya oluşturulur. Bu şekilde yayınlanan uygulamalar `dotnet <filename.dll>` komutla çalıştırılır ve herhangi bir platformda çalıştırılabilir.
+Uygulamanızı [çalışma zamanına bağlı](#publish-runtime-dependent)olarak bir *DLL* dosyası biçiminde yayımladığınızda platformlar arası ikili dosyalar oluşturulur. *DLL* dosyası projenizden sonra adlandırılır. Örneğin, **word_reader**adlı bir uygulamanız varsa, *word_reader.dll* adlı bir dosya oluşturulur. Bu şekilde yayımlanan uygulamalar `dotnet <filename.dll>` komutla çalışır ve herhangi bir platformda çalıştırılabilir.
 
-Hedeflenen .NET Core çalışma süresi zaten yüklenmiş olduğu sürece, platformlar arası ikililer herhangi bir işletim sisteminde çalıştırılabilir. Hedeflenen .NET Core çalışma zamanı yüklü değilse, uygulama roll-forward için yapılandırılırsa uygulama daha yeni bir çalışma süresi kullanarak çalışabilir. Daha fazla bilgi için [çalışma süresine bağlı uygulamaların ileri ye doğru kayda bakınız.](../versions/selection.md#framework-dependent-apps-roll-forward)
+Platformlar arası ikili dosyalar, hedeflenen .NET Core çalışma zamanı zaten yüklü olduğu sürece herhangi bir işletim sisteminde çalıştırılabilir. Hedeflenen .NET Core çalışma zamanı yüklü değilse, uygulama geri almak üzere yapılandırılmışsa uygulama daha yeni bir çalışma zamanı kullanılarak çalıştırılabilir. Daha fazla bilgi için bkz. [çalışma zamanına bağımlı uygulamalar ileri alma](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Aşağıdaki komut bir çapraz platform ikili üretir:
+Aşağıdaki komut platformlar arası ikili dosya üretir:
 
-| Tür                                                                                 | SDK 2.1 | SDK 3.x | Komut |
+| Tür                                                                                 | SDK 2.1 | SDK 3. x | Komut |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
-| [runtime bağımlı çapraz platform ikili](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [çalışma zamanına bağımlı platformlar arası ikili](#publish-runtime-dependent).               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
-## <a name="publish-runtime-dependent"></a>Çalışma süresine bağımlı yayımlama
+## <a name="publish-runtime-dependent"></a>Yayımlama çalışma zamanına bağımlı
 
-Çalışma süresine bağlı olarak yayınlanan uygulamalar çapraz platformdur ve .NET Core çalışma süresini içermez. Uygulamanızın kullanıcısının .NET Core çalışma süresini yüklemesi gerekir.
+Çalışma zamanına bağlı olarak yayımlanan uygulamalar platformlar arası ve .NET Core çalışma zamanı dahil değildir. Uygulamanızın kullanıcısı .NET Core çalışma zamanı 'nı yüklemek için gereklidir.
 
-Bir uygulamayı çalışma süresine bağlı olarak yayımlama, *dll* dosyası olarak [bir çapraz platform ikilisi](#produce-a-cross-platform-binary) ve geçerli platformunuzu hedefleyen platforma özgü bir [yürütülebilir](#produce-an-executable) üretir. Yürütülebilir değilken *dll* çapraz platformdur. Örneğin, **word_reader** adlı bir uygulama yayımlar ve Windows'u hedeflerseniz, *word_reader.dll*ile birlikte bir *word_reader.exe* çalıştırılabilir oluşturulur. Linux veya macOS hedeflenirken, *word_reader.dll*ile birlikte bir *word_reader* çalıştırılabilir oluşturulur. RID'ler hakkında daha fazla bilgi için [.NET Core RID Kataloğu'na](../rid-catalog.md)bakın.
+Bir uygulamayı çalışma zamanına bağlı olarak yayımlamak, *DLL* dosyası olarak [platformlar arası bir ikili](#produce-a-cross-platform-binary) dosya ve geçerli platformunuzu hedefleyen [platforma özgü bir yürütülebilir](#produce-an-executable) dosya oluşturur. Yürütülebilir dosya olmadığından, *DLL* platformlar arası bir platformdur. Örneğin, **word_reader** ve hedef pencereleri adlı bir uygulama yayımlarsanız, *word_reader.dll*birlikte *word_reader.exe* yürütülebilir dosyası oluşturulur. Linux veya macOS hedeflenirken, *word_reader.dll*birlikte *word_reader* çalıştırılabilir dosyası oluşturulur. RID 'Ler hakkında daha fazla bilgi için bkz. [.NET Core RID kataloğu](../rid-catalog.md).
 
 > [!IMPORTANT]
-> .NET Core SDK 2.1, çalışma süresine bağlı bir uygulama yayımladığınızda platforma özgü yürütülebilir uygulamalar üretmez.
+> .NET Core SDK 2,1, bir uygulama çalışma zamanına bağımlı olduğunda platforma özgü yürütülebilir dosyalar oluşturmaz.
 
-Uygulamanızın çapraz platform ikilisi `dotnet <filename.dll>` komutla çalıştırılabilir ve herhangi bir platformda çalıştırılabilir. Uygulama platforma özel uygulamalara sahip bir NuGet paketi kullanıyorsa, tüm platformların bağımlılıkları uygulamayla birlikte yayımlama klasörüne kopyalanır.
+Uygulamanızın platformlar arası ikili dosyası, `dotnet <filename.dll>` komutla çalıştırılabilir ve herhangi bir platformda çalıştırılabilir. Uygulama platforma özgü uygulamalar içeren bir NuGet paketi kullanıyorsa, tüm platformların bağımlılıkları uygulamayla birlikte yayımlama klasörüne kopyalanır.
 
-`-r <RID> --self-contained false` Parametreleri [`dotnet publish`](../tools/dotnet-publish.md) komuta geçirerek belirli bir platform için yürütülebilir oluşturabilirsiniz. `-r` Parametre atlandığında, geçerli platformunuz için bir çalıştırılabilir oluşturulur. Hedeflenen platform için platforma özgü bağımlılıkları olan Tüm NuGet paketleri yayımlama klasörüne kopyalanır.
+Parametreleri komuta geçirerek belirli bir platform için yürütülebilir bir dosya oluşturabilirsiniz `-r <RID> --self-contained false` [`dotnet publish`](../tools/dotnet-publish.md) . `-r`Parametresi atlandığında, geçerli platformunuz için yürütülebilir bir dosya oluşturulur. Hedeflenen platform için platforma özgü bağımlılıklara sahip tüm NuGet paketleri Yayımla klasörüne kopyalanır.
 
-### <a name="advantages"></a>Yararları
+### <a name="advantages"></a>Avantajlar
 
 - **Küçük dağıtım**\
-Yalnızca uygulamanız ve bağımlılıkları dağıtılır. .NET Core çalışma zamanı ve kitaplıklar kullanıcı tarafından yüklenir ve tüm uygulamalar çalışma süresini paylaşır.
+Yalnızca uygulamanız ve bağımlılıkları dağıtılır. .NET Core çalışma zamanı ve kitaplıkları Kullanıcı tarafından yüklenir ve tüm uygulamalar çalışma zamanını paylaşır.
 
-- **Çapraz platform**\
-Uygulamanız ve herhangi bir . NET tabanlı kitaplık diğer işletim sistemlerinde çalışır. Uygulamanız için bir hedef platform tanımlamanız gerekmez. .NET dosya biçimi hakkında bilgi için [bkz.](../../standard/assembly/file-format.md)
+- **Platformlar arası**\
+Uygulamanız ve herhangi bir. AĞ tabanlı kitaplık diğer işletim sistemlerinde çalışır. Uygulamanız için bir hedef platform tanımlamanız gerekmez. .NET dosya biçimi hakkında daha fazla bilgi için bkz. [.NET derleme dosyası biçimi](../../standard/assembly/file-format.md).
 
-- **En son yamalı çalışma süresini kullanır**\
-Uygulama, hedef sistemde yüklü en son çalışma süresini (hedeflenen büyük-küçük .CORE ailesi içinde) kullanır. Bu, uygulamanızın .NET Core çalışma zamanının en son yamalı sürümünü otomatik olarak kullandığı anlamına gelir. Bu varsayılan davranış geçersiz kılınabilir. Daha fazla bilgi için [çalışma süresine bağlı uygulamaların ileri ye doğru kayda bakınız.](../versions/selection.md#framework-dependent-apps-roll-forward)
+- **En son düzeltme eki uygulanmış çalışma zamanını kullanır**\
+Uygulama, hedef sistemde yüklü olan en son çalışma zamanını (.NET Core 'un hedeflenen ana alt ailesi içinde) kullanır. Bu, uygulamanızın .NET Core çalışma zamanının en son düzeltme eki uygulanmış sürümünü otomatik olarak kullandığı anlamına gelir. Bu varsayılan davranış geçersiz kılınabilir. Daha fazla bilgi için bkz. [çalışma zamanına bağımlı uygulamalar ileri alma](../versions/selection.md#framework-dependent-apps-roll-forward).
 
 ### <a name="disadvantages"></a>Dezavantajlar
 
-- **Çalışma süresini önceden yüklemeyi gerektirir**\
-Uygulamanız yalnızca .NET Core sürümü uygulama hedefleriniz ana bilgisayar sistemine zaten yüklenmişse çalıştırılabilir. Uygulama için yuvarlanme davranışını ,NET Core'un belirli bir sürümünü gerektirecek veya .NET Core'un daha yeni bir sürümüne izin verecek şekilde yapılandırabilirsiniz. Daha fazla bilgi için [çalışma süresine bağlı uygulamaların ileri ye doğru kayda bakınız.](../versions/selection.md#framework-dependent-apps-roll-forward)
+- **Çalışma zamanının önceden yüklenmesini gerektirir**\
+Uygulamanız yalnızca .NET Core 'un uygulama hedeflerinizin sürümü konak sisteminde zaten yüklüyse çalıştırılabilir. .NET Core 'un belirli bir sürümünü gerektirmek veya .NET Core 'un daha yeni bir sürümüne izin vermek için uygulama için ilet davranışını yapılandırabilirsiniz. Daha fazla bilgi için bkz. [çalışma zamanına bağımlı uygulamalar ileri alma](../versions/selection.md#framework-dependent-apps-roll-forward).
 
 - **.NET Core değişebilir**\
-.NET Core çalışma zamanı ve kitaplıkların uygulamanın çalıştırıldığı makinede güncellenmesi mümkündür. Nadir durumlarda, çoğu uygulamanın kullandığı .NET Core kitaplıklarını kullanırsanız, bu uygulamanızın davranışını değiştirebilir. Uygulamanızın .NET Core'un daha yeni sürümlerini nasıl kullandığını yapılandırabilirsiniz. Daha fazla bilgi için [çalışma süresine bağlı uygulamaların ileri ye doğru kayda bakınız.](../versions/selection.md#framework-dependent-apps-roll-forward)
+.NET Core çalışma zamanı ve kitaplıklarının uygulamanın çalıştırıldığı makinede güncellenmesi mümkündür. Nadir durumlarda, çoğu uygulamanın yapabileceği .NET Core kitaplıklarını kullanırsanız, bu durum uygulamanızın davranışını değiştirebilir. Uygulamanızın .NET Core 'un daha yeni sürümlerini nasıl kullandığını yapılandırabilirsiniz. Daha fazla bilgi için bkz. [çalışma zamanına bağımlı uygulamalar ileri alma](../versions/selection.md#framework-dependent-apps-roll-forward).
 
-Aşağıdaki dezavantaj yalnızca .NET Core 2.1 SDK için geçerlidir.
+Aşağıdaki dezavantajı yalnızca .NET Core 2,1 SDK için geçerlidir.
 
-- **Uygulamayı `dotnet` başlatmak için komutu kullanın**\
-Kullanıcıların uygulamanızı `dotnet <filename.dll>` başlatmak için komutu çalıştırması gerekir. .NET Core 2.1 SDK, çalışma süresine bağlı olarak yayınlanan uygulamalar için platforma özgü yürütülebilir uygulamalar üretmez.
+- **`dotnet`Uygulamayı başlatmak için komutunu kullanın**\
+Kullanıcıların `dotnet <filename.dll>` uygulamanızı başlatması için komutunu çalıştırmaları gerekir. .NET Core 2,1 SDK, çalışma zamanına bağımlı uygulamalar için platforma özel yürütülebilir dosyalar üretmez.
 
 ### <a name="examples"></a>Örnekler
 
-Bir uygulama çapraz platform çalışma süresine bağlı yayımlayın. Geçerli platformunuzu hedefleyen bir yürütülebilir *dll* dosyasıyla birlikte oluşturulur.
+Uygulama yayımlama platformlar arası çalışma zamanına bağımlı. Geçerli platformunuzu hedefleyen bir yürütülebilir dosya *DLL* dosyası ile birlikte oluşturulur.
 
 ```dotnet
 dotnet publish
 ```
 
-Bir uygulama çapraz platform çalışma süresine bağlı yayımlayın. Linux 64 bit çalıştırılabilir *dll* dosyası ile birlikte oluşturulur. Bu komut .NET Core SDK 2.1 ile çalışmaz.
+Uygulama yayımlama platformlar arası çalışma zamanına bağımlı. Linux 64 bit yürütülebilir dosyası, *DLL* dosyasıyla birlikte oluşturulur. Bu komut .NET Core SDK 2,1 ile çalışmıyor.
 
 ```dotnet
 dotnet publish -r linux-x64 --self-contained false
 ```
 
-## <a name="publish-self-contained"></a>Bağımsız yayımlama
+## <a name="publish-self-contained"></a>Kendi içinde Yayımla
 
-Uygulamanızı bağımsız olarak yayımlama, platforma özgü bir yürütülebilir lik üretir. Çıktı yayımlama klasörü, .NET Core kitaplıkları ve hedef çalışma süresi de dahil olmak üzere uygulamanın tüm bileşenlerini içerir. Uygulama diğer .NET Core uygulamalarından izole edilmiştir ve yerel olarak yüklenen paylaşılan çalışma süresini kullanmaz. Uygulamanızın kullanıcısının .NET Core'u indirmesi ve yüklemesi gerekmez.
+Uygulamanızı kendi içinde yayımlamak platforma özgü bir yürütülebilir dosya oluşturur. Çıkış yayımlama klasörü, .NET Core kitaplıkları ve hedef çalışma zamanı dahil olmak üzere uygulamanın tüm bileşenlerini içerir. Uygulama diğer .NET Core uygulamalarından yalıtılmıştır ve yerel olarak yüklenmiş bir paylaşılan çalışma zamanı kullanmaz. Uygulamanızın kullanıcısı .NET Core indirmek ve yüklemek için gerekli değildir.
 
-Çalıştırılabilir ikili belirtilen hedef platform için üretilir. Örneğin, **word_reader**adında bir uygulamanız varsa ve Windows için bağımsız bir yürütülebilir yayımladıysanız, *word_reader.exe* dosyası oluşturulur. Linux veya macOS için yayımlama, *bir word_reader* dosyası oluşturulur. Hedef platform ve mimari `-r <RID>` [`dotnet publish`](../tools/dotnet-publish.md) komut için parametre ile belirtilir. RID'ler hakkında daha fazla bilgi için [.NET Core RID Kataloğu'na](../rid-catalog.md)bakın.
+Yürütülebilir ikili dosya belirtilen hedef platform için üretildi. Örneğin, **word_reader**adlı bir uygulamanız varsa ve Windows için kendi kendine içerilen bir yürütülebilir dosyayı yayımlarsanız, bir *word_reader.exe* dosyası oluşturulur. Linux veya macOS için yayımlama, bir *word_reader* dosyası oluşturulur. Hedef platform ve mimari, `-r <RID>` komut parametresiyle belirtilir [`dotnet publish`](../tools/dotnet-publish.md) . RID 'Ler hakkında daha fazla bilgi için bkz. [.NET Core RID kataloğu](../rid-catalog.md).
 
-Uygulamanın platforma özgü bağımlılıkları içeren NuGet paketi gibi platforma özgü bağımlılıkları varsa, bunlar uygulamayla birlikte yayımlama klasörüne kopyalanır.
+Uygulamanın platforma özgü bağımlılıklar içeren bir NuGet paketi gibi platforma özgü bağımlılıkları varsa, bunlar uygulamayla birlikte Yayımla klasörüne kopyalanır.
 
-### <a name="advantages"></a>Yararları
+### <a name="advantages"></a>Avantajlar
 
-- **Control .NET Core sürümü**\
-Uygulamanızla birlikte .NET Core'un hangi sürümünün dağıtılan olduğunu siz denetlersiniz.
+- **.NET Core sürümünü denetleme**\
+Uygulamanız ile hangi .NET Core sürümünün dağıtıldığını kontrol edersiniz.
 
-- **Platforma özel hedefleme**\
-Uygulamanızı her platform için yayımlamanız gerektiğinden, uygulamanızın nerede yayınlayacağını bilirsiniz. .NET Core yeni bir platform sunarsa, siz bu platformu hedefleyen bir sürüm yayımlayana kadar kullanıcılar uygulamanızı bu platformda çalıştıramaz. Kullanıcılarınız uygulamanızı yeni platformda çalıştırmadan önce uygulamanızı uyumluluk sorunları için test edebilirsiniz.
+- **Platforma özgü hedefleme**\
+Uygulamanızı her platform için yayımlamanız gerektiğinden uygulamanızın nerede çalışacağını bilirsiniz. .NET Core yeni bir platform sunabiliyorsa, kullanıcılar bu platformu hedefleyen bir sürüm yayınlayana kadar uygulamanızı bu platformda çalıştıramıyoruz. Kullanıcılarınızın uygulamanızı yeni platformda çalıştırmadan önce uyumluluk sorunları için uygulamanızı test edebilirsiniz.
 
 ### <a name="disadvantages"></a>Dezavantajlar
 
 - **Daha büyük dağıtımlar**\
-Uygulamanız .NET Core çalışma süresini ve tüm uygulama bağımlılıklarınızı içerdiğinden, gereken indirme boyutu ve sabit disk alanı [çalışma süresine bağlı](#publish-runtime-dependent) bir sürümden daha büyüktür.
+Uygulamanız .NET Core çalışma zamanı ve tüm uygulama bağımlılıklarınızı içerdiğinden, gereken indirme boyutu ve sabit disk alanı [çalışma zamanına bağlı](#publish-runtime-dependent) sürümden daha büyük.
 
   > [!TIP]
-  > .NET Core [*globalization değişmez modunu*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)kullanarak Linux sistemlerindeki dağıtımınızın boyutunu yaklaşık 28 MB azaltabilirsiniz. Bu, uygulamanızı tüm kültürlere [değişmez kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi davranmaya zorlar.
+  > .NET Core [*Genelleştirme sabit modunu*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)kullanarak Linux sistemlerinde dağıtımınızın boyutunu YAKLAŞıK 28 MB azaltabilirsiniz. Bu, uygulamanızı [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi tüm kültürleri işleyecek şekilde zorlar.
 
-- **.NET Core sürümünü güncelleştirmek daha zor**\
-.NET Core Runtime (uygulamanızla birlikte dağıtılır) yalnızca uygulamanızın yeni bir sürümünü yayınlayarak yükseltilebilir. .NET Core Runtime'a güvenlik yamaları için uygulamanızın güncelleştirilmiş bir sürümünü sağlamaktan siz sorumlusunuz.
+- **.NET Core sürümünü güncelleştirmek daha zordur**\
+.NET Core çalışma zamanı (uygulamanızla birlikte dağıtılır) yalnızca uygulamanızın yeni bir sürümü serbest bırakılarak yükseltilebilir. .NET Core çalışma zamanına yönelik güvenlik düzeltme ekleri için uygulamanızın güncelleştirilmiş bir sürümünü sağlamaktan sorumlu olursunuz.
 
 ### <a name="examples"></a>Örnekler
 
-Kendi kendine yeten bir uygulama yayımlayın. MacOS 64 bit çalıştırılabilir bir oluşturulur.
+Kendisini içeren bir uygulama yayımlayın. MacOS 64 bit yürütülebilir dosyası oluşturulur.
 
 ```dotnet
 dotnet publish -r osx-x64
 ```
 
-Kendi kendine yeten bir uygulama yayımlayın. Windows 64 bit çalıştırılabilir oluşturulur.
+Kendisini içeren bir uygulama yayımlayın. Windows 64 bit yürütülebilir dosyası oluşturulur.
 
 ```dotnet
 dotnet publish -r win-x64
@@ -150,8 +150,7 @@ dotnet publish -r win-x64
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core CLI ile .NET Çekirdek Uygulamalarını dağıtma.](deploy-with-cli.md)
-- [.NET Core Apps'ı Visual Studio ile dağıtma.](deploy-with-vs.md)
-- [Paketler, Metapaketler ve Çerçeveler.](../packages.md)
-- [.NET Core Runtime Tanımlayıcı (RID) kataloğu.](../rid-catalog.md)
-- [Kullanmak için .NET Core sürümünü seçin.](../versions/selection.md)
+- [.NET Core CLI ile .NET Core uygulamaları dağıtma.](deploy-with-cli.md)
+- [Visual Studio ile .NET Core uygulamaları dağıtma.](deploy-with-vs.md)
+- [.NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu.](../rid-catalog.md)
+- [Kullanılacak .NET Core sürümünü seçin.](../versions/selection.md)

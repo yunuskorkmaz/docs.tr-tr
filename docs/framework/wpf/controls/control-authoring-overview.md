@@ -1,5 +1,6 @@
 ---
 title: Denetim Yazımına Genel Bakış
+description: Windows Presentation Foundation denetimlerinin genişletilebilirliği, özel denetimler oluşturma gereksinimini en aza indirir. Gerekirse yeni bir denetim oluşturmayı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,284 +9,284 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 600eb193613846d7eeeb626a6dfd317d2592f809
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646132"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166341"
 ---
 # <a name="control-authoring-overview"></a>Denetim yazma genel bakış
 
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Denetim modelinin genişletilebilirliği, yeni bir denetim oluşturma gereksinimini büyük ölçüde azaltır. Ancak, bazı durumlarda yine de özel bir denetim oluşturmanız gerekebilir. Bu konu, özel bir denetim oluşturma gereksiniminizi en aza indiren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]özellikleri ve 'deki farklı denetim yazma modellerini tartışır. Bu konu aynı zamanda yeni bir denetimin nasıl oluşturultur olduğunu da gösterir.
+Denetim modelinin genişletilebilirliği, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Yeni bir denetim oluşturma gereksinimini önemli ölçüde azaltır. Ancak bazı durumlarda, hala özel bir denetim oluşturmanız gerekebilir. Bu konuda, içinde özel bir denetim ve farklı denetim yazma modelleri oluşturma gereksiniminizi en aza indirecek özellikler açıklanmaktadır [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] . Bu konuda ayrıca nasıl yeni bir denetim oluşturacağınız gösterilmektedir.
 
 <a name="when_to_write_a_new_control"></a>
 
-## <a name="alternatives-to-writing-a-new-control"></a>Yeni Bir Denetim Yazmaya Alternatifler
+## <a name="alternatives-to-writing-a-new-control"></a>Yeni denetim yazma alternatifleri
 
-Tarihsel olarak, varolan bir denetimden özelleştirilmiş bir deneyim elde etmek istiyorsanız, arka plan rengi, kenarlık genişliği ve yazı tipi boyutu gibi denetimin standart özelliklerini değiştirmekle sınırlıydınız. Bir denetimin görünümünü veya davranışını bu önceden tanımlanmış parametrelerin ötesine genişletmek isterseniz, genellikle varolan bir denetimden devralma ve denetimi çizmekten sorumlu yöntemi geçersiz kılarak yeni bir denetim oluşturmanız gerekir.  Bu hala bir seçenek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olmasına rağmen, zengin içerik modelini, stillerini, şablonlarını ve tetikleyicilerini kullanarak varolan denetimleri özelleştirmenize olanak tanır. Aşağıdaki liste, bu özelliklerin yeni bir denetim oluşturmak zorunda kalmadan özel ve tutarlı deneyimler oluşturmak için nasıl kullanılabileceğini örnekler eve verir.
+Tarihsel olarak, var olan bir denetimden özelleştirilmiş bir deneyim almak isterseniz, denetimin, arka plan rengi, kenarlık genişliği ve yazı tipi boyutu gibi standart özelliklerini değiştirmekle sınırlı olursunuz. Bir denetimin görünüşünü veya davranışını bu önceden tanımlanmış parametrelerin ötesinde uzatmak istiyorsanız, genellikle var olan bir denetimden devralarak ve denetimi çizmekten sorumlu yöntemi geçersiz kılarak yeni bir denetim oluşturmanız gerekir.  Yine de bir seçenek olsa da, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] var olan denetimleri zengin içerik modeli, stiller, şablonlar ve Tetikleyiciler kullanarak özelleştirmenize olanak sağlar. Aşağıdaki listede, bu özelliklerin yeni bir denetim oluşturmak zorunda kalmadan özel ve tutarlı deneyimler oluşturmak için nasıl kullanılabileceği hakkında örnekler verilmektedir.
 
-- **Zengin İçerik.** Standart [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerin çoğu zengin içeriği destekler. Örneğin, bir <xref:System.Windows.Controls.Button> içerik özelliği türündedir, <xref:System.Object>bu nedenle teorik olarak <xref:System.Windows.Controls.Button>her şey bir .  Bir düğmenin bir görüntüyü ve metni görüntülemesi <xref:System.Windows.Controls.TextBlock> için, <xref:System.Windows.Controls.StackPanel> bir görüntü <xref:System.Windows.Controls.StackPanel> ve <xref:System.Windows.Controls.ContentControl.Content%2A> a'ya bir görüntü ekleyebilir ve özelliğiata atayabilirsiniz. Denetimler görsel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] öğeleri ve rasgele verileri görüntüleyebildiği için, yeni bir denetim oluşturmak veya karmaşık bir görselleştirmeyi desteklemek için varolan denetimi değiştirmek için daha az gereksinim vardır. İçerik modeli ve diğer <xref:System.Windows.Controls.Button> içerik modelleri hakkında [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]daha fazla bilgi için [WPF İçerik Modeli'ne](wpf-content-model.md)bakın.
+- **Zengin Içerik.** Standart [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerin birçoğu zengin içerikleri destekler. Örneğin, öğesinin içerik özelliği <xref:System.Windows.Controls.Button> türündedir <xref:System.Object> , bu nedenle teorik olarak her şey bir üzerinde görüntülenebilir <xref:System.Windows.Controls.Button> .  Bir düğmenin bir görüntü ve metin görüntülemesi için, bir görüntü ve a ekleyebilir <xref:System.Windows.Controls.TextBlock> <xref:System.Windows.Controls.StackPanel> ve <xref:System.Windows.Controls.StackPanel> <xref:System.Windows.Controls.ContentControl.Content%2A> özelliğini özelliğine atayabilirsiniz. Denetimler [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görsel öğeleri ve rastgele verileri görüntüleyeceğinden, yeni bir denetim oluşturmanız veya var olan bir denetimi karmaşık görselleştirmeyi destekleyecek şekilde değiştirmeniz daha az olabilir. ' Deki içerik modeli <xref:System.Windows.Controls.Button> ve içindeki diğer içerik modelleri hakkında daha fazla bilgi için [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bkz. [WPF içerik modeli](wpf-content-model.md).
 
-- **Stil.** A, <xref:System.Windows.Style> denetim in özelliklerini temsil eden değerler topluluğudur. Stilleri kullanarak, yeni bir denetim yazmadan istenen denetim görünümünün ve davranışının yeniden kullanılabilir bir temsilini oluşturabilirsiniz. Örneğin, tüm denetimlerinizin <xref:System.Windows.Controls.TextBlock> kırmızı, yazı tipi boyutu 14 olan Arial yazı tipine sahip olmasını istediğinizi varsayalım. Kaynak olarak bir stil oluşturabilir ve uygun özellikleri buna göre ayarlayabilirsiniz. Daha <xref:System.Windows.Controls.TextBlock> sonra uygulamanıza eklediğiniz her şey aynı görünüme sahip olacaktır.
+- **Stillerde.** <xref:System.Windows.Style>, Bir denetimin özelliklerini temsil eden bir değerler koleksiyonudur. Stilleri kullanarak, istenen denetim görünümü ve davranışı için yeni bir denetim yazmadan yeniden kullanılabilir bir temsili oluşturabilirsiniz. Örneğin, tüm <xref:System.Windows.Controls.TextBlock> denetimlerinizin, 14 yazı tipi boyutuyla kırmızı, Arial yazı tipine sahip olmasını istediğinizi varsayalım. Kaynak olarak bir stil oluşturabilir ve uygun özellikleri uygun şekilde ayarlayabilirsiniz. Sonra <xref:System.Windows.Controls.TextBlock> uygulamanıza eklediğiniz her bir görünüm aynı olur.
 
-- **Veri Şablonları.** A, <xref:System.Windows.DataTemplate> verilerin denetimde nasıl görüntüleneceğini özelleştirmenize olanak tanır. Örneğin, bir <xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.ListBox>' de verilerin nasıl görüntüleneceğini belirtmek için kullanılabilir.  Bunun bir örneği için [bkz.](../data/data-templating-overview.md)  Verilerin görünümünü özelleştirmenin yanı sıra, <xref:System.Windows.DataTemplate> özel kullanıcı arama larında çok fazla esneklik sağlayan Kullanıcı Bira öğeleri de içerebilir.  Örneğin, bir <xref:System.Windows.DataTemplate>, her öğenin <xref:System.Windows.Controls.ComboBox> bir onay kutusu içerdiği bir oluşturabilirsiniz.
+- **Veri şablonları.** Bir <xref:System.Windows.DataTemplate> denetimde verilerin nasıl görüntülendiğini özelleştirmenizi sağlar. Örneğin, bir, ' <xref:System.Windows.DataTemplate> de verilerin nasıl görüntüleneceğini belirtmek için kullanılabilir <xref:System.Windows.Controls.ListBox> .  Buna bir örnek için bkz. [veri şablonu oluşturmaya genel bakış](../data/data-templating-overview.md).  Verilerin görünümünü özelleştirmenin yanı sıra, <xref:System.Windows.DataTemplate> özel uıof 'ta çok sayıda esneklik sağlayan UI öğeleri içerebilir.  Örneğin, bir kullanarak <xref:System.Windows.DataTemplate> , <xref:System.Windows.Controls.ComboBox> her bir öğenin bir onay kutusu içerdiği bir oluşturabilirsiniz.
 
-- **Denetim Şablonları.** Denetimin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] görünümünü <xref:System.Windows.Controls.ControlTemplate> denetimin işlevselliğinden ayıran denetimin yapısını ve görünümünü tanımlamak için kullanılan birçok denetim. Büyük ölçüde onun <xref:System.Windows.Controls.ControlTemplate>yeniden tanımlayarak bir denetim görünümünü değiştirebilirsiniz.  Örneğin, stop lambası gibi görünen bir denetim istediğinizi varsayalım. Bu denetim basit bir kullanıcı arabirimi ve işlevselliği vardır.  Denetim üç dairedir ve bunlardan yalnızca biri aynı anda aydınlatılabilir. Biraz düşündükten sonra, bir <xref:System.Windows.Controls.RadioButton> seferde seçilen yalnızca bir işlevsellik sunuyor fark edebilirsiniz, ancak varsayılan görünüm bir stoplight ışıklar gibi <xref:System.Windows.Controls.RadioButton> görünüyor.  Görünümünü <xref:System.Windows.Controls.RadioButton> tanımlamak için bir denetim şablonu kullandığından, denetimgereksinimlerini karşılamak için yeniden <xref:System.Windows.Controls.ControlTemplate> tanımlamak ve stoplambanızı yapmak için radyo düğmelerini kullanmak kolaydır.
+- **Denetim şablonları.** İçindeki pek çok denetim, denetimin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] işlevselliğiyle denetimin bir denetimin <xref:System.Windows.Controls.ControlTemplate> görünüşünü ayıran denetimin yapısını ve görünümünü tanımlamak için kullanır. Denetimin görünümünü büyük ölçüde tekrar tanımlayarak değiştirebilirsiniz <xref:System.Windows.Controls.ControlTemplate> .  Örneğin, bir denetim ışığı gibi görünen bir denetim istediğinizi varsayalım. Bu denetimde basit bir kullanıcı arabirimi ve işlevselliği vardır.  Denetim üç dairedir, tek seferde yalnızca bir tane olabilir. Bazı yansımalardan sonra, bir <xref:System.Windows.Controls.RadioButton> kerede yalnızca bir tane seçilmekte olan işlevi sunduğunu fark edebilirsiniz, ancak varsayılan görünümü bir <xref:System.Windows.Controls.RadioButton> trafik ışığı üzerindeki ışıklar gibi görünmüyor.  , <xref:System.Windows.Controls.RadioButton> Görünümünü tanımlamak için bir denetim şablonu kullandığından, <xref:System.Windows.Controls.ControlTemplate> denetimin gereksinimlerine uyacak şekilde öğesini yeniden tanımlamak ve trafik durma alanınızı açmak için radyo düğmelerini kullanmak kolaydır.
 
   > [!NOTE]
-  > A, <xref:System.Windows.Controls.RadioButton> a <xref:System.Windows.DataTemplate> <xref:System.Windows.DataTemplate> bu örnekte yeterli olmasa da.  Denetim <xref:System.Windows.DataTemplate> içeriğinin görünümünü tanımlar. Bir <xref:System.Windows.Controls.RadioButton>durumunda , içerik seçilip <xref:System.Windows.Controls.RadioButton> seçilmediğini gösteren dairenin sağında görünen şeydir.  Stoplight örneğinde, radyo düğmesinin sadece "yanabilen" bir daire olması gerekir. Stop lambası için görünüm gereksinimi varsayılan görünümden <xref:System.Windows.Controls.RadioButton>çok farklı olduğundan, yeniden <xref:System.Windows.Controls.ControlTemplate>tanımlamak gerekir.  Genel olarak <xref:System.Windows.DataTemplate> a, bir denetimin içeriğini (veya verilerini) <xref:System.Windows.Controls.ControlTemplate> tanımlamak için kullanılır ve bir denetimin nasıl yapılandırılacağını tanımlamak için kullanılır.
+  > , Bir <xref:System.Windows.Controls.RadioButton> kullanabilir ancak <xref:System.Windows.DataTemplate> , <xref:System.Windows.DataTemplate> Bu örnekte yeterli değildir.  , <xref:System.Windows.DataTemplate> Bir denetimin içeriğinin görünümünü tanımlar. Bir durumunda <xref:System.Windows.Controls.RadioButton> , içerik seçili olup olmadığını gösteren dairenin sağında görüntülenir <xref:System.Windows.Controls.RadioButton> .  Trafik ışığı örneğinde radyo düğmesi yalnızca "hafif" bir daire olmalıdır. Durma ışığı için görünüm gereksinimi, ' nin varsayılan görünümüyle farklı olduğundan, <xref:System.Windows.Controls.RadioButton> öğesini yeniden tanımlamak gerekir <xref:System.Windows.Controls.ControlTemplate> .  Genel a <xref:System.Windows.DataTemplate> , bir denetimin içeriğini (veya verilerini) tanımlamak için kullanılır ve bir <xref:System.Windows.Controls.ControlTemplate> denetimin nasıl yapılandırıldığını tanımlamak için kullanılır.
 
-- **Tetikleyiciler.** A, <xref:System.Windows.Trigger> yeni bir denetim oluşturmadan denetimin görünümünü ve davranışını dinamik olarak değiştirmenize olanak tanır. Örneğin, uygulamanızda birden <xref:System.Windows.Controls.ListBox> çok denetiminiz olduğunu ve <xref:System.Windows.Controls.ListBox> her bir indeki öğelerin seçildiğinde kalın ve kırmızı olmasını istediğinizi varsayalım. İlk içgüdünüz, seçili öğenin <xref:System.Windows.Controls.ListBox> görünümünü değiştirmek <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> için yöntemi devralan ve geçersiz kılabilecek bir sınıf oluşturmak olabilir, ancak <xref:System.Windows.Controls.ListBoxItem> daha iyi bir yaklaşım, seçili öğenin görünümünü değiştiren bir stile tetikleyici eklemektir. Tetikleyici, özellik değerlerini değiştirmenize veya bir özelliğin değerine göre eylem yapmanızı sağlar. Bir <xref:System.Windows.EventTrigger> olay meydana geldiğinde eylem yapmanızı sağlar.
+- **Tetikleyiciler.** <xref:System.Windows.Trigger>, Bir denetimin görünümünü ve davranışını yeni bir denetim oluşturmadan dinamik olarak değiştirmenize olanak sağlar. Örneğin, uygulamanızda birden çok <xref:System.Windows.Controls.ListBox> denetiminizin olduğunu ve her birinin <xref:System.Windows.Controls.ListBox> seçildikleri zaman kalın ve kırmızı olmasını istediğinizi varsayalım. İlk işlem, ' den devralan bir sınıf oluşturmak <xref:System.Windows.Controls.ListBox> ve <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> Seçilen öğenin görünümünü değiştirmek için yöntemini geçersiz kılmak, ancak daha iyi bir yaklaşım, <xref:System.Windows.Controls.ListBoxItem> Seçilen öğenin görünümünü değiştiren bir öğesinin stiline bir tetikleyici eklemektir. Tetikleyici, özellik değerlerini değiştirmenize veya bir özelliğin değerine göre eylem yapmanıza olanak sağlar. Bir <xref:System.Windows.EventTrigger> olay gerçekleştiğinde eylemler gerçekleştirmenizi sağlar.
 
-Stiller, şablonlar ve tetikleyiciler hakkında daha fazla bilgi için [bkz.](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+Stiller, şablonlar ve Tetikleyiciler hakkında daha fazla bilgi için bkz. [Stil oluşturma ve şablon](../../../desktop-wpf/fundamentals/styles-templates-overview.md)oluşturma.
 
-Genel olarak, denetiminiz varolan bir denetimin işlevselliğini yansıtıyorsa, ancak denetimin farklı görünmesini istiyorsanız, öncelikle varolan denetimin görünümünü değiştirmek için bu bölümde tartışılan yöntemlerden herhangi birini kullanıp kullanamayacağınızı düşünmelisiniz.
+Genel olarak, denetiminiz var olan bir denetimin işlevselliğini yansıtır, ancak denetimin farklı görünmesini istiyorsanız, bu bölümde açıklanan yöntemlerden herhangi birini kullanıp kullanmayacağınızı, var olan denetimin görünümünü değiştirmek için göz önünde bulundurmanız gerekir.
 
 <a name="models_for_control_authoring"></a>
 
-## <a name="models-for-control-authoring"></a>Denetim Yazma Modelleri
+## <a name="models-for-control-authoring"></a>Denetim yazma modelleri
 
-Zengin içerik modeli, stilleri, şablonları ve tetikleyicileri, yeni bir denetim oluşturma gereksinimini en aza indirir. Ancak, yeni bir denetim oluşturmanız gerekiyorsa, farklı denetim yazma modellerini [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]anlamak önemlidir. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]her biri farklı özellikler ve esneklik düzeyi sağlayan bir denetim oluşturmak için üç genel model sağlar. Üç model için temel <xref:System.Windows.Controls.UserControl>sınıflar <xref:System.Windows.Controls.Control>, <xref:System.Windows.FrameworkElement>, ve .
+Zengin içerik modeli, stiller, şablonlar ve Tetikleyiciler, yeni bir denetim oluşturmanız gereksinimini en aza indirir. Ancak, yeni bir denetim oluşturmanız gerekiyorsa, içinde farklı denetim yazma modellerinin anlaşılması önemlidir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] . [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], her biri farklı bir özellik kümesi ve esneklik düzeyi sağlayan denetim oluşturmak için üç genel model sağlar. Üç modelin temel sınıfları, ve ' dir <xref:System.Windows.Controls.UserControl> <xref:System.Windows.Controls.Control> <xref:System.Windows.FrameworkElement> .
 
-### <a name="deriving-from-usercontrol"></a>UserControl'den Türeyen
+### <a name="deriving-from-usercontrol"></a>UserControl 'ten türetme
 
-Bir denetim [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oluşturmanın en basit <xref:System.Windows.Controls.UserControl>yolu. Devralan bir denetim <xref:System.Windows.Controls.UserControl>oluşturduğunuzda, varolan bileşenleri <xref:System.Windows.Controls.UserControl>, bileşenleri adlandırmave başvuru olay [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]işleyicileri ekleyin. Daha sonra adlandırılmış öğelere başvuru yapabilir ve koddaki olay işleyicilerini tanımlayabilirsiniz. Bu geliştirme modeli, uygulama geliştirme için kullanılan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]modele çok benzer.
+' De bir denetim oluşturmanın en kolay yolu, ' [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] den türetmektir <xref:System.Windows.Controls.UserControl> . Öğesinden devralan bir denetim oluşturduğunuzda, <xref:System.Windows.Controls.UserControl> var olan bileşenleri <xref:System.Windows.Controls.UserControl> içine ekleyin, bileşenleri adlandırın ve içindeki olay işleyicilerini başvuru yapın [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] . Daha sonra adlandırılmış öğelere başvurabilir ve koddaki olay işleyicilerini tanımlayabilirsiniz. Bu geliştirme modeli, içinde uygulama geliştirme için kullanılan modele çok benzer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .
 
-Doğru bir şekilde <xref:System.Windows.Controls.UserControl> oluşturulursa, zengin içeriğin, stillerin ve tetikleyicilerin avantajlarından yararlanabilir. Ancak, denetiminiz <xref:System.Windows.Controls.UserControl>devralırsa, denetiminizi kullanan kişiler bir <xref:System.Windows.DataTemplate> kişiyi kullanamaz <xref:System.Windows.Controls.ControlTemplate> veya görünümünü özelleştiremez.  Şablonları destekleyen özel bir <xref:System.Windows.Controls.Control> denetim oluşturmak için sınıftan <xref:System.Windows.Controls.UserControl>veya türetilmiş sınıflarından (diğer) türemiş olması gerekir.
+Doğru şekilde oluşturulıyorsa, <xref:System.Windows.Controls.UserControl> zengin içerik, stiller ve tetikleyicilerin avantajlarından faydalanabilirsiniz. Ancak, denetiminiz öğesinden devralırsa <xref:System.Windows.Controls.UserControl> , denetiminizi kullanan kişiler <xref:System.Windows.DataTemplate> <xref:System.Windows.Controls.ControlTemplate> görünümünü özelleştirmek için bir veya kullanamaz.  <xref:System.Windows.Controls.Control> <xref:System.Windows.Controls.UserControl> Şablonları destekleyen özel bir denetim oluşturmak için sınıfından veya türetilmiş sınıflarından birinden (dışında) türetmeniz gerekir.
 
-#### <a name="benefits-of-deriving-from-usercontrol"></a>UserControl'den Türeyen Faydaları
+#### <a name="benefits-of-deriving-from-usercontrol"></a>UserControl 'dan Türetmenin avantajları
 
-Aşağıdakilerin tümü <xref:System.Windows.Controls.UserControl> geçerliyse, aşağıdakilerden kaynaklanın:
+Aşağıdakilerin tümü uygulandıysanız ' dan türetmeyi göz önünde bulundurun <xref:System.Windows.Controls.UserControl> :
 
-- Denetiminizi, bir uygulamayı nasıl oluşturduğunuza benzer şekilde oluşturmak istiyorsunuz.
+- Bir uygulamayı nasıl derlemenize benzer şekilde denetiminizi oluşturmak istersiniz.
 
-- Denetiminiz yalnızca varolan bileşenlerden oluşur.
+- Denetiminiz yalnızca mevcut bileşenlerden oluşur.
 
-- Karmaşık özelleştirmeyi desteklemeniz gerekmez.
+- Karmaşık özelleştirmeyi desteklemek zorunda değilsiniz.
 
-### <a name="deriving-from-control"></a>Kontrolden Türeyen
+### <a name="deriving-from-control"></a>Denetimden türetme
 
-Sınıftan <xref:System.Windows.Controls.Control> türeyen model, varolan [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetimlerin çoğu tarafından kullanılan modeldir. <xref:System.Windows.Controls.Control> Sınıftan devralan bir denetim oluşturduğunuzda, şablonları kullanarak görünümünü tanımlarsınız. Bunu yaparak, çalışma mantığını görsel gösterimden ayırırsınız. Ayrıca, olaylar yerine komutlar ve bağlamalar kullanarak ve mümkün <xref:System.Windows.Controls.ControlTemplate> olduğunca referans öğeleri kaçınarak UI ve mantığın ayrıştırılması sağlayabilirsiniz.  Kullanıcı GÖn'ü ve denetiminizin mantığı düzgün bir şekilde ayrılmışsa, denetiminizdeki <xref:System.Windows.Controls.ControlTemplate> bir kullanıcı denetimin görünümünü özelleştirmek için denetimi yeniden tanımlayabilir. Bir özel <xref:System.Windows.Controls.Control> bina kadar basit olmasa <xref:System.Windows.Controls.UserControl>da, <xref:System.Windows.Controls.Control> bir özel en esnekliği sağlar.
+Sınıfından türetmek, <xref:System.Windows.Controls.Control> varolan denetimlerin çoğu tarafından kullanılan modeldir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] . Sınıfından devralan bir denetim oluşturduğunuzda <xref:System.Windows.Controls.Control> , görünümünü şablonlar kullanarak tanımlarsınız. Bunu yaptığınızda, işlemsel mantığı görsel gösterimden ayırdığınızda. Ayrıca, olaylar yerine komutları ve bağlamaları kullanarak ve mümkün olan her durumda öğelere başvurmaktan kaçınarak UI ve mantığın ayrılmasıyla emin olabilirsiniz <xref:System.Windows.Controls.ControlTemplate> .  Denetiminizin kullanıcı ARABIRIMI ve mantığı düzgün şekilde ayrıldıysanız, denetiminizin bir kullanıcısı, <xref:System.Windows.Controls.ControlTemplate> görünümünü özelleştirmek için denetimi yeniden tanımlayabilir. Özel derleme, oluşturma <xref:System.Windows.Controls.Control> kadar basit olmasa da <xref:System.Windows.Controls.UserControl> , özel bir <xref:System.Windows.Controls.Control> en esnekliği sağlar.
 
-#### <a name="benefits-of-deriving-from-control"></a>Kontrolden Elde Edilen Faydaları
+#### <a name="benefits-of-deriving-from-control"></a>Denetimden Türetmenin avantajları
 
-Aşağıdakilerden herhangi <xref:System.Windows.Controls.Control> biri uygulanıyorsa <xref:System.Windows.Controls.UserControl> sınıfı kullanmak yerine elde etmeyi düşünün:
+<xref:System.Windows.Controls.Control>Aşağıdakilerden birini uyguladığınızda sınıfını kullanmak yerine ' den türetmeyi göz önünde bulundurun <xref:System.Windows.Controls.UserControl> :
 
-- Denetiminizin görünümünün <xref:System.Windows.Controls.ControlTemplate>.
+- Denetiminizin görünümünün aracılığıyla özelleştirilebilir olmasını istiyorsunuz <xref:System.Windows.Controls.ControlTemplate> .
 
 - Denetiminizin farklı temaları desteklemesini istiyorsunuz.
 
-### <a name="deriving-from-frameworkelement"></a>FrameworkElement'den Türeyen
+### <a name="deriving-from-frameworkelement"></a>FrameworkElement 'ten türetme
 
-Varolan öğelerden <xref:System.Windows.Controls.UserControl> <xref:System.Windows.Controls.Control> türeyen veya bu öğelerin besteedilmesine dayanan denetimler. Birçok senaryo için bu kabul edilebilir bir çözümdür, <xref:System.Windows.FrameworkElement> çünkü devralan <xref:System.Windows.Controls.ControlTemplate>herhangi bir nesne bir . Ancak, bir denetimin görünümünün basit öğe bileşiminin işlevselliğinden daha fazlasını gerektirdiği zamanlar vardır. Bu senaryolar için, bir <xref:System.Windows.FrameworkElement> bileşeni temel alma doğru seçimdir.
+<xref:System.Windows.Controls.UserControl>Var olan öğeleri oluşturma işleminden türetilen veya bunları temel alan denetimler <xref:System.Windows.Controls.Control> . Birçok senaryoda, ' den devralan herhangi bir nesne bir içinde olabileceğinden, bu, kabul edilebilir bir çözümdür <xref:System.Windows.FrameworkElement> <xref:System.Windows.Controls.ControlTemplate> . Ancak, bir denetimin görünümü basit öğe kompozisyonunun işlevlerinden daha fazlasını gerektirdiğinde zaman vardır. Bu senaryolar için, bir bileşeni temel alan <xref:System.Windows.FrameworkElement> doğru tercih edilir.
 
-Yapı tabanlı bileşenler için <xref:System.Windows.FrameworkElement>iki standart yöntem vardır: doğrudan işleme ve özel öğe kompozisyonu. Doğrudan işleme, bileşen <xref:System.Windows.UIElement.OnRender%2A> görsellerini <xref:System.Windows.FrameworkElement> açıkça <xref:System.Windows.Media.DrawingContext> tanımlayan yöntemin geçersiz kılınması ve işlemlerin sağlanmasını içerir. Bu yöntem tarafından <xref:System.Windows.Controls.Image> kullanılan <xref:System.Windows.Controls.Border>ve . Özel öğe bileşimi, bileşeninizin görünümünü oluşturmak için tür <xref:System.Windows.Media.Visual> nesneleri kullanmayı içerir. Örneğin, [bkz. ÇizimGörsel Nesneleri Kullanma.](../graphics-multimedia/using-drawingvisual-objects.md) <xref:System.Windows.Controls.Primitives.Track>özel öğe kompozisyonu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kullanan bir denetim örneğidir. Doğrudan işleme ve özel eleman kompozisyonu aynı denetimde karıştırmak da mümkündür.
+Yapı tabanlı bileşenler için iki standart yöntem vardır <xref:System.Windows.FrameworkElement> : doğrudan işleme ve özel öğe oluşturma. Doğrudan işleme yöntemi geçersiz kılmayı <xref:System.Windows.UIElement.OnRender%2A> <xref:System.Windows.FrameworkElement> ve <xref:System.Windows.Media.DrawingContext> bileşen görsellerini açıkça tanımlayan işlemleri sağlamayı içerir. Bu, ve tarafından kullanılan yöntemidir <xref:System.Windows.Controls.Image> <xref:System.Windows.Controls.Border> . Özel öğe kompozisyonu <xref:System.Windows.Media.Visual> , bileşeninizin görünümünü oluşturmak için türündeki nesnelerin kullanımını içerir. Bir örnek için bkz. [DrawingVisual nesnelerini kullanma](../graphics-multimedia/using-drawingvisual-objects.md). <xref:System.Windows.Controls.Primitives.Track>, içinde [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özel öğe kompozisyonu kullanan bir denetimin örneğidir. Aynı denetimde doğrudan işleme ve özel öğe oluşturmayı karıştırmak da mümkündür.
 
-#### <a name="benefits-of-deriving-from-frameworkelement"></a>FrameworkElement'den Türemanın Faydaları
+#### <a name="benefits-of-deriving-from-frameworkelement"></a>FrameworkElement 'ten Türetmenin avantajları
 
-Aşağıdakilerden herhangi <xref:System.Windows.FrameworkElement> biri geçerliyse, aşağıdakilerden birini kullanmayı düşünün:
+Aşağıdakilerden birini uyguladığınızda ' den türetmeyi göz önünde bulundurun <xref:System.Windows.FrameworkElement> :
 
-- Basit öğe bileşimi tarafından sağlananın ötesinde, denetiminizin görünümü üzerinde kesin denetime sahip olmak istiyorsunuz.
+- Denetimin görünümü üzerinde basit öğe kompozisyonu tarafından sağlananların ötesinde kesin denetim sahibi olmak istiyorsunuz.
 
-- Kendi render mantığınızı tanımlayarak denetiminizin görünümünü tanımlamak istiyorsunuz.
+- Kendi oluşturma mantığınızı tanımlayarak denetiminizin görünümünü tanımlamak istiyorsunuz.
 
-- Varolan öğeleri, mümkün olanın ötesine geçecek yeni <xref:System.Windows.Controls.UserControl> <xref:System.Windows.Controls.Control>yollarla oluşturmak istiyorsunuz.
+- Ve ile mümkün olan unsurların ötesine geçen önemli yollarla mevcut öğeleri oluşturmak istersiniz <xref:System.Windows.Controls.UserControl> <xref:System.Windows.Controls.Control> .
 
 <a name="control_authoring_basics"></a>
 
 ## <a name="control-authoring-basics"></a>Denetim Yazma Temelleri
 
-Daha önce de ele alındığı gibi, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en güçlü özelliklerinden biri, görünümünü ve davranışını değiştirmek için bir denetimin temel özelliklerini ayarlamanın ötesine geçebilmektir, ancak yine de özel bir denetim oluşturmaya gerek yoktur. Stil, veri bağlama ve tetikleyici özellikleri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi ve [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay sistemi tarafından mümkün kılınmaktadır. Aşağıdaki bölümler, özel denetimi oluşturmak için kullandığınız modelden bağımsız olarak izlemeniz gereken bazı uygulamaları açıklar, böylece özel denetiminizdeki kullanıcılar bu özellikleri tıpkı [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]bu özellikleri, bir denetimde olduğu gibi kullanabilirler.
+Daha önce anlatıldığı gibi, en güçlü özelliklerinden biri [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de bir denetimin temel özelliklerinin, görünümünü ve davranışını değiştirmek, ancak yine de özel bir denetim oluşturmaya gerek yoktur. Stil, veri bağlama ve tetikleyici özellikleri, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik sistemi ve olay sistemi tarafından mümkün hale getirilir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] . Aşağıdaki bölümlerde, özel denetim oluşturmak için kullandığınız model ne olursa olsun, özel denetim kullanıcılarının, bu özellikleri ' de bulunan bir denetim için yaptıkları gibi kullanabilmesi için, izlemeniz gereken bazı yöntemler açıklanır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .
 
-### <a name="use-dependency-properties"></a>Bağımlılık Özelliklerini Kullanma
+### <a name="use-dependency-properties"></a>Bağımlılık özelliklerini kullanma
 
-Bir özellik bir bağımlılık özelliği olduğunda, aşağıdakileri yapmak mümkündür:
+Bir özellik bir bağımlılık özelliği olduğunda, şunları yapmak mümkündür:
 
-- Özelliği bir tarzda ayarlayın.
+- Bir stilde özelliği ayarlayın.
 
-- Özelliği bir veri kaynağına bağla.
+- Özelliği bir veri kaynağına bağlayın.
 
 - Özelliğin değeri olarak dinamik bir kaynak kullanın.
 
-- Mülkü canlandırın.
+- Özelliği canlandırın.
 
-Bu işlevselliklerden herhangi birini desteklemek için denetiminizin bir özelliğini istiyorsanız, bunu bir bağımlılık özelliği olarak uygulamanız gerekir. Aşağıdaki örnek, aşağıdakileri yaparak `Value` adlı bir bağımlılık özelliği tanımlar:
+Denetiminizin bir özelliğinin bu işlevlerden herhangi birini desteklemesini istiyorsanız, bunu bir bağımlılık özelliği olarak uygulamalısınız. Aşağıdaki örnek, aşağıdaki işlemleri gerçekleştirerek adlı bir bağımlılık özelliğini tanımlar `Value` :
 
-- Alan <xref:System.Windows.DependencyProperty> olarak adlandırılan `ValueProperty` bir `public` `static` `readonly` tanımlayıcı tanımlayın.
+- <xref:System.Windows.DependencyProperty>Alan olarak adlandırılan bir tanımlayıcı tanımlayın `ValueProperty` `public` `static` `readonly` .
 
-- Aşağıdakileri belirtmek için, emlak sistemine, arayarak <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType>özellik adını kaydedin:
+- Aşağıdaki belirtmek için, özellik adını çağırarak özellik sistemiyle kaydedin <xref:System.Windows.DependencyProperty.Register%2A?displayProperty=nameWithType> :
 
   - Özelliğin adı.
 
   - Özelliğin türü.
 
-  - Mülkün sahibi olan tür.
+  - Özelliğin sahibi olan tür.
 
-  - Özellik için meta veriler. Meta veriler özelliğin varsayılan değerini içerir, <xref:System.Windows.CoerceValueCallback> <xref:System.Windows.PropertyChangedCallback>a ve a .
+  - Özelliğin meta verileri. Meta veriler, özelliğinin varsayılan değerini, a ve, içerir <xref:System.Windows.CoerceValueCallback> <xref:System.Windows.PropertyChangedCallback> .
 
-- Özelliğin `get` ve `set` erişimedenlerin `Value`uygulanmasını uygulayarak bağımlılık özelliğini kaydetmek için kullanılan aynı ad olan CLR sarıcı özelliğini tanımlayın. `get` Ve `set` erişimedenlerin yalnızca ve <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> sırasıyla aramalarını unutmayın. Bağımlılık özelliklerinin erişimcilerin ek mantık içermemesi önerilir, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] çünkü istemciler ve erişimcileri <xref:System.Windows.DependencyObject.SetValue%2A> atlayabilir ve doğrudan arayabilir. <xref:System.Windows.DependencyObject.GetValue%2A> Örneğin, bir özellik bir veri kaynağına bağlı olduğunda, özelliğin `set` erişimcisi çağrılmaz.  Erişime erişim ve erişime ek mantık eklemek <xref:System.Windows.ValidateValueCallback>yerine, değiştiğinde değeri yanıtlamak veya denetlemek için , ve <xref:System.Windows.CoerceValueCallback> <xref:System.Windows.PropertyChangedCallback> temsilciler kullanın.  Bu geri aramalarla ilgili daha fazla bilgi için Bağımlılık [Özelliği Geri Aramaları ve Doğrulama'ya](../advanced/dependency-property-callbacks-and-validation.md)bakın.
+- `Value`Özellik ve erişimcileri uygulayarak bağımlılık özelliğini kaydetmek için kullanılan aynı ada sahip adlı BIR clr sarmalayıcı özelliği tanımlayın `get` `set` . `get`Ve `set` erişimcilerinin yalnızca ve sırasıyla çağrı olduğunu unutmayın <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> . Bağımlılık özellikleri erişimcilerinin, istemciler için ek mantık içermemesi ve bu nedenle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erişimcileri ve çağrı ve doğrudan çağırabileceğinden bu önerilir <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> . Örneğin, bir özellik bir veri kaynağına bağlandığında, özelliğin `set` erişimcisi çağrılmaz.  Get ve set erişimcilerine ek mantık eklemek yerine,,,, ve ' ı, <xref:System.Windows.ValidateValueCallback> <xref:System.Windows.CoerceValueCallback> <xref:System.Windows.PropertyChangedCallback> değiştiğinde değerini yanıtlamak veya denetlemek için kullanın.  Bu geri çağrılar hakkında daha fazla bilgi için bkz. [bağımlılık özelliği geri çağırmaları ve doğrulama](../advanced/dependency-property-callbacks-and-validation.md).
 
-- Adlandırılmış `CoerceValue`için <xref:System.Windows.CoerceValueCallback> bir yöntem tanımlayın. `CoerceValue`'den `Value` daha büyük veya `MinValue` eşit ve daha `MaxValue`az veya eşit olmasını sağlar.
+- Adlandırılmış için bir yöntem tanımlayın <xref:System.Windows.CoerceValueCallback> `CoerceValue` . `CoerceValue`Bunun daha `Value` büyük veya eşit ya da `MinValue` daha küçük veya eşit olmasını sağlar `MaxValue` .
 
-- <xref:System.Windows.PropertyChangedCallback>, adlı için bir `OnValueChanged`yöntem tanımlayın. `OnValueChanged`bir <xref:System.Windows.RoutedPropertyChangedEventArgs%601> nesne oluşturur ve yönlendirilen `ValueChanged` olayı yükseltmeye hazırlanır. Yönlendirilen olaylar sonraki bölümde ele alınmıştır.
+- Adlı için bir yöntem tanımlayın <xref:System.Windows.PropertyChangedCallback> `OnValueChanged` . `OnValueChanged`bir <xref:System.Windows.RoutedPropertyChangedEventArgs%601> nesnesi oluşturur ve yönlendirilmiş olayı yükseltmek için hazırlar `ValueChanged` . Yönlendirilmiş olaylar, sonraki bölümde ele alınmıştır.
 
 [!code-csharp[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
 [!code-vb[UserControlNumericUpDown#DependencyProperty](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]
 
-Daha fazla bilgi için [bkz.](../advanced/custom-dependency-properties.md)
+Daha fazla bilgi için bkz. [Özel bağımlılık özellikleri](../advanced/custom-dependency-properties.md).
 
-### <a name="use-routed-events"></a>Yönlendirilen Olayları Kullanma
+### <a name="use-routed-events"></a>Yönlendirilmiş olayları kullanma
 
-Bağımlılık özelliklerinin ek işlevsellikle CLR özellikleri kavramını genişletmesi gibi, yönlendirilen olaylar da standart CLR olayları kavramını genişletir. Yeni [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bir denetim oluşturduğunuzda, yönlendirilen bir olay aşağıdaki davranışı desteklediğinden, olayınızı yönlendirilmiş bir olay olarak uygulamak da iyi bir uygulamadır:
+Bağımlılık özellikleri, CLR özelliklerinin kavramını ek işlevlerle genişletmenin yanı da, yönlendirilmiş olaylar standart CLR olayları kavramını uzatır. Yeni bir [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] denetim oluşturduğunuzda, yönlendirilmiş bir olay aşağıdaki davranışı desteklediğinden, olayınızı yönlendirilmiş bir olay olarak uygulamak da iyi bir uygulamadır:
 
-- Olaylar, birden çok denetimin üst öğesinde işlenebilir. Bir olay köpüren bir olaysa, öğe ağacındaki tek bir üst öğe olaya abone olabilir. Daha sonra uygulama yazarları birden çok denetim olayına yanıt vermek için bir işleyici kullanabilirsiniz. Örneğin, denetiminiz her maddenin bir <xref:System.Windows.Controls.ListBox> parçasıysa (bir maddeye dahil <xref:System.Windows.DataTemplate>olduğundan), uygulama geliştiricisi denetiminizin olayı nın <xref:System.Windows.Controls.ListBox>olay ını tanımlayabilir. Olay denetimlerden herhangi birinde oluştuğunda, olay işleyicisi çağrılır.
+- Olaylar, birden fazla denetimin üst öğesi üzerinde işlenebilir. Bir olay bir kabarcıklanma olayıdır, öğe ağacındaki tek bir üst öğe olaya abone olabilir. Ardından, uygulama yazarları birden çok denetimin olayına yanıt vermek için bir işleyici kullanabilir. Örneğin, denetiminiz bir içindeki her öğenin parçasıysa <xref:System.Windows.Controls.ListBox> (bir ' a dahil edildiği için <xref:System.Windows.DataTemplate> ), uygulama geliştiricisi, denetim olayınızın ' de olay işleyicisini tanımlayabilir <xref:System.Windows.Controls.ListBox> . Her bir denetim üzerinde olay gerçekleştiğinde olay işleyicisi çağırılır.
 
-- Yönlendirilen olaylar, uygulama <xref:System.Windows.EventSetter>geliştiricilerin bir stil içinde bir olayın işleyicisini belirtmelerini sağlayan bir , kullanılabilir.
+- Yönlendirilmiş olaylar <xref:System.Windows.EventSetter> , uygulama geliştiricilerinin bir stil içindeki bir olayın işleyicisini belirtmesini sağlayan bir ' de kullanılabilir.
 
-- Yönlendirilen olaylar kullanarak <xref:System.Windows.EventTrigger>özellikleri canlandırmak için yararlı olan [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bir , kullanılabilir . Daha fazla bilgi için [Animasyona Genel Bakış'a](../graphics-multimedia/animation-overview.md)bakın.
+- Yönlendirilmiş olaylar <xref:System.Windows.EventTrigger> , kullanarak özellikleri hareketlendirmek için yararlı olan bir içinde kullanılabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] . Daha fazla bilgi için bkz. [animasyon genel bakış](../graphics-multimedia/animation-overview.md).
 
-Aşağıdaki örnek, aşağıdakileri yaparak yönlendirilmiş bir olayı tanımlar:
+Aşağıdaki örnek aşağıdakileri yaparak bir yönlendirilmiş olayı tanımlar:
 
-- Alan <xref:System.Windows.RoutedEvent> olarak adlandırılan `ValueChangedEvent` bir `public` `static` `readonly` tanımlayıcı tanımlayın.
+- <xref:System.Windows.RoutedEvent>Alan olarak adlandırılan bir tanımlayıcı tanımlayın `ValueChangedEvent` `public` `static` `readonly` .
 
-- Yöntemi arayarak yönlendirilen <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> olayı kaydedin. Örnek, aradığında <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>aşağıdaki bilgileri belirtir:
+- Yöntemini çağırarak yönlendirilmiş olayı kaydedin <xref:System.Windows.EventManager.RegisterRoutedEvent%2A?displayProperty=nameWithType> . Örnek, çağrı sırasında aşağıdaki bilgileri belirtir <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> :
 
-  - Olayın adı `ValueChanged`.
+  - Olayın adı `ValueChanged` .
 
-  - Yönlendirme <xref:System.Windows.RoutingStrategy.Bubble>stratejisi, kaynaktaki bir olay işleyicisinin (olayı yükselten nesne) önce çağrıldığı ve daha sonra kaynağın üst öğelerindeki olay işleyicilerinin en yakın üst öğedeki olay işleyicisi ile başlayarak art arda çağrıldığı anlamına gelir.
+  - Yönlendirme stratejisi, <xref:System.Windows.RoutingStrategy.Bubble> kaynak üzerindeki bir olay işleyicisinin (olayı oluşturan nesne) ilk olarak çağrıldığı ve ardından kaynağın üst öğelerinde olay işleyicilerinin, en yakın üst öğedeki olay işleyicisiyle başlayarak birbirini izleyen şekilde çağrıldığı anlamına gelir.
 
-  - Olay işleyicisi türü, bir <xref:System.Windows.RoutedPropertyChangedEventHandler%601> <xref:System.Decimal> tür ile inşa edilir.
+  - Olay işleyicisinin türü <xref:System.Windows.RoutedPropertyChangedEventHandler%601> , bir tür ile oluşturulur <xref:System.Decimal> .
 
-  - Olayın sahip olduğu `NumericUpDown`tür.
+  - Olayın sahibi olan türü `NumericUpDown` .
 
-- Adlandırılmış `ValueChanged` ve olay alalı bildirimleri içeren herkese açık bir olayı bildirin. Örnek, <xref:System.Windows.UIElement.AddHandler%2A> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] olay hizmetlerini kullanmak <xref:System.Windows.UIElement.RemoveHandler%2A> için `remove` erişimci bildiriminde `add` ve erişimci bildiriminde çağrıda bulunur.
+- Adlı bir genel olay bildirin `ValueChanged` ve olay erişimcisi bildirimlerini içerir. Örnek, <xref:System.Windows.UIElement.AddHandler%2A> `add` <xref:System.Windows.UIElement.RemoveHandler%2A> `remove` olay hizmetlerini kullanmak için erişimci bildiriminde ve erişimci bildiriminde çağırır [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .
 
-- `ValueChanged` Olayı `OnValueChanged` yükselten korumalı, sanal bir yöntem oluşturun.
+- Olayı oluşturan adlı korumalı, sanal bir yöntem oluşturun `OnValueChanged` `ValueChanged` .
 
 [!code-csharp[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#routedevent)]
 [!code-vb[UserControlNumericUpDown#RoutedEvent](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#routedevent)]
 
-Daha fazla bilgi için, [Yönlendirilen Olaylara Genel Bakış'a](../advanced/routed-events-overview.md) bakın ve [Özel Yönlendirilmiş Etkinlik Oluşturun.](../advanced/how-to-create-a-custom-routed-event.md)
+Daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../advanced/routed-events-overview.md) ve [özel bir yönlendirilmiş olay oluşturma](../advanced/how-to-create-a-custom-routed-event.md).
 
-### <a name="use-binding"></a>Ciltleme Kullan
+### <a name="use-binding"></a>Bağlamayı kullan
 
-Denetiminizin UI'sini mantığından ayırmak için veri bağlama yı kullanmayı düşünün. Bu, özellikle bir <xref:System.Windows.Controls.ControlTemplate>. Veri bağlama yı kullandığınızda, UI'nin belirli bölümlerine koddan başvurma gereksinimini ortadan kaldırabilirsiniz. Kod, içinde <xref:System.Windows.Controls.ControlTemplate> bulunan <xref:System.Windows.Controls.ControlTemplate> ve değiştirilen öğelere başvuru yaptığında, başvurulan öğenin yeni <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.ControlTemplate>öğeye dahil edilmesi gerektiğinden, bu öğelere başvurmaktan kaçınmak iyi bir fikirdir.
+Denetiminizin Kullanıcı arabirimini mantığa ayırmak için veri bağlamayı kullanmayı düşünün. Bu, bir kullanarak denetiminizin görünümünü tanımlarsanız özellikle önemlidir <xref:System.Windows.Controls.ControlTemplate> . Veri bağlamayı kullandığınızda, koddan Kullanıcı arabiriminin belirli bölümlerine başvurma gereksinimini ortadan kaldırabiliyor olabilirsiniz. Kod içinde olan <xref:System.Windows.Controls.ControlTemplate> öğelerin başvurduğu <xref:System.Windows.Controls.ControlTemplate> ve <xref:System.Windows.Controls.ControlTemplate> değiştirildiği, başvurulan öğenin yeni içine dahil olması gerektiği için, içinde bulunan öğelerin başvurmaması iyi bir fikirdir <xref:System.Windows.Controls.ControlTemplate> .
 
-Aşağıdaki örnek, <xref:System.Windows.Controls.TextBlock> `NumericUpDown` denetimin güncelleştirmesini, ona bir ad atamasını ve textbox'ı kodda ada göre yönlendirmesini sağlar.
+Aşağıdaki örnek, <xref:System.Windows.Controls.TextBlock> `NumericUpDown` denetimin ' de bir ad atamasını ve koddaki ada göre TextBox 'a başvurmayı sağlar.
 
 [!code-xaml[UserControlNumericUpDownSimple#UIRefMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml#uirefmarkup)]
 
 [!code-csharp[UserControlNumericUpDownSimple#UIRefCode](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDownSimple/CSharp/NumericUpDown.xaml.cs#uirefcode)]
 [!code-vb[UserControlNumericUpDownSimple#UIRefCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDownSimple/VisualBasic/NumericUpDown.xaml.vb#uirefcode)]
 
-Aşağıdaki örnekte aynı şeyi gerçekleştirmek için bağlama kullanır.
+Aşağıdaki örnek, aynı şeyi gerçekleştirmek için bağlamayı kullanır.
 
 [!code-xaml[UserControlNumericUpDown#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml#binding)]
 
-Veri bağlama hakkında daha fazla bilgi için [bkz.](../../../desktop-wpf/data/data-binding-overview.md)
+Veri bağlama hakkında daha fazla bilgi için bkz. [veri bağlamaya genel bakış](../../../desktop-wpf/data/data-binding-overview.md).
 
-### <a name="design-for-designers"></a>Tasarımcılar için Tasarım
+### <a name="design-for-designers"></a>Tasarımcılar için tasarım
 
-Visual Studio için WPF Designer'da özel WPF denetimleri için destek almak için (örneğin, Özellikler penceresinde özellik düzenleme), aşağıdaki yönergeleri izleyin.  WPF Designer için geliştirme hakkında daha fazla bilgi için Visual [Studio'da Design XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)bölümüne bakın.
+Visual Studio için WPF Tasarımcısında özel WPF denetimleri için destek almak üzere (örneğin, Özellikler penceresi ile özellik düzenlemesi), bu yönergeleri izleyin.  WPF Tasarımcısı için geliştirme hakkında daha fazla bilgi için bkz. [Visual Studio 'DA xaml tasarlama](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 #### <a name="dependency-properties"></a>Bağımlılık Özellikleri
 
-CLR `get` ve `set` erişimcileri daha önce açıklandığı gibi "Bağımlılık Özelliklerini Kullan" adlı nda uyguladığından emin olun. Tasarımcılar bir bağımlılık özelliğinin varlığını algılamak için sarıcıyı kullanabilir, ancak onlar, örneğin [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ve denetim istemcileri, özelliği alırken veya ayarlarken erişimcileri aramak zorunda değildir.
+`get` `set` Daha önce AÇıKLANDıĞı gibi CLR ve erişimcileri, "bağımlılık özelliklerini kullan" bölümünde uyguladığınızdan emin olun. Tasarımcılar bir bağımlılık özelliğinin varlığını algılamak için sarmalayıcı kullanabilir, ancak bu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] özellik ve denetimin istemcileri, özelliği alırken veya ayarlarken erişimcileri çağırmak için gerekli değildir.
 
-#### <a name="attached-properties"></a>Ekli Özellikler
+#### <a name="attached-properties"></a>İliştirilmiş Özellikler
 
-Aşağıdaki yönergeleri kullanarak özel denetimler üzerinde ekli özellikleri uygulamalısınız:
+Aşağıdaki yönergeleri kullanarak özel denetimlere Ekli Özellikler uygulamalısınız:
 
-- `public` `static` `readonly` <xref:System.Windows.DependencyProperty> *PropertyName* `Property` Yöntemi kullanarak oluşturan form PropertyName bir var. <xref:System.Windows.DependencyProperty.RegisterAttached%2A> Geçirilen özellik adı <xref:System.Windows.DependencyProperty.RegisterAttached%2A> *PropertyName*ile eşleşmelidir.
+- `public` `static` `readonly` <xref:System.Windows.DependencyProperty> Yöntemi kullanılarak oluşturulan bir form *PropertyName* 'e sahip `Property` <xref:System.Windows.DependencyProperty.RegisterAttached%2A> . Geçirilen Özellik adı <xref:System.Windows.DependencyProperty.RegisterAttached%2A> *PropertyName*ile aynı olmalıdır.
 
-- PropertyName ve `public` `static` `Set` `Get` *PropertyName* *PropertyName* adlı bir çift CLR yöntemi uygulayın. Her iki yöntem de <xref:System.Windows.DependencyProperty> ilk bağımsız değişken olarak türetilen bir sınıf kabul etmelidir. `Set` *PropertyName* yöntemi, türü özellik için kayıtlı veri türüyle eşleşen bir bağımsız değişkeni de kabul eder. `Get` *PropertyName* yöntemi aynı türde bir değer döndürmelidir. `Set` *Özellik Adı* yöntemi eksikse, özellik salt okunur olarak işaretlenir.
+- `public` `static` `Set` *PropertyName* ve `Get` *PropertyName*adlı bir çift CLR yöntemi uygulayın. Her iki yöntem de <xref:System.Windows.DependencyProperty> ilk bağımsız değişkeni olarak sınıfından türetilmiş bir sınıfı kabul etmelidir. `Set` *PropertyName* yöntemi, türü özelliği için kayıtlı veri türüyle eşleşen bir bağımsız değişkeni de kabul eder. `Get` *PropertyName* yöntemi aynı türde bir değer döndürmelidir. `Set` *PropertyName* yöntemi eksikse, özelliği salt okunurdur olarak işaretlenir.
 
-- `Set`*PropertyName* `Get`ve *PropertyName,* sırasıyla hedef bağımlılık nesnesindeki <xref:System.Windows.DependencyObject.GetValue%2A> yöntemlere <xref:System.Windows.DependencyObject.SetValue%2A> doğrudan yönlendirilmelidir. Tasarımcılar, yöntem sarıcı aracılığıyla arayarak veya hedef bağımlılık nesnesine doğrudan çağrı yaparak ekli özelliğe erişebilir.
+- `Set`*PropertyName* ve `Get` *PropertyName* , <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A> sırasıyla hedef bağımlılık nesnesi üzerindeki ve yöntemlerine doğrudan yönlendirmelidir. Tasarımcılar, yöntem sarmalayıcısı aracılığıyla arayarak veya hedef bağımlılık nesnesine doğrudan çağrı yaparak ekli özelliğe erişebilir.
 
-Ekteki özellikler hakkında daha fazla bilgi için [bkz.](../advanced/attached-properties-overview.md)
+Ekli Özellikler hakkında daha fazla bilgi için bkz. [ekli özelliklere genel bakış](../advanced/attached-properties-overview.md).
 
-### <a name="define-and-use-shared-resources"></a>Paylaşılan Kaynakları Tanımlama ve Kullanma
+### <a name="define-and-use-shared-resources"></a>Paylaşılan kaynakları tanımlama ve kullanma
 
-Denetiminizi uygulamanızla aynı derlemeye ekleyebilirsiniz veya denetiminizi birden çok uygulamada kullanılabilecek ayrı bir derlemede paketleyebilirsiniz. Çoğunlukla, bu konuda tartışılan bilgiler kullandığınız yöntemden bağımsız olarak geçerlidir.  Ancak kayda değer bir fark vardır.  Bir denetimi uygulamayla aynı derlemeye koyduğunuzda, App.xaml dosyasına genel kaynaklar eklemekte özgürsunuz. Ancak yalnızca denetimleri içeren bir <xref:System.Windows.Application> derlemeile ilişkili bir nesne yoktur, bu nedenle app.xaml dosyası kullanılamaz.
+Denetiminizi uygulamanız ile aynı derlemeye dahil edebilir veya birden çok uygulamada kullanılabilen ayrı bir derlemede denetiminizi paketleyebilir. Çoğu bölümde, bu konuda tartışılan bilgiler kullandığınız yöntemden bağımsız olarak geçerlidir.  Ancak, buna dikkat edilecek bir fark vardır.  Bir uygulamayı bir uygulama olarak aynı derlemeye yerleştirdiğinizde, App. xaml dosyasına genel kaynaklar ekleyebilirsiniz. Ancak yalnızca denetimleri içeren bir derlemeye <xref:System.Windows.Application> kendisiyle ilişkili bir nesne yoktur, bu nedenle App. xaml dosyası kullanılamaz.
 
-Bir uygulama bir kaynak aradığında, aşağıdaki sırayla üç düzeye bakar:
+Bir uygulama bir kaynağı ararken, üç düzeye aşağıdaki sırayla bakar:
 
 1. Öğe düzeyi.
 
-   Sistem, kaynağa başvuruyapan öğeyle başlar ve ardından kök öğeye ulaşılıncaya kadar mantıksal üst öğenin kaynaklarını arar.
+   Sistem, kaynağa başvuruda bulunan öğeyle başlar ve sonra mantıksal üst öğenin kaynaklarını arar ve bu nedenle kök öğeye ulaşılana kadar bu şekilde devam eder.
 
 2. Uygulama düzeyi.
 
-   Nesne tarafından <xref:System.Windows.Application> tanımlanan kaynaklar.
+   Nesne tarafından tanımlanan kaynaklar <xref:System.Windows.Application> .
 
 3. Tema düzeyi.
 
-   Tema düzeyindesözlükler Temalar adlı bir alt klasörde depolanır.  Temalar klasöründeki dosyalar temalara karşılık gelir.  Örneğin, Aero.NormalColor.xaml, Luna.NormalColor.xaml, Royale.NormalColor.xaml, ve benzeri olabilir.  Generic.xaml adında bir dosyanız da olabilir.  Sistem temalar düzeyinde bir kaynak aradığında, önce temalı dosyada arar ve sonra generic.xaml'da arar.
+   Tema düzeyi sözlükler, Temalar adlı bir alt klasörde depolanır.  Temalar klasöründeki dosyalar temalara karşılık gelir.  Örneğin, Aero. NormalColor. xaml, Luna. NormalColor. xaml, Royale. NormalColor. xaml, vb. olabilir.  Ayrıca, Generic. xaml adlı bir dosyaya da sahip olabilirsiniz.  Sistem Temalar düzeyinde bir kaynak ararken, önce temaya özel dosyada arama yapar ve ardından bunu genel. xaml içinde arar.
 
-Denetiminiz uygulamadan ayrı bir derlemedeyken, genel kaynaklarınızı öğe düzeyinde veya tema düzeyine koymanız gerekir. Her iki yöntemin de avantajları vardır.
+Denetiminiz uygulamadan ayrı bir derlemede olduğunda, genel kaynaklarınızı öğe düzeyinde veya tema düzeyinde koymanız gerekir. Her iki yöntem de avantajlarına sahiptir.
 
-#### <a name="defining-resources-at-the-element-level"></a>Öğe Düzeyinde Kaynakları Tanımlama
+#### <a name="defining-resources-at-the-element-level"></a>Öğe düzeyinde kaynakları tanımlama
 
-Özel bir kaynak sözlüğü oluşturup denetiminizin kaynak sözlüğüyle birleştirerek paylaşılan kaynakları öğe düzeyinde tanımlayabilirsiniz.  Bu yöntemi kullandığınızda, kaynak dosyanızı istediğiniz her şeyi adlandırabilirsiniz ve bu dosya denetimlerinizle aynı klasörde olabilir. Öğe düzeyindeki kaynaklar, basit dizeleri anahtar olarak da kullanabilir. Aşağıdaki örnek, Dictionary1.xaml adlı bir <xref:System.Windows.Media.LinearGradientBrush> kaynak dosyası oluşturur.
+Özel bir kaynak sözlüğü oluşturarak ve denetimin kaynak sözlüğü ile birleştirerek, öğe düzeyinde paylaşılan kaynaklar tanımlayabilirsiniz.  Bu yöntemi kullandığınızda, kaynak dosyanıza istediğiniz her şeyi verebilir ve denetimleriniz ile aynı klasörde olabilir. Öğe düzeyindeki kaynaklar, anahtar olarak basit dizeler da kullanabilir. Aşağıdaki örnek <xref:System.Windows.Media.LinearGradientBrush> Dictionary1. xaml adlı bir kaynak dosyası oluşturur.
 
 [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]
 
-Sözlüğünüztanımlanmıştır sonra, denetiminizin kaynak sözlüğüyle birleştirmeniz gerekir.  Bunu kullanarak veya [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kodkullanarak yapabilirsiniz.
+Sözlüğünüzü tanımladıktan sonra denetimin kaynak sözlüğü ile birleştirmeniz gerekir.  Bunu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] veya kodunu kullanarak yapabilirsiniz.
 
-Aşağıdaki örnek kullanarak bir kaynak [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]sözlüğü birleştirir.
+Aşağıdaki örnek kullanarak bir kaynak sözlüğünü birleştirir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] .
 
 [!code-xaml[SharedResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml#2)]
 
-Bu yaklaşımın dezavantajı, <xref:System.Windows.ResourceDictionary> bir nesneye her başvuruyaptığınızda oluşturulmuş olmasıdır.  Örneğin, kitaplığınızda 10 özel denetiminiz varsa ve xaml kullanarak her denetim için paylaşılan kaynak <xref:System.Windows.ResourceDictionary> sözlüklerini birleştirirseniz, 10 özdeş nesne oluşturursunuz.  Kaynakları kodda birleştiren ve elde edilen <xref:System.Windows.ResourceDictionary>.
+Bu yaklaşımın dezavantajı, <xref:System.Windows.ResourceDictionary> ona her başvurduğunuzda bir nesne oluşturulur.  Örneğin, kitaplığınızda 10 özel denetiminiz varsa ve XAML kullanarak her denetim için paylaşılan kaynak sözlüklerini birleştirirseniz, 10 özdeş <xref:System.Windows.ResourceDictionary> nesne oluşturursunuz.  Bu, koddaki kaynakları birleştiren ve sonucu döndüren bir statik sınıf oluşturarak bunu önleyebilirsiniz <xref:System.Windows.ResourceDictionary> .
 
-Aşağıdaki örnek, paylaşılan <xref:System.Windows.ResourceDictionary>bir sınıf döndürür.
+Aşağıdaki örnek, paylaşılan bir sınıf oluşturur <xref:System.Windows.ResourceDictionary> .
 
 [!code-csharp[SharedResources#3](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/SharedDictionaryManager.cs#3)]
 
-Aşağıdaki örnek, paylaşılan kaynağı, denetlemenin oluşturucusundaki özel denetimin kaynaklarıyla, aramadan `InitializeComponent`önce birleştirir.  Statik `SharedDictionaryManager.SharedDictionary` bir özellik olduğundan, <xref:System.Windows.ResourceDictionary> yalnızca bir kez oluşturulur. Kaynak sözlüğü çağrılmadan `InitializeComponent` önce birleştirilmeden önce birleştirilmeden önce [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kaynaklar dosyasındaki denetimiçin kullanılabilir.
+Aşağıdaki örnek, bir paylaşılan kaynağı, çağrı yapmadan önce denetimin oluşturucusunda özel bir denetimin kaynaklarıyla birleştirir `InitializeComponent` .  `SharedDictionaryManager.SharedDictionary`Statik bir özellik olduğundan, <xref:System.Windows.ResourceDictionary> yalnızca bir kez oluşturulur. Kaynak sözlüğü çağrılmadan önce birleştirildiğinden `InitializeComponent` , kaynaklar dosyasında denetim için kullanılabilir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] .
 
 [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]
 
-#### <a name="defining-resources-at-the-theme-level"></a>Tema Düzeyinde Kaynakları Tanımlama
+#### <a name="defining-resources-at-the-theme-level"></a>Tema düzeyinde kaynakları tanımlama
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]farklı Windows temaları için kaynak oluşturmanıza olanak tanır.  Denetim yazarı olarak, hangi temanın kullanıldığına bağlı olarak denetiminizin görünümünü değiştirmek için belirli bir tema için bir kaynak tanımlayabilirsiniz. Örneğin, Windows Classic <xref:System.Windows.Controls.Button> temasındaki (Windows 2000 için varsayılan tema) bir <xref:System.Windows.Controls.Button> görünümü, her tema için farklı <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> bir tema kullandığından, Windows Luna temasındaki (Windows XP için varsayılan tema) farklıdır.
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]farklı Windows temaları için kaynaklar oluşturmanızı sağlar.  Denetim yazarı olarak, belirli bir temaya ait bir kaynağı tanımlayabilir ve hangi temanın kullanımda olduğuna bağlı olarak denetiminizin görünümünü değiştirebilirsiniz. Örneğin, <xref:System.Windows.Controls.Button> Windows klasik teması içindeki (windows 2000 için varsayılan tema) görünümü, <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Button> her tema için farklı bir değer kullandığından, Windows Luna TEMASıNDAKI (Windows XP için varsayılan tema) bir ' dan farklıdır <xref:System.Windows.Controls.ControlTemplate> .
 
-Bir temaya özgü kaynaklar, belirli bir dosya adı içeren bir kaynak sözlüğünde tutulur. Bu dosyalar, denetimi içeren `Themes` klasörün bir alt klasörü olan adlı bir klasörde olmalıdır. Aşağıdaki tabloda kaynak sözlüğü dosyaları ve her dosyayla ilişkili tema listelenir:
+Bir temaya özgü kaynaklar, belirli bir dosya adına sahip bir kaynak sözlüğünde tutulur. Bu dosyalar, `Themes` denetimi içeren klasörün bir alt klasörü olan adlı bir klasörde olmalıdır. Aşağıdaki tabloda, kaynak sözlüğü dosyaları ve her bir dosyayla ilişkili tema listelenmektedir:
 
 |Kaynak sözlüğü dosya adı|Windows teması|
 |-----------------------------------|-------------------|
-|`Classic.xaml`|Windows XP'de Klasik Windows 9x/2000 görünümü|
-|`Luna.NormalColor.xaml`|Windows XP'de varsayılan mavi tema|
-|`Luna.Homestead.xaml`|Windows XP'de zeytin teması|
-|`Luna.Metallic.xaml`|Windows XP'de gümüş tema|
-|`Royale.NormalColor.xaml`|Windows XP Media Center Sürümü'nde varsayılan tema|
-|`Aero.NormalColor.xaml`|Windows Vista'da varsayılan tema|
+|`Classic.xaml`|Klasik Windows 9x/2000 Windows XP 'ye bakış|
+|`Luna.NormalColor.xaml`|Windows XP 'de varsayılan mavi tema|
+|`Luna.Homestead.xaml`|Windows XP 'de zeytin teması|
+|`Luna.Metallic.xaml`|Windows XP 'de Gümüş teması|
+|`Royale.NormalColor.xaml`|Windows XP Media Center Edition 'da varsayılan tema|
+|`Aero.NormalColor.xaml`|Windows Vista 'da varsayılan tema|
 
-Her tema için bir kaynak tanımlamanız gerekmez. Belirli bir tema için kaynak tanımlanmamışsa, `Classic.xaml` kaynak denetimini denetler. Kaynak, geçerli temaya karşılık gelen dosyada tanımlanmamışsa `Classic.xaml`veya denetim, kaynak sözlüğü dosyasında bulunan `generic.xaml`genel kaynağı kullanır.  Dosya, `generic.xaml` teme özgü kaynak sözlüğü dosyalarıyla aynı klasörde bulunur. Belirli `generic.xaml` bir Windows temasıyla örtüşmese de, yine de tema düzeyinde bir sözlüktür.
+Her tema için bir kaynak tanımlamanız gerekmez. Belirli bir tema için bir kaynak tanımlanmamışsa denetim, `Classic.xaml` kaynağı denetler. Kaynak, geçerli temaya veya ' de karşılık gelen dosyada tanımlanmamışsa, `Classic.xaml` Denetim adlı bir kaynak sözlüğü dosyasında olan genel kaynağı kullanır `generic.xaml` .  `generic.xaml`Dosya, temaya özgü kaynak sözlüğü dosyalarıyla aynı klasörde bulunur. `generic.xaml`, Belirli bir Windows temasına karşılık gelmese de, hala Tema düzeyi bir sözlüktür.
 
-Tema ve Kullanıcı Arabirimi otomasyon destek örneği ile [C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) veya [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown özel `NumericUpDown` denetimi, denetim için iki kaynak sözlük içerir: biri generic.xaml'da, diğeri luna.normalcolor.xaml'dadır.
+[C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) veya [Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown özel denetımı ile tema ve UI Otomasyonu desteği örneği, denetim için iki kaynak sözlüğü içerir `NumericUpDown` : biri Generic. xaml içinde, diğeri de Luna. NormalColor. xaml ' de bulunur.
 
-Temalı özel <xref:System.Windows.Controls.ControlTemplate> kaynak sözlüğü dosyalarından herhangi birini koyduğunuzda, denetiminiz için statik bir <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> oluşturucu <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>oluşturmanız ve aşağıdaki örnekte gösterildiği gibi yöntemi aramanız gerekir.
+<xref:System.Windows.Controls.ControlTemplate>Temayı özel kaynak sözlüğü dosyalarından birine yerleştirdiğinizde, denetiminiz için bir statik oluşturucu oluşturmanız ve <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> Aşağıdaki örnekte gösterildiği gibi, üzerinde yöntemini çağırmanız gerekir.
 
 [!code-csharp[CustomControlNumericUpDownOneProject#StaticConstructor](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/CSharp/NumericUpDown.cs#staticconstructor)]
 [!code-vb[CustomControlNumericUpDownOneProject#StaticConstructor](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDownOneProject/visualbasic/numericupdown.vb#staticconstructor)]
 
-##### <a name="defining-and-referencing-keys-for-theme-resources"></a>Tema Kaynakları için Anahtar tanımlama ve başvurma
+##### <a name="defining-and-referencing-keys-for-theme-resources"></a>Tema kaynakları için anahtar tanımlama ve başvuru
 
-Öğe düzeyinde bir kaynak tanımladığınızda, bir dizeyi anahtarı olarak atayabilir ve dize üzerinden kaynağa erişebilirsiniz. Tema düzeyinde bir kaynak tanımladığınızda, bir <xref:System.Windows.ComponentResourceKey> kaynağı anahtar olarak kullanmanız gerekir.  Aşağıdaki örnek, generic.xaml'da bir kaynak tanımlar.
+Öğe düzeyinde bir kaynak tanımladığınızda, anahtarı olarak bir dize atayabilir ve dize aracılığıyla kaynağa erişebilirsiniz. Tema düzeyinde bir kaynak tanımladığınızda, <xref:System.Windows.ComponentResourceKey> anahtar olarak bir olarak kullanmanız gerekir.  Aşağıdaki örnek, genel. xaml içinde bir kaynağı tanımlar.
 
 [!code-xaml[ThemeResourcesControlLibrary#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/Themes/generic.xaml#5)]
 
-Aşağıdaki örnekte anahtar <xref:System.Windows.ComponentResourceKey> olarak belirterek kaynağa başvurur.
+Aşağıdaki örnek, anahtar olarak öğesini belirterek kaynağa başvurur <xref:System.Windows.ComponentResourceKey> .
 
 [!code-xaml[ThemeResourcesControlLibrary#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ThemeResourcesControlLibrary/CS/NumericUpDown.xaml#6)]
 
-##### <a name="specifying-the-location-of-theme-resources"></a>Tema Kaynaklarının Konumunu Belirtme
+##### <a name="specifying-the-location-of-theme-resources"></a>Tema kaynaklarının konumunu belirtme
 
-Denetim için kaynakları bulmak için barındırma uygulamasının derlemenin denetime özgü kaynaklar içerdiğini bilmesi gerekir. Denetimi içeren <xref:System.Windows.ThemeInfoAttribute> derlemeye ekleyerek bunu başarabilirsiniz. Genel <xref:System.Windows.ThemeInfoAttribute> kaynakların <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> konumunu belirten bir özelliği ve temalı <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> özel kaynakların konumunu belirten bir özelliği vardır.
+Bir denetimin kaynaklarını bulmak için barındırma uygulamasının, derlemenin denetime özgü kaynakları içerdiğini bilmeleri gerekir. Bunu, <xref:System.Windows.ThemeInfoAttribute> denetimini içeren derlemeye ekleyerek yapabilirsiniz. , <xref:System.Windows.ThemeInfoAttribute> <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> Genel kaynakların konumunu ve <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> temaya özgü kaynakların konumunu belirten bir özelliği olan bir özelliğine sahiptir.
 
-Aşağıdaki örnek, <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> genel <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> ve <xref:System.Windows.ResourceDictionaryLocation.SourceAssembly>temaya özgü kaynakların denetimle aynı derlemede olduğunu belirtmek için, özellikleri ve özelliklerini ayarlar.
+Aşağıdaki örnek, <xref:System.Windows.ThemeInfoAttribute.GenericDictionaryLocation%2A> ve <xref:System.Windows.ThemeInfoAttribute.ThemeDictionaryLocation%2A> özelliklerini <xref:System.Windows.ResourceDictionaryLocation.SourceAssembly> , genel ve temaya özgü kaynakların denetimle aynı derlemede olduğunu belirtmek için olarak ayarlar.
 
 [!code-csharp[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
 [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]

@@ -1,5 +1,6 @@
 ---
 title: UI Otomasyonu Kullanarak Denetim Çağırma
+description: UI otomasyonunu kullanarak belirli özellik koşullarına uyan bir denetim bulun, bir AutomationElement oluşturun, bir ınvokemodel alın ve denetimde Invoke kullanın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,29 +10,29 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: e1b489e8daaaf9f5b8c0cb46374fa54bf165d49c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2347a620aab848bf6bcc649a9780aa5a3a520822
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447006"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168175"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>UI Otomasyonu Kullanarak Denetim Çağırma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu konu başlığı altında, aşağıdaki görevlerin nasıl gerçekleştirileceği gösterilmektedir:  
   
-- Hedef uygulama için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ağacının denetim görünümünü yürüyerek belirli özellik koşullarıyla eşleşen bir denetim bulun.  
+- Hedef uygulama için ağacın denetim görünümünü yürüyerek belirli özellik koşullarıyla eşleşen bir denetim bulun [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
-- Her denetim için bir <xref:System.Windows.Automation.AutomationElement> oluşturun.  
+- <xref:System.Windows.Automation.AutomationElement>Her denetim için oluşturun.  
   
-- <xref:System.Windows.Automation.InvokePattern> denetim modelini destekleyen, bulunan herhangi bir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] öğesinden bir <xref:System.Windows.Automation.InvokePattern> nesnesi elde edin.  
+- <xref:System.Windows.Automation.InvokePattern> [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Denetim modelini destekleyen, bulunan herhangi bir öğeden bir nesne elde edin <xref:System.Windows.Automation.InvokePattern> .  
   
-- Bir istemci olay işleyicisinden denetimi çağırmak için <xref:System.Windows.Automation.InvokePattern.Invoke%2A> kullanın.  
+- <xref:System.Windows.Automation.InvokePattern.Invoke%2A>Bir istemci olay işleyicisinden denetimi çağırmak için kullanın.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir <xref:System.Windows.Automation.InvokePattern> nesnesi oluşturmak ve <xref:System.Windows.Automation.InvokePattern.Invoke%2A> metodunu kullanarak bir denetimi çağırmak için <xref:System.Windows.Automation.AutomationElement> sınıfının <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> yöntemini kullanır.  
+ Bu örnek, <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.InvokePattern> yöntemini kullanarak bir nesnesi oluşturmak ve bir denetimi çağırmak için sınıfının yöntemini kullanır <xref:System.Windows.Automation.InvokePattern.Invoke%2A> .  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  

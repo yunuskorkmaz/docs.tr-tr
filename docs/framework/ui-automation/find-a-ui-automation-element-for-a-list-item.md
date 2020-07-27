@@ -1,5 +1,6 @@
 ---
 title: Liste Öğesi İçin UI Otomasyon Öğesi Bulma
+description: Öğenin dizini bilindiğinde, bir liste öğesi için bir UI Otomasyonu öğesinin nasıl bulunacağını gösteren bir örneğe bakın.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +10,21 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ec6464bc0ec504fd34ed113c9bed1a54a7d4eaec
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741761"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168410"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>Liste Öğesi İçin UI Otomasyon Öğesi Bulma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, öğenin dizini bilindiğinde liste içindeki bir öğe için <xref:System.Windows.Automation.AutomationElement> nasıl alınacağını gösterir.  
+ Bu konu, <xref:System.Windows.Automation.AutomationElement> öğenin dizini bilindiğinde liste içindeki bir öğe için nasıl alınacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, bir listeden belirtilen öğeyi almanın iki yolunu gösterir, biri <xref:System.Windows.Automation.TreeWalker> ve diğeri <xref:System.Windows.Automation.AutomationElement.FindAll%2A>kullanarak.  
+ Aşağıdaki örnek, bir listesinden ve diğeri kullanılarak belirtilen bir öğeyi almanın iki yolunu gösterir <xref:System.Windows.Automation.TreeWalker> <xref:System.Windows.Automation.AutomationElement.FindAll%2A> .  
   
  İlk teknik, Win32 denetimleri için daha hızlı bir şekilde eğilimindedir, ancak İkincisi Windows Presentation Foundation (WPF) denetimleri için daha hızlıdır.  
   
@@ -32,4 +33,4 @@ ms.locfileid: "75741761"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Öğelerini Alma](obtaining-ui-automation-elements.md)
+- [UI Otomasyon Öğelerini Alma](obtaining-ui-automation-elements.md)

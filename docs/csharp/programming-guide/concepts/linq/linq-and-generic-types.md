@@ -1,17 +1,18 @@
 ---
 title: LINQ ve Genel Türler (C#)
+description: Sorguları destekleyen C# ' de genel türlerin temel kavramları hakkında bilgi edinin.  LINQ sorguları genel türleri temel alır.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 98054a4a21704293faa1194dac342bc48aef138d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241766"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165646"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ ve Genel Türler (C#)
 LINQ sorguları, .NET Framework sürüm 2,0 ' de tanıtılan genel türleri temel alır. Sorgu yazmaya başlayabilmeniz için önce genel türler hakkında ayrıntılı bilgi sahibi olmanız gerekmez. Ancak, iki temel kavramı anlamak isteyebilirsiniz:  

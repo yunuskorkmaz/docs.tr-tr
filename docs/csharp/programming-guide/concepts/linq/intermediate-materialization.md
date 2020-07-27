@@ -1,19 +1,20 @@
 ---
-title: Ara Maddeizasyon (C#)
+title: Ara materialization (C#)
+description: Bu C# örneği, ilk öğeyi bırakmadan önce bir sorgunun AppendString 'in kaynağın tamamını numaralandırması için yol gösteren ara materialization 'ı gösterir.
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: af1eb7df7da02d8e72fc102cda4ee5f329dc7974
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 30951aaeea261efbd414205bcc54b63106324344
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253157"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165724"
 ---
-# <a name="intermediate-materialization-c"></a>Ara Maddeizasyon (C#)
-Dikkatli değilseniz, bazı durumlarda sorgularınızda koleksiyonların erken somutlaşmasına neden olarak uygulamanızın bellek ve performans profilini büyük ölçüde değiştirebilirsiniz. Bazı standart sorgu işleçleri, tek bir öğe vermeden önce kaynak koleksiyonlarının somutlaştırılmasına neden olur. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> önce tüm kaynak koleksiyonunu yineler, sonra tüm öğeleri sıralar ve son olarak ilk öğeyi verir. Bu, sipariş edilen bir koleksiyonun ilk öğesini almak pahalı olduğu anlamına gelir; bundan sonra her öğe pahalı değildir. Bu mantıklı: Bu sorgu işleci nin aksini yapması imkansızdır.  
+# <a name="intermediate-materialization-c"></a>Ara materialization (C#)
+Dikkatli değilseniz, bazı durumlarda, Sorgularınızdaki koleksiyonların erken olarak kullanıma hazır hale gelmesine neden olarak uygulamanızın bellek ve performans profilini büyük ölçüde değiştirebilirsiniz. Bazı standart sorgu işleçleri, tek bir öğeyi oluşturmadan önce kaynak koleksiyonlarının çalışmasının oluşturulmasına neden olur. Örneğin, <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> ilk olarak tüm kaynak koleksiyonu boyunca yinelenir, sonra tüm öğeleri sıralar ve son olarak ilk öğeyi verir. Bu, sıralı bir koleksiyonun ilk öğesini almak pahalı olduğu anlamına gelir; Bundan sonra her öğe pahalı değildir. Bu anlamlı olur: Bu sorgu işlecinin başka bir şekilde yapması imkansız olabilir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek önceki örneği değiştirir. Yöntem, `AppendString` <xref:System.Linq.Enumerable.ToList%2A> kaynak üzerinden yinelenmeden önce çağırır. Bu maddeleşmeye neden olur.  
+ Bu örnek, önceki örneği değiştirir. `AppendString`Yöntemi, <xref:System.Linq.Enumerable.ToList%2A> kaynak üzerinde yineleme yapmadan önce çağırır. Bu, materialization oluşturulmasına neden olur.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -64,7 +65,7 @@ class Program
 }  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 ToUpper: source >abc<  
@@ -80,12 +81,12 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
- Bu örnekte, ilk öğeyi <xref:System.Linq.Enumerable.ToList%2A> vermeden `AppendString` önce tüm kaynağının sayısala neden olan çağrısını görebilirsiniz. Kaynak büyük bir dizi olsaydı, bu uygulamanın bellek profilini önemli ölçüde değiştirirdi.  
+ Bu örnekte, çağrısının <xref:System.Linq.Enumerable.ToList%2A> `AppendString` ilk öğeyi bırakmadan önce tüm kaynağını numaralandırmasına neden olduğunu görebilirsiniz. Kaynak büyük bir diziyse, bu, uygulamanın bellek profilini önemli ölçüde değiştirecek.  
   
- Standart sorgu işleçleri de birbirine zincirlenebilir. Bu öğreticide son konu bu göstermektedir.  
+ Standart sorgu işleçleri de birlikte zincirlenebilir. Bu öğreticideki son konu, bunu gösterir.  
   
-- [Standart Sorgu Operatörlerini Birlikte Zincirleme (C#)](./chaining-standard-query-operators-together.md)  
+- [Standart sorgu Işleçlerini birlikte zincirleme (C#)](./chaining-standard-query-operators-together.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: Sorguları Birlikte Zincirleme (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Öğretici: sorguları birlikte zincirleme (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

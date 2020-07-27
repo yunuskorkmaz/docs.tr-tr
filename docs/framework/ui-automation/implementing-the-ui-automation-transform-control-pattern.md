@@ -1,67 +1,68 @@
 ---
 title: UI Otomasyonu Dönüştürme Denetim Düzenini Uygulama
+description: Kullanıcı Arabirimi Otomasyonu 'nda dönüşüm denetim deseninin uygulanması için yönergeleri ve kuralları gözden geçirin. Iransformprovider arabirimi için gerekli üyeleri öğrenin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, Transform
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: 5643bc85972ea33cc31b1a83ecf7615dbb275bc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da11ce4cf9da10c0ebb990f9439b0bbe3621c561
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180046"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168210"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>UI Otomasyonu Dönüştürme Denetim Düzenini Uygulama
 > [!NOTE]
-> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, özellikler, yöntemler ve <xref:System.Windows.Automation.Provider.ITransformProvider>olaylar hakkında bilgiler de dahil olmak üzere uygulama yönergeleri ve kuralları sunar. Ek başvurulara bağlantılar konunun sonunda listelenir.  
+ Bu konuda <xref:System.Windows.Automation.Provider.ITransformProvider> Özellikler, Yöntemler ve olaylar hakkında bilgiler de dahil olmak üzere uygulama yönergeleri ve kuralları tanıtılmaktadır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   
- Denetim <xref:System.Windows.Automation.TransformPattern> deseni, iki boyutlu bir boşluk içinde taşınabilen, yeniden boyutlandırılabilen veya döndürülebilen denetimleri desteklemek için kullanılır. Bu denetim deseni uygulayan denetim örnekleri için, [UI Otomasyon Istemcileri için Denetim Deseni Eşleciliği'ne](control-pattern-mapping-for-ui-automation-clients.md)bakın.  
+ <xref:System.Windows.Automation.TransformPattern>Denetim stili, iki boyutlu bir boşluk içinde taşınabilecek, yeniden boyutlandırılabileceğini veya döndürülebilen denetimleri desteklemek için kullanılır. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama Yönergeleri ve Sözleşmeleri  
- Dönüşüm denetimi modelini uygularken aşağıdaki yönergeleri ve kuralları not edin:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Dönüşüm denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde aklınızda olmanız gerekir:  
   
-- Bu denetim deseni desteği masaüstündeki nesnelerle sınırlı değildir. Çocuklar kapsayıcının sınırları içinde taşınabilir, yeniden boyutlandırılabilir veya serbestçe döndürülebiliyorsa, bu denetim deseni bir kapsayıcı nesnesinin alt ları tarafından da desteklenmelidir.  
+- Bu denetim deseninin desteği masaüstündeki nesnelerle sınırlı değildir. Bu denetim deseninin ayrıca alt öğeler, kapsayıcının sınırları içinde taşınabileceği, yeniden boyutlandırılabileceği veya serbest bir şekilde döndürülebilen bir kapsayıcı nesnesinin alt öğeleri tarafından desteklenmelidir.  
   
-- Bir nesne, ortaya çıkan ekran konumunun kapsayıcısının koordinatlarının tamamen dışında olacağı şekilde hareket ettirilemez, yeniden boyutlandırılamaz veya döndürülemez ve bu nedenle klavye veya fare tarafından erişilemez (örneğin, üst düzey bir pencere ekrandan veya alt nesne kapsayıcının viewport sınırları nın dışına taşınır). Bu gibi durumlarda, nesne, kapsayıcı sınırları içinde olmak üzere geçersiz kılınmış üst veya sol koordinatları ile istenilen ekran koordinatlarına mümkün olduğunca yakın yerleştirilir.  
+- Bir nesne, sonuçta elde edilen ekran konumunun kendi kapsayıcısının koordinatları dışında ve bu nedenle klavye veya fareye erişilemeyen (örneğin, üst düzey bir pencere ekrandan taşındığında veya bir alt nesne kapsayıcının Görünüm penceresinin sınırları dışına taşındığında), yeniden boyutlandırılıp döndürülemez. Bu gibi durumlarda, nesne, kapsayıcı sınırları dahilinde olacak şekilde geçersiz kılınan üstteki veya soldaki koordinatlarla mümkün olduğunca istenen ekran koordinatlarına yakın şekilde yerleştirilir.  
   
-- Çoklu monitör sistemlerinde, bir nesne taşınır, yeniden boyutlandırılır veya birleştirilmiş masaüstü ekran koordinatlarının dışına tamamen döndürülürse, nesne istenen koordinatlara mümkün olduğunca yakın olarak birincil monitöre yerleştirilir.  
+- Çoklu izleyici sistemlerinde, bir nesne birleştirilmiş masaüstü ekran koordinatları dışında taşındığında, yeniden boyutlandırılırsa veya döndürülürse, nesne birincil monitöre istenen koordinatlara yakın şekilde yerleştirilir.  
   
-- Tüm parametreler ve özellik değerleri mutlak ve yerel bağımsızdır.  
+- Tüm parametreler ve özellik değerleri mutlak ve yerel ayardan bağımsızdır.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
-## <a name="required-members-for-itransformprovider"></a>ITransformProvider için Gerekli Üyeler  
- Uygulamak için aşağıdaki özellikler ve <xref:System.Windows.Automation.Provider.ITransformProvider>yöntemler gereklidir.  
+## <a name="required-members-for-itransformprovider"></a>Iransformprovider için gerekli Üyeler  
+ Uygulamak için aşağıdaki özellikler ve Yöntemler gereklidir <xref:System.Windows.Automation.Provider.ITransformProvider> .  
   
-|Gerekli üyeler|Üye tipi|Notlar|  
+|Gerekli Üyeler|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Yöntem|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Yöntem|None|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Yöntem|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Yöntem|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Yöntem|Hiçbiri|  
   
- Bu denetim deseni ilişkili olaylar vardır.  
+ Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>
 ## <a name="exceptions"></a>Özel durumlar  
- Sağlayıcılar aşağıdaki özel durumları atmalıdır.  
+ Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
-|Özel Durum Türü|Koşul|  
+|Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - Eğer <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> yanlış.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - Eğer <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> yanlış.|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - Eğer <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> yanlış.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanMoveProperty> False ise.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanResizeProperty> False ise.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> - <xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty> False ise.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Denetim Desenlerine Genel Bakış](ui-automation-control-patterns-overview.md)
-- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](support-control-patterns-in-a-ui-automation-provider.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyon Denetim Düzenlerine Genel Bakış](ui-automation-control-patterns-overview.md)
+- [UI Otomasyon Sağlayıcısında Denetim Düzenleri Desteği](support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyon Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
 - [UI Otomasyon Ağacına Genel Bakış](ui-automation-tree-overview.md)
-- [UI Otomasyonunda Önbelleğe Almayı Kullanma](use-caching-in-ui-automation.md)
+- [UI Otomasyonda Önbelleğe Almayı Kullanma](use-caching-in-ui-automation.md)

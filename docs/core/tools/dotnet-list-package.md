@@ -2,18 +2,18 @@
 title: DotNet List paket komutu
 description: "' DotNet List Package ' komutu bir proje veya çözümün paket başvurularını listelemek için uygun bir seçenek sağlar."
 ms.date: 02/14/2020
-ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7157e56860936d10aa322854a589ae89e2bc0826
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463656"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164760"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,2 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet list package`-Bir proje veya çözüm için paket başvurularını listeler.
 
@@ -21,6 +21,7 @@ ms.locfileid: "81463656"
 
 ```dotnetcli
 dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--deprecated]
     [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
     [--include-prerelease] [--include-transitive] [--interactive]
     [--outdated] [--source <SOURCE>]
@@ -28,7 +29,7 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>Description
+## <a name="description"></a>Açıklama
 
 `dotnet list package`Komut belirli bir proje veya çözüm için tüm NuGet paket başvurularını listelemek için uygun bir seçenek sağlar. Bu komutun işlemesi için gereken varlıkların olması için öncelikle projeyi derlemeniz gerekir. Aşağıdaki örnek, `dotnet list package` [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) projesi için komutunun çıkışını gösterir:
 
@@ -78,6 +79,10 @@ Project 'HelloPlugin' has the following package references
 
   Yeni paketler aranırken kullanılacak NuGet kaynakları. Seçeneğini gerektirir `--outdated` .
 
+- **`--deprecated`**
+
+  Kullanım dışı bırakılan paketleri görüntüler.
+
 - **`--framework <FRAMEWORK>`**
 
   Yalnızca belirtilen [hedef çerçeve](../../standard/frameworks.md)için geçerli olan paketleri görüntüler. Birden çok çerçeve belirtmek için seçeneğini birden çok kez tekrarlayın. Örneğin: `--framework netcoreapp2.2 --framework netstandard2.0`.
@@ -88,15 +93,15 @@ Project 'HelloPlugin' has the following package references
 
 - **`--highest-minor`**
 
-  Daha yeni paketler aranırken yalnızca eşleşen bir ana sürüm numarası olan paketleri dikkate alır. Seçeneğini gerektirir `--outdated` .
+  Daha yeni paketler aranırken yalnızca eşleşen bir ana sürüm numarası olan paketleri dikkate alır. `--outdated`Veya seçeneğini gerektirir `--deprecated` .
 
 - **`--highest-patch`**
 
-  Yeni paketleri ararken yalnızca eşleşen büyük ve küçük sürüm numaralarına sahip paketleri dikkate alır. Seçeneğini gerektirir `--outdated` .
+  Yeni paketleri ararken yalnızca eşleşen büyük ve küçük sürüm numaralarına sahip paketleri dikkate alır. `--outdated`Veya seçeneğini gerektirir `--deprecated` .
 
 - **`--include-prerelease`**
 
-  Yeni paketleri ararken paketleri ön sürüm sürümlerini kabul eder. Seçeneğini gerektirir `--outdated` .
+  Yeni paketleri ararken paketleri ön sürüm sürümlerini kabul eder. `--outdated`Veya seçeneğini gerektirir `--deprecated` .
 
 - **`--include-transitive`**
 
@@ -112,7 +117,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`-s|--source <SOURCE>`**
 
-  Yeni paketler aranırken kullanılacak NuGet kaynakları. Seçeneğini gerektirir `--outdated` .
+  Yeni paketler aranırken kullanılacak NuGet kaynakları. `--outdated`Veya seçeneğini gerektirir `--deprecated` .
 
 ## <a name="examples"></a>Örnekler
 

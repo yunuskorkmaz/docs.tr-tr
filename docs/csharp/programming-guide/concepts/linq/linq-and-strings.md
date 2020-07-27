@@ -1,78 +1,79 @@
 ---
-title: LINQ ve dizeleri (C#)
+title: LINQ ve dizeler (C#)
+description: LINQ, dizeleri ve dize koleksiyonlarını sorgulayabilir ve dönüştürebilir. LINQ sorgularını C# dize işlevleri ve normal ifadeler ile birleştirebilirsiniz.
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635541"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165611"
 ---
-# <a name="linq-and-strings-c"></a>LINQ ve dizeleri (C#)
+# <a name="linq-and-strings-c"></a>LINQ ve dizeler (C#)
 
-LINQ, dizeleri ve dizeleri koleksiyonlarını sorgulamak ve dönüştürmek için kullanılabilir. Özellikle metin dosyalarındaki yarı yapılandırılmış verilerle yararlı olabilir. LINQ sorguları geleneksel dize işlevleri ve normal ifadelerle birleştirilebilir. Örneğin, LINQ kullanarak <xref:System.String.Split%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> sorgulayabildiğiniz veya değiştirebileceğiniz bir dizi dize oluşturmak için veya yöntemi kullanabilirsiniz. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> Yöntemi LINQ sorgusunun `where` yan tümcesinde kullanabilirsiniz. Ayrıca, düzenli bir ifadeyle döndürülen <xref:System.Text.RegularExpressions.MatchCollection> sonuçları sorgulamak veya değiştirmek için LINQ'yi kullanabilirsiniz.
+LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için kullanılabilir. Bu, özellikle metin dosyalarındaki yarı yapılandırılmış verilerle yararlı olabilir. LINQ sorguları, geleneksel dize işlevleri ve normal ifadelerle birleştirilebilir. Örneğin, <xref:System.String.Split%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> daha sonra LINQ kullanarak sorgulayabilmeniz veya değiştiremeyeceğiniz bir dize dizisi oluşturmak için veya yöntemini kullanabilirsiniz. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> `where` Bir LINQ sorgusunun yan tümcesindeki yöntemini kullanabilirsiniz. Aynı şekilde, <xref:System.Text.RegularExpressions.MatchCollection> bir normal ifade tarafından döndürülen sonuçları sorgulamak veya değiştirmek IÇIN LINQ kullanabilirsiniz.
 
-Yarı yapılandırılmış metin verilerini XML'e dönüştürmek için bu bölümde açıklanan teknikleri de kullanabilirsiniz. Daha fazla bilgi için [CSV dosyalarından XML nasıl oluşturacağıkonusunda](how-to-generate-xml-from-csv-files.md)bilgi alabiliyorum.
+Yarı yapılandırılmış metin verilerini XML 'e dönüştürmek için bu bölümde açıklanan teknikleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [CSV DOSYALARıNDAN XML oluşturma](how-to-generate-xml-from-csv-files.md).
 
 Bu bölümdeki örnekler iki kategoriye ayrılır:
 
 ## <a name="querying-a-block-of-text"></a>Metin bloğunu sorgulama
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> Yöntem veya <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> yöntemi kullanarak metin bloklarını sorgulanabilir küçük dizeleri diziye bölerek sorgulayabilir, çözümleyebilir ve değiştirebilirsiniz. Kaynak metni sözcüklere, cümlelere, paragraflara, sayfalara veya diğer ölçütlere bölebilir ve sorgunuzda gerekirse ek bölmeler gerçekleştirebilirsiniz.
+Yöntemini veya yöntemini kullanarak bunları bir daha küçük dizeler dizisine bölerek metin bloklarını sorgulayabilir, çözümleyebilir ve değiştirebilirsiniz <xref:System.String.Split%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> . Kaynak metni sözcükler, cümleler, paragraflar, sayfalar veya diğer ölçütlere bölebilir ve ardından sorgunuzda gerekliyse ek bölmeler gerçekleştirebilirsiniz.
 
-- [Bir dizedeki bir sözcüğün oluşumları nasıl sayilir (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
-  Metin üzerinden basit sorgulama için LINQ'nin nasıl kullanılacağını gösterir.
+- [Dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+  Metin üzerinde basit sorgulama için LINQ 'ın nasıl kullanılacağını gösterir.
 
-- [Belirli bir sözcük kümesi (LINQ) (C#) içeren cümleler için sorgulama](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
+- [Belirli bir sözcük kümesini (LINQ) içeren cümleleri sorgulama (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
 
-  Metin dosyalarını rasgele sınırlarda nasıl bölerve her bölüme karşı sorguların nasıl gerçekleştirilişini gösterir.
+  Metin dosyalarının rastgele sınırlarda nasıl bölüneceği ve her parçaya yönelik sorguların nasıl gerçekleştirileceğini gösterir.
 
-- [Dizedeki karakterler (LINQ) (C#) karakterleri sorgulama](how-to-query-for-characters-in-a-string-linq.md)
+- [Dizedeki karakterleri sorgulama (LINQ) (C#)](how-to-query-for-characters-in-a-string-linq.md)
 
-  Bir dize sorgulanabilir bir tür olduğunu gösterir.
+  Bir dizenin sorgulanabilir bir tür olduğunu gösterir.
 
 - [LINQ sorgularını normal ifadelerle birleştirme (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
 
-  Filtre uygulanmış sorgu sonuçlarında karmaşık desen eşleştirmesi için LINQ sorgularında normal ifadelerin nasıl kullanılacağını gösterir.
+  Filtrelenmiş sorgu sonuçlarında karmaşık model eşleştirmesi için LINQ sorgularında normal ifadelerin nasıl kullanılacağını gösterir.
 
 ## <a name="querying-semi-structured-data-in-text-format"></a>Yarı yapılandırılmış verileri metin biçiminde sorgulama
 
-Birçok farklı metin dosyası türü, genellikle sekme veya virgülle sınırlandırılmış dosyalar veya sabit uzunluktaki satırlar gibi benzer biçimlendirmeye sahip bir dizi satırdan oluşur. Böyle bir metin dosyasını belleğe okuduktan sonra, satırları sorgulamak ve/veya değiştirmek için LINQ'yu kullanabilirsiniz. LINQ sorguları, birden çok kaynaktan gelen verileri birleştirme görevini de basitleştirir.
+Birçok farklı metin dosyası türü, genellikle sekme veya virgülle ayrılmış dosyalar ya da sabit uzunluklu çizgiler gibi benzer biçimlendirmeler içeren bir dizi satırdan oluşur. Bu tür bir metin dosyasını belleğe okuduktan sonra, satırları sorgulamak ve/veya değiştirmek için LINQ kullanabilirsiniz. LINQ sorguları Ayrıca birden çok kaynaktan veri birleştirme görevini basitleştirir.
 
-- [İki liste (LINQ) (C#) arasındaki küme farkı nasıl bulabilirim?](how-to-find-the-set-difference-between-two-lists-linq.md)
+- [İki liste arasındaki küme farkını bulma (LINQ) (C#)](how-to-find-the-set-difference-between-two-lists-linq.md)
 
-  Bir listede bulunan ancak diğerinde bulunmayan tüm dizeleri nasıl bulacağımı gösterir.
+  Bir listede bulunan ancak diğeri olmayan tüm dizelerin nasıl bulunacağını gösterir.
 
-- [Metin verilerini herhangi bir sözcüğe veya alana göre sıralama veya filtreleme (LINQ) (C#)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
 
-  Metin çizgilerini herhangi bir sözcük veya alana göre nasıl sıralanır gösterir.
+  Metin çizgilerinin herhangi bir sözcük veya alana göre nasıl sıralanacağını gösterir.
 
-- [Sınırlandırılmış bir dosyanın (LINQ) (C#) alanlarını yeniden sıralama](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
+- [Ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
 
-  .csv dosyasındaki bir satırdaki alanların nasıl yeniden sıralanın gerektiğini gösterir.
+  Bir. csv dosyasındaki bir satırdaki alanların nasıl yeniden oluşturulduğunu gösterir.
 
 - [Dize koleksiyonlarını birleştirme ve karşılaştırma (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
 
-  Dize listelerini çeşitli şekillerde nasıl birleştirin.
+  Dize listelerinin çeşitli yollarla nasıl birleştirileceğini gösterir.
 
-- [Nesne koleksiyonları birden çok kaynaktan (LINQ) (C#) doldurma](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Birden çok kaynaktan nesne koleksiyonlarını doldurma (LINQ) (C#)](how-to-populate-object-collections-from-multiple-sources-linq.md)
 
-  Veri kaynağı olarak birden çok metin dosyasını kullanarak nesne koleksiyonlarının nasıl oluşturulurulur gösterir.
+  Birden çok metin dosyasını veri kaynağı olarak kullanarak nasıl nesne koleksiyonları oluşturulacağını gösterir.
 
-- [Farklı dosyalardan (LINQ) (C#) içerik birleştirme](how-to-join-content-from-dissimilar-files-linq.md)
+- [Benzer olmayan dosyalardaki (LINQ) içerik ekleme (C#)](how-to-join-content-from-dissimilar-files-linq.md)
   
-  Eşleşen bir tuşu kullanarak iki listedeki dizeleri tek bir dize halinde nasıl birleştirin.
+  İki listedeki dizelerin, eşleşen bir anahtar kullanılarak tek bir dize içinde nasıl birleştirileceğini gösterir.
 
-- [Grupları kullanarak bir dosyayı birçok dosyaya bölme (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
-  Veri kaynağı olarak tek bir dosya kullanarak yeni dosyaların nasıl oluşturularak oluşturulabildiğini gösterir.
+  Veri kaynağı olarak tek bir dosya kullanarak yeni dosyaların nasıl oluşturulacağını gösterir.
 
-- [CSV metin dosyasındaki sütun değerlerini nasıl hesaplar (LINQ) (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [Bir CSV metin dosyasında (LINQ) sütun değerlerini hesaplama (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
   
-  .csv dosyalarındaki metin verilerinde matematiksel hesaplamaların nasıl yapılacağını gösterir.
+  . Csv dosyalarındaki metin verilerinde matematiksel hesaplamaların nasıl gerçekleştirileceğini gösterir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Dil-Tümleşik Sorgu (LINQ) (C#)](index.md)
+- [Dil ile tümleşik sorgu (LINQ) (C#)](index.md)
 - [CSV dosyalarından XML oluşturma](how-to-generate-xml-from-csv-files.md)

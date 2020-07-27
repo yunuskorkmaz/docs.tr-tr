@@ -1,80 +1,81 @@
 ---
 title: UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi
+description: UI Otomasyon istemcileri için bir denetim modelini eşleme tablosu görüntüleyin. Belirli denetim türlerine yönelik eylemler desteklenir, koşullu olarak desteklenir veya desteklenmez.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 689e649343c93d0670c6870098a09f61097f4fb4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7673ce4ac88cc36a7c35e2e946a31d23b2ce6eca
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180235"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164189"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI Otomasyon İstemcileri İçin Denetim Düzeni Eşleştirmesi
 > [!NOTE]
-> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu, denetim türlerini ve bunların ilişkili denetim modellerini listeler.  
+ Bu konuda denetim türleri ve bunlarla ilişkili denetim desenleri listelenmektedir.  
   
- Aşağıdaki tablo denetim modellerini aşağıdaki kategorilerde düzenler:  
+ Aşağıdaki tablo Denetim desenlerini aşağıdaki kategorilere göre düzenler:  
   
-- Destekleniyor. Denetim bu denetim deseni desteklemelidir.  
+- Destekleniyor. Denetimde bu denetim deseninin desteklenmesi gerekir.  
   
-- Şartlı destek. Denetim, denetimin durumuna bağlı olarak bu denetim deseni destekleyebilir.  
+- Koşullu destek. Denetim, denetimin durumuna bağlı olarak bu denetim modelini destekleyebilir.  
   
-- Desteklenmiyor. Denetim bu denetim deseni desteklemez; özel denetimler bu denetim deseni destekleyebilir.  
+- Desteklenmez. Denetim bu denetim modelini desteklemiyor; özel denetimler bu denetim modelini destekleyebilir.  
   
 > [!NOTE]
-> Bazı denetimler, denetimin işlevselliliği bağlı olarak çeşitli denetim desenleri için koşullu desteğe sahiptir. Örneğin, menü öğesi denetimi, menü denetimindeki <xref:System.Windows.Automation.ExpandCollapsePattern> <xref:System.Windows.Automation.TogglePattern>işlevine <xref:System.Windows.Automation.SelectionItemPattern> bağlı olarak <xref:System.Windows.Automation.InvokePattern>, , veya denetim deseni için koşullu desteğe sahiptir.  
+> Bazı denetimlerin, denetimin işlevselliğine bağlı olarak birkaç denetim deseni için koşullu desteği vardır. Örneğin, menü öğesi denetimi, <xref:System.Windows.Automation.InvokePattern> <xref:System.Windows.Automation.ExpandCollapsePattern> <xref:System.Windows.Automation.TogglePattern> <xref:System.Windows.Automation.SelectionItemPattern> menü denetimindeki işlevine bağlı olarak,,, veya denetim deseninin koşullu desteğine sahiptir.  
   
 <a name="control_mapping_clients"></a>
 ## <a name="ui-automation-control-patterns-for-clients"></a>İstemciler İçin UI Otomasyon Denetim Düzenleri  
   
-|Kontrol Türü|Destekleniyor|Koşullu Destek|Desteklenmiyor|  
+|Denetim türü|Desteklenir|Koşullu destek|Desteklenmiyor|  
 |------------------|---------------|-------------------------|-------------------|  
-|Düğme|None|Çağırma, Geçiş, Genişletme|None|  
-|Takvim|Izgara, Tablo|Seçim, Kaydırma|Değer|  
-|Onay Kutusu|İki Durumlu Düğme|None|None|  
-|Birleşik Giriş Kutusu|Daraltma'yı Genişlet|Seçim, Değer|Kaydırma|  
-|Veri Kılavuzu|Kılavuz|Kaydırma, Seçim, Tablo|None|  
-|Veri Öğesi|Seçim Öğesi|Daraltma, Izgara Öğesi, Kaydırma Öğesi, Tablo, Geçiş, Değer genişletme|None|  
-|Belge|Metin|Kaydırma, Değer|None|  
-|Düzenle|None|Metin, Aralık Değeri, Değer|None|  
-|Grup|None|Daraltma'yı Genişlet|None|  
-|Üst bilgi|None|Dönüşüm|None|  
-|Üstbilgi Öğesi|None|Dönüştür, Çağır|None|  
-|Köprü|Çağır|Değer|None|  
-|Görüntü|None|Izgara Öğesi, Tablo Öğesi|Çağırma, Seçim Öğesi|  
-|Liste|None|Izgara, Çoklu Görünüm, Kaydırma, Seçim|Tablo|  
-|Liste Öğesi|Seçim Öğesi|Genişletme, Izgara Öğesi, Çağır, Kaydırma Öğesi, Geçiş, Değer|None|  
-|Menü|None|None|None|  
-|Menü Çubuğu|None|Daraltma, Yerleştirme, Dönüştürmeyi Genişlet|None|  
-|Menü Öğesi|None|Daraltma, Çağırma, Seçim Öğesini Genişletme, Geçiş|None|  
-|Bölme|None|Dock. Kaydırma, Dönüştürme|Pencere|  
-|İlerleme Çubuğu|None|Aralık Değeri, Değer|None|  
-|Radyo Düğmesi|Seçim Öğesi|None|İki Durumlu Düğme|  
-|Kaydırma Çubuğu|None|Aralık Değeri|Kaydırma|  
-|Ayırıcı|None|None|None|  
-|Kaydırıcı|None|Aralık Değeri, Seçimi, Değeri|None|  
-|Değer Değiştirici|None|Aralık Değeri, Seçimi, Değeri|None|  
-|Bölünmüş Düğme|Çağırma, Genişletme|None|None|  
-|Durum Çubuğu|None|Kılavuz|None|  
-|Tab|Seçim|Kaydırma|None|  
-|Sekme Öğesi|Seçim Öğesi|None|Çağır|  
-|Tablo|Izgara, Izgara Öğesi, Tablo, Tablo Öğesi|None|None|  
-|Metin|None|Izgara Öğesi, Tablo Öğesi, Metin|Değer|  
-|Parmak|Dönüşüm|None|None|  
-|Başlık Çubuğu|None|None|None|  
-|Araç Çubuğu|None|Dock, Genişletme Daraltma, Dönüştürme|None|  
-|Araç İpucu|None|Metin, Pencere|None|  
-|Ağaç|None|Kaydırma, Seçim|None|  
-|Ağaç Öğesi|Daraltma'yı Genişlet|Çağırma, Öğeyi Kaydırma, Seçim Öğesi, Geçiş|None|  
-|Pencere|Dönüşüm, Pencere|Dock|None|  
+|Düğme|Hiçbiri|Çağır, aç, Genişlet Daralt|Hiçbiri|  
+|Takvim|Kılavuz, tablo|Seçim, kaydırma|Değer|  
+|Onay kutusu|İki Durumlu Düğme|Hiçbiri|Hiçbiri|  
+|Birleşik Giriş Kutusu|Daralt Genişlet|Seçim, değer|Kaydırma|  
+|Veri Kılavuzu|Kılavuz|Kaydırma, seçim, tablo|Hiçbiri|  
+|Veri Öğesi|Seçim Öğesi|Daralt Genişlet, kılavuz öğesi, kaydırma öğesi, tablo, değiştirme, değer|Hiçbiri|  
+|Belge|Metin|Kaydırma, değer|Hiçbiri|  
+|Düzenle|Hiçbiri|Metin, Aralık değeri, değer|Hiçbiri|  
+|Grup|Hiçbiri|Daralt Genişlet|Hiçbiri|  
+|Üst bilgi|Hiçbiri|Dönüşüm|Hiçbiri|  
+|Üstbilgi Öğesi|Hiçbiri|Dönüştürme, çağırma|Hiçbiri|  
+|Köprü|Çağır|Değer|Hiçbiri|  
+|Görüntü|Hiçbiri|Grid öğesi, tablo öğesi|Invoke, seçim öğesi|  
+|Liste|Hiçbiri|Kılavuz, birden çok görünüm, kaydırma, seçim|Tablo|  
+|Liste öğesi|Seçim Öğesi|Genişlet, kılavuz öğesi, çağır, kaydırma öğesi, Iki durumlu, değer|Hiçbiri|  
+|Menü|Hiçbiri|Hiçbiri|Hiçbiri|  
+|Menü Çubuğu|Hiçbiri|Daralt Genişlet, yerleştir, Dönüştür|Hiçbiri|  
+|Menü Öğesi|Hiçbiri|Daralt Genişlet, çağır, seçim öğesi, geçiş yap|Hiçbiri|  
+|Bölme|Hiçbiri|Dock. Kaydır, Dönüştür|Pencere|  
+|İlerleme Çubuğu|Hiçbiri|Aralık değeri, değer|Hiçbiri|  
+|Radyo Düğmesi|Seçim Öğesi|Hiçbiri|İki Durumlu Düğme|  
+|Kaydırma Çubuğu|Hiçbiri|Aralık Değeri|Kaydırma|  
+|Ayırıcı|Hiçbiri|Hiçbiri|Hiçbiri|  
+|Slider|Hiçbiri|Aralık değeri, seçim, değer|Hiçbiri|  
+|Değer Değiştirici|Hiçbiri|Aralık değeri, seçim, değer|Hiçbiri|  
+|Bölünmüş Düğme|Çağır, Genişlet Daralt|Hiçbiri|Hiçbiri|  
+|Durum Çubuğu|Hiçbiri|Kılavuz|Hiçbiri|  
+|Tab|Seçim|Kaydırma|Hiçbiri|  
+|Sekme Öğesi|Seçim Öğesi|Hiçbiri|Çağır|  
+|Tablo|Kılavuz, kılavuz öğesi, tablo, tablo öğesi|Hiçbiri|Hiçbiri|  
+|Metin|Hiçbiri|Grid öğesi, tablo öğesi, metin|Değer|  
+|Parmak|Dönüşüm|Hiçbiri|Hiçbiri|  
+|Başlık Çubuğu|Hiçbiri|Hiçbiri|Hiçbiri|  
+|Araç çubuğu|Hiçbiri|Yerleştir, Genişlet Daralt, Dönüştür|Hiçbiri|  
+|Araç Ipucu|Hiçbiri|Metin, pencere|Hiçbiri|  
+|Ağaç|Hiçbiri|Kaydırma, seçim|Hiçbiri|  
+|Ağaç Öğesi|Daralt Genişlet|Çağırma, kaydırma öğesi, seçim öğesi, değiştirme|Hiçbiri|  
+|Pencere|Dönüştür, pencere|Dock|Hiçbiri|  
   
 > [!NOTE]
-> Denetim türünde desteklenen denetim desenleri yoksa ancak bir veya daha fazla koşullu destekli denetim desenleri varsa, bu koşullu denetim desenlerinden biri her zaman desteklenir.  
+> Denetim türünde desteklenen denetim desenleri yoksa ancak bir veya daha fazla koşullu desteklenen denetim deseni varsa, bu koşullu denetim desenlerinden biri her zaman desteklenecektir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

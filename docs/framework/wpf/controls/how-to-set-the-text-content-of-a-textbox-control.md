@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: TextBox Denetiminin Metin İçeriğini Ayarlama'
+description: Metin özelliğini kullanarak bir Windows Presentation Foundation metin kutusu denetiminin ilk metin içeriğini ayarlama hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +9,19 @@ helpviewer_keywords:
 - text content [WPF], setting
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-ms.openlocfilehash: 9b16f2d99295a28725255361b0be3ef7f4245fd2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 41efb69e297b3c6fdb1203c358dcc72d7a9f806f
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459308"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168046"
 ---
 # <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Nasıl yapılır: TextBox Denetiminin Metin İçeriğini Ayarlama
 
-Bu örnek, bir <xref:System.Windows.Controls.TextBox> denetiminin ilk metin içeriğini ayarlamak için <xref:System.Windows.Controls.TextBox.Text%2A> özelliğinin nasıl kullanılacağını gösterir.
+Bu örnek, <xref:System.Windows.Controls.TextBox.Text%2A> bir denetimin ilk metin içeriğini ayarlamak için özelliğinin nasıl kullanılacağını gösterir <xref:System.Windows.Controls.TextBox> .
 
 > [!NOTE]
-> Örneğin [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] sürümü, her düğmenin <xref:System.Windows.Controls.TextBox> içeriği metin etrafında `<TextBox.Text>` etiketlerini kullanabilse de, <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Markup.ContentPropertyAttribute> özniteliğini <xref:System.Windows.Controls.TextBox.Text%2A> özelliğine uyguladığı için bu gerekli değildir. Daha fazla bilgi için bkz. [xaml genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md).
+> [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]Örneğin sürümü, `<TextBox.Text>` her düğmenin içeriği metin etrafında Etiketler kullanabilse de, <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Markup.ContentPropertyAttribute> özniteliği özelliği özelliğine uyguladığı için bu gerekli değildir <xref:System.Windows.Controls.TextBox.Text%2A> . Daha fazla bilgi için bkz. [xaml genel bakış (WPF)](../../../desktop-wpf/fundamentals/xaml.md).
 
 ## <a name="example"></a>Örnek
 
@@ -33,5 +34,5 @@ Bu örnek, bir <xref:System.Windows.Controls.TextBox> denetiminin ilk metin içe
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [TextBox Genel Bakış](textbox-overview.md)
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
+- [TextBox Genel Bakışı](textbox-overview.md)
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)

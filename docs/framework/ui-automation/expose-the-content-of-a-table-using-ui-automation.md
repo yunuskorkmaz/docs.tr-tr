@@ -1,5 +1,6 @@
 ---
 title: UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma
+description: UI Otomasyonu kullanarak bir tablonun içeriğini kullanıma sunma bölümüne bakın. Tablosal denetim içindeki her hücrenin içerik ve iç özellikleri gösterilir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,21 +10,21 @@ helpviewer_keywords:
 - UI Automation, exposing content of tables
 - exposing content of tables using UI Automation
 ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
-ms.openlocfilehash: e1c1d43073ce47a45a78bcbeb1d4da368988ca3a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c6ceb05421547a7e84f612ed6da2bd7002bf095b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433630"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168464"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>UI Otomasyonu Kullanarak Tablo İçeriğini Kullanıma Sunma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu konu başlığı altında, tablo denetimi içindeki her hücrenin içeriğini ve iç özelliklerini göstermek için [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] nasıl kullanılabileceği gösterilmektedir.  
+ Bu konu başlığı altında [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , her hücrenin içeriğini ve iç özelliklerini tablosal denetim içinde göstermek için nasıl kullanılabilecekleri gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod örneği, bir tablo hücresinin içeriğini temsil eden bir <xref:System.Windows.Automation.AutomationElement> nasıl elde leyeceğinizi gösterir; satır ve sütun dizinleri, satır ve sütun yayılmaları, satır ve sütun başlığı bilgileri gibi hücre özellikleri de alınır. Bu örnek, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]uygulayan tablolu bir denetimin klavye çapraz geçişinin benzetimini yapmak için bir odak değişikliği olay işleyicisi kullanır. Her tablo öğesi için bilgi, bir odak değişikliği olayında gösterilir.  
+ Aşağıdaki kod örneği, bir tablo hücresinin içeriğini temsil eden bir öğesinin nasıl elde edileceği gösterilmektedir <xref:System.Windows.Automation.AutomationElement> ; satır ve sütun dizinleri, satır ve sütun yayılmaları gibi hücre özellikleri, satır ve sütun başlığı bilgileri de alınır. Bu örnek, uygulayan tablolu bir denetimin klavye çapraz geçişinin benzetimini yapmak için bir odak değişikliği olay işleyicisi kullanır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Her tablo öğesi için bilgi, bir odak değişikliği olayında gösterilir.  
   
 > [!NOTE]
 > Odak değişiklikleri genel Masaüstü olayları olduğundan, tablo dışındaki odak değişikliği olayları filtrelenmelidir. İlgili bir uygulama için [TrackFocus örneğine](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771428(v=vs.90)) bakın.  
@@ -43,9 +44,9 @@ ms.locfileid: "74433630"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Denetim Desenlerine Genel Bakış](ui-automation-control-patterns-overview.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
-- [UI Otomasyonu Table Denetim Desenini Uygulama](implementing-the-ui-automation-table-control-pattern.md)
-- [UI Otomasyonu TableItem Denetim Desenini Uygulama](implementing-the-ui-automation-tableitem-control-pattern.md)
-- [UI Otomasyonu Grid Denetim Desenini Uygulama](implementing-the-ui-automation-grid-control-pattern.md)
-- [UI Otomasyonu GridItem Denetim Desenini Uygulama](implementing-the-ui-automation-griditem-control-pattern.md)
+- [UI Otomasyon Denetim Düzenlerine Genel Bakış](ui-automation-control-patterns-overview.md)
+- [İstemciler İçin UI Otomasyon Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyonu Tablo Denetim Düzenini Uygulama](implementing-the-ui-automation-table-control-pattern.md)
+- [UI Otomasyon TableItem Denetim Düzeni Uygulama](implementing-the-ui-automation-tableitem-control-pattern.md)
+- [UI Otomasyon Kılavuz Denetim Düzenini Uygulama](implementing-the-ui-automation-grid-control-pattern.md)
+- [UI Otomasyon GridItem Denetim Düzeni Uygulama](implementing-the-ui-automation-griditem-control-pattern.md)

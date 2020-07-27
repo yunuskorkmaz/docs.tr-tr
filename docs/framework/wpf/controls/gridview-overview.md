@@ -1,114 +1,115 @@
 ---
 title: GridView Genel Bakışı
+description: Windows Presentation Foundation ListView denetimi için stiller ve şablonlar hakkında bilgi edinin. Denetime benzersiz bir görünüm sağlamak için ControlTemplate 'i değiştirin.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 98bc7985172cabeab19469af4b4c21e13a6bce73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 02a2182ef1fc893107e434f431b9fbe0b3fbcd08
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181896"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165925"
 ---
 # <a name="gridview-overview"></a>GridView Genel Bakışı
-<xref:System.Windows.Controls.GridView>görünüm modu, denetim <xref:System.Windows.Controls.ListView> için görünüm modlarından biridir. Sınıf <xref:System.Windows.Controls.GridView> ve destekleyici sınıfları, sizin ve kullanıcılarınızın öğe koleksiyonlarını genellikle düğmeleri etkileşimli sütun üstbilgi olarak kullanan bir tabloda görüntülemenize olanak tanır. Bu konu <xref:System.Windows.Controls.GridView> sınıfı tanır ve kullanımını özetler.  
+<xref:System.Windows.Controls.GridView>Görünüm modu, bir denetim için görünüm modlarından biridir <xref:System.Windows.Controls.ListView> . <xref:System.Windows.Controls.GridView>Sınıfı ve destekleyici sınıfları, sizin ve kullanıcılarınızın, genellikle düğmeleri etkileşimli sütun başlıkları olarak kullanan bir tablodaki öğe koleksiyonlarını görüntülemesini sağlar. Bu konu sınıfı tanıtır <xref:System.Windows.Controls.GridView> ve kullanımını özetler.  
 
 <a name="DefiningaListViewthatusesGridViewView"></a>
-## <a name="what-is-a-gridview-view"></a>GridView Görünümü Nedir?  
- Görünüm <xref:System.Windows.Controls.GridView> modu, veri alanlarını sütunlara bağlayarak ve alanı tanımlamak için bir sütun üstbilgisi görüntüleyerek veri öğelerinin listesini görüntüler. Varsayılan <xref:System.Windows.Controls.GridView> stil düğmeleri sütun üstbilgi olarak uygular. Sütun üstbilgi düğmeleri kullanarak önemli kullanıcı etkileşimi yeteneklerini uygulayabilirsiniz; örneğin, kullanıcılar belirli bir sütunun <xref:System.Windows.Controls.GridView> içeriğine göre verileri sıralamak için sütun üstbilgisini tıklatabilir.  
+## <a name="what-is-a-gridview-view"></a>GridView görünümü nedir?  
+ <xref:System.Windows.Controls.GridView>Görünüm modu, veri alanlarını sütunlara bağlayarak ve alanı tanımlamak için bir sütun üst bilgisi görüntüleyerek veri öğelerinin bir listesini görüntüler. Varsayılan <xref:System.Windows.Controls.GridView> stil düğmeleri sütun başlıkları olarak uygular. Sütun başlıkları için düğmeleri kullanarak, önemli Kullanıcı etkileşimi özelliklerini uygulayabilirsiniz; Örneğin, kullanıcılar <xref:System.Windows.Controls.GridView> verileri belirli bir sütunun içeriğine göre sıralamak için sütun başlığına tıklabilirler.  
   
 > [!NOTE]
-> Sütun üstbilgilerinin <xref:System.Windows.Controls.GridView> kullandığı düğme <xref:System.Windows.Controls.Primitives.ButtonBase>denetimleri.  
+> <xref:System.Windows.Controls.GridView>Sütun başlıkları için kullanılan düğme denetimleri öğesinden türetilir <xref:System.Windows.Controls.Primitives.ButtonBase> .  
   
- Aşağıdaki resimde <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView> içerik görünümü gösterilmektedir.  
+ Aşağıdaki çizimde bir <xref:System.Windows.Controls.GridView> içerik görünümü gösterilmektedir <xref:System.Windows.Controls.ListView> .  
 
  ![ListView içeriğinin GridView görünümünü gösteren ekran görüntüsü.](./media/gridview-overview/styled-listview-content.png)  
   
- <xref:System.Windows.Controls.GridView>sütunlar, içeriklerine otomatik olarak boyutlandırılabilen nesneler tarafından <xref:System.Windows.Controls.GridViewColumn> temsil edilir. İsteğe bağlı olarak, a'yı <xref:System.Windows.Controls.GridViewColumn> açıkça belirli bir genişliğe ayarlayabilirsiniz. Kavrayıcıyı sütun başlıkları arasında sürükleyerek sütunları yeniden boyutlandırabilirsiniz. Ayrıca, bu işlevsellik yerleşik olduğundan, sütunları dinamik olarak ekleyebilir, kaldırabilir, değiştirebilir ve yeniden <xref:System.Windows.Controls.GridView>sıralayabilirsiniz. Ancak, <xref:System.Windows.Controls.GridView> görüntülenebilen verileri doğrudan güncelleştiremezsiniz.  
+ <xref:System.Windows.Controls.GridView>sütunlar nesneler tarafından temsil edilir <xref:System.Windows.Controls.GridViewColumn> ve içeriğe otomatik olarak boyutlenebilir. İsteğe bağlı olarak, açıkça belirli bir <xref:System.Windows.Controls.GridViewColumn> Genişlik olarak ayarlayabilirsiniz. Kavrayıcıyı sütun başlıkları arasında sürükleyerek sütunları yeniden boyutlandırabilirsiniz. Ayrıca, bu işlev yerleşik olarak bulunduğu için sütunları dinamik olarak ekleyebilir, kaldırabilir, değiştirebilir ve yeniden sıralayabilirsiniz <xref:System.Windows.Controls.GridView> . Ancak, <xref:System.Windows.Controls.GridView> görüntülediği veriler doğrudan güncelleştirilemez.  
   
- Aşağıdaki örnek, çalışan verilerini <xref:System.Windows.Controls.GridView> görüntüleyen bir şeyin nasıl tanımlanılsüreceğini gösterir. Bu örnekte, <xref:System.Windows.Controls.ListView> `EmployeeInfoDataSource` <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>'. Bağlayıcı <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> <xref:System.Windows.Controls.GridViewColumn> içeriğin veri kategorilerine `EmployeeInfoDataSource` özellik tanımları.  
+ Aşağıdaki örnek, <xref:System.Windows.Controls.GridView> çalışan verilerini görüntüleyen bir 'nın nasıl tanımlanacağını göstermektedir. Bu örnekte, öğesini <xref:System.Windows.Controls.ListView> olarak tanımlar `EmployeeInfoDataSource` <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> . İçerik bağlama özelliğinin özellik <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> tanımları <xref:System.Windows.Controls.GridViewColumn> `EmployeeInfoDataSource` veri kategorilerine.  
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- Aşağıdaki resimde, önceki örnekte oluşturduğu tablo gösterilmektedir. GridView denetimi, Bir ItemsSource nesnesinden gelen verileri görüntüler:
+ Aşağıdaki çizimde, önceki örneğin oluşturduğu tablo gösterilmektedir. GridView denetimi bir ıtemısource nesnesinden verileri görüntüler:
 
- ![GridView çıktılı bir ListView gösteren ekran görüntüsü.](./media/gridview-overview/listview-gridview-output.jpg)  
+ ![GridView çıkışıyla bir ListView gösteren ekran görüntüsü.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>
-## <a name="gridview-layout-and-style"></a>GridView Düzeni ve Stili  
- Sütun hücreleri ve bir <xref:System.Windows.Controls.GridViewColumn> sütun üstbilgiaynı genişliğe sahip. Varsayılan olarak, her sütun kendi içeriğine uyacak şekilde genişliğini boyutlar. İsteğe bağlı olarak, bir sütunu sabit genişliğe ayarlayabilirsiniz.  
+## <a name="gridview-layout-and-style"></a>GridView düzeni ve stili  
+ Sütun hücrelerinin ve sütununun sütun üstbilgisinin <xref:System.Windows.Controls.GridViewColumn> genişliği aynı. Varsayılan olarak, her sütun genişliğini içeriğine uyacak şekilde boyutlandırır. İsteğe bağlı olarak, bir sütunu sabit genişliğe ayarlayabilirsiniz.  
   
- İlgili veri içeriği yatay satırlarda görüntülenir. Örneğin, önceki resimde, yatay bir satırda göründükleri için her çalışanın soyadı, adı ve kimlik numarası küme olarak görüntülenir.  
+ İlgili veri içeriği yatay satırlarda görüntülenir. Örneğin, önceki çizimde, her çalışanın soyadı, adı ve KIMLIK numarası, yatay bir satırda göründükleri için bir küme olarak görüntülenir.  
   
 <a name="DefiningandStylingColumnsinaGridView"></a>
-### <a name="defining-and-styling-columns-in-a-gridview"></a>GridView'da Sütunları Tanımlama ve Şekillendirme  
- Görüntülemek için veri alanını tanımlarken <xref:System.Windows.Controls.GridViewColumn> <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>, , <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>veya <xref:System.Windows.Controls.GridViewColumn.CellTemplateSelector%2A> özellikleri kullanın. Özellik, <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> şablon özelliklerinden herhangi biri üzerinde önceliklidir.  
+### <a name="defining-and-styling-columns-in-a-gridview"></a>GridView 'da sütunları tanımlama ve Stillendirme  
+ İçinde görüntülenecek veri alanını tanımlarken,, <xref:System.Windows.Controls.GridViewColumn> <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> veya <xref:System.Windows.Controls.GridViewColumn.CellTemplateSelector%2A> özelliklerini kullanın. <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>Özelliği, şablon özelliklerinden herhangi birinin üzerine gelir.  
   
- Bir sütundaki içeriğin hizalanmasını <xref:System.Windows.Controls.GridView>belirtmek için <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>, bir . <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> <xref:System.Windows.Controls.GridView>Bir <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> <xref:System.Windows.Controls.ListView>  
+ İçeriğinin bir sütununda hizalamasını belirtmek için <xref:System.Windows.Controls.GridView> bir tanımlayın <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> . <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> Kullanılarak görüntülenen içerik için ve özelliklerini kullanmayın <xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.GridView> .  
   
- Sütun üstbilgiler için şablon ve stil <xref:System.Windows.Controls.GridView>özelliklerini <xref:System.Windows.Controls.GridViewColumn>belirtmek <xref:System.Windows.Controls.GridViewColumnHeader> için , ve sınıfları kullanın. Daha fazla bilgi için [GridView Sütun Üstbilgi Stilleri ve Şablonlara Genel Bakış'a](gridview-column-header-styles-and-templates-overview.md)bakın.  
+ Sütun başlıkları için şablon ve stil özelliklerini belirtmek üzere,, <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.GridViewColumn> ve <xref:System.Windows.Controls.GridViewColumnHeader> sınıflarını kullanın. Daha fazla bilgi için bkz. [GridView sütun üst bilgi stilleri ve şablonlara genel bakış](gridview-column-header-styles-and-templates-overview.md).  
   
 <a name="AddingVisualElementstoaGridViewView"></a>
-### <a name="adding-visual-elements-to-a-gridview"></a>GridView'a Görsel Öğeler Ekleme  
- Görünüm moduna ve <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.Button> denetimler gibi görsel öğeler eklemek için şablonları veya stilleri kullanın. <xref:System.Windows.Controls.GridView>  
+### <a name="adding-visual-elements-to-a-gridview"></a>GridView 'a görsel öğe ekleme  
+ Ve denetimleri gibi görsel öğeleri <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.Button> bir <xref:System.Windows.Controls.GridView> Görünüm moduna eklemek için şablonlar veya stiller kullanın.  
   
- Görsel öğeyi açıkça bir veri öğesi olarak tanımlarsanız, bir <xref:System.Windows.Controls.GridView>'de yalnızca bir kez görüntülenebilir. Bu sınırlama, bir öğenin yalnızca bir üst öğesi olabilir ve bu nedenle, görsel ağaçta yalnızca bir kez görüntülenebilir çünkü var.  
+ Bir görsel öğeyi bir veri öğesi olarak açıkça tanımlarsanız, bir içinde yalnızca bir kez görünebilir <xref:System.Windows.Controls.GridView> . Bu sınırlama, bir öğenin yalnızca bir üst öğesi olabileceğinden ve bu nedenle görsel ağaçta yalnızca bir kez görünebildiğinden oluşur.  
   
 <a name="StylingRowsinaGridViewView"></a>
-### <a name="styling-rows-in-a-gridview"></a>GridView'da Satırları Şekillendirme  
- Bir <xref:System.Windows.Controls.GridViewRowPresenter> <xref:System.Windows.Controls.GridView>' <xref:System.Windows.Controls.GridViewHeaderRowPresenter> nin satırlarını biçimlendirmek ve görüntülemek için ve sınıfları kullanın. <xref:System.Windows.Controls.GridView> Görünüm modunda satırları nasıl stile uygulayacağınız örneği için [GridView Uygulayan ListView'da Satır Stili'ne](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)bakın.  
+### <a name="styling-rows-in-a-gridview"></a>GridView 'da satır Stillendirme  
+ <xref:System.Windows.Controls.GridViewRowPresenter>Ve <xref:System.Windows.Controls.GridViewHeaderRowPresenter> satırlarını biçimlendirmek ve göstermek için ve sınıflarını kullanın <xref:System.Windows.Controls.GridView> . Bir görünüm modundaki satırların nasıl Stillendirilmesi hakkında bir örnek için <xref:System.Windows.Controls.GridView> , bkz. [GridView Uygulayan ListView Içindeki bir satırı stilme](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md).  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>
-### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>ItemContainerStyle kullanırken hizalama sorunları  
- Sütun üstbilgi ve hücreler arasındaki hizalama sorunlarını önlemek için, bir özellik ayarlamayın <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>veya bir maddenin genişliğini etkileyen bir şablon belirtin. Örneğin, <xref:System.Windows.FrameworkElement.Margin%2A> özelliği ayarlamayın veya <xref:System.Windows.Controls.ControlTemplate> denetimde <xref:System.Windows.Controls.CheckBox> tanımlanan <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> bir a'ya <xref:System.Windows.Controls.ListView> bir şey ekleyen bir özellik belirtmeyin. Bunun yerine, <xref:System.Windows.Controls.GridView> sütun genişliğini doğrudan bir görünüm modu tanımlayan sınıflarda etkileyen özellikleri ve şablonları belirtin.  
+### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>ItemContainerStyle kullandığınızda hizalama sorunları  
+ Sütun üstbilgileri ve hücreler arasındaki hizalama sorunlarını engellemek için, bir özellik ayarlamayın veya içindeki bir öğenin genişliğini etkileyen bir şablon belirtmeyin <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> . Örneğin, <xref:System.Windows.FrameworkElement.Margin%2A> özelliğini ayarlamayın veya bir <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.CheckBox> denetimde tanımlı bir öğesine ekleyen bir öğesini belirtin <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> <xref:System.Windows.Controls.ListView> . Bunun yerine, bir görünüm modunu tanımlayan sınıflarda doğrudan sütun genişliğini etkileyen özellikleri ve şablonları belirtin <xref:System.Windows.Controls.GridView> .  
   
- Örneğin, <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.GridView> görünüm modundasatırlara bir eklemek <xref:System.Windows.Controls.CheckBox> için, bir <xref:System.Windows.DataTemplate>,'a ekleyin <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> ve <xref:System.Windows.DataTemplate>sonra özelliği buna ayarlayın.  
+ Örneğin, görüntüleme modundaki satırlara bir eklemek için öğesini <xref:System.Windows.Controls.CheckBox> <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.CheckBox> öğesine ekleyin <xref:System.Windows.DataTemplate> ve sonra <xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A> özelliği bu olarak ayarlayın <xref:System.Windows.DataTemplate> .  
   
 <a name="InteractingwithaGridViewControl"></a>
-## <a name="user-interactions-with-a-gridview"></a>GridView ile Kullanıcı Etkileşimleri  
- Uygulamanızda bir <xref:System.Windows.Controls.GridView> a kullandığınızda, kullanıcılar ile etkileşim ve <xref:System.Windows.Controls.GridView>biçimlendirme değiştirebilirsiniz. Örneğin, kullanıcılar sütunları yeniden sıralayabilir, sütunu yeniden boyutlandırabilir, tablodaki öğeleri seçebilir ve içerik arasında gezinebilir. Ayrıca, bir kullanıcı sütun üstbilgisi düğmesini tıklattığında yanıt veren bir olay işleyicisi de tanımlayabilirsiniz. Olay işleyicisi, sütuniçeriğine <xref:System.Windows.Controls.GridView> göre görüntülenen verileri sıralama gibi işlemler gerçekleştirebilir.  
+## <a name="user-interactions-with-a-gridview"></a>GridView ile kullanıcı etkileşimleri  
+ Uygulamanızda bir kullandığınızda <xref:System.Windows.Controls.GridView> , kullanıcılar ile etkileşime geçebilir ve biçimlendirmesini değiştirebilir <xref:System.Windows.Controls.GridView> . Örneğin, kullanıcılar sütunları yeniden sıralayabilir, bir sütunu yeniden boyutlandırabilir, tablodaki öğeleri seçebilir ve içeriği kaydırabilirler. Ayrıca, bir Kullanıcı sütun üst bilgisi düğmesine tıkladığında yanıt veren bir olay işleyicisi tanımlayabilirsiniz. Olay işleyicisi, <xref:System.Windows.Controls.GridView> bir sütunun içeriğine göre görüntülenen verileri sıralama gibi işlemler gerçekleştirebilir.  
   
- Aşağıdaki liste, kullanıcı etkileşimi için kullanma <xref:System.Windows.Controls.GridView> nın yeteneklerini daha ayrıntılı olarak tartışır:  
+ Aşağıdaki liste, Kullanıcı etkileşimi için kullanmanın yeteneklerini daha ayrıntılı bir şekilde anlatmaktadır <xref:System.Windows.Controls.GridView> :  
   
-- **Sürükle ve bırak yöntemini kullanarak sütunları yeniden sırala.**  
+- **Sürükle ve bırak yöntemini kullanarak sütunları yeniden sıralayın.**  
   
-     Kullanıcılar, sütun üstbilginin üzerindeyken sol fare düğmesine <xref:System.Windows.Controls.GridView> basarak ve sonra bu sütunu yeni bir konuma sürükleyerek sütunları yeniden sıralayabilir. Kullanıcı sütun üstbilgisini sürüklerken, üstbilginin kayan bir sürümü ve sütunun nereye ekleneceğini gösteren düz siyah bir çizgi görüntülenir.  
+     Kullanıcılar bir <xref:System.Windows.Controls.GridView> sütun başlığı üzerindeyken sol fare düğmesine basarak ve sonra bu sütunu yeni bir konuma sürükleyerek, içindeki sütunları yeniden sıralayabilir. Kullanıcı sütun başlığını sürüklediğinde, başlığın kayan bir sürümü ve sütunun ekleneceği yeri gösteren düz bir siyah çizgi görüntülenir.  
   
-     Üstbilginin kayan sürümü için varsayılan stili değiştirmek istiyorsanız, <xref:System.Windows.Controls.ControlTemplate> özellik <xref:System.Windows.Controls.GridViewColumnHeader> ayarlandığında tetiklenen bir <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> tür için <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>bir a belirtin. Daha fazla bilgi için bkz: [Sürüncemede Edilmiş GridView Sütun Başlığı için Stil Oluştur.](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+     Bir üstbilginin kayan sürümünün varsayılan stilini değiştirmek istiyorsanız, <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.GridViewColumnHeader> özelliği olarak ayarlandığında tetiklenen bir tür için bir seçin <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating> . Daha fazla bilgi için bkz. [sürüklenen GridView sütun üst bilgisi Için stil oluşturma](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
 - **Bir sütunu içeriğine göre yeniden boyutlandırın.**  
   
-     Kullanıcılar, bir sütunu içeriğine uyacak şekilde yeniden boyutlandırmak için sütun başlığının sağındaki kavrayıcıyı çift tıklatabilir.  
+     Kullanıcılar bir sütunu içeriğe sığacak şekilde yeniden boyutlandırmak için bir sütun üst bilgisinin sağındaki kavrayıcıyı çift tıklayabilirler.  
   
     > [!NOTE]
-    > <xref:System.Windows.Controls.GridViewColumn.Width%2A> Özelliği aynı etkiyi `Double.NaN` üretecek şekilde ayarlayabilirsiniz.  
+    > <xref:System.Windows.Controls.GridViewColumn.Width%2A>Özelliğini `Double.NaN` aynı etkiyi oluşturmak için olarak ayarlayabilirsiniz.  
   
 - **Satır öğelerini seçin.**  
   
-     Kullanıcılar bir <xref:System.Windows.Controls.GridView>'de bir veya daha fazla öğe seçebilir.  
+     Kullanıcılar bir veya daha fazla öğeyi bir veya daha fazla seçim yapabilir <xref:System.Windows.Controls.GridView> .  
   
-     Seçili bir öğenin öğesini <xref:System.Windows.Style> değiştirmek istiyorsanız, [listview'de Seçili Öğeleri Stil'de Tetikleyicileri Kullan'a](how-to-use-triggers-to-style-selected-items-in-a-listview.md)bakın.  
+     <xref:System.Windows.Style>Seçili bir öğenin öğesini değiştirmek istiyorsanız, bkz. [ListView Içindeki seçili öğelere stil eklemek Için Tetikleyicileri kullanma](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
 - **Başlangıçta ekranda görünmeyen içeriği görüntülemek için kaydırın.**  
   
-     Boyutu <xref:System.Windows.Controls.GridView> tüm öğeleri görüntülemek için yeterince büyük değilse, kullanıcılar bir <xref:System.Windows.Controls.ScrollViewer> denetim tarafından sağlanan kaydırma çubukları kullanarak yatay veya dikey kaydırma yapabilirsiniz. Tüm <xref:System.Windows.Controls.Primitives.ScrollBar> içerik belirli bir yönde görünürse A gizlenir. Sütun başlıkları dikey kaydırma çubuğuyla kaydırmaz, yatay kaydırma yapar.  
+     Boyutu <xref:System.Windows.Controls.GridView> tüm öğelerin görüntülenmesi için yeterince büyük değilse, kullanıcılar bir denetim tarafından sunulan kaydırma çubuklarını kullanarak yatay veya dikey bir şekilde kaydırabilirler <xref:System.Windows.Controls.ScrollViewer> . <xref:System.Windows.Controls.Primitives.ScrollBar>Tüm içerik belirli bir yönde görünür durumdaysa, gizli olur. Sütun başlıkları dikey bir kaydırma çubuğuyla kaydırılmaz, ancak yatay olarak kaydırılmaz.  
   
-- **Sütun üstbilgi düğmelerini tıklatarak sütunlarla etkileşimkurun.**  
+- **Sütun başlığı düğmelerine tıklayarak sütunlarla etkileşime geçin.**  
   
-     Kullanıcılar bir sütun üstbilgisi düğmesini tıklattıklarında, sıralama algoritması sağladıysanız sütunda görüntülenen verileri sıralayabilirler.  
+     Kullanıcılar bir sütun üst bilgisi düğmesine tıkladıklarında, bir sıralama algoritması sağladıysanız sütunda görüntülenen verileri sıralabilirler.  
   
-     Sıralama algoritması <xref:System.Windows.Controls.Primitives.ButtonBase.Click> gibi işlevsellik sağlamak için sütun üstbilgi düğmeleri için olayı işleyebilirsiniz. Olayı tek <xref:System.Windows.Controls.Primitives.ButtonBase.Click> bir sütun üstbilgiiçin işlemek için, ''nin üzerinde bir olay işleyicisi <xref:System.Windows.Controls.GridViewColumnHeader>ayarlayın Tüm sütun üstbilgilerinin <xref:System.Windows.Controls.Primitives.ButtonBase.Click> olayı işleyen bir olay işleyicisini ayarlamak için <xref:System.Windows.Controls.ListView> işleyiciyi denetime ayarlayın.  
+     <xref:System.Windows.Controls.Primitives.ButtonBase.Click>Sıralama algoritması gibi işlevler sağlamak için sütun üst bilgisi düğmelerinin olayını işleyebilirsiniz. <xref:System.Windows.Controls.Primitives.ButtonBase.Click>Tek bir sütun üst bilgisinin olayını işlemek için üzerinde bir olay işleyicisi ayarlayın <xref:System.Windows.Controls.GridViewColumnHeader> . Tüm sütun başlıkları için olayı işleyen bir olay işleyicisi ayarlamak için <xref:System.Windows.Controls.Primitives.ButtonBase.Click> , denetimde işleyiciyi ayarlayın <xref:System.Windows.Controls.ListView> .  
   
 <a name="Obtaining_Other_Custom_Views"></a>
-## <a name="obtaining-other-custom-views"></a>Diğer Özel Görünümleri Edinme  
- Soyut sınıftan türetilen sınıf, <xref:System.Windows.Controls.ListView> sınıfın olası görünüm modlarından sadece biridir. <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ViewBase> <xref:System.Windows.Controls.ViewBase> Sınıftan <xref:System.Windows.Controls.ListView> türeyen diğer özel görünümler oluşturabilirsiniz. Özel görünüm modu örneği [için](how-to-create-a-custom-view-mode-for-a-listview.md)bkz.  
+## <a name="obtaining-other-custom-views"></a>Diğer özel görünümleri edinme  
+ <xref:System.Windows.Controls.GridView>Soyut sınıftan türetilmiş sınıf, <xref:System.Windows.Controls.ViewBase> sınıf için olası görünüm modlarından yalnızca biridir <xref:System.Windows.Controls.ListView> . Sınıfından türeterek için başka özel görünümler oluşturabilirsiniz <xref:System.Windows.Controls.ListView> <xref:System.Windows.Controls.ViewBase> . Özel görünüm moduna bir örnek için bkz. [ListView Için özel görünüm modu oluşturma](how-to-create-a-custom-view-mode-for-a-listview.md).  
   
 <a name="GridViewSupportingClasses"></a>
-## <a name="gridview-supporting-classes"></a>GridView Destekleyici Sınıflar  
- Aşağıdaki sınıflar görünüm <xref:System.Windows.Controls.GridView> modunu destekler.  
+## <a name="gridview-supporting-classes"></a>GridView destekleme sınıfları  
+ Aşağıdaki sınıflar <xref:System.Windows.Controls.GridView> Görünüm modunu destekler.  
   
 - <xref:System.Windows.Controls.GridViewColumn>  
   
@@ -131,6 +132,6 @@ ms.locfileid: "79181896"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [ListView Genel Bakış](listview-overview.md)
+- [ListView Genel Bakışı](listview-overview.md)
 - [Üst Bilgiye Tıklandığında GridView Sütununu Sıralama](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Nasıl Dır Konular](listview-how-to-topics.md)
+- [Nasıl Yapılır Konuları](listview-how-to-topics.md)

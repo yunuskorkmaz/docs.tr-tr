@@ -1,43 +1,44 @@
 ---
 title: Standart Denetimler İçin UI Otomasyon Desteği
+description: Windows Presentation Foundation (WPF), Win32 ve Windows Forms için geliştirilen uygulamalardaki standart denetimler için UI Otomasyonu desteği hakkında bilgi alın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: 36028d589e98177f6a0e83092edd656860b1a8d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17916a6978008439e91caae00d8b6f26045f9018
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179857"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166127"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Standart Denetimler İçin UI Otomasyon Desteği
 > [!NOTE]
-> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]konu, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Win32 ve Windows Forms çerçeveleri için geliştirilen uygulamalarda standart denetimdesteği hakkında bilgi içerir.  
+ Bu konu [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , Win32 ve Windows Forms çerçeveleri için geliştirilen uygulamalardaki standart denetimler için destek hakkında bilgiler içerir.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>
-## <a name="windows-presentation-foundation-controls"></a>Windows Sunum Temel Denetimleri  
- Kullanıcı [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] etkileşimi için bilgi veya destek sağlayan tüm [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]denetim öğeleri için tam yerel destek var. Paneller gibi diğer öğeler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]görünmez.  
+## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation denetimleri  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]Kullanıcı etkileşimi için bilgi veya destek sağlayan tüm denetim öğeleri için tam yerel destek vardır [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Paneller gibi diğer öğeler, için görünür değildir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
 <a name="Win32_Controls"></a>
-## <a name="win32-controls"></a>Win32 Kontroller  
- Win32 denetimlerinin çoğu, UIAutomationClientsideProviders.dll'deki istemci tarafındaki sağlayıcılar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] aracılığıyla uygulanır. Bu derleme otomatik olarak UI Automation istemci uygulamalarında kullanılmak üzere kaydedilir.  
+## <a name="win32-controls"></a>Win32 denetimleri  
+ Çoğu Win32 denetimi, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UIAutomationClientsideProviders.dll istemci tarafı sağlayıcılar aracılığıyla sunulur. Bu derleme, UI Otomasyonu istemci uygulamalarıyla kullanılmak üzere otomatik olarak kaydedilir.  
   
- Tam destek yalnızca *ComCtrl32.dll'nin*6.  
+ Tam destek yalnızca *ComCtrl32.dll*sürüm 6 ' dan denetimler için sağlanır.  
   
  Aşağıdaki denetimler desteklenir.  
   
-|Sınıf adı|Kontrol Türü|  
+|Sınıf adı|Denetim türü|  
 |----------------|------------------|  
 |Düğme|Düğme|  
 |Düğme|RadioButton|  
 |Düğme|Grup|  
 |Düğme|CheckBox|  
 |Düğme|Köprü|  
-|Düğme|Splitbutton|  
+|Düğme|SplitButton|  
 |Düğme|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
@@ -47,37 +48,37 @@ ms.locfileid: "79179857"
 |Statik|Metin|  
 |Statik|Görüntü|  
 |SysIPAddress32|Özel|  
-|SysHeader32|Üstbilgi/Üstbilgi Öğesi|  
+|SysHeader32|Üstbilgi/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|Liste|  
 |ListBox|Liste|  
-|ListBox|Listıtem|  
+|ListBox|Liste|  
 |#32768|Menü|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|Richedit|Belge. Nota bakın.|  
+|RichEdit|Belgedeki. Bkz. Note.|  
 |RichEdit20A|Belge|  
-|ZenginEdit20W|Belge|  
-|ZenginEdit50W|Belge|  
-|ScrollBar|Kaydırıcı|  
-|msctls_trackbar32|Kaydırıcı|  
+|RichEdit20W|Belge|  
+|RichEdit50W|Belge|  
+|ScrollBar|Slider|  
+|msctls_trackbar32|Slider|  
 |msctls_updown32|Değer Değiştirici|  
 |msctls_statusbar32|StatusBar|  
 |SysTabControl32|Tab|  
-|SysTabControl32|Tabıtem|  
-|Araç ÇubuğuWindow32|ToolBar|  
-|Araç ÇubuğuWindow32|MenuItem|  
-|Araç ÇubuğuWindow32|Düğme|  
-|Araç ÇubuğuWindow32|CheckBox|  
-|Araç ÇubuğuWindow32|RadioButton|  
-|Araç ÇubuğuWindow32|Ayırıcı|  
+|SysTabControl32|TabItem|  
+|ToolbarWindow32|ToolBar|  
+|ToolbarWindow32|MenuItem|  
+|ToolbarWindow32|Düğme|  
+|ToolbarWindow32|CheckBox|  
+|ToolbarWindow32|RadioButton|  
+|ToolbarWindow32|Ayırıcı|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
-|RebarWindow32|Araç Çubuğu|  
+|ReBarWindow32|Araç Çubuğu|  
 |SysTreeView32|Ağaç|  
-|SysTreeView32|Treeıtem|  
+|SysTreeView32|TreeItem|  
   
- **Not** RichEdit denetimi yalnızca Windows Vista (RichEd20.dll sürüm 3.1 ve daha sonra ve MsftEdit.dll sürüm 4.1 ve sonraki sürümlerde) ile gönderilen sürümler için desteklenir.  
+ **Göz önünde** RichEdit denetimi yalnızca Windows Vista ile birlikte gelen sürümler için desteklenir (RichEd20.dll sürüm 3,1 ve üzeri sürümlerde ve MsftEdit.dll sürüm 4,1 ve üzeri).  
   
  Aşağıdaki denetimler desteklenmez.  
   
@@ -87,84 +88,84 @@ ms.locfileid: "79179857"
 |SysPager|Değer Değiştirici|  
 |SysDateTimePick32|Özel|  
 |SysMonthCal32|Takvim|  
-|MS_WINNOTE|Araç İpucu|  
-|VBBubble|Araç İpucu|  
-|ScrollBar (bağımsız denetim olarak kullanıldığında)|Kaydırıcı|  
+|MS_WINNOTE|Araç ipucu|  
+|Vbkabarcık|Araç ipucu|  
+|Kaydırma çubuğu (tek başına denetim olarak kullanıldığında)|Slider|  
 |SuperGrid|Özel|  
   
 <a name="Windows_Forms_Controls"></a>
 ## <a name="windows-forms-controls"></a>Windows Forms Denetimleri  
- Windows Forms denetimleri, UIAutomationClientsideProviders.dll'deki istemci tarafındaki sağlayıcılar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] aracılığıyla uygulanır. Bu derleme otomatik olarak UI Automation istemci uygulamalarında kullanılmak üzere kaydedilir.  
+ Windows Forms denetimleri, [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] UIAutomationClientsideProviders.dll istemci tarafı sağlayıcılar aracılığıyla sunulur. Bu derleme, UI Otomasyonu istemci uygulamalarıyla kullanılmak üzere otomatik olarak kaydedilir.  
   
- Genellikle, Win32 ortak denetimleri için yönetilen Windows Forms denetimleri tarafından [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]desteklenir. Aşağıdaki denetimler desteklenir.  
+ Genellikle, Win32 ortak denetimleri için yönetilen sarmalayıcılar olan Windows Forms denetimleri tarafından desteklenir [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Aşağıdaki denetimler desteklenir.  
   
 |Sınıf Adı|  
 |----------------|  
 |Düğme|  
 |CheckBox|  
-|Checkedlistbox|  
-|Colordialog|  
+|CheckedListBox|  
+|ColorDialog|  
 |ComboBox|  
-|KlasörTarayıcı|  
+|FolderBrowser|  
 |FontDialog|  
 |GroupBox|  
-|Hscrollbar|  
-|ımagelist|  
+|HscrollBar|  
+|'I|  
 |Etiketle|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
 |MonthCalendar|  
-|Notifyıcon|  
-|Openfiledialog|  
-|SayfaSetupDialog|  
+|NotifyIcon|  
+|OpenFileDialog|  
+|PageSetupDialog|  
 |PrintDialog|  
 |ProgressBar|  
 |RadioButton|  
 |RichTextBox|  
-|Savefiledialog|  
+|SaveFileDialog|  
 |ScrollableControl|  
-|Soundplayer|  
+|SoundPlayer|  
 |StatusBar|  
-|Sekme/Sekme Sayfası|  
+|TabControl/TabPage|  
 |TextBox|  
 |Zamanlayıcı|  
 |Araç Çubuğu|  
 |ToolTip|  
-|Trackbar|  
+|TrackBar|  
 |TreeView|  
-|Vscrollbar|  
-|Webbrowser|  
+|VscrollBar|  
+|'A|  
   
- Aşağıdaki denetimler yalnızca [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] Microsoft Etkin Erişilebilirlik desteği ile maruz kalır. Bazı işlevler kullanılamayabilir.  
+ Aşağıdaki denetimler [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] yalnızca Microsoft Etkin Erişilebilirlik desteğiyle kullanıma sunulur. Bazı işlevler kullanılamayabilir.  
   
-|Kontrol Adı|  
+|Denetim adı|  
 |------------------|  
 |BindingSource|  
 |DataGrid|  
-|Datagridview|  
+|DataGridView|  
 |DataNavigator|  
 |DomainUpDown|  
-|Hata Sağlayıcısı|  
-|Flowlayoutpanel|  
+|Bileþeni|  
+|FlowLayoutPanel|  
 |Form|  
-|Bağlantı Etiketi|  
-|Yardım Sağlayıcısı|  
-|Maskedtextbox|  
-|MenüŞeridi/BağlammenüŞeridi|  
+|LinkLabel|  
+|HelpProvider|  
+|MaskedTextBox|  
+|MenuStrip/ContextMenuStrip|  
 |NumericUpDown|  
 |Panel|  
-|Picturebox|  
-|Printdocument|  
-|PrintPreview-Control|  
-|PrintPreview-Dialog|  
-|Emlak Grid|  
-|Usercontrol|  
+|PictureBox|  
+|Öniz|  
+|PrintPreview-denetim|  
+|PrintPreview-Iletişim kutusu|  
+|'In|  
+|UserControl|  
 |ToolStrip|  
-|Tablelayoutpanel|  
+|TableLayoutPanel|  
 |SplitContainer/SplitterPanel|  
 |Bölücü|  
-|RaftingKonteyner|  
+|RaftingContainer|  
 |StatusStrip|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

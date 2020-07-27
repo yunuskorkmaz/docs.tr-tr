@@ -1,23 +1,24 @@
 ---
 title: UI Otomasyon Güvenliğine Genel Bakış
+description: Microsoft UI Otomasyonu için güvenlik modeline genel bakış konusunu okuyun. Kullanıcı hesabı denetimini, daha fazla ayrıcalık gerektiren görevleri ve bildirim dosyalarını anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: 70d24c3dcc531abcec6d4dce75b5f0b31757e0c0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d483f282db8ce8e5653d6d83361fa44df05f63f5
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448774"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87163149"
 ---
 # <a name="ui-automation-security-overview"></a>UI Otomasyon Güvenliğine Genel Bakış
 
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).
 
-Bu genel bakışta, Windows Vista 'da [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] için güvenlik modeli açıklanır.
+Bu genel bakışta, Windows Vista 'da için güvenlik modeli açıklanır [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] .
 
 <a name="User_Account_Control"></a>
 
@@ -41,7 +42,7 @@ Daha yüksek bir ayrıcalık düzeyinde çalışan uygulamalarla iletişim kurma
 
 ## <a name="manifest-files"></a>Bildirim dosyaları
 
-Korunan sistem kullanıcı arabirimine erişim kazanmak için uygulamalar, `requestedExecutionLevel` etiketinde `uiAccess` özniteliğini içeren bir bildirim dosyası ile oluşturulmalıdır:
+Korunan sistem kullanıcı arabirimine erişim kazanmak için, uygulamalar `uiAccess` aşağıdaki gibi etiketteki özniteliğini içeren bir bildirim dosyası ile oluşturulmalıdır `requestedExecutionLevel` :
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -55,6 +56,6 @@ Korunan sistem kullanıcı arabirimine erişim kazanmak için uygulamalar, `requ
 </trustInfo>
 ```
 
-Bu koddaki `level` özniteliğinin değeri yalnızca bir örnektir.
+`level`Bu koddaki özniteliğin değeri yalnızca bir örnektir.
 
-`uiAccess` varsayılan olarak "false" değeridir; diğer bir deyişle, özniteliği atlanırsa veya derleme için bildirim yoksa, uygulama korumalı Kullanıcı arabirimine erişim elde edemeyecektir.
+`uiAccess`Varsayılan olarak "false" değeridir; diğer bir deyişle, özniteliği atlanırsa veya derleme için bildirim yoksa, uygulama korumalı Kullanıcı arabirimine erişim elde edemeyecektir.
