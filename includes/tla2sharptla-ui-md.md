@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65672709"
 ---
-<span data-ttu-id="c6a12-101">UI</span><span class="sxs-lookup"><span data-stu-id="c6a12-101">UI</span></span>
+<span data-ttu-id="6dfc0-101">Kullanıcı arabirimi</span><span class="sxs-lookup"><span data-stu-id="6dfc0-101">UI</span></span>

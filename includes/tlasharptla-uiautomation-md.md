@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65672182"
 ---
-<span data-ttu-id="c7161-101">Microsoft UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="c7161-101">Microsoft UI Automation</span></span>
+<span data-ttu-id="dfeef-101">Microsoft UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="dfeef-101">Microsoft UI Automation</span></span>
