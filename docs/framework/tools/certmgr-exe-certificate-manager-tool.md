@@ -1,5 +1,6 @@
 ---
 title: Certmgr.exe (Sertifika Yönetim Aracı)
+description: Sertifika Yöneticisi aracını Certmgr.exe keşfedelim. Bu araç sertifikaları, sertifika güven listelerini (CTL) ve sertifika iptal listelerini (CRL 'Ler) yönetir.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,28 +14,28 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 43ab281e6ec28ff23ea584b03fd4278c6682e33e
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73129870"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167271"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Sertifika Yönetim Aracı)
 Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven listelerini (CTL) ve sertifika iptal listelerini (CRL) yönetir.  
   
- Sertifika Yöneticisi Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için [Komut İstemleri'ni](developer-command-prompt-for-vs.md)kullanın.  
+ Sertifika Yöneticisi Visual Studio ile birlikte otomatik olarak yüklenir. Aracı başlatmak için [komut istemlerini](developer-command-prompt-for-vs.md)kullanın.  
   
 > [!NOTE]
-> Sertifika Yöneticisi aracı (Certmgr.exe) bir komut satırı aracıyken, Sertifikalar (Certmgr.msc) bir Microsoft Yönetim Konsolu (MMC) ek bileşenidir. Certmgr.msc genellikle Windows System dizininde bulunduğundan, `certmgr` komut satırına girmek, Visual Studio için Geliştirici Komut Komut Ustemkomutu Komut Istemi'ni açmış olsanız bile MMC sertifikalarını yükleyebilir. Bu, PATH ortam değişkeninde ek bileşene olan yol Sertifika Yöneticisi aracına olan yoldan önce geldiği için gerçekleşir. Eğer bu sorunla karşılaşırsanız, çalıştırılabilir öğenin yolunu belirterek Certmgr.exe komutlarını yürütebilirsiniz.  
+> Sertifika Yöneticisi aracı (Certmgr.exe) bir komut satırı aracıyken, Sertifikalar (Certmgr.msc) bir Microsoft Yönetim Konsolu (MMC) ek bileşenidir. Certmgr. msc genellikle Windows sistem dizininde bulunduğu için, komut satırına girildiğinde, `certmgr` Visual Studio için geliştirici komut istemi açmış olsanız bile SERTIFIKALAR MMC ek bileşenini yükleyebilirsiniz. Bu, PATH ortam değişkeninde ek bileşene olan yol Sertifika Yöneticisi aracına olan yoldan önce geldiği için gerçekleşir. Eğer bu sorunla karşılaşırsanız, çalıştırılabilir öğenin yolunu belirterek Certmgr.exe komutlarını yürütebilirsiniz.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7). Daha fazla bilgi için [Komut İstemleri'ne](developer-command-prompt-for-vs.md)bakın.  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
   
- X.509 sertifikalarına genel bakış için [bkz.](../wcf/feature-details/working-with-certificates.md)  
+ X. 509.440 sertifikalarına genel bakış için bkz. [sertifikalarla çalışma](../wcf/feature-details/working-with-certificates.md).  
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
       certmgr [/add | /del | /put] [options]  
@@ -47,26 +48,26 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
 |Bağımsız Değişken|Açıklama|  
 |--------------|-----------------|  
 |*sourceStorename*|Eklenecek, silinecek, kaydedilecek veya görüntülenecek varolan sertifikaları, CTL'leri veya CRL'leri içeren sertifika deposu. Bu bir depo dosyası veya sistem deposu olabilir.|  
-|*hedefMağazaname*|Çıktı sertifika deposu veya dosyası.|  
+|*destinationStorename*|Çıktı sertifika deposu veya dosyası.|  
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/ekle**|Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.|  
-|**/tümü**|/ekle ile kullanıldığında tüm girişleri **ekler.** **/del**ile kullanıldığında tüm girişleri siler. **/ekle** veya **/del** seçenekleri olmadan kullanıldığında tüm girişleri görüntüler. **/tümü** seçeneği **/put**ile kullanılamaz.|  
-|**/c**|**/ekle ile**kullanıldığında sertifika ekler. **/del**ile kullanıldığında sertifikaları siler. **/put**ile kullanıldığında sertifikaları kaydeder. **/ekle**, **/del**, veya **/put** seçeneği olmadan kullanıldığında sertifikaları görüntüler.|  
-|**/CRL**|**/ekle ile**kullanıldığında CRL ekler. **/del**ile kullanıldığında CRL'leri siler. **/put**ile kullanıldığında CRL'leri kaydeder. **/add**, **/del**, veya **/put** seçeneği olmadan kullanıldığında CRL'leri görüntüler.|  
-|**/CTL**|**/ekle ile**kullanıldığında CTL ekler. **/del**ile kullanıldığında CTL'leri siler. **/put**ile kullanıldığında CTL'leri kaydeder. **/add**, **/del**, veya **/put** seçeneği olmadan kullanıldığında CTL'leri görüntüler.|  
-|**/del**|Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.|  
-|**/e** *kodlamaTürü*|Sertifika kodlama türünü belirtir. Varsayılan değer: `X509_ASN_ENCODING`.|  
-|**/f** *dwBayraklar*|Depo açık bayrağını belirtir. Bu **CertOpenStore**geçirilen *dwFlags* parametresi. Varsayılan değer CERT_SYSTEM_STORE_CURRENT_USER değeridir. Bu seçenek yalnızca **/y** seçeneği kullanılırsa kabul edilir.|  
-|**/h**[**elp**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/n** *nam*|Eklenecek, silinecek veya kaydedilecek sertifika için ortak adı belirtir. Bu seçenek yalnızca sertifikalarla kullanılabilir; CTL'ler veya CRL'ler ile kullanılamaz.|  
-|**/koymak**|Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder. Dosya X.509 biçiminde kaydedilir. Dosyayı PKCS #7 formatında kaydetmek için **/put** seçeneği ile **/7** seçeneğini kullanabilirsiniz. **/put** seçeneği **/c**, **/CTL**, veya **/CRL**tarafından izlenmelidir. **/tümü** seçeneği **/put**ile kullanılamaz.|  
-|**/r** *konumu*|Sistem deposu için kayıt defteri konumunu tanımlar. Bu seçenek yalnızca **/s** seçeneğini belirtirseniz kabul edilir. *konum* aşağıdakilerden biri olmalıdır:<br /><br /> -   `currentUser`sertifika deposunun HKEY_CURRENT_USER anahtarının altında olduğunu gösterir. Bu varsayılandır.<br />-   `localMachine`sertifika deposunun HKEY_LOCAL_MACHINE anahtarının altında olduğunu gösterir.|  
-|**/s**|Sertifika deposunun bir sistem deposu olduğunu gösterir. Bu seçeneği belirtmezseniz, mağaza **StoreFile**olarak kabul edilir.|  
-|**/sha1** *sha1Hash*|Eklenecek, silinecek veya kaydedilecek sertifikanın, CTL'nin veya CRL'nin SHA1 karmasını belirtir.|  
-|**/v**|Ayrıntılı modu belirtir; sertifikalar, CTL'ler ve CRL'ler hakkında ayrıntılı bilgi görüntüler. Bu seçenek **/add**, **/del**, veya **/put** seçenekleriyle kullanılamaz.|  
-|**/y** *sağlayıcı*|Depo sağlayıcısı adını sağlar.|  
+|**/Add**|Bir sertifika deposuna sertifikalar, CTL'ler ve CRL'ler ekler.|  
+|**/All**|**/Add**ile kullanıldığında tüm girdileri ekler. **/Del&lt**ile kullanıldığında tüm girdileri siler. **/Add** veya **/del&lt** seçenekleri olmadan kullanıldığında tüm girişleri görüntüler. **/All** seçeneği **/PUT**ile kullanılamaz.|  
+|**/c**|**/Add**ile kullanıldığında sertifikaları ekler. **/Del&lt**ile kullanıldığında sertifikaları siler. , **/PUT**ile kullanıldığında sertifikaları kaydeder. **/Add**, **/del&lt**veya **/PUT** seçeneği olmadan kullanıldığında sertifikaları görüntüler.|  
+|**/CRL**|**/Add**Ile kullanıldığında CRL 'leri ekler. **/Del&lt**Ile kullanıldığında CRL 'leri siler. , **/PUT**Ile kullanıldığında CRL 'leri kaydeder. **/Add**, **/del&lt**veya **/PUT** seçeneği olmadan kullanıldığında CRL 'leri görüntüler.|  
+|**/CTL**|**/Add**Ile kullanıldığında CTL ekler. **/Del&lt**Ile kullanıldığında CTL 'leri siler. **/PUT**Ile kullanıldığında CTL 'leri kaydeder. **/Add**, **/del&lt**veya **/PUT** seçeneği olmadan kullanıldığında CTL 'leri görüntüler.|  
+|**/del&lt**|Bir sertifika deposundan sertifikaları, CTL'leri ve CRL'leri siler.|  
+|**/E** *EncodingType*|Sertifika kodlama türünü belirtir. Varsayılan değer: `X509_ASN_ENCODING`.|  
+|**/F** *dwFlags*|Depo açık bayrağını belirtir. Bu, **CertOpenStore**'A geçirilen *dwFlags* parametresidir. Varsayılan değer CERT_SYSTEM_STORE_CURRENT_USER değeridir. Bu seçenek yalnızca **/y** seçeneği kullanılırsa değerlendirilir.|  
+|**/h**[**ELP**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/n** *Nam*|Eklenecek, silinecek veya kaydedilecek sertifika için ortak adı belirtir. Bu seçenek yalnızca sertifikalarla kullanılabilir; CTL'ler veya CRL'ler ile kullanılamaz.|  
+|**/Put**|Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder. Dosya X.509 biçiminde kaydedilir. Dosyayı PKCS #7 biçiminde kaydetmek için **/PUT** seçeneğiyle birlikte **/7** seçeneğini kullanabilirsiniz. **/PUT** seçeneğinin arkasından **/c**, **/CTL**veya **/CRL**gelmelidir. **/All** seçeneği **/PUT**ile kullanılamaz.|  
+|**/r** *konumu*|Sistem deposu için kayıt defteri konumunu tanımlar. Bu seçenek yalnızca **/s** seçeneğini belirtirseniz değerlendirilir. *konum* aşağıdakilerden biri olmalıdır:<br /><br /> -   `currentUser`sertifika deposunun HKEY_CURRENT_USER anahtarı altında olduğunu gösterir. Bu varsayılan seçenektir.<br />-   `localMachine`sertifika deposunun HKEY_LOCAL_MACHINE anahtarı altında olduğunu gösterir.|  
+|**sn**|Sertifika deposunun bir sistem deposu olduğunu gösterir. Bu seçeneği belirtmezseniz, mağaza bir **StoreFile**olarak kabul edilir.|  
+|**/SHA1** *sha1Hash*|Eklenecek, silinecek veya kaydedilecek sertifikanın, CTL'nin veya CRL'nin SHA1 karmasını belirtir.|  
+|**çıktıda**|Ayrıntılı modu belirtir; sertifikalar, CTL'ler ve CRL'ler hakkında ayrıntılı bilgi görüntüler. Bu seçenek **/Add**, **/del&lt**veya **/PUT** seçenekleriyle birlikte kullanılamaz.|  
+|**/y** *sağlayıcısı*|Depo sağlayıcısı adını sağlar.|  
 |**/7**|Hedef depoyu bir PKCS #7 nesnesi olarak kaydeder.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
@@ -81,55 +82,55 @@ Sertifika Yöneticisi aracı (Certmgr.exe) sertifikaları, sertifika güven list
   
 - Bir sertifika deposundan bir X.509 sertifikasını, CTL'yi veya CRL'yi dosyaya kaydeder.  
   
- Certmgr.exe iki tür sertifika deposuyla çalışır: **StoreFile** ve sistem mağazası. Sertifika deposu türünü belirtmek gerekli değildir: Certmgr.exe depo türünü tanımlayarak uygun işlemleri gerçekleştirebilir.  
+ Certmgr.exe, iki tür sertifika deposu ile birlikte kullanılabilir: **StoreFile** ve System Store. Sertifika deposu türünü belirtmek gerekli değildir: Certmgr.exe depo türünü tanımlayarak uygun işlemleri gerçekleştirebilir.  
   
  Certmgr.exe'yi hiçbir seçenek olmadan belirtmek, komut satırından kullanılabilen sertifika yönetim görevlerine yardımcı olan bir GUI'ye sahip certmgr.msc ek bileşenini yönetir. GUI; sertifikaları, CTL'leri ve CRL'leri diskinizden bir sertifika deposuna kopyalayan bir içeri aktarma sihirbazı sağlar.  
   
- Aşağıdaki kodu derleyip çalıştırarak X509Certificate `destinationStorename` depolarının adlarını ve parametreleri `sourceStorename` bulabilirsiniz.  
+ `sourceStorename`Aşağıdaki kodu derleyerek ve çalıştırarak, ve parametreleri Için X509Certificate mağazaların adlarını bulabilirsiniz `destinationStorename` .  
   
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
   
- Sertifikalar hakkında daha fazla bilgi için [bkz.](../wcf/feature-details/working-with-certificates.md)  
+ Sertifikalar hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](../wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="examples"></a>Örnekler  
- Aşağıdaki komut, ayrıntılı çıktı `my` ile adlandırılan varsayılan bir sistem deposu görüntüler.  
+ Aşağıdaki komut, ayrıntılı çıktıyla çağrılan bir varsayılan sistem deposunu görüntüler `my` .  
   
 ```console  
 certmgr /v /s my  
 ```  
   
- Aşağıdaki komut, adı verilen `myFile.ext` `newFile.ext`yeni bir dosyaya çağrılan bir dosyadaki tüm sertifikaları ekler.  
+ Aşağıdaki komut adlı bir dosyadaki tüm sertifikaları `myFile.ext` adlı yeni bir dosyaya ekler `newFile.ext` .  
   
 ```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
- Aşağıdaki komut, sertifikayı sistem `testcert.cer` deposuna `my` adlı bir dosyaya ekler.  
+ Aşağıdaki komut, sertifikayı sistem deposuna adlı bir dosyaya ekler `testcert.cer` `my` .  
   
 ```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
- Aşağıdaki komut, sertifikayı kök `TrustedCert.cer` sertifika deposuna adlı bir dosyaya ekler.  
+ Aşağıdaki komut, sertifikayı Kök sertifika deposuna adlı bir dosyaya ekler `TrustedCert.cer` .  
   
 ```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
- Aşağıdaki komut, `myCert` `my` sistem deposunda ortak adı olan bir sertifikayı . `newCert.cer`  
+ Aşağıdaki komut, sistem deposunda ortak ada sahip bir sertifikayı `myCert` `my` adlı bir dosyaya kaydeder `newCert.cer` .  
   
 ```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
- Aşağıdaki komut, sistem deposundaki `my` tüm CTL'leri siler ve ortaya `newStore.str`çıkan depoyu .  
+ Aşağıdaki komut, sistem deposundaki tüm CTL 'leri siler `my` ve elde edilen depoyu adlı bir dosyaya kaydeder `newStore.str` .  
   
 ```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
- Aşağıdaki komut, dosyadaki `my` `newFile`sistem deposunda bir sertifika kaydeder. Koymak için sertifika numarasını `my` girmeniz `newFile`istenir.  
+ Aşağıdaki komut, bir sertifikayı `my` dosyadaki sistem deposuna kaydeder `newFile` . İçine koymak için sertifika numarasını girmeniz istenir `my` `newFile` .  
   
 ```console  
 certmgr /put /c /s my newFile  
@@ -138,5 +139,5 @@ certmgr /put /c /s my newFile
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [Makecert.exe (Sertifika Oluşturma Aracı)](/windows/desktop/SecCrypto/makecert)
-- [Komut İstemleri](developer-command-prompt-for-vs.md)
+- [Makecert.exe (sertifika oluşturma aracı)](/windows/desktop/SecCrypto/makecert)
+- [Komut Istemleri](developer-command-prompt-for-vs.md)

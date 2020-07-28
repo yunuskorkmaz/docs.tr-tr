@@ -1,5 +1,6 @@
 ---
 title: 'İzlenecek yol: DataGrid Denetimindeki SQL Server Veritabanından Veri Görüntüleme'
+description: SQL Server veritabanından veri alma ve bu kılavuzu kullanarak Windows Presentation Foundation DataGrid denetiminde görüntüleme hakkında bilgi edinin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 1398d8408a0b85d6603d638312e92ba35c5e77d3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cc41979c869021c9c363f3f68ce590d4702e068c
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591039"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167557"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>İzlenecek yol: DataGrid Denetimindeki SQL Server veritabanından veri görüntüleme
 
 Bu kılavuzda, verileri bir SQL Server veritabanından alır ve bu verileri bir denetimde görüntüleriz <xref:System.Windows.Controls.DataGrid> . Verileri temsil eden varlık sınıflarını oluşturmak için ADO.NET Entity Framework kullanır ve bir varlık sınıfından belirtilen verileri alan bir sorgu yazmak için LINQ kullanın.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vardır:
 
@@ -47,7 +48,7 @@ Bu izlenecek yolu tamamlamak için aşağıdaki bileşenlere ihtiyacınız vard�
 
 6. Veri bağlantınızı seçin ekranında AdventureWorksLT2008 veritabanınıza bağlantı sağlayın. Daha fazla bilgi için bkz. [veri bağlantınızı seçme Iletişim kutusu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399244(v=vs.100)).
 
-    Adın olduğundan `AdventureWorksLT2008Entities` ve **app. config dosyasındaki varlık bağlantı ayarlarını kaydet** onay kutusunun seçili olduğundan emin olun ve ardından **İleri**' ye tıklayın.
+    Adın olduğundan `AdventureWorksLT2008Entities` ve **App.Config varlık bağlantı ayarlarını kaydet** onay kutusunun seçildiğinden emin olun ve ardından **İleri**' ye tıklayın.
 
 7. Veritabanı nesnelerinizi seçin ekranında, tablolar düğümünü genişletin ve **Product** ve **ProductCategory** tablolarını seçin.
 
