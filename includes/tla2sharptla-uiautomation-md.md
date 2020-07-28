@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65669406"
 ---
-<span data-ttu-id="8fc9e-101">UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="8fc9e-101">UI Automation</span></span>
+<span data-ttu-id="46543-101">UI Otomasyonu</span><span class="sxs-lookup"><span data-stu-id="46543-101">UI Automation</span></span>
