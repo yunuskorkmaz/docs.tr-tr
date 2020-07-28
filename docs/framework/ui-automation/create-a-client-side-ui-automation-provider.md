@@ -1,5 +1,6 @@
 ---
 title: İstemci Tarafı UI Otomasyon Sağlayıcı Oluşturma
+description: İstemci tarafı UI Otomasyon sağlayıcısı oluşturma hakkında bir örnek görüntüleyin. Örnek, bir konsol penceresi için basit bir istemci tarafı sağlayıcı uygular.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, creating client-side provider
 - client-side UI Automation provider, creating
 ms.assetid: d91edaf2-be28-41ec-a508-af421cb43c3d
-ms.openlocfilehash: 79accd23392ff9e1e8157348f7a1042ee2b3cc47
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a25966d0f11e409bd4e53f944fc2528360327039
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433660"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87168470"
 ---
 # <a name="create-a-client-side-ui-automation-provider"></a>İstemci Tarafı UI Otomasyon Sağlayıcı Oluşturma
 > [!NOTE]
-> Bu belge, <xref:System.Windows.Automation> ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıflarını kullanmak isteyen .NET Framework geliştiricilere yöneliktir. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]hakkında en son bilgiler için bkz. [Windows Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
  Bu konu, bir istemci tarafı UI Otomasyon sağlayıcısının nasıl uygulanacağını gösteren örnek kodu içerir.  
   
@@ -29,5 +30,5 @@ ms.locfileid: "74433660"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Sağlayıcılara Genel Bakış](ui-automation-providers-overview.md)
-- [İstemci Tarafı Sağlayıcı Bütünleştirilmiş Kodunu Kaydetme](register-a-client-side-provider-assembly.md)
+- [UI Otomasyon Sağlayıcılara Genel Bakış](ui-automation-providers-overview.md)
+- [İstemci Tarafı Sağlayıcı Derlemesini Kaydetme](register-a-client-side-provider-assembly.md)
