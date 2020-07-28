@@ -2,12 +2,12 @@
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: 619f6121d9d476726c3d422e50737ff3d622f444
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164922"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251211"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -180,7 +180,7 @@ Bir `<DotNetCliToolReference>` öğe öğesi, kullanıcının proje bağlamında
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-`DotNetCliToolReference`Artık [.NET Core yerel araçlarının](https://aka.ms/local-tools) [kullanım dışı](https://github.com/dotnet/announcements/issues/107) olduğunu unutmayın.
+`DotNetCliToolReference`Artık [.NET Core yerel araçlarının](./global-tools.md#install-a-local-tool) [kullanım dışı](https://github.com/dotnet/announcements/issues/107) olduğunu unutmayın.
 
 #### <a name="version"></a>Sürüm
 

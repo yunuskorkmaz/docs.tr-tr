@@ -1,166 +1,166 @@
 ---
 title: .NET Standard
-description: .NET Standard, sürümleri ve onu destekleyen .NET uygulamaları hakkında bilgi edinin.
+description: .NET Standard, sürümleri ve bunu destekleyen .NET uygulamaları hakkında bilgi edinin.
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607486"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87167412"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standardı,](https://github.com/dotnet/standard) .NET'in tüm uygulamalarında bulunması amaçlanan .NET API'lerinin resmi bir belirtimidir. .NET Standard'ın arkasındaki motivasyon,.NET ekosisteminde daha fazla tekdüzelik oluşturmaktır. [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) .NET uygulama davranışı için tekdüzelik oluşturmaya devam ediyor ve ECMA 335 küçük bir standart kitaplık kümesi belirtirken, .NET Standart belirtimi daha geniş bir .NET API'sini kapsar.
+[.NET Standard](https://github.com/dotnet/standard) , tüm .NET uygulamalarında kullanılabilmesi amaçlanan .NET API 'lerinin resmi bir belirtimidir. .NET Standard arkasındaki mosyon, .NET ekosisteminde daha fazla esneklik sağlamak için kullanılır. [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) , .NET uygulama davranışı için bir kullanılabilirlik kurmaya devam eder ve ECMA 335 küçük bir standart kitaplıklar kümesini belirttiğinde .NET Standard belirtimi, daha geniş bir .NET API 'si yelpazesi kapsar.
 
-.NET Standard aşağıdaki anahtar senaryoları sağlar:
+.NET Standard aşağıdaki temel senaryolara izin vermez:
 
-- İş yükünden bağımsız olarak uygulanacak tüm .NET uygulamaları için tek tip BCL API'ları tanımlar.
-- Geliştiricilerin aynı API kümesini kullanarak .NET uygulamalarında kullanılabilir taşınabilir kitaplıklar oluşturmasına olanak tanır.
-- Sadece OS API'leri için .NET API'leri nedeniyle paylaşılan kaynağın koşullu derlemesini azaltır veya ortadan kaldırır.
+- İş yüküyle bağımsız olarak uygulanacak tüm .NET uygulamaları için tek bir BCL API kümesini tanımlar.
+- Geliştiricilerin aynı API kümesi kullanılarak .NET uygulamalarında kullanılabilir olan taşınabilir kitaplıklar oluşturmasını sağlar.
+- .NET API 'leri, yalnızca OS API 'Leri için, paylaşılan kaynağın koşullu derlemesini azaltır veya ortadan kaldırır.
 
-Çeşitli .NET uygulamaları .NET Standard'ın belirli sürümlerini hedeflemaktadır. Her .NET uygulama sürümü, desteklediği en yüksek .NET Standart sürümünün reklamını, önceki sürümleri de desteklediği anlamına gelen bir bildirimdir. Örneğin, .NET Framework 4.6 .NET Standart 1.3'u uygular, bu da .NET Standart sürümleri 1.0 ile 1.3 arasında tanımlanan tüm API'leri ortaya çıkardığı anlamına gelir. Benzer şekilde,.NET Framework 4.6.1 .NET Standard 1.4'u uygularken.NET Core 1.0 .NET Standard 1.6'yı uygular.
+Çeşitli .NET uygulamaları .NET Standard belirli sürümlerini hedefleyin. Her .NET uygulama sürümü, desteklediği en yüksek .NET Standard sürümünü tanıtır, yani önceki sürümleri de destekler. Örneğin, .NET Framework 4,6 .NET Standard 1,3 ' i uygular, yani .NET Standard sürümler 1,0 içinde tanımlanan tüm API 'Leri 1,3 aracılığıyla gösterir. Benzer şekilde, .NET Framework 4.6.1 .NET Standard 1,4 uygular, ancak .NET Core 1,0 .NET Standard 1,6 uygular.
 
 ## <a name="net-implementation-support"></a>.NET uygulama desteği
 
-Aşağıdaki tabloda, her .NET Standart sürümünü destekleyen **minimum** platform sürümleri listeleilmektedir. Bu, listelenen bir platformun sonraki sürümlerinin ilgili .NET Standart sürümünü de desteklediği anlamına gelir. Örneğin, .NET Core 2.2 .NET Standard 2.0 ve daha önce destekler.
+Aşağıdaki tabloda, her bir .NET Standard sürümünü destekleyen **En düşük** platform sürümleri listelenmektedir. Diğer bir deyişle, listelenen bir platformun sonraki sürümlerinin de karşılık gelen .NET Standard sürümü destekleyeceği anlamına gelir. Örneğin, .NET Core 2,2 .NET Standard 2,0 ve öncesini destekler.
 
 [!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
-.NET Standard'ın hedeflediğiniz en yüksek sürümünü bulmak için aşağıdaki adımları yapın:
+Hedeflenebilen .NET Standard en yüksek sürümünü bulmak için aşağıdaki adımları uygulayın:
 
-1. Çalıştırmak istediğiniz .NET uygulamasını gösteren satırı bulun.
-2. Sağdan sola başlayarak sürümünüzü gösteren bu satırdaki sütunu bulun.
-3. Sütun üstbilgi, hedefinizin desteklediği .NET Standart sürümünü gösterir. Ayrıca daha düşük .NET Standart sürümünü de hedefabilirsiniz. Daha yüksek .NET Standart sürümleri de uygulamanızı destekleyecektir.
-4. Hedeflemek istediğiniz her platform için bu işlemi tekrarlayın. Birden fazla hedef platformunuz varsa, aralarındaki daha küçük sürümü seçmelisiniz. Örneğin, .NET Framework 4.5 ve .NET Core 1.0 üzerinde çalışmak istiyorsanız, kullanabileceğiniz en yüksek .NET Standart sürümü .NET Standart 1.1'dir.
+1. Üzerinde çalışmak istediğiniz .NET uygulamasını gösteren satırı bulun.
+2. Bu satırdaki, sürümünüzü sağdan sola başlayarak gösteren sütunu bulun.
+3. Sütun üst bilgisi, hedefin desteklediği .NET Standard sürümünü belirtir. Ayrıca, daha düşük .NET Standard sürümleri de hedefleyebilirsiniz. Daha yüksek .NET Standard sürümler de Uygulamanızı destekleyecektir.
+4. Hedeflemek istediğiniz her platform için bu işlemi tekrarlayın. Birden fazla hedef platformunuz varsa, bunların arasından daha küçük bir sürüm seçmeniz gerekir. Örneğin, .NET Framework 4,5 ve .NET Core 1,0 ' de çalıştırmak istiyorsanız kullanabileceğiniz en yüksek .NET Standard sürümü .NET Standard 1,1.
 
-### <a name="which-net-standard-version-to-target"></a>Hangi .NET Standart sürümü hedef
+### <a name="which-net-standard-version-to-target"></a>Hedeflenecek .NET Standard sürümü
 
-.NET Standart sürümünü seçerken, şu değiş tokuşu göz önünde bulundurmalısınız:
+.NET Standard bir sürüm seçerken, bu ticareti göz önünde bulundurmanız gerekir:
 
-- Sürüm ne kadar yüksekse, o kadar çok API kullanılabilir.
-- Sürüm ne kadar düşükse, o kadar çok platform uygular.
+- Sürüm arttıkça, diğer API 'Ler sizin için de kullanılabilir.
+- Sürüm ne kadar düşükse, o kadar çok platform bunu uygular.
 
-Genel olarak, .NET Standard'ın mümkün olan *en düşük* sürümünü hedeflemenizi öneririz. Bu nedenle, hedeflenebildiğiniz en yüksek .NET Standart sürümünü bulduktan sonra aşağıdaki adımları izleyin:
+Genel olarak, mümkün olan *En düşük* sürümü .NET Standard hedeflemesini öneririz. Bu nedenle, hedeflenebilen en yüksek .NET Standard sürümünü bulduktan sonra aşağıdaki adımları izleyin:
 
-1. .NET Standard'ın bir sonraki alt sürümünü hedefle ve projenizi oluşturun.
-2. Projeniz başarıyla inşa edilirse, adım 1'i yineleyin. Aksi takdirde, bir sonraki yüksek sürüme yeniden hedeflemek ve kullanmanız gereken sürüm bu.
+1. .NET Standard sonraki alt sürümünü hedefleyin ve projenizi derleyin.
+2. Projeniz başarıyla oluşturul, 1. adımı yineleyin. Aksi takdirde, sonraki daha yüksek sürüme yeniden hedefleyin ve kullanmanız gereken sürümdür.
 
-Ancak, daha düşük .NET Standart sürümlerini hedeflemek bir dizi destek bağımlılığı sunar. Projeniz .NET Standart 1.x'i hedefliyorsa, .NET Standart 2.0'ı *da* hedeflemenizi öneririz. Bu, .NET Standart 2.0 uyumlu çerçevelerde çalışan kitaplığınızın kullanıcıları için bağımlılık grafiğini basitleştirir ve karşıdan yüklemeleri gereken paket sayısını azaltır.
+Ancak, daha düşük .NET Standard sürümleri hedeflemek çok sayıda destek bağımlılığı sunar. Projeniz .NET Standard 1. x hedefliyorsa, ayrıca .NET Standard 2,0 ' i *de* hedeflediğiniz önerilir. Bu, kitaplığınızın .NET Standard 2,0 uyumlu çerçeveler üzerinde çalışan kullanıcıları için bağımlılık grafiğini basitleştirir ve İndirmeleri gereken paket sayısını azaltır.
 
-### <a name="net-standard-versioning-rules"></a>.NET Standart sürüm kuralları
+### <a name="net-standard-versioning-rules"></a>.NET Standard sürüm oluşturma kuralları
 
-İki temel sürüm kuralı vardır:
+İki birincil sürüm oluşturma kuralı vardır:
 
-- Katkı: .NET Standart sürümleri mantıksal olarak eşmerkezli dairelerdir: daha yüksek sürümler önceki sürümlerden tüm API'leri içerir. Sürümler arasında herhangi bir kırılma değişiklik yoktur.
-- Değişmez: Sevk edildikten sonra ,NET Standart sürümleri dondurulur. Yeni API'ler ilk olarak .NET Core gibi belirli .NET uygulamalarında kullanılabilir hale gelir. .NET Standard inceleme kurulu, yeni API'lerin tüm .NET uygulamaları için kullanılabilir olması gerektiğine inanıyorsa, bunlar yeni bir .NET Standart sürümüne eklenir.
+- Eklenebilir: .NET Standard sürümler mantıksal olarak eşmerkezli daireler: daha yüksek sürümler önceki sürümlerden tüm API 'Leri dahil. Sürümler arasında hiç Son değişiklik yok.
+- Sabit: sevk edildiğinde .NET Standard sürümler dondurulur. Yeni API 'Ler öncelikle .NET Core gibi belirli .NET uygulamalarında kullanılabilir hale gelir. .NET Standard gözden geçirme panosu, tüm .NET uygulamalarında yeni API 'Lerin kullanılabilir olması gerektiğini düşünürsa, yeni bir .NET Standard sürümüne eklenir.
 
 ## <a name="specification"></a>Belirtim
 
-.NET Standart belirtimi standartlaştırılmış bir API kümesidir. Belirtim ,NET uygulayıcıları, özellikle Microsoft (.NET Framework, .NET Core ve Mono içerir) ve Unity tarafından korunur. Ortak geri bildirim [işlemi, GitHub](https://github.com/dotnet/standard)üzerinden yeni .NET Standart sürümlerioluşturmanın bir parçası olarak kullanılır.
+.NET Standard belirtimi, standartlaştırılmış bir API kümesidir. Belirtim .NET uygulayıcılar tarafından, özellikle Microsoft (.NET Framework, .NET Core ve mono dahil) ve Unity tarafından korunur. [GitHub](https://github.com/dotnet/standard)aracılığıyla yeni .NET Standard sürümlerini oluşturma işleminin parçası olarak genel geri bildirim işlemi kullanılır.
 
-### <a name="official-artifacts"></a>Resmi eserler
+### <a name="official-artifacts"></a>Resmi yapılar
 
-Resmi belirtim, standardın bir parçası olan API'leri tanımlayan bir .cs dosyaları kümesidir. [Dotnet/standart deposundaki](https://github.com/dotnet/standard) [ref dizini](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) .NET Standart API'leri tanımlar.
+Resmi belirtimi, standart bir parçası olan API 'Leri tanımlayan bir. cs dosyası kümesidir. [DotNet/standart deposundaki](https://github.com/dotnet/standard) [ref dizini](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) .NET Standard API 'leri tanımlar.
 
-[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) metapackage[(kaynak)](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)(kısmen) bir veya daha fazla .NET Standart sürümleri tanımlayan kitaplıkkümesi açıklar.
+[Netstandard. Library](https://www.nuget.org/packages/NETStandard.Library) meta paketi ([kaynak](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) bir veya daha fazla .NET Standard sürümünde tanımlayan kitaplıklar kümesini açıklar.
 
-Belirli bir bileşen, gibi `System.Runtime`, açıklar:
+Şunun gibi belirli bir bileşen şunları `System.Runtime` açıklar:
 
-- .NET Standard'ın bir parçası (sadece kapsamı).
-- Bu kapsam için .NET Standard'ın birden çok sürümü.
+- .NET Standard (yalnızca kapsamı) bir parçasıdır.
+- Bu kapsam için birden çok .NET Standard sürümü.
 
-Türev yapılar daha rahat okuma sağlamak ve belirli geliştirici senaryoları (örneğin, bir derleyici kullanarak) etkinleştirmek için sağlanır.
+Türetilmiş yapıtlar, daha kolay okunması ve belirli geliştirici senaryolarına olanak tanımak için sağlanır (örneğin, bir derleyici kullanarak).
 
-- [İşaretledeki API listesi](https://github.com/dotnet/standard/tree/master/docs/versions)
-- [NuGet paketleri](../core/packages.md) olarak dağıtılan ve [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) meta paketi tarafından başvurulan referans derlemeleri.
+- [Markın içindeki API listesi](https://github.com/dotnet/standard/tree/master/docs/versions)
+- NuGet paketleri olarak dağıtılan ve [Netstandard. Library](https://www.nuget.org/packages/NETStandard.Library/) metapackage tarafından başvurulan başvuru derlemeleri.
 
-### <a name="package-representation"></a>Paket gösterimi
+### <a name="package-representation"></a>Paket temsili
 
-.NET Standart referans montajları için birincil dağıtım aracı [NuGet paketleridir.](../core/packages.md) Uygulamalar, her .NET uygulaması için uygun çeşitli şekillerde teslim edilir.
+.NET Standard başvuru derlemelerinin birincil dağıtım aracı NuGet paketlerdir. Uygulamalar, her .NET uygulaması için uygun olan çeşitli yollarla dağıtılır.
 
-NuGet paketleri bir veya daha fazla [çerçeveyi hedefalır.](frameworks.md) .NET Standart paketleri ".NET Standard" çerçevesini hedeflemektedir. .NET Standart çerçevesini kompakt `netstandard` [TFM'yi](frameworks.md) kullanarak `netstandard1.4`(örneğin) hedefleyebilirsiniz. Birden çok çalışma zamanında çalışması amaçlanan kitaplıklar bu çerçeveyi hedeflemelidir. En geniş API kümesi için, mevcut API sayısı .NET Standart 1.6 ve 2.0 arasında iki kattan fazla olduğundan hedef. `netstandard2.0`
+NuGet paketleri bir [veya daha fazla](frameworks.md)çerçeveyi hedeflemelidir. .NET Standard paketleri ".NET Standard" çerçevesini hedefleyin. `netstandard` [Compact tfı](frameworks.md) kullanarak .NET Standard çerçevesini hedefleyebilirsiniz (örneğin, `netstandard1.4` ). Birden çok çalışma zamanında çalıştırılması amaçlanan kitaplıkların bu çerçeveyi hedeflemesi gerekir. En geniş API kümesi için, `netstandard2.0` kullanılabilir API sayısı .NET Standard 1,6 ile 2,0 arasında iki katına çıkardığından hedefleyin.
 
-Meta [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) paket, .NET Standard'ı tanımlayan NuGet paketlerinin tamamına başvurur.  Hedeflemenin `netstandard` en yaygın yolu bu meta pakete başvurmaktır. ~40 .NET kitaplıklarını ve .NET Standardını tanımlayan ilişkili API'leri açıklar ve bunlara erişim sağlar. Ek API'lere `netstandard` erişmek için hedefleyen ek paketlere başvurulayabilirsiniz.
+[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/)Metapackage, .NET Standard tanımlayan tüm NuGet paketleri kümesine başvurur.  Hedefetmenin en yaygın yolu, `netstandard` Bu metapackage 'e başvurarak yapılır. Bu, .NET Standard tanımlayan ~ 40 .NET kitaplıklarına ve ilişkili API 'lere erişim sağlar. Ek API 'lere erişim sağlamak için, hedef olan ek paketlere başvurabilirsiniz `netstandard` .
 
-### <a name="versioning"></a>Sürüm Oluşturma
+### <a name="versioning"></a>Sürüm oluşturma
 
-Belirtim tekil değil, artımlı olarak büyüyen ve doğrusal olarak sürümlenmiş API'ler kümesidir. Standardın ilk sürümü, bir temel API kümesi belirler. Sonraki sürümler API'ler ekler ve önceki sürümler tarafından tanımlanan API'leri devralır. API'lerin standarttan kaldırılması için belirlenmiş bir hüküm yoktur.
+Belirtim tekil değildir, ancak artımlı olarak büyüyen ve önceden oluşturulmuş bir API kümesidir. Standart 'ın ilk sürümü bir temel API kümesi oluşturur. Sonraki sürümler, API 'Ler ekler ve önceki sürümler tarafından tanımlanan API 'Leri alırlar. Standart olmayan API 'Leri kaldırmak için bir sağlama yoktur.
 
-.NET Standardı herhangi bir .NET uygulamasına özgü değildir ve bu çalışma sürelerinden herhangi birinin sürüm şemasıyla eşleşmiyor.
+.NET Standard herhangi bir .NET uygulamasına özgü değildir ve bu çalışma zamanlarının herhangi birinin sürüm oluşturma şemasıyla eşleşmez.
 
-Uygulamalardan herhangi biri (.NET Framework, .NET Core ve Mono gibi) eklenen API'ler, özellikle doğada temel oldukları düşünülse, şartnameye eklenecek aday lar olarak kabul edilebilir. [.NET Standard'ın](https://github.com/dotnet/standard/blob/master/docs/versions.md) yeni sürümleri .NET uygulama sürümlerine göre oluşturulur ve böylece yeni API'leri .NET Standart PCL'den hedeflemenize olanak sağlar. Sürüm mekaniği [.NET Çekirdek Sürüm'de](../core/versions/index.md)daha ayrıntılı olarak açıklanmıştır.
+Uygulamalardan birine eklenen API 'Ler (örneğin, .NET Framework, .NET Core ve mono), özellikle de temel olarak düşünüldüler halinde, belirtime eklenecek aday olarak kabul edilebilir. [.NET Standard yeni sürümleri](https://github.com/dotnet/standard/blob/master/docs/versions.md) , .NET uygulama sürümleri temel alınarak oluşturulur ve bu sayede yeni apı 'LERI .NET Standard PCL 'den hedeflemenize olanak tanır. Sürüm oluşturma mekanizması, [.NET Core sürümü oluşturma](../core/versions/index.md)bölümünde daha ayrıntılı olarak açıklanmıştır.
 
-.NET Standart sürüm kullanımı için önemlidir. Bir .NET Standart sürümü göz önüne alındığında, aynı veya daha düşük sürümü hedefleyen kitaplıkları kullanabilirsiniz. Aşağıdaki yaklaşım, .NET Standart hedeflemesine özgü .NET Standart PCL'leri kullanmak için iş akışını açıklar.
+Kullanım için .NET Standard sürümü oluşturma önemlidir. .NET Standard sürüm verildiğinde, aynı veya daha düşük sürümü hedefleyen kitaplıkları kullanabilirsiniz. Aşağıdaki yaklaşım, .NET Standard hedefleme öğesine özgü .NET Standard PCLs kullanma iş akışını açıklar.
 
-- PCL'niz için kullanmak üzere bir .NET Standart sürümü seçin.
-- Aynı .NET Standart sürümüne veya daha düşük olan kitaplıkları kullanın.
-- Daha yüksek bir .NET Standart sürümüne bağlı bir kitaplık bulursanız, aynı sürümü benimsemeniz veya bu kitaplığı kullanmamaya karar vermeniz gerekir.
+- PCL 'niz için kullanılacak bir .NET Standard sürümü seçin.
+- Aynı .NET Standard sürümüne veya daha düşük bir sürüme bağlı olan kitaplıkları kullanın.
+- Daha yüksek .NET Standard sürüme bağlı bir kitaplık bulursanız, bu sürümü benimsemeniz veya bu kitaplığı kullanmamaya karar vermeniz gerekir.
 
-## <a name="target-net-standard"></a>Hedef .NET Standardı
+## <a name="target-net-standard"></a>Hedef .NET Standard
 
-[.NET Standart Kitaplıklar](../core/tutorials/libraries.md) çerçeve ve `netstandard` NETStandard.Library metapaketinin bir birleşimini kullanarak oluşturabilirsiniz. [.NET Core araçları ile .NET Standard hedefleme](../core/packages.md)örneklerini görebilirsiniz.
+[build .NET Standard Libraries](../core/tutorials/libraries.md) `netstandard` Framework ve Netstandard. Library meta paketinin bir birleşimini kullanarak .NET Standard kitaplıkları oluşturabilirsiniz.
 
-## <a name="net-framework-compatibility-mode"></a>.NET Framework uyumluluk modu
+## <a name="net-framework-compatibility-mode"></a>Uyumluluk modu .NET Framework
 
-.NET Standard 2.0 ile başlayarak .NET Framework uyumluluk modu tanıtıldı. Bu uyumluluk modu ,NET Standard projelerinin .NET Framework kitaplıklarına .NET Standard için derlenmiş gibi başvurmalarını sağlar. .NET Framework kitaplıklarına başvurmak, Windows Sunu Temeli (WPF) API'lerini kullanan kitaplıklar gibi tüm projelerde işe yaramaz.
+.NET Standard 2,0 ' den başlayarak .NET Framework uyumluluk modu sunuldu. Bu uyumluluk modu, .NET Standard projelerin .NET Standard için derlendikleri gibi .NET Framework kitaplıklarına başvurmasına olanak tanır. .NET Framework kitaplıklara başvurmak, Windows Presentation Foundation (WPF) API 'Leri kullanan kitaplıklar gibi tüm projeler için çalışmaz.
 
-Daha fazla bilgi için [.NET Framework uyumluluk moduna](../core/porting/third-party-deps.md#net-framework-compatibility-mode)bakın.
+Daha fazla bilgi için bkz. [.NET Framework uyumluluk modu](../core/porting/third-party-deps.md#net-framework-compatibility-mode).
 
-## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standart kütüphaneler ve Görsel Stüdyo
+## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard kitaplıkları ve Visual Studio
 
-Visual Studio'da .NET Standard kitaplıkları oluşturmak için Visual [Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya Visual Studio 2017 sürüm 15.3 veya daha sonra Windows'da veya [Mac sürüm 7.1 için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya daha sonra macOS'ta yüklü olduğundan emin olun.
+Visual Studio 'da .NET Standard kitaplıklarını derlemek için, Windows 'da [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya visual Studio 2017 sürüm 15,3 veya üzeri sürümünün yüklü olduğundan veya macos 'ta [Mac için Visual Studio sürüm 7,1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) veya üzeri sürümlerin yüklü olduğundan emin olun.
 
-Projelerinizde .NET Standard 2.0 kitaplıklarını yalnızca tüketmeniz gerekiyorsa, bunu Visual Studio 2015'te de yapabilirsiniz. Ancak, NuGet istemci3.6 veya daha yüksek yüklü gerekir. Visual Studio 2015 için NuGet istemcisini [NuGet indirme sayfasından](https://www.nuget.org/downloads) indirebilirsiniz.
+Projelerinizde yalnızca .NET Standard 2,0 kitaplıklarını kullanmanız gerekiyorsa, bunu Visual Studio 2015 ' de de yapabilirsiniz. Ancak, NuGet Client 3,6 veya üzeri yüklü olmalıdır. [NuGet İndirmeleri](https://www.nuget.org/downloads) sayfasından Visual Studio 2015 için NuGet istemcisini indirebilirsiniz.
 
-## <a name="comparison-to-portable-class-libraries"></a>Taşınabilir Sınıf Kitaplıkları ile karşılaştırma
+## <a name="comparison-to-portable-class-libraries"></a>Taşınabilir sınıf kitaplıklarına karşılaştırma
 
-.NET Standardı, [Taşınabilir Sınıf Kitaplıkları 'nın (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)yerini alır. .NET Standard, standart bir BCL'yi küratörlük ederek ve sonuç olarak .NET uygulamalarında daha fazla tekdüzelik oluşturarak taşınabilir kitaplıklar oluşturma deneyimini geliştirir. .NET Standard'ı hedefleyen bir kitaplık BIR PCL veya ".NET Standart tabanlı PCL"dir. Mevcut PCL'ler "profil tabanlı PCL'lerdir".
+.NET Standard, [taşınabilir sınıf kitaplıklarının (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)yerini alır. .NET Standard, standart bir BCL seçerek ve .NET uygulamalarında bir sonuç olarak daha fazla esneklik kurarak taşınabilir kitaplıklar oluşturma deneyiminden gelişir. .NET Standard hedefleyen bir kitaplık, PCL veya ".NET Standard tabanlı bir PCL" dir. Mevcut PCLs 'ler "profil tabanlı PCLs" şeklindedir.
 
-.NET Standart ve PCL profilleri benzer amaçlariçin oluşturulmuştur, ancak aynı zamanda önemli şekillerde farklılık gösterir.
+.NET Standard ve PCL profilleri benzer amaçlar için oluşturulmuştur, ancak önemli yollarla da farklılık gösterir.
 
-Benzerlik:
+Benzerlikler
 
-- İkili kod paylaşımı için kullanılabilecek API'leri tanımlayın.
+- İkili kod paylaşımı için kullanılabilecek API 'Leri tanımlayın.
 
-Farklılık -lar:
+Fark
 
-- .NET Standard, PCL profilleri varolan platformların kesişmelerle tanımlanırken, seçilmiş bir API kümesidir.
-- .NET Standart doğrusal sürümler, PCL profilleri ise yok.
-- PCL profilleri Microsoft platformlarını temsil ederken .NET Standard platform-agnostiktir.
+- .NET Standard, PCL profilleri mevcut platformların Kesişimleriyle tanımlandığında, seçkin bir API kümesidir.
+- .NET Standard linerken sürümler, PCL profilleri değildir.
+- PCL profilleri, .NET Standard platformdan bağımsız olduğu sürece Microsoft platformlarını temsil eder.
 
 ### <a name="pcl-compatibility"></a>PCL uyumluluğu
 
-.NET Standard, PCL profillerinin bir alt kümesiyle uyumludur. .NET Standart 1.0, 1.1 ve 1.2 her PCL profilleri bir dizi çakışıyor. Bu çakışma iki nedenden dolayı oluşturuldu:
+.NET Standard, PCL profillerinin bir alt kümesiyle uyumludur. .NET Standard 1,0, 1,1 ve 1,2 her biri bir PCL profilleri kümesiyle örtüşüyor. Bu çakışma iki nedenden dolayı oluşturulmuştur:
 
-- Profil tabanlı PCL'lere başvurmak için .NET Standart tabanlı PCL'leri etkinleştirin.
-- Profil tabanlı PCL'lerin .NET Standart tabanlı PCL'ler olarak paketlemesini etkinleştirin.
+- Profil tabanlı PCLs 'e başvurmak için .NET Standard tabanlı PCLs 'yi etkinleştirin.
+- Profil tabanlı PCLs 'Leri .NET Standard tabanlı PCLs olarak paketlenebilecek şekilde etkinleştirin.
 
-Profil tabanlı PCL uyumluluğu [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet paketi tarafından sağlanır. Profil tabanlı PCL'ler içeren NuGet paketlerine başvururken bu bağımlılık gereklidir.
+Profil tabanlı PCL uyumluluğu, [Microsoft. NETCore. Portable. Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet paketi tarafından sağlanır. Profil tabanlı PCLs 'Leri içeren NuGet paketlerine başvururken bu bağımlılık gereklidir.
 
-Genellikle paketlenmiş profil tabanlı PCL'lere göre daha kolay olarak paketlenmiş `netstandard` profil tabanlı PCL'ler. `netstandard`ambalajı mevcut kullanıcılarla uyumludur.
+Profil tabanlı PCLs 'ler `netstandard` , genellikle paketlenmiş profil tabanlı PCLS 'dan daha kolay tüketilecektir. `netstandard`Paketleme, mevcut kullanıcılarla uyumludur.
 
-.NET Standardı ile uyumlu PCL profilleri kümesini görebilirsiniz:
+.NET Standard ile uyumlu PCL profillerinin kümesini görebilirsiniz:
 
-| PCL Profil | .NET Standard | PCL Platformları
+| PCL profili | .NET Standard | PCL platformları
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profil7    | 1.1           | .NET Framework 4.5, Windows 8
-| Profil31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
-| Profil32   | 1.2           | Windows 8.1, Windows Phone 8.1
-| Profil44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
-| Profil49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
-| Profil78   | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
-| Profil84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profil111  | 1.1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
-| Profil151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
-| Profil157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profil259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
+| Profile7    | 1.1           | .NET Framework 4,5, Windows 8
+| Profile31   | 1,0           | Windows 8.1 Windows Phone Silverlight 8,1
+| Profile32   | 1.2           | Windows 8.1, Windows Phone 8,1
+| Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
+| Profile49   | 1,0           | .NET Framework 4,5, Windows Phone Silverlight 8
+| Profile78   | 1,0           | .NET Framework 4,5, Windows 8 Windows Phone Silverlight 8
+| Profile84   | 1,0           | Windows Phone 8,1, Windows Phone Silverlight 8,1
+| Profile111  | 1.1           | .NET Framework 4,5, Windows 8, Windows Phone 8,1
+| Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8,1
+| Profile157  | 1,0           | Windows 8.1, Windows Phone 8,1, Windows Phone Silverlight 8,1
+| Profile259  | 1,0           | .NET Framework 4,5, Windows 8, Windows Phone 8,1, Windows Phone Silverlight 8
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Standart Versiyonları](https://github.com/dotnet/standard/blob/master/docs/versions.md)
-- [Bir .NET Standart kitaplığı oluşturma](../core/tutorials/library-with-visual-studio.md)
+- [.NET Standard sürümleri](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [.NET Standard kitaplığı oluşturma](../core/tutorials/library-with-visual-studio.md)
 - [Platformlar arası hedefleme](./library-guidance/cross-platform-targeting.md)

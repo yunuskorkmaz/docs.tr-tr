@@ -3,12 +3,12 @@ title: Microsoft. NET. SDK için MSBuild özellikleri
 description: MSBuild özellikleri ve .NET Core SDK anlayan öğeler için başvuru.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206105"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164383"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild başvurusu
 
@@ -25,7 +25,7 @@ Bu sayfa, .NET Core projelerini yapılandırmak için kullanabileceğiniz MSBuil
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework`Özelliği, bir [metapackage](../packages.md#metapackages)örtük olarak başvurduğu uygulamanın hedef Framework sürümünü belirtir. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).
+`TargetFramework`Özelliği, uygulamanın hedef Framework sürümünü belirtir. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).
 
 ```xml
 <PropertyGroup>
@@ -55,7 +55,7 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 > [!NOTE]
 > Bu özellik yalnızca kullanan projeler için geçerlidir `netstandard1.x` . Kullanan projeler için uygulanmaz `netstandard2.x` .
 
-`NetStandardImplicitPackageVersion` [Metapackage](../packages.md#metapackages) sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde özelliğini kullanın. Aşağıdaki örnekteki proje dosyası hedefler, `netstandard1.3` ancak 1.6.0 sürümünü kullanır `NETStandard.Library` .
+`NetStandardImplicitPackageVersion`Metapackage sürümünden daha düşük bir çerçeve sürümü belirtmek istediğinizde özelliğini kullanın. Aşağıdaki örnekteki proje dosyası hedefler, `netstandard1.3` ancak 1.6.0 sürümünü kullanır `NETStandard.Library` .
 
 ```xml
 <PropertyGroup>
@@ -292,7 +292,7 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference`Öğe, bir NuGet paketine bir başvuru tanımlar. Örneğin, [metapackage](../packages.md#metapackages)yerine tek bir pakete başvurmak isteyebilirsiniz.
+`PackageReference`Öğe, bir NuGet paketine bir başvuru tanımlar.
 
 `Include`Öznitelik, paket kimliğini belirtir. `Version`Öznitelik, sürümü veya sürüm aralığını belirtir. En düşük sürüm, en yüksek sürüm, Aralık veya tam eşleşme belirtme hakkında bilgi için bkz. [Sürüm aralıkları](/nuget/concepts/package-versioning#version-ranges). Aşağıdaki meta verileri bir proje başvurusuna de ekleyebilirsiniz: `IncludeAssets` , `ExcludeAssets` , ve `PrivateAssets` .
 

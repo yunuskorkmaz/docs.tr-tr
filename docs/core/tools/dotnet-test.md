@@ -2,18 +2,18 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: 911d10917c2262c0bd32ef30d48da0f85ac39a39
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
+ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803162"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87251198"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Ad
 
 `dotnet test`-Birim testlerini yürütmek için kullanılan .NET test sürücüsü.
 
@@ -21,14 +21,17 @@ ms.locfileid: "84803162"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
-    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-a|--test-adapter-path <ADAPTER_PATH>] [--blame] [--blame-crash]
+    [--blame-crash-dump-type <DUMP_TYPE>] [--blame-crash-collect-always]
+    [--blame-hang] [--blame-hang-dump-type <DUMP_TYPE>]
+    [--blame-hang-timeout <TIMESPAN>]
     [-c|--configuration <CONFIGURATION>]
-    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
-    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--collect <DATA_COLLECTOR_NAME>]
+    [-d|--diag <LOG_FILE>] [-f|--framework <FRAMEWORK>]
     [--filter <EXPRESSION>] [--interactive]
-    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [-l|--logger <LOGGER>] [--no-build]
     [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-r|--results-directory <RESULTS_DIR>] [--runtime <RUNTIME_IDENTIFIER>]
     [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
     [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
@@ -64,7 +67,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 ## <a name="options"></a>Seçenekler
 
-- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <ADAPTER_PATH>`**
 
   Ek test bağdaştırıcıları için aranacak bir dizin yolu. Yalnızca soneki olan *. dll* dosyaları `.TestAdapter.dll` denetlenir. Belirtilmemişse, test *. dll* dizininde arama yapılır.
 
@@ -72,11 +75,42 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
   Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Kilitlenme algılandığında, `TestResults/<Guid>/<Guid>_Sequence.xml` çökmeden önce çalıştırılan testlerin sırasını yakalayan bir sıra dosyası oluşturur.
 
+- **`--blame-crash`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+
+  Testleri sorumluyu modunda çalıştırır ve test ana bilgisayarı beklenmedik bir şekilde çıktığında kilitlenme dökümünü toplar. Bu seçenek yalnızca Windows 'ta desteklenir. *procdump.exe* ve *procdump64.exe* IÇEREN bir dizin, yol veya PROCDUMP_PATH ortam değişkeninde olmalıdır. [Araçları indirin](https://docs.microsoft.com/sysinternals/downloads/procdump). Şunu gösterir `--blame` .
+
+- **`--blame-crash-dump-type <DUMP_TYPE>`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+
+  Toplanacak kilitlenme bilgi dökümü türü. Şunu gösterir `--blame-crash` .
+
+- **`--blame-crash-collect-always`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+
+  Beklenen ve beklenmeyen test ana bilgisayarı çıkışında oluşan kilitlenme dökümünü toplar.
+
+- **`--blame-hang`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+
+  Testleri sorumluyu modunda çalıştırın ve bir test verilen zaman aşımını aştığında bir askıda kalma dökümü toplar.
+
+- **`--blame-hang-dump-type <DUMP_TYPE>`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+
+  Toplanacak kilitlenme bilgi dökümü türü. `full`, `mini` Veya olmalıdır `none` . `none`Belirtildiğinde, test ana bilgisayarı zaman aşımında sonlandırılır, ancak hiçbir döküm toplanmaz. Şunu gösterir `--blame-hang` .
+
+- **`--blame-hang-timeout <TIMESPAN>`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+
+  Test ana zaman aşımı, bir askıda kalma dökümü tetiklenir ve test ana bilgisayarı işlemi sonlandırılır. Zaman aşımı değeri aşağıdaki biçimlerden birinde belirtilir:
+  
+  - 1.5 s
+  - 90 milyon
+  - 5400s
+  - 5400000ms
+
+  Hiçbir birim kullanılmazsa (örneğin, 5400000), değerin milisaniye cinsinden olduğu varsayılır. Veri odaklı testlerle birlikte kullanıldığında, zaman aşımı davranışı kullanılan test bağdaştırıcısına bağlıdır. XUnit ve NUnit için zaman aşımı her test çalışmasının ardından yenilenir. MSTest için zaman aşımı tüm test çalışmaları için kullanılır. Bu seçenek netcoreapp 2.1 ve üzeri sürümlerde ve netcoreapp 3.1 ve üzeri Linux 'ta desteklenir. macOS desteklenmez.
+
 - **`-c|--configuration <CONFIGURATION>`**
 
   Yapı yapılandırmasını tanımlar. Varsayılan değer `Debug` , ancak projenizin yapılandırması bu varsayılan SDK ayarını geçersiz kılabilir.
 
-- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_NAME>`**
 
   Test çalıştırması için veri toplayıcıyı etkinleştirilir. Daha fazla bilgi için bkz. [test çalıştırmasını izleme ve çözümleme](https://aka.ms/vstest-collect).
   
@@ -84,7 +118,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
   Windows üzerinde, seçeneğini kullanarak kod kapsamını toplayabilirsiniz `--collect "Code Coverage"` . Bu seçenek, Visual Studio 2019 Enterprise 'ta açılabilen bir *. Coverage* dosyası üretir. Daha fazla bilgi için bkz. [kod kapsamını kullanma](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested) ve [kod kapsamı analizini özelleştirme](/visualstudio/test/customizing-code-coverage-analysis).
 
-- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <LOG_FILE>`**
 
   Test platformu için tanılama modunu sağlar ve belirtilen dosyaya ve bunun yanındaki dosyalara tanılama iletileri yazar. İletileri günlüğe kaydeden işlem, `*.host_<date>.txt` Test ana bilgisayar günlüğü için ve veri toplayıcı günlüğü için oluşturulan dosyaları belirler `*.datacollector_<date>.txt` .
 
@@ -104,7 +138,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
   Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir. Örneğin, kimlik doğrulamasını tamamlamaya yönelik. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
-- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER>`**
 
   Test sonuçları için bir günlükçü belirtir. MSBuild 'in aksine, DotNet testi kısaltmalar kabul etmez: `-l "console;v=d"` kullanım yerine `-l "console;verbosity=detailed"` .
 
@@ -124,7 +158,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
   Çalıştırılacak ikililerin bulunacağı dizin. Belirtilmemişse, varsayılan yol olur `./bin/<configuration>/<framework>/` .  Birden çok hedef çerçevesi olan projeler için ( `TargetFrameworks` özelliği aracılığıyla), `--framework` Bu seçeneği ne zaman belirttiğinizde de tanımlamanız gerekir. `dotnet test`her zaman çıkış dizininden testleri çalıştırır. <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType>' I, çıkış dizininde test varlıklarını kullanmak için kullanabilirsiniz.
 
-- **`-r|--results-directory <PATH>`**
+- **`-r|--results-directory <RESULTS_DIR>`**
 
   Test sonuçlarının yerleştirileceği dizin. Belirtilen dizin yoksa, oluşturulur. Varsayılan değer `TestResults` Proje dosyasını içeren dizindir.
 
@@ -141,7 +175,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`-t|--list-tests`**
 
-  Geçerli projedeki tüm bulunan testlerin listesini listeleyin.
+  Testleri çalıştırmak yerine bulunan testleri listeleyin.
 
 - **`-v|--verbosity <LEVEL>`**
 
@@ -209,13 +243,13 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Ad</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:
 
-| Operatör | İşlev        |
+| İşleç | İşlev        |
 | :------: | --------------- |
 | `=`      | Tam eşleşme     |
 | `!=`     | Tam eşleşme yok |
@@ -228,9 +262,9 @@ Bir ifadesi `<operator>` , otomatik olarak on özelliği olarak kabul `contains`
 
 İfadeler koşullu işleçlerle birleştirilebilecek:
 
-| Operatör            | İşlev |
+| İşleç            | İşlev |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | VEYA       |
 | `&`                 | AND      |
 
 Koşullu işleçler kullandığınızda (örneğin,) ifadeleri parantez içine alabilirsiniz `(Name~TestMethod1) | (Name~TestMethod2)` .
