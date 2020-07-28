@@ -1,5 +1,6 @@
 ---
 title: 'Nasıl yapılır: TextBox İçindeki Metin Değiştirildiğinde Algılama'
+description: Bir Windows Presentation Foundation uygulamasında metin kutusu denetimindeki metinlerin her değiştiğinde bir yöntemi çalıştırmak için TextChanged olayını nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,33 +10,33 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 8c7744e9e61b8ba796802e54435c0bf9fdbee50e
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 1e054380a8c77d32e6bb4adbbcb032e531bbefd0
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855614"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87166226"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Nasıl yapılır: TextBox İçindeki Metin Değiştirildiğinde Algılama
 
-Bu örnek, bir <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> <xref:System.Windows.Controls.TextBox> denetimdeki metnin değiştiği her seferinde yöntemi yürütmek için olayı kullanmanın bir yolunu gösterir.
+Bu örnek, bir <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> denetimdeki metnin değiştiği her seferinde yöntemi yürütmek için olayı kullanmanın bir yolunu gösterir <xref:System.Windows.Controls.TextBox> .
 
-Değişiklik için izlemek istediğiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Controls.TextBox> denetimi içeren için arka plan kod sınıfında, <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> olay her tetiklendiğinde çağrılacak bir yöntem ekleyin.  Bu yöntem, <xref:System.Windows.Controls.TextChangedEventHandler> temsilci tarafından beklenildiği ile eşleşen bir imzaya sahip olmalıdır.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Değişiklik için izlemek istediğiniz denetimi içeren için arka plan kod sınıfında <xref:System.Windows.Controls.TextBox> , olay her tetiklendiğinde çağrılacak bir yöntem ekleyin <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> .  Bu yöntem, temsilci tarafından beklenildiği ile eşleşen bir imzaya sahip olmalıdır <xref:System.Windows.Controls.TextChangedEventHandler> .
 
 Olay işleyicisi, <xref:System.Windows.Controls.TextBox> denetimin içeriği kullanıcı veya program aracılığıyla değiştirildiğinde çağrılır.
 
 > [!NOTE]
-> Bu olay <xref:System.Windows.Controls.TextBox> denetim oluşturulduğunda ve başlangıçta metin ile doldurulduğunda ateşlenir.
+> Bu olay <xref:System.Windows.Controls.TextBox> Denetim oluşturulduğunda ve başlangıçta metin ile doldurulduğunda ateşlenir.
 
 ## <a name="example"></a>Örnek
 
-Denetiminizi tanımlayan öğesinde, olay işleyicisi yöntem adıyla eşleşen <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> bir değere sahip özniteliği belirtin. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] <xref:System.Windows.Controls.TextBox>
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]Denetiminizi tanımlayan öğesinde, <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> olay işleyicisi yöntem adıyla eşleşen bir değere sahip özniteliği belirtin.
 
 [!code-xaml[TextBox_MiscCode#_TextChangedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_textchangedxaml)]
 
 ## <a name="example"></a>Örnek
 
-Değişiklik için izlemek istediğiniz [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] <xref:System.Windows.Controls.TextBox> denetimi içeren için arka plan kod sınıfında, <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> olay her tetiklendiğinde çağrılacak bir yöntem ekleyin.  Bu yöntem, <xref:System.Windows.Controls.TextChangedEventHandler> temsilci tarafından beklenildiği ile eşleşen bir imzaya sahip olmalıdır.
+[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]Değişiklik için izlemek istediğiniz denetimi içeren için arka plan kod sınıfında <xref:System.Windows.Controls.TextBox> , olay her tetiklendiğinde çağrılacak bir yöntem ekleyin <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> .  Bu yöntem, temsilci tarafından beklenildiği ile eşleşen bir imzaya sahip olmalıdır <xref:System.Windows.Controls.TextChangedEventHandler> .
 
 [!code-csharp[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml.cs#_textchangedeventhandler)]
 [!code-vb[TextBox_MiscCode#_TextChangedEventHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_textchangedeventhandler)]
@@ -43,12 +44,12 @@ Değişiklik için izlemek istediğiniz [!INCLUDE[TLA2#tla_xaml](../../../../inc
 Olay işleyicisi, <xref:System.Windows.Controls.TextBox> denetimin içeriği kullanıcı veya program aracılığıyla değiştirildiğinde çağrılır.
 
 > [!NOTE]
-> Bu olay <xref:System.Windows.Controls.TextBox> denetim oluşturulduğunda ve başlangıçta metin ile doldurulduğunda ateşlenir.
+> Bu olay <xref:System.Windows.Controls.TextBox> Denetim oluşturulduğunda ve başlangıçta metin ile doldurulduğunda ateşlenir.
 
-Açıklamalar
+Yorumlar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.TextChangedEventArgs>
-- [TextBox Genel Bakış](textbox-overview.md)
-- [RichTextBox Genel Bakış](richtextbox-overview.md)
+- [TextBox Genel Bakışı](textbox-overview.md)
+- [RichTextBox Genel Bakışı](richtextbox-overview.md)

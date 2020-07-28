@@ -1,64 +1,65 @@
 ---
 title: UI Otomasyon Yerleştirme Denetim Düzenini Uygulama
+description: UI Otomasyon Dock denetim modelini uygulamayı öğrenin. Bir denetimin dock özelliklerini göstermek için Dockmodel denetim modelini kullanın. IDockProvider 'ı uygulayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, dock
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b1213791609245209fa37e3cdcb0876c963bfeb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8080d78c7bded3cb884f92948eb1259cda5544dc
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180200"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165898"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI Otomasyon Yerleştirme Denetim Düzenini Uygulama
 > [!NOTE]
-> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Bu <xref:System.Windows.Automation.Provider.IDockProvider>konu, özellikler hakkında bilgi de dahil olmak üzere uygulama yönergeleri ve kuralları sunar. Ek başvurulara bağlantılar konunun sonunda listelenir.  
+ Bu konu <xref:System.Windows.Automation.Provider.IDockProvider> , özellikler hakkında bilgiler de dahil olmak üzere uygulama yönergelerini ve kurallarını tanıtır. Ek başvuruların bağlantıları konunun sonunda listelenmiştir.  
   
- Denetim <xref:System.Windows.Automation.DockPattern> deseni, bir yerleştirme kapsayıcısı içindeki bir denetimin dock özelliklerini ortaya çıkarmak için kullanılır. Yerleştirme kapsayıcısı, alt öğeleri birbirine göre yatay ve dikey olarak düzenlemenizi sağlayan bir denetimdir. Bu denetim deseni uygulayan denetim örnekleri için, [UI Otomasyon Istemcileri için Denetim Deseni Eşleciliği'ne](control-pattern-mapping-for-ui-automation-clients.md)bakın.  
+ <xref:System.Windows.Automation.DockPattern>Denetim deseninin, bir yerleştirme kapsayıcısı içindeki denetimin dock özelliklerini göstermek için kullanılır. Bir yerleştirme kapsayıcısı, alt öğeleri yatay ve dikey olarak birbirlerine göre düzenlemenizi sağlayan bir denetimdir. Bu denetim modelini uygulayan denetimlerin örnekleri için bkz. [UI Otomasyonu istemcileri Için denetim model eşlemesi](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![İki kenetlenmiş çocukla kenetlenmiş konteynır.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
-"Sınıf Görünümü" Penceresinin DockPosition.Right ve "Hata Listesi" Penceresinin DockPosition olduğu Visual Studio'dan Yerleştirme Örneği.Alt  
+ ![İki sabitlenmiş alt öğe ile kapsayıcıyı sabitleme.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+Visual Studio 'dan "Sınıf Görünümü" penceresinin DockPosition olduğu yere yerleştirme örneği. Right ve "Hata Listesi" Window, DockPosition. Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>
-## <a name="implementation-guidelines-and-conventions"></a>Uygulama Yönergeleri ve Sözleşmeleri  
- Dock denetim modelini uygularken aşağıdaki yönergeleri ve kuralları dikkate alabelirtin:  
+## <a name="implementation-guidelines-and-conventions"></a>Uygulama kılavuzları ve kuralları  
+ Dock denetim modelini uygularken, aşağıdaki kılavuz ve kurallara göz önünde yer verilmiştir:  
   
-- <xref:System.Windows.Automation.Provider.IDockProvider>yerleştirme kabının herhangi bir özelliğini veya yerleştirme kabı içindeki geçerli denetime bitişik olarak sabitlenmiş denetimlerin özelliklerini ortaya çıkarmaz.  
+- <xref:System.Windows.Automation.Provider.IDockProvider>, yerleştirme kapsayıcısının veya yerleştirme kapsayıcısı içindeki geçerli denetime bitişik yerleştirilmiş denetimlerin özelliklerinin herhangi bir özelliğini açığa çıkarmaz.  
   
-- Denetimler, geçerli z sıralarına göre birbirine göre sabitlenir; z-sıra yerleşimleri ne kadar yüksekse, yerleştirme kabının belirtilen kenarından o kadar uzağa yerleştirilirler.  
+- Denetimler, geçerli z sıralarına göre birbirlerine göre sabitlenebilir; z sırası yerleşimi arttıkça, yerleştirme kapsayıcısının belirtilen kenarından de yerleştirilirler.  
   
-- Yerleştirme kapsayıcısı yeniden boyutlandırılırsa, konteyneriçindeki sabitlenmiş denetimler, ilk olarak sabitlendikleri kenarına yeniden konumlandırılır. Kenetlenmiş denetimler de kendi <xref:System.Windows.Automation.DockPosition>yerleştirme davranışına göre kapsayıcı içinde herhangi bir alanı doldurmak için yeniden boyutlandırAcak . Örneğin, <xref:System.Windows.Automation.DockPosition.Top> belirtilirse, denetimin sol ve sağ tarafları kullanılabilir alanı doldurmak için genişler. <xref:System.Windows.Automation.DockPosition.Fill> Belirtilirse, denetimin dört tarafı kullanılabilir alanı doldurmak için genişler.  
+- Yerleştirme kapsayıcısı yeniden boyutlandırılırsa, kapsayıcıdaki tüm yerleşik denetimler, özgün olarak yerleştirildikleri kenara yeniden konumlandırılacaktır. Sabitlenmiş denetimler Ayrıca, kapsayıcının içindeki herhangi bir alanı kendi yerleştirme davranışına göre dolduracak şekilde yeniden boyutlandırılır <xref:System.Windows.Automation.DockPosition> . Örneğin, belirtilirse, <xref:System.Windows.Automation.DockPosition.Top> denetimin sol ve sağ kenarları, kullanılabilir alanı dolduracak şekilde genişletilir. <xref:System.Windows.Automation.DockPosition.Fill>Belirtilmişse, denetimin dört kenarı kullanılabilir alanı dolduracak şekilde genişletilir.  
   
-- Çoklu monitör sisteminde, denetimler geçerli monitörün sol veya sağ tarafına dock gerekir. Bu mümkün değilse, en soldaki monitörün sol tarafına veya en sağdaki monitörün sağ tarafına dock gerekir.  
+- Birden çok Monitor sisteminde, denetimler geçerli izleyicinin sol veya sağ tarafına yerleştirilmelidir. Bu mümkün değilse, en soldaki izleyicinin sol tarafına veya en sağdaki monitörün sağ tarafına yerleştirilmelidir.  
   
 <a name="Required_Members_for_IDockProvider"></a>
-## <a name="required-members-for-idockprovider"></a>IDockProvider için Gerekli Üyeler  
- IDockProvider arabiriminin uygulanması için aşağıdaki özellikler ve yöntemler gereklidir.  
+## <a name="required-members-for-idockprovider"></a>IDockProvider için gerekli Üyeler  
+ IDockProvider arabirimini uygulamak için aşağıdaki özellikler ve Yöntemler gereklidir.  
   
-|Gerekli üyeler|Üye tipi|Notlar|  
+|Gerekli Üyeler|Üye türü|Notlar|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Özellik|None|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Yöntem|None|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Özellik|Hiçbiri|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Yöntem|Hiçbiri|  
   
- Bu denetim deseni ilişkili olaylar vardır.  
+ Bu denetim deseninin ilişkili olayları yok.  
   
 <a name="Exceptions"></a>
 ## <a name="exceptions"></a>Özel durumlar  
- Sağlayıcılar aşağıdaki özel durumları atmalıdır.  
+ Sağlayıcılar aşağıdaki özel durumları oluşturması gerekir.  
   
 |Özel durum türü|Koşul|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> - Bir denetim istenen dock stilini yürütemediğinde.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -Bir denetim istenen yuva stilini yürütemediğinde.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu Denetim Desenlerine Genel Bakış](ui-automation-control-patterns-overview.md)
-- [UI Otomasyonu Sağlayıcıda Denetim Düzenleri Desteği](support-control-patterns-in-a-ui-automation-provider.md)
-- [İstemciler İçin UI Otomasyonu Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
+- [UI Otomasyon Denetim Düzenlerine Genel Bakış](ui-automation-control-patterns-overview.md)
+- [UI Otomasyon Sağlayıcısında Denetim Düzenleri Desteği](support-control-patterns-in-a-ui-automation-provider.md)
+- [İstemciler İçin UI Otomasyon Denetim Düzenleri](ui-automation-control-patterns-for-clients.md)
 - [UI Otomasyon Ağacına Genel Bakış](ui-automation-tree-overview.md)
-- [UI Otomasyonunda Önbelleğe Almayı Kullanma](use-caching-in-ui-automation.md)
+- [UI Otomasyonda Önbelleğe Almayı Kullanma](use-caching-in-ui-automation.md)

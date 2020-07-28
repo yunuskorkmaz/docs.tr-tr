@@ -1,5 +1,6 @@
 ---
 title: UI Otomasyonu ve Microsoft Active Accessibility
+description: Uygulamaları erişilebilir hale getirmek için önceki çözüm olan UI Otomasyonu ve Microsoft Active Accessibility arasındaki farkları anlayın.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Active Accessibility
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 9aa975cf3c6e60fbcc759adbf5a991930bff36d6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 0685a3f89a6578433641aaf78717f4ff377ff2f9
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144792"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87164071"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI Otomasyonu ve Microsoft Active Accessibility
 > [!NOTE]
@@ -94,7 +95,7 @@ Etkin Erişilebilirlik, çift arabirimler için destek içeren bileşen nesne mo
 |ROLE_SYSTEM_RADIOBUTTON|Radyo düğmesi|  
 |ROLE_SYSTEM_SCROLLBAR|Kaydırma çubuğu|  
 |ROLE_SYSTEM_SEPARATOR|Ayırıcı|  
-|ROLE_SYSTEM_SLIDER|Kaydırıcı|  
+|ROLE_SYSTEM_SLIDER|Slider|  
 |ROLE_SYSTEM_SPINBUTTON|Değer Değiştirici|  
 |ROLE_SYSTEM_SPLITBUTTON|Bölünmüş düğme|  
 |ROLE_SYSTEM_STATUSBAR|Durum çubuğu|  
@@ -251,4 +252,4 @@ Etkin Erişilebilirlik, çift arabirimler için destek içeren bileşen nesne mo
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [UI Otomasyonu temelleri](index.md)
+- [UI Otomasyon Temelleri](index.md)
