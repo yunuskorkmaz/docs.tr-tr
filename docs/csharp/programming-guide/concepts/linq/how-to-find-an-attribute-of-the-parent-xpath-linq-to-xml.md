@@ -1,27 +1,28 @@
 ---
-title: Üst öğenin özniteliği (XPath-LINQ'dan XML'e) (C#) nasıl bulabilirim?
+title: Üst öğenin bir özniteliğini bulma (XPath-LINQ to XML) (C#)
+description: Üst öğenin bir özniteliğini bulmayı öğrenin. Örnek bir XML belgesi kullanan bir kod örneğine bakın.
 ms.date: 07/20/2015
 ms.assetid: dbef9d89-a5c4-431f-80cc-7a2ebf323f86
-ms.openlocfilehash: bfe7554a5c767adde5e7170c8e1ea0537155f6df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03344bb66f617970d9598c91366eb7d69514397a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141170"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303302"
 ---
-# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a><span data-ttu-id="0c93b-102">Üst öğenin özniteliği (XPath-LINQ'dan XML'e) (C#) nasıl bulabilirim?</span><span class="sxs-lookup"><span data-stu-id="0c93b-102">How to find an attribute of the parent (XPath-LINQ to XML) (C#)</span></span>
+# <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-c"></a><span data-ttu-id="24dce-104">Üst öğenin bir özniteliğini bulma (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="24dce-104">How to find an attribute of the parent (XPath-LINQ to XML) (C#)</span></span>
 
-<span data-ttu-id="0c93b-103">Bu konu, üst öğeye nasıl gidilir ve bir özniteliğini nasıl bulacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="0c93b-103">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>
+<span data-ttu-id="24dce-105">Bu konu başlığı altında, üst öğeye gitme ve bir özniteliği bulma gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="24dce-105">This topic shows how to navigate to the parent element and find an attribute of it.</span></span>
 
-<span data-ttu-id="0c93b-104">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="0c93b-104">The XPath expression is:</span></span>
+<span data-ttu-id="24dce-106">XPath ifadesi:</span><span class="sxs-lookup"><span data-stu-id="24dce-106">The XPath expression is:</span></span>
 
 `../@id`
 
-## <a name="example"></a><span data-ttu-id="0c93b-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="0c93b-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="24dce-107">Örnek</span><span class="sxs-lookup"><span data-stu-id="24dce-107">Example</span></span>
 
-<span data-ttu-id="0c93b-106">Bu örnekte `Author` ilk önce bir öğe bulur.</span><span class="sxs-lookup"><span data-stu-id="0c93b-106">This example first finds an `Author` element.</span></span> <span data-ttu-id="0c93b-107">Daha sonra `id` üst öğenin özniteliğini bulur.</span><span class="sxs-lookup"><span data-stu-id="0c93b-107">It then finds the `id` attribute of the parent element.</span></span>
+<span data-ttu-id="24dce-108">Bu örnek önce bir `Author` öğesi bulur.</span><span class="sxs-lookup"><span data-stu-id="24dce-108">This example first finds an `Author` element.</span></span> <span data-ttu-id="24dce-109">Daha sonra `id` üst öğenin özniteliğini bulur.</span><span class="sxs-lookup"><span data-stu-id="24dce-109">It then finds the `id` attribute of the parent element.</span></span>
 
-<span data-ttu-id="0c93b-108">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Kitaplar (LINQ-XML)](./sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="0c93b-108">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>
+<span data-ttu-id="24dce-110">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: kitaplar (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="24dce-110">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>
 
 ```csharp
 XDocument books = XDocument.Load("Books.xml");
@@ -48,7 +49,7 @@ else
 Console.WriteLine(att1);
 ```
 
-<span data-ttu-id="0c93b-109">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="0c93b-109">This example produces the following output:</span></span>
+<span data-ttu-id="24dce-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="24dce-111">This example produces the following output:</span></span>
 
 ```output
 Results are identical

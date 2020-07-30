@@ -1,18 +1,19 @@
 ---
 title: XML dosyasından nesne verilerini okuma (C#)
+description: Bu C# örneği, daha önce XmlSerializer sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur.
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 525a93812279756b3802d43d85bb5e61d8f7415e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241883"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302795"
 ---
-# <a name="how-to-read-object-data-from-an-xml-file-c"></a><span data-ttu-id="9bcf3-102">XML dosyasından nesne verilerini okuma (C#)</span><span class="sxs-lookup"><span data-stu-id="9bcf3-102">How to read object data from an XML file (C#)</span></span>
-<span data-ttu-id="9bcf3-103">Bu örnek, daha önce sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> .</span><span class="sxs-lookup"><span data-stu-id="9bcf3-103">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
+# <a name="how-to-read-object-data-from-an-xml-file-c"></a><span data-ttu-id="b103a-103">XML dosyasından nesne verilerini okuma (C#)</span><span class="sxs-lookup"><span data-stu-id="b103a-103">How to read object data from an XML file (C#)</span></span>
+<span data-ttu-id="b103a-104">Bu örnek, daha önce sınıfını kullanarak bir XML dosyasına yazılmış nesne verilerini okur <xref:System.Xml.Serialization.XmlSerializer> .</span><span class="sxs-lookup"><span data-stu-id="b103a-104">This example reads object data that was previously written to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9bcf3-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="9bcf3-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b103a-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="b103a-105">Example</span></span>  
   
 ```csharp  
 public class Book  
@@ -42,28 +43,28 @@ public void ReadXML()
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9bcf3-105">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="9bcf3-105">Compiling the Code</span></span>  
-<span data-ttu-id="9bcf3-106">"C:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-106">Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data.</span></span> <span data-ttu-id="9bcf3-107">Verileri seri hale getirme hakkında daha fazla bilgi için bkz. [BIR XML dosyasına nesne verileri yazma (C#)](./how-to-write-object-data-to-an-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="9bcf3-107">For more information about serializing data, see [How to write object data to an XML file (C#)](./how-to-write-object-data-to-an-xml-file.md).</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="b103a-106">Kod Derleniyor</span><span class="sxs-lookup"><span data-stu-id="b103a-106">Compiling the Code</span></span>  
+<span data-ttu-id="b103a-107">"c:\temp\SerializationOverview.xml" dosya adını seri hale getirilen verileri içeren dosyanın adıyla değiştirin.</span><span class="sxs-lookup"><span data-stu-id="b103a-107">Replace the file name "c:\temp\SerializationOverview.xml" with the name of the file containing the serialized data.</span></span> <span data-ttu-id="b103a-108">Verileri seri hale getirme hakkında daha fazla bilgi için bkz. [BIR XML dosyasına nesne verileri yazma (C#)](./how-to-write-object-data-to-an-xml-file.md).</span><span class="sxs-lookup"><span data-stu-id="b103a-108">For more information about serializing data, see [How to write object data to an XML file (C#)](./how-to-write-object-data-to-an-xml-file.md).</span></span>
   
- <span data-ttu-id="9bcf3-108">Sınıfın parametresiz ortak bir oluşturucusu olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-108">The class must have a public constructor without parameters.</span></span>  
+ <span data-ttu-id="b103a-109">Sınıfın parametresiz ortak bir oluşturucusu olmalıdır.</span><span class="sxs-lookup"><span data-stu-id="b103a-109">The class must have a public constructor without parameters.</span></span>  
   
- <span data-ttu-id="9bcf3-109">Yalnızca ortak özellikler ve alanların serisi kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-109">Only public properties and fields are deserialized.</span></span>  
+ <span data-ttu-id="b103a-110">Yalnızca ortak özellikler ve alanların serisi kaldırılır.</span><span class="sxs-lookup"><span data-stu-id="b103a-110">Only public properties and fields are deserialized.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="9bcf3-110">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="9bcf3-110">Robust Programming</span></span>  
- <span data-ttu-id="9bcf3-111">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="9bcf3-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="b103a-111">Güçlü Programlama</span><span class="sxs-lookup"><span data-stu-id="b103a-111">Robust Programming</span></span>  
+ <span data-ttu-id="b103a-112">Aşağıdaki koşullar özel bir duruma neden olabilir:</span><span class="sxs-lookup"><span data-stu-id="b103a-112">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="9bcf3-112">Seri hale getirilen sınıfın ortak, parametresiz bir oluşturucusu yok.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-112">The class being serialized does not have a public, parameterless constructor.</span></span>  
+- <span data-ttu-id="b103a-113">Seri hale getirilen sınıfın ortak, parametresiz bir oluşturucusu yok.</span><span class="sxs-lookup"><span data-stu-id="b103a-113">The class being serialized does not have a public, parameterless constructor.</span></span>  
   
-- <span data-ttu-id="9bcf3-113">Dosyadaki veriler, seri durumdan çıkarılacak sınıftan verileri temsil etmez.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-113">The data in the file does not represent data from the class to be deserialized.</span></span>  
+- <span data-ttu-id="b103a-114">Dosyadaki veriler, seri durumdan çıkarılacak sınıftan verileri temsil etmez.</span><span class="sxs-lookup"><span data-stu-id="b103a-114">The data in the file does not represent data from the class to be deserialized.</span></span>  
   
-- <span data-ttu-id="9bcf3-114">Dosya yok ( <xref:System.IO.IOException> ).</span><span class="sxs-lookup"><span data-stu-id="9bcf3-114">The file does not exist (<xref:System.IO.IOException>).</span></span>  
+- <span data-ttu-id="b103a-115">Dosya yok ( <xref:System.IO.IOException> ).</span><span class="sxs-lookup"><span data-stu-id="b103a-115">The file does not exist (<xref:System.IO.IOException>).</span></span>  
   
-## <a name="net-security"></a><span data-ttu-id="9bcf3-115">.NET güvenliği</span><span class="sxs-lookup"><span data-stu-id="9bcf3-115">.NET Security</span></span>  
- <span data-ttu-id="9bcf3-116">Girişleri her zaman doğrulayın ve güvenilmeyen bir kaynaktaki verileri hiçbir zaman serisini kaldırma.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-116">Always verify inputs, and never deserialize data from an untrusted source.</span></span> <span data-ttu-id="9bcf3-117">Yeniden oluşturulan nesne, yerel bir bilgisayarda, serisi kaldırılan kodun izinleriyle çalışır.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-117">The re-created object runs on a local computer with the permissions of the code that deserialized it.</span></span> <span data-ttu-id="9bcf3-118">Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-118">Verify all inputs before using the data in your application.</span></span>  
+## <a name="net-security"></a><span data-ttu-id="b103a-116">.NET güvenliği</span><span class="sxs-lookup"><span data-stu-id="b103a-116">.NET Security</span></span>  
+ <span data-ttu-id="b103a-117">Girişleri her zaman doğrulayın ve güvenilmeyen bir kaynaktaki verileri hiçbir zaman serisini kaldırma.</span><span class="sxs-lookup"><span data-stu-id="b103a-117">Always verify inputs, and never deserialize data from an untrusted source.</span></span> <span data-ttu-id="b103a-118">Yeniden oluşturulan nesne, yerel bir bilgisayarda, serisi kaldırılan kodun izinleriyle çalışır.</span><span class="sxs-lookup"><span data-stu-id="b103a-118">The re-created object runs on a local computer with the permissions of the code that deserialized it.</span></span> <span data-ttu-id="b103a-119">Verileri uygulamanızda kullanmadan önce tüm girişleri doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="b103a-119">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9bcf3-119">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9bcf3-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b103a-120">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b103a-120">See also</span></span>
 
 - <xref:System.IO.StreamWriter>
-- [<span data-ttu-id="9bcf3-120">Nesne verilerini bir XML dosyasına yazma (C#)</span><span class="sxs-lookup"><span data-stu-id="9bcf3-120">How to write object data to an XML file (C#)</span></span>](./how-to-write-object-data-to-an-xml-file.md)
-- [<span data-ttu-id="9bcf3-121">Serileştirme (C# )</span><span class="sxs-lookup"><span data-stu-id="9bcf3-121">Serialization (C#)</span></span>](./index.md)
-- [<span data-ttu-id="9bcf3-122">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="9bcf3-122">C# Programming Guide</span></span>](../../index.md)
+- [<span data-ttu-id="b103a-121">Nesne verilerini bir XML dosyasına yazma (C#)</span><span class="sxs-lookup"><span data-stu-id="b103a-121">How to write object data to an XML file (C#)</span></span>](./how-to-write-object-data-to-an-xml-file.md)
+- [<span data-ttu-id="b103a-122">Serileştirme (C# )</span><span class="sxs-lookup"><span data-stu-id="b103a-122">Serialization (C#)</span></span>](./index.md)
+- [<span data-ttu-id="b103a-123">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="b103a-123">C# Programming Guide</span></span>](../../index.md)

@@ -1,18 +1,19 @@
 ---
 title: 'Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması'
+description: Bu XML dosyası LINQ to XML belgelerindeki çeşitli örneklerde kullanılır. Dosya bir test yapılandırma dosyasıdır. XML bir ad alanıdır.
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: ed25a8608977070e0db5f4cdee8a44a3c347cc8e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e08bc476eda39b6e9ff3e2958a49a0d9e5dc303a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168008"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302483"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="4357a-102">Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması</span><span class="sxs-lookup"><span data-stu-id="4357a-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="4357a-103">Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerdeki çeşitli örneklerde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="4357a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="4357a-104">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="4357a-104">This is a test configuration file.</span></span> <span data-ttu-id="4357a-105">XML bir ad alanında.</span><span class="sxs-lookup"><span data-stu-id="4357a-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="96e61-105">Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması</span><span class="sxs-lookup"><span data-stu-id="96e61-105">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="96e61-106">Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .</span><span class="sxs-lookup"><span data-stu-id="96e61-106">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="96e61-107">Bu bir test yapılandırma dosyasıdır.</span><span class="sxs-lookup"><span data-stu-id="96e61-107">This is a test configuration file.</span></span> <span data-ttu-id="96e61-108">XML bir ad alanıdır.</span><span class="sxs-lookup"><span data-stu-id="96e61-108">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="4357a-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="4357a-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="96e61-109">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="96e61-109">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  

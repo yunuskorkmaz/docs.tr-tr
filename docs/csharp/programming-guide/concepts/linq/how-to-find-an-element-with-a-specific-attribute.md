@@ -1,21 +1,22 @@
 ---
-title: Belirli bir özniteliğe (C#) sahip bir öğe yi bulma
+title: Belirli bir özniteliğe sahip bir öğe bulma (C#)
+description: Belirli bir değere sahip bir özniteliğe sahip bir öğe bulmayı öğrenin. Kod örneklerine ve ek kaynaklara bakın.
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44875ca2104e7a8f83e83da983af49ef85c89f0a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141156"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303289"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="b21df-102">Belirli bir özniteliğe (C#) sahip bir öğe yi bulma</span><span class="sxs-lookup"><span data-stu-id="b21df-102">How to find an element with a specific attribute (C#)</span></span>
-<span data-ttu-id="b21df-103">Bu konu, belirli bir değere sahip bir özniteliğe sahip bir öğeyi nasıl bulacağımı gösterir.</span><span class="sxs-lookup"><span data-stu-id="b21df-103">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a><span data-ttu-id="e2dfd-104">Belirli bir özniteliğe sahip bir öğe bulma (C#)</span><span class="sxs-lookup"><span data-stu-id="e2dfd-104">How to find an element with a specific attribute (C#)</span></span>
+<span data-ttu-id="e2dfd-105">Bu konu, belirli bir değere sahip bir özniteliğe sahip olan bir öğenin nasıl bulunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="e2dfd-105">This topic shows how to find an element that has an attribute that has a specific value.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b21df-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="b21df-104">Example</span></span>  
- <span data-ttu-id="b21df-105">Örnek, "Faturalama" `Address` değeri olan `Type` bir özniteliği olan öğeyi nasıl bulabileceğinizi gösterir.</span><span class="sxs-lookup"><span data-stu-id="b21df-105">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
+## <a name="example"></a><span data-ttu-id="e2dfd-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="e2dfd-106">Example</span></span>  
+ <span data-ttu-id="e2dfd-107">Örnek, `Address` `Type` "Faturalandırma" değerine sahip bir özniteliğe sahip olan öğenin nasıl bulunacağını gösterir.</span><span class="sxs-lookup"><span data-stu-id="e2dfd-107">The example shows how to find the `Address` element that has a `Type` attribute with a value of "Billing".</span></span>  
   
- <span data-ttu-id="b21df-106">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Tipik SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="b21df-106">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
+ <span data-ttu-id="e2dfd-108">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span><span class="sxs-lookup"><span data-stu-id="e2dfd-108">This example uses the following XML document: [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -27,7 +28,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="b21df-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="b21df-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="e2dfd-109">Bu kod şu çıkışı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="e2dfd-109">This code produces the following output:</span></span>  
   
 ```xml  
 <Address Type="Billing">  
@@ -40,10 +41,10 @@ foreach (XElement el in address)
 </Address>  
 ```  
   
-## <a name="example"></a><span data-ttu-id="b21df-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="b21df-108">Example</span></span>  
- <span data-ttu-id="b21df-109">Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="b21df-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="b21df-110">Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="b21df-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="e2dfd-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="e2dfd-110">Example</span></span>  
+ <span data-ttu-id="e2dfd-111">Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="e2dfd-111">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="e2dfd-112">Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e2dfd-112">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="b21df-111">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında Tipik Satın Alma Siparişi.](./sample-xml-file-typical-purchase-order-in-a-namespace.md)</span><span class="sxs-lookup"><span data-stu-id="b21df-111">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](./sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="e2dfd-113">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında tipik satın alma siparişi](./sample-xml-file-typical-purchase-order-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="e2dfd-113">This example uses the following XML document: [Sample XML File: Typical Purchase Order in a Namespace](./sample-xml-file-typical-purchase-order-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -56,7 +57,7 @@ foreach (XElement el in address)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="b21df-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="b21df-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="e2dfd-114">Bu kod şu çıkışı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="e2dfd-114">This code produces the following output:</span></span>  
   
 ```xml  
 <aw:Address aw:Type="Billing" xmlns:aw="http://www.adventure-works.com">  
@@ -69,9 +70,9 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b21df-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b21df-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2dfd-115">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e2dfd-115">See also</span></span>
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [<span data-ttu-id="b21df-114">Standart Sorgu Operatörlerine Genel Bakış (C#)</span><span class="sxs-lookup"><span data-stu-id="b21df-114">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
-- [<span data-ttu-id="b21df-115">Projeksiyon İşlemleri (C#)</span><span class="sxs-lookup"><span data-stu-id="b21df-115">Projection Operations (C#)</span></span>](./projection-operations.md)
+- [<span data-ttu-id="e2dfd-116">Standart sorgu Işleçlerine genel bakış (C#)</span><span class="sxs-lookup"><span data-stu-id="e2dfd-116">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
+- [<span data-ttu-id="e2dfd-117">Projeksiyon Işlemleri (C#)</span><span class="sxs-lookup"><span data-stu-id="e2dfd-117">Projection Operations (C#)</span></span>](./projection-operations.md)

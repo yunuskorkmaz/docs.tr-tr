@@ -1,23 +1,24 @@
 ---
-title: Birden çok tuşdaki öğeleri sıralama (C#)
+title: Birden çok anahtar üzerinde öğeleri sıralama (C#)
+description: Birden çok anahtar üzerinde öğeleri sıralamayı öğrenin. Örnek XML belgeleri kullanan öğeleri sıralama örneklerine bakın.
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347378"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301508"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="60a56-102">Birden çok tuşdaki öğeleri sıralama (C#)</span><span class="sxs-lookup"><span data-stu-id="60a56-102">How to sort elements on multiple keys (C#)</span></span>
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="02098-104">Birden çok anahtar üzerinde öğeleri sıralama (C#)</span><span class="sxs-lookup"><span data-stu-id="02098-104">How to sort elements on multiple keys (C#)</span></span>
 
-<span data-ttu-id="60a56-103">Bu konu, birden çok anahtarda nasıl sıralanır gösteriş gösterir.</span><span class="sxs-lookup"><span data-stu-id="60a56-103">This topic shows how to sort on multiple keys.</span></span>
+<span data-ttu-id="02098-105">Bu konu başlığı altında, birden çok anahtar üzerinde nasıl sıralama yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="02098-105">This topic shows how to sort on multiple keys.</span></span>
 
-## <a name="example"></a><span data-ttu-id="60a56-104">Örnek</span><span class="sxs-lookup"><span data-stu-id="60a56-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="02098-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="02098-106">Example</span></span>
 
-<span data-ttu-id="60a56-105">Bu örnekte, sonuçlar önce sevkiyat posta kodu, ardından sipariş tarihi tarafından sıralanır.</span><span class="sxs-lookup"><span data-stu-id="60a56-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
+<span data-ttu-id="02098-107">Bu örnekte, sonuçlar önce sevkiyat posta kodu tarafından, ardından sipariş tarihine göre sıralanır.</span><span class="sxs-lookup"><span data-stu-id="02098-107">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
 
-<span data-ttu-id="60a56-106">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="60a56-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
+<span data-ttu-id="02098-108">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="02098-108">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -36,7 +37,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="60a56-107">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="60a56-107">This code produces the following output:</span></span>
+<span data-ttu-id="02098-109">Bu kod şu çıkışı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="02098-109">This code produces the following output:</span></span>
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -63,11 +64,11 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```
 
-## <a name="example"></a><span data-ttu-id="60a56-108">Örnek</span><span class="sxs-lookup"><span data-stu-id="60a56-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="02098-110">Örnek</span><span class="sxs-lookup"><span data-stu-id="02098-110">Example</span></span>
 
-<span data-ttu-id="60a56-109">Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="60a56-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="60a56-110">Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="60a56-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
+<span data-ttu-id="02098-111">Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir.</span><span class="sxs-lookup"><span data-stu-id="02098-111">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="02098-112">Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="02098-112">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
 
-<span data-ttu-id="60a56-111">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında müşteriler ve Siparişler.](./sample-xml-file-customers-and-orders-in-a-namespace.md)</span><span class="sxs-lookup"><span data-stu-id="60a56-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
+<span data-ttu-id="02098-113">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanındaki müşteriler ve siparişler](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="02098-113">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
@@ -88,7 +89,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="60a56-112">Bu kod aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="60a56-112">This code produces the following output:</span></span>
+<span data-ttu-id="02098-114">Bu kod şu çıkışı oluşturur:</span><span class="sxs-lookup"><span data-stu-id="02098-114">This code produces the following output:</span></span>
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997

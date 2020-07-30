@@ -1,23 +1,24 @@
 ---
-title: Bir alt öğe (XPath-LINQ - XML) (C#) nasıl bulabilirim?
+title: Alt öğe bulma (XPath-LINQ to XML) (C#)
+description: XPath alt öğe eksenini LINQ to XML element yöntemiyle karşılaştırarak bir alt öğe bulmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
-ms.openlocfilehash: 37ce6c9d91d4edf2576ccddabd1d7f14a96b0a33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d1a4e636e3443512020129a76cc2de7bb3f244
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141244"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301742"
 ---
-# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="451f2-102">Bir alt öğe (XPath-LINQ - XML) (C#) nasıl bulabilirim?</span><span class="sxs-lookup"><span data-stu-id="451f2-102">How to find a child element (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="451f2-103">Bu konu, XPath alt öğesi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> eksenini yöntemle karşılaştırır.</span><span class="sxs-lookup"><span data-stu-id="451f2-103">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
+# <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a><span data-ttu-id="940d0-103">Alt öğe bulma (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="940d0-103">How to find a child element (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="940d0-104">Bu konu, XPath alt öğe eksenini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> yöntemiyle karşılaştırır.</span><span class="sxs-lookup"><span data-stu-id="940d0-104">This topic compares the XPath child element axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> method.</span></span>  
   
- <span data-ttu-id="451f2-104">XPath ifadesi `DeliveryNotes`.</span><span class="sxs-lookup"><span data-stu-id="451f2-104">The XPath expression is `DeliveryNotes`.</span></span>  
+ <span data-ttu-id="940d0-105">XPath ifadesi `DeliveryNotes` .</span><span class="sxs-lookup"><span data-stu-id="940d0-105">The XPath expression is `DeliveryNotes`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="451f2-105">Örnek</span><span class="sxs-lookup"><span data-stu-id="451f2-105">Example</span></span>  
- <span data-ttu-id="451f2-106">Bu örnekte alt `DeliveryNotes`öğeyi bulur.</span><span class="sxs-lookup"><span data-stu-id="451f2-106">This example finds the child element `DeliveryNotes`.</span></span>  
+## <a name="example"></a><span data-ttu-id="940d0-106">Örnek</span><span class="sxs-lookup"><span data-stu-id="940d0-106">Example</span></span>  
+ <span data-ttu-id="940d0-107">Bu örnek, alt öğesini bulur `DeliveryNotes` .</span><span class="sxs-lookup"><span data-stu-id="940d0-107">This example finds the child element `DeliveryNotes`.</span></span>  
   
- <span data-ttu-id="451f2-107">Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="451f2-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="940d0-108">Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="940d0-108">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -38,7 +39,7 @@ else
 Console.WriteLine(el1);  
 ```  
   
- <span data-ttu-id="451f2-108">Bu örnek, aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="451f2-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="940d0-109">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="940d0-109">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  
