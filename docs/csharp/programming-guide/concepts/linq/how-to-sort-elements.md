@@ -1,19 +1,20 @@
 ---
-title: Öğeleri sıralamak için nasıl (C#)
+title: Öğeleri sıralama (C#)
+description: Öğeleri sıralamayı öğrenin. Sonuçları bir XML belgesinde sıralayan sorgu yazma örneklerine bakın.
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: 7fad9fcb43905072c88a5704c56672917bfc377c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 669d9cf583e6ab70c93be39ad271eaf104f88718
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347373"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301443"
 ---
-# <a name="how-to-sort-elements-c"></a>Öğeleri sıralamak için nasıl (C#)
-Bu örnek, sonuçlarını sıralayan bir sorgunun nasıl yazılabildiğini gösterir.  
+# <a name="how-to-sort-elements-c"></a>Öğeleri sıralama (C#)
+Bu örnek, sonuçlarını sıralayan bir sorgunun nasıl yazılacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnekte aşağıdaki XML belgesi kullanılır: [Örnek XML Dosyası: Sayısal Veriler (LINQ-XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -26,7 +27,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 0.99  
@@ -39,9 +40,9 @@ foreach (decimal el in prices)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnekte aşağıdaki XML belgesi kullanılır: [Örnek XML Dosyası: Ad alanında Sayısal Veriler.](./sample-xml-file-numerical-data-in-a-namespace.md)  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında sayısal veri](./sample-xml-file-numerical-data-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -55,7 +56,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 0.99  
@@ -69,4 +70,4 @@ foreach (decimal el in prices)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Verileri Sıralama (C#)](./sorting-data.md)
+- [Verileri sıralama (C#)](./sorting-data.md)

@@ -1,21 +1,22 @@
 ---
-title: Bağlam (C#) tabanlı öğeleri bulan bir sorgu yazma
+title: Bağlam temelinde öğeleri bulan bir sorgu yazma (C#)
+description: Bağlam temelinde öğeleri bulan bir sorgu yazmayı öğrenin. Kod örneklerine bakın ve ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64f09a41c2c1d01b0be8f776461f9be9df9ecb5f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75348375"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303198"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Bağlam (C#) tabanlı öğeleri bulan bir sorgu yazma
-Bazen öğeleri bağlamlarına göre seçen bir sorgu yazmanız gerekebilir. Önceki veya sonraki kardeş öğeleritemel olarak filtrelemek isteyebilirsiniz. Alt veya ata öğelerine göre filtrelemek isteyebilirsiniz.  
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Bağlam temelinde öğeleri bulan bir sorgu yazma (C#)
+Bazen, bağlamlarına göre öğeleri seçen bir sorgu yazmanız gerekebilir. Önceki veya sonraki eşdüzey öğelere göre filtrelemek isteyebilirsiniz. Alt veya üst öğe öğelerine göre filtrelemek isteyebilirsiniz.  
   
- Bunu bir sorgu yazarak ve `where` yan tümcedeki sorgu sonuçlarını kullanarak yapabilirsiniz. Önce null'a karşı test etmeniz ve sonra değeri test etmeniz gerekiyorsa, sorguyu bir `let` yan `where` tümcede yapmak ve ardından yan tümcedeki sonuçları kullanmak daha uygundur.  
+ Bunu, bir sorgu yazarak ve yan tümcesindeki sorgunun sonuçlarını kullanarak yapabilirsiniz `where` . İlk olarak null ile test etmeniz ve sonra değeri test etmeniz gerekiyorsa, bir yan tümce içinde sorgu yapmak daha uygundur `let` ve sonra sonuçları `where` yan tümce içinde kullanın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, hemen `p` bir `ul` öğe tarafından izlenen tüm öğeleri seçer.  
+ Aşağıdaki örnek, `p` hemen arkasından bir öğesi olan tüm öğeleri seçer `ul` .  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root>  
@@ -47,7 +48,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 id = 1  
@@ -56,7 +57,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -90,7 +91,7 @@ foreach (XElement e in items)
     Console.WriteLine("id = {0}", (string)e.Attribute("id"));  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 id = 1  

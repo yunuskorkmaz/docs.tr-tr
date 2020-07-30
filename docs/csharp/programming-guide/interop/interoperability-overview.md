@@ -1,5 +1,6 @@
 ---
 title: Birlikte çalışabilirlik genel bakış-C# Programlama Kılavuzu
+description: Platform çağırma, C++ birlikte çalışma, COM bileşenlerini C# ' a gösterme ve C# ' yi COM olarak gösterme dahil olmak üzere C# ve yönetilmeyen kod arasında birlikte çalışabilirlik hakkında bilgi edinin
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 6546a379d6d851aafbced0931221dc19ca022a72
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6b1dec96dfb3fc354c614983ed1dafab66c5b007
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241740"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302964"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Birlikte Çalışabilirliğe Genel Bakış (C# Programlama Kılavuzu)
 Konu C# yönetilen kodu ve yönetilmeyen kod arasında birlikte çalışabilirliği etkinleştirme yöntemlerini açıklar.  
@@ -32,11 +33,11 @@ Daha fazla bilgi için bkz. [YÖNETILMEYEN DLL işlevlerini](../../../framework/
 ## <a name="exposing-com-components-to-c"></a>COM bileşenlerini C 'ye gösterme\#
  Bir C# projesinden bir COM bileşeni kullanabilirsiniz. Genel adımlar şu şekildedir:  
   
-1. Kullanmak için bir COM bileşeni bulun ve kaydedin. Bir COM DLL kaydını kaydetmek veya kaydını silmek için Regsvr32. exe ' yi kullanın.  
+1. Kullanmak için bir COM bileşeni bulun ve kaydedin. COM DLL kaydını kaydetmek veya kaydetmek için regsvr32.exe kullanın.  
   
 2. Projeye COM bileşenine veya tür kitaplığına başvuru ekleyin.  
   
-     Başvuruyu eklediğinizde, Visual Studio bir .NET birlikte çalışma derlemesini çıkarmak için giriş olarak bir tür kitaplığı alan [Tlbimp. exe (tür kitaplığı alma)](../../../framework/tools/tlbimp-exe-type-library-importer.md)kullanır. Ayrıca, çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı derleme, tür kitaplığındaki COM sınıflarını ve arabirimlerini sarmalayan yönetilen sınıfları ve arabirimleri içerir. Visual Studio, oluşturulan derleme için projeye bir başvuru ekler.  
+     Başvuruyu eklediğinizde, Visual Studio bir .NET birlikte çalışma derlemesini çıkarmak için giriş olarak bir tür kitaplığı alan [Tlbimp.exe (tür kitaplığı Içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)kullanır. Ayrıca, çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı derleme, tür kitaplığındaki COM sınıflarını ve arabirimlerini sarmalayan yönetilen sınıfları ve arabirimleri içerir. Visual Studio, oluşturulan derleme için projeye bir başvuru ekler.  
   
 3. RCW 'da tanımlanan bir sınıfın örneğini oluşturun. Bu, sırasıyla COM nesnesinin bir örneğini oluşturur.  
   
@@ -53,7 +54,7 @@ Daha fazla bilgi için bkz. [YÖNETILMEYEN DLL işlevlerini](../../../framework/
   
 2. Bir COM tür kitaplığı oluşturun ve bunu COM kullanımı için kaydedin.  
   
-     Visual C# proje özelliklerini değiştirerek, COM birlikte çalışma için C# derlemesini otomatik olarak kaydedebilirsiniz. Visual Studio, bir tür kitaplığı oluşturmak için yönetilen bir derlemeyi giriş olarak alan komut satırı anahtarını kullanarak [Regasm. exe ' yi (derleme kayıt aracı)](../../../framework/tools/regasm-exe-assembly-registration-tool.md)kullanır `/tlb` . Bu tür kitaplığı `public` derlemedeki türleri açıklar ve com istemcilerinin yönetilen sınıflar oluşturabilmesi için kayıt defteri girişleri ekler.  
+     Visual C# proje özelliklerini değiştirerek, COM birlikte çalışma için C# derlemesini otomatik olarak kaydedebilirsiniz. Visual Studio, [Regasm.exe (Assembly Registration Tool)](../../../framework/tools/regasm-exe-assembly-registration-tool.md) `/tlb` bir tür kitaplığı oluşturmak için yönetilen bir derlemeyi giriş olarak alan komut satırı anahtarını kullanarakRegasm.exe (derleme kayıt aracı) kullanır. Bu tür kitaplığı `public` derlemedeki türleri açıklar ve com istemcilerinin yönetilen sınıflar oluşturabilmesi için kayıt defteri girişleri ekler.  
   
  Daha fazla bilgi için bkz. COM ve [örnek com sınıfına](./example-com-class.md) [.NET Framework bileşenleri gösterme](../../../framework/interop/exposing-dotnet-components-to-com.md) .  
   

@@ -1,13 +1,14 @@
 ---
 title: Nesne odaklı programlama (C#)
+description: C#; soyutlama, kapsülleme, devralma ve çok biçimlilik dahil olmak üzere nesne odaklı programlama için tam destek sağlar.
 ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 83140a9dbd16f60f04f50ba18c71099cdd862f15
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 0c5495aefad73a2916ad6e2bd2bf3701d0868f24
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226640"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302821"
 ---
 # <a name="object-oriented-programming-c"></a>Nesne odaklı programlama (C#)
 
@@ -90,7 +91,7 @@ class SampleClass
 
 Çoğu özelliğin, özellik değerini ayarlamak ve almak için yöntemleri ya da yordamları vardır. Ancak, bunları değiştirilmesini veya okumayı kısıtlamak için salt okunurdur veya salt yazılır özellikler oluşturabilirsiniz. C# ' de, `get` veya `set` özellik yöntemini atlayabilirsiniz. Ancak otomatik uygulanan özellikler salt yazılır olamaz. Salt okuma otomatik uygulanmış özellikler, kapsayan sınıfın oluşturucuları içinde ayarlanabilir.
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 
 - [Al](../../language-reference/keywords/get.md)
 - [kurmak](../../language-reference/keywords/set.md)
@@ -122,7 +123,7 @@ public int SampleMethod(int sampleParam) { }
 
 Çoğu durumda, bir sınıf tanımı içinde bir yöntemi bildirirsiniz. Ancak C#, sınıfın gerçek tanımının dışında mevcut bir sınıfa Yöntemler eklemenize olanak tanıyan *genişletme yöntemlerini* de destekler.
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 
 - [Yöntemler](../classes-and-structs/methods.md)
 - [Uzantı Metotları](../classes-and-structs/extension-methods.md)
@@ -224,7 +225,7 @@ var sampleObject = new SampleClass
 };
 ```
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 
 - [New Işleci](../../language-reference/operators/new-operator.md)
 - [Nesne ve Koleksiyon Başlatıcıları](../classes-and-structs/object-and-collection-initializers.md)
@@ -296,7 +297,7 @@ Bir sınıfın yalnızca temel sınıf olarak kullanılabileceğini ve örneklen
 public abstract class B { }
 ```
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 
 - [sealed](../../language-reference/keywords/sealed.md)
 - [Soyut](../../language-reference/keywords/abstract.md)
@@ -361,7 +362,7 @@ var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-Daha fazla bilgi için bkz:
+Daha fazla bilgi için bkz.
 
 - [.NET içindeki Genel Türler](../../../standard/generics/index.md)
 - [Genel türler-C# Programlama Kılavuzu](../generics/index.md)

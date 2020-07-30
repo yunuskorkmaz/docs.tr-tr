@@ -1,23 +1,24 @@
 ---
-title: Ad alanlarında XML'de sorgu yazma (C#)
+title: Ad alanlarında XML üzerinde sorgu yazma (C#)
+description: Ad alanlarında XML üzerinde sorgu yazmayı öğrenin. Bu sorgular için, doğru ad alanına sahip XName nesnelerini kullanmanız gerekir.
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64eb9df1cde3b434a11e2e5410aab96993dc0fa1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75337369"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303185"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Ad alanlarında XML'de sorgu yazma (C#)
-XML'de ad alanında bir sorgu yazmak için <xref:System.Xml.Linq.XName> doğru ad alanına sahip nesneleri kullanmanız gerekir.  
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Ad alanlarında XML üzerinde sorgu yazma (C#)
+Bir ad alanında olan XML üzerinde bir sorgu yazmak için, <xref:System.Xml.Linq.XName> doğru ad alanına sahip nesneleri kullanmanız gerekir.  
   
- C# için en yaygın yaklaşım, URI <xref:System.Xml.Linq.XNamespace> içeren bir dize kullanarak bir başlangıç yapmak, ardından ad alanını yerel adla birleştirmek için ek işleci aşırı yüklenmesini kullanmaktır.  
+ C# için en yaygın yaklaşım, <xref:System.Xml.Linq.XNamespace> URI 'yi içeren bir dize kullanarak başlatmak, ardından ad alanını yerel adla birleştirmek için ek işleç aşırı yüklemesi kullanmaktır.  
   
- Bu konudaki ilk örnek kümesi, varsayılan ad alanında bir XML ağacının nasıl oluşturultur olduğunu gösterir. İkinci küme, bir ad alanında önek içeren bir XML ağacının nasıl oluşturultur olduğunu gösterir.  
+ Bu konudaki ilk örnek kümesi, varsayılan bir ad alanında bir XML ağacının nasıl oluşturulacağını gösterir. İkinci küme, öneki olan bir ad alanında bir XML ağacının nasıl oluşturulacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte varsayılan ad alanında bir XML ağacı oluşturulur. Daha sonra bir öğe koleksiyonu alır.  
+ Aşağıdaki örnek, varsayılan bir ad alanında bulunan bir XML ağacı oluşturur. Daha sonra bir öğe koleksiyonu alır.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -37,7 +38,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 1  
@@ -46,9 +47,9 @@ foreach (XElement el in c1)
 ```  
   
 ## <a name="example"></a>Örnek  
- C#'da, önklü bir ad alanı kullanan bir XML ağacında veya varsayılan ad alanına sahip bir XML ağacında sorgu lar yazıp yazmadığınıza bakılmaksızın sorguları aynı şekilde yazarsınız.  
+ C# ' ta, ön ek içeren bir ad alanı kullanan bir XML ağacına veya varsayılan bir ad alanı olan bir XML ağacına sorgu yazarken aynı şekilde sorgular yazarsınız.  
   
- Aşağıdaki örnek, önek içeren bir ad alanında olan bir XML ağacı oluşturur. Daha sonra bir öğe koleksiyonu alır.  
+ Aşağıdaki örnek, öneki olan bir ad alanında olan bir XML ağacı oluşturur. Daha sonra bir öğe koleksiyonu alır.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -68,7 +69,7 @@ foreach (XElement el in c1)
     Console.WriteLine((int)el);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 1  
@@ -78,4 +79,4 @@ foreach (XElement el in c1)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İsim Alanlarına Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md)
+- [Ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

@@ -1,19 +1,20 @@
 ---
-title: XmlSerializer (C#) kullanarak serileştirme
+title: XmlSerializer kullanarak serileştirme (C#)
+description: XmlSerializer kullanarak nesneleri serileştirmek hakkında bilgi edinin. Nesneleri oluşturan, bunları bir bellek akışına serileştiren ve sonra bunları seri hale getirilen bir örneğe bakın.
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29c8c7170af8a24292892862dc89cfe101d24f15
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347391"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301521"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>XmlSerializer (C#) kullanarak serileştirme
-Bu konu, 'yi kullanarak <xref:System.Xml.Serialization.XmlSerializer>serihale ve deserialize eden bir örnek gösterir.  
+# <a name="how-to-serialize-using-xmlserializer-c"></a>XmlSerializer kullanarak serileştirme (C#)
+Bu konuda, kullanarak seri hale getirilen ve seri hale getirilen bir örnek gösterilmektedir <xref:System.Xml.Serialization.XmlSerializer> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, nesneleri içeren <xref:System.Xml.Linq.XElement> bir dizi nesne oluşturur. Daha sonra onları bir bellek akışına serileştirir ve sonra bellek akışından deserialize eder.  
+ Aşağıdaki örnek, nesneleri içeren bir dizi nesne oluşturur <xref:System.Xml.Linq.XElement> . Daha sonra bunları bir bellek akışına serileştirir ve sonra bellek akışından serileştirir.  
   
 ```csharp  
 using System;  
@@ -78,7 +79,7 @@ class XLinqTest
 }  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Testing for type: XElementNullContainer  
