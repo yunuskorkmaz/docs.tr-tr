@@ -1,15 +1,16 @@
 ---
 title: .NET yönergeleriyle uyumlu olayları yayımlama-C# Programlama Kılavuzu
+description: .NET yönergelerine uygun olan olayları yayımlamayı öğrenin. .NET Framework sınıf kitaplığındaki tüm olaylar EventHandler temsilcisini temel alır.
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1b802e236026911b55bafcb3f48d487c43bba174
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240752"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302119"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>.NET yönergeleriyle uyumlu olayları yayımlama (C# Programlama Kılavuzu)
 

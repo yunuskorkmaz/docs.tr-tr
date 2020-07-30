@@ -2,12 +2,12 @@
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.date: 04/08/2019
-ms.openlocfilehash: ea57b66d9a2e5cb69fe82e9a4bcf68625af546fd
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251211"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427014"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -74,7 +74,7 @@ Aşağıdaki tabloda, SDK 'nın hangi öğesi ve hangi [genelleştirmeler](https
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | Yok                      |
 | EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | Yok                      |
-| Hiçbiri              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx   |
+| Yok              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx   |
 
 > [!NOTE]
 > **Glob 'Yi hariç tut** , `./bin` `./obj` `$(BaseOutputPath)` sırasıyla ve MSBuild özellikleriyle temsil edilen ve klasörlerini dışlar `$(BaseIntermediateOutputPath)` . Bütün olarak, tüm dışlar tarafından temsil edilir `$(DefaultItemExcludes)` .
@@ -278,7 +278,7 @@ Nuget.org üzerindeki profil adlarıyla eşleşen paket yazarları için noktal�
 
 UI görüntüleme paketinin uzun açıklaması.
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Derleme için uzun bir açıklama. `PackageDescription`Belirtilmezse, bu özellik paketin açıklaması olarak da kullanılır.
 
@@ -342,9 +342,9 @@ Lisans dosyasının paketlenmiş olduğundan emin olmanız gerekir, bu işlem, �
 
 Pakete uygulanabilen lisansın URL 'SI. (_Visual Studio 15.9.4, .NET SDK 2.1.502 ve 2.2.101 'den beri kullanım dışı_)
 
-### <a name="packageiconurl"></a>PackageIconUrl 'Si
+### <a name="packageicon"></a>Packageıcon
 
-Kullanıcı arabirimi görüntüsündeki paketin simgesi olarak kullanılacak, saydam arka planlı bir 64x64 görüntüsünün URL 'SI.
+Paket simgesi olarak kullanılacak paketteki bir görüntünün yolu. [ `icon` Meta veriler](/nuget/reference/nuspec#icon)hakkında daha fazla bilgi edinin. [Packageiconurl,](/nuget/reference/msbuild-targets#packageiconurl) packageıcon kullanımı için kullanım dışıdır.
 
 ### <a name="packagereleasenotes"></a>PackageReleaseNotes
 

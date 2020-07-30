@@ -1,5 +1,5 @@
 ---
-title: bağlamsal anahtar kelime - C# Reference
+title: Bağlamsal anahtar sözcük-C# başvurusu
 ms.date: 03/07/2017
 f1_keywords:
 - when_CSharpKeyword
@@ -7,50 +7,51 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b041ca3a821f45dd63ce3f6bee7a920eb495651
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712838"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427001"
 ---
-# <a name="when-c-reference"></a>ne zaman (C# Reference)
+# <a name="when-c-reference"></a>ne zaman (C# Başvurusu)
 
-`when` Bir filtre koşulunu iki bağlamda belirtmek için bağlamsal anahtar sözcüğü kullanabilirsiniz:
+`when`Aşağıdaki bağlamlarda bir filtre koşulu belirtmek için bağlamsal anahtar sözcüğünü kullanabilirsiniz:
 
-- Bir `catch` [deneyin / yakalamak](try-catch.md) veya denemek / yakalamak [/ nihayet](try-catch-finally.md) blok ifadesinde.
-- Anahtar `case` deyiminin [switch](switch.md) etiketinde.
+- `catch` [Try/catch](try-catch.md) veya [try/catch/finally](try-catch-finally.md) bloğunun bildiriminde.
+- `case`Bir [Switch](switch.md) ifadesinin etiketinde.
+- [ `switch` İfadesi](../operators/switch-expression.md).
 
-## <a name="when-in-a-catch-statement"></a>`when`bir `catch` açıklamada
+## <a name="when-in-a-catch-statement"></a>`when`bir `catch` ifadede
 
-C# 6 ile `when` başlayarak, `catch` belirli bir özel durum yürütmek için işleyici için doğru olması gereken bir koşul belirtmek için bir deyim kullanılabilir. Sözdizimi:
+C# 6 ' dan itibaren, `when` `catch` belirli bir özel durumun yürütülmesi için doğru olması gereken bir koşul belirtmek üzere bir bildirimde kullanılabilir. Sözdizimi şöyledir:
 
 ```csharp
 catch (ExceptionType [e]) when (expr)
 ```
 
-*expr* bir Boolean değerine değerlendiren bir ifadedir. Dönerse, `true`özel durum işleyicisi yürütür; eğer `false`, bu değil.
+Burada *Expr* , Boolean değer değerlendiren bir ifadedir. Döndürürse `true` , özel durum işleyicisi yürütülür; varsa, yapmaz `false` .
 
-Aşağıdaki örnek, `when` özel durum iletisinin metnine <xref:System.Net.Http.HttpRequestException> bağlı olarak işleyicileri koşullu olarak yürütmek için anahtar sözcüğü kullanır.
+Aşağıdaki örnek, `when` <xref:System.Net.Http.HttpRequestException> özel durum iletisinin metnine bağlı olarak işleyicileri koşullu olarak yürütmek için anahtar sözcüğünü kullanır.
 
 [!code-csharp[when-with-catch](~/samples/snippets/csharp/language-reference/keywords/when/catch.cs)]
 
-## <a name="when-in-a-switch-statement"></a>`when`bir `switch` açıklamada
+## <a name="when-in-a-switch-statement"></a>`when`bir `switch` ifadede
 
-C# 7.0 ile `case` başlayarak, etiketlerin artık birbirini dışlayan `case` olması gerekmez `switch` ve bir deyimde etiketlerin görünme sırası hangi anahtar bloğunun yürütüleceğini belirleyebilir. Anahtar `when` kelime, yalnızca filtre koşulu da doğruysa ilişkili durum etiketinin doğru olmasını sağlayan bir filtre koşulu belirtmek için kullanılabilir. Sözdizimi:
+C# 7,0 ' den başlayarak `case` etiketlerin artık birbirini dışlamalı olması gerekmez ve `case` etiketlerin bir bildirimde görünme sırası `switch` hangi anahtar bloğunun çalıştırılacağını tespit edebilir. `when`Anahtar sözcüğü, ilişkili Case etiketinin doğru olmasına neden olan bir filtre koşulunu belirtmek için kullanılabilir ve yalnızca filtre koşulu da geçerlidir. Sözdizimi şöyledir:
 
 ```csharp
 case (expr) when (when-condition):
 ```
 
-*expr* eşleşme ifadesi ile karşılaştırıldığında sabit bir desen veya tür deseni nerede ve *ne zaman koşul* herhangi bir Boolean ifadedir.
+Burada *Expr* , Match ifadesiyle karşılaştırılan sabit bir model veya tür deseninin olduğu *durumlarda-Condition* herhangi bir Boolean ifadedir.
 
-Aşağıdaki `when` örnekte, sıfır lık `Shape` bir alana sahip nesneler için test etmek ve sıfırdan `Shape` büyük bir alana sahip çeşitli nesneleri sınamak için anahtar kelime kullanır.
+Aşağıdaki örnek, `when` `Shape` bir alanı sıfır olan nesneleri test etmek ve `Shape` sıfırdan büyük bir alana sahip çeşitli nesneleri test etmek için anahtar sözcüğünü kullanır.
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [anahtar deyimi](switch.md)
-- [try/catch deyimi](try-catch.md)
-- [try/catch/finally deyimi](try-catch-finally.md)
+- [switch deyimi](switch.md)
+- [Try/Catch ekstresi](try-catch.md)
+- [try/catch/finally ekstresi](try-catch-finally.md)

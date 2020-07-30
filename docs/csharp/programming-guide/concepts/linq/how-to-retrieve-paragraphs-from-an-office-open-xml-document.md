@@ -1,27 +1,28 @@
 ---
-title: Office Open XML belgesinden paragraflar nasıl alınır (C#)
+title: Office Open XML belgesinden paragrafları alma (C#)
+description: Office Open XML belgesinden bir paragraf koleksiyonunu almayı öğrenin. ' Stringbirleştir ' genişletme yöntemini kullanan bir örneğe bakın.
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64678b39d9d0bfb23574a09998248c8e33ec01d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347454"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301599"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Office Open XML belgesinden paragraflar nasıl alınır (C#)
-Bu konu, Office Open XML belgesini açan ve belgedeki tüm paragrafların bir koleksiyonunu alan bir örnek sunar.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Office Open XML belgesinden paragrafları alma (C#)
+Bu konuda, bir Office Open XML belgesi açan ve belgedeki tüm paragrafların bir koleksiyonunu alan bir örnek sunulmaktadır.  
   
- Office Open XML hakkında daha fazla bilgi için [Bkz. XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com.](http://ericwhite.com/)  
+ Office Open XML hakkında daha fazla bilgi için bkz. [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) ve [www.ericwhite.com](http://ericwhite.com/).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir Office Open XML paketi açar, belgeyi ve stil parçalarını bulmak için Open XML paketi içindeki ilişkileri kullanır. Daha sonra, paragraf <xref:System.Xml.Linq.XElement> düğümü, her paragrafın stil adı ve her paragrafın metnini içeren anonim bir tür bir koleksiyon yansıtarak belgeyi sorgular.  
+ Bu örnek, bir Office Open XML paketi açar, belgeyi ve stil parçalarını bulmak için Open XML paketi içindeki ilişkileri kullanır. Ardından, paragraf <xref:System.Xml.Linq.XElement> düğümünü, her bir paragrafın stil adını ve her bir paragrafın metnini içeren anonim bir türün koleksiyonunu yansıtırken belgeyi sorgular.  
   
- Örnek, örnekte de `StringConcatenate`sağlanan , adlı bir uzantı yöntemi kullanır.  
+ Örnek, örneğinde de verilen adlı bir genişletme yöntemi kullanır `StringConcatenate` .  
   
- Bu örneğin nasıl çalıştığını açıklayan ayrıntılı bir öğretici için [bkz.](./introduction-to-pure-functional-transformations.md)  
+ Bu örneğin nasıl çalıştığını açıklayan ayrıntılı bir öğretici için bkz. [XML 'In saf Işlevsel dönüştürmeleri (C#)](./introduction-to-pure-functional-transformations.md).  
   
- Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinde bulunan sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +164,7 @@ class Program
 }  
 ```  
   
- [Kaynak Office Open XML Belgesi (C#) oluşturmada](./creating-the-source-office-open-xml-document.md)açıklanan örnek Open XML belgesiyle çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:  
+ [Kaynak Office Open XML belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bölümünde açıklanan örnek Open XML belgesiyle birlikte çalıştırıldığında, bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  

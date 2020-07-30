@@ -1,21 +1,22 @@
 ---
-title: XDocument ve XElement Sorgulama (C#) Sorgulama
+title: Bir XDocument sorgulama ve XElement sorgulama (C#)
+description: Bir XDocument sorgulama ve bir XElement sorgulama arasındaki farklar hakkında bilgi edinin. Bu farklılıkları gösteren kod örneklerini gözden geçirin.
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c81768f06148308a639f96f4041e464b24edd33
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253134"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300325"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument ve XElement Sorgulama (C#) Sorgulama
-Bir belgeyi <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>yüklediğinizde, 'den yüklediğinizden biraz daha farklı sorgular <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>yazmanız gerektiğini fark edeceksiniz.  
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Bir XDocument sorgulama ve XElement sorgulama (C#)
+Aracılığıyla bir belge yüklediğinizde <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> , ile yükleme yaparken sorguları biraz farklı yazacağınız fark edeceksiniz <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> .  
   
-## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load ve XElement.Load Karşılaştırması  
- Bir XML belgesini bir <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>via'ya yüklediğinizde, <xref:System.Xml.Linq.XElement> XML ağacının kökünde yüklenen belgenin kök öğesini içerir. Ancak, aynı XML belgesini bir <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>via'ya yüklediğinizde, <xref:System.Xml.Linq.XDocument> ağacın kökü bir düğümdür ve yüklenen belgenin <xref:System.Xml.Linq.XElement> kök öğesi <xref:System.Xml.Linq.XDocument>, 'nin alt düğümüne izin verilen öğedir. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Eksenler kök düğümüne göre çalışır.  
+## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument. Load ve XElement. Load karşılaştırması  
+ Bir XML belgesini <xref:System.Xml.Linq.XElement> aracılığıyla yüklediğinizde <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> , <xref:System.Xml.Linq.XElement> XML ağacının kök öğesi yüklenen belgenin kök öğesini içerir. Ancak, bir ile aynı XML belgesini yüklediğinizde <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> , ağacın kökü bir <xref:System.Xml.Linq.XDocument> düğümdür ve yüklenen belgenin kök öğesi, öğesinin izin verilen alt <xref:System.Xml.Linq.XElement> düğümüdür <xref:System.Xml.Linq.XDocument> . [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Eksenler kök düğüme göre çalışır.  
   
- Bu ilk örnek kullanarak <xref:System.Xml.Linq.XElement.Load%2A>bir XML ağacı yükler. Daha sonra ağacın kök alt öğeleri için sorgular.  
+ Bu ilk örnek kullanarak bir XML ağacı yükler <xref:System.Xml.Linq.XElement.Load%2A> . Daha sonra ağacın kök öğelerinin alt öğelerini sorgular.  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -45,7 +46,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- Aşağıdaki örnek, XML ağacının bir <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement>. yerine yüklenmesi dışında, yukarıdakiyle aynıdır.  
+ Aşağıdaki örnek, XML ağacının bir yerine bir olarak yüklendiği özel durum ile, yukarıdaki bir ile aynıdır <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement> .  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -65,7 +66,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Querying tree loaded with XDocument.Load  
@@ -77,9 +78,9 @@ Querying tree loaded with XDocument.Load
 </Root>  
 ```  
   
- Aynı sorgunun üç alt `Root` düğüm yerine bir düğümü döndürdene dikkat edin.  
+ Aynı sorgunun `Root` üç alt düğüm yerine bir düğümü döndürtiğine dikkat edin.  
   
- Bununla başa çıkmak için bir <xref:System.Xml.Linq.XDocument.Root%2A> yaklaşım aşağıdaki gibi, eksenler yöntemleri erişmeden önce özelliği kullanmaktır:  
+ Bu ile ilgilenmeye yönelik bir yaklaşım <xref:System.Xml.Linq.XDocument.Root%2A> , aşağıdaki gibi, eksen yöntemlerine erişmeden önce özelliğini kullanmaktır:  
   
 ```csharp  
 // Create a simple document and write it to a file  
@@ -99,7 +100,7 @@ foreach (XElement e in childList)
     Console.WriteLine(e);  
 ```  
   
- Bu sorgu şimdi ağaçta köklü sorgu olarak aynı <xref:System.Xml.Linq.XElement>şekilde gerçekleştirir. Örnek aşağıdaki çıktıyı üretir:  
+ Bu sorgu artık, içinde kök ağaçtaki sorgu ile aynı şekilde gerçekleştirilir <xref:System.Xml.Linq.XElement> . Örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Querying tree loaded with XDocument.Load  

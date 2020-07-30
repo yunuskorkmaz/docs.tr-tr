@@ -1,15 +1,16 @@
 ---
 title: İşaretçi türleri-C# Programlama Kılavuzu
+description: İşaretçi türleri hakkında bilgi edinin. Farklı işaretçiler, kod örnekleri ve diğer kullanılabilir kaynakları görüntüleme örneklerine bakın.
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 492b37460c05ffbc82e020facb354be22706f8d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9c62a31f9a4a090fe56fb10ac45fe2f93f1b036e
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396265"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87382041"
 ---
 # <a name="pointer-types-c-programming-guide"></a>İşaretçi türleri (C# Programlama Kılavuzu)
 
@@ -24,7 +25,7 @@ void* identifier; //allowed but not recommended
 
 İşaretçi türleri [nesneden](../../language-reference/builtin-types/reference-types.md) aktarılmaz ve işaretçi türleri ve arasında dönüştürme yok `object` . Ayrıca, kutulama ve kutudan çıkarma işaretçileri desteklemez. Ancak, farklı işaretçi türleri ve işaretçi türleri ve tamsayı türleri arasında dönüştürme yapabilirsiniz.
 
-Aynı bildirimde birden çok işaretçi bildirdiğinizde, yıldız işareti (*) yalnızca altı çizili türle birlikte yazılır; her bir işaretçi adı için önek olarak kullanılmaz. Örnek:
+Aynı bildirimde birden çok işaretçi bildirdiğinizde, yıldız işareti (*) yalnızca altı çizili türle birlikte yazılır; her bir işaretçi adı için önek olarak kullanılmaz. Örneğin:
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -63,7 +64,7 @@ Yöntemler arasında işaretçiler geçirmek tanımsız davranışlara neden ola
 
 Aşağıdaki tabloda, güvenli olmayan bir bağlamda işaretçiler üzerinde işlem yapabilecek işleçler ve deyimler listelenmektedir:
 
-|İşleç/Deyim|Kullanım|
+|İşleç/Deyim|Kullanın|
 |-------------------------|---------|
 |`*`|İşaretçi yöneltmesi gerçekleştirir.|
 |`->`|Bir yapının bir üyesine bir işaretçi yoluyla erişir.|
@@ -84,7 +85,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Güvenli Olmayan Kod ve İşaretçiler](index.md)
+- [Güvenli olmayan kod ve Işaretçiler](index.md)
 - [İşaretçi dönüştürmeleri](pointer-conversions.md)
 - [Başvuru türleri](../../language-reference/keywords/reference-types.md)
 - [Değer türleri](../../language-reference/builtin-types/value-types.md)

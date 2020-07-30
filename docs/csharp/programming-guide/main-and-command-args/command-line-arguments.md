@@ -1,15 +1,16 @@
 ---
 title: Komut satırı bağımsız değişkenleri-C# Programlama Kılavuzu
+description: Komut satırı bağımsız değişkenleri hakkında bilgi edinin. Konsol uygulamasında komut satırı bağımsız değişkenlerini kullanan bir örneğe bakın.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: c203716d9bb8298c934a999a496793c294949ddb
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 35ff0425d3f09cf4ad116cf688b943cef3ef02e3
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007760"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381924"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Komut Satırı Bağımsız Değişkenleri (C# Programlama Kılavuzu)
 
@@ -65,7 +66,7 @@ Uygulamayı bir komut isteminden derlemek ve çalıştırmak için aşağıdaki 
   
      `csc Factorial.cs`  
   
-     Uygulamanızda hiçbir derleme hatası yoksa, *çarpınımı. exe* adlı bir yürütülebilir dosya oluşturulur.
+     Uygulamanızda hiçbir derleme hatası yoksa, *Factorial.exe* adlı yürütülebilir bir dosya oluşturulur.
   
 4. 3 ' ün çarpımını hesaplamak için aşağıdaki komutu girin:
   

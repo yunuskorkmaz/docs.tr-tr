@@ -1,25 +1,26 @@
 ---
-title: Bir öznitelik te filtreleme (XPath-LINQ - XML) (C#)
+title: Bir özniteliğe filtre uygulama (XPath-LINQ to XML) (C#)
+description: Alt öğeleri XPath-LINQ to XML için belirtilen bir ad ve öznitelik değeriyle nasıl filtreleyeceğinizi öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: ab2cd439f4dd1454de4fa565658ef5dac14b8c22
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 80c43b8485314c6a711b574b5d6c23b56533833d
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141281"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302899"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Bir öznitelik te filtreleme (XPath-LINQ - XML) (C#)
-Bu konu, belirli bir ada sahip soyundan gelen öğelerin nasıl alınıldığını ve belirli bir değere sahip bir öznitelik ile nasıl alınılsüreceğini gösterir.  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>Bir özniteliğe filtre uygulama (XPath-LINQ to XML) (C#)
+Bu konu, belirtilen bir ada sahip ve belirtilen değere sahip bir öznitelik ile alt öğelerin nasıl alınacağını gösterir.  
   
  XPath ifadesi:  
   
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, "Sevkiyat" değeri `Address`ne kadar `Type` öznitelik taşıyan tüm soyundan gelen öğeleri bulur.  
+ Bu örnek, adı olan tüm alt öğeleri `Address` ve `Type` "Shipping" değeri olan bir özniteliği bulur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -42,7 +43,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

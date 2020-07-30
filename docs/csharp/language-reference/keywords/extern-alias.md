@@ -1,5 +1,5 @@
 ---
-title: extern takma adı - C# Başvurusu
+title: extern diğer adı-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - alias_CSharpKeyword
@@ -8,42 +8,64 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 891e56b064f8a327abe28293223a85b9d95e8fd3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713541"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301820"
 ---
 # <a name="extern-alias-c-reference"></a>extern alias (C# Başvurusu)
-Aynı tam nitelikli tür adlarına sahip derlemelerin iki sürümüne başvurmanız gerekebilir. Örneğin, aynı uygulamada bir derlemenin iki veya daha fazla sürümü kullanmanız gerekebilir. Dış derleme takma adı kullanılarak, her derlemedeki ad boşlukları, diğer adla adlandırılan kök düzeyindead boşluklarıiçinde paketlenebilir ve bu da aynı dosyada kullanılmasını sağlar.  
+Aynı tam tür adlarına sahip derlemelerin iki sürümüne başvurmanız gerekebilir. Örneğin, bir derlemenin iki veya daha fazla sürümünü aynı uygulamada kullanmanız gerekebilir. Bir dış derleme diğer adı kullanarak, her derlemeden ad alanları, diğer ad tarafından adlandırılan ve aynı dosyada kullanılmasına olanak sağlayan kök düzeyi ad alanları içinde sarmalanabilir.  
   
 > [!NOTE]
-> [Extern](./extern.md) anahtar sözcüğü, yönetilmeyen kodla yazılmış bir yöntem bildiren bir yöntem değiştirici olarak da kullanılır.  
+> [Extern](./extern.md) anahtar sözcüğü, yönetilmeyen kodda yazılmış bir yöntemi bildiren bir yöntem değiştiricisi olarak da kullanılır.  
   
- Aynı tam nitelikli tür adlarına sahip iki derlemeye başvurmak için, bir diğer adın komut isteminde aşağıdaki gibi belirtilmesi gerekir:  
+ Aynı tam tür adlarıyla iki derlemeye başvurmak için, bir diğer ad aşağıdaki gibi bir komut isteminde belirtilmelidir:  
   
  `/r:GridV1=grid.dll`  
   
  `/r:GridV2=grid20.dll`  
   
- Bu dış takma adlar `GridV1` `GridV2`oluşturur ve. Bu diğer adları bir program içinden kullanmak için, anahtar sözcüğü kullanarak bunlara başvurun. `extern` Örnek:  
+ Bu, dış diğer adları oluşturur `GridV1` ve `GridV2` . Bu diğer adları bir program içinden kullanmak için anahtar sözcüğünü kullanarak bunlara başvurun `extern` . Örneğin:  
   
  `extern alias GridV1;`  
   
  `extern alias GridV2;`  
   
- Her extern diğer ad bildirimi, genel ad alanına paralel (ancak içinde olmayan) ek bir kök düzeyi ad alanı sunar. Böylece, her derlemeden gelen türler, uygun ad alanı-diğer adlarına dayanan tam nitelikli adlarını kullanarak belirsizlik olmadan başvurulabilir.  
+ Her extern diğer ad bildirimi, genel ad alanını paraleller (ancak içinde olmayan) ek bir kök düzeyi ad alanı sunar. Bu nedenle, her bir derlemeden türler, uygun ad alanı-diğer adı altında belirtildiği gibi tam nitelikli adı kullanılarak belirsizlik olmadan başvuruda bulunulabilir.  
   
- Önceki örnekte, `GridV1::Grid` 'den `grid.dll`ızgara denetimi `GridV2::Grid` olacaktır ve `grid20.dll`.  
+ Önceki örnekte, `GridV1::Grid` kılavuz denetimi olur `grid.dll` ve `GridV2::Grid` kılavuz denetimi olacaktır `grid20.dll` .  
   
+## <a name="using-visual-studio"></a>Visual Studio’yu kullanma
+
+Visual Studio kullanıyorsanız, diğer adlar benzer şekilde sağlanmış olabilir.
+
+Visual Studio 'da projenize *grid.dll* ve *grid20.dll* başvurusu ekleyin. Bir özellik sekmesi açın ve Global olan diğer adları sırasıyla GridV1 ve GridV2 olarak değiştirin.
+
+Bu diğer adları yukarıdaki şekilde kullanın
+
+```csharp
+ extern alias GridV1;  
+  
+ extern alias GridV2;  
+```
+
+Artık *diğer ad yönergesini kullanarak*bir ad alanı veya tür için takma ad oluşturabilirsiniz. Daha fazla bilgi için bkz. [using yönergesi](using-directive.md).
+
+```csharp
+using Class1V1 = GridV1::Namespace.Class1;
+
+using Class1V2 = GridV2::Namespace.Class1;
+```
+
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](./index.md)
-- [:: Operatör](../operators/namespace-alias-qualifier.md)
-- [-referans (C# Derleyici Seçenekleri)](../compiler-options/reference-compiler-option.md)
+- [C# anahtar sözcükleri](./index.md)
+- [:: İşleci](../operators/namespace-alias-qualifier.md)
+- [-Reference (C# derleyici seçenekleri)](../compiler-options/reference-compiler-option.md)

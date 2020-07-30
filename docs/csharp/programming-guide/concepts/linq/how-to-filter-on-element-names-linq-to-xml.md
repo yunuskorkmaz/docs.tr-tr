@@ -1,21 +1,22 @@
 ---
-title: Eleman adlarına nasıl filtre yapılır (LINQ - XML) (C#)
+title: Öğe adlarını filtreleme (LINQ to XML) (C#)
+description: XElement IEnumerable döndüren bir yöntemi çağırdığınızda öğe adında filtre yapmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
-ms.openlocfilehash: 74efb19ef5ec77ca29145d27a8e5aa977530b68b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: be660a69b8d860ad907661ce17002379b8842121
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141268"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301755"
 ---
-# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Eleman adlarına nasıl filtre yapılır (LINQ - XML) (C#)
-Döndürülen <xref:System.Collections.Generic.IEnumerable%601> yöntemlerden birini <xref:System.Xml.Linq.XElement>aradiğinizde, öğe adına filtre uygulayabilirsiniz.  
+# <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>Öğe adlarını filtreleme (LINQ to XML) (C#)
+' In döndürdüğü yöntemlerden birini çağırdığınızda <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> , öğe adı üzerinde filtre uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, yalnızca belirtilen ada sahip torunları içerecek şekilde filtre uygulanmış bir soyundan gelenler koleksiyonunu alır.  
+ Bu örnek, yalnızca belirtilen ada sahip alt öğeleri içerecek şekilde filtrelenen alt öğelerin bir koleksiyonunu alır.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Tipik SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -26,14 +27,14 @@ foreach(XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string) prdName);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 ProductName:Lawnmower  
 ProductName:Baby Monitor  
 ```  
   
- Koleksiyonların <xref:System.Xml.Linq.XElement> döndürülen <xref:System.Collections.Generic.IEnumerable%601> diğer yöntemleri de aynı şekilde izler. İmzaları benzer <xref:System.Xml.Linq.XContainer.Elements%2A> ve. <xref:System.Xml.Linq.XContainer.Descendants%2A> Benzer yöntem imzalarına sahip yöntemlerin tam listesi aşağıda verilmiştir:  
+ Koleksiyonları döndüren diğer yöntemler <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> aynı kalıbı izler. İmzaları <xref:System.Xml.Linq.XContainer.Elements%2A> ve ile benzerdir <xref:System.Xml.Linq.XContainer.Descendants%2A> . Aşağıda benzer yöntem imzaları olan yöntemlerin tamamı listelenmiştir:  
   
 - <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -50,9 +51,9 @@ ProductName:Baby Monitor
 - <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında Tipik Satın Alma Siparişi.](./sample-xml-file-typical-purchase-order-in-a-namespace.md)  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında tipik satın alma siparişi](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -64,7 +65,7 @@ foreach (XElement prdName in items)
     Console.WriteLine(prdName.Name + ":" + (string)prdName);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 {http://www.adventure-works.com}ProductName:Lawnmower  
@@ -73,4 +74,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ - XML Eksenleri (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ to XML eksenleri (C#)](./linq-to-xml-axes-overview.md)

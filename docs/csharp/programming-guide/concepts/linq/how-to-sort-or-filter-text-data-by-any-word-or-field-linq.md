@@ -1,20 +1,21 @@
 ---
-title: Metin verilerini herhangi bir sözcüğe veya alana göre sıralama veya filtreleme (LINQ) (C#)
+title: Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)
+description: Metin verilerini herhangi bir sözcük veya alana göre sıralamayı veya filtreleyeceğinizi öğrenin. Yapılandırılmış metnin satırlarını satırdaki herhangi bir alana göre sıralamak için bir örneğe bakın.
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: e869d57c413d175c092cdc15a6fe54cab94e04b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f27ce44f4b0b05bc9094b7e108af8f65170bb58a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347358"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301326"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Metin verilerini herhangi bir sözcüğe veya alana göre sıralama veya filtreleme (LINQ) (C#)
-Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metin satırlarının satırdaki herhangi bir alana göre nasıl sıralanır olduğunu gösterir. Alan çalışma zamanında dinamik olarak belirtilebilir. Scores.csv'deki alanların bir öğrencinin kimlik numarasını temsil ettiğini ve ardından dört test puanı nın geldiğini varsayalım.  
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Her kelime veya alana göre metin verilerini sıralama veya filtreleme (LINQ) (C#)
+Aşağıdaki örnek, virgülle ayrılmış değerler gibi yapılandırılmış metnin çizgilerinin satırdaki herhangi bir alana göre nasıl sıralanacağını gösterir. Alan, çalışma zamanında dinamik olarak belirtilmiş olabilir. scores.csv içindeki alanların, bir öğrencinin KIMLIK numarasını temsil ettiğini ve ardından dört test puanı serisi olduğunu varsayalım.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Veri içeren bir dosya oluşturmak için  
   
-1. Konudaki scores.csv verilerini kopyalayın [Farklı dosyalardan (LINQ) (C#) içerik birleştirme](./how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme.  
+1. scores.csv verileri, [benzer dosyalardan (LINQ) (C#) içerik ekleme](./how-to-join-content-from-dissimilar-files-linq.md) ve çözüm klasörünüze kaydetme konusundan kopyalayın.  
   
 ## <a name="example"></a>Örnek  
   
@@ -72,12 +73,12 @@ public class SortLines
  */  
 ```  
   
- Bu örnek, bir yöntemden sorgu değişkeninin nasıl döndürülecek olduğunu da gösterir.  
+ Bu örnek ayrıca bir yöntemden nasıl sorgu değişkeni dönebileceğinizi gösterir.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
 
-System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.
+`using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)

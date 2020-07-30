@@ -1,40 +1,41 @@
 ---
-title: LINQ - XML Olayları (C#)
+title: LINQ to XML olayları (C#)
+description: C# içinde herhangi bir XObject örneğine LINQ to XML olaylar ekleyin. Olay işleyicisi, söz konusu XObject için XML ağacı değiştirildiğinde olayları alır.
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
-ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 576b0a5d0472bddd66e01d3bef8f3affa1c9458b
+ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253168"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87165419"
 ---
-# <a name="linq-to-xml-events-c"></a>LINQ - XML Olayları (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]olaylar, bir XML ağacı değiştirildiğinde bilgilendirilmenizi sağlar.  
+# <a name="linq-to-xml-events-c"></a>LINQ to XML olayları (C#)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]olaylar, bir XML ağacı değiştiğinde size bildirim gönderilmesini sağlar.  
   
- Herhangi bir örneğine olaylar <xref:System.Xml.Linq.XObject>ekleyebilirsiniz. Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ve onun torunları herhangi bir değişiklik için olaylar alırsınız. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve bu olay işleyicisinden ağaca yapılan tüm değişiklikleri işleyebilirsiniz.  
+ Herhangi bir örneğine olay ekleyebilirsiniz <xref:System.Xml.Linq.XObject> . Olay işleyicisi daha sonra bu <xref:System.Xml.Linq.XObject> ve alt öğelerinden herhangi birine değişiklikler için olaylar alır. Örneğin, ağacın köküne bir olay işleyicisi ekleyebilir ve ağaçtaki tüm değişiklikleri bu olay işleyicisinden işleyebilirsiniz.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Olay örnekleri için <xref:System.Xml.Linq.XObject.Changing> bkz. <xref:System.Xml.Linq.XObject.Changed>  
+ Olay örnekleri için [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] bkz <xref:System.Xml.Linq.XObject.Changing> <xref:System.Xml.Linq.XObject.Changed> . ve.  
   
-## <a name="types-and-events"></a>Türleri ve Etkinlikler  
- Olaylarla çalışırken aşağıdaki türleri kullanırsınız:  
+## <a name="types-and-events"></a>Türler ve olaylar  
+ Olaylarla çalışırken aşağıdaki türleri kullanın:  
   
-|Tür|Açıklama|  
+|Tür|Description|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange>|Bir olay için yükseltildiğinde olay türünü <xref:System.Xml.Linq.XObject>belirtir.|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Olaylar <xref:System.Xml.Linq.XObject.Changing> ve olaylar <xref:System.Xml.Linq.XObject.Changed> için veri sağlar.|  
+|<xref:System.Xml.Linq.XObjectChange>|Bir olay oluşturulduğunda olay türünü belirtir <xref:System.Xml.Linq.XObject> .|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|Ve olayları için veri <xref:System.Xml.Linq.XObject.Changing> sağlar <xref:System.Xml.Linq.XObject.Changed> .|  
   
- Bir XML ağacını değiştirdiğinizde aşağıdaki olaylar yükseltilir:  
+ Bir XML ağacını değiştirirken aşağıdaki olaylar oluşturulur:  
   
-|Olay|Açıklama|  
+|Olay|Description|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing>|Şu <xref:System.Xml.Linq.XObject> ya da onun soyundan herhangi biri değişmeden hemen önce meydana gelir.|  
-|<xref:System.Xml.Linq.XObject.Changed>|Bir <xref:System.Xml.Linq.XObject> değişti veya onun torunlarından herhangi biri değişti oluşur.|  
+|<xref:System.Xml.Linq.XObject.Changing>|Bu <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi birinin değişmesinden hemen önce gerçekleşir.|  
+|<xref:System.Xml.Linq.XObject.Changed>|Bir değiştiğinde <xref:System.Xml.Linq.XObject> veya alt öğelerinden herhangi biri değiştiğinde gerçekleşir.|  
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Olaylar, bir XML ağacında bazı toplu bilgileri korumak istediğinizde yararlıdır. Örneğin, faturanın satır maddelerinin toplamı olan bir fatura toplamını korumak isteyebilirsiniz. Bu örnek, karmaşık öğe `Items`altında tüm alt öğelerin toplamını korumak için olayları kullanır.  
+### <a name="description"></a>Description  
+ Olaylar, bir XML ağacındaki bazı toplu bilgileri korumak istediğinizde faydalıdır. Örneğin, faturanın satır öğelerinin toplamı olan bir fatura toplamı korumak isteyebilirsiniz. Bu örnek, karmaşık öğe altındaki tüm alt öğelerinin toplamını korumak için olayları kullanır `Items` .  
   
 ### <a name="code"></a>Kod  
   
@@ -76,7 +77,7 @@ Console.WriteLine(root);
 ```  
   
 ### <a name="comments"></a>Yorumlar  
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 Changed System.Xml.Linq.XElement Add  

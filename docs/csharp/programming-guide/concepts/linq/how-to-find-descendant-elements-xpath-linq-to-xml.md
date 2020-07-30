@@ -1,23 +1,24 @@
 ---
-title: Soyundan gelen öğeleri bulma (XPath-LINQ - XML) (C#)
+title: Alt öğeleri bulma (XPath-LINQ to XML) (C#)
+description: Bir XPath ifadesi kullanarak, belirli bir ada sahip olan alt öğeleri bulmayı öğrenin. Örnek XML dosyası kullanan bir kod örneğini gözden geçirin.
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-ms.openlocfilehash: c90651502629284c67cc16de8a1aa59c392ae178
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5a998a05f866203f3b684b8847a4a5647c12e5b
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141109"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303276"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Soyundan gelen öğeleri bulma (XPath-LINQ - XML) (C#)
-Bu konu, belirli bir adla soyundan gelen öğelerin nasıl alınılsüreceğini gösterir.  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Alt öğeleri bulma (XPath-LINQ to XML) (C#)
+Bu konu, belirli bir ada sahip alt öğelerin nasıl alınacağını gösterir.  
   
- XPath ifadesi `//Name`.  
+ XPath ifadesi `//Name` .  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, adı `Name`verilen tüm torunları bulur.  
+ Bu örnek adlı tüm alt öğeleri bulur `Name` .  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Birden Çok SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birden fazla satın alma siparişi (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -37,7 +38,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

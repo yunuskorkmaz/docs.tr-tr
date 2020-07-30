@@ -1,19 +1,20 @@
 ---
-title: XmlReader'a serileştirme (XSLT Başlatma) (C#)
+title: XmlReader 'a serileştirme (XSLT çağırma) (C#)
+description: C# ' de CreateReader kullanarak bir XmlReader oluşturma hakkında bilgi edinin. Bu XmlReader 'dan okuyan modül, düğümleri XML ağacından okur ve bunları işler.
 ms.date: 07/20/2015
 ms.assetid: 4cc3ee03-ef4c-429b-a408-fedd10b728cd
-ms.openlocfilehash: b079fe05fa8c230f644e011dcb62ec54f55cae60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa5a232c74c5314cb7f1cf03c2a8875ca1cd04df
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66487185"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302418"
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>XmlReader'a serileştirme (XSLT Başlatma) (C#)
-<xref:System.Xml?displayProperty=nameWithType> Birlikte çalışabilirlik yeteneklerini [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]kullandığınızda, <xref:System.Xml.Linq.XNode.CreateReader%2A> bir <xref:System.Xml.XmlReader>. Buradan <xref:System.Xml.XmlReader> okuyan modül XML ağacındaki düğümleri okur ve buna göre işler.  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-c"></a>XmlReader 'a serileştirme (XSLT çağırma) (C#)
+<xref:System.Xml?displayProperty=nameWithType>Uygulamasının birlikte çalışabilirlik yeteneklerini kullandığınızda [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] , <xref:System.Xml.Linq.XNode.CreateReader%2A> oluşturmak için kullanabilirsiniz <xref:System.Xml.XmlReader> . Bu öğesinden okuyan modül, <xref:System.Xml.XmlReader> DÜĞÜMLERI XML ağacından okur ve bunlara göre işler.  
   
-## <a name="invoking-an-xslt-transformation"></a>XSLT Dönüşümü'ne neden olmak  
- Bu yöntem için olası bir kullanım bir XSLT dönüşümü çağırArak. Bir XML ağacı oluşturabilir, <xref:System.Xml.XmlReader> XML ağacından bir oluşturma, yeni bir <xref:System.Xml.XmlWriter> belge oluşturabilir ve ardından yeni belgeye yazacak bir belge oluşturabilirsiniz. Daha sonra, XSLT dönüşümlerini çağırabilir, içeri girebilirsiniz <xref:System.Xml.XmlReader> ve. <xref:System.Xml.XmlWriter> Dönüşüm başarıyla tamamlandıktan sonra, yeni XML ağacı dönüşümün sonuçlarıyla doldurulur.  
+## <a name="invoking-an-xslt-transformation"></a>XSLT dönüşümünü çağırma  
+ Bu yöntem için olası bir kullanım XSLT dönüşümünü çağırmada olur. Bir XML ağacı oluşturabilir, XML ağacından oluşturabilir, <xref:System.Xml.XmlReader> Yeni bir belge oluşturabilir ve sonra <xref:System.Xml.XmlWriter> yeni belgeye yazmak için oluşturabilirsiniz. Ardından, ve ile geçirerek XSLT dönüşümünü çağırabilirsiniz <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> . Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.  
   
 ```csharp  
 string xslMarkup = @"<?xml version='1.0'?>  
@@ -50,7 +51,7 @@ using (XmlWriter writer = newTree.CreateWriter()) {
 Console.WriteLine(newTree);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -61,4 +62,4 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XML Ağaçlarını Serihale Getirme (C#)](serializing-to-files-textwriters-and-xmlwriters.md)
+- [XML ağaçlarını serileştirme (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

@@ -1,17 +1,18 @@
 ---
 title: Kayıt defteri-C# programlama kılavuzunda anahtar oluşturma
+description: Kayıt defterinde anahtar oluşturmayı öğrenin. Bkz. bir kod örneği, yönergeleri derleme ve kullanılabilir ek kaynaklar.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 9e340083ffca118337dc9a53bdf20808cd1b15cb
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 6db076bc22e098c285b74a8c10e8b5f456c2c55e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241636"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299987"
 ---
 # <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Kayıt defterinde anahtar oluşturma (C# Programlama Kılavuzu)
 Bu örnek, "ad" ve "Isabella" değer çiftini geçerli kullanıcının kayıt defterine, "adlar" anahtarı altında ekler.  

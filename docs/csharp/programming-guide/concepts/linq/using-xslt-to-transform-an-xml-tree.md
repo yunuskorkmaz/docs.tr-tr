@@ -1,16 +1,17 @@
 ---
-title: XML Ağacını Dönüştürmek için XSLT kullanma (C#)
+title: XML ağacını dönüştürmek için XSLT kullanma (C#)
+description: XmlReader ve XmlWriter örnekleri üzerinde XSLT dönüşümünü çağırarak C# ' deki bir XML ağacını dönüştürmek için XSLT 'yi nasıl kullanacağınızı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-ms.openlocfilehash: 7ebcfbd6be86fdd5e12bfc48a0fe80a084c6f9b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce92136850aeef52e5b17cd7bc658b85fe70604
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74140918"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302275"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-c"></a>XML Ağacını Dönüştürmek için XSLT kullanma (C#)
-Bir XML ağacı oluşturabilir, <xref:System.Xml.XmlReader> XML ağacından bir oluşturma, yeni bir <xref:System.Xml.XmlWriter> belge oluşturabilir ve yeni belgeye yazacak bir belge oluşturabilirsiniz. Daha sonra, XSLT dönüşümve dönüşüm <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> geçirerek çağırabilirsiniz. Dönüşüm başarıyla tamamlandıktan sonra, yeni XML ağacı dönüşümün sonuçlarıyla doldurulur.  
+# <a name="using-xslt-to-transform-an-xml-tree-c"></a>XML ağacını dönüştürmek için XSLT kullanma (C#)
+Bir XML ağacı oluşturabilir, XML ağacından oluşturabilir, <xref:System.Xml.XmlReader> Yeni bir belge oluşturabilir ve <xref:System.Xml.XmlWriter> yeni belgeye yazılacak bir oluşturabilirsiniz. Ardından, XSLT dönüşümünü çağırarak <xref:System.Xml.XmlReader> ve <xref:System.Xml.XmlWriter> dönüşümünü dönüştürebilirsiniz. Dönüştürme başarıyla tamamlandıktan sonra, yeni XML ağacı dönüştürmenin sonuçlarıyla doldurulur.  
   
 ## <a name="example"></a>Örnek  
   
@@ -58,7 +59,7 @@ string result = newDocument.ToString();
 Console.WriteLine(result);
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  

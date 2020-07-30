@@ -1,5 +1,6 @@
 ---
-title: <typeparam> - C# programlama kılavuzu
+title: <typeparam> -C# Programlama Kılavuzu
+description: XML hakkında bilgi edinin <typeparam> Etiket. Bu etiket, bir tür parametresini anlatmak için genel bir tür veya yöntem bildirimi açıklamasında kullanılır.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 867ecacf58f95533395ded203a8f17bc92558ccf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e5333e384e8c77b500f74ab7c6038146df6e2c0
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76793360"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380793"
 ---
-# <a name="typeparam-c-programming-guide"></a>\<typeparam> (C# programlama kılavuzu)
+# <a name="typeparam-c-programming-guide"></a>\<typeparam>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <typeparam name="name">description</typeparam>
@@ -26,7 +27,7 @@ ms.locfileid: "76793360"
 
 - `name`
 
-  Tür parametresinin adı. Adı çift tırnak işaretlerine (" ") ekin.
+  Tür parametresinin adı. Adı çift tırnak işareti ("") içine alın.
 
 - `description`
 
@@ -34,13 +35,13 @@ ms.locfileid: "76793360"
 
 ## <a name="remarks"></a>Açıklamalar
 
-Etiket, `<typeparam>` bir tür parametresini açıklamak için genel bir tür veya yöntem bildirimi için yorumda kullanılmalıdır. Genel tür veya yöntemin her tür parametresi için bir etiket ekleyin.
+`<typeparam>`Etiket, bir tür parametresini betimleyen genel tür veya yöntem bildirimine ilişkin açıklamada kullanılmalıdır. Genel tür veya metodun her tür parametresi için bir etiket ekleyin.
 
-Daha fazla bilgi için [Genel Bilgiler'e](../generics/index.md)bakın.
+Daha fazla bilgi için bkz. [Genel türler](../generics/index.md).
 
-Etiketin `<typeparam>` metni, [Nesne Tarayıcı Penceresi](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) kodu yorum web raporu olan IntelliSense'de görüntülenir.
+`<typeparam>`Etiketin metni IntelliSense 'de, [nesne tarayıcısı pencere](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) kodu açıklama Web raporu ' nda görüntülenir.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

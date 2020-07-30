@@ -1,5 +1,6 @@
 ---
-title: Özel Durumlar Oluşturma ve Atma - C# Programlama Kılavuzu
+title: Özel durumlar oluşturma ve atma-C# Programlama Kılavuzu
+description: Özel durumlar oluşturma ve atma hakkında bilgi edinin. Özel durumlar, bir program çalıştırılırken bir hata oluştuğunu göstermek için kullanılır.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -7,67 +8,67 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8ab10dbf686def8d169ef3239492e3b618e9d297
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712305"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302054"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Özel Durumlar Oluşturma ve Atma (C# Programlama Kılavuzu)
-Özel durumlar, programı çalıştırırken bir hata oluştuğunu belirtmek için kullanılır. Bir hatayı açıklayan özel durum nesneleri oluşturulur ve [sonra atma](../../language-reference/keywords/throw.md) anahtar sözcüğüyle *birlikte atılır.* Çalışma süresi sonra en uyumlu özel durum işleyicisi arar.  
+Özel durumlar, programı çalıştırırken bir hata oluştuğunu göstermek için kullanılır. Bir hatayı tanımlayan özel durum nesneleri oluşturulur ve [throw](../../language-reference/keywords/throw.md) anahtar *sözcüğüyle oluşturulur.* Çalışma zamanı, en uyumlu özel durum işleyicisini arar.  
   
- Programcılar, aşağıdaki koşullardan biri veya birkaçı doğru olduğunda özel durumlar sunmalıdır:  
+ Aşağıdaki koşullardan biri veya daha fazlası doğru olduğunda programcılar özel durumlar atmalıdır:  
   
-- Yöntem tanımlanan işlevselliğini tamamlayamıyor.  
+- Yöntem, tanımlı işlevini tamamlayamıyor.  
   
-     Örneğin, bir yöntemin parametresi geçersiz bir değere sahipse:  
+     Örneğin, bir yönteme ait bir parametre geçersiz bir değere sahipse:  
   
      [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
-- Nesne durumuna göre nesneye uygunsuz bir çağrı yapılır.  
+- Nesne durumuna bağlı olarak bir nesneye uygun olmayan bir çağrı yapılır.  
   
-     Bir örnek, salt okunur dosyaya yazmaya çalışıyor olabilir. Nesne durumunun bir işleme izin vermediği durumlarda, bu sınıfın türemesine dayalı bir örnek <xref:System.InvalidOperationException> veya nesne atın. Bu, bir <xref:System.InvalidOperationException> nesne atan bir yönteme örnektir:  
+     Bir örnek, salt okunurdur bir dosyaya yazmaya çalışıyor olabilir. Bir nesne durumunun bir işleme izin vermediği durumlarda, <xref:System.InvalidOperationException> Bu sınıfın bir türetmesi temelinde bir örneği veya nesnesi oluşturun. Bu, bir nesnesi oluşturan bir yönteme örnektir <xref:System.InvalidOperationException> :  
   
      [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
-- Bir yöntemiçin bir bağımsız değişken bir özel durum neden olduğunda.  
+- Bir yöntemin bağımsız değişkeni bir özel duruma neden olur.  
   
-     Bu durumda, özgün özel durum yakalanmalı ve bir <xref:System.ArgumentException> örnek oluşturulmalıdır. Özgün özel <xref:System.ArgumentException> <xref:System.Exception.InnerException%2A> durum, parametre olarak oluşturucuya geçirilmelidir:  
+     Bu durumda, özgün özel durum yakalanmalı ve bir <xref:System.ArgumentException> örnek oluşturulmalıdır. Özgün özel durum, parametresi olarak öğesinin oluşturucusuna geçirilmelidir <xref:System.ArgumentException> <xref:System.Exception.InnerException%2A> :  
   
      [!code-csharp[csProgGuideExceptions#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#14)]  
   
- Özel durumlar adlı <xref:System.Exception.StackTrace%2A>bir özellik içerir. Bu dize, her yöntem için özel durum atıldığı dosya adı ve satır numarasıyla birlikte geçerli çağrı yığınındaki yöntemlerin adını içerir. Bir <xref:System.Exception.StackTrace%2A> `throw` nesne, deyim in den itibaren ortak dil çalışma süresi (CLR) tarafından otomatik olarak oluşturulur, böylece yığın izlemenin başlaması gereken noktadan özel durumlar atılmalıdır.  
+ Özel durumlar adlı bir özelliği içerir <xref:System.Exception.StackTrace%2A> . Bu dize, geçerli çağrı yığınındaki yöntemlerin adını, her yöntem için özel durumun oluşturulduğu dosya adı ve satır numarasıyla birlikte içerir. Bir <xref:System.Exception.StackTrace%2A> nesne, deyimin noktasındaki ortak dil çalışma zamanı (CLR) tarafından otomatik olarak oluşturulur `throw` . böylece, yığın izlemenin başlayacağı noktadan özel durumlar oluşturulmalıdır.  
   
- Tüm özel durumlar adlı <xref:System.Exception.Message%2A>bir özellik içerir. Bu dize, özel durum nedenini açıklamak için ayarlanmalıdır. Güvenlik açısından hassas olan bilgilerin ileti metnine konulmaması gerektiğini unutmayın. Buna ek <xref:System.Exception.Message%2A> <xref:System.ArgumentException> olarak, özel <xref:System.ArgumentException.ParamName%2A> durum atılmasına neden olan bağımsız değişkenin adına ayarlanmalıdır adlı bir özellik içerir. Bir özellik ayarlayıcısı durumunda, <xref:System.ArgumentException.ParamName%2A> 'ye `value`ayarlanmalıdır.  
+ Tüm özel durumlar adlı bir özelliği içerir <xref:System.Exception.Message%2A> . Bu dize, özel durumun nedenini açıklamak için ayarlanmalıdır. Güvenliğe duyarlı bilgilerin ileti metnine yerleştirilmemelidir. Öğesinin buna ek olarak <xref:System.Exception.Message%2A> , <xref:System.ArgumentException> <xref:System.ArgumentException.ParamName%2A> özel durumun oluşturulmasına neden olan bağımsız değişkenin adı olarak ayarlanması gereken adlı bir özelliği içerir. Özellik ayarlayıcı söz konusu olduğunda, <xref:System.ArgumentException.ParamName%2A> olarak ayarlanmalıdır `value` .  
   
- Genel ve korumalı yöntemler, amaçlanan işlevlerini tamamlayamadıkları zaman özel durumlar atmalıdır. Atılan özel durum sınıfı, hata koşullarına uyan kullanılabilir en özel özel özel durum olmalıdır. Bu özel durumlar sınıf işlevselliğinin bir parçası olarak belgelenmeli ve özgün sınıfa türetilen sınıflar veya güncelleştirmeler geriye dönük uyumluluk için aynı davranışı korumalıdır.  
+ Ortak ve korumalı Yöntemler, kendilerine amaçlanan işlevleri tamamlanamadığında özel durumlar atmalıdır. Oluşturulan özel durum sınıfı, hata koşullarına uyan en belirgin özel durum olmalıdır. Bu özel durumlar, sınıf işlevselliğinin bir parçası olarak belgelenmelidir ve özgün sınıftaki türetilmiş sınıflar veya güncelleştirmeler geriye dönük uyumluluk için aynı davranışı korurlar.  
   
-## <a name="things-to-avoid-when-throwing-exceptions"></a>İstisna Atarken Kaçınılması Gerekenler  
- Aşağıdaki liste, özel durumlar atarken kaçınılması gereken uygulamaları tanımlar:  
+## <a name="things-to-avoid-when-throwing-exceptions"></a>Özel durumlar oluştururken kaçınmak için gerekenler  
+ Aşağıdaki liste, özel durumlar oluştururken kaçınmak için Yöntemler tanımlar:  
   
-- Özel durumlar, olağan yürütmenin bir parçası olarak bir programın akışını değiştirmek için kullanılmamalıdır. Özel durumlar yalnızca hata koşullarını bildirmek ve işlemek için kullanılmalıdır.  
+- Özel durumlar, bir programın akışını sıradan yürütmenin parçası olarak değiştirmek için kullanılmamalıdır. Özel durumlar yalnızca hata koşullarını raporlamak ve işlemek için kullanılmalıdır.  
   
-- Özel durumlar, atılmak yerine iade değeri veya parametre olarak döndürülmemelidir.  
+- Özel durumlar, oluşturulması yerine dönüş değeri veya parametresi olarak döndürülmemelidir.  
   
-- Kendi kaynak <xref:System.Exception?displayProperty=nameWithType> <xref:System.SystemException?displayProperty=nameWithType>kodunuzdan kasıtlı olarak , veya <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> kasıtlı olarak atmayın. <xref:System.NullReferenceException?displayProperty=nameWithType>  
+- <xref:System.Exception?displayProperty=nameWithType> <xref:System.SystemException?displayProperty=nameWithType> <xref:System.NullReferenceException?displayProperty=nameWithType> <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> Kendi kaynak kodunuzla,, veya kasıtlı olarak kullanmayın.  
   
-- Hata ayıklama modunda atılabilir, ancak serbest bırakma modunda oluşturulabilecek özel durumlar oluşturmayın. Geliştirme aşamasında çalışma zamanı hatalarını tanımlamak için Hata Ayıklama İddiası'nı kullanın.  
+- Hata ayıklama modunda, ancak serbest bırakma modunda oluşturulabilecek özel durumlar oluşturmayın. Geliştirme aşamasında çalışma zamanı hatalarını belirlemek için bunun yerine hata ayıklama onayı kullanın.  
   
-## <a name="defining-exception-classes"></a>Özel Durum Sınıflarını Tanımlama  
- Programlar <xref:System> ad alanına önceden tanımlanmış bir özel durum sınıfı atabilir (daha önce belirtilmiş olan <xref:System.Exception>durumlar hariç) veya 'den türeerek kendi özel durum sınıflarını oluşturabilirler. Türemiş sınıflar en az dört oluşturucu tanımlamalıdır: bir parametresiz oluşturucu, ileti özelliğini ayarlayan ve hem özellikleri <xref:System.Exception.Message%2A> hem de <xref:System.Exception.InnerException%2A> özellikleri belirleyen bir tane. Dördüncü oluşturucu özel durumu serihale getirmek için kullanılır. Yeni özel durum sınıfları serileştirilebilir olmalıdır. Örnek:  
+## <a name="defining-exception-classes"></a>Özel durum sınıfları tanımlama  
+ Programlar, ad alanında önceden tanımlanmış bir özel durum sınıfı oluşturabilir <xref:System> (daha önce belirtilen durumlar hariç) veya ' den türeterek kendi özel durum sınıflarını oluşturabilir <xref:System.Exception> . Türetilmiş sınıflar en az dört Oluşturucu tanımlamalıdır: tek parametresiz bir Oluşturucu, ileti özelliğini ayarlayan diğeri ve hem hem de <xref:System.Exception.Message%2A> <xref:System.Exception.InnerException%2A> özelliklerini ayarlayan. Dördüncü Oluşturucu özel durumu seri hale getirmek için kullanılır. Yeni özel durum sınıfları seri hale getirilebilir olmalıdır. Örneğin:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   
- Yeni özellikler yalnızca sağladıkları veriler özel durumu çözmek için yararlı olduğunda özel durum sınıfına eklenmelidir. Türemiş özel durum sınıfına `ToString()` yeni özellikler eklenirse, eklenen bilgileri döndürmek için geçersiz kılınması gerekir.  
+ Yeni özellikler özel durumu çözmek için yararlı olduğunda yalnızca özel durum sınıfına eklenmelidir. Türetilmiş özel durum sınıfına yeni özellikler eklenirse, `ToString()` eklenen bilgileri döndürmek için geçersiz kılınmalıdır.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Özel Durumlar](~/_csharplang/spec/exceptions.md) ve [atma deyimine](~/_csharplang/spec/statements.md#the-throw-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Exceptions](~/_csharplang/spec/exceptions.md) ve [throw deyimine](~/_csharplang/spec/statements.md#the-throw-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Özel Durumlar ve Özel Durum Kullanımı](./index.md)
-- [Özel Durum Hiyerarşisi](../../../standard/exceptions/index.md)
-- [Özel Durum Taşıma](./exception-handling.md)
+- [Özel durumlar ve özel durum Işleme](./index.md)
+- [Özel durum hiyerarşisi](../../../standard/exceptions/index.md)
+- [Özel Durum İşleme](./exception-handling.md)

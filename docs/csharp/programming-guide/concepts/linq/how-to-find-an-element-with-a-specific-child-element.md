@@ -1,21 +1,22 @@
 ---
-title: Belirli bir alt öğe (C#) ile bir öğeyi bulma
+title: Belirli bir alt öğeye sahip bir öğe bulma (C#)
+description: Belirli bir alt öğeye sahip olan bir öğeyi bulmayı öğrenin. Kod örneklerine ve ek kaynaklara bakın.
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1d02f3d3af0a3711a5361941727e2e0b6c8bbdc9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141152"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301716"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Belirli bir alt öğe (C#) ile bir öğeyi bulma
-Bu konu, belirli bir değere sahip bir alt öğeye sahip belirli bir öğeyi nasıl bulabileceğinizi gösterir.  
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Belirli bir alt öğeye sahip bir öğe bulma (C#)
+Bu konu, belirli bir değere sahip bir alt öğesi olan belirli bir öğenin nasıl bulunacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
- Örnek, "Examp2.EXE" değerine sahip bir `Test` `CommandLine` alt öğeye sahip öğeyi bulur.  
+ Örnek, `Test` `CommandLine` "Examp2.EXE" değerine sahip bir alt öğeye sahip öğeyi bulur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Test Yapılandırması (LINQ -XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: test yapılandırması (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("TestConfig.xml");  
@@ -27,7 +28,7 @@ foreach (XElement el in tests)
     Console.WriteLine((string)el.Attribute("TestId"));  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 0002  
@@ -35,9 +36,9 @@ foreach (XElement el in tests)
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
+ Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında Test Yapılandırması.](./sample-xml-file-test-configuration-in-a-namespace1.md)  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanında test yapılandırması](./sample-xml-file-test-configuration-in-a-namespace1.md).  
   
 ```csharp  
 XElement root = XElement.Load("TestConfigInNamespace.xml");  
@@ -50,7 +51,7 @@ foreach (XElement el in tests)
     Console.WriteLine((string)el.Attribute("TestId"));  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 0002  
@@ -61,5 +62,5 @@ foreach (XElement el in tests)
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
-- [Standart Sorgu Operatörlerine Genel Bakış (C#)](./standard-query-operators-overview.md)
-- [Projeksiyon İşlemleri (C#)](./projection-operations.md)
+- [Standart sorgu Işleçlerine genel bakış (C#)](./standard-query-operators-overview.md)
+- [Projeksiyon Işlemleri (C#)](./projection-operations.md)

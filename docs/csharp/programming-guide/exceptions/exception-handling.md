@@ -1,21 +1,22 @@
 ---
-title: Özel Durum İşleme - C# Programlama Kılavuzu
+title: Özel durum Işleme-C# Programlama Kılavuzu
+description: Özel durum işleme hakkında bilgi edinin. Try-catch, try-finally ve try-catch-finally deyimlerinin örneklerine bakın.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: ee1e5bd15183dad9ffe97824f9b194668e9d3b17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8e55b44573c40f594e567fc5a4501689e66c7af4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705307"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302041"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Özel Durum İşleme (C# Programlama Kılavuzu)
-Bir [try](../../language-reference/keywords/try-catch.md) bloğu C# programcıları tarafından bir özel durum tarafından etkilenebilir bölüm kodu için kullanılır. İlişkili [catch](../../language-reference/keywords/try-catch.md) blokları, ortaya çıkan özel durumları işlemek için kullanılır. [Son olarak](../../language-reference/keywords/try-finally.md) blok, `try` `try` blokta ayrılan kaynakları serbest bırakmak gibi bir özel durum bloğuna atılıp atılmadığına bakılmaksızın çalıştırılan kod içerir. Bir `try` blok bir veya `catch` daha fazla `finally` ilişkili blok veya bir blok veya her ikisini gerektirir.  
+[TRY](../../language-reference/keywords/try-catch.md) bloğu, C# programcıları tarafından bir özel durumdan etkilenebilecek kodu bölümlemek için kullanılır. İlişkili [catch](../../language-reference/keywords/try-catch.md) blokları, ortaya çıkan özel durumları işlemek için kullanılır. [Finally](../../language-reference/keywords/try-finally.md) bloğu bloğunda bir özel durum oluşturulup oluşturulmayacağını (blokta `try` ayrılan kaynakları serbest bırakma gibi) ne olursa olsun, çalıştırılan kodu içerir `try` . Bir `try` blok, bir veya daha fazla ilişkili `catch` blok, ya da bir `finally` blok ya da her ikisini gerektirir.  
   
- Aşağıdaki örneklerde `try-catch` bir deyim, bir `try-finally` `try-catch-finally` deyim ve bir deyim gösterilmektedir.  
+ Aşağıdaki örneklerde bir `try-catch` ifade, bir `try-finally` ifade ve bir `try-catch-finally` ifade gösterilmektedir.  
   
  [!code-csharp[csProgGuideExceptions#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#6)]  
   
@@ -23,44 +24,44 @@ Bir [try](../../language-reference/keywords/try-catch.md) bloğu C# programcıla
   
  [!code-csharp[csProgGuideExceptions#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#8)]  
   
- Bir `try` `catch` veya `finally` blok olmayan bir blok derleyici hatasına neden olur.  
+ `try`Or bloğu olmayan bir blok bir `catch` `finally` derleyici hatasına neden olur.  
   
-## <a name="catch-blocks"></a>Blokları Yakala  
- Bir `catch` blok yakalamak için özel durum türünü belirtebilir. Tür belirtimi özel *durum filtresi*olarak adlandırılır. Özel durum türü <xref:System.Exception>nden türetilmelidir. Genel <xref:System.Exception> olarak, `try` blokta atılabilecek tüm özel durumların nasıl işleyeceğini bilmediğiniz veya bloğunuzun `catch` sonuna bir [atma](../../language-reference/keywords/throw.md) deyimi eklenmiş seniz, özel durum filtresi olarak belirtmeyin.  
+## <a name="catch-blocks"></a>Catch blokları  
+ Bir `catch` blok, yakalamak için özel durum türünü belirtebilir. Tür belirtimine *özel durum filtresi*denir. Özel durum türü öğesinden türetilmelidir <xref:System.Exception> . Genel olarak, <xref:System.Exception> blokta oluşturulan tüm özel durumları nasıl işleyebileceğinizi `try` veya bloizin sonuna bir [throw](../../language-reference/keywords/throw.md) bildirisi eklemiş olmanız durumunda özel durum filtresi olarak belirtmeyin `catch` .  
   
- Farklı `catch` özel durum filtreleri ile birden fazla blok birlikte zincirlenebilir. Bloklar `catch` kodunuzda yukarıdan aşağıya doğru değerlendirilir, `catch` ancak atılan her özel durum için yalnızca bir blok yürütülür. Atılan `catch` özel durum tam türünü veya taban sınıfını belirten ilk blok yürütülür. Hiçbir `catch` blok eşleşen bir özel durum `catch` filtresi belirtmezse, deyimde varsa filtresi olmayan bir blok seçilir. Blokları önce en `catch` özel (yani en türetilmiş) özel özel durum türlerine göre konumlandırmak önemlidir.  
+ `catch`Farklı özel durum filtrelerine sahip birden çok blok birbirine zincirlenebilir. `catch`Bloklar kodunuzda yukarıdan aşağıya değerlendirilir, ancak `catch` oluşturulan her özel durum için yalnızca bir blok yürütülür. `catch`Oluşturulan özel durumun tam türünü veya temel sınıfını belirten ilk blok yürütülür. Bir `catch` blok eşleşen bir özel durum filtresi belirtiyorsa, `catch` deyimde varsa, filtre olmayan bir blok seçilir. `catch`Blokları en belirli (yani, en türetilmiş) özel durum türleri ile konumlandırmak önemlidir.  
   
- Aşağıdaki koşullar doğru olduğunda özel durumları yakalamanız gerekir:  
+ Aşağıdaki koşullar doğru olduğunda özel durumları yakalamalı:  
   
-- Özel durum neden atılmış olabilir iyi bir anlayışa sahip ve bir nesne yakalamak zaman yeni bir dosya adı <xref:System.IO.FileNotFoundException> girmek için kullanıcı isteyen gibi belirli bir kurtarma uygulayabilirsiniz.  
+- Özel durumun neden oluşturulması gerektiği hakkında daha iyi bir fikir sahibi olabilirsiniz ve bir nesneyi yakalarsanız kullanıcıdan yeni bir dosya adı girmesini isteme gibi belirli bir kurtarma uygulayabilirsiniz <xref:System.IO.FileNotFoundException> .  
   
-- Yeni, daha özel bir özel durum oluşturabilir ve atabilirsiniz.  
+- Yeni, daha özel bir özel durum oluşturabilir ve silebilirsiniz.  
   
      [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
-- Ek işleme için geçirmeden önce bir özel durum kısmen işlemek istiyorsunuz. Aşağıdaki örnekte, `catch` özel durumu yeniden atmadan önce hata günlüğüne giriş eklemek için bir blok kullanılır.  
+- Ek işleme için geçirmeden önce bir özel durumu kısmen işlemek istiyorsunuz. Aşağıdaki örnekte, `catch` özel durumu yeniden oluşturmadan önce bir hata günlüğüne giriş eklemek için bir blok kullanılır.  
   
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   
-## <a name="finally-blocks"></a>Son Bloklar  
- Blok, `finally` bir `try` blokta gerçekleştirilen eylemleri temizlemenizi sağlar. Varsa, `finally` blok, `try` blok ve eşleşen `catch` blok sonra, son yürütür. Bir `finally` özel durum atılıp atılmadığına veya özel `catch` durum türüyle eşleşen bir blok bulunup bulunmadığına bakılmaksızın, bir blok her zaman çalışır.  
+## <a name="finally-blocks"></a>Finally blokları  
+ Bir `finally` blok, bir blokta gerçekleştirilen eylemleri temizlemenize olanak sağlar `try` . Varsa, blok `finally` ve eşleşen bloğundan sonra blok son yürütülür `try` `catch` . Bir `finally` blok her zaman bir özel durum oluşturulup oluşturulmayacağını veya `catch` özel durum türüyle eşleşen bir blok bulunup bulunamadığına bakılmaksızın çalışır.  
   
- Blok, `finally` nesneleri sonuçlandırmak için çalışma zamanında çöp toplayıcısını beklemeden dosya akışları, veritabanı bağlantıları ve grafik işletmeleri gibi kaynakları serbest bırakmak için kullanılabilir. Daha fazla bilgi için [Bildirim'i kullanma](../../language-reference/keywords/using-statement.md) bilgisine bakın.  
+ `finally`Blok, çalışma zamanındaki çöp toplayıcısının nesneleri son haline getirilmeksizin dosya akışları, veritabanı bağlantıları ve grafik tanıtıcıları gibi kaynakları serbest bırakmak için kullanılabilir. Daha fazla bilgi için bkz. [using deyimleri](../../language-reference/keywords/using-statement.md) .  
   
- Aşağıdaki örnekte, `finally` blok, `try` blokta açılan bir dosyayı kapatmak için kullanılır. Dosya kapanmadan önce dosya tanıtıcısının durumunun denetlenir olduğuna dikkat edin. Blok dosyayı açamıyorsa, dosya tutamacı `null` yine `finally` de değere sahiptir ve blok dosyayı kapatmaya çalışmaz. `try` Alternatif olarak, dosya `try` blokta başarıyla açılırsa, `finally` blok açık dosyayı kapatır.  
+ Aşağıdaki örnekte, bloğu `finally` bloğunda açılan bir dosyayı kapatmak için kullanılır `try` . Dosya tutamacı durumunun, dosya kapatılmadan önce denetlendiğine dikkat edin. `try`Blok dosyayı açmayabilir, dosya tanıtıcısı yine de değeri içerir `null` ve `finally` blok bunu kapatmayı denemez. Alternatif olarak, dosya blokta başarıyla açılırsa `try` , `finally` blok açık dosyayı kapatır.  
   
  [!code-csharp[csProgGuideExceptions#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#11)]  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
 
-Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Özel Durumlar](~/_csharplang/spec/exceptions.md) ve [Try deyimine](~/_csharplang/spec/statements.md#the-try-statement) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Exceptions](~/_csharplang/spec/exceptions.md) ve [TRY deyimleri](~/_csharplang/spec/statements.md#the-try-statement) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../../language-reference/index.md)
+- [C# başvurusu](../../language-reference/index.md)
 - [C# Programlama Kılavuzu](../index.md)
-- [Özel Durumlar ve Özel Durum Kullanımı](./index.md)
+- [Özel durumlar ve özel durum Işleme](./index.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
-- [Ekstresi'ni kullanma](../../language-reference/keywords/using-statement.md)
+- [using Deyimi](../../language-reference/keywords/using-statement.md)

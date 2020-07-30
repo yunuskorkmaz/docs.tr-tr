@@ -1,16 +1,17 @@
 ---
 title: Dizeler-C# Programlama Kılavuzu
+description: C# programlamasında dizeler hakkında bilgi edinin. Dizeleri bildirme ve başlatma, dize nesnelerinin imlebilirlik ve dize kaçış dizileri hakkında bilgi için bkz..
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 7bf5cba51a2e72d3a648f795f018220a452e51f5
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 8e833bdeefcce2f12c839738b43778df8e54fa5b
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226601"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381612"
 ---
 # <a name="strings-c-programming-guide"></a>Dizeler (C# Programlama Kılavuzu)
 Dize, değeri Text olan türünde bir nesnedir <xref:System.String> . Dahili olarak, metin sıralı bir salt okunabilir nesne koleksiyonu olarak depolanır <xref:System.Char> . C# dizesinin sonunda null sonlandırma karakteri yoktur; Bu nedenle, bir C# dizesinde herhangi bir sayıda gömülü null karakter (' \ 0 ') bulunabilir. <xref:System.String.Length%2A>Bir dizenin özelliği, `Char` Unicode karakter sayısını değil, içerdiği nesne sayısını temsil eder. Bir dizedeki tek tek Unicode kod noktalarına erişmek için <xref:System.Globalization.StringInfo> nesnesini kullanın.  
@@ -128,7 +129,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>İlgili Konular  
   
-|Konu|Açıklama|  
+|Konu|Description|  
 |-----------|-----------------|  
 |[Dize içeriklerini değiştirme](../../how-to/modify-string-contents.md)|Dizeleri dönüştürme ve dizelerin içeriğini değiştirme tekniklerini gösterir.|  
 |[Dizeleri karşılaştırma](../../how-to/compare-strings.md)|Dizelerin sıralı ve kültüre özgü karşılaştırmalarının nasıl gerçekleştirileceğini gösterir.|  

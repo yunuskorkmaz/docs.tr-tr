@@ -1,26 +1,26 @@
 ---
-title: dotnet aracı geri yükleme komutu
-description: Dotnet aracı geri yükleme komutu makinenize geçerli dizinin kapsamı içinde olan .NET Core yerel araçlarını yükler.
+title: DotNet aracı geri yükleme komutu
+description: DotNet aracı geri yükleme komutu, makinenizde geçerli dizin için kapsamdaki .NET Core yerel araçları yükler.
 ms.date: 02/14/2020
-ms.openlocfilehash: a518c2d45bbe9522bddfed4bbef61b30f1ad634b
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: ceef3274ec9d337f8c51009d5a8c27e808b14035
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463339"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302678"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 3.0 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
-`dotnet tool restore`- Makinenize geçerli dizinin kapsamı içinde olan .NET Core yerel araçlarını yükler.
+`dotnet tool restore`-Makinenizde geçerli dizin için kapsamdaki .NET Core yerel araçları yüklenir.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME>
+dotnet tool restore
     [--configfile <FILE>] [--add-source <SOURCE>]
     [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
     [--ignore-failed-sources] [--no-cache] [--interactive]
@@ -29,45 +29,39 @@ dotnet tool restore <PACKAGE_NAME>
 dotnet tool restore -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
-Komut, `dotnet tool restore` geçerli dizinin kapsamı içinde olan araç bildirimi dosyasını bulur ve içinde listelenen araçları yükler. Bildirim dosyaları hakkında bilgi için [bkz.](global-tools.md#install-a-local-tool) [Invoke a local tool](global-tools.md#invoke-a-local-tool)
-
-## <a name="arguments"></a>Bağımsız Değişkenler
-
-- **`PACKAGE_NAME`**
-
-Yüklemek için .NET Core aracını içeren NuGet paketinin adı/kimliği.
+`dotnet tool restore`Komutu, geçerli dizinin kapsamındaki araç bildirim dosyasını bulur ve içinde listelenen araçları kurar. Bildirim dosyaları hakkında daha fazla bilgi için bkz. [yerel araç yükleyip](global-tools.md#install-a-local-tool) [yerel bir araç çağırma](global-tools.md#invoke-a-local-tool).
 
 ## <a name="options"></a>Seçenekler
 
 - **`--configfile <FILE>`**
 
-  NuGet yapılandırması (*nuget.config*) dosyasını kullanmak.
+  Kullanılacak NuGet yapılandırma (*nuget.config*) dosyası.
 
 - **`--add-source <SOURCE>`**
 
-  Yükleme sırasında kullanmak üzere ek bir NuGet paket kaynağı ekler.
+  Yükleme sırasında kullanmak üzere ek bir NuGet paketi kaynağı ekler.
 
 - **`--tool-manifest <PATH>`**
 
-  Bildirim dosyasına giden yol.
+  Bildirim dosyasının yolu.
 
 - **`--disable-parallel`**
 
-  Birden çok projeyi paralel olarak geri getirmeyi önleyin.
+  Paralel olarak birden çok projenin geri yüklenmesini engelleyin.
 
 - **`--ignore-failed-sources`**
 
-  Paket kaynağı hatalarını uyarı olarak ele ala.
+  Paket kaynağı başarısızlıklarını uyarı olarak değerlendirin.
 
 - **`--no-cache`**
 
-  Paketleri ve http isteklerini önbelleğe almıyor.
+  Paketleri ve http isteklerini önbelleğe vermeyin.
 
 - **`--interactive`**
 
-  Komutun durmasına ve kullanıcı girişinin veya eylemini beklemesine izin verir (örneğin kimlik doğrulamasını tamamlamak için).
+  Komutun Kullanıcı girişini veya eylemini durdurmasına ve beklemesine izin verir (örneğin, kimlik doğrulamasını tamamlamaya).
 
 - **`-h|--help`**
 
@@ -75,7 +69,7 @@ Yüklemek için .NET Core aracını içeren NuGet paketinin adı/kimliği.
 
 - **`-v|--verbosity <LEVEL>`**
 
-  Komutun ayrıntılı düzeyini ayarlar. İzin verilen `q[uiet]` `m[inimal]`değerler `n[ormal]` `d[etailed]`, `diag[nostic]`, , , ve .
+  Komutun ayrıntı düzeyini ayarlar. İzin verilen değerler,,, `q[uiet]` `m[inimal]` `n[ormal]` `d[etailed]` ve `diag[nostic]` .
 
 ## <a name="example"></a>Örnek
 
@@ -85,5 +79,5 @@ Yüklemek için .NET Core aracını içeren NuGet paketinin adı/kimliği.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Çekirdek araçları](global-tools.md)
-- [Öğretici: .NET Core CLI'yi kullanarak bir .NET Core yerel aracı nı yükleyin ve kullanın](local-tools-how-to-use.md)
+- [.NET Core araçları](global-tools.md)
+- [Öğretici: .NET Core CLI kullanarak bir .NET Core yerel aracı yükleyip kullanın](local-tools-how-to-use.md)

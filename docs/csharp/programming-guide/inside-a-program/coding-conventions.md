@@ -1,93 +1,94 @@
 ---
-title: C# Kodlama Kuralları - C# Programlama Kılavuzu
+title: C# kodlama kuralları-C# Programlama Kılavuzu
+description: C# ' de kodlama kuralları hakkında bilgi edinin. Kodlama kuralları koda tutarlı bir görünüm oluşturur ve kodun kopyalanmasını, değiştirilmesini ve bakımının yapılmasını kolaylaştırır.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - coding conventions, C#
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 772aebff0b8c7aebe7c7d5c7634cd2931f4570b1
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399737"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301859"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# Kodlama Kuralları (C# Programlama Kılavuzu)
 
 Kodlama kuralları aşağıdaki amaçlara hizmet eder:  
   
-- Okuyucuların düzene değil içeriğe odaklanabilmesi için koda tutarlı bir görünüm oluştururlar.  
+- Bunlar, koda tutarlı bir görünüm oluşturur, böylece okuyucular düzene göre değil, içeriğe odaklanabilir.  
   
-- Okuyucuların önceki deneyimlere dayalı varsayımlar yaparak kodu daha hızlı anlamalarını sağlarlar.  
+- Bu kullanıcılar, önceki deneyimle dayalı varsayımlar yaparak okuyucuların kodu daha hızlı anlamasına imkan sağlar.  
   
-- Kodun kopyalanması, değiştirilmesi ve korunmasını kolaylaştırır.  
+- Kodu kopyalama, değiştirme ve sürdürme işlemlerini kolaylaştırır.  
   
-- C# en iyi uygulamaları gösteriyorlar.  
+- C# En Iyi yöntemlerini gösterir.  
 
-Bu makaledeki yönergeler Microsoft tarafından örnekler ve belgeler geliştirmek için kullanılır.  
+Bu makaledeki yönergeler, Microsoft tarafından örnek ve belge geliştirmek için kullanılır.  
   
 ## <a name="naming-conventions"></a>Adlandırma Kuralları  
   
-- [Yönergeleri kullanmayı](../../language-reference/keywords/using-directive.md)içermeyen kısa örneklerde, ad alanı niteliklerini kullanın. Bir projede varsayılan olarak bir ad alanının alındığını biliyorsanız, bu ad alanından adları tam olarak nitelemeniz gerekmez. Aşağıdaki örnekte gösterildiği gibi, tek bir satır için çok uzunsa, nitelikli adlar bir nokta (.) sonra kırılabilir.  
+- [Using yönergeleri](../../language-reference/keywords/using-directive.md)dahil olmayan kısa örneklerde ad alanı nitelikleri kullanın. Bir ad alanının bir projede varsayılan olarak içeri aktarıldığını biliyorsanız, adları bu ad alanından tam olarak nitelemeniz gerekmez. Nitelenmiş adlar, aşağıdaki örnekte gösterildiği gibi, tek bir satırda çok uzunsa bir nokta (.) sonrasında bozulabilir.  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
-- Visual Studio tasarımcı araçlarını kullanarak oluşturulan nesnelerin adlarını diğer yönergelere uygun hale getirmek için değiştirmeniz gerekmez.  
+- Visual Studio tasarımcı araçları kullanılarak oluşturulan nesnelerin adlarını, diğer yönergelere uyum sağlamak için değiştirmeniz gerekmez.  
   
 ## <a name="layout-conventions"></a>Düzeni Kuralları  
 
-İyi düzen, kodunuzu vurgulamak ve kodun okunmasını kolaylaştırmak için biçimlendirmeyi kullanır. Microsoft örnekleri ve örnekleri aşağıdaki kurallara uygundur:  
+İyi düzen, kodunuzun yapısını vurgulamak ve kodun daha kolay okunmasını sağlamak için biçimlendirme kullanır. Microsoft örnekleri ve örnekleri aşağıdaki kurallara uygun şekilde yapılır:  
   
-- Varsayılan Kod Düzenleyicisi ayarlarını (akıllı girinti, dört karakterli girintiler, boşluk olarak kaydedilen sekmeler) kullanın. Daha fazla bilgi için [seçenekler, Metin Düzenleyicisi, C#, Biçimlendirme'ye](/visualstudio/ide/reference/options-text-editor-csharp-formatting)bakın.  
+- Varsayılan kod Düzenleyicisi ayarlarını (akıllı girintileme, dört karakterlik girintiler, sekmeler boşluk olarak kaydedilir) kullanın. Daha fazla bilgi için bkz. [Seçenekler, metin düzenleyici, C#, biçimlendirme](/visualstudio/ide/reference/options-text-editor-csharp-formatting).  
   
-- Satır başına yalnızca bir deyim yazın.  
+- Her satırda yalnızca bir ifade yazın.  
   
-- Satır başına yalnızca bir bildirim yazın.  
+- Her satırda yalnızca bir bildirim yazın.  
   
-- Devam satırları otomatik olarak girintisi değilse, bir sekme durağı (dört boşluk) girintisi girintisi.  
+- Devamlılık satırları otomatik olarak girintili değilse, bir sekme durağı (dört boşluk) için girinti yapın.  
   
-- Yöntem tanımları ve özellik tanımları arasında en az bir boş satır ekleyin.  
+- Yöntem tanımları ve özellik tanımları arasına en az bir boş satır ekleyin.  
   
-- Aşağıdaki kodda gösterildiği gibi, bir ifadedeki yan tümceleri görünür hale getirmek için parantezleri kullanın.  
+- Aşağıdaki kodda gösterildiği gibi, bir ifadedeki tümceleri görünür hale getirmek için parantezleri kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#2)]  
   
 ## <a name="commenting-conventions"></a>Yorum Oluşturma Kuralları  
   
-- Yorumu kod satırının sonuna değil, ayrı bir satıra yerleştirin.  
+- Yorumu bir kod satırının sonuna değil, ayrı bir satıra yerleştirin.  
   
-- Açıklama metnini büyük harfle başlayın.  
+- Açıklama metnini büyük harfle Başlat.  
   
-- Açıklama metnini bir dönemle sonla.  
+- Açıklama metnini noktayla bitirin.  
   
-- Aşağıdaki örnekte gösterildiği gibi, açıklama delimiter (//) ile açıklama metni arasına bir boşluk ekleyin.  
+- Aşağıdaki örnekte gösterildiği gibi açıklama sınırlayıcısı (//) ve açıklama metni arasına bir boşluk ekleyin.  
   
      [!code-csharp[csProgGuideCodingConventions#3](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#3)]  
   
-- Yorumların etrafında biçimlendirilmiş yıldız taşları oluşturmayın.  
+- Açıklamaların etrafında, biçimli yıldız işaretleri oluşturmayın.  
   
 ## <a name="language-guidelines"></a>Dil Kuralları  
 
-Aşağıdaki bölümlerde C# ekibinin kod örnekleri ve örnekleri hazırlamak için izlediği uygulamalar açıklanmaktadır.  
+Aşağıdaki bölümlerde, C# ekibinin kod örneklerini ve örnekleri hazırlamak için izlediği uygulamalar açıklanır.  
   
 ### <a name="string-data-type"></a>Dize Veri Türü  
   
-- Aşağıdaki kodda gösterildiği gibi kısa dizeleri birleştirmek için [dize enterpolasyonunu](../../language-reference/tokens/interpolated.md) kullanın.  
+- Aşağıdaki kodda gösterildiği gibi, kısa dizeleri birleştirmek için [dize ilişkilendirmeyi](../../language-reference/tokens/interpolated.md) kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   
-- Özellikle büyük miktarda metinle çalışıyorsanız, döngüler halinde dizeleri eklemek için bir <xref:System.Text.StringBuilder> nesne kullanın.  
+- Özellikle büyük miktarlarda metinle çalışırken, Döngülerde dizeler eklemek için bir <xref:System.Text.StringBuilder> nesnesi kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
 ### <a name="implicitly-typed-local-variables"></a>Örtülü Olarak Yazılan Yerel Değişkenler  
   
-- Değişkenin türü atamanın sağ tarafından belirgin olduğunda veya kesin tür önemli olmadığında yerel değişkenler için [örtük yazma](../classes-and-structs/implicitly-typed-local-variables.md) kullanın.  
+- Değişkenin türü atamanın sağ tarafından açık olduğunda veya kesin tür önemli olmadığında yerel değişkenler için [örtülü yazma](../classes-and-structs/implicitly-typed-local-variables.md) kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
-- Tür atamanın sağ tarafından belirgin olmadığında [var](../../language-reference/keywords/var.md) kullanmayın.  
+- Tür atamanın sağ tarafından görünmüyorsa, [yok kullanmayın.](../../language-reference/keywords/var.md)  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
@@ -95,36 +96,36 @@ Aşağıdaki bölümlerde C# ekibinin kod örnekleri ve örnekleri hazırlamak i
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- [Dinamik](../../language-reference/builtin-types/reference-types.md)yerine `var` kullanmaktan kaçının.  
+- Dinamik yerine kullanılmasını önleyin `var` . [dynamic](../../language-reference/builtin-types/reference-types.md)  
   
-- Döngüler için döngü değişkeninin türünü belirlemek [için](../../language-reference/keywords/for.md) örtük yazıyı kullanın.  
+- Döngülerde içindeki döngü değişkeninin türünü [öğrenmek için örtük](../../language-reference/keywords/for.md) yazma kullanın.  
   
-     Aşağıdaki örnekte bir `for` deyimde örtük yazma kullanılır.  
+     Aşağıdaki örnek, bir bildiriminde örtük yazma kullanır `for` .  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
 
-- [Foreach](../../language-reference/keywords/foreach-in.md) döngülerde döngü değişkeninin türünü belirlemek için örtük yazma kullanmayın.
+- [Foreach](../../language-reference/keywords/foreach-in.md) Döngülerde döngü değişkeninin türünü öğrenmek için örtük yazma kullanmayın.
 
-     Aşağıdaki örnekte bir `foreach` deyimde açık yazım kullanılır.
+     Aşağıdaki örnek, bir bildiriminde açık bir yazma kullanır `foreach` .
 
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > Yinelenebilir koleksiyonun bir öğesini yanlışlıkla değiştirmemeye dikkat edin. Örneğin, sorgunun yürütülmesini <xref:System.Linq.IQueryable?displayProperty=nameWithType> değiştiren <xref:System.Collections.IEnumerable?displayProperty=nameWithType> bir `foreach` deyimde geçiş yapmak kolaydır.
+     > Yinelenebilir bir koleksiyonun öğe türünü yanlışlıkla değiştirmemeye dikkat edin. Örneğin, bir <xref:System.Linq.IQueryable?displayProperty=nameWithType> <xref:System.Collections.IEnumerable?displayProperty=nameWithType> sorgunun yürütülmesini değiştiren bir ifadede öğesine geçiş yapmak kolaydır `foreach` .
 
 ### <a name="unsigned-data-type"></a>İmzasız Veri Türü  
   
-Genel olarak, `int` imzasız türler yerine kullanın. Kullanımı `int` C# boyunca yaygındır ve kullandığınızda `int`diğer kitaplıklarla etkileşim kurmak daha kolaydır.  
+Genel olarak, `int` imzasız türler yerine kullanın. Kullanımı `int` C# ' nin tamamında ortaktır ve kullandığınızda diğer kitaplıklarla etkileşim kurmak daha kolaydır `int` .  
   
 ### <a name="arrays"></a>Diziler  
   
-Bildirim satırındaki dizileri baş harfe aldığınızda kısa sözdizimini kullanın.  
+Bildirim satırında dizileri başlattığınızda kısa sözdizimini kullanın.  
   
 [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>Temsilciler  
   
-Temsilci türü örnekleri oluşturmak için kısa sözdizimini kullanın.  
+Bir temsilci türünün örneklerini oluşturmak için kısa sözdizimini kullanın.  
   
 [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
@@ -132,23 +133,23 @@ Temsilci türü örnekleri oluşturmak için kısa sözdizimini kullanın.
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>try-catch ve Özel Durum İşleme bölümünde Deyimleri kullanma  
   
-- Çoğu özel durum işleme için [try-catch](../../language-reference/keywords/try-catch.md) deyimi kullanın.  
+- Çoğu özel durum işleme için [try-catch](../../language-reference/keywords/try-catch.md) ifadesini kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- [C# deyimini kullanarak](../../language-reference/keywords/using-statement.md)kodunuzu basitleştirin. Bloktaki tek kodun <xref:System.IDisposable.Dispose%2A> yönteme çağrı olduğu bir `using` [try-finally](../../language-reference/keywords/try-finally.md) deyiminiz varsa, bunun yerine bir deyim kullanın. `finally`  
+- C# [using ifadesini](../../language-reference/keywords/using-statement.md)kullanarak kodunuzu kolaylaştırın. Yalnızca bloktaki kodun yöntemine yönelik bir çağrı olduğu bir [try-finally](../../language-reference/keywords/try-finally.md) deyiminiz varsa `finally` <xref:System.IDisposable.Dispose%2A> , `using` bunun yerine bir ifade kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
-### <a name="-and-124124-operators"></a>&& ve &#124;&#124; Operatörleri  
+### <a name="-and-124124-operators"></a>&& ve &#124;&#124; Işleçleri  
   
-İstisnaları önlemek ve gereksiz karşılaştırmaları atlayarak [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) performansı [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) artırmak için, aşağıdaki örnekte gösterildiği gibi karşılaştırmalar yaparken [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) yerine yerine kullanın ve [&#124;&#124;.](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)  
+Gereksiz karşılaştırmaları atlayarak özel durumların önüne geçmek ve performansı artırmak için, [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) Aşağıdaki örnekte gösterildiği gibi karşılaştırmaları gerçekleştirirken [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) yerine yerine [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) kullanın.  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
 ### <a name="new-operator"></a>Yeni İşleç  
   
-- Aşağıdaki bildirimde gösterildiği gibi, örtük yazım la nesne anlık kısa formu kullanın.  
+- Aşağıdaki bildirimde gösterildiği gibi örtük olarak yazılan nesne örneğinin kısa biçimini kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#19](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#19)]  
   
@@ -156,13 +157,13 @@ Temsilci türü örnekleri oluşturmak için kısa sözdizimini kullanın.
   
      [!code-csharp[csProgGuideCodingConventions#20](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#20)]  
   
-- Nesne oluşturmayı kolaylaştırmak için nesne baş harflerini kullanın.  
+- Nesne oluşturma işlemini basitleştirmek için nesne başlatıcıları kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#21](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#21)]  
   
 ### <a name="event-handling"></a>Olay İşleme  
   
-Daha sonra kaldırmanız gerekmeyen bir olay işleyicisi tanımlıyorsanız, lambda ifadesi kullanın.  
+Daha sonra kaldırmanız gerekmeyen bir olay işleyicisi tanımlıyorsanız, bir lambda ifadesi kullanın.  
   
 [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
@@ -170,39 +171,39 @@ Daha sonra kaldırmanız gerekmeyen bir olay işleyicisi tanımlıyorsanız, lam
   
 ### <a name="static-members"></a>Statik Üyeler  
   
-Sınıf adını kullanarak [statik](../../language-reference/keywords/static.md) üyeleri arayın: *ClassName.StaticMember*. Bu uygulama, statik erişimi net hale getirerek kodu daha okunabilir hale getirir.  Taban sınıfta tanımlanan statik bir üyeyi türetilmiş sınıf adıyla nitelemayın.  Bu kod derlenirken, kod okunabilirliği yanıltıcıdır ve türemiş sınıfa aynı ada sahip statik bir üye eklerseniz kod gelecekte kırılabilir.  
+[Statik](../../language-reference/keywords/static.md) üyeleri, sınıf adı: *ClassName. staticmember*' i kullanarak çağırın. Bu uygulama, statik erişim Temizleme yaparak kodu daha okunabilir hale getirir.  Türetilmiş bir sınıf adına sahip bir temel sınıfta tanımlanan statik bir üyeyi nitelemeyin.  Kod derlense de, kod okunurluğu yanıltıcı olur ve türetilmiş sınıfa aynı ada sahip bir statik üye eklerseniz kod daha sonra bozulabilir.  
   
 ### <a name="linq-queries"></a>LINQ Sorguları  
   
-- Sorgu değişkenleri için anlamlı adlar kullanın. Aşağıdaki örnek, `seattleCustomers` Seattle'da bulunan müşteriler için kullanır.  
+- Sorgu değişkenleri için anlamlı adlar kullanın. Aşağıdaki örnek `seattleCustomers` Seattle 'da bulunan müşteriler için kullanır.  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
-- Pascal kasasını kullanarak anonim türdeki özellik adlarının doğru şekilde büyük harfle yazdığından emin olmak için takma adlar kullanın.  
+- Anonim türlerin özellik adlarının, Pascal büyük küçük harf kullanarak doğru şekilde büyük harfli olduğundan emin olmak için diğer adları kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
-- Sonuç taki özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Örneğin, sorgunuz bir müşteri adı ve bir distribütör kimliği `Name` döndürürse, sonuç olarak ve `ID` sonuç olarak bırakmak `ID` yerine, müşterinin adı olduğunu ve bir distribütörün kimliği olduğunu `Name` açıklığa kavuşturmak için bunları yeniden adlandırın.  
+- Sonuç içindeki Özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Örneğin, sorgunuz bir müşteri adı ve bir dağıtıcı KIMLIĞI döndürürse, ve sonuç olarak bırakmak yerine, `Name` `ID` `Name` bir müşterinin adı olduğunu ve bır dağıtıcının kimliğini açıklığa kavuşturacak şekilde yeniden adlandırın `ID` .  
   
      [!code-csharp[csProgGuideCodingConventions#27](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#27)]  
   
-- Sorgu değişkenleri ve aralık değişkenleri bildiriminde örtük yazıyı kullanın.  
+- Sorgu değişkenleri ve Aralık değişkenleri bildiriminde örtük yazma kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
-- Önceki örneklerde gösterildiği [gibi, sorgu](../../language-reference/keywords/from-clause.md) yan tümcelerini from yan tümcesinin altında hizala.  
+- Önceki örneklerde gösterildiği gibi, [from](../../language-reference/keywords/from-clause.md) yan tümcesinin altındaki sorgu yan tümcelerini hizalayın.  
   
-- Daha sonraki sorgu yan tümcelerinin azaltılmış, filtre uygulanmış veri kümesinde çalışmasını sağlamak için diğer sorgu yan tümcelerinden önce [nerede](../../language-reference/keywords/where-clause.md) yan tümcelerini kullanın.  
+- Daha sonra sorgu yan tümcelerinin azaltılmış ve filtrelenmiş veri kümesi üzerinde çalışmasını sağlamak için diğer sorgu yan tümcelerinden önce [WHERE](../../language-reference/keywords/where-clause.md) yan tümceleri kullanın.  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- İç `from` koleksiyonlara erişmek için [birleştirme](../../language-reference/keywords/join-clause.md) yan tümcesi yerine birden çok yan tümce kullanın. Örneğin, nesnelerin bir `Student` koleksiyonu her test puanları bir koleksiyon içerebilir. Aşağıdaki sorgu yürütüldüğünde, 90'ın üzerindeki her puanı, puanı alan öğrencinin soyadıyla birlikte döndürür.  
+- `from`İç koleksiyonlara erişmek için [JOIN](../../language-reference/keywords/join-clause.md) yan tümcesi yerine birden çok yan tümce kullanın. Örneğin, bir `Student` nesne koleksiyonu her biri bir test puanları koleksiyonu içerebilir. Aşağıdaki sorgu yürütüldüğünde, puanı alan öğrencinin son adıyla birlikte 90 ' ten fazla olan her puanı döndürür.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>Güvenlik  
 
-Güvenli Kodlama [Yönergeleri'ndeki](../../../standard/security/secure-coding-guidelines.md)yönergeleri izleyin.  
+[Güvenli kodlama yönergeleri](../../../standard/security/secure-coding-guidelines.md)bölümündeki yönergeleri izleyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

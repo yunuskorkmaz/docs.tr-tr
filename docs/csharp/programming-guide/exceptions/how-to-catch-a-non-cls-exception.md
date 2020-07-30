@@ -1,33 +1,34 @@
 ---
 title: CLS dışı özel durumu yakalama
+description: CLS dışı bir özel durum yakalama hakkında bilgi edinin. Bir kod örneğine bakın ve kullanılabilir ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 635cf0a9142f56dea4b2722fbf3f3eda505d85ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 255de4cab9a72491eb3b9624d968539d432e0442
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346272"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302015"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>CLS dışı özel durumu yakalama
-C++/CLI dahil olmak üzere bazı .NET dilleri, nesnelerin <xref:System.Exception>. Bu tür özel *durumlar, CLS dışı özel durumlar* veya Özel Durumlar *olarak*adlandırılır. C#'da CLS dışı özel durumlar atamazsınız, ancak bunları iki şekilde yakalayabilirsiniz:  
+C++/CLı dahil bazı .NET dilleri, nesnelerin türetmeyen özel durumlar oluşturmasını sağlar <xref:System.Exception> . Bu tür özel durumlar *CLS dışı özel durumlar* veya *özel durumlar*olarak adlandırılır. C# dilinde CLS olmayan özel durumlar belirtemezsiniz, ancak bunları iki şekilde yakalayabilirsiniz:  
   
 - Bir `catch (RuntimeWrappedException e)` blok içinde.
   
-     Varsayılan olarak, Visual C# derlemesi CLS olmayan özel durumları sarılmış özel durumlar olarak yakalar. <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> Özellik üzerinden erişilebilen özgün özel durum özelliğine erişmeniz gerekiyorsa bu yöntemi kullanın. Bu konunun ilerleyen sonraki yordamı, özel durumların bu şekilde nasıl yakaılacağını açıklar.  
+     Varsayılan olarak, bir Visual C# derlemesi, CLS dışı özel durumları sarmalanmış özel durumlar olarak yakalar. Bu yöntemi, özelliği aracılığıyla erişilebilen özgün özel duruma erişmeniz gerekiyorsa kullanın <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> . Bu konu başlığında ilerleyen yordamda, özel durumların bu şekilde nasıl yakalanacağı açıklanmaktadır.  
   
-- Genel bir catch bloğu içinde (bir istisna türü belirtilmeden bir `catch` catch blok) tüm diğer bloklar sonra konur.
+- Genel bir catch bloğu içinde (özel durum türü belirtilmeden bir catch bloğu), diğer tüm bloklarından sonra konur `catch` .
   
-     CLS dışı özel durumlara yanıt olarak bazı eylem (günlük dosyasına yazma gibi) gerçekleştirmek istediğinizde bu yöntemi kullanın ve özel durum bilgilerine erişmeniz gerekmez. Varsayılan olarak ortak dil çalışma süresi tüm özel durumları sarar. Bu davranışı devre dışı katmak için, genellikle AssemblyInfo.cs dosyasında bu derleme `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`düzeyi özniteliğini kodunuza ekleyin: .  
+     CLS olmayan özel durumlara yanıt olarak bazı eylemler (örneğin, bir günlük dosyasına yazma) gerçekleştirmek istediğinizde ve özel durum bilgilerine erişmeniz gerekmiyorsa bu yöntemi kullanın. Varsayılan olarak ortak dil çalışma zamanı tüm özel durumları sarmalanır. Bu davranışı devre dışı bırakmak için, bu derleme düzeyi özniteliğini kodunuzda, genellikle AssemblyInfo.cs dosyasında ekleyin: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]` .  
   
-### <a name="to-catch-a-non-cls-exception"></a>CLS olmayan bir özel durum yakalamak için  
+### <a name="to-catch-a-non-cls-exception"></a>CLS olmayan bir özel durumu yakalamak için  
   
-Bir `catch(RuntimeWrappedException e)` blok içinde, özellik üzerinden <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> orijinal özel durum erişin.  
+Bir `catch(RuntimeWrappedException e)` blok içinde, özelliği aracılığıyla özgün özel duruma erişin <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> .  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, C++/CLI ile yazılmış bir sınıf kitaplığından atılan CLS olmayan bir özel durum nasıl yakalandığını gösterir. Bu örnekte, C# istemci kodu atılan özel durum türünün <xref:System.String?displayProperty=nameWithType>bir . olduğunu önceden bildiğini unutmayın Bu türe <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> kodunuzdan erişilebildiği sürece özelliği özgün türünü geri atabilirsiniz.  
+ Aşağıdaki örnek, C++/CLIENDE yazılmış bir sınıf kitaplığından oluşturulan CLS olmayan bir özel durumun nasıl yakalanalınacağını gösterir. Bu örnekte, C# istemci kodunun, oluşturulmakta olan özel durum türünün bir olduğunu önceden öğrendiğine unutmayın <xref:System.String?displayProperty=nameWithType> . <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType>Bu tür, kodunuzun erişebileceği sürece özelliği özgün türünü geri çevirebilirsiniz.  
   
 ```csharp
 // Class library written in C++/CLI.
@@ -52,4 +53,4 @@ catch (RuntimeWrappedException e)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Runtime.CompilerServices.RuntimeWrappedException>
-- [Özel Durumlar ve Özel Durum Kullanımı](./index.md)
+- [Özel durumlar ve özel durum Işleme](./index.md)

@@ -1,21 +1,22 @@
 ---
 title: Derleyicinin ürettiği özel durumlar-C# Programlama Kılavuzu
+description: Derleyicinin ürettiği özel durumlar hakkında bilgi edinin. Otomatik olarak oluşturulan özel durumların ve bunların hata koşullarının listesini gözden geçirin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-ms.openlocfilehash: 1d2d561df3e496893657b050fa93b44c56542d97
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 1def83f72e83976ac672ec35169b4950a20ef54e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240739"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302067"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>Derleyicinin Ürettiği Özel Durumlar (C# Programlama Kılavuzu)
 
 Bazı özel durumlar, temel işlemler başarısız olduğunda .NET çalışma zamanı tarafından otomatik olarak oluşturulur. Bu özel durumlar ve bunların hata koşulları aşağıdaki tabloda listelenmiştir.  
   
-|Özel durum|Açıklama|  
+|Özel durum|Description|  
 |---------------|-----------------|  
 |<xref:System.ArithmeticException>|Ve gibi aritmetik işlemler sırasında oluşan özel durumlar için temel sınıf <xref:System.DivideByZeroException> <xref:System.OverflowException> .|  
 |<xref:System.ArrayTypeMismatchException>|Öğenin gerçek türü dizinin gerçek türüyle uyumlu olmadığından, bir dizi belirli bir öğeyi depolayamadığı zaman oluşturulur.|  
@@ -31,7 +32,7 @@ Bazı özel durumlar, temel işlemler başarısız olduğunda .NET çalışma za
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Özel Durumlar ve Özel Durum İşleme](./index.md)
+- [Özel durumlar ve özel durum Işleme](./index.md)
 - [Özel Durum İşleme](./exception-handling.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)

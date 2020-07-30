@@ -1,5 +1,6 @@
 ---
 title: Ad alanlarını kullanma-C# Programlama Kılavuzu
+description: Ad alanlarını, ad alanı diğer adlarına erişme ve kapsamı denetlemek için ad alanlarını kullanma gibi C# programlamada ad alanlarını nasıl kullanacağınızı öğrenin.
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 71d97f7c1c0c3ece0cdce3de4318d8a9d65baed3
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 86892f50e059c16ee9c133d7ba9f2716e11a8e56
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241935"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381703"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Ad alanlarını kullanma (C# Programlama Kılavuzu)
 

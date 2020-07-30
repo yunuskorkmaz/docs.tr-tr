@@ -4,12 +4,12 @@ description: .NET Core 'u hangi macOS sürümlerinin yükleyebileceğinizi öğr
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 2900d98dbd30c51f689cdce37ea273ccc4f598b5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308929"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302938"
 ---
 # <a name="install-net-core-on-macos"></a>MacOS 'ta .NET Core 'u yükler
 
@@ -33,7 +33,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 - ✔️, .NET Core sürümünün hala desteklendiğini gösterir.
 - Bir ❌ , .NET Core sürümünün desteklenmediğini belirtir.
 
-| Operating System          | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
+| İşletim Sistemi          | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
 |---------------------------|---------------|---------------|----------------|
 | macOS 10,15 "Catalina"    | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
 | macOS 10,14 "Mojave"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
@@ -145,7 +145,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > Yukarıdaki `export` Komutlar yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
 >
 > - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
 > - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
@@ -200,7 +200,7 @@ Bir Docker kapsayıcısında .NET Core kullanma hakkında daha fazla bilgi için
 
 - [.NET Core 'un zaten yüklü olup olmadığını denetleme](how-to-detect-installed-versions.md?pivots=os-macos).
 - [MacOS Catalina Ile çalışma](macos-notarization-issues.md).
-- [Öğretici: macOS 'u kullanmaya](../tutorials/using-on-mac-vs.md)başlayın.
+- [Öğretici: macOS 'u kullanmaya](../tutorials/with-visual-studio-mac.md)başlayın.
 - [Öğretici: Visual Studio Code yeni bir uygulama oluşturun](../tutorials/with-visual-studio-code.md).
 - [Öğretici: bir .NET Core uygulamasını Kapsayıize](../docker/build-container.md)edin.
 

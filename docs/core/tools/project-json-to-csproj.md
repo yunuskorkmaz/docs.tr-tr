@@ -1,22 +1,22 @@
 ---
-title: Project. JSON ve csproj karşılaştırması
-description: Project. JSON ve csproj öğeleri arasındaki eşlemeyi görüntüleyin.
+title: project.jsve csproj karşılaştırması
+description: project.json ve csproj öğeleri arasında bir eşlemeye bakın.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: c8638bc30ba09d8e8d464159aded60dcde4b8dc0
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83205828"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427027"
 ---
-# <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Project. JSON ve csproj özellikleri arasındaki eşleme
+# <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json ve csproj özellikleri arasında bir eşleme
 
 [Nate McMaster](https://github.com/natemcmaster) tarafından
 
-.NET Core araçları 'nın geliştirilmesi sırasında, artık *Project. JSON* dosyalarını desteklemeyen önemli bir tasarım değişikliği yapılmıştır ve bunun yerine .NET Core projelerini MSBuild/csproj biçimine taşıyın.
+.NET Core araçları 'nın geliştirilmesi sırasında, artık dosyalarda *project.js* desteklememeye yönelik önemli bir tasarım değişikliği yapılmıştır ve bunun yerine .NET Core projelerini MSBuild/csproj biçimine taşıyın.
 
-Bu makalede, Project *. JSON* Içindeki ayarların MSBuild/csproj biçiminde nasıl temsil edildiği gösterilmektedir, böylece yeni biçimin nasıl kullanılacağını ve projenizi araçların en son sürümüne yükseltirken geçiş araçlarının yaptığı değişiklikleri nasıl anlayabileceğinizi öğrenebilirsiniz.
+Bu makalede, *project.jsüzerindeki* ayarların MSBuild/csproj biçiminde nasıl temsil edildiği gösterilmektedir. böylece yeni biçimin nasıl kullanılacağını ve projenizi araçların en son sürümüne yükseltirken geçiş araçlarının yaptığı değişiklikleri nasıl anlayabileceğinizi öğrenebilirsiniz.
 
 ## <a name="the-csproj-format"></a>Csproj biçimi
 
@@ -49,7 +49,7 @@ Varsayılan olarak, proje dosya adı ve özelliklerinin değerini de belirtir `<
 </PropertyGroup>
 ```
 
-, `<AssemblyName>` `<PackageId>` `buildOptions\outputName` Property, Project. JSON içinde tanımlananla farklı bir değere sahip olacaktır.
+, `<AssemblyName>` `<PackageId>` `buildOptions\outputName` Üzerinde project.jsözelliğinde tanımlanmış, farklı bir değere sahip olur.
 Daha fazla bilgi için bkz. [diğer ortak derleme seçenekleri](#other-common-build-options).
 
 ### <a name="version"></a>sürüm
@@ -332,7 +332,7 @@ Csproj içinde eşdeğer değildir.
 
 ### <a name="standalone-apps-self-contained-deployment"></a>Tek başına uygulamalar (otomatik olarak kapsanan dağıtım)
 
-Project. json ' de bir bölüm tanımlamak, `runtimes` uygulamanın oluşturma ve yayımlama sırasında tek başına olduğu anlamına gelir.
+project.jsüzerinde, Bölüm tanımlama, `runtimes` uygulamanın oluşturma ve yayımlama sırasında tek başına olduğu anlamına gelir.
 MSBuild 'de, tüm projeler derleme sırasında *Taşınabilir* , ancak tek başına olarak yayımlanabilir.
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
@@ -475,7 +475,7 @@ Ayrıca bkz. [dosyalar](#files).
   <!-- summary is not migrated from project.json, but you can use the <Description> property for that if needed. -->
   <PackageTags>machine learning;framework</PackageTags>
   <PackageReleaseNotes>Version 0.9.12-beta</PackageReleaseNotes>
-  <PackageIconUrl>http://numl.net/images/ico.png</PackageIconUrl>
+  <PackageIcon>ico.png</PackageIcon>
   <PackageProjectUrl>http://numl.net</PackageProjectUrl>
   <PackageLicenseUrl>https://raw.githubusercontent.com/sethjuarez/numl/master/LICENSE.md</PackageLicenseUrl>
   <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -485,7 +485,7 @@ Ayrıca bkz. [dosyalar](#files).
 </PropertyGroup>
 ```
 
-MSBuild içindeki öğe için eşdeğer yok `owners` . İçin `summary` MSBuild `<Description>` özelliğini kullanabilirsiniz. `summary`Bu özellik öğesiyle eşlendiği için değeri bu özelliğe otomatik olarak geçirilmez [`description`](#other-common-root-level-options) .
+MSBuild içindeki öğe için eşdeğer yok `owners` . İçin `summary` MSBuild `<Description>` özelliğini kullanabilirsiniz. `summary`Bu özellik öğesiyle eşlendiği için değeri bu özelliğe otomatik olarak geçirilmez [`description`](#other-common-root-level-options) .  [Packageiconurl,](/nuget/reference/msbuild-targets#packageiconurl) packageıcon kullanımı için kullanım dışıdır.
 
 ## <a name="scripts"></a>betikler
 
@@ -527,7 +527,7 @@ MSBuild 'teki eşdeğerleri [hedefler](/visualstudio/msbuild/msbuild-targets):
 }
 ```
 
-Özelliği hariç, bu gruptaki tüm ayarlar, `System.GC.Server` proje klasöründe *runtimeconfig. Template. JSON* adlı bir dosyaya yerleştirilir ve bu seçenek, geçiş işlemi sırasında kök nesneye yükseltilmemiş.
+Özelliği hariç bu gruptaki tüm ayarlar, `System.GC.Server` proje klasöründe *runtimeconfig.template.js* adlı bir dosyaya yerleştirilir ve bu işlem, geçiş işlemi sırasında kök nesneye yükseltilmemiş.
 
 ```json
 {
@@ -573,7 +573,7 @@ Daha fazla bilgi için bkz. [içerik dosyaları ekleme](/nuget/schema/nuspec#inc
 
 ## <a name="files"></a>files
 
-*Project. JSON*içinde derleme ve paketleme farklı klasörlerden derlenmesi ve katıştırılması için genişletilebilir.
+*project.jsüzerinde*, derleme ve paketleme farklı klasörlerden derlemek ve eklemek için genişletilebilir.
 MSBuild 'te bu, [öğeler](/visualstudio/msbuild/common-msbuild-project-items)kullanılarak yapılır. Aşağıdaki örnek ortak bir dönüştürmedir:
 
 ```json

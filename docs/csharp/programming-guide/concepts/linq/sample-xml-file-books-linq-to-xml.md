@@ -1,18 +1,19 @@
 ---
 title: 'Örnek XML Dosyası: Kitaplar (LINQ to XML)'
+description: Bu XML dosyası LINQ to XML belgelerindeki çeşitli örneklerde kullanılır. Dosya, kitaplar hakkındaki bilgileri içerir.
 ms.date: 07/20/2015
 ms.assetid: b75ab1a2-fb76-4df9-bd01-c45ec22a29ef
-ms.openlocfilehash: bcdc402fc32278a1cd3ddde52a0b102f0d939005
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2ff47dada19c63e037d64db6c48783811bc9c8f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168278"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302587"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>Örnek XML Dosyası: Kitaplar (LINQ to XML)
-Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerdeki çeşitli örneklerde kullanılır. Dosya kitaplar hakkında bilgi içerir.  
+Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Dosya, kitaplar hakkındaki bilgileri içerir.  
   
-## <a name="booksxml"></a>Books.xml  
+## <a name="booksxml"></a>books.xml  
   
 ```xml  
 <?xml version="1.0"?>  

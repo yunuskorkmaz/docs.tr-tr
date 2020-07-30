@@ -1,25 +1,26 @@
 ---
 title: C# Dilinde Varsayılan Ad Alanlarının Kapsamı
+description: C# ' deki LINQ to XML varsayılan XML ad alanlarında sorgulama hakkında bilgi edinin. Sorgu için tam bir ad oluşturmak üzere bir XNamespace değişkeni ve yerel adı kullanın.
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 912e47099f89daa9b80ac58b422d39d598509ac9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253047"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302405"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C'deki Varsayılan Ad Alanlarının Kapsamı\#
-XML ağacında temsil edilen varsayılan ad alanları sorgular için kapsam içinde değildir. Varsayılan ad alanında bulunan XML'niz varsa, yine <xref:System.Xml.Linq.XNamespace> de bir değişken ilbildirmeniz ve sorguda kullanılacak nitelikli bir ad yapmak için bunu yerel adla birleştirmeniz gerekir.  
+# <a name="scope-of-default-namespaces-in-c"></a>C 'de varsayılan ad alanlarının kapsamı\#
+XML ağacında temsil edilen varsayılan ad alanları sorgular kapsamında değildir. Varsayılan bir ad alanında olan XML varsa, <xref:System.Xml.Linq.XNamespace> sorguda kullanılacak nitelikli bir ad oluşturmak için bir değişken bildirmeniz ve bunu yerel adla birleştirmeniz gerekir.  
   
- XML ağaçlarını sorgularken en sık karşılaşılan sorunlardan biri, XML ağacının varsayılan ad alanı varsa, geliştiricinin bazen sorguyu XML ad alanında değilmiş gibi yazmasıdır.  
+ XML ağaçlarını sorgularken en yaygın sorunlardan biri, XML ağacının varsayılan bir ad alanına sahip olması ve geliştiricinin bazen sorguyu bir ad alanında olmamasına rağmen yazar.  
   
- Bu konudaki ilk örnek kümesi, varsayılan ad alanında XML'nin yüklenmesinin tipik bir yolunu gösterir, ancak yanlış sorgulanır.  
+ Bu konudaki ilk örnek kümesi, varsayılan bir ad alanındaki XML 'nin yüklendiği, ancak yanlış sorgulandığı tipik bir yöntemi gösterir.  
   
- İkinci örnek kümesi, xml'i bir ad alanında sorgulayabilmeniz için gerekli düzeltmeleri gösterir.  
+ İkinci örnek kümesinde, bir ad alanında XML 'yi sorgulayabilmeniz için gerekli düzeltmeler gösterilmektedir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanında XML oluşturulmasını ve boş bir sonuç kümesidöndüren bir sorguyu gösterir.  
+ Bu örnek, bir ad alanında XML oluşturmayı ve boş bir sonuç kümesi döndüren bir sorguyu gösterir.  
   
 ### <a name="code"></a>Kod  
   
@@ -51,9 +52,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanında XML oluşturulmasını ve düzgün kodlanmış bir sorguyu gösterir.  
+ Bu örnek, bir ad alanında XML oluşturmayı ve düzgün kodlanmış bir sorguyu gösterir.  
   
- Yukarıdaki yanlış kodlanmış örneğin aksine, C# kullanırken doğru yaklaşım, bir <xref:System.Xml.Linq.XNamespace> nesneyi bildirmek ve başlatmak <xref:System.Xml.Linq.XName> ve nesneleri belirtirken kullanmaktır. Bu durumda, yönteme <xref:System.Xml.Linq.XContainer.Elements%2A> bağımsız değişken <xref:System.Xml.Linq.XName> bir nesnedir.  
+ Yukarıdaki yanlış kodlanmış örneğin aksine, C# kullanırken doğru yaklaşım bir nesneyi bildirmek ve başlatmak <xref:System.Xml.Linq.XNamespace> ve nesneleri belirtirken kullanmak <xref:System.Xml.Linq.XName> . Bu durumda, yöntemin bağımsız değişkeni <xref:System.Xml.Linq.XContainer.Elements%2A> bir <xref:System.Xml.Linq.XName> nesnedir.  
   
 ### <a name="code"></a>Kod  
   
@@ -90,4 +91,4 @@ End of result set
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [İsim Alanlarına Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md)
+- [Ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

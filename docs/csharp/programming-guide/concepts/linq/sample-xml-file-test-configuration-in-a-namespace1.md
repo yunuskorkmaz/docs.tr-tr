@@ -1,16 +1,17 @@
 ---
 title: 'Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması'
+description: Bu XML dosyası LINQ to XML belgelerindeki çeşitli örneklerde kullanılır. Dosya bir test yapılandırma dosyasıdır. XML bir ad alanıdır.
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: ed25a8608977070e0db5f4cdee8a44a3c347cc8e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e08bc476eda39b6e9ff3e2958a49a0d9e5dc303a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168008"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302483"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Test Yapılandırması
-Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerdeki çeşitli örneklerde kullanılır. Bu bir test yapılandırma dosyasıdır. XML bir ad alanında.  
+Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Bu bir test yapılandırma dosyasıdır. XML bir ad alanıdır.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
   

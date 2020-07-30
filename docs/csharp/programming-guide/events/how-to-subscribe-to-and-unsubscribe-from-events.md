@@ -1,17 +1,18 @@
 ---
 title: Olaylara abone olma ve aboneliği kaldırma-C# Programlama Kılavuzu
+description: Olaylara abone olma ve olayları kaldırma hakkında bilgi edinin. Visual Studio IDE 'yi kullanarak, programlı olarak veya anonim bir yöntem kullanarak olaylara abone olun.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: f228cc2e4fd719f4d79c56d65aa45b2a3031cba7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84240674"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302093"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Olaylara abone olma ve aboneliği kaldırma (C# Programlama Kılavuzu)
 Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, başka bir sınıf tarafından yayımlanan bir olaya abone olursunuz. Örneğin, `click` Kullanıcı düğmeye tıkladığında uygulamanızı yararlı hale getirmek için bir düğmenin olayına abone olabilirsiniz.  

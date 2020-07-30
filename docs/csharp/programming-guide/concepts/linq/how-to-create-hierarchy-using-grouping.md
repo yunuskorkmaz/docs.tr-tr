@@ -1,21 +1,22 @@
 ---
-title: Gruplandırmayı kullanarak hiyerarşi oluşturma (C#)
+title: Gruplandırma kullanarak hiyerarşi oluşturma (C#)
+description: Verileri gruplamayı ve ardından XML hiyerarşisinin gruplandırmayı yansıtan yeni bir XML dosyası oluşturmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: c5a96b02595446b2efa01868cc88377c3a5151c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9470ce9b9b7702cf9b835cb2143b6a36f3a254f
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141309"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302925"
 ---
-# <a name="how-to-create-hierarchy-using-grouping-c"></a>Gruplandırmayı kullanarak hiyerarşi oluşturma (C#)
-Bu örnek, verilerin nasıl gruplatınıgösterilen ve gruplandırmaya dayalı Olarak XML'nin nasıl oluşturacağı gösterilmektedir.  
+# <a name="how-to-create-hierarchy-using-grouping-c"></a>Gruplandırma kullanarak hiyerarşi oluşturma (C#)
+Bu örnek, verilerin nasıl gruplanıp gruplandırılmasının yanı sıra gruplandırma temelli XML oluşturmayı gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, önce verileri bir kategoriye göre gruplandırmak, sonra XML hiyerarşisinin gruplandırmayı yansıttığı yeni bir XML dosyası oluşturur.  
+ Bu örnek öncelikle verileri bir kategoriye göre gruplandırır, ardından XML hiyerarşisinin gruplamayı yansıtan yeni bir XML dosyası oluşturur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanılır: [Örnek XML Dosyası: Sayısal Veriler (LINQ-XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: sayısal veri (LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -35,7 +36,7 @@ var newData =
 Console.WriteLine(newData);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  

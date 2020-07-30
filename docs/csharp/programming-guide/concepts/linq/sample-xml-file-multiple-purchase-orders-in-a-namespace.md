@@ -1,18 +1,19 @@
 ---
-title: 'Örnek XML Dosyası: Bir Namespace2 birden Çok Satınalma Siparişleri'
+title: 'Örnek XML dosyası: bir Namespace2 içinde birden çok satın alma siparişi'
+description: Bu XML dosyası LINQ to XML belgelerindeki çeşitli örneklerde kullanılır. Dosya birkaç satın alma siparişi içerir. XML bir ad alanıdır.
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: f525f73854b52b8a4d70ff842c19d3bdda9c38d5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2dd16d2ebe7e8e05d52df79b7d725b5acf0e6c9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168193"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302535"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Birden Fazla Satın Alma Siparişi
-Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerdeki çeşitli örneklerde kullanılır. Bu dosya birkaç satınalma siparişi içerir. XML bir ad alanında.  
+Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Bu dosya birkaç satın alma siparişi içerir. XML bir ad alanıdır.  
   
-## <a name="purchaseordersinnamespacexml"></a>Satın AlmaOrdersInNamespace.xml  
+## <a name="purchaseordersinnamespacexml"></a>PurchaseOrdersInNamespace.xml  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -1,15 +1,16 @@
 ---
 title: Eşitlik karşılaştırmaları-C# Programlama Kılavuzu
+description: Eşitlik karşılaştırmaları hakkında bilgi edinin. ' Değer eşitlik ' ve ' başvuru eşitliği ' açıklamalarını inceleyin ve ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 46d6881955252b21de6a92e25d65d1f76c8ec06c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d10d1851978ef25b7b02503f196cd2a436aab608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241922"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381690"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Eşitlik karşılaştırmaları (C# Programlama Kılavuzu)
 

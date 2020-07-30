@@ -1,21 +1,23 @@
 ---
-title: korumalı dahili - C# Referans
+title: Protected Internal-C# başvurusu
 ms.date: 11/15/2017
+f1_keywords:
+- protectedinternal_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4067da93bcceba0fa3e4a14aa58b4cde812412f3
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713202"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301794"
 ---
-# <a name="protected-internal-c-reference"></a>korumalı dahili (C# Reference)
+# <a name="protected-internal-c-reference"></a>korumalı iç (C# Başvurusu)
 
-`protected internal` Anahtar kelime birleşimi bir üye erişim değiştiricidir. Korumalı bir iç üyeye geçerli derlemeden veya içeren sınıftan türetilen türlerden erişilebilir. Diğer erişim `protected internal` değiştiriciler ile karşılaştırma için [Erişilebilirlik Düzeyleri'ne](accessibility-levels.md)bakın.
+`protected internal`Anahtar sözcük birleşimi bir üye erişim değiştiricisidir. Korunan bir iç üyeye geçerli derlemeden veya kapsayan sınıftan türetilmiş türlerden erişilebilir. `protected internal`Diğer erişim değiştiricilerine ilişkin bir karşılaştırma için bkz. [Erişilebilirlik düzeyleri](accessibility-levels.md).
 
 ## <a name="example"></a>Örnek
 
-Taban sınıfın korumalı bir iç üyesine, içerdiği derlemedeki herhangi bir türden erişilebilir. Erişim türemiş sınıf türünden bir değişken aracılığıyla oluşursa, başka bir derlemede bulunan türemiş bir sınıfta da erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:
+Bir temel sınıfın korunan iç üyesine, kendisini içeren derleme içindeki herhangi bir türden erişilebilir. Ayrıca, başka bir derlemede bulunan türetilmiş bir sınıfta, yalnızca erişim türetilmiş sınıf türünün bir değişkeniyle gerçekleşirse erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:
 
 ```csharp
 // Assembly1.cs
@@ -55,11 +57,11 @@ class DerivedClass : BaseClass
 }
 ```
 
-Bu örnekte iki `Assembly1.cs` `Assembly2.cs`dosya ve .
-İlk dosya, ortak taban `BaseClass`sınıf ve başka `TestAccess`bir sınıf içerir. `BaseClass`türüne göre erişilen korumalı bir `TestAccess` dahili üyeye `myValue`sahip.
-İkinci dosyada, bir hata `myValue` örneği `BaseClass` üzerinden erişim girişimi bir hata üretirken, türetilmiş bir `DerivedClass` sınıfın bir örneği aracılığıyla bu üyeye erişim başarılı olacaktır.
+Bu örnek, ve olmak üzere iki dosya içerir `Assembly1.cs` `Assembly2.cs` .
+İlk dosya bir ortak temel sınıf, `BaseClass` ve başka bir sınıf içerir `TestAccess` . `BaseClass`, türü tarafından erişilen korumalı bir iç üyeye sahip `myValue` `TestAccess` .
+İkinci dosyada, `myValue` bir örneği üzerinden erişim girişimi `BaseClass` bir hata üretir, bu üyeye türetilmiş bir sınıf örneği aracılığıyla erişim `DerivedClass` başarılı olur.
 
-Yapı üyeleri, yapının devralınamayacağı için olamaz. `protected internal`
+Struct üye olamaz `protected internal` çünkü yapı devralınamaz.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -67,13 +69,13 @@ Yapı üyeleri, yapının devralınamayacağı için olamaz. `protected internal
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [Kamu](public.md)
-- [Özel](private.md)
-- [Iç](internal.md)
-- [Dahili sanal anahtar kelimeler için güvenlik endişeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [genel](public.md)
+- [özelleştirme](private.md)
+- [internal](internal.md)
+- [İç sanal anahtar sözcüklere yönelik güvenlik sorunları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

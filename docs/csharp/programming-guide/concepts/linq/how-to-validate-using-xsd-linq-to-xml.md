@@ -1,19 +1,20 @@
 ---
-title: XSD (LINQ - XML) (C#) kullanımı nasıl doğrulanır?
+title: XSD kullanarak doğrulama (LINQ to XML) (C#)
+description: Xml ağacının bir XML şeması tanım dili (XSD) dosyası ile nasıl doğrulandığını öğrenin. Kod örneklerine bakın ve ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
-ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4d2137d511efbe20e4d31ad27e4975d5444ec9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347247"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302639"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>XSD (LINQ - XML) (C#) kullanımı nasıl doğrulanır?
-Ad <xref:System.Xml.Schema> alanı, xml şema tanım dili (XSD) dosyasına karşı bir XML ağacını doğrulamayı kolaylaştıran uzantı yöntemleri içerir. Daha fazla bilgi <xref:System.Xml.Schema.Extensions.Validate%2A> için yöntem belgelerine bakın.  
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>XSD kullanarak doğrulama (LINQ to XML) (C#)
+Ad alanı, bir XML <xref:System.Xml.Schema> ağacının BIR XML şeması tanım dili (xsd) dosyasına göre doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. Daha fazla bilgi için <xref:System.Xml.Schema.Extensions.Validate%2A> Yöntem belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, şema <xref:System.Xml.Schema.XmlSchemaSet>kümesine <xref:System.Xml.Linq.XDocument> karşı iki nesneyi doğrular. Belgelerden biri geçerli, diğeri geçerli değil.  
+ Aşağıdaki örnek bir oluşturur <xref:System.Xml.Schema.XmlSchemaSet> , sonra <xref:System.Xml.Linq.XDocument> şema kümesinde iki nesneyi doğrular. Belgelerden biri geçerli, diğeri değildir.  
   
 ```csharp  
 string xsdMarkup =  
@@ -64,7 +65,7 @@ doc2.Validate(schemas, (o, e) =>
 Console.WriteLine("doc2 {0}", errors ? "did not validate" : "validated");  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Validating doc1  
@@ -76,11 +77,11 @@ doc2 did not validate
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, Örnek XML Dosyasından XML belgesinin geçerli olduğunu [doğrular: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) Örnek [XSD Dosyasından](./sample-xsd-file-customers-and-orders1.md)şema başına geçerlidir: Müşteriler ve Siparişler. Daha sonra kaynak XML belgedeğiştirir. İlk müşterideki `CustomerID` özniteliği değiştirir. Değişiklikten sonra, siparişler var olmayan bir müşteriye başvurur, böylece XML belgesi artık doğrulanmaz.  
+ Aşağıdaki örnek, XML belgesinin [örnek XML dosyasından bulunduğunu doğrular: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) [örnek xsd dosyasından şema başına geçerlidir: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md). Sonra kaynak XML belgesini değiştirir. `CustomerID`İlk Müşterideki özniteliği değiştirir. Değişiklik sonrasında, siparişler var olmayan bir müşteriye başvuracaktır, bu nedenle XML belgesi artık doğrulanmaz.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
- Bu örnekte aşağıdaki XSD şeması kullanır: [Örnek XSD Dosyası: Müşteriler ve Siparişler.](./sample-xsd-file-customers-and-orders1.md)  
+ Bu örnek şu XSD şemasını kullanır: [örnek xsd dosyası: müşteriler ve siparişler](./sample-xsd-file-customers-and-orders1.md).  
   
 ```csharp  
 XmlSchemaSet schemas = new XmlSchemaSet();  
@@ -109,7 +110,7 @@ custOrdDoc.Validate(schemas, (o, e) =>
 Console.WriteLine("custOrdDoc {0}", errors ? "did not validate" : "validated");  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Attempting to validate  
@@ -123,4 +124,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
-- [XML Ağaçları Oluşturma (C#)](creating-xml-trees-linq-to-xml-2.md)
+- [XML ağaçları oluşturma (C#)](creating-xml-trees-linq-to-xml-2.md)

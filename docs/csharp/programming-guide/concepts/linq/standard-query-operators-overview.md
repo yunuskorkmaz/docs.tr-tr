@@ -1,13 +1,14 @@
 ---
 title: Standart sorgu Işleçlerine genel bakış (C#)
+description: LINQ standart sorgu işleçleri, C# ' de filtreleme, projeksiyon, toplama ve sıralama dahil olmak üzere sorgu özellikleri sağlar.
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 095a0b7a7a8265f235d28a4634ea82cdcd7a60c0
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 8a399f52881e10f8d94263843b5992101f96a5ea
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990009"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302327"
 ---
 # <a name="standard-query-operators-overview-c"></a>Standart sorgu Işleçlerine genel bakış (C#)
 *Standart sorgu IŞLEÇLERI* LINQ deseninin bulunduğu yöntemlerdir. Bu yöntemlerin çoğu diziler üzerinde çalışır, burada bir sıra, türü arabirimini veya arabirimi uygulayan bir nesnedir <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Linq.IQueryable%601> . Standart sorgu işleçleri filtreleme, yansıtma, toplama, sıralama ve daha fazlasını içeren sorgu özellikleri sağlar.  

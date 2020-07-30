@@ -1,17 +1,18 @@
 ---
 title: Tür parametrelerine yönelik kısıtlamalar-C# Programlama Kılavuzu
+description: Tür parametrelerinin kısıtlamaları hakkında bilgi edinin. Kısıtlamalar derleyiciye bir tür bağımsız değişkeninin sahip olması gereken özellikleri söyler.
 ms.date: 04/12/2018
 helpviewer_keywords:
 - generics [C#], type constraints
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 4c4554c808ab15776f3217c257e0a60119ea2338
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91807fa05ce49b8507ee6913ff2620452fcbfab5
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368367"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301950"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Tür Parametrelerindeki Kısıtlamalar (C# Programlama Kılavuzu)
 

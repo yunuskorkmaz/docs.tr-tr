@@ -1,23 +1,24 @@
 ---
-title: Birden çok tuşdaki öğeleri sıralama (C#)
+title: Birden çok anahtar üzerinde öğeleri sıralama (C#)
+description: Birden çok anahtar üzerinde öğeleri sıralamayı öğrenin. Örnek XML belgeleri kullanan öğeleri sıralama örneklerine bakın.
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: ddfeab4bf9b67231296ca90df1244a3b8a441440
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 486aac38a27cf064553894a548722a54c58c21b6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347378"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301508"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Birden çok tuşdaki öğeleri sıralama (C#)
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a>Birden çok anahtar üzerinde öğeleri sıralama (C#)
 
-Bu konu, birden çok anahtarda nasıl sıralanır gösteriş gösterir.
+Bu konu başlığı altında, birden çok anahtar üzerinde nasıl sıralama yapılacağı gösterilmektedir.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, sonuçlar önce sevkiyat posta kodu, ardından sipariş tarihi tarafından sıralanır.
+Bu örnekte, sonuçlar önce sevkiyat posta kodu tarafından, ardından sipariş tarihine göre sıralanır.
 
-Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
+Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -36,7 +37,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-Bu kod aşağıdaki çıktıyı üretir:
+Bu kod şu çıkışı oluşturur:
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -65,9 +66,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, ad alanında olan XML için aynı sorguyu gösterir. Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).
+Aşağıdaki örnek, bir ad alanında bulunan XML için aynı sorguyu gösterir. Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).
 
-Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Ad alanında müşteriler ve Siparişler.](./sample-xml-file-customers-and-orders-in-a-namespace.md)
+Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: bir ad alanındaki müşteriler ve siparişler](./sample-xml-file-customers-and-orders-in-a-namespace.md).
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
@@ -88,7 +89,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-Bu kod aşağıdaki çıktıyı üretir:
+Bu kod şu çıkışı oluşturur:
 
 ```output
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997

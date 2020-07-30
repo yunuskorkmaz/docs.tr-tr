@@ -1,5 +1,6 @@
 ---
 title: <include> -C# Programlama Kılavuzu
+description: XML hakkında bilgi edinin <include> Etiket. Bu etiket, kaynak kodunuzda türleri ve üyeleri tanımlayan başka bir dosyadaki açıklamalara başvurmanıza olanak sağlar.
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: bf41019c775fed25afe4bdb9453a8e52f44856b5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 15a99444d464594cc91a7c8805c564c703c3b608
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287356"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381911"
 ---
 # <a name="include-c-programming-guide"></a>\<include>(C# Programlama Kılavuzu)
 
@@ -53,7 +54,7 @@ Bu çok dosyalı bir örnektir. Tarafından kullanılan ilk dosya aşağıda ver
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
-İkinci dosya olan *xml_include_tag. doc*, aşağıdaki belge açıklamalarını içerir.
+İkinci dosya *xml_include_tag.doc*, aşağıdaki belge açıklamalarını içerir.
 
 ```xml
 <MyDocs>
@@ -75,7 +76,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>Program çıktısı
 
-Aşağıdaki komut satırı ile test ve test2 sınıflarını derlerken aşağıdaki çıktı oluşturulur: `-doc:DocFileName.xml.` Visual Studio 'da, proje Tasarımcısı 'Nın derleme BÖLMESINDE XML belgesi açıklamaları seçeneğini belirtirsiniz. C# derleyicisi `<include>` etiketini gördüğünde, geçerli kaynak dosya yerine *xml_include_tag. doc* dosyasındaki belge açıklamalarını arar. Daha sonra derleyici *DocFileName. xml*oluşturur ve bu, son belgeleri oluşturmak Için [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçları tarafından tüketilen dosyadır.  
+Aşağıdaki komut satırı ile test ve test2 sınıflarını derlerken aşağıdaki çıktı oluşturulur: `-doc:DocFileName.xml.` Visual Studio 'da, proje Tasarımcısı 'Nın derleme BÖLMESINDE XML belgesi açıklamaları seçeneğini belirtirsiniz. C# derleyicisi `<include>` etiketini gördüğünde, geçerli kaynak dosya yerine *xml_include_tag.doc* belge açıklamalarını arar. Derleyici daha sonra *DocFileName.xml*oluşturur ve bu, son belgeleri oluşturmak Için [sandrole](https://github.com/EWSoftware/SHFB) gibi belge araçları tarafından tüketilen dosyadır.  
   
 ```xml
 <?xml version="1.0"?>

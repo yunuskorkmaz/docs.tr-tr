@@ -1,16 +1,17 @@
 ---
-title: Grupları kullanarak bir dosyayı birçok dosyaya bölme (LINQ) (C#)
+title: Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)
+description: Grupları kullanarak bir dosyayı birçok dosyaya bölmeyi öğrenin. Bir kod örneğine bakın ve kullanılabilir ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1db16a48db257069eca83127c0b1fed7e49f19d6
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168576"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301066"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Grupları kullanarak bir dosyayı birçok dosyaya bölme (LINQ) (C#)
-Bu örnek, iki dosyanın içeriğini birleştirmenin ve ardından verileri yeni bir şekilde düzenleyen bir dizi yeni dosya oluşturmanın bir yolunu gösterir.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Grupları (LINQ) kullanarak bir dosyayı birden çok dosyaya bölme (C#)
+Bu örnek, iki dosyanın içeriğini birleştirmenin bir yolunu gösterir ve ardından verileri yeni bir şekilde düzenleyen yeni bir dosya kümesi oluşturur.  
   
 ### <a name="to-create-the-data-files"></a>Veri dosyalarını oluşturmak için  
   
@@ -29,7 +30,7 @@ Bu örnek, iki dosyanın içeriğini birleştirmenin ve ardından verileri yeni 
     Garcia, Debra  
     ```  
   
-2. Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin: İki dosyanın ortak bazı adları olduğunu unutmayın.  
+2. Bu adları names2.txt adlı bir metin dosyasına kopyalayın ve proje klasörünüze kaydedin: iki dosyanın ortak olarak bazı adlara sahip olduğunu unutmayın.  
   
     ```text  
     Liu, Jinghao  
@@ -122,13 +123,13 @@ class SplitWithGroups
  */  
 ```  
   
- Program, veri dosyalarıyla aynı klasördeki her grup için ayrı bir dosya yazar.  
+ Program, veri dosyalarıyla aynı klasöre her bir grup için ayrı bir dosya yazar.  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor
 
-System.Linq ve System.IO `using` ad alanları için yönergeleri içeren bir C# konsolu uygulama projesi oluşturun.
+`using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ ve Dizeleri (C#)](./linq-and-strings.md)
-- [LINQ ve Dosya Dizinleri (C#)](./linq-and-file-directories.md)
+- [LINQ ve dizeler (C#)](./linq-and-strings.md)
+- [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)

@@ -1,5 +1,6 @@
 ---
 title: <see>-C# Programlama Kılavuzu
+description: XML etiketi hakkında bilgi edinin <see> . Bu etiket, örneğin bir cref özniteliği kullanarak metin içinden bir bağlantı belirtmenize olanak tanır.
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 731e42a6d4d354b043a56dbe150bb03a693a9454
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 1cc4982d1ebe9d6896404218a6d200b10cc6503f
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863792"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381937"
 ---
 # <a name="see-c-programming-guide"></a>\<see>(C# Programlama Kılavuzu)
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 78a47b01cc8fba4cb45a686adad901784552c1c1
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865339"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303484"
 ---
-# <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
+# <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
 Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsoft.Json](https://www.newtonsoft.com/json) <xref:System.Text.Json> .
 
@@ -34,7 +34,7 @@ Bu makalede, ' den ' e nasıl geçiş yapılacağı gösterilmektedir [Newtonsof
 
 Bu makalenin çoğu, API 'yi kullanma ile <xref:System.Text.Json.JsonSerializer> ilgilidir, ancak aynı zamanda <xref:System.Text.Json.JsonDocument> (belge nesne MODELI veya DOM), <xref:System.Text.Json.Utf8JsonReader> ve türlerini temsil eder <xref:System.Text.Json.Utf8JsonWriter> .
 
-## <a name="table-of-differences-between-newtonsoftjson-and-systemtextjson"></a>Ve arasındaki farklar tablosu Newtonsoft.JsonSystem.Text.Json
+## <a name="table-of-differences-between-no-locnewtonsoftjson-and-no-locsystemtextjson"></a>Ve arasındaki farklar tablosu Newtonsoft.JsonSystem.Text.Json
 
 Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmektedir `System.Text.Json` . Eşdeğerleri aşağıdaki kategorilere ayrılır:
 
@@ -83,7 +83,7 @@ Aşağıdaki tabloda `Newtonsoft.Json` Özellikler ve eşdeğerleri listelenmekt
 
 Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [GitHub sorunları](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json) veya [StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json) gönderileri için istenen birçok senaryo bulunur. Burada listelenen senaryolardan biri için şu anda örnek kodu olmayan bir geçici çözüm uygularsanız ve çözümünüzü paylaşmak istiyorsanız, bu sayfanın altındaki **geri bildirim** bölümünde **Bu sayfayı** seçin. Bu, bu belgenin GitHub deposunda bir sorun oluşturur ve bu sayfadaki **geri bildirim** bölümünde de listeler.
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>Varsayılan JsonSerializer davranışındaki farklılıklarNewtonsoft.Json
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-no-locnewtonsoftjson"></a>Varsayılan JsonSerializer davranışındaki farklılıklarNewtonsoft.Json
 
 <xref:System.Text.Json>Varsayılan olarak katı olur ve arayan adına tahmin veya yorumlamayı önler, belirleyici davranışı vurgulayarak. Kitaplık, performans ve güvenlik için kasıtlı olarak bu şekilde tasarlanmıştır. `Newtonsoft.Json`Varsayılan olarak esnektir. Tasarımda bu temel fark, varsayılan davranıştaki aşağıdaki belirli farklılıklardan birçoğın arkasında bulunur.
 
@@ -402,12 +402,14 @@ Bu yaklaşım aşağıdaki durumlarda ek mantık gerektirir:
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/WeatherForecastCallbacksConverter.cs)]
 
-Bu özel dönüştürücüyü [sınıfında bir özniteliği kullanarak](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type) veya [dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) kaydedin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
+[Dönüştürücüyü koleksiyona ekleyerek](system-text-json-converters-how-to.md#registration-sample---converters-collection) bu özel dönüştürücüyü kaydedin <xref:System.Text.Json.JsonSerializerOptions.Converters> .
 
 Önceki örneği takip eden özel bir dönüştürücü kullanıyorsanız:
 
 * `OnDeserializing`Kodun yenı POCO örneğine erişimi yok. Yeni POCO örneğini serisini kaldırma başlangıcında işlemek için, bu kodu POCO yapıcısına koyun.
-* Özyinelemeli bir döngüden kaçınarak, Seçenekler nesnesine dönüştürücüyü kaydederek ve yinelemeli olarak ya da çağrılırken Options nesnesine geçirmekten kaçının `Serialize` `Deserialize` . Daha fazla bilgi için bu makalenin önceki bölümlerinde bulunan [gerekli özellikler](#required-properties) bölümüne bakın.
+* Özyinelemeli bir döngüden kaçınarak, Seçenekler nesnesine dönüştürücüyü kaydederek ve yinelemeli olarak ya da çağrılırken Options nesnesine geçirmekten kaçının `Serialize` `Deserialize` .
+
+Yinelemeli olarak çağıran özel dönüştürücüler hakkında daha fazla bilgi `Serialize` için `Deserialize` , bu makalenin önceki kısımlarında yer alan [gerekli özellikler](#required-properties) bölümüne bakın.
 
 ### <a name="public-and-non-public-fields"></a>Ortak ve genel olmayan alanlar
 
@@ -488,7 +490,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

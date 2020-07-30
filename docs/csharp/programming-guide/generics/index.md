@@ -1,16 +1,17 @@
 ---
 title: Genel türler-C# Programlama Kılavuzu
+description: Genel türler hakkında bilgi edinin. Genel türler kod yeniden kullanımını, tür güvenliğini ve performansı en üst düzeye çıkarır ve genellikle koleksiyon sınıfları oluşturmak için kullanılır.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: a3ed3aa412c7d9c9d6b705dba80b527057c647fa
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: beef9c20e3ac62505bc7a4584b404637935de1dc
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241675"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299402"
 ---
 # <a name="generics-c-programming-guide"></a>Genel Türler (C# Programlama Kılavuzu)
 
@@ -48,7 +49,7 @@ Aşağıdaki kod örneği, istemci kodunun `GenericList<T>` tamsayılar listesin
 - [Genel Tür Parametreleri](generic-type-parameters.md)
 - [Tür Parametrelerindeki Kısıtlamalar](constraints-on-type-parameters.md)
 - [Genel Sınıflar](generic-classes.md)
-- [Genel Arabirimler](generic-interfaces.md)
+- [Genel arabirimler](generic-interfaces.md)
 - [Genel Yöntemler](generic-methods.md)
 - [Genel Temsilciler](generic-delegates.md)
 - [C++ Şablonları ve C# Genel Türleri Arasındaki Farklar](differences-between-cpp-templates-and-csharp-generics.md)

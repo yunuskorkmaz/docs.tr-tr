@@ -1,19 +1,20 @@
 ---
-title: LINQ to XML (C#) kullanarak sözlüklerle nasıl çalışIlir?
+title: LINQ to XML kullanarak sözlüklerle çalışma (C#)
+description: LINQ to XML kullanarak sözlüklerle nasıl çalışacağınızı öğrenin. Bkz. sözlükleri XML ve XML 'e dönüştürme örnekleri diğer veri yapılarına geri.
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
-ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bdba7a2b3dfc16fab1e239ac804c317dfefb7d9e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347219"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302626"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>LINQ to XML (C#) kullanarak sözlüklerle nasıl çalışIlir?
-Veri yapılarının çeşitlerini XML'e, XML'i ise diğer veri yapılarına dönüştürmek genellikle uygundur. Bu konu, bir <xref:System.Collections.Generic.Dictionary%602> XML ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulama gösterir.  
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>LINQ to XML kullanarak sözlüklerle çalışma (C#)
+Çok sayıda veri yapısını XML 'e ve XML 'e diğer veri yapılarına dönüştürmek genellikle yararlıdır. Bu konu, bir XML ve geri dönüştürerek bu genel yaklaşımın belirli bir uygulamasını gösterir <xref:System.Collections.Generic.Dictionary%602> .  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, sorgunun yeni <xref:System.Xml.Linq.XElement> nesneleri oluşturduğu ve ortaya çıkan koleksiyonun Kök <xref:System.Xml.Linq.XElement> nesnenin oluşturucusu için bağımsız değişken olarak geçtiği işlevsel bir yapı biçimi kullanır.  
+ Bu örnek, bir sorgu projelerinin yeni <xref:System.Xml.Linq.XElement> nesne ve elde edilen koleksiyonun bir bağımsız değişken olarak kök nesnenin oluşturucusuna geçirildiği işlevsel oluşturma formunu kullanır <xref:System.Xml.Linq.XElement> .  
   
 ```csharp  
 Dictionary<string, string> dict = new Dictionary<string, string>();  
@@ -28,7 +29,7 @@ XElement root = new XElement("Root",
 Console.WriteLine(root);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```xml  
 <Root>  
@@ -40,7 +41,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod XML bir sözlük oluşturur.  
+ Aşağıdaki kod XML 'den bir sözlük oluşturur.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -57,7 +58,7 @@ foreach (string str in dict.Keys)
     Console.WriteLine("{0}:{1}", str, dict[str]);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 Child1:Value1  

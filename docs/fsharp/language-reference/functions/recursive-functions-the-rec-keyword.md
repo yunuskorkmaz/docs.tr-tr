@@ -1,19 +1,19 @@
 ---
-title: 'Özyinelemeli Işlevler: REC anahtar sözcüğü'
-description: "' Rec ' F# anahtar sözcüğünün özyinelemeli bir işlev tanımlamak için ' Let ' anahtar sözcüğüyle nasıl kullanıldığını öğrenin."
+title: 'Yinelemeli İşlevler: rec Anahtar Sözcüğü'
+description: "Bir özyinelemeli işlev tanımlamak için ' Let ' anahtar sözcüğüyle F # ' Rec ' anahtar sözcüğünün nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 7edaa7206b2109c7b1a405624b9b2330968f9c52
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630655"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87426982"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a>Özyinelemeli Işlevler: REC anahtar sözcüğü
+# <a name="recursive-functions-the-rec-keyword"></a>Yinelemeli İşlevler: rec Anahtar Sözcüğü
 
-Anahtar sözcüğü özyinelemeli bir işlev tanımlamak için `let` anahtar sözcüğüyle birlikte kullanılır. `rec`
+`rec`Anahtar sözcüğü `let` özyinelemeli bir işlev tanımlamak için anahtar sözcüğüyle birlikte kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 // Recursive function:
@@ -30,20 +30,47 @@ function2-body
 
 ## <a name="remarks"></a>Açıklamalar
 
-Kendini çağıran işlevler, açıkça F# dilde tanımlanır. Bu, tanımlanmakta olan tanımlayıcıların işlevin kapsamında kullanılabilir olmasını sağlar.
+Özyinelemeli işlevler, kendilerini çağıran işlevler, F # dilinde açıkça tanımlanır. Bu, tanımlanmakta olan tanımlayıcıların işlevin kapsamında kullanılabilir olmasını sağlar.
 
-Aşağıdaki kod, *n*<sup>.</sup> fibonaccı numarasını hesaplayan özyinelemeli bir işlevi gösterir.
+Aşağıdaki kod, matematik tanımını kullanarak *n*<sup>.</sup> fibonaccı numarasını hesaplayan özyinelemeli bir işlevi gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 > [!NOTE]
-> Uygulamada, yukarıda yer alan kod, daha önce hesaplanmış değerlerin yeniden hesaplanmasını içerdiğinden, bellek ve işlemci süresinin boşa harcanmasından kaynaklanır.
+> Uygulamada, önceki örneğe benzer bir kod, unecessarily daha önce hesaplanmış olan değerleri yeniden hesaplar olduğundan ideal değildir. Bunun nedeni, bu makalede daha fazla açıklanacak tail özyinelemeli değildir.
 
-Yöntemler tür içinde örtük olarak özyinelemeli; `rec` anahtar sözcüğü eklemeye gerek yoktur. Sınıfların içindeki bağlamaların örtülü olarak özyinelemeli olmadığından izin verin.
+Yöntemler tür içinde örtük olarak özyinelemeli; anahtar sözcüğü eklemeye gerek yoktur `rec` . Sınıfların içindeki bağlamaların örtülü olarak özyinelemeli olmadığından izin verin.
+
+## <a name="tail-recursion"></a>Kuyruk özyineleme
+
+Bazı Özyinelemeli işlevler için, daha "saf" tanımın [tail özyinelemeli](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)olan bir tanımına yeniden düzenlenmesi gerekir. Bu, unecessary yeniden hesaplamaları önler. Örneğin, önceki fibonaccı sayı Oluşturucusu şöyle olabilir:
+
+```fsharp
+let fib n =
+    let rec loop acc1 acc2 n =
+        match n with
+        | 0 -> acc1
+        | 1 -> acc2
+        | _ ->
+            loop acc2 (acc1 + acc2) (n - 1)
+    loop 0 1 n
+```
+
+Bu daha karmaşık bir uygulama. Fibonaccı numarası oluşturmak, matematiksel olarak saf, ancak verimsiz bir "Naïve" algoritmasına yönelik harika bir örnektir. Birkaç yönü, yine de özyinelemeli olarak tanımlanmış olan F # ' da verimli hale getirir:
+
+* Bir `loop` ı, F # deseninin adlı özyinelemeli bir iç işlev.
+* İki biriktiricidir parametresi, bu değerler, çoğaltılan çağrılara biriktir.
+* `n`Belirli bir birikme döndürmek için değerinin bir denetimi.
+
+Bu örnek bir döngüyle yinelemeli olarak yazılmışsa, kod, belirli bir koşul karşılanana kadar iki farklı değer ile benzer şekilde görünür.
+
+Bunun tail-özyinelemeli olmasının nedeni, özyinelemeli çağrının çağrı yığınında değer kaydetmesi gerekmez. Hesaplanmakta olan tüm ara değerler, iç işleve girişler aracılığıyla toplanır. Bu Ayrıca, F # derleyicisinin bir döngü gibi bir şey yazmışsınız gibi, kodu en yüksek hıza kadar hızlı bir şekilde iyileştirmelerine de olanak tanır `while` .
+
+Önceki örnekte gösterildiği gibi, bir iç ve dış işlevle bir şeyi yinelemeli olarak işleyen F # kodu yazmak yaygındır. İç işlev, Kuyruk özyineleme kullanır, dış işlevin çağıranlar için daha iyi bir arabirimi vardır.
 
 ## <a name="mutually-recursive-functions"></a>Birbirini karşılıklı özyinelemeli Işlevler
 
-Bazen işlevler *birbirini yinelemelidir*, yani bir işlevin bir kez çağrı yaptığı, aralarında herhangi bir sayıda çağrıya sahip olan diğeri çağıran bir daire oluşturur. Bu tür işlevleri bir `let` bağlamada birlikte tanımlamanız gerekir, `and` anahtar sözcüğünü kullanarak birbirine bağlayabilirsiniz.
+Bazen işlevler *birbirini yinelemelidir*, yani bir işlevin bir kez çağrı yaptığı, aralarında herhangi bir sayıda çağrıya sahip olan diğeri çağıran bir daire oluşturur. Bu tür işlevleri bir bağlamada birlikte tanımlamanız gerekir `let` , `and` anahtar sözcüğünü kullanarak birbirine bağlayabilirsiniz.
 
 Aşağıdaki örnekte birbirini dışlayan iki özyinelemeli işlev gösterilmektedir.
 

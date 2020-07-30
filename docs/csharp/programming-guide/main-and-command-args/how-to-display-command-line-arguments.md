@@ -1,30 +1,31 @@
 ---
-title: Komut satırı bağımsız değişkenleri nasıl görüntülenir - C# Programlama Kılavuzu
+title: Komut satırı bağımsız değişkenlerini görüntüleme-C# Programlama Kılavuzu
+description: Komut satırı bağımsız değişkenlerini görüntülemeyi öğrenin. Bir kod örneğine bakın ve kullanılabilir ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ac5dc5a5f4e974c9202d2ce23f61071494e1977
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712032"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381820"
 ---
-# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Komut satırı bağımsız değişkenleri nasıl görüntülenir (C# Programlama Kılavuzu)
-Komut satırında yürütülebilir bir bağımsız değişkene `Main`isteğe bağlı bir parametre ile erişilebilir. Bağımsız değişkenler bir dizi dize biçiminde sağlanır. Dizinin her öğesi bir bağımsız değişken içerir. Bağımsız değişkenler arasındaki beyaz boşluk kaldırılır. Örneğin, hayali bir yürütülebilir bu komut satırı çağrıları düşünün:  
+# <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Komut satırı bağımsız değişkenlerini görüntüleme (C# Programlama Kılavuzu)
+Komut satırındaki bir yürütülebilir dosyaya belirtilen bağımsız değişkenlere, için isteğe bağlı bir parametre üzerinden erişilebilir `Main` . Bağımsız değişkenler, dizeler dizisi biçiminde sağlanır. Dizinin her öğesi bir bağımsız değişken içerir. Bağımsız değişkenler arasındaki beyaz boşluk kaldırılır. Örneğin, kurgusal bir yürütülebilirin şu komut satırı çağırmaları göz önünde bulundurun:  
   
-|Komut satırına Giriş|Main'e geçirilen dizeleri dizisi|  
+|Komut satırında giriş|Main 'e geçirilen dizelerin dizisi|  
 |----------------------------|-------------------------------------|  
-|**icra edilebilir.exe a b c**|"a"<br /><br /> "b"<br /><br /> "c"|  
-|**executable.exe bir iki**|"bir"<br /><br /> "iki"|  
-|**executable.exe "bir iki" üç**|"one two"<br /><br /> "üç"|  
+|**B cexecutable.exe**|a<br /><br /> kenarı<br /><br /> ,|  
+|**executable.exe 1 2**|biriyle<br /><br /> ikiye|  
+|**executable.exe "1 2" üç**|"one two"<br /><br /> ünden|  
   
 > [!NOTE]
-> Visual Studio'da bir uygulama çalıştırırken Hata [Ayıklama Sayfasında, Proje Tasarımcısı'nda](/visualstudio/ide/reference/debug-page-project-designer)komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
+> Visual Studio 'da bir uygulama çalıştırırken, [hata ayıklama sayfasında, proje Tasarımcısı](/visualstudio/ide/reference/debug-page-project-designer)' nda komut satırı bağımsız değişkenlerini belirtebilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, komut satırı uygulamasına geçirilen komut satırı bağımsız değişkenlerini görüntüler. Gösterilen çıktı yukarıdaki tablodaki ilk giriş içindir.  
+ Bu örnek, komut satırı uygulamasına geçirilen komut satırı bağımsız değişkenlerini görüntüler. Gösterilen çıktı, yukarıdaki tablodaki ilk giriş içindir.  
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
@@ -32,5 +33,5 @@ Komut satırında yürütülebilir bir bağımsız değişkene `Main`isteğe ba�
 
 - [C# Programlama Kılavuzu](../index.md)
 - [csc.exe Kullanarak Komut Satırı Derleme](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [Ana() ve Komut Satırı Bağımsız Değişkenleri](./index.md)
+- [Main () ve komut satırı bağımsız değişkenleri](./index.md)
 - [Ana() Dönüş Değerleri](./main-return-values.md)

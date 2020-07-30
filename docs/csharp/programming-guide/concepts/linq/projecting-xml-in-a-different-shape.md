@@ -1,25 +1,26 @@
 ---
-title: XML'i Farklı Bir Şekilde Yansıtma (C#)
+title: XML 'i farklı bir şekilde yansıtma (C#)
+description: XML 'yi kaynak XML 'den farklı bir şekilde proje olarak nasıl kullanacağınızı öğrenin. WindowsBase derlemesinden sınıfları kullanan bir kod örneğini gözden geçirin.
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 492c0671b6a81f7e6b8d5f93698f84b88b14bd23
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591540"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87299103"
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a>XML'i Farklı Bir Şekilde Yansıtma (C#)
-Bu konu, kaynak XML'den farklı bir şekilde olan XML'i yansıtmaya bir örnek gösterir.  
+# <a name="projecting-xml-in-a-different-shape-c"></a>XML 'i farklı bir şekilde yansıtma (C#)
+Bu konuda, kaynak XML 'den farklı bir şekilde XML yansıtma örneği gösterilmektedir.  
   
- Birçok tipik XML dönüşümü, bu örnekte olduğu gibi zincirlenmiş sorgulardan oluşur. Bir tür XML ile başlamak, ara sonuçları anonim türleri veya adlandırılmış türleri koleksiyonları olarak yansıtmak ve son olarak sonuçları kaynak XML'den tamamen farklı bir şekilde XML'e yansıtmak yaygındır.  
+ Birçok tipik XML dönüştürmesi, bu örnekte olduğu gibi zincirleme sorgulardan oluşur. Bir dizi XML, proje ara sonuçları anonim türlerin veya adlandırılmış türlerin koleksiyonları olarak, son olarak da sonuçları kaynak XML 'den tamamen farklı bir şekilde yeniden XML 'ye proje ile başlatmak için yaygındır.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca, her paragrafın stilini ve metnini tanımlar. Son olarak, örnek farklı bir şekil ile XML projeleri. Bu örnek, bu öğreticide önceki örneklere dayanmaktadır. Projeksiyonu yapan yeni deyim, aşağıdaki koddaki yorumlarda çağrılır.  
+ Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca, her bir paragrafın stilini ve metnini tanımlar. Son olarak, örnek proje XML 'SI farklı bir şekil ile. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yansıtmayı yapan yeni ifadeye aşağıdaki koddaki açıklamalarda bir tanesi çağırılır.  
   
- Bu örnek için kaynak belge oluşturma yönergeleri için [bkz.](./creating-the-source-office-open-xml-document.md)  
+ Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (C#)](./creating-the-source-office-open-xml-document.md).  
   
- Bu örnek, WindowsBase derlemesi sınıflarını kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -163,7 +164,7 @@ class Program
 }  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -231,7 +232,7 @@ class Program
 ```  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnekte, Word belgesindeki tüm metni bulmak için sorgu yapacaksınız:  
+ Sonraki örnekte, bir Word belgesinde tüm metni bulmak için sorgulama yapacaksınız:  
   
-- [Word Belgelerinde Metin Bulma (C#)](./finding-text-in-word-documents.md)  
+- [Word belgelerinde metin bulma (C#)](./finding-text-in-word-documents.md)  
   

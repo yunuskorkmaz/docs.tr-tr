@@ -1,27 +1,28 @@
 ---
-title: Konuma göre alt öğeleri bulma (XPath-LINQ - XML) (C#)
+title: Konuma göre alt öğeleri bulma (XPath-LINQ to XML) (C#)
+description: Bir XPath ifadesi kullanarak konuma göre alt öğeleri bulmayı öğrenin. Örnek XML dosyası kullanan bir kod örneğini gözden geçirin.
 ms.date: 07/20/2015
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: cc0ff5639345d36ebb0423a12b66de8f1a70ade1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2603d3ac94ace645bde1ce85a43a43af7321014e
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141127"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301677"
 ---
-# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Konuma göre alt öğeleri bulma (XPath-LINQ - XML) (C#)
-Bazen konumlarına göre öğeleri bulmak istiyorum. İkinci öğeyi bulmak isteyebilirsiniz veya üçüncü öğeyi beşinci öğe ile bulmak isteyebilirsiniz.  
+# <a name="how-to-find-child-elements-based-on-position-xpath-linq-to-xml-c"></a>Konuma göre alt öğeleri bulma (XPath-LINQ to XML) (C#)
+Bazen, konumlarına göre öğeleri bulmak isteyebilirsiniz. İkinci öğeyi bulmak isteyebilirsiniz veya beşinci öğe aracılığıyla üçüncü öğeyi bulmak isteyebilirsiniz.  
   
  XPath ifadesi:  
   
  `Test[position() >= 2 and position() <= 4]`  
   
- Bu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorguyu tembel bir şekilde yazmak için iki yaklaşım vardır. İşleçleri <xref:System.Linq.Enumerable.Skip%2A> veya dizin gerektiren <xref:System.Linq.Enumerable.Where%2A> aşırı yüklemeyi kullanabilirsiniz. <xref:System.Linq.Enumerable.Take%2A> Aşırı yüklemeyi <xref:System.Linq.Enumerable.Where%2A> kullandığınızda, iki bağımsız değişken alan bir lambda ifadesi kullanırsınız. Aşağıdaki örnek, konuma göre seçim her iki yöntemi gösterir.  
+ Bu sorguyu geç bir şekilde yazmak için iki yaklaşım vardır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . <xref:System.Linq.Enumerable.Skip%2A>Ve <xref:System.Linq.Enumerable.Take%2A> işleçlerini kullanabilir veya <xref:System.Linq.Enumerable.Where%2A> bir dizini alan aşırı yüklemeyi kullanabilirsiniz. <xref:System.Linq.Enumerable.Where%2A>Aşırı yüklemeyi kullandığınızda, iki bağımsız değişken alan bir lambda ifadesi kullanırsınız. Aşağıdaki örnek, konum temelinde seçim yapmak için her iki yöntemi gösterir.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, dördüncü `Test` öğe ile ikinci bulur. Sonuç, öğelertopluluğudur.  
+ Bu örnek, dördüncü öğe aracılığıyla ikincisini bulur `Test` . Sonuç, öğelerin bir koleksiyonudur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Test Yapılandırması (LINQ -XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: test yapılandırması (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement testCfg = XElement.Load("TestConfig.xml");  
@@ -54,7 +55,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

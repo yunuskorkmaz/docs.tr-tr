@@ -1,5 +1,6 @@
 ---
-title: <typeparamref>- C# programlama kılavuzu
+title: <typeparamref>-C# Programlama Kılavuzu
+description: XML etiketi hakkında bilgi edinin <typeparamref> . Bu etiket, belge dosyası tüketicilerinin sözcüğü farklı bir şekilde (örneğin, italik) biçimlendirmesini sağlar.
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a39e896f1242452c7bcc94faa1e7ef3086ae2149
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789654"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87380728"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (C# programlama kılavuzu)
+# <a name="typeparamref-c-programming-guide"></a>\<typeparamref>(C# Programlama Kılavuzu)
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```xml
 <typeparamref name="name"/>
@@ -26,15 +27,15 @@ ms.locfileid: "76789654"
 
 - `name`
 
-  Tür parametresinin adı. Adı çift tırnak işaretlerine (" ") ekin.
+  Tür parametresinin adı. Adı çift tırnak işareti ("") içine alın.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Genel tür ve yöntemlerdeki tür parametreleri hakkında daha fazla bilgi için [Genel Bilgiler'e](../generics/index.md)bakın.
+Genel türlerde ve yöntemlerde tür parametreleri hakkında daha fazla bilgi için bkz. [Genel türler](../generics/index.md).
 
-Belge dosyasının tüketicilerinsözcüğü farklı şekillerde biçimlendirmesini sağlamak için bu etiketi kullanın, örneğin italik durumlarda.
+Belge dosyasının tüketicilerini farklı bir şekilde (örneğin, italik) biçimlendirmesini sağlamak için bu etiketi kullanın.
 
-Belge yorumlarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derle.
+Belge açıklamalarını bir dosyaya işlemek için [-doc](../../language-reference/compiler-options/doc-compiler-option.md) ile derleyin.
 
 ## <a name="example"></a>Örnek
 

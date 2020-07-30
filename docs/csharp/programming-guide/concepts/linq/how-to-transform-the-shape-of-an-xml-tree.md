@@ -1,29 +1,30 @@
 ---
-title: Bir XML ağacının şeklini dönüştürme (C#)
+title: XML ağacının şeklini dönüştürme (C#)
+description: Bir XML ağacının şeklini dönüştürmeyi öğrenin. Bir XML ağacının şekli, öğe ve öznitelik adlarına ve hiyerarşi özelliklerine başvurur.
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 91f91ed6fea5371fae2ce67a413f4825f37af6c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa3cc18f235d061ae1778c177c4ac9b626f4b71
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75347301"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302652"
 ---
-# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Bir XML ağacının şeklini dönüştürme (C#)
-XML belgesinin *şekli,* öğe adlarını, öznitelik adlarını ve hiyerarşisinin özelliklerini ifade eder.  
+# <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>XML ağacının şeklini dönüştürme (C#)
+Bir XML belgesinin *şekli* öğe adlarına, öznitelik adlarına ve hiyerarşisinin özelliklerine başvurur.  
   
- Bazen bir XML belgesinin şeklini değiştirmeniz gerekir. Örneğin, varolan bir XML belgesini farklı öğe ve öznitelik adları gerektiren başka bir sisteme göndermeniz gerekebilir. Öğeleri gerektiği gibi silip yeniden adlandırarak belgeyi gözden geçirebilirsiniz, ancak işlevsel yapı sonuçlarını daha okunabilir ve koruyabilir kodla kullanarak. Fonksiyonel yapı hakkında daha fazla bilgi için bkz: [Fonksiyonel Yapı (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md).  
+ Bazen bir XML belgesinin şeklini değiştirmeniz gerekir. Örneğin, var olan bir XML belgesini farklı öğe ve öznitelik adları gerektiren başka bir sisteme göndermeniz gerekebilir. Belgeyi, gereken şekilde silip yeniden adlandırarak, ancak işlevsel oluşturmayı kullanmak daha okunabilir ve sürdürülebilir kod ile sonuçlanır. İşlevsel oluşturma hakkında daha fazla bilgi için bkz. [Işlevsel oluşturma (LINQ to XML) (C#)](./functional-construction-linq-to-xml.md).  
   
- İlk örnek, XML belgesinin kuruluşunu değiştirir. Karmaşık öğeleri ağaçtaki bir konumdan diğerine taşır.  
+ İlk örnek, XML belgesi organizasyonunu değiştirir. Karmaşık öğeleri ağaçtaki bir konumdan diğerine taşımıştır.  
   
- Bu konudaki ikinci örnek, kaynak belgeden farklı bir şekle sahip bir XML belgesi oluşturur. Öğe adlarının gövdesini değiştirir, bazı öğeleri yeniden adlandırır ve kaynak ağaçtan bazı öğeleri dönüştürülmüş ağacın dışına bırakır.  
+ Bu konudaki ikinci örnek, kaynak belgeden farklı bir şekle sahip bir XML belgesi oluşturur. Öğe adlarının büyük küçük harflerini değiştirir, bazı öğeleri yeniden adlandırır ve dışarı dönüştürülen ağacın bazı öğelerini kaynak ağacından bırakır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki kod, katışılmış sorgu ifadelerini kullanarak bir XML dosyasının şeklini değiştirir.  
+ Aşağıdaki kod, ekli sorgu ifadeleri kullanarak bir XML dosyasının şeklini değiştirir.  
   
- Bu örnekteki kaynak XML `Customers` belgesi, `Root` tüm müşterileri içeren öğenin altında bir öğe içerir. Ayrıca tüm `Orders` siparişleri `Root` içeren öğe altında bir öğe içerir. Bu örnek, her müşteri için `Orders` `Customer` siparişlerin öğe içindeki bir öğede bulunduğu yeni bir XML ağacı oluşturur. Özgün belge de `CustomerID` `Order` öğebir öğe içerir; bu öğe yeniden şekillendirilen belgeden kaldırılır.  
+ Bu örnekteki kaynak XML belgesi `Customers` , `Root` tüm müşterileri içeren öğesi altında bir öğesi içerir. Ayrıca `Orders` , `Root` tüm siparişleri içeren öğesi altında bir öğesi de içerir. Bu örnek, her müşteriye ait siparişlerin öğesi içindeki bir öğede bulunduğu yeni bir XML ağacı oluşturur `Orders` `Customer` . Özgün belge ayrıca `CustomerID` öğesi içindeki bir öğesi de içerir `Order` ; Bu öğe, yeniden şekillendirilmiş belgeden kaldırılır.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Müşteriler ve Siparişler (LINQ-XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: müşteriler ve siparişler (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  
@@ -49,7 +50,7 @@ XElement newCustOrd =
 Console.WriteLine(newCustOrd);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```xml  
 <Root>  
@@ -86,11 +87,11 @@ Console.WriteLine(newCustOrd);
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bazı öğeleri yeniden adlandırır ve bazı öznitelikleri öğelere dönüştürür.  
+ Bu örnek bazı öğeleri yeniden adlandırır ve bazı öznitelikleri öğelere dönüştürür.  
   
- Nesnelerin listesini döndüren kod çağrıları. `ConvertAddress` <xref:System.Xml.Linq.XElement> Yöntemin bağımsız değişkeni, özniteliğin `Address` değeri `"Shipping"`olan `Type` karmaşık öğeyi belirleyen bir sorgudur.  
+ `ConvertAddress`Bir nesne listesi döndüren kod çağırır <xref:System.Xml.Linq.XElement> . Yöntemin bağımsız değişkeni, `Address` özniteliğinin değeri olan karmaşık öğeyi belirleyen bir sorgudur `Type` `"Shipping"` .  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Tipik SatınAlma Siparişi (LINQ-XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: tipik satın alma siparişi (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 static IEnumerable<XElement> ConvertAddress(XElement add)  
@@ -123,7 +124,7 @@ static void Main(string[] args)
 }  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```xml  
 <PO>  

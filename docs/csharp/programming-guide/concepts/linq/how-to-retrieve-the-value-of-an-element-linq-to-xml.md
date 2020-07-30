@@ -1,26 +1,27 @@
 ---
-title: Bir öğenin değeri (LINQ - XML) (C#) nasıl alınır?
+title: Bir öğenin değerini alma (LINQ to XML) (C#)
+description: Öğelerin değerini alma hakkında bilgi edinin. Bkz. dize çevrim, tamsayı atama ve değer özelliği kullanma örnekleri.
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: eb750927d74c3068d7ab06caba9835110bd77a09
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805824"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301547"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Bir öğenin değeri (LINQ - XML) (C#) nasıl alınır?
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>Bir öğenin değerini alma (LINQ to XML) (C#)
 
-Bu makalede, öğelerin değerini almak için nasıl gösterir. Değeri elde etmenin iki ana yolu vardır:
+Bu makale, öğelerin değerinin nasıl alınacağını gösterir. Değeri almanın iki ana yolu vardır:
 
-- Bir <xref:System.Xml.Linq.XElement> veya <xref:System.Xml.Linq.XAttribute> bir istenilen türe döküm. Açık dönüştürme işleci daha sonra öğenin içeriğini dönüştürür veya belirtilen türe atfeder ve değişkeninize atar.
+- Bir <xref:System.Xml.Linq.XElement> veya öğesini <xref:System.Xml.Linq.XAttribute> istenen türe atayın. Daha sonra açık dönüştürme işleci, öğe veya özniteliğin içeriğini belirtilen türe dönüştürür ve değişkenine atar.
 
-- Özellikleri <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> veya <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> özelliklerini kullanın. Bu özellikleri kullanarak değeri de ayarlayabilirsiniz.
+- <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>Veya özelliklerini kullanın <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> . Bu özellikleri kullanarak da değeri ayarlayabilirsiniz.
 
-C# ile, döküm genellikle daha iyi bir yaklaşımdır. Öğeyi veya özniteliği boşalabilir bir değer türüne atarsanız, var olabilecek veya var olmayan bir öğenin (veya öznitelik) değerini alırken kod yazmak daha kolaydır. Bu makaledeki [son örnek,](#element-might-not-exist-example) öğenin var olmadığı durumlarda dökümün daha basit olduğunu göstermektedir. Ancak, bir öğenin içeriğini, özellik aracılığıyla olduğu <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> gibi, döküm yoluyla ayarlayamazsınız.  
+C# ile, atama genellikle daha iyi bir yaklaşımdır. Öğesi veya özniteliğini null atanabilir bir değer türüne ayarlarsanız, kod, var olabilen veya varolmayan bir öğenin (veya özniteliğin) değeri alınırken yazmak daha basittir. Bu makaledeki [Son örnekte](#element-might-not-exist-example) , öğenin mevcut olmadığı durumlarda atama daha basit olduğu gösterilmektedir. Ancak, özelliğini kullanarak bir öğenin içeriğini atama aracılığıyla ayarlayamazsınız <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> .  
   
-## <a name="string-cast-example"></a>String döküm örneği  
- Bir öğenin değerini almak için <xref:System.Xml.Linq.XElement> nesneyi istediğiniz türe atın. Bir öğeyi aşağıdaki gibi bir dize atabilirsiniz:  
+## <a name="string-cast-example"></a>Dize atama örneği  
+ Bir öğenin değerini almak için, <xref:System.Xml.Linq.XElement> nesneyi istediğiniz türe atayın. Bir öğeyi şu şekilde bir dizeye çevirebilirsiniz:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -28,15 +29,15 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (string)e);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="integer-cast-example"></a>İnteger döküm örneği  
- Ayrıca, dize dışındaki türlere öğeleri de atabilirsiniz. Örneğin, bir arameger içeren bir öğeniz varsa, aşağıdaki `int`kodda gösterildiği gibi bu öğeyi şu şekilde atabilirsiniz:  
+## <a name="integer-cast-example"></a>Tamsayı atama örneği  
+ Ayrıca, öğeleri dize dışındaki türlere de çevirebilirsiniz. Örneğin, bir tamsayı içeren bir öğeye sahipseniz, `int` aşağıdaki kodda gösterildiği gibi, öğesini öğesine çevirebilirsiniz:  
   
 ```csharp  
 XElement e = new XElement("Age", "44");  
@@ -44,19 +45,19 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + (int)e);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]aşağıdaki veri türleri için açık `string`döküm `bool` `bool?`operatörleri `int` `int?`sağlar: `uint?` `long`, `long?` `ulong`, `ulong?` `float`, `float?` `uint` `double`, `double?` `decimal`, `decimal?` `DateTime` `DateTime?` `TimeSpan` `TimeSpan?`, , `GUID`, `GUID?`, , , , , , , , , , , ,  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Şu veri türleri için açık atama işleçleri sağlar: `string` , `bool` ,, `bool?` `int` , `int?` , `uint` , `uint?` , `long` , `long?` , `ulong` , `ulong?` , `float` , `float?` , `double` , `double?` , `decimal` , `decimal?` , `DateTime` , `DateTime?` `TimeSpan` `TimeSpan?` `GUID` `GUID?` ,,,,,,,,,,,, ve  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]nesneler için <xref:System.Xml.Linq.XAttribute> aynı döküm işleçleri sağlar.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]nesneler için aynı atama işleçlerini sağlar <xref:System.Xml.Linq.XAttribute> .  
   
-## <a name="value-property-example"></a>Değer özelliği örneği  
- Bir öğenin <xref:System.Xml.Linq.XElement.Value%2A> içeriğini almak için özelliği kullanabilirsiniz:  
+## <a name="value-property-example"></a>Value özelliği örneği  
+ <xref:System.Xml.Linq.XElement.Value%2A>Bir öğenin içeriğini almak için özelliğini kullanabilirsiniz:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");
@@ -64,15 +65,15 @@ Console.WriteLine(e);
 Console.WriteLine("Value of e:" + e.Value);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
-## <a name="element-might-not-exist-example"></a>Öğe örnek olmayabilir
- Bazen var olup olmadığından emin olmamanız aletin değerini almaya çalışırsınız. Bu durumda, döküm öğeyi nullable başvuru türüne veya nullable değer türüne atadığınızda, öğe yoksa, `null`atanan değişken . Aşağıdaki kod, öğe var olabilir veya olmayabilir, <xref:System.Xml.Linq.XElement.Value%2A> özelliği kullanmak için daha döküm kullanmak daha kolay olduğunu gösterir.  
+## <a name="element-might-not-exist-example"></a>Öğe mevcut olmayabilir örnek
+ Bazen, var olup olmadığından emin olmadığınız halde bir öğenin değerini almaya çalışırsınız. Bu durumda, başvurulan öğeyi null olabilen bir başvuru türüne veya null yapılabilir değer türüne atadığınızda, öğe yoksa atanan değişken olarak ayarlanır `null` . Aşağıdaki kod, öğe ne zaman olabileceği veya mevcut olmadığında, özelliği kullanmak için, atama kullanmanın daha kolay olduğunu gösterir <xref:System.Xml.Linq.XElement.Value%2A> .  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -134,7 +135,7 @@ else
 Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString());  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 c1:child 1 content  
@@ -148,8 +149,8 @@ v3:element does not exist
 v4:element does not exist  
 ```  
   
- Genel olarak, öğelerin ve özniteliklerin içeriğini almak için döküm kullanırken daha basit kod yazabilirsiniz.  
+ Genel olarak, öğelerin ve özniteliklerin içeriğini almak için atama kullanırken daha basit bir kod yazabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ - XML Eksenleri (C#)](./linq-to-xml-axes-overview.md)
+- [LINQ to XML eksenleri (C#)](./linq-to-xml-axes-overview.md)

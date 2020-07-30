@@ -1,15 +1,16 @@
 ---
 title: My Namespace-C# programlama kılavuzunu kullanma
+description: "' My ' ad alanını bizimle öğrenin. ' My ' ad alanı, bir dizi .NET sınıfına kolay ve sezgisel erişim sağlar."
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: 268543980ba891b0b30f393ee8982f2863ba9a71
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: 7abd5049a979d5a15d123052cba0cfdb35bf3fb7
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241948"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381716"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>My ad alanım 'ı kullanma (C# Programlama Kılavuzu)
 
@@ -25,18 +26,18 @@ ms.locfileid: "84241948"
   
 1. **Çözüm Gezgini**, **Başvurular** düğümüne sağ tıklayın ve **Başvuru Ekle**' yi seçin.  
   
-2. **Başvurular** iletişim kutusu göründüğünde, listeyi aşağı kaydırın ve Microsoft. VisualBasic. dll ' i seçin.  
+2. **Başvurular** iletişim kutusu göründüğünde, listeyi aşağı kaydırın ve Microsoft.VisualBasic.dll ' yi seçin.  
   
      Programınızın başlangıcında bölümüne aşağıdaki satırı da eklemek isteyebilirsiniz `using` .  
   
      [!code-csharp[csProgGuideNamespaces#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#18)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, ad alanında bulunan çeşitli statik yöntemleri çağırır `MyServices` . Bu kodun derlenmesi için projeye Microsoft. VisualBasic. DLL başvurusunun eklenmesi gerekir.  
+ Bu örnek, ad alanında bulunan çeşitli statik yöntemleri çağırır `MyServices` . Bu kodun derlenmesi için, projeye Microsoft.VisualBasic.DLL bir başvuru eklenmelidir.  
   
  [!code-csharp[csProgGuideNamespaces#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#19)]  
   
- `MyServices`Ad alanındaki sınıfların hepsi bir C# uygulamasından çağrılabilir: Örneğin, <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> sınıfı uyumlu değildir. Bu durumda, ' ın bir parçası olan statik yöntemler <xref:Microsoft.VisualBasic.FileIO.FileSystem> bunun yerine VisualBasic. dll içinde de kullanılabilir. Örneğin, bir dizini yinelemek için bu yöntemin nasıl kullanılacağı aşağıda verilmiştir:  
+ `MyServices`Ad alanındaki sınıfların hepsi bir C# uygulamasından çağrılabilir: Örneğin, <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> sınıfı uyumlu değildir. Bu durumda, öğesinin parçası olan statik yöntemler <xref:Microsoft.VisualBasic.FileIO.FileSystem> bunun yerine VisualBasic.dll de kullanılabilir. Örneğin, bir dizini yinelemek için bu yöntemin nasıl kullanılacağı aşağıda verilmiştir:  
   
  [!code-csharp[csProgGuideNamespaces#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#20)]  
   

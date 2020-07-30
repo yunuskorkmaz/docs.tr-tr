@@ -1,31 +1,32 @@
 ---
-title: XElement Sınıfına Genel Bakış (C#)
+title: XElement sınıfına genel bakış (C#)
+description: XElement sınıfı, C# içindeki bir XML öğesini temsil eder. Bu, LINQ to XML temel sınıflardan biridir. XElement tarafından sunulan işlevsellik hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 6a93dd4bdaf16fddff800b08b0f3146ecb63f9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f76f51703de054443f47531294777b43a9c0b004
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167900"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302184"
 ---
-# <a name="xelement-class-overview-c"></a>XElement Sınıfına Genel Bakış (C#)
-Sınıf, <xref:System.Xml.Linq.XElement> .................................................................................................. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Bir XML öğesini temsil eder. Bu sınıfı öğeleri oluşturmak için kullanabilirsiniz; öğenin içeriğini değiştirmek; alt öğeleri ekleme, değiştirme veya silme; bir öğeye öznitelikleri eklemek; veya metin biçiminde bir öğenin içeriğini serihale. <xref:System.Xml?displayProperty=nameWithType>Ayrıca, <xref:System.Xml.XmlReader>, , <xref:System.Xml.XmlWriter>, ve <xref:System.Xml.Xsl.XslCompiledTransform>.  
+# <a name="xelement-class-overview-c"></a>XElement sınıfına genel bakış (C#)
+<xref:System.Xml.Linq.XElement>Sınıfı, içindeki temel sınıflardan biridir [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Bir XML öğesini temsil eder. Bu sınıfı, öğeler oluşturmak için kullanabilirsiniz; öğenin içeriğini değiştirme; alt öğeleri ekleyin, değiştirin veya silin; özniteliği bir öğeye ekleyin; veya metin biçimindeki bir öğenin içeriğini seri hale getirme. Ayrıca, ve gibi diğer sınıflarla da birlikte kullanabilirsiniz <xref:System.Xml?displayProperty=nameWithType> <xref:System.Xml.XmlReader> <xref:System.Xml.XmlWriter> <xref:System.Xml.Xsl.XslCompiledTransform> .  
   
-Bu <xref:System.Xml.Linq.XElement> konu, sınıf tarafından sağlanan işlevselliği açıklar.  
+Bu konu, sınıfının sunduğu işlevselliği açıklar <xref:System.Xml.Linq.XElement> .  
   
-## <a name="constructing-xml-trees"></a>XML Ağaçlarının İnşası  
- XML ağaçları aşağıdakiler de dahil olmak üzere çeşitli şekillerde oluşturabilirsiniz:  
+## <a name="constructing-xml-trees"></a>XML ağaçları oluşturma  
+ Aşağıdakiler dahil olmak üzere çeşitli yollarla XML ağaçları oluşturabilirsiniz:  
   
-- Kod da bir XML ağacı oluşturabilirsiniz. Daha fazla bilgi için Bkz. [XML Ağaçları Oluşturma (C#)](./linq-to-xml-overview.md).  
+- Kodda bir XML ağacı oluşturabilirsiniz. Daha fazla bilgi için bkz. [xml ağaçları oluşturma (C#)](./linq-to-xml-overview.md).  
   
-- XML'i <xref:System.IO.TextReader>metin dosyaları veya Web adresi (URL) dahil olmak üzere çeşitli kaynaklardan ayrışdırabilirsiniz. Daha fazla bilgi için Bkz. [Ayrıştırma XML (C#)](./how-to-parse-a-string.md).  
+- Bir <xref:System.IO.TextReader> metin dosyası veya bir Web adresi (URL) dahil olmak üzere çeşitli kaynaklardan XML ayrıştırabilirsiniz. Daha fazla bilgi için bkz. [XML 'ı ayrıştırma (C#)](./how-to-parse-a-string.md).  
   
-- Ağacı doldurmak <xref:System.Xml.XmlReader> için bir kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+- <xref:System.Xml.XmlReader>Ağacı doldurmak için kullanabilirsiniz. Daha fazla bilgi için bkz. <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
-- Bir içeriğe içerik yazabilen <xref:System.Xml.XmlWriter>bir modülüz <xref:System.Xml.Linq.XContainer.CreateWriter%2A> varsa, bir yazar oluşturmak, yazarı modüle geçirmek ve ardından XML <xref:System.Xml.XmlWriter> ağacını doldurmak için yazılan içeriği kullanmak için yöntemi kullanabilirsiniz.  
+- İçine içerik yazabileceği bir modülünüzün varsa, bir <xref:System.Xml.XmlWriter> <xref:System.Xml.Linq.XContainer.CreateWriter%2A> yazıcı oluşturmak, yazıcıyı modüle geçirmek ve ardından <xref:System.Xml.XmlWriter> XML ağacını doldurmak için öğesine yazılan içeriği kullanmak için yöntemini kullanabilirsiniz.  
   
- Ancak, bir XML ağacı oluşturmak için en yaygın yolu aşağıdaki gibidir:  
+ Ancak, bir XML ağacı oluşturmanın en yaygın yolu aşağıdaki gibidir:  
   
 ```csharp  
 XElement contacts =  
@@ -43,7 +44,7 @@ XElement contacts =
     );  
 ```  
   
- Bir XML ağacı oluşturmak için başka bir çok yaygın teknik aşağıdaki örnekte gösterildiği gibi, bir XML ağacı doldurmak için bir LINQ sorgusunun sonuçlarını kullanarak içerir:  
+ Bir XML ağacı oluşturmaya yönelik başka bir çok yaygın teknik, aşağıdaki örnekte gösterildiği gibi bir XML ağacını doldurmak için bir LINQ sorgusunun sonuçlarının kullanılmasını içerir:  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -63,7 +64,7 @@ XElement xmlTree = new XElement("Root",
 Console.WriteLine(xmlTree);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```xml  
 <Root>  
@@ -76,25 +77,25 @@ Console.WriteLine(xmlTree);
 ```  
   
 ## <a name="serializing-xml-trees"></a>XML Ağaçlarını Serileştirme  
- XML ağacını bir <xref:System.IO.File>, a <xref:System.IO.TextWriter>veya bir <xref:System.Xml.XmlWriter>.  
+ XML ağacını bir <xref:System.IO.File> , a veya olarak seri hale getirebilirsiniz <xref:System.IO.TextWriter> <xref:System.Xml.XmlWriter> .  
   
- Daha fazla bilgi için bkz: [Serializing XML Ağaçlar (C#)](./preserving-white-space-while-serializing.md).  
+ Daha fazla bilgi için bkz. [XML ağaçlarını serileştirme (C#)](./preserving-white-space-while-serializing.md).  
   
-## <a name="retrieving-xml-data-via-axis-methods"></a>Eksen Yöntemleri ile XML Veri alma  
- Öznitelikleri, alt öğeleri, soyundan gelen öğeleri ve ata öğelerini almak için eksen yöntemlerini kullanabilirsiniz. LINQ sorguları eksen yöntemleri üzerinde çalışır ve bir XML ağacında gezinmek ve işlemek için birkaç esnek ve güçlü yol sağlar.  
+## <a name="retrieving-xml-data-via-axis-methods"></a>XML verilerini eksen yöntemleri aracılığıyla alma  
+ Öznitelikleri, alt öğeleri, alt öğeleri ve üst öğeleri almak için eksen yöntemlerini kullanabilirsiniz. LINQ sorguları eksen yöntemleri üzerinde çalışır ve bir XML ağacı üzerinde gezinmek ve işlemek için çeşitli esnek ve güçlü yollar sunar.  
   
- Daha fazla bilgi için [LinQ to XML Axes (C#)](./linq-to-xml-axes-overview.md)için bkz.  
+ Daha fazla bilgi için bkz. [LINQ to XML eksenleri (C#)](./linq-to-xml-axes-overview.md).  
   
 ## <a name="querying-xml-trees"></a>XML Ağaçlarını Sorgulama  
- Bir XML ağacından veri ayıklayan LINQ sorguları yazabilirsiniz.  
+ XML ağacından veri çıkaran LINQ sorguları yazabilirsiniz.  
   
- Daha fazla bilgi için Bkz. [XML AğaçLarını Sorgula (C#)](./how-to-find-an-element-with-a-specific-attribute.md).  
+ Daha fazla bilgi için bkz. [XML ağaçlarını sorgulama (C#)](./how-to-find-an-element-with-a-specific-attribute.md).  
   
-## <a name="modifying-xml-trees"></a>XML Ağaçlarını Değiştirme  
- Bir öğeyi, içeriğini veya özniteliklerini değiştirme de dahil olmak üzere çeşitli şekillerde değiştirebilirsiniz. Bir öğeyi üst öğesinden de kaldırabilirsiniz.  
+## <a name="modifying-xml-trees"></a>XML ağaçlarını değiştirme  
+ Bir öğeyi, içeriğini veya özniteliklerini değiştirme gibi çeşitli yollarla değiştirebilirsiniz. Ayrıca bir öğeyi üst öğesinden da kaldırabilirsiniz.  
   
- Daha fazla bilgi için bkz: [XML Ağaçlarını Değiştirme (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
+ Daha fazla bilgi için bkz. [XML ağaçlarını değiştirme (LINQ to XML) (C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [LINQ - XML Programlamaya Genel Bakış (C#)](serializing-to-files-textwriters-and-xmlwriters.md)
+- [LINQ to XML programlamaya genel bakış (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

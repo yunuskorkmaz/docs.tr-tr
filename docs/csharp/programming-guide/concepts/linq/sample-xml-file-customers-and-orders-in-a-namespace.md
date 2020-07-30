@@ -1,18 +1,19 @@
 ---
-title: 'Örnek XML Dosyası: Bir Namespace2 Müşteriler ve Siparişler'
+title: 'Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler'
+description: Bu XML dosyası LINQ to XML belgelerindeki çeşitli örneklerde kullanılır. Dosya müşteriler ve siparişler içerir. XML bir ad alanıdır.
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
-ms.openlocfilehash: 80bc052ecc62dfbd78f1dfdffac1925f8a03f31a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 467e00df01d85f1d42b91645cfc6379afac65fc9
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "66483802"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302548"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Örnek XML Dosyası: Bir Ad Alanında Müşteriler ve Siparişler
-Aşağıdaki XML dosyası [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] belgelerdeki çeşitli örneklerde kullanılır. Bu dosya müşteriler ve siparişler içerir. XML bir ad alanında.  
+Aşağıdaki XML dosyası belgelerindeki çeşitli örneklerde kullanılır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Bu dosya müşteriler ve siparişler içerir. XML bir ad alanıdır.  
   
-## <a name="customersordersinnamespacexml"></a>MüşterilerOrdersInNamespace.xml  
+## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

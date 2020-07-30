@@ -3,12 +3,12 @@ title: Bulutta Yerel'i tanımlama
 description: Bulutta yerel sistemler için yatak odası sağlayan temel sütunlar hakkında bilgi edinin
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e8b07fe7758d90f6ba97b81d0efa9d2fb5058d49
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f50c144d99fae0c4702965342fd76ec22e8bd8c8
+ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614192"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87427040"
 ---
 # <a name="defining-cloud-native"></a>Cloud Native 'i tanımlama
 
@@ -34,7 +34,7 @@ Bu teknikleri uygulayan bazı şirketler aşağıda verilmiştir. Elde ettikleri
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Üretimde 600 ' dür ve hizmet vardır. Günde yüz kez dağıtılır. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Üretimde 1000 + hizmet vardır. Her hafta birkaç bin kez dağıtılır. |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Üretimde 300 ' den fazla hizmet vardır. Günde 1.000 kez dağıtılır. |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Üretimde 3000 + hizmet vardır. Günde 1.000 kez dağıtılır. |
 
 Gördüğünüz gibi, Netflix, Uber ve WeChat yüzlerce bağımsız mikro hizmetten oluşan sistemleri kullanıma sunar. Bu mimari stili, pazar koşullarına hızlı yanıt vermesini sağlar. Canlı, karmaşık bir uygulamanın küçük alanlarında anında güncelleştirebilir ve bu alanların gerektiği şekilde ölçeklendirilmesini sağlayabilirsiniz.
 
@@ -74,7 +74,7 @@ Web tabanlı herhangi bir uygulama için geçerli olsa da birçok uygulama, bulu
 
 Aşağıdaki tablo, on Iki öğeli yöntemi vurgular:
 
-|    |  Çarpan | Açıklama  |
+|    |  Faktör | Açıklama  |
 | :-------- | :-------- | :-------- |
 | 1 | Kod tabanı | Her mikro hizmet için kendi deposunda depolanan tek bir kod tabanı. Sürüm denetimiyle izlenen, birden çok ortama (QA, hazırlama, üretim) dağıtılabilir. |
 | 2 | Bağımlılıklar | Her mikro hizmet, sistemin tamamını etkilemeden değişiklikler yapmadan kendi bağımlılıklarını yalıtır ve paketler. |
@@ -173,7 +173,7 @@ Mikro hizmetler, herhangi bir modern geliştirme platformunda oluşturulabilir.
 
 Microsoft .NET Core platformu harika bir seçimdir. Ücretsiz ve açık kaynak olmak üzere, mikro hizmet geliştirmeyi basitleştirmek için birçok yerleşik özelliği vardır. .NET Core platformlar arası bir platformdur. Uygulamalar Windows, macOS ve Linux 'un birçok özellikleri üzerinde oluşturulabilir ve çalıştırılabilir.
 
-.NET Core yüksek performans düzeyine sahiptir ve Node. js ve diğer rekabet platformları karşılaştırmayla iyi bir şekilde puanlanır. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET Core, Node. js ve diğer rekabet platformları üzerinde en iyi 10 ' un üzerinde puanlanır.
+.NET Core yüksek performans düzeyine sahiptir ve Node.js ve diğer rekabet platformları karşılaştırmayla iyi bir şekilde puanlanır. Interest, [Techempower](https://www.techempower.com/) birçok Web uygulaması platformu ve çerçevesinde çok sayıda [performans karşılaştırmalı olarak kıyaslamalarından](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) oluşur. .NET Core, Node.js ve diğer rekabet platformlarındaki en iyi 10 ' un üzerinde puanlanır.
 
 .NET Core, GitHub 'da Microsoft ve .NET Community tarafından korunur.
 
@@ -331,7 +331,7 @@ Azure Pipelines, sürekli tümleştirme (CI) ve sürekli teslimi (CD) birleştir
 İşlem hattınızı, uygulamanız için kodun geri kalanı ile birlikte bir YAML dosyasında tanımlarsınız.
 
 - İşlem hattı, kodunuzla birlikte sürümlüdür ve aynı dallanma yapısına uyar.
-- Çekme isteklerindeki ve dal derleme ilkelerindeki kod İncelemeleri aracılığıyla değişikliklerinizin doğrulanmasını alırsınız.
+- Çekme istekleri ve dal derleme ilkelerindeki kod incelemeleri aracılığıyla değişikliklerinizin doğrulamasını alırsınız.
 - Kullandığınız her dal, Azure-Pipelines. yıml dosyasını değiştirerek yapı ilkesini özelleştirebilir.
 - İşlem hattı dosyası sürüm denetimine denetlenir ve bir sorun varsa araştırılır.
 

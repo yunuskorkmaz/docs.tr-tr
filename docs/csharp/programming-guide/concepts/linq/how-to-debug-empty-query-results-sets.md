@@ -1,25 +1,26 @@
 ---
-title: Boş sorgu sonuç kümelerini hata ayıklama (C#)
+title: Boş sorgu sonuçları kümelerinde hata ayıklama (C#)
+description: Boş sorgu sonuçları kümelerinde hata ayıklamayı öğrenin. Bu kümeler, XML bir ad alanında olmasa da bir geliştirici bir sorgu yazsa da oluşabilir.
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad6d39697e5a59fe23ca700ceeb2a9860d05bb94
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141285"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302912"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Boş sorgu sonuç kümelerini hata ayıklama (C#)
-XML ağaçlarını sorgularken en sık karşılaşılan sorunlardan biri, XML ağacının varsayılan ad alanı varsa, geliştiricinin bazen sorguyu XML ad alanında değilmiş gibi yazmasıdır.  
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Boş sorgu sonuçları kümelerinde hata ayıklama (C#)
+XML ağaçlarını sorgularken en yaygın sorunlardan biri, XML ağacının varsayılan bir ad alanına sahip olması ve geliştiricinin bazen sorguyu bir ad alanında olmamasına rağmen yazar.  
   
- Bu konudaki ilk örnek kümesi, varsayılan ad alanında XML'nin yüklenmesinin ve yanlış sorgulanan tipik bir şekilde gösterir.  
+ Bu konudaki ilk örnek kümesi, varsayılan bir ad alanındaki XML 'nin yüklendiği ve yanlış sorgulandığı tipik bir yöntemi gösterir.  
   
- İkinci örnek kümesi, xml'i bir ad alanında sorgulayabilmeniz için gerekli düzeltmeleri gösterir.  
+ İkinci örnek kümesinde, bir ad alanında XML 'yi sorgulayabilmeniz için gerekli düzeltmeler gösterilmektedir.  
   
- Daha fazla bilgi için [Bkz. NameSpaces Genel Bakış (LINQ - XML) (C#)](namespaces-overview-linq-to-xml.md).  
+ Daha fazla bilgi için bkz. [ad alanlarına genel bakış (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanında XML oluşturulmasını ve boş bir sonuç kümesidöndüren bir sorgugösterir.  
+ Bu örnek, bir ad alanında XML oluşturmayı ve boş bir sonuç kümesi döndüren bir sorguyu gösterir.  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -48,9 +49,9 @@ End of result set
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir ad alanında XML oluşturulmasını ve düzgün kodlanmış bir sorgugösterir.  
+ Bu örnek, bir ad alanında XML oluşturmayı ve düzgün kodlanmış bir sorguyu gösterir.  
   
- Çözüm, bir <xref:System.Xml.Linq.XNamespace> nesneyi bildirmek ve başlatmak ve <xref:System.Xml.Linq.XName> nesneleri belirtirken kullanmaktır. Bu durumda, yönteme <xref:System.Xml.Linq.XContainer.Elements%2A> bağımsız değişken <xref:System.Xml.Linq.XName> bir nesnedir.  
+ Çözüm, bir nesneyi bildirmek ve başlatmak <xref:System.Xml.Linq.XNamespace> ve nesneleri belirtirken kullanmak <xref:System.Xml.Linq.XName> . Bu durumda, yöntemin bağımsız değişkeni <xref:System.Xml.Linq.XContainer.Elements%2A> bir <xref:System.Xml.Linq.XName> nesnedir.  
   
 ```csharp  
 XElement root = XElement.Parse(  

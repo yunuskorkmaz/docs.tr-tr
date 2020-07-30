@@ -1,27 +1,28 @@
 ---
-title: Uzantı Yöntemini Kullanarak Yeniden Düzenleme (C#)
+title: Genişletme yöntemi kullanarak yeniden düzenleme (C#)
+description: Bir genişletme yöntemi kullanarak kodu yeniden düzenleme hakkında bilgi edinin. Kod örneklerine bakın ve kullanılabilir ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-ms.openlocfilehash: 8546c2cb834107cf2e099af40f9a7df4d5858b4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e786f0e1514156535fd6a6033e37ed8879e99709
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253094"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381950"
 ---
-# <a name="refactoring-using-an-extension-method-c"></a>Uzantı Yöntemini Kullanarak Yeniden Düzenleme (C#)
-Bu örnek, bir uzantı yöntemi olarak uygulanan saf bir işlev kullanarak dizeleri concatenation refactoring tarafından, önceki örnek, [Paragraflar (C# ) Metni Alma](./retrieving-the-text-of-the-paragraphs.md)oluşturur.  
+# <a name="refactoring-using-an-extension-method-c"></a>Genişletme yöntemi kullanarak yeniden düzenleme (C#)
+Bu örnek, bir genişletme yöntemi olarak uygulanan bir saf işlev kullanarak dizelerin birleştirilmesiyle yeniden düzenleyerek, önceki örnekte yer alan, [paragrafların (C#) metnini alma](./retrieving-the-text-of-the-paragraphs.md).  
   
- Önceki örnekte, <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi tek bir dize ye dönüştürmek için standart sorgu işleci kullanılmıştır. Ancak, ortaya çıkan sorgu daha küçük ve daha basit, çünkü bunu yapmak için bir uzantı yöntemi yazmak için daha uygundur.  
+ Önceki örnek, <xref:System.Linq.Enumerable.Aggregate%2A> birden çok dizeyi tek bir dizede birleştirmek için standart sorgu işlecini kullandı. Bununla birlikte, bunu yapmak için bir genişletme yöntemi yazmak daha uygundur, çünkü sonuçta elde edilen sorgu daha küçük ve daha basit.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, paragrafları, her paragrafın stilini ve her paragrafın metnini alan bir WordprocessingML belgesini işler. Bu örnek, bu öğreticide önceki örneklere dayanmaktadır.  
+ Bu örnekte, bir WordprocessingML belgesi, paragrafları, her bir paragrafın stili ve her bir paragrafın metni işlenir. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır.  
   
- Örnek, yöntemin birden `StringConcatenate` çok aşırı yüklemesini içerir.  
+ Örnek, yönteminin birden çok aşırı yüklerini içerir `StringConcatenate` .  
   
- [Kaynak Office Açık XML Belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bu örnek için kaynak belge oluşturmak için yönergeleri bulabilirsiniz.  
+ Kaynak [Office Open XML belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bölümünde bu örnek için kaynak belge oluşturma yönergelerini bulabilirsiniz.  
   
- Bu örnek, WindowsBase derlemesi sınıflarını kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -63,9 +64,9 @@ public static class LocalExtensions
 ```  
   
 ## <a name="example"></a>Örnek  
- `StringConcatenate` Yöntemin dört aşırı yükleri vardır. Bir aşırı yükleme sadece dizeleri bir koleksiyon alır ve tek bir dize döndürür. Başka bir aşırı yükleme herhangi bir türde bir koleksiyon alabilir ve koleksiyonun singleton bir dize için projeler bir temsilci. Ayırıcı dize belirtmenize olanak tanıyan iki fazla yükleme daha vardır.  
+ Metodun dört aşırı yüklemesi vardır `StringConcatenate` . Bir aşırı yükleme yalnızca bir dize koleksiyonu alır ve tek bir dize döndürür. Başka bir aşırı yükleme, herhangi bir türün bir koleksiyonunu ve bir koleksiyonun tek bir sınıfından bir dizeye olan bir temsilciyi alabilir. Bir ayırıcı dize belirtmenizi sağlayan iki aşırı yükleme daha vardır.  
   
- Aşağıdaki kod, dört aşırı yüklemeyi de kullanır.  
+ Aşağıdaki kod dört aşırı yüklemeyi kullanır.  
   
 ```csharp  
 string[] numbers = { "one", "two", "three" };  
@@ -78,7 +79,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString()));
 Console.WriteLine("{0}", intNumbers.StringConcatenate(i => i.ToString(), ":"));  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 onetwothree  
@@ -88,7 +89,7 @@ one:two:three:
 ```  
   
 ## <a name="example"></a>Örnek  
- Şimdi, örnek yeni uzantı yöntemiyararlanmak için değiştirilebilir:  
+ Şimdi, örnek yeni uzantı yönteminden faydalanmak için değiştirilebilir:  
   
 ```csharp  
 public static class LocalExtensions  
@@ -219,7 +220,7 @@ class Program
 }  
 ```  
   
- Bu örnek, [Kaynak Office Açık XML Belgesi (C#) oluşturma'da](./creating-the-source-office-open-xml-document.md)açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
+ Bu örnek, [kaynak Office Open XML belgesi (C#) oluşturma](./creating-the-source-office-open-xml-document.md)bölümünde açıklanan belgeye uygulandığında aşağıdaki çıktıyı üretir.  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -239,14 +240,14 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
- Bu yeniden düzenlemenin saf bir işleve yeniden düzenlemenin bir varyantı olduğunu unutmayın. Bir sonraki konu daha ayrıntılı olarak saf işlevler içine faktoring fikrini tanıtacaktır.  
+ Bu yeniden düzenleme, saf bir işleve yeniden düzenleme çeşidine sahip olduğunu unutmayın. Sonraki konu, düzenleme işlevlerini saf işlevlere daha ayrıntılı bir şekilde tanıtacaktır.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnek, saf işlevleri kullanarak bu kodu niçin başka bir şekilde yeniden düzenlediğini gösterir:  
+ Sonraki örnekte, saf işlevleri kullanılarak bu kodun başka bir şekilde nasıl yeniden düzenlenmesi gösterilmektedir:  
   
-- [Saf Bir İşlev Kullanarak Yeniden Düzenleme (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [Saf Işlev kullanarak yeniden düzenleme (C#)](./refactoring-using-a-pure-function.md)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML Belgesinde İçeriği Manipüle Etme (C#)](./shape-of-wordprocessingml-documents.md)
-- [Saf Fonksiyonlara Yeniden Düzenleme (C#)](./refactoring-into-pure-functions.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (C#)](./shape-of-wordprocessingml-documents.md)
+- [Saf IŞLEVLERE yeniden düzenleme (C#)](./refactoring-into-pure-functions.md)

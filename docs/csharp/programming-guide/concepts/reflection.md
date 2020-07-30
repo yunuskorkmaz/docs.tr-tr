@@ -1,22 +1,23 @@
 ---
 title: Yansıma (C#)
+description: Yansıma, C# içindeki derlemeleri, modülleri ve türleri tanımlayan nesneler sağlar. Kodunuz öznitelikleri içeriyorsa, yansıma bunlara erişmenizi sağlar.
 ms.date: 07/20/2015
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-ms.openlocfilehash: a56fb24b63e4d80dbb67b079466b67cd11672023
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d4f4c082dd2d58e212bae53524e5dd4fd06fb75
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711668"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302808"
 ---
 # <a name="reflection-c"></a>Yansıma (C#)
 
-Yansıma, derlemeleri, <xref:System.Type>modülleri ve türleri açıklayan nesneler (tür) sağlar. Yansımayı dinamik olarak bir tür örneği oluşturmak, türü varolan bir nesneye bağlamak veya türü varolan bir nesneden almak ve yöntemlerini çağırmak veya alanlarına ve özelliklerine erişmek için kullanabilirsiniz. Kodunuzda öznitelikler kullanıyorsanız, yansıma bunlara erişmenizi sağlar. Daha fazla bilgi için [Özniteliklere](../../../standard/attributes/index.md)bakın.
+Yansıma <xref:System.Type> derlemeleri, modülleri ve türleri tanımlayan nesneler (türü) sağlar. Bir türün örneğini dinamik olarak oluşturmak, türü var olan bir nesneye bağlamak veya var olan bir nesneden türü almak ya da onun yöntemlerini çağırmak ya da alanları ve özelliklerine erişmek için yansıma kullanabilirsiniz. Kodunuzda öznitelikler kullanıyorsanız, yansıma bunlara erişmenizi sağlar. Daha fazla bilgi için bkz. [öznitelikler](../../../standard/attributes/index.md).
 
-Bir değişken türünü elde etmek <xref:System.Object.GetType> için `Object` temel sınıftan tüm türler tarafından devralınan yöntemi kullanarak yansımabasit bir örnek aşağıda verilmiştir:
+<xref:System.Object.GetType> `Object` Bir değişkenin türünü almak için temel sınıftan tüm türler tarafından devralınan yöntemi kullanan basit bir yansıma örneği aşağıda verilmiştir:
 
 > [!NOTE]
-> *.cs* `using System;` dosyanızın üst kısmında ve `using System.Reflection;` eklentisini yaptığınızdan emin olun.
+> `using System;` `using System.Reflection;` *. Cs* dosyanızın üst kısmına ve eklediğinizden emin olun.
 
 ```csharp
 // Using GetType to obtain type information:
@@ -25,9 +26,9 @@ Type type = i.GetType();
 Console.WriteLine(type);
 ```
 
-Çıktı: `System.Int32`.
+Çıktı: `System.Int32` .
 
-Aşağıdaki örnek, yüklenen derlemenin tam adını elde etmek için yansımayı kullanır.
+Aşağıdaki örnek, yüklü derlemenin tam adını almak için yansıma kullanır.
 
 ```csharp
 // Using Reflection to get information of an Assembly:
@@ -35,19 +36,19 @@ Assembly info = typeof(int).Assembly;
 Console.WriteLine(info);
 ```
 
-Çıktı: `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e`.
+Çıktı: `System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e` .
 
 > [!NOTE]
-> C# anahtar `protected` `internal` kelimeleri il'de bir anlam ifade etmez ve yansıma API'lerinde kullanılmaz. IL'de karşılık gelen terimler *Aile* ve *Meclis'tir.* Yansımayı `internal` kullanarak bir yöntem <xref:System.Reflection.MethodBase.IsAssembly%2A> tanımlamak için özelliği kullanın. Bir `protected internal` yöntemi tanımlamak için, <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A>.
+> C# anahtar sözcükleri `protected` ve `internal` Il 'de hiçbir anlamı yoktur ve yansıma API 'lerinde kullanılmaz. Il 'deki ilgili terimler *Aile* ve *derlemedir*. `internal`Yansıma kullanarak bir yöntemi tanımlamak için <xref:System.Reflection.MethodBase.IsAssembly%2A> özelliğini kullanın. Bir yöntemi tanımlamak için `protected internal` öğesini kullanın <xref:System.Reflection.MethodBase.IsFamilyOrAssembly%2A> .
 
 ## <a name="reflection-overview"></a>Yansımaya genel bakış
 
-Yansıma aşağıdaki durumlarda yararlıdır:
+Aşağıdaki durumlarda yansıma yararlı olur:
 
-- Programınızın meta verilerindeki özniteliklere erişmeniz gerektiğinde. Daha fazla bilgi için [bkz.](../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- Montajdaki türleri incelemek ve anlık olarak incelemek için.
-- Çalışma zamanında yeni türler oluşturmak için. Sınıfları <xref:System.Reflection.Emit>' da kullan.
-- Geç bağlama gerçekleştirmek için, çalışma zamanında oluşturulan türlerdeki yöntemlere erişin. Konuya Dinamik [Yükleme ve Kullanma Türleri'ni](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)görün.
+- Programınızın meta verilerindeki özniteliklere erişmeniz gerektiğinde. Daha fazla bilgi için bkz. [özniteliklerde depolanan bilgileri alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md).
+- Bir derlemedeki türleri İnceleme ve örnekleme için.
+- Çalışma zamanında yeni türler oluşturmak için. İçinde sınıfları kullanın <xref:System.Reflection.Emit> .
+- Geç bağlama gerçekleştirmek için çalışma zamanında oluşturulan türler üzerindeki yöntemlere erişme. [Türleri dinamik olarak yükleme ve kullanma](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)konusuna bakın.
 
 ## <a name="related-sections"></a>İlgili bölümler
 

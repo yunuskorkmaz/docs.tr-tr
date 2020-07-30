@@ -1,5 +1,6 @@
 ---
-title: İfadeler, İfadeler ve Operatörler - C# Programlama Kılavuzu
+title: Deyimler, Ifadeler ve Işleçler-C# Programlama Kılavuzu
+description: C# programlamada deyimler, ifadeler ve operatörlerin temel öğelerine kendinizi tanıtın.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: b339158848dac30f8c87a372b44574f6114a6aed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 08692cbe583feb534315b637492adedb1254bc38
+ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75698644"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87381625"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Deyimler, İfadeler ve İşleçler (C# Programlama Kılavuzu)
 
-Bir uygulamayı oluşturan C# kodu anahtar kelimelerden, ifadelerden ve işleçlerden oluşan ifadelerden oluşur. Bu bölümde, c# programının bu temel öğeleriyle ilgili bilgiler yer almaktadır.
+Bir uygulamayı kapsayan C# kodu, anahtar sözcüklerden, ifadelerden ve işleçlerden oluşan ifadelerden oluşur. Bu bölüm, bir C# programının bu temel öğeleriyle ilgili bilgiler içerir.
 
  Daha fazla bilgi için bkz.
 
@@ -28,9 +29,9 @@ Bir uygulamayı oluşturan C# kodu anahtar kelimelerden, ifadelerden ve işleçl
 
   - [İfade gövdeli üyeler](expression-bodied-members.md)
 
-- [Anonim Fonksiyonlar](anonymous-functions.md)
+- [Anonim Işlevler](anonymous-functions.md)
 
-- [Eşitlik Karşılaştırmaları](equality-comparisons.md)
+- [Eşitlik karşılaştırmaları](equality-comparisons.md)
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi
 
@@ -39,4 +40,4 @@ Bir uygulamayı oluşturan C# kodu anahtar kelimelerden, ifadelerden ve işleçl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Tür Değiştirme ve Tür Dönüştürmeler](../types/casting-and-type-conversions.md)
+- [Atama ve Tür Dönüşümleri](../types/casting-and-type-conversions.md)

@@ -1,19 +1,20 @@
 ---
-title: Ad alanında (C#) tüm düğümleri bulma
+title: Ad alanındaki tüm düğümleri bulma (C#)
+description: Bu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde nasıl filtre yapacağınızı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf739480c6b4e2c53d5c430d47ff833e8995f6a4
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141188"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303315"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Ad alanında (C#) tüm düğümleri bulma
-Her öğenin ad alanına filtre uygulayabilir veya belirli ad alanındaki tüm düğümleri bulmak için öznitelik verebilirsiniz.  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Ad alanındaki tüm düğümleri bulma (C#)
+Söz konusu ad alanındaki tüm düğümleri bulmak için her öğe veya özniteliğin ad alanı üzerinde filtre uygulayabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, iki ad alanı içeren bir XML ağacı oluşturur. Daha sonra ağaç taslanır ve bu ad alanlarından birinde tüm öğelerin ve özniteliklerin adlarını yazdırır.  
+ Aşağıdaki örnek iki ad alanı olan bir XML ağacı oluşturur. Daha sonra ağaç üzerinde dolaşır ve bu ad alanlarından birindeki tüm öğelerin ve özniteliklerin adlarını yazdırır.  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -35,7 +36,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```output  
 Nodes in the http://www.adventure-works.com namespace  
@@ -44,9 +45,9 @@ Nodes in the http://www.adventure-works.com namespace
 ```  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki sorgu tarafından erişilen XML dosyası, iki farklı ad alanında satınalma siparişleri içerir. Sorgu, ad alanlarından birinde bulunan öğelerle yeni bir ağaç oluşturur.  
+ Aşağıdaki sorgu tarafından erişilen XML dosyası, satın alma emirlerini iki farklı ad alanında içerir. Sorgu, yalnızca ad alanlarından birindeki öğeleri içeren yeni bir ağaç oluşturur.  
   
- Bu örnekte aşağıdaki XML belgesi kullanır: [Örnek XML Dosyası: Konsolide Satınalma Siparişleri.](./sample-xml-file-consolidated-purchase-orders.md)  
+ Bu örnek, şu XML belgesini kullanır: [örnek xml dosyası: birleştirilmiş satın alma siparişleri](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -59,7 +60,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- Bu kod aşağıdaki çıktıyı üretir:  
+ Bu kod şu çıkışı oluşturur:  
   
 ```xml  
 <Root>  

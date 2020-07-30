@@ -1,23 +1,24 @@
 ---
-title: Bir alt öğenin torunları (XPath-LINQ - XML) (C#)
+title: Bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML) (C#)
+description: Bir XPath ifadesi kullanarak, belirli bir ada sahip bir alt öğenin alt öğelerini bulmayı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: fb3e20ce21c1f6d2a71f2f71b8acec7cecf0f3ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8e110abc2e0df99c3fdf6d2846c7cbbc4736c1a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74141101"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87303263"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Bir alt öğenin torunları (XPath-LINQ - XML) (C#)
-Bu konu, belirli bir ada sahip bir alt öğenin soyundan gelen öğeleri nasıl elde etmek için gösterir.  
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>Bir alt öğenin alt öğelerini bulma (XPath-LINQ to XML) (C#)
+Bu konu başlığı altında, bir alt öğenin belirli bir ada sahip öğeleri nasıl alınacağı gösterilmektedir.  
   
  XPath ifadesi:  
   
  `./Paragraph//Text/text()`  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarını simüle eder. Önce tüm `Paragraph` öğeleri seçer ve sonra her `Text` `Paragraph` öğenin tüm soyundan öğeleri seçer. Bu, öğenin soyundan gelen `Text` öğeleri seçmez. `Comment`  
+ Bu örnek, bir sözcük işleme belgesinin XML gösteriminden metin ayıklama sorunlarının benzetimini yapar. Önce tüm öğeleri seçer `Paragraph` ve ardından `Text` her bir öğenin tüm alt öğelerini seçer `Paragraph` . Bu `Text` , öğesinin alt öğelerini seçmeyin `Comment` .  
   
 ```csharp  
 XElement root = XElement.Parse(  
@@ -68,7 +69,7 @@ else
 Console.WriteLine(str2);  
 ```  
   
- Bu örnek, aşağıdaki çıktıyı üretir:  
+ Bu örnek aşağıdaki çıktıyı üretir:  
   
 ```output  
 Results are identical  

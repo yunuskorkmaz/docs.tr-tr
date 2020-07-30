@@ -1,16 +1,17 @@
 ---
 title: Bir dizin ağacı aracılığıyla yineleme yapma-C# Programlama Kılavuzu
+description: Bir dizin ağacında yineleme yapmayı öğrenin. Belirtilen kök klasörü altındaki her iç içe geçmiş alt dizindeki her bir dosyaya erişin.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 24a6225527becb0b896017616e2661ab8247c74c
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: c49a9d1eaea9d4d8967b105d753f2a611d80e795
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84241610"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301989"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Bir dizin ağacında yineleme yapma (C# Programlama Kılavuzu)
 "Bir dizin ağacını yineleme" ifadesi, belirtilen kök klasörü altındaki her bir dosyaya her bir dosyanın herhangi bir derinliğine erişmesi anlamına gelir. Her bir dosyayı açmak zorunda değilsiniz. Dosya veya alt dizinin adını yalnızca bir olarak alabilir `string` veya bir veya nesnesi biçiminde ek bilgiler alabilirsiniz <xref:System.IO.FileInfo?displayProperty=nameWithType> <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> .  

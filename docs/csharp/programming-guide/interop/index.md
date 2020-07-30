@@ -1,5 +1,6 @@
 ---
 title: Birlikte çalışabilirlik-C# Programlama Kılavuzu
+description: Birlikte çalışabilirlik, ortak dil çalışma zamanı altında çalışan kodun yanına yönetilmeyen kodu destekler. Birlikte çalışabilirlik seçeneklerini anlamak için bu kaynakları kullanın.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: e53465066cf27a5f46c66ac73ee242370be23395
-ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
+ms.openlocfilehash: d85eb51107d50e023270fcbe1ef6e08a7788ae78
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84242013"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87302977"
 ---
 # <a name="interoperability-c-programming-guide"></a>Birlikte Çalışabilirlik (C# Programlama Kılavuzu)
 

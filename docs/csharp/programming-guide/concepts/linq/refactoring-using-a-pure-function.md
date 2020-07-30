@@ -1,23 +1,24 @@
 ---
-title: Saf Bir Fonksiyon Kullanarak Yeniden Düzenleme (C#)
+title: Saf Işlev kullanarak yeniden düzenleme (C#)
+description: Saf bir işlev kullanarak kodu yeniden düzenleme hakkında bilgi edinin. Kod örneklerine bakın ve kullanılabilir ek kaynakları görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3f0084d9de27f3f215cc3ba527ada93f7a3d61a
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70253085"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300117"
 ---
-# <a name="refactoring-using-a-pure-function-c"></a>Saf Bir Fonksiyon Kullanarak Yeniden Düzenleme (C#)
-Aşağıdaki örnek, önceki örnekte, [Bir Uzantı Yöntemini Kullanarak Yeniden Düzenleme (C#)](./refactoring-using-an-extension-method.md), bu örnekte saf bir işlev kullanmak için, paragraf metnini bulmak için kod saf statik yönteme `ParagraphText`taşınır.  
+# <a name="refactoring-using-a-pure-function-c"></a>Saf Işlev kullanarak yeniden düzenleme (C#)
+Aşağıdaki örnek, bir [genişletme yöntemi (C#) kullanarak](./refactoring-using-an-extension-method.md)saf bir işlevi kullanmak için önceki örneği şunların. Bu örnekte, bir paragrafın metnini bulmak için kod saf statik metoda taşınır `ParagraphText` .  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, bir WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her paragrafın stilini tanımlar. Bu örnek, bu öğreticide önceki örneklere dayanmaktadır. Refactored kodu aşağıdaki kodda yorum denir.  
+ Bu örnek, WordprocessingML belgesinden paragraf düğümlerini alarak bir WordprocessingML belgesini işler. Ayrıca her bir paragrafın stilini belirler. Bu örnekte, bu öğreticideki önceki örneklerde derleme yapılır. Yeniden düzenlenmiş kodu, aşağıdaki koddaki açıklamalarda çağrılır.  
   
- Bu örnek için kaynak belge oluşturma yönergeleri için [bkz.](./creating-the-source-office-open-xml-document.md)  
+ Bu örnek için kaynak belge oluşturmaya ilişkin yönergeler için bkz. [kaynak Office Open XML belgesi oluşturma (C#)](./creating-the-source-office-open-xml-document.md).  
   
- Bu örnek, WindowsBase derlemesi sınıflarını kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType> Ad alanında türleri kullanır.  
+ Bu örnek, WindowsBase derlemesinden sınıfları kullanır. <xref:System.IO.Packaging?displayProperty=nameWithType>Ad alanındaki türleri kullanır.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -154,7 +155,7 @@ class Program
 }  
 ```  
   
- Bu örnek, yeniden düzenlemeden önceki yle aynı çıktıyı üretir:  
+ Bu örnek, yeniden düzenlemeden önceki ile aynı çıktıyı üretir:  
   
 ```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -175,12 +176,12 @@ StyleName:Code >Hello World<
 ```  
   
 ### <a name="next-steps"></a>Sonraki Adımlar  
- Sonraki örnek, XML'nin nasıl farklı bir şekle yansıtılabildiğini gösterir:  
+ Sonraki örnekte, XML 'in farklı bir şekle nasıl proje yapılacağı gösterilmektedir:  
   
-- [XML'i Farklı Bir Şekilde Yansıtma (C#)](./projecting-xml-in-a-different-shape.md)  
+- [XML 'i farklı bir şekilde yansıtma (C#)](./projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Öğretici: WordprocessingML Belgesinde İçeriği Manipüle Etme (C#)](./shape-of-wordprocessingml-documents.md)
-- [Uzantı Yöntemini Kullanarak Yeniden Düzenleme (C#)](./refactoring-using-an-extension-method.md)
-- [Saf Fonksiyonlara Yeniden Düzenleme (C#)](./refactoring-into-pure-functions.md)
+- [Öğretici: WordprocessingML belgesindeki Içeriği düzenleme (C#)](./shape-of-wordprocessingml-documents.md)
+- [Genişletme yöntemi kullanarak yeniden düzenleme (C#)](./refactoring-using-an-extension-method.md)
+- [Saf IŞLEVLERE yeniden düzenleme (C#)](./refactoring-into-pure-functions.md)

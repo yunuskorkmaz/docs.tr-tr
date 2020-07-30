@@ -1,24 +1,26 @@
 ---
-title: özel korumalı - C# Referans
+title: özel korumalı-C# başvurusu
 ms.date: 11/15/2017
+f1_keywords:
+- privateprotected_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 03fa90582d096919f2e6546fae2fde28e486fe41
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 94ef55d7e13841f81b036f52659b215e22a3a0d7
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463050"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87301807"
 ---
-# <a name="private-protected-c-reference"></a>özel korumalı (C# Reference)
+# <a name="private-protected-c-reference"></a>özel korumalı (C# Başvurusu)
 
-`private protected` Anahtar kelime birleşimi bir üye erişim değiştiricidir. Özel korumalı bir üye, içerdiği sınıftan türetilen türlere, ancak yalnızca kendi içderlemesi içinde erişilebilir. Diğer erişim `private protected` değiştiriciler ile karşılaştırma için [Erişilebilirlik Düzeyleri'ne](accessibility-levels.md)bakın.
+`private protected`Anahtar sözcük birleşimi bir üye erişim değiştiricisidir. Özel korumalı bir üyeye, kapsayan sınıftan türetilmiş türler tarafından erişilebilir, ancak yalnızca kendi kapsayıcı bütünleştirilmiş kodu içinde erişilebilir. `private protected`Diğer erişim değiştiricilerine ilişkin bir karşılaştırma için bkz. [Erişilebilirlik düzeyleri](accessibility-levels.md).
 
 > [!NOTE]
-> Erişim `private protected` değiştirici C# sürüm 7.2 ve sonraki sürümlerinde geçerlidir.
+> `private protected`Access Modifier, C# sürüm 7,2 ve üzeri sürümlerde geçerlidir.
 
 ## <a name="example"></a>Örnek
 
-Taban sınıfın özel korumalı üyesine, yalnızca değişkenin statik türü türetilmiş sınıf türüyse, içerdiği derlemedeki türetilmiş türlerden erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:
+Bir temel sınıfın özel korumalı bir üyesine, yalnızca değişkenin statik türü türetilmiş sınıf türü ise, kendisini kapsayan derlemede bulunan türetilmiş türlerden erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:
 
 ```csharp
 public class BaseClass
@@ -56,14 +58,14 @@ class DerivedClass2 : BaseClass
 }
 ```
 
-Bu örnekte iki `Assembly1.cs` `Assembly2.cs`dosya ve .
-İlk dosya, ortak taban `BaseClass`sınıf ve ondan türetilen `DerivedClass1`bir tür içerir. `BaseClass`iki şekilde erişmeye `myValue`çalışan `DerivedClass1` özel bir korumalı üyesi ne sahiptir. Bir örnek üzerinden `myValue` erişmek için `BaseClass` ilk girişimi bir hata üretecek. Ancak, kalıtsal bir üye olarak kullanma `DerivedClass1` girişimi başarılı olacaktır.
+Bu örnek, ve olmak üzere iki dosya içerir `Assembly1.cs` `Assembly2.cs` .
+İlk dosya, bir ortak temel sınıf, `BaseClass` ve ondan türetilmiş bir tür içerir `DerivedClass1` . `BaseClass`, `myValue` iki şekilde erişmeye çalışan özel korumalı bir üyenin sahibidir `DerivedClass1` . Bir örneğinden ilk erişme girişimi `myValue` `BaseClass` bir hata üretir. Ancak, bunu devralınmış bir üye olarak kullanma girişimi `DerivedClass1` başarılı olur.
 
-İkinci dosyada, devralınan `myValue` bir üye `DerivedClass2` olarak erişme girişimi, yalnızca Derleme1'de türetilen türler tarafından erişilebilir olduğundan bir hata üretir.
+İkinci dosyada, devralınan bir üye olarak erişim girişimi `myValue` `DerivedClass2` yalnızca Assembly1 içindeki türetilmiş türler tarafından erişilebilen bir hata oluşturur.
 
-Bir `Assembly1.cs` ad <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> `Assembly2`içeriyorsa, `DerivedClass1` türemiş `private protected` sınıfın ' `BaseClass`da bildirilen üyelere erişimi olacak. `InternalsVisibleTo`üyeleri `private protected` diğer derlemelerde türetilmiş sınıflara görünür kılar.
+`Assembly1.cs` <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> Bu adları içeriyorsa `Assembly2` , türetilmiş sınıfın `DerivedClass1` `private protected` içinde belirtilen üyelere erişimi olur `BaseClass` . `InternalsVisibleTo``private protected`üyeleri diğer derlemelerdeki türetilmiş sınıflara görünür hale getirir.
 
-Yapı üyeleri, yapının devralınamayacağı için olamaz. `private protected`
+Struct üye olamaz `private protected` çünkü yapı devralınamaz.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -71,13 +73,13 @@ Yapı üyeleri, yapının devralınamayacağı için olamaz. `private protected`
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [public](public.md)
-- [private](private.md)
+- [genel](public.md)
+- [özelleştirme](private.md)
 - [internal](internal.md)
-- [Dahili sanal anahtar kelimeler için güvenlik endişeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [İç sanal anahtar sözcüklere yönelik güvenlik sorunları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

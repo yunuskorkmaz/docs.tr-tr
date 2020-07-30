@@ -1,42 +1,43 @@
 ---
-title: XML Ağacından Öğeleri, Öznitelikleri ve Düğümleri Kaldırma (C#)
+title: XML ağacından öğeleri, öznitelikleri ve düğümleri kaldırma (C#)
+description: Öğeleri, öznitelikleri ve düğümleri bir XML ağacından kaldırmayı öğrenin. Kaldırma yöntemlerinin listesini ve kod örneğini görüntüleyin.
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: badaa6bab35367d62a73f56c5221cb7d6d4a45f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e753c3d96c4cbc050b08076ca8bff8c17b2e252
+ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69591265"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87300052"
 ---
-# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML Ağacından Öğeleri, Öznitelikleri ve Düğümleri Kaldırma (C#)
+# <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML ağacından öğeleri, öznitelikleri ve düğümleri kaldırma (C#)
 
-Öğeleri, öznitelikleri ve diğer düğüm türlerini kaldırarak bir XML ağacını değiştirebilirsiniz.
+Bir XML ağacını değiştirebilir, öğeleri, öznitelikleri ve diğer düğüm türlerini kaldırabilirsiniz.
 
-Bir XML belgesinden tek bir öğeyi veya tek bir özniteliği kaldırmak kolaydır. Ancak, öğe veya öznitelik koleksiyonlarını kaldırırken, önce bir koleksiyonu bir listeye eklemeniz ve ardından öğeleri veya öznitelikleri listeden silmeniz gerekir. En iyi yaklaşım, <xref:System.Xml.Linq.Extensions.Remove%2A> bunu sizin için yapacak uzantı yöntemini kullanmaktır.
+Tek bir öğeyi veya bir XML belgesinden tek bir özniteliği kaldırmak basittir. Bununla birlikte, öğe veya öznitelik koleksiyonları kaldırılırken, önce bir koleksiyonu bir liste halinde ve ardından listeden öğeleri veya öznitelikleri silmelisiniz. En iyi yaklaşım, bunu <xref:System.Xml.Linq.Extensions.Remove%2A> sizin için sağlayacak olan genişletme yöntemini kullanmaktır.
 
-Bunu yapmanın temel nedeni, bir XML ağacından aldığınız koleksiyonların çoğunun ertelenmiş yürütme kullanılarak elde edilmesidir. Bunları ilk önce bir listeye dahil etmezseniz veya uzantı yöntemlerini kullanmazsanız, belirli bir hata sınıfıyla karşılaşmanız mümkündür. Daha fazla bilgi için bkz: [Karışık Bildirim kodu/Zorunlu Kod Hataları (LINQ - XML) (C#)](./mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).
+Bunu yapmanın asıl nedeni, bir XML ağacından aldığınız koleksiyonların çoğunun ertelenmiş yürütme kullanılarak yapılır. İlk olarak bunları bir liste içine almayın veya uzantı yöntemlerini kullanmıyorsanız, belirli bir hata sınıfıyla karşılaşmanız mümkündür. Daha fazla bilgi için bkz. [karma bildirim kodu/zorunlu kod hataları (LINQ to XML) (C#)](./mixed-declarative-code-imperative-code-bugs-linq-to-xml.md).
 
 Aşağıdaki yöntemler bir XML ağacından düğümleri ve öznitelikleri kaldırır.
 
 |Yöntem|Açıklama|
 |------------|-----------------|
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Bir ebeveynini <xref:System.Xml.Linq.XAttribute> kaldırır.|
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Alt düğümleri bir <xref:System.Xml.Linq.XContainer>'den kaldırır.|
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|İçeriği ve öznitelikleri <xref:System.Xml.Linq.XElement>bir 'den kaldırır.|
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|Bir <xref:System.Xml.Linq.XElement>' nin özniteliklerini kaldırır.|
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|Değer için `null` geçerseniz, özniteliği kaldırır.|
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|Değer için `null` geçerseniz, alt öğeyi kaldırır.|
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Bir ebeveynini <xref:System.Xml.Linq.XNode> kaldırır.|
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Kaynak koleksiyonundaki her özniteliği veya öğeyi üst öğeden kaldırır.|
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|Bir öğesini <xref:System.Xml.Linq.XAttribute> üst öğesinden kaldırır.|
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|Alt düğümleri bir öğesinden kaldırır <xref:System.Xml.Linq.XContainer> .|
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|Öğesinden içerik ve öznitelikleri kaldırır <xref:System.Xml.Linq.XElement> .|
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|, Özniteliklerini kaldırır <xref:System.Xml.Linq.XElement> .|
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|`null`Değerini geçirirseniz, özniteliğini kaldırır.|
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|`null`Değer ' i geçirirseniz, alt öğeyi kaldırır.|
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|Bir öğesini <xref:System.Xml.Linq.XNode> üst öğesinden kaldırır.|
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|Kaynak koleksiyondaki her özniteliği veya öğeyi üst öğesinden kaldırır.|
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
-Bu örnek, öğeleri kaldırmak için üç yaklaşım gösterir. İlk olarak, tek bir öğeyi kaldırır. İkinci olarak, bir öğe koleksiyonunu alır, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> işleci kullanarak bunları somutlaştırır ve koleksiyonu kaldırır. Son olarak, bir öğe koleksiyonu alır ve <xref:System.Xml.Linq.Extensions.Remove%2A> uzantı yöntemini kullanarak bunları kaldırır.
+Bu örnek, öğeleri kaldırmak için üç yaklaşımlar gösterir. İlk olarak, tek bir öğeyi kaldırır. İkincisi, bir öğe koleksiyonunu alır, bunları işlecini kullanarak bunları <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> çıkarır ve koleksiyonu kaldırır. Son olarak, bir öğe koleksiyonunu alır ve genişletme yöntemini kullanarak onları kaldırır <xref:System.Xml.Linq.Extensions.Remove%2A> .
 
-<xref:System.Linq.Enumerable.ToList%2A> İşleç hakkında daha fazla bilgi için [bkz.](./converting-data-types.md)
+İşleci hakkında daha fazla bilgi için <xref:System.Linq.Enumerable.ToList%2A> bkz. [veri türlerini dönüştürme (C#)](./converting-data-types.md).
 
 ### <a name="code"></a>Kod
 
@@ -66,7 +67,7 @@ Console.WriteLine(root);
 
 ### <a name="comments"></a>Yorumlar
 
-Bu kod aşağıdaki çıktıyı üretir:
+Bu kod şu çıkışı oluşturur:
 
 ```xml
 <Root>
@@ -79,4 +80,4 @@ Bu kod aşağıdaki çıktıyı üretir:
 </Root>
 ```
 
-İlk torun öğesinin `Child1`. Tüm torun elemanları `Child2` kaldırıldı `Child3`ve .
+İlk alt öğenin öğesinden çıkarıldığına dikkat edin `Child1` . Tüm alt öğeler öğeleri öğesinden `Child2` ve kaynağından kaldırılmıştır `Child3` .
