@@ -3,12 +3,12 @@ title: " .NET Core araçları"
 description: .NET Core araçları 'nı yüklemek, kullanmak, güncelleştirmek ve kaldırmak. Küresel araçlar, araç yolu araçları ve yerel araçları içerir.
 author: KathleenDollard
 ms.date: 02/12/2020
-ms.openlocfilehash: 583dbb461543d1efb7328d55f6ecce4a99afcaca
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 75bdedcbc3ebe9c23477795415076d160ab9a642
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226614"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455717"
 ---
 # <a name="how-to-manage-net-core-tools"></a>.NET Core araçlarını yönetme
 
@@ -37,11 +37,11 @@ ms.locfileid: "86226614"
 
 Şimdilik, .NET Core bir araç arama özelliğine sahip değildir. Araç bulmak için bazı yollar şunlardır:
 
+* ".NET aracı" paket türü filtresini kullanarak [NuGet](https://www.nuget.org) Web sitesinde arama yapın. Daha fazla bilgi için bkz. [paketleri bulma ve seçme](/nuget/consume-packages/finding-and-choosing-packages).
 * [Natemcmaster/DotNet-Tools](https://github.com/natemcmaster/dotnet-tools) GitHub deposundaki araçların listesine bakın.
 * .NET araçları aramak için [araç al](https://www.toolget.net/) 'ı kullanın.
 * [DotNet/aspnetcore GitHub deposunun Araçlar dizininde](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)ASP.NET Core ekibi tarafından oluşturulan araçların kaynak koduna bakın.
 * [.NET Core DotNet tanılama araçları](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)' nın tanılama araçları hakkında bilgi edinin.
-* [NuGet](https://www.nuget.org) Web sitesinde arama yapın. Ancak, NuGet sitesi henüz araç paketleri için arama yapmanızı sağlayan bir özelliğe sahip değildir.
 
 ## <a name="check-the-author-and-statistics"></a>Yazarı ve istatistikleri denetleme
 

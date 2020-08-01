@@ -2,12 +2,12 @@
 title: Serileştirme (C# )
 description: Serileştirme, nesneyi depolamak veya belleği, bir veritabanı ya da bir dosyaya aktarmak için bir nesneyi bayt akışına dönüştürür.
 ms.date: 01/02/2020
-ms.openlocfilehash: b2b3105887ad6f000fcba895452a483881ae5a09
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 29625648b19c97556c107997ef9ecd3f0f971cbf
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302782"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455754"
 ---
 # <a name="serialization-c"></a>Serileştirme (C# )
 
@@ -45,6 +45,8 @@ JSON serileştirme bir nesnenin ortak özelliklerini, [RFC 8259 JSON belirtimine
 <xref:System.Runtime.Serialization>Ad alanı, ikili ve XML serileştirme ve seri durumdan çıkarma için sınıflar içerir.
 
 İkili serileştirme, depolama veya soket tabanlı ağ akışları gibi kullanımlar için sıkıştırılmış serileştirme oluşturmak üzere ikili kodlama kullanır. İkili serileştirme ' de, salt okunan tüm Üyeler, hatta salt okunurdur ve performans geliştirilir.
+
+[!INCLUDE [binary-serialization-warning](~/includes/binary-serialization-warning.md)]
 
 XML serileştirme, bir nesnenin ortak alanlarını ve özelliklerini veya parametrelerinin parametrelerini ve dönüş değerlerini belirli bir XML şeması tanım dili (XSD) belgesine uygun bir XML akışı olarak serileştirir. XML serileştirme, XML 'e dönüştürülen ortak özellikler ve alanlarla kesin olarak belirlenmiş sınıflarda oluşur. <xref:System.Xml.Serialization>XML serileştirilmesi ve seri durumdan çıkarmak için sınıflar içerir. Sınıfın bir örneğini seri hale getirmenin veya seri hale getirmenin yolunu denetlemek için sınıflara ve sınıf üyelerine öznitelikler uygularsınız <xref:System.Xml.Serialization.XmlSerializer> .
 

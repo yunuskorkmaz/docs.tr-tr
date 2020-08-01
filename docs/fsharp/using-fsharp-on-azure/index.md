@@ -2,13 +2,13 @@
 title: Azure’da F# Kullanma
 description: 'F ile Azure hizmetlerini kullanma kılavuzu #'
 author: sylvanc
-ms.date: 09/22/2016
-ms.openlocfilehash: f074ac192f6dedbadf8132430cf27dc5865e6371
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.date: 07/29/2020
+ms.openlocfilehash: ebf94d724db2c503f27581bf1352bf4fa90f5e2a
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84501826"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455707"
 ---
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
@@ -55,12 +55,14 @@ Azure depolama Ayrıca, açık API çağrıları yerine bildirim temelli yapıla
 * [F # Azure Web API örneği](https://github.com/fsprojects/azure-webapi-example)
 * [Azure 'da bir Web uygulamasında F # barındırma](https://github.com/isaacabraham/fsharp-demonstrator)
 
-## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Azure HDInsight ile F # ile Apache Spark kullanma
+## <a name="using-apache-spark-with-f-on-azure-hdinsight-or-azure-databricks"></a>Azure HDInsight veya Azure Databricks 'de F # ile Apache Spark kullanma
 
-[Azure HDInsight için Apache Spark](https://azure.microsoft.com/services/hdinsight/apache-spark/) , büyük ölçekli veri analizi uygulamalarını çalıştıran bir açık kaynak işleme çerçevesidir. Azure, dağıtıma Apache Spark kolaylaştırır ve ekonomik hale gelir. Spark için .NET API 'SI olan [Mobius](https://github.com/Microsoft/Mobius)kullanarak Spark uygulamanızı F # ile geliştirin.
+[Azure HDInsight için Apache Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) , büyük ölçekli veri analizi uygulamalarını çalıştıran bir açık kaynak işleme çerçevesidir. [Azure Databricks](https://docs.microsoft.com/azure/databricks/scenarios/what-is-azure-databricks), Microsoft Azure bulut hizmetleri platformu için iyileştirilen Apache Spark tabanlı bir analiz platformudur. Azure, dağıtıma Apache Spark kolaylaştırır ve ekonomik hale gelir. Apache Spark için bir dizi .NET bağlaması olan [Apache Spark için .net](../../spark/what-is-apache-spark-dotnet.md)kullanarak Spark uygulamanızı geliştirin.
 
-* [Mobius kullanarak F # içinde Spark uygulamaları uygulama](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [Mobius kullanarak örnek F # Spark uygulamaları](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Apache Spark F # örnekleri için .NET](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
+* [Azure HDInsight 'a .NET etkileşimli Jupyıter not defterlerini yükler](../../spark/how-to-guides/hdinsight-notebook-installation.md)
+* [Azure HDInsight 'a Apache Spark işleri gönderme](../../spark/how-to-guides/hdinsight-deploy-methods.md)
+* [Azure Databricks Apache Spark işleri gönder](../../spark/how-to-guides/databricks-deploy-methods.md)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>F ile Azure Cosmos DB kullanma\#
 

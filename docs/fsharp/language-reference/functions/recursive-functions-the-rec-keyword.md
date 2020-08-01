@@ -2,12 +2,12 @@
 title: 'Yinelemeli İşlevler: rec Anahtar Sözcüğü'
 description: "Bir özyinelemeli işlev tanımlamak için ' Let ' anahtar sözcüğüyle F # ' Rec ' anahtar sözcüğünün nasıl kullanıldığını öğrenin."
 ms.date: 05/16/2016
-ms.openlocfilehash: c9a3b7dc27f4ed86948a08b7783d7e8e8b60e57f
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87426982"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455663"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Yinelemeli İşlevler: rec Anahtar Sözcüğü
 
@@ -43,7 +43,7 @@ Yöntemler tür içinde örtük olarak özyinelemeli; anahtar sözcüğü ekleme
 
 ## <a name="tail-recursion"></a>Kuyruk özyineleme
 
-Bazı Özyinelemeli işlevler için, daha "saf" tanımın [tail özyinelemeli](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)olan bir tanımına yeniden düzenlenmesi gerekir. Bu, unecessary yeniden hesaplamaları önler. Örneğin, önceki fibonaccı sayı Oluşturucusu şöyle olabilir:
+Bazı Özyinelemeli işlevler için, daha "saf" tanımın [tail özyinelemeli](https://cs.stackexchange.com/questions/6230/what-is-tail-recursion)olan bir tanımına yeniden düzenlenmesi gerekir. Bu, gereksiz yeniden hesaplamaları önler. Örneğin, önceki fibonaccı sayı Oluşturucusu şöyle olabilir:
 
 ```fsharp
 let fib n =

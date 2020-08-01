@@ -10,16 +10,16 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: c8b4b9a79577776bc049ef77e222d63374178708
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4f0cc9b88947d60638057ca83adb7f2e141c5d14
+ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447179"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87455741"
 ---
 # <a name="implement-a-dispose-method"></a>Dispose metodu uygulama
 
-Yöntemi uygulamak, <xref:System.IDisposable.Dispose%2A> birincil olarak kodunuzun kullandığı yönetilmeyen kaynakları serbest bırakmakta olur. Uygulamalar olan örnek üyeleriyle çalışırken <xref:System.IDisposable> , basamaklı <xref:System.IDisposable.Dispose%2A> çağrılar yaygındır. <xref:System.IDisposable.Dispose%2A>Daha önce yapılan bir şeyi geri alma gibi, uygulama için başka nedenler de vardır. Örneğin, ayrılan belleği serbest bırakma, eklenen bir koleksiyondan öğe kaldırma, alınmış bir kilidin bulunduğu bir kilidi sinyal verme ve benzeri.
+Yöntemi uygulamak, <xref:System.IDisposable.Dispose%2A> öncelikle yönetilmeyen kaynakların serbest bırakılması içindir. Uygulamalar olan örnek üyeleriyle çalışırken <xref:System.IDisposable> , basamaklı <xref:System.IDisposable.Dispose%2A> çağrılar yaygındır. <xref:System.IDisposable.Dispose%2A>Örneğin, ayrılan belleği serbest bırakma, koleksiyona eklenen bir öğeyi kaldırma veya alınan bir kilidin serbest bırakılması sinyali gibi nedenlerle başka nedenler de vardır.
 
 [.Net atık toplayıcısı](index.md) , yönetilmeyen bellek ayırır veya serbest bırakmaz. Dispose düzeni olarak adlandırılan bir nesneyi elden atma düzeni, bir nesnenin kullanım ömrüne göre sıra uygular. Dispose deseninin, arabirimi uygulayan nesneler için kullanılır <xref:System.IDisposable> ve dosya ve kanal tutamaçları, kayıt defteri tutamaçları, bekleme tutamaçları veya yönetilmeyen bellek bloklarına yönelik işaretçilerle etkileşim kurarken yaygındır. Bunun nedeni, çöp toplayıcının yönetilmeyen nesneleri geri kazanmamadır.
 
