@@ -1,5 +1,6 @@
 ---
 title: Storeadm.exe (Yalıtılmış Depolama Aracı)
+description: Yalıtılmış depolama aracı Storeadm.exe hakkında bilgi edinin. Bu araç, geçerli kullanıcı için varolan tüm depoları listeler veya kaldırır.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storeadm.exe
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 153fc2b4b5a955fd5ed768d1492f053595363e6e
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715724"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517015"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (Yalıtılmış Depolama Aracı)
 Yalıtılmış Depolama aracı, geçerli kullanıcı için varolan tüm depoları listeler veya kaldırır.  
   
- Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7). Daha fazla bilgi için [Komut İstemleri'ne](developer-command-prompt-for-vs.md)bakın.  
+ Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).  
   
  Komut satırına şunu yazın:  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 storeadm [/list][/machine][/remove][/roaming][/quiet]  
@@ -32,34 +33,34 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 |Seçenek|Açıklama|  
 |------------|-----------------|  
-|**/h**[**elp**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
-|**/liste**|Geçerli kullanıcı için varolan tüm depoları görüntüler. Buna, kullanıcı tarafından çalıştırılan tüm uygulamaların veya derlemelerin depoları dahildir.|  
-|**/makine**|Makine deposunu seçer. Eylemin makine deposuna uygulanması gerektiğini belirtmek için **/list** veya **/remove** seçeneğiyle bu seçeneği kullanın.<br /><br /> .NET Framework 2.0'da yeni bir özelliktir|  
-|**/sessiz**|Sessiz mod kullanılacağını belirtir; yalnızca hata iletileri görünecek şekilde bilgilendirici çıktıyı engeller.|  
-|**/kaldırmak**|Geçerli kullanıcı için varolan tüm depoları kalıcı olarak kaldırır.|  
-|**/dolaşım**|Dolaşım deposunu seçer. Eylemin dolaşım mağazasına uygulanması gerektiğini belirtmek için **/list** veya **/remove** seçenekleriyle bu seçeneği kullanın.|  
+|**/h**[**ELP**]|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
+|**/List**|Geçerli kullanıcı için varolan tüm depoları görüntüler. Buna, kullanıcı tarafından çalıştırılan tüm uygulamaların veya derlemelerin depoları dahildir.|  
+|**/MACHINE**|Makine deposunu seçer. Eylemin Makine deposuna uygulanması gerektiğini belirtmek için bu seçeneği **/list** veya **/Remove** seçeneğiyle birlikte kullanın.<br /><br /> .NET Framework 2.0'da yeni bir özelliktir|  
+|**/**|Sessiz mod kullanılacağını belirtir; yalnızca hata iletileri görünecek şekilde bilgilendirici çıktıyı engeller.|  
+|**/Remove**|Geçerli kullanıcı için varolan tüm depoları kalıcı olarak kaldırır.|  
+|**/dolaşım**|Dolaşım deposunu seçer. Eylemin dolaşım deposuna uygulanması gerektiğini belirtmek için bu seçeneği **/list** veya **/Remove** seçenekleriyle birlikte kullanın.|  
 |**/?**|Araç için komut sözdizimini ve seçenekleri görüntüler.|  
   
 ## <a name="remarks"></a>Açıklamalar  
  Herhangi bir seçenek belirtmeden Storeadm.exe'yi komut satırından çalıştırmak sözdizimini ve araç için seçenekleri görüntüler.  
   
- **/list** ve **/remove** seçenekleri genellikle birer birer kullanılır; ancak, iki veya daha fazla seçenek belirtilirse, bunlar komut satırında göründükleri sırada gerçekleştirilir.  
+ **/List** ve **/Remove** seçenekleri genellikle tek seferde kullanılır; Ancak, iki veya daha fazla seçenek belirtilirse, komut satırında göründükleri sırada gerçekleştirilir.  
   
  Uygulamaların, bir kullanıcı için iki depodan birine veya makine deposuna kaydetme seçeneği vardır:  
   
-- Yerel mağaza, kullanıcı verileri dolaşımı kullanıcı için etkinleştirilse bile (Windows 2000 ve sonraki yerlerde) gezinmemesi garanti edilen bir konumda bulunur.  
+- Kullanıcı için Kullanıcı veri dolaşımı etkin olsa bile yerel depo, dolaşımda olmayan (Windows 2000 ve üzeri) bir konumda bulunur.  
   
-- Dolaşım deposu, gezinmeyi yapabilen bir konumda bulunur, ancak bunu ancak Windows NT yönetimi aracılığıyla kullanıcı için dolaşım etkinleştirilirse yapabilir.  
+- Dolaşım deposu, dolaşımda bulunan bir konumda bulunur, ancak yalnızca Windows NT yönetimi aracılığıyla Kullanıcı için dolaşım etkinse bu işlemi yapabilirsiniz.  
   
 - Makine deposu bir makinedeki tüm kullanıcılar için ortaktır ve o makinede ortak bir dizin altında depolanır.  
   
     > [!NOTE]
     > Makine deposu .NET Framework sürüm 2.0'da yeni bir özelliktir.  
   
- Dolaşımın kullanıcı için etkinleştirilip etkinleştirilmediği Storeadm.exe'nin yönetimini etkilemez. Aracı hiçbir seçenek olmadan çalıştırmak yerel depoya tüm işlemleri uygular. Aracı **/dolaşım** seçeneğiyle çalıştırmak, dolaşıma sabilen mağazaya tüm eylemleri uygular. /machine seçeneği **/machine** ile aracı çalıştırmak makine deposuna tüm eylemleri uygular.  
+ Dolaşımın kullanıcı için etkinleştirilip etkinleştirilmediği Storeadm.exe'nin yönetimini etkilemez. Aracı hiçbir seçenek olmadan çalıştırmak yerel depoya tüm işlemleri uygular. Aracı **/dolaşım** seçeneğiyle çalıştırmak, tüm işlemleri dolaşımda olan depoya uygular. Aracı **/MACHINE** seçeneğiyle çalıştırmak, tüm eylemleri Makine deposuna uygular.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Araçlar](index.md)
-- [Yalıtılmış Depolama](../../standard/io/isolated-storage.md)
-- [Komut İstemleri](developer-command-prompt-for-vs.md)
+- [Yalıtılmış depolama](../../standard/io/isolated-storage.md)
+- [Komut Istemleri](developer-command-prompt-for-vs.md)

@@ -2,12 +2,12 @@
 title: DotNet-izleme aracı-.NET Core
 description: DotNet-Trace komut satırı aracını yükleme ve kullanma.
 ms.date: 11/21/2019
-ms.openlocfilehash: 6dd968dc49522229dca02c0dc6f3de898026dd82
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 25178a0e59ce9edb69d15ee761c1b9e56aa5eb3a
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924857"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517314"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>DotNet-izleme performansı Analizi yardımcı programı
 
@@ -38,13 +38,13 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>Seçenekler
 
-- **`--version`**
-
-  DotNet-Trace yardımcı programının sürümünü görüntüler.
-
 - **`-h|--help`**
 
   Komut satırı yardımını gösterir.
+
+- **`--version`**
+
+  DotNet-Trace yardımcı programının sürümünü görüntüler.
 
 ## <a name="commands"></a>Komutlar
 
@@ -62,23 +62,45 @@ dotnet-trace [-h, --help] [--version] <command>
 ### <a name="synopsis"></a>Özeti
 
 ```console
-dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--output]
-    [--providers] [--profile <profile-name>] [--format]
+dotnet-trace collect [--buffersize <size>] [--clreventlevel <clreventlevel>] [--clrevents <clrevents>]
+    [--format <Chromium|NetTrace|Speedscope>] [-h|--help]
+    [-n, --name <name>]  [-o|--output <trace-file-path>] [-p|--process-id <pid>]
+    [--profile <profile-name>] [--providers <list-of-comma-separated-providers>]
 ```
 
 ### <a name="options"></a>Seçenekler
-
-- **`-p|--process-id <PID>`**
-
-  İzlemeyi toplama işlemi.
 
 - **`--buffersize <size>`**
 
   Bellek içi dairesel arabelleğin boyutunu megabayt cinsinden ayarlar. Varsayılan 256 MB.
 
+- **`--clreventlevel <clreventlevel>`**
+
+  Oluşturulacak CLR olaylarının ayrıntı düzeyi.
+
+- **`--clrevents <clrevents>`**
+
+  Görüntülenecek CLR çalışma zamanı olaylarının listesi.
+
+- **`--format {Chromium|NetTrace|Speedscope}`**
+
+  İzleme dosyası dönüştürmesi için çıkış biçimini ayarlar. Varsayılan değer: `NetTrace`.
+
+- **`-n, --name <name>`**
+
+  İzlemenin toplanacağı işlemin adı.
+
 - **`-o|--output <trace-file-path>`**
 
-  Toplanan izleme verileri için çıkış yolu. Belirtilmemişse, varsayılan olarak `trace.nettrace` .
+  Toplanan izleme verileri için çıkış yolu. Belirtilmemişse, varsayılan olarak olur `trace.nettrace` .
+
+- **`-p|--process-id <PID>`**
+
+  İzlemeyi toplanacak işlem kimliği.
+
+- **`--profile <profile-name>`**
+
+  Yaygın izleme senaryolarına izin veren önceden tanımlanmış adlandırılmış bir dizi sağlayıcı yapılandırması succinctly.
 
 - **`--providers <list-of-comma-separated-providers>`**
 
@@ -90,14 +112,6 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
   - `Provider`Şu biçimdedir: `KnownProviderName[:Flags[:Level][:KeyValueArgs]]` .
   - `KeyValueArgs`Şu biçimdedir: `[key1=value1][;key2=value2]` .
 
-- **`--profile <profile-name>`**
-
-  Yaygın izleme senaryolarına izin veren önceden tanımlanmış adlandırılmış bir dizi sağlayıcı yapılandırması succinctly.
-
-- **`--format {NetTrace|Speedscope}`**
-
-  İzleme dosyası dönüştürmesi için çıkış biçimini ayarlar. Varsayılan değer: `NetTrace`.
-
 ## <a name="dotnet-trace-convert"></a>DotNet-Trace Dönüştür
 
 `nettrace`Diğer izleme çözümleme araçlarıyla birlikte kullanmak üzere izlemeleri alternatif biçimlere dönüştürür.
@@ -105,7 +119,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 ### <a name="synopsis"></a>Özeti
 
 ```console
-dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
+dotnet-trace convert [<input-filename>] [--format <Chromium|NetTrace|Speedscope>] [-h|--help] [-o|--output <output-filename>]
 ```
 
 ### <a name="arguments"></a>Arguments
@@ -116,7 +130,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ### <a name="options"></a>Seçenekler
 
-- **`--format <NetTrace|Speedscope>`**
+- **`--format <Chromium|NetTrace|Speedscope>`**
 
   İzleme dosyası dönüştürmesi için çıkış biçimini ayarlar.
 
@@ -126,7 +140,7 @@ dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 
 ## <a name="dotnet-trace-ps"></a>DotNet-izleme PS 'si
 
-İliştirilebilecek DotNet süreçlerini listeler.
+ İzlemelerin toplanabilecek DotNet süreçlerini listeler.
 
 ### <a name="synopsis"></a>Özeti
 
@@ -154,7 +168,7 @@ Kullanarak izlemeleri toplamak için `dotnet-trace` :
   - Linux 'ta, örneğin, `ps` komutu.
   - [DotNet-izleme PS 'si](#dotnet-trace-ps)
 
-- Şu komutu çalıştırın:
+- Aşağıdaki komutu çalıştırın:
 
   ```console
   dotnet-trace collect --process-id <PID>

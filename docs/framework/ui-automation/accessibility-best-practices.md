@@ -1,137 +1,138 @@
 ---
 title: En İyi Erişilebilirlik Uygulamaları
+description: .NET ' te erişilebilirlik en iyi uygulamaları hakkında bilgi edinin. Programlı erişimi, Kullanıcı ayarlarını, görsel kullanıcı arabirimi tasarımını, gezinmeyi ve çok kalıcı arabirimleri bulun.
 ms.date: 03/30/2017
 helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: c6f0f31260ffae43e59703ef53dd7ef30a73320b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725bb0c60972e2d0dc6089b4370dd7e3e436e444
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180294"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517067"
 ---
 # <a name="accessibility-best-practices"></a>En İyi Erişilebilirlik Uygulamaları
 > [!NOTE]
-> Bu dokümantasyon, ad alanında tanımlanan yönetilen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sınıfları kullanmak <xref:System.Windows.Automation> isteyen .NET Framework geliştiricileri için tasarlanmıştır. Hakkında en son [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]bilgi için [Bkz. Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
+> Bu belge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ad alanında tanımlanan yönetilen sınıfları kullanmak isteyen .NET Framework geliştiricilere yöneliktir <xref:System.Windows.Automation> . Hakkında en son bilgiler için [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bkz. [WINDOWS Otomasyonu API: UI Otomasyonu](/windows/win32/winauto/entry-uiauto-win32).  
   
- Denetimlerde veya uygulamalarda aşağıdaki en iyi uygulamaların uygulanması, yardımcı teknoloji aygıtları kullanan kişiler için erişilebilirliklerini artırır. Bu en iyi uygulamaların çoğu [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] iyi tasarım aodaklanz. Her en iyi uygulama, denetimler veya uygulamalar için [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] uygulama bilgilerini içerir. Çoğu durumda, bu en iyi uygulamaları karşılamak için [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] çalışma zaten denetimleri dahildir.  
+ Aşağıdaki en iyi yöntemleri denetimlerde veya uygulamalarda uygulamak, yardımcı teknoloji cihazlarını kullanan kişiler için erişilebilirliğini geliştirir. Bu en iyi uygulamaların birçoğu iyi tasarıma odaklanmaktadır [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . En iyi yöntemler, denetimler veya uygulamalar için uygulama bilgilerini içerir [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] . Çoğu durumda, bu en iyi uygulamaları karşılamak için çalışma zaten [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimlere eklenmiştir.  
   
 <a name="Programmatic_Access"></a>
 ## <a name="programmatic-access"></a>Programlı Erişim  
- Programlı erişim, tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerin etiketlendiğini, özellik değerlerinin açığa alınmasını ve uygun olayların yükseltilmesini sağlar. Standart [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimler için, bu çalışmanın <xref:System.Windows.Automation.Peers.AutomationPeer>çoğu zaten . Özel denetimler, programatik erişimin doğru şekilde uygulandığından emin olmak için ek çalışma gerektirir.  
+ Programlı erişim [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , tüm öğelerin etiketlenmesini, özellik değerlerinin gösterilmesini ve uygun olayların ortaya çıkarılmasını sağlar. Standart [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] denetimler için, bu çalışmanın çoğu aracılığıyla zaten yapılır <xref:System.Windows.Automation.Peers.AutomationPeer> . Özel denetimler, programlı erişimin doğru bir şekilde uygulandığından emin olmak için ek çalışma gerektirir.  
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>
-### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Tüm Kullanıcı Ve Özel Eğitim Öğelerine ve Metne Programlı Erişimi Etkinleştirme  
- Kullanıcı arabirimi (UI) öğeleri programlı erişimi etkinleştirmelidir. Standart [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] bir denetim varsa, programlı erişim desteği denetime dahil edilir. Denetim özel bir denetimse – ortak bir denetimden veya Denetim'den alt sınıflanmış bir denetimden alt <xref:System.Windows.Automation.Peers.AutomationPeer> sınıflanmış bir denetim - o zaman değiştirilmesi gereken alanlar için uygulamayı denetlemeniz gerekir.  
+### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Tüm Kullanıcı Arabirimi öğelerine ve metnine programlı erişimi etkinleştir  
+ Kullanıcı arabirimi (UI) öğeleri programlı erişimi etkinleştirmelidir. [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]Standart bir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] Denetim ise, programlı erişim desteği denetime dahil edilir. Denetim özel bir denetim ise (ortak bir denetimden veya denetimin alt sınıflandırıından oluşturulmuş bir denetimden) alt sınıflandırılacak bir denetim – daha sonra, <xref:System.Windows.Automation.Peers.AutomationPeer> değişiklik gerekebilecek alanlara yönelik uygulamayı denetlemeniz gerekir.  
   
- Bu en iyi uygulamayı takiben yardımcı teknoloji satıcılarının ürününüzün [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]elemanlarını tanımlamasına ve işlemesine olanak tanır.  
+ Bu en iyi yöntem, yardımcı teknoloji satıcılarının ürününüzün öğelerini belirlemesine ve işlemesini sağlar [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>
-### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Kullanıcı Sayısı Nesnelerine, Çerçevelere ve Sayfalara İsimler, Başlıklar ve Açıklamalar Yerleştirme  
- Yardımcı teknolojiler, özellikle ekran okuyucular, gezinti düzeninde çerçevenin, nesnenin veya sayfanın konumunu anlamak için başlığı kullanır. Bu nedenle, başlık çok açıklayıcı olmalıdır. Örneğin, kullanıcı belirli bir alanda derinden gezinmişse, "Microsoft Web Sayfası"nın bir Web sayfası başlığı işe yaramaz. Açıklayıcı bir başlık, görme engelliler ve ekran okuyuculara bağımlı olan kullanıcılar için çok önemlidir. Benzer şekilde, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] denetimler için <xref:System.Windows.Automation.AutomationProperties.NameProperty> ve <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> yardımcı teknoloji aygıtları için önemlidir.  
+### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Kullanıcı arabirimi nesnelerine, çerçevelerine ve sayfalarına ad, başlık ve açıklama yerleştirme  
+ Yardımcı teknolojiler, özellikle ekran okuyucular, gezinti düzeninde çerçeve, nesne veya sayfanın konumunu anlamak için başlığı kullanır. Bu nedenle, başlık çok açıklayıcı olmalıdır. Örneğin, Kullanıcı belirli bir alana daha fazla gezindiyseniz, "Microsoft Web sayfası" Web sayfası başlığı kullanılamaz. Açıklayıcı bir başlık, görme engelli ve ekran okuyucularına bağlı olan kullanıcılar için önemlidir. Benzer şekilde, [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] denetimler için <xref:System.Windows.Automation.AutomationProperties.NameProperty> ve <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> yardımcı teknoloji cihazları için önemlidir.  
   
- Bu en iyi uygulamanın ardından yardımcı teknolojilerin [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] örnek denetimleri ve uygulamalarında tanımlanmasına ve manipüle edilmesine olanak tanır.  
+ Bu en iyi yöntem, yardımcı teknolojik [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] , örnek denetimleri ve uygulamaları belirlemesine ve değiştirmesine olanak tanır.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>
-### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Programlı Olayların Tüm UI Etkinlikleri Tarafından Tetiklendirilmesini Sağlayın  
- Bu en iyi uygulamayı takiben yardımcı teknolojiler, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] yardımcı teknolojideki değişiklikleri dinlemelerine ve kullanıcıyı bu değişiklikler hakkında bilgilendirmelerine olanak tanır.  
+### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Programlı olayların tüm Kullanıcı arabirimi etkinlikleri tarafından tetiklendiğinden emin olun  
+ Bu en iyi yöntem, yardımcı teknolojik içindeki değişiklikleri dinlemek [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ve kullanıcıya bu değişiklikleri bildirme olanağı sağlar.  
   
 <a name="User_Settings"></a>
 ## <a name="user-settings"></a>Kullanıcı Ayarları  
- Bu bölümdeki en iyi uygulama, denetimlerin veya uygulamaların kullanıcı ayarlarını geçersiz kılmamasını sağlar.  
+ Bu bölümdeki en iyi yöntem, denetimlerin veya uygulamaların kullanıcı ayarlarını geçersiz kılmamasını sağlar.  
   
 <a name="Respect_all_System_Wide_Settings_and_do_not_Interfere"></a>
-### <a name="respect-all-system-wide-settings-and-do-not-interfere-with-accessibility-functions"></a>Tüm Sistem Genelindeki Ayarlara Saygı Gösterin ve Erişilebilirlik Fonksiyonlarına Müdahale Etmeyin  
- Kullanıcılar, sistem genelinde bazı bayraklar ayarlamak için Denetim Masası'nı kullanabilir; diğer bayraklar programlı olarak ayarlanabilir. Bu ayarlar denetimler veya uygulamalar tarafından değiştirilmemelidir. Ayrıca, uygulamalar ana bilgisayar işletim sisteminin erişilebilirlik ayarlarını desteklemelidir.  
+### <a name="respect-all-system-wide-settings-and-do-not-interfere-with-accessibility-functions"></a>Tüm sistem genelinde ayarları dikkate alarak erişilebilirlik Işlevlerini engellemez  
+ Kullanıcılar, sistem genelinde bazı bayraklar ayarlamak için Denetim Masası 'nı kullanabilir; diğer bayraklar programlı bir şekilde ayarlanabilir. Bu ayarlar, denetimler veya uygulamalar tarafından değiştirilmemelidir. Ayrıca, uygulamalar, ana bilgisayar işletim sisteminin erişilebilirlik ayarlarını desteklemelidir.  
   
- Bu en iyi uygulamadan sonra, kullanıcıların erişilebilirlik ayarlarını ayarlamasına ve bu ayarların uygulamalar tarafından değiştirilmeyeceğini bilmelerine olanak tanır.  
+ Bu en iyi yöntem, kullanıcıların erişilebilirlik ayarlarını ayarlamasına ve bu ayarların uygulamalar tarafından değiştirilmediğini bilmesini sağlar.  
   
 <a name="Visual_UI_Design"></a>
-## <a name="visual-ui-design"></a>Görsel UI Tasarım  
- Bu bölümdeki en iyi uygulamalar, denetimlerin veya uygulamaların renk ve görüntüleri etkin bir şekilde kullanmasını ve Yardımcı teknolojiler tarafından kullanılabilmesini sağlar.  
+## <a name="visual-ui-design"></a>Görsel kullanıcı arabirimi tasarımı  
+ Bu bölümdeki en iyi uygulamalar, denetimlerin veya uygulamaların renk ve görüntüleri etkin şekilde kullanmasını ve yardımcı teknolojiler tarafından kullanılmasını sağlar.  
   
 <a name="Don_t_Hard_Code_Colors"></a>
 ### <a name="dont-hard-code-colors"></a>Renkleri Sabit Kodlamayın  
- Renk körü olan, görme güçlüğü çeken veya siyah beyaz ekran kullanan kişiler, sabit kodlu renklere sahip uygulamaları kullanamayabilir.  
+ Renkli, görme zorluğu olan veya siyah beyaz bir ekran kullanan kişiler, sabit kodlanmış renklerle uygulamaları kullanmayabilir.  
   
- Bu en iyi uygulamadan sonra, kullanıcıların bireysel ihtiyaçlara göre renk birleşimlerini ayarlamalarına olanak tanır.  
+ Bu en iyi yöntem, kullanıcıların renk birleşimlerini bireysel gereksinimlere göre ayarlamasına olanak tanır.  
   
 <a name="Support_High_Contrast_and_all_System_Display_Attributes"></a>
-### <a name="support-high-contrast-and-all-system-display-attributes"></a>Yüksek Karşıtlığı ve Tüm Sistem Görüntü Özelliklerini Destekle  
- Uygulamalar, kullanıcı tarafından seçilen, sistem genelindeki kontrast ayarlarını, renk seçimlerini veya sistem genelindeki diğer ekran ayarlarını ve özniteliklerini bozmamalı veya devre dışı etmememelidir. Kullanıcı tarafından benimsenen sistem genelindeki ayarlar uygulamaların erişilebilirliğini artırır, böylece uygulamalar tarafından devre dışı bırakılmamalı veya göz ardı edilmemelidir. Renk, doğru kontrast sağlamak için doğru ön plan-arka plan kombinasyonu kullanılmalıdır. İlişkisiz renkler karıştırılmamalı ve renkler ters çevrilmemelidir.  
+### <a name="support-high-contrast-and-all-system-display-attributes"></a>Yüksek Karşıtlık ve tüm sistem görüntüleme özniteliklerini destekler  
+ Uygulamalar, Kullanıcı tarafından seçilen, sistem genelinde karşıtlık ayarlarını, renk seçimlerini veya sistem genelindeki diğer ekran ayarlarını ve özniteliklerini bozmamalıdır veya devre dışı bırakmamalıdır. Bir kullanıcı tarafından benimsenen sistem genelindeki ayarlar uygulamaların erişilebilirliğini geliştirir, bu nedenle uygulamalar tarafından devre dışı bırakılmamalıdır veya gözardı edilmelidir. Renk, doğru karşıtlığı sağlamak için doğru arka plan ön planda kullanılmalıdır. İlişkisiz renklerin karışık olmaması ve renklerin ters çevrilmemelidir.  
   
- Birçok kullanıcı, siyah arka plandaki beyaz metin gibi belirli yüksek karşıtlıklı kombinasyonlar gerektirir. Beyaz arka plandaki siyah metin arka planın ön planda kanamasına neden olduğu ve bazı kullanıcılar için okumayı zorlaştırabileceği nden, bunları tersine çizmek.  
+ Birçok kullanıcı, siyah bir arka planda beyaz metin gibi belirli yüksek karşıtlıklı birleşimler gerektirir. Bu ters çevrilme, beyaz bir arka planda siyah metin olarak çizilerek arka planda taşma ve bazı kullanıcılar için okuma zor hale gelmesine neden olabilir.  
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>
-### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Herhangi bir DPI Ayarına Göre Tüm UI'nin Doğru Ölçeklendirildirdiğinden emin olun  
- Tüm [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] doğru inç başına herhangi bir nokta (dpi) ayarı tarafından ölçeklenebilir emin olun. Ayrıca, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elemanların inç başına 120 nokta (dpi) ile 1024 x 768 ekrana sığdığından emin olun.  
+### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Tüm Kullanıcı arabiriminin tüm DPı ayarlarına göre doğru şekilde ölçeklendirdiğinden emin olun  
+ Her [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] bir nokta/inç (dpi) ayarı için tümünün doğru şekilde ölçeklendiğinden emin olun. Ayrıca, [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğelerin 1024 x 768 ekranına, inç başına 120 nokta (DPI) ile uygun olduğundan emin olun.  
   
 <a name="Navigation"></a>
 ## <a name="navigation"></a>Gezinti  
- Bu bölümdeki En İyi Uygulamalar, denetimler ve uygulamalar için gezintinin ele alınmasını sağlar.  
+ Bu bölümdeki en iyi uygulamalar, gezintinin denetimler ve uygulamalar için sağlandığından emin olun.  
   
 <a name="Provide_Keyboard_Interface_for_all_UI_Elements"></a>
-### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Tüm UI Öğeleri için Klavye Arabirimi Sağlayın  
- Sekme durur, özellikle dikkatlice planlandığında, kullanıcılara gezinmek için başka bir yol [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]verin.  
+### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Tüm Kullanıcı arabirimi öğeleri için klavye arabirimi sağla  
+ Özellikle dikkatli bir şekilde planlandığınızda, kullanıcıların ' de gezinmek için başka bir yol vermesi için sekme duraklar [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
   
  Uygulamalar aşağıdaki klavye arabirimlerini sağlamalıdır:  
   
-- düğmeler, bağlantılar veya liste kutuları gibi kullanıcının etkileşimkurabileceği tüm denetimler için sekme durakları  
+- düğme, bağlantılar veya liste kutuları gibi, kullanıcının etkileşime girebileceği tüm denetimler için sekme duraklar  
   
 - mantıksal sekme sırası  
   
 <a name="Show_the_Keyboard_Focus"></a>
-### <a name="show-the-keyboard-focus"></a>Klavye Odağı göster  
- Kullanıcıların tuş vuruşlarının etkisini öngörebilmeleri için klavye odağına sahip olan nesnenin olması gerekir. Klavye odağı vurgulamak için, dikdörtgenler veya büyütme gibi renkleri, yazı tiplerini veya grafikleri kullanın. Klavye odağının sesli olarak vurgulanması için ses düzeyini, perdeyi veya ton kalitesini değiştirin.  
+### <a name="show-the-keyboard-focus"></a>Klavye odağını göster  
+ Kullanıcıların tuş vuruşlarının etkisini tahmin edebilmesi için hangi nesnenin klavye odağına sahip olduğunu bilmeleri gerekir. Klavye odağını vurgulamak için, renkler, yazı tipleri veya dikdörtgenler ya da büyütme gibi grafikleri kullanın. Klavye odağını sesli olarak vurgulamak için birim, Aralık veya ton kalitesini değiştirin.  
   
- Karışıklığı önlemek için, uygulamalar etkin olmayan pencerelerde (veya bölmelerde) bulunan tüm görsel odak göstergelerini ve loş seçimleri gizlemelidir.  
+ Karışıklıkları önlemek için uygulamalar, etkin olmayan Windows (veya bölmeler) içindeki tüm görsel odak göstergelerini ve karartma seçimlerini gizlemelidir.  
   
- Uygulamalar klavye odaklama ile aşağıdakileri yapmalıdır:  
+ Uygulamalar klavye odağıyla aşağıdakileri yapması gerekir:  
   
-- bir öğe her zaman klavye odağı olmalıdır  
+- tek bir öğe, her zaman klavye odağına sahip olmalıdır  
   
-- klavye odağı görünür ve açık olmalıdır  
+- klavye odağı görünür ve belirgin olmalıdır  
   
-- seçimler ve/veya odaklanmış öğeler görsel olarak vurgulanmalıdır  
+- seçimlerin ve/veya odaklanmış öğelerin görsel olarak vurgulanmış olması gerekir  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>
-### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Destek Navigasyon Standartları ve Güçlü Navigasyon Şemaları  
- Klavye gezintisinin farklı yönleri, kullanıcıların [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Gezinti standartlarını ve güçlü gezinti düzenlerini destekleme  
+ Klavye gezinmesinin farklı yönleri, kullanıcıların gezinmesinin farklı yollarını sağlar [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
   
  Uygulamalar aşağıdaki klavye arabirimlerini sağlamalıdır:  
   
-- tüm komutlar, menüler ve denetimler için kısayol tuşları ve altı çizili erişim tuşları  
+- Tüm komutlar, menüler ve denetimler için kısayol tuşları ve altı çizili erişim tuşları  
   
 - önemli bağlantılara klavye kısayolları  
   
-- tüm menü öğelerinin bir erişim anahtarı vardır; tüm düğmelerde hızlandırıcı tuşları vardır, tüm komutların bir hızlandırıcı tuşu vardır.  
+- tüm menü öğelerinin bir erişim anahtarı vardır; tüm düğmelerin kısayol tuşları vardır, tüm komutlarda kısayol tuşu vardır.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>
-### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Fare Konumunun Klavye Gezintisine Müdahale Etmesine İzin Vermeyin  
- Fare konumu klavye gezintisi ile müdahale etmemelidir. Örneğin, fare bir yere konumlandırılmışsa ve kullanıcı klavyede geziniyorsa, kullanıcı tarafından başlatılmadığı sürece fare tıklaması gerçekleşmemelidir.  
+### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Klavye gezintisi ile fare konumunun kesintiye uğramasını Izin vermeyin  
+ Fare konumu klavye gezintisini engellemez. Örneğin, fare bir yerde konumlandırılmışsa ve Kullanıcı klavyeyle geziniyorsa Kullanıcı tarafından başlatılmadığı takdirde fare tıklaması gerçekleşmemelidir.  
   
 <a name="Multimodal_Interface"></a>
-## <a name="multimodal-interface"></a>Multimodal Arayüz  
- Bu bölümdeki En İyi [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] Uygulamalar, uygulamanın görsel öğeler için alternatifler içermesini sağlar.  
+## <a name="multimodal-interface"></a>Multimodal arabirimi  
+ Bu bölümdeki en iyi uygulamalar, uygulamanın [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] görsel öğeler için alternatifler içerdiğinden emin olmanızı sağlamaktır.  
   
 <a name="Provide_User_Selectable_Equivalents_for_Non_Text"></a>
-### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Metin Olmayan Öğeler için Kullanıcı Tarafından Seçilebilir Eşdeğerler Sağlayın  
- Metin olmayan her öğe için, alt metin, altyazılar veya görsel geri bildirim gibi metin, transkript veya ses açıklamaları için kullanıcı tarafından seçilebilir bir eşdeğer sağlayın.  
+### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Metin olmayan öğeler için Kullanıcı tarafından seçilebilir eşdeğerleri sağlama  
+ Metin olmayan her öğe için, metin, döküm veya görsel geri bildirim gibi metin, döküm veya ses açıklamaları için Kullanıcı tarafından seçilebilir bir eşdeğer belirtin.  
   
- Metin dışı [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] öğeler, resimler, görüntü haritası bölgeleri, animasyonlar, uygulamalar, kareler, komut dosyaları, grafik düğmeler, sesler, bağımsız ses dosyaları ve video gibi çok çeşitli öğeleri kapsar. Metin dışı öğeler, kullanıcının içeriğini anlamak için erişmesi gereken görsel bilgiler, konuşmalar veya genel [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]ses bilgileri içerdiklerinde önemlidir.  
+ Metin olmayan öğeler [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ; görüntüler, görüntü eşleme bölgeleri, animasyonlar, uygulamalar, çerçeveler, betikler, grafik düğmeleri, sesler, tek başına ses dosyaları ve video dahil olmak üzere çok çeşitli öğeleri kapsar. Metin olmayan öğeler, kullanıcının içeriğini anlamak için erişmesi gereken görsel bilgiler, konuşma veya genel ses bilgileri içerdiğinde önemlidir [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
   
 <a name="Use_Color_but_also_Provide_Alternatives_to_Color"></a>
-### <a name="use-color-but-also-provide-alternatives-to-color"></a>Renk Kullanın ama Aynı zamanda Renk Alternatifleri sağlayın  
- Başka yollarla gösterilen bilgileri geliştirmek, vurgulamak veya yinelemek için rengi kullanın, ancak renkleri tek başına kullanarak bilgileri iletmeyin. Renk körü veya tek renkli ekrana sahip kullanıcıların renk alternatiflerine ihtiyacı vardır.  
+### <a name="use-color-but-also-provide-alternatives-to-color"></a>Renk kullanın, ancak renk alternatifleri de sağlar  
+ Diğer yollarla gösterilen bilgileri geliştirmek, vurgulamak veya yeniden yinelemek için renk kullanın, ancak yalnızca renk kullanarak bilgileri iletmeyin. Renkleri görme engelli veya tek renkli ekranı olan kullanıcıların renk alternatifleri olmalıdır.  
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>
-### <a name="use-standard-input-apis-with-device-independent-calls"></a>Aygıt-Bağımsız Aramalarla Standart Giriş API'lerini Kullanma  
- Cihazdan bağımsız aramalar klavye ve fare özelliği eşitliğini sağlarken, yardımcı [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]teknoloji hakkında gerekli bilgileri sağlar.  
+### <a name="use-standard-input-apis-with-device-independent-calls"></a>Cihazdan bağımsız çağrılarla standart giriş API 'Lerini kullanma  
+ Cihazdan bağımsız çağrılar klavye ve fare özelliği eşitliğini sağlar [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Automation.Peers>
-- [Tema ve UI Otomasyon Destek Örneği ile SayısalUpDown Özel Kontrol](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
-- [Klavye Kullanıcı Arabirimi Tasarımı Kılavuzu](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+- [Tema ve UI Otomasyonu desteği örneği ile NumericUpDown özel denetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
+- [Klavye Kullanıcı arabirimi tasarımı için yönergeler](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

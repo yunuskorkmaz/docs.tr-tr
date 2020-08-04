@@ -3,12 +3,12 @@ title: Azure’da F# Kullanma
 description: 'F ile Azure hizmetlerini kullanma kılavuzu #'
 author: sylvanc
 ms.date: 07/29/2020
-ms.openlocfilehash: ebf94d724db2c503f27581bf1352bf4fa90f5e2a
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.openlocfilehash: 24ef3fd14a4d0173935fac3e67aadf86110fa6d8
+ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455707"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517379"
 ---
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
@@ -113,7 +113,7 @@ Süreölçerler, F # ' da uygulanabilir ve [bir Zamanlayıcı tetikleyicisi Ile 
 
 Azure VM 'leri, Microsoft. Azure. Yönetim paketleri ve API 'Leri kullanılarak, F # betiklerinden programlı bir şekilde dağıtılabilir ve yönetilebilir. Örneğin, bkz. [.net Için yönetim kitaplıklarını kullanmaya başlama](https://msdn.microsoft.com/library/dn722415.aspx) ve [Azure Resource Manager kullanma](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Benzer şekilde, diğer Azure kaynakları da aynı bileşenleri kullanarak F # betiklerinden dağıtılabilir ve yönetilebilir. Örneğin, depolama hesapları oluşturabilir, Azure Cloud Services dağıtabilir, Azure Cosmos DB örnekleri oluşturabilir ve Azure notifcation hub 'Larını F # betiklerinden programlı bir şekilde yönetebilirsiniz.
+Benzer şekilde, diğer Azure kaynakları da aynı bileşenleri kullanarak F # betiklerinden dağıtılabilir ve yönetilebilir. Örneğin, bir depolama hesabı oluşturabilir, Azure Cloud Services dağıtabilir, Azure Cosmos DB örnekleri oluşturabilir ve Azure Notification Hubs F # betiklerinden programlı bir şekilde yönetebilirsiniz.
 
 Kaynakları dağıtmak ve yönetmek için F # betikleri kullanılması normalde gerekli değildir. Örneğin, Azure kaynakları, parametreleştirilen parametreli bir şekilde doğrudan JSON şablonu açıklamalarından da dağıtılabilir. Bkz. [Azure hızlı başlangıç şablonları](https://azure.microsoft.com/resources/templates/)gibi örnekler de [Azure Resource Manager şablonları](/azure/azure-resource-manager/resource-manager-template-best-practices) .
 
