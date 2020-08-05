@@ -479,7 +479,5 @@ items:
     href: native-interop/expose-components-to-com.md
   - name: Yerel koddan .NET Core barındırma
     href: tutorials/netcore-hosting.md
-  - name: 'Paketler, meta paketler ve çerçeveler'
-    href: packages.md
   - name: Sürekli tümleştirme
     href: tools/using-ci-with-cli.md

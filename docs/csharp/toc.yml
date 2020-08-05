@@ -1,6 +1,6 @@
 - name: C# belgeleri
   href: index.yml
-- name: Kullanmaya başlayın
+- name: başlarken
   items:
     - name: Genel Bakış
       displayName: get started
@@ -233,7 +233,7 @@
       href: programming-guide/interop/index.md
     - name: Kodunuzu belgeleme
       href: codedoc.md
-    - name: Sürüm Oluşturma
+    - name: Sürüm oluşturma
       href: versioning.md
 - name: Nasıl yapılır C# makaleleri
   items:
@@ -876,8 +876,6 @@
           href: programming-guide/statements-expressions-operators/index.md
         - name: Deyimler
           href: programming-guide/statements-expressions-operators/statements.md
-        - name: İfadeler
-          href: programming-guide/statements-expressions-operators/expressions.md
         - name: İfade gövdeli üyeler
           href: programming-guide/statements-expressions-operators/expression-bodied-members.md
         - name: Anonim işlevler
@@ -925,7 +923,7 @@
           href: programming-guide/classes-and-structs/objects.md
         - name: Devralma
           href: programming-guide/classes-and-structs/inheritance.md
-        - name: Çok Biçimlilik
+        - name: Çok biçimlilik
           items:
             - name: Genel Bakış
               displayName: polymorphism
@@ -1256,7 +1254,7 @@
           href: programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time.md
         - name: Kayıt defterinde anahtar oluşturma
           href: programming-guide/file-system/how-to-create-a-key-in-the-registry.md
-    - name: Birlikte Çalışabilirlik
+    - name: Birlikte çalışabilirlik
       items:
         - name: .NET Birlikte Çalışabilirliği
           href: programming-guide/interop/index.md
@@ -1520,7 +1518,7 @@
               href: language-reference/keywords/set.md
             - name: when (filtre koşulu)
               href: language-reference/keywords/when.md
-            - name: value
+            - name: değer
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1561,7 +1559,7 @@
       items:
         - name: Genel Bakış
           href: language-reference/operators/index.md
-          displayName: 'operator precedence, operator associativity'
+          displayName: 'operator precedence, operator associativity, expressions'
         - name: Aritmetik İşleçler
           href: language-reference/operators/arithmetic-operators.md
           displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
