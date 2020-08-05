@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 59e01b17d78032714803629d503a92ba86a20fdc
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 242442e9b0ad41a4945c66421bb537cb6cb9b6c0
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394650"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556481"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>Üye erişim işleçleri ve ifadeleri (C# Başvurusu)
 
@@ -223,6 +223,6 @@ Dizinler ve aralıklar hakkında daha fazla bilgi için bkz. [özellik teklifi N
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)
 - [?? (null birleşim işleci)](null-coalescing-operator.md)
 - [:: işleci](namespace-alias-qualifier.md)

@@ -1,7 +1,7 @@
 ---
 title: 'Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama'
-description: XML belgelerinin dijital imzalar ile nasıl imzalanacağınızı öğrenin. .NET 'teki System. Security. Cryptography. xml ad alanındaki sınıfları kullanın.
-ms.date: 03/30/2017
+description: XML belgelerinin dijital imzalar ile nasıl imzalanacağınızı öğrenin. .NET 'teki System.Security.Cryptography.Xml ad alanındaki sınıfları kullanın.
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,24 +10,28 @@ helpviewer_keywords:
 - signatures, XML signing
 - System.Security.Cryptography.SignedXml class
 - digital signatures, XML signing
-- System.Security.Cryptography.RSACryptoServiceProvider class
+- System.Security.Cryptography.RSA class
 - XML digital signatures
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 97bd23182ed54b899b76dbf43e179fe0c94b011d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e1457fd659ab63489bd4cfafd7731a4b098a2791
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598573"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557079"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Nasıl yapılır: XML Belgelerini Dijital İmzalarla imzalama
+
 Bir <xref:System.Security.Cryptography.Xml> XML belgesini veya BIR XML belgesinin bir kısmını dijital imzaya imzalamak için ad alanındaki sınıfları kullanabilirsiniz.  XML dijital imzaları (XMLDSIG), imzalandıktan sonra verilerin değiştirilmediğini doğrulamanızı sağlar.  XMLDSIG standardı hakkında daha fazla bilgi için, World Wide Web Konsorsiyumu (W3C) önerisi [XML Imzası sözdizimi ve işleme](https://www.w3.org/TR/xmldsig-core/)bölümüne bakın.  
   
- Bu yordamdaki kod örneği, bir XML belgesinin tamamını dijital olarak imzalamayı ve bir <> öğesindeki imzayı belgeye eklemeyi gösterir `Signature` .  Örnek, bir RSA imzalama anahtarı oluşturur, anahtarı güvenli bir anahtar kapsayıcısına ekler ve ardından bir XML belgesini dijital olarak imzalamak için anahtarı kullanır.  Anahtar daha sonra XML dijital imzasını doğrulamak için alınabilir veya başka bir XML belgesi imzalamak için kullanılabilir.  
+> [!NOTE]
+> Bu makaledeki kod Windows için geçerlidir.
+
+Bu yordamdaki kod örneği, bir XML belgesinin tamamını dijital olarak imzalamayı ve bir <> öğesindeki imzayı belgeye eklemeyi gösterir `Signature` .  Örnek, bir RSA imzalama anahtarı oluşturur, anahtarı güvenli bir anahtar kapsayıcısına ekler ve ardından bir XML belgesini dijital olarak imzalamak için anahtarı kullanır.  Anahtar daha sonra XML dijital imzasını doğrulamak için alınabilir veya başka bir XML belgesi imzalamak için kullanılabilir.  
   
- Bu yordam kullanılarak oluşturulan bir XML dijital imzasını doğrulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML belgelerinin dijital Imzalarını doğrulama](how-to-verify-the-digital-signatures-of-xml-documents.md).  
+Bu yordam kullanılarak oluşturulan bir XML dijital imzasını doğrulama hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML belgelerinin dijital Imzalarını doğrulama](how-to-verify-the-digital-signatures-of-xml-documents.md).  
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Bir XML belgesini dijital olarak imzalamak için  
   
@@ -108,16 +112,23 @@ Bir <xref:System.Security.Cryptography.Xml> XML belgesini veya BIR XML belgesini
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Bu örneği derlemek için, öğesine bir başvuru eklemeniz gerekir `System.Security.dll` .  
+- .NET Framework hedefleyen bir projede, öğesine bir başvuru ekleyin `System.Security.dll` .
+
+- .NET Core veya .NET 5 ' i hedefleyen bir projede NuGet paketi [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)' yi yükler.
   
 - Şu ad alanlarını ekleyin: <xref:System.Xml> , <xref:System.Security.Cryptography> , ve <xref:System.Security.Cryptography.Xml> .  
   
-## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Asimetrik anahtar çiftinin özel anahtarını düz metin olarak depolamayın veya aktarmayın.  Simetrik ve asimetrik şifreleme anahtarları hakkında daha fazla bilgi için bkz. [şifreleme ve şifre çözme Için anahtarlar oluşturma](generating-keys-for-encryption-and-decryption.md).  
+## <a name="net-security"></a>.NET güvenliği
+
+Asimetrik anahtar çiftinin özel anahtarını düz metin olarak depolamayın veya aktarmayın.  Simetrik ve asimetrik şifreleme anahtarları hakkında daha fazla bilgi için bkz. [şifreleme ve şifre çözme Için anahtarlar oluşturma](generating-keys-for-encryption-and-decryption.md).  
   
- Özel anahtarı hiçbir şekilde doğrudan kaynak kodunuza gömmeyin.  Gömülü anahtarlar [ıldadsm. exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanılarak veya derlemeyi Not Defteri gibi bir metin düzenleyicisinde açarak bir derlemeden kolayca okunabilir.  
+Özel anahtarı hiçbir şekilde doğrudan kaynak kodunuza gömmeyin.  Katıştırılmış anahtarlar [Ildasm.exe (Il ayrıştırma)](../../framework/tools/ildasm-exe-il-disassembler.md) kullanılarak veya derlemeyi Not Defteri gibi bir metin düzenleyicisinde açarak bir derlemeden kolayca okunabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Şifreleme Modeli](cryptography-model.md)
+- [Şifreleme Hizmetleri](cryptographic-services.md)
+- [Platformlar arası şifreleme](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [Nasıl yapılır: XML Belgelerinin Dijital İmzalarını Doğrulama](how-to-verify-the-digital-signatures-of-xml-documents.md)
+- [ASP.NET Core veri koruma](/aspnet/core/security/data-protection/introduction)

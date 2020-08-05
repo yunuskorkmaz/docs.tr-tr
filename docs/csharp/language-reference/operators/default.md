@@ -1,53 +1,53 @@
 ---
-title: varsayılan değer ifadeleri - C# başvurusu
-description: Bir türün varsayılan değerini elde etmek için varsayılan değer ifadelerini kullanma
+title: Varsayılan değer ifadeleri-C# başvurusu
+description: Bir türün varsayılan değerini elde etmek için varsayılan değer ifadelerini kullanın
 ms.date: 03/13/2020
 f1_keywords:
 - default_CSharpKeyword
 - default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: c07eb8e50dc2ec3413882fa841d2f896b28d2e8d
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507184"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556715"
 ---
-# <a name="default-value-expressions-c-reference"></a>varsayılan değer ifadeleri (C# başvurusu)
+# <a name="default-value-expressions-c-reference"></a>Varsayılan değer ifadeleri (C# Başvurusu)
 
-Varsayılan değer ifadesi, bir türün [varsayılan değerini](../builtin-types/default-values.md) üretir. İki tür varsayılan değer ifadesi vardır: [varsayılan işleç](#default-operator) çağrısı ve [varsayılan bir literal](#default-literal).
+Varsayılan değer ifadesi bir türün [varsayılan değerini](../builtin-types/default-values.md) üretir. İki tür varsayılan değer ifadesi vardır: [varsayılan işleç](#default-operator) çağrısı ve [varsayılan bir sabit](#default-literal)değer.
 
-`default` Ayrıca bir [ `switch` deyim](../keywords/switch.md)içinde varsayılan durum etiketi olarak anahtar kelime kullanın.
+Ayrıca, `default` anahtar sözcüğünü bir [ `switch` deyimindeki](../keywords/switch.md)varsayılan Case etiketi olarak da kullanabilirsiniz.
 
 ## <a name="default-operator"></a>default işleçi
 
-Aşağıdaki örnekte `default` görüldüğü gibi, işlecibağımsız değişkenbir tür veya tür parametresi adı olmalıdır:
+`default`Aşağıdaki örnekte gösterildiği gibi, işlecin bağımsız değişkeni bir tür veya tür parametresinin adı olmalıdır:
 
 [!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
-## <a name="default-literal"></a>varsayılan edebi
+## <a name="default-literal"></a>Varsayılan sabit değer
 
-C# 7.1 ile başlayarak, `default` derleyici ifade türünü çıkarabildiği bir türün varsayılan değerini üretmek için literal'ı kullanabilirsiniz. Literal `default` ifade, çıkarılan türdeki `default(T)` ifadeyle `T` aynı değeri üretir. Aşağıdaki durumlardan `default` herhangi birinde gerçek kullanımı yapabilirsiniz:
+C# 7,1 ' den başlayarak, `default` derleyicinin ifade türünü çıkardığı zaman bir türün varsayılan değerini oluşturmak için değişmez değeri kullanabilirsiniz. `default`Değişmez değer ifadesi, `default(T)` çıkarılan tür olan ifadesiyle aynı değeri üretir `T` . `default`Aşağıdaki durumlardan herhangi birinde değişmez değeri kullanabilirsiniz:
 
 - Bir değişkenin atamasında veya başlatılmasında.
-- İsteğe bağlı yöntem [parametresi](../../methods.md#optional-parameters-and-arguments)için varsayılan değer bildiriminde .
-- Bir yöntemde bir bağımsız değişken değeri sağlamak için çağrı.
-- [ `return` İfade](../keywords/return.md) de veya [ifade gövdeli](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)bir üyede ifade olarak .
+- [İsteğe bağlı bir yöntem parametresi](../../methods.md#optional-parameters-and-arguments)için varsayılan değer bildiriminde.
+- Bir bağımsız değişken değeri sağlamak için bir yöntem çağrısında.
+- Bir deyimde [ `return` veya bir](../keywords/return.md) [ifade ile](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)ifade olarak ifade olarak.
 
-Aşağıdaki `default` örnek, edebi kullanımı gösterir:
+Aşağıdaki örnek, `default` değişmez değerin kullanımını gösterir:
 
 [!code-csharp-interactive[default literal](snippets/DefaultOperator.cs#DefaultLiteral)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Varsayılan değer ifadeleri](~/_csharplang/spec/expressions.md#default-value-expressions) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [varsayılan değer ifadeleri](~/_csharplang/spec/expressions.md#default-value-expressions) bölümüne bakın.
 
-`default` Gerçek hakkında daha fazla bilgi için özellik teklifi [notuna](~/_csharplang/proposals/csharp-7.1/target-typed-default.md)bakın.
+Değişmez değer hakkında daha fazla bilgi için `default` bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-7.1/target-typed-default.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)
 - [C# türlerinin varsayılan değerleri](../builtin-types/default-values.md)
 - [.NET içindeki Genel Türler](../../../standard/generics/index.md)

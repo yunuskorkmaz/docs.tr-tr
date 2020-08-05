@@ -1,6 +1,6 @@
 ---
-title: Tür-test işleçleri ve döküm ifadesi - C# referansı
-description: İfade sonucunun türünü denetlemek ve gerekirse başka bir türe dönüştürmek için kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
+title: Tür testi işleçleri ve Cast ifadesi-C# başvurusu
+description: Bir ifade sonucunun türünü denetlemek ve gerekirse başka bir türe dönüştürmek için kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
 ms.date: 06/21/2019
 author: pkulikov
 f1_keywords:
@@ -18,65 +18,65 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: bc293c359af5744eebc63c0d0f94b4cebe3d450a
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 7c1c65c61a2214792dcd26efd4be1a9d7f2c07ca
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "82021249"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555506"
 ---
-# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Tür-test işleçleri ve döküm ifadesi (C# başvurusu)
+# <a name="type-testing-operators-and-cast-expression-c-reference"></a>Tür testi işleçleri ve Cast ifadesi (C# Başvurusu)
 
-Tür denetimi veya tür dönüştürmesi gerçekleştirmek için aşağıdaki işleçleri ve ifadeleri kullanabilirsiniz:
+Tür denetimi veya tür dönüştürme gerçekleştirmek için aşağıdaki işleçleri ve ifadeleri kullanabilirsiniz:
 
-- [is operator](#is-operator): bir ifadenin çalışma zamanı türünün belirli bir türle uyumlu olup olmadığını kontrol etmek için
-- [olarak işleç](#as-operator): çalışma zamanı türü bu türle uyumluysa, bir ifadeyi açıkça belirli bir türe dönüştürmek için
-- [cast expression](#cast-expression): açık bir dönüştürme gerçekleştirmek için
-- [typeof operator](#typeof-operator): <xref:System.Type?displayProperty=nameWithType> bir tür için örnek elde etmek için
+- [işleç](#is-operator): bir ifadenin çalışma zamanı türünün belirli bir tür ile uyumlu olup olmadığını denetlemek için
+- [as işleci](#as-operator): çalışma zamanı türü bu türle uyumluysa bir ifadeyi açıkça belirli bir türe dönüştürmek için
+- [Cast ifadesi](#cast-expression): açık bir dönüştürme gerçekleştirmek için
+- [typeof işleci](#typeof-operator): <xref:System.Type?displayProperty=nameWithType> bir türün örneğini almak için
 
 ## <a name="is-operator"></a>işleç
 
-İşleç, `is` bir ifade sonucunun çalışma zamanı türünün belirli bir türle uyumlu olup olmadığını denetler. C# 7.0 ile `is` başlayarak, işleç de bir desen karşı bir ifade sonucu test eder.
+`is`İşleci, bir ifade sonucunun çalışma zamanı türünün belirli bir tür ile uyumlu olup olmadığını denetler. C# 7,0 ile başlayarak, `is` işleci bir ifade sonucunu bir düzene göre de sınar.
 
-Tür test `is` işleci ile ifade aşağıdaki formu vardır
+Type-Testing işlecine sahip ifade `is` aşağıdaki biçimdedir
 
 ```csharp
 E is T
 ```
 
-nerede `E` bir değer döndürür `T` ve bir tür veya tür parametre adı olan bir ifadedir. `E`anonim bir yöntem veya lambda ifade olamaz.
+`E`, bir değer döndüren ve `T` bir tür ya da tür parametresinin adı olan bir ifadedir. `E`anonim bir yöntem veya lambda ifadesi olamaz.
 
-Sonuç `E is T` null'suz `true` `E` ise ve bir başvuru dönüştürme, bir `T` kutulama dönüştürme veya unboxing dönüştürme tarafından türe dönüştürülebilir ifade döndürür; aksi takdirde, `false`döner . Operatör `is` kullanıcı tanımlı dönüşümleri dikkate almaz.
+`E is T`İfadesi, `true` sonucu `E` null olmayan ve `T` bir başvuru dönüştürmesi, paketleme dönüştürmesi ya da bir kutudan çıkarma dönüştürmesi tarafından türe dönüştürülebileceğinden, öğesini döndürür; Aksi takdirde, döndürür `false` . `is`İşleci Kullanıcı tanımlı dönüştürmeleri dikkate almaz.
 
-Aşağıdaki örnek, bir `is` ifade `true` sonucunun çalışma zamanı türü belirli bir türden türemişse işlecinin geri döndüğünü, yani türler arasında bir başvuru dönüştürmesi olduğunu gösterir:
+Aşağıdaki örnek, `is` `true` bir ifade sonucunun çalışma zamanı türü verilen bir türden türetilse, yani türler arasında bir başvuru dönüştürmesi varsa, işlecinin döndürdüğü gösterilmektedir:
 
 [!code-csharp[is with reference conversion](snippets/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
-Sonraki örnek, `is` işleç dikkate boks ve unboxing dönüşümleri alır ama sayısal [dönüşümleri](../builtin-types/numeric-conversions.md)dikkate almaz gösterir:
+Sonraki örnekte, `is` işlecin hesap paketleme ve kutudan çıkarma dönüştürmelerinin gösterdiği ancak [sayısal dönüştürmeleri](../builtin-types/numeric-conversions.md)düşünmeyen bir örnek gösterilmektedir:
 
 [!code-csharp-interactive[is with int](snippets/TypeTestingAndConversionOperators.cs#IsWithInt)]
 
-C# dönüşümleri hakkında bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Dönüşümler](~/_csharplang/spec/conversions.md) bölümüne bakın.
+C# dönüştürmeleri hakkında daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [dönüşümler](~/_csharplang/spec/conversions.md) bölümüne bakın.
 
-### <a name="type-testing-with-pattern-matching"></a>Desen eşleştirmeli tür testi
+### <a name="type-testing-with-pattern-matching"></a>Model eşleştirme ile test türü
 
-C# 7.0 ile `is` başlayarak, işleç de bir desen karşı bir ifade sonucu test eder. Özellikle, aşağıdaki formda tür deseni destekler:
+C# 7,0 ile başlayarak, `is` işleci bir ifade sonucunu bir düzene göre de sınar. Özellikle, aşağıdaki biçimde tür düzenlerini destekler:
 
 ```csharp
 E is T v
 ```
 
-nerede `E` bir değer döndürür `T` bir ifade, bir tür veya tür `v` parametre adıdır `T`ve tür yeni bir yerel değişkendir . Sonucu `E` null olmayan ve bir referans, kutulama veya unboxing dönüştürme `T` tarafından dönüştürülebilir, `E is T v` ifade döndürür `true` ve `E` sonucudönüştürülen `v`değeri değişkene atanır.
+, bir `E` değer döndüren bir ifade, `T` bir tür veya tür parametresinin adıdır ve `v` Yeni bir yerel değişken türünde `T` . Sonucu `E` null olmayan ve `T` bir başvuru, paketleme veya kutudan çıkarma dönüştürmesi tarafından ' e dönüştürülebiliyorsanız, `E is T v` ifade döner `true` ve sonucun dönüştürülen değeri `E` değişkenine atanır `v` .
 
-Aşağıdaki örnek, `is` tür deseni ile işlecinin kullanımını gösterir:
+Aşağıdaki örnek, `is` işleç kullanımını tür düzeniyle birlikte gösterir:
 
 [!code-csharp-interactive[is with type pattern](snippets/TypeTestingAndConversionOperators.cs#IsTypePattern)]
 
-Tür deseni ve diğer desteklenen desenler hakkında daha fazla bilgi için [bkz.](../keywords/is.md#pattern-matching-with-is)
+Tür deseni ve diğer desteklenen desenler hakkında daha fazla bilgi için, bkz. [deseniyle eşleme](../keywords/is.md#pattern-matching-with-is).
 
-## <a name="as-operator"></a>operatör olarak
+## <a name="as-operator"></a>as işleci
 
-İşleç, `as` bir ifadenin sonucunu açıkça belirli bir başvuru veya nullable değer türüne dönüştürür. Dönüştürme mümkün değilse, `as` işleç `null`döndürür. Döküm [ifadesinin](#cast-expression) `as` aksine, işleç hiçbir zaman bir özel durum atmaz.
+`as`İşleci, bir ifadenin sonucunu açıkça belirli bir başvuruya veya null yapılabilir değer türüne dönüştürür. Dönüştürme mümkün değilse, `as` işleç döndürülür `null` . [Atama ifadesinin](#cast-expression)aksine, `as` işleç hiçbir şekilde özel durum oluşturmaz.
 
 Formun ifadesi
 
@@ -84,75 +84,75 @@ Formun ifadesi
 E as T
 ```
 
-bir `E` değer döndüren ve `T` bir tür veya tür parametresinin adı olan bir ifade, aynı sonucu
+, `E` bir değer döndüren ve `T` bir tür ya da tür parametresinin adı olan bir ifadedir, aynı sonucu şöyle üretir
 
 ```csharp
 E is T ? (T)(E) : (T)null
 ```
 
-`E` bunun dışında sadece bir kez değerlendirilir.
+hariç `E` yalnızca bir kez değerlendirilir.
 
-İşletici `as` yalnızca başvuru, nullable, boxing ve unboxing dönüşümleri dikkate alır. Kullanıcı tanımlı `as` bir dönüştürme gerçekleştirmek için işleci kullanamazsınız. Bunu yapmak [için,](#cast-expression)bir döküm ifadesi kullanın.
+`as`İşleci yalnızca başvuru, null yapılabilir, kutulama ve kutudan çıkarma dönüştürmelerini dikkate alır. `as`Kullanıcı tanımlı bir dönüştürme gerçekleştirmek için işlecini kullanamazsınız. Bunu yapmak için bir [atama ifadesi](#cast-expression)kullanın.
 
-Aşağıdaki örnek, işleç `as` kullanımını gösterir:
+Aşağıdaki örnek işlecinin kullanımını gösterir `as` :
 
 [!code-csharp-interactive[as operator](snippets/TypeTestingAndConversionOperators.cs#AsOperator)]
 
 > [!NOTE]
-> Önceki örnekte de görüldüğü gibi, dönüştürmenin `as` başarılı `null` olup olmadığını denetlemek için ifadenin sonucunu karşılaştırmanız gerekir. C# 7.0 ile başlayarak, hem dönüştürmenin başarılı olup olmadığını sınamak için [is işlecini](#type-testing-with-pattern-matching) kullanabilir ve başarılı olursa sonucunu yeni bir değişkene atayabilirsiniz.
+> Yukarıdaki örnekte gösterildiği gibi, `as` `null` dönüştürmenin başarılı olup olmadığını kontrol etmek için ifadesinin sonucunu karşılaştırmanız gerekir. C# 7,0 ' den başlayarak, dönüştürmenin başarılı olup olmadığını test etmek için, her iki [işleci](#type-testing-with-pattern-matching) de kullanabilirsiniz ve başarılı olursa, sonucunu yeni bir değişkene atayın.
 
-## <a name="cast-expression"></a>Oyuncu ifadesi
+## <a name="cast-expression"></a>Atama ifadesi
 
-Formun `(T)E` döküm ifadesi, ifade `E` sonucunun türe `T`açık bir şekilde dönüştürülmesini gerçekleştirir. Tür `E` `T`türünden açık bir dönüştürme yoksa derleme zamanı hatası oluşur. Çalışma zamanında, açık bir dönüştürme başarılı olmayabilir ve bir döküm ifadesi bir özel durum atabilir.
+Formun bir atama ifadesi `(T)E` , ifadenin sonucunun türüne açık bir şekilde dönüştürülmesini gerçekleştirir `E` `T` . Türünden türüne hiçbir açık dönüştürme yoksa `E` `T` , derleme zamanı hatası oluşur. Çalışma zamanında, açık bir dönüştürme başarılı olmayabilir ve bir atama ifadesi bir özel durum oluşturabilir.
 
-Aşağıdaki örnek, açık sayısal ve başvuru dönüşümlerini gösterir:
+Aşağıdaki örnek, açık sayısal ve başvuru dönüştürmelerini göstermektedir:
 
 [!code-csharp-interactive[cast expression](snippets/TypeTestingAndConversionOperators.cs#Cast)]
 
-Desteklenen açık dönüşümler hakkında bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Açık dönüşümler](~/_csharplang/spec/conversions.md#explicit-conversions) bölümüne bakın. Özel bir açık veya örtülü tür dönüştürmesinin nasıl tanımlanaaçık olduğu hakkında bilgi için [Bkz. Kullanıcı tanımlı dönüştürme operatörleri.](user-defined-conversion-operators.md)
+Desteklenen açık dönüştürmeler hakkında daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Açık dönüşümler](~/_csharplang/spec/conversions.md#explicit-conversions) bölümüne bakın. Özel bir açık veya örtük tür dönüştürme tanımlama hakkında daha fazla bilgi için bkz. [Kullanıcı tanımlı dönüştürme işleçleri](user-defined-conversion-operators.md).
 
-### <a name="other-usages-of-"></a>Diğer kullanımları ()
+### <a name="other-usages-of-"></a>() Diğer kullanımları
 
-Bir [yöntemi çağırmak veya bir temsilci çağırmak](member-access-operators.md#invocation-expression-)için parantez de kullanıyorsunuz.
+Ayrıca, [bir yöntemi çağırmak veya bir temsilciyi çağırmak](member-access-operators.md#invocation-expression-)için parantezleri de kullanabilirsiniz.
 
-Parantezin diğer kullanımı, bir ifadedeki işlemleri değerlendirmek için sırasını ayarlamaktır. Daha fazla bilgi için [C# işleçleri'ne](index.md)bakın.
+Diğer parantez kullanımı, bir ifadede işlemlerin değerlendirileceği sırayı ayarlamadır. Daha fazla bilgi için bkz. [C# işleçleri](index.md).
 
 ## <a name="typeof-operator"></a>typeof işleci
 
-İşleç `typeof` bir <xref:System.Type?displayProperty=nameWithType> tür için örnek alır. Aşağıdaki örnekte `typeof` görüldüğü gibi, işlecibağımsız değişkenbir tür veya tür parametresi adı olmalıdır:
+`typeof`İşleci <xref:System.Type?displayProperty=nameWithType> bir tür için örneği edinir. `typeof`Aşağıdaki örnekte gösterildiği gibi, işlecin bağımsız değişkeni bir tür veya tür parametresinin adı olmalıdır:
 
 [!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
-İşleç'i `typeof` bağlı olmayan genel türleri olan da kullanabilirsiniz. Bağlanmamış genel türün adı, tür parametreleri sayısından bir küçük olan uygun sayıda virgül içermelidir. Aşağıdaki örnek, `typeof` bağlı olmayan genel türü olan işleç kullanımını gösterir:
+`typeof`İşleci ilişkisiz genel türler ile de kullanabilirsiniz. İlişkisiz genel türün adı, tür parametrelerinin sayısından küçük olan uygun sayıda virgül içermelidir. Aşağıdaki örnek, `typeof` sınırsız bir genel türü olan işlecinin kullanımını gösterir:
 
 [!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 
-Bir ifade işlecinin `typeof` bir bağımsız değişkeni olamaz. İfade sonucunun <xref:System.Type?displayProperty=nameWithType> çalışma zamanı türünü almak için <xref:System.Object.GetType%2A?displayProperty=nameWithType> yöntemi kullanın.
+İfade, işlecin bağımsız değişkeni olamaz `typeof` . <xref:System.Type?displayProperty=nameWithType>Bir ifade sonucunun çalışma zamanı türünün örneğini almak için <xref:System.Object.GetType%2A?displayProperty=nameWithType> yöntemini kullanın.
 
-### <a name="type-testing-with-the-typeof-operator"></a>`typeof` Operatörle tip testi
+### <a name="type-testing-with-the-typeof-operator"></a>İşleci ile test türü `typeof`
 
-İfade `typeof` sonucunun çalışma zamanı türünün belirli bir türle tam olarak eşleşip eşleşmeyemeyişmasını denetlemek için işleci kullanın. Aşağıdaki örnek, `typeof` işleç ile gerçekleştirilen tür denetimi ile [İşletici](#is-operator)arasındaki farkı gösterir:
+`typeof`İfade sonucunun çalışma zamanı türünün verilen bir türle tam olarak eşleşip eşleşmediğini denetlemek için işlecini kullanın. Aşağıdaki örnek, işleç ve işleç işleci ile gerçekleştirilen tür denetimi arasındaki farkı gösterir `typeof` : [is operator](#is-operator)
 
 [!code-csharp[typeof vs is](snippets/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
-## <a name="operator-overloadability"></a>Operatör aşırı yüklenebilirlik
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-`is`, `as`ve `typeof` işleçler aşırı yüklenemez.
+`is`, `as` Ve `typeof` işleçleri aşırı yüklenemez.
 
-Kullanıcı tanımlı bir tür `()` işleç aşırı yükleyemez, ancak döküm ifadesi tarafından gerçekleştirilebilecek özel tür dönüşümleri tanımlayabilir. Daha fazla bilgi için [Bkz. Kullanıcı tanımlı dönüşüm operatörleri.](user-defined-conversion-operators.md)
+Kullanıcı tanımlı bir tür işleci aşırı yükleyemez `()` , ancak bir atama ifadesi tarafından gerçekleştirilebilecek özel tür dönüştürmeleri tanımlayabilir. Daha fazla bilgi için bkz. [Kullanıcı tanımlı dönüştürme işleçleri](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
-- [Is işleci](~/_csharplang/spec/expressions.md#the-is-operator)
-- [As operatörü](~/_csharplang/spec/expressions.md#the-as-operator)
-- [Döküm ifadeler](~/_csharplang/spec/expressions.md#cast-expressions)
-- [Operatör türü](~/_csharplang/spec/expressions.md#the-typeof-operator)
+- [SIS işleci](~/_csharplang/spec/expressions.md#the-is-operator)
+- [As işleci](~/_csharplang/spec/expressions.md#the-as-operator)
+- [Atama ifadeleri](~/_csharplang/spec/expressions.md#cast-expressions)
+- [Typeof işleci](~/_csharplang/spec/expressions.md#the-typeof-operator)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
-- [Desen eşleştirme ve is ve operatörler olarak kullanarak güvenli bir şekilde döküm nasıl](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [C# işleçleri ve ifadeleri](index.md)
+- [Desenler ve as işleçlerini kullanarak güvenli bir şekilde atama](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [.NET içindeki Genel Türler](../../../standard/generics/index.md)

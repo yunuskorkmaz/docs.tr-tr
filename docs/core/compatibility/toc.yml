@@ -44,6 +44,8 @@
       href: msbuild.md
     - name: Ağ Oluşturma
       href: networking.md
+    - name: Serileştirme
+      href: serialization.md
     - name: Visual Basic
       href: visualbasic.md
     - name: Windows Forms

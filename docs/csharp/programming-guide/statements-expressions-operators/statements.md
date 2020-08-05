@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: b941e46f959167f78f1366a3863aca4240810013
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 3f8ac88525c44f9572f4f647145ad251537aba57
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381768"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556754"
 ---
 # <a name="statements-c-programming-guide"></a>Deyimler (C# Programlama Kılavuzu)
 
@@ -28,10 +28,10 @@ Aşağıdaki tabloda, daha fazla bilgi içeren konuların bağlantılarıyla bir
 |Kategori|C# anahtar sözcükleri/notları|
 |--------------|---------------------------|
 |[Bildirim deyimleri](#declaration-statements)|Bir bildirim bildirimi yeni bir değişken veya sabit tanıtır. Değişken bildirimi, isteğe bağlı olarak değişkenine bir değer atayabilir. Sabit bildiriminde atama gereklidir.|
-|[İfade deyimleri](expressions.md)|Bir değeri hesaplayan ifade deyimleri değeri bir değişkende depoalmalıdır. Daha fazla bilgi için bkz. [Expression deyimleri](#expression-statements).|
+|[İfade deyimleri](#expression-statements)|Bir değeri hesaplayan ifade deyimleri değeri bir değişkende depoalmalıdır.|
 |Seçim deyimleri|Seçim deyimleri, belirtilen bir veya daha fazla koşula bağlı olarak farklı kod bölümlerine dallandırmayı sağlar. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <ul><li>[if](../../language-reference/keywords/if-else.md)</li><li>[else](../../language-reference/keywords/if-else.md)</li><li>[değiştirebilirsiniz](../../language-reference/keywords/switch.md)</li><li>[harflerini](../../language-reference/keywords/switch.md)</li></ul>|
 |Yineleme deyimleri|Yineleme deyimleri, diziler gibi koleksiyonlar aracılığıyla döngü gerçekleştirmenizi veya belirli bir koşul karşılanana kadar aynı deyim kümesini sürekli olarak gerçekleştirmenizi sağlar. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <ul><li>[do](../../language-reference/keywords/do.md)</li><li>[:](../../language-reference/keywords/for.md)</li><li>[foreach](../../language-reference/keywords/foreach-in.md)</li><li>['ndaki](../../language-reference/keywords/foreach-in.md)</li><li>[while](../../language-reference/keywords/while.md)</li></ul>|
-|Atlama deyimleri|Atdeyimlerini, kodun başka bir bölümüne aktarma denetimi. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <ul><li>[break](../../language-reference/keywords/break.md)</li><li>[devam](../../language-reference/keywords/continue.md)</li><li>[default](../../language-reference/keywords/switch.md)</li><li>[goto](../../language-reference/keywords/goto.md)</li><li>[return](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
+|Atlama deyimleri|Atdeyimlerini, kodun başka bir bölümüne aktarma denetimi. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <ul><li>[break](../../language-reference/keywords/break.md)</li><li>[devam](../../language-reference/keywords/continue.md)</li><li>[varsayılanını](../../language-reference/keywords/switch.md)</li><li>[goto](../../language-reference/keywords/goto.md)</li><li>[return](../../language-reference/keywords/return.md)</li><li>[yield](../../language-reference/keywords/yield.md)</li></ul>|
 |Özel durum işleme deyimleri|Özel durum işleme deyimleri, çalışma zamanında oluşan olağanüstü koşullardan sorunsuz bir şekilde kurtarmanızı sağlar. Daha fazla bilgi edinmek için aşağıdaki kaynaklara bakın: <ul><li>[throw](../../language-reference/keywords/throw.md)</li><li>[try-catch](../../language-reference/keywords/try-catch.md)</li><li>[try-finally](../../language-reference/keywords/try-finally.md)</li><li>[try-catch-finally](../../language-reference/keywords/try-catch-finally.md)</li></ul>|
 |[Checked ve unchecked](../../language-reference/keywords/checked-and-unchecked.md)|Checked ve unchecked deyimleri, sonuçta elde edilen değeri tutmak için çok küçük bir değişkende depolandığında sayısal işlemlere taşma olmasına izin verilip verilmeyeceğini belirtmenizi sağlar. Daha fazla bilgi için bkz. [Checked](../../language-reference/keywords/checked.md) ve [unchecked](../../language-reference/keywords/unchecked.md).|
 |`await`İfade|[Zaman uyumsuz](../../language-reference/keywords/async.md) değiştiriciyle bir yöntemi işaretlerseniz, yönteminde [await](../../language-reference/operators/await.md) işlecini kullanabilirsiniz. Denetim `await` zaman uyumsuz yöntemde bir ifadeye ulaştığında denetim çağırana döner ve beklenen görev tamamlanana kadar yöntem içindeki ilerleme durumu askıya alınır. Görev tamamlandığında, yürütme yöntemi içinde çalışmaya çalışabilir.<br /><br /> Basit bir örnek için, [yöntemlerin](../classes-and-structs/methods.md)"zaman uyumsuz metotlar" bölümüne bakın. Daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../concepts/async/index.md).|
@@ -92,5 +92,5 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [İfade anahtar sözcükleri](../../language-reference/keywords/statement-keywords.md)  
-- [İfadeler](expressions.md)  
+- [İfade anahtar sözcükleri](../../language-reference/keywords/statement-keywords.md)
+- [C# işleçleri ve ifadeleri](../../language-reference/operators/index.md)

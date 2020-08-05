@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: eda039d950e4be13d9c041c8bb95b6ea773b83f6
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: d57f96b9c80bdc5f40169180b40326ffed91cf10
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207220"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555375"
 ---
 # <a name="comparison-operators-c-reference"></a>Karşılaştırma işleçleri (C# Başvurusu)
 
@@ -76,6 +76,6 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
-- [Eşitlik işleçleri](equality-operators.md)
+- [Eşitlik İşleçleri](equality-operators.md)

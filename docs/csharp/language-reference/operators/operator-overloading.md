@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1324a4a3610b96f7258a856609dc4090b9751e52
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 2a27dc887671edc3f3f465ca757e7bf83262e915
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301768"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555181"
 ---
 # <a name="operator-overloading-c-reference"></a>İşleç aşırı yüklemesi (C# Başvurusu)
 
@@ -62,7 +62,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)
 - [Kullanıcı tanımlı dönüştürme işleçleri](user-defined-conversion-operators.md)
 - [Tasarım yönergeleri-Işleç aşırı yüklemeleri](../../../standard/design-guidelines/operator-overloads.md)
 - [Tasarım yönergeleri-eşitlik işleçleri](../../../standard/design-guidelines/equality-operators.md)

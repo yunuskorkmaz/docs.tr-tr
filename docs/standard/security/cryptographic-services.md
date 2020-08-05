@@ -1,46 +1,44 @@
 ---
 title: Şifreleme Hizmetleri
-description: ClickOnce bildirimleri, Suite B & şifreleme yeni nesil (CNG) desteği gibi .NET tarafından desteklenen şifreleme yöntemlerine ve uygulamalarına genel bakış konusunu okuyun.
-ms.date: 03/30/2017
+description: .NET tarafından desteklenen şifreleme yöntemlerine ve uygulamalarına genel bakış.
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- cryptography [.NET Framework]
+- cryptography [.NET]
 - pattern of derived class inheritance
 - digital signatures
 - asymmetric cryptographic algorithms
 - digital signatures, public-key systems
 - public keys
-- decryption [.NET Framework]
+- decryption [.NET]
 - private keys
 - MAC algorithms
 - cryptographic algorithms
 - private keys, overview
-- encryption [.NET Framework]
-- security [.NET Framework], encryption
+- encryption [.NET]
+- security [.NET], encryption
 - cryptographic services
 - symmetric cryptographic algorithms
 - hash
 - message authentication codes
 - derived class inheritance
-- cryptography [.NET Framework], about
+- cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596338"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557027"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 
 Internet gibi genel ağlar, varlıklar arasında güvenli bir iletişim yöntemi sağlamaz. Bu tür ağlarla iletişim, yetkisiz üçüncü taraflar tarafından okunmakta ve hatta değiştirilmezler. Şifreleme, verilerin görüntülenmesini önlemeye yardımcı olur, verilerin değiştirilip değiştirilmediğini algılamaya yönelik yollar sağlar ve aksi takdirde güvenli olmayan kanallar üzerinden güvenli bir iletişim sağlanmasına yardımcı olur. Örneğin, veriler bir şifreleme algoritması kullanılarak şifrelenebilir, şifreli bir durumda iletilir ve daha sonra hedeflenen tarafın şifresini çözülür. Üçüncü bir taraf şifrelenmiş verileri karşılar, şifre çöz zor olur.
 
-.NET Framework, ad alanındaki sınıflar, <xref:System.Security.Cryptography?displayProperty=nameWithType> şifreleme ayrıntılarını sizin için yönetir. Bazıları, yönetilmeyen Microsoft şifreleme API 'SI (CryptoAPI) için sarmalayıcılardır, diğerleri ise yalnızca yönetilen uygulamalardır. Bu sınıfları kullanmak için şifrede uzman olmanız gerekmez. Şifreleme algoritması sınıflarından birinin yeni bir örneğini oluşturduğunuzda, anahtarlar kullanım kolaylığı için otomatik olarak oluşturulur ve varsayılan özellikler mümkün olduğunca güvenli ve güvenlidir.
+.NET ' te, <xref:System.Security.Cryptography> ad alanındaki sınıflar sizin için şifreleme ayrıntılarının çoğunu yönetir. Bazıları yalnızca işletim sistemi uygulamaları için sarmalayıcılardır, diğerleri ise yalnızca yönetilen uygulamalardır. Bu sınıfları kullanmak için şifrede uzman olmanız gerekmez. Şifreleme algoritması sınıflarından birinin yeni bir örneğini oluşturduğunuzda, anahtarlar kullanım kolaylığı için otomatik olarak oluşturulur ve varsayılan özellikler mümkün olduğunca güvenli ve güvenlidir.
 
-Bu genel bakış, .NET Framework 3,5 ' de tanıtılan ClickOnce bildirimleri, Suite B ve şifreleme yeni nesil (CNG) desteği dahil olmak üzere .NET Framework tarafından desteklenen şifreleme yöntemleri ve uygulamaları için bir özeti sağlar.
-
-Verilerinize şifreleme güvenliği eklemenizi sağlayan Microsoft Hizmetleri, bileşenleri ve araçları hakkında daha fazla bilgi için bu belgenin Win32 ve COM Geliştirme ve Güvenlik bölümüne bakın.
+Bu genel bakış, ClickOnce bildirimleri de dahil olmak üzere .NET tarafından desteklenen şifreleme yöntemleri ve uygulamaları Özeti sağlar.
 
 ## <a name="cryptographic-primitives"></a>Şifreleme temelleri
 
@@ -58,7 +56,7 @@ Verilerinize şifreleme güvenliği eklemenizi sağlayan Microsoft Hizmetleri, b
 
 Bu hedeflere ulaşmak için şifreleme düzeni oluşturmak üzere şifreleme temel işlemleri olarak bilinen algoritmaların ve uygulamaların bir bileşimini kullanabilirsiniz. Aşağıdaki tabloda şifreleme temelleri ve kullanımları listelenmektedir.
 
-|Şifreleme temel|Kullanım|
+|Şifreleme temel|Kullanın|
 |-----------------------------|---------|
 |Gizli anahtar şifreleme (simetrik şifreleme)|Verilerin üçüncü taraflar tarafından okunmasını önlemek için bir dönüştürme gerçekleştirir. Bu tür bir şifreleme, verileri şifrelemek ve şifrelerini çözmek için tek bir paylaşılan gizli anahtar kullanır.|
 |Ortak anahtar şifrelemesi (asimetrik şifreleme)|Verilerin üçüncü taraflar tarafından okunmasını önlemek için bir dönüştürme gerçekleştirir. Bu tür bir şifreleme, verileri şifrelemek ve şifrelerini çözmek için ortak/özel anahtar çifti kullanır.|
@@ -85,19 +83,11 @@ Gizli anahtar şifrelemenin dezavantajı, iki tarafın bir anahtar ve IV üzerin
 
 Gamze ve Bob 'un güvenli olmayan bir kanal üzerinden iletişim kurmak isteyen iki taraf olduğu varsayılırsa, gizli anahtar şifrelemesini şu şekilde kullanabilir: Gamze ve Bob, belirli bir anahtar ve IV ile belirli bir algoritmayı (örneğin, AES) kullanmayı kabul eder. Çiğdem bir ileti oluşturur ve iletiyi göndermek için bir ağ akışı (Belki de adlandırılmış kanal veya ağ e-postası) oluşturur. Ardından, anahtarı ve IV 'yi kullanarak metni şifreler ve Intranet üzerinden emre 'ye şifreli iletiyi ve IV 'yi gönderir. Bob şifreli metni alır ve IV 'yi kullanarak ve daha önce anahtar üzerinde anlaşarak şifresini çözer. İletim yakalandıktan sonra, bu anahtarı bilmez çünkü bu, anahtarı bilmez. Bu senaryoda, yalnızca anahtarın gizli kalması gerekir. Gerçek bir Dünya senaryosunda, Gamze veya Bob bir gizli anahtar oluşturur ve gizli (simetrik) anahtarı diğer tarafa aktarmak için ortak anahtar (asimetrik) şifrelemeyi kullanır. Ortak anahtar şifreleme hakkında daha fazla bilgi için sonraki bölüme bakın.
 
-.NET Framework, gizli anahtar şifreleme algoritmaları uygulayan aşağıdaki sınıfları sağlar:
+.NET, gizli anahtar şifreleme algoritmaları uygulayan aşağıdaki sınıfları sağlar:
 
-- <xref:System.Security.Cryptography.AesManaged>(.NET Framework 3,5 ' de tanıtılan).
+- <xref:System.Security.Cryptography.Aes>
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.HMACSHA1>(Bir gizli anahtar ile Birleşik bir şifreleme karması işlevi kullanılarak hesaplanan ileti kimlik doğrulama kodunu temsil ettiğinden, bu teknik açıdan gizli anahtar algoritmadır. Bu konunun ilerleyen kısımlarında bulunan [karma değerleri](#hash-values)bölümüne bakın.)
-
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
-
-- <xref:System.Security.Cryptography.RijndaelManaged>.
-
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
+- <xref:System.Security.Cryptography.HMACSHA256>, <xref:System.Security.Cryptography.HMACSHA384> ve <xref:System.Security.Cryptography.HMACSHA512> . (Bu teknik açıdan gizli anahtar algoritmalarda, gizli anahtar ile Birleşik bir şifreleme karması işlevi kullanılarak hesaplanan ileti kimlik doğrulama kodları temsil etmektedir. Bu makalenin ilerleyen kısımlarında bulunan [karma değerleri](#hash-values)bölümüne bakın.)
 
 ## <a name="public-key-encryption"></a>Ortak anahtar şifrelemesi
 
@@ -123,25 +113,19 @@ Aşağıdaki listede, ortak anahtar ve gizli anahtar şifreleme algoritmaları a
 
 - Ortak anahtar algoritmaları gizli anahtar algoritmalarıyla karşılaştırıldığında çok yavaştır ve büyük miktarlarda verileri şifrelemek üzere tasarlanmamıştır. Ortak anahtar algoritmaları yalnızca çok az miktardaki verileri aktarmak için yararlıdır. Genellikle ortak anahtar şifrelemesi, bir anahtarı ve IV 'yi bir gizli anahtar algoritması tarafından kullanılmak üzere şifrelemek için kullanılır. Anahtar ve IV aktarıldıktan sonra, oturumun geri kalanı için gizli anahtar şifreleme kullanılır.
 
-.NET Framework, ortak anahtar şifreleme algoritmaları uygulayan aşağıdaki sınıfları sağlar:
+.NET, ortak anahtar algoritmaları uygulayan aşağıdaki sınıfları sağlar:
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDiffieHellman>(temel sınıf)
+- <xref:System.Security.Cryptography.ECDiffieHellman>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCng>
+- <xref:System.Security.Cryptography.DSA>
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey>(temel sınıf)
+RSA hem şifrelemeye hem de imzalamaya izin verir, ancak DSA yalnızca imzalama için kullanılabilir. DSA, RSA olarak güvenli değildir ve RSA önerilir. Diffie-Hellman yalnızca anahtar üretimi için kullanılabilir. Genel olarak, ortak anahtar algoritmaları, kullanımları özel anahtar algoritmalarından daha sınırlıdır.
 
-- <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction>(temel sınıf)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
-
-RSA hem şifrelemeye hem de imzalamaya izin verir, ancak DSA yalnızca imzalama için kullanılabilir ve Diffie-Hellman yalnızca anahtar üretimi için kullanılabilir. Genel olarak, ortak anahtar algoritmaları, kullanımları özel anahtar algoritmalarından daha sınırlıdır.
-
-## <a name="digital-signatures"></a>Dijital Imzalar
+## <a name="digital-signatures"></a>Dijital İmzalar
 
 Ortak anahtar algoritmaları, dijital imzaları biçimlendirmek için de kullanılabilir. Dijital imzalar gönderici kimliğini doğrular (gönderenin ortak anahtarına güveniyorsanız) ve verilerin bütünlüğünü korumaya yardımcı olur. Gamze tarafından oluşturulan bir ortak anahtar kullanarak, Gamze 'nin verilerinin alıcısı, dijital imzayı gamze 'nin verilerine ve Gamze 'nin ortak anahtarına göre karşılaştırarak gamze 'nin gönderdiğini doğrulayabilirler.
 
@@ -150,15 +134,13 @@ Bir iletiyi dijital olarak imzalamak için ortak anahtar şifrelemeyi kullanmak 
 > [!NOTE]
 > Gönderenin ortak anahtarı ortak bilgi olduğundan ve genellikle dijital imza biçiminde yer aldığı için imza, herkes tarafından doğrulanabilir. Bu yöntem iletinin gizliliğini korumaz; iletinin gizli olması için de şifrelenmelidir.
 
-.NET Framework, dijital imza algoritmaları uygulayan aşağıdaki sınıfları sağlar:
+.NET, dijital imza algoritmaları uygulayan aşağıdaki sınıfları sağlar:
 
-- <xref:System.Security.Cryptography.DSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.RSA>
 
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider>
+- <xref:System.Security.Cryptography.ECDsa>
 
-- <xref:System.Security.Cryptography.ECDsa>(temel sınıf)
-
-- <xref:System.Security.Cryptography.ECDsaCng>
+- <xref:System.Security.Cryptography.DSA>
 
 ## <a name="hash-values"></a>Karma değerleri
 
@@ -184,38 +166,21 @@ Karma algoritmalar rastgele uzunluktaki ikili değerleri, karma değerler olarak
 
 Önceki yöntemlerin hiçbiri düz metin olarak aktarıldıklarından, birisinin çiğdem iletilerini okumasını engellemez. Tam güvenlik genellikle dijital imzaları (ileti imzalama) ve şifrelemeyi gerektirir.
 
-.NET Framework, karma algoritmaları uygulayan aşağıdaki sınıfları sağlar:
+.NET, karma algoritmaları uygulayan aşağıdaki sınıfları sağlar:
 
-- <xref:System.Security.Cryptography.HMACSHA1>.
+- <xref:System.Security.Cryptography.SHA256>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>.
+- <xref:System.Security.Cryptography.SHA384>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
+- <xref:System.Security.Cryptography.SHA512>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>.
-
-- <xref:System.Security.Cryptography.SHA1Managed>.
-
-- <xref:System.Security.Cryptography.SHA256Managed>.
-
-- <xref:System.Security.Cryptography.SHA384Managed>.
-
-- <xref:System.Security.Cryptography.SHA512Managed>.
-
-- Tüm güvenli karma algoritması (SHA), Ileti Özeti 5 (MD5) ve RIPEMD-160 algoritmalarının HMAC sapmaları.
-
-- Tüm SHA algoritmalarının CryptoServiceProvider (yönetilen kod sarmalayıcıları).
-
-- Tüm MD5 ve SHA algoritmalarının yeni nesil (CNG) uygulamalarını şifreleme.
-
-> [!NOTE]
-> MD5 tasarım kusuru 1996 ' de keşfedilmiştir ve bunun yerine SHA-1 önerilir. 2004 ' de, ek hatalar keşfedilmiştir ve MD5 algoritması artık güvenli olarak kabul edilmez. SHA-1 algoritmasından de güvensiz olduğu belirlenmiştir ve bunun yerine SHA-2 önerilir.
+.NET ayrıca <xref:System.Security.Cryptography.MD5> ve sağlar <xref:System.Security.Cryptography.SHA1> . Ancak MD5 ve SHA-1 algoritmalarının güvenli olmadığı algılandı ve bunun yerine SHA-2 önerilir. SHA-2 SHA256, SHA384 ve SHA512 olur içerir.
 
 ## <a name="random-number-generation"></a>Rastgele sayı oluşturma
 
 Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin, şifreleme anahtarlarının mümkün olduğunca rastgele olması gerekir, böylece bunları yeniden oluşturmak uygulanabilir hale gelir. Şifreleme rastgele sayı oluşturucuları, bir günden daha iyi bir olasılık ile tahmin edilmesi açısından uygun olmayan çıktıyı üretmelidir. Bu nedenle, bir sonraki çıkış bitini tahmin etmek için herhangi bir yöntem rastgele tahmin gerçekleştirmemelidir. .NET Framework sınıflar, şifreleme anahtarları oluşturmak için rastgele sayı oluşturucuları kullanır.
 
-<xref:System.Security.Cryptography.RNGCryptoServiceProvider>Sınıfı, rastgele sayı Oluşturucu algoritmasının bir uygulamasıdır.
+<xref:System.Security.Cryptography.RandomNumberGenerator>Sınıfı, rastgele sayı Oluşturucu algoritmasının bir uygulamasıdır.
 
 ## <a name="clickonce-manifests"></a>ClickOnce bildirimleri
 
@@ -237,25 +202,9 @@ Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin,
 
 - <xref:System.Security.Cryptography.X509Certificates.TrustStatus>Authenticode imzasının güvenilir olup olmadığını denetlemek için basit bir yol sağlar.
 
-## <a name="suite-b-support"></a>Suite B desteği
-
-3,5 .NET Framework, Ulusal Güvenlik Kurumu (NSA) tarafından yayınlanan şifreleme algoritmalarının Suite B kümesini destekler. Suite B hakkında daha fazla bilgi için, [NSA Suite B şifreleme olgu sayfasına](https://www.nsa.gov/what-we-do/information-assurance/)bakın.
-
-Aşağıdaki algoritmalar dahil edilmiştir:
-
-- Şifreleme için 128, 192, ve 256 bit anahtar boyutlarına sahip Gelişmiş Şifreleme Standardı (AES) algoritması.
-
-- Karma algoritmaları için SHA-1, SHA-256, SHA-384 ve SHA-512 güvence altına alın. (Son üç genellikle birlikte gruplandırılır ve SHA-2 olarak adlandırılır.)
-
-- Dijital Imza algoritması (ECDSA), imzalama için 256 bit, 384 bit ve 521 bit asal moduli eğrileri kullanılarak. NSA belgeleri özellikle bu eğrileri tanımlar ve P-256, P-384 ve P-521 çağırır. Bu algoritma sınıfı tarafından sağlanır <xref:System.Security.Cryptography.ECDsaCng> . Özel anahtarla oturum açmanızı ve imzayı ortak anahtarla doğrulamanızı sağlar.
-
-- Anahtar değişimi ve gizli sözleşme için 256-bit, 384-bit ve 521-bit asal modulı eğrileri kullanılarak Eliptik Eğri Diffie-Hellman (ECDH) algoritması. Bu algoritma sınıfı tarafından sağlanır <xref:System.Security.Cryptography.ECDiffieHellmanCng> .
-
-AES, SHA-256, SHA-384 ve SHA-512 uygulamalarının Federal bilgi işleme standardı (FIPS) sertifikalı uygulamalarına yönelik yönetilen kod sarmalayıcıları, yeni <xref:System.Security.Cryptography.AesCryptoServiceProvider> , <xref:System.Security.Cryptography.SHA256CryptoServiceProvider> , <xref:System.Security.Cryptography.SHA384CryptoServiceProvider> ve <xref:System.Security.Cryptography.SHA512CryptoServiceProvider> sınıflarında kullanılabilir.
-
 ## <a name="cryptography-next-generation-cng-classes"></a>Yeni nesil şifreleme (CNG) sınıfları
 
-Yeni nesil şifreleme (CNG) sınıfları, yerel CNG işlevlerinin etrafında yönetilen bir sarmalayıcı sağlar. (CNG, CryptoAPI 'nin yerini alır.) Bu sınıfların adlarının bir parçası olarak "CNG" vardır. CNG sarmalayıcı sınıflarına merkezi olarak <xref:System.Security.Cryptography.CngKey> , CNG anahtarlarının depolanmasını ve kullanımını soyutlayan anahtar kapsayıcı sınıfıdır. Bu sınıf, bir anahtar çiftini veya ortak anahtarı güvenli bir şekilde depolamanıza ve basit bir dize adı kullanarak buna başvurmanıza olanak sağlar. Eliptik Eğri tabanlı <xref:System.Security.Cryptography.ECDsaCng> imza sınıfı ve <xref:System.Security.Cryptography.ECDiffieHellmanCng> şifreleme sınıfı <xref:System.Security.Cryptography.CngKey> nesneleri kullanabilir.
+.NET Framework 3,5 ve sonraki sürümlerde, yeni nesil şifreleme (CNG) sınıfları, yerel CNG işlevlerinin etrafında yönetilen bir sarmalayıcı sağlar. (CNG, CryptoAPI 'nin yerini alır.) Bu sınıfların adlarının bir parçası olarak "CNG" vardır. CNG sarmalayıcı sınıflarına merkezi olarak <xref:System.Security.Cryptography.CngKey> , CNG anahtarlarının depolanmasını ve kullanımını soyutlayan anahtar kapsayıcı sınıfıdır. Bu sınıf, bir anahtar çiftini veya ortak anahtarı güvenli bir şekilde depolamanıza ve basit bir dize adı kullanarak buna başvurmanıza olanak sağlar. Eliptik Eğri tabanlı <xref:System.Security.Cryptography.ECDsaCng> imza sınıfı ve <xref:System.Security.Cryptography.ECDiffieHellmanCng> şifreleme sınıfı <xref:System.Security.Cryptography.CngKey> nesneleri kullanabilir.
 
 <xref:System.Security.Cryptography.CngKey>Sınıfı, anahtarları açma, oluşturma, silme ve dışarı aktarma dahil olmak üzere çeşitli ek işlemler için kullanılır. Ayrıca, yerel işlevleri doğrudan çağırırken kullanılacak temel anahtar tanıtıcısına erişim sağlar.
 
@@ -267,10 +216,9 @@ Yeni nesil şifreleme (CNG) sınıfları, yerel CNG işlevlerinin etrafında yö
 
 - <xref:System.Security.Cryptography.CngProperty>sık kullanılan anahtar özelliklerini korur.
 
-## <a name="related-topics"></a>İlgili Konular
+## <a name="see-also"></a>Ayrıca bkz.
 
-|Başlık|Açıklama|
-|-----------|-----------------|
-|[Şifreleme Modeli](cryptography-model.md)|Şifrelemenin temel sınıf kitaplığında nasıl uygulandığını açıklar.|
-|[İzlenecek Yol: Şifreleme Uygulaması Oluşturma](walkthrough-creating-a-cryptographic-application.md)|Temel şifreleme ve şifre çözme görevlerini gösterir.|
-|[Şifreleme Sınıflarını Yapılandırma](../../framework/configure-apps/configure-cryptography-classes.md)|Algoritma adlarını şifreleme sınıflarına eşlemeyi ve nesne tanımlayıcılarını şifreleme algoritmayla eşlemeyi açıklar.|
+- [Şifreleme modeli](cryptography-model.md) -şifrelemenin temel sınıf kitaplığında nasıl uygulandığını açıklar.
+- [Platformlar arası şifreleme](cross-platform-cryptography.md)
+- [Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları](vulnerabilities-cbc-mode.md)
+- [ASP.NET Core veri koruma](/aspnet/core/security/data-protection/introduction)

@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 793a9bc55e5bd660374abd2ae81899e63ce3f36a
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85854016"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557157"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>.NET Core ve .NET 5 ' te platformlar arası şifreleme
 
@@ -100,7 +100,7 @@ RSA anahtar işlemleri işletim sistemi kitaplıkları tarafından gerçekleşti
 
 İşletim sistemi kitaplıkları şifreleme ve şifre çözme dolgusu için kullanılır. Tüm platformlar aynı doldurma seçeneklerini desteklemez:
 
-| Doldurma modu                          | Windows (CNG) | Linux (OpenSSL) | Mac OS | Windows (CAPı) |
+| Doldurma modu                          | Windows (CNG) | Linux (OpenSSL) | macOS | Windows (CAPı) |
 |---------------------------------------|---------------|-----------------|-------|----------------|
 | PKCS1 şifreleme                      | ✔️           | ✔️              | ✔️   | ✔️             |
 | OAEP-SHA-1                          | ✔️           | ✔️              | ✔️   | ✔️             |
@@ -369,3 +369,5 @@ macOS, CRL (sertifika Iptal listesi)/OCSP (çevrimiçi sertifika durumu Protokol
 
 * [.NET şifreleme modeli](cryptography-model.md)
 * [.NET Şifreleme Hizmetleri](cryptographic-services.md)
+* [Doldurmayı kullanarak CBC modunda simetrik şifre çözmedeki zamanlama açıkları](vulnerabilities-cbc-mode.md)
+* [ASP.NET Core veri koruma](/aspnet/core/security/data-protection/introduction)

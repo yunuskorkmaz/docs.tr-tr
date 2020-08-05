@@ -1,6 +1,6 @@
 ---
-title: Kullanıcı tanımlı dönüşüm işleçleri - C# başvurusu
-description: C#'da özel örtük ve açık tür dönüşümlerini nasıl tanımlayın öğrenin.
+title: Kullanıcı tanımlı dönüştürme işleçleri-C# başvurusu
+description: C# ' de özel örtük ve açık tür dönüştürmeleri tanımlama hakkında bilgi edinin.
 ms.date: 07/09/2019
 f1_keywords:
 - explicit_CSharpKeyword
@@ -10,44 +10,44 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: b59fc27be31f1a38e2a6c3cabd82598933b5ed53
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: ab3598b8158d0a789e8583403389df657ae01aed
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121398"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556286"
 ---
-# <a name="user-defined-conversion-operators-c-reference"></a>Kullanıcı tanımlı dönüşüm işleçleri (C# başvurusu)
+# <a name="user-defined-conversion-operators-c-reference"></a>Kullanıcı tanımlı dönüştürme işleçleri (C# Başvurusu)
 
-Kullanıcı tanımlı bir tür, başka bir türe özel örtük veya açık bir dönüştürme tanımlayabilir.
+Kullanıcı tanımlı bir tür, ya da başka bir türe özel örtük veya açık bir dönüştürme tanımlayabilir.
 
-Örtük dönüşümler çağrılması için özel sözdizimi gerektirmez ve atamalar ve yöntem çağrıları gibi çeşitli durumlarda oluşabilir. Önceden tanımlanmış C# örtük dönüşümleri her zaman başarılı olur ve hiçbir zaman bir özel durum atmaz. Kullanıcı tanımlı örtük dönüşümler de bu şekilde kullanılmalıdır. Özel bir dönüştürme bir özel durum atabiliyor veya bilgi kaybedebilirse, bunu açık bir dönüştürme olarak tanımlayın.
+Örtük dönüştürmeler özel sözdiziminin çağrılmasını gerektirmez ve örneğin atamalar ve Yöntemler çağırmaları gibi çeşitli durumlarda gerçekleşebilir. Önceden tanımlanmış C# örtük dönüştürmeleri her zaman başarılı olur ve hiçbir zaman özel durum oluşturmaz. Kullanıcı tanımlı örtük dönüştürmeler de bu şekilde davranmalıdır. Özel bir dönüştürme özel durum oluşturabilir veya bilgi kaybedebilir, onu açık bir dönüştürme olarak tanımlayın.
 
-Kullanıcı tanımlı [dönüşümler, is](type-testing-and-cast.md#is-operator) ve [operatörler tarafından](type-testing-and-cast.md#as-operator) dikkate alınmaz. Kullanıcı tanımlı açık dönüştürme çağırmak için [döküm ifadesini](type-testing-and-cast.md#cast-expression) kullanın.
+Kullanıcı tanımlı dönüştürmeler [, ve](type-testing-and-cast.md#is-operator) [gibi](type-testing-and-cast.md#as-operator) işleçler tarafından değerlendirilmez. Kullanıcı tanımlı açık dönüştürmeyi çağırmak için bir [atama ifadesi](type-testing-and-cast.md#cast-expression) kullanın.
 
-Örtük `operator` `implicit` veya `explicit` açık bir dönüştürmeyi tanımlamak için anahtar kelimeleri ve veya anahtar kelimeleri kullanın. Dönüştürmeyi tanımlayan tür, kaynak türü veya bu dönüşümün hedef türü olmalıdır. İki kullanıcı tanımlı tür arasında bir dönüşüm iki türden birinde tanımlanabilir.
+`operator` `implicit` `explicit` Sırasıyla örtük veya açık bir dönüştürme tanımlamak için ve veya anahtar sözcüklerini kullanın. Bir dönüştürmeyi tanımlayan tür bir kaynak türü ya da bu dönüştürmenin hedef türü olmalıdır. Kullanıcı tanımlı iki tür arasında dönüştürme iki türden birinde tanımlanabilir.
 
-Aşağıdaki örnek, örtük ve açık bir dönüştürmenin nasıl tanımlanabildiğini gösterir:
+Aşağıdaki örnek, örtük ve açık bir dönüştürmenin nasıl tanımlanacağını göstermektedir:
 
 [!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
 
-Önceden tanımlanmış `operator` bir C# işlecinin aşırı yüklenmesi için de anahtar kelime yi kullanırsınız. Daha fazla bilgi için operatör [aşırı yüklemesi'ne](operator-overloading.md)bakın.
+Ayrıca, `operator` önceden tanımlanmış bir C# işlecini aşırı yüklemek için anahtar sözcüğünü de kullanabilirsiniz. Daha fazla bilgi için bkz. [operatör aşırı yüklemesi](operator-overloading.md).
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
-- [Dönüşüm operatörleri](~/_csharplang/spec/classes.md#conversion-operators)
+- [Dönüştürme işleçleri](~/_csharplang/spec/classes.md#conversion-operators)
 - [Kullanıcı tanımlı dönüştürmeler](~/_csharplang/spec/conversions.md#user-defined-conversions)
-- [Örtülü dönüşümler](~/_csharplang/spec/conversions.md#implicit-conversions)
+- [Örtük dönüştürmeler](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [Açık dönüşümler](~/_csharplang/spec/conversions.md#explicit-conversions)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)
 - [İşleç aşırı yüklemesi](operator-overloading.md)
 - [Tür testi ve atama işleçleri](type-testing-and-cast.md)
-- [Döküm ve tür dönüştürme](../../programming-guide/types/casting-and-type-conversions.md)
-- [Tasarım yönergeleri - Dönüşüm operatörleri](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
-- [C'de zincirlenmiş kullanıcı tanımlı açık dönüşümler #](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)
+- [Atama ve tür dönüştürme](../../programming-guide/types/casting-and-type-conversions.md)
+- [Tasarım yönergeleri-dönüştürme işleçleri](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
+- [C 'de Kullanıcı tanımlı açık dönüştürmeler zincirleme #](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)

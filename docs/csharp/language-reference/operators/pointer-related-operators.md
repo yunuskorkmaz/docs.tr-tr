@@ -1,5 +1,5 @@
 ---
-title: İşaretçi ile ilgili işleçler - C# başvurusu
+title: İşaretçiden ilgili işleçler-C# başvurusu
 description: İşaretçilerle çalışırken kullanabileceğiniz C# işleçleri hakkında bilgi edinin.
 ms.date: 05/20/2019
 author: pkulikov
@@ -20,57 +20,57 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7eb6666d10c44c342f69c7cfc763feb1b7b98c9d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 05bc6ce00adc8c874b88ccc8da5afbcfc702585b
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738611"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555296"
 ---
-# <a name="pointer-related-operators-c-reference"></a>İşaretçi ile ilgili işleçler (C# başvurusu)
+# <a name="pointer-related-operators-c-reference"></a>İşaretçi ile ilgili işleçler (C# Başvurusu)
 
 İşaretçilerle çalışmak için aşağıdaki işleçleri kullanabilirsiniz:
 
-- Unary [ `&` (adres-of)](#address-of-operator-) işleci: bir değişkenin adresini almak için
-- Unary [ `*` (işaretçi indirection)](#pointer-indirection-operator-) işleci: bir işaretçi tarafından işaret edilen değişkeni elde etmek için
-- [ `->` (üye erişimi)](#pointer-member-access-operator--) ve [ `[]` (eleman erişimi)](#pointer-element-access-operator-) işleçleri
-- Aritmetik işleçler [ `+`, `-` `++`, , ve`--`](#pointer-arithmetic-operators)
-- Karşılaştırma işleçleri [ `==`, `!=` `<`, `>`, , `<=`ve`>=`](#pointer-comparison-operators)
+- Birli [ `&` (Adres-of)](#address-of-operator-) işleci: bir değişkenin adresini almak için
+- Birli [ `*` (işaretçi yöneltme)](#pointer-indirection-operator-) işleci: bir işaretçiye işaret eden değişkeni almak için
+- [ `->` (Üye erişimi)](#pointer-member-access-operator--) ve [ `[]` (öğe erişimi)](#pointer-element-access-operator-) işleçleri
+- Aritmetik işleçler [ `+` , `-` ,, `++` ve `--` ](#pointer-arithmetic-operators)
+- Karşılaştırma işleçleri,,,, [ `==` `!=` `<` `>` `<=` ve `>=` ](#pointer-comparison-operators)
 
-İşaretçi türleri hakkında bilgi için [işaretçi türlerine](../../programming-guide/unsafe-code-pointers/pointer-types.md)bakın.
+İşaretçi türleri hakkında bilgi için bkz. [işaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md).
 
 > [!NOTE]
-> İşaretçileri olan herhangi bir işlem [güvenli olmayan](../keywords/unsafe.md) bir bağlam gerektirir. Güvenli olmayan bloklar içeren kod [`-unsafe`](../compiler-options/unsafe-compiler-option.md) derleyici seçeneği ile derlenmiş olmalıdır.
+> İşaretçilerle herhangi bir işlem [güvenli olmayan](../keywords/unsafe.md) bir bağlam gerektirir. Güvenli olmayan bloklar içeren kodun [`-unsafe`](../compiler-options/unsafe-compiler-option.md) derleyici seçeneğiyle derlenmesi gerekir.
 
-## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>İşleticinin adresi&amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>Address-of işleci&amp;
 
-Unary `&` işleticisi operand adresini döndürür:
+Birli `&` işleç, işleneninin adresini döndürür:
 
 [!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
 
-İşleticinin `&` operand sabit bir değişken olmalıdır. *Sabit* [değişkenler, çöp toplayıcısının](../../../standard/garbage-collection/index.md)çalışmasından etkilenmeyen depolama konumlarında bulunan değişkenlerdir. Önceki örnekte, yerel değişken `number` sabit bir değişkendir, çünkü yığında bulunur. Çöp toplayıcıdan etkilenebilecek depolama konumlarında bulunan değişkenlere (örneğin, taşınan) *hareketli* değişkenler denir. Nesne alanları ve dizi öğeleri hareketli değişkenlere örnektir. Eğer "düzeltmek", ya da "pin", bir [ `fixed` deyimi](../keywords/fixed-statement.md)ile taşınır değişkenin adresini alabilirsiniz. Elde edilen adres yalnızca bir `fixed` deyim bloğu içinde geçerlidir. Aşağıdaki örnek, bir `fixed` deyimin ve `&` işlecinin nasıl kullanılacağını gösterir:
+`&`İşlecin işleneni sabit bir değişken olmalıdır. *Sabit* değişkenler, [Atık toplayıcısının](../../../standard/garbage-collection/index.md)işleminden etkilenmeyen depolama konumlarında bulunan değişkenlerdir. Yukarıdaki örnekte, yerel değişken `number` yığında bulunduğundan sabit bir değişkendir. Çöp toplayıcısından etkilenebilecek (örneğin, yeniden konumlandırılan) depolama konumlarında bulunan değişkenler *Taşınabilir* değişkenler olarak adlandırılır. Nesne alanları ve dizi öğeleri taşınabilir değişkenlerin örnekleridir. Taşınabilir bir değişkenin adresini, bir [ `fixed` ifadesiyle](../keywords/fixed-statement.md)"düzelmiyor" veya "sabitle" yaparsanız alabilirsiniz. Alınan adres yalnızca bir deyimin bloğunun içinde geçerlidir `fixed` . Aşağıdaki örnek, bir `fixed` deyimin ve işlecin nasıl kullanılacağını gösterir `&` :
 
 [!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
 
-Sabitveya değerin adresini alamazsınız.
+Bir sabit veya bir değerin adresini alamazsınız.
 
-Sabit ve taşınabilir değişkenler hakkında daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Sabit ve taşınabilir değişkenler](~/_csharplang/spec/unsafe-code.md#fixed-and-moveable-variables) bölümüne bakın.
+Sabit ve taşınabilir değişkenler hakkında daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [sabit ve taşınabilir değişkenler](~/_csharplang/spec/unsafe-code.md#fixed-and-moveable-variables) bölümüne bakın.
 
-İkili `&` işleç, Boolean operandlarının veya [bitwise mantıksal ve](bitwise-and-shift-operators.md#logical-and-operator-) integral operandlarının mantıksal [ve](boolean-logical-operators.md#logical-and-operator-) mantıksal ve hesaplamasını.
+Binary `&` işleci, Boolean işlenenlerinin [mantıksal ve](boolean-logical-operators.md#logical-and-operator-) işlecini ya da tam sayı işlenenlerinin [bit düzeyinde mantıksal ve](bitwise-and-shift-operators.md#logical-and-operator-) işlecini hesaplar.
 
-## <a name="pointer-indirection-operator-"></a>İşaretçi indirection işleci *
+## <a name="pointer-indirection-operator-"></a>İşaretçi yöneltme işleci *
 
-Unary işaretçi indirection işleci, `*` operand noktaları değişkeni elde eder. Dereference işleci olarak da bilinir. İşleticinin `*` operand bir işaretçi türünde olmalıdır.
+Birli işaretçi yöneltme işleci, `*` işleneninin gösterdiği değişkeni edinir. Başvuru operatörü olarak da bilinir. `*`İşlecin işleneni bir işaretçi türünde olmalıdır.
 
 [!code-csharp[pointer indirection](snippets/PointerOperators.cs#PointerIndirection)]
 
-İşleç `*` türünü bir ifadeye `void*`uygulayamazsınız.
+`*`İşleci türündeki bir ifadeye uygulayamazsınız `void*` .
 
-İkili `*` işleç, sayısal operandlarının [ürününü](arithmetic-operators.md#multiplication-operator-) hesaplar.
+İkili `*` işleç, sayısal işlenenlerinin [çarpımını](arithmetic-operators.md#multiplication-operator-) hesaplar.
 
-## <a name="pointer-member-access-operator--"></a>Pointer üye erişim işleci ->
+## <a name="pointer-member-access-operator--"></a>İşaretçi üyesi erişim işleci->
 
-İşleç `->` [işaretçi yönlendirme](#pointer-indirection-operator-) ve [üye erişimi](member-access-operators.md#member-access-expression-)birleştirir. Diğer bir `x` yazı, bir `T*` tür `y` işaretçisi `T`yse ve türünün erişilebilir bir üyesiyse, formun bir ifadesi
+`->`İşleci [işaretçi yöneltme](#pointer-indirection-operator-) ve [üye erişimini](member-access-operators.md#member-access-expression-)birleştirir. Diğer bir deyişle, `x` türünde bir işaretçisiyse `T*` ve türünün erişilebilir bir üyesi ise, `y` `T` formun bir ifadesi
 
 ```csharp
 x->y
@@ -82,115 +82,115 @@ eşdeğerdir
 (*x).y
 ```
 
-Aşağıdaki örnek, işleç `->` kullanımını gösterir:
+Aşağıdaki örnek işlecinin kullanımını gösterir `->` :
 
 [!code-csharp[pointer member access](snippets/PointerOperators.cs#MemberAccess)]
 
-İşleç `->` türünü bir ifadeye `void*`uygulayamazsınız.
+`->`İşleci türündeki bir ifadeye uygulayamazsınız `void*` .
 
 ## <a name="pointer-element-access-operator-"></a>İşaretçi öğesi erişim işleci []
 
-Bir `p` işaretçi türünün ifadesi için, formun `p[n]` işaretçi `*(p + n)`öğesi `n` erişimi , örtülü olarak dönüştürülebilir `int` `uint`bir `long`tür `ulong`, , , veya . İşaretçilerle `+` ilgili işleç davranışı hakkında bilgi için, [integral değerinin işaretçi bölümüne veya işaretçi bölümüne eklenmesine veya çıkarını](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) görün.
+İşaretçi türünün bir ifadesi için `p` , formun işaretçi öğesi erişimi `p[n]` olarak değerlendirilir `*(p + n)` , burada,, veya ' a `n` örtülü olarak dönüştürülebilir bir tür olması gerekir `int` `uint` `long` `ulong` . İşaretçilerle işlecin davranışı hakkında daha fazla bilgi için `+` , [bir tam sayı değerinin bir Işaretçi bölümüne eklenmesi veya çıkarılması](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) bölümüne bakın.
 
-Aşağıdaki örnek, bir işaretçi ve `[]` işleç ile dizi öğelerine nasıl erişilen gösteriş gösterir:
+Aşağıdaki örnek, bir işaretçi ve işleçle dizi öğelerine nasıl erişileceğini göstermektedir `[]` :
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-Önceki örnekte, bir [ `stackalloc` ifade](stackalloc.md) yığınüzerinde bellek bloğu ayırır.
+Yukarıdaki örnekte, bir [ `stackalloc` ifade](stackalloc.md) yığında bir bellek bloğu ayırır.
 
 > [!NOTE]
 > İşaretçi öğesi erişim işleci, sınır dışı hataları denetlemez.
 
-Bir tür `[]` `void*`ifadesi ile işaretçi öğesi erişimi için kullanamazsınız.
+`[]`Türünde bir ifadeyle işaretçi öğesi erişimi için kullanamazsınız `void*` .
 
-Ayrıca [dizi öğesi veya dizinleyici erişimi](member-access-operators.md#indexer-operator-)için işleci kullanabilirsiniz. `[]`
+`[]` [Dizi öğesi veya Dizin Oluşturucu erişimi](member-access-operators.md#indexer-operator-)için işlecini de kullanabilirsiniz.
 
 ## <a name="pointer-arithmetic-operators"></a>İşaretçi aritmetik işleçleri
 
 İşaretçilerle aşağıdaki aritmetik işlemleri gerçekleştirebilirsiniz:
 
-- Bir işaretçiye veya işaretçiden integral değeri ekleme veya çıkarma
-- İki işaretçi çıkarma
-- Bir işaretçiyi artım veya kararname
+- Bir işaretçiye veya işaretçiden tamsayı değer ekleme veya çıkarma
+- İki işaretçileri çıkar
+- Bir işaretçiyi artırma veya azaltma
 
-Bu işlemleri tür `void*`işaretçilerle gerçekleştiremezsiniz.
+Bu işlemleri türündeki işaretçilerle gerçekleştiremezsiniz `void*` .
 
-Sayısal türleri ile desteklenen aritmetik işlemler hakkında bilgi için [bkz.](arithmetic-operators.md)
+Sayısal türlerle desteklenen aritmetik işlemler hakkında daha fazla bilgi için bkz. [Aritmetik işleçler](arithmetic-operators.md).
 
-### <a name="addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer"></a>Bir integral değerinin bir işaretçiye veya işaretçiden eklenmesi veya çıkarTı
+### <a name="addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer"></a>Bir işaretçiye veya bir işaretçiye tamsayı değer ekleme veya çıkarma
 
-Bir tür `p` `T*` işaretçisi `n` ve örtülü olarak dönüştürülebilen bir tür ifadesi `int`için , , `uint` `long`, ekleme `ulong`ve çıkarma aşağıdaki gibi tanımlanır:
+Türünde bir işaretçi `p` ve bir `T*` türün bir ifadesi için `n` örtük olarak dönüştürülebilir,, `int` `uint` `long` , veya `ulong` , toplama ve çıkarma için aşağıdaki gibi tanımlanır:
 
-- Hem `p + n` `n + p` de ifadeler tarafından verilen `T*` adrese `n * sizeof(T)` eklenmesinden kaynaklanan `p`bir tür işaretçisi üretir.
-- İfade, `p - n` `T*` `n * sizeof(T)` `p`'' tarafından verilen adresten çıkarma sonucu oluşan bir tür işaretçisi üretir.
+- Hem hem de `p + n` `n + p` ifadeleri, `T*` tarafından verilen adrese eklenmesinin sonucu olan türünde bir işaretçi üretir `n * sizeof(T)` `p` .
+- `p - n`İfade, `T*` `n * sizeof(T)` tarafından verilen adresten çıkarılmasına neden olan türde bir işaretçi oluşturur `p` .
 
-[ `sizeof` Operatör](sizeof.md) baytlarda bir tür boyutunu elde eder.
+[ `sizeof` İşleci](sizeof.md) bir türün boyutunu bayt cinsinden edinir.
 
-Aşağıdaki örnek, `+` işleç bir işaretçi ile kullanımını gösterir:
+Aşağıdaki örnek, `+` bir işaretçi ile işlecinin kullanımını gösterir:
 
 [!code-csharp[pointer addition](snippets/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>İşaretçi çıkarması
 
-İki işaretçi `p1` `p2` ve `T*`tür `p1 - p2` için, ifade `p1` tarafından verilen ve `p2` `sizeof(T)`bölünen adresler arasındaki farkı üretir. Sonucun türü `long`. Yani, `p1 - p2` olarak `((long)(p1) - (long)(p2)) / sizeof(T)`hesaplanır .
+İki işaretçi `p1` ve `p2` türü için `T*` , ifadesi `p1 - p2` tarafından verilen `p1` ve `p2` tarafından bölünen adresler arasındaki farkı üretir `sizeof(T)` . Sonucun türü `long` . Diğer bir deyişle, `p1 - p2` olarak hesaplanır `((long)(p1) - (long)(p2)) / sizeof(T)` .
 
-Aşağıdaki örnek, işaretçi çıkarma gösterir:
+Aşağıdaki örnekte işaretçi çıkarma gösterilmektedir:
 
 [!code-csharp[pointer subtraction](snippets/PointerOperators.cs#SubtractPointers)]
 
-### <a name="pointer-increment-and-decrement"></a>İşaretçi artış ve kararname
+### <a name="pointer-increment-and-decrement"></a>İşaretçi artışı ve azaltma
 
-Artış `++` işleci işaretçisi operand'a 1 [ekler.](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) `--` Decrement işleci işaretçisi operand'Dan 1 [çıkarır.](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer)
+`++`Artış işleci, işaretçi işleneni 1 [ekler](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) . `--`Azaltma işleci, 1 işaretçi işlenenden [çıkartır](#addition-or-subtraction-of-an-integral-value-to-or-from-a-pointer) .
 
-Her iki işleç de iki şekilde`p++` `p--`desteklenir: postfix ( ve ) ve önek (`++p` ve `--p`). Sonucu `p++` ve `p--` işlem `p` *öncesi* değeridir. Sonuç `++p` ve `--p` işlem den `p` *sonra* değeridir.
+İki tür işleç desteklenir: sonek ( `p++` ve `p--` ) ve ön ek ( `++p` ve `--p` ). Ve sonucu, `p++` `p--` `p` işlemden *önceki* değeridir. Ve sonucu, `++p` `--p` `p` işlemden *sonraki* değeridir.
 
-Aşağıdaki örnek, hem postfix hem de önek artış lı işlemenlerin davranışını gösterir:
+Aşağıdaki örnek, hem sonek hem de önek artırma işleçlerinin davranışını gösterir:
 
 [!code-csharp[pointer increment](snippets/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>İşaretçi karşılaştırma işleçleri
 
-Herhangi bir `==`işaretçi türündeki operandları karşılaştırmak için , , `!=`, `<` `>`, `<=`, ve `>=` işleçleri `void*`kullanabilirsiniz. Bu işleçler, iki operandtarafından verilen adresleri imzasız birermeçmiş gibi karşılaştırır.
+,,,, `==` `!=` `<` Ve işleçlerini, `>` gibi `<=` `>=` herhangi bir işaretçi türünün işlenenlerini karşılaştırmak için kullanabilirsiniz `void*` . Bu işleçler, iki işlenen tarafından verilen adresleri işaretsiz tamsayılar gibi karşılaştırır.
 
-Diğer türlerde operands için bu işleçlerin davranışı hakkında bilgi [için, Eşitlik işleçleri](equality-operators.md) ve [Karşılaştırma işleçleri](comparison-operators.md) makalelere bakın.
+Diğer türlerin işlenenleri için bu işleçlerin davranışı hakkında daha fazla bilgi için bkz. [eşitlik işleçleri](equality-operators.md) ve [karşılaştırma işleçleri](comparison-operators.md) makaleleri.
 
 ## <a name="operator-precedence"></a>İşleç önceliği
 
-Aşağıdaki liste, en yüksek öncelikten en düşük başlayarak ilgili işleçleri işaretçisi sipariş eder:
+Aşağıdaki liste, işaretçinin ilgili işleçlerini en yüksek öncelikten en düşüğe başlayarak sıralar:
 
-- Postfix artış `x++` ve decrement `x--` operatörleri `->` `[]` ve ve operatörler
-- Önek `++x` artış ve `--x` decrement operatörleri `&` `*` ve ve operatörler
-- Katkı `+` `-` maddesi ve operatörler
-- Karşılaştırma `<` `>`, `<=`, `>=` , ve işleçler
-- Eşitlik `==` ve `!=` operatörler
+- Sonek artırma `x++` ve azaltma `x--` işleçleri ve `->` ve `[]` işleçleri
+- Ön ek artırma `++x` ve azaltma `--x` işleçleri ve `&` ve `*` işleçleri
+- Eklenebilir `+` ve `-` işleçler
+- Karşılaştırma `<` , `>` , `<=` , ve `>=` işleçler
+- Eşitlik `==` ve `!=` işleçler
 
-Operatör önceliği tarafından `()`dayatılan değerlendirme sırasını değiştirmek için parantez kullanın.
+`()`İşleç önceliğine göre uygulanan değerlendirmenin sırasını değiştirmek için parantez ' nu kullanın.
 
-Öncelik düzeyine göre sıralanan C# işleçlerinin tam listesi için [C# işleçleri](index.md) makalesinin [Operatör önceliği](index.md#operator-precedence) bölümüne bakın.
+Öncelik düzeyine göre sıralanan C# işleçlerinin tüm listesi için [c# işleçleri](index.md) makalesinin [operatör önceliği](index.md#operator-precedence) bölümüne bakın.
 
-## <a name="operator-overloadability"></a>Operatör aşırı yüklenebilirlik
+## <a name="operator-overloadability"></a>Operatör overloadability
 
-Kullanıcı tanımlı bir tür işaretçi `&`yle `*` `->`ilgili `[]`işleçleri aşırı yükleyemez, ve .
+Kullanıcı tanımlı bir tür, işaretçiyle ilgili işleçleri,, `&` `*` `->` ve ile aşırı yükleyemez `[]` .
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
 
 - [Sabit ve taşınabilir değişkenler](~/_csharplang/spec/unsafe-code.md#fixed-and-moveable-variables)
-- [İşleticinin adresi](~/_csharplang/spec/unsafe-code.md#the-address-of-operator)
-- [İşaretçi yönlendirme](~/_csharplang/spec/unsafe-code.md#pointer-indirection)
+- [Address-of işleci](~/_csharplang/spec/unsafe-code.md#the-address-of-operator)
+- [İşaretçi yöneltme](~/_csharplang/spec/unsafe-code.md#pointer-indirection)
 - [İşaretçi üye erişimi](~/_csharplang/spec/unsafe-code.md#pointer-member-access)
 - [İşaretçi öğesi erişimi](~/_csharplang/spec/unsafe-code.md#pointer-element-access)
-- [İşaretçi aritmetik](~/_csharplang/spec/unsafe-code.md#pointer-arithmetic)
-- [İşaretçi artış ve kararname](~/_csharplang/spec/unsafe-code.md#pointer-increment-and-decrement)
+- [İşaretçi aritmetiği](~/_csharplang/spec/unsafe-code.md#pointer-arithmetic)
+- [İşaretçi artışı ve azaltma](~/_csharplang/spec/unsafe-code.md#pointer-increment-and-decrement)
 - [İşaretçi karşılaştırması](~/_csharplang/spec/unsafe-code.md#pointer-comparison)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [güvenli olmayan anahtar kelime](../keywords/unsafe.md)
-- [sabit anahtar kelime](../keywords/fixed-statement.md)
+- [güvenli olmayan anahtar sözcük](../keywords/unsafe.md)
+- [Fixed anahtar sözcüğü](../keywords/fixed-statement.md)
 - [stackalloc](stackalloc.md)
 - [sizeof işleci](sizeof.md)

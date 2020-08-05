@@ -1,6 +1,7 @@
 ---
-title: C# işleçleri-C# başvurusu
-ms.date: 04/28/2020
+title: C# işleçleri ve ifadeleri-C# başvurusu
+description: C# işleçleri ve ifadeleri, işleç önceliği ve işleç birleşim hakkında bilgi edinin
+ms.date: 08/04/2020
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -9,18 +10,52 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 96bb97690f8954cce2cc75cad921e21985972798
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301781"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556559"
 ---
-# <a name="c-operators-c-reference"></a>C# işleçleri (C# Başvurusu)
+# <a name="c-operators-and-expressions-c-reference"></a>C# işleçleri ve ifadeleri (C# Başvurusu)
 
-C#, yerleşik türler tarafından desteklenen bir dizi işleç sağlar. Örneğin, [Aritmetik işleçler](arithmetic-operators.md) sayısal Işlenenler ve [Boole mantıksal işleçleri](boolean-logical-operators.md) [bool](../builtin-types/bool.md) işlenenleri olan mantıksal işlemleri gerçekleştirir. Bazı işleçler [aşırı](operator-overloading.md)yüklenebilir. İşleç aşırı yüklemesi ile, Kullanıcı tanımlı bir türün işlenenleri için işleç davranışını belirtebilirsiniz.
+C# çok sayıda işleç sağlar. Bunların birçoğu [Yerleşik türler](../builtin-types/built-in-types.md) tarafından desteklenir ve temel işlemleri bu türlerin değerleriyle gerçekleştirmenize olanak tanır. Bu işleçler aşağıdaki grupları içerir:
 
-Bir [ifadede](../../programming-guide/statements-expressions-operators/expressions.md), işleç önceliği ve ilişkilendirilebilirliği, işlemlerin gerçekleştirileceği sırayı belirlemektir. İşleç önceliği ve ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için ayraçları kullanabilirsiniz.
+- Sayısal işlenenlerin aritmetik işlemlerini gerçekleştiren [Aritmetik işleçler](arithmetic-operators.md)
+- Sayısal işlenenleri karşılaştıran [karşılaştırma işleçleri](comparison-operators.md)
+- İşlenenler ile mantıksal işlemler gerçekleştiren [Boolean mantıksal işleçler](boolean-logical-operators.md) [`bool`](../builtin-types/bool.md)
+- İntegral türlerinin işlenenleri ile bit düzeyinde veya SHIFT işlemleri gerçekleştiren [bit düzeyinde and SHIFT işleçleri](bitwise-and-shift-operators.md)
+- İşlenenleri eşit olup olmadığını denetleyen [eşitlik işleçleri](equality-operators.md)
+
+Genellikle, bu işleçleri [aşırı](operator-overloading.md) yükleyebilir, diğer bir deyişle, Kullanıcı tanımlı bir türün işlenenleri için işleç davranışını belirtebilirsiniz.
+
+En basit C# ifadeleri değişmez değerler (örneğin, [tamsayı](../builtin-types/integral-numeric-types.md#integer-literals) ve [Gerçek](../builtin-types/floating-point-numeric-types.md#real-literals) sayılar) ve değişkenlerin adları. İşleçleri kullanarak bunları karmaşık ifadelerle birleştirebilirsiniz. İşleç [önceliği](#operator-precedence) ve [ilişkilendirilebilirliği](#operator-associativity) , bir ifadedeki işlemlerin gerçekleştirileceği sırayı belirleme. İşleç önceliği ve ilişkilendirilebilirliği tarafından uygulanan değerlendirmenin sırasını değiştirmek için ayraçları kullanabilirsiniz.
+
+Aşağıdaki kodda, ifadelerin örnekleri, atamaların sağ tarafındadır:
+
+[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+
+Genellikle, bir ifade sonuç üretir ve başka bir ifadeye eklenebilir. [`void`](../builtin-types/void.md)Yöntem çağrısı, sonuç üretmeyen bir ifade örneğidir. Aşağıdaki örnekte gösterildiği gibi yalnızca bir [ifade](../../programming-guide/statements-expressions-operators/statements.md)olarak kullanılabilir:
+
+```csharp
+Console.WriteLine("Hello, world!");
+```
+
+C# ' nin sağladığı diğer ifade türleri şunlardır:
+
+- Biçimlendirilen dizeler oluşturmak için uygun sözdizimi sağlayan, [enterpolasyonlu dize ifadeleri](../tokens/interpolated.md) :
+
+  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+
+- Anonim işlevler oluşturmanıza olanak sağlayan [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) :
+
+  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+
+- Sorgu yeteneklerini doğrudan C# dilinde kullanmanıza imkan sağlayan [sorgu Ifadeleri](../keywords/query-keywords.md) :
+
+  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+
+Bir yöntem, Oluşturucu, özellik, Dizin Oluşturucu veya Sonlandırıcı için kısa bir tanım sağlamak üzere bir [ifade gövdesi tanımı](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) kullanabilirsiniz.
 
 ## <a name="operator-precedence"></a>İşleç önceliği
 
@@ -90,9 +125,13 @@ Genellikle, tüm işleç işlenenleri değerlendirilir. Ancak, bazı işleçler 
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [işleçler](~/_csharplang/spec/expressions.md#operators) bölümüne bakın.
+Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)aşağıdaki bölümlerine bakın:
+
+- [İfadeler](~/_csharplang/spec/expressions.md)
+- [İşleçler](~/_csharplang/spec/expressions.md#operators)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [İfadeler](../../programming-guide/statements-expressions-operators/expressions.md)
+- [İşleç aşırı yüklemesi](operator-overloading.md)
+- [İfade ağaçları](../../programming-guide/concepts/expression-trees/index.md)

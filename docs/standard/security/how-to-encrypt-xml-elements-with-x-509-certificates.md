@@ -1,43 +1,46 @@
 ---
 title: 'Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme'
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- encryption [.NET Framework], X.509 certificates
-- cryptography [.NET Framework], X.509 certificates
+- encryption [.NET], X.509 certificates
+- cryptography [.NET], X.509 certificates
 - System.Security.Cryptography.EncryptedXml class
 - XML encryption
 - System.Security.Cryptography.X509Certificate2 class
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-ms.openlocfilehash: 9cdd8e52be11eeba86ec406510f40f1a08809ff8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c978bea7336e64d6622aca4d21c7ef3317d73957
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277225"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555727"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Nasıl yapılır: XML Öğelerini X.509 Sertifikalarıyla Şifreleme
+
 <xref:System.Security.Cryptography.Xml>BIR XML belgesi içindeki bir öğeyi şifrelemek için ad alanındaki sınıfları kullanabilirsiniz.  XML şifrelemesi, kolayca okunan veriler hakkında endişelenmeden şifrelenmiş XML verilerini alışverişi veya depolamayı standart bir yoludur.  XML şifreleme standardı hakkında daha fazla bilgi için bkz. konumundaki XML şifrelemesi için World Wide Web Konsorsiyumu (W3C) belirtimi <https://www.w3.org/TR/xmldsig-core/> .  
   
  XML şifrelemesini, `EncryptedData` ŞIFRELENMIŞ XML verilerini içeren bir <> öğesiyle herhangi BIR XML öğesini veya belgeyi değiştirmek için kullanabilirsiniz. <`EncryptedData`> öğesi, şifreleme sırasında kullanılan anahtarlar ve süreçler hakkında bilgi içeren alt öğeleri içerebilir.  XML şifrelemesi, bir belgenin birden çok şifrelenmiş öğe içermesini sağlar ve bir öğenin birden çok kez şifrelenmesini sağlar.  Bu yordamdaki kod örneği, `EncryptedData` daha sonra şifre çözme sırasında kullanabileceğiniz diğer birkaç alt öğe ile birlikte <> bir öğe oluşturma işlemini gösterir.  
   
- Bu örnek, iki anahtar kullanarak bir XML öğesini şifreler. [Sertifika oluşturma aracı 'nı (Makecert. exe)](/windows/desktop/SecCrypto/makecert) kullanarak bir test X. 509.440 sertifikası oluşturur ve sertifikayı bir sertifika deposuna kaydeder. Örnek daha sonra sertifikayı program aracılığıyla alır ve bir XML öğesini kullanarak bir XML öğesini şifrelemek için kullanır <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> . Dahili olarak, <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> Yöntem ayrı bir oturum anahtarı oluşturur ve XML belgesini şifrelemek için onu kullanır. Bu yöntem, oturum anahtarını şifreler ve şifreli XML ile birlikte yeni bir <> öğesi içinde kaydeder `EncryptedData` .  
+Bu örnek, iki anahtar kullanarak bir XML öğesini şifreler. Örnek program aracılığıyla bir sertifikayı alır ve bu yöntemi kullanarak bir XML öğesini şifrelemek için kullanır <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> . Dahili olarak, <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> Yöntem ayrı bir oturum anahtarı oluşturur ve XML belgesini şifrelemek için onu kullanır. Bu yöntem, oturum anahtarını şifreler ve şifreli XML ile birlikte yeni bir <> öğesi içinde kaydeder `EncryptedData` .  
+
+XML öğesinin şifresini çözmek için, <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> mağazadan X. 509.952 sertifikasını otomatik olarak alan ve gerekli şifre çözme işlemini gerçekleştiren yöntemini çağırın.  Bu yordam kullanılarak şifrelenmiş bir XML öğesinin şifresini çözme hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML öğelerinin şifresini X. 509.440 sertifikalarıyla çözme](how-to-decrypt-xml-elements-with-x-509-certificates.md).  
   
- XML öğesinin şifresini çözmek için, <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> mağazadan X. 509.952 sertifikasını otomatik olarak alan ve gerekli şifre çözme işlemini gerçekleştiren yöntemini çağırmanız yeterlidir.  Bu yordam kullanılarak şifrelenmiş bir XML öğesinin şifresini çözme hakkında daha fazla bilgi için bkz. [nasıl yapılır: XML öğelerinin şifresini X. 509.440 sertifikalarıyla çözme](how-to-decrypt-xml-elements-with-x-509-certificates.md).  
-  
- Bu örnek, birden fazla uygulamanın şifrelenmiş verileri paylaşması gereken ya da bir uygulamanın, kaç kez şifrelenmiş verileri çalıştığı zamanlar arasında kaydetmesi gereken durumlar için uygundur.  
+Bu örnek, birden fazla uygulamanın şifrelenmiş verileri paylaşması gereken ya da bir uygulamanın, kaç kez şifrelenmiş verileri çalıştığı zamanlar arasında kaydetmesi gereken durumlar için uygundur.  
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>Bir XML öğesini X.509 sertifikası ile şifrelemek için  
-  
-1. [Sertifika oluşturma aracı 'nı (Makecert. exe)](/windows/desktop/SecCrypto/makecert) kullanarak bir test X. 509.952 sertifikası oluşturun ve bunu yerel kullanıcı deposuna yerleştirin. Bir Exchange anahtarı oluşturmanız gerekir ve anahtarı dışa aktarılabilir yapmanız gerekir. Şu komutu çalıştırın:  
+
+Bu örneği çalıştırmak için bir test sertifikası oluşturmanız ve onu bir sertifika deposuna kaydetmeniz gerekir. Bu görev için yönergeler yalnızca Windows [sertifika oluşturma aracı (Makecert.exe)](/windows/desktop/SecCrypto/makecert)için sağlanır.
+
+1. Bir test X. 509.952 sertifikası oluşturmak ve bunu yerel kullanıcı deposuna yerleştirmek için [Makecert.exe](/windows/desktop/SecCrypto/makecert) kullanın. Bir Exchange anahtarı oluşturmanız gerekir ve anahtarı dışa aktarılabilir yapmanız gerekir. Aşağıdaki komutu çalıştırın:  
   
     ```console  
-    makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  
+    makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2020 -e 01/01/2025 -sky exchange -ss my  
     ```  
   
 2. Bir <xref:System.Security.Cryptography.X509Certificates.X509Store> nesne oluşturun ve geçerli kullanıcı deposunu açmak için başlatın.  
@@ -107,14 +110,21 @@ ms.locfileid: "84277225"
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
   
-- Bu örneği derlemek için, öğesine bir başvuru eklemeniz gerekir `System.Security.dll` .  
+- .NET Framework hedefleyen bir projede, öğesine bir başvuru ekleyin `System.Security.dll` .
+
+- .NET Core veya .NET 5 ' i hedefleyen bir projede NuGet paketi [System.Security.Cryptography.Xml](https://www.nuget.org/packages/System.Security.Cryptography.Xml)' yi yükler.
   
 - Şu ad alanlarını ekleyin: <xref:System.Xml> , <xref:System.Security.Cryptography> , ve <xref:System.Security.Cryptography.Xml> .  
   
-## <a name="net-framework-security"></a>.NET Framework Güvenliği  
- Bu örnekte kullanılan X. 509.440 sertifikası yalnızca test amaçlıdır.  Uygulamalar, güvenilir bir sertifika yetkilisi tarafından oluşturulan bir X. 509.440 sertifikası kullanmalı veya Microsoft Windows sertifika sunucusu tarafından oluşturulan bir sertifikayı kullanmalıdır.  
+## <a name="net-security"></a>.NET güvenliği
+  
+Bu örnekte kullanılan X. 509.440 sertifikası yalnızca test amaçlıdır.  Uygulamalar, güvenilir bir sertifika yetkilisi tarafından oluşturulan bir X. 509.440 sertifikası kullanmalıdır.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Şifreleme Modeli](cryptography-model.md)
+- [Şifreleme Hizmetleri](cryptographic-services.md)
+- [Platformlar arası şifreleme](cross-platform-cryptography.md)
 - <xref:System.Security.Cryptography.Xml>
 - [Nasıl yapılır: XML Öğelerinin Şifresini X.509 Sertifikalarıyla Çözme](how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- [ASP.NET Core veri koruma](/aspnet/core/security/data-protection/introduction)

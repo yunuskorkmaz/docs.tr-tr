@@ -1,7 +1,7 @@
 ---
 title: Karma Kodlarla Veri Bütünlüğünü Sağlama
 description: .NET 'teki karma kodları kullanarak veri bütünlüğünü sağlama hakkında bilgi edinin. Karma değeri, verileri benzersiz bir şekilde tanımlayan sabit uzunlukta sayısal bir değerdir.
-ms.date: 03/30/2017
+ms.date: 07/14/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,37 +9,37 @@ dev_langs:
 helpviewer_keywords:
 - generating hash
 - verifying hash codes
-- cryptography [.NET Framework], hash
+- cryptography [.NET], hash
 - data integrity
 - checking hash codes
-- encryption [.NET Framework], hash
+- encryption [.NET], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: ffc5e78228f4e7c56febdc0872a0bc0fc581f162
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: 3205e37f283cb205f5edfc5948a9cb9f7256f752
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84769060"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556962"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Karma Kodlarla Veri Bütünlüğünü Sağlama
 Karma değeri, verileri benzersiz bir şekilde tanımlayan sabit uzunlukta sayısal bir değerdir. Karma değerler, büyük miktarlarda veriyi çok daha küçük sayısal değerler halinde temsil eder, bu nedenle dijital imzalarla birlikte kullanılır. Karma değeri, daha büyük değeri imzalamadan daha verimli bir şekilde imzalayabilirsiniz. Karma değerleri, güvenli olmayan kanallar aracılığıyla gönderilen verilerin bütünlüğünü doğrulamak için de kullanışlıdır. Alınan verilerin karma değeri, verilerin değiştirilip değiştirilmediğini tespit etmek için gönderilen verilerin karma değeriyle karşılaştırılabilir.  
   
- Bu konu, ad alanındaki sınıfları kullanarak karma kodların nasıl oluşturulacağını ve doğrulanacağını açıklamaktadır <xref:System.Security.Cryptography?displayProperty=nameWithType> .  
+Bu konu, ad alanındaki sınıfları kullanarak karma kodların nasıl oluşturulacağını ve doğrulanacağını açıklamaktadır <xref:System.Security.Cryptography> .  
   
-## <a name="generating-a-hash"></a>Karma oluşturma  
- Yönetilen karma sınıflar bir bayt dizisini veya yönetilen bir akış nesnesini karma hale getirebilirsiniz. Aşağıdaki örnek, bir dize için bir karma değer oluşturmak üzere SHA1 karma algoritmasını kullanır. Örnek, sınıfını <xref:System.Text.UnicodeEncoding> kullanarak dizeyi karma bir bayt dizisine dönüştürmek için sınıfını kullanır <xref:System.Security.Cryptography.SHA1Managed> . Karma değeri daha sonra konsola görüntülenir.  
+## <a name="generating-a-hash"></a>Karma oluşturma
 
- Microsoft, SHA1 ile ilgili çakışma sorunları nedeniyle SHA256 veya daha iyi bir performans öneriyor.
-  
+ Yönetilen karma sınıflar bir bayt dizisini veya yönetilen bir akış nesnesini karma hale getirebilirsiniz. Aşağıdaki örnek, bir dize için bir karma değer oluşturmak üzere SHA1 karma algoritmasını kullanır. Örnek, sınıfını <xref:System.Text.UnicodeEncoding> kullanarak dizeyi karma bir bayt dizisine dönüştürmek için sınıfını kullanır <xref:System.Security.Cryptography.SHA256> . Karma değeri daha sonra konsola görüntülenir.  
+
  [!code-csharp[GeneratingAHash#1](../../../samples/snippets/csharp/VS_Snippets_CLR/generatingahash/cs/program.cs#1)]
  [!code-vb[GeneratingAHash#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/generatingahash/vb/program.vb#1)]  
   
  Bu kod konsola aşağıdaki dizeyi gösterir:  
   
- `59 4 248 102 77 97 142 201 210 12 224 93 25 41 100 197 213 134 130 135`  
+ `185 203 236 22 3 228 27 130 87 23 244 15 87 88 14 43 37 61 106 224 81 172 224 211 104 85 194 197 194 25 120 217`  
   
-## <a name="verifying-a-hash"></a>Karma doğrulama  
+## <a name="verifying-a-hash"></a>Karma doğrulama
+
  Verileri, bütünlüğünü tespit etmek için bir karma değerle karşılaştırılabilir. Genellikle, veriler belirli bir zamanda karma hale getirilir ve karma değeri bir şekilde korunur. Daha sonra veriler karma hale getirilir ve korunan değerle karşılaştırılır. Karma değerleri eşleşiyorsa, veriler değiştirilmez. Değerler eşleşmiyorsa, veriler bozulmuş demektir. Bu sistemin çalışması için korunan karmaların güvenilmeyen tüm taraflardan şifrelenmesi veya gizli tutulması gerekir.  
   
  Aşağıdaki örnek bir dizenin önceki karma değerini yeni bir karma değerle karşılaştırır. Bu örnek, karma değerlerin her baytında döngü yapar ve bir karşılaştırma yapar.  
@@ -61,4 +61,7 @@ The hash codes do not match.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
+- [Şifreleme Modeli](cryptography-model.md)
 - [Şifreleme Hizmetleri](cryptographic-services.md)
+- [Platformlar arası şifreleme](cross-platform-cryptography.md)
+- [ASP.NET Core veri koruma](/aspnet/core/security/data-protection/introduction)

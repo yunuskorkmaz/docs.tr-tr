@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 03bf7f246884fc8cd0095f0dd1375389a95e1ef0
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207236"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555480"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Aritmetik işleçler (C# Başvurusu)
 
@@ -253,8 +253,8 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 
 - [Sonek artırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
 - [Önek arttırma ve azaltma işleçleri](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
-- [Tekli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
-- [Birli eksi işleci](~/_csharplang/spec/expressions.md#unary-minus-operator)
+- [Birli artı işleci](~/_csharplang/spec/expressions.md#unary-plus-operator)
+- [Birli eksi işareti](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [Çarpma işleci](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Bölme işleci](~/_csharplang/spec/expressions.md#division-operator)
 - [Kalan işleç](~/_csharplang/spec/expressions.md#remainder-operator)
@@ -267,7 +267,7 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>
 - [.NET Sayısal Değerleri](../../../standard/numerics.md)

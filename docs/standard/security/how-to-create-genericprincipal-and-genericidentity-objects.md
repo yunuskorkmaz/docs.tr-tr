@@ -1,6 +1,6 @@
 ---
 title: 'Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma'
-ms.date: 03/30/2017
+ms.date: 07/15/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,14 +11,19 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-ms.openlocfilehash: 10a71185db3359cda1c3bf7a12f5698929c98296
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 903d636938c47850951330d7936d95470441607e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290869"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87557222"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Nasıl yapılır: GenericPrincipal ve GenericIdentity Nesneleri Oluşturma
+
+> [!NOTE]
+> Bu makale Windows için geçerlidir.
+>
+> ASP.NET Core hakkında bilgi için bkz. [ASP.NET Core güvenliğine genel bakış](https://docs.microsoft.com/aspnet/core/security/).
 
 <xref:System.Security.Principal.GenericIdentity> <xref:System.Security.Principal.GenericPrincipal> Bir Windows etki alanından bağımsız olarak bulunan bir yetkilendirme şeması oluşturmak için sınıfını sınıfıyla birlikte kullanabilirsiniz.
 
@@ -144,5 +149,5 @@ Is this a Manager? True
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>
 - <xref:System.Security.Permissions.PrincipalPermission>
-- [Sorumlu Nesnesini Değiştirme](replacing-a-principal-object.md)
-- [Sorumlu ve Kimlik Nesneleri](principal-and-identity-objects.md)
+- [Asıl Nesneyi Değiştirme](replacing-a-principal-object.md)
+- [Asıl ve Kimlik Nesneleri](principal-and-identity-objects.md)

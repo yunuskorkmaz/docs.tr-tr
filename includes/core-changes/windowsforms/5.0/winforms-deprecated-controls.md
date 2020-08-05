@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: c9720f51e40ada4cd2cf6997ba7006a232893553
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d3bfeda8309af83d8e4199999ed91263a17caeea
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702474"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556259"
 ---
 ### <a name="removed-status-bar-controls"></a>Durum çubuğu denetimleri kaldırıldı
 
-.NET 5,0 Preview 1 ' den başlayarak bazı Windows Forms denetimleri artık kullanılamıyor.
+.NET 5,0 ' den başlayarak bazı Windows Forms denetimleri artık kullanılamaz.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET 5,0 Preview 1 ' den itibaren, durum çubuğu ile ilgili Windows Forms denetimlerinin bazıları artık kullanılamıyor. Daha iyi tasarım ve destek içeren değiştirme denetimleri .NET Framework 2,0 ' de sunulmuştur. Kullanım dışı bırakılan denetimler daha önce Tasarımcı araç kutularından kaldırılmıştır ancak yine de kullanılabilir. Şimdi tamamen kaldırılmıştır.
+.NET 5,0 ile başlayarak, durum çubuğu ile ilgili Windows Forms denetimlerinin bazıları artık kullanılamıyor. Daha iyi tasarım ve destek içeren değiştirme denetimleri .NET Framework 2,0 ' de sunulmuştur. Kullanım dışı bırakılan denetimler daha önce Tasarımcı araç kutularından kaldırılmıştır ancak yine de kullanılabilir. Şimdi tamamen kaldırılmıştır.
 
 Aşağıdaki türler artık kullanılamaz:
 

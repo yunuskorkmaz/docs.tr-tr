@@ -1,39 +1,39 @@
 ---
-title: doğru ve yanlış operatörler - C# referans
+title: true ve false işleçleri-C# başvurusu
 ms.date: 12/10/2018
 helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 5ccd08a348478902bbbac36e99acf7ffc1fc814b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efba2c1c921d867725db90a1879cc9dee1a22b4e
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846226"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87555534"
 ---
-# <a name="true-and-false-operators-c-reference"></a>doğru ve yanlış işleçler (C# referansı)
+# <a name="true-and-false-operators-c-reference"></a>true ve false işleçleri (C# Başvurusu)
 
-Operatör, `true` operand'ın kesinlikle doğru olduğunu belirtmek için [bool](../builtin-types/bool.md) değerini `true` döndürür. İşletici, `false` `true` operand'ın kesinlikle yanlış olduğunu belirtmek için değeri döndürür. `bool` Ve `true` `false` işleçlerin birbirini tamamlayacakları garanti edilmez. Diğer bir `true` süre, `false` hem işleç hem de işleç aynı operand için `bool` değeri `false` döndürebilir. Bir tür iki işleçten birini tanımlıyorsa, başka bir işleç de tanımlaması gerekir.
+`true`İşleci, [bool](../builtin-types/bool.md) `true` işleneninin kesinlikle doğru olduğunu göstermek için bool değeri döndürür. `false`İşleci, `bool` `true` işleneninin kesinlikle yanlış olduğunu göstermek için değeri döndürür. `true`Ve `false` işleçleri birbirini tamamlamak için garanti edilmez. Diğer bir deyişle, `true` ve `false` işleci `bool` `false` aynı işlenen için değeri döndürebilir. Bir tür iki işleçten birini tanımlıyorsa, aynı zamanda başka bir işleç tanımlamalıdır.
 
 > [!TIP]
-> Üç `bool?` değerli mantığı desteklemeniz gerekiyorsa (örneğin, üç değerli Boolean türünü destekleyen veritabanlarıyla çalışırken) türü kullanın. C# `&` `bool?` operands ile üç değerli mantığı destekleyen ve `|` işleçleri sağlar. Daha fazla bilgi için [Boolean mantıksal işleçleri](boolean-logical-operators.md) makalesinin [Nullable Boolean mantıksal işleçleri](boolean-logical-operators.md#nullable-boolean-logical-operators) bölümüne bakın.
+> `bool?`Üç değerli mantığı desteklemeniz gerekiyorsa (örneğin, üç değerli bir Boolean türünü destekleyen veritabanlarıyla çalışırken) türünü kullanın. C#, `&` `|` işlenenlerle üç değerli mantığı destekleyen ve işleçlerini sağlar `bool?` . Daha fazla bilgi için, [Boole mantıksal işleçler](boolean-logical-operators.md) makalesinin [Nullable Boolean mantıksal işleçler](boolean-logical-operators.md#nullable-boolean-logical-operators) bölümüne bakın.
 
 ## <a name="boolean-expressions"></a>Mantıksal ifadeler
 
-Tanımlanan `true` işleci ile bir tür [if,](../keywords/if-else.md) [do](../keywords/do.md), [while](../keywords/while.md), ve ifadeler [için](../keywords/for.md) ve [koşullu `?:`işleç ](conditional-operator.md)bir kontrol koşullu ifade sonucu türü olabilir. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Boolean ifadeleri](~/_csharplang/spec/expressions.md#boolean-expressions) bölümüne bakın.
+Tanımlı işleci olan bir tür `true` , [IF](../keywords/if-else.md), [Do](../keywords/do.md), [while](../keywords/while.md), ve [for](../keywords/for.md) deyimlerinde ve [koşullu işleçte `?:` ](conditional-operator.md)bir denetim koşullu ifadesi sonucunun türü olabilir. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Boole ifadeleri](~/_csharplang/spec/expressions.md#boolean-expressions) bölümüne bakın.
 
-## <a name="user-defined-conditional-logical-operators"></a>Kullanıcı tanımlı koşullu mantıksal işleçler
+## <a name="user-defined-conditional-logical-operators"></a>Kullanıcı tanımlı Koşullu mantıksal işleçler
 
-Tanımlanan `true` ve `false` işleçleri olan bir tür [mantıksal OR işleci](boolean-logical-operators.md#logical-or-operator-) `|` veya mantıksal AND [işleci](boolean-logical-operators.md#logical-and-operator-) `&` belirli bir şekilde [aşırı yükler,](operator-overloading.md) [koşullu mantıksal VEYA işleci](boolean-logical-operators.md#conditional-logical-or-operator-) `||` veya [koşullu mantıksal VE işleci](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`, sırasıyla, bu tür operands için değerlendirilebilir. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Kullanıcı tanımlı koşullu mantıksal işleçleri](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümüne bakın.
+Tanımlı `true` ve işleçlere sahip bir tür `false` [mantıksal veya IŞLECINI](boolean-logical-operators.md#logical-or-operator-) [overloads](operator-overloading.md) `|` veya [mantıksal ve işlecini](boolean-logical-operators.md#logical-and-operator-) `&` belirli bir şekilde aşırı YÜKIYORSA, [Koşullu mantıksal or işleci](boolean-logical-operators.md#conditional-logical-or-operator-) `||` veya [Koşullu mantıksal ve işleç](boolean-logical-operators.md#conditional-logical-and-operator-) `&&` sırasıyla bu türün işlenenleri için değerlendirilebilir. Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [Kullanıcı tanımlı Koşullu mantıksal işleçler](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) bölümüne bakın.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, hem de `true` `false` işleçleri tanımlayan türü gösterir. Tür ayrıca mantıksal AND `&` `&&` işlecinin de bu tip operands için değerlendirilebilir şekilde aşırı yükler.
+Aşağıdaki örnek hem hem de işleçlerini tanımlayan türü gösterir `true` `false` . Bu tür ayrıca mantıksal ve işlecini, `&` `&&` işlecin bu türdeki işlenenler için de değerlendirilebilecek şekilde de aşırı yükler.
 
 [!code-csharp[true and false operators example](snippets/TrueFalseOperators.cs)]
 
-Operatörün kısa devre davranışına `&&` dikkat edin. `GetFuelLaunchStatus` Yöntem döndüğünde, `LaunchStatus.Red`operatörün `&&` sağ operand'ı değerlendirilmez. Çünkü kesinlikle `LaunchStatus.Red` yanlıştır. Sonra mantıksal ve sonucu sağ operand değerine bağlı değildir. Örneğin çıktısı aşağıdaki gibidir:
+İşlecin kısa devre dışı davranışına dikkat edin `&&` . Yöntemi döndürüldüğünde `GetFuelLaunchStatus` `LaunchStatus.Red` , işlecin sağ işleneni `&&` değerlendirilmez. Bunun nedeni `LaunchStatus.Red` kesinlikle false 'tur. Sonra mantıksal ve sonucu, sağ işlenenin değerine bağlı değildir. Örneğin çıktısı aşağıdaki gibidir:
 
 ```console
 Getting fuel launch status...
@@ -43,4 +43,4 @@ Wait!
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)

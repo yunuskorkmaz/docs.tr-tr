@@ -15,12 +15,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: a2fc2c56eeb29f5e89dc0b9f94636408ff10700f
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4788c84be76a5cc9a9a6327fcd054e08db4d1872
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446372"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556806"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Normal İfade Dili - Hızlı Başvuru
 
@@ -49,7 +49,7 @@ Bir normal ifadede ters eğik çizgi karakteri ( \\ ), kendisini izleyen karakte
 |`\e`|Bir çıkışla eşleşir, \u001B.|`\e`|`"\x001B"` içinde `"\x001B"`|
 |`\`*nnn*|Bir karakter belirtmek için sekizlik gösterim kullanır (*nnn* iki veya üç basamaktan oluşur).|`\w\040\w`|`"a b"``"c d"`içinde,`"a bc d"`|
 |`\x`*nn*|Bir karakter belirtmek için onaltılık gösterim kullanır (*nn* tam olarak iki basamak içerir).|`\w\x20\w`|`"a b"``"c d"`içinde,`"a bc d"`|
-|`\c` *X*<br /><br /> `\c` *x*|X *veya x tarafından BELIRTILEN* ASCII denetim karakteriyle *eşleşir; burada* *x* veya *x* , denetim karakterinin harfidir.|`\cC`|`"\x0003"`içinde `"\x0003"` (CTRL-C)|
+|`\c`*X*<br /><br /> `\c` *x*|X *veya x tarafından BELIRTILEN* ASCII denetim karakteriyle *eşleşir; burada* *x* veya *x* , denetim karakterinin harfidir.|`\cC`|`"\x0003"`içinde `"\x0003"` (CTRL-C)|
 |`\u`*nnnn*|Onaltılık gösterim kullanarak bir Unicode karakteriyle eşleşir ( *nnnn*ile gösterildiği gibi, tam olarak dört basamaklı).|`\w\u0020\w`|`"a b"``"c d"`içinde,`"a bc d"`|
 |`\`|Bu konudaki bu ve diğer tablolarda kaçış karakteri olarak tanınmayan bir karakterden önce geldiğinde karakterle eşleşir. Örneğin, ile `\*` aynıdır `\x2A` ve ile `\.` aynıdır `\x2E` . Bu, normal ifade altyapısının dil öğelerini ( \* veya? gibi) ve karakter değişmez değerlerini (veya ile temsil edilen) belirsizliğini sağlar `\*` `\?` .|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"` içinde `"2+2"` ve `"3*9"`|
 
@@ -94,8 +94,8 @@ Yapıları gruplandırma, normal bir ifadenin alt ifadelerini açıklar ve tipik
 |Yapıyı gruplandırma|Açıklama|Desen|Eşleşmeler|
 |------------------------|-----------------|-------------|-------------|
 |`(`alt *ifade*`)`|Eşleşen alt ifadeyi yakalar ve buna bir tabanlı bir sıra numarası atar.|`(\w)\1`|`"deep"` içinde `"ee"`|
-|`(?<`*ad* `>` alt *ifade*`)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|`"deep"` içinde `"ee"`|
-|`(?<`*name1* `-` *AD2* `>` alt *ifade*`)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için, [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md)Içindeki "Grup tanımı Dengeleme" bölümüne bakın.|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"` içinde `"((1-3)*(3-1))"`|
+|`(?<`*ad* `>` alt *ifade*`)`<br /> veya <br />`(?'`*ad* `'` alt *ifade*`)`|Eşleşen alt ifadeyi adlandırılmış bir gruba yakalar.|`(?<double>\w)\k<double>`|`"deep"` içinde `"ee"`|
+|`(?<`*name1* `-` *AD2* `>` alt *ifade*`)` <br /> veya <br /> `(?'`*name1* `-` *AD2* `'` alt *ifade*`)`|Bir dengeleme grubu tanımını tanımlar. Daha fazla bilgi için, [gruplandırma yapıları](grouping-constructs-in-regular-expressions.md)Içindeki "Grup tanımı Dengeleme" bölümüne bakın.|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"` içinde `"((1-3)*(3-1))"`|
 |`(?:`alt *ifade*`)`|Yakalama yapmayan grubu tanımlar.|`Write(?:Line)?`|`"Console.WriteLine()"` içinde `"WriteLine"`<br /><br /> `"Console.Write(value)"` içinde `"Write"`|
 |`(?imnsx-imnsx:`alt *ifade*`)`|Alt *ifade*içinde belirtilen seçenekleri uygular veya devre dışı bırakır. Daha fazla bilgi için bkz. [normal Ifade seçenekleri](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|`"A12xl"``"A12XL"`içinde,`"A12xl A12XL a12xl"`|
 |`(?=`alt *ifade*`)`|Sıfır genişlik pozitif ileriye yönelik onaylar.|`\w+(?=\.)`|`"is"`, `"ran"` , ve `"out"` içinde`"He is. The dog ran. The sun is out."`|
@@ -129,7 +129,7 @@ Yeniden başvuru, aynı normal ifadede daha sonra tanımlanabilecek alt ifadeyle
 
 |Yeniden başvuru yapısı|Açıklama|Desen|Eşleşmeler|
 |-----------------------------|-----------------|-------------|-------------|
-|`\`*sayı*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|`"seek"` içinde `"ee"`|
+|`\` *sayı*|Yeniden başvuru. Numaralandırılmış ifadenin değeriyle eşleşir.|`(\w)\1`|`"seek"` içinde `"ee"`|
 |`\k<`*ad*`>`|Adlandırılan yeniden başvuru. Adlandırılmış ifadenin değeriyle eşleşir.|`(?<char>\w)\k<char>`|`"seek"` içinde `"ee"`|
 
 ## <a name="alternation-constructs"></a>Değişim Yapıları
@@ -148,7 +148,7 @@ Değişimler değiştirme desenlerinde desteklenen normal ifade dil öğeleridir
 
 |Karakter|Açıklama|Desen|Değiştirme deseni|Giriş dizesi|Sonuç Dizesi|
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|
-|`$`*sayı*|Grup *numarasıyla*eşleşen alt dizeyi değiştirir.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
+|`$` *sayı*|Grup *numarasıyla*eşleşen alt dizeyi değiştirir.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|`"one two"`|`"two one"`|
 |`${`*ad*`}`|Adlandırılmış grup *adıyla*eşleştirilen alt dizeyi değiştirir.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|
 |`$$`|Değişmez değerli bir "$" işaretinin yerini alır.|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|
 |`$&`|Tam eşleşmenin bir kopyasının yerini alır.|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|

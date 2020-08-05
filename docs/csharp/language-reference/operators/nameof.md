@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: d71acf0cf7d5cdcfa5310455af2120fa1f82d567
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 1bd8800a553eb9b3363da8a3b5f230caecddf223
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135925"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556416"
 ---
 # <a name="nameof-expression-c-reference"></a>NameOf ifadesi (C# Başvurusu)
 
@@ -22,17 +22,17 @@ Bir `nameof` ifade, dize sabiti olarak bir değişkenin, türün veya üyenin ad
 
 Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluşturulan ad genellikle [tam olarak nitelenir](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
-Tam [tanımlayıcılar](../tokens/verbatim.md)söz konusu olduğunda, aşağıdaki örnekte `@` gösterildiği gibi karakter bir adın parçası değildir:
+Tam [tanımlayıcılar](../tokens/verbatim.md)söz konusu olduğunda, `@` Aşağıdaki örnekte gösterildiği gibi karakter bir adın parçası değildir:
 
 [!code-csharp-interactive[nameof verbatim](snippets/NameOfOperator.cs#Verbatim)]
 
 Bir `nameof` ifade derleme zamanında değerlendirilir ve çalışma zamanında hiçbir etkiye sahip değildir.
 
-Bağımsız değişken denetleme kodunun `nameof` daha sürdürülebilir olması için bir ifade kullanabilirsiniz:
+`nameof`Bağımsız değişken denetleme kodunun daha sürdürülebilir olması için bir ifade kullanabilirsiniz:
 
 [!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
 
-C# `nameof` 6 ve sonrasında bir ifade mevcuttur.
+`nameof`C# 6 ve sonrasında bir ifade mevcuttur.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -41,4 +41,4 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)
-- [C# işleçleri](index.md)
+- [C# işleçleri ve ifadeleri](index.md)

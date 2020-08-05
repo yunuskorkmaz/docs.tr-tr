@@ -3,12 +3,12 @@ title: Son değişiklikler-.NET Core 'a .NET Framework
 titleSuffix: ''
 description: .NET Framework 'den .NET Core 'a yapılan son değişiklikleri listeler.
 ms.date: 05/05/2020
-ms.openlocfilehash: f830d4571f21752900b35a7462bf0881673d6d2e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5f7424fdd959044b729dfb04f4f0147fbc946bfd
+ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420454"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87556312"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework 'den .NET Core 'a geçiş için son değişiklikler
 
@@ -96,8 +96,6 @@ Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir. .NET Framewor
 - [EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported)
 - [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
 - [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported)
-- [Erişilebilir nesne. Runtimeıdfirtıtem için erişim değişikliği](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [Yinelenen API 'Ler Windows Forms kaldırıldı](#duplicated-apis-removed-from-windows-forms)
 
 ### <a name="net-core-31"></a>.NET Core 3,1
 
@@ -152,14 +150,6 @@ Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir. .NET Framewor
 ***
 
 [!INCLUDE[UseLegacyImages compatibility switch not supported](~/includes/core-changes/windowsforms/3.0/deprecate-uselegacyimages.md)]
-
-***
-
-[!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/3.0/changed-access-for-runtimeidfirstitem.md)]
-
-***
-
-[!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
 
 ***
 
