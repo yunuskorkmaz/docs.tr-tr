@@ -5,14 +5,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-ms.openlocfilehash: 0a6a82c2c88fe61bd34c0accb831f018cf8702fc
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 5e499f8052306cd1ad063c9f44a2a0f1d0b365ef
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281439"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855744"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Güvenlik ve Genel Salt Okunur Dizi Alanları
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 Salt okuma genel dizi alanları değiştirilirken, uygulamanızın sınır davranışını veya güvenliğini tanımlamak için, yönetilen kitaplıklardan hiçbir şekilde salt okuma temelli dizi alanları kullanmayın.  
   
 ## <a name="remarks"></a>Açıklamalar  

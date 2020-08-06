@@ -11,14 +11,16 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: f19641ad2154631b4eab5104252c12b73b9084fd
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 393e334e8165f55812681848070929bdfb03a2a5
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309280"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855692"
 ---
 # <a name="security-and-serialization"></a>Güvenlik ve serileştirme
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
 Serileştirme diğer kodun başka bir şekilde erişilemeyen nesne örneği verilerini görmesine veya değiştirmesine izin abileceğinden, kod serileştirme: belirtilen bayrağıyla özel bir izin gerekir <xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> . Varsayılan ilke altında, bu izin Internet 'Ten indirilen veya intranet koduna verilmez; yalnızca yerel bilgisayardaki koda bu izin verilir.  
   

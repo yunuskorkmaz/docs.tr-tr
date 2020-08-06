@@ -17,14 +17,15 @@ helpviewer_keywords:
 - permissions [.NET Framework], overriding security checks
 - permissions [.NET Framework], assertions
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
-ms.openlocfilehash: 096e0375a94c92a835cccb4d1b3297783b4120e9
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 573b84f991e795c2513f213ddb52999fef51c454
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309813"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855679"
 ---
 # <a name="using-the-assert-method"></a>Onay Yöntemini Kullanma
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  <xref:System.Security.CodeAccessPermission.Assert%2A>, kod erişimi izin sınıflarında ve sınıfında çağrılabilecek bir yöntemdir <xref:System.Security.PermissionSet> . Kodunuzun (ve aşağı akış çağıranlarının), kodunuzun gerçekleştirme iznine sahip olduğu, ancak çağıranlarının yapma izni olmayan eylemleri **gerçekleştirmesini sağlamak için onay kullanabilirsiniz.** Güvenlik onayı, çalışma zamanının güvenlik denetimi sırasında gerçekleştirdiği normal işlemi değiştirir. Bir izin belirttiğinizde, güvenlik sistemine, onaylanan izin için kodunuzun çağıranlarını denetvermediğini söyler.  

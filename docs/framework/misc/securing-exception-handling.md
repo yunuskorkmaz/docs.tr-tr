@@ -10,14 +10,17 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-ms.openlocfilehash: 73597f83d7236cd48a18a891c987b4f5d7e1723d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: c7643bb34da0cbcbd267fc90e6294bc0b565985e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309046"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855783"
 ---
 # <a name="securing-exception-handling"></a>Özel Durum İşleme Güvenliğini Sağlama
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 Visual C++ ve Visual Basic içinde, yığın üzerinde daha fazla bir filtre ifadesi herhangi bir ifadeden önce çalışır `finally` . Bu filtreyle ilişkili **catch** bloğu `finally` deyimden sonra çalışır. Daha fazla bilgi için bkz. [Kullanıcı filtrelenmiş özel durumları kullanma](../../standard/exceptions/using-user-filtered-exception-handlers.md). Bu bölümde, bu sıranın güvenlik etkileri incelenir. Filtre deyimlerinin ve deyimlerinin çalışacağı sırayı gösteren aşağıdaki sözde kod örneğini göz önünde bulundurun `finally` .  
   
 ```cpp  

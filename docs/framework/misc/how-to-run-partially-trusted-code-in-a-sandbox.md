@@ -9,14 +9,15 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: e02b5d679fb1f5947373399ac1226732623ef96d
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 415a42f7c4f4866bb72f19bdd6f02bfdb5158bf8
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309241"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855809"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Nasıl yapılır: Korumalı Alanda Kısmen Güvenilen Kodu Çalıştırma
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Korumalı alana alma, kodu, koda verilen erişim izinlerini sınırlayan kısıtlı bir güvenlik ortamında çalıştırmaya yönelik bir uygulamadır. Örneğin, tam olarak güvenmediğiniz bir kaynaktan yönetilen bir kitaplığınız varsa, bunu tam güvenilir olarak çalıştırmanız gerekir. Bunun yerine, kodu, izinlerini beklediğinizi (örneğin, izin) sınırlayan bir korumalı alana yerleştirmeniz gerekir <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> .  

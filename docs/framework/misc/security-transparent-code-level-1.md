@@ -10,14 +10,15 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-ms.openlocfilehash: c44fe3339f3bf24d266fa97487868ce090d51bb1
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 75cf38412f3ba21832c5e63898b10bcf681f5904
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309100"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855705"
 ---
 # <a name="security-transparent-code-level-1"></a>Güvenliği saydam kod, düzey 1
+
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Saydamlık, geliştiricilerin kısmen güvenilen koda işlevsellik sunan daha güvenli .NET Framework kitaplıklar yazmasını sağlar. 1. düzey saydamlık .NET Framework sürüm 2,0 ' de tanıtılmıştı ve öncelikle yalnızca Microsoft içinde kullanılmıştı. 4. .NET Framework başlayarak [düzey 2 saydamlığını](security-transparent-code-level-2.md)kullanabilirsiniz. Ancak, 1. düzey saydamlık, önceki güvenlik kuralları ile çalışması gereken eski kodu tanımlayabilmeniz için korunur.  

@@ -8,14 +8,17 @@ helpviewer_keywords:
 - security [.NET Framework], remoting
 - secure coding, remoting
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
-ms.openlocfilehash: 019773b19eaca2e4364fb79c40fdb923093d4e7e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 3a272b2a8f164aad07413a069e68a2146d0df6a7
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309371"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855718"
 ---
 # <a name="security-and-remoting-considerations"></a>Güvenlik ve Uzaktan Yönetim Konuları
+
+[!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
+
 Uzaktan iletişim, uygulama etki alanları, süreçler veya bilgisayarlar arasında şeffaf çağrı ayarlamanıza olanak sağlar. Ancak, kod erişimi güvenlik yığını, işleme veya makine sınırları üzerinde olamaz (aynı işlemin uygulama etki alanları arasında geçerlidir).  
   
  Uzaktan erişilebilen herhangi bir sınıfın (bir sınıftan türetilmiş <xref:System.MarshalByRefObject> ) güvenlik için sorumluluğu olması gerekir. Kod, yalnızca çağıran kodun örtük olarak güvendiği kapalı ortamlarda kullanılmalıdır veya korumalı kodu, kötü amaçlı olarak kullanılabilecek bir girdinin dışına çıkarmaması için uzaktan iletişim aramaları tasarlanmalıdır.  

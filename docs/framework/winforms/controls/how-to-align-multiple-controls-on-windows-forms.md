@@ -1,6 +1,8 @@
 ---
 title: Birden Fazla Denetimi Hizalama
 ms.date: 03/30/2017
+f1_keywords:
+- Designer_Microsoft.VisualStudio.Windows.Forms.Design.DocumentDesigner
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
 - Windows Forms, aligning controls
@@ -10,12 +12,12 @@ ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5593c20e0e00e646949bf7357ecd126cbd1271f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4bde1926b89fe553ec9eda29ca5dfc1f3373af52
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747201"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855627"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Nasıl yapılır: Windows Formlarında Birden Çok Denetimi Hizalama
 
@@ -31,11 +33,11 @@ Windows tabanlı uygulamanızın kullanıcı arabirimi (UI) yerleşimini standar
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms Denetimleri](index.md)
+- [Windows Forms denetimleri](index.md)
 - [Nasıl yapılır: Windows Forms’a Denetimler Ekleme](how-to-add-controls-to-windows-forms.md)
-- [Windows Forms'da Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
-- [İşleve Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
-- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Windows Forms'ta Kullanılacak Denetimler](controls-to-use-on-windows-forms.md)
+- [İşlevlere Göre Windows Forms Denetimleri](windows-forms-controls-by-function.md)
+- [İzlenecek yol: Dayama Çizgileri Kullanarak Windows Forms'ta Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [İzlenecek yol: TableLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [İzlenecek yol: FlowLayoutPanel Kullanarak Windows Forms'da Denetimleri Düzenleme](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Nasıl yapılır: Mevcut Denetimleri Farklı bir Üst Öğeye Yeniden Atama](how-to-reassign-existing-controls-to-a-different-parent.md)
