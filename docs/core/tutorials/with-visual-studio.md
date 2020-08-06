@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 3c8fc7c4702b786c05e14397dc36d994c77e114d
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: fbe0b3491260e787c08b98b320b19408f2c897eb
+ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84811648"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87795391"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Core konsol uygulaması oluşturma
 
 Bu öğreticide, Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,6 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK 'Sı, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
 
@@ -27,7 +27,7 @@ Bu öğreticide, Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma
 
 "HelloWorld" adlı bir .NET Core konsol uygulaması projesi oluşturun.
 
-1. Visual Studio 2019 ' i başlatın.
+1. Visual Studio 2019’u başlatın.
 
 1. Başlangıç sayfasında **Yeni proje oluştur**' u seçin.
 
@@ -79,7 +79,7 @@ Kullanmak istediğiniz dil gösterilmiyorsa sayfanın en üstündeki dil seçici
 
 ## <a name="run-the-app"></a>Uygulamayı çalıştırma
 
-1. <kbd>Shift</kbd> + Programı hata ayıklamadan çalıştırmak için SHIFT<kbd>F5</kbd> tuşuna basın.
+1. <kbd>Ctrl</kbd> + Programı hata ayıklamadan çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
    Bir konsol penceresi "Merhaba Dünya!" metniyle açılıyor ekranda ve bazı Visual Studio hata ayıklama bilgilerinde yazdırılır.
 
@@ -102,7 +102,7 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 
    `$`Bir dizenin önünde dolar işareti (), değişken adları gibi ifadeleri dizedeki küme ayraçları içine koymanıza imkan tanır. İfade değeri, ifadenin yerine dizeye eklenir. Bu söz dizimi, [enterpolasyonlu dizeler](../../csharp/language-reference/tokens/interpolated.md)olarak adlandırılır.
 
-1. <kbd>Shift</kbd> + Programı hata ayıklamadan çalıştırmak için SHIFT<kbd>F5</kbd> tuşuna basın.
+1. <kbd>Ctrl</kbd> + Programı hata ayıklamadan çalıştırmak için CTRL<kbd>F5</kbd> tuşuna basın.
 
 1. Bir ad girip <kbd>ENTER</kbd> tuşuna basarak istemi yanıtlayın.
 
