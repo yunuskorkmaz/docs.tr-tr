@@ -1,43 +1,47 @@
 ---
-title: bool tipi - C# referans
+title: bool türü-C# başvurusu
 ms.date: 11/26/2019
 f1_keywords:
 - bool
 - bool_CSharpKeyword
+- "true"
+- "false"
+- true_CSharpKeyword
+- false_CSharpKeyword
 helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 2ba2e54a6b0f24402fc3728dfe19b548a2368830
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4623dc7d6c8c6c437c78aee45f0eeee8a92e3200
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846451"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854886"
 ---
-# <a name="bool-c-reference"></a>bool (C# referansı)
+# <a name="bool-c-reference"></a>bool (C# Başvurusu)
 
-Tür `bool` anahtar kelimesi,.NET <xref:System.Boolean?displayProperty=nameWithType> yapı türüiçin boolean değerini temsil eden bir `true` diğer `false`addır ve bu da .
+`bool`Type anahtar sözcüğü, <xref:System.Boolean?displayProperty=nameWithType> ya da olabilen bir Boole değerini temsil eden .net yapı türü için bir diğer addır `true` `false` .
 
-`bool` Mantıksal işlemleri türünün değerleriyle gerçekleştirmek için [Boolean mantıksal](../operators/boolean-logical-operators.md) işleçlerini kullanın. Tür, `bool` [karşılaştırma](../operators/comparison-operators.md) ve [eşitlik](../operators/equality-operators.md) işleçlerinin sonuç türüdür. Bir `bool` ifade [if,](../keywords/if-else.md) [do](../keywords/do.md), [while](../keywords/while.md), ve ifadeler [için](../keywords/for.md) ve [ `?:`koşullu işleç ](../operators/conditional-operator.md)bir kontrol koşullu ifade olabilir.
+Tür değerleriyle mantıksal işlemler gerçekleştirmek için `bool` [Boolean mantıksal](../operators/boolean-logical-operators.md) işleçler kullanın. `bool`Tür, [karşılaştırma](../operators/comparison-operators.md) ve [eşitlik](../operators/equality-operators.md) işleçlerinin sonuç türüdür. Bir `bool` ifade, [IF](../keywords/if-else.md), [Do](../keywords/do.md), [while](../keywords/while.md)ve [for](../keywords/for.md) deyimlerinde ve [koşullu işleçte `?:` ](../operators/conditional-operator.md)bir denetim koşullu ifadesi olabilir.
 
-`bool` Türünün varsayılan `false`değeri.
+Türün varsayılan değeri `bool` `false` .
 
-## <a name="literals"></a>Sabit değerler
+## <a name="literals"></a>Değişmez Değerler
 
-Bir `bool` değişkeni `true` `false` başlatmak veya bir `bool` değeri geçirmek için ve literals'i kullanabilirsiniz:
+`true` `false` Bir `bool` değişkeni başlatmak veya bir değeri geçirmek için ve değişmez `bool` değerlerini kullanabilirsiniz:
 
 [!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
 
-## <a name="three-valued-boolean-logic"></a>Üç değerli Boolean mantığı
+## <a name="three-valued-boolean-logic"></a>Üç değerli Boole mantığı
 
-Örneğin, üç `bool?` değerli Boolean türünü destekleyen veritabanlarıyla çalışırken, üç değerli mantığı desteklemeniz gerekiyorsa, nullable türünü kullanın. `bool?` Operands için, önceden `&` tanımlanmış `|` ve operatörler üç değerli mantığı destekler. Daha fazla bilgi için [Boolean mantıksal işleçleri](../operators/boolean-logical-operators.md) makalesinin [Nullable Boolean mantıksal işleçleri](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) bölümüne bakın.
+Üç `bool?` değerli mantığı desteketmeniz gerekiyorsa (örneğin, üç değerli bir Boolean türünü destekleyen veritabanlarıyla çalışırken), null yapılabilir türü kullanın. İşlenenler için `bool?` , önceden tanımlanmış `&` ve `|` işleçleri üç değerli mantığı destekler. Daha fazla bilgi için, [Boole mantıksal işleçler](../operators/boolean-logical-operators.md) makalesinin [Nullable Boolean mantıksal işleçler](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) bölümüne bakın.
 
-Nullable değer türleri hakkında daha fazla bilgi için, [Nullable değer türleri](nullable-value-types.md)bakın.
+Null yapılabilir değer türleri hakkında daha fazla bilgi için bkz. [Nullable değer türleri](nullable-value-types.md).
 
 ## <a name="conversions"></a>Dönüşümler
 
-C# `bool` türü içeren yalnızca iki dönüşüm sağlar. Bunlar, karşılık gelen geçersiz `bool?` türüne örtülü bir dönüştürme `bool?` ve türden açık bir dönüştürmedir. Ancak,.NET, `bool` türe dönüştürmek için kullanabileceğiniz ek yöntemler sağlar. Daha fazla bilgi için API başvuru sayfasının [Boolean değerleri bölümüne dönüştürme ve](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) değiştirme bölümüne <xref:System.Boolean?displayProperty=nameWithType> bakın.
+C# yalnızca türü içeren iki dönüştürme sağlar `bool` . Bunlar, karşılık gelen null yapılabilir `bool?` türe ve türden açık dönüştürmeye örtülü bir dönüşümtür `bool?` . Ancak, .NET, türden veya türünden dönüştürmek için kullanabileceğiniz ek yöntemler sağlar `bool` . Daha fazla bilgi için, API başvurusu sayfasının [Boole değerlerine dönüştürme](/dotnet/api/system.boolean#converting-to-and-from-boolean-values) bölümüne bakın <xref:System.Boolean?displayProperty=nameWithType> .
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
