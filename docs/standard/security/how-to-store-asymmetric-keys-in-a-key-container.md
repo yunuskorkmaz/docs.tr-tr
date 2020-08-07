@@ -16,19 +16,19 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: aa6fad815338cbd6316deca7be0a23286630fa56
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9c04d1ea4d7e7ee46d875b3fa791f3eee2059e52
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556299"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854730"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Asimetrik anahtarları bir anahtar kapsayıcısında depola
 
 Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel bir anahtar depolamanız gerekiyorsa, anahtar kapsayıcısı kullanın. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [makine düzeyi ve Kullanıcı DÜZEYI RSA anahtar kapsayıcılarını anlama](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).
 
 > [!NOTE]
-> Bu makaledeki kod Windows için geçerlidir.
+> Bu makaledeki kod Windows için geçerlidir ve .NET Core 2,2 ve önceki sürümlerinde kullanılamayan özellikleri kullanır. Daha fazla bilgi için bkz. [DotNet/Runtime # 23391](https://github.com/dotnet/runtime/issues/23391).
 
 ## <a name="create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Asimetrik anahtar oluşturma ve anahtar kapsayıcısına kaydetme
 
