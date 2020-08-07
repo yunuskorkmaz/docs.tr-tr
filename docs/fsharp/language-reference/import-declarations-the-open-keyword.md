@@ -1,22 +1,19 @@
 ---
 title: 'İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü'
-description: F# alma bildirimleri ve tam nitelikli bir ad kullanmadan başvuruda bulunabileceğiniz bir modülü veya ad alanını nasıl belirttikleri hakkında bilgi edinin.
+description: 'F # içeri aktarma bildirimleri hakkında bilgi edinin ve öğelerin tam nitelikli bir ad kullanmadan başvurdukları bir modül veya ad alanı belirtmeleri hakkında bilgi edinin.'
 ms.date: 04/04/2019
-ms.openlocfilehash: 0baef27c7dc3181b9da0defb1c793fec04269c09
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 2b88427ca92212fb4a7598447dd1a5e12061093a
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021536"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855094"
 ---
-# <a name="import-declarations-the-open-keyword"></a>İthalat Bildirimleri: `open` Anahtar Kelime
+# <a name="import-declarations-the-open-keyword"></a>İçeri aktarma bildirimleri: `open` anahtar sözcüğü
 
-> [!NOTE]
-> Bu makaledeki API başvuru bağlantıları sizi MSDN'ye götürür.  docs.microsoft.com API başvurusu tamamlanmadı.
+*İçeri aktarma bildirimi* , öğelerini tam nitelikli bir ad kullanmadan başvuralabileceğiniz bir modül veya ad alanını belirtir.
 
-*Alma bildirimi,* tam nitelikli bir ad kullanmadan öğelerine başvuruyapabileceğiniz bir modül veya ad alanı belirtir.
-
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 open module-or-namespace-name
@@ -24,19 +21,22 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Açıklamalar
 
-Kodu, her seferinde tam nitelikli ad alanı veya modül yolunu kullanarak başvurmak, yazması, okunması ve bakımı zor kodlar oluşturabilir. Bunun yerine, sık `open` kullanılan modüller ve ad alanları için anahtar sözcüğü kullanabilirsiniz, böylece bu modülün veya ad alanının bir üyesine başvuruyaptığınızda, tam nitelikli ad yerine adın kısa biçimini kullanabilirsiniz. Bu anahtar kelime C#, `using` `using namespace` Visual C++'daki ve `Imports` Visual Basic'teki anahtar kelimeye benzer.
+> [!NOTE]
+> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
 
-Sağlanan modül veya ad alanı aynı projede veya başvurulan proje veya derlemede olmalıdır. Değilse, projeye bir başvuru ekleyebilir veya `-reference` komut satırı seçeneğini (veya kısaltmasını) `-r`kullanabilirsiniz. Daha fazla bilgi için [Derleyici Seçenekleri'ne](compiler-options.md)bakın.
+Her seferinde tam nitelikli ad alanı veya modül yolunu kullanarak koda başvurmak, yazmak, okumak ve sürdürmek zor olan kod oluşturabilir. Bunun yerine `open` sık kullanılan modüller ve ad alanları için anahtar sözcüğünü kullanarak bu modülün veya ad alanının bir üyesine başvurduğunuzda, tam ad yerine adın kısa formunu kullanabilirsiniz. Bu anahtar sözcük `using` , `using namespace` Visual C++ ve Visual Basic içindeki C# anahtar sözcüğüne benzerdir `Imports` .
 
-Alma bildirimi, adları, çevreleyen ad alanının, modülün veya dosyanın sonuna kadar, bildirimi izleyen kodda kullanılabilir hale getirir.
+Belirtilen modül veya ad alanı aynı projede veya başvurulan bir proje ya da derlemede olmalıdır. Yoksa, projeye bir başvuru ekleyebilir veya `-reference` komut satırı seçeneğini (ya da kısaltmasının `-r` ) kullanabilirsiniz. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).
 
-Birden çok alma bildirimi kullandığınızda, bunlar ayrı satırlarda görünmelidir.
+İçeri aktarma bildirimi, kapsayan ad alanı, modül veya dosyanın sonuna kadar, bildirimi izleyen koddaki adları kullanılabilir hale getirir.
 
-Aşağıdaki kod, kodu basitleştirmek için `open` anahtar kelimenin kullanımını gösterir.
+Çoklu içeri aktarma bildirimleri kullandığınızda, bunlar ayrı satırlarda görünmelidir.
+
+Aşağıdaki kod, `open` kodu basitleştirmek için anahtar sözcüğünün kullanımını gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-F# derleyicisi, aynı ad birden fazla açık modülveya ad alanında oluştuğunda belirsizlikler oluştuğunda bir hata veya uyarı yayar. Belirsizlikler oluştuğunda, F# daha yeni açılan modülü veya ad alanını tercih verir. Örneğin, aşağıdaki kodda, `empty` `Seq.empty`hem `empty` `Seq` modüllerde hem de `List` modüllerde bulunmasına rağmen , anlamına gelir.
+Aynı ad birden fazla açık modülde veya ad alanında gerçekleştiğinde, F # derleyicisi bir hata veya uyarı göstermez. Belirsizlikleri gerçekleştiğinde, F # daha yeni açılan modüle veya ad alanına tercih verir. Örneğin, aşağıdaki kodda hem hem de `empty` `Seq.empty` `empty` `List` modüllerinde bulunur `Seq` .
 
 ```fsharp
 open List
@@ -44,30 +44,30 @@ open Seq
 printfn "%A" empty
 ```
 
-Bu nedenle, modülleri veya aynı adlara `List` `Seq` sahip üyeler içeren ad alanlarını açtığınızda dikkatli olun; bunun yerine, nitelikli adları kullanmayı düşünün. Kodun alma bildirimlerinin sırasına bağlı olduğu herhangi bir durumdan kaçınmalısınız.
+Bu nedenle, ya da gibi özdeş adlara sahip üyeler içeren veya gibi modülleri veya ad alanlarını açtığınızda dikkatli olun `List` `Seq` ; bunun yerine nitelikli adları kullanmayı göz önünde bulundurun. Kodun içeri aktarma bildirimlerinin sırasına bağlı olduğu herhangi bir durumu kullanmaktan kaçının.
 
-## <a name="namespaces-that-are-open-by-default"></a>Varsayılan Olarak Açık Olan Ad Alanları
+## <a name="namespaces-that-are-open-by-default"></a>Varsayılan olarak açık olan ad alanları
 
-Bazı ad alanları F# kodunda o kadar sık kullanılır ki, açık bir alma bildirimine gerek kalmadan örtülü olarak açılırlar. Aşağıdaki tablo, varsayılan olarak açık olan ad alanlarını gösterir.
+Bazı ad alanları, F # kodunda açık bir içeri aktarma bildirimine gerek kalmadan örtük olarak açıldıkları sıklıkla kullanılır. Aşağıdaki tabloda varsayılan olarak açık olan ad alanları gösterilmektedir.
 
 |Ad Alanı|Açıklama|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Dahili türleri için temel F# türü `int` tanımları içerir ve. `float`|
-|`Microsoft.FSharp.Core.Operators`|Gibi temel aritmetik `+` işlemleri `*`içerir ve.|
-|`Microsoft.FSharp.Collections`|Gibi değişmez toplama sınıfları `List` `Array`içerir ve.|
-|`Microsoft.FSharp.Control`|Tembel değerlendirme ve eşzamanlı iş akışları gibi denetim yapıları için türleri içerir.|
-|`Microsoft.FSharp.Text`|İşlev gibi biçimlendirilmiş IO `printf` işlevleri içerir.|
+|`Microsoft.FSharp.Core`|Ve gibi yerleşik türler için temel F # tür tanımlarını içerir `int` `float` .|
+|`Microsoft.FSharp.Core.Operators`|Ve gibi temel aritmetik işlemleri içerir `+` `*` .|
+|`Microsoft.FSharp.Collections`|Ve gibi sabit koleksiyon sınıflarını içerir `List` `Array` .|
+|`Microsoft.FSharp.Control`|Yavaş değerlendirme ve zaman uyumsuz iş akışları gibi denetim yapıları için türler içerir.|
+|`Microsoft.FSharp.Text`|İşlev gibi, biçimlendirilen GÇ işlevleri içerir `printf` .|
 
-## <a name="autoopen-attribute"></a>OtomatikAçık Öznitelik
+## <a name="autoopen-attribute"></a>Oto aç özniteliği
 
-Derleme başvurulduğunda bir ad alanı veya modülü otomatik olarak açmak istiyorsanız özniteliği bir derlemeye uygulayabilirsiniz. `AutoOpen` Ana modül veya `AutoOpen` ad alanı açıldığında bu modülü otomatik olarak açmak için bir modüle özniteliği de uygulayabilirsiniz. Daha fazla bilgi için [Core.AutoOpenAttribute Class'a](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)bakın.
+`AutoOpen`Derlemeye başvuruluyorsa bir ad alanını veya modülü otomatik olarak açmak istiyorsanız, özniteliği bir derlemeye uygulayabilirsiniz. `AutoOpen`Üst modül veya ad alanı açıldığında bu modülü otomatik olarak açmak için bir modüle özniteliği de uygulayabilirsiniz. Daha fazla bilgi için bkz. [Core. oto Openattribute sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d).
 
-## <a name="requirequalifiedaccess-attribute"></a>Kalifiye Erişim Özniteliği Gerektirir
+## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess özniteliği
 
-Bazı modüller, kayıtlar veya birleşim türleri özniteliği belirtebilir. `RequireQualifiedAccess` Bu modüllerin, kayıtların veya birliş öğelerine başvururken, bir alma bildirimi ekleyip eklemediğinize bakılmaksızın nitelikli bir ad kullanmanız gerekir. Bu özniteliği, yaygın olarak kullanılan adları tanımlayan türler üzerinde stratejik olarak kullanırsanız, ad çakışmalarını önlemeye yardımcı olur ve böylece kodu kitaplıktaki değişikliklere karşı daha esnek hale getirebilirsiniz. Daha fazla bilgi için [Core.RequireQualifiedAccessAttribute Class'a](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)bakın.
+Bazı modüller, kayıtlar veya birleşim türleri `RequireQualifiedAccess` özniteliği belirtebilir. Bu modüllerin, kayıtların veya birleşimlerin öğelerine başvurduğunuzda, bir içeri aktarma bildirimi eklenip eklenmeyeceğini fark etmeksizin nitelikli bir ad kullanmanız gerekir. Bu özniteliği yaygın olarak kullanılan adları tanımlayan türler üzerinde stratejik olarak kullanırsanız, ad çakışmalarını önlemeyi ve bu sayede kodu kitaplıklarda değişikliklere daha dayanıklı hale getirmenize yardımcı olursunuz. Daha fazla bilgi için bkz. [Core. RequireQualifiedAccessAttribute sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Dil Referansı](index.md)
+- [F # dil başvurusu](index.md)
 - [Ad Alanları](namespaces.md)
 - [Modüller](modules.md)

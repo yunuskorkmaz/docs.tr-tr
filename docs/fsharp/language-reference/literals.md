@@ -1,40 +1,40 @@
 ---
-title: Sabit değerler
-description: F# Programlama dilindeki değişmez türler hakkında bilgi edinin.
+title: Değişmez Değerler
+description: 'F # programlama dilindeki değişmez türler hakkında bilgi edinin.'
 ms.date: 06/28/2019
-ms.openlocfilehash: 9792a24ac28eb402e35e78574cd6a2bf9526734d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 98d609a1cf0beb00c0dd4d45ea343aaa2280b62e
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041039"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855029"
 ---
-# <a name="literals"></a>Sabit değerler
+# <a name="literals"></a>Değişmez Değerler
+
+Bu makale, F # içinde bir sabit değerin türünü nasıl belirtmeyle ilgili bir tablo sağlar.
 
 > [!NOTE]
-> Bu makaledeki API başvuru bağlantıları sizi MSDN 'ye götürecektir (şimdilik).
-
-Bu konu, içinde F#bir sabit değerin türünü nasıl belirtmeyle ilgili bir tablo sağlar.
+> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
 
 ## <a name="literal-types"></a>Değişmez değer türleri
 
-Aşağıdaki tabloda, içindeki F#değişmez türler gösterilmektedir. Onaltılı gösterimdeki basamakları temsil eden karakterler büyük/küçük harfe duyarlı değildir; türü tanımlayan karakterler büyük/küçük harfe duyarlıdır.
+Aşağıdaki tabloda, F # içinde değişmez türler gösterilmektedir. Onaltılı gösterimdeki basamakları temsil eden karakterler büyük/küçük harfe duyarlı değildir; türü tanımlayan karakterler büyük/küçük harfe duyarlıdır.
 
 |Tür|Açıklama|Sonek veya ön ek|Örnekler|
 |----|-----------|----------------|--------|
-|sbyte|İmzalanan 8 bit tamsayı|y|`86y`<br /><br />`0b00000101y`|
+|sbyte|imzalanan 8 bit tamsayı|y|`86y`<br /><br />`0b00000101y`|
 |byte|işaretsiz 8 bit doğal sayı|uy|`86uy`<br /><br />`0b00000101uy`|
-|Int16|İmzalanan 16 bit tamsayı|s|`86s`|
+|Int16|imzalanan 16 bit tamsayı|s|`86s`|
 |Int16|işaretsiz 16 bit doğal numara|ABD|`86us`|
-|int<br /><br />Int32|İmzalanan 32 bit tamsayı|l veya hiçbiri|`86`<br /><br />`86l`|
+|int<br /><br />Int32|imzalanan 32 bit tamsayı|l veya hiçbiri|`86`<br /><br />`86l`|
 |uint<br /><br />Int32|işaretsiz 32 bit doğal numara|u veya UL|`86u`<br /><br />`86ul`|
 |nativeint|doğal olarak imzalanan bir sayının yerel işaretçisi|n|`123n`|
 |unativeint|işaretsiz doğal sayı olarak yerel işaretçi|alma|`0x00002D3Fun`|
-|Tutulamaz|İmzalanan 64 bit tamsayı|L|`86L`|
+|tutulamaz|imzalanan 64 bit tamsayı|L|`86L`|
 |Int64|işaretsiz 64 bit doğal numara|UL|`86UL`|
 |Single, float32|32-bit kayan noktalı sayı|F veya f|`4.14F` veya `4.14f`|
 |||LF|`0x00000000lf`|
-|float Çift|64-bit kayan noktalı sayı|yok|`4.14` veya `2.3E+32` veya `2.3e+32`|
+|float Çift|64-bit kayan noktalı sayı|yok|`4.14`or `2.3E+32` veya`2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|tamsayı, 64 bitlik gösterimiyle sınırlı değildir|I|`9999999999999999999999999999I`|
 |decimal|sabit bir nokta veya Rational numarası olarak temsil edilen kesirli sayı|A veya d|`0.7833M` veya `0.7833m`|
@@ -42,7 +42,7 @@ Aşağıdaki tabloda, içindeki F#değişmez türler gösterilmektedir. Onaltıl
 |Dize|Unicode dizesi|yok|`"text\n"`<br /><br />veya<br /><br />`@"c:\filename"`<br /><br />veya<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />veya<br /><br />`"string1" + "string2"`<br /><br />Ayrıca bkz. [dizeler](Strings.md).|
 |byte|ASCII karakteri|B|`'a'B`|
 |Byte []|ASCII dizesi|B|`"text"B`|
-|Dize veya Byte []|Tam dize|@ ön eki|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
+|Dize veya Byte []|Tam dize|@ ön eki|`@"\\server\share"`Kodlamaları<br /><br />`@"\\server\share"B`ASCII|
 
 ## <a name="named-literals"></a>Adlandırılmış sabit değerler
 
@@ -69,13 +69,13 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>Açıklamalar
 
-Unicode dizeleri, `\u` ve ardından bir 16 bit onaltılı kod (0000-FFFF) veya UTF-32 kodlamalarının ardından, herhangi bir Unicode 'U temsil eden 32 bitlik bir onaltılık kod tarafından ve `\U` kullanarak belirtebileceğiniz açık kodlamalar içerebilir kod noktası (00000000-0010FFFF).
+Unicode dizeleri, ardından, `\u` `\U` herhangi bir Unicode kod noktasını temsil eden 32 bitlik bir onaltılık kod ile bunu kullanarak belirtebileceğiniz bir 16 bit onaltılı kod (0000-ffff) veya UTF-32 kodlamalarının ardından kullanarak belirtebileceğiniz açık kodlamalar içerebilir.
 
-`|||` dışındaki diğer bit düzeyinde işleçlerin kullanımına izin verilmez.
+Dışındaki diğer bit düzeyinde işleçlerin kullanımına `|||` izin verilmez.
 
 ## <a name="integers-in-other-bases"></a>Diğer tabandaki tamsayılar
 
-İmzalı 32 bitlik tamsayılar, sırasıyla `0x``0o` veya `0b` ön eki kullanılarak onaltılık, sekizlik veya ikili düzende de belirtilebilir.
+İmzalanan 32 bit tamsayılar Ayrıca `0x` , `0o` sırasıyla bir veya öneki kullanılarak onaltılık, sekizlik veya ikili olarak belirtilebilir `0b` .
 
 ```fsharp
 let numbers = (0x9F, 0o77, 0b1010)
@@ -84,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Sayısal sabit değerlerde alt çizgiler
 
-Rakamları alt çizgi karakteri (`_`) ile ayırabilirsiniz.
+Rakamları alt çizgi karakteri () ile ayırabilirsiniz `_` .
 
 ```fsharp
 let value = 0xDEAD_BEEF

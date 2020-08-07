@@ -2,21 +2,20 @@
 title: Sorgu İfadeleri
 description: 'F # programlama dilinde LINQ için sorgu ifadesi desteği hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: bbd15352aa89bd1891b409177921a675784a0227
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419193"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855042"
 ---
-# <a name="query-expressions"></a>Sorgu İfadeleri
-
-> [!NOTE]
-> Bu makaledeki API başvuru bağlantıları sizi MSDN 'ye götürür.  Docs.microsoft.com API başvurusu tamamlanmadı.
+# <a name="query-expressions"></a>Sorgu ifadeleri
 
 Sorgu ifadeleri bir veri kaynağını sorgulamanızı ve verileri istenen bir biçimde yerleştirlamanızı sağlar. Sorgu ifadeleri, F # ' ta LINQ desteği sağlar.
+> [!NOTE]
+> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
 
-## <a name="syntax"></a>Söz dizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 query { expression }
@@ -83,7 +82,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 <table style="width:100%">
   <tr>
-    <th>Operatör</th>
+    <th>İşleç</th>
     <th>Açıklama</th>
   </tr>
   <tr>

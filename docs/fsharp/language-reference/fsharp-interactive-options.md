@@ -2,16 +2,16 @@
 title: Etkileşimli Seçenekler
 description: F# Etkileşimli, fsi.exe tarafından desteklenen komut satırı seçenekleri hakkında bilgi edinin.
 ms.date: 07/22/2020
-ms.openlocfilehash: f9932cac24fad187c332306968fb13981912e80a
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795469"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87855354"
 ---
 # <a name="f-interactive-options"></a>F# Etkileşimli seçenekleri
 
-Bu makalede, F# Etkileşimli tarafından desteklenen komut satırı seçenekleri açıklanmaktadır `fsi.exe` . F# Etkileşimli, F # derleyicisi ile aynı komut satırı seçeneklerinin çoğunu kabul eder, ancak Ayrıca bazı ek seçenekleri de kabul eder.
+Bu makalede, F# Etkileşimli tarafından desteklenen komut satırı seçenekleri açıklanmaktadır `fsi.exe` . F# Etkileşimli, F # derleyicisi ile aynı komut satırı seçeneklerinin birçoğunu kabul eder, ancak aynı zamanda bazı ek seçenekleri de kabul eder.
 
 ## <a name="use-f-interactive-for-scripting"></a>Betik için F# Etkileşimli kullanma
 
@@ -25,13 +25,13 @@ F # betik dosyaları için dosya uzantısı `.fsx` .
 
 ## <a name="table-of-f-interactive-options"></a>F# Etkileşimli seçenekleri tablosu
 
-Aşağıdaki tablo F# Etkileşimli tarafından desteklenen seçenekleri özetler. Bu seçenekleri komut satırında veya Visual Studio IDE aracılığıyla ayarlayabilirsiniz. Bu seçenekleri Visual Studio IDE 'de ayarlamak için, **Araçlar** menüsünü açın, **Seçenekler...**' i seçin, ardından **F # araçları** düğümünü genişletin ve **F# Etkileşimli**' yi seçin.
+Aşağıdaki tablo F# Etkileşimli tarafından desteklenen seçenekleri özetler. Bu seçenekleri komut satırında veya Visual Studio IDE aracılığıyla ayarlayabilirsiniz. Visual Studio IDE 'de bu seçenekleri ayarlamak için, **Araçlar** menüsünü açın, **Seçenekler**' i seçin, **F # araçlar** düğümünü genişletin ve ardından **F# Etkileşimli**' yi seçin.
 
 Listelerin F# Etkileşimli seçenek bağımsız değişkenlerinde göründüğü, liste öğeleri noktalı virgülle ( `;` ) ayrılır.
 
 |Seçenek|Açıklama|
 |------|-----------|
-|**--**|F# Etkileşimli, diğer bağımsız değişkenleri F # programı veya betiğine komut satırı bağımsız değişkeni olarak değerlendirmek için kullanılır. Bu, **fsi. Commandbir**listesini kullanarak koda erişebilirsiniz.|
+|**--**|F# Etkileşimli, diğer bağımsız değişkenleri F # programı veya betiğine komut satırı bağımsız değişkenleri olarak değerlendirmek için kullanılır. Bu, **fsi. Commandbir**listesini kullanarak koda erişebilirsiniz.|
 |**--Checked**[ **+**&#124;**-** ]|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--CodePage: &lt; int&gt;**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--consolecolors**[ **+**&#124;**-** ]|Uyarı ve hata iletilerini renkli olarak verir.|
@@ -56,7 +56,7 @@ Listelerin F# Etkileşimli seçenek bağımsız değişkenlerinde göründüğü
 |**--ReadLine**[ **+**&#124;**-** ]|Etkileşimli modda sekme tamamlamayı etkinleştirin veya devre dışı bırakın.|
 |**--Başvuru: &lt; dosya adı&gt;**<br /><br />**-r: &lt; dosya adı&gt;**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--edilecek çağrılar**[ **+**&#124;**-** ]|Tail Özyinelemeli işlevler için yığın çerçevesinin yeniden kullanılmasını sağlayan tail Il yönergesinin kullanımını etkinleştirin veya devre dışı bırakın. Bu seçenek varsayılan olarak etkindir.|
-|**--targetprofile: &lt; dize&gt;**|Bu derlemenin hedef çerçeve profilini belirtir. Geçerli değerler mscorlib, netcore veya Netstandard ' dır.  Varsayılan olarak mscorlib 'dir.|
+|**--targetprofile: &lt; dize&gt;**|Bu derlemenin hedef çerçeve profilini belirtir. Geçerli değerler `mscorlib` , `netcore` , veya `netstandard` . Varsayılan değer: `mscorlib`.|
 |**--şunu kullanın: &lt; dosya adı&gt;**|Yorumlayıcıya ilk girdi olarak başlangıçta verilen dosyayı kullanmasını söyler.|
 |**--utf8output**|fsc.exe derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--warn: &lt; Uyarı düzeyi&gt;**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|

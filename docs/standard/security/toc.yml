@@ -38,8 +38,6 @@
           href: cryptographic-signatures.md
         - name: Karma Kodlarla Veri Bütünlüğünü Sağlama
           href: ensuring-data-integrity-with-hash-codes.md
-        - name: Şifreleme Düzeni Oluşturma
-          href: creating-a-cryptographic-scheme.md
         - name: 'Nasıl yapılır: XML Öğelerini Simetrik Anahtarlarla Şifreleme'
           href: how-to-encrypt-xml-elements-with-symmetric-keys.md
         - name: 'Nasıl yapılır: XML Öğelerinin Şifresini Simetrik Anahtarlarla Çözme'

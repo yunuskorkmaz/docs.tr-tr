@@ -2,12 +2,12 @@
 title: Düz metin biçimlendirme
 description: 'F # uygulamalarında ve betiklerinizde printf ve diğer düz metin biçimlendirmesini nasıl kullanacağınızı öğrenin.'
 ms.date: 07/22/2020
-ms.openlocfilehash: a0f2c52431be894c4f74dd2940345a518f620589
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795750"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854925"
 ---
 # <a name="plain-text-formatting"></a>Düz metin biçimlendirme
 
@@ -81,15 +81,15 @@ Biçimlerin biçim belirtimleri `printf` `%` biçimi gösteren işaretçilerle d
 | `%f`               | temel kayan nokta türü | `[-]dddd.dddd` `dddd` Bir veya daha fazla ondalık basamak olmak üzere, forma sahip imzalı bir değer olarak biçimlendirilir. Ondalık noktadan önceki basamak sayısı sayının büyüklüğüne ve ondalık ayırıcıdan sonraki basamak sayısı, istenen duyarlığa bağlıdır. |
 | `%g`, `%G` | temel kayan nokta türü |  `%f` `%e` Belirtilen değer ve duyarlık için daha küçük olduğu için, veya biçiminde yazdırılmış bir imzalı değer olarak kullanılarak biçimlendirilir. |
 | `%M` | bir `System.Decimal` değer  |    `"G"`Biçim belirleyicisi kullanılarak biçimlendirilir`System.Decimal.ToString(format)` |
-| `%O` | herhangi bir değer  |   Nesnesi kutulama yaparak ve `System.Object.ToString()` yöntemi ile |
+| `%O` | herhangi bir değer  |   Nesnesi kutulama yaparak ve metodunu çağırarak biçimlendirilir `System.Object.ToString()` |
 | `%A` | herhangi bir değer  |   Varsayılan düzen ayarlarıyla [yapılandırılmış düz metin biçimlendirme](plaintext-formatting.md) kullanılarak biçimlendirildi |
-| `%a` | herhangi bir değer  |   İki bağımsız değişken gerektirir-bir bağlam parametresi ve değeri kabul eden bir biçimlendirme işlevi ve yazdırılacak belirli değer |
-| `%t` | herhangi bir değer  |   Bir bağımsız değişken gerektirir, ya da uygun metni veren veya döndüren bir bağlam parametresini kabul eden bir biçimlendirme işlevi |
+| `%a` | herhangi bir değer  |   İki bağımsız değişken gerektirir: bir bağlam parametresini ve değeri kabul eden bir biçimlendirme işlevi ve yazdırılacak belirli değer |
+| `%t` | herhangi bir değer  |   Bir bağımsız değişken gerektirir: bir bağlam parametresini kabul eden veya uygun metni döndüren bir biçimlendirme işlevi |
 
 Temel tamsayı türleri `byte` ( `System.Byte` ), ( `sbyte` ) `System.SByte` , `int16` () `System.Int16` , `uint16` ( `System.UInt16` ), `int32` `System.Int32` `uint32` `System.UInt32` `int64` `System.Int64` `uint64` `System.UInt64` `nativeint` `System.IntPtr` `unativeint` `System.UIntPtr` (), (), ve ().
 Temel kayan nokta türleri `float` ( `System.Double` ) ve `float32` ( `System.Single` ).
 
-İsteğe bağlı genişlik, sonucun en az genişliğini gösteren bir tamsayıdır. Örneğin, `%6d` en az 6 karakteri dolduracak şekilde bir tamsayı yazdırır, boşluk ile önek olarak. Width ise `*` , karşılık gelen genişliği belirtmek için fazladan bir tamsayı bağımsız değişkeni alınır.
+İsteğe bağlı genişlik, sonucun en az genişliğini gösteren bir tamsayıdır. Örneğin, `%6d` bir tamsayı yazdırır, en az altı karakteri dolduracak şekilde boşluk ile önek olarak. Width ise `*` , karşılık gelen genişliği belirtmek için fazladan bir tamsayı bağımsız değişkeni alınır.
 
 Geçerli bayraklar şunlardır:
 
@@ -161,7 +161,7 @@ Culture 2: 12/31/1999 12:00:00 AM
 
 ### <a name="structured-values"></a>Yapılandırılmış değerler
 
-Belirteci kullanarak düz metin biçimlendirilirken `%A` , blok girintileme F # listeleri ve tanımlama grupları için kullanılır. , Önceki örnekte gösterilir.
+Belirteci kullanarak düz metin biçimlendirilirken `%A` , blok girintileme F # listeleri ve tanımlama grupları için kullanılır. Bu, önceki örnekte gösterilmiştir.
 Birden çok boyutlu diziler de dahil olmak üzere dizilerin yapısı da kullanılır.  Tek boyutlu diziler sözdizimi ile gösterilir `[| ... |]` . Örneğin,
 
 ```fsharp
@@ -205,7 +205,7 @@ printfn "%50A" [| for i in 1 .. 5 -> (i, i*i) |]
 ```fsharp
 printfn "%0A" [| for i in 1 .. 5 -> (i, i*i) |]
 
-printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef |]
+printfn "%0A" [| for i in 1 .. 5 -> "abc\ndef" |]
 ```
 
 üretmez
@@ -318,7 +318,7 @@ printfn "%A" r
 
 `Value is not created`Değer henüz değerlendirilmemişse, yavaş değerler veya eşit metin olarak yazdırılır.
 
-`null`Değer statik türü, izin verilen bir temsil olan bir birleşim türü olarak belirlenmediği sürece null değerler yazdırılır `null` .
+`null`Değer statik türünün, `null` izin verilen bir temsil olduğu bir birleşim türü olarak belirlenmediği sürece null değerler yazdırılır.
 
 F # işlev değerleri, dahili olarak oluşturulan kapanış adı olarak yazdırılır (örneğin,) `<fun:it@43-7>` .
 

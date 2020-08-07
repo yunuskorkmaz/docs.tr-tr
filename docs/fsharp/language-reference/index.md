@@ -2,20 +2,20 @@
 title: Dil Başvurusu
 description: 'Bu başvurudan dil belirteçleri, kavramlar, türler, ifadeler ve derleyicinin desteklediği yapı konularına F # dil özelliği bilgilerini bulun.'
 ms.date: 05/16/2016
-ms.openlocfilehash: e8a6c7ef83c4e2d292cc6a12a59e420708240a39
-ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+ms.openlocfilehash: 43272c6684c8fc763e8f99611901f35695f48981
+ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87795482"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87854964"
 ---
 # <a name="f-language-reference"></a>F# Dili Başvurusu
 
-Bu bölüm, .NET hedefleme bir multi-kip programlama dili olan F # diline bir başvurudur. F # dili işlevsel, nesne yönelimli ve kesinlik temelli programlama modellerini destekler.
+Bu bölüm, .NET 'i hedefleyen bir multi-kip programlama dili olan F # diline yönelik bir başvurudur. F # dili işlevsel, nesne yönelimli ve kesinlik temelli programlama modellerini destekler.
 
 ## <a name="f-tokens"></a>F # belirteçleri
 
-Aşağıdaki tabloda, F # içinde belirteçler olarak kullanılan anahtar sözcükler, semboller ve sabit değerler tabloları sağlayan başvuru konuları gösterilmektedir.
+Aşağıdaki tabloda, F # içinde belirteç olarak kullanılan anahtar sözcükler, semboller ve sabit değerler tabloları sağlayan başvuru makaleleri gösterilmektedir.
 
 |Başlık|Açıklama|
 |-----|-----------|
@@ -31,7 +31,7 @@ Aşağıdaki tabloda, dil kavramlarını tanımlayan kullanılabilir başvuru ko
 |-----|-----------|
 |[İşlevler](./functions/index.md)|İşlevler, herhangi bir programlama dilinde program yürütmenin temel birimidir. Diğer dillerde olduğu gibi, bir F # işlevinin adı vardır, parametreleri olabilir ve bağımsız değişkenler alabilir ve bir gövdeye sahip olabilir. F #, işlevleri değer olarak kabul etmek, ifadelerde adlandırılmamış işlevleri kullanmak, yeni işlevler, curried işlevleri ve işlev bağımsız değişkenlerinin kısmi uygulaması aracılığıyla işlev tanımları oluşturmak için işlevlerin oluşturulması gibi işlevsel programlama yapılarını da destekler.|
 |[F# Türleri](fsharp-types.md)|F # içinde kullanılan türleri ve F # türlerinin nasıl adlandırıldığını ve açıklandığını açıklar.|
-|[Tür Çıkarma](type-inference.md)|F # derleyicisinin değer, değişken, parametre ve dönüş değeri türlerini nasıl kullandığını açıklar.|
+|[Tür Çıkarma](type-inference.md)|F # derleyicisinin değer türlerini, değişkenleri, parametreleri ve dönüş değerlerini nasıl kullandığını açıklar.|
 |[Otomatik Genelleştirme](./generics/automatic-generalization.md)|F # içinde genel yapıları açıklar.|
 |[Devralma](inheritance.md)|Nesne odaklı programlamada "a-a" ilişkisini veya alt yazmayı modellemek için kullanılan devralmayı açıklar.|
 |[Üyeler](./members/index.md)|F # nesne türlerinin üyelerini açıklar.|
@@ -39,7 +39,7 @@ Aşağıdaki tabloda, dil kavramlarını tanımlayan kullanılabilir başvuru ko
 |[İşleç aşırı yüklemesi](operator-overloading.md)|Bir sınıf veya kayıt türünde ve genel düzeyde aritmetik işleçlerin nasıl aşırı yükleneceğini açıklar.|
 |[Atama ve Dönüştürmeler](casting-and-conversions.md)|F # içinde tür dönüştürmeleri için desteği açıklar.|
 |[Access Control](access-control.md)|F # ' da erişim denetimini açıklar. Erişim denetimi, istemcilerin türler, Yöntemler, işlevler vb. gibi belirli program öğelerini kullanabildiklerini bildiren anlamına gelir.|
-|[Model eşleştirme](pattern-matching.md)|Verileri bir desenle karşılaştırmak, verileri yapısal parçalara çıkarmak veya verileri çeşitli yollarla çıkarmak için F # dilinde kullanılan giriş verilerini dönüştürme kuralları olan desenleri açıklar.|
+|[Model eşleştirme](pattern-matching.md)|Giriş verilerini dönüştürme kuralları olan ve F # dili boyunca kullanılan desenleri açıklar. Verileri bir düzeniyle karşılaştırabilir, verileri yapısal parçalar halinde çıkarabilir veya verileri çeşitli yollarla ayıklayabilirsiniz.|
 |[Etkin Desenler](active-patterns.md)|Etkin desenleri açıklar. Etkin desenler, giriş verilerini bölümlendirilen adlandırılmış bölümler tanımlamanızı sağlar. Her bölüm için özelleştirilmiş bir şekilde verileri ayırmak için etkin desenleri kullanabilirsiniz.|
 |[Onaylamalar](assertions.md)|`assert`Bir ifadeyi test etmek için kullanabileceğiniz bir hata ayıklama özelliği olan ifadeyi açıklar. Hata ayıklama modunda hata oluştuğunda bir onaylama işlemi bir sistem hatası iletişim kutusu oluşturur.|
 |[Özel Durum İşleme](./exception-handling/index.md)|F # dilinde özel durum işleme desteği hakkında bilgi içerir.|
@@ -49,7 +49,7 @@ Aşağıdaki tabloda, dil kavramlarını tanımlayan kullanılabilir başvuru ko
 |[Modüller](modules.md)|Modüller açıklanmaktadır. F # modülü, f # programında değerler, türler ve işlev değerleri gibi bir F # kodu gruplandırmasıdır. Modüllerde kod gruplandırma, ilgili kodu birlikte tutmaya yardımcı olur ve programınızda ad çakışmalarını önlemeye yardımcı olur.|
 |[İçeri aktarma bildirimleri: `open` anahtar sözcüğü](import-declarations-the-open-keyword.md)|Nasıl `open` çalıştığını açıklar. İçeri aktarma bildirimi, öğelerini tam nitelikli bir ad kullanmadan başvuralabileceğiniz bir modül veya ad alanını belirtir.|
 |[İmzalar](signature-files.md)|İmzaları ve imza dosyalarını açıklar. İmza dosyası türler, ad alanları ve modüller gibi bir F # program öğesi kümesinin genel imzaları hakkında bilgiler içerir. Bu program öğelerinin erişilebilirliğini belirtmek için kullanılabilir.|
-|[XML belgeleri](xml-documentation.md)|Üçlü eğik çizgi açıklamaları olarak da bilinen XML belgesi açıklamaları için belge dosyası oluşturma desteğini açıklar. F # ' daki kod açıklamalarından, diğer .NET dillerinde olduğu gibi belgeler üretebilirsiniz.|
+|[XML belgeleri](xml-documentation.md)|Üçlü eğik çizgi açıklamaları olarak da bilinen XML belgesi açıklamaları için belge dosyası oluşturma desteğini açıklar. F # içindeki kod açıklamalarından farklı .NET dillerinde belgeler oluşturabilirsiniz.|
 |[Ayrıntılı Sözdizimi](verbose-syntax.md)|Hafif sözdizimi etkin olmadığında F # yapıları için sözdizimi açıklar. Ayrıntılı sözdizimi, `#light "off"` kod dosyasının en üstündeki yönergeyle belirtilir.|
 |[Düz metin biçimlendirme](plaintext-formatting.md)|F # uygulamalarında sprintf ve diğer düz metin biçimlendirmelerini nasıl kullanacağınızı öğrenin.|
 
@@ -79,7 +79,7 @@ Aşağıdaki tabloda, F # dili tarafından desteklenen türleri tanımlayan kull
 |[Arabirimler](interfaces.md)|Diğer sınıfların uygulayan ilgili üye kümelerini belirten arabirimlerini açıklar.|
 |[Soyut sınıflar](abstract-classes.md)|Uygulamaların türetilmiş sınıflar tarafından sağlanabilmesi için bazı veya tüm üyeleri uygulanmayan sınıflar olan soyut sınıfları açıklar.|
 |[Tür Genişletmeleri](type-extensions.md)|Daha önce tanımlanmış bir nesne türüne yeni üyeler eklemenize olanak sağlayan tür uzantılarını açıklar.|
-|[Esnek Türler](flexible-types.md)|Esnek türleri açıklar. Esnek tür ek açıklaması, bir parametre, değişken veya değerin belirtilen tür ile uyumlu bir tür olduğunu belirtir; burada uyumluluk, nesne odaklı sınıfların veya arabirimlerin bulunduğu konuma göre belirlenir.|
+|[Esnek Türler](flexible-types.md)|Esnek türleri açıklar. Esnek tür ek açıklaması, bir parametre, değişken veya değerin belirtilen tür ile uyumlu bir tür olduğunu belirtir ve uyumluluk, nesne odaklı sınıfların veya arabirimlerin bulunduğu konuma göre belirlenir.|
 |[Temsilciler](delegates.md)|Bir işlev çağrısını nesne olarak temsil eden temsilcileri açıklar.|
 |[Ölçü birimleri](units-of-measure.md)|Ölçü birimlerini açıklar. F # içindeki kayan nokta değerleri, genellikle uzunluğu, hacmi, kütle, vb. belirtmek için kullanılan ilişkili ölçü birimlerine sahip olabilir.|
 |[Tür Sağlayıcıları](../tutorials/type-providers/index.md)|Türü açıklar ve, veritabanlarına ve Web hizmetlerine erişmek için yerleşik tür sağlayıcılarını kullanma hakkındaki izlenecek yollara bağlantılar sağlar.|
@@ -97,7 +97,7 @@ Aşağıdaki tabloda, F # ifadelerini tanımlayan konular listelenmektedir.
 |[Döngüler: `while...do` ifade](loops-while-do-expression.md)|`while...do`Belirtilen test koşulu doğru olduğunda yinelemeli yürütmeyi (döngü) gerçekleştirmek için kullanılan ifadeyi açıklar.|
 |[Nesne İfadeleri](object-expressions.md)|Mevcut bir temel türü, arabirimi veya arabirim kümesini temel alan dinamik olarak oluşturulan, anonim nesne türünün yeni örneklerini oluşturan ifadeler olan nesne ifadelerini açıklar.|
 |[Gecikmeli İfadeler](lazy-expressions.md)|Hemen değerlendirilmediği hesaplamalar olan yavaş ifadeleri açıklar, ancak bunun yerine sonuç gerçekten gerektiğinde değerlendirilir.|
-|[Hesaplama İfadeleri](computation-expressions.md)|Denetim akışı yapıları ve bağlamaları kullanılarak sıralanmakta ve birleştirilebilir hesaplamalar yazmak için kullanışlı bir sözdizimi sağlayan F # içindeki hesaplama ifadelerini açıklar. Bunlar, işlevsel programlardaki verileri, denetimi ve yan etkileri yönetmek için kullanılabilen bir işlevsel programlama özelliği olan *monadları*için uygun bir sözdizimi sağlamak üzere kullanılabilir. Bir tür hesaplama ifadesi, zaman uyumsuz iş akışı, zaman uyumsuz ve paralel hesaplamalar için destek sağlar. Daha fazla bilgi için bkz. [zaman uyumsuz Iş akışları](asynchronous-workflows.md).|
+|[Hesaplama İfadeleri](computation-expressions.md)|Denetim akışı yapıları ve bağlamaları kullanılarak sıralanmakta ve birleştirilebilir hesaplamalar yazmak için kullanışlı bir sözdizimi sağlayan F # içindeki hesaplama ifadelerini açıklar. Bunlar, işlevsel programlardaki verileri, denetimi ve yan etkileri yönetmek için kullanılabilecek bir işlevsel programlama özelliği olan *monadları*için uygun bir sözdizimi sağlamak üzere kullanılabilir. Bir tür hesaplama ifadesi, zaman uyumsuz iş akışı, zaman uyumsuz ve paralel hesaplamalar için destek sağlar. Daha fazla bilgi için bkz. [zaman uyumsuz Iş akışları](asynchronous-workflows.md).|
 |[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Zaman uyumsuz kodu, doğal olarak zaman uyumlu olarak yazacağınız bir şekilde yazmanıza imkan tanıyan bir dil özelliği olan zaman uyumsuz iş akışlarını açıklar.|
 |[Kod Tırnak İşaretleri](code-quotations.md)|Programlama yoluyla F # kod ifadelerini oluşturup çalışmanıza olanak tanıyan bir dil özelliği olan kod tekliflerini açıklar.|
 |[Sorgu İfadeleri](query-expressions.md)|F # için LINQ uygulayan ve bir veri kaynağına veya sıralanabilir koleksiyona karşı sorgular yazmanıza olanak tanıyan bir dil özelliği olan sorgu ifadelerini açıklar.|
