@@ -1,31 +1,89 @@
 ---
-title: Kapsayıcılar ve Docker’a Giriş
-description: Docker kullanmanın temel yararları hakkında üst düzey bir genel bakış elde edin.
-ms.date: 02/15/2019
-ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
+description: Docker ve Microsoft platformu ve araçları ile Kapsayıcılı uygulamalar geliştirmeye ve dağıtmaya yönelik geliştirme ve dağıtım sürecine ileri düzey bir genel bakış alın.
+ms.date: 07/30/2020
+ms.openlocfilehash: d8055315b25f73d7b0b355026ab6b2c4767f9d89
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73738182"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915163"
 ---
-# <a name="introduction-to-containers-and-docker"></a><span data-ttu-id="7cf46-103">Konteynerlere giriş ve Docker</span><span class="sxs-lookup"><span data-stu-id="7cf46-103">Introduction to containers and Docker</span></span>
+# <a name="containerized-docker-application-lifecycle-with-microsoft-platform-and-tools"></a><span data-ttu-id="2b321-103">Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü</span><span class="sxs-lookup"><span data-stu-id="2b321-103">Containerized Docker Application Lifecycle with Microsoft Platform and Tools</span></span>
 
-<span data-ttu-id="7cf46-104">*Kapsayıcılaştırma, bir uygulamanın veya hizmetin, bağımlılıklarının ve yapılandırmasının (dağıtım bildirimi dosyaları olarak özetlenmiş) kapsayıcı görüntüsü olarak birlikte paketlendiği yazılım geliştirme yaklaşımıdır. Daha sonra kapsayıcılı uygulamayı bir birim olarak sınayabilir ve kapsayıcı görüntü örneği olarak ana bilgisayar işletim sistemine (OS) dağıtabilirsiniz.*</span><span class="sxs-lookup"><span data-stu-id="7cf46-104">*Containerization is an approach to software development in which an application or service, its dependencies, and its configuration (abstracted as deployment manifest files) are packaged together as a container image. You then can test the containerized application as a unit and deploy it as a container image instance to the host operating system (OS).*</span></span>
+![Kitap kapağı](./media/devops-book-cover-large-we.png)
 
-<span data-ttu-id="7cf46-105">Nakliye konteynerleri malların içindeki kargodan bağımsız olarak gemi, tren veya kamyonla taşınmasına izin verdiği gibi, yazılım konteynerleri de farklı kod ve bağımlılıklar içerebilen standart bir yazılım dağıtım birimi görevi görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7cf46-105">Just as shipping containers allow goods to be transported by ship, train, or truck regardless of the cargo inside, software containers act as a standard unit of software deployment that can contain different code and dependencies.</span></span> <span data-ttu-id="7cf46-106">Yazılımı bu şekilde kapsayıcıhale getirme, geliştiricilerin ve BT uzmanlarının bunları çok az veya hiç değişiklik olmayan ortamlar arasında dağıtmasına olanak tanır.</span><span class="sxs-lookup"><span data-stu-id="7cf46-106">Containerizing software this way enables developers and IT professionals to deploy them across environments with little or no modification.</span></span>
+<span data-ttu-id="2b321-105">**Sürüm v 3.1** -ASP.NET Core 3,1 ' ye güncelleştirildi</span><span class="sxs-lookup"><span data-stu-id="2b321-105">**EDITION v3.1** - Updated to ASP.NET Core 3.1</span></span>
 
-<span data-ttu-id="7cf46-107">Kapsayıcılar, paylaşılan bir işletim sistemi üzerinde uygulamaları birbirinden yalıtlar.</span><span class="sxs-lookup"><span data-stu-id="7cf46-107">Containers also isolate applications from each other on a shared OS.</span></span> <span data-ttu-id="7cf46-108">Kapsayıcılaştırılmış uygulamalar, işletim sistemi (Linux veya Windows) üzerinde çalışan bir kapsayıcı ana bilgisayar üzerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="7cf46-108">Containerized applications run on top of a container host that in turn runs on the OS (Linux or Windows).</span></span> <span data-ttu-id="7cf46-109">Bu nedenle kaplar sanal makine (VM) görüntülerden çok daha küçük bir ayak izine sahiptir.</span><span class="sxs-lookup"><span data-stu-id="7cf46-109">Containers therefore have a much smaller footprint than virtual machine (VM) images.</span></span>
+<span data-ttu-id="2b321-106">Bu kılavuz, Microsoft platformu ve araçları kullanılarak Docker ile Kapsayıcılı ASP.NET Core uygulamalar geliştirmeye ve dağıtmaya yönelik genel bir genel bakıştır.</span><span class="sxs-lookup"><span data-stu-id="2b321-106">This guide is a general overview for developing and deploying containerized ASP.NET Core applications with Docker, using the Microsoft platform and tools.</span></span> <span data-ttu-id="2b321-107">Kılavuz, CI/CD işlem hatlarının yanı sıra Azure Container Registry (ACR) ve Azure Kubernetes Hizmetleri AKS ' i dağıtmak için Azure DevOps 'a yönelik yüksek düzeyde bir giriş içerir.</span><span class="sxs-lookup"><span data-stu-id="2b321-107">The guide includes a high-level introduction to Azure DevOps, for implementing CI/CD pipelines, as well as Azure Container Registry (ACR), and Azure Kubernetes Services AKS for deployment.</span></span>
 
-<span data-ttu-id="7cf46-110">Her kapsayıcı, Şekil 1-1'de gösterildiği gibi bir web uygulamasını veya hizmeti nin tamamını çalıştırabilir.</span><span class="sxs-lookup"><span data-stu-id="7cf46-110">Each container can run a whole web application or a service, as shown in Figure 1-1.</span></span> <span data-ttu-id="7cf46-111">Bu örnekte, Docker ana bilgisayar bir kapsayıcı ana bilgisayardır ve App1, App2, Svc1 ve Svc2 kapsayıcı uygulamalar veya hizmetlerdir.</span><span class="sxs-lookup"><span data-stu-id="7cf46-111">In this example, Docker host is a container host, and App1, App2, Svc1, and Svc2 are containerized applications or services.</span></span>
+<span data-ttu-id="2b321-108">Düşük düzey, geliştirmeyle ilgili ayrıntılar için [.net mikro hizmetleri: Kapsayıcılı .NET uygulamaları](https://docs.microsoft.com/dotnet/architecture/microservices/) Kılavuzu ve BT ile ilgili başvuru uygulaması [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers)için mimari görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="2b321-108">For low-level, development-related details you can see the [.NET Microservices: Architecture for Containerized .NET Applications](https://docs.microsoft.com/dotnet/architecture/microservices/) guide and it related reference application [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers).</span></span>
 
-![VM veya sunucuda çalışan dört kapsayıcıyı gösteren diyagram.](./media/index/multiple-containers-single-host.png)
+## <a name="send-us-your-feedback"></a><span data-ttu-id="2b321-109">Görüşlerinizi bize gönderin!</span><span class="sxs-lookup"><span data-stu-id="2b321-109">Send us your feedback!</span></span>
 
-<span data-ttu-id="7cf46-113">**Şekil 1-1**.</span><span class="sxs-lookup"><span data-stu-id="7cf46-113">**Figure 1-1**.</span></span> <span data-ttu-id="7cf46-114">Konteyner ana bilgisayarda çalışan birden çok kapsayıcı</span><span class="sxs-lookup"><span data-stu-id="7cf46-114">Multiple containers running on a container host</span></span>
+<span data-ttu-id="2b321-110">.NET 'teki Kapsayıcılı uygulamaların ve mikro hizmetlerin mimarisini anlamanıza yardımcı olması için bu kılavuzu yazdık.</span><span class="sxs-lookup"><span data-stu-id="2b321-110">We wrote this guide to help you understand the architecture of containerized applications and microservices in .NET.</span></span> <span data-ttu-id="2b321-111">Kılavuz ve ilgili başvuru uygulaması geliştireceğiz, bu nedenle geri bildirimlerinize hoş geldiniz!</span><span class="sxs-lookup"><span data-stu-id="2b321-111">The guide and related reference application will be evolving, so we welcome your feedback!</span></span> <span data-ttu-id="2b321-112">Bu kılavuzun nasıl iyileştirilen hakkında açıklamalara sahipseniz, konusunda geri bildirimde bulunun <https://aka.ms/ebookfeedback> .</span><span class="sxs-lookup"><span data-stu-id="2b321-112">If you have comments about how this guide can be improved, submit feedback at <https://aka.ms/ebookfeedback>.</span></span>
 
-<span data-ttu-id="7cf46-115">Konteynerleştirme den elde edebilirsiniz başka bir yararı ölçeklenebilirlik olduğunu.</span><span class="sxs-lookup"><span data-stu-id="7cf46-115">Another benefit you can derive from containerization is scalability.</span></span> <span data-ttu-id="7cf46-116">Kısa vadeli görevler için yeni kapsayıcılar oluşturarak hızla ölçeklendirebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7cf46-116">You can scale out quickly by creating new containers for short-term tasks.</span></span> <span data-ttu-id="7cf46-117">Uygulama açısından bakıldığında, bir görüntüyü anlık olarak (kapsayıcı oluşturma) bir hizmet veya web uygulaması gibi bir işlemi anında oluşturmaya benzer.</span><span class="sxs-lookup"><span data-stu-id="7cf46-117">From an application point of view, instantiating an image (creating a container) is similar to instantiating a process like a service or web app.</span></span> <span data-ttu-id="7cf46-118">Ancak güvenilirlik için, birden çok ana bilgisayar sunucusunda aynı görüntünün birden çok örneğini çalıştırdığınızda, genellikle her kapsayıcının (resim örneği) farklı bir ana bilgisayar sunucusunda veya Farklı hata etki alanlarında VM'de çalışmasını istersiniz.</span><span class="sxs-lookup"><span data-stu-id="7cf46-118">For reliability, however, when you run multiple instances of the same image across multiple host servers, you typically want each container (image instance) to run in a different host server or VM in different fault domains.</span></span>
+## <a name="credits"></a><span data-ttu-id="2b321-113">Krediler</span><span class="sxs-lookup"><span data-stu-id="2b321-113">Credits</span></span>
 
-<span data-ttu-id="7cf46-119">Kısacası, kapsayıcılar tüm uygulama yaşam döngüsü iş akışı boyunca yalıtım, taşınabilirlik, çeviklik, ölçeklenebilirlik ve denetim avantajları sunar.</span><span class="sxs-lookup"><span data-stu-id="7cf46-119">In short, containers offer the benefits of isolation, portability, agility, scalability, and control across the entire application lifecycle workflow.</span></span> <span data-ttu-id="7cf46-120">En önemli yararı Dev ve Ops arasında sağlanan çevre yalıtımı.</span><span class="sxs-lookup"><span data-stu-id="7cf46-120">The most important benefit is the environment isolation provided between Dev and Ops.</span></span>
+<span data-ttu-id="2b321-114">Yazar:</span><span class="sxs-lookup"><span data-stu-id="2b321-114">Author:</span></span>
+
+> <span data-ttu-id="2b321-115">**Cesar de La Torre**, SR. PM, .net ürün ekibi, Microsoft Corp.</span><span class="sxs-lookup"><span data-stu-id="2b321-115">**Cesar de la Torre**, Sr. PM, .NET product team, Microsoft Corp.</span></span>
+
+<span data-ttu-id="2b321-116">Alım Düzenleyicisi:</span><span class="sxs-lookup"><span data-stu-id="2b321-116">Acquisitions Editor:</span></span>
+
+> <span data-ttu-id="2b321-117">**Ida Patrick**</span><span class="sxs-lookup"><span data-stu-id="2b321-117">**Janine Patrick**</span></span>
+
+<span data-ttu-id="2b321-118">Geliştirme Düzenleyicisi:</span><span class="sxs-lookup"><span data-stu-id="2b321-118">Developmental Editor:</span></span>
+
+> <span data-ttu-id="2b321-119">**Bob Russatı**, Microsoft 'Ta çözüm uzmanı</span><span class="sxs-lookup"><span data-stu-id="2b321-119">**Bob Russell**, Solutions Professional at Microsoft</span></span>
+>
+> [<span data-ttu-id="2b321-120">**Sekizlik yayımlama, Inc.**</span><span class="sxs-lookup"><span data-stu-id="2b321-120">**Octal Publishing, Inc.**</span></span>](http://www.octalpub.com/)
+
+<span data-ttu-id="2b321-121">Düzenleme üretimi:</span><span class="sxs-lookup"><span data-stu-id="2b321-121">Editorial Production:</span></span>
+
+> [<span data-ttu-id="2b321-122">Dianne Russati</span><span class="sxs-lookup"><span data-stu-id="2b321-122">Dianne Russell</span></span>](http://www.octalpub.com/)
+>
+> <span data-ttu-id="2b321-123">**Sekizlik yayımlama, Inc.**</span><span class="sxs-lookup"><span data-stu-id="2b321-123">**Octal Publishing, Inc.**</span></span>
+
+<span data-ttu-id="2b321-124">Copyeditor:</span><span class="sxs-lookup"><span data-stu-id="2b321-124">Copyeditor:</span></span>
+
+> <span data-ttu-id="2b321-125">**Bob Russatı**, Microsoft 'Ta çözüm uzmanı</span><span class="sxs-lookup"><span data-stu-id="2b321-125">**Bob Russell**, Solutions Professional at Microsoft</span></span>
+
+<span data-ttu-id="2b321-126">Katılımcılar ve gözden geçirenler:</span><span class="sxs-lookup"><span data-stu-id="2b321-126">Participants and reviewers:</span></span>
+
+> <span data-ttu-id="2b321-127">**Hayvan anıl**, SR. Program Yöneticisi, .NET ekibi, Microsoft</span><span class="sxs-lookup"><span data-stu-id="2b321-127">**Nish Anil**, Sr. Program Manager, .NET team, Microsoft</span></span>
+>
+> <span data-ttu-id="2b321-128">**MIGUEL Veloso**, düz kavramlarda yazılım geliştirme mühendisi</span><span class="sxs-lookup"><span data-stu-id="2b321-128">**Miguel Veloso**, Software Development Engineer at Plain Concepts</span></span>
+>
+> <span data-ttu-id="2b321-129">**Sumit Ghosh**, sorumlu danışman Neudesic</span><span class="sxs-lookup"><span data-stu-id="2b321-129">**Sumit Ghosh**, Principal Consultant at Neudesic</span></span>
+
+## <a name="copyright"></a><span data-ttu-id="2b321-130">Telif Hakkı</span><span class="sxs-lookup"><span data-stu-id="2b321-130">Copyright</span></span>
+
+<span data-ttu-id="2b321-131">YAYIMLAYAN</span><span class="sxs-lookup"><span data-stu-id="2b321-131">PUBLISHED BY</span></span>
+
+<span data-ttu-id="2b321-132">Microsoft Geliştirici bölümü, .NET ve Visual Studio ürün ekipleri</span><span class="sxs-lookup"><span data-stu-id="2b321-132">Microsoft Developer Division, .NET and Visual Studio product teams</span></span>
+
+<span data-ttu-id="2b321-133">Microsoft Corporation 'ın bir bölümü</span><span class="sxs-lookup"><span data-stu-id="2b321-133">A division of Microsoft Corporation</span></span>
+
+<span data-ttu-id="2b321-134">One Microsoft Way</span><span class="sxs-lookup"><span data-stu-id="2b321-134">One Microsoft Way</span></span>
+
+<span data-ttu-id="2b321-135">Redmond, Washington 98052-6399</span><span class="sxs-lookup"><span data-stu-id="2b321-135">Redmond, Washington 98052-6399</span></span>
+
+<span data-ttu-id="2b321-136">Telif hakkı &copy; 2020 Microsoft Corporation</span><span class="sxs-lookup"><span data-stu-id="2b321-136">Copyright &copy; 2020 by Microsoft Corporation</span></span>
+
+<span data-ttu-id="2b321-137">All rights reserved.</span><span class="sxs-lookup"><span data-stu-id="2b321-137">All rights reserved.</span></span> <span data-ttu-id="2b321-138">Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.</span><span class="sxs-lookup"><span data-stu-id="2b321-138">No part of the contents of this book may be reproduced or transmitted in any form or by any means without the written permission of the publisher.</span></span>
+
+<span data-ttu-id="2b321-139">Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder.</span><span class="sxs-lookup"><span data-stu-id="2b321-139">This book is provided "as-is" and expresses the author's views and opinions.</span></span> <span data-ttu-id="2b321-140">Bu kitapta ifade edilen görünümler, eklentiler ve bilgiler, URL ve diğer Internet Web sitesi başvuruları da dahil olmak üzere bildirimde bulunmaksızın değiştirilebilir.</span><span class="sxs-lookup"><span data-stu-id="2b321-140">The views, opinions and information expressed in this book, including URL and other Internet website references, may change without notice.</span></span>
+
+<span data-ttu-id="2b321-141">Burada tarif edilen bazı örnekler yalnızca açıklama için sağlanmıştır ve kurgusaldır.</span><span class="sxs-lookup"><span data-stu-id="2b321-141">Some examples depicted herein are provided for illustration only and are fictitious.</span></span> <span data-ttu-id="2b321-142">Gerçek bir ilişki veya bağlantı amaçlanmamıştır veya böyle bir bağlantı olduğu sonucuna varılmamalıdır.</span><span class="sxs-lookup"><span data-stu-id="2b321-142">No real association or connection is intended or should be inferred.</span></span>
+
+<span data-ttu-id="2b321-143">Microsoft ve <https://www.microsoft.com> "ticari markalar" Web sayfasında listelenen ticari markalar, Microsoft şirketler grubunun ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="2b321-143">Microsoft and the trademarks listed at <https://www.microsoft.com> on the "Trademarks" webpage are trademarks of the Microsoft group of companies.</span></span>
+
+<span data-ttu-id="2b321-144">Mac ve macOS, Apple Inc. ' in ticari markalarıdır.</span><span class="sxs-lookup"><span data-stu-id="2b321-144">Mac and macOS are trademarks of Apple Inc.</span></span>
+
+<span data-ttu-id="2b321-145">Docker balina logosu,, izin tarafından kullanılan Docker, Inc. ' in tescilli ticari markasıdır.</span><span class="sxs-lookup"><span data-stu-id="2b321-145">The Docker whale logo is a registered trademark of Docker, Inc. Used by permission.</span></span>
+
+<span data-ttu-id="2b321-146">Diğer tüm işaretler ve amblemler kendi sahiplerinin mülkiyetindedir.</span><span class="sxs-lookup"><span data-stu-id="2b321-146">All other marks and logos are property of their respective owners.</span></span>
 
 >[!div class="step-by-step"]
->[<span data-ttu-id="7cf46-121">Sonraki</span><span class="sxs-lookup"><span data-stu-id="7cf46-121">Next</span></span>](what-is-docker.md)
+>[<span data-ttu-id="2b321-147">Sonraki</span><span class="sxs-lookup"><span data-stu-id="2b321-147">Next</span></span>](introduction-to-containers-and-docker.md)

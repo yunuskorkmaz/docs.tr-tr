@@ -1,42 +1,42 @@
 ---
 title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
-ms.date: 02/15/2019
-ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 1a973407d59484899f99fb6e326b8d7c8e97079b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70295780"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915215"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a><span data-ttu-id="9c949-103">Azure DevOps Services içinde Kapsayıcılar üzerindeki bir .NET Core 2.0 uygulaması için CI/CD işlem hatları oluşturma ve bir Kubernetes kümesine dağıtma</span><span class="sxs-lookup"><span data-stu-id="9c949-103">Creating CI/CD pipelines in Azure DevOps Services for a .NET Core 2.0 application on Containers and deploying to a Kubernetes cluster</span></span>
+# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a><span data-ttu-id="7df02-103">Kapsayıcılar üzerinde bir .NET Core uygulaması ve bir Kubernetes kümesine dağıtım için Azure DevOps Services CI/CD işlem hatları oluşturma</span><span class="sxs-lookup"><span data-stu-id="7df02-103">Creating CI/CD pipelines in Azure DevOps Services for a .NET Core application on Containers and deploying to a Kubernetes cluster</span></span>
 
-<span data-ttu-id="9c949-104">Şekil 5-12'de kod yönetimi, kod derleme, Docker görüntüleri oluşturma, Docker görüntüleri ve son olarak Azure'daki bir Kubernetes kümesine dağıtımı kapsayan uçdan uca DevOps senaryosunu görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9c949-104">In Figure 5-12 you can see the end-to-end DevOps scenario covering the code management, code compilation, Docker images build, Docker images push to a Docker registry and finally the deployment to a Kubernetes cluster in Azure.</span></span>
+<span data-ttu-id="7df02-104">Şekil 5-12 ' de, kod yönetimi, kod derleme, Docker görüntüleri oluşturma, Docker görüntüleri bir Docker kayıt defterine gönderme ve son olarak Azure 'daki bir Kubernetes kümesine dağıtım gibi uçtan uca DevOps senaryosunu görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7df02-104">In Figure 5-12 you can see the end-to-end DevOps scenario covering the code management, code compilation, Docker images build, Docker images push to a Docker registry and finally the deployment to a Kubernetes cluster in Azure.</span></span>
 
-![İş akışı: Geliştirme makinesinde başlar.](media/docker-workflow-ci-cd-aks.png)
+![İş akışı: geliştirme makinesinde başlatılır.](media/docker-workflow-ci-cd-aks.png)
 
-<span data-ttu-id="9c949-107">**Şekil 5-12**.</span><span class="sxs-lookup"><span data-stu-id="9c949-107">**Figure 5-12**.</span></span> <span data-ttu-id="9c949-108">Docker görüntüleri oluşturma ve Azure'daki bir Kubernetes kümesine dağıtma CI/CD senaryosu</span><span class="sxs-lookup"><span data-stu-id="9c949-108">CI/CD scenario creating Docker images and deploying to a Kubernetes cluster in Azure</span></span>
+<span data-ttu-id="7df02-107">**Şekil 5-12**.</span><span class="sxs-lookup"><span data-stu-id="7df02-107">**Figure 5-12**.</span></span> <span data-ttu-id="7df02-108">Azure 'da Docker görüntüleri oluşturma ve bir Kubernetes kümesine dağıtma CI/CD senaryosu</span><span class="sxs-lookup"><span data-stu-id="7df02-108">CI/CD scenario creating Docker images and deploying to a Kubernetes cluster in Azure</span></span>
 
-<span data-ttu-id="9c949-109">Yapı/CD ve sürüm/CD olmak üzere iki boru hattının Docker Registry (Docker Hub veya Azure Konteyner Kayıt Defteri gibi) aracılığıyla bağlandığı vurgulanması önemlidir.</span><span class="sxs-lookup"><span data-stu-id="9c949-109">It is important to highlight that the two pipelines, build/CI, and release/CD, are connected through the Docker Registry (such as Docker Hub or Azure Container Registry).</span></span> <span data-ttu-id="9c949-110">Docker kayıt defteri, Docker olmadan geleneksel CI/CD sürecine kıyasla en önemli farklardan biridir.</span><span class="sxs-lookup"><span data-stu-id="9c949-110">The Docker registry is one of the main differences compared to a traditional CI/CD process without Docker.</span></span>
+<span data-ttu-id="7df02-109">İki işlem hattı, derleme/CI ve yayın/CD 'nin Docker kayıt defteri (Docker Hub veya Azure Container Registry gibi) aracılığıyla bağlandığını vurgulamak önemlidir.</span><span class="sxs-lookup"><span data-stu-id="7df02-109">It is important to highlight that the two pipelines, build/CI, and release/CD, are connected through the Docker Registry (such as Docker Hub or Azure Container Registry).</span></span> <span data-ttu-id="7df02-110">Docker kayıt defteri, Docker olmadan geleneksel bir CI/CD işlemine kıyasla ana farklardan biridir.</span><span class="sxs-lookup"><span data-stu-id="7df02-110">The Docker registry is one of the main differences compared to a traditional CI/CD process without Docker.</span></span>
 
-<span data-ttu-id="9c949-111">Şekil 5-13'te gösterildiği gibi, ilk aşama yapı/CI boru hattıdır.</span><span class="sxs-lookup"><span data-stu-id="9c949-111">As shown in Figure 5-13, the first phase is the build/CI pipeline.</span></span> <span data-ttu-id="9c949-112">Azure DevOps Hizmetleri'nde kodu derleyecek, Docker görüntülerini oluşturacak ve docker hub veya Azure Konteyner Kayıt Defteri gibi docker registry'ye itecek yapı/CI ardışık hatları oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9c949-112">In Azure DevOps Services you can create build/CI pipelines that will compile the code, create the Docker images, and push them to a Docker Registry like Docker Hub or Azure Container Registry.</span></span>
+<span data-ttu-id="7df02-111">Şekil 5-13 ' de gösterildiği gibi, ilk aşama Build/CI ardışık düzeni olur.</span><span class="sxs-lookup"><span data-stu-id="7df02-111">As shown in Figure 5-13, the first phase is the build/CI pipeline.</span></span> <span data-ttu-id="7df02-112">Azure DevOps Services, kodu derlemek, Docker görüntülerini oluşturmak ve bunları Docker Hub veya Azure Container Registry gibi bir Docker kayıt defterine göndermek için derleme/CI işlem hatları oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7df02-112">In Azure DevOps Services you can create build/CI pipelines that will compile the code, create the Docker images, and push them to a Docker Registry like Docker Hub or Azure Container Registry.</span></span>
 
-![Azure DevOps tarayıcı görünümü, Oluşturma işlemi görev tanımı.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Azure DevOps 'un tarayıcı görünümü, derleme işlemi görev tanımı.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
-<span data-ttu-id="9c949-114">**Şekil 5-13**.</span><span class="sxs-lookup"><span data-stu-id="9c949-114">**Figure 5-13**.</span></span> <span data-ttu-id="9c949-115">Azure DevOps'lerde Docker görüntüleri oluşturma ve görüntüleri Docker kayıt defterine itme de geliştirme/CI ardışık</span><span class="sxs-lookup"><span data-stu-id="9c949-115">Build/CI pipeline in Azure DevOps building Docker images and pushing images to a Docker registry</span></span>
+<span data-ttu-id="7df02-114">**Şekil 5-13**.</span><span class="sxs-lookup"><span data-stu-id="7df02-114">**Figure 5-13**.</span></span> <span data-ttu-id="7df02-115">Azure DevOps 'daki derleme/CI işlem hattı Docker görüntülerini oluşturma ve görüntüleri bir Docker kayıt defterine iletme</span><span class="sxs-lookup"><span data-stu-id="7df02-115">Build/CI pipeline in Azure DevOps building Docker images and pushing images to a Docker registry</span></span>
 
-<span data-ttu-id="9c949-116">İkinci aşama bir dağıtım/sürüm ardışık hattı oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="9c949-116">The second phase is to create a deployment/release pipeline.</span></span> <span data-ttu-id="9c949-117">Azure DevOps Hizmetlerinde, Şekil 5-14'te gösterildiği gibi Azure DevOps Hizmetleri için Kubernetes görevlerini kullanarak bir Kubernetes kümesini hedefleyen bir dağıtım ardışık hattı kolayca oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9c949-117">In Azure DevOps Services, you can easily create a deployment pipeline targeting a Kubernetes cluster by using the Kubernetes tasks for Azure DevOps Services, as shown in Figure 5-14.</span></span>
+<span data-ttu-id="7df02-116">İkinci aşama, bir dağıtım/yayın işlem hattı oluşturmaktır.</span><span class="sxs-lookup"><span data-stu-id="7df02-116">The second phase is to create a deployment/release pipeline.</span></span> <span data-ttu-id="7df02-117">Azure DevOps Services, Şekil 5-14 ' de gösterildiği gibi, Azure DevOps Services için Kubernetes görevlerini kullanarak bir Kubernetes kümesini hedefleyen bir dağıtım işlem hattını kolayca oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7df02-117">In Azure DevOps Services, you can easily create a deployment pipeline targeting a Kubernetes cluster by using the Kubernetes tasks for Azure DevOps Services, as shown in Figure 5-14.</span></span>
 
 ![Azure DevOps tarayıcı görünümü, Kubernetes görev tanımına dağıtın.](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
-<span data-ttu-id="9c949-119">**Şekil 5-14**.</span><span class="sxs-lookup"><span data-stu-id="9c949-119">**Figure 5-14**.</span></span> <span data-ttu-id="9c949-120">Bir Kubernetes kümesine dağıtılan Azure DevOps Hizmetleri'nde sürüm/CD ardışık</span><span class="sxs-lookup"><span data-stu-id="9c949-120">Release/CD pipeline in Azure DevOps Services deploying to a Kubernetes cluster</span></span>
+<span data-ttu-id="7df02-119">**Şekil 5-14**.</span><span class="sxs-lookup"><span data-stu-id="7df02-119">**Figure 5-14**.</span></span> <span data-ttu-id="7df02-120">Bir Kubernetes kümesine dağıtma Azure DevOps Services içindeki yayın/CD işlem hattı</span><span class="sxs-lookup"><span data-stu-id="7df02-120">Release/CD pipeline in Azure DevOps Services deploying to a Kubernetes cluster</span></span>
 
-> [! Walkthrough]<span data-ttu-id="9c949-121"> Kubernetes için eShopModernized dağıtma:</span><span class="sxs-lookup"><span data-stu-id="9c949-121"> Deploying eShopModernized to Kubernetes:</span></span>
+> <span data-ttu-id="7df02-121">[! İzlenecek yol] Kubernetes 'e Eshopmodernıtes dağıtma:</span><span class="sxs-lookup"><span data-stu-id="7df02-121">[!Walkthrough] Deploying eShopModernized to Kubernetes:</span></span>
 >
-> <span data-ttu-id="9c949-122">Azure DevOps CI/CD ardışık birimlerinin Kubernetes'e dağıtışlarını ayrıntılı bir şekilde gözden geçirmek için aşağıdaki yazıya bakın: </span><span class="sxs-lookup"><span data-stu-id="9c949-122">For a detailed walkthrough of Azure DevOps CI/CD pipelines deploying to Kubernetes, see this post: </span></span>\
+> <span data-ttu-id="7df02-122">Kubernetes 'e dağıtan Azure DevOps CI/CD işlem hatları hakkında ayrıntılı bir anlatım için şu gönderiyi inceleyin: </span><span class="sxs-lookup"><span data-stu-id="7df02-122">For a detailed walkthrough of Azure DevOps CI/CD pipelines deploying to Kubernetes, see this post: </span></span>\
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="9c949-123">[Önceki](docker-application-outer-loop-devops-workflow.md)
->[Sonraki](../run-manage-monitor-docker-environments/index.md)</span><span class="sxs-lookup"><span data-stu-id="9c949-123">[Previous](docker-application-outer-loop-devops-workflow.md)
+><span data-ttu-id="7df02-123">[Önceki](docker-application-outer-loop-devops-workflow.md) 
+> [Sonraki](../run-manage-monitor-docker-environments/index.md)</span><span class="sxs-lookup"><span data-stu-id="7df02-123">[Previous](docker-application-outer-loop-devops-workflow.md)
 [Next](../run-manage-monitor-docker-environments/index.md)</span></span>

@@ -1,227 +1,434 @@
 ---
-title: Linux konteynerolarak AKS/Kubernetes kümelerine dağıtılan core 2.2 ASP.NET uygulamaları oluşturun
+title: AKS/Kubernetes kümelerine Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
-ms.date: 02/25/2019
-ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 08/06/2020
+ms.openlocfilehash: 4b04e5d56c73918c665ad6e2825205870aac9606
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989031"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916417"
 ---
-# <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a><span data-ttu-id="7a285-103">Linux konteynerolarak dağıtılan ASP.NET Core 2.2 uygulamalarını AKS/Kubernetes orkestratörüne dönüştürün</span><span class="sxs-lookup"><span data-stu-id="7a285-103">Build ASP.NET Core 2.2 applications deployed as Linux containers into an AKS/Kubernetes orchestrator</span></span>
+# <a name="build-aspnet-core-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a><span data-ttu-id="f7cfd-103">Bir AKS/Kubernetes Orchestrator 'a Linux kapsayıcıları olarak dağıtılan ASP.NET Core uygulamalar oluşturun</span><span class="sxs-lookup"><span data-stu-id="f7cfd-103">Build ASP.NET Core applications deployed as Linux containers into an AKS/Kubernetes orchestrator</span></span>
 
-<span data-ttu-id="7a285-104">Azure Kubernetes Services (AKS), Azure'un konteyner dağıtımını ve yönetimini basitleştiren yönetilen Kubernetes orkestrasyon hizmetleridir.</span><span class="sxs-lookup"><span data-stu-id="7a285-104">Azure Kubernetes Services (AKS) is Azure's managed Kubernetes orchestrations services that simplify container deployment and management.</span></span>
+<span data-ttu-id="f7cfd-104">Azure Kubernetes Hizmetleri (AKS), Azure 'un kapsayıcı dağıtımı ve yönetimini kolaylaştıran yönetilen Kubernetes yönetimi hizmetidir.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-104">Azure Kubernetes Services (AKS) is Azure's managed Kubernetes orchestrations services that simplify container deployment and management.</span></span>
 
-<span data-ttu-id="7a285-105">AKS'nin başlıca özellikleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="7a285-105">AKS main features are:</span></span>
+<span data-ttu-id="f7cfd-105">AKS ana özellikleri şunlardır:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-105">AKS main features are:</span></span>
 
-- <span data-ttu-id="7a285-106">Azure tarafından barındırılan bir denetim düzlemi</span><span class="sxs-lookup"><span data-stu-id="7a285-106">An Azure-hosted control plane</span></span>
-- <span data-ttu-id="7a285-107">Otomatik yükseltmeler</span><span class="sxs-lookup"><span data-stu-id="7a285-107">Automated upgrades</span></span>
-- <span data-ttu-id="7a285-108">Kendi kendini iyileştirme</span><span class="sxs-lookup"><span data-stu-id="7a285-108">Self-healing</span></span>
-- <span data-ttu-id="7a285-109">Kullanıcı yapılandırılabilir ölçekleme</span><span class="sxs-lookup"><span data-stu-id="7a285-109">User configurable scaling</span></span>
-- <span data-ttu-id="7a285-110">Hem geliştiriciler hem de küme işleçleri için daha basit bir kullanıcı deneyimi.</span><span class="sxs-lookup"><span data-stu-id="7a285-110">A simpler user experience for both developers and cluster operators.</span></span>
+- <span data-ttu-id="f7cfd-106">Azure 'da barındırılan denetim düzlemi</span><span class="sxs-lookup"><span data-stu-id="f7cfd-106">An Azure-hosted control plane</span></span>
+- <span data-ttu-id="f7cfd-107">Otomatik yükseltmeler</span><span class="sxs-lookup"><span data-stu-id="f7cfd-107">Automated upgrades</span></span>
+- <span data-ttu-id="f7cfd-108">Kendi kendini onarma</span><span class="sxs-lookup"><span data-stu-id="f7cfd-108">Self-healing</span></span>
+- <span data-ttu-id="f7cfd-109">Kullanıcı tarafından yapılandırılabilir ölçekleme</span><span class="sxs-lookup"><span data-stu-id="f7cfd-109">User-configurable scaling</span></span>
+- <span data-ttu-id="f7cfd-110">Hem geliştiriciler hem de küme işleçleri için daha basit kullanıcı deneyimi.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-110">Simpler user experience for both developers and cluster operators.</span></span>
 
-<span data-ttu-id="7a285-111">Aşağıdaki örnekler, Linux üzerinde çalışan ve Azure'da bir AKS Cluster'a dağıtılan bir ASP.NET Core 2.2 uygulamasının oluşturulmasını incelerken, geliştirme Visual Studio 2017 kullanılarak yapılır.</span><span class="sxs-lookup"><span data-stu-id="7a285-111">The following examples explore the creation of an ASP.NET Core 2.2 application that runs on Linux and deploys to an AKS Cluster in Azure, while development is done using Visual Studio 2017.</span></span>
+<span data-ttu-id="f7cfd-111">Aşağıdaki örneklerde, Linux üzerinde çalışan ve Azure 'daki bir AKS kümesine dağıtan ASP.NET Core 3,1 uygulamasının oluşturulması araştırırken Visual Studio 2019 kullanılarak geliştirme yapılır.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-111">The following examples explore the creation of an ASP.NET Core 3.1 application that runs on Linux and deploys to an AKS Cluster in Azure, while development is done using Visual Studio 2019.</span></span>
 
-## <a name="creating-the-aspnet-core-22-project-using-visual-studio-2017"></a><span data-ttu-id="7a285-112">Visual Studio 2017'yi kullanarak ASP.NET Core 2.2 Projesi Oluşturma</span><span class="sxs-lookup"><span data-stu-id="7a285-112">Creating the ASP.NET Core 2.2 Project using Visual Studio 2017</span></span>
+## <a name="creating-the-aspnet-core-project-using-visual-studio-2019"></a><span data-ttu-id="f7cfd-112">Visual Studio 2019 kullanarak ASP.NET Core projesi oluşturma</span><span class="sxs-lookup"><span data-stu-id="f7cfd-112">Creating the ASP.NET Core Project using Visual Studio 2019</span></span>
 
-<span data-ttu-id="7a285-113">ASP.NET Core, Microsoft ve GitHub'daki .NET topluluğu tarafından korunan genel amaçlı bir geliştirme platformudur.</span><span class="sxs-lookup"><span data-stu-id="7a285-113">ASP.NET Core is a general-purpose development platform maintained by Microsoft and the .NET community on GitHub.</span></span> <span data-ttu-id="7a285-114">Windows, macOS ve Linux'u destekleyen çapraz platformdur ve aygıt, bulut ve gömülü/IoT senaryolarında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7a285-114">It's cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</span></span>
+<span data-ttu-id="f7cfd-113">ASP.NET Core, GitHub 'da Microsoft ve .NET Community tarafından tutulan genel amaçlı bir geliştirme platformudur.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-113">ASP.NET Core is a general-purpose development platform maintained by Microsoft and the .NET community on GitHub.</span></span> <span data-ttu-id="f7cfd-114">Windows, macOS ve Linux 'un desteklenme ve cihaz, bulut ve katıştırılmış/IoT senaryolarında kullanılabilen platformlar arası bir platformdur.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-114">It's cross-platform, supporting Windows, macOS and Linux, and can be used in device, cloud, and embedded/IoT scenarios.</span></span>
 
-<span data-ttu-id="7a285-115">Bu örnek, Visual Studio Web API şablonuna dayanan basit bir proje kullanır, böylece örneği oluşturmak için ek bilgiye ihtiyacınız olmaz.</span><span class="sxs-lookup"><span data-stu-id="7a285-115">This example uses a simple project that's based on a Visual Studio Web API template, so you don't need any additional knowledge to create the sample.</span></span> <span data-ttu-id="7a285-116">Yalnızca, Core 2.2 teknolojisini kullanarak REST API'li küçük bir projeyi çalıştırmak için tüm öğeleri içeren standart bir şablon kullanarak proje ASP.NETyi oluşturmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="7a285-116">You only have to create the project using a standard template that includes all the elements to run a small project with a REST API, using ASP.NET Core 2.2 technology.</span></span>
+<span data-ttu-id="f7cfd-115">Bu örnek, Visual Studio şablonlarına dayalı birkaç basit proje kullanır, bu nedenle örneği oluşturmak için çok fazla ek bilgiye gerek kalmaz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-115">This example uses a couple of simple projects based on Visual Studio templates, so you don't need much additional knowledge to create the sample.</span></span> <span data-ttu-id="f7cfd-116">Projeyi, ASP.NET Core 3,1 teknolojisini kullanarak REST API ve Razor sayfaları olan bir Web uygulamasıyla küçük bir proje çalıştırmak için tüm öğeleri içeren standart bir şablon kullanarak oluşturmanız yeterlidir.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-116">You only have to create the project using a standard template that includes all the elements to run a small project with a REST API and a Web App with Razor pages, using ASP.NET Core 3.1 technology.</span></span>
 
-![Visual Studio'da core web uygulamasını ASP.NET seçerek yeni proje penceresi ekleyin.](media/create-aspnet-core-application.png)
+![Visual Studio 'da ASP.NET Core Web uygulaması ' nı seçerek yeni proje penceresi ekleyin.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-aspnet-core-application.png)
 
-<span data-ttu-id="7a285-118">**Şekil 4-36**.</span><span class="sxs-lookup"><span data-stu-id="7a285-118">**Figure 4-36**.</span></span> <span data-ttu-id="7a285-119">ASP.NET Çekirdek Uygulama Oluşturma</span><span class="sxs-lookup"><span data-stu-id="7a285-119">Creating ASP.NET Core Application</span></span>
+<span data-ttu-id="f7cfd-118">**Şekil 4-35**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-118">**Figure 4-35**.</span></span> <span data-ttu-id="f7cfd-119">Visual Studio 2019 ' de ASP.NET Core Web uygulaması oluşturma.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-119">Creating an ASP.NET Core Web Application in Visual Studio 2019.</span></span>
 
-<span data-ttu-id="7a285-120">Visual Studio'da örnek proje oluşturmak **için, Dosya** > **Yeni** > **Proje'yi**seçin, sol bölmedeki **Web** proje türlerini seçin ve ardından ASP.NET Çekirdek **Web Uygulaması.**</span><span class="sxs-lookup"><span data-stu-id="7a285-120">To create the sample project in Visual Studio, select **File** > **New** > **Project**, select the **Web** project types in the left pane, followed by **ASP.NET Core Web Application**.</span></span>
+<span data-ttu-id="f7cfd-120">Visual Studio 'da örnek proje oluşturmak için **Dosya**  >  **Yeni**  >  **Proje**' yi seçin, **Web** projesi türünü ve ardından **ASP.NET Core Web uygulaması** şablonunu seçin.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-120">To create the sample project in Visual Studio, select **File** > **New** > **Project**, select the **Web** project type and then the **ASP.NET Core Web Application** template.</span></span> <span data-ttu-id="f7cfd-121">Ayrıca, gerekirse şablon için arama yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-121">You can also search for the template if you need it.</span></span>
 
-<span data-ttu-id="7a285-121">Visual Studio, web projeleri için şablonları listeler.</span><span class="sxs-lookup"><span data-stu-id="7a285-121">Visual Studio lists templates for web projects.</span></span> <span data-ttu-id="7a285-122">Örneğin, ASP.NET bir Web API Uygulaması oluşturmak için **API'yi** seçin.</span><span class="sxs-lookup"><span data-stu-id="7a285-122">For our example, select **API** to create an ASP.NET Web API Application.</span></span>
+<span data-ttu-id="f7cfd-122">Ardından, sonraki görüntüde gösterildiği gibi uygulama adını ve konumunu girin.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-122">Then enter the application name and location as shown in the next image.</span></span>
 
-<span data-ttu-id="7a285-123">Çerçeve olarak Core 2.2ASP.NET seçtiğinizi doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="7a285-123">Verify that you've selected ASP.NET Core 2.2 as the framework.</span></span> <span data-ttu-id="7a285-124">.NET Core 2.2, Visual Studio 2017'nin son sürümüne dahildir ve Visual Studio 2017'yi yüklediğinizde otomatik olarak yüklenir ve sizin için yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="7a285-124">.NET Core 2.2 is included in the last version of Visual Studio 2017 and is automatically installed and configured for you when you install Visual Studio 2017.</span></span>
+![Proje adını ve konumunu girin.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/enter-project-name-and-location.png)
 
-![API seçeneği seçili bir ASP.NET Çekirdek Web Uygulaması türünü seçmek için Visual Studio iletişim kutusu.](media/create-web-api-application.png)
+<span data-ttu-id="f7cfd-124">**Şekil 4-36**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-124">**Figure 4-36**.</span></span> <span data-ttu-id="f7cfd-125">Visual Studio 2019 ' de proje adını ve konumunu girin.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-125">Enter the project name and location in Visual Studio 2019.</span></span>
 
-<span data-ttu-id="7a285-126">**Şekil 4-37.**</span><span class="sxs-lookup"><span data-stu-id="7a285-126">**Figure 4-37**.</span></span> <span data-ttu-id="7a285-127">CORE 2.2 ve Web API proje türü ASP.NET seçme</span><span class="sxs-lookup"><span data-stu-id="7a285-127">Selecting ASP.NET CORE 2.2 and Web API project type</span></span>
+<span data-ttu-id="f7cfd-126">Framework olarak ASP.NET Core 3,1 ' i seçtiğinizi doğrulayın.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-126">Verify that you've selected ASP.NET Core 3.1 as the framework.</span></span> <span data-ttu-id="f7cfd-127">.NET Core 3,1, Visual Studio 2019 ' nin en son sürümüne dahildir ve Visual Studio 'Yu yüklediğinizde sizin için otomatik olarak yüklenir ve yapılandırılır.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-127">.NET Core 3.1 is included in the latest release of Visual Studio 2019 and is automatically installed and configured for you when you install Visual Studio.</span></span>
 
-<span data-ttu-id="7a285-128">.NET Core'un önceki bir sürümünüz varsa, 2.2 sürümünü <https://dotnet.microsoft.com/download>'den indirebilir ve yükleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-128">If you have any previous version of .NET Core, you can download and install the 2.2 version from <https://dotnet.microsoft.com/download>.</span></span>
+![API seçeneği seçili ASP.NET Core Web uygulaması türünü seçmek için Visual Studio iletişim kutusu.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/create-web-api-application.png)
 
-<span data-ttu-id="7a285-129">Projeyi oluştururken veya sonrasında Docker desteği ekleyebilirsiniz, böylece projenizi istediğiniz zaman "Dockerize" edebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-129">You can add Docker support when creating the project or afterwards, so you can "Dockerize" your project at any time.</span></span> <span data-ttu-id="7a285-130">Proje oluşturulduktan sonra Docker desteği eklemek için Solution Explorer'daki proje düğümüne sağ tıklayın ve bağlam menüsünde**Docker ekle desteğini** seçin. **Add** > </span><span class="sxs-lookup"><span data-stu-id="7a285-130">To add Docker support after project creation, right-click on the project node in Solution Explorer and select **Add** > **Docker support** on the context menu.</span></span>
+<span data-ttu-id="f7cfd-129">**Şekil 4-37**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-129">**Figure 4-37**.</span></span> <span data-ttu-id="f7cfd-130">ASP.NET CORE 3,1 ve Web API proje türünü seçme</span><span class="sxs-lookup"><span data-stu-id="f7cfd-130">Selecting ASP.NET CORE 3.1 and Web API project type</span></span>
 
-![Varolan bir projeye Docker desteği eklemek için bağlam menüsü seçeneği: Sağ tıklayın (projeye) > > Docker Desteği ekleyin.](media/add-docker-support-to-project.png)
+<span data-ttu-id="f7cfd-131">Artık Docker desteğinin, Proje oluşturulduktan sonra yapılabileceğini göstermek için etkin olmadığına dikkat edin.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-131">Notice Docker support is not enabled now, just to show it can be done after project creation.</span></span>
 
-<span data-ttu-id="7a285-132">**Şekil 4-38**.</span><span class="sxs-lookup"><span data-stu-id="7a285-132">**Figure 4-38**.</span></span> <span data-ttu-id="7a285-133">Mevcut projeye Docker desteği ekleme</span><span class="sxs-lookup"><span data-stu-id="7a285-133">Adding Docker support to existing project</span></span>
+<span data-ttu-id="f7cfd-132">.NET Core 'un önceki bir sürümüne sahipseniz, 3,1 sürümünü indirip yükleyebilirsiniz <https://dotnet.microsoft.com/download> .</span><span class="sxs-lookup"><span data-stu-id="f7cfd-132">If you have any previous version of .NET Core, you can download and install the 3.1 version from <https://dotnet.microsoft.com/download>.</span></span>
 
-<span data-ttu-id="7a285-134">Docker desteğini eklemeyi tamamlamak için Windows veya Linux'u seçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-134">To complete adding Docker support, you can choose Windows or Linux.</span></span> <span data-ttu-id="7a285-135">Bu durumda, AKS Windows Kapsayıcılarını desteklemediği için (2018 sonu itibariyle) **Linux'u**seçin.</span><span class="sxs-lookup"><span data-stu-id="7a285-135">In this case, select **Linux**, because AKS doesn't support Windows Containers (as of late 2018).</span></span>
+<span data-ttu-id="f7cfd-133">Projenizi dilediğiniz zaman "Dockerize" gösterebilmeniz için artık Docker desteği ekleyeceğiz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-133">To show you can "Dockerize" your project at any time, you'll add Docker support now.</span></span> <span data-ttu-id="f7cfd-134">Bu nedenle Çözüm Gezgini içindeki proje düğümüne sağ tıklayın ve **Add**  >  bağlam menüsünde**Docker desteği** Ekle ' yi seçin.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-134">So right-click on the project node in Solution Explorer and select **Add** > **Docker support** on the context menu.</span></span>
 
-![Dockerfile için Hedef İşletim Sistemi'ni seçmek için seçenek iletişim kutusu.](media/select-linux-docker-support.png)
+![Mevcut bir projeye Docker desteği eklemek için bağlam menü seçeneği: > Docker desteği eklemek > (projede) öğesine sağ tıklayın.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-docker-support-to-project.png)
 
-<span data-ttu-id="7a285-137">**Şekil 4-39**.</span><span class="sxs-lookup"><span data-stu-id="7a285-137">**Figure 4-39**.</span></span> <span data-ttu-id="7a285-138">Linux kapsayıcıları seçme.</span><span class="sxs-lookup"><span data-stu-id="7a285-138">Selecting Linux containers.</span></span>
+<span data-ttu-id="f7cfd-136">**Şekil 4-38**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-136">**Figure 4-38**.</span></span> <span data-ttu-id="f7cfd-137">Mevcut bir projeye Docker desteği ekleme</span><span class="sxs-lookup"><span data-stu-id="f7cfd-137">Adding Docker support to an existing project</span></span>
 
-<span data-ttu-id="7a285-139">Bu basit adımlarla, ASP.NET Core 2.2 uygulamanız bir Linux kapsayıcısı üzerinde çalışır.</span><span class="sxs-lookup"><span data-stu-id="7a285-139">With these simple steps, you have your ASP.NET Core 2.2 application running on a Linux container.</span></span>
+<span data-ttu-id="f7cfd-138">Docker desteği ekleme işleminin tamamlanabilmesi için Windows veya Linux ' u seçebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-138">To complete adding Docker support, you can choose Windows or Linux.</span></span> <span data-ttu-id="f7cfd-139">Bu durumda, **Linux**' u seçin.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-139">In this case, select **Linux**.</span></span>
 
-<span data-ttu-id="7a285-140">Gördüğünüz gibi Visual Studio 2017 ve Docker arasındaki entegrasyon tamamen geliştiricinin üretkenliğine odaklıdır.</span><span class="sxs-lookup"><span data-stu-id="7a285-140">As you can see, the integration between Visual Studio 2017 and Docker is totally oriented to the developer's productivity.</span></span>
+![Dockerfile için hedef işletim sistemini seçmek üzere seçenek iletişim kutusu.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-linux-docker-support.png)
 
-<span data-ttu-id="7a285-141">Artık **f5** tuşu ile veya **Oynat** düğmesini kullanarak uygulamanızı çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-141">Now you can run your application with the **F5** key or by using the **Play** button.</span></span>
+<span data-ttu-id="f7cfd-141">**Şekil 4-39**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-141">**Figure 4-39**.</span></span> <span data-ttu-id="f7cfd-142">Linux kapsayıcıları seçiliyor.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-142">Selecting Linux containers.</span></span>
 
-<span data-ttu-id="7a285-142">Projeyi çalıştırdıktan sonra, komutu `docker images` kullanarak görüntüleri listeleyebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-142">After running the project, you can list the images using the `docker images` command.</span></span> <span data-ttu-id="7a285-143">Visual Studio `mssampleapplication` 2017 ile projemizin otomatik olarak dağıtılmasıyla oluşturulan görüntüyü görmelisiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-143">You should see the `mssampleapplication` image created by the automatic deployment of our project with Visual Studio 2017.</span></span>
+<span data-ttu-id="f7cfd-143">Bu basit adımlarla bir Linux kapsayıcısında çalışan ASP.NET Core 3,1 uygulamanız vardır.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-143">With these simple steps, you have your ASP.NET Core 3.1 application running on a Linux container.</span></span>
+
+<span data-ttu-id="f7cfd-144">Benzer bir şekilde, Web API uç noktasını kullanmak için çok basit bir **WebApp** projesi (Şekil 4-40) ekleyebilirsiniz, ancak Ayrıntılar burada açıklanmaz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-144">In a similar way, you can also add a very simple **WebApp** project (Figure 4-40) to consume the web API endpoint, although the details are not discussed here.</span></span>
+
+<span data-ttu-id="f7cfd-145">Bundan sonra, görüntü 4-40 ' de aşağıda gösterildiği gibi, **WebApi** projeniz için Orchestrator desteği eklersiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-145">After that, you add orchestrator support for your **WebApi** project as shown next, in image 4-40.</span></span>
+
+![WebApi projesine Orchestrator desteği ekleniyor](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/add-orchestrator-support.png)
+
+<span data-ttu-id="f7cfd-147">**Şekil 4-40**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-147">**Figure 4-40**.</span></span> <span data-ttu-id="f7cfd-148">*WebApi* projesine Orchestrator desteği ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-148">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="f7cfd-149">`Docker Compose`Yerel geliştirme için iyi olan seçeneğini belirlediğinizde, Visual Studio Docker-Compose projesini, görüntü 4-41 ' de gösterildiği gibi Docker-Compose dosyaları ile ekler.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-149">When you choose the `Docker Compose` option, which is fine for local development, Visual Studio adds the docker-compose project, with the docker-compose files as shown in image 4-41.</span></span>
+
+![Docker-Compose çözüme eklendi](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/docker-compose-project-in-visual-studio.png)
+
+<span data-ttu-id="f7cfd-151">**Şekil 4-41**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-151">**Figure 4-41**.</span></span> <span data-ttu-id="f7cfd-152">*WebApi* projesine Orchestrator desteği ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-152">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="f7cfd-153">Eklenen ilk dosyalar bunlara benzerdir:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-153">The initial files added are similar to these ones:</span></span>
+
+`docker-compose.yml`
+
+```yml
+version: "3.4"
+
+services:
+  webapi:
+    image: ${DOCKER_REGISTRY-}webapi
+    build:
+      context: .
+      dockerfile: WebApi/Dockerfile
+
+  webapp:
+    image: ${DOCKER_REGISTRY-}webapp
+    build:
+      context: .
+      dockerfile: WebApp/Dockerfile
+```
+
+`docker-compose.override.yml`
+
+```yml
+version: "3.4"
+
+services:
+  webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+  webapp:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+    ports:
+      - "80"
+      - "443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+```
+
+<span data-ttu-id="f7cfd-154">Uygulamanızı çalıştırmak için Docker Compose yalnızca birkaç tdalgalı KS yapmanız gerekir`docker-compose.override.yml`</span><span class="sxs-lookup"><span data-stu-id="f7cfd-154">To have you app running with Docker Compose you just have to make a few tweaks to `docker-compose.override.yml`</span></span>
+
+```yml
+services:
+  webapi:
+    #...
+    ports:
+      - "51080:80"
+      - "51443:443"
+    #...
+  webapp:
+    environment:
+      #...
+      - WebApiBaseAddress=http://webapi
+    ports:
+      - "50080:80"
+      - "50443:443"
+    #...
+```
+
+<span data-ttu-id="f7cfd-155">Artık, görüntü 4-42 ' de gösterildiği gibi, uygulamanızı **F5** tuşuyla veya **oynat** düğmesini ya da **CTRL + F5** tuşunu kullanarak Docker-Compose projesini seçerek çalıştırabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-155">Now you can run your application with **F5** key, or by using the **Play** button, or the **Ctrl+F5** key, selecting the docker-compose project, as shown in image 4-42.</span></span>
+
+![Visual Studio ile Docker-Compose projesi çalıştırma](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/running-docker-compose-with-visual-studio.png)
+
+<span data-ttu-id="f7cfd-157">**Şekil 4-42**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-157">**Figure 4-42**.</span></span> <span data-ttu-id="f7cfd-158">*WebApi* projesine Orchestrator desteği ekleniyor.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-158">Adding orchestrator support to *WebApi* project.</span></span>
+
+<span data-ttu-id="f7cfd-159">Docker-Compose uygulamasını açıklandığı şekilde çalıştırırken şunları alırsınız:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-159">When running the docker-compose application as explained, you get:</span></span>
+
+1. <span data-ttu-id="f7cfd-160">Docker-Compose dosyasına göre oluşturulan ve kapsayıcı görüntüleri.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-160">The images built and containers created as per the docker-compose file.</span></span>
+2. <span data-ttu-id="f7cfd-161">Tarayıcı, proje için "Özellikler" iletişim kutusunda yapılandırılan adreste açılır `docker-compose` .</span><span class="sxs-lookup"><span data-stu-id="f7cfd-161">The browser open in the address configured in the "Properties" dialog for the `docker-compose` project.</span></span>
+3. <span data-ttu-id="f7cfd-162">**Kapsayıcı** penceresi açık (Visual Studio 2019 sürüm 16,4 ve sonraki sürümlerde).</span><span class="sxs-lookup"><span data-stu-id="f7cfd-162">The **Container** window open (in Visual Studio 2019 version 16.4 and later).</span></span>
+4. <span data-ttu-id="f7cfd-163">Aşağıdaki resimlerde gösterildiği gibi, Çözümdeki tüm projeler için hata ayıklayıcı desteği.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-163">Debugger support for all projects in the solution, as shown in the following images.</span></span>
+
+<span data-ttu-id="f7cfd-164">Tarayıcı açıldı:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-164">Browser opened:</span></span>
+
+![Web uygulamasının çalıştığı tarayıcı görünümü](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/browser-opened.png)
+
+<span data-ttu-id="f7cfd-166">**Şekil 4-43**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-166">**Figure 4-43**.</span></span> <span data-ttu-id="f7cfd-167">Birden çok kapsayıcı üzerinde çalışan bir uygulamayla tarayıcı penceresi.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-167">Browser window with an application running on multiple containers.</span></span>
+
+<span data-ttu-id="f7cfd-168">Kapsayıcılar penceresi:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-168">Containers window:</span></span>
+
+![Visual Studio "kapsayıcılar" penceresi](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/visual-studio-containers-window.png)
+
+<span data-ttu-id="f7cfd-170">**Şekil 4-44**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-170">**Figure 4-44**.</span></span> <span data-ttu-id="f7cfd-171">Visual Studio "kapsayıcılar" penceresi</span><span class="sxs-lookup"><span data-stu-id="f7cfd-171">Visual Studio "Containers" window</span></span>
+
+<span data-ttu-id="f7cfd-172">**Kapsayıcılar** penceresi, çalışan kapsayıcıları görüntülemenize, kullanılabilir görüntülere gözatmanıza, ortam değişkenlerini, günlüklere ve bağlantı noktası eşlemelerini görüntülemenize, dosya sistemini incelemenize, hata ayıklayıcı eklemenize veya kapsayıcı ortamının içinde bir Terminal penceresi açmaya olanak sağlar.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-172">The **Containers** window lets you view running containers, browse available images, view environment variables, logs, and port mappings, inspect the filesystem, attach a debugger, or open a terminal window inside the container environment.</span></span>
+
+<span data-ttu-id="f7cfd-173">Gördüğünüz gibi, Visual Studio 2019 ile Docker arasındaki tümleştirme, geliştiricinin verimliliğine tamamen dayalıdır.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-173">As you can see, the integration between Visual Studio 2019 and Docker is completely oriented to the developer's productivity.</span></span>
+
+<span data-ttu-id="f7cfd-174">Kuşkusuz, komutunu kullanarak da görüntüleri listeleyebilirsiniz `docker images` .</span><span class="sxs-lookup"><span data-stu-id="f7cfd-174">Of course, you can also list the images using the `docker images` command.</span></span> <span data-ttu-id="f7cfd-175">`webapi` `webapp` `dev` Visual Studio 2019 ile projemizin otomatik dağıtımı tarafından oluşturulan etiketlerle ve görüntülerini görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-175">You should see the `webapi` and `webapp` images with the `dev` tags created by the automatic deployment of our project with Visual Studio 2019.</span></span>
 
 ```console
 docker images
 ```
 
-![Docker images komutundan konsol çıkışı, bir liste gösterir: Depo, Etiket, Resim Kimliği, Oluşturulan (tarih) ve Boyut.](media/docker-images-command.png)
+![Docker görüntüleri komutundan konsol çıktısı: depo, etiket, görüntü KIMLIĞI, oluşturulan (Tarih) ve boyut içeren bir liste gösterir.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/docker-images-command.png)
 
-<span data-ttu-id="7a285-145">**Şekil 4-40.**</span><span class="sxs-lookup"><span data-stu-id="7a285-145">**Figure 4-40**.</span></span> <span data-ttu-id="7a285-146">Docker görüntülerini görüntüle</span><span class="sxs-lookup"><span data-stu-id="7a285-146">View of Docker images</span></span>
+<span data-ttu-id="f7cfd-177">**Şekil 4-45**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-177">**Figure 4-45**.</span></span> <span data-ttu-id="f7cfd-178">Docker görüntülerinin görünümü</span><span class="sxs-lookup"><span data-stu-id="f7cfd-178">View of Docker images</span></span>
 
-## <a name="register-the-solution-in-the-azure-container-registry"></a><span data-ttu-id="7a285-147">Çözümü Azure Konteyner Kayıt Defterine Kaydedin</span><span class="sxs-lookup"><span data-stu-id="7a285-147">Register the Solution in the Azure Container Registry</span></span>
+## <a name="register-the-solution-in-an-azure-container-registry-acr"></a><span data-ttu-id="f7cfd-179">Çözümü bir Azure Container Registry kaydetme (ACR)</span><span class="sxs-lookup"><span data-stu-id="f7cfd-179">Register the Solution in an Azure Container Registry (ACR)</span></span>
 
-<span data-ttu-id="7a285-148">Görüntülerin söz kayıt defterinden AKS kümesine dağıtılaabilmesi için resmi [Azure Konteyner Kayıt Defteri (ACR)](https://azure.microsoft.com/services/container-registry/) veya Docker Hub gibi herhangi bir Docker kayıt defterine yükleyin.</span><span class="sxs-lookup"><span data-stu-id="7a285-148">Upload the image to any Docker registry, like [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) or Docker Hub, so the images can be deployed to the AKS cluster from that registry.</span></span> <span data-ttu-id="7a285-149">Bu durumda, resmi Azure Kapsayıcı Kayıt Defteri'ne yüklüyoruz.</span><span class="sxs-lookup"><span data-stu-id="7a285-149">In this case, we're uploading the image to Azure Container Registry.</span></span>
+<span data-ttu-id="f7cfd-180">Görüntüleri [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/)yükleyebilirsiniz, ancak Docker Hub veya başka bir kayıt defteri de kullanabilirsiniz. bu sayede, görüntüler bu kayıt defterinden aks kümesine dağıtılabilir.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-180">You can upload the images to the [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/), but you could also use Docker Hub or any other registry, so the images can be deployed to the AKS cluster from that registry.</span></span>
 
-### <a name="create-the-image-in-release-mode"></a><span data-ttu-id="7a285-150">Görüntüyü Yayın modunda oluşturma</span><span class="sxs-lookup"><span data-stu-id="7a285-150">Create the image in Release mode</span></span>
+### <a name="create-an-acr-instance"></a><span data-ttu-id="f7cfd-181">ACR örneği oluşturma</span><span class="sxs-lookup"><span data-stu-id="f7cfd-181">Create an ACR instance</span></span>
 
-<span data-ttu-id="7a285-151">Şimdi, Şekil 4-41'de gösterildiği gibi **Release** **Release**(üretime hazır) görüntü oluşturacağız ve uygulamayı daha önce yaptığımız gibi çalıştıracağız.</span><span class="sxs-lookup"><span data-stu-id="7a285-151">We'll now create the image in **Release** mode (ready for production) by changing to **Release**, as shown in Figure 4-41, and running the application as we did before.</span></span>
+<span data-ttu-id="f7cfd-182">**Az CLI**konumundan şu komutu çalıştırın:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-182">Run the following command from the **az cli**:</span></span>
 
-![Sürüm modunda oluşturmak için VS araç çubuğu seçeneği.](media/select-release-mode.png)
-
-<span data-ttu-id="7a285-153">**Şekil 4-41.**</span><span class="sxs-lookup"><span data-stu-id="7a285-153">**Figure 4-41**.</span></span> <span data-ttu-id="7a285-154">Serbest Bırakma Modu'nu Seçme</span><span class="sxs-lookup"><span data-stu-id="7a285-154">Selecting Release Mode</span></span>
-
-<span data-ttu-id="7a285-155">Komutu `docker image` çalıştırırsanız, biri için diğeri mod `debug` için `release` olmak üzere her iki görüntünün oluşturulduğunu görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="7a285-155">If you execute the `docker image` command, you'll see both images created, one for `debug` and the other for `release` mode.</span></span>
-
-### <a name="create-a-new-tag-for-the-image"></a><span data-ttu-id="7a285-156">Resim için yeni bir Etiket Oluşturma</span><span class="sxs-lookup"><span data-stu-id="7a285-156">Create a new Tag for the Image</span></span>
-
-<span data-ttu-id="7a285-157">Her kapsayıcı görüntüsünün kayıt `loginServer` defterinin adıyla etiketlenmiş olması gerekir.</span><span class="sxs-lookup"><span data-stu-id="7a285-157">Each container image needs to be tagged with the `loginServer` name of the registry.</span></span> <span data-ttu-id="7a285-158">Bu etiket, görüntü kayıt defterine kapsayıcı görüntüleri gönderilirken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="7a285-158">This tag is used for routing when pushing container images to an image registry.</span></span>
-
-<span data-ttu-id="7a285-159">Azure Konteyner `loginServer` Kayıt Defteri'nden bilgileri alarak adı Azure portalından görüntüleyebilirsiniz</span><span class="sxs-lookup"><span data-stu-id="7a285-159">You can view the `loginServer` name from the Azure portal, taking the information from the Azure Container Registry</span></span>
-
-![Sağ üstteki Azure kapsayıcı kayıt defteri adının tarayıcı görünümü.](media/loginServer-name.png)
-
-<span data-ttu-id="7a285-161">**Şekil 4-42**.</span><span class="sxs-lookup"><span data-stu-id="7a285-161">**Figure 4-42**.</span></span> <span data-ttu-id="7a285-162">Kayıt Defterinin adının görünümü</span><span class="sxs-lookup"><span data-stu-id="7a285-162">View of the name of the Registry</span></span>
-
-<span data-ttu-id="7a285-163">Veya aşağıdaki komutu çalıştırarak:</span><span class="sxs-lookup"><span data-stu-id="7a285-163">Or by running the following command:</span></span>
-
-```console
-az acr list --resource-group MSSampleResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
+```powershell
+az acr create --name exploredocker --resource-group explore-docker-aks-rg --sku basic --admin-enabled
 ```
 
-![Yukarıdaki komuttan konsol çıkışı.](media/az-cli-loginServer-name.png)
+### <a name="create-the-image-in-release-mode"></a><span data-ttu-id="f7cfd-183">Görüntüyü yayın modunda oluşturma</span><span class="sxs-lookup"><span data-stu-id="f7cfd-183">Create the image in Release mode</span></span>
 
-<span data-ttu-id="7a285-165">**Şekil 4-43**.</span><span class="sxs-lookup"><span data-stu-id="7a285-165">**Figure 4-43**.</span></span> <span data-ttu-id="7a285-166">PowerShell'i kullanarak kayıt defterinin adını alın</span><span class="sxs-lookup"><span data-stu-id="7a285-166">Get the name of the registry using PowerShell</span></span>
+<span data-ttu-id="f7cfd-184">Şimdi, Şekil 4-46 ' de gösterildiği gibi, **yayın**moduna geçiş yaparak ve uygulamayı daha önce yaptığınız gibi çalıştırarak **yayın** modunda (üretim için hazır) görüntüyü oluşturacaksınız.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-184">You'll now create the image in **Release** mode (ready for production) by changing to **Release**, as shown in Figure 4-46, and running the application as you did before.</span></span>
 
-<span data-ttu-id="7a285-167">Her iki durumda da, adı alırsınız.</span><span class="sxs-lookup"><span data-stu-id="7a285-167">In both cases, you'll obtain the name.</span></span> <span data-ttu-id="7a285-168">Bizim örneğimizde, `mssampleacr.azurecr.io`.</span><span class="sxs-lookup"><span data-stu-id="7a285-168">In our example, `mssampleacr.azurecr.io`.</span></span>
+![Yayın modunda derleme ' deki araç çubuğu seçeneği.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/select-release-mode.png)
 
-<span data-ttu-id="7a285-169">Şimdi en son görüntüyü (Yayın görüntüsü) komutuyla alarak görüntüyü etiketleyebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7a285-169">Now you can tag the image, taking the latest image (the Release image), with the command:</span></span>
+<span data-ttu-id="f7cfd-186">**Şekil 4-46**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-186">**Figure 4-46**.</span></span> <span data-ttu-id="f7cfd-187">Yayın modunu seçme</span><span class="sxs-lookup"><span data-stu-id="f7cfd-187">Selecting Release Mode</span></span>
 
-```console
-docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
-```
+<span data-ttu-id="f7cfd-188">`docker images`Komutu çalıştırırsanız, bir tane `debug` (**geliştirme**) ve diğeri `release` (**en son**) modu için oluşturulan görüntüleri görürsünüz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-188">If you execute the `docker images` command, you'll see both images created, one for `debug` (**dev**) and the other for `release` (**latest**) mode.</span></span>
 
-<span data-ttu-id="7a285-170">Komutu `docker tag` çalıştırdıktan sonra, görüntüleri `docker images` komutla listeleyin ve yeni etiketle görüntüyü görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="7a285-170">After running the `docker tag` command, list the images with the `docker images` command, and you should see the image with the new tag.</span></span>
+### <a name="create-a-new-tag-for-the-image"></a><span data-ttu-id="f7cfd-189">Görüntü için yeni bir etiket oluşturun</span><span class="sxs-lookup"><span data-stu-id="f7cfd-189">Create a new Tag for the Image</span></span>
 
-![Docker images komutundan konsol çıkışı.](media/tagged-docker-images-list.png)
+<span data-ttu-id="f7cfd-190">Her kapsayıcı görüntüsünün kayıt defteri adıyla etiketlenmesi gerekir `loginServer` .</span><span class="sxs-lookup"><span data-stu-id="f7cfd-190">Each container image needs to be tagged with the `loginServer` name of the registry.</span></span> <span data-ttu-id="f7cfd-191">Bu etiket, görüntü kayıt defterine kapsayıcı görüntüleri gönderilirken kullanılır.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-191">This tag is used for routing when pushing container images to an image registry.</span></span>
 
-<span data-ttu-id="7a285-172">**Şekil 4-44.**</span><span class="sxs-lookup"><span data-stu-id="7a285-172">**Figure 4-44**.</span></span> <span data-ttu-id="7a285-173">Etiketli resimlerin görünümü</span><span class="sxs-lookup"><span data-stu-id="7a285-173">View of tagged images</span></span>
+<span data-ttu-id="f7cfd-192">`loginServer`Azure Container Registry bilgileri alarak Azure Portal adı görüntüleyebilirsiniz</span><span class="sxs-lookup"><span data-stu-id="f7cfd-192">You can view the `loginServer` name from the Azure portal, taking the information from the Azure Container Registry</span></span>
 
-### <a name="push-the-image-into-the-azure-acr"></a><span data-ttu-id="7a285-174">Görüntüyü Azure ACR'ye itin</span><span class="sxs-lookup"><span data-stu-id="7a285-174">Push the image into the Azure ACR</span></span>
+![Azure Container kayıt defteri adının sağ üst tarafındaki tarayıcı görünümü.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/loginServer-name.png)
 
-<span data-ttu-id="7a285-175">Azure Konteyner Kayıt Defteri'nde oturum açın</span><span class="sxs-lookup"><span data-stu-id="7a285-175">Log in to the Azure Container Registry</span></span>
+<span data-ttu-id="f7cfd-194">**Şekil 4-47**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-194">**Figure 4-47**.</span></span> <span data-ttu-id="f7cfd-195">Kayıt defterinin adının görünümü</span><span class="sxs-lookup"><span data-stu-id="f7cfd-195">View of the name of the Registry</span></span>
 
-```console
-az acr login --name mssampleacr
-```
-
-<span data-ttu-id="7a285-176">Aşağıdaki komutu kullanarak görüntüyü Azure ACR'ye itin:</span><span class="sxs-lookup"><span data-stu-id="7a285-176">Push the image into the Azure ACR, using the following command:</span></span>
+<span data-ttu-id="f7cfd-196">Ya da aşağıdaki komutu çalıştırarak:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-196">Or by running the following command:</span></span>
 
 ```console
-docker push mssampleacr.azurecr.io/mssampleaksapplication:v1
+az acr list --resource-group <resource-group-name> --query "[].{acrLoginServer:loginServer}" --output table
 ```
 
-<span data-ttu-id="7a285-177">Bu komut görüntüleri yüklemek biraz zaman alır, ancak işlem sırasında geribildirim verir.</span><span class="sxs-lookup"><span data-stu-id="7a285-177">This command takes a while uploading the images but gives you feedback in the process.</span></span>
+![Yukarıdaki komuttan konsol çıktısı.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/az-cli-loginServer-name.png)
 
-![Docker push komutundan konsol çıkışı: her katman için karakter tabanlı bir ilerleme çubuğu gösterir.](media/uploading-image-to-acr.png)
+<span data-ttu-id="f7cfd-198">**Şekil 4-48**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-198">**Figure 4-48**.</span></span> <span data-ttu-id="f7cfd-199">**Az CLI** kullanarak kayıt defterinin adını alın</span><span class="sxs-lookup"><span data-stu-id="f7cfd-199">Get the name of the registry using **az cli**</span></span>
 
-<span data-ttu-id="7a285-179">**Şekil 4-45.**</span><span class="sxs-lookup"><span data-stu-id="7a285-179">**Figure 4-45**.</span></span> <span data-ttu-id="7a285-180">Görüntüyü ACR'ye yükleme</span><span class="sxs-lookup"><span data-stu-id="7a285-180">Uploading the image to the ACR</span></span>
+<span data-ttu-id="f7cfd-200">Her iki durumda da adı elde edersiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-200">In both cases, you'll obtain the name.</span></span> <span data-ttu-id="f7cfd-201">Örneğimizde, `exploredocker.azurecr.io` .</span><span class="sxs-lookup"><span data-stu-id="f7cfd-201">In our example, `exploredocker.azurecr.io`.</span></span>
 
-<span data-ttu-id="7a285-181">İşlem tamamlandığında elde ediletmeniz gereken sonucu aşağıda görebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7a285-181">You can see below the result you should get when the process completes:</span></span>
+<span data-ttu-id="f7cfd-202">Artık, şu komutla birlikte en son görüntüyü (yayın görüntüsü) alarak resmi etiketleyebilir:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-202">Now you can tag the image, taking the latest image (the Release image), with the command:</span></span>
 
-![Docker push komutundan konsol çıkışı, tüm katmanları veya düğümleri gösteren tamamlandı.](media/uploading-docker-images-complete.png)
+```console
+docker tag <image-name>:latest <login-server-name>/<image-name>:v1
+```
 
-<span data-ttu-id="7a285-183">**Şekil 4-46.**</span><span class="sxs-lookup"><span data-stu-id="7a285-183">**Figure 4-46**.</span></span> <span data-ttu-id="7a285-184">Düğümlerin görünümü</span><span class="sxs-lookup"><span data-stu-id="7a285-184">View of nodes</span></span>
+<span data-ttu-id="f7cfd-203">Komutunu çalıştırdıktan sonra, `docker tag` komutuyla görüntüleri listeleyin `docker images` ve yeni etiketiyle birlikte resmi görmeniz gerekir.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-203">After running the `docker tag` command, list the images with the `docker images` command, and you should see the image with the new tag.</span></span>
 
-<span data-ttu-id="7a285-185">Bir sonraki adım, kapsayıcınızı AKS Kubernetes kümenize dağıtmaktır.</span><span class="sxs-lookup"><span data-stu-id="7a285-185">The next step is to deploy your container into your AKS Kubernetes cluster.</span></span> <span data-ttu-id="7a285-186">Bunun için aşağıdakileri içeren bir dosyaya **(.yml dağıtım dosyası)** ihtiyacınız vardır:</span><span class="sxs-lookup"><span data-stu-id="7a285-186">For that, you need a file (**.yml deploy file**) that contains the following:</span></span>
+![Docker görüntüleri komutundan konsol çıktısı.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/tagged-docker-images-list.png)
+
+<span data-ttu-id="f7cfd-205">**Şekil 4-49**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-205">**Figure 4-49**.</span></span> <span data-ttu-id="f7cfd-206">Etiketli görüntülerin görünümü</span><span class="sxs-lookup"><span data-stu-id="f7cfd-206">View of tagged images</span></span>
+
+### <a name="push-the-image-into-the-azure-acr"></a><span data-ttu-id="f7cfd-207">Görüntüyü Azure ACR 'ye gönderme</span><span class="sxs-lookup"><span data-stu-id="f7cfd-207">Push the image into the Azure ACR</span></span>
+
+<span data-ttu-id="f7cfd-208">Azure Container Registry oturum açın</span><span class="sxs-lookup"><span data-stu-id="f7cfd-208">Log in to the Azure Container Registry</span></span>
+
+```console
+az acr login --name exploredocker
+```
+
+<span data-ttu-id="f7cfd-209">Aşağıdaki komutu kullanarak görüntüyü Azure ACR 'ye gönderin:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-209">Push the image into the Azure ACR, using the following command:</span></span>
+
+```console
+docker push <login-server-name>/<image-name>:v1
+```
+
+<span data-ttu-id="f7cfd-210">Bu komut, görüntüleri karşıya yüklerken bir işlem gerçekleştirir, ancak işlemde geri bildirim sağlar.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-210">This command takes a while uploading the images but gives you feedback in the process.</span></span> <span data-ttu-id="f7cfd-211">Aşağıdaki görüntüde, bir görüntüden alınan çıktıyı ve sürmekte olan bir işlemi görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-211">In the following image you can see the output from one image completed and another in progress.</span></span>
+
+![Docker Push komutundan konsol çıktısı.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/uploading-docker-images-complete.png)
+
+<span data-ttu-id="f7cfd-213">**Şekil 4-50**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-213">**Figure 4-50**.</span></span> <span data-ttu-id="f7cfd-214">Push komutundan konsol çıktısı.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-214">Console output from the push command.</span></span>
+
+<span data-ttu-id="f7cfd-215">Çok Kapsayıcılı uygulamanızı AKS kümenize dağıtmak için, `.yaml` ve dosyalarından alınan özelliklerin büyük bir bölümü olan bazı bildirim dosyalarına ihtiyacınız vardır `docker-compose.yml` `docker-compose.override.yml` .</span><span class="sxs-lookup"><span data-stu-id="f7cfd-215">To deploy your multi-container app into your AKS cluster you need some manifest `.yaml` files that have, most of the properties taken from the `docker-compose.yml` and `docker-compose.override.yml` files.</span></span>
+
+#### `deploy-webapi.yml`
 
 ```yml
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mssamplesbook
+  name: webapi
+  labels:
+    app: weather-forecast
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      service: webapi
   template:
     metadata:
       labels:
-        app: mssample-kub-app
+        app: weather-forecast
+        service: webapi
     spec:
       containers:
-        - name: mssample-services-app
-          image: mssampleacr.azurecr.io/mssampleaksapplication:v1
+        - name: webapi
+          image: exploredocker.azurecr.io/webapi:v1
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-    name: mssample-kub-app
+  name: webapi
+  labels:
+    app: weather-forecast
+    service: webapi
 spec:
   ports:
-    - name: http-port
-      port: 80
+    - port: 80
       targetPort: 80
+      protocol: TCP
   selector:
-    app: mssample-kub-app
+    service: webapi
+```
+
+#### `deploy-webapp.yml`
+
+```yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    app: weather-forecast
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: webapp
+  template:
+    metadata:
+      labels:
+        app: weather-forecast
+        service: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: exploredocker.azurecr.io/webapp:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+            - name: WebApiBaseAddress
+              value: http://webapi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp
+  labels:
+    app: weather-forecast
+    service: webapp
+spec:
   type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    service: webapp
 ```
 
 > [!NOTE]
-> <span data-ttu-id="7a285-187">Kubernetes ile dağıtım hakkında daha fazla bilgi için bkz:<https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span><span class="sxs-lookup"><span data-stu-id="7a285-187">For more information on deployment with Kubernetes see: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span></span>
+> <span data-ttu-id="f7cfd-216">Önceki `.yml` dosyalar, `HTTP` `ASPNETCORE_URLS` örnek uygulamadaki eksik sertifikayla ilgili sorunları önlemek için, yalnızca parametresini kullanarak bağlantı noktalarını etkinleştirir.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-216">The previous `.yml` files only enable the `HTTP` ports, using the `ASPNETCORE_URLS` parameter, to avoid issues with the missing certificate in the sample app.</span></span>
 
-<span data-ttu-id="7a285-188">Şimdi **kubectl**kullanarak dağıtmak için neredeyse hazırsınız, ama önce bu komutile AKS Cluster kimlik bilgilerini almak gerekir:</span><span class="sxs-lookup"><span data-stu-id="7a285-188">Now you're almost ready to deploy using **Kubectl**, but first you must get the credentials to the AKS Cluster with this command:</span></span>
+> [!TIP]
+> <span data-ttu-id="f7cfd-217">Bu kılavuzda [**Azure Kubernetes Service 'e (aks) dağıtım**](deploy-azure-kubernetes-service.md) bölümünde bu örnek için aks kümesini nasıl oluşturacağınız hakkında bilgi alabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-217">You can see how to create the AKS Cluster for this sample in section [**Deploy to Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) on this guide.</span></span>
 
-```console
-az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
-```
-
-![Yukarıdaki komuttan konsol çıkışı: Birleştirilmiş "MSSampleK8Cluster /root/.kube/config'deki geçerli bağlam olarak](media/getting-aks-credentials.png)
-
-<span data-ttu-id="7a285-190">**Şekil 4-47.**</span><span class="sxs-lookup"><span data-stu-id="7a285-190">**Figure 4-47**.</span></span> <span data-ttu-id="7a285-191">kimlik bilgileri alma</span><span class="sxs-lookup"><span data-stu-id="7a285-191">getting credentials</span></span>
-
-<span data-ttu-id="7a285-192">Ardından, dağıtımı `kubectl create` başlatmak için komutu kullanın.</span><span class="sxs-lookup"><span data-stu-id="7a285-192">Then, use the `kubectl create` command to launch the deployment.</span></span>
+<span data-ttu-id="f7cfd-218">Artık, **kubectl**kullanarak dağıtıma hazırsınız, ancak ilk olarak aks kümesindeki kimlik bilgilerini şu komutla almalısınız:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-218">Now you're almost ready to deploy using **kubectl**, but first you must get the credentials from the AKS Cluster with this command:</span></span>
 
 ```console
-kubectl create -f mssample-deploy.yml
+az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks
 ```
 
-![Yukarıdaki komuttan konsol çıkışı: dağıtım "mssamplesbook" oluşturuldu.](media/kubectl-create-command.png)
+![Yukarıdaki komuttan konsol çıkışı: "keşfet-Docker-aks" değerini C:\users\mıguel.exe Kube\config içinde geçerli bağlam olarak birleştirildi](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/getting-aks-credentials.png)
 
-<span data-ttu-id="7a285-195">**Şekil 4-48**.</span><span class="sxs-lookup"><span data-stu-id="7a285-195">**Figure 4-48**.</span></span> <span data-ttu-id="7a285-196">Kubernetes’e dağıtma</span><span class="sxs-lookup"><span data-stu-id="7a285-196">Deploy to Kubernetes</span></span>
+<span data-ttu-id="f7cfd-220">**Şekil 4-51**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-220">**Figure 4-51**.</span></span> <span data-ttu-id="f7cfd-221">AKS 'ten kubectl ortamına kimlik bilgileri alma.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-221">Getting credentials from AKS into the kubectl environment.</span></span>
 
-<span data-ttu-id="7a285-197">Dağıtım tamamlandığında, kubernetes konsoluna bu komutla zamansal olarak erişebileceğiniz yerel bir proxy ile erişebilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="7a285-197">When the deployment completes, you can access the Kubernetes console with a local proxy that you can temporally access with this command:</span></span>
+<span data-ttu-id="f7cfd-222">Ayrıca, AKS kümesinin bu komutu kullanarak ACR 'den görüntü çekmesine de izin vermeniz gerekir:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-222">You also have to allow the AKS cluster to pull images from the ACR, using this command:</span></span>
 
 ```console
-az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
+az aks update --name explore-docker-aks --resource-group explore-docker-aks-rg --attach-acr exploredocker
 ```
 
-<span data-ttu-id="7a285-198">Ve url `http://127.0.0.1:8001`erişim .</span><span class="sxs-lookup"><span data-stu-id="7a285-198">And accessing the url `http://127.0.0.1:8001`.</span></span>
+<span data-ttu-id="f7cfd-223">Önceki komutun tamamlanması birkaç dakika sürebilir.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-223">The previous command might take a couple of minutes to complete.</span></span> <span data-ttu-id="f7cfd-224">Ardından, `kubectl apply` dağıtımları başlatmak için komutunu kullanın ve ardından `kubectl get all` küme nesnelerini listeleyin.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-224">Then, use the `kubectl apply` command to launch the deployments, and then `kubectl get all` get list the cluster objects.</span></span>
 
-![Dağıtımları, Bölmeleri, Çoğaltma Kümelerini ve Hizmetleri gösteren Kubernetes panosunun tarayıcı görünümü.](media/kubernetes-cluster-information.png)
+```console
+kubectl apply -f deploy-webapi.yml
+kubectl apply -f deploy-webapp.yml
 
-<span data-ttu-id="7a285-200">**Şekil 4-49**.</span><span class="sxs-lookup"><span data-stu-id="7a285-200">**Figure 4-49**.</span></span> <span data-ttu-id="7a285-201">Kubernetes küme bilgilerini görüntüleme</span><span class="sxs-lookup"><span data-stu-id="7a285-201">View Kubernetes cluster information</span></span>
+kubectl get all
+```
 
-<span data-ttu-id="7a285-202">Artık uygulamanızı Bir Linux Kapsayıcısı ve bir AKS Kubernetes Kümesi kullanarak Azure'da dağıttınız.</span><span class="sxs-lookup"><span data-stu-id="7a285-202">Now you have your application deployed on Azure, using a Linux Container, and an AKS Kubernetes Cluster.</span></span> <span data-ttu-id="7a285-203">Azure portalından alabileceğiniz uygulamanızın genel IP'sine erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-203">You can access your app browsing to the public IP of your service, which you can get from the Azure portal.</span></span>
+![Yukarıdaki komutlardan konsol çıkışı: dağıtımlar uygulandı.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubectl-apply-command.png)
+
+<span data-ttu-id="f7cfd-227">**Şekil 4-52**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-227">**Figure 4-52**.</span></span> <span data-ttu-id="f7cfd-228">Kubernetes 'e dağıtım</span><span class="sxs-lookup"><span data-stu-id="f7cfd-228">Deployment to Kubernetes</span></span>
+
+<span data-ttu-id="f7cfd-229">Yük dengeleyici dış IP 'yi alıncaya kadar beklemeniz gerekir, ile kontrol edin `kubectl get services` ve ardından sonraki görüntüde gösterildiği gibi uygulamanın o adreste kullanılabilir olması gerekir:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-229">You'll have to wait a while until the load balancer gets the external IP, checking with `kubectl get services`, and then the application should be available at that address, as shown in the next image:</span></span>
+
+![AKS 'e dağıtılan uygulamanın tarayıcı görünümü](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/aks-deployed-application.png)
+
+<span data-ttu-id="f7cfd-231">**Şekil 4-53**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-231">**Figure 4-53**.</span></span> <span data-ttu-id="f7cfd-232">Kubernetes 'e dağıtım</span><span class="sxs-lookup"><span data-stu-id="f7cfd-232">Deployment to Kubernetes</span></span>
+
+<span data-ttu-id="f7cfd-233">Dağıtım tamamlandığında, bir SSH tüneli kullanarak [Kubernetes Web Kullanıcı arabirimine](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) yerel bir ara sunucu ile erişebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-233">When the deployment completes, you can access the [Kubernetes Web UI](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) with a local proxy, using an ssh tunnel.</span></span>
+
+<span data-ttu-id="f7cfd-234">Önce aşağıdaki komutla bir ClusterRoleBinding oluşturmanız gerekir:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-234">First you must create a ClusterRoleBinding with the following command:</span></span>
+
+```console
+kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+```
+
+<span data-ttu-id="f7cfd-235">Ardından, proxy 'yi başlatmak için şu komutu kullanabilirsiniz:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-235">And then this command to start the proxy:</span></span>
+
+```console
+az aks browse --resource-group exploredocker-aks-rg --name explore-docker-aks
+```
+
+<span data-ttu-id="f7cfd-236">Bir tarayıcı penceresi `http://127.0.0.1:8001` Şuna benzer bir görünümle birlikte açılmalıdır:</span><span class="sxs-lookup"><span data-stu-id="f7cfd-236">A browser window should open at `http://127.0.0.1:8001` with a view similar to this one:</span></span>
+
+![Dağıtım, dizin, çoğaltma kümesi ve hizmet gösteren Kubernetes panosunun tarayıcı görünümü.](media/build-aspnet-core-applications-linux-containers-aks-kubernetes/kubernetes-cluster-information.png)
+
+<span data-ttu-id="f7cfd-238">**Şekil 4-54**.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-238">**Figure 4-54**.</span></span> <span data-ttu-id="f7cfd-239">Kubernetes kümesi bilgilerini görüntüle</span><span class="sxs-lookup"><span data-stu-id="f7cfd-239">View Kubernetes cluster information</span></span>
+
+<span data-ttu-id="f7cfd-240">Artık ASP.NET Core uygulamanız var, Linux kapsayıcılarında çalışıyor ve Azure 'da bir AKS kümesine dağıtıldı.</span><span class="sxs-lookup"><span data-stu-id="f7cfd-240">Now you have your ASP.NET Core application, running in Linux containers, and deployed to an AKS cluster on Azure.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="7a285-204">Bu kılavuzda [**Azure Kubernetes Hizmetine (AKS) dağıt**](deploy-azure-kubernetes-service.md) bölümünde bu örnek için AKS Kümesi'nin nasıl oluşturulabileceğini görebilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="7a285-204">You can see how to create the AKS Cluster for this sample in section [**Deploy to Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) on this guide.</span></span>
+> <span data-ttu-id="f7cfd-241">Kubernetes ile dağıtım hakkında daha fazla bilgi için bkz:<https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span><span class="sxs-lookup"><span data-stu-id="f7cfd-241">For more information on deployment with Kubernetes see: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/></span></span>
 
->[!div class="step-by-step"]
-><span data-ttu-id="7a285-205">[Önceki](set-up-windows-containers-with-powershell.md)
->[Sonraki](../docker-devops-workflow/index.md)</span><span class="sxs-lookup"><span data-stu-id="7a285-205">[Previous](set-up-windows-containers-with-powershell.md)
+> [!div class="step-by-step"]
+> <span data-ttu-id="f7cfd-242">[Önceki](set-up-windows-containers-with-powershell.md) 
+>  [Sonraki](../docker-devops-workflow/index.md)</span><span class="sxs-lookup"><span data-stu-id="f7cfd-242">[Previous](set-up-windows-containers-with-powershell.md)
 [Next](../docker-devops-workflow/index.md)</span></span>
