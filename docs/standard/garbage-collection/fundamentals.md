@@ -11,12 +11,12 @@ helpviewer_keywords:
 - garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 438188b6d694bdeab772c43ef92e5621c68facff
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 322e079a1be556efb536b24e216e480c1950bd8c
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990222"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917021"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Çöp toplamanın temelleri
 
@@ -24,7 +24,7 @@ Ortak dil çalışma zamanında (CLR) Çöp toplayıcı (GC) otomatik bellek yö
 
 Bu makalede çöp toplamanın temel kavramları açıklanmaktadır.
 
-## <a name="benefits"></a>Avantajlar
+## <a name="benefits"></a>Yararları
 
 Çöp toplayıcı aşağıdaki avantajları sağlar:
 
@@ -53,7 +53,7 @@ Aşağıdaki listede, önemli CLR belleği kavramları özetlenmektedir.
   | Durum | Açıklama |
   |---------|---------|
   | Ücretsiz | Bellek bloğunun kendisine başvuru yoktur ve ayırma için kullanılabilir. |
-  | Ayrıldı | Bellek bloğu kullanım için kullanılabilir ve diğer herhangi bir ayırma isteği için kullanılamaz. Ancak, bu bellek bloğunda verileri kaydedilene kadar depoleyemez. |
+  | Ayrılmıştır | Bellek bloğu kullanım için kullanılabilir ve diğer herhangi bir ayırma isteği için kullanılamaz. Ancak, bu bellek bloğunda verileri kaydedilene kadar depoleyemez. |
   | Yürütülen | Bellek bloğu fiziksel depolamaya atanır. |
 
 - Sanal adres alanı parçalanabilir. Bu, adres alanında delik olarak da bilinen boş blokların olduğu anlamına gelir. Sanal bellek ayırma istendiğinde, sanal bellek yöneticisinin, bu ayırma isteğini karşılamak için yeterince büyük olan tek bir ücretsiz blok bulması gerekir. 2 GB boş alan olsa bile, tüm bu boş alan tek bir adres bloğunda yer almadığı takdirde 2 GB gerektiren bir ayırma başarısız olur.
@@ -186,7 +186,7 @@ Bir çöp toplama işlemi aşağıdaki aşamaları içerir:
   Genellikle büyük nesne yığını (LOH) sıkıştırmaz, çünkü büyük nesneleri kopyalamak bir performans cezası uygular. Ancak, .NET Core 'da ve .NET Framework 4.5.1 ve üzeri sürümlerde, <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> büyük nesne yığınını isteğe bağlı olarak sıkıştırmak için özelliğini kullanabilirsiniz. Ayrıca, bir sabit sınır belirtildiğinde, LOH otomatik olarak sıkıştırılır:
 
   - Kapsayıcıda bir bellek sınırı.
-  - [Gcheaphardlimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) veya [Gcheaphardlimit yüzdesi](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) çalışma zamanı yapılandırma seçenekleri.
+  - [Gcheaphardlimit](../../core/run-time-config/garbage-collector.md#heap-limit) veya [Gcheaphardlimit yüzdesi](../../core/run-time-config/garbage-collector.md#heap-limit-percent) çalışma zamanı yapılandırma seçenekleri.
 
 Çöp toplayıcı, nesnelerin canlı olup olmadığını anlamak için aşağıdaki bilgileri kullanır:
 

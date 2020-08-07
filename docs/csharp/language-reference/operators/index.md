@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 19b5683a7cd334e1203c57fa90d275b659eac873
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556559"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916817"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C# işleçleri ve ifadeleri (C# Başvurusu)
 
@@ -33,7 +33,7 @@ En basit C# ifadeleri değişmez değerler (örneğin, [tamsayı](../builtin-typ
 
 Aşağıdaki kodda, ifadelerin örnekleri, atamaların sağ tarafındadır:
 
-[!code-csharp[expression examples](snippets/Overview.cs#Expressions)]
+[!code-csharp[expression examples](snippets/shared/Overview.cs#Expressions)]
 
 Genellikle, bir ifade sonuç üretir ve başka bir ifadeye eklenebilir. [`void`](../builtin-types/void.md)Yöntem çağrısı, sonuç üretmeyen bir ifade örneğidir. Aşağıdaki örnekte gösterildiği gibi yalnızca bir [ifade](../../programming-guide/statements-expressions-operators/statements.md)olarak kullanılabilir:
 
@@ -45,15 +45,15 @@ C# ' nin sağladığı diğer ifade türleri şunlardır:
 
 - Biçimlendirilen dizeler oluşturmak için uygun sözdizimi sağlayan, [enterpolasyonlu dize ifadeleri](../tokens/interpolated.md) :
 
-  [!code-csharp-interactive[interpolated string](snippets/Overview.cs#InterpolatedString)]
+  [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
 - Anonim işlevler oluşturmanıza olanak sağlayan [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) :
 
-  [!code-csharp-interactive[lambda expression](snippets/Overview.cs#Lambda)]
+  [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
 - Sorgu yeteneklerini doğrudan C# dilinde kullanmanıza imkan sağlayan [sorgu Ifadeleri](../keywords/query-keywords.md) :
 
-  [!code-csharp-interactive[query expression](snippets/Overview.cs#Query)]
+  [!code-csharp-interactive[query expression](snippets/shared/Overview.cs#Query)]
 
 Bir yöntem, Oluşturucu, özellik, Dizin Oluşturucu veya Sonlandırıcı için kısa bir tanım sağlamak üzere bir [ifade gövdesi tanımı](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) kullanabilirsiniz.
 
@@ -80,7 +80,7 @@ Aşağıdaki tabloda, en düşük önceliğe göre C# işleçleri listelenmişti
 | [x. y](member-access-operators.md#member-access-expression-), [f (x)](member-access-operators.md#invocation-expression-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [`x?.y`](member-access-operators.md#null-conditional-operators--and-) , [`x?[y]`](member-access-operators.md#null-conditional-operators--and-) , [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [x!](null-forgiving.md), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [denetimsiz](../keywords/unchecked.md), [Default](default.md), [NameOf](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Birincil |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \! x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(T) x](type-testing-and-cast.md#cast-expression), [await](await.md), [&x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true ve false](true-false-operators.md) | Birli |
 | [x.. Iz](member-access-operators.md#range-operator-) | Aralık |
-| [değiştirebilirsiniz](switch-expression.md) | `switch`ifadesini |
+| [switch](switch-expression.md) | `switch`ifadesini |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x/y](arithmetic-operators.md#division-operator-), [x% y](arithmetic-operators.md#remainder-operator-) | Çarpımsal|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Toplamsal |
 | [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |

@@ -1,18 +1,18 @@
 ---
 title: Docker uygulama yaşam döngüsüne giriş
-description: Burada konteyner uygulama geliştirme yolculuğu başlayın.
-ms.date: 11/23/2018
-ms.openlocfilehash: 825226e0004af16deccfe1418596d91d6438b076
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Kapsayıcılı uygulama geliştirmenin yolculuğuna buradan başlayın.
+ms.date: 08/06/2020
+ms.openlocfilehash: 65a707eb76c79c6ae774cdbbed096d6e42680ff5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295368"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916043"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker uygulama yaşam döngüsüne giriş
 
-*Konteyner uygulamalarının yaşam döngüsü geliştirici ile başlayan bir yolculuktur. Geliştirici kapsayıcıları ve Docker'ı uygulamayı seçer, çünkü dağıtımlar ve BT işlemlerindeki sürtünmeleri ortadan kaldırır ve bu da herkesin daha çevik, uçtan uca ve daha hızlı olmasına yardımcı olur.*
+*Kapsayıcılı uygulamaların yaşam döngüsü, geliştiriciyle başlayan bir yolculuktu. Geliştiriciler, dağıtımlar ve BT işlemlerinde, herkesin daha çevik, uçtan uca ve daha hızlı olmasına yardımcı olan, son derece daha üretken olmalarını sağlayan kapsayıcılar ve Docker 'ı uygulamayı seçer.*
 
 >[!div class="step-by-step"]
->[Önceki](../docker-containers-images-and-registries.md)
->[Sonraki](containers-foundation-for-devops-collaboration.md)
+>[Önceki](../docker-containers-images-and-registries.md) 
+> [Sonraki](containers-foundation-for-devops-collaboration.md)

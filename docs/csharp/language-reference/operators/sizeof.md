@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 84dc67be95fa65f6c46dab02af2ee7bc08d2ec31
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 327183ccdf79cb8e15cd15aa3cffb044120808f8
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555233"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916702"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof işleci (C# Başvurusu)
 
@@ -40,7 +40,7 @@ Ayrıca, `sizeof` işlecin işleneni bir [sabit](../builtin-types/enum.md) liste
 
 Aşağıdaki örnek işlecinin kullanımını gösterir `sizeof` :
 
-[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/shared/SizeOfOperator.cs)]
 
 `sizeof`İşleci, yönetilen bellekte ortak dil çalışma zamanı tarafından ayrılacak bayt sayısını döndürür. [Yapı](../builtin-types/struct.md) türleri için bu değer, yukarıdaki örnekte gösterildiği gibi herhangi bir doldurma içerir. İşlecinin sonucu, `sizeof` <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> *yönetilmeyen* bellekteki bir türün boyutunu döndüren yönteminin sonuçlarından farklılık gösterebilir.
 

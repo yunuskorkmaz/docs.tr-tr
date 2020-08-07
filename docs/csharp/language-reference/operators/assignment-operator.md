@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 7843c15f15debeea7cb3627b3c7576579f0169fb
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7b4f3b3f4d6b697903461f08435552f2df36bfe4
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555467"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916932"
 ---
 # <a name="assignment-operators-c-reference"></a>Atama işleçleri (C# Başvurusu)
 
@@ -31,13 +31,13 @@ a = (b = c)
 
 Aşağıdaki örnek, bir yerel değişken, bir özellik ve bir Dizin Oluşturucu öğesi olan atama işlecinin kullanımını sol işlenen olarak gösterir:
 
-[!code-csharp-interactive[simple assignment](snippets/AssignmentOperator.cs#Simple)]
+[!code-csharp-interactive[simple assignment](snippets/shared/AssignmentOperator.cs#Simple)]
 
 ## <a name="ref-assignment-operator"></a>ref atama işleci
 
 C# 7,3 ' den başlayarak ref atama işlecini kullanarak `= ref` bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkenini yeniden atayabilirsiniz. Aşağıdaki örnek, ref atama işlecinin kullanımını gösterir:
 
-[!code-csharp[ref assignment operator](snippets/AssignmentOperator.cs#RefAssignment)]
+[!code-csharp[ref assignment operator](snippets/shared/AssignmentOperator.cs#RefAssignment)]
 
 Ref atama operatörü durumunda, her iki işleneni de aynı türde olmalıdır.
 

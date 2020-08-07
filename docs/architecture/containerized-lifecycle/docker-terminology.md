@@ -1,13 +1,13 @@
 ---
 title: Docker terimleri
 description: Docker ile çalışırken gündelik olarak kullanılan bazı temel terminolojiyi öğrenin.
-ms.date: 04/16/2020
-ms.openlocfilehash: 34e50596eca21ec5b5505493414056814455d745
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/06/2020
+ms.openlocfilehash: b47639a2995c3a0a30ea7111c16bbea21f1048ba
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507331"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915188"
 ---
 # <a name="docker-terminology"></a>Docker terimleri
 
@@ -29,7 +29,7 @@ docker build
 
 **Etiket**: görüntüler için uygulayabileceğiniz bir işaret veya etiket, aynı görüntünün farklı görüntülerinin veya sürümlerinin (sürüm numarasına veya hedef ortama göre) tanımlanabilmesi için kullanabilirsiniz.
 
-**Çok aşamalı derleme**: docker 17,05 veya üzeri olduğundan, son görüntülerin boyutunu azaltmaya yardımcı olan bir özelliktir. Birkaç cümleden, çok aşamalı derleme ile, örneğin, uygulamayı derlemek ve yayımlamak için ve daha küçük bir son görüntü oluşturmak üzere küçük bir çalışma zamanı temel görüntüsü ile yayımlama klasörünü kullanmak için SDK içeren büyük bir temel görüntü kullanabilirsiniz.
+**Çok aşamalı derleme**: docker 17,05 veya üzeri olduğundan, son görüntülerin boyutunu azaltmaya yardımcı olan bir özelliktir. Örneğin, SDK içeren büyük bir temel görüntü, derleme ve yayımlama için kullanılabilir ve sonra yalnızca küçük bir çalışma zamanı temel görüntüsü uygulamayı barındırmak için kullanılabilir.
 
 **Depo (depo)**: görüntü sürümünü gösteren bir etiketle etiketlenmiş Ilgili Docker görüntülerinin koleksiyonu. Bazı depolarda, SDK (daha ağır) içeren bir görüntü, yalnızca çalışma zamanları içeren bir görüntü (daha açık) vb. gibi belirli bir görüntünün birden fazla çeşitlemesi bulunur. Bu çeşitler etiketlerle işaretlenebilir. Tek bir depo, Linux görüntüsü ve Windows görüntüsü gibi platform türevlerini içerebilir.
 
@@ -41,7 +41,7 @@ docker build
 
 **Azure Container Registry**: Docker görüntüleriyle ve Azure 'daki bileşenleriyle çalışmak için ortak bir kaynak. Bu, Azure 'daki dağıtımlarınıza yakın bir kayıt defteri sağlar ve erişim üzerinde denetim sağlayarak Azure Active Directory gruplarınızı ve izinlerinizi kullanmayı mümkün kılar.
 
-**Docker güvenilir kayıt defteri (DTR)**: kuruluşun veri merkezinde ve ağında yer alması için şirket içinde yüklenebilen bir Docker kayıt defteri hizmeti (Docker 'dan). Kuruluş dahilinde yönetilmesi gereken özel görüntüler için kolaylık vardır. Docker güvenilen kayıt defteri, Docker Datacenter ürününün bir parçası olarak dahil edilmiştir. Daha fazla bilgi için bkz. [Docker güvenilir kayıt defteri (DTR)](https://docs.docker.com/docker-trusted-registry/overview/).
+**Docker güvenilir kayıt defteri (DTR)**: kuruluşun veri merkezinde ve ağında yer alması için şirket içinde yüklenebilen bir Docker kayıt defteri hizmeti (Docker 'dan). Kuruluş dahilinde yönetilmesi gereken özel görüntüler için kolaylık vardır. Docker güvenilen kayıt defteri, Docker Datacenter ürününün bir parçası olarak dahil edilmiştir. Daha fazla bilgi için bkz. [Docker güvenilir kayıt defteri (DTR)](https://www.docker.com/sites/default/files/Docker%20Trusted%20Registry.pdf).
 
 **Docker Community Edition (CE)**: yerel olarak kapsayıcı oluşturma, çalıştırma ve test etme için Windows ve MacOS için geliştirme araçları. Docker CE for Windows hem Linux hem de Windows kapsayıcıları için geliştirme ortamları sağlar. Windows üzerindeki Linux Docker ana bilgisayarı bir [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) sanal makinesini temel alır. Windows kapsayıcıları için ana bilgisayar, doğrudan Windows 'a dayalıdır. Mac için Docker CE, Apple hiper yönetici çerçevesini ve Mac OS X bir Linux Docker konak sanal makinesi sağlayan [xhyve hiper yönetici](https://github.com/mist64/xhyve)'yi temel alır. Docker CE for Windows ve Mac Için, Oracle VirtualBox tabanlı olan Docker araç kutusu bulunur.
 
@@ -51,8 +51,8 @@ docker build
 
 **Küme**: tek bir sanal Docker ana bilgisayarı gibi kullanıma sunulan Docker konaklarının bir koleksiyonu, uygulamanın birden fazla hizmetin kümedeki birden fazla örneğine yayılabilmesini sağlamak için, bu, uygulamanın birden çok hizmet örneğine ölçeklenebilmesini sağlar. Docker kümeleri, Kubernetes, Azure Service Fabric, Docker Sısınma ve Mesosphere DC/OS ile oluşturulabilir.
 
-**Orchestrator**: kümelerin ve Docker konaklarının yönetimini kolaylaştıran bir araç. Düzenleyiciler, bir komut satırı arabirimi (CLı) veya grafik kullanıcı arabirimi aracılığıyla görüntülerini, kapsayıcıları ve konaklarını yönetmenizi sağlar. Kapsayıcı ağ, yapılandırma, Yük Dengeleme, hizmet bulma, yüksek kullanılabilirlik, Docker ana bilgisayar yapılandırması ve daha fazlasını yönetebilirsiniz. Bir Orchestrator, bir düğüm koleksiyonunda çalıştırma, dağıtma, ölçekleme ve düzeltme yüklerini çalıştırmaktan sorumludur. Genellikle, Orchestrator ürünleri, piyasadaki diğer tekliflerin yanı sıra Kubernetes ve Azure Service Fabric gibi küme altyapısı sağlayan ürünlerdir.
+**Orchestrator**: kümelerin ve Docker ana bilgisayarlarının yönetimini kolaylaştıran bir araç. Düzenleyiciler, bir komut satırı arabirimi (CLı) veya grafik kullanıcı arabirimi aracılığıyla görüntülerini, kapsayıcıları ve konaklarını yönetmenizi sağlar. Kapsayıcı ağ, yapılandırma, Yük Dengeleme, hizmet bulma, yüksek kullanılabilirlik, Docker ana bilgisayar yapılandırması ve daha fazlasını yönetebilirsiniz. Bir Orchestrator, bir düğüm koleksiyonunda çalıştırma, dağıtma, ölçekleme ve düzeltme yüklerini çalıştırmaktan sorumludur. Genellikle, Orchestrator ürünleri, piyasadaki diğer tekliflerin yanı sıra Kubernetes ve Azure Service Fabric gibi küme altyapısı sağlayan ürünlerdir.
 
 >[!div class="step-by-step"]
->[Önceki](what-is-docker.md)
->[İleri](docker-containers-images-and-registries.md)
+>[Önceki](what-is-docker.md) 
+> [Sonraki](docker-containers-images-and-registries.md)

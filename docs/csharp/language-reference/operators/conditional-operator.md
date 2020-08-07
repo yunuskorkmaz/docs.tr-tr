@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 8e6753a08bbd96f980b3c5901e763f2dfad055c6
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: fcde0476935108122d7f7e825d701e48952873f6
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555376"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916850"
 ---
 # <a name="-operator-c-reference"></a>?: işleci (C# Başvurusu)
 
@@ -51,7 +51,7 @@ a ? b : (c ? d : e)
 
 Aşağıdaki örnek, koşullu işlecin kullanımını gösterir:
 
-[!code-csharp-interactive[non ref conditional](snippets/ConditionalOperator.cs#ConditionalValue)]
+[!code-csharp-interactive[non ref conditional](snippets/shared/ConditionalOperator.cs#ConditionalValue)]
 
 ## <a name="conditional-ref-expression"></a>Koşullu başvuru ifadesi
 
@@ -69,13 +69,13 @@ Koşullu başvuru ifadesi söz konusu olduğunda, `consequent` ve türü `altern
 
 Aşağıdaki örnek, koşullu başvuru ifadesinin kullanımını gösterir:
 
-[!code-csharp-interactive[conditional ref](snippets/ConditionalOperator.cs#ConditionalRef)]
+[!code-csharp-interactive[conditional ref](snippets/shared/ConditionalOperator.cs#ConditionalRef)]
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>Koşullu işleç ve bir `if..else` ifade
 
 [İf-else](../keywords/if-else.md) ifadesinin yerine koşullu işlecin kullanılması, bir değeri hesaplamak için koşullu olarak bir değer hesaplamanız gerektiğinde daha kısa kod oluşmasına neden olacaktır. Aşağıdaki örnek, bir tamsayıyı negatif veya negatif olmayan olarak sınıflandırmanın iki yolunu göstermektedir:
 
-[!code-csharp[conditional and if-else](snippets/ConditionalOperator.cs#CompareWithIf)]
+[!code-csharp[conditional and if-else](snippets/shared/ConditionalOperator.cs#CompareWithIf)]
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 

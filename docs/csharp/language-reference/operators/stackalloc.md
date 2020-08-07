@@ -5,12 +5,12 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc expression [C#]
-ms.openlocfilehash: 32ac85f678912cb7e5f506244265b1bf57d0b4aa
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 4f20f3262b77cc2fe16480e53d13960e68d230b5
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555612"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916670"
 ---
 # <a name="stackalloc-expression-c-reference"></a>stackalloc ifadesi (C# Başvurusu)
 
@@ -20,24 +20,24 @@ Bir `stackalloc` ifadenin sonucunu aşağıdaki türlerden birinin değişkenine
 
 - <xref:System.Span%601?displayProperty=nameWithType>Aşağıdaki örnekte gösterildiği gibi C# 7,2 veya sonraki bir sürümünden itibaren <xref:System.ReadOnlySpan%601?displayProperty=nameWithType> :
 
-  [!code-csharp[stackalloc span](snippets/StackallocOperator.cs#AssignToSpan)]
+  [!code-csharp[stackalloc span](snippets/shared/StackallocOperator.cs#AssignToSpan)]
 
   Bir veya değişkenine bir yığın ayrılmış bellek bloğu atadığınızda, [güvenli olmayan](../keywords/unsafe.md) bir bağlam kullanmanız gerekmez <xref:System.Span%601> <xref:System.ReadOnlySpan%601> .
 
   Bu türlerle çalıştığınızda, `stackalloc` Aşağıdaki örnekte gösterildiği gibi [koşullu](conditional-operator.md) veya atama ifadelerinde bir ifade kullanabilirsiniz:
 
-  [!code-csharp[stackalloc expression](snippets/StackallocOperator.cs#AsExpression)]
+  [!code-csharp[stackalloc expression](snippets/shared/StackallocOperator.cs#AsExpression)]
 
   C# 8,0 ' den başlayarak, `stackalloc` <xref:System.Span%601> <xref:System.ReadOnlySpan%601> Aşağıdaki örnekte gösterildiği gibi, bir veya değişkenine izin verildiğinde, diğer ifadelerin içindeki bir ifadeyi kullanabilirsiniz:
 
-  [!code-csharp[stackalloc in nested expressions](snippets/StackallocOperator.cs#Nested)]
+  [!code-csharp[stackalloc in nested expressions](snippets/shared/StackallocOperator.cs#Nested)]
 
   > [!NOTE]
   > <xref:System.Span%601> <xref:System.ReadOnlySpan%601> Mümkün olduğunda yığın tarafından ayrılan bellekle çalışmak için veya türlerini kullanmanızı öneririz.
 
 - Aşağıdaki örnekte gösterildiği gibi bir [işaretçi türü](../../programming-guide/unsafe-code-pointers/pointer-types.md):
 
-  [!code-csharp[stackalloc pointer](snippets/StackallocOperator.cs#AssignToPointer)]
+  [!code-csharp[stackalloc pointer](snippets/shared/StackallocOperator.cs#AssignToPointer)]
 
   Yukarıdaki örnekte gösterildiği gibi, `unsafe` işaretçi türleriyle çalışırken bir bağlam kullanmanız gerekir.
 
@@ -47,7 +47,7 @@ Yığındaki kullanılabilir bellek miktarı sınırlıdır. Yığında çok faz
 
 - Tahsis ettiğiniz bellek miktarını sınırlayın `stackalloc` :
 
-  [!code-csharp[limit stackalloc](snippets/StackallocOperator.cs#LimitStackalloc)]
+  [!code-csharp[limit stackalloc](snippets/shared/StackallocOperator.cs#LimitStackalloc)]
 
   Yığında kullanılabilir bellek miktarı kodun yürütüldüğü ortama bağlı olduğundan, gerçek sınır değerini tanımlarken koruyucu olun.
 
@@ -57,7 +57,7 @@ Yeni ayrılan belleğin içeriği tanımlı değil. Kullanmadan önce onu başla
 
 C# 7,3 ' den başlayarak, dizi başlatıcısı sözdizimini kullanarak yeni ayrılan belleğin içeriğini tanımlayabilirsiniz. Aşağıdaki örnek bunu yapmak için çeşitli yollar göstermektedir:
 
-[!code-csharp[stackalloc initialization](snippets/StackallocOperator.cs#StackallocInit)]
+[!code-csharp[stackalloc initialization](snippets/shared/StackallocOperator.cs#StackallocInit)]
 
 İfadesinde `stackalloc T[E]` , `T` yönetilmeyen bir [tür](../builtin-types/unmanaged-types.md) olmalıdır ve `E` negatif olmayan bir [tamsayı](../builtin-types/integral-numeric-types.md) değeri olarak değerlendirilmelidir.
 

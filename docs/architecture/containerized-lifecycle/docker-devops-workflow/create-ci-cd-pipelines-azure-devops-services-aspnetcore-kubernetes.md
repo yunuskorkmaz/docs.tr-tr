@@ -1,41 +1,41 @@
 ---
 title: Bir Docker uygulaması için dış döngü DevOps iş akışındaki adımlar
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
-ms.date: 02/15/2019
-ms.openlocfilehash: 9fdc5acfd375e4f2266859f061ef1c854286b914
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 1a973407d59484899f99fb6e326b8d7c8e97079b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70295780"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915215"
 ---
-# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-20-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Azure DevOps Services içinde Kapsayıcılar üzerindeki bir .NET Core 2.0 uygulaması için CI/CD işlem hatları oluşturma ve bir Kubernetes kümesine dağıtma
+# <a name="creating-cicd-pipelines-in-azure-devops-services-for-a-net-core-application-on-containers-and-deploying-to-a-kubernetes-cluster"></a>Kapsayıcılar üzerinde bir .NET Core uygulaması ve bir Kubernetes kümesine dağıtım için Azure DevOps Services CI/CD işlem hatları oluşturma
 
-Şekil 5-12'de kod yönetimi, kod derleme, Docker görüntüleri oluşturma, Docker görüntüleri ve son olarak Azure'daki bir Kubernetes kümesine dağıtımı kapsayan uçdan uca DevOps senaryosunu görebilirsiniz.
+Şekil 5-12 ' de, kod yönetimi, kod derleme, Docker görüntüleri oluşturma, Docker görüntüleri bir Docker kayıt defterine gönderme ve son olarak Azure 'daki bir Kubernetes kümesine dağıtım gibi uçtan uca DevOps senaryosunu görebilirsiniz.
 
-![İş akışı: Geliştirme makinesinde başlar. Repo'ya itme, Docker kayıt defterine itilen özel bir görüntü kullanarak yapı/CI görevine başlar ve ardından CD/deploy görevi tarafından SON olarak AKS'ye iterek kullanılır.](media/docker-workflow-ci-cd-aks.png)
+![İş akışı: geliştirme makinesinde başlatılır. Bir depoya gönderim, bir Docker kayıt defterine gönderilen özel bir görüntü kullanarak Build/CI görevine başlar ve ardından CD/dağıt görevi tarafından, son olarak AKS 'ye itilmiş olarak kullanılır.](media/docker-workflow-ci-cd-aks.png)
 
-**Şekil 5-12**. Docker görüntüleri oluşturma ve Azure'daki bir Kubernetes kümesine dağıtma CI/CD senaryosu
+**Şekil 5-12**. Azure 'da Docker görüntüleri oluşturma ve bir Kubernetes kümesine dağıtma CI/CD senaryosu
 
-Yapı/CD ve sürüm/CD olmak üzere iki boru hattının Docker Registry (Docker Hub veya Azure Konteyner Kayıt Defteri gibi) aracılığıyla bağlandığı vurgulanması önemlidir. Docker kayıt defteri, Docker olmadan geleneksel CI/CD sürecine kıyasla en önemli farklardan biridir.
+İki işlem hattı, derleme/CI ve yayın/CD 'nin Docker kayıt defteri (Docker Hub veya Azure Container Registry gibi) aracılığıyla bağlandığını vurgulamak önemlidir. Docker kayıt defteri, Docker olmadan geleneksel bir CI/CD işlemine kıyasla ana farklardan biridir.
 
-Şekil 5-13'te gösterildiği gibi, ilk aşama yapı/CI boru hattıdır. Azure DevOps Hizmetleri'nde kodu derleyecek, Docker görüntülerini oluşturacak ve docker hub veya Azure Konteyner Kayıt Defteri gibi docker registry'ye itecek yapı/CI ardışık hatları oluşturabilirsiniz.
+Şekil 5-13 ' de gösterildiği gibi, ilk aşama Build/CI ardışık düzeni olur. Azure DevOps Services, kodu derlemek, Docker görüntülerini oluşturmak ve bunları Docker Hub veya Azure Container Registry gibi bir Docker kayıt defterine göndermek için derleme/CI işlem hatları oluşturabilirsiniz.
 
-![Azure DevOps tarayıcı görünümü, Oluşturma işlemi görev tanımı.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
+![Azure DevOps 'un tarayıcı görünümü, derleme işlemi görev tanımı.](media/build-ci-pipeline-azure-devops-push-to-docker-registry.png)
 
-**Şekil 5-13**. Azure DevOps'lerde Docker görüntüleri oluşturma ve görüntüleri Docker kayıt defterine itme de geliştirme/CI ardışık
+**Şekil 5-13**. Azure DevOps 'daki derleme/CI işlem hattı Docker görüntülerini oluşturma ve görüntüleri bir Docker kayıt defterine iletme
 
-İkinci aşama bir dağıtım/sürüm ardışık hattı oluşturmaktır. Azure DevOps Hizmetlerinde, Şekil 5-14'te gösterildiği gibi Azure DevOps Hizmetleri için Kubernetes görevlerini kullanarak bir Kubernetes kümesini hedefleyen bir dağıtım ardışık hattı kolayca oluşturabilirsiniz.
+İkinci aşama, bir dağıtım/yayın işlem hattı oluşturmaktır. Azure DevOps Services, Şekil 5-14 ' de gösterildiği gibi, Azure DevOps Services için Kubernetes görevlerini kullanarak bir Kubernetes kümesini hedefleyen bir dağıtım işlem hattını kolayca oluşturabilirsiniz.
 
 ![Azure DevOps tarayıcı görünümü, Kubernetes görev tanımına dağıtın.](media/release-cd-pipeline-azure-devops-deploy-to-kubernetes.png)
 
-**Şekil 5-14**. Bir Kubernetes kümesine dağıtılan Azure DevOps Hizmetleri'nde sürüm/CD ardışık
+**Şekil 5-14**. Bir Kubernetes kümesine dağıtma Azure DevOps Services içindeki yayın/CD işlem hattı
 
-> [! Walkthrough] Kubernetes için eShopModernized dağıtma:
+> [! İzlenecek yol] Kubernetes 'e Eshopmodernıtes dağıtma:
 >
-> Azure DevOps CI/CD ardışık birimlerinin Kubernetes'e dağıtışlarını ayrıntılı bir şekilde gözden geçirmek için aşağıdaki yazıya bakın: \
+> Kubernetes 'e dağıtan Azure DevOps CI/CD işlem hatları hakkında ayrıntılı bir anlatım için şu gönderiyi inceleyin: \
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
->[Önceki](docker-application-outer-loop-devops-workflow.md)
->[Sonraki](../run-manage-monitor-docker-environments/index.md)
+>[Önceki](docker-application-outer-loop-devops-workflow.md) 
+> [Sonraki](../run-manage-monitor-docker-environments/index.md)

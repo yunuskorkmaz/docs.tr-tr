@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 05bc6ce00adc8c874b88ccc8da5afbcfc702585b
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 3728778b31a4b4adc51933e8fdc6287f28e03d83
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555296"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916717"
 ---
 # <a name="pointer-related-operators-c-reference"></a>İşaretçi ile ilgili işleçler (C# Başvurusu)
 
@@ -46,11 +46,11 @@ ms.locfileid: "87555296"
 
 Birli `&` işleç, işleneninin adresini döndürür:
 
-[!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](snippets/shared/PointerOperators.cs#AddressOf)]
 
 `&`İşlecin işleneni sabit bir değişken olmalıdır. *Sabit* değişkenler, [Atık toplayıcısının](../../../standard/garbage-collection/index.md)işleminden etkilenmeyen depolama konumlarında bulunan değişkenlerdir. Yukarıdaki örnekte, yerel değişken `number` yığında bulunduğundan sabit bir değişkendir. Çöp toplayıcısından etkilenebilecek (örneğin, yeniden konumlandırılan) depolama konumlarında bulunan değişkenler *Taşınabilir* değişkenler olarak adlandırılır. Nesne alanları ve dizi öğeleri taşınabilir değişkenlerin örnekleridir. Taşınabilir bir değişkenin adresini, bir [ `fixed` ifadesiyle](../keywords/fixed-statement.md)"düzelmiyor" veya "sabitle" yaparsanız alabilirsiniz. Alınan adres yalnızca bir deyimin bloğunun içinde geçerlidir `fixed` . Aşağıdaki örnek, bir `fixed` deyimin ve işlecin nasıl kullanılacağını gösterir `&` :
 
-[!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](snippets/shared/PointerOperators.cs#AddressOfFixed)]
 
 Bir sabit veya bir değerin adresini alamazsınız.
 
@@ -62,7 +62,7 @@ Binary `&` işleci, Boolean işlenenlerinin [mantıksal ve](boolean-logical-oper
 
 Birli işaretçi yöneltme işleci, `*` işleneninin gösterdiği değişkeni edinir. Başvuru operatörü olarak da bilinir. `*`İşlecin işleneni bir işaretçi türünde olmalıdır.
 
-[!code-csharp[pointer indirection](snippets/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](snippets/shared/PointerOperators.cs#PointerIndirection)]
 
 `*`İşleci türündeki bir ifadeye uygulayamazsınız `void*` .
 
@@ -84,7 +84,7 @@ eşdeğerdir
 
 Aşağıdaki örnek işlecinin kullanımını gösterir `->` :
 
-[!code-csharp[pointer member access](snippets/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](snippets/shared/PointerOperators.cs#MemberAccess)]
 
 `->`İşleci türündeki bir ifadeye uygulayamazsınız `void*` .
 
@@ -94,7 +94,7 @@ Aşağıdaki örnek işlecinin kullanımını gösterir `->` :
 
 Aşağıdaki örnek, bir işaretçi ve işleçle dizi öğelerine nasıl erişileceğini göstermektedir `[]` :
 
-[!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](snippets/shared/PointerOperators.cs#ElementAccess)]
 
 Yukarıdaki örnekte, bir [ `stackalloc` ifade](stackalloc.md) yığında bir bellek bloğu ayırır.
 
@@ -128,7 +128,7 @@ Türünde bir işaretçi `p` ve bir `T*` türün bir ifadesi için `n` örtük o
 
 Aşağıdaki örnek, `+` bir işaretçi ile işlecinin kullanımını gösterir:
 
-[!code-csharp[pointer addition](snippets/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](snippets/shared/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>İşaretçi çıkarması
 
@@ -136,7 +136,7 @@ Aşağıdaki örnek, `+` bir işaretçi ile işlecinin kullanımını gösterir:
 
 Aşağıdaki örnekte işaretçi çıkarma gösterilmektedir:
 
-[!code-csharp[pointer subtraction](snippets/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](snippets/shared/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>İşaretçi artışı ve azaltma
 
@@ -146,7 +146,7 @@ Aşağıdaki örnekte işaretçi çıkarma gösterilmektedir:
 
 Aşağıdaki örnek, hem sonek hem de önek artırma işleçlerinin davranışını gösterir:
 
-[!code-csharp[pointer increment](snippets/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](snippets/shared/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>İşaretçi karşılaştırma işleçleri
 

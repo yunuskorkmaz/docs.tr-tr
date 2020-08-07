@@ -1,13 +1,13 @@
 ---
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 description: Gerçek üretim uygulamalarının, tüm kapsayıcıların sistem durumunu, iş yükünü ve yaşam döngülerini ele alan düzenleyiciler ile dağıtılması ve yönetilmesi gerekir.
-ms.date: 02/15/2019
-ms.openlocfilehash: 459a445258a8d66834814f7b084fd969d005ff45
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/06/2020
+ms.openlocfilehash: 61c66e1f3835df543cbc9ba23d9c098ad52c90cd
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374487"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915468"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
 
@@ -35,10 +35,10 @@ Bir kümenin ve Scheduler 'ın kavramlarıyla ilgili olarak, farklı satıcılar
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>Kapsayıcı Kümelemesi, düzenleme ve zamanlama için yazılım platformları
 
-| Platform | Yorumlar |
+| Platform | Açıklamalar |
 |:---:|:---|
 | **Kubernetes** <br/> ![Kubernetes logosunun bir görüntüsü.](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) , özellikleri düzenlemek için küme altyapısı ve kapsayıcı zamanlamalarından değişen işlevselliği sağlayan açık kaynaklı bir üründür. Ana bilgisayar kümelerinde uygulama kapsayıcılarının dağıtım, ölçeklendirme ve işlemlerini otomatikleştirmenizi sağlar. <br/> <br/> *Kubernetes* , kolay yönetim ve bulma için uygulama kapsayıcılarını mantıksal birimlere gruplandıran kapsayıcı merkezli bir altyapı sağlar. <br/> <br/> *Kubernetes* , Linux 'Ta, Windows 'da daha az olgun bir yerde. |
-| **Azure Kubernetes Hizmeti (AKS)** <br/> ![Azure Kubernetes hizmet logosunun bir görüntüsü.](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini basitleştiren, yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
+| **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes hizmet logosunun bir görüntüsü.](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Azure Kubernetes hizmeti (AKS)](https://azure.microsoft.com/services/kubernetes-service/) , Azure 'Da Kubernetes kümesinin yönetimini, dağıtımını ve işlemlerini basitleştiren, yönetilen bir Kubernetes kapsayıcı düzenleme hizmetidir. |
 | **Azure Service Fabric** <br/> ![Azure Service Fabric logosunun bir görüntüsü.](./media/orchestrate-high-scalability-availability/azure-service-fabric-logo.png) | [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) , uygulama oluşturmaya yönelik bir Microsoft mikro hizmetler platformudur. Bu, hizmetlerin bir [Orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) ve makine kümeleri oluşturur. Service Fabric, Hizmetleri kapsayıcı olarak veya düz süreçler olarak dağıtabilir. Aynı uygulama ve küme içindeki kapsayıcılardaki hizmetler ile süreçlerdeki hizmetleri de karıştırabilirler. <br/> <br/> *Service Fabric* kümeler Azure 'da, şirket içinde veya herhangi bir bulutta dağıtılabilir. Ancak, Azure 'da dağıtım, yönetilen bir yaklaşım ile basitleştirilmiştir. <br/> <br/> *Service Fabric* , [durum bilgisi olan hizmetler](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-services-introduction/) ve [Reliable Actors](https://azure.microsoft.com/documentation/articles/service-fabric-reliable-actors-introduction/)gibi ek ve isteğe bağlı, seçkin [Service Fabric programlama modelleri](https://azure.microsoft.com/documentation/articles/service-fabric-choose-framework/) sağlar. <br/> <br/> *Service Fabric* , Windows 'Da (Windows 'da gelişen yıllar) ve Linux 'ta daha az olgun olması. <br/> <br/> Hem Linux hem de Windows kapsayıcıları 2017 tarihinden itibaren Service Fabric desteklenir. |
 | **Azure Service Fabric ağı** <br/> ![Azure Service Fabric kafes logosunun bir görüntüsü.](./media/orchestrate-high-scalability-availability/azure-service-fabric-mesh-logo.png) | [*Azure Service Fabric ağı*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) aynı güvenilirliği, görev açısından kritik performansı ve ölçeği Service Fabric olarak sunar, ancak aynı zamanda tamamen yönetilen ve sunucusuz bir platform sunar. Bir kümeyi, VM 'Leri, depolamayı veya ağ yapılandırmasını yönetmeniz gerekmez. Yalnızca uygulamanızın geliştirilmesine odaklanırsınız. <br/> <br/> *Service Fabric ağ* , hem Windows hem de Linux kapsayıcıları destekler, böylece dilediğiniz programlama diliyle ve çerçevesiyle geliştirebilirsiniz.
 
@@ -62,7 +62,7 @@ Azure Kubernetes hizmeti, popüler Docker Kümelemesi açık kaynaklı araçlar�
 
 ## <a name="development-environment-for-kubernetes"></a>Kubernetes için geliştirme ortamı
 
-[Docker 'ın 2018 Temmuz 'da duyurduğu](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)geliştirme ortamında, Kubernetes yalnızca [Docker Desktop](https://www.docker.com/community-edition)'ı yükleyerek tek bir geliştirme makinesinde (Windows 10 veya MacOS) da çalıştırılabilir. Şekil 4-8 ' de gösterildiği gibi daha sonra daha fazla tümleştirme testi için buluta dağıtabilirsiniz (AKS).
+[Docker 'ın 2018 Temmuz 'da duyurduğu](https://blog.docker.com/2018/07/kubernetes-is-now-available-in-docker-desktop-stable-channel/)geliştirme ortamında, Kubernetes yalnızca [Docker Desktop](https://www.docker.com/products/docker-desktop)'ı yükleyerek tek bir geliştirme makinesinde (Windows 10 veya MacOS) da çalıştırılabilir. Şekil 4-8 ' de gösterildiği gibi daha sonra daha fazla tümleştirme testi için buluta dağıtabilirsiniz (AKS).
 
 ![Bir geliştirici makinesinde Kubernetes 'i gösteren ve daha sonra AKS 'e dağıtılan diyagram.](./media/orchestrate-high-scalability-availability/kubernetes-development-environment.png)
 

@@ -3,12 +3,12 @@ title: Microsoft. NET. SDK için MSBuild özellikleri
 description: MSBuild özellikleri ve .NET Core SDK anlayan öğeler için başvuru.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 115c4f32e856dee64abe0c607b8ee595a65692e6
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164383"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916249"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild başvurusu
 
@@ -182,7 +182,7 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 
 ### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
 
-`ConcurrentGarbageCollection`Özelliği [Background (eşzamanlı) Çöp toplamanın](../../standard/garbage-collection/background-gc.md) etkinleştirilip etkinleştirilmeyeceğini yapılandırır. `false`Arka plan atık toplamayı devre dışı bırakmak için değerini olarak ayarlayın. Daha fazla bilgi için bkz. [System. GC. eşzamanlı/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent).
+`ConcurrentGarbageCollection`Özelliği [Background (eşzamanlı) Çöp toplamanın](../../standard/garbage-collection/background-gc.md) etkinleştirilip etkinleştirilmeyeceğini yapılandırır. `false`Arka plan atık toplamayı devre dışı bırakmak için değerini olarak ayarlayın. Daha fazla bilgi için bkz. [arka plan GC](../run-time-config/garbage-collector.md#background-gc).
 
 ```xml
 <PropertyGroup>
@@ -202,7 +202,7 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
 
-`RetainVMGarbageCollection`Özelliği, çöp toplayıcıyı, daha sonra kullanılmak üzere veya serbest bırakmak için silinen bellek segmentlerini bir bekleme listesine koymak üzere yapılandırır. Değeri, `true` çöp toplayıcıya kesimleri bir bekleme listesine koymasını söyler. Daha fazla bilgi için bkz. [System. GC. RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm).
+`RetainVMGarbageCollection`Özelliği, çöp toplayıcıyı, daha sonra kullanılmak üzere veya serbest bırakmak için silinen bellek segmentlerini bir bekleme listesine koymak üzere yapılandırır. Değeri, `true` çöp toplayıcıya kesimleri bir bekleme listesine koymasını söyler. Daha fazla bilgi için bkz. [VM 'Yi koruma](../run-time-config/garbage-collector.md#retain-vm).
 
 ```xml
 <PropertyGroup>
@@ -212,7 +212,7 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
 
-`ServerGarbageCollection`Özelliği, uygulamanın [iş istasyonu çöp toplamayı veya sunucu çöp toplamayı](../../standard/garbage-collection/workstation-server-gc.md)kullanıp kullanmadığını yapılandırır. Değerini `true` sunucu çöp toplamayı kullanacak şekilde ayarlayın. Daha fazla bilgi için bkz. [System. GC. Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+`ServerGarbageCollection`Özelliği, uygulamanın [iş istasyonu çöp toplamayı veya sunucu çöp toplamayı](../../standard/garbage-collection/workstation-server-gc.md)kullanıp kullanmadığını yapılandırır. Değerini `true` sunucu çöp toplamayı kullanacak şekilde ayarlayın. Daha fazla bilgi için bkz. [Workstation vs Server](../run-time-config/garbage-collector.md#workstation-vs-server).
 
 ```xml
 <PropertyGroup>

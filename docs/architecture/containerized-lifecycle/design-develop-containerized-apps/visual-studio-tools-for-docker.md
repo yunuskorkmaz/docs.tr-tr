@@ -1,94 +1,93 @@
 ---
-title: Windows'da Docker için Görsel Stüdyo Araçları
-description: Visual Studio 2017 sürüm 15.7 ve sonraki sürümlerde sunulan Docker araçlarını tanıyın.
-ms.date: 02/15/2019
+title: Windows üzerinde Docker için Visual Studio Araçları
+description: Visual Studio 2017 sürüm 15,7 ve sonraki sürümlerde bulunan Docker araçlarını öğrenin.
+ms.date: 08/06/2020
 ms.custom: vs-dotnet
-ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 74cffaae5885a7079ec774b1e8c68241cddda99a
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70295810"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915325"
 ---
-# <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows'da Visual Studio 2017'de Docker Araçlarını Kullanma
+# <a name="use-docker-tools-in-visual-studio-on-windows"></a>Windows üzerinde Visual Studio 'da Docker Araçları kullanma
 
-Visual Studio 2017 sürüm 15.7 ve sonrası sürüm15.7 ve sonraki sürümlerinde yer alan Docker Tools'u kullanırken geliştirici iş akışı Visual Studio Code ve Docker CLI 'yi kullanmaya benzer (aslında aynı Docker CLI'ye dayanır), ancak başlamak daha kolaydır, süreci kolaylaştırır ve oluşturma, çalıştırma ve oluşturma görevleri için daha fazla üretkenlik sağlar. Ayrıca Visual Studio'dan her zamanki `F5` ve `Ctrl+F5` tuşlarla kaplarınızı çalıştırıp hata ayıklayabilir. Kapsayıcıları çözüm düzeyinde aynı `docker-compose.yml` dosyada tanımlanmışsa, tüm bir çözümü hata ayıklayabilirsiniz.
+Visual Studio 2017 sürüm 15,7 ve üzeri sürümlerde bulunan Docker Araçları kullanılırken geliştirici iş akışı, Visual Studio Code ve Docker CLı (aslında aynı Docker CLı 'yi temel alır) kullanılmasına benzer, ancak çalışmaya başlamak, işlemi kolaylaştırmak ve oluşturma, çalıştırma ve oluşturma görevleri için daha fazla verimlilik sağlar. Ayrıca, `F5` Visual Studio 'daki her zamanki ve anahtarlar aracılığıyla Kapsayıcılarınızı çalıştırabilir ve hata ayıklayabilirsiniz `Ctrl+F5` . Her bir çözümün, kapsayıcıları çözüm düzeyinde aynı dosyada tanımlansa bile, tüm çözümde hata ayıklayabilirsiniz `docker-compose.yml` .
 
-## <a name="configure-your-local-environment"></a>Yerel ortamınızı yapılandırın
+## <a name="configure-your-local-environment"></a>Yerel ortamınızı yapılandırma
 
-Docker for Windows'un en son sürümleriyle Docker uygulamalarını geliştirmek her zamankinden daha kolaydır, çünkü kurulum aşağıdaki başvurularda açıklandığı gibi basittir.
+En son Docker for Windows sürümleriyle, aşağıdaki başvurularda açıklandığı gibi, kurulum basit olduğundan Docker uygulamalarının geliştirilmesi her zamankinden daha kolay.
 
 > [!TIP]
-> Windows için Docker'ı yükleme hakkında<https://docs.docker.com/docker-for-windows/>daha fazla bilgi edinmek için ( ).
+> Docker for Windows yükleme hakkında daha fazla bilgi için () bölümüne gidin <https://docs.docker.com/docker-for-windows/> .
 
-## <a name="docker-support-in-visual-studio-2017"></a>Visual Studio 2017'de Docker desteği
+## <a name="docker-support-in-visual-studio"></a>Visual Studio 'da Docker desteği
 
-Bir projeye ekleyebileceğiniz iki Docker desteği düzeyi vardır. ASP.NET Core projelerinde Docker desteğini `Dockerfile` etkinleştirerek projeye bir dosya ekleyebilirsiniz. Bir sonraki düzey, projeye (zaten `Dockerfile` yoksa) bir dosya ve çözüm düzeyinde bir `docker-compose.yml` dosya ekleyen kapsayıcı düzenleme desteğidir. Docker Compose aracılığıyla konteyner orkestrasyon desteği, Visual Studio 2017 sürümleri 15.0 ile 15.7 arasında varsayılan olarak eklenir. Konteyner orkestrasyon desteği Visual Studio 2017 sürümleri 15.8 veya daha sonra bir opt-in özelliğidir. Sürüm 15.8 daha sonra destek Docker Compose ve Hizmet Kumaş.
+Bir projeye ekleyebileceğiniz iki adet Docker desteği düzeyi vardır. ASP.NET Core projelerinde, `Dockerfile` Docker desteğini etkinleştirerek yalnızca projeye bir dosya ekleyebilirsiniz. Bir sonraki düzey, `Dockerfile` Proje (zaten yoksa) ve çözüm düzeyinde bir dosya ekleyen kapsayıcı düzenleme destedir `docker-compose.yml` . Docker Compose aracılığıyla kapsayıcı düzenleme desteği, Visual Studio 2017 sürüm 15,0 ' den 15,7 ' de varsayılan olarak eklenir. Kapsayıcı düzenleme desteği, Visual Studio 2017 sürüm 15,8 veya üzeri bir katılım özelliğidir. Visual Studio 2019 ve üzeri, **Kubernetes/Held** dağıtımını da destekler.
 
-Şekil 4-31'de gösterildiği **gibi, Çözüm Gezgini**>'ndeki bir ASP.NET Çekirdek projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsünde) > Docker Desteği ve Ekle > **Docker Desteği** ve **Ekle** komutları bulunur:
+**> Docker desteği ekleme** ve **ekleme > kapsayıcı Orchestrator destek** komutları, Şekil 4-31 ' de gösterildiği gibi **Çözüm Gezgini**içindeki bir ASP.NET Core projesi için proje düğümünün sağ tıklama menüsünde (veya bağlam menüsü) bulunur:
 
-![Visual Studio'da Docker Destek menüsü ekle seçeneği](./media/add-docker-support-menu.png)
+![Visual Studio 'da Docker desteği Ekle menü seçeneği](media/add-docker-support-menu.png)
 
-**Şekil 4-31**. Visual Studio 2017 projesine Docker desteği ekleme
+**Şekil 4-31**. Visual Studio 2019 projesine Docker desteği ekleme
 
 ### <a name="add-docker-support"></a>Docker desteği ekleme
 
-**Çözüm Gezgini'nde**Docker Desteği **Ekle'yi** > seçerek varolan bir ASP.NET Core projesine Docker**desteği** ekleyebilirsiniz. Şekil 4-32'de gösterildiği gibi **Yeni Proje** iletişim kutusunda **Tamam'ı** tıklattıktan sonra açılan Yeni ASP.NET Çekirdek **Web Uygulaması** iletişim kutusunda Docker **Desteğini Etkinleştir'i** seçerek proje oluşturma sırasında Docker desteğini de etkinleştirebilirsiniz.
+Önceki bölümde gösterildiği gibi, mevcut bir uygulamaya Docker desteği ekleme seçeneğinin yanı sıra, Şekil 4-32 ' de gösterildiği gibi **Yeni proje** Iletişim kutusunda **Tamam** ' a tıkladıktan sonra açılan **Yeni ASP.NET Core Web uygulaması** iletişim kutusunda **Docker desteğini etkinleştir** ' i seçerek proje oluşturma sırasında Docker desteğini de etkinleştirebilirsiniz.
 
-![Visual Studio'da yeni ASP.NET Core web uygulaması için Docker Desteği etkinleştirin](./media/enable-docker-support-visual-studio.png)
+![Visual Studio 'da yeni ASP.NET Core Web uygulaması için Docker desteğini etkinleştir](media/enable-docker-support-visual-studio.png)
 
-**Şekil 4-32**. Visual Studio 2017'de proje oluşturma sırasında Docker desteğini etkinleştirin
+**Şekil 4-32**. Visual Studio 2019 ' de proje oluşturma sırasında Docker desteğini etkinleştir
 
-Docker desteği eklediğinizde veya etkinleştirdiğinizde, Visual Studio projeye bir *Dockerfile* dosyası ekler.
+Docker desteğini eklediğinizde veya etkinleştirdiğinizde, Visual Studio projeye bir _Dockerfile_ dosyası ekler ve bu, Çözümdeki tüm gerekli projeye yönelik başvuruları içerir.
 
-> [!NOTE]
-> Şekil 4-33'te gösterildiği gibi ASP.NET bir proje (.NET Core projesi değil,.NET Core projesi) için proje oluşturma sırasında Docker Compose desteğini etkinleştirdiğinizde, konteyner orkestrasyonu desteği de eklenir.
+### <a name="add-container-orchestration-support"></a>Kapsayıcı düzenleme desteği ekle
 
-![ASP.NET bir proje için Docker'ın destek oluşturmasını etkinleştirme](media/enable-docker-compose-support.png)
+Çok kapsayıcılı bir çözüm oluşturmak istediğinizde, projelerinize kapsayıcı düzenleme desteği ekleyin. Bu, aynı _Docker-Compose. yıml_ dosyasında tanımlandıklarında bir kapsayıcı grubunu (bir bütün çözüm) aynı anda çalıştırmanıza ve hata ayıklamanıza olanak tanır.
 
-**Şekil 4-33**. Visual Studio 2017'de ASP.NET projesi için Docker Compose desteğini etkinleştirme
+Kapsayıcı düzenleme desteği eklemek için **Çözüm Gezgini**çözüm veya proje düğümüne sağ tıklayın ve **> kapsayıcı düzenleme desteği ekle**' yi seçin. Ardından, kapsayıcıları yönetmek için **Kubernetes/Held** veya **Docker Compose** seçin.
 
-### <a name="add-container-orchestration-support"></a>Konteyner düzenleme desteği ekle
+Projenize kapsayıcı düzenleme desteğini ekledikten sonra şekil 4-33 ' de gösterildiği gibi, projeye eklenen bir Dockerfile ve **Çözüm Gezgini**çözüme eklenen bir **Docker-Compose** klasörü görürsünüz:
 
-Çok kapsayıcılı bir çözüm oluşturmak istediğinizde, projelerinize konteyner düzenleme desteği ekleyin. Bu, aynı *docker-compose.yml* dosyasında tanımlanmışsa, bir kapsayıcı grubunu (tam çözüm) aynı anda çalıştırmanızı ve hata ayıklamanızı sağlar.
+![Visual Studio 'da Çözüm Gezgini Docker dosyaları](media/docker-support-solution-explorer.png)
 
-Kapsayıcı orkestrasyon desteği eklemek **için, Solution Explorer'daki**çözüm veya proje düğümüne sağ tıklayın ve **Kapsayıcı Düzenleme Desteği > ekle'yi**seçin. Ardından, konteynerleri yönetmek için **Docker Compose** veya **Service Fabric'i** seçin.
+**Şekil 4-33**. Visual Studio 2019 ' de Çözüm Gezgini Docker dosyaları
 
-Projenize kapsayıcı düzenleme desteği ekledikten sonra, projeye bir Dockerfile ve Şekil 4-34'te gösterildiği gibi **Solution Explorer'da**çözüme eklenen **docker-compose** klasörü görürsünüz:
-
-![Visual Studio'da Solution Explorer'da Docker dosyaları](media/docker-support-solution-explorer.png)
-
-**Şekil 4-34**. Visual Studio 2017'de Solution Explorer'da Docker dosyaları
-
-*Docker-compose.yml* zaten varsa, Visual Studio sadece yapılandırma kodu gerekli satırları ekler.
+_Docker-Compose. yml_ zaten varsa, Visual Studio buna yalnızca gerekli olan yapılandırma kodu satırlarını ekler.
 
 ## <a name="configure-docker-tools"></a>Docker araçlarını yapılandırma
 
-Ana menüden **Araçlar > Seçenekleri'ni**seçin ve Kapsayıcı Araçları **> Ayarları'nı**genişletin. Kapsayıcı araçları ayarları görüntülenir.
+Ana menüden **araçlar > seçenekler**' i seçin ve **kapsayıcı araçları > ayarlar**' ı genişletin. Kapsayıcı araçları ayarları görüntülenir.
 
-![Visual Studio Docker araçları seçenekleri, gösteriliyor: Proje yükünde gerekli Docker görüntülerini otomatik olarak çekin, arka planda kapları otomatik olarak başlatın, çözüm kapanışında kapları otomatik olarak öldürün ve SSL sertifikasına güvenmek için istekte bulunmayın.](./media/visual-studio-docker-tools-options.png)
+![Visual Studio Docker Araçları seçenekleri, üç sayfa gösteriliyor: genel, tek proje ve Docker Compose, makale metnindeki ayrıntılar.](media/visual-studio-docker-tools-options.png)
 
-**Şekil 4-35**. Docker Araçları Seçenekleri
+**Şekil 4-34**. Docker Araçları seçenekleri
 
-Aşağıdaki tablo, bu seçenekleri nasıl ayarlayacağınınıza karar vermenize yardımcı olabilir.
+Aşağıdaki tablo, bu seçeneklerin nasıl ayarlanacağına karar vermenize yardımcı olur.
 
-| Adı | Varsayılan Ayar | Uygulanan Öğe | Açıklama |
-| -----|:---------------:|:----------:| ----------- |
-| Proje yükünde gerekli Docker görüntülerini otomatik olarak çekin | Açık | Docker Oluştur | Proje yüklerken daha yüksek performans için Visual Studio arka planda docker çekme işlemine başlar, böylece kodunuzu çalıştırmaya hazır olduğunuzda görüntü zaten indirilir veya indirme işleminde olur. Projeleri ve gözatma kodunu yüklüyorsanız, ihtiyacınız olmayan kapsayıcı görüntülerini indirmemek için bunu kapatabilirsiniz. |
-| Arka planda kapsayıcıları otomatik olarak başlatın | Açık | Docker Oluştur | Yine artan performans için Visual Studio, kapsayıcınızı inşa edip çalıştırdığınızda ses montajlarına hazır bir kapsayıcı oluşturur. Kapsayıcınızın ne zaman oluşturulduğunu denetlemek istiyorsanız, bunu kapatın. |
-| Çözelti kapatmada otomatik olarak kapları öldürmek | Açık | Docker Oluştur | Çözümünüzü kapattıktan veya Visual Studio'yu kapattıktan sonra çalışmaya devam etmesini istiyorsanız bunu kapatın. |
-| Localhost SSL sertifikasına güvenmek için istekte yok | Kapalı | ASP.NET Core 2.2 projeleri | Localhost SSL sertifikasına güvenilmezse, bu onay kutusu işaretlenmedikçe Visual Studio projenizi her çalıştırdığınızda ister. |
+| Sayfa/ayar                                |  Varsayılan ayar   | Açıklama                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------- | :----------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Genel sayfa**                            |
+| Gerekirse Docker Desktop 'ı yükler            |     Bana sor      |
+| Gerekirse Docker Desktop 'ı Başlat              |     Bana sor      |
+| SSL sertifikası ASP.NET Core güven          |     Bana sor      | Localhost SSL sertifikası güvenilir (ile) olarak işaretlenmemişse `dotnet dev-certs https --trust` , projenizi her çalıştırdığınızda Visual Studio sorar.                                                                                                                                                                                                                                                    |
+| **Tek proje sayfası**                     |
+| Proje açıkken gerekli Docker görüntülerini çekme |        Doğru        | Projeyi çalıştırırken daha yüksek performans için, Visual Studio arka planda bir Docker çekme işlemi başlatır, böylece kodunuzu çalıştırmaya hazırsanız görüntü zaten indirilmeye devam eder ve indirme sürecinde olur. Yalnızca projeler ve tarama kodu yüklüyorsanız, gerek duymadığınız kapsayıcı görüntülerini indirmeyi önlemek için bunu kapatabilirsiniz. Bu, açık proje Kullanıcı deneyimini yavaşlatabilir. |
+| Proje yükünde güncelleştirilmiş Docker görüntülerini çekme  | .NET Core projeleri | Proje açıkken en son güncelleştirmeleri almak için mevcut görüntülere yönelik güncelleştirmeleri çekin. Bu, açık proje Kullanıcı deneyimini yavaşlatabilir.                                                                                                                                                                                                                                                                                          |
+| Proje kapatıldığında kapsayıcıları kaldır          |        Doğru        | Projeyi kapatmada Temizleme bu, proje Kullanıcı deneyimini kapatır, ancak genellikle hızlıdır.                                                                                                                                                                                                                                                                                                            |
+| Açık proje üzerinde kapsayıcıları Çalıştır              |        Doğru        | Projeyi çalıştırırken daha yüksek performans için, Visual Studio Çözümdeki tüm kapsayıcıları başlatacak. Bu, açık proje Kullanıcı deneyimini yavaşlatabilir.                                                                                                                                                                                                                                                        |
+| **Docker Compose**                          |                    | Docker Compose sayfası, tek proje sayfasıyla aynı ayarları içerir, ancak bunlar çok Kapsayıcılı çözümler için geçerlidir.                                                                                                                                                                                                                                                                                           |
 
 > [!WARNING]
-> Localhost SSL sertifikasına güvenilmezse ve istek isteni bastırmak için kutuyu işaretleseniz, HTTPS web istekleri uygulamanızda veya hizmetinizde çalışma zamanında başarısız olabilir. Bu durumda, Onay **kutusunu işaretlenin,** projenizi çalıştırın ve istek anında güven belirtin.
+> Localhost SSL sertifikasına güvenilmiyor ve seçeneğini **hiçbir zaman**olarak AYARLARSANıZ, HTTPS Web istekleri uygulamanızdaki veya hizmetinizdeki çalışma zamanında başarısız olabilir. Bu durumda, bir kez daha önce **sorulması** için değeri yeniden, daha iyi bir şekilde ayarlamak için komutunu kullanarak geliştirme makinenizdeki sertifikalara güvenin `dotnet dev-certs https --trust` .
 
 > [!TIP]
-> Docker için Visual Studio Tools hizmetlerinin uygulanması ve kullanımı hakkında daha fazla bilgi için aşağıdaki makaleleri okuyun:
+> Hizmet uygulamasıyla ilgili daha fazla ayrıntı ve Docker için Visual Studio Araçları kullanımı için aşağıdaki makaleleri okuyun:
 >
->Uygulamaları yerel bir Docker konteynerinde hata ayıklama:<https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
+> Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama:<https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >
->Visual Studio'ASP.NET bir kapsayıcıyı kullanarak konteyner kayıt defterine dağıtın:<https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
+> Visual Studio 'Yu kullanarak bir kapsayıcı kayıt defterine ASP.NET kapsayıcısını dağıtma:<https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
->[!div class="step-by-step"]
->[Önceki](docker-apps-inner-loop-workflow.md)
->[Sonraki](set-up-windows-containers-with-powershell.md)
+> [!div class="step-by-step"]
+> [Önceki](docker-apps-inner-loop-workflow.md) 
+>  [Sonraki](set-up-windows-containers-with-powershell.md)

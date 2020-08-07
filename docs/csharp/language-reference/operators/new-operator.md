@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 7e2f1a52f1681e0cc454da8cba324dd1b5995f11
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 42128cf23fe2410bf33bb40131843325939646de
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855107"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916765"
 ---
 # <a name="new-operator-c-reference"></a>New işleci (C# Başvurusu)
 
@@ -23,21 +23,21 @@ ms.locfileid: "87855107"
 
 Bir türün yeni bir örneğini oluşturmak için, genellikle işlecini kullanarak bu türdeki [oluşturuculardan](../../programming-guide/classes-and-structs/constructors.md) birini çağırın `new` :
 
-[!code-csharp-interactive[invoke constructor](snippets/NewOperator.cs#Constructor)]
+[!code-csharp-interactive[invoke constructor](snippets/shared/NewOperator.cs#Constructor)]
 
 [object or collection initializer](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) `new` Aşağıdaki örnekte gösterildiği gibi, bir ifadede bir nesne oluşturmak ve başlatmak için işleciyle bir nesne veya koleksiyon başlatıcısı kullanabilirsiniz:
 
-[!code-csharp-interactive[constructor with initializer](snippets/NewOperator.cs#ConstructorWithInitializer)]
+[!code-csharp-interactive[constructor with initializer](snippets/shared/NewOperator.cs#ConstructorWithInitializer)]
 
 ## <a name="array-creation"></a>Dizi oluşturma
 
 `new`Aşağıdaki örnekte gösterildiği gibi, bir dizi örneği oluşturmak için işlecini de kullanabilirsiniz:
 
-[!code-csharp-interactive[create array](snippets/NewOperator.cs#Array)]
+[!code-csharp-interactive[create array](snippets/shared/NewOperator.cs#Array)]
 
 Dizi başlatma söz dizimini kullanarak bir dizi örneği oluşturun ve tek bir deyimdeki öğelerle doldurun. Aşağıdaki örnek, bunu nasıl yapabilmenizin çeşitli yollarını göstermektedir:
 
-[!code-csharp-interactive[initialize array](snippets/NewOperator.cs#ArrayInitialization)]
+[!code-csharp-interactive[initialize array](snippets/shared/NewOperator.cs#ArrayInitialization)]
 
 Diziler hakkında daha fazla bilgi için bkz. [diziler](../../programming-guide/arrays/index.md).
 
@@ -45,7 +45,7 @@ Diziler hakkında daha fazla bilgi için bkz. [diziler](../../programming-guide/
 
 [Anonim türün](../../programming-guide/classes-and-structs/anonymous-types.md)bir örneğini oluşturmak için `new` işleç ve nesne Başlatıcısı söz dizimini kullanın:
 
-[!code-csharp-interactive[anonymous type](snippets/NewOperator.cs#AnonymousType)]
+[!code-csharp-interactive[anonymous type](snippets/shared/NewOperator.cs#AnonymousType)]
 
 ## <a name="destruction-of-type-instances"></a>Tür örneklerinin yok edilmesi
 

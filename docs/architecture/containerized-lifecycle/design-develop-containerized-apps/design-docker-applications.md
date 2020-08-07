@@ -1,22 +1,22 @@
 ---
 title: Docker uygulamaları tasarlama
-description: Burada mikro hizmetler mimarisi için ayrıntılı bir kılavuza bir başvuru bulabilirsiniz, çünkü bu kılavuzda ayrıntılı olarak belirtilmeyecek bir konudur.
-ms.date: 02/15/2019
-ms.openlocfilehash: b8a08658ec6c3df3e1aed596a0240223768dd647
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+description: Bu kılavuzda ayrıntılı olmadığından, mikro hizmetler mimarisine yönelik derinlemesine bir kılavuza yönelik bir başvuru bulabilirsiniz.
+ms.date: 08/06/2020
+ms.openlocfilehash: b63d4344abb358a393587bdacf91f6091b531af0
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738458"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87915984"
 ---
 # <a name="design-docker-applications"></a>Docker uygulamaları tasarlama
 
-Bölüm 1 konteyner ve Docker ile ilgili temel kavramları tanıttı. Bu bilgiler, başlamak için gereken temel bilgi düzeyidir. Ancak, kurumsal uygulamalar karmaşık olabilir ve tek bir hizmet veya kapsayıcı yerine birden çok hizmetten oluşabilir. İsteğe bağlı kullanım örnekleri için, Hizmet Odaklı Mimari (SOA) ve daha gelişmiş microservices kavramları ve konteyner orkestrasyon kavramları gibi tasarıma ek yaklaşımları bilmeniz gerekir. Bu belgenin kapsamı mikro hizmetlerle sınırlı değildir, ancak herhangi bir Docker uygulama yaşam döngüsüyle sınırlı değildir, bu nedenle, düzenli SOA, arka plan görevleri veya işleri, hatta yekpare uygulama dağıtım yaklaşımları ile kaplar ve Docker kullanabilirsiniz, çünkü derinlemesine mikrohizmetler mimarisi keşfetmek değildir.
+Bölüm 1, kapsayıcılar ve Docker ile ilgili temel kavramları sunmuştur. Bu bilgiler, başlamak için ihtiyacınız olan temel bilgi düzeyidir. Ancak kurumsal uygulamalar, tek bir hizmet veya kapsayıcı yerine karmaşık ve birden çok hizmetten oluşabilir. Bu isteğe bağlı kullanım örnekleri için, hizmet odaklı mimari (SOA) ve daha gelişmiş mikro hizmet kavramları ve kapsayıcı düzenleme kavramları gibi tasarıma yönelik ek yaklaşımlar bilmeniz gerekir. Bu belgenin kapsamı mikro hizmetlerle sınırlı değildir, ancak herhangi bir Docker uygulaması yaşam döngüsü ile, kapsayıcıları ve Docker 'ı normal SOA, arka plan görevleri veya işleriyle, hatta tek parçalı uygulama dağıtımı yaklaşımları ile de kullanabileceğiniz için, mikro hizmetler mimarisini derinlemesine bir şekilde araştırmaz.
 
-**Daha fazla bilgi** Kurumsal uygulamalar ve mikrohizmetler mimarisi hakkında daha fazla bilgi edinmek [için NET Microservices: Architecture for Containerized .NET Applications](../../microservices/index.md) adlı rehberi ni <https://aka.ms/MicroservicesEbook>okuyabilirsiniz.
+**Daha fazla bilgi** Kurumsal uygulamalar ve mikro hizmetler mimarisi hakkında ayrıntılı bilgi edinmek için, ağ mikro hizmetleri: ' dan da indirebileceğiniz [Kapsayıcılı .NET uygulamaları Için mimari](../../microservices/index.md) makalesini okuyun <https://aka.ms/MicroservicesEbook> .
 
-Ancak, uygulama yaşam döngüsüne ve DevOps'lere girmeden önce, uygulamanızı nasıl tasarlayıp oluşturacağınız ve tasarım seçenekleriniz nelerdir bilmek önemlidir.
+Ancak, uygulama yaşam döngüsü ve DevOps 'a girmeden önce, uygulamanızı nasıl tasarlayacağınızı ve tasarlayacağınızı ve tasarım seçimlerinizle karşılaşabileceğinizi bilmeniz önemlidir.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)
->[Sonraki](common-container-design-principles.md)
+>[Önceki](index.md) 
+> [Sonraki](common-container-design-principles.md)

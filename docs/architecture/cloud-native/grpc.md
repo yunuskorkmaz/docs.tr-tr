@@ -6,12 +6,12 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 05/13/2020
-ms.openlocfilehash: 6b41363008405032f4233448f134a8a602dbd26a
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4a0c88472d2b19efb2ff0f58395003b1b6409131
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173165"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914898"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -31,10 +31,11 @@ gRPC, Java, JavaScript, C#, Go, Swift ve NodeJS dahil birçok popüler geliştir
 
 gRPC, Aktarım Protokolü için HTTP/2 kullanır. HTTP 1,1 ile uyumlu olmakla birlikte, HTTP/2 özellikleri birçok gelişmiş özelliğe sahiptir:
 
-- Verileri düz metin olarak gönderen HTTP 1,1 'nin aksine veri aktarımı için bir ikili protokol.
+- Veri aktarımı için bir ikili çerçeveleme Protokolü-metin tabanlı HTTP 1,1 ' den farklı.
 - Aynı bağlantı üzerinden birden çok paralel istek göndermek için çoğullama desteği-HTTP 1,1, işleme bir kerede tek bir istek/yanıt iletisi ile sınırlar.
 - Hem istemci isteklerini hem de sunucu yanıtlarını aynı anda göndermek için çift yönlü tam çift yönlü iletişim.
 - Zaman uyumsuz akış büyük veri kümelerine yönelik istekleri ve yanıtları etkinleştiren yerleşik akış.
+- Ağ kullanımını azaltan üstbilgi sıkıştırması.
 
 gRPC hafif ve yüksek performanslı. % 60-80 daha küçük iletilerle JSON serileştirmesine kadar daha hızlı olabilir. Microsoft [Windows Communication Foundation (WCF)](https://docs.microsoft.com/dotnet/framework/wcf/whats-wcf) ayrıştırmasına göre, GRPC performansı, yüksek oranda Iyileştirilmiş [NetTcp bağlamalarının](https://docs.microsoft.com/dotnet/api/system.servicemodel.nettcpbinding?view=netframework-4.8)hızını ve verimliliğini aşmaktadır. Microsoft Stack ' i tercih eden NetTCP 'nin aksine gRPC platformlar arası bir platformdur.
 
@@ -84,7 +85,7 @@ GRPC 'yi aşağıdaki senaryolar için tercih edin:
 - Noktadan noktaya gerçek zamanlı iletişim-gRPC, yoklama yapmadan iletileri gerçek zamanlı olarak gönderebilir ve iki yönlü akış için mükemmel destek sağlar.
 - Ağ kısıtlamalı ortamlar – ikili gRPC iletileri her zaman eşdeğer bir metin tabanlı JSON iletisinden küçüktür.
 
-Bu yazma sırasında, gRPC öncelikle arka uç hizmetleriyle birlikte kullanılır. Modern tarayıcıların çoğu, ön uç gRPC istemcisini desteklemek için gereken HTTP/2 denetimi düzeyini sağlayamaz. Yani, JavaScript veya teknolojilerle oluşturulmuş tarayıcı tabanlı uygulamalardan gRPC iletişimini sağlayan [erken bir girişim](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/) vardır Blazor WebAssembly . [.Net Için GRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) , ASP.NET Core GRPC uygulamasının tarayıcı uygulamalarında GRPC özelliklerini desteklemesini sağlar:
+Bu yazma sırasında, gRPC öncelikle arka uç hizmetleriyle birlikte kullanılır. Modern tarayıcılar bir ön uç gRPC istemcisini desteklemek için gereken HTTP/2 denetimi düzeyini sağlayamaz. Yani, JavaScript veya teknolojilerle oluşturulmuş tarayıcı tabanlı uygulamalardan gRPC iletişimini sağlayan [.net Ile GRPC-Web](https://devblogs.microsoft.com/aspnet/grpc-web-for-net-now-available/) desteği vardır Blazor WebAssembly . [GRPC-Web](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md) , ASP.NET Core GRPC uygulamasının tarayıcı uygulamalarında GRPC özelliklerini desteklemesini sağlar:
 
 - Türü kesin belirlenmiş, kod tarafından oluşturulan istemciler
 - Küçük mesajlar

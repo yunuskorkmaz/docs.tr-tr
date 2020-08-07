@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: 780503288d3474cd99a595bdbd52c3a5abba5308
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: bf88c14b2aeed94a548b6116749fa8669576afe1
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990229"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916997"
 ---
 # <a name="background-garbage-collection"></a>Arka plan atık toplama
 
 Arka plan atık toplama (GC) içinde, 2. nesil toplama işlemi devam ederken, kısa ömürlü nesiller (0 ve 1) gerektiği şekilde toplanır. Arka plan atık toplama, arka plan veya sunucu GC olmasına bağlı olarak bir veya daha fazla adanmış iş parçacığında gerçekleştirilir ve yalnızca 2. nesil koleksiyonlar için geçerlidir.
 
-Arka plan atık toplama varsayılan olarak etkindir. .NET Framework uygulamalarında [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma ayarıyla etkinleştirilebilir veya devre dışı bırakılabilir ve .NET Core uygulamalarında [System. GC. eşzamanlı](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) ayarı.
+Arka plan atık toplama varsayılan olarak etkindir. .NET Framework uygulamalarında [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) yapılandırma ayarıyla etkinleştirilebilir veya devre dışı bırakılabilir, .NET Core ve .NET 5 ve sonraki uygulamalardaki [System. GC. eşzamanlı](../../core/run-time-config/garbage-collector.md#background-gc) ayarı.
 
 > [!NOTE]
 > Arka plan atık toplama, [eşzamanlı atık toplamayı](#concurrent-garbage-collection) değiştirir ve .NET Framework 4 ve sonraki sürümlerde kullanılabilir. .NET Framework 4 ' te yalnızca *iş istasyonu* çöp toplama için desteklenir. .NET Framework 4,5 ' den başlayarak, arka plan atık toplama, hem *iş istasyonu* hem de *sunucu* çöp toplama için kullanılabilir.

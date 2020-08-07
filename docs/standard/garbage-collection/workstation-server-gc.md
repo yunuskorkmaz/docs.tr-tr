@@ -7,12 +7,12 @@ helpviewer_keywords:
 - garbage collection, server
 - workstation garbage collection
 - server garbage collection
-ms.openlocfilehash: 5ff2b1fe2f997913e071f35ec5abb167ed757608
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 640b5f42c1f841c2537284e4721e827248e3d300
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306701"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87917011"
 ---
 # <a name="workstation-and-server-garbage-collection"></a>İş istasyonu ve sunucu atık toplama
 
@@ -40,7 +40,7 @@ Aşağıdaki çizimde, bir sunucusunda çöp toplamayı gerçekleştiren adanmı
 
 - Koleksiyon, çöp toplamayı tetikleyen ve aynı önceliğe kalan Kullanıcı iş parçacığında oluşur. Kullanıcı iş parçacıkları genellikle normal öncelikte çalıştığı için çöp toplayıcı (normal bir öncelikli iş parçacığı üzerinde çalışır), CPU süresi için diğer iş parçacıklarıyla rekabet etmelidir. (Yerel kod çalıştıran iş parçacıkları sunucu veya iş istasyonu çöp toplamadan askıya alınmaz.)
 
-- İş istasyonu çöp toplama her zaman, [yapılandırma ayarından](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)bağımsız olarak yalnızca bir işlemciye sahip olan bir bilgisayarda kullanılır.
+- İş istasyonu çöp toplama her zaman, [yapılandırma ayarından](../../core/run-time-config/garbage-collector.md#workstation-vs-server)bağımsız olarak yalnızca bir işlemciye sahip olan bir bilgisayarda kullanılır.
 
 ### <a name="server-gc"></a>Sunucu GC
 

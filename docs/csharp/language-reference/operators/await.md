@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: f4b0ef501a30d3dffc1346c805ce0161ca4cac90
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555441"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916916"
 ---
 # <a name="await-operator-c-reference"></a>Await işleci (C# Başvurusu)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87555441"
 
 Aşağıdaki örnekte, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> yöntemi, `Task<byte[]>` tamamlandığında bir bayt dizisi üreten zaman uyumsuz bir işlemi temsil eden örneğini döndürür. İşlem tamamlanana kadar `await` operatör yöntemi askıya alır `DownloadDocsMainPageAsync` . `DownloadDocsMainPageAsync`Askıya alındığında, denetim, çağıran olan yöntemine döndürülür `Main` `DownloadDocsMainPageAsync` . Yöntemi, `Main` yöntemi tarafından gerçekleştirilen zaman uyumsuz işlemin sonucuna ihtiyaç duyuncaya kadar yürütülür `DownloadDocsMainPageAsync` . <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>Tüm baytlar aldığında yöntemin geri kalanı `DownloadDocsMainPageAsync` değerlendirilir. Bundan sonra yöntemin geri kalanı `Main` değerlendirilir.
 
-[!code-csharp[await example](snippets/AwaitOperator.cs)]
+[!code-csharp[await example](snippets/shared/AwaitOperator.cs)]
 
 Önceki örnekte, C# 7,1 ile başlayarak [zaman uyumsuz `Main` yöntemi](../../programming-guide/main-and-command-args/index.md)kullanılmaktadır. Daha fazla bilgi için, [ana yöntem bölümünde await işlecine](#await-operator-in-the-main-method) bakın.
 

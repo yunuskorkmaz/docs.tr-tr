@@ -35,12 +35,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 2a67542e25ddb258602b4005a71b565cf6522917
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 00b1523029ed6562fda6947415029cd3b7a9b405
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855146"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916900"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Boole mantıksal işleçleri (C# Başvurusu)
 
@@ -56,7 +56,7 @@ Aşağıdaki işleçler [bool](../builtin-types/bool.md) işlenenleri olan mant�
 
 Birli önek `!` işleci, işleneninin mantıksal olumsuzunu hesaplar. Diğer bir deyişle, `true` işlenen olarak değerlendirilirse, ve işleneni şunu değerleniyorsa üretir `false` `false` `true` .
 
-[!code-csharp-interactive[logical negation](snippets/BooleanLogicalOperators.cs#Negation)]
+[!code-csharp-interactive[logical negation](snippets/shared/BooleanLogicalOperators.cs#Negation)]
 
 C# 8,0 ' den başlayarak birli sonek `!` operatörü [null-forverme işleçtir](null-forgiving.md).
 
@@ -68,7 +68,7 @@ C# 8,0 ' den başlayarak birli sonek `!` operatörü [null-forverme işleçtir](
 
 Aşağıdaki örnekte, işlecinin sağ işleneni, `&` sol işlenenin değerinden bağımsız olarak gerçekleştirilen bir yöntem çağrıdır:
 
-[!code-csharp-interactive[logical AND](snippets/BooleanLogicalOperators.cs#And)]
+[!code-csharp-interactive[logical AND](snippets/shared/BooleanLogicalOperators.cs#And)]
 
 [Koşullu MANTıKSAL and işleci](#conditional-logical-and-operator-) `&&` Ayrıca IŞLENENLERININ mantıksal ve işlecini hesaplar, ancak sol işlenen olarak değerlendirilirse sağ işleneni değerlendirmez `false` .
 
@@ -78,7 +78,7 @@ Aşağıdaki örnekte, işlecinin sağ işleneni, `&` sol işlenenin değerinden
 
 `^`İşleci, işlenenlerinin MANTıKSAL XOR 'ı olarak da bilinen mantıksal dışlamalı veya hesaplar. Sonucu olarak `x ^ y` değerlendirilir ve değerlendiriyor ya da olarak değerlendirilir ve olarak değerlendirilir `true` `x` `true` `y` `false` `x` `false` `y` `true` . Aksi takdirde, sonuç olur `false` . Diğer bir deyişle, `bool` işleç, işlenenleri `^` [eşitsizlik işleciyle](equality-operators.md#inequality-operator-) aynı sonucu hesaplar `!=` .
 
-[!code-csharp-interactive[logical exclusive OR](snippets/BooleanLogicalOperators.cs#Xor)]
+[!code-csharp-interactive[logical exclusive OR](snippets/shared/BooleanLogicalOperators.cs#Xor)]
 
 [İntegral sayısal türlerin](../builtin-types/integral-numeric-types.md)işlenenleri için, `^` işleç [bit DÜZEYINDE mantıksal dışlamalı veya](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) işlenenleri hesaplar.
 
@@ -90,7 +90,7 @@ Aşağıdaki örnekte, işlecinin sağ işleneni, `&` sol işlenenin değerinden
 
 Aşağıdaki örnekte, işlecinin sağ işleneni, `|` sol işlenenin değerinden bağımsız olarak gerçekleştirilen bir yöntem çağrıdır:
 
-[!code-csharp-interactive[logical OR](snippets/BooleanLogicalOperators.cs#Or)]
+[!code-csharp-interactive[logical OR](snippets/shared/BooleanLogicalOperators.cs#Or)]
 
 [Koşullu MANTıKSAL or işleci](#conditional-logical-or-operator-) `||` Ayrıca, işlenenlerinin mantıksal veya işlecini hesaplar, ancak sol işlenen olarak değerlendirilirse sağ işleneni değerlendirmez `true` .
 
@@ -102,7 +102,7 @@ Aşağıdaki örnekte, işlecinin sağ işleneni, `|` sol işlenenin değerinden
 
 Aşağıdaki örnekte, işlecinin sağ işleneni, `&&` sol taraftaki işlenen şu şekilde değerlendirildiğinde gerçekleştirilmeyen bir yöntem çağrıdır `false` :
 
-[!code-csharp-interactive[conditional logical AND](snippets/BooleanLogicalOperators.cs#ConditionalAnd)]
+[!code-csharp-interactive[conditional logical AND](snippets/shared/BooleanLogicalOperators.cs#ConditionalAnd)]
 
 [MANTıKSAL and işleci](#logical-and-operator-) , `&` işlenenlerinin mantıksal ve işlecini de hesaplar, ancak her iki işleneni de değerlendirir.
 
@@ -112,7 +112,7 @@ Aşağıdaki örnekte, işlecinin sağ işleneni, `&&` sol taraftaki işlenen ş
 
 Aşağıdaki örnekte, işlecinin sağ işleneni, `||` sol taraftaki işlenen şu şekilde değerlendirildiğinde gerçekleştirilmeyen bir yöntem çağrıdır `true` :
 
-[!code-csharp-interactive[conditional logical OR](snippets/BooleanLogicalOperators.cs#ConditionalOr)]
+[!code-csharp-interactive[conditional logical OR](snippets/shared/BooleanLogicalOperators.cs#ConditionalOr)]
 
 [MANTıKSAL or işleci](#logical-or-operator-) `|` Ayrıca işlenenlerinin mantıksal veya ' lerini hesaplar, ancak her iki işleneni de değerlendirir.
 
@@ -142,7 +142,7 @@ Bu işleçlerin davranışı, null yapılabilir değer türleriyle tipik işleç
 
 Ayrıca, `!` `^` `bool?` Aşağıdaki örnekte gösterildiği gibi işlenenlerle birlikte ve işleçlerini kullanabilirsiniz:
 
-[!code-csharp-interactive[lifted negation and xor](snippets/BooleanLogicalOperators.cs#WithNullableBoolean)]
+[!code-csharp-interactive[lifted negation and xor](snippets/shared/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
 Koşullu mantıksal işleçler `&&` ve `||` `bool?` işlenenleri desteklemez.
 
@@ -164,7 +164,7 @@ hariç `x` yalnızca bir kez değerlendirilir.
 
 `&` `|` `^` Aşağıdaki örnekte gösterildiği gibi,, ve işleçleri bileşik atamayı destekler:
 
-[!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](snippets/shared/BooleanLogicalOperators.cs#CompoundAssignment)]
 
 > [!NOTE]
 > Koşullu mantıksal işleçler `&&` ve `||` bileşik atamayı desteklemez.
@@ -182,7 +182,7 @@ Aşağıdaki liste, en yüksek öncelikten başlayarak mantıksal işleçleri en
 
 `()`İşleç önceliğine göre uygulanan değerlendirmenin sırasını değiştirmek için parantezleri kullanın:
 
-[!code-csharp-interactive[operator precedence](snippets/BooleanLogicalOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](snippets/shared/BooleanLogicalOperators.cs#Precedence)]
 
 Öncelik düzeyine göre sıralanan C# işleçlerinin tüm listesi için [c# işleçleri](index.md) makalesinin [operatör önceliği](index.md#operator-precedence) bölümüne bakın.
 

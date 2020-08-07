@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 1b87f7f6c1b22550e3df554572225b3fce6a1b56
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 47e550226cdef31c82b30348d779207200f32b90
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556624"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916834"
 ---
 # <a name="equality-operators-c-reference"></a>Eşitlik işleçleri (C# Başvurusu)
 
@@ -34,7 +34,7 @@ Eşitlik işleci, `==` `true` işlenenleri eşitse, `false` Aksi takdirde dönd�
 
 [Yerleşik değer türlerinin](../builtin-types/value-types.md#built-in-value-types) işlenenleri, değerleri eşitse eşittir:
 
-[!code-csharp-interactive[value types equality](snippets/EqualityOperators.cs#ValueTypesEquality)]
+[!code-csharp-interactive[value types equality](snippets/shared/EqualityOperators.cs#ValueTypesEquality)]
 
 > [!NOTE]
 > ,, `==` , [ `<` `>` `<=` Ve `>=` ](comparison-operators.md) işleçleri için İşlenenlerden herhangi biri bir sayı ( <xref:System.Double.NaN?displayProperty=nameWithType> veya <xref:System.Single.NaN?displayProperty=nameWithType> ) değilse, işlemin sonucu olur `false` . Bu, değeri, `NaN` dahil olmak üzere herhangi bir değerden büyük, küçüktür veya eşit olmayan bir değere eşit değil anlamına gelir `double` `float` `NaN` . Daha fazla bilgi ve örnek için bkz <xref:System.Double.NaN?displayProperty=nameWithType> . veya <xref:System.Single.NaN?displayProperty=nameWithType> başvuru makalesi.
@@ -49,7 +49,7 @@ C# 7,3 ile başlayarak, `==` ve `!=` Işleçleri c# [Tanımlama grupları](../bu
 
 Varsayılan olarak, iki başvuru türü işlenen aynı nesneye başvurduklarında eşittir:
 
-[!code-csharp[reference type equality](snippets/EqualityOperators.cs#ReferenceTypesEquality)]
+[!code-csharp[reference type equality](snippets/shared/EqualityOperators.cs#ReferenceTypesEquality)]
 
 Örnekte gösterildiği gibi, Kullanıcı tanımlı başvuru türleri `==` Varsayılan olarak işleci destekler. Ancak, bir başvuru türü işleci aşırı yükleyebilir `==` . Bir başvuru türü işleci aşırı yükle, `==` <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> Bu türden iki başvurunun aynı nesneye başvurmasını denetlemek için yöntemini kullanın.
 
@@ -57,7 +57,7 @@ Varsayılan olarak, iki başvuru türü işlenen aynı nesneye başvurduklarınd
 
 İki [dize](../builtin-types/reference-types.md#the-string-type) işleneni her ikisi de olduğunda eşittir `null` veya her iki dize örneği de aynı uzunluktadır ve her bir karakter konumunda özdeş karakterlere sahiptir:
 
-[!code-csharp-interactive[string equality](snippets/EqualityOperators.cs#StringEquality)]
+[!code-csharp-interactive[string equality](snippets/shared/EqualityOperators.cs#StringEquality)]
 
 Bu, büyük/küçük harfe duyarlı bir sıra karşılaştırmasına sahiptir. Dize karşılaştırması hakkında daha fazla bilgi için bkz. [C# içindeki dizeleri karşılaştırma](../../how-to/compare-strings.md).
 
@@ -65,13 +65,13 @@ Bu, büyük/küçük harfe duyarlı bir sıra karşılaştırmasına sahiptir. D
 
 Aynı çalışma zamanı türünün iki [temsilci](../../programming-guide/delegates/index.md) işleneni, her ikisi de `null` aynı uzunluktadır ve her konumda eşit girişlere sahip olduğunda eşittir:
 
-[!code-csharp-interactive[delegate equality](snippets/EqualityOperators.cs#DelegateEquality)]
+[!code-csharp-interactive[delegate equality](snippets/shared/EqualityOperators.cs#DelegateEquality)]
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md), [eşitlik işleçlerini temsilci](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümüne bakın.
 
 Anlamsal olarak özdeş [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) değerlendirmesinden üretilen temsilciler, aşağıdaki örnekte gösterildiği gibi eşit değildir:
 
-[!code-csharp-interactive[from identical lambdas](snippets/EqualityOperators.cs#IdenticalLambdas)]
+[!code-csharp-interactive[from identical lambdas](snippets/shared/EqualityOperators.cs#IdenticalLambdas)]
 
 ## <a name="inequality-operator-"></a>Eşitsizlik işleci! =
 
@@ -79,7 +79,7 @@ Eşitsizlik işleci, `!=` `true` işlenenleri eşit değilse döndürür, `false
 
 Aşağıdaki örnek işlecinin kullanımını gösterir `!=` :
 
-[!code-csharp-interactive[non-equality examples](snippets/EqualityOperators.cs#NonEquality)]
+[!code-csharp-interactive[non-equality examples](snippets/shared/EqualityOperators.cs#NonEquality)]
 
 ## <a name="operator-overloadability"></a>Operatör overloadability
 

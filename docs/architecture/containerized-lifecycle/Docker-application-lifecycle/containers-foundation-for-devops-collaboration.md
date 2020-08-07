@@ -1,13 +1,13 @@
 ---
 title: DevOps işbirliğinin temeli olarak kapsayıcılar
 description: DevOps 'u kolaylaştırmak için kapsayıcıların anahtar rolünü anlayın.
-ms.date: 04/16/2020
-ms.openlocfilehash: 83bebc92a242a5ac2906d9997b7b278f87f0db96
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 08/06/2020
+ms.openlocfilehash: af28c1add8b2e6befbd2f3e6ae9fe707ccc5b106
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507356"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916011"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>DevOps işbirliğinin temeli olarak kapsayıcılar
 
@@ -19,7 +19,7 @@ Kapsayıcılar ve Docker teknolojisinin çok doğası gereği, geliştiriciler, 
 
 Docker Kapsayıcıları sayesinde, geliştiriciler kapsayıcı içinde (uygulama ve hizmet ve çerçeveler ile bileşenlere bağımlılıklar) ve kapsayıcı ve hizmetlerin bir hizmet koleksiyonu tarafından oluşturulan bir uygulama olarak birlikte nasıl davrandığına sahiptir. Birden çok kapsayıcının bağımlılıkları bir `docker-compose.yml` dosyada tanımlanır veya bir *dağıtım bildirimi*olarak çağrılabilir. Bu arada, BT operasyon ekipleri (BT uzmanları ve yönetimi) üretim ortamlarının yönetimine odaklanabilir. gerekli sorun izlemesinin ve sonuç olarak, uygulamaların son kullanıcılar için çeşitli kapsayıcıların içeriğini bilmeden doğru şekilde teslim edilmesini sağlamaktır. Bu nedenle, "kapsayıcı" adı, benzerleme vurguladı gerçek dünya teslim kapsayıcılarına geri çekiliyor. Bu nedenle, kapsayıcının içeriğinin sahipleri, kapsayıcının nasıl sevk edileceği ile ilgilenmemelidir ve sevkiyat şirketi, içeriği bilmeden veya bunlarla ilgili bilgi sahibi olmadan kaynak noktasından bir kapsayıcıyı hedefine aktarır. Benzer şekilde, geliştiriciler, "taşıma" mekanizmalarıyla ilgilenmenize gerek kalmadan bir Docker kapsayıcısı içinde içerik oluşturabilir ve kendilerinin bulunabilir.
 
-Şekil 2-1 'nın sol tarafındaki sayfalarda, geliştiriciler Docker for Windows veya Mac kullanarak Docker kapsayıcılarında yerel olarak kod yazar ve çalıştırır. Bunlar, çalıştırılacak temel işletim sistemini ve bir Docker görüntüsüne kod oluşturmaya yönelik yapı adımlarını belirleyen bir Dockerfile kullanarak kodun işletim ortamını tanımlar. Geliştiriciler bir veya daha fazla görüntünün, belirtilen `docker-compose.yml` dosya dağıtım bildirimini kullanarak nasıl birlikte çalıştığını tanımlar. Kendi yerel geliştirilmesini tamamladıkları için, uygulama kodunu ve Docker yapılandırma dosyalarını kendi seçtikleri kod deposuna (yani, git deposu) iletebilirler.
+Şekil 2-1 'nın sol tarafındaki sayfalarda, geliştiriciler Docker for Windows veya Mac kullanarak Docker kapsayıcılarında yerel olarak kod yazar ve çalıştırır. Bunlar, çalıştırılacak temel işletim sistemini ve bir Docker görüntüsüne kod oluşturmaya yönelik yapı adımlarını belirleyen bir Dockerfile kullanarak kodun işletim ortamını tanımlar. Geliştiriciler bir veya daha fazla görüntünün, belirtilen dosya dağıtım bildirimini kullanarak nasıl birlikte çalıştığını tanımlar `docker-compose.yml` . Kendi yerel geliştirilmesini tamamladıkları için, uygulama kodunu ve Docker yapılandırma dosyalarını kendi seçtikleri kod deposuna (yani, git deposu) iletebilirler.
 
 DevOps sütun, kod deposunda sunulan dockerfile öğesini kullanarak derleme – sürekli tümleştirme (CI) işlem hatlarını tanımlar. CI sistemi, seçili Docker kayıt defterinden temel kapsayıcı görüntülerini çeker ve uygulama için özel Docker görüntülerini oluşturur. Görüntüler daha sonra onaylanır ve birden çok ortamda dağıtımlar için kullanılan Docker kayıt defterine gönderilir.
 
@@ -27,25 +27,25 @@ Sağ taraftaki işlemler, Operations ekipleri, geliştirme ekibine uygulamanın 
 
 İki ekip, bir sözleşme olarak ilgilendirmeyi sağlayan temel bir platform (Docker kapsayıcıları) aracılığıyla işbirliği yapar, ancak uygulama yaşam döngüsünde iki ekibin işbirliğini büyük ölçüde geliştirir. Geliştiriciler kapsayıcı içeriklerini, işletim ortamını ve kapsayıcı bağımlılarını kendi kendine alır, ancak operasyon ekipleri, derleme ve bunları düzenleme sistemlerinde çalıştırır.
 
-## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Docker kullanılırken uygulama yaşam döngüsü sorunları.
+## <a name="challenges-in-the-application-life-cycle-when-using-docker"></a>Docker kullanılırken uygulama yaşam döngüsü sorunları.
 
 Yaklaşan yıllarda Kapsayıcılı uygulama sayısını artıracak birçok neden vardır ve bu nedenlerden biri, mikro hizmetlere dayalı olarak uygulamaların oluşturulmasına neden olur.
 
-Son 15 yılda, Web Hizmetleri kullanımı binlerce uygulamanın temelini ve muhtemelen birkaç yıldan sonra, Docker Kapsayıcıları üzerinde çalışan mikro hizmet tabanlı uygulamalarla aynı durumu bulacağız.
+Son 15 yılda, Web Hizmetleri kullanımı binlerce uygulamanın temelini ve muhtemelen birkaç yıldan sonra, Docker Kapsayıcıları üzerinde çalışan mikro hizmet tabanlı uygulamalarla aynı durumu bulacaksınız.
 
 Ayrıca, tek parçalı uygulamalar için Docker kapsayıcılarını de kullanabilirsiniz ve Docker avantajlarından büyük bir kısmını elde edebilirsiniz. Kapsayıcılar yalnızca mikro hizmetleri hedefetmez.
 
 Docker containerleştirme ve mikro hizmetlerin kullanımı, kuruluşlarınızın geliştirme sürecinde yeni zorluk oluşmasına neden olur ve bu nedenle, üretim sistemlerinde çalışan çok sayıda kapsayıcıyı ve mikro hizmeti sürdürmek için kesintisiz bir stratejiye ihtiyacınız vardır. Sonuç olarak, kurumsal uygulamalarda, üretimde çalışan yüzlerce veya binlerce kapsayıcı/örnek olacaktır.
 
-Bu sorunlar DevOps araçlarını kullanırken yeni talepler oluşturur, bu nedenle DevOps etkinliklerinizde yeni işlemler tanımlamanız ve bu tür sorulara cevap bulmanız gerekir:
+Bu sorunlar DevOps araçlarını kullanırken yeni talepler oluşturur, bu nedenle DevOps etkinliklerinizde yeni işlemler tanımlamanız ve aşağıdaki soru türüyle ilgili yanıtlar bulmanız gerekir:
 
-- CI/CD, yönetim ve işlemler için geliştirme için hangi araçları kullanabilirim?
+- Geliştirme, CI/CD, yönetim ve işlemler için hangi araçları kullanabilirim?
 
 - Üretimde çalışırken şirketimdeki kapsayıcılardaki hataları nasıl yönetebilirim?
 
 - Üretimde yazılımlarımızın parçalarını en düşük kapalı kalma süresiyle nasıl değiştirebilirim?
 
-- Nasıl ölçeklendiriyoruz ve üretim sistemimizi nasıl izleyebiliriz?
+- Üretim sistemimizi nasıl ölçeklendirebiliriz ve izliyoruz?
 
 - Yayın işlem hatmıza kapsayıcıların test ve dağıtımını nasıl dahil eteceğiz?
 
@@ -63,9 +63,9 @@ Tüm bu soruları yanıtlayabiliyorsanız, uygulamalarınızı (mevcut veya yeni
 
 Her şey, iç döngü iş akışında kod yazmaya başlayan geliştiriciyle başlar. İç döngü aşaması, geliştiricilerin kod deposuna kod göndermeden önce gerçekleşen her şeyi tanımlamaktır (örneğin, git gibi bir kaynak denetim sistemi). Oluşturulduktan sonra depo, sürekli tümleştirme (CI) ve iş akışının geri kalanını tetikler.
 
-İç döngü temelde "Code," "Run," "test," ve "Debug" gibi tipik adımlardan oluşur ve uygulamayı yerel olarak çalıştırmadan önce gereken ek adımları içerir. Bu, uygulamayı bir Docker kapsayıcısı olarak çalıştırmak ve test etmek için geliştirici işlemidir. İç döngü iş akışı, izleyen bölümlerde açıklanacaktır.
+İç döngü "Code," "Run," "test" ve "Debug" gibi tipik adımlardan oluşur ve uygulamayı yerel olarak çalıştırmadan önce gereken ek adımları içerir. Bu, uygulamayı bir Docker kapsayıcısı olarak çalıştırmak ve test etmek için geliştirici işlemidir. İç döngü iş akışı, izleyen bölümlerde açıklanacaktır.
 
-Uçtan uca iş akışına bakmak için bir adım geri alma, DevOps iş akışı bir teknolojiden veya bir araç kümesinden daha fazla. Bu, kültürel bir evyi gerektiren bir anlayış. BT yaşamınızı daha hızlı ve öngörülebilir hale getirmek için insanlar, süreçler ve uygun araçlar. Kapsayıcılı bir iş akışını benimseyen kuruluşlar genellikle kuruluşlarını Kapsayıcılı iş akışıyla eşleşen kişileri ve süreçlerini temsil etmek üzere yeniden yapılandırabilir.
+Uçtan uca iş akışına bakmak için bir adım geri dönerek DevOps iş akışı bir teknolojiden veya bir araç kümesinden daha fazla olduğunda, bu, kültürel bir evyi gerektiren bir anlayış. BT yaşamınızı daha hızlı ve öngörülebilir hale getirmek için insanlar, süreçler ve uygun araçlar. Kapsayıcılı bir iş akışını benimseyen kuruluşlar genellikle kuruluşlarını Kapsayıcılı iş akışıyla eşleşen kişileri ve süreçlerini temsil etmek üzere yeniden yapılandırabilir.
 
 DevOps 'ın harekete geçmesini sağlamak, ekiplerin, gelişmiş izlenebilirlik ve yinelenebilir iş akışları ile sonuçlanan hataya açık el ile işlemleri Otomasyon ile değiştirerek rekabet baskılarına ile birlikte daha hızlı yanıt vermesini sağlar. Kuruluşlar ayrıca ortamları daha verimli bir şekilde yönetebilir ve şirket içi ve bulut kaynaklarının yanı sıra sıkı tümleşik araç oluşturma ile maliyet tasarrufu sağlayabilir.
 
@@ -92,5 +92,5 @@ Katı bir DevOps iş akışı tarafından sunulan en önemli avantajlardan bazı
 - Açık kaynaklı yatırımlar dahil olmak üzere mevcut DevOps yatırımlarınızdan çok sayıda Tak ve kullan.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)
->[İleri](../Microsoft-platform-tools-containerized-apps/index.md)
+>[Önceki](index.md) 
+> [Sonraki](../Microsoft-platform-tools-containerized-apps/index.md)

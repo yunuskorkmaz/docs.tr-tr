@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fbd3c8062892f106ec17d0fef86d5ad7f1207d20
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4390f46492ada4b15d187be4c43a4f7865f64a80
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303484"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916971"
 ---
 # <a name="how-to-migrate-from-no-locnewtonsoftjson-to-no-locsystemtextjson"></a>' Den ' a geçiş Newtonsoft.JsonSystem.Text.Json
 
@@ -91,13 +91,13 @@ Bu, özelliklerin kapsamlı bir listesi değildir `Newtonsoft.Json` . Listede, [
 
 Seri durumdan çıkarma sırasında, `Newtonsoft.Json` Varsayılan olarak büyük/küçük harfe duyarsız Özellik adı eşleştirmeyi yapar. <xref:System.Text.Json>Varsayılan değer büyük/küçük harfe duyarlıdır ve tam bir eşleşme yaptığından daha iyi performans sağlar. Büyük/küçük harfe duyarsız eşleşme yapma hakkında daha fazla bilgi için bkz. [büyük/küçük harfe duyarsız Özellik eşleştirme](system-text-json-how-to.md#case-insensitive-property-matching).
 
-`System.Text.Json`ASP.NET Core kullanarak dolaylı olarak kullanıyorsanız, gibi davranışları almak için herhangi bir şey yapmanız gerekmez `Newtonsoft.Json` . ASP.NET Core, kullandığı [Camel özellik adlarına](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) ve büyük/küçük harfe duyarsız eşleştirmeye yönelik ayarları belirtir `System.Text.Json` .
+`System.Text.Json`ASP.NET Core kullanarak dolaylı olarak kullanıyorsanız, gibi davranışları almak için herhangi bir şey yapmanız gerekmez `Newtonsoft.Json` . ASP.NET Core, kullandığı [Camel özellik adlarına](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) ve büyük/küçük harfe duyarsız eşleştirmeye yönelik ayarları belirtir `System.Text.Json` . Varsayılan değerler [Jsonoptions sınıfında](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L22-L28)ayarlanır.
 
 ### <a name="minimal-character-escaping"></a>En az karakter kaçış
 
 Serileştirme sırasında, `Newtonsoft.Json` karakterlerin kaçış olmadan üzerinden izin verme konusunda görece bir şekilde izin verilir. Diğer bir deyişle, bunları `\uxxxx` `xxxx` karakterin kod noktası olduğu yerde değiştirmez. Burada kaçış yaptığı yerlerde, `\` karakterden önce bir (örneğin, `"` olur) bir olarak yayarak bunu yapar `\"` . <xref:System.Text.Json>siteler arası betik (XSS) veya bilgi açıklama saldırılarına karşı derinlemesine savunma korumaları sağlamak için varsayılan olarak daha fazla karakter çıkar ve altı karakterli sırayı kullanarak bu şekilde yapılır. `System.Text.Json`ASCII olmayan tüm karakterleri varsayılan olarak çıkar, bu nedenle içinde kullanıyorsanız herhangi bir şey yapmanız gerekmez `StringEscapeHandling.EscapeNonAscii` `Newtonsoft.Json` . `System.Text.Json`Ayrıca, varsayılan olarak HTML duyarlı karakterleri de çıkar. Varsayılan davranışı geçersiz kılma hakkında daha fazla bilgi için `System.Text.Json` bkz. [karakter kodlamasını özelleştirme](system-text-json-how-to.md#customize-character-encoding).
 
-### <a name="comments"></a>Yorumlar
+### <a name="comments"></a>Açıklamalar
 
 Seri durumdan çıkarma sırasında, `Newtonsoft.Json` Varsayılan olarak JSON 'daki açıklamaları yoksayar. <xref:System.Text.Json> [RFC 8259](https://tools.ietf.org/html/rfc8259) belirtiminde bunları içermediğinden, açıklamalar için özel durumlar oluşturmak varsayılan değer. Açıklamalara izin verme hakkında daha fazla bilgi için bkz. [yorumlara Izin verme ve sondaki virgüller](system-text-json-how-to.md#allow-comments-and-trailing-commas).
 
@@ -128,6 +128,8 @@ Buradaki fark, koleksiyondaki özel dönüştürücünün `Converters` tür düz
 ### <a name="maximum-depth"></a>En yüksek derinlik
 
 `Newtonsoft.Json`Varsayılan olarak en yüksek derinlik sınırına sahip değildir. <xref:System.Text.Json>Varsayılan 64 için bir sınır vardır ve bu ayar tarafından yapılandırılabilir <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType> .
+
+`System.Text.Json`ASP.NET Core kullanarak dolaylı olarak kullanıyorsanız, varsayılan derinlik üst sınırı 32 ' dir. Varsayılan değer model bağlama ile aynıdır ve [Jsonoptions sınıfında](https://github.com/dotnet/aspnetcore/blob/1f56888ea03f6a113587a6c4ac4d8b2ded326ffa/src/Mvc/Mvc.Core/src/JsonOptions.cs#L17-L20)ayarlanır.
 
 ### <a name="json-strings-property-names-and-string-values"></a>JSON dizeleri (özellik adları ve dize değerleri)
 
@@ -490,7 +492,7 @@ public JsonElement LookAndLoad(JsonElement source)
 
 Yukarıdaki kod, bir özellik içeren bir için bekliyor `JsonElement` `fileName` . JSON dosyasını açar ve bir oluşturur `JsonDocument` . Yöntemi, çağıranın tüm belge ile çalışmak istediğini varsayar, bu yüzden öğesinin öğesini döndürür `Clone` `RootElement` .
 
-Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örneğin:
+Bir alır ve bir `JsonElement` alt öğe döndürüyorsa, alt öğenin bir kısmını döndürmek gerekli değildir `Clone` . Çağıran, `JsonDocument` geçirilen ' ın ait olduğu canlı tutmanın sorumluluğundadır `JsonElement` . Örnek:
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)

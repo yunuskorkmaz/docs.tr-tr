@@ -1,83 +1,77 @@
 ---
 title: Yüksek ölçeklenebilirlik ve kullanılabilirlik için mikro hizmetleri ve çok kapsayıcılı uygulamaları yönetme
-description: Azure Kubernetes Hizmetini kullanarak bir uygulamayı nasıl dağıtacaklarını öğrenin.
-ms.date: 02/15/2019
-ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+description: Azure Kubernetes hizmetini kullanarak bir uygulamayı dağıtmayı öğrenin.
+ms.date: 08/06/2020
+ms.openlocfilehash: b4deb9906e0fece7fb611b6988df576e8b07fe46
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71182364"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916113"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service’e (AKS) Dağıtma
 
-Tercih ettiğiniz istemci işletim sistemini kullanarak AKS ile etkileşimkurabilirsiniz, burada Nasıl Microsoft Windows ve Windows Ubuntu Linux gömülü bir sürümünü, Bash komutları kullanarak bunu göstermek.
+Azure komut satırı arabirimi (Azure CLı) yüklü olan tercih ettiğiniz istemci işletim sistemini (Windows, macOS veya Linux) kullanarak AKS ile etkileşim kurabilirsiniz. Daha fazla ayrıntı için, kullanılabilir ortamlar için [Azure CLI belgelerine](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest) ve [yükleme kılavuzuna](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) bakın.
 
-AKS kullanmadan önce sahip olması önkoşullar şunlardır:
+## <a name="create-the-aks-environment-in-azure"></a>Azure 'da AKS ortamını oluşturma
 
-- Linux veya Mac geliştirme makinesi
-- Windows geliştirme makinesi
-  - Windows'da Geliştirici Modu etkin
-  - Linux için Windows Alt Sistemi
-- [Windows, Mac veya Linux'ta](https://docs.microsoft.com/cli/azure/install-azure-cli) yüklü Azure-CLI
+AKS ortamını oluşturmanın birkaç yolu vardır. Azure CLı komutları kullanılarak veya Azure portal kullanılarak yapılabilir.
 
-> [!NOTE]
-> Hakkında tam bilgi bulmak için:
->
-> Azure-CLI:<https://docs.microsoft.com/cli/azure/index>
->
-> Linux için Windows Alt Sistemi:<https://docs.microsoft.com/windows/wsl/about>
-
-## <a name="create-the-aks-environment-in-azure"></a>Azure'da AKS ortamını oluşturma
-
-AKS Ortamını oluşturmanın birkaç yolu vardır. Azure-CLI komutlarını kullanarak veya Azure portalını kullanarak yapılabilir.
-
-Burada, sonuçları gözden geçirmek için küme yi ve Azure portalını oluşturmak için Azure-CLI'yi kullanarak bazı örnekleri keşfedebilirsiniz. Ayrıca geliştirme makinenizde Kubectl ve Docker olması gerekir.  
+Burada, kümeyi oluşturmak için Azure CLı kullanarak bazı örnekleri keşfedebilirsiniz ve sonuçları gözden geçirmek için Azure portal. Geliştirme makinenizde Kubectl ve Docker de sahip olmanız gerekir.
 
 ## <a name="create-the-aks-cluster"></a>AKS kümesini oluşturma
 
-Bu komutu kullanarak AKS kümesini oluşturun:
+Bu komutu kullanarak AKS kümesini oluşturun (kaynak grubu mevcut olmalıdır):
 
 ```console
-az aks create --resource-group MSSampleResourceGroup --name MSSampleClusterK801 --agent-count 1 --generate-ssh-keys --location westus2
+az aks create --resource-group explore-docker-aks-rg --name explore-docker-aks --node-vm-size Standard_B2s --node-count 1 --generate-ssh-keys --location westeurope
 ```
 
-Oluşturma işi bittikten sonra Azure portalında oluşturulan AKS'yi görebilirsiniz:
+> [!NOTE]
+> `--node-vm-size`Ve `--node-count` parametre değerleri bir örnek/dev uygulaması için yeterince iyidir.
 
-Kaynak grubu:
+Oluşturma işi tamamlandıktan sonra aşağıdakileri görebilirsiniz:
 
-![Azure AKS kaynak grubunun tarayıcı görünümü.](media/aks-resource-group-view.png)
+- İlk kaynak grubunda oluşturulan AKS kümesi
+- Aşağıdaki görüntülerde gösterildiği gibi, AKS kümesiyle ilgili kaynakları içeren yeni, ilişkili bir kaynak grubu.
 
-**Şekil 4-17**. Azure'dan AKS Kaynak Grubu görünümü.
+AKS kümesi ile ilk kaynak grubu:
 
-AKS kümesi:
+![AKS kaynak grubunun tarayıcı görünümü.](media/deploy-azure-kubernetes-service/aks-cluster-view.png)
 
-![AKS kaynak grubunun tarayıcı görünümü.](media/aks-cluster-view.png)
+**Şekil 4-17**. Azure 'dan AKS kaynak grubu görünümü.
 
-**Şekil 4-18**. Azure'dan AKS görünümü.
+AKS kümesi kaynak grubu:
 
-Ayrıca kullanarak `Azure-CLI` oluşturulan düğümü görüntüleyebilir `Kubectl`ve.
+![Azure AKS kaynak grubunun tarayıcı görünümü.](media/deploy-azure-kubernetes-service/aks-resource-group-view.png)
 
-İlk olarak, kimlik bilgilerini alma:
+**Şekil 4-18**. Azure 'dan AKS görünümü.
+
+> [!IMPORTANT]
+> Genel olarak, AKS kümesi kaynak grubundaki kaynakları değiştirmeniz gerekmez. Örneğin, AKS kümesini sildiğinizde kaynak grubu silinir.
+
+Ve kullanılarak oluşturulan düğümü de görüntüleyebilirsiniz `Azure CLI` `Kubectl` .
+
+İlk olarak, kimlik bilgileri alınıyor:
 
 ```console
-az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
+az aks get-credentials --resource-group explore-docker-aks-rg --name explore-docker-aks
 ```
 
-![Yukarıdaki komuttan konsol çıkışı: Birleştirilmiş "MsSampleK8Cluster geçerli bağlam olarak /root/.kube/config.](media/get-credentials-command-result.png)
+![Yukarıdaki komuttan konsol çıktısı: "keşfet-Docker-aks" i/Home/MIGUEL/.exe içindeki geçerli bağlam olarak birleştirildi.](media/deploy-azure-kubernetes-service/get-credentials-command-result.png)
 
 **Şekil 4-19**. `aks get-credentials`komut sonucu.
 
-Ve sonra, Kubectl gelen düğümleri alma:
+Ardından, Kubectl 'den düğüm alma:
 
 ```console
 kubectl get nodes
 ```
 
-![Yukarıdaki komuttan konsol çıkışı: Durum, yaş (zaman çalışan) ve sürüm ile düğümlistesi](media/kubectl-get-nodes-command-result.png)
+![Yukarıdaki komuttan konsol çıktısı: durum, Yaş (çalıştırma süresi) ve sürüm içeren düğümlerin listesi](media/deploy-azure-kubernetes-service/kubectl-get-nodes-command-result.png)
 
 **Şekil 4-20**. `kubectl get nodes`komut sonucu.
 
->[!div class="step-by-step"]
->[Önceki](orchestrate-high-scalability-availability.md)
->[Sonraki](docker-apps-development-environment.md)
+> [!div class="step-by-step"]
+> [Önceki](orchestrate-high-scalability-availability.md) 
+>  [Sonraki](docker-apps-development-environment.md)

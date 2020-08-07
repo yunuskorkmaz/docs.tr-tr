@@ -1,24 +1,24 @@
 ---
-title: Docker üretim ortamlarını çalıştırın, yönetin ve izleyin
+title: Docker üretim ortamlarını çalıştırma, yönetme ve izleme
 description: Microsoft Platformu ve Araçları ile Kapsayıcı Docker Uygulaması Yaşam Döngüsü
-ms.date: 02/15/2019
-ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 08/06/2020
+ms.openlocfilehash: 013918a5b3f0b9dc6c60416af186dc3e51a29a98
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "70295631"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87914914"
 ---
-# <a name="run-manage-and-monitor-docker-production-environments"></a>Docker üretim ortamlarını çalıştırın, yönetin ve izleyin
+# <a name="run-manage-and-monitor-docker-production-environments"></a>Docker üretim ortamlarını çalıştırma, yönetme ve izleme
 
-Vizyon: Kurumsal uygulamaların yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik ile çalışması gerekir; BT işlemlerinin ortamları ve uygulamaları yönetebilmesi ve izleyebilmeleri gerekir.
+Vizyon: kurumsal uygulamaların yüksek kullanılabilirlik ve yüksek ölçeklenebilirlik ile çalışması gerekir; BT işlemlerinin ortamları ve uygulamaları yönetebilmeleri ve izleyebilmeleri gerekir.
 
-Konteynerleştirilmiş Docker uygulamalarıyaşam döngüsündeki bu son sütun, uygulamalarınızı ölçeklenebilir, yüksek kullanılabilirlik (HA) üretim ortamlarında nasıl çalıştırabileceğiniz, yönetebileceğiniz ve izleyebileceğinize bağlıdır.
+Kapsayıcılı Docker uygulamaları yaşam döngüsünün bu en son bölümünde, uygulamalarınızı ölçeklenebilir, yüksek kullanılabilirlik (HA) üretim ortamlarında nasıl çalıştırabileceğiniz, yönetebileceğiniz ve izleyebileceğinizi gözlemleceksiniz.
 
-Üretimde konteyner uygulamalarınızı çalıştırma biçiminiz (altyapı mimarisi ve platform teknolojileri) çok ilgilidir ve bu e-kitabın Bölüm 1'inde tartışılan seçilen mimari ve geliştirme platformlarına dayanmaktadır.
+Kapsayıcılı uygulamalarınızı üretimde çalıştırmanın yolu (altyapı mimarisi ve platform teknolojileri), bu e-kitabın Bölüm 1 ' de açıklanan seçili mimariye ve geliştirme platformlarına göre çok daha fazla ilgilidir.
 
-Bu bölümde, Microsoft ve diğer satıcılardan gelen belirli ürünler ve teknolojiler, ölçeklenebilir, HA dağıtılmış uygulamaları etkili bir şekilde çalıştırmak ve bunları BT açısından nasıl yönetebileceğinizve izleyebilirsiniz.
+Bu bölümde, ölçeklenebilir, HA dağıtılmış uygulamaları verimli bir şekilde çalıştırmak ve BT perspektifinden bunları yönetmek ve izlemek için kullanabileceğiniz Microsoft ve diğer satıcıların belirli ürünleri ve teknolojileri inceleirsiniz.
 
 >[!div class="step-by-step"]
->[Önceki](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
->[Sonraki](run-microservices-based-applications-in-production.md)
+>[Önceki](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md) 
+> [Sonraki](run-microservices-based-applications-in-production.md)

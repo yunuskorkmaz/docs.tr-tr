@@ -7,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - nameof expression [C#]
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 1bd8800a553eb9b3363da8a3b5f230caecddf223
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: b00c5f6f97d27290fb3773dcbb422bf9fb4c425b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556416"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916773"
 ---
 # <a name="nameof-expression-c-reference"></a>NameOf ifadesi (C# Başvurusu)
 
 Bir `nameof` ifade, dize sabiti olarak bir değişkenin, türün veya üyenin adını üretir:
 
-[!code-csharp-interactive[nameof expression](snippets/NameOfOperator.cs#Examples)]
+[!code-csharp-interactive[nameof expression](snippets/shared/NameOfOperator.cs#Examples)]
 
 Yukarıdaki örnekte gösterildiği gibi, bir tür ve ad alanı durumunda, oluşturulan ad genellikle [tam olarak nitelenir](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).
 
 Tam [tanımlayıcılar](../tokens/verbatim.md)söz konusu olduğunda, `@` Aşağıdaki örnekte gösterildiği gibi karakter bir adın parçası değildir:
 
-[!code-csharp-interactive[nameof verbatim](snippets/NameOfOperator.cs#Verbatim)]
+[!code-csharp-interactive[nameof verbatim](snippets/shared/NameOfOperator.cs#Verbatim)]
 
 Bir `nameof` ifade derleme zamanında değerlendirilir ve çalışma zamanında hiçbir etkiye sahip değildir.
 
 `nameof`Bağımsız değişken denetleme kodunun daha sürdürülebilir olması için bir ifade kullanabilirsiniz:
 
-[!code-csharp[nameof and argument check](snippets/NameOfOperator.cs#ExceptionMessage)]
+[!code-csharp[nameof and argument check](snippets/shared/NameOfOperator.cs#ExceptionMessage)]
 
 `nameof`C# 6 ve sonrasında bir ifade mevcuttur.
 

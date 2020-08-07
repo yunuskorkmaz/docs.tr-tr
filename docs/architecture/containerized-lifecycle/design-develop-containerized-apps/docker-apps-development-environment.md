@@ -1,13 +1,13 @@
 ---
 title: Docker uygulamaları için geliştirme ortamı
 description: Docker geliştirme yaşam döngüsünü destekleyen en önemli geliştirme aracı seçeneklerini öğrenin.
-ms.date: 04/16/2020
-ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 08/06/2020
+ms.openlocfilehash: 07b42b2bd05ab16ba0fbf61863b050ee2c9e242b
+ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394896"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87916033"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker uygulamaları için geliştirme ortamı
 
