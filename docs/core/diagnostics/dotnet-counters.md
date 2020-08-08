@@ -1,27 +1,27 @@
 ---
-title: dotnet sayaçları - .NET Core
-description: Dotnet-counter komut satırı aracını nasıl yükleyip kullanacağınızı öğrenin.
+title: DotNet-sayaçlar-.NET Core
+description: DotNet-Counter komut satırı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 02/26/2020
-ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71e3c4f0a60960c4e672b95000bc0d67bd427514
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147184"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024634"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
-**Bu makale şu şekilde dir:** ✔️ .NET Core 3.0 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .net Core 3,0 SDK ve sonraki sürümleri
 
-## <a name="install-dotnet-counters"></a>dotnet sayaçları yükleme
+## <a name="install-dotnet-counters"></a>DotNet-sayaçlar 'ı yükler
 
-`dotnet-counters` [NuGet paketinin](https://www.nuget.org/packages/dotnet-counters)en son sürüm sürümünü yüklemek [için, dotnet aracı yükleme](../tools/dotnet-tool-install.md) komutunu kullanın:
+NuGet paketinin en son sürümünü yüklemek için `dotnet-counters` [NuGet package](https://www.nuget.org/packages/dotnet-counters) [DotNet aracı install](../tools/dotnet-tool-install.md) komutunu kullanın:
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
 ```
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```console
 dotnet-counters [-h|--help] [--version] <command>
@@ -29,32 +29,32 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-counters`özel sağlık izleme ve birinci düzey performans araştırması için bir performans izleme aracıdır. <xref:System.Diagnostics.Tracing.EventCounter> API üzerinden yayınlanan performans sayacı değerlerini gözlemleyebilir. Örneğin, CPU kullanımı veya .NET Core uygulamanızda atılan özel durumlar gibi şeyleri hızlı bir şekilde izleyerek daha ciddi bir performans `PerfView` `dotnet-trace`araştırması yapmadan önce şüpheli bir şey olup olmadığını görebilirsiniz.
+`dotnet-counters`, geçici sistem durumu izleme ve ilk düzey performans araştırması için bir performans izleme aracıdır. API aracılığıyla yayınlanan performans sayacı değerlerini gözlemleyebilirsiniz <xref:System.Diagnostics.Tracing.EventCounter> . Örneğin, veya kullanarak daha ciddi performans araştırmasına gerek olmadan önce kuşkulu bir şey olup olmadığını görmek için, CPU kullanımı veya .NET Core uygulamanızda oluşturulan özel durumların oranı gibi şeyleri hızlıca izleyebilirsiniz `PerfView` `dotnet-trace` .
 
 ## <a name="options"></a>Seçenekler
 
 - **`--version`**
 
-  Dotnet sayaçları yardımcı programı sürümünü görüntüler.
+  DotNet-Counters yardımcı programının sürümünü görüntüler.
 
 - **`-h|--help`**
 
-  Komut satırı yardımlarını gösterir.
+  Komut satırı yardımını gösterir.
 
 ## <a name="commands"></a>Komutlar
 
 | Komut                                             |
-| --------------------------------------------------- |
-| [dotnet sayaçları toplamak](#dotnet-counters-collect) |
-| [dotnet sayaçları listesi](#dotnet-counters-list)       |
-| [dotnet sayaçları monitör](#dotnet-counters-monitor) |
-| [dotnet sayaçları ps](#dotnet-counters-ps) |
+|-----------------------------------------------------|
+| [DotNet-sayaçlar toplama](#dotnet-counters-collect) |
+| [DotNet-sayaçlar listesi](#dotnet-counters-list)       |
+| [DotNet-sayaçlar İzleyicisi](#dotnet-counters-monitor) |
+| [DotNet-sayaçlar PS 'si](#dotnet-counters-ps)           |
 
-## <a name="dotnet-counters-collect"></a>dotnet sayaçları toplamak
+## <a name="dotnet-counters-collect"></a>DotNet-sayaçlar toplama
 
-Seçili sayaç değerlerini düzenli aralıklarla toplayın ve işlem sonrası için belirli bir dosya biçimine aktarın.
+Seçili sayaç değerlerini düzenli olarak toplayın ve işleme sonrası için belirtilen dosya biçimine dışarı aktarın.
 
-### <a name="synopsis"></a>Özet
+### <a name="synopsis"></a>Özeti
 
 ```console
 dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
@@ -64,19 +64,19 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`-p|--process-id <PID>`**
 
-  İzlenecek işlemin kimliği.
+  İzlenecek işlemin KIMLIĞI.
 
 - **`--refresh-interval <SECONDS>`**
 
-  Görüntülenen sayaçları güncelleştirmek arasında geciktirecek saniye sayısı
+  Görüntülenecek sayaçların güncelleştirilmesi arasındaki gecikme süresi (saniye)
 
 - **`counter_list <COUNTERS>`**
 
-  Sayaçların ayrılmış bir boşluk listesi. Sayaçlar belirtilebilir. `provider_name[:counter_name]` Bir `provider_name` eleme olmadan `counter_name`kullanılırsa, o zaman tüm sayaçları gösterilir. Sağlayıcı ve sayaç adlarını bulmak için [dotnet sayaçları liste](#dotnet-counters-list) komutunu kullanın.
+  Sayaçların boşlukla ayrılmış bir listesi. Sayaçlar belirtilebilir `provider_name[:counter_name]` . `provider_name`Nitelendirme olmadan kullanılırsa `counter_name` , tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
 
 - **`--format <csv|json>`**
 
-  TThe biçimi dışa aktarılacak. Şu anda kullanılabilir: csv, json.
+  Aktarılacak biçim. Şu anda kullanılabilir: CSV, JSON.
 
 - **`-o|--output <output>`**
 
@@ -84,7 +84,7 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 ### <a name="examples"></a>Örnekler
 
-- Tüm sayaçları 3 saniyelik bir yenileme aralığında toplayın ve çıktı olarak bir csv oluşturun:
+- Tüm sayaçları 3 saniyelik yenileme aralığında toplayın ve çıkış olarak bir CSV oluşturun:
 
   ```console
   > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
@@ -93,11 +93,11 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Starting a counter session. Press Q to quit.
   ```
 
-## <a name="dotnet-counters-list"></a>dotnet sayaçları listesi
+## <a name="dotnet-counters-list"></a>DotNet-sayaçlar listesi
 
-Sağlayıcıya göre gruplanmış sayaç adlarının ve açıklamaların listesini görüntüler.
+Sağlayıcıya göre gruplandırılan sayaç adlarının ve açıklamalarının listesini görüntüler.
 
-### <a name="synopsis"></a>Özet
+### <a name="synopsis"></a>Özeti
 
 ```console
 dotnet-counters list [-h|--help]
@@ -107,23 +107,44 @@ dotnet-counters list [-h|--help]
 
 ```console
 > dotnet-counters list
+Showing well-known counters only. Specific processes may support additional counters.
 
-    Showing well-known counters only. Specific processes may support additional counters.
-    System.Runtime
-        cpu-usage                    Amount of time the process has utilized the CPU (ms)
-        working-set                  Amount of working set used by the process (MB)
-        gc-heap-size                 Total heap size reported by the GC (MB)
-        gen-0-gc-count               Number of Gen 0 GCs / sec
-        gen-1-gc-count               Number of Gen 1 GCs / sec
-        gen-2-gc-count               Number of Gen 2 GCs / sec
-        exception-count              Number of Exceptions / sec
+System.Runtime
+    cpu-usage                                    Amount of time the process has utilized the CPU (ms)
+    working-set                                  Amount of working set used by the process (MB)
+    gc-heap-size                                 Total heap size reported by the GC (MB)
+    gen-0-gc-count                               Number of Gen 0 GCs / min
+    gen-1-gc-count                               Number of Gen 1 GCs / min
+    gen-2-gc-count                               Number of Gen 2 GCs / min
+    time-in-gc                                   % time in GC since the last GC
+    gen-0-size                                   Gen 0 Heap Size
+    gen-1-size                                   Gen 1 Heap Size
+    gen-2-size                                   Gen 2 Heap Size
+    loh-size                                     LOH Heap Size
+    alloc-rate                                   Allocation Rate
+    assembly-count                               Number of Assemblies Loaded
+    exception-count                              Number of Exceptions / sec
+    threadpool-thread-count                      Number of ThreadPool Threads
+    monitor-lock-contention-count                Monitor Lock Contention Count
+    threadpool-queue-length                      ThreadPool Work Items Queue Length
+    threadpool-completed-items-count             ThreadPool Completed Work Items Count
+    active-timer-count                           Active Timers Count
+
+Microsoft.AspNetCore.Hosting
+    requests-per-second                  Request rate
+    total-requests                       Total number of requests
+    current-requests                     Current number of requests
+    failed-requests                      Failed number of requests
 ```
 
-## <a name="dotnet-counters-monitor"></a>dotnet sayaçları monitör
+> [!NOTE]
+> `Microsoft.AspNetCore.Hosting`Sayaçlar, bu sayaçları destekleyen bir işlem olduğunda (örneğin, konak makinede bir ASP.NET Core uygulama çalışırken) görüntülenir.
 
-Seçili sayaçların periyodik olarak yenilenme değerlerini görüntüler.
+## <a name="dotnet-counters-monitor"></a>DotNet-sayaçlar İzleyicisi
 
-### <a name="synopsis"></a>Özet
+Seçili sayaçların değerlerini düzenli aralıklarla yenilemeyi görüntüler.
+
+### <a name="synopsis"></a>Özeti
 
 ```console
 dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
@@ -133,19 +154,19 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`-p|--process-id <PID>`**
 
-  İzlenecek işlemin kimliği.
+  İzlenecek işlemin KIMLIĞI.
 
 - **`--refresh-interval <SECONDS>`**
 
-  Görüntülenen sayaçları güncelleştirmek arasında geciktirecek saniye sayısı
+  Görüntülenecek sayaçların güncelleştirilmesi arasındaki gecikme süresi (saniye)
 
 - **`counter_list <COUNTERS>`**
 
-  Sayaçların ayrılmış bir boşluk listesi. Sayaçlar belirtilebilir. `provider_name[:counter_name]` Bir `provider_name` eleme olmadan `counter_name`kullanılırsa, o zaman tüm sayaçları gösterilir. Sağlayıcı ve sayaç adlarını bulmak için [dotnet sayaçları liste](#dotnet-counters-list) komutunu kullanın.
+  Sayaçların boşlukla ayrılmış bir listesi. Sayaçlar belirtilebilir `provider_name[:counter_name]` . `provider_name`Nitelendirme olmadan kullanılırsa `counter_name` , tüm sayaçlar gösterilir. Sağlayıcı ve sayaç adlarını saptamak için [DotNet-Counters listesi](#dotnet-counters-list) komutunu kullanın.
 
 ### <a name="examples"></a>Örnekler
 
-- Tüm sayaçları `System.Runtime` 3 saniyelik bir yenileme aralığından izleyin:
+- Tüm sayaçları `System.Runtime` 3 saniyelik yenileme aralığından izleyin:
 
   ```console
   > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
@@ -161,7 +182,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       Number of Exceptions / sec                     4
   ```
 
-- Monitör sadece CPU kullanımı ve GC yığın boyutu: `System.Runtime`
+- Yalnızca CPU kullanımı ve GC yığın boyutunu izle `System.Runtime` :
 
   ```console
   > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
@@ -172,7 +193,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- `EventCounter` Değerleri kullanıcı tanımlı `EventSource`olarak izleyin. Daha fazla bilgi için [Bkz. Öğretici: EventCounters'ı kullanarak çok sık karşılaşılan olaylar için performans nasıl ölçülür?](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)
+- `EventCounter`Kullanıcı tanımlı değerleri izleme `EventSource` . Daha fazla bilgi için bkz. [öğretici: .NET Core 'Da EventCounters kullanarak performansı ölçme](event-counter-perf.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
@@ -181,11 +202,11 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       request                                      100
   ```
   
-## <a name="dotnet-counters-ps"></a>dotnet sayaçları ps
+## <a name="dotnet-counters-ps"></a>DotNet-sayaçlar PS 'si
 
-İzlenebilen dotnet işlemlerinin listesini görüntüleyin.
+İzlenebilecek DotNet işlemlerinin bir listesini görüntüleyin.
 
-### <a name="synopsis"></a>Özet
+### <a name="synopsis"></a>Özeti
 
 ```console
 dotnet-counters ps [-h|--help]

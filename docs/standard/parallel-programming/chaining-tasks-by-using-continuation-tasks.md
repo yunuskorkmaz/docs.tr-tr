@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 53457f7f99d96c288b002f58c9db36f431ba863a
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
+ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381313"
+ms.lasthandoff: 08/08/2020
+ms.locfileid: "88024595"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Devamlılık görevlerini kullanarak görevleri zincirleme
 
@@ -145,7 +145,7 @@ Bazen bir tür döndüren devamlılık zincirlemesi gerekebilir <xref:System.Thr
 Aşağıdaki örnek, ek görevi döndüren işlevleri sarmanın nasıl kullanıldığını gösterir. Her devamlılık, Sarmalanan iç görevi ortaya çıkarmış olabilir.
 
 :::code language="csharp" source="snippets/cs/unwrap.cs":::
-:::code language="csharp" source="snippets/vb/unwrap.vb":::
+:::code language="vb" source="snippets/vb/unwrap.vb":::
 
 Kullanma hakkında daha fazla bilgi için <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> bkz. [nasıl yapılır: iç içe geçmiş bir görevi sarmalama](how-to-unwrap-a-nested-task.md).
 
