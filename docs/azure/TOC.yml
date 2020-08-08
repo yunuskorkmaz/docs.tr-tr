@@ -11,6 +11,8 @@
       href: authentication.md
     - name: Günlüğe Kaydetme
       href: logging.md
+    - name: Paketler
+      href: packages.md
     - name: SDK örneği
       href: /samples/dotnet/samples/azure-identity-resource-management-storage/
 - name: Azure’a geçiş
