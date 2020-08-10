@@ -290,6 +290,8 @@ items:
         href: diagnostics/index.md
       - name: Yönetilen hata ayıklayıcıları
         href: diagnostics/managed-debuggers.md
+      - name: EventCounters
+        href: diagnostics/event-counters.md
       - name: Günlüğe kaydetme ve izleme
         href: diagnostics/logging-tracing.md
       - name: .NET Core CLI genel araçları
@@ -302,6 +304,8 @@ items:
             href: diagnostics/dotnet-trace.md
       - name: .NET Core tanılama öğreticileri
         items:
+          - name: EventCounters ile performans ölçümlerini alma
+            href: diagnostics/event-counter-perf.md
           - name: Bellek sızıntısında hata ayıklama
             href: diagnostics/debug-memory-leak.md
           - name: Yüksek CPU kullanımı hatasını ayıklama

@@ -82,3 +82,35 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md
         - name: İç içe stackalloc
           href: ../../../../_csharplang/proposals/csharp-8.0/nested-stackalloc.md
+    - name: C# 9.0 belirtim teklifi
+      items:
+        - name: Kayıtlar
+          href: ../../../../_csharplang/proposals/csharp-9.0/records.md
+        - name: Üst düzey deyimler
+          href: ../../../../_csharplang/proposals/csharp-9.0/top-level-statements.md
+        - name: Desen eşleştirme geliştirmeleri
+          href: ../../../../_csharplang/proposals/csharp-9.0/patterns3.md
+        - name: Yalnızca init ayarlayıcılar
+          href: ../../../../_csharplang/proposals/csharp-9.0/init.md
+        - name: Hedef türü belirtilmiş yeni ifadeler
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-new.md
+        - name: Modül başlatıcılar
+          href: ../../../../_csharplang/proposals/csharp-9.0/module-initializers.md
+        - name: Kısmi metotları genişletme
+          href: ../../../../_csharplang/proposals/csharp-9.0/extending-partial-methods.md
+        - name: Statik anonim işlevler
+          href: ../../../../_csharplang/proposals/csharp-9.0/static-anonymous-functions.md
+        - name: Hedef türü belirtilmiş koşullu ifade
+          href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
+        - name: Birlikte değişken dönüş türleri
+          href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: Lambda atma parametreleri
+          href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
+        - name: Yerel işlevlerlerde öznitelikler
+          href: ../../../../_csharplang/proposals/csharp-9.0/local-function-attributes.md
+        - name: Yerel boyutlu tamsayılar
+          href: ../../../../_csharplang/proposals/csharp-9.0/native-integers.md
+        - name: İşlev işaretçileri
+          href: ../../../../_csharplang/proposals/csharp-9.0/function-pointers.md
+        - name: localsinit bayrağını yaymayı durdurma
+          href: ../../../../_csharplang/proposals/csharp-9.0/skip-localsinit.md
