@@ -1829,7 +1829,7 @@
       href: language-reference/compiler-messages/index.md
     - name: C# 6.0 taslak belirtimi
       href: language-reference/specification/
-    - name: C# 7.0 - 8.0 teklifleri
+    - name: C# 7.0 - 9.0 teklifleri
       href: language-reference/proposals/
 - name: İzlenecek Yollar
   href: walkthroughs.md
