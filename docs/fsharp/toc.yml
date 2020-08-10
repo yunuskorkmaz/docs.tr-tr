@@ -1,21 +1,21 @@
-- name: 'F# belgeleri'
+- name: F# belgeleri
   href: index.yml
-- name: 'F# nedir?'
+- name: F# nedir?
   href: what-is-fsharp.md
-- name: Kullanmaya başlayın
+- name: başlarken
   href: get-started/index.md
   items:
-    - name: 'F# yükleme'
+    - name: F# yükleme
       href: get-started/install-fsharp.md
-    - name: 'Visual Studio’da F#'
+    - name: Visual Studio’da F#
       href: get-started/get-started-visual-studio.md
-    - name: 'Visual Studio Code’da F#'
+    - name: Visual Studio Code’da F#
       href: get-started/get-started-vscode.md
-    - name: '.NET Core CLI ile F#'
+    - name: .NET Core CLI ile F#
       href: get-started/get-started-command-line.md
-    - name: 'Mac için Visual Studio’da F#'
+    - name: Mac için Visual Studio’da F#
       href: get-started/get-started-with-visual-studio-for-mac.md
-- name: 'F# Turu'
+- name: F# Turu
   href: tour.md
 - name: Öğreticiler
   items:
@@ -37,17 +37,17 @@
           href: tutorials/type-providers/type-provider-security.md
         - name: Tür Sağlayıcıları Sorunlarını Giderme
           href: tutorials/type-providers/troubleshooting-type-providers.md
-    - name: 'F# Etkileşimli'
+    - name: F# Etkileşimli
       href: tutorials/fsharp-interactive/index.md
-- name: 'F# yenilikleri'
+- name: F# yenilikleri
   items:
-    - name: 'F# 4.7'
+    - name: F# 4.7
       href: whats-new/fsharp-47.md
-    - name: 'F# 4.6'
+    - name: F# 4.6
       href: whats-new/fsharp-46.md
-    - name: 'F# 4.5'
+    - name: F# 4.5
       href: whats-new/fsharp-45.md
-- name: 'F# dil başvurusu'
+- name: F# dil başvurusu
   href: language-reference/index.md
   items:
     - name: Klavye Başvurusu
@@ -85,9 +85,9 @@
       items:
         - name: Boş Değerler
           href: language-reference/values/null-values.md
-    - name: Sabit değerler
+    - name: Değişmez Değerler
       href: language-reference/literals.md
-    - name: 'F# Türleri'
+    - name: F# Türleri
       href: language-reference/fsharp-types.md
     - name: Tür Çıkarma
       href: language-reference/type-inference.md
@@ -99,7 +99,7 @@
       href: language-reference/strings.md
     - name: Demetler
       href: language-reference/tuples.md
-    - name: 'F# Koleksiyon Türleri'
+    - name: F# Koleksiyon Türleri
       href: language-reference/fsharp-collection-types.md
     - name: Listeler
       href: language-reference/lists.md
@@ -132,7 +132,7 @@
       href: language-reference/copy-and-update-record-expressions.md
     - name: Ayrılmış Birleşimler
       href: language-reference/discriminated-unions.md
-    - name: Numaralandırmalar
+    - name: Listelemeler
       href: language-reference/enumerations.md
     - name: Tür Kısaltmaları
       href: language-reference/type-abbreviations.md
@@ -163,7 +163,7 @@
           href: language-reference/members/constructors.md
         - name: Olaylar
           href: language-reference/members/events.md
-        - name: 'Açık Alanlar: `val` Anahtar Sözcüğü'
+        - name: 'Belirtik Alanlar: `val` Anahtar Sözcüğü'
           href: language-reference/members/explicit-fields-the-val-keyword.md
     - name: Tür Genişletmeleri
       href: language-reference/type-extensions.md
@@ -220,12 +220,14 @@
       href: language-reference/namespaces.md
     - name: Modüller
       href: language-reference/modules.md
-    - name: 'Önemli Bildirimler: open Anahtar Sözcüğü'
+    - name: 'İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü'
       href: language-reference/import-declarations-the-open-keyword.md
     - name: İmza Dosyaları
       href: language-reference/signature-files.md
     - name: Ölçü Birimleri
       href: language-reference/units-of-measure.md
+    - name: Düz Metin Biçimlendirmesi
+      href: language-reference/plaintext-formatting.md
     - name: XML Belgeleri
       href: language-reference/xml-documentation.md
     - name: Gecikmeli İfadeler
@@ -248,7 +250,7 @@
       href: language-reference/compiler-directives.md
     - name: Derleyici Seçenekleri
       href: language-reference/compiler-options.md
-    - name: 'F# Etkileşimli Seçenekleri'
+    - name: F# Etkileşimli Seçenekleri
       href: language-reference/fsharp-interactive-options.md
     - name: 'Kaynak Satırı, Dosya ve Yol Tanımlayıcıları'
       href: language-reference/source-line-file-path-identifiers.md
@@ -258,25 +260,25 @@
       href: language-reference/verbose-syntax.md
     - name: Derleyici hataları ve uyarıları
       href: language-reference/compiler-messages/index.md
-- name: 'F# stil kılavuzu'
+- name: F# stil kılavuzu
   href: style-guide/index.md
   items:
-    - name: 'F# kod biçimlendirme yönergeleri'
+    - name: F# kod biçimlendirme yönergeleri
       href: style-guide/formatting.md
-    - name: 'F# kodlama kuralları'
+    - name: F# kodlama kuralları
       href: style-guide/conventions.md
-    - name: 'F# bileşen tasarımı yönergeleri'
+    - name: F# bileşen tasarımı yönergeleri
       href: style-guide/component-design-guidelines.md
-- name: 'Azure’da F# kullanma'
+- name: Azure’da F# kullanma
   href: using-fsharp-on-azure/index.md
   items:
-    - name: 'F# kullanarak Azure Blob depolama kullanmaya başlama'
+    - name: F# kullanarak Azure Blob depolama kullanmaya başlama
       href: using-fsharp-on-azure/blob-storage.md
-    - name: 'F# kullanarak Azure Dosya depolama kullanmaya başlama'
+    - name: F# kullanarak Azure Dosya depolama kullanmaya başlama
       href: using-fsharp-on-azure/file-storage.md
-    - name: 'F# kullanarak Azure Kuyruk depolama kullanmaya başlama'
+    - name: F# kullanarak Azure Kuyruk depolama kullanmaya başlama
       href: using-fsharp-on-azure/queue-storage.md
-    - name: 'F# kullanarak Azure Tablo depolama kullanmaya başlama'
+    - name: F# kullanarak Azure Tablo depolama kullanmaya başlama
       href: using-fsharp-on-azure/table-storage.md
-    - name: 'F# Azure Bağımlılıkları için Paket Yönetimi'
+    - name: F# Azure Bağımlılıkları için Paket Yönetimi
       href: using-fsharp-on-azure/package-management.md
