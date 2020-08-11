@@ -1,13 +1,14 @@
 ---
 title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
+ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: a0cbead27e52af3114d9c44fd19c966e665a2850
-ms.sourcegitcommit: 32f0d6f4c01ddc6ca78767c3a30e3305f8cd032c
+ms.openlocfilehash: 4f45362fbb3df053b95156b8e633903f011a85ad
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87427014"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062879"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -278,7 +279,7 @@ Nuget.org üzerindeki profil adlarıyla eşleşen paket yazarları için noktal�
 
 UI görüntüleme paketinin uzun açıklaması.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Açıklama
 
 Derleme için uzun bir açıklama. `PackageDescription`Belirtilmezse, bu özellik paketin açıklaması olarak da kullanılır.
 

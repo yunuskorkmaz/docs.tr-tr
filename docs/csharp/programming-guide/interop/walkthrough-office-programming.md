@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: bf4725f3f636bb208450cb9b5c58766d84947f86
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 76f0e2eccb5d1a59d9aaa3eed11b25dd2dd9cac3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302951"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063009"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 
@@ -25,7 +25,7 @@ Her iki dil de, birincil birlikte çalışma derlemelerini (PIA 'lar) kullanıc�
 
 Bu izlenecek yol, Office programlama bağlamında bu özellikleri gösterir, ancak bu özelliklerin birçoğu genel programlamada de yararlıdır. İzlenecek yolda, Excel çalışma kitabı oluşturmak için bir Excel eklenti uygulaması kullanırsınız. Sonra, çalışma kitabının bağlantısını içeren bir Word belgesi oluşturursunuz. Son olarak, PIA bağımlılığını etkinleştirmeyi ve devre dışı bırakmayı görürsünüz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Microsoft Office Word yüklü olmalıdır.
 
@@ -45,7 +45,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 6. İsterseniz, **ad** kutusuna projeniz için bir ad yazın.
 
-7. **Tamam** düğmesine tıklayın.
+7. **Tamam**’a tıklayın.
 
 8. Yeni proje **Çözüm Gezgini**görüntülenir.
 
@@ -55,7 +55,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 2. **Derlemeler** sekmesinde, **Microsoft. Office. Interop. Excel**, sürüm `<version>.0.0.0` (Office ürün sürüm numaraları için bir anahtar için), **bileşen adı** listesinde, [Microsoft](https://en.wikipedia.org/wiki/Microsoft_Office#Versions) **. Office. Interop. Word**, öğesini seçin ve sonra da CTRL tuşunu basılı tutun `version <version>.0.0.0` . Derlemeleri görmüyorsanız bunların yüklendiğinden ve görüntülendiklerinden emin olmanız gerekebilir (bkz. [nasıl yapılır: Office birincil birlikte çalışma derlemelerini yükleme](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)).
 
-3. **Tamam** düğmesine tıklayın.
+3. **Tamam**’a tıklayın.
 
 ### <a name="to-add-necessary-imports-statements-or-using-directives"></a>Gerekli Içeri aktarmalar deyimlerini eklemek veya yönergeleri kullanmak için
 
@@ -125,7 +125,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
 ### <a name="to-invoke-displayinexcel"></a>DisplayInExcel 'i çağırmak için
 
-1. Yönteminin sonuna aşağıdaki kodu ekleyin `ThisAddIn_StartUp` . Çağrısı `DisplayInExcel` iki bağımsız değişken içerir. İlk bağımsız değişken işlenecek hesapların listesinin adıdır. İkinci bağımsız değişken, verilerin nasıl işleneceğini tanımlayan çok satırlı bir lambda ifadesidir. `ID`Her bir `balance` hesabın ve değerleri bitişik hücrelerde görüntülenir ve bakiye sıfırdan küçükse satır kırmızı renkte görüntülenir. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+1. Yönteminin sonuna aşağıdaki kodu ekleyin `ThisAddIn_StartUp` . Çağrısı `DisplayInExcel` iki bağımsız değişken içerir. İlk bağımsız değişken işlenecek hesapların listesinin adıdır. İkinci bağımsız değişken, verilerin nasıl işleneceğini tanımlayan çok satırlı bir lambda ifadesidir. `ID`Her bir `balance` hesabın ve değerleri bitişik hücrelerde görüntülenir ve bakiye sıfırdan küçükse satır kırmızı renkte görüntülenir. Daha fazla bilgi için bkz. [lambda ifadeleri](../../language-reference/operators/lambda-expressions.md).
 
      [!code-csharp[csOfficeWalkthrough#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#9)]
 
@@ -200,10 +200,10 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 - [Bağımsız Değişkenleri Konuma ve Ada Göre Geçirme](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [Adlandırılmış ve İsteğe Bağlı Bağımsız Değişkenler](../classes-and-structs/named-and-optional-arguments.md)
 - [Erken ve geç bağlama](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dinamik](../../language-reference/builtin-types/reference-types.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Tür dinamiği kullanma](../types/using-type-dynamic.md)
 - [Lambda İfadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [Lambda Ifadeleri (C#)](../statements-expressions-operators/lambda-expressions.md)
+- [Lambda Ifadeleri (C#)](../../language-reference/operators/lambda-expressions.md)
 - [COM birlikte çalışma programlamada dizin oluşturulmuş özellikleri kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [İzlenecek yol: Visual Studio’da Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
 - [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](../../../standard/assembly/embed-types-visual-studio.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: a00957c8d36a96b5ee23b9e5a309b6139b33fd36
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: c126837309b5fe3495a5e9e6af589892670b62c3
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916687"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063087"
 ---
 # <a name="--and---operators-c-reference"></a>-ve-= işleçleri (C# Başvurusu)
 
@@ -37,7 +37,7 @@ Aynı [temsilci](../builtin-types/reference-types.md#the-delegate-type) türün�
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/shared/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  Yukarıdaki örnek ayrıca temsilci kaldırma temsilci örneklerinin karşılaştırıldığı gösterilmektedir. Örneğin, aynı [lambda ifadelerinin](../../programming-guide/statements-expressions-operators/lambda-expressions.md) değerlendirmesinden üretilen temsilciler eşit değildir. Temsilci eşitliği hakkında daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md), [eşitlik işleçleri temsilcisi](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümüne bakın.
+  Yukarıdaki örnek ayrıca temsilci kaldırma temsilci örneklerinin karşılaştırıldığı gösterilmektedir. Örneğin, aynı [lambda ifadelerinin](lambda-expressions.md) değerlendirmesinden üretilen temsilciler eşit değildir. Temsilci eşitliği hakkında daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md), [eşitlik işleçleri temsilcisi](~/_csharplang/spec/expressions.md#delegate-equality-operators) bölümüne bakın.
 
 - Sol işlenen ise `null` işlemin sonucu olur `null` . Sağ işlenen ise, `null` işlemin sonucu sol işlenenin bir sonucudur.
 

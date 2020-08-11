@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 132518b9d8d22efecfcf3ed14e8b5969aa768cd4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: d42d244e644bf3ee1f45b25a71d60bbb2ef8e590
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024595"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063841"
 ---
 # <a name="chaining-tasks-using-continuation-tasks"></a>Devamlılık görevlerini kullanarak görevleri zincirleme
 
@@ -52,7 +52,7 @@ Yöntemini çağırarak, öncül öğesinin tamamlandığında yürütülen bir 
 
 Ayrıca, bir görev grubunun herhangi biri veya tümü tamamlandığında çalıştırılacak bir devamlılık oluşturabilirsiniz. Tüm öncül görevler tamamlandığında bir devamlılık yürütmek için statik ( `Shared` Visual Basic) <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> yöntemi veya örnek <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType> yöntemi çağırın. Öncül görevlerden herhangi biri tamamlandığında bir devamlılık yürütmek için statik ( `Shared` Visual Basic) <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> yöntemi veya örnek <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A?displayProperty=nameWithType> yöntemi çağırın.
 
-<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>Ve <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> aşırı yüklerini çağıran iş parçacığını engellemediğine unutmayın. Ancak, <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> çağıran iş parçacığını engelleyen döndürülen özelliği almak için ve yöntemleri hariç tüm ve yöntemlerini çağırabilirsiniz.
+Ve aşırı yüklerine yapılan çağrılar <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> çağıran iş parçacığını engellemez. Ancak, <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task.WhenAll%28System.Threading.Tasks.Task%5B%5D%29?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> çağıran iş parçacığını engelleyen döndürülen özelliği almak için ve yöntemleri hariç tüm ve yöntemlerini çağırabilirsiniz.
 
 Aşağıdaki örnek, <xref:System.Threading.Tasks.Task.WhenAll%28System.Collections.Generic.IEnumerable%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> 10 öncül görevlerinin sonuçlarını yansıtan bir devamlılık görevi oluşturmak için yöntemini çağırır. Her öncül görev, birinden 10 ' a değişen bir dizin değeri sağlar. Öncüllerin başarıyla tamamlandıysanız ( <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> özelliği ise <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType> ), <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> Devamlılık özelliği <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> her öncül tarafından döndürülen değerlerin bir dizisidir. Örnek, bir ve 10 arasındaki tüm sayıların karelerinin toplamını hesaplamak için bunları ekler.
 
@@ -88,7 +88,7 @@ Görev devamlılık seçenekleri hakkında daha fazla bilgi için konusuna bakı
 
 <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType>Devamlılık özelliği <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> aşağıdaki durumlarda olarak ayarlanır:
 
-- <xref:System.OperationCanceledException>İptal isteğine yanıt olarak bir özel durum oluşturur. Herhangi bir görevde olduğu gibi, özel durum devamlılığın geçirildiği aynı belirteci içeriyorsa, birlikte iptalin iptali onayı olarak değerlendirilir.
+- <xref:System.OperationCanceledException>İptal isteğine yanıt olarak bir özel durum oluşturur. Herhangi bir görevde olduğu gibi, özel durum devamlılığın geçirildiği aynı belirteci içeriyorsa, birlikte iptalin iptali bildirimi olarak değerlendirilir.
 - Devamlılık bir <xref:System.Threading.CancellationToken?displayProperty=nameWithType> <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> özelliği olan `true` . Bu durumda, devamlılık başlamaz ve durumuna geçiş yapar <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> .
 - Bağımsız değişkeni tarafından ayarlanan koşul karşılanmadığından devamlılık hiçbir şekilde <xref:System.Threading.Tasks.TaskContinuationOptions> çalışmaz. Örneğin, bir öncül bir <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> duruma gittiyse, bu, bu, bu, bu, bu <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> işlem çalışır ancak <xref:System.Threading.Tasks.TaskStatus.Canceled> duruma geçer.
 

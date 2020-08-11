@@ -1,5 +1,5 @@
 ---
-title: atmak - C# Referans
+title: throw-C# başvurusu
 ms.date: 03/02/2015
 f1_keywords:
 - throw
@@ -9,55 +9,55 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 04d3138e3390627355b4b2d4e25c6b00248cec1a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399338"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063126"
 ---
 # <a name="throw-c-reference"></a>throw (C# Başvurusu)
 
-Program yürütülmesi sırasında bir özel durum oluşumunu bildirir.  
+Programın yürütülmesi sırasında bir özel durumun oluşumunu bildirir.  
   
 ## <a name="remarks"></a>Açıklamalar
 
-`throw` Sözdizimi:
+Sözdizimi şöyledir `throw` :
 
 ```csharp
 throw [e];
 ```
 
-nereden `e` türetilmiş bir sınıfın <xref:System.Exception?displayProperty=nameWithType>bir örneğidir. Aşağıdaki örnek, `throw` adlı `GetNumber` bir <xref:System.IndexOutOfRangeException> yönteme geçirilen bağımsız değişken iç dizinin geçerli bir dizine karşılık gelmiyorsa, bir ifade yi atmak için deyimkullanır.
+Burada `e` türetilmiş bir sınıfın örneğidir <xref:System.Exception?displayProperty=nameWithType> . Aşağıdaki örnek, `throw` <xref:System.IndexOutOfRangeException> adlı bir metoda geçirilen bağımsız değişken `GetNumber` iç dizinin geçerli bir dizinine karşılık gelmiyorsa bir oluşturmak için ifadesini kullanır.
 
 [!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]
 
-Yöntem arayanlar daha `try-catch` sonra `try-catch-finally` atılan özel durumu işlemek için bir veya blok kullanır. Aşağıdaki örnek, `GetNumber` yöntem tarafından atılan özel durumu işler.
+Yöntem çağıranları, sonra `try-catch` `try-catch-finally` oluşturulan özel durumu işlemek için bir veya bloğu kullanır. Aşağıdaki örnek, yöntemi tarafından oluşturulan özel durumu işler `GetNumber` .
 
 [!code-csharp[csrefKeyword#2](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#2)]
 
-## <a name="re-throwing-an-exception"></a>Bir özel durumu yeniden atma
+## <a name="re-throwing-an-exception"></a>Özel durum yeniden oluşturuluyor
 
-`throw`bir `catch` blokta işlenen `catch` bir özel durum yeniden atmak için bir blokta da kullanılabilir.  Bu durumda, `throw` bir istisna operand almaz. Bir yöntem, bir arayandan başka bir kitaplık yöntemine bir bağımsız değişken geçtiğinde ve kitaplık yöntemi arayana aktarılması gereken bir özel durum attığında en kullanışlıdır. Örneğin, aşağıdaki örnek, başharfe <xref:System.NullReferenceException> çevrilmemiş bir dizenin ilk karakterini almaya çalışırken atılan bir şeyi yeniden atar.
+`throw`, `catch` bir blokta işlenen bir özel durumu yeniden oluşturmak için bir blokta da kullanılabilir `catch` .  Bu durumda, `throw` bir özel durum işleneni almaz. Bir yöntem çağıran bir bağımsız değişkende diğer bir kitaplık yöntemine geçtiğinde ve kitaplık yöntemi çağırana geçirilmesi gereken bir özel durum oluşturduğunda, en çok yararlı olur. Örneğin, aşağıdaki örnek, <xref:System.NullReferenceException> başlatılmamış bir dizenin ilk karakterini almaya çalışırken oluşturulan bir öğesini yeniden atar.
 
 [!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]
 
 > [!IMPORTANT]
-> Arayanın aktardığı `throw e` yeni bir `catch` özel durumu anında anımsamak için bir bloktaki sözdizimini de kullanabilirsiniz. Bu durumda, <xref:System.Exception.StackTrace> özellikten kullanılabilen özgün özel durumun yığın izi korunmaz.
+> Ayrıca, `throw e` `catch` çağrıyı yapana geçirdiğiniz yeni bir özel durum oluşturmak için bir blokta söz dizimini kullanabilirsiniz. Bu durumda, özelliğinden erişilebilen özgün özel durumun yığın izlemesi <xref:System.Exception.StackTrace> korunmaz.
 
-## <a name="the-throw-expression"></a>İfade `throw`
+## <a name="the-throw-expression"></a>`throw`İfade
 
-C# 7.0 ile `throw` başlayarak, bir ifade yanı sıra bir ifade olarak kullanılabilir. Bu, daha önce desteklenmeyen bağlamlarda bir özel durum atılmasına izin verir. Bunlar:
+C# 7,0 ' den itibaren bir deyim ve `throw` deyim olarak kullanılabilir. Bu, daha önce desteklenmeyen bağlamlarda bir özel durumun oluşturulmasına olanak sağlar. Bu modüller şunlardır:
 
-- [koşullu işleç](../operators/conditional-operator.md). Aşağıdaki örnekte, `throw` boş bir <xref:System.ArgumentException> dize dizisi geçirilirse bir yöntem atmak için bir ifade kullanır. C# 7.0'dan önce, bu mantığın bir `if` / `else` deyimde görünmesi gerekir.
+- [koşullu işleç](../operators/conditional-operator.md). Aşağıdaki örnek, bir `throw` <xref:System.ArgumentException> Yöntem boş bir dize dizisi geçirtiyse, oluşturmak için bir ifade kullanır. C# 7,0 ' den önce, bu mantığın bir bildirimde görünmesi gerekir `if` / `else` .
 
    [!code-csharp[csrefKeyword#4](~/samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]
 
-- [null-coalescing operatörü](../operators/null-coalescing-operator.md). Aşağıdaki örnekte, `throw` bir `Name` özel liğe atanan dize `null`.
+- [null birleşim işleci](../operators/null-coalescing-operator.md). Aşağıdaki örnekte bir `throw` ifade, bir özelliğe atanmış dize ise bir özel durum oluşturmak için null birleşim işleciyle birlikte kullanılır `Name` `null` .
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- bir ifade gövdeli [lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) veya yöntemi. Aşağıdaki örnekte, bir <xref:System.InvalidCastException> <xref:System.DateTime> değere dönüşüm desteklenmez bir çünkü atan bir ifade gövdeli yöntem gösterin.
+- ifade-Bodied [lambda](../operators/lambda-expressions.md) veya yöntem. Aşağıdaki örnek, bir <xref:System.InvalidCastException> değere dönüştürme desteklenmediğinden bir ifade-Bodied yöntemi gösterir <xref:System.DateTime> .
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 
@@ -67,8 +67,8 @@ C# 7.0 ile `throw` başlayarak, bir ifade yanı sıra bir ifade olarak kullanıl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [try-catch](try-catch.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Nasıl yapılır: Açıkça Özel Durumlar Oluşturma](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

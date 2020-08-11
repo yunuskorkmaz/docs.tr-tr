@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1765a15347aeedb9cc5fa6784abdfad6fafe4016
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 46b0e44182d22158aa5fa54a0f44bae70aa8ddd9
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87300767"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063048"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ'te Sorgu Sözdizimi ve Yöntem Sözdizimi (C#)
 Giriş dili tümleşik sorgu (LINQ) belgelerindeki çoğu sorgu LINQ bildirime dayalı sorgu söz dizimi kullanılarak yazılır. Ancak, kod derlendiğinde, sorgu söz dizimi .NET ortak dil çalışma zamanı (CLR) için yöntem çağrılarına çevrilmelidir. Bu yöntem,,,,, ve gibi adlara sahip standart sorgu işleçlerini `Where` çağırır `Select` `GroupBy` `Join` `Max` `Average` . Sorgu söz dizimi yerine yöntemi sözdizimi kullanarak doğrudan çağırabilirsiniz.  
@@ -38,7 +38,7 @@ Giriş dili tümleşik sorgu (LINQ) belgelerindeki çoğu sorgu LINQ bildirime d
 ## <a name="lambda-expressions"></a>Lambda İfadeleri  
  Önceki örnekte, koşullu ifadenin ( `num % 2 == 0` ) yönteme bir satır içi bağımsız değişken olarak geçirildiğine dikkat edin `Where` : `Where(num => num % 2 == 0).` Bu satır içi ifadeye lambda ifadesi denir. Başka türlü bir anonim yöntem veya bir genel temsilci ya da bir ifade ağacı olarak daha az sayıda biçimde yazılması gereken kodu yazmak için kullanışlı bir yoldur. C# ' de `=>` , "gider" olarak okunan lambda işleçtir. `num`İşlecinin sol tarafındaki giriş değişkeni sorgu ifadesinde öğesine karşılık gelir `num` . Derleyici, `num` genel bir tür olduğunu bildiğinden, türünü çıkarabilir `numbers` <xref:System.Collections.Generic.IEnumerable%601> . Lambda gövdesi, sorgu söz dizimi ya da başka bir C# ifadesi ya da deyimi ile yalnızca ifade ile aynıdır; Bu, Yöntem çağrılarını ve diğer karmaşık mantığı içerebilir. "Dönüş değeri" yalnızca ifade sonucudur.  
   
- LINQ kullanmaya başlamak için lambdaları yoğun bir şekilde kullanmanız gerekmez. Ancak bazı sorgular yalnızca Yöntem söz dizimine ve bu öğelerden bazıları lambda ifadeleri gerektirir. Lambdalar hakkında daha fazla bilgi sahibi olduktan sonra, LINQ araç kutusu 'nda güçlü ve esnek bir araç olduğunu fark edersiniz. Daha fazla bilgi için bkz. [lambda ifadeleri](../../statements-expressions-operators/lambda-expressions.md).  
+ LINQ kullanmaya başlamak için lambdaları yoğun bir şekilde kullanmanız gerekmez. Ancak bazı sorgular yalnızca Yöntem söz dizimine ve bu öğelerden bazıları lambda ifadeleri gerektirir. Lambdalar hakkında daha fazla bilgi sahibi olduktan sonra, LINQ araç kutusu 'nda güçlü ve esnek bir araç olduğunu fark edersiniz. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../language-reference/operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Sorgu Oluşturabilirliği  
  Önceki kod örneğinde, `OrderBy` yönteminin, çağrısı üzerindeki nokta operatörü kullanılarak çağrılacağını unutmayın `Where` . `Where`filtrelenmiş bir sıra üretir ve sonra `Orderby` Bu dizi üzerinde sıralama yaparak çalışır. Sorgular bir döndürdüğü `IEnumerable` için, Yöntem çağrılarını birlikte zincirleyerek yöntem sözdiziminde oluşturursunuz. Sorgu söz dizimini kullanarak sorgular yazdığınızda derleyicinin arka planda yaptığı şeydir. Bir sorgu değişkeni sorgunun sonuçlarını depolamadığından, bunu değiştirebilir veya herhangi bir zamanda yeni bir sorgu için temel olarak kullanabilirsiniz.  

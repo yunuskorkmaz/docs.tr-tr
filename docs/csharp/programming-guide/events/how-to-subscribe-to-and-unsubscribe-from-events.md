@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: f228cc2e4fd719f4d79c56d65aa45b2a3031cba7
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 4aecbbd58268e7b50a34f503160edd1eca4fe659
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302093"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063631"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Olaylara abone olma ve aboneliği kaldırma (C# Programlama Kılavuzu)
 Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, başka bir sınıf tarafından yayımlanan bir olaya abone olursunuz. Örneğin, `click` Kullanıcı düğmeye tıkladığında uygulamanızı yararlı hale getirmek için bir düğmenin olayına abone olabilirsiniz.  
@@ -58,7 +58,7 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
-     Bir olay işleyicisi belirtmek için bir [lambda ifadesi](../statements-expressions-operators/lambda-expressions.md) de kullanabilirsiniz:
+     Bir olay işleyicisi belirtmek için bir [lambda ifadesi](../../language-reference/operators/lambda-expressions.md) de kullanabilirsiniz:
   
     ```csharp
     public Form1()  
@@ -100,8 +100,8 @@ Bu olay ortaya çıktığında çağrılan özel kod yazmak istediğinizde, baş
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ekinlikler](./index.md)
-- [olay](../../language-reference/keywords/event.md)
+- [Olaylar](./index.md)
+- [event](../../language-reference/keywords/event.md)
 - [.NET yönergeleriyle uyumlu olayları yayımlama](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [-ve-= işleçleri](../../language-reference/operators/subtraction-operator.md)
 - [+ ve + = işleçleri](../../language-reference/operators/addition-operator.md)

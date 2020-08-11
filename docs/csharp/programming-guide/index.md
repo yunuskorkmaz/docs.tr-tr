@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: e2127b91efb5a77497ce22e0f2934fab98f015af
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6db16a86e949fb50254c301f5e5ac0904a6072a4
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473883"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063605"
 ---
 # <a name="c-programming-guide"></a>C# programlama kılavuzu
 
@@ -37,7 +37,7 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
 
  [Türler](./types/index.md)  
 
- [Sınıflar ve yapılar](./classes-and-structs/index.md)  
+ [Sınıflar ve Yapılar](./classes-and-structs/index.md)  
   
  [Arabirimler](./interfaces/index.md)  
 
@@ -59,11 +59,9 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
   
  [LINQ sorgu Ifadeleri](../linq/index.md)  
   
- [Lambda Ifadeleri](./statements-expressions-operators/lambda-expressions.md)  
+ [Ad Alanları](./namespaces/index.md)  
   
- [Ad alanları](./namespaces/index.md)  
-  
- [Güvenli olmayan kod ve Işaretçiler](./unsafe-code-pointers/index.md)  
+ [Güvenli Olmayan Kod ve İşaretçiler](./unsafe-code-pointers/index.md)  
   
  [XML belge açıklamaları](./xmldoc/index.md)  
   
@@ -77,7 +75,7 @@ Bu bölüm, .NET aracılığıyla C# tarafından erişilebilen temel C# dil öze
   
  [Koleksiyonlar](./concepts/collections.md)  
   
- [Özel durumlar ve özel durum Işleme](./exceptions/index.md)  
+ [Özel Durumlar ve Özel Durum İşleme](./exceptions/index.md)  
   
  [Dosya Sistemi ve Kayıt Defteri (C# Programlama Kılavuzu)](./file-system/index.md)  
   

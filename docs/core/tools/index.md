@@ -2,13 +2,14 @@
 title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI ve özelliklerine genel bir bakış.
+ms.topic: overview
 ms.date: 02/13/2020
-ms.openlocfilehash: f92151c85b4816fef1859e84ad94945445db1854
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 18dde384058206f437b53572b2f8331d65324482
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415966"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062697"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI’ya genel bakış
 
@@ -81,7 +82,7 @@ Sürücü [DotNet](dotnet.md) olarak adlandırılır ve [çerçeveye bağlı bir
 
 Çerçeveye bağımlı bir uygulama çalıştırmak için, uygulamayı sürücüden sonra belirtin, örneğin, `dotnet /path/to/my_app.dll` . Komutu, uygulamanın DLL 'sinin bulunduğu klasörden yürütürken yalnızca yürütün `dotnet my_app.dll` . .NET Core çalışma zamanının belirli bir sürümünü kullanmak istiyorsanız, `--fx-version <VERSION>` seçeneğini kullanın ( [DotNet komut](dotnet.md) başvurusuna bakın).
 
-Sürücüye bir komut sağlarsanız, `dotnet.exe` CLI komutu yürütme işlemini başlatır. Örneğin:
+Sürücüye bir komut sağlarsanız, `dotnet.exe` CLI komutu yürütme işlemini başlatır. Örnek:
 
 ```dotnetcli
 dotnet build

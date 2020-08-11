@@ -15,17 +15,17 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: 2fc47a834f8f5b18021aa4f321345b8d7e4e8459
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 3ffdd481ac001b4e1bd229c6f5fa0bf285b508b2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662894"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063815"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Normal İfadelerdeki Miktar Niceleyiciler
 Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane karakter, Grup veya karakter sınıfının olması gerektiğini belirtir.  Aşağıdaki tabloda .NET tarafından desteklenen nicelik belirteçleri listelenmektedir.  
   
-|Greedy nicelik belirteci|Geç nicelik belirteci|Description|  
+|Greedy nicelik belirteci|Geç nicelik belirteci|Açıklama|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Sıfır veya daha fazla kez eşleştirin.|  
 |`+`|`+?`|Bir veya daha fazla kez eşleştirin.|  
@@ -48,14 +48,14 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
 ### <a name="match-zero-or-more-times-"></a>Sıfır veya daha fazla kez eşleştir: *  
  `*`Nicelik belirteci önceki öğeyle sıfır veya daha fazla kez eşleşir. `{0,}`Nicelik belirleyici eşdeğerdir. `*`, geç eşdeğerini olan doyumsuz nicelik belirleyicgidir `*?` .  
   
- Aşağıdaki örnekte bu normal ifade gösterilmektedir. Giriş dizesindeki dokuz basamak, (,,, ve) ve dört (,, `95` `929` `9219` , ve) düzeniyle eşleşir `9919` .  
+ Aşağıdaki örnekte bu normal ifade gösterilmektedir. Giriş dizesindeki dokuz basamaklı gruplar, (,, `95` `929` `9219` , ve) ile beş arasında eşleşir `9919` .  
   
  [!code-csharp[RegularExpressions.Quantifiers#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#1)]  
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`91*`|"9" öğesini ve ardından sıfır veya daha fazla "1" karakteri eşleştirin.|  
@@ -72,7 +72,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`an+`|Bir "a" ve arkasından bir veya daha fazla "n" karakteri eşleştirin.|  
@@ -89,7 +89,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`an?`|Bir "a" ve arkasından sıfır veya bir "n" karakteri ile eşleştirin.|  
@@ -105,7 +105,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`\d+`|Bir veya daha fazla ondalık basamağı eşleştirin.|  
@@ -123,7 +123,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`\d{2,}`|En az iki ondalık basamakla eşleştirin.|  
@@ -148,7 +148,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`\w*?`|Sıfır veya daha fazla sözcük karakteri ile mümkün olduğunca az karakter eşleştirin.|  
@@ -174,7 +174,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`^`|Giriş akışının başlangıcını eşleştirin.|  
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|  
@@ -193,7 +193,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`(\w{3,}?\.)`|En az 3 sözcük karakteri, ancak mümkün olduğunca az karakter ve nokta veya nokta karakteriyle eşleştirin. Bu ilk yakalama grubudur.|  
@@ -215,7 +215,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  Normal ifade deseninin, aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
 |`[A-Z]`|A 'dan Z 'ye büyük harfli bir karakter eşleştirin.|  
@@ -259,7 +259,7 @@ Nicelik belirteçleri, bir eşleşmenin bulunması için girişte kaç tane kara
   
  En az ve en fazla sayıda yakalama tanımlayan bir yakalama grubu arasındaki pratik farkı görmek için ve sabit sayıda yakalama tanımlayan bir tane, normal ifade desenlerini ve ' yi göz önünde bulundurun `(a\1|(?(1)\1)){0,2}` `(a\1|(?(1)\1)){2}` . Her iki normal ifade de, aşağıdaki tabloda gösterildiği gibi tanımlanan tek bir yakalama grubundan oluşur.  
   
-|Desen|Description|  
+|Desen|Açıklama|  
 |-------------|-----------------|  
 |`(a\1`|"A" ile birlikte yakalanan ilk grubun değerini eşleştirin...|  
 |<code>&#124;(?(1)</code>|… ya da ilk yakalanan grubun tanımlanıp tanımlanmadığını test edin. ( `(?(1)` Yapının bir yakalama grubu tanımlamadığını unutmayın.)|  

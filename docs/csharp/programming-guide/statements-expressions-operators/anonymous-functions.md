@@ -7,18 +7,18 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: ae8bda3c68542637b1430587ca4a537980c028bc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 1fde7d535054f09d55018a010468776622ebfba7
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381677"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063269"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Anonim işlevler (C# Programlama Kılavuzu)
 
 Anonim bir işlev, bir temsilci türünün beklendiği her yerde kullanılabilecek bir "satır içi" deyim veya ifadedir. Adlandırılmış bir temsilciyi başlatmak veya bir yöntem parametresi olarak adlandırılmış bir temsilci türü yerine bunu geçirmek için kullanabilirsiniz.
 
-Anonim bir işlev oluşturmak için bir [lambda ifadesi](lambda-expressions.md) veya [anonim yöntem](../../language-reference/operators/delegate-operator.md) kullanabilirsiniz. Satır içi kod yazmak için daha kısa ve açıklayıcı bir yol sağlayan lambda ifadeleri kullanmanızı öneririz. Anonim yöntemlerin aksine, bazı lambda ifadesi türleri ifade ağacı türlerine dönüştürülebilir.
+Anonim bir işlev oluşturmak için bir [lambda ifadesi](../../language-reference/operators/lambda-expressions.md) veya [anonim yöntem](../../language-reference/operators/delegate-operator.md) kullanabilirsiniz. Satır içi kod yazmak için daha kısa ve açıklayıcı bir yol sağlayan lambda ifadeleri kullanmanızı öneririz. Anonim yöntemlerin aksine, bazı lambda ifadesi türleri ifade ağacı türlerine dönüştürülebilir.
 
 ## <a name="the-evolution-of-delegates-in-c"></a>C 'deki temsilcilerin evrimi\#
 
@@ -35,6 +35,6 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Deyimler, Ifadeler ve Işleçler](./index.md)
-- [Lambda Ifadeleri](./lambda-expressions.md)
+- [Lambda Ifadeleri](../../language-reference/operators/lambda-expressions.md)
 - [Temsilciler](../delegates/index.md)
 - [İfade ağaçları (C#)](../concepts/expression-trees/index.md)

@@ -3,13 +3,14 @@ title: Sekme tamamlamayı etkinleştirme
 description: Bu makalede PowerShell, bash ve zsh için .NET Core CLI sekme tamamlamayı nasıl etkinleştireceğinizi öğretilir.
 author: adegeo
 ms.author: adegeo
+ms.topic: how-to
 ms.date: 11/03/2019
-ms.openlocfilehash: 491e1ca34c20c3994a571fc2deff7392c6bdb3f2
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: cd46305b8cd82825671a3a1568e8b93de1bbab26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324384"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062814"
 ---
 # <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI için sekme tamamlamayı etkinleştirme
 
@@ -17,7 +18,7 @@ ms.locfileid: "85324384"
 
 Bu makalede, üç kabuk, PowerShell, bash ve zsh için sekme tamamlamayı yapılandırma açıklanmaktadır. Diğer kabuklar için sekme tamamlamayı yapılandırma hakkında daha fazla bilgi için belgelerine bakın.
 
-Ayarladıktan sonra, .NET Core CLI için sekme tamamlama, `dotnet` kabuğa bir komut yazılarak ve ardından SEKME tuşuna basarak tetiklenir. Geçerli komut satırı `dotnet complete` komuta gönderilir ve sonuçlar kabuğunuz tarafından işlenir. Doğrudan komuta bir şey göndererek, sekme tamamlamayı etkinleştirmeden sonuçları test edebilirsiniz `dotnet complete` . Örneğin:
+Ayarladıktan sonra, .NET Core CLI için sekme tamamlama, `dotnet` kabuğa bir komut yazılarak ve ardından SEKME tuşuna basarak tetiklenir. Geçerli komut satırı `dotnet complete` komuta gönderilir ve sonuçlar kabuğunuz tarafından işlenir. Doğrudan komuta bir şey göndererek, sekme tamamlamayı etkinleştirmeden sonuçları test edebilirsiniz `dotnet complete` . Örnek:
 
 ```console
 > dotnet complete "dotnet a"

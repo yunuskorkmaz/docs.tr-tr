@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 9ada39a2144e5565a76a25df0f83424710ad939f
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 854d7c1278319869104e1758ba91eb3594741126
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916817"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063191"
 ---
 # <a name="c-operators-and-expressions-c-reference"></a>C# işleçleri ve ifadeleri (C# Başvurusu)
 
@@ -47,7 +47,7 @@ C# ' nin sağladığı diğer ifade türleri şunlardır:
 
   [!code-csharp-interactive[interpolated string](snippets/shared/Overview.cs#InterpolatedString)]
 
-- Anonim işlevler oluşturmanıza olanak sağlayan [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md) :
+- Anonim işlevler oluşturmanıza olanak sağlayan [lambda ifadeleri](lambda-expressions.md) :
 
   [!code-csharp-interactive[lambda expression](snippets/shared/Overview.cs#Lambda)]
 
@@ -80,7 +80,7 @@ Aşağıdaki tabloda, en düşük önceliğe göre C# işleçleri listelenmişti
 | [x. y](member-access-operators.md#member-access-expression-), [f (x)](member-access-operators.md#invocation-expression-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [`x?.y`](member-access-operators.md#null-conditional-operators--and-) , [`x?[y]`](member-access-operators.md#null-conditional-operators--and-) , [x + +](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [x!](null-forgiving.md), [New](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [Checked](../keywords/checked.md), [denetimsiz](../keywords/unchecked.md), [Default](default.md), [NameOf](nameof.md), [Delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Birincil |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \! x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(T) x](type-testing-and-cast.md#cast-expression), [await](await.md), [&x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true ve false](true-false-operators.md) | Birli |
 | [x.. Iz](member-access-operators.md#range-operator-) | Aralık |
-| [switch](switch-expression.md) | `switch`ifadesini |
+| [değiştirebilirsiniz](switch-expression.md) | `switch`ifadesini |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x/y](arithmetic-operators.md#division-operator-), [x% y](arithmetic-operators.md#remainder-operator-) | Çarpımsal|
 | [x + y](arithmetic-operators.md#addition-operator-), [x – y](arithmetic-operators.md#subtraction-operator--) | Toplamsal |
 | [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-), [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |

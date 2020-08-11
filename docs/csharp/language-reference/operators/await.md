@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 20fc492e45b2d248602de59682e752026d421e06
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 1941174d7e8d1676d11a13fa3ee6c7b84fe3952c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916916"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063243"
 ---
 # <a name="await-operator-c-reference"></a>Await işleci (C# Başvurusu)
 
@@ -27,7 +27,7 @@ Aşağıdaki örnekte, <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?dis
 > [!NOTE]
 > Zaman uyumsuz programlamaya giriş için bkz. [Async ve await Ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md). Ve ile zaman uyumsuz programlama `async` `await` , [görev tabanlı zaman uyumsuz düzene](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)uyar.
 
-`await`İşlecini yalnızca bir yöntem, [lambda ifadesi](../../programming-guide/statements-expressions-operators/lambda-expressions.md)veya [zaman uyumsuz](../keywords/async.md) anahtar sözcük tarafından değiştirilen [anonim bir yöntemde](delegate-operator.md) kullanabilirsiniz. Zaman uyumsuz bir yöntemde `await` işlecini, bir [kilit ifadesinin](../keywords/lock-statement.md)bloğu içinde ve [güvenli olmayan](../keywords/unsafe.md) bir bağlamda, zaman uyumlu bir işlevin gövdesinde kullanamazsınız.
+`await`İşlecini yalnızca bir yöntem, [lambda ifadesi](lambda-expressions.md)veya [zaman uyumsuz](../keywords/async.md) anahtar sözcük tarafından değiştirilen [anonim bir yöntemde](delegate-operator.md) kullanabilirsiniz. Zaman uyumsuz bir yöntemde `await` işlecini, bir [kilit ifadesinin](../keywords/lock-statement.md)bloğu içinde ve [güvenli olmayan](../keywords/unsafe.md) bir bağlamda, zaman uyumlu bir işlevin gövdesinde kullanamazsınız.
 
 `await`İşlecin işleneni genellikle şu .net türlerinden biridir: <xref:System.Threading.Tasks.Task> , <xref:System.Threading.Tasks.Task%601> , <xref:System.Threading.Tasks.ValueTask> , veya <xref:System.Threading.Tasks.ValueTask%601> . Ancak, herhangi bir awasever ifadesi işlecin işleneni olabilir `await` . Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [awasever ifadeleri](~/_csharplang/spec/expressions.md#awaitable-expressions) bölümüne bakın.
 

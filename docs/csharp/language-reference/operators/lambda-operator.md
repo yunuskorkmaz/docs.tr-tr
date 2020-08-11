@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: b72b058c1709e7a643a70233cc3289d5d9165ca4
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 30e1a3546f83a0a1ba5b1363238878868e94ab93
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916809"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063139"
 ---
 # <a name="-operator-c-reference"></a>=> işleci (C# Başvurusu)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87916809"
 
 ## <a name="lambda-operator"></a>Lambda işleci
 
-[Lambda ifadelerinde](../../programming-guide/statements-expressions-operators/lambda-expressions.md)lambda işleci, `=>` sol taraftaki giriş parametrelerini sağ taraftaki lambda gövdesinden ayırır.
+[Lambda ifadelerinde](lambda-expressions.md)lambda işleci, `=>` sol taraftaki giriş parametrelerini sağ taraftaki lambda gövdesinden ayırır.
 
 Aşağıdaki örnek, lambda ifadelerinin kullanımını göstermek için yöntem sözdizimi ile [LINQ](../../programming-guide/concepts/linq/index.md) özelliğini kullanır:
 
@@ -34,7 +34,7 @@ Aşağıdaki örnek, giriş parametreleri olmadan bir lambda ifadesinin nasıl t
 
 [!code-csharp-interactive[without input variables](snippets/shared/LambdaOperator.cs#WithoutInput)]
 
-Daha fazla bilgi için bkz. [lambda ifadeleri](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
+Daha fazla bilgi için bkz. [lambda ifadeleri](lambda-expressions.md).
 
 ## <a name="expression-body-definition"></a>İfade gövdesi tanımı
 

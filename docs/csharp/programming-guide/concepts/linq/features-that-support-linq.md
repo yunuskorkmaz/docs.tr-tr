@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f72b82180d794086dcea9f11a7a057dc26ab0b26
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 13254c69193e04ffcf11e3e23f1deb460063a6c1
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105419"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063698"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ'i Destekleyen C# Özellikleri
 
@@ -83,7 +83,7 @@ select new {name = cust.Name, phone = cust.Phone};
 
 Daha fazla bilgi için bkz. [anonim türler](../../classes-and-structs/anonymous-types.md).
 
-## <a name="extension-methods"></a>Uzantı Metotları
+## <a name="extension-methods"></a>Genişletme Yöntemleri
 
 Uzantı yöntemi, bir tür ile ilişkilendirilebilen statik bir yöntemdir ve bu sayede tür üzerinde bir örnek yöntemi gibi çağrılabilir. Bu özellik, etkin bir şekilde, var olan türlere "Ekle" gibi yeni yöntemler eklemenizi sağlar. Standart sorgu işleçleri, uygulayan herhangi bir tür için LINQ sorgu işlevselliği sağlayan bir genişletme yöntemleri kümesidir <xref:System.Collections.Generic.IEnumerable%601> .
 
@@ -97,7 +97,7 @@ Daha fazla bilgi için bkz.
 
 - [Anonim Işlevler](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Lambda Ifadeleri](../../statements-expressions-operators/lambda-expressions.md)
+- [Lambda Ifadeleri](../../../language-reference/operators/lambda-expressions.md)
 
 - [İfade ağaçları (C#)](../expression-trees/index.md)
 

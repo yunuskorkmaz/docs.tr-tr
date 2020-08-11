@@ -3,12 +3,12 @@ title: Kavramlar ve terminoloji (Işlevsel dönüşüm) (C#)
 description: Fonksiyonel programlama özellikleri XML dönüştürmeyi kolaylaştırır. C# ' de saf işlevsel dönüşümlerinin kavramları ve terminolojisi hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: ee972b376f0d0898b7681049b9641b43780ed353
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ca05a914f6156730e773d1effebfc72626b16507
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103986"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063282"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Kavramlar ve terminoloji (Işlevsel dönüşüm) (C#)
 
@@ -55,7 +55,7 @@ Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (C#)](./
 Lambda ifadesi \
 Temelde, bir temsilci türünün beklendiği her yerde kullanılabilecek bir satır içi anonim işlev. Bu, lambda ifadelerinin basitleştirilmiş bir tanımıdır, ancak Bu öğreticinin amaçları doğrultusunda yeterlidir.
 
-Hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../statements-expressions-operators/lambda-expressions.md).
+Hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../../language-reference/operators/lambda-expressions.md).
 
 koleksiyon
 Genellikle tek biçimli bir tür için yapılandırılmış bir veri kümesi. LINQ ile uyumlu olmak için bir koleksiyonun <xref:System.Collections.IEnumerable> arabirimini veya <xref:System.Linq.IQueryable> arabirimini (ya da kendi genel karşılıklarından birini veya) uygulaması gerekir <xref:System.Collections.Generic.IEnumerator%601> <xref:System.Linq.IQueryable%601> .

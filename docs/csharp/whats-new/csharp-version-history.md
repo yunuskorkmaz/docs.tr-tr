@@ -3,12 +3,12 @@ title: C# ' nin geçmişi-c# Kılavuzu
 description: Dil en eski sürümlerinde ne şekilde görünür ve bu tarihten sonra nasıl gelişmiştir?
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: 96d6e07d5553d65e95144a0cede7cab86b4c5ef7
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: b5c320e4c55803547fa44793a46e4a3da65bd0cb
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556859"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063477"
 ---
 # <a name="the-history-of-c"></a>C geçmişi\#
 
@@ -36,10 +36,10 @@ C# sürüm 1,0, bugün ile karşılaştırıldığında özelliklerden çıkarı
 
 C# 1,0 'nin başlıca özellikleri dahildir:
 
-- [Sınıflar](../programming-guide/classes-and-structs/classes.md)
+- [Sınıftır](../programming-guide/classes-and-structs/classes.md)
 - [Yapılar](../language-reference/builtin-types/struct.md)
 - [Arabirimler](../programming-guide/interfaces/index.md)
-- [Ekinlikler](../events-overview.md)
+- [Olaylar](../events-overview.md)
 - [Özellikler](../properties.md)
 - [Temsilciler](../delegates-overview.md)
 - [İşleçler ve ifadeler](../language-reference/operators/index.md)
@@ -83,7 +83,7 @@ C# sürüm 3,0, Visual Studio 2008 ile birlikte 2007 geldi, ancak dil özellikle
 - [Otomatik uygulanan özellikler](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonim türler](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Sorgu ifadeleri](../linq/query-expression-basics.md)
-- [Lambda ifadeleri](../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Lambda ifadeleri](../language-reference/operators/lambda-expressions.md)
 - [İfade ağaçları](../expression-trees.md)
 - [Uzantı yöntemleri](../programming-guide/classes-and-structs/extension-methods.md)
 - [Örtük olarak yazılan yerel değişkenler](../language-reference/keywords/var.md)

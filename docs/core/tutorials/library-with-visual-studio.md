@@ -1,29 +1,29 @@
 ---
 title: Visual Studio 'Yu kullanarak .NET Standard sınıf kitaplığı oluşturma
 description: Visual Studio kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
-ms.date: 06/08/2020
+ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 69259b1d47a8e30945c578db10c6d697c81fa261
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 07cc1bd7b9892f7cbee7a82998093718cd311b92
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164407"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062683"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Standard kitaplığı oluşturma
 
-Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir yardımcı program kitaplığı oluşturacaksınız. Bunu, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulamalısınız <xref:System.String> .
+Bu öğreticide, tek bir dize işleme yöntemi içeren basit bir sınıf kitaplığı oluşturacaksınız.
 
-Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,0 ' i hedefleyen bir sınıf kitaplığı, kitaplığınızın bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasının çağrılmasına izin verir. Sınıf kitaplığınızı bitirdiğinizde, bir üçüncü taraf bileşen olarak veya bir veya daha fazla uygulamayla paketlenmiş bileşen olarak dağıtabilirsiniz.
+Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve yöntemleri tanımlar. .NET Standard 2,0 ' i hedefleyen bir sınıf kitaplığı, kitaplığınızın bu .NET Standard sürümünü destekleyen herhangi bir .NET uygulamasının çağrılmasına izin verir.
 
-## <a name="prerequisites"></a>Ön koşullar
+Sınıf kitaplığınızı bitirdiğinizde, bir NuGet paketi veya onu kullanan uygulamayla paketlenmiş bir bileşen olarak dağıtabilirsiniz.
+
+## <a name="prerequisites"></a>Önkoşullar
 
 - **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,6 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
-
-  Daha fazla bilgi için, [.NET Core SDK](../install/sdk.md?pivots=os-windows) makalesine [Visual Studio ile install](../install/sdk.md?pivots=os-windows#install-with-visual-studio) bölümüne bakın.
 
 ## <a name="create-a-solution"></a>Çözüm oluşturma
 
@@ -67,6 +67,8 @@ Boş çözümü oluşturmak için:
    :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibrary/Class1.vb":::
 
    Sınıf kitaplığı, `UtilityLibraries.StringLibrary` adlı bir yöntemi içerir `StartsWithUpper` . Bu yöntem <xref:System.Boolean> , geçerli dize örneğinin büyük harfli bir karakterle başlayıp başlamadığını belirten bir değer döndürür. Unicode standart, büyük harfli karakterleri küçük harfli karakterlerden ayırır. <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> `true` Bir karakter büyük harfli ise, yöntemi döndürür.
+
+   `StartsWithUpper`, sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulanır <xref:System.String> .
 
 1. **Build**  >  Projenin hatasız derlendiğinden emin olmak için menü çubuğunda, derleme**çözümü** oluştur ' u seçin.
 
@@ -126,7 +128,17 @@ Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-Bu öğreticide, bir çözüm oluşturdunuz, bir kitaplık projesi eklediniz ve kitaplığı kullanan bir konsol uygulaması projesi ekledik. Sonraki öğreticide, çözüme bir birim testi projesi eklersiniz.
+Bu öğreticide, bir sınıf kitaplığı oluşturdunuz. Sonraki öğreticide, sınıf kitaplığını birim testi ile öğrenin.
 
 > [!div class="nextstepaction"]
-> [Visual Studio kullanarak .NET Core ile .NET Standard kitaplığı test etme](testing-library-with-visual-studio.md)
+> [Visual Studio 'Yu kullanarak .NET Standard kitaplığı ile birim testi](testing-library-with-visual-studio.md)
+
+Ya da otomatik birim testlerini atlayabilir ve bir NuGet paketi oluşturarak kitaplığı nasıl paylaşacağınızı öğrenebilirsiniz:
+
+> [!div class="nextstepaction"]
+> [Visual Studio kullanarak paket oluşturma ve yayımlama](/nuget/quickstart/create-and-publish-a-package-using-visual-studio)
+
+Ya da bir konsol uygulamasını yayımlamayı öğrenin. Konsol uygulamasını, bu öğreticide oluşturduğunuz çözümden yayımlarsanız, sınıf kitaplığı bir *. dll* dosyası olarak onunla birlikte görüntülenir.
+
+> [!div class="nextstepaction"]
+> [Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio.md)

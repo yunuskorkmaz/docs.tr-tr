@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 8d4c8424b07a9bccc9112ca9e635a78b9e1a3366
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b741b3bc9c03faaa5fa2c01bd8f70d4be9b099c2
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87300221"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063672"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Bir temsilciyi bildirme, oluşturma ve kullanma (C# Programlama Kılavuzu)
 C# 1,0 ve üzeri sürümlerde, temsilciler aşağıdaki örnekte gösterildiği gibi bildirilebilecek.  
@@ -31,7 +31,7 @@ C# 1,0 ve üzeri sürümlerde, temsilciler aşağıdaki örnekte gösterildiği 
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- Daha fazla bilgi için bkz. [lambda ifadeleri](../statements-expressions-operators/lambda-expressions.md).  
+ Daha fazla bilgi için bkz. [lambda ifadeleri](../../language-reference/operators/lambda-expressions.md).  
   
  Aşağıdaki örnek, bir temsilciyi bildirme, örneklendirme ve kullanma hakkında gösterilmektedir. `BookDB`Sınıfı, kitap veritabanını tutan bir kitaplığı veritabanını kapsüller. Bu, `ProcessPaperbackBooks` veritabanındaki tüm kağıt geri kitaplarını bulan ve her biri için bir temsilci çağıran bir yöntemi sunar. `delegate`Kullanılan tür adı `ProcessBookDelegate` . `Test`Sınıfı, Paperback kitaplarının başlıklarını ve ortalama fiyatını yazdırmak için bu sınıfı kullanır.  
   
@@ -75,5 +75,5 @@ C# 1,0 ve üzeri sürümlerde, temsilciler aşağıdaki örnekte gösterildiği 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Ekinlikler](../events/index.md)
+- [Olaylar](../events/index.md)
 - [Temsilciler](./index.md)

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 829e7dce4801508a8311f7bcbfeccbc36184cffc
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eee04959493914018904b61b0e5a289f172f2f18
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286643"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063724"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet Sorguları
 Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkisel veritabanları için SQL gibi özel bir sorgu dilinde ifade edilir ve XML için XQuery. Bu nedenle, geliştiricilerin sorgutıkları her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmeleri gerekiyordu. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik daha basit ve tutarlı bir model sunar. Bir LINQ sorgusunda, her zaman programlama nesneleriyle çalışırsınız.  
@@ -40,7 +40,7 @@ Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkise
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Yöntem tabanlı sorgu söz dizimi  
- LINQ to DataSet sorguları formületmenin diğer yolu Yöntem tabanlı sorguları kullanmaktır. Yöntem tabanlı sorgu söz dizimi, LINQ operatörü yöntemlerine doğrudan yöntem çağrılarının bir dizidir ve Lambda ifadelerini parametreler olarak geçirerek. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ LINQ to DataSet sorguları formületmenin diğer yolu Yöntem tabanlı sorguları kullanmaktır. Yöntem tabanlı sorgu söz dizimi, LINQ operatörü yöntemlerine doğrudan yöntem çağrılarının bir dizidir ve Lambda ifadelerini parametreler olarak geçirerek. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../csharp/language-reference/operators/lambda-expressions.md).  
   
  Bu örnek, <xref:System.Linq.Enumerable.Select%2A> içindeki tüm satırları döndürmek `Product` ve ürün adlarını göstermek için kullanır.  
   

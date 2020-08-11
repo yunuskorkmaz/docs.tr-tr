@@ -2,12 +2,12 @@
 title: .NET Core 'da EventCounters
 description: Bu makalede, olaylarınızın ne olduğunu, nasıl uygulanacağını ve bunları nasıl kullanacağınızı öğreneceksiniz.
 ms.date: 08/07/2020
-ms.openlocfilehash: 68868ff8b4e1393fc3b23af2bc8eef239ac56975
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: fc2f945e3de732a81b9ce3fd82eff10e455cae87
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88025022"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062970"
 ---
 # <a name="eventcounters-in-net-core"></a>.NET Core 'da EventCounters
 
@@ -177,7 +177,9 @@ EventCounters Azure Izleyici tarafından, özellikle Azure Application Insights 
 
 #### <a name="dotnet-monitor"></a>DotNet-izleyici
 
-, `dotnet-monitor` Bir .net işlemindeki tanılama bilgilerine erişimi daha kolay hale getiren deneysel bir araçtır. Daha fazla bilgi için bkz. [deneysel bir araç olan DotNet-Monitor](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor).
+`dotnet-monitor`Araç, bir .net işlemindeki tanılama bilgilerine erişimi daha kolay hale getiren deneysel bir araçtır. Araç, tüm tanılama araçlarının bir üst kümesi olarak görev yapar. İzlemelere ek olarak, ölçümleri izleyebilir, bellek dökümlerini toplayabilir ve GC dökümlerini toplayabilirler. Hem CLı aracı hem de Docker görüntüsü olarak dağıtılır. Bir REST API sunar ve tanılama yapıtlarının toplanması REST çağrıları aracılığıyla oluşur.
+
+Daha fazla bilgi için bkz. [deneysel bir araç olan DotNet-Monitor](https://devblogs.microsoft.com/dotnet/introducing-dotnet-monitor).
 
 ### <a name="consume-in-proc"></a>İşlem içi tüketme
 

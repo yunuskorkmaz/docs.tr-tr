@@ -3,12 +3,12 @@ title: Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma
 description: Bir Workflow Foundation iş akışı tanımı, yapılandırılmış etkinlik nesnelerinin bir ağacıdır. İş akışı tanımları, etkinlikler ve ifadeler oluşturmak için kodu kullanın.
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: d8b4cb8b85d3ea3759d58e15df823a72146772e8
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d169049c47c154858a2e653b5f286fa6b66ba44d
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421559"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063802"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Kesin Kod Kullanarak İş Akışları, Etkinlikler ve İfadeler Yazma
 İş akışı tanımı, yapılandırılmış etkinlik nesnelerinin bir ağacıdır. Bu etkinlik ağacı, el ile düzenlenen XAML veya XAML oluşturmak için İş Akışı Tasarımcısı kullanılarak dahil olmak üzere birçok şekilde tanımlanabilir. Ancak XAML kullanımı bir gereklilik değildir. Ayrıca, iş akışı tanımları programlama yoluyla da oluşturulabilir. Bu konu, kod kullanarak iş akışı tanımları, etkinlikler ve deyimler oluşturmaya genel bir bakış sağlar. Kodu kullanarak XAML iş akışlarıyla çalışma örnekleri için bkz. [xaml 'de ve xaml 'de Iş akışlarını ve etkinlikleri seri hale getirme](serializing-workflows-and-activities-to-and-from-xaml.md).  
@@ -62,7 +62,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri (C# Programlama Kılavuzu)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) veya [lambda ifadeleri (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
+ Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri (C# Başvurusu)](../../csharp/language-reference/operators/lambda-expressions.md) veya [lambda ifadeleri (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
  Lambda ifadeleri XAML biçimine serileştirilebilir değildir. Lambda ifadeleriyle bir iş akışını serileştirme girişimi yapılırsa, <xref:System.Activities.Expressions.LambdaSerializationException> Şu iletiyle bir oluşturulur: "Bu iş akışı kodda belirtilen Lambda ifadelerini içerir. Bu ifadeler XAML serileştirilebilir değildir. İş akışınızı XAML-serileştirilebilir yapmak için VisualBasicValue/VisualBasicReference veya ExpressionServices. Convert (lambda) kullanın. Bu işlem lambda ifadelerinizi ifade etkinliklerine dönüştürür. " Bu ifadeyi XAML ile uyumlu hale getirmek için, <xref:System.Activities.Expressions.ExpressionServices> <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> Aşağıdaki örnekte gösterildiği gibi ve kullanın.  
   

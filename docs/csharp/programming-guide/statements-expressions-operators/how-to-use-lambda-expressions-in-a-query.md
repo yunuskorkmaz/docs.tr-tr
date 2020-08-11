@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 501e67011707e2d165a3b9c1ff9f206db7f55448
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: ef8a7e3b4cd5302d6c928ad7ad81811797777b4a
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381638"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063256"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Bir sorguda lambda ifadeleri kullanma (C# Programlama Kılavuzu)
 Lambda ifadelerini doğrudan sorgu sözdiziminde kullanamazsınız, ancak bunları yöntem çağrılarında kullanın ve sorgu ifadeleri Yöntem çağrıları içerebilir. Aslında, bazı sorgu işlemleri yalnızca yöntem sözdiziminde ifade edilebilir. Sorgu sözdizimi ve Yöntem sözdizimi arasındaki fark hakkında daha fazla bilgi için bkz. [LINQ 'Te sorgu sözdizimi ve Yöntem sözdizimi](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -32,5 +32,5 @@ Lambda ifadelerini doğrudan sorgu sözdiziminde kullanamazsınız, ancak bunlar
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Lambda Ifadeleri](./lambda-expressions.md)
+- [Lambda Ifadeleri](../../language-reference/operators/lambda-expressions.md)
 - [İfade ağaçları (C#)](../concepts/expression-trees/index.md)

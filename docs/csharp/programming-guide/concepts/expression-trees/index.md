@@ -3,12 +3,12 @@ title: İfade ağaçları (C#)
 description: İfade ağaçları hakkında bilgi edinin. Her düğümün bir ifade olduğu bu veri yapıları tarafından temsil edilen kodu derleme ve çalıştırma bölümüne bakın.
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 2fa8577dd945650edebf84459de10c0c3bd04225
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a5c84673f0b45b92be18b955a6d1e7268bb73c26
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105579"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063321"
 ---
 # <a name="expression-trees-c"></a>İfade ağaçları (C#)
 İfade ağaçları, her düğümün bir ifade olduğu, örneğin bir yöntem çağrısı veya gibi bir ikili işlem olduğu ağaç benzeri bir veri yapısında kodu temsil eder `x < y` .  
@@ -22,7 +22,7 @@ ms.locfileid: "87105579"
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>Lambda Ifadelerinden Ifade ağaçları oluşturma  
  Lambda ifadesi türünde bir değişkene atandığında <xref:System.Linq.Expressions.Expression%601> , derleyici lambda ifadesini temsil eden bir ifade ağacı oluşturmak için kodu yayar.  
   
- C# derleyicisi yalnızca ifade lambdaları (veya tek satırlık Lambdalar) için ifade ağaçları oluşturabilir. İfade lambdaları (veya çok satırlı Lambdalar) ayrıştırılamaz. C# ' deki lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../statements-expressions-operators/lambda-expressions.md).  
+ C# derleyicisi yalnızca ifade lambdaları (veya tek satırlık Lambdalar) için ifade ağaçları oluşturabilir. İfade lambdaları (veya çok satırlı Lambdalar) ayrıştırılamaz. C# ' deki lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../../language-reference/operators/lambda-expressions.md).  
   
  Aşağıdaki kod örnekleri, C# derleyicisinin lambda ifadesini temsil eden bir ifade ağacının nasıl oluşturulduğunu gösterir `num => num < 5` .  
   
@@ -153,6 +153,6 @@ Console.WriteLine(expr.Compile()(4));
 - <xref:System.Linq.Expressions>
 - [İfade ağaçlarını yürütme (C#)](./how-to-execute-expression-trees.md)
 - [İfade ağaçlarını değiştirme (C#)](./how-to-modify-expression-trees.md)
-- [Lambda Ifadeleri](../../statements-expressions-operators/lambda-expressions.md)
+- [Lambda Ifadeleri](../../../language-reference/operators/lambda-expressions.md)
 - [Dinamik dil çalışma zamanına genel bakış](../../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)
 - [Programlama kavramları (C#)](../index.md)

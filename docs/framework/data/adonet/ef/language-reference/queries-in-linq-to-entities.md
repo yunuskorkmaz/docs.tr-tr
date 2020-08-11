@@ -3,12 +3,12 @@ title: LINQ to Entities Sorguları
 description: LINQ 'ın, programlama nesnelerini kullanarak çeşitli veri kaynakları ve biçimler genelinde verilerle çalışmaya yönelik basit, tutarlı bir model nasıl sunduğunu öğrenin.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 048fd56fc687dd715292fb3bb09405130de09779
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: eaf44cf6c995be335c6127f42d7aaec0dd98527c
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286824"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063737"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities Sorguları
 Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkisel veritabanları için SQL gibi özel bir sorgu dilinde ifade edilir ve XML için XQuery. Bu nedenle, geliştiricilerin sorgutıkları her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmeleri gerekiyordu. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik daha basit ve tutarlı bir model sunar. Bir LINQ sorgusunda, her zaman programlama nesneleriyle çalışırsınız.  
@@ -44,7 +44,7 @@ Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkise
 - [Sorgu İfadesi Söz Dizimi Örnekleri: İlişkilerde Gezinme](query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>Yöntem tabanlı sorgu söz dizimi  
- LINQ to Entities sorguları oluşturmanın başka bir yolu da Yöntem tabanlı sorgular kullanmaktır. Yöntem tabanlı sorgu söz dizimi, LINQ operatörü yöntemlerine doğrudan yöntem çağrılarının bir dizidir ve Lambda ifadelerini parametreler olarak geçirerek. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md). Yöntem tabanlı sözdiziminin nasıl kullanılacağını gösteren örnekler için aşağıdaki konulara bakın:  
+ LINQ to Entities sorguları oluşturmanın başka bir yolu da Yöntem tabanlı sorgular kullanmaktır. Yöntem tabanlı sorgu söz dizimi, LINQ operatörü yöntemlerine doğrudan yöntem çağrılarının bir dizidir ve Lambda ifadelerini parametreler olarak geçirerek. Daha fazla bilgi için bkz. [lambda ifadeleri](../../../../../csharp/language-reference/operators/lambda-expressions.md). Yöntem tabanlı sözdiziminin nasıl kullanılacağını gösteren örnekler için aşağıdaki konulara bakın:  
   
 - [Metot Tabanlı Sorgu Söz Dizimi Örnekleri: Projeksiyon](method-based-query-syntax-examples-projection.md)  
   

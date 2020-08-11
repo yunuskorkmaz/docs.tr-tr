@@ -4,18 +4,18 @@ description: C# kitaplıkları ve uygulamalarında devralmayı kullanmayı öğr
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 70db8716bea84984ad56d79fa9e26aab3a8182fa
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007734"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063516"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# ve .NET içinde devralma
 
 Bu öğretici, C# dilinde devralma işlemini tanıtır. Devralma, belirli işlevleri (veri ve davranış) sağlayan bir temel sınıf tanımlamanızı ve bu işlevi devralıp geçersiz kılan türetilmiş sınıfları tanımlamanızı sağlayan nesne odaklı programlama dillerinin bir özelliğidir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu öğreticide .NET Core SDK yüklediğinizi varsayılmaktadır. [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasını ziyaret ederek indirin. Ayrıca bir kod düzenleyicisine ihtiyacınız vardır. Bu öğretici [Visual Studio Code](https://code.visualstudio.com)kullanır, ancak istediğiniz herhangi bir kod düzenleyicisini kullanabilirsiniz.
 
@@ -297,5 +297,4 @@ Aşağıdaki örnek, öğesinden türetilmiş nesneleri kullanır `Shape` . Sın
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sınıflar ve nesneler](../tour-of-csharp/classes-and-objects.md)
 - [Devralma (C# Programlama Kılavuzu)](../programming-guide/classes-and-structs/inheritance.md)
