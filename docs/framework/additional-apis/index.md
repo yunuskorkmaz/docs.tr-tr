@@ -1,7 +1,7 @@
 ---
 title: Ek sınıf kitaplıkları ve API'ler
 description: Bant dışı (OOB) projeler, platforma özgü kitaplıklar ve özel API 'Ler dahil olmak üzere .NET 'teki ek sınıf kitaplıklarını ve API 'Leri inceleyin.
-ms.date: 06/12/2020
+ms.date: 08/11/2020
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - out-of-band releases
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 ms.topic: conceptual
-ms.openlocfilehash: 0b888d2f0e80685ba993682b2f3067cf8aee15bc
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: c6404df5d4f0be381bc0a9c1924fcf82cf078306
+ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989737"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88075481"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Ek sınıf kitaplıkları ve API'ler
 
@@ -24,7 +24,7 @@ Bu makalede, bant dışında yayınlanan, belirli bir platformu hedefleyen veya 
 
 Platformlar arası geliştirmeyi artırmak ve yeni işlevsellik sunmak için bazı .NET Framework Özellikler bant dışı (OOB) serbest bırakıldı.
 
-| Project | Description |  
+| Proje | Açıklama |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | , İş parçacığı açısından güvenli olan ve içeriklerinin hiçbir şekilde değişmeme garantisi sağlayan koleksiyonlar sağlar. |
 | <xref:System.Net.Http.WinHttpHandler> | <xref:System.Net.Http.HttpClient>Windows 'un WinHTTP arabirimine dayalı olarak bir ileti işleyicisi sağlar. |
@@ -35,7 +35,7 @@ Platformlar arası geliştirmeyi artırmak ve yeni işlevsellik sunmak için baz
 
 Bazı kitaplıklar belirli platformları hedeflemelidir. Örneğin, <xref:System.Text.CodePagesEncodingProvider> sınıfı kod sayfası kodlamalarını .NET Framework kullanılarak GELIŞTIRILEN UWP uygulamaları için kullanılabilir hale getirir.
   
-| Project | Description |  
+| Proje | Açıklama |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | <xref:System.Text.EncodingProvider>Kod sayfası kodlamalarını Evrensel Windows platformu hedefleyen uygulamalar için kullanılabilir hale getirmek için sınıfını genişletir. |  
   
@@ -87,6 +87,7 @@ Bu API 'Ler ürün altyapısını destekler ve doğrudan kodunuzdan kullanılmak
 * [System .net. WebHeaderCollection. Addınternal yöntemi](system.net.webheadercollection.addinternal.md)
 * [System. ServiceModel. Channels. Message. BodyToString yöntemi](system.servicemodel.channels.message.bodytostring.md)
 * [System. ServiceModel. Channels. Message. WriteStartHeaders yöntemi](system.servicemodel.channels.message.writestartheaders.md)
+* [System. Web. Compilation. Controlbuilderyakalayıcısı sınıfı](controlbuilderinterceptor-class.md)
 * [System. Windows. Diagnostics. VisualDiagnostics. s \_ ıdebuggercheckdisabledfortestamaçlar alanı](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System. Windows. Forms. Design. DataMemberFieldEditor sınıfı](datamemberfieldeditor-class.md)
 * [System. Windows. Forms. Design. Datamemberlistedıtor sınıfı](datamemberlisteditor-class.md)

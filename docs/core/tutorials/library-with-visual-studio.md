@@ -5,13 +5,13 @@ ms.date: 08/07/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 07cc1bd7b9892f7cbee7a82998093718cd311b92
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.custom: contperfq1
+ms.openlocfilehash: 5bd853c62a44d2160bd222d76adcd2dc34d42efc
+ms.sourcegitcommit: 70d6a7e4f7187cbfa332f0f8be76566f7828cfcd
 ms.translationtype: MT
 ms.contentlocale: tr-TR
 ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062683"
+ms.locfileid: "88075494"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Standard kitaplığı oluşturma
 
@@ -21,7 +21,7 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
 
 Sınıf kitaplığınızı bitirdiğinizde, bir NuGet paketi veya onu kullanan uygulamayla paketlenmiş bir bileşen olarak dağıtabilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,6 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
 
