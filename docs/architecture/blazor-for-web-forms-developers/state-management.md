@@ -1,32 +1,97 @@
 ---
 title: Durum yönetimi
-description: ASP.NET Web Forms ve ' de durum yönetimi için farklı yaklaşımlar hakkında bilgi edinin Blazor .
-author: danroth27
-ms.author: daroth
-no-loc:
-- Blazor
-ms.date: 09/11/2019
-ms.openlocfilehash: 390822ff93a928c84540505687472a361a0c5f4b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+description: ASP.NET Web Forms ve Blazor ' de durum yönetimi için farklı yaklaşımlar öğrenin.
+author: csharpfritz
+ms.author: jefritz
+ms.date: 05/15/2020
+ms.openlocfilehash: bac2f00330113725f09259ca31bdf857a8769f24
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173100"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88062347"
 ---
-# <a name="state-management"></a><span data-ttu-id="072e4-103">Durum yönetimi</span><span class="sxs-lookup"><span data-stu-id="072e4-103">State management</span></span>
+# <a name="state-management"></a><span data-ttu-id="dc6fb-103">Durum yönetimi</span><span class="sxs-lookup"><span data-stu-id="dc6fb-103">State management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="072e4-104">*Bu içerik yakında geliyor.*</span><span class="sxs-lookup"><span data-stu-id="072e4-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="dc6fb-104">Durum yönetimi, Görünüm durumu, oturum durumu, uygulama durumu ve geri gönderme özellikleri aracılığıyla kolaylaştırlanan Web Forms uygulamalar temel kavramıdır.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-104">State management is a key concept of Web Forms applications, facilitated through View State, Session State, Application State, and Postback features.</span></span> <span data-ttu-id="dc6fb-105">Framework 'ün durum bilgisi olan bu özellikleri, bir uygulama için gereken durum yönetimini gizlemeyi ve uygulama geliştiricilerinin işlevlerini sunmaya odaklanmasını sağlar.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-105">These stateful features of the framework helped to hide the state management required for an application and allow application developers to focus on delivering their functionality.</span></span> <span data-ttu-id="dc6fb-106">ASP.NET Core ve Blazor ile bu özelliklerden bazıları yeniden konumlandırıldı ve bazıları tamamen kaldırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-106">With ASP.NET Core and Blazor, some of these features have been relocated and some have been removed altogether.</span></span> <span data-ttu-id="dc6fb-107">Bu bölümde, Blazor sürümündeki yeni özelliklerle durumu koruma ve aynı işlevselliği sunma hakkında inceleme yapılır.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-107">This chapter reviews how to maintain state and deliver the same functionality with the new features in Blazor.</span></span>
 
-<!--
-- View state
-- Session state
-- Local storage
-- App state
--->
+## <a name="request-state-management-with-viewstate"></a><span data-ttu-id="dc6fb-108">ViewState ile durum yönetimi isteme</span><span class="sxs-lookup"><span data-stu-id="dc6fb-108">Request state management with ViewState</span></span>
+
+<span data-ttu-id="dc6fb-109">Web Forms uygulamasında durum yönetimi tartışırken birçok geliştirici, ViewState 'in hemen önünde bulunduracaktır.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-109">When discussing state management in Web Forms application, many developers will immediately think of ViewState.</span></span> <span data-ttu-id="dc6fb-110">Web Forms, ViewState, tarayıcıda büyük bir kodlanmış metin bloğu göndererek HTTP istekleri arasındaki içeriğin durumunu yönetir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-110">In Web Forms, ViewState manages the state of the content between HTTP requests by sending a large encoded block of text back and forth to the browser.</span></span> <span data-ttu-id="dc6fb-111">Görünüm durumu alanı, büyük olasılıkla çok sayıda öğe içeren bir sayfadan içerik ile fazla olabilir, bu da boyutu çok fazla olacak şekilde genişletiliyor.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-111">The ViewState field could be overwhelmed with content from a page containing many elements, potentially expanding to several megabytes in size.</span></span>
+
+<span data-ttu-id="dc6fb-112">Blazor sunucusu ile, Uygulama sunucuyla devam eden bir bağlantı sağlar.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-112">With Blazor Server, the app maintains an ongoing connection with the server.</span></span> <span data-ttu-id="dc6fb-113">Bağlantı etkin kabul edildiğinde uygulamanın, *devre*olarak adlandırılan durumu sunucu belleğinde tutulur.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-113">The app's state, called a *circuit*, is held in server memory while the connection is considered active.</span></span> <span data-ttu-id="dc6fb-114">Durum yalnızca Kullanıcı uygulamadan veya uygulamadaki belirli bir sayfadan uzaklaştığında bırakılacak.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-114">State will only be disposed when the user navigates away from the app or a particular page in the app.</span></span> <span data-ttu-id="dc6fb-115">Etkin bileşenlerin tüm üyeleri, sunucusuyla etkileşimler arasında kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-115">All members of the active components are available between interactions with the server.</span></span>
+
+<span data-ttu-id="dc6fb-116">Bu özelliğin çeşitli avantajları vardır:</span><span class="sxs-lookup"><span data-stu-id="dc6fb-116">There are several advantages of this feature:</span></span>
+
+- <span data-ttu-id="dc6fb-117">Bileşen durumu hazır ve etkileşimler arasında yeniden derlenmiyor.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-117">Component state is readily available and not rebuilt between interactions.</span></span>
+- <span data-ttu-id="dc6fb-118">Durum tarayıcıya aktarılmaz.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-118">State isn't transmitted to the browser.</span></span>
+
+<span data-ttu-id="dc6fb-119">Ancak, bellek içi bileşen durumu kalıcılığının farkında olması için bazı dezavantajları vardır:</span><span class="sxs-lookup"><span data-stu-id="dc6fb-119">However, there are some disadvantages to in-memory component state persistence to be aware of:</span></span>
+
+- <span data-ttu-id="dc6fb-120">Sunucu istek arasında yeniden başlatılırsa durum kaybedilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-120">If the server restarts between request, state is lost.</span></span>
+- <span data-ttu-id="dc6fb-121">Uygulama Web sunucusu yük dengeleme çözümünüz aynı tarayıcıdan gelen tüm isteklerin aynı sunucuya dönmesini sağlamak için yapışkan oturumlar içermelidir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-121">Your application web server load-balancing solution must include sticky sessions to ensure that all requests from the same browser return to the same server.</span></span> <span data-ttu-id="dc6fb-122">Bir istek farklı bir sunucuya gittiğinde, durum kaybedilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-122">If a request goes to a different server, state will be lost.</span></span>
+- <span data-ttu-id="dc6fb-123">Sunucu üzerindeki bileşen durumunun kalıcılığı Web sunucusunda bellek baskısı oluşmasına neden olabilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-123">Persistence of component state on the server can lead to memory pressure on the web server.</span></span>
+
+<span data-ttu-id="dc6fb-124">Önceki nedenlerden dolayı, sunucuda bellek içi olarak bulunan yalnızca bileşenin durumuna güvenmeyin.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-124">For the preceding reasons, don't rely on just the state of the component to reside in-memory on the server.</span></span> <span data-ttu-id="dc6fb-125">Uygulamanız Ayrıca istekler arasında veri için bazı yedekleme veri depolama alanı içermelidir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-125">Your application should also include some backing data store for data between requests.</span></span> <span data-ttu-id="dc6fb-126">Bu stratejinin bazı basit örnekleri:</span><span class="sxs-lookup"><span data-stu-id="dc6fb-126">Some simple examples of this strategy:</span></span>
+
+- <span data-ttu-id="dc6fb-127">Bir alışveriş sepeti uygulamasında, bir veritabanı kaydındaki sepete eklenen yeni öğelerin içeriğini kalıcı hale getirin.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-127">In a shopping cart application, persist the content of new items added to the cart in a database record.</span></span> <span data-ttu-id="dc6fb-128">Sunucu üzerindeki durum kaybolursa, bunu veritabanı kayıtlarından edilmeyen yapabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-128">If the state on the server is lost, you can reconstitute it from the database records.</span></span>
+- <span data-ttu-id="dc6fb-129">Çok parçalı bir Web formunda kullanıcılarınız, uygulamanızın her istek arasındaki değerleri anımsamasını bekler.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-129">In a multi-part web form, your users will expect your application to remember values between each request.</span></span> <span data-ttu-id="dc6fb-130">Birden çok parçalı form tamamlandığında son form yanıt yapısına getirilmeleri ve bunları birleştirmek için bir veri deposuna her bir Kullanıcı gönderilerinin her biri arasındaki verileri yazın.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-130">Write the data between each of your user's posts to a data store so that they can be fetched and assembled into the final form response structure when the multi-part form is completed.</span></span>
+
+<span data-ttu-id="dc6fb-131">Blazor uygulamalarında durumu yönetme hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor State Management](/aspnet/core/blazor/state-management).</span><span class="sxs-lookup"><span data-stu-id="dc6fb-131">For additional details on managing state in Blazor apps, see [ASP.NET Core Blazor state management](/aspnet/core/blazor/state-management).</span></span>
+
+## <a name="maintain-state-with-session"></a><span data-ttu-id="dc6fb-132">Oturumla durumu koru</span><span class="sxs-lookup"><span data-stu-id="dc6fb-132">Maintain state with Session</span></span>
+
+<span data-ttu-id="dc6fb-133">Web Forms geliştiriciler, şu anda sözlük nesnesi ile hareket eden kullanıcı hakkındaki bilgileri koruyabilir <xref:Microsoft.AspNetCore.Http.ISession?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="dc6fb-133">Web Forms developers could maintain information about the currently acting user with the <xref:Microsoft.AspNetCore.Http.ISession?displayProperty=nameWithType> dictionary object.</span></span> <span data-ttu-id="dc6fb-134">Öğesine dize anahtarı olan bir nesne eklemek çok kolay `Session` ve bu nesne, kullanıcının uygulamayla etkileşimi sırasında daha sonra kullanılabilir hale gelir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-134">It's easy enough to add an object with a string key to the `Session`, and that object would be available at a later time during the user's interactions with the application.</span></span> <span data-ttu-id="dc6fb-135">HTTP ile etkileşim kurmayı ortadan kaldırmaya çalıştığınızda, `Session` nesne durumu korumayı kolay hale yaptı.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-135">In an attempt to eliminate managing interacting with HTTP, the `Session` object made it easy to maintain state.</span></span>
+
+<span data-ttu-id="dc6fb-136">.NET Framework nesnesinin imzası, `Session` ASP.NET Core nesnesiyle aynı değil `Session` .</span><span class="sxs-lookup"><span data-stu-id="dc6fb-136">The signature of the .NET Framework `Session` object isn't the same as the ASP.NET Core `Session` object.</span></span> <span data-ttu-id="dc6fb-137">Yeni oturum durumu özelliğini geçirmeye ve kullanmaya karar vermeden önce [yeni ASP.NET Core oturumunun belgelerini](/dotnet/api/microsoft.aspnetcore.http.isession) göz önünde bulundurun.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-137">Consider [the documentation for the new ASP.NET Core Session](/dotnet/api/microsoft.aspnetcore.http.isession) before deciding to migrate and use the new session state feature.</span></span>
+
+<span data-ttu-id="dc6fb-138">Oturum ASP.NET Core ve Blazor Server 'da kullanılabilir, ancak veri deposundaki verileri uygun şekilde depolamanın kullanılması önerilmez.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-138">Session is available in ASP.NET Core and Blazor Server, but is discouraged from use in favor of storing data in a data repository appropriately.</span></span> <span data-ttu-id="dc6fb-139">Ziyaretçiler gizlilik kaygıları nedeniyle uygulamanızda HTTP tanımlama bilgilerini kullan ' ın reddetmesi durumunda oturum durumu da işlevsel değildir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-139">Session state is also not functional if visitors decline the use HTTP cookies in your application due to privacy concerns.</span></span>
+
+<span data-ttu-id="dc6fb-140">ASP.NET Core ve oturum durumu yapılandırması, [ASP.NET Core makalesinde oturum ve durum yönetimi](/aspnet/core/fundamentals/app-state#session-state)' nde kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-140">Configuration for ASP.NET Core and Session state is available in the [Session and state management in ASP.NET Core article](/aspnet/core/fundamentals/app-state#session-state).</span></span>
+
+## <a name="application-state"></a><span data-ttu-id="dc6fb-141">Uygulama durumu</span><span class="sxs-lookup"><span data-stu-id="dc6fb-141">Application state</span></span>
+
+<span data-ttu-id="dc6fb-142">`Application`Web Forms çerçevesindeki nesne, uygulama kapsamı yapılandırması ve durumuyla etkileşim kurmak için büyük ve çapraz istek içeren bir depo sağlar.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-142">The `Application` object in the Web Forms framework provides a massive, cross-request repository for interacting with application-scope configuration and state.</span></span> <span data-ttu-id="dc6fb-143">Uygulama durumu, isteği yapan Kullanıcı ne olursa olsun, tüm istekler tarafından başvurulacak çeşitli uygulama yapılandırma özelliklerini depolamak için ideal bir yerdir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-143">Application state was an ideal place to store various application configuration properties that would be referenced by all requests, regardless of the user making the request.</span></span> <span data-ttu-id="dc6fb-144">Nesneyle ilgili sorun, `Application` verilerin birden çok sunucu arasında kalıcı olmadığı oldu.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-144">The problem with the `Application` object was that data didn't persist across multiple servers.</span></span> <span data-ttu-id="dc6fb-145">Uygulama nesnesinin durumu, yeniden başlatmalar arasında kayboldu.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-145">The state of the application object was lost between restarts.</span></span>
+
+<span data-ttu-id="dc6fb-146">' De olduğu gibi `Session` , verilerin birden çok sunucu örneği tarafından erişilebilen kalıcı bir yedekleme deposuna taşınması önerilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-146">As with `Session`, it's recommended that data move to a persistent backing store that could be accessed by multiple server instances.</span></span> <span data-ttu-id="dc6fb-147">İstekler ve kullanıcılara erişebilmek istediğiniz geçici veriler varsa, bu bilgileri veya etkileşimi gerektiren bileşenlere eklenebilen bir tek hizmette kolayca depolama alanı oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-147">If there is volatile data that you would like to be able to access across requests and users, you could easily store it in a singleton service that can be injected into components that require this information or interaction.</span></span>
+
+<span data-ttu-id="dc6fb-148">Uygulama durumunu ve tüketimini korumak için bir nesne oluşturma aşağıdaki uygulamaya benzeyebilir:</span><span class="sxs-lookup"><span data-stu-id="dc6fb-148">The construction of an object to maintain application state and its consumption could resemble the following implementation:</span></span>
+
+```csharp
+public class MyApplicationState
+{
+    public int VisitorCounter { get; private set; } = 0;
+
+    public void IncrementCounter() => VisitorCounter += 1;
+}
+```
+
+```csharp
+app.AddSingleton<MyApplicationState>();
+```
+
+```razor
+@inject MyApplicationState AppState
+
+<label>Total Visitors: @AppState.VisitorCounter</label>
+```
+
+<span data-ttu-id="dc6fb-149">`MyApplicationState`Nesnesi sunucuda yalnızca bir kez oluşturulur ve değer `VisitorCounter` getirilir ve bileşen etiketinde çıktı olur.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-149">The `MyApplicationState` object is created only once on the server, and the value `VisitorCounter` is fetched and output in the component's label.</span></span> <span data-ttu-id="dc6fb-150">`VisitorCounter`Değerin kalıcı olması ve dayanıklılık ve ölçeklenebilirlik için bir yedekleme veri deposundan alınması gerekir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-150">The `VisitorCounter` value should be persisted and retrieved from a backing data store for durability and scalability.</span></span>
+
+## <a name="in-the-browser"></a><span data-ttu-id="dc6fb-151">Tarayıcıda</span><span class="sxs-lookup"><span data-stu-id="dc6fb-151">In the browser</span></span>
+
+<span data-ttu-id="dc6fb-152">Uygulama verileri, daha sonra kullanılabilir olması için kullanıcının cihazında istemci tarafı da depolanabilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-152">Application data can also be stored client-side on the user's device so that is available later.</span></span> <span data-ttu-id="dc6fb-153">Kullanıcı tarayıcısının farklı kapsamlarında verilerin kalıcılığına izin veren iki tarayıcı özelliği vardır:</span><span class="sxs-lookup"><span data-stu-id="dc6fb-153">There are two browser features that allow for persistence of data in different scopes of the user's browser:</span></span>
+
+- <span data-ttu-id="dc6fb-154">`localStorage`-kullanıcının tüm tarayıcı kapsamı.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-154">`localStorage` - scoped to the user's entire browser.</span></span> <span data-ttu-id="dc6fb-155">Sayfa yeniden yüklendiğinde, tarayıcı kapatılıp yeniden açılır veya aynı URL ile başka bir sekme açılırsa aynı şekilde `localStorage` tarayıcı tarafından sağlanır</span><span class="sxs-lookup"><span data-stu-id="dc6fb-155">If the page is reloaded, the browser is closed and reopened, or another tab is opened with the same URL then the same `localStorage` is provided by the browser</span></span>
+- <span data-ttu-id="dc6fb-156">`sessionStorage`-kullanıcının geçerli tarayıcı sekmesi kapsamı. Sekme yeniden yüklendiğinde durum devam ettirir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-156">`sessionStorage` - scoped to the user's current browser tab. If the tab is reloaded, the state persists.</span></span> <span data-ttu-id="dc6fb-157">Ancak, Kullanıcı uygulamanıza başka bir sekme açarsa veya tarayıcıyı kapatıp yeniden açarsa durum kaybedilir.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-157">However, if the user opens another tab to your application or closes and reopens the browser the state is lost.</span></span>
+
+<span data-ttu-id="dc6fb-158">Bu özelliklerle etkileşim kurmak için bazı özel JavaScript kodu yazabilir veya bu işlevselliği sağlamak için kullanabileceğiniz çeşitli NuGet paketleri bulabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-158">You can write some custom JavaScript code to interact with these features, or there are a number of NuGet packages that you can use that provide this functionality.</span></span> <span data-ttu-id="dc6fb-159">Bu tür bir paket [Microsoft. AspNetCore. ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage)' dır.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-159">One such package is [Microsoft.AspNetCore.ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage).</span></span>
+
+<span data-ttu-id="dc6fb-160">Ve ile etkileşime geçmek üzere bu paketin kullanılmasıyla ilgili yönergeler için `localStorage` `sessionStorage` [Blazor durum yönetimi](/aspnet/core/blazor/state-management#protected-browser-storage-experimental-package) makalesine bakın.</span><span class="sxs-lookup"><span data-stu-id="dc6fb-160">For instructions on utilizing this package to interact with `localStorage` and `sessionStorage`, see the [Blazor State Management](/aspnet/core/blazor/state-management#protected-browser-storage-experimental-package) article.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="072e4-105">[Önceki](pages-routing-layouts.md) 
-> [Sonraki](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="072e4-105">[Previous](pages-routing-layouts.md)
+><span data-ttu-id="dc6fb-161">[Önceki](pages-routing-layouts.md) 
+> [Sonraki](forms-validation.md)</span><span class="sxs-lookup"><span data-stu-id="dc6fb-161">[Previous](pages-routing-layouts.md)
 [Next](forms-validation.md)</span></span>
