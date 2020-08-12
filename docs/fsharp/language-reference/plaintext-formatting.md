@@ -1,13 +1,13 @@
 ---
-title: Düz metin biçimlendirme
+title: Düz Metin Biçimlendirmesi
 description: 'F # uygulamalarında ve betiklerinizde printf ve diğer düz metin biçimlendirmesini nasıl kullanacağınızı öğrenin.'
 ms.date: 07/22/2020
-ms.openlocfilehash: 6b14633e074961757d0f0cd258d1b1667f5fd8ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 90a861736dae69dfbc199a19e24f587c42404737
+ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854925"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88063789"
 ---
 # <a name="plain-text-formatting"></a>Düz metin biçimlendirme
 
@@ -85,6 +85,7 @@ Biçimlerin biçim belirtimleri `printf` `%` biçimi gösteren işaretçilerle d
 | `%A` | herhangi bir değer  |   Varsayılan düzen ayarlarıyla [yapılandırılmış düz metin biçimlendirme](plaintext-formatting.md) kullanılarak biçimlendirildi |
 | `%a` | herhangi bir değer  |   İki bağımsız değişken gerektirir: bir bağlam parametresini ve değeri kabul eden bir biçimlendirme işlevi ve yazdırılacak belirli değer |
 | `%t` | herhangi bir değer  |   Bir bağımsız değişken gerektirir: bir bağlam parametresini kabul eden veya uygun metni döndüren bir biçimlendirme işlevi |
+| `%%` | (yok)  |   Bağımsız değişken gerektirmez ve bir salt yüzde işareti yazdırır:`%` |
 
 Temel tamsayı türleri `byte` ( `System.Byte` ), ( `sbyte` ) `System.SByte` , `int16` () `System.Int16` , `uint16` ( `System.UInt16` ), `int32` `System.Int32` `uint32` `System.UInt32` `int64` `System.Int64` `uint64` `System.UInt64` `nativeint` `System.IntPtr` `unativeint` `System.UIntPtr` (), (), ve ().
 Temel kayan nokta türleri `float` ( `System.Double` ) ve `float32` ( `System.Single` ).
