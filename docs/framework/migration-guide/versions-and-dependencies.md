@@ -6,12 +6,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: df44786dfd0a384ae2498a94d14b029612450fee
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: df7acc788943e9655dbbb03ffaaa88ff22b81ad2
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475482"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187901"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework sürümleri ve bağımlılıklar
 
@@ -31,8 +31,9 @@ CLR kendi sürüm numarası ile tanımlanır. .NET Framework sürüm numarası h
 
 Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visual Studio, Windows ve Windows Server ile ilişkilendirmek özetlenmektedir. Visual Studio çoklu hedefleme destekler, bu nedenle listelenen .NET Framework sürümüyle sınırlı değilsiniz.
 
-- Onay işareti simgesi ✔️, .NET Framework yüklendiği, ancak [Denetim Masası 'nda](../install/dotnet-35-windows-10.md) (Windows için) veya Sunucu Yöneticisi (Windows Server için) etkinleştirilmiş olması gereken işletim sistemi sürümlerini gösterir.
+- Onay işareti simgesi ✔️, varsayılan olarak .NET Framework yüklü olan işletim sistemi sürümlerini gösterir.
 - Artı işareti simgesi ➕, .NET Framework yüklendiği ancak yüklenemeyen işletim sistemi sürümlerini gösterir.
+- Yıldız işareti, **\*** .NET Framework (önceden yüklenmiş veya değil) [Denetim Masası 'Nda](../install/dotnet-35-windows-10.md) veya Windows Server için Sunucu Yöneticisi aracılığıyla etkinleştirilmesi gereken işletim sistemi sürümlerini gösterir.
 
 | | |
 | - | - |

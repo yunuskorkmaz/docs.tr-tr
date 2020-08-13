@@ -2,20 +2,20 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 59fdbfa875dad13963ae198acc6a31b537279dfe
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
+ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251185"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88187981"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet publish`-Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
+`dotnet publish` -Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -34,7 +34,7 @@ dotnet publish -h|--help
 
 ## <a name="description"></a>Açıklama
 
-`dotnet publish`uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
+`dotnet publish` uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
 - *DLL* uzantılı bir derlemede ara DIL (IL) kodu.
 - Projenin tüm bağımlılıklarını içeren bir *.deps.js* dosyası.
@@ -51,7 +51,9 @@ dotnet publish -h|--help
 
 `dotnet publish`Komutu, hedefi çağıran MSBuild 'i çağırır `Publish` . Öğesine geçirilen parametreler `dotnet publish` MSBuild 'e geçirilir. `-c`Ve `-o` parametreleri `Configuration` sırasıyla MSBuild ve özellikler ile eşlenir `PublishDir` .
 
-`dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` . Ayrıca, bir *. pubxml* dosyasına başvurarak yayınla ilgili özellikleri ayarlayabilirsiniz, örneğin:
+`dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
+
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -71,9 +73,9 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   Yayımlanacak proje veya çözüm.
   
-  * `PROJECT`bir [C#](csproj.md), f # veya Visual Basic proje dosyasının yolu ve dosya adı ya da C#, f # veya Visual Basic proje dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.
+  * `PROJECT` bir [C#](csproj.md), f # veya Visual Basic proje dosyasının yolu ve dosya adı ya da C#, f # veya Visual Basic proje dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır.
 
-  * `SOLUTION`, bir çözüm dosyasının (*. sln* uzantısının) yolu ve dosya adı veya çözüm dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır. .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  * `SOLUTION` , bir çözüm dosyasının (*. sln* uzantısının) yolu ve dosya adı veya çözüm dosyası içeren bir dizinin yoludur. Dizin belirtilmemişse, varsayılan olarak geçerli dizine ayarlanır. .NET Core 3,0 SDK 'dan beri kullanılabilir.
 
 ## <a name="options"></a>Seçenekler
 
