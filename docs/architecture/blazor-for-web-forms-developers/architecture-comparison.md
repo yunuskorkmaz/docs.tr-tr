@@ -1,21 +1,19 @@
 ---
-title: ASP.NET Web Forms ve mimari karşılaştırmasıBlazor
+title: ASP.NET Web Forms ve mimari karşılaştırması Blazor
 description: ASP.NET 'in mimarilerinin nasıl Web Forms ve Blazor karşılaştırılacağını öğrenin.
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/11/2019
-ms.openlocfilehash: 51b114c842e131ad9b9a589bf5137a522e135082
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 9a8e78338aff53002647a10ed9007296e4682b5a
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267717"
 ---
-# <a name="architecture-comparison-of-aspnet-web-forms-and-blazor"></a>ASP.NET Web Forms ve mimari karşılaştırmasıBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="architecture-comparison-of-aspnet-web-forms-and-no-locblazor"></a>ASP.NET Web Forms ve mimari karşılaştırması Blazor
 
 ASP.NET Web Forms ve Blazor birçok benzer kavramlara sahip olmakla birlikte, nasıl çalıştıkları konusunda farklılıklar vardır. Bu bölümde, ASP.NET Web Forms ve ve mimarilerinin iç işleyişi ve mimarileri incelenmiştir Blazor .
 
@@ -40,19 +38,19 @@ Bir sayfadaki denetimler genellikle denetimi sunan aynı sayfaya geri dönerek, 
 
 ## Blazor
 
-Blazor, angular veya tepki verme gibi JavaScript ön uç çerçevelerinin doğası gereği benzer bir istemci tarafı Web UI çerçevesidir. BlazorKullanıcı etkileşimlerini işler ve gerekli Kullanıcı arabirimi güncelleştirmelerini işler. Blazoristek-yanıt modeli tabanlı *değil* . Kullanıcı etkileşimleri, belirli bir HTTP isteği bağlamında olmayan olaylar olarak işlenir.
+Blazor , angular veya tepki verme gibi JavaScript ön uç çerçevelerinin doğası gereği benzer bir istemci tarafı Web UI çerçevesidir. Blazor Kullanıcı etkileşimlerini işler ve gerekli Kullanıcı arabirimi güncelleştirmelerini işler. Blazoristek-yanıt modeli tabanlı *değil* . Kullanıcı etkileşimleri, belirli bir HTTP isteği bağlamında olmayan olaylar olarak işlenir.
 
-Blazoruygulamalar, HTML sayfasında işlenen bir veya daha fazla kök bileşenden oluşur.
+Blazor uygulamalar, HTML sayfasında işlenen bir veya daha fazla kök bileşenden oluşur.
 
-![BlazorHTML 'deki bileşenler](./media/architecture-comparison/blazor-components-in-html.png)
+![::: No-Loc (Blazor)::: HTML 'deki bileşenler](./media/architecture-comparison/blazor-components-in-html.png)
 
 Kullanıcı, bileşenlerin nerede işleneceğini ve bileşenlerin kullanıcı etkileşimleri için nasıl bağlanacağını, modele özgü bir [barındırma](hosting-models.md) .
 
 Blazor[Bileşenler](components.md) , yeniden KULLANILABILIR bir UI parçasını temsil eden .net sınıflarıdır. Her bileşen kendi durumunu korur ve diğer bileşenleri işlemeyi içerebilen kendi işleme mantığını belirtir. Bileşenler, bileşenin durumunu güncelleştirmek üzere belirli kullanıcı etkileşimleri için olay işleyicilerini belirtir.
 
-Bir bileşen bir olayı işlediğinde, Blazor bileşeni işler ve işlenmiş çıktıda nelerin değiştiğini izler. Bileşenler, Belge Nesne Modeli (DOM) doğrudan işlenmez. Bunun yerine `RenderTree` , değişiklikleri izleyebilmek için ADLı Dom 'ın bellek içi temsili olarak işlenir Blazor . BlazorYeni işlenmiş çıktıyı, daha sonra DOM 'a verimli bir şekilde uyguladığı bir UI farkını hesaplamak için önceki çıktıyla karşılaştırır.
+Bir bileşen bir olayı işlediğinde, Blazor bileşeni işler ve işlenmiş çıktıda nelerin değiştiğini izler. Bileşenler, Belge Nesne Modeli (DOM) doğrudan işlenmez. Bunun yerine `RenderTree` , değişiklikleri izleyebilmek için ADLı Dom 'ın bellek içi temsili olarak işlenir Blazor . Blazor Yeni işlenmiş çıktıyı, daha sonra DOM 'a verimli bir şekilde uyguladığı bir UI farkını hesaplamak için önceki çıktıyla karşılaştırır.
 
-![BlazorDOM etkileşimi](./media/architecture-comparison/blazor-dom-interaction.png)
+![::: No-Loc (Blazor)::: DOM etkileşimi](./media/architecture-comparison/blazor-dom-interaction.png)
 
 Bileşenler, olağan dışı bir kullanıcı arabirimi olayının dışına değiştiği takdirde, bunların işlenip işlenmeyeceğini el ile de belirtebilir. Blazor`SynchronizationContext`yürütmenin tek bir mantıksal iş parçacığını zorlamak için bir kullanır. Bir bileşenin yaşam döngüsü yöntemleri ve tarafından oluşturulan tüm olay geri çağırmaları Blazor bunun üzerinde yürütülür `SynchronizationContext` .
 

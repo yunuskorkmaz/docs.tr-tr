@@ -6,22 +6,20 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/26/2020
-ms.openlocfilehash: 4bf9bee21ce1db828dbe0aeb156d5e15cae4f703
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267600"
 ---
 # <a name="work-with-data"></a>Verilerle çalışma
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Veri erişimi, bir ASP.NET Web Forms uygulamasının omurgası olur. Web için form oluşturuyorsanız, bu verilere ne olur? Web Forms ile, bir veritabanıyla etkileşim kurmak için kullanabileceğiniz birden fazla veri erişim tekniği vardı:
 
 - Data Sources
 - ADO.NET
-- Varlık Çerçevesi
+- Entity Framework
 
 Veri kaynakları, Web Forms bir sayfada yerleştirebileceğiniz ve diğer denetimler gibi yapılandırabileceğiniz denetimleridir. Visual Studio, denetimleri Web Forms sayfalarınıza yapılandırmak ve bağlamak için kolay bir iletişim kutusu kümesi sağladı. Bir "düşük kod" veya "kod yok" yaklaşımı yaşayan geliştiriciler Web Forms ilk kez yayınlandığında bu tekniği tercih edilir.
 
@@ -29,7 +27,7 @@ Veri kaynakları, Web Forms bir sayfada yerleştirebileceğiniz ve diğer deneti
 
 ADO.NET, bir veritabanıyla etkileşime geçmek için düşük düzeyli yaklaşımdır. Uygulamalarınız, etkileşim kurmak için komutlarla, kayıt kümeleriyle ve veri kümeleriyle veritabanıyla bir bağlantı oluşturabilir. Sonuçlar daha sonra çok kod olmadan ekrandaki alanlara bağlanabilir. Bu yaklaşımın dezavantajı, her bir ADO.NET nesneleri ( `Connection` , `Command` ve `Recordset` ) kümesinin bir veritabanı satıcısı tarafından sunulan kitaplıklara bağlıydı. Bu bileşenlerin kullanımı, kodu rigıd yaptı ve farklı bir veritabanına geçiş yapılmasını zorlaştırıyor.
 
-## <a name="entity-framework"></a>Varlık Çerçevesi
+## <a name="entity-framework"></a>Entity Framework
 
 Entity Framework (EF), .NET Foundation tarafından tutulan açık kaynaklı nesne ilişkisel eşleme çerçevesidir. Başlangıçta .NET Framework ile yayınlanan EF, veritabanı bağlantıları, depolama şemaları ve etkileşimler için kod üretmesine olanak tanır. Bu Soyutlamalarla, uygulamanızın iş kurallarına odaklanarak veritabanının güvenilir bir veritabanı yöneticisi tarafından yönetilmesine izin verebilirsiniz. .NET Core 'da, EF Core adlı ve güncelleştirilmiş bir EF sürümü kullanabilirsiniz. EF Core, komut satırı aracını kullanarak, kodunuz ve veritabanı arasındaki etkileşimleri, sizin için kullanabileceğiniz bir dizi komutla oluşturup sürdürmenize yardımcı olur `dotnet ef` . Bir veritabanı ile çalışmaya başlamanızı sağlamak için birkaç örnek göz atalım.
 
@@ -57,8 +55,8 @@ public class Product
 Ürünün, veritabanımızda oluşturulacak bir birincil anahtarı ve üç ek alanı vardır:  
 
 - EF `Id` özelliği kural tarafından birincil anahtar olarak tanımlanacaktır.
-- `Name`, metin depolaması için yapılandırılmış bir sütunda depolanacak. `[Required]`Bu özelliği dekorasyon özniteliği, `not null` özelliğin bu tanımlanmış davranışının zorlanmasını sağlamaya yardımcı olmak için bir kısıtlama ekler.
-- `Description`, metin depolaması için yapılandırılmış bir sütunda depolanacak ve özniteliği tarafından dikte edilen en fazla 4000 karakter uzunluğunda olmalıdır `[MaxLength]` . Veritabanı şeması, veri türü kullanılarak adlı bir sütunla yapılandırılacaktır `MaxLength` `varchar(4000)` .
+- `Name` , metin depolaması için yapılandırılmış bir sütunda depolanacak. `[Required]`Bu özelliği dekorasyon özniteliği, `not null` özelliğin bu tanımlanmış davranışının zorlanmasını sağlamaya yardımcı olmak için bir kısıtlama ekler.
+- `Description` , metin depolaması için yapılandırılmış bir sütunda depolanacak ve özniteliği tarafından dikte edilen en fazla 4000 karakter uzunluğunda olmalıdır `[MaxLength]` . Veritabanı şeması, veri türü kullanılarak adlı bir sütunla yapılandırılacaktır `MaxLength` `varchar(4000)` .
 - `Price`Özelliği para birimi olarak depolanır. `[Range]`Özniteliği, veri depolamayı belirtilen en düşük ve en yüksek değerler dışında engellemek için uygun kısıtlamalar oluşturacaktır.
 
 Bu `Product` sınıfı, veritabanı ile bağlantı ve çeviri işlemlerini tanımlayan bir veritabanı bağlamı sınıfına eklememiz gerekiyor.

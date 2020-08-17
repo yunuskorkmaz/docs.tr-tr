@@ -6,16 +6,14 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 10/11/2019
-ms.openlocfilehash: ff2b3fd41316a1c8c20a0eed9a585e5fd2733af3
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 639755dd78892df1b70ea5245a9584e575fbf691
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267886"
 ---
 # <a name="modules-handlers-and-middleware"></a>Modüller, işleyiciler ve ara yazılım
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.NET Core bir uygulama, bir dizi *Ara yazılım*üzerine kurulmuştur. Ara yazılım, istekleri ve yanıtları işlemek için bir işlem hattına düzenlenmiş işleyicileridir. Web Forms uygulamasında HTTP işleyicileri ve modülleri benzer sorunları çözecektir. ASP.NET Core, modüller, işleyiciler, *Global.asax.cs*ve uygulama yaşam döngüsü, ara yazılım ile değiştirilmiştir. Bu bölümde, bir uygulama bağlamında hangi ara yazılımı öğreneceksiniz Blazor .
 

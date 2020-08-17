@@ -6,16 +6,14 @@ ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/19/2019
-ms.openlocfilehash: fc1f6f9420c7149b6e67123f2f68bef75667aa0c
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 714ba0be7c2014895a75250a47e6ce448863eb6c
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267795"
 ---
 # <a name="pages-routing-and-layouts"></a>Sayfalar, yönlendirme ve düzenler
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.NET Web Forms uygulamalar *. aspx* dosyalarında tanımlanan sayfalardan oluşur. Her sayfanın adresi, projedeki fiziksel dosya yolunu temel alır. Bir tarayıcı sayfada bir istek yaptığında, sayfanın içeriği sunucu üzerinde dinamik olarak işlenir. Sayfanın HTML işaretlemesi ve sunucu denetimleri için işleme hesapları.
 
@@ -94,7 +92,7 @@ Bir uygulamadaki eşdeğer sayfa şöyle Blazor görünür:
 
 Yol şablonu parametresi gereklidir. ASP.NET Web Forms aksine, Blazor bileşen yolu dosyanın konumundan (gelecekte eklenmiş bir özellik olabilir) *değil* .
 
-Yol şablonu sözdizimi, ASP.NET Web Forms yönlendirme için kullanılan temel sözdizimidir. Rota parametreleri, küme ayraçları kullanılarak şablonda belirtilmiştir. Blazorrota değerlerini aynı ada (büyük/küçük harfe duyarsız) sahip bileşen parametrelerine bağlayacaktır.
+Yol şablonu sözdizimi, ASP.NET Web Forms yönlendirme için kullanılan temel sözdizimidir. Rota parametreleri, küme ayraçları kullanılarak şablonda belirtilmiştir. Blazor rota değerlerini aynı ada (büyük/küçük harfe duyarsız) sahip bileşen parametrelerine bağlayacaktır.
 
 ```razor
 @page "/product/{id}"
@@ -147,7 +145,7 @@ Tarafından desteklenen yol kısıtlamalarının tam listesi için Blazor bkz. [
 
 ## <a name="navigation"></a>Gezinti
 
-ASP.NET Web Forms ' de, tarayıcıya yeniden yönlendirme yanıtı döndürerek, gezintiyi farklı bir sayfaya tetiklersiniz. Örnek:
+ASP.NET Web Forms ' de, tarayıcıya yeniden yönlendirme yanıtı döndürerek, gezintiyi farklı bir sayfaya tetiklersiniz. Örneğin:
 
 ```csharp
 protected void NavigateButton_Click(object sender, EventArgs e)
@@ -156,9 +154,9 @@ protected void NavigateButton_Click(object sender, EventArgs e)
 }
 ```
 
-' De yeniden yönlendirme yanıtı döndürülmesi genellikle mümkün değildir Blazor . Blazoristek-yanıt modeli kullanmaz. Ancak, JavaScript ile yaptığınız gibi tarayıcı gezginlerini doğrudan tetikleyebilirsiniz.
+' De yeniden yönlendirme yanıtı döndürülmesi genellikle mümkün değildir Blazor . Blazor istek-yanıt modeli kullanmaz. Ancak, JavaScript ile yaptığınız gibi tarayıcı gezginlerini doğrudan tetikleyebilirsiniz.
 
-BlazorŞu `NavigationManager` şekilde kullanılabilecek bir hizmet sağlar:
+Blazor Şu `NavigationManager` şekilde kullanılabilecek bir hizmet sağlar:
 
 - Geçerli tarayıcı adresini al
 - Temel adresi al

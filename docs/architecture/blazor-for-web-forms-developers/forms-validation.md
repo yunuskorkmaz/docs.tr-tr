@@ -7,22 +7,20 @@ no-loc:
 - Blazor
 - Blazor WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 1a99719f59415872510aef051d1f3c73daf53e15
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: d2dce23996e996a736b04c9cdd1ccf3b549ff3ff
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267561"
 ---
 # <a name="forms-and-validation"></a>Formlar ve doğrulama
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ASP.NET Web Forms Framework, bir forma ( `RequiredFieldValidator` , `CompareValidator` , vb.) girilen kullanıcı girişini doğrulamayı işleyen bir doğrulama sunucusu denetimleri kümesi içerir `RangeValidator` . ASP.NET Web Forms Framework, model bağlamayı ve veri ek açıklamalarına (,, vb `[Required]` `[StringLength]` .) göre modeli doğrulamayı da destekler `[Range]` . Doğrulama mantığı hem sunucuda hem de istemci üzerinde, kaldırma JavaScript tabanlı doğrulama kullanılarak zorlanabilir. `ValidationSummary`Sunucu denetimi, kullanıcıya doğrulama hatalarının özetini göstermek için kullanılır.
 
-Blazor, hem istemci hem de sunucu arasında doğrulama mantığının paylaşımını destekler. ASP.NET birçok ortak sunucu doğrulamayla önceden oluşturulmuş JavaScript uygulamaları sağlar. Çoğu durumda, geliştirici uygulamaya özgü doğrulama mantığını tam olarak uygulamak için JavaScript yazmak zorunda kalır. Aynı model türleri, veri ek açıklamaları ve doğrulama mantığı hem sunucu hem de istemcide kullanılabilir.
+Blazor , hem istemci hem de sunucu arasında doğrulama mantığının paylaşımını destekler. ASP.NET birçok ortak sunucu doğrulamayla önceden oluşturulmuş JavaScript uygulamaları sağlar. Çoğu durumda, geliştirici uygulamaya özgü doğrulama mantığını tam olarak uygulamak için JavaScript yazmak zorunda kalır. Aynı model türleri, veri ek açıklamaları ve doğrulama mantığı hem sunucu hem de istemcide kullanılabilir.
 
-Blazorbir giriş bileşenleri kümesi sağlar. Giriş bileşenleri, alan verilerini bir modele bağlamayı ve form gönderildiğinde kullanıcı girişini doğrulamayı işler.
+Blazor bir giriş bileşenleri kümesi sağlar. Giriş bileşenleri, alan verilerini bir modele bağlamayı ve form gönderildiğinde kullanıcı girişini doğrulamayı işler.
 
 |Giriş bileşeni|İşlenmiş HTML öğesi    |
 |---------------|-------------------------|

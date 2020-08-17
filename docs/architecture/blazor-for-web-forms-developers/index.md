@@ -1,5 +1,5 @@
 ---
-title: BlazorASP.NET Web Forms geliştiricileri için
+title: Blazor ASP.NET Web Forms geliştiricileri için
 description: .NET Blazor Core ile basit ve tanıdık bir şekilde tam yığın Web uygulamaları oluşturmayı öğrenin.
 author: danroth27
 ms.author: daroth
@@ -7,20 +7,18 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/11/2019
-ms.openlocfilehash: 779eb47d9796c61df9939d0e7de287443870576e
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 1c869cce6ab8a0ab7c4b83817fe1afc3d6a4a7fd
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267482"
 ---
-# <a name="blazor-for-aspnet-web-forms-developers"></a>BlazorASP.NET Web Forms geliştiricileri için
+# <a name="no-locblazor-for-aspnet-web-forms-developers"></a>Blazor ASP.NET Web Forms geliştiricileri için
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+![Sunucusuz uygulamalar e-kitap kapağını gösteren ekran görüntüsü.](./media/index/blazor-for-aspnet-web-forms-developers.png)
 
-![Sunucusuz uygulamalar e-kitap kapağını gösteren ekran görüntüsü.](./media/index/blazor-for-web-forms-developers-cover.png)
-
-> INDIRME:<https://aka.ms/blazor-ebook>
+> INDIRME: <https://aka.ms/blazor-ebook>
 
 YAYIMLAYAN
 
@@ -32,9 +30,9 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Telif hakkı © 2019 Microsoft Corporation
+Telif hakkı © 2020 Microsoft Corporation
 
-Tüm hakları saklıdır. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
+All rights reserved. Bu kitabın içeriğinin herhangi bir bölümü herhangi bir biçimde veya herhangi bir şekilde veya başka bir şekilde herhangi bir şekilde çoğaltılamaz veya herhangi bir şekilde gönderilebilir.
 
 Bu kitap, "olduğu gibi" verilmiştir ve yazarın görünümlerini ve opnons 'yi ifade eder. Bu kitapta ifade edilen görünümler, eklentiler ve bilgiler, URL ve diğer Internet Web sitesi başvuruları da dahil olmak üzere bildirimde bulunmaksızın değiştirilebilir.
 
@@ -56,11 +54,13 @@ Düzenliyor
 
 > **[Scott Ade](https://github.com/scottaddie)**, üst düzey içerik Geliştirici, Microsoft Corp.
 
+> **[Steve "ardalış" Smith](https://ardalis.com)**, yazılım mimarı ve Trainer, Ardalış Hizmetleri LLC
+
 ## <a name="introduction"></a>Giriş
 
 .NET, ASP.NET aracılığıyla desteklenen Web uygulaması geliştirmeyi, her türlü Web uygulaması oluşturmak için kapsamlı bir çerçeve ve araç kümesi içerir. ASP.NET, klasik Active Server sayfalarına (ASP) kadar tüm Web çerçeveleri ve teknolojileri içeren kendi kökenini sahiptir. ASP.NET Web Forms, ASP.NET MVC, ASP.NET Web sayfaları ve daha yeni ASP.NET Core gibi çerçeveler, Kullanıcı arabirimi içeriğinin HTTP isteklerine yanıt olarak dinamik olarak oluşturulduğu *sunucu tarafından işlenmiş* Web uygulamaları oluşturmak için üretken ve güçlü bir yol sağlar. Her bir ASP.NET çerçevesi, farklı bir hedef kitleye ve uygulama oluşturma felsekasında bulunur. ASP.NET Web Forms .NET Framework özgün sürümüyle birlikte sunulan ve basit olay işleme özellikli yeniden kullanılabilir kullanıcı arabirimi denetimleri gibi masaüstü geliştiricilere tanıdık olan çok sayıda desenden yararlanarak web geliştirmeyi etkin bir şekilde. Ancak, ASP.NET tekliflerinin hiçbiri kullanıcının tarayıcısında yürütülen kodu çalıştırmak için bir yol sağlamaz. Bunu yapmak için, JavaScript yazma ve yıl boyunca açık ve popüler olan birçok JavaScript çerçevesini ve araçlarından birini kullanmanızı gerektirir: jQuery, altını gizleme, angular, tepki verme ve benzeri.
 
-[Blazor](https://blazor.net), .NET ile Web uygulamaları oluştururken mümkün olan şeyleri değiştiren yeni bir Web çerçevesidir. BlazorJavaScript yerine C# tabanlı bir istemci tarafı Web Kullanıcı arabirimi çerçevesidir. İle Blazor , istemci tarafı mantığınızı ve Kullanıcı arabirimi bileşenlerinizi C# dilinde yazabilir, bunları normal .net Derlemeleriyle derleyebilir ve ardından doğrudan tarayıcıda çalıştırarak, yeni bir açık web standardı kullanın WebAssembly Ya da alternatif olarak, Blazor .net UI bileşenlerinizi sunucuda çalıştırabilir ve tarayıcı ile gerçek zamanlı bir bağlantı üzerinden tüm Kullanıcı arabirimi etkileşimlerini akıcı bir şekilde işleyebilir. Sunucuda çalışan .NET ile eşlendiğinde, Blazor .NET ile tam yığın Web geliştirmesini mümkün bir şekilde sunar. BlazorYeniden kullanılabilir bir bileşen modeli ve Kullanıcı olaylarını işlemek için basit bir yol gibi ASP.NET Web Forms ile çok sayıda ortak paylaşım yaparken, modern ve yüksek performanslı bir Web geliştirme deneyimi sağlamak üzere .NET Core 'un temelleri de oluşturulur.
+[Blazor](https://blazor.net) , .NET ile Web uygulamaları oluştururken mümkün olan şeyleri değiştiren yeni bir Web çerçevesidir. Blazor JavaScript yerine C# tabanlı bir istemci tarafı Web Kullanıcı arabirimi çerçevesidir. İle Blazor , istemci tarafı mantığınızı ve Kullanıcı arabirimi bileşenlerinizi C# dilinde yazabilir, bunları normal .net Derlemeleriyle derleyebilir ve ardından doğrudan tarayıcıda çalıştırarak, yeni bir açık web standardı kullanın WebAssembly Ya da alternatif olarak, Blazor .net UI bileşenlerinizi sunucuda çalıştırabilir ve tarayıcı ile gerçek zamanlı bir bağlantı üzerinden tüm Kullanıcı arabirimi etkileşimlerini akıcı bir şekilde işleyebilir. Sunucuda çalışan .NET ile eşlendiğinde, Blazor .NET ile tam yığın Web geliştirmesini mümkün bir şekilde sunar. BlazorYeniden kullanılabilir bir bileşen modeli ve Kullanıcı olaylarını işlemek için basit bir yol gibi ASP.NET Web Forms ile çok sayıda ortak paylaşım yaparken, modern ve yüksek performanslı bir Web geliştirme deneyimi sağlamak üzere .NET Core 'un temelleri de oluşturulur.
 
 Bu kitap, ASP.NET Web Forms geliştiricilerin Blazor tanıdık ve kullanışlı bir şekilde tanıtılmasını sağlar. BlazorASP.NET Web Forms benzer kavramlarla paralel kavramları tanıtır, aynı zamanda daha az tanıdık olabilecek yeni kavramları de açıklamıştır. Bileşen yazma, yönlendirme, düzen, yapılandırma ve güvenlik dahil olmak üzere çok çeşitli konuları ve sorunları ele alır. Bu kitabın içeriği öncelikli olarak yeni geliştirmeyi etkinleştirmek için, var olan bir uygulamayı modernleştirin istediğinizde mevcut ASP.NET Web Forms geçişine yönelik yönergeleri ve stratejileri de ele alır Blazor .
 

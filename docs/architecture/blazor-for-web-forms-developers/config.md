@@ -6,16 +6,14 @@ ms.author: jefritz
 no-loc:
 - Blazor
 ms.date: 04/01/2020
-ms.openlocfilehash: a13f663c2c6908ba906e42cb939c3b8707b8cccd
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6154b4f8c7a5bff42e603b12d5ef85468b80224e
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267509"
 ---
 # <a name="app-configuration"></a>Uygulama yapılandırması
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Web Forms ' de uygulama yapılandırmasını yüklemeye yönelik birincil yol, *web.config* &mdash; sunucuda veya *web.config*tarafından başvurulan ilgili bir yapılandırma dosyasında bulunanweb.configdosyasında yer alan girişlerdir. Statik nesneyi, uygulama `ConfigurationManager` ayarları, veri deposu bağlantı dizeleri ve uygulamaya eklenen diğer genişletilmiş yapılandırma sağlayıcıları ile etkileşim kurmak için kullanabilirsiniz. Aşağıdaki kodda görüldüğü gibi, uygulama yapılandırması ile etkileşimleri görmek normaldir:
 
@@ -74,7 +72,7 @@ Komutu yürüterek uygulamanızı gizli dizi depolaması için yapılandırın `
 dotnet user-secrets init
 ```
 
-Yukarıdaki komut, `UserSecretsId` proje dosyasına bir öğesi ekler. Öğesi, gizli dizileri uygulamayla ilişkilendirmek için kullanılan bir GUID içerir. Daha sonra komutuyla bir gizli dizi tanımlayabilirsiniz `set` . Örnek:
+Yukarıdaki komut, `UserSecretsId` proje dosyasına bir öğesi ekler. Öğesi, gizli dizileri uygulamayla ilişkilendirmek için kullanılan bir GUID içerir. Daha sonra komutuyla bir gizli dizi tanımlayabilirsiniz `set` . Örneğin:
 
 ```dotnetcli
 dotnet user-secrets set "Parent:ApiKey" "12345"

@@ -1,5 +1,5 @@
 ---
-title: ASP.NET Web Forms 'den geçişBlazor
+title: ASP.NET Web Forms 'den geçiş Blazor
 description: Var olan bir ASP.NET Web Forms uygulamasını ' ye geçirmeye nasıl yaklaşımınızı öğrenin Blazor .
 author: twsouthwick
 ms.author: tasou
@@ -7,16 +7,14 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: 464d2f535acd3b9774fe240b4feeda1875f98022
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267808"
 ---
-# <a name="migrate-from-aspnet-web-forms-to-blazor"></a>ASP.NET Web Forms 'den geçişBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms 'den geçiş Blazor
 
 Bir kod tabanının ASP.NET Web Forms ' den geçirilmesi Blazor , planlama gerektiren zaman alan bir görevdir. Bu bölümde işlem özetlenmektedir. Geçişi kolaylaştırmaya yönelik bir şey, uygulamanın, uygulama modelinde (Bu durumda Web Forms) iş mantığındaki bir *N katmanlı* mimariye uyduğundan emin olunması olabilir. Katmanlara yönelik bu mantıksal ayrım, .NET Core 'a ve ne kadar taşınabilmesini temizler Blazor .
 
@@ -24,8 +22,8 @@ Bu örnekte, [GitHub](https://github.com/dotnet-architecture/eShopOnBlazor) 'Da 
 
 Çalışma uygulaması neden geçirilecek Blazor ? Birçok kez ihtiyacınız yoktur. ASP.NET Web Forms, birçok yıl boyunca desteklenmeye devam edecektir. Ancak, tarafından sağlanan özelliklerin birçoğu Blazor yalnızca geçirilmiş bir uygulamada desteklenir. Bu tür özellikler şunlardır:
 
-- Çerçevede performans iyileştirmeleri`Span<T>`
-- Farklı ÇalıştırWebAssembly
+- Çerçevede performans iyileştirmeleri `Span<T>`
+- Farklı Çalıştır WebAssembly
 - Linux ve macOS için platformlar arası destek
 - Diğer uygulamaları etkilemeden uygulama yerel dağıtımı veya paylaşılan çerçeve dağıtımı
 
@@ -41,7 +39,7 @@ Bu veya diğer yeni özellikler yeterince etkileyici ise, uygulamayı geçirmede
 
 Yazma sırasında, sunucu tarafı modeli Web Forms daha yakından benzerdir. Bu bölümün çoğu, üretime hazırsa da sunucu tarafı barındırma modeline odaklanır.
 
-## <a name="create-a-new-project"></a>Yeni proje oluşturma
+## <a name="create-a-new-project"></a>Yeni bir proje oluşturma
 
 Bu ilk geçiş adımı yeni bir proje oluşturmaktır. Bu proje türü, .NET Core SDK stili projelerine dayalıdır ve önceki proje biçimlerinde kullanılan ortak alanının çoğunu basitleştirir. Daha fazla ayrıntı için lütfen [Proje yapısındaki](project-structure.md)bölüme bakın.
 
@@ -525,7 +523,7 @@ namespace eShopLegacyWebForms.Catalog
 
 Kodun ve biçimlendirmenin aynı dosyada olduğuna dikkat edin. Gerekli hizmetlere, özniteliğiyle erişilebilir hale getirilir `@inject` . `@page`Yönergeye göre, bu sayfaya `Catalog/Details/{id}` rotada erişilebilir. Yolun `{id}` yer tutucusunun değeri bir tamsayı ile kısıtlanıyor. [Yönlendirme](pages-routing-layouts.md) bölümünde açıklandığı gibi, Web Forms aksine bir Razor bileşeni, kendi yolunu ve dahil edilen tüm parametreleri açıkça belirtir. Birçok Web Forms denetimi ' de tam karşılıklarıyla eşleşmeyebilir Blazor . Genellikle aynı amacı sunan eşdeğer bir HTML kod parçacığı vardır. Örneğin, `<asp:Label />` Denetim BIR HTML `<label>` öğesiyle değiştirilebilir.
 
-### <a name="model-validation-in-blazor"></a>İçindeki model doğrulamasıBlazor
+### <a name="model-validation-in-no-locblazor"></a>İçindeki model doğrulaması Blazor
 
 Web Forms kodunuz doğrulamayı içeriyorsa, az sayıda değişiklik ile sahip olduğunuz kadarını aktarabilirsiniz. İçinde çalıştırmanın bir avantajı, Blazor aynı doğrulama mantığının özel JavaScript gerekmeden çalıştırılmamasının bir avantajıdır. Veri ek açıklamaları kolay model doğrulamayı etkinleştirir.
 

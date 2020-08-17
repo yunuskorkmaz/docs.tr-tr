@@ -1,25 +1,23 @@
 ---
-title: İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturunBlazor
+title: İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun Blazor
 description: İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturmayı Blazor ve ASP.NET Web Forms denetimleriyle nasıl karşılaştırılacağını öğrenin.
 author: danroth27
 ms.author: daroth
 no-loc:
 - Blazor
 ms.date: 09/18/2019
-ms.openlocfilehash: 9577fc916bb11783b885b2641242820865c0b115
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 4fdf062fb719e62b53e47f79db1e93d0bf079350
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267691"
 ---
-# <a name="build-reusable-ui-components-with-blazor"></a>İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturunBlazor
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="build-reusable-ui-components-with-no-locblazor"></a>İle yeniden kullanılabilir kullanıcı arabirimi bileşenleri oluşturun Blazor
 
 ASP.NET Web Forms hakkındaki harika şeyler, yeniden kullanılabilir kullanıcı arabirimi (UI) kodunun yeniden kullanılabilir kullanıcı arabirimi denetimlerine kapsüllemesini mümkün kılar. Özel Kullanıcı denetimleri, *. ascx* dosyalarını kullanarak biçimlendirme içinde tanımlanabilir. Ayrıca, tam tasarımcı desteğiyle kodda ayrıntılı sunucu denetimleri de oluşturabilirsiniz.
 
-BlazorAyrıca, *Bileşenler*aracılığıyla UI kapsüllemeyi destekler. Bileşen:
+Blazor Ayrıca, *Bileşenler*aracılığıyla UI kapsüllemeyi destekler. Bileşen:
 
 - , Kendinden bağımsız bir kullanıcı arabirimi öbektir.
 - Kendi durumunu ve işleme mantığını korur.
@@ -81,13 +79,13 @@ Aşağıdaki tabloda, varsa, içinde kullanılan çeşitli Razor yönergeleri Bl
 
 |Deki    |Açıklama|Örnek|Web Forms eşdeğeri|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Hiçbiri|
+|`@attribute` |Bileşene bir sınıf düzeyi özniteliği ekler|`@attribute [Authorize]`|Yok|
 |`@code`      |Bileşene sınıf üyeleri ekler|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Belirtilen arabirimi uygular|`@implements IDisposable`|Arka plan kodu kullan|
 |`@inherits`  |Belirtilen taban sınıftan devralır|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Hiçbiri|
+|`@inject`    |Bileşene bir hizmet çıkarır|`@inject IJSRuntime JS`|Yok|
 |`@layout`    |Bileşen için bir düzen bileşeni belirtir|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Hiçbiri|
+|`@namespace` |Bileşen için ad alanını ayarlar|`@namespace MyNamespace`|Yok|
 |`@page`      |Bileşen için yolu belirtir|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Bileşen için genel bir tür parametresi belirtir|`@typeparam TItem`|Arka plan kodu kullan|
 |`@using`     |Kapsama getirmek için bir ad alanı belirtir|`@using MyComponentNamespace`|*web.config* ad alanı Ekle|
@@ -116,7 +114,7 @@ Aşağıdaki tabloda, ' de kullanılan Razor yönergelerinin çeşitli özniteli
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Yönergeler                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Kod blokları                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|İfadeler<br>(HTML kodlu)|`<%: %>`            |`<%:DateTime.Now %>` |İndirgen`@`<br>Anlaşılır`@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|İfadeler<br>(HTML kodlu)|`<%: %>`            |`<%:DateTime.Now %>` |İndirgen `@`<br>Anlaşılır `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |Yorumlar                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Veri bağlama                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
@@ -168,7 +166,7 @@ Bir bileşenin ad alanı kapsamda değilse, C# ' de olduğu gibi tam tür adın�
 
 ## <a name="component-parameters"></a>Bileşen parametreleri
 
-ASP.NET Web Forms ' de, genel özellikleri kullanarak parametreleri ve verileri denetimlere akışı sağlayabilirsiniz. Bu özellikler, öznitelikler kullanılarak biçimlendirme içinde ayarlanabilir veya doğrudan kodda ayarlanabilir. Blazorbileşenler benzer bir şekilde çalışır, ancak bileşen özellikleri de `[Parameter]` bileşen parametreleri olarak kabul edilecek özniteliğiyle işaretlenmelidir.
+ASP.NET Web Forms ' de, genel özellikleri kullanarak parametreleri ve verileri denetimlere akışı sağlayabilirsiniz. Bu özellikler, öznitelikler kullanılarak biçimlendirme içinde ayarlanabilir veya doğrudan kodda ayarlanabilir. Blazor bileşenler benzer bir şekilde çalışır, ancak bileşen özellikleri de `[Parameter]` bileşen parametreleri olarak kabul edilecek özniteliğiyle işaretlenmelidir.
 
 Aşağıdaki `Counter` Bileşen, `IncrementAmount` `Counter` düğmenin tıklandığı her seferinde artırılması gereken miktarı belirtmek için kullanılan adlı bir bileşen parametresini tanımlar.
 
@@ -311,7 +309,7 @@ Bileşenler, türünde bir bileşen parametresi tanımlayarak kendi olaylarını
 
 ## <a name="data-binding"></a>Veri bağlama
 
-Blazorbir UI bileşeninden bileşen durumuna veri bağlamak için basit bir mekanizma sağlar. Bu yaklaşım, veri kaynaklarından kullanıcı arabirimi denetimlerine veri bağlamak için ASP.NET Web Forms özelliklerinden farklıdır. [Verilerle ilgilenme](data.md) bölümünde farklı veri kaynaklarından veri işlemeyi ele alacağız.
+Blazor bir UI bileşeninden bileşen durumuna veri bağlamak için basit bir mekanizma sağlar. Bu yaklaşım, veri kaynaklarından kullanıcı arabirimi denetimlerine veri bağlamak için ASP.NET Web Forms özelliklerinden farklıdır. [Verilerle ilgilenme](data.md) bölümünde farklı veri kaynaklarından veri işlemeyi ele alacağız.
 
 Bir UI bileşeninden bileşen durumuna iki yönlü bir veri bağlama oluşturmak için, `@bind` Directive özniteliğini kullanın. Aşağıdaki örnekte, onay kutusunun değeri `isChecked` alana bağlanır.
 
@@ -433,7 +431,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Blazorbileşenler Ayrıca iyi tanımlanmış bir yaşam döngüsüne sahiptir. Bileşenin yaşam döngüsü, bileşen durumunu başlatmak ve Gelişmiş bileşen davranışları uygulamak için kullanılabilir.
+Blazor bileşenler Ayrıca iyi tanımlanmış bir yaşam döngüsüne sahiptir. Bileşenin yaşam döngüsü, bileşen durumunu başlatmak ve Gelişmiş bileşen davranışları uygulamak için kullanılabilir.
 
 Tüm Blazor bileşen yaşam döngüsü yöntemlerinde hem zaman uyumlu hem de zaman uyumsuz sürümler vardır. Bileşen işleme zaman uyumludur. Zaman uyumsuz mantığı bileşen işlemenin bir parçası olarak çalıştıramazsınız. Tüm zaman uyumsuz mantığın bir yaşam döngüsü yönteminin parçası olarak yürütülmesi gerekir `async` .
 
@@ -476,13 +474,13 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 }
 ```
 
-`OnAfterRender`ve `OnAfterRenderAsync` *sunucuda prerendering çağrıldığında çağrılmaz*.
+`OnAfterRender` ve `OnAfterRenderAsync` *sunucuda prerendering çağrıldığında çağrılmaz*.
 
 `firstRender`Parametre, `true` bileşen ilk kez işlendiğinde, aksi durumda değeri ' dir `false` .
 
 ### <a name="idisposable"></a>IDisposable
 
-Blazorbileşenler `IDisposable` , bileşen kullanıcı arabiriminden kaldırıldığında kaynakların atılmaya uygulanabilir. Bir Razor bileşeni `IDispose` yönergesini kullanarak uygulayabilir `@implements` :
+Blazor bileşenler `IDisposable` , bileşen kullanıcı arabiriminden kaldırıldığında kaynakların atılmaya uygulanabilir. Bir Razor bileşeni `IDispose` yönergesini kullanarak uygulayabilir `@implements` :
 
 ```razor
 @using System
@@ -523,17 +521,17 @@ Bileşen başvurularını kullanarak bileşen durumunu doğrudan işlemek öneri
 
 ## <a name="capture-element-references"></a>Öğe başvurularını yakala
 
-Blazorbileşenler, bir öğeye başvuruları yakalayabilir. ASP.NET Web Forms içindeki HTML sunucu denetimlerinden farklı olarak, ' deki bir öğe başvurusunu kullanarak DOM 'ı doğrudan düzenleyemezsiniz Blazor . Blazor, DOM dağıtma algoritmasını kullanarak sizin için çoğu DOM etkileşimini işler. ' De yakalanan öğe başvuruları Blazor donuk. Ancak, JavaScript birlikte çalışma çağrısında belirli bir öğe başvurusunu geçirmek için kullanılırlar. JavaScript birlikte çalışması hakkında daha fazla bilgi için bkz. [ Blazor javascript Interop ASP.NET Core](/aspnet/core/blazor/javascript-interop).
+Blazor bileşenler, bir öğeye başvuruları yakalayabilir. ASP.NET Web Forms içindeki HTML sunucu denetimlerinden farklı olarak, ' deki bir öğe başvurusunu kullanarak DOM 'ı doğrudan düzenleyemezsiniz Blazor . Blazor , DOM dağıtma algoritmasını kullanarak sizin için çoğu DOM etkileşimini işler. ' De yakalanan öğe başvuruları Blazor donuk. Ancak, JavaScript birlikte çalışma çağrısında belirli bir öğe başvurusunu geçirmek için kullanılırlar. JavaScript birlikte çalışması hakkında daha fazla bilgi için bkz. [ Blazor javascript Interop ASP.NET Core](/aspnet/core/blazor/javascript-interop).
 
 ## <a name="templated-components"></a>Şablonlu bileşenler
 
 ASP.NET Web Forms içinde *şablonlu denetimler*oluşturabilirsiniz. Şablonlu denetimler, geliştiricinin bir kapsayıcı denetimini işlemek için kullanılan HTML 'nin bir bölümünü belirtmesini sağlar. Şablonlu sunucu denetimleri oluşturma mekanizması karmaşıktır, ancak kullanıcı tarafından özelleştirilebilir bir şekilde veri işlemeye yönelik güçlü senaryolar sağlar. Şablonlu denetimlerin örnekleri `Repeater` ve içerir `DataList` .
 
-Blazorbileşenler Ayrıca, veya türündeki bileşen parametreleri tanımlayarak şablonlanır `RenderFragment` `RenderFragment<T>` . Bir `RenderFragment` , daha sonra bileşen tarafından işlenebilen bir Razor biçimlendirme öbeğini temsil eder. , `RenderFragment<T>` İşleme parçası işlendiğinde belirtilebilen bir parametre alan Razor biçimlendirme öbektir.
+Blazor bileşenler Ayrıca, veya türündeki bileşen parametreleri tanımlayarak şablonlanır `RenderFragment` `RenderFragment<T>` . Bir `RenderFragment` , daha sonra bileşen tarafından işlenebilen bir Razor biçimlendirme öbeğini temsil eder. , `RenderFragment<T>` İşleme parçası işlendiğinde belirtilebilen bir parametre alan Razor biçimlendirme öbektir.
 
 ### <a name="child-content"></a>Alt içerik
 
-Blazorbileşenler alt içeriğini bir olarak yakalayabilir `RenderFragment` ve bu içeriği bileşen işlemenin bir parçası olarak işleyebilir. Alt içeriği yakalamak için, türü bir bileşen parametresi tanımlayın `RenderFragment` ve bu parametreyi adlandırın `ChildContent` .
+Blazor bileşenler alt içeriğini bir olarak yakalayabilir `RenderFragment` ve bu içeriği bileşen işlemenin bir parçası olarak işleyebilir. Alt içeriği yakalamak için, türü bir bileşen parametresi tanımlayın `RenderFragment` ve bu parametreyi adlandırın `ChildContent` .
 
 *ChildContentComponent. Razor*
 

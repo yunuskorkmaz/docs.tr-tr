@@ -4,16 +4,14 @@ description: ASP.NET Web Forms ve Blazor ' de durum yönetimi için farklı yakl
 author: csharpfritz
 ms.author: jefritz
 ms.date: 05/15/2020
-ms.openlocfilehash: bac2f00330113725f09259ca31bdf857a8769f24
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 2ca811f886c6a245ac16c2bd66a68ff16e5bfc44
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267730"
 ---
 # <a name="state-management"></a>Durum yönetimi
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Durum yönetimi, Görünüm durumu, oturum durumu, uygulama durumu ve geri gönderme özellikleri aracılığıyla kolaylaştırlanan Web Forms uygulamalar temel kavramıdır. Framework 'ün durum bilgisi olan bu özellikleri, bir uygulama için gereken durum yönetimini gizlemeyi ve uygulama geliştiricilerinin işlevlerini sunmaya odaklanmasını sağlar. ASP.NET Core ve Blazor ile bu özelliklerden bazıları yeniden konumlandırıldı ve bazıları tamamen kaldırılmıştır. Bu bölümde, Blazor sürümündeki yeni özelliklerle durumu koruma ve aynı işlevselliği sunma hakkında inceleme yapılır.
 
@@ -84,8 +82,8 @@ app.AddSingleton<MyApplicationState>();
 
 Uygulama verileri, daha sonra kullanılabilir olması için kullanıcının cihazında istemci tarafı da depolanabilir. Kullanıcı tarayıcısının farklı kapsamlarında verilerin kalıcılığına izin veren iki tarayıcı özelliği vardır:
 
-- `localStorage`-kullanıcının tüm tarayıcı kapsamı. Sayfa yeniden yüklendiğinde, tarayıcı kapatılıp yeniden açılır veya aynı URL ile başka bir sekme açılırsa aynı şekilde `localStorage` tarayıcı tarafından sağlanır
-- `sessionStorage`-kullanıcının geçerli tarayıcı sekmesi kapsamı. Sekme yeniden yüklendiğinde durum devam ettirir. Ancak, Kullanıcı uygulamanıza başka bir sekme açarsa veya tarayıcıyı kapatıp yeniden açarsa durum kaybedilir.
+- `localStorage` -kullanıcının tüm tarayıcı kapsamı. Sayfa yeniden yüklendiğinde, tarayıcı kapatılıp yeniden açılır veya aynı URL ile başka bir sekme açılırsa aynı şekilde `localStorage` tarayıcı tarafından sağlanır
+- `sessionStorage` -kullanıcının geçerli tarayıcı sekmesi kapsamı. Sekme yeniden yüklendiğinde durum devam ettirir. Ancak, Kullanıcı uygulamanıza başka bir sekme açarsa veya tarayıcıyı kapatıp yeniden açarsa durum kaybedilir.
 
 Bu özelliklerle etkileşim kurmak için bazı özel JavaScript kodu yazabilir veya bu işlevselliği sağlamak için kullanabileceğiniz çeşitli NuGet paketleri bulabilirsiniz. Bu tür bir paket [Microsoft. AspNetCore. ProtectedBrowserStorage](https://www.nuget.org/packages/Microsoft.AspNetCore.ProtectedBrowserStorage)' dır.
 

@@ -4,16 +4,14 @@ description: Uygulamanız için başlangıç mantığını tanımlama hakkında 
 author: csharpfritz
 ms.author: jefritz
 ms.date: 02/25/2020
-ms.openlocfilehash: 3d460750c36f64b8ad343755bd63b47af5c310d9
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ea2ea458011d8351a834aa12db02e5d2bac2dc65
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87914886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88267704"
 ---
 # <a name="app-startup"></a>Uygulama başlatma
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ASP.NET için yazılan uygulamalar genellikle, `global.asax.cs` `Application_Start` hangi hizmetlerin yapılandırıldığını ve hem HTML işleme hem de .net işlemesi için kullanılabilir hale getirildiğini denetleyen olayı tanımlayan bir dosya olur. Bu bölümde, ASP.NET Core ve Blazor Server ile ilgili işlerin nasıl biraz farklı olduğu açıklanır.
 
@@ -21,10 +19,10 @@ ASP.NET için yazılan uygulamalar genellikle, `global.asax.cs` `Application_Sta
 
 Varsayılan Web formları `Application_Start` yöntemi, birçok yapılandırma görevini işlemek için yıllarca bir amaç artmıştır.  Visual Studio 2019 ' de varsayılan şablona sahip yeni bir Web Forms projesi artık aşağıdaki yapılandırma mantığını içerir:
 
-- `RouteConfig`-Uygulama URL 'SI yönlendirme
-- `BundleConfig`-CSS ve JavaScript paketleme ve küçültmeye yönelik
+- `RouteConfig` -Uygulama URL 'SI yönlendirme
+- `BundleConfig` -CSS ve JavaScript paketleme ve küçültmeye yönelik
 
-Bu dosyaların her biri `App_Start` klasöründe bulunur ve uygulamamız başlangıcında yalnızca bir kez çalıştırılır.  `RouteConfig`Varsayılan proje şablonunda, `FriendlyUrlSettings` Uygulama URL 'lerinin dosya uzantısını yok saymasını sağlamak için Web formları için ' i ekler `.ASPX` .  Varsayılan şablon Ayrıca, `.ASPX` uzantıları açan dosya adı ile kolay URL 'ye sayfalar için kalıcı http yeniden yönlendirme durum kodları (HTTP 301) sağlayan bir yönerge içerir.
+Bu dosyaların her biri `App_Start` klasöründe bulunur ve uygulamamız başlangıcında yalnızca bir kez çalıştırılır.  `RouteConfig` Varsayılan proje şablonunda, `FriendlyUrlSettings` Uygulama URL 'lerinin dosya uzantısını yok saymasını sağlamak için Web formları için ' i ekler `.ASPX` .  Varsayılan şablon Ayrıca, `.ASPX` uzantıları açan dosya adı ile kolay URL 'ye sayfalar için kalıcı http yeniden yönlendirme durum kodları (HTTP 301) sağlayan bir yönerge içerir.
 
 ASP.NET Core ve Blazor ile bu yöntemler `Startup` basitleşilir ve sınıfla birleştirilir ya da ortak web teknolojilerinin yararına ortadan kaldırılır.
 

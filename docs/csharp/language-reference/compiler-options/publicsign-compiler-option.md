@@ -1,5 +1,5 @@
 ---
-title: -publicsign (C# Derleyici Seçenekleri)
+title: -publicsign (C# derleyici seçenekleri)
 ms.date: 05/15/2018
 f1_keywords:
 - /publicsign
@@ -7,44 +7,47 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2655e0216a412053e052ab2ec2fcc8c68ea4f968
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "61662536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268055"
 ---
-# <a name="-publicsign-c-compiler-options"></a>-publicsign (C# Derleyici Seçenekleri)
+# <a name="-publicsign-c-compiler-options"></a>-publicsign (C# derleyici seçenekleri)
 
-Bu seçenek derleyicinin ortak bir anahtar uygulamasına neden olur, ancak derlemeyi gerçekte imzalamaz. **-publicsign** seçeneği de dosyanın gerçekte imzalanmış olduğunu çalışma zamanı söyler derleme biraz ayarlar.
+Bu seçenek derleyicinin ortak anahtar uygulamasına, ancak derlemeyi gerçekten imzalamasına neden olur. **-Publicsign** seçeneği Ayrıca derlemede, dosyanın gerçekten imzalandığını belirten bir bit belirler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```console
 -publicsign
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
 Yok.
 
 ## <a name="remarks"></a>Açıklamalar
 
-**-publicsign** seçeneği [-keyfile](keyfile-compiler-option.md) veya [-keycontainer](keycontainer-compiler-option.md)kullanımını gerektirir. **Anahtar dosyası** veya **anahtar kapsayıcı** seçenekleri ortak anahtarı belirtir.
+**-Publicsign** seçeneği, [-keyfile](keyfile-compiler-option.md) veya [-keycontainer](keycontainer-compiler-option.md)kullanımını gerektirir. **Keyfile** veya **keycontainer** seçenekleri ortak anahtarı belirtir.
 
-**-publicsign** **ve-delaysign** seçenekleri birbirini dışlar.
+**-Publicsign** ve **-delaysign** seçenekleri birbirini dışlıyor.
 
-Bazen "sahte işaret" veya "OSS işareti" olarak adlandırılan, genel imza bir çıktı derlemesinde ortak anahtarı içerir ve "imzalı" bayrağı ayarlar, ancak aslında özel bir anahtarla derlemeyi imzalamaz. Bu, insanların yayımlanan "tam olarak imzalanmış" derlemelerle uyumlu derlemeler oluşturmak istedikleri, ancak derlemeleri imzalamak için kullanılan özel anahtara erişemedikleri açık kaynak projeleri için yararlıdır. Hemen hemen hiç tüketici aslında montaj tam olarak imzalanmış olup olmadığını kontrol etmek gerekir, bu kamuya inşa meclisleri tam olarak imzalanmış bir kullanılacak hemen hemen her senaryoda kullanılabilir.
+Bazen "sahte imza" veya "OSS işareti" olarak da adlandırılan ortak imzalama, bir çıktı derlemesinde ortak anahtarı içerir ve "imzalanmış" bayrağını ayarlar, ancak aslında derlemeyi özel bir anahtarla imzalayamıyor. Bu, insanların yayınlanan "tam olarak imzalanmış" derlemeleriyle uyumlu derlemeler oluşturmak istediği, ancak derlemeleri imzalamak için kullanılan özel anahtara erişime sahip olmadığı açık kaynaklı projeler için kullanışlıdır. Neredeyse hiçbir tüketiciye derlemenin tamamen imzalanıp imzalanmadığını kontrol etmek zorunda olduğundan, bu genel olarak oluşturulan derlemeler neredeyse her bir senaryoda, tam olarak imzalanan bir şekilde kullanılabilir.
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için
+### <a name="to-set-this-compiler-option-in-a-csproj-file"></a>Bir csproj dosyasında bu derleyici seçeneğini ayarlamak için
 
-1. Projenin **Özellikleri** sayfasını açın.
-1. Yalnızca **Gecikme işareti** özelliğini değiştirin.
+Bir proje için. csproj dosyasını açın ve şu öğeyi ekleyin:
+
+```xml
+<PublicSign>true</PublicSign>
+```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici -delaysign işareti seçeneği](delaysign-compiler-option.md)
-- [C# Derleyici -keyfile seçeneği](keyfile-compiler-option.md)
-- [C# Derleyici -keycontainer seçeneği](keycontainer-compiler-option.md)
-- [C# Derleyici Seçenekleri](index.md)
+- [C# derleyicisi-delaysign seçeneği](delaysign-compiler-option.md)
+- [C# Derleyici-anahtar seçeneği](keyfile-compiler-option.md)
+- [C# derleyicisi-keycontainer seçeneği](keycontainer-compiler-option.md)
+- [C# derleyici seçenekleri](index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

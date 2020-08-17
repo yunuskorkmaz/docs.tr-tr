@@ -2,12 +2,12 @@
 title: C# programlarının yapı taşları "
 description: C# üyeleri, ifadeler ve deyimler hakkında bilgi edinin. Türler yazdığınız üyeleri içerir. Bu Üyeler deyimlerden ve ifadelerden oluşturulur.
 ms.date: 08/06/2020
-ms.openlocfilehash: de9f634db129ea2ec6f692cabb657f9fe41b2f9c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 142fe7b5a3424a8925638bfb4e4437392347f4c6
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268146"
 ---
 # <a name="program-building-blocks"></a>Program yapı taşları
 
@@ -207,13 +207,13 @@ Bir özelliğin erişimcisi sanal olabilir. Bir özellik bildirimi `virtual` ,, 
 
 *Dizin Oluşturucu* , nesnelerin diziyle aynı şekilde dizinlenmesini sağlayan bir üyedir. Bir Dizin Oluşturucu, üyenin adının `this` ardından sınırlayıcılar ve arasında yazılmış bir parametre listesi gelmesi dışında bir özellik gibi bildirilmiştir `[` `]` . Parametreler, dizin oluşturucunun erişimcisinde kullanılabilir. Özelliklere benzer şekilde, Dizin oluşturucular okunabilir-yazılır, salt okunurdur ve salt yazılır olabilir ve bir dizin oluşturucunun erişimcisi sanal olabilir.
 
-`MyList<T>`Sınıfı, bir parametresi alan tek bir okuma-yazma Dizin Oluşturucu bildirir `int` . Dizin Oluşturucu, örneklerin değerleriyle dizin oluşturmanızı mümkün kılar `MyList<T>` `int` . Örnek:
+`MyList<T>`Sınıfı, bir parametresi alan tek bir okuma-yazma Dizin Oluşturucu bildirir `int` . Dizin Oluşturucu, örneklerin değerleriyle dizin oluşturmanızı mümkün kılar `MyList<T>` `int` . Örneğin:
 
-:::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="ListAddition":::
+:::code language="csharp" source="./snippets/shared/ClassesObjects.cs" ID="ListAccess":::
 
 Dizin oluşturucular aşırı yüklenebilir. Bir sınıf, parametrelerinin sayısı veya türleri farklı olduğu sürece birden çok Dizin Oluşturucu bildirebilir.
 
-### <a name="events"></a>Olaylar
+### <a name="events"></a>Ekinlikler
 
 Bir *olay* , bir sınıf veya nesnenin bildirimler sağlamasını sağlayan bir üyedir. Bildirimin bir `event` anahtar sözcük içermesi ve türün bir temsilci türü olması dışında bir olay, bir alan gibi bildirilmiştir.
 
@@ -284,21 +284,21 @@ Aşağıdakiler, kullanılabilecek deyimlerin türlerini listeler:
 * Yerel değişken bildirimi.
 * Yerel sabit bildirimi.
 * İfade deyimi.
-* `if`Ekstre.
-* `switch`Ekstre.
-* `while`Ekstre.
-* `do`Ekstre.
-* `for`Ekstre.
-* `foreach`Ekstre.
-* `break`Ekstre.
-* `continue`Ekstre.
-* `goto`Ekstre.
-* `return`Ekstre.
-* `yield`Ekstre.
-* `throw`deyimler ve `try` deyimler.
-* `checked`ve `unchecked` deyimleri.
-* `lock`Ekstre.
-* `using`Ekstre.
+* `if` Ekstre.
+* `switch` Ekstre.
+* `while` Ekstre.
+* `do` Ekstre.
+* `for` Ekstre.
+* `foreach` Ekstre.
+* `break` Ekstre.
+* `continue` Ekstre.
+* `goto` Ekstre.
+* `return` Ekstre.
+* `yield` Ekstre.
+* `throw` deyimler ve `try` deyimler.
+* `checked` ve `unchecked` deyimleri.
+* `lock` Ekstre.
+* `using` Ekstre.
 
 >[!div class="step-by-step"]
 >[Önceki](types.md) 

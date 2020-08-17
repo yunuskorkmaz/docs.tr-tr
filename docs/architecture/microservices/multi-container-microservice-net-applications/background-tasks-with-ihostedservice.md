@@ -1,51 +1,51 @@
 ---
-title: IHostedService ve BackgroundService sınıfı ile mikro hizmetlerde arka plan görevlerini uygulayın
-description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Microservices .NET Core'da arka plan görevlerini uygulamak için IHostedService ve BackgroundService'i kullanmak için yeni seçenekleri anlayın.
-ms.date: 01/30/2020
-ms.openlocfilehash: fd26d0444312d3525ad95b2273f28a6ceaa27911
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+title: Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler .NET Core 'da arka plan görevleri uygulamak için ıhostedservice ve BackgroundService kullanmak üzere yeni seçenekleri anlayın.
+ms.date: 08/14/2020
+ms.openlocfilehash: 4ab215f2196cd2e66b116465c3a582a9846c8066
+ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88268003"
 ---
-# <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService ve BackgroundService sınıfı ile mikro hizmetlerde arka plan görevlerini uygulayın
+# <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Ihostedservice ve BackgroundService sınıfıyla mikro hizmetlerde arka plan görevleri uygulama
 
-Arka plan görevleri ve zamanlanmış işler, sonunda, bir mikrohizmet tabanlı uygulamada veya herhangi bir uygulamada uygulama yapmanız gereken bir şeydir. Bir microservices mimarisi kullanırken fark, bu arka plan görevlerini barındırmak için tek bir microservice işlemi/kapsayıcı uygulayabilmenizdir, böylece gerektiğinde küçültebilirsiniz/yukarı ya da hatta bu mikrohizmet işleminin/kapsayıcının tek bir örneğini çalıştırdığından emin olabilirsiniz.
+Arka plan görevleri ve zamanlanan işler, mikro hizmetler mimari modelini takip etmeksizin, herhangi bir uygulamada kullanmanız gerekebilecek bir şeydir. Mikro hizmet mimarisi kullanmanın farkı, arka plan görevini, barındırmak üzere ayrı bir süreç/kapsayıcıda uygulayabileceğiniz için, ihtiyacınız olan temelinde ölçeklendirebilmeniz gerekir.
 
-Genel bir bakış açısından, .NET Core'da bu tür görevler *barındırılan hizmetler*olarak adlandırdık, çünkü bunlar ana bilgisayar/uygulama/microservice içinde barındırdığınız hizmetler/mantık. Bu durumda, barındırılan hizmetin yalnızca arka plan görev mantığına sahip bir sınıf anlamına geldiğini unutmayın.
+.NET Core 'da, genel bir bakış noktasından, ana bilgisayar/uygulama/mikro hizmetiniz içinde barındırmanıza yönelik hizmetler/mantık olduklarından, bu tür görevler *barındırılan hizmetler*olarak adlandırdık. Bu durumda, barındırılan hizmetin arka plan görevi mantığına sahip bir sınıf anlamına geldiğini unutmayın.
 
-.NET Core 2.0'dan bu yana, <xref:Microsoft.Extensions.Hosting.IHostedService> framework barındırılan hizmetleri kolayca uygulamanıza yardımcı olan yeni bir arabirim sağlar. Temel fikir, 6-26 görüntüde gösterildiği gibi, web ana bilgisayarınız veya ana bilgisayarınız çalışırken arka planda çalışan birden çok arka plan görevlerini (barındırılan hizmetleri) kaydedebilirsiniz.
+.NET Core 2,0 sürümünden itibaren Framework, <xref:Microsoft.Extensions.Hosting.IHostedService> barındırılan Hizmetleri kolayca uygulamanıza yardımcı adlı yeni bir arabirim sağlar. Temel düşünce, 6-26 görüntüsünde gösterildiği gibi Web ana bilgisayarınız veya ana bilgisayarınız çalışırken arka planda çalışan birden fazla arka plan görevini (barındırılan hizmetler) kaydedebilmeniz için kullanılır.
 
-![Diyagram Core IWebHost ve .NET Core IHost ASP.NET karşılaştırarak.](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
+![ASP.NET Core ıwebhost ve .NET Core IHOST karşılaştırması.](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
-**Şekil 6-26**. IHostedService'i Bir WebHost'ta kullanma ve Bir Ana Bilgisayar
+**Şekil 6-26**. Bir WebHost 'de ıhostedservice kullanma ve bir ana bilgisayar
 
-ASP.NET Core 1.x ve `IWebHost` 2.x web uygulamalarında arka plan işlemleri için destek. .NET Core 2.1 ve `IHost` sonraki sürümler düz konsol uygulamaları ile arka plan işlemleri için destek. ve `Host`. arasında `WebHost` yapılan farka dikkat edin
+`IWebHost`Web Apps 'te arka plan işlemlerine yönelik 1. x ve 2. x desteği ASP.NET Core. .NET Core 2,1 ve üzeri sürümleri, `IHost` düz konsol uygulamalarıyla arka plan süreçlerini destekler. Ve arasında yapılan farkı dikkate `WebHost` alın `Host` .
 
-Core `WebHost` 2.0ASP.NETbir (taban sınıf uygulama) `IWebHost`bir MVC web uygulaması veya Web API hizmeti uygularken gibi işlemiçin HTTP sunucu özellikleri sağlamak için kullandığınız altyapı artifakı olduğunu. bağımlılık enjeksiyonu, istek ardışık hatlarına ara yazılım ekleme ve benzeri ekleme yapmanızı sağlayan ASP.NET Core'daki tüm yeni altyapı iyiliğini sağlar. Arka `WebHost` plan görevleri `IHostedServices` için bu çok aynı kullanır.
+`WebHost`ASP.NET Core 2,0 ' de bir (temel sınıf uygulayan `IWebHost` ), bir MVC web uygulaması veya Web API hizmeti uygularken, Işlem uygulamanıza http sunucusu özellikleri sağlamak için kullandığınız altyapı yapıtıdır. ASP.NET Core, bağımlılık ekleme, istek ardışık düzeninde middlewares ekleme ve benzer şekilde tüm yeni altyapıyı bir araya getirir. , `WebHost` `IHostedServices` Arka plan görevleri için bu çok aynısını kullanır.
 
-.NET Core 2.1'de (taban `Host` sınıf uygulama) `IHost`tanıtıldı. Temel olarak, bir `Host` (bağımlılık enjeksiyon, barındırılan hizmetler, vb) ile `WebHost` ne benzer bir altyapıya sahip sağlar, ama bu durumda, sadece mvc, Web API veya HTTP sunucu özellikleri ile ilgili hiçbir şey ile, ana bilgisayar olarak basit ve daha hafif bir süreç istiyorum.
+`Host` `IHost` .Net Core 2,1 ' de bir (temel sınıf uygulayan) tanıtılmıştı. Temel olarak, sahip `Host` olduğunuz kadar benzer bir altyapıya sahip olmanız `WebHost` (bağımlılık ekleme, barındırılan hizmetler vb.), ancak bu durumda, MVC, Web API 'SI veya http sunucu özellikleriyle ilgili hiçbir şey olmadan ana bilgisayar için basit ve daha hafif bir işleme sahip olmak istersiniz.
 
-Bu nedenle, barındırılan hizmetleri işlemek `IHost` için özel bir ana bilgisayar işlemi oluşturabilir ve başka bir `IHostedServices`şey, böyle bir mikrohizmet sadece `WebHost`barındırma için yapılmış , ya da alternatif olarak mevcut bir ASP.NET Core uzatabilirsiniz , mevcut bir ASP.NET Core Web API veya MVC uygulaması gibi.
+Bu nedenle, barındırılan Hizmetleri işlemek için ile özel bir konak oluşturma ve `IHost` başka hiçbir şey yapma (örneğin, yalnızca barındırmak için yapılan bir mikro hizmet) veya var olan bir `IHostedServices` `WebHost` ASP.NET Core Web API 'SI ya da MVC uygulaması gibi mevcut bir ASP.NET Core genişletebilirsiniz.
 
-Her yaklaşımın, iş ve ölçeklenebilirlik ihtiyaçlarınıza bağlı olarak artıları ve eksileri vardır. Alt satırda temelde arka plan görevleri HTTP (`IWebHost`) ile `IHost`ilgisi varsa kullanmanız gerektiğini .
+Her yaklaşımın iş ve ölçeklenebilirlik gereksinimlerinize bağlı olarak profesyonelleri ve dezavantajları vardır. Arka plan görevleriniz, kullanmanız gereken HTTP () ile hiçbir şey yapmayabilir `IWebHost` `IHost` .
 
-## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Barındırılan hizmetleri WebHost veya Host'unuzda kaydetme
+## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Barındırılan Hizmetleri WebHost veya ana bilgisayarınıza kaydetme
 
-Kullanımı bir veya bir `IHostedService` `WebHost` `Host`'de oldukça benzer olduğundan arayüzü daha fazla detaya gidelim .
+Kullanımı, içinde veya ' de oldukça benzer olduğundan arabirim üzerinde daha fazla ayrıntıya bakalım `IHostedService` `WebHost` `Host` .
 
-SignalR barındırılan hizmetleri kullanan bir yapı örneğidir, ancak aynı zamanda gibi çok basit şeyler için kullanabilirsiniz:
+SignalR, barındırılan Hizmetleri kullanan bir yapıtın örneğidir, ancak şu gibi daha basit şeyler için de kullanabilirsiniz:
 
-- Değişiklikleri arayan bir veritabanını yoklayan bir arka plan görevi.
-- Bazı önbelleği düzenli aralıklarla güncelleştiren zamanlanmış bir görev.
-- Bir görevin arka plan iş parçacığı üzerinde yürütülmesini sağlayan QueueBackgroundWorkItem uygulaması.
-- Bir web uygulamasının arka planındaki ileti kuyruğundan gelen iletileri işleme alırken, bu tür `ILogger`ortak hizmetleri paylaşın.
-- Bir arka plan `Task.Run()`görevi ile başladı.
+- Arka plan görevi, değişiklik isteyen bir veritabanını yoklamaktadır.
+- Belirli bir önbelleği düzenli aralıklarla güncelleştiren zamanlanmış bir görev.
+- Bir görevin arka plan iş parçacığında yürütülmesini sağlayan QueueBackgroundWorkItem 'ın bir uygulamasıdır.
+- Gibi ortak hizmetleri paylaşırken bir Web uygulamasının arka planında bir ileti kuyruğundan iletileri işleme `ILogger` .
+- İle başlatılan bir arka plan görevi `Task.Run()` .
 
-Temelde bu eylemlerden herhangi birini uygulayan bir arka `IHostedService`plan görevine boşaltabilirsiniz.
+Bu eylemlerin herhangi birini, uygulayan bir arka plan görevine temelde devretmek `IHostedService` .
 
-Bir veya birden fazla `IHostedServices` eklemenin `WebHost` veya `Host` <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>  uzantı yöntemiyle ASP.NET Core'a `WebHost` (veya `Host` .NET Core 2.1 ve üzeri bir girişte) kaydettirmeniz dir. Temel olarak, tipik bir ASP.NET WebHost aşağıdaki `Startup` kod olarak, sınıfın tanıdık `ConfigureServices()` yöntemi içinde barındırılan hizmetleri kaydetmek zorunda.
+Veya ' a bir veya daha fazla ekleme yönteminiz, `IHostedServices` `WebHost` bunları bir `Host` <xref:Microsoft.Extensions.DependencyInjection.ServiceCollectionHostedServiceExtensions.AddHostedService%2A>   ASP.NET Core genişletme yöntemiyle `WebHost` (veya `Host` .NET Core 2,1 ve üzeri sürümlerde) kaydederek. Temel olarak, barındırılan Hizmetleri, `ConfigureServices()` `Startup` tipik bir ASP.net Webhost öğesinden aşağıdaki kodda olduğu gibi, sınıfının tanıdık bir yöntemi içine kaydetmeniz gerekir.
 
 ```csharp
 public IServiceProvider ConfigureServices(IServiceCollection services)
@@ -60,51 +60,29 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 }
 ```
 
-Bu kodda, `GracePeriodManagerService` barındırılan hizmet eShopOnContainers sipariş iş microservice gerçek kodu, diğer iki ek örnek ise.
+Bu kodda, `GracePeriodManagerService` barındırılan hizmet eShopOnContainers 'Daki sıralama iş mikro hizmetinden gerçek koddur, diğer ikisi de yalnızca iki ek örnek olur.
 
-Arka `IHostedService` plan görev yürütme uygulamanın ömrü (ana bilgisayar veya microservice, bu konuda) ile koordine edilir. Uygulama başladığında görevleri kaydedersiniz ve uygulama kapatılırken bazı zarif eylem veya temizleme yapma fırsatınız olur.
+`IHostedService`Arka plan görevi yürütme, uygulamanın yaşam süresi (Bu konuyla ilgili konak veya mikro hizmet) ile birlikte düzenlenir. Uygulama başlatıldığında görevleri kaydeder ve uygulama kapatılırken düzgün bir şekilde işlem yapmak veya temizlemek için bir fırsattır.
 
-`IHostedService`Kullanmadan, her zaman herhangi bir görevi çalıştırmak için bir arka plan iş parçacığı başlatabilirsiniz. Aradaki fark, uygulamanın kapatma süresinin tam olarak bu iş parçacığının zarif temizleme eylemleri çalıştırma fırsatına sahip olmadan öldürüleceği zamandır.
+Kullanmadan `IHostedService` , herhangi bir görevi çalıştırmak için her zaman bir arka plan iş parçacığı başlatabilirsiniz. Bu iş parçacığı, sorunsuz temizleme eylemleri çalıştırma fırsatına gerek kalmadan yalnızca uygulamanın kapanma zamanına göre farklılık gösteren bir fark vardır.
 
-## <a name="the-ihostedservice-interface"></a>IHostedService arabirimi
+## <a name="the-ihostedservice-interface"></a>Ihostedservice arabirimi
 
-Bir `IHostedService`, .NET Core kaydettiğinizde, `StopAsync()` uygulama `IHostedService` başlangıç `StartAsync()` ve durdurma sırasında türün ve yöntemin izini ve yöntemini sırasıyla çağırır. Özellikle, başlat sunucu başladıktan ve `IApplicationLifetime.ApplicationStarted` tetiklendikten sonra çağrılır.
+Bir kaydettiğinizde `IHostedService` , .NET Core `StartAsync()` `StopAsync()` `IHostedService` uygulama başlatma ve durdurma sırasında, sizin yazmanız için ve yöntemlerini çağıracaktır. Daha fazla ayrıntı için [ıhostedservice arabirimine](https://docs.microsoft.com/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-3.1&tabs=visual-studio#ihostedservice-interface) başvurun
 
-.NET Core'da tanımlandığı `IHostedService` gibi aşağıdaki gibi görünür.
+Imagine kullanabileceğiniz gibi, birden çok ıhostedservice uygulaması oluşturabilir ve bu Hizmetleri `ConfigureService()` daha önce gösterildiği gibi, yöntemde de dı kapsayıcısına kaydedebilirsiniz. Bu barındırılan tüm hizmetler uygulama/mikro hizmetle birlikte başlatılır ve durdurulur.
 
-```csharp
-namespace Microsoft.Extensions.Hosting
-{
-    //
-    // Summary:
-    //     Defines methods for objects that are managed by the host.
-    public interface IHostedService
-    {
-        //
-        // Summary:
-        // Triggered when the application host is ready to start the service.
-        Task StartAsync(CancellationToken cancellationToken);
-        //
-        // Summary:
-        // Triggered when the application host is performing a graceful shutdown.
-        Task StopAsync(CancellationToken cancellationToken);
-    }
-}
-```
+Bir geliştirici olarak, bir `StopAsync()` Yöntem ana bilgisayar tarafından tetiklendiğinde hizmetlerinizin durdurma eylemini işlemekten siz sorumlusunuz.
 
-Tahmin edebileceğiniz gibi, IHostedService'in birden çok uygulaması oluşturabilir `ConfigureService()` ve bunları daha önce gösterildiği gibi, yöntemde DI kapsayıcısına kaydedebilirsiniz. Tüm bu barındırılan hizmetler başlatılacaktır ve uygulama / microservice ile birlikte durdurulur.
+## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Arka plan hizmeti temel sınıfından türeten özel bir barındırılan hizmet sınıfıyla ıhostedservice 'i uygulama
 
-Bir geliştirici olarak, `StopAsync()` yöntem ana bilgisayar tarafından tetiklendiğinde hizmetlerinizin durdurma eylemini işlemekten siz sorumlusunuz.
+Devam edip özel barındırılan hizmet sınıfınızı sıfırdan oluşturabilir ve `IHostedService` .NET Core 2,0 kullanırken yapmanız gereken şekilde uygulamasını uygulayabilirsiniz.
 
-## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>BackgroundService taban sınıfından kaynaklanan özel barındırılan hizmet sınıfıyla IHostedService'i uygulama
+Ancak, çoğu arka plan görevinin, iptal belirteçleri yönetimi ve diğer tipik işlemlerle ilgili benzer ihtiyaçlarına sahip olacağı için, `BackgroundService` (.NET Core 2,1 sürümünden itibaren kullanılabilir) adlı öğesinden türetilebilir uygun bir soyut temel sınıf vardır.
 
-.NET Core 2.0'ı kullanırken yapmanız `IHostedService`gereken özel barındırılan hizmet sınıfınızı sıfırdan oluşturabilir ve uygulamanız gerekir.
+Bu sınıf, arka plan görevini kurmak için gereken ana işi sağlar.
 
-Ancak, çoğu arka plan görevi, iptal belirteçleri yönetimi ve diğer tipik işlemlerle ilgili benzer ihtiyaçlara sahip `BackgroundService` olduğundan, (.NET Core 2.1'den beri kullanılabilir) adından da tanabilirsiniz.
-
-Bu sınıf, arka plan görevini ayarlamak için gereken temel çalışmayı sağlar.
-
-Sonraki kod ,NET Core'da uygulanan soyut BackgroundService taban sınıfıdır.
+Sonraki kod, .NET Core 'da uygulanan şekilde soyut BackgroundService taban sınıfıdır.
 
 ```csharp
 // Copyright (c) .NET Foundation. Licensed under the Apache License, Version 2.0.
@@ -164,7 +142,7 @@ public abstract class BackgroundService : IHostedService, IDisposable
 }
 ```
 
-Bir önceki soyut taban sınıftan türeyen, bu devralınan uygulama sayesinde, bir veritabanı yoklama ve gerektiğinde Olay Veri Servisi içine entegrasyon olayları yayımlama eShopOnContainers aşağıdaki basitleştirilmiş kod gibi, kendi özel barındırılan hizmet sınıfında `ExecuteAsync()` yöntemi uygulamak gerekir.
+Bu devralınan uygulama için bir önceki soyut temel sınıftan türetirken, `ExecuteAsync()` bir veritabanını yoklayarak ve gerektiğinde tümleştirme olaylarını yayımlayan eShopOnContainers 'dan olduğu gibi, özel bir barındırılan hizmet sınıfınıza yöntemi uygulamanız yeterlidir.
 
 ```csharp
 public class GracePeriodManagerService : BackgroundService
@@ -206,13 +184,13 @@ public class GracePeriodManagerService : BackgroundService
 }
 ```
 
-eShopOnContainers için bu özel durumda, belirli bir devlet ile siparişleri arayan bir veritabanı tablosu sorgulayan bir uygulama yöntemi yürütülür ve değişiklikleri uygularken, olay veri yolunda (altında RabbitMQ veya Azure Hizmet Veri Servisi kullanıyor olabilir) üzerinden entegrasyon olayları yayımlıyor.
+EShopOnContainers için bu özel durumda, belirli bir duruma sahip siparişleri bulmak için bir veritabanı tablosunu sorgulayan bir uygulama yöntemi yürütüyor ve değişiklikler uygulanırken, tümleştirme olayları olay veri yolu aracılığıyla yayımlanıyor (bunun altında, Kbbitmq veya Azure Service Bus).
 
-Tabii ki, bunun yerine, başka bir iş arka plan görev çalıştırabilirsiniz.
+Kuşkusuz, bunun yerine başka bir iş arka plan görevini çalıştırabilirsiniz.
 
-Varsayılan olarak, iptal belirteci 5 saniyelik bir zaman kaybıyla ayarlanır, `WebHost` ancak `UseShutdownTimeout` 'nın `IWebHostBuilder`uzantısını kullanırken bu değeri değiştirebilirsiniz. Bu, hizmetimizin 5 saniye içinde iptal edilmesinin beklendiği, aksi takdirde daha ani bir şekilde öldürüleceği anlamına gelir.
+Varsayılan olarak, iptal belirteci 5 saniyelik bir zaman aşımıyla ayarlanır, ancak bu değeri `WebHost` , uzantısını kullanarak oluştururken de değiştirebilirsiniz `UseShutdownTimeout` `IWebHostBuilder` . Bu, hizmetimizin 5 saniye içinde iptal etmek beklenen, aksi takdirde daha aniden sonlandırabilecek anlamına gelir.
 
-Aşağıdaki kod bu süreyi 10 saniyeolarak değiştirir.
+Aşağıdaki kod bu süreyi 10 saniyeye değiştiriyor.
 
 ```csharp
 WebHost.CreateDefaultBuilder(args)
@@ -222,33 +200,33 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="summary-class-diagram"></a>Özet sınıf diyagramı
 
-Aşağıdaki resimde, IHostedServices uygularken ilgili sınıfların ve arabirimlerin görsel bir özeti gösterilmektedir.
+Aşağıdaki görüntüde, ıhostedservices 'i uygularken dahil olan sınıfların ve arabirimlerin görsel bir özeti gösterilmektedir.
 
-![IWebHost ve IHost birçok hizmet barındırabilir gösteren diyagram.](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
+![Iwebhost ve IHOST 'un birçok hizmeti barındırabir şekilde gösteren diyagram.](./media/background-tasks-with-ihostedservice/class-diagram-custom-ihostedservice.png)
 
-**Şekil 6-27**. IHostedService ile ilgili birden çok sınıf ve arabirimi gösteren sınıf diyagramı
+**Şekil 6-27**. Ihostedservice ile ilgili birden çok sınıfı ve arabirimi gösteren sınıf diyagramı
 
-Sınıf diyagramı: IWebHost ve IHost, IHostedService uygulayan BackgroundService'ten devralınan birçok hizmeti barındırabilir.
+Sınıf diyagramı: ıwebhost ve IHOST, ıhostedservice 'i uygulayan BackgroundService 'ten kalıtımla alınan birçok hizmeti barındırabilir.
 
-### <a name="deployment-considerations-and-takeaways"></a>Dağıtım hususları ve paket ler
+### <a name="deployment-considerations-and-takeaways"></a>Dağıtım değerlendirmeleri ve özellikleri
 
-ASP.NET Core `WebHost` veya .NET Core'unuzu `Host` dağıtma şeklinizin nihai çözümü etkileyebileceğini unutmayın. Örneğin, `WebHost` IIS'de veya normal bir Azure Uygulama Hizmetine dağıtırsanız, ana bilgisayarınız uygulama havuzu geri dönüşümleri nedeniyle kapatılabilir. Ancak ev sahibinizi Kubernetes gibi bir orkestratöre konteyner olarak dağıtıyorsanız, ev sahibinizin emin sayıda canlı örneğini kontrol edebilirsiniz. Ayrıca, bulutta özellikle Bu Senaryolar için yapılan Azure İşlevler gibi diğer yaklaşımları da göz önünde bulundurabilirsiniz. Son olarak, hizmetin sürekli çalışıyor olması gerekiyorsa ve bir Windows Server'da dağıtılıyorsanız, bir Windows Hizmeti kullanabilirsiniz.
+ASP.NET Core veya .NET Core ' u dağıtırken, `WebHost` son çözümü etkileyebilecek şekilde dikkat etmeniz önemlidir `Host` . Örneğin, uygulamanızı `WebHost` IIS 'de veya düzenli bir Azure App Service dağıtırsanız, uygulama havuzu geri dönüştürme nedeniyle ana bilgisayarınız kapatılabilir. Ancak, ana bilgisayarınızı bir kapsayıcı olarak Kubernetes gibi bir Orchestrator 'a dağıtıyorsanız, ana bilgisayarınızda bulunan canlı örnek sayısını kontrol edebilirsiniz. Ayrıca, Azure Işlevleri gibi bu senaryolar için bulutta yapılan diğer yaklaşımları de göz önünde bulundurmanız gerekir. Son olarak, hizmetin tüm zamanı çalıştırması ve bir Windows Server üzerinde dağıtımı gerekiyorsa, bir Windows hizmeti kullanabilirsiniz.
 
-Ancak, bir `WebHost` uygulama havuzuna dağıtılan bir uygulama için bile, uygulamanın bellek içi önbelleğini yeniden doldurma veya yıkama gibi hala geçerli olacak senaryolar vardır.
+Ancak `WebHost` , bir uygulama havuzuna dağıtılan bir uygulama için bile, hala geçerli olacak şekilde uygulamanın bellek içi önbelleğini yeniden doldurma veya temizleme gibi senaryolar vardır.
 
-Arabirim, `IHostedService` arka plan görevlerini ASP.NET Core web uygulamasında (.NET Core 2.0 ve sonraki sürümlerde) veya herhangi bir işlem/ana bilgisayarda (.NET Core 2.1 ile başlayarak) başlatmak için `IHost`kullanışlı bir yol sağlar. Ana bilgisayarın en büyük avantajı, ana bilgisayar kapatılırken arka plan görevlerinizin temizleme kodunu temizlemek için zarif iptal ile elde ettiğiniz fırsattır.
+`IHostedService`Arabirim, bir ASP.NET Core Web uygulamasında (.net core 2,0 ve sonraki sürümlerde) veya herhangi bir işlem/konakta (.net core 2,1 ile başlayarak) arka plan görevleri başlatmak için kullanışlı bir yol sağlar `IHost` . Ana avantajı, ana bilgisayarın kendisi kapatılırken arka plan görevlerinizin kodunu temizlemek için sorunsuz iptalle elde ettiğiniz fırsatdır.
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **ASP.NET Core/Standard 2.0'da zamanlanmış bir görev oluşturma** \
+- **ASP.NET Core/Standart 2,0 ' de zamanlanmış bir görev oluşturma** \
   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Core 2.0'da IHostedService'in uygulanması ASP.NET** \
+- **ASP.NET Core 2,0 ' de ıhostedservice 'i uygulama** \
   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **ASP.NET Core 2.1 kullanarak GenericHost Örnek** \
+- **ASP.NET Core 2,1 kullanarak GenericHost örneği** \
   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 > [!div class="step-by-step"]
-> [Önceki](test-aspnet-core-services-web-apps.md)
-> [Sonraki](implement-api-gateways-with-ocelot.md)
+> [Önceki](test-aspnet-core-services-web-apps.md) 
+>  [Sonraki](implement-api-gateways-with-ocelot.md)
