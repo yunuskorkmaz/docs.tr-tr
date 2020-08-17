@@ -7,16 +7,17 @@ metadata:
   level: Beginner
   ms.custom: mvc
   ms.date: 08/24/2018
+  ms.topic: interactive-tutorial
   displayType: two-column
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Liste koleksiyonu
-  ms.openlocfilehash: e7679c511cf67eed55687c5815bcf7faf4e1e624
-  ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+  ms.openlocfilehash: 596dfeca6e8910bd954b63364af958b7bef1580a
+  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 05/14/2020
-  ms.locfileid: "83396855"
+  ms.lasthandoff: 08/17/2020
+  ms.locfileid: "88267548"
 items:
 - durationInMinutes: 1
   content: >
@@ -99,7 +100,7 @@ items:
     > Siz kodu yürütürken `while` döngüsü koşulunun false olarak değiştiğinden emin olun. Aksi halde, programınızın hiç sona ermediği **sonsuz bir döngü** oluşturmuş olursunuz. Kodunuzu çalıştıran altyapı, zaman aşımına uğrayacağından ve programınıza ait bir çıkış görmeyeceğinizden bunu göstermemiz gerekmez.
 
 
-    `while` döngüsü, `while` koşulundan sonraki kodu yürütmeden önce koşulu test eder. `do` ... `while` döngüsü önce kodu yürütür, sonra koşulu kontrol eder. Şu şekilde görünür:
+    `while` döngüsü, `while` koşulundan sonraki kodu yürütmeden önce koşulu test eder. `do` ... `while` döngüsü önce kodu yürütür, sonra koşulu kontrol eder. Bu bölüm şuna benzer:
 
 
     ```csharp
