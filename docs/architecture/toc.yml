@@ -5,22 +5,19 @@
   items:
     - name: ASP.NET Core ve Microsoft Azure ile modern web uygulamaları tasarlama
       href: modern-web-apps-azure/
+    - name: Azure için bulutta yerel .NET uygulamaları tasarlama
+      href: cloud-native/
     - name: WCF geliştiricileri için ASP.NET Core gRPC
       href: grpc-for-wcf-developers/
-    - name: Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
-      href: modernize-with-azure-containers/
+    - name: ASP.NET Web Forms geliştiricileri için Blazor
+      href: blazor-for-web-forms-developers/
     - name: Microsoft platformu ve araçları ile kapsayıcılı Docker uygulaması yaşam döngüsü
       href: containerized-lifecycle/
+    - name: Azure bulutu ve Windows Kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
+      href: modernize-with-azure-containers/
+    - name: .NET Core 3.1 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
+      href: modernize-desktop/
     - name: '.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamaları mimarisi'
       href: microservices/
     - name: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
       href: serverless/
-    - name: Azure için bulutta yerel .NET uygulamaları tasarlama
-      href: cloud-native/
-    - name: .NET Core 3.1 ile Windows 10 üzerinde masaüstü uygulamalarını modernleştirme
-      href: modernize-desktop/
-- name: E-kitapların önizlemesini görüntüleme
-  expanded: true
-  items:
-    - name: ASP.NET Web Forms geliştiricileri için Blazor
-      href: blazor-for-web-forms-developers/
