@@ -1,18 +1,17 @@
 ---
 title: Geliştiriciler için .NET Framework dağıtım kılavuzu
 description: Geliştiriciler için .NET dağıtım kılavuzunu okuyun. Bu bilgileri, 4,5 sürümündeki bir .NET sürümünü uygulamalarınızla birlikte 4,8 sürümüne yüklemek istiyorsanız kullanın.
-ms.custom: updateeachrelease
 ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 95c2cacc062bbe05ce0bc5c3e832bfe3006cf412
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622672"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558835"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 Bu konu, .NET Framework .NET Framework 4,5 ' den uygulamalarına herhangi bir sürümünü yüklemek isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] .
@@ -71,9 +70,9 @@ Uygulamanızı bir Web sunucusuna veya başka bir merkezi konuma yayımlamaya, b
 |Dil paketleri|Dahil * *|Tüm işletim sistemlerini hedefleyen paketi kullanmadığınız takdirde [ayrı olarak yüklenmelidir](#chain_langpack)|
 |Dağıtım yöntemi|Tüm yöntemleri destekler:<br /><br />- ['](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|Tüm yöntemleri destekler:<br /><br /> - ['](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [Programının](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [El ile yükleme](#installing_manually)<br />- [Özel Kurulum (zincirleme)](#chaining)|
 
-\*Çevrimdışı yükleyici, tüm hedef platformlar için bileşenleri içerdiğinden daha büyük. Kurulumu çalıştırmayı tamamladığınızda, Windows işletim sistemi yalnızca kullanılan yükleyiciyi önbelleğe alır. Yükleme sonrasında çevrimdışı yükleyici silinirse kullanılan disk alanı, web yükleyicisinin kullandığı ile aynıdır. Uygulamanızın kurulum programını oluşturmak için kullandığınız araç (örneğin, [InstallAware](#installaware-deployment) veya [InstallShield](#installshield-deployment)), yüklemeden sonra kaldırılan bir kurulum dosyası klasörü sağlıyorsa, çevrimdışı yükleyici, kurulum klasörüne yerleştirerek otomatik olarak silinebilir.
+\* Çevrimdışı yükleyici, tüm hedef platformlar için bileşenleri içerdiğinden daha büyük. Kurulumu çalıştırmayı tamamladığınızda, Windows işletim sistemi yalnızca kullanılan yükleyiciyi önbelleğe alır. Yükleme sonrasında çevrimdışı yükleyici silinirse kullanılan disk alanı, web yükleyicisinin kullandığı ile aynıdır. Uygulamanızın kurulum programını oluşturmak için kullandığınız araç (örneğin, [InstallAware](#installaware-deployment) veya [InstallShield](#installshield-deployment)), yüklemeden sonra kaldırılan bir kurulum dosyası klasörü sağlıyorsa, çevrimdışı yükleyici, kurulum klasörüne yerleştirerek otomatik olarak silinebilir.
 
-\*\*Web yükleyicisini özel kurulumla kullanıyorsanız, kullanıcının çok dilli kullanıcı arabirimi (MUI) ayarını temel alan varsayılan dil ayarlarını kullanabilir veya komut satırındaki seçeneğini kullanarak başka bir dil paketi belirtebilirsiniz `/LCID` . Örnekler için [varsayılan .NET Framework Kullanıcı arabirimini kullanarak zincirleme](#chaining_default) bölümüne bakın.
+\*\* Web yükleyicisini özel kurulumla kullanıyorsanız, kullanıcının çok dilli kullanıcı arabirimi (MUI) ayarını temel alan varsayılan dil ayarlarını kullanabilir veya komut satırındaki seçeneğini kullanarak başka bir dil paketi belirtebilirsiniz `/LCID` . Örnekler için [varsayılan .NET Framework Kullanıcı arabirimini kullanarak zincirleme](#chaining_default) bölümüne bakın.
 
 ## <a name="deployment-methods"></a>Dağıtım yöntemleri
 
@@ -228,7 +227,7 @@ Ortak dönüş kodları için [dönüş kodları](#return-codes) bölümüne bak
 Yükleme başarılı olduğunda .NET Framework yükleyicisi kayıt defteri anahtarlarını yazar. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`Adlı bir değer için kayıt defterindeki klasörü denetleyerek .NET Framework 4,5 veya sonraki bir sürümünün yüklenip yüklenmediğini test edebilirsiniz `DWORD` `Release` . ("NET Framework Setup" bir noktayla başlamayacağını unutmayın.) Bu anahtarın varlığı, bu bilgisayarda .NET Framework 4,5 veya sonraki bir sürümün yüklü olduğunu gösterir. Değeri `Release` .NET Framework hangi sürümünün yüklü olduğunu gösterir.
 
 > [!IMPORTANT]
-> Belirli bir sürümün mevcut olup olmadığını algılamaya çalışırken Release anahtar sözcüğünün değerinden **büyük veya ona eşit** bir değer olup olmadığını denetlemeniz gerekir.
+> Belirli bir sürümün mevcut olup olmadığını algılamaya çalışırken Release anahtar sözcüğünün değerinden  **büyük veya ona eşit** bir değer olup olmadığını denetlemeniz gerekir.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -262,7 +261,7 @@ Yükleme başarılı olduğunda .NET Framework yükleyicisi kayıt defteri anaht
 | | |
 |-|-|
 | Anahtar | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | Sürüm |
+| Adı | Yayınla |
 | Tür | DWORD |
 
 4,5 ile 4.7.2 arasında .NET Framework belirli bir sürümü için dil paketinin son sürümünün yüklenip yüklenmediğini saptamak için, önceki bölümde açıklanan yayın anahtarı DWORD değerinin değerini denetleyin ve [.NET Framework](#detect_net)tespit edin.
@@ -348,7 +347,7 @@ Aşağıdaki tabloda, .NET Framework 4,5 yeniden dağıtılabilir öğesini uygu
 |**/Ceiponayı**|Varsayılan davranışın üzerine yazar ve gelecekteki dağıtım deneyimlerini geliştirmek üzere Microsoft 'a anonim geri bildirim gönderir. Bu seçenek, yalnızca kurulum programı onay isterse ve Kullanıcı Microsoft 'a anonim geri bildirim gönderme izni veriyorsa kullanılabilir.|
 |**/ChainingPackage**`packageName`|Zincirlemeyi yapan yürütülebilir dosyanın adını belirtir. Bu bilgiler, gelecekteki dağıtım deneyimlerini iyileştirmenize yardımcı olmak için anonim geri bildirim olarak Microsoft 'a gönderilir.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "Lucerne Publishing"**. Bir zincir paketi örneği için bkz. [bir yükleme paketinden Ilerleme bilgisi alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
 |**/LCıD**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcı (bkz. [desteklenen diller](#supported-languages))|Tarafından belirtilen dil paketini yüklenir `LCID` ve sessiz mod ayarlanmadığı takdirde görüntülenen kullanıcı arabirimini o dilde gösterilecek şekilde zorlar.<br /><br /> Web Yükleyicisi için bu seçenek zinciri, dil paketini Web 'den kurar. **Note:**  Bu seçeneği yalnızca Web yükleyicisiyle kullanın.|
-|**/log** `file` &#124;`folder`|Günlük dosyasının konumunu belirtir. Varsayılan, işlemin geçici klasörüdür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı. txt ise, bir metin günlüğü üretilir. Başka bir uzantıyı veya uzantıyı belirtirseniz, bir HTML günlüğü oluşturulur.|
+|**/log** `file` &#124; `folder`|Günlük dosyasının konumunu belirtir. Varsayılan, işlemin geçici klasörüdür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı. txt ise, bir metin günlüğü üretilir. Başka bir uzantıyı veya uzantıyı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|. Msi ve. msp öğeleri için geçirilecek seçenekleri belirtir; Örneğin: `/msioptions "PROPERTY1='Value'"` .|
 |**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulamanın dönüş kodunu yakalaması ve yeniden başlatma işlemini işlemesi gerekir (bkz. [bir yükleme paketinden Ilerleme bilgilerini alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
 |**/passive**|Pasif modu ayarlar. Yüklemenin devam ettiğini belirten, ancak kullanıcıya hiçbir istem veya hata iletisi görüntülemediğini belirten ilerleme çubuğunu görüntüler. Bu modda, bir kurulum programı tarafından zincirleme yaparken, zincirleme paketi [dönüş kodlarını](#return-codes)işlemelidir.|
@@ -398,4 +397,4 @@ Aşağıdaki tabloda, .NET Framework 4,5 ve sonraki sürümleri için kullanıla
 - [Geliştiriciler için .NET Framework yüklemesi](../install/guide-for-developers.md)
 - [Engellenen .NET Framework yükleme ve kaldırma sorunlarını giderme](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [.NET Framework 4.5 Yüklemeleri Sırasında Sistem Yeniden Başlatmalarını Azaltma](reducing-system-restarts.md)
-- [Nasıl Yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](how-to-get-progress-from-the-dotnet-installer.md)
+- [Nasıl yapılır: .NET Framework 4.5 Yükleyicisinden İlerleme Durumunu Alma](how-to-get-progress-from-the-dotnet-installer.md)

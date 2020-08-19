@@ -1,17 +1,17 @@
 ---
-title: BinaryFormatter Güvenlik Kılavuzu
+title: BinaryFormatter güvenlik kılavuzu
 description: Bu makalede, BinaryFormatter türünde devralınan güvenlik riskleri ve farklı serileştiricilerin kullanması için öneriler açıklanmaktadır.
 ms.date: 07/11/2020
 ms.author: levib
 author: GrabYourPitchforks
-ms.openlocfilehash: f6a54b34bbf1e19212fe37aadb448a1722fe9ff0
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: ac01fe78c9577563641a8b06a232ed614ed8520a
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444768"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558848"
 ---
-# <a name="binaryformatter-security-guide"></a>BinaryFormatter Güvenlik Kılavuzu
+# <a name="binaryformatter-security-guide"></a>BinaryFormatter güvenlik kılavuzu
 
 Bu makale aşağıdaki .NET uygulamalarına yöneliktir:
 
@@ -22,7 +22,7 @@ Bu makale aşağıdaki .NET uygulamalarına yöneliktir:
 ## <a name="background"></a>Arka Plan
 
 > [!WARNING]
-> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Tür tehlikelidir ve veri işleme için ***not*** önerilmez. Uygulamalar `BinaryFormatter` , işlemekte oldukları verilerin güvenilir olmasını düşünse bile, en kısa sürede kullanılması gerekir. `BinaryFormatter`güvenli olmayan bir güvenlik yapılamaz.
+> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Tür tehlikelidir ve veri işleme için ***not*** önerilmez. Uygulamalar `BinaryFormatter` , işlemekte oldukları verilerin güvenilir olmasını düşünse bile, en kısa sürede kullanılması gerekir. `BinaryFormatter` güvenli olmayan bir güvenlik yapılamaz.
 
 Bu makale aşağıdaki türler için de geçerlidir:
 
@@ -33,7 +33,7 @@ Bu makale aşağıdaki türler için de geçerlidir:
 
 Seri kaldırma güvenlik açıkları, istek yüklerinin güvenli bir şekilde işlendiği bir tehdit kategorisidir. Bir uygulamaya karşı bu güvenlik açıklarından yararlanan bir saldırgan, hedef uygulama içinde hizmet reddi (DoS), bilgilerin açığa çıkması veya uzaktan kod yürütülmesine neden olabilir. Bu risk kategorisi sürekli olarak [OWASP en iyi 10](https://owasp.org/www-project-top-ten/)' un olmasını sağlar. Hedefler, C/C++, Java ve C# dahil olmak üzere [çeşitli dillerde](https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data)yazılmış uygulamaları içerir.
 
-.NET sürümünde en büyük risk hedefi, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veri serisini kaldırmak için türünü kullanan uygulamalardır. `BinaryFormatter`, gücü ve kullanım kolaylığı nedeniyle .NET ekosistemi genelinde yaygın olarak kullanılır. Ancak, bu aynı güç, saldırganların hedef uygulama içindeki denetim akışını etkilebilme yeteneği sağlar. Başarılı saldırılar, saldırganın hedef işlem bağlamında kod çalıştırabilmesini sağlayabilir.
+.NET sürümünde en büyük risk hedefi, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> veri serisini kaldırmak için türünü kullanan uygulamalardır. `BinaryFormatter` , gücü ve kullanım kolaylığı nedeniyle .NET ekosistemi genelinde yaygın olarak kullanılır. Ancak, bu aynı güç, saldırganların hedef uygulama içindeki denetim akışını etkilebilme yeteneği sağlar. Başarılı saldırılar, saldırganın hedef işlem bağlamında kod çalıştırabilmesini sağlayabilir.
 
 Daha basit bir benzerleme vurguladı olarak, `BinaryFormatter.Deserialize` yük üzerinde çağırmanın bu yükü tek başına yürütülebilir dosya olarak yorumlayarak ve başlatarak buna eşdeğer olduğunu varsayalım.
 
@@ -42,9 +42,9 @@ Daha basit bir benzerleme vurguladı olarak, `BinaryFormatter.Deserialize` yük 
 > [!WARNING]
 > `BinaryFormatter.Deserialize`Güvenilir olmayan girişle kullanıldığında Yöntem __hiçbir zaman__ güvenli değildir. Bunun yerine, bu makalede daha sonra özetlenen alternatifden birini kullanmayı öneririz.
 
-`BinaryFormatter`seri durumdan çıkarma güvenlik açıkları iyi anlaşılmış bir tehdit kategorisi olacak şekilde uygulandı. Sonuç olarak, kod modern en iyi uygulamaları izlemez. `Deserialize`Yöntemi, saldırganların uygulamalara yönelik DOS saldırıları gerçekleştirmesini sağlamak için bir vektör olarak kullanılabilir. Bu saldırılar, uygulamanın yanıt vermemesine veya beklenmeyen işlem sonlandırmasıyla sonuçlanır. Bu saldırı kategorisi bir `SerializationBinder` veya başka bir `BinaryFormatter` yapılandırma anahtarıyla azaltılamaz. .NET bu davranışı ***tasarıma göre*** kabul eder ve davranışı değiştirmek için bir kod güncelleştirmesi yayınlamayın.
+`BinaryFormatter` seri durumdan çıkarma güvenlik açıkları iyi anlaşılmış bir tehdit kategorisi olacak şekilde uygulandı. Sonuç olarak, kod modern en iyi uygulamaları izlemez. `Deserialize`Yöntemi, saldırganların uygulamalara yönelik DOS saldırıları gerçekleştirmesini sağlamak için bir vektör olarak kullanılabilir. Bu saldırılar, uygulamanın yanıt vermemesine veya beklenmeyen işlem sonlandırmasıyla sonuçlanır. Bu saldırı kategorisi bir `SerializationBinder` veya başka bir `BinaryFormatter` yapılandırma anahtarıyla azaltılamaz. .NET bu davranışı ***tasarıma göre*** kabul eder ve davranışı değiştirmek için bir kod güncelleştirmesi yayınlamayın.
 
-`BinaryFormatter.Deserialize`, bilgilerin açığa çıkması veya uzaktan kod yürütme gibi diğer saldırı kategorilerine karşı savunmasız olabilir. Özel gibi özelliklerin kullanılması <xref:System.Runtime.Serialization.SerializationBinder> , bu riskleri doğru şekilde azaltmak için yetersiz olabilir. Bu olasılık, .NET 'in bir güvenlik güncelleştirmesini önemli bir şekilde yayımlayamayacak bir nobir güvenlik açığının bulunmasından oluşur. Tüketiciler, bağımsız senaryolarını değerlendirmeli ve bu risklerle ilgili olası pozlandırmayı göz önünde bulundurmalıdır.
+`BinaryFormatter.Deserialize` , bilgilerin açığa çıkması veya uzaktan kod yürütme gibi diğer saldırı kategorilerine karşı savunmasız olabilir. Özel gibi özelliklerin kullanılması <xref:System.Runtime.Serialization.SerializationBinder> , bu riskleri doğru şekilde azaltmak için yetersiz olabilir. Bu olasılık, .NET 'in bir güvenlik güncelleştirmesini önemli bir şekilde yayımlayamayacak bir nobir güvenlik açığının bulunmasından oluşur. Tüketiciler, bağımsız senaryolarını değerlendirmeli ve bu risklerle ilgili olası pozlandırmayı göz önünde bulundurmalıdır.
 
 `BinaryFormatter`Tüketicilerin uygulamalarında tek tek risk değerlendirmesi gerçekleştirmesini öneririz. Bunun kullanılması gerekip gerekmediğini belirlemede tüketicinin tek sorumluluğudur `BinaryFormatter` . Tüketiciler, kullanmanın güvenlik, teknik, saygınlık, yasal ve mevzuat gereksinimlerini değerlendirmelidir `BinaryFormatter` .
 
@@ -52,8 +52,8 @@ Daha basit bir benzerleme vurguladı olarak, `BinaryFormatter.Deserialize` yük 
 
 .NET, güvenilir olmayan verileri güvenli bir şekilde işleyebilen çeşitli yerleşik serileştiriciler sunar:
 
-* <xref:System.Xml.Serialization.XmlSerializer>ve <xref:System.Runtime.Serialization.DataContractSerializer> nesne grafiklerini XML içine ve XML 'den seri hale getirme. `DataContractSerializer`İle karıştırmayın <xref:System.Runtime.Serialization.NetDataContractSerializer> .
-* <xref:System.IO.BinaryReader>ve <xref:System.IO.BinaryWriter> for xml ve JSON.
+* <xref:System.Xml.Serialization.XmlSerializer> ve <xref:System.Runtime.Serialization.DataContractSerializer> nesne grafiklerini XML içine ve XML 'den seri hale getirme. `DataContractSerializer`İle karıştırmayın <xref:System.Runtime.Serialization.NetDataContractSerializer> .
+* <xref:System.IO.BinaryReader> ve <xref:System.IO.BinaryWriter> for xml ve JSON.
 * <xref:System.Text.Json>Nesne GRAFIKLERINI JSON içine serileştirme API 'leri.
 
 ## <a name="dangerous-alternatives"></a>Tehlikeli alternatifler
@@ -87,7 +87,6 @@ __Masaüstü yüklemesi modelinden bir bulut ilk modeline taşınan bir uygulama
 ## <a name="further-resources"></a>Daha fazla kaynak
 
 * [YSoSerial.net](https://github.com/pwntester/ysoserial.net) tarafından kullanılan uygulamaların nasıl saldırıya alınacağını araştırın `BinaryFormatter` .
-* Tehdit modelleme uygulamaları ve hizmetleri hakkında bilgi için [tehdit modelleme](/securityengineering/sdl/threatmodeling) .
 * Seri kaldırma güvenlik açıkları genel arka planı:
   * [OWASP Top 10-A8:2017-güvensiz serisini kaldırma](https://owasp.org/www-project-top-ten/OWASP_Top_Ten_2017/Top_10-2017_A8-Insecure_Deserialization)
   * [CWE-502: güvenilmeyen verilerin serisini kaldırma](https://cwe.mitre.org/data/definitions/502.html)

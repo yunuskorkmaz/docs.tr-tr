@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 7a4ffd5b1b58e6ea7fd46c676e139b77a126aa2b
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 23d67761838f17e833a4a478e2355e908a2e35ca
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803033"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557912"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio ile .NET Core uygulamaları dağıtma
 
@@ -77,7 +77,7 @@ Bir veya daha fazla üçüncü taraf bağımlılığı olan çerçeveye bağlı 
 
 Üçüncü taraf bağımlılıkları olan çerçeveye bağlı bir dağıtım, yalnızca üçüncü taraf bağımlılıkları olarak taşınabilir. Örneğin, bir üçüncü taraf kitaplığı yalnızca macOS destekliyorsa, uygulama Windows sistemlerine taşınabilir değildir. Bu durum, üçüncü taraf bağımlılığının yerel koda bağlı olması durumunda meydana gelir. Bunun iyi bir örneği, [libuv](https://github.com/libuv/libuv)üzerinde yerel bir bağımlılık gerektiren [Kestrel sunucusudur](/aspnet/core/fundamentals/servers/kestrel). Bu tür üçüncü taraf bağımlılığı olan bir uygulama için FDD oluşturulduğunda, yayımlanan çıktı, yerel bağımlılığın desteklediği (ve NuGet paketinde bulunan) her [çalışma zamanı tanımlayıcısı (RID)](../rid-catalog.md) için bir klasör içerir.
 
-## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a>Üçüncü taraf bağımlılıkları olmayan kendi kendine kapsanan dağıtım
+## <a name="self-contained-deployment-without-third-party-dependencies"></a><a name="simpleSelf"></a> Üçüncü taraf bağımlılıkları olmayan kendi kendine kapsanan dağıtım
 
 Bir üçüncü taraf bağımlılığı olmadan kendi içinde bir dağıtımı dağıtmak, projeyi oluşturma, *csproj* dosyasını değiştirme, uygulama oluşturma, test etme ve uygulamayı yayımlamayı kapsar. C# dilinde yazılmış basit bir örnek süreci gösterir. Yalnızca çerçeveye bağımlı bir dağıtımda olduğu gibi projenizi oluşturarak, kodlayarak ve test etmeye başlayabilirsiniz:
 

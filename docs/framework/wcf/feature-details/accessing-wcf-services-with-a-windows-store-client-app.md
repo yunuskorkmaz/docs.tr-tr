@@ -2,14 +2,15 @@
 title: WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: ff6638936f476bd8fe75a065d3e61e96790cb7f4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ed13a88e3a534cd586d9386396802d7457de56e7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597702"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558978"
 ---
-# <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>WCF Hizmetlerine Windows Mağazası İstemci Uygulaması ile Erişme
+# <a name="access-wcf-services-with-a-windows-store-client-app"></a>WCF hizmetlerine Windows Mağazası Istemci uygulaması ile erişin
+
 Windows 8, Windows Mağazası uygulamaları adlı yeni bir uygulama türü sunar. Bu uygulamalar dokunmatik ekran arabirimi etrafında tasarlanmıştır. .NET Framework 4,5, Windows Mağazası uygulamalarının WCF hizmetlerini çağırmasını sağlar.  
   
 ## <a name="wcf-support-in-windows-store-applications"></a>Windows Mağazası uygulamalarında WCF desteği  
@@ -176,9 +177,5 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Mağazası uygulamaları blogu 'nda WCF](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
-- [WCF Windows Mağazası Istemcileri ve güvenliği](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
-- [Windows Mağazası uygulamaları ve çapraz makine çağrıları](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Azure 'da dağıtılan bir WCF hizmetini bir Windows Mağazası uygulamasından çağırma](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [WCF Güvenliğini Programlama](programming-wcf-security.md)
 - [Bağlamalar](../bindings.md)

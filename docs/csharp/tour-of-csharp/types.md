@@ -2,12 +2,12 @@
 title: 'Türleri ve üyelerini tanımlama-C turu #'
 description: Programların yapı taşları türlerdir. C# ' de sınıflar, yapılar, arabirimler ve daha fazlasını oluşturma hakkında bilgi edinin.
 ms.date: 08/06/2020
-ms.openlocfilehash: 69d6f0fe1e11f287fb5e385761fc210a61929d10
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: efd353fe8c1e6a57952bcb2586a05ad38ecd52b9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068547"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559121"
 ---
 # <a name="types-and-members"></a>Türler ve Üyeler
 
@@ -97,7 +97,7 @@ Aşağıdaki örnekte, önceki Numaralandırmaların bildirimleri gösterilmekte
 
 ## <a name="nullable-types"></a>Null atanabilir türler
 
-Herhangi bir türdeki değişkenler ***null atanamaz*** veya ***null yapılabilir***olarak belirtilebilir. Null atanabilir bir değişken `null` , değer olmadığını gösteren ek bir değer tutabilir. Null yapılabilir değer türleri (yapılar veya numaralandırmalar) tarafından temsil edilir <xref:System.Nullable%601?displayProperty=nameWithType> . Null yapılamayan ve Nullable başvuru türleri, her ikisi de temel alınan başvuru türü tarafından temsil edilir. Ayrım, derleyici tarafından okunan meta veriler ve bazı kitaplıklar tarafından temsil edilir. Derleyici, null yapılabilir başvurular, önce değeri denetlenmeden başvurulduğunu uyarı verir `null` . Derleyici aynı zamanda olabilecek bir değere null atanamaz başvurular atandığında uyarı da sağlar `null` . Aşağıdaki örnek, ***null atanabilir bir int***bildirir ve ' a başlatılıyor `null` . Ardından, değerini olarak ayarlar `5` . Aynı şekilde ***null olabilen bir dize***ile aynı kavramı gösterir. Daha fazla bilgi için bkz. [Nullable değer türleri](../language-reference/builtin-types/nullable-value-types.md) ve [null yapılabilir başvuru türleri](../nullable-references.md).
+Herhangi bir türdeki değişkenler ***null atanamaz*** veya ***null yapılabilir***olarak belirtilebilir. Null atanabilir bir değişken `null` , değer olmadığını gösteren ek bir değer tutabilir. Null yapılabilir değer türleri (yapılar veya numaralandırmalar) tarafından temsil edilir <xref:System.Nullable%601?displayProperty=nameWithType> . Null yapılamayan ve Nullable başvuru türleri, her ikisi de temel alınan başvuru türü tarafından temsil edilir. Ayrım, derleyici tarafından okunan meta veriler ve bazı kitaplıklar tarafından temsil edilir. Derleyici, null yapılabilir başvurular, önce değeri denetlenmeden başvurulduğunu uyarı verir `null` . Ayrıca, null yapılamayan başvurulara olabilecek bir değer atandığında derleyici de uyarılar sağlar `null` . Aşağıdaki örnek, ***null atanabilir bir int***bildirir ve ' a başlatılıyor `null` . Ardından, değerini olarak ayarlar `5` . Aynı şekilde ***null olabilen bir dize***ile aynı kavramı gösterir. Daha fazla bilgi için bkz. [Nullable değer türleri](../language-reference/builtin-types/nullable-value-types.md) ve [null yapılabilir başvuru türleri](../nullable-references.md).
 
 :::code language="csharp" source="./snippets/shared/Types.cs" ID="DeclareNullable":::
 

@@ -3,12 +3,12 @@ title: Hata ayıklama kilitlenmesi-.NET Core
 description: .NET Core 'da kilitleme sorununu ayıklamada size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 247521176297254180d794d4d4fc850f30e343b0
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926420"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557886"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core 'da kilitlenmeyle hata ayıklama
 
@@ -26,7 +26,7 @@ Bu öğreticide şunları yapacaksınız:
 > - Çağrı yığınlarını ve eşitleme bloklarını çözümle
 > - Bir kilitlenmesi tanılayın ve çözün
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Öğretici şunları kullanır:
 
@@ -51,7 +51,7 @@ dotnet-trace ps
 
 Komut çıktıınızdan işlem KIMLIĞI ' ni bir yere göz atın. İşlem KIMLIĞINIZ idi `4807` , ancak sizinki farklı olacak. Örnek sitede bir API uç noktası olan aşağıdaki URL 'ye gidin:
 
-[https://localhost:5001/api/diagscenario/deadlock](https://localhost:5001/api/diagscenario/deadlock)
+`https://localhost:5001/api/diagscenario/deadlock`
 
 Siteye yönelik API isteği askıda kalır ve yanıt vermez. İsteğin yaklaşık 10-15 saniye çalışmasına izin verin. Ardından aşağıdaki komutu kullanarak çekirdek dökümünü oluşturun:
 

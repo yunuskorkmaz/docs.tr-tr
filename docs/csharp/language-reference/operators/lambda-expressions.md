@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: e2eae276d644413dcfff10c109ad10291fbb1386
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 3dd793ec000999935bff6b54b1b00e49211bd5ec
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068535"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558367"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda ifadeleri (C# Başvurusu)
 
@@ -156,7 +156,7 @@ C# tanımlama bilgileri hakkında daha fazla bilgi için bkz. [demet türleri](.
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Standart sorgu işleçleri ile Lambdalar
 
-Diğer uygulamalar arasında LINQ to Objects, türü genel Temsilciler ailesinden olan bir giriş parametresine sahiptir <xref:System.Func%601> . Bu temsilciler, giriş parametrelerinin sayısını ve türünü ve temsilcinin dönüş türünü tanımlamak için tür parametreleri kullanır. `Func`Temsilciler, bir kaynak veri kümesindeki her öğeye uygulanan Kullanıcı tanımlı ifadeleri kapsüllemek için çok yararlıdır. Örneğin, temsilci türünü göz önünde bulundurun <xref:System.Func%602> :  
+Diğer uygulamalar arasında LINQ to Objects, türü genel Temsilciler ailesinden olan bir giriş parametresine sahiptir <xref:System.Func%601> . Bu temsilciler, giriş parametrelerinin sayısını ve türünü ve temsilcinin dönüş türünü tanımlamak için tür parametreleri kullanır. `Func` Temsilciler, bir kaynak veri kümesindeki her öğeye uygulanan Kullanıcı tanımlı ifadeleri kapsüllemek için çok yararlıdır. Örneğin, temsilci türünü göz önünde bulundurun <xref:System.Func%602> :  
 
 ```csharp
 public delegate TResult Func<in T, out TResult>(T arg)
@@ -234,4 +234,3 @@ C# 3,0 tanımlama kitabı, üçüncü sürüm 'de [Temsilciler, olaylar ve lambd
 - [İfade ağaçları](../../programming-guide/concepts/expression-trees/index.md)
 - [Yerel işlevler ve lambda ifadeleri karşılaştırması](../../programming-guide/classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [Visual Studio 2008 C# örnekleri (bkz. LINQ örnek sorguları dosyaları ve XQuery programı)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
-- [Özyinelemeli lambda ifadeleri](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

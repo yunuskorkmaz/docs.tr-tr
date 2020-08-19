@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 378ee4e7d3a3b106b719e5da819b09f336ff218e
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: b169a1c13b3f20d7b5e2a1386cfb28a9cc093dcd
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226666"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559095"
 ---
 # <a name="tuples-visual-basic"></a>Tanımlama grupları (Visual Basic)
 
@@ -72,7 +72,7 @@ Alan adının çıkarımı başarısız olduğunda, Visual Basic bir derleyici h
 
 ## <a name="tuples-versus-structures"></a>Tanımlama grupları ve yapılar
 
-Visual Basic tanımlama grubu, **System. ValueTuple** genel türlerinden birinin bir örneği olan bir değer türüdür. Örneğin, `holiday` Önceki örnekte tanımlanan kayıt düzeni yapının bir örneğidir <xref:System.ValueTuple%603> . Veriler için hafif bir kapsayıcı olacak şekilde tasarlanmıştır. Kayıt düzeni, birden fazla veri öğesiyle bir nesne oluşturmayı kolaylaştıran bir özel yapının sahip olabileceği bazı özelliklerden oluşur. Bunlar:
+Visual Basic tanımlama grubu, **System. ValueTuple** genel türlerinden birinin bir örneği olan bir değer türüdür. Örneğin, `holiday` Önceki örnekte tanımlanan kayıt düzeni yapının bir örneğidir <xref:System.ValueTuple%603> . Veriler için hafif bir kapsayıcı olacak şekilde tasarlanmıştır. Kayıt düzeni, birden fazla veri öğesiyle bir nesne oluşturmayı kolaylaştıran bir özel yapının sahip olabileceği bazı özelliklerden oluşur. Bu modüller şunlardır:
 
 - Özel Üyeler. Tanımlama grubu için kendi özelliklerinizi, yöntemlerinizi veya olaylarını tanımlayamazsınız.
 
@@ -84,14 +84,14 @@ Visual Basic tanımlama grubu, **System. ValueTuple** genel türlerinden birinin
 
 Visual Basic bir tanımlama grubu, değer **Etuple** türünün üyelerini devralınır. Alanlarına ek olarak, bunlar aşağıdaki yöntemleri içerir:
 
-| Üye | Açıklama |
+| Yöntem | Açıklama |
 | ---|---|
 | CompareTo | Geçerli tanımlama grubunu aynı sayıda öğeye sahip başka bir tanımlama grubu ile karşılaştırır. |
 | Eşittir | Geçerli tanımlama grubunun başka bir demet veya nesneye eşit olup olmadığını belirler. |
 | GetHashCode | Geçerli örnek için karma kodu hesaplar. |
 | ToString | Bu tanımlama grubunun dize gösterimini döndürür. Bu, formunu alır `(Item1, Item2...)` `Item1` ve `Item2` kayıt düzeni alanlarının değerlerini temsil eder. |
 
-Ayrıca, **Valuetuple** türleri <xref:System.Collections.IStructuralComparable> <xref:System.Collections.IStructuralEquatable> , müşteri Karşılaştırıcılar tanımlamanızı sağlayan ve arabirimlerini uygular.
+Ayrıca, **Valuetuple** türleri <xref:System.Collections.IStructuralComparable> <xref:System.Collections.IStructuralEquatable> , ve arabirimlerini özel Karşılaştırıcılar tanımlamanızı sağlayacak şekilde uygular.
 
 ## <a name="assignment-and-tuples"></a>Atama ve tanımlama grupları
 

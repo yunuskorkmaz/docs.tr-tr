@@ -1,19 +1,18 @@
 ---
 title: .NET Framework artık kullanılmıyor
 description: .NET sınıf kitaplığı 'nın üyeleri nasıl eski olarak işaretlediği hakkında bilgi alın. Kullanımdan kaldırılmış Teattribute özniteliğini, eski türleri ve üyeleri nasıl işleyeceğinizi ve daha fazlasını anlayın.
-ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
 - obsolete [.NET Framework]
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 2f39f5ec614b669f3a0f63677cb6f8a6f9ed11cf
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 188d9184476e58fb679421467cd68e2ea8a8a101
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925806"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558874"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework sınıfı kitaplığındaki kullanım dışı Özellikler
 
@@ -58,7 +57,7 @@ Mevcut kodu .NET Framework sonraki bir sürümüne karşı yeniden derleyemeyebi
 
 .NET Framework belirli bir sürümünü hedeflemek için, aşağıdaki dize değerlerinden birini `version` özniteliğe atayın:
 
-|.NET Framework sürümü|`version`dizisinde|
+|.NET Framework sürümü|`version` dizisinde|
 |-|-|
 |4,8|v4.0|
 |4,7 (4.7.1 ve 4.7.2 dahil)|v4.0|
@@ -84,4 +83,4 @@ Mevcut kodu .NET Framework sonraki bir sürümüne karşı yeniden derleyemeyebi
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [\<supportedRuntime>Dosyalarında](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime> Dosyalarında](../configure-apps/file-schema/startup/supportedruntime-element.md)

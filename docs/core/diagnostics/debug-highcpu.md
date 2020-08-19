@@ -3,12 +3,12 @@ title: Yüksek CPU kullanımı hata ayıkla-.NET Core
 description: .NET Core 'da yüksek CPU kullanımında hata ayıklama konusunda size yol gösteren bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: e69585d0eb6f04bf37d0c023a1956be62c2a1cf3
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86926419"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557808"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core 'da yüksek CPU kullanımını hata ayıkla
 
@@ -26,7 +26,7 @@ Bu öğreticide şunları yapacaksınız:
 > - PerfView 'da profil performansı
 > - Aşırı CPU kullanımını Tanıla ve çöz
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 Öğretici şunları kullanır:
 
@@ -85,7 +85,7 @@ Press p to pause, r to resume, q to quit.
 
 Web uygulaması çalışırken, başlangıçtan hemen sonra CPU tüketilmez ve tarihinde raporlanır `0%` . Rota `api/diagscenario/highcpu` parametresi olarak bulunan yola gidin `60000` :
 
-[https://localhost:5001/api/diagscenario/highcpu/60000](https://localhost:5001/api/diagscenario/highcpu/60000)
+`https://localhost:5001/api/diagscenario/highcpu/60000`
 
 Şimdi [DotNet-Counters](dotnet-counters.md) komutunu yeniden çalıştırın. Yalnızca öğesini izlemek için `cpu-usage` `System.Runtime[cpu-usage]` komutunun bir parçası olarak belirtin.
 
@@ -127,7 +127,7 @@ export COMPlus_PerfMapEnabled=1
 dotnet run
 ```
 
-Yüksek CPU API ( <https://localhost:5001/api/diagscenario/highcpu/60000> ) uç noktasını yeniden deneyin. 1 dakikalık istek içinde çalışırken, `perf` Işlem Kimliğinizle komutunu çalıştırın:
+Yüksek CPU API uç noktasını ( `https://localhost:5001/api/diagscenario/highcpu/60000` ) yeniden deneyin. 1 dakikalık istek içinde çalışırken, `perf` Işlem Kimliğinizle komutunu çalıştırın:
 
 ```bash
 sudo perf record -p 2266 -g
@@ -152,7 +152,7 @@ Bu komut `flamegraph.svg` , tarayıcıda görüntüleyebilmeniz için performans
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Windows 'da, [DotNet-Trace](dotnet-trace.md) aracını bir profil oluşturucu olarak kullanabilirsiniz. Önceki [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)kullanarak, yüksek CPU ( <https://localhost:5001/api/diagscenario/highcpu/60000> ) uç noktasını yeniden kullanın. 1 dakikalık istek içinde çalışırken `collect` komutunu aşağıdaki gibi kullanın:
+Windows 'da, [DotNet-Trace](dotnet-trace.md) aracını bir profil oluşturucu olarak kullanabilirsiniz. Önceki [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)kullanarak, yüksek CPU uç noktasını ( `https://localhost:5001/api/diagscenario/highcpu/60000` ) yeniden deneyin. 1 dakikalık istek içinde çalışırken `collect` komutunu aşağıdaki gibi kullanın:
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler

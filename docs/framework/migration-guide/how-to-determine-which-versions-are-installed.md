@@ -5,17 +5,16 @@ ms.date: 02/03/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: updateeachrelease
 helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 122441e9238fd91199aed255b0125f69081c0a8c
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 1591aacf5496852609ae571a52aaea2d5c09a15b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84990140"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558562"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Nasıl yapılır: hangi .NET Framework sürümlerinin yüklendiğini belirleme
 
@@ -132,13 +131,13 @@ Bu örnek sürüm denetimi için önerilen yöntemi izler:
 
 | Framework sürümü  | Kayıt defteri alt anahtarı | Değer |
 | ------------------ | --------------- | ----- |
-| 1.0                | **HKLM \\ Software \\ Microsoft \\ . NETFramework \\ ilkesi \\ v 1.0 \\ 3705**     | **Yüklemesi** REG_SZ eşittir`1` |
-| 1.1                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 1.1.4322**   | **Yüklemesi** REG_DWORD eşittir`1` |
-| 2.0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 2.0.50727**  | **Yüklemesi** REG_DWORD eşittir`1` |
-| 3.0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.0 \\ kurulumu** | **Installsuccess** REG_DWORD eşittir`1` |
-| 3,5                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5**        | **Yüklemesi** REG_DWORD eşittir`1` |
-| 4,0 istemci profili | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ istemcisi**  | **Yüklemesi** REG_DWORD eşittir`1` |
-| 4,0 tam profil   | **HKLM \\ Software \\ Microsoft \\ net Framework Kurulumu \\ NDP \\ v4 \\ dolu**    | **Yüklemesi** REG_DWORD eşittir`1` |
+| 1,0                | **HKLM \\ Software \\ Microsoft \\ . NETFramework \\ ilkesi \\ v 1.0 \\ 3705**     | **Yüklemesi** REG_SZ eşittir `1` |
+| 1.1                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 1.1.4322**   | **Yüklemesi** REG_DWORD eşittir `1` |
+| 2,0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 2.0.50727**  | **Yüklemesi** REG_DWORD eşittir `1` |
+| 3,0                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.0 \\ kurulumu** | **Installsuccess** REG_DWORD eşittir `1` |
+| 3,5                | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5**        | **Yüklemesi** REG_DWORD eşittir `1` |
+| 4,0 istemci profili | **HKLM \\ Software \\ Microsoft \\ net Framework Setup \\ NDP \\ v4 \\ istemcisi**  | **Yüklemesi** REG_DWORD eşittir `1` |
+| 4,0 tam profil   | **HKLM \\ Software \\ Microsoft \\ net Framework Kurulumu \\ NDP \\ v4 \\ dolu**    | **Yüklemesi** REG_DWORD eşittir `1` |
 
 > [!IMPORTANT]
 > Çalıştırdığınız uygulama 32-bit ise ve 64 bit Windows 'da çalışıyorsa, kayıt defteri yolları daha önce listelenenden farklı olacaktır. 64 bit kayıt defteri **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ ** alt anahtarında kullanılabilir. Örneğin, .NET Framework 3,5 için kayıt defteri alt anahtarı **HKEY_LOCAL_MACHINE \\ Software \\ Wow6432Node \\ Microsoft \\ net Framework Setup \\ NDP \\ v 3.5**' dir.

@@ -1,19 +1,18 @@
 ---
 title: .NET Framework erişilebilirlik yenilikleri
 description: .NET Framework 4.7.1 ile başlayarak .NET erişilebilirlik yenilikleri bölümüne bakın. Erişilebilirlik özellikleri, bir uygulamanın yardımcı teknoloji kullanıcıları için doğru deneyimi sağlamasına imkan tanır.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 593591ca340cc130a3a6d1daa015a849b8eca0f8
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: df9188c4f7c2af77f5dc87309880a41724254c5c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925845"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558965"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework erişilebilirlik yenilikleri
 
@@ -194,7 +193,7 @@ Bu özelliği kullanmak için XAML kodunuza eklemeniz ve uygun fırçayı ya da 
 
 **Özelliği Için UIAutomation Controllersupport desteği**
 
-UIAutomation `ControllerFor` özelliği, bu özelliği destekleyen Otomasyon öğesi tarafından yönetilen bir Otomasyon öğeleri dizisi döndürüyor. Bu özellik genellikle otomatik öneri erişilebilirliği için kullanılır. `ControllerFor`bir Otomasyon öğesi uygulama kullanıcı arabirimi veya masaüstünün bir veya daha fazla kesimini etkiliyorsa kullanılır. Aksi takdirde, denetim işleminin etkisini UI öğeleriyle ilişkilendirmek zordur. Bu özellik, denetimlerin özellik için bir değer sağlama yeteneğini ekler `ControllerFor` .
+UIAutomation `ControllerFor` özelliği, bu özelliği destekleyen Otomasyon öğesi tarafından yönetilen bir Otomasyon öğeleri dizisi döndürüyor. Bu özellik genellikle otomatik öneri erişilebilirliği için kullanılır. `ControllerFor` bir Otomasyon öğesi uygulama kullanıcı arabirimi veya masaüstünün bir veya daha fazla kesimini etkiliyorsa kullanılır. Aksi takdirde, denetim işleminin etkisini UI öğeleriyle ilişkilendirmek zordur. Bu özellik, denetimlerin özellik için bir değer sağlama yeteneğini ekler `ControllerFor` .
 
 .NET Framework 4,8 yeni bir sanal yöntem ekler <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType> . Özelliği için bir değer sağlamak için `ControllerFor` , bu yöntemi geçersiz kılın ve `List<AutomationPeer>` bunun tarafından geçirilmekte olan denetimler için bir döndürür <xref:System.Windows.Automation.Peers.AutomationPeer> :
 
@@ -473,11 +472,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **High contrast**
 
-.NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimlerinde yüksek karşıtlıklı geliştirmeler yapılmıştır. Artık <xref:System.Windows.SystemParameters.HighContrast%2A> Tema ayarlandığında görünür olur. Bunlara
+.NET Framework 4.7.1 ile başlayarak, çeşitli WPF denetimlerinde yüksek karşıtlıklı geliştirmeler yapılmıştır. Artık <xref:System.Windows.SystemParameters.HighContrast%2A> Tema ayarlandığında görünür olur. Bu modüller şunlardır:
 
-- <xref:System.Windows.Controls.Expander>denetimle
+- <xref:System.Windows.Controls.Expander> denetimle
 
-  Denetim için odak görseli <xref:System.Windows.Controls.Expander> artık görülebilir. <xref:System.Windows.Controls.ComboBox>, Ve denetimlerinin klavye görselleri <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.RadioButton> de görünür. Örneğin:
+  Denetim için odak görseli  <xref:System.Windows.Controls.Expander> artık görülebilir. <xref:System.Windows.Controls.ComboBox>, Ve denetimlerinin klavye görselleri <xref:System.Windows.Controls.ListBox> <xref:System.Windows.Controls.RadioButton> de görünür. Örneğin:
 
   Önce:
 
@@ -487,7 +486,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   ![Odak ile denetimin metninin etrafında noktalı bir çizgi gösteren genişleticiyle ilgili ekran görüntüsü.](./media/whats-new-in-accessibility/expander-control-after.png)
 
-- <xref:System.Windows.Controls.CheckBox>ve <xref:System.Windows.Controls.RadioButton> denetimler
+- <xref:System.Windows.Controls.CheckBox> ve <xref:System.Windows.Controls.RadioButton> denetimler
 
   <xref:System.Windows.Controls.CheckBox>Ve <xref:System.Windows.Controls.RadioButton> denetimlerindeki metin artık yüksek karşıtlık temalarında seçildiğinde daha kolay görülebilir. Örneğin:
 
@@ -499,7 +498,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   ![Yüksek karşıtlık temalarda daha iyi metin görünürlüğü olan radyo ve denetim düğmelerinin ekran görüntüsü.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
-- <xref:System.Windows.Controls.ComboBox>denetimle
+- <xref:System.Windows.Controls.ComboBox> denetimle
 
   .NET Framework 4.7.1 ile başlayarak, devre dışı bir denetimin kenarlığı <xref:System.Windows.Controls.ComboBox> devre dışı metinle aynı renktedir. Örneğin:
 
@@ -531,7 +530,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   ![Açılan oku görüntüleyen bir ComBoxBox denetiminin ekran görüntüsü.](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
-- <xref:System.Windows.Controls.DataGrid>denetimle
+- <xref:System.Windows.Controls.DataGrid> denetimle
 
   .NET Framework 4.7.1 başlayarak, denetimlerde sıralama göstergesi oku <xref:System.Windows.Controls.DataGrid> artık doğru Tema renklerini kullanır. Örneğin:
 
