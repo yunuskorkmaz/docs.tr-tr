@@ -1,7 +1,6 @@
 ---
 title: .NET Framework yenilikleri
 description: Çeşitli .NET Framework sürümlerindeki yenilikleri görün. Her sürümdeki önemli yeni özellik ve geliştirmelerin özetini okuyun.
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 dev_langs:
 - csharp
@@ -9,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 42f872bba87a88fc92a37879e815ee7068407cf7
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 3eba676a4134415f0e2981d5094c0b0f6a1651be
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925598"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559030"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework yenilikleri
 
@@ -139,20 +138,20 @@ Sistem durumu uç noktasını açığa çıkarmak ve WCF hizmeti durum bilgileri
 
 Hizmetin sistem durumu,,,, gibi sorgu parametreleri kullanılarak sorgulanabilir `OnServiceFailure` `OnDispatcherFailure` `OnListenerFailure` `OnThrottlePercentExceeded` ve her sorgu parametresi için bir http yanıt kodu belirtilebilir. Bir sorgu parametresi için HTTP yanıt kodu atlanırsa, varsayılan olarak bir 503 HTTP yanıt kodu kullanılır. Örneğin:
 
-- OnServiceFailure:`https://contoso:81/Service1?health&OnServiceFailure=450`
+- OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
   [ServiceHost. State](xref:System.ServiceModel.Channels.CommunicationObject.State) değerinden büyük olduğunda BIR 450 http yanıt durum kodu döndürülür <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> .
 Sorgu parametreleri ve örnekleri:
 
-- OnDispatcherFailure:`https://contoso:81/Service1?health&OnDispatcherFailure=455`
+- OnDispatcherFailure: `https://contoso:81/Service1?health&OnDispatcherFailure=455`
 
   Bir 455 HTTP yanıt durum kodu, kanal sevkiyatlarından birinin durumu değerinden büyükse döndürülür <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> .
 
-- OnListenerFailure:`https://contoso:81/Service1?health&OnListenerFailure=465`
+- OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
 
   Kanal dinleyicilerinin herhangi birinin durumu şundan büyükse, 465 HTTP yanıt durum kodu döndürülür <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType> .
 
-- Onthrottleyüztexcebaşında:`https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
+- Onthrottleyüztexcebaşında: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
   Yanıtı tetikleyen {1 – 100} yüzdesini ve {200 – 599} HTTP yanıt kodunu belirtir. Bu örnekte:
 
@@ -325,7 +324,7 @@ Daha fazla bilgi ve kod örnekleri için [.net blogda](https://devblogs.microsof
 
 **Yeni SignerInfo üyeleri**
 
-.NET Framework 4.7.2 ile başlayarak, <xref:System.Security.Cryptography.Pkcs.SignerInfo> sınıfı imza hakkında daha fazla bilgi sunar. <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName>İmzalayan tarafından kullanılan imza algoritmasını belirleyebilmek için özelliğinin değerini alabilirsiniz. <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType>, bu imzalayan için şifreleme imzasının bir kopyasını almak üzere çağrılabilir.
+.NET Framework 4.7.2 ile başlayarak, <xref:System.Security.Cryptography.Pkcs.SignerInfo> sınıfı imza hakkında daha fazla bilgi sunar. <xref:System.Security.Cryptography.Pkcs.SignerInfo.SignatureAlgorithm?displayProperty=fullName>İmzalayan tarafından kullanılan imza algoritmasını belirleyebilmek için özelliğinin değerini alabilirsiniz. <xref:System.Security.Cryptography.Pkcs.SignerInfo.GetSignature%2A?displayProperty=nameWithType> , bu imzalayan için şifreleme imzasının bir kopyasını almak üzere çağrılabilir.
 
 **CryptoStream atıldıktan sonra sarmalanmış bir akışın açılmasını bırakma**
 
@@ -351,14 +350,14 @@ Windows API 'Leri kullanarak açma desteği, .NET Framework 4.7.2 ' i hedefleyen
 
 **Ek koleksiyon API 'Leri**
 
-.NET Framework 4.7.2, ve türlerine bir dizi yeni API ekler <xref:System.Collections.Generic.SortedSet%601> <xref:System.Collections.Generic.HashSet%601> . Bunlara
+.NET Framework 4.7.2, ve türlerine bir dizi yeni API ekler <xref:System.Collections.Generic.SortedSet%601> <xref:System.Collections.Generic.HashSet%601> . Bu modüller şunlardır:
 
-- `TryGetValue`diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişleten Yöntemler. Yöntemler şunlardır:
+- `TryGetValue` diğer koleksiyon türlerinde kullanılan try modelini bu iki türe genişleten Yöntemler. Yöntemler şunlardır:
 
   - [Genel bool diyez kümesi \<T> . TryGetValue (T equalValue, out gerçek değeri)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
   - [Genel bool SortedSet \<T> . TryGetValue (T equalValue, out gerçek değeri)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
-- `Enumerable.To*`Uzantı yöntemleri, bir koleksiyonu öğesine dönüştürür <xref:System.Collections.Generic.HashSet%601> :
+- `Enumerable.To*` Uzantı yöntemleri, bir koleksiyonu öğesine dönüştürür <xref:System.Collections.Generic.HashSet%601> :
 
   - [ortak static HashSet \<TSource> tohashset \<TSource> (Bu IEnumerable \<TSource> kaynağı)](xref:System.Linq.Enumerable.ToHashSet%2A)
   - [ortak statik HashSet \<TSource> tohashset \<TSource> (Bu IEnumerable \<TSource> kaynağı, IEqualityComparer \<TSource> karşılaştırıcısı)](xref:System.Linq.Enumerable.ToHashSet%2A)
@@ -742,7 +741,7 @@ WCF, .NET Framework 4,7 ' den itibaren, varsayılan ileti güvenlik protokolü o
 
 **WCF uygulamalarının ve WCF serileştirmenin güvenilirliği geliştirildi**
 
-WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bunlara
+WCF, yarış koşullarını ortadan kaldıran bir dizi kod değişikliği içerir, böylece performansı ve serileştirme seçeneklerinin güvenilirliğini geliştirir. Bu modüller şunlardır:
 
 - **SocketConnection. BeginRead** ve **SocketConnection. Read**çağrılarına zaman uyumsuz ve zaman uyumlu kod karıştırma için daha iyi destek.
 - **Sharedconnectionlistener** ve **DuplexChannelBinder**ile bağlantı iptal edildiğinde iyileştirilmiş güvenilirlik.
@@ -842,7 +841,7 @@ End Class
 
 Ardından, anahtar hata iletisi dizesi olan ve değeri yerelleştirilmiş hata iletisi olan DataAnnotation. yerelleştirme. fr. resx olan bir kaynak dosyası oluşturabilirsiniz. Dosyanın klasörde bulunması gerekir `App.LocalResources` . Örneğin, aşağıdaki anahtar ve değeri yerelleştirilmiş Fransızca (fr) dil hata iletisinde verilmiştir:
 
-| Ad                                 | Değer                                     |
+| Name                                 | Değer                                     |
 | ------------------------------------ | ----------------------------------------- |
 | Derecelendirme 1 ile 10 arasında olmalıdır. | La Note DoIt être, diğer 1 et 10. |
 
@@ -880,7 +879,7 @@ End Interface
 
 - , sınıfında 18 yeni yöntem <xref:System.Web.HttpCachePolicy?displayProperty=nameWithType> . Bunlar,,,,, <xref:System.Web.HttpCachePolicy.GetCacheability%2A> <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A> <xref:System.Web.HttpCachePolicy.GetETag%2A> <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A> <xref:System.Web.HttpCachePolicy.GetMaxAge%2A> <xref:System.Web.HttpCachePolicy.GetMaxAge%2A> , <xref:System.Web.HttpCachePolicy.GetNoStore%2A> , <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A> , <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A> , <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A> , <xref:System.Web.HttpCachePolicy.GetRevalidation%2A> , <xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A> , <xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A> , <xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> , ve içerir <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A> .
 
-- sınıfında 2 yeni yöntem <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=nameWithType> : <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> ve <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A> .
+- sınıfında 2 yeni yöntem <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=nameWithType> :  <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> ve <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A> .
 
 - sınıfında 2 yeni yöntem <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=nameWithType> : <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> ve <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A> .
 
@@ -954,7 +953,7 @@ End Function
 
 .NET Framework 3,5, üç farklı anahtar türetme Işlevi (KDF) yordamlarına sahip Eliptik Eğri Diffie-Hellman anahtar anlaşması için destek eklendi. Yordamlarına yapılan girişler ve yordamlar, nesne üzerindeki özellikler aracılığıyla yapılandırılmıştır <xref:System.Security.Cryptography.ECDiffieHellmanCng> . Ancak her bir yordam her giriş özelliğini okumadığından, geliştiricinin geçmişte karışıklık için çok fazla yer vardır.
 
-.NET Framework 4.6.2 ' de bunu çözmek için temel sınıfa aşağıdaki üç yöntem eklenmiştir <xref:System.Security.Cryptography.ECDiffieHellman> ve bu KDF yordamlarını ve bunların girişlerini daha net bir şekilde temsil eder:
+.NET Framework 4.6.2 ' de bunu çözmek için temel sınıfa aşağıdaki üç yöntem eklenmiştir  <xref:System.Security.Cryptography.ECDiffieHellman> ve bu KDF yordamlarını ve bunların girişlerini daha net bir şekilde temsil eder:
 
 |Ecdıfıfiehellman yöntemi|Açıklama|
 |----------------------------|-----------------|
@@ -1104,7 +1103,7 @@ Müşteriler, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer
 </runtime>
 ```
 
-Bu özellik etkinleştirildiğinde bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne, <xref:System.TimeZoneInfo> <xref:System.TimeZone> Tarih ve saat verilerinin serisini kaldırmak için türü yerine türünü kullanır. <xref:System.TimeZoneInfo>, geçmişteki saat dilimi verileriyle çalışmayı olanaklı kılan birden çok ayarlama kuralını destekler;   <xref:System.TimeZone>değildir.
+Bu özellik etkinleştirildiğinde bir <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nesne, <xref:System.TimeZoneInfo> <xref:System.TimeZone> Tarih ve saat verilerinin serisini kaldırmak için türü yerine türünü kullanır. <xref:System.TimeZoneInfo> , geçmişteki saat dilimi verileriyle çalışmayı olanaklı kılan birden çok ayarlama kuralını destekler;   <xref:System.TimeZone> değildir.
 
 <xref:System.TimeZoneInfo>Yapı ve saat dilimi ayarlamaları hakkında daha fazla bilgi için bkz. [saat dilimine genel bakış](../../standard/datetime/time-zone-overview.md).
 
@@ -1151,7 +1150,7 @@ SSL 3,0, aktarım güvenliği ile NetTcp kullanırken güvenli bir bağlantı an
 
 Grup sıralamasını desteklemek için, New <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> ve <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> Properties, nesne tarafından üretilen grupların koleksiyonunun nasıl sıralanacağını anlatmaktadır <xref:System.ComponentModel.GroupDescription> . Bu, aynı adlı <xref:System.Windows.Data.ListCollectionView> özelliklerin veri öğelerinin nasıl sıralanacağını betimleyen yönteme benzerdir.
 
-Sınıfının iki yeni statik özelliği <xref:System.Windows.Data.PropertyGroupDescription> <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> ve <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A> en sık karşılaşılan durumlar için kullanılabilir.
+Sınıfının iki yeni statik özelliği <xref:System.Windows.Data.PropertyGroupDescription>  <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> ve <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A> en sık karşılaşılan durumlar için kullanılabilir.
 
 Örneğin, aşağıdaki XAML verileri yaş ile gruplandırır, yaş gruplarını artan düzende sıralar ve her yaş grubundaki öğeleri son ada göre gruplandırır.
 
@@ -1199,7 +1198,7 @@ WPF uygulamaları için yüksek DPı ve hibrit DPı ortamlarının en son kullan
 
 WF .NET Framework 4,5 ' den başlayarak hem Visual Studio tasarımcısında hem de kod iş akışlarında C# ifadelerini destekler. Yeniden barındırılan İş Akışı Tasarımcısı, bir WF 'nin Visual Studio dışında bir uygulamada olmasını İş Akışı Tasarımcısı sağlayan bir temel özelliktir (örneğin, WPF).  Windows Workflow Foundation, yeniden barındırılan İş Akışı Tasarımcısı C# ifadelerini ve IntelliSense 'i destekleme yeteneği sağlar. Daha fazla bilgi için [Windows Workflow Foundation bloguna](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)bakın.
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`4.6.2 ' den önceki .NET Framework sürümlerinde, bir müşteri, Visual Studio 'dan bir iş akışı projesi yeniden oluştururken WF Tasarımcısı IntelliSense bozulur. Proje derlemesi başarılı olsa da, iş akışı türleri tasarımcıda bulunmadı ve eksik iş akışı türleri için IntelliSense uyarıları **hata listesi** penceresinde görünür. .NET Framework 4.6.2 Bu sorunu giderir ve IntelliSense 'i kullanılabilir hale getirir.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 4.6.2 ' den önceki .NET Framework sürümlerinde, bir müşteri, Visual Studio 'dan bir iş akışı projesi yeniden oluştururken WF Tasarımcısı IntelliSense bozulur. Proje derlemesi başarılı olsa da, iş akışı türleri tasarımcıda bulunmadı ve eksik iş akışı türleri için IntelliSense uyarıları **hata listesi** penceresinde görünür. .NET Framework 4.6.2 Bu sorunu giderir ve IntelliSense 'i kullanılabilir hale getirir.
 
 **İş akışı Izleme olan iş akışı v1 uygulamaları artık FIPS modunda çalıştırılır**
 
@@ -1239,7 +1238,7 @@ Dönüştürülmüş masaüstü uygulamaları, UWP API 'Lerinin, canlı kutucuk 
 
 *Yönetilmeyen hata ayıklama API 'si* , bir <xref:System.NullReferenceException> kaynak kodunun tek bir satırındaki hangi değişkenin olduğunu belirleyebilmek için oluşturulduğunda ek analizler gerçekleştirmek üzere .NET Framework 4.6.2 içinde geliştirilmiştir `null` .   Bu senaryoyu desteklemek için, yönetilmeyen hata ayıklama API 'sine aşağıdaki API 'Ler eklenmiştir.
 
-- Yönetilen değişkenlerin yerel evlerini açığa çıkaran [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ıcordebugvariablehome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)ve [ıcordebugvariablehomeenum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) arabirimleri. Bu, hata ayıklayıcıların bir durum oluştuğunda bazı kod akışı analizlerini yapmasına <xref:System.NullReferenceException> ve geri doğru çalışarak yerel konuma karşılık gelen yönetilen değişkeni belirlemesine olanak sağlar `null` .
+- Yönetilen değişkenlerin yerel evlerini açığa çıkaran [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ıcordebugvariablehome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)ve [ıcordebugvariablehomeenum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) arabirimleri. Bu, hata ayıklayıcıların bir durum oluştuğunda bazı kod akışı analizlerini yapmasına  <xref:System.NullReferenceException> ve geri doğru çalışarak yerel konuma karşılık gelen yönetilen değişkeni belirlemesine olanak sağlar `null` .
 
 - [ICorDebugType2:: GetTypeId](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) yöntemi ıcordebugtype için [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md)bir eşleme sağlar ve bu da hata ayıklayıcının ICorDebugType örneği olmadan bir [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) almasına olanak tanır. [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) mevcut API 'ler, daha sonra türün sınıf yerleşimini belirlemede kullanılabilir.
 
@@ -1635,7 +1634,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
     <add key="EnableMultiMonitorDisplayClipping" value="true"/>
     ```
 
-    Üzerine DPı ayarı temelinde sağ imleci otomatik olarak yüklemek için destek eklenmiştir <xref:System.Windows.Input.Cursor?displayProperty=nameWithType> .
+    Üzerine DPı ayarı temelinde sağ imleci otomatik olarak yüklemek için destek eklenmiştir  <xref:System.Windows.Input.Cursor?displayProperty=nameWithType> .
 
   - **Dokunmatik daha iyidir**
 
@@ -1817,7 +1816,7 @@ Ngen pdb 'leri ile NGen, Il PDB 'ye bağımlılık olmadan IL-yerel eşlemeyi i�
 
 - **Bir işlemi yükseltme ve dayanıklı bir kayda dönüştürme**
 
-  <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType>.NET Framework 4.5.2 ve 4,6 ' ye yeni bir API eklendi:
+  <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> .NET Framework 4.5.2 ve 4,6 ' ye yeni bir API eklendi:
 
   ```csharp
   [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1977,7 +1976,7 @@ Web Forms, WebSocket desteği, zaman uyumsuz işleyiciler, performans geliştirm
 
 - [Visual Studio 2013 için ASP.NET and Web Tools Sürüm Notları](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking"></a>İşlemleri<a name="networking"></a>
+### <a name="networking"></a>İşlemleri <a name="networking"></a>
 
 .NET Framework 4,5, HTTP uygulamaları için yeni bir programlama arabirimi sağlar. Daha fazla bilgi için bkz. yeni <xref:System.Net.Http?displayProperty=nameWithType> ve <xref:System.Net.Http.Headers?displayProperty=nameWithType> ad alanları.
 
@@ -2049,7 +2048,7 @@ Ayrıca, 4,5 .NET Framework aşağıdaki ağ geliştirmelerini içerir:
 
 - XML Düzenleyici araç ipuçları.
 
-- <xref:System.ServiceModel.ChannelFactory>önbelleğe alma desteği.
+- <xref:System.ServiceModel.ChannelFactory> önbelleğe alma desteği.
 
 - İkili kodlayıcı sıkıştırma desteği.
 
@@ -2121,7 +2120,7 @@ Daha fazla bilgi için bkz. [Windows Workflow Foundation](../windows-workflow-fo
 
 Windows 8. x Mağazası uygulamaları belirli form faktörleri için tasarlanmıştır ve Windows işletim sisteminin gücünden yararlanır. 4,5 veya 4.5.1 .NET Framework bir alt kümesi, C# veya Visual Basic kullanarak Windows için Windows 8. x Mağazası uygulamaları oluşturmak için kullanılabilir. Bu alt küme, Windows 8. x Mağazası uygulamaları için .NET olarak adlandırılır ve [genel bakışta](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))ele alınmıştır.
 
-### <a name="portable-class-libraries"></a>Taşınabilir sınıf kitaplıkları<a name="portable"></a>
+### <a name="portable-class-libraries"></a>Taşınabilir sınıf kitaplıkları <a name="portable"></a>
 
 Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitaplığı projesi, birden çok .NET Framework platformda çalışan yönetilen derlemeler yazmanızı ve oluşturmanızı sağlar. Taşınabilir bir sınıf kitaplığı projesi kullanarak, hedeflenecek platformları (Windows Phone ve Windows 8. x Mağazası uygulamaları için .NET) seçersiniz. Projenizdeki kullanılabilir türler ve Üyeler, bu platformlar genelinde ortak türler ve üyelerle otomatik olarak kısıtlıdır. Daha fazla bilgi için bkz. [taşınabilir sınıf kitaplığı](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
@@ -2130,6 +2129,6 @@ Visual Studio 2012 ' deki (ve sonraki sürümlerde) taşınabilir sınıf kitapl
 - [.NET Framework ve Bant Dışı Yayınlar](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [.NET Framework erişilebilirlik yenilikleri](whats-new-in-accessibility.md)
 - [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
-- [Visual Studio 2019’daki Yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 'da C++ yenilikleri](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

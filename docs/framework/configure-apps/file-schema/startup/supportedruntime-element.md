@@ -1,7 +1,6 @@
 ---
-title: <supportedRuntime>yapılandırma öğesi-.NET
+title: <supportedRuntime> yapılandırma öğesi-.NET
 ms.date: 04/02/2019
-ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/supportedRuntime
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: ecbe73593e5b8b87909499f6fff7e865e29b1ec8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: cc221c71b68c21b61b5fa27e0972b9e9156dbc3b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "82796047"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558679"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> öğesi
 
@@ -24,7 +23,7 @@ Uygulamanın desteklediği ortak dil çalışma zamanı sürümünü ve isteğe 
 &nbsp;&nbsp;[\<startup>](startup-element.md)  
 &nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <supportedRuntime version="runtime version" sku="sku id"/>
@@ -61,14 +60,14 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 
 |.NET Framework sürümü|`version` özniteliği|
 |----------------------------|-------------------------|
-|1.0|"v 1.0.3705"|
+|1,0|"v 1.0.3705"|
 |1.1|"v 1.1.4322"|
-|2.0|"v 2.0.50727"|
-|3.0|"v 2.0.50727"|
+|2,0|"v 2.0.50727"|
+|3,0|"v 2.0.50727"|
 |3,5|"v 2.0.50727"|
 |4.0-4.8|"v 4.0"|
 
-## <a name="sku-id-values"></a><a name="sku"></a>"SKU kimliği" değerleri
+## <a name="sku-id-values"></a><a name="sku"></a> "SKU kimliği" değerleri
 
 `sku`Özniteliği, uygulamanın hedeflediği ve çalışması gereken .NET Framework sürümünü belirtmek için bir hedef çerçeve bilinen adı (tfd) kullanır. Aşağıdaki tabloda `sku` , .NET Framework 4 ' ten başlayarak özniteliği tarafından desteklenen geçerli değerler listelenmiştir.
 
@@ -85,7 +84,7 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 |4,5|". NETFramework, sürüm = v 4.5 "|
 |4.5.1|". NETFramework, sürüm = v 4.5.1 "|
 |4.5.2|". NETFramework, sürüm = v 4.5.2 "|
-|4.6|". NETFramework, sürüm = v 4.6 "|
+|4,6|". NETFramework, sürüm = v 4.6 "|
 |4.6.1|". NETFramework, sürüm = v 4.6.1 "|
 |4.6.2|". NETFramework, sürüm = v 4.6.2 "|
 |4,7|". NETFramework, sürüm = v 4.7 "|
@@ -112,5 +111,5 @@ Bu öğe, uygulama yapılandırma dosyasında kullanılabilir.
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Başlangıç Ayarları Şeması](index.md)
-- [Yapılandırma dosyası şeması](../index.md)
+- [Yapılandırma Dosyası Şeması](../index.md)
 - [Devam Eden Yan Yana Yürütme](../../../deployment/in-process-side-by-side-execution.md)

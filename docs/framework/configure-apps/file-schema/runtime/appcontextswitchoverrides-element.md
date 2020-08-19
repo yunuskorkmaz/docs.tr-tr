@@ -1,6 +1,5 @@
 ---
 title: AppContextSwitchOverrides öğesi
-ms.custom: updateeachrelease
 ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "82102937"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558757"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> öğesi
 
@@ -23,7 +22,7 @@ ms.locfileid: "82102937"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<AppContextSwitchOverrides>**
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <AppContextSwitchOverrides value="name1=value1[[;name2=value2];...]" />
@@ -68,19 +67,19 @@ ms.locfileid: "82102937"
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Olarak ayarlandığında `false` , FIPS etkin olduğunda Visual Studio Ile XAML tabanlı iş akışı projelerinin hata ayıklamasına izin verir. Bu olmadan, <xref:System.NullReferenceException> System. Activities derlemesinde yöntemlere çağrılar halinde bir oluşturulur.| .NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Hata ayıklayıcı içindeki bir iş akışı örneği için sağlama toplamı, MD5 veya SHA1 kullanıp kullanmadığını denetler. |  .NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|İş akışı sağlama toplamı karmasının, .NET Framework 4,7 () içinde varsayılan olarak tanıtılan SHA1 algoritmasını `true` veya .NET Framework 4,8 () içinde varsayılan olarak tanıtılan varsayılan sha256 algoritmasını kullanıp kullanmadığını denetler `false` .<br>SHA1 ile ilgili çakışma sorunları nedeniyle Microsoft SHA256 önerir.| .NET Framework 4.8|
-|`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Taşınabilir pdb 'leri kullanırken yığın izlemelerinin elde edilip edilmeyeceğini denetler ve kaynak dosya ve satır bilgileri içerebilir. `false`Kaynak dosya ve satır bilgilerini dahil etmek için; Aksi takdirde, `true` .| .NET Framework 4.7.2|
+|`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Taşınabilir pdb 'leri kullanırken yığın izlemelerinin elde edilip edilmeyeceğini denetler ve kaynak dosya ve satır bilgileri içerebilir. `false` Kaynak dosya ve satır bilgilerini dahil etmek için; Aksi takdirde, `true` .| .NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>Bir <xref:System.Drawing.Icon> nesne png çerçevelerindeyken yöntemin bir özel durum oluşturulup oluşturulmayacağını denetler. Daha fazla bilgi için bkz. [azaltma: simge NESNELERINDE png çerçeveleri](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
-|`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>Yöntem tarafından koleksiyona eklendiğinde nesnelerin düzgün şekilde atılıp atılmayacağını belirler <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> . `true`eski davranışı korumak için; `false`tüm özel yazı tipi nesnelerini atmak için. | .NET Framework 4.7.2|
+|`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>Yöntem tarafından koleksiyona eklendiğinde nesnelerin düzgün şekilde atılıp atılmayacağını belirler <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> . `true` eski davranışı korumak için; `false` tüm özel yazı tipi nesnelerini atmak için. | .NET Framework 4.7.2|
 |`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Performansının, <xref:System.Windows.Forms.PrintPreviewDialog> ağ yazıcıları için en iyi duruma getirilip getirilmediğini denetler. Daha fazla bilgi için bkz. [Printönizleme Iletişim kutusu denetimine genel bakış](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
-|`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|Yıl aralığının Japonca takvim için olup olmadığını denetler. `true`yıl aralığı denetimlerini zorlamak ve `false` devre dışı bırakmak için (varsayılan davranış). Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
-|`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|Yalnızca "1" öğesinin ayrıştırma işlemlerinde bir Japonca takvim dönemi için ilk yıl olarak tanınıp tanınmadığını denetler. `true`yalnızca "1" öğesini tanımak için `false`"1" veya gannen (varsayılan davranış) öğesini tanımak için. Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
-|`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|Japonca takvim çağının ilk yılının, biçimlendirme işlemlerinde "1" veya gannen olarak temsil edilip edilmeyeceğini denetler. `true`çağın ilk yılını "1" olarak biçimlendirmek için `false`bunu gannen olarak biçimlendirmek için (varsayılan davranış). Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
+|`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|Yıl aralığının Japonca takvim için olup olmadığını denetler. `true` yıl aralığı denetimlerini zorlamak ve `false` devre dışı bırakmak için (varsayılan davranış). Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
+|`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|Yalnızca "1" öğesinin ayrıştırma işlemlerinde bir Japonca takvim dönemi için ilk yıl olarak tanınıp tanınmadığını denetler. `true` yalnızca "1" öğesini tanımak için `false` "1" veya gannen (varsayılan davranış) öğesini tanımak için. Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
+|`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|Japonca takvim çağının ilk yılının, biçimlendirme işlemlerinde "1" veya gannen olarak temsil edilip edilmeyeceğini denetler. `true` çağın ilk yılını "1" olarak biçimlendirmek için `false` bunu gannen olarak biçimlendirmek için (varsayılan davranış). Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Zaman uyumsuz işlemlerin çağıran iş parçacığının bağlamından akış yapıp yapamadığını denetler. Daha fazla bilgi için bkz. [Görevler arasında CurrentCulture ve CurrentUICulture Flow](../../../migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType>Yöntemin yalnızca son DNS girdisiyle talep türü ile eşleştirmeye çalışıp çalışmadığını denetler. Daha fazla bilgi için bkz. [azaltma: X509CertificateClaimSet. Findclaim metodu](../../../migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|
 |`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|AuthorizationContext. Empty 'in kesilebilir bir nesne döndürmesini izin verip vermeyeceğinizi denetler.|.NET Framework 4.6|
 |`Switch.System.IO.BlockLongPaths`|(260 karakter) karakterden daha uzun bir yol olup olmadığını denetler `MAX_PATH` <xref:System.IO.PathTooLongException> . Daha fazla bilgi için bkz. [uzun yol desteği](../../../migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|
-|`Switch.System.IO.Compression.`<br/>`DoNotUseNativeZipLibraryForDecompression`|Sınıf tarafından açma için yerel işletim sistemi yordamlarının kullanılıp kullanılmadığını denetler <xref:System.IO.Compression.DeflateStream> . `false`Yerel API 'Leri kullanmak için; `true` <xref:System.IO.Compression.DeflateStream> uygulamasını kullanın.| .NET Framework 4.7.2|
-|`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|\\Özelliğindeki yol ayırıcısı olarak eğik çizgi ("/") yerine ters eğik çizgi ("") kullanır <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> . Daha fazla bilgi için bkz. [azaltma: ZipArchiveEntry. FullName yol ayırıcısı](../../../migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|
+|`Switch.System.IO.Compression.`<br/>`DoNotUseNativeZipLibraryForDecompression`|Sınıf tarafından açma için yerel işletim sistemi yordamlarının kullanılıp kullanılmadığını denetler <xref:System.IO.Compression.DeflateStream> . `false` Yerel API 'Leri kullanmak için; `true` <xref:System.IO.Compression.DeflateStream> uygulamasını kullanın.| .NET Framework 4.7.2|
+|`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|\\Özelliğindeki yol ayırıcısı olarak eğik çizgi ("/") yerine ters eğik çizgi ("") kullanır <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> . Daha fazla bilgi için bkz.  [azaltma: ZipArchiveEntry. FullName yol ayırıcısı](../../../migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Akışlarla oluşturulan arka plan iş parçacıklarında oluşan işletim sistemi özel durumlarının <xref:System.IO.Ports.SerialPort> işlemi sonlandırır.|.NET Framework 4.7.1|
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|Eski yol normalleştirme kullanılıp kullanılmadığını ve URI yollarının ve yöntemleri tarafından desteklenip desteklenmediğini denetler <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> . Daha fazla bilgi için bkz. [azaltma: yol normalleştirme](../../../migration-guide/mitigation-path-normalization.md) ve [azaltma: yol iki nokta denetimleri](../../../migration-guide/mitigation-path-colon-checks.md).|.NET Framework 4.6.2|
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Bir eşitlik testinin, <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> bir nesnenin özelliğini ikinci nesnenin özelliğiyle karşılaştırıp karşılaştırmadığını denetler <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> . Daha fazla bilgi için bkz. [MemberDescriptor. Equals Için hatalı uygulama](../../../migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|
@@ -113,14 +112,14 @@ ms.locfileid: "82102937"
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Hizmet başlangıcında oluşturulan özel durumların yöntemi çağırana yayıp yayılmayacağını denetler <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> .|.NET Framework 4.7.1|
 |`Switch.System.Threading.UseNetCoreTimer`|<xref:System.Threading.Timer>Örneklerin yüksek ölçekli ortamlar için performans geliştirmelerinden faydalanıp yararlanmadığını denetler. `true`Performans iyileştirmeleri etkinse; `false` (varsayılan değer), devre dışı bırakılır.| .NET Framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|Bazen çözülmüş olan belirli yüzde kodlamalı karakterlerin artık tutarlı bir şekilde kodlanmış olduğunu belirler. Varsa, `true` bunlar kodu çözülür; Aksi takdirde, `false` .| .NET Framework 4.7.2|
-|`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|URI 'Lerinde Unicode çift yönlü karakterlerin işlenmesini belirler. `true`Bunları URI 'lerden atmak için `false`bunları korumak ve yüzde kodlamak için.| .NET Framework 4.7.2|
+|`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|URI 'Lerinde Unicode çift yönlü karakterlerin işlenmesini belirler. `true` Bunları URI 'lerden atmak için `false` bunları korumak ve yüzde kodlamak için.| .NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation `true` `false` , sütunların sütun ayrılırken eski bir algoritma () veya yeni bir algoritma () uygulanıp uygulanmadığını belirler \* . Daha fazla bilgi için bkz. [azaltma: Grid denetiminin boşluk tahsisi Için yıldız-sütun](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns). | .NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Seçim değiştirilen olayı oluşturmadan önce bir seçicinin veya sekme denetiminin her zaman seçili değer özelliğinin değerini güncelleştirip güncelleştirmediğini denetler.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|' In ve denetim için donatıcı tabanlı seçme oluşturma için kullanılabilir olup olmadığını <xref:System.Windows.Controls.TextBox> belirler <xref:System.Windows.Controls.PasswordBox> ( `false` ) veya metnin yalnızca donatıcı katmanında () işlenip işlenmeyeceği `true` .| .NET Framework 4.7.2|
 |`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|Özel IList dizin oluşturucularının `true` , sınıf tarafından yanlış bir şekilde () veya doğru () kullanılıp kullanılmadığını denetler `false` <xref:System.Windows.Data.Binding?displayProperty=nameWithType> .| .NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|DPı değişikliklerinin sistem başına mı (bir değer `false` ) yoksa tek tek izleyici temelinde mi (bir değeri) olacağını belirler `true` .|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|WPF 'nin izleyici tanıma modunda çalıştırıldığı sırada bir içindeki denetimlerin boyutlandırılmasına yönelik iyileştirmelerin <xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType> devre dışı bırakılıp bırakılmadığını denetler ( `true` ) veya etkin ( `false` ).| .NET Framework 4.8|
-|`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|Denetim metni mevcut olduğunda geliştiricinin eylemi özel olarak işlemesi gerekip gerekmediğini belirler <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> . `true`eylemi işlemek için <xref:System.Windows.Forms.DomainUpDown.UpButton> ; `false` <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> ve <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> eylemlerinin doğru şekilde eşitlenmesi için.| .NET Framework 4.7.2|
+|`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|Denetim metni mevcut olduğunda geliştiricinin eylemi özel olarak işlemesi gerekip gerekmediğini belirler <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> . `true` eylemi işlemek için <xref:System.Windows.Forms.DomainUpDown.UpButton> ; `false` <xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType> ve <xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType> eylemlerinin doğru şekilde eşitlenmesi için.| .NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|Özel bir <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> uygulamanın, yöntemi çağrıldığında bir özel durum oluşturmadan iletileri güvenli bir şekilde filtrelemesine olanak tanıyan kodun dışına çıkma <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> . Daha fazla bilgi için bkz. [azaltma: Custom IMessageFilter. PreFilterMessage uygulamaları](../../../migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).|.NET Framework 4.6.1|
 |`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|<xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>Kullanıcı menüyü iç içe geçmiş bir denetimden açtığında özelliğin kaynak denetimini döndürüp döndürmeyeceğini belirler <xref:System.Windows.Forms.ToolStripMenuItem> . `true``null` `false` kaynak denetimi döndürmek için eski davranışı;.| .NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.UseLegacyToolTipDisplay`|Araç ipucu çağırma desteğinin devre dışı ( `true` ) veya etkin () olup olmadığını denetler `false` . Araç ipucu çağırma desteğinin etkinleştirilmesi, tarafından tanımlanan eski erişilebilirlik özelliklerinin yanı sıra `Switch.UseLegacyAccessibilityFeatures` `Switch.UseLegacyAccessibilityFeatures.2` `Switch.UseLegacyAccessibilityFeatures.3` devre dışı bırakılması (olarak ayarlanır `false` ) gerekir.| .NET Framework 4.8|
@@ -143,9 +142,9 @@ ms.locfileid: "82102937"
 
 ## <a name="switches-in-aspnet-apps"></a>ASP.NET Apps 'teki anahtarlar
 
-[\<Add>](../appsettings/add-element-for-appsettings.md) [\<appSettings>](../appsettings/index.md) Web. config dosyasının bölümüne bir öğe ekleyerek, uyumluluk ayarlarını kullanmak için bir ASP.NET uygulaması yapılandırabilirsiniz.
+[\<Add>](../appsettings/add-element-for-appsettings.md)web.config dosyanın bölümüne bir öğe ekleyerek uyumluluk ayarlarını kullanmak için bir ASP.NET uygulamasını yapılandırabilirsiniz [\<appSettings>](../appsettings/index.md) .
 
-Aşağıdaki örnek, `<add>` `<appSettings>` Web. config dosyasının bölümüne iki ayar eklemek için öğesini kullanır:
+Aşağıdaki örnek, `<add>` `<appSettings>` web.config bir dosyanın bölümüne iki ayar eklemek için öğesini kullanır:
 
 ```xml
 <appSettings>
@@ -181,5 +180,5 @@ Aşağıdaki örnek, `<add>` `<appSettings>` Web. config dosyasının bölümün
 
 - [.NET Framework 4,6 ve sonraki sürümlerde yeni davranışları azaltma](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
-- [\<runtime>Dosyalarında](runtime-element.md)
-- [\<configuration>Dosyalarında](../configuration-element.md)
+- [\<runtime> Dosyalarında](runtime-element.md)
+- [\<configuration> Dosyalarında](../configuration-element.md)

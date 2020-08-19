@@ -2,12 +2,12 @@
 title: Bulutta yerel uygulamalar için Azure güvenliği
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Cloud Native uygulamalar için Azure güvenliği
 ms.date: 05/13/2020
-ms.openlocfilehash: 223d9e77aca611697958981bf2ee3a630fb9fffb
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.openlocfilehash: 996c7075b252466a3b3374f1e75e64315fdd6fc7
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374500"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557652"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>Bulutta yerel uygulamalar için Azure güvenliği
 
@@ -201,7 +201,7 @@ kubectl apply -f ./secret.yaml
 
 Bu gizlilikler daha sonra birimlere bağlanabilir veya ortam değişkenleri aracılığıyla kapsayıcı işlemlerine sunulabilir. Uygulamalar oluşturmaya yönelik [on iki öğeli uygulama](https://12factor.net/) yaklaşımı, ayarları bir uygulamaya aktarmak için en düşük ortak paydayı kullanmayı önerir. İşletim sistemi veya uygulamadan bağımsız olarak desteklendiklerinden, ortam değişkenleri en düşük ortak paydatır.
 
-Yerleşik Kubernetes gizliliklerini kullanmanın bir alternatifi, Kubernetes içindeki Azure Key Vault gizli dizilerle erişimdir. Bunu yapmanın en kolay yolu, yük gizli dizilerini bulmak için kapsayıcıya bir RBAC rolü atamak. Uygulama daha sonra gizli dizileri erişmek için Azure Key Vault API 'Lerini kullanabilir. Ancak, bu yaklaşım kodda değişiklik yapılmasını gerektirir ve ortam değişkenlerini kullanma örüntüsünün izmez. Bunun yerine, [Azure Key Vault Injector](https://mrdevops.io/introducing-azure-key-vault-to-kubernetes-931f82364354)kullanımı aracılığıyla bir kapsayıcıya değer eklemek mümkündür. Bu yaklaşım aslında doğrudan Kubernetes gizli dizileri kullanmaktan daha güvenlidir, çünkü bunlar kümedeki kullanıcılar tarafından erişilebilirler.
+Yerleşik Kubernetes gizliliklerini kullanmanın bir alternatifi, Kubernetes içindeki Azure Key Vault gizli dizilerle erişimdir. Bunu yapmanın en kolay yolu, yük gizli dizilerini bulmak için kapsayıcıya bir RBAC rolü atamak. Uygulama daha sonra gizli dizileri erişmek için Azure Key Vault API 'Lerini kullanabilir. Ancak, bu yaklaşım kodda değişiklik yapılmasını gerektirir ve ortam değişkenlerini kullanma örüntüsünün izmez. Bunun yerine, bir kapsayıcıya değerler eklemek mümkündür. Bu yaklaşım aslında doğrudan Kubernetes gizli dizileri kullanmaktan daha güvenlidir, çünkü bunlar kümedeki kullanıcılar tarafından erişilebilirler.
 
 ## <a name="encryption-in-transit-and-at-rest"></a>Aktarım ve bekleme sırasında şifreleme
 

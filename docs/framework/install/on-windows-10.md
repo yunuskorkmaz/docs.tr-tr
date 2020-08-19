@@ -2,13 +2,12 @@
 title: .NET Framework Windows 10 ' a yükler
 description: .NET Framework Windows 10 veya Windows Server 2016 ' e yüklemeyi öğrenin.
 ms.date: 04/18/2019
-ms.custom: updateeachrelease
-ms.openlocfilehash: 1443ae8f8d4e61b0561f4827fafc9ecedd80fccc
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 8bd54133f67395d0f110dd24e9e77521bbfe2bab
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144740"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558783"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 ve Windows Server 2016 ve sonraki sürümlere .NET Framework yüklemesini
 

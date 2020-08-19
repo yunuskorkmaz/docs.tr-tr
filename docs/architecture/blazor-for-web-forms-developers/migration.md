@@ -7,12 +7,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/19/2019
-ms.openlocfilehash: ca3d8747b02602c89aec187ea0826e658fb0cbc4
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: ba6dbfdf9a4fa9973dfe84cf5d58f1300f5d0cb4
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267808"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557548"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-no-locblazor"></a>ASP.NET Web Forms 'den geçiş Blazor
 
@@ -559,10 +559,6 @@ Blazor' De, eşdeğer biçimlendirme bir *Create. Razor* dosyasında verilmişti
 ```
 
 `EditForm`Bağlam doğrulama desteğini içerir ve girişin etrafında sarmalanabilir. Veri ek açıklamaları, doğrulama eklemenin yaygın bir yoludur. Bu tür doğrulama desteği bileşen aracılığıyla eklenebilir `DataAnnotationsValidator` . Bu mekanizma hakkında daha fazla bilgi için bkz. [ASP.NET Core Blazor Forms ve Validation](/aspnet/core/blazor/forms-validation).
-
-## <a name="migrate-built-in-web-forms-controls"></a>Yerleşik Web Forms denetimlerini geçirme
-
-*Bu içerik yakında geliyor.*
 
 ## <a name="migrate-configuration"></a>Yapılandırmayı geçir
 

@@ -2,20 +2,20 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: 9b1e190579902dda71547b01f31dd5adcc22fe9c
-ms.sourcegitcommit: c8c3e1c63a00b7d27f76f5e50ee6469e6bdc8987
+ms.openlocfilehash: e5c0ec3423cf98895b49596633c81861bbcf4878
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87251198"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557847"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Adı
 
-`dotnet test`-Birim testlerini yürütmek için kullanılan .NET test sürücüsü.
+`dotnet test` -Birim testlerini yürütmek için kullanılan .NET test sürücüsü.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -75,27 +75,27 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
   Testleri sorumluyu modunda çalıştırır. Bu seçenek, test ana bilgisayarının kilitlenmesine neden olan sorunlu testleri yalıtmak için yararlıdır. Kilitlenme algılandığında, `TestResults/<Guid>/<Guid>_Sequence.xml` çökmeden önce çalıştırılan testlerin sırasını yakalayan bir sıra dosyası oluşturur.
 
-- **`--blame-crash`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+- **`--blame-crash`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
   Testleri sorumluyu modunda çalıştırır ve test ana bilgisayarı beklenmedik bir şekilde çıktığında kilitlenme dökümünü toplar. Bu seçenek yalnızca Windows 'ta desteklenir. *procdump.exe* ve *procdump64.exe* IÇEREN bir dizin, yol veya PROCDUMP_PATH ortam değişkeninde olmalıdır. [Araçları indirin](https://docs.microsoft.com/sysinternals/downloads/procdump). Şunu gösterir `--blame` .
 
-- **`--blame-crash-dump-type <DUMP_TYPE>`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+- **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
   Toplanacak kilitlenme bilgi dökümü türü. Şunu gösterir `--blame-crash` .
 
-- **`--blame-crash-collect-always`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+- **`--blame-crash-collect-always`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
   Beklenen ve beklenmeyen test ana bilgisayarı çıkışında oluşan kilitlenme dökümünü toplar.
 
-- **`--blame-hang`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+- **`--blame-hang`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
   Testleri sorumluyu modunda çalıştırın ve bir test verilen zaman aşımını aştığında bir askıda kalma dökümü toplar.
 
-- **`--blame-hang-dump-type <DUMP_TYPE>`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+- **`--blame-hang-dump-type <DUMP_TYPE>`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
   Toplanacak kilitlenme bilgi dökümü türü. `full`, `mini` Veya olmalıdır `none` . `none`Belirtildiğinde, test ana bilgisayarı zaman aşımında sonlandırılır, ancak hiçbir döküm toplanmaz. Şunu gösterir `--blame-hang` .
 
-- **`--blame-hang-timeout <TIMESPAN>`**(.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
+- **`--blame-hang-timeout <TIMESPAN>`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
   Test ana zaman aşımı, bir askıda kalma dökümü tetiklenir ve test ana bilgisayarı işlemi sonlandırılır. Zaman aşımı değeri aşağıdaki biçimlerden birinde belirtilir:
   
@@ -156,7 +156,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  Çalıştırılacak ikililerin bulunacağı dizin. Belirtilmemişse, varsayılan yol olur `./bin/<configuration>/<framework>/` .  Birden çok hedef çerçevesi olan projeler için ( `TargetFrameworks` özelliği aracılığıyla), `--framework` Bu seçeneği ne zaman belirttiğinizde de tanımlamanız gerekir. `dotnet test`her zaman çıkış dizininden testleri çalıştırır. <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType>' I, çıkış dizininde test varlıklarını kullanmak için kullanabilirsiniz.
+  Çalıştırılacak ikililerin bulunacağı dizin. Belirtilmemişse, varsayılan yol olur `./bin/<configuration>/<framework>/` .  Birden çok hedef çerçevesi olan projeler için ( `TargetFrameworks` özelliği aracılığıyla), `--framework` Bu seçeneği ne zaman belirttiğinizde de tanımlamanız gerekir. `dotnet test` her zaman çıkış dizininden testleri çalıştırır. <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType>' I, çıkış dizininde test varlıklarını kullanmak için kullanabilirsiniz.
 
 - **`-r|--results-directory <RESULTS_DIR>`**
 
@@ -237,32 +237,32 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 `--filter <EXPRESSION>`
 
-`<Expression>`biçimindedir `<property><operator><value>[|&<Expression>]` .
+`<Expression>` biçimindedir `<property><operator><value>[|&<Expression>]` .
 
-`<property>`, öğesinin bir özniteliğidir `Test Case` . Popüler birim testi çerçeveleri tarafından desteklenen özellikler aşağıda verilmiştir:
+`<property>` , öğesinin bir özniteliğidir `Test Case` . Popüler birim testi çerçeveleri tarafından desteklenen özellikler aşağıda verilmiştir:
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Adı</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Ad</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Adı</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:
 
-| İşleç | İşlev        |
+| Operatör | İşlev        |
 | :------: | --------------- |
 | `=`      | Tam eşleşme     |
 | `!=`     | Tam eşleşme yok |
 | `~`      | Contains        |
 | `!~`     | İçermez    |
 
-`<value>`bir dizedir. Tüm aramalar büyük/küçük harfe duyarlıdır.
+`<value>` bir dizedir. Tüm aramalar büyük/küçük harfe duyarlıdır.
 
 Bir ifadesi `<operator>` , otomatik olarak on özelliği olarak kabul `contains` edilir `FullyQualifiedName` (örneğin, `dotnet test --filter xyz` ile aynıdır `dotnet test --filter FullyQualifiedName~xyz` ).
 
 İfadeler koşullu işleçlerle birleştirilebilecek:
 
-| İşleç            | İşlev |
+| Operatör            | İşlev |
 | ------------------- | -------- |
 | <code>&#124;</code> | VEYA       |
 | `&`                 | AND      |

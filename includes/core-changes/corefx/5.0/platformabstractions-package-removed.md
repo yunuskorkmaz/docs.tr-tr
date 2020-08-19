@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d85fb8df7afdc5f4c3faecebcd24d11677798bc9
-ms.sourcegitcommit: 63bb83322814f5e5e5c5b69939b14a3139a6ca7e
+ms.openlocfilehash: a635e2ed6a735b5234c92fd8f5ffa1685fe9373e
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85365627"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558196"
 ---
 ### <a name="microsoftdotnetplatformabstractions-package-removed"></a>Microsoft. DotNet. PlatformAbstractions paketi kaldırıldı
 
@@ -28,7 +28,7 @@ Kitaplık tarafından etkinleştirilen senaryolar <xref:Microsoft.DotNet.Platfor
 
 - Eski sürümler gereksinimlerinizi karşılamıyorsa, API 'lerin kullanımlarını `PlatformAbstractions` Önerilen değişikliklerle değiştirin.
 
-  | `PlatformAbstractions`'SINDEKI | Önerilen değiştirme |
+  | `PlatformAbstractions` 'SINDEKI | Önerilen değiştirme |
   |-|-|
   | `ApplicationEnvironment.ApplicationBasePath` | <xref:System.AppContext.BaseDirectory?displayProperty=nameWithType> |
   | <xref:Microsoft.DotNet.PlatformAbstractions.HashCodeCombiner> | <xref:System.HashCode?displayProperty=nameWithType> |
@@ -39,7 +39,7 @@ Kitaplık tarafından etkinleştirilen senaryolar <xref:Microsoft.DotNet.Platfor
   | `RuntimeEnvironment.OperatingSystemVersion` | <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> ve <xref:System.Environment.OSVersion?displayProperty=nameWithType> |
 
   > [!NOTE]
-  > Ve için çoğu kullanım `RuntimeEnvironment.OperatingSystem` `RuntimeEnvironment.OperatingSystemVersion` örneği, örneğin, bir kullanıcıya, günlüğe kaydetmeye ve telemetrisine görüntüleme amaçlıdır. Çalışma zamanı kararlarını bir işletim sistemi (OS) sürümüne göre yapmanız önerilmez. <xref:System.Environment.OSVersion?displayProperty=nameWithType>Şimdi Windows ve macOS işletim sistemleri için doğru sürümü döndürür. Ancak, çoğu UNIX dağıtımı için "işletim sistemi sürümü" olarak kabul edilir. Örneğin, Linux çekirdek sürümü olabilir veya sürüm sürümü olabilir. Birçok UNIX platformu için <xref:System.Environment.OSVersion?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> tarafından döndürülen sürümünü döndürün `uname` . Linux 'un adı ve sürüm bilgilerini almak için önerilen yaklaşım, */etc/OS-Release* dosyasını okumalıdır.
+  > Ve için çoğu kullanım `RuntimeEnvironment.OperatingSystem` `RuntimeEnvironment.OperatingSystemVersion` örneği, örneğin, bir kullanıcıya, günlüğe kaydetmeye ve telemetrisine görüntüleme amaçlıdır. Çalışma zamanı kararlarını bir işletim sistemi (OS) sürümüne göre yapmanız önerilmez. <xref:System.Environment.OSVersion?displayProperty=nameWithType> Şimdi Windows ve macOS işletim sistemleri için [doğru sürümü döndürür](../../../../docs/core/compatibility/corefx.md#environmentosversion-returns-the-correct-operating-system-version) . Ancak, çoğu UNIX dağıtımı için "işletim sistemi sürümü" olarak kabul edilir. Örneğin, Linux çekirdek sürümü olabilir veya sürüm sürümü olabilir. Birçok UNIX platformu için <xref:System.Environment.OSVersion?displayProperty=nameWithType> ve <xref:System.Runtime.InteropServices.RuntimeInformation.OSDescription?displayProperty=nameWithType> tarafından döndürülen sürümünü döndürün `uname` . Linux 'un adı ve sürüm bilgilerini almak için önerilen yaklaşım, */etc/OS-Release* dosyasını okumalıdır.
 
 #### <a name="category"></a>Kategori
 

@@ -3,12 +3,12 @@ title: Bulutta yerel bir uygulamada önbelleğe alma
 description: Bulut Yerel uygulamasındaki önbelleğe alma stratejilerini öğrenin.
 author: robvet
 ms.date: 05/17/2020
-ms.openlocfilehash: a109db59d7b2005ea97922eef07ae4869e4894a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: a33f143499b5f9545493bc4bc757cc3d152f7aa9
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614298"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557522"
 ---
 # <a name="caching-in-a-cloud-native-app"></a>Bulutta yerel bir uygulamada önbelleğe alma
 
@@ -57,7 +57,7 @@ Redsıs için Azure önbelleği, basit bir önbellek sunucusundan daha fazla. Mi
   
 Gelişmiş senaryolarda, önbelleğe alınmış verilerin bir kopyası [diskte kalıcı](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-how-to-premium-persistence)hale getirilir. Çok zararlı bir olay hem birincil hem de çoğaltma önbelleklerini devre dışı bırakırsa, önbellek en son anlık görüntüden yeniden oluşturulur.
 
-Azure Redis Cache, bir dizi önceden tanımlanmış yapılandırmada ve fiyatlandırma katmanlarında kullanılabilir.  [Premium katman](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-premium-tier-intro) kümeleme, veri kalıcılığı, coğrafi çoğaltma ve sanal ağ yalıtımı gibi birçok kurumsal düzey özelliği sunar.
+Azure Redis Cache, bir dizi önceden tanımlanmış yapılandırmada ve fiyatlandırma katmanlarında kullanılabilir. [Premium katman](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-overview#service-tiers) kümeleme, veri kalıcılığı, coğrafi çoğaltma ve sanal ağ yalıtımı gibi birçok kurumsal düzey özelliği sunar.
 
 >[!div class="step-by-step"]
 >[Önceki](relational-vs-nosql-data.md) 
