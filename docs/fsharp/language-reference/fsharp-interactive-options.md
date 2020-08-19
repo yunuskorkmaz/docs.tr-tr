@@ -1,13 +1,13 @@
 ---
 title: Etkileşimli Seçenekler
 description: F# Etkileşimli, fsi.exe tarafından desteklenen komut satırı seçenekleri hakkında bilgi edinin.
-ms.date: 07/22/2020
-ms.openlocfilehash: abddd1fd990be18ede139ab26ffe80513ba6e0dd
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855354"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558614"
 ---
 # <a name="f-interactive-options"></a>F# Etkileşimli seçenekleri
 
@@ -44,7 +44,7 @@ Listelerin F# Etkileşimli seçenek bağımsız değişkenlerinde göründüğü
 |**--GUI**[ **+**&#124;**-** ]|Windows Forms olay döngüsünü etkinleştirilir veya devre dışı bırakır. Varsayılan değer etkindir.|
 |**--yardım**<br /><br />**-?**|Komut satırı söz dizimini ve her seçeneğin kısa bir açıklamasını göstermek için kullanılır.|
 |**--lib: &lt; Klasör-Listele&gt;**<br /><br />**-I: &lt; Klasör-liste&gt;**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
-|**--Yükle: &lt; dosya adı&gt;**|Başlangıçta verilen kaynak kodu derler ve derlenmiş F # yapılarını oturuma yükler. Hedef kaynak **#use** veya **#load**gibi komut dosyası yönergeleri içeriyorsa,-- **Load** veya **#load**yerine **--Use** veya **#use** kullanmanız gerekir.|
+|**--Yükle: &lt; dosya adı&gt;**|Başlangıçta verilen kaynak kodu derler ve derlenmiş F # yapılarını oturuma yükler.|
 |**--mlcompatibility**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--noframework**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md)|
 |**--nologo**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
@@ -126,7 +126,7 @@ val newYearsDay1999 : DateAndLabel = { Date = 1999-01-01T00:00:00
                                        Label = "New Year" }
 ```
 
-`fsi.AddPrintTransformer`, yazdırma için bir yedek nesne vermek üzere kullanılabilir:
+`fsi.AddPrintTransformer` , yazdırma için bir yedek nesne vermek üzere kullanılabilir:
 
 ```fsharp
 type MyList(values: int list) =
@@ -144,7 +144,7 @@ val x : MyList = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
 ```
 
 Transformatör işlevi geçirildiğinde `fsi.AddPrintTransformer` `null` , yazdırma transformatörü yok sayılır.
-Bu, tür ile başlayarak herhangi bir giriş değerini filtrelemek için kullanılabilir `obj` .  Örnek:
+Bu, tür ile başlayarak herhangi bir giriş değerini filtrelemek için kullanılabilir `obj` .  Örneğin:
 
 ```fsharp
 fsi.AddPrintTransformer(fun (x:obj) ->

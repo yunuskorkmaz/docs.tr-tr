@@ -1,19 +1,19 @@
 ---
 title: Kayıtlar
-description: Kayıtların, F# isteğe bağlı olarak, adlandırılmış değerlerin basit toplamlarını nasıl temsil ettiğini öğrenin.
-ms.date: 06/09/2019
-ms.openlocfilehash: 874c5fa30a36f2778f7a43266316deb8c59d1d72
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+description: 'F # kayıtlarının, isteğe bağlı olarak, adlandırılmış değerlerin basit toplamlarını nasıl temsil ettiğini öğrenin.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216794"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559056"
 ---
 # <a name="records"></a>Kayıtlar
 
 Kayıtlar, isteğe bağlı olarak Üyeler ile adlandırılmış değerlerin basit toplamlarını temsil eder. Bunlar, yapılar veya başvuru türleri olabilir.  Bunlar varsayılan olarak başvuru türlerdir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 [ attributes ]
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Önceki sözdiziminde, *TypeName* kayıt türünün adı, *Label1* ve *Etiket 2* değerleri *Etiketler*olarak adlandırılır ve *Type1* ve *type2* bu değerlerin türleridir. *üye listesi* , türü için isteğe bağlı üyelerin listesidir.  Özniteliği, `[<Struct>]` başvuru türü olan bir kayıt yerine bir struct kaydı oluşturmak için kullanabilirsiniz.
+Önceki sözdiziminde, *TypeName* kayıt türünün adı, *Label1* ve *Etiket 2* değerleri *Etiketler*olarak adlandırılır ve *Type1* ve *type2* bu değerlerin türleridir. *üye listesi* , türü için isteğe bağlı üyelerin listesidir.  `[<Struct>]`Özniteliği, başvuru türü olan bir kayıt yerine bir struct kaydı oluşturmak için kullanabilirsiniz.
 
 Bazı örnekler aşağıda verilmiştir.
 
@@ -34,7 +34,7 @@ Bazı örnekler aşağıda verilmiştir.
 
 Her etiket ayrı bir satırda olduğunda, noktalı virgül isteğe bağlıdır.
 
-*Kayıt ifadeleri*olarak bilinen ifadelerde değerler belirleyebilirsiniz. Derleyici, kullanılan etiketlerden tür kullanır (Etiketler diğer kayıt türlerinden yeterince farklı olursa). Küme ayraçları ({}) kayıt ifadesini kapsar. Aşağıdaki kod, etiketleriyle `x` `y` üç float öğesi olan bir kaydı Başlatan bir kayıt ifadesi gösterir. `z`
+*Kayıt ifadeleri*olarak bilinen ifadelerde değerler belirleyebilirsiniz. Derleyici, kullanılan etiketlerden tür kullanır (Etiketler diğer kayıt türlerinden yeterince farklı olursa). Küme ayraçları ({}) kayıt ifadesini kapsar. Aşağıdaki kod, etiketleriyle üç float öğesi olan bir kaydı Başlatan bir kayıt ifadesi gösterir `x` `y` `z` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -42,7 +42,7 @@ Aynı etiketlere de sahip olan başka bir tür varsa, kısaltılmış biçimi ku
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-En son tanımlanan türün etiketleri, önceden tanımlanmış olan türden önceliklidir, bu nedenle önceki örnekte `mypoint3D` olduğu gibi algılanır. `Point3D` Kayıt türünü aşağıdaki kodda olduğu gibi açıkça belirtebilirsiniz.
+En son tanımlanan türün etiketleri, önceden tanımlanmış olan türden önceliklidir, bu nedenle önceki örnekte olduğu gibi `mypoint3D` algılanır `Point3D` . Kayıt türünü aşağıdaki kodda olduğu gibi açıkça belirtebilirsiniz.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
@@ -112,7 +112,7 @@ and Address =
     Occupant: Person }
 ```
 
-Önceki örneği `and` anahtar sözcüğü olmadan tanımlamanız durumunda derlenmez. Anahtar `and` sözcüğü, karşılıklı özyinelemeli tanımlar için gereklidir.
+Önceki örneği anahtar sözcüğü olmadan tanımlamanız durumunda `and` derlenmez. `and`Anahtar sözcüğü, karşılıklı özyinelemeli tanımlar için gereklidir.
 
 ## <a name="pattern-matching-with-records"></a>Kayıtlarla eşleşen desenler
 
@@ -126,6 +126,39 @@ Bu kodun çıktısı aşağıdaki gibidir.
 Point is at the origin.
 Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
+```
+
+## <a name="records-and-members"></a>Kayıtlar ve Üyeler
+
+Kayıtlar üzerinde, sınıflar ile yaptığınız gibi Üyeler belirtebilirsiniz. Alanlar için destek yoktur. Yaygın bir yaklaşım, `Default` kolay kayıt oluşturma için statik bir üye tanımlamaktır:
+
+```fsharp
+type Person =
+  { Name: string
+    Age: int
+    Address: string }
+
+    static member Default =
+        { Name = "Phillip"
+          Age = 12
+          Address = "123 happy fun street" }
+
+let defaultPerson = Person.Default
+```
+
+Kendi kendine tanımlayıcı kullanırsanız, bu tanımlayıcı, üyesini çağıran kaydın örneğine başvurur:
+
+```fsharp
+type Person =
+  { Name: string
+    Age: int
+    Address: string }
+
+    member this.WeirdToString() =
+        this.Name + this.Address + string this.Age
+
+let p = { Name = "a"; Age = 12; Address = "abc123 }
+let weirdString = p.WeirdToString()
 ```
 
 ## <a name="differences-between-records-and-classes"></a>Kayıtlar ve sınıflar arasındaki farklılıklar
@@ -142,14 +175,14 @@ Bu kodun çıktısı aşağıdaki gibidir:
 The records are equal.
 ```
 
-Aynı kodu sınıflarla yazarsanız, iki değer yığında iki nesneyi temsil ettiğinden ve yalnızca adresler karşılaştırılacağından (sınıf türü `System.Object.Equals` yöntemi geçersiz kılmadığı takdirde), iki sınıf nesnesi eşit değildir.
+Aynı kodu sınıflarla yazarsanız, iki değer yığında iki nesneyi temsil ettiğinden ve yalnızca adresler karşılaştırılacağından (sınıf türü yöntemi geçersiz kılmadığı takdirde), iki sınıf nesnesi eşit değildir `System.Object.Equals` .
 
-Kayıtlar için başvuru eşitlik gerekiyorsa, kaydın üzerine özniteliği `[<ReferenceEquality>]` ekleyin.
+Kayıtlar için başvuru eşitlik gerekiyorsa, `[<ReferenceEquality>]` kaydın üzerine özniteliği ekleyin.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F# Türleri](fsharp-types.md)
 - [Sınıflar](classes.md)
-- [F# Dili Başvurusu](index.md)
+- [F # dil başvurusu](index.md)
 - [Başvuru-eşitlik](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
-- [Desen Eşleştirme](pattern-matching.md)
+- [Model eşleştirme](pattern-matching.md)

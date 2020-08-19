@@ -1,6 +1,6 @@
 ---
 title: Klavye Başvurusu
-description: Tüm F# dil anahtar kelimeleri hakkında bilgi bağlantıları bulun.
+description: 'Tüm F # dil anahtar kelimeleri hakkındaki bilgilerin bağlantılarını bulun.'
 f1_keywords:
 - new_FS
 - use_FS
@@ -74,98 +74,100 @@ f1_keywords:
 - global_FS
 - select_FS
 - use!_FS
+- const_FS
 dev_langs:
 - FSharp
-ms.date: 11/04/2019
-ms.openlocfilehash: 34959f471406643e85990c2c80a38a684759a7f9
-ms.sourcegitcommit: b16eacb6f94a5b601882a861ad17cc5470a8d5d5
+ms.date: 08/15/2020
+ms.openlocfilehash: 15505c123dd0d6497fbc80c8fc9f0910018911ea
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80352317"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558107"
 ---
 # <a name="keyword-reference"></a>Klavye Başvurusu
 
-Bu konu, tüm F# dil anahtar kelimeleri hakkında bilgi bağlantıları içerir.
+Bu konu, tüm F # dil anahtar kelimeleri hakkında bilgi bağlantıları içerir.
 
-## <a name="f-keyword-table"></a>F# Anahtar Kelime Tablosu
+## <a name="f-keyword-table"></a>F # anahtar sözcük tablosu
 
-Aşağıdaki tabloda, tüm F# anahtar kelimeleri alfabetik sırayla, kısa açıklamalar ve daha fazla bilgi içeren ilgili konulara bağlantılar gösterilmektedir.
+Aşağıdaki tablo, tüm F # anahtar sözcüklerini kısa açıklamalarla ve daha fazla bilgi içeren ilgili konuların bağlantılarıyla birlikte alfabetik sırayla gösterir.
 
-|Anahtar kelime|Bağlantı|Açıklama|
+|Sözcükle|Bağlantı|Açıklama|
 |-------|----|-----------|
-|`abstract`|[Üyeler](./members/index.md)<br /><br />[Soyut Sınıflar](abstract-classes.md)|Beyan edildiği türde uygulama olmayan veya sanal olan ve varsayılan bir uygulaması olan bir yöntemi gösterir.|
-|`and`|[`let`Bağlama](./functions/let-bindings.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Üyeler](./members/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Karşılıklı özyinelemeli bağlamalarda ve kayıtlarda, özellik bildirimlerinde ve genel parametrelerüzerinde birden çok kısıtlamayla kullanılır.|
-|`as`|[Sınıflar](classes.md)<br /><br />[Desen Eşleştirme](Pattern-Matching.md)|Geçerli sınıf nesnesine bir nesne adı vermek için kullanılır. Ayrıca bir desen maç içinde bütün bir desen için bir ad vermek için kullanılır.|
+|`abstract`|[Üyeler](./members/index.md)<br /><br />[Soyut sınıflar](abstract-classes.md)|İçinde, bildirildiği veya sanal olan ve varsayılan bir uygulamaya sahip olan türde hiçbir uygulamaya sahip olmayan bir yöntemi gösterir.|
+|`and`|[`let` Lara](./functions/let-bindings.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Üyeler](./members/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Karşılıklı özyinelemeli bağlamalar ve kayıtlarda, özellik bildirimlerinde ve genel parametrelerde birden çok kısıtlama ile kullanılır.|
+|`as`|[Sınıflar](classes.md)<br /><br />[Model eşleştirme](Pattern-Matching.md)|Geçerli sınıf nesnesine bir nesne adı vermek için kullanılır. Ayrıca, bir model eşleşmesi içindeki tam bir düzene bir ad vermek için kullanılır.|
 |`assert`|[Onaylamalar](assertions.md)|Hata ayıklama sırasında kodu doğrulamak için kullanılır.|
-|`base`|[Sınıflar](classes.md)<br /><br />[Devralma](inheritance.md)|Taban sınıf nesnesinin adı olarak kullanılır.|
-|`begin`|[Ayrıntılı Sözdizimi](verbose-syntax.md)|Ayrıntılı sözdiziminde, kod bloğunun başlangıcını gösterir.|
-|`class`|[Sınıflar](classes.md)|Ayrıntılı sözdiziminde, sınıf tanımının başlangıcını gösterir.|
-|`default`|[Üyeler](./members/index.md)|Soyut bir yöntemin uygulanmasını gösterir; sanal bir yöntem oluşturmak için soyut bir yöntem bildirimi ile birlikte kullanılır.|
-|`delegate`|[Temsilciler](delegates.md)|Bir temsilci ilan etmek için kullanılır.|
-|`do`|[do Bağlamaları](./functions/do-bindings.md)<br /><br />[Döngüler: `for...to` İfade](loops-for-to-expression.md)<br /><br />[Döngüler: `for...in` İfade](loops-for-in-expression.md)<br /><br />[Döngüler: `while...do` İfade](loops-while-do-expression.md)|Döngü yapıları veya zorunlu kod yürütmek için kullanılır.|
-|`done`|[Ayrıntılı Sözdizimi](verbose-syntax.md)|Ayrıntılı sözdiziminde, döngü ifadesinde bir kod bloğunun sonunu gösterir.|
-|`downcast`|[Atama ve Dönüştürmeler](casting-and-conversions.md)|Kalıtım zincirinde daha düşük bir türe dönüştürmek için kullanılır.|
-|`downto`|[Döngüler: `for...to` İfade](loops-for-to-expression.md)|Ters `for` sayma kullanılırken kullanılan bir ifadede.|
-|`elif`|[Koşullu İfadeler:`if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallanmada kullanılır. Kısa bir `else if`form .|
-|`else`|[Koşullu İfadeler:`if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallanmada kullanılır.|
-|`end`|[Yapılar](structures.md)<br /><br />[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Tür Genişletmeleri](type-extensions.md)<br /><br />[Ayrıntılı Sözdizimi](verbose-syntax.md)|Tür tanımlarında ve tür uzantılarında, üye tanımlarının bir bölümünün sonunu gösterir.<br /><br />Verbose sözdiziminde, `begin` anahtar kelimeyle başlayan bir kod bloğunun sonunu belirtmek için kullanılır.|
-|`exception`|[Özel Durum İşleme](./exception-handling/index.md)<br /><br />[Özel Durum Türleri](./exception-handling/exception-types.md)|Özel durum türünü bildirmek için kullanılır.|
-|`extern`|[Dış İşlevler](./functions/external-functions.md)|Bildirilen program öğesinin başka bir ikili veya derlemede tanımlandığını gösterir.|
-|`false`|[İlkel Türler](basic-types.md)|Boolean edebi olarak kullanılır.|
-|`finally`|[Özel Durumlar: `try...finally` İfade](./exception-handling/the-try-finally-expression.md)|Özel durum `try` oluşup oluşmadığına bakılmaksızın çalıştıran bir kod bloğu tanıtmak için birlikte kullanılır.|
-|`fixed`|[Sabit](fixed.md)|Çöp toplanmasını önlemek için yığındaki bir işaretçiyi "sabitlemek" için kullanılır.|
-|`for`|[Döngüler: `for...to` İfade](loops-for-to-expression.md)<br /><br />[Döngüler: for...in İfadesi](loops-for-in-expression.md)|Döngü yapılarda kullanılır.|
-|`fun`|[Lambda İfadeler: `fun` Anahtar Kelime](./functions/lambda-expressions-the-fun-keyword.md)|Anonim işlevler olarak da bilinen lambda ifadelerinde kullanılır.|
-|`function`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Lambda İfadeleri: fun Anahtar Sözcüğü](./functions/lambda-expressions-the-fun-keyword.md)|`fun` Tek bir bağımsız değişkende desen `match` eşleşen bir lambda ifadesinde anahtar kelimeye ve ifadeye daha kısa bir alternatif olarak kullanılır.|
-|`global`|[Ad Alanları](namespaces.md)|Üst düzey .NET ad alanına başvurmak için kullanılır.|
-|`if`|[Koşullu İfadeler:`if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallanma yapılarında kullanılır.|
-|`in`|[Döngüler: for...in İfadesi](loops-for-in-expression.md)<br /><br />[Ayrıntılı Sözdizimi](verbose-syntax.md)|Sıra ifadeleri ve ayrıntılı sözdiziminde ifadeleri bağlamalardan ayırmak için kullanılır.|
-|`inherit`|[Devralma](inheritance.md)|Taban sınıf veya taban arabirimi belirtmek için kullanılır.|
-|`inline`|[Işlev](./functions/index.md)<br /><br />[Satır İçi İşlevler](./functions/inline-functions.md)|Doğrudan arayanın koduna entegre edilmesi gereken bir işlevi belirtmek için kullanılır.|
+|`base`|[Sınıflar](classes.md)<br /><br />[Devralma](inheritance.md)|Temel sınıf nesnesinin adı olarak kullanılır.|
+|`begin`|[Ayrıntılı Sözdizimi](verbose-syntax.md)|Ayrıntılı söz diziminde kod bloğunun başlangıcını gösterir.|
+|`class`|[Sınıflar](classes.md)|Ayrıntılı söz diziminde, bir sınıf tanımının başlangıcını gösterir.|
+|`default`|[Üyeler](./members/index.md)|Soyut yöntemin bir uygulamasını belirtir; bir sanal yöntem oluşturmak için soyut Yöntem bildirimiyle birlikte kullanılır.|
+|`delegate`|[Temsilciler](delegates.md)|Bir temsilciyi bildirmek için kullanılır.|
+|`do`|[do Bağlamaları](./functions/do-bindings.md)<br /><br />[Döngüler: `for...to` ifade](loops-for-to-expression.md)<br /><br />[Döngüler: `for...in` ifade](loops-for-in-expression.md)<br /><br />[Döngüler: `while...do` ifade](loops-while-do-expression.md)|Döngü yapıları içinde veya kesinlik temelli kodu yürütmek için kullanılır.|
+|`done`|[Ayrıntılı Sözdizimi](verbose-syntax.md)|Ayrıntılı söz diziminde, bir döngü ifadesinde bir kod bloğunun sonunu gösterir.|
+|`downcast`|[Atama ve Dönüştürmeler](casting-and-conversions.md)|Devralma zincirinde daha düşük olan bir türe dönüştürmek için kullanılır.|
+|`downto`|[Döngüler: `for...to` ifade](loops-for-to-expression.md)|Bir `for` ifadede, ters sayım sırasında kullanılır.|
+|`elif`|[Koşullu Ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallandırma içinde kullanılır. Kısa bir biçimi `else if` .|
+|`else`|[Koşullu Ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallandırma içinde kullanılır.|
+|`end`|[Yapılar](structures.md)<br /><br />[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Tür Genişletmeleri](type-extensions.md)<br /><br />[Ayrıntılı Sözdizimi](verbose-syntax.md)|Tür tanımlarında ve tür uzantılarında, üye tanımlarının bir bölümünün sonunu belirtir.<br /><br />Ayrıntılı söz diziminde, anahtar sözcüğüyle başlayan bir kod bloğunun sonunu belirtmek için kullanılır `begin` .|
+|`exception`|[Özel Durum İşleme](./exception-handling/index.md)<br /><br />[Özel Durum Türleri](./exception-handling/exception-types.md)|Bir özel durum türü bildirmek için kullanılır.|
+|`extern`|[Dış İşlevler](./functions/external-functions.md)|Belirtilen bir program öğesinin başka bir ikili veya derlemede tanımlandığını gösterir.|
+|`false`|[İlkel Türler](basic-types.md)|Boolean sabit değeri olarak kullanılır.|
+|`finally`|[Özel durumlar: `try...finally` ifade](./exception-handling/the-try-finally-expression.md)|`try`Bir özel durumun gerçekleşmediğine bakılmaksızın yürütülen bir kod bloğunu tanıtmak için ile birlikte kullanılır.|
+|`fixed`|[Düzenle](fixed.md)|Atık olarak toplanmasını engellemek için yığında bir işaretçiyi "sabitlemek" için kullanılır.|
+|`for`|[Döngüler: `for...to` ifade](loops-for-to-expression.md)<br /><br />[Döngüler: for...in İfadesi](loops-for-in-expression.md)|Döngü yapılarında kullanılır.|
+|`fun`|[Lambda Ifadeleri: `fun` anahtar sözcüğü](./functions/lambda-expressions-the-fun-keyword.md)|Anonim işlevler olarak da bilinen Lambda ifadelerinde kullanılır.|
+|`function`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Lambda Ifadeleri: Fun anahtar sözcüğü](./functions/lambda-expressions-the-fun-keyword.md)|Anahtar kelimesine daha kısa bir alternatif olarak `fun` ve `match` tek bir bağımsız değişkende kalıp eşleşmesi olan bir lambda ifadesinde bir ifadeye kullanılır.|
+|`global`|[Ad alanları](namespaces.md)|Üst düzey .NET ad alanına başvurmak için kullanılır.|
+|`if`|[Koşullu Ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)|Koşullu dallanma yapılarında kullanılır.|
+|`in`|[Döngüler: for...in İfadesi](loops-for-in-expression.md)<br /><br />[Ayrıntılı Sözdizimi](verbose-syntax.md)|Deyimleri bağlamalardan ayırmak için dizi ifadeleri ve ayrıntılı sözdiziminde kullanılır.|
+|`inherit`|[Devralma](inheritance.md)|Temel sınıf veya temel arabirim belirtmek için kullanılır.|
+|`inline`|[İşlevler](./functions/index.md)<br /><br />[Satır İçi İşlevler](./functions/inline-functions.md)|Doğrudan çağıranın koduna tümleştirilmesi gereken bir işlevi göstermek için kullanılır.|
 |`interface`|[Arabirimler](interfaces.md)|Arabirimleri bildirmek ve uygulamak için kullanılır.|
-|`internal`|[Erişim Denetimi](access-control.md)|Bir üyenin bir derlemenin içinde görünür olduğunu, ancak dışında olmadığını belirtmek için kullanılır.|
-|`lazy`|[Gecikmeli İfadeler](lazy-expressions.md)|Yalnızca bir sonuç gerektiğinde gerçekleştirilecek bir ifadeyi belirtmek için kullanılır.|
-|`let`|[`let`Bağlama](./functions/let-bindings.md)|Bir adı bir değere veya işleve ilişkilendirmek veya bağlamak için kullanılır.|
-|`let!`|[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)<br /><br />[Hesaplama İfadeleri](computation-expressions.md)|Bir adı asenkron hesaplama nın sonucuna bağlamak için asenkron iş akışlarında veya diğer hesaplama ifadelerinde, bir adı bir sonuca bağlamak için kullanılan ve hesaplama türünden olan bir sonuca bağlamak için kullanılır.|
-|`match`|[Eşleşme İfadeleri](match-expressions.md)|Bir değeri bir desenle karşılaştırarak dallandırmak için kullanılır.|
-|`match!`|[Hesaplama İfadeleri](computation-expressions.md#match)|Bir hesaplama ifadesive sonucuyla eşleşen desen için bir çağrının satır satırını almak için kullanılır.|
-|`member`|[Üyeler](./members/index.md)|Nesne türünde bir özelliği veya yöntemi bildirmek için kullanılır.|
-|`module`|[Modules](modules.md)|Bir adı mantıksal olarak diğer kodlardan ayırmak için ilgili türler, değerler ve işlevler grubuyla ilişkilendirmek için kullanılır.|
-|`mutable`|[let Bağlamaları](./functions/let-bindings.md)|Bir değişkeni, yani değiştirilebilen bir değeri bildirmek için kullanılır.|
-|`namespace`|[Ad Alanları](namespaces.md)|Bir adı mantıksal olarak diğer kodlardan ayırmak için ilgili tür ve modüllerden oluşan bir grupla ilişkilendirmek için kullanılır.|
-|`new`|[Oluşturucular](./members/constructors.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Bir nesne oluşturan veya oluşturabilen bir oluşturucusu bildirmek, tanımlamak veya çağırmak için kullanılır.<br /><br />Ayrıca, bir türün belirli bir oluşturucuya sahip olması gerektiğini belirtmek için genel parametre kısıtlamalarında da kullanılır.|
-|`not`|[Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Aslında bir anahtar kelime değil. Ancak, `not struct` birlikte genel bir parametre kısıtlaması olarak kullanılır.|
-|`null`|[Boş Değerler](./values/null-values.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Nesnenin yokluğunu gösterir.<br /><br />Ayrıca genel parametre kısıtlamaları kullanılır.|
-|`of`|[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Temsilciler](delegates.md)<br /><br />[Özel Durum Türleri](./exception-handling/exception-types.md)|Değer kategorilerinin türünü belirtmek için ayrımcı birliş ve temsilci ve özel durum bildirimlerinde kullanılır.|
-|`open`|[İthalat Bildirimleri: `open` Anahtar Kelime](import-declarations-the-open-keyword.md)|Bir ad alanının veya modülün içeriğini niteliksiz olarak kullanılabilir hale getirmek için kullanılır.|
-|`or`|[Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Boolean operatörleri olarak boolean `or` koşullarında kullanılır. `||`Eşdeğeri .<br /><br />Üye kısıtlamalarında da kullanılır.|
-|`override`|[Üyeler](./members/index.md)|Temel sürümden farklı soyut veya sanal bir yöntemin sürümünü uygulamak için kullanılır.|
-|`private`|[Erişim Denetimi](access-control.md)|Bir üyeye erişimi aynı türde veya modülde kodla sınırlandıran.|
-|`public`|[Erişim Denetimi](access-control.md)|Bir üyeye dışarıdan giriş izni verir.|
-|`rec`|[Işlev](./functions/index.md)|Bir işlevin özyinelemeli olduğunu belirtmek için kullanılır.|
-|`return`|[Zaman Uyumsuz İş Akışları](Asynchronous-Workflows.md)<br /><br />[Hesaplama İfadeleri](computation-expressions.md)|Bir hesaplama ifadesinin sonucu olarak sağlamak için bir değer belirtmek için kullanılır.|
-|`return!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Değerlendirildiğinde, içeren hesaplama ifadesinin sonucunu sağlayan bir hesaplama ifadesini belirtmek için kullanılır.|
-|`select`|[Sorgu İfadeleri](query-expressions.md)|Sorgu ifadelerinde hangi alanların veya sütunların ayıklanması gerektiğini belirtmek için kullanılır. Bunun bağlamsal bir anahtar kelime olduğunu, bunun da aslında ayrılmış bir sözcük olmadığı ve yalnızca uygun bağlamda bir anahtar kelime gibi davrandığı anlamına geldiğini unutmayın.|
-|`static`|[Üyeler](./members/index.md)|Bir tür örneği olmadan çağrılabilen bir yöntem veya özelliği veya bir türün tüm örnekleri arasında paylaşılan bir değer üyesini belirtmek için kullanılır.|
-|`struct`|[Yapılar](structures.md)<br /><br /> [Demetler](tuples.md)<br/><br/>[Kısıtlamalar](./generics/constraints.md)|Yapı türünü bildirmek için kullanılır.<br /><br/>Bir yapı tuple belirtmek için kullanılır.<br/><br />Ayrıca genel parametre kısıtlamaları kullanılır.<br /><br />Modül tanımlarında OCaml uyumluluğu için kullanılır.|
-|`then`|[Koşullu İfadeler:`if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Oluşturucular](./members/constructors.md)|Koşullu ifadelerde kullanılır.<br /><br />Ayrıca nesne yapımından sonra yan etkileri gerçekleştirmek için kullanılır.|
-|`to`|[Döngüler: `for...to` İfade](loops-for-to-expression.md)|Bir `for` aralığı belirtmek için döngüler halinde kullanılır.|
-|`true`|[İlkel Türler](basic-types.md)|Boolean edebi olarak kullanılır.|
-|`try`|[Özel Durumlar: try...with İfadesi](./exception-handling/the-try-with-expression.md)<br /><br />[Özel Durumlar: try...finally İfadesi](./exception-handling/the-try-finally-expression.md)|Özel durum oluşturabilecek bir kod bloğu tanıtmak için kullanılır. Birlikte kullanılır `with` `finally`veya .|
-|`type`|[F# Türleri](fsharp-types.md)<br /><br />[Sınıflar](classes.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Yapılar](structures.md)<br /><br />[Numaralandırma](enumerations.md)<br /><br />[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Tür Kısaltmaları](type-abbreviations.md)<br /><br />[Ölçü Birimleri](units-of-measure.md)|Bir sınıf, kayıt, yapı, ayrımcı birleşim, numaralandırma türü, ölçü birimi veya tür kısaltması bildirmek için kullanılır.|
-|`upcast`|[Atama ve Dönüştürmeler](casting-and-conversions.md)|Kalıtım zincirinde daha yüksek bir türe dönüştürmek için kullanılır.|
-|`use`|[Kaynak Yönetimi: `use` Anahtar Kelime](resource-management-the-use-keyword.md)|Özgür kaynaklariçin çağrılması gereken `let` `Dispose` değerler yerine kullanılır.|
-|`use!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Serbest kaynaklara `let!` çağrılması gereken `Dispose` değerler için eşzamanlı iş akışları ve diğer hesaplama ifadeleri yerine kullanılır.|
-|`val`|[Belirtik Alanlar: `val` Anahtar Sözcüğü](./members/explicit-fields-the-val-keyword.md)<br /><br />[İmzalar](signature-files.md)<br /><br />[Üyeler](./members/index.md)|Bir değeri belirtmek için imzada veya bir üyeyi sınırlı durumlarda beyan etmek için bir türde kullanılır.|
-|`void`|[İlkel Türler](basic-types.md)|.NET `void` türünü gösterir. Diğer .NET dilleriyle çalışırken kullanılır.|
-|`when`|[Kısıtlamalar](./generics/constraints.md)|Desen eşleşmelerinde Boolean koşulları *(korumaları)* için ve genel bir tür parametresi için bir kısıtlama yan tümcesi tanıtmak için kullanılır.|
-|`while`|[Döngüler: `while...do` İfade](loops-while-do-expression.md)|Bir döngü yapısı tanıttı.|
-|`with`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Nesne İfadeleri](object-expressions.md)<br /><br />[Kayıt İfadelerini Kopyalama ve Güncelleştirme](copy-and-update-record-expressions.md)<br /><br />[Tür Genişletmeleri](type-extensions.md)<br /><br />[Özel Durumlar: `try...with` İfade](./exception-handling/the-try-with-expression.md)|Desen eşleştirme `match` ifadelerinde anahtar kelimeyle birlikte kullanılır. Ayrıca nesne ifadeleri, kayıt kopyalama ifadeleri ve üye tanımları tanıtmak ve özel durum işleyicileri tanıtmak için uzantıları yazın kullanılır.|
-|`yield`|[Listeler](lists.md), [Diziler](arrays.md), [Diziler](sequences.md)|Bir dizi için değer üretmek için liste, dizi veya sıra lı ifadede kullanılır. Çoğu durumda örtülü olduğu gibi genellikle atlanabilir.|
-|`yield!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Belirli bir hesaplama ifadesinin sonucunu içeren hesaplama ifadesi için sonuç koleksiyonuna eklemek için bir hesaplama ifadesinde kullanılır.|
+|`internal`|[Access Control](access-control.md)|Bir üyenin bir derlemenin içinde görünür olduğunu ancak dışarıda olduğunu belirtmek için kullanılır.|
+|`lazy`|[Gecikmeli İfadeler](lazy-expressions.md)|Yalnızca bir sonuç gerektiğinde gerçekleştirilecek bir ifade belirtmek için kullanılır.|
+|`let`|[`let` Lara](./functions/let-bindings.md)|Bir adı bir değer veya işleve ilişkilendirmek veya bağlamak için kullanılır.|
+|`let!`|[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)<br /><br />[Hesaplama İfadeleri](computation-expressions.md)|Bir adı zaman uyumsuz bir hesaplamanın sonucuna bağlamak için zaman uyumsuz iş akışlarında veya bir adı, hesaplama türü olan bir sonuca bağlamak için kullanılan diğer hesaplama ifadelerinde kullanılır.|
+|`match`|[Eşleşme İfadeleri](match-expressions.md)|Bir değeri bir düzeniyle karşılaştırarak dallandırma için kullanılır.|
+|`match!`|[Hesaplama İfadeleri](computation-expressions.md#match)|Bir hesaplama ifadesine çağrı ve sonuç olarak bir model eşleşmesi için kullanılır.|
+|`member`|[Üyeler](./members/index.md)|Bir nesne türünde bir özelliği veya yöntemi bildirmek için kullanılır.|
+|`module`|[Modül](modules.md)|Bir adı ilgili türler, değerler ve işlevler grubuyla ilişkilendirmek için kullanılır, bu da diğer koddan mantıksal olarak ayrılır.|
+|`mutable`|[let Bağlamaları](./functions/let-bindings.md)|Değişken, yani değiştirilebilen bir değer bildirmek için kullanılır.|
+|`namespace`|[Ad alanları](namespaces.md)|Bir adı ilgili türler ve modüller grubuyla ilişkilendirmek için kullanılır, diğer koddan mantıksal olarak ayırın.|
+|`new`|[Oluşturucular](./members/constructors.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Bir nesnesi oluşturan ya da oluşturabileceğiniz bir oluşturucuyu bildirmek, tanımlamak veya çağırmak için kullanılır.<br /><br />Ayrıca, bir türün belirli bir oluşturucuya sahip olması gerektiğini göstermek için genel parametre kısıtlamalarında de kullanılır.|
+|`not`|[Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Gerçekte bir anahtar sözcük değil. Ancak, `not struct` içinde genel parametre kısıtlaması olarak kullanılır.|
+|`null`|[Null değerler](./values/null-values.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Bir nesnenin yokluğunu gösterir.<br /><br />Genel parametre kısıtlamalarında de kullanılır.|
+|`of`|[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Temsilciler](delegates.md)<br /><br />[Özel Durum Türleri](./exception-handling/exception-types.md)|Değer kategorilerinin türünü ve temsilci ve özel durum bildirimlerini göstermek için ayrılmış birleşimlerde kullanılır.|
+|`open`|[İçeri aktarma bildirimleri: `open` anahtar sözcüğü](import-declarations-the-open-keyword.md)|Bir ad alanının veya modülün içeriğini nitelemeden kullanılabilir hale getirmek için kullanılır.|
+|`or`|[Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)<br /><br />[Kısıtlamalar](./generics/constraints.md)|Boole koşulları ile Boolean işleci olarak kullanılır `or` . İle eşdeğerdir `||` .<br /><br />Üye kısıtlamalarında da kullanılır.|
+|`override`|[Üyeler](./members/index.md)|Temel sürümden farklı bir soyut veya sanal yöntemin sürümünü uygulamak için kullanılır.|
+|`private`|[Access Control](access-control.md)|Aynı türdeki veya modüldeki bir üyeye erişimi bir koda kısıtlar.|
+|`public`|[Access Control](access-control.md)|Tür dışından bir üyeye erişime izin verir.|
+|`rec`|[İşlevler](./functions/index.md)|Bir işlevin özyinelemeli olduğunu göstermek için kullanılır.|
+|`return`|[Zaman Uyumsuz İş Akışları](Asynchronous-Workflows.md)<br /><br />[Hesaplama İfadeleri](computation-expressions.md)|Hesaplama ifadesinin sonucu olarak sağlanacak bir değeri belirtmek için kullanılır.|
+|`return!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Değerlendirildiğinde, kapsayan hesaplama ifadesinin sonucunu sağlayan bir hesaplama ifadesi belirtmek için kullanılır.|
+|`select`|[Sorgu İfadeleri](query-expressions.md)|Ayıklanacak alanları veya sütunları belirtmek için sorgu ifadelerinde kullanılır. Bu, aslında ayrılmış bir sözcük değil ve yalnızca uygun bağlamda anahtar sözcük gibi davranan bir bağlamsal anahtar sözcüktür.|
+|`static`|[Üyeler](./members/index.md)|Bir türün örneği olmadan çağrılabilecek bir yöntemi veya özelliği ya da bir türün tüm örnekleri arasında paylaşılan bir değer üyesini göstermek için kullanılır.|
+|`struct`|[Yapılar](structures.md)<br /><br /> [Demetler](tuples.md)<br/><br/>[Kısıtlamalar](./generics/constraints.md)|Bir yapı türünü bildirmek için kullanılır.<br /><br/>Yapı tanımlama grubu belirtmek için kullanılır.<br/><br />Genel parametre kısıtlamalarında de kullanılır.<br /><br />Modül tanımlarında OCaml uyumluluğu için kullanılır.|
+|`then`|[Koşullu Ifadeler: `if...then...else`](conditional-expressions-if-then-else.md)<br /><br />[Oluşturucular](./members/constructors.md)|Koşullu ifadelerde kullanılır.<br /><br />Nesne oluşturulduktan sonra yan etkileri gerçekleştirmek için de kullanılır.|
+|`to`|[Döngüler: `for...to` ifade](loops-for-to-expression.md)|`for`Bir aralığı göstermek için Döngülerde kullanılır.|
+|`true`|[İlkel Türler](basic-types.md)|Boolean sabit değeri olarak kullanılır.|
+|`try`|[Özel Durumlar: try...with İfadesi](./exception-handling/the-try-with-expression.md)<br /><br />[Özel Durumlar: try...finally İfadesi](./exception-handling/the-try-finally-expression.md)|Özel durum oluşturabilen bir kod bloğunu tanıtmak için kullanılır. Veya ile birlikte `with` kullanılır `finally` .|
+|`type`|[F# Türleri](fsharp-types.md)<br /><br />[Sınıflar](classes.md)<br /><br />[Kayıtlar](records.md)<br /><br />[Yapılar](structures.md)<br /><br />[Numaralandırmalar](enumerations.md)<br /><br />[Ayrılmış Birleşimler](discriminated-unions.md)<br /><br />[Tür Kısaltmaları](type-abbreviations.md)<br /><br />[Ölçü Birimleri](units-of-measure.md)|Bir sınıf, kayıt, yapı, ayırt edici birleşim, numaralandırma türü, ölçü birimi veya tür kısaltması bildirmek için kullanılır.|
+|`upcast`|[Atama ve Dönüştürmeler](casting-and-conversions.md)|Devralma zincirinde daha üst bir türe dönüştürmek için kullanılır.|
+|`use`|[Kaynak yönetimi: `use` anahtar sözcüğü](resource-management-the-use-keyword.md)|`let`Serbest kaynaklar için çağrılması gereken değerler için yerine kullanılır `Dispose` .|
+|`use!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|`let!`Zaman uyumsuz iş akışları ve `Dispose` boş kaynaklar için çağrılması gereken değerler için diğer hesaplama ifadeleri yerine kullanılır.|
+|`val`|[Açık alanlar: `val` anahtar sözcük](./members/explicit-fields-the-val-keyword.md)<br /><br />[İmzalar](signature-files.md)<br /><br />[Üyeler](./members/index.md)|Bir değeri belirtmek için bir imzada veya bir üyeyi bildirmek için bir tür içinde, sınırlı durumlarda kullanılır.|
+|`void`|[İlkel Türler](basic-types.md)|.NET türünü gösterir `void` . Diğer .NET dilleri ile birlikte çalışırken kullanılır.|
+|`when`|[Kısıtlamalar](./generics/constraints.md)|Bir genel tür parametresi için bir kısıtlama yan tümcesi tanıtmak üzere, desenli Boole koşulları (*korumaları olduğunda*) için kullanılır.|
+|`while`|[Döngüler: `while...do` ifade](loops-while-do-expression.md)|Bir döngü yapısı tanıtır.|
+|`with`|[Eşleşme İfadeleri](match-expressions.md)<br /><br />[Nesne İfadeleri](object-expressions.md)<br /><br />[Kayıt İfadelerini Kopyalama ve Güncelleştirme](copy-and-update-record-expressions.md)<br /><br />[Tür Genişletmeleri](type-extensions.md)<br /><br />[Özel durumlar: `try...with` ifade](./exception-handling/the-try-with-expression.md)|`match`Model eşleştirme ifadelerinde anahtar sözcüğü ile birlikte kullanılır. Ayrıca, nesne ifadelerinde, üye tanımlarını tanıtmak ve özel durum işleyicilerini tanıtmak için tür uzantıları kaydetmek için kullanılır.|
+|`yield`|[Listeler](lists.md), [diziler](arrays.md), [diziler](sequences.md)|Bir dizi için değer üretmek üzere bir liste, dizi veya dizi ifadesinde kullanılır. Genellikle, çoğu durumda örtük olduğu için atlanabilir.|
+|`yield!`|[Hesaplama İfadeleri](computation-expressions.md)<br /><br />[Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)|Belirli bir hesaplama ifadesinin sonucunu, kapsayan hesaplama ifadesi için bir sonuç koleksiyonuna eklemek üzere bir hesaplama ifadesinde kullanılır.|
+|`const`|[Tür Sağlayıcıları](../tutorials/type-providers/index.md)| Tür sağlayıcıları `const` tür parametresi bağımsız değişkeni olarak sabit bir sabit değer belirtmek için anahtar sözcük olarak kullanılmasına izin verir.|
 
-OCaml dilinde anahtar kelimeler olduğundan aşağıdaki belirteçler F# olarak ayrılmıştır:
+OCaml dilinde anahtar sözcükler olduklarından aşağıdaki belirteçler F # içinde ayrılmıştır:
 
 - `asr`
 - `land`
@@ -176,9 +178,9 @@ OCaml dilinde anahtar kelimeler olduğundan aşağıdaki belirteçler F# olarak 
 - `mod`
 - `sig`
 
-`--mlcompatibility` Derleyici seçeneğini kullanıyorsanız, yukarıdaki anahtar kelimeler tanımlayıcı olarak kullanılabilir.
+`--mlcompatibility`Derleyici seçeneğini kullanırsanız yukarıdaki anahtar sözcükler tanımlayıcı olarak kullanılabilir.
 
-Aşağıdaki belirteçler, F# dilinin gelecekteki genişlemesi için anahtar kelime olarak ayrılmıştır:
+Aşağıdaki belirteçler F # dilinin gelecek genişletmesi için anahtar sözcük olarak ayrılmıştır:
 
 - `atomic`
 - `break`
@@ -208,6 +210,6 @@ Aşağıdaki belirteçler, F# dilinin gelecekteki genişlemesi için anahtar kel
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Dil Referansı](index.md)
+- [F # dil başvurusu](index.md)
 - [Simge ve İşleç Başvurusu](./symbol-and-operator-reference/index.md)
-- [Derleyici Seçenekleri](compiler-options.md)
+- [Derleyici seçenekleri](compiler-options.md)

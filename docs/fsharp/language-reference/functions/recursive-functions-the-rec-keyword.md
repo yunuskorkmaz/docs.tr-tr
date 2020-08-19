@@ -1,13 +1,13 @@
 ---
 title: 'Yinelemeli İşlevler: rec Anahtar Sözcüğü'
 description: "Bir özyinelemeli işlev tanımlamak için ' Let ' anahtar sözcüğüyle F # ' Rec ' anahtar sözcüğünün nasıl kullanıldığını öğrenin."
-ms.date: 05/16/2016
-ms.openlocfilehash: c2374f90b4585327c6f5208a3d6bca75a23d0cbb
-ms.sourcegitcommit: 7499bdb428d63ed0e19e97f54d3d576c41598659
+ms.date: 08/12/2020
+ms.openlocfilehash: 389357bd13cef39b1d07972c1a3167320b61612b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87455663"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558718"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Yinelemeli İşlevler: rec Anahtar Sözcüğü
 
@@ -18,28 +18,44 @@ ms.locfileid: "87455663"
 ```fsharp
 // Recursive function:
 let rec function-nameparameter-list =
-function-body
+    function-body
 
 // Mutually recursive functions:
 let rec function1-nameparameter-list =
-function1-body
+    function1-body
+
 and function2-nameparameter-list =
-function2-body
+    function2-body
 ...
 ```
 
 ## <a name="remarks"></a>Açıklamalar
 
-Özyinelemeli işlevler, kendilerini çağıran işlevler, F # dilinde açıkça tanımlanır. Bu, tanımlanmakta olan tanımlayıcıların işlevin kapsamında kullanılabilir olmasını sağlar.
+Özyinelemeli işlevler-kendilerini çağıran işlevler-anahtar sözcüğüyle F # dilinde açıkça tanımlanır `rec` . `rec`Anahtar sözcüğü, `let` bağlamanın adını gövdesinde kullanılabilir hale getirir.
 
-Aşağıdaki kod, matematik tanımını kullanarak *n*<sup>.</sup> fibonaccı numarasını hesaplayan özyinelemeli bir işlevi gösterir.
+Aşağıdaki örnek, matematik tanımını kullanarak *n*<sup>.</sup> fibonaccı numarasını hesaplayan özyinelemeli bir işlevi gösterir.
 
-[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
+```fsharp
+let fib n =
+    match n with
+    | 0 | 1 -> 1
+    | n -> fib (n-1) + fib (n-2)
+```
 
 > [!NOTE]
 > Uygulamada, önceki örneğe benzer bir kod, unecessarily daha önce hesaplanmış olan değerleri yeniden hesaplar olduğundan ideal değildir. Bunun nedeni, bu makalede daha fazla açıklanacak tail özyinelemeli değildir.
 
-Yöntemler tür içinde örtük olarak özyinelemeli; anahtar sözcüğü eklemeye gerek yoktur `rec` . Sınıfların içindeki bağlamaların örtülü olarak özyinelemeli olmadığından izin verin.
+Yöntemler içinde tanımlandıkları tür içinde örtülü olarak özyinelemeli olur, yani anahtar sözcüğü eklemeye gerek yoktur `rec` . Örneğin:
+
+```fsharp
+type MyClass() =
+    member this.Fib(n) =
+        match n with
+        | 0 | 1 -> 1
+        | n -> this.Fib(n-1) + this.Fib(n-2)
+```
+
+Sınıfların içindeki bağlamaların örtülü olarak özyinelemeli olmamasına izin verir. Tüm `let` bağlantılı işlevler `rec` anahtar sözcüğünü gerektirir.
 
 ## <a name="tail-recursion"></a>Kuyruk özyineleme
 
@@ -75,6 +91,14 @@ Bazen işlevler *birbirini yinelemelidir*, yani bir işlevin bir kez çağrı ya
 Aşağıdaki örnekte birbirini dışlayan iki özyinelemeli işlev gösterilmektedir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
+
+## <a name="recursive-values"></a>Özyinelemeli değerler
+
+`let`Özyinelemeli olacak şekilde, bir-bağlantılı değer de tanımlayabilirsiniz. Bu işlem bazen günlüğe kaydetme için yapılır. F # 5 ve işlevi ile `nameof` bunu yapabilirsiniz:
+
+```fsharp
+let rec nameDoubles = nameof nameDoubles + nameof nameDoubles
+```
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

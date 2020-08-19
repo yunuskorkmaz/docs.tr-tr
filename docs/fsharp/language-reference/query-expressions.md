@@ -1,19 +1,17 @@
 ---
 title: Sorgu İfadeleri
 description: 'F # programlama dilinde LINQ için sorgu ifadesi desteği hakkında bilgi edinin.'
-ms.date: 05/16/2016
-ms.openlocfilehash: c6f33a58bc959745a5f83bdcfe378a4dbbe577c5
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855042"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559069"
 ---
 # <a name="query-expressions"></a>Sorgu ifadeleri
 
 Sorgu ifadeleri bir veri kaynağını sorgulamanızı ve verileri istenen bir biçimde yerleştirlamanızı sağlar. Sorgu ifadeleri, F # ' ta LINQ desteği sağlar.
-> [!NOTE]
-> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,9 +43,9 @@ query1
 |> Seq.iter (fun customer -> printfn "Company: %s Contact: %s" customer.CompanyName customer.ContactName)
 ```
 
-Önceki kod örneğinde sorgu ifadesi küme ayraçları içinde bulunur. İfadedeki kodun anlamı, sorgu sonuçlarındaki veritabanındaki Müşteriler tablosuna her müşteriyi döndürür. Sorgu ifadeleri <xref:System.Linq.IQueryable%601> , ve ' i uygulayan bir tür döndürür <xref:System.Collections.Generic.IEnumerable%601> ve bu nedenle örnek gösterildiği gibi [Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) kullanılarak yinelenebilir.
+Önceki kod örneğinde sorgu ifadesi küme ayraçları içinde bulunur. İfadedeki kodun anlamı, sorgu sonuçlarındaki veritabanındaki Müşteriler tablosuna her müşteriyi döndürür. Sorgu ifadeleri <xref:System.Linq.IQueryable%601> , ve ' i uygulayan bir tür döndürür <xref:System.Collections.Generic.IEnumerable%601> ve bu nedenle örnek gösterildiği gibi [Seq modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) kullanılarak yinelenebilir.
 
-Her hesaplama ifadesi türü bir Oluşturucu sınıfından oluşturulur. Sorgu hesaplama ifadesi için Oluşturucu sınıfı `QueryBuilder` . Daha fazla bilgi için bkz. [Hesaplama ifadeleri](computation-expressions.md) ve [LINQ. QueryBuilder Sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d).
+Her hesaplama ifadesi türü bir Oluşturucu sınıfından oluşturulur. Sorgu hesaplama ifadesi için Oluşturucu sınıfı `QueryBuilder` . Daha fazla bilgi için bkz. [Hesaplama ifadeleri](computation-expressions.md) ve [QueryBuilder Sınıfı](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).
 
 ## <a name="query-operators"></a>Sorgu Işleçleri
 
@@ -55,7 +53,7 @@ Sorgu işleçleri, döndürülecek kayıtlara ölçüt koymak veya sonuçların 
 
 Sorgu ifadelerinde yalnızca SQL 'e çevrilebilen ifadelere izin verilir. Örneğin, sorgu işlecini kullandığınızda ifadelerde hiçbir işlev çağrısı yapılmasına izin verilmez `where` .
 
-Tablo 1 kullanılabilir sorgu işleçlerini gösterir. Ayrıca, bu konunun ilerleyen kısımlarında SQL sorgularını ve eşdeğer F # sorgu ifadelerini karşılaştıran Table2, bkz.. Bazı sorgu işleçleri bazı tür sağlayıcıları tarafından desteklenmez. Özellikle OData tür sağlayıcısı, OData 'teki sınırlamalar nedeniyle desteklediği sorgu işleçleri ile sınırlıdır. Daha fazla bilgi için bkz. [ODataService tür sağlayıcısı (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tablo 1 kullanılabilir sorgu işleçlerini gösterir. Ayrıca, bu konunun ilerleyen kısımlarında SQL sorgularını ve eşdeğer F # sorgu ifadelerini karşılaştıran Table2, bkz.. Bazı sorgu işleçleri bazı tür sağlayıcıları tarafından desteklenmez. Özellikle OData tür sağlayıcısı, OData 'teki sınırlamalar nedeniyle desteklediği sorgu işleçleri ile sınırlıdır.
 
 Bu tabloda bir veritabanı aşağıdaki biçimde varsayılmaktadır:
 
@@ -682,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>IN</code>belirtilen değerler kümesi<br/>
+<code>IN</code> belirtilen değerler kümesi<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -723,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>Model eşleştirme kümesiyle.<br/>
+<code>LIKE</code> Model eşleştirme kümesiyle.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -740,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>küme dışlama düzeniyle.<br/>
+<code>LIKE</code> küme dışlama düzeniyle.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -759,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code>bir alanda, ancak farklı bir alan seçin.<br/>
+<code>LIKE</code> bir alanda, ancak farklı bir alan seçin.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -809,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>LEFT JOIN</code>iki tablo ile.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code> iki tablo ile.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -828,7 +826,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code>kullanılarak<code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> kullanılarak <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -911,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>OR</code>sıralama ile<br/>
+</td></tr><tr><td><code>OR</code> sıralama ile<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -951,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>UNION</code>iki sorgudan oluşur.<br/>
+</td></tr><tr><td><code>UNION</code> iki sorgudan oluşur.<br/>
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable no-space-in-emphasis -->
@@ -1006,7 +1004,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td><code>CASE</code>koşul.<br/>
+</td></tr><tr><td><code>CASE</code> koşul.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age
@@ -2439,5 +2437,5 @@ end
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F # dil başvurusu](index.md)
-- [LINQ. QueryBuilder Sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/linq.querybuilder-class-%5bfsharp%5d)
+- [QueryBuilder Sınıfı](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html)
 - [Hesaplama İfadeleri](Computation-Expressions.md)

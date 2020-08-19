@@ -1,20 +1,17 @@
 ---
 title: Diziler
 description: 'F # programlama dilinde dizileri oluşturmayı ve kullanmayı öğrenin.'
-ms.date: 05/16/2016
-ms.openlocfilehash: f95ca3274e098fda044973a48205cb591ec30b27
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: 93d524046ff93a7f1b04e72d580d9d0e1360ba0b
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855614"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88558887"
 ---
 # <a name="arrays"></a>Diziler
 
 Diziler, aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı ve değişebilir koleksiyonlarıdır.
-
-> [!NOTE]
-> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
 
 ## <a name="create-arrays"></a>Dizi oluştur
 
@@ -59,11 +56,11 @@ Dilim gösterimi kullanıldığında, dizinin yeni bir kopyası oluşturulur.
 
 Tüm F # dizilerinin türü .NET Framework türüdür <xref:System.Array?displayProperty=nameWithType> . Bu nedenle, F # dizileri ' de bulunan tüm işlevleri destekler <xref:System.Array?displayProperty=nameWithType> .
 
-Kitaplık modülü, [`Microsoft.FSharp.Collections.Array`](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) tek boyutlu dizilerde işlemleri destekler. Modüller, `Array2D` `Array3D` ve `Array4D` sırasıyla iki, üç ve dört boyutun dizilerindeki işlemleri destekleyen işlevler içerir. Kullanarak dörtten büyük dizi dizileri oluşturabilirsiniz <xref:System.Array?displayProperty=nameWithType> .
+[ `Array` Modül](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html) , tek boyutlu dizilerde işlemleri destekler. Modüller, `Array2D` `Array3D` ve `Array4D` sırasıyla iki, üç ve dört boyutun dizilerindeki işlemleri destekleyen işlevler içerir. Kullanarak dörtten büyük dizi dizileri oluşturabilirsiniz <xref:System.Array?displayProperty=nameWithType> .
 
 ### <a name="simple-functions"></a>Basit işlevler
 
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)bir öğeyi alır. [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)bir dizinin uzunluğuna izin verir. [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)bir öğeyi belirtilen değere ayarlar. Aşağıdaki kod örneği, bu işlevlerin kullanımını gösterir.
+[`Array.get`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#get) bir öğeyi alır. [`Array.length`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#length) bir dizinin uzunluğuna izin verir. [`Array.set`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#set) bir öğeyi belirtilen değere ayarlar. Aşağıdaki kod örneği, bu işlevlerin kullanımını gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -75,7 +72,7 @@ Kitaplık modülü, [`Microsoft.FSharp.Collections.Array`](https://msdn.microsof
 
 ### <a name="functions-that-create-arrays"></a>Dizi oluşturan işlevler
 
-Çeşitli işlevler, var olan bir dizi gerekmeden diziler oluşturur. [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)herhangi bir öğe içermeyen yeni bir dizi oluşturur. [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)belirtilen boyuttaki bir dizi oluşturur ve tüm öğeleri sağlanmış değerlere ayarlar. [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)öğeleri oluşturmak için bir boyut ve bir işlev verildiğinde bir dizi oluşturur. [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)tüm öğelerin, dizinin türü için sıfır değere başlatıldığı bir dizi oluşturur. Aşağıdaki kod bu işlevleri gösterir.
+Çeşitli işlevler, var olan bir dizi gerekmeden diziler oluşturur. [`Array.empty`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#empty) herhangi bir öğe içermeyen yeni bir dizi oluşturur. [`Array.create`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#create) belirtilen boyuttaki bir dizi oluşturur ve tüm öğeleri sağlanmış değerlere ayarlar. [`Array.init`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#init) öğeleri oluşturmak için bir boyut ve bir işlev verildiğinde bir dizi oluşturur. [`Array.zeroCreate`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zeroCreate) tüm öğelerin, dizinin türü için sıfır değere başlatıldığı bir dizi oluşturur. Aşağıdaki kod bu işlevleri gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -87,7 +84,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)Varolan bir diziden kopyalanmış öğeleri içeren yeni bir dizi oluşturur. Kopyanın basit bir kopya olduğunu, yani öğe türü bir başvuru türü ise, temeldeki nesne değil yalnızca başvurunun kopyalanacağını unutmayın. Aşağıdaki kod örneği bunu gösterir.
+[`Array.copy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#copy) Varolan bir diziden kopyalanmış öğeleri içeren yeni bir dizi oluşturur. Kopyanın basit bir kopya olduğunu, yani öğe türü bir başvuru türü ise, temeldeki nesne değil yalnızca başvurunun kopyalanacağını unutmayın. Aşağıdaki kod örneği bunu gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -100,7 +97,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 Dize `Test1` yalnızca ilk dizide görünür çünkü yeni bir öğe oluşturma işlemi içindeki başvurunun üzerine yazar, `firstArray` ancak hala içinde mevcut olan boş bir dizeye özgün başvuruyu etkilemez `secondArray` . Dize `Test2` her iki dizide de görünür çünkü `Insert` türdeki işlem, <xref:System.Text.StringBuilder?displayProperty=nameWithType> <xref:System.Text.StringBuilder?displayProperty=nameWithType> her iki dizide de başvurulan temel nesneyi etkiler.
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)bir dizinin alt aralığından yeni bir dizi oluşturur. Başlangıç dizinini ve uzunluğunu belirterek alt aralığı belirtirsiniz. Aşağıdaki kod öğesinin kullanımını gösterir `Array.sub` .
+[`Array.sub`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sub) bir dizinin alt aralığından yeni bir dizi oluşturur. Başlangıç dizinini ve uzunluğunu belirterek alt aralığı belirtirsiniz. Aşağıdaki kod öğesinin kullanımını gösterir `Array.sub` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -110,7 +107,7 @@ Dize `Test1` yalnızca ilk dizide görünür çünkü yeni bir öğe oluşturma 
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
 
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)Varolan iki diziyi birleştirerek yeni bir dizi oluşturur.
+[`Array.append`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#append) Varolan iki diziyi birleştirerek yeni bir dizi oluşturur.
 
 Aşağıdaki kodda **Array. Append**gösterilmektedir.
 
@@ -122,7 +119,7 @@ Aşağıdaki kodda **Array. Append**gösterilmektedir.
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)Yeni bir diziye dahil etmek için bir dizinin öğelerini seçer. Aşağıdaki kod gösterilmektedir `Array.choose` . Dizinin öğe türünün, seçenek türünde döndürülen değer türüyle eşleşmesi gerekmediğini unutmayın. Bu örnekte, öğe türü ' dir `int` ve seçenek, `elem*elem - 1` kayan noktalı sayı olarak bir polinom işlevinin sonucudur.
+[`Array.choose`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#choose) Yeni bir diziye dahil etmek için bir dizinin öğelerini seçer. Aşağıdaki kod gösterilmektedir `Array.choose` . Dizinin öğe türünün, seçenek türünde döndürülen değer türüyle eşleşmesi gerekmediğini unutmayın. Bu örnekte, öğe türü ' dir `int` ve seçenek, `elem*elem - 1` kayan noktalı sayı olarak bir polinom işlevinin sonucudur.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -132,7 +129,7 @@ Aşağıdaki kodda **Array. Append**gösterilmektedir.
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)Varolan bir dizinin her bir dizi öğesinde belirtilen bir işlevi çalıştırır ve ardından işlev tarafından oluşturulan öğeleri toplar ve bunları yeni bir dizide birleştirir. Aşağıdaki kod gösterilmektedir `Array.collect` .
+[`Array.collect`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#collect) Varolan bir dizinin her bir dizi öğesinde belirtilen bir işlevi çalıştırır ve ardından işlev tarafından oluşturulan öğeleri toplar ve bunları yeni bir dizide birleştirir. Aşağıdaki kod gösterilmektedir `Array.collect` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -142,7 +139,7 @@ Aşağıdaki kodda **Array. Append**gösterilmektedir.
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)dizi dizisini alır ve bunları tek bir dizi halinde birleştirir. Aşağıdaki kod gösterilmektedir `Array.concat` .
+[`Array.concat`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#concat) dizi dizisini alır ve bunları tek bir dizi halinde birleştirir. Aşağıdaki kod gösterilmektedir `Array.concat` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -153,7 +150,7 @@ Aşağıdaki kodda **Array. Append**gösterilmektedir.
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)bir Boolean koşul işlevi alır ve yalnızca koşulun doğru olduğu Giriş dizisindeki öğeleri içeren yeni bir dizi oluşturur. Aşağıdaki kod gösterilmektedir `Array.filter` .
+[`Array.filter`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#filter) bir Boolean koşul işlevi alır ve yalnızca koşulun doğru olduğu Giriş dizisindeki öğeleri içeren yeni bir dizi oluşturur. Aşağıdaki kod gösterilmektedir `Array.filter` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -163,7 +160,7 @@ Aşağıdaki kodda **Array. Append**gösterilmektedir.
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)Varolan bir dizinin sırasını tersine çevirerek yeni bir dizi oluşturur. Aşağıdaki kod gösterilmektedir `Array.rev` .
+[`Array.rev`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#rev) Varolan bir dizinin sırasını tersine çevirerek yeni bir dizi oluşturur. Aşağıdaki kod gösterilmektedir `Array.rev` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet18.fs)]
 
@@ -185,11 +182,11 @@ Aşağıdaki örnekte gösterildiği gibi, ardışık düzen işlecini () kullan
 
 ### <a name="multidimensional-arrays"></a>Çok boyutlu diziler
 
-Çok boyutlu bir dizi oluşturulabilir, ancak çok boyutlu bir dizi değişmez değeri yazmak için sözdizimi yoktur. [`array2D`](https://msdn.microsoft.com/library/1d52503d-2990-49fc-8fd3-6b0e508aa236)Dizi öğelerinden oluşan dizilerden bir dizi oluşturmak için işlecini kullanın. Diziler dizi veya liste sabit değerleri olabilir. Örneğin, aşağıdaki kod iki boyutlu bir dizi oluşturur.
+Çok boyutlu bir dizi oluşturulabilir, ancak çok boyutlu bir dizi değişmez değeri yazmak için sözdizimi yoktur. [`array2D`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)Dizi öğelerinden oluşan dizilerden bir dizi oluşturmak için işlecini kullanın. Diziler dizi veya liste sabit değerleri olabilir. Örneğin, aşağıdaki kod iki boyutlu bir dizi oluşturur.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet20.fs)]
 
-Ayrıca, işlevini [`Array2D.init`](https://msdn.microsoft.com/library/9de07e95-bc21-4927-b5b4-08fdec882c7b) iki boyutun dizilerini başlatmak için de kullanabilirsiniz ve benzer işlevler üç ve dört boyutlu diziler için kullanılabilir. Bu işlevler, öğeleri oluşturmak için kullanılan bir işlevi alır. Bir işlev belirtmek yerine bir başlangıç değeri olarak ayarlanan öğeleri içeren iki boyutlu bir dizi oluşturmak için, [`Array2D.create`](https://msdn.microsoft.com/library/36c9d980-b241-4a20-bc64-bcfa0205d804) en fazla dört boyuta kadar diziler için de kullanılabilir olan işlevini kullanın. Aşağıdaki kod örneği, önce istenen öğeleri içeren bir dizi dizinin nasıl oluşturulacağını gösterir ve ardından `Array2D.init` istenen iki boyutlu diziyi oluşturmak için kullanır.
+Ayrıca, işlevini [`Array2D.init`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html#init) iki boyutun dizilerini başlatmak için de kullanabilirsiniz ve benzer işlevler üç ve dört boyutlu diziler için kullanılabilir. Bu işlevler, öğeleri oluşturmak için kullanılan bir işlevi alır. Bir işlev belirtmek yerine bir başlangıç değeri olarak ayarlanan öğeleri içeren iki boyutlu bir dizi oluşturmak için, [`Array2D.create`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html#create) en fazla dört boyuta kadar diziler için de kullanılabilir olan işlevini kullanın. Aşağıdaki kod örneği, önce istenen öğeleri içeren bir dizi dizinin nasıl oluşturulacağını gösterir ve ardından `Array2D.init` istenen iki boyutlu diziyi oluşturmak için kullanır.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet21.fs)]
 
@@ -199,7 +196,7 @@ Dizi dizin oluşturma ve dilimleme sözdizimi, sıralama 4 ' e kadar olan dizile
 
 İki boyutlu bir dizinin türü olarak yazılır `<type>[,]` (örneğin,, `int[,]` `double[,]` ) ve üç boyutlu bir dizinin türü `<type>[,,]` , daha yüksek boyutlarda diziler için olarak yazılır.
 
-Tek boyutlu diziler için kullanılabilen işlevlerin yalnızca bir alt kümesi, çok boyutlu diziler için de kullanılabilir. Daha fazla bilgi için bkz [`Collections.Array Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array-module-%5bfsharp%5d) .,, [`Collections.Array2D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array2d-module-%5bfsharp%5d) [`Collections.Array3D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array3d-module-%5bfsharp%5d) ve [`Collections.Array4D Module`](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.array4d-module-%5bfsharp%5d) .
+Tek boyutlu diziler için kullanılabilen işlevlerin yalnızca bir alt kümesi, çok boyutlu diziler için de kullanılabilir.
 
 ### <a name="array-slicing-and-multidimensional-arrays"></a>Dizi Dilimleme ve çok boyutlu diziler
 
@@ -219,7 +216,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-F # 3,1 itibariyle, çok boyutlu bir diziyi aynı veya daha düşük boyutun alt dizileri halinde parçalara ayırmayı sağlayabilirsiniz. Örneğin, tek bir satır veya sütun belirterek bir matreden bir vektör elde edebilirsiniz.
+Çok boyutlu bir diziyi, aynı veya alt boyutun alt dizileri halinde parçalara ayırmayı sağlayabilirsiniz. Örneğin, tek bir satır veya sütun belirterek bir matreden bir vektör elde edebilirsiniz.
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -300,7 +297,7 @@ module test =
 
 ### <a name="boolean-functions-on-arrays"></a>Diziler üzerinde Boole işlevleri
 
-[`Array.exists`](https://msdn.microsoft.com/library/8e47ad6c-c065-4876-8cb4-ec960ec3e5c9) [`Array.exists2`](https://msdn.microsoft.com/library/2e384a6a-f99d-4e23-b677-250ffbc1dd8e) Sırasıyla bir veya iki dizide bulunan işlevler ve test öğeleri. Bu işlevler bir test işlevi alır ve `true` koşulu karşılayan bir öğe (veya öğe çifti) varsa döndürülür `Array.exists2` .
+[`Array.exists`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#exists) [`Array.exists2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#exists2) Sırasıyla bir veya iki dizide bulunan işlevler ve test öğeleri. Bu işlevler bir test işlevi alır ve `true` koşulu karşılayan bir öğe (veya öğe çifti) varsa döndürülür `Array.exists2` .
 
 Aşağıdaki kod, ve kullanımını göstermektedir `Array.exists` `Array.exists2` . Bu örneklerde, bağımsız değişkenlerden yalnızca biri uygulanarak, bu durumlarda işlev bağımsız değişkeni olarak yeni işlevler oluşturulur.
 
@@ -315,7 +312,7 @@ false
 true
 ```
 
-Benzer şekilde, işlevi [`Array.forall`](https://msdn.microsoft.com/library/d88f2cd0-fa7f-45cf-ac15-31eae9086cc4) her öğenin bir Boole koşulunu karşılayıp karşılamadığını tespit etmek için bir diziyi sınar. Çeşitleme, [`Array.forall2`](https://msdn.microsoft.com/library/c68f61a1-030c-4024-b705-c4768b6c96b9) aynı şeyi eşit uzunlukta iki dizinin öğelerini içeren bir Boolean işlevi kullanarak yapar. Aşağıdaki kod, bu işlevlerin kullanımını gösterir.
+Benzer şekilde, işlevi [`Array.forall`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#forall) her öğenin bir Boole koşulunu karşılayıp karşılamadığını tespit etmek için bir diziyi sınar. Çeşitleme, [`Array.forall2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#forall2) aynı şeyi eşit uzunlukta iki dizinin öğelerini içeren bir Boolean işlevi kullanarak yapar. Aşağıdaki kod, bu işlevlerin kullanımını gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet24.fs)]
 
@@ -330,7 +327,7 @@ false
 
 ### <a name="search-arrays"></a>Dizileri ara
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)bir Boole işlevi alır ve işlevin döndürdüğü ilk öğeyi döndürür `true` ya da <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> koşulu karşılayan bir öğe bulunursa, öğesini başlatır. [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)`Array.find`,, öğesinin kendisi yerine öğesinin dizinini döndürmesi dışında, gibidir.
+[`Array.find`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#find) bir Boole işlevi alır ve işlevin döndürdüğü ilk öğeyi döndürür `true` ya da <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> koşulu karşılayan bir öğe bulunursa, öğesini başlatır. [`Array.findIndex`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#findIndex)`Array.find`,, öğesinin kendisi yerine öğesinin dizinini döndürmesi dışında, gibidir.
 
 Aşağıdaki kod, `Array.find` `Array.findIndex` hem mükemmel bir kare hem de kusursuz küp olan bir sayıyı bulmak için ve kullanır.
 
@@ -342,7 +339,7 @@ Aşağıdaki kod, `Array.find` `Array.findIndex` hem mükemmel bir kare hem de k
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9), `Array.find` , sonucu bir seçenek türü olması dışında, bir öğe bulunmazsa, öğesini döndürür `None` . `Array.tryFind``Array.find`bir eşleşen öğenin dizide olup olmadığını bilinmediğinizde yerine kullanılmalıdır. Benzer şekilde, [`Array.tryFindIndex`](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a) [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) seçenek türünün dönüş değeri olması dışında, benzer. Hiçbir öğe bulunmazsa, seçeneği olur `None` .
+[`Array.tryFind`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryFind) , `Array.find` , sonucu bir seçenek türü olması dışında, bir öğe bulunmazsa, öğesini döndürür `None` . `Array.tryFind``Array.find`bir eşleşen öğenin dizide olup olmadığını bilinmediğinizde yerine kullanılmalıdır. Benzer şekilde, [`Array.tryFindIndex`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryFindIndex) `Array.findIndex` seçenek türünün dönüş değeri olması dışında, benzer. Hiçbir öğe bulunmazsa, seçeneği olur `None` .
 
 Aşağıdaki kod öğesinin kullanımını gösterir `Array.tryFind` . Bu kod, önceki koda bağlıdır.
 
@@ -356,7 +353,7 @@ Found an element: 729
 Failed to find a matching element.
 ```
 
-[`Array.tryPick`](https://msdn.microsoft.com/library/72d45f85-037b-43a9-97fd-17239f72713e)Öğesini bulmaya ek olarak bir öğesi dönüştürmeniz gerektiğinde kullanın. Sonuç, işlevin dönüştürülmüş öğeyi bir seçenek değeri olarak döndürdüğü ilk öğedir, ya da `None` böyle bir öğe bulunmazsa.
+[`Array.tryPick`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#tryPick)Öğesini bulmaya ek olarak bir öğesi dönüştürmeniz gerektiğinde kullanın. Sonuç, işlevin dönüştürülmüş öğeyi bir seçenek değeri olarak döndürdüğü ilk öğedir, ya da `None` böyle bir öğe bulunmazsa.
 
 Aşağıdaki kod öğesinin kullanımını gösterir `Array.tryPick` . Bu durumda, bir lambda ifadesi yerine, kodu basitleştirmek için birkaç yerel yardımcı işlev tanımlanmıştır.
 
@@ -374,23 +371,23 @@ Did not find an element that is both a perfect square and a perfect cube.
 
 ### <a name="perform-computations-on-arrays"></a>Diziler üzerinde hesaplamalar gerçekleştirme
 
-[`Array.average`](https://msdn.microsoft.com/library/7029f2b9-91ea-41cb-be1b-466a5a0db20e)İşlevi dizideki her öğenin ortalamasını döndürür. Bu, kayan nokta türleri de dahil olmak üzere, bir tamsayı ile tam bölme desteği olan öğe türleriyle sınırlıdır. [`Array.averageBy`](https://msdn.microsoft.com/library/e9d64609-06a3-48f0-bc07-226ab0f85c54)İşlevi her öğe üzerinde bir işlev çağırma sonuçlarının ortalamasını döndürür. Bir integral türü dizisi için öğesini kullanabilir `Array.averageBy` ve işlevin her öğeyi hesaplama için bir kayan nokta türüne dönüştürmesini sağlayabilirsiniz.
+[`Array.average`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#average)İşlevi dizideki her öğenin ortalamasını döndürür. Bu, kayan nokta türleri de dahil olmak üzere, bir tamsayı ile tam bölme desteği olan öğe türleriyle sınırlıdır. [`Array.averageBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#averageBy)İşlevi her öğe üzerinde bir işlev çağırma sonuçlarının ortalamasını döndürür. Bir integral türü dizisi için öğesini kullanabilir `Array.averageBy` ve işlevin her öğeyi hesaplama için bir kayan nokta türüne dönüştürmesini sağlayabilirsiniz.
 
-[`Array.max`](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b) [`Array.min`](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd) Öğe türü destekliyorsa, en büyük veya en küçük öğeyi almak için veya kullanın. Benzer şekilde, ancak [`Array.maxBy`](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045) [`Array.minBy`](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f) önce bir işlevin yürütülmesini, belki de karşılaştırmayı destekleyen bir türe dönüştürülmeye izin verir.
+[`Array.max`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#max) [`Array.min`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#min) Öğe türü destekliyorsa, en büyük veya en küçük öğeyi almak için veya kullanın. Benzer şekilde, ancak [`Array.maxBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#maxBy) [`Array.minBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#minBy) önce bir işlevin yürütülmesini, belki de karşılaştırmayı destekleyen bir türe dönüştürülmeye izin verir.
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)bir dizinin öğelerini ekler ve [`Array.sumBy`](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b) her bir öğeye bir işlev çağırır ve sonuçları birlikte ekler.
+[`Array.sum`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sum) bir dizinin öğelerini ekler ve [`Array.sumBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sumBy) her bir öğeye bir işlev çağırır ve sonuçları birlikte ekler.
 
-Dönüş değerlerini depolamadan bir dizideki her öğe üzerinde bir işlevi yürütmek için kullanın [`Array.iter`](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516) . Eşit uzunlukta iki dizi içeren bir işlev için kullanın [`Array.iter2`](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc) . Ayrıca, işlevin sonuçlarının bir dizisini tutmanız gerekiyorsa, [`Array.map`](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45) veya kullanın [`Array.map2`](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c) , tek seferde iki dizi üzerinde çalışır.
+Dönüş değerlerini depolamadan bir dizideki her öğe üzerinde bir işlevi yürütmek için kullanın [`Array.iter`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iter) . Eşit uzunlukta iki dizi içeren bir işlev için kullanın [`Array.iter2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iter2) . Ayrıca, işlevin sonuçlarının bir dizisini tutmanız gerekiyorsa, [`Array.map`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#map) veya kullanın [`Array.map2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#map2) , tek seferde iki dizi üzerinde çalışır.
 
-Çeşitlemeler [`Array.iteri`](https://msdn.microsoft.com/library/8bbe2ed4-ada7-4906-ac3e-cb09f9db6486) ve [`Array.iteri2`](https://msdn.microsoft.com/library/c041b91f-6080-45b7-867b-2ed983a90405) öğenin dizine eklenmesine izin verir; aynı değer ve için de geçerlidir [`Array.mapi`](https://msdn.microsoft.com/library/f7e45994-b0a1-49e6-8fb5-5641cea8fde4) [`Array.mapi2`](https://msdn.microsoft.com/library/5edb33d2-47da-44e1-9290-40c00c47d5b0) .
+Çeşitlemeler [`Array.iteri`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri) ve [`Array.iteri2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#iteri2) öğenin dizine eklenmesine izin verir; aynı değer ve için de geçerlidir [`Array.mapi`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi) [`Array.mapi2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#mapi2) .
 
-,,,, [`Array.fold`](https://msdn.microsoft.com/library/5ed9dd3b-3694-4567-94d0-fd9a24474e09) Ve işlevleri, [`Array.foldBack`](https://msdn.microsoft.com/library/1121a453-dead-4711-a0ca-cc147752989c) [`Array.reduce`](https://msdn.microsoft.com/library/fd62a985-89fe-4f49-a9d4-0c808ac6749d) [`Array.reduceBack`](https://msdn.microsoft.com/library/4fdd4cbe-2238-4c5c-b286-597a7e9036f9) [`Array.scan`](https://msdn.microsoft.com/library/f6893608-9146-450d-9ebb-a0016803fbb0) [`Array.scanBack`](https://msdn.microsoft.com/library/7610f406-7a5c-41db-a0ca-8e2a2a4826ad) bir dizinin tüm öğelerini içeren algoritmaları içerir. Benzer şekilde, Çeşitlemeler [`Array.fold2`](https://msdn.microsoft.com/library/5c845087-d041-476e-8cc4-53ae6849ef79) ve [`Array.foldBack2`](https://msdn.microsoft.com/library/aa51b405-df20-4c51-9998-a6530f7db862) iki dizi üzerinde hesaplamalar gerçekleştirir.
+,,,, [`Array.fold`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold) Ve işlevleri, [`Array.foldBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#foldBack) [`Array.reduce`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduce) [`Array.reduceBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#reduceBack) [`Array.scan`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scan) [`Array.scanBack`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#scanBack) bir dizinin tüm öğelerini içeren algoritmaları içerir. Benzer şekilde, Çeşitlemeler [`Array.fold2`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fold2) ve [`Array.foldBack2`](foldBack2) iki dizi üzerinde hesaplamalar gerçekleştirir.
 
-Hesaplamalar gerçekleştirmeye yönelik bu işlevler, [liste modülündeki](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)aynı adlı işlevlere karşılık gelir. Kullanım örnekleri için bkz. [listeler](lists.md).
+Hesaplamalar gerçekleştirmeye yönelik bu işlevler, [liste modülündeki](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)aynı adlı işlevlere karşılık gelir. Kullanım örnekleri için bkz. [listeler](lists.md).
 
 ### <a name="modify-arrays"></a>Dizileri değiştirme
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)bir öğeyi belirtilen değere ayarlar. [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)bir dizideki öğe aralığını belirtilen değere ayarlar. Aşağıdaki kod bir örneği sağlar `Array.fill` .
+[`Array.set`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#set) bir öğeyi belirtilen değere ayarlar. [`Array.fill`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#fill) bir dizideki öğe aralığını belirtilen değere ayarlar. Aşağıdaki kod bir örneği sağlar `Array.fill` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -400,23 +397,23 @@ Hesaplamalar gerçekleştirmeye yönelik bu işlevler, [liste modülündeki](htt
 [|1; 2; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 23; 24; 25|]
 ```
 
-Bir [`Array.blit`](https://msdn.microsoft.com/library/675e13e4-7fb9-4e0d-a5be-a112830de667) dizinin alt bölümünü başka bir diziye kopyalamak için ' i kullanabilirsiniz.
+Bir [`Array.blit`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#blit) dizinin alt bölümünü başka bir diziye kopyalamak için ' i kullanabilirsiniz.
 
 ### <a name="convert-to-and-from-other-types"></a>Diğer türlere ve diğer türlerden Dönüştür
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)bir listeden bir dizi oluşturur. [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)diziden bir dizi oluşturur. [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)ve [`Array.toSeq`](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4) dizi türünden bu diğer koleksiyon türlerine Dönüştür.
+[`Array.ofList`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#ofList) bir listeden bir dizi oluşturur. [`Array.ofSeq`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#ofSeq) diziden bir dizi oluşturur. [`Array.toList`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#toList) ve [`Array.toSeq`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#toSeq) dizi türünden bu diğer koleksiyon türlerine Dönüştür.
 
 ### <a name="sort-arrays"></a>Dizileri Sırala
 
-[`Array.sort`](https://msdn.microsoft.com/library/c6679075-e7eb-463c-9be5-c89be140c312)Genel karşılaştırma işlevini kullanarak bir diziyi sıralamak için kullanın. Anahtar [`Array.sortBy`](https://msdn.microsoft.com/library/144498dc-091d-4575-a229-c0bcbd61426b) olarak adlandırılan ve anahtardaki genel karşılaştırma işlevini kullanarak sıralamak için bir değer oluşturan *key*bir işlev belirtmek için kullanın. [`Array.sortWith`](https://msdn.microsoft.com/library/699d3638-4244-4f42-8496-45f53d43ce95)Özel bir karşılaştırma işlevi sağlamak istiyorsanız kullanın. `Array.sort`, `Array.sortBy` ve `Array.sortWith` All sıralanmış diziyi yeni bir dizi olarak döndürür. Çeşitlemeler, [`Array.sortInPlace`](https://msdn.microsoft.com/library/36f39947-8a88-4823-9e9b-e9d838d292e0) [`Array.sortInPlaceBy`](https://msdn.microsoft.com/library/7fb9d2dd-d461-4c67-8b43-b5c59fc12c3f) ve yeni bir [`Array.sortInPlaceWith`](https://msdn.microsoft.com/library/454f9e11-972d-47a6-a854-8031cb0c7b0b) tane döndürmek yerine mevcut diziyi değiştirir.
+[`Array.sort`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sort)Genel karşılaştırma işlevini kullanarak bir diziyi sıralamak için kullanın. Anahtar [`Array.sortBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortBy) olarak adlandırılan ve anahtardaki genel karşılaştırma işlevini kullanarak sıralamak için bir değer oluşturan *key*bir işlev belirtmek için kullanın. [`Array.sortWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortWith)Özel bir karşılaştırma işlevi sağlamak istiyorsanız kullanın. `Array.sort`, `Array.sortBy` ve `Array.sortWith` All sıralanmış diziyi yeni bir dizi olarak döndürür. Çeşitlemeler, [`Array.sortInPlace`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlace) [`Array.sortInPlaceBy`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceBy) ve yeni bir [`Array.sortInPlaceWith`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#sortInPlaceWith) tane döndürmek yerine mevcut diziyi değiştirir.
 
 ### <a name="arrays-and-tuples"></a>Diziler ve tanımlama grupları
 
-İşlevler ve dizi kümesi [`Array.zip`](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187) [`Array.unzip`](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) çiftlerinin dizilerini dizi dizilerine ve tersine dönüştürür. [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)ve, [`Array.unzip3`](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677) üç öğe tanımlama grubuyla veya üç dizi tanımlama grubu ile çalıştıkları sürece benzerdir.
+İşlevler ve dizi kümesi [`Array.zip`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zip) [`Array.unzip`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#unzip) çiftlerinin dizilerini dizi dizilerine ve tersine dönüştürür. [`Array.zip3`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#zip3) ve, [`Array.unzip3`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html#unzip3) üç öğe tanımlama grubuyla veya üç dizi tanımlama grubu ile çalıştıkları sürece benzerdir.
 
 ## <a name="parallel-computations-on-arrays"></a>Diziler üzerinde paralel hesaplamalar
 
-Modülü [`Array.Parallel`](https://msdn.microsoft.com/library/60f30b77-5af4-4050-9a5c-bcdb3f5cbb09) diziler üzerinde paralel hesaplamalar gerçekleştirmeye yönelik işlevler içerir. Bu modül, sürüm 4 ' ten önceki .NET Framework sürümlerini hedefleyen uygulamalarda kullanılamaz.
+Modülü [`Array.Parallel`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule-parallel.html) diziler üzerinde paralel hesaplamalar gerçekleştirmeye yönelik işlevler içerir. Bu modül, sürüm 4 ' ten önceki .NET Framework sürümlerini hedefleyen uygulamalarda kullanılamaz.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

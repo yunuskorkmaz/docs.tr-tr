@@ -1,19 +1,19 @@
 ---
 title: Esnek Türler
-description: Bir parametre, değişken F# veya değerin belirtilen tür ile uyumlu bir türe sahip olduğunu gösteren esnek tür ek açıklamasını nasıl kullanacağınızı öğrenin.
-ms.date: 05/16/2016
-ms.openlocfilehash: bf05f78f163d1f9c73c667df60925b66a5315627
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+description: 'Bir parametre, değişken veya değerin belirtilen tür ile uyumlu bir türe sahip olduğunu belirten F # esnek tür ek açıklamasını nasıl kullanacağınızı öğrenin.'
+ms.date: 08/15/2020
+ms.openlocfilehash: 44241ad082cd7f3de9e0cc6a48b8a8946e7b33d3
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083072"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557756"
 ---
 # <a name="flexible-types"></a>Esnek Türler
 
 *Esnek tür ek açıklaması* , bir parametre, değişken veya değerin belirtilen tür ile uyumlu bir türe sahip olduğunu belirtir; burada uyumluluk, nesne odaklı sınıfların veya arabirimlerin bulunduğu konuma göre belirlenir. Esnek türler özellikle tür hiyerarşisinde daha üst türlere otomatik dönüştürme gerçekleşmezse yararlı olur ancak yine de işlevselliği hiyerarşide herhangi bir türle veya bir arabirim uygulayan herhangi bir tür ile çalışacak şekilde etkinleştirmek istiyorsanız.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 #type
@@ -31,13 +31,13 @@ Esnek tür, izin verilen türleri temel veya arabirim türüyle uyumlu türlere 
 'T when 'T :> SomeType
 ```
 
-Esnek türler birkaç tür durumda yararlıdır. Örneğin, daha yüksek bir order işleviniz (bağımsız değişken olarak işlev alan bir işlev) olduğunda, işlevin esnek bir tür döndürmesi genellikle yararlı olur. Aşağıdaki örnekte, içinde `iterate2` bir dizi bağımsız değişkeni olan esnek bir tür kullanılması, daha yüksek sıralı işlevin diziler, diziler, listeler ve diğer herhangi bir sıralanabilir tür oluşturan işlevlerle çalışmasını sağlar.
+Esnek türler birkaç tür durumda yararlıdır. Örneğin, daha yüksek bir order işleviniz (bağımsız değişken olarak işlev alan bir işlev) olduğunda, işlevin esnek bir tür döndürmesi genellikle yararlı olur. Aşağıdaki örnekte, içinde bir dizi bağımsız değişkeni olan esnek bir tür kullanılması, `iterate2` daha yüksek sıralı işlevin diziler, diziler, listeler ve diğer herhangi bir sıralanabilir tür oluşturan işlevlerle çalışmasını sağlar.
 
 Aşağıdaki iki işlevi göz önünde bulundurun, bunlardan biri bir dizi döndürür, diğeri ise esnek bir tür döndürür.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4101.fs)]
 
-Başka bir örnek olarak, [Seq. Concat](https://msdn.microsoft.com/library/2eeb69a9-fc2f-4b7d-8dee-101fa2b00712) Kitaplık işlevini göz önünde bulundurun:
+Başka bir örnek olarak, [Seq. Concat](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#concat) Kitaplık işlevini göz önünde bulundurun:
 
 ```fsharp
 val concat: sequences:seq<#seq<'T>> -> seq<'T>
@@ -51,7 +51,7 @@ Aşağıdaki sıralanabilir dizileri bu işleve geçirebilirsiniz:
 - Dizi dizileri
 - Sıralanabilir sıraların diğer birleşimleri
 
-Aşağıdaki kod, esnek `Seq.concat` türler kullanarak destekleyerek kullanabileceğiniz senaryoları göstermek için kullanır.
+Aşağıdaki kod, `Seq.concat` Esnek türler kullanarak destekleyerek kullanabileceğiniz senaryoları göstermek için kullanır.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4102.fs)]
 
@@ -65,9 +65,9 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-' F#De, diğer nesne yönelimli dillerde olduğu gibi, arabirimleri uygulayan türetilmiş türlerin veya türlerin otomatik olarak temel türe veya arabirim türüne dönüştürüldüğü bağlamlar vardır. Bu otomatik dönüştürmeler doğrudan bağımsız değişkenlerde oluşur, ancak tür bir alt konumda olduğunda değil, bir işlev türünün dönüş türü veya tür bağımsız değişkeni gibi daha karmaşık bir türün parçası olarak değildir. Bu nedenle, esnek tür gösterimi öncelikle, uyguladığınız tür daha karmaşık bir türün parçası olduğunda faydalıdır.
+F # ' da, diğer nesne yönelimli dillerde olduğu gibi, arabirimleri uygulayan türetilmiş türlerin veya türlerin otomatik olarak temel tür veya arabirim türüne dönüştürüldüğü bağlamlar vardır. Bu otomatik dönüştürmeler doğrudan bağımsız değişkenlerde oluşur, ancak tür bir alt konumda olduğunda değil, bir işlev türünün dönüş türü veya tür bağımsız değişkeni gibi daha karmaşık bir türün parçası olarak değildir. Bu nedenle, esnek tür gösterimi öncelikle, uyguladığınız tür daha karmaşık bir türün parçası olduğunda faydalıdır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Dili Başvurusu](index.md)
+- [F # dil başvurusu](index.md)
 - [Genel Türler](./generics/index.md)

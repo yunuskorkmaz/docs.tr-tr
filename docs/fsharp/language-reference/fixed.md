@@ -1,19 +1,19 @@
 ---
 title: Fixed anahtar sözcüğü
-description: Öğrenin 'koleksiyonuyla önlemek için bir yerel yığına PIN' F# 'fixed anahtar sözcüğü'.
-ms.date: 04/24/2017
-ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+description: "F # ' fixed ' anahtar sözcüğüyle toplamayı engellemek için yerel olarak yığına nasıl ' sabitleyebileceğinizi öğrenin."
+ms.date: 08/15/2020
+ms.openlocfilehash: 786ffd706c243fc83f8fb3afc2201d2a34536372
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772664"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559186"
 ---
 # <a name="the-fixed-keyword"></a>Fixed anahtar sözcüğü
 
-F#4.1 tanıtır `fixed` ", toplanan veya çöp toplama sırasında taşınan önlemek için bir yerel yığına sabitlemek" izin veren anahtar sözcüğü.  Bu düşük düzeydeki programlama senaryoları için kullanılır.
+`fixed`Anahtar sözcüğü, atık toplama sırasında toplanmasını veya taşınmasını engellemek için yerel olarak yığına "sabitlemenizi" sağlar.  Alt düzey programlama senaryolarında kullanılır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 use ptr = fixed expression
@@ -21,13 +21,13 @@ use ptr = fixed expression
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu, bir işaretçi çıkarma ve toplanan veya çöp toplama sırasında taşınan dan engelleyen bir ad bağlama izin vermek için ifadeler sözdizimi genişletir.  
+Bu, bir işaretçinin ayıklanmasına izin vermek ve atık toplama sırasında toplanmasının veya taşınmasını önleyen bir ada bağlamak için ifadelerin sözdizimini genişletir.  
 
-Bir ifade işaretçisinden aracılığıyla sabit `fixed` anahtar sözcüğü bir tanımlayıcıya bağlı `use` anahtar sözcüğü.  Bu semantiği kaynak yönetimi benzerdir `use` anahtar sözcüğü.  İşaretçi sabit kapsamları dahilinde olması ve kapsam dışına olduktan sonra artık sabittir.  `fixed` bağlamı dışında kullanılamaz bir `use` bağlama.  İşaretçiyi bir adla bağlamanız gerekir `use`.
+Bir ifadeden bir işaretçi, anahtar sözcüğü aracılığıyla `fixed` bir tanımlayıcıya bağlanır `use` .  Bunun semantiği, anahtar sözcüğü aracılığıyla kaynak yönetimine benzerdir `use` .  İşaretçi kapsamdayken sabitlenmiştir ve kapsam dışına alındıktan sonra artık sabit değildir.  `fixed` bağlama bağlamı dışında kullanılamaz `use` .  İşaretçiyi ile bir ada bağlamanız gerekir `use` .
 
-Kullanım `fixed` bir ifadede bir işlev veya yöntem içinde gerçekleşmelidir.  Bir komut dosyası düzeyi veya modül düzeyinde kapsamda kullanılamaz.
+Öğesinin kullanımı, `fixed` bir işlev veya metot içindeki bir ifadede gerçekleşmelidir.  Betik düzeyinde veya modül düzeyinde bir kapsamda kullanılamaz.
 
-Tüm işaretçi kodu gibi bu güvenli olmayan bir özelliktir ve bir uyarı yayar.
+Tüm işaretçi kodu gibi, bu güvenli olmayan bir özelliktir ve kullanıldığında bir uyarı oluşturulur.
 
 ## <a name="example"></a>Örnek
 
@@ -63,4 +63,4 @@ doPointerWork()
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [NativePtr modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [NativePtr modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-nativeinterop-nativeptrmodule.html)

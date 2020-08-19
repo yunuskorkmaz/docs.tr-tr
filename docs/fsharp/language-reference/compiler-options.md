@@ -1,13 +1,13 @@
 ---
 title: Derleyici Seçenekleri
 description: 'F # uygulamalarınızın ve kitaplıklarınızın derlemesini denetlemek için F # derleyici komut satırı seçeneklerini kullanın.'
-ms.date: 12/10/2018
-ms.openlocfilehash: 79c175e1daa43d23e0a90b6a09ca29358566aca0
-ms.sourcegitcommit: e7748001b1cee80ced691d8a76ca814c0b02dd9b
+ms.date: 08/15/2020
+ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86374331"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557366"
 ---
 # <a name="compiler-options"></a>Derleyici seçenekleri
 
@@ -19,7 +19,7 @@ Derleme ortamı, proje özellikleri ayarlanarak de denetlenebilir. .NET Core 'u 
 
 Aşağıdaki tabloda alfabetik olarak listelenen derleyici seçenekleri gösterilmektedir. F # derleyici seçeneklerinin bazıları C# derleyici seçeneklerine benzer. Bu durumda, C# derleyici seçenekleri konusuna bir bağlantı sağlanır.
 
-|Derleyici seçeneği|Description|
+|Derleyici seçeneği|Açıklama|
 |---------------|-----------|
 |`-a filename.fs`|Belirtilen dosyadan bir kitaplık oluşturur. Bu seçenek, kısa bir biçimidir `--target:library filename.fs` .|
 |`--baseaddress:address`|DLL 'nin yükleneceği tercih edilen temel adresi belirtir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;baseaddress &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md).|
@@ -38,7 +38,7 @@ Aşağıdaki tabloda alfabetik olarak listelenen derleyici seçenekleri gösteri
 |`--keycontainer:key-container-name`|Bir tanımlayıcı ad anahtar kapsayıcısı belirtir.|
 |`--keyfile:filename`|Oluşturulan derlemeyi imzalamak için ortak anahtar dosyasının adını belirtir.|
 |`--lib:folder-name`<br /><br />`-I:folder-name`|Başvurulan derlemeler için aranacak dizini belirtir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;lib &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/lib-compiler-option.md).|
-|`--linkresource:resource-info`|Belirtilen bir kaynağı derlemeye bağlar. Kaynak-bilgi biçimi<code>filename[name[public&#124;private]]</code><br /><br />Tek bir kaynağı bu seçenekle bağlamak, tüm kaynak dosyalarını seçeneğiyle gömmeye alternatiftir `--resource` .<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;linkresource &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).|
+|`--linkresource:resource-info`|Belirtilen bir kaynağı derlemeye bağlar. Kaynak-bilgi biçimi <code>filename[name[public&#124;private]]</code><br /><br />Tek bir kaynağı bu seçenekle bağlamak, tüm kaynak dosyalarını seçeneğiyle gömmeye alternatiftir `--resource` .<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;linkresource &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/linkresource-compiler-option.md).|
 |`--mlcompatibility`|Diğer ML sürümleriyle uyumluluk için tasarlanan özellikleri kullandığınızda görüntülenen uyarıları yoksayar.|
 |`--noframework`|.NET Framework derlemesine varsayılan başvuruyu devre dışı bırakır.|
 |`--nointerfacedata`|Derleyiciye normalde F # özel meta verileri içeren bir derlemeye eklediği kaynağı atmasını söyler.|
@@ -51,7 +51,7 @@ Aşağıdaki tabloda alfabetik olarak listelenen derleyici seçenekleri gösteri
 |`--pathmap:path=sourcePath,...`|Derleyici tarafından giden kaynak yol adlarına fiziksel yolların nasıl eşleneceğini belirtir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;pathmap &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/pathmap-compiler-option.md).|
 |`--pdb:pdb-filename`|Çıkış hata ayıklama PDB (program veritabanı) dosyasını adlandırır. Bu seçenek yalnızca `--debug` Ayrıca etkinleştirildiğinde geçerlidir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;pdb &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md).|
 |`--platform:platform-name`|Oluşturulan kodun yalnızca belirtilen platformda ( `x86` , `Itanium` veya `x64` ) çalışacağını veya platform adı `anycpu` seçilirse oluşturulan kodun herhangi bir platformda çalışacağını belirtir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;platform &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md).|
-|`--preferreduilang:lang`| Tercih edilen çıkış dili kültür adını belirtir (örneğin,, `es-ES` `ja-JP` ). |
+|`--preferreduilang:lang`| Tercih edilen çıkış dili kültür adını belirtir (örneğin,,  `es-ES` `ja-JP` ). |
 |`--quotations-debug`|F # teklif değişmez değerleri ve yansıtılan tanımlardan türetilmiş ifadeler için ek hata ayıklama bilgilerinin yayınlanmasının gerektiğini belirtir. Hata ayıklama bilgileri bir F # ifade ağacı düğümünün özel özniteliklerine eklenir. Bkz. [kod teklifleri](code-quotations.md) ve [Expr. CustomAttributes](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d).|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|Bir F # veya .NET Framework derlemesinden kodu derlenen kod için kullanılabilir hale getirir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;reference &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md).|
 |`--resource:resource-filename`|Yönetilen bir kaynak dosyasını oluşturulan derlemeye gömer.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;kaynak &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md).|
@@ -61,11 +61,11 @@ Aşağıdaki tabloda alfabetik olarak listelenen derleyici seçenekleri gösteri
 |`--staticlink:assembly-name`|Verilen derlemeyi ve bu derlemeye bağlı tüm başvurulan DLL 'Leri statik olarak bağlar. DLL adını değil, derleme adını kullanın.|
 |`--subsystemversion`|Oluşturulan yürütülebilir dosya tarafından kullanılacak işletim sistemi alt sisteminin sürümünü belirtir. Windows 8.1, Windows 7 için 6,01, Windows Vista için 6,00 6,02 kullanın. Bu seçenek yalnızca yürütülebilir dosyalar için geçerlidir, dll 'Ler için geçerli olur ve yalnızca uygulamanız yalnızca belirli işletim sistemi sürümlerinde kullanılabilir olan belirli güvenlik özelliklerine bağımlıysa kullanılması gerekir. Bu seçenek kullanılırsa ve bir Kullanıcı, uygulamanızı işletim sisteminin daha düşük bir sürümünde yürütmeyi denerse bir hata iletisiyle başarısız olur.|
 |<code>--tailcalls[+&#124;-]</code>|Tail Özyinelemeli işlevler için yığın çerçevesinin yeniden kullanılmasını sağlayan tail Il yönergesinin kullanımını sağlar veya devre dışı bırakır. Bu seçenek varsayılan olarak etkindir.|
-|<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|Oluşturulan derlenmiş kodun türünü ve dosya adını belirtir.<ul><li>`exe`bir konsol uygulaması anlamına gelir.<br /></li><li>`winexe`, tanımlı standart giriş/çıkış akışları (stdin, STDOUT ve stderr) bulunmayan konsol uygulamasından farklı olan bir Windows uygulaması anlamına gelir.<br /></li><li>`library`, giriş noktası olmayan bir derlemedir.<br /></li><li>`module`, daha sonra diğer modüllerle bir derlemeye birleştirilebilecek bir .NET Framework modülüdür (. netmodule).<br /></li><ul/>Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;target &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/target-compiler-option.md).|
+|<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|Oluşturulan derlenmiş kodun türünü ve dosya adını belirtir.<ul><li>`exe` bir konsol uygulaması anlamına gelir.<br /></li><li>`winexe` , tanımlı standart giriş/çıkış akışları (stdin, STDOUT ve stderr) bulunmayan konsol uygulamasından farklı olan bir Windows uygulaması anlamına gelir.<br /></li><li>`library` , giriş noktası olmayan bir derlemedir.<br /></li><li>`module` , daha sonra diğer modüllerle bir derlemeye birleştirilebilecek bir .NET Framework modülüdür (. netmodule).<br /></li><ul/>Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;target &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/target-compiler-option.md).|
 |`--times`|Derleme için zamanlama bilgilerini görüntüler.|
 |`--utf8output`|Derleyici çıkışının UTF-8 kodlaması içinde yazdırılmasını mümkün.|
 |`--warn:warning-level`|Bir uyarı düzeyi (0-5) ayarlar. Varsayılan düzey 3 ' dir. Her uyarıya önem derecesine göre bir düzey verilir. Düzey 5, düzey 1 ' den daha fazla, ancak daha az ciddi uyarılar sunar.<br /><br />Düzey 5 uyarıları: 21 (çalışma zamanında denetlenen yinelemeli kullanım), 22 ( `let rec` sıra dışı), 45 (tam soyutlama) ve 52 (savunmalı kopya). Diğer tüm uyarılar düzey 2 ' dir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;uyarma &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/warn-compiler-option.md).|
-|`--warnon:warning-number-list`|Varsayılan olarak kapalı olabilecek veya başka bir komut satırı seçeneği tarafından devre dışı bırakılmış belirli uyarıları etkinleştirin. F # 3,0 ' de, varsayılan olarak yalnızca 1182 (kullanılmayan değişkenler) uyarısı kapalıdır.|
+|`--warnon:warning-number-list`|Varsayılan olarak kapalı olabilecek veya başka bir komut satırı seçeneği tarafından devre dışı bırakılmış belirli uyarıları etkinleştirin. 1182 (kullanılmayan değişkenler) Uyarısı varsayılan olarak kapalıdır.|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|Uyarıları hata olarak bildirme seçeneğini sağlar veya devre dışı bırakır. Devre dışı bırakılacak veya etkinleştirilecek belirli uyarı numaralarını sağlayabilirsiniz. Komut satırında daha sonra bulunan seçenekler, komut satırında daha önce olan seçenekleri geçersiz kılar. Örneğin, hata olarak bildirilmesini istemediğiniz uyarıları belirtmek için, belirtin `--warnaserror+` `--warnaserror-:warning-number-list` .<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;warnaserror &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md).|
 |`--win32manifest:manifest-filename`|Derlemeye bir Win32 bildirim dosyası ekler. Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;win32manifest &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/win32manifest-compiler-option.md).|
 |`--win32res:resource-filename`|Derlemeye bir Win32 kaynak dosyası ekler.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;win32res (&#40;C&#35;) derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/win32res-compiler-option.md).|

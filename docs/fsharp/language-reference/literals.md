@@ -1,20 +1,17 @@
 ---
 title: Değişmez Değerler
 description: 'F # programlama dilindeki değişmez türler hakkında bilgi edinin.'
-ms.date: 06/28/2019
-ms.openlocfilehash: 98d609a1cf0beb00c0dd4d45ea343aaa2280b62e
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 15f73db3c36f7c60ab1eeba96c63a28ebc6d7f01
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855029"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559160"
 ---
 # <a name="literals"></a>Değişmez Değerler
 
 Bu makale, F # içinde bir sabit değerin türünü nasıl belirtmeyle ilgili bir tablo sağlar.
-
-> [!NOTE]
-> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
 
 ## <a name="literal-types"></a>Değişmez değer türleri
 
@@ -34,7 +31,7 @@ Aşağıdaki tabloda, F # içinde değişmez türler gösterilmektedir. Onaltıl
 |Int64|işaretsiz 64 bit doğal numara|UL|`86UL`|
 |Single, float32|32-bit kayan noktalı sayı|F veya f|`4.14F` veya `4.14f`|
 |||LF|`0x00000000lf`|
-|float Çift|64-bit kayan noktalı sayı|yok|`4.14`or `2.3E+32` veya`2.3e+32`|
+|float Çift|64-bit kayan noktalı sayı|yok|`4.14` or `2.3E+32` veya `2.3e+32`|
 |||LF|`0x0000000000000000LF`|
 |bigint|tamsayı, 64 bitlik gösterimiyle sınırlı değildir|I|`9999999999999999999999999999I`|
 |decimal|sabit bir nokta veya Rational numarası olarak temsil edilen kesirli sayı|A veya d|`0.7833M` veya `0.7833m`|
@@ -42,11 +39,11 @@ Aşağıdaki tabloda, F # içinde değişmez türler gösterilmektedir. Onaltıl
 |Dize|Unicode dizesi|yok|`"text\n"`<br /><br />veya<br /><br />`@"c:\filename"`<br /><br />veya<br /><br />`"""<book title="Paradise Lost">"""`<br /><br />veya<br /><br />`"string1" + "string2"`<br /><br />Ayrıca bkz. [dizeler](Strings.md).|
 |byte|ASCII karakteri|B|`'a'B`|
 |Byte []|ASCII dizesi|B|`"text"B`|
-|Dize veya Byte []|Tam dize|@ ön eki|`@"\\server\share"`Kodlamaları<br /><br />`@"\\server\share"B`ASCII|
+|Dize veya Byte []|Tam dize|@ ön eki|`@"\\server\share"` Kodlamaları<br /><br />`@"\\server\share"B` ASCII|
 
 ## <a name="named-literals"></a>Adlandırılmış sabit değerler
 
-Sabitler olması amaçlanan değerler [değişmez değer](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285) özniteliğiyle işaretlenebilir. Bu öznitelik, bir değerin bir sabit olarak derlenmesine neden olan etkiye sahiptir.
+Sabitler olması amaçlanan değerler [değişmez değer](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-literalattribute.html) özniteliğiyle işaretlenebilir. Bu öznitelik, bir değerin bir sabit olarak derlenmesine neden olan etkiye sahiptir.
 
 Desenler eşleşen ifadelerde, küçük harfli karakterlerle başlayan tanımlayıcılar her zaman değişmez değer yerine, her zaman bağlanacak değişkenler olarak değerlendirilir. bu nedenle, sabit değerleri tanımlarken genellikle ilk büyük harfleri kullanmanız gerekir.
 
@@ -93,7 +90,3 @@ let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
 let exampleSSN = 123_456_7890
 ```
-
-## <a name="see-also"></a>Ayrıca bkz.
-
-- [Core. LiteralAttribute sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.literalattribute-class-%5bfsharp%5d)

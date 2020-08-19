@@ -1,20 +1,17 @@
 ---
 title: Diziler
 description: 'Büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığınız durumlarda F # dizilerini nasıl kullanacağınızı öğrenin.'
-ms.date: 11/04/2019
-ms.openlocfilehash: fa5073f33b9dae52371c249bfb257a2446b4d26a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/13/2020
+ms.openlocfilehash: c84e0aebcc79a595c0ae3b9075648fb629bdd65c
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855328"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88559043"
 ---
 # <a name="sequences"></a>Diziler
 
-*Dizi* , tek bir türdeki öğelerin mantıksal bir dizisidir. Diziler özellikle büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığında yararlıdır. Tek tek dizi öğeleri yalnızca gerekli olduğu gibi hesaplanır, bu nedenle bir sıra, tüm öğelerin kullanılmadığı durumlarda bir listeden daha iyi performans sağlayabilir. Diziler, `seq<'T>` için bir diğer ad olan türü tarafından temsil edilir <xref:System.Collections.Generic.IEnumerable%601> . Bu nedenle, arabirimini uygulayan tüm .NET türleri <xref:System.Collections.Generic.IEnumerable%601> bir dizi olarak kullanılabilir. [Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) , diziler içeren düzenlemelere yönelik destek sağlar.
-
-> [!NOTE]
-> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
+*Dizi* , tek bir türdeki öğelerin mantıksal bir dizisidir. Diziler özellikle büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığında yararlıdır. Tek tek dizi öğeleri yalnızca gerekli olduğu gibi hesaplanır, bu nedenle bir sıra, tüm öğelerin kullanılmadığı durumlarda bir listeden daha iyi performans sağlayabilir. Diziler, `seq<'T>` için bir diğer ad olan türü tarafından temsil edilir <xref:System.Collections.Generic.IEnumerable%601> . Bu nedenle, arabirimini uygulayan tüm .NET türleri <xref:System.Collections.Generic.IEnumerable%601> bir dizi olarak kullanılabilir. [Seq modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) , diziler içeren düzenlemelere yönelik destek sağlar.
 
 ## <a name="sequence-expressions"></a>Dizi Ifadeleri
 
@@ -67,7 +64,7 @@ seq {
 }
 ```
 
-Yalnızca `x` Önceki örnekte belirtme, sıranın hiçbir değer üretmesine neden olur.
+Önceki örnek, her bir için değerine kadar olan `x` tüm değerlere ek olarak değerini `1` oluşturacaktır `x` `x` .
 
 ## <a name="examples"></a>Örnekler
 
@@ -91,17 +88,17 @@ Listeler, diziler, kümeler ve haritalar gibi birçok veri türü, sıralanabili
 
 ## <a name="module-functions"></a>Modül Işlevleri
 
-[Microsoft. FSharp. Collections ad alanındaki](https://msdn.microsoft.com/library/24f64e5f-5030-47d0-9759-8d3e398ed13f) [Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) , dizileriyle çalışma işlevlerini içerir. Bu işlevler listeler, diziler, haritalar ve kümeler ile birlikte çalışarak, bu türlerin hepsi numaralandırılabilir olduğundan ve bu nedenle dizi olarak kabul edilebilir.
+[FSharp. Collections ad alanındaki](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections.html) [Seq modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) , dizileriyle çalışma işlevlerini içerir. Bu işlevler listeler, diziler, haritalar ve kümeler ile birlikte çalışarak, bu türlerin hepsi numaralandırılabilir olduğundan ve bu nedenle dizi olarak kabul edilebilir.
 
 ## <a name="creating-sequences"></a>Sıralar oluşturma
 
 Dizileri, daha önce açıklandığı gibi veya belirli işlevleri kullanarak sıra ifadeleri kullanarak oluşturabilirsiniz.
 
-[Seq. Empty](https://msdn.microsoft.com/library/3c7f1c69-6117-4782-b2da-0e04d6854f59)kullanarak boş bir sıra oluşturabilir veya [Seq. Singleton](https://msdn.microsoft.com/library/9b8cc460-a282-4ec5-b29a-630ab17e9de7)kullanarak yalnızca bir belirtilen öğenin dizisini oluşturabilirsiniz.
+[Seq. Empty](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#empty)kullanarak boş bir sıra oluşturabilir veya [Seq. Singleton](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#singleton)kullanarak yalnızca bir belirtilen öğenin dizisini oluşturabilirsiniz.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet9.fs)]
 
-Sağladığınız bir işlev kullanılarak öğelerin oluşturulduğu bir sıra oluşturmak için [Seq.init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be86-88aa72101576) kullanabilirsiniz. Ayrıca sıra için bir boyut da sağlarsınız. Bu işlev, dizi boyunca yineleme yapana kadar öğelerin oluşturulmasının dışında [List.init](https://msdn.microsoft.com/library/dd38c096-0ea8-4858-be6b-794b90418b83)gibi. Aşağıdaki kod öğesinin kullanımını gösterir `Seq.init` .
+Sağladığınız bir işlev kullanılarak öğelerin oluşturulduğu bir sıra oluşturmak için [Seq.init](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#init) kullanabilirsiniz. Ayrıca sıra için bir boyut da sağlarsınız. Bu işlev, dizi boyunca yineleme yapana kadar öğelerin oluşturulmasının dışında [List.init](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#init)gibi. Aşağıdaki kod öğesinin kullanımını gösterir `Seq.init` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet10.fs)]
 
@@ -111,19 +108,19 @@ Sağladığınız bir işlev kullanılarak öğelerin oluşturulduğu bir sıra 
 0 10 20 30 40
 ```
 
-[Seq. ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99) ve [Seq. ofList&#60; 't&#62; işlevini](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d)kullanarak diziler ve listelerden sıralar oluşturabilirsiniz. Ancak, bir atama işleci kullanarak dizileri ve listeleri dizilere de dönüştürebilirsiniz. Her iki teknik de aşağıdaki kodda gösterilmiştir.
+[Seq. ofArray](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#ofArray) ve [Seq. ofList&#60; 't&#62; işlevini](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#ofList)kullanarak diziler ve listelerden sıralar oluşturabilirsiniz. Ancak, bir atama işleci kullanarak dizileri ve listeleri dizilere de dönüştürebilirsiniz. Her iki teknik de aşağıdaki kodda gösterilmiştir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet11.fs)]
 
-[Seq. Cast](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334)kullanarak, içinde tanımlananlar gibi, Zayıf yazılmış bir koleksiyondan bir dizi oluşturabilirsiniz `System.Collections` . Bu tür zayıf türsüz koleksiyonlar öğe türüne sahiptir `System.Object` ve genel olmayan tür kullanılarak numaralandırılır `System.Collections.Generic.IEnumerable&#96;1` . Aşağıdaki kod, `Seq.cast` bir diziye dönüştürmek için kullanımını gösterir `System.Collections.ArrayList` .
+[Seq. Cast](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#cast)kullanarak, içinde tanımlananlar gibi, Zayıf yazılmış bir koleksiyondan bir dizi oluşturabilirsiniz `System.Collections` . Bu tür zayıf türsüz koleksiyonlar öğe türüne sahiptir `System.Object` ve genel olmayan tür kullanılarak numaralandırılır `System.Collections.Generic.IEnumerable&#96;1` . Aşağıdaki kod, `Seq.cast` bir diziye dönüştürmek için kullanımını gösterir `System.Collections.ArrayList` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet12.fs)]
 
-Sonsuz dizileri [Seq.iniTinsonlu](https://msdn.microsoft.com/library/d1804e53-da92-48ec-8d6e-57eaf4c62bef) işlevini kullanarak tanımlayabilirsiniz. Böyle bir sıra için, öğe dizininden her bir öğeyi oluşturan bir işlev sağlarsınız. Geç değerlendirme nedeniyle sonsuz sıralar mümkündür; öğeler, belirttiğiniz işlevi çağırarak gerektiği şekilde oluşturulur. Aşağıdaki kod örneği, bir kayan noktalı sayı dizisi oluşturur, bu durumda ardışık tamsayıların karelerinin geçişli serisi.
+Sonsuz dizileri [Seq.iniTinsonlu](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#initInfinite) işlevini kullanarak tanımlayabilirsiniz. Böyle bir sıra için, öğe dizininden her bir öğeyi oluşturan bir işlev sağlarsınız. Geç değerlendirme nedeniyle sonsuz sıralar mümkündür; öğeler, belirttiğiniz işlevi çağırarak gerektiği şekilde oluşturulur. Aşağıdaki kod örneği, bir kayan noktalı sayı dizisi oluşturur, bu durumda ardışık tamsayıların karelerinin geçişli serisi.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq. unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) , bir durum alan hesaplama işlevinden bir dizi oluşturur ve sıradaki her bir öğeyi oluşturmak için bunu dönüştürür. Durum yalnızca her bir öğeyi hesaplamak için kullanılan bir değerdir ve her öğe hesaplandıktan sonra değiştirilebilir. İkinci bağımsız değişkeni, `Seq.unfold` diziyi başlatmak için kullanılan ilk değerdir. `Seq.unfold`, değeri döndürerek diziyi sonlandırabilmenizi sağlayan durum için bir seçenek türü kullanır `None` . Aşağıdaki kod, `seq1` `fib` bir işlem tarafından oluşturulan ve için iki dizi örneği gösterir `unfold` . Birincisi, `seq1` yalnızca 20 ' ye kadar olan sayıları içeren basit bir sıralamadır. İkincisi, `fib` `unfold` Fibonaccı sırasını hesaplamak için kullanır. Fibonaccı sırasındaki her öğe önceki iki Fibonaccı numaralarının toplamı olduğundan, durum değeri dizideki önceki iki sayıdan oluşan bir kayıt dizisidir. İlk değer `(1,1)` , dizideki ilk iki sayı.
+[Seq. unfold](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#unfold) , bir durum alan hesaplama işlevinden bir dizi oluşturur ve sıradaki her bir öğeyi oluşturmak için bunu dönüştürür. Durum yalnızca her bir öğeyi hesaplamak için kullanılan bir değerdir ve her öğe hesaplandıktan sonra değiştirilebilir. İkinci bağımsız değişkeni, `Seq.unfold` diziyi başlatmak için kullanılan ilk değerdir. `Seq.unfold` , değeri döndürerek diziyi sonlandırabilmenizi sağlayan durum için bir seçenek türü kullanır `None` . Aşağıdaki kod, `seq1` `fib` bir işlem tarafından oluşturulan ve için iki dizi örneği gösterir `unfold` . Birincisi, `seq1` yalnızca 20 ' ye kadar olan sayıları içeren basit bir sıralamadır. İkincisi, `fib` `unfold` Fibonaccı sırasını hesaplamak için kullanır. Fibonaccı sırasındaki her öğe önceki iki Fibonaccı numaralarının toplamı olduğundan, durum değeri dizideki önceki iki sayıdan oluşan bir kayıt dizisidir. İlk değer `(1,1)` , dizideki ilk iki sayı.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -145,13 +142,13 @@ Aşağıdaki kod, sonsuz sıraların değerlerini oluşturmak ve hesaplamak içi
 
 ## <a name="searching-and-finding-elements"></a>Öğeleri arama ve bulma
 
-Sıralar desteği işlevleri listelerle kullanılabilir: [Seq. Exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [Seq. exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [Seq. Find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [Seq. FindIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [Seq. Pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [Seq. tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)ve [Seq. tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Diziler için kullanılabilen bu işlevlerin sürümleri, yalnızca aranmakta olan öğeye kadar olan sırayı değerlendirir. Örnekler için bkz. [listeler](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
+Sıralar desteği işlevleri listelerle kullanılabilir: [Seq. Exists](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#exists), [Seq. exists2](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#exists), [Seq. Find](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#find), [Seq. FindIndex](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#findIndex), [Seq. Pick](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#pick), [Seq. tryFind](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#tryFind)ve [Seq. tryFindIndex](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#tryFindIndex). Diziler için kullanılabilen bu işlevlerin sürümleri, yalnızca aranmakta olan öğeye kadar olan sırayı değerlendirir. Örnekler için bkz. [listeler](lists.md).
 
 ## <a name="obtaining-subsequences"></a>Subsequences edinme
 
-[Seq. Filter](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) ve [Seq. Choose](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) , listeler için kullanılabilen işlevlere benzer, ancak sıralama öğeleri değerlendirilene kadar filtreleme ve seçme gerçekleşmeyecektir.
+[Seq. Filter](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#filter) ve [Seq. Choose](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#choose) , listeler için kullanılabilen işlevlere benzer, ancak sıralama öğeleri değerlendirilene kadar filtreleme ve seçme gerçekleşmeyecektir.
 
-[Seq. Truncate](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) , başka bir dizideki bir sıra oluşturur, ancak diziyi belirtilen sayıda öğe ile sınırlandırır. [Seq. take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) , sıranın başından yalnızca belirtilen sayıda öğeyi içeren yeni bir dizi oluşturur. Dizide, almak için belirtenden daha az öğe varsa, `Seq.take` bir oluşturur `System.InvalidOperationException` . Ve arasındaki fark `Seq.take` , `Seq.truncate` `Seq.truncate` öğe sayısı belirttiğiniz sayıdan daha az olursa hata oluşturmaz.
+[Seq. Truncate](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#truncate) , başka bir dizideki bir sıra oluşturur, ancak diziyi belirtilen sayıda öğe ile sınırlandırır. [Seq. take](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#take) , sıranın başından yalnızca belirtilen sayıda öğeyi içeren yeni bir dizi oluşturur. Dizide, almak için belirtenden daha az öğe varsa, `Seq.take` bir oluşturur `System.InvalidOperationException` . Ve arasındaki fark `Seq.take` , `Seq.truncate` `Seq.truncate` öğe sayısı belirttiğiniz sayıdan daha az olursa hata oluşturmaz.
 
 Aşağıdaki kod, ve arasındaki farklılıkları gösterir `Seq.truncate` `Seq.take` .
 
@@ -166,7 +163,7 @@ Aşağıdaki kod, ve arasındaki farklılıkları gösterir `Seq.truncate` `Seq.
 1 4 9 16 25 36 49 64 81 100
 ```
 
-[Seq. takeWhile](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92)kullanarak, bir koşul Işlevi (Boolean işlevi) belirtebilir ve bu öğelerden biri koşulun olduğu `true` , ancak koşulun döndürdüğü ilk öğeden önce durulabileceğiniz bir sıra oluşturabilirsiniz `false` . [Seq. Skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1) , başka bir dizinin ilk öğelerinin belirtilen sayısını atlayan ve kalan öğeleri döndüren bir sıra döndürür. [Seq. skipWhile](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16) , koşulun döndürdüğü sürece başka bir dizinin ilk öğelerini atlayan bir dizi döndürür `true` ve sonra koşulun döndürdüğü ilk öğeden başlayarak kalan öğeleri döndürür `false` .
+[Seq. takeWhile](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#takeWhile)kullanarak, bir koşul Işlevi (Boolean işlevi) belirtebilir ve bu öğelerden biri koşulun olduğu `true` , ancak koşulun döndürdüğü ilk öğeden önce durulabileceğiniz bir sıra oluşturabilirsiniz `false` . [Seq. Skip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#skip) , başka bir dizinin ilk öğelerinin belirtilen sayısını atlayan ve kalan öğeleri döndüren bir sıra döndürür. [Seq. skipWhile](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#skipWhile) , koşulun döndürdüğü sürece başka bir dizinin ilk öğelerini atlayan bir dizi döndürür `true` ve sonra koşulun döndürdüğü ilk öğeden başlayarak kalan öğeleri döndürür `false` .
 
 Aşağıdaki kod örneği, ve arasındaki farklılıkları gösterir `Seq.takeWhile` `Seq.skip` `Seq.skipWhile` .
 
@@ -182,11 +179,11 @@ Aşağıdaki kod örneği, ve arasındaki farklılıkları gösterir `Seq.takeWh
 
 ## <a name="transforming-sequences"></a>Dizileri dönüştürme
 
-[Seq. ikili](https://msdn.microsoft.com/library/210dcf26-4e24-4d83-af6d-a8288b2ae4b1) , giriş dizisinin ardışık öğelerinin diziler halinde gruplandırıldığı yeni bir dizi oluşturur.
+[Seq. ikili](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#pairwise) , giriş dizisinin ardışık öğelerinin diziler halinde gruplandırıldığı yeni bir dizi oluşturur.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet18.fs)]
 
-[Seq. pencereli](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744) gibidir `Seq.pairwise` , ancak bir dizi tanımlama dizisi üretmek yerine, dizideki bitişik öğelerin (bir *pencere*) kopyalarını içeren diziler dizisi oluşturur. Her dizide istediğiniz bitişik öğe sayısını belirtirsiniz.
+[Seq. pencereli](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#windowed) gibidir `Seq.pairwise` , ancak bir dizi tanımlama dizisi üretmek yerine, dizideki bitişik öğelerin (bir *pencere*) kopyalarını içeren diziler dizisi oluşturur. Her dizide istediğiniz bitişik öğe sayısını belirtirsiniz.
 
 Aşağıdaki kod örneği öğesinin kullanımını gösterir `Seq.windowed` . Bu durumda, penceredeki öğelerin sayısı 3 ' dir. Örnek `printSeq` , önceki kod örneğinde tanımlanan kullanır.
 
@@ -208,13 +205,13 @@ Moving average:
 
 ## <a name="operations-with-multiple-sequences"></a>Birden çok dizileri olan işlemler
 
-[Seq.zip](https://msdn.microsoft.com/library/0a5df8bf-0d48-44ce-bff4-e8ef1df5bca4) ve [Seq.zip3](https://msdn.microsoft.com/library/ef13bebb-22ae-4eb9-873b-87dd29154d16) iki veya üç sıra alır ve bir dizi tanımlama grubu oluşturur. Bu işlevler, [listelerde](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)kullanılabilen ilgili işlevlere benzer. Bir diziyi iki veya daha fazla diziye ayırmak için karşılık gelen bir işlev yoktur. Bu işlevselliğe bir sıra için ihtiyacınız varsa, diziyi bir listeye dönüştürün ve [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)öğesini kullanın.
+[Seq.zip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#zip) ve [Seq.zip3](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#zip3) iki veya üç sıra alır ve bir dizi tanımlama grubu oluşturur. Bu işlevler, [listelerde](lists.md)kullanılabilen ilgili işlevlere benzer. Bir diziyi iki veya daha fazla diziye ayırmak için karşılık gelen bir işlev yoktur. Bu işlevselliğe bir sıra için ihtiyacınız varsa, diziyi bir listeye dönüştürün ve [List. unzip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip)öğesini kullanın.
 
 ## <a name="sorting-comparing-and-grouping"></a>Sıralama, karşılaştırma ve gruplama
 
-Listeler için desteklenen sıralama işlevleri de dizileriyle birlikte çalışır. Buna [Seq. Sort](https://msdn.microsoft.com/library/327ea595-e77c-4529-b61e-8c6cbf5ec92e) ve [Seq. sortBy](https://msdn.microsoft.com/library/4f8b4fb9-bf20-49d9-b4ee-dcc906c8208f)dahildir. Bu işlevler, tüm sıra boyunca yinelenir.
+Listeler için desteklenen sıralama işlevleri de dizileriyle birlikte çalışır. Buna [Seq. Sort](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#sort) ve [Seq. sortBy](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#sortBy)dahildir. Bu işlevler, tüm sıra boyunca yinelenir.
 
-[Seq. compareWith](https://msdn.microsoft.com/library/5a740135-0b3a-4545-816f-8f91cc31290f) işlevini kullanarak iki diziyi karşılaştırırsınız. İşlev birbirini izleyen öğeleri sırayla karşılaştırır ve ilk eşit olmayan çifle karşılaştığında duraklar. Ek öğeler karşılaştırmaya katkıda bulunamaz.
+[Seq. compareWith](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#compareWith) işlevini kullanarak iki diziyi karşılaştırırsınız. İşlev birbirini izleyen öğeleri sırayla karşılaştırır ve ilk eşit olmayan çifle karşılaştığında duraklar. Ek öğeler karşılaştırmaya katkıda bulunamaz.
 
 Aşağıdaki kod öğesinin kullanımını gösterir `Seq.compareWith` .
 
@@ -222,7 +219,7 @@ Aşağıdaki kod öğesinin kullanımını gösterir `Seq.compareWith` .
 
 Önceki kodda yalnızca ilk öğe hesaplanır ve incelenir ve sonuç-1 ' dir.
 
-[Seq. countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) her öğe için *anahtar* olarak adlandırılan bir değer üreten bir işlevi alır. Her öğe için bu işlevi çağırarak her öğe için bir anahtar oluşturulur. `Seq.countBy`sonra anahtar değerlerini içeren bir dizi ve anahtarın her bir değerini oluşturan öğe sayısı sayısını döndürür.
+[Seq. countBy](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#countBy) her öğe için *anahtar* olarak adlandırılan bir değer üreten bir işlevi alır. Her öğe için bu işlevi çağırarak her öğe için bir anahtar oluşturulur. `Seq.countBy` sonra anahtar değerlerini içeren bir dizi ve anahtarın her bir değerini oluşturan öğe sayısı sayısını döndürür.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -234,7 +231,7 @@ Aşağıdaki kod öğesinin kullanımını gösterir `Seq.compareWith` .
 
 Önceki çıktı, anahtar 1, 33 anahtar 2 üreten değerleri ve 0 anahtarını üreten 33 değerlerini üreten orijinal sıranın 34 öğe olduğunu gösterir.
 
-[Seq. GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)öğesini çağırarak bir sıranın öğelerini gruplandırabilirsiniz. `Seq.groupBy`bir dizi ve bir öğeden anahtar üreten bir işlev alır. İşlev dizideki her öğe üzerinde yürütülür. `Seq.groupBy`Her bir kayıt düzeninin ilk öğesi anahtar, ikincisi ise bu anahtarı üreten öğelerin bir dizisi olduğunda, bir dizi tanımlama grubu döndürür.
+[Seq. GroupBy](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#groupBy)öğesini çağırarak bir sıranın öğelerini gruplandırabilirsiniz. `Seq.groupBy` bir dizi ve bir öğeden anahtar üreten bir işlev alır. İşlev dizideki her öğe üzerinde yürütülür. `Seq.groupBy` Her bir kayıt düzeninin ilk öğesi anahtar, ikincisi ise bu anahtarı üreten öğelerin bir dizisi olduğunda, bir dizi tanımlama grubu döndürür.
 
 Aşağıdaki kod örneği, `Seq.groupBy` 1 ile 100 arasındaki sayıların sırasını 0, 1 ve 2 farklı anahtar değerlerine sahip üç gruba bölümlemek için kullanımını gösterir.
 
@@ -246,9 +243,9 @@ Aşağıdaki kod örneği, `Seq.groupBy` 1 ile 100 arasındaki sayıların sıra
 (1, seq [1; 4; 7; 10; ...]) (2, seq [2; 5; 8; 11; ...]) (0, seq [3; 6; 9; 12; ...])
 ```
 
-[Seq. Distinct](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401)öğesini çağırarak yinelenen öğeleri ortadan kaldıran bir dizi oluşturabilirsiniz. Ya da her öğe üzerinde çağrılacak bir anahtar oluşturma işlevi alan [Seq. dıstınt](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75)'i de kullanabilirsiniz. Elde edilen sıra, özgün sıranın benzersiz anahtarlara sahip öğelerini içerir; daha önceki bir öğeye yinelenen bir anahtar üreten daha sonraki öğeler atılır.
+[Seq. Distinct](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#distinct)öğesini çağırarak yinelenen öğeleri ortadan kaldıran bir dizi oluşturabilirsiniz. Ya da her öğe üzerinde çağrılacak bir anahtar oluşturma işlevi alan [Seq. dıstınt](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#distinctBy)'i de kullanabilirsiniz. Elde edilen sıra, özgün sıranın benzersiz anahtarlara sahip öğelerini içerir; daha önceki bir öğeye yinelenen bir anahtar üreten daha sonraki öğeler atılır.
 
-Aşağıdaki kod örneği öğesinin kullanımını gösterir `Seq.distinct` . `Seq.distinct`ikili sayıları temsil eden diziler oluşturarak ve sonra yalnızca ayrı öğelerin 0 ve 1 olduğunu gösteren sıralar oluşturarak gösterilmiştir.
+Aşağıdaki kod örneği öğesinin kullanımını gösterir `Seq.distinct` . `Seq.distinct` ikili sayıları temsil eden diziler oluşturarak ve sonra yalnızca ayrı öğelerin 0 ve 1 olduğunu gösteren sıralar oluşturarak gösterilmiştir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -258,17 +255,17 @@ Aşağıdaki kod, `Seq.distinctBy` negatif ve pozitif sayılar içeren bir dizi 
 
 ## <a name="readonly-and-cached-sequences"></a>Salt okunur ve önbelleğe alınmış sıralar
 
-[Seq. ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) sıranın salt okunur bir kopyasını oluşturur. `Seq.readonly`dizi gibi bir okuma-yazma koleksiyonunuz olduğunda ve özgün koleksiyonu değiştirmek istemediğinizde yararlıdır. Bu işlev, veri kapsüllemesini korumak için kullanılabilir. Aşağıdaki kod örneğinde, bir dizi içeren bir tür oluşturulur. Bir özellik diziyi kullanıma sunar, ancak bir diziyi döndürmek yerine, kullanarak diziden oluşturulan bir diziyi döndürür `Seq.readonly` .
+[Seq. ReadOnly](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#readonly) sıranın salt okunur bir kopyasını oluşturur. `Seq.readonly` dizi gibi bir okuma-yazma koleksiyonunuz olduğunda ve özgün koleksiyonu değiştirmek istemediğinizde yararlıdır. Bu işlev, veri kapsüllemesini korumak için kullanılabilir. Aşağıdaki kod örneğinde, bir dizi içeren bir tür oluşturulur. Bir özellik diziyi kullanıma sunar, ancak bir diziyi döndürmek yerine, kullanarak diziden oluşturulan bir diziyi döndürür `Seq.readonly` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet24.fs)]
 
-[Seq. Cache](https://msdn.microsoft.com/library/d197f9cc-08bf-4986-9869-246e72ca73f0) bir sıranın saklı bir sürümünü oluşturur. `Seq.cache`Bir dizinin yeniden değerlendirilmesini önlemek için veya bir sıra kullanan birden çok iş parçacığına sahip olduğunuzda, ancak her bir öğenin yalnızca bir kez işlem yapabileceği halde olduğundan emin olmanız gerekir. Birden çok iş parçacığı tarafından kullanılan bir diziniz varsa, özgün sıranın değerlerini numaralandırır ve hesaplayan bir iş parçacığına sahip olabilirsiniz ve kalan iş parçacıkları önbelleğe alınmış sırayı kullanabilir.
+[Seq. Cache](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#cache) bir sıranın saklı bir sürümünü oluşturur. `Seq.cache`Bir dizinin yeniden değerlendirilmesini önlemek için veya bir sıra kullanan birden çok iş parçacığına sahip olduğunuzda, ancak her bir öğenin yalnızca bir kez işlem yapabileceği halde olduğundan emin olmanız gerekir. Birden çok iş parçacığı tarafından kullanılan bir diziniz varsa, özgün sıranın değerlerini numaralandırır ve hesaplayan bir iş parçacığına sahip olabilirsiniz ve kalan iş parçacıkları önbelleğe alınmış sırayı kullanabilir.
 
 ## <a name="performing-computations-on-sequences"></a>Diziler üzerinde hesaplamalar gerçekleştirme
 
-Basit aritmetik işlemler, [Seq. Average](https://msdn.microsoft.com/library/609d793b-c70f-4e36-9ab4-d928056d65b8), [Seq. Sum](https://msdn.microsoft.com/library/01208515-4880-4358-91f5-af34f66dc77a), [Seq. averageBy](https://msdn.microsoft.com/library/47c855c1-2dbd-415a-885e-b909d9d3e4f8), [Seq. sumBy](https://msdn.microsoft.com/library/68cca78c-94ed-4a45-9b8d-34d2c5f2b1b1)vb. gibi listelerden birine benzer.
+Basit aritmetik işlemler, [Seq. Average](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#average), [Seq. Sum](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#sum), [Seq. averageBy](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#averageBy), [Seq. sumBy](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#sumBy)vb. gibi listelerden birine benzer.
 
-[Seq. Fold](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3), [Seq. küçültme](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9)ve [Seq. Scan](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e) , listeler için kullanılabilen ilgili işlevlere benzer. Diziler, bu işlevlerin desteğini listeleyen tam çeşitlerinin bir alt kümesini destekler. Daha fazla bilgi ve örnek için bkz. [listeler](lists.md).
+[Seq. Fold](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#fold), [Seq. küçültme](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#reduce)ve [Seq. Scan](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html#scan) , listeler için kullanılabilen ilgili işlevlere benzer. Diziler, bu işlevlerin desteğini listeleyen tam çeşitlerinin bir alt kümesini destekler. Daha fazla bilgi ve örnek için bkz. [listeler](lists.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

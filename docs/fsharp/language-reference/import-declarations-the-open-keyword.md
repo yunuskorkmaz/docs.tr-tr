@@ -1,13 +1,13 @@
 ---
 title: 'İçeri Aktarma Bildirimleri: open Anahtar Sözcüğü'
 description: 'F # içeri aktarma bildirimleri hakkında bilgi edinin ve öğelerin tam nitelikli bir ad kullanmadan başvurdukları bir modül veya ad alanı belirtmeleri hakkında bilgi edinin.'
-ms.date: 04/04/2019
-ms.openlocfilehash: 2b88427ca92212fb4a7598447dd1a5e12061093a
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: 6420df071f86159c44606c2710331d5f587023cc
+ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855094"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88557613"
 ---
 # <a name="import-declarations-the-open-keyword"></a>İçeri aktarma bildirimleri: `open` anahtar sözcüğü
 
@@ -20,9 +20,6 @@ open module-or-namespace-name
 ```
 
 ## <a name="remarks"></a>Açıklamalar
-
-> [!NOTE]
-> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
 
 Her seferinde tam nitelikli ad alanı veya modül yolunu kullanarak koda başvurmak, yazmak, okumak ve sürdürmek zor olan kod oluşturabilir. Bunun yerine `open` sık kullanılan modüller ve ad alanları için anahtar sözcüğünü kullanarak bu modülün veya ad alanının bir üyesine başvurduğunuzda, tam ad yerine adın kısa formunu kullanabilirsiniz. Bu anahtar sözcük `using` , `using namespace` Visual C++ ve Visual Basic içindeki C# anahtar sözcüğüne benzerdir `Imports` .
 
@@ -52,22 +49,22 @@ Bazı ad alanları, F # kodunda açık bir içeri aktarma bildirimine gerek kalm
 
 |Ad Alanı|Açıklama|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Ve gibi yerleşik türler için temel F # tür tanımlarını içerir `int` `float` .|
-|`Microsoft.FSharp.Core.Operators`|Ve gibi temel aritmetik işlemleri içerir `+` `*` .|
-|`Microsoft.FSharp.Collections`|Ve gibi sabit koleksiyon sınıflarını içerir `List` `Array` .|
-|`Microsoft.FSharp.Control`|Yavaş değerlendirme ve zaman uyumsuz iş akışları gibi denetim yapıları için türler içerir.|
-|`Microsoft.FSharp.Text`|İşlev gibi, biçimlendirilen GÇ işlevleri içerir `printf` .|
+|`FSharp.Core`|Ve gibi yerleşik türler için temel F # tür tanımlarını içerir `int` `float` .|
+|`FSharp.Core.Operators`|Ve gibi temel aritmetik işlemleri içerir `+` `*` .|
+|`FSharp.Collections`|Ve gibi sabit koleksiyon sınıflarını içerir `List` `Array` .|
+|`FSharp.Control`|Yavaş değerlendirme ve zaman uyumsuz iş akışları gibi denetim yapıları için türler içerir.|
+|`FSharp.Text`|İşlev gibi, biçimlendirilen GÇ işlevleri içerir `printf` .|
 
 ## <a name="autoopen-attribute"></a>Oto aç özniteliği
 
-`AutoOpen`Derlemeye başvuruluyorsa bir ad alanını veya modülü otomatik olarak açmak istiyorsanız, özniteliği bir derlemeye uygulayabilirsiniz. `AutoOpen`Üst modül veya ad alanı açıldığında bu modülü otomatik olarak açmak için bir modüle özniteliği de uygulayabilirsiniz. Daha fazla bilgi için bkz. [Core. oto Openattribute sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d).
+`AutoOpen`Derlemeye başvuruluyorsa bir ad alanını veya modülü otomatik olarak açmak istiyorsanız, özniteliği bir derlemeye uygulayabilirsiniz. `AutoOpen`Üst modül veya ad alanı açıldığında bu modülü otomatik olarak açmak için bir modüle özniteliği de uygulayabilirsiniz. Daha fazla bilgi için bkz. [oto Openattribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-autoopenattribute.html).
 
 ## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess özniteliği
 
-Bazı modüller, kayıtlar veya birleşim türleri `RequireQualifiedAccess` özniteliği belirtebilir. Bu modüllerin, kayıtların veya birleşimlerin öğelerine başvurduğunuzda, bir içeri aktarma bildirimi eklenip eklenmeyeceğini fark etmeksizin nitelikli bir ad kullanmanız gerekir. Bu özniteliği yaygın olarak kullanılan adları tanımlayan türler üzerinde stratejik olarak kullanırsanız, ad çakışmalarını önlemeyi ve bu sayede kodu kitaplıklarda değişikliklere daha dayanıklı hale getirmenize yardımcı olursunuz. Daha fazla bilgi için bkz. [Core. RequireQualifiedAccessAttribute sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D).
+Bazı modüller, kayıtlar veya birleşim türleri `RequireQualifiedAccess` özniteliği belirtebilir. Bu modüllerin, kayıtların veya birleşimlerin öğelerine başvurduğunuzda, bir içeri aktarma bildirimi eklenip eklenmeyeceğini fark etmeksizin nitelikli bir ad kullanmanız gerekir. Bu özniteliği yaygın olarak kullanılan adları tanımlayan türler üzerinde stratejik olarak kullanırsanız, ad çakışmalarını önlemeyi ve bu sayede kodu kitaplıklarda değişikliklere daha dayanıklı hale getirmenize yardımcı olursunuz. Daha fazla bilgi için bkz. [RequireQualifiedAccessAttribute](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-requirequalifiedaccessattribute.html).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [F # dil başvurusu](index.md)
-- [Ad Alanları](namespaces.md)
-- [Modüller](modules.md)
+- [Ad alanları](namespaces.md)
+- [Modül](modules.md)
