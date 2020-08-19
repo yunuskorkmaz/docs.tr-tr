@@ -7,12 +7,12 @@ metadata:
   ms.topic: landing-page
   ms.date: 08/13/2020
   ms.custom: contperfq1
-  ms.openlocfilehash: 507ee5cfc579a75231bf49b1db0d28ec32927ecd
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: dff262ba8646427baa0021dbe4b3f859d22459cd
+  ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88268159"
+  ms.lasthandoff: 08/18/2020
+  ms.locfileid: "88559212"
 landingContent:
 - title: başlarken
   linkLists:
@@ -22,15 +22,15 @@ landingContent:
       url: https://dotnet.microsoft.com/download
   - linkListType: get-started
     links:
-    - text: "\"Merhaba Dünya\" uygulaması oluşturma"
-      url: ../core/tutorials/vb-with-visual-studio.md
-    - text: Sınıf kitaplığı oluşturma
-      url: ../core/tutorials/vb-library-with-visual-studio.md
+    - text: Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
+      url: ../core/tutorials/with-visual-studio.md
+    - text: Visual Studio 'Yu kullanarak .NET Standard kitaplığı oluşturma
+      url: ../core/tutorials/library-with-visual-studio.md
     - text: İzlenecek Yollar
       url: walkthroughs.md
     - text: Ek kaynaklar
       url: getting-started/additional-resources.md
-- title: Temeller
+- title: Temel Bilgiler
   linkLists:
   - linkListType: overview
     links:
