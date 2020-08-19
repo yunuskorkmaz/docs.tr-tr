@@ -3,12 +3,12 @@ title: Veri kümesi ve DataTable Güvenlik Kılavuzu
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 2fbac625ae0049fc4c363977dc1d3fbcfb376025
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416199"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608524"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Veri kümesi ve DataTable Güvenlik Kılavuzu
 
@@ -29,7 +29,7 @@ ADO.NET hakkında daha fazla bilgi için, bkz. [ADO.net belgeleri](/dotnet/frame
 * Temel elemanlar ve ilkel eşdeğerleri: `bool` , `char` ,, `sbyte` `byte` , `short` , `ushort` , `int` , `uint` , `long` , `ulong` , `float` , `double` `decimal` `DateTime` `DateTimeOffset` `TimeSpan` `string` `Guid` `SqlBinary` `SqlBoolean` `SqlByte` `SqlBytes` `SqlChars` `SqlDateTime` `SqlDecimal` `SqlDouble` `SqlGuid` `SqlInt16` `SqlInt32` `SqlInt64` `SqlMoney` `SqlSingle` `SqlString` ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 * Yaygın olarak kullanılan temel olmayan: `Type` , `Uri` , ve `BigInteger` .
 * Yaygın olarak kullanılan _System. Drawing_ türleri: `Color` ,,, `Point` `PointF` `Rectangle` , `RectangleF` , `Size` , ve `SizeF` .
-* `Enum`türü.
+* `Enum` türü.
 * Yukarıdaki türlerin dizileri ve listeleri.
 
 Gelen XML verileri, türü bu listede olmayan bir nesne içeriyorsa:
@@ -252,7 +252,7 @@ Daha fazla bilgi için, bkz [\<AppContextSwitchOverrides>](../../../configure-ap
 
 Daha fazla bilgi için bkz. [".NET Core çalışma zamanı yapılandırma ayarları"](/dotnet/core/run-time-config/).
 
-`AllowArbitraryDataSetTypeInstantiation`, aşağıdaki kodda gösterildiği gibi, bir yapılandırma dosyası kullanmak yerine [AppContext. SetSwitch](/dotnet/api/system.appcontext.setswitch) aracılığıyla program aracılığıyla da ayarlanabilir:
+`AllowArbitraryDataSetTypeInstantiation` , aşağıdaki kodda gösterildiği gibi, bir yapılandırma dosyası kullanmak yerine [AppContext. SetSwitch](/dotnet/api/system.appcontext.setswitch) aracılığıyla program aracılığıyla da ayarlanabilir:
 
 ```cs
 // Warning: setting the following switch can introduce a security problem.
@@ -289,7 +289,7 @@ Ancak `DataSet` `DataTable` , XML yüklerini seri durumdan çıkarma sırasında
 * `DataSet.ReadXml`Or `DataTable.ReadXml` yöntemi, sütun ve satır bilgilerini IÇEREN bir XML dosyasını okumak için kullanılır.
 * Bir `DataSet` veya `DataTable` örneği, bir ASP.net (SOAP) Web HIZMETLERININ veya WCF uç noktasının bir parçası olarak serileştirilir.
 * Bir seri hale getirici `XmlSerializer` , BIR `DataSet` XML akışından bir veya örneğinin serisini kaldırmak için kullanılır `DataTable` .
-* Bir seri hale getirici `JsonConvert` , BIR `DataSet` JSON akışından bir veya örneğinin serisini kaldırmak için kullanılır `DataTable` . `JsonConvert`, kitaplığındaki popüler üçüncü taraf [Newtonsoft.Js](https://www.newtonsoft.com/json) bir yöntemdir.
+* Bir seri hale getirici `JsonConvert` , BIR `DataSet` JSON akışından bir veya örneğinin serisini kaldırmak için kullanılır `DataTable` . `JsonConvert` , kitaplığındaki popüler üçüncü taraf [Newtonsoft.Js](https://www.newtonsoft.com/json) bir yöntemdir.
 * Bir seri hale getirici `BinaryFormatter` , `DataSet` ham bayt akışından bir veya örneğinin serisini kaldırmak için kullanılır `DataTable` .
 
 Bu belgede, yukarıdaki senaryolara yönelik güvenlik konuları ele alınmaktadır.
@@ -488,3 +488,28 @@ Nesne modelini [Entity Framework](/ef)kullanacak şekilde değiştirmeyi düşü
 * Güvenilmeyen kaynaklardan veri serisini kaldırırken yerleşik korumalar sunar.
 
 `.aspx`SOAP uç noktaları kullanan uygulamalar için, bu uç noktaları [WCF](/dotnet/framework/wcf/)kullanacak şekilde değiştirmeyi göz önünde bulundurun. WCF, Web Hizmetleri için daha tam özellikli bir değiştirme işlemi `.asmx` . WCF uç noktaları, mevcut çağıranlar ile uyumluluk için [SOAP aracılığıyla gösterilebilir](../../../wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) .
+
+## <a name="code-analyzers"></a>Kod çözümleyicileri
+
+Kaynak kodunuz derlendiğinde çalıştırılan kod Çözümleyicisi güvenlik kuralları, C# ve Visual Basic kodundaki bu güvenlik sorunuyla ilgili güvenlik açıklarını bulmaya yardımcı olabilir. Microsoft. CodeAnalysis. Fxcopçözümleyiciler, [NuGet.org](https://www.nuget.org/)üzerinde dağıtılan kod Çözümleyicileri 'Nin bir NuGet paketidir.
+
+Kod çözümleyicilerine genel bakış için bkz. [kaynak kodu Çözümleyicileri 'Ne genel bakış](https://docs.microsoft.com/visualstudio/code-quality/roslyn-analyzers-overview).
+
+Aşağıdaki Microsoft. CodeAnalysis. Fxcopçözümleyiciler kurallarını etkinleştirin:
+
+- [CA2350](https://docs.microsoft.com/visualstudio/code-quality/ca2350): güvenilmeyen verilerle DataTable. ReadXml () kullanmayın
+- [CA2351](https://docs.microsoft.com/visualstudio/code-quality/ca2351): veri kümesi. ReadXml () öğesini güvenilmeyen verilerle kullanma
+- [CA2352](https://docs.microsoft.com/visualstudio/code-quality/ca2352): serileştirilebilir türdeki güvenli olmayan veri kümesi veya DataTable, uzak kod yürütme saldırılarına karşı savunmasız olabilir
+- [CA2353](https://docs.microsoft.com/visualstudio/code-quality/ca2353): Serializable türde güvenli olmayan veri kümesi veya DataTable
+- [CA2354](https://docs.microsoft.com/visualstudio/code-quality/ca2354): Serisi kaldırılan nesne grafiğinde güvenli olmayan veri kümesi veya DataTable, uzak kod yürütme saldırılarına karşı savunmasız olabilir
+- [CA2355](https://docs.microsoft.com/visualstudio/code-quality/ca2355): serisi kaldırılabilir nesne grafiğinde güvenli olmayan veri kümesi veya DataTable türü bulundu
+- [CA2356](https://docs.microsoft.com/visualstudio/code-quality/ca2356): Web 'in seri hale getirilebilir nesne grafiğinde güvenli olmayan veri kümesi veya DataTable türü
+- [CA2361](https://docs.microsoft.com/visualstudio/code-quality/ca2361): DataSet. ReadXml () içeren bir otomatik olarak oluşturulan sınıfın güvenilmeyen verilerle kullanılmadığından emin olun
+- [CA2362](https://docs.microsoft.com/visualstudio/code-quality/ca2362): otomatik olarak seri hale getirilebilir türde veri kümesi veya DataTable, uzaktan kod yürütme saldırılarına karşı savunmasız olabilir
+
+Kuralları yapılandırma hakkında daha fazla bilgi için bkz. [kod Çözümleyicileri kullanma](https://docs.microsoft.com/visualstudio/code-quality/use-roslyn-analyzers).
+
+Yeni güvenlik kuralları aşağıdaki NuGet paketlerinde kullanılabilir:
+
+- Microsoft. CodeAnalysis. Fxcopçözümleyiciler 3.3.0: Visual Studio 2019 sürüm 16,3 veya üzeri için
+- Microsoft. CodeAnalysis. Fxcopçözümleyiciler 2.9.11: Visual Studio 2017 sürüm 15,9 veya üzeri için

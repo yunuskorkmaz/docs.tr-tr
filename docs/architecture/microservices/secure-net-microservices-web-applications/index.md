@@ -3,16 +3,16 @@ title: .NET mikro hizmetleri ve Web uygulamalarının güvenliğini sağlama
 description: .NET mikro hizmetleri ve Web uygulamalarında güvenlik-ASP.NET Core Web uygulamalarında kimlik doğrulama seçeneklerini öğrenin.
 author: mjrousos
 ms.date: 08/07/2020
-ms.openlocfilehash: 9ce62039374f2256cd9adbddbb850aa4135af9f4
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 1dcdb5d2987360ac583fa700a387d977f498d1d9
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024621"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608092"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Güvenli .NET mikro hizmetleri ve Web uygulamaları oluşturun
 
-Mikro hizmetlerde ve Web uygulamalarında güvenlikle ilgili olarak konunun bu şekilde birçok kitap alabilmesini sağlayacak pek çok konu vardır. Bu bölümde, kimlik doğrulama, yetkilendirme ve uygulama gizliliklerine odaklanırsınız.
+Mikro hizmetlerde ve Web uygulamalarında güvenlik konusunda, konunun bunun gibi birçok defterde kolayca yararlanabilme konusunda pek çok konu vardır. Bu nedenle, bu bölümde kimlik doğrulama, yetkilendirme ve uygulama gizli dizileri üzerine odaklanacağız.
 
 ## <a name="implement-authentication-in-net-microservices-and-web-applications"></a>.NET mikro hizmetleri ve Web uygulamalarında kimlik doğrulaması uygulama
 
@@ -293,9 +293,9 @@ public void ConfigureServices(IServiceCollection services)
 
 Bu kullanımdaki parametreler şunlardır:
 
-- `Audience`gelen belirtecin veya belirtecin erişim izni verdiği kaynağın alıcısını temsil eder. Bu parametrede belirtilen değer, belirteçteki parametreyle eşleşmezse, belirteç reddedilir.
+- `Audience` gelen belirtecin veya belirtecin erişim izni verdiği kaynağın alıcısını temsil eder. Bu parametrede belirtilen değer, belirteçteki parametreyle eşleşmezse, belirteç reddedilir.
 
-- `Authority`, belirteç veren kimlik doğrulama sunucusunun adresidir. JWT taşıyıcı kimlik doğrulama ara yazılımı, belirtecin imzasını doğrulamak için kullanılabilecek ortak anahtarı almak için bu URI 'yi kullanır. Ara yazılım, `iss` belirteçteki parametrenin bu URI ile eşleştiğini de onaylar.
+- `Authority` , belirteç veren kimlik doğrulama sunucusunun adresidir. JWT taşıyıcı kimlik doğrulama ara yazılımı, belirtecin imzasını doğrulamak için kullanılabilecek ortak anahtarı almak için bu URI 'yi kullanır. Ara yazılım, `iss` belirteçteki parametrenin bu URI ile eşleştiğini de onaylar.
 
 Başka bir parametre, `RequireHttpsMetadata` Test amaçları için yararlıdır; bu parametreyi yanlış olarak ayarlarsanız, sertifikalarınızın olmadığı ortamlarda test edebilirsiniz. Gerçek dünyada dağıtımlarda, JWT taşıyıcı belirteçlerinin her zaman yalnızca HTTPS üzerinden geçirilmesi gerekir.
 

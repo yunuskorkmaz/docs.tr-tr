@@ -4,12 +4,12 @@ description: Bu makalede, BinaryFormatter türünde devralınan güvenlik riskle
 ms.date: 07/11/2020
 ms.author: levib
 author: GrabYourPitchforks
-ms.openlocfilehash: ac01fe78c9577563641a8b06a232ed614ed8520a
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 2c76a81650e5b83677f6c4df64770bd1ef5f775e
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558848"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88607931"
 ---
 # <a name="binaryformatter-security-guide"></a>BinaryFormatter güvenlik kılavuzu
 
@@ -22,7 +22,7 @@ Bu makale aşağıdaki .NET uygulamalarına yöneliktir:
 ## <a name="background"></a>Arka Plan
 
 > [!WARNING]
-> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Tür tehlikelidir ve veri işleme için ***not*** önerilmez. Uygulamalar `BinaryFormatter` , işlemekte oldukları verilerin güvenilir olmasını düşünse bile, en kısa sürede kullanılması gerekir. `BinaryFormatter` güvenli olmayan bir güvenlik yapılamaz.
+> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Tür tehlikelidir ve veri işleme için ***not*** önerilmez. Uygulamalar `BinaryFormatter` , işlemekte oldukları verilerin güvenilir olmasını düşünse bile, en kısa sürede kullanılması gerekir. `BinaryFormatter` güvenli değil ve güvenli hale getirilebilir.
 
 Bu makale aşağıdaki türler için de geçerlidir:
 

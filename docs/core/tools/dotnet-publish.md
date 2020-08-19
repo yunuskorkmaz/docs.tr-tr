@@ -2,18 +2,18 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 4ff49452e4d941b3e06ad511507b1dc429ab459f
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 64a68c97e01bbf962616b31210889eb23d3734f1
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187981"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608290"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Name
+## <a name="name"></a>Adı
 
 `dotnet publish` -Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
@@ -53,7 +53,7 @@ dotnet publish -h|--help
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
 
-Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örneğin:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -123,7 +123,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   Çıkış dizini için yolu belirtir.
   
-  Belirtilmemişse, çalışma zamanına bağlı bir yürütülebilir dosya ve platformlar arası ikili dosyalar için *[project_file_folder]./bin/[Configuration]/[Framework]/Publish/* varsayılan değeri. Bu, kendi içinde bulunan yürütülebilir dosya için *[project_file_folder]/bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* varsayılan değerini alır.
+  Belirtilmemişse, çerçeveye bağlı bir yürütülebilir dosya ve platformlar arası ikili dosyalar için *[project_file_folder]./bin/[Configuration]/[Framework]/Publish/* varsayılan değeri. Bu, kendi içinde bulunan yürütülebilir dosya için *[project_file_folder]/bin/[yapılandırma]/[Framework]/[Runtime]/Publish/* varsayılan değerini alır.
 
   Bir Web projesinde, çıkış klasörü proje klasöründe ise, birbirini izleyen `dotnet publish` Komutlar iç içe geçmiş çıkış klasörlerine neden olur. Örneğin, proje klasörü *projem ise*ve yayımlama çıkış klasörü *myprojem/Publish*ise ve `dotnet publish` iki kez çalıştırırsanız ikinci çalıştırma, *MyProject/Publish/Publish*içindeki *. config* ve *. JSON* dosyaları gibi içerik dosyalarını koyar. Yayımlama klasörlerinin iç içe geçirilmesi önlemek için, proje **klasörünün altında olmayan** bir yayımlama klasörü belirtin veya Yayımla klasörünü projeden dışlayın. *Publishoutput*adlı bir yayımlama klasörünü dışlamak için, `PropertyGroup` *. csproj* dosyasındaki bir öğeye aşağıdaki öğeyi ekleyin:
 
@@ -187,13 +187,13 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 ## <a name="examples"></a>Örnekler
 
-- Geçerli dizindeki proje için [çalışma zamanına bağımlı platformlar arası ikili](../deploying/index.md#produce-a-cross-platform-binary) oluşturun:
+- Geçerli dizinde proje için [çerçeveye bağımlı platformlar arası ikili](../deploying/index.md#produce-a-cross-platform-binary) oluşturun:
 
   ```dotnetcli
   dotnet publish
   ```
 
-  .NET Core 3,0 SDK ile başlayarak bu örnek ayrıca geçerli platform için [çalışma zamanına bağlı bir yürütülebilir dosya](../deploying/index.md#publish-runtime-dependent) oluşturur.
+  .NET Core 3,0 SDK ile başlayarak bu örnek ayrıca geçerli platform için [çerçeveye bağlı bir yürütülebilir dosya](../deploying/index.md#publish-framework-dependent) oluşturur.
 
 - Belirli bir çalışma zamanı için geçerli dizindeki proje için [kendi kendine içerilen bir yürütülebilir dosya](../deploying/index.md#publish-self-contained) oluşturun:
 
@@ -203,7 +203,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   RID proje dosyasında olmalıdır.
 
-- Belirli bir platform için geçerli dizindeki proje için [çalışma zamanına bağımlı bir yürütülebilir dosya](../deploying/index.md#publish-runtime-dependent) oluşturun:
+- Belirli bir platform için geçerli dizindeki proje için [çerçeveye bağlı bir yürütülebilir dosya](../deploying/index.md#publish-framework-dependent) oluşturun:
 
   ```dotnetcli
   dotnet publish --runtime osx.10.11-x64 --self-contained false

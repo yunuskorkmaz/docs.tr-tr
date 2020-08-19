@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: f7cb42c8982cb6a704b39730a4f7aa0ce781d506
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 57261602c456a6dcf90c03aa044e7d1c0c8c1c6a
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446385"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608024"
 ---
 # <a name="task-based-asynchronous-programming"></a>Görev tabanlı zaman uyumsuz programlama
 
@@ -66,7 +66,7 @@ Aynı zamanda bir <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayPr
 [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
 [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]
 
-<xref:System.Threading.Tasks.Task>ve <xref:System.Threading.Tasks.Task%601> her biri <xref:System.Threading.Tasks.Task.Factory%2A> varsayılan bir örneğini döndüren statik bir özellik sunar <xref:System.Threading.Tasks.TaskFactory> , böylece yöntemini olarak çağırabilirsiniz `Task.Factory.StartNew()` . Ayrıca, aşağıdaki örnekte, görevler türünde olduğundan <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> , her birinin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> Hesaplama sonucunu içeren bir public özelliği vardır. Görevler zaman uyumsuz olarak çalışır ve herhangi bir sırada tamamlanabilir. <xref:System.Threading.Tasks.Task%601.Result%2A>Hesaplama tamamlanmadan önce özelliğe erişilirse, özelliği, değer kullanılabilir olana kadar çağıran iş parçacığını engeller.
+<xref:System.Threading.Tasks.Task> ve <xref:System.Threading.Tasks.Task%601> her biri <xref:System.Threading.Tasks.Task.Factory%2A> varsayılan bir örneğini döndüren statik bir özellik sunar <xref:System.Threading.Tasks.TaskFactory> , böylece yöntemini olarak çağırabilirsiniz `Task.Factory.StartNew()` . Ayrıca, aşağıdaki örnekte, görevler türünde olduğundan <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> , her birinin <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> Hesaplama sonucunu içeren bir public özelliği vardır. Görevler zaman uyumsuz olarak çalışır ve herhangi bir sırada tamamlanabilir. <xref:System.Threading.Tasks.Task%601.Result%2A>Hesaplama tamamlanmadan önce özelliğe erişilirse, özelliği, değer kullanılabilir olana kadar çağıran iş parçacığını engeller.
 
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
@@ -96,7 +96,7 @@ Her görev, kendisini bir uygulama etki alanında benzersiz bir şekilde tanıml
 
 Görevleri oluşturan çoğu API, bir parametreyi kabul eden aşırı yüklemeler sağlar <xref:System.Threading.Tasks.TaskCreationOptions> . Bu seçeneklerden birini belirleyerek görev zamanlayıcıya iş parçacığı havuzundaki görevi nasıl zamanlayacağını söyleyebilirsiniz. Aşağıdaki tabloda, çeşitli görev oluşturma seçenekleri listelenmektedir.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions>parametre değeri|Açıklama|
+|<xref:System.Threading.Tasks.TaskCreationOptions> parametre değeri|Açıklama|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Hiç seçenek belirtilmemişse varsayılan değerdir. Zamanlayıcı, görevi zamanlamak için varsayılan buluşsal yöntemlerini kullanır.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Daha önce oluşturulmuş görevlerin daha önce çalıştırılabilmesi ve daha sonra oluşturulmuş görevlerin daha sonra çalıştırılabilmesi için görevin zamanlanması gerektiğini belirtir.|
@@ -134,7 +134,7 @@ Zaman uyumsuz görevler ve kültür hakkında daha fazla bilgi için, konusunun 
 
 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>Ve <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> yöntemleri, *öncül görevi* bittiğinde başlamak için bir görev belirtmenizi sağlar. Devamlılık görevinin temsilcisi öncül göreve bir başvuru geçirdiğinden, öncül görevin durumunu inceleyebilir ve özelliğinin değerini alarak, <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> öncül 'un çıkışını devamlılık için giriş olarak kullanabilir.
 
-Aşağıdaki örnekte, `getData` görev yöntemine bir çağrı ile başlatılır <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> . `processData`Görev tamamlandığında otomatik olarak başlatılır `getData` ve `displayData` `processData` tamamlandığında başlatılır. `getData`görevin özelliği aracılığıyla görevle erişilebilen bir tamsayı dizisi üretir `processData` `getData` <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> . `processData`Görev bu diziyi işler ve türü, metoduna geçirilen lambda ifadesinin dönüş türünden çıkarılan bir sonuç döndürür <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> . `displayData`Görev tamamlandığında otomatik olarak yürütülür `processData` ve <xref:System.Tuple%603> lambda ifadesinin döndürdüğü nesne görevin `processData` `displayData` özelliği aracılığıyla görev için erişilebilir olur `processData` <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> . `displayData`Görev, görevin sonucunu alır `processData` ve türü benzer bir şekilde çıkarılan ve özelliğindeki program için kullanılabilir hale getirilen bir sonuç üretir <xref:System.Threading.Tasks.Task%601.Result%2A> .
+Aşağıdaki örnekte, `getData` görev yöntemine bir çağrı ile başlatılır <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> . `processData`Görev tamamlandığında otomatik olarak başlatılır `getData` ve `displayData` `processData` tamamlandığında başlatılır. `getData` görevin özelliği aracılığıyla görevle erişilebilen bir tamsayı dizisi üretir `processData` `getData` <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> . `processData`Görev bu diziyi işler ve türü, metoduna geçirilen lambda ifadesinin dönüş türünden çıkarılan bir sonuç döndürür <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> . `displayData`Görev tamamlandığında otomatik olarak yürütülür `processData` ve <xref:System.Tuple%603> lambda ifadesinin döndürdüğü nesne görevin `processData` `displayData` özelliği aracılığıyla görev için erişilebilir olur `processData` <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> . `displayData`Görev, görevin sonucunu alır `processData` ve türü benzer bir şekilde çıkarılan ve özelliğindeki program için kullanılabilir hale getirilen bir sonuç üretir <xref:System.Threading.Tasks.Task%601.Result%2A> .
 
 [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
 [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]
@@ -187,7 +187,7 @@ Aşağıdaki örnek, özel durum işleme içermeyen temel düzeni gösterir.
 
 Bazı aşırı yüklemeler bir zaman aşımı belirtmenize izin verir ve diğer bir deyişle, bir <xref:System.Threading.CancellationToken> giriş parametresi olarak diğerleri, bekleme süresi programlı bir şekilde veya kullanıcı girdisine yanıt olarak iptal edilebilir.
 
-Bir görevi beklerken, bu görevin, seçeneği kullanılarak oluşturulan tüm alt öğelerini örtük olarak beklemiş olursunuz <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> . <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>görev zaten tamamlanmışsa, hemen döndürür. Bir görev tarafından oluşturulan tüm özel durumlar <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> , <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi görev tamamlandıktan sonra çağrılsa bile bir yöntemi tarafından oluşturulur.
+Bir görevi beklerken, bu görevin, seçeneği kullanılarak oluşturulan tüm alt öğelerini örtük olarak beklemiş olursunuz <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> . <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> görev zaten tamamlanmışsa, hemen döndürür. Bir görev tarafından oluşturulan tüm özel durumlar <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> , <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> yöntemi görev tamamlandıktan sonra çağrılsa bile bir yöntemi tarafından oluşturulur.
 
 ## <a name="composing-tasks"></a>Görevler oluşturuluyor
 
@@ -269,7 +269,7 @@ TPL'de, hem paralel hem de sıralı senaryolarda yararlı olan çeşitli, yeni g
 
 Veya ' den devralma yapmanızı öneririz <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> . Bunun yerine, <xref:System.Threading.Tasks.Task.AsyncState%2A> ek verileri veya durumu bir veya nesnesiyle ilişkilendirmek için özelliğini kullanmanızı öneririz <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> . Ve sınıflarının işlevlerini genişletmek için uzantı yöntemlerini de kullanabilirsiniz <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> . Uzantı yöntemleri hakkında daha fazla bilgi için bkz. [Uzantı yöntemleri](../../csharp/programming-guide/classes-and-structs/extension-methods.md) ve [genişletme yöntemleri](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
-Veya ' den ' i veya ' den devralma yapmanız gerekiyorsa, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.Task.Run%2A> <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> Bu mekanizmalar yalnızca ve nesneleri oluşturduğundan özel görev tipinizi oluşturmak için, <xref:System.Threading.Tasks.Task> veya, ya da sınıflarını kullanamazsınız <xref:System.Threading.Tasks.Task%601> . Bunlara ek olarak,,,, ve tarafından sunulan görev devamlılık mekanizmalarını <xref:System.Threading.Tasks.Task> ,,, <xref:System.Threading.Tasks.Task%601> ve tarafından <xref:System.Threading.Tasks.TaskFactory> <xref:System.Threading.Tasks.TaskFactory%601> özel görev türü örnekleri oluşturmak için kullanamazsınız, çünkü bu mekanizmalar yalnızca <xref:System.Threading.Tasks.Task> ve nesnelerini de oluşturur <xref:System.Threading.Tasks.Task%601> .
+Veya ' den ' i veya ' den devralma yapmanız gerekiyorsa, <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.Task.Run%2A> <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> Bu mekanizmalar yalnızca ve nesneleri oluşturduğundan özel görev tipinizi oluşturmak için, <xref:System.Threading.Tasks.Task> veya, ya da sınıflarını kullanamazsınız <xref:System.Threading.Tasks.Task%601> . Bunlara ek olarak,,,, ve tarafından sunulan görev devamlılık mekanizmalarını <xref:System.Threading.Tasks.Task> ,,, <xref:System.Threading.Tasks.Task%601> ve tarafından <xref:System.Threading.Tasks.TaskFactory>  <xref:System.Threading.Tasks.TaskFactory%601> özel görev türü örnekleri oluşturmak için kullanamazsınız, çünkü bu mekanizmalar yalnızca <xref:System.Threading.Tasks.Task> ve nesnelerini de oluşturur  <xref:System.Threading.Tasks.Task%601> .
 
 ## <a name="related-topics"></a>İlgili konular
 

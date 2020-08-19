@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2373b21e92c6ca68aac33684a9bd0912a2e642b3
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 42d4f7e8800bf2d13d584084f8a41bad2ada534f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324266"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608130"
 ---
 # <a name="whats-new-in-net-core-31"></a>​.NET Core 3.1’deki yenilikler
 
@@ -29,7 +29,7 @@ Yayın hakkında daha fazla bilgi için bkz. [.NET Core 3,1 duyurusu](https://de
 
 .NET Core 3,1, bir sonraki üç yılda Microsoft desteğiyle desteklenen bir LTS sürümüdür. Uygulamalarınızı .NET Core 3,1 ' e taşımanız önemle tavsiye edilir. Diğer ana yayınların geçerli yaşam döngüsü aşağıdaki gibidir:
 
-| Sürüm | Not |
+| Yayınla | Not |
 | ------- | ---- |
 | .NET Core 3.0 | 3 Mart 2020 ' de yaşam sonu.     |
 | .NET Core 2.2 | 23 Aralık 2019 ' de yaşam sonu. |
@@ -45,7 +45,7 @@ MacOS için .NET Core SDK 3,1 ' den başlayarak, appHost ayarı varsayılan olar
 
 AppHost ayarı etkinleştirildiğinde, .NET Core, oluşturduğunuzda veya yayımladığınızda yerel bir MAK-O çalıştırılabilir dosyası oluşturur. Uygulamanız, komutuyla kaynak koddan çalıştırıldığında `dotnet run` veya mak-O yürütülebilir dosyasını doğrudan başlatarak appHost bağlamında çalışır.
 
-AppHost olmadan, bir kullanıcıya [çalışma zamanına bağımlı](../deploying/index.md#publish-runtime-dependent) bir uygulama başlatabilir `dotnet <filename.dll>` . Uygulamanızı [kendi içinde](../deploying/index.md#publish-self-contained)yayımladığınızda her zaman bir appHost oluşturulur.
+AppHost olmadan, bir kullanıcıya [çerçeveye bağımlı](../deploying/index.md#publish-framework-dependent) bir uygulama başlatabilir tek yöntem `dotnet <filename.dll>` komutunu kullanabilirsiniz. Uygulamanızı [kendi içinde](../deploying/index.md#publish-self-contained)yayımladığınızda her zaman bir appHost oluşturulur.
 
 AppHost 'yi proje düzeyinde yapılandırabilir veya parametresi ile belirli bir komut için appHost ' ı kapatabilirsiniz `dotnet` `-p:UseAppHost` :
 

@@ -3,12 +3,12 @@ title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 4f45362fbb3df053b95156b8e633903f011a85ad
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 82174b2976abda2337a4a9b5a5a5e1f60a1094fb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062879"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608326"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -56,7 +56,7 @@ Meta paketlere, `<TargetFramework>` proje dosyanızın veya özelliğinde belirt
 
 > Bilinen sorun: .NET Core 2,1 SDK 'Sı yalnızca proje Microsoft. NET. SDK. Web 'i kullandığında bu söz dizimini destekliyordu. Bu, .NET Core 2,2 SDK 'sında çözümlenir.
 
-ASP.NET Core metapaketlerine yapılan bu başvuruların çoğu normal NuGet paketlerinden biraz farklı bir davranışı vardır. Bu metapaketleri kullanan uygulamaların [çerçeveye bağımlı dağıtımları](../deploying/index.md#publish-runtime-dependent) ASP.NET Core paylaşılan çerçeveden otomatik olarak yararlanır. Meta paketleri kullandığınızda başvurulan ASP.NET Core NuGet paketlerinden **hiçbir** varlık uygulamayla birlikte dağıtılır — ASP.NET Core paylaşılan çerçeve bu varlıkları içerir. Paylaşılan çerçevede bulunan varlıklar, uygulama başlatma süresini artırmak üzere hedef platform için iyileştirilmiştir. Paylaşılan Framework hakkında daha fazla bilgi için bkz. [.NET Core dağıtım paketleme](../distribution-packaging.md).
+ASP.NET Core metapaketlerine yapılan bu başvuruların çoğu normal NuGet paketlerinden biraz farklı bir davranışı vardır. Bu metapaketleri kullanan uygulamaların [çerçeveye bağımlı dağıtımları](../deploying/index.md#publish-framework-dependent) ASP.NET Core paylaşılan çerçeveden otomatik olarak yararlanır. Meta paketleri kullandığınızda başvurulan ASP.NET Core NuGet paketlerinden **hiçbir** varlık uygulamayla birlikte dağıtılır — ASP.NET Core paylaşılan çerçeve bu varlıkları içerir. Paylaşılan çerçevede bulunan varlıklar, uygulama başlatma süresini artırmak üzere hedef platform için iyileştirilmiştir. Paylaşılan Framework hakkında daha fazla bilgi için bkz. [.NET Core dağıtım paketleme](../distribution-packaging.md).
 
 Bir *Sürüm belirtilmişse* , çerçeveye bağımlı dağıtımlar için ASP.NET Core paylaşılan Framework 'ün *En düşük* sürümü ve kendi içinde olan dağıtımlar için *tam* sürüm olarak değerlendirilir. Bu, aşağıdaki sonuçlara sahip olabilir:
 
@@ -96,7 +96,7 @@ Bu özelliğin olarak ayarlanması `false` örtük eklemeyi devre dışı bırak
 
 Bu değişiklik, diğer dahil olmak üzere ana mekana 'yi değiştirmez. Bununla birlikte, örneğin, uygulamanızla yayımlanacak bazı dosyalar belirtmek istiyorsanız, bilinen mekanizmaların *csproj* içinde yine de (örneğin, `<Content>` öğesi) kullanılmasını sağlayabilirsiniz.
 
-`<EnableDefaultCompileItems>`yalnızca genelleştirmeler 'i devre dışı bırakır, `Compile` ancak `None` \* . cs öğeleri için de geçerli olan örtük glob gibi diğer genelleştirmeler 'yi etkilemez. Bu nedenle **Çözüm Gezgini** , \* öğe olarak dahil olmak üzere projenin bir parçası olarak. cs öğelerini göstermeye devam edecektir `None` . Benzer bir şekilde, `<EnableDefaultNoneItems>` örtük glob 'yi devre dışı bırakmak için false olarak ayarlayabilirsiniz `None` :
+`<EnableDefaultCompileItems>` yalnızca genelleştirmeler 'i devre dışı bırakır, `Compile` ancak `None` \* . cs öğeleri için de geçerli olan örtük glob gibi diğer genelleştirmeler 'yi etkilemez. Bu nedenle **Çözüm Gezgini** , \* öğe olarak dahil olmak üzere projenin bir parçası olarak. cs öğelerini göstermeye devam edecektir `None` . Benzer bir şekilde, `<EnableDefaultNoneItems>` örtük glob 'yi devre dışı bırakmak için false olarak ayarlayabilirsiniz `None` :
 
 ```xml
 <PropertyGroup>
@@ -126,11 +126,11 @@ Projede birden çok hedef çerçeve varsa, komutun sonuçları MSBuild özelliğ
 
 ### <a name="sdk-attribute"></a>SDK özniteliği
 
-`<Project>` *. Csproj* dosyasının kök öğesi adlı yeni bir özniteliğe sahiptir `Sdk` . `Sdk`Proje tarafından hangi SDK 'nın kullanılacağını belirtir. [Katman, katmanlama belgesinde](cli-msbuild-architecture.md) açıklandığı gibi, .NET Core kodu oluşturabileceğiniz MSBuild [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) kümesidir. .NET Core için aşağıdaki SDK 'lar mevcuttur:
+`<Project>` *. Csproj* dosyasının kök öğesi adlı yeni bir özniteliğe sahiptir `Sdk` . `Sdk` Proje tarafından hangi SDK 'nın kullanılacağını belirtir. [Katman, katmanlama belgesinde](cli-msbuild-architecture.md) açıklandığı gibi, .NET Core kodu oluşturabileceğiniz MSBuild [görevleri](/visualstudio/msbuild/msbuild-tasks) ve [hedefleri](/visualstudio/msbuild/msbuild-targets) kümesidir. .NET Core için aşağıdaki SDK 'lar mevcuttur:
 
-1. KIMLIĞINE sahip .NET Core SDK`Microsoft.NET.Sdk`
-2. KIMLIĞINE sahip .NET Core Web SDK 'Sı`Microsoft.NET.Sdk.Web`
-3. KIMLIKLI .NET Core Razor sınıf kitaplığı SDK 'Sı`Microsoft.NET.Sdk.Razor`
+1. KIMLIĞINE sahip .NET Core SDK `Microsoft.NET.Sdk`
+2. KIMLIĞINE sahip .NET Core Web SDK 'Sı `Microsoft.NET.Sdk.Web`
+3. KIMLIKLI .NET Core Razor sınıf kitaplığı SDK 'Sı `Microsoft.NET.Sdk.Razor`
 4. KIMLIĞI `Microsoft.NET.Sdk.Worker` (.net core 3,0 ' den beri) olan .NET Core Worker hizmeti
 5. KIMLIĞI `Microsoft.NET.Sdk.WindowsDesktop` (.net core 3,0 ' den beri) olan .NET Core WinForms ve WPF
 
@@ -150,28 +150,28 @@ Gerekli `Version` öznitelik, geri yüklenecek paketin sürümünü belirtir. Ö
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>Includevarlıklarını, Excludevarlıklarını ve Privatevarlıkları
 
-`IncludeAssets`öznitelik, tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmesi gerektiğini belirtir. Varsayılan olarak, tüm paket varlıkları dahil edilmiştir.
+`IncludeAssets` öznitelik, tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmesi gerektiğini belirtir. Varsayılan olarak, tüm paket varlıkları dahil edilmiştir.
 
-`ExcludeAssets`öznitelik, tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmediğini belirtir.
+`ExcludeAssets` öznitelik, tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmediğini belirtir.
 
-`PrivateAssets`öznitelik, tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmesi gerektiğini, ancak bir sonraki projenin akışını belirtir. `Analyzers` `Build` `ContentFiles` Bu öznitelik mevcut olmadığında, ve varlıkları varsayılan olarak özeldir.
+`PrivateAssets` öznitelik, tarafından belirtilen pakete ait olan varlıkların `<PackageReference>` tüketilmesi gerektiğini, ancak bir sonraki projenin akışını belirtir. `Analyzers` `Build` `ContentFiles` Bu öznitelik mevcut olmadığında, ve varlıkları varsayılan olarak özeldir.
 
 > [!NOTE]
 > `PrivateAssets`, *project.json* / *xproj* `SuppressParent` öğesindekiproject.jseşdeğerdir.
 
 Bu öznitelikler, birden fazla listeleniyorsa noktalı virgül karakteriyle ayrılmış aşağıdaki öğelerden birini veya daha fazlasını içerebilir `;` :
 
-- `Compile`– *LIB* klasörünün içeriği, derleme için kullanılabilir.
-- `Runtime`– *çalışma zamanı* klasörünün içeriği dağıtılır.
-- `ContentFiles`– *ContentFiles* klasörünün içeriği kullanılır.
-- `Build`– *Build* klasöründeki props/targets kullanılır.
-- `Native`– Yerel varlıklardan içerik çalışma zamanı için *Çıkış* klasörüne kopyalanır.
-- `Analyzers`– çözümleyiciler kullanılır.
+- `Compile` – *LIB* klasörünün içeriği, derleme için kullanılabilir.
+- `Runtime` – *çalışma zamanı* klasörünün içeriği dağıtılır.
+- `ContentFiles` – *ContentFiles* klasörünün içeriği kullanılır.
+- `Build` – *Build* klasöründeki props/targets kullanılır.
+- `Native` – Yerel varlıklardan içerik çalışma zamanı için *Çıkış* klasörüne kopyalanır.
+- `Analyzers` – çözümleyiciler kullanılır.
 
 Alternatif olarak, öznitelik şunları içerebilir:
 
-- `None`– varlıkların hiçbiri kullanılmaz.
-- `All`– Tüm varlıklar kullanılır.
+- `None` – varlıkların hiçbiri kullanılmaz.
+- `All` – Tüm varlıklar kullanılır.
 
 ### <a name="dotnetclitoolreference"></a>Dotnetclientoolreference
 
@@ -185,7 +185,7 @@ Bir `<DotNetCliToolReference>` öğe öğesi, kullanıcının proje bağlamında
 
 #### <a name="version"></a>Sürüm
 
-`Version`geri yüklenecek paketin sürümünü belirtir. Öznitelik, [NuGet sürüm oluşturma](/nuget/create-packages/dependency-versions#version-ranges) şemasının kurallarına uyar. Varsayılan davranış en düşük sürüm ve kapsamlı eşleşmedir. Örneğin, öğesini belirleme, `Version="1.2.3"` NuGet gösterimi ile eşdeğerdir `[1.2.3, )` ve, çözümlenmiş paketin 1.2.3 sürümü varsa veya daha büyük değilse, sürümüne sahip olacağı anlamına gelir.
+`Version` geri yüklenecek paketin sürümünü belirtir. Öznitelik, [NuGet sürüm oluşturma](/nuget/create-packages/dependency-versions#version-ranges) şemasının kurallarına uyar. Varsayılan davranış en düşük sürüm ve kapsamlı eşleşmedir. Örneğin, öğesini belirleme, `Version="1.2.3"` NuGet gösterimi ile eşdeğerdir `[1.2.3, )` ve, çözümlenmiş paketin 1.2.3 sürümü varsa veya daha büyük değilse, sürümüne sahip olacağı anlamına gelir.
 
 ### <a name="runtimeidentifiers"></a>Runtimetanımlayıcıtanımlayıcıları
 
@@ -204,7 +204,7 @@ RID 'Ler, kendi kendine kapsanan dağıtımları yayımlamayı etkinleştirir.
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
-`<RuntimeIdentifiers>`Çoklu çalışma zamanları için yayımlamanız gerekiyorsa bunun yerine (plural) kullanın. `<RuntimeIdentifier>`yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.
+`<RuntimeIdentifiers>`Çoklu çalışma zamanları için yayımlamanız gerekiyorsa bunun yerine (plural) kullanın. `<RuntimeIdentifier>` yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.
 
 ### <a name="packagetargetfallback"></a>PackageTargetFallback
 
@@ -385,7 +385,7 @@ Deponun türünü belirtir. Varsayılan değer "git" dir.
 Depodaki kaynak dalın adını belirtir. Proje bir NuGet paketinde paketlenmişse, paket meta verilerine eklenir.
 
 ### <a name="repositorycommit"></a>Kayıt yapma
-Paketin hangi kaynağa göre oluşturulduğunu göstermek için isteğe bağlı depo kaydı veya değişiklik kümesi. `RepositoryUrl`Bu özelliğin dahil edilmesini sağlamak için de belirtilmesi gerekir. Proje bir NuGet paketinde paketlenmişse, bu tamamlama veya değişiklik kümesi paket meta verilerine eklenir.
+Paketin hangi kaynağa göre oluşturulduğunu göstermek için isteğe bağlı depo kaydı veya değişiklik kümesi. `RepositoryUrl` Bu özelliğin dahil edilmesini sağlamak için de belirtilmesi gerekir. Proje bir NuGet paketinde paketlenmişse, bu tamamlama veya değişiklik kümesi paket meta verilerine eklenir.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 
@@ -449,11 +449,11 @@ Aşağıdaki tabloda gösterildiği gibi, her öznitelik, içeriğini denetleyen
 
 Notlar:
 
-- `AssemblyVersion`ve `FileVersion` Varsayılan, `$(Version)` sonek olmadan değerini alır. Örneğin, ise, `$(Version)` `1.2.3-beta.4` değer olacaktır `1.2.3` .
-- `InformationalVersion`Varsayılan değer olarak değeridir `$(Version)` .
+- `AssemblyVersion` ve `FileVersion` Varsayılan, `$(Version)` sonek olmadan değerini alır. Örneğin, ise, `$(Version)` `1.2.3-beta.4` değer olacaktır `1.2.3` .
+- `InformationalVersion` Varsayılan değer olarak değeridir `$(Version)` .
 - `InformationalVersion``$(SourceRevisionId)`, özelliği varsa eklenmiş olur. Kullanılarak devre dışı bırakılabilir `IncludeSourceRevisionInInformationalVersion` .
 - `Copyright``Description`Ayrıca, NuGet meta verileri için de Özellikler kullanılır.
-- `Configuration`Tüm derleme işlemiyle paylaşılır ve `--configuration` komutları parametresi aracılığıyla ayarlanır `dotnet` .
+- `Configuration` Tüm derleme işlemiyle paylaşılır ve `--configuration` komutları parametresi aracılığıyla ayarlanır `dotnet` .
 
 ### <a name="generateassemblyinfo"></a>Generateassemblyınfo
 

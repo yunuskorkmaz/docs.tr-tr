@@ -4,12 +4,12 @@ description: .NET Core 'un programınızın çalışma zamanı sürümlerini oto
 author: adegeo
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: faaa638905bb3c8e9cd4c09af83979d90698df3d
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 82b5522601b0ed5d3f4faf6e6c6c970ba285b11f
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803124"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608199"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Kullanılacak .NET Core sürümünü seçin
 
@@ -52,8 +52,8 @@ Aşağıdaki örnek sözdiziminde *global.js* gösterir:
 
 SDK sürümü seçme işlemi şu şekilde yapılır:
 
-1. `dotnet`dosyada yinelenen bir *global.js* arar ve yolun geçerli çalışma dizininden yukarı doğru gezinilmesini ister.
-1. `dotnet`bulunan ilk *global.js* belirtilen SDK 'yı kullanır.
+1. `dotnet` dosyada yinelenen bir *global.js* arar ve yolun geçerli çalışma dizininden yukarı doğru gezinilmesini ister.
+1. `dotnet` bulunan ilk *global.js* belirtilen SDK 'yı kullanır.
 1. `dotnet`*global.json* yoksa en son yüklenen SDK 'yı kullanır.
 
 *global.js*üzerindeki makalenin [eşleştirme KURALLARı](../tools/global-json.md#matching-rules) bölümünde bir SDK sürümü seçme hakkında daha fazla bilgi edinebilirsiniz.
@@ -78,7 +78,7 @@ Belirli bir SDK, birlikte geldiği çalışma zamanının hedef çerçevesine ka
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Çerçeveye bağımlı uygulamalar ileri alma
 
-İle kaynağından [`dotnet run`](../tools/dotnet-run.md) , [**çerçevesine bağlı bir dağıtımdan**](../deploying/index.md#publish-runtime-dependent) [`dotnet myapp.dll`](../tools/dotnet.md#description) veya ile [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#publish-runtime-dependent) uygulama çalıştırdığınızda, `myapp.exe` `dotnet` çalıştırılabilir dosya uygulamanın **ana bilgisayarı** olur.
+İle kaynağından [`dotnet run`](../tools/dotnet-run.md) , [**çerçevesine bağlı bir dağıtımdan**](../deploying/index.md#publish-framework-dependent) [`dotnet myapp.dll`](../tools/dotnet.md#description) veya ile [**çerçeveye bağlı bir yürütülebilirden**](../deploying/index.md#publish-framework-dependent) uygulama çalıştırdığınızda, `myapp.exe` `dotnet` çalıştırılabilir dosya uygulamanın **ana bilgisayarı** olur.
 
 Konak makinede yüklü en son düzeltme eki sürümünü seçer. Örneğin, `netcoreapp3.0` proje dosyanızda belirttiyseniz ve `3.0.2` en son .NET çalışma zamanı yüklüyse, `3.0.2` çalışma zamanı kullanılır.
 
@@ -87,9 +87,9 @@ Kabul edilebilir `3.0.*` bir sürüm bulunamazsa yeni bir `3.*` sürüm kullanı
 Birkaç kullanım örneği, 3,0 hedefliyorsanız davranışı gösterir:
 
 - ✔️ 3,0 belirtildi. 3.0.3, en yüksek düzeltme eki sürümüdür. 3.0.3 kullanılır.
-- ❌3,0 belirtildi. 3,0. * sürüm yüklendi. 2.1.1, en yüksek çalışma zamanının yüklü olduğunu. Bir hata iletisi görüntülenir.
+- ❌ 3,0 belirtildi. 3,0. * sürüm yüklendi. 2.1.1, en yüksek çalışma zamanının yüklü olduğunu. Bir hata iletisi görüntülenir.
 - ✔️ 3,0 belirtildi. 3,0. * sürüm yüklendi. 3.1.0, en yüksek çalışma zamanı sürümüdür. 3.1.0 kullanılır.
-- ❌2,0 belirtildi. 2. x sürümü yüklü değil. 3.0.0, en yüksek çalışma zamanının yüklü olduğunu. Bir hata iletisi görüntülenir.
+- ❌ 2,0 belirtildi. 2. x sürümü yüklü değil. 3.0.0, en yüksek çalışma zamanının yüklü olduğunu. Bir hata iletisi görüntülenir.
 
 İkincil sürüm al-ileri, son kullanıcıları etkileyebilecek bir yan etkiye sahiptir. Şu senaryoyu göz önünde bulundurun:
 
@@ -105,7 +105,7 @@ Bir uygulamayı [**kendi kendine dahil**](../deploying/index.md#publish-self-con
 
 Yayımlama işlemi, belirtilen çalışma zamanı ailesinin en son düzeltme eki sürümünü seçer. Örneğin, `dotnet publish` .net core 3,0 çalışma zamanı ailesindeki en son düzeltme eki sürümledir, .NET Core 3.0.3 ' ı seçer. Hedef Framework (en son yüklenen güvenlik düzeltme ekleri dahil) uygulamayla birlikte paketlenir.
 
-Bir uygulama için belirtilen minimum sürüm karşılanmazsa, bu bir hatadır. `dotnet publish`en son çalışma zamanı düzeltme eki sürümüne bağlar (belirli bir ana. ikincil sürüm ailesi içinde). `dotnet publish`, ' ın geri iletme semantiğini desteklemez `dotnet run` . Düzeltme ekleri ve bağımsız dağıtımlar hakkında daha fazla bilgi için .NET Core Uygulamaları Dağıtma konusundaki [çalışma zamanı düzeltme eki seçimi](../deploying/runtime-patch-selection.md) başlıklı makaleye bakın.
+Bir uygulama için belirtilen minimum sürüm karşılanmazsa, bu bir hatadır. `dotnet publish` en son çalışma zamanı düzeltme eki sürümüne bağlar (belirli bir ana. ikincil sürüm ailesi içinde). `dotnet publish` , ' ın geri iletme semantiğini desteklemez `dotnet run` . Düzeltme ekleri ve bağımsız dağıtımlar hakkında daha fazla bilgi için .NET Core Uygulamaları Dağıtma konusundaki [çalışma zamanı düzeltme eki seçimi](../deploying/runtime-patch-selection.md) başlıklı makaleye bakın.
 
 Kendi içinde olan dağıtımlar belirli bir düzeltme eki sürümü gerektirebilir. Aşağıdaki örnekte gösterildiği gibi, proje dosyasında en düşük çalışma zamanı düzeltme eki sürümünü (daha yüksek veya daha düşük sürümlere) geçersiz kılabilirsiniz:
 

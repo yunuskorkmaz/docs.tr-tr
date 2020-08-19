@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 9f553e9af16be0891f208832c5daa444a1b736e2
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
+ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281517"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88608215"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -54,7 +54,7 @@ Visual Studio kullanıyorsanız, Visual Studio 2017 **.NET Standard 2,1** veya *
 
 ### <a name="default-executables"></a>Varsayılan yürütülebilir dosyalar
 
-.NET Core artık [çalışma zamanına bağımlı yürütülebilir dosyaları](../deploying/index.md#publish-runtime-dependent) varsayılan olarak oluşturur. Bu davranış, .NET Core 'un küresel olarak yüklenen bir sürümünü kullanan uygulamalar için yenidir. Daha önce yalnızca [kendi kendine kapsanan dağıtımlar](../deploying/index.md#publish-self-contained) yürütülebilir bir dosya üretecektir.
+.NET Core artık [çerçeveye bağlı yürütülebilir dosyaları](../deploying/index.md#publish-framework-dependent) varsayılan olarak oluşturur. Bu davranış, .NET Core 'un küresel olarak yüklenen bir sürümünü kullanan uygulamalar için yenidir. Daha önce yalnızca [kendi kendine kapsanan dağıtımlar](../deploying/index.md#publish-self-contained) yürütülebilir bir dosya üretecektir.
 
 `dotnet build`Veya sırasında `dotnet publish` , kullanmakta olduğunuz SDK ortamı ve platformuyla eşleşen bir çalıştırılabilir ( **appHost**olarak bilinir) oluşturulur. Bu yürütülebilir dosyalarla aynı şeyleri, diğer yerel yürütülebilir dosyaları gibi bekleyebilir, örneğin:
 
@@ -69,7 +69,7 @@ MacOS için .NET Core SDK 3,0 ' den başlayarak, varsayılan bir yürütülebili
 
 AppHost ayarı etkinleştirildiğinde, .NET Core, oluşturduğunuzda veya yayımladığınızda yerel bir MAK-O çalıştırılabilir dosyası oluşturur. Uygulamanız, komutuyla kaynak koddan çalıştırıldığında `dotnet run` veya mak-O yürütülebilir dosyasını doğrudan başlatarak appHost bağlamında çalışır.
 
-AppHost olmadan, bir kullanıcıya [çalışma zamanına bağımlı](../deploying/index.md#publish-runtime-dependent) bir uygulama başlatabilir `dotnet <filename.dll>` . Uygulamanızı [kendi içinde](../deploying/index.md#publish-self-contained)yayımladığınızda her zaman bir appHost oluşturulur.
+AppHost olmadan, bir kullanıcıya [çerçeveye bağımlı](../deploying/index.md#publish-framework-dependent) bir uygulama başlatabilir tek yöntem `dotnet <filename.dll>` komutunu kullanabilirsiniz. Uygulamanızı [kendi içinde](../deploying/index.md#publish-self-contained)yayımladığınızda her zaman bir appHost oluşturulur.
 
 AppHost 'yi proje düzeyinde yapılandırabilir veya parametresi ile belirli bir komut için appHost ' ı kapatabilirsiniz `dotnet` `-p:UseAppHost` :
 
@@ -212,10 +212,10 @@ ReadyToRun derleyicisi Şu anda çapraz hedefleme 'yi desteklememektedir. Belirl
 
 .NET Core 3,0, uygulamanızın .NET Core 'un en son ana sürümüne iletmesini sağlayan bir katılım özelliği sunar. Ayrıca, geri alma 'nın uygulamanıza nasıl uygulandığını denetlemek için yeni bir ayar eklenmiştir. Bu, aşağıdaki yollarla yapılandırılabilir:
 
-- Proje dosyası özelliği:`RollForward`
-- Çalışma zamanı yapılandırma dosyası özelliği:`rollForward`
-- Ortam değişkeni:`DOTNET_ROLL_FORWARD`
-- Komut satırı bağımsız değişkeni:`--roll-forward`
+- Proje dosyası özelliği: `RollForward`
+- Çalışma zamanı yapılandırma dosyası özelliği: `rollForward`
+- Ortam değişkeni: `DOTNET_ROLL_FORWARD`
+- Komut satırı bağımsız değişkeni: `--roll-forward`
 
 Aşağıdaki değerlerden biri belirtilmelidir. Ayar atlanırsa, **İkincil** varsayılandır.
 
@@ -249,9 +249,9 @@ Bağlama ve Razor sayfası yayımlama gibi bazı işlemler, yayımlamayı gerekt
 > [!WARNING]
 > .NET Core 3,0 Preview 1 ' de veya çalıştıran gibi yerel araçlara çalıştıysanız, `dotnet tool restore` `dotnet tool install` Yerel araçlar önbellek klasörünü silin. Aksi takdirde, yerel araçlar yeni bir sürümde çalışmaz. Bu klasör şu konumda bulunur:
 >
-> MacOS 'ta Linux:`rm -r $HOME/.dotnet/toolResolverCache`
+> MacOS 'ta Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
-> Windows 'da:`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> Windows 'da: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 
 Yerel araçlar, geçerli dizininizde bir bildirim dosyası adına bağımlıdır `dotnet-tools.json` . Bu bildirim dosyası, bu klasörde ve altında kullanılabilecek araçları tanımlar. Kodunuzla çalışan herkesin aynı araçları geri yükleyip kullanabilmesini sağlamak için, bildirim dosyasını kodunuzla dağıtabilirsiniz.
 
@@ -481,10 +481,10 @@ Ayrıştırma ve biçimlendirme düzeltmeleri şunları içerir:
 
 Yeni <xref:System.Math?displayProperty=nameWithType> API 'ler şunlardır:
 
-- <xref:System.Math.BitIncrement(System.Double)>'<xref:System.Math.BitDecrement(System.Double)>\
+- <xref:System.Math.BitIncrement(System.Double)> ' <xref:System.Math.BitDecrement(System.Double)>\
 `nextUp`Ve `nextDown` IEEE işlemlerine karşılık gelir. Bunlar, girdiden daha büyük veya daha az (sırasıyla) karşılaştıran en küçük kayan nokta numarasını döndürür. Örneğin, `Math.BitIncrement(0.0)` döndürür `double.Epsilon` .
 
-- <xref:System.Math.MaxMagnitude(System.Double,System.Double)>'<xref:System.Math.MinMagnitude(System.Double,System.Double)>\
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> ' <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 `maxNumMag`Ve `minNumMag` IEEE işlemlerine karşılık gelen değeri, iki girişin büyüklüğüne daha büyük veya daha az (sırasıyla) döndürür. Örneğin, `Math.MaxMagnitude(2.0, -3.0)` döndürür `-3.0` .
 
 - <xref:System.Math.ILogB(System.Double)>\
@@ -512,7 +512,7 @@ Daha fazla bilgi için bkz. [.net platforma bağımlı iç](https://github.com/d
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 
-.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örnek:
+.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örneğin:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");
@@ -539,7 +539,7 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>Hızlı yerleşik JSON desteği
 
-.NET kullanıcıları büyük ölçüde [Newtonsoft.Js](https://www.newtonsoft.com/json) ve DIĞER popüler JSON kitaplıklarında büyük bir seçenek olmaya devam eder. `Newtonsoft.Json`temel veri türü olarak .NET dizelerini kullanır, bu da arada bulunan UTF-16 ' dır.
+.NET kullanıcıları büyük ölçüde [Newtonsoft.Js](https://www.newtonsoft.com/json) ve DIĞER popüler JSON kitaplıklarında büyük bir seçenek olmaya devam eder. `Newtonsoft.Json` temel veri türü olarak .NET dizelerini kullanır, bu da arada bulunan UTF-16 ' dır.
 
 Yeni yerleşik JSON desteği yüksek performanslı, düşük ayırma, UTF-8 kodlu JSON metniyle birlikte çalışıyor. Ad alanı ve türleri hakkında daha fazla bilgi için <xref:System.Text.Json> aşağıdaki makalelere bakın:
 
