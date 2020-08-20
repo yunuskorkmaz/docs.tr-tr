@@ -5,24 +5,24 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: ddbee0764897b511cac0c4142354ba995d94a2b6
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416055"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656696"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core ile çalışmaya başlama
 
 Bu makalede, .NET Core ile çalışmaya başlama hakkında bilgi sağlanır. .NET Core, Windows, Linux ve macOS 'a yüklenebilir. En sevdiğiniz metin düzenleyicinizde kod oluşturabilir ve platformlar arası kitaplıklar ve uygulamalar oluşturabilirsiniz.
 
-.NET Core 'un ne olduğunu veya diğer .NET teknolojileriyle nasıl ilişkili olduğunu bilmiyorsanız, [.net](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) genel bakış ile başlayın. .NET Core, .NET ' in açık kaynaklı ve platformlar arası bir uygulamasıdır.
+.NET Core 'un ne olduğu veya diğer .NET teknolojileriyle nasıl ilişkili olduğu konusunda emin değilseniz, [.net](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet) genel bakış ile başlayın. .NET Core, .NET ' in açık kaynaklı ve platformlar arası bir uygulamasıdır.
 
 ## <a name="create-an-application"></a>Uygulama oluşturma
 
 İlk olarak, [.NET Core SDK](https://dotnet.microsoft.com/download) bilgisayarınıza indirip yükleyin.
 
-Ardından, **PowerShell**, **komut istemi**veya **Bash**gibi bir Terminal açın. `dotnet`Bir C# uygulaması oluşturmak ve çalıştırmak için aşağıdaki komutları yazın:
+Ardından, **PowerShell**, **komut istemi**veya **Bash**gibi bir Terminal açın. `dotnet`Bir C# uygulaması oluşturmak ve çalıştırmak için aşağıdaki komutları girin:
 
 ```dotnetcli
 dotnet new console --output sample1
@@ -35,7 +35,7 @@ Aşağıdaki çıkışı görmeniz gerekir:
 Hello World!
 ```
 
-Tebrikler! Basit bir .NET Core uygulaması oluşturdunuz. .NET Core uygulaması oluşturmak için [Visual Studio Code](./tutorials/with-visual-studio-code.md), [Visual Studio](./tutorials/with-visual-studio.md) (yalnızca Windows) veya [Mac için Visual Studio](./tutorials/using-on-mac-vs.md) (yalnızca MacOS) de kullanabilirsiniz.
+Tebrikler! Basit bir .NET Core uygulaması oluşturdunuz. .NET Core uygulaması oluşturmak için [Visual Studio Code](./tutorials/with-visual-studio-code.md), [Visual Studio](./tutorials/with-visual-studio.md) (yalnızca Windows) veya [Mac için Visual Studio](tutorials/with-visual-studio-mac.md) (yalnızca MacOS) de kullanabilirsiniz.
 
 ## <a name="tutorials"></a>Öğreticiler
 
@@ -47,7 +47,7 @@ Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulamaları g
 
 - [Visual Studio 2019 ' de ilk .NET Core konsol uygulamanızı oluşturma](./tutorials/with-visual-studio.md)
 - [Visual Studio 'da .NET Standard bir sınıf kitaplığı oluşturma](./tutorials/library-with-visual-studio.md)
-- [.NET Core CLI kullanarak .NET Core ile çalışmaya başlama](./tutorials/cli-create-console-app.md)
+- [Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -60,7 +60,7 @@ Desteklenen Windows sürümlerinin bir listesi için bkz. [.NET Core Dependencie
 
 Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulamaları geliştirmeye başlayın:
 
-- [Komut satırını kullanarak .NET Core ile çalışmaya başlama](./tutorials/cli-create-console-app.md)
+- [Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma](tutorials/with-visual-studio-code.md)
 
 |   |   |
 |---|---|
@@ -72,9 +72,8 @@ Desteklenen Linux desteklerinin ve sürümlerinin bir listesi için bkz. [.NET C
 
 Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulamaları geliştirmeye başlayın:
 
-- [Visual Studio Code kullanarak macOS üzerinde .NET Core kullanmaya başlama](./tutorials/using-on-macos.md)
-- [Komut satırını kullanarak .NET Core ile çalışmaya başlama](./tutorials/cli-create-console-app.md)
-- [Mac için Visual Studio kullanarak macOS üzerinde .NET Core kullanmaya başlama](./tutorials/using-on-mac-vs.md)
+- [Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma](tutorials/with-visual-studio-code.md)
+- [Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma](tutorials/with-visual-studio-mac.md)
 - [Mac için Visual Studio kullanarak macOS 'ta .NET Standard kitaplığı oluşturma](tutorials/library-with-visual-studio-mac.md)
 
 |   |   |

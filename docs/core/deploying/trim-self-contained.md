@@ -1,32 +1,32 @@
 ---
-title: Kendi kendine yeten uygulamaları kırpma
-description: Boyutlarını azaltmak için bağımsız uygulamaları nasıl kırptığınızı öğrenin. .NET Core, çalışma süresini kendi kendine çalışan bir uygulamayla paketler ve genellikle çalışma süresinin daha fazlasını içerir ve o zaman gereklidir.
+title: Kendi içindeki uygulamaları kırpma
+description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları nasıl kırpacağınızı öğrenin. .NET Core paketleri kendi içinde yayınlanan ve genellikle çalışma zamanının daha fazlasını içeren bir uygulamayla çalışma zamanı gereklidir.
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: bb8ac88c5e16b7fd20a7670e4ad76dbe4b44da1b
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 2bb0f03994468bbad3096ebf0b141bc1f47b867e
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242936"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656722"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
-Bir uygulama bağımsız yayımlanırken,.NET Core çalışma süresi uygulamayla birlikte paketlenir. Bu birleştirme, paket uygulamanıza önemli miktarda içerik ekler. Uygulamanızı dağıtma söz konusu olduğunda, boyut genellikle önemli bir faktördür. Paket uygulamasının boyutunu mümkün olduğunca küçük tutmak genellikle uygulama geliştiricileri için bir hedeftir.
+[Framework 'e bağımlı dağıtım modeli](index.md#publish-framework-dependent) , .net 'in başlangıcından bu yana en başarılı dağıtım modelidir. Bu senaryoda, uygulama geliştiricisi yalnızca, .NET çalışma zamanı ve çerçeve kitaplıklarının istemci makinede kullanılabilir olacağı beklentisiyle yalnızca uygulama ve üçüncü taraf derlemeler sunan. Bu dağıtım modeli, .NET Core 'da baskın bir tane olmaya devam eder ancak çerçeveye bağımlı modelin en iyi durumda olmadığı bazı senaryolar vardır. Alternatif olarak, .NET Core çalışma zamanı ve çerçevesinin uygulama ve üçüncü taraf Derlemeleriyle birlikte paketlenmiş olduğu, [kendi kendine içerilen bir uygulama](index.md#publish-self-contained)yayımlamaktır.
 
-Uygulamanın karmaşıklığına bağlı olarak, uygulamayı çalıştırmak için yalnızca çalışma zamanının bir alt kümesi gerekir. Çalışma zamanının bu kullanılmayan bölümleri gereksizdir ve paket uygulamadan kesilebilir.
+Kırpma Self-içerilen dağıtım modeli, dağıtım boyutunu azaltmak için optimize edilmiş, kendine dahil edilen dağıtım modelinin özelleşmiş bir sürümüdür. Dağıtım boyutunu en aza indirmek Blazor uygulamaları gibi bazı istemci tarafı senaryolar için kritik bir gereksinimdir. Uygulamanın karmaşıklığına bağlı olarak, uygulamayı çalıştırmak için çerçeve derlemelerinin yalnızca bir alt kümesi gereklidir. Kitaplığın kullanılmayan bu bölümleri gereksizdir ve paketlenmiş uygulamadan kırpılabilecek. Ancak, uygulamanın derleme zamanı analizinin, çeşitli sorunlu kod düzenlerini güvenilir bir şekilde çözümleyemedikleri için çalışma zamanında hatalara neden olabileceği bir risk vardır (büyük ölçüde yansıma kullanımı üzerinde ortalandı). Güvenilirlik güvencesi verilmediğinden, bu dağıtım modeli bir önizleme özelliği olarak sunulur. Derleme zamanı Çözümleme altyapısı, sorunlu kod desenlerinin geliştiricisine uyarı sağlar ve bu kod desenlerinin düzeltilme beklentisi olur. Mümkün olduğunda, aynı gereksinimleri karşılayan kodu kullanarak zaman oluşturmak için uygulamanızdaki çalışma zamanı yansıma bağımlılıklarını taşımanızı öneririz.
 
-Kırpma özelliği, gerekli çalışma zamanı derlemelerinin bir grafiğini keşfetmek ve oluşturmak için uygulama ikililerini inceleyerek çalışır. Başvurulamayan kalan çalışma zamanı derlemeleri hariç tutulur.
+Uygulamalar için kırpma modu, Kırım modu aracılığıyla yapılandırılabilir ve `copyused` uygulamada kullanılan derlemeleri paketleyip varsayılan () olur. Blazor WebAssembly uygulamaları, `link` derlemeler içinde kullanılmayan kodu kırpacak daha agresif bir mod () kullanır. Kırpma Analizi uyarıları, tam bağımlılık analizinin mümkün olmadığı kod desenleri hakkında bilgi verir. Bu uyarılar varsayılan olarak bastırılır ve bayrağı `SuppressTrimAnalysisWarnings` false olarak ayarlanarak açılabilir. Kullanılabilir kırpma seçenekleri hakkında daha fazla bilgi için [ılbağlayıcı sayfasında](https://github.com/mono/linker/blob/master/docs/illink-options.md)bulabilirsiniz.
 
 > [!NOTE]
-> Kırpma ,NET Core 3.1'de deneysel bir özelliktir ve _yalnızca_ bağımsız olarak yayınlanan uygulamalar için kullanılabilir.
+> Kırpma, .NET Core 3,1, 5,0 ' deki deneysel bir özelliktir ve _yalnızca_ kendi içinde yayımlanan uygulamalar tarafından kullanılabilir.
 
-## <a name="prevent-assemblies-from-being-trimmed"></a>Montajların kırpılmasını önleyin
+## <a name="prevent-assemblies-from-being-trimmed"></a>Derlemelerin kırpılmasına engel
 
-Kırpma işlevinin başvuruları algılayamadığı senaryolar vardır. Örneğin, uygulamanız veya uygulamanız tarafından başvurulan bir kitaplık tarafından bir çalışma zamanı derlemesi üzerinde yansıma kullanıldığında, derleme doğrudan başvurulmuyor. Kırpma bu dolaylı başvurulardan habersizdir ve kitaplığı yayımlanmış klasöründen dışlar.
+Kırpma işlevinin başvuruları algılayamayacağı senaryolar vardır. Örneğin, yansıma bir çalışma zamanı derlemesinde, uygulamanız veya uygulamanız tarafından başvurulan bir kitaplıkda kullanıldığında, derlemeye doğrudan başvurulmuyor demektir. Kırpma, bu dolaylı başvuruların farkında değildir ve kitaplığı yayımlanan klasörden hariç tutar.
 
-Kod dolaylı olarak yansıma yoluyla bir derlemeye başvururken, derlemenin `<TrimmerRootAssembly>` ayarla birlikte kırpılmasını engelleyebilirsiniz. Aşağıdaki örnek, derleme adı verilen `System.Security` bir derlemenin nasıl kırpılmasının önlenişretilenin ilerler:
+Kod, yansıma aracılığıyla bir derlemeye dolaylı olarak başvurduğunda, derlemenin ayarla kırpılmasına engel olabilirsiniz `<TrimmerRootAssembly>` . Aşağıdaki örnek, derleme adlı derlemenin kırpılmasını nasıl önleyekullanacağınızı gösterir `System.Security` :
 
 ```xml
 <ItemGroup>
@@ -34,57 +34,69 @@ Kod dolaylı olarak yansıma yoluyla bir derlemeye başvururken, derlemenin `<Tr
 </ItemGroup>
 ```
 
-## <a name="trim-your-app---cli"></a>Uygulamanızı kırpın - CLI
+## <a name="trim-your-app---cli"></a>Uygulamanızı kırpın-CLı
 
-[Dotnet yayımlama](../tools/dotnet-publish.md) komutunu kullanarak uygulamanızı kırpın. Uygulamanızı yayımladığınızda aşağıdaki üç ayarı ayarlayın:
+[DotNet Publish](../tools/dotnet-publish.md) komutunu kullanarak uygulamanızı kırpın. Uygulamanızı yayımladığınızda, aşağıdaki üç ayarı ayarlayın:
 
-- Bağımsız olarak yayımlayın:`--self-contained true`
-- Tek dosyalı yayımlamayı devre dışı:`-p:PublishSingleFile=false`
-- Kırpma yı etkinleştirme:`p:PublishTrimmed=true`
+- Kendi içinde Yayımla: `--self-contained true`
+- Kırpmayı etkinleştir: `p:PublishTrimmed=true`
 
-Aşağıdaki örnek, Windows 10 için bir uygulamayı bağımsız olarak yayımlar ve çıktıyı kırpar.
+Aşağıdaki örnek, Windows için bir uygulamayı kendi içinde yayınlar ve çıktıyı kırpar.
 
-```dotnetcli
-dotnet publish -c Release -r win10-x64 --self-contained true -p:PublishSingleFile=false -p:PublishTrimmed=true
+```xml
+<ItemGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+</ItemGroup>
 ```
 
-Daha fazla bilgi için [bkz.](deploy-with-cli.md)
+Aşağıdaki örnek, kullanılmayan kod oluşturma derlemelerinin kırpılıp kırpılmayabileceği, agresif kırpma modunda bir uygulamayı yayınlar.
 
-## <a name="trim-your-app---visual-studio"></a>Uygulamanızı kırpın - Visual Studio
+```xml
+<ItemGroup>
+    <TrimMode>link</TrimMode>
+    <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
+</ItemGroup>
+```
+
+Daha fazla bilgi için bkz. [.NET Core uygulamalarını .NET Core CLI yayımlama](deploy-with-cli.md).
+
+## <a name="trim-your-app---visual-studio"></a>Uygulamanızı kırpın-Visual Studio
 
 Visual Studio, uygulamanızın nasıl yayımlandığını denetleyen yeniden kullanılabilir yayımlama profilleri oluşturur.
 
-01. Çözüm **Gezgini** bölmesine, yayımlamak istediğiniz projeye sağ tıklayın. **Yayımla'yı seçin...**.
+01. **Çözüm Gezgini** bölmesinde, yayımlamak istediğiniz projeye sağ tıklayın. Yayımla ' yı seçin.. **.**
 
     :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="Yayımla seçeneğini vurgulayan sağ tıklama menüsüyle Çözüm Gezgini.":::
 
-    Zaten bir yayımlama profiliniz yoksa, bir tane oluşturmak için yönergeleri izleyin ve **Klasör** hedef türünü seçin.
+    Zaten bir yayımlama profiliniz yoksa, bir tane oluşturmak için yönergeleri izleyin ve hedef türü **klasörünü** seçin.
 
-01. **Edit'i**seçin.
+01. **Düzenle**' yi seçin.
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Visual studio, profili edit düğmesiyle yayımlar.":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-edit-settings.png" alt-text="Visual Studio Profili Düzenle düğmesi ile Yayımla.":::
 
-01. Profil **ayarları** iletişim kutusunda aşağıdaki seçenekleri ayarlayın:
+01. **Profil ayarları** iletişim kutusunda, aşağıdaki seçenekleri ayarlayın:
 
-    - **Dağıtım modunu** **Bağımsız**olarak ayarlayın.
-    - **Hedef çalışma zamanını** yayınlamak istediğiniz platforma ayarlayın.
-    - **Kullanılmayan derlemeleri Kırp'ı (önizlemede)** seçin.
+    - **Dağıtım modunu** **kendi kendine dahil**olarak ayarlayın.
+    - **Hedef çalışma zamanını** , yayımlamak istediğiniz platforma ayarlayın.
+    - **Kullanılmayan derlemeleri Kırp (önizlemede)** seçeneğini belirleyin.
 
-    Ayarları kaydetmek ve **Yayımla** iletişim kutusuna dönmek için **Kaydet'i** seçin.
+    Ayarları kaydetmek ve **Yayımla** iletişim kutusuna dönmek için **Kaydet** ' i seçin.
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="Dağıtım modu, hedef çalışma zamanı ve kullanılmayan derlemeleri kırpma seçenekleri vurgulanan profil ayarları iletişim kutusu.":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-publish-properties.png" alt-text="Dağıtım modu, hedef çalışma zamanı ve kullanılmayan derlemeleri Kırp seçeneklerinin vurgulandığı profil ayarları iletişim kutusu.":::
 
-01. Kesilmiş uygulamanızı yayınlamak için **Yayımla'yı** seçin.
+01. Uygulamanızı yayımlamak için **Yayımla** ' yı seçin.
 
-Daha fazla bilgi için [bkz.](deploy-with-vs.md)
+Daha fazla bilgi için bkz. [Visual Studio ile .NET Core uygulamalarını yayımlama](deploy-with-vs.md).
 
-## <a name="trim-your-app---visual-studio-for-mac"></a>Uygulamanızı kırpın - Mac için Visual Studio
+## <a name="trim-your-app---visual-studio-for-mac"></a>Uygulamanızı kırpın-Mac için Visual Studio
 
-Mac için Visual Studio, yayın sırasında uygulamanızı kırpma seçenekleri sağlamaz. [Uygulamanızı Kırpma - CLI](#trim-your-app---cli) bölümündeki yönergeleri izleyerek el ile yayınlamanız gerekir. Daha fazla bilgi için [bkz.](deploy-with-cli.md)
+Mac için Visual Studio yayımlama sırasında uygulamanızı kırpmak için seçenek sağlamıyor. [Uygulamanızı Kırp-CLI](#trim-your-app---cli) bölümündeki yönergeleri izleyerek el ile yayımlamanız gerekir. Daha fazla bilgi için bkz. [.NET Core uygulamalarını .NET Core CLI yayımlama](deploy-with-cli.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Çekirdek uygulama dağıtımı](index.md).
-- [.NET Core CLI ile .NET Core uygulamalarını yayımlayın.](deploy-with-cli.md)
-- [.NET Core uygulamalarını Visual Studio ile yayımlayın.](deploy-with-vs.md)
-- [dotnet yayımlama komutu](../tools/dotnet-publish.md).
+- [.NET Core uygulama dağıtımı](index.md).
+- [.NET Core uygulamalarını .NET Core CLI yayımlayın](deploy-with-cli.md).
+- [Visual Studio ile .NET Core uygulamaları yayımlayın](deploy-with-vs.md).
+- [DotNet Publish komutu](../tools/dotnet-publish.md).

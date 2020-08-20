@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanı, SDK ve .NET Core ile oluşturulan uyg
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: 905a8b8a4a17836823b1c6574828acb08110d224
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415948"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656533"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina Notaror .NET Core indirmeleri ve projeleri üzerindeki etki
 
@@ -92,5 +92,5 @@ Uygulamanızın macOS Catalina (sürüm 10,15) veya daha yükseği üzerinde ça
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- [.NET Core bağımlılıkları ve gereksinimleri](dependencies.md).
+- [.NET Core bağımlılıkları ve gereksinimleri](macos.md#dependencies).
 - [.NET Core çalışma zamanı ve SDK 'Sını yükler](macos.md).

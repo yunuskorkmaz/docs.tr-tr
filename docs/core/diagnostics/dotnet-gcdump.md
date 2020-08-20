@@ -2,12 +2,12 @@
 title: DotNet-gcdump-.NET Core
 description: DotNet-gcdump komut satırı aracını yükleme ve kullanma.
 ms.date: 07/26/2020
-ms.openlocfilehash: 10e4c7e9e3a1df5d0eb58e68d38c0af091aeedc1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a7b19f4d7487677b975621e7267a17894dae2e3a
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88575685"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656657"
 ---
 # <a name="heap-analysis-tool-dotnet-gcdump"></a>Yığın Analizi Aracı (DotNet-gcdump)
 
@@ -29,7 +29,7 @@ dotnet-gcdump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Açıklama
 
-`dotnet-gcdump`Genel araç, canlı .net IŞLEMLERININ GC (çöp toplayıcısı) dökümlerini toplamanın bir yoludur. Windows üzerinde ETW için platformlar arası bir alternatif olan EventPipe teknolojisini kullanır. GC dökümleri, hedef işlemde bir GC tetikleyerek, özel olayları açıp, nesne kökleri grafiğini Olay akışından yeniden oluşturarak oluşturulur. Bu, işlem çalışırken en az ek yük ile GC dökümlerinin toplanmasını sağlar. Bu dökümler birkaç senaryo için yararlıdır:
+`dotnet-gcdump`Genel araç, canlı .net IŞLEMLERININ GC (çöp toplayıcısı) dökümlerini toplamanın bir yoludur. Windows üzerinde ETW için platformlar arası bir alternatif olan EventPipe teknolojisini kullanır. GC dökümleri, hedef işlemde bir GC tetikleyerek, özel olayları açıp, nesne kökleri grafiğini Olay akışından yeniden oluşturarak oluşturulur. Bu işlem, işlem çalışırken ve en az ek yük ile GC dökümlerinin toplanmasını sağlar. Bu dökümler birkaç senaryo için yararlıdır:
 
 - Yığın üzerindeki nesne sayısını zaman içinde birkaç noktada karşılaştırma.
 - Nesnelerin kökleri çözümleniyor ("Bu tür için hala bir başvuru var?" gibi sorulara yanıt verme).
@@ -69,7 +69,7 @@ dotnet-gcdump collect [-h|--help] [-p|--process-id <pid>] [-o|--output <gcdump-f
 
 - **`-p|--process-id <pid>`**
 
-  GC dökümünü toplanacak işlem kimliği.
+  GC dökümünü toplanacak işlem KIMLIĞI.
 
 - **`-o|--output <gcdump-file-path>`**
 
@@ -115,7 +115,7 @@ dotnet-gcdump report [-h|--help] [-p|--process-id <pid>] [-t|--report-type <Heap
 
 - **`-p|--process-id <pid>`**
 
-  GC dökümünü toplanacak işlem kimliği.
+  GC dökümünü toplanacak işlem KIMLIĞI.
 
 - **`-t|--report-type <HeapStat>`**
 

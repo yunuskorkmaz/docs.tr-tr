@@ -1,6 +1,6 @@
 ---
-title: .NET 'te karakter kodlamaya giriş
-description: .NET 'te karakter kodlama ve kod çözme hakkında bilgi edinin.
+title: char.Net ' te acter kodlamaya giriş
+description: char.Net 'te acter kodlama ve kod çözme hakkında bilgi edinin.
 ms.date: 03/09/2020
 no-loc:
 - Rune
@@ -10,26 +10,26 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 85349e1e1c4eca4dd3ef7980f48350a4145fca24
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599873"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656299"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde karakter kodlaması
 
-Bu makalede, .NET tarafından kullanılan karakter kodlama sistemlerine giriş sağlanır. Makalesinde,,, <xref:System.String> <xref:System.Char> <xref:System.Text.Rune> ve <xref:System.Globalization.StringInfo> türlerinin Unicode, UTF-16 ve UTF-8 ile nasıl çalıştığı açıklanmaktadır.
+Bu makalede char , .NET tarafından kullanılan kodlama sistemlerine yönelik bir giriş sunulmaktadır. Makalesinde,,, <xref:System.String> <xref:System.Char> <xref:System.Text.Rune> ve <xref:System.Globalization.StringInfo> türlerinin Unicode, UTF-16 ve UTF-8 ile nasıl çalıştığı açıklanmaktadır.
 
-Bu *karakter* , *bir okuyucunun tek bir görüntüleme öğesi olarak beyin bir*genel anlamda burada kullanılır. Ortak örnekler, "a", "@" simgesi ve Emoji "" harftir 🐂 . Bazı durumlarda, [grafem kümelerindeki](#grapheme-clusters) bölümünde açıklanan bir karakter aslında birden çok bağımsız görüntüleme öğelerinden oluşur.
+* char Acter* terimi, *bir okuyucunun tek bir görüntüleme öğesi olarak beyin bir*genel anlamda burada kullanılır. Ortak örnekler, "a", "@" simgesi ve Emoji "" harftir 🐂 . Bazı durumlarda char , [grafem kümelerindeki](#grapheme-clusters) bölümünde açıklandığı gibi, bir acter aslında birden çok bağımsız görüntüleme öğelerinden oluşur.
 
-## <a name="the-string-and-char-types"></a>stringVe char türleri
+## <a name="the-no-locstring-and-no-locchar-types"></a>stringVe char türleri
 
 Sınıfının bir örneği [string](xref:System.String) bazı metinleri temsil eder. `string`, Her biri yapının bir örneği olan 16 bit değerlerden oluşan bir dizidir [char](xref:System.Char) . [ string . Length](xref:System.String.Length) özelliği `char` , örnekteki örneklerin sayısını döndürür `string` .
 
 Aşağıdaki örnek işlev, içindeki tüm örneklerin onaltılı gösterimindeki değerleri yazdırır `char` `string` :
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/PrintStringChars.cs" id="SnippetPrintChars":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtımı/CSharp/PrintStringChars. cs" id = "SnippetPrintChars":::
 
 string"Hello" ifadesini bu işleve geçirin ve aşağıdaki çıktıyı alın:
 
@@ -46,7 +46,7 @@ s[3] = 'l' ('\u006c')
 s[4] = 'o' ('\u006f')
 ```
 
-Her karakter tek bir değerle temsil edilir `char` . Bu kalıp, dünyanın çoğu dili için geçerli bir değer içerir. Örneğin, *nǐ hǎo* ve " *Hello*" gibi sesli iki Çince karakterin çıktısı aşağıda verilmiştir:
+Her char bir acter tek bir değer ile temsil edilir `char` . Bu kalıp, dünyanın çoğu dili için geçerli bir değer içerir. Örneğin, char *nǐ hǎo* ve " *Hello*" gibi sesli iki Çince acters çıkışı aşağıda verilmiştir:
 
 ```csharp
 PrintChars("你好");
@@ -58,7 +58,7 @@ s[0] = '你' ('\u4f60')
 s[1] = '好' ('\u597d')
 ```
 
-Ancak bazı dillerde ve bazı semboller ve Emoji için `char` tek bir karakteri temsil eden iki örnek sürer. Örneğin, `char` sözcükteki karakter ve örnekleri, Ozu dilinde kullanılacak şekilde *Osage* karşılaştırın:
+Ancak bazı dillerde ve bazı semboller ve Emoji için `char` tek bir acter temsil eden iki örnek sürer char . Örneğin, char sözcük içindeki acters ve `char` örnekleri, Ozu dilinde *Ozu* anlamına gelir:
 
 ```csharp
 PrintChars("𐓏𐓘𐓻𐓘𐓻𐓟 𐒻𐓟");
@@ -85,7 +85,7 @@ s[15] = '�' ('\ud801')
 s[16] = '�' ('\udcdf')
 ```
 
-Yukarıdaki örnekte, boşluk hariç her bir karakter iki örnek tarafından temsil edilir `char` .
+Yukarıdaki örnekte, char boşluk hariç her bir acter iki örnekle temsil edilir `char` .
 
 Tek bir Unicode emoji Ayrıca `char` , aşağıdaki örnekte görüldüğü gibi bir Ox emoji gösterildiği gibi iki s tarafından da temsil edilir:
 
@@ -95,21 +95,21 @@ s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
 ```
 
-Bu örnekler `string.Length` , örnek sayısını gösteren değerinin, `char` görüntülenen karakter sayısını belirtmesinin gerekli olmadığını gösterir. Tek bir `char` örnek bir karakteri temsil etmesi gerekmez.
+Bu örnekler `string.Length` , örneklerinin sayısını gösteren değerinin, `char` görüntülenen acters sayısını belirtmesinin gerekli olmadığını gösterir char . Tek bir `char` örnek bir acter temsil etmesi gereken değildir char .
 
-`char`Tek bir karakterle eşlenen çiftler *vekil çiftler*olarak adlandırılır. Nasıl çalıştığını anlamak için Unicode ve UTF-16 kodlamasını anlamanız gerekir.
+`char`Tek bir acter ile eşlenen çiftler char *vekil çiftleri*olarak adlandırılır. Nasıl çalıştığını anlamak için Unicode ve UTF-16 kodlamasını anlamanız gerekir.
 
 ## <a name="unicode-code-points"></a>Unicode kod noktaları
 
 Unicode, çeşitli platformlarda ve çeşitli diller ve betiklerle kullanım için uluslararası bir kodlama standardıdır.
 
-Unicode standart 1.100.000 ' den fazla [kod noktasını](https://www.unicode.org/glossary/#code_point)tanımlar. Kod noktası, 0 ile `U+10FFFF` (ondalık 1.114.111) arasında değişebilir bir tamsayı değeridir. Bazı kod noktaları harflere, simgelere veya emoji 'ye atanır. Diğer bir deyişle, yeni bir satıra ilerlemek gibi metin veya karakterlerin nasıl görüntülendiğini denetleyen eylemlere atanır. Birçok kod noktası henüz atanmadı.
+Unicode standart 1.100.000 ' den fazla [kod noktasını](https://www.unicode.org/glossary/#code_point)tanımlar. Kod noktası, 0 ile `U+10FFFF` (ondalık 1.114.111) arasında değişebilir bir tamsayı değeridir. Bazı kod noktaları harflere, simgelere veya emoji 'ye atanır. Diğer char bir deyişle, yeni bir satıra ilerlemek gibi metin veya acters 'nin nasıl görüntülendiğini denetleyen eylemlere atanır. Birçok kod noktası henüz atanmadı.
 
-Aşağıda göründükleri Unicode grafiklerine yönelik bağlantılarla birlikte kod noktası atamalarından oluşan bazı örnekler verilmiştir:
+Aşağıda göründükleri Unicode TS bağlantıları ile kod noktası atamalarının bazı örnekleri verilmiştir char :
 
 |Ondalık|Onaltılık       |Örnek|Açıklama|
 |------:|----------|-------|-----------|
-|10     | `U+000A` |YOK| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|10     | `U+000A` |N/A| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |65     | `U+0061` | a | [LATIN KÜÇÜK HARF A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LATIN BÜYÜK HARF Y WITH MACRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [ESKI TÜRKIC LETTER ORKHON](https://www.unicode.org/charts/PDF/U10C00.pdf) |
@@ -124,11 +124,11 @@ Kod noktalarının tam aralığı içinde iki alt Aralık vardır:
 
 Aşağıdaki diyagramda, BMP ve ek kod noktaları arasındaki ilişki gösterilmektedir.
 
-:::image type="content" source="media/character-encoding-introduction/bmp-and-supplementary.svg" alt-text="BMP ve ek kod noktaları":::
+:::image type="content" source="media/:::No-Loc (Char)::: acter-Encoding-introduction/BMP-and-Supplementary. SVG "alt-text =" BMP ve ek kod noktaları ":::
 
 ## <a name="utf-16-code-units"></a>UTF-16 kod birimleri
 
-16 bit Unicode dönüştürme biçimi ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)), Unicode kod noktalarını temsil etmek için 16 bit *kod birimi* kullanan bir karakter kodlama sistemidir. .NET, içindeki metni kodlamak için UTF-16 kullanır `string` . `char`Örnek, 16 bit kod birimini temsil eder.
+16 bit Unicode dönüştürme biçimi ([UTF-16](https://www.unicode.org/faq/utf_bom.html#UTF16)), char Unicode kod noktalarını temsil etmek için 16 bit *kod birimi* kullanan bir acter kodlama sistemidir. .NET, içindeki metni kodlamak için UTF-16 kullanır `string` . `char`Örnek, 16 bit kod birimini temsil eder.
 
 Tek bir 16 bit kod birimi, temel çok dilli düzlemin 16 bit aralığında herhangi bir kod noktasını temsil edebilir. Ancak, tamamlayıcı aralıktaki bir kod noktası için iki `char` örnek gereklidir.
 
@@ -138,7 +138,7 @@ Tek bir 16 bit kod birimi, temel çok dilli düzlemin 16 bit aralığında herha
 
 Aşağıdaki diyagramda, BMP ve vekil kod noktaları arasındaki ilişki gösterilmektedir.
 
-:::image type="content" source="media/character-encoding-introduction/bmp-and-surrogate.svg" alt-text="BMP ve vekil kod noktaları":::
+:::image type="content" source="media/:::No-Loc (Char)::: acter-Encoding-introduction/BMP-and-Surrogate. SVG "alt-text =" BMP ve vekil kod noktaları ":::
 
 Yüksek bir *yedek* kod noktası ( `U+D800..U+DBFF` ) hemen sonrasında *düşük bir yedek* kod noktası () olduğunda `U+DC00..U+DFFF` , Çift, aşağıdaki formül kullanılarak bir ek kod noktası olarak yorumlanır:
 
@@ -158,7 +158,7 @@ code point = 65,536 +
 
 *Üst* yedek kod noktası, *düşük* bir vekil kod noktasına göre daha yüksek bir sayı değerine sahip değildir. Yüksek yedek kod noktası, tam 21 bit kod noktası aralığının daha yüksek sıralı 11 bitini hesaplamak için kullanıldığından, "yüksek" olarak adlandırılır. Düşük yedek kod noktası, alt sıra 10 bitlerini hesaplamak için kullanılır.
 
-Örneğin, yedek çiftine karşılık gelen gerçek kod noktası `0xD83C` `0xDF39` aşağıdaki şekilde hesaplanır:
+Örneğin, yedek çiftine karşılık gelen gerçek kod noktası `0xD83C` `0xDF39`  aşağıdaki şekilde hesaplanır:
 
 ```
 actual = 0x10000 + ((0xD83C - 0xD800) * 0x0400) + (0xDF39 - 0xDC00)
@@ -180,33 +180,33 @@ Yukarıdaki örnek, `"\ud83c\udf39"` `U+1F339 ROSE ('🌹')` daha önce bahsedil
 
 ## <a name="unicode-scalar-values"></a>Unicode skaler değerleri
 
-[Unicode skaler değeri](https://www.unicode.org/glossary/#unicode_scalar_value) , yedek kod noktalarından başka tüm kod noktalarına başvurur. Diğer bir deyişle, skaler bir değer bir karakter atanmış veya gelecekte bir karakter atanabilir olan herhangi bir kod noktasıdır. Burada "karakter", metin veya karakterlerin nasıl görüntülendiğini denetleyen eylemler gibi şeyler içeren bir kod noktasına atanabilecek her şeyi ifade eder.
+[Unicode skaler değeri](https://www.unicode.org/glossary/#unicode_scalar_value) , yedek kod noktalarından başka tüm kod noktalarına başvurur. Diğer bir deyişle, skaler bir değer, bir char acter atanmış veya gelecekte bir acter atanabilir olan herhangi bir kod noktasıdır char . Burada "character", metin veya acters 'nin nasıl görüntülendiğini denetleyen eylemler gibi şeyler içeren bir kod noktasına atanabilecek her şeyi ifade eder char .
 
 Aşağıdaki diyagramda skaler değer kod noktaları gösterilmektedir.
 
-:::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="Skaler değerler":::
+:::image type="content" source="media/:::No-Loc (Char)::: acter-Encoding-introduction/scalar-values. SVG "alt-text =" skaler değerler ":::
 
-### <a name="the-rune-type-as-a-scalar-value"></a>RuneSkalar değer olarak tür
+### <a name="the-no-locrune-type-as-a-scalar-value"></a>RuneSkalar değer olarak tür
 
-.NET Core 3,0 ile başlayarak, <xref:System.Text.Rune?displayProperty=fullName> tür bir Unicode skaler değeri temsil eder. **`Rune`.NET Core 2. x veya .NET Framework 4. x sürümünde kullanılamaz.**
+.NET Core 3,0 ile başlayarak, <xref:System.Text.Rune?displayProperty=fullName> tür bir Unicode skaler değeri temsil eder. **`Rune` .NET Core 2. x veya .NET Framework 4. x sürümünde kullanılamaz.**
 
 `Rune`Oluşturucular, sonuçta elde edilen örneğin geçerli bir Unicode skaler değeri olduğunu doğrular, aksi takdirde bir özel durum oluşturur. Aşağıdaki örnek, `Rune` giriş geçerli skaler değerleri temsil ettiğinden örnekleri başarıyla örnekleyen kodu gösterir:
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetValid":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-giriş/CSharp/örnek oluştur Rune s.cs" id = "SnippetValid":::
 
 Aşağıdaki örnek, bir özel durum oluşturur çünkü kod noktası vekil aralıkta ve bir yedek çiftinin parçası değil:
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidSurrogate":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-giriş/CSharp/örnek oluştur Rune s.cs" id = "SnippetInvalidSurrogate":::
 
 Aşağıdaki örnek bir özel durum oluşturur çünkü kod noktası, tamamlayıcı aralığın ötesinde:
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-giriş/CSharp/örnek oluştur Rune s.cs" id = "SnippetInvalidHigh":::
 
-### <a name="rune-usage-example-changing-letter-case"></a>RuneKullanım örneği: harf durumunu değiştirme
+### <a name="no-locrune-usage-example-changing-letter-case"></a>Rune Kullanım örneği: harf durumunu değiştirme
 
 Bir ' a sahip olan `char` ve bir vekil çiftten ise, skaler bir değer olan bir kod noktasıyla çalıştığını varsayan BIR API `char` . Örneğin, her birinde ' de çağıran aşağıdaki yöntemi göz önünde bulundurun <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> char string :
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetBadExample":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtımı/CSharp/ConvertToUpper. cs" ID = "SnippetBadExample":::
 
 `input` string Küçük harfli Deseret harfini içeriyorsa `er` ( `𐑉` ), bu kod bunu büyük harfe ( `𐐡` ) dönüştürmez. Kod `char.ToUpperInvariant` , her yedek kod noktasında ayrı olarak çağırır `U+D801` `U+DC49` . Ancak `U+D801` kendi kendine küçük harf olarak tanımlamak için yeterli bilgi yok, `char.ToUpperInvariant` Bu nedenle tek başına çıkar. `U+DC49`Aynı şekilde işler. Sonuç, içindeki küçük harfli ' 𐑉 ' `input` string ' 𐑉 ' değerine dönüştürülmez.
 
@@ -215,9 +215,9 @@ Doğru bir şekilde büyük harfe dönüştürmek için iki seçenek vardır str
 * <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType>Giriş üzerinde, yineleme yerine çağırın string `char` `char` . `string.ToUpperInvariant`Yöntemi her bir yedek çiftinin her iki bölümüne erişebilir, bu nedenle tüm Unicode kod noktalarını doğru bir şekilde işleyebilir.
 * `Rune` `char` Aşağıdaki örnekte gösterildiği gibi, UNICODE skaler değerlerini örnekler yerine örnekler olarak yineleyin. `Rune`Örnek geçerli bir Unicode skaler değeri olduğundan, skaler bir değer üzerinde çalışmasını bekleyen API 'lere geçirilebilir. Örneğin, <xref:System.Text.Rune.ToUpperInvariant%2A?displayProperty=nameWithType> Aşağıdaki örnekte gösterildiği gibi çağırmak doğru sonuçlar verir:
 
-  :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
+  ::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtımı/CSharp/ConvertToUpper. cs" ID = "SnippetGoodExample":::
 
-### <a name="other-rune-apis"></a>Diğer Rune API 'ler
+### <a name="other-no-locrune-apis"></a>Diğer Rune API 'ler
 
 `Rune`Tür, API 'lerin çoğunun analoglarından sunar `char` . Örneğin, aşağıdaki yöntemler tür üzerinde statik API 'Leri yansıtır `char` :
 
@@ -236,9 +236,9 @@ Herhangi bir Unicode skaler değeri tek `char` veya bir vekil çifti tarafından
 
 ## <a name="grapheme-clusters"></a>Grapheme kümeleri
 
-Tek bir karakter, birden çok kod noktasının birleşiminden kaynaklanabilir. bu nedenle, genellikle "character" yerine kullanılan daha açıklayıcı bir terim [grafem](https://www.unicode.org/glossary/#grapheme_cluster)kümesidir. .NET 'teki denk terim [metin öğesidir](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A).
+Bir char acter, birden çok kod noktasının birleşiminden kaynaklanabilir. bu nedenle, genellikle "acter" yerine kullanılan daha açıklayıcı bir terim, char [grafem](https://www.unicode.org/glossary/#grapheme_cluster)kümesidir. .NET 'teki denk terim [metin öğesidir](xref:System.Globalization.StringInfo.GetTextElementEnumerator%2A).
 
-`string`"A", "á" örneklerini göz önünde bulundurun. "á" ve " `👩🏽‍🚒` ". İşletim sisteminiz, Unicode standardı tarafından belirtildiği gibi bunları işlediğinde, bu örneklerin her biri `string` tek bir metin öğesi veya grafem kümesi olarak görünür. Ancak son ikisi birden fazla skaler değer kod noktasıyla temsil edilir.
+`string`"A", "á", "á" ve "" örneklerini göz önünde bulundurun `👩🏽‍🚒` . İşletim sisteminiz, Unicode standardı tarafından belirtildiği gibi bunları işlediğinde, bu örneklerin her biri `string` tek bir metin öğesi veya grafem kümesi olarak görünür. Ancak son ikisi birden fazla skaler değer kod noktasıyla temsil edilir.
 
 * string"A", bir skaler değerle temsil edilir ve bir örnek içerir `char` .
 
@@ -255,30 +255,30 @@ Tek bir karakter, birden çok kod noktasının birleşiminden kaynaklanabilir. b
 
 * Son olarak, string " `👩🏽‍🚒` " dört skaler değer ile temsil edilir ve yedi `char` örnek içerir.
 
-  * `U+1F469 WOMAN`(tamamlayıcı Aralık, yedek çifti gerektirir)
-  * `U+1F3FD EMOJI MODIFIER FITZPATRICK TYPE-4`(tamamlayıcı Aralık, yedek çifti gerektirir)
+  * `U+1F469 WOMAN` (tamamlayıcı Aralık, yedek çifti gerektirir)
+  * `U+1F3FD EMOJI MODIFIER FITZPATRICK TYPE-4` (tamamlayıcı Aralık, yedek çifti gerektirir)
   * `U+200D ZERO WIDTH JOINER`
-  * `U+1F692 FIRE ENGINE`(tamamlayıcı Aralık, yedek çifti gerektirir)
+  * `U+1F692 FIRE ENGINE` (tamamlayıcı Aralık, yedek çifti gerektirir)
 
-Önceki örneklerde, örneğin, vurgulu vurgu değiştiricisi veya kaplama tonu değiştiricisi gibi-kod noktası ekranda tek başına bir öğe olarak görüntülenmez. Bunun yerine, daha önce gelen bir metin öğesinin görünümünü değiştirmek için kullanılır. Bu örnekler, tek bir "karakter" veya "grapheme kümesi" olarak düşündüğimizi oluşturmak için birden çok skalar değer alıp verebileceğini gösterir.
+Önceki örneklerde, örneğin, vurgulu vurgu değiştiricisi veya kaplama tonu değiştiricisi gibi-kod noktası ekranda tek başına bir öğe olarak görüntülenmez. Bunun yerine, daha önce gelen bir metin öğesinin görünümünü değiştirmek için kullanılır. Bu örnekler, tek bir " char acter," veya "grapheme kümesi" olarak düşündüğimizi oluşturmak için birden çok skalar değer alıp verebileceğini gösterir.
 
 Bir a 'nın grafem kümelerini numaralandırmak için `string` <xref:System.Globalization.StringInfo> Aşağıdaki örnekte gösterildiği gibi sınıfını kullanın. Swift hakkında bilginiz varsa, .NET `StringInfo` türü [Swift 'ın `character` tipine](https://developer.apple.com/documentation/swift/character)benzer.
 
-### <a name="example-count-char-rune-and-text-element-instances"></a>Örnek: Count char , Rune , ve metin öğesi örnekleri
+### <a name="example-count-no-locchar-no-locrune-and-text-element-instances"></a>Örnek: Count char , Rune , ve metin öğesi örnekleri
 
 .NET API 'lerinde, bir grafem kümesine *metin öğesi*denir. Aşağıdaki yöntem `char` ,, `Rune` ve içindeki metin öğesi örnekleri arasındaki farkları göstermektedir `string` :
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/CountTextElements.cs" id="SnippetCountMethod":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtımı/CSharp/CountTextElements. cs" ID = "SnippetCountMethod":::
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/CountTextElements.cs" id="SnippetCallCountMethod":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtımı/CSharp/CountTextElements. cs" ID = "SnippetCallCountMethod":::
 
 Bu kodu .NET Framework veya .NET Core 3,1 veya önceki sürümlerde çalıştırırsanız, emoji için metin öğesi sayısı gösterilir `4` . Bunun nedeni, `StringInfo` .NET 5 ' te düzeltilen sınıftaki bir hatadır.
 
-### <a name="example-splitting-string-instances"></a>Örnek: string örnekleri bölme
+### <a name="example-splitting-no-locstring-instances"></a>Örnek: string örnekleri bölme
 
-Örnekleri bölrken `string` , vekil çiftleri ve grafem kümelerini bölmemeye özen gösterin. Aşağıdaki hatalı kod örneğini göz önünde bulundurun. Bu, her 10 karakterden oluşan satır sonlarını bir araya eklemeyi amaçlar string :
+Örnekleri bölrken `string` , vekil çiftleri ve grafem kümelerini bölmemeye özen gösterin. Aşağıdaki hatalı kod örneğini göz önünde bulundurun: her 10 acters satır sonu eklemeyi amaçlayan char string
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/InsertNewlines.cs" id="SnippetBadExample":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtım/CSharp/ınsertnewlines. cs" ID = "SnippetBadExample":::
 
 Bu kod örnekleri numaralandırdığından `char` , Straddle bir 10 sınır olarak gerçekleşen bir yedek çift `char` bölünecektir ve aralarında bir yeni satır eklenebilir. Bu ekleme veri bozulması sunarak, vekil kod noktaları yalnızca çiftler olarak anlamlıdır.
 
@@ -286,7 +286,7 @@ Bu kod örnekleri numaralandırdığından `char` , Straddle bir 10 sınır olar
 
 stringAşağıdaki örnekte olduğu gibi, grafem kümelerini veya metin öğelerini sayarak daha iyi bir yaklaşım vardır:
 
-:::code language="csharp" source="snippets/character-encoding-introduction/csharp/InsertNewlines.cs" id="SnippetGoodExample":::
+::: Code Language = "CSharp" Source = "parçacıklar/ char acter-Encoding-tanıtım/CSharp/ınsertnewlines. cs" ID = "SnippetGoodExample":::
 
 Ancak daha önce belirtildiği gibi, .NET 5 dışındaki .NET uygulamalarında, `StringInfo` sınıfı bazı grafem kümelerini yanlış işleyebilir.
 
@@ -365,16 +365,16 @@ Hatalı biçimlendirilmiş kodlamalar örnekleri aşağıda verilmiştir:
   const string s = "\ud800";
   ```
 
-* Bir vekil çifti ayıran alt dize:
+* stringBir vekil çifti ayıran Sub:
 
   ```csharp
   string x = "\ud83e\udd70"; // "🥰"
   string y = x.Substring(1, 1); // "\udd70" standalone low surrogate
   ```
 
-Hiçbir şekilde [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) hatalı oluşturulmuş örnekler döndürmeyen API 'ler `string` . `Encoding.GetString`ve `Encoding.GetBytes` yöntemleri, girişte hatalı biçimlendirilmiş dizileri tespit edin ve çıkış oluştururken karakter değiştirme işlemi gerçekleştirir. Örneğin, [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) GIRIŞTE ASCII olmayan bir bayt görürseniz (U + 0000.. U + 007F aralığı dışında), döndürülen örneğe bir '? ' ekler `string` . [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A)Hatalı biçimlendirilmiş UTF-8 dizilerini `U+FFFD REPLACEMENT CHARACTER ('�')` döndürülen örnekteki ile değiştirir `string` . Daha fazla bilgi için bkz. [Unicode standart](https://www.unicode.org/versions/latest/), Bölüm 5,22 ve 3,9.
+Hiçbir şekilde [`Encoding.UTF8.GetString`](xref:System.Text.UTF8Encoding.GetString%2A) hatalı oluşturulmuş örnekler döndürmeyen API 'ler `string` . `Encoding.GetString` ve `Encoding.GetBytes` yöntemleri, girişte hatalı biçimlendirilmiş dizileri tespit ediyor ve çıkış oluştururken char acter değiştirme işlemi gerçekleştirmiyor. Örneğin, [`Encoding.ASCII.GetString(byte[])`](xref:System.Text.ASCIIEncoding.GetString%2A) GIRIŞTE ASCII olmayan bir bayt görürseniz (U + 0000.. U + 007F aralığı dışında), döndürülen örneğe bir '? ' ekler `string` . [`Encoding.UTF8.GetString(byte[])`](xref:System.Text.UTF8Encoding.GetString%2A) Hatalı biçimlendirilmiş UTF-8 dizilerini `U+FFFD REPLACEMENT CHARACTER ('�')` döndürülen örnekteki ile değiştirir `string` . Daha fazla bilgi için bkz. [Unicode standart](https://www.unicode.org/versions/latest/), Bölüm 5,22 ve 3,9.
 
-Yerleşik `Encoding` sınıflar, hatalı biçimlendirilmiş diziler görüldüğünde karakter değişimi gerçekleştirmek yerine bir özel durum oluşturmak için de yapılandırılabilir. Bu yaklaşım, genellikle karakter değiştirme 'nin kabul edilebilir olabileceği güvenliğe duyarlı uygulamalarda kullanılır.
+Yerleşik `Encoding` sınıflar, char Hatalı biçimlendirilmiş diziler görüldüğünde, acter değiştirme yerine özel bir durum oluşturmak için de yapılandırılabilir. Bu yaklaşım, genellikle char acter değiştirme 'nin kabul edilebilir olabileceği güvenlik duyarlı uygulamalarda kullanılır.
 
 ```csharp
 byte[] utf8Bytes = ReadFromNetwork();
@@ -382,7 +382,7 @@ UTF8Encoding encoding = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false,
 string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is ill-formed
 ```
 
-Yerleşik sınıfların nasıl kullanılacağı hakkında daha fazla bilgi için `Encoding` bkz. [.net 'te karakter kodlama sınıfları kullanma](character-encoding.md).
+Yerleşik sınıfların nasıl kullanılacağı hakkında daha fazla bilgi için `Encoding` bkz. [ char .net 'te acter kodlama sınıfları kullanma](character-encoding.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

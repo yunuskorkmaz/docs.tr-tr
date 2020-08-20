@@ -2,12 +2,12 @@
 title: Uygulama yayımlama
 description: .NET Core uygulaması yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platformlar arası uygulamalar yayımlayabilir. Bir uygulamayı, kendi içinde veya Framework 'e bağımlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde etkiler.
 ms.date: 04/01/2020
-ms.openlocfilehash: 57889271ce2f210c0838a54bb793aeb3be5c7272
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: f343e184a7ccca66aaf94533b2d0262478f873f4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608399"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656592"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayımlamaya genel bakış
 
@@ -131,8 +131,11 @@ Uygulamanız .NET Core çalışma zamanı ve tüm uygulama bağımlılıkların�
   > [!TIP]
   > .NET Core [*Genelleştirme sabit modunu*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)kullanarak Linux sistemlerinde dağıtımınızın boyutunu YAKLAŞıK 28 MB azaltabilirsiniz. Bu, uygulamanızı [sabit kültür](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)gibi tüm kültürleri işleyecek şekilde zorlar.
 
+  > [!TIP]
+  > Dağıtımınızın boyutunu daha fazla azalyabilecek bir [Önizleme kırpma özelliği](trim-self-contained.md) vardır.
+
 - **.NET Core sürümünü güncelleştirmek daha zordur**\
-.NET Core çalışma zamanı (uygulamanızla birlikte dağıtılır) yalnızca uygulamanızın yeni bir sürümü serbest bırakılarak yükseltilebilir. .NET Core çalışma zamanına yönelik güvenlik düzeltme ekleri için uygulamanızın güncelleştirilmiş bir sürümünü sağlamaktan sorumlu olursunuz.
+.NET Core çalışma zamanı (uygulamanızla birlikte dağıtılır) yalnızca uygulamanızın yeni bir sürümü serbest bırakılarak yükseltilebilir. Ancak, .NET Core, uygulamanızın üzerinde çalıştığı makinedeki çerçeve kitaplığı için gereken kritik güvenlik düzeltme eklerini güncelleştirir. Bu güvenlik düzeltme eki senaryosuna uçtan uca doğrulamadan sorumlusunuz.
 
 ### <a name="examples"></a>Örnekler
 

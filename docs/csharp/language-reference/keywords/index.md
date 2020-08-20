@@ -8,59 +8,60 @@ helpviewer_keywords:
 - C# language, keywords
 - Visual C#, keywords
 - '@ keyword'
+ms.custom: updateeachrelease
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 251046a8bd825a90d817965f9f747d08d4492197
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 51e3802ba7b78dab4c3f96365c51af83098c05c7
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102040"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656130"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 
-Anahtar kelimeler, derleyiciye özel anlamları olan önceden tanımlanmış, ayrılmış tanımlayıcılardır. Önek olarak içermedikçe `@` programınızda tanımlayıcı olarak kullanılamazlar. Örneğin, `@if` geçerli bir tanımlayıcıdır, ancak `if` bir anahtar `if` kelime olduğu için değildir.  
+Anahtar sözcükler, derleyiciye özel anlamlara sahip olan önceden tanımlanmış, ayrılmış tanımlayıcılardır. Bunlar, ön ek olarak içermedikleri sürece programınızda tanımlayıcı olarak kullanılamaz `@` . Örneğin, `@if` geçerli bir tanımlayıcıdır, ancak `if` bunun nedeni `if` bir anahtar sözcüktür.  
   
- Bu konudaki ilk tabloda, C# programının herhangi bir bölümünde ayrılmış tanımlayıcılar olan anahtar kelimeler listelenir. Bu konudaki ikinci tabloda C#'daki bağlamsal anahtar kelimeler listelenir. Bağlamsal anahtar kelimeler yalnızca sınırlı bir program bağlamında özel bir anlama sahiptir ve bu bağlamın dışında tanımlayıcı olarak kullanılabilir. Genellikle, C# diline yeni anahtar kelimeler eklendikçe, önceki sürümlerde yazılan programların kırılmasını önlemek için bağlamsal anahtar kelime olarak eklenir.  
+ Bu konudaki ilk tablo, bir C# programının herhangi bir bölümünde ayrılmış tanımlayıcılar olan anahtar sözcükleri listeler. Bu konudaki ikinci tablo, C# ' deki bağlamsal anahtar sözcükleri listeler. Bağlamsal anahtar sözcüklerde yalnızca sınırlı program bağlamında özel anlamı vardır ve bu bağlamın dışında tanımlayıcılar olarak kullanılabilir. Genellikle, C# diline yeni anahtar sözcükler eklendikçe, önceki sürümlerde yazılmış programları bozmamak için bağlamsal anahtar sözcükler olarak eklenirler.  
   
 |||||  
 |---|---|---|---|  
-|[Soyut](abstract.md)|[Olarak](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](../builtin-types/bool.md)|  
-|[break](break.md)|[Bayt](../builtin-types/integral-numeric-types.md)|[Durumda](switch.md)|[Yakalamak](try-catch.md)|  
-|[char](../builtin-types/char.md)|[Kontrol](checked.md)|[sınıf](class.md)|[const](const.md)|  
-|[continue](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[temsilci](../builtin-types/reference-types.md)|  
-|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[Enum](../builtin-types/enum.md)|  
-|[event](event.md)|[explicit](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[False](../builtin-types/bool.md)|  
-|[Sonunda](try-finally.md)|[Sabit](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
-|[Foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](../operators/user-defined-conversion-operators.md)|  
-|[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[arabirim](interface.md)|[internal](internal.md)|
-|[is](is.md)|[Kilit](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[ad alanı](namespace.md)|
-|[Yeni](../operators/new-operator.md)|[null](null.md)|[Nesne](../builtin-types/reference-types.md)|[operator](../operators/operator-overloading.md)|
-|[çıkış](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
-|[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
-|[return](return.md)|[Sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
-[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[Dize](../builtin-types/reference-types.md)|
-|[Yapı](../builtin-types/struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[True](../builtin-types/bool.md)|[Deneyin](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[Uint](../builtin-types/integral-numeric-types.md)|
-|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[Güvenli olmayan](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
+|[Soyut](abstract.md)|[gerektiği](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](../builtin-types/bool.md)|  
+|[break](break.md)|[bayt](../builtin-types/integral-numeric-types.md)|[harflerini](switch.md)|[yakalaya](try-catch.md)|  
+|[char](../builtin-types/char.md)|[edildikten](checked.md)|[sınıfı](class.md)|[const](const.md)|  
+|[devam](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[varsayılanını](default.md)|[ğini](../builtin-types/reference-types.md)|  
+|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[yardımının](../builtin-types/enum.md)|  
+|[olay](event.md)|[anlaşılır](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[yanlýþ](../builtin-types/bool.md)|  
+|[finally](try-finally.md)|[Düzenle](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[:](for.md)|  
+|[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[indirgen](../operators/user-defined-conversion-operators.md)|  
+|['ndaki](in.md)|[int](../builtin-types/integral-numeric-types.md)|[arayüz](interface.md)|[internal](internal.md)|
+|[eklenir](is.md)|[ine](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[uzayına](namespace.md)|
+|[Yeni](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[işlecinde](../operators/operator-overloading.md)|
+|[dışı](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
+|[protected](protected.md)|[genel](public.md)|[readonly](readonly.md)|[ref](ref.md)|
+|[return](return.md)|[SByte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
+[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
+|[sýný](../builtin-types/struct.md)|[değiştirebilirsiniz](switch.md)|[this](this.md)|[throw](throw.md)|
+|[değeri](../builtin-types/bool.md)|[almaya](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
+|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[olmayabilecek](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
 |[kullanma](using.md)|[virtual](virtual.md)|[void](../builtin-types/void.md)|[volatile](volatile.md)|
 |[while](while.md)|
 
-## <a name="contextual-keywords"></a>Bağlamsal anahtar kelimeler
+## <a name="contextual-keywords"></a>Bağlamsal anahtar sözcükler
 
- İçeriksel anahtar kelime, kodda belirli bir anlam sağlamak için kullanılır, ancak C#'da ayrılmış bir sözcük değildir. Bazı bağlamsal anahtar kelimeler, gibi `partial` ve, `where`iki veya daha fazla bağlamlarda özel anlamları vardır.  
+ Bağlam anahtar sözcüğü kodda belirli bir anlamı sağlamak için kullanılır, ancak C# dilinde ayrılmış bir sözcük değildir. Ve gibi bazı bağlamsal anahtar sözcükler `partial` `where` , iki veya daha fazla bağlamda özel anlamlara sahiptir.  
   
 ||||  
 |---|---|---|  
-|[add](add.md)|[takma ad](extern-alias.md)|[ascending](ascending.md)|
+|[add](add.md)|[ek](extern-alias.md)|[ascending](ascending.md)|
 |[async](async.md)|[await](../operators/await.md)|[by](by.md)|
-|[descending](descending.md)|[Dinamik](../builtin-types/reference-types.md)|[equals](equals.md)|
-|[Kaynak](from-clause.md)|[get](get.md)|[Küresel](../operators/namespace-alias-qualifier.md)|
-|[grup](group-clause.md)|[into](into.md)|[Katılın](join-clause.md)|
-|[Izin](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
-|[Orderby](orderby-clause.md)|[kısmi (tür)](partial-type.md)|[kısmi (yöntem)](partial-method.md)|
-|[remove](remove.md)|[Seçin](select-clause.md)|[Ayarlamak](set.md)|
-|[yönetilmemiş (genel tür kısıtlaması)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
-|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[where (sorgu yan tümcesi)](where-clause.md)|
+|[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[eşittir](equals.md)|
+|[Kaynak](from-clause.md)|[get](get.md)|[Genel](../operators/namespace-alias-qualifier.md)|
+|[grup](group-clause.md)|[birleştirin](into.md)|[ayrılma](join-clause.md)|
+|[atalım](let-clause.md)|[nameof](../operators/nameof.md)|[dayanır](on.md)|
+|[OrderBy](orderby-clause.md)|[Kısmi (tür)](partial-type.md)|[partial (Yöntem)](partial-method.md)|
+|[temizlenmesine](remove.md)|[seçin](select-clause.md)|[kurmak](set.md)|
+|[yönetilmeyen (genel tür kısıtlaması)](where-generic-type-constraint.md)|[deeri](value.md)|[l](var.md)|
+|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[WHERE (sorgu yan tümcesi)](where-clause.md)|
 |[yield](yield.md)| | |
   
 ## <a name="see-also"></a>Ayrıca bkz.

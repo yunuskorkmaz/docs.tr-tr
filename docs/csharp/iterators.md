@@ -4,12 +4,12 @@ description: Yerleşik C# yineleyicilerini kullanmayı ve kendi özel Yineleyici
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: c2a1dfe38b6a65e382e140541c71e94bb0fc76aa
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: ee72331cb85ba1a03d48e2f58526ad432c7fe6d4
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062489"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656104"
 ---
 # <a name="iterators"></a>Yineleyiciler
 
@@ -24,7 +24,7 @@ Ayrıca, bir yineleyici üreten Yöntemler (Bu sınıfın öğeleri için bir ka
 
 C# dili, bu senaryoların her ikisi için de özellikler sağlar. Bu makale, bu özelliklere genel bir bakış sağlar.
 
-Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çalıştırabilir ve ilerleme durumunu görebilirsiniz. Ayrıca, bu konu için [Tamamlanan örneği görüntüleyebilir veya indirebilirsiniz](https://github.com/dotnet/samples/blob/master/csharp/iterators) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide birden çok adım vardır. Her adımdan sonra, uygulamayı çalıştırabilir ve ilerleme durumunu görebilirsiniz. Ayrıca, bu konu için [Tamamlanan örneği görüntüleyebilir veya indirebilirsiniz](https://github.com/dotnet/samples/blob/master/csharp/iterators) . İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="iterating-with-foreach"></a>Foreach ile yineleme
 
@@ -167,7 +167,7 @@ private IEnumerable<int> IteratorMethod()
 
 Yukarıdaki yöntemlere bakın. İlki, `return` boş bir koleksiyon ya da ikinci yöntem tarafından oluşturulan Yineleyici döndürmek için standart ifadeyi kullanır. İkinci yöntem, `yield return` istenen diziyi oluşturmak için ifadesini kullanır.
 
-## <a name="deeper-dive-into-foreach"></a>Daha ayrıntılı bilgi`foreach`
+## <a name="deeper-dive-into-foreach"></a>Daha ayrıntılı bilgi `foreach`
 
 `foreach`Deyimi, `IEnumerable<T>` `IEnumerator<T>` bir koleksiyonun tüm öğelerinde yinelemek için ve arabirimlerini kullanan standart bir IOM olarak genişletilir. Ayrıca, geliştiricilerin kaynakları düzgün bir şekilde yönetmediğinden yaptığı hataları da en aza indirir.
 

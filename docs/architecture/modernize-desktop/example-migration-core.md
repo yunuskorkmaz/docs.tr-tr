@@ -2,12 +2,12 @@
 title: .NET Core 3.1’e geçiş örneği
 description: .NET Framework Hedefleme örnek uygulamaların .NET Core 3,1 ' ye nasıl geçirileceği gösteriliyor.
 ms.date: 05/12/2020
-ms.openlocfilehash: 5e8b1219cf4bd89ada5b71a60ef27eaabb94997c
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6a0311e9aaeb25ac39f3394d3a62e17046fe03d8
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144272"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656768"
 ---
 # <a name="example-of-migrating-to-net-core-31"></a>.NET Core 3.1’e geçiş örneği
 
@@ -31,11 +31,11 @@ Geçiş işlemi dört sıralı adımdan oluşur:
 
 ### <a name="preparation"></a>Hazırlık
 
-#### <a name="migrate-packagesconfig-file"></a>Packages. config dosyasını geçirme
+#### <a name="migrate-packagesconfig-file"></a>packages.config dosyayı geçir
 
-.NET Framework bir uygulamada, dış paketlere yapılan tüm başvurular *Packages. config* dosyasında belirtilir. .NET Core 'da, artık *Packages. config* dosyasını kullanma gereksinimi yoktur. Bunun yerine, uygulamanızın NuGet paketlerini belirtmek için proje dosyasının içindeki [Packagereference](../../core/project-sdk/msbuild-props.md#packagereference) özelliğini kullanın.
+.NET Framework bir uygulamada, dış paketlere yapılan tüm başvurular *packages.config* dosyasında belirtilir. .NET Core 'da artık *packages.config* dosyasını kullanma gereksinimi yoktur. Bunun yerine, uygulamanızın NuGet paketlerini belirtmek için proje dosyasının içindeki [Packagereference](../../core/project-sdk/msbuild-props.md#packagereference) özelliğini kullanın.
 
-Bu nedenle, bir biçimden diğerine geçiş yapmanız gerekir. Bu güncelleştirmeyi, *Packages. config* dosyasında bulunan bağımlılıkları alarak ve bunları biçimiyle proje dosyasına geçirerek el ile yapabilirsiniz `PackageReference` . Ya da, Visual Studio 'Nun bu işi sizin yerinize yapmasına izin verebilirsiniz: *Packages. config* dosyasına sağ tıklayıp **Packages. config ' i packagereference** ' a Geçir seçeneğini belirleyin.
+Bu nedenle, bir biçimden diğerine geçiş yapmanız gerekir. *packages.config* dosyasında bulunan bağımlılıkları alarak ve bunları biçimiyle proje dosyasına geçirerek güncelleştirmeyi el ile yapabilirsiniz `PackageReference` . Ya da, Visual Studio 'Nun işi sizin yerinize yapmasına izin verebilirsiniz: *packages.config* dosyasına sağ tıklayıp **packages.config Packagereference 'a geçir** seçeneğini belirleyin.
 
 #### <a name="verify-every-dependency-compatibility-in-net-core"></a>.NET Core 'da her bağımlılık uyumluluğunu doğrulama
 
@@ -85,7 +85,7 @@ Gömülü kaynaklar otomatik olarak dahil edilir ancak kaynaklar değildir, bu n
 
 #### <a name="package-references"></a>Paket başvuruları
 
-**Packages. config 'ı PackageReference seçeneğine geçir** seçeneğiyle, dış paket başvurularınızı daha önce belirtildiği gibi yeni biçime kolayca taşıyabilirsiniz.
+packages.config, **PackageReference 'A geçir** seçeneğiyle, dış paket başvurularınızı daha önce belirtildiği gibi yeni biçime kolayca taşıyabilirsiniz.
 
 #### <a name="update-package-references"></a>Paket başvurularını Güncelleştir
 
@@ -129,7 +129,7 @@ Uygulamanızın hatasız olarak oluşturulmasını sağlayarak, her işlevselli�
 
 Bu son adımda, uygulamanızın karmaşıklığına ve kullanmakta olduğunuz bağımlılıklara ve API 'Lere bağlı olarak çeşitli farklı sorunlar bulabilirsiniz.
 
-Örneğin, yapılandırma dosyalarını (*app. config*) kullanıyorsanız, çalışma zamanında yapılandırma bölümleri gibi bazı hatalar bulabilirsiniz. `Microsoft.Extensions.Configuration`NuGet paketinin kullanılması bu hatayı düzeltir.
+Örneğin, yapılandırma dosyalarını (*app.config*) kullanıyorsanız, çalışma zamanında yapılandırma bölümlerinin olmadığı gibi bazı hatalar bulabilirsiniz. `Microsoft.Extensions.Configuration`NuGet paketinin kullanılması bu hatayı düzeltir.
 
 Hatalar için bir diğer neden, `BeginInvoke` `EndInvoke` .NET Core üzerinde desteklenmediğinden ve yöntemlerinin kullanılmasının bir nedenidir. .NET Core üzerinde mevcut olmayan bir uzaktan Iletişim bağımlılığı olduğundan, .NET Core üzerinde desteklenmez. Bu sorunu gidermek için `await` anahtar sözcüğünü (kullanılabilir olduğunda) veya yöntemini kullanmayı deneyin <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> .
 
@@ -195,7 +195,7 @@ Hizmet konumlandırıldıktan sonra araç, hizmet tarafından uygulanan API söz
 Üç adet otomatik olarak oluşturulan dosya görmeniz gerekir:
 
 1. *Başlarken*: WCF ile ilgili bazı bilgiler sağlamak için GitHub bağlantısı.
-2. *ConnectedService. JSON*: hizmete bağlanmak için yapılandırma parametreleri.
+2. *ConnectedService.js*: hizmete bağlanmak için yapılandırma parametreleri.
 3. *Reference.cs*: gerçek WCF istemci kodu.
 
 ![Otomatik olarak oluşturulan üç dosyayı içeren Çözüm Gezgini penceresinin ekran görüntüsü](./media/example-migration-core/autogenerated-files.png)
@@ -208,7 +208,7 @@ Projeyi yeniden derleyip çalıştırırsanız, ürün görüntülerini görmezs
 string image_name = Environment.CurrentDirectory + "\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
 ```
 
--
+şöyle değiştirin:
 
 ```csharp
 string image_name = Environment.CurrentDirectory + "\\..\\..\\..\\Assets\\Images\\Catalog\\" + catalogItems.Picturefilename;
@@ -233,7 +233,7 @@ Bu durumda, *. csproj* dosyasının tüm içeriğini silin ve aşağıdaki kodla
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
         <TargetFramework>netcoreapp3.1</TargetFramework>
-        <UseWPF>true</UseWPF>
+        <UseWpf>true</UseWpf>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
 </Project>

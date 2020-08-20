@@ -2,18 +2,18 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: 64a68c97e01bbf962616b31210889eb23d3734f1
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 45bf8504fd882286041794d27ecb56464fc8d13d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608290"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656671"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Ad
 
 `dotnet publish` -Uygulamayı ve bağımlılıklarını barındırma sistemine dağıtım için bir klasöre yayımlar.
 
@@ -53,7 +53,7 @@ dotnet publish -h|--help
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
 
-Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örneğin:
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -159,7 +159,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 - **`-p:PublishTrimmed=true`**
 
-  Bağımsız bir yürütülebilir dosya yayımlarken uygulamanın dağıtım boyutunu azaltmak için kullanılmayan kitaplıkları kırpar. Daha fazla bilgi için bkz. [kendi kendine kapsanan dağıtımları ve yürütülebilir dosyaları kırpma](../deploying/trim-self-contained.md). .NET Core 3,0 SDK 'dan beri kullanılabilir.
+  Bağımsız bir yürütülebilir dosya yayımlarken uygulamanın dağıtım boyutunu azaltmak için kullanılmayan kitaplıkları kırpar. Daha fazla bilgi için bkz. [kendi kendine kapsanan dağıtımları ve yürütülebilir dosyaları kırpma](../deploying/trim-self-contained.md). Bir önizleme özelliği olarak .NET Core 3,0 SDK sürümünden itibaren kullanılabilir.
 
   Bu seçeneği, komut satırı yerine bir yayımlama profilinde belirtmenizi öneririz. Daha fazla bilgi için bkz. [MSBuild](#msbuild).
 
@@ -234,7 +234,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [.NET Core uygulama yayımlamaya genel bakış](../deploying/index.md)
 - [.NET Core CLI .NET Core uygulamaları yayımlayın](../deploying/deploy-with-cli.md)
 - [Hedef çerçeveler](../../standard/frameworks.md)
-- [Çalışma zamanı tanımlayıcı (RID) kataloğu](../rid-catalog.md)
+- [Çalışma Zamanı Tanımlayıcısı (RID) kataloğu](../rid-catalog.md)
 - [MacOS Catalina Notarle çalışma](../install/macos-notarization-issues.md)
 - [Yayımlanan bir uygulamanın dizin yapısı](/aspnet/core/hosting/directory-structure)
 - [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference)
