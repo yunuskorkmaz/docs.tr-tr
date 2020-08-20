@@ -4,16 +4,16 @@ description: .NET Core 'da, DotNet test ve xUnit kullanarak örnek Visual Basic 
 author: billwagner
 ms.author: wiwagn
 ms.date: 05/18/2020
-ms.openlocfilehash: d87550d692e0b7f3bfee1633bd00cbf501cc2e67
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: d384bf08f0b6031a519a8430c876eafc05d03a2e
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84502762"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656429"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>DotNet test ve xUnit kullanarak .NET Core kitaplıkları Visual Basic birim testi
 
-Bu öğreticide, birim testi projesi ve kitaplık projesi içeren bir çözüm oluşturma gösterilmektedir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izlemek için [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu öğreticide, birim testi projesi ve kitaplık projesi içeren bir çözüm oluşturma gösterilmektedir. Önceden oluşturulmuş bir çözümü kullanarak öğreticiyi izlemek için [örnek kodu görüntüleyin veya indirin](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
 ## <a name="create-the-solution"></a>Çözümü oluşturma
 
@@ -128,7 +128,7 @@ Test odaklı geliştirme (TDD) içinde popüler bir yaklaşım, hedef kodu uygul
 *Primeservice. Tests* projesini güncelleştirin:
 
 * *Primeservice. Tests/UnitTest1. vb*öğesini silin.
-* Bir *Primeservice. Tests/PrimeService_IsPrimeShould. vb* dosyası oluşturun.
+* Bir *Primeservice. Tests/PrimeService_IsPrimeShould. vb*  dosyası oluşturun.
 * *PrimeService_IsPrimeShould. vb* içindeki kodu aşağıdaki kodla değiştirin:
 
 ```vb
@@ -154,7 +154,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-`[Fact]`Özniteliği, Test Çalıştırıcısı tarafından çalıştırılan bir test yöntemi bildirir. *Primeservice. Tests* klasöründen çalıştırın `dotnet test` . [DotNet test](../tools/dotnet-test.md) komutu her iki projeyi de oluşturur ve testleri çalıştırır. XUnit Test Çalıştırıcısı, testleri çalıştırmak için program giriş noktasını içerir. `dotnet test`birim test projesini kullanarak Test Çalıştırıcısı başlatır.
+`[Fact]`Özniteliği, Test Çalıştırıcısı tarafından çalıştırılan bir test yöntemi bildirir. *Primeservice. Tests* klasöründen çalıştırın `dotnet test` . [DotNet test](../tools/dotnet-test.md) komutu her iki projeyi de oluşturur ve testleri çalıştırır. XUnit Test Çalıştırıcısı, testleri çalıştırmak için program giriş noktasını içerir. `dotnet test` birim test projesini kullanarak Test Çalıştırıcısı başlatır.
 
 Test başarısız oldu, çünkü `IsPrime` uygulanmadı. TDD yaklaşımını kullanarak, bu testin başarılı olması için yalnızca yeterli kodu yazın. `IsPrime`Aşağıdaki kodla güncelleştirin:
 
@@ -181,8 +181,8 @@ Assert.False(result, "1 should not be prime")
 
 Yalnızca bir parametre değiştiğinde test kodu kopyalama, kod yineleme ve test blobunun sonuçlarını değiştirir. Aşağıdaki xUnit öznitelikleri benzer testlerin bir paketini yazmayı etkinleştirir:
 
-- `[Theory]`aynı kodu çalıştıran, ancak farklı giriş bağımsız değişkenlerine sahip olan testlerin paketini temsil eder.
-- `[InlineData]`öznitelik, bu girişlerin değerlerini belirtir.
+- `[Theory]` aynı kodu çalıştıran, ancak farklı giriş bağımsız değişkenlerine sahip olan testlerin paketini temsil eder.
+- `[InlineData]` öznitelik, bu girişlerin değerlerini belirtir.
 
 Yeni test oluşturmak yerine, tek bir teorisi oluşturmak için önceki xUnit özniteliklerini uygulayın. Aşağıdaki kodu değiştirin:
 

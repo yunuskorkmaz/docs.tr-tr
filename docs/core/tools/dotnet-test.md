@@ -2,18 +2,18 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: e5c0ec3423cf98895b49596633c81861bbcf4878
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557847"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656761"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Ad
 
 `dotnet test` -Birim testlerini yürütmek için kullanılan .NET test sürücüsü.
 
@@ -243,13 +243,13 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Adı</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Adı</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Ad</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:
 
-| Operatör | İşlev        |
+| İşleç | İşlev        |
 | :------: | --------------- |
 | `=`      | Tam eşleşme     |
 | `!=`     | Tam eşleşme yok |
@@ -262,7 +262,7 @@ Bir ifadesi `<operator>` , otomatik olarak on özelliği olarak kabul `contains`
 
 İfadeler koşullu işleçlerle birleştirilebilecek:
 
-| Operatör            | İşlev |
+| İşleç            | İşlev |
 | ------------------- | -------- |
 | <code>&#124;</code> | VEYA       |
 | `&`                 | AND      |

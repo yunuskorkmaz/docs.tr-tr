@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: b770543eb09ed2edc1a028561e0cf41e74fab1cc
-ms.sourcegitcommit: 2543a78be6e246aa010a01decf58889de53d1636
+ms.openlocfilehash: a861ee38963f77bffe23bbca19a6f895289e372d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86444501"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656820"
 ---
 # <a name="serialization-and-deserialization"></a>Seri Hale Getirme ve Seri Durumdan Çıkarma
 Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içerir, <xref:System.Runtime.Serialization.DataContractSerializer> . <xref:System.Runtime.Serialization.DataContractSerializer>.NET Framework nesneleri ve XML arasında her iki yönde çevirir. Bu konuda, serileştiricinin nasıl çalıştığı açıklanmaktadır.  
@@ -20,9 +20,9 @@ Windows Communication Foundation (WCF) yeni bir serileştirme altyapısı içeri
   
  XML serisi kaldırılırken, serileştirici <xref:System.Xml.XmlReader> ve sınıflarını kullanır <xref:System.Xml.XmlWriter> . Ayrıca, <xref:System.Xml.XmlDictionaryReader> <xref:System.Xml.XmlDictionaryWriter> WCF ikili xml biçimi kullanılırken olduğu gibi bazı durumlarda iyileştirilmiş XML üretmesine olanak tanımak için ve sınıflarını destekler.  
   
- WCF Ayrıca bir yardımcı seri hale getirici içerir <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>Şunları yapın:
+ WCF Ayrıca bir yardımcı seri hale getirici içerir <xref:System.Runtime.Serialization.NetDataContractSerializer> . <xref:System.Runtime.Serialization.NetDataContractSerializer>:
 
-* Güvenli ***değil*** . Daha fazla bilgi için, bkz. [BinaryFormatter Güvenlik Kılavuzu](/dotnet/standard/serialization/binaryformatter-security-guide).
+* Güvenli ***değil*** . Daha fazla bilgi için, bkz. [BinaryFormatter Güvenlik Kılavuzu](../../../standard/serialization/binaryformatter-security-guide.md).
 * , <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Ve <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> serileştiricilerle benzerdir çünkü aynı zamanda .NET Framework tür adlarını serileştirilmiş verilerin bir parçası olarak yayar.
 * Aynı türler serileştirilmede paylaşıldığında ve seri durumdan çıkarma sona erdiğinde kullanılır.
 

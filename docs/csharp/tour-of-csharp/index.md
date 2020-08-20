@@ -2,12 +2,12 @@
 title: C#-C# Kılavuzu turu
 description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin.
 ms.date: 08/06/2020
-ms.openlocfilehash: 42c4ff59a520a1b99bbb2fb01d79d8902e16bdd5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063555"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656234"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# dilinin turu
 
@@ -15,7 +15,7 @@ C# ("bkz. diyez") modern, nesne odaklı ve tür açısından güvenli bir progra
 
 C#, nesne odaklı, ***bileşen odaklı*** bir programlama dilidir. C#, bu kavramları doğrudan desteklemek için dil yapıları sağlar ve c#, yazılım bileşenlerinin oluşturulması ve kullanılması için doğal bir dil yapar. Başlangıç noktası nedeniyle, C# yeni iş yüklerini destekleyecek ve yazılım tasarımı uygulamalarını gelişren özellikler ekledi.
 
-Birçok C# özelliği sağlam ve dayanıklı uygulamalar oluşturmaya yardımcı olur. [***Çöp toplama***](../../standard/garbage-collection/index.md) , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır. [***Özel durum işleme***](../programming-guide/exceptions/index.md) , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar. [***Lambda ifadeleri***](../programming-guide/statements-expressions-operators/lambda-expressions.md) fonksiyonel programlama tekniklerini destekler. [***Sorgu sözdizimi***](../linq/index.md) , herhangi bir kaynaktaki verilerle çalışmak için ortak bir model oluşturur. [***Zaman uyumsuz işlemler***](../programming-guide/concepts/async/index.md) için dil desteği, dağıtılmış sistemler oluşturmak için söz dizimi sağlar. [***Model eşleştirme***](..//pattern-matching.md) , modern dağıtılan sistemlerdeki algoritmalardan kolayca veri ayırmak için söz dizimi sağlar. C# Birleşik bir [***tür sistemine***](../programming-guide/types/index.md)sahiptir. Ve gibi temel türler dahil olmak üzere tüm C# `int` türleri `double` , tek bir kök türünden devralınır `object` . Tüm türler ortak işlemler kümesini paylaşır. Herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı başvuru türlerini hem de değer türlerini destekler. C#, basit yapıların nesnelerin dinamik ayrılmasına ve satır içi depolamaya olanak tanır.
+Birçok C# özelliği sağlam ve dayanıklı uygulamalar oluşturmaya yardımcı olur. [***Çöp toplama***](../../standard/garbage-collection/index.md) , erişilemeyen kullanılmayan nesneler tarafından kullanılan belleği otomatik olarak geri kazanır. [***Özel durum işleme***](../programming-guide/exceptions/index.md) , hata algılama ve kurtarmaya yönelik yapılandırılmış ve genişletilebilir bir yaklaşım sağlar. [***Lambda ifadeleri***](../language-reference/operators/lambda-expressions.md) fonksiyonel programlama tekniklerini destekler. [***Sorgu sözdizimi***](../linq/index.md) , herhangi bir kaynaktaki verilerle çalışmak için ortak bir model oluşturur. [***Zaman uyumsuz işlemler***](../programming-guide/concepts/async/index.md) için dil desteği, dağıtılmış sistemler oluşturmak için söz dizimi sağlar. [***Model eşleştirme***](..//pattern-matching.md) , modern dağıtılan sistemlerdeki algoritmalardan kolayca veri ayırmak için söz dizimi sağlar. C# Birleşik bir [***tür sistemine***](../programming-guide/types/index.md)sahiptir. Ve gibi temel türler dahil olmak üzere tüm C# `int` türleri `double` , tek bir kök türünden devralınır `object` . Tüm türler ortak işlemler kümesini paylaşır. Herhangi bir türdeki değerler tutarlı bir şekilde depolanabilir, taşınır ve çalıştırılabilir. Ayrıca, C# hem Kullanıcı tanımlı başvuru türlerini hem de değer türlerini destekler. C#, basit yapıların nesnelerin dinamik ayrılmasına ve satır içi depolamaya olanak tanır.
 
 C#, programları ve kitaplıkları zamanla uyumlu bir şekilde gelişebilmesini sağlamak için ***sürüm oluşturmayı*** vurgular. C# tasarımının sürüm oluşturma konuları tarafından doğrudan etkilenmiş olan yönleri `virtual` , ayrı ve `override` değiştiriciler, yöntem aşırı yükleme çözümlemesi kurallarını ve açık arabirim üyesi bildirimleri için desteği içerir.
 
@@ -43,31 +43,31 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
 
 - [Değer türleri](../language-reference/builtin-types/value-types.md)
   - [Basit türler](../language-reference/builtin-types/value-types.md#built-in-value-types)
-    - [İmzalanan integral](../language-reference/builtin-types/integral-numeric-types.md): `sbyte` , `short` , `int` ,`long`
-    - [İşaretsiz integral](../language-reference/builtin-types/integral-numeric-types.md): `byte` , `ushort` , `uint` ,`ulong`
-    - [Unicode karakterler](/dotnet/standard/base-types/character-encoding-introduction): `char` bir UTF-16 kod birimini temsil eden
-    - [IEEE ikili kayan nokta](../language-reference/builtin-types/floating-point-numeric-types.md): `float` ,`double`
-    - [Yüksek duyarlıklı ondalık kayan nokta](../language-reference/builtin-types/floating-point-numeric-types.md):`decimal`
+    - [İmzalanan integral](../language-reference/builtin-types/integral-numeric-types.md): `sbyte` , `short` , `int` , `long`
+    - [İşaretsiz integral](../language-reference/builtin-types/integral-numeric-types.md): `byte` , `ushort` , `uint` , `ulong`
+    - [Unicode karakterler](../../standard/base-types/character-encoding-introduction.md): `char` bir UTF-16 kod birimini temsil eden
+    - [IEEE ikili kayan nokta](../language-reference/builtin-types/floating-point-numeric-types.md): `float` , `double`
+    - [Yüksek duyarlıklı ondalık kayan nokta](../language-reference/builtin-types/floating-point-numeric-types.md): `decimal`
     - Boolean `bool` değerleri temsil eden Boole değeri — ya da olan değerler `true``false`
   - [Sabit listesi türleri](../language-reference/builtin-types/enum.md)
     - Formun Kullanıcı tanımlı türleri `enum E {...}` . Bir `enum` tür, adlandırılmış sabitleri olan ayrı bir türdür. Her `enum` türün, sekiz integral türünden biri olması gereken temel bir türü vardır. Bir türün değer kümesi, `enum` temel alınan türün değerleri kümesiyle aynıdır.
   - [Yapı türleri](../language-reference/builtin-types/struct.md)
-    - Formun Kullanıcı tanımlı türleri`struct S {...}`
+    - Formun Kullanıcı tanımlı türleri `struct S {...}`
   - [Boş değer atanabilen değer türleri](../language-reference/builtin-types/nullable-value-types.md)
     - Bir değere sahip diğer tüm değer türlerinin uzantıları `null`
-  - [Demet değer türleri](../tuples.md)
-    - Formun Kullanıcı tanımlı türleri`(T1, T2, ...)`
+  - [Demet değer türleri](../language-reference/builtin-types/value-tuples.md)
+    - Formun Kullanıcı tanımlı türleri `(T1, T2, ...)`
 - [Başvuru türleri](../language-reference/keywords/reference-types.md)
   - [Sınıf türleri](../language-reference/keywords/class.md)
-    - Diğer tüm türlerin Ultimate temel sınıfı:`object`
-    - [Unicode dizeleri](/dotnet/standard/base-types/character-encoding-introduction): `string` bir UTF-16 kod birimi dizisini temsil eden
-    - Formun Kullanıcı tanımlı türleri`class C {...}`
+    - Diğer tüm türlerin Ultimate temel sınıfı: `object`
+    - [Unicode dizeleri](../../standard/base-types/character-encoding-introduction.md): `string` bir UTF-16 kod birimi dizisini temsil eden
+    - Formun Kullanıcı tanımlı türleri `class C {...}`
   - [Arabirim türleri](../language-reference/keywords/interface.md)
-    - Formun Kullanıcı tanımlı türleri`interface I {...}`
+    - Formun Kullanıcı tanımlı türleri `interface I {...}`
   - [Dizi türleri](../programming-guide/arrays/index.md)
-    - Tek ve çok boyutlu ve pürüzlü, örneğin,, `int[]` `int[,]` ve`int[][]`
-  - [Temsilci türleri](../language-reference/keywords/delegate.md)
-    - Formun Kullanıcı tanımlı türleri`delegate int D(...)`
+    - Tek ve çok boyutlu ve pürüzlü, örneğin,, `int[]` `int[,]` ve `int[][]`
+  - [Temsilci türleri](../language-reference/builtin-types/reference-types.md#the-delegate-type)
+    - Formun Kullanıcı tanımlı türleri `delegate int D(...)`
 
 C# programları yeni türler oluşturmak için *tür bildirimleri* kullanır. Tür bildiriminde yeni türün adı ve üyeleri belirtilir. C# tür kategorilerinin sayısı Kullanıcı tarafından tanımlanabilir: sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri ve temsilci türleri.
 

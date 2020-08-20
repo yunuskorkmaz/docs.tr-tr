@@ -3,12 +3,12 @@ title: .NET Core kullanarak REST istemcisi oluşturma
 description: Bu öğretici, .NET Core ve C# dilinde birçok özellik öğretir.
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8db87440bb6e0995b1cc2c97b0d28995170ada8c
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004861"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656950"
 ---
 # <a name="rest-client"></a>REST istemcisi
 
@@ -25,9 +25,9 @@ GitHub 'da REST hizmetine HTTP Istekleri veren bir uygulama oluşturacaksınız.
 
 Bu öğreticide birçok özellik vardır. Bunları birer birer oluşturalım.
 
-Bu konuyla ilgili [son örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) birlikte izlemeyi tercih ediyorsanız, indirebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Bu konuyla ilgili [son örnekle](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) birlikte izlemeyi tercih ediyorsanız, indirebilirsiniz. İndirme yönergeleri için bkz. [örnekler ve öğreticiler](../../samples-and-tutorials/index.md#view-and-download-samples).
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Makinenizi .NET Core çalıştıracak şekilde ayarlamanız gerekir. Yükleme yönergelerini [.NET Core İndirmeleri](https://dotnet.microsoft.com/download) sayfasında bulabilirsiniz. Bu uygulamayı Windows, Linux, macOS veya bir Docker kapsayıcısında çalıştırabilirsiniz.
 En sevdiğiniz kod düzenleyicinizi yüklemeniz gerekir. Aşağıdaki açıklamalar açık kaynaklı, platformlar arası bir düzenleyici olan [Visual Studio Code](https://code.visualstudio.com/)kullanır. Bununla birlikte, rahat olan her türlü aracı kullanabilirsiniz.
@@ -88,7 +88,7 @@ static async Task Main(string[] args)
 
 Artık hiçbir şey yapmaz ancak zaman uyumsuz olarak bunu yapar. Bunu geliştirelim.
 
-Önce, Web 'den veri alan bir nesne gerekir; <xref:System.Net.Http.HttpClient>bunu yapmak için kullanabilirsiniz. Bu nesne, isteği ve yanıtları işler. `Program` *Program.cs* dosyasının içindeki sınıfta bu türün tek bir örneğini oluşturun.
+Önce, Web 'den veri alan bir nesne gerekir; <xref:System.Net.Http.HttpClient> bunu yapmak için kullanabilirsiniz. Bu nesne, isteği ve yanıtları işler. `Program` *Program.cs* dosyasının içindeki sınıfta bu türün tek bir örneğini oluşturun.
 
 ```csharp
 namespace WebAPIClient
