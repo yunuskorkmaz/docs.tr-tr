@@ -5,12 +5,12 @@ description: ASP.NET Core 'deki son değişiklikleri listeler.
 ms.date: 07/17/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 7a07df5194d5dc220b61d55a4457d90881ac9ddf
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 1506e0aa27778d44497252231028689259f48896
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474832"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720247"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -28,6 +28,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 - [Yetkilendirme: ıauthorizationpolicyprovider uygulamaları için yeni yöntem gerekir](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
 - [Yetkilendirme: uç nokta yönlendirmesinde kaynak HttpContext 'dir](#authorization-resource-in-endpoint-routing-is-httpcontext)
 - [Azure: Microsoft 'un ön eki olan Azure tümleştirme paketleri kaldırıldı](#azure-microsoft-prefixed-azure-integration-packages-removed)
+- [BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor: derleme zamanında bileşenlerden çok önemli olan boşluk](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
 - [Blazor: NuGet paketlerinin hedef çerçevesi değiştirildi](#blazor-target-framework-of-nuget-packages-changed)
 - [Önbelleğe alma: CompactOnMemoryPressure özelliği kaldırıldı](#caching-compactonmemorypressure-property-removed)
@@ -99,6 +100,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 ***
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE [binaryformatter-serialization-obsolete](../../../includes/core-changes/corefx/5.0/binaryformatter-serialization-obsolete.md)]
 
 ***
 

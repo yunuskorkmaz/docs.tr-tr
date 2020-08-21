@@ -4,12 +4,12 @@ description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları na
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 2bb0f03994468bbad3096ebf0b141bc1f47b867e
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656722"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720130"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
@@ -51,7 +51,7 @@ Aşağıdaki örnek, Windows için bir uygulamayı kendi içinde yayınlar ve ç
 </ItemGroup>
 ```
 
-Aşağıdaki örnek, kullanılmayan kod oluşturma derlemelerinin kırpılıp kırpılmayabileceği, agresif kırpma modunda bir uygulamayı yayınlar.
+Aşağıdaki örnek, derleme içinde kullanılmayan kodun kırpılıp kırpılmayabileceği, agresif kırpma modunda bir uygulama yayımlar.
 
 ```xml
 <ItemGroup>

@@ -2,12 +2,12 @@
 title: Temel sınıf kitaplığı bölünmesi değişiklikleri
 description: Çekirdek .NET kitaplıklarında son değişiklikleri listeler.
 ms.date: 07/27/2020
-ms.openlocfilehash: 9190fc2fc8dddc4fb4be8409915cf24c92a97daf
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558198"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720221"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Çekirdek .NET kitaplıklarının parçalara bölünmesi
 
@@ -17,6 +17,9 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [Başvuru derlemelerindeki parametre adları değiştirildi](#parameter-names-changed-in-reference-assemblies) | 5.0 |
+| [ASCII olmayan karakterler içeren URI yolları UNIX üzerinde doğru şekilde ayrıştırır](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
+| [UNIX üzerinde UNC yollarının URI tanıması](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
 | [Environment. OSVersion doğru işletim sistemi sürümünü döndürür](#environmentosversion-returns-the-correct-operating-system-version) | 5.0 |
 | [LINQ OrderBy 'in karmaşıklığı. Ilk {OrDefault} artırılmış](#complexity-of-linq-orderbyfirstordefault-increased) | 5.0 |
 | [IntPtr ve UIntPtr IFormattable 'ı uygular](#intptr-and-uintptr-implement-iformattable) | 5.0 |
@@ -47,6 +50,18 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [Process. StartInfo, başlatmadığınız işlemler için InvalidOperationException 'yi oluşturur](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1,0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
+
+***
+
+[!INCLUDE [non-ascii-chars-in-uri-parsed-correctly](../../../includes/core-changes/corefx/5.0/non-ascii-chars-in-uri-parsed-correctly.md)]
+
+***
+
+[!INCLUDE [unc-path-recognition-unix](../../../includes/core-changes/corefx/5.0/unc-path-recognition-unix.md)]
+
+***
 
 [!INCLUDE [environment-osversion-returns-correct-version](../../../includes/core-changes/corefx/5.0/environment-osversion-returns-correct-version.md)]
 

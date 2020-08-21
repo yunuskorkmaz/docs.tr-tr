@@ -2,12 +2,12 @@
 title: Uygulama yayımlama
 description: .NET Core uygulaması yayımlama yolları hakkında bilgi edinin. .NET Core, platforma özgü veya platformlar arası uygulamalar yayımlayabilir. Bir uygulamayı, kendi içinde veya Framework 'e bağımlı olarak yayımlayabilirsiniz. Her mod, bir kullanıcının uygulamanızı nasıl yürüttüğünde etkiler.
 ms.date: 04/01/2020
-ms.openlocfilehash: f343e184a7ccca66aaf94533b2d0262478f873f4
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: ece5e46162fd4a8de0b996ba239e89cceca4dbca
+ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656592"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88720117"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core uygulama yayımlamaya genel bakış
 
