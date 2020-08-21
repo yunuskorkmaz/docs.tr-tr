@@ -1,19 +1,19 @@
 ---
 title: Sonuçlar
-description: Hataya dayanıklı kod yazmanıza yardımcı F# olması için ' Result ' türünü nasıl kullanacağınızı öğrenin.
-ms.date: 04/24/2017
-ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+description: "F # ' Result ' türünün, hataya dayanıklı kod yazmanıza yardımcı olması için nasıl kullanılacağını öğrenin."
+ms.date: 08/13/2020
+ms.openlocfilehash: d69e6ddc37bcf5cb5fc28644d59a11a822b83faa
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424845"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656924"
 ---
 # <a name="results"></a>Sonuçlar
 
-4,1 ' F# den başlayarak, birleştirilebilen hata toleranslı kod yazmak için kullanabileceğiniz `Result<'T,'TFailure>` bir tür vardır.
+`Result<'T,'TFailure>`Türü, birleştirilebilen hataya dayanıklı kod yazmanızı sağlar.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 // The definition of Result in FSharp.Core
@@ -27,9 +27,11 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Açıklamalar
 
-Sonuç türünün, 4,1 ' de F# tanıtılan bir [Yapı ayrılmış birleşimi](discriminated-unions.md#struct-discriminated-unions)olduğunu unutmayın.  Yapısal eşitlik semantiği burada geçerlidir.
+[`Result`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-resultmodule.html)İçin yerleşik kombinatör modülüne bakın `Result` . türüyle.
 
-`Result` türü genellikle F# topluluk Içinde [Railway odaklı programlama](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) olarak adlandırılan monadıc hata işleme içinde kullanılır.  Aşağıdaki önemsiz örnekte bu yaklaşım gösterilmektedir.
+Sonuç türünün bir [struct ayrılmış birleşim](discriminated-unions.md#struct-discriminated-unions)olduğunu unutmayın. Yapısal eşitlik semantiği burada geçerlidir.
+
+`Result`Tür genellikle F # Community Içinde [Railway odaklı programlama](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) olarak adlandırılan monmonotik hata işleme içinde kullanılır.  Aşağıdaki önemsiz örnekte bu yaklaşım gösterilmektedir.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,9 +82,9 @@ let test() =
 test()
 ```
 
-Görebileceğiniz gibi, tümünün bir `Result`döndürmesini zorlarsanız, çeşitli doğrulama işlevlerini birbirine kolayca zincirleyebilirsiniz.  Bu, bunun gibi işlevleri, sizin için gerekli olduğu kadar birleştirilebilen küçük parçalara bölmenize olanak tanır.  Bu Ayrıca, bir doğrulamanın sonunda, daha yüksek bir program doğruluğu uygulayan, bir doğrulama sayısının sonunda [kalıp eşleştirmesinin](pattern-matching.md) kullanımını *zorunlu kılma* değeri de vardır.
+Görebileceğiniz gibi, tümünün bir döndürmesini zorlarsanız, çeşitli doğrulama işlevlerini birbirine kolayca zincirleyebilirsiniz `Result` .  Bu, bunun gibi işlevleri, sizin için gerekli olduğu kadar birleştirilebilen küçük parçalara bölmenize olanak tanır.  Bu Ayrıca, bir doğrulamanın sonunda, daha yüksek bir program doğruluğu uygulayan, bir doğrulama sayısının sonunda [kalıp eşleştirmesinin](pattern-matching.md) kullanımını *zorunlu kılma* değeri de vardır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Ayrılmış Birleşimler](discriminated-unions.md)
-- [Desen Eşleştirme](pattern-matching.md)
+- [Model eşleştirme](pattern-matching.md)

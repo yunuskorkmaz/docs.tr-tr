@@ -2,12 +2,12 @@
 title: Koleksiyon türleri
 description: 'F # koleksiyon türleri ve bunların koleksiyon türlerinden nasıl farklı olduğunu öğrenin.'
 ms.date: 08/14/2020
-ms.openlocfilehash: 197ba754d632051b5a0bf9c8364d45a1fb932f48
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
+ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267288"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88656911"
 ---
 # <a name="f-collection-types"></a>F# Koleksiyon Türleri
 
@@ -21,11 +21,11 @@ Aşağıdaki tabloda, F # koleksiyon türleri gösterilmektedir.
 
 |Tür|Açıklama|İlişkili Bağlantılar|
 |----|-----------|-------------|
-|[Liste](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|Aynı türdeki sıralı, sabit bir öğe dizisi. Bağlantılı liste olarak uygulanır.|[Listeler](lists.md)<br /><br />[Modül Listele](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[Dizide](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, kesilebilir bir koleksiyonu.|[Diziler](arrays.md)<br /><br />[Dizi modülü](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D modülü](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D modülü](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[sıra](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Tek bir türden oluşan mantıksal dizi öğeleri. Diziler özellikle büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığınız durumlarda faydalıdır. Tek tek dizi öğeleri yalnızca gerekli olduğu gibi hesaplanır. bu nedenle, tüm öğeler kullanılmazsa bir sıra bir listeden daha iyi çalışabilir. Diziler, `seq<'T>` için bir diğer ad olan türü tarafından temsil edilir `IEnumerable<T>` . Bu nedenle, uygulayan .NET Framework her türlü tür `System.Collections.Generic.IEnumerable<'T>` bir sıra olarak kullanılabilir.|[Diziler](sequences.md)<br /><br />[Seq modülü](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
-|[Harita](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Öğelerin sabit bir sözlüğü. Öğelere anahtar tarafından erişilir.|[Eşleme Modülü](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Ayarla](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|İkili ağaçlara dayalı, karşılaştırma F # yapısal karşılaştırma işlevidir ve bu da anahtar değerlerinde arabirimin uygulamalarını kullanan bir sabit kümesidir `System.IComparable` .|[Modül ayarla](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Liste](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|Aynı türdeki sıralı, sabit bir öğe dizisi. Bağlantılı liste olarak uygulanır.|[Listeler](lists.md)<br /><br />[Modül Listele](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
+|[Dizide](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|Aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, kesilebilir bir koleksiyonu.|[Diziler](arrays.md)<br /><br />[Dizi modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
+|[sıra](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seq-1.html)|Tek bir türden oluşan mantıksal dizi öğeleri. Diziler özellikle büyük, sıralı bir veri koleksiyonunuz olduğunda ancak tüm öğeleri kullanmak zorunda olmadığınız durumlarda faydalıdır. Tek tek dizi öğeleri yalnızca gerekli olduğu gibi hesaplanır. bu nedenle, tüm öğeler kullanılmazsa bir sıra bir listeden daha iyi çalışabilir. Diziler, `seq<'T>` için bir diğer ad olan türü tarafından temsil edilir `IEnumerable<T>` . Bu nedenle, uygulayan .NET Framework her türlü tür `System.Collections.Generic.IEnumerable<'T>` bir sıra olarak kullanılabilir.|[Diziler](sequences.md)<br /><br />[Seq modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html)|
+|[Harita](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|Öğelerin sabit bir sözlüğü. Öğelere anahtar tarafından erişilir.|[Eşleme Modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
+|[Ayarla](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|İkili ağaçlara dayalı, karşılaştırma F # yapısal karşılaştırma işlevidir ve bu da anahtar değerlerinde arabirimin uygulamalarını kullanan bir sabit kümesidir `System.IComparable` .|[Modül ayarla](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
 ### <a name="table-of-functions"></a>Işlev tablosu
 
@@ -93,7 +93,7 @@ Bu bölüm, F # koleksiyon türlerinde kullanılabilir olan işlevleri karşıla
 |max|O (N)|O (N)|O (N)|-|-|[En büyük](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) işleç kullanılarak karşılaştırılan koleksiyondaki en büyük öğeyi döndürür.|
 |maxBy|O (N)|O (N)|O (N)|-|-|İşlev sonucu üzerinde [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) kullanılarak karşılaştırıldığında koleksiyondaki en büyük öğeyi döndürür.|
 |maxElement|-|-|-|-|O (günlük (N))|Küme için kullanılan sıralamaya göre küme içindeki en büyük öğeyi döndürür.|
-|dk|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci kullanılarak karşılaştırılan koleksiyonda en az öğeyi döndürür.|
+|min|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci kullanılarak karşılaştırılan koleksiyonda en az öğeyi döndürür.|
 |minBy|O (N)|O (N)|O (N)|-|-|İşlev sonucunda [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci kullanılarak karşılaştırılan koleksiyondaki en az öğeyi döndürür.|
 |minElement|-|-|-|-|O (günlük (N))|Küme için kullanılan sıralamaya göre küme içindeki en düşük öğeyi döndürür.|
 |ofArray|-|O (N)|O (1)|O (N)|O (N)|Verilen dizi ile aynı öğeleri içeren bir koleksiyon oluşturur.|
