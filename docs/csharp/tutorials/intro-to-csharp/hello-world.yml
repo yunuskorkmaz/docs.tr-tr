@@ -12,12 +12,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 17d33b25867f75419a0e65ab0d75950bad13af57
-  ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+  ms.openlocfilehash: 72198287028c73f0e518d7bcfd0b694bb267e132
+  ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/17/2020
-  ms.locfileid: "88267405"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88812282"
 items:
 - durationInMinutes: 1
   content: >
@@ -52,7 +52,7 @@ items:
     > Bu alıştırma, C# kodunun yapısını öğrenmenize yardımcı olur.
 
 
-    İlk programınız bir ileti yazdırmayla sınırlıdır. **Değişkenleri** kullanarak daha kullanışlı programlar yazabilirsiniz. **Değişken**, aynı kodu farklı değerlerle çalıştırmak için kullanabileceğiniz bir semboldür. Deneyelim mi? Etkileşimli pencerede yazdığınız kodu şu kodla değiştirin:
+    İlk programınız bir ileti yazdırmayla sınırlıdır. *Değişkenleri* kullanarak daha kullanışlı programlar yazabilirsiniz. *Değişken*, aynı kodu farklı değerlerle çalıştırmak için kullanabileceğiniz bir semboldür. Deneyelim mi? Etkileşimli pencerede yazdığınız kodu şu kodla değiştirin:
 
 
     ```csharp
@@ -64,7 +64,7 @@ items:
     ```
 
 
-    Örneğin, ilk satır `aFriend` değişkenini tanımlar ve buna “Bill” değerini atar. İkinci satır, adı yazdırır.
+    İlk satır bir değişken bildirir `aFriend` ve bir "fatura" değeri atar. İkinci satır, adı yazdırır.
 
 
     Bildirdiğiniz herhangi bir değişkene farklı değerler atayabilirsiniz. Adı arkadaşlarınızdan birinin adıyla değiştirebilirsiniz. Etkileşimli pencerede şu iki satırı, eklemiş olduğunuz koddan sonra ekleyin:
@@ -149,11 +149,11 @@ items:
 
     > [!TIP]
 
-    > Bu, kendi kendinize keşif yapmanız için iyi bir fırsattır. `Console.WriteLine()` tarafından ekrana metin yazıldığını öğrendiniz. Değişkenleri bildirmeyi ve dizeleri birleştirmeyi öğrendiniz. Etkileşimli pencerede denemeler yapın. Pencerede, **IntelliSense** adlı bir özellik bulunur ve yapabilecekleriniz için öneriler sağlar. `.`Öğesinden sonra bir yazın `d` `firstFriend` . Kullanabileceğiniz özellikler ve yöntemler için önerilerin bir listesini görürsünüz.
+    > Bu, kendi kendinize keşif yapmanız için iyi bir fırsattır. `Console.WriteLine()` tarafından ekrana metin yazıldığını öğrendiniz. Değişkenleri bildirmeyi ve dizeleri birleştirmeyi öğrendiniz. Etkileşimli pencerede denemeler yapın. Pencerede, *IntelliSense* adlı bir özellik bulunur ve yapabilecekleriniz için öneriler sağlar. `.`Öğesinden sonra bir yazın `d` `firstFriend` . Kullanabileceğiniz özellikler ve yöntemler için önerilerin bir listesini görürsünüz.
 - title: Dizelerle daha fazlasını gerçekleştirme
   durationInMinutes: 5
   content: >
-    İletileri yazdırmak için bir **Yöntem**kullanıyorsunuz <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> . **Yöntem**, bazı eylemleri uygulayan bir kod bloğudur. Bir adı olduğundan yönteme erişebilirsiniz.
+    İletileri yazdırmak için bir *Yöntem*kullanıyorsunuz <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> . *Yöntem*, bazı eylemleri uygulayan bir kod bloğudur. Bir adı olduğundan yönteme erişebilirsiniz.
 
 
     Dizelerinizin görüntülenmesini istemediğiniz baştaki veya sondaki boşlukların olduğunu varsayalım. Dizelerin içindeki boşlukları **kırpmak** istiyorsunuz.
@@ -234,7 +234,7 @@ items:
     ```
 
 
-    <xref:System.String.Contains%2A> yöntemi, aradığınız dizenin bulunup bulunmadığını size belirten bir **boole** değeri döndürür. **Boole** değeri bir `true` veya `false` değeri depolar. Metin çıktısı olarak görüntülendiğinde, bunlar sırasıyla büyük harfle alınır: `True` ve `False` . Sonraki bir derste **boole** değerleriyle ilgili daha fazla bilgi edineceksiniz.
+    <xref:System.String.Contains%2A> yöntemi, aradığınız dizenin bulunup bulunmadığını size belirten bir *boole* değeri döndürür. *Boole* değeri bir `true` veya `false` değeri depolar. Metin çıktısı olarak görüntülendiğinde, bunlar sırasıyla büyük harfle alınır: `True` ve `False` . Sonraki bir derste *boole* değerleriyle ilgili daha fazla bilgi edineceksiniz.
 
 
     ***Sınama***
