@@ -2,12 +2,12 @@
 title: Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama
 description: Yayımlama, .NET Core uygulamasını çalıştırmak için gereken dosya kümesini oluşturur.
 ms.date: 07/04/2020
-ms.openlocfilehash: 8fd9975e8a88704b9dea45b40127c8dc03f7d09f
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 04dfbae85f196ca4c8f8eb593637a801aa9773f2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051889"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811398"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama
 
@@ -15,13 +15,13 @@ Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulam
 
 .NET Core CLI, uygulamayı yayımlamak için kullanılır, bu nedenle bu öğreticiyi Visual Studio Code dışında bir kod düzenleyicisiyle takip edebilirsiniz.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Bu öğretici, [Visual Studio Code bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="publish-the-app"></a>Uygulamayı yayımlama
 
-1. Visual Studio Code başlatın.
+1. Visual Studio Code’u başlatma.
 
 1. [Visual Studio Code .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz *HelloWorld* proje klasörünü açın.
 
@@ -29,7 +29,7 @@ Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulam
 
    Terminal *HelloWorld* klasöründe açılır.
 
-1. Şu komutu çalıştırın:
+1. Aşağıdaki komutu çalıştırın:
 
    ```dotnetcli
    dotnet publish --configuration Release
@@ -39,7 +39,7 @@ Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulam
 
    Komut çıktısı aşağıdaki örneğe benzer:
 
-   ```
+   ```output
    Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -63,7 +63,7 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 
    Görüntüde gösterildiği gibi, yayımlanan çıktı aşağıdaki dosyaları içerir:
 
-   * *ÜzerindeHelloWorld.deps.js*
+   * * ÜzerindeHelloWorld.deps.js*
 
       Bu, uygulamanın çalışma zamanı bağımlılıkları dosyasıdır. Uygulamayı çalıştırmak için gereken .NET Core bileşenlerini ve kitaplıklarını (uygulamanızı içeren dinamik bağlantı kitaplığı dahil) tanımlar. Daha fazla bilgi için bkz. [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
 
@@ -79,7 +79,7 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 
       Bu, hata ayıklama sembolleri dosyasıdır. Bu dosyayı uygulamanızla birlikte dağıtmanız gerekmez, ancak uygulamanızın yayımlanan sürümünde hata ayıklaması yapmanız gereken bir olaya kaydetmeniz gerekir.
 
-   * *ÜzerindeHelloWorld.runtimeconfig.js*
+   * * ÜzerindeHelloWorld.runtimeconfig.js*
 
       Bu, uygulamanın çalışma zamanı yapılandırma dosyasıdır. Uygulamanızın üzerinde çalışmak üzere oluşturulduğu .NET Core sürümünü tanımlar. Ayrıca, buna yapılandırma seçenekleri de ekleyebilirsiniz. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
 
@@ -97,7 +97,7 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 
    1. İstemine yanıt olarak bir ad girin ve çıkmak için herhangi bir tuşa basın.
 
-1. Herhangi bir platformda, komutunu kullanarak uygulamayı çalıştırın [`dotnet`](../tools/dotnet.md) :
+1. Herhangi bir platformda, komutunu kullanarak uygulamayı çalıştırın  [`dotnet`](../tools/dotnet.md) :
 
    1. Yazın `dotnet HelloWorld.dll` ve ENTER <kbd>Enter</kbd>tuşuna basın.
 

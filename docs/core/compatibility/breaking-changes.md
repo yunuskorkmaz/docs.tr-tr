@@ -2,12 +2,12 @@
 title: Yeni değişiklikler
 description: .NET Core 'un her sürümündeki son değişiklikler hakkında bilgi edinin.
 ms.date: 11/27/2019
-ms.openlocfilehash: 550553ef14cd0635fbe4a5346c457a41264a4b82
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916261"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810904"
 ---
 # <a name="breaking-change-selectors"></a>Son değişiklik seçicileri
 
@@ -33,6 +33,7 @@ Aşağıdaki sürüm ve alan seçicileri, .NET Core 'un farklı sürümleri, ASP
 > [!div class="op_single_selector"]
 >
 > - [ASP.NET Core](aspnetcore.md)
+> - [Kod analizi](code-analysis.md)
 > - [Core .NET kitaplıkları](corefx.md)
 > - [Şifreleme](cryptography.md)
 > - [EF Core](/ef/core/what-is-new/ef-core-3.0/breaking-changes)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: abda23ea538c2c0da6ada4f359ce745602dca45d
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e0b769d7bb6b336d226cd48de1932524c4d7e74d
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84279769"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811073"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET 'teki JSON serileştirme (sıralama) için özel dönüştürücüler yazma
 
@@ -93,7 +93,7 @@ Açık genel türler için fabrika deseninin olması gerekir çünkü bir nesney
 
 Hata işleme kodunda bir özel durum oluşturmanız gerekiyorsa, <xref:System.Text.Json.JsonException> ileti olmadan bir ileti yerleştirmeyi düşünün. Bu özel durum türü otomatik olarak, hataya neden olan JSON bölümünün yolunu içeren bir ileti oluşturur. Örneğin, ifade `throw new JsonException();` Aşağıdaki örnekte olduğu gibi bir hata iletisi üretir:
 
-```
+```output
 Unhandled exception. System.Text.Json.JsonException:
 The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
@@ -165,9 +165,9 @@ Bir struct oluşturan ve özniteliği uygulayan kod aşağıda verilmiştir `[Js
 
 Serileştirme veya seri durumundan çıkarma sırasında, en yüksek öncelikten en düşüğe doğru listelenen her bir JSON öğesi için bir dönüştürücü seçilir:
 
-* `[JsonConverter]`bir özelliğe uygulandı.
+* `[JsonConverter]` bir özelliğe uygulandı.
 * Koleksiyona eklenen bir dönüştürücü `Converters` .
-* `[JsonConverter]`özel bir değer türüne veya POCO 'a uygulandı.
+* `[JsonConverter]` özel bir değer türüne veya POCO 'a uygulandı.
 
 Bir tür için birden çok özel dönüştürücü `Converters` koleksiyonda kayıtlıysa, için true döndüren ilk dönüştürücü `CanConvert` kullanılır.
 
@@ -190,12 +190,12 @@ Tür çıkarımı yanlış olabilir. Seri hale getirici, ondalık noktası olmay
 
 Tür çıkarımı gerektiren senaryolar için aşağıdaki kod, özellikler için özel bir dönüştürücü gösterir `object` . Kod dönüştürür:
 
-* `true`ve `false` için`Boolean`
-* Ondalık olmayan sayılar`long`
-* Ondalık sayı olan sayılar`double`
-* Tarihler`DateTime`
-* Dizeler`string`
-* Diğer her şey`JsonElement`
+* `true` ve `false` için `Boolean`
+* Ondalık olmayan sayılar `long`
+* Ondalık sayı olan sayılar `double`
+* Tarihler `DateTime`
+* Dizeler `string`
+* Diğer her şey `JsonElement`
 
 [!code-csharp[](snippets/system-text-json-how-to/csharp/ObjectToInferredTypesConverter.cs)]
 
@@ -325,10 +325,10 @@ Varolan bir yerleşik dönüştürücünün davranışını değiştiren bir dö
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 * [Yerleşik dönüştürücüler için kaynak kodu](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [İçinde DateTime ve DateTimeOffset desteğiSystem.Text.Json](../datetime/system-text-json-support.md)
-* [System.Text.Jsonbakýþ](system-text-json-overview.md)
-* [Nasıl kullanılırSystem.Text.Json](system-text-json-how-to.md)
-* [Öğesinden geçişNewtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.Text.JsonAPI başvurusu](xref:System.Text.Json)
+* [İçinde DateTime ve DateTimeOffset desteği System.Text.Json](../datetime/system-text-json-support.md)
+* [System.Text.Json bakýþ](system-text-json-overview.md)
+* [Nasıl kullanılır System.Text.Json](system-text-json-how-to.md)
+* [Öğesinden geçiş Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json API başvurusu](xref:System.Text.Json)
 * [System.Text.Json. Serileştirme API başvurusu](xref:System.Text.Json.Serialization)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 4715a27a94ac86c5e4955c0e8be95c6ee4a28507
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bb81ddbe631fedfcfe247c6e62580de679ad972f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619708"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812308"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# Başvurusu)
 
@@ -129,11 +129,11 @@ Catch hakkında daha fazla bilgi için bkz. [try-catch-finally](try-catch-finall
 
 ## <a name="exceptions-in-async-methods"></a>Zaman uyumsuz yöntemlerde özel durumlar
 
-Zaman uyumsuz bir yöntem, [zaman uyumsuz](async.md) bir değiştirici tarafından işaretlenir ve genellikle bir veya daha fazla await ifadesi ya da deyimi içerir. Await ifadesi bir veya ' a [await](../operators/await.md) işlecini uygular <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> .
+Zaman uyumsuz bir yöntem,  [zaman uyumsuz](async.md) bir değiştirici tarafından işaretlenir ve genellikle bir veya daha fazla await ifadesi ya da deyimi içerir. Await ifadesi bir veya ' a [await](../operators/await.md) işlecini uygular <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> .
 
-Denetim `await` zaman uyumsuz yöntemde bir ulaştığında, beklenen görev tamamlanana kadar yöntemindeki ilerleme askıya alınır. Görev tamamlandığında, yürütme yöntemi içinde çalışmaya çalışabilir. Daha fazla bilgi için bkz. Async [ve await ile](../../programming-guide/concepts/async/index.md) zaman uyumsuz programlama ve [zaman uyumsuz programlarda denetim akışı](../../programming-guide/concepts/async/control-flow-in-async-programs.md).
+Denetim `await` zaman uyumsuz yöntemde bir ulaştığında, beklenen görev tamamlanana kadar yöntemindeki ilerleme askıya alınır. Görev tamamlandığında, yürütme yöntemi içinde çalışmaya çalışabilir. Daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../../programming-guide/concepts/async/index.md).
 
-Uygulanan tamamlanan görev, `await` görevi döndüren yöntemdeki işlenmeyen bir özel durum nedeniyle hatalı bir durumda olabilir. Görevin bekleniyor bir özel durum oluşturur. Aynı zamanda, döndüren zaman uyumsuz işlem iptal edilirse, bir görev iptal edilmiş durumda da bitebilirler. İptal edilen bir görevin bekleniyor bir oluşturur `OperationCanceledException` . Zaman uyumsuz bir işlemi iptal etme hakkında daha fazla bilgi için bkz. [zaman uyumsuz uygulamanızda Ince ayar yapma](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).
+Uygulanan tamamlanan görev, `await` görevi döndüren yöntemdeki işlenmeyen bir özel durum nedeniyle hatalı bir durumda olabilir. Görevin bekleniyor bir özel durum oluşturur. Aynı zamanda, döndüren zaman uyumsuz işlem iptal edilirse, bir görev iptal edilmiş durumda da bitebilirler. İptal edilen bir görevin bekleniyor bir oluşturur `OperationCanceledException` .
 
 Özel durumu yakalamak için, görevi bir `try` blokta bekleve özel durumu ilişkili blokta yakalayacak `catch` . Örneğin, [zaman uyumsuz yöntem örneği](#async-method-example) bölümüne bakın.
 

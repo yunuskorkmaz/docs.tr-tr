@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 44d33fb28e66e590e4604c6dd2c73616e4c5e943
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 47f42305f4106f5e05e555a859f13c41bb950519
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728289"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811294"
 ---
 ### <a name="http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes"></a>HTTP: ıhttpclientfactory günlük tamsayı durum kodları tarafından oluşturulan HttpClient örnekleri
 
-<xref:System.Net.Http.HttpClient>günlük HTTP durum <xref:System.Net.Http.IHttpClientFactory> kodları tarafından, durum kodu adları yerine tamsayılar olarak oluşturulan örnekler.
+<xref:System.Net.Http.HttpClient><xref:System.Net.Http.IHttpClientFactory>günlük http durum kodları tarafından, durum kodu adları yerine tamsayılar olarak oluşturulan örnekler.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -18,7 +18,7 @@ ms.locfileid: "82728289"
 
 Günlüğe kaydetme, HTTP durum kodlarının metinsel açıklamalarını kullanır. Aşağıdaki günlük iletilerini göz önünde bulundurun:
 
-```
+```output
 Received HTTP response after 56.0044ms - OK
 End processing HTTP request after 70.0862ms - OK
 ```
@@ -27,7 +27,7 @@ End processing HTTP request after 70.0862ms - OK
 
 Günlüğe kaydetme, HTTP durum kodlarının tamsayı değerlerini kullanır. Aşağıdaki günlük iletilerini göz önünde bulundurun:
 
-```
+```output
 Received HTTP response after 56.0044ms - 200
 End processing HTTP request after 70.0862ms - 200
 ```
@@ -55,7 +55,7 @@ Eski davranışla uyumluluğu zorlamak ve metin durum kodları kullanmak gerekir
 
 1. [Microsoft. Extensions. http](https://www.nuget.org/packages/Microsoft.Extensions.Http) NuGet paketindeki ortak türlerle çakışmaları önlemek için sınıfları yeniden adlandırın.
 
-1. Uygulamasının `LoggingHttpMessageHandlerBuilderFilter` yerleşik uygulamasını, projenin `Startup.ConfigureServices` yönteminde kendi ile değiştirin. Örneğin:
+1. Uygulamasının yerleşik uygulamasını, `LoggingHttpMessageHandlerBuilderFilter` projenin yönteminde kendi ile değiştirin `Startup.ConfigureServices` . Örnek:
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)

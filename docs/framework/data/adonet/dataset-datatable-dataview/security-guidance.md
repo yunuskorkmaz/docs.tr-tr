@@ -3,12 +3,12 @@ title: Veri kümesi ve DataTable Güvenlik Kılavuzu
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: f0fa43c467cc7866e69115acb5f807e6487fda7a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608524"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812243"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Veri kümesi ve DataTable Güvenlik Kılavuzu
 
@@ -34,7 +34,14 @@ ADO.NET hakkında daha fazla bilgi için, bkz. [ADO.net belgeleri](/dotnet/frame
 
 Gelen XML verileri, türü bu listede olmayan bir nesne içeriyorsa:
 
-* Bir özel durum oluşturulur.
+* Aşağıdaki ileti ve yığın izleme ile bir özel durum oluşturulur.  
+Hata İletisi:  
+Burada System. InvalidOperationException: Type ' \<Type Name\> , Version = \<n.n.n.n\> , Culture = \<culture\> , PublicKeyToken = ' kullanılamaz \<token value\> . [https://go.microsoft.com/fwlink/?linkid=2132227](https://go.microsoft.com/fwlink/?linkid=2132227)Daha fazla ayrıntı için bkz..  
+Yığın Izlemesi:  
+System. Data. TypeLimiter. EnsureTypeIsAllowed (tür türü, TypeLimiter capturedLimiter) konumunda  
+System. Data. DataColumn. UpdateColumnType (tür türü, StorageType typeCode) konumunda  
+System. Data. DataColumn. set_DataType (tür değeri)  
+
 * Seri durumdan çıkarma işlemi başarısız olur.
 
 XML 'i var olan bir `DataSet` veya `DataTable` örneğe yüklerken, var olan sütun tanımları da hesaba alınır. Tablo, özel bir türün sütun tanımını zaten içeriyorsa, bu tür XML serisini kaldırma işleminin süresi için izin verilenler listesine geçici olarak eklenir.

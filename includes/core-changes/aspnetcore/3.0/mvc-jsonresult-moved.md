@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 1356f3eee5e2d8090d7d96aafc07a19507a1aff1
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 96c2a32dd7cca91e965601d715bbd4625bba439a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721013"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811291"
 ---
 ### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC: JsonResult, Microsoft. AspNetCore. Mvc. Core 'a taşındı
 
-`JsonResult`, `Microsoft.AspNetCore.Mvc.Core` derlemeye taşındı. Bu tür, [Microsoft. AspNetCore. Mvc. Formatters. JSON](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Formatters.Json)içinde tanımlanması için kullanılır. Bir derleme düzeyi [[TypeForwardedTo]](xref:System.Runtime.CompilerServices.TypeForwardedToAttribute) özniteliği, ' ye `Microsoft.AspNetCore.Mvc.Formatters.Json` , kullanıcıların çoğunluğunda bu sorunu gidermek için eklenmiştir. Üçüncü taraf kitaplıklar kullanan uygulamalar sorunlarla karşılaşabilir.
+`JsonResult` , `Microsoft.AspNetCore.Mvc.Core` derlemeye taşındı. Bu tür [ üzerindeMicrosoft.AspNetCore.Mvc.Formatters.Js](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Formatters.Json)tanımlanması için kullanılır. Bir derleme düzeyi [[TypeForwardedTo]](xref:System.Runtime.CompilerServices.TypeForwardedToAttribute) özniteliği, ' ye `Microsoft.AspNetCore.Mvc.Formatters.Json` , kullanıcıların çoğunluğunda bu sorunu gidermek için eklenmiştir. Üçüncü taraf kitaplıklar kullanan uygulamalar sorunlarla karşılaşabilir.
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 
@@ -22,7 +22,7 @@ ms.locfileid: "83721013"
 
 2,2 tabanlı kitaplık kullanan bir uygulama derleme hatası verir. Aşağıdaki metnin bir varyasyonunu içeren bir hata verilmiştir:
 
-```
+```output
 The type 'JsonResult' exists in both 'Microsoft.AspNetCore.Mvc.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' and 'Microsoft.AspNetCore.Mvc.Formatters.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
 ```
 

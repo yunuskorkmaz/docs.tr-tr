@@ -4,14 +4,14 @@ description: Yöntemlere, yöntem parametrelerine ve yöntem dönüş değerleri
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 09a287b3d74e1b8dbdaf4a53cb207dfe1fad8a0c
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063360"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810579"
 ---
-# <a name="methods"></a>Yöntemler
+# <a name="methods-in-c"></a>İçindeki Yöntemler (C#)
 
 Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak ve gerekli Yöntem bağımsız değişkenlerini belirterek deyimlerin yürütülmesine neden olur. C# ' de, yürütülen her yönerge bir yöntem bağlamında gerçekleştirilir. `Main`Yöntemi her C# uygulamasının giriş noktasıdır ve program başlatıldığında ortak dil çalışma zamanı (CLR) tarafından çağırılır.
 
@@ -32,7 +32,7 @@ Yöntemler bir `class` veya `struct` şunu belirterek belirtilir:
 
 Bu parçalar birlikte yöntem imzasını oluşturur.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Bir yöntemin dönüş türü, yöntem aşırı yüklemesi amaçları için yöntemin imzasının bir parçası değildir. Ancak, bir temsilci ve işaret ettiği yöntem arasındaki uyumluluğun belirlenmesi sırasında yönteminin imzasının bir parçasıdır.
 
 Aşağıdaki örnek, beş yöntem içeren adlı bir sınıfı tanımlar `Motorcycle` :
@@ -149,7 +149,7 @@ Aşağıdaki örnek, `ExampleMethod` bir zorunlu ve iki isteğe bağlı parametr
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Birden çok isteğe bağlı bağımsız değişkeni olan bir yöntem Konumsal bağımsız değişkenler kullanılarak çağrılırsa, çağıran ilk bir bağımsız değişken için bağımsız değişkenin sağlandığı en son bir parametre için bir bağımsız değişken sağlamalıdır. Yöntemin söz konusu olduğunda `ExampleMethod` , örneğin, çağıran parametre için bir bağımsız değişken sağlarsa `description` , bu parametre için de bir tane sağlanmalıdır `optionalInt` . `opt.ExampleMethod(2, 2, "Addition of 2 and 2");`geçerli bir yöntem çağrıdır; `opt.ExampleMethod(2, , "Addition of 2 and 0");`"bağımsız değişken eksik" derleyici hatası oluşturur.
+Birden çok isteğe bağlı bağımsız değişkeni olan bir yöntem Konumsal bağımsız değişkenler kullanılarak çağrılırsa, çağıran ilk bir bağımsız değişken için bağımsız değişkenin sağlandığı en son bir parametre için bir bağımsız değişken sağlamalıdır. Yöntemin söz konusu olduğunda  `ExampleMethod` , örneğin, çağıran parametre için bir bağımsız değişken sağlarsa `description` , bu parametre için de bir tane sağlanmalıdır `optionalInt` . `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` geçerli bir yöntem çağrıdır; `opt.ExampleMethod(2, , "Addition of 2 and 0");` "bağımsız değişken eksik" derleyici hatası oluşturur.
 
 Bir yöntem adlandırılmış bağımsız değişkenler veya konumsal ve adlandırılmış bağımsız değişkenlerin bir birleşimi kullanılarak çağrılırsa, çağıran yöntem çağrısındaki son Konumsal bağımsız değişkeni izleyen tüm bağımsız değişkenleri atlayabilir.
 
@@ -249,11 +249,11 @@ Zaman uyumsuz bir yöntem,, veya dönüş türüne sahip olabilir <xref:System.T
 
 Aşağıdaki örnekte, `DelayAsync` bir tamsayı döndüren Return ifadesine sahip zaman uyumsuz bir yöntemdir. Zaman uyumsuz bir yöntem olduğundan, metot bildiriminin dönüş türü olmalıdır `Task<int>` . Dönüş türü olduğu için `Task<int>` , `await` içindeki ifadesinin değerlendirmesi, `DoSomethingAsync` aşağıdaki deyimde gösterildiği gibi bir tamsayı oluşturur `int result = await delayTask` .
 
-[!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
+:::code language="csharp" source="programming-guide/classes-and-structs/snippets/classes-and-structs/methods/Program.cs":::
 
 Zaman uyumsuz bir yöntem hiçbir [içinde](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md)veya [Out](language-reference/keywords/out-parameter-modifier.md) parametrelerini bildiremez, ancak bu parametrelere sahip yöntemleri çağırabilir.
 
- Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](async.md), [zaman uyumsuz programlarda denetim akışı](programming-guide/concepts/async/control-flow-in-async-programs.md)ve [zaman uyumsuz dönüş türleri](programming-guide/concepts/async/async-return-types.md).
+ Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. Async ve await ile zaman uyumsuz [dönüş türleri](programming-guide/concepts/async/async-return-types.md) [ile zaman uyumsuz programlama](async.md) .
 
 <a name="expr"></a>
 
@@ -291,5 +291,5 @@ Daha fazla bilgi için bkz. [yineleyiciler](programming-guide/concepts/iterators
 - [params](language-reference/keywords/params.md)
 - [dışı](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
-- [in](language-reference/keywords/in-parameter-modifier.md)
-- [Parametreleri Geçirme](programming-guide/classes-and-structs/passing-parameters.md)
+- ['ndaki](language-reference/keywords/in-parameter-modifier.md)
+- [Parametreleri geçirme](programming-guide/classes-and-structs/passing-parameters.md)

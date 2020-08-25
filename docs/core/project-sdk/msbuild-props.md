@@ -3,12 +3,13 @@ title: Microsoft. NET. SDK için MSBuild özellikleri
 description: MSBuild özellikleri ve .NET Core SDK anlayan öğeler için başvuru.
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 7980369b87d606d3876fe043e929a65da1d0d92b
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.custom: updateeachrelease
+ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916249"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810540"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild başvurusu
 
@@ -97,10 +98,10 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 
 ### <a name="runtimeidentifiers"></a>Runtimetanımlayıcıtanımlayıcıları
 
-`RuntimeIdentifiers`Özelliği, proje için bir [çalışma zamanı tanımlayıcıları (RID 'ler)](../rid-catalog.md) için noktalı virgülle ayrılmış bir liste belirtmenize olanak tanır. Birden çok çalışma zamanı için yayımlamanız gerekiyorsa bu özelliği kullanın. `RuntimeIdentifiers`, doğru varlıkların grafikte olduğundan emin olmak için geri yükleme zamanında kullanılır.
+`RuntimeIdentifiers`Özelliği, proje için bir [çalışma zamanı tanımlayıcıları (RID 'ler)](../rid-catalog.md) için noktalı virgülle ayrılmış bir liste belirtmenize olanak tanır. Birden çok çalışma zamanı için yayımlamanız gerekiyorsa bu özelliği kullanın. `RuntimeIdentifiers` , doğru varlıkların grafikte olduğundan emin olmak için geri yükleme zamanında kullanılır.
 
 > [!TIP]
-> `RuntimeIdentifier`(tekil) yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.
+> `RuntimeIdentifier` (tekil) yalnızca tek bir çalışma zamanı gerektiğinde daha hızlı derlemeler sağlayabilir.
 
 ```xml
 <PropertyGroup>
@@ -165,6 +166,50 @@ Varsayılan olarak, yeni bir .NET Core projesinde, bu özellik olarak ayarlanır
 ```
 
 Daha fazla bilgi için bkz. [C# dil sürümü oluşturma](../../csharp/language-reference/configure-language-version.md#override-a-default).
+
+## <a name="code-analysis-properties"></a>Kod Analizi özellikleri
+
+### <a name="analysislevel"></a>AnalysisLevel
+
+`AnalysisLevel`Özelliği, bir kod analizi düzeyi belirtmenize olanak tanır. Örneğin, önizleme kodu Çözümleyicileri için erişim istiyorsanız, `AnalysisLevel` olarak ayarlayın `preview` . Varsayılan değer: `latest`.
+
+```xml
+<PropertyGroup>
+  <AnalysisLevel>preview</AnalysisLevel>
+</PropertyGroup>
+```
+
+Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
+
+| Değer | Anlamı |
+|-|-|
+| `latest` | Yayınlanan en son kod Çözümleyicileri kullanılır. Bu varsayılan seçenektir. |
+| `preview` | Önizleme aşamasında olsalar dahi, en son kod Çözümleyicileri kullanılır. |
+| `5.0` | .NET 5,0 sürümü için etkinleştirilen kurallar kümesi, daha yeni kurallar kullanılabilir olsa bile kullanılır. |
+| `5` | .NET 5,0 sürümü için etkinleştirilen kurallar kümesi, daha yeni kurallar kullanılabilir olsa bile kullanılır. |
+
+### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
+
+`CodeAnalysisTreatWarningsAsErrors`Özelliği, kod analizi uyarılarının uyarı olarak kabul edilip edilmeyeceğini yapılandırmanıza ve derlemeyi kesmesine izin verir. Projelerinizi oluştururken bayrağını kullanırsanız `-warnaserror` , [.NET kod analizi](../../fundamentals/productivity/code-analysis.md) uyarıları da hata olarak kabul edilir. Yalnızca derleyici uyarılarının hata olarak değerlendirilmesini istiyorsanız, `CodeAnalysisTreatWarningsAsErrors` MSBuild özelliğini `false` proje dosyanızda olarak ayarlayabilirsiniz.
+
+```xml
+<PropertyGroup>
+  <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+</PropertyGroup>
+```
+
+### <a name="enablenetanalyzers"></a>Enablenetçözümleyiciler
+
+.Net [Code Analysis](../../fundamentals/productivity/code-analysis.md) , .NET 5,0 veya üstünü hedefleyen projeler için varsayılan olarak etkinleştirilmiştir. Özelliği true olarak ayarlayarak .NET 'in önceki sürümlerini hedefleyen projeler için .NET kod analizini etkinleştirebilirsiniz `EnableNETAnalyzers` . Herhangi bir projede kod analizini devre dışı bırakmak için bu özelliği olarak ayarlayın `false` .
+
+```xml
+<PropertyGroup>
+  <EnableNETAnalyzers>true</EnableNETAnalyzers>
+</PropertyGroup>
+```
+
+> [!TIP]
+> .NET 5,0 ' den önceki .NET sürümlerini hedefleyen projelerde .NET kod analizini etkinleştirmenin bir diğer yolu, [Analysislevel](#analysislevel) özelliğini olarak ayarlamadır `latest` .
 
 ## <a name="run-time-configuration-properties"></a>Çalışma zamanı yapılandırma özellikleri
 

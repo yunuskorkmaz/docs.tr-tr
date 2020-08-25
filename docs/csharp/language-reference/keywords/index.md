@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ keyword'
 ms.custom: updateeachrelease
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 51e3802ba7b78dab4c3f96365c51af83098c05c7
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 3392b92cbd77e5b3f895af99a71f33d2ab43fa15
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656130"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812321"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 
@@ -39,7 +39,7 @@ Anahtar sözcükler, derleyiciye özel anlamlara sahip olan önceden tanımlanm�
 |[dışı](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
 |[protected](protected.md)|[genel](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[SByte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
-[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
+[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[dizisinde](../builtin-types/reference-types.md)|
 |[sýný](../builtin-types/struct.md)|[değiştirebilirsiniz](switch.md)|[this](this.md)|[throw](throw.md)|
 |[değeri](../builtin-types/bool.md)|[almaya](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
 |[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[olmayabilecek](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
@@ -57,12 +57,12 @@ Anahtar sözcükler, derleyiciye özel anlamlara sahip olan önceden tanımlanm�
 |[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[eşittir](equals.md)|
 |[Kaynak](from-clause.md)|[get](get.md)|[Genel](../operators/namespace-alias-qualifier.md)|
 |[grup](group-clause.md)|[birleştirin](into.md)|[ayrılma](join-clause.md)|
-|[atalım](let-clause.md)|[nameof](../operators/nameof.md)|[dayanır](on.md)|
-|[OrderBy](orderby-clause.md)|[Kısmi (tür)](partial-type.md)|[partial (Yöntem)](partial-method.md)|
-|[temizlenmesine](remove.md)|[seçin](select-clause.md)|[kurmak](set.md)|
-|[yönetilmeyen (genel tür kısıtlaması)](where-generic-type-constraint.md)|[deeri](value.md)|[l](var.md)|
-|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|[WHERE (sorgu yan tümcesi)](where-clause.md)|
-|[yield](yield.md)| | |
+|[atalım](let-clause.md)|[nameof](../operators/nameof.md)|[NotNull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|
+|[dayanır](on.md)|[OrderBy](orderby-clause.md)|[Kısmi (tür)](partial-type.md)|
+|[partial (Yöntem)](partial-method.md)|[temizlenmesine](remove.md)|[seçin](select-clause.md)|
+|[kurmak](set.md)|[yönetilmeyen (genel tür kısıtlaması)](where-generic-type-constraint.md)|[deeri](value.md)|
+|[l](var.md)|[when (filtre koşulu)](when.md)|[where (genel tür kısıtlaması)](where-generic-type-constraint.md)|
+|[WHERE (sorgu yan tümcesi)](where-clause.md)|[yield](yield.md)| |
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

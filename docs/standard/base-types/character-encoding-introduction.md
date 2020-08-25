@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: a5d838176bf4437a295ebe6c2cea8b1fe0eeeb61
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: d1f9878c7e7c07944a943c0b05e557ceaa5d1b2f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656299"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812126"
 ---
 # <a name="character-encoding-in-net"></a>.NET içinde karakter kodlaması
 
@@ -89,7 +89,7 @@ Yukarıdaki örnekte, char boşluk hariç her bir acter iki örnekle temsil edil
 
 Tek bir Unicode emoji Ayrıca `char` , aşağıdaki örnekte görüldüğü gibi bir Ox emoji gösterildiği gibi iki s tarafından da temsil edilir:
 
-```
+```output
 "🐂".Length = 2
 s[0] = '�' ('\ud83d')
 s[1] = '�' ('\udc02')
@@ -109,7 +109,7 @@ Aşağıda göründükleri Unicode TS bağlantıları ile kod noktası atamalar�
 
 |Ondalık|Onaltılık       |Örnek|Açıklama|
 |------:|----------|-------|-----------|
-|10     | `U+000A` |N/A| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
+|10     | `U+000A` |YOK| [SATıR BESLEME](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |65     | `U+0061` | a | [LATIN KÜÇÜK HARF A](https://www.unicode.org/charts/PDF/U0000.pdf) |
 |562    | `U+0232` | Ȳ | [LATIN BÜYÜK HARF Y WITH MACRON](https://www.unicode.org/charts/PDF/U0180.pdf) |
 |68.675 | `U+10C43`| 𐱃 | [ESKI TÜRKIC LETTER ORKHON](https://www.unicode.org/charts/PDF/U10C00.pdf) |

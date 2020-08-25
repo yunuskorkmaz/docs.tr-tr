@@ -3,12 +3,12 @@ title: C# dil sürümü oluşturma-C# Kılavuzu
 description: C# dil sürümünün projenize göre nasıl belirlendiği ve bu seçimin arkasındaki nedenler hakkında bilgi edinin. Varsayılanı el ile nasıl geçersiz kılacağınızı öğrenin.
 ms.custom: updateeachrelease
 ms.date: 05/20/2020
-ms.openlocfilehash: a27f3210f399f1bed190c18d778cf3824772d576
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 24797c564890b034683d2989010bc694aabc423c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656859"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811957"
 ---
 # <a name="c-language-versioning"></a>C# dil sürümü oluşturma
 
@@ -32,11 +32,14 @@ Derleyici, bu kurallara göre bir varsayılan değer belirler:
 | .NET Core        | 3.x     | C# 8.0                      |
 | .NET Core        | 2.x     | C# 7.3                      |
 | .NET Standard    | 2.1     | C# 8.0                      |
-| .NET Standard    | 2,0     | C# 7.3                      |
+| .NET Standard    | 2.0     | C# 7.3                      |
 | .NET Standard    | 'in     | C# 7.3                      |
 | .NET Framework   | tümü     | C# 7.3                      |
 
 Projeniz karşılık gelen önizleme dili sürümüne sahip bir önizleme çerçevesini hedefliyorsa, kullanılan dil sürümü önizleme dili sürümüdür. Yayınlanan bir .NET Core sürümünü hedefleyen projeleri etkilemeden, bu Önizlemedeki en son özellikleri herhangi bir ortamda kullanırsınız.
+
+> [!TIP]
+> Kullanmakta olduğunuz dil sürümünü görmek için `#error version` kodunuzda (büyük/küçük harfe duyarlı) koyun. Bu, derleyicinin, kullanılmakta olan derleyici sürümünü ve geçerli seçili dil sürümünü içeren bir ileti içeren bir tanılama, CS8304 oluşturmasını sağlar.
 
 ## <a name="override-a-default"></a>Varsayılanı geçersiz kıl
 

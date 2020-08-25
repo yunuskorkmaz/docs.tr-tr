@@ -4,12 +4,12 @@ description: Windows 'da Apache Spark için .NET uygulamanızı nasıl oluştura
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: how-to
-ms.openlocfilehash: 6d52e5be8c8e528880eece5a9b46fb08933c1eb3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d4755ff94ffc1f678bc078e382e353c203caba87
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617671"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812256"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows 'da Apache Spark için .NET uygulamanızı nasıl oluşturacağınızı öğrenin
 
@@ -26,7 +26,7 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
      * .NET masaüstü geliştirme
        * Tüm gerekli bileşenler
          * .NET Framework 4.6.1 geliştirme araçları
-     * .NET Core çoklu platform geliştirme
+     * .NET Core platformlar arası geliştirme
        * Tüm gerekli bileşenler
   3. **[Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)**' i yükler.
      - İşletim sisteminiz için uygun sürümü seçin. Örneğin, Windows x64 makinesi için *jdk-8u201-windows-x64.exe* .
@@ -53,7 +53,7 @@ Aşağıdaki önkoşulların tümüne zaten sahipseniz, [derleme](#build) adıml
      - Komut satırınızdan çalıştırabildiğinizi doğrulayın `spark-shell` .
         Örnek konsol çıkışı:
 
-        ```
+        ```output
         Welcome to
               ____              __
              / __/__  ___ _____/ /__

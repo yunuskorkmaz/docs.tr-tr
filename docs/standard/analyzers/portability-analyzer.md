@@ -4,12 +4,12 @@ description: .Net taşınabilirlik Çözümleyicisi aracını kullanarak kodunuz
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: d2a9551565e9ef0a2ed76960c869829fc2e86a1f
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: d8b5fcf8b6c3230e41585261de747edb9105aa31
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903616"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811814"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET taşınabilirlik Çözümleyicisi
 
@@ -39,7 +39,7 @@ Birçok projeyle bir çözümü çözümlemede yararlı bir adım, derlemelerin 
 
 Bunu almak için aşağıdaki komutu çalıştırabilirsiniz:
 
-```
+```console
 ApiPort.exe analyze -r DGML -f [directory or file]
 ```
 
@@ -54,8 +54,8 @@ Visual Studio 'daki tüm projenizi çözümlemek için **Çözüm Gezgini** ' de
 
 [Apiport konsol uygulamasını](https://aka.ms/apiportdownload)da kullanabilirsiniz.
 
-- Geçerli dizini çözümlemek için aşağıdaki komutu yazın:`ApiPort.exe analyze -f .`
-- Belirli bir. dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın:`ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- Geçerli dizini çözümlemek için aşağıdaki komutu yazın: `ApiPort.exe analyze -f .`
+- Belirli bir. dll dosyaları listesini analiz etmek için aşağıdaki komutu yazın: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 - `ApiPort.exe -?`Daha fazla yardım almak için çalıştırın
 
 Sahip olduğunuz ve bağlantı noktası yapmak istediğiniz tüm ilgili exe ve DLL dosyalarını dahil etmeniz ve uygulamanızın bağlı olduğu dosyaları dışlayamazsınız, ancak bağlantı noktası kullanamazsınız. Bu, size en uygun taşınabilirlik raporu sağlar.

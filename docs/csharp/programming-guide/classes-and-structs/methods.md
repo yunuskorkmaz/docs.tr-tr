@@ -6,12 +6,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: db35b48d4d7e70a54b38342e79fa2881b3857bd7
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 7b411283822360f3057b0d4f4e60ebade4fe45bc
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864156"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810943"
 ---
 # <a name="methods-c-programming-guide"></a>Yöntemler (C# Programlama Kılavuzu)
 
@@ -24,7 +24,7 @@ Yöntemi, bir dizi deyim içeren bir kod bloğudur. Program, metodu çağırarak
 
 Yöntemler veya, [class](../../language-reference/keywords/class.md) [struct](../../language-reference/builtin-types/struct.md) [interface](../interfaces/index.md) `public` `private` `abstract` `sealed` dönüş değeri, yöntemin adı ve herhangi bir yöntem parametresi gibi erişim düzeyi belirtilerek, veya gibi isteğe bağlı değiştiriciler belirtilerek bir sınıf, yapı veya arabirim içinde bildirilmiştir. Bu parçalar, yönteminin imzasıdır.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Bir yöntemin dönüş türü, yöntem aşırı yüklemesi amaçları için yöntemin imzasının bir parçası değildir. Ancak, bir temsilci ve işaret ettiği yöntem arasındaki uyumluluğun belirlenmesi sırasında yönteminin imzasının bir parçasıdır.
 
 Yöntem parametreleri parantez içine alınır ve virgülle ayrılır. Boş parantezler, yöntemin hiçbir parametre gerektirmediğini belirtir. Bu sınıf dört yöntem içerir:
@@ -127,15 +127,15 @@ Async özelliğini kullanarak, açık geri çağırmaları kullanmadan zaman uyu
 
 Zaman uyumsuz bir yöntem,, veya void dönüş türüne sahip olabilir <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.Task> . Void dönüş türü birincil olarak, bir void dönüş türünün gerekli olduğu olay işleyicilerini tanımlamak için kullanılır. Void döndüren zaman uyumsuz bir yöntem beklenemez ve void döndüren bir yöntemi çağıran yöntemin aldığı özel durumları yakalayamaz.
 
-Aşağıdaki örnekte, `DelayAsync` dönüş türüne sahip bir zaman uyumsuz yöntem <xref:System.Threading.Tasks.Task%601> . `DelayAsync`, `return` bir tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, öğesinin yöntem bildirimi `DelayAsync` bir dönüş türüne sahip olmalıdır `Task<int>` . Dönüş türü olduğu için `Task<int>` , `await` içindeki ifadesinin değerlendirmesi `DoSomethingAsync` aşağıdaki deyim tarafından gösterildiği gibi bir tamsayı oluşturur: `int result = await delayTask` .
+Aşağıdaki örnekte, `DelayAsync` dönüş türüne sahip bir zaman uyumsuz yöntem <xref:System.Threading.Tasks.Task%601> . `DelayAsync` , `return` bir tamsayı döndüren bir ifadeye sahiptir. Bu nedenle, öğesinin yöntem bildirimi `DelayAsync` bir dönüş türüne sahip olmalıdır `Task<int>` . Dönüş türü olduğu için `Task<int>` , `await` içindeki ifadesinin değerlendirmesi `DoSomethingAsync` aşağıdaki deyim tarafından gösterildiği gibi bir tamsayı oluşturur: `int result = await delayTask` .
 
-`startButton_Click`Yöntemi, void dönüş türüne sahip bir zaman uyumsuz metoda bir örnektir. `DoSomethingAsync`Zaman uyumsuz bir yöntem olduğundan, çağrının görevi `DoSomethingAsync` beklenmelidir, çünkü aşağıdaki deyimde gösterildiği gibi: `await DoSomethingAsync();` . Metodun `startButton_Click` bir ifadesi olduğundan, metodun değiştirici ile tanımlanması gerekir `async` `await` .
+`Main`Yöntemi, dönüş türüne sahip bir zaman uyumsuz metoda bir örnektir <xref:System.Threading.Tasks.Task> . `DoSomethingAsync`Yöntemine gider ve tek bir satırla ifade edildiğinden, `async` ve `await` anahtar sözcüklerini atlayabilir. `DoSomethingAsync`Zaman uyumsuz bir yöntem olduğundan, çağrının görevi `DoSomethingAsync` beklenmelidir, çünkü aşağıdaki deyimde gösterildiği gibi: `await DoSomethingAsync();` .
 
-[!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
+:::code language="csharp" source="snippets/classes-and-structs/methods/Program.cs":::
 
 Zaman uyumsuz bir yöntem herhangi bir [ref](../../language-reference/keywords/ref.md) veya [Out](../../language-reference/keywords/out-parameter-modifier.md) parametresi bildiremez, ancak bu parametrelere sahip yöntemleri çağırabilir.
 
-Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. [Async ve await Ile zaman uyumsuz programlama](../concepts/async/index.md), [zaman uyumsuz programlarda denetim akışı](../concepts/async/control-flow-in-async-programs.md)ve [zaman uyumsuz dönüş türleri](../concepts/async/async-return-types.md).
+Zaman uyumsuz yöntemler hakkında daha fazla bilgi için bkz. Async ve await ile zaman uyumsuz [dönüş türleri](../concepts/async/async-return-types.md) [ile zaman uyumsuz programlama](../concepts/async/index.md) .
 
 ## <a name="expression-body-definitions"></a>İfade gövdesi tanımları
 
@@ -169,7 +169,7 @@ Daha fazla bilgi için bkz. [yineleyiciler](../concepts/iterators.md).
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# Programlama Kılavuzu](../index.md)
-- [Sınıflar ve yapılar](index.md)
+- [Sınıflar ve Yapılar](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Statik Sınıflar ve Statik Sınıf Üyeleri](static-classes-and-static-class-members.md)
 - [Devralma](inheritance.md)

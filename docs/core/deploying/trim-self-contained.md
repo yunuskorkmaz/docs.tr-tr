@@ -4,12 +4,12 @@ description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları na
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 0fde409e9e5911213855ab206368d302b73eebb3
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: e3eb161b14f206723ad034af0a4a6ba8cd575578
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720130"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810618"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
@@ -36,28 +36,29 @@ Kod, yansıma aracılığıyla bir derlemeye dolaylı olarak başvurduğunda, de
 
 ## <a name="trim-your-app---cli"></a>Uygulamanızı kırpın-CLı
 
-[DotNet Publish](../tools/dotnet-publish.md) komutunu kullanarak uygulamanızı kırpın. Uygulamanızı yayımladığınızda, aşağıdaki üç ayarı ayarlayın:
+[DotNet Publish](../tools/dotnet-publish.md) komutunu kullanarak uygulamanızı kırpın. Uygulamanızı yayımladığınızda, aşağıdaki özellikleri ayarlayın:
 
-- Kendi içinde Yayımla: `--self-contained true`
-- Kırpmayı etkinleştir: `p:PublishTrimmed=true`
+- Belirli bir çalışma zamanı için kendi kendine kapsanan uygulama olarak yayımla: `-r win-x64`
+- Kırpmayı etkinleştir: `/p:PublishTrimmed=true`
 
 Aşağıdaki örnek, Windows için bir uygulamayı kendi içinde yayınlar ve çıktıyı kırpar.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
-    <SelfContained>true</SelfContained>
     <PublishTrimmed>true</PublishTrimmed>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 Aşağıdaki örnek, derleme içinde kullanılmayan kodun kırpılıp kırpılmayabileceği, agresif kırpma modunda bir uygulama yayımlar.
 
 ```xml
-<ItemGroup>
+<PropertyGroup>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishTrimmed>true</PublishTrimmed>
     <TrimMode>link</TrimMode>
     <SuppressTrimAnalysisWarnings>false</SuppressTrimAnalysisWarnings>
-</ItemGroup>
+</PropertyGroup>
 ```
 
 Daha fazla bilgi için bkz. [.NET Core uygulamalarını .NET Core CLI yayımlama](deploy-with-cli.md).

@@ -2,18 +2,18 @@
 title: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 description: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 05/26/2020
-ms.openlocfilehash: 40e9b114df1bd12fb05bfb773781d6009d087a06
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 84c7b64ad7708cf2def084593cd7f96eb0ad82e5
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702133"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810670"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
 Bu öğreticide, .NET Core uygulamalarıyla çalışmak üzere Visual Studio Code sağlanan hata ayıklama araçları tanıtılmaktadır.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 - Bu öğretici, [Visual Studio Code bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
@@ -25,7 +25,7 @@ Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bil
 
 Varsayılan olarak, Visual Studio Code başlatma ayarları hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
 
-1. Visual Studio Code başlatın.
+1. Visual Studio Code’u başlatma.
 
 1. [Visual Studio Code .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz projenin klasörünü açın.
 
@@ -51,13 +51,13 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
    Kimden:
 
-   ```
+   ```json
    "console": "internalConsole",
    ```
 
    Hedef:
 
-   ```
+   ```json
    "console": "integratedTerminal",
    ```
 

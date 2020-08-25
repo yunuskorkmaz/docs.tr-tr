@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 746fe35e6d6d4a75f363ccb82ae8dc6106854d8d
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381898"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810605"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek yolları
 
@@ -22,7 +22,7 @@ ms.locfileid: "87381898"
 
 ## <a name="in-this-section"></a>Bu bölümde
 
-- [Async ve await kullanarak Web 'e erişme](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)\
+- [Zaman uyumsuz görevleri tamamlarlar işleme](./programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)\
   [Async](./language-reference/keywords/async.md) ve [await](./language-reference/operators/await.md)kullanarak zaman uyumsuz bir çözümün nasıl oluşturulacağını gösterir.
 
 - [C# veya Visual Basic Windows Çalışma Zamanı bileşeni oluşturma ve JavaScript 'ten çağırma](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)\

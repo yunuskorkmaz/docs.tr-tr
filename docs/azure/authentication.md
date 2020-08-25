@@ -3,18 +3,18 @@ title: .NET için Azure kitaplıklarında kimlik doğrulamasını anlama
 description: .NET için Azure SDK ile kimlik doğrulamanın farklı yollarını açıklar.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: e588499a789fc5e7da7eb51009f97090ca75e562
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916608"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811385"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>.NET için Azure SDK ile kimlik doğrulama
 
 ## <a name="recommended-azureidentity"></a>Önerilen: Azure. Identity
 
-.NET için Azure SDK 'sindeki en son paketler, kimlik doğrulaması için ortak bir kimlik doğrulama paketi kullanır `Azure.Identity` . `Azure.Identity`Bu belgenin ilerleyen kısımlarında açıklanan diğer kimlik doğrulama mekanizmaları üzerinde kullanılması önerilir. Tarafından sunulan kimlik bilgilerini destekleyen paketler, üzerine `Azure.Identity` kurulmuştur `Azure.Core` ve Azure ile başlayan paket tanımlayıcılarına sahiptir *.* Kullanan paketlerin envanterini [görmek için paket listesine bakın](packages.md) `Azure.Core` .
+.NET için Azure SDK 'sindeki en son paketler, kimlik doğrulaması için ortak bir kimlik doğrulama paketi kullanır `Azure.Identity` . `Azure.Identity`Bu belgenin ilerleyen kısımlarında açıklanan diğer kimlik doğrulama mekanizmaları üzerinde kullanılması önerilir. Tarafından sunulan kimlik bilgilerini destekleyen paketler, üzerine `Azure.Identity` kurulmuştur `Azure.Core` ve *Azure*ile başlayan paket tanımlayıcılarına sahiptir. Kullanan paketlerin envanterini [görmek için paket listesine bakın](packages.md) `Azure.Core` .
 
 Projenizde kullanmayla ilgili tüm yönergeler için `Azure.Identity` bkz. [.net Için Azure Identity Client](/dotnet/api/overview/azure/identity-readme)belgeleri.
 

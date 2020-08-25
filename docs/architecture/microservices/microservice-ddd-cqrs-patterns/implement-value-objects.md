@@ -1,43 +1,43 @@
 ---
 title: Değer nesneleri uygulama
-description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Yeni Varlık Çerçevesi özelliklerini kullanarak değer nesnelerini uygulamak için ayrıntılara ve seçeneklere bakın.
-ms.date: 01/30/2020
-ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Yeni Entity Framework özelliklerini kullanarak değer nesneleri uygulamak için Ayrıntılar ve seçeneklere ulaşın.
+ms.date: 08/21/2020
+ms.openlocfilehash: 02eed7baaa364c62aa2df599f1d8b0e700dd215f
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805742"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811125"
 ---
-# <a name="implement-value-objects"></a>Değer nesnelerini uygulama
+# <a name="implement-value-objects"></a>Değer nesneleri uygulama
 
-Varlıklar ve toplamlar hakkında önceki bölümlerde ele alındığı gibi, kimlik varlıklar için esastır. Ancak, bir sistemde değer nesneleri gibi kimlik ve kimlik izleme gerektirmeyen birçok nesne ve veri öğesi vardır.
+Varlıklar ve toplamalar hakkında daha önceki bölümlerde açıklandığı gibi, varlıklar için de kimlik temel alınmıştır. Ancak, bir sistemde, değer nesneleri gibi kimlik ve kimlik izleme gerektirmeyen birçok nesne ve veri öğesi vardır.
 
-Bir değer nesnesi diğer varlıklara başvuruyapabilir. Örneğin, bir noktadan diğerine nasıl alınacağını açıklayan bir rota oluşturan bir uygulamada, bu yol bir değer nesnesi olacaktır. Bu belirli bir rota üzerinde noktaların bir anlık görüntü olurdu, ancak bu önerilen rota bir kimlik olmazdı, dahili şehir, yol, vb gibi varlıklar atıfta bulunsa bile.
+Bir değer nesnesi, diğer varlıklara başvurabilir. Örneğin, bir noktadan diğerine nasıl alınacağını açıklayan bir yol oluşturan bir uygulamada, bu yol bir değer nesnesi olur. Bu, belirli bir rotadaki noktaların anlık görüntüsü olacaktır, ancak bu önerilen yolun, dahili olarak şehir, yol vb. varlıklara başvurabileceği bir kimliğe sahip olmaması gerekir.
 
-Şekil 7-13, Sipariş toplamıiçindeki Adres değeri nesnesini gösterir.
+Şekil 7-13, düzen toplama içindeki adres değeri nesnesini gösterir.
 
-![Sipariş Toplamı'nın içindeki Adres değeri nesnesini gösteren diyagram.](./media/implement-value-objects/value-object-within-aggregate.png)
+![Düzen toplama içindeki adres değeri-nesnesi gösteren diyagram.](./media/implement-value-objects/value-object-within-aggregate.png)
 
-**Şekil 7-13**. Sipariş toplamı içindeki adres değeri nesnesi
+**Şekil 7-13**. Sıra toplaması içindeki adres değeri nesnesi
 
-Şekil 7-13'te gösterildiği gibi, bir varlık genellikle birden çok özniteliklerden oluşur. Örneğin, `Order` varlık bir kimliğe sahip bir varlık olarak modellenebilir ve Sipariş Kimliği, OrderDate, OrderItems, vb. gibi öznitelikler kümesinden dahili olarak oluşturulabilir. Ancak, sadece ülke/bölge, sokak, şehir, vb. oluşan karmaşık bir değer olan ve bu etki alanında kimliği olmayan adres, modellenmeli ve bir değer nesnesi olarak ele alınmalıdır.
+Şekil 7-13 ' de gösterildiği gibi, bir varlık genellikle birden çok öznitelikten oluşur. Örneğin, `Order` varlık kimliği olan bir varlık olarak modellenebilir ve OrderID, OrderDate, OrderItems vb. gibi bir öznitelik kümesinin dahili olarak oluşturulmuş olabilir. Ancak, ülke/bölge, cadde, şehir, vb. gibi karmaşık bir değer olan ve bu etki alanında hiçbir kimliği olmayan adresin, modellenmesi ve değer nesnesi olarak kabul edilmesinin gerekir.
 
 ## <a name="important-characteristics-of-value-objects"></a>Değer nesnelerinin önemli özellikleri
 
 Değer nesneleri için iki ana özellik vardır:
 
-- Kimlikleri yok.
+- Hiçbir kimliği yoktur.
 
-- Değişmezler.
+- Bunlar sabittir.
 
-İlk karakteristik zaten tartışıldı. Değişmezlik önemli bir gerekliliktir. Nesne oluşturulduktan sonra bir değer nesnesinin değerleri değişmez olmalıdır. Bu nedenle, nesne oluşturulduğunda, gerekli değerleri sağlamanız gerekir, ancak nesnenin ömrü boyunca bunların değişmesine izin vermemelisiniz.
+İlk özellik zaten tartılandı. Dengeszlik kullanılabilirliği önemli bir gereksinimdir. Nesne oluşturulduktan sonra bir değer nesnesinin değerleri sabit olmalıdır. Bu nedenle, nesne oluşturulduğunda gerekli değerleri sağlamanız gerekir, ancak nesnenin ömrü boyunca değişmelerine izin vermeniz gerekir.
 
-Değer nesneleri, değişmez doğası sayesinde performans için belirli hileler gerçekleştirmenize olanak sağlar. Bu, özellikle, çoğu aynı değerlere sahip binlerce değer nesnesi örneği olabilecek sistemlerde geçerlidir. Değişmez doğaları yeniden kullanılmalarını sağlar; değerleri aynı olduğundan ve kimlikleri olmadığından değiştirilebilir nesneler olabilirler. Bu tür optimizasyon bazen yavaş çalışan yazılım ve iyi performans ile yazılım arasında bir fark yaratabilir. Tabii ki, tüm bu durumlarda uygulama ortamı ve dağıtım bağlamında bağlıdır.
+Değer nesneleri, belirli püf noktalarını, gerçek sabit doğası sayesinde performans için gerçekleştirmenize olanak tanır. Bu, özellikle de aynı değere sahip binlerce değer nesne örneği olabilen sistemlerde geçerlidir. Sabit doğası, bunların yeniden kullanılmasını sağlar; değerleri aynı olduğundan ve kimlik olmadığından, bunlar değiştirilebilir nesneler olabilir. Bu tür iyileştirme, bazen yavaş çalışan yazılımlar ve iyi performansa sahip yazılımlar arasında farklılık yapabilirler. Tabii ki, tüm bu durumlar uygulama ortamına ve dağıtım bağlamına bağlıdır.
 
-## <a name="value-object-implementation-in-c"></a>C'de değer nesnesi uygulaması\#
+## <a name="value-object-implementation-in-c"></a>C 'de değer nesnesi uygulama\#
 
-Uygulama açısından, tüm öznitelikler (bir değer nesnesi kimliğe dayalı olmamalıdır) ve diğer temel özellikleri arasında karşılaştırma dayalı eşitlik gibi temel yardımcı program yöntemleri olan bir değer nesnesi taban sınıf olabilir. Aşağıdaki örnekte, eShopOnContainers'dan sipariş mikrohizmetinde kullanılan bir değer nesnesi taban sınıfı gösterilmektedir.
+Uygulama açısından, tüm öznitelikler arasındaki karşılaştırmaya göre (bir değer nesnesi kimlik tabanlı olmaması gerektiğinden) ve diğer temel özelliklerle eşitlik gibi temel yardımcı yöntemlere sahip bir değer nesnesi taban sınıfına sahip olabilirsiniz. Aşağıdaki örnek, eShopOnContainers 'dan sıralama mikro hizmetinde kullanılan bir değer nesnesi temel sınıfını gösterir.
 
 ```csharp
 public abstract class ValueObject
@@ -56,7 +56,7 @@ public abstract class ValueObject
         return !(EqualOperator(left, right));
     }
 
-    protected abstract IEnumerable<object> GetAtomicValues();
+    protected abstract IEnumerable<object> GetEqualityComponents();
 
     public override bool Equals(object obj)
     {
@@ -65,37 +65,22 @@ public abstract class ValueObject
             return false;
         }
 
-        ValueObject other = (ValueObject)obj;
-        IEnumerator<object> thisValues = GetAtomicValues().GetEnumerator();
-        IEnumerator<object> otherValues = other.GetAtomicValues().GetEnumerator();
-        while (thisValues.MoveNext() && otherValues.MoveNext())
-        {
-            if (ReferenceEquals(thisValues.Current, null) ^
-                ReferenceEquals(otherValues.Current, null))
-            {
-                return false;
-            }
+        var other = (ValueObject)obj;
 
-            if (thisValues.Current != null &&
-                !thisValues.Current.Equals(otherValues.Current))
-            {
-                return false;
-            }
-        }
-        return !thisValues.MoveNext() && !otherValues.MoveNext();
+        return this.GetEqualityComponents().SequenceEqual(other.GetEqualityComponents());
     }
 
     public override int GetHashCode()
     {
-        return GetAtomicValues()
-         .Select(x => x != null ? x.GetHashCode() : 0)
-         .Aggregate((x, y) => x ^ y);
+        return GetEqualityComponents()
+            .Select(x => x != null ? x.GetHashCode() : 0)
+            .Aggregate((x, y) => x ^ y);
     }
     // Other utility methods
 }
 ```
 
-Aşağıdaki örnekte gösterilen Adres değeri nesnesinde olduğu gibi, gerçek değer nesnenizi uygularken bu sınıfı kullanabilirsiniz:
+Aşağıdaki örnekte gösterilen adres değeri nesnesi gibi gerçek değer nesneniz uygularken bu sınıfı kullanabilirsiniz:
 
 ```csharp
 public class Address : ValueObject
@@ -106,7 +91,7 @@ public class Address : ValueObject
     public String Country { get; private set; }
     public String ZipCode { get; private set; }
 
-    private Address() { }
+    public Address() { }
 
     public Address(string street, string city, string state, string country, string zipcode)
     {
@@ -117,7 +102,7 @@ public class Address : ValueObject
         ZipCode = zipcode;
     }
 
-    protected override IEnumerable<object> GetAtomicValues()
+    protected override IEnumerable<object> GetEqualityComponents()
     {
         // Using a yield return statement to return each element one at a time
         yield return Street;
@@ -129,21 +114,21 @@ public class Address : ValueObject
 }
 ```
 
-Adres'in bu değer nesnesi uygulamasının nasıl bir kimliği olmadığını ve bu nedenle, Değer Nesnesi sınıfında bile Adres sınıfında kimlik alanı olmadığını görebilirsiniz.
+Bu değerin nesne uygulamasının bir kimlik olmadığını ve bu nedenle, hiçbir kimlik alanı olmadığını, hiçbir ID alanını ve ne zaman ValueObject sınıfında bile olmadığını görebilirsiniz.
 
-Varlık Çerçevesi (EF) tarafından kullanılacak bir sınıfta kimlik alanı olmaması, kimliği olmayan daha iyi değer nesnelerinin uygulanmasına büyük ölçüde yardımcı olan EF Core 2.0'a kadar mümkün değildi. Bu tam olarak bir sonraki bölümün açıklamasıdır.
+Entity Framework (EF) tarafından kullanılmak üzere bir sınıfta ID alanı olmadığından, KIMLIK olmayan daha iyi değer nesnelerini uygulama konusunda büyük ölçüde yardımcı olan EF Core 2,0 'e kadar mümkün değildir. Bu, bir sonraki bölümün tam olarak bir açıklaması olur.
 
-Bu değer nesneleri, değişmez olan, salt okunur olması gerektiğini iddia edilebilir (yani, sadece almak özellikleri var), ve bu gerçekten doğrudur. Ancak, değer nesneleri genellikle seri hale getirilir ve ileti kuyruklarından geçmek için deserialized ve salt okunur değerleri atama deserializer durur, bu yüzden sadece olarak `private set`bırakın , hangi pratik olması için sadece okunur.
+Değer nesnelerinin sabit olması, salt okunurdur (yani salt al özelliklerine sahip) ve gerçekten doğru olması gerekir. Ancak, değer nesneleri genellikle serileştirilmiş ve seri durumdan çıkarılmış ve ileti kuyruklarıyla birlikte kaldırılacak ve Salt okunabilir hale getirilemez, bu yüzden yalnızca `private set` , pratik olması gereken salt okunurdur.
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>EF Core 2.0 ve sonrası ile veritabanındaki değer nesneleri nasıl kalıcı
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>EF Core 2,0 ve üzeri ile veritabanında değer nesnelerini kalıcı hale getirme
 
-Etki alanı modelinizde bir değer nesnesini nasıl tanımladığınızı gördün. Ama nasıl aslında veritabanında Genellikle kimlik ile varlıkları hedefleyen varlık Framework Core kullanarak veritabanında devam edebilirsiniz?
+Yalnızca etki alanı modelinizde bir değer nesnesinin nasıl tanımlanacağını gördünüz. Ancak, genellikle kimliği olan varlıkları hedeflediğinden bu Entity Framework Core kullanarak veritabanını veritabanına nasıl kalıcı hale getirebilirsiniz?
 
-### <a name="background-and-older-approaches-using-ef-core-11"></a>EF Core 1.1 kullanarak arka plan ve eski yaklaşımlar
+### <a name="background-and-older-approaches-using-ef-core-11"></a>EF Core 1,1 kullanarak arka plan ve eski yaklaşımlar
 
-Arka plan olarak, EF Core 1.0 ve 1.1 kullanırken bir sınırlama, geleneksel .NET Framework'de EF 6.x'te tanımlandığı gibi [karmaşık türleri](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) kullanamamanızdır. Bu nedenle, EF Core 1.0 veya 1.1 kullanıyorsanız, değer nesnenizi kimlik alanına sahip bir EF varlığı olarak depolamanız gerekir. Daha sonra, daha çok kimliği olmayan bir değer nesnesine benzemektedir, böylece etki alanı modelinde bir değer nesnesinin kimliğinin önemli olmadığını açıkça belirtebilirsiniz. Kimliği [gölge özellik](https://docs.microsoft.com/ef/core/modeling/shadow-properties )olarak kullanarak bu kimliği gizleyebilirsiniz. Modelde kimliği gizlemek için bu yapılandırma EF altyapı düzeyinde ayarlandığından, etki alanı modeli için saydam tür olacaktır.
+Arka plan olarak, 1,0 ve 1,1 EF Core kullanılırken, geleneksel .NET Framework EF 6. x bölümünde tanımlandığı gibi [karmaşık türleri](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) kullanmadığınıza ilişkin bir sınırlama vardır. Bu nedenle, 1,0 veya 1,1 EF Core kullanıyorsanız, değer nesnenizin kimliğini kimlik alanı olan bir EF varlığı olarak depolamanız gerekir. Daha sonra, kimliği olmayan bir değer nesnesi gibi daha fazla baktığı için, bir değer nesnesinin kimliğinin etki alanı modelinde önemli olmadığını net hale getirmek için KIMLIĞINI gizleyebilirsiniz. KIMLIĞI bir [Gölge Özellik](https://docs.microsoft.com/ef/core/modeling/shadow-properties )olarak kullanarak bu kimliği gizleyebilirsiniz. Modeldeki KIMLIĞI gizlemek için bu yapılandırma EF altyapı düzeyinde ayarlandığından, etki alanı modelinize yönelik bir tür saydam olacaktır.
 
-eShopOnContainers'ın (.NET Core 1.1) ilk sürümünde, EF Core altyapısının ihtiyaç duyduğu gizli kimlik, altyapı projesinde Akıcı API kullanılarak DbContext düzeyinde aşağıdaki şekilde uygulanmıştır. Bu nedenle, kimlik etki alanı modeli açısından gizliydi, ancak yine de altyapıda mevcuttu.
+EShopOnContainers 'un ilk sürümünde (.NET Core 1,1), EF Core altyapısı tarafından gereken gizli KIMLIK, altyapı projesinde akıcı API kullanılarak, DbContext düzeyinde aşağıdaki şekilde uygulanmıştır. Bu nedenle, KIMLIK, görünümün etki alanı model noktasından gizlendi, ancak hala altyapıda var.
 
 ```csharp
 // Old approach with EF Core 1.1
@@ -158,35 +143,35 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 }
 ```
 
-Ancak, bu değer nesnesinin veritabanına kalıcılığı farklı bir tablodaki normal bir varlık gibi gerçekleştirildi.
+Ancak, bu değer nesnesinin veritabanına kalıcılığı, farklı bir tablodaki normal bir varlık gibi gerçekleştirildi.
 
-EF Core 2.0 ve sonraki ile değer nesnelerini kalıcı olarak sürdürmek için yeni ve daha iyi yollar vardır.
+EF Core 2,0 ve üzeri sürümlerde, değer nesnelerini kalıcı hale getirmek için yeni ve daha iyi yollar vardır.
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>EF Core 2.0 ve sonraki işlemlerde sahip olunan varlık türleri olarak değer nesnelerini kalıcı olarak
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>Değer nesnelerini EF Core 2,0 ve sonraki sürümlerde sahip olan varlık türleri olarak kalıcı hale getirme
 
-DDD'deki kanonik değer nesnesi deseni ile EF Core'daki sahip olunan varlık türü arasındaki bazı boşluklara rağmen, şu anda EF Core 2.0 ve sonraki değerlere sahip nesneleri kalıcı hale getirmek için en iyi yoldur. Bu bölümün sonunda sınırlamaları görebilirsiniz.
+DDD 'daki kurallı değer nesne deseninin yanı sıra EF Core sahip olan varlık türü arasında bazı boşluklar olsa da, EF Core 2,0 ve üzeri ile değer nesnelerini kalıcı hale getirmenin en iyi yolu vardır. Bu bölümün sonundaki sınırlamalara bakabilirsiniz.
 
-Sahip olunan varlık türü özelliği, sürüm 2.0'dan beri EF Core'a eklendi.
+Sahip olan varlık türü özelliği 2,0 sürümünden bu yana EF Core eklenmiştir.
 
-Sahip olunan varlık türü, etki alanı modelinde açıkça tanımlanan kendi kimliği olmayan ve varlıklarınızdan herhangi birinde değer nesnesi gibi özellikler olarak kullanılan türleri eşlemenize olanak tanır. Sahip olunan varlık türü, aynı CLR türünü başka bir varlık türüyle paylaşır (diğer bir şey, bu sadece normal bir sınıftır). Tanımlayıcı gezintiyi içeren varlık sahibi varlıktır. Sahibini sorgularken, sahip olunan türler varsayılan olarak dahil edilir.
+Sahip olunan bir varlık türü, kendi kimliğine sahip olmayan türleri etki alanı modelinde açıkça tanımlamış ve varlıklarınızda bir değer nesnesi gibi özellikler olarak kullanılan türleri eşlemenizi sağlar. Sahip olan bir varlık türü, başka bir varlık türüyle aynı CLR türünü paylaşır (yani, yalnızca normal bir sınıftır). Tanımlama gezintisini içeren varlık, sahip varlıktır. Sahibi sorgulanırken, sahip olan türler varsayılan olarak dahil edilir.
 
-Sadece etki alanı modeline bakarak, sahip olunan bir tür herhangi bir kimliği yokmuş gibi görünür. Ancak, kapakları altında, sahip olunan türleri kimlik var, ancak sahibi navigasyon özelliği bu kimliğin bir parçasıdır.
+Yalnızca etki alanı modeline bakarak, sahip olunan bir tür herhangi bir kimliğe sahip değil gibi görünür. Bununla birlikte, sahip olunan türlerin altında kimlik vardır ancak sahip gezinti özelliği bu kimliğin bir parçasıdır.
 
-Sahip olunan türlerin örneklerinin kimliği tamamen kendilerine ait değildir. Üç bileşenden oluşur:
+Sahip olunan türlerin örneklerinin kimliği tamamen kendi kendine değil. Üç bileşenden oluşur:
 
-- Sahibinin kimliği
+- Sahibin kimliği
 
-- Onları gösteren navigasyon özelliği
+- İşaret eden gezinti özelliği
 
-- Sahip olunan türlerin koleksiyonlarısöz konusu olduğunda, bağımsız bir bileşen (EF Core 2.2 ve sonrası olarak desteklenir).
+- Sahip olunan türlerin koleksiyonları durumunda bağımsız bir bileşen (EF Core 2,2 ve üzeri sürümlerde desteklenir).
 
-Örneğin, eShopOnContainers'daki Sipariş etki alanı modelinde, Sipariş varlığının bir parçası olarak, Adres değeri nesnesi, Sipariş varlığı olan sahip varlık içinde sahip olunan varlık türü olarak uygulanır. Adres, etki alanı modelinde tanımlı kimlik özelliği olmayan bir türdür. Belirli bir siparişin sevkiyat adresini belirtmek için Sipariş türünün bir özelliği olarak kullanılır.
+Örneğin, eShopOnContainers 'daki sıralama etki alanı modelinde, sipariş varlığının bir parçası olarak, adres değeri nesnesi, sahip varlığı içinde, sipariş varlığı olan bir sahip varlık türü olarak uygulanır. `Address` , etki alanı modelinde tanımlanmış Identity özelliği olmayan bir türdür. Bu, belirli bir siparişin sevkiyat adresini belirtmek için sipariş türünün bir özelliği olarak kullanılır.
 
-Kural olarak, sahip olunan tür için bir gölge birincil anahtar oluşturulur ve tablo bölme kullanılarak sahibi ile aynı tabloya eşlenir. Bu, sahip olunan türleri, geleneksel .NET Framework'de EF6'da karmaşık türlerin nasıl kullanıldığına benzer şekilde kullanmanıza olanak tanır.
+Kurala göre, sahip olunan tür için bir gölge birincil anahtar oluşturulur ve tablo bölme kullanılarak aynı tabloyla aynı tabloyla eşleştirilir. Bu, sahip oldukları türlerin geleneksel .NET Framework EF6 içinde nasıl kullanıldığı hakkında benzer şekilde kullanılmasına olanak tanır.
 
-Sahip olunan türlerin EF Core'daki sözleşme tarafından hiçbir zaman keşfedilmeyişediğini, bu nedenle bunları açıkça beyan etmeniz gerektiğini unutmayın.
+Sahip oldukları EF Core hiçbir kurala göre hiçbir şekilde bulunamadığına dikkat etmeniz önemlidir, bu nedenle bunları açıkça bildirmeniz gerekir.
 
-eShopOnContainers, OrderingContext.cs dosyasında, `OnModelCreating()` yöntem içinde, birden fazla altyapı yapılandırmaları uygulanır. Bunlardan biri Sipariş varlığı ile ilgilidir.
+EShopOnContainers içinde, OrderingContext.cs dosyasında, yöntemi içinde, `OnModelCreating()` birden çok altyapı yapılandırması uygulanır. Bunlardan biri sipariş varlığıyla ilgilidir.
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -201,7 +186,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 }
 ```
 
-Aşağıdaki kodda, kalıcılık altyapısı Sipariş varlığı için tanımlanır:
+Aşağıdaki kodda, sıra varlığı için kalıcılık altyapısı tanımlanmıştır:
 
 ```csharp
 // Part of the OrderEntityTypeConfiguration.cs class
@@ -224,11 +209,11 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 }
 ```
 
-Önceki kodda, `orderConfiguration.OwnsOne(o => o.Address)` yöntem `Address` özelliğitin `Order` türünün sahip olduğu bir varlık olduğunu belirtir.
+Önceki kodda, `orderConfiguration.OwnsOne(o => o.Address)` yöntemi, `Address` özelliğin türün sahip olduğu bir varlık olduğunu belirtir `Order` .
 
-Varsayılan olarak, EF Core kuralları veritabanı sütunlarını sahip olunan `EntityProperty_OwnedEntityProperty`varlık türündeki özellikleri . Bu nedenle, tabloda , `Orders` (ve benzeri `Address_Street` `Address_City` için `State`, `Country`, ve `ZipCode`) adlarıyla tabloda görünür. `Address`
+Varsayılan olarak EF Core kurallar, sahip olduğu varlık türünün özelliklerinin veritabanı sütunlarını olarak adlandırın `EntityProperty_OwnedEntityProperty` . Bu nedenle, iç özellikleri, `Address` `Orders` `Address_Street` `Address_City` (ve için,, ve için) adlarına sahip tabloda görüntülenir `State` `Country` `ZipCode` .
 
-Bu sütunları `Property().HasColumnName()` yeniden adlandırmak için akıcı yöntemi ekleyebilirsiniz. Kamu malı `Address` olduğu durumlarda, haritalamalar aşağıdaki gibi olacaktır:
+`Property().HasColumnName()`Bu sütunları yeniden adlandırmak için floent metodunu ekleyebilirsiniz. Ortak özellik olduğu durumlarda `Address` , eşlemeler aşağıdakine benzer olacaktır:
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.Address)
@@ -238,7 +223,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-Yöntemi akıcı bir haritalamayla zincirlemek `OwnsOne` mümkündür. Aşağıdaki varsayımsal `OrderDetails` örnekte, sahip `BillingAddress` `ShippingAddress`ve , `Address` her ikisi de türü vardır. Sonra `OrderDetails` türüne `Order` aittir.
+`OwnsOne`Yöntemi akıcı bir eşlemede zincirlemek mümkündür. Aşağıdaki kuramsal örnekte, ve olan `OrderDetails` `BillingAddress` ve `ShippingAddress` her iki tür olan `Address` . Daha sonra `OrderDetails` `Order` türüne aittir.
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
@@ -269,68 +254,68 @@ public class Address
 
 ### <a name="additional-details-on-owned-entity-types"></a>Sahip olunan varlık türleri hakkında ek ayrıntılar
 
-- OwnsOne akıcı API'sini kullanarak bir gezinti özelliğini belirli bir türe yapılandırdığınızda sahip olunan türler tanımlanır.
+- Sahip olan türler, OwnsOne Fluent API kullanarak belirli bir türe bir gezinti özelliği yapılandırdığınızda tanımlanmıştır.
 
-- Meta veri modelimizde sahip olunan bir türün tanımı bir bileşimidir: sahip türü, gezinti özelliği ve sahip olunan türün CLR türü.
+- Meta veri modelinizdeki sahip olunan bir türün tanımı, bir bileşiminin türü, gezinti özelliği ve sahip olunan türün CLR türü.
 
-- Yığınımızdaki sahipolunan bir tür örneğinin kimliği (anahtarı), sahip türünün kimliğinin ve sahip olunan türün tanımının bir bileşimidir.
+- Yığınımızda sahip olan bir tür örneğinin kimliği (anahtarı), sahip türünün kimliğinin ve sahip olunan türün tanımının bir bileşiminin bir örneğidir.
 
-#### <a name="owned-entities-capabilities"></a>Sahip olunan varlıklar yetenekleri
+#### <a name="owned-entities-capabilities"></a>Sahip olunan varlıkların özellikleri
 
-- Sahip olunan türler, sahip olunan (iç içe sahip olunan türler) veya sahip olunmayan (diğer varlıklara düzenli başvuru gezinme özellikleri) diğer varlıklara başvurur.
+- Sahip olunan türler, sahip olunan (iç içe geçmiş türler) veya sahip olmayan (diğer varlıklara ait normal başvuru gezinti özellikleri) diğer varlıklara başvurabilir.
 
-- Ayrı gezinti özellikleri aracılığıyla aynı sahip varlığında farklı sahip olunan türler olarak aynı CLR türünü eşleyebilirsiniz.
+- Aynı CLR türünü, ayrı gezinti özellikleri aracılığıyla aynı sahip varlıktaki farklı sahip türlerle eşleyebilirsiniz.
 
-- Tablo bölme kuralına göre ayarlanır, ancak ToTable'ı kullanarak sahip olunan türü farklı bir tabloyla eşleyerek devre dışı bırakabilirsiniz.
+- Tablo bölme kurala göre ayarlanır, ancak ait türü ToTable kullanarak farklı bir tabloyla eşleyerek bu seçeneği kullanabilirsiniz.
 
-- İstekli yükleme, sahip olunan türlerde otomatik olarak gerçekleştirilir, `.Include()` yani sorguyu çağırmaya gerek yoktur.
+- Eager yüklemesi, sahip olunan türler üzerinde otomatik olarak gerçekleştirilir, yani sorgu üzerinde çağrı yapmanız gerekmez `.Include()` .
 
-- EF Core 2.1 `[Owned]`ve sonrası kullanılarak öznitelik ile yapılandırılabilir.
+- `[Owned]`EF Core 2,1 ve üzeri kullanılarak özniteliğiyle yapılandırılabilir.
 
-- Sahip olunan türlerin koleksiyonlarını işleyebilir (sürüm 2.2 ve sonraki sürümleri kullanarak).
+- , Sahip olunan türlerin koleksiyonlarını işleyebilir (sürüm 2,2 ve üzeri kullanarak).
 
-#### <a name="owned-entities-limitations"></a>Sahip olunan varlıklar sınırlamaları
+#### <a name="owned-entities-limitations"></a>Sahip olunan varlıkların sınırlamaları
 
-- Sahip olunan bir `DbSet<T>` tür (tasarım gereği) oluşturamazsınız.
+- `DbSet<T>`Sahip olunan bir tür (tasarıma göre) oluşturamazsınız.
 
-- Sahip olunan `ModelBuilder.Entity<T>()` türleri (şu anda tasarımgereği) arayamayabilirsiniz.
+- `ModelBuilder.Entity<T>()`Sahip olunan türler üzerinde çağrılamaz (Şu anda tasarım kaynaklı).
 
-- Aynı tabloda sahibiyle eşlenen isteğe bağlı (yani geçersiz kılınabilir) sahip olunan türler için destek yok (diğer bir deyişle, tablo bölmeyi kullanarak). Bunun nedeni, haritalama nın her özellik için yapılmasıdır, bir bütün olarak null karmaşık değeri için ayrı bir nöbetçimiz yoktur.
+- Aynı tablodaki (yani, tablo bölme kullanılarak) sahip ile eşlenmiş isteğe bağlı (null yapılabilir) türler desteklenmez. Bunun nedeni her bir özellik için eşlemenin yapıldığından, null karmaşık değer için bir bütün olarak ayrı bir Sentinel yoktur.
 
-- Sahip olunan türler için devralma eşleme desteği yok, ancak aynı devralma hiyerarşilerinin iki yaprak türünü farklı sahip olunan türler olarak eşlenebilmelisiniz. EF Core, aynı hiyerarşinin bir parçası oldukları gerçeğini düşünmez.
+- Sahip olunan türler için devralma-eşleme desteği yoktur, ancak aynı devralma hiyerarşilerindeki iki yaprak türünü farklı sahipli türlerle eşleyemezsiniz. EF Core, aynı hiyerarşinin bir parçası oldukları gerçeğiyle ilgili bir neden olmayacaktır.
 
-#### <a name="main-differences-with-ef6s-complex-types"></a>EF6'nın karmaşık tipleri ile temel farklılıklar
+#### <a name="main-differences-with-ef6s-complex-types"></a>EF6's karmaşık türlerle ana farklılıklar
 
-- Tablo bölme isteğe bağlıdır, diğer bir süre sonra isteğe bağlı olarak ayrı bir tabloya eşlenebilir ve yine de sahip olunabilir.
+- Tablo bölme isteğe bağlıdır, diğer bir deyişle, isteğe bağlı olarak ayrı bir tabloyla eşleştirilebilir ve sahip oldukları türler de vardır.
 
-- Diğer varlıklara başvuruda bulunabilirler (diğer varlıklar, sahip olunmayan diğer türlerle ilişkilerde bağımlı taraf olarak hareket edebilirler).
+- Diğer varlıklara başvurabilir (diğer bir deyişle, bağımlı olan diğer türlere ilişkilerle ilgili olarak görev yapabilir).
 
 ## <a name="additional-resources"></a>Ek kaynaklar
 
-- **Martin Fowler' ı. ValueObject deseni** \
+- **Marwler. ValueObject kalıbı** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans' ı. Etki Alanı Odaklı Tasarım: Yazılımın Kalbinde Karmaşıklıkla Mücadele.** (Kitap; değer nesnelerinin bir tartışma içerir) \
+- **Eric Evans. Etki alanı odaklı tasarım: yazılım Kalbunda karmaşıklık karmaşıklığı.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Vaughn Vernon' u. Etki Alanı Odaklı Tasarımın Uygulanması.** (Kitap; değer nesnelerinin bir tartışma içerir) \
+- **Vaughn versuz. Etki alanı odaklı tasarım uygulama.** (Kitap; değer nesnelerinin bir tartışmasını içerir) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Sahip olunan Varlık Türleri** \
+- **Sahip olan varlık türleri** \
   <https://docs.microsoft.com/ef/core/modeling/owned-entities>
 
-- **Gölge Özellikleri** \
+- **Gölge özellikleri** \
   <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
-- **Karmaşık türleri ve/veya değer nesneleri.** EF Core GitHub repo (Sorunlar sekmesinde) \
+- **Karmaşık türler ve/veya değer nesneleri**. EF Core GitHub deposu 'nda tartışma (sorunlar sekmesi) \
   <https://github.com/dotnet/efcore/issues/246>
 
-- **ValueObject.cs.** eShopOnContainers'da temel değer nesne sınıfı. \
+- **ValueObject.cs.** EShopOnContainers içindeki temel değer nesne sınıfı. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
-- **Adres sınıfı.** eShopOnContainers örnek değer nesne sınıfı. \
+- **Adres sınıfı.** EShopOnContainers içinde örnek değer nesne sınıfı. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs>
 
 > [!div class="step-by-step"]
-> [Önceki](seedwork-domain-model-base-classes-interfaces.md)
-> [Sonraki](enumeration-classes-over-enum-types.md)
+> [Önceki](seedwork-domain-model-base-classes-interfaces.md) 
+>  [Sonraki](enumeration-classes-over-enum-types.md)
