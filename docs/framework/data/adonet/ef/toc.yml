@@ -77,38 +77,17 @@
               href: sqlclient-for-ef-types.md
             - name: Entity Framework için SqlClient’ta Bilinen Sorunlar
               href: known-issues-in-sqlclient-for-entity-framework.md
-    - name: Entity Framework Veri Sağlayıcısı Yazma
-      href: writing-an-ef-data-provider.md
+    - name: Geliştirme ve Dağıtım Konuları
+      href: development-and-deployment-considerations.md
       items:
-        - name: SQL Üretimi
-          href: sql-generation.md
-          items:
-            - name: Komut Ağaçlarının Şekli
-              href: the-shape-of-the-command-trees.md
-            - name: Komut Ağaçlarından SQL Oluşturma - En İyi Yöntemler
-              href: generating-sql-from-command-trees-best-practices.md
-            - name: Örnek Sağlayıcısında SQL Oluşturma
-              href: sql-generation-in-the-sample-provider.md
-              items:
-                - name: Mimari ve Tasarım
-                  href: architecture-and-design.md
-                - name: 'İzlenecek yol: SQL Üretimi'
-                  href: walkthrough-sql-generation.md
-        - name: Değişiklik SQL Oluşturma
-          href: modification-sql-generation.md
-        - name: Sağlayıcı Bildirimi Belirtimi
-          href: provider-manifest-specification.md
-- name: Geliştirme ve Dağıtım Konuları
-  href: development-and-deployment-considerations.md
-  items:
-    - name: Güvenlik Değerlendirmeleri
-      href: security-considerations.md
-    - name: Başarım Değerlendirmeleri
-      href: performance-considerations.md
-    - name: Geçiş Konuları
-      href: migration-considerations.md
-    - name: Dağıtım Hakkında Önemli Noktalar
-      href: deployment-considerations.md
+        - name: Güvenlik Değerlendirmeleri
+          href: security-considerations.md
+        - name: Başarım Değerlendirmeleri
+          href: performance-considerations.md
+        - name: Geçiş Konuları
+          href: migration-considerations.md
+        - name: Dağıtım Hakkında Önemli Noktalar
+          href: deployment-considerations.md
 - name: Entity Framework Kaynakları
   href: resources.md
 - name: Entity Framework Terimleri

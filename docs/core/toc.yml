@@ -368,6 +368,13 @@ items:
         href: run-time-config/networking.md
       - name: İş parçacığı oluşturma ayarları
         href: run-time-config/threading.md
+  - name: Kod analizi
+    items:
+      - name: Genel Bakış
+        href: ../fundamentals/productivity/code-analysis.md
+        displayName: 'code analysis, analyzers'
+      - name: Kuralları yapılandırma
+        href: ../fundamentals/productivity/configure-code-analysis-rules.md
   - name: Geçiş
     items:
       - name: .NET Core 2.0’dan 2.1’e geçiş
