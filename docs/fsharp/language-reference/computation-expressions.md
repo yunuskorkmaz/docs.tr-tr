@@ -1,15 +1,15 @@
 ---
 title: Hesaplama İfadeleri
 description: "F # ' da, denetim akışı yapıları ve bağlamaları kullanılarak sıralanmış ve birleştirilebilir hesaplamalar yazmak için uygun sözdizimi oluşturmayı öğrenin."
-ms.date: 11/04/2019
+ms.date: 08/15/2020
 f1_keywords:
 - let!_FS
-ms.openlocfilehash: 32638e9493fb2c6b7aae30d044a0cda2a97f2178
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 1649d8c57ea9e025d40ef6d39d92b96795964150
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855367"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812165"
 ---
 # <a name="computation-expressions"></a>Hesaplama İfadeleri
 
@@ -81,7 +81,7 @@ let doThingsAsync url =
 
 İle bir hesaplama ifadesine çağrı bağlarsanız `let` Hesaplama ifadesinin sonucunu elde edersiniz. Bunun yerine, *gerçekleştirilmemiş* çağrının değerini o hesaplama ifadesine bağlacaksınız. `let!`Sonuca bağlamak için kullanın.
 
-`let!`, `Bind(x, f)` Oluşturucu türündeki üye tarafından tanımlanır.
+`let!` , `Bind(x, f)` Oluşturucu türündeki üye tarafından tanımlanır.
 
 ### `do!`
 
@@ -97,7 +97,7 @@ let doThingsAsync data url =
 
 [Zaman uyumsuz iş akışı](asynchronous-workflows.md)için bu tür olur `Async<unit>` . Diğer hesaplama ifadeleri için türün büyük olasılıkla olması olasıdır `CExpType<unit>` .
 
-`do!`, `Bind(x, f)` Oluşturucu türündeki üye tarafından tanımlanır, burada `f` bir oluşturur `unit` .
+`do!` , `Bind(x, f)` Oluşturucu türündeki üye tarafından tanımlanır, burada `f` bir oluşturur `unit` .
 
 ### `yield`
 
@@ -410,20 +410,20 @@ comp |> step |> step
 comp |> step |> step |> step |> step
 ```
 
-Hesaplama ifadesinde, ifadenin döndürdüğü temel bir tür vardır. Temel alınan tür, gerçekleştirilebilecek bir sonucu veya bir Gecikmeli hesaplamayı temsil edebilir veya bazı koleksiyon türleri arasında yineleme yapmak için bir yol sağlayabilir. Önceki örnekte, temel alınan tür **sonunda**. Bir dizi ifadesi için, temel alınan tür olur <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Bir sorgu ifadesi için, temel alınan tür olur <xref:System.Linq.IQueryable?displayProperty=nameWithType> . Zaman uyumsuz bir iş akışı için, temel alınan tür olur [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7) . `Async`Nesnesi, sonucu hesaplamak için gerçekleştirilecek işi temsil eder. Örneğin, [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) bir hesaplama yürütmek ve sonucu döndürmek için öğesini çağırın.
+Hesaplama ifadesinde, ifadenin döndürdüğü temel bir tür vardır. Temel alınan tür, gerçekleştirilebilecek bir sonucu veya bir Gecikmeli hesaplamayı temsil edebilir veya bazı koleksiyon türleri arasında yineleme yapmak için bir yol sağlayabilir. Önceki örnekte, temel alınan tür **sonunda**. Bir dizi ifadesi için, temel alınan tür olur <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> . Bir sorgu ifadesi için, temel alınan tür olur <xref:System.Linq.IQueryable?displayProperty=nameWithType> . Zaman uyumsuz bir iş akışı için, temel alınan tür olur [`Async`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync-1.html) . `Async`Nesnesi, sonucu hesaplamak için gerçekleştirilecek işi temsil eder. Örneğin, [`Async.RunSynchronously`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#RunSynchronously) bir hesaplama yürütmek ve sonucu döndürmek için öğesini çağırın.
 
 ## <a name="custom-operations"></a>Özel İşlemler
 
-Hesaplama ifadesinde özel bir işlem tanımlayabilir ve bir hesaplama ifadesinde bir işleç olarak özel bir işlem kullanabilirsiniz. Örneğin, sorgu ifadesine bir sorgu işleci ekleyebilirsiniz. Özel bir işlem tanımladığınızda, hesaplama ifadesinde yield ve yöntemleri tanımlamanız gerekir. Özel bir işlem tanımlamak için, bunu hesaplama ifadesi için bir Oluşturucu sınıfına koyun ve ardından öğesini uygulayın [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19) . Bu öznitelik bir dizeyi bir özel işlemde kullanılacak olan bir bağımsız değişken olarak alır. Bu ad, hesaplama ifadesinin açma küme ayracı başlangıcında kapsama girer. Bu nedenle, bu bloktaki özel bir işlemle aynı ada sahip tanımlayıcılar kullanmamanız gerekir. Örneğin, `all` sorgu ifadelerinde veya gibi tanımlayıcıların kullanılmasını önleyin `last` .
+Hesaplama ifadesinde özel bir işlem tanımlayabilir ve bir hesaplama ifadesinde bir işleç olarak özel bir işlem kullanabilirsiniz. Örneğin, sorgu ifadesine bir sorgu işleci ekleyebilirsiniz. Özel bir işlem tanımladığınızda, hesaplama ifadesinde yield ve yöntemleri tanımlamanız gerekir. Özel bir işlem tanımlamak için, bunu hesaplama ifadesi için bir Oluşturucu sınıfına koyun ve ardından öğesini uygulayın [`CustomOperationAttribute`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-customoperationattribute.html) . Bu öznitelik bir dizeyi bir özel işlemde kullanılacak olan bir bağımsız değişken olarak alır. Bu ad, hesaplama ifadesinin açma küme ayracı başlangıcında kapsama girer. Bu nedenle, bu bloktaki özel bir işlemle aynı ada sahip tanımlayıcılar kullanmamanız gerekir. Örneğin, `all` sorgu ifadelerinde veya gibi tanımlayıcıların kullanılmasını önleyin `last` .
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Mevcut oluşturucuları yeni özel Işlemlerle genişletme
 
 Zaten bir Oluşturucu sınıfınız varsa, özel işlemleri bu Oluşturucu sınıfının dışından genişletilebilir. Uzantılar modüllerde bildirilmelidir. Ad alanları, aynı dosya ve türün tanımlandığı aynı ad alanı bildirim grubu dışında uzantı üyeleri içeremez.
 
-Aşağıdaki örnek, varolan sınıfının uzantısını gösterir `Microsoft.FSharp.Linq.QueryBuilder` .
+Aşağıdaki örnek, varolan sınıfının uzantısını gösterir `FSharp.Linq.QueryBuilder` .
 
 ```fsharp
-type Microsoft.FSharp.Linq.QueryBuilder with
+type FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
     member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
@@ -434,5 +434,5 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 
 - [F # dil başvurusu](index.md)
 - [Zaman Uyumsuz İş Akışları](asynchronous-workflows.md)
-- [Diziler](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Diziler](sequences.md)
 - [Sorgu İfadeleri](query-expressions.md)

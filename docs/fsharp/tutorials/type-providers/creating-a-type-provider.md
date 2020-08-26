@@ -2,18 +2,18 @@
 title: 'Öğretici: tür sağlayıcısı oluşturma'
 description: "Temel kavramları göstermek üzere çeşitli basit tür sağlayıcılarını inceleyerek F # 3,0 ' de kendi F # tür sağlayıcılarını oluşturmayı öğrenin."
 ms.date: 11/04/2019
-ms.openlocfilehash: 67ebd91007ff814370573ebc1a65b2c7a8399f7d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 71225614ed983a76d35c214faa87bbad0fbb7d24
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202138"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810878"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Öğretici: tür sağlayıcısı oluşturma
 
 F # içindeki tür sağlayıcısı mekanizması, bilgi zengin programlama desteğinin önemli bir parçasıdır. Bu öğreticide, temel kavramları göstermek için çeşitli basit tür sağlayıcılarının geliştirilmesi sırasında kendi tür sağlayıcılarınızın nasıl oluşturulduğu açıklanmaktadır. F # içindeki tür sağlayıcısı mekanizması hakkında daha fazla bilgi için bkz. [tür sağlayıcıları](index.md).
 
-F # ekosistemi, yaygın olarak kullanılan Internet ve kurumsal veri Hizmetleri için bir dizi tür sağlayıcı içerir. Örneğin:
+F # ekosistemi, yaygın olarak kullanılan Internet ve kurumsal veri Hizmetleri için bir dizi tür sağlayıcı içerir. Örnek:
 
 - [FSharp. Data](https://fsharp.github.io/FSharp.Data/) , JSON, XML, CSV ve HTML belge biçimleri için tür sağlayıcıları içerir.
 
@@ -175,9 +175,9 @@ Bu bölümde, tür sağlayıcısı uygulamasının asıl bölümlerinde adım ad
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Bu tür ortak olmalıdır ve bu türü [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) özniteliğiyle işaretlemeniz gerekir; böylece derleyici, ayrı bir F # projesi türü içeren derlemeye başvurduğunda tür sağlayıcısını tanıyacaktır. *Yapılandırma* parametresi isteğe bağlıdır ve varsa, F # derleyicisinin oluşturduğu tür sağlayıcısı örneği için bağlamsal yapılandırma bilgilerini içerir.
+Bu tür ortak olmalıdır ve bu türü [TypeProvider](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderattribute.html) özniteliğiyle işaretlemeniz gerekir; böylece derleyici, ayrı bir F # projesi türü içeren derlemeye başvurduğunda tür sağlayıcısını tanıyacaktır. *Yapılandırma* parametresi isteğe bağlıdır ve varsa, F # derleyicisinin oluşturduğu tür sağlayıcısı örneği için bağlamsal yapılandırma bilgilerini içerir.
 
-Daha sonra, [ITypeInfo arabirimini Uygularınızda](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) . Bu durumda, `TypeProviderForNamespaces` türü `ProvidedTypes` API 'den temel tür olarak kullanırsınız. Bu yardımcı türü, her biri doğrudan sınırlı sayıda sabit, ekip tarafından sağlanmış tür içeren bir dizi sağlanmış ad alanı için sınırlı bir koleksiyon sağlayabilir. Bu *bağlamda sağlayıcı,* gerekli olmasalar veya kullanılmasa bile türler oluşturur.
+Daha sonra, [ITypeInfo arabirimini Uygularınızda](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-itypeprovider.html) . Bu durumda, `TypeProviderForNamespaces` türü `ProvidedTypes` API 'den temel tür olarak kullanırsınız. Bu yardımcı türü, her biri doğrudan sınırlı sayıda sabit, ekip tarafından sağlanmış tür içeren bir dizi sağlanmış ad alanı için sınırlı bir koleksiyon sağlayabilir. Bu *bağlamda sağlayıcı,* gerekli olmasalar veya kullanılmasa bile türler oluşturur.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -236,7 +236,7 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
 
 Aşağıdaki noktaları dikkate almanız gerekir:
 
-- Bu sunulan tür silindi.  Temel türün olduğunu gösterdiğiniz, `obj` örnekler derlenmiş kodda [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) türünde değerler olarak görünür.
+- Bu sunulan tür silindi.  Temel türün olduğunu gösterdiğiniz, `obj` örnekler derlenmiş kodda [obj](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-obj.html) türünde değerler olarak görünür.
 
 - İç içe olmayan bir tür belirttiğinizde, derlemeyi ve ad alanını belirtmeniz gerekir. Silinen türler için derleme, tür sağlayıcısı derlemesinin kendisi olmalıdır.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Bu özelliğin alınması, her zaman "Merhaba!" dizesi olarak değerlendirilir. `GetterCode`Özelliği için, ana bilgisayar derleyicisinin özelliği almak için oluşturduğu kodu temsil eden bir F # teklifini kullanır. Alıntılar hakkında daha fazla bilgi için bkz. [kod teklifleri (F #)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Bu özelliğin alınması, her zaman "Merhaba!" dizesi olarak değerlendirilir. `GetterCode`Özelliği için, ana bilgisayar derleyicisinin özelliği almak için oluşturduğu kodu temsil eden bir F # teklifini kullanır. Alıntılar hakkında daha fazla bilgi için bkz. [kod teklifleri (F #)](../../language-reference/code-quotations.md).
 
 Özelliğe XML belgesi ekleyin.
 
@@ -282,7 +282,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
 new Type10()
 ```
 
-Belirtilen türde bir örnek, "nesne verileri" temel alınan verilerle oluşturulur. Alıntılanmış kod, bu verilen türün (belirtilen türü bildirdiğiniz sırada belirttiğiniz şekilde) bu tür için bir değer olduğu için [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) 'e bir dönüştürme içerir.
+Belirtilen türde bir örnek, "nesne verileri" temel alınan verilerle oluşturulur. Alıntılanmış kod, bu verilen türün (belirtilen türü bildirdiğiniz sırada belirttiğiniz şekilde) bu tür için bir değer olduğu için [obj](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-obj.html) 'e bir dönüştürme içerir.
 
 Oluşturucuya XML belgesi ekleyin ve verilen oluşturucuyu belirtilen türe ekleyin:
 
@@ -742,7 +742,7 @@ Basit bir örnek olarak, virgülle ayrılmış değer (CSV) biçiminde bilimsel 
 
 |Uzaklık (ölçüm)|Süre (saniye)|
 |----------------|-------------|
-|50,0|3.7|
+|50.0|3.7|
 |100,0|5,2|
 |150,0|6.4|
 
@@ -750,7 +750,7 @@ Bu bölümde, `Distance` türünde bir özelliği `float<meter>` ve türünde bi
 
 - Üst bilgi adları, birim-daha küçüktür veya "ad (birim)" biçiminde ve virgül içermez.
 
-- Birimler, [Microsoft. FSharp. Data. UnitSystems. sı. UnitNames modülü (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) modülünün tanımladığı tüm sistem uluslararası (sı) birimleridir.
+- [FSharp. Data. UnitSystems. sı. UnitNames modülü (F #)](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-data-unitsystems-si-unitnames.html) modülünün tanımladığı birimler, tüm sistem uluslararası (sı) birimleridir.
 
 - Birimler, bileşik yerine (örneğin, ölçüm/saniye) tamamen basittir.
 
@@ -877,7 +877,7 @@ Uygulamayla ilgili aşağıdaki noktaları dikkate alın:
 
 - Aşırı yüklenmiş oluşturucular, özgün dosyanın veya özdeş bir şemaya sahip olan birinin okunmasını sağlar. Bu model, yerel veya uzak veri kaynakları için bir tür sağlayıcısı yazdığınızda yaygındır ve bu model yerel bir dosyanın uzak veriler için şablon olarak kullanılmasına izin verir.
 
-- Göreli dosya adlarını çözümlemek için tür sağlayıcısı oluşturucusuna geçirilen [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) değerini kullanabilirsiniz.
+- Göreli dosya adlarını çözümlemek için tür sağlayıcısı oluşturucusuna geçirilen [TypeProviderConfig](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-compilerservices-typeproviderconfig.html) değerini kullanabilirsiniz.
 
 - `AddDefinitionLocation`Yöntemi, belirtilen özelliklerin konumunu tanımlamak için kullanabilirsiniz. Bu nedenle, `Go To Definition` sağlanmış bir özellik üzerinde kullanıyorsanız, CSV dosyası Visual Studio 'da açılır.
 
@@ -901,7 +901,7 @@ let function1 () =
     obj1.InstanceProperty
 ```
 
-Ildadsm. exe kullanılarak derlenen ortaya çıkan kodun bir görüntüsü aşağıda verilmiştir:
+ildasm.exe kullanarak, ortaya çıkan ve derlenmiş kodun bir görüntüsü aşağıda verilmiştir:
 
 ```il
 .class public abstract auto ansi sealed Module1
@@ -976,7 +976,7 @@ Aşağıdaki bölümlerde, tür sağlayıcıları yazarken kullanabileceğiniz t
 
 #### <a name="the-getconnection-design-pattern"></a>GetConnection tasarım deseninin
 
-`GetConnection`Aşağıdaki örnekte gösterildiği gibi, FSharp. Data. TypeProviders. dll içindeki tür sağlayıcıları tarafından kullanılan kalıbı kullanmak için çoğu tür sağlayıcı yazılmalıdır:
+`GetConnection`Aşağıdaki örnekte gösterildiği gibi, FSharp.Data.TypeProviders.dll tür sağlayıcıları tarafından kullanılan kalıbı kullanmak için çoğu tür sağlayıcı yazılmalıdır:
 
 ```fsharp
 #r "Fabrikam.Data.WebDataStore.dll"
@@ -1054,7 +1054,7 @@ Bir tür sağlayıcının her örneğine, `TypeProviderConfig` oluşturma sıras
 
 ### <a name="invalidation"></a>Geçersiz kılma
 
-Sağlayıcılar, F # dil hizmetini şema varsayımına değiştiği hakkında bilgilendirmek için doğrulama sinyalleri oluşturabilir. Invalidation gerçekleştiğinde, sağlayıcı Visual Studio 'da barındırılıyorsa bir typecheck, yinelendi olur. Sağlayıcı F# Etkileşimli veya F # derleyicisi (FSC. exe) tarafından barındırılıyorsa, bu sinyal yok sayılır.
+Sağlayıcılar, F # dil hizmetini şema varsayımına değiştiği hakkında bilgilendirmek için doğrulama sinyalleri oluşturabilir. Invalidation gerçekleştiğinde, sağlayıcı Visual Studio 'da barındırılıyorsa bir typecheck, yinelendi olur. Bu sinyal, sağlayıcı F# Etkileşimli veya F # derleyicisi (fsc.exe) tarafından barındırılıyorsa yok sayılır.
 
 ### <a name="caching-schema-information"></a>Şema bilgilerini önbelleğe alma
 
@@ -1086,7 +1086,7 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 F # 3,0 sürümünün parçası olan ProvidedTypes-0,2 yardımcı kodu yalnızca oluşturulan türleri sağlamak için sınırlı desteğe sahiptir. Oluşturulan bir tür tanımı için aşağıdaki deyimler doğru olmalıdır:
 
-- `isErased`olarak ayarlanmalıdır `false` .
+- `isErased` olarak ayarlanmalıdır `false` .
 
 - Oluşturulan tür, `ProvidedAssembly()` oluşturulan kod parçaları için bir kapsayıcıyı temsil eden yeni oluşturulmuş bir şekilde eklenmiş olmalıdır.
 
@@ -1118,17 +1118,17 @@ Geliştirme sürecinde aşağıdaki ipuçlarını yararlı bulabilirsiniz:
 
 Test IDE, tür sağlayıcının yeniden oluşturulmasını önleyen. dll dosyasında bir kilit alacak olduğundan, tür sağlayıcısını bir örnek içinde geliştirebilir ve sağlayıcıyı başka bir örnekte test edebilirsiniz. Bu nedenle, sağlayıcı ilk örnekte derlenirken Visual Studio 'nun ikinci örneğini kapatmanız gerekir ve ardından sağlayıcı oluşturulduktan sonra ikinci örneği yeniden açmanız gerekir.
 
-### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>FSC. exe ' nin etkinleştirmeleri kullanılarak tür sağlayıcılarının hatalarını ayıklama
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a>fsc.exe etkinleştirmeleri kullanarak tür sağlayıcılarını hata ayıkla
 
 Aşağıdaki araçları kullanarak tür sağlayıcılarını çağırabilirsiniz:
 
-- FSC. exe (F # komut satırı derleyicisi)
+- fsc.exe (F # komut satırı derleyicisi)
 
-- fsi. exe (F# Etkileşimli derleyicisi)
+- fsi.exe (F# Etkileşimli derleyicisi)
 
-- Devenv. exe (Visual Studio)
+- devenv.exe (Visual Studio)
 
-Bir test betik dosyasında (örneğin, Script. FSX) FSC. exe ' yi kullanarak genellikle tür sağlayıcılarının hatalarını kolayca ayıklayabilirsiniz. Bir komut isteminden bir hata ayıklayıcı başlatabilirsiniz.
+Genellikle, tür sağlayıcılarının bir test betik dosyasında fsc.exe kullanarak en kolay şekilde hata ayıklaması yapabilirsiniz (örneğin, Script. FSX). Bir komut isteminden bir hata ayıklayıcı başlatabilirsiniz.
 
 ```console
 devenv /debugexe fsc.exe script.fsx

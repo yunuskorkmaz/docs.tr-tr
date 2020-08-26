@@ -1,51 +1,51 @@
 ---
-title: Async Programlama
-description: F#'nın temel işlevsel programlama kavramlarından türetilen dil düzeyindebir programlama modeline dayalı olarak eş zamanlılık için nasıl temiz destek sağladığını öğrenin.
-ms.date: 12/17/2018
-ms.openlocfilehash: 0a7d400c9778e30d6b25798239f12b7b2b0e3d82
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+title: Zaman uyumsuz programlama
+description: "F # ' ın, temel fonksiyonel programlama kavramlarından türetilmiş dil düzeyi bir programlama modeline bağlı olarak, zaman uyumsuzluğu için temizleme desteği sağladığını öğrenin."
+ms.date: 08/15/2020
+ms.openlocfilehash: 2e5d4fb744b4443eb9caf90cc1bf01473b809127
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021527"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88811775"
 ---
-# <a name="async-programming-in-f"></a>F'de Async programlama\#
+# <a name="async-programming-in-f"></a>F 'de zaman uyumsuz programlama\#
 
-Asynchronous programlama çeşitli nedenlerle modern uygulamalar için gerekli olan bir mekanizmadır. Çoğu geliştiricinin karşılaşacağı iki birincil kullanım örnekleri vardır:
+Zaman uyumsuz programlama, farklı nedenlerle modern uygulamalar için gerekli olan bir mekanizmadır. Çoğu geliştiricinin karşılaştığı iki birincil kullanım durumu vardır:
 
-- İstek işleme işlemi, bu işlemin dışındaki sistemlerden veya hizmetlerden gelen girişleri beklerken, meşgul olan sistem kaynaklarını en aza indirirken, önemli sayıda eşzamanlı gelen isteke hizmet verebilen bir sunucu işlemi sunmak
-- Arka plan çalışmasını aynı anda ilerletirken yanıt veren bir ui veya ana iş parçacığı koruma
+- Çok sayıda eş zamanlı gelen isteğe hizmet veren bir sunucu işlemi sunma, ancak bu işleme ait sistemlerden veya hizmetlerden gelen bekleme girişlerini işlerken istek sırasında bulunan sistem kaynaklarını en aza indirme
+- Eşzamanlı bir kullanıcı arabirimini veya ana iş parçacığını, arka planda çalışmaya devam ederken koruma
 
-Arka plan çalışmaları genellikle birden çok iş parçacığı kullanımını içerse de, eş zamanlı ve çoklu iş parçacığı kavramlarını ayrı ayrı dikkate almak önemlidir. Aslında, onlar ayrı endişeler, ve biri diğer anlamına gelmez. Bu makalede, ayrı kavramları daha ayrıntılı olarak açıklanır.
+Arka plan çalışması genellikle birden çok iş parçacığının kullanımını içerse de, zaman uyumsuzluğu ve çoklu iş parçacığı kavramlarını ayrı ayrı ele almanız önemlidir. Aslında bunlar ayrı kaygılardır ve diğeri diğerini göstermez. Bu makalede, ayrı kavramlar daha ayrıntılı olarak açıklanmaktadır.
 
 ## <a name="asynchrony-defined"></a>Asynchrony tanımlı
 
-Önceki nokta - bu eşzamanlılık birden fazla iş parçacığı kullanımı bağımsızdır - biraz daha fazla açıklamaya değer. Bazen ilişkili olan, ancak birbirinden tamamen bağımsız olan üç kavram vardır:
+Önceki nokta-eşzamanlı olarak birden çok iş parçacığının kullanımından bağımsız olduğu için, biraz daha ayrıntılı bir şekilde kullanılır. Bazen birbiriyle ilgili olan ancak birbirleriyle tamamen bağımsız olan üç kavram vardır:
 
-- Eşzamanlılık; çakışan dönemlerde birden çok hesaplama yürütüldüğünde.
-- Paralellik; birden çok hesaplama veya tek bir hesaplamanın birkaç bölümü tam olarak aynı anda çalıştırıldığında.
-- Asynchrony; bir veya daha fazla hesaplama ana program akışından ayrı olarak yürütebilir.
+- Zamanlı birden çok hesaplama, çakışan zaman dilimlerinde yürütülür.
+- Paralellik birden çok hesaplama veya tek bir hesaplamanın çeşitli bölümleri tam olarak aynı anda çalıştığında.
+- Zaman uyumsuzluğu bir veya daha fazla hesaplama ana program akışından ayrı ayrı Yürütülebilirler.
 
-Her üç ortogonal kavramlar, ama kolayca conflated olabilir, özellikle birlikte kullanılır. Örneğin, birden çok eşzamanlı hesaplamayı paralel olarak yürütmeniz gerekebilir. Bu ilişki paralellik veya eşzamanlılık birbirini ima anlamına gelmez.
+Üçü de birbirine diksiz kavramlardır, ancak özellikle birlikte kullanıldığında kolayca kolayca kanatılabilir. Örneğin, paralel olarak birden çok zaman uyumsuz hesaplama yürütmeniz gerekebilir. Bu ilişki, paralellik veya zaman uyumsuzluğu 'in bir diğeri olduğunu göstermez.
 
-"Asynchronous" kelimesinin etimolojisini göz önünde bulundurursanız, iki parça vardır:
+"Zaman uyumsuz" sözcüğünün ilgili listesini göz önünde bulundurmanız durumunda iki parça vardır:
 
-- "a", "değil" anlamına gelir.
-- "senkron", "aynı anda" anlamına gelir.
+- "a", anlamı "Not".
+- "zaman uyumlu", anlamı "aynı anda".
 
-Bu iki terimi bir araya getirdiğinizde, "eşzamanlı"nın "aynı anda değil" anlamına geldiğini görürsünüz. İşte bu kadar! Bu tanımda eşzamanlılık veya paralellik iması yoktur. Bu uygulamada da geçerlidir.
+Bu iki terimi birlikte yerleştirdiğinizde "zaman uyumsuz", "aynı anda değil" anlamına gelir. İşte bu kadar! Bu tanımda eşzamanlılık veya paralellik bir engel yoktur. Bu, pratikte de geçerlidir.
 
-Pratik açıdan, F# daki eşzamanlı hesaplamalar ana program akışından bağımsız olarak yürütülecek şekilde zamanlanır. Bu bağımsız yürütme eşzamanlılık veya paralellik anlamına gelmez, ne de bir hesaplama her zaman arka planda olur anlamına gelmez. Aslında, eşzamanlı hesaplamalar, hesaplamanın doğasına ve hesaplamanın yürütüldettiği ortama bağlı olarak eşzamanlı olarak bile yürütülebilir.
+Pratik koşullarda, F # ' daki zaman uyumsuz hesaplamalar ana program akışından bağımsız olarak yürütülecek şekilde zamanlanır. Bu bağımsız yürütme eşzamanlılık veya paralellik anlamına gelmez veya bir hesaplamanın arka planda her zaman gerçekleştiğini göstermez. Aslında, hesaplamanın yapısına ve hesaplamanın yürütüldüğü ortama bağlı olarak zaman uyumsuz hesaplamalar bile zaman uyumlu bir şekilde çalıştırılabilir.
 
-Sahip olması gereken ana paket, asynchronöz hesaplamaların ana program akışından bağımsız olmasıdır. Eşzamanlı hesaplamanın ne zaman veya nasıl yürütüldüğü konusunda az garanti olmasına rağen, bunları planlamak ve planlamak için bazı yaklaşımlar vardır. Bu makalenin geri kalanında, F# eşzamanlılığı ve F# içine yerleşik tür, işlev ve ifadelerin nasıl kullanılacağı ile ilgili temel kavramlar incelenir.
+Sahip olmanız gereken ana zaman uyumsuz hesaplamaların ana program akışından bağımsız olması gerekir. Zaman uyumsuz hesaplamanın ne zaman ya da nasıl yürütüldüğü hakkında bazı garantiler olsa da, bunları düzenlemek ve zamanlamak için bazı yaklaşımlar vardır. Bu makalenin geri kalanında f # zaman uyumsuzluğu için temel kavramlar ve f # içinde oluşturulan türlerin, işlevlerin ve ifadelerin nasıl kullanılacağı ele alınarak anlatılmaktadır.
 
 ## <a name="core-concepts"></a>Temel kavramlar
 
-F#'da, asynchronous programlama üç temel kavram etrafında ortalanır:
+F # içinde, zaman uyumsuz programlama üç temel kavram etrafında ortalandı:
 
-- Tek `Async<'T>` bir eşzamanlı hesaplamayı temsil eden tür.
-- Asynchronous `Async` çalışmasını zamanlamanızı, asynchronous hesaplamaları oluşturmanızı ve eşzamanlı sonuçları dönüştürmenizi sağlayan modül işlevleri.
-- Asynchronöz `async { }` hesaplamaları oluşturmak ve denetlemek için uygun bir sözdizimi sağlayan [hesaplama ifadesi.](../../language-reference/computation-expressions.md)
+- `Async<'T>`Birleştirilebilir bir zaman uyumsuz hesaplamayı temsil eden tür.
+- `Async`Modül işlevleri, zaman uyumsuz iş zamanlamanıza, zaman uyumsuz hesaplamalar oluşturmanıza ve zaman uyumsuz sonuçları dönüştürmenizi sağlar.
+- `async { }`Zaman uyumsuz hesaplamalar oluşturmak ve denetlemek için kullanışlı bir sözdizimi sağlayan [Hesaplama ifadesi](../../language-reference/computation-expressions.md).
 
 Aşağıdaki örnekte bu üç kavramı görebilirsiniz:
 
@@ -69,15 +69,15 @@ let main argv =
     0
 ```
 
-Örnekte, `printTotalFileBytes` işlev türü. `string -> Async<unit>` İşlev çağırma aslında asynchronous hesaplama yürütmez. Bunun yerine, `Async<unit>` eşzamanlı olarak yürütmek için işin bir *belirtimi* olarak hareket eden bir döndürür. Bu `Async.AwaitTask` uygun bir tür sonucu <xref:System.IO.File.ReadAllBytesAsync%2A> dönüştürür kendi vücudunda çağırır.
+Örnekte, `printTotalFileBytes` işlevi türündedir `string -> Async<unit>` . İşlevin çağrılması, zaman uyumsuz hesaplamayı gerçekten yürütmez. Bunun yerine, `Async<unit>` zaman uyumsuz olarak yürütülecek çalışmanın bir *belirtimi* görevi gören bir döndürür. Bu, `Async.AwaitTask` sonucunu, konumunu uygun bir türe dönüştüren gövdesinde çağırır <xref:System.IO.File.ReadAllBytesAsync%2A> .
 
-Bir diğer önemli satır `Async.RunSynchronously`da. Bu, f# asynchronous hesaplamasını gerçekten yürütmek istiyorsanız aramanız gereken Async modülü başlangıç işlevlerinden biridir.
+Başka bir önemli satır, öğesine yapılan çağrıdır `Async.RunSynchronously` . Bu, gerçekten bir F # zaman uyumsuz hesaplamayı yürütmek istiyorsanız çağırmanız gereken bir zaman uyumsuz modül başlatma işlevleridir.
 
-Bu `async` programlama C # / Visual Basic tarzı ile temel bir farktır. F#'da, asenkron hesaplamalar **Soğuk görevler**olarak düşünülebilir. Bunlar açıkça gerçekten yürütmek için başlatılmalıdır. Bu, c# veya Visual Basic'tekinden çok daha kolay bir şekilde asynchronous çalışmasını birleştirmenize ve dizilemenize olanak sağladığından bazı avantajları vardır.
+Bu, C#/Visual Basic 'in programlama stilinde temel bir farktır `async` . F # ' da, zaman uyumsuz hesaplamalar **soğuk görevler**olarak düşünülebilir. Gerçekten yürütmek için açıkça başlatılmış olmaları gerekir. Bu, zaman uyumsuz çalışmayı C# veya Visual Basic göre çok daha kolay bir şekilde birleştirip dizmenize olanak sağladığı için bazı avantajlar içerir.
 
-## <a name="combine-asynchronous-computations"></a>Eşzamanlı hesaplamaları birleştirme
+## <a name="combine-asynchronous-computations"></a>Zaman uyumsuz hesaplamaları birleştirme
 
-Aşağıda, hesaplamaları birleştirerek bir öncekinin üzerine inşa edilen bir örnek verilmiştir:
+Hesaplamaları birleştirerek önceki bir örnek üzerinde derleme yapan bir örnek aşağıda verilmiştir:
 
 ```fsharp
 open System
@@ -101,18 +101,18 @@ let main argv =
     0
 ```
 
-Gördüğünüz gibi, `main` işlev yapılan oldukça birkaç arama vardır. Kavramsal olarak, aşağıdakileri yapar:
+Gördüğünüz gibi, `main` işlev çok daha fazla sayıda çağrı yaptı. Kavramsal olarak, şunları yapar:
 
-1. Komut satırı bağımsız değişkenlerini ' `Async<unit>` `Array.map`ile hesaplamalara dönüştürün
-2. `printTotalFileBytes` Bir zamanlama `Async<'T[]>` ve çalışırken paralel olarak hesaplamaları çalıştırAn oluşturun.
-3. Paralel `Async<unit>` hesaplamayı çalıştıracak ve sonucunu yoksayacak bir oluştur.
-4. Son hesaplamayı açıkça çalıştırın `Async.RunSynchronously` ve tamamlanana kadar engelleyin.
+1. Komut satırı bağımsız değişkenlerini `Async<unit>` ile hesaplamalar içine dönüştürün `Array.map` .
+2. Çalışırken `Async<'T[]>` hesaplamaları zamanlayan ve çalıştıran bir oluştur `printTotalFileBytes` .
+3. `Async<unit>`Paralel hesaplamayı çalıştıracak ve sonucunu yoksayacak bir oluştur.
+4. Son hesaplamayı ile `Async.RunSynchronously` ve blok tamamlanana kadar açıkça çalıştırın.
 
-Bu program çalıştığında, `printTotalFileBytes` her komut satırı bağımsız değişkeni için paralel olarak çalışır. Eşzamanlı hesaplamalar program akışından bağımsız olarak yürütüldeğinden, bilgilerini yazdırDıkları ve yürütmeyi bitirdikleri bir sıra yoktur. Hesaplamalar paralel olarak zamanlanır, ancak bunların yürütme sırası garanti edilmez.
+Bu program çalıştığında, `printTotalFileBytes` her komut satırı bağımsız değişkeni için paralel olarak çalışır. Zaman uyumsuz hesaplamalar program akışından bağımsız olarak yürütüldüğünden, bilgilerini yazdırdıkları ve yürütmeyi tamamlayabileceği bir sıra yoktur. Hesaplamalar paralel olarak zamanlanır, ancak yürütme sırası garanti edilmez.
 
-## <a name="sequence-asynchronous-computations"></a>Sıralı asenkron hesaplamalar
+## <a name="sequence-asynchronous-computations"></a>Sıra zaman uyumsuz hesaplamalar
 
-Zaten `Async<'T>` çalışan bir görev yerine çalışmanın bir belirtimi olduğundan, daha karmaşık dönüşümleri kolayca gerçekleştirebilirsiniz. Aşağıda, bir dizi Async hesaplamasını sıralayan bir örnek ve böylece birbiri ardına çalıştırışlar.
+`Async<'T>`, Zaten çalışan bir görev yerine bir iş belirtimi olduğundan, kolayca daha karmaşık dönüştürmeler gerçekleştirebilirsiniz. Bir dizi zaman uyumsuz hesaplamalar, bunlardan sonra çalıştırılacak bir örnek aşağıda verilmiştir.
 
 ```fsharp
 let printTotalFileBytes path =
@@ -132,17 +132,17 @@ let main argv =
     |> ignore
 ```
 
-Bu, `printTotalFileBytes` bunları paralel olarak planlamak `argv` yerine öğelerin sırasına göre yürütülmesi için zamanlayacaktır. Sonraki öğe son hesaplama yürütme tamamlanana kadar zamanlanmadığından, hesaplamalar yürütmede çakışmayacak şekilde sıralanır.
+Bu işlem, `printTotalFileBytes` öğeleri `argv` paralel olarak zamanlamak yerine öğesinin sırasıyla yürütmeye zamanlanır. Bir sonraki öğe, son hesaplamanın yürütülmesi bitinceye kadar zamanlanmayacak, bu hesaplamalar yürütmeyle ilgili bir çakışma olmaması gibi sıralanacaktır.
 
-## <a name="important-async-module-functions"></a>Önemli Async modülü fonksiyonları
+## <a name="important-async-module-functions"></a>Önemli zaman uyumsuz modül işlevleri
 
-F#'a async kodu yazdığınızda, genellikle sizin için hesaplamaların zamanlamasını işleyen bir çerçeveyle etkileşime girebilirsiniz. Ancak, bu her zaman böyle değildir, bu nedenle asynchronous çalışma zamanlamak için çeşitli başlangıç işlevleri öğrenmek iyidir.
+F # ' da zaman uyumsuz kod yazdığınızda, genellikle sizin için hesaplamaların zamanlamasını işleyen bir çerçeve ile etkileşime geçebilirsiniz. Ancak, bu her zaman durum değildir, bu nedenle zaman uyumsuz çalışmayı zamanlamak için çeşitli başlangıç işlevlerini öğrenmenizde yarar vardır.
 
-F# asynchronous hesaplamaları, zaten yürütülmakta olan çalışmanın bir gösterimi yerine çalışmanın bir _belirtimi_ olduğundan, açıkça bir başlangıç işlevi ile başlatılmalıdır. Farklı bağlamlarda yararlı olan birçok [Async başlangıç işlevi](https://msdn.microsoft.com/library/ee370232.aspx) vardır. Aşağıdaki bölümde daha yaygın başlangıç işlevlerinden bazıları açıklanmaktadır.
+F # zaman uyumsuz hesaplamalar, zaten yürütülmekte olan çalışmanın temsili yerine bir iş _belirtimi_ olduğundan, bir başlangıç işleviyle açıkça başlatılmaları gerekir. Farklı bağlamlarda yararlı olan çok sayıda [zaman uyumsuz başlangıç yöntemi](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html#section0) vardır. Aşağıdaki bölümde daha yaygın başlangıç işlevlerinin bazıları açıklanmaktadır.
 
-### <a name="asyncstartchild"></a>Async.StartChild
+### <a name="asyncstartchild"></a>Async. StartChild
 
-Bir eşyoknom hesaplaması içinde bir alt hesaplama başlatır. Bu, birden çok eşzamanlı hesaplamanın aynı anda yürütülmesini sağlar. Alt hesaplama, üst hesaplamaile bir iptal belirteci paylaşır. Üst hesaplama iptal edilirse, alt hesaplama da iptal edilir.
+Bir zaman uyumsuz hesaplama içinde bir alt hesaplama başlatır. Bu, birden çok zaman uyumsuz hesaplamaların eşzamanlı olarak yürütülmesini sağlar. Alt hesaplama, bir iptal belirtecini üst hesaplama ile paylaşır. Üst hesaplama iptal edilirse, alt hesaplama da iptal edilir.
 
 İmza:
 
@@ -152,17 +152,17 @@ computation: Async<'T> * timeout: ?int -> Async<Async<'T>>
 
 Ne zaman kullanılır:
 
-- Birden çok eşzamanlı hesaplamayı aynı anda değil, aynı anda yürütmek istediğinizde, ancak bunları paralel olarak zamanlatmayın.
-- Bir çocuğun hesaplamasının ömrünü bir ebeveyn hesaplamasına bağlamak istediğinizde.
+- Aynı anda birden çok zaman uyumsuz hesaplamalar çalıştırmak istediğinizde, ancak paralel olarak zamanlanamaz.
+- Bir alt hesaplamanın ömrünü bir üst hesaplamadan bağlamak istediğinizde.
 
-Dikkat et:
+İçin izlenecek:
 
-- Birden çok hesaplamayla `Async.StartChild` başlatıcı, bunları paralel olarak zamanlamayla aynı şey değildir. Hesaplamaları paralel olarak zamanlamak istiyorsanız, `Async.Parallel`'yi kullanın.
-- Bir üst hesaplamanın iptaledilmesi, başlattığı tüm alt hesaplamaların iptalini tetikler.
+- Birden çok hesaplama başlatma `Async.StartChild` , bunları paralel olarak zamanlamaya yönelik değildir. Hesaplamaları paralel olarak zamanlamak istiyorsanız kullanın `Async.Parallel` .
+- Bir üst hesaplamayı iptal etmek, başlattığı tüm alt hesaplamaların iptalini tetikler.
 
-### <a name="asyncstartimmediate"></a>Async.StartHemen
+### <a name="asyncstartimmediate"></a>Async. StartImmediate
 
-Geçerli işletim sistemi iş parçacığıüzerinde hemen başlayarak, bir eşzamanlı hesaplama çalıştırın. Hesaplama sırasında arama iş parçacığı üzerinde bir şey güncelleştirmeniz gerekiyorsa bu yararlıdır. Örneğin, bir eşzamanlı hesaplama nın bir Kullanıcı Arabirimi güncelleştirmesi gerekiyorsa (ilerleme `Async.StartImmediate` çubuğunun güncelleştirilmesi gibi), daha sonra kullanılmalıdır.
+Geçerli işletim sistemi iş parçacığında hemen başlayarak bir zaman uyumsuz hesaplama çalıştırır. Bu, hesaplama sırasında çağıran iş parçacığında bir şeyi güncelleştirmeniz gerekiyorsa yararlıdır. Örneğin, bir zaman uyumsuz hesaplamanın bir kullanıcı arabirimini Güncelleştirmesi (bir ilerleme çubuğunu güncelleştirme gibi) gerekiyorsa, `Async.StartImmediate` kullanılması gerekir.
 
 İmza:
 
@@ -172,15 +172,15 @@ computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 
 Ne zaman kullanılır:
 
-- Bir eşzamanlı hesaplamanın ortasındaki arama iş parçacığında bir şeyi güncelleştirmeniz gerektiğinde.
+- Bir zaman uyumsuz hesaplamanın ortasında çağıran iş parçacığında bir şeyi güncelleştirmeniz gerektiğinde.
 
-Dikkat et:
+İçin izlenecek:
 
-- Asynchronous hesaplamasındaki kod, zamanlanan iş parçacığı üzerinde çalışacaktır. Bu iş parçacığı bir şekilde bir ui iş parçacığı gibi hassas ise bu sorunlu olabilir. Bu gibi `Async.StartImmediate` durumlarda, kullanmak için büyük olasılıkla uygun değildir.
+- Zaman uyumsuz hesaplama içindeki kod, üzerinde zamanlanabilecek her iş parçacığında çalışır. Bu iş parçacığı, bir kullanıcı arabirimi iş parçacığı gibi bir şekilde hassas olduğunda sorunlu olabilir. Bu gibi durumlarda, `Async.StartImmediate` kullanımı uygunsuz olabilir.
 
-### <a name="asyncstartastask"></a>Async.StartAsTask
+### <a name="asyncstartastask"></a>Async. StartAsTask
 
-İş parçacığı havuzunda bir hesaplama yürütür. Hesaplama <xref:System.Threading.Tasks.Task%601> sona erdiğinde (sonucu üreten, özel durum ortaya koyan veya iptal edilen) ilgili durumda tamamlanacak bir belge döndürür. İptal belirteci sağlanmazsa, varsayılan iptal belirteci kullanılır.
+İş parçacığı havuzunda bir hesaplama yürütür. <xref:System.Threading.Tasks.Task%601>Hesaplama sonlandırıldığında (sonucu üretir, özel durum oluşturur veya iptal edildiğinde) karşılık gelen durumda tamamlanacak bir döndürür. İptal belirteci sağlanmazsa, varsayılan iptal belirteci kullanılır.
 
 İmza:
 
@@ -190,15 +190,15 @@ computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellatio
 
 Ne zaman kullanılır:
 
-- A'nın <xref:System.Threading.Tasks.Task%601> eşzamanlı bir hesaplamanın sonucunu temsil etmesini bekleyen bir .NET API'sini aramanız gerektiğinde.
+- Bir <xref:System.Threading.Tasks.Task%601> zaman uyumsuz hesaplamanın sonucunu temsil eden bir .NET API 'sine çağrı yapmanız gerektiğinde.
 
-Dikkat et:
+İçin izlenecek:
 
-- Bu çağrı, sık `Task` sık kullanılırsa ek yükü artırabilir ek bir nesne tahsis edecektir.
+- Bu çağrı ek bir nesne ayırır `Task` ve bu, sıklıkla kullanılıyorsa yükü artırabilir.
 
-### <a name="asyncparallel"></a>Async.Parallel
+### <a name="asyncparallel"></a>Async. Parallel
 
-Paralel olarak yürütülecek bir eşzamanlı hesaplama dizisi zamanlar. Paralellik `maxDegreesOfParallelism` derecesi, parametre belirtilmek suretiyle isteğe bağlı olarak ayarlanabilir/daraltılabilir.
+Paralel olarak yürütülecek zaman uyumsuz hesaplamalar dizisini zamanlar. Paralellik derecesi, parametre belirtilerek isteğe bağlı olarak ayarlanabilir/kısıtlanabilir `maxDegreesOfParallelism` .
 
 İmza:
 
@@ -208,17 +208,17 @@ computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
 
 Ne zaman kullanılır:
 
-- Aynı anda bir dizi hesaplama çalıştırmanız gerekiyorsa ve bunların yürütme sırasına güvenmeniz gerekmez.
-- Hepsi tamamlanana kadar paralel olarak zamanlanan hesaplamalardan sonuç gerektirmezseniz.
+- Aynı anda bir hesaplamalar kümesi çalıştırmanız gerekiyorsa ve bunların yürütme sırasına göre hiçbir rahatlık olmaz.
+- Tüm tamamlanana kadar paralel olarak zamanlanan hesaplamaların sonuçlarına gerek yoksa.
 
-Dikkat et:
+İçin izlenecek:
 
-- Tüm hesaplamalar tamamlandıktan sonra yalnızca ortaya çıkan değerler dizisine erişebilirsiniz.
-- Hesaplamalar zamanlandırıldığında çalıştırılacaktır. Bu davranış, onların yürütme sırasına güvenemeyeceğiniz anlamına gelir.
+- Yalnızca tüm hesaplamalar bittikten sonra elde edilen değer dizisine erişebilirsiniz.
+- Hesaplamalar, her zaman zamanlandığı her seferinde çalıştırılır. Bu davranış, yürütmesinin sırasıyla güvenemeyeceğiniz anlamına gelir.
 
-### <a name="asyncsequential"></a>Async.Sequential
+### <a name="asyncsequential"></a>Async. Sequential
 
-Geçirilme sırasına göre yürütülecek bir eşzamanlı hesaplama dizisi zamanlar. İlk hesaplama yürütülür, sonra sonraki, ve benzeri. Hiçbir hesaplama paralel olarak yürütülmez.
+Bir dizi zaman uyumsuz hesaplamaların, geçirildikleri sırada yürütülecek şekilde zamanlamasını zamanlar. İlk hesaplama yürütülür, sonra bir sonraki ve bu şekilde devam eder. Paralel olarak hiçbir hesaplama yürütülmeyecektir.
 
 İmza:
 
@@ -230,14 +230,14 @@ Ne zaman kullanılır:
 
 - Sırayla birden çok hesaplama yürütmeniz gerekiyorsa.
 
-Dikkat et:
+İçin izlenecek:
 
-- Tüm hesaplamalar tamamlandıktan sonra yalnızca ortaya çıkan değerler dizisine erişebilirsiniz.
-- Hesaplamalar, bu işleve geçirilme sırasına göre çalıştırılır, bu da sonuçlar döndürülmeden önce daha fazla zamanın geçeceği anlamına gelebilir.
+- Yalnızca tüm hesaplamalar bittikten sonra elde edilen değer dizisine erişebilirsiniz.
+- Hesaplamalar, bu işleve geçirildikleri sırada çalıştırılır, bu da sonuçlar döndürülmeden önce geçecek daha fazla zaman geçilecektir.
 
-### <a name="asyncawaittask"></a>Async.AwaitTask
+### <a name="asyncawaittask"></a>Async. AwaitTask
 
-Verilenin <xref:System.Threading.Tasks.Task%601> tamamlanmasını bekleyen bir eşzamanlı hesaplama verir ve sonucunu`Async<'T>`
+Verilen öğenin tamamlanmasını bekleyen bir zaman uyumsuz hesaplama döndürür <xref:System.Threading.Tasks.Task%601> ve bunun sonucunu bir olarak döndürür `Async<'T>`
 
 İmza:
 
@@ -247,15 +247,15 @@ task: Task<'T> -> Async<'T>
 
 Ne zaman kullanılır:
 
-- Bir F# asynchronous hesaplama içinde <xref:System.Threading.Tasks.Task%601> bir .NET API tüketirken.
+- Bir <xref:System.Threading.Tasks.Task%601> F # zaman uyumsuz hesaplama içinde bir .NET API 'si kullandığınızda.
 
-Dikkat et:
+İçin izlenecek:
 
-- Özel durumlar Görev <xref:System.AggregateException> Paralel Kitaplığı kuralını izleyerek sarılır ve bu davranış, F# async'in genellikle özel durumları nasıl yüzeye çıkardığını gösterir.
+- Özel durumlar, <xref:System.AggregateException> görev paralel kitaplığı kuralına göre sarmalanır ve bu davranış, F # zaman uyumsuz genellikle özel durumların dışında farklılık gösterir.
 
-### <a name="asynccatch"></a>Async.Catch
+### <a name="asynccatch"></a>Async. catch
 
-Belirli `Async<'T>`bir , döndüren bir `Async<Choice<'T, exn>>`' yi yürüten bir eşzamanlı hesaplama oluşturur. Verilen `Async<'T>` başarıyla tamamlanırsa, a `Choice1Of2` elde edilen değerle döndürülür. Bir özel durum tamamlanmadan önce atılırsa, a `Choice2of2` yükseltilen özel durum la döndürülür. Kendisi birçok hesaplamadan oluşan bir eşzamanlı hesaplamada kullanılırsa ve bu hesaplamalardan biri özel bir durum oluşturursa, kapsayan hesaplama tamamen durdurulur.
+Verilen ve döndüren zaman uyumsuz bir hesaplama oluşturur `Async<'T>` `Async<Choice<'T, exn>>` . Verilen `Async<'T>` başarıyla tamamlanırsa, `Choice1Of2` sonuç değeri ile bir döndürülür. İşlem tamamlanmadan önce bir özel durum oluşturulursa, bir özel durum `Choice2of2` ortaya çıkan özel durumla döndürülür. Bu, birçok hesaplamayı oluşturan zaman uyumsuz bir hesaplamada kullanılırsa ve bu hesaplamaların biri bir özel durum oluşturursa, dahil edilen hesaplama tamamen durdurulur.
 
 İmza:
 
@@ -265,15 +265,15 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 Ne zaman kullanılır:
 
-- Bir özel durumla başarısız olabilecek eşzamanlı çalışma gerçekleştirirken ve bu özel durumu arayanda işlemek istediğinizde.
+- Bir özel durumla başarısız olabilecek ve çağıranın bu özel durumu işlemek istediğiniz zaman uyumsuz iş yaparken.
 
-Dikkat et:
+İçin izlenecek:
 
-- Birleştirilmiş veya sıralanmış asynchronöz hesaplamalar kullanılırken, "dahili" hesaplamalarından biri özel durum oluşturursa, kapsamlı hesaplama tamamen durdurulacaktır.
+- Birleşik veya sıralı zaman uyumsuz hesaplamalar kullanılırken, "iç" hesaplamalarından biri bir özel durum oluşturursa, birlikte bulunan hesaplama tam olarak durdurulur.
 
-### <a name="asyncignore"></a>Async.Ignore
+### <a name="asyncignore"></a>Async. Ignore
 
-Verilen hesaplamayı çalıştıran ve sonucunu yok sayan bir eşzamanlı hesaplama oluşturur.
+Verilen hesaplamayı çalıştıran ve sonucunu yoksayan zaman uyumsuz bir hesaplama oluşturur.
 
 İmza:
 
@@ -283,15 +283,15 @@ computation: Async<'T> -> Async<unit>
 
 Ne zaman kullanılır:
 
-- Sonucu gerekli olmayan bir eşzamanlı hesaplamanız olduğunda. Bu, eşzamanlı olmayan `ignore` kod koduna benzer.
+- Zaman uyumsuz bir hesaplamanız olduğunda, sonucu gerekli değildir. Bu, `ignore` zaman uyumsuz kod için koda benzerdir.
 
-Dikkat et:
+İçin izlenecek:
 
-- Kullanmak `Async.Ignore` `Async.Start` istediğiniz için veya gerektiren `Async<unit>`başka bir işlevi kullanmanız gerekiyorsa, sonucu atmanın sorun olmadığını düşünün. Bir tür imzasına sığdırmak için sonuçları atmaktan kaçının.
+- `Async.Ignore`Kullanmak istediğiniz `Async.Start` veya gerektiren başka bir işlev için kullanmanız gerekiyorsa, sonucun atılıp `Async<unit>` atılmadığı konusunda düşünün. Sonuçları bir tür imzasına uyacak şekilde yok saymaktan kaçının.
 
-### <a name="asyncrunsynchronously"></a>Async.RunSynchronously
+### <a name="asyncrunsynchronously"></a>Async. RunSynchronously
 
-Asynchronous hesaplaması çalıştırıyor ve arama iş parçacığında sonucunu bekliyor. Bu arama engelliyor.
+Zaman uyumsuz bir hesaplama çalıştırır ve bunun sonucunu çağıran iş parçacığında bekler. Bu çağrı engelleniyor.
 
 İmza:
 
@@ -301,16 +301,16 @@ computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -
 
 Ne zaman kullanılır:
 
-- İhtiyacınız varsa, yürütülebilir bir giriş noktasında bir uygulamada yalnızca bir kez kullanın.
-- Performansı önemsemiyorsanız ve aynı anda bir dizi diğer eşzamanlı işlemi yürütmek istediğinizde.
+- İhtiyacınız varsa, çalıştırılabilir dosyanın giriş noktasında uygulamayı yalnızca bir kez kullanın.
+- Performansla ilgilenmezseniz ve aynı anda başka bir zaman uyumsuz işlem kümesi yürütmek istiyorsanız.
 
-Dikkat et:
+İçin izlenecek:
 
-- Yürütme `Async.RunSynchronously` tamamlanana kadar arama iş parçacığı engeller.
+- Çağırma `Async.RunSynchronously` , yürütme tamamlanana kadar çağıran iş parçacığını engeller.
 
-### <a name="asyncstart"></a>Async.Start
+### <a name="asyncstart"></a>Async. Start
 
-İş parçacığı havuzunda dönen bir eşzamanlı hesaplama `unit`başlatır. Sonucunu beklemez. İç `Async.Start` içe başlayan hesaplamalar, onları çağıran ana hesaplamadan bağımsız olarak başlatılır. Onların ömrü herhangi bir üst hesaplama bağlı değildir. Üst hesaplama iptal edilirse, alt hesaplamalar iptal edilir.
+Öğesini döndüren iş parçacığı havuzunda zaman uyumsuz bir hesaplama başlatır `unit` . Sonucunu beklemez. İle başlatılan iç içe hesaplamalar `Async.Start` , onları çağıran üst hesaplamadan bağımsız olarak başlatılır. Yaşam süresi herhangi bir üst hesaplamasına bağlı değildir. Üst hesaplama iptal edilirse, hiçbir alt hesaplama iptal edilemez.
 
 İmza:
 
@@ -318,27 +318,27 @@ Dikkat et:
 computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
-Yalnızca:
+Yalnızca şu durumlarda kullanın:
 
-- Sonuç vermeyen ve/veya bir sonuç alınmasını gerektiren bir eşzamanlı hesaplamanız var.
-- Eşzamanlı hesaplamanın ne zaman tamamlaşacağını bilmeniz gerekmez.
-- Asynchronous hesaplamanın hangi iş parçacığı üzerinde çalıştığı umurunda değil.
-- Görevden kaynaklanan özel durumları bilmeniz veya bildirmeniz gerekmez.
+- Bir sonuç elde etmez ve/veya işlemesini gerektirmeyen zaman uyumsuz bir hesaplasahipsiniz.
+- Zaman uyumsuz bir hesaplamanın tamamlanışında, bilmeniz gerekmez.
+- Zaman uyumsuz bir hesaplamanın çalışacağı iş parçacığını ilgilenmezsiniz.
+- Görevden kaynaklanan özel durumları bilmeniz veya bunları raporlamak zorunda kalmazsınız.
 
-Dikkat et:
+İçin izlenecek:
 
-- Başlatılan hesaplamalar tarafından `Async.Start` yükseltilen özel durumlar arayana yayılmaz. Arama yığını tamamen çözülecektir.
-- Herhangi bir çalışma `printfn`(arama `Async.Start` gibi) bir programın yürütülmesinin ana iş parçacığı üzerinde gerçekleşmesine neden olmaz.
+- İle başlatılan hesaplamalar tarafından oluşturulan özel durumlar `Async.Start` çağırana yayılmaz. Çağrı yığını tamamen kalıcı olmayacak.
+- İle başlatılan herhangi bir iş (örneğin `printfn` , çağırma) `Async.Start` , bir programın yürütmenin ana iş parçacığında meydana gelmesine neden olmaz.
 
 ## <a name="interoperate-with-net"></a>.NET ile birlikte çalışma
 
-[Async/await](../../../standard/async.md)-style asynchronous programlama kullanan bir .NET kitaplığı veya C# kod tabanıyla çalışıyor olabilirsiniz. C# ve .NET kitaplıklarının <xref:System.Threading.Tasks.Task%601> çoğunluğu <xref:System.Threading.Tasks.Task> çekirdek soyutlamaları yerine `Async<'T>`çekirdek soyutlamaları olarak kullandığından, bu iki eşsenkronizasyon yaklaşımı arasında bir sınırı geçmeniz gerekir.
+[Zaman uyumsuz/await](../../../standard/async.md)stili zaman uyumsuz programlama kullanan bir .NET kitaplığı veya C# kod temeli ile çalışıyor olabilirsiniz. C# ve .NET kitaplıklarının çoğunluğu <xref:System.Threading.Tasks.Task%601> <xref:System.Threading.Tasks.Task> bunun yerine temel soyutlamaları olarak ' i kullandığından, `Async<'T>` Bu iki yaklaşım arasında bir sınır arasında geçiş yapmanız gerekir.
 
-### <a name="how-to-work-with-net-async-and-taskt"></a>.NET async ve`Task<T>`
+### <a name="how-to-work-with-net-async-and-taskt"></a>.NET Async ve ile çalışma `Task<T>`
 
-.NET async kitaplıkları ve kullanan <xref:System.Threading.Tasks.Task%601> kod tabanları (yani, iade değerlerine sahip async hesaplamaları) ile çalışmak basittir ve F# ile yerleşik desteği vardır.
+.NET Async kitaplıkları ve kod tabanları ile çalışma (yani <xref:System.Threading.Tasks.Task%601> , dönüş değeri olan zaman uyumsuz hesaplamalar) basittir ve F # ile yerleşik destek vardır.
 
-İşlevi `Async.AwaitTask` .NET asynchronous hesaplamasını beklemek için kullanabilirsiniz:
+`Async.AwaitTask`.NET zaman uyumsuz hesaplamayı beklemek için işlevini kullanabilirsiniz:
 
 ```fsharp
 let getValueFromLibrary param =
@@ -348,7 +348,7 @@ let getValueFromLibrary param =
     }
 ```
 
-İşlev, `Async.StartAsTask` bir .NET arayana eşzamanlı bir hesaplama geçirmek için kullanabilirsiniz:
+`Async.StartAsTask`Bir .net çağıranına zaman uyumsuz bir hesaplama geçirmek için işlevini kullanabilirsiniz:
 
 ```fsharp
 let computationForCaller param =
@@ -358,9 +358,9 @@ let computationForCaller param =
     } |> Async.StartAsTask
 ```
 
-### <a name="how-to-work-with-net-async-and-task"></a>.NET async ve`Task`
+### <a name="how-to-work-with-net-async-and-task"></a>.NET Async ve ile çalışma `Task`
 
-Kullanan <xref:System.Threading.Tasks.Task> API'lerle çalışmak için (yani bir değer döndürmeyen .NET async hesaplamaları), bir değeri `Async<'T>` dönüştürecek ek <xref:System.Threading.Tasks.Task>bir işlev eklemeniz gerekebilir:
+Kullanan API 'lerle çalışmak için <xref:System.Threading.Tasks.Task> (yani, bir değer döndürmeyen .NET zaman uyumsuz hesaplamalar), öğesini öğesine dönüştürecek ek bir işlev eklemeniz gerekebilir `Async<'T>` <xref:System.Threading.Tasks.Task> :
 
 ```fsharp
 module Async =
@@ -369,22 +369,22 @@ module Async =
         Async.StartAsTask comp :> Task
 ```
 
-Zaten `Async.AwaitTask` bir girdi olarak <xref:System.Threading.Tasks.Task> kabul eden bir. Bu ve daha önce `startTaskFromAsyncUnit` tanımlanmış işlevle, <xref:System.Threading.Tasks.Task> F# async hesaplamasından türleri başlatabilir ve bekleyebilirsiniz.
+`Async.AwaitTask`Bir as girişi kabul eden bir zaten var <xref:System.Threading.Tasks.Task> . Bu ve daha önce tanımlanmış olan `startTaskFromAsyncUnit` işlevle, <xref:System.Threading.Tasks.Task> bir F # Async hesaplamadan türleri başlatabilir ve beklede olursunuz.
 
-## <a name="relationship-to-multi-threading"></a>Çoklu iş parçacığı ile ilişki
+## <a name="relationship-to-multi-threading"></a>Çoklu iş parçacıklı ilişki
 
-Bu makale boyunca iş parçacığı belirtilmiş olsa da, hatırlanması gereken iki önemli şey vardır:
+Bu makale boyunca iş parçacığına bahsedilse de, dikkat etmeniz gereken iki önemli nokta vardır:
 
-1. Geçerli iş parçacığı üzerinde açıkça başlıkça, bir eşzamanlı hesaplama ile iş parçacığı arasında bir benzerlik yoktur.
-1. F# asynchronous programlama çoklu iş parçacığı için bir soyutlama değildir.
+1. Geçerli iş parçacığında açıkça başlamadıkça, zaman uyumsuz bir hesaplama ve bir iş parçacığı arasında benzeşim yoktur.
+1. F # içinde zaman uyumsuz programlama, çoklu iş parçacığı oluşturma için bir soyutlama değildir.
 
-Örneğin, bir hesaplama aslında işin doğasına bağlı olarak, arayan kişinin iş parçacığı üzerinde çalışabilir. Bir hesaplama da iş parçacıkları arasında "atlama" olabilir, "bekleme" dönemleri arasında yararlı işler yapmak için zaman küçük bir miktar için ödünç (örneğin bir ağ araması transit olduğunda gibi).
+Örneğin, bir hesaplama, işin doğasına bağlı olarak, çağıranın iş parçacığı üzerinde çalışır. Bir hesaplama Ayrıca, iş parçacıkları arasında "bekleyen" (bir ağ çağrısının aktarım aşamasında olduğu gibi) kullanım süreleri arasında yararlı bir süre için ödünç alınan "atlayabilir".
 
-F# geçerli iş parçacığı (veya açıkça geçerli iş parçacığı üzerinde değil) bir eşzamanlı hesaplama başlatmak için bazı yetenekler sağlar, asynchrony genellikle belirli bir iş parçacığı stratejisi ile ilişkili değildir.
+F #, geçerli iş parçacığında (veya açık olarak geçerli iş parçacığında değil) zaman uyumsuz bir hesaplama başlatmak için bazı yetenekler sağlasa da, zaman uyumsuzluğu genellikle belirli bir iş parçacığı stratejisiyle ilişkili değildir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Asynchronous Programlama Modeli](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
-- [Jet.com'un F# Async Rehberi](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
-- [Eğlence ve kar için F# Asynchronous Programlama kılavuzu](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
-- [C# ve F#'da Async: C'de asynchronous gotchas #](http://tomasp.net/blog/csharp-async-gotchas.aspx/)
+- [F # zaman uyumsuz programlama modeli](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
+- [Jet. com ' un F # Async Kılavuzu](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
+- [Eğlence ve karın zaman uyumsuz programlama kılavuzu için F #](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
+- [C# ve F # dilinde Async: C 'de zaman uyumsuz tuzakları #](http://tomasp.net/blog/csharp-async-gotchas.aspx/)

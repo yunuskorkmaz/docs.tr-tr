@@ -1,20 +1,17 @@
 ---
 title: Dizeler
 description: "F # ' String ' türünün Unicode karakter dizisi olarak sabit metni nasıl temsil ettiğini öğrenin."
-ms.date: 07/05/2019
-ms.openlocfilehash: 67a6506b4b8c479da1022c069a7f53402f904b4d
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.date: 08/15/2020
+ms.openlocfilehash: f6ec36feeb197bf785c702e7b626cf5cf80696ab
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855419"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812217"
 ---
 # <a name="strings"></a>Dizeler
 
-`string`Tür, Unicode karakter dizisi olarak sabit metni temsil eder. `string`, .NET içindeki için bir diğer addır `System.String` .
-
-> [!NOTE]
-> F # için docs.microsoft.com API başvurusu tamamlanmadı. Bozuk bağlantılarla karşılaşırsanız, bunun yerine [F # Çekirdek Kitaplığı belgelerine](https://fsharp.github.io/fsharp-core-docs/) başvurun.
+`string`Tür, Unicode karakter dizisi olarak sabit metni temsil eder. `string` , .NET içindeki için bir diğer addır `System.String` .
 
 ## <a name="remarks"></a>Açıklamalar
 
@@ -32,10 +29,10 @@ Dize sabit değerleri tırnak işareti (") karakteriyle sınırlandırılmışt�
 |Sola|`\\`|
 |Tırnak işareti|`\"`|
 |Kesme işareti|`\'`|
-|Unicode karakter|`\DDD`( `D` ondalık basamağı belirtir; 000-255 aralığı; Örneğin, `\231` = "ç")|
-|Unicode karakter|`\xHH`( `H` onaltılık basamağı belirtir; 00-FF aralığı; Örneğin, `\xE7` = "ç")|
-|Unicode karakter|`\uHHHH`(UTF-16) ( `H` onaltılık basamağı belirtir; 0000-ffff aralığı;  Örneğin, `\u00E7` = "ç")|
-|Unicode karakter|`\U00HHHHHH`(UTF-32) ( `H` onaltılık basamağı belirtir; 000000 yazın-10FFFF) aralığı  Örneğin, `\U0001F47D` = " 👽 ")|
+|Unicode karakter|`\DDD` ( `D` ondalık basamağı belirtir; 000-255 aralığı; Örneğin, `\231` = "ç")|
+|Unicode karakter|`\xHH` ( `H` onaltılık basamağı belirtir; 00-FF aralığı; Örneğin, `\xE7` = "ç")|
+|Unicode karakter|`\uHHHH` (UTF-16) ( `H` onaltılık basamağı belirtir; 0000-ffff aralığı;  Örneğin, `\u00E7` = "ç")|
+|Unicode karakter|`\U00HHHHHH` (UTF-32) ( `H` onaltılık basamağı belirtir; 000000 yazın-10FFFF) aralığı  Örneğin, `\U0001F47D` = " 👽 ")|
 
 > [!IMPORTANT]
 > `\DDD`Kaçış sırası, diğer dillerin çoğunda, sekizli gösterimi değil ondalık gösterimidir. Bu nedenle, rakamlar `8` ve `9` geçerli ve bir dizisi `\032` bir boşluk (U + 0020) temsil ederken, sekizlik gösterimde aynı kod noktası olur `\040` .
@@ -69,7 +66,7 @@ Bir dizedeki ayrı karakterlere, aşağıdaki gibi dizi benzeri sözdizimini kul
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1002.fs)]
 
-Çıktı `b` .
+Çıktı `b` olur.
 
 Ya da aşağıdaki kodda gösterildiği gibi, dizi dilimi söz dizimini kullanarak alt dizeleri de ayıklayabilirsiniz.
 
@@ -102,7 +99,7 @@ F # ' deki dize türü aslında .NET Framework bir tür olduğundan `System.Stri
 
 ## <a name="string-module"></a>Dize modülü
 
-Dize işleme için ek işlevler, `String` ad alanındaki modüle dahil edilmiştir `FSharp.Core` . Daha fazla bilgi için bkz. [Core. String modülü](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
+Dize işleme için ek işlevler, `String` ad alanındaki modüle dahil edilmiştir `FSharp.Core` . Daha fazla bilgi için bkz. [dize modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-stringmodule.html).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

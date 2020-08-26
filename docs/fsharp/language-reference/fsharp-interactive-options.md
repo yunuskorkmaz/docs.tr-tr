@@ -2,12 +2,12 @@
 title: Etkileşimli Seçenekler
 description: F# Etkileşimli, fsi.exe tarafından desteklenen komut satırı seçenekleri hakkında bilgi edinin.
 ms.date: 08/15/2020
-ms.openlocfilehash: da2251c1d2e57090ed926e501cebf3c53ac58052
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: adc8dc86f14366720e1acbf35115d4e318a76aef
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558614"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88810539"
 ---
 # <a name="f-interactive-options"></a>F# Etkileşimli seçenekleri
 
@@ -52,7 +52,7 @@ Listelerin F# Etkileşimli seçenek bağımsız değişkenlerinde göründüğü
 |**--optimize**[ **+**&#124;**-** ]|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--preferreduilang: &lt; lang&gt;**| Tercih edilen çıkış dili kültür adını belirtir (örneğin, ES-ES, ja-JP). |
 |**--quiet**|F# Etkileşimli **stdout** akışına çıktıyı gizleyin.|
-|**--alıntılar-hata ayıkla**|F # teklif değişmez değerleri ve yansıtılan tanımlardan türetilmiş ifadeler için ek hata ayıklama bilgilerinin yayınlanmasının gerektiğini belirtir. Hata ayıklama bilgileri bir F # ifade ağacı düğümünün özel özniteliklerine eklenir. Bkz. [kod teklifleri](code-quotations.md) ve [Expr. CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
+|**--alıntılar-hata ayıkla**|F # teklif değişmez değerleri ve yansıtılan tanımlardan türetilmiş ifadeler için ek hata ayıklama bilgilerinin yayınlanmasının gerektiğini belirtir. Hata ayıklama bilgileri bir F # ifade ağacı düğümünün özel özniteliklerine eklenir. Bkz. [kod teklifleri](code-quotations.md) ve [Expr. CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |**--ReadLine**[ **+**&#124;**-** ]|Etkileşimli modda sekme tamamlamayı etkinleştirin veya devre dışı bırakın.|
 |**--Başvuru: &lt; dosya adı&gt;**<br /><br />**-r: &lt; dosya adı&gt;**|**fsc.exe** derleyici seçeneği ile aynı. Daha fazla bilgi için bkz. [derleyici seçenekleri](compiler-options.md).|
 |**--edilecek çağrılar**[ **+**&#124;**-** ]|Tail Özyinelemeli işlevler için yığın çerçevesinin yeniden kullanılmasını sağlayan tail Il yönergesinin kullanımını etkinleştirin veya devre dışı bırakın. Bu seçenek varsayılan olarak etkindir.|
@@ -144,7 +144,7 @@ val x : MyList = [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
 ```
 
 Transformatör işlevi geçirildiğinde `fsi.AddPrintTransformer` `null` , yazdırma transformatörü yok sayılır.
-Bu, tür ile başlayarak herhangi bir giriş değerini filtrelemek için kullanılabilir `obj` .  Örneğin:
+Bu, tür ile başlayarak herhangi bir giriş değerini filtrelemek için kullanılabilir `obj` .  Örnek:
 
 ```fsharp
 fsi.AddPrintTransformer(fun (x:obj) ->

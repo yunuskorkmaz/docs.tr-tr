@@ -2,12 +2,12 @@
 title: Derleyici Seçenekleri
 description: 'F # uygulamalarınızın ve kitaplıklarınızın derlemesini denetlemek için F # derleyici komut satırı seçeneklerini kullanın.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 7f7b7dac2060213cd7d783669cb4de2b96a88968
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: c10808e97d31bd3bdb469fc2a8e57a4650170dec
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557366"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812152"
 ---
 # <a name="compiler-options"></a>Derleyici seçenekleri
 
@@ -52,7 +52,7 @@ Aşağıdaki tabloda alfabetik olarak listelenen derleyici seçenekleri gösteri
 |`--pdb:pdb-filename`|Çıkış hata ayıklama PDB (program veritabanı) dosyasını adlandırır. Bu seçenek yalnızca `--debug` Ayrıca etkinleştirildiğinde geçerlidir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;pdb &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/pdb-compiler-option.md).|
 |`--platform:platform-name`|Oluşturulan kodun yalnızca belirtilen platformda ( `x86` , `Itanium` veya `x64` ) çalışacağını veya platform adı `anycpu` seçilirse oluşturulan kodun herhangi bir platformda çalışacağını belirtir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;platform &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/platform-compiler-option.md).|
 |`--preferreduilang:lang`| Tercih edilen çıkış dili kültür adını belirtir (örneğin,,  `es-ES` `ja-JP` ). |
-|`--quotations-debug`|F # teklif değişmez değerleri ve yansıtılan tanımlardan türetilmiş ifadeler için ek hata ayıklama bilgilerinin yayınlanmasının gerektiğini belirtir. Hata ayıklama bilgileri bir F # ifade ağacı düğümünün özel özniteliklerine eklenir. Bkz. [kod teklifleri](code-quotations.md) ve [Expr. CustomAttributes](https://msdn.microsoft.com/visualfsharpdocs/conceptual/expr.customattributes-property-%5bfsharp%5d).|
+|`--quotations-debug`|F # teklif değişmez değerleri ve yansıtılan tanımlardan türetilmiş ifadeler için ek hata ayıklama bilgilerinin yayınlanmasının gerektiğini belirtir. Hata ayıklama bilgileri bir F # ifade ağacı düğümünün özel özniteliklerine eklenir. Bkz. [kod teklifleri](code-quotations.md) ve [Expr. CustomAttributes](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-quotations-fsharpexpr.html#CustomAttributes).|
 |`--reference:assembly-filename`<br /><br />`-r:assembly-filename`|Bir F # veya .NET Framework derlemesinden kodu derlenen kod için kullanılabilir hale getirir.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;reference &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/reference-compiler-option.md).|
 |`--resource:resource-filename`|Yönetilen bir kaynak dosyasını oluşturulan derlemeye gömer.<br /><br />Bu derleyici seçeneği aynı ada sahip C# derleyici seçeneğine eşdeğerdir. Daha fazla bilgi için bkz. [&#47;kaynak &#40;C&#35; derleyici seçenekleri&#41;](../../csharp/language-reference/compiler-options/resource-compiler-option.md).|
 |`--sig:signature-filename`|Oluşturulan derlemeye dayalı bir imza dosyası oluşturur. İmza dosyaları hakkında daha fazla bilgi için bkz. [imzalar](signature-files.md).|

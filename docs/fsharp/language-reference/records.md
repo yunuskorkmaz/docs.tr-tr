@@ -2,12 +2,12 @@
 title: Kayıtlar
 description: 'F # kayıtlarının, isteğe bağlı olarak, adlandırılmış değerlerin basit toplamlarını nasıl temsil ettiğini öğrenin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: 182b2e83c3940c866197052af102787a96e49c54
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: a72c0f15b58407e7d759e2fb5a1b35a7fc0d29e3
+ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559056"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88812360"
 ---
 # <a name="records"></a>Kayıtlar
 
@@ -184,5 +184,5 @@ Kayıtlar için başvuru eşitlik gerekiyorsa, `[<ReferenceEquality>]` kaydın �
 - [F# Türleri](fsharp-types.md)
 - [Sınıflar](classes.md)
 - [F # dil başvurusu](index.md)
-- [Başvuru-eşitlik](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Başvuru-eşitlik](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-referenceequalityattribute.html)
 - [Model eşleştirme](pattern-matching.md)
