@@ -2,12 +2,12 @@
 title: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
 description: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturmayı öğrenin.
 ms.date: 06/02/2020
-ms.openlocfilehash: e0b18837bf8bef5be5f20b84341bde8526b9f7a2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811879"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867665"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
 
@@ -19,7 +19,7 @@ Bu öğreticide Mac için Visual Studio kullanarak bir .NET Core konsol uygulama
 > * Mac için Visual Studio, **Help**  >  menüden**sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalayarak bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/8/index.html) portalında izleyebilirsiniz.
 > * Öneride bulunmak için, **Help**  >  menüden**bir öneri sağlayın** veya hoş geldiniz ekranından bir öneri **Provide a Suggestion** sağlayın. Bu işlem sizi [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götürür.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Sürüm 8,6 veya üzeri Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core ' u yüklemek için seçeneği belirleyin. .NET Core geliştirmesi için Xamarin 'in yüklenmesi isteğe bağlıdır. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
@@ -105,4 +105,4 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 Bu öğreticide, bir .NET Core konsol uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio-mac.md)
+> [Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio-mac.md)

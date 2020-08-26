@@ -2,26 +2,26 @@
 title: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama
 description: Yayımlama, .NET Core uygulamasını çalıştırmak için gereken dosya kümesini oluşturur.
 ms.date: 06/08/2020
-ms.openlocfilehash: 38b656ac919dfb8b710a97c5d7fc63479e3fa367
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: ec6b867f145ffdea491187de3745149f2cebd8dd
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811411"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867548"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama
 
 Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulamasının nasıl yayımlanacağı gösterilmektedir. Yayımlama, uygulamanızı çalıştırmak için gereken dosya kümesini oluşturur. Dosyaları dağıtmak için, onları hedef makineye kopyalayın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Mac için Visual Studio bir .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="publish-the-app"></a>Uygulamayı yayımlama
 
 1. Mac için Visual Studio başlatın.
 
-1. [Mac için Visual Studio .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz HelloWorld projesini açın.
+1. [Mac için Visual Studio kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio-mac.md)bölümünde oluşturduğunuz HelloWorld projesini açın.
 
 1. Visual Studio 'nun uygulamanızın yayın sürümünü oluşturmakta olduğundan emin olun. Gerekirse, araç çubuğundaki derleme yapılandırma ayarını **Hata Ayıkla** 'dan **Release**olarak değiştirin.
 
@@ -67,7 +67,7 @@ Yayımlama işlemi, yayımlanan uygulamanın .NET Core çalışma zamanı yükl�
 
 ## <a name="run-the-published-app"></a>Yayımlanan uygulamayı çalıştırma
 
-1. Bir Terminal açın ve *Yayımla* klasörüne gidin. Bunu yapmak için, `cd` daha önce kopyaladığınız yolu girin ve yapıştırın. Örnek:
+1. Bir Terminal açın ve *Yayımla* klasörüne gidin. Bunu yapmak için, `cd` daha önce kopyaladığınız yolu girin ve yapıştırın. Örneğin:
 
    ```console
    cd ~/Projects/HelloWorld/HelloWorld/bin/Release/netcoreapp3.1/publish/
@@ -88,4 +88,4 @@ Yayımlama işlemi, yayımlanan uygulamanın .NET Core çalışma zamanı yükl�
 Bu öğreticide bir konsol uygulaması yayımladınız. Sonraki öğreticide, bir sınıf kitaplığı oluşturursunuz.
 
 > [!div class="nextstepaction"]
-> [Mac için Visual Studio 'da .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)
+> [Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-mac.md)

@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: c732728a98eb993762e4fbb9e4b0f5229fdde181
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4cd18aca4396f902268d59867760424d65ddcf6d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811853"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867639"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Core konsol uygulaması oluşturma
 
 Bu öğreticide, Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma ve çalıştırma gösterilmektedir.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 - **.NET Core platformlar arası geliştirme** iş yükünün yüklü olduğu [Visual Studio 2019 sürüm 16,6 veya sonraki bir sürüm](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) . .NET Core 3,1 SDK 'Sı, bu iş yükünü seçtiğinizde otomatik olarak yüklenir.
 
@@ -115,4 +115,4 @@ Kullanıcıya adını istemek ve Tarih ve saat ile birlikte göstermek için uyg
 Bu öğreticide, bir .NET Core konsol uygulaması oluşturdunuz. Sonraki öğreticide, uygulamada hata ayıklaması yapabilirsiniz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio 'da bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio.md)
+> [Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama](debugging-with-visual-studio.md)

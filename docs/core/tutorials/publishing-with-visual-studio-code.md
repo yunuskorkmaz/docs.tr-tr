@@ -2,12 +2,12 @@
 title: Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama
 description: Yayımlama, .NET Core uygulamasını çalıştırmak için gereken dosya kümesini oluşturur.
 ms.date: 07/04/2020
-ms.openlocfilehash: 04dfbae85f196ca4c8f8eb593637a801aa9773f2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: a84e66126806e2ab45c14527df1b931fa9980468
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811398"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867652"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama
 
@@ -15,15 +15,15 @@ Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulam
 
 .NET Core CLI, uygulamayı yayımlamak için kullanılır, bu nedenle bu öğreticiyi Visual Studio Code dışında bir kod düzenleyicisiyle takip edebilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio Code bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="publish-the-app"></a>Uygulamayı yayımlama
 
 1. Visual Studio Code’u başlatma.
 
-1. [Visual Studio Code .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz *HelloWorld* proje klasörünü açın.
+1. [Visual Studio Code kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz *HelloWorld* proje klasörünü açın.
 
 1. Ana menüden **Görünüm**  >  **terminali** ' ni seçin.
 
@@ -112,4 +112,4 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 Bu öğreticide bir konsol uygulaması yayımladınız. Sonraki öğreticide, bir sınıf kitaplığı oluşturursunuz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)
+> [Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)

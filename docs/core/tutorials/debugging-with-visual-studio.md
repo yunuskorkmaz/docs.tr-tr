@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 743603cb037406948190c7090ca3527bfc40db18
-ms.sourcegitcommit: 1cbd77da54405ea7dba343ac0334fb03237d25d2
+ms.openlocfilehash: 0555c6b4185da088333503c1e744da2dd7b4f2e4
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84702073"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867600"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
@@ -19,7 +19,7 @@ Bu öğreticide, Visual Studio 'da kullanılabilen hata ayıklama araçları tan
 
 ## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="use-debug-build-configuration"></a>Hata ayıklama derleme yapılandırmasını kullan
 
@@ -31,7 +31,7 @@ Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bil
 
 1. Visual Studio’yu çalıştırın.
 
-1. [Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz projeyi açın.
+1. [Visual Studio kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz projeyi açın.
 
    Geçerli derleme yapılandırması araç çubuğunda gösterilir. Aşağıdaki araç çubuğu görüntüsünde, Visual Studio 'nun uygulamanın hata ayıklama sürümünü derlemek üzere yapılandırıldığı gösterilmektedir:
 
@@ -188,4 +188,4 @@ Konsol uygulamanızın yayın sürümünü derlemek ve test etmek için, araç �
 Bu öğreticide, Visual Studio hata ayıklama araçları 'nı kullandınız. Sonraki öğreticide, uygulamanın dağıtılabilir bir sürümünü yayımlarsınız.
 
 > [!div class="nextstepaction"]
-> [Visual Studio ile bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio.md)
+> [Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio.md)

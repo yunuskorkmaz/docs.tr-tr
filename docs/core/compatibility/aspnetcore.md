@@ -5,18 +5,24 @@ description: ASP.NET Core 'deki son değişiklikleri listeler.
 ms.date: 08/20/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 4f37bf73c13379bce006c9a3b51302c09562cc44
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 8b37ae5c5eea9e192a269092fccf435ab4877e61
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811292"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867678"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
 ASP.NET Core .NET Core tarafından kullanılan Web uygulaması geliştirme özelliklerini sağlar.
 
-Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
+Belirli bir sürümdeki son değişiklikler için aşağıdaki bağlantılardan birini seçin:
+
+* [ASP.NET Core 5,0](#aspnet-core-50)
+* [ASP.NET Core 3,1](#aspnet-core-31)
+* [ASP.NET Core 3,0](#aspnet-core-30)
+
+ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 - [Kullanılmayan Antiforgery, CORS, tanılama, MVC ve yönlendirme API 'Leri kaldırıldı](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [Kimlik doğrulaması: Google + kullanımdan kaldırma](#authentication-google-deprecated-and-replaced)

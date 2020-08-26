@@ -2,20 +2,20 @@
 title: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 description: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 05/26/2020
-ms.openlocfilehash: 84c7b64ad7708cf2def084593cd7f96eb0ad82e5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: e2be9324a77d0360247a225bbd93224d379bda0d
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810670"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867587"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
 Bu öğreticide, .NET Core uygulamalarıyla çalışmak üzere Visual Studio Code sağlanan hata ayıklama araçları tanıtılmaktadır.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio Code bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Visual Studio Code kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="use-debug-build-configuration"></a>Hata ayıklama derleme yapılandırmasını kullan
 
@@ -27,7 +27,7 @@ Varsayılan olarak, Visual Studio Code başlatma ayarları hata ayıklama derlem
 
 1. Visual Studio Code’u başlatma.
 
-1. [Visual Studio Code .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz projenin klasörünü açın.
+1. [Visual Studio Code kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio-code.md)bölümünde oluşturduğunuz projenin klasörünü açın.
 
 ## <a name="set-a-breakpoint"></a>Kesme noktası ayarlama
 
@@ -224,4 +224,4 @@ dotnet run --configuration Release
 Bu öğreticide hata ayıklama araçları Visual Studio Code kullandınız. Sonraki öğreticide, uygulamanın dağıtılabilir bir sürümünü yayımlarsınız.
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-code.md)
+> [Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-code.md)

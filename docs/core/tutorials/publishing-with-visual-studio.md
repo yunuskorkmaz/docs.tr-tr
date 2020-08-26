@@ -6,26 +6,26 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: afbffa5dc8a620836ec1433a095face46c32df90
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: e0033d52ab54259ce5e4ccf2a25bf4e3d4f244de
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811321"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867561"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET Core konsol uygulaması yayımlama
 
 Bu öğreticide, diğer kullanıcıların çalışması için bir konsol uygulamasının nasıl yayımlanacağı gösterilmektedir. Yayımlama, uygulamanızı çalıştırmak için gereken dosya kümesini oluşturur. Dosyaları dağıtmak için, onları hedef makineye kopyalayın.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Bu öğretici, [Visual Studio 2019 ' de .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
+- Bu öğretici, [Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz konsol uygulamasıyla birlikte kullanılır.
 
 ## <a name="publish-the-app"></a>Uygulamayı yayımlama
 
 1. Visual Studio’yu çalıştırın.
 
-1. [Visual Studio 'da .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz *HelloWorld* projesini açın.
+1. [Visual Studio kullanarak .NET Core konsol uygulaması oluşturma](with-visual-studio.md)bölümünde oluşturduğunuz *HelloWorld* projesini açın.
 
 1. Visual Studio 'Nun yayın derleme yapılandırması ' nı kullandığınızdan emin olun. Gerekirse, araç çubuğundaki derleme yapılandırma ayarını **Hata Ayıkla** 'dan **Release**olarak değiştirin.
 
@@ -85,7 +85,7 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 
 1. **Çözüm Gezgini**, *Yayımla* klasörüne sağ tıklayın ve **tam yolu Kopyala**' yı seçin.
 
-1. Bir komut istemi açın ve *Yayımla* klasörüne gidin. Bunu yapmak için `cd` tam yolu girin ve ardından yapıştırın. Örnek:
+1. Bir komut istemi açın ve *Yayımla* klasörüne gidin. Bunu yapmak için `cd` tam yolu girin ve ardından yapıştırın. Örneğin:
 
    ```console
    cd C:\Projects\HelloWorld\bin\Release\netcoreapp3.1\publish\
@@ -112,4 +112,4 @@ Aşağıdaki adımlarda, yayımlama işlemi tarafından oluşturulan dosyalara b
 Bu öğreticide bir konsol uygulaması yayımladınız. Sonraki öğreticide, bir sınıf kitaplığı oluşturursunuz.
 
 > [!div class="nextstepaction"]
-> [Visual Studio’da bir .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)
+> [Visual Studio 'Yu kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)
