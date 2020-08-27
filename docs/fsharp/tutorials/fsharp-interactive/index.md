@@ -1,30 +1,21 @@
 ---
-title: F# Etkileşimli (fsi.exe) Başvurusu
-description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # betiklerini yürütmek için F# Etkileşimli (fsi.exe) nasıl kullanılacağını öğrenin.'
-ms.date: 05/16/2016
+title: F# Etkileşimli (DotNet) başvurusu
+description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # betiklerini yürütmek için F# Etkileşimli (DotNet fsi) nasıl kullanılacağını öğrenin.'
+ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 8bb1563ad34e65101fb9f09d6e347278e4b0de78
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
+ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854951"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88867626"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
-> [!NOTE]
-> Bu makalede şu anda yalnızca Windows deneyimi açıklanmaktadır.
+F# Etkileşimli (DotNet fsi), konsolda F # kodunu etkileşimli olarak çalıştırmak veya F # betiklerini yürütmek için kullanılır. Diğer bir deyişle, F # Interactive F # dili için bir REPL (okuma, değerlendirme, yazdırma döngüsü) yürütür.
 
-F# Etkileşimli (fsi.exe), konsolda F # kodu etkileşimli olarak çalıştırmak veya F # betiklerini yürütmek için kullanılır. Diğer bir deyişle, F # Interactive F # dili için bir REPL (okuma, değerlendirme, yazdırma döngüsü) yürütür.
-
-Konsolundan F# Etkileşimli çalıştırmak için fsi.exe çalıştırın. fsi.exe şu şekilde bulacaksınız:
-
-```console
-C:\Program Files (x86)\Microsoft Visual Studio\2019\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
-```
-
-nerede `sku` `Community` , veya olur `Professional` `Enterprise` .
+Konsolundan F# Etkileşimli çalıştırmak için, öğesini çalıştırın `dotnet fsi` . `dotnet fsi`Herhangi bir .NET SDK 'sında bulabilirsiniz.
 
 Kullanılabilen komut satırı seçenekleri hakkında daha fazla bilgi için bkz. [F# etkileşimli seçenekleri](../../language-reference/fsharp-interactive-options.md).
 
@@ -44,7 +35,7 @@ Ayarları ayarlayarak F# Etkileşimli komut satırı bağımsız değişkenlerin
 
 ## <a name="scripting-with-f"></a>F ile betik oluşturma\#
 
-Betikler **. FSX** veya **. fsscript**dosya uzantısını kullanır. Kaynak kodu derlemek ve daha sonra derlenen derlemeyi çalıştırmak yerine yalnızca **fsi.exe** çalıştırabilir ve f # Kaynak Kodu betiğinin dosya adını belirtebilir ve f # Interactive kodu okur ve gerçek zamanlı olarak yürütür.
+Betikler **. FSX** veya **. fsscript**dosya uzantısını kullanır. Kaynak kodu derlemek ve daha sonra derlenen derlemeyi çalıştırmak yerine **DotNet fsi** 'yi çalıştırabilir ve f # Kaynak Kodu betiğinin dosya adını belirtebilir ve f # Interactive kodu okur ve gerçek zamanlı olarak yürütür.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Etkileşimli, komut dosyası ve derlenmiş ortamlar arasındaki farklar
 
@@ -92,6 +83,36 @@ Command line arguments:
 file1.fsx
 test
 90
+```
+
+## <a name="package-management-in-f-interactive"></a>F# Etkileşimli Paket Yönetimi
+
+[!NOTE] Paket Yönetimi, .NET SDK 'nın `dotnet fsi` `3.1.300` ve sonraki sürümlerinde ve .NET SDK 'sının tüm sürümlerinde sevk edilen sürümlerinde bir önizleme özelliği olarak kullanılabilir `5.*` . Bu önizleme sürümünde etkinleştirmek için `dotnet fsi` `--langversion:preview` bağımsız değişkenle çalıştırın.
+
+`#r`Aşağıdaki sözdizimi aracılığıyla bir NuGet paketine başvurmak için F# Etkileşimli içindeki BIR DLL 'ye başvurmak üzere sözdizimi de kullanılabilir:
+
+```fsharp
+#r "nuget: <package name>
+```
+
+Örneğin, pakete başvurmak için `FSharp.Data` aşağıdaki `#r` başvuruyu kullanın:
+
+```fsharp
+#r "nuget: FSharp.Data"
+```
+
+Bu satırı yürüttükten sonra, paketin en son sürümü `FSharp.Data` NuGet önbelleğinize indirilir ve geçerli F# Etkileşimli oturumunda başvurulacaktır.
+
+Paket adına ek olarak, bir paketin belirli sürümlerine kısa bir sözdizimi aracılığıyla başvurulabilir:
+
+```fsharp
+#r "nuget: FSharp.Data, 3.3.2"
+```
+
+daha açık bir biçimde:
+
+```fsharp
+#r "nuget: FSharp.Data, Version=3.3.2"
 ```
 
 ## <a name="related-articles"></a>İlgili makaleler:
