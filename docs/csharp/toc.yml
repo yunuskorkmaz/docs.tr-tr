@@ -219,7 +219,7 @@
       href: programming-guide/interop/index.md
     - name: Kodunuzu belgeleme
       href: codedoc.md
-    - name: Sürüm oluşturma
+    - name: Sürüm Oluşturma
       href: versioning.md
 - name: Nasıl yapılır C# makaleleri
   items:
@@ -299,38 +299,25 @@
         - name: Genel Bakış
           displayName: programming concepts
           href: programming-guide/concepts/index.md
-        - name: Async ve await ile asenkron programlama
+        - name: Zaman uyumsuz programlama
+          displayName: 'async, await, asynchronous programming, task, cancellation'
           items:
             - name: Genel Bakış
               displayName: asynchronous programming
               href: programming-guide/concepts/async/index.md
             - name: Zaman uyumsuz görev programlama modeli
               href: programming-guide/concepts/async/task-asynchronous-programming-model.md
-            - name: 'İzlenecek yol: Async ve await kullanarak Web''e erişme'
-              href: programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md
-            - name: Task.WhenAll kullanarak zaman uyumsuz izlenecek yolu genişletme
-              href: programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-            - name: Async ve await kullanarak birden çok web isteğini paralel hale getirme
-              href: programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-            - name: Zaman Uyumsuz Dönüş Türleri
+            - name: Zaman uyumsuz dönüş türleri
               href: programming-guide/concepts/async/async-return-types.md
-            - name: Zaman Uyumsuz Programlarda Denetim Akışı
-              href: programming-guide/concepts/async/control-flow-in-async-programs.md
-            - name: Görevleri iptal etme ve tamamlanan görevleri işleme
+            - name: Görevleri iptal etme
               items:
-                - name: Genel Bakış
-                  href: programming-guide/concepts/async/fine-tuning-your-async-application.md
-                - name: Zaman Uyumsuz bir Görevi veya Görev Listesini İptal Etme
+                - name: Görev listesini iptal etme
                   href: programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md
-                - name: Zaman Uyumsuz Görevleri Belirli Bir Süre Sonunda İptal Etme
+                - name: Görevleri belirli bir süre sonra iptal etme
                   href: programming-guide/concepts/async/cancel-async-tasks-after-a-period-of-time.md
-                - name: Bir Görev Tamamlandıktan Sonra Geri Kalan Zaman Uyumsuz Görevleri İptal Etme
-                  href: programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md
-                - name: Birden Çok Zaman Uyumsuz Görev Başlatma ve Görevleri Tamamlandıkça İşleme
-                  href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
-            - name: Zaman Uyumsuz Uygulamalarda Yeniden Girişi İşleme
-              href: programming-guide/concepts/async/handling-reentrancy-in-async-apps.md
-            - name: Dosya Erişimi için Async Kullanma
+            - name: Zaman uyumsuz görevleri tamamlandıkları anda işleme
+              href: programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md
+            - name: Zaman uyumsuz dosya erişimi
               href: programming-guide/concepts/async/using-async-for-file-access.md
         - name: Öznitelikler
           items:
