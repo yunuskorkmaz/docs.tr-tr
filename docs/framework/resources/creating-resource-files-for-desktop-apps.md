@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 4730a14e499c75176d7ba7c8378626070d5211e9
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 2e71dc177a0358370c7eecde03d9388cced60b75
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865183"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957443"
 ---
 # <a name="create-resource-files-for-net-apps"></a>.NET uygulamaları için kaynak dosyaları oluşturma
 
@@ -59,7 +59,7 @@ name2=value2
 
  .txt ve .restext dosyalarının kaynak dosya biçimi aynıdır. .restext dosya uzantısı yalnızca metin dosyalarının metin tabanlı kaynak dosyaları olarak hemen tanımlanabilmesi için hizmet verir.
 
- Dize kaynakları *ad/değer* çiftleri olarak görünür; burada *ad* kaynağı tanımlayan bir dizedir ve *değer* , gibi bir kaynak alımı *yöntemine geçirdiğinizde döndürülen* kaynak dizesidir <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> . *ad* ve *değerin* eşittir işareti (=) ile ayrılması gerekir. Örnek:
+ Dize kaynakları *ad/değer* çiftleri olarak görünür; burada *ad* kaynağı tanımlayan bir dizedir ve *değer* , gibi bir kaynak alımı *yöntemine geçirdiğinizde döndürülen* kaynak dizesidir <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> . *ad* ve *değerin* eşittir işareti (=) ile ayrılması gerekir. Örneğin:
 
 ```text
 FileMenuName=File
@@ -71,7 +71,7 @@ HelpMenuName=Help
 > [!CAUTION]
 > Şifreleri, güvenlik açısından duyarlı bilgileri veya özel verileri depolamak için kaynak dosyalarını kullanmayın.
 
- Boş dizelere (yani değeri <xref:System.String.Empty?displayProperty=nameWithType> olan bir kaynak) metin dosyalarında izin verilir. Örnek:
+ Boş dizelere (yani değeri <xref:System.String.Empty?displayProperty=nameWithType> olan bir kaynak) metin dosyalarında izin verilir. Örneğin:
 
 ```text
 EmptyString=
@@ -206,5 +206,5 @@ Derleme zamanında, Visual Studio önce bir projedeki. resx dosyalarını ikili 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Resources>
-- [Masaüstü uygulamalarındaki kaynaklar](index.md)
+- [.NET uygulamalarında kaynaklar](index.md)
 - [Kaynakları Paketleme ve Dağıtma](packaging-and-deploying-resources-in-desktop-apps.md)

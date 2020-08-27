@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 0555c6b4185da088333503c1e744da2dd7b4f2e4
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 4e408d5bd0976d88f368615860ac373142d0fe1e
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867600"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957231"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio"></a>Öğretici: Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
@@ -27,7 +27,7 @@ Bu öğreticide, Visual Studio 'da kullanılabilen hata ayıklama araçları tan
 
 Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bilgileriyle derlenir ve iyileştirmesi yoktur. Kaynak kodu ve oluşturulan yönergeler arasındaki ilişki daha karmaşık olduğundan iyileştirme, hata ayıklamayı karmaşıklaştırır. Bir programın yayın yapılandırmasında sembolik hata ayıklama bilgisi yoktur ve tamamen iyileştirilmiştir.
 
- Varsayılan olarak, Visual Studio Code hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
+ Varsayılan olarak, Visual Studio hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
 
 1. Visual Studio’yu çalıştırın.
 
@@ -41,7 +41,7 @@ Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bil
 
 Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın yürütülmesini geçici olarak keser.
 
-1. Bu satırdaki kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur.  Bir kesme noktası ayarlamak için başka bir yol ise imleci kod satırına yerleştirip, sonra da menü çubuğunda **Hata Ayıkla**  >  **geçiş kesme noktası** ' nı seçerek yapılır.
+1. Bu satırdaki kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur.  Bir kesme noktası ayarlamak için diğer yollar, imleci kod satırına yerleştirip <kbd>F9</kbd> tuşuna basarak veya menü çubuğundan **hata ayıklama**  >  **geçiş noktası geçişi** ' ni seçmekten oluşur.
 
    Aşağıdaki görüntüde gösterildiği gibi, Visual Studio, kesme noktasının ayarlandığı ve sol kenar boşluğunda kırmızı bir nokta görüntüleyen çizgiyi gösterir.
 
@@ -127,7 +127,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
 1. Herhangi bir tuşa basarak konsol penceresini kapatın ve hata ayıklamayı durdurun.
 
-1. Kod penceresinin sol kenarındaki noktaya tıklayarak kesme noktasını temizleyin. Bir kesme noktasını temizlemek için başka bir yol da, kod satırı seçiliyken **kesme noktası > geçiş noktası** ' nı seçmektir.
+1. Kod penceresinin sol kenarındaki noktaya tıklayarak kesme noktasını temizleyin. Bir kesme noktasını temizlemek için diğer yollar <kbd>F9</kbd> tuşuna basarak veya kod satırı seçiliyken **kesme noktası > geçiş noktasını** seçmektir.
 
 ## <a name="step-through-a-program"></a>Programda adımla
 

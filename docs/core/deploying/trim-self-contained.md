@@ -4,20 +4,24 @@ description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları na
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: e3eb161b14f206723ad034af0a4a6ba8cd575578
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 47bccf25b6f6a1b65742bb5e3f5f299932659c3c
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810618"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957559"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
 [Framework 'e bağımlı dağıtım modeli](index.md#publish-framework-dependent) , .net 'in başlangıcından bu yana en başarılı dağıtım modelidir. Bu senaryoda, uygulama geliştiricisi yalnızca, .NET çalışma zamanı ve çerçeve kitaplıklarının istemci makinede kullanılabilir olacağı beklentisiyle yalnızca uygulama ve üçüncü taraf derlemeler sunan. Bu dağıtım modeli, .NET Core 'da baskın bir tane olmaya devam eder ancak çerçeveye bağımlı modelin en iyi durumda olmadığı bazı senaryolar vardır. Alternatif olarak, .NET Core çalışma zamanı ve çerçevesinin uygulama ve üçüncü taraf Derlemeleriyle birlikte paketlenmiş olduğu, [kendi kendine içerilen bir uygulama](index.md#publish-self-contained)yayımlamaktır.
 
-Kırpma Self-içerilen dağıtım modeli, dağıtım boyutunu azaltmak için optimize edilmiş, kendine dahil edilen dağıtım modelinin özelleşmiş bir sürümüdür. Dağıtım boyutunu en aza indirmek Blazor uygulamaları gibi bazı istemci tarafı senaryolar için kritik bir gereksinimdir. Uygulamanın karmaşıklığına bağlı olarak, uygulamayı çalıştırmak için çerçeve derlemelerinin yalnızca bir alt kümesi gereklidir. Kitaplığın kullanılmayan bu bölümleri gereksizdir ve paketlenmiş uygulamadan kırpılabilecek. Ancak, uygulamanın derleme zamanı analizinin, çeşitli sorunlu kod düzenlerini güvenilir bir şekilde çözümleyemedikleri için çalışma zamanında hatalara neden olabileceği bir risk vardır (büyük ölçüde yansıma kullanımı üzerinde ortalandı). Güvenilirlik güvencesi verilmediğinden, bu dağıtım modeli bir önizleme özelliği olarak sunulur. Derleme zamanı Çözümleme altyapısı, sorunlu kod desenlerinin geliştiricisine uyarı sağlar ve bu kod desenlerinin düzeltilme beklentisi olur. Mümkün olduğunda, aynı gereksinimleri karşılayan kodu kullanarak zaman oluşturmak için uygulamanızdaki çalışma zamanı yansıma bağımlılıklarını taşımanızı öneririz.
+Kırpma Self-içerilen dağıtım modeli, dağıtım boyutunu azaltmak için optimize edilmiş, kendine dahil edilen dağıtım modelinin özelleşmiş bir sürümüdür. Dağıtım boyutunu en aza indirmek Blazor uygulamaları gibi bazı istemci tarafı senaryolar için kritik bir gereksinimdir. Uygulamanın karmaşıklığına bağlı olarak, yalnızca çerçeve derlemelerinin bir alt kümesine başvurulur ve uygulamayı çalıştırmak için her derleme içindeki kodun bir alt kümesi gereklidir. Kitaplıkların kullanılmayan bölümleri gereksizdir ve paketlenmiş uygulamadan kırpılabilecek.
 
-Uygulamalar için kırpma modu, Kırım modu aracılığıyla yapılandırılabilir ve `copyused` uygulamada kullanılan derlemeleri paketleyip varsayılan () olur. Blazor WebAssembly uygulamaları, `link` derlemeler içinde kullanılmayan kodu kırpacak daha agresif bir mod () kullanır. Kırpma Analizi uyarıları, tam bağımlılık analizinin mümkün olmadığı kod desenleri hakkında bilgi verir. Bu uyarılar varsayılan olarak bastırılır ve bayrağı `SuppressTrimAnalysisWarnings` false olarak ayarlanarak açılabilir. Kullanılabilir kırpma seçenekleri hakkında daha fazla bilgi için [ılbağlayıcı sayfasında](https://github.com/mono/linker/blob/master/docs/illink-options.md)bulabilirsiniz.
+Ancak, uygulamanın derleme zamanı analizinin, çeşitli sorunlu kod düzenlerini güvenilir bir şekilde çözümleyemedikleri için çalışma zamanında hatalara neden olabileceği bir risk vardır (büyük ölçüde yansıma kullanımı üzerinde ortalandı). Güvenilirlik güvencesi verilmediğinden, bu dağıtım modeli bir önizleme özelliği olarak sunulur.
+
+Derleme zamanı Çözümleme altyapısı, hangi diğer kodun gerekli olduğunu tespit etmek için problemsiz kod desenlerinin geliştiricisine uyarı sağlar. Koda, başka nelerin dahil edileceğini söylemek için koda açıklama eklenebilir. Birçok yansıma deseni, [kaynak](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)oluşturucuları kullanılarak derleme zamanı kod üretimi ile değiştirilebilir.
+
+Uygulamalar için kırpma modu ayarı ile yapılandırılır `TrimMode` . Varsayılan değer ve, `copyused` uygulamayla birlikte başvurulan derlemelerdir. `link`Değer, Blazor WebAssembly uygulamalarıyla kullanılır ve derlemeler içinde kullanılmayan kodu kırpar. Kırpma Analizi uyarıları, tam bağımlılık analizinin mümkün olmadığı kod desenleri hakkında bilgi verir. Bu uyarılar varsayılan olarak bastırılır ve bayrağı olarak ayarlanarak açılabilir `SuppressTrimAnalysisWarnings` `false` . Kullanılabilir kırpma seçenekleri hakkında daha fazla bilgi için bkz. [ılbağlayıcı sayfası](https://github.com/mono/linker/blob/master/docs/illink-options.md).
 
 > [!NOTE]
 > Kırpma, .NET Core 3,1, 5,0 ' deki deneysel bir özelliktir ve _yalnızca_ kendi içinde yayımlanan uygulamalar tarafından kullanılabilir.

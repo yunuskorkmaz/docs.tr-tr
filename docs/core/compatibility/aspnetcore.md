@@ -2,15 +2,15 @@
 title: ASP.NET Core son değişiklikler
 titleSuffix: ''
 description: ASP.NET Core 'deki son değişiklikleri listeler.
-ms.date: 08/20/2020
+ms.date: 08/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 8b37ae5c5eea9e192a269092fccf435ab4877e61
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 443494291f4ec58aecd7c8d8ed42cb4086e64095
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867678"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957736"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -81,6 +81,7 @@ ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada 
 - [MVC: ön derleme aracı kullanım dışı](#mvc-precompilation-tool-deprecated)
 - [MVC: türler internal olarak değiştirildi](#mvc-pubternal-types-changed-to-internal)
 - [MVC: Web API 'SI uyumluluk dolgusu kaldırıldı](#mvc-web-api-compatibility-shim-removed)
+- [Razor: RazorTemplateEngine API 'SI kaldırıldı](#razor-razortemplateengine-api-removed)
 - [Razor: çalışma zamanı derlemesi bir pakete taşındı](#razor-runtime-compilation-moved-to-a-package)
 - [Güvenlik: tanımlama bilgisi ad kodlaması kaldırıldı](#security-cookie-name-encoding-removed)
 - [Güvenlik: IdentityModel NuGet paket sürümleri güncelleştirildi](#security-identitymodel-nuget-package-versions-updated)
@@ -354,6 +355,10 @@ ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada 
 ***
 
 [!INCLUDE[MVC: Web API compatibility shim removed](~/includes/core-changes/aspnetcore/3.0/mvc-webapi-compat-shim-removed.md)]
+
+***
+
+[!INCLUDE[Razor: RazorTemplatEengine API removed](~/includes/core-changes/aspnetcore/3.0/razor-razortemplateengine-api-removed.md)]
 
 ***
 

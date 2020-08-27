@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: c984a29208d8680de3c04f6b4d16c6f41afedc71
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812347"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957579"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -48,13 +48,13 @@ Temel sınıf kitaplığı. *Çerçeve kitaplıkları*olarak da bilinir.
 
 Sistemi oluşturan kitaplıkların bir kümesi. \* (ve sınırlı bir ölçüde Microsoft. \* ) öznitelikleri. BCL, ASP.NET Core gibi daha üst düzey uygulama çerçevelerinin üzerine inşa eden genel amaçlı, alt düzey bir çerçevedir.
 
-.Net [5 ve sonraki sürümler IÇIN BCL kaynak kodu (.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions) , [.NET çalışma zamanı deposunda](https://github.com/dotnet/runtime)bulunur. .NET 'in bu yeni uygulamasına yönelik BCL API 'Lerinin çoğu .NET Framework de mevcuttur. bu sayede, bu kaynak kodu .NET Framework BCL kaynak kodunun bir çatalı olarak düşünebilirsiniz.
+[.NET 5 (ve .NET Core) ve sonraki SÜRÜMLERIN](#net-5-and-later-versions) BCL kaynak kodu, [.NET çalışma zamanı deposunda](https://github.com/dotnet/runtime)bulunur. .NET 'in bu yeni uygulamasına yönelik BCL API 'Lerinin çoğu .NET Framework de mevcuttur. bu sayede, bu kaynak kodu .NET Framework BCL kaynak kodunun bir çatalı olarak düşünebilirsiniz.
 
 ## <a name="clr"></a>CLR
 
 Ortak dil çalışma zamanı.
 
-Tam anlamı bağlama göre değişir. Ortak dil çalışma zamanı genellikle [.NET Framework](#net-framework) çalışma zamanına veya [.NET 5 ve sonraki sürümlerin çalışma zamanına (.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions)başvurur.
+Tam anlamı bağlama göre değişir. Ortak dil çalışma zamanı genellikle [.NET Framework](#net-framework) çalışma zamanına veya [.NET 5 (ve .NET Core) ve sonraki sürümlere](#net-5-and-later-versions)yönelik çalışma zamanına başvurur.
 
 CLR bellek ayırmayı ve yönetimini işler. CLR Ayrıca, yalnızca uygulamaları yürüten ancak aynı zamanda bir [JIT](#jit) derleyicisi kullanarak anında kod oluşturup derleyen bir sanal makinedir.
 
@@ -66,7 +66,7 @@ Ayrıca bkz. [çalışma zamanı](#runtime).
 
 ## <a name="core-clr"></a>Çekirdek CLR
 
-[.NET 5 ve sonraki sürümler Için ortak dil çalışma zamanı (.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions).
+[.NET 5 (ve .NET Core) ve sonraki sürümler](#net-5-and-later-versions)Için ortak dil çalışma zamanı.
 
 Bkz. [clr](#clr)
 
@@ -126,7 +126,7 @@ Just-In-Time derleyicisi.
 .NET uygulamasının şunları içerir:
 
 - Bir veya daha fazla çalışma zamanı. Örnekler: [clr](#clr), [corert](#corert).
-- .NET Standard bir sürümünü uygulayan ve ek API 'Ler içerebilen bir sınıf kitaplığı. Örnekler: [.NET Framework](#net-framework) ve [.NET 5 ve sonraki sürümler için BCls (.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions). [BCLs](#bcl)
+- .NET Standard bir sürümünü uygulayan ve ek API 'Ler içerebilen bir sınıf kitaplığı. Örnekler: [.NET Framework](#net-framework) ve [.NET 5 (ve .NET Core) ve sonraki sürümler](#net-5-and-later-versions)için [BCls](#bcl) .
 - İsteğe bağlı olarak, bir veya daha fazla uygulama çerçevesi. Örnekler: [ASP.net](#aspnet), WINDOWS Forms ve WPF, .NET Framework ve .NET 5 ' de yer almaktadır.
 - İsteğe bağlı olarak, geliştirme araçları. Bazı geliştirme araçları birden çok uygulama arasında paylaşılır.
 
@@ -173,7 +173,7 @@ Bkz. [.net](../core/index.yml).
 
 ## <a name="net-cli"></a>.NET CLı
 
-.NET 5 ve sonraki sürümler için uygulama ve kitaplıklar geliştirmeye yönelik platformlar arası araç zinciri [(.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions). .NET Core CLI olarak da bilinir.
+[.NET 5 (ve .NET Core) ve sonraki sürümler](#net-5-and-later-versions)için uygulama ve kitaplıklar geliştirmeye yönelik platformlar arası araç zinciri. .NET Core CLI olarak da bilinir.
 
 Bkz. [.net CLI](../core/tools/index.md).
 
@@ -199,7 +199,7 @@ UWP, .NET Native tarafından desteklenen ilk uygulama çerçevesidir. Şimdi Win
 
 ## <a name="net-sdk"></a>.NET SDK
 
-Geliştiricilerin .NET 5 ve sonraki sürümler için .NET uygulamaları ve kitaplıkları oluşturmalarına izin veren bir dizi kitaplık ve araç [(.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions). .NET Core SDK olarak da bilinir.
+Geliştiricilerin [.NET 5 (ve .NET Core) ve sonraki sürümler](#net-5-and-later-versions)için .NET uygulamaları ve kitaplıkları oluşturmalarına izin veren bir kitaplıklar ve araçlar kümesi. .NET Core SDK olarak da bilinir.
 
 Uygulamalar oluşturmaya yönelik [.net CLI](#net-cli) , uygulamalar oluşturmak ve çalıştırmak için .NET, .NET kitaplıkları ve çalışma zamanı ve CLI komutlarını çalıştıran ve uygulamaları çalıştıran DotNet çalıştırılabilir (*dotnet.exe*) içerir.
 
@@ -252,7 +252,7 @@ Genel olarak, yönetilen programın yürütme ortamı. İşletim sistemi çalı�
 
   Burada "Runtime" burada [clr](#clr) 'nin bir makineye indirip yükleyebilecekleri [BCL](#bcl) (çerçeve kitaplıkları) ile birlikte, makineye [bağlı](../core/deploying/index.md#publish-framework-dependent) uygulamaları makinede çalıştırabilmeniz için bir makineye indirebilir ve yükleyebilirsiniz.
 
-* .NET 5 ve sonraki sürümler için [çalışma zamanı tanımlayıcısı (RID)](../core/rid-catalog.md) [(.NET Core 2.1-3.1 dahil)](#net-5-and-later-versions).
+* [.NET 5 (ve .NET Core) ve sonraki sürümler](#net-5-and-later-versions)Için [çalışma zamanı tanımlayıcısı (RID)](../core/rid-catalog.md) .
 
   Burada "Runtime", .NET uygulamasının üzerinde çalıştığı işletim sistemi platformu ve CPU mimarisi anlamına gelir, örneğin: `linux-x64` .
 
@@ -290,7 +290,7 @@ Bkz. [hedef çerçeveler](frameworks.md).
 
 Evrensel Windows Platformu.
 
-Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılım oluşturmak için kullanılan bir .NET uygulaması. Bilgisayar, tabletler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini içerecek şekilde tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript 'te yazılabilir. C# ve Visual Basic kullanılırken .NET API 'Leri .NET 5 ve sonraki sürümler (.NET Core 2.1-3.1 dahil) tarafından sağlanır.
+Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulamaları ve yazılım oluşturmak için kullanılan bir .NET uygulaması. Bilgisayar, tabletler, telefonlar ve hatta Xbox dahil olmak üzere hedeflemek isteyebileceğiniz farklı cihaz türlerini içerecek şekilde tasarlanmıştır. UWP, merkezi bir App Store, bir yürütme ortamı (AppContainer) ve Win32 (WinRT) yerine kullanılacak bir dizi Windows API 'si gibi birçok hizmeti sağlar. Uygulamalar C++, C#, Visual Basic ve JavaScript 'te yazılabilir. C# ve Visual Basic kullanılırken .NET API 'Leri .NET 5 (ve .NET Core) ve sonraki sürümler tarafından sağlanır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

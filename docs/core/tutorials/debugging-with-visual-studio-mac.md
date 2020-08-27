@@ -2,12 +2,12 @@
 title: Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 description: Visual Studio Mac kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 06/08/2020
-ms.openlocfilehash: 79936fb99d0bc37c1234eb8f227eb5415ae48b93
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 011647a6e3e676909880befa3b770205eb9616d6
+ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867574"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88957531"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
@@ -23,7 +23,7 @@ Bu öğreticide Mac için Visual Studio bulunan hata ayıklama araçları tanıt
 
 Hata ayıklama yapılandırmasında, bir program tam sembolik hata ayıklama bilgileriyle derlenir ve iyileştirmesi yoktur. Kaynak kodu ve oluşturulan yönergeler arasındaki ilişki daha karmaşık olduğundan iyileştirme, hata ayıklamayı karmaşıklaştırır. Bir programın yayın yapılandırmasında sembolik hata ayıklama bilgisi yoktur ve tamamen iyileştirilmiştir.
 
-Varsayılan olarak, Visual Studio hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
+Varsayılan olarak, Mac için Visual Studio hata ayıklama derleme yapılandırmasını kullanır, bu nedenle hata ayıklamadan önce değiştirmeniz gerekmez.
 
 1. Mac için Visual Studio başlatın.
 
