@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "65633612"
 ---
-<span data-ttu-id="b7ec0-101">LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="b7ec0-101">LINQ to SQL</span></span>
+<span data-ttu-id="0233f-101">LINQ - SQL</span><span class="sxs-lookup"><span data-stu-id="0233f-101">LINQ to SQL</span></span>

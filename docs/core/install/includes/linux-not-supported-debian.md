@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84603085"
 ---
 
-<span data-ttu-id="b0011-101">❌Lütfen bu deni sürümünün artık desteklenmediğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="b0011-101">❌ Please note that this version of Debian is no longer supported.</span></span>
+<span data-ttu-id="20cd0-101">❌ Lütfen bu deni sürümünün artık desteklenmediğini unutmayın.</span><span class="sxs-lookup"><span data-stu-id="20cd0-101">❌ Please note that this version of Debian is no longer supported.</span></span>
