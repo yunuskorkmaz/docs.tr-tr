@@ -45,7 +45,7 @@ Bu komut şöyle biçimlendirilir: `sudo snap alias {package}.{command} {alias}`
 |-------------------|---------------------|
 | 3,1 (LTS)         | `dotnet-runtime-31` |
 | 3.0               | `dotnet-runtime-30` |
-| 2,2               | `dotnet-runtime-22` |
+| 2.2               | `dotnet-runtime-22` |
 | 2,1 (LTS)         | `dotnet-runtime-21` |
 
 `snap install`.NET Core çalışma zamanı ek paketi yüklemek için komutunu kullanın. Bu örnekte, .NET Core 3,1 yüklüdür:
@@ -84,6 +84,6 @@ export SSL_CERT_DIR=/dev/null
 
 Sertifika konumu, bir konuma göre farklılık gösterecektir. İşte bu, sorunla karşılaştiğimiz, distro 'lara için konumlar.
 
-* Fedora`/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem`
-* OpenSUSE`/etc/ssl/ca-bundle.pem`
-* Solus-`/etc/ssl/certs/ca-certificates.crt`
+* Fedora `/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem`
+* OpenSUSE `/etc/ssl/ca-bundle.pem`
+* Solus- `/etc/ssl/certs/ca-certificates.crt`

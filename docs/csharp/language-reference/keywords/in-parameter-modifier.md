@@ -1,32 +1,33 @@
 ---
-title: parametre değiştirici - C# Referans
+description: parametre değiştiricisi-C# başvurusu
+title: parametre değiştiricisi-C# başvurusu
 ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 613be9248e6ce9b974bcab1b59abd30469e9e180
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249376"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118410"
 ---
-# <a name="in-parameter-modifier-c-reference"></a>parametre değiştirici (C# Reference)
+# <a name="in-parameter-modifier-c-reference"></a>parametre değiştiricide (C# Başvurusu)
 
-Anahtar `in` kelime bağımsız değişkenlerin başvuruyla geçirilmesine neden olur. Bu, resmi parametreyi bağımsız değişken için bir diğer ad yapar, bu da bir değişken olmalıdır. Başka bir deyişle, parametre üzerinde herhangi bir işlem bağımsız değişken üzerinde yapılır. Bu, `in` bağımsız değişkenlerin çağrılan yöntemle değiştirilememek [dışında, ref](ref.md) veya [çıkış](out-parameter-modifier.md) anahtar kelimeleri gibidir. Bağımsız `ref` değişkenler değiştirilebilirken, `out` bağımsız değişkenler çağrılan yöntem tarafından değiştirilmelidir ve bu değişiklikler çağrı bağlamında gözlemlenebilir.
+`in`Anahtar sözcüğü, bağımsız değişkenlerin başvuruya göre geçirilmesine neden olur. Bir değişken olması gereken, biçimsel parametreye bağımsız değişken için bir diğer ad oluşturur. Diğer bir deyişle, parametresindeki tüm işlemler bağımsız değişkende yapılır. [Başvuru](ref.md) veya [Çıkış](out-parameter-modifier.md) anahtar kelimeleri gibidir, bu `in` bağımsız değişkenler çağrılan yöntem tarafından değiştirilemez. `ref`Bağımsız değişkenler değiştirilebilir, `out` bağımsız değişkenler çağrılan yöntemle değiştirilmelidir ve bu değişiklikler çağıran bağlamda Observable ' tır.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
-Önceki örnek, değiştiricinin `in` arama yerinde genellikle gereksiz olduğunu gösterir. Yalnızca yöntem bildiriminde gereklidir.
+Yukarıdaki örnek, `in` değiştiricinin çağrı sitesinde genellikle gereksiz olduğunu gösterir. Yalnızca yöntem bildiriminde gereklidir.
 
 > [!NOTE]
-> Anahtar `in` kelime, tür parametresinin bir `foreach` deyimin parçası olarak veya LINQ sorgusundaki bir yan tümcenin `join` parçası olarak karşıt olduğunu belirtmek için genel bir tür parametresi ile de kullanılabilir. Bu bağlamlarda `in` anahtar kelimenin kullanımı hakkında daha fazla bilgi için, tüm bu kullanımlara bağlantılar sağlayan içeriye bakın. [in](in.md)
+> `in`Anahtar sözcüğü, tür parametresinin değişken karşıtı olduğunu, bir deyimin parçası olarak `foreach` veya bir `join` LINQ sorgusundaki yan tümcesinin bir parçası olarak belirtmek için genel bir tür parametresiyle de kullanılabilir. Bu bağlamlarda anahtar sözcüğünün kullanımı hakkında daha fazla bilgi için, `in` bkz. [içindeki](in.md)tüm kullanımları için bağlantı sağlayan.
   
-Bağımsız değişken `in` olarak geçirilen değişkenler, bir yöntem çağrısında geçirilmeden önce başharflere geçirilmelidir. Ancak, çağrılan yöntem bir değer atamaz veya bağımsız değişkeni değiştiremez.  
+Bağımsız değişken olarak geçirilen değişkenlerin `in` bir yöntem çağrısında geçirilmeden önce başlatılması gerekir. Ancak çağrılan yöntem bir değer atayamayabilir veya bağımsız değişkeni değiştirebilir.  
 
-`in` Parametre değiştirici C# 7.2 ve sonraki durumlarda kullanılabilir. Önceki sürümlerde derleyici hatası `CS8107` oluşturulur ("Özellik 'yalnızca başvuru' C# 7.0'da kullanılamaz. Lütfen dil sürüm 7.2 veya daha büyük kullanın.") Derleyici dili sürümünü yapılandırmak için [C# dil sürümünü seçin'e](../configure-language-version.md)bakın.
+`in`Parametre değiştiricisi C# 7,2 ve üzeri sürümlerde kullanılabilir. Önceki sürümlerde derleyici hatası `CS8107` ("' ReadOnly başvuruları" özelliği C# 7,0 ' de kullanılamaz. Lütfen dil sürümü 7,2 veya üstünü kullanın. ") Derleyici dili sürümünü yapılandırmak için bkz. [C# dil sürümünü seçme](../configure-language-version.md).
 
-, `in` `ref`ve `out` anahtar kelimeler aşırı yük çözümlemesi amacıyla yöntem imzasının bir parçası olarak kabul edilmez. Bu nedenle, tek fark bir yöntemin bir `ref` bağımsız `in` değişken ilerlerken `out` diğerinin bir bağımsız değişken almasıysa, yöntemler aşırı yüklenemez. Örneğin, aşağıdaki kod derlenilmeyecektir:  
+`in`, `ref` Ve `out` anahtar kelimeleri, aşırı yükleme çözümlemesi amacıyla yöntem imzasının bir parçası olarak kabul edilmez. Bu nedenle, tek fark bir yöntemin bir `ref` veya bağımsız değişken alırsa `in` ve diğeri bir bağımsız değişken alırsa Yöntemler aşırı yüklenemez `out` . Aşağıdaki kod, örneğin derlenmeyecektir:  
   
 ```csharp
 class CS0663_Example
@@ -38,7 +39,7 @@ class CS0663_Example
 }
 ```
   
-Varlığına göre aşırı `in` yüklemeye izin verilir:  
+Varlığına göre aşırı yüklemeye `in` izin verilir:  
   
 ```csharp
 class InOverloads
@@ -48,23 +49,23 @@ class InOverloads
 }
 ```
 
-## <a name="overload-resolution-rules"></a>Aşırı yükleme çözünürlüğü kuralları
+## <a name="overload-resolution-rules"></a>Aşırı yükleme çözümleme kuralları
 
-Bağımsız değişkenlerin motivasyonunu anlayarak, değerlere `in` karşılık gelen bağımsız değişkenlerle yöntemleriçin aşırı yük çözümleme kurallarını anlayabilirsiniz. `in` Parametreleri kullanarak `in` yöntemleri tanımlamak potansiyel bir performans optimizasyonudur. Bazı `struct` tür bağımsız değişkenleri boyutu büyük olabilir ve yöntemleri sıkı döngüler veya kritik kod yolları çağrıldığında, bu yapıları kopyalama maliyeti önemlidir. Çağrılan `in` yöntem bu bağımsız değişkenin durumunu değiştirmediği için bağımsız değişkenlerin güvenle başvuruyla geçirilebileceğini belirtmek için parametreleri bildiren yöntemler. Bu bağımsız değişkenleri referansla geçirme (potansiyel olarak) pahalı kopyayı önler.
+`in`Bağımsız değişkenler için mosyon 'yı anlayarak değere ve bağımsız değişkenlerle ile yöntemler için aşırı yükleme çözümleme kurallarını anlayabilirsiniz `in` . Parametreleri kullanarak yöntemlerin tanımlanması `in` potansiyel bir performans iyileştirmesidir. Bazı `struct` tür bağımsız değişkenleri boyutu büyük olabilir ve Yöntemler sıkı Döngülerde veya kritik kod yollarında çağrıldığında, bu yapıları kopyalama maliyeti kritik öneme sahiptir. Yöntemler, bu `in` bağımsız değişkenin durumunu değiştirmediğinden bağımsız değişkenlerin başvuruya güvenli bir şekilde geçirilebileceğini belirtmek için parametreler bildirir. Bu bağımsız değişkenlerin başvuruya göre geçirilmesi, (potansiyel) pahalı kopyayı önler.
 
-Arama `in` sitesindeki bağımsız değişkenler için belirtme genellikle isteğe bağlıdır. Bağımsız değişkenleri değere göre geçirmekle `in` değiştirici kullanarak referansla geçirmek arasında anlamsal bir fark yoktur. Bağımsız `in` değişkenin değerinin değiştirilebileceğini belirtmeniz gerekmedığından, arama sitesindeki değiştirici isteğe bağlıdır. Bağımsız değişkenin `in` değere göre değil, referans la geçtiğinden emin olmak için çağrı yerindeki değiştiriciyi açıkça eklersiniz. Açıkça kullanarak `in` aşağıdaki iki etkisi vardır:
+`in`Çağrı sitesinde bağımsız değişkenlerin belirtilmesi genellikle isteğe bağlıdır. Bağımsız değişkenleri değere göre geçirme ve değiştiricisini kullanarak başvuruya göre geçirme arasında herhangi bir semantik fark yoktur `in` . `in`Bağımsız değişkenin değerinin değiştirilip değiştirilemeyeceğini belirtmeniz gerekmiyorsa, çağrı sitesindeki değiştirici isteğe bağlıdır. `in`Bağımsız değişkenin değere göre değil başvuruya göre geçirildiğinden emin olmak için çağrı sitesine açıkça değiştiricisini eklersiniz. Açıkça kullanmak `in` aşağıdaki iki etkiye sahiptir:
 
-İlk olarak, `in` çağrı yerinde belirtilmesi derleyiciyi eşleşen `in` bir parametre ile tanımlanan bir yöntem seçmeye zorlar. Aksi takdirde, iki yöntem sadece `in`varlığında farklı olduğunda , değer aşırı yük daha iyi bir maç.
+İlk olarak, `in` çağıran sitede belirtme, derleyicinin eşleşen bir parametreyle tanımlanmış bir yöntemi seçmesini zorlar `in` . Aksi takdirde, iki yöntem yalnızca varlığı içinde farklılık gösteriyorsa `in` , bu değer aşırı yükleme daha iyi bir eşleşmedir.
 
-İkinci olarak, `in` belirtme, bir bağımsız değişkeni başvuruyla geçirme niyetinizi bildirir. Kullanılan bağımsız `in` değişken, doğrudan başvurulabilen bir konumu temsil etmelidir. Aynı genel kurallar `out` `ref` ve bağımsız değişkenler geçerlidir: Değerleri üreten sabitleri, sıradan özellikleri veya diğer ifadeleri kullanamazsınız. Aksi takdirde, `in` çağrı yerinde atlayarak, derleyiciye yönteme salt okunur başvuruyla geçmek için geçici bir değişken oluşturmasına izin vereceğini bildirir. Derleyici bağımsız değişkenlerle `in` çeşitli kısıtlamaları aşmak için geçici bir değişken oluşturur:
+İkincisi, belirtme, `in` bir bağımsız değişkeni başvuruya göre geçirme amacınızı bildirir. İle kullanılan bağımsız değişken, `in` doğrudan başvuruda bulunulabilir bir konumu temsil etmelidir. Ve bağımsız değişkenler için aynı genel kurallar `out` `ref` geçerlidir: sabitleri, olağan özellikleri veya değer üreten diğer ifadeleri kullanamazsınız. Aksi takdirde, `in` çağıran sitede atlama yöntemi derleyiciye bildirir ve bu, yönteme salt okuma başvurusu ile geçirilecek geçici bir değişken oluşturmasına izin verir. Derleyici, bağımsız değişkenlerle birkaç kısıtlamayı aşmak için geçici bir değişken oluşturur `in` :
 
-- Geçici bir değişken, zaman sabitlerinin `in` parametre olarak derlenmesine olanak tanır.
-- Geçici bir değişken, parametreler için `in` özellikler veya diğer ifadelere izin verir.
-- Geçici bir değişken, bağımsız değişken türünden parametre türüne örtülü dönüştürme nin olduğu bağımsız değişkenlere izin verir.
+- Geçici bir değişken, derleme zamanı sabitlerinin parametre olarak kullanılmasına izin verir `in` .
+- Geçici bir değişken özellikler veya parametreler için diğer ifadelere izin verir `in` .
+- Geçici bir değişken, bağımsız değişken türünden parametre türüne örtük bir dönüştürme olduğu bağımsız değişkenlere izin verir.
 
-Önceki tüm örneklerde derleyici, sabitin, özelliğin veya diğer ifadenin değerini depolayan geçici bir değişken oluşturur.
+Önceki tüm örneklerde, derleyici sabit, özellik veya başka bir ifadenin değerini depolayan geçici bir değişken oluşturur.
 
-Aşağıdaki kod şu kuralları göstermektedir:
+Aşağıdaki kod bu kuralları gösterir:
 
 ```csharp
 static void Method(in int argument)
@@ -82,7 +83,7 @@ Method(i); // passed by readonly reference
 Method(in i); // passed by readonly reference, explicitly using `in`
 ```
 
-Şimdi, değer bağımsız değişkenleri tarafından kullanılan başka bir yöntem kullanılabilir olduğunu varsayalım. Sonuçlar aşağıdaki kodda gösterildiği gibi değişir:
+Şimdi, değer bağımsız değişkenlerine göre kullanılan başka bir yöntem bulunduğunu varsayalım. Sonuçlar aşağıdaki kodda gösterildiği gibi değişir:
 
 ```csharp
 static void Method(int argument)
@@ -105,27 +106,27 @@ Method(i); // Calls overload passed by value
 Method(in i); // passed by readonly reference, explicitly using `in`
 ```
 
-Bağımsız değişkenin başvuru yla geçtiği tek yöntem çağrısı son yöntemdir.
+Bağımsız değişkenin başvuruya göre geçirildiği tek yöntem çağrısı son bir yöntemdir.
 
 > [!NOTE]
-> Önceki kod basitlik için bağımsız değişken türü olarak kullanır. `int` Çoğu `int` modern makinelerde bir referans daha büyük olduğundan, tek bir `int` okuma referans olarak geçen hiçbir yararı yoktur.
+> Önceki kod `int` basitlik için bağımsız değişken türü olarak kullanılır. `int`Çoğu modern makinenin bir başvurusundan daha büyük olmadığından, tek tek bir `int` salt okunur başvuru olarak geçirilme avantajı yoktur.
 
-## <a name="limitations-on-in-parameters"></a>Parametrelerüzerindeki `in` sınırlamalar
+## <a name="limitations-on-in-parameters"></a>Parametrelerle ilgili sınırlamalar `in`
 
-Aşağıdaki yöntem türleri `in`için `ref`, `out` ve anahtar kelimeleri kullanamazsınız:  
+`in` `ref` `out` Aşağıdaki tür yöntemler için, ve anahtar sözcüklerini kullanamazsınız:  
   
-- Async değiştirici kullanarak tanımladığınız [async](async.md) yöntemleri.  
-- [Verim getirisi](yield.md) veya `yield break` deyimi içeren yineleyici yöntemleri.
-- Bir uzantı yönteminin ilk `in` bağımsız değişkeni, bu bağımsız değişken bir yapı olmadığı sürece değiştiriciye sahip olamaz.
-- Bu bağımsız değişkenin genel bir tür olduğu bir uzantı yönteminin ilk bağımsız değişkeni (bu tür bir yapı olarak sınırlandırılsa bile.)
+- Zaman [uyumsuz](async.md) değiştirici kullanarak tanımladığınız zaman uyumsuz yöntemler.  
+- Bir [yield return](yield.md) veya bildiri içeren Yineleyici yöntemleri `yield break` .
+- Uzantı yönteminin ilk bağımsız değişkeni, `in` Bu bağımsız değişken bir struct olmadığı takdirde değiştiriciye sahip olamaz.
+- Bu bağımsız değişkenin genel bir tür olduğu bir genişletme yönteminin ilk bağımsız değişkeni (Bu tür bir struct gibi kısıtlanıyor olsa bile).
 
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Yöntem Parametreleri](method-parameters.md)
-- [Güvenli verimli kod yazın](../../write-safe-efficient-code.md)
+- [Güvenli verimli kod yazma](../../write-safe-efficient-code.md)

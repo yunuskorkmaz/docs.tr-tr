@@ -2,12 +2,12 @@
 title: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 description: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklamayı öğrenin.
 ms.date: 05/26/2020
-ms.openlocfilehash: e2be9324a77d0360247a225bbd93224d379bda0d
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: 8e84747256551b633a5bf74b72723ba8d2840d52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867587"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118305"
 ---
 # <a name="tutorial-debug-a-net-core-console-application-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak bir .NET Core konsol uygulamasında hata ayıklama
 
@@ -35,7 +35,7 @@ Kesme *noktası,* kesme noktası olan satır yürütülmeden önce uygulamanın 
 
 1. *Program.cs* dosyasını açın.
 
-1. Kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için diğer yollar <kbd>F9</kbd> tuşuna basarak veya **Run**  >  kod satırı seçiliyken menüden**geçiş kesme noktası** Çalıştır ' i seçmekle belirlenir.
+1. Kod penceresinin sol kenar boşluğuna tıklayarak adı, tarihi ve saati gösteren satırda bir *kesme noktası* ayarlayın. Sol kenar boşluğu satır numaralarının solunda bulunur. Bir kesme noktası ayarlamak için diğer yollar <kbd>F9</kbd> tuşuna basarak veya **Run**  >  kod satırı seçiliyken menüden**geçiş kesme noktası** Çalıştır ' i seçmektir.
 
    Visual Studio Code, sol kenar boşluğunda kırmızı bir nokta görüntüleyerek kesme noktasının ayarlandığı satırı gösterir.
 
@@ -69,7 +69,7 @@ Kesme noktası bir `Console.ReadLine` Yöntem çağrısından sonra bulunur. **H
 
    :::image type="content" source="media/debugging-with-visual-studio-code/select-debug-pane.png" alt-text="Visual Studio Code hata ayıkla sekmesini açın":::
 
-1. Bölmenin üst kısmındaki yeşil oku seçerek **.NET Core başlatma (konsol)**' nin yanına tıklayın. Programı hata ayıklama modunda başlatmak için başka bir yöntem de **Run**  >  menüden**hata ayıklamayı Başlat** Çalıştır ' i seçmektir.
+1. Bölmenin üst kısmındaki yeşil oku seçerek **.NET Core başlatma (konsol)**' nin yanına tıklayın. Programı hata ayıklama modunda başlatmak için diğer yollar <kbd>F5</kbd> tuşuna basarak veya **Run**  >  menüden**hata ayıklamayı Başlat** Çalıştır ' i seçmekten yapılır.
 
    :::image type="content" source="media/debugging-with-visual-studio-code/start-debugging.png" alt-text="Hata ayıklamayı Başlat":::
 
@@ -133,7 +133,7 @@ Program, kullanıcının girdiği dizeyi görüntüler. Kullanıcı hiçbir şey
 
 1. Adınızı girmeniz istendiğinde, **Terminal** sekmesinde <kbd>ENTER</kbd> tuşuna basın.
 
-   Belirttiğiniz koşul ( `name` `null` veya <xref:System.String.Empty?displayProperty=nameWithType> ) karşılandı olduğundan, program yürütmesi kesme noktasına ulaştığında ve Yöntem yürütülmeden önce durmaktadır `Console.WriteLine` .
+   Belirttiğiniz koşul ( `name` veya ya da `null` <xref:System.String.Empty?displayProperty=nameWithType> ) karşılandığından, program yürütmesi kesme noktasına ulaştığında ve Yöntem yürütülmeden önce durduktan sonra duraklar `Console.WriteLine` .
 
    **Değişkenler** penceresi `name` , değişkeninin değerinin veya olduğunu gösterir `""` <xref:System.String.Empty?displayProperty=nameWithType> .
 
@@ -173,7 +173,7 @@ Visual Studio Code Ayrıca, bir program aracılığıyla satır içine girerek v
 
 1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 
-   Visual Studio Code, `Console.WriteLine` ad istemi için öğesini yürütür ve sonraki yürütme satırını vurgular. Sonraki satır, `Console.ReadLine` içindir `name` . **Değişkenler** penceresi değiştirilmez ve **Terminal** sekmesi "adınız nedir?" olarak gösterilir. isteme.
+   Visual Studio Code, `Console.WriteLine` ad istemi için öğesini yürütür ve sonraki yürütme satırını vurgular. Sonraki satır, `Console.ReadLine` içindir `name` . **Değişkenler** penceresi değiştirilmez ve **Terminal** sekmesi "adınız nedir?" olarak gösterilir. ekran görüntüsü.
 
 1. Adımla **Çalıştır**' ı seçin  >  **Step Into** veya <kbd>F11</kbd>tuşuna basın.
 

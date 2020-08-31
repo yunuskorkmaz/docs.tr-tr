@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17fbb8c6714f3af47c0b554aec2c53c8046021bb
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 593897b31c86e79db2376dde94f3e5c87fdf8289
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803748"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89052829"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Öğretici: ML.NET görüntü sınıflandırma API 'SI ile aktarım öğrenimini kullanarak otomatikleştirilmiş görsel inceleme
 
@@ -49,7 +49,7 @@ Bu öğreticide, bir özel görüntü sınıflandırma modeli sunarak, her ne ka
 
 ML.NET, görüntü sınıflandırması yapmak için çeşitli yollar sağlar. Bu öğretici, görüntü sınıflandırması API 'sini kullanarak Aktarım öğrenimini uygular. Görüntü sınıflandırma API 'si, TensorFlow C++ API 'SI için C# bağlamaları sağlayan alt düzey bir kitaplık olan [TensorFlow.net](https://github.com/SciSharp/TensorFlow.NET)kullanımını sağlar.
 
-## <a name="what-is-transfer-learning"></a>Aktarım öğrenimi nedir?
+## <a name="what-is-transfer-learning"></a>Öğrenme aktarımı nedir?
 
 Aktarım öğrenimi, bir problemi bir sorunla ilgili diğer soruna çözüm olarak elde edilen bilgileri uygular.
 
@@ -124,41 +124,41 @@ Bu öğreticide, yalnızca köprü destesi görüntüleri kullanılır.
 
 1. *Program.cs* dosyasını açın ve `using` dosyanın en üstündeki mevcut deyimlerini aşağıdaki gibi değiştirin:
 
-    [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L1-L7)]
+    [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L1-L7)]
 
 1. `Program` *Program.cs*içindeki sınıfının altında adlı bir sınıf oluşturun `ImageData` . Bu sınıf başlangıçta yüklenen verileri temsil etmek için kullanılır.
 
-    [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L137-L142)]
+    [!code-csharp [ImageDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L138-L143)]
 
-    `ImageData`aşağıdaki özellikleri içerir:
+    `ImageData` aşağıdaki özellikleri içerir:
 
-    - `ImagePath`, görüntünün depolandığı tam yoldur.
-    - `Label`, görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
+    - `ImagePath` , görüntünün depolandığı tam yoldur.
+    - `Label` , görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
 
 1. Giriş ve çıkış verileriniz için sınıflar oluşturma
 
     1. Sınıfının altında `ImageData` , giriş verilerinizin şemasını adlı yeni bir sınıfta tanımlayın `ModelInput` .
 
-        [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L144-L153)]
+        [!code-csharp [ModelInputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L145-L154)]
 
-        `ModelInput`aşağıdaki özellikleri içerir:
+        `ModelInput` aşağıdaki özellikleri içerir:
 
         - `Image``byte[]`görüntünün gösterimidir. Model, yansıma verilerinin eğitim için bu türden olmasını bekler.
-        - `LabelAsKey`, öğesinin sayısal gösterimidir `Label` .
-        - `ImagePath`, görüntünün depolandığı tam yoldur.
-        - `Label`, görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
+        - `LabelAsKey` , öğesinin sayısal gösterimidir `Label` .
+        - `ImagePath` , görüntünün depolandığı tam yoldur.
+        - `Label` , görüntünün ait olduğu kategorisidir. Tahmin edilecek değer budur.
 
         Yalnızca `Image` ve `LabelAsKey` modeli eğitmek ve tahmin yapmak için kullanılır. `ImagePath`Ve `Label` özellikleri özgün görüntü dosyası adına ve kategorisine erişmek için kolaylık sağlamak üzere tutulur.
 
     1. Ardından, sınıfının altında `ModelInput` , çıkış verilerinizin şemasını adlı yeni bir sınıfta tanımlayın `ModelOutput` .
 
-        [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L155-L162)]
+        [!code-csharp [ModelOutputClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L156-L163)]
 
-        `ModelOutput`aşağıdaki özellikleri içerir:
+        `ModelOutput` aşağıdaki özellikleri içerir:
 
-        - `ImagePath`, görüntünün depolandığı tam yoldur.
-        - `Label`görüntünün ait olduğu özgün kategorisidir. Tahmin edilecek değer budur.
-        - `PredictedLabel`, model tarafından tahmin edilen değerdir.
+        - `ImagePath` , görüntünün depolandığı tam yoldur.
+        - `Label` görüntünün ait olduğu özgün kategorisidir. Tahmin edilecek değer budur.
+        - `PredictedLabel` , model tarafından tahmin edilen değerdir.
 
         Benzer şekilde `ModelInput` , yalnızca, `PredictedLabel` model tarafından yapılan tahminleri içerdiğinden tahmin yapmak için gereklidir. `ImagePath`Ve `Label` özellikleri özgün görüntü dosyası adına ve kategorisine erişmek için kolaylık sağlamak üzere tutulur.
 
@@ -172,13 +172,13 @@ Eğitim ve doğrulama verileri sıklıkla değişmediğinde, daha fazla çalış
 
 1. Yöntemi içinde `Main` varlıklarınızın konumunu, hesaplanan performans sorunu değerlerini ve `.pb` modelin sürümünü tanımlayın.
 
-    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
+    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L15-L17)]
 
 1. `mlContext`Değişkeni yeni bir [mlcontext](xref:Microsoft.ML.MLContext)örneğiyle başlatın.
 
-    [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
+    [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L19)]
 
-    [Mlcontext](xref:Microsoft.ML.MLContext) sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlcontext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal olarak da benzerdir `DBContext` .
+    [Mlcontext](xref:Microsoft.ML.MLContext) sınıfı tüm ml.NET işlemleri için bir başlangıç noktasıdır ve mlcontext 'i başlatmak, model oluşturma iş akışı nesneleri genelinde paylaşılabilen yeni bir ml.net ortamı oluşturur. Entity Framework, kavramsal olarak da benzerdir `DbContext` .
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
@@ -193,9 +193,9 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 }
 ```
 
-1. İçinde, `LoadImagesDirectory` alt dizinlerden tüm dosya yollarını almak için aşağıdaki kodu ekleyin:
+1. İçinde `LoadImagesFromDirectory` , alt dizinlerin tüm dosya yollarını almak için aşağıdaki kodu ekleyin:
 
-    [!code-csharp [GetFiles](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L104-L105)]
+    [!code-csharp [GetFiles](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L105-L106)]
 
 1. Ardından, bir deyimleri kullanarak her bir dosya için yineleme yapın `foreach` .
 
@@ -208,41 +208,41 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. İfadesinin içinde `foreach` , dosya uzantılarının desteklendiğinden emin olun. Resim sınıflandırma API 'SI JPEG ve PNG biçimlerini destekler.
 
-    [!code-csharp [CheckExtension](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L109-L110)]
+    [!code-csharp [CheckExtension](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L110-L111)]
 
 1. Ardından, dosyanın etiketini alın. Parametresi olarak `useFolderNameAsLabel` ayarlandıysa `true` , dosyanın kaydedildiği üst dizin etiket olarak kullanılır. Aksi takdirde, etiketin dosya adının veya dosya adının ön eki olmasını bekler.
 
-    [!code-csharp [GetLabel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L112-L126)]
+    [!code-csharp [GetLabel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L113-L127)]
 
 1. Son olarak, yeni bir örneğini oluşturun `ModelInput` .
 
-    [!code-csharp [CreateImageData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L128-L132)]
+    [!code-csharp [CreateImageData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L129-L133)]
 
 ### <a name="prepare-the-data"></a>Verileri hazırlama
 
-1. Yöntemine geri döndüğünüzde `Main` , `LoadFromDirectory` eğitim için kullanılan görüntülerin listesini almak için yardımcı program yöntemini kullanın.
+1. Yöntemine geri döndüğünüzde `Main` , `LoadImagesFromDirectory` eğitim için kullanılan görüntülerin listesini almak için yardımcı program yöntemini kullanın.
 
-    [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L21)]
+    [!code-csharp [LoadImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L22)]
 
 1. Ardından, yöntemini kullanarak görüntüleri içine yükleyin [`IDataView`](xref:Microsoft.ML.IDataView) [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) .
 
-    [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L23)]
+    [!code-csharp [CreateIDataView](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L24)]
 
 1. Veriler, dizinlerden okunan sıraya göre yüklenir. Verileri dengelemek için yöntemini kullanarak karıştırın [`ShuffleRows`](xref:Microsoft.ML.DataOperationsCatalog.ShuffleRows*) .
 
-    [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L25)]
+    [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L26)]
 
 1. Makine öğrenimi modelleri, girişin sayısal biçimde olmasını bekler. Bu nedenle, eğitimin öncesinde bazı ön işleme verilerin yapılması gerekir. [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) Ve `LoadRawImageBytes` dönüştürmelerini oluşturun. `MapValueToKey`Dönüştür sütundaki kategorik değeri alır `Label` , sayısal bir `KeyType` değere dönüştürür ve adlı yeni bir sütunda depolar `LabelAsKey` . , Bir `LoadImages` sütundaki değerleri, `ImagePath` `imageFolder` eğitimle ilgili görüntüleri yüklemek için parametresiyle birlikte alır.
 
-    [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L27-L33)]
+    [!code-csharp [PreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L28-L34)]
 
 1. Verileri, [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) daha önce işlenmiş verileri içeren bir öğesini döndüren yöntemine göre uygulamak için yöntemini kullanın [`IDataView`](xref:Microsoft.ML.IDataView) .
 
-    [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L35-L37)]
+    [!code-csharp [PreprocessData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L36-L38)]
 
 1. Bir modeli eğmek için bir eğitim veri kümesinin yanı sıra bir doğrulama veri kümesi de olması önemlidir. Model, eğitim kümesi üzerinde eğitilir. Görülmeyen veriler üzerinde tahminleri ne kadar iyi yapar doğrulama kümesine göre performans ile ölçülür. Model, bu performansın sonuçlarına bağlı olarak, geliştirme çabasında ne kadar öğrenildiği konusunda ayarlamalar yapar. Doğrulama kümesi, özgün veri kümenizi veya bu amaçla zaten ayrılmış olan başka bir kaynağı bölerek gelebilir. Bu durumda, önceden işlenmiş veri kümesi eğitim, doğrulama ve test kümelerine bölünür.
 
-    [!code-csharp [CreateDataSplits](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L39-L40)]
+    [!code-csharp [CreateDataSplits](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L40-L41)]
 
     Yukarıdaki kod örneği iki bölme gerçekleştirir. İlk olarak, önceden işlenmiş veriler bölünür ve %70, doğrulama için kalan %30 ' u kullanıldığında eğitim için kullanılır. Daha sonra, %30 doğrulama kümesi daha fazla doğrulama ve test kümelerine bölünür; burada %90 doğrulama için kullanılır ve test için %10 kullanılır.
 
@@ -250,7 +250,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 1. Eğitim, doğrulama ve test verileri için bölümleri ilgili değerleri atayın.
 
-    [!code-csharp [CreateDatasets](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L42-L44)]
+    [!code-csharp [CreateDatasets](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L43-L45)]
 
 ## <a name="define-the-training-pipeline"></a>Eğitim işlem hattını tanımlama
 
@@ -258,27 +258,27 @@ Model eğitimi birkaç adımdan oluşur. İlk olarak, modeli eğitmek için gör
 
 1. Bir için gerekli ve isteğe bağlı parametrelerin bir kümesini depolamak için yeni bir değişken oluşturun `ImageClassificationTrainer` .
 
-    [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
+    [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L47-L58)]
 
     , `ImageClassificationTrainer` İsteğe bağlı birkaç parametre alır:
 
-    - `FeatureColumnName`, model için girdi olarak kullanılan sütundur.
-    - `LabelColumnName`tahmin edilecek değerin sütundeğeridir.
-    - `ValidationSet`, [`IDataView`](xref:Microsoft.ML.IDataView) doğrulama verilerini içeriyor.
-    - `Arch`önceden eğitilen model mimarilerinden hangisinin kullanılacağını tanımlar. Bu öğretici ResNetv2 modelinin 101 katman türevini kullanır.
-    - `MetricsCallback`Eğitim sırasında ilerlemeyi izlemek için bir işlevi bağlar.
-    - `TestOnTrainSet`bir doğrulama kümesi mevcut olmadığında, modele eğitim kümesine karşı performansı ölçmesini söyler.
-    - `ReuseTrainSetBottleneckCachedValues`modele, sonraki çalışmalarda performans sorunlarına neden olan önbelleğe alınmış değerleri kullanıp kullanmayacağınızı söyler. Performans sorunu, ilk çalıştırıldığında yoğun bir şekilde yoğun bir geçiş hesaplasıdır. Eğitim verileri değişmezse ve farklı sayıda dönemler veya toplu iş boyutu kullanmayı denemek istiyorsanız, önbelleğe alınmış değerleri kullanmak bir modeli eğmek için gereken süreyi önemli ölçüde azaltır.
+    - `FeatureColumnName` , model için girdi olarak kullanılan sütundur.
+    - `LabelColumnName` tahmin edilecek değerin sütundeğeridir.
+    - `ValidationSet` , [`IDataView`](xref:Microsoft.ML.IDataView) doğrulama verilerini içeriyor.
+    - `Arch` önceden eğitilen model mimarilerinden hangisinin kullanılacağını tanımlar. Bu öğretici ResNetv2 modelinin 101 katman türevini kullanır.
+    - `MetricsCallback` Eğitim sırasında ilerlemeyi izlemek için bir işlevi bağlar.
+    - `TestOnTrainSet` bir doğrulama kümesi mevcut olmadığında, modele eğitim kümesine karşı performansı ölçmesini söyler.
+    - `ReuseTrainSetBottleneckCachedValues` modele, sonraki çalışmalarda performans sorunlarına neden olan önbelleğe alınmış değerleri kullanıp kullanmayacağınızı söyler. Performans sorunu, ilk çalıştırıldığında yoğun bir şekilde yoğun bir geçiş hesaplasıdır. Eğitim verileri değişmezse ve farklı sayıda dönemler veya toplu iş boyutu kullanmayı denemek istiyorsanız, önbelleğe alınmış değerleri kullanmak bir modeli eğmek için gereken süreyi önemli ölçüde azaltır.
     - `ReuseValidationSetBottleneckCachedValues``ReuseTrainSetBottleneckCachedValues`yalnızca bu durumda, doğrulama veri kümesi için olduğu gibidir.
-    - `WorkspacePath`hesaplanan performans sorunu değerlerinin ve model sürümünün depolanacağı dizini tanımlar `.pb` .
+    - `WorkspacePath` hesaplanan performans sorunu değerlerinin ve model sürümünün depolanacağı dizini tanımlar `.pb` .
 
 1. [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601)Ve ' den oluşan eğitim işlem hattını tanımlayın `mapLabelEstimator` `ImageClassificationTrainer` .
 
-    [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L59-L60)]
+    [!code-csharp [TrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L60-L61)]
 
 1. [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*)Modelinizi eğitebilmeniz için yöntemini kullanın.
 
-    [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L62)]
+    [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L63)]
 
 ## <a name="use-the-model"></a>Modeli kullanma
 
@@ -286,7 +286,7 @@ Modelinize eğitim sahibi olduğunuza göre, görüntüleri sınıflandırmak i�
 
 Yönteminin altında `Main` , `OutputPrediction` konsolunda tahmin bilgilerini göstermek için adlı yeni bir yardımcı program yöntemi oluşturun.
 
-[!code-csharp [OuputPredictionMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L96-L100)]
+[!code-csharp [OuputPredictionMethod](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L97-L101)]
 
 ### <a name="classify-a-single-image"></a>Tek bir görüntüyü sınıflandır
 
@@ -301,23 +301,23 @@ Yönteminin altında `Main` , `OutputPrediction` konsolunda tahmin bilgilerini g
 
 1. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)Yöntemi içinde oluşturun `ClassifySingleImage` . , [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) Tek bir veri örneği üzerinde bir tahmin etmenizi ve daha sonra bir tahmin gerçekleştirmenizi sağlayan kullanışlı BIR API 'dir.
 
-    [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L73)]
+    [!code-csharp [CreatePredictionEngine](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L74)]
 
 1. Tek bir örneğe erişmek için, `ModelInput` `data` [`IDataView`](xref:Microsoft.ML.IDataView) yöntemini kullanarak öğesine dönüştürün [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) ve sonra ilk gözlemyi alın.
 
-    [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L75)]
+    [!code-csharp [GetTestInputData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L76)]
 
 1. [`Predict`](xref:Microsoft.ML.PredictionEngine%602.Predict*)Görüntüyü sınıflandırmak için yöntemini kullanın.
 
-    [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L77)]
+    [!code-csharp [MakeSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L78)]
 
 1. Yöntemi ile tahmine göre tahmine çıkış yapın `OutputPrediction` .
 
-    [!code-csharp [OuputSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L79-L80)]
+    [!code-csharp [OuputSinglePrediction](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L80-L81)]
 
 1. Yöntemi içinde `Main` , `ClassifySingleImage` Test görüntü kümesini kullanarak çağırın.
 
-    [!code-csharp [ClassifySingleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L64)]
+    [!code-csharp [ClassifySingleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L65)]
 
 ### <a name="classify-multiple-images"></a>Birden çok görüntüyü sınıflandırma
 
@@ -332,19 +332,19 @@ Yönteminin altında `Main` , `OutputPrediction` konsolunda tahmin bilgilerini g
 
 1. [`IDataView`](xref:Microsoft.ML.IDataView)Yöntemini kullanarak tahminleri içeren bir oluşturma oluşturun [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) . Aşağıdaki kodu yönteminin içine ekleyin `ClassifyImages` .
 
-    [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L85)]
+    [!code-csharp [MakeMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L86)]
 
 1. Tahmine dayalı olarak yinelemek için `predictionData` [`IDataView`](xref:Microsoft.ML.IDataView) [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) yöntemini kullanarak öğesine dönüştürün [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) ve ardından ilk 10 gözlemyi alın.
 
-    [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L87)]
+    [!code-csharp [IEnumerablePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L88)]
 
 1. Tahmine dayalı olarak orijinal ve tahmin edilen etiketleri yineleyin ve çıktı.
 
-    [!code-csharp [OutputMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L89-L93)]
+    [!code-csharp [OutputMultiplePredictions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L90-L94)]
 
 1. Son olarak, `Main` yöntemi içinde, `ClassifyImages` görüntü sınama kümesini kullanarak çağırın.
 
-    [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L66)]
+    [!code-csharp [ClassifyImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification/Program.cs#L67)]
 
 ## <a name="run-the-application"></a>Uygulamayı çalıştırma
 

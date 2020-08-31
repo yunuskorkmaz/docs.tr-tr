@@ -32,9 +32,9 @@ Yüklenecek SDK veya çalışma zamanının sürümü. Bu makale her zaman deste
 
 ### <a name="examples"></a>Örnekler
 
-- ASP.NET Core 3,1 çalışma zamanını yükler:`aspnetcore-runtime-3.1`
-- .NET Core 2,1 çalışma zamanını yükler:`dotnet-runtime-2.1`
-- .NET Core 3,1 SDK 'sını yükler:`dotnet-sdk-3.1`
+- ASP.NET Core 3,1 çalışma zamanını yükler: `aspnetcore-runtime-3.1`
+- .NET Core 2,1 çalışma zamanını yükler: `dotnet-runtime-2.1`
+- .NET Core 3,1 SDK 'sını yükler: `dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>Paket eksik
 

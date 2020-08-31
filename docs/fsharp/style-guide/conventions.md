@@ -2,12 +2,12 @@
 title: F# kodlama kuralları
 description: 'F # kodu yazarken genel kılavuzları ve deyimleri öğrenin.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 47e9183ce22689a050878cf10d7a9bcf3b929ec6
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143542"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053017"
 ---
 # <a name="f-coding-conventions"></a>F# kodlama kuralları
 
@@ -46,7 +46,7 @@ type MyClass() =
     ...
 ```
 
-### <a name="carefully-apply-autoopen"></a>Dikkatle Uygula`[<AutoOpen>]`
+### <a name="carefully-apply-autoopen"></a>Dikkatle Uygula `[<AutoOpen>]`
 
 `[<AutoOpen>]`Yapı, çağıranlar için kullanılabilir olan kapsamı ve bir şeyin geldiği yanıtın "Magic" olduğunu pollute olabilir. Bu iyi bir şey değildir. Bu kural için bir özel durum, F # Çekirdek kitaplığının kendisidir (Bu olgu aynı zamanda bir bit controversıal).
 
@@ -108,34 +108,19 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Compiler
-open Microsoft.FSharp.Compiler.AbstractIL
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
-open Microsoft.FSharp.Compiler.AbstractIL.IL
-open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Internal
-open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
+open FSharp.Compiler
+open FSharp.Compiler.AbstractIL
+open FSharp.Compiler.AbstractIL.Diagnostics
+open FSharp.Compiler.AbstractIL.IL
+open FSharp.Compiler.AbstractIL.ILBinaryReader
+open FSharp.Compiler.AbstractIL.Internal
+open FSharp.Compiler.AbstractIL.Internal.Library
 
-open Microsoft.FSharp.Compiler.AccessibilityLogic
-open Microsoft.FSharp.Compiler.Ast
-open Microsoft.FSharp.Compiler.CompileOps
-open Microsoft.FSharp.Compiler.CompileOptions
-open Microsoft.FSharp.Compiler.Driver
-open Microsoft.FSharp.Compiler.ErrorLogger
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
-open Microsoft.FSharp.Compiler.Lib
-open Microsoft.FSharp.Compiler.NameResolution
-open Microsoft.FSharp.Compiler.PrettyNaming
-open Microsoft.FSharp.Compiler.Parser
-open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Tast
-open Microsoft.FSharp.Compiler.Tastops
-open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.TypeChecker
-open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
+open FSharp.Compiler.AccessibilityLogic
+open FSharp.Compiler.Ast
+open FSharp.Compiler.CompileOps
+open FSharp.Compiler.CompileOptions
+open FSharp.Compiler.Driver
 
 open Internal.Utilities
 open Internal.Utilities.Collections
@@ -224,7 +209,7 @@ Hatalar bir sorun etki alanında gösterilemez. Bu tür hatalar doğası gereği
 
 Özel durumları tetikme amaçları için F # ' da kullanılabilen ana yapılar, aşağıdaki tercih sırasına göre düşünülmelidir:
 
-| İşlev | Sözdizimi | Amaç |
+| İşlev | Syntax | Amaç |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | `System.ArgumentNullException`Belirtilen bağımsız değişken adına sahip bir oluşturur. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | `System.ArgumentException`Belirtilen bağımsız değişken adı ve iletisiyle bir ile başlatır. |
@@ -237,7 +222,7 @@ Hatalar bir sorun etki alanında gösterilemez. Bu tür hatalar doğası gereği
 
 `failwith`Ve `failwithf` işlevlerinin genellikle kaçınılması gerekir `Exception` , çünkü belirli bir özel durum değil temel türü yükseltir. [Özel durum tasarım yönergelerine](../../standard/design-guidelines/exceptions.md)göre,, ' yi kullanırken daha özel özel durumlar da yapmak istersiniz.
 
-### <a name="using-exception-handling-syntax"></a>Özel durum işleme söz dizimini kullanma
+### <a name="use-exception-handling-syntax"></a>Özel durum işleme sözdizimini kullan
 
 F #, sözdizimi aracılığıyla özel durum düzenlerini destekler `try...with` :
 
@@ -365,7 +350,7 @@ MySolution.sln
 |_/API.fsproj
 ```
 
-`ImplementationLogic.fsproj`Şu gibi bir kod açığa çıkabilir:
+`ImplementationLogic.fsproj` Şu gibi bir kod açığa çıkabilir:
 
 ```fsharp
 module Transactions =
@@ -443,18 +428,18 @@ Son olarak, otomatik Genelleştirme, F # veya büyük bir kod temeli için yeni 
 
 ## <a name="performance"></a>Performans
 
-### <a name="prefer-structs-for-small-data-types"></a>Küçük veri türleri için yapıları tercih et
+### <a name="consider-structs-for-small-types-with-high-allocation-rates"></a>Yüksek ayırma oranlarına sahip küçük türler için yapıları göz önünde bulundurun
 
 Yapıları (değer türleri olarak da bilinir) kullanmak, genellikle nesne ayırmayı önlediği için bazı kodlar için daha yüksek performans oluşmasına neden olabilir. Ancak, yapılar her zaman bir "daha hızlı git" düğmesi değildir: bir yapı içindeki verilerin boyutu 16 baytı aşarsa, verilerin kopyalanması genellikle başvuru türü kullanmaktan daha fazla CPU süresi harcanmasına neden olabilir.
 
 Yapısını kullanıp kullanmadığını öğrenmek için aşağıdaki koşulları göz önünde bulundurun:
 
 - Verilerinizin boyutu 16 bayt veya daha küçükse.
-- Büyük olasılıkla, çalışan bir programda bellekte yerleşik olarak bulunan bu veri türlerinden birçoğuna sahip olabilirsiniz.
+- Büyük olasılıkla bu türlerin çok sayıda örneği çalışan bir programda bellekte yerleşik olarak bulunuyorsa.
 
 İlk koşul geçerliyse, genellikle bir struct kullanmanız gerekir. Her ikisi de varsa, neredeyse her zaman bir struct kullanmanız gerekir. Önceki koşulların geçerli olduğu bazı durumlar olabilir, ancak bir yapının kullanılması bir başvuru türü kullanmaktan daha iyi veya daha kötütür değildir ancak nadir olabilir. Bu, ancak bu gibi değişiklikler yaparken her zaman ölçülmek önemlidir, ancak varsayım veya ıntukon üzerinde çalışmaz.
 
-#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>Küçük değer türlerini gruplarken yapı tanımlama gruplarını tercih et
+#### <a name="consider-struct-tuples-when-grouping-small-value-types-with-high-allocation-rates"></a>Küçük değer türlerini yüksek ayırma oranları ile gruplandırırken struct tanımlama gruplarını düşünün
 
 Aşağıdaki iki işlevi göz önünde bulundurun:
 
@@ -486,7 +471,7 @@ Bu işlevleri [Benchmarkdotnet](https://benchmarkdotnet.org/)gibi istatistiksel 
 
 Ancak, bu sonuçlar her zaman kendi kodunuzda durum değildir. Bir işlevi olarak işaretlerseniz `inline` , başvuru tanımlama gruplarını kullanan kod bazı ek iyileştirmeler alabilir veya ayrılacak kod yalnızca en iyi duruma getirilebilir. Performans açısından her zaman sonuçları ölçmelisiniz ve varsayım ya da ıntuksiz göre hiçbir zaman çalışmaz.
 
-#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>Veri türü küçük olduğunda yapı kayıtlarını tercih et
+#### <a name="consider-struct-records-when-the-type-is-small-and-has-high-allocation-rates"></a>Tür küçük olduğunda ve yüksek ayırma oranlarına sahip olduğunda yapı kayıtlarını düşünün
 
 Daha önce açıklanan Thumb kuralı [F # kayıt türleri](../language-reference/records.md)için de geçerlidir. Aşağıdaki veri türlerini ve bunları işleyen işlevleri göz önünde bulundurun:
 
@@ -521,7 +506,7 @@ Bu, önceki demet koduna benzerdir, ancak bu kez örnek kayıtları ve satır i�
 
 Bu işlevleri [Benchmarkdotnet](https://benchmarkdotnet.org/)gibi istatistiksel bir değerlendirme aracı ile kıyaslandığınızda, `processStructPoint` %60 daha hızlı bir şekilde çalıştığını ve yönetilen yığında hiçbir şey ayırdığını görürsünüz.
 
-#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>Veri türü küçük olduğunda struct ayrılmış birleşimler tercih et
+#### <a name="consider-struct-discriminated-unions-when-the-data-type-is-small-with-high-allocation-rates"></a>Veri türü yüksek ayırma oranları ile küçük olduğunda struct ayrılmış birleşimler kullanın
 
 Struct tanımlama grupları ve kayıtlarıyla performans hakkında önceki gözlemler Ayrıca, [F # ayrılmış birleşimler](../language-reference/discriminated-unions.md)için de geçerlidir. Aşağıdaki kodu inceleyin:
 
@@ -616,7 +601,7 @@ type Closure1Table() =
         | (false, _) -> false
 ```
 
-`Closure1Table`temel alınan mutasyon tabanlı veri yapısını kapsüller, böylece çağıranlar temel alınan veri yapısını sürdürmek üzere zorlar. Sınıflar, çağıranların ayrıntılarını açığa çıkarmadan tabanlı verileri ve yordamları kapsüllemek için güçlü bir yoldur.
+`Closure1Table` temel alınan mutasyon tabanlı veri yapısını kapsüller, böylece çağıranlar temel alınan veri yapısını sürdürmek üzere zorlar. Sınıflar, çağıranların ayrıntılarını açığa çıkarmadan tabanlı verileri ve yordamları kapsüllemek için güçlü bir yoldur.
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>Hücrelere başvuru yapmayı tercih et `let mutable`
 
@@ -670,9 +655,9 @@ F #, nesneler ve nesne yönelimli (OO) kavramları için tam desteğe sahiptir. 
 * Encapsulated kesilebilir veriler
 * Türlerde işleçler
 * Otomatik Özellikler
-* Uygulama `IDisposable` ve`IEnumerable`
+* Uygulama `IDisposable` ve `IEnumerable`
 * Tür uzantıları
-* Olaylar
+* Ekinlikler
 * Yapılar
 * Temsilciler
 * Numaralandırmalar
@@ -680,7 +665,7 @@ F #, nesneler ve nesne yönelimli (OO) kavramları için tam desteğe sahiptir. 
 **Bunları kullanmanız gerekmedikçe bu özelliklerden genellikle kaçının:**
 
 * Devralma tabanlı tür hiyerarşileri ve uygulama devralma
-* Null değerleri ve`Unchecked.defaultof<_>`
+* Null değerleri ve `Unchecked.defaultof<_>`
 
 ### <a name="prefer-composition-over-inheritance"></a>Devralma üzerine oluşturmayı tercih et
 
@@ -740,7 +725,7 @@ type BufferSize = int
 
 Bu, birden çok şekilde kafa karıştırıcı olabilir:
 
-* `BufferSize`bir soyutlama değil; tamsayı için yalnızca başka bir addır.
+* `BufferSize` bir soyutlama değil; tamsayı için yalnızca başka bir addır.
 * `BufferSize`Ortak BIR API 'de açığa çıkarılacası, kolayca yanlışlıkla büyük bir şekilde yorumlanabilmektedir `int` . Genellikle, etki alanı türlerinin kendileri için birden çok özniteliği vardır ve gibi basit türler değildir `int` . Bu kısaltma Bu varsayımını ihlal ediyor.
 * Büyük/küçük harf `BufferSize` (PascalCase), bu türün daha fazla veri bulundurduğunu gösterir.
 * Bu diğer ad, bir işleve adlandırılmış bir bağımsız değişken sağlamaya kıyasla daha fazla açıklık sunmaz.

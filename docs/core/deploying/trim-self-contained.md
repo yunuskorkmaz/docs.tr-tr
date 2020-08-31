@@ -4,12 +4,12 @@ description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları na
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 47bccf25b6f6a1b65742bb5e3f5f299932659c3c
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957559"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053113"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
@@ -21,7 +21,7 @@ Ancak, uygulamanın derleme zamanı analizinin, çeşitli sorunlu kod düzenleri
 
 Derleme zamanı Çözümleme altyapısı, hangi diğer kodun gerekli olduğunu tespit etmek için problemsiz kod desenlerinin geliştiricisine uyarı sağlar. Koda, başka nelerin dahil edileceğini söylemek için koda açıklama eklenebilir. Birçok yansıma deseni, [kaynak](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)oluşturucuları kullanılarak derleme zamanı kod üretimi ile değiştirilebilir.
 
-Uygulamalar için kırpma modu ayarı ile yapılandırılır `TrimMode` . Varsayılan değer ve, `copyused` uygulamayla birlikte başvurulan derlemelerdir. `link`Değer, Blazor WebAssembly uygulamalarıyla kullanılır ve derlemeler içinde kullanılmayan kodu kırpar. Kırpma Analizi uyarıları, tam bağımlılık analizinin mümkün olmadığı kod desenleri hakkında bilgi verir. Bu uyarılar varsayılan olarak bastırılır ve bayrağı olarak ayarlanarak açılabilir `SuppressTrimAnalysisWarnings` `false` . Kullanılabilir kırpma seçenekleri hakkında daha fazla bilgi için bkz. [ılbağlayıcı sayfası](https://github.com/mono/linker/blob/master/docs/illink-options.md).
+Uygulamalar için kırpma modu ayarı ile yapılandırılır `TrimMode` . Varsayılan değer ve, `copyused` uygulamayla birlikte başvurulan derlemelerdir. `link`Değer, Blazor WebAssembly uygulamalarıyla kullanılır ve derlemeler içinde kullanılmayan kodu kırpar. Kırpma Analizi uyarıları, tam bağımlılık analizinin mümkün olmadığı kod desenleri hakkında bilgi verir. Bu uyarılar varsayılan olarak bastırılır ve bayrağı olarak ayarlanarak açılabilir `SuppressTrimAnalysisWarnings` `false` . Kullanılabilir kırpma seçenekleri hakkında daha fazla bilgi için bkz. [kırpma seçenekleri](trimming-options.md).
 
 > [!NOTE]
 > Kırpma, .NET Core 3,1, 5,0 ' deki deneysel bir özelliktir ve _yalnızca_ kendi içinde yayımlanan uygulamalar tarafından kullanılabilir.

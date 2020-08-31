@@ -4,12 +4,12 @@ description: Bir .NET Framework Windows Forms uygulamasının Windows için .NET
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 71bd5740e1ea380fdde86328a5aed71fded64765
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83206129"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118552"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows Forms masaüstü uygulamasının .NET Core 'a bağlantı noktası oluşturma
 
@@ -22,22 +22,22 @@ Bu makalede, geçiş için kullanılan dosya türlerini tanımlamak için çeşi
 | **Uygps. sln** | Çözüm dosyasının adı. |
 | **MyForms. csproj** | .NET Framework Windows Forms projenin bağlantı noktasına adı. |
 | **MyFormsCore. csproj** | Oluşturduğunuz yeni .NET Core projesinin adı. |
-| **MyAppCore. exe** | .NET Core Windows Forms uygulaması çalıştırılabilir. |
+| **MyAppCore.exe** | .NET Core Windows Forms uygulaması çalıştırılabilir. |
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-- Yapmak istediğiniz tüm tasarımcı çalışmaları için [Visual Studio 2019 16,5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) veya üzeri. [Visual Studio 'nun en son önizleme sürümüne](https://visualstudio.microsoft.com/vs/preview/)güncelleştirmeniz önerilir.
+- Yapmak istediğiniz tüm tasarımcı işleri için [Visual Studio 2019 sürüm 16,5 veya üzeri](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=16) . [Visual Studio 'nun en son sürümüne](https://visualstudio.microsoft.com/vs/)güncelleştirmeniz önerilir.
 
   Aşağıdaki Visual Studio iş yüklerini yükler:
   
   - .NET masaüstü geliştirme
-  - .NET Core çoklu platform geliştirme
+  - .NET Core platformlar arası geliştirme
 
 - Sorun olmadan oluşturulup çalışan bir çözümde çalışan bir Windows Forms projesi.
 - C# dilinde kodlanmış bir proje.
 
 > [!NOTE]
-> .NET Core 3,0 projeleri yalnızca **Visual Studio 2019** veya sonraki bir sürümde desteklenir. **Visual Studio 2019 sürüm 16,5 Preview 1**' den başlayarak, .net Core Windows Forms Tasarımcısı da desteklenir.
+> .NET Core Windows Forms projeleri Visual Studio 2019 ve sonraki sürümlerde desteklenir. .NET Core Windows Forms Tasarımcısı, Visual Studio 2019 sürüm 16,5 ' den itibaren desteklenmektedir.
 >
 > Tasarımcıyı etkinleştirmek için **Araçlar**  >  **Seçenekler**  >  **ortam**  >  **Önizleme özellikleri** ' ne gidin ve **.NET Core uygulamaları için Önizleme Windows Forms Tasarımcısını kullan** seçeneğini belirleyin.
 
@@ -162,7 +162,7 @@ Alternatif olarak, `<Compile>` `<EmbeddedResource>` .NET Framework projenizdeki 
 
 .NET Framework projesi tarafından başvurulan her bir NuGet paketini .NET Core projesine ekleyin.
 
-Büyük olasılıkla .NET Framework Windows Forms uygulamanızın, projeniz tarafından başvurulan tüm NuGet paketlerinin listesini içeren bir **Packages. config** dosyası vardır. .NET Core projesine hangi NuGet paketlerinin ekleneceğini öğrenmek için bu listeye bakabilirsiniz. Örneğin, .NET Framework projesi `MetroFramework` ,, `MetroFramework.Design` ve NuGet paketlerine başvuruyorsa, `MetroFramework.Fonts` her birini Visual Studio ya da **SolutionFolder** dizininden .NET Core CLI ile projeye ekleyin:
+Büyük olasılıkla .NET Framework Windows Forms uygulamanızın, projeniz tarafından başvurulan tüm NuGet paketlerinin listesini içeren bir **packages.config** dosyası vardır. .NET Core projesine hangi NuGet paketlerinin ekleneceğini öğrenmek için bu listeye bakabilirsiniz. Örneğin, .NET Framework projesi `MetroFramework` ,, `MetroFramework.Design` ve NuGet paketlerine başvuruyorsa, `MetroFramework.Fonts` her birini Visual Studio ya da **SolutionFolder** dizininden .NET Core CLI ile projeye ekleyin:
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework
@@ -191,7 +191,7 @@ Bağlantı noktası için bir Windows Forms denetimleri kitaplığı projeniz va
 | **Uygps. sln** | Çözüm dosyasının adı. |
 | **MyControls. csproj** | .NET Framework Windows Forms adı, projeyi bağlantı noktasına denetler. |
 | **MyControlsCore. csproj** | Oluşturduğunuz yeni .NET Core kitaplığı projesinin adı. |
-| **MyCoreControls. dll** | .NET Core Windows Forms denetimleri kitaplığı. |
+| **MyCoreControls.dll** | .NET Core Windows Forms denetimleri kitaplığı. |
 
 ```
 SolutionFolder

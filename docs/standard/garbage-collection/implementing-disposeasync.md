@@ -1,27 +1,27 @@
 ---
 title: DisposeAsync metodu uygulama
-description: ''
+description: Zaman uyumsuz kaynak Temizleme işlemini gerçekleştirmek için DisposeAsync ve Dispomevsimsynccore yöntemlerini nasıl uygulayacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 06/02/2020
+ms.date: 08/25/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 0f6370d37703509681dd9fb818af8e7e2f3a1085
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: 268cea7584040ad92e2da75e5e03112480cda93c
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608081"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053184"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
 <xref:System.IAsyncDisposable?displayProperty=nameWithType>Arabirim, C# 8,0 'nin bir parçası olarak sunulmuştur. <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> [Bir Dispose yöntemi uygularken](implementing-dispose.md)yaptığınız gibi, kaynak temizlik gerçekleştirmeniz gerektiğinde yöntemini uygulayabilirsiniz. Ancak, bu uygulamanın zaman uyumsuz temizleme işlemlerine izin verdiği önemli farklılıklardan biridir. , <xref:System.IAsyncDisposable.DisposeAsync> <xref:System.Threading.Tasks.ValueTask> Zaman uyumsuz Dispose işlemini temsil eden bir döndürür.
 
-Arabirim uygulama sırasında <xref:System.IAsyncDisposable> , sınıfların de arabirimini uyguladığı tipik bir işlem olur <xref:System.IDisposable> . Arabirimin iyi bir uygulama deseninin, <xref:System.IAsyncDisposable> zaman uyumlu ya da zaman uyumsuz Dispose için hazırlanması gerekir. Dispose deseninin uygulanması için tüm rehberlik, zaman uyumsuz uygulama için geçerlidir. Bu makalede, [bir Dispose yönteminin nasıl uygulanacağını](implementing-dispose.md)bildiğiniz varsayılmaktadır.
+Sınıfların de arabirimini uyguladığı arabirim, tipik olarak kullanılır <xref:System.IAsyncDisposable> <xref:System.IDisposable> . Arabirimin iyi bir uygulama deseninin, <xref:System.IAsyncDisposable> zaman uyumlu ya da zaman uyumsuz Dispose için hazırlanması gerekir. Dispose deseninin uygulanması için tüm rehberlik, zaman uyumsuz uygulama için de geçerlidir. Bu makalede, [bir Dispose yönteminin nasıl uygulanacağını](implementing-dispose.md)bildiğiniz varsayılmaktadır.
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync () ve Dispodeniz synccore ()
 
@@ -30,17 +30,15 @@ Arabirim uygulama sırasında <xref:System.IAsyncDisposable> , sınıfların de 
 - Parametresi olmayan bir `public` <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> uygulama.
 - `protected virtual ValueTask DisposeAsyncCore()`İmzası şu şekilde olan bir yöntem:
 
-```csharp
-protected virtual ValueTask DisposeAsyncCore()
-{
-}
-```
-
-`DisposeAsyncCore()`Yöntemi, `virtual` türetilmiş sınıfların geçersiz Kılmalarda ek temizleme tanımlayabilmeleri için kullanılır.
+  ```csharp
+  protected virtual ValueTask DisposeAsyncCore()
+  {
+  }
+  ```
 
 ### <a name="the-disposeasync-method"></a>DisposeAsync () yöntemi
 
-`public`Parametresiz `DisposeAsync()` yöntemi bir bildirimde örtük olarak çağrılır `await using` ve amacı yönetilmeyen kaynakları serbest bırakmak, genel temizleme gerçekleştirmek ve bir varsa sonlandırıcının mevcut olduğunu belirtmek için gerekli değildir. Yönetilen bir nesneyle ilişkili belleği serbest bırakma, her zaman [çöp toplayıcının](index.md)etki alanıdır. Bu nedenle, standart bir uygulaması vardır:
+`public`Parametresiz `DisposeAsync()` yöntemi bir bildirimde örtük olarak çağrılır `await using` ve amacı yönetilmeyen kaynakları serbest bırakmak, genel temizleme gerçekleştirmek ve bir tane varsa sonlandırıcının çalıştırılmaması gerektiğini belirtmek için kullanılır. Yönetilen bir nesneyle ilişkili belleği serbest bırakma, her zaman [çöp toplayıcının](index.md)etki alanıdır. Bu nedenle, standart bir uygulaması vardır:
 
 ```csharp
 public async ValueTask DisposeAsync()
@@ -57,6 +55,13 @@ public async ValueTask DisposeAsync()
 
 > [!NOTE]
 > Zaman uyumsuz Dispose deseninin, Dispose düzenine kıyasla bir birincil farkı, <xref:System.IAsyncDisposable.DisposeAsync> `Dispose(bool)` aşırı yükleme yöntemine yapılan çağrının `false` bir bağımsız değişken olarak verilme yöntemidir. <xref:System.IDisposable.Dispose?displayProperty=nameWithType>Yöntemi uygularken, `true` bunun yerine geçirilir. Bu, zaman uyumlu Dispose düzeniyle işlevsel denklik sağlanmasına yardımcı olur ve Sonlandırıcı kod yollarının hala çağrılmasını sağlar. Diğer bir deyişle, `DisposeAsyncCore()` Yöntem yönetilen kaynakları zaman uyumsuz olarak elden atıyor, bu nedenle bunları zaman uyumlu olarak atmak istemezsiniz. Bu nedenle, `Dispose(false)` yerine çağırın `Dispose(true)` .
+
+### <a name="the-disposeasynccore-method"></a>Dispomevsimsynccore () yöntemi
+
+`DisposeAsyncCore()`Yöntemi, yönetilen kaynakların zaman uyumsuz temizliğini veya ' nin basamaklı çağrılarını gerçekleştirmek için tasarlanmıştır `DisposeAsync()` . Bir alt sınıf, uygulamasının bir temel sınıfını devraldığında ortak zaman uyumsuz temizleme işlemlerini Kapsüller <xref:System.IAsyncDisposable> . `DisposeAsyncCore()`Yöntemi, `virtual` türetilmiş sınıfların geçersiz Kılmalarda ek temizleme tanımlayabilmeleri için kullanılır.
+
+> [!TIP]
+> Bir uygulamasına <xref:System.IAsyncDisposable> ise `sealed` , `DisposeAsyncCore()` yöntemi gerekli değildir ve zaman uyumsuz temizleme doğrudan <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> yönteminde gerçekleştirilebilir.
 
 ## <a name="implement-the-async-dispose-pattern"></a>Zaman uyumsuz Dispose modelini uygulama
 

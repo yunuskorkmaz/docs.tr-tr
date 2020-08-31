@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 515b8d9adc1359581625f0d822e254d2c1df3b58
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 8f99af5accdecf1892a67a88c221e866bfddcbb2
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062502"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053050"
 ---
 # <a name="structure-types-c-reference"></a>Yapı türleri (C# Başvurusu)
 
@@ -27,7 +27,7 @@ Genellikle, çok az davranış sağlayan küçük veri merkezli türler tasarlam
 
 Yapı türlerinde değer semantiklerine sahip olduğundan, *değişmez* yapı türlerini tanımlamanızı öneririz.
 
-## <a name="readonly-struct"></a>`readonly`sýný
+## <a name="readonly-struct"></a>`readonly` sýný
 
 C# 7,2 ' den başlayarak, `readonly` bir yapı türünün sabit olduğunu bildirmek için değiştiricisini kullanın:
 
@@ -38,14 +38,14 @@ Bir yapının tüm veri üyeleri `readonly` aşağıdaki şekilde salt okunabili
 - Herhangi bir alan bildirimi [ `readonly` değiştiriciye](../keywords/readonly.md) sahip olmalıdır
 - Otomatik olarak uygulanan özellikler dahil olmak üzere herhangi bir özellik salt okunabilir olmalıdır
 
-Bu, yapının hiçbir üyesinin `readonly` yapının durumunu değiştirdiğine garanti eder.
+Bu, yapının hiçbir üyesinin `readonly` yapının durumunu değiştirdiğine garanti eder. C# 8,0 ve üzeri sürümlerde, oluşturucular hariç diğer örnek üyelerinin örtülü olarak olduğu anlamına gelir [`readonly`](#readonly-instance-members) .
 
 > [!NOTE]
 > Bir `readonly` yapıda, kesilebilir başvuru türünün veri üyesi yine de kendi durumunu mukuz edebilir. Örneğin, bir <xref:System.Collections.Generic.List%601> örneği değiştiremezsiniz, ancak buna yeni öğeler ekleyebilirsiniz.
 
-## <a name="readonly-instance-members"></a>`readonly`örnek üyeleri
+## <a name="readonly-instance-members"></a>`readonly` örnek üyeleri
 
-C# 8,0 ' den başlayarak, `readonly` bir örnek üyesinin bir yapının durumunu değiştirmediğini bildirmek için değiştiricisini de kullanabilirsiniz. Tüm yapı türünü olarak bildiremezseniz `readonly` , `readonly` yapının durumunu değiştirmeyin örnek üyelerini işaretlemek için değiştiricisini kullanın. Bir `readonly` yapıda, her örnek üye örtük olarak olur `readonly` .
+C# 8,0 ' den başlayarak, `readonly` bir örnek üyesinin bir yapının durumunu değiştirmediğini bildirmek için değiştiricisini de kullanabilirsiniz. Tüm yapı türünü olarak bildiremezseniz `readonly` , `readonly` yapının durumunu değiştirmeyin örnek üyelerini işaretlemek için değiştiricisini kullanın.
 
 Bir `readonly` örnek üyesi içinde, yapının örnek alanlarına atayamazsınız. Ancak bir `readonly` üye üye olmayan bir öğesi çağırabilir `readonly` . Bu durumda, derleyici yapı örneğinin bir kopyasını oluşturur ve bu kopyada üye olmayan ' i çağırır `readonly` . Sonuç olarak, özgün yapı örneği değiştirilmez.
 
@@ -102,7 +102,7 @@ Bir yapı türünün tüm örnek alanlarına erişilebiliyorsa, işleci olmadan 
 
 Bir yapı türü değişkenini bir bağımsız değişken olarak bir yönteme geçirdiğinizde veya bir yöntemden yapı türü değer döndürmeniz durumunda, bir yapı türünün tüm örneği kopyalanır. Bu, büyük yapı türlerini içeren yüksek performanslı senaryolarda kodunuzun performansını etkileyebilir. Bir yapı türü değişkenini başvuruya göre geçirerek değer kopyalamaya engel olabilirsiniz. [`ref`](../keywords/ref.md#passing-an-argument-by-reference) [`out`](../keywords/out-parameter-modifier.md) [`in`](../keywords/in-parameter-modifier.md) Bir bağımsız değişkenin başvuruya göre geçirilmesi gerektiğini göstermek için, veya yöntem parametre değiştiricilerini kullanın. Başvuruya göre bir yöntem sonucu döndürmek için [ref dönüşleri](../../programming-guide/classes-and-structs/ref-returns.md) kullanın. Daha fazla bilgi için bkz. [yazma güvenli ve verimli C# kodu](../../write-safe-efficient-code.md).
 
-## <a name="ref-struct"></a>`ref`sýný
+## <a name="ref-struct"></a>`ref` sýný
 
 C# 7,2 ' den başlayarak, `ref` bir yapı türünün bildiriminde değiştiricisini kullanabilirsiniz. `ref`Yapı türünün örnekleri yığında ayrılır ve yönetilen yığına atlayabilir. Derleyicinin yapı türlerinin kullanımını şu şekilde sınırladığından emin olmak için `ref` :
 

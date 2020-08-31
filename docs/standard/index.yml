@@ -6,12 +6,12 @@ metadata:
   description: Birçok farklı uygulama türü oluşturmaya yönelik açık kaynaklı bir geliştirici platformu olan .NET hakkında bilgi edinin.
   ms.topic: landing-page
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 37908d252d6dfcef92ce642f6f7c6f7e12f551f1
+  ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135821"
+  ms.lasthandoff: 08/28/2020
+  ms.locfileid: "89053218"
 landingContent:
 - title: .NET hakkında bilgi edinin
   linkLists:
@@ -53,7 +53,7 @@ landingContent:
     links:
     - text: 'C kullanarak JSON serisini serileştirme ve seri durumdan çıkarma #'
       url: serialization/system-text-json-how-to.md
-    - text: Newtonsoft. JSON 'dan System. Text. JSON 'a geçiş
+    - text: Newtonsoft.Jsüzerinde System.Text.Jsüzerine geçir
       url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
     - text: JSON serileştirme için özel dönüştürücüler yazma
       url: serialization/system-text-json-converters-how-to.md
@@ -141,6 +141,8 @@ landingContent:
       url: garbage-collection/fundamentals.md
     - text: Dispose metodu uygulama
       url: garbage-collection/implementing-dispose.md
+    - text: DisposeAsync metodu uygulama
+      url: garbage-collection/implementing-disposeasync.md
 - title: Paralel programlama hakkında bilgi edinin
   linkLists:
   - linkListType: overview

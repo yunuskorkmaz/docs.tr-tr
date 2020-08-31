@@ -7,4 +7,4 @@ ms.lasthandoff: 06/09/2020
 ms.locfileid: "84603085"
 ---
 
-❌Lütfen bu deni sürümünün artık desteklenmediğini unutmayın.
+❌ Lütfen bu deni sürümünün artık desteklenmediğini unutmayın.

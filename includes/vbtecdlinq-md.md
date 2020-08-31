@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "65633612"
 ---
-LINQ to SQL
+LINQ - SQL

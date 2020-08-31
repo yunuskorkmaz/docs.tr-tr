@@ -1,5 +1,6 @@
 ---
-title: if-else - C# Referans
+description: if-else-C# başvurusu
+title: if-else-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - if_CSharpKeyword
@@ -10,22 +11,22 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 61b60674d3b5de4649a52d2a165265ae0a27e0be
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: e2de84807a049bd47ea277db9fb010d0c2e4857d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738859"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118513"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# Başvurusu)
 
-Bir `if` deyim, Boolean ifadesinin değerine göre hangi ifadenin çalıştırılalaaçıklamasını tanımlar. Aşağıdaki örnekte, `bool` değişken `condition` ayarlanır `true` ve daha sonra `if` deyiminde işaretlenir. Çıktı. `The variable is set to true.`
+Bir `if` deyimi, bir Boolean ifadesinin değerine göre hangi deyimin çalıştırılacağını tanımlar. Aşağıdaki örnekte, `bool` değişkeni `condition` olarak ayarlanır `true` ve sonra `if` deyimden işaretlenir. Çıktı `The variable is set to true.` olur.
 
 [!code-csharp[csrefKeywordsSelection#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#1)]
 
-Bu konudaki örnekleri bir konsol uygulaması `Main` yöntemine yerleştirerek çalıştırabilirsiniz.
+Bu konudaki örnekleri `Main` bir konsol uygulaması yöntemine yerleştirerek çalıştırabilirsiniz.
 
-`if` Aşağıdaki örnekte görüldüğü gibi, C# ifadesi iki biçim alabilir.
+`if`Aşağıdaki örnekte gösterildiği gibi C# içindeki bir ifade iki form alabilir.
 
 ```csharp
 // if-else statement
@@ -47,41 +48,41 @@ if (condition)
 // Next statement in the program.
 ```
 
-Bir `if-else` açıklamada, `condition` doğru değerlendirirse, `then-statement` çalışır. Eğer `condition` yanlışsa, `else-statement` çalışır. Aynı `condition` anda doğru ve yanlış olamaz, `else-statement` çünkü `if-else` bir ifadenin `then-statement` ve ifadenin her ikisi de çalıştırılamaz. Çalıştırmaveya `then-statement` çalıştırmadan `else-statement` sonra, denetim deyimden `if` sonra bir sonraki ifadeye aktarılır.
+Bir `if-else` bildiriminde, `condition` true olarak değerlendirilirse `then-statement` çalışır. `condition`Yanlışsa, `else-statement` çalışır. `condition`Aynı anda doğru ve yanlış olamayacağı için, `then-statement` `else-statement` bir `if-else` deyimin her ikisi de her ikisini de çalıştırmazlar. `then-statement`Veya `else-statement` çalıştırıldıktan sonra Denetim, deyimden sonra sonraki ifadeye aktarılır `if` .
 
-Bir `if` deyim içermeyen bir `else` deyimde, `condition` eğer doğruysa, `then-statement` çalışır. Yanlışsa, `condition` denetim deyimden `if` sonra bir sonraki ifadeye aktarılır.
+`if`Eğer true ise, bir ifadesini içermeyen bir bildirimde, `else` `condition` `then-statement` çalışır. `condition`False ise, denetim deyimden sonra Next ifadesine aktarılır `if` .
 
-Hem `then-statement` de `else-statement` parantez içinde kapalı tek bir ifade veya birden çok`{}`ifadeden oluşabilir ( ). Tek bir ifade için ayraçlar isteğe bağlıdır, ancak önerilir.
+Hem hem de, `then-statement` `else-statement` küme ayracı () içine alınmış tek bir ifadeden veya birden çok deyimden oluşabilir `{}` . Tek bir ifadede, küme ayraçları isteğe bağlıdır ancak önerilir.
 
-İfade veya ifadeler `then-statement` ve `else-statement` orijinal `if` deyimi içinde iç içe `if` başka bir ifade de dahil olmak üzere, her türlü olabilir. İç içe `if` geçen `else` ifadelerde, her `if` bir yan tümce `else`karşılık gelen olmayan son maddeye aittir. Aşağıdaki örnekte, `Result1` her ikisi `m > 10` `n > 20` de ve doğru değerlendirmek görüntülenir. Doğruysa `m > 10` ancak `n > 20` yanlışsa `Result2` görüntülenir.
+Ve içindeki deyim veya deyimler, `then-statement` `else-statement` özgün deyimin içindeki başka bir deyim dahil olmak üzere herhangi bir türde olabilir `if` `if` . İç içe geçmiş `if` ifadelerde her `else` bir yan tümce karşılık gelen en son öğesine aittir `if` `else` . Aşağıdaki örnekte, `Result1` her ikisi de `m > 10` `n > 20` true olarak değerlendirilir. `m > 10`True ise, ancak `n > 20` false ise `Result2` görünür.
 
 [!code-csharp[csrefKeywordsSelection#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#2)]
 
-Bunun yerine, yanlış `Result2` olduğunda `(m > 10)` görünmek istiyorsanız, aşağıdaki örnekte görüldüğü gibi iç içe alan `if` deyimin başlangıç ve sonunu oluşturmak için ayraçları kullanarak bu ilişkilendirme belirtebilirsiniz.
+Bunun yerine, `Result2` false olduğunda görünmesini istiyorsanız, `(m > 10)` `if` Aşağıdaki örnekte gösterildiği gibi, iç içe geçmiş deyimin başlangıcını ve bitişini oluşturmak için, ayraçları kullanarak bu ilişkilendirmeyi belirtebilirsiniz.
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-`Result2`koşul `(m > 10)` yanlış olarak değerlendirilirse görünür.
+`Result2` koşul `(m > 10)` false olarak değerlendirilirse görüntülenir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, klavyeden bir karakter girersiniz ve program `if` giriş karakterinin alfabetik bir karakter olup olmadığını belirlemek için iç içe bir deyim kullanır. Giriş karakteri alfabetik bir karakterse, program giriş karakterinin küçük veya büyük harf olup olmadığını denetler. Her servis talebi için bir ileti görüntülenir.
+Aşağıdaki örnekte, klavyeden bir karakter girersiniz ve program, `if` giriş karakterinin alfabetik bir karakter olup olmadığını anlamak için iç içe geçmiş bir ifade kullanır. Giriş karakteri alfabetik bir karakter ise, program giriş karakterinin küçük harf veya büyük harf olup olmadığını denetler. Her durumda bir ileti görüntülenir.
 
 [!code-csharp[csrefKeywordsSelection#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#4)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki kısmi kodun gösterdiği gibi, bir `if` ifadeyi başka bir bloğun içine de ekte yapabilirsiniz. Örnek, deyimleri diğer iki blok ve bir blok içinde yuvalar. `if` Açıklamalar, her blokta hangi koşulların doğru veya yanlış olduğunu belirtir.
+Ayrıca `if` , aşağıdaki kısmi kodun gösterdiği gibi, bir ifadeyi Else bloğunun içine iç içe geçirebilirsiniz. Örnek, `if` iki diğer blok içindeki deyimlerini bir ve sonra blok içinde ifade etti. Açıklamalar, her blokta hangi koşulların doğru veya yanlış olduğunu belirtir.
 
 [!code-csharp[csrefKeywordsSelection#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#5)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, giriş karakterinin küçük harf mi, büyük harf mi yoksa bir sayı mı olduğunu belirler. Üç koşul da yanlışsa, karakter alfasayısal bir karakter değildir. Örnek, her servis talebi için bir ileti görüntüler.
+Aşağıdaki örnek, bir giriş karakterinin küçük harf, büyük harf veya sayı olduğunu belirler. Üç koşulun üçü de yanlışsa, karakter alfasayısal bir karakter değildir. Örnek, her durum için bir ileti görüntüler.
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Else bloğundaki veya sonrabloğundaki bir deyimin geçerli bir ifade olması gibi, durum için geçerli boolean ifadesini kullanabilirsiniz. , , `&&` `||`, `&` `|`, `!`gibi [mantıksal işleçleri](../operators/boolean-logical-operators.md) kullanabilirsiniz ve `^` bileşik koşullar yapmak için. Aşağıdaki kod örnekleri gösterir.
+Else bloğunda bir deyim olarak veya then bloğu geçerli bir deyim olabilir, koşul için herhangi bir geçerli Boole ifadesi kullanabilirsiniz. [logical operators](../operators/boolean-logical-operators.md) `!` `&&` `||` `&` `|` `^` Bileşik koşullar oluşturmak için,,,, ve gibi mantıksal işleçleri kullanabilirsiniz. Aşağıdaki kod örnekleri gösterir.
 
 ```csharp
 // NOT
@@ -136,9 +137,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
-- [?: Operatör](../operators/conditional-operator.md)
+- [C# anahtar sözcükleri](index.md)
+- [?: İşleci](../operators/conditional-operator.md)
 - [if-else Deyimi (C++)](/cpp/cpp/if-else-statement-cpp)
-- [switch](switch.md)
+- [değiştirebilirsiniz](switch.md)

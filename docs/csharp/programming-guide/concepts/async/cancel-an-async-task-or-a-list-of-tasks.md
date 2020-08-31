@@ -4,12 +4,12 @@ description: Bir görev listesine iptal isteği bildirmek için iptal belirteçl
 ms.date: 08/19/2020
 ms.topic: tutorial
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-ms.openlocfilehash: 000b6a89a9240344508a5ae6b248572c8a2177dc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 30bef5d1a5082fbd3757377dbedb8f9b9d17e218
+ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811489"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053099"
 ---
 # <a name="cancel-a-list-of-tasks-c"></a>Görev listesini iptal etme (C#)
 
@@ -33,7 +33,7 @@ Bu öğretici için aşağıdakiler gereklidir:
 
 ### <a name="create-example-application"></a>Örnek uygulama oluştur
 
-Yeni bir .NET Core konsol uygulaması oluşturun. [DotNet yeni konsol](../../../../core/tools/dotnet-new.md#console) komutunu veya [Visual Studio 'yu](/visualstudio/install/install-visual-studio)kullanarak bir tane oluşturabilirsiniz. En sevdiğiniz kod düzenleyicisinde *program.cs* dosyasını açın.
+Yeni bir .NET Core konsol uygulaması oluşturun. [`dotnet new console`](../../../../core/tools/dotnet-new.md#console)Komutunu kullanarak veya [Visual Studio](/visualstudio/install/install-visual-studio)'dan bir tane oluşturabilirsiniz. En sevdiğiniz kod düzenleyicisinde *program.cs* dosyasını açın.
 
 ### <a name="replace-using-statements"></a>Using deyimlerini Değiştir
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet,contperfq1
-ms.openlocfilehash: 595e93d8d8d22478c6770ddd4f70a0214653f5b9
-ms.sourcegitcommit: d337df55f83325918cbbd095eb573400bea49064
+ms.openlocfilehash: 45a44dcd73e1abcc8dfd75cd54da5a2310f027c4
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88187949"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89118266"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio"></a>Öğretici: Visual Studio kullanarak .NET Standard kitaplığı oluşturma
 
@@ -70,7 +70,7 @@ Boş çözümü oluşturmak için:
 
    `StartsWithUpper` , sınıfının bir üyesi gibi çağırabilmeniz için bir [genişletme yöntemi](../../csharp/programming-guide/classes-and-structs/extension-methods.md) olarak uygulanır <xref:System.String> .
 
-1. **Build**  >  Projenin hatasız derlendiğinden emin olmak için menü çubuğunda, derleme**çözümü** oluştur ' u seçin.
+1. Projenin hatasız derlendiğinden emin olmak için, menü çubuğunda yapı çözümü **Oluştur**' u seçin  >  **Build Solution** veya <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>B</kbd> ' ye basın.
 
 ## <a name="add-a-console-app-to-the-solution"></a>Çözüme bir konsol uygulaması ekleme
 
