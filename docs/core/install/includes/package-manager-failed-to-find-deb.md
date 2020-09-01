@@ -1,13 +1,13 @@
 ---
-ms.openlocfilehash: 7d398df060c031ae891218b82a2712d74f4c33b7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9d4c031eda291b0a8832c824789efdffe4084926
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602987"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132956"
 ---
 
-**{Netcore-Package} paketi bulunamıyor**hatasıyla benzer bir hata iletisi alırsanız, aşağıdaki komutları çalıştırın.
+**{Netcore-Package} paketi bulunamadı** veya **bazı paketler yüklenemediğinden**benzer bir hata iletisi alırsanız, aşağıdaki komutları çalıştırın.
 
 Aşağıdaki komut kümesinde iki yer tutucu vardır.
 
@@ -17,12 +17,11 @@ Bu, yüklemekte olduğunuz .NET Core paketini (gibi) temsil eder `aspnetcore-run
 - `{os-version}`\
 Bu, açık olduğunuz Linux sürümünü temsil eder. Bu, `wget` aşağıdaki komutta kullanılır.
 
-Paket listesini temizlemeyi deneyin:
+Önce paket listesini temizlemeyi deneyin:
 
 ```bash
 sudo dpkg --purge packages-microsoft-prod && sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
-sudo apt-get install {dotnet-package}
 ```
 
-Bu işe yaramazsa, aşağıdaki komutlarla el ile yüklemeyi çalıştırabilirsiniz:
+Ardından, .NET Core 'u yeniden yüklemeyi deneyin. Bu işe yaramazsa, aşağıdaki komutlarla el ile yüklemeyi çalıştırabilirsiniz:

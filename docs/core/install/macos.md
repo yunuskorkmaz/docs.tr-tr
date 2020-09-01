@@ -4,12 +4,12 @@ description: .NET Core 'u hangi macOS sürümlerinin yükleyebileceğinizi öğr
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 951e9b6a64d55274729e233b4a2d7728c75d05d4
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302938"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89132761"
 ---
 # <a name="install-net-core-on-macos"></a>MacOS 'ta .NET Core 'u yükler
 
@@ -38,7 +38,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 | macOS 10,15 "Catalina"    | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
 | macOS 10,14 "Mojave"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
 | macOS 10,13 "High Sierra" | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ✔️ 3,1 ([sürüm notları][release-notes-31]) | ✔️ 5,0 Preview ([sürüm notları][release-notes-50]) |
-| macOS 10,12 "Sierra"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ❌3,1 ([sürüm notları][release-notes-31]) | ❌5,0 Önizleme ([sürüm notları][release-notes-50]) |
+| macOS 10,12 "Sierra"      | ✔️ 2,1 ([sürüm notları][release-notes-21]) | ❌ 3,1 ([sürüm notları][release-notes-31]) | ❌ 5,0 Önizleme ([sürüm notları][release-notes-50]) |
 
 ## <a name="unsupported-releases"></a>Desteklenmeyen yayınlar
 
@@ -77,11 +77,11 @@ SDK, .NET Core Uygulamaları ve kitaplıkları derlemek ve yayımlamak için kul
 > [!NOTE]
 > Bir `+` sembol en düşük sürümü temsil eder.
 
-| .NET Core sürümü | macOS                 | Mimariler |     |
+| .NET Core sürümü | Mac OS                 | Mimariler |     |
 | ----------------- | --------------------- | --------------| --- |
 | 3,1               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
-| 3,0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
-| 2,2               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
+| 3.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
+| 2.2               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12 +)       | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
 
 MacOS Catalina (sürüm 10,15) ile başlayarak, geliştirici KIMLIĞIYLE dağıtılan 1 Haziran 2019 ' den sonra oluşturulan tüm yazılımlar, dikkat edilmiş olmalıdır. Bu gereksinim .NET Core çalışma zamanı, .NET Core SDK ve .NET Core ile oluşturulan yazılımlar için geçerlidir.
@@ -159,7 +159,7 @@ Bu yaklaşım ayrı konumlara farklı sürümler yüklemenize ve hangi uygulamay
 
 ## <a name="install-with-visual-studio-for-mac"></a>Mac için Visual Studio ile yüklensin
 
-**.NET Core** iş yükü seçiliyken Mac için Visual Studio .NET Core SDK yüklenir. MacOS 'ta .NET Core geliştirme ile çalışmaya başlamak için bkz. [Mac Için Visual Studio 2019 'Yi yüklemek](/visualstudio/mac/installation). En son sürüm olan .NET Core 3,1 için Mac için Visual Studio 8,4 Preview ' i kullanmanız gerekir.
+**.NET Core** iş yükü seçiliyken Mac için Visual Studio .NET Core SDK yüklenir. MacOS 'ta .NET Core geliştirme ile çalışmaya başlamak için bkz. [Mac Için Visual Studio 2019 'Yi yüklemek](/visualstudio/mac/installation). En son sürüm olan .NET Core 3,1 için Mac için Visual Studio 8,4 ' i kullanmanız gerekir.
 
 [![.NET Core iş yükü özelliği ile Mac için macOS Visual Studio 2019](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
