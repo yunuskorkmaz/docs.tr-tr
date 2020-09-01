@@ -1,15 +1,16 @@
 ---
+description: using deyimleri-C# başvurusu
 title: using deyimleri-C# başvurusu
 ms.date: 05/29/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: b889d2fcbdf854dbe8948744810f9b74e9f0dac2
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: c7f1fc4b7e911bdec3bd38ae88aa39b7f1795300
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307052"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141939"
 ---
 # <a name="using-statement-c-reference"></a>using deyimleri (C# Başvurusu)
 
@@ -27,7 +28,7 @@ C# 8,0 ' den başlayarak, `using` küme ayraçları gerektirmeyen ifade için a�
 
 ## <a name="remarks"></a>Açıklamalar
 
-<xref:System.IO.File>ve <xref:System.Drawing.Font> yönetilmeyen kaynaklara erişen yönetilen türlerin örnekleridir (Bu durumda dosya tutamaçları ve cihaz bağlamları). Birçok farklı türde yönetilmeyen kaynak ve bunları kapsülleyen sınıf kitaplığı türleri vardır. Bu tür türler <xref:System.IDisposable> arabirimini veya <xref:System.IAsyncDisposable> arabirimini gerçekleştirmelidir.
+<xref:System.IO.File> ve <xref:System.Drawing.Font> yönetilmeyen kaynaklara erişen yönetilen türlerin örnekleridir (Bu durumda dosya tutamaçları ve cihaz bağlamları). Birçok farklı türde yönetilmeyen kaynak ve bunları kapsülleyen sınıf kitaplığı türleri vardır. Bu tür türler <xref:System.IDisposable> arabirimini veya <xref:System.IAsyncDisposable> arabirimini gerçekleştirmelidir.
 
 Bir nesnenin yaşam süresi `IDisposable` tek bir yöntemle sınırlı olduğunda, bu örneği bildiriminde belirtmeniz ve oluşturmanız gerekir `using` . `using`İfade, <xref:System.IDisposable.Dispose%2A> yöntemi nesnesi üzerinde doğru şekilde çağırır ve (daha önce gösterildiği gibi kullandığınızda), bu da nesnenin kendisinin kapsam dışına geçmesine neden olur ve <xref:System.IDisposable.Dispose%2A> çağrılır. Blok içinde `using` , nesne salt okunurdur ve değiştirilemez ya da yeniden atanamaz. Nesnesi yerine uygularsa, `IAsyncDisposable` `IDisposable` `using` ifade öğesini ve döndürülen öğesini çağırır <xref:System.IAsyncDisposable.DisposeAsync%2A> `awaits` <xref:System.Threading.Tasks.ValueTask> . Hakkında daha fazla bilgi için <xref:System.IAsyncDisposable> bkz. [DisposeAsync yöntemi uygulama](../../../standard/garbage-collection/implementing-disposeasync.md).
 

@@ -1,15 +1,16 @@
 ---
+description: static yönergesini kullanma-C# başvurusu
 title: static yönergesini kullanma-C# başvurusu
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: bffbc026e8f7937db91d42b7a06a5b7bba3bc2f8
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: a10c315a05c28bce9b5ddb65af67dde6446d031d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396149"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141926"
 ---
 # <a name="using-static-directive-c-reference"></a>static yönergesini kullanma (C# Başvurusu)
 
@@ -35,9 +36,9 @@ Genellikle, bir statik üye çağırdığınızda, tür adını üye adıyla bir
 
 [!code-csharp[using-static#2](~/samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
-`using static`yalnızca erişilebilir statik üyeleri ve belirtilen türde tanımlanmış iç içe geçmiş türleri içeri aktarır.  Devralınan Üyeler içeri aktarılmaz.  Visual Basic modüller dahil olmak üzere, bir using static yönergesi ile herhangi bir adlandırılmış türden içeri aktarabilirsiniz.  F # en üst düzey işlevleri meta verilerde adı geçerli bir C# tanımlayıcısı olan bir adlandırılmış türün statik üyeleri olarak görünürse, F # işlevleri içeri aktarılabilir.
+`using static` yalnızca erişilebilir statik üyeleri ve belirtilen türde tanımlanmış iç içe geçmiş türleri içeri aktarır.  Devralınan Üyeler içeri aktarılmaz.  Visual Basic modüller dahil olmak üzere, bir using static yönergesi ile herhangi bir adlandırılmış türden içeri aktarabilirsiniz.  F # en üst düzey işlevleri meta verilerde adı geçerli bir C# tanımlayıcısı olan bir adlandırılmış türün statik üyeleri olarak görünürse, F # işlevleri içeri aktarılabilir.
 
- `using static`Uzantı yöntemi arama için belirtilen türde belirtilen uzantı yöntemlerini kullanılabilir yapar.  Ancak, uzantı yöntemlerinin adları kodda nitelenmemiş başvuru için kapsama aktarılmaz.
+ `using static` Uzantı yöntemi arama için belirtilen türde belirtilen uzantı yöntemlerini kullanılabilir yapar.  Ancak, uzantı yöntemlerinin adları kodda nitelenmemiş başvuru için kapsama aktarılmaz.
 
  Aynı ada sahip Yöntemler `using static` aynı derleme birimi veya ad alanı içinde farklı yönergelere göre farklı türlerden içeri aktarılmalıdır bir yöntem grubu.  Bu yöntem grupları içindeki aşırı yükleme çözümlemesi normal C# kurallarını izler.
 
@@ -55,4 +56,4 @@ Aşağıdaki örnek `using static` <xref:System.Console> ,, ve sınıflarının 
 - [C# başvurusu](../index.md)
 - [C# anahtar sözcükleri](index.md)
 - [Ad alanlarını kullanma](../../programming-guide/namespaces/using-namespaces.md)
-- [Ad alanları](../../programming-guide/namespaces/index.md)
+- [Ad Alanları](../../programming-guide/namespaces/index.md)

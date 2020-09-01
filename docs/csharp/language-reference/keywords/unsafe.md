@@ -1,5 +1,6 @@
 ---
-title: güvenli olmayan anahtar kelime - C# Başvuru
+description: güvenli olmayan anahtar sözcük-C# başvurusu
+title: güvenli olmayan anahtar sözcük-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - unsafe_CSharpKeyword
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e047a4cff77877862c5cbbb5e49eb1a75b42499
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712994"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141965"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C# Başvurusu)
 
-`unsafe` Anahtar kelime, işaretçileri içeren herhangi bir işlem için gerekli olan güvenli olmayan bir bağlamı gösterir. Daha fazla bilgi için [Güvenli Olmayan Kod ve İşaretçiler'e](../../programming-guide/unsafe-code-pointers/index.md)bakın.
+`unsafe`Anahtar sözcüğü, işaretçileri içeren tüm işlemler için gerekli olan güvenli olmayan bir bağlamı gösterir. Daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../../programming-guide/unsafe-code-pointers/index.md).
 
-`unsafe` Bir tür veya üyenin bildiriminde değiştiriciyi kullanabilirsiniz. Bu nedenle, türün veya üyenin tüm metin boyutu güvenli olmayan bir bağlam olarak kabul edilir. Örneğin, aşağıdaki `unsafe` değiştirici ile bildirilen bir yöntemdir:
+`unsafe`Değiştirici bir tür veya üye bildiriminde kullanabilirsiniz. Türün veya üyenin metinsel kapsamı, bu nedenle güvenli olmayan bir bağlam olarak değerlendirilir. Örneğin, değiştirici ile belirtilen bir yöntemi aşağıda verilmiştir `unsafe` :
 
 ```csharp
 unsafe static void FastCopy(byte[] src, byte[] dst, int count)
@@ -27,13 +28,13 @@ unsafe static void FastCopy(byte[] src, byte[] dst, int count)
 }
 ```
 
-Güvenli olmayan bağlamın kapsamı parametre listesinden yöntemin sonuna kadar uzanır, böylece işaretçiler parametre listesinde de kullanılabilir:
+Güvenli olmayan bağlamın kapsamı parametre listesinden yönteminin sonuna kadar uzanır, bu nedenle işaretçiler parametre listesinde de kullanılabilir:
 
 ```csharp
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-Bu blok içinde güvenli olmayan bir kod kullanımını etkinleştirmek için güvenli olmayan bir blok da kullanabilirsiniz. Örnek:
+Güvenli olmayan bir blok, bu blok içinde güvenli olmayan bir kod kullanımını etkinleştirmek için de kullanabilirsiniz. Örneğin:
 
 ```csharp
 unsafe
@@ -42,7 +43,7 @@ unsafe
 }
 ```
 
-Güvenli olmayan kod derlemek için [`-unsafe`](../compiler-options/unsafe-compiler-option.md) derleyici seçeneğini belirtmeniz gerekir. Güvenli olmayan kod, ortak dil çalışma süresi tarafından doğrulanabilir değildir.
+Güvenli olmayan kod derlemek için derleyici seçeneğini belirtmeniz gerekir [`-unsafe`](../compiler-options/unsafe-compiler-option.md) . Güvenli olmayan kod, ortak dil çalışma zamanı tarafından doğrulanabilir değil.
 
 ## <a name="example"></a>Örnek
 
@@ -50,13 +51,13 @@ Güvenli olmayan kod derlemek için [`-unsafe`](../compiler-options/unsafe-compi
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Güvenli Olmayan koda](~/_csharplang/spec/unsafe-code.md) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [güvenli olmayan kod](~/_csharplang/spec/unsafe-code.md) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [fixed Deyimi](fixed-statement.md)
 - [Güvenli Olmayan Kod ve İşaretçiler](../../programming-guide/unsafe-code-pointers/index.md)
-- [Sabit Boyutlu Arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [Sabit boyutlu arabellekler](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

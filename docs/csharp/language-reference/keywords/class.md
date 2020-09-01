@@ -1,5 +1,6 @@
 ---
-title: sınıf anahtar kelime - C# Referans
+description: Class anahtar sözcüğü-C# başvurusu
+title: Class anahtar sözcüğü-C# başvurusu
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 67c9c4be55cce25edf9ecb84b257a8523f193bec
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77673101"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142121"
 ---
 # <a name="class-c-reference"></a>class (C# Başvurusu)
 
-Sınıflar, aşağıdaki örnekte `class`gösterildiği gibi anahtar kelime kullanılarak bildirilir:
+Sınıflar `class` , aşağıdaki örnekte gösterildiği gibi anahtar sözcüğü kullanılarak bildirilmiştir:
 
 ```csharp
 class TestClass
@@ -28,24 +29,24 @@ class TestClass
 
 ## <a name="remarks"></a>Açıklamalar
 
-C#'da yalnızca tek bir devralmaya izin verilir. Başka bir deyişle, bir sınıf yalnızca bir taban sınıftan uygulama devralabilir. Ancak, bir sınıf birden fazla arabirim uygulayabilir. Aşağıdaki tabloda sınıf devralma ve arabirim uygulama örnekleri gösterilmektedir:
+C# içinde yalnızca tek devralmaya izin verilir. Diğer bir deyişle, bir sınıf yalnızca bir temel sınıftan uygulamayı devralınabilir. Ancak, bir sınıf birden fazla arabirim uygulayabilir. Aşağıdaki tabloda sınıf devralma ve arabirim uygulama örnekleri gösterilmektedir:
 
 |Devralma|Örnek|
 |-----------------|-------------|
-|None|`class ClassA { }`|
+|Yok|`class ClassA { }`|
 |Tek|`class DerivedClass : BaseClass { }`|
-|Yok, iki arabirim uygular|`class ImplClass : IFace1, IFace2 { }`|
-|Tek, bir arayüz uygular|`class ImplDerivedClass : BaseClass, IFace1 { }`|
+|Hiçbiri, iki arabirim uygular|`class ImplClass : IFace1, IFace2 { }`|
+|Tek, bir arabirim uygular|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
-Diğer sınıflar içinde iç içe olmayan, doğrudan bir ad alanı içinde beyan ettiğiniz [sınıflar, genel](./public.md) veya [dahili](./internal.md)olabilir. Sınıflar `internal` varsayılan olarak vardır.
+Diğer sınıflarda iç içe değil, bir ad alanı içinde doğrudan bildirdiğiniz sınıflar [ortak](./public.md) veya [iç](./internal.md)olabilir. Sınıflar `internal` Varsayılan olarak ' dir.
 
-İç içe sınıflar da dahil olmak üzere sınıf [üyeleri, kamu,](public.md) [korunan iç,](protected-internal.md) [korumalı,](protected.md) [iç,](internal.md) [özel](private.md)veya [özel korumalı](private-protected.md)olabilir. Üyeler `private` varsayılan olarak vardır.
+İç içe geçmiş sınıflar dahil olmak üzere sınıf üyeleri [ortak](public.md), [korumalı dahili](protected-internal.md), [korunan](protected.md), [dahili](internal.md), [özel](private.md)veya [özel korumalı](private-protected.md)olabilir. Üyeler `private` Varsayılan olarak ' dir.
 
-Daha fazla bilgi için [Erişim Değiştiriciler'e](../../programming-guide/classes-and-structs/access-modifiers.md)bakın.
+Daha fazla bilgi için bkz. [erişim değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md).
 
-Tür parametreleri olan genel sınıfları bildirebilirsiniz. Daha fazla bilgi için [Genel Sınıflar'a](../../programming-guide/generics/generic-classes.md)bakın.
+Tür parametrelerine sahip genel sınıfları bildirebilirsiniz. Daha fazla bilgi için bkz. [genel sınıflar](../../programming-guide/generics/generic-classes.md).
 
-Bir sınıf aşağıdaki üyelerin bildirimlerini içerebilir:
+Bir sınıf, aşağıdaki üyelerin bildirimlerini içerebilir:
 
 - [Oluşturucular](../../programming-guide/classes-and-structs/constructors.md)
 
@@ -63,7 +64,7 @@ Bir sınıf aşağıdaki üyelerin bildirimlerini içerebilir:
 
 - [İşleçler](../operators/index.md)
 
-- [Olaylar](../../programming-guide/events/index.md)
+- [Ekinlikler](../../programming-guide/events/index.md)
 
 - [Temsilciler](../../programming-guide/delegates/index.md)
 
@@ -77,23 +78,23 @@ Bir sınıf aşağıdaki üyelerin bildirimlerini içerebilir:
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, sınıf alanlarını, oluşturucuları ve yöntemleri bildireni gösterir. Ayrıca nesne anlık ve yazdırma örneği verilerini de gösterir. Bu örnekte, iki sınıf bildirilir. Birinci sınıf, `Child`iki özel alan`name` `age`(ve), iki kamu yapıcılar ve bir ortak yöntem içerir. İkinci sınıf, `StringTest`, içerdiği `Main`için kullanılır.
+Aşağıdaki örnek, sınıf alanları, oluşturucular ve yöntemlerinin bildirimini gösterir. Ayrıca, nesne örneğini oluşturmayı ve örnek verilerini yazdırmayı gösterir. Bu örnekte, iki sınıf bildirilmiştir. İlk sınıf olan, `Child` iki özel alan ( `name` ve `age` ), iki ortak Oluşturucu ve bir genel yöntem içerir. İkinci sınıfı, `StringTest` öğesini içermesi için kullanılır `Main` .
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>Yorumlar
 
-Önceki örnekte özel alanlara`name` (ve) `age`yalnızca `Child` sınıfın ortak yöntemiyle erişilenebildiğine dikkat edin. Örneğin, aşağıdaki gibi bir ifade kullanarak `Main` yöntemden çocuğun adını yazdıramazsınız:
+Önceki örnekte özel alanlara ( `name` ve `age` ) yalnızca sınıfın genel yöntemiyle erişildiğine dikkat edin `Child` . Örneğin, `Main` aşağıdaki gibi bir ifade kullanarak alt öğenin adını yöntemden yazdıramazsınız:
 
 ```csharp
 Console.Write(child1.name);   // Error
 ```
 
-Özel `Child` üyelere `Main` yalnızca sınıfın bir `Main` üyesi olsaydı erişmek mümkündür.
+' In özel üyelerine erişim, `Child` `Main` yalnızca `Main` sınıfının bir üyesi ise mümkün olacaktır.
 
-Erişim değiştiricisi varsayılan olarak bir sınıf `private`içinde bildirilen türler , bu `private` nedenle bu örnekteki veri üyeleri anahtar sözcük kaldırılırsa yine de olacaktır.
+Bir erişim değiştiricisi olmayan bir sınıf içinde bildirildiği türler `private` , bu nedenle bu örnekteki veri üyeleri `private` anahtar sözcüğünün kaldırılmakta olması durumunda olmaya devam eder.
 
-Son olarak, parametresiz oluşturucu kullanılarak oluşturulan`child3`nesne `age` için alanın varsayılan olarak sıfıra başlandığını unutmayın.
+Son olarak, parametresiz Oluşturucu () kullanılarak oluşturulan nesne için `child3` , `age` alanın varsayılan olarak sıfıra başlatıldığını fark edersiniz.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
@@ -101,7 +102,7 @@ Son olarak, parametresiz oluşturucu kullanılarak oluşturulan`child3`nesne `ag
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](./index.md)
-- [Referans Türleri](./reference-types.md)
+- [C# anahtar sözcükleri](./index.md)
+- [Başvuru türleri](./reference-types.md)

@@ -1,4 +1,5 @@
 ---
+description: throw-C# başvurusu
 title: throw-C# başvurusu
 ms.date: 03/02/2015
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-ms.openlocfilehash: 7ed84e04dae54283e4b5f03be0600c4dbf95b4b4
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 4cad4810b89f976f92ce576917feb2398acce636
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063126"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89142043"
 ---
 # <a name="throw-c-reference"></a>throw (C# Başvurusu)
 
@@ -38,7 +39,7 @@ Yöntem çağıranları, sonra `try-catch` `try-catch-finally` oluşturulan öze
 
 ## <a name="re-throwing-an-exception"></a>Özel durum yeniden oluşturuluyor
 
-`throw`, `catch` bir blokta işlenen bir özel durumu yeniden oluşturmak için bir blokta da kullanılabilir `catch` .  Bu durumda, `throw` bir özel durum işleneni almaz. Bir yöntem çağıran bir bağımsız değişkende diğer bir kitaplık yöntemine geçtiğinde ve kitaplık yöntemi çağırana geçirilmesi gereken bir özel durum oluşturduğunda, en çok yararlı olur. Örneğin, aşağıdaki örnek, <xref:System.NullReferenceException> başlatılmamış bir dizenin ilk karakterini almaya çalışırken oluşturulan bir öğesini yeniden atar.
+`throw` , `catch` bir blokta işlenen bir özel durumu yeniden oluşturmak için bir blokta da kullanılabilir `catch` .  Bu durumda, `throw` bir özel durum işleneni almaz. Bir yöntem çağıran bir bağımsız değişkende diğer bir kitaplık yöntemine geçtiğinde ve kitaplık yöntemi çağırana geçirilmesi gereken bir özel durum oluşturduğunda, en çok yararlı olur. Örneğin, aşağıdaki örnek, <xref:System.NullReferenceException> başlatılmamış bir dizenin ilk karakterini almaya çalışırken oluşturulan bir öğesini yeniden atar.
 
 [!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]
 
@@ -47,7 +48,7 @@ Yöntem çağıranları, sonra `try-catch` `try-catch-finally` oluşturulan öze
 
 ## <a name="the-throw-expression"></a>`throw`İfade
 
-C# 7,0 ' den itibaren bir deyim ve `throw` deyim olarak kullanılabilir. Bu, daha önce desteklenmeyen bağlamlarda bir özel durumun oluşturulmasına olanak sağlar. Bu modüller şunlardır:
+C# 7,0 ' den itibaren bir deyim ve `throw` deyim olarak kullanılabilir. Bu, daha önce desteklenmeyen bağlamlarda bir özel durumun oluşturulmasına olanak sağlar. Bu güncelleştirmeler şunlardır:
 
 - [koşullu işleç](../operators/conditional-operator.md). Aşağıdaki örnek, bir `throw` <xref:System.ArgumentException> Yöntem boş bir dize dizisi geçirtiyse, oluşturmak için bir ifade kullanır. C# 7,0 ' den önce, bu mantığın bir bildirimde görünmesi gerekir `if` / `else` .
 

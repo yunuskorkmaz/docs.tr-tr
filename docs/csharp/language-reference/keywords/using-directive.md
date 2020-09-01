@@ -1,45 +1,46 @@
 ---
-title: yönergeyi kullanarak - C# Referans
+description: using yönergesi-C# başvurusu
+title: using yönergesi-C# başvurusu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f22a67348b19b8c97513ca685b2b10b34b1fd6fd
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093155"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141952"
 ---
-# <a name="using-directive-c-reference"></a>yönergeyi kullanma (C# Reference)
+# <a name="using-directive-c-reference"></a>using yönergesi (C# Başvurusu)
 
-`using` Yönergeüç kullanıma sahiptir:
+`using`Yönergesinin üç kullanımı vardır:
 
-- Bu ad alanında bir tür kullanımını hak kazanmak zorunda kalmamak için bir ad alanında türlerin kullanımına izin vermek için:
+- Bir ad alanında türlerin kullanılmasına izin vermek için, bu ad alanında bir tür kullanımını nitelendirmeniz gerekmez:
 
     ```csharp
     using System.Text;
     ```
 
-- Erişimi tür adıyla nitelemek zorunda kalmadan statik üyelere ve iç içe geçmiş türtürlerine erişmenize izin vermek için.
+- Tür adıyla erişimi nitelemek zorunda kalmadan statik üyelere ve bir tür iç içe türlerine erişmenize izin vermek için.
 
     ```csharp
     using static System.Math;
     ```
 
-    Daha fazla bilgi için statik [yönergeleri kullanarak](using-static.md)bakın.
+    Daha fazla bilgi için bkz. [using static yönergesi](using-static.md).
 
-- Ad alanı veya tür için takma ad oluşturmak için. Buna kullanma *diğer adı yönergesi*denir.
+- Bir ad alanı veya tür için bir diğer ad oluşturmak için. Bu, *Using alias yönergesi*olarak adlandırılır.
 
     ```csharp
     using Project = PC.MyCompany.Project;
     ```
 
-Anahtar kelime, dosya ve yazı tipleri gibi <xref:System.IDisposable> nesnelerin doğru şekilde işlenmesini sağlamaya yardımcı olan ifadeleri kullanarak oluşturmak için de kullanılır. *using statements* `using` Daha fazla bilgi için [Bildirim'i kullanma](using-statement.md) bilgisine bakın.
+`using`Anahtar sözcüğü Ayrıca, dosyalar ve yazı tipleri gibi nesnelerin doğru şekilde işlenmesini sağlamaya yardımcı olan *using deyimleri*oluşturmak için de kullanılır <xref:System.IDisposable> . Daha fazla bilgi için bkz. [using deyimleri](using-statement.md) .
 
-## <a name="using-static-type"></a>Statik türü kullanma
+## <a name="using-static-type"></a>Statik tür kullanma
 
-Erişimi tür adıyla nitelemek zorunda kalmadan bir türün statik üyelerine erişebilirsiniz:
+Tür adıyla erişimi nitelemek zorunda kalmadan, bir türün statik üyelerine erişebilirsiniz:
 
 ```csharp
 using static System.Console;
@@ -55,49 +56,49 @@ class Program
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir `using` yönergenin kapsamı, görüntülendiği dosyayla sınırlıdır.
+Bir `using` yönergenin kapsamı göründüğü dosyayla sınırlıdır.
 
-Yönerge `using` şu şekilde görünebilir:
+`using`Yönerge şu şekilde görünebilir:
 
-- Kaynak kodu dosyasının başında, herhangi bir ad alanı veya tür tanımlarından önce.
-- Herhangi bir ad alanında, ancak bu ad alanında bildirilen herhangi bir ad alanı veya türleri önce.
+- Bir kaynak kodu dosyasının başlangıcında, herhangi bir ad alanı veya tür tanımlarından önce.
+- Herhangi bir ad alanında, bu ad alanında bildirilmeyen herhangi bir ad alanı veya türden önce.
 
-Aksi takdirde, derleyici hatası [CS1529](../../misc/cs1529.md) oluşturulur.
+Aksi halde, derleyici hatası [CS1529](../../misc/cs1529.md) oluşturulur.
 
-Bir `using` tanımlayıcıyı bir ad alanı veya türe hak kazanmak için bir takma ad yönergesi oluşturun. Herhangi `using` bir yönergede, tam nitelikli ad alanı veya `using` türü, ondan önce gelen yönergelerden bağımsız olarak kullanılmalıdır. Bir yönerge bildiriminde başka `using` bir ad kullanılamaz. `using` Örneğin, aşağıdaki derleyici hatası oluşturur:
+Bir `using` tanımlayıcıyı bir ad alanına veya türe göre bulmayı kolaylaştırmak için bir diğer ad yönergesi oluşturun. Herhangi bir `using` yönergede, daha `using` önce gelen yönergelerden bağımsız olarak tam nitelikli ad alanı veya tür kullanılmalıdır. `using`Bir yönergenin bildiriminde diğer ad kullanılamaz `using` . Örneğin, aşağıdakiler bir derleyici hatası oluşturur:
 
 ```csharp
 using s = System.Text;
 using s.RegularExpressions; // Generates a compiler error.
 ```
 
-Ad `using` alanını belirtmek zorunda kalmadan, türleri ad alanında kullanmak için bir yönerge oluşturun. Yönerge, `using` belirttiğiniz ad alanında iç içe olan ad alanlarına erişmenizi sağlamaz.
+Ad `using` alanını belirtmek zorunda kalmadan bir ad alanındaki türleri kullanmak için bir yönerge oluşturun. Bir `using` yönerge, belirttiğiniz ad alanında iç içe yerleştirilmiş herhangi bir ad alanı için erişim sağlamaz.
 
-Ad alanları iki kategoride gelir: kullanıcı tanımlı ve sistem tanımlı. Kullanıcı tanımlı ad alanları, kodunuzda tanımlanan ad alanlarıdır. Sistem tanımlı ad alanlarının listesi [için](../../../../api/index.md)bkz.
+Ad alanları iki kategoride gelir: Kullanıcı tanımlı ve sistem tanımlı. Kullanıcı tanımlı ad alanları kodunuzda tanımlı ad uzaylardır. Sistem tanımlı ad alanlarının listesi için bkz. [.NET API Browser](../../../../api/index.md).
 
 ## <a name="example-1"></a>Örnek 1
 
-Aşağıdaki örnek, ad alanı için `using` takma adınasıl tanımlanırken kullanılacağını gösterir:
+Aşağıdaki örnek, `using` bir ad alanı için bir diğer ad tanımlama ve kullanmayı gösterir:
 
 [!code-csharp[csrefKeywordsNamespace#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#8)]
 
-Bir diğer ad yönergesi sağ tarafta açık bir genel türü olamaz. Örneğin, bir `List<T>`, bir için bir ' için bir `List<int>`', bir ' için bir ' için bir ' sözcük oluşturamazsınız.
+Using takma ad yönergesinin sağ tarafta açık genel bir türü olamaz. Örneğin, için bir using diğer adı oluşturamazsınız `List<T>` , ancak bir için bir tane oluşturabilirsiniz `List<int>` .
 
 ## <a name="example-2"></a>Örnek 2
 
-Aşağıdaki örnek, bir sınıf `using` için `using` bir yönerge ve diğer adnasıl tanımlanabildiğini gösterir:
+Aşağıdaki örnek bir `using` sınıfın bir yönergesinin ve diğer adının nasıl tanımlanacağını göstermektedir `using` :
 
 [!code-csharp[csrefKeywordsNamespace#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#9)]
 
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
-Daha fazla bilgi için Bkz. [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [yönergeleri kullanma.](~/_csharplang/spec/namespaces.md#using-directives) Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [yönergeleri kullanma](~/_csharplang/spec/namespaces.md#using-directives) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [Ad Alanlarını Kullanma](../../programming-guide/namespaces/using-namespaces.md)
-- [C# Anahtar Kelimeler](index.md)
+- [Ad alanlarını kullanma](../../programming-guide/namespaces/using-namespaces.md)
+- [C# anahtar sözcükleri](index.md)
 - [Ad Alanları](../../programming-guide/namespaces/index.md)
-- [Ekstresi'ni kullanma](using-statement.md)
+- [using Deyimi](using-statement.md)
