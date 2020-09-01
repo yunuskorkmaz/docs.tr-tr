@@ -1,5 +1,6 @@
 ---
-title: -yol haritası (C# Derleyici Seçenekleri)
+description: -pathmap (C# derleyici seçenekleri)
+title: -pathmap (C# derleyici seçenekleri)
 ms.date: 05/16/2018
 f1_keywords:
 - /pathmap
@@ -7,44 +8,44 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 707a37c6946cfcaf429552f0aeece6b87f3ad71d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606634"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125013"
 ---
-# <a name="-pathmap-c-compiler-options"></a>-yol haritası (C# Derleyici Seçenekleri)
+# <a name="-pathmap-c-compiler-options"></a>-pathmap (C# derleyici seçenekleri)
 
-**-pathmap** derleyici seçeneği, derleyici tarafından kaynak yol adları çıktısı için fiziksel yolların nasıl eşlenecek olduğunu belirtir.
+**-Pathmap** derleyici seçeneği, fiziksel yolların derleyicinin çıkış kaynak yol adlarına nasıl eşlendiğini belirtir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```console
 -pathmap:path1=sourcePath1,path2=sourcePath2
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
- `path1`Geçerli ortamdaki kaynak dosyalara tam yol
+ `path1` Geçerli ortamdaki kaynak dosyalarının tam yolu
 
- `sourcePath1`Kaynak yolu herhangi `path1` bir çıktı dosyalarında yerine geçer.
+ `sourcePath1` Her çıkış dosyasında yerine geçen kaynak yol `path1` .
 
-Birden çok eşlenen kaynak yolu belirtmek için, her biri virgülle ayırın.
+Birden çok eşlenmiş kaynak yolunu belirtmek için, her biri virgülle ayırın.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derleyici kaynak yolu çıktısına aşağıdaki nedenlerden dolayı yazar:
+Derleyici, kaynak yolunu aşağıdaki nedenlerden dolayı çıktısına yazar:
 
-1. Kaynak yol, isteğe bağlı bir <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> parametreye uygulandığında bir bağımsız değişkenle değiştirilir.
-1. Kaynak yol bir PDB dosyasına katıştırılmış.
-1. PDB dosyasının yolu pe (taşınabilir çalıştırılabilir) dosyaya katıştırılır.
+1. İsteğe bağlı bir parametreye uygulandığında kaynak yolu bir bağımsız değişken için değiştirilir <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> .
+1. Kaynak yolu bir PDB dosyasına katıştırılır.
+1. PDB dosyasının yolu bir PE (taşınabilir yürütülebilir) dosyasına katıştırılır.
 
-Bu seçenek, derleyicinin çıktı dosyalarına yazılması gereken karşılık gelen bir yola çalıştığı makinedeki her fiziksel yolu eşler.
+Bu seçenek, derleyicinin çalıştığı makinedeki her fiziksel yolu, çıktı dosyalarında yazılması gereken karşılık gelen bir yola eşler.
 
 ## <a name="example"></a>Örnek
 
-C `t.cs` dizinini derle: **\\\\çalışma testleri** ve **\çıktıda yayımlamak** için dizini eşle:
+`t.cs` **C: \\ iş \\ testlerinde** derleyin ve bu dizini çıktıda **\publish** ile eşleyin:
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs
@@ -52,5 +53,5 @@ csc -pathmap:C:\work\tests=\publish t.cs
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
