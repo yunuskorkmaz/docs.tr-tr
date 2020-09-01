@@ -4,12 +4,12 @@ description: Kendi içindeki uygulamaların kırpılacağını nasıl denetleyec
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 5597d4cdb9e8e96dcec6545e039d43295ca991bd
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: d6081a24cc18e424b55d40e152f519c680f11aa0
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142264"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271886"
 ---
 # <a name="trimming-options"></a>Kırpma seçenekleri
 
@@ -25,7 +25,7 @@ Kullanırken `Microsoft.NET.Sdk` , bu, netcoreapp çalışma zamanı paketinden 
 
 ## <a name="trimming-granularity"></a>Parçalı yapısı kırpma
 
-Aşağıdaki ayrıntı düzeyi ayarları, kullanılmamış olmayan Il 'nin nasıl atılma olduğunu denetler. Bu, bir özellik olarak veya [tek bir derlemede](#Trimmed-assemblies)meta veriler olarak ayarlanabilir.
+Aşağıdaki ayrıntı düzeyi ayarları, kullanılmamış olmayan Il 'nin nasıl atılma olduğunu denetler. Bu, bir özellik olarak veya [tek bir derlemede](#trimmed-assemblies)meta veriler olarak ayarlanabilir.
 
 - `<TrimMode>copyused</TrimMode>`
 
@@ -60,7 +60,7 @@ Kırpılan bir uygulamayı yayımlarken, SDK, `ItemGroup` `ManagedAssemblyToLink
 
 - `<TrimMode>copyused</TrimMode>` veya `<TrimMode>link</TrimMode>`
 
-  Bu derlemenin [kırpma parçalı yapısını](#Trimming-granularity) denetleyin. Bu genel olarak önceliklidir `TrimMode` . `TrimMode`Bir derlemenin ayarlanması, ' i belirtir `<IsTrimmable>true</IsTrimmable>` .
+  Bu derlemenin [kırpma parçalı yapısını](#trimming-granularity) denetleyin. Bu genel olarak önceliklidir `TrimMode` . `TrimMode`Bir derlemenin ayarlanması, ' i belirtir `<IsTrimmable>true</IsTrimmable>` .
 
 ## <a name="root-assemblies"></a>Kök derlemeler
 
@@ -106,7 +106,7 @@ Bu, kendi kodunuz, kitaplık kodu ve çerçeve kodunuz da dahil olmak üzere tü
 
 ## <a name="warning-versions"></a>Uyarı sürümleri
 
-Kırpma analizi, [`AnalysisLevel`](../project-sdk/msbuild-props.md#AnalysisLevel) SDK genelinde analiz uyarıları sürümünü denetleyen özelliği uyar. Kırpma Analizi uyarılarının sürümünü bağımsız olarak denetleyen başka bir özellik vardır (derleyiciye benzer şekilde `WarningLevel` ):
+Kırpma analizi, [`AnalysisLevel`](../project-sdk/msbuild-props.md#analysislevel) SDK genelinde analiz uyarıları sürümünü denetleyen özelliği uyar. Kırpma Analizi uyarılarının sürümünü bağımsız olarak denetleyen başka bir özellik vardır (derleyiciye benzer şekilde `WarningLevel` ):
 
 - `<ILLinkWarningLevel>5</ILLinkWarningLevel>`
 

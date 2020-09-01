@@ -3,12 +3,12 @@ title: Bulutta yerel uygulamalarda elaun arama
 description: Bulutta yerel uygulamalara elastik arama özellikleri ekleme hakkında bilgi edinin.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: e956f28877d88ce5279944964a877efc324918b6
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 70d1925d6b8c7bbe515ee4f178513dc61212ebce
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614090"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271808"
 ---
 # <a name="elasticsearch-in-a-cloud-native-app"></a>Bulutta yerel bir uygulamada elaun arama
 
@@ -74,7 +74,7 @@ Bu bölümde, bulutta yerel sistemlerdeki verilere ayrıntılı bir bakış sunu
 
 - [Vitess](https://vitess.io/)
 
-- [Elana Search: kesin kılavuz](http://shop.oreilly.com/product/0636920028505.do)
+- [Elana Search: kesin kılavuz](https://shop.oreilly.com/product/0636920028505.do)
   
 - [Apache Lucene 'e giriş](https://www.baeldung.com/lucene)
 

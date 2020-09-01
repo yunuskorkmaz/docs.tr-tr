@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 829c93e97990b87e6e568614236de9708ef080d9
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325750"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89272003"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF 'de veri bağlamaya genel bakış
 
@@ -91,11 +91,11 @@ Bu şekilde farklı veri akışı türleri gösterilmektedir:
 
 ![Veri bağlama veri akışı](./media/data-binding-overview/databinding-dataflow.png "DataBinding_DataFlow")
 
-- <xref:System.Windows.Data.BindingMode.OneWay>bağlama, hedef özelliği otomatik olarak güncelleştirmek için kaynak özellikte değişikliklere neden olur, ancak Target özelliğindeki değişiklikler kaynak özelliğine geri yayılmaz. Bu tür bir bağlama, bağlanmakta olan denetimin örtülü olarak salt okunurdur. Örneğin, bir stok şeridi gibi bir kaynağa bağlanabilir veya belki de hedef özellikte, bir tablonun veri bağlantılı arka plan rengi gibi değişiklikler yapmak için hiçbir denetim arabirimi sağlanmamıştır. Hedef özelliğin değişikliklerini izlemeye gerek yoksa <xref:System.Windows.Data.BindingMode.OneWay> bağlama modunun kullanılması bağlama modunun ek yükünü önler <xref:System.Windows.Data.BindingMode.TwoWay> .
+- <xref:System.Windows.Data.BindingMode.OneWay> bağlama, hedef özelliği otomatik olarak güncelleştirmek için kaynak özellikte değişikliklere neden olur, ancak Target özelliğindeki değişiklikler kaynak özelliğine geri yayılmaz. Bu tür bir bağlama, bağlanmakta olan denetimin örtülü olarak salt okunurdur. Örneğin, bir stok şeridi gibi bir kaynağa bağlanabilir veya belki de hedef özellikte, bir tablonun veri bağlantılı arka plan rengi gibi değişiklikler yapmak için hiçbir denetim arabirimi sağlanmamıştır. Hedef özelliğin değişikliklerini izlemeye gerek yoksa <xref:System.Windows.Data.BindingMode.OneWay> bağlama modunun kullanılması bağlama modunun ek yükünü önler <xref:System.Windows.Data.BindingMode.TwoWay> .
 
-- <xref:System.Windows.Data.BindingMode.TwoWay>bağlama, kaynak özellikte veya Target özelliğinde, diğerini otomatik olarak güncelleştirmek için değişikliklere neden olur. Bu tür bir bağlama, düzenlenebilir formlar veya diğer tam etkileşimli kullanıcı arabirimi senaryoları için uygundur. Çoğu özellik varsayılan olarak <xref:System.Windows.Data.BindingMode.OneWay> bağlamaya, ancak bazı bağımlılık özelliklerine (genellikle <xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> ve [onay kutusu](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) gibi kullanıcı tarafından düzenlenebilir denetimlerin özellikleri). <xref:System.Windows.Data.BindingMode.TwoWay> Bağımlılık özelliğinin tek yönlü veya iki yönlü olarak bağlama özelliğinin, özelliği olan özellik meta verilerini almak <xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> ve sonra özelliğin Boole değerini denetlemesi için programlı bir yoldur <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> .
+- <xref:System.Windows.Data.BindingMode.TwoWay> bağlama, kaynak özellikte veya Target özelliğinde, diğerini otomatik olarak güncelleştirmek için değişikliklere neden olur. Bu tür bir bağlama, düzenlenebilir formlar veya diğer tam etkileşimli kullanıcı arabirimi senaryoları için uygundur. Çoğu özellik varsayılan olarak <xref:System.Windows.Data.BindingMode.OneWay> bağlamaya, ancak bazı bağımlılık özelliklerine (genellikle <xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> ve [onay kutusu](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked) gibi kullanıcı tarafından düzenlenebilir denetimlerin özellikleri). <xref:System.Windows.Data.BindingMode.TwoWay> Bağımlılık özelliğinin tek yönlü veya iki yönlü olarak bağlama özelliğinin, özelliği olan özellik meta verilerini almak <xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType> ve sonra özelliğin Boole değerini denetlemesi için programlı bir yoldur <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType> .
 
-- <xref:System.Windows.Data.BindingMode.OneWayToSource>, <xref:System.Windows.Data.BindingMode.OneWay> bağlamanın tersidir; Target özelliği değiştiğinde kaynak özelliğini güncelleştirir. Tek örnek senaryo yalnızca kaynak değeri kullanıcı arabiriminden yeniden değerlendirmeniz gerektiğinde olur.
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> , <xref:System.Windows.Data.BindingMode.OneWay> bağlamanın tersidir; Target özelliği değiştiğinde kaynak özelliğini güncelleştirir. Tek örnek senaryo yalnızca kaynak değeri kullanıcı arabiriminden yeniden değerlendirmeniz gerektiğinde olur.
 
 - Şekil, <xref:System.Windows.Data.BindingMode.OneTime> kaynak özelliğin hedef özelliği başlatmasına, ancak sonraki değişiklikleri yaymasına neden olan bağlamadır. Veri bağlamı değişirse veya veri bağlamındaki nesne değişirse değişiklik, hedef *özellikte yansıtılmaz.* Geçerli durumun bir anlık görüntüsü uygunsa veya veriler gerçekten statikse, bu tür bir bağlama uygundur. Hedef özelliği bir kaynak özelliğinden bir değer ile başlatmak istiyorsanız ve veri bağlamı önceden bilinmiyorsa, bu tür bağlama de kullanışlıdır. Bu mod aslında <xref:System.Windows.Data.BindingMode.OneWay> kaynak değerin değişmemesi durumunda daha iyi performans sağlayan daha basit bir bağlama biçimidir.
 
@@ -113,7 +113,7 @@ Ancak, metin düzenlenirken veya metni düzenledikten sonra Denetim odağı kayb
 
 `UpdateSourceTrigger`Değer ise <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged?displayProperty=nameWithType> , sağ ok veya bağlamalar tarafından işaret edilen değer, <xref:System.Windows.Data.BindingMode.TwoWay> <xref:System.Windows.Data.BindingMode.OneWayToSource> hedef özelliği değiştikçe hemen güncellenir. Ancak `UpdateSourceTrigger` değer ise <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> , bu değer yalnızca Target özelliği odağı kaybettiğinde yeni değerle güncelleştirilir.
 
-Özelliğe benzer şekilde <xref:System.Windows.Data.Binding.Mode%2A> , farklı bağımlılık özellikleri farklı varsayılan değerlere sahiptir <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> . Bağımlılık özelliklerinin çoğu için varsayılan değer <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> , `TextBox.Text` özelliğin varsayılan değeri olan ' dir <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> . `PropertyChanged`kaynak güncelleştirmelerinin genellikle Target özelliği değiştiğinde meydana gelir. Anında değişiklikler, onay kutuları ve diğer basit denetimler için uygundur. Bununla birlikte, metin alanları için, her tuş vuruşundan sonra güncelleştirme performansı azaledebilir ve kullanıcıyı yeni değere işlemeden önce, geri alma ve yazma hatalarını çözme fırsatını reddeder.
+Özelliğe benzer şekilde <xref:System.Windows.Data.Binding.Mode%2A> , farklı bağımlılık özellikleri farklı varsayılan değerlere sahiptir <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> . Bağımlılık özelliklerinin çoğu için varsayılan değer <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> , `TextBox.Text` özelliğin varsayılan değeri olan ' dir <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> . `PropertyChanged` kaynak güncelleştirmelerinin genellikle Target özelliği değiştiğinde meydana gelir. Anında değişiklikler, onay kutuları ve diğer basit denetimler için uygundur. Bununla birlikte, metin alanları için, her tuş vuruşundan sonra güncelleştirme performansı azaledebilir ve kullanıcıyı yeni değere işlemeden önce, geri alma ve yazma hatalarını çözme fırsatını reddeder.
 
 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>Bağımlılık özelliğinin varsayılan değerini bulma hakkında bilgi için bkz. Özellik sayfası.
 
@@ -121,7 +121,7 @@ Aşağıdaki tabloda <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> ,
 
 | UpdateSourceTrigger değeri | Kaynak değer güncelleştirildiği zaman | TextBox için örnek senaryo |
 | ------------------------- | ---------------------------------- | ---------------------------- |
-| `LostFocus`(için varsayılan <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> ) | TextBox denetimi odağı kaybettiğinde. | Doğrulama mantığı ile ilişkili bir metin kutusu (aşağıdaki [veri doğrulamasına](#data-validation) bakın). |
+| `LostFocus` (için varsayılan <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> ) | TextBox denetimi odağı kaybettiğinde. | Doğrulama mantığı ile ilişkili bir metin kutusu (aşağıdaki [veri doğrulamasına](#data-validation) bakın). |
 | `PropertyChanged` | Öğesine yazarken <xref:System.Windows.Controls.TextBox> . | Bir sohbet odası penceresinde TextBox denetimleri. |
 | `Explicit` | Uygulama çağırdığında <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> . | Düzenlenebilir bir formda metin kutusu denetimleri (kaynak değerlerini yalnızca Kullanıcı Gönder düğmesine tıkladığında güncelleştirir). |
 
@@ -173,12 +173,12 @@ Verilerin, bağlantılı hedef özelliği için anlamlı olması için özel man
 
 Veri bağlamanın diğer özelliklerine ve kullanımlarına geçmeden önce sınıfı tanıtmak yararlı olur <xref:System.Windows.Data.BindingExpression> . Önceki bölümlerde gördüğünüz gibi, <xref:System.Windows.Data.Binding> sınıfı bağlama bildirimi için üst düzey sınıftır; bir bağlamanın özelliklerini belirtmenize imkan tanıyan birçok özellik sağlar. İlişkili bir sınıf, <xref:System.Windows.Data.BindingExpression> kaynak ve hedef arasındaki bağlantıyı tutan temel nesnedir. Bağlama, birkaç bağlama ifadesi genelinde paylaşılabilen tüm bilgileri içerir. <xref:System.Windows.Data.BindingExpression>, Paylaşılamayan bir örnek ifadesidir ve öğesinin tüm örnek bilgilerini içerir <xref:System.Windows.Data.Binding> .
 
-Aşağıdaki örneği, burada `myDataObject` sınıfının bir örneği `MyData` , `myBinding` kaynak <xref:System.Windows.Data.Binding> nesne ise ve `MyData` adlı bir dize özelliği içeren tanımlanmış bir sınıftır `MyDataProperty` . Bu örnek, bir örneği olan öğesinin metin içeriğini `myText` öğesine bağlar <xref:System.Windows.Controls.TextBlock> `MyDataProperty` .
+Aşağıdaki örneği, burada `myDataObject` sınıfının bir örneği `MyData` , `myBinding` kaynak <xref:System.Windows.Data.Binding> nesne ise ve `MyData` adlı bir dize özelliği içeren tanımlanmış bir sınıftır `ColorName` . Bu örnek, bir örneği olan öğesinin metin içeriğini `myText` öğesine bağlar <xref:System.Windows.Controls.TextBlock> `ColorName` .
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-Diğer bağlamaları oluşturmak için aynı *myBinding* nesnesi kullanabilirsiniz. Örneğin, bir onay kutusunun metin içeriğini *MyDataProperty*olarak bağlamak Için *myBinding* nesnesini kullanabilirsiniz. Bu senaryoda, <xref:System.Windows.Data.BindingExpression> *myBinding* nesnesini paylaşan iki örnek olacaktır.
+Diğer bağlamaları oluşturmak için aynı *myBinding* nesnesi kullanabilirsiniz. Örneğin, bir onay kutusunun metin içeriğini *ColorName*' e bağlamak Için *myBinding* nesnesini kullanabilirsiniz. Bu senaryoda, <xref:System.Windows.Data.BindingExpression> *myBinding* nesnesini paylaşan iki örnek olacaktır.
 
 Bir <xref:System.Windows.Data.BindingExpression> nesne, <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> veriye bağlı bir nesne çağırarak döndürülür. Aşağıdaki makalelerde, sınıfının kullanımları gösterilmektedir <xref:System.Windows.Data.BindingExpression> :
 
@@ -261,7 +261,7 @@ Aşağıdaki tabloda, varsayılan koleksiyon görünümü olarak veya <xref:Syst
 
 | Kaynak koleksiyon türü                    | Koleksiyon görünüm türü | Notlar |
 | ----------------------------------------- | -------------------- | ----- |
-| <xref:System.Collections.IEnumerable>     | Temelinde bir iç tür<xref:System.Windows.Data.CollectionView> | Öğeler gruplandırılamıyor. |
+| <xref:System.Collections.IEnumerable>     | Temelinde bir iç tür <xref:System.Windows.Data.CollectionView> | Öğeler gruplandırılamıyor. |
 | <xref:System.Collections.IList>           | <xref:System.Windows.Data.ListCollectionView> | En hızlı. |
 | <xref:System.ComponentModel.IBindingList> | <xref:System.Windows.Data.BindingListCollectionView> | |
 

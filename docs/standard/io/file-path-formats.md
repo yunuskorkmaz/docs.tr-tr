@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 5eb9d5127dffd2e80349352ad7a4b57f8848d56b
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165800"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271795"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
@@ -33,19 +33,19 @@ Standart bir DOS yolu üç bileşenden oluşabilir:
 
 |Yol  |Açıklama  |
 | -- | -- |
-| `C:\Documents\Newsletters\Summer2018.pdf` | C sürücüsünün kökünden mutlak bir dosya yolu: |
+| `C:\Documents\Newsletters\Summer2018.pdf` | Sürücü kökünden mutlak bir dosya yolu `C:` . |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Geçerli sürücünün kökünden mutlak bir yol. |
 | `2018\January.xlsx` | Geçerli dizinin bir alt dizinindeki bir dosyanın göreli yolu. |
 | `..\Publications\TravelBrochure.pdf` | Geçerli dizinin eşi olan dizindeki dosyanın göreli yolu. |
-| `C:\Projects\apilibrary\apilibrary.sln` | C sürücüsünün kökünden bir dosyanın mutlak yolu: |
-| `C:Projects\apilibrary\apilibrary.sln` | C: sürücüsünün geçerli dizininden göreli bir yol. |
+| `C:\Projects\apilibrary\apilibrary.sln` | Sürücünün kökünden bir dosyanın mutlak yolu `C:` . |
+| `C:Projects\apilibrary\apilibrary.sln` | Sürücünün geçerli dizininden göreli bir yol `C:` . |
 
 > [!IMPORTANT]
-> Son iki yol arasındaki farkı dikkate alın. Her ikisi de isteğe bağlı birim belirticisini (C: her iki durumda) belirtir, ancak ilki belirtilen birimin köküyle başlar, ikincisi ise değildir. Sonuç olarak, ilki C sürücüsünün kök dizinindeki mutlak bir yoldur, ikincisi ise C: sürücüsündeki geçerli dizinden göreli bir yoldur. İlki Windows dosya yollarını içeren yaygın bir hata kaynağı olduğunda ikinci formun kullanılması.
+> Son iki yol arasındaki farkı dikkate alın. Her ikisi de isteğe bağlı birim tanımlayıcısını ( `C:` her iki durumda) belirtir, ancak ilki belirtilen birimin köküyle başlar, ikincisi ise. Sonuç olarak, ilki sürücünün kök dizinindeki mutlak bir yoldur `C:` , ikincisi ise geçerli sürücü dizininden göreli bir yoldur `C:` . İlki Windows dosya yollarını içeren yaygın bir hata kaynağı olduğunda ikinci formun kullanılması.
 
 Yöntemi çağırarak bir dosya yolunun tam nitelikli olup olmadığını (yani yol geçerli dizinden bağımsız olduğunu ve geçerli dizin değiştiğinde değiştirmediğini) belirleyebilirsiniz <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> . Bu tür bir yolun göreli Dizin kesimleri ( `.` ve) içerebildiğini `..` ve çözümlenen yol her zaman aynı konuma işaret ediyorsa tam nitelikli olduğunu unutmayın.
 
-Aşağıdaki örnek mutlak ve göreli yollar arasındaki farkı gösterir. Dizin \ saat 2018\ ' un var olduğunu ve D:\ için geçerli bir dizin belirlemediğinizi varsayar. komut isteminden örneği çalıştırın.
+Aşağıdaki örnek mutlak ve göreli yollar arasındaki farkı gösterir. Dizinin `D:\FY2018\` var olduğunu ve `D:\` örneği çalıştırmadan önce komut isteminden geçerli bir dizin belirlemediğinizi varsayar.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -56,8 +56,8 @@ Aşağıdaki örnek mutlak ve göreli yollar arasındaki farkı gösterir. Dizin
 
 Ağ kaynaklarına erişmek için kullanılan evrensel adlandırma kuralı (UNC) yolları aşağıdaki biçimdedir:
 
-- Tarafından önceden ortaya çıkacak sunucu veya ana bilgisayar adı \\ \\ . Sunucu adı bir NetBIOS makine adı veya IP/FQDN adresi (IPv4 ve V6 desteklenir) olabilir.
-- Tarafından ana bilgisayar adından ayrılan bir paylaşma adı \\ . Birlikte, sunucu ve paylaşımın adı birimi oluşturun.
+- Tarafından önceden ortaya çıkacak sunucu veya ana bilgisayar adı `\\` . Sunucu adı bir NetBIOS makine adı veya IP/FQDN adresi (IPv4 ve V6 desteklenir) olabilir.
+- Tarafından ana bilgisayar adından ayrılan bir paylaşma adı `\` . Birlikte, sunucu ve paylaşımın adı birimi oluşturun.
 - Bir dizin adı. [Dizin ayırıcı karakteri](<xref:System.IO.Path.DirectorySeparatorChar>) , iç içe geçmiş Dizin hiyerarşisindeki alt dizinleri ayırır.
 - İsteğe bağlı bir dosya adı. [Dizin ayırıcı karakteri](<xref:System.IO.Path.DirectorySeparatorChar>) dosya yolunu ve dosya adını ayırır.
 
@@ -65,8 +65,8 @@ Aşağıda, UNC yollarının bazı örnekleri verilmiştir:
 
 |Yol  |Açıklama  |
 | -- | -- |
-| `\\system07\C$\` | C: sürücüsünün kök dizini `system07` . |
-| `\\Server2\Share\Test\Foo.txt` | \\ \\ Sunucu2 paylaşılan biriminin sınama dizinindeki Foo.txt dosyası \\ .|
+| `\\system07\C$\` | `C:`Üzerindeki sürücünün kök dizini `system07` . |
+| `\\Server2\Share\Test\Foo.txt` | `Foo.txt`Birimin test dizinindeki dosya `\\Server2\Share` .|
 
 UNC yollarının her zaman tam olarak nitelenmiş olması gerekir. Bunlara göreli Dizin kesimleri ( `.` ve) dahil edebilirler `..` , ancak bunların tam nitelikli bir yolun parçası olması gerekir. Yalnızca bir UNC yolunu bir sürücü harfine eşleyerek göreli yolları kullanabilirsiniz.
 
@@ -96,12 +96,12 @@ DOS cihaz yolu aşağıdaki bileşenlerden oluşur:
 
    Cihaz yolu belirticisinden sonra DOS cihaz yolunun ilk segmenti birimi veya sürücüyü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\` .)
 
-   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örnek:
+   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örneğin:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Cihaz UNCs için, sunucu/paylaşma bölümü birimi oluşturur. Örneğin, ' de, `\\?\server1\e:\utilities\\filecomparer\` sunucu/paylaşma bölümü server1\utilities. Bu, göreli Dizin kesimlerinde olduğu gibi bir yöntemi çağırırken önemli bir yöntemdir <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> ; birim geçmiş bir zaman içinde gezinmek mümkün değildir.
+    Cihaz UNCs için, sunucu/paylaşma bölümü birimi oluşturur. Örneğin, ' de, `\\?\server1\e:\utilities\\filecomparer\` sunucu/paylaşma bölümü `server1\utilities` . Bu, göreli Dizin kesimlerinde olduğu gibi bir yöntemi çağırırken önemli bir yöntemdir <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> ; birim geçmiş bir zaman içinde gezinmek mümkün değildir.
 
 DOS cihaz yolları tanımına göre tam olarak nitelenir. Göreli Dizin kesimlerine ( `.` ve `..` ) izin verilmez. Geçerli dizinler, kullanımlarına hiçbir şekilde girmez.
 
@@ -122,7 +122,7 @@ Windows API 'Lerine geçirilen neredeyse tüm yollar normalleştirilir. Normalle
 - Göreli Dizin bileşenlerini değerlendirir ( `.` geçerli dizin ve `..` üst dizin için).
 - Belirli karakterleri kırpar.
 
-Bu normalleştirme örtük bir şekilde gerçekleşir, ancak <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType> [GetFullPathName () işlevine](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)yapılan çağrıyı sarmalayan yöntemini çağırarak açıkça yapabilirsiniz. Ayrıca, P/Invoke kullanarak doğrudan Windows [GetFullPathName () işlevini](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) çağırabilirsiniz.
+Bu normalleştirme örtük bir şekilde gerçekleşir, ancak <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>  [GetFullPathName () işlevine](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)yapılan çağrıyı sarmalayan yöntemini çağırarak açıkça yapabilirsiniz. Ayrıca, P/Invoke kullanarak doğrudan Windows [GetFullPathName () işlevini](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) çağırabilirsiniz.
 
 ### <a name="identify-the-path"></a>Yolu tanımla
 
@@ -146,7 +146,7 @@ Eski cihaz adı ile başlayan bir yol, her zaman yöntemi tarafından eski bir c
 
 ### <a name="apply-the-current-directory"></a>Geçerli dizini Uygula
 
-Bir yol tam nitelikli değilse, Windows geçerli dizini bu dizine uygular. UNCs ve cihaz yollarına geçerli dizin uygulanmaz. , Ayırıcısı C olan tam bir sürücü değildir: \\ .
+Bir yol tam nitelikli değilse, Windows geçerli dizini bu dizine uygular. UNCs ve cihaz yollarına geçerli dizin uygulanmaz. Ayırıcı ile tam bir sürücü yapmaz `C:\` .
 
 Yol tek bir bileşen ayırıcısıyla başlıyorsa, geçerli dizindeki sürücü uygulanır. Örneğin, dosya yolu `\utilities` ve geçerli dizin ise, `C:\temp\` normalleştirme üretir `C:\utilities` .
 

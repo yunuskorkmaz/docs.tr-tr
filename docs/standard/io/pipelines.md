@@ -1,7 +1,7 @@
 ---
-title: G/Ç boru hatları - .NET
-description: .NET'te G/Ç ardışık hatlarını verimli bir şekilde nasıl kullanacağınızı ve kodunuzdaki sorunları nasıl önleyeceğimiz öğrenin.
-ms.date: 10/01/2019
+title: G/ç işlem hatları-.NET
+description: .NET ' te ı/O işlem hatlarını verimli bir şekilde kullanmayı ve kodunuzda sorunlardan kaçınmak hakkında bilgi edinin.
+ms.date: 08/27/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - Pipelines
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 8822e731ae805e83d4072c5bd78dff3fcf9a31a1
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: a24d7f5c22c936cd3fd3fdc51f0f3ace56386574
+ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81462518"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89271990"
 ---
-# <a name="systemiopipelines-in-net"></a>System.IO.Pipelines in .NET
+# <a name="systemiopipelines-in-net"></a>.NET 'teki System. ıO. işlem hatları
 
-<xref:System.IO.Pipelines>.NET'te yüksek performanslı G/Ç yapmayı kolaylaştırmak için tasarlanmış yeni bir kitaplıktır. Tüm .NET uygulamalarında çalışan .NET Standard'ı hedefleyen bir kitaplık.
+<xref:System.IO.Pipelines> , .NET ortamında yüksek performanslı g/ç 'yi daha kolay hale getirmek için tasarlanan yeni bir kitaplıktır. Bu, tüm .NET uygulamalarında çalışacak .NET Standard hedefleme bir kitaplıktır.
 
 <a name="solve"></a>
 
-## <a name="what-problem-does-systemiopipelines-solve"></a>System.IO.Pipelines hangi sorunu çözer?
+## <a name="what-problem-does-systemiopipelines-solve"></a>System. ıO. hatlarını çözme sorunu
 
 <!-- corner case doesn't MT (machine translate)   -->
-Akış verilerini ayrıştıran uygulamalar, birçok özel ve sıradışı kod akışına sahip ortak kodlardan oluşur. Ortak plaka ve özel servis kodu karmaşıktır ve bakımı zordur.
+Akış verilerini ayrıştırmaya yönelik uygulamalar, çok sayıda özel ve olağandışı kod akışına sahip ortak koddan oluşur. Ortak ve özel durum kodu karmaşık ve devam etmek zordur.
 
-`System.IO.Pipelines`için mimar oldu:
+`System.IO.Pipelines` Şu şekilde tasarlanmıştır:
 
-* Akış verisi için yüksek performanslı ayrışma vardır.
+* Akış verilerinin yüksek performans ayrıştırması vardır.
 * Kod karmaşıklığını azaltın.
 
-Aşağıdaki kod, istemciden satır sınırlandırAn `'\n'`(sınırlandırılabilen) iletileri alan bir TCP sunucusu için tipiktir:
+Aşağıdaki kod, bir istemciden satır sınırlı iletileri (ile ayrılmış) alan bir TCP sunucusu için tipik bir noktadır `'\n'` :
 
 ```csharp
 async Task ProcessLinesAsync(NetworkStream stream)
@@ -45,97 +45,97 @@ async Task ProcessLinesAsync(NetworkStream stream)
 }
 ```
 
-Önceki kodun çeşitli sorunları vardır:
+Yukarıdaki kodda birkaç sorun vardır:
 
-* İletinin tamamı (satır sonu) `ReadAsync`tek bir aramada alınmayabilir.
-* Sonucu görmezden `stream.ReadAsync`geliyor. `stream.ReadAsync`ne kadar veri okundugünü döndürür.
-* Tek `ReadAsync` bir aramada birden çok satırın okunduğu durumu işlemez.
-* Her okuma `byte` ile bir dizi ayırır.
+* Tüm ileti (satır sonu), için tek bir çağrıda alınmayabilir `ReadAsync` .
+* Sonucu yok sayılıyor `stream.ReadAsync` . `stream.ReadAsync` ne kadar veri okunduğunu döndürür.
+* Birden çok satırın tek bir çağrıda okunduğu durumu işlemez `ReadAsync` .
+* `byte`Her okunan bir diziyi ayırır.
 
-Önceki sorunları gidermek için aşağıdaki değişiklikler gereklidir:
+Yukarıdaki sorunları onarmak için aşağıdaki değişiklikler gereklidir:
 
-* Yeni bir satır bulunana kadar gelen verileri arabelleğe alan.
+* Yeni bir satır bulunana kadar gelen verileri arabelleğe koyun.
 * Arabellekte döndürülen tüm satırları ayrıştırın.
-* Bu satır 1 KB (1024 bayt) daha büyük olması mümkündür. Kodun, arabellek içindeki tam satırı sığdırmak için sınır dışı layıcı bulunana kadar giriş arabelleği yeniden boyutlandırılması gerekir.
+* Satır 1 KB 'den büyük (1024 bayt) olabilir. Bu kodun, arabelleğin içindeki tamamlanma satırına sığması için sınırlayıcı bulunana kadar giriş arabelleğini yeniden boyutlandırması gerekir.
 
-  * Arabellek yeniden boyutlandırılırsa, girişte daha uzun satırlar göründükçe daha fazla arabellek kopyası yapılır.
-  * Boşa harcanan alanı azaltmak için, satırları okumak için kullanılan arabelleği sıkıştırın.
+  * Arabellek yeniden boyutlandırılırsa, girişte daha uzun çizgiler göründüğü sürece daha fazla arabellek kopyası yapılır.
+  * Harcanan alanı azaltmak için, satırları okumak için kullanılan arabelleği sıkıştırın.
 
-* Belleği tekrar tekrar ayırmamak için arabellek birleştirme yi kullanmayı düşünün.
-* Aşağıdaki kod, bu sorunlardan bazılarını giderer:
+* Belleği sürekli ayırmayı önlemek için arabellek havuzu kullanmayı düşünün.
+* Aşağıdaki kod bu sorunlardan bazılarını ele alınmaktadır:
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs" id="snippet":::
 
-Önceki kod karmaşıktır ve tanımlanan tüm sorunları gidermez. Yüksek performanslı ağ genellikle performansı en üst düzeye çıkarmak için çok karmaşık kod yazmak anlamına gelir. `System.IO.Pipelines`bu tür kod yazmayı kolaylaştırmak için tasarlanmıştır.
+Önceki kod karmaşıktır ve tanımlanan tüm sorunları gidermez. Yüksek performanslı ağ genellikle performansı en üst düzeye çıkarmak için çok karmaşık kod yazmak anlamına gelir. `System.IO.Pipelines` Bu tür bir kodu daha kolay yazmak için tasarlandı.
 
 [!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
 
-## <a name="pipe"></a>Boru
+## <a name="pipe"></a>Kapatıldığı
 
-Sınıf <xref:System.IO.Pipelines.Pipe> bir `PipeWriter/PipeReader` çift oluşturmak için kullanılabilir. Tüm veriler içinde `PipeWriter` mevcuttur: `PipeReader`
+<xref:System.IO.Pipelines.Pipe>Sınıf, bir çift oluşturmak için kullanılabilir `PipeWriter/PipeReader` . İçine yazılan tüm veriler `PipeWriter` ' de kullanılabilir `PipeReader` :
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet2":::
 
 <a name="pbu"></a>
 
-### <a name="pipe-basic-usage"></a>Boru temel kullanımı
+### <a name="pipe-basic-usage"></a>Kanal temel kullanımı
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Pipe.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Pipe.cs" id="snippet":::
 
 İki döngü vardır:
 
-* `FillPipeAsync`dan okur `Socket` ve yazıyor `PipeWriter`.
-* `ReadPipeAsync``PipeReader` ve gelen satırları parses okur.
+* `FillPipeAsync` öğesinden okur `Socket` ve öğesine yazar `PipeWriter` .
+* `ReadPipeAsync` öğesinden okur `PipeReader` ve gelen satırları ayrıştırır.
 
-Ayrılmış açık arabellek yok. Tüm arabellek yönetimi ve `PipeReader` `PipeWriter` uygulamalara devredilir. Arabellek yönetimini adeleyen, kod tüketen lerin yalnızca iş mantığına odaklanmasını kolaylaştırır.
+Ayrılmış açık arabellek yok. Tüm arabellek yönetimi, `PipeReader` ve uygulamalarına Temsilcili `PipeWriter` . Arabellek yönetimi için temsilci seçme, kodun yalnızca iş mantığına odaklanılmasını kolaylaştırır.
 
 İlk döngüde:
 
-* <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType>altta yatan yazardan bellek almak için çağrılır.
-* <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType>arabelleğe `PipeWriter` ne kadar veri yazıldığını söylemek için çağrılır.
-* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>verileri kullanılabilir hale getirmek için `PipeReader`denir.
+* <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType> , temel alınan yazıcıya bellek almak için çağrılır.
+* <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType> , `PipeWriter` arabelleğe ne kadar veri yazıldığını bildirmek için çağırılır.
+* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType> , verileri için kullanılabilir hale getirmek üzere çağırılır `PipeReader` .
 
-İkinci döngüde, `PipeReader` `PipeWriter`'' tarafından yazılan arabellekleri tüketir. Arabellekler yuvadan geliyor. Çağrı: `PipeReader.ReadAsync`
+İkinci döngüde, `PipeReader` tarafından yazılan arabellekleri kullanır `PipeWriter` . Arabellekler yuvadan gelir. Çağrısı `PipeReader.ReadAsync` :
 
-* İki <xref:System.IO.Pipelines.ReadResult> önemli bilgi parçasını içeren bir verir:
+* <xref:System.IO.Pipelines.ReadResult>İki önemli bilgi parçasını içeren bir döndürür:
 
-  * Şeklinde okunan veriler `ReadOnlySequence<byte>`.
-  * Verilerin sonuna `IsCompleted` (EOF) ulaşılıp ulaşıldığını gösteren bir boolean.
+  * Biçiminde okunan veriler `ReadOnlySequence<byte>` .
+  * `IsCompleted`Verilerin sonuna (EOF) ulaşıldığını gösteren bir Boole değeri.
 
-Satır sonu (EOL) delimiter bulma ve çizgi ayrıştırma sonra:
+Satır sonu (EOL) sınırlayıcısı bulduktan ve satırı ayrıştırdıktan sonra:
 
-* Mantık, arabelleği zaten işlenmiş olanı atlamak için işler.
-* `PipeReader.AdvanceTo``PipeReader` ne kadar veri tüketildiğini ve incelendiğini söylemek için çağrılır.
+* Mantık, zaten işlenmiş olan öğeleri atlamak için arabelleği işler.
+* `PipeReader.AdvanceTo` ne `PipeReader` kadar veri tüketiğini ve incelendiğini söylemek için çağırılır.
 
-Okuyucu ve yazar döngüleri `Complete`arayarak sona erer. `Complete`altta yatan Boru'nun ayırdEttiği belleği serbest bırakmasına olanak tanır.
+Okuyucu ve yazıcı döngüleri, çağırarak biter `Complete` . `Complete` temeldeki kanalın ayrılan belleği serbest bırakmasına olanak tanır.
 
-### <a name="backpressure-and-flow-control"></a>Geri basınç ve akış kontrolü
+### <a name="backpressure-and-flow-control"></a>Arka basınç ve akış denetimi
 
-İdeal olarak, okuma ve ayrıştma birlikte çalışır:
+İdeal olarak, birlikte iş okuma ve ayrıştırma:
 
-* Yazma iş parçacığı ağdan gelen verileri tüketir ve arabelleklere koyar.
-* Ayrıştırma iş parçacığı, uygun veri yapılarının oluşturulmasından sorumludur.
+* Yazma iş parçacığı ağdan verileri tüketir ve arabelleğe koyar.
+* Ayrıştırma iş parçacığı, uygun veri yapılarını oluşturmaktan sorumludur.
 
-Genellikle, ayrıştma, ağdaki veri bloklarını kopyalamaktan daha fazla zaman alır:
+Genellikle, ayrıştırma yalnızca ağdan veri bloklarını kopyalamaya kıyasla daha fazla zaman alır:
 
-* Okuma iş parçacığı ayrışma iş parçacığının önüne geçer.
-* Okuma iş parçacığı, ayrıştma iş parçacığı için verileri depolamak için daha fazla bellek ayırmak veya yavaşlatmak zorundadır.
+* Okuma iş parçacığı ayrıştırma iş parçacığının önüne alınır.
+* Okuma iş parçacığı, ayrıştırma iş parçacığı için verileri depolamak üzere yavaşlıyor veya daha fazla bellek ayırmıştır.
 
-En iyi performans için, sık duraklar ve daha fazla bellek ayırma arasında bir denge vardır.
+En iyi performans için, sık duraklamalar ve daha fazla bellek ayırma arasında bir denge vardır.
 
-Önceki sorunu çözmek için, `Pipe` veri akışını denetlemek için iki ayarı vardır:
+Önceki sorunu çözmek için, `Pipe` veri akışını denetlemek üzere iki ayarı vardır:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> Duraklatma çağrıları ndan önce ne kadar veri arabelleğe alınması gerektiğini belirler.
-* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: Okuyucunun devam etmek için `PipeWriter.FlushAsync` yapılan aramadan önce ne kadar veri gözlemlemeyi gerektiğini belirler.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: Duraklatma çağrılarına önce ne kadar veri ara belleğe alınacağını belirler <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> .
+* <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: Okuyucunun sürdürülmeye yönelik çağrılardan önce ne kadar veri gözlemleyecek olduğunu belirler `PipeWriter.FlushAsync` .
 
-![ResumeWriterThreshold ve PauseWriterThreshold ile Diyagram](./media/pipelines/resume-pause.png)
+![ResumeWriterThreshold ve PauseWriterThreshold ile diyagram](media/pipelines/resume-pause.png)
 
 <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType>:
 
-* `Pipe` Haçlar `PauseWriterThreshold`veri miktarı tamamlanmamış `ValueTask<FlushResult>` bir verir.
-* 'den `ValueTask<FlushResult>` daha `ResumeWriterThreshold`düşük olduğunda tamamlar.
+* `ValueTask<FlushResult>`Kesiştiği içindeki veri miktarı için bir tamamlanmamış döndürür `Pipe` `PauseWriterThreshold` .
+* Daha `ValueTask<FlushResult>` düşük hale geldiğinde tamamlanır `ResumeWriterThreshold` .
 
-Bir değer kullanıldığında oluşabilir hızlı bisiklet, önlemek için iki değer kullanılır.
+Tek bir değer kullanılırsa oluşabilecek hızlı döngüyü engellemek için iki değer kullanılır.
 
 ### <a name="examples"></a>Örnekler
 
@@ -148,203 +148,229 @@ var pipe = new Pipe(options);
 
 ### <a name="pipescheduler"></a>PipeScheduler
 
-Genellikle kullanırken `async` `await`ve , asynchronous kodu bir <xref:System.Threading.Tasks.TaskScheduler> veya geçerli <xref:System.Threading.SynchronizationContext>üzerinde devam eder.
+Genellikle ve kullanılırken `async` `await` , zaman uyumsuz kod, ya da geçerli bir üzerinde devam eder <xref:System.Threading.Tasks.TaskScheduler> <xref:System.Threading.SynchronizationContext> .
 
-G/Ç yaparken, G/Ç'nin nerede gerçekleştirildiği üzerinde ince taneli denetime sahip olmak önemlidir. Bu denetim, CPU önbelleklerinden etkin bir şekilde yararlanmanızı sağlar. Verimli önbelleğe alma, web sunucuları gibi yüksek performanslı uygulamalar için çok önemlidir. <xref:System.IO.Pipelines.PipeScheduler>eşzamanlı geri aramaların nerede çalıştığı üzerinde denetim sağlar. Varsayılan olarak:
+G/ç yaparken, g/ç 'nin gerçekleştirildiği noktada ayrıntılı denetime sahip olmak önemlidir. Bu denetim, CPU önbelleklerinin etkin bir şekilde yararlanmasını sağlar. Verimli önbelleğe alma, Web sunucuları gibi yüksek performanslı uygulamalar için kritik öneme sahiptir. <xref:System.IO.Pipelines.PipeScheduler> zaman uyumsuz geri çağırmaların çalıştığı konum üzerinde denetim sağlar. Varsayılan olarak:
 
-* Akım <xref:System.Threading.SynchronizationContext> kullanılır.
-* Yoksa, `SynchronizationContext`geri aramaları çalıştırmak için iş parçacığı havuzunu kullanır.
+* Geçerli, <xref:System.Threading.SynchronizationContext> kullanılır.
+* Hayır ise `SynchronizationContext` , geri çağırmaları çalıştırmak için iş parçacığı havuzunu kullanır.
 
-[!code-csharp[](~/samples/snippets/csharp/pipelines/Program.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/Program.cs" id="snippet":::
 
-[PipeScheduler.ThreadPool](xref:System.IO.Pipelines.PipeScheduler.ThreadPool) iş <xref:System.IO.Pipelines.PipeScheduler> parçacığı havuzuna geri aramaları sıralayan bir uygulamadır. `PipeScheduler.ThreadPool`varsayılan ve genellikle en iyi seçimdir. [PipeScheduler.Inline](xref:System.IO.Pipelines.PipeScheduler.Inline) kilitlenmeler gibi istenmeyen sonuçlara neden olabilir.
+[Pipescheduler. ThreadPool](xref:System.IO.Pipelines.PipeScheduler.ThreadPool) , <xref:System.IO.Pipelines.PipeScheduler> iş parçacığı havuzuna geri çağırmaları sıraya alan uygulamasıdır. `PipeScheduler.ThreadPool` Varsayılan ve genellikle en iyi seçenektir. [Pipescheduler. Inline](xref:System.IO.Pipelines.PipeScheduler.Inline) , kilitlenme gibi istenmeyen sonuçlara neden olabilir.
 
-### <a name="pipe-reset"></a>Boru sıfırlama
+### <a name="pipe-reset"></a>Kanal sıfırlama
 
-Nesneyi `Pipe` yeniden kullanmak genellikle etkilidir. Boruyu sıfırlamak için, hem `PipeReader` `PipeWriter` boru hem de tam olduğunda arayın. <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A>
+Nesneyi yeniden kullanmak sıklıkla etkilidir `Pipe` . Kanalı sıfırlamak için <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> hem hem de `PipeReader` tamamlandığında çağırın `PipeWriter` .
 
-## <a name="pipereader"></a>PipeReader
+## <a name="pipereader"></a>Piypereader
 
-<xref:System.IO.Pipelines.PipeReader>arayan adına belleği yönetir. **Her** <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> zaman <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType>aradıktan sonra arayın. Bu, `PipeReader` arayanın bellekle ne zaman işlenirse izlenebileceğini bilmesini sağlar. İade `ReadOnlySequence<byte>` edilen `PipeReader.ReadAsync` den yalnızca arama `PipeReader.AdvanceTo`gelene kadar geçerlidir. Aradıktan `PipeReader.AdvanceTo`sonra kullanmak `ReadOnlySequence<byte>` yasak.
+<xref:System.IO.Pipelines.PipeReader> arayan adına belleği yönetir. Çağrıldıktan sonra **her zaman** çağırın <xref:System.IO.Pipelines.PipeReader.AdvanceTo%2A?displayProperty=nameWithType> <xref:System.IO.Pipelines.PipeReader.ReadAsync%2A?displayProperty=nameWithType> . Bu, `PipeReader` çağıranın bellek ile ne zaman yapıldığını, böylece izlenebilmesini sağlar. `ReadOnlySequence<byte>`Döndürülen öğesinden `PipeReader.ReadAsync` yalnızca öğesine çağrı yapılıncaya kadar geçerlidir `PipeReader.AdvanceTo` . Çağrıldıktan sonra kullanım geçersizdir `ReadOnlySequence<byte>` `PipeReader.AdvanceTo` .
 
-`PipeReader.AdvanceTo`iki <xref:System.SequencePosition> bağımsız değişken alır:
+`PipeReader.AdvanceTo` iki <xref:System.SequencePosition> bağımsız değişken alır:
 
-* İlk bağımsız değişken ne kadar bellek tüketilmeyi belirler.
-* İkinci bağımsız değişken, arabelleğe ne kadarının gözlendiğini belirler.
+* İlk bağımsız değişken, ne kadar bellek tüketildiğini belirler.
+* İkinci bağımsız değişken, arabelleğin ne kadarının gözlemlendiğini belirler.
 
-Verileri tüketilen olarak işaretleme, borunun belleği alttaki arabellek havuzuna döndürebileceği anlamına gelir. Verileri gözlenen olarak işaretleme, `PipeReader.ReadAsync` bir sonraki çağrının ne işe yaradığı yla ilgili denetimleri yapar. Her şeyi gözlenen şekilde işaretlemek, bir sonraki çağrının boruya `PipeReader.ReadAsync` daha fazla veri yazılana kadar geri dönmeyeceği anlamına gelir. Başka bir değer, gözlenen `PipeReader.ReadAsync` *ve* gözlenmeyen verilerle hemen dönmek için bir sonraki çağrıyı yapar, ancak zaten tüketilen verileri yapmaz.
+Verileri tüketilen olarak işaretlemek, kanalın belleği temel alınan arabellek havuzuna döndürebileceği anlamına gelir. Verileri gözlemlenen olarak işaretlemek, sonraki çağrının ne olduğunu denetler `PipeReader.ReadAsync` . Her şeyi gözlemlenen olarak işaretlemek, bir sonraki çağrının `PipeReader.ReadAsync` kanala yazılmış daha fazla veri olana kadar dönemeyeceği anlamına gelir. Diğer herhangi bir değer, sonraki çağrının `PipeReader.ReadAsync` gözlemlenen *ve* gözlemlenen verilerle hemen döndürülmesini sağlar, ancak daha önce tüketilen verileri değil.
 
-### <a name="read-streaming-data-scenarios"></a>Akış veri senaryolarını okuma
+### <a name="read-streaming-data-scenarios"></a>Akış verilerini okuma senaryoları
 
-Akış verilerini okumaya çalışırken ortaya çıkan birkaç tipik desen vardır:
+Akış verilerini okumaya çalışırken ortaya çıktı olan birkaç tipik desen vardır:
 
-* Veri akışı göz önüne alındığında, tek bir iletiyi ayrıştın.
-* Bir veri akışı göz önüne alındığında, kullanılabilir tüm iletileri ayrıştın.
+* Veri akışı verildiğinde, tek bir iletiyi ayrıştırır.
+* Veri akışı verildiğinde, tüm kullanılabilir iletileri ayrıştırır.
 
-Aşağıdaki örnekler, `TryParseMessage` bir `ReadOnlySequence<byte>`. `TryParseMessage`tek bir iletiyi ayrıştırır ve arabellekten ayrıştırılan iletiyi kırpmak için giriş arabelleği güncelleştirin. `TryParseMessage`.NET'in bir parçası değildir, aşağıdaki bölümlerde kullanılan kullanıcı yazılı bir yöntemdir.
+Aşağıdaki örneklerde, ' `TryParseMessage` dan ileti ayrıştırma yöntemi kullanılmaktadır `ReadOnlySequence<byte>` . `TryParseMessage` tek bir iletiyi ayrıştırır ve ayrıştırılmış iletiyi arabellekten kırpmak için giriş arabelleğini güncelleştirin. `TryParseMessage` , .NET 'in bir parçası değildir, aşağıdaki bölümlerde kullanılan bir kullanıcı yazılmış yöntemidir.
 
 ```csharp
 bool TryParseMessage(ref ReadOnlySequence<byte> buffer, out Message message);
 ```
 
-### <a name="read-a-single-message"></a>Tek bir iletiyi okuma
+### <a name="read-a-single-message"></a>Tek bir iletiyi okuyun
 
-Aşağıdaki kod a'dan `PipeReader` tek bir ileti okur ve arayana döndürür.
+Aşağıdaki kod, bir öğesinden tek bir ileti okur `PipeReader` ve bunu çağırana döndürür.
 
-[!code-csharp[ReadSingleMsg](~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/ReadSingleMsg.cs" id="snippet":::
 
 Yukarıdaki kod:
 
-* Tek bir iletiyi ayrışdırır.
-* Kırpılan giriş arabelleği başlangıcına işaret etmek için tüketilen `SequencePosition` ve incelenen `SequencePosition` güncelleştirmeler.
+* Tek bir ileti ayrıştırır.
+* Tüketilen `SequencePosition` ve incelenen, `SequencePosition` kırpılan giriş arabelleğinin başlangıcını işaret eden şekilde güncelleştirir.
 
-Ayrıştırılmış iletiyi giriş arabelleğinden `SequencePosition` `TryParseMessage` kaldırdığından, iki bağımsız değişken güncelleştirilir. Genellikle, arabellekten tek bir ileti ayrıştırırken, incelenen konum aşağıdakilerden biri olmalıdır:
+İki `SequencePosition` bağımsız değişken güncelleştirilir çünkü bu, `TryParseMessage` ayrıştırılmış iletiyi giriş arabelleğinden kaldırır. Genellikle, arabellekteki tek bir ileti ayrıştırılırken, incelenen konum aşağıdakilerden biri olmalıdır:
 
 * İletinin sonu.
-* İleti bulunamadıysa alınan arabelleğe son.
+* İleti bulunmazsa alınan arabelleğin sonu.
 
-Tek ileti örneği en fazla hata potansiyeline sahiptir. Yanlış değerlerin *incelenmesi,* bellek dışı bir özel durum veya sonsuz bir döngüyle sonuçlanabilir. Daha fazla bilgi için bu makaledeki [PipeReader ortak sorunlar](#gotchas) bölümüne bakın.
+Tek ileti durumunun hata için en olası olasılığı vardır. Yanlış değerleri *incelenmeye* geçirmek, yetersiz bellek özel durumu veya sonsuz bir döngüye neden olabilir. Daha fazla bilgi için bu makaledeki [Pıpereader ortak sorunlar](#gotchas) bölümüne bakın.
 
-### <a name="reading-multiple-messages"></a>Birden çok ileti okuma
+### <a name="reading-multiple-messages"></a>Birden çok ileti okunuyor
 
-Aşağıdaki kod a'dan `PipeReader` gelen tüm `ProcessMessageAsync` iletileri okur ve her birinde çağrılar.
+Aşağıdaki kod, `PipeReader` her bir üzerinde ve çağrılarındaki tüm iletileri okur `ProcessMessageAsync` .
 
-[!code-csharp[MyConnection1](~/samples/snippets/csharp/pipelines/MyConnection1.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection1.cs" id="snippet":::
 
 ### <a name="cancellation"></a>İptal
 
 `PipeReader.ReadAsync`:
 
-* Bir <xref:System.Threading.CancellationToken>.
-* Bekleyen bir <xref:System.OperationCanceledException> okuma `CancellationToken` varken iptal edilirse atar.
-* Bir özel durum yükseltmeyi önleyen <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>geçerli okuma işlemini iptal etmenin bir yolunu destekler. `PipeReader.CancelPendingRead` Arama, geçerli veya bir `PipeReader.ReadAsync` sonraki <xref:System.IO.Pipelines.ReadResult> çağrının bir 'e `IsCanceled` ayarlanmış bir 'e döndürülmeye neden `true`olur. Bu, varolan okuma döngüsünün yıkıcı olmayan ve istisnai olmayan bir şekilde durdurulması için yararlı olabilir.
+* , Geçişini destekler <xref:System.Threading.CancellationToken> .
+* Bir okuma beklemede olduğunda, bir iptal edilirse bir oluşturur <xref:System.OperationCanceledException> `CancellationToken` .
+* <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>, Bir özel durumun çıkarılmasını engelleyen geçerli okuma işlemini iptal etmek için bir yol destekler. Çağırma `PipeReader.CancelPendingRead` , geçerli veya sonraki çağrısının ' `PipeReader.ReadAsync` a ayarlanmış olarak dönüşmesine neden olur <xref:System.IO.Pipelines.ReadResult> `IsCanceled` `true` . Bu, var olan okuma döngüsünü bozucu olmayan ve olağanüstü olmayan bir şekilde sonlandırmanız için yararlı olabilir.
 
-[!code-csharp[MyConnection](~/samples/snippets/csharp/pipelines/MyConnection.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyConnection.cs" id="snippet":::
 
 <a name="gotchas"></a>
 
-### <a name="pipereader-common-problems"></a>PipeReader yaygın sorunlar
+### <a name="pipereader-common-problems"></a>Piypereader yaygın sorunlar
 
-* Yanlış değerlerin okunması `consumed` `examined` veya okunmasıyla sonuçlanabilir.
-* İncelendiği gibi geçmek `buffer.End` şu neden olabilir:
+* Yanlış değerleri veya ' a geçirmek, `consumed` `examined` zaten okuma verilerinin okunmasına neden olabilir.
+* `buffer.End`İncelenen şekilde geçirme şu şekilde olabilir:
 
-  * Durmuş veriler
-  * Veriler tüketilmezse, büyük olasılıkla bellek dışı (OOM) özel durumu. Örneğin, `PipeReader.AdvanceTo(position, buffer.End)` arabellekten bir seferde tek bir ileti işlenirken.
+  * Durdurulmuş veriler
+  * Veriler tüketilmemişse, büyük olasılıkla yetersiz bellek (OOM) özel durumu. Örneğin, `PipeReader.AdvanceTo(position, buffer.End)` arabellekteki bir anda tek bir ileti işlenirken.
 
-* Yanlış değerlerin sonsuz `consumed` `examined` bir döngüye geçirilmesi veya bunun sonucu olabilir. Örneğin, `PipeReader.AdvanceTo(buffer.Start)` değişmediyse, `buffer.Start` bir sonraki aramanın `PipeReader.ReadAsync` yeni veriler gelmeden hemen önce geri dönmesine neden olur.
-* Yanlış değerlerin geçirilmesi `consumed` `examined` veya sonsuz arabelleğe alma (nihai OOM) neden olabilir.
-* Aramadan `ReadOnlySequence<byte>` `PipeReader.AdvanceTo` sonra kullanmak bellek bozulmasına neden olabilir (ücretsiz sonra kullanın).
-* Aramanın `PipeReader.Complete/CompleteAsync` başarısız olması bellek sızıntısına neden olabilir.
-* Arabelleği işlemeden önce okuma mantığını denetlemek <xref:System.IO.Pipelines.ReadResult.IsCompleted?displayProperty=nameWithType> ve çıkmak veri kaybına neden olabilir. Döngü çıkış durumu temel `ReadResult.Buffer.IsEmpty` alınmalıdır ve `ReadResult.IsCompleted`. Bunu yanlış yapmak sonsuz bir döngüye neden olabilir.
+* Yanlış değerleri ' a geçirme `consumed` veya `examined` sonsuz bir döngüye neden olabilir. Örneğin, `PipeReader.AdvanceTo(buffer.Start)` `buffer.Start` henüz değiştirilmediyse, `PipeReader.ReadAsync` Yeni veri ulaşmadan hemen önce geri dönmesi için bir sonraki çağrıya neden olur.
+* Yanlış değerleri ' a geçirme `consumed` veya `examined` sonsuz arabelleğe alma (NIHAI OOM) ile sonuçlanabilir.
+* Çağrıldıktan `ReadOnlySequence<byte>` sonra kullanılması, `PipeReader.AdvanceTo` bellek bozulmasına yol açabilir (ücretsiz olarak kullanabilirsiniz).
+* Çağrı başarısız `PipeReader.Complete/CompleteAsync` olabilir ve bellek sızıntısına yol açabilir.
+* <xref:System.IO.Pipelines.ReadResult.IsCompleted?displayProperty=nameWithType>Veri kaybına neden olan arabellek sonuçlarını işlemeden önce okuma mantığı denetleniyor ve çıkılıyor. Döngü çıkış koşulunun ve tabanlı olması gerekir `ReadResult.Buffer.IsEmpty` `ReadResult.IsCompleted` . Bunu yanlış yapmak sonsuz bir döngüye neden olabilir.
 
 #### <a name="problematic-code"></a>Sorunlu kod
 
 ❌**Veri kaybı**
 
-Son `ReadResult` veri kesimi ayarlandığında' `IsCompleted` `true` Okuma döngüsünden çıkmadan önce bu verilerin okunmaması veri kaybına neden olur.
+, `ReadResult` Olarak ayarlandığında verilerin son segmentini döndürebilir `IsCompleted` `true` . Okuma döngüsünden çıkmadan önce bu verilerin okunmamasından dolayı veri kaybı olur.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#1](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
 ❌**Sonsuz döngü**
 
-Aşağıdaki mantık sonsuz bir döngü ile `Result.IsCompleted` `true` sonuçlanabilir, ancak arabellekte hiçbir zaman tam bir ileti yoktur.
+Aşağıdaki mantık,, `Result.IsCompleted` `true` ancak arabellekte hiç tamamlanmamış bir ileti varsa sonsuz döngüye neden olabilir.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#2](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet2":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-Burada aynı sorun ile kod başka bir parçası. Kontrol etmeden önce boş olmayan bir arabelleği kontrol `ReadResult.IsCompleted`ediyor. Çünkü bir `else if`, tampon tam bir mesaj yoksa sonsuza kadar döngü olacaktır.
+Aynı sorunu içeren başka bir kod parçası aşağıda verilmiştir. Denetlemeden önce boş olmayan bir arabellek denetleniyor `ReadResult.IsCompleted` . Bir içinde olduğu için `else if` , arabellekte hiç bir ileti yoksa sonsuza kadar döngüye alınır.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#3](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet3)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet3":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-❌**Beklenmeyen Hang**
+❌**Beklenmeyen askı**
 
-Pozisyonda koşulsuz `PipeReader.AdvanceTo` `buffer.End` arama, tek bir iletiyi ayrıştururken askıda kalmasına neden olabilir. `examined` Bir sonraki `PipeReader.AdvanceTo` arama şu zamana kadar geri dönmeyecek:
+Konumda koşullu olarak `PipeReader.AdvanceTo` çağırmanın `buffer.End` `examined` tek bir ileti ayrıştırılırken askıda kalmasına neden olabilir. Sonraki çağrısı şu `PipeReader.AdvanceTo` kadar geri dönemeyecek:
 
-* Boruya daha fazla veri yazılmış.
-* Ve yeni veriler daha önce incelenmedi.
+* Kanala yazılan daha fazla veri var.
+* Ve yeni veriler daha önce incelendi.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#4](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet4)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet4":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-❌**Bellek Dışı (OOM)**
+❌**Yetersiz bellek (OOM)**
 
-Aşağıdaki koşullarla, aşağıdaki kod bir <xref:System.OutOfMemoryException> oluştukadar arabelleğe alma tutar:
+Aşağıdaki koşullara göre aşağıdaki kod arabelleğe alma işlemi gerçekleşene kadar devam eder <xref:System.OutOfMemoryException> :
 
-* Maksimum ileti boyutu yok.
-* Döndürülen `PipeReader` veriler tam bir ileti yapmaz. Örneğin, diğer taraf büyük bir ileti (örneğin, 4 GB'lık ileti) yazdığından tam bir ileti yapmaz.
+* En büyük ileti boyutu yok.
+* Öğesinden döndürülen veriler, `PipeReader` bir ileti yapmaz. Örneğin, diğer taraf büyük bir ileti (örneğin, 4 GB bir ileti) yazıldığı için, bu tam bir ileti yapmaz.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#5](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet5)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet5":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
-❌**Bellek Bozulması**
+❌**Bellek bozulması**
 
-Arabelleği okuyan yardımcıları yazarken, döndürülen herhangi bir yük `Advance`aramadan önce kopyalanmalıdır. Aşağıdaki örnek, atanbellin `Pipe` attığı belleği döndürür ve bir sonraki işlem için yeniden kullanabilir (okuma/yazma).
+Arabelleği okuyan yardımcıları yazarken, çağrılmadan önce döndürülen tüm yükün kopyalanması gerekir `Advance` . Aşağıdaki örnek, atılan belleği döndürür ve bir `Pipe` sonraki işlem (okuma/yazma) için onu tekrar kullanabilir.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
-[!code-csharp[DoNotUse#Message](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippetMessage)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippetMessage":::
 
-[!code-csharp[DoNotUse#6](~/samples/snippets/csharp/pipelines/DoNotUse.cs?name=snippet6)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/DoNotUse.cs" id="snippet6":::
 
 [!INCLUDE [pipelines-do-not-use-2](../../../includes/pipelines-do-not-use-2.md)]
 
 ## <a name="pipewriter"></a>PipeWriter
 
-Arayan <xref:System.IO.Pipelines.PipeWriter> adına yazmak için arabellekleri yönetir. `PipeWriter`[`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601)uygular. `IBufferWriter<byte>`ek arabellek kopyaları olmadan yazma yapmak için arabelleklere erişim elde etmek mümkün kılar.
+<xref:System.IO.Pipelines.PipeWriter>Arayan adına yazmak için arabellekleri yönetir. `PipeWriter` uygular [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601) . `IBufferWriter<byte>` ek arabellek kopyaları olmadan yazma işlemleri gerçekleştirmek için arabelleklere erişim sağlamak mümkün hale gelir.
 
-[!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet":::
 
 Önceki kod:
 
-* `PipeWriter` Kullanarak <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>en az 5 bayt lık bir arabellek ister.
-* Döndürülen `Memory<byte>`ASCII dizesi `"Hello"` için bayt yazar.
-* Arabelleğe kaç bayt yazıldığını gösteren çağrılar. <xref:System.IO.Pipelines.PipeWriter.Advance%2A>
-* Baytları `PipeWriter`alttaki aygıta gönderen floşlar.
+* Kullanarak en az 5 baytlık bir arabellek ister `PipeWriter` <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> .
+* ASCII dizesinin bayt sayısını `"Hello"` döndürülen öğesine yazar `Memory<byte>` .
+* <xref:System.IO.Pipelines.PipeWriter.Advance%2A>Arabelleğe kaç bayt yazıldığını belirten çağrılar.
+* , `PipeWriter` Baytları temeldeki cihaza gönderen öğesini temizler.
 
-Önceki yazma yöntemi, `PipeWriter`.. Alternatif olarak, <xref:System.IO.Pipelines.PipeWriter.WriteAsync%2A?displayProperty=nameWithType>:
+Önceki yazma yöntemi, tarafından sağlanmış arabellekleri kullanır `PipeWriter` . Alternatif olarak, <xref:System.IO.Pipelines.PipeWriter.WriteAsync%2A?displayProperty=nameWithType> :
 
-* Varolan arabelleği `PipeWriter`' ne kopyalar.
-* Aramalar `GetSpan` `Advance` , uygun <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>olarak ve aramalar .
+* Varolan arabelleği öğesine kopyalar `PipeWriter` .
+* `GetSpan` `Advance` Uygun ve çağrılar için çağrılar <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> .
 
-[!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
+:::code language="csharp" source="~/samples/snippets/csharp/pipelines/MyPipeWriter.cs" id="snippet2":::
 
 ### <a name="cancellation"></a>İptal
 
-<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>bir <xref:System.Threading.CancellationToken>. Bekleyen `CancellationToken` bir floş varken belirteç iptal edilirse bir `OperationCanceledException` sonuç geçirme. `PipeWriter.FlushAsync`bir özel durum <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> yükseltmeden geçerli floş işlemini iptal etmenin bir yolunu destekler. Arama, `PipeWriter.CancelPendingFlush` geçerli veya bir `PipeWriter.FlushAsync` `PipeWriter.WriteAsync` sonraki çağrıya neden olur veya bir <xref:System.IO.Pipelines.FlushResult> 'e `IsCanceled` ayarlanmış bir ile `true`döndürün. Bu, zarar vermeyen ve istisnai olmayan bir şekilde verimli floş durdurmak için yararlı olabilir.
+<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> , geçişini destekler <xref:System.Threading.CancellationToken> . Bekleyen bir `CancellationToken` `OperationCanceledException` Temizleme işlemi varken belirteç iptal edilirse bir sonuçları bir ile geçirme. `PipeWriter.FlushAsync` , özel durum oluşturmadan geçerli temizleme işlemini iptal etmenin bir yolunu destekler <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> . Çağırma `PipeWriter.CancelPendingFlush` , geçerli veya sonraki çağrıya, `PipeWriter.FlushAsync` veya olarak `PipeWriter.WriteAsync` ayarlanmış olarak dönüşmesine neden olur <xref:System.IO.Pipelines.FlushResult> `IsCanceled` `true` . Bu, bozucu olmayan ve olağanüstü olmayan bir şekilde boşaltmayı Temizleme için yararlı olabilir.
 
 <a name="pwcp"></a>
 
-### <a name="pipewriter-common-problems"></a>PipeWriter sık karşılaşılan sorunlar
+### <a name="pipewriter-common-problems"></a>PipeWriter ortak sorunları
 
-* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>ve <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> en az istenen bellek miktarı ile bir arabellek döndürün. Tam arabellek boyutları **varsayma.**
-* Ardışık aramaların aynı arabelleği veya aynı boyuttaara bellek döndüreceğinin garantisi yoktur.
-* Daha fazla veri yazmaya devam <xref:System.IO.Pipelines.PipeWriter.Advance%2A> etmek için çağrıda bulunduktan sonra yeni bir arabellek istenmelidir. Daha önce edinilen arabellek için yazılamaz.
-* Arama `GetMemory` `GetSpan` ya da eksik bir arama `FlushAsync` güvenli değil.
-* Arama `Complete` `CompleteAsync` veya sifonlanmamış veri varken bellek bozulmasına neden olabilir.
+* <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> ve <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> en az istenen bellek miktarına sahip bir arabellek döndürür. Tam arabellek boyutlarını kabul **etmeyin** .
+* Art arda yapılan çağrıların aynı arabelleğe veya aynı boyutlu arabelleğe Döneceğinin garantisi yoktur.
+* <xref:System.IO.Pipelines.PipeWriter.Advance%2A>Daha fazla veri yazmaya devam etmek için çağrıldıktan sonra yeni bir arabellek istenmesi gerekir. Daha önce edinilen arabelleğin üzerine yazılamaz.
+* `GetMemory` `GetSpan` Eksik bir çağrı olduğu için veya çağrısı sırasında `FlushAsync` güvenli değildir.
+* `Complete` `CompleteAsync` Verilerin temizlenme sırasında veya boşaltılmasından sonra bellek bozulmasına yol açabilir.
 
 ## <a name="iduplexpipe"></a>IDuplexPipe
 
-Hem <xref:System.IO.Pipelines.IDuplexPipe> okuma yı hem de yazmayı destekleyen türler için bir sözleşmedir. Örneğin, bir ağ bağlantısı bir `IDuplexPipe`.
+, <xref:System.IO.Pipelines.IDuplexPipe> Hem okumayı hem de yazmayı destekleyen türler için bir sözleşmedir. Örneğin, bir ağ bağlantısı bir tarafından temsil edilir `IDuplexPipe` .
 
- Bir `Pipe` ve `PipeReader` a `PipeWriter`içeren `IDuplexPipe` aksine, tam çift yönlü bağlantının tek bir tarafını temsil eder. Yani yazılanlar `PipeWriter` `PipeReader`okunmayacak.
+ `Pipe`Ve içeren öğelerinden farklı olarak `PipeReader` `PipeWriter` , `IDuplexPipe` tam çift yönlü bağlantının tek tarafını temsil eder. Bu, üzerine yazılan ve ' `PipeWriter` den okunmayacağı anlamına gelir `PipeReader` .
 
 ## <a name="streams"></a>Akışlar
 
-Akış verilerini okurken veya yazarken, genellikle bir de-serializer kullanarak verileri okur ve bir serializer kullanarak veri yazarsınız. Bu okuma ve yazma akışı API'lerinin çoğunun bir `Stream` parametresi var. Bu varolan API'lerle tümleştirmeyi `PipeReader` `PipeWriter` kolaylaştırmak <xref:System.IO.Pipelines.PipeReader.AsStream%2A>ve bir .  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A>etrafında `Stream` `PipeReader` bir uygulama `PipeWriter`döndürür.
+Akış verilerini okurken veya yazarken genellikle seri hale getirici kullanarak verileri okur ve serileştirici kullanarak verileri yazın. Bu okuma ve yazma akışı API 'Lerinin çoğu bir `Stream` parametreye sahiptir. Bu var olan API 'lerle tümleştirmeyi kolaylaştırmak `PipeReader` ve `PipeWriter` bir yöntemi ortaya çıkarmak için <xref:System.IO.Pipelines.PipeReader.AsStream%2A> . <xref:System.IO.Pipelines.PipeWriter.AsStream%2A>`Stream`veya etrafında bir uygulama döndürür `PipeReader` `PipeWriter` .
+
+### <a name="stream-example"></a>Akış örneği
+
+`PipeReader` ve `PipeWriter` örnekleri `Create` bir nesne verilen statik yöntemler <xref:System.IO.Stream> ve isteğe bağlı olarak ilgili oluşturma seçenekleri kullanılarak oluşturulabilir.
+
+<xref:System.IO.Pipelines.StreamPipeReaderOptions>Aşağıdaki parametrelerle örnek oluşturma üzerinde denetime izin ver `PipeReader` :
+
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.BufferSize?displayProperty=nameWithType> , havuzdan belleği yeniden boyutlandırdığınızda kullanılan bayt cinsinden en düşük arabellek boyutu ve varsayılan değer olarak kullanılır `4096` .
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.LeaveOpen?displayProperty=nameWithType> bayrak, işlem tamamlandıktan sonra temeldeki akışın açık bırakılıp başlatılmayacağını belirler `PipeReader` ve varsayılan olarak öğesine ayarlanır `false` .
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.MinimumReadSize?displayProperty=nameWithType> Yeni bir arabelleğin ayrılmadan önce arabellekteki kalan baytların eşiğini temsil eder ve varsayılan olarak değerine ayarlanır `1024` .
+- <xref:System.IO.Pipelines.StreamPipeReaderOptions.Pool?displayProperty=nameWithType>`MemoryPool<byte>`bellek ayrılırken kullanılır ve varsayılan olarak öğesine ayarlanır `null` .
+
+<xref:System.IO.Pipelines.StreamPipeWriterOptions>Aşağıdaki parametrelerle örnek oluşturma üzerinde denetime izin ver `PipeWriter` :
+
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.LeaveOpen?displayProperty=nameWithType> bayrak, işlem tamamlandıktan sonra temeldeki akışın açık bırakılıp başlatılmayacağını belirler `PipeWriter` ve varsayılan olarak öğesine ayarlanır `false` .
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.MinimumBufferSize?displayProperty=nameWithType> , bellekten bellek oluştururken kullanılacak en düşük arabellek boyutunu temsil eder <xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool> `4096` .
+- <xref:System.IO.Pipelines.StreamPipeWriterOptions.Pool?displayProperty=nameWithType>`MemoryPool<byte>`bellek ayrılırken kullanılır ve varsayılan olarak öğesine ayarlanır `null` .
+
+> [!IMPORTANT]
+> `PipeReader` `PipeWriter` Yöntemlerini kullanarak ve örnekleri kullanırken `Create` , nesne ömrünü göz önünde bulundurmanız gerekir `Stream` . Okuyucu veya yazıcı ile işiniz bittiğinde akışa erişmeniz gerekiyorsa, `LeaveOpen` oluşturma seçeneklerinde bayrağını olarak ayarlamanız gerekir `true` . Aksi takdirde, akış kapatılacak.
+
+Aşağıdaki kod, `PipeReader` `PipeWriter` bir akıştan yöntemleri kullanarak ve örneklerinin oluşturulmasını gösterir `Create` .
+
+:::code language="csharp" source="snippets/pipelines/Program.cs":::
+
+Uygulama bir <xref:System.IO.StreamReader> akış olarak *lorem-ipsum.txt* dosyayı okumak için bir kullanır. , <xref:System.IO.FileStream> <xref:System.IO.Pipelines.PipeReader.Create%2A?displayProperty=nameWithType> Bir nesneyi örnekleyen öğesine geçirilir `PipeReader` . Konsol uygulaması daha sonra kendi standart çıkış akışını kullanarak geçirir <xref:System.IO.Pipelines.PipeWriter.Create%2A?displayProperty=nameWithType> <xref:System.Console.OpenStandardOutput?displayProperty=nameWithType> . Örnek [iptali](#cancellation)destekler.
