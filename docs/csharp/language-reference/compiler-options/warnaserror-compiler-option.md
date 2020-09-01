@@ -1,5 +1,6 @@
 ---
-title: -warnaserror (C# Derleyici Seçenekleri)
+description: -warnaserror (C# derleyici seçenekleri)
+title: -warnaserror (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /warnaserror
@@ -8,43 +9,43 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3ccd4546402dbc8e5d9245af6411ba2d831d4959
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503482"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127249"
 ---
-# <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# Derleyici Seçenekleri)
-**-warnaserror+** seçeneği tüm uyarıları hata olarak ele almaz  
+# <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# derleyici seçenekleri)
+**-Warnaserror +** seçeneği tüm uyarıları hata olarak değerlendirir  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -warnaserror[+ | -][:warning-list]  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Normalde uyarı olarak bildirilecek iletiler hata olarak bildirilir ve yapı işlemi durdurulur (çıktı dosyası oluşturulmaz).  
+ Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir ve derleme işlemi durdurulur (çıktı dosyası derlenmemiştir).  
   
- Varsayılan olarak, **-warnaserror-** geçerlidir, bu da bir çıktı dosyasının oluşumunu engellememeye neden olur. **-warnaserror**, **-warnaserror+** ile aynıdır, uyarılar hata olarak ele alınmasına neden olur.  
+ Varsayılan olarak, **-warnaserror-** , bir çıkış dosyasının oluşturulmasını engellemez uyarısı oluşmasına neden olur. - **warnaserror +** ile aynı olan **warnaserror**, uyarıların hata olarak işlenmesine neden olur.  
   
- İsteğe bağlı olarak, yalnızca birkaç özel uyarının hata olarak ele alınmasını istiyorsanız, hata olarak ele almak için virgülle ayrılmış bir uyarı numaraları listesi belirtebilirsiniz. Tüm nullability uyarılar kümesi **nullable** steno ile belirtilebilir.
+ İsteğe bağlı olarak, yalnızca birkaç özel uyarının hata olarak değerlendirilmesini istiyorsanız, hata olarak değerlendirilecek uyarı numaralarının virgülle ayrılmış bir listesini belirtebilirsiniz. Tüm null olabilme uyarıları kümesi **Nullable toplu değer** ile belirtilebilir.
   
- Derleyicinin görüntülemesini istediğiniz uyarıların düzeyini belirtmek için [-uyar'ı](./warn-compiler-option.md) kullanın. Bazı [-nowarn](./nowarn-compiler-option.md) uyarıları devre dışı kullanabilirsiniz.  
+ Derleyicinin görüntülemesini istediğiniz uyarı düzeyini belirtmek için [-Warn](./warn-compiler-option.md) kullanın. Belirli uyarıları devre dışı bırakmak için [-nowarn](./nowarn-compiler-option.md) kullanın.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikleri** sayfasını açın.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. Özellik **Oluştur** sayfasını tıklatın.  
+2. **Yapı** özelliği sayfasına tıklayın.  
   
-3. Uyarıları **Hata Olarak Ele'de** değiştirin özelliği.  
+3. **Uyarıları hata olarak değerlendir** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini programlı olarak <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>ayarlamak için bkz.  
+ Bu derleyici seçeneğini program aracılığıyla ayarlamak için, bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors> ..  
   
 ## <a name="example"></a>Örnek  
- Derleyicinin hiçbir uyarı görüntülemesini `in.cs` ve derlemesini ve görüntülemesini gerek:  
+ Derle `in.cs` ve derleyicinin hiçbir uyarı görüntülememe:  
   
 ```console  
 csc -warnaserror in.cs  
@@ -53,5 +54,5 @@ csc -warnaserror:642,649,652,nullable in.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

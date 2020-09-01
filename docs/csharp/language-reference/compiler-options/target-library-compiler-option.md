@@ -1,5 +1,6 @@
 ---
-title: -hedef:kütüphane (C# Derleyici Seçenekleri)
+description: '-target: Library (C# derleyici seçenekleri)'
+title: '-target: Library (C# derleyici seçenekleri)'
 ms.date: 07/20/2015
 f1_keywords:
 - /dll
@@ -8,43 +9,43 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 953249c4d0168ed3d279d03a0b2fb63d8ff6d5f5
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606399"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128484"
 ---
-# <a name="-targetlibrary-c-compiler-options"></a>-hedef:kütüphane (C# Derleyici Seçenekleri)
-**-hedef:kitaplık** seçeneği derleyicinin yürütülebilir bir dosya (EXE) yerine dinamik bağlantı kitaplığı (DLL) oluşturmasına neden olur.  
+# <a name="-targetlibrary-c-compiler-options"></a>-target: Library (C# derleyici seçenekleri)
+**-Target: Library** seçeneği derleyicinin yürütülebilir dosya (exe) yerine bir dinamik bağlantı KITAPLıĞı (dll) oluşturmasına neden olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -target:library  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- DLL .dll uzantısı ile oluşturulur.  
+ DLL,. dll uzantısıyla oluşturulacaktır.  
   
- [-out](./out-compiler-option.md) seçeneğinde aksi belirtilmedikçe, çıktı dosyası adı ilk giriş dosyasının adını alır.  
+ Aksi belirtilmediği [takdirde, çıkış](./out-compiler-option.md) dosyası adı ilk giriş dosyasının adını alır.  
   
- Komut satırında belirtildiğinde, .dll dosyasını oluşturmak için bir sonraki **-out** veya **-target:module** seçeneğine kadar tüm dosyalar kullanılır.  
+ Komut satırında belirtildiğinde, bir sonraki **-Out** veya **-target: Module** seçeneğine kadar olan tüm dosyalar,. dll dosyasını oluşturmak için kullanılır.  
   
- Bir .dll dosyası [yaparken, Bir Ana](../../programming-guide/main-and-command-args/index.md) yöntem gerekli değildir.  
+ Bir. dll dosyası oluştururken [Main](../../programming-guide/main-and-command-args/index.md) yöntemi gerekli değildir.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikleri** sayfasını açın.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. **Uygulama** özelliği sayfasını tıklatın.  
+2. **Uygulama** Özellik sayfasına tıklayın.  
   
-3. Çıktı **türü** özelliğini değiştirin.  
+3. **Çıktı türü** özelliğini değiştirin.  
   
- Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabildiğini öğrenmek için bkz. <xref:VSLangProj80.ProjectProperties3.OutputType%2A>  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.OutputType%2A> ..  
   
 ## <a name="example"></a>Örnek  
- Derlemek `in.cs`, `in.dll`oluşturma :  
+ Derle `in.cs` , oluşturma `in.dll` :  
   
 ```console  
 csc -target:library in.cs  
@@ -52,5 +53,5 @@ csc -target:library in.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-hedef (C# Derleyici Seçenekleri)](./target-compiler-option.md)
-- [C# Derleyici Seçenekleri](./index.md)
+- [-target (C# derleyici seçenekleri)](./target-compiler-option.md)
+- [C# derleyici seçenekleri](./index.md)

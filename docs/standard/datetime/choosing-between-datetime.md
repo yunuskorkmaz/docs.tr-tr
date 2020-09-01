@@ -14,12 +14,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 03d00fb802032b981a5ebe80f7166eba0fb54a60
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 7ef8782c15ad816b8bb0356e74615a49387f73b9
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326047"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89129143"
 ---
 # <a name="choose-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime, DateTimeOffset, TimeSpan ve TimeZoneInfo arasında seçim yapın
 
@@ -43,6 +43,28 @@ ms.locfileid: "85326047"
 
 > [!NOTE]
 > Bu konu, <xref:System.TimeZone> işlevselliği sınıfında neredeyse tamamen dahil olduğu için anlatılmamaktadır <xref:System.TimeZoneInfo> . Mümkün olduğunda sınıfı <xref:System.TimeZoneInfo> yerine sınıfını kullanın <xref:System.TimeZone> .
+
+## <a name="the-datetimeoffset-structure"></a>DateTimeOffset yapısı
+
+<xref:System.DateTimeOffset>Yapı, bir tarih ve saat değerini temsil eder ve bu DEĞERIN UTC 'den ne kadar farklı olduğunu gösteren bir uzaklığa sahip. Bu nedenle, değer her zaman kesin olarak tek bir noktayı tanımlar.
+
+<xref:System.DateTimeOffset>Türü, <xref:System.DateTime> saat dilimi tanıma ile birlikte türün tüm işlevlerini içerir. Bu, aşağıdaki uygulamalar için uygun hale getirir:
+
+- Tek bir zaman noktasını benzersiz ve kesin bir şekilde tanımlar. <xref:System.DateTimeOffset>Türü, "Şimdi" anlamını, işlem sürelerini günlüğe kaydetmek, sistem veya uygulama olaylarının saatlerini günlüğe kaydetmek ve dosya oluşturma ve değiştirme zamanlarını kaydetmek için kullanılabilir.
+
+- Genel Tarih ve saat aritmetiği gerçekleştirin.
+
+- Bu süreler iki ayrı değer olarak veya bir yapının iki üyesi olarak depolandığı sürece birden çok ilgili zamanı koruyun.
+
+> [!NOTE]
+> Değerler için bu kullanımlar <xref:System.DateTimeOffset> , değerlerden çok daha yaygındır <xref:System.DateTime> . Sonuç olarak, <xref:System.DateTimeOffset> uygulama geliştirme için varsayılan tarih ve saat türünü göz önünde bulundurun.
+
+Bir <xref:System.DateTimeOffset> değer belirli bir saat dilimine bağlı değildir, ancak çeşitli saat dilimlerden kaynaklanalabilir. Aşağıdaki örnekte, bir dizi <xref:System.DateTimeOffset> değerin (yerel Pasifik standart saati dahil) ait olduğu saat dilimleri listelenmektedir.
+
+[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
+[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
+
+Çıktı, bu örnekteki her bir tarih ve saat değerinin en az üç farklı saat dilimine ait olduğunu gösterir. <xref:System.DateTimeOffset>6/10/2007 değeri, bir tarih ve saat değeri gün ışığından yararlanma süresini gösteriyorsa, UTC arasındaki fark, kaynak saat diliminin temel UTC denkleye karşılık gelir veya görünen ADıNDA UTC 'den gelen uzaklığa karşılık gelmelidir. Tek bir <xref:System.DateTimeOffset> değer, saat dilimiyle sıkı bir şekilde bağlı olmadığından, gün ışığından yararlanma saatine kadar bir saat diliminin geçişini yansıtmaz. Bu, bir değeri işlemek için tarih ve saat aritmetiği kullanıldığında soruna neden olabilir <xref:System.DateTimeOffset> . Tarih ve saat aritmetiğini bir saat diliminin ayarlama kurallarının hesabını alan bir şekilde gerçekleştirme hakkında bir tartışma için bkz. [Tarih ve saatlerle aritmetik Işlemler gerçekleştirme](performing-arithmetic-operations.md).
 
 ## <a name="the-datetime-structure"></a>DateTime yapısı
 
@@ -68,28 +90,6 @@ Belirli bir <xref:System.DateTime> değer UTC 'yi temsil etmediği takdirde, bu 
 
 > [!IMPORTANT]
 > Verileri kaydetme veya paylaşma sırasında <xref:System.DateTime> UTC kullanılmalıdır ve <xref:System.DateTime> değerin <xref:System.DateTime.Kind%2A> özelliği olarak ayarlanmalıdır <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> .
-
-## <a name="the-datetimeoffset-structure"></a>DateTimeOffset yapısı
-
-<xref:System.DateTimeOffset>Yapı, bir tarih ve saat değerini temsil eder ve bu DEĞERIN UTC 'den ne kadar farklı olduğunu gösteren bir uzaklığa sahip. Bu nedenle, değer her zaman kesin olarak tek bir noktayı tanımlar.
-
-<xref:System.DateTimeOffset>Türü, <xref:System.DateTime> saat dilimi tanıma ile birlikte türün tüm işlevlerini içerir. Bu, aşağıdaki uygulamalar için uygun hale getirir:
-
-- Tek bir zaman noktasını benzersiz ve kesin bir şekilde tanımlar. <xref:System.DateTimeOffset>Türü, "Şimdi" anlamını, işlem sürelerini günlüğe kaydetmek, sistem veya uygulama olaylarının saatlerini günlüğe kaydetmek ve dosya oluşturma ve değiştirme zamanlarını kaydetmek için kullanılabilir.
-
-- Genel Tarih ve saat aritmetiği gerçekleştirin.
-
-- Bu süreler iki ayrı değer olarak veya bir yapının iki üyesi olarak depolandığı sürece birden çok ilgili zamanı koruyun.
-
-> [!NOTE]
-> Değerler için bu kullanımlar <xref:System.DateTimeOffset> , değerlerden çok daha yaygındır <xref:System.DateTime> . Sonuç olarak, <xref:System.DateTimeOffset> uygulama geliştirme için varsayılan tarih ve saat türünü göz önünde bulundurun.
-
-Bir <xref:System.DateTimeOffset> değer belirli bir saat dilimine bağlı değildir, ancak çeşitli saat dilimlerden kaynaklanalabilir. Aşağıdaki örnekte, bir dizi <xref:System.DateTimeOffset> değerin (yerel Pasifik standart saati dahil) ait olduğu saat dilimleri listelenmektedir.
-
-[!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
-
-Çıktı, bu örnekteki her bir tarih ve saat değerinin en az üç farklı saat dilimine ait olduğunu gösterir. <xref:System.DateTimeOffset>6/10/2007 değeri, bir tarih ve saat değeri gün ışığından yararlanma süresini gösteriyorsa, UTC arasındaki fark, kaynak saat diliminin temel UTC denkleye karşılık gelir veya görünen ADıNDA UTC 'den gelen uzaklığa karşılık gelmelidir. Tek bir <xref:System.DateTimeOffset> değer, saat dilimiyle sıkı bir şekilde bağlı olmadığından, gün ışığından yararlanma saatine kadar bir saat diliminin geçişini yansıtmaz. Bu, bir değeri işlemek için tarih ve saat aritmetiği kullanıldığında soruna neden olabilir <xref:System.DateTimeOffset> . Tarih ve saat aritmetiğini bir saat diliminin ayarlama kurallarının hesabını alan bir şekilde gerçekleştirme hakkında bir tartışma için bkz. [Tarih ve saatlerle aritmetik Işlemler gerçekleştirme](performing-arithmetic-operations.md).
 
 ## <a name="the-timespan-structure"></a>TimeSpan yapısı
 

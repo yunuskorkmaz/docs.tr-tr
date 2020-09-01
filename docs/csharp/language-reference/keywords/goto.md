@@ -1,5 +1,6 @@
 ---
-title: goto deyimi - C# Referans
+description: goto ekstresi-C# başvurusu
+title: goto ekstresi-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - goto_CSharpKeyword
@@ -7,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C#]
 ms.assetid: 2c03c9c1-8119-44ef-b740-fb3d287a42fe
-ms.openlocfilehash: 076f793e880a7b4d1e8872d80e88c44cdf077541
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de95e477bd7e76f549130643c8d4b70a0e2f015c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715282"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128432"
 ---
 # <a name="goto-c-reference"></a>goto (C# Başvurusu)
 
-İfade, `goto` program denetimini doğrudan etiketli bir bildirime aktarMaktadır.
+`goto`İfade program denetimini doğrudan etiketli bir ifadeye aktarır.
 
-Denetimin `goto` yaygın kullanımı, denetimi belirli bir anahtar-servis talebi etiketine veya bir `switch` deyimdeki varsayılan etikete aktarmaktır.
+Öğesinin yaygın kullanımı `goto` , denetimin belirli bir anahtar-durum etiketine veya bir deyimdeki varsayılan etikete aktarılmalıdır `switch` .
 
-İfade, `goto` derin iç içe giden döngülerden çıkmak için de yararlıdır.
+`goto`Deyimden daha fazla iç içe geçmiş döngüler almak için de yararlıdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir `goto` [anahtar](switch.md) deyiminde kullanımı gösterir.
+Aşağıdaki örnek, `goto` bir [Switch](switch.md) deyimindeki kullanımını gösterir.
 
 [!code-csharp[csrefKeywordsJump#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#4)]
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, iç `goto` içe giden döngülerden çıkmak için kullanımı gösterir.
+Aşağıdaki örnek, `goto` iç içe döngülerden ayırmak için kullanımını gösterir.
 
 [!code-csharp[csrefKeywordsJump#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#5)]
 
@@ -40,7 +41,7 @@ Aşağıdaki örnek, iç `goto` içe giden döngülerden çıkmak için kullanı
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [goto Deyimi (C++)](/cpp/cpp/goto-statement-cpp)

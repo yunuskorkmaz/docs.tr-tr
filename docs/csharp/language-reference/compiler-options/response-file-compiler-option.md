@@ -1,4 +1,5 @@
 ---
+description: '@ (C# Derleyici Seçenekleri)'
 title: '@ (C# Derleyici Seçenekleri)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -7,47 +8,47 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89a057cba6e0d23c15fc9b652e5bfbc89b6ecbaa
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70202915"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128653"
 ---
 # <a name="-c-compiler-options"></a>@ (C# Derleyici Seçenekleri)
-@ seçeneği derleyici seçenekleri ve derlemek için kaynak kodu dosyaları içeren bir dosya belirtmenizi sağlar.  
+@ Seçeneği, derlemek için derleyici seçeneklerini ve kaynak kodu dosyalarını içeren bir dosya belirtmenizi sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 @response_file  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `response_file`  
- Derleyici seçeneklerini veya derlemide kaynak kod dosyalarını listeleyen bir dosya.  
+ Derlemek için derleyici seçeneklerini veya kaynak kodu dosyalarını listeleyen bir dosya.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici seçenekleri ve kaynak kod dosyaları, komut satırında belirtilmiş gibi derleyici tarafından işlenir.  
+ Derleyici seçenekleri ve kaynak kodu dosyaları, derleyici tarafından, tıpkı komut satırında belirtildikleri gibi işlenecek şekilde işlenir.  
   
- Derlemede birden fazla yanıt dosyası belirtmek için birden çok yanıt dosyası seçeneği belirtin. Örnek:  
+ Bir derlemede birden fazla yanıt dosyası belirtmek için, birden çok yanıt dosyası seçeneği belirtin. Örneğin:  
   
 ```console  
 @file1.rsp @file2.rsp  
 ```  
   
- Yanıt dosyasında, birden çok derleyici seçeneği ve kaynak kodu dosyası tek bir satırda görünebilir. Tek bir derleyici seçeneği belirtimi tek bir satırda görünmelidir (birden çok satıra yayılamaz). Yanıt dosyaları # sembolü ile başlayan yorumlar olabilir.  
+ Bir yanıt dosyasında, bir satırda birden çok derleyici seçeneği ve kaynak kodu dosyası görünebilir. Tek bir derleyici seçenek belirtiminin tek bir satırda görünmesi gerekir (birden çok satıra yayılamaz). Yanıt dosyaları # simgesiyle başlayan açıklamalara sahip olabilir.  
   
- Yanıt dosyasının içinden derleyici seçeneklerini belirtmek, komut satırında bu komutları vermek gibidir. Daha fazla bilgi için [Komut Satırı'ndan Bina'ya](./how-to-set-environment-variables-for-the-visual-studio-command-line.md) bakın.  
+ Bir yanıt dosyası içinden derleyici seçeneklerinin belirtilmesi, komut satırında bu komutları verme gibidir. Daha fazla bilgi için bkz. [komut satırından oluşturma](./how-to-set-environment-variables-for-the-visual-studio-command-line.md) .  
   
- Derleyici, komut seçeneklerini karşılaşılan şekilde işler. Bu nedenle, komut satırı bağımsız değişkenleri yanıt dosyalarında daha önce listelenen seçenekleri geçersiz kılabilir. Tersine, yanıt dosyasındaki seçenekler komut satırında veya diğer yanıt dosyalarında daha önce listelenen seçenekleri geçersiz kılar.  
+ Derleyici komut seçeneklerini karşılaştığı şekilde işler. Bu nedenle, komut satırı bağımsız değişkenleri yanıt dosyalarındaki daha önce listelenen seçenekleri geçersiz kılabilir. Buna karşılık, bir yanıt dosyasındaki seçenekler, önceden komut satırında veya diğer yanıt dosyalarında listelenen seçenekleri geçersiz kılar.  
   
- C# csc.exe dosyası ile aynı dizinde bulunan csc.rsp dosyasını sağlar. CSc.rsp hakkında daha fazla bilgi için [-noconfig](./noconfig-compiler-option.md) bakın.  
+ C#, csc.exe dosyası ile aynı dizinde bulunan CSC. rsp dosyasını sağlar. Csc. rsp hakkında daha fazla bilgi için bkz. [-noconfig](./noconfig-compiler-option.md) .  
   
- Bu derleyici seçeneği Visual Studio geliştirme ortamında ayarlanamaz ve programlı olarak değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio geliştirme ortamında ayarlanamaz veya program aracılığıyla değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
- Örnek yanıt dosyasından birkaç satır şunlardır:  
+ Örnek yanıt dosyasından birkaç satır aşağıda verilmiştir:  
   
 ```console  
 # build the first output file  
@@ -56,4 +57,4 @@ ms.locfileid: "70202915"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)

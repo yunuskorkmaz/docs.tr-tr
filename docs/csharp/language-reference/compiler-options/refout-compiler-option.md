@@ -1,5 +1,6 @@
 ---
-title: -refout (C# Derleyici Seçenekleri)
+description: -refout (C# derleyici seçenekleri)
+title: -refout (C# derleyici seçenekleri)
 ms.date: 08/08/2017
 f1_keywords:
 - /refout
@@ -7,34 +8,34 @@ helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-ms.openlocfilehash: f48316a1e6f657e3bd0190d269dfe0e875a833d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 424782e4607fea63130e95ab09a671c75fe1404d
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771755"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89128720"
 ---
-# <a name="-refout-c-compiler-options"></a>-refout (C# Derleyici Seçenekleri)
+# <a name="-refout-c-compiler-options"></a>-refout (C# derleyici seçenekleri)
 
-**-refout** seçeneği, başvuru derlemesinin çıktı olması gereken bir dosya yolu belirtir. Bu Emit API `metadataPeStream` çevirir. Bu seçenek, MSBuild'in [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) proje özelliğine karşılık gelir.
+**-Refout** seçeneği, başvuru derlemesinin çıkış olması gereken bir dosya yolunu belirtir. Bu `metadataPeStream` , yayma API 'sine çevrilir. Bu seçenek, MSBuild 'in [ProduceReferenceAssembly](/visualstudio/msbuild/common-msbuild-project-properties) Project özelliğine karşılık gelir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```console
 -refout:filepath
 ```
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Bağımsız değişkenler
 
- `filepath`Başvuru derlemesi için dosya yolu. Genellikle birincil derleme ile eşleşmelidir. Önerilen kural kuralı (MSBuild tarafından kullanılan) birincil derlemeye göre bir "ref/" alt klasörüne başvuru derlemesi yerleştirmektir.
+ `filepath` Başvuru derlemesinin FilePath 'i. Genellikle birincil derlemenin ile eşleşmelidir. Önerilen kural (MSBuild tarafından kullanılır), başvuru derlemesini birincil derlemeye göre bir "ref/" alt klasörüne yerleştirmelidir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-Başvuru derlemeleri, kitaplığın genel API yüzeyini temsil etmek için gereken yalnızca minimum meta veri miktarını içeren özel bir derleme türüdür. Bunlar, yapı araçlarında bir derlemeye atıfta bulunurken önemli olan tüm üyeler için bildirimler içerir, ancak API sözleşmesi üzerinde gözlemlenebilir bir etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için .NET Kılavuzu'ndaki [Başvuru derlemelerine](../../../standard/assembly/reference-assemblies.md) bakın.
+Başvuru derlemeleri, kitaplığın ortak API yüzeyini göstermek için gereken en düşük meta veri miktarını içeren özel bir derleme türüdür. Derleme araçlarındaki bir derlemeye başvururken önemli olan tüm Üyeler için bildirimler içerirler, ancak API sözleşmeleri üzerinde herhangi bir observable etkisi olmayan özel üyelerin tüm üye uygulamalarını ve bildirimlerini hariç tutar. Daha fazla bilgi için bkz. .NET kılavuzundaki [başvuru derlemeleri](../../../standard/assembly/reference-assemblies.md) .
 
-`-refout` Ve [`-refonly`](refonly-compiler-option.md) seçenekler birbirini dışlar.
+`-refout`Ve [`-refonly`](refonly-compiler-option.md) seçenekleri birbirini dışlıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
