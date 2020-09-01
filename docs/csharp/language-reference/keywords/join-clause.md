@@ -1,5 +1,6 @@
 ---
-title: join clause - C# Reference
+description: JOIN tümcesi-C# başvurusu
+title: JOIN tümcesi-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,93 +9,93 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44b35bd1243e4715f81513eef9968f30a8f315a3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713400"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139755"
 ---
 # <a name="join-clause-c-reference"></a>join tümcesi (C# Başvurusu)
 
-Yan `join` tümce, nesne modelinde doğrudan ilişkisi olmayan farklı kaynak dizilerinden öğeleri ilişkilendirmede yararlıdır. Tek gereksinim, her kaynaktaki öğelerin eşitlik için karşılaştırılabilen bir değeri paylaşmasıdır. Örneğin, bir gıda dağıtıcısının belirli bir ürünün tedarikçilerinin listesi ve alıcıların listesi olabilir. Bir `join` yan tümce, örneğin, tedarikçiler ve alıcılar ın tüm aynı belirtilen bölgede olan bu ürünün bir listesini oluşturmak için kullanılabilir.
+`join`Yan tümcesi, nesne modelinde doğrudan ilişkisi olmayan farklı kaynak dizilerinden öğeleri ilişkilendirmek için yararlıdır. Tek gereksinim, her kaynaktaki öğelerin eşitlik için karşılaştırılabileceğiniz bazı değerleri paylaşmasına yöneliktir. Örneğin, bir yiyecek dağıtıcısının belirli bir ürünün tedarikçilerinin bir listesi ve alıcıların listesi olabilir. `join`Yan tümce, örneğin, aynı belirtilen bölgede bulunan ürün sağlayıcılarının ve alıcılarının bir listesini oluşturmak için kullanılabilir.
 
-Bir `join` yan tümce giriş olarak iki kaynak dizileri alır. Her dizideki öğeler, diğer sırada karşılık gelen bir özellik ile karşılaştırılabilen bir özellik olmalıdır. Yan `join` tümce, özel `equals` anahtar sözcüğü kullanarak eşitlik için belirtilen anahtarları karşılaştırır. `join` Yan tümek tarafından gerçekleştirilen tüm birleştirmeler denkliktir. Bir `join` yan tümcenin çıktısının şekli, gerçekleştirmekte olduğunuz belirli birleştirme türüne bağlıdır. Aşağıdakiler en yaygın üç birleştirme türüdir:
+`join`Yan tümce iki kaynak dizisini giriş olarak alır. Her dizideki öğelerin, başka bir dizide karşılık gelen bir özellik ile karşılaştırılabileceğiniz bir özellik olması veya bir özelliği içermesi gerekir. `join`Yan tümcesi, özel anahtar sözcüğünü kullanarak, eşitlik için belirtilen anahtarları karşılaştırır `equals` . Yan tümce tarafından gerçekleştirilen tüm birleştirmeler `join` eşlere katılır. Bir yan tümcesinin çıktısının şekli, `join` gerçekleştirdiğiniz belirli bir JOIN türüne bağlıdır. En yaygın üç JOIN türü aşağıda verilmiştir:
 
-- İç birleştirme
+- İç birleşim
 
-- Grup birleştirme
+- Gruba ekleme
 
-- Sol dış birleştirme
+- Sol dış birleşim
 
-## <a name="inner-join"></a>İç birleştirme
+## <a name="inner-join"></a>İç birleşim
 
-Aşağıdaki örnekbasit bir iç equijoin gösterir. Bu sorgu ,"ürün adı / kategorisi" çiftlerinin düz bir sırasını üretir. Aynı kategori dizesi birden çok öğe görünür. Eşleme `products`olmayan `categories` bir öğe varsa, bu kategori sonuçlarda görünmez.
+Aşağıdaki örnek bir basit iç Eş birleşim gösterir. Bu sorgu, "ürün adı/kategori" çiftleri için düz bir dizi oluşturur. Aynı kategori dizesi birden çok öğe içinde görüntülenir. Öğesinden bir öğenin `categories` eşleşmesi yoksa `products` , bu kategori sonuçlarda görünmez.
 
 [!code-csharp[cscsrefQueryKeywords#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#24)]
 
-Daha fazla bilgi için [bkz.](../../linq/perform-inner-joins.md)
+Daha fazla bilgi için bkz. [İç birleştirmeler gerçekleştirme](../../linq/perform-inner-joins.md).
 
-## <a name="group-join"></a>Grup birleştirme
+## <a name="group-join"></a>Gruba ekleme
 
-İfadeiçeren `join` bir `into` yan tümceye grup birleştirme denir.
+Bir `join` ifadeye sahip bir yan tümce `into` , Grup birleşimi olarak adlandırılır.
 
 [!code-csharp[cscsrefQueryKeywords#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#25)]
 
-Grup birleştirme, sol kaynak dizisindeki öğeleri sağ yan kaynak dizisinde bir veya daha fazla eşleşen öğeyle ilişkilendiren hiyerarşik bir sonuç dizisi üretir. Bir grup birleştirme ilişkisel terimler açısından eşdeğeri vardır; aslında nesne dizileri dizisidir.
+Bir grup birleşimi, sol kaynak dizisindeki öğeleri sağ taraftaki kaynak dizisinde bir veya daha fazla eşleşen öğeyle ilişkilendiren hiyerarşik bir sonuç sırası üretir. Bir grup katılımı ilişkisel terimlerle eşdeğer değildir; Aslında bir nesne dizileri dizisidir.
 
-Sağ kaynak dizisinden hiçbir öğe sol kaynaktaki bir öğeyle `join` eşleşecek şekilde bulunmazsa, yan tümce o öğe için boş bir dizi üretir. Bu nedenle, grup birleştirme hala temelde bir iç-equijoin dışında sonuç sırası gruplar halinde düzenlenir.
+Sağ kaynak diziden bir öğe, sol kaynaktaki bir öğeyle eşleşecek şekilde bulunmazsa, `join` yan tümce bu öğe için boş bir dizi oluşturur. Bu nedenle, sonuç sırasının gruplar halinde düzenlenme dışında, gruba katılması hala temel olarak bir iç eşbirleştirmedir.
 
-Grup birleştirme sonuçlarını seçerseniz, öğelere erişebilirsiniz, ancak eşleştikleri anahtarı tanımlayamazsınız. Bu nedenle, önceki örnekte gösterildiği gibi, grubun birleşme nedenlerini de anahtar adlarIna sahip yeni bir türün katılımını seçmek daha yararlısıdır.
+Yalnızca bir grup JOIN 'in sonuçlarını seçerseniz, öğelere erişebilirsiniz, ancak eşleştikleri anahtarı tanımlamazsınız. Bu nedenle, önceki örnekte gösterildiği gibi, Grup birleştirmenin sonuçlarının anahtar adı da olan yeni bir türe katılması genellikle daha yararlıdır.
 
-Ayrıca, tabii ki, başka bir alt sorgunun jeneratörolarak bir grup birleştirme sonucunu kullanabilirsiniz:
+Ayrıca, başka bir alt sorgunun Oluşturucusu olarak bir grup birleşimi sonucunu da kullanabilirsiniz:
 
 [!code-csharp[cscsrefQueryKeywords#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#26)]
 
-Daha fazla bilgi için bkz: [Gruplu birleştirmeleri gerçekleştirin.](../../linq/perform-grouped-joins.md)
+Daha fazla bilgi için bkz. [gruplanmış birleşimler gerçekleştirme](../../linq/perform-grouped-joins.md).
 
-## <a name="left-outer-join"></a>Sol dış birleştirme
+## <a name="left-outer-join"></a>Sol dış birleşim
 
-Sol dış birleştirmede, eşleşen öğeler doğru sırada olmasa bile sol kaynak dizisindeki tüm öğeler döndürülür. LINQ'da sol dış birleştirme gerçekleştirmek `DefaultIfEmpty` için, sol tarafta ki öğe eşleşmesi yoksa üretmek için varsayılan sağ taraf öğesini belirtmek için yöntemi grup birleştirmesiyle birlikte kullanın. Herhangi bir `null` başvuru türü için varsayılan değer olarak kullanabilir veya kullanıcı tarafından tanımlanan varsayılan türü belirtebilirsiniz. Aşağıdaki örnekte, kullanıcı tanımlı varsayılan türü gösterilir:
+Sol dış birleşimde, hiçbir eşleşen öğe doğru sırada olmasa bile, sol kaynak dizideki tüm öğeler döndürülür. LINQ içinde bir sol dış birleşim gerçekleştirmek için, `DefaultIfEmpty` bir sol taraftaki öğenin eşleşmesi yoksa, oluşturmak üzere varsayılan bir sağ taraftaki öğe belirtmek için bir grup birleştirimiyle birlikte yöntemi kullanın. `null`Herhangi bir başvuru türü için varsayılan değer olarak kullanabilirsiniz veya Kullanıcı tanımlı varsayılan bir tür belirtebilirsiniz. Aşağıdaki örnekte, Kullanıcı tanımlı varsayılan bir tür gösterilir:
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
-Daha fazla bilgi için [bkz.](../../linq/perform-left-outer-joins.md)
+Daha fazla bilgi için bkz. [sol dış birleştirmeler gerçekleştirme](../../linq/perform-left-outer-joins.md).
 
 ## <a name="the-equals-operator"></a>Eşittir işleci
 
-Bir `join` yan tümce equijoin gerçekleştirir. Başka bir deyişle, eşleşmeleri yalnızca iki anahtarın eşitliğine dayandırabilirsiniz. "Büyük" veya "eşit olmayan" gibi diğer karşılaştırma türleri desteklenmez. Tüm birleştirmelerin eşit olduğunu belirtmek için, `join` yan tümce `equals` `==` operatör yerine anahtar sözcüğü kullanır. `equals` Anahtar kelime yalnızca bir `join` yan tümcede kullanılabilir `==` ve işleçten önemli bir şekilde farklıdır. Ile `equals`, sol anahtar dış kaynak dizisi tüketir ve sağ anahtar iç kaynak tüketir. Dış kaynak yalnızca sol tarafında ki `equals` kapsamdadır ve iç kaynak dizisi yalnızca sağ taraftaki kapsamdadır.
+`join`Yan tümce bir equijoın gerçekleştirir. Diğer bir deyişle, yalnızca iki anahtarın eşitliğine ait eşleşmeleri temel alabilirsiniz. "Büyüktür" veya "Not Equals" gibi diğer karşılaştırma türleri desteklenmez. Tüm birleşimlerin Eş birleşim olduğunu net hale getirmek için `join` yan tümce `equals` işleç yerine anahtar sözcüğünü kullanır `==` . `equals`Anahtar sözcüğü yalnızca bir `join` yan tümcesinde kullanılabilir ve `==` işleçten çok önemli bir şekilde farklılık gösterir. İle `equals` , sol anahtar dış kaynak sırasını kullanır ve sağ anahtar, iç kaynağı kullanır. Dış kaynak yalnızca sol taraftaki kapsam içinde yer alır `equals` ve iç kaynak sırası yalnızca sağ taraftaki kapsamdadır.
 
-## <a name="non-equijoins"></a>Denk olmayanlar
+## <a name="non-equijoins"></a>Eşit olmayan birleşimler
 
-Bir sorguya bağımsız olarak yeni diziler tanıtmak için birden çok `from` yan tümce yi kullanarak, equijoins, çapraz birleştirme ve diğer özel birleştirme işlemleri gerçekleştirebilirsiniz. Daha fazla bilgi için [bkz.](../../linq/perform-custom-join-operations.md)
+`from`Yeni dizileri bir sorguda bağımsız olarak tanıtmak için birden çok yan tümce kullanarak, eşlenmemiş olmayan birleşimler, çapraz birleşimler ve diğer özel birleştirme işlemleri gerçekleştirebilirsiniz. Daha fazla bilgi için bkz. [özel JOIN Işlemleri gerçekleştirme](../../linq/perform-custom-join-operations.md).
 
-## <a name="joins-on-object-collections-vs-relational-tables"></a>Nesne koleksiyonlarıile ilişkisel tablolara katılma
+## <a name="joins-on-object-collections-vs-relational-tables"></a>Nesne koleksiyonlarındaki ve ilişkisel tablolardaki birleşimler
 
-LINQ sorgu ifadesinde, birleştirme işlemleri nesne koleksiyonlarında gerçekleştirilir. Nesne koleksiyonları iki ilişkisel tabloyla aynı şekilde "birleşemez". LINQ'da, `join` açık yan tümceler yalnızca iki kaynak dizisi herhangi bir ilişkiyle bağlı olmadığında gereklidir. Çalışma [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], yabancı anahtar tabloları birincil tablonun özellikleri olarak nesne modelinde temsil edilir. Örneğin, Northwind veritabanında, Müşteri tablosunun Siparişler tablosuyla yabancı anahtar ilişkisi vardır. Tabloları nesne modeliyle eşlediğinizde, Müşteri sınıfının bu Müşteriyle ilişkili Siparişler koleksiyonunu içeren bir Siparişler özelliği vardır. Sonuç olarak, birleştirme zaten sizin için yapılmıştır.
+Bir LINQ sorgu ifadesinde, nesne koleksiyonlarında JOIN işlemleri gerçekleştirilir. Nesne koleksiyonları, iki ilişkisel tabloyla tamamen aynı şekilde "birleştirilemez". LINQ içinde açık `join` yan tümceler yalnızca iki kaynak dizisi herhangi bir ilişkiye bağlı olmadığında gereklidir. İle çalışırken [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] , yabancı anahtar tabloları nesne modelinde birincil tablonun özellikleri olarak temsil edilir. Örneğin, Northwind veritabanında, müşteri tablosunun Orders tablosuyla bir yabancı anahtar ilişkisi vardır. Tabloları nesne modeliyle eşlediğinizde, müşteri sınıfının bu müşteriyle ilişkili siparişlerin koleksiyonunu içeren bir Orders özelliği vardır. Aslında, birleşimi sizin için zaten yapıldı.
 
-İlgili tablolar arasında sorgu lama hakkında daha [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]fazla bilgi için [bkz.](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)
+Bağlamındaki ilgili tablolarda sorgulama hakkında daha fazla bilgi için [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] bkz. [nasıl yapılır: veritabanı ilişkilerini eşleme](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
-## <a name="composite-keys"></a>Kompozit tuşlar
+## <a name="composite-keys"></a>Bileşik anahtarlar
 
-Bileşik bir anahtar kullanarak birden çok değerin eşitliğini sınayabilirsiniz. Daha fazla bilgi için [bkz: Bileşik tuşları kullanarak Katıl.](../../linq/join-by-using-composite-keys.md) Bileşik tuşlar bir `group` yan tümcede de kullanılabilir.
+Bileşik anahtar kullanarak birden çok değerin eşitlik için test edebilirsiniz. Daha fazla bilgi için bkz. [bileşik anahtarlar kullanarak ekleme](../../linq/join-by-using-composite-keys.md). Bileşik anahtarlar da bir `group` yan tümcesinde kullanılabilir.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, aynı eşleşen tuşları kullanarak aynı veri kaynaklarında bir iç birleştirme, bir grup birleştirme ve sol dış birleştirme sonuçlarını karşılaştırır. Konsol ekranındaki sonuçları netleştirmek için bu örneklere bazı ekstra kodlar eklenir.
+Aşağıdaki örnek, aynı eşleşen anahtarları kullanarak bir iç birleşim, bir grup JOIN ve bir sol dış birleşim sonuçlarını aynı veri kaynakları üzerinde karşılaştırır. Bu örneklere bazı ek kodlar, konsol görüntülerindeki sonuçları açıklığa kavuşturacak şekilde eklenir.
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
 ## <a name="remarks"></a>Açıklamalar
 
-Takip `join` `into` edilmeyen bir yan tümce, <xref:System.Linq.Enumerable.Join%2A> bir yöntem çağrısına çevrilir. İzleyen bir `join` yan `into` tümce bir <xref:System.Linq.Enumerable.GroupJoin%2A> yöntem çağrısına çevrilir.
+`join`Tarafından izlenen bir yan tümce `into` bir <xref:System.Linq.Enumerable.Join%2A> yöntem çağrısına çevrilir. `join`Tarafından izlenen bir yan tümce `into` bir <xref:System.Linq.Enumerable.GroupJoin%2A> yöntem çağrısına çevrilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sorgu Anahtar Kelimeleri (LINQ)](query-keywords.md)
+- [Sorgu anahtar sözcükleri (LINQ)](query-keywords.md)
 - [Dil ile Tümleşik Sorgu (LINQ)](../../linq/index.md)
 - [Birleştirme İşlemleri](../../programming-guide/concepts/linq/join-operations.md)
-- [group yan tümcesi](group-clause.md)
+- [group tümcesi](group-clause.md)
 - [Sol dış birleşimler gerçekleştirme](../../linq/perform-left-outer-joins.md)
 - [İç birleşimler gerçekleştirme](../../linq/perform-inner-joins.md)
 - [Gruplanmış birleşimler gerçekleştirme](../../linq/perform-grouped-joins.md)

@@ -1,15 +1,16 @@
 ---
+description: Protected Internal-C# başvurusu
 title: Protected Internal-C# başvurusu
 ms.date: 11/15/2017
 f1_keywords:
 - protectedinternal_CSharpKeyword
 author: sputier
-ms.openlocfilehash: 4067da93bcceba0fa3e4a14aa58b4cde812412f3
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: a7537fba93c0d7145f04c6236d15c11b70f8bf98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301794"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139443"
 ---
 # <a name="protected-internal-c-reference"></a>korumalı iç (C# Başvurusu)
 
@@ -58,7 +59,7 @@ class DerivedClass : BaseClass
 ```
 
 Bu örnek, ve olmak üzere iki dosya içerir `Assembly1.cs` `Assembly2.cs` .
-İlk dosya bir ortak temel sınıf, `BaseClass` ve başka bir sınıf içerir `TestAccess` . `BaseClass`, türü tarafından erişilen korumalı bir iç üyeye sahip `myValue` `TestAccess` .
+İlk dosya bir ortak temel sınıf, `BaseClass` ve başka bir sınıf içerir `TestAccess` . `BaseClass` , türü tarafından erişilen korumalı bir iç üyeye sahip `myValue` `TestAccess` .
 İkinci dosyada, `myValue` bir örneği üzerinden erişim girişimi `BaseClass` bir hata üretir, bu üyeye türetilmiş bir sınıf örneği aracılığıyla erişim `DerivedClass` başarılı olur.
 
 Struct üye olamaz `protected internal` çünkü yapı devralınamaz.
@@ -76,6 +77,6 @@ Struct üye olamaz `protected internal` çünkü yapı devralınamaz.
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
 - [genel](public.md)
-- [özelleştirme](private.md)
+- [private](private.md)
 - [internal](internal.md)
 - [İç sanal anahtar sözcüklere yönelik güvenlik sorunları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
