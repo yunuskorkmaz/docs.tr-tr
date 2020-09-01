@@ -1,20 +1,21 @@
 ---
-title: '#son bölge - C# Referans'
+description: '#endregion-C# başvurusu'
+title: '#endregion-C# başvurusu'
 ms.date: 07/20/2015
 f1_keywords:
 - '#endregion'
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: c61c7a890811014acc69a43e422be53480bfb6f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5bf95d499dc61c74a2474d47deb76ada21763538
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173425"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138156"
 ---
 # <a name="endregion-c-reference"></a>#endregion (C# Başvurusu)
-`#endregion`[#region](./preprocessor-region.md) bloğunun sonunu işaretler. Örnek:  
+`#endregion`[#region](./preprocessor-region.md) bloğunun sonunu işaretler. Örneğin:  
   
 ```csharp
 #region MyClass definition  
@@ -29,6 +30,6 @@ class MyClass
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Önİşleme İşlemciler Direktifleri](./index.md)
+- [C# Önişlemci yönergeleri](./index.md)

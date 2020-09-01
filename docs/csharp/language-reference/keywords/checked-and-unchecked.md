@@ -1,5 +1,6 @@
 ---
-title: İşaretli ve İşaretsiz - C# Başvurusu
+description: Checked ve unchecked-C# başvurusu
+title: Checked ve unchecked-C# başvurusu
 ms.date: 05/15/2018
 helpviewer_keywords:
 - operators [C#], checked and unchecked
@@ -9,35 +10,35 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 8ee4c481a30dce30029fbe8cc26f4798b523a7ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8d6a26e28062da682689bf64a9e38ea5fd158b2
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173646"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89138273"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked ve Unchecked (C# Başvurusu)
-C# deyimleri denetlenen veya denetlenmemiş bağlamında yürütülebilir. Denetlenen bir bağlamda, aritmetik taşma bir özel durum yükseltir. Denetlenmemiş bir bağlamda, aritmetik taşması yoksayılır ve sonuç hedef türüne uymayan yüksek sıralı bitler atılarak kesilir.  
+C# deyimleri işaretli veya işaretlenmemiş bağlamda çalıştırılabilir. Denetlenen bir bağlamda aritmetik taşma bir özel durum oluşturur. İşaretlenmemiş bir bağlamda aritmetik taşma yok sayılır ve hedef türüne uymayan yüksek sıralı bitleri atarak sonuç kesilir.  
   
-- [kontrol edildi](checked.md) Denetlenen bağlamı belirtin.  
+- [denetlenen](checked.md) Denetlenen bağlamı belirtin.  
   
-- [işaretlenmemiş](unchecked.md) İşaretlenmemiş bağlamı belirtin.  
+- [işaretlenmemiş](unchecked.md) İşaretlenmeyen bağlamı belirtin.  
   
- Aşağıdaki işlemler taşma denetiminden etkilenir:  
+ Aşağıdaki işlemler taşma denetimini etkiler:  
   
-- İntegral türlerinde aşağıdaki önceden tanımlanmış işleçleri kullanan ifadeler:  
+- Tamsayı türlerinde aşağıdaki önceden tanımlanmış işleçleri kullanan ifadeler:  
   
-     `++`, `--`, `-`unary `-` `*`, `+`, ,`/`  
+     `++`,, `--` birli `-` , `+` , `-` , `*` , `/`  
   
-- İntegral türleri arasında veya integral `float` `double` türünden veya integral türünden açık sayısal dönüşümler.  
+- İntegral türleri veya `float` bir integral türü arasında açık sayısal dönüştürmeler `double` .  
   
- Ne `checked` belirtilmişse ne de `unchecked` belirtilmişse, sabit olmayan ifadeler (çalışma zamanında değerlendirilen ifadeler) için varsayılan [bağlam, -denetlenen](../compiler-options/checked-compiler-option.md) derleyici seçeneğinin değeriyle tanımlanır. Varsayılan olarak, bu seçeneğin değeri ayarlanmamış ve aritmetik işlemler denetlenmemiş bir bağlamda yürütülür.
+ Ne `checked` de `unchecked` belirtilmemişse, sabit olmayan ifadeler için varsayılan bağlam (çalışma zamanında değerlendirilen ifadeler) [işaretli](../compiler-options/checked-compiler-option.md) derleyici seçeneğinin değeri tarafından tanımlanır. Varsayılan olarak, bu seçeneğin değeri unset ve aritmetik işlemler işaretlenmemiş bir bağlamda yürütülür.
 
- Sabit ifadeler (derleme zamanında tam olarak değerlendirilebilen ifadeler) için varsayılan bağlam her zaman denetlenir. Sabit bir ifade açıkça denetlenmemiş bir içeriğe yerleştirilmediği sürece, ifadenin derleme zamanı değerlendirmesi sırasında oluşan taşmalar derleme zamanı hatalarına neden olur.
+ Sabit ifadeler (derleme sırasında tamamen değerlendirilebilecek ifadeler) için, varsayılan bağlam her zaman denetlenir. Sabit bir ifade işaretsiz bir bağlam içine açıkça yerleştirilmediyse, ifadenin derleme zamanı değerlendirmesi sırasında oluşan taşmalar derleme zamanı hatalarına neden olur.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Deyim Anahtar Sözcükleri](statement-keywords.md)

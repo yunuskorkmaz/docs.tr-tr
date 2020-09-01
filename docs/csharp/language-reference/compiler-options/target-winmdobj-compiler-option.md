@@ -1,46 +1,47 @@
 ---
-title: -hedef:winmdobj (C# Derleyici Seçenekleri)
+description: '-target: winmdobj (C# derleyici seçenekleri)'
+title: '-target: winmdobj (C# derleyici seçenekleri)'
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66a4bddb34832705ad4779829e561afd9442be8f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74204485"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89139092"
 ---
-# <a name="-targetwinmdobj-c-compiler-options"></a>-hedef:winmdobj (C# Derleyici Seçenekleri)
-**-hedef:winmdobj** derleyici sebunu kullanırsanız, derleyici Windows Runtime ikili (.winmd) dosyasına dönüştürebileceğiniz bir ara .winmdobj dosyası oluşturur. .winmd dosyası daha sonra yönetilen dil programlarına ek olarak JavaScript ve C++ programları tarafından da tüketilebilir.  
+# <a name="-targetwinmdobj-c-compiler-options"></a>-target: winmdobj (C# derleyici seçenekleri)
+**-Target: winmdobj** derleyici seçeneğini kullanırsanız, derleyici Windows çalışma zamanı ikili (. winmd) dosyasına dönüştürebileceğiniz bir ara. winmdobj dosyası oluşturur. . Winmd dosyası daha sonra JavaScript ve C++ programları tarafından, yönetilen dil programlarına ek olarak tüketilebilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -target:winmdobj  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- **Winmdobj** ayarı derleyiciye bir ara modülün gerekli olduğunu bildirir. Buna karşılık, Visual Studio C# sınıf kitaplığını .winmdobj dosyası olarak derler. .winmdobj dosyası daha sonra bir <xref:Microsoft.Build.Tasks.WinMDExp> Windows meta data (.winmd) dosyası oluşturmak için dışa aktarma aracı üzerinden beslenebilir. .winmd dosyası hem özgün kitaplıktaki kodu hem de JavaScript veya C++ ve Windows Runtime tarafından kullanılan WinMD meta verilerini içerir.  
+ **Winmdobj** ayarı derleyiciye bir ara modülün gerekli olduğunu bildirir. Yanıt olarak, Visual Studio C# sınıf kitaplığını bir. winmdobj dosyası olarak derler. . Winmdobj dosyası daha sonra <xref:Microsoft.Build.Tasks.WinMDExp> bir Windows meta veri (. winmd) dosyası oluşturmak için dışarı aktarma aracından beslenebilir. . Winmd dosyası, özgün kitaplıktan kodu ve JavaScript ya da C++ tarafından kullanılan WinMD meta verilerini ve Windows Çalışma Zamanı içerir.  
   
- **-target:winmdobj** derleyici seçeneği kullanılarak derlenen bir dosyanın çıktısı yalnızca WimMDExp dışa aktarma aracı nın girişi olarak kullanılmak üzere tasarlanmıştır; .winmdobj dosyasının kendisi doğrudan başvurulmuyor.  
+ **-Target: winmdobj** derleyici seçeneği kullanılarak derlenen bir dosyanın çıktısı yalnızca Wımmdexp Export aracı için giriş olarak kullanılmak üzere tasarlanmıştır; . winmdobj dosyasının kendisine doğrudan başvurulmuyor.  
   
- [-out](./out-compiler-option.md) seçeneğini kullanmadığınız sürece, çıktı dosyası adı ilk giriş dosyasının adını alır. [Ana](../../programming-guide/main-and-command-args/index.md) yöntem gerekli değildir.  
+ [-Out](./out-compiler-option.md) seçeneğini kullanmadığınız takdirde, çıkış dosyası adı ilk giriş dosyasının adını alır. [Main](../../programming-guide/main-and-command-args/index.md) yöntemi gerekli değildir.  
   
- Komut isteminde -hedef:winmdobj seçeneğini belirtirseniz, Windows programını oluşturmak için bir sonraki **-out** veya [-target:module](./target-module-compiler-option.md) seçeneğine kadar tüm dosyalar kullanılır.  
+ Bir komut isteminde-target: winmdobj seçeneğini belirtirseniz, Windows programını oluşturmak için bir sonraki **-Out** veya [-target: Module](./target-module-compiler-option.md) seçeneği görüntüleninceye kadar tüm dosyalar kullanılır.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Bu derleyici seçeneğini Windows Mağazası uygulaması için Visual Studio IDE'de ayarlamak için  
   
-1. **Çözüm Gezgini'nde,** projenizin kısayol menüsünü açın ve ardından **Özellikler'i**seçin.  
+1. **Çözüm Gezgini**' de, projeniz için kısayol menüsünü açın ve ardından **Özellikler**' i seçin.  
   
 2. **Uygulama** sekmesini seçin.  
   
-3. Çıktı **türü** listesinde **WinMD Dosyası'nı**seçin.  
+3. **Çıktı türü** listesinde, **winmd dosyası**' nı seçin.  
   
-     **WinMD Dosyası** seçeneği yalnızca Windows 8.x Store uygulama şablonları için kullanılabilir.  
+     **Winmd dosyası** seçeneği yalnızca Windows 8. x Mağazası uygulama şablonları için kullanılabilir.  
   
- Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabilen ler hakkında bilgi için bkz. <xref:VSLangProj80.ProjectProperties3.OutputType%2A>  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.OutputType%2A> ..  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki komut bir `filename.cs` ara .winmdobj dosyasında derler.  
+ Aşağıdaki komut `filename.cs` bir ara. winmdobj dosyası içinde derlenir.  
   
 ```console  
 csc -target:winmdobj filename.cs  
@@ -48,5 +49,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [-hedef (C# Derleyici Seçenekleri)](./target-compiler-option.md)
-- [C# Derleyici Seçenekleri](./index.md)
+- [-target (C# derleyici seçenekleri)](./target-compiler-option.md)
+- [C# derleyici seçenekleri](./index.md)

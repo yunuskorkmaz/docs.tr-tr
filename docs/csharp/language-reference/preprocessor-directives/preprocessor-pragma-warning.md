@@ -1,22 +1,23 @@
 ---
-title: '#pragma uyarısı - C# Referans'
+description: '#pragma warning-C# başvurusu'
+title: '#pragma warning-C# başvurusu'
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma warning'
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3085c21db386ca215d48bbe8ade83cd26732242c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712474"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137974"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma uyarısı (C# Başvurusu)
-`#pragma warning`bazı uyarıları etkinleştirebilir veya devre dışı kılabilir.  
+`#pragma warning` Belirli uyarıları etkinleştirebilir veya devre dışı bırakabilir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```csharp
 #pragma warning disable warning-list  
@@ -25,12 +26,12 @@ ms.locfileid: "75712474"
   
 ## <a name="parameters"></a>Parametreler  
  `warning-list`  
- Uyarı numaralarının virgülden ayrılmış bir listesi. "CS" öneki isteğe bağlıdır.  
+ Uyarı numaralarının virgülle ayrılmış bir listesi. "CS" ön eki isteğe bağlıdır.  
   
- Uyarı numarası belirtilmediğinde, `disable` tüm uyarıları devre `restore` dışı katanır ve tüm uyarıları etkinleştirilir.  
+ Hiçbir uyarı numarası belirtilmediğinde, `disable` tüm uyarıları devre dışı bırakır ve `restore` tüm uyarıları etkinleştirilir.  
   
 > [!NOTE]
-> Visual Studio'da uyarı numaralarını bulmak için projenizi oluşturun ve **çıktı** penceresindeuyarı numaralarını arayın.  
+> Visual Studio 'da uyarı numaralarını bulmak için projenizi derleyin ve ardından **Çıkış** penceresinde uyarı numaralarını arayın.  
   
 ## <a name="example"></a>Örnek  
   
@@ -60,7 +61,7 @@ public class D
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Önİşleme İşlemciler Direktifleri](./index.md)
-- [C# Derleyici Hataları](../compiler-messages/index.md)
+- [C# Önişlemci yönergeleri](./index.md)
+- [C# derleyici hataları](../compiler-messages/index.md)

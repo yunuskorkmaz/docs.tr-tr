@@ -3,12 +3,12 @@ title: Veri kümesi ve DataTable Güvenlik Kılavuzu
 ms.date: 07/14/2020
 dev_langs:
 - csharp
-ms.openlocfilehash: 24c8a830f8638bc2d9dd20c2384c8230a682d817
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4fe8a062c762cc70d33243e3443aa9bf55635f98
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812243"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137623"
 ---
 # <a name="dataset-and-datatable-security-guidance"></a>Veri kümesi ve DataTable Güvenlik Kılavuzu
 
@@ -45,6 +45,9 @@ System. Data. DataColumn. set_DataType (tür değeri)
 * Seri durumdan çıkarma işlemi başarısız olur.
 
 XML 'i var olan bir `DataSet` veya `DataTable` örneğe yüklerken, var olan sütun tanımları da hesaba alınır. Tablo, özel bir türün sütun tanımını zaten içeriyorsa, bu tür XML serisini kaldırma işleminin süresi için izin verilenler listesine geçici olarak eklenir.
+
+> [!NOTE]
+> Bir öğesine sütun eklediğinizde `DataTable` , `ReadXml` XML 'den şemayı okumaz ve şema onunla eşleşmezse, bu yöntemi kullanmak için tüm sütunları kendiniz eklemeniz gerekir, bu nedenle, bu yöntemi kullanmak için tüm sütunları eklemeniz gerekecektir.
 
 ```cs
 XmlReader xmlReader = GetXmlReader();

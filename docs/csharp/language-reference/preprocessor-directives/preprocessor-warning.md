@@ -1,27 +1,28 @@
 ---
-title: '#uyarı - C# Referans'
+description: '#Uyarı-C# başvurusu'
+title: '#Uyarı-C# başvurusu'
 ms.date: 07/20/2015
 f1_keywords:
 - '#warning'
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab2cc5120492fc2a4b94296eb85e563c0a1d5ad3
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715063"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137844"
 ---
 # <a name="warning-c-reference"></a>#warning (C# Başvurusu)
-`#warning`kodunuzda belirli bir konumdan [bir CS1030](../../misc/cs1030.md) düzey bir derleyici uyarısı oluşturmanıza olanak tanır. Örnek:  
+`#warning` kodunuzda belirli bir konumdan bir [CS1030](../../misc/cs1030.md) düzeyinde bir derleyici uyarısı oluşturmanıza olanak sağlar. Örneğin:  
   
 ```csharp
 #warning Deprecated code in this method.  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar
- Yaygın bir `#warning` kullanım koşullu bir yönergede yer alan bir durumdur. [#error](./preprocessor-error.md)ile kullanıcı tanımlı bir hata oluşturmak da mümkündür.  
+ Öğesinin yaygın kullanımı `#warning` koşullu bir yönergedir. [#Error](./preprocessor-error.md)ile Kullanıcı tanımlı bir hata oluşturmak da mümkündür.  
   
 ## <a name="example"></a>Örnek  
 
@@ -42,6 +43,6 @@ class MainClass
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Önİşleme İşlemciler Direktifleri](./index.md)
+- [C# Önişlemci yönergeleri](./index.md)
