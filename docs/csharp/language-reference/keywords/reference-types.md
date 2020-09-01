@@ -1,5 +1,6 @@
 ---
-title: Referans türleri - C# Referans
+description: Başvuru türleri-C# başvurusu
+title: Başvuru türleri-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - cs.referencetypes
@@ -8,36 +9,36 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: b2d6cc94c11ca6305a75e9ee489af53ad957201e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a9df3c95d6f5052821be8db5ecf5a8ed99a8ba7
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76744522"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137064"
 ---
-# <a name="reference-types-c-reference"></a>Başvuru türleri (C# Reference)
+# <a name="reference-types-c-reference"></a>Başvuru türleri (C# Başvurusu)
 
-C#'de iki çeşit tür vardır: başvuru türleri ve değer türleri. Başvuru türlerinin değişkenleri başvuruları kendi verilerine (nesneler) depolarken, değer türlerinin değişkenleri kendi verilerini doğrudan içerir. Başvuru türleri ile, iki değişken aynı nesneye başvurabilir; bu nedenle, bir değişken üzerinde yapılan işlemler diğer değişkenin başvurduğu nesneyi etkileyebilir. Değer türleri ile, her değişkenin kendi veri kopyası vardır ve bir değişkendeki işlemlerin diğerini etkilemesi mümkün değildir (in, ref [ref](ref.md) ve [out](out-parameter-modifier.md) out parametre değişkenleri hariç; [bkz.](in-parameter-modifier.md)
+C#'de iki çeşit tür vardır: başvuru türleri ve değer türleri. Başvuru türlerinin değişkenleri başvuruları kendi verilerine (nesneler) depolarken, değer türlerinin değişkenleri kendi verilerini doğrudan içerir. Başvuru türleri ile, iki değişken aynı nesneye başvurabilir; bu nedenle, bir değişken üzerinde yapılan işlemler diğer değişkenin başvurduğu nesneyi etkileyebilir. Değer türleriyle, her değişken kendi verilerinin kopyasına sahiptir ve bir değişkende diğer işlemler (ın, ref ve out parametre değişkenleri hariç) için bir değişken üzerinde işlemler yapılamaz; bkz. [ın](in-parameter-modifier.md), [ref](ref.md) ve [Out](out-parameter-modifier.md) parametre değiştiricisi.
 
  Aşağıdaki anahtar sözcükler, başvuru türlerini bildirmek için kullanılır:
 
-- [Sınıfı](class.md)
+- [sınıfı](class.md)
 
-- [Arabirim](interface.md)
+- [arayüz](interface.md)
 
-- [temsilci](../builtin-types/reference-types.md)
+- [ğini](../builtin-types/reference-types.md)
 
  C# ayrıca aşağıdaki yerleşik başvuru türlerini de sağlar:
 
-- [Dinamik](../builtin-types/reference-types.md)
+- [dynamic](../builtin-types/reference-types.md)
 
-- [Nesne](../builtin-types/reference-types.md)
+- [object](../builtin-types/reference-types.md)
 
-- [Dize](../builtin-types/reference-types.md)
+- [string](../builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# başvurusu](../index.md)
+- [C# anahtar sözcükleri](index.md)
 - [İşaretçi türleri](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Değer türleri](../builtin-types/value-types.md)

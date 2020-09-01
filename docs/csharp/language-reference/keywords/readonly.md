@@ -1,4 +1,5 @@
 ---
+description: ReadOnly anahtar sözcüğü-C# başvurusu
 title: ReadOnly anahtar sözcüğü-C# başvurusu
 ms.date: 04/14/2020
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 66a096e8831f72a2216e8ba5dd9866046504624f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b1bab5af18216fcef2162179493dbbb59e3470cf
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84368627"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137181"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# Başvurusu)
 
@@ -22,7 +23,7 @@ ms.locfileid: "84368627"
   
   `readonly`Oluşturucu çıktıktan sonra bir alan atanamaz. Bu kural, değer türleri ve başvuru türleri için farklı etkilere sahiptir:
   
-  - Değer türleri doğrudan verilerini içerdiğinden, bir değer türü olan bir alan `readonly` sabittir.
+  - Değer türleri doğrudan verilerini içerdiğinden, bir değer türü olan bir alan  `readonly` sabittir.
   - Başvuru türleri, verilerine yönelik bir başvuru içerdiğinden, başvuru türü olan bir alan `readonly` her zaman aynı nesneye başvurmalıdır. Bu nesne sabit değildir. `readonly`Değiştirici, alanın farklı bir başvuru türü örneğiyle değiştirilmesini önler. Ancak, değiştirici alanın örnek verilerinin salt okunurdur alanı aracılığıyla değiştirilmesini engellemez.
 
   > [!WARNING]
@@ -32,7 +33,7 @@ ms.locfileid: "84368627"
 - Yapı türü içindeki bir örnek üye bildiriminde, bir `readonly` örnek üyesinin yapının durumunu değiştirmediğini belirtir. Daha fazla bilgi için [yapı türleri](../builtin-types/struct.md) makalesinin [ `readonly` örnek Üyeler](../builtin-types/struct.md#readonly-instance-members) bölümüne bakın.
 - Bir [ `ref readonly` Yöntem](#ref-readonly-return-example)döndürüldüğünde, `readonly` değiştirici yöntemin bir başvuru döndürdüğünü ve bu başvuruya yazma izni verilmediğini gösterir.
 
-`readonly struct`Ve `ref readonly` bağlamları C# 7,2 ' ye eklenmiştir. `readonly`C# 8,0 ' de yapı üyeleri eklendi
+`readonly struct`Ve `ref readonly` bağlamları C# 7,2 ' ye eklenmiştir. `readonly` C# 8,0 ' de yapı üyeleri eklendi
 
 ## <a name="readonly-field-example"></a>ReadOnly alan örneği
 
