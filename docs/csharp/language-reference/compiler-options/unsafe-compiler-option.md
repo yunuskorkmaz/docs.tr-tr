@@ -1,5 +1,6 @@
 ---
-title: -güvenli değil (C# Derleyici Seçenekleri)
+description: -unsafe (C# derleyici seçenekleri)
+title: -unsafe (C# derleyici seçenekleri)
 ms.date: 04/25/2018
 f1_keywords:
 - /unsafe
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f6d94dd25a020d96430746c4b5e7aefd0f679da
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "65877989"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89140847"
 ---
-# <a name="-unsafe-c-compiler-options"></a>-güvenli değil (C# Derleyici Seçenekleri)
+# <a name="-unsafe-c-compiler-options"></a>-unsafe (C# derleyici seçenekleri)
 
-**-güvenli olmayan** derleyici seçeneği derlemek için [güvenli olmayan](../keywords/unsafe.md) anahtar kelime kullanan kod sağlar.  
+**-Unsafe** derleyici seçeneği, [unsafe](../keywords/unsafe.md) anahtar sözcüğünü kullanan koda derleme için izin verir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -unsafe  
@@ -26,19 +27,19 @@ ms.locfileid: "65877989"
   
 ## <a name="remarks"></a>Açıklamalar
 
-Güvenli olmayan kod hakkında daha fazla bilgi için [Güvenli Olmayan Kod ve İşaretçiler'e](../../programming-guide/unsafe-code-pointers/index.md)bakın.  
+Güvenli olmayan kod hakkında daha fazla bilgi için bkz. [güvenli olmayan kod ve işaretçiler](../../programming-guide/unsafe-code-pointers/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikleri** sayfasını açın.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. Özellik **Oluştur** sayfasını tıklatın.  
+2. **Yapı** özelliği sayfasına tıklayın.  
   
-3. Güvenli **Olmayan Koda İzin Ver** onay kutusunu seçin.  
+3. **Güvenli olmayan koda Izin ver** onay kutusunu seçin.  
   
 ### <a name="to-add-this-option-in-a-csproj-file"></a>Bu seçeneği bir csproj dosyasına eklemek için
 
-Bir proje için .csproj dosyasını açın ve aşağıdaki öğeleri ekleyin:
+Bir proje için. csproj dosyasını açın ve aşağıdaki öğeleri ekleyin:
 
 ```xml
   <PropertyGroup>
@@ -46,11 +47,11 @@ Bir proje için .csproj dosyasını açın ve aşağıdaki öğeleri ekleyin:
   </PropertyGroup>
 ```
 
- Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabilen ler hakkında bilgi için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A> ..  
   
 ## <a name="example"></a>Örnek
 
-Güvenli `in.cs` olmayan mod için derleme:  
+`in.cs`Güvenli olmayan mod için derle:  
   
 ```console  
 csc -unsafe in.cs  
@@ -58,5 +59,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](index.md)
+- [C# derleyici seçenekleri](index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
