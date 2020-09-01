@@ -1,32 +1,33 @@
 ---
-title: değer bağlamsal anahtar kelime - C# Başvuru
+description: value bağlamsal anahtar sözcüğü-C# başvurusu
+title: value bağlamsal anahtar sözcüğü-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - value_CSharpKeyword
 helpviewer_keywords:
 - value keyword [C#]
 ms.assetid: c99d6468-687f-4a46-89b4-a95e1b00bf6d
-ms.openlocfilehash: 84d0c51ddafb59144f4ba8c6e73412642fa8fa28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f72e9f097880d9de725a85a0973001baaefd9a9c
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712903"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89141744"
 ---
-# <a name="value-c-reference"></a><span data-ttu-id="5b284-102">value (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="5b284-102">value (C# Reference)</span></span>
+# <a name="value-c-reference"></a><span data-ttu-id="653a2-103">value (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="653a2-103">value (C# Reference)</span></span>
 
-<span data-ttu-id="5b284-103">Bağlamsal anahtar `value` [kelime, özellik](../../programming-guide/classes-and-structs/properties.md) `set` ve [dizinleyici](../../programming-guide/indexers/index.md) bildirimlerinde erişimde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="5b284-103">The contextual keyword `value` is used in the `set` accessor in [property](../../programming-guide/classes-and-structs/properties.md) and [indexer](../../programming-guide/indexers/index.md) declarations.</span></span> <span data-ttu-id="5b284-104">Bir yöntemin giriş parametresine benzer.</span><span class="sxs-lookup"><span data-stu-id="5b284-104">It is similar to an input parameter of a method.</span></span> <span data-ttu-id="5b284-105">Sözcük, `value` istemci kodunun özellik veya dizinleyiciye atamaya çalıştığı değere başvurur.</span><span class="sxs-lookup"><span data-stu-id="5b284-105">The word `value` references the value that client code is attempting to assign to the property or indexer.</span></span> <span data-ttu-id="5b284-106">Aşağıdaki örnekte, `MyDerivedClass` destek alanına `Name` `name`yeni `value` bir dize atamak için parametre kullanan bir özellik vardır.</span><span class="sxs-lookup"><span data-stu-id="5b284-106">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="5b284-107">İstemci kodu açısından, işlem basit bir atama olarak yazılır.</span><span class="sxs-lookup"><span data-stu-id="5b284-107">From the point of view of client code, the operation is written as a simple assignment.</span></span>
+<span data-ttu-id="653a2-104">Bağlamsal anahtar sözcüğü, `value` `set` [özellik](../../programming-guide/classes-and-structs/properties.md) ve [Dizin Oluşturucu](../../programming-guide/indexers/index.md) bildirimlerinde erişimcisinde kullanılır.</span><span class="sxs-lookup"><span data-stu-id="653a2-104">The contextual keyword `value` is used in the `set` accessor in [property](../../programming-guide/classes-and-structs/properties.md) and [indexer](../../programming-guide/indexers/index.md) declarations.</span></span> <span data-ttu-id="653a2-105">Yöntemin giriş parametresine benzerdir.</span><span class="sxs-lookup"><span data-stu-id="653a2-105">It is similar to an input parameter of a method.</span></span> <span data-ttu-id="653a2-106">Sözcük, `value` istemci kodunun özelliğe veya dizin oluşturucusuna atamaya çalışan değere başvurur.</span><span class="sxs-lookup"><span data-stu-id="653a2-106">The word `value` references the value that client code is attempting to assign to the property or indexer.</span></span> <span data-ttu-id="653a2-107">Aşağıdaki örnekte, `MyDerivedClass` `Name` `value` yedekleme alanına yeni bir dize atamak için parametresini kullanan adlı bir özelliğe sahiptir `name` .</span><span class="sxs-lookup"><span data-stu-id="653a2-107">In the following example, `MyDerivedClass` has a property called `Name` that uses the `value` parameter to assign a new string to the backing field `name`.</span></span> <span data-ttu-id="653a2-108">İstemci kodunun bakış noktasından, işlem basit atama olarak yazılır.</span><span class="sxs-lookup"><span data-stu-id="653a2-108">From the point of view of client code, the operation is written as a simple assignment.</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-<span data-ttu-id="5b284-108">Daha fazla bilgi için [Özellikler](../../programming-guide/classes-and-structs/properties.md) ve [Dizinleyiciler](../../programming-guide/indexers/index.md) makalelerini görün.</span><span class="sxs-lookup"><span data-stu-id="5b284-108">For more information, see the [Properties](../../programming-guide/classes-and-structs/properties.md) and [Indexeres](../../programming-guide/indexers/index.md) articles.</span></span>
+<span data-ttu-id="653a2-109">Daha fazla bilgi için bkz. [Özellikler](../../programming-guide/classes-and-structs/properties.md) ve [Indexeres](../../programming-guide/indexers/index.md) makaleleri.</span><span class="sxs-lookup"><span data-stu-id="653a2-109">For more information, see the [Properties](../../programming-guide/classes-and-structs/properties.md) and [Indexeres](../../programming-guide/indexers/index.md) articles.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="5b284-109">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="5b284-109">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="653a2-110">C# dili belirtimi</span><span class="sxs-lookup"><span data-stu-id="653a2-110">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="5b284-110">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5b284-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="653a2-111">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="653a2-111">See also</span></span>
 
-- [<span data-ttu-id="5b284-111">C# Referans</span><span class="sxs-lookup"><span data-stu-id="5b284-111">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="5b284-112">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="5b284-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="5b284-113">C# Anahtar Kelimeler</span><span class="sxs-lookup"><span data-stu-id="5b284-113">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="653a2-112">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="653a2-112">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="653a2-113">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="653a2-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="653a2-114">C# anahtar sözcükleri</span><span class="sxs-lookup"><span data-stu-id="653a2-114">C# Keywords</span></span>](index.md)
