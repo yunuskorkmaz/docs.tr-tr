@@ -1,4 +1,5 @@
 ---
+description: ':::no-loc text=interface::: (C# Başvurusu)'
 title: arabirim-C# başvurusu
 ms.date: 01/17/2020
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 869f1398ae0af3c7379655aa018a9f4aacb934d7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 24f95e828522f467c519c0c8a7ba9410aa97af4e
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85243977"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134594"
 ---
-# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface":::(C# Başvurusu)
+# <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# Başvurusu)
 
 Arabirim, bir sözleşmeyi tanımlar. [`class`](class.md) [`struct`](../builtin-types/struct.md) Bu sözleşmeyi uygulayan her türlü veya, arabirimde tanımlanan üyelerin bir uygulamasını sağlamalıdır. C# 8,0 ' den başlayarak bir arabirim, Üyeler için varsayılan bir uygulama tanımlayabilir. Ayrıca, [`static`](static.md) ortak işlevlere yönelik tek bir uygulama sağlamak için üyeleri tanımlayabilir.
 

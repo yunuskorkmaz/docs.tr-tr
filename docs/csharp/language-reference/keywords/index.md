@@ -1,4 +1,5 @@
 ---
+description: C# Anahtar Sözcükleri
 title: C# Anahtar Sözcükleri
 ms.date: 03/07/2017
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '@ keyword'
 ms.custom: updateeachrelease
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 3392b92cbd77e5b3f895af99a71f33d2ab43fa15
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: a6658fe7bb97309d35ca2a9177a90a2443f1a3ca
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812321"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134620"
 ---
 # <a name="c-keywords"></a>C# Anahtar Sözcükleri
 
@@ -25,21 +26,21 @@ Anahtar sözcükler, derleyiciye özel anlamlara sahip olan önceden tanımlanm�
   
 |||||  
 |---|---|---|---|  
-|[Soyut](abstract.md)|[gerektiği](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](../builtin-types/bool.md)|  
+|[abstract](abstract.md)|[gerektiği](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](../builtin-types/bool.md)|  
 |[break](break.md)|[bayt](../builtin-types/integral-numeric-types.md)|[harflerini](switch.md)|[yakalaya](try-catch.md)|  
 |[char](../builtin-types/char.md)|[edildikten](checked.md)|[sınıfı](class.md)|[const](const.md)|  
-|[devam](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[varsayılanını](default.md)|[ğini](../builtin-types/reference-types.md)|  
+|[devam](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[default](default.md)|[ğini](../builtin-types/reference-types.md)|  
 |[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[yardımının](../builtin-types/enum.md)|  
 |[olay](event.md)|[anlaşılır](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[yanlýþ](../builtin-types/bool.md)|  
 |[finally](try-finally.md)|[Düzenle](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[:](for.md)|  
-|[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[indirgen](../operators/user-defined-conversion-operators.md)|  
+|[Foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[indirgen](../operators/user-defined-conversion-operators.md)|  
 |['ndaki](in.md)|[int](../builtin-types/integral-numeric-types.md)|[arayüz](interface.md)|[internal](internal.md)|
-|[eklenir](is.md)|[ine](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[uzayına](namespace.md)|
+|[is](is.md)|[ine](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[uzayına](namespace.md)|
 |[Yeni](../operators/new-operator.md)|[null](null.md)|[object](../builtin-types/reference-types.md)|[işlecinde](../operators/operator-overloading.md)|
 |[dışı](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
 |[protected](protected.md)|[genel](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[SByte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
-[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[dizisinde](../builtin-types/reference-types.md)|
+[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
 |[sýný](../builtin-types/struct.md)|[değiştirebilirsiniz](switch.md)|[this](this.md)|[throw](throw.md)|
 |[değeri](../builtin-types/bool.md)|[almaya](try-catch.md)|[typeof](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
 |[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[olmayabilecek](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
@@ -54,7 +55,7 @@ Anahtar sözcükler, derleyiciye özel anlamlara sahip olan önceden tanımlanm�
 |---|---|---|  
 |[add](add.md)|[ek](extern-alias.md)|[ascending](ascending.md)|
 |[async](async.md)|[await](../operators/await.md)|[by](by.md)|
-|[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[eşittir](equals.md)|
+|[descending](descending.md)|[dynamic](../builtin-types/reference-types.md)|[equals](equals.md)|
 |[Kaynak](from-clause.md)|[get](get.md)|[Genel](../operators/namespace-alias-qualifier.md)|
 |[grup](group-clause.md)|[birleştirin](into.md)|[ayrılma](join-clause.md)|
 |[atalım](let-clause.md)|[nameof](../operators/nameof.md)|[NotNull](../../programming-guide/generics/constraints-on-type-parameters.md#notnull-constraint)|

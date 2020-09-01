@@ -1,19 +1,20 @@
 ---
-title: kısmi yöntem - C# Referans
+description: kısmi Yöntem-C# başvurusu
+title: kısmi Yöntem-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - partialmethod_CSharpKeyword
 helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
-ms.openlocfilehash: 62efd8b47fb565316b417a65e1b0fe37e40786c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6c433fd30f6ec51355bdefee90d815783487c1b
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713228"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134386"
 ---
-# <a name="partial-method-c-reference"></a>kısmi yöntem (C# Reference)
+# <a name="partial-method-c-reference"></a>partial yöntemi (C# Başvurusu)
 
 Kısmi bir yöntem, imzasını kısmi türün bir parçasında, uygulamasını ise başka bir parçasında tanımlatır. Kısmi yöntemler sınıf tasarımcılarının, geliştiricilerin uygulamaya veya uygulamamaya karar verebildikleri olay işleyicilerine benzer yöntem kancaları sağlamasına olanak sağlar. Geliştirici bir uygulama sağlamazsa, derleyici derleme zamanında imzayı kaldırır. Aşağıdaki koşullar kısmi yöntemler için geçerlidir:
 
@@ -27,9 +28,9 @@ Aşağıdaki örnek, kısmi bir sınıfın iki parçasında tanımlanan kısmi b
 
 [!code-csharp[csrefKeywordsContextual#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#9)]
 
-Daha fazla bilgi için Kısmi [Sınıflar ve Yöntemler'e](../../programming-guide/classes-and-structs/partial-classes-and-methods.md)bakın.
+Daha fazla bilgi için bkz. [kısmi sınıflar ve Yöntemler](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
-- [kısmi tip](partial-type.md)
+- [C# başvurusu](../index.md)
+- [Kısmi tür](partial-type.md)

@@ -1,5 +1,6 @@
 ---
-title: parametre dizileri için params anahtar kelime - C# referans
+description: Parameter dizileri için params anahtar sözcüğü-C# başvurusu
+title: Parameter dizileri için params anahtar sözcüğü-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -9,30 +10,30 @@ helpviewer_keywords:
 - params keyword [C#]
 - parameter array
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 77d7fd19ff57f80f401191027e2fae95026e1966
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: a2726c725508cd297001aaabddeff414704d1115
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738838"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89134477"
 ---
 # <a name="params-c-reference"></a>params (C# Başvurusu)
 
-Anahtar kelimeyi `params` kullanarak, değişken sayıda bağımsız değişken alan bir [yöntem parametresi](method-parameters.md) belirtebilirsiniz. Parametre türü tek boyutlu bir dizi olmalıdır.
+`params`Anahtar sözcüğünü kullanarak, değişken sayıda bağımsız değişken alan bir [yöntem parametresi](method-parameters.md) belirtebilirsiniz. Parametre türü tek boyutlu bir dizi olmalıdır.
 
-Yöntem bildirimindeki anahtar kelimeden `params` sonra ek parametreye `params` izin verilmez ve yöntem bildiriminde yalnızca bir anahtar kelimeye izin verilir.
+`params`Yöntem bildiriminde anahtar kelimeden sonra ek parametrelere izin verilmez ve `params` bir yöntem bildiriminde yalnızca bir anahtar sözcüğe izin verilir.
 
-Bildirilen `params` parametre türü tek boyutlu bir dizi değilse, derleyici hatası [CS0225](../../misc/cs0225.md) oluşur.
+Parametrenin bildirildiği tür `params` tek boyutlu bir dizi değilse, derleyici hatası [CS0225](../../misc/cs0225.md) oluşur.
 
-Parametresi olan bir `params` yöntemi çağırdığınızda, şu yoldan geçebilirsiniz:
+Bir parametre içeren bir yöntemi çağırdığınızda `params` , şu şekilde geçiş yapabilirsiniz:
 
-- Dizi öğelerinin türüne ait bağımsız değişkenlerin virgülle ayrılmış bir listesi.
-- Belirtilen türdeki bağımsız değişkenler dizisi.
-- Tartışma yok. Bağımsız değişken göndermezseniz, `params` listenin uzunluğu sıfırdır.
+- Dizi öğelerinin türünün bağımsız değişkenlerinin virgülle ayrılmış listesi.
+- Belirtilen türde bir bağımsız değişken dizisi.
+- Bağımsız değişken yok. Bağımsız değişken gönderirseniz, `params` listenin uzunluğu sıfırdır.
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bağımsız değişkenlerin bir `params` parametreye gönderilebildiği çeşitli yolları göstermektedir.
+Aşağıdaki örnekte, bağımsız değişkenlerin bir parametreye gönderilebileceği çeşitli yollar gösterilmektedir `params` .
 
 [!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)]
 
@@ -42,7 +43,7 @@ Aşağıdaki örnek, bağımsız değişkenlerin bir `params` parametreye gönde
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Yöntem Parametreleri](method-parameters.md)
