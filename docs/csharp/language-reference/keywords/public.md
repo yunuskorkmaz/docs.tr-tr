@@ -1,5 +1,6 @@
 ---
-title: ortak anahtar kelime - C# Başvuru
+description: Public anahtar sözcüğü-C# başvurusu
+title: Public anahtar sözcüğü-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - public
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 19906d7fd0f7d41ef9e4cdaf951c77825e0bbead
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 26edaf7538d11d082a4b8863228213c3ebc46937
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713176"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122348"
 ---
 # <a name="public-c-reference"></a>public (C# Başvurusu)
 
-`public` Anahtar kelime, türler ve tür üyeleri için bir erişim değiştiricidir. Genel erişim en izin verilen erişim düzeyidir. Bu örnekte olduğu gibi, herkese açık üyelere erişimkonusunda herhangi bir kısıtlama yoktur:
+`public`Anahtar sözcüğü, türler ve tür üyeleri için bir erişim değiştiricisidir. Genel erişim en çok izin veren erişim düzeyidir. Şu örnekte olduğu gibi genel üyelere erişim konusunda kısıtlama yoktur:
 
 ```csharp
 class SampleClass
@@ -25,31 +26,31 @@ class SampleClass
 }
 ```
 
-Daha fazla bilgi için [Erişim Değiştiriciler](../../programming-guide/classes-and-structs/access-modifiers.md) ve [Erişilebilirlik Düzeyleri'ne](accessibility-levels.md) bakın.
+Daha fazla bilgi için bkz. [erişim değiştiriciler](../../programming-guide/classes-and-structs/access-modifiers.md) ve [Erişilebilirlik düzeyleri](accessibility-levels.md) .
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnekte, iki sınıf `PointTest` bildirilir `MainClass`ve . Kamu üyeleri `x` `y` ve `PointTest` doğrudan `MainClass`erişilir.
+Aşağıdaki örnekte, iki sınıf bildirilmiştir `PointTest` ve `MainClass` . Ortak üyelerine `x` ve ' `y` a `PointTest` doğrudan üzerinden erişilir `MainClass` .
 
 [!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
 
-`public` Erişim düzeyini [özel](private.md) veya [korumalı](protected.md)olarak değiştirirseniz, hata iletisi alırsınız:
+`public`Erişim düzeyini [özel](private.md) veya [korumalı](protected.md)olarak değiştirirseniz şu hata iletisini alırsınız:
 
-'PointTest.y' koruma düzeyi nedeniyle erişilemez.
+' PointTest. y ', koruma düzeyi nedeniyle erişilebilir değil.
 
 ## <a name="c-language-specification"></a>C# dili belirtimi  
 
-Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Bildirilen Erişilebilirlik'e](~/_csharplang/spec/basic-concepts.md#declared-accessibility) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Erişilebilirlik bildirimi](~/_csharplang/spec/basic-concepts.md#declared-accessibility) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Erişim Değiştiricileri](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [Özel](private.md)
+- [private](private.md)
 - [protected](protected.md)
-- [Iç](internal.md)
+- [internal](internal.md)

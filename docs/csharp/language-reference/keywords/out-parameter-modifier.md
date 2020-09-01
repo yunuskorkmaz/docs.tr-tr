@@ -1,19 +1,20 @@
 ---
+description: out parametre değiştiricisi-C# başvurusu
 title: out parametre değiştiricisi-C# başvurusu
 ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 30946c85d2b64ead3f42e03da61108fa5b367779
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 23bf841c002f9be5fdd4e8d8da48e68e9f6e5fcc
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174815"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122439"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out parametresi değiştiricisi (C# Başvurusu)
 
-`out`Anahtar sözcüğü, bağımsız değişkenlerin başvuruya göre geçirilmesine neden olur. Bir değişken olması gereken, biçimsel parametreye bağımsız değişken için bir diğer ad oluşturur. Diğer bir deyişle, parametresindeki tüm işlemler bağımsız değişkende yapılır. [Ref](ref.md) anahtar sözcüğüne benzer, ancak bu, `ref` değişkeninin geçirilmeden önce başlatılması gerekir. Aynı zamanda [ın](in-parameter-modifier.md) anahtar sözcüğüne benzer, ancak `in` çağrılan yöntemin bağımsız değişken değerini değiştirmesine izin vermez. Bir parametre kullanmak için `out` , hem yöntem tanımı hem de çağıran yöntemi, anahtar sözcüğünü açıkça kullanmalıdır `out` . Örnek:  
+`out`Anahtar sözcüğü, bağımsız değişkenlerin başvuruya göre geçirilmesine neden olur. Bir değişken olması gereken, biçimsel parametreye bağımsız değişken için bir diğer ad oluşturur. Diğer bir deyişle, parametresindeki tüm işlemler bağımsız değişkende yapılır. [Ref](ref.md) anahtar sözcüğüne benzer, ancak bu, `ref` değişkeninin geçirilmeden önce başlatılması gerekir. Aynı zamanda [ın](in-parameter-modifier.md) anahtar sözcüğüne benzer, ancak `in` çağrılan yöntemin bağımsız değişken değerini değiştirmesine izin vermez. Bir parametre kullanmak için `out` , hem yöntem tanımı hem de çağıran yöntemi, anahtar sözcüğünü açıkça kullanmalıdır `out` . Örneğin:  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 

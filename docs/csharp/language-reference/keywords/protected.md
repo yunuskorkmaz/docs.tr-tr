@@ -1,5 +1,6 @@
 ---
-title: korumalı anahtar kelime - C# Başvuru
+description: protected anahtar sözcüğü-C# başvurusu
+title: protected anahtar sözcüğü-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - protected
@@ -7,40 +8,40 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: bec619d4f49bd26daa742c18c830909c14948adf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4c18d1f2f45a0a154dccd42736a01874dd1af853
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713189"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89122387"
 ---
 # <a name="protected-c-reference"></a>protected (C# Başvurusu)
 
-Anahtar `protected` kelime bir üye erişim değiştiricidir.
+`protected`Anahtar sözcüğü bir üye erişim değiştiricisidir.
 
- > Bu sayfa `protected` erişimi kapsar. Anahtar `protected` kelime de [`protected internal`](protected-internal.md) bir parçasıdır [`private protected`](private-protected.md) ve erişim değiştiriciler.
+ > Bu sayfa `protected` erişimi içerir. `protected`Anahtar sözcüğü ayrıca [`protected internal`](protected-internal.md) ve [`private protected`](private-protected.md) erişim değiştiricilerin bir parçasıdır.
 
-Korumalı bir üyeye kendi sınıfında ve türetilmiş sınıf örnekleri ne göre erişilebilir.
+Korunan bir üyeye kendi sınıfı içinde ve türetilmiş sınıf örnekleri tarafından erişilebilir.
 
-Diğer erişim `protected` değiştiriciler ile karşılaştırma için [Erişilebilirlik Düzeyleri'ne](accessibility-levels.md)bakın.
+`protected`Diğer erişim değiştiricilerine ilişkin bir karşılaştırma için bkz. [Erişilebilirlik düzeyleri](accessibility-levels.md).
 
 ## <a name="example"></a>Örnek
 
-Taban sınıfın korumalı üyesine, yalnızca türetilmiş sınıf türü nden erişim oluşursa, türetilmiş bir sınıfta erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:
+Bir temel sınıfın korunan üyesine, yalnızca erişim türetilmiş sınıf türü aracılığıyla gerçekleşirse türetilmiş bir sınıfta erişilebilir. Örneğin, aşağıdaki kod kesimini göz önünde bulundurun:
 
 [!code-csharp[csrefKeywordsModifiers#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#11)]
 
-İfade, `a.x = 10` B sınıfının bir örneği değil, main statik yöntemi içinde yapıldığından bir hata oluşturur.
+İfade, `a.x = 10` B sınıfının bir örneği değil ana static yöntemi içinde yapıldığından bir hata oluşturur.
 
-Yapı kalıtsal olamaz, çünkü yapı üyeleri korunamaz.
+Struct devralınamadığı için yapı üyeleri korunamaz.
 
 ## <a name="example"></a>Örnek
 
-Bu örnekte, `DerivedPoint` `Point`sınıf. Bu nedenle, taban sınıfın korumalı üyelerine doğrudan türemiş sınıftan erişebilirsiniz.
+Bu örnekte, sınıfı `DerivedPoint` öğesinden türetilir `Point` . Bu nedenle, doğrudan türetilmiş sınıftan temel sınıfın korunan üyelerine erişebilirsiniz.
 
 [!code-csharp[csrefKeywordsModifiers#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#12)]  
 
-Erişim düzeylerini `x` `y` ve [özel](private.md)düzeylerini değiştirirseniz, derleyici hata iletilerini verecektir:
+Ve erişim düzeylerini `x` `y` [özel](private.md)olarak değiştirirseniz, derleyici hata iletilerini de verebilir:
 
 `'Point.y' is inaccessible due to its protection level.`
 
@@ -48,17 +49,17 @@ Erişim düzeylerini `x` `y` ve [özel](private.md)düzeylerini değiştirirseni
 
 ## <a name="c-language-specification"></a>C# dili belirtimi  
 
-Daha fazla bilgi için [C# Dil Belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Bildirilen Erişilebilirlik'e](~/_csharplang/spec/basic-concepts.md#declared-accessibility) bakın. Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
+Daha fazla bilgi için bkz. [C# dil belirtiminde](/dotnet/csharp/language-reference/language-specification/introduction) [Erişilebilirlik bildirimi](~/_csharplang/spec/basic-concepts.md#declared-accessibility) . Dil belirtimi, C# sözdizimi ve kullanımı için kesin bir kaynaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
-- [C# Anahtar Kelimeler](index.md)
+- [C# anahtar sözcükleri](index.md)
 - [Erişim Değiştiricileri](access-modifiers.md)
 - [Erişilebilirlik Düzeyleri](accessibility-levels.md)
 - [Değiştiriciler](index.md)
-- [Kamu](public.md)
-- [Özel](private.md)
-- [Iç](internal.md)
-- [Dahili sanal anahtar kelimeler için güvenlik endişeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [genel](public.md)
+- [private](private.md)
+- [internal](internal.md)
+- [İç sanal anahtar sözcüklere yönelik güvenlik sorunları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
