@@ -1,42 +1,43 @@
 ---
-title: '#pragma - C# Referans'
+description: '#pragma-C# başvurusu'
+title: '#pragma-C# başvurusu'
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 3bd62364aeae0f21715711324655ef7d00d88afc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97d7a786c83a8be21f7fd38873061dba0f9278ae
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712461"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89137961"
 ---
-# <a name="pragma-c-reference"></a><span data-ttu-id="f2ba7-102">#pragma (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="f2ba7-102">#pragma (C# Reference)</span></span>
-<span data-ttu-id="f2ba7-103">`#pragma`göründüğü dosyanın derleyicisi için özel talimatlar verir.</span><span class="sxs-lookup"><span data-stu-id="f2ba7-103">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="f2ba7-104">Yönergeler derleyici tarafından desteklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="f2ba7-104">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="f2ba7-105">Başka bir deyişle, `#pragma` özel ön işleme yönergeleri oluşturmak için kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="f2ba7-105">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="f2ba7-106">Microsoft C# derleyicisi `#pragma` aşağıdaki iki yönergeyi destekler:</span><span class="sxs-lookup"><span data-stu-id="f2ba7-106">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  
+# <a name="pragma-c-reference"></a><span data-ttu-id="1f359-103">#pragma (C# Başvurusu)</span><span class="sxs-lookup"><span data-stu-id="1f359-103">#pragma (C# Reference)</span></span>
+<span data-ttu-id="1f359-104">`#pragma` Derleyicinin göründüğü dosyanın derlenmesi için özel yönergeler sağlar.</span><span class="sxs-lookup"><span data-stu-id="1f359-104">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="1f359-105">Yönergeler derleyici tarafından desteklenmelidir.</span><span class="sxs-lookup"><span data-stu-id="1f359-105">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="1f359-106">Diğer bir deyişle, `#pragma` özel ön işleme yönergeleri oluşturmak için kullanamazsınız.</span><span class="sxs-lookup"><span data-stu-id="1f359-106">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="1f359-107">Microsoft C# derleyicisi aşağıdaki iki `#pragma` yönergeleri destekler:</span><span class="sxs-lookup"><span data-stu-id="1f359-107">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  
   
- [<span data-ttu-id="f2ba7-107">#pragma uyarısı</span><span class="sxs-lookup"><span data-stu-id="f2ba7-107">#pragma warning</span></span>](./preprocessor-pragma-warning.md)  
+ [<span data-ttu-id="1f359-108">#pragma uyarısı</span><span class="sxs-lookup"><span data-stu-id="1f359-108">#pragma warning</span></span>](./preprocessor-pragma-warning.md)  
   
- [<span data-ttu-id="f2ba7-108">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="f2ba7-108">#pragma checksum</span></span>](./preprocessor-pragma-checksum.md)  
+ [<span data-ttu-id="1f359-109">#pragma sağlama toplamı</span><span class="sxs-lookup"><span data-stu-id="1f359-109">#pragma checksum</span></span>](./preprocessor-pragma-checksum.md)  
   
-## <a name="syntax"></a><span data-ttu-id="f2ba7-109">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="f2ba7-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f359-110">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="1f359-110">Syntax</span></span>  
   
 ```csharp
 #pragma pragma-name pragma-arguments  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f2ba7-110">Parametreler</span><span class="sxs-lookup"><span data-stu-id="f2ba7-110">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1f359-111">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1f359-111">Parameters</span></span>  
  `pragma-name`  
- <span data-ttu-id="f2ba7-111">Tanınan bir pragmanın adı.</span><span class="sxs-lookup"><span data-stu-id="f2ba7-111">The name of a recognized pragma.</span></span>  
+ <span data-ttu-id="1f359-112">Tanınan bir pragma adı.</span><span class="sxs-lookup"><span data-stu-id="1f359-112">The name of a recognized pragma.</span></span>  
   
  `pragma-arguments`  
- <span data-ttu-id="f2ba7-112">Pragma'ya özgü argümanlar.</span><span class="sxs-lookup"><span data-stu-id="f2ba7-112">Pragma-specific arguments.</span></span>  
+ <span data-ttu-id="1f359-113">Pragma 'a özgü bağımsız değişkenler.</span><span class="sxs-lookup"><span data-stu-id="1f359-113">Pragma-specific arguments.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f2ba7-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f2ba7-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1f359-114">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1f359-114">See also</span></span>
 
-- [<span data-ttu-id="f2ba7-114">C# Referans</span><span class="sxs-lookup"><span data-stu-id="f2ba7-114">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="f2ba7-115">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="f2ba7-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="f2ba7-116">C# Önİşleme İşlemciler Direktifleri</span><span class="sxs-lookup"><span data-stu-id="f2ba7-116">C# Preprocessor Directives</span></span>](./index.md)
-- [<span data-ttu-id="f2ba7-117">#pragma uyarısı</span><span class="sxs-lookup"><span data-stu-id="f2ba7-117">#pragma warning</span></span>](./preprocessor-pragma-warning.md)
-- [<span data-ttu-id="f2ba7-118">#pragma checksum</span><span class="sxs-lookup"><span data-stu-id="f2ba7-118">#pragma checksum</span></span>](./preprocessor-pragma-checksum.md)
+- [<span data-ttu-id="1f359-115">C# başvurusu</span><span class="sxs-lookup"><span data-stu-id="1f359-115">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="1f359-116">C# Programlama Kılavuzu</span><span class="sxs-lookup"><span data-stu-id="1f359-116">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="1f359-117">C# Önişlemci yönergeleri</span><span class="sxs-lookup"><span data-stu-id="1f359-117">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="1f359-118">#pragma uyarısı</span><span class="sxs-lookup"><span data-stu-id="1f359-118">#pragma warning</span></span>](./preprocessor-pragma-warning.md)
+- [<span data-ttu-id="1f359-119">#pragma sağlama toplamı</span><span class="sxs-lookup"><span data-stu-id="1f359-119">#pragma checksum</span></span>](./preprocessor-pragma-checksum.md)
