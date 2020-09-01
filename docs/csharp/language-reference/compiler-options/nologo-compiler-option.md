@@ -1,5 +1,6 @@
 ---
-title: -nologo (C# Derleyici Seçenekleri)
+description: -nologo (C# derleyici seçenekleri)
+title: -nologo (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /nologo
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: 84fc7f7448309a0800ea05f03f0c5039a6b4f807
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5107563b5133c183dca7626281ad11df9d09a8d8
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606648"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125221"
 ---
-# <a name="-nologo-c-compiler-options"></a>-nologo (C# Derleyici Seçenekleri)
-**-nologo** seçeneği, derleyici başlatıldığında oturum açma başlığının görüntülenmesini ve derleme sırasında bilgilendirme iletilerinin görüntülenmesini bastırır.  
+# <a name="-nologo-c-compiler-options"></a>-nologo (C# derleyici seçenekleri)
+**-Nologo** seçeneği, derleyici başlatıldığında ve derleme sırasında bilgilendirici iletileri görüntülerken oturum açma başlığının görüntülenmesini önler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -nologo  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu seçenek geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+ Bu seçenek geliştirme ortamının içinden kullanılamaz; yalnızca komut satırından derlerken kullanılabilir.  
   
- Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,5 +1,6 @@
 ---
-title: -define (C# Derleyici Seçenekleri)
+description: -define (C# derleyici seçenekleri)
+title: -define (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /define
@@ -11,51 +12,51 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 4a3622b6acc8ebe9c590b01b67074ae59396fc34
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b7a1c6e92d2c60ce289f29044774c3aa42ca84f
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173750"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125884"
 ---
-# <a name="-define-c-compiler-options"></a>-define (C# Derleyici Seçenekleri)
-**-tanımla** seçeneği, `name` programınızı tüm kaynak kodu dosyalarında bir sembol olarak tanımlar.  
+# <a name="-define-c-compiler-options"></a>-define (C# derleyici seçenekleri)
+**-Define** seçeneği, `name` programınızın tüm kaynak kodu dosyalarında sembol olarak tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -define:name[;name2]  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `name`, `name2`  
  Tanımlamak istediğiniz bir veya daha fazla sembolün adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-define** seçeneği, derleyici seçeneğinin projedeki tüm dosyalar için etkin olması dışında [#define](../preprocessor-directives/preprocessor-define.md) bir önişlemci yönergesi kullanmakla aynı etkiye sahiptir. Kaynak dosyadaki [#undef](../preprocessor-directives/preprocessor-undef.md) bir yönerge tanımı kaldırana kadar bir sembol kaynak dosyada tanımlanmaya devam eder. -define seçeneğini kullandığınızda, `#undef` bir dosyadaki bir yönergenin projedeki diğer kaynak kodu dosyaları üzerinde hiçbir etkisi yoktur.  
+ **-Define** seçeneği, derleme seçeneğinin projedeki tüm dosyalar için geçerli olması dışında, [#define](../preprocessor-directives/preprocessor-define.md) Önişlemci yönergesinin kullanılmasıyla aynı etkiye sahiptir. Kaynak dosyadaki bir [#undef](../preprocessor-directives/preprocessor-undef.md) yönergesi tanımı kaldırana kadar bir sembol kaynak dosyasında tanımlı kalır. -Define seçeneğini kullandığınızda, `#undef` bir dosyadaki bir yönergenin projedeki diğer kaynak kodu dosyaları üzerinde hiçbir etkisi olmaz.  
   
- Kaynak dosyalarını koşullu olarak derlemek için bu seçenek tarafından oluşturulan #if [,](../preprocessor-directives/preprocessor-if.md) [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md)ve [#endif](../preprocessor-directives/preprocessor-endif.md) sembolleri kullanabilirsiniz.  
+ Kaynak dosyaları koşullu olarak derlemek için bu seçenek tarafından oluşturulan sembolleri [#if](../preprocessor-directives/preprocessor-if.md), [#else](../preprocessor-directives/preprocessor-else.md), [#elif](../preprocessor-directives/preprocessor-elif.md)ve [#endif](../preprocessor-directives/preprocessor-endif.md) kullanabilirsiniz.  
   
- **-d** **-define**kısa şeklidir.  
+ **-d** , **-define**öğesinin kısa biçimidir.  
   
- Sembol adlarını ayırmak için bir yarı nokta nokta veya virgül kullanarak **-define** ile birden çok sembol tanımlayabilirsiniz. Örnek:  
+ Sembol adlarını ayırmak için noktalı virgül veya virgül kullanarak, **-define** ile birden çok sembol tanımlayabilirsiniz. Örneğin:  
   
 ```console  
 -define:DEBUG;TUESDAY  
 ```  
   
- C# derleyicisinin kendisi kaynak kodunuzda kullanabileceğiniz hiçbir sembol veya makro tanımlamaz; tüm sembol tanımları kullanıcı tanımlı olmalıdır.  
+ C# derleyicisi, kaynak kodunuzda kullanabileceğiniz hiçbir sembol veya makroyu tanımlar; Tüm sembol tanımlarının Kullanıcı tanımlı olması gerekir.  
   
 > [!NOTE]
-> C#, `#define` C++gibi dillerde olduğu gibi bir sembole değer verilmesine izin vermez. Örneğin, `#define` makro oluşturmak veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamanız gerekiyorsa, `enum` bir değişken kullanın. C++ tarzı bir makro oluşturmak istiyorsanız, genel olarak alternatifleri göz önünde bulundurun. Makrolar hataya açık olduğu için, C# kullanımlarına izin verir ancak daha güvenli alternatifler sunar.  
+> C#, `#define` C++ gibi dillerde bir simgeye değer verilmesini sağlar. Örneğin, `#define` bir makro oluşturmak veya bir sabit tanımlamak için kullanılamaz. Bir sabit tanımlamanız gerekiyorsa, bir `enum` değişken kullanın. C++ stili makro oluşturmak isterseniz, genel türler gibi alternatifleri göz önünde bulundurun. Makrolar dikkatle hataya açık olduğundan, C# kullanılmasına Izin vermez, ancak daha güvenli alternatifler sağlar.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Bu derleyici seçeneğini Visual Studio geliştirme ortamında ayarlamak için  
   
-1. Projenin **Özellikleri** sayfasını açın.  
+1. Projenin **Özellikler** sayfasını açın.  
   
-2. **Yapı** sekmesinde, **Koşullu derleme sembolleri** kutusunda tanımlanacak simgeyi yazın. Örneğin, aşağıdaki kod örneğini kullanıyorsanız, metin `xx` kutusuna yazmanız gereken bir yazı nız vardır.  
+2. **Derleme** sekmesinde, **koşullu derleme sembolleri** kutusunda tanımlanacak simgeyi yazın. Örneğin, aşağıdaki kod örneğini kullanıyorsanız, `xx` metin kutusuna yazmanız yeterlidir.  
   
- Bu derleyici seçeneğini programlı olarak nasıl ayarlayıştırılabildiğini öğrenmek için bkz. <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>  
+ Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A> ..  
   
 ## <a name="example"></a>Örnek  
   
@@ -80,5 +81,5 @@ public class Test
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,4 +1,5 @@
 ---
+description: Alfabetik Listelenmiş C# Derleyici Seçenekleri
 title: Alfabetik Listelenmiş C# Derleyici Seçenekleri
 ms.date: 06/04/2020
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: eb3a591ba7b58e187eb03e65a3da6dfb47c9475c
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 6e1351eb9989abeaadebcb755ea9268fcff40a11
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473987"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125338"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Alfabetik Listelenmiş C# Derleyici Seçenekleri
 
@@ -77,7 +78,7 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 |[-Kaynak](resource-compiler-option.md)|Belirtilen kaynağı katıştırır.|
 |RuleSet\<file>|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|Yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir.|
-|[-target](target-compiler-option.md)|Aşağıdaki seçeneklerden birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: Module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md), [-target: winmdobj](target-winmdobj-compiler-option.md).|
+|[-target](target-compiler-option.md)|Aşağıdaki seçeneklerden birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: Module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md),  [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |[-unsafe](unsafe-compiler-option.md)|[Güvenli olmayan](../keywords/unsafe.md) koda izin verir.|
 |[-utf8output](utf8output-compiler-option.md)|Derleyici iletilerini UTF-8 kodlamasında çıkarır.|
 |-sürüm|Derleyici sürüm numarasını ve çıkışı görüntüleyin.|
@@ -92,4 +93,4 @@ Aşağıdaki derleyici seçenekleri alfabetik olarak sıralanır. Kategorik bir 
 - [C# derleyici seçenekleri](index.md)
 - [Kategorilere Göre Listelenen C# Derleyici Seçenekleri](listed-by-category.md)
 - [Visual Studio Komut Satırı için ortam değişkenlerini ayarlama](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [\<compiler>Dosyalarında](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<compiler> Dosyalarında](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

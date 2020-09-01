@@ -1,5 +1,6 @@
 ---
-title: özet - C# Referans
+description: abstract-C# başvurusu
+title: abstract-C# başvurusu
 ms.date: 07/20/2015
 f1_keywords:
 - abstract
@@ -7,40 +8,40 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 96e8bbce2e67c316d5cd1cd78e3e2506dabead25
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 095c4dea838aff4f14833d78fb10a2f831cf5173
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713858"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89127210"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# Başvurusu)
-Değiştirici, `abstract` değiştirilen şeyin eksik veya eksik bir uygulaması olduğunu gösterir. Soyut değiştirici sınıflar, yöntemler, özellikler, dizinleyiciler ve olaylar la kullanılabilir. Bir `abstract` sınıfın yalnızca kendi başına anlık değil, diğer sınıfların taban sınıfı olması amaçlandığını belirtmek için sınıf bildiriminde değiştiriyi kullanın. Soyut olarak işaretlenmiş üyeler, soyut sınıftan türeyen soyut olmayan sınıflar tarafından uygulanmalıdır.
+`abstract`Değiştirici, değiştirilmekte olan bir uygulamanın eksik veya tamamlanmamış bir uygulamasına sahip olduğunu gösterir. Soyut değiştirici sınıflar, Yöntemler, özellikler, Dizin oluşturucular ve olaylar ile kullanılabilir. Bir `abstract` sınıfın yalnızca diğer sınıfların temel sınıfı olduğunu göstermek için bir sınıf bildiriminde değiştiricisini kullanın, kendi kendine örneği değildir. Soyut olarak işaretlenen Üyeler soyut sınıftan türetilen soyut olmayan sınıflar tarafından uygulanmalıdır.
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, `Square` sınıf aşağıdakilerden `GetArea` türediği için `Shape`bir uygulama sağlamalıdır:  
+ Bu örnekte, sınıfının `Square` türettiği için bir uygulamasını sağlaması gerekir `GetArea` `Shape` :  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
  Soyut sınıflar aşağıdaki özelliklere sahiptir:  
   
-- Soyut bir sınıf anında alınamaz.  
+- Soyut bir sınıf örneği oluşturulamıyor.  
   
-- Soyut bir sınıf soyut yöntemler ve erişimciler içerebilir.  
+- Soyut bir sınıf, Soyut yöntemler ve erişimciler içerebilir.  
   
-- İki değiştiricinin zıt anlamları [olduğundan, soyut](./sealed.md) bir sınıfı mühürlü değiştirici ile değiştirmek mümkün değildir. `sealed` Değiştirici bir sınıfın devralınmasını `abstract` engeller ve değiştirici bir sınıfın devralınmasını gerektirir.  
+- İki değiştiricinin ters anlamları olduğundan, [soyut değiştirici içeren](./sealed.md) bir soyut sınıfı değiştirmek mümkün değildir. `sealed`Değiştirici bir sınıfın devralınmasını engeller ve `abstract` değiştirici bir sınıfın devralınmasını gerektirir.  
   
-- Soyut bir sınıftan türetilen soyut olmayan bir sınıf, devralınan tüm soyut yöntemlerin ve erişimcilerin gerçek uygulamalarını içermelidir.  
+- Soyut bir sınıftan türetilmiş soyut olmayan bir sınıf, devralınan tüm soyut yöntemlerin ve erişimcilerinin gerçek uygulamalarını içermelidir.  
   
- Yöntemin `abstract` veya özelliğin uygulama içermediğini belirtmek için bir yöntem veya özellik bildiriminde değiştiriyi kullanın.  
+ Yöntemin veya `abstract` özelliğin uygulama içermediğini belirtmek için yöntem veya özellik bildiriminde değiştirici kullanın.  
   
  Soyut yöntemler aşağıdaki özelliklere sahiptir:  
   
-- Soyut bir yöntem dolaylı olarak sanal bir yöntemdir.  
+- Soyut bir yöntem örtük olarak sanal bir yöntemdir.  
   
 - Soyut yöntem bildirimlerine yalnızca soyut sınıflarda izin verilir.  
   
-- Soyut bir yöntem bildirimi gerçek bir uygulama sağlamadığından, yöntem gövdesi yoktur; yöntem bildirimi sadece bir semicolon ile sona erer ve imzadan sonra kıvırcık ayraç ({ }) yoktur. Örnek:  
+- Soyut bir yöntem bildirimi gerçek uygulama sunmadığından, hiçbir Yöntem gövdesi yoktur; Yöntem bildirimi yalnızca noktalı virgül ile sona erer ve imzadan sonra küme ayracı ({}) yoktur. Örneğin:  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -48,43 +49,43 @@ Değiştirici, `abstract` değiştirilen şeyin eksik veya eksik bir uygulaması
   
      Uygulama, soyut olmayan bir sınıfın üyesi olan bir yöntem [geçersiz kılma](./override.md)tarafından sağlanır.  
   
-- Statik [veya](./static.md) [sanal](./virtual.md) değiştiriciler soyut bir yöntem bildiriminde kullanmak bir hatadır.  
+- Soyut bir yöntem bildiriminde [statik](./static.md) veya [sanal](./virtual.md) değiştiricilerin kullanılması hatadır.  
   
- Soyut özellikler, bildirim ve çağırma sözdiziminde yapılan farklılıklar dışında soyut yöntemler gibi olur.  
+ Özet özellikler, bildirim ve çağırma söz dizimi farklılıkları dışında soyut yöntemler gibi davranır.  
   
-- `abstract` Statik bir özellik üzerinde değiştirici kullanmak bir hatadır.  
+- `abstract`Değiştirici statik bir özellik üzerinde kullanılması hatadır.  
   
-- Soyut bir devralınan [özellik, geçersiz kılma değiştiricisini](./override.md) kullanan bir özellik bildirimi ekleyerek türetilmiş bir sınıfta geçersiz kılınabilir.  
+- Bir soyut devralınmış özellik, [geçersiz kılma](./override.md) değiştiricisini kullanan bir özellik bildirimi eklenerek, türetilmiş bir sınıfta geçersiz kılınabilir.  
   
- Soyut sınıflar hakkında daha fazla bilgi için [Özet ve Mühürlü Sınıflar ve Sınıf Üyeleri'ne](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)bakın.  
+ Soyut sınıflar hakkında daha fazla bilgi için bkz. [soyut ve korumalı sınıflar ve sınıf üyeleri](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
  Soyut bir sınıf tüm arabirim üyeleri için uygulama sağlamalıdır.  
   
- Arabirim uygulayan soyut bir sınıf, arabirim yöntemlerini soyut yöntemlerle eşleyebilir. Örnek:  
+ Arabirim uygulayan bir soyut sınıf, arabirim yöntemlerini soyut yöntemlerle eşleyebilir. Örneğin:  
   
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>Örnek  
- Bu örnekte, `DerivedClass` sınıf soyut bir `BaseClass`sınıftan türetilmiştir. Soyut sınıf soyut bir `AbstractMethod`yöntem ve iki `X` soyut `Y`özellikleri içerir ve .  
+ Bu örnekte, sınıfı `DerivedClass` soyut bir sınıftan türetilir `BaseClass` . Soyut sınıf soyut bir yöntem, `AbstractMethod` ve iki soyut özellik içerir `X` ve `Y` .  
   
 [!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
   
- Önceki örnekte, aşağıdaki gibi bir ifade kullanarak soyut sınıfı anında kullanmaya çalışırsanız:  
+ Yukarıdaki örnekte, aşağıdaki gibi bir ifade kullanarak soyut sınıfı örneğini oluşturmaya çalışırsanız:  
   
 ```csharp
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
-Derleyicinin soyut sınıf 'BaseClass' bir örnek oluşturamayacağını söyleyerek bir hata alırsınız.  
+Derleyicinin ' BaseClass ' soyut sınıfının bir örneğini oluşturkullanılamadığını belirten bir hata alırsınız.  
   
 ## <a name="c-language-specification"></a>C# Dil Belirtimi  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Referans](../index.md)
+- [C# başvurusu](../index.md)
 - [C# Programlama Kılavuzu](../../programming-guide/index.md)
 - [Değiştiriciler](index.md)
 - [virtual](./virtual.md)
-- [Geçersiz kılma](./override.md)
-- [C# Anahtar Kelimeler](./index.md)
+- [override](./override.md)
+- [C# anahtar sözcükleri](./index.md)

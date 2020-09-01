@@ -1,5 +1,6 @@
 ---
-title: -deterministic (C# Derleyici Seçenekleri)
+description: -belirleyici (C# derleyici seçenekleri)
+title: -belirleyici (C# derleyici seçenekleri)
 ms.date: 04/12/2018
 f1_keywords:
 - /deterministic
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d0bcc2957e5a666c21cdc2ce61e74fc90fe3530
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73455177"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125832"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Derleyicinin, bayt için bayt çıktısı aynı girişler için derlemeler arasında aynı olan bir derleme oluşturmasına neden olur.
+Derleyicinin bayt çıkışı, aynı girişlerin derlemeleri arasında özdeş olan bir derleme üretmesine neden olur.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```console
 -deterministic
@@ -26,33 +27,33 @@ Derleyicinin, bayt için bayt çıktısı aynı girişler için derlemeler aras�
 
 ## <a name="remarks"></a>Açıklamalar
 
-Derleyici rasgele sayılardan oluşturulan bir zaman damgası ve GUID eklediğiiçin, varsayılan olarak, belirli bir giriş kümesinden derleyici çıktısı benzersizdir. Giriş aynı `-deterministic` kaldığı sürece ikili içeriği derlemeler arasında aynı olan *deterministik*bir derleme oluşturmak için bu seçeneği kullanırsınız.
+Varsayılan olarak, belirli bir giriş kümesinden Derleyici çıktısı benzersizdir, çünkü derleyici bir zaman damgası ve rastgele sayıdan oluşturulan bir GUID ekliyor. `-deterministic`Değer aynı kaldığı sürece, bir *belirleyici derleme*oluşturmak için bu seçeneği kullanın.
 
-Derleyici determinizm amacıyla aşağıdaki girdileri dikkate alır:
+Derleyici, belirlemeleri için aşağıdaki girişleri dikkate alır:
 
 - Komut satırı parametrelerinin sırası.
-- Derleyicinin .rsp yanıt dosyasının içeriği.
-- Derleyicinin kullanılan kesin sürümü ve başvurulan derlemeleri.
+- Derleyicinin. rsp yanıt dosyasının içeriği.
+- Kullanılan derleyicinin kesin sürümü ve başvurulan derlemeleri.
 - Geçerli dizin yolu.
-- Aşağıdakiler dahil olmak üzere, tüm dosyaların ikili içeriği doğrudan veya dolaylı olarak derleyiciye açıkça iletilir:
-  - Kaynak dosyaları
+- Açıkça derleyiciye doğrudan veya dolaylı olarak geçirilen tüm dosyaların ikili içeriği:
+  - Kaynak dosyalar
   - Başvurulan derlemeler
   - Başvurulan modüller
   - Kaynaklar
-  - Güçlü ad anahtarı dosyası
-  - @ yanıt dosyaları
+  - Tanımlayıcı ad anahtar dosyası
+  - @ Yanıt dosyaları
   - Çözümleyiciler
-  - Kural kümeleri
+  - RuleSets
   - Çözümleyiciler tarafından kullanılabilecek ek dosyalar
-- Geçerli kültür (tanılama ve özel durum iletilerinin üretildiği dil için).
-- Kodlama belirtilmemişse varsayılan kodlama (veya geçerli kod sayfası).
-- Derleyicinin arama yollarında dosyaların varlığı, varlığı ve içeriği (örneğin, tarafından `-lib` veya `-recurse`tarafından belirtilir).
+- Geçerli kültür (tanılama ve özel durum iletilerinin oluşturulduğu dil için).
+- Kodlama belirtilmemişse, varsayılan kodlama (veya geçerli kod sayfası).
+- Derleyicinin arama yollarındaki dosyaların varlığı, var olmayan ve içeriği (örneğin, `-lib` veya ile `-recurse` ).
 - Derleyicinin çalıştırıldığı CLR platformu.
-- Çözümleyici `%LIBPATH%`bağımlılık yüklemesini etkileyebilecek değeri.
+- `%LIBPATH%`, Çözümleyici bağımlılığı yüklemeyi etkileyebilecek değeri.
 
-Kaynaklar genel kullanıma sunulduğunda, ikilinin güvenilir bir kaynaktan derlenip derlenmediğini belirlemek için deterministik derleme kullanılabilir. Ayrıca, ikili gereksinimdeki değişikliklere bağlı olan yapı adımlarının yürütülmesi gerekip gerekmediğini belirlemek için sürekli bir yapı sisteminde de yararlı olabilir.
+Kaynaklar herkese açık olduğunda, bir ikilinin güvenilir bir kaynaktan derlenip derlenmediğini oluşturmak için belirleyici derleme kullanılabilir. Ayrıca, bir ikiliye yapılan değişikliklere bağımlı derleme adımlarının yürütülmesi gerekip gerekmediğini belirlemek için sürekli bir derleme sisteminde de yararlı olabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,5 +1,6 @@
 ---
-title: -moduleassemblyname (C# Derleyici Seçeneği)
+description: -moduleassemblyname (C# derleyici seçeneği)
+title: -moduleassemblyname (C# derleyici seçeneği)
 ms.date: 07/20/2015
 f1_keywords:
 - /moduleassemblyname
@@ -8,45 +9,45 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 1477eeb0f2e16e18cb86009739bc8e7d9dee2ac0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d669a1687abe496b921d5670b9149b0e933b2d95
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173724"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125260"
 ---
-# <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# Derleyici Seçeneği)
-Ortak olmayan türleri bir .netmodule erişebileceği bir derleme belirtir.  
+# <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C# derleyici seçeneği)
+Genel olmayan türleri bir. netmodule 'nin erişebileceği bir derlemeyi belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -moduleassemblyname:assembly_name  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `assembly_name`  
- .netmodülünün erişebileceği genel olmayan türleri olan derlemenin adı.  
+ Genel olmayan türleri. netmodule 'nin erişebileceği derlemenin adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-moduleassemblyname** bir .netmodule inşa ederken kullanılmalıdır ve aşağıdaki koşullar doğru:  
+ **-moduleassemblyname** bir. netmodule oluştururken ve aşağıdaki koşulların doğru olduğu durumlarda kullanılmalıdır:  
   
-- .netmodülü, varolan bir derlemede genel olmayan türlere erişmeye ihtiyaç duyar.  
+- . Netmodule, mevcut bir derlemede ortak olmayan türlere erişim gerektirir.  
   
-- .netmodülünün oluşturulacağı derlemenin adını biliyorsunuz.  
+- . Netmodule 'nin derolacağı derlemenin adını bilirsiniz.  
   
-- Varolan derleme, .net modülünün oluşturulacağı derlemeye arkadaş derleme erişimi verdi.  
+- Mevcut bütünleştirilmiş kod,. netmodule 'nin derolacağı derlemeye arkadaş derleme erişimi verdi.  
   
- .netmodule oluşturma hakkında daha fazla bilgi için bkz: [-target:module (C# Derleyici Seçenekleri)](./target-module-compiler-option.md).  
+ . Netmodule oluşturma hakkında daha fazla bilgi için bkz. [-target: Module (C# derleyici seçenekleri)](./target-module-compiler-option.md).  
   
- Arkadaş derlemeleri hakkında daha fazla bilgi için [Arkadaş Derlemeleri'ne](../../../standard/assembly/friend.md)bakın.  
+ Friend derlemeleri hakkında daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend.md).  
   
- Bu seçenek geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
+ Bu seçenek geliştirme ortamının içinden kullanılamaz; yalnızca komut satırından derlerken kullanılabilir.  
   
- Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, özel türü olan bir derleme oluşturur ve arkadaş derlemesi csman_an_assembly adlı bir derlemeye erişim sağlar.  
+ Bu örnek, bir özel türü olan ve csman_an_assembly adlı bir derlemeye arkadaş derleme erişimi veren bir derleme oluşturur.  
   
 ```csharp  
 // moduleassemblyname_1.cs  
@@ -66,7 +67,7 @@ class An_Internal_Class
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, derleme moduleassemblyname_1.dll'de genel olmayan bir türe erişen bir .netmodülü oluşturur. Bu .netmodule'ın csman_an_assembly adlı bir derlemede oluşturulacağını bilerek, .netmodülün csman_an_assembly arkadaş derlemesi erişimi sağlayan bir derlemede genel olmayan türlere erişmesine izin vererek **-moduleassemblyname'yi**belirtebiliriz.  
+ Bu örnek, moduleassemblyname_1.dll derlemede ortak olmayan bir türe erişen. netmodule 'yi oluşturur. Bu. netmodule csman_an_assembly adlı bir derlemede derlenip,. netmodule 'nin csman_an_assembly arkadaş derleme erişimi veren bir derlemede genel olmayan türlere erişmesine izin vererek **-moduleassemblyname**belirtemez.  
   
 ```csharp  
 // moduleassemblyname_2.cs  
@@ -80,7 +81,7 @@ class B {
 ```  
   
 ## <a name="example"></a>Örnek  
- Bu kod örneği, daha önce oluşturulmuş derleme ve .netmodule başvurarak, csman_an_assembly derleme oluşturur.  
+ Bu kod örneği, daha önce oluşturulmuş derleme ve. netmodule 'e başvurarak bütünleştirilmiş kod csman_an_assembly oluşturur.  
   
 ```csharp  
 // csman_an_assembly.cs  
@@ -93,9 +94,9 @@ class A {
 }  
 ```  
   
-**An_Internal_Class.Test adlı**
+**An_Internal_Class. test çağrıldı**
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)

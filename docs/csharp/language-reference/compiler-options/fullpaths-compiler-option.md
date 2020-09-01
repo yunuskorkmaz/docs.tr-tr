@@ -1,5 +1,6 @@
 ---
-title: -fullpaths (C# Derleyici Seçenekleri)
+description: -fullpaths (C# derleyici seçenekleri)
+title: -fullpaths (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /fullpaths
@@ -10,27 +11,27 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 3bb4027f1c479bbaedda889d72712acb587b5713
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f1200c78e8dc22d6e04e2ee6a42906433708c31
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606862"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89125702"
 ---
-# <a name="-fullpaths-c-compiler-options"></a>-fullpaths (C# Derleyici Seçenekleri)
-**-fullpaths** seçeneği, derleme hatalarını ve uyarıları listelerken derleyicinin dosyaya giden tam yolu belirtilmesine neden olur.  
+# <a name="-fullpaths-c-compiler-options"></a>-fullpaths (C# derleyici seçenekleri)
+**-Fullpaths** seçeneği derleyicinin derleme hatalarını ve uyarılarını listelerken dosyanın tam yolunu belirtmesini sağlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -fullpaths  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
- Varsayılan olarak, derlemeden kaynaklanan hatalar ve uyarılar, hatanın bulunduğu dosyanın adını belirtir. **-fullpaths** seçeneği derleyicinin dosyaya giden tam yolu belirtilmesine neden olur.  
+ Varsayılan olarak, derlemeden kaynaklanan hatalar ve uyarılar, bir hatanın bulunduğu dosyanın adını belirtir. **-Fullpaths** seçeneği derleyicinin dosyanın tam yolunu belirtmesini sağlar.  
   
- Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
+- [C# derleyici seçenekleri](./index.md)

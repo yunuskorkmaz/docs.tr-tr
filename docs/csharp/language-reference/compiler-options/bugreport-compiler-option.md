@@ -1,5 +1,6 @@
 ---
-title: -hata raporu (C# Derleyici Seçenekleri)
+description: -bugreport (C# derleyici seçenekleri)
+title: -bugreport (C# derleyici seçenekleri)
 ms.date: 07/20/2015
 f1_keywords:
 - /bugreport
@@ -8,53 +9,53 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c358b2dda400f6077ffb5ba1dfc8e6e1127fa52
+ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69603074"
+ms.lasthandoff: 08/30/2020
+ms.locfileid: "89126001"
 ---
-# <a name="-bugreport-c-compiler-options"></a>-hata raporu (C# Derleyici Seçenekleri)
-Hata ayıklama bilgilerinin daha sonraki çözümleme için bir dosyaya konulması gerektiğini belirtir.  
+# <a name="-bugreport-c-compiler-options"></a>-bugreport (C# derleyici seçenekleri)
+Hata ayıklama bilgilerinin daha sonra analiz edilmek üzere bir dosyaya yerleştirilmesi gerektiğini belirtir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```console  
 -bugreport:file  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `file`  
- Hata raporunuzu içermek istediğiniz dosyanın adı.  
+ Hata raporunuzu içermesini istediğiniz dosyanın adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
- **-hata raporu** seçeneği, aşağıdaki bilgilerin yerleştirilmesini `file`belirtir:  
+ **-Bugreport** seçeneği aşağıdaki bilgilerin yerleştirilmesi gerektiğini belirtir `file` :  
   
-- Derlemedeki tüm kaynak kod dosyalarının bir kopyası.  
+- Derlemedeki tüm kaynak kodu dosyalarının bir kopyası.  
   
-- Derlemede kullanılan derleyici seçeneklerinin listesi.  
+- Derlemede kullanılan derleyici seçeneklerinin bir listesi.  
   
-- Derleyiciniz, çalışma süreniz ve işletim sisteminiz hakkındaki sürüm bilgileri.  
+- Derleyici, çalışma zamanı ve işletim sistemi ile ilgili sürüm bilgileri.  
   
-- .NET Framework ve SDK ile birlikte sevk edilen derlemeler hariç, hexadecimal basamak olarak kaydedilen başvurulan derlemeler ve modüller.  
+- Başvurulan derlemeler ve modüller, .NET Framework ve SDK ile birlikte gelen derlemeler hariç, onaltılık basamaklar olarak kaydedilir.  
   
-- Varsa derleyici çıktısı.  
+- Varsa derleyici çıkışı.  
   
-- Sizden istenecek sorunun açıklaması.  
+- Probleme için sizden sorulacak bir açıklama.  
   
-- Sorunun nasıl çözülmesi gerektiğini düşündüğünüze ve sizden isteneceğinin açıklaması.  
+- Sorunun düzeltilmesi hakkında bir açıklama ve sizden istenir.  
   
- Bu seçenek **-errorreport:prompt** veya **-errorreport:send**ile kullanılırsa, dosyadaki bilgiler Microsoft Corporation'a gönderilir.  
+ Bu seçenek **-errorreport: Prompt** veya **-errorreport: Send**ile kullanılırsa, dosyadaki bilgiler Microsoft Corporation 'a gönderilir.  
   
- Tüm kaynak kodu dosyalarının bir kopyası `file`yerleştirilecektir çünkü, şüpheli kod kusurunu mümkün olan en kısa programda çoğaltmak isteyebilirsiniz.  
+ Tüm kaynak kodu dosyalarının bir kopyası içine yerleştirilecek `file` , olası en kısa programda şüpheli kod hatasını yeniden oluşturmak isteyebilirsiniz.  
   
- Bu derleyici seçeneği Visual Studio'da kullanılamaz ve programlı olarak değiştirilemez.  
+ Bu derleyici seçeneği Visual Studio 'da kullanılamaz ve program aracılığıyla değiştirilemez.  
   
- Oluşturulan dosyanın içeriğinin, yanlışlıkla bilgi ifşası ile sonuçlabilen kaynak kodu ortaya çıkardığına dikkat edin.  
+ Oluşturulan dosyanın içeriğinin, yanlışlıkla bilginin açığa çıkmasına neden olabilecek kaynak kodu kullanıma sunduğuna dikkat edin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [C# Derleyici Seçenekleri](./index.md)
-- [-hata raporu (C# Derleyici Seçenekleri)](./errorreport-compiler-option.md)
+- [C# derleyici seçenekleri](./index.md)
+- [-errorreport (C# derleyici seçenekleri)](./errorreport-compiler-option.md)
 - [Proje ve Çözüm Özelliklerini Yönetme](/visualstudio/ide/managing-project-and-solution-properties)
