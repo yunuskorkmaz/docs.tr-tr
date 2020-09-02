@@ -11,12 +11,12 @@ metadata:
   helpviewer_keywords:
   - .NET Framework guide
   ms.date: 04/22/2020
-  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 47781bbc5b1b1a2f4c0bc44929c5bb29fe3e7978
+  ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135912"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89379180"
 landingContent:
 - title: .NET Framework hakkında bilgi edinin
   linkLists:
@@ -74,24 +74,16 @@ landingContent:
     links:
     - text: Windows hizmetlerini yükleme ve kaldırma
       url: windows-services/how-to-install-and-uninstall-services.md
-- title: Windows Forms uygulamalar oluşturma
+- title: Masaüstü uygulamaları oluşturma
   linkLists:
   - linkListType: overview
     links:
-    - text: Windows Forms genel bakış
-      url: winforms/index.md
-  - linkListType: tutorial
-    links:
-    - text: Windows Form Tasarımcısı’nı kullanmaya başlama
-      url: /visualstudio/designers/walkthrough-windows-forms-designer
-    - text: Komut satırından Windows Forms uygulaması oluşturma
-      url: winforms/how-to-create-a-windows-forms-application-from-the-command-line.md
-  - linkListType: how-to-guide
-    links:
-    - text: ComboBox, ListBox ve CheckedListBox denetimlerinden öğe ekleme ve kaldırma
-      url: winforms/controls/add-and-remove-items-from-a-wf-combobox.md
-    - text: Denetimlere iş parçacığına güvenli çağrılar yapma
-      url: winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md
+    - text: Masaüstü Kılavuzu tanıtımı
+      url: /dotnet/desktop/
+    - text: .NET Framework WPF
+      url: wpf/index.md
+    - text: .NET Framework Windows Forms
+      url: /dotnet/desktop/winforms/?view=netframework-4-8
 - title: WPF uygulamaları oluşturma
   linkLists:
   - linkListType: overview
