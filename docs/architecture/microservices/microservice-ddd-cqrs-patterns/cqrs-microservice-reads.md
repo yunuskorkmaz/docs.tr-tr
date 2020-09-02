@@ -2,12 +2,12 @@
 title: CQRS mikro hizmetinde okuma/sorgulama işlemleri uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | CQRS 'nin sorgular tarafının, Davber kullanarak eShopOnContainers 'daki sıralama mikro hizmeti üzerinde uygulanmasını anlayın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 71db95e6fc17475693183be9c6854884cd331ce1
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 41932122326cf4c49b9c9e2c344d2ac17da7466b
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614415"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358901"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS mikro hizmetinde okuma/sorgu uygulama
 
@@ -33,7 +33,7 @@ Sorgular, istemci uygulamaları için gereken verileri elde etmek üzere gerçek
 
 Döndürülen veriler (ViewModel), veritabanındaki birden çok varlık veya tablodan ya da işlem alanı için etki alanı modelinde tanımlanan birden çok toplama arasında veri birleştirme sonucu olabilir. Bu durumda, etki alanı modelinden bağımsız sorgular oluştururken, toplamalar sınırları ve kısıtlamaları yok sayılır ve ihtiyacınız olan herhangi bir tabloyu ve sütunu sorgulayabilirsiniz. Bu yaklaşım, sorguları oluşturan veya güncelleştiren geliştiriciler için harika esneklik ve verimlilik sağlar.
 
-Viewmodeller sınıflarda tanımlanmış statik türler olabilir. Ya da geliştiriciler için çok çevik olan, gerçekleştirilen sorgulara göre dinamik olarak oluşturulabilir (sıralama mikro hizmetinde uygulandığı gibi).
+Viewmodeller sınıflarda tanımlanmış statik türler olabilir (sıralama mikro hizmetinde uygulandığı gibi). Ya da geliştiriciler için çok çevik olan gerçekleştirilen sorgulara göre dinamik olarak oluşturulabilir.
 
 ## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Sorguları gerçekleştirmek için mikro ORM olarak kaber kullanma
 

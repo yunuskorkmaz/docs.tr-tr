@@ -2,12 +2,12 @@
 title: Temel sınıf kitaplığı bölünmesi değişiklikleri
 description: Çekirdek .NET kitaplıklarında son değişiklikleri listeler.
 ms.date: 07/27/2020
-ms.openlocfilehash: e0ebc054e0abccfe934b505a727060653fe313cd
-ms.sourcegitcommit: ef86c24c418439b8bb5e3e7d64bbdbe5e11c3e9c
+ms.openlocfilehash: 8b8fb9b88edf4f1e5f83ef7c21f1712af40479fd
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88720221"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359148"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Çekirdek .NET kitaplıklarının parçalara bölünmesi
 
@@ -17,6 +17,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [Donanım iç tarafından desteklenen denetimler iç içe türler için farklılık gösterebilir](#hardware-intrinsic-issupported-checks-may-differ-for-nested-types) | 5.0 |
 | [Başvuru derlemelerindeki parametre adları değiştirildi](#parameter-names-changed-in-reference-assemblies) | 5.0 |
 | [ASCII olmayan karakterler içeren URI yolları UNIX üzerinde doğru şekilde ayrıştırır](#uri-paths-with-non-ascii-characters-parse-correctly-on-unix) | 5.0 |
 | [UNIX üzerinde UNC yollarının URI tanıması](#uri-recognition-of-unc-paths-on-unix) | 5.0 |
@@ -32,24 +33,28 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [SSE ve SSE2 CompareGreaterThan yöntemleri NaN girdilerini doğru bir şekilde işler](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
 | [CounterSet. CreateCounterSetInstance şimdi örnek zaten varsa InvalidOperationException oluşturur](#countersetcreatecountersetinstance-now-throws-invalidoperationexception-if-instance-already-exists) | 5.0 |
 | [Microsoft. DotNet. PlatformAbstractions paketi kaldırıldı](#microsoftdotnetplatformabstractions-package-removed) | 5.0 |
-| [Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil](#apis-that-report-version-now-report-product-and-not-file-version) | 3,0 |
-| [Özel EncoderFallbackBuffer örnekleri özyinelemeli olarak geri dönemez](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3,0 |
-| [Kayan nokta biçimlendirme ve ayrıştırma davranışı değişiklikleri](#floating-point-formatting-and-parsing-behavior-changed) | 3,0 |
-| [Kayan nokta ayrıştırma işlemleri artık başarısız olmaz veya bir OverflowException oluşturmaz](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3,0 |
-| [InvalidAsynchronousStateException başka bir derlemeye taşındı](#invalidasynchronousstateexception-moved-to-another-assembly) | 3,0 |
-| [Hatalı biçimlendirilmiş UTF-8 bayt dizilerini değiştirme Unicode yönergelerine uyar](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3,0 |
-| [TypeDescriptionProviderAttribute başka bir derlemeye taşındı](#typedescriptionproviderattribute-moved-to-another-assembly) | 3,0 |
-| [ZipArchiveEntry artık tutarsız giriş boyutlarına sahip arşivleri işliyor](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3,0 |
-| [FieldInfo. SetValue statik, yalnızca init alanları için özel durum oluşturur](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3,0 |
+| [Sürümü şimdi rapor eden API 'Ler rapor ürünü ve dosya sürümü değil](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [Özel EncoderFallbackBuffer örnekleri özyinelemeli olarak geri dönemez](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [Kayan nokta biçimlendirme ve ayrıştırma davranışı değişiklikleri](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [Kayan nokta ayrıştırma işlemleri artık başarısız olmaz veya bir OverflowException oluşturmaz](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
+| [InvalidAsynchronousStateException başka bir derlemeye taşındı](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [Hatalı biçimlendirilmiş UTF-8 bayt dizilerini değiştirme Unicode yönergelerine uyar](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
+| [TypeDescriptionProviderAttribute başka bir derlemeye taşındı](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [ZipArchiveEntry artık tutarsız giriş boyutlarına sahip arşivleri işliyor](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
+| [FieldInfo. SetValue statik, yalnızca init alanları için özel durum oluşturur](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
 | [Yerleşik yapı türlerine eklenen özel alanlar](#private-fields-added-to-built-in-struct-types) | 2.1 |
 | [UseShellExecute varsayılan değerindeki değişiklik](#change-in-default-value-of-useshellexecute) | 2.1 |
 | [MacOS üzerinde OpenSSL sürümleri](#openssl-versions-on-macos) | 2.1 |
-| [Fılesystemınfo. Attributes tarafından oluşturulan UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1,0 |
-| [Bozuk işlem durumu özel durumlarını işleme desteklenmiyor](#handling-corrupted-state-exceptions-is-not-supported) | 1,0 |
-| [UriBuilder özellikleri artık önde gelen karakterlerin önüne alınmaz](#uribuilder-properties-no-longer-prepend-leading-characters) | 1,0 |
-| [Process. StartInfo, başlatmadığınız işlemler için InvalidOperationException 'yi oluşturur](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1,0 |
+| [Fılesystemınfo. Attributes tarafından oluşturulan UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
+| [Bozuk işlem durumu özel durumlarını işleme desteklenmiyor](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
+| [UriBuilder özellikleri artık önde gelen karakterlerin önüne alınmaz](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
+| [Process. StartInfo, başlatmadığınız işlemler için InvalidOperationException 'yi oluşturur](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [hardware-instrinsics-issupported-checks](../../../includes/core-changes/corefx/5.0/hardware-instrinsics-issupported-checks.md)]
+
+***
 
 [!INCLUDE [reference-assembly-parameter-names](../../../includes/core-changes/corefx/5.0/reference-assembly-parameter-names.md)]
 
