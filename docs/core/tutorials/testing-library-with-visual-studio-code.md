@@ -2,12 +2,12 @@
 title: Visual Studio Code kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 description: .NET Core sınıf kitaplığı için bir birim test projesi oluşturun. .NET Core sınıf kitaplığının birim testleriyle düzgün çalıştığını doğrulayın.
 ms.date: 06/08/2020
-ms.openlocfilehash: b5f394b5dea2bf0b4af6e8b119df3fa0ec113dd3
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: f49974e1b918424ae5b5d7f3969f52c371e37154
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811723"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359174"
 ---
 # <a name="tutorial-test-a-net-standard-class-library-with-net-core-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Core ile .NET Standard sınıf kitaplığı test etme
 
@@ -15,7 +15,7 @@ Bu öğreticide, bir çözüme test projesi ekleyerek birim testinin nasıl otom
 
 ## <a name="prerequisites"></a>Ön koşullar
 
-- Bu öğretici, [Visual Studio Code içinde .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
+- Bu öğretici, [Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)bölümünde oluşturduğunuz çözümle birlikte kullanılır.
 
 ## <a name="create-a-unit-test-project"></a>Birim testi projesi oluşturma
 
@@ -23,7 +23,7 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
 
 1. Visual Studio Code’u başlatma.
 
-1. `ClassLibraryProjects` [Visual Studio 'da .NET Standard kitaplığı oluşturma](library-with-visual-studio.md)bölümünde oluşturduğunuz çözümü açın.
+1. `ClassLibraryProjects` [Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma](library-with-visual-studio-code.md)bölümünde oluşturduğunuz çözümü açın.
 
 1. "StringLibraryTest" adlı bir birim testi projesi oluşturun.
 
@@ -67,7 +67,7 @@ Birim testleri geliştirme ve yayımlama sırasında otomatik yazılım testi sa
 
 Test projesinin sınıfla çalışması için projeye `StringLibrary` bir başvuru ekleyin `StringLibraryTest` `StringLibrary` .
 
-1. Aşağıdaki komutu çalıştırın:
+1. Şu komutu çalıştırın:
 
    ```dotnetcli
    dotnet add StringLibraryTest/StringLibraryTest.csproj reference StringLibrary/StringLibrary.csproj
@@ -193,4 +193,4 @@ Bir kitaplığı bir NuGet paketi olarak yayımlarsanız, diğerleri onu yükley
 Bir kitaplığın paket olarak dağıtılması gerekmez. Onu kullanan bir konsol uygulamasıyla paketlenmiş olabilir. Bir konsol uygulamasını yayımlamayı öğrenmek için bu serideki önceki öğreticiye bakın:
 
 > [!div class="nextstepaction"]
-> [Visual Studio Code bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-code.md)
+> [Visual Studio Code kullanarak bir .NET Core konsol uygulaması yayımlama](publishing-with-visual-studio-code.md)

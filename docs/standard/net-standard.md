@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: b52d69756d85e3e422b798c3ac7d53de3b538b8d
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: e96a03ca55682d3e30bc13fb20a8e443105301fc
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167412"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359317"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -92,7 +92,7 @@ Belirtim tekil değildir, ancak artımlı olarak büyüyen ve önceden oluşturu
 
 .NET Standard herhangi bir .NET uygulamasına özgü değildir ve bu çalışma zamanlarının herhangi birinin sürüm oluşturma şemasıyla eşleşmez.
 
-Uygulamalardan birine eklenen API 'Ler (örneğin, .NET Framework, .NET Core ve mono), özellikle de temel olarak düşünüldüler halinde, belirtime eklenecek aday olarak kabul edilebilir. [.NET Standard yeni sürümleri](https://github.com/dotnet/standard/blob/master/docs/versions.md) , .NET uygulama sürümleri temel alınarak oluşturulur ve bu sayede yeni apı 'LERI .NET Standard PCL 'den hedeflemenize olanak tanır. Sürüm oluşturma mekanizması, [.NET Core sürümü oluşturma](../core/versions/index.md)bölümünde daha ayrıntılı olarak açıklanmıştır.
+Herhangi bir .NET uygulamasına eklenen API 'Ler (örneğin, .NET Framework, .NET Core ve mono), özellikle de temel olarak düşünüldüler, belirtime eklenecek aday olarak kabul edilebilir. [.NET Standard yeni sürümleri](https://github.com/dotnet/standard/blob/master/docs/versions.md) , .NET uygulama sürümleri temel alınarak oluşturulur ve bu sayede yeni API 'leri bir .NET Standard taşınabilir sınıf KITAPLıĞıNDAN (PCL) hedeflemenize olanak sağlanır. Sürüm oluşturma mekanizması, [.NET Core sürümü oluşturma](../core/versions/index.md)bölümünde daha ayrıntılı olarak açıklanmıştır.
 
 Kullanım için .NET Standard sürümü oluşturma önemlidir. .NET Standard sürüm verildiğinde, aynı veya daha düşük sürümü hedefleyen kitaplıkları kullanabilirsiniz. Aşağıdaki yaklaşım, .NET Standard hedefleme öğesine özgü .NET Standard PCLs kullanma iş akışını açıklar.
 
@@ -141,23 +141,23 @@ Fark
 
 Profil tabanlı PCL uyumluluğu, [Microsoft. NETCore. Portable. Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet paketi tarafından sağlanır. Profil tabanlı PCLs 'Leri içeren NuGet paketlerine başvururken bu bağımlılık gereklidir.
 
-Profil tabanlı PCLs 'ler `netstandard` , genellikle paketlenmiş profil tabanlı PCLS 'dan daha kolay tüketilecektir. `netstandard`Paketleme, mevcut kullanıcılarla uyumludur.
+Profil tabanlı PCLs 'ler `netstandard` , genellikle paketlenmiş profil tabanlı PCLS 'dan daha kolay tüketilecektir. `netstandard` Paketleme, mevcut kullanıcılarla uyumludur.
 
 .NET Standard ile uyumlu PCL profillerinin kümesini görebilirsiniz:
 
 | PCL profili | .NET Standard | PCL platformları
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4,5, Windows 8
-| Profile31   | 1,0           | Windows 8.1 Windows Phone Silverlight 8,1
+| Profile31   | 1.0           | Windows 8.1 Windows Phone Silverlight 8,1
 | Profile32   | 1.2           | Windows 8.1, Windows Phone 8,1
 | Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
-| Profile49   | 1,0           | .NET Framework 4,5, Windows Phone Silverlight 8
-| Profile78   | 1,0           | .NET Framework 4,5, Windows 8 Windows Phone Silverlight 8
-| Profile84   | 1,0           | Windows Phone 8,1, Windows Phone Silverlight 8,1
+| Profile49   | 1.0           | .NET Framework 4,5, Windows Phone Silverlight 8
+| Profile78   | 1.0           | .NET Framework 4,5, Windows 8 Windows Phone Silverlight 8
+| Profile84   | 1.0           | Windows Phone 8,1, Windows Phone Silverlight 8,1
 | Profile111  | 1.1           | .NET Framework 4,5, Windows 8, Windows Phone 8,1
 | Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8,1
-| Profile157  | 1,0           | Windows 8.1, Windows Phone 8,1, Windows Phone Silverlight 8,1
-| Profile259  | 1,0           | .NET Framework 4,5, Windows 8, Windows Phone 8,1, Windows Phone Silverlight 8
+| Profile157  | 1.0           | Windows 8.1, Windows Phone 8,1, Windows Phone Silverlight 8,1
+| Profile259  | 1.0           | .NET Framework 4,5, Windows 8, Windows Phone 8,1, Windows Phone Silverlight 8
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

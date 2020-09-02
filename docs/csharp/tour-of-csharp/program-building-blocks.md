@@ -2,12 +2,12 @@
 title: C# programlarının yapı taşları "
 description: C# üyeleri, ifadeler ve deyimler hakkında bilgi edinin. Türler yazdığınız üyeleri içerir. Bu Üyeler deyimlerden ve ifadelerden oluşturulur.
 ms.date: 08/06/2020
-ms.openlocfilehash: 142fe7b5a3424a8925638bfb4e4437392347f4c6
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 3bdc6a4da6ae76148c7d1d5cb8ccb65d91fda61a
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268146"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358823"
 ---
 # <a name="program-building-blocks"></a>Program yapı taşları
 
@@ -137,7 +137,7 @@ Bir örnek yöntemi bildirimi bir değiştirici içerdiğinde `virtual` , yönte
 
 Bir sanal yöntem çağrıldığında, çağrının gerçekleştiği örneğin *çalışma zamanı türü* , çağrılacak gerçek Yöntem uygulamasını belirler. Sanal olmayan bir yöntem çağrısında, örneğin *derleme zamanı türü* belirleme faktörü olur.
 
-Bir sanal yöntem, türetilmiş bir sınıfta *geçersiz kılınabilir* . Bir örnek yöntemi bildirimi bir geçersiz kılma değiştiricisi içerdiğinde, yöntemi aynı imzaya sahip devralınmış bir sanal yöntemi geçersiz kılar. Aa sanal yöntem bildirimi yeni bir yöntem sunar. Bir geçersiz kılma yöntemi bildirimi, bu yöntemin yeni bir uygulamasını sağlayarak, var olan bir devralınmış sanal yöntemi uzmanlık eder.
+Bir sanal yöntem, türetilmiş bir sınıfta *geçersiz kılınabilir* . Bir örnek yöntemi bildirimi bir geçersiz kılma değiştiricisi içerdiğinde, yöntemi aynı imzaya sahip devralınmış bir sanal yöntemi geçersiz kılar. Bir sanal yöntem bildirimi yeni bir yöntem sunar. Bir geçersiz kılma yöntemi bildirimi, bu yöntemin yeni bir uygulamasını sağlayarak, var olan bir devralınmış sanal yöntemi uzmanlık eder.
 
 *Soyut bir yöntem* , uygulama içermeyen bir sanal yöntemdir. Soyut bir yöntem `abstract` değiştiriciyle tanımlanmış ve yalnızca bir soyut sınıfta izin verilir. Soyut olmayan her türetilmiş sınıfta bir soyut yöntem geçersiz kılınmalıdır.
 
@@ -192,8 +192,6 @@ Diğer üyelerin aksine, örnek oluşturucular devralınmaz. Bir sınıf, sını
 Bir özellik, bildirim bir get erişimcisi ile sona erene veya sınırlayıcılar arasında yazılmış bir set erişimcisi ya da bir `{` noktalı virgülle bitmesi dışında, bir alan gibi tanımlanır `}` . Hem get erişimcisine hem de bir set erişimcisine sahip olan bir özellik *okuma-yazma özelliğidir*, yalnızca bir get erişimcisine sahip olan bir özellik *salt okunurdur*ve yalnızca bir set erişimcisi olan bir özellik yalnızca bir salt *yazılır özelliktir*.
 
 Get erişimcisi, özellik türünün dönüş değeri olan parametresiz bir yönteme karşılık gelir. Bir set erişimcisi, value adlı tek parametreli ve dönüş türü olmayan bir yönteme karşılık gelir. Get erişimcisi özelliğin değerini hesaplar. Set erişimcisi, özelliği için yeni bir değer sağlar. Özellik bir atamanın hedefi ya da veya işleneni, `++` `--` set erişimcisi çağrılır. Özelliğin başvurduğu diğer durumlarda, get erişimcisi çağrılır.
-
- Bir atamaya bir atama hedefi olarak veya + + veya--, işleneni olarak başvurulduğunda, yeni değer sağlayan bir bağımsız değişkenle çağrılır.
 
 `MyList<T>`Sınıfı iki özellik bildirir `Count` ve `Capacity` sırasıyla salt okunurdur ve okuma-yazma olur. Aşağıdaki kod, bu özelliklerin kullanım örneğidir:
 

@@ -2,12 +2,12 @@
 title: Ocelot ile API Ağ Geçitlerini uygulama
 description: Ocelot ile API ağ geçitleri uygulamayı ve kapsayıcı tabanlı bir ortamda Ocelot 'yi kullanmayı öğrenin.
 ms.date: 03/02/2020
-ms.openlocfilehash: f103c1e394a3f829489b61fd17af749798b02f70
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3611ffa7a163ff632ca854fafb910fcd3e228306
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86864104"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358992"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot ile API ağ geçitleri uygulama
 
@@ -15,6 +15,7 @@ ms.locfileid: "86864104"
 > Başvuru mikro hizmet uygulaması [Eshoponcontainers](https://github.com/dotnet-architecture/eShopOnContainers) Şu anda, önceki başvurulan [OCELOT](https://github.com/ThreeMammals/Ocelot)yerine API ağ geçidini uygulamak üzere [Envoy](https://www.envoyproxy.io/) tarafından sunulan özellikleri kullanıyor.
 > Bu tasarımı, eShopOnContainers 'da uygulanan yeni gRPC Hizmetleri arası iletişimler için gerekli olan WebSocket protokolüne yönelik yerleşik destek nedeniyle, bu tasarımın seçimi yaptık.
 > Ancak, bu bölümü kılavuzda tutduk, böylece üretim sınıfı senaryolar için uygun olan basit, yetenekli ve hafif bir API ağ geçidi olarak Ocelot 'yi düşünebilirsiniz.
+> Ayrıca, en son Ocelot sürümü JSON şemasında bir son değişiklik içerir. Ocelot < v 16.0.0 kullanmayı düşünün veya ReRoutes yerine anahtar yollarını kullanın.
 
 ## <a name="architect-and-design-your-api-gateways"></a>API ağ geçitlerini mimarinizi ve tasarlama
 
@@ -154,7 +155,7 @@ EShopOnContainers 'da, API Gateway uygulamasının basit bir ASP.NET Core WebHos
 
 **Şekil 6-32**. EShopOnContainers 'da OcelotApiGw temel projesi
 
-Bu ASP.NET Core WebHost projesi temel olarak iki basit dosya ile oluşturulmuştur: `Program.cs` ve `Startup.cs` .
+Bu ASP.NET Core WebHost projesi temel olarak iki basit dosya ile oluşturulmuştur:  `Program.cs` ve `Startup.cs` .
 
 Program.cs yalnızca, BuildWebHost ASP.NET Core oluşturmak ve yapılandırmak için gereklidir.
 
@@ -544,13 +545,13 @@ Web uygulamalarının önündeki Kubernetes 'de bir giriş Nginx katmanına sahi
 
 Kubernetes girişi, genellikle API ağ geçidi kapsamından çıkan Web uygulamaları dahil olmak üzere, uygulamaya yönelik tüm trafik için ters proxy görevi görür. EShopOnContainers 'ı Kubernetes 'e dağıttığınızda, temel olarak yalnızca birkaç hizmet veya uç _nokta Ile URL_'lerde aşağıdaki postdüzeltmelerin listesini sunar:
 
-- `/`istemci SPA Web uygulaması için
-- `/webmvc`istemci MVC web uygulaması için
-- `/webstatus`durum/healthdenetimleri gösteren istemci Web uygulaması için
-- `/webshoppingapigw`Web BFF ve alışveriş iş süreçlerini
-- `/webmarketingapigw`Web BFF ve pazarlama iş işlemlerinde
-- `/mobileshoppingapigw`Mobil BFF ve alışveriş iş işlemlerinde
-- `/mobilemarketingapigw`Mobil BFF ve pazarlama iş işlemlerinde
+- `/` istemci SPA Web uygulaması için
+- `/webmvc` istemci MVC web uygulaması için
+- `/webstatus` durum/healthdenetimleri gösteren istemci Web uygulaması için
+- `/webshoppingapigw` Web BFF ve alışveriş iş süreçlerini
+- `/webmarketingapigw` Web BFF ve pazarlama iş işlemlerinde
+- `/mobileshoppingapigw` Mobil BFF ve alışveriş iş işlemlerinde
+- `/mobilemarketingapigw` Mobil BFF ve pazarlama iş işlemlerinde
 
 Kubernetes 'e dağıtım yaparken, her Ocelot API ağ geçidi, API ağ geçitlerini çalıştıran her _Pod_ için farklı bir "configuration.json" dosyası kullanıyor. "configuration.json" dosyaları, ' Ocelot ' adlı bir Kubernetes _yapılandırma eşlemesi_ temel alınarak oluşturulan bir birimi bağlama tarafından sağlanır (başlangıçta deploy.ps1 betiği ile). Her kapsayıcı, ilişkili yapılandırma dosyasını kapsayıcısının adlı kapsayıcı klasörüne bağlar `/app/configuration` .
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Basic yenilikler
+title: Yenilikler
 ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: a9bac04a7839796229a2e1c61771ca32573f8fcd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e9ab745a60cd9eb646bee57a9a6838c30add77c5
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374518"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359213"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic yenilikler
 
@@ -45,7 +45,7 @@ Visual Basic/Visual Studio 2013 \
 .NET Compiler Platform teknoloji önizlemeleri ("Roslyn")
 
 Visual Basic/Visual Studio 2012 \
-`Async`ve `await` anahtar sözcükler, yineleyiciler, çağıran bilgi öznitelikleri
+`Async` ve `await` anahtar sözcükler, yineleyiciler, çağıran bilgi öznitelikleri
 
 Visual Basic, Visual Studio 2010 \
 Otomatik uygulanan özellikler, koleksiyon başlatıcıları, örtük satır devamlılığı, dinamik, genel ortak/Contra varyansı, genel ad alanı erişimi
@@ -64,7 +64,7 @@ Visual Basic .NET ilk sürümü
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
 
-Visual Basic 16,0, .NET Core 'a Visual Basic çalışma zamanının (Microsoft. VisualBasic. dll) özelliklerinin daha fazlasını sağlamaya odaklanır ve Visual Basic .NET Core 'a odaklanmış ilk sürümüdür. Visual Basic çalışma zamanının pek çok bölümü WinForms bağımlıdır ve bu, Visual Basic daha sonraki bir sürümüne eklenecektir.
+Visual Basic 16,0, .NET Core 'a Visual Basic çalışma zamanının (microsoft.visualbasic.dll) özelliklerinin daha fazlasını sağlamaya odaklanır ve Visual Basic .NET Core 'a odaklanmış ilk sürümüdür. Visual Basic çalışma zamanının pek çok bölümü WinForms bağımlıdır ve bu, Visual Basic daha sonraki bir sürümüne eklenecektir.
 
 **Deyimler içinde daha fazla yerde izin verilen açıklamalar**
 
@@ -124,7 +124,7 @@ Visual Basic 15,3 ve önceki sürümlerde, bir yöntem bağımsız değişkenler
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[`Private Protected`üye erişim değiştiricisi](../language-reference/modifiers/private-protected.md)
+[`Private Protected` üye erişim değiştiricisi](../language-reference/modifiers/private-protected.md)
 
 Bu yeni anahtar sözcük birleşimi, kapsayan sınıf içindeki tüm üyeler tarafından erişilebilen bir üyeyi ve kapsayan sınıftan türetilmiş türleri, ancak yalnızca kapsayan derlemede bulunduklarında tanımlar. Yapılar devralınamadığı `Private Protected` için yalnızca bir sınıfın üyelerine uygulanabilir.
 
@@ -158,7 +158,7 @@ Visual Basic komut satırı derleyicisi artık başvuru derlemelerinin çıkış
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[**Demetler**](../programming-guide/language-features/data-types/tuples.md)
+[**Tanımlama grupları**](../programming-guide/language-features/data-types/tuples.md)
 
 Tanımlama grupları, en yaygın olarak tek bir yöntem çağrısından birden çok değer döndürmek için kullanılan hafif bir veri yapısıdır. Genellikle, bir yöntemden birden çok değer döndürmek için aşağıdakilerden birini yapmanız gerekir:
 
@@ -220,7 +220,7 @@ Dizeler oluşturmak için dize ilişkilendirme ifadeleri kullanabilirsiniz.  Ent
 
 [Çok satırlı dize sabit değerleri](../programming-guide/language-features/strings/string-basics.md)
 
-Dize sabit değerleri, yeni satır dizileri içerebilir.  Artık eski bir iş için kullanmak zorunda kalmayacak`<xml><![CDATA[...text with newlines...]]></xml>.Value`
+Dize sabit değerleri, yeni satır dizileri içerebilir.  Artık eski bir iş için kullanmak zorunda kalmayacak `<xml><![CDATA[...text with newlines...]]></xml>.Value`
 
 **Açıklamalar**
 
@@ -238,11 +238,11 @@ Tarih sabit değerlerini YYYY-AA-GG biçiminde olabilir `#2015-03-17 16:10 PM#` 
 
 Salt okunur Arabirim özelliklerini bir ReadWrite özelliğini kullanarak uygulayabilirsiniz. Arabirim minimum işlevselliği garanti eder ve bir uygulama sınıfının ayarlanmasının izin vermesini durdurmaz.
 
-[TypeOf \<expr> IsNot\<type>](../language-reference/operators/typeof-operator.md)
+[TypeOf \<expr> IsNot \<type>](../language-reference/operators/typeof-operator.md)
 
 Kodunuzun daha okunaklı olması için artık `TypeOf` ile kullanabilirsiniz `IsNot` .
 
-[#Disable Uyarı \<ID> ve #Enable uyarısı\<ID>](../language-reference/directives/index.md)
+[#Disable Uyarı \<ID> ve #Enable uyarısı \<ID>](../language-reference/directives/index.md)
 
 Kaynak dosya içindeki bölgeler için belirli uyarıları devre dışı bırakabilir ve etkinleştirebilirsiniz.
 
@@ -292,4 +292,4 @@ Derleyici, en uygun çözümü seçmek için normal aşırı yükleme çözümle
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Visual Studio 2017 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2017)
-- [Visual Studio 2019 ' deki yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)
+- [Visual Studio 2019’daki Yenilikler](/visualstudio/ide/whats-new-visual-studio-2019)

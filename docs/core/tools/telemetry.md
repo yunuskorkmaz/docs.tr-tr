@@ -3,12 +3,12 @@ title: .NET Core SDK telemetri
 description: Analiz için kullanım bilgilerini toplayan, hangi verilerin toplandığı ve devre dışı bırakılacağı .NET Core SDK telemetri özelliklerini bulun.
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 0917dae23588ccd1809252aaf484c397e84561c7
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 01376cabc4f59f64c59a78dcff061fb6ec11e3c3
+ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226575"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89359239"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK telemetri
 
@@ -18,7 +18,7 @@ Toplanan veriler anonimdir ve [Creative Commons Attribution Lisansı](https://cr
 
 ## <a name="scope"></a>Kapsam
 
-`dotnet`iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için. *isn't collected* `dotnet` Aşağıdaki biçimde bir uygulamayı başlatmak için kullanılırken telemetri toplanmaz:
+`dotnet` iki işleve sahiptir: uygulamaları çalıştırmak ve CLı komutlarını yürütmek için. *isn't collected* `dotnet` Aşağıdaki biçimde bir uygulamayı başlatmak için kullanılırken telemetri toplanmaz:
 
 - `dotnet [path-to-app].dll`
 
@@ -138,5 +138,5 @@ Bu nedenle, .NET Core SDK özel derlemeleri yol adları kişisel veya hassas bil
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Core CLI telemetri-2019 S2 verileri](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2)
+- [Telemetri verileri .NET Core CLI](https://dotnet.microsoft.com/platform/telemetry)
 - [Telemetri başvuru kaynağı (DotNet/SDK deposu)](https://github.com/dotnet/sdk/tree/master/src/Cli/dotnet/Telemetry)
