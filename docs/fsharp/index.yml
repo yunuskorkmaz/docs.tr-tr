@@ -1,37 +1,37 @@
 ### YamlMime:Landing
-title: F#belgelerle
-summary: .NET üzerinde F# programlama dilini kullanarak herhangi bir uygulamayı yazmayı öğrenin.
+title: F# belgeleri
+summary: '.NET üzerinde F # programlama dilini kullanarak herhangi bir uygulamayı yazmayı öğrenin.'
 metadata:
-  title: F#docs-kullanmaya başlayın, Öğreticiler, başvuru.
-  description: Programlama F# hakkında bilgi edinin-yeni F#geliştiriciler ve deneyimli F# /.NET geliştiricileri
+  title: 'F # docs-kullanmaya başlayın, Öğreticiler, başvuru.'
+  description: 'F # programlama-F # için yeni geliştiriciler ve deneyimli F #/.NET geliştiricileri hakkında bilgi edinin'
   ms.topic: landing-page
   author: cartermp
   ms.author: phcart
-  ms.date: 11/25/2019
-  ms.openlocfilehash: 113a99d75f77cba56639abf485bf646155f0ff36
-  ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+  ms.date: 08/29/2020
+  ms.openlocfilehash: 7d7f9492bcd41975616ddd4d8f552aea5217b2d7
+  ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 11/28/2019
-  ms.locfileid: "74569493"
+  ms.lasthandoff: 09/01/2020
+  ms.locfileid: "89271860"
 landingContent:
-- title: İçindeki programı öğreninF#
+- title: "F 'de programı öğrenin #"
   linkLists:
   - linkListType: get-started
     links:
-    - text: Nedir F#?
+    - text: 'F # nedir?'
       url: what-is-fsharp.md
     - text: F# yükleme
       url: get-started/install-fsharp.md
-    - text: Visual Studio F# 'da kullanmaya başlayın
+    - text: "Visual Studio 'da F # ile çalışmaya başlama"
       url: get-started/get-started-visual-studio.md
-    - text: Visual Studio Code ile F# çalışmaya başlama
+    - text: 'Visual Studio Code F # ile çalışmaya başlama'
       url: get-started/get-started-vscode.md
   - linkListType: download
     links:
-    - text: .NET Core SDK indirin
+    - text: .NET Core SDK’sını indirin
       url: https://dotnet.microsoft.com/download
-- title: F#Temelleri
+- title: 'F # temelleri'
   linkLists:
   - linkListType: overview
     links:
@@ -51,19 +51,19 @@ landingContent:
       url: style-guide/conventions.md
   - linkListType: tutorial
     links:
-    - text: İçinde zaman uyumsuz programlamaF#
+    - text: "F 'de zaman uyumsuz programlama #"
       url: tutorials/asynchronous-and-concurrent-programming/async.md
-- title: İçindeki yeni özelliklerF#
+- title: "F 'deki yeni özellikler #"
   linkLists:
   - linkListType: whats-new
     links:
-    - text: F# 4,7 sürümündeki yenilikler
+    - text: "F # 4,7 ' deki yenilikler"
       url: whats-new/fsharp-47.md
-    - text: F# 4,6 sürümündeki yenilikler
+    - text: "F # 4,6 ' deki yenilikler"
       url: whats-new/fsharp-46.md
-    - text: F# 4,5 sürümündeki yenilikler
+    - text: "F # 4,5 ' deki yenilikler"
       url: whats-new/fsharp-45.md
-- title: F#dil başvurusu
+- title: F# dil başvurusu
   linkLists:
   - linkListType: reference
     links:
@@ -75,5 +75,11 @@ landingContent:
       url: language-reference/symbol-and-operator-reference/index.md
     - text: İşlevler
       url: language-reference/functions/index.md
-    - text: F#türü
+    - text: 'F # türleri'
       url: language-reference/fsharp-types.md
+- title: 'F # Çekirdek Kitaplığı başvurusu'
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: FSharp. Core API başvurusu
+      url: https://fsharp.github.io/fsharp-core-docs/
