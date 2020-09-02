@@ -2,12 +2,12 @@
 title: .NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu
 description: .NET Core 'da çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin nasıl kullanıldığı hakkında bilgi edinin.
 ms.date: 02/22/2019
-ms.openlocfilehash: 903dd9c619008c9e3c6149a471ba814bdc9c97cc
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: da8c73ef50a8933b93528e4424dff6e5ed95938d
+ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84903291"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89379076"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID kataloğu
 
@@ -27,15 +27,15 @@ Tek bir RID, `<RuntimeIdentifier>` proje dosyanızın öğesinde ayarlanabilir. 
 
 Somut işletim sistemlerini temsil eden RID 'Ler genellikle şu düzene uyar: `[os].[version]-[architecture]-[additional qualifiers]` burada:
 
-- `[os]`işletim/platform sistem adıdır. Örneğin, `ubuntu`.
+- `[os]` işletim/platform sistem adıdır. Örneğin, `ubuntu`.
 
-- `[version]`, bir noktayla ayrılmış () sürüm numarası biçimindeki işletim sistemi sürümüdür `.` . Örneğin, `15.10`.
+- `[version]` , bir noktayla ayrılmış () sürüm numarası biçimindeki işletim sistemi sürümüdür `.` . Örneğin, `15.10`.
 
   - Sürüm, genellikle farklı platform API yüzey alanı ile birlikte işletim sisteminin birden fazla ayrı sürümünü temsil ettiğinden, **Pazarlama sürümü olmamalıdır** .
 
-- `[architecture]`işlemci mimarisidir. Örneğin: `x86` ,, `x64` `arm` veya `arm64` .
+- `[architecture]` işlemci mimarisidir. Örneğin: `x86` ,, `x64` `arm` veya `arm64` .
 
-- `[additional qualifiers]`farklı platformları daha da birbirinden ayırt edin. Örneğin: `aot`.
+- `[additional qualifiers]` farklı platformları daha da birbirinden ayırt edin. Örneğin: `aot`.
 
 ## <a name="rid-graph"></a>RID grafiği
 
@@ -52,9 +52,9 @@ Aşağıdaki örnek, RID için gerçek giriştir `osx.10.12-x64` :
 }
 ```
 
-Yukarıdaki RID, `osx.10.12-x64` içeri aktarmaların belirtir `osx.10.11-x64` . Bu nedenle, NuGet paketleri geri yüklediğinde, pakette tam eşleşmeyi bulmaya çalışır `osx.10.12-x64` . NuGet belirli çalışma zamanını bulamazsa, örneğin çalışma zamanlarını belirten paketleri geri yükleyebilir `osx.10.11-x64` .
+Yukarıdaki RID, `osx.10.12-x64` içeri aktarmaların belirtir `osx.10.11-x64` . Bu nedenle, NuGet paketleri geri yüklediğinde, pakette tam eşleşmeyi bulmaya çalışır  `osx.10.12-x64` . NuGet belirli çalışma zamanını bulamazsa, örneğin çalışma zamanlarını belirten paketleri geri yükleyebilir `osx.10.11-x64` .
 
-Aşağıdaki örnek, dosyasında *runtime.js* de tanımlanan biraz daha büyük bir RID grafiğini gösterir:
+Aşağıdaki örnek, dosyasında *runtime.js*  de tanımlanan biraz daha büyük bir RID grafiğini gösterir:
 
 ```
     win7-x64    win7-x86
@@ -72,7 +72,7 @@ Tüm RID 'Ler sonunda kök RID 'e geri eşlenir `any` .
 
 RID 'Ler hakkında, bunlarla çalışırken göz önünde bulundurmanız gereken bazı noktalar vardır:
 
-- RID 'ler **donuk dizelerdir** ve siyah kutular olarak değerlendirilmelidir.
+- Bileşen parçalarını almak için RID ayrıştırmaya çalışmayın.
 - Program aracılığıyla RID oluşturma.
 - Platform için önceden tanımlanmış olan RID 'leri kullanın.
 - RID 'Lerin özel olması gerekir, bu nedenle gerçek RID değerinden herhangi bir şeyi varsaymayın.
@@ -115,13 +115,13 @@ Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/d
 Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın `dotnet/runtime` . Aşağıda listelenmeyen bir dağıtımı çalıştıran cihazlar taşınabilir RID 'Ler ile çalışabilir. Örneğin, listelenmemiş bir Linux dağıtımını çalıştıran Raspberry PI cihazları ile hedeflenebilir `linux-arm` .
 
 - Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
-  - `linux-x64`(CentOS, deler, Fedora, Ubuntu ve türetmeler gibi masaüstü dağıtımlarını en iyi şekilde)
-  - `linux-musl-x64`(Alp Linux gibi [MUSL](https://wiki.musl-libc.org/projects-using-musl.html) kullanan hafif dağıtımlar)
-  - `linux-arm`(Raspbian gibi ARM üzerinde çalışan Linux dağıtımları Raspberry PI model 2 +)
-  - `linux-arm64`(Raspberry PI model 3 + üzerinde Ubuntu Server 64-bit gibi 64 bit ARM üzerinde çalışan Linux dağıtımları
+  - `linux-x64` (CentOS, deler, Fedora, Ubuntu ve türetmeler gibi masaüstü dağıtımlarını en iyi şekilde)
+  - `linux-musl-x64` (Alp Linux gibi [MUSL](https://wiki.musl-libc.org/projects-using-musl.html) kullanan hafif dağıtımlar)
+  - `linux-arm` (Raspbian gibi ARM üzerinde çalışan Linux dağıtımları Raspberry PI model 2 +)
+  - `linux-arm64` (Raspberry PI model 3 + üzerinde Ubuntu Server 64-bit gibi 64 bit ARM üzerinde çalışan Linux dağıtımları
 - Red Hat Enterprise Linux
-  - `rhel-x64`(X sürüm 6 ' dan önce `linux-x64` RHEL için yerine geçti)
-  - `rhel.6-x64`(.NET Core 2,0 veya sonraki sürümler)
+  - `rhel-x64` (X sürüm 6 ' dan önce `linux-x64` RHEL için yerine geçti)
+  - `rhel.6-x64` (.NET Core 2,0 veya sonraki sürümler)
 - Tizen (.NET Core 2,0 veya sonraki sürümler)
   - `tizen`
   - `tizen.4.0.0`
@@ -134,7 +134,7 @@ Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/d
 macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [runtime.js](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) dosyasına bakın `dotnet/runtime` .
 
 - Taşınabilir (.NET Core 2,0 veya sonraki sürümler)
-  - `osx-x64`(En düşük işletim sistemi sürümü macOS 10,12 Sierra)
+  - `osx-x64` (En düşük işletim sistemi sürümü macOS 10,12 Sierra)
 - macOS 10,10 Yosemite
   - `osx.10.10-x64`
 - macOS 10,11 El Capitan
