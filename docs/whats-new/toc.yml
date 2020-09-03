@@ -4,6 +4,8 @@ expanded: true
 items:
   - name: 2020
     items:
+      - name: Ağustos
+        href: 2020-08.md
       - name: Temmuz
         href: 2020-07.md
       - name: Haziran
@@ -14,5 +16,3 @@ items:
         href: dotnet-2020-04.md
       - name: Mart
         href: dotnet-2020-03.md
-      - name: Şubat
-        href: dotnet-2020-02.md
