@@ -6,16 +6,16 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 55b90d10a1d8ac8534ba98e1cc5af906d69822a6
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: fe504124a4274ccce332be255addd1f0b41e9026
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100840"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414727"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# diline ve .NET Framework giriş
+# <a name="introduction-to-the-c-language-and-net-framework"></a>C# diline giriş ve .NET Framework
 
-C#, geliştiricilerin .NET ekosisteminde çalışan çok sayıda güvenli ve güçlü uygulamalar oluşturmalarına olanak tanıyan, şık ve tür açısından güvenli bir nesne yönelimli dildir. .Net ekosistemi, .net [Core](../../core/index.yml)ile sınırlı olmamak üzere tüm .net uygulamalarından oluşur ve [.NET Framework](../../framework/index.yml). Bu makale .NET Framework odaklanır. Windows istemci uygulamaları, XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamaları, veritabanı uygulamaları ve çok daha fazlasını oluşturmak Için C# kullanabilirsiniz.
+C#, geliştiricilerin .NET ekosisteminde çalışan çok sayıda güvenli ve güçlü uygulamalar oluşturmalarına olanak tanıyan, şık ve tür açısından güvenli bir nesne yönelimli dildir. .Net ekosistemi, .net [Core](../../core/introduction.md)ile sınırlı olmamak üzere tüm .net uygulamalarından oluşur ve [.NET Framework](../../framework/index.yml). Bu makale .NET Framework odaklanır. Windows istemci uygulamaları, XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamaları, veritabanı uygulamaları ve çok daha fazlasını oluşturmak Için C# kullanabilirsiniz.
 
 > [!NOTE]
 > Visual C# belgeleri, temel programlama kavramlarını anladığınızı varsayar. Yeni bir başlangıç yapıyorsanız, Web 'de bulunan Visual C# Express 'i incelemek isteyebilirsiniz. Pratik programlama becerileri öğrenmek Için C# hakkındaki kitaplar ve Web kaynaklarından de yararlanabilirsiniz.

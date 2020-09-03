@@ -2,12 +2,12 @@
 title: "C 'de zaman uyumsuz programlama #"
 description: Async, await, Task ve Task kullanılarak zaman uyumsuz programlama için C# dil desteğine genel bakış<T>
 ms.date: 06/04/2020
-ms.openlocfilehash: 992ccd3a015653ea9ee13dfc309d47711ad0fca4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 853019c39880b1f4ef6536aed5841ecab53d7304
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619721"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414987"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>Async ve await ile asenkron programlama
 
@@ -45,7 +45,7 @@ Bilgisayarın yukarıdaki yönergeleri zaman uyumsuz olarak yürütmesini istiyo
 
 Bu sorunlar, bugün yazdığınız programlar için önemlidir. İstemci programları yazdığınızda, kullanıcı ARABIRIMININ Kullanıcı girişine yanıt vermesini istersiniz. Uygulamanız, Web 'den veri indirirken bir telefonu dondurulmuş hale döndürmemelidir. Sunucu programları yazdığınızda, iş parçacıklarının engellenmesini istemezsiniz. Bu iş parçacıkları diğer isteklere hizmet verebilir. Zaman uyumsuz alternatifler mevcut olduğunda zaman uyumlu kod kullanarak daha ucuz bir şekilde ölçeklendirme imkanına sahip olabilirsiniz. Engellenen bu iş parçacıkları için ödeme yaparsınız.
 
-Başarılı modern uygulamalar zaman uyumsuz kod gerektirir. Dil desteği olmadan, zaman uyumsuz kod gerekli geri çağırmaları, tamamlanma olaylarını veya başka bir deyişle, kodun orijinal hedefini görünmez hale gelir. Zaman uyumlu kodun avantajı, anlaşılması kolay bir işlemdir. Adım adım eylemler, taramayı ve anlamayı kolaylaştırır. Geleneksel zaman uyumsuz modeller kodun temel eylemlerine değil, kodun zaman uyumsuz yapısına odaklanmaya zorlanır.
+Başarılı modern uygulamalar zaman uyumsuz kod gerektirir. Dil desteği olmadan, zaman uyumsuz kod gerekli geri çağırmaları, tamamlanma olaylarını veya başka bir deyişle, kodun orijinal hedefini görünmez hale gelir. Zaman uyumlu kodun avantajı, bu işlemin adım adım işlemler tarafından taranması ve anlaşılması kolay hale gelir. Geleneksel zaman uyumsuz modeller kodun temel eylemlerine değil, kodun zaman uyumsuz yapısına odaklanmaya zorlanır.
 
 ## <a name="dont-block-await-instead"></a>Engelleme, yerine await
 
@@ -181,7 +181,7 @@ while (breakfastTasks.Count > 0)
 }
 ```
 
-Tüm bu değişiklikler yapıldıktan sonra, kodun son sürümü şöyle görünür:<a id="final-version"></a>
+Tüm bu değişiklikler yapıldıktan sonra, kodun son sürümü şöyle görünür: <a id="final-version"></a>
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
 :::image type="content" source="media/whenany-async-breakfast.png" alt-text="herhangi bir zaman uyumsuz Breakfast":::

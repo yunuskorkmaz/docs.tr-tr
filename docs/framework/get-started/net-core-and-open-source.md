@@ -3,16 +3,16 @@ title: .NET Core ve Açık Kaynak
 description: Genel amaçlı, modüler, platformlar arası ve .NET Standard açık kaynaklı bir uygulama olan .NET Core hakkında genel bakış konusunu okuyun.
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: 08d30d047c25b3b6d681d72b46b81a0cb21f8e0a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4627d4cc1bf45f3a7ad3f269279384b4a303f00d
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622763"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414922"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core ve açık kaynak
 
-Bu makalede .NET Core 'un ne olduğuna ilişkin kısa bir genel bakış sağlanır ve nasıl daha fazla bilgi bulabileceğiniz gösterilmektedir. .NET Core belgelerinin tüm listesini bulmak için [.NET Core Kılavuzu](../../core/index.yml)' nu ziyaret edin.
+Bu makalede .NET Core 'un ne olduğuna ilişkin kısa bir genel bakış sağlanır ve nasıl daha fazla bilgi bulabileceğiniz gösterilmektedir.
 
 ## <a name="what-is-net-core"></a>.NET Core nedir?  
 
@@ -47,5 +47,5 @@ Bu makalede .NET Core 'un ne olduğuna ilişkin kısa bir genel bakış sağlan�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET öğreticisi-10 dakika içinde Merhaba Dünya](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [.NET Core kılavuzu](../../core/index.yml)
+- [.NET Core tanıtımı](../../core/introduction.md)
 - [ASP.NET Core docs](/aspnet/core/)

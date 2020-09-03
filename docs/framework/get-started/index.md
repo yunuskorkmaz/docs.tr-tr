@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 1d6b1fccd9751180ee096531a34b2afb60547072
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 85ba856fd695f264f75a6dab2dca3aded4e5cdc1
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557327"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414974"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework kullanmaya başlayın
 
 .NET Framework, .NET Framework hedef uygulamaları yöneten bir çalışma zamanı yürütme ortamıdır. Bu, bellek yönetimi ve diğer sistem hizmetleri sağlayan ortak dil çalışma zamanından ve programcıların uygulama geliştirmenin tüm önemli alanlarında güçlü, güvenilir koddan yararlanmasını sağlayan kapsamlı bir sınıf kitaplığı içerir.
 
 > [!NOTE]
-> .NET Framework yalnızca Windows sistemlerinde kullanılabilir. Windows, MacOS ve Linux 'ta uygulama geliştirmek ve çalıştırmak için [.NET Core](../../core/index.yml) ' u kullanabilirsiniz.
+> .NET Framework yalnızca Windows sistemlerinde kullanılabilir. Windows, MacOS ve Linux 'ta uygulama geliştirmek ve çalıştırmak için [.NET Core](../../core/introduction.md) ' u kullanabilirsiniz.
 
 ## <a name="what-is-net-framework"></a>.NET Framework nedir?
 
@@ -80,7 +80,7 @@ Geliştiriciyseniz, uygulamalarınızı oluşturmak için .NET Framework destekl
 | [.NET Framework ve bant dışı yayınlar](the-net-framework-and-out-of-band-releases.md) | Bant dışı yayınları .NET Framework ve bunları uygulamanızda nasıl kullanacağınızı açıklar. |
 | [Sistem Gereksinimleri](system-requirements.md) | .NET Framework çalıştırmak için donanım ve yazılım gereksinimlerini listeler. |
 | [.NET Core ve Açık Kaynak](net-core-and-open-source.md) | .NET Framework ve açık kaynaklı .NET Core projelerine nasıl erişebileceğiniz ile ilgili olarak .NET Core açıklanır. |
-| [.NET Core belgeleri](../../core/index.yml) | .NET Core için kavramsal ve API başvuru belgelerini sağlar. |
+| [.NET Core belgeleri](../../core/introduction.md) | .NET Core için kavramsal ve API başvuru belgelerini sağlar. |
 | [.NET Standard](../../standard/net-standard.md) | Ayrı ayrı .NET uygulamalarının birden çok platformda kullanılabilir olduğunu garantilemek için tek tek .NET uygulamalarının desteklediği bir sürümlenmiş belirtim .NET Standard açıklar.
 
 ## <a name="see-also"></a>Ayrıca bkz.

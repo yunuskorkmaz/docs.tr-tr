@@ -3,12 +3,12 @@ title: .NET Sözlüğü
 description: .NET belgelerinde kullanılan seçili koşulların anlamını öğrenin.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 59e338de99510759e3e7acfd782915ed6dc5d988
-ms.sourcegitcommit: 60dc0a11ebdd77f969f41891d5cca06335cda6a7
+ms.openlocfilehash: b79580baa12cc8081346678f06d49a9d0455375c
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88957579"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415023"
 ---
 # <a name="net-glossary"></a>.NET Sözlüğü
 
@@ -30,7 +30,7 @@ Bazen ASP.NET, ASP.NET Core dahil olmak üzere hem ASP.NET uygulamalarına başv
 
 Bkz. [ASP.net belgeleri](/aspnet/#pivot=aspnet).
 
-## <a name="aspnet-core"></a>ASP.NET Core
+## <a name="aspnet-core"></a>ASP.NET Çekirdeği
 
 ASP.NET 'in platformlar arası, yüksek performanslı, açık kaynaklı bir uygulamasıdır.
 
@@ -161,7 +161,7 @@ Mono genellikle tam [zamanında bir derleyici](#jit)ile kullanılır, ancak iOS 
 
 [.NET 5](#net-5-and-later-versions) (Şu anda önizleme aşamasında) yayınlanmışsa, tüm yeni .NET geliştirme işlemleri için önerilen .NET uygulamaları olacaktır ve bu nedenle ".net" bazı bağlamlarda ".NET 5 ve sonraki sürümler" anlamına gelir.
 
-Bkz. [.net Kılavuzu](index.yml)
+Bkz. [.net temelleri](../fundamentals/index.yml)
 
 ## <a name="net-5-and-later-versions"></a>.NET 5 ve sonraki sürümler
 
@@ -169,7 +169,7 @@ Bkz. [.net Kılavuzu](index.yml)
 
 Bu .NET uygulamasının önceki sürümleri .NET Core olarak bilinir. .NET 5,0, .NET Core 3,1 ' ü izleyen bir sonraki sürümdür. Sürüm 4, daha yeni bir .NET uygulamasının [.NET Framework](#net-framework)olarak bilinen eski uygulamayla karışmasını önlemek için atlandı. .NET Framework geçerli sürümü 4,8 ' dir.
 
-Bkz. [.net](../core/index.yml).
+Bkz. [.net temelleri](../fundamentals/index.yml).
 
 ## <a name="net-cli"></a>.NET CLı
 
@@ -294,8 +294,7 @@ Nesnelerin İnterneti (IoT) için modern, dokunmatik özellikli Windows Uygulama
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET kılavuzu](index.yml)
+- [.NET temelleri](../fundamentals/index.yml)
 - [.NET Framework Kılavuzu](../framework/index.yml)
-- [.NET Core](../core/index.yml)
 - [ASP.NET genel bakış](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core genel bakış](/aspnet/index#pivot=core)

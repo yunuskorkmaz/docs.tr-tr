@@ -2,14 +2,14 @@
 title: C#-ana dil alanlarının turu
 description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin.
 ms.date: 08/06/2020
-ms.openlocfilehash: f0e9bff144cc3c853a82f2ee6b400049df60683d
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88068536"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414909"
 ---
-# <a name="major-language-areas"></a>Ana dil alanı
+# <a name="major-language-areas"></a>Ana dil alanları
 
 ## <a name="arrays-collections-and-linq"></a>Diziler, koleksiyonlar ve LINQ
 
@@ -60,7 +60,7 @@ C# [***dize ilişkilendirme***](../language-reference/tokens/interpolated.md) , 
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="StringInterpolation":::
 
-Enterpolasyonlu bir dize, `$` belirteç kullanılarak bildirilmiştir. Dize ilişkilendirme, ve arasındaki ifadeleri `{` değerlendirir `}` , sonra sonucu bir öğesine dönüştürür `string` ve köşeli ayraçlar arasındaki metni ifadenin dize sonucuyla değiştirir. `:`İlk ifadede, `{weatherData.Data:MM-DD-YYYY}` *biçim dizesini*belirtir. Yukarıdaki örnekte, tarihin "AA-GG-YYYY" biçiminde yazdırılması gerektiğini belirtir.
+Enterpolasyonlu bir dize, `$` belirteç kullanılarak bildirilmiştir. Dize ilişkilendirme, ve arasındaki ifadeleri `{` değerlendirir `}` , sonra sonucu bir öğesine dönüştürür `string` ve köşeli ayraçlar arasındaki metni ifadenin dize sonucuyla değiştirir. `:`İlk ifadede, `{weatherData.Date:MM-DD-YYYY}` *biçim dizesini*belirtir. Yukarıdaki örnekte, tarihin "AA-GG-YYYY" biçiminde yazdırılması gerektiğini belirtir.
 
 ## <a name="pattern-matching"></a>Desen eşleştirme
 

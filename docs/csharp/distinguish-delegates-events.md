@@ -1,55 +1,55 @@
 ---
-title: Delegeler ve olaylar
-description: Temsilciler ve olaylar arasındaki farkı ve .NET Core'un bu özelliklerinin her birini ne zaman kullanacağınızı öğrenin.
+title: Temsilciler ve olaylar
+description: Temsilciler ve olaylar arasındaki farkı ve .NET Core 'un bu özelliklerinin her birini ne zaman kullanacağınızı öğrenin.
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 51d982c9b5b16a5fc28ede5f0318bc100bb33b68
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 193a9b0fe0e0c36deb6552449c92135057412225
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805759"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414675"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Temsilcileri ve Olayları Ayırt Etme
 
 [Önceki](modern-events.md)
 
-.NET Core platformuna yeni gelen geliştiriciler, bir tasarıma `delegates` dayalı ve temelli bir tasarım arasında karar verirken genellikle mücadele ederler. `events` İki dil özelliği benzer olduğundan, temsilci veya olay seçimi genellikle zordur. Etkinlikler, temsilciler için dil desteği kullanılarak bile oluşturulur.
+.NET Core platformunda yeni olan geliştiriciler, temel olarak bir tasarıma ve tasarımına göre karar verirken çok daha fazla zaman harcamaya uğraşır `delegates` `events` . İki dil özelliği de benzer olduğundan, temsilci veya olay seçimi genellikle zordur. Olaylar, temsilciler için dil desteği kullanılarak bile oluşturulur.
 
-Her ikisi de geç bağlama senaryosu sunar: bileşenin yalnızca çalışma zamanında bilinen bir yöntemi çağırarak iletişim kurduğu senaryoları etkinleştirir. Her ikisi de tek ve birden çok abone yöntemini destekler. Bunu tek döküm ve çok noktaya yayın desteği olarak adlandırabilirsiniz. Her ikisi de işleyicileri eklemek ve kaldırmak için benzer sözdizimini destekler. Son olarak, bir olay yükselterek ve bir temsilci arama tam olarak aynı yöntem sözdizimi arayın kullanın. Hatta her ikisi `Invoke()` de `?.` işleç ile kullanmak için aynı yöntem sözdizimini destekler.
+Her ikisi de bir geç bağlama senaryosu sunar: yalnızca çalışma zamanında bilinen bir yöntemi çağırarak bir bileşenin iletişim kurduğu senaryolara olanak tanır. Her ikisi de tek ve birden çok abone yöntemini destekler. Bu şekilde, tekcast ve çok noktaya yayın desteği olarak adlandırılan bulabilirsiniz. Bunlar her ikisi de işleyicileri eklemek ve kaldırmak için benzer sözdizimini destekler. Son olarak, bir olayı oluşturup bir temsilciyi çağırmak, tam olarak aynı yöntem çağrısı söz dizimini kullanır. Her ikisi de `Invoke()` işleçle birlikte kullanmak için aynı yöntem söz dizimini destekler `?.` .
 
-Tüm bu benzerlikler ile, hangi kullanmak için ne zaman belirlemekte sorun olması kolaydır.
+Bu benzerlikler sayesinde ne zaman kullanacağınızı belirlemek oldukça kolaydır.
 
-## <a name="listening-to-events-is-optional"></a>Olayları Dinlemek İsteğe Bağlıdır
+## <a name="listening-to-events-is-optional"></a>Olayları dinlemek Isteğe bağlıdır
 
-Hangi dil özelliğinin kullanılacağını belirlemede en önemli husus, bağlı bir abonenin olup olmaması gerektiğidir. Kodunuz abone tarafından sağlanan kodu aramanız gerekiyorsa, temsilcilere dayalı bir tasarım kullanmanız gerekir. Kodunuz tüm çalışmasını herhangi bir abone çağırmadan tamamlayabiliyorsa, olaylara dayalı bir tasarım kullanmalısınız.
+Hangi dil özelliğinin kullanılacağını belirlemede en önemli nokta, eklenen bir abone olmalıdır. Kodunuzun abone tarafından sağlanan kodu çağırması gerekiyorsa, geri çağırma uygulamanız gerektiğinde temsilcilere dayalı bir tasarım kullanmanız gerekir. Kodunuz herhangi bir abone çağrılmadan tüm işlerini tamamlayabiliyorsanız, olaylara dayalı bir tasarım kullanmanız gerekir.
 
-Bu bölümde oluşturulmuş örnekleri göz önünde bulundurun. Öğeleri düzgün bir `List.Sort()` şekilde sıralamak için, kullanarak oluşturduğun koda bir karşılayıcı işlevi verilmelidir. Hangi öğelerin döndürüleceğini belirlemek için LINQ sorguları temsilcilerle birlikte sağlanmalıdır. Her ikisi de delegelerle oluşturulmuş bir tasarım kullandı.
+Bu bölüm sırasında oluşturulan örnekleri göz önünde bulundurun. Kullanılarak oluşturduğunuz koda, `List.Sort()` öğeleri doğru bir şekilde sıralamak için bir karşılaştırıcı işlevi verilmelidir. Hangi öğelerin döneceğini belirlemek için temsilcilerle LINQ sorgularının sağlanması gerekir. Her ikisi de temsilcilerle oluşturulmuş bir tasarım kullandı.
 
-Olayı `Progress` göz önünde bulundurun. Bir görevde ilerleme yi tirenleri bildirir.
-Herhangi bir dinleyici olup olmadığı görev devam ediyor.
-Başka `FileSearcher` bir örnektir. Yine de arama ve hiçbir olay aboneleri ekli bile, aranan tüm dosyaları bulmak.
-Olayları dinleyen abone ler olmasa bile UX denetimleri hala doğru çalışır. Her ikisi de olaylara dayalı tasarımlar kullanır.
+Olayı göz önünde bulundurun `Progress` . Bir görevde ilerlemeyi raporlar.
+Görev, herhangi bir dinleyici olup olmadığına bakılmaksızın devam etmeye devam eder.
+`FileSearcher`Başka bir örnektir. Hiçbir olay abonesi ekli olmasa bile, aranan tüm dosyaları arayabilir ve bulur.
+UX denetimleri, olayları dinleyen bir abone olmadığında bile hala düzgün çalışır. Bunlar her ikisi de olayları temel alan tasarımlar kullanır.
 
-## <a name="return-values-require-delegates"></a>İade Değerleri Temsilciler Gerektirir
+## <a name="return-values-require-delegates"></a>Dönüş değerleri temsilciler gerektiriyor
 
-Başka bir husus, temsilci yönteminiz için isteyeceğiniz yöntem prototipidir. Gördüğünüz gibi, olaylar için kullanılan temsilcilerin hepsinin geçersiz bir dönüş türü vardır. Ayrıca, olay bağımsız değişken nesnesinin özelliklerini değiştirerek bilgileri olay kaynaklarına geri aktaran olay işleyicileri oluşturmak için deyimler olduğunu da gördünüz. Bu deyimler işe yarasa da, bir yöntemden değer döndürmek kadar doğal değildir.
+Temsilci yönteminiz için istediğiniz yöntem prototipi başka bir noktadır. Gördüğünüz gibi, olaylar için kullanılan temsilcilerin void dönüş türü vardır. Ayrıca, olay bağımsız değişkeni nesnesinin özelliklerini değiştirerek olayları olay kaynaklarına geri geçiren olay işleyicileri oluşturmak için ıoms olduğunu da gördünüz. Bu IBU deyimler çalışırken, bir yöntemden değer döndürürken doğal olarak değildir.
 
-Bu iki buluşçistin her ikisinin de genellikle mevcut olabileceğine dikkat edin: Temsilci yönteminiz bir değer döndürürse, algoritmayı bir şekilde etkileme olasılığı yüksektir.
+Bu iki buluşsal yöntemin her ikisi de mevcut olabilir: temsilci yönteminiz bir değer döndürürse, bu durum büyük olasılıkla algoritmayı bir şekilde etkiler.
 
-## <a name="events-have-private-invocation"></a>Etkinlikler Özel Çağrı var
+## <a name="events-have-private-invocation"></a>Olayların özel çağrısı var
 
-Bir olayın bulunduğu sınıf dışındaki sınıflar yalnızca olay dinleyicileri ekleyebilir ve kaldırabilir; yalnızca olayı içeren sınıf olayı çağırabilir. Olaylar genellikle ortak sınıf üyeleridir.
-Buna karşılık, temsilciler genellikle parametre olarak geçirilir ve hiç depolanırsa özel sınıf üyesi olarak depolanır.
+Bir olayın bulunduğu bir olay dışındaki sınıflar yalnızca olay dinleyicileri ekleyebilir ve kaldırabilir; Yalnızca olayı içeren sınıf olayı çağırabilir. Olaylar genellikle ortak sınıf üyeleridir.
+Bir karşılaştırma yaparak, temsilciler genellikle parametre olarak geçirilir ve özel sınıf üyeleri olarak depolanır.
 
-## <a name="event-listeners-often-have-longer-lifetimes"></a>Etkinlik Dinleyicilerinin Genellikle Daha Uzun Ömürleri Var
+## <a name="event-listeners-often-have-longer-lifetimes"></a>Olay dinleyicileri genellikle daha uzun ömürleri vardır
 
-Bu olay dinleyiciler daha uzun ömürleri var biraz daha zayıf bir gerekçedir. Ancak, olay kaynağı uzun bir süre boyunca olayları yükseltecek zaman olay tabanlı tasarımlar daha doğal olduğunu görebilirsiniz. Birçok sistemde UX denetimleri için olay tabanlı tasarım örneklerini görebilirsiniz. Bir etkinliğe abone olduktan sonra, etkinlik kaynağı programın ömrü boyunca olayları yükseltebilir.
-(Artık ihtiyacınız olmadığında etkinliklerden aboneliğinizi kaldırabilirsiniz.)
+Bu olay dinleyicilerinin süreleri daha uzun bir süre daha zayıf. Ancak olay tabanlı tasarımların olay kaynağı uzun bir süre boyunca olayları oluştururken daha doğal olduğunu fark edebilirsiniz. Birçok sistemde, UX denetimleri için olay tabanlı tasarımın örneklerini görebilirsiniz. Bir olaya abone olduktan sonra olay kaynağı, programın kullanım ömrü boyunca olayları oluşturabilir.
+(Artık ihtiyaç kalmadığında olayları abonelikten kaldırabilirsiniz.)
 
-Bir temsilcinin bir yönteme bağımsız değişken olarak kullanıldığı ve bu yöntem döndürüldikten sonra temsilcinin kullanılmadığı birçok temsilci tabanlı tasarımla karşılamayın.
+Bir temsilcinin bir yönteme bağımsız değişken olarak kullanıldığı birçok temsilci tabanlı tasarım ile, bu yöntem, bu yöntemin döndürdüğü süre dolduktan sonra kullanılmlarından farklıdır.
 
-## <a name="evaluate-carefully"></a>Dikkatle Değerlendirin
+## <a name="evaluate-carefully"></a>Dikkatle değerlendirin
 
-Yukarıdaki hususlar sert ve hızlı kurallar değildir. Bunun yerine, belirli kullanımınız için hangi seçeneğin en iyi olduğuna karar vermenize yardımcı olabilecek bir kılavuztemsil ederler. Benzer oldukları için, hatta her ikisini de prototip ve çalışmak için daha doğal olacağını düşünebilirsiniz. Her ikisi de geç bağlama senaryoları iyi ele. Tasarımınızı en iyi şekilde ileten tasarımıkullanın.
+Yukarıdaki konular sabit ve hızlı kurallar değildir. Bunun yerine, belirli kullanımınız için en uygun seçeneği belirlemenize yardımcı olabilecek Kılavuzu temsil ederler. Benzer olduklarından, her ikisini de prototip yapabilir ve bununla birlikte çalışmak için ne kadar doğal olacağını düşünün. Bunlar her ikisi de geç bağlama senaryolarını de işler. Tasarımınızı en iyi şekilde iletişim kuran birini kullanın.

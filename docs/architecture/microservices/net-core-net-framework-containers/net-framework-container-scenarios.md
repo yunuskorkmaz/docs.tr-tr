@@ -1,66 +1,66 @@
 ---
 title: Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
-description: .NET Microservices Mimari Containerized .NET Uygulamaları için | Docker kapsayıcıları için .NET Framework ne zaman seçilir?
+description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Docker kapsayıcıları için .NET Framework seçme
 ms.date: 01/30/2020
-ms.openlocfilehash: 2697ae56eda104a0ee8e7bfcd79d3972943d1f79
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 116ba02878a60487f1af3c2b2e084307fad29618
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344989"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414428"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker kapsayıcıları için ne zaman .NET Framework seçilmelidir?
 
-.NET Core yeni uygulamalar ve uygulama kalıpları için önemli avantajlar sunarken, .NET Framework varolan birçok senaryo için iyi bir seçim olmaya devam edecektir.
+.NET Core yeni uygulamalar ve uygulama desenleri için önemli avantajlar sağladığından, .NET Framework birçok mevcut senaryo için iyi bir seçenek olmaya devam edecektir.
 
-## <a name="migrating-existing-applications-directly-to-a-windows-server-container"></a>Varolan uygulamaları doğrudan bir Windows Server kapsayıcısına geçirme
+## <a name="migrating-existing-applications-directly-to-a-windows-server-container"></a>Mevcut uygulamaları doğrudan bir Windows Server kapsayıcısına geçirme
 
-Mikro hizmetler oluşturmasanız bile, docker kapsayıcılarını dağıtımı basitleştirmek için kullanmak isteyebilirsiniz. Örneğin, DevOps iş akışınızı Docker ile iyileştirmek isteyebilirsiniz-kapsayıcılar size daha iyi yalıtılmış test ortamları sağlayabilir ve üretim ortamına taşındığınızda eksik bağımlılıklardan kaynaklanan dağıtım sorunlarını da ortadan kaldırabilir. Bu gibi durumlarda, yekpare bir uygulama dağıtıyor olsanız bile, geçerli .NET Framework uygulamalarınız için Docker ve Windows Kapsayıcıları kullanmak mantıklıdır.
+Mikro hizmetler oluşturmasanız bile, yalnızca dağıtımı basitleştirmek için Docker kapsayıcılarını kullanmak isteyebilirsiniz. Örneğin, Docker ile DevOps iş akışınızı geliştirmek isteyebilirsiniz. kapsayıcılar, size daha iyi yalıtılmış test ortamları verebilir ve ayrıca bir üretim ortamına geçtiğinizde eksik bağımlılıklardan kaynaklanan dağıtım sorunlarını ortadan kaldırabilir. Bunlar gibi durumlarda, tek parçalı bir uygulama dağıtsanız bile, geçerli .NET Framework uygulamalarınız için Docker ve Windows kapsayıcıları kullanmak mantıklı olur.
 
-Bu senaryonun çoğu durumunda, varolan uygulamalarınızı .NET Core'a geçirmeniz gerekmez; geleneksel .NET Framework içeren Docker kapsayıcılarını kullanabilirsiniz. Ancak, ASP.NET Core'da yeni bir hizmet yazmak gibi varolan bir uygulamayı genişletirken .NET Core'u kullanmanız önerilir.
+Bu senaryo için çoğu durumda, mevcut uygulamalarınızı .NET Core 'a geçirmeniz gerekmez; geleneksel .NET Framework içeren Docker Kapsayıcıları kullanabilirsiniz. Ancak, ASP.NET Core ' de yeni bir hizmet yazma gibi, mevcut bir uygulamayı genişletmekle birlikte .NET Core kullanmak önerilen bir yaklaşımdır.
 
-## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Üçüncü taraf .NET kitaplıklarını veya .NET Core için kullanılamayan NuGet paketlerini kullanma
+## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core için mevcut olmayan üçüncü taraf .NET kitaplıklarını veya NuGet paketlerini kullanma
 
-Üçüncü taraf kitaplıkları, [.NET](../../../standard/net-standard.md)Core da dahil olmak üzere tüm .NET tatlarında kod paylaşımını sağlayan .NET Standard'ı hızla benimsiyor. .NET Standart 2.0 ve sonraki ile, farklı çerçeveler arasında API yüzey uyumluluğu önemli ölçüde daha büyük hale gelmiştir. Dahası, .NET Core 2.x ve yeni uygulamalar da doğrudan mevcut .NET Framework kitaplıklarına başvuruyapabilir (bkz. [.NET Framework 4.6.1 destekleyen .NET Standart 2.0).](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)
+Üçüncü taraf kitaplıkları, .NET Core dahil olmak üzere tüm .NET özellikleri genelinde kod paylaşımına izin veren [.NET Standard](../../../standard/net-standard.md)hızla bir şekilde bir şekilde kullanıyor. .NET Standard 2,0 ve üzeri sürümlerde, farklı çerçeveler genelinde API Surface uyumluluğu önemli ölçüde daha büyük hale gelmiştir. Daha da fazla .NET Core 2. x ve daha yeni uygulamalar, mevcut .NET Framework kitaplıklarına doğrudan başvurabilir (bkz. [.NET Framework 4.6.1 destekleme .NET Standard 2,0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)).
 
-Ayrıca, [Windows Uyumluluk Paketi,](../../../core/porting/windows-compat-pack.md) Windows'da .NET Standart 2.0 için kullanılabilir API yüzeyini genişletir. Bu paket, varolan kodun çoğunun Windows'da çalıştırılabilmek için çok az değişiklik le veya hiç değişiklik olmadan .NET Standard 2.x'e yeniden derlemesine olanak tanır.
+Ayrıca, [Windows Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md) windows üzerinde .NET Standard 2,0 için KULLANILABILIR olan API yüzeyini genişletir. Bu paket, Windows üzerinde çalıştırmak için çok sayıda kodu .NET Standard 2. x ' e yeniden derliyorsanız ve çok az değişiklikle.
 
-Ancak, .NET Standart 2.0 ve .NET Core 2.1'den bu yana bu olağanüstü ilerlemeyle bile, bazı NuGet paketlerinin çalıştırmak için Windows'a ihtiyaç duyduğu ve .NET Core'u desteklemeyebileceği durumlar olabilir. Bu paketler uygulamanız için kritik se, Windows Kapsayıcılar üzerinde .NET Framework kullanmanız gerekir.
+Bununla birlikte, 2,0 ve .NET Core 2,1 ' den .NET Standard bu yana bu olağanüstü ilerlemeyi bile, bazı NuGet paketlerinin Windows 'un çalışması ve .NET Core 'u desteklememe gibi durumlar olabilir. Bu paketler uygulamanız için önemliyse, Windows kapsayıcılarında .NET Framework kullanmanız gerekir.
 
-## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılamıyor .NET teknolojilerini kullanma
+## <a name="using-net-technologies-not-available-for-net-core"></a>.NET Core için kullanılamayan .NET teknolojilerini kullanma
 
-Bazı .NET Framework teknolojileri .NET Core'un geçerli sürümünde kullanılamaz (bu yazıitibariyle sürüm 3.1). Bazıları daha sonraki sürümlerde kullanılabilir hale gelebilir, ancak diğerleri .NET Core tarafından hedeflenen yeni uygulama desenlerine uymaz ve hiçbir zaman kullanılamayabilir.
+Bazı .NET Framework teknolojileri .NET Core 'un geçerli sürümünde (Bu yazma itibariyle sürüm 3,1) kullanılamaz. Bunlardan bazıları sonraki sürümlerde kullanılabilir hale gelebilir, ancak diğerleri .NET Core tarafından hedeflenen yeni uygulama desenlerine sığmıyor ve hiçbir şekilde kullanılamayabilir.
 
-Aşağıdaki liste,.NET Core 3.1'de bulunmayan teknolojilerin çoğunu gösterir:
+Aşağıdaki listede, .NET Core 3,1 ' de kullanılamayan teknolojilerin çoğu gösterilmektedir:
 
-- ASP.NET Web Formları. Bu teknoloji yalnızca .NET Framework'de kullanılabilir. Şu anda web formlarını .NET Core'a ASP.NET getirme planları bulunmamaktadır.
+- ASP.NET Web Forms. Bu teknoloji yalnızca .NET Framework kullanılabilir. Şu anda ASP.NET Web Forms .NET Core 'a getirmeye yönelik bir plan yoktur.
 
-- WCF hizmetleri. Şubat-2020 itibariyle .NET Core'dan WCF hizmetlerini tüketmek için [wcf istemci kitaplığı](https://github.com/dotnet/wcf) kullanılabilir olsa bile, WCF sunucu uygulaması yalnızca .NET Framework'de kullanılabilir. Bu senaryo .NET Core'un gelecekteki sürümleri için düşünülebilir, windows [uyumluluk paketine](../../../core/porting/windows-compat-pack.md)eklenmesi için düşünülen bazı API'ler bile vardır.
+- WCF Hizmetleri. WCF-2020 itibariyle, .NET Core 'dan WCF hizmetlerini kullanmak için bir [WCF-istemci kitaplığı](https://github.com/dotnet/wcf) kullanılabilir olduğunda bıle, WCF sunucu uygulamasının yalnızca .NET Framework kullanılabilir. Bu senaryo, .NET Core 'un gelecek sürümleri için göz önünde bulundurulmalı, [Windows Uyumluluk Paketi](../../../core/porting/windows-compat-pack.md)'ne dahil edilmesi Için bazı API 'ler bile vardır.
 
-- İş akışıyla ilgili hizmetler. Windows İş Akışı Temeli (WF), İş Akışı Hizmetleri (Tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eski adıyla ADO.NET Veri Hizmetleri olarak bilinir) yalnızca .NET Framework'de kullanılabilir. Şu anda onları .NET Core'a getirme gibi bir plan bulunmamaktadır.
+- İş akışı ile ilgili hizmetler. Windows Workflow Foundation (WF), Iş akışı hizmetleri (tek bir hizmette WCF + WF) ve WCF Veri Hizmetleri (eski adıyla ADO.NET veri Hizmetleri) yalnızca .NET Framework kullanılabilir. Şu anda bunları .NET Core 'a getirmeye yönelik bir plan yoktur.
 
-Resmi [.NET Core yol haritasında](https://github.com/dotnet/core/blob/master/roadmap.md)listelenen teknolojilere ek olarak, diğer özellikler .NET Core'a veya yeni [birleştirilmiş .NET platformuna](https://devblogs.microsoft.com/dotnet/introducing-net-5/)taşınabilir. Sesinizi duyurabilmek için GitHub'daki tartışmalara katılmayı düşünebilirsiniz. Ve bir şey eksik olduğunu düşünüyorsanız, [dotnet / runtime](https://github.com/dotnet/runtime/issues/new) GitHub deposunda yeni bir sorun dosya.
+Resmi [.NET Core yol haritasında](https://github.com/dotnet/core/blob/master/roadmap.md)listelenen teknolojilerin yanı sıra, diğer özellikler .NET Core veya yeni [Birleşik .NET platformu](https://devblogs.microsoft.com/dotnet/introducing-net-5/)için de olabilir. Sesinizin duyabilmesi için GitHub 'daki tartışmalara katılımını düşünebilirsiniz. Bir şeyin eksik olduğunu düşünüyorsanız, [DotNet/Runtime](https://github.com/dotnet/runtime/issues/new) GitHub deposunda yeni bir sorun verin.
 
-## <a name="using-a-platform-or-api-that-doesnt-support-net-core"></a>.NET Core'u desteklemeyen bir platform veya API kullanma
+## <a name="using-a-platform-or-api-that-doesnt-support-net-core"></a>.NET Core desteklemeyen bir platform veya API kullanma
 
-Bazı Microsoft ve üçüncü taraf platformlar .NET Core'u desteklemez. Örneğin, bazı Azure hizmetleri .NET Core'da henüz kullanılamayan bir SDK sağlar. Azure SDK'larının çoğu sonunda .NET Core/Standard'a taşınabilir, ancak bazıları çeşitli nedenlerden dolayı olmayabilir. Kullanılabilir Azure SDK SDK'larını [Azure SDK Son Sürümler](https://azure.github.io/azure-sdk/releases/latest/index.html) sayfasında görebilirsiniz.
+Bazı Microsoft ve üçüncü taraf platformları .NET Core ' u desteklemez. Örneğin, bazı Azure hizmetleri henüz .NET Core üzerinde tüketim için kullanılamayan bir SDK sağlar. Azure SDK 'sının en sonunda .NET Core/Standard ile bağlantı edilmelidir, ancak bazıları çeşitli nedenlerden kaynaklanabilir. Kullanılabilir Azure [SDK 'Larını Azure SDK 'Sının en son sürümleri](https://azure.github.io/azure-sdk/releases/latest/index.html) sayfasında görebilirsiniz.
 
-Bu arada, Azure'daki herhangi bir platform veya hizmet istemci API'sıyla .NET Core'u hala desteklemiyorsa, Azure hizmetinden veya sdenisistemci SDK'dan .NET Framework'de eşdeğer REST API'sini kullanabilirsiniz.
+Bu sırada, Azure 'daki herhangi bir platform veya hizmet, istemci API 'SI ile .NET Core 'u desteklemiyorsa, Azure hizmetindeki veya .NET Framework istemci SDK 'sindeki eşdeğer REST API de kullanabilirsiniz.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 
-- **.NET Çekirdek Rehberi** \
-  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.yml)
+- **.NET temelleri** \
+  [https://docs.microsoft.com/dotnet/fundamentals](../../../fundamentals/index.yml)
 
-- **.NET Framework'den .NET Core'a taşıma** \
+- **.NET Framework 'den .NET Core 'a taşıma** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **.NET Core Üzerinde Docker Kılavuzu** \
+- **Docker kılavuzunda .NET Core** \
   [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
-- **.NET Bileşenlerine Genel Bakış** \
+- **.NET bileşenlerine genel bakış** \
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
->[Önceki](net-core-container-scenarios.md)
->[Sonraki](container-framework-choice-factors.md)
+>[Önceki](net-core-container-scenarios.md) 
+> [Sonraki](container-framework-choice-factors.md)

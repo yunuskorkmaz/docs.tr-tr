@@ -3,12 +3,12 @@ title: Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim 
 description: Bir sunucu uygulaması oluştururken hangi .NET uygulamasının kullanılması gerektiğine karar vermenize yardımcı olacak bir kılavuz.
 author: cartermp
 ms.date: 04/28/2020
-ms.openlocfilehash: 30157276bce53ed44dca5b660172e5556dab14f8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: a3c15e8f2198b1bcc4e623a7dc7f5cddca9c83f6
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507448"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415026"
 ---
 # <a name="net-core-vs-net-framework-for-server-apps"></a>.NET Core ile sunucu uygulamaları için .NET Framework
 
@@ -111,7 +111,7 @@ Bazı Microsoft veya üçüncü taraf platformları .NET Core ' u desteklemez. B
 - [ASP.NET ve ASP.NET Core arasında seçim yapın](/aspnet/core/choose-aspnet-framework)
 - [.NET Framework'ü hedefleyen ASP.NET Core](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [Hedef çerçeveler](frameworks.md)
-- [.NET Core Kılavuzu](../core/index.yml)
+- [.NET Core tanıtımı](../core/introduction.md)
 - [.NET Framework 'den .NET Core 'a taşıma](../core/porting/index.md)
 - [.NET ve Docker’a Giriş](../core/docker/introduction.md)
 - [.NET bileşenlerine genel bakış](components.md)

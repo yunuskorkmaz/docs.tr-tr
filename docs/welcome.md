@@ -1,75 +1,74 @@
 ---
-title: .NET'e Hoş Geldiniz
-description: .NET teknoloji ailesiyle başlarken.
+title: .NET 'e hoş geldiniz
+description: .NET teknolojileri ailesine Başlarken.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 1933714263b98b4a503ced3868570c35feafe8f0
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646287"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89415065"
 ---
-# <a name="welcome-to-net"></a>.NET'e Hoş Geldiniz
+# <a name="welcome-to-net"></a>.NET 'e hoş geldiniz
 
-.NET Core uygulamalarını nasıl oluşturabilirsiniz öğrenmek için [.NET Core ile başlayın.](core/get-started.md)
+.NET Core uygulamaları oluşturmayı öğrenmek için bkz. [.NET Core ile çalışmaya başlama](core/get-started.md) .
 
-Ücretsiz çapraz platform araçlarını kullanarak bulut, IoT ve oyunlar gibi .NET ile birçok uygulama türü oluşturun. Uygulamalarınız Android, iOS, Linux, macOS ve Windows'da çalıştırılabilir. Uygulamaları sunuculara veya masaüstü bilgisayarlara dağıtın ve mobil cihazlarda dağıtım için uygulama mağazalarında yayımlayın. .NET öğrenciler ve hobi ler için erişilebilir ve herkes canlı bir uluslararası geliştirici topluluğuna katılmak ve .NET teknolojilerinin çoğuna doğrudan katkıda bulunmak için bekliyoruz.
+Bulut, IoT ve ücretsiz platformlar arası araçlar kullanan oyunlar gibi .NET ile birçok tür uygulama oluşturun. Uygulamalarınız Android, iOS, Linux, macOS ve Windows üzerinde çalışabilir. Uygulamaları sunuculara veya masaüstlerine dağıtın ve mobil cihazlarda dağıtım için uygulama depolarına yayımlayın. .NET, öğrenciler ve hobler tarafından erişilebilir ve hepsi, canlı bir uluslararası geliştirici topluluğuna katılmak ve .NET teknolojilerinin çoğuna doğrudan katkı sağlamak için hoş geldiniz.
 
 ## <a name="news"></a>Haberler
 
-.NET ile ilgili haberler için aşağıdaki blogları kontrol edin:
+.NET hakkında haberler için aşağıdaki bloglara bakın:
 
-- [.NET Blog](https://devblogs.microsoft.com/dotnet/)
-- [ASP.NET Blog](https://devblogs.microsoft.com/aspnet/)
-- [Görsel Stüdyo Blog](https://devblogs.microsoft.com/visualstudio/)
-- [Görsel Temel Takım](https://devblogs.microsoft.com/vbteam/)
+- [.NET blogu](https://devblogs.microsoft.com/dotnet/)
+- [ASP.NET blogu](https://devblogs.microsoft.com/aspnet/)
+- [Visual Studio blogu](https://devblogs.microsoft.com/visualstudio/)
+- [Visual Basic ekibi](https://devblogs.microsoft.com/vbteam/)
 
-Ayrıca en son .NET olaylarını takip edin:
+Ayrıca, en son .NET olaylarını izleyin:
 
 - [Microsoft Ignite](https://www.microsoft.com/ignite)
-- [Microsoft Build](https://www.microsoft.com/build)
-- [.NET Conf](https://www.dotnetconf.net/)
+- [Microsoft derleme](https://www.microsoft.com/build)
+- [.NET conf](https://www.dotnetconf.net/)
 
-.NET uygulamalarına ve desteklenen dillere eklenen en son özellikler hakkında bilgi için aşağıdaki makalelere bakın:
+.NET uygulamalarına ve desteklenen dillere eklenen en son özellikler hakkında daha fazla bilgi için aşağıdaki makalelere bakın:
 
 - [​.NET Core 3.1’deki yenilikler](core/whats-new/dotnet-core-3-1.md)
-- [.NET Framework’teki yenilikler](framework/whats-new/index.md)
+- [.NET Framework yenilikler](framework/whats-new/index.md)
 - [C# yenilikleri](csharp/whats-new/index.md)
-- [Visual Basic için yenilikler](visual-basic/getting-started/whats-new.md)
+- [Visual Basic yenilikler](visual-basic/getting-started/whats-new.md)
 
 ## <a name="documentation"></a>Belgeler
 
-Bu dokümantasyon,.NET'in platformlar ve diller arasında genişliğini kapsar. .NET ve dilleriyle aşağıdaki bölümlerden herhangi birinde işe alabilirsiniz:
+Bu belge platformlar ve diller genelinde .NET 'in kapsamını içerir. Aşağıdaki bölümlerde .NET ve dillerini kullanmaya başlamanızı sağlayabilirsiniz:
 
-- [.NET Rehberi](standard/index.yml)
-- [.NET Çekirdek Rehberi](core/index.yml)
-- [.NET Çerçeve Rehberi](framework/index.yml)
-- [C# Rehberi](csharp/index.yml)
-- [F# Rehberi](fsharp/index.yml)
-- [Görsel Temel Kılavuz](visual-basic/index.yml)
-- [ML.NET Rehberi](machine-learning/index.yml)
+- [.NET temelleri](fundamentals/index.yml)
+- [.NET Framework Kılavuzu](framework/index.yml)
+- [C# Kılavuzu](csharp/index.yml)
+- [F # Kılavuzu](fsharp/index.yml)
+- [Visual Basic Kılavuzu](visual-basic/index.yml)
+- [ML.NET kılavuzu](machine-learning/index.yml)
 - [Apache Spark için .NET](spark/index.yml)
-- [.NET Uygulama Mimarisi](architecture/index.yml)
+- [.NET uygulama mimarisi](architecture/index.yml)
 
-Ayrıca, [.NET API başvurusuna](/dotnet/api)da göz atabilirsiniz.
+Ayrıca, [.NET API başvurusuna](/dotnet/api)de gidebilirsiniz.
 
 ## <a name="videos"></a>Videolar
 
-Web, mobil, masaüstü, C#, makine öğrenimi, konteynerler/Docker, veri erişimi ve daha fazlası ile ilgili videoları keşfedin:
+Web, mobil, Masaüstü, C#, Machine Learning, kapsayıcılar/Docker, veri erişimi ve daha fazlasına yönelik videoları bulun:
 
 [.NET 101 video serisi](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>Açık kaynak
 
-Bu dokümantasyon tamamen [açık kaynak.](https://github.com/dotnet/docs) Sorun oluşturmaktan belge yazmaya kadar istediğiniz şekilde katkıda bulunabilirsiniz. Ayrıca, .NET'in büyük bir kısmı da açık kaynak koddur. Aşağıdaki liste ana .NET GitHub depolarını gösterir:
+Bu belge tamamen [açık kaynaktır](https://github.com/dotnet/docs). Belge yazma sorunlarıyla karşılaşmanız, istediğiniz herhangi bir şekilde katkıda bulunabilir. Ayrıca, .NET 'in çoğu da açık kaynaktır. Aşağıdaki listede, ana .NET GitHub depoları gösterilmektedir:
 
-- [.NET Çekirdek Ana Sayfa](https://github.com/dotnet/core)
-- [.NET Çekirdek çalışma süresi](https://github.com/dotnet/runtime)
-- [.NET Çekirdek SDK](https://github.com/dotnet/sdk)
-- [Roslyn (C# ve Visual Basic) Derleyici Platformu ve IDE Araçları](https://github.com/dotnet/roslyn)
-- [F# Derleyici ve IDE Araçları](https://github.com/dotnet/fsharp)
+- [.NET Core giriş sayfası](https://github.com/dotnet/core)
+- [.NET Core çalışma zamanı](https://github.com/dotnet/runtime)
+- [.NET Core SDK](https://github.com/dotnet/sdk)
+- [Roslyn (C# ve Visual Basic) derleyicisi platformu ve IDE araçları](https://github.com/dotnet/roslyn)
+- [F # derleyicisi ve IDE araçları](https://github.com/dotnet/fsharp)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-Yenilikleri öğrenmek veya yardım istemek için [.NET topluluğunda](https://dotnet.microsoft.com/platform/community) zaten etkin olan diğer kişilere katılabilirsiniz.
+[.Net Community](https://dotnet.microsoft.com/platform/community) 'de zaten etkin olan diğer kişilere katılarak, nelerin yeni olduğunu bulabilir veya yardım isteyebilirsiniz.

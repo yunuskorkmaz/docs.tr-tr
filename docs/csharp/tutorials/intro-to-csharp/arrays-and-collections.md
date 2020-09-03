@@ -3,12 +3,12 @@ title: Koleksiyonlarla çalışma-C# öğreticisine giriş
 description: Bu öğreticide liste koleksiyonunu inceleyerek C# öğrenin.
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: e2282df21420630634911e07f4fb3b94f34a792b
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396890"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414689"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Genel liste türünü kullanarak veri koleksiyonlarını yönetmeyi öğrenin
 
@@ -230,4 +230,4 @@ Döngünün her tekrarında, listedeki son iki tamsayının yerine getiriyorsunu
 
 Tebrikler, liste öğreticisini tamamladınız. Kendi geliştirme ortamınızda [sınıflarla tanışın](introduction-to-classes.md) öğreticisine devam edebilirsiniz.
 
-`List` [Koleksiyonlar](../../../standard/collections/index.md)hakkında [.net Kılavuzu](../../../standard/index.yml) makalesindeki türle çalışma hakkında daha fazla bilgi edinebilirsiniz. Diğer birçok koleksiyon türünü de öğreneceksiniz.
+`List` [Koleksiyonlar](../../../standard/collections/index.md)üzerinde .net temelleri makalesindeki türle çalışma hakkında daha fazla bilgi edinebilirsiniz. Diğer birçok koleksiyon türünü de öğreneceksiniz.

@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 4458f3cd7c8259c5725cfe5e853f826fe2ef61cc
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: 469ed872c1c8c4eb41eecd04277d4fc53fb3d112
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87382067"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414649"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main () dönüş değerleri (C# Programlama Kılavuzu)
 
@@ -26,7 +26,7 @@ Dönüş değeri `Main` kullanılmazsa, döndürme `void` biraz daha basit bir k
 
 ## <a name="example"></a>Örnek
 
-Bu örnek [.NET Core](../../../core/index.yml) komut satırı araçlarını kullanır. .NET Core komut satırı araçları hakkında bilginiz yoksa, bu [Get-Started makalesinde](../../../core/tutorials/with-visual-studio-code.md)hakkında bilgi edinebilirsiniz.
+Bu örnek [.NET Core](../../../core/introduction.md) komut satırı araçlarını kullanır. .NET Core komut satırı araçları hakkında bilginiz yoksa, bu [Get-Started makalesinde](../../../core/tutorials/with-visual-studio-code.md)hakkında bilgi edinebilirsiniz.
 
 `Main` *Program.cs* içindeki yöntemi aşağıdaki gibi değiştirin:
 
@@ -88,10 +88,10 @@ Yeni sözdiziminin avantajı, derleyicinin her zaman doğru kodu üretmesinin av
 
 Uygulama giriş noktası bir `Task` veya döndürdüğünde `Task<int>` , derleyici uygulama kodunda belirtilen giriş noktası yöntemini çağıran yeni bir giriş noktası oluşturur. Bu giriş noktasının çağrıldığı kabul edildiğinde `$GeneratedMain` , derleyici bu giriş noktaları için aşağıdaki kodu üretir:
 
-- `static Task Main()`Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar`private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task Main(string[])`Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar`private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
-- `static Task<int> Main()`Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar`private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
-- `static Task<int> Main(string[])`Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar`private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task Main()` Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar `private static void $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task Main(string[])` Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar `private static void $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
+- `static Task<int> Main()` Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar `private static int $GeneratedMain() => Main().GetAwaiter().GetResult();`
+- `static Task<int> Main(string[])` Derleyicinin ' ın eşdeğerini yaymasına ilişkin sonuçlar `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();`
 
 > [!NOTE]
 >Örnekler `async` yöntemde değiştirici kullandıysanız `Main` , derleyici aynı kodu oluşturur.

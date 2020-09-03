@@ -2,14 +2,14 @@
 title: C# 8,0 ' deki yenilikler-C# Kılavuzu
 description: C# 8,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 04/07/2020
-ms.openlocfilehash: 14df381e17fe89bd862f97522c7efd814857e71e
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: eee395c33585028cd81861045f05f7790d8db949
+ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309410"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89414896"
 ---
-# <a name="whats-new-in-c-80"></a>C# 8,0 ' deki yenilikler
+# <a name="whats-new-in-c-80"></a>C# 8.0 sürümündeki yenilikler
 
 C# 8,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 
@@ -39,7 +39,7 @@ Bu makalenin geri kalanında bu özellikler kısaca açıklanmaktadır. Ayrınt�
 1. [DotNet-TRY](https://github.com/dotnet/try/blob/master/README.md#setup) küresel aracını yükler.
 1. [DotNet/TRY-Samples](https://github.com/dotnet/try-samples) deposunu kopyalayın.
 1. *TRY-Samples* deposu için geçerli dizini *csharp8* alt dizinine ayarlayın.
-1. Şu komutu çalıştırın: `dotnet try`.
+1. `dotnet try` öğesini çalıştırın.
 
 ## <a name="readonly-members"></a>Salt okunur Üyeler
 
@@ -311,8 +311,8 @@ static int WriteLinesToFile(IEnumerable<string> lines)
                 skippedLines++;
             }
         }
+        return skippedLines;
     } // file is disposed here
-    return skippedLines;
 }
 ```
 
@@ -406,9 +406,9 @@ Dizinler ve aralıklar bir dizideki tek öğelere veya aralıklara erişmek içi
 
 Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
-- <xref:System.Index?displayProperty=nameWithType>bir dizinin dizisini temsil eder.
+- <xref:System.Index?displayProperty=nameWithType> bir dizinin dizisini temsil eder.
 - `^`Bir dizinin sıranın sonuna göre olduğunu belirten End işlecinden dizin.
-- <xref:System.Range?displayProperty=nameWithType>bir dizinin alt aralığını temsil eder.
+- <xref:System.Range?displayProperty=nameWithType> bir dizinin alt aralığını temsil eder.
 - `..`Aralık işleci, bir aralığın işlenenlerinin başlangıcını ve sonunu belirtir.
 
 Dizin kurallarıyla başlayalım. Bir dizi düşünün `sequence` . `0`Dizin, ile aynıdır `sequence[0]` . `^0`Dizin, ile aynıdır `sequence[sequence.Length]` . Bunun `sequence[^0]` gibi bir özel durum oluşturur `sequence[sequence.Length]` . Herhangi bir sayı için `n` Dizin `^n` aynı olur `sequence.Length - n` .
