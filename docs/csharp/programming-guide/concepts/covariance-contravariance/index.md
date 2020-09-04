@@ -3,12 +3,12 @@ title: Kovaryans ve değişken varyans (C#)
 description: Kovaryans ve değişken varyans hakkında bilgi edinin ve bunların atama uyumluluğunu nasıl etkilediğini öğrenin. Aralarındaki farkları gösteren bir kod örneğine bakın.
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 65c75029c27b6c9a5ddc96f01622b520e8698f55
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: ad4b2a7d7925d7893eb5a8e1d2d7c9ee3dcbd527
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105702"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465669"
 ---
 # <a name="covariance-and-contravariance-c"></a>Kovaryans ve değişken varyans (C#)
 C# ' de, Kovaryans ve değişken varyans dizi türleri, temsilci türleri ve genel tür bağımsız değişkenleri için örtük başvuru dönüştürmeyi etkinleştirir. Kovaryans, atama uyumluluğunu korur ve değişken varyans onu tersine çevirir.  
@@ -84,9 +84,9 @@ IEnumerable<Object> objects = strings;
   
 |Başlık|Açıklama|  
 |-----------|-----------------|  
-|[Genel Arabirimlerde Varyans (C#)](./variance-in-generic-interfaces.md)|Genel arabirimlerde Kovaryans ve değişken varyansı açıklar ve .NET Framework değişken genel arabirimlerin bir listesini sağlar.|  
+|[Genel Arabirimlerde Varyans (C#)](./variance-in-generic-interfaces.md)|Genel arabirimlerde Kovaryans ve değişken varyansı açıklar ve .NET 'te VARIANT genel arabirimlerin bir listesini sağlar.|  
 |[VARIANT genel arabirimleri oluşturma (C#)](./creating-variant-generic-interfaces.md)|Özel değişken arabirimlerinin nasıl oluşturulacağını gösterir.|  
 |[Genel Koleksiyonlar için Arabirimlerde Varyans kullanma (C#)](./using-variance-in-interfaces-for-generic-collections.md)|Ve arabirimlerinde Kovaryans ve değişken varyans desteğinin <xref:System.Collections.Generic.IEnumerable%601> <xref:System.IComparable%601> kodu yeniden kullanmanıza nasıl yardımcı olduğunu gösterir.|  
-|[Temsilcilerde varyans (C#)](./variance-in-delegates.md)|Genel ve genel olmayan temsilcilerde kovaryans ve değişken varyansı açıklar ve .NET Framework değişken genel temsilcilerin bir listesini sağlar.|  
+|[Temsilcilerde varyans (C#)](./variance-in-delegates.md)|Genel ve genel olmayan temsilcilerde kovaryans ve değişken varyansı açıklar ve .NET 'te VARIANT genel temsilcilerin bir listesini sağlar.|  
 |[Temsilcilerde varyans kullanma (C#)](./using-variance-in-delegates.md)|Temsilci türleriyle Yöntem imzalarını eşleştirmek için genel olmayan temsilcilerde kovaryans ve değişken varyans desteğinin nasıl kullanılacağını gösterir.|  
 |[Func ve eylem genel temsilcileri için varyans kullanma (C#)](./using-variance-for-func-and-action-generic-delegates.md)|Ve temsilcilerde kovaryans ve değişken varyans desteğinin `Func` `Action` kodu yeniden kullanmanıza nasıl yardımcı olduğunu gösterir.|

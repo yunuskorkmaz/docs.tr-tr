@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: 42b1891c29457745689542a4c9e0482ec5e918fa
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f79ee449eafd04906dab49700a1af6441d54cece
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126014"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89464889"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-BaseAddress (C# derleyici seçenekleri)
 **-BaseAddress** SEÇENEĞI, dll 'nin yükleneceği tercih edilen temel adresi belirtmenizi sağlar. Bu seçeneğin ne zaman ve neden kullanıldığı hakkında daha fazla bilgi için bkz. [Larry Osterman 'ın Web günlüğü](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).  
@@ -30,7 +30,7 @@ ms.locfileid: "89126014"
  DLL 'nin temel adresi. Bu adres ondalık, onaltılık veya sekizlik sayı olarak belirtilebilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bir DLL için varsayılan temel adres .NET Framework ortak dil çalışma zamanı tarafından ayarlanır.  
+ Bir DLL için varsayılan temel adres, .NET ortak dil çalışma zamanı tarafından ayarlanır.  
   
  Bu adresteki alt sıra sözcüğünün yuvarlanacağını unutmayın. Örneğin, 0x11110001 belirtirseniz, 0x11110000 ' ya yuvarlanır.  
   

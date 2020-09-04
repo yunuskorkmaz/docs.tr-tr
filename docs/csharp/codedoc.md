@@ -1,230 +1,230 @@
 ---
-title: Kodunuzu XML yorumlarıyla belgeleme
-description: Kodunuzu XML dokümantasyon yorumlarıyla nasıl belgeleyacağınızı ve derleme zamanında bir XML dokümantasyon dosyası oluşturmayı öğrenin.
+title: Kodunuzu XML açıklamalarıyla belgeleme
+description: Kodunuzu XML belge açıklamalarıyla belgeleme ve derleme zamanında bir XML belge dosyası oluşturma hakkında bilgi edinin.
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91de11c610ea17999dabff6d0552de9440f532e6
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146323"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465305"
 ---
-# <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML yorumlarıyla belgele
+# <a name="document-your-code-with-xml-comments"></a>Kodunuzu XML açıklamalarıyla belgeleme
 
-XML dokümantasyon yorumları, kullanıcı tarafından tanımlanan herhangi bir tür veya üyetanımının üzerine eklenen özel bir yorum türüdür.
-Derleyici tarafından derleyici tarafından derleme zamanında bir XML dokümantasyon dosyası oluşturmak için işlenebileceğinden özeldirler.
-Derleyici tarafından oluşturulan XML dosyası .NET derlemenizin yanında dağıtılabilir, böylece Visual Studio ve diğer IDA'lar türleri veya üyeleri hakkında hızlı bilgi göstermek için IntelliSense'i kullanabilir. Ayrıca, XML dosyası API başvuru web siteleri oluşturmak için [DocFX](https://dotnet.github.io/docfx/) ve [Sandcastle](https://github.com/EWSoftware/SHFB) gibi araçlar aracılığıyla çalıştırılabilir.
+XML belge açıklamaları, Kullanıcı tanımlı herhangi bir tür veya üyenin tanımının üzerine eklenen özel bir açıklama türüdür.
+Bunlar, derleme zamanında bir XML belge dosyası oluşturmak için derleyici tarafından işlenebilecekleri için özeldir.
+Derleyici tarafından oluşturulan XML dosyası, Visual Studio ve diğer IDE 'Ler, türler veya üyeler hakkında hızlı bilgi göstermek için IntelliSense kullanabilmesi için .NET derlemenizin yanı sıra dağıtılabilir. Ayrıca, XML dosyası, API başvuru Web siteleri oluşturmak için [Docfx](https://dotnet.github.io/docfx/) ve [sandrole](https://github.com/EWSoftware/SHFB) gibi araçlar aracılığıyla çalıştırılabilir.
 
-XML dokümantasyon yorumları, diğer tüm yorumlar gibi derleyici tarafından yoksayılır.
+Tüm diğer yorumlar gibi XML belgesi açıklamaları derleyici tarafından yok sayılır.
 
-Aşağıdakilerden birini yaparak XML dosyasını derleme zamanında oluşturabilirsiniz:
+XML dosyasını, derleme zamanında aşağıdakilerden birini yaparak oluşturabilirsiniz:
 
-- Komut satırından .NET Core içeren bir uygulama geliştiriyorsanız, `GenerateDocumentationFile` .csproj proje dosyanızın bölümüne `<PropertyGroup>` bir öğe ekleyebilirsiniz. Ayrıca, [ `DocumentationFile` öğeyi](/visualstudio/msbuild/common-msbuild-project-properties)kullanarak doğrudan dokümantasyon dosyasına giden yolu da belirtebilirsiniz. Aşağıdaki örnek, proje dizininde derlemeyle aynı kök dosya adına sahip bir XML dosyası oluşturur:
+- Komut satırından .NET Core ile bir uygulama geliştiriyorsanız, `GenerateDocumentationFile` `<PropertyGroup>` . csproj proje dosyanızın bölümüne bir öğesi ekleyebilirsiniz. Ayrıca, belge dosyasının yolunu doğrudan [ `DocumentationFile` öğesini](/visualstudio/msbuild/common-msbuild-project-properties)kullanarak belirtebilirsiniz. Aşağıdaki örnek, derleme ile aynı kök dosya adına sahip proje dizininde bir XML dosyası oluşturur:
 
    ```xml
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    ```
 
-   Bu, aşağıdakilere eşdeğerdir:
+   Bu, aşağıdaki gibi eşdeğerdir:
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-- Visual Studio'yu kullanarak bir uygulama geliştiriyorsanız, projeye sağ tıklayın ve **Özellikler'i**seçin. Özellikler iletişim kutusunda, **Yapı** sekmesini seçin ve **XML belge dosyasını**denetleyin. Derleyicinin dosyayı yazdığı konumu da değiştirebilirsiniz.
+- Visual Studio 'Yu kullanarak bir uygulama geliştiriyorsanız, projeye sağ tıklayıp **Özellikler**' i seçin. Özellikler iletişim kutusunda **derleme** sekmesini seçin ve **XML belge dosyasını**denetleyin. Derleyicinin dosyayı yazdıkları konumu da değiştirebilirsiniz.
 
-- Komut satırından bir .NET Framework uygulaması derliyorsanız, derleme yaparken [-doc derleyici seçeneğini](language-reference/compiler-options/doc-compiler-option.md) ekleyin.  
+- Komut satırından bir .NET uygulaması derlerken, derlerken [-doc derleyici seçeneğini](language-reference/compiler-options/doc-compiler-option.md) ekleyin.  
 
-XML dokümantasyon yorumları üçlü`///`ileri eğik çizgiler ( ) ve XML biçimlendirilmiş yorum gövdesi kullanır. Örnek:
+XML belge açıklamaları Üçlü eğik çizgi ( `///` ) ve XML biçimli bir açıklama gövdesi kullanır. Örneğin:
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
 ## <a name="walkthrough"></a>Kılavuz
 
-Yeni geliştiricilerin anlamasını/katkıda bulunmasını ve üçüncü taraf geliştiricilerin kullanmasını kolaylaştırmak için çok temel bir matematik kitaplığını belgeleme konusunda yürüyelim.
+Yeni geliştiricilerin, üçüncü taraf geliştiricilerin kullanması için ve katkıda bulunmak üzere çok basit bir matematik kitaplığını belgeleme konusunda bilgi vereceğiz.
 
-Burada basit matematik kitaplığı için kod:
+Basit matematik kitaplığı için kod aşağıda verilmiştir:
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-Örnek kitaplık dört ana aritmetik `subtract` `multiply`işlemleri `divide`destekler `int` ( `double` `add`, , , ve ) ve veri türleri.
+Örnek kitaplık, ve veri türlerini dört ana aritmetik işlemi ( `add` , `subtract` , `multiply` , ve `divide` ) destekler `int` `double` .
 
-Artık kitaplığınızı kullanan ancak kaynak koduna erişimi olmayan üçüncü taraf geliştiriciler için kodunuzdan bir API başvuru belgesi oluşturmak istiyorsunuz.
-Daha önce belirtildiği gibi XML belge etiketleri bunu başarmak için kullanılabilir. Şimdi C# derleyicisinin desteklediği standart XML etiketleri ile tanışır.
+Şimdi kitaplığınızı kullanan üçüncü taraf geliştiriciler için kodunuzda bir API başvuru belgesi oluşturabilmek, ancak kaynak koda erişiminiz yok.
+Daha önce bahsedilen XML belge etiketleri bunu elde etmek için kullanılabilir. Artık C# derleyicisinin desteklediği standart XML etiketlerine tanıtılcaksınız.
 
-## <a name="summary"></a>\<summary>
+## \<summary>
 
-Etiket, `<summary>` bir tür veya üye hakkında kısa bilgiler ekler.
-Ben `Math` sınıf tanımı ve ilk `Add` yöntem ekleyerek kullanımını göstereceğim. Kodunuzun geri kalanına uygulamadan çekinmeyin.
+`<summary>`Etiketi, bir tür veya üye hakkında kısa bilgiler ekler.
+Kendi kullanımını `Math` sınıf tanımına ve ilk yönteme ekleyerek göstereceğim `Add` . Kodunuzu geri kalanına uygulamayı ücretsiz olarak hissetmekten çekinmeyin.
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-Etiket `<summary>` önemlidir ve içeriği IntelliSense'deki tür veya üye bilgilerinin birincil kaynağı veya API başvuru belgesi olduğundan etiketlemeyi eklemenizi öneririz.
+`<summary>`Etiketi önemlidir ve içeriği, IntelliSense 'de veya BIR API başvuru belgesinde bulunan içerik veya üye bilgilerinin birincil kaynağı olduğundan, bunu dahil etmenizi öneririz.
 
-## <a name="remarks"></a>\<açıklamalar>
+## \<remarks>
 
-Etiket, `<remarks>` `<summary>` etiketin sağladığı türveya üyeler hakkındaki bilgileri tamamlar. Bu örnekte, sınıfa eklemeniz gereken bir örnek.
+`<remarks>`Etiketi, etiketin sağladığı türler veya Üyeler hakkındaki bilgileri tamamlar `<summary>` . Bu örnekte, bunu yalnızca sınıfına eklersiniz.
 
 [!code-csharp[Remarks Tag](~/samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-## <a name="returns"></a>\<returns>
+## \<returns>
 
-Etiket, `<returns>` yöntem bildiriminin dönüş değerini açıklar.
-Daha önce olduğu gibi, `<returns>` aşağıdaki örnekte `Add` ilk yöntemdeki etiket gösterin. Aynı şeyi diğer yöntemlerde de yapabilirsiniz.
+`<returns>`Etiket, bir yöntem bildiriminin dönüş değerini açıklar.
+Daha önce olduğu gibi, aşağıdaki örnek `<returns>` İlk yöntemde etiketini gösterir `Add` . Diğer yöntemlerle aynı şekilde yapabilirsiniz.
 
 [!code-csharp[Returns Tag](~/samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-## <a name="value"></a>\<value>
+## \<value>
 
-Etiket, `<value>` özellikleri için `<returns>` kullanmanız dışında etikete benzer.
-Kitaplığınızın `Math` statik `PI`bir özelliği olduğunu varsayarsak, bu etiketi şu şekilde kullanırdınız:
+`<value>`Etiketi, bu etiketle benzerdir `<returns>` , ancak bunları özellikler için kullanmanız gerekir.
+`Math`Kitaplığınızın bir statik özelliği olduğu varsayıldığında `PI` , bu etiketi şu şekilde kullanabilirsiniz:
 
 [!code-csharp[Value Tag](~/samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-## <a name="example"></a>\<örnek>
+## \<example>
 
-`<example>` Etiketi XML belgelerinize bir örnek eklemek için kullanırsınız.
-Bu, alt `<code>` etiketini kullanmayı içerir.
+`<example>`XML belgelerinize bir örnek eklemek için etiketini kullanın.
+Bunun için alt etiketi kullanılması gerekir `<code>` .
 
 [!code-csharp[Example Tag](~/samples/snippets/csharp/concepts/codedoc/example-tag.cs)]
 
-Etiket, `code` satır sonları ve girintiyi daha uzun örnekler için korur.
+`code`Etiket, daha uzun örnekler için satır sonlarını ve girintiyi korur.
 
-## <a name="para"></a>\<para>
+## \<para>
 
-`<para>` Etiketi, ana etiketindeki içeriği biçimlendirmek için kullanırsınız. `<para>`genellikle bir etiket içinde kullanılır, gibi `<remarks>` veya `<returns>`, paragraflara metin bölmek için.
-Sınıf tanımınız için `<remarks>` etiketin içeriğini biçimlendirebilirsiniz.
+`<para>`İçeriğini üst etiketi içinde biçimlendirmek için etiketini kullanın. `<para>` genellikle `<remarks>` `<returns>` metin paragraflarına bölmek için veya gibi bir etiket içinde kullanılır.
+`<remarks>`Sınıf tanımınız için etiketin içeriğini biçimlendirebilirsiniz.
 
 [!code-csharp[Para Tag](~/samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-## <a name="c"></a>\<c>
+## \<c>
 
-Biçimlendirme konusunda hala, metnin `<c>` bir bölümünü kod olarak işaretlemek için etiketi kullanırsınız.
-Bu `<code>` etiket gibi ama satır içinde. Bir etiketin içeriğinin bir parçası olarak hızlı bir kod örneği göstermek istediğinizde kullanışlıdır.
-Sınıfın belgelerini `Math` güncelleyelim.
+Biçimlendirme konusunda hala, `<c>` metnin bir kısmını kod olarak işaretlemek için etiketini kullanırsınız.
+`<code>`Etiket, ancak satır içi gibi. Bir etiketin içeriğinin bir parçası olarak hızlı bir kod örneği göstermek istediğinizde yararlı olur.
+Sınıfın belgelerini güncelleştirelim `Math` .
 
 [!code-csharp[C Tag](~/samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-## <a name="exception"></a>\<özel durum>
+## \<exception>
 
-`<exception>` Etiketi kullanarak, geliştiricilerinize bir yöntemin belirli özel durumlar atabileceğini bildirin.
-Kitaplığınıza `Math` baktığınızda, belirli bir `Add` koşul yerine getirildiğinde her iki yöntemin de özel bir durum ortaya çıkardığını görebilirsiniz. O kadar açık değil, ancak, `Divide` `b` parametre sıfır ise tamsayı yöntemi de atar. Şimdi bu yönteme özel durum belgeleri ekleyin.
+`<exception>`Etiketini kullanarak, geliştiricilerin bir yöntemin belirli özel durumlar oluşturduğunu bilmesini sağlar.
+`Math`Kitaplığınıza bakarak, `Add` belirli bir koşul karşılanırsa her iki yöntemin de bir özel durum oluşturmasını sağlayabilirsiniz. Öyle değildir, ancak `Divide` parametrenin sıfır olması durumunda tamsayı yöntemi de oluşturulur `b` . Şimdi bu yönteme özel durum belgeleri ekleyin.
 
 [!code-csharp[Exception Tag](~/samples/snippets/csharp/concepts/codedoc/exception-tag.cs)]
 
-Öznitelik, `cref` geçerli derleme ortamından kullanılabilen bir özel durum için bir başvuruyu temsil eder.
-Bu, projede tanımlanan herhangi bir tür veya başvurulan bir derleme olabilir. Derleyici, değeri çözülemiyorsa bir uyarı yayımlar.
+`cref`Öznitelik, geçerli derleme ortamında kullanılabilir olan bir özel duruma başvuruyu temsil eder.
+Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir. Değeri çözülemezse, derleyici bir uyarı verebilir.
 
-## <a name="see"></a>\<bkz.>
+## \<see>
 
-Etiket, `<see>` başka bir kod öğesi için bir belgesayfasına tıklanabilir bir bağlantı oluşturmanıza olanak tanır. Bir sonraki örneğimizde, iki `Add` yöntem arasında tıklanabilir bir bağlantı oluştururuz.
+`<see>`Etiketi, başka bir kod öğesi için bir belge sayfasına tıklatılabilir bir bağlantı oluşturmanıza olanak sağlar. Sonraki örnekte, iki yöntem arasında tıklatılabilir bir bağlantı oluşturacağız `Add` .
 
 [!code-csharp[See Tag](~/samples/snippets/csharp/concepts/codedoc/see-tag.cs)]
 
-Bu, `cref` geçerli derleme ortamından kullanılabilen bir türe veya üyesine yapılan başvuruyu temsil eden **gerekli** bir özniteliktir.
-Bu, projede tanımlanan herhangi bir tür veya başvurulan bir derleme olabilir.
+, `cref` Geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eden **gerekli** bir özniteliktir.
+Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir.
 
-## <a name="seealso"></a>\<seealso>
+## \<seealso>
 
-`<seealso>` Etiketi, `<see>` etiketi yaptığınız gibi kullanırsınız. Tek fark, içeriğinin genellikle bir "Ayrıca Bak" bölümüne yerleştirilmiş olmasıdır. Burada tamsayı parametrelerini kabul eden `Add` sınıftaki diğer yöntemlere başvurmak için tamsayı yöntemine bir `seealso` etiket ekleyeceğiz:
+`<seealso>`Etiketi, etiketi yaptığınız şekilde kullanırsınız `<see>` . Tek fark, içeriğinin genellikle bir "Ayrıca bkz." bölümüne yerleştirilme nedendir. Burada, tamsayı `seealso` `Add` parametrelerini kabul eden sınıftaki diğer yöntemlere başvurmak için tamsayı yöntemine bir etiket ekleyeceğiz:
 
 [!code-csharp[Seealso Tag](~/samples/snippets/csharp/concepts/codedoc/seealso-tag.cs)]
 
-Öznitelik, `cref` geçerli derleme ortamından kullanılabilen bir türe veya üyesine yapılan başvuruyu temsil eder.
-Bu, projede tanımlanan herhangi bir tür veya başvurulan bir derleme olabilir.
+`cref`Öznitelik, geçerli derleme ortamında kullanılabilir olan bir türe veya üyesine başvuruyu temsil eder.
+Bu, projede veya başvurulan bir derlemede tanımlanmış herhangi bir tür olabilir.
 
-## <a name="param"></a>\<param>
+## \<param>
 
-Bir yöntemin parametrelerini `<param>` açıklamak için etiketi kullanırsınız. Çift `Add` yöntemle ilgili bir örnek aşağıda verilmiştir: Etiketin açıkladığı parametre **gerekli** `name` öznitelikte belirtilir.
+`<param>`Bir yöntemin parametrelerini anlatmak için etiketini kullanırsınız. Double yöntemine bir örnek aşağıda verilmiştir `Add` : etiketin açıkladığı parametre, **gerekli** `name` özniteliğinde belirtilir.
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-## <a name="typeparam"></a>\<typeparam>
+## \<typeparam>
 
-Etiketi etiket gibi, ancak genel bir parametreyi açıklamak için genel tür veya yöntem bildirimleri için kullanırsınız. `<typeparam>` `<param>`
-Bir miktarın diğerinden `Math` büyük olup olmadığını denetlemek için sınıfınıza hızlı bir genel yöntem ekleyin.
+Etiketi `<typeparam>` tıpkı etiketi gibi kullanırsınız, `<param>` ancak genel tür veya yöntem bildirimlerinin genel bir parametreyi tanımlamasını sağlar.
+`Math`Bir miktarın diğerinden daha büyük olup olmadığını denetlemek için sınıfınıza hızlı genel bir yöntem ekleyin.
 
 [!code-csharp[Typeparam Tag](~/samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-## <a name="paramref"></a>\<paramref>
+## \<paramref>
 
-Bazen bir yöntemin `<summary>` etiket olabilecek bir şeyde ne yaptığını açıklamanın ortasında olabilirsiniz ve bir parametreye başvuruda bulunmak isteyebilirsiniz. Etiket `<paramref>` sadece bu için harika. Çift tabanlı `Add` yöntemimizin özetini güncelleyelim. `<param>` Etiket gibi, parametre adı da **gerekli** `name` öznitelikte belirtilir.
+Bazen bir yöntemin hangi bir etiketle ne olduğunu açıklayan ortasında olabilirsiniz `<summary>` ve bir parametreye başvuru yapmak isteyebilirsiniz. `<paramref>`Etiketi yalnızca bunun için harika. Double tabanlı yönteminizin özetini güncelleştirelim `Add` . Etiketi gibi `<param>` , parametre adı **gerekli** `name` özniteliğinde belirtilir.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-## <a name="typeparamref"></a>\<typeparamref>
+## \<typeparamref>
 
-Etiketi etiket gibi, ancak genel bir parametreyi açıklamak için genel tür veya yöntem bildirimleri için kullanırsınız. `<typeparamref>` `<paramref>`
+Etiketi `<typeparamref>` tıpkı etiketi gibi kullanırsınız, `<paramref>` ancak genel tür veya yöntem bildirimlerinin genel bir parametreyi tanımlamasını sağlar.
 Daha önce oluşturduğunuz genel yöntemi kullanabilirsiniz.
 
 [!code-csharp[Typeparamref Tag](~/samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-## <a name="list"></a>\<liste>
+## \<list>
 
-Etiketi, `<list>` belge bilgilerini sıralı bir liste, sıralanmamış liste veya tablo olarak biçimlendirmek için kullanırsınız. Kitaplığınızın `Math` desteklediği her matematik işleminin sıralanmamış bir listesini yapın.
+`<list>`Belge bilgilerini sıralı liste, sırasız liste veya tablo olarak biçimlendirmek için etiketini kullanın. Kitaplığınızın desteklediği her matematik işleminin sıralanmamış bir listesini oluşturun `Math` .
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
-Sırasıyla özniteliği değiştirerek `type` sıralı bir liste `number` `table`veya tablo yapabilirsiniz.
+`type`Özniteliği sırasıyla veya olarak değiştirerek sıralı bir liste veya tablo yapabilirsiniz `number` `table` .
 
-## <a name="inheritdoc"></a>\<kalıtsal doc>
+## \<inheritdoc>
 
-`<inheritdoc>` Etiketi, temel sınıflardan, arabirimlerden ve benzer yöntemlerden XML yorumlarını devralmak için kullanabilirsiniz. Bu, yinelenen XML yorumlarının istenmeyen kopyalanması ve yapıştırMasını ortadan kaldırır ve XML yorumlarını otomatik olarak senkronize eder.
+`<inheritdoc>`Temel sınıflardan, arabirimlerden ve benzer metotlardan XML açıklamalarını devralacak şekilde etiketini kullanabilirsiniz. Bu, yinelenen XML açıklamalarını istenmeyen kopyalama ve yapıştırmayı ortadan kaldırır ve otomatik olarak XML açıklamalarını eşitlenmiş halde tutar.
 
 [!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>Hepsini bir araya getirin
 
-Bu öğreticiyi takip ettiyseniz ve etiketleri gerektiğinde kodunuza uyguladıysanız, kodunuz artık aşağıdakilere benzer olmalıdır:
+Bu öğreticiyi takip ediyorsanız ve gereken yere etiketleri kodunuza uyguladıysanız, kodunuzun aşağıdakine benzer şekilde görünmesi gerekir:
 
 [!code-csharp[Tagged Library](~/samples/snippets/csharp/concepts/codedoc/tagged-library.cs)]
 
-Kodunuzdan, tıklanabilir çapraz referanslarla birlikte ayrıntılı bir dokümantasyon web sitesi oluşturabilirsiniz. Ama başka bir sorunla karşı karşıyasınız: kodunuzu okumak zor laştı.
-Bu koda katkıda bulunmak isteyen herhangi bir geliştirici için bir kabus olacak bu elemek için çok fazla bilgi var.
-Neyse ki bu başa yardımcı olabilecek bir XML etiketi var:
+Kodınızdan, tıklatılabilir çapraz başvurularla ayrıntılı bir belge Web sitesi oluşturabilirsiniz. Ancak başka bir sorunla karşılaşıyoruz: kodunuzun okunması zor oldu.
+Bu koda katkıda bulunmak isteyen herhangi bir geliştirici için bu bir gece olacak şekilde, bu kadar çok bilgi vardır.
+Bu konuda size yardımcı olabilecek bir XML etiketi vardı:
 
-## <a name="include"></a>\<> dahil
+## \<include>
 
-Etiket, `<include>` belge yorumlarını doğrudan kaynak kod dosyanıza yerleştirmek yerine kaynak kodunuzdaki türleri ve üyeleri açıklayan ayrı bir XML dosyasındaki yorumlara başvurmanızı sağlar.
+`<include>`Etiketi, belge açıklamalarını doğrudan kaynak kodu dosyanıza yerleştirmeyi aksine, kaynak kodunuzda türleri ve üyeleri tanımlayan ayrı bır XML dosyasındaki açıklamalara başvurmanıza olanak sağlar.
 
-Şimdi tüm XML etiketlerinizi ayrı bir XML dosyasına `docs.xml`taşıyacaksın. Dosyaya istediğiniz ismi vermekte çekinmeyin.
+Artık tüm XML etiketlerinizi adlı ayrı bir XML dosyasına taşıyacağız `docs.xml` . Dosyayı istediğiniz şekilde adlandırabilirsiniz.
 
 [!code-xml[Sample XML](~/samples/snippets/csharp/concepts/codedoc/include.xml)]
 
-Yukarıdaki XML'de, her üyenin dokümantasyon yorumları doğrudan yaptıklarından sonra bir etiketin içinde görünür. Kendi stratejini seçebilirsin.
-Artık XML yorumlarınızı ayrı bir dosyada gördüğünüze göre, `<include>` etiketi kullanarak kodunuzun nasıl daha okunabilir hale getirebileceğini görelim:
+Yukarıdaki XML 'de, her üyenin belge yorumu, ne yapacaklarıyla doğrudan adlı bir etiketin içinde görünür. Kendi stratejinizi seçebilirsiniz.
+XML açıklamalarınız ayrı bir dosyada olduğuna göre, şu etiketi kullanarak kodunuzun daha okunaklı hale getirilme biçimini görelim `<include>` :
 
 [!code-csharp[Include Tag](~/samples/snippets/csharp/concepts/codedoc/include-tag.cs)]
 
-Ve işte burada: kodumuz tekrar okunabilir hale döndü ve hiçbir belge bilgisi kaybedilmedi.
+Bu durumda: kodunuz okunabilir hale getirilir ve belge bilgisi kaybedilmiyor.
 
-Öznitelik belgeleri `file` içeren XML dosyasının adını temsil eder.
+`file`Öznitelik, belgeleri IÇEREN XML dosyasının adını temsil eder.
 
-Öznitelik `path` belirtilen `tag name` bugünü bir [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) sorgusu `file`temsil eder.
+`path`Öznitelik, belirtilen öğesinde var olan bir [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) sorgusunu temsil eder `tag name` `file` .
 
-Öznitelik, `name` yorumlardan önce etiketteki adı belirtici temsil eder.
+`name`Öznitelik, yorumlarla önce gelen etiketteki ad belirticisini temsil eder.
 
-`id` Yerine `name`kullanılabilen öznitelik, yorumlardan önce gelen etiketin kimliğini temsil eder.
+Yerine `id` kullanılabilecek özniteliği, `name` yorumların ÖNÜNDEKI etiketin kimliğini temsil eder.
 
-### <a name="user-defined-tags"></a>Kullanıcı tanımlı etiketler
+### <a name="user-defined-tags"></a>Kullanıcı tanımlı Etiketler
 
-Yukarıda özetlenen tüm etiketler, C# derleyicisi tarafından tanınan etiketleri temsil elerdir. Ancak, bir kullanıcı kendi etiketlerini tanımlamakta özgürdür.
-Sandcastle gibi araçlar [ \<olay>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) ve [ \<not>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)gibi ekstra etiketler için destek getirmek ve hatta ad alanlarını [belgeleme](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)desteği.
-Özel veya şirket içi dokümantasyon oluşturma araçları da standart etiketlerle kullanılabilir ve HTML'den PDF'ye birden fazla çıkış biçimi desteklenebilir.
+Yukarıda özetlenen tüm Etiketler, C# derleyicisi tarafından tanınan olanları temsil eder. Ancak, bir Kullanıcı kendi etiketlerini tanımlayaücretsizdir.
+Sandrole gibi araçlar, ve gibi ekstra Etiketler için destek getirme [\<event>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) [\<note>](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) ve hatta [ad alanlarını belgeleme](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)desteği.
+Özel veya şirket içi belge oluşturma araçları ayrıca standart Etiketler ve HTML 'den PDF 'ye birden çok çıktı biçimi ile kullanılabilir.
 
 ## <a name="recommendations"></a>Öneriler
 
-Kodu belgeleme birçok nedenden dolayı önerilir. C# kodunuzda XML belge etiketleri kullanırken bilmeniz gereken bazı en iyi uygulamalar, genel kullanım durumu senaryoları ve bilmeniz gereken şeyler aşağıda verilmiştir.
+Kodu belgeleme pek çok nedenden dolayı önerilir. Aşağıda, bazı en iyi yöntemler, genel kullanım örneği senaryoları ve C# kodunuzda XML belge etiketlerini kullanırken bilmeniz gereken noktalar verilmiştir.
 
-- Tutarlılık adına, herkesin önünde görülebilen tüm türler ve üyeleri belgelenmelidir. Eğer yapmak zorundaysan, hepsini yap.
-- Özel üyeler xml yorumları kullanılarak da belgelenebilir. Ancak bu, kitaplığınızın iç (potansiyel olarak gizli) çalışmasını ortaya çıkarır.
-- En azından, intelliSense için `<summary>` içeriği gerektiğinden, türleri ve üyeleri bir etikete sahip olmalıdır.
-- Dokümantasyon metni tam duraklarla biten tam cümleler kullanılarak yazılmalıdır.
-- Kısmi sınıflar tam olarak desteklenir ve belge bilgileri bu tür için tek bir girişe dönüştürülecektir.
-- `<exception>`Derleyici, `<include>`, , `<param>` `<see>`, `<seealso>`, , ve `<typeparam>` etiketlerin sözdizimini doğrular.
-- Derleyici, dosya yolları ve kodun diğer bölümlerine başvurular içeren parametreleri doğrular.
+- Tutarlılık açısından, herkese açık olarak görünen tüm türler ve üyeleri açıklanmalıdır. Bunu yapmanız gerekiyorsa, bunu yapın.
+- Özel Üyeler ayrıca XML açıklamaları kullanılarak Belgelenebilir. Ancak bu, kitaplığınızın iç (potansiyel olarak gizli) işleyişini kullanıma sunar.
+- En azından, türler ve üyeleri, `<summary>` IntelliSense için içerik gerektiğinden bir etikete sahip olmalıdır.
+- Belge metni tam uyarılarla biten tam tümceler kullanılarak yazılmalıdır.
+- Kısmi sınıflar tam olarak desteklenir ve belge bilgileri bu tür için tek bir girişte birleştirilir.
+- Derleyici,,,, `<exception>` `<include>` `<param>` `<see>` `<seealso>` ve `<typeparam>` etiketlerinin sözdizimini doğrular.
+- Derleyici dosya yolları içeren parametreleri ve kodun diğer bölümlerine başvuruları doğrular.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,12 +4,12 @@ description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları na
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 7a4731e2cbaa3835e6aa6ba558dfa8cd03828e01
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053113"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465487"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
@@ -19,7 +19,7 @@ Kırpma Self-içerilen dağıtım modeli, dağıtım boyutunu azaltmak için opt
 
 Ancak, uygulamanın derleme zamanı analizinin, çeşitli sorunlu kod düzenlerini güvenilir bir şekilde çözümleyemedikleri için çalışma zamanında hatalara neden olabileceği bir risk vardır (büyük ölçüde yansıma kullanımı üzerinde ortalandı). Güvenilirlik güvencesi verilmediğinden, bu dağıtım modeli bir önizleme özelliği olarak sunulur.
 
-Derleme zamanı Çözümleme altyapısı, hangi diğer kodun gerekli olduğunu tespit etmek için problemsiz kod desenlerinin geliştiricisine uyarı sağlar. Koda, başka nelerin dahil edileceğini söylemek için koda açıklama eklenebilir. Birçok yansıma deseni, [kaynak](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)oluşturucuları kullanılarak derleme zamanı kod üretimi ile değiştirilebilir.
+Derleme zamanı Çözümleme altyapısı, hangi diğer kodun gerekli olduğunu tespit etmek için sorunlu kod desenlerinin geliştiricisine uyarı sağlar. Koda, başka nelerin dahil edileceğini söylemek için koda açıklama eklenebilir. Birçok yansıma deseni, [kaynak](https://github.com/dotnet/roslyn/blob/master/docs/features/source-generators.md)oluşturucuları kullanılarak derleme zamanı kod üretimi ile değiştirilebilir.
 
 Uygulamalar için kırpma modu ayarı ile yapılandırılır `TrimMode` . Varsayılan değer ve, `copyused` uygulamayla birlikte başvurulan derlemelerdir. `link`Değer, Blazor WebAssembly uygulamalarıyla kullanılır ve derlemeler içinde kullanılmayan kodu kırpar. Kırpma Analizi uyarıları, tam bağımlılık analizinin mümkün olmadığı kod desenleri hakkında bilgi verir. Bu uyarılar varsayılan olarak bastırılır ve bayrağı olarak ayarlanarak açılabilir `SuppressTrimAnalysisWarnings` `false` . Kullanılabilir kırpma seçenekleri hakkında daha fazla bilgi için bkz. [kırpma seçenekleri](trimming-options.md).
 

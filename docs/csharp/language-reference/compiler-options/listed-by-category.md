@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 27445b6685f48f7acf646c16de3201e68767da69
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: a1b65db6efb60d27ab82ab47854c0399b9476729
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125299"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466085"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>Kategorilere Göre Listelenen C# Derleyici Seçenekleri
 
@@ -41,7 +41,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |[-target](target-compiler-option.md)|Aşağıdaki seçeneklerden birini kullanarak çıkış dosyasının biçimini belirtir: [-target: appcontainerexe](target-appcontainerexe-compiler-option.md), [-target: exe](target-exe-compiler-option.md), [-target: Library](target-library-compiler-option.md), [-target: Module](target-module-compiler-option.md), [-target: winexe](target-winexe-compiler-option.md)veya [-target: winmdobj](target-winmdobj-compiler-option.md).|
 |ladı\<string>|Kaynak modülünün adını belirtin|
 
-## <a name="net-framework-assemblies"></a>.NET Framework derlemeleri
+## <a name="net-assemblies"></a>.NET derlemeleri
 
 |Seçenek|Amaç|
 |------------|-------------|
@@ -85,7 +85,7 @@ Aşağıdaki derleyici seçenekleri kategoriye göre sıralanır. Alfabetik bir 
 |------------|-------------|
 |[-bağlantı](link-compiler-option.md)|Belirtilen derlemelerdeki COM türü bilgilerini proje için kullanılabilir hale getirir.|
 |[-linkresource](linkresource-compiler-option.md)|Yönetilen bir kaynağa bir bağlantı oluşturur.|
-|[-Kaynak](resource-compiler-option.md)|Bir .NET Framework kaynağını çıkış dosyasına katıştırır.|
+|[-Kaynak](resource-compiler-option.md)|Çıktı dosyasına bir .NET kaynağı gömer.|
 |[-win32icon](win32icon-compiler-option.md)|Çıktı dosyasına eklenecek bir. ico dosyasını belirtir.|
 |[-win32res](win32res-compiler-option.md)|Çıktı dosyasına eklenecek bir Win32 kaynağı belirtir.|
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 43817a236e95b3ab8fd0ba94da98457eeec2396c
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: b7225e295268a3e46e4e9bd446372ae87bbbbb10
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87301898"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466150"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Genel Arabirimler (C# Programlama Kılavuzu)
-Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden genel sınıflar için arabirim tanımlamak genellikle yararlıdır. Genel sınıfların tercihi, <xref:System.IComparable%601> <xref:System.IComparable> değer türlerinde kutulamayı ve kutudan çıkarma işlemlerini önlemek için yerine gibi genel arabirimleri kullanmaktır. .NET Framework sınıf kitaplığı, ad alanındaki koleksiyon sınıflarıyla kullanılmak üzere birkaç genel arabirimi tanımlar <xref:System.Collections.Generic> .  
+Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden genel sınıflar için arabirim tanımlamak genellikle yararlıdır. Genel sınıfların tercihi, <xref:System.IComparable%601> <xref:System.IComparable> değer türlerinde kutulamayı ve kutudan çıkarma işlemlerini önlemek için yerine gibi genel arabirimleri kullanmaktır. .NET sınıf kitaplığı, ad alanındaki koleksiyon sınıflarıyla kullanılmak üzere çeşitli genel arabirimler tanımlar <xref:System.Collections.Generic> .  
   
- Bir arabirim bir tür parametresinde kısıtlama olarak belirtildiğinde, yalnızca arabirimini uygulayan türler kullanılabilir. Aşağıdaki kod örneğinde `SortedList<T>` sınıfından türetilen bir sınıf gösterilmektedir `GenericList<T>` . Daha fazla bilgi için bkz. [Genel türlere giriş](./index.md). `SortedList<T>`kısıtlamayı ekler `where T : IComparable<T>` . Bu, `BubbleSort` içindeki yönteminin `SortedList<T>` <xref:System.IComparable%601.CompareTo%2A> list öğelerinde genel yöntemini kullanmasına olanak sağlar. Bu örnekte, liste öğeleri, uygulayan basit bir sınıftır `Person` `IComparable<Person>` .  
+ Bir arabirim bir tür parametresinde kısıtlama olarak belirtildiğinde, yalnızca arabirimini uygulayan türler kullanılabilir. Aşağıdaki kod örneğinde `SortedList<T>` sınıfından türetilen bir sınıf gösterilmektedir `GenericList<T>` . Daha fazla bilgi için bkz. [Genel türlere giriş](./index.md). `SortedList<T>` kısıtlamayı ekler `where T : IComparable<T>` . Bu, `BubbleSort` içindeki yönteminin `SortedList<T>` <xref:System.IComparable%601.CompareTo%2A> list öğelerinde genel yöntemini kullanmasına olanak sağlar. Bu örnekte, liste öğeleri, uygulayan basit bir sınıftır `Person` `IComparable<Person>` .  
   
  [!code-csharp[csProgGuideGenerics#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics2.cs#29)]  
   
@@ -32,7 +32,7 @@ Genel koleksiyon sınıfları için ya da koleksiyondaki öğeleri temsil eden g
   
  [!code-csharp[csProgGuideGenerics#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#32)]  
   
- Genel arabirim değişken karşıtı ise genel arabirimler, genel olmayan arabirimlerden devralınabilir, bu da yalnızca kendi tür parametresini dönüş değeri olarak kullanır. .NET Framework sınıf kitaplığında <xref:System.Collections.Generic.IEnumerable%601> öğesinden devralır <xref:System.Collections.IEnumerable> çünkü <xref:System.Collections.Generic.IEnumerable%601> yalnızca `T` öğesinin dönüş değerinde <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> ve <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özellik alıcısı içinde kullanılır.  
+ Genel arabirim değişken karşıtı ise genel arabirimler, genel olmayan arabirimlerden devralınabilir, bu da yalnızca kendi tür parametresini dönüş değeri olarak kullanır. .NET sınıf kitaplığında <xref:System.Collections.Generic.IEnumerable%601> öğesinden devralır <xref:System.Collections.IEnumerable> çünkü <xref:System.Collections.Generic.IEnumerable%601> yalnızca `T` öğesinin dönüş değerinde <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> ve <xref:System.Collections.Generic.IEnumerator%601.Current%2A> özellik alıcısı içinde kullanılır.  
   
  Somut sınıflar, aşağıdaki gibi kapalı oluşturulmuş arabirimler uygulayabilir:  
   

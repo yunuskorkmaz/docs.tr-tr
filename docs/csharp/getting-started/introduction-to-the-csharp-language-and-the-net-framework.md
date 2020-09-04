@@ -1,19 +1,19 @@
 ---
-title: C# Diline ve.NET Framework'e Giriş
+title: C# diline ve .NET 'e giriş
 description: C# ve .NET hakkında temel bilgileri öğrenin. C# diline ve .NET ekosistemine genel bakış alın.
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: fe504124a4274ccce332be255addd1f0b41e9026
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9e84726a8f6056c5beeedae9081a68980150efdd
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414727"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465175"
 ---
-# <a name="introduction-to-the-c-language-and-net-framework"></a>C# diline giriş ve .NET Framework
+# <a name="introduction-to-the-c-language-and-net"></a>C# diline ve .NET 'e giriş
 
 C#, geliştiricilerin .NET ekosisteminde çalışan çok sayıda güvenli ve güçlü uygulamalar oluşturmalarına olanak tanıyan, şık ve tür açısından güvenli bir nesne yönelimli dildir. .Net ekosistemi, .net [Core](../../core/introduction.md)ile sınırlı olmamak üzere tüm .net uygulamalarından oluşur ve [.NET Framework](../../framework/index.yml). Bu makale .NET Framework odaklanır. Windows istemci uygulamaları, XML Web Hizmetleri, dağıtılmış bileşenler, istemci-sunucu uygulamaları, veritabanı uygulamaları ve çok daha fazlasını oluşturmak Için C# kullanabilirsiniz.
 
@@ -44,19 +44,19 @@ Ek C# kaynakları aşağıda verilmiştir:
 - C# dilinin belirli yönleri hakkında ayrıntılı bilgi için bkz. [C# başvurusu](../language-reference/index.md).
 - LINQ hakkında daha fazla bilgi için bkz. [LINQ (dil Ile tümleşik sorgu)](../programming-guide/concepts/linq/index.md).
 
-## <a name="net-framework-platform-architecture"></a>.NET Framework platform mimarisi
+## <a name="net-platform-architecture"></a>.NET platformu mimarisi
 
-C# programları, ortak dil çalışma zamanı (CLR) ve birleştirilmiş bir sınıf kitaplıkları kümesi adlı bir sanal yürütme sistemi içeren, Windows 'un integral bir bileşeni olan .NET Framework çalışır. CLR, dil ve kitaplıkların sorunsuz şekilde çalıştığı yürütme ve geliştirme ortamları oluşturmaya yönelik temel bir uluslararası standart olan ortak dil altyapısının (CLı) Microsoft tarafından oluşturulan ticari bir uygulamasıdır.
+C# programları, ortak dil çalışma zamanı (CLR) ve birleştirilmiş bir sınıf kitaplıkları kümesi adlı bir sanal yürütme sistemi içeren, Windows 'un tümleşik bir bileşeni olan .NET üzerinde çalışır. CLR, dil ve kitaplıkların sorunsuz şekilde çalıştığı yürütme ve geliştirme ortamları oluşturmaya yönelik temel bir uluslararası standart olan ortak dil altyapısının (CLı) Microsoft tarafından oluşturulan ticari bir uygulamasıdır.
 
 C# dilinde yazılan kaynak kodu, CLı belirtimine uyan bir [Ara dilde (IL)](../../standard/managed-code.md) derlenir. Il kodu ve bit eşlemler ve dizeler gibi kaynaklar, genellikle bir. exe veya. dll uzantısıyla derleme adlı yürütülebilir bir dosyada diskte depolanır. Bütünleştirilmiş kod, derlemenin türleri, sürümü, kültürü ve güvenlik gereksinimleri hakkında bilgi sağlayan bir bildirim içerir.
 
-C# programı yürütüldüğünde, derleme CLR 'ye yüklenir ve bu, bildirimdeki bilgilere bağlı olarak çeşitli eylemler gerçekleştirebilir. Daha sonra, güvenlik gereksinimleri karşılanıyorsa, CLR tam zamanında (JıT) derleme gerçekleştirerek Il kodunu yerel makine yönergelerine dönüştürür. CLR Ayrıca otomatik çöp toplama, özel durum işleme ve kaynak yönetimiyle ilgili diğer hizmetleri de sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" olarak adlandırılır ve bu, belirli bir sistemi hedefleyen yerel makine diline derlenen "yönetilmeyen kodun" aksine. Aşağıdaki diyagramda C# kaynak kodu dosyalarının derleme zamanı ve çalışma zamanı ilişkileri, .NET Framework sınıf kitaplıkları, derlemeler ve CLR gösterilmektedir.
+C# programı yürütüldüğünde, derleme CLR 'ye yüklenir ve bu, bildirimdeki bilgilere bağlı olarak çeşitli eylemler gerçekleştirebilir. Daha sonra, güvenlik gereksinimleri karşılanıyorsa, CLR tam zamanında (JıT) derleme gerçekleştirerek Il kodunu yerel makine yönergelerine dönüştürür. CLR Ayrıca otomatik çöp toplama, özel durum işleme ve kaynak yönetimiyle ilgili diğer hizmetleri de sağlar. CLR tarafından yürütülen kod bazen "yönetilen kod" olarak adlandırılır ve bu, belirli bir sistemi hedefleyen yerel makine diline derlenen "yönetilmeyen kodun" aksine. Aşağıdaki diyagramda C# kaynak kodu dosyalarının derleme zamanı ve çalışma zamanı ilişkileri, .NET sınıf kitaplığı, derlemeler ve CLR gösterilmektedir.
 
 ![C# kaynak kodundan makine yürütmeye](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)
 
-Dil birlikte çalışabilirliği, .NET Framework temel bir özelliğidir. C# derleyicisi tarafından üretilen IL kodu ortak tür belirtimine (CTS) uygun olduğundan, C# ' dan oluşturulan IL kodu, Visual Basic, Visual C++ veya 20 ' den fazla diğer CTS uyumlu dilden oluşan .NET sürümlerinden oluşturulan kodla etkileşime geçebilir. Tek bir derlemede, farklı .NET dillerinde yazılmış birden çok modül bulunabilir ve türler aynı dilde yazılmış gibi birbirlerine başvurabilir.
+Dil birlikte çalışabilirliği, .NET 'in önemli bir özelliğidir. C# derleyicisi tarafından üretilen IL kodu ortak tür belirtimine (CTS) uygun olduğundan, C# ' dan oluşturulan IL kodu, Visual Basic, Visual C++ veya 20 ' den fazla diğer CTS uyumlu dilden oluşan .NET sürümlerinden oluşturulan kodla etkileşime geçebilir. Tek bir derlemede, farklı .NET dillerinde yazılmış birden çok modül bulunabilir ve türler aynı dilde yazılmış gibi birbirlerine başvurabilir.
 
-Çalışma zamanı hizmetlerine ek olarak .NET Framework, dosya girişi ve çıktısından dize işlemeye kadar her şey için, Windows Forms denetimlere kadar çok çeşitli yararlı işlevler sağlayan ad alanları halinde düzenlenmiş kapsamlı 4000 sınıftan oluşan kapsamlı bir kitaplık içerir. Tipik C# uygulaması, ortak "sıhhi tesisat" seçeneklerini işlemek için .NET Framework sınıf kitaplığını kapsamlı olarak kullanır.
+Çalışma zamanı hizmetlerine ek olarak, .NET ayrıca dosya girişi ve çıktısından dize işlemeye, XML ayrıştırmaya, Windows Forms denetimlerine kadar her şey için çok çeşitli yararlı işlevler sağlayan, ad alanları halinde düzenlenmiş, 4000 ' den fazla sınıftan oluşan kapsamlı bir kitaplık içerir. Tipik C# uygulaması, ortak "sıhhi tesisat" işlerini ele almak için .NET sınıf kitaplığını kapsamlı olarak kullanır.
 
 .NET Framework hakkında daha fazla bilgi için bkz. [Microsoft .NET Framework 'e genel bakış](../../framework/get-started/overview.md).
 

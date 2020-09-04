@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.openlocfilehash: baa21908b85130f8a0dd992b10cdc95c6e42912e
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 769098134799800d45a31c22f4390734545ff6ff
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415907"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465253"
 ---
 # <a name="get-started-with-c"></a>C ile çalışmaya başlama\#
 
@@ -18,7 +18,7 @@ Bu bölümde, C# ve .NET Core kullanarak hızlı bir şekilde uygulama oluşturm
 
 Aşağıdaki konular kullanılabilir:
 
-- [C# diline ve .NET Framework giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
+- [C# diline ve .NET 'e giriş](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      C# diline ve .NET 'e genel bakış sunar.
 

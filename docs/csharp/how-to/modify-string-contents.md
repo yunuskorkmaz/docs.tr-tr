@@ -4,12 +4,12 @@ description: Yeni bir dize nesnesi döndüren C# ' de var olan dize içeriklerin
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecce8857befc66353deea341d81f8c6e4313b951
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: bae54757fdb6f02cdc0dc8fc15ad3f7583c230a7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86473974"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465058"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C 'de dize içeriğini değiştirme\#
 
@@ -47,7 +47,7 @@ Yöntemini kullanarak bir dizeden metin kaldırabilirsiniz <xref:System.String.R
 
 ## <a name="replace-matching-patterns"></a>Eşleşen desenleri Değiştir
 
-Metin eşleştirme desenlerini, büyük olasılıkla bir desenle tanımlanan yeni metinle değiştirmek için [Normal ifadeleri](../../standard/base-types/regular-expressions.md) kullanabilirsiniz. Aşağıdaki örnek, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> bir kaynak dizesindeki bir düzeni bulmak ve uygun büyük harfle değiştirmek için sınıfını kullanır. <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType>Yöntemi, bağımsız değişkenlerinden biri olarak değiştirme mantığını sağlayan bir işlevi alır. Bu örnekte, bu işlev `LocalReplaceMatchCase` örnek yöntemin içinde belirtilen **yerel bir işlevdir** . `LocalReplaceMatchCase`uygun bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> büyük harfle değiştirme dizesini oluşturmak için sınıfını kullanır.
+Metin eşleştirme desenlerini, büyük olasılıkla bir desenle tanımlanan yeni metinle değiştirmek için [Normal ifadeleri](../../standard/base-types/regular-expressions.md) kullanabilirsiniz. Aşağıdaki örnek, <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> bir kaynak dizesindeki bir düzeni bulmak ve uygun büyük harfle değiştirmek için sınıfını kullanır. <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType>Yöntemi, bağımsız değişkenlerinden biri olarak değiştirme mantığını sağlayan bir işlevi alır. Bu örnekte, bu işlev `LocalReplaceMatchCase` örnek yöntemin içinde belirtilen **yerel bir işlevdir** . `LocalReplaceMatchCase` uygun bir <xref:System.Text.StringBuilder?displayProperty=nameWithType> büyük harfle değiştirme dizesini oluşturmak için sınıfını kullanır.
 
 Normal ifadeler, bilinen metinler yerine bir kalıbı izleyen metni aramak ve değiştirmek için kullanışlıdır. Daha fazla bilgi için bkz. [dizeleri arama](search-strings.md). "The\s" arama deseninin "The" sözcüğünü ve ardından bir boşluk karakteri arar. Bu düzenin bu bölümü, kaynak dizede "orada" ile eşleşmemesini sağlar. Normal ifade dili öğeleri hakkında daha fazla bilgi için bkz. [normal Ifade dili-hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md).
 
@@ -73,5 +73,5 @@ Güvenli olmayan koda sahip sabit bir blokta bir dizeyi değiştirebilirsiniz, a
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Normal ifadeleri .NET Framework](../../standard/base-types/regular-expressions.md)
+- [.NET normal ifadeleri](../../standard/base-types/regular-expressions.md)
 - [Normal ifade dili-hızlı başvuru](../../standard/base-types/regular-expression-language-quick-reference.md)

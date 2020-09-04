@@ -12,15 +12,15 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 162baad57397b6d992dcf8f03f0b3661e0105cb8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: cd1150f3fa0dd0eca4e9352ce3809e73a15126c7
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125351"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466111"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# derleyici seçenekleri)
-Çıkış dosyasındaki bir .NET Framework kaynağına bir bağlantı oluşturur. Kaynak dosyası çıkış dosyasına eklenmez. Bu, çıkış dosyasına bir kaynak dosyası katıştırabilen [-Resource](./resource-compiler-option.md) seçeneğinden farklıdır.  
+Çıkış dosyasında .NET kaynağına bir bağlantı oluşturur. Kaynak dosyası çıkış dosyasına eklenmez. Bu, çıkış dosyasına bir kaynak dosyası katıştırabilen [-Resource](./resource-compiler-option.md) seçeneğinden farklıdır.  
   
 ## <a name="syntax"></a>Söz dizimi  
   
@@ -30,7 +30,7 @@ ms.locfileid: "89125351"
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
  `filename`  
- Derlemeden bağlamak istediğiniz .NET Framework kaynak dosyası.  
+ Derlemeden bağlamak istediğiniz .NET kaynak dosyası.  
   
  `identifier` (isteğe bağlı)  
  Kaynağın mantıksal adı; kaynağı yüklemek için kullanılan ad. Varsayılan değer, dosyanın adıdır.  
@@ -43,7 +43,7 @@ ms.locfileid: "89125351"
   
  **-linkresource** ,- **target: Module**dışındaki [-target](./target-compiler-option.md) seçeneklerinden birini gerektiriyor.  
   
- , `filename` Örneğin, [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, `GetManifestResource` <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek üzere sınıfındaki yöntemleri kullanın.  
+ `filename`Örneğin, [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .net kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, `GetManifestResource` <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek üzere sınıfındaki yöntemleri kullanın.  
   
  İçinde belirtilen dosya `filename` herhangi bir biçimde olabilir. Örneğin, genel derleme önbelleğine yüklenebilmesi ve derlemedeki yönetilen koddan erişilebilmesi için derlemenin yerel bir DLL parçası yapmak isteyebilirsiniz. Aşağıdaki örneklerden İkincisi bunun nasıl yapılacağını gösterir. Derleme bağlayıcıda aynı şeyi yapabilirsiniz. Aşağıdaki örneklerden üçüncüsü bunun nasıl yapılacağını gösterir. Daha fazla bilgi için bkz. [Al.exe (bütünleştirilmiş kod bağlayıcı)](../../../framework/tools/al-exe-assembly-linker.md) ve [derlemeler ve genel derleme önbelleği ile çalışma](../../../framework/app-domains/working-with-assemblies-and-the-gac.md).  
   

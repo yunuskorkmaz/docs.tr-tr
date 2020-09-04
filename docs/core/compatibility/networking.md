@@ -2,12 +2,12 @@
 title: Ağ bozan değişiklikler
 description: .NET Core 'da ağ üzerindeki son değişiklikleri listeler.
 ms.date: 05/05/2020
-ms.openlocfilehash: 568d26bde43ccd6e19fbe2d947f576ef5f99450a
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: fa5807c882c3bc6f66e8a27361ccc14254e90b3e
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608473"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465526"
 ---
 # <a name="networking-breaking-changes"></a>Ağ bozan değişiklikler
 
@@ -17,8 +17,9 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | - | - |
 | [.NET çalışma zamanından WinHttpHandler kaldırıldı](#winhttphandler-removed-from-net-runtime) | 5.0 |
 | [Multicastop. Group null bir değer kabul etmez](#multicastoptiongroup-doesnt-accept-a-null-value) | 5.0 |
-| [HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi](#default-value-of-httprequestmessageversion-changed-to-11) | 3,0 |
-| [WebClient. Iptallasync her zaman hemen iptal etmez](#webclientcancelasync-doesnt-always-cancel-immediately) | 2,0 |
+| [Tanımlama bilgisi yol işleme artık RFC 6265 ' e uyar](#cookie-path-handling-now-conforms-to-rfc-6265) | 5.0 |
+| [HttpRequestMessage. Version öğesinin varsayılan değeri 1,1 olarak değiştirildi](#default-value-of-httprequestmessageversion-changed-to-11) | 3.0 |
+| [WebClient. Iptallasync her zaman hemen iptal etmez](#webclientcancelasync-doesnt-always-cancel-immediately) | 2.0 |
 
 ## <a name="net-50"></a>.NET 5,0
 
@@ -27,6 +28,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 ***
 
 [!INCLUDE [multicastoption-group-doesnt-accept-null](../../../includes/core-changes/networking/5.0/multicastoption-group-doesnt-accept-null.md)]
+
+***
+
+[!INCLUDE [cookie-path-conforms-to-rfc6265](../../../includes/core-changes/networking/5.0/cookie-path-conforms-to-rfc6265.md)]
 
 ***
 

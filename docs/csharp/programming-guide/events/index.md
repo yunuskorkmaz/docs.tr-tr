@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 3160d1e381c6cb3af0f017538f9555b3fded9910
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: f56de15dd2c7b0a10e40a886dbd82a4147a03014
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302080"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466163"
 ---
 # <a name="events-c-programming-guide"></a>Olaylar (C# Programlama Kılavuzu)
 Olaylar, bir [sınıf](../../language-reference/keywords/class.md) ya da nesnenin, ilgi çekici bir şeyler gerçekleştiğinde diğer sınıflara veya nesnelere bildirilmesini sağlar. Olayı gönderen (veya *başlatan*) sınıf *Yayımcı* olarak adlandırılır ve olayı alan (veya *işleyen*) sınıflar *aboneler*olarak adlandırılır.  
@@ -32,7 +32,7 @@ Tipik bir C# Windows Forms veya Web uygulamasında, düğmeler ve liste kutular�
   
 - Bir olayda birden çok abone olduğunda, olay işleyicileri bir olay oluşturulduğunda zaman uyumlu olarak çağrılır. Olayları zaman uyumsuz olarak çağırmak için bkz. [zaman uyumlu yöntemleri zaman uyumsuz çağırma](../../../standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md).  
   
-- .NET Framework sınıf kitaplığında, olaylar <xref:System.EventHandler> temsilciyi ve <xref:System.EventArgs> temel sınıfı temel alır.  
+- .NET sınıf kitaplığında, olaylar <xref:System.EventHandler> temsilciyi ve <xref:System.EventArgs> temel sınıfı temel alır.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
  Daha fazla bilgi için bkz.  

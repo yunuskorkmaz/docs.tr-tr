@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 947a3bc7da0949781ae89ed74a87edb2637daf73
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1883662f736361a947cbad440aeefda839265251
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89126521"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465643"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
@@ -106,7 +106,7 @@ Belirli bir uygulama sınıfının test edilmekte olan çok sayıda yöntemi (ve
 
 ## <a name="unit-testing-aspnet-core-apps"></a>Uygulamalar ASP.NET Core birim testi
 
-İyi tasarlanmış bir ASP.NET Core uygulamasında, karmaşıklık ve iş mantığının çoğu iş varlıklarında ve çeşitli hizmetlerde kapsüllenir. ASP.NET Core MVC uygulamasının kendisi, denetleyiciler, filtreler, viewmodeller ve görünümleriyle, çok az sayıda birim testi gerektirmelidir. Belirli bir eylemin işlevselliğinin çoğu eylem yönteminin dışında kalıyor. Yönlendirmenin doğru şekilde çalışıp çalışmadığını test etme veya küresel hata işleme, birim testi ile etkin bir şekilde yapılamaz. Benzer şekilde, model doğrulama ve kimlik doğrulama ve Yetkilendirme filtreleri dahil olmak üzere tüm filtreler, denetleyicinin eylem yöntemini hedefleyen bir test ile birim test edilemez. Bu davranış kaynakları olmadan, çoğu eylem yöntemi, bunları kullanan denetleyiciden bağımsız olarak test edilebilir hizmetler için çalışmanın toplu olarak küçük olması gerekir.
+İyi tasarlanmış bir ASP.NET Core uygulamasında, karmaşıklık ve iş mantığının çoğu iş varlıklarında ve çeşitli hizmetlerde kapsüllenir. ASP.NET Core MVC uygulamasının kendisi, denetleyiciler, filtreler, viewmodeller ve görünümleriyle, çok az sayıda birim testi gerektirmelidir. Belirli bir eylemin işlevselliğinin çoğu eylem yönteminin dışında kalıyor. Yönlendirme veya genel hata işlemenin doğru şekilde çalışıp çalışmadığını test etme, birim testi ile etkili bir şekilde yapılamaz. Benzer şekilde, model doğrulama ve kimlik doğrulama ve Yetkilendirme filtreleri dahil olmak üzere tüm filtreler, denetleyicinin eylem yöntemini hedefleyen bir test ile birim test edilemez. Bu davranış kaynakları olmadan, çoğu eylem yöntemi, bunları kullanan denetleyiciden bağımsız olarak test edilebilir hizmetler için çalışmanın toplu olarak küçük olması gerekir.
 
 Bazen kodunuzu birim test etmek için yeniden düzenlemeniz gerekir. Genellikle bu, soyutlamaları tanımlamayı ve doğrudan altyapıya yönelik olarak kodlamak yerine test etmek istediğiniz koddaki soyutlamadan erişmek için bağımlılık ekleme kullanımını içerir. Örneğin, görüntüleri görüntülemek için bu basit eylem yöntemini göz önünde bulundurun:
 
@@ -121,7 +121,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-Bu yöntemin birim testi, doğrudan bağımlılığı tarafından zor hale getirilir `System.IO.File` ve dosya sisteminden okumak için kullanılır. Beklendiği gibi çalıştığından emin olmak için bu davranışı test edebilirsiniz, ancak bunu gerçek dosyalarla yapmak bir tümleştirme testi olur. Bu yöntemin yolunu birim testi yapamıyoruz. Bu, kısa bir süre içinde bunu nasıl yapacağım hakkında bilgi edineceksiniz.
+Bu yöntemin birim testi, doğrudan bağımlılığı tarafından zor hale getirilir `System.IO.File` ve dosya sisteminden okumak için kullanılır. Beklendiği gibi çalıştığından emin olmak için bu davranışı test edebilirsiniz, ancak bunu gerçek dosyalarla yapmak bir tümleştirme testi olur. Bu yöntemin yolunu kullanarak birim testi yapamıyorum, &mdash; kısa süre içinde bunu nasıl yapacağım hakkında bilgi edineceksiniz.
 
 Dosya sistemi davranışını doğrudan birim testi yapamıyoruz ve yolu sınayamıyoruz, ne test etmek istiyorsunuz? Ayrıca, birim testi yapmak için yeniden düzenleme yapıldıktan sonra, bazı test çalışmalarını ve hata işleme gibi eksik davranışları bulabilirsiniz. Bir dosya bulunamadığında Yöntem ne yapar? Ne yapmalıyım? Bu örnekte, yeniden düzenlenmiş yöntemi şöyle görünür:
 
@@ -155,9 +155,9 @@ ASP.NET Core uygulamalarınızın çoğu tümleştirme testi, altyapı projenizd
 
 ASP.NET Core uygulamalar için, `TestServer` sınıf işlevsel testleri yazma konusunda oldukça kolay hale getirir. `TestServer` `WebHostBuilder` (Veya `HostBuilder` ) kullanarak ya da ( `WebApplicationFactory` sürüm 2,1 ' den bu tarihten itibaren kullanılabilir) ile bir (veya) kullanarak yapılandırabilirsiniz. Test ana bilgisayarınızı üretim konağınız için mümkün olduğunca yakın bir şekilde eşleştirmeye çalışın, böylece testleriniz uygulamanın üretimde yapacaklarına benzer davranışlar olur. `WebApplicationFactory`Sınıf, görünümler gibi statik kaynağı bulmak için ASP.NET Core tarafından kullanılan TestServer 'ın ContentRoot 'yi yapılandırmaya yardımcı olur.
 
-Web uygulamanızın başlangıç sınıfı olduğu ıssfixture> uygulayan bir test sınıfı oluşturarak basit işlevsel testler oluşturabilirsiniz \<WebApplicationFactory\<TEntry> . Bu şekilde, test armatürü, fabrika 'nin CreateClient metodunu kullanarak bir istemci oluşturabilir:
+`IClassFixture\<WebApplicationFactory\<TEntry>>` `TEntry` Web uygulamanızın sınıfı olduğu, uygulayan bir test sınıfı oluşturarak basit işlevsel testler oluşturabilirsiniz `Startup` . Bu durumda, test armatürü fabrika yöntemini kullanarak bir istemci oluşturabilir `CreateClient` :
 
-```cs
+```csharp
 public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 {
     protected readonly HttpClient _client;
@@ -171,9 +171,9 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-Genellikle, her bir test çalıştırılmadan önce sitenizin bazı ek yapılandırmalarını gerçekleştirmek isteyeceksiniz; Örneğin, uygulamayı bellek içi veri deposu kullanacak şekilde yapılandırma ve ardından uygulamayı test verileriyle sağlama. Bunu yapmak için, WebApplicationFactory 'nin kendi alt sınıfını oluşturmanız \<TEntry> ve ConfigureWebHost metodunu geçersiz kılmanız gerekir. Aşağıdaki örnek eShopOnWeb FunctionalTests projesinden ve ana Web uygulamasındaki testlerin bir parçası olarak kullanılır.
+Genellikle, her bir test çalıştırılmadan önce sitenizin bazı ek yapılandırmalarını gerçekleştirmek isteyeceksiniz; Örneğin, uygulamayı bellek içi veri deposu kullanacak şekilde yapılandırma ve ardından uygulamayı test verileriyle sağlama. Bunu yapmak için kendi alt sınıfını oluşturun `WebApplicationFactory\<TEntry>` ve metodunu geçersiz kılın `ConfigureWebHost` . Aşağıdaki örnek eShopOnWeb FunctionalTests projesinden ve ana Web uygulamasındaki testlerin bir parçası olarak kullanılır.
 
-```cs
+```csharp
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-Bu fonksiyonel test, bir bütün ara yazılım, filtre, cilt, vb. dahil olmak üzere tam ASP.NET Core MVC/Razor Pages uygulama yığınını uygular. Belirli bir yolun ("/") beklenen başarı durum kodunu ve HTML çıkışını döndürdüğünü doğrular. Bu, gerçek bir Web sunucusu ayarlamadan ve bu sayede, test için gerçek bir Web sunucusu kullanan brittın büyük bölümünü önler (örneğin, Güvenlik Duvarı ayarlarıyla ilgili sorunlar). TestServer 'a karşı çalışan işlevsel testler genellikle tümleştirme ve birim testlerinden daha yavaştır, ancak ağ üzerinden bir test Web sunucusuna çalışacak testlerden çok daha hızlıdır. Uygulamanızın ön uç yığınının beklendiği gibi çalıştığından emin olmak için işlevsel testleri kullanın. Bu sınamalar, denetleyicilerde veya sayfalarınızda yineleme bulduğunuzda ve filtreler ekleyerek yinelemeyi adresleyerek özellikle yararlıdır. İdeal olarak, bu yeniden düzenleme uygulamanın davranışını değiştirmez ve işlevsel testlerin bir paketi bu durumun olduğunu doğrular.
+Bu fonksiyonel test, bir bütün ara yazılım, filtre ve yer alan ciltler de dahil olmak üzere tam ASP.NET Core MVC/Razor Pages uygulama yığınını uygular. Belirli bir yolun ("/") beklenen başarı durum kodunu ve HTML çıkışını döndürdüğünü doğrular. Bu, gerçek bir Web sunucusu ayarlamadan ve test için gerçek bir Web sunucusu kullanan britlet 'in çoğunu (örneğin, Güvenlik Duvarı ayarlarıyla ilgili sorunlar gibi) engeller. TestServer 'a karşı çalışan işlevsel testler genellikle tümleştirme ve birim testlerinden daha yavaştır, ancak ağ üzerinden bir test Web sunucusuna çalışacak testlerden çok daha hızlıdır. Uygulamanızın ön uç yığınının beklendiği gibi çalıştığından emin olmak için işlevsel testleri kullanın. Bu sınamalar, denetleyicilerde veya sayfalarınızda yineleme bulduğunuzda ve filtreler ekleyerek yinelemeyi adresleyerek özellikle yararlıdır. İdeal olarak, bu yeniden düzenleme uygulamanın davranışını değiştirmez ve işlevsel testlerin bir paketi bu durumun olduğunu doğrular.
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Başvurular – test ASP.NET Core MVC uygulamaları
 >

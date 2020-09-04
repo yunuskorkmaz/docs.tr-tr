@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 0f6927fd240f3f8535478d163be615fc74dad8d2
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6fd291c49c282713ea56ca20d8d58616d38ec752
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125403"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465721"
 ---
 # <a name="-link-c-compiler-options"></a>-Link (C# derleyici seçenekleri)
 Derleyicinin, belirtilen derlemelerdeki COM tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.
@@ -52,7 +52,7 @@ Derleyicinin, belirtilen derlemelerdeki COM tür bilgilerini şu anda derlediği
 
 - B derlemesinden dönüş türü veya parametre türü olan bir alan, özellik, olay veya yöntem çağrılır.
 
- [-Reference](./reference-compiler-option.md) derleyici seçeneği gibi, `-link` derleyici seçeneği sık kullanılan .NET Framework derlemelerine başvuran Csc. rsp yanıt dosyasını kullanır. Derleyicinin Csc. rsp dosyasını kullanmasını istemiyorsanız [-noconfig](./noconfig-compiler-option.md) derleyici seçeneğini kullanın.
+ [-Reference](./reference-compiler-option.md) derleyici seçeneği gibi, `-link` derleyici seçeneği sık kullanılan .NET derlemelerine başvuran Csc. rsp yanıt dosyasını kullanır. Derleyicinin Csc. rsp dosyasını kullanmasını istemiyorsanız [-noconfig](./noconfig-compiler-option.md) derleyici seçeneğini kullanın.
 
  Öğesinin kısa biçimi `-link` `-l` .
 

@@ -4,21 +4,21 @@ description: DotNet New komutu, belirtilen şablona göre yeni .NET Core projele
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 04/10/2020
-ms.openlocfilehash: ec41b3b79ed5eded7c9124d3e4d95c658ee39580
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 09/01/2020
+ms.openlocfilehash: 8e05f4dc7a03ae8ae68acc6a57f6fa0e1c6b2ce4
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173126"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465435"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,0 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet new`-Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
+`dotnet new` -Belirtilen şablonu temel alan yeni bir proje, yapılandırma dosyası veya çözüm oluşturur.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -62,23 +62,23 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Konsol Uygulaması                          | [konsola](#console)             | [C#], F #, VB | Ortak/konsol                        | 1.0        |
 | Sınıf kitaplığı                                | [projesinin](#classlib)           | [C#], F #, VB | Ortak/Kitaplık                        | 1.0        |
-| WPF uygulaması                              | [WPF](#wpf)                     | Þ         | Ortak/WPF                            | 3.0        |
-| WPF sınıf kitaplığı                            | [wpflib](#wpf)                  | Þ         | Ortak/WPF                            | 3.0        |
-| WPF Özel Denetim Kitaplığı                   | [wpfcustomcontrollib](#wpf)     | Þ         | Ortak/WPF                            | 3.0        |
-| WPF Kullanıcı denetimi kitaplığı                     | [wpfusercontrollib](#wpf)       | Þ         | Ortak/WPF                            | 3.0        |
-| Windows Forms (WinForms) uygulaması         | [WinForms](#winforms)           | Þ         | Ortak/WinForms                       | 3.0        |
-| Windows Forms (WinForms) sınıf kitaplığı       | [winformslib](#winforms)        | Þ         | Ortak/WinForms                       | 3.0        |
+| WPF uygulaması                              | [WPF](#wpf)                     | [C#], VB     | Ortak/WPF                            | 3.0        |
+| WPF sınıf kitaplığı                            | [wpflib](#wpf)                  | [C#], VB     | Ortak/WPF                            | 3.0        |
+| WPF Özel Denetim Kitaplığı                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Ortak/WPF                            | 3.0        |
+| WPF Kullanıcı denetimi kitaplığı                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Ortak/WPF                            | 3.0        |
+| Windows Forms (WinForms) uygulaması         | [WinForms](#winforms)           | [C#], VB     | Ortak/WinForms                       | 3.0        |
+| Windows Forms (WinForms) sınıf kitaplığı       | [winformslib](#winforms)        | [C#], VB     | Ortak/WinForms                       | 3.0        |
 | Çalışan hizmeti                               | [ından](#web-others)           | Þ         | Ortak/çalışan/Web                     | 3.0        |
 | Birim testi projesi                            | ['i](#test)                 | [C#], F #, VB | Test/MSTest                           | 1.0        |
-| NUnit 3 test projesi                         | [NUnit](#nunit)                  | [C#], F #, VB | Test/NUnit                            | 2.1.400    |
-| NUnit 3 test öğesi                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2,2        |
+| NUnit 3 test projesi                         | [NUnit](#nunit)                 | [C#], F #, VB | Test/NUnit                            | 2.1.400    |
+| NUnit 3 test öğesi                            | `nunit-test`                    | [C#], F #, VB | Test/NUnit                            | 2.2        |
 | xUnit test projesi                           | [xUnit](#test)                  | [C#], F #, VB | Test/xUnit                            | 1.0        |
 | Razor bileşeni                              | `razorcomponent`                | Þ         | Web/ASP. NET                           | 3.0        |
 | Razor sayfası                                   | [sayfasında](#page)                   | Þ         | Web/ASP. NET                           | 2.0        |
 | MVC Viewıtemts                              | [viewıtems 'lar](#namespace)       | Þ         | Web/ASP. NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | Þ         | Web/ASP. NET                           | 2.0        |
-| BlazorSunucu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | WebBlazor                            | 3.0        |
-| BlazorWebAssemblyUygulama                       | `blazorwasm`                    | Þ         | WebBlazor/WebAssembly                            | 3.1.300    |
+| Blazor Sunucu uygulaması                            | [blazorserver](#blazorserver)   | Þ         | WebBlazor                            | 3.0        |
+| BlazorWebAssemblyUygulama                       | `blazorwasm`                    | Þ         | WebBlazor/WebAssembly                | 3.1.300    |
 | ASP.NET Core boş                           | [Web](#web)                     | [C#], F #     | Web/boş                             | 1.0        |
 | ASP.NET Core Web uygulaması (Model-View-Controller) | [MVC](#web-options)             | [C#], F #     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web uygulaması                         | [WEBAPP, Razor](#web-options)   | Þ         | Web/MVC/Razor Pages                   | 2,2, 2,0   |
@@ -210,7 +210,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 ***
 
-### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>WPF, wpflib, wpfcustomcontrollib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a> WPF, wpflib, wpfcustomcontrollib, wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -228,7 +228,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 ***
 
-### <a name="winforms-winformslib"></a><a name="winforms"></a>WinForms, winformslib
+### <a name="winforms-winformslib"></a><a name="winforms"></a> WinForms, winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -242,7 +242,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 ***
 
-### <a name="worker-grpc"></a><a name="web-others"></a>çalışan, GRPC
+### <a name="worker-grpc"></a><a name="web-others"></a> çalışan, GRPC
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -258,7 +258,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 ***
 
-### <a name="mstest-xunit"></a><a name="test"></a>MSTest, xUnit
+### <a name="mstest-xunit"></a><a name="test"></a> MSTest, xUnit
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -293,7 +293,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   |-------------|-----------------|
   | 3,1         | `netcoreapp3.1` |
   | 3.0         | `netcoreapp3.0` |
-  | 2,2         | `netcoreapp2.2` |
+  | 2.2         | `netcoreapp2.2` |
   | 2.1         | `netcoreapp2.1` |
 
 - **`-p|--enable-pack`**
@@ -318,7 +318,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 ***
 
-### <a name="viewimports-proto"></a><a name="namespace"></a>viewıtemler, Proto
+### <a name="viewimports-proto"></a><a name="namespace"></a> viewıtemler, Proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
@@ -332,12 +332,12 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-  - `None`-Kimlik doğrulaması yok (varsayılan).
-  - `Individual`-Bireysel kimlik doğrulama.
-  - `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-  - `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-  - `MultiOrg`-Birden çok kiracı için kuruluş kimlik doğrulaması.
-  - `Windows`-Windows kimlik doğrulaması.
+  - `None` -Kimlik doğrulaması yok (varsayılan).
+  - `Individual` -Bireysel kimlik doğrulama.
+  - `IndividualB2C` -Azure AD B2C ile bireysel kimlik doğrulama.
+  - `SingleOrg` -Tek bir kiracı için kuruluş kimlik doğrulaması.
+  - `MultiOrg` -Birden çok kiracı için kuruluş kimlik doğrulaması.
+  - `Windows` -Windows kimlik doğrulaması.
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
@@ -425,18 +425,18 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 ***
 
-### <a name="mvc-webapp"></a><a name="web-options"></a>MVC, WebApp
+### <a name="mvc-webapp"></a><a name="web-options"></a> MVC, WebApp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
   Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-  - `None`-Kimlik doğrulaması yok (varsayılan).
-  - `Individual`-Bireysel kimlik doğrulama.
-  - `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-  - `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-  - `MultiOrg`-Birden çok kiracı için kuruluş kimlik doğrulaması.
-  - `Windows`-Windows kimlik doğrulaması.
+  - `None` -Kimlik doğrulaması yok (varsayılan).
+  - `Individual` -Bireysel kimlik doğrulama.
+  - `IndividualB2C` -Azure AD B2C ile bireysel kimlik doğrulama.
+  - `SingleOrg` -Tek bir kiracı için kuruluş kimlik doğrulaması.
+  - `MultiOrg` -Birden çok kiracı için kuruluş kimlik doğrulaması.
+  - `Windows` -Windows kimlik doğrulaması.
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
@@ -515,7 +515,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 ***
 
-### <a name="angular-react"></a><a name="spa"></a>Angular, tepki verme
+### <a name="angular-react"></a><a name="spa"></a> Angular, tepki verme
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -523,8 +523,8 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
   
   Olası değerler şunlardır:
 
-  - `None`-Kimlik doğrulaması yok (varsayılan).
-  - `Individual`-Bireysel kimlik doğrulama.
+  - `None` -Kimlik doğrulaması yok (varsayılan).
+  - `Individual` -Bireysel kimlik doğrulama.
 
 - **`--exclude-launch-settings`**
 
@@ -602,10 +602,10 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
   Kullanılacak kimlik doğrulaması türü. Olası değerler şunlardır:
 
-  - `None`-Kimlik doğrulaması yok (varsayılan).
-  - `IndividualB2C`-Azure AD B2C ile bireysel kimlik doğrulama.
-  - `SingleOrg`-Tek bir kiracı için kuruluş kimlik doğrulaması.
-  - `Windows`-Windows kimlik doğrulaması.
+  - `None` -Kimlik doğrulaması yok (varsayılan).
+  - `IndividualB2C` -Azure AD B2C ile bireysel kimlik doğrulama.
+  - `SingleOrg` -Tek bir kiracı için kuruluş kimlik doğrulaması.
+  - `Windows` -Windows kimlik doğrulaması.
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
@@ -641,7 +641,7 @@ Her proje şablonunda ek seçenekler bulunabilir. Çekirdek şablonlar aşağıd
 
 - **`--no-https`**
 
-  HTTPS 'yi kapatır. `app.UseHsts`ve `app.UseHttpsRedirection` öğesine eklenmez `Startup.Configure` . Bu seçenek yalnızca `IndividualB2C` `SingleOrg` kimlik doğrulaması için kullanılmıyorsa geçerlidir.
+  HTTPS 'yi kapatır. `app.UseHsts` ve `app.UseHttpsRedirection` öğesine eklenmez `Startup.Configure` . Bu seçenek yalnızca `IndividualB2C` `SingleOrg` kimlik doğrulaması için kullanılmıyorsa geçerlidir.
 
 - **`-uld|--use-local-db`**
 

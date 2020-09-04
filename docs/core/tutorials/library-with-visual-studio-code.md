@@ -2,12 +2,12 @@
 title: Visual Studio Code kullanarak .NET Standard sınıf kitaplığı oluşturma
 description: Visual Studio Code kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
 ms.date: 06/08/2020
-ms.openlocfilehash: 146dfd49e448494cce0c844282bc0394a8739ac9
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: d37e3c663146c90f4ae4188b25ea7e501501c93b
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810865"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465292"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-code"></a>Öğretici: Visual Studio Code kullanarak .NET Standard kitaplığı oluşturma
 
@@ -55,6 +55,8 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
    ```dotnetcli
    dotnet new classlib -o StringLibrary
    ```
+
+   `-o`Or `--output` komutu oluşturulan çıkışın yerleştirileceği konumu belirtir.
 
    Terminal çıktısı aşağıdaki örneğe benzer şekilde görünür:
 
@@ -169,7 +171,7 @@ Sınıf kitaplığını kullanan bir konsol uygulaması ekleyin. Uygulama kullan
 
 Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez. Sınıf kitaplığındaki yöntemleri çağırmasına izin vermek için, sınıf kitaplığı projesine bir proje başvurusu oluşturun.
 
-1. Aşağıdaki komutu çalıştırın:
+1. Şu komutu çalıştırın:
 
    ```dotnetcli
    dotnet add ShowCase/ShowCase.csproj reference StringLibrary/StringLibrary.csproj
@@ -200,9 +202,9 @@ Başlangıçta, yeni konsol uygulaması projesi sınıf kitaplığına erişemez
    Input: A string that starts with an uppercase letter
    Begins with uppercase? : Yes
 
-   A string that starts with a lowercase letter
-   Input: A string that starts with a lowercase letter
-   Begins with uppercase? : Yes
+   a string that starts with a lowercase letter
+   Input: a string that starts with a lowercase letter
+   Begins with uppercase? : No
    ```
 
 ## <a name="additional-resources"></a>Ek kaynaklar

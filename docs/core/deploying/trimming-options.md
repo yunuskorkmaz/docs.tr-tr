@@ -4,12 +4,12 @@ description: Kendi içindeki uygulamaların kırpılacağını nasıl denetleyec
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: d6081a24cc18e424b55d40e152f519c680f11aa0
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271886"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465422"
 ---
 # <a name="trimming-options"></a>Kırpma seçenekleri
 
@@ -39,7 +39,7 @@ Aşağıdaki ayrıntı düzeyi ayarları, kullanılmamış olmayan Il 'nin nası
 
 ## <a name="trimmed-assemblies"></a>Kırpılan derlemeler
 
-Kırpılan bir uygulamayı yayımlarken, SDK, `ItemGroup` `ManagedAssemblyToLink` kırpma için işlenecek dosya kümesini temsil eden bir çağrılan öğesini hesaplar. `ManagedAssemblyToLink` derleme başına kırpma davranışını denetleyen meta verilere sahip olabilir. Bu meta verileri ayarlamak için, yerleşik hedeften önce çalışan bir hedef oluşturun `PrepareForILLink` . Bu örnek, kırpılacağını nasıl etkinleştireceğinizi göstermektedir `MyAssembly` :
+Kırpılan bir uygulamayı yayımlarken, SDK, `ItemGroup` `ManagedAssemblyToLink` kırpma için işlenecek dosya kümesini temsil eden bir çağrılan öğesini hesaplar. `ManagedAssemblyToLink` derleme başına kırpma davranışını denetleyen meta verilere sahip olabilir. Bu meta verileri ayarlamak için, yerleşik hedeften önce çalışan bir hedef oluşturun `PrepareForILLink` . Aşağıdaki örnek, kırpılacağını nasıl etkinleştireceğinizi gösterir `MyAssembly` .
 
 ```xml
 <Target Name="ConfigureTrimming"
@@ -64,7 +64,7 @@ Kırpılan bir uygulamayı yayımlarken, SDK, `ItemGroup` `ManagedAssemblyToLink
 
 ## <a name="root-assemblies"></a>Kök derlemeler
 
-Olmayan tüm derlemeler `<IsTrimmable>true</IsTrimmable>` analize yönelik kökleri olarak kabul edilir, bu da bunların ve statik olarak anladıkları bağımlılıkların tutulduğu anlamına gelir. Ek derlemeler ada göre "kökü belirtilmiş" olabilir (uzantı olmadan `.dll` ):
+Olmayan tüm derlemeler `<IsTrimmable>true</IsTrimmable>` analiz için kökleri olarak kabul edilir, bu da bunların ve statik olarak anladıkları bağımlılıkların tutulduğu anlamına gelir. Ek derlemeler ada göre "kökü belirtilmiş" olabilir (uzantı olmadan `.dll` ):
 
 ```xml
 <ItemGroup>

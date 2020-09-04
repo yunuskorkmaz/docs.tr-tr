@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: e2e4fc37418243ff6998d19165250b895c0a4fa1
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 3fdb030dfc141b011f5faa827a4e4bb45ae38d19
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89124870"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466020"
 ---
 # <a name="-platform-c-compiler-options"></a>-Platform (C# derleyici seçenekleri)
 
@@ -35,7 +35,7 @@ anycpu (varsayılan), anycpu32bitpreferred, ARM, x64, x86 veya Itanium.
 
 - **anycpu** (varsayılan), derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulamanız mümkün olduğunda 64 bitlik bir işlem olarak çalışır ve yalnızca bu mod kullanılabilir olduğunda 32 bit 'e geri döner.
 
-- **anycpu32bitpreferred** , derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulamanız, hem 64 bit hem de 32 bit uygulamaları destekleyen sistemlerde 32 bitlik modda çalışır. Bu seçeneği yalnızca .NET Framework 4,5 ' i hedefleyen projeler için belirtebilirsiniz.
+- **anycpu32bitpreferred** , derlemenizi herhangi bir platformda çalışacak şekilde derler. Uygulamanız, hem 64 bit hem de 32 bit uygulamaları destekleyen sistemlerde 32 bitlik modda çalışır. Bu seçeneği yalnızca .NET Framework 4,5 veya üstünü hedefleyen projeler için belirtebilirsiniz.
 
 - **ARM** , derlemenizi GELIŞMIŞ bir RISC MAKINESI (ARM) işlemcisi olan bir bilgisayarda çalışacak şekilde derler.
 
@@ -57,7 +57,7 @@ anycpu (varsayılan), anycpu32bitpreferred, ARM, x64, x86 veya Itanium.
 
 - **-Platform: anycpu32bitpreferred** ile derlenen yürütülebilir dosyalar 32 bit clr üzerinde yürütülür.
 
-**Anycpu32bitpreferred** ayarı yalnızca yürütülebilir dosya için geçerlidir (. EXE) dosyalarını ve .NET Framework 4,5 gerektirir.
+**Anycpu32bitpreferred** ayarı yalnızca yürütülebilir dosya için geçerlidir (. EXE) dosyalarını ve .NET Framework 4,5 veya üzeri bir sürümü gerektirir.
 
 Windows 64 bit işletim sisteminde çalışacak bir uygulama geliştirme hakkında daha fazla bilgi için bkz. [64-bit uygulamalar](../../../framework/64-bit-apps.md).
 
@@ -67,7 +67,7 @@ Windows 64 bit işletim sisteminde çalışacak bir uygulama geliştirme hakkın
 
 2. **Yapı** özelliği sayfasına tıklayın.
 
-3. **Platform hedefi** özelliğini değiştirin ve .NET Framework 4,5 ' i hedefleyen projeler için **32 bit tercih** et onay kutusunu seçin veya temizleyin.
+3. **Platform hedefi** özelliğini değiştirin ve .NET Framework 4,5 veya sonraki bir sürümü hedefleyen projeler için **32 bit tercih** et onay kutusunu seçin veya temizleyin.
 
 > [!NOTE]
 > `-platform` Visual C# Express 'teki geliştirme ortamında kullanılamaz.

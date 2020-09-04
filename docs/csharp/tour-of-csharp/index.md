@@ -2,12 +2,12 @@
 title: C#-C# Kılavuzu turu
 description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin.
 ms.date: 08/06/2020
-ms.openlocfilehash: 9fa292e8e85832d831f36cf0f21512aa0cf32580
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 84775a436deb0958d3c05ec7d0207e76be28f27c
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656234"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465009"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# dilinin turu
 
@@ -37,7 +37,7 @@ C# ' de iki tür tür vardır: *değer türleri* ve *başvuru türleri*. Değer 
 
 ***Tanımlayıcı*** bir değişken adıdır. Tanımlayıcı, bir boşluk olmadan Unicode karakterlerinden oluşan bir dizidir. Bir tanımlayıcı, öneki olan bir C# ayrılmış sözcüğü olabilir `@` . Diğer dillerle etkileşim kurarken faydalı olabilir.
 
-C# ' nin değer türleri, *basit türlere*, *enum türlerine*, *yapı türlerine*ve *null yapılabilir değer türlerine*daha fazla bölünmüştür. C# ' nin başvuru türleri, *Sınıf türlerine*, *arabirim türlerine*, *dizi türlerine*ve *temsilci türlerine*daha fazla bölünmüştür.
+C# ' nin değer türleri, *basit türlere*, *enum türlerine*, *yapı türlerine*, *null yapılabilir değer türlerine* ve *demet değer türlerine*daha fazla bölünmüştür. C# ' nin başvuru türleri, *Sınıf türlerine*, *arabirim türlerine*, *dizi türlerine*ve *temsilci türlerine*daha fazla bölünmüştür.
 
 Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
 
@@ -65,11 +65,11 @@ Aşağıdaki ana hat C# tür sistemine genel bir bakış sağlar.
   - [Arabirim türleri](../language-reference/keywords/interface.md)
     - Formun Kullanıcı tanımlı türleri `interface I {...}`
   - [Dizi türleri](../programming-guide/arrays/index.md)
-    - Tek ve çok boyutlu ve pürüzlü, örneğin,, `int[]` `int[,]` ve `int[][]`
+    - Tek boyutlu, çok boyutlu ve sivri. Örneğin: `int[]` , `int[,]` , ve `int[][]`
   - [Temsilci türleri](../language-reference/builtin-types/reference-types.md#the-delegate-type)
     - Formun Kullanıcı tanımlı türleri `delegate int D(...)`
 
-C# programları yeni türler oluşturmak için *tür bildirimleri* kullanır. Tür bildiriminde yeni türün adı ve üyeleri belirtilir. C# tür kategorilerinin sayısı Kullanıcı tarafından tanımlanabilir: sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri ve temsilci türleri.
+C# programları yeni türler oluşturmak için *tür bildirimleri* kullanır. Tür bildiriminde yeni türün adı ve üyeleri belirtilir. C# ' nin tür kategorilerinin altısı, Kullanıcı tarafından tanımlanabilir: sınıf türleri, yapı türleri, arabirim türleri, sabit listesi türleri, temsilci türleri ve demet değer türleri.
 
 - Bir `class` tür, veri üyeleri (alanlar) ve işlev üyeleri (Yöntemler, Özellikler ve diğerleri) içeren bir veri yapısını tanımlar. Sınıf türleri, tek devralma ve çok biçimlilik destekler, türetilmiş sınıfların temel sınıfları genişletebileceği ve özelleştireceği mekanizmalar.
 - Bir `struct` tür, veri üyeleri ve işlev üyeleri olan bir yapıyı temsil eden bir sınıf türüne benzerdir. Ancak, sınıfların aksine yapılar değer türlerdir ve genellikle yığın ayırmayı gerektirmez. Yapı türleri Kullanıcı tarafından belirtilen devralmayı desteklemez ve tüm yapı türleri örtülü olarak türünden devralınır `object` .
@@ -78,7 +78,7 @@ C# programları yeni türler oluşturmak için *tür bildirimleri* kullanır. T�
 
 `class`,, `struct` `interface` Ve `delegate` türleri tüm genel türleri destekler, diğer türlerle parametrelenebilir.
 
-C#, herhangi bir türdeki tek ve çok boyutlu dizileri destekler. Yukarıda listelenen türlerin aksine, kullanılmadan önce dizi türlerinin bildirilmesini gerekmez. Bunun yerine, dizi türleri Köşeli parantezlerle bir tür adı izleyerek oluşturulur. Örneğin, `int[]` tek boyutlu bir diziyse `int` , iki boyutlu bir dizidir ve tek boyutlu `int[,]` `int` `int[][]` dizi ya da "pürüzlü" dizisinin tek boyutlu bir dizisidir `int` .
+C#, herhangi bir türdeki tek boyutlu ve çok boyutlu dizileri destekler. Yukarıda listelenen türlerin aksine, kullanılmadan önce dizi türlerinin bildirilmesini gerekmez. Bunun yerine, dizi türleri Köşeli parantezlerle bir tür adı izleyerek oluşturulur. Örneğin, `int[]` tek boyutlu bir diziyse `int` , iki boyutlu bir dizidir ve tek boyutlu `int[,]` `int` `int[][]` diziler veya bir "pürüzlü" dizisi olan tek boyutlu bir dizidir `int` .
 
 Null yapılabilir türler ayrı bir tanım gerektirmez. Null yapılamayan her tür için, `T` ek bir değer içerebilen, buna karşılık gelen null yapılabilir bir tür vardır `T?` `null` . Örneğin, `int?` herhangi bir 32 bit tamsayı veya değeri tutabilecek bir türdür `null` ve `string?` herhangi birini veya değeri tutabilecek bir türüdür `string` `null` .
 

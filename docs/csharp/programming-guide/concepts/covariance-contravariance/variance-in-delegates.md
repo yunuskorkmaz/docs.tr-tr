@@ -1,14 +1,14 @@
 ---
 title: Temsilcilerde varyans (C#)
-description: .NET Framework ' deki varyans desteğinin, tüm Temsilcilerde temsilci türleriyle Yöntem imzalarını nasıl eşleşeceğini öğrenin.
+description: .NET ' teki varyans desteğinin, tüm Temsilcilerde temsilci türleriyle Yöntem imzalarını nasıl eşleşeceğini öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: ef57a7fa7feaef98a47822e3f1c9242d0205932d
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 02b59dd97cedc6ab35c3122912ee528f7ca29238
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105658"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89466137"
 ---
 # <a name="variance-in-delegates-c"></a>Temsilcilerde varyans (C#)
 .NET Framework 3,5, C# ' deki tüm Temsilcilerde temsilci türleriyle eşleşen yöntem imzaları için fark desteğini kullanıma sunmuştur. Bu, yalnızca eşleşen imzalara sahip yöntemlerin değil, aynı zamanda daha fazla türetilmiş tür (Kovaryans) döndüren veya temsilci türü tarafından belirtilenden daha az türetilmiş tür (değişken varyans) içeren parametreleri kabul eden yöntemler için atama yaptığınız anlamına gelir. Bu hem genel hem de genel olmayan temsilcileri içerir.  
@@ -114,9 +114,9 @@ public static void Test()
 
 .NET Framework 4, çeşitli genel temsilcilerde genel tür parametrelerine yönelik varyans desteği getirmiştir:  
   
-- `Action`ad alanından temsilciler, <xref:System> Örneğin <xref:System.Action%601> ve<xref:System.Action%602>  
+- `Action` ad alanından temsilciler, <xref:System> Örneğin <xref:System.Action%601> ve <xref:System.Action%602>  
   
-- `Func`ad alanından temsilciler, <xref:System> Örneğin <xref:System.Func%601> ve<xref:System.Func%602>  
+- `Func` ad alanından temsilciler, <xref:System> Örneğin <xref:System.Func%601> ve <xref:System.Func%602>  
   
 - <xref:System.Predicate%601>Temsilci  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 963004820f56272b4f1b1d92ccc4d0a60493a4a0
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 1e2de095b460b684fb06faf46731283a1304906e
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89128705"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465695"
 ---
 # <a name="-resource-c-compiler-options"></a>-Resource (C# derleyici seçenekleri)
 Belirtilen kaynağı çıkış dosyasına katıştırır.  
@@ -30,7 +30,7 @@ Belirtilen kaynağı çıkış dosyasına katıştırır.
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
  `filename`  
- Çıkış dosyasına eklemek istediğiniz .NET Framework kaynak dosyası.  
+ Çıktı dosyasına eklemek istediğiniz .NET kaynak dosyası.  
   
  `identifier` (isteğe bağlı)  
  Kaynağın mantıksal adı; kaynağı yüklemek için kullanılan ad. Varsayılan değer, dosya adının adıdır.  
@@ -43,7 +43,7 @@ Belirtilen kaynağı çıkış dosyasına katıştırır.
   
  Varsayılan olarak, kaynaklar C# derleyicisi kullanılarak oluşturulduğunda derlemede ortaktır. Kaynakları özel hale getirmek için `private` erişilebilirlik değiştiricisi olarak belirtin. Veya dışında başka bir erişilebilirliği `public` olamaz `private` .  
   
- , `filename` Örneğin, [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .NET Framework kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, `GetManifestResource` <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek üzere sınıfındaki yöntemleri kullanın.  
+ `filename`Örneğin, [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) veya geliştirme ortamında oluşturulmuş bir .net kaynak dosyası ise, <xref:System.Resources> ad alanındaki üyelerle erişilebilir. Daha fazla bilgi için bkz. <xref:System.Resources.ResourceManager?displayProperty=nameWithType>. Diğer tüm kaynaklar için, `GetManifestResource` <xref:System.Reflection.Assembly> çalışma zamanında kaynağa erişmek üzere sınıfındaki yöntemleri kullanın.  
   
  **-res** , **-Resource**' in kısa biçimidir.  
   

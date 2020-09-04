@@ -4,16 +4,16 @@ description: Tüm C# programlarında çekirdek türleri (Numerics, dizeler ve ne
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 93a0023969bb8bb089922a9e30fbf599eddc7203
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 18a73e62bf45cdc4a4eaa0985c3fe036ac3b55a8
+ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174185"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89465266"
 ---
 # <a name="types-variables-and-values"></a>Türler, değişkenler ve değerler
 
-C# türü kesin belirlenmiş bir dildir. Her değişken ve sabitin, bir değeri değerlendiren her ifadeyi olduğu gibi bir türü vardır. Her yöntem imzası her giriş parametresi ve dönüş değeri için bir tür belirtir. .NET Framework sınıf kitaplığı, dosya sistemi, ağ bağlantıları, koleksiyon ve nesne dizileri ve tarihler gibi çok çeşitli mantıksal yapıları temsil eden daha karmaşık türler ve yerleşik sayısal türlerin bir kümesini tanımlar. Tipik bir C# programı, sınıf kitaplığından türleri ve programın sorunlu etki alanına özgü kavramları modeleden Kullanıcı tanımlı türleri kullanır.  
+C# türü kesin belirlenmiş bir dildir. Her değişken ve sabitin, bir değeri değerlendiren her ifadeyi olduğu gibi bir türü vardır. Her yöntem imzası her giriş parametresi ve dönüş değeri için bir tür belirtir. .NET sınıf kitaplığı, dosya sistemi, ağ bağlantıları, koleksiyon ve nesne dizileri ve tarihler gibi çok çeşitli mantıksal yapıları temsil eden daha karmaşık türler ve yerleşik sayısal türlerin bir kümesini tanımlar. Tipik bir C# programı, sınıf kitaplığından türleri ve programın sorunlu etki alanına özgü kavramları modeleden Kullanıcı tanımlı türleri kullanır.  
   
 Bir tür içinde depolanan bilgiler şunları içerebilir:  
   
@@ -58,11 +58,11 @@ C#, tamsayıları, kayan nokta değerlerini, Boole ifadelerini, metin karakterle
   
 ## <a name="custom-types"></a>Özel türler
 
-Kendi özel türlerinizi oluşturmak için [struct](language-reference/builtin-types/struct.md), [Class](language-reference/keywords/class.md), [Interface](language-reference/keywords/interface.md)ve [enum](language-reference/builtin-types/enum.md) yapılarını kullanırsınız. .NET Framework sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler, herhangi bir C# programında kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz.
+Kendi özel türlerinizi oluşturmak için [struct](language-reference/builtin-types/struct.md), [Class](language-reference/keywords/class.md), [Interface](language-reference/keywords/interface.md)ve [enum](language-reference/builtin-types/enum.md) yapılarını kullanırsınız. .NET sınıf kitaplığı, Microsoft tarafından kendi uygulamalarınızda kullanabileceğiniz özel türlerin bir koleksiyonudur. Varsayılan olarak, sınıf kitaplığındaki en sık kullanılan türler, herhangi bir C# programında kullanılabilir. Diğerleri yalnızca tanımlandıkları derlemeye açıkça bir proje başvurusu eklediğinizde kullanılabilir hale gelir. Derleyicinin derlemeye bir başvurusu olduktan sonra, kaynak kodda o derlemede belirtilen türlerin değişkenlerini (ve sabitleri) bildirebilirsiniz.
   
 ## <a name="generic-types"></a>Genel türler
 
-Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, .NET Framework türü, <xref:System.Collections.Generic.List%601> kuralına göre bir tür parametresine sahiptir. *T* Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:  
+Bir tür, istemci kodunun türün bir örneğini oluşturduğunda sağladığı gerçek tür ( *somut tür*) için yer tutucu olarak görev yapan bir veya daha fazla *tür parametresiyle* bildirilemez. Bu tür türler *Genel türler*olarak adlandırılır. Örneğin, <xref:System.Collections.Generic.List%601> kuralına göre bir tür parametresine sahip *T*adı verilir. Türün bir örneğini oluşturduğunuzda, listenin içereceği nesnelerin türünü (örneğin, dize) belirtirsiniz:  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
@@ -78,7 +78,7 @@ Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir 
 
 ## <a name="the-common-type-system"></a>Ortak tür sistemi
 
-.NET Framework sistem hakkında iki temel noktayı anlamak önemlidir:  
+.NET 'teki tür sistemi hakkında iki temel noktayı anlamak önemlidir:  
   
 - Devralma ilkesini destekler. Türler, *temel türler*olarak adlandırılan diğer türlerden türetilebilir. Türetilmiş tür, yöntemleri, özellikleri ve temel türün diğer üyelerini devralır (bazı kısıtlamalarla). Temel tür başka bir türden türetebilir, bu durumda türetilmiş tür, devralma hiyerarşisindeki her iki temel türün üyelerini devralır. (C# anahtar sözcüğü:) gibi yerleşik sayısal türler de dahil olmak üzere tüm türler, <xref:System.Int32> `int` sonunda <xref:System.Object> (c# anahtar sözcüğü:) tek bir temel türden türetilir `object` . Bu Birleşik tür hiyerarşisine [ortak tür sistemi](../standard/common-type-system.md) (Cts) denir. C# ' de devralma hakkında daha fazla bilgi için bkz. [Devralma](programming-guide/classes-and-structs/inheritance.md).  
   
@@ -88,4 +88,4 @@ Bir yöntemden birden fazla değer döndürmek, yaygın bir yöntemdir. Tek bir 
 
 - [Yapı türleri](language-reference/builtin-types/struct.md)
 - [Numaralandırma türleri](language-reference/builtin-types/enum.md)
-- [Sınıflar](programming-guide/classes-and-structs/classes.md)
+- [Sınıftır](programming-guide/classes-and-structs/classes.md)
