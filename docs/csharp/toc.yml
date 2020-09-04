@@ -1,6 +1,6 @@
 - name: C# belgeleri
   href: index.yml
-- name: başlarken
+- name: Kullanmaya başlayın
   items:
     - name: Genel Bakış
       displayName: get started
@@ -219,7 +219,7 @@
       href: programming-guide/interop/index.md
     - name: Kodunuzu belgeleme
       href: codedoc.md
-    - name: Sürüm Oluşturma
+    - name: Sürüm oluşturma
       href: versioning.md
 - name: Nasıl yapılır C# makaleleri
   items:
@@ -230,8 +230,6 @@
       href: how-to/parse-strings-using-split.md
     - name: Dizeleri birleştirme
       href: how-to/concatenate-multiple-strings.md
-    - name: Bir dizeyi DateTime olarak dönüştürme
-      href: ../standard/base-types/parsing-datetime.md
     - name: Dizeleri arama
       href: how-to/search-strings.md
     - name: Dize içeriklerini değiştirme
