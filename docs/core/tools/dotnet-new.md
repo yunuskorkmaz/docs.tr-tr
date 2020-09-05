@@ -5,12 +5,12 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 09/01/2020
-ms.openlocfilehash: 8e05f4dc7a03ae8ae68acc6a57f6fa0e1c6b2ce4
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 70297cfe15732716b9ceacae091abe3c8957fb61
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465435"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495479"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -62,12 +62,12 @@ Komutu, belirtilen şablon ve seçeneklere göre diskteki yapıtları oluşturma
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
 | Konsol Uygulaması                          | [konsola](#console)             | [C#], F #, VB | Ortak/konsol                        | 1.0        |
 | Sınıf kitaplığı                                | [projesinin](#classlib)           | [C#], F #, VB | Ortak/Kitaplık                        | 1.0        |
-| WPF uygulaması                              | [WPF](#wpf)                     | [C#], VB     | Ortak/WPF                            | 3.0        |
-| WPF sınıf kitaplığı                            | [wpflib](#wpf)                  | [C#], VB     | Ortak/WPF                            | 3.0        |
-| WPF Özel Denetim Kitaplığı                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Ortak/WPF                            | 3.0        |
-| WPF Kullanıcı denetimi kitaplığı                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Ortak/WPF                            | 3.0        |
-| Windows Forms (WinForms) uygulaması         | [WinForms](#winforms)           | [C#], VB     | Ortak/WinForms                       | 3.0        |
-| Windows Forms (WinForms) sınıf kitaplığı       | [winformslib](#winforms)        | [C#], VB     | Ortak/WinForms                       | 3.0        |
+| WPF uygulaması                              | [WPF](#wpf)                     | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| WPF sınıf kitaplığı                            | [wpflib](#wpf)                  | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| WPF Özel Denetim Kitaplığı                   | [wpfcustomcontrollib](#wpf)     | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| WPF Kullanıcı denetimi kitaplığı                     | [wpfusercontrollib](#wpf)       | [C#], VB     | Ortak/WPF                            | 3,0 (VB için 5,0)|
+| Windows Forms (WinForms) uygulaması         | [WinForms](#winforms)           | [C#], VB     | Ortak/WinForms                       | 3,0 (VB için 5,0)|
+| Windows Forms (WinForms) sınıf kitaplığı       | [winformslib](#winforms)        | [C#], VB     | Ortak/WinForms                       | 3,0 (VB için 5,0)|
 | Çalışan hizmeti                               | [ından](#web-others)           | Þ         | Ortak/çalışan/Web                     | 3.0        |
 | Birim testi projesi                            | ['i](#test)                 | [C#], F #, VB | Test/MSTest                           | 1.0        |
 | NUnit 3 test projesi                         | [NUnit](#nunit)                 | [C#], F #, VB | Test/NUnit                            | 2.1.400    |

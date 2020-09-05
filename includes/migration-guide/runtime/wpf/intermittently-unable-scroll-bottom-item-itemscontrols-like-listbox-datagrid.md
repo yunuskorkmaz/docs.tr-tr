@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b92dc8a1c48e83846c3d9a1d86e66629f31b7722
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bca76daca6e9c424377a80aa56e1a5ff191be5ca
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622122"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497157"
 ---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>Özel veri şablonları kullanılırken, ara sıra ıtemcontrols (ListBox ve DataGrid gibi) alt öğeye kaydırılamıyor
 
@@ -21,3 +21,15 @@ Bu sorun .NET Framework 4.5.2 düzeltilmiştir ve bu sürüme (veya sonraki bir 
 | Kapsam   |İkincil|
 |Sürüm|4,5|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d587e542a72d584502ac3ac892619cc38b88ef77
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12fb72d5ee9fc0d6c57899589cb2b0da7db41f4a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620535"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497084"
 ---
 ### <a name="httputilityjavascriptstringencode-escapes-ampersand"></a>HttpUtility. JavaScriptStringEncode kaçış ve amperde
 
@@ -20,8 +20,18 @@ Uygulamanız bu yöntemin önceki davranışına bağımlıysa, yapılandırma d
 |:--------|:------------|
 | Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String)?displayProperty=nameWithType>
+- <xref:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Web.HttpUtility.JavaScriptStringEncode(System.String)`
+- `M:System.Web.HttpUtility.JavaScriptStringEncode(System.String,System.Boolean)`
+
+-->

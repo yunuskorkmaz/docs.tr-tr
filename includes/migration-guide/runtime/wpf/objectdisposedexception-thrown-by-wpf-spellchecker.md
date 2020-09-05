@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b836b26f3f52e9d0cc78feb764629bd2fa306657
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3244913e06a744dafc4440f824ebe6bed25b8dd1
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621835"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496299"
 ---
 ### <a name="objectdisposedexception-thrown-by-wpf-spellchecker"></a>WPF yazım denetleyicisi tarafından oluşturulan ObjectDisposedException
 
@@ -21,3 +21,15 @@ WPF uygulamaları <xref:System.ObjectDisposedException?displayProperty=fullName>
 | Kapsam   |Edge|
 |Sürüm|4.6.1|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

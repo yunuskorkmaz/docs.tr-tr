@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 809ca85b347fabc44573e2e0c5a43261d68590d3
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: cb9305f623044233082286863d2f2d2c7e9d665a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621395"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497900"
 ---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>İş akışı SQL kalıcılığı birincil anahtar kümeleri ekler ve bazı sütunlarda null değerlere izin vermez
 
@@ -21,3 +21,15 @@ Bu değişikliğe yönelik olarak, SqlWorkflowInstanceStoreSchemaUpgrade. sql do
 | Kapsam   |Edge|
 |Sürüm|4,7|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

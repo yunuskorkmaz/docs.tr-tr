@@ -3,12 +3,12 @@ title: .NET 'e hoş geldiniz
 description: .NET teknolojileri ailesine Başlarken.
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1933714263b98b4a503ced3868570c35feafe8f0
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 7b1c5eceefd1e108eabf17d5cb6f7552af00e0d5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89415065"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495153"
 ---
 # <a name="welcome-to-net"></a>.NET 'e hoş geldiniz
 
@@ -36,7 +36,7 @@ Ayrıca, en son .NET olaylarını izleyin:
 - [​.NET Core 3.1’deki yenilikler](core/whats-new/dotnet-core-3-1.md)
 - [.NET Framework yenilikler](framework/whats-new/index.md)
 - [C# yenilikleri](csharp/whats-new/index.md)
-- [Visual Basic yenilikler](visual-basic/getting-started/whats-new.md)
+- [Visual Basic yenilikler](visual-basic/whats-new/index.md)
 
 ## <a name="documentation"></a>Belgeler
 

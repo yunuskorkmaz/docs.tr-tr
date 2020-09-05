@@ -4,12 +4,12 @@ description: Yöntemlere, yöntem parametrelerine ve yöntem dönüş değerleri
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 8c33bcb9dd4052589222c2cb1b375d94d6792ba2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810579"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495544"
 ---
 # <a name="methods-in-c"></a>İçindeki Yöntemler (C#)
 
@@ -61,7 +61,7 @@ Bir yöntemi çağırırken Konumsal bağımsız değişkenler yerine *adlandır
 
 [!code-csharp[csSnippets.Methods#45](../../samples/snippets/csharp/concepts/methods/named1.cs#45)]
 
-Bir yöntemi, hem Konumsal bağımsız değişkenleri hem de adlandırılmış bağımsız değişkenleri kullanarak çağırabilirsiniz. Ancak, Konumsal bağımsız değişken adlandırılmış bir bağımsız değişkeni izleyemez. Aşağıdaki örnek, `TestMotorcycle.Drive` bir konum bağımsız değişkeni ve bir adlandırılmış bağımsız değişken kullanarak önceki örnekteki yöntemi çağırır.
+Bir yöntemi, hem Konumsal bağımsız değişkenleri hem de adlandırılmış bağımsız değişkenleri kullanarak çağırabilirsiniz. Ancak, Konumsal bağımsız değişkenler yalnızca adlandırılmış bağımsız değişkenler doğru konumlarda olduğunda adlandırılmış bağımsız değişkenleri izleyebilir. Aşağıdaki örnek, `TestMotorcycle.Drive` bir konum bağımsız değişkeni ve bir adlandırılmış bağımsız değişken kullanarak önceki örnekteki yöntemi çağırır.
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
@@ -292,4 +292,4 @@ Daha fazla bilgi için bkz. [yineleyiciler](programming-guide/concepts/iterators
 - [dışı](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
 - ['ndaki](language-reference/keywords/in-parameter-modifier.md)
-- [Parametreleri geçirme](programming-guide/classes-and-structs/passing-parameters.md)
+- [Parametreleri Geçirme](programming-guide/classes-and-structs/passing-parameters.md)

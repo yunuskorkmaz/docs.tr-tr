@@ -1,6 +1,6 @@
 ---
-title: .NET Düzenli İfadelerde Alternation Yapılar
-description: Düzenli ifadelerde koşullu eşleştirme için alternasyon yapılarını nasıl kullanacağınızı öğrenin.
+title: .NET normal Ifadelerinde değişim yapıları
+description: Normal ifadelerde koşullu eşleme için değişim yapılarını nasıl kullanacağınızı öğrenin.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,116 +15,116 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 506c1cdeb577452628d67ab00df20dd30881f406
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159695"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495440"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Normal İfadelerdeki Değişim Yapıları
 
-Alternation yapıları ya / veya koşullu eşleştirme etkinleştirmek için normal bir ifade değiştirmek. .NET üç değişim yapısını destekler:
+Değişim yapıları,/veya veya koşullu eşleştirmeyi etkinleştirmek için bir normal ifadeyi değiştirir. .NET üç değişim yapılarını destekler:
 
-- [&#124;ile eşleşen desen](#Either_Or)
-- [Koşullu eşleştirme ile (?( ifade)evet&#124;hayır)](#Conditional_Expr)
-- [Yakalanan geçerli bir gruba göre koşullu eşleştirme](#Conditional_Group)
+- [&#124;ile eşleşen desenler ](#Either_Or)
+- [(? () İle koşullu eşleme ifade) Evet&#124;Hayır)](#Conditional_Expr)
+- [Geçerli bir yakalanan gruba göre koşullu eşleme](#Conditional_Group)
 
 <a name="Either_Or"></a>
-## <a name="pattern-matching-with-124"></a>&#124; ile Örüntü Eşleştirme
+## <a name="pattern-matching-with-124"></a>&#124; ile eşleşen desenler
 
-Dikey çubuk (`|`) karakterini, `|` karakterin her deseni ayırdığı bir dizi desenle eşleştirmek için kullanabilirsiniz.
+Dikey çubuk ( `|` ) karakterini, bir dizi desenden eşleştirmek için kullanabilirsiniz, burada `|` karakter her bir deseni ayırır.
 
-Pozitif karakter sınıfı gibi, `|` karakter de tek karakterden herhangi biriyle eşleşmek için kullanılabilir. Aşağıdaki örnekte, bir dizedeki "gri" veya `|` "gri" sözcüklerinin oluşumlarını bulmak için hem pozitif karakter sınıfı hem de karakterle eşleşen bir deseni kullanır. Bu durumda, `|` karakter daha ayrıntılı düzenli bir ifade üretir.
+Pozitif karakter sınıfı gibi, karakter, `|` bir dizi tek karakterden biriyle eşleştirmek için de kullanılabilir. Aşağıdaki örnek, `|` bir dizede "gri" veya "gri" kelimelerin tekrarlamalarını bulmak için hem pozitif bir karakter sınıfını hem de karakteri ile eşleşen stili kullanır. Bu durumda, `|` karakter daha ayrıntılı olan bir normal ifade üretir.
 
 [!code-csharp[RegularExpressions.Language.Alternation#1](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
 [!code-vb[RegularExpressions.Language.Alternation#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]
 
-`|` Karakteri kullanan normal ifade, `\bgr(a|e)y\b`aşağıdaki tabloda gösterildiği gibi yorumlanır:
+Bu karakteri kullanan normal ifade, `|` `\bgr(a|e)y\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır:
 
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`gr`|"gr" karakterlerini eşleştirin.|  
+|`gr`|"Gr" karakterlerini eşleştirin.|  
 |<code>(a&#124;e)</code>|Bir "a" veya "e" ile eşleş.|  
-|`y\b`|Sözcük sınırında bir "y" ile eşleştirin.|  
+|`y\b`|Bir sözcük sınırında "y" ile eşleşir.|  
 
-`|` Karakter, karakter gerçek ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakter veya alt ifadeyle eşleştirme yapmak için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, `|` *ddd*-*ddddd**dd*-biçimine sahip 9 basamaklı bir sayı olan ABD Sosyal Güvenlik Numarası (SSN) veya-*dddddd*biçimine sahip 9 basamaklı bir sayı *dd*olan ABD İşveren Kimlik Numarası (EIN) özelliğini ayıklamak için karakteri kullanır.
+`|`Karakter, ya da karakter değişmez değerleri ve normal ifade dili öğelerinin herhangi bir birleşimini içerebilen birden çok karakterle veya alt ifadeyle eşleşme gerçekleştirmek için de kullanılabilir. (Karakter sınıfı bu işlevselliği sağlamaz.) Aşağıdaki örnek, bir `|` ABD sosyal güvenlik numarası (SSK), örneğin *ddd*gg dddd olan 9 basamaklı bir sayı - *dd* - *dddd*veya bir ABD işveren kimlik numarası (EIN) *dd*ayıklamak için kullanır - *ddddddd*.
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
 
-Normal ifade `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` aşağıdaki tabloda gösterildiği gibi yorumlanır:
+Normal ifade `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` Aşağıdaki tabloda gösterildiği gibi yorumlanır:
   
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Aşağıdakilerden birini eşleştirin: iki ondalık basamak ve ardından bir tire ve ardından yedi ondalık basamak; veya üç ondalık basamak, bir tire, iki ondalık basamak, başka bir tire ve dört ondalık basamak.|  
-|`\d`|Eşlemeyi bir sözcük sınırında sonlandır.|  
+|<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|Aşağıdakilerden birini eşleştirin: iki ondalık basamak ve sonra da yedi ondalık basamak gelen tire. ya da üç ondalık basamak, kısa çizgi, iki ondalık basamak, başka bir tire ve dört ondalık basamak.|  
+|`\b`|Eşlemeyi bir sözcük sınırında sonlandır.|  
   
 <a name="Conditional_Expr"></a>
-## <a name="conditional-matching-with-an-expression"></a>Bir ifadeyle koşullu eşleştirme
+## <a name="conditional-matching-with-an-expression"></a>Bir ifadeyle koşullu eşleme
 
-Bu dil öğesi, ilk desenle eşleşip eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi:  
+Bu dil öğesi, bir başlangıç deseniyle eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi şöyledir:  
 
-`(?(`*ifade* `)` *evet* `|` *hayır*`)`
+`(?(`*ifade* `)` *Evet* `|` *Hayır*`)`
 
-*ifadenin* eşleşecek ilk desen olduğu yerde, *evet* *ifade* eşleşip eşleşmediği desendir ve *ifade* eşleşmiyorsa eşleşen isteğe bağlı desen *hayırdır.* Normal ifade altyapısı *ifadeyi* sıfır genişlikli bir tasnı olarak ele alar; diğer bir deyişle, normal ifade altyapısı *ifadeyi*değerlendirdikten sonra giriş akışında ilerlemez. Bu nedenle, bu yapı aşağıdakilere eşdeğerdir:
+Burada ifadesi eşleşmek üzere Başlangıç *düzensiyse* , *Evet* *ifadesi* eşleşiyorsa eşleşen bir modeldir ve *hiçbir* değer *ifade* eşleşmezse eşleşen isteğe bağlı bir modeldir. Normal ifade altyapısı, *ifadeyi* sıfır genişlikli bir onaylama olarak değerlendirir; diğer bir deyişle, normal ifade altyapısı, *ifade*değerlendirdikten sonra giriş akışında ilerlemez. Bu nedenle, bu yapı aşağıdaki ile eşdeğerdir:
 
-`(?(?=`*ifade* `)` *evet* `|` *hayır*`)`
+`(?(?=`*ifade* `)` *Evet* `|` *Hayır*`)`
 
-`(?=` *ifadenin* `)` sıfır genişlikte bir tasnİf yapısı olduğu yerde. (Daha fazla bilgi için yapı [yı gruplandırma](grouping-constructs-in-regular-expressions.md)ya da gruplandırma 'ya bakın.) Normal ifade altyapısı *ifadeyi* bir bağlantı noktası (sıfır genişlikte bir iddia) olarak yorumladığı için, *ifade* nin sıfır genişlikte bir tasnİf (daha fazla bilgi için, [Bkz. Çapalar)](anchors-in-regular-expressions.md)veya *evet'te*de bulunan bir alt ifade olması gerekir. Aksi takdirde, *evet* deseni eşleşemez.  
+Burada `(?=` *ifadesi* `)` sıfır genişlikli bir onaylama yapısıdır. (Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).) Normal ifade altyapısı *ifadeyi* bir tutturucu (sıfır genişlikli bir onaylama) olarak yorumladığı için, *ifadenin* sıfır genişlikli bir onaylama (daha fazla bilgi Için, bkz. [Tutturucular](anchors-in-regular-expressions.md)) veya *Evet*' de bulunan bir alt ifade olması gerekir. Aksi halde, *Evet* deseninin eşleştirilemez.  
   
 > [!NOTE]
-> *İfade* adlandırılmış veya numaralandırılmış bir yakalama grubuysa, değiştirme yapısı bir yakalama testi olarak yorumlanır; daha fazla bilgi için, [geçerli bir yakalama grubuna dayalı koşullu eşleştirme](#Conditional_Group)sonraki bölüme bakın. Başka bir deyişle, normal ifade altyapısı yakalanan alt dizeyle eşleşmeye çalışmaz, bunun yerine grubun varlığı veya yokluğu için test eder.  
+> İfade adlandırılmış veya numaralandırılmış yakalama *grubsiyse* , değişim yapısı yakalama testi olarak yorumlanır; daha fazla bilgi için, [geçerli bir yakalama grubuna göre koşullu eşleme](#Conditional_Group)başlıklı sonraki bölüme bakın. Diğer bir deyişle, normal ifade altyapısı yakalanan alt dizeyle eşleştirmeye çalışmaz, bunun yerine grubun varlığını veya yokluğunu sınar.  
   
-Aşağıdaki örnek, [ya/veya desen eşleştirmesinde &#124;bölümüyle](#Either_Or) görünen örneğin bir varyasyonudur. Bir sözcük sınırından sonraki ilk üç karakterin iki basamaklı olup olmadığını belirlemek için koşullu eşleştirmeyi kullanır. Varsa, bir ABD İşveren Kimlik Numarası (EIN) eşleşmeye çalışır. Değilse, bir ABD Sosyal Güvenlik Numarası (SSN) eşleşmeye çalışır.
+Aşağıdaki örnek, &#124;bölümünde bulunan [/veya düzeniyle eşleşen ](#Either_Or) bir örnek çeşitlemesi örneğidir. Bir sözcük sınırından sonraki ilk üç karakterin, kısa çizgi ve sonrasında iki basamak olup olmadığını anlamak için koşullu eşleştirmeyi kullanır. Bunlar ise, bir ABD Işveren kimlik numarası (EIN) ile eşleştirmeye çalışır. Aksi takdirde, bir ABD sosyal güvenlik numarası (SSN) ile eşleştirmeye çalışır.
 
 [!code-csharp[RegularExpressions.Language.Alternation#3](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
 [!code-vb[RegularExpressions.Language.Alternation#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]
 
-Normal ifade `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` deseni aşağıdaki tabloda gösterildiği gibi yorumlanır:
+Normal ifade deseninin `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` Aşağıdaki tabloda gösterildiği gibi yorumlanması sağlanır:
 
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`(?(\d{2}-)`|Sonraki üç karakterin iki basamaktan oluşup oluşmadığını ve ardından tireyi belirleyin.|  
-|`\d{2}-\d{7}`|Önceki desen eşleşirse, iki basamak ve ardından bir tire ve ardından yedi basamak eşleştirin.|  
-|`\d{3}-\d{2}-\d{4}`|Önceki desen eşleşmiyorsa, üç ondalık basamak, bir tire, iki ondalık basamak, başka bir tire ve dört ondalık basamak eşleştirin.|  
+|`(?(\d{2}-)`|Sonraki üç karakterin iki basamakla ve sonra bir tire ile olup olmadığını belirleme.|  
+|`\d{2}-\d{7}`|Önceki kalıp eşleşiyorsa, iki basamakla ve sonra da yedi basamakla eşleşen bir tire ile eşleştirin.|  
+|`\d{3}-\d{2}-\d{4}`|Önceki model eşleşmiyorsa üç ondalık basamağı, kısa çizgi, iki ondalık basamak, başka bir tire ve dört ondalık basamak eşleştirin.|  
 |`\b`|Bir sözcük sınırıyla eşleş.|  
 
 <a name="Conditional_Group"></a>
-## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Yakalanan geçerli bir gruba göre koşullu eşleştirme
+## <a name="conditional-matching-based-on-a-valid-captured-group"></a>Geçerli bir yakalanan gruba göre koşullu eşleme
 
-Bu dil öğesi, belirli bir yakalama grubuyla eşleşip eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi:
+Bu dil öğesi, belirtilen bir yakalama grubuyla eşleşip eşleşmediğine bağlı olarak iki desenden birini eşleştirmeye çalışır. Sözdizimi şöyledir:
 
-`(?(`*isim* `)` *evet* `|` *hayır*`)`
+`(?(`*ad* `)` *Evet* `|` *Hayır*`)`
 
-or
+veya
 
-`(?(`*numara* `)` *evet* `|` *hayır*`)`
+`(?(`*sayı* `)` *Evet* `|` *Hayır*`)`
 
-*adı* nisisim ve *sayı* bir yakalama grubunun numarasıdır, *evet* *ad* veya *sayı* eşleşip eşleşmediği ifadedir ve *hayır,* yoksa eşleşecek isteğe bağlı ifadedir.
+Burada *ad* , ad ve *sayı* bir yakalama grubu numarasıdır, *Evet* , *ad* veya *sayı* bir eşleşme içeriyorsa ve *Hayır* ise eşleşmesi gereken isteğe bağlı ifadedir.
 
-*Ad,* normal ifade deseninde kullanılan bir yakalama grubunun adıile uyuşmuyorsa, değiştirme yapısı önceki bölümde açıklandığı gibi bir ifade testi olarak yorumlanır. Genellikle, bu *ifadenin* `false`. *Sayı,* normal ifade deseninde kullanılan numaralanmış bir yakalama grubuna karşılık gelmiyorsa, normal ifade motoru . <xref:System.ArgumentException>
+*Ad* , normal ifade modelinde kullanılan bir yakalama grubunun adına karşılık gelmiyorsa, değişim yapısı, önceki bölümde açıklandığı gibi bir ifade testi olarak yorumlanır. Genellikle, bu *ifade* olarak değerlendirilir `false` . *Sayı* , normal ifade deseninin kullandığı numaralandırılmış bir yakalama grubuna karşılık gelmiyorsa, normal ifade altyapısı bir oluşturur <xref:System.ArgumentException> .
 
-Aşağıdaki örnek, [ya/veya desen eşleştirmesinde &#124;bölümüyle](#Either_Or) görünen örneğin bir varyasyonudur. İki basamaktan oluşan `n2` ve ardından tire yi izleyen bir yakalama grubu kullanır. Alternation yapı, bu yakalama grubunun giriş dizesinde eşleşip eşleşmediğini sınar. Varsa, alternation yapı dokuz basamaklı BIR ABD İşveren Kimlik Numarası (EIN) son yedi basamak eşleşmeye çalışır. Değilse, dokuz basamaklı bir ABD Sosyal Güvenlik Numarası (SSN) eşleştirmeye çalışır.
+Aşağıdaki örnek, &#124;bölümünde bulunan [/veya düzeniyle eşleşen ](#Either_Or) bir örnek çeşitlemesi örneğidir. İki basamaktan oluşan adlı bir yakalama grubu kullanır `n2` ve kısa çizgi gelir. Değişim yapısı, bu yakalama grubunun giriş dizesinde eşleştirilip eşleştirilmediğini test eder. Varsa, değişim yapısı dokuz basamaklı bir ABD Işveren kimlik numarasının (EIN) son yedi basamağıyla eşleştirmeye çalışır. Bu yoksa dokuz basamaklı bir ABD sosyal güvenlik numarası (SSK) ile eşleştirmeye çalışır.
 
 [!code-csharp[RegularExpressions.Language.Alternation#4](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
 [!code-vb[RegularExpressions.Language.Alternation#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]
 
-Normal ifade `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` deseni aşağıdaki tabloda gösterildiği gibi yorumlanır:
+Normal ifade deseninin `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` Aşağıdaki tabloda gösterildiği gibi yorumlanması sağlanır:
 
 |Desen|Açıklama|  
 |-------------|-----------------|  
 |`\b`|Bir sözcük sınırında başla.|  
-|`(?<n2>\d{2}-)?`|Eşleştirme sıfır veya iki basamaklı bir olay ardından bir tire. Bu yakalama grubunu `n2`adlandırın.|  
-|`(?(n2)`|Giriş `n2` dizesinde eşleşip eşleşmediğini test edin.|  
-|`\d{7}`|Eşleştirildiyse, `n2` yedi ondalık basamakeşleştirin.|  
-|<code>&#124;\d{3}-\d{2}-\d{4}</code>|Eşleşmediyse, `n2` üç ondalık basamak, bir tire, iki ondalık basamak, başka bir tire ve dört ondalık basamak eşleştirin.|  
+|`(?<n2>\d{2}-)?`|Sıfır veya iki basamaklı bir oluşumu izleyen kısa çizgi ile eşleştirin. Bu yakalama grubunu adlandırın `n2` .|  
+|`(?(n2)`|`n2`Giriş dizesinde eşleştirilip eşleştirilmediğini test edin.|  
+|`\d{7}`|`n2`Eşleştiriliyorsa yedi ondalık basamağı eşleştirin.|  
+|<code>&#124;\d{3}-\d{2}-\d{4}</code>|`n2`Eşleştirilmedi, üç ondalık basamağı, kısa çizgi, iki ondalık basamak, başka bir tire ve dört ondalık basamak eşleştirin.|  
 |`\b`|Bir sözcük sınırıyla eşleş.|  
 
-Bu örneğin, adlandırılmış bir grup yerine numaralandırılmış bir grup kullanan bir varyasyonu aşağıdaki örnekte gösterilmiştir. Onun düzenli ifade `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`deseni .
+Bu örneğin, adlandırılmış bir grup yerine numaralandırılmış bir grup kullanan bir çeşitlemesi aşağıdaki örnekte gösterilmiştir. Normal ifade deseninin `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b` .
 
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]

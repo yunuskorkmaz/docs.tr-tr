@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3eab96149be1e40d528cfd552bbe05ca766cf4e8
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 58dbb54d42d89b450134758072e3133ae4e6b13d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620592"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496401"
 ---
 ### <a name="systemthreadingtaskstask-no-longer-throw-objectdisposedexception-after-object-is-disposed"></a>System. Threading. Tasks. Task artık nesne atıldıktan sonra ObjectDisposedException oluşturmaz
 
@@ -21,3 +21,15 @@ Görev yöntemlerinin <xref:System.ObjectDisposedException?displayProperty=fullN
 | Kapsam   |İkincil|
 |Sürüm|4,5|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

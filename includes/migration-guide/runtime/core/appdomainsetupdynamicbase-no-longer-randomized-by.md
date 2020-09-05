@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 08ad6fd4ccb6d5ddbbb4fa7ef1b325ce30689748
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 26c50ac8b0e570e31a38b1913f73acbe21fae08b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621412"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497032"
 ---
 ### <a name="appdomainsetupdynamicbase-is-no-longer-randomized-by-userandomizedstringhashalgorithm"></a>AppDomainSetup. DynamicBase artık UseRandomizedStringHashAlgorithm tarafından rasgeleleştirilmedi
 
@@ -20,8 +20,16 @@ Etkinleştirmenin rastgele hale gelemeyeceğini unutmayın <code>UseRandomizedSt
 |:--------|:------------|
 | Kapsam   |Edge|
 |Sürüm|4.6|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType></li></ul>|
+- <xref:System.AppDomainSetup.DynamicBase?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.AppDomainSetup.DynamicBase`
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bae6d7c0f8843211c721c68ce6f16000b35b4401
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 61749f59f9379a6d18bb013b2612a07cb7822b3a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620700"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497447"
 ---
 ### <a name="new-enum-values-in-wpfs-pagerangeselection"></a>WPF 'in PageRangeSelection öğesindeki yeni Enum değerleri
 
@@ -20,8 +20,16 @@ Sabit listesine iki yeni üye ( <xref:System.Windows.Controls.PageRangeSelection
 |:--------|:------------|
 | Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Windows.Controls.PageRangeSelection`
+
+-->

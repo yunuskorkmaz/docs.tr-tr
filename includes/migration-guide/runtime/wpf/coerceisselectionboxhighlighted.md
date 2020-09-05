@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c8e597310ec0b02edbf993709f931a6093b6285
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 11bb23232dfedc9fd62cac46493c3fa5d195721b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621825"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496329"
 ---
 ### <a name="coerceisselectionboxhighlighted"></a>CoerceIsSelectionBoxHighlighted
 
@@ -20,8 +20,16 @@ Mümkünse, .NET Framework 4.6.2 ' ye yükseltin.
 |:--------|:------------|
 | Kapsam   |İkincil|
 |Sürüm|4.6|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Windows.Controls.ComboBox.IsSelectionBoxHighlighted`
+
+-->

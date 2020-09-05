@@ -5,12 +5,12 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: f9fd0d09dbb65c2367ac268ea4a7055a299a7586
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: c9ac93c152d39bd06875f82ee5f34c1540236038
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89471991"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495232"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 'un .NET 5 sürümüne evrimi
 
@@ -42,7 +42,7 @@ Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te n
 - [Uygulama kırpması](https://devblogs.microsoft.com/dotnet/app-trimming-in-net-5)
 - [C# derleyici geliştirmeleri](https://devblogs.microsoft.com/dotnet/automatically-find-latent-bugs-in-your-code-with-net-5)
 - Döküm hata ayıklaması için araç desteği
-- Platform [null yapılabilir başvuru türleri](csharp/nullable-references.md) için %80 açıklanmalıdır
+- Platform [null yapılabilir başvuru türleri](../csharp/nullable-references.md) için %80 açıklanmalıdır
 
 ### <a name="what-net-5-is-not"></a>.NET 5 ne değildir?
 
@@ -58,7 +58,7 @@ Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te n
 
 Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere tüm proje türleri için hedef çerçeve bilinen adını (tfd) belirtebilir. .NET 5 iş yükleri arasında kod paylaşımı, tüm ihtiyacınız olan tfd ' de basitleştirilmiştir `net5.0` .
 
-`net5.0`Tfd, ve adlarını birleştirir ve değiştirir `netcoreapp` `netstandard` . Bu TFM genellikle, .NET Standard gibi, platformlar arası çalışan teknolojileri dahil eder. Ancak, .NET Framework, .NET Core ve .NET 5 iş yükleri arasında kod paylaşmayı planlıyorsanız, `netstandard2.0` TFI olarak belirterek bunu yapabilirsiniz. Daha fazla bilgi için bkz. [hedef çerçeveleri belirtme](standard/frameworks.md#how-to-specify-target-frameworks).
+`net5.0`Tfd, ve adlarını birleştirir ve değiştirir `netcoreapp` `netstandard` . Bu TFM genellikle, .NET Standard gibi, platformlar arası çalışan teknolojileri dahil eder. Ancak, .NET Framework, .NET Core ve .NET 5 iş yükleri arasında kod paylaşmayı planlıyorsanız, `netstandard2.0` TFI olarak belirterek bunu yapabilirsiniz. Daha fazla bilgi için bkz. [hedef çerçeveleri belirtme](../standard/frameworks.md#how-to-specify-target-frameworks).
 
 ## <a name="language-updates"></a>Dil güncelleştirmeleri
 
@@ -76,9 +76,9 @@ Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere
    System.Console.Write("Hello world!");
    ```
 
-- İşlevsel işaretçiler: ara dili (IL) sunan dil yapıları aşağıdaki işlem kodları `ldftn` ve `calli` .
+- İşlev işaretçileri: aşağıdaki ara dil (IL) OpCodes 'ı kullanıma sunan dil yapıları: `ldftn` ve `calli` .
 
-Kullanılabilir C# 9 özellikleri hakkında daha fazla bilgi için bkz. [C# 9 ' daki](csharp/whats-new/csharp-9.md)yenilikler.
+<!-- For more information on the available C# 9 features, see [What's new in C# 9](csharp/whats-new/csharp-9.md). -->
 
 #### <a name="source-generators"></a>Kaynak oluşturucuları
 
@@ -108,7 +108,7 @@ let age = 36
 let message = $"%s{name} is %d{age} years old."
 ```
 
-Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-printfmodule.html#sprintf) türü güvenli girişlere göre bir dizeyi biçimlendiren işleve benzerdir. Daha fazla bilgi için bkz. [F # 5 ' teki](fsharp/whats-new/fsharp-50.md) yenilikler
+Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-printfmodule.html#sprintf) türü güvenli girişlere göre bir dizeyi biçimlendiren işleve benzerdir. <!-- For more information, see [What's new in F# 5](fsharp/whats-new/fsharp-50.md). -->
 
 ### <a name="visual-basic-updates"></a>Visual Basic güncelleştirmeleri
 
@@ -129,7 +129,7 @@ Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-
 | NUnit 3 test öğesi                      | `nunit-test`           |
 | xUnit test projesi                     | `xunit`                |
 
-.NET CLı 'dan proje şablonları hakkında daha fazla bilgi için bkz [`dotnet new`](core/tools/dotnet-new.md) ..
+.NET CLı 'dan proje şablonları hakkında daha fazla bilgi için bkz [`dotnet new`](tools/dotnet-new.md) ..
 
 ## <a name="net-maui"></a>.NET MAUı
 

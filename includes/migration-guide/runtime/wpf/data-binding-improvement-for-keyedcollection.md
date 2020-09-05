@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: beb869208e8d48d762d94b5989a558fa2f1aaf29
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8964cd2f69e95e4078001997ad5a5d126ce42d7b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622112"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496556"
 ---
 ### <a name="data-binding-improvement-for-keyedcollection"></a>KeyedCollection için veri bağlama geliştirmesi
 
@@ -21,3 +21,15 @@ Daha eski bir sürümü hedefleyen bir uygulamanın bu değişiklikten faydalana
 | Kapsam   |Ana|
 |Sürüm|4,8|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

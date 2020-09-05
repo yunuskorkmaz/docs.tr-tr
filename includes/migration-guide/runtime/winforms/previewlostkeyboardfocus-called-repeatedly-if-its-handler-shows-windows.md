@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2aa6603e2ed77ffa94fbc6325cd5db50985bda6a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: c4a3d903894027a01d32ca132d1233da9d9c3ee5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620681"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496395"
 ---
 ### <a name="previewlostkeyboardfocus-is-called-repeatedly-if-its-handler-shows-a-windows-forms-message-box"></a>PreviewLostKeyboardFocus, işleyicisi bir Windows Forms ileti kutusu gösteriyorsa, tekrar tekrar çağırılır
 
@@ -20,8 +20,22 @@ Bu sorunu geçici olarak çözmek için iki seçenek vardır:<ol><li>Yerine ça�
 |:--------|:------------|
 | Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Windows.ContentElement.PreviewLostKeyboardFocus?displayProperty=nameWithType></li><li><xref:System.Windows.IInputElement.PreviewLostKeyboardFocus?displayProperty=nameWithType></li><li><xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=nameWithType></li><li><xref:System.Windows.UIElement3D.PreviewLostKeyboardFocus?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.ContentElement.PreviewLostKeyboardFocus?displayProperty=nameWithType>
+- <xref:System.Windows.IInputElement.PreviewLostKeyboardFocus?displayProperty=nameWithType>
+- <xref:System.Windows.UIElement.PreviewLostKeyboardFocus?displayProperty=nameWithType>
+- <xref:System.Windows.UIElement3D.PreviewLostKeyboardFocus?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `E:System.Windows.ContentElement.PreviewLostKeyboardFocus`
+- `E:System.Windows.IInputElement.PreviewLostKeyboardFocus`
+- `E:System.Windows.UIElement.PreviewLostKeyboardFocus`
+- `E:System.Windows.UIElement3D.PreviewLostKeyboardFocus`
+
+-->

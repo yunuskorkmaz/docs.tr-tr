@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a5c6dda0c1d68468cd95f67716709dd059948c80
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 6a79f04af44f78313c4d5bb5c37dfad252d3024b
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621436"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496686"
 ---
 ### <a name="product-versioning-changes-in-the-net-framework-46-and-later-versions"></a>.NET Framework 4,6 ve sonraki sürümlerde ürün sürümü oluşturma değişiklikleri
 
@@ -21,3 +21,15 @@ Genel olarak, uygulamalar .NET Framework çalışma zamanı sürümü ve yüklem
 | Kapsam   |İkincil|
 |Sürüm|4.6|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

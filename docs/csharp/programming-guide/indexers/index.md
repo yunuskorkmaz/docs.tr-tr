@@ -8,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 07e0ae4294373817e10bb79920c73ec1e275d169
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: ea95eef7bb9ba232e4d59e3f833b82e98398fc33
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87303120"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89495310"
 ---
 # <a name="indexers-c-programming-guide"></a>Dizin Oluşturucular (C# Programlama Kılavuzu)
 
@@ -46,7 +46,7 @@ C# 7,0 ' den itibaren hem Get hem de set erişimcisi, ifade Bodied Üyeler olara
   
 - [Bu](../../language-reference/keywords/this.md) anahtar sözcük, Dizin oluşturucuyu tanımlamak için kullanılır.  
   
-- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, Dizin Oluşturucu tarafından atanan değeri tanımlamak için kullanılır `set` .  
+- [Value](../../language-reference/keywords/value.md) anahtar sözcüğü, erişimci tarafından atanan değeri tanımlamak için kullanılır `set` .  
   
 - Dizin oluşturucuların bir tamsayı değeri ile dizinlenmesini gerekmez; Bu, belirli bir arama mekanizmasını nasıl tanımlayacaksınız.  
   
@@ -54,7 +54,7 @@ C# 7,0 ' den itibaren hem Get hem de set erişimcisi, ifade Bodied Üyeler olara
   
 - Dizin oluşturucular birden fazla biçimsel parametreye sahip olabilir, örneğin iki boyutlu bir diziye erişirken.  
   
-## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>İlgili bölümler  
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> İlgili bölümler  
   
 - [Dizin Oluşturucular Kullanma](./using-indexers.md)  
   

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e4d9efe7d2a06a1e501b070c23184dcd913dba71
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 14581b193fc000c7f805a0602e191cad688c014a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621411"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497460"
 ---
 ### <a name="persian-calendar-now-uses-the-hijri-solar-algorithm"></a>Farsça takvimi artık Hicri güneş algoritmasını kullanıyor
 
@@ -20,8 +20,16 @@ ms.locfileid: "85621411"
 |:--------|:------------|
 | Kapsam   |İkincil|
 |Sürüm|4.6|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Globalization.PersianCalendar?displayProperty=nameWithType></li></ul>|
+- <xref:System.Globalization.PersianCalendar?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Globalization.PersianCalendar`
+
+-->

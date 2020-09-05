@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c3e39e49747be709977d7fba3c39b59f5575c40d
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 04d1c1162dc79bbcb0578c6661466f4d58a57acc
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620724"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496937"
 ---
 ### <a name="xmlschemaexception-now-sets-line-positions-properly"></a>XmlSchemaException artık satır konumlarını düzgün şekilde ayarlıyor
 
@@ -20,8 +20,16 @@ ms.locfileid: "85620724"
 |:--------|:------------|
 | Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=nameWithType></li></ul>|
+- <xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `F:System.Xml.Linq.LoadOptions.SetLineInfo`
+
+-->

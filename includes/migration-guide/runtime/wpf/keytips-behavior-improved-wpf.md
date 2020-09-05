@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9659068304eb208fd6a0a753273453bc669fbc56
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 1487b5f47966cfcae0e47848dae99b39b42db18d
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621405"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497318"
 ---
 ### <a name="keytips-behavior-improved-in-wpf"></a>WPF 'de geliştirilmiş KeyTips davranışı
 
@@ -14,10 +14,22 @@ KeyTips davranışı, Microsoft Word ve Windows Gezgini 'ndeki davranışa eşli
 
 #### <a name="suggestion"></a>Öneri
 
-Yok
+YOK
 
 | Name    | Değer       |
 |:--------|:------------|
 | Kapsam   |Edge|
 |Sürüm|4.7.2|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

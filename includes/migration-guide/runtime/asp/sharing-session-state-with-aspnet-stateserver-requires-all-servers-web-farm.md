@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0fe07ac21effacffc56d37ccb46a121f443acd20
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 76425ca03c98cd6a23b8366257f9e0d53b486edb
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620544"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497486"
 ---
 ### <a name="sharing-session-state-with-aspnet-stateserver-requires-all-servers-in-the-web-farm-to-use-the-same-net-framework-version"></a>Asp.Net StateServer ile oturum durumunu paylaşma, Web grubundaki tüm sunucuların aynı .NET Framework sürümünü kullanmasını gerektirir
 
@@ -24,4 +24,12 @@ Durumu paylaşan Web sunucularındaki .NET Framework sürümlerini aynı anda y�
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.SessionState.SessionStateMode.StateServer?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `F:System.Web.SessionState.SessionStateMode.StateServer`
+
+-->

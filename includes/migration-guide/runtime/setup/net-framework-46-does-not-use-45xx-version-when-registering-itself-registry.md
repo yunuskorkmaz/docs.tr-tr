@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09fb7a54fccd5cf37800483c64e2fa6a54681f11
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a9011514c7c4393ec44de2c7fae88768cdccf435
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621430"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496537"
 ---
 ### <a name="the-net-framework-46-does-not-use-a-45xx-version-when-registering-itself-in-the-registry"></a>.NET Framework 4,6, kayıt defterine kendisini kaydederken 4.5. x. x sürümünü kullanmaz
 
@@ -21,3 +21,15 @@ Bir tane beklendiğinde, 4,6 .NET Framework için kayıt defterindeki (at) kayı
 | Kapsam   |Edge|
 |Sürüm|4.6|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

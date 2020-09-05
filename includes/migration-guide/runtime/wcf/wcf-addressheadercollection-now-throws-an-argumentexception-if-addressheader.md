@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d29be721b50d1c93723b325774a06e86f77dbebf
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 200c22a1b83149d833a083365ebb65d0e80bc31a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621387"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497031"
 ---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>Bir addressHeader öğesi null ise, WCF AddressHeaderCollection şimdi bir ArgumentException oluşturur
 
@@ -20,8 +20,16 @@ Bu değişiklik ile .NET Framework 4.7.1 veya sonraki bir sürümde uyumluluk so
 |:--------|:------------|
 | Kapsam   |İkincil|
 |Sürüm|4.7.1|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})></li></ul>|
+- <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.ServiceModel.Channels.AddressHeaderCollection.#ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})`
+
+-->

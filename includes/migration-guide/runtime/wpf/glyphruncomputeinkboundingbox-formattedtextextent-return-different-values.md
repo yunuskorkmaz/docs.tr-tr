@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 00ffc782c9a15c0d88f797f52372b4658706b350
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: d9e1624bbeb91db63bc284b8eb52643938eb42e5
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620687"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497575"
 ---
 ### <a name="glyphruncomputeinkboundingbox-and-formattedtextextent-return-different-values-beginning-in-net-framework-45"></a>GlyphRun. ComputeInkBoundingBox () ve FormattedText. kapsam .NET Framework 4,5 ' den başlayarak farklı değerler döndürüyor
 
@@ -20,8 +20,18 @@ Bazı glif sınırlayıcı kutusu boyutlarının arttığını unutmayın. Bu de
 |:--------|:------------|
 | Kapsam   |Edge|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType></li><li><xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType></li></ul>|
+- <xref:System.Windows.Media.GlyphRun.ComputeInkBoundingBox?displayProperty=nameWithType>
+- <xref:System.Windows.Media.FormattedText.Extent?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Windows.Media.GlyphRun.ComputeInkBoundingBox`
+- `P:System.Windows.Media.FormattedText.Extent`
+
+-->

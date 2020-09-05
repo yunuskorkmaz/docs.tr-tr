@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ae557ce57557d027dba35b7da213c08aee85f2c7
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 55a26f1ab27792cbedf3f31b797f37d3f768d51a
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622073"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496605"
 ---
 ### <a name="aspnet-fix-handling-of-inputattributes-and-labelattributes-for-webforms-checkbox-control"></a>WebForms onay kutusu denetimi için InputAttributes ve LabelAttributes 'ın ASP.NET düzeltmesini işleme
 
@@ -20,8 +20,16 @@ Geri göndermede özniteliklerin geri yüklenmesine yönelik doğru davranış i
 |:--------|:------------|
 | Kapsam   |Bilinmiyor|
 |Sürüm|4,8|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.UI.WebControls.CheckBox?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `T:System.Web.UI.WebControls.CheckBox`
+
+-->

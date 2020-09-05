@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d19ed4c74b0ca25edb19c05a987ef2e3a6610628
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 74e40a682dc0ede6750f9d0a3dccaee5db48cb79
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622102"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497247"
 ---
 ### <a name="keyboard-navigation-improvement-in-listbox-with-hyperlinks"></a>Köprülerle ListBox 'ta klavye gezintisi geliştirmesi
 
@@ -17,3 +17,15 @@ Odak, üst öğenin seçili öğesi olmayan bir öğe köprüdeyse, bir ok tuşu
 | Kapsam   |Ana|
 |Sürüm|4,8|
 |Tür|Çalışma Zamanı|
+
+#### <a name="affected-apis"></a>Etkilenen API’ler
+
+API analizi aracılığıyla algılanamaz.
+
+<!--
+
+#### Affected APIs
+
+Not detectable via API analysis.
+
+-->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 29c66edfeb1690199aac39b9c3076d161b2075d4
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 17fde81f9734966692c9f41d2213f8682dedea46
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621441"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89497479"
 ---
 ### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract. sabit veya sözleşme. \<TException> Için String. IsNullOrEmpty 'ın saf olmasını gerektirmeyin
 
@@ -20,8 +20,18 @@ Bu davranış, [GitHub sorun #339](https://github.com/Microsoft/CodeContracts/is
 |:--------|:------------|
 | Kapsam   |İkincil|
 |Sürüm|4.6.1|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)?displayProperty=nameWithType></li></ul>|
+- <xref:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)?displayProperty=nameWithType>
+- <xref:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `M:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)`
+- `M:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)`
+
+-->

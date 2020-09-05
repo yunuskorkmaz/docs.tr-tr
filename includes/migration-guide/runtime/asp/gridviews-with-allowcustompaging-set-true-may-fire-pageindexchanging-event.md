@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3b329bf5ba2af4d3ab9c3e203e99daba8ca0d0c0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 4d210eeedd2f228017634d29f11554deb6ed8079
+ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620532"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89496845"
 ---
 ### <a name="gridviews-with-allowcustompaging-set-to-true-may-fire-the-pageindexchanging-event-when-leaving-the-final-page-of-the-view"></a>Allowcustompeskime ile true olarak ayarlanan GridViews, görünümün son sayfasından çıkılırken PageIndexChanging olayını tetiklebiliyor
 
@@ -20,8 +20,16 @@ Bu sorun .NET Framework 4,6 ' de düzeltilmiştir ve bu .NET Framework sürümü
 |:--------|:------------|
 | Kapsam   |İkincil|
 |Sürüm|4,5|
-|Tür|Çalışma Zamanı
+|Tür|Çalışma Zamanı|
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
--<xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType></li></ul>|
+- <xref:System.Web.UI.WebControls.GridView.AllowCustomPaging?displayProperty=nameWithType>
+
+<!--
+
+#### Affected APIs
+
+- `P:System.Web.UI.WebControls.GridView.AllowCustomPaging`
+
+-->
