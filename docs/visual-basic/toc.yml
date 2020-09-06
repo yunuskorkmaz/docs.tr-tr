@@ -1,7 +1,9 @@
 - name: Visual Basic Kılavuzu
   href: index.yml
 - name: Visual Basic’teki Yenilikler
-  href: getting-started/whats-new.md
+  href: whats-new/index.md
+- name: Derleyicideki yeni değişiklikler
+  href: whats-new/breaking-changes.md
 - name: Başlarken
   href: getting-started/index.md
   items:
@@ -535,7 +537,7 @@
               href: language-reference/operators/addition-operator.md
             - name: += İşleci
               href: language-reference/operators/addition-assignment-operator.md
-            - name: = İşleci
+            - name: '= İşleci'
               href: language-reference/operators/assignment-operator.md
             - name: '- İşleç'
               href: language-reference/operators/subtraction-operator.md
