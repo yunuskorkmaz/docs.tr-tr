@@ -6,12 +6,12 @@ metadata:
   description: C# ile programlamayı öğrenin - Başlangıç düzeyindeki geliştiriciler, C# dilini kullanmaya yeni başlayan geliştiriciler ve C#/.NET geliştiricileri için
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
-  ms.sourcegitcommit: 09bad6ec0cbf18be7cd7f62e77286d305a18b607
+  ms.openlocfilehash: fd9a641d588ffd410ed2a6163505a81c69dae867
+  ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 08/05/2020
-  ms.locfileid: "82102729"
+  ms.lasthandoff: 09/05/2020
+  ms.locfileid: "89495323"
 landingContent:
 - title: C# ile programlamayı öğrenin
   linkLists:
@@ -63,6 +63,12 @@ landingContent:
       url: tutorials/string-interpolation.md
     - text: Tüm öğreticilere göz atın
       url: tutorials/index.md
+- title: C# 9.0 sürümündeki yeni özellikler
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: C# 9.0 sürümündeki yenilikler
+      url: whats-new/csharp-9.md
 - title: C# 8.0 sürümündeki yeni özellikler
   linkLists:
   - linkListType: whats-new
