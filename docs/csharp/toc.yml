@@ -1,11 +1,11 @@
 - name: C# belgeleri
   href: index.yml
-- name: Kullanmaya başlayın
+- name: başlarken
   items:
     - name: Genel Bakış
       displayName: get started
       href: getting-started/index.md
-    - name: C# Diline ve.NET Framework’e Giriş
+    - name: C# diline ve .NET’e giriş
       href: getting-started/introduction-to-the-csharp-language-and-the-net-framework.md
 - name: Öğreticiler
   items:
@@ -80,8 +80,10 @@
       href: tour-of-csharp/features.md
 - name: C# yenilikleri
   items:
-    - name: C# 8.0
+    - name: C# 9.0
       displayName: what's new
+      href: whats-new/csharp-9.md
+    - name: C# 8.0
       href: whats-new/csharp-8.md
     - name: C# 7.3
       href: whats-new/csharp-7-3.md
@@ -1066,7 +1068,7 @@
           href: programming-guide/events/index.md
         - name: Olaylara abone olma ve aboneliği kaldırma
           href: programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md
-        - name: .NET Framework Yönergeleriyle uyumlu olayları yayımlama
+        - name: .NET Kılavuzlarına uygun olaylar yayımlama
           href: programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md
         - name: Türetilmiş sınıflarda temel sınıf olayları oluşturma
           href: programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md

@@ -314,28 +314,6 @@ items:
                   - name: Windows Forms denetimleri
                     tocHref: /dotnet/framework/winforms/controls/
                     topicHref: /dotnet/framework/winforms/controls/index
-              - name: Windows Presentation Foundation
-                tocHref: /dotnet/framework/wpf/
-                topicHref: /dotnet/framework/wpf/index
-                items:
-                  - name: Gelişmiş
-                    tocHref: /dotnet/framework/wpf/advanced/
-                    topicHref: /dotnet/framework/wpf/advanced/index
-                  - name: Uygulama geliştirme
-                    tocHref: /dotnet/framework/wpf/app-development/
-                    topicHref: /dotnet/framework/wpf/app-development/index
-                  - name: Denetimler
-                    tocHref: /dotnet/framework/wpf/controls/
-                    topicHref: /dotnet/framework/wpf/controls/index
-                  - name: Veri
-                    tocHref: /dotnet/framework/wpf/data/
-                    topicHref: /dotnet/framework/wpf/data/index
-                  - name: Kullanmaya başlama (WPF)
-                    tocHref: /dotnet/framework/wpf/getting-started/
-                    topicHref: /dotnet/framework/wpf/getting-started/index
-                  - name: Grafikler ve multimedya
-                    tocHref: /dotnet/framework/wpf/graphics-multimedia/
-                    topicHref: /dotnet/framework/wpf/graphics-multimedia/index
               - name: XAML hizmetleri
                 tocHref: /dotnet/framework/xaml-services/
                 topicHref: /dotnet/framework/xaml-services/index
