@@ -1,0 +1,1323 @@
+items:
+  - name: .NET belgeleri
+    href: index.yml
+  - name: Kullanmaya başlama (1. gün)
+    items:
+      - name: Hello World
+        href: ../core/get-started.md
+      - name: Başlangıç öğreticileri
+        href: ../standard/get-started.md
+      - name: .NET 101 videoları
+        href: 'https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80'
+      - name: Yükleme
+        items:
+          - name: Genel Bakış
+            href: ../core/install/index.yml
+          - name: Windows’ta yükleme
+            href: ../core/install/windows.md
+          - name: macOS’ta yükleme
+            href: ../core/install/macos.md
+          - name: Linux'ta yükleme
+            items:
+              - name: Genel Bakış
+                href: ../core/install/linux.md
+              - name: Ubuntu
+                href: ../core/install/linux-ubuntu.md
+              - name: Alpine
+                href: ../core/install/linux-alpine.md
+              - name: CentOS
+                href: ../core/install/linux-centos.md
+              - name: Debian
+                href: ../core/install/linux-debian.md
+              - name: Fedora
+                href: ../core/install/linux-fedora.md
+              - name: OpenSUSE
+                href: ../core/install/linux-opensuse.md
+              - name: Redhat Enterprise Linux
+                href: ../core/install/linux-rhel.md
+              - name: SLES
+                href: ../core/install/linux-sles.md
+          - name: Eski çalışma zamanlarını ve SDK’ları kaldırma
+            href: ../core/install/remove-runtime-sdk-versions.md
+          - name: .NET şablonlarını yönetme
+            href: ../core/install/templates.md
+          - name: macOS Noter Onayı sorunları
+            href: ../core/install/macos-notarization-issues.md
+          - name: .NET Core sürümlerini denetleme
+            href: ../core/install/how-to-detect-installed-versions.md
+          - name: Yerelleştirilmiş IntelliSense’i yükleme
+            href: ../core/install/localized-intellisense.md
+  - name: Genel bakış (1. hafta)
+    items:
+      - name: .NET Turu
+        href: ../standard/tour.md
+      - name: .NET mimari bileşenleri
+        href: ../standard/components.md
+      - name: .NET sınıf kitaplıkları
+        href: ../standard/class-libraries.md
+      - name: .NET Core’a genel bakış
+        href: ../core/introduction.md
+      - name: .NET Standard’a genel bakış
+        href: ../standard/net-standard.md
+      - name: .NET sözlüğü
+        href: ../standard/glossary.md
+      - name: Öğreticiler
+        items:
+          - name: Visual Studio kullanma
+            items:
+              - name: Konsol uygulaması oluşturma
+                href: ../core/tutorials/with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Uygulamada hata ayıklama
+                href: ../core/tutorials/debugging-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Uygulama yayımlama
+                href: ../core/tutorials/publishing-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Kitaplık oluşturma
+                href: ../core/tutorials/library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Kitaplığa birim testi yapma
+                href: ../core/tutorials/testing-library-with-visual-studio.md
+                displayName: 'tutorials, visual studio, vs'
+              - name: Paket yükleme ve kullanma
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+              - name: Paket oluşturma ve yayımlama
+                href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+                displayName: 'tutorials, visual studio, vs'
+          - name: Visual Studio Code kullanma
+            items:
+              - name: Konsol uygulaması oluşturma
+                href: ../core/tutorials/with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code, cli'
+              - name: Uygulamada hata ayıklama
+                href: ../core/tutorials/debugging-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Uygulama yayımlama
+                href: ../core/tutorials/publishing-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Kitaplık oluşturma
+                href: ../core/tutorials/library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Kitaplığa birim testi yapma
+                href: ../core/tutorials/testing-library-with-visual-studio-code.md
+                displayName: 'tutorials, visual studio code, vs code'
+              - name: Paket yükleme ve kullanma
+                href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+                displayName: 'tutorials, cli'
+              - name: Paket oluşturma ve yayımlama
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: Mac için Visual Studio’yu kullanma
+            items:
+              - name: Konsol uygulaması oluşturma
+                href: ../core/tutorials/with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+              - name: Uygulamada hata ayıklama
+                href: ../core/tutorials/debugging-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Uygulama yayımlama
+                href: ../core/tutorials/publishing-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Kitaplık oluşturma
+                href: ../core/tutorials/library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Kitaplığa birim testi yapma
+                href: ../core/tutorials/testing-library-with-visual-studio-mac.md
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Paket yükleme ve kullanma
+                href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+                displayName: 'tutorials, visual studio for mac, vs for mac'
+              - name: Paket oluşturma ve yayımlama
+                href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+                displayName: tutorials
+          - name: Diğer öğreticiler
+            href: ../core/tutorials/index.md
+  - name: Yenilikler
+    items:
+      - name: ​.NET Core 3.1’deki yenilikler
+        href: ../core/whats-new/dotnet-core-3-1.md
+      - name: ​.NET Core 3.0’daki yenilikler
+        href: ../core/whats-new/dotnet-core-3-0.md
+      - name: ​.NET Core 2.2’deki yenilikler
+        href: ../core/whats-new/dotnet-core-2-2.md
+      - name: ​.NET Core 2.1’deki yenilikler
+        href: ../core/whats-new/dotnet-core-2-1.md
+      - name: ​.NET Core 2.0’deki yenilikler
+        href: ../core/whats-new/dotnet-core-2-0.md
+      - name: .NET Standard’daki yenilikler
+        href: ../standard/whats-new/whats-new-in-dotnet-standard.md
+  - name: Ortam ve çalışma zamanı bileşenleri
+    items:
+      - name: Araçlar ve üretkenlik
+        items:
+          - name: .NET Core SDK’sına genel bakış
+            href: ../core/sdk.md
+          - name: .NET Core CLI
+            items:
+              - name: Genel Bakış
+                href: ../core/tools/index.md
+              - name: Başvuru
+                items:
+                  - name: dotnet
+                    href: ../core/tools/dotnet.md
+                  - name: dotnet build
+                    href: ../core/tools/dotnet-build.md
+                  - name: dotnet build-server
+                    href: ../core/tools/dotnet-build-server.md
+                  - name: dotnet clean
+                    href: ../core/tools/dotnet-clean.md
+                  - name: dotnet help
+                    href: ../core/tools/dotnet-help.md
+                  - name: dotnet migrate
+                    href: ../core/tools/dotnet-migrate.md
+                  - name: dotnet msbuild
+                    href: ../core/tools/dotnet-msbuild.md
+                  - name: dotnet new
+                    href: ../core/tools/dotnet-new.md
+                  - name: dotnet nuget
+                    items:
+                      - name: dotnet nuget delete
+                        href: ../core/tools/dotnet-nuget-delete.md
+                      - name: dotnet nuget locals
+                        href: ../core/tools/dotnet-nuget-locals.md
+                      - name: dotnet nuget push
+                        href: ../core/tools/dotnet-nuget-push.md
+                      - name: dotnet nuget add source
+                        href: ../core/tools/dotnet-nuget-add-source.md
+                      - name: dotnet nuget disable source
+                        href: ../core/tools/dotnet-nuget-disable-source.md
+                      - name: dotnet nuget enable source
+                        href: ../core/tools/dotnet-nuget-enable-source.md
+                      - name: dotnet nuget list source
+                        href: ../core/tools/dotnet-nuget-list-source.md
+                      - name: dotnet nuget remove source
+                        href: ../core/tools/dotnet-nuget-remove-source.md
+                      - name: dotnet nuget update source
+                        href: ../core/tools/dotnet-nuget-update-source.md
+                  - name: dotnet pack
+                    href: ../core/tools/dotnet-pack.md
+                  - name: dotnet publish
+                    href: ../core/tools/dotnet-publish.md
+                  - name: dotnet restore
+                    href: ../core/tools/dotnet-restore.md
+                  - name: dotnet run
+                    href: ../core/tools/dotnet-run.md
+                  - name: dotnet sln
+                    href: ../core/tools/dotnet-sln.md
+                  - name: dotnet store
+                    href: ../core/tools/dotnet-store.md
+                  - name: dotnet test
+                    href: ../core/tools/dotnet-test.md
+                  - name: dotnet tool
+                    items:
+                      - name: dotnet tool install
+                        href: ../core/tools/dotnet-tool-install.md
+                      - name: dotnet tool list
+                        href: ../core/tools/dotnet-tool-list.md
+                      - name: dotnet tool restore
+                        href: ../core/tools/dotnet-tool-restore.md
+                      - name: dotnet tool run
+                        href: ../core/tools/dotnet-tool-run.md
+                      - name: dotnet tool uninstall
+                        href: ../core/tools/dotnet-tool-uninstall.md
+                      - name: dotnet tool update
+                        href: ../core/tools/dotnet-tool-update.md
+                  - name: dotnet vstest
+                    href: ../core/tools/dotnet-vstest.md
+                  - name: dotnet-install scripts
+                    href: ../core/tools/dotnet-install-script.md
+                  - name: Proje başvurusu komutları
+                    items:
+                      - name: dotnet add reference
+                        href: ../core/tools/dotnet-add-reference.md
+                      - name: dotnet list reference
+                        href: ../core/tools/dotnet-list-reference.md
+                      - name: dotnet remove reference
+                        href: ../core/tools/dotnet-remove-reference.md
+                  - name: Proje paketi komutları
+                    items:
+                      - name: dotnet add package
+                        href: ../core/tools/dotnet-add-package.md
+                      - name: dotnet list package
+                        href: ../core/tools/dotnet-list-package.md
+                      - name: dotnet remove package
+                        href: ../core/tools/dotnet-remove-package.md
+              - name: Genel ve yerel araçlar
+                items:
+                  - name: Araçları yönetme
+                    href: ../core/tools/global-tools.md
+                  - name: Sorun giderme araçları
+                    href: ../core/tools/troubleshoot-usage-issues.md
+                  - name: CLI için araçlar oluşturma
+                    items:
+                      - name: 1 - Araç oluşturma
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-create.md
+                      - name: 2 - Genel araç kullanma
+                        displayName: 'tools, tutorials, cli'
+                        href: ../core/tools/global-tools-how-to-use.md
+                      - name: 3 - Yerel araç kullanma
+                        href: ../core/tools/local-tools-how-to-use.md
+                        displayName: 'tools, tutorials, cli'
+              - name: global.json’a genel bakış
+                href: ../core/tools/global-json.md
+              - name: Telemetri
+                href: ../core/tools/telemetry.md
+              - name: Yükseltilmiş erişim
+                href: ../core/tools/elevated-access.md
+              - name: Sekme tamamlamayı etkinleştirme
+                href: ../core/tools/enable-tab-autocomplete.md
+          - name: CLI ile sürekli tümleştirme
+            href: ../core/tools/using-ci-with-cli.md
+          - name: CLI ile kitaplıklar geliştirme
+            href: ../core/tutorials/libraries.md
+          - name: CLI için şablonlar oluşturma
+            items:
+              - name: Özel şablonlar
+                href: ../core/tools/custom-templates.md
+              - name: 1 - Öğe şablonu oluşturma
+                href: ../core/tutorials/cli-templates-create-item-template.md
+                displayName: 'tutorials, cli'
+              - name: 2 - Proje şablonu oluşturma
+                href: ../core/tutorials/cli-templates-create-project-template.md
+                displayName: 'tutorials, cli'
+              - name: 3 - Şablon paketi oluşturma
+                href: ../core/tutorials/cli-templates-create-template-pack.md
+                displayName: 'tutorials, cli'
+          - name: .NET Core ek araçlar
+            items:
+              - name: Genel Bakış
+                href: ../core/additional-tools/index.md
+              - name: .NET Core Kaldırma Aracı
+                href: ../core/additional-tools/uninstall-tool.md
+              - name: WCF Web Service Reference Provider
+                href: ../core/additional-tools/wcf-web-service-reference-guide.md
+              - name: dotnet-svcutil
+                href: ../core/additional-tools/dotnet-svcutil-guide.md
+              - name: dotnet-svcutil.xmlserializer
+                href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+              - name: XML Serileştirici Oluşturucusu
+                href: ../core/additional-tools/xml-serializer-generator.md
+          - name: Tanılama araçları
+            items:
+              - name: Genel Bakış
+                href: ../core/diagnostics/index.md
+              - name: Yönetilen hata ayıklayıcıları
+                href: ../core/diagnostics/managed-debuggers.md
+              - name: EventCounters
+                href: ../core/diagnostics/event-counters.md
+              - name: Günlüğe kaydetme ve izleme
+                href: ../core/diagnostics/logging-tracing.md
+              - name: .NET Core CLI genel araçları
+                items:
+                  - name: dotnet-counters
+                    href: ../core/diagnostics/dotnet-counters.md
+                  - name: dotnet-dump
+                    href: ../core/diagnostics/dotnet-dump.md
+                  - name: dotnet-gcdump
+                    href: ../core/diagnostics/dotnet-gcdump.md
+                  - name: dotnet-trace
+                    href: ../core/diagnostics/dotnet-trace.md
+              - name: .NET Core tanılama öğreticileri
+                items:
+                  - name: EventCounters ile performans ölçümlerini alma
+                    href: ../core/diagnostics/event-counter-perf.md
+                  - name: Bellek sızıntısında hata ayıklama
+                    href: ../core/diagnostics/debug-memory-leak.md
+                  - name: Yüksek CPU kullanımı hatasını ayıklama
+                    href: ../core/diagnostics/debug-highcpu.md
+                  - name: Çıkmaz hatasını ayıklama
+                    href: ../core/diagnostics/debug-deadlock.md
+          - name: Kod analizi
+            items:
+              - name: Genel Bakış
+                href: productivity/code-analysis.md
+                displayName: 'code analysis, analyzers'
+              - name: Kuralları yapılandırma
+                href: productivity/configure-code-analysis-rules.md
+              - name: API çözümleyicisi
+                href: ../standard/analyzers/api-analyzer.md
+              - name: Taşınabilirlik çözümleyicisi
+                href: ../standard/analyzers/portability-analyzer.md
+      - name: Yürütme modeli
+        items:
+          - name: Ortak Dil Çalışma Zamanı (CLR)
+            href: ../standard/clr.md
+          - name: Yönetilen yürütme işlemi
+            href: ../standard/managed-execution-process.md
+          - name: .NET’te bütünleştirilmiş kodlar
+            href: ../standard/assembly/
+          - name: Meta veriler ve kendiliğinden açıklayıcı bileşenler
+            href: ../standard/metadata-and-self-describing-components.md
+          - name: Bağımlılık yüklemesi
+            items:
+              - name: Bağımlılık yüklemesi
+                href: ../core/dependency-loading/overview.md
+              - name: AssemblyLoadContext’i anlama
+                href: ../core/dependency-loading/understanding-assemblyloadcontext.md
+              - name: Bağımlılık yüklemesi ayrıntıları
+                items:
+                  - name: Varsayılan bağımlılık araştırması
+                    href: ../core/dependency-loading/default-probing.md
+                  - name: Yönetilen derlemeleri yükleme
+                    href: ../core/dependency-loading/loading-managed.md
+                  - name: Uydu derlemeleri yükleme
+                    href: ../core/dependency-loading/loading-resources.md
+                  - name: Yönetilmeyen kitaplıkları yükleme
+                    href: ../core/dependency-loading/loading-unmanaged.md
+              - name: Öğreticiler
+                items:
+                  - name: Eklentilerle .NET Core uygulaması oluşturma
+                    href: ../core/tutorials/creating-app-with-plugin-support.md
+                  - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
+                    href: ../core/../standard/assembly/unloadability.md
+          - name: Sürüm Oluşturma
+            items:
+              - name: Genel Bakış
+                href: ../core/versions/index.md
+              - name: .NET Core sürüm seçimi
+                href: ../core/versions/selection.md
+          - name: Çalışma zamanı yapılandırması
+            items:
+              - name: Ayarlar
+                href: ../core/run-time-config/index.md
+              - name: Derleme ayarları
+                href: ../core/run-time-config/compilation.md
+              - name: Hata ayıklama ve profil oluşturma ayarları
+                href: ../core/run-time-config/debugging-profiling.md
+              - name: Atık toplayıcı ayarları
+                href: ../core/run-time-config/garbage-collector.md
+              - name: Genelleştirme ayarları
+                href: ../core/run-time-config/globalization.md
+              - name: Ağ ayarları
+                href: ../core/run-time-config/networking.md
+              - name: İş parçacığı oluşturma ayarları
+                href: ../core/run-time-config/threading.md
+      - name: Dağıtım modelleri
+        items:
+          - name: Genel Bakış
+            href: ../core/deploying/index.md
+          - name: Visual Studio ile uygulama dağıtma
+            href: ../core/deploying/deploy-with-vs.md
+          - name: CLI ile uygulama yayımlama
+            href: ../core/deploying/deploy-with-cli.md
+          - name: CLI ile NuGet paketi oluşturma
+            href: ../core/deploying/creating-nuget-packages.md
+          - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
+            href: ../core/deploying/runtime-patch-selection.md
+          - name: Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
+            href: ../core/deploying/trim-self-contained.md
+          - name: Çalışma zamanı paket deposu
+            href: ../core/deploying/runtime-store.md
+          - name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu
+            href: ../core/rid-catalog.md
+          - name: Kaynak bildirim adları
+            href: ../core/resources/manifest-file-names.md
+          - name: Docker
+            items:
+              - name: .NET ve Docker’a Giriş
+                href: ../core/docker/introduction.md
+              - name: .NET Core uygulamasını kapsayıcılı hale getirme
+                href: ../core/docker/build-container.md
+              - name: Visual Studio’da kapsayıcı araçları
+                href: /visualstudio/containers/overview
+      - name: MSBuild ve proje dosyaları
+        items:
+          - name: Proje SDK’leri
+            items:
+              - name: Genel Bakış
+                href: ../core/project-sdk/overview.md
+              - name: Başvuru
+                items:
+                  - name: Microsoft.NET.Sdk
+                    href: ../core/project-sdk/msbuild-props.md
+                  - name: Microsoft.NET.Sdk.Web
+                    href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+                  - name: Microsoft.NET.Sdk.Razor
+                    href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
+          - name: Hedef çerçeveler
+            href: ../standard/frameworks.md
+          - name: Csproj biçimine eklenenler
+            href: ../core/tools/csproj.md
+          - name: Bağımlılık yönetimi
+            href: ../core/tools/dependencies.md
+  - name: Temel kodlama bileşenleri
+    items:
+      - name: Temel türlere genel bakış
+        items:
+          - name: Ortak tür sistemi ve ortak dil belirtimi
+            href: ../standard/common-type-system.md
+          - name: Ortak tür sistemi
+            href: ../standard/base-types/common-type-system.md
+          - name: Dil bağımsızlığı
+            href: ../standard/language-independence.md
+          - name: Dilden bağımsız bileşenler
+            href: ../standard/language-independence-and-language-independent-components.md
+          - name: .NET içinde tür dönüştürme
+            href: ../standard/base-types/type-conversion.md
+          - name: Tür dönüştürme tabloları
+            href: ../standard/base-types/conversion-tables.md
+          - name: Framework kitaplıkları
+            href: ../standard/framework-libraries.md
+          - name: Sınıf kitaplığına genel bakış
+            href: ../standard/class-library-overview.md
+      - name: Genel türler
+        items:
+          - name: Genel Bakış
+            href: ../standard/generics/index.md
+          - name: Genel türlere giriş
+            href: ../standard/generics.md
+          - name: .NET’te genel koleksiyonlar
+            href: ../standard/generics/collections.md
+          - name: Dizi ve listeleri düzenlemek için genel temsilciler
+            href: ../standard/generics/delegates-for-manipulating-arrays-and-lists.md
+          - name: Genel arabirimler
+            href: ../standard/generics/interfaces.md
+          - name: Kovaryans ve kontravaryans
+            href: ../standard/generics/covariance-and-contravariance.md
+      - name: Koleksiyonlar ve veri yapıları
+        items:
+          - name: Genel Bakış
+            href: ../standard/collections/index.md
+            displayName: 'collections, data structures'
+          - name: Koleksiyon sınıfı seçme
+            href: ../standard/collections/selecting-a-collection-class.md
+          - name: Çok kullanılan koleksiyon türleri
+            href: ../standard/collections/commonly-used-collection-types.md
+          - name: Genel koleksiyonların kullanılma zamanı
+            href: ../standard/collections/when-to-use-generic-collections.md
+          - name: Koleksiyonlardaki karşılaştırma ve sıralamalar
+            href: ../standard/collections/comparisons-and-sorts-within-collections.md
+          - name: Sıralanmış koleksiyon türleri
+            href: ../standard/collections/sorted-collection-types.md
+          - name: Hashtable ve Sözlük türleri
+            href: ../standard/collections/hashtable-and-dictionary-collection-types.md
+          - name: İş parçacığı güvenli koleksiyonlar
+            href: ../standard/collections/thread-safe/
+      - name: Temsilciler ve lambda ifadeleri
+        href: ../standard/delegates-lambdas.md
+      - name: Olaylar
+        items:
+          - name: Genel Bakış
+            href: ../standard/events/index.md
+            displayName: events
+          - name: Olay oluşturma ve kullanma
+            href: ../standard/events/how-to-raise-and-consume-events.md
+          - name: Olay özelliklerini kullanarak birden çok olayı işleme
+            href: ../standard/events/how-to-handle-multiple-events-using-event-properties.md
+          - name: Gözlemci tasarım deseni
+            items:
+              - name: Genel Bakış
+                href: ../standard/events/observer-design-pattern.md
+                displayName: Observer design pattern
+              - name: Önerilen uygulamalar
+                href: ../standard/events/observer-design-pattern-best-practices.md
+              - name: 'Nasıl yapılır: Sağlayıcı uygulama'
+                href: ../standard/events/how-to-implement-a-provider.md
+              - name: 'Nasıl yapılır: Gözlemci uygulama'
+                href: ../standard/events/how-to-implement-an-observer.md
+      - name: Özel durumlar
+        items:
+          - name: Genel Bakış
+            href: ../standard/exceptions/index.md
+            displayName: exceptions
+          - name: Özel durum sınıfı ve özellikleri
+            href: ../standard/exceptions/exception-class-and-properties.md
+          - name: Nasıl yapılır belgeleri
+            items:
+              - name: Özel durumları yakalamak için try-catch bloğu kullanma
+                href: ../standard/exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
+              - name: Bir catch bloğunda belirli özel durumları kullanma
+                href: ../standard/exceptions/how-to-use-specific-exceptions-in-a-catch-block.md
+              - name: Açıkça özel durumlar oluşturma
+                href: ../standard/exceptions/how-to-explicitly-throw-exceptions.md
+              - name: Kullanıcı tanımlı özel durumlar oluşturma
+                href: ../standard/exceptions/how-to-create-user-defined-exceptions.md
+              - name: Yerelleştirilmiş özel durum iletileriyle kullanıcı tanımlı özel durumlar oluşturma
+                href: ../standard/exceptions/how-to-create-localized-exception-messages.md
+              - name: Finally blokları kullanma
+                href: ../standard/exceptions/how-to-use-finally-blocks.md
+          - name: Kullanıcı tarafından filtrelenmiş özel durum işleyicilerini kullanma
+            href: ../standard/exceptions/using-user-filtered-exception-handlers.md
+          - name: COM ile birlikte çalışma özel durumlarını işleme
+            href: ../standard/exceptions/handling-com-interop-exceptions.md
+          - name: Önerilen uygulamalar
+            href: ../standard/exceptions/best-practices-for-exceptions.md
+      - name: Sayısal türler
+        href: ../standard/numerics.md
+      - name: 'Tarihler, saatler ve saat dilimleri'
+        href: ../standard/datetime/
+      - name: 'Sayıları, tarihleri ve diğer türleri biçimlendirme'
+        items:
+          - name: Genel Bakış
+            href: ../standard/base-types/formatting-types.md
+          - name: Standart sayısal biçim dizeleri
+            href: ../standard/base-types/standard-numeric-format-strings.md
+          - name: Özel sayısal biçim dizeleri
+            href: ../standard/base-types/custom-numeric-format-strings.md
+          - name: Standart tarih ve saat biçim dizeleri
+            href: ../standard/base-types/standard-date-and-time-format-strings.md
+          - name: Özel tarih ve saat biçim dizeleri
+            href: ../standard/base-types/custom-date-and-time-format-strings.md
+          - name: Standart TimeSpan biçim dizeleri
+            href: ../standard/base-types/standard-timespan-format-strings.md
+          - name: Özel TimeSpan biçim dizeleri
+            href: ../standard/base-types/custom-timespan-format-strings.md
+          - name: Sabit listesi biçim dizeleri
+            href: ../standard/base-types/enumeration-format-strings.md
+          - name: Bileşik biçimlendirme
+            href: ../standard/base-types/composite-formatting.md
+          - name: Nasıl yapılır belgeleri
+            items:
+              - name: Bir sayıyı baştaki sıfırlarla doldurma
+                href: ../standard/base-types/how-to-pad-a-number-with-leading-zeros.md
+              - name: Belirli bir tarihten haftanın gününü ayıklama
+                href: ../standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md
+              - name: Özel sayısal biçim sağlayıcıları tanımlama ve kullanma
+                href: ../standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md
+              - name: Gidiş dönüş tarih ve saat değerleri
+                href: ../standard/base-types/how-to-round-trip-date-and-time-values.md
+              - name: Tarih ve saat değerlerinde milisaniyeleri görüntüleme
+                href: ../standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md
+              - name: Tarihleri Gregoryen olmayan takvimlerde görüntüleme
+                href: ../standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md
+      - name: Dizeleri işleme
+        items:
+          - name: .NET içinde karakter kodlaması
+            href: ../standard/base-types/character-encoding-introduction.md
+          - name: Karakter kodlaması sınıflarını kullanma
+            href: ../standard/base-types/character-encoding.md
+          - name: Dizeleri kullanmak için en iyi deneyimler
+            href: ../standard/base-types/best-practices-strings.md
+          - name: Temel dize işlemleri
+            items:
+              - name: Genel Bakış
+                href: ../standard/base-types/basic-string-operations.md
+                displayName: string operations
+              - name: Yeni dize oluşturma
+                href: ../standard/base-types/creating-new.md
+              - name: Karakterleri kırpma ve kaldırma
+                href: ../standard/base-types/trimming.md
+              - name: Dizeleri doldurma
+                href: ../standard/base-types/padding.md
+              - name: Dizeleri karşılaştırma
+                href: ../standard/base-types/comparing.md
+              - name: Büyük/küçük harf durumunu değiştirme
+                href: ../standard/base-types/changing-case.md
+              - name: StringBuilder sınıfını kullanma
+                href: ../standard/base-types/stringbuilder.md
+              - name: 'Nasıl yapılır: Temel dize işlemeleri gerçekleştirme'
+                href: ../standard/base-types/basic-manipulations.md
+          - name: .NET içinde normal ifadeler
+            items:
+              - name: Genel Bakış
+                href: ../standard/base-types/regular-expressions.md
+                displayName: regular expressions
+              - name: Dil başvurusu
+                items:
+                  - name: Genel Bakış
+                    href: ../standard/base-types/regular-expression-language-quick-reference.md
+                  - name: Karakter kaçışları
+                    href: ../standard/base-types/character-escapes-in-regular-expressions.md
+                  - name: Karakter sınıfları
+                    href: ../standard/base-types/character-classes-in-regular-expressions.md
+                  - name: Tutturucular
+                    href: ../standard/base-types/anchors-in-regular-expressions.md
+                  - name: Gruplandırma yapıları
+                    href: ../standard/base-types/grouping-constructs-in-regular-expressions.md
+                  - name: Miktar Niceleyiciler
+                    href: ../standard/base-types/quantifiers-in-regular-expressions.md
+                  - name: Geri başvuru yapıları
+                    href: ../standard/base-types/backreference-constructs-in-regular-expressions.md
+                  - name: Değişim yapıları
+                    href: ../standard/base-types/alternation-constructs-in-regular-expressions.md
+                  - name: Değişimler
+                    href: ../standard/base-types/substitutions-in-regular-expressions.md
+                  - name: Normal ifade seçenekleri
+                    href: ../standard/base-types/regular-expression-options.md
+                  - name: Çeşitli yapılar
+                    href: ../standard/base-types/miscellaneous-constructs-in-regular-expressions.md
+              - name: Normal ifadeler için en iyi deneyimler
+                href: ../standard/base-types/best-practices.md
+              - name: Normal ifade nesne modeli
+                href: ../standard/base-types/the-regular-expression-object-model.md
+              - name: Normal ifade davranışı
+                items:
+                  - name: Genel Bakış
+                    href: ../standard/base-types/details-of-regular-expression-behavior.md
+                  - name: Geri Dönüş
+                    href: ../standard/base-types/backtracking-in-regular-expressions.md
+                  - name: Derleme ve yeniden kullanma
+                    href: ../standard/base-types/compilation-and-reuse-in-regular-expressions.md
+                  - name: İş parçacığı güvenliği
+                    href: ../standard/base-types/thread-safety-in-regular-expressions.md
+              - name: Örnekler
+                items:
+                  - name: HREF’ler için tarama
+                    href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
+                  - name: Tarih biçimlerini değiştirme
+                    href: ../standard/base-types/regular-expression-example-changing-date-formats.md
+                  - name: URL'den protokol ve bağlantı noktası numarasını ayıklama
+                    href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+                  - name: Dizeden geçersiz karakterleri çıkartma
+                    href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
+                  - name: Dizelerin geçerli e-posta biçiminde olduğunu doğrulama
+                    href: ../standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md
+      - name: Dizeleri ayrıştırma
+        items:
+          - name: Genel Bakış
+            href: ../standard/base-types/parsing-strings.md
+          - name: Sayısal dizeleri ayrıştırma
+            href: ../standard/base-types/parsing-numeric.md
+          - name: Tarih ve saat dizelerini ayrıştırma
+            href: ../standard/base-types/parsing-datetime.md
+          - name: Diğer dizeleri ayrıştırma
+            href: ../standard/base-types/parsing-other.md
+      - name: Öznitelikler
+        items:
+          - name: Genel Bakış
+            href: ../standard/attributes/index.md
+            displayName: attributes
+          - name: Öznitelikleri uygulama
+            href: ../standard/attributes/applying-attributes.md
+          - name: Özel öznitelikleri yazma
+            href: ../standard/attributes/writing-custom-attributes.md
+          - name: Özniteliklerde depolanan bilgileri alma
+            href: ../standard/attributes/retrieving-information-stored-in-attributes.md
+      - name: Anonim ile demet türleri arasında seçim yapma
+        href: ../standard/base-types/choosing-between-anonymous-and-tuple.md
+  - name: Microsoft Uzantıları
+    items:
+      - name: Yapılandırma
+        href: /aspnet/core/fundamentals/configuration/
+      - name: Bağımlılık ekleme
+        href: /aspnet/core/fundamentals/dependency-injection/
+      - name: Günlüğe kaydetme
+        href: /aspnet/core/fundamentals/logging/
+  - name: Veri erişimi
+    items:
+      - name: LINQ
+        href: ../standard/using-linq.md
+      - name: XML belgeleri ve verileri
+        href: ../standard/data/xml/
+      - name: Microsoft.Data.Sqlite
+        href: ../standard/data/sqlite/
+  - name: 'Paralel işleme, eşzamanlılık ve zaman uyumsuzluk'
+    items:
+      - name: Genel Bakış
+        href: ../standard/parallel-processing-and-concurrency.md
+        displayName: 'Parallel processing, concurrency, async'
+      - name: Zaman uyumsuz programlama
+        items:
+          - name: Genel Bakış
+            href: ../standard/async.md
+          - name: Ayrıntılı zaman uyumsuz programlama
+            href: ../standard/async-in-depth.md
+          - name: Asenkron programlama desenleri
+            href: ../standard/asynchronous-programming-patterns/
+      - name: Paralel programlama
+        items:
+          - name: Genel Bakış
+            href: ../standard/parallel-programming/index.md
+          - name: Görev Paralel Kitaplığı (TPL)
+            href: ../standard/parallel-programming/task-parallel-library-tpl.md
+            items:
+              - name: Veri paralelliği
+                href: ../standard/parallel-programming/data-parallelism-task-parallel-library.md
+                items:
+                  - name: 'Nasıl yapılır: Basit bir Parallel.For Döngüsü Yazma'
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md
+                  - name: 'Nasıl yapılır: Basit bir Parallel.ForEach Döngüsü Yazma'
+                    href: ../standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
+                  - name: 'Nasıl yapılır: İş Parçacığı Yerel Değişkenleriyle bir Parallel.For Döngüsü Yazma'
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+                  - name: 'Nasıl yapılır: Bölüm Yerel Değişkenleriyle bir Parallel.ForEach Döngüsü Yazma'
+                    href: ../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+                  - name: 'Nasıl yapılır: Bir Parallel.For veya ForEach Döngüsünü İptal Etme'
+                    href: ../standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md
+                  - name: 'Nasıl yapılır: Paralel Döngülerde Özel Durumları İşleme'
+                    href: ../standard/parallel-programming/how-to-handle-exceptions-in-parallel-loops.md
+                  - name: 'Nasıl yapılır: Küçük Döngü Gövdelerini Hızlandırma'
+                    href: ../standard/parallel-programming/how-to-speed-up-small-loop-bodies.md
+                  - name: 'Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme'
+                    href: ../standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md
+              - name: Görev tabanlı zaman uyumsuz programlama
+                href: ../standard/parallel-programming/task-based-asynchronous-programming.md
+                items:
+                  - name: Devamlılık Görevlerini Kullanarak Görevleri Birbirine Bağlama
+                    href: ../standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md
+                  - name: Eklenen ve Ayrılan Alt Görevler
+                    href: ../standard/parallel-programming/attached-and-detached-child-tasks.md
+                  - name: Görev iptali
+                    href: ../standard/parallel-programming/task-cancellation.md
+                  - name: Özel Durum İşleme
+                    href: ../standard/parallel-programming/exception-handling-task-parallel-library.md
+                  - name: 'Nasıl yapılır: Paralel İşlemleri Yürütmek için parallel_invoke Kullanma'
+                    href: ../standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md
+                  - name: 'Nasıl yapılır: Bir Görevden Değer Döndürme'
+                    href: ../standard/parallel-programming/how-to-return-a-value-from-a-task.md
+                  - name: 'Nasıl yapılır: Bir Görevi ve Alt Öğelerini İptal Etme'
+                    href: ../standard/parallel-programming/how-to-cancel-a-task-and-its-children.md
+                  - name: 'Nasıl yapılır: Önceden Hesaplanan Görevler Oluşturma'
+                    href: ../standard/parallel-programming/how-to-create-pre-computed-tasks.md
+                  - name: 'Nasıl yapılır: Paralel Görevler İçeren Bir İkili Ağacı Gezme'
+                    href: ../standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md
+                  - name: 'Nasıl yapılır: İç İçe Geçmiş Bir Görevi Sarmalamadan Çıkarma'
+                    href: ../standard/parallel-programming/how-to-unwrap-a-nested-task.md
+                  - name: 'Nasıl yapılır: Alt Görevin Üst Göreve Eklenmesini Önleme'
+                    href: ../standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+              - name: Veri akışı
+                href: ../standard/parallel-programming/dataflow-task-parallel-library.md
+                items:
+                  - name: 'Nasıl yapılır: Veri Akışı Bloğuna İletiler Yazma ve Veri Akışı Bloğundan İletiler Okuma'
+                    href: ../standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+                  - name: 'Nasıl yapılır: Üretici-Tüketici Veri Akışı Düzeni Uygulama'
+                    href: ../standard/parallel-programming/how-to-implement-a-producer-consumer-dataflow-pattern.md
+                  - name: 'Nasıl yapılır: Veri Akışı Bloğu Veri Aldığında İşlem Gerçekleştirme'
+                    href: ../standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md
+                  - name: 'İzlenecek yol: Veri Akışı Ardışık Düzeni Oluşturma'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md
+                  - name: 'Nasıl yapılır: Veri Akışı Bloklarının Bağlantısını Kaldırma'
+                    href: ../standard/parallel-programming/how-to-unlink-dataflow-blocks.md
+                  - name: 'İzlenecek yol: Windows Forms Uygulaması''nda Veri Akışı Kullanma'
+                    href: ../standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md
+                  - name: 'Nasıl yapılır: Veri Akışı Bloğunu İptal Etme'
+                    href: ../standard/parallel-programming/how-to-cancel-a-dataflow-block.md
+                  - name: 'İzlenecek yol: Özel bir Veri Akışı Blok Türü Oluşturma'
+                    href: ../standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md
+                  - name: 'Nasıl yapılır: Birden Fazla Kaynaktan Okumak için JoinBlock''u Kullanma'
+                    href: ../standard/parallel-programming/how-to-use-joinblock-to-read-data-from-multiple-sources.md
+                  - name: 'Nasıl yapılır: Veri Akışı Bloğunda Paralellik Derecesini Belirtme'
+                    href: ../standard/parallel-programming/how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+                  - name: 'Nasıl yapılır: Veri Akışı Bloğunda Görev Zamanlayıcı Belirtme'
+                    href: ../standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+                  - name: 'İzlenecek yol: Verimliliği Artırmak için BatchBlock ve BatchedJoinBlock''u Kullanma'
+                    href: ../standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+              - name: Diğer Zaman Uyumsuz Desenlerle TPL Kullanma
+                href: ../standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md
+                items:
+                  - name: TPL ve Geleneksel .NET Framework Zaman Uyumsuz Programlama
+                    href: ../standard/parallel-programming/tpl-and-traditional-async-programming.md
+                  - name: 'Nasıl yapılır: Bir Görevde EAP Desenlerini Sarmalama'
+                    href: ../standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md
+              - name: Veri ve Görev Paralelliğinde Olası Tuzaklar
+                href: ../standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md
+          - name: Paralel LINQ (PLINQ)
+            items:
+              - name: PLINQ'e Giriş
+                href: ../standard/parallel-programming/introduction-to-plinq.md
+              - name: PLINQ'te Hızlandırmayı Anlama
+                href: ../standard/parallel-programming/understanding-speedup-in-plinq.md
+              - name: PLINQ'te Sıra Koruma
+                href: ../standard/parallel-programming/order-preservation-in-plinq.md
+              - name: PLINQ'te Birleştirme Seçenekleri
+                href: ../standard/parallel-programming/merge-options-in-plinq.md
+              - name: PLINQ'te Olası Tuzaklar
+                href: ../standard/parallel-programming/potential-pitfalls-with-plinq.md
+              - name: 'Nasıl yapılır: Basit bir PLINQ Sorgusu Oluşturma ve Yürütme'
+                href: ../standard/parallel-programming/how-to-create-and-execute-a-simple-plinq-query.md
+              - name: 'Nasıl yapılır: PLINQ Sorgusunda Sıralama Denetimi'
+                href: ../standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md
+              - name: 'Nasıl yapılır: Paralel ve Sıralı LINQ Sorgularını Birleştirme'
+                href: ../standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md
+              - name: 'Nasıl yapılır: PLINQ Sorgusunda Özel Durumları İşleme'
+                href: ../standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md
+              - name: 'Nasıl yapılır: PLINQ Sorgusunu İptal Etme'
+                href: ../standard/parallel-programming/how-to-cancel-a-plinq-query.md
+              - name: 'Nasıl yapılır: Özel Bir PLINQ Toplama İşlevi Yazma'
+                href: ../standard/parallel-programming/how-to-write-a-custom-plinq-aggregate-function.md
+              - name: 'Nasıl yapılır: PLINQ''te Yürütme Modunu Belirtme'
+                href: ../standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md
+              - name: 'Nasıl yapılır: PLINQ''te Birleştirme Seçeneklerini Belirtme'
+                href: ../standard/parallel-programming/how-to-specify-merge-options-in-plinq.md
+              - name: 'Nasıl yapılır: PLINQ ile Dosya Dizinlerini Yineleme'
+                href: ../standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md
+              - name: 'Nasıl yapılır: PLINQ Sorgu Performansını Ölçme'
+                href: ../standard/parallel-programming/how-to-measure-plinq-query-performance.md
+              - name: PLINQ Veri Örneği
+                href: ../standard/parallel-programming/plinq-data-sample.md
+          - name: Paralel programlama için veri yapıları
+            href: ../standard/parallel-programming/data-structures-for-parallel-programming.md
+          - name: Paralel tanılama araçları
+            href: ../standard/parallel-programming/parallel-diagnostic-tools.md
+          - name: PLINQ ve TPL için özel bölümleyiciler
+            items:
+              - name: Genel Bakış
+                href: ../standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md
+                displayName: custom partitioners
+              - name: 'Nasıl yapılır: Dinamik Bölümleri Uygulama'
+                href: ../standard/parallel-programming/how-to-implement-dynamic-partitions.md
+              - name: 'Nasıl yapılır: Statik Bölümleme için bir Bölümleyici Uygulama'
+                href: ../standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md
+          - name: PLINQ ve TPL’deki Lambda ifadeleri
+            href: ../standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md
+          - name: Daha fazla bilgi
+            href: ../standard/parallel-programming/for-further-reading-parallel-programming.md
+      - name: İş Parçacığı Oluşturma
+        href: ../standard/threading/
+  - name: Serileştirme
+    items:
+      - name: Genel Bakış
+        href: ../standard/serialization/index.md
+      - name: JSON seri hale getirme
+        items:
+          - name: Genel Bakış
+            href: ../standard/serialization/system-text-json-overview.md
+            displayName: json serialization
+          - name: JSON’u seri hale getirme ve seri halden çıkarma
+            href: ../standard/serialization/system-text-json-how-to.md
+          - name: Özel dönüştürücü yazma
+            href: ../standard/serialization/system-text-json-converters-how-to.md
+          - name: Newtonsoft.Json’dan geçiş yapma
+            href: ../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md
+      - name: İkili serileştirme
+        items:
+          - name: Genel Bakış
+            href: ../standard/serialization/binary-serialization.md
+            displayName: binary serialization
+          - name: BinaryFormatter güvenlik kılavuzu
+            href: ../standard/serialization/binaryformatter-security-guide.md
+          - name: Serileştirme kavramları
+            href: ../standard/serialization/serialization-concepts.md
+          - name: Temel serileştirme
+            href: ../standard/serialization/basic-serialization.md
+          - name: Seçmeli serileştirme
+            href: ../standard/serialization/selective-serialization.md
+          - name: Özel serileştirme
+            href: ../standard/serialization/custom-serialization.md
+          - name: Serileştirme işlemi adımları
+            href: ../standard/serialization/steps-in-the-serialization-process.md
+          - name: Sürüm toleranslı serileştirme
+            href: ../standard/serialization/version-tolerant-serialization.md
+          - name: Serileştirme yönergeleri
+            href: ../standard/serialization/serialization-guidelines.md
+          - name: 'Nasıl yapılır: Öbek halinde serileştirilmiş veriler'
+            href: ../standard/serialization/how-to-chunk-serialized-data.md
+          - name: 'Nasıl yapılır: .NET Standard nesnesinin serileştirilebilir olup olmadığını belirleme'
+            href: ../standard/serialization/how-to-determine-if-netstandard-object-is-serializable.md
+          - name: Örnek
+            href: ../standard/serialization/basic-serialization-technology-sample.md
+      - name: XML ve SOAP serileştirmesi
+        items:
+          - name: Genel Bakış
+            href: ../standard/serialization/xml-and-soap-serialization.md
+          - name: Ayrıntılı XML serileştirmesi
+            href: ../standard/serialization/introducing-xml-serialization.md
+          - name: Örnekler
+            href: ../standard/serialization/examples-of-xml-serialization.md
+          - name: XML Şema Tanımlama aracı
+            href: ../standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md
+          - name: Öznitelikleri kullanarak XML serileştirmesini denetleme
+            href: ../standard/serialization/controlling-xml-serialization-using-attributes.md
+          - name: XML serileştirmesini denetleyen öznitelikler
+            href: ../standard/serialization/attributes-that-control-xml-serialization.md
+          - name: XML Web Hizmetleri ile XML serileştirmesi
+            href: ../standard/serialization/xml-serialization-with-xml-web-services.md
+          - name: Kodlanmış SOAP serileştirmesini denetleyen öznitelikler
+            href: ../standard/serialization/attributes-that-control-encoded-soap-serialization.md
+          - name: Nasıl yapılır belgeleri
+            items:
+              - name: Nesne serileştirme
+                href: ../standard/serialization/how-to-serialize-an-object.md
+              - name: Nesneyi seri durumdan çıkarma
+                href: ../standard/serialization/how-to-deserialize-an-object.md
+              - name: Sınıflar ve XML şeması belgeleri oluşturmak için XML Şema Tanımlama aracını kullanma
+                href: ../standard/serialization/xml-schema-def-tool-gen.md
+              - name: Türetilen sınıfların serileştirmesini denetleme
+                href: ../standard/serialization/how-to-control-serialization-of-derived-classes.md
+              - name: XML akışı için alternatif öğe adı belirtme
+                href: ../standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+              - name: XML öğesini ve XML öznitelik adlarını niteleme
+                href: ../standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md
+              - name: SOAP kodlu XML akışı olarak nesneyi serileştirme
+                href: ../standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+              - name: Kodlanmış SOAP XML serileştirmesini geçersiz kılma
+                href: ../standard/serialization/how-to-override-encoded-soap-xml-serialization.md
+          - name: XML serileştirme öğeleri
+            items:
+              - name: dizileştirme mekanizmasını System.xml.Serialization
+                href: ../standard/serialization/system-xml-serialization-element.md
+              - name: dateTimeSerialization
+                href: ../standard/serialization/datetimeserialization-element.md
+              - name: schemaImporterExtensions
+                href: ../standard/serialization/schemaimporterextensions-element.md
+              - name: schemaImporterExtensions için add öğesi
+                href: ../standard/serialization/add-element-for-schemaimporterextensions.md
+              - name: xmlSerializer
+                href: ../standard/serialization/xmlserializer-element.md
+          - name: Araçlar
+            items:
+              - name: XML Serileştiricisi Oluşturma Aracı (Sgen.exe)
+                href: ../standard/serialization/xml-serializer-generator-tool-sgen-exe.md
+              - name: XML Şema Tanımlama aracı (Xsd.exe)
+                href: ../standard/serialization/xml-schema-definition-tool-xsd-exe.md
+  - name: Dosya ve akış G/Ç
+    items:
+      - name: Genel Bakış
+        href: ../standard/io/index.md
+      - name: Windows sistemlerinde dosya yolu biçimleri
+        href: ../standard/io/file-path-formats.md
+      - name: Ortak G/Ç görevleri
+        href: ../standard/io/common-i-o-tasks.md
+        items:
+          - name: 'Nasıl yapılır: Dizinleri Kopyalama'
+            href: ../standard/io/how-to-copy-directories.md
+          - name: 'Nasıl yapılır: Dizinleri ve Dosyaları Numaralandırma'
+            href: ../standard/io/how-to-enumerate-directories-and-files.md
+          - name: 'Nasıl yapılır: Yeni Oluşturulan bir Veri Dosyasını Okuma ve Dosyaya Yazma'
+            href: ../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md
+          - name: 'Nasıl yapılır: Günlük Dosyasını Açma ve Sonuna Ekleme'
+            href: ../standard/io/how-to-open-and-append-to-a-log-file.md
+          - name: 'Nasıl yapılır: Bir Dosyaya Metin Yazma'
+            href: ../standard/io/how-to-write-text-to-a-file.md
+          - name: 'Nasıl yapılır: Dosyadan Metin Okuma'
+            href: ../standard/io/how-to-read-text-from-a-file.md
+          - name: 'Nasıl yapılır: Dizeden Karakterleri Okuma'
+            href: ../standard/io/how-to-read-characters-from-a-string.md
+          - name: 'Nasıl yapılır: Bir Dizeye Karakter Yazma'
+            href: ../standard/io/how-to-write-characters-to-a-string.md
+          - name: 'Nasıl yapılır: Erişim Denetimi Listesi Girdileri Ekleme veya Kaldırma'
+            href: ../standard/io/how-to-add-or-remove-access-control-list-entries.md
+          - name: 'Nasıl yapılır: Dosya Sıkıştırma ve Çıkarma'
+            href: ../standard/io/how-to-compress-and-extract-files.md
+          - name: Akışlar Oluşturma
+            href: ../standard/io/composing-streams.md
+          - name: 'Nasıl yapılır: .NET Framework Akışları ile Windows Çalışma Zamanı Akışları Arasında Dönüştürme'
+            href: ../standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md
+      - name: Zaman uyumsuz dosya G/Ç
+        href: ../standard/io/asynchronous-file-i-o.md
+      - name: G/Ç hatalarını işleme
+        href: ../standard/io/handling-io-errors.md
+      - name: Yalıtılmış depolama
+        href: ../standard/io/isolated-storage.md
+        items:
+          - name: Yalıtım Türleri
+            href: ../standard/io/types-of-isolation.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Alma'
+            href: ../standard/io/how-to-obtain-stores-for-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolama için Depoları Numaralandırma'
+            href: ../standard/io/how-to-enumerate-stores-for-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Depoları Silme'
+            href: ../standard/io/how-to-delete-stores-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolama ile Alan Dolu Koşullarını Öngörme'
+            href: ../standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Dosya ve Dizinler Oluşturma'
+            href: ../standard/io/how-to-create-files-and-directories-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamada Mevcut Dosya ve Dizinleri Bulma'
+            href: ../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosyaları Okuma ve Yazma'
+            href: ../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md
+          - name: 'Nasıl yapılır: Yalıtılmış Depolamadaki Dosya ve Dizinleri Silme'
+            href: ../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md
+      - name: Kanallar
+        href: ../standard/io/pipe-operations.md
+        items:
+          - name: 'Nasıl yapılır: Yerel İşlemler Arası İletişim için Anonim Kanallar Kullanma'
+            href: ../standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+          - name: 'Nasıl yapılır: Ağ İşlemler Arası İletişimi için Adlandırılmış Kanallar Kullanma'
+            href: ../standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md
+      - name: İşlem hatları
+        href: ../standard/io/pipelines.md
+      - name: Arabellekler ile çalışma
+        href: ../standard/io/buffers.md
+      - name: Bellek eşlemeli dosyalar
+        href: ../standard/io/memory-mapped-files.md
+  - name: Birim testi
+    displayName: 'xUnit,NUnit,MSTest,unit testing,testing'
+    items:
+      - name: Genel Bakış
+        href: ../core/testing/index.md
+      - name: Birim testi en iyi deneyimler
+        href: ../core/testing/unit-testing-best-practices.md
+      - name: xUnit
+        items:
+          - name: C# birim testi
+            href: ../core/testing/unit-testing-with-dotnet-test.md
+          - name: F# birim testi
+            href: ../core/testing/unit-testing-fsharp-with-dotnet-test.md
+          - name: Visual Basic birim testi
+            href: ../core/testing/unit-testing-visual-basic-with-dotnet-test.md
+          - name: xUnit ile proje düzenleme ve test etme
+            href: ../core/tutorials/testing-with-cli.md
+            displayName: 'tutorials, cli'
+      - name: NUnit
+        items:
+          - name: C# birim testi
+            href: ../core/testing/unit-testing-with-nunit.md
+          - name: F# birim testi
+            href: ../core/testing/unit-testing-fsharp-with-nunit.md
+          - name: Visual Basic birim testi
+            href: ../core/testing/unit-testing-visual-basic-with-nunit.md
+      - name: MSTest
+        items:
+          - name: C# birim testi
+            href: ../core/testing/unit-testing-with-mstest.md
+          - name: F# birim testi
+            href: ../core/testing/unit-testing-fsharp-with-mstest.md
+          - name: Visual Basic birim testi
+            href: ../core/testing/unit-testing-visual-basic-with-mstest.md
+      - name: Seçmeli birim testleri çalıştırma
+        href: ../core/testing/selective-unit-tests.md
+      - name: Birim testlerini düzenleme
+        href: ../core/testing/order-unit-tests.md
+      - name: Birim testi kod kapsamı
+        href: ../core/testing/unit-testing-code-coverage.md
+      - name: Birim testi yayımlanmış çıktısı
+        href: ../core/testing/unit-testing-published-output.md
+      - name: Visual Studio ile .NET Core projelerinde canlı birim testi
+        href: /visualstudio/test/live-unit-testing-start
+  - name: Güvenlik
+    href: ../standard/security/
+  - name: Gelişmiş konular
+    items:
+      - name: Performans
+        items:
+          - name: Bellek yönetimi
+            items:
+              - name: “Yönetilen kod” nedir?
+                href: ../standard/managed-code.md
+              - name: Otomatik bellek yönetimi
+                href: ../standard/automatic-memory-management.md
+              - name: Yönetilmeyen kaynakları temizleme
+                items:
+                  - name: Genel Bakış
+                    href: ../standard/garbage-collection/unmanaged.md
+                    displayName: 'unmanaged resources, memory management'
+                  - name: Dispose metodu uygulama
+                    href: ../standard/garbage-collection/implementing-dispose.md
+                    displayName: 'using, Dispose, dispose pattern, IDisposable'
+                  - name: DisposeAsync metodu uygulama
+                    href: ../standard/garbage-collection/implementing-disposeasync.md
+                    displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
+                  - name: IDisposable uygulayan nesneler kullanma
+                    href: ../standard/garbage-collection/using-objects.md
+              - name: Atık toplama
+                items:
+                  - name: Genel Bakış
+                    href: ../standard/garbage-collection/index.md
+                    displayName: garbage collection
+                  - name: Temeller
+                    href: ../standard/garbage-collection/fundamentals.md
+                  - name: İş istasyonu ve sunucu GC
+                    href: ../standard/garbage-collection/workstation-server-gc.md
+                  - name: Arka Plan GC
+                    href: ../standard/garbage-collection/background-gc.md
+                  - name: Büyük nesne yığını
+                    href: ../standard/garbage-collection/large-object-heap.md
+                  - name: Çöp toplama ve performans
+                    href: ../standard/garbage-collection/performance.md
+                  - name: Uyarılmış koleksiyonlar
+                    href: ../standard/garbage-collection/induced.md
+                  - name: Gecikme modları
+                    href: ../standard/garbage-collection/latency.md
+                  - name: Paylaşılan web barındırma için iyileştirme
+                    href: ../standard/garbage-collection/optimization-for-shared-web-hosting.md
+                  - name: Çöp toplama bildirimleri
+                    href: ../standard/garbage-collection/notifications.md
+                  - name: Uygulama etki alanı kaynak izleme
+                    href: ../standard/garbage-collection/app-domain-resource-monitoring.md
+                  - name: Zayıf başvurular
+                    href: ../standard/garbage-collection/weak-references.md
+          - name: Bellek ve aralıkla ilgili türler
+            items:
+              - name: Genel Bakış
+                href: ../standard/memory-and-spans/index.md
+              - name: Memory<T> ve Span<T> kullanım yönergeleri
+                href: ../standard/memory-and-spans/memory-t-usage-guidelines.md
+          - name: SIMD özellikli türler
+            href: ../standard/simd.md
+      - name: Native ile birlikte çalışma
+        items:
+          - name: Genel Bakış
+            href: ../standard/native-interop/index.md
+            displayName: Native interop
+          - name: P/Invoke
+            href: ../standard/native-interop/pinvoke.md
+          - name: Tür hazırlama
+            href: ../standard/native-interop/type-marshaling.md
+          - name: Yapı hazırlamayı özelleştirme
+            href: ../standard/native-interop/customize-struct-marshaling.md
+          - name: Parametre hazırlamayı özelleştirme
+            href: ../standard/native-interop/customize-parameter-marshaling.md
+          - name: Birlikte çalışma kılavuzu
+            href: ../standard/native-interop/best-practices.md
+          - name: Karakter kümesi ve hazırlama
+            href: ../standard/native-interop/charset.md
+          - name: .NET Core bileşenlerini COM’da kullanıma sunma
+            href: ../core/native-interop/expose-components-to-com.md
+          - name: Yerel koddan .NET Core barındırma
+            href: ../core/tutorials/netcore-hosting.md
+          - name: COM birlikte çalışma
+            items:
+              - name: Genel Bakış
+                href: ../standard/native-interop/cominterop.md
+                displayName: COM interop
+              - name: COM sarmalayıcıları
+                items:
+                  - name: Genel Bakış
+                    href: ../standard/native-interop/com-wrappers.md
+                    displayName: COM wrappers
+                  - name: Çalışma zamanında çağrılabilir sarmalayıcı
+                    href: ../standard/native-interop/runtime-callable-wrapper.md
+                  - name: COM çağrılabilir sarmalayıcı
+                    href: ../standard/native-interop/com-callable-wrapper.md
+              - name: COM ile birlikte çalışma için .NET türlerini niteleme
+                href: ../standard/native-interop/qualify-net-types-for-interoperation.md
+          - name: Birlikte çalışma özniteliklerini uygulama
+            href: ../standard/native-interop/apply-interop-attributes.md
+          - name: Özel Durumlar
+            href: ../standard/native-interop/exceptions-interoperability.md
+      - name: .NET Core dağıtımı paketleme
+        href: ../core/distribution-packaging.md
+      - name: Genelleştirme ve yerelleştirme
+        href: ../standard/globalization-localization/
+      - name: Açık kaynak kitaplık kılavuzu
+        href: ../standard/library-guidance/
+      - name: Çerçeve tasarım yönergeleri
+        items:
+          - name: Genel Bakış
+            href: ../standard/design-guidelines/index.md
+          - name: Adlandırma yönergeleri
+            href: ../standard/design-guidelines/naming-guidelines.md
+            items:
+              - name: Büyük/Küçük Harf kuralları
+                href: ../standard/design-guidelines/capitalization-conventions.md
+              - name: Genel adlandırma kuralları
+                href: ../standard/design-guidelines/general-naming-conventions.md
+              - name: Bütünleştirilmiş Kod ve DLL adları
+                href: ../standard/design-guidelines/names-of-assemblies-and-dlls.md
+              - name: Ad alanlarının adları
+                href: ../standard/design-guidelines/names-of-namespaces.md
+              - name: 'Sınıf, yapı ve arabirimlerin adları'
+                href: ../standard/design-guidelines/names-of-classes-structs-and-interfaces.md
+              - name: Tür üyelerinin adları
+                href: ../standard/design-guidelines/names-of-type-members.md
+              - name: Adlandırma parametreleri
+                href: ../standard/design-guidelines/naming-parameters.md
+              - name: Adlandırma kaynakları
+                href: ../standard/design-guidelines/naming-resources.md
+          - name: Tür tasarımı yönergeleri
+            href: ../standard/design-guidelines/type.md
+            items:
+              - name: Sınıf ile yapı arasında seçim yapma
+                href: ../standard/design-guidelines/choosing-between-class-and-struct.md
+              - name: Soyut sınıf tasarımı
+                href: ../standard/design-guidelines/abstract-class.md
+              - name: Statik sınıf tasarımı
+                href: ../standard/design-guidelines/static-class.md
+              - name: Arabirim tasarımı
+                href: ../standard/design-guidelines/interface.md
+              - name: Yapı tasarımı
+                href: ../standard/design-guidelines/struct.md
+              - name: Sabit listesi tasarımı
+                href: ../standard/design-guidelines/enum.md
+              - name: İç içe geçmiş türler
+                href: ../standard/design-guidelines/nested-types.md
+          - name: Üye tasarımı yönergeleri
+            href: ../standard/design-guidelines/member.md
+            items:
+              - name: Üye aşırı yüklemesi
+                href: ../standard/design-guidelines/member-overloading.md
+              - name: Özellik tasarımı
+                href: ../standard/design-guidelines/property.md
+              - name: Oluşturucu tasarımı
+                href: ../standard/design-guidelines/constructor.md
+              - name: Olay tasarımı
+                href: ../standard/design-guidelines/event.md
+              - name: Alan tasarımı
+                href: ../standard/design-guidelines/field.md
+              - name: Genişletme yöntemleri
+                href: ../standard/design-guidelines/extension-methods.md
+              - name: İşleç aşırı yüklemeleri
+                href: ../standard/design-guidelines/operator-overloads.md
+              - name: Parametre tasarımı
+                href: ../standard/design-guidelines/parameter-design.md
+          - name: Genişletilebilirlik için tasarlama
+            href: ../standard/design-guidelines/designing-for-extensibility.md
+            items:
+              - name: Mühürsüz sınıflar
+                href: ../standard/design-guidelines/unsealed-classes.md
+              - name: Korumalı üyeler
+                href: ../standard/design-guidelines/protected-members.md
+              - name: Etkinlikler ve geri aramalar
+                href: ../standard/design-guidelines/events-and-callbacks.md
+              - name: Sanal üyeler
+                href: ../standard/design-guidelines/virtual-members.md
+              - name: Soyutlamalar (soyut türler ve arabirimler)
+                href: ../standard/design-guidelines/abstractions-abstract-types-and-interfaces.md
+              - name: Soyutlama uygulamak için temel sınıflar
+                href: ../standard/design-guidelines/base-classes-for-implementing-abstractions.md
+              - name: Mühürleme
+                href: ../standard/design-guidelines/sealing.md
+          - name: Özel durum tasarım yönergeleri
+            href: ../standard/design-guidelines/exceptions.md
+            items:
+              - name: Özel durum oluşturma
+                href: ../standard/design-guidelines/exception-throwing.md
+              - name: Standart özel durum türlerini kullanma
+                href: ../standard/design-guidelines/using-standard-exception-types.md
+              - name: Özel durumlar ve performans
+                href: ../standard/design-guidelines/exceptions-and-performance.md
+          - name: Kullanım yönergeleri
+            href: ../standard/design-guidelines/usage-guidelines.md
+            items:
+              - name: Diziler
+                href: ../standard/design-guidelines/arrays.md
+              - name: Öznitelikler
+                href: ../standard/design-guidelines/attributes.md
+              - name: Koleksiyonlar
+                href: ../standard/design-guidelines/guidelines-for-collections.md
+              - name: Serileştirme
+                href: ../standard/design-guidelines/serialization.md
+              - name: System.Xml kullanımı
+                href: ../standard/design-guidelines/system-xml-usage.md
+              - name: Eşitlik İşleçleri
+                href: ../standard/design-guidelines/equality-operators.md
+          - name: Yaygın tasarım desenleri
+            href: ../standard/design-guidelines/common-design-patterns.md
+            items:
+              - name: Bağımlılık özellikleri
+                href: ../standard/design-guidelines/dependency-properties.md
+  - name: Geçiş kılavuzu
+    items:
+      - name: Yeni değişiklikler
+        displayName: app compatibility
+        href: ../core/compatibility/
+      - name: Geçiş
+        items:
+          - name: .NET Core 2.0’dan 2.1’e geçiş
+            href: ../core/migration/20-21.md
+          - name: Project.json’dan geçiş
+            href: ../core/migration/index.md
+          - name: Project.json ile csproj arasında eşleme
+            href: ../core/tools/project-json-to-csproj.md
+          - name: CLI’daki değişikliklere genel bakış
+            href: ../core/tools/cli-msbuild-architecture.md
+          - name: DNX’ten geçiş
+            href: ../core/migration/from-dnx.md
+      - name: .NET Framework’ten taşıma
+        items:
+          - name: Genel Bakış
+            href: ../core/porting/index.md
+          - name: Üçüncü taraf bağımlılıklarını çözümleme
+            href: ../core/porting/third-party-deps.md
+          - name: Taşıma kitaplıkları
+            href: ../core/porting/libraries.md
+          - name: .NET Core için projeleri düzenleme
+            href: ../core/porting/project-structure.md
+          - name: Kullanılamayan teknolojiler
+            href: ../core/porting/net-framework-tech-unavailable.md
+          - name: Araçlar
+            href: ../core/porting/tools.md
+          - name: Windows Uyumluluk Paketi’ni kullanma
+            href: ../core/porting/windows-compat-pack.md
+          - name: Windows Forms projelerini bağlama
+            href: ../core/porting/winforms.md
+          - name: WPF projelerini bağlama
+            href: ../core/../desktop-wpf/migration/convert-project-from-net-framework.md
+          - name: C++/CLI projelerini taşıma
+            href: ../core/porting/cpp-cli.md
+      - name: Sunucu uygulamaları için .NET Core ile .NET Framework arasında seçim yapma
+        href: ../standard/choosing-core-framework-server.md
