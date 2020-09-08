@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 99181855fdf8e937676e44e8b347510f9405aa3d
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 061abc8bc37d166a3683be1d2ad920a083a8ea3b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916906"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515949"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Bit düzeyinde and Shift işleçleri (C# Başvurusu)
 
@@ -60,7 +60,7 @@ Bit düzeyinde ve kaydırma işlemleri hiçbir şekilde taşmaya neden olmaz ve 
 
 `~`Sonlandırıcıları bildirmek için sembolünü de kullanabilirsiniz. Daha fazla bilgi için bkz. [sonlandırıcılar](../../programming-guide/classes-and-structs/destructors.md).
 
-## <a name="left-shift-operator-"></a>Sola kaydırma işleci\<\<
+## <a name="left-shift-operator-"></a>Sola kaydırma işleci \<\<
 
 `<<`İşleci sol taraftaki işlenenini [sağ işleneni tarafından tanımlanan bit sayısına](#shift-count-of-the-shift-operators)göre sola kaydırır.
 
@@ -94,9 +94,9 @@ Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre a�
 
 İşlecin sağ işleneninin kaydırma sayısını tanımladığı hakkında daha fazla bilgi için `>>` [SHIFT Operators bölümünün kaydırma](#shift-count-of-the-shift-operators) sayısını inceleyin.
 
-## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a>Mantıksal AND işleci&amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> Mantıksal AND işleci &amp;
 
-`&`İşleci, işlenenlerinin bit düzeyinde MANTıKSAL ve işlecini hesaplar:
+`&`İşleci, tam sayı işlenenlerinin bit düzeyinde MANTıKSAL ve işlecini hesaplar:
 
 [!code-csharp-interactive[bitwise AND](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
@@ -104,7 +104,7 @@ Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre a�
 
 ## <a name="logical-exclusive-or-operator-"></a>Mantıksal dışlamalı OR işleci ^
 
-`^`İşleci, işlenenlerinin bit düzeyinde MANTıKSAL XOR değeri olarak da bilinen bit düzeyinde mantıksal dışlamalı veya hesaplar:
+`^`İşleci, tam bit düzeyinde mantıksal dışlamalı veya tam sayı işlenenlerinin bit düzeyinde MANTıKSAL XOR olarak da bilinen değerini hesaplar:
 
 [!code-csharp-interactive[bitwise XOR](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
@@ -112,7 +112,7 @@ Yüksek sıralı boş bit konumları, sol taraftaki işlenenin türüne göre a�
 
 ## <a name="logical-or-operator-"></a>Mantıksal OR işleci |
 
-`|`İşleci, işlenenlerinin bit düzeyinde MANTıKSAL veya işlecini hesaplar:
+`|`İşleci, tamsayı işlenenlerinin bit düzeyinde MANTıKSAL veya bir değerini hesaplar:
 
 [!code-csharp-interactive[bitwise OR](snippets/shared/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
@@ -146,11 +146,11 @@ Aşağıdaki örnek, bileşik atamanın bit düzeyinde ve kaydırma işleçleriy
 
 Aşağıdaki liste, en yüksek öncelikten en düşüğe başlayarak bit düzeyinde ve kaydırma işleçlerini sıralar:
 
-- Bit düzeyinde tamamlama işleci`~`
-- SHIFT işleçleri `<<` ve`>>`
-- Mantıksal AND işleci`&`
-- Mantıksal dışlamalı OR işleci`^`
-- Mantıksal OR işleci`|`
+- Bit düzeyinde tamamlama işleci `~`
+- SHIFT işleçleri `<<` ve `>>`
+- Mantıksal AND işleci `&`
+- Mantıksal dışlamalı OR işleci `^`
+- Mantıksal OR işleci `|`
 
 `()`İşleç önceliğine göre uygulanan değerlendirmenin sırasını değiştirmek için parantezleri kullanın:
 

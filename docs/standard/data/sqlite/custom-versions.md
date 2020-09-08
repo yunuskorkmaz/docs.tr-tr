@@ -1,27 +1,28 @@
 ---
 title: Özel SQLite sürümleri
-ms.date: 05/14/2020
+ms.date: 09/04/2020
 description: Yerel SQLite kitaplığı 'nın özel bir sürümünü nasıl kullanacağınızı öğrenin.
-ms.openlocfilehash: 15db10db26bc7c5017313ca020a0e1e528ba207a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: fbf4b4cd33e6e890ce0c0cfe0b7688487b94b4a3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440843"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516144"
 ---
 # <a name="custom-sqlite-versions"></a>Özel SQLite sürümleri
 
-`Microsoft.Data.Sqlite`, üzerine kurulmuştur `SQLitePCLRaw` . Bir paket kullanarak veya bir sağlayıcıyı yapılandırarak yerel SQLite kitaplığının özel sürümlerini kullanabilirsiniz `SQLitePCLRaw` .
+`Microsoft.Data.Sqlite` , üzerine kurulmuştur `SQLitePCLRaw` . Bir paket kullanarak veya bir sağlayıcıyı yapılandırarak yerel SQLite kitaplığının özel sürümlerini kullanabilirsiniz `SQLitePCLRaw` .
 
 ## <a name="bundles"></a>Paketi
 
-`SQLitePCLRaw`, farklı platformlarda doğru bağımlılıklara kolayca gelmesini kolaylaştıran, kullanışlı tabanlı paket paketleri sağlar. Ana `Microsoft.Data.Sqlite` paket varsayılan olarak ' i sunar `SQLitePCLRaw.bundle_e_sqlite3` . Farklı bir paket kullanmak için, kullanmak istediğiniz paket `Microsoft.Data.Sqlite.Core` paketiyle birlikte bunun yerine paketini de yükleyebilirsiniz. Paketleri tarafından otomatik olarak başlatılır `Microsoft.Data.Sqlite` .
+`SQLitePCLRaw` , farklı platformlarda doğru bağımlılıklara kolayca gelmesini kolaylaştıran, kullanışlı tabanlı paket paketleri sağlar. Ana `Microsoft.Data.Sqlite` paket varsayılan olarak ' i sunar `SQLitePCLRaw.bundle_e_sqlite3` . Farklı bir paket kullanmak için, kullanmak istediğiniz paket `Microsoft.Data.Sqlite.Core` paketiyle birlikte bunun yerine paketini de yükleyebilirsiniz. Paketleri tarafından otomatik olarak başlatılır `Microsoft.Data.Sqlite` .
 
-| Paket | Açıklama |
+| Paket | Description |
 |--|--|
-| [SQLitePCLRaw. bundle_e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3) | Tüm platformlarda SQLite ' un tutarlı bir sürümünü sağlar. FTS4, FTS5, JSON1 ve R * ağaç uzantılarını içerir. Bu varsayılandır. |
+| [SQLitePCLRaw. bundle_e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3) | Tüm platformlarda SQLite ' un tutarlı bir sürümünü sağlar. FTS4, FTS5, JSON1 ve R * ağaç uzantılarını içerir. Bu varsayılan seçenektir. |
 | [SQLitePCLRaw. bundle_e_sqlcipher](https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlcipher) | Resmi olmayan, açık kaynaklı bir yapı sağlar `SQLCipher` . |
 | [SQLitePCLRaw. bundle_green](https://www.nuget.org/packages/SQLitePCLRaw.bundle_green) | `bundle_e_sqlite3`İOS dışında, sistem SQLite kitaplığını kullandığında, ile aynıdır. |
+| [SQLitePCLRaw. bundle_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_sqlite3) | , Sistem SQLite kitaplığını kullanır. |
 | [SQLitePCLRaw. bundle_winsqlite3](https://www.nuget.org/packages/SQLitePCLRaw.bundle_winsqlite3) | `winsqlite3.dll`, Windows 10 ' da sistem SQLite Kitaplığı ' nı kullanır. |
 | [SQLitePCLRaw. bundle_zetetic](https://www.nuget.org/packages/SQLitePCLRaw.bundle_zetetic) | `SQLCipher`Zetetik 'dan (dahil değil) resmi derlemeler kullanır. |
 
@@ -47,7 +48,7 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 Bir pakete bağlı olmadığında, çekirdek derleme ile kullanılabilir SQLite sağlayıcıları kullanabilirsiniz.
 
-| Sağlayıcı | Açıklama |
+| Sağlayıcı | Description |
 |--|--|
 | [SQLitePCLRaw. Provider. Dynamic](https://www.nuget.org/packages/SQLitePCLRaw.provider.dynamic) | `dynamic`Sağlayıcı, öznitelikleri kullanmak yerine yerel kitaplığı yükler <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType> . Bu sağlayıcıyı kullanma hakkında daha fazla bilgi için bkz. [dinamik sağlayıcıyı kullanma](#use-the-dynamic-provider). |
 | [SQLitePCLRaw. Provider. e_sqlite3](https://www.nuget.org/packages/SQLitePCLRaw.provider.e_sqlite3) | `e_sqlite3`Varsayılan sağlayıcıdır. |

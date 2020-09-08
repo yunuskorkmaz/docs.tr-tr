@@ -6,18 +6,18 @@ ms.author: wiwagn
 no-loc:
 - Blazor
 - WebAssembly
-ms.date: 12/04/2019
-ms.openlocfilehash: 4fe889fe86d96a5b2ffa5bd879d2ec1801a3cf20
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.date: 07/27/2020
+ms.openlocfilehash: f04de5c350dfead4dad8c37eece7f16c9a9e00bc
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174373"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515825"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Geleneksel Web Apps ve tek sayfalı uygulamalar (maça 'Lar) arasında seçim yapın
 
 > "Atwood 'ın yasaları: JavaScript 'te yazılabilen tüm uygulamalar, sonunda JavaScript 'e yazılır."  
-> _\-Jeff Atwood_
+> _\- Jeff Atwood_
 
 Günümüzde web uygulamaları oluşturmaya yönelik iki genel yaklaşım vardır: sunucuda uygulama mantığının çoğunu gerçekleştiren geleneksel web uygulamaları ve bir Web tarayıcısında Kullanıcı arabirimi mantığının çoğunu gerçekleştiren tek sayfalı uygulamalar (maça 'Lar), Web API 'Lerini kullanarak Web sunucusuyla iletişim kurmaya yöneliktir. Karma yaklaşım da mümkündür, en basit, daha büyük bir geleneksel Web uygulaması içinde bir veya daha fazla zengin SPA benzeri alt pplicAtions barındırmakta.
 
@@ -33,7 +33,7 @@ Günümüzde web uygulamaları oluşturmaya yönelik iki genel yaklaşım vardı
 
 - Uygulamanız çok sayıda özelliği olan zengin bir kullanıcı arabirimi kullanıma sunmalıdır.
 
-- Takımınız JavaScript ve/veya TypeScript geliştirmeyi biliyor.
+- Takımınız JavaScript, TypeScript veya geliştirme hakkında bilgi sahibi Blazor WebAssembly .
 
 - Uygulamanız zaten diğer (iç veya genel) istemciler için bir API 'YI kullanıma sunmalıdır.
 
@@ -43,17 +43,17 @@ SPA yaklaşımı tarafından mümkün kılınan Kullanıcı deneyimindeki iyile�
 
 ## Blazor
 
-ASP.NET Core 3,0, adlı zengin, etkileşimli ve birleştirilebilir Kullanıcı arabirimi oluşturmak için yeni bir model sunar Blazor . Blazorsunucu tarafı, geliştiricilerin sunucuda C# ve Razor ile Kullanıcı arabirimi oluşturmalarına ve Kullanıcı arabiriminin kalıcı bir SignalR bağlantısı kullanarak gerçek zamanlı olarak tarayıcıya bağlanmasını sağlar.
+ASP.NET Core, adında zengin, etkileşimli ve birleştirilebilir Kullanıcı arabirimleri oluşturmak için bir model içerir Blazor . Blazor sunucu tarafı, geliştiricilerin sunucuda C# ve Razor ile Kullanıcı arabirimi oluşturmalarına ve Kullanıcı arabiriminin kalıcı bir SignalR bağlantısı kullanarak gerçek zamanlı olarak tarayıcıya bağlanmasını sağlar. BlazorWebAssemblyuygulamalar için başka bir seçenek sunarak Blazor , kullanarak tarayıcıda çalışmasına izin verir WebAssembly . Üzerinde çalışan gerçek .NET olduğundan WebAssembly , uygulamanızın sunucu tarafı bölümlerinden kod ve kitaplıkları yeniden kullanabilirsiniz.
 
-BlazorWebAssemblyuygulamalar için başka bir seçenek sunarak Blazor , kullanarak tarayıcıda çalışmasına izin verir WebAssembly . Üzerinde çalışan gerçek .NET olduğundan WebAssembly , uygulamanızın sunucu tarafı bölümlerinden kod ve kitaplıkları yeniden kullanabilirsiniz.
-
-Blazoryalnızca sunucu tarafından işlenmiş bir Web uygulaması veya SPA 'nın oluşturulup oluşturulmayacağını değerlendirmek için göz önünde bulundurmanız gereken yeni, üçüncü bir seçenek sağlar. BlazorÖnemli bir JavaScript geliştirmeye gerek duymadan, kullanarak zengin ve Spa benzeri istemci tarafı davranışları oluşturabilirsiniz. Blazoruygulamalar, veri istemek veya sunucu tarafı işlemleri gerçekleştirmek için API 'Leri çağırabilir.
+Blazor yalnızca sunucu tarafından işlenmiş bir Web uygulaması veya SPA 'nın oluşturulup oluşturulmayacağını değerlendirmek için göz önünde bulundurmanız gereken yeni, üçüncü bir seçenek sağlar. Blazor' Yi kullanarak, önemli JavaScript geliştirmeye gerek duymadan zengin, Spa benzeri istemci tarafı davranışları oluşturabilirsiniz. Blazor uygulamalar, veri istemek veya sunucu tarafı işlemleri gerçekleştirmek için API 'Leri çağırabilir. JavaScript kitaplıkları ve çerçevelerinden yararlanmak için gerektiğinde JavaScript ile birlikte çalışabilir.
 
 Şu durumlarda Web uygulamanızı oluşturmayı düşünün Blazor :
 
 - Uygulamanız, zengin bir kullanıcı arabirimini kullanıma sunmalıdır
 
 - Takımınız JavaScript veya TypeScript geliştirmeden .NET geliştirme konusunda daha rahat
+
+.NET Core 'a geçiş yapmayı düşündüğünüz mevcut bir Web Forms uygulamanız varsa, [ Blazor Web Forms geliştiricilerin](../blazor-for-web-forms-developers/index.md) , ' a geçiş yapmayı düşünmenin mantıklı olup olmadığını görmek için ücretsiz e-kitabı gözden geçirmek isteyebilirsiniz Blazor .
 
 Hakkında daha fazla bilgi için Blazor bkz. [ Blazor ile çalışmaya başlama ](https://blazor.net/docs/get-started.html).
 
@@ -100,7 +100,7 @@ Maça yazmak için JavaScript ve/veya TypeScript ile istemci tarafı programlama
 
 Web API 'sini zaten başka istemciler tarafından kullanılmak üzere destekliyorsanız, sunucu tarafı formundaki mantığı yeniden oluşturmak yerine bu API 'lerden yararlanan bir SPA uygulamasının oluşturulması daha az çaba gerektirebilir. Maça, kullanıcılar uygulamayla etkileşime geçerek verileri sorgulamak ve güncelleştirmek için Web API 'lerinin kapsamlı bir şekilde kullanılmasını sağlar.
 
-## <a name="when-to-choose-blazor"></a>Ne zaman seçimBlazor
+## <a name="when-to-choose-no-locblazor"></a>Ne zaman seçim Blazor
 
 Aşağıda, Web uygulamanız için ne zaman seçeceğiniz hakkında daha ayrıntılı bir açıklama verilmiştir Blazor .
 
@@ -116,7 +116,7 @@ Birçok geliştirici, JavaScript veya TypeScript gibi istemci tarafı dillerle .
 
 Aşağıdaki karar tablosu, geleneksel bir Web uygulaması, SPA veya bir uygulama arasında seçim yaparken göz önünde bulundurmanız gereken bazı temel faktörleri özetler Blazor .
 
-| **Çarpan**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** | **BlazorUygulamanızda**  |
+| **Faktör**                                           | **Geleneksel Web uygulaması** | **Tek Sayfalı Uygulama** | **Blazor Uygulamanızda**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
 | JavaScript/TypeScript ile gerekli takım hakkında benzerlik | **En az**             | **Gerekli**                | **En az**     |
 | Betik olmadan destek tarayıcıları                   | **Desteklenir**           | **Desteklenmiyor**           | **Desteklenir**   |

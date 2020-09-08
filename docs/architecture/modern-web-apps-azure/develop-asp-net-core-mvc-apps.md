@@ -3,13 +3,16 @@ title: ASP.NET Core MVC uygulamaları geliştirme
 description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın ASP.NET Core MVC uygulamaları geliştirme
 author: ardalis
 ms.author: wiwagn
-ms.date: 12/04/2019
-ms.openlocfilehash: be674f3292238b1983064408184777d379cf52a7
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.date: 08/12/2020
+no-loc:
+- Blazor
+- WebAssembly
+ms.openlocfilehash: 255a7f9b34752b3480ba5a8ffc5d506e6d7b05d3
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84307013"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515988"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC uygulamaları geliştirin
 
@@ -20,7 +23,7 @@ ASP.NET Core, bulutta iyileştirilmiş Modern Web uygulamaları oluşturmak içi
 
 ## <a name="mvc-and-razor-pages"></a>MVC ve Razor Pages
 
-ASP.NET Core MVC, Web tabanlı API 'Ler ve uygulamalar oluşturmak için yararlı olan birçok özellik sunar. MVC terimi, Kullanıcı isteklerine birkaç parçaya yanıt verme sorumluluklarını kesen bir kullanıcı arabirimi modeli olan "model-görünüm-denetleyicisi" için temsil eder. Bu düzenin yanı sıra, Razor Pages olarak ASP.NET Core uygulamalarında özellikler de uygulayabilirsiniz. Razor Pages, MVC ASP.NET Core yerleşik olarak bulunur ve yönlendirme, model bağlama vb. için aynı özellikleri kullanır. Bununla birlikte, denetleyiciler, görünümler, vb. için ayrı klasörler ve dosyalar olması yerine, Razor Pages tek bir klasöre ("/Pages") konur, bu klasördeki göreli konumlarına göre rota ve istekleri denetleyici eylemleri yerine işleyicilerle işleyebilir.
+ASP.NET Core MVC, Web tabanlı API 'Ler ve uygulamalar oluşturmak için yararlı olan birçok özellik sunar. MVC terimi, Kullanıcı isteklerine birkaç parçaya yanıt verme sorumluluklarını kesen bir kullanıcı arabirimi modeli olan "model-görünüm-denetleyicisi" için temsil eder. Bu düzenin yanı sıra, Razor Pages olarak ASP.NET Core uygulamalarında özellikler de uygulayabilirsiniz. Razor Pages, MVC ASP.NET Core yerleşik olarak bulunur ve yönlendirme, model bağlama, filtreler, yetkilendirme vb. için aynı özellikleri kullanır. Bununla birlikte, denetleyiciler, modeller, görünümler, vb. için ayrı klasörler ve dosyalar olması yerine, Razor Pages tek bir klasöre ("/Pages") konur, bu klasördeki göreli konumlarına göre rota ve istekleri denetleyici eylemleri yerine işleyicilerle işleyebilir. Sonuç olarak, Razor Pages ile çalışırken, ihtiyacınız olan tüm dosya ve sınıflar genellikle Web projesi genelinde yayılmaz.
 
 Yeni bir ASP.NET Core uygulaması oluşturduğunuzda, derlemek istediğiniz uygulama türü için bir plana sahip olmanız gerekir. Visual Studio 'da çeşitli şablonlardan seçim yapmanız gerekir. En yaygın üç proje şablonu Web API 'SI, Web uygulaması ve Web uygulaması (Model-View-Controller). Bu kararı yalnızca bir proje oluştururken yapmanız mümkün olsa da, geri alınamaz bir karardır. Web API projesi standart model-görünüm-denetleyici denetleyicileri kullanır; varsayılan olarak yalnızca görünümler eksiktir. Benzer şekilde, varsayılan Web uygulaması şablonu Razor Pages kullanır ve aynı zamanda bir görünümler klasörü eksiktir. Görünüm tabanlı davranışı desteklemek için bu projelere daha sonra bir görünümler klasörü ekleyebilirsiniz. Web API ve model-görünüm-denetleyicisi projeleri varsayılan olarak bir Pages klasörü içermez, ancak daha sonra Razor Pages tabanlı davranışı desteklemek için bir tane ekleyebilirsiniz. Üç farklı türde varsayılan kullanıcı etkileşimini desteklemek için bu üç şablonu düşünebilirsiniz: veri (Web API 'SI), sayfa tabanlı ve görünüm tabanlı. Bununla birlikte, isterseniz tek bir proje içinde bunlardan herhangi birini veya tümünü karıştırabilir ve eşleştirebilirsiniz.
 
@@ -97,6 +100,72 @@ Model doğrulaması kullanıyorsanız, uygulamanızın geçersiz verilerle bozul
 Web API 'Leri için ASP.NET Core MVC [_içerik anlaşmasını_](/aspnet/core/mvc/models/formatting)destekler ve isteklerin nasıl biçimlendirilmesi gerektiğini belirtmesini sağlar. İstekte belirtilen üstbilgilere göre verileri döndüren eylemler, yanıtı XML, JSON veya desteklenen başka bir biçimde biçimlendirir. Bu özellik, farklı veri biçimi gereksinimlerine sahip birden çok istemci tarafından aynı API 'nin kullanılmasını sağlar.
 
 Web API projeleri, `[ApiController]` tek tek denetleyicilere, bir temel denetleyici sınıfına veya tüm derlemeye uygulanabilecek özniteliği kullanmayı göz önünde bulundurmalıdır. Bu öznitelik otomatik model doğrulama denetimi ekler ve geçersiz bir modele sahip herhangi bir eylem doğrulama hatalarının ayrıntılarına sahip bir BadRequest döndürür. Özniteliği aynı zamanda geleneksel bir yol kullanmak yerine tüm eylemlerin bir öznitelik yoluna sahip olmasını gerektirir ve hatalara yanıt olarak daha ayrıntılı ProblemDetails bilgileri döndürür.
+
+### <a name="keeping-controllers-under-control"></a>Denetimleri denetim altında tutma
+
+Sayfa tabanlı uygulamalar için Razor Pages denetleyicileri çok büyük bir şekilde tutmaya yönelik harika bir iş elde edin. Her bir sayfaya, kendi dosya ve sınıfları yalnızca işleyicisine ayrılmış şekilde verilir. Razor Pages 'nin kullanıma sunulmasından önce, birçok görünüm merkezli uygulamanın birçok farklı eylem ve görünümden sorumlu büyük denetleyici sınıfları vardır. Bu sınıflar doğal olarak çok sayıda sorumluluklara ve bağımlılıklara sahip olacak şekilde büyürken daha zor hale getirir. Görünüm tabanlı denetleyicilerinizi çok büyük büyüdüğünü fark ederseniz, Razor Pages kullanmak için yeniden düzenlemeyi veya Mediator gibi bir model tanıtmasını düşünün.
+
+Ortalama tasarım stili, aralarında iletişime izin verirken sınıflar arasındaki bağlantı sayısını azaltmak için kullanılır. ASP.NET Core MVC uygulamalarında, bu model genellikle işlem yöntemlerinin çalışması için *işleyiciler* kullanılarak denetleyicileri daha küçük parçalara bölmek için kullanılır. Popüler [mediaTR NuGet paketi](https://www.nuget.org/packages/MediatR/) genellikle bunu gerçekleştirmek için kullanılır. Genellikle, denetleyicilerin her biri belirli bağımlılıklar gerektirebilecek birçok farklı eylem yöntemi vardır. Herhangi bir eylem için gereken tüm bağımlılıkların kümesi denetleyicinin oluşturucusuna geçirilmelidir. MediaTR kullanırken, bir denetleyicinin bir örneği olan tek bağımlılığı bir ortam örneğidir. Sonra her eylem, bir işleyici tarafından işlenen bir ileti göndermek için Mediator örneğini kullanır. İşleyici tek bir eyleme özeldir ve bu nedenle yalnızca bu eylem için gereken bağımlılıklara ihtiyaç duyuyor. MediatR kullanan bir denetleyiciye örnek burada gösterilmektedir:
+
+```csharp
+public class OrderController : Controller
+{
+    private readonly IMediator _mediator;
+
+    public OrderController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> MyOrders()
+    {
+        var viewModel = await _mediator.Send(new GetMyOrders(User.Identity.Name));
+
+        return View(viewModel);
+    }
+
+    // other actions implemented similarly
+}
+```
+
+`MyOrders`Eylemde, `Send` bir iletiye yapılan çağrı `GetMyOrders` Bu sınıf tarafından işlenir:
+
+```csharp
+public class GetMyOrdersHandler : IRequestHandler<GetMyOrders, IEnumerable<OrderViewModel>>
+{
+    private readonly IOrderRepository _orderRepository;
+
+    public GetMyOrdersHandler(IOrderRepository orderRepository)
+    {
+        _orderRepository = orderRepository;
+    }
+
+    public async Task<IEnumerable<OrderViewModel>> Handle(GetMyOrders request, CancellationToken cancellationToken)
+    {
+        var specification = new CustomerOrdersWithItemsSpecification(request.UserName);
+        var orders = await _orderRepository.ListAsync(specification);
+
+        return orders.Select(o => new OrderViewModel
+        {
+            OrderDate = o.OrderDate,
+            OrderItems = o.OrderItems?.Select(oi => new OrderItemViewModel()
+            {
+                PictureUrl = oi.ItemOrdered.PictureUri,
+                ProductId = oi.ItemOrdered.CatalogItemId,
+                ProductName = oi.ItemOrdered.ProductName,
+                UnitPrice = oi.UnitPrice,
+                Units = oi.Units
+            }).ToList(),
+            OrderNumber = o.Id,
+            ShippingAddress = o.ShipToAddress,
+            Total = o.Total()
+        });
+    }
+}
+```
+
+Bu yaklaşımın nihai sonucu, denetleyicilerin çok daha küçük olmasını ve öncelikle yönlendirme ve model bağlamasıyla odaklanmasını, ancak belirli bir uç nokta için gereken belirli görevlerden bağımsız işleyicilerin sorumlu olmasını sağlar. Bu yaklaşım ayrıca, API Razor Pages denetleyicilerini, görüntüleme tabanlı denetleyicilere getirmelerini sağlayan [Apiendpoints NuGet paketi](https://www.nuget.org/packages/Ardalis.ApiEndpoints/)kullanılarak MediatR olmadan elde edilebilir.
 
 > ### <a name="references--mapping-requests-to-responses"></a>Başvurular – Istekleri yanıtlara eşleme
 >
@@ -234,6 +303,18 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 ASP.NET Core MVC, görünümleri bulmak için de bir kural kullanır. Görünümlerin Özellik klasörlerinizde bulunması için (yukarıdaki FeatureConvention tarafından sunulan özellik adı kullanılarak) özel bir kural ile geçersiz kılabilirsiniz. Bu yaklaşım hakkında daha fazla bilgi alabilir ve MSDN Magazine makalesinden çalışan bir örnek indirebilirsiniz [ASP.NET Core MVC Için özellik dilimleri](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
+### <a name="apis-and-no-locblazor-applications"></a>API 'Ler ve Blazor uygulamalar
+
+Uygulamanız güvenli hale getirilmesi gereken bir dizi Web API 'si içeriyorsa, bu, görünüm veya Razor Pages uygulamanızdan ayrı bir proje olarak yapılandırılmalıdır. Sunucu tarafı Web uygulamanızdan API 'Lerin, özellikle ortak API 'lerin ayrılması birçok avantaj sağlar. Bu uygulamalar genellikle benzersiz dağıtım ve yükleme özelliklerine sahip olur. Ayrıca, tanımlama bilgisi tabanlı kimlik doğrulaması ve API 'Lerin en büyük olasılıkla belirteç tabanlı kimlik doğrulaması kullanan API 'lerden yararlanarak standart form tabanlı uygulamalarla güvenlik için farklı mekanizmalar benimseme olasılığı yüksektir.
+
+Ayrıca, Blazor sunucu veya kullanma gibi uygulamalar Blazor Blazor WebAssembly ayrı projeler olarak oluşturulmalıdır. Uygulamalarda farklı çalışma zamanı özellikleri ve güvenlik modelleri de vardır. Büyük olasılıkla sunucu tarafı Web uygulamasıyla (veya API projesiyle) ortak türleri paylaşmaları olasıdır ve bu türler ortak bir paylaşılan projede tanımlanmalıdır.
+
+Blazor WebAssembly EShopOnWeb 'e yönetici arabiriminin eklenmesi, birkaç yeni proje eklemeye gerek. Blazor WebAssembly Projenin kendisi, `BlazorAdmin` . Tarafından kullanılan `BlazorAdmin` ve belirteç tabanlı kimlik doğrulaması kullanmak için yapılandırılan yeni bir ortak API uç noktası kümesi, `PublicApi` projede tanımlanmıştır. Ve bu projelerin her ikisi tarafından kullanılan bazı paylaşılan türler yeni bir `BlazorShared` projede tutulur.
+
+Bunlardan biri, `BlazorShared` `ApplicationCore` hem hem de gereken herhangi bir türü paylaşmak için kullanılabilen ortak bir proje olduğunda `PublicApi` , neden tek bir proje eklemeli, neden olabilir. `BlazorAdmin` Yanıt, bu projenin tüm uygulamanın iş mantığını içermesi ve bu nedenle gerekenden çok daha büyük olması ve sunucuda güvenli tutulması gereken çok daha fazla olasılıktır. Tarafından başvurulan herhangi bir kitaplığın `BlazorAdmin` , uygulamayı yüklediklerinde kullanıcıların tarayıcılarına indirileceğini unutmayın Blazor .
+
+Arka [uçlar-for-frontends (BFF) modelini](https://docs.microsoft.com/azure/architecture/patterns/backends-for-frontends)kullanıp kullanmadığını bağlı olarak, uygulama tarafından tüketilen API 'ler Blazor WebAssembly ile %100 türlerini paylaşamaz Blazor . Özellikle, birçok farklı istemci tarafından kullanılması amaçlanan ortak bir API, istemciye özgü paylaşılan bir projede paylaşmak yerine kendi istek ve sonuç türlerini tanımlayabilir. EShopOnWeb örneğinde, `PublicApi` Proje bir ortak API barındırılmakta olduğundan, tüm istek ve yanıt türleri projeden gelmemesi için varsayım yapılır `BlazorShared` .
+
 ### <a name="cross-cutting-concerns"></a>Geniş kapsamlı kritik konular
 
 Uygulamalar büyüdükçe, çoğaltmayı ortadan kaldırmak ve tutarlılığı sürdürmek için çapraz kesme sorunlarını ortadan kaldırmak giderek daha da önemli hale gelir. ASP.NET Core uygulamalardaki çapraz kesme kaygılarının bazı örnekleri, çok sayıda diğerleri olsa da, kimlik doğrulama, model doğrulama kuralları, çıktı önbelleği ve hata işleme örnekleridir. ASP.NET Core MVC [filtreleri](/aspnet/core/mvc/controllers/filters) , istek işleme ardışık düzeninde belirli adımlardan önce veya sonra kod çalıştırmanızı sağlar. Örneğin bir filtre, model bağlamadan önce ve sonra, bir eylemden önce ve sonra ya da bir eylem sonucundan önce ve sonra çalışabilir. Ayrıca, ardışık düzenin geri kalanına erişimi denetlemek için bir yetkilendirme filtresi de kullanabilirsiniz. Şekil 7-2, yapılandırılmışsa, istek yürütmenin filtreler aracılığıyla nasıl akacağını gösterir.
@@ -323,7 +404,7 @@ Filtre uygulama hakkında daha fazla bilgi edinmek ve MSDN Magazine makalesinden
 
 Web uygulamalarının güvenliğini sağlamak, çok sayıda konuyla büyük bir konudur. En temel düzeyinde güvenlik, belirli bir isteğin geldiği kişiyi öğrendiğinizden ve isteğin yalnızca gereken kaynaklara erişimi olduğundan emin olmanızı içerir. Kimlik doğrulaması, isteğin bilinen bir varlıktan geldiği kabul edilmesinin gerekip gerekmediğini görmek için, güvenilir bir veri deposundaki bir istekle girilen kimlik bilgilerini karşılaştırma işlemidir. Yetkilendirme, belirli kaynaklara erişimi kullanıcı kimliğine göre kısıtlama işlemidir. Üçüncü bir güvenlik konusu, isteklerin, en azından [SSL 'nin uygulamanız tarafından kullanıldığından emin](/aspnet/core/security/enforcing-ssl)olmanız gereken üçüncü taraflar tarafından dinleyerek dinleme yaptığı isteklerden korunuyor.
 
-### <a name="authentication"></a>Kimlik Doğrulaması
+### <a name="identity"></a>Kimlik
 
 ASP.NET Core kimlik, uygulamanız için oturum açma işlevlerini desteklemek için kullanabileceğiniz bir üyelik sistemidir. Bu, yerel kullanıcı hesaplarının yanı sıra Microsoft hesabı, Twitter, Facebook, Google ve daha fazlası gibi sağlayıcılardan dış oturum açma sağlayıcısı desteği için destek içerir. ASP.NET Core kimliğe ek olarak, uygulamanız Windows kimlik doğrulamasını veya [kimlik sunucusu](https://github.com/IdentityServer/IdentityServer4)gibi bir üçüncü taraf kimlik sağlayıcısını kullanabilir.
 
@@ -342,8 +423,8 @@ public void ConfigureServices(IServiceCollection services)
     services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
     services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultTokenProviders();
     services.AddMvc();
 }
 
@@ -362,6 +443,73 @@ Useıdentity 'in configure yönteminde UseMvc 'den önce görünmesi önemlidir.
 
 [İki öğeli kimlik doğrulamayı yapılandırma](/aspnet/core/security/authentication/2fa) ve resmi ASP.NET Core belgelerinden [dış oturum açma sağlayıcılarını etkinleştirme](/aspnet/core/security/authentication/social/) hakkında daha fazla bilgi edinebilirsiniz.
 
+### <a name="authentication"></a>Kimlik Doğrulaması
+
+Kimlik doğrulama, sisteme kimlerin eriştiğini belirleme işlemidir. Önceki bölümde gösterilen ASP.NET Core kimliği ve yapılandırma yöntemleri kullanıyorsanız, uygulama içindeki bazı kimlik doğrulama varsayılanlarını otomatik olarak yapılandırır. Bununla birlikte, bu Varsayılanları el ile de yapılandırabilir veya AddEntity tarafından ayarlanmış olanları geçersiz kılabilirsiniz. Kimlik kullanıyorsanız, tanımlama bilgisi tabanlı kimlik doğrulamasını varsayılan *Düzen*olarak yapılandırın.
+
+Web tabanlı kimlik doğrulamasında, genellikle bir sistem istemcisinin kimlik doğrulaması sırasında gerçekleştirilebilecek en fazla 5 eylem vardır. Bunlar:
+
+- Denetimini. Uygulama içinde kullanmak üzere bir kimlik oluşturmak için istemci tarafından sunulan bilgileri kullanın.
+- Sına. Bu eylem, istemcinin kendilerini belirlemesini gerektirmek için kullanılır.
+- Yasaklamaz. İstemciye bir eylem gerçekleştirmekten yasaklanmış olduğunu bildirin.
+- Oturum açın. Mevcut istemciyi bir şekilde kalıcı hale getirin.
+- Oturum kapatma. İstemciyi kalıcılığı kaldırın.
+
+Web uygulamalarında kimlik doğrulaması gerçekleştirmeye yönelik çeşitli yaygın teknikler vardır. Bunlar, şemalar olarak adlandırılır. Belirli bir düzen, Yukarıdaki seçeneklerin bazıları veya tümü için eylem tanımlar. Bazı şemalar yalnızca eylemlerin bir alt kümesini destekler ve desteklemediği işlemleri gerçekleştirmek için ayrı bir şema gerektirebilir. Örneğin, OpenID-Connect (OıDC) şeması, oturum açma veya oturumu kapatma işlemini desteklemez, ancak yaygın olarak bu Kalıcılık için tanımlama bilgisi kimlik doğrulaması kullanmak üzere yapılandırılmıştır.
+
+ASP.NET Core uygulamanızda, `DefaultAuthenticateScheme` yukarıda açıklanan eylemlerin her biri için isteğe bağlı özel düzenleri de yapılandırabilirsiniz. Örneğin,, `DefaultChallengeScheme` , `DefaultForbidScheme` vb. Çağırma [`AddIdentity<TUser,TRole>`](https://github.com/dotnet/aspnetcore/blob/release/3.1/src/Identity/Core/src/IdentityServiceCollectionExtensions.cs#L38-L102) , uygulamanın çeşitli yönlerini yapılandırır ve birçok gerekli hizmeti ekler. Ayrıca, kimlik doğrulama düzenini yapılandırmak için bu çağrıyı içerir:
+
+```csharp
+services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultChallengeScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+});
+```
+
+Bu düzenler, varsayılan olarak kimlik doğrulaması için oturum açma sayfalarında Kalıcılık ve yeniden yönlendirme için tanımlama bilgilerini kullanır. Bu şemalar, Web tarayıcıları aracılığıyla kullanıcılarla etkileşen ancak API 'Ler için önerilmeyen Web uygulamaları için uygundur. Bunun yerine, API 'Ler genellikle JWT taşıyıcı belirteçleri gibi başka bir kimlik doğrulama biçimi kullanır.
+
+Web API 'Leri, `HttpClient` .NET uygulamaları ve diğer çerçevelerde eşdeğer türler gibi kod tarafından kullanılır. Bu istemciler bir API çağrısından kullanılabilir bir yanıt bekler veya varsa, sorun oluştuğunda ne olduğunu belirten bir durum kodudur. Bu istemciler bir tarayıcıdan etkileşim kurmazlar ve bir API 'nin döndürebileceği HTML 'yi işlemez veya bunlarla etkileşime girmezler. Bu nedenle, kimlik doğrulamasından geçirilmezse istemcilerinin oturum açma sayfalarına yönlendirilmesini sağlamak için API uç noktaları için uygun değildir. Başka bir düzen daha uygundur.
+
+API 'Lerin kimlik doğrulamasını yapılandırmak için, `PublicApi` eShopOnWeb Reference uygulamasındaki proje tarafından kullanılan aşağıdaki gibi kimlik doğrulamasını ayarlayabilirsiniz:
+
+```csharp
+services.AddAuthentication(config =>
+{
+    config.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+    .AddJwtBearer(config =>
+    {
+        config.RequireHttpsMetadata = false;
+        config.SaveToken = true;
+        config.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+```
+
+Tek bir proje içinde birden çok farklı kimlik doğrulama düzeni yapılandırmak mümkün olsa da, tek bir varsayılan düzeni yapılandırmak çok basittir. Bu nedenle, eShopOnWeb Reference uygulaması, API 'Lerini, `PublicApi` `Web` uygulamanın görünümlerini ve Razor Pages içeren ana projeden ayrı olarak kendi projesine ayırır.
+
+#### <a name="authentication-in-no-locblazor-apps"></a>Uygulamalarda kimlik doğrulaması Blazor
+
+Blazor Sunucu uygulamaları, diğer ASP.NET Core uygulamalarla aynı kimlik doğrulama özelliklerinden faydalanabilir. BlazorWebAssemblyuygulamalar, tarayıcıda çalıştırıldıklarından, yerleşik kimlik ve kimlik doğrulama sağlayıcılarını kullanamaz. BlazorWebAssemblyuygulamalar Kullanıcı kimlik doğrulama durumunu yerel olarak saklayabilir ve kullanıcıların gerçekleştirebilecekleri eylemleri belirlemek için taleplere erişebilir. Ancak, Blazor WebAssembly Kullanıcılar uygulamayı kolayca atlayıp API 'lerle doğrudan etkileşime girebileceği için tüm kimlik doğrulama ve yetkilendirme denetimleri, uygulamanın içinde uygulanan mantığa bakılmaksızın sunucuda gerçekleştirilmelidir.
+
+> ### <a name="references--authentication"></a>Başvurular – kimlik doğrulaması
+>
+> - **Kimlik doğrulama eylemleri ve varsayılanlar**  
+>   <https://stackoverflow.com/a/52493428>
+> - **Maça kimlik doğrulaması ve yetkilendirme**
+>   <https://docs.microsoft.com/aspnet/core/security/authentication/identity-api-authorization>
+> - **ASP.NET Core Blazor kimlik doğrulaması ve yetkilendirme**
+>   <https://docs.microsoft.com/aspnet/core/blazor/security/>
+> - **Güvenlik: ASP.NET Web Forms ve üzerinde kimlik doğrulaması ve yetkilendirme Blazor**
+>   <https://docs.microsoft.com/dotnet/architecture/blazor-for-web-forms-developers/security-authentication-authorization>
+
 ### <a name="authorization"></a>Yetkilendirme
 
 En basit yetkilendirme biçimi anonim kullanıcılara erişimin kısıtlanmasını içerir. Bu, yalnızca \[ \] belirli denetleyicilere veya eylemlere Yetkilendir özniteliği uygulanarak elde edilebilir. Roller kullanılıyorsa, bu öznitelik, aşağıda gösterildiği gibi belirli rollere ait kullanıcılara erişimi kısıtlamak için daha fazla genişletilebilir.
@@ -376,7 +524,7 @@ public class SalaryController : Controller
 
 Bu durumda, HRManager veya finans rollerinin (ya da her ikisi) birine ait olan kullanıcılar SalaryController erişimine sahip olur. Bir kullanıcının birden çok role (yalnızca birkaç tane değil) ait olmasını gerektirmek için, her seferinde gerekli bir rol belirterek özniteliği birden çok kez uygulayabilirsiniz.
 
-Birçok farklı denetleyicilerde ve eylemlerdeki belirli rol kümelerini belirtme, istenmeyen bir tekrarya yol açabilir. Yetkilendirme kurallarını kapsülleyen yetkilendirme ilkelerini yapılandırabilir ve sonra Yetkilendir özniteliği uygulanırken ayrı roller yerine ilkeyi belirtebilirsiniz \[ \] :
+Birçok farklı denetleyicilerde ve eylemlerdeki belirli rol kümelerini belirtme, istenmeyen bir tekrarya yol açabilir. En azından, bu dize sabit değerleri için sabitleri tanımlayın ve dizeyi belirtmeniz gereken her yerde sabitleri kullanın. Yetkilendirme kurallarını kapsülleyen yetkilendirme ilkelerini de yapılandırabilir ve sonra Yetkilendir özniteliği uygulanırken ayrı roller yerine ilkeyi belirtebilirsiniz \[ \] :
 
 ```csharp
 [Authorize(Policy = "CanViewPrivateReport")]
@@ -407,7 +555,7 @@ Bu ilke daha sonra \[ \] yukarıda açıklandığı gibi herhangi bir denetleyic
 
 #### <a name="securing-web-apis"></a>Web API 'Lerinin güvenliğini sağlama
 
-Çoğu Web API 'si, belirteç tabanlı bir kimlik doğrulama sistemi uygulamalıdır. Belirteç kimlik doğrulaması durum bilgisiz ve ölçeklenebilir olacak şekilde tasarlandı. Belirteç tabanlı bir kimlik doğrulama sisteminde, istemci ilk olarak kimlik doğrulama sağlayıcısıyla kimlik doğrulaması yapması gerekir. Başarılı olursa, istemciye yalnızca şifreli olarak anlamlı bir karakter dizesi olan bir belirteç verilir. İstemcinin bir API 'ye istek vermesi gerektiğinde, bu belirteci istek üzerine bir başlık olarak ekler. Sunucu daha sonra isteği tamamlamadan önce istek üstbilgisinde bulunan belirteci doğrular. Şekil 7-4 bu işlemi gösterir.
+Çoğu Web API 'si, belirteç tabanlı bir kimlik doğrulama sistemi uygulamalıdır. Belirteç kimlik doğrulaması durum bilgisiz ve ölçeklenebilir olacak şekilde tasarlandı. Belirteç tabanlı bir kimlik doğrulama sisteminde, istemci ilk olarak kimlik doğrulama sağlayıcısıyla kimlik doğrulaması yapması gerekir. Başarılı olursa, istemciye yalnızca şifreli olarak anlamlı bir karakter dizesi olan bir belirteç verilir. Belirteçler için en yaygın biçim JSON Web Token veya JWT (genellikle "parça" olarak belirlenir). İstemcinin bir API 'ye istek vermesi gerektiğinde, bu belirteci istek üzerine bir başlık olarak ekler. Sunucu daha sonra isteği tamamlamadan önce istek üstbilgisinde bulunan belirteci doğrular. Şekil 7-4 bu işlemi gösterir.
 
 ![TokenAuth](./media/image7-4.png)
 
@@ -415,7 +563,22 @@ Bu ilke daha sonra \[ \] yukarıda açıklandığı gibi herhangi bir denetleyic
 
 Kendi kimlik doğrulama hizmetinizi oluşturabilir, Azure AD ve OAuth ile tümleştirilebilir veya [IdentityServer](https://github.com/IdentityServer)gibi açık kaynaklı bir aracı kullanarak bir hizmet uygulayabilirsiniz.
 
-#### <a name="custom-security"></a>Özel güvenlik
+JWT belirteçleri Kullanıcı hakkında, istemci veya sunucu üzerinde okunabilen talepler ekleyebilir. Bir JWT belirtecinin içeriğini görüntülemek için [JWT.io](https://jwt.io/) gibi bir araç kullanabilirsiniz. İçerikleri kolayca okunduğundan, gizli verileri JTW belirteçlerinde parolalar veya anahtarlar gibi depolamayın.
+
+SPA belirteçlerini SPA veya Blazor WebAssembly uygulamalarla kullanırken, belirteci istemcide bir yere depolamanız ve sonra her API çağrısına eklemeniz gerekir. Aşağıdaki kodun gösterdiği gibi, bu genellikle üst bilgi olarak yapılır:
+
+```csharp
+// AuthService.cs in BlazorAdmin project of eShopOnWeb
+private async Task SetAuthorizationHeader()
+{
+    var token = await GetToken();
+    _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+}
+```
+
+Yukarıdaki yöntemi çağırdıktan sonra, ile yapılan isteklere `_httpClient` isteğin üst bilgilerine gömülü ve sunucu tarafı API 'sinin istek için kimlik doğrulaması yapmasına ve yetkilendirilemez.
+
+#### <a name="custom-security"></a>Özel Güvenlik
 
 Özellikle şifreleme, Kullanıcı üyeliği veya belirteç oluşturma sisteminin "kendi kendine alınması" konusunda dikkatli olun. Çok sayıda ticari ve açık kaynaklı alternatif vardır ve bu, bir özel uygulamadan daha iyi güvenliğe sahip olur.
 
@@ -518,8 +681,6 @@ Bu model türlerine ek olarak, DDD genellikle çeşitli desenler kullanır:
 - [Depolama](https://deviq.com/repository-pattern/), kalıcılık ayrıntılarını soyutlayan.
 
 - Karmaşık nesne oluşturmayı kapsüllemek için [fabrika](https://en.wikipedia.org/wiki/Factory_method_pattern).
-
-- Bağımlı davranış tetiklemeden bağımsız olarak, etki alanı olayları.
 
 - Karmaşık davranışı ve/veya altyapı uygulama ayrıntılarını kapsüllemek için [Hizmetler](http://gorodinski.com/blog/2012/04/14/services-in-domain-driven-design-ddd/).
 

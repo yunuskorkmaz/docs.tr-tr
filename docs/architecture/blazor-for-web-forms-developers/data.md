@@ -5,13 +5,13 @@ author: csharpfritz
 ms.author: jefritz
 no-loc:
 - Blazor
-ms.date: 04/26/2020
-ms.openlocfilehash: 8bd326e6952708b2099c3a575d6811990335df17
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.date: 09/08/2020
+ms.openlocfilehash: 84e12f9890351fa46cd7ed0ee31db449f3c55e59
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267600"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515858"
 ---
 # <a name="work-with-data"></a>Verilerle çalışma
 
@@ -19,7 +19,7 @@ Veri erişimi, bir ASP.NET Web Forms uygulamasının omurgası olur. Web için f
 
 - Data Sources
 - ADO.NET
-- Entity Framework
+- Varlık Çerçevesi
 
 Veri kaynakları, Web Forms bir sayfada yerleştirebileceğiniz ve diğer denetimler gibi yapılandırabileceğiniz denetimleridir. Visual Studio, denetimleri Web Forms sayfalarınıza yapılandırmak ve bağlamak için kolay bir iletişim kutusu kümesi sağladı. Bir "düşük kod" veya "kod yok" yaklaşımı yaşayan geliştiriciler Web Forms ilk kez yayınlandığında bu tekniği tercih edilir.
 
@@ -27,7 +27,7 @@ Veri kaynakları, Web Forms bir sayfada yerleştirebileceğiniz ve diğer deneti
 
 ADO.NET, bir veritabanıyla etkileşime geçmek için düşük düzeyli yaklaşımdır. Uygulamalarınız, etkileşim kurmak için komutlarla, kayıt kümeleriyle ve veri kümeleriyle veritabanıyla bir bağlantı oluşturabilir. Sonuçlar daha sonra çok kod olmadan ekrandaki alanlara bağlanabilir. Bu yaklaşımın dezavantajı, her bir ADO.NET nesneleri ( `Connection` , `Command` ve `Recordset` ) kümesinin bir veritabanı satıcısı tarafından sunulan kitaplıklara bağlıydı. Bu bileşenlerin kullanımı, kodu rigıd yaptı ve farklı bir veritabanına geçiş yapılmasını zorlaştırıyor.
 
-## <a name="entity-framework"></a>Entity Framework
+## <a name="entity-framework"></a>Varlık Çerçevesi
 
 Entity Framework (EF), .NET Foundation tarafından tutulan açık kaynaklı nesne ilişkisel eşleme çerçevesidir. Başlangıçta .NET Framework ile yayınlanan EF, veritabanı bağlantıları, depolama şemaları ve etkileşimler için kod üretmesine olanak tanır. Bu Soyutlamalarla, uygulamanızın iş kurallarına odaklanarak veritabanının güvenilir bir veritabanı yöneticisi tarafından yönetilmesine izin verebilirsiniz. .NET Core 'da, EF Core adlı ve güncelleştirilmiş bir EF sürümü kullanabilirsiniz. EF Core, komut satırı aracını kullanarak, kodunuz ve veritabanı arasındaki etkileşimleri, sizin için kullanabileceğiniz bir dizi komutla oluşturup sürdürmenize yardımcı olur `dotnet ef` . Bir veritabanı ile çalışmaya başlamanızı sağlamak için birkaç örnek göz atalım.
 
@@ -128,7 +128,7 @@ GitHub 'dan veriye her erişmeniz gerektiğinde, adı olan bir istemci oluşturu
         var client = factory.CreateClient("github");
         var response = await client.GetAsync("repos/dotnet/docs/issues");
         response.EnsureStatusCode();
-        var content = async response.Content.ReadAsStringAsync();
+        var content = await response.Content.ReadAsStringAsync();
     }
 }
 ```

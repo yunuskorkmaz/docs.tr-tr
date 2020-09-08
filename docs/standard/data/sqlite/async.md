@@ -1,19 +1,19 @@
 ---
 title: Zaman uyumsuz sınırlamalar
-ms.date: 12/13/2019
+ms.date: 09/04/2020
 description: Zaman uyumsuz API 'lerin ve bunun yerine kullanabileceğiniz bazı alternatiflere ilişkin sınırlamaları açıklar.
-ms.openlocfilehash: 350237dc5c03023f60e9680e8b9c94aabb62606f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8b14fcfeb12d331d8d43ca6d77332007a12ae5dc
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447085"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516001"
 ---
 # <a name="async-limitations"></a>Zaman uyumsuz sınırlamalar
 
 SQLite zaman uyumsuz g/ç 'yi desteklemez. Zaman uyumsuz ADO.NET Yöntemler Microsoft. Data. SQLite içinde zaman uyumlu olarak yürütülür. Bunları çağırmadan kaçının.
 
-Bunun yerine, performansı ve Eşzamanlılığını artırmak için [yazma öncesi günlüğü](https://www.sqlite.org/wal.html) kullanın.
+Bunun yerine, performansı ve Eşzamanlılığını artırmak için [paylaşılan bir önbellek](connection-strings.md#cache) ve [sonradan yazma günlüğü](https://www.sqlite.org/wal.html) kullanın.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/AsyncSample/Program.cs?name=snippet_WAL)]
 

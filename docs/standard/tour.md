@@ -1,146 +1,146 @@
 ---
 title: .NET Turu
-description: .NET'in öne çıkan özelliklerinden bazıları arasında rehberli bir tur.
+description: .NET 'in bazı önemli özelliklerinden bazıları arasında kılavuzlu bir tur.
 author: cartermp
 ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a44c3692dc9ed9b3de37955191edfb279403f152
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241149"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516027"
 ---
 # <a name="tour-of-net"></a>.NET Turu
 
-.NET genel amaçlı bir geliştirme platformudur. Birden çok programlama dili desteği, eşzamanlı ve eşzamanlı programlama modelleri ve birden çok platformda çok çeşitli senaryolar sağlayan yerel birlikte çalışabilirlik gibi çeşitli temel özelliklere sahiptir.
+.NET, genel amaçlı bir geliştirme platformudur. Birden çok platformda çok çeşitli senaryolar sağlayan çoklu programlama dilleri, zaman uyumsuz ve eşzamanlı programlama modelleri ve yerel birlikte çalışabilirlik gibi birçok temel özelliğe sahiptir.
 
-Bu makalede, .NET'in bazı temel özellikleri arasında rehberli bir tur sunulmaktadır. .NET'in mimari parçaları ve ne için kullanıldıkları hakkında bilgi edinmek için [.NET Mimari Bileşenler](components.md) konusuna bakın.
+Bu makalede, .NET 'in temel özelliklerinden bazıları üzerinden kılavuzlu bir tur sunulmaktadır. .NET 'in mimari parçaları ve için kullanıldıkları özellikler hakkında bilgi edinmek için bkz. [.net mimari bileşenleri](components.md) konusu.
 
-## <a name="how-to-run-the-code-samples"></a>Kod örnekleri nasıl çalıştırılabilen
+## <a name="how-to-run-the-code-samples"></a>Kod örneklerini çalıştırma
 
-Kod örneklerini çalıştırmak için bir geliştirme ortamının nasıl ayarlan gerektiğini öğrenmek için [Başlarken](get-started.md) konusuna bakın. Bu sayfadaki kod örneklerini yürütmek için ortamınıza kopyalayın ve yapıştırın.
+Kod örneklerini çalıştırmak için bir geliştirme ortamı ayarlamayı öğrenmek için [Başlarken](get-started.md) konusuna bakın. Kod örneklerini bu sayfadan kopyalayıp yürütmek için ortamınıza yapıştırın.
 
 ## <a name="programming-languages"></a>Programlama dilleri
 
-.NET birden çok programlama dilini destekler. .NET uygulamaları, diğer şeylerin yanı sıra dilden bağımsız çalışma süresi ve dil birlikte çalışabilirliği belirten [Ortak Dil Altyapısını (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uygular. Bu, .NET'te uygulama ve hizmet oluşturmak için herhangi bir .NET dilini seçtiğiniz anlamına gelir.
+.NET birden çok programlama dilini destekler. .NET uygulamaları, diğer şeyler arasında dilden bağımsız çalışma zamanı ve dil birlikte çalışabilirliği belirten [ortak dil altyapısını (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)uygular. Bu, .NET üzerinde uygulama ve hizmet oluşturmak için herhangi bir .NET dilini seçtiğiniz anlamına gelir.
 
-Microsoft, C#, F#ve Visual Basic olmak üzere üç .NET dili etkin bir şekilde geliştirir ve destekler.
+Microsoft, üç .NET dilini etkin bir şekilde geliştirir ve destekler: C#, F # ve Visual Basic.
 
-* C# basit, güçlü, tür güvenli ve nesne yönelimli, C tarzı dillerin ifade ve zarafetini korurken. C ve benzeri dillere aşina olan herkes C#'a uyum sağlamada birkaç sorun bulur. C# hakkında daha fazla bilgi edinmek için [C# Kılavuzu'na](../csharp/index.yml) göz atın.
+* C# basit, güçlü, tür kullanımı uyumlu ve nesne yönelimli bir işlemdir. Bu, C stili dillerin ifade ve inceliğini bir kısmını korur. C ve benzer dilleri bilen herkes C# ' ye uyarlanmaya yönelik birkaç sorun buluyor. C# hakkında daha fazla bilgi edinmek için [C# kılavuzuna](../csharp/index.yml) göz atın.
 
-* F# aynı zamanda geleneksel nesne yönelimli ve zorunlu programlama destekleyen bir çapraz platform, işlevsel-ilk programlama dilidir. F# hakkında daha fazla bilgi edinmek için [F# Kılavuzu'na](../fsharp/index.yml) göz atın.
+* F #, geleneksel nesne yönelimli ve kesinlik temelli programlamayı da destekleyen platformlar arası, işlevsel ilk programlama dilidir. F # hakkında daha fazla bilgi edinmek için [f # kılavuzuna](../fsharp/index.yml) göz atın.
 
-* Visual Basic, .NET'te çalışan çeşitli uygulamalar oluşturmak için kullandığınızı öğrenmek için kolay bir dildir. .NET dilleri arasında Visual Basic'in sözdizimi sıradan insan diline en yakın dildir ve bu da yazılım geliştirmeye yeni katılan kişilerin işini kolaylaştırır.
+* Visual Basic .NET üzerinde çalışan çeşitli uygulamalar oluşturmak için kullanacağınızı öğrenmek için kolay bir dildir. .NET dilleri arasında Visual Basic sözdizimi, normal insan diline en yakın bir deyişle, çoğu zaman yazılım geliştirme konusunda yeni kişiler daha kolay hale gelir.
 
 ## <a name="automatic-memory-management"></a>Otomatik bellek yönetimi
 
-.NET, programlar için otomatik bellek yönetimi sağlamak için [çöp toplama (GC)](garbage-collection/index.md) kullanır. GC bellek yönetimi için tembel bir yaklaşım üzerinde çalışır, bellek hemen toplama uygulama iş kısmını tercih. .NET GC hakkında daha fazla bilgi edinmek için [çöp toplamanın temellerine (GC)](garbage-collection/fundamentals.md)göz atın.
+.NET, programlar için otomatik bellek yönetimi sağlamak üzere [çöp toplama (GC)](garbage-collection/index.md) kullanır. GC, bellek yönetimine yönelik yavaş bir yaklaşımda çalışır ve uygulama aktarım hızını hemen bellek koleksiyonuna tercih etmenizi sağlar. .NET GC hakkında daha fazla bilgi edinmek için [çöp toplamanın (GC) temellerini](garbage-collection/fundamentals.md)inceleyin.
 
-Aşağıdaki iki satır her ikisi de bellek ayırır:
+Aşağıdaki iki satır, her ikisi de bellek ayırır:
 
 [!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
-Çöp toplayıcısı zamanlanan çalışmasıyla belleği geri aldığında ayırma yı otomatik olarak gerçekleştiğinden, belleği ayırmayı ayırmak için benzer bir anahtar kelime yoktur.
+Bellek ayırmayı serbest bırakmak için benzer bir anahtar sözcük yoktur, çünkü atık toplayıcı tarafından zamanlanan çalışma üzerinden bellek geri kazanır.
 
-Çöp toplayıcı bellek *güvenliğini*sağlamaya yardımcı olan hizmetlerden biridir. Program, yalnızca ayrılmış belleğe erişiyorsa bellek teredir. Örneğin, çalışma süresi, bir uygulamanın bir dizi sınırlarının ötesinde tahsis edilmemiş belleğe erişmemesini sağlar.
+Çöp toplayıcı, *bellek güvenliğini*sağlamaya yardımcı olan hizmetlerden biridir. Bir program, yalnızca ayrılmış belleğe eriştiğinde bellek güvende olur. Örneğin, çalışma zamanı, bir uygulamanın ayrılmamış belleğe bir dizi sınırlarının ötesinde erişmesini sağlar.
 
-Aşağıdaki örnekte, çalışma zamanı bellek <xref:System.IndexOutOfRangeException> güvenliğini zorlamak için bir özel durum atar:
+Aşağıdaki örnekte, çalışma zamanı <xref:System.IndexOutOfRangeException> bellek güvenliğini zorlamak için bir özel durum oluşturur:
 
 [!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Yönetilmeyen kaynaklarla çalışma
 
-Bazı nesneler *yönetilmeyen kaynaklara*başvurur. Yönetilmeyen kaynaklar, .NET çalışma zamanı tarafından otomatik olarak korunmayan kaynaklardır. Örneğin, dosya işlemiş, yönetilmeyen bir kaynaktır. Nesne <xref:System.IO.FileStream> yönetilen bir nesnedir, ancak yönetilmeyen bir dosya işlemesi başvurur. <xref:System.IO.FileStream>'yi kullanmayı bitirdiğinizde, dosya tutamacını serbest bırakmanız gerekir.
+Bazı nesneler *yönetilmeyen kaynaklara*başvurur. Yönetilmeyen kaynaklar, .NET çalışma zamanı tarafından otomatik olarak tutulmayan kaynaklardır. Örneğin, bir dosya tanıtıcısı yönetilmeyen bir kaynaktır. Bir <xref:System.IO.FileStream> nesne yönetilen bir nesnedir, ancak yönetilmeyen bir dosya tanıtıcısına başvurur. Kullanarak işiniz bittiğinde <xref:System.IO.FileStream> dosya tanıtıcısını serbest bırakmanız gerekir.
 
-.NET'te, yönetilmeyen kaynaklara başvuran <xref:System.IDisposable> nesneler arabirimi uygular. Nesneyi kullanmayı bitirdiğinizde, yönetilmeyen kaynakları serbest <xref:System.IDisposable.Dispose> bırakmakla sorumlu olan nesnenin yöntemini çağırırsınız. .NET dilleri, [ `using` ](../csharp/language-reference/keywords/using.md) aşağıdaki örnekte gösterildiği gibi, bu tür nesneler için uygun bir ifade sağlar:
+.NET ' te, yönetilmeyen kaynaklara başvuran nesneler arabirimini uygular <xref:System.IDisposable> . Nesnesini kullanarak işiniz bittiğinde, <xref:System.IDisposable.Dispose> yönetilmeyen kaynakları serbest bırakmaktan sorumlu olan nesnenin yöntemini çağıracağız. .NET dilleri, aşağıdaki örnekte gösterildiği gibi, bu nesneler için uygun bir [ `using` bildirim](../csharp/language-reference/keywords/using.md) sağlar:
 
 [!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Blok tamamlandıktan sonra,.NET çalışma süresi otomatik `stream` olarak <xref:System.IDisposable.Dispose> nesnenin dosya tutamacını serbest bırakan yöntemini çağırır. `using` Bir özel durum denetimin bloktan ayrılmasına neden oluyorsa çalışma zamanı da bunu yapar.
+`using`Blok tamamlandığında, .NET çalışma zamanı otomatik olarak `stream` nesnenin <xref:System.IDisposable.Dispose> yöntemini çağırır ve dosya tanıtıcısını yayınlar. Ayrıca, bir özel durum denetimin bloğundan ayrılmasına neden olursa, çalışma zamanı bunu yapar.
 
 Daha fazla bilgi için aşağıdaki konulara bakın:
 
-* C# [için, kullanarak Deyim (C# Reference)](../csharp/language-reference/keywords/using-statement.md) konusuna bakın.
-* F# için kaynak [yönetimi: Anahtar kelimeyi kullanın.](../fsharp/language-reference/resource-management-the-use-keyword.md)
-* Visual Basic [için, Kullanma Bildirimi (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) konusuna bakın.
+* C# için bkz. [using deyimleri (C# Başvurusu)](../csharp/language-reference/keywords/using-statement.md) konusu.
+* F # için bkz. [kaynak yönetimi: Use anahtar sözcüğü](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* Visual Basic için bkz. [using deyimin (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) konusu.
 
-## <a name="type-safety"></a>Tip güvenliği
+## <a name="type-safety"></a>Tür güvenliği
 
-Nesne, belirli bir türörneğidir. Belirli bir nesne için izin verilen işlemler yalnızca türünden işlemlerdir. Bir `Dog` tür `Jump` ve `WagTail` yöntemler olabilir, ancak bir `SumTotal` yöntem. Program yalnızca belirli bir türe ait yöntemleri çağırır. Diğer tüm aramalar derleme zamanı hatası na veya çalışma süresi özel durumuyla sonuçlanır `object`(dinamik özellikler kullanılması veya kullanılması durumunda).
+Bir nesne, belirli bir türün örneğidir. Belirli bir nesne için izin verilen tek işlemler, türü olanlardır. Bir `Dog` tür `Jump` ve yöntemleri olabilir, `WagTail` ancak bir `SumTotal` Yöntem olamaz. Program yalnızca belirli bir türe ait yöntemleri çağırır. Diğer tüm çağrılar, derleme zamanı hatası veya çalışma zamanı özel durumuyla sonuçlanır (dinamik özellikleri veya kullanımı durumunda `object` ).
 
-.NET dilleri taban ve türemiş sınıfların hiyerarşileri ile nesne yönelimli. .NET çalışma süresi yalnızca nesne dökümlerine ve nesne hiyerarşisiyle hizalayan çağrılara izin verir. Herhangi bir .NET dilinde tanımlanan her türün <xref:System.Object> temel türden türediğini unutmayın.
+.NET dilleri, temel ve türetilmiş sınıfların Hiyerarşileriyle nesne yönelimlidir. .NET çalışma zamanı, yalnızca nesne hiyerarşisine göre hizalı nesne yayınlarına ve çağrılarına izin verir. Herhangi bir .NET dilinde tanımlanan her türün temel türden türetildiğinden emin olmak <xref:System.Object> .
 
 [!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
-Tür güvenliği, erişimci anahtar kelimelerin doğruluklarını garanti ederek kapsüllemenin uygulanmasına yardımcı olmak için de kullanılır. Erişimveya anahtar kelimeler, belirli bir türün üyelerine diğer kodlara göre erişimi kontrol eden yapılardır. Bunlar genellikle davranışını yönetmek için kullanılan bir tür içinde çeşitli veri türleri için kullanılır.
+Tür güvenliği, erişimci anahtar sözcüklerinin aslına uygunluğunu garanti ederek kapsüllemeye yardımcı olmak için de kullanılır. Erişimci anahtar sözcükleri, belirli bir türdeki üyelere diğer kod tarafından erişimi denetleyen yapıtlardır. Bunlar genellikle davranışını yönetmek için kullanılan bir tür içindeki çeşitli veri türleri için kullanılır.
 
 [!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, Visual Basic ve F# yerel *tür çıkarımlarını*destekler. Tür çıkarımı, derleyicinin sol taraftaki ifadetürünü sağ taraftaki ifadeden çıkardığı anlamına gelir. Bu, tür güvenliğinin kırıldığı veya kaçındığı anlamına gelmez. Ortaya çıkan tür ima her şeyi ile güçlü bir türü var. Önceki örnekten, `dog` tür çıkarımını tanıtmak için yeniden yazılır ve örneğin geri kalanı değişmeden:
+C#, Visual Basic ve F # yerel *tür çıkarımını*destekler. Tür çıkarımı, derleyicinin sağ taraftaki ifadeden sol taraftaki ifadenin türünü akmasıdır. Bu, tür güvenliği kopmuş veya kaçınılmış değildir. Elde edilen türün, her şeyi ifade eden güçlü bir türü vardır. Önceki örnekte, `dog` tür çıkarımı tanıtmak için yeniden yazılır ve örneğin geri kalanı değiştirilmez:
 
 [!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-F# C# ve Visual Basic'te bulunan yöntem-yerel tür çıkarımLarından daha fazla tür çıkarımı yeteneğine sahiptir. Daha fazla bilgi için Bkz. [Tür Çıkarımı.](../fsharp/language-reference/type-inference.md)
+F #, C# ve Visual Basic ' de bulunan yöntem yerel tür çıkarımı dışında daha da fazla tür çıkarımı özelliğine sahiptir. Daha fazla bilgi için bkz. [tür çıkarımı](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Temsilciler ve lambda ifadeleri
 
-Bir temsilci yöntem imzasıyla temsil edilir. Bu imzaile herhangi bir yöntem temsilciatanabilir ve temsilci çağrıldığınızda yürütülür.
+Bir temsilci bir yöntem imzasıyla temsil edilir. Bu imzaya sahip herhangi bir yöntem temsilciye atanabilir ve temsilci çağrıldığında yürütülür.
 
-Temsilciler, yazının güvenli olması dışında C++ işlev işaretçileri gibidir. CLR tipi sistemde bir tür bağlantısız yöntem. Düzenli yöntemler bir sınıfa eklenir ve yalnızca statik veya örnek çağrı kuralları aracılığıyla doğrudan çağrılabilir.
+Temsilciler tür kullanımı güvenli olduklarından, C++ işlev işaretçilerine benzer. CLR tür sistemi içindeki bir bağlantısı kesilmiş yöntem türüdür. Normal yöntemler bir sınıfa iliştirilir ve yalnızca statik veya örnek çağırma kuralları aracılığıyla doğrudan çağrılabilir.
 
-.NET'te, temsilciler genellikle olay işleyicilerinde, asenkron işlemleri tanımlamada ve LINQ'un temel taşı olan lambda ifadelerinde kullanılır. Delegeler ve [lambdas](delegates-lambdas.md) konusu hakkında daha fazla bilgi edinin.
+.NET ' te temsilciler genellikle olay işleyicilerde, zaman uyumsuz işlemleri tanımlama ve LINQ 'in bir temel pulu olan Lambda ifadelerinde kullanılır. [Temsilciler ve Lambdalar](delegates-lambdas.md) konusunda daha fazla bilgi edinin.
 
 ## <a name="generics"></a>Genel Türler
 
-Genel ler, programcının sınıflarını tasarlarken istemci kodunun (türdeki kullanıcılar) tür parametresi yerine tam olarak kullanılacak türü belirtmesine olanak tanıyan bir *tür parametresi* tanıtmasına olanak tanır.
+Genel türler, programcı 'nin, istemci kodunun (tür kullanıcıları) tür parametresi yerine kullanılacak tam türü belirtmesini sağlayan sınıflarını tasarlarken bir *tür parametresi* almasına izin verir.
 
-Programcıların genel veri yapılarını uygulamasına yardımcı olmak için genel bilgiler eklendi. Gelmelerinden önce, `List` tür gibi bir tür gibi bir tür için genel olması için, `object`türü olan öğelerle çalışması gerekir. Bu çeşitli performans ve anlamsal sorunlar, birlikte olası ince çalışma zamanı hataları vardı. Ortak bir çalışma zamanı hatası, bir veri yapısının örneğin, hem tamsayılar hem <xref:System.InvalidCastException> de dizeleri içerdiği ve listenin üyelerini işlerken bir atTırışolmasıdır.
+Yardım geliştirenler genel veri yapıları uygulayan genel türler eklenmiştir. Gelişinden önce, tür gibi bir türün genel olması için, `List` türünde olan öğelerle çalışması gerekir `object` . Bu, olası hafif çalışma zamanı hatalarıyla birlikte çeşitli performans ve anlam sorunları içeriyordu. Ortak bir çalışma zamanı hatası, bir veri yapısının içerdiğinde, örneğin hem tamsayılar hem de dizeler ve <xref:System.InvalidCastException> listenin üyelerini işlerken oluşturulur.
 
-Aşağıdaki örnek, türlerin bir örneğini <xref:System.Collections.Generic.List%601> kullanarak çalışan temel bir programı gösterir:
+Aşağıdaki örnek, bir tür örneği kullanılarak çalışan temel bir programı göstermektedir <xref:System.Collections.Generic.List%601> :
 
 [!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
-Daha fazla bilgi için [Genel türler (Genel Bilgiler) genel bakış](generics.md) konusuna bakın.
+Daha fazla bilgi için [Genel türler (genel türler) genel bakış](generics.md) konusuna bakın.
 
-## <a name="async-programming"></a>Async programlama
+## <a name="async-programming"></a>Zaman uyumsuz programlama
 
-Async programlama çalışma zamanı, çerçeve kitaplıkları ve .NET dil yapıları async desteği ile .NET içinde birinci sınıf bir kavramdır. Dahili olarak, G/Ç'ye bağlı `Task`işleri mümkün olduğunca verimli bir şekilde gerçekleştirmek için işletim sisteminden yararlanan nesnelere (örneğin) dayanırlar.
+Zaman uyumsuz programlama, .NET içinde çalışma zamanı, çerçeve kitaplıkları ve .NET dil yapılarında zaman uyumsuz destek içeren birinci sınıf kavramdır. Dahili olarak, `Task` g/ç bağlantılı işleri mümkün olduğunca verimli bir şekilde gerçekleştirmek için işletim sisteminden faydalanan nesneleri (gibi) temel alırlar.
 
-.NET'te async programlama hakkında daha fazla bilgi edinmek için [Async genel bakış](async.md) konusuyla başlayın.
+.NET 'te zaman uyumsuz programlama hakkında daha fazla bilgi edinmek için [zaman uyumsuz genel bakış](async.md) konusuyla başlayın.
 
 ## <a name="language-integrated-query-linq"></a>Dil ile Tümleşik Sorgu (LINQ)
 
-LINQ, C# ve Visual Basic için, verileri işletmek için basit, bildirimsel kod yazmanızı sağlayan güçlü bir özellik kümesidir. Veriler birçok formda (bellek nesneleri, SQL veritabanı veya XML belgesi gibi) olabilir, ancak yazdığınız LINQ kodu genellikle veri kaynağına göre farklılık gösterir.
+LINQ, C# ve Visual Basic veri üzerinde çalışma için basit ve bildirim temelli kod yazmanıza olanak tanıyan güçlü bir özellikler kümesidir. Veriler birçok biçimde (örneğin, bellek içi nesneler, bir SQL veritabanı veya bir XML belgesi) olabilir, ancak yazdığınız LINQ kodu genellikle veri kaynağı tarafından farklılık gösterir.
 
-Daha fazla bilgi edinmek ve bazı örnekleri görmek için [LINQ (Language Integrated Query)](using-linq.md) konusuna bakın.
+Daha fazla bilgi edinmek ve bazı örneklere bakmak için bkz. [LINQ (dil Ile tümleşik sorgu) genel bakış](./linq/index.md) makalesi.
 
 ## <a name="native-interoperability"></a>Native ile birlikte çalışma
 
-Her işletim sistemi, sistem hizmetleri sağlayan bir uygulama programlama arabirimi (API) içerir. .NET, bu API'leri aramak için çeşitli yollar sağlar.
+Her işletim sistemi, sistem hizmetleri sağlayan bir uygulama programlama arabirimi (API) içerir. .NET, bu API 'Leri çağırmak için çeşitli yollar sağlar.
 
-Yerel birlikte çalışabilirlik yapmanın ana yolu, Linux ve Windows platformlarında desteklenen "platform invoke" veya kısaca P/Invoke üzerinden dir. Yerel birlikte çalışabilirlik yapmanın yalnızca Windows'a özgü bir yolu, yönetilen koddaki [COM bileşenleriyle](/cpp/atl/introduction-to-com) çalışmak için kullanılan "COM interop" olarak bilinir. P/Invoke altyapısının üzerine inşa edilmiştir, ancak kurnazca farklı şekillerde çalışır.
+Yerel birlikte çalışabilirliğin ana yolu, Linux ve Windows platformları genelinde desteklenen Short için "Platform Invoke" veya P/Invoke aracılığıyla yapılır. Yerel birlikte çalışabilirliğin yalnızca Windows 'un bir yolu, Yönetilen koddaki [COM bileşenleriyle](/cpp/atl/introduction-to-com) çalışmak için kullanılan "com birlikte çalışma" olarak bilinir. P/Invoke altyapısının üzerine kurulmuştur, ancak daha sorunsuz şekilde farklı yollarla çalışmaktadır.
 
-Mono's (ve böylece Xamarin's) Java ve Objective-C için birlikte çalışabilirlik desteği çoğu benzer inşa edilmiştir, yani, onlar aynı ilkeleri kullanın.
+Birçok Mono (ve bu nedenle Xamarin 'in) Java ve amaç için birlikte çalışabilirlik desteğinin çoğu benzer şekilde oluşturulmuştur, yani aynı ilkeleri kullanır.
 
-Yerel birlikte çalışabilirlik hakkında daha fazla bilgi için Yerel [birlikte çalışabilirlik](native-interop/index.md) makalesine bakın.
+Yerel birlikte çalışabilirlik hakkında daha fazla bilgi için bkz. [yerel birlikte çalışabilirlik](native-interop/index.md) makalesi.
 
 ## <a name="unsafe-code"></a>Güvenli olmayan kod
 
-Dil desteğine bağlı olarak, CLR yerel belleğe erişmenizi `unsafe` ve kod aracılığıyla işaretçi aritmetik yapmanızı sağlar. Bu işlemler belirli algoritmalar ve sistem birlikte çalışabilirliği için gereklidir. Güçlü olmasına rağmen, sistem API'leri ile interop veya en verimli algoritmauygulamak için gerekli olmadığı sürece güvenli olmayan kod kullanımı önerilmez. Güvenli olmayan kod farklı ortamlarda aynı şekilde yürütülmeyebilir ve çöp toplayıcısı ve tür güvenliğinin avantajlarını da kaybeder. Güvenli olmayan kodu mümkün olduğunca sınırlamak ve merkezileştirmek ve bu kodu iyice test etmek önerilir.
+Dil desteğine bağlı olarak, CLR yerel belleğe erişmenizi ve kod aracılığıyla işaretçi aritmetiği yapmanızı sağlar `unsafe` . Bu işlemler, bazı algoritmalar ve sistem birlikte çalışabilirliği için gereklidir. Güçlü, güvenli olmayan kod kullanımı, sistem API 'Leriyle birlikte çalışabilmek ya da en verimli algoritmayı uygulamak için gerekli olmadığı için önerilmez. Güvenli olmayan kod farklı ortamlarda aynı şekilde yürütülemeyebilir ve ayrıca çöp toplayıcı ve tür güvenliği avantajlarından de yararlanmaya başlayabilir. Güvenli olmayan kodu sınırlamak ve merkezileştirmek ve kodu tamamen test etmeniz önerilir.
 
-Aşağıdaki örnek, `ToString()` `StringBuilder` yöntemin sınıftan değiştirilmiş bir sürümüdür. Kod kullanmanın, `unsafe` bellek yığınları arasında doğrudan hareket ederek bir algoritmayı nasıl verimli bir şekilde uygulayabileceğini gösterir:
+Aşağıdaki örnek, sınıfından yönteminin değiştirilmiş bir sürümüdür `ToString()` `StringBuilder` . Kod kullanmanın, `unsafe` bellek öbeklerini doğrudan kullanarak bir algoritmayı nasıl verimli bir şekilde uygulayabileceği gösterilmektedir:
 
 [!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-C# özelliklerinin bir turuyla ilgileniyorsanız, [Tour of C# bölümüne](../csharp/tour-of-csharp/index.md)göz atın.
+C# özelliklerinin turuna ilgileniyorsanız, [C# turuna](../csharp/tour-of-csharp/index.md)göz atın.
 
-F# özellikleriyle dolu bir turla ilgileniyorsanız, [F# Turu'na](../fsharp/tour.md)bakın.
+F # özelliklerinin turuna ilgileniyorsanız, bkz. [Tur-f #](../fsharp/tour.md).
 
-Kendi kodunuzu yazmaya başlamak istiyorsanız, [Başlarken'i](get-started.md)ziyaret edin.
+Kendi kodunuzu yazmaya başlamak istiyorsanız [Başlarken](get-started.md)' i ziyaret edin.
 
-.NET'in önemli bileşenleri hakkında bilgi edinmek için [.NET Mimari Bileşenlerbölümüne](components.md)göz atın.
+.NET ' in önemli bileşenleri hakkında bilgi edinmek için [.net mimari bileşenleri](components.md)' ne göz atın.

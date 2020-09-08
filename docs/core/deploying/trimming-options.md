@@ -4,16 +4,16 @@ description: Kendi içindeki uygulamaların kırpılacağını nasıl denetleyec
 author: sbomer
 ms.author: svbomer
 ms.date: 08/25/2020
-ms.openlocfilehash: 42e98f9ede004f06221d2df5ecd076500061e37d
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 89bd195a97c2f1bbbba9199fea51c917c4e4836b
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465422"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515838"
 ---
 # <a name="trimming-options"></a>Kırpma seçenekleri
 
-Aşağıdaki MSBuild özellikleri ve öğeleri, [kırpılan kendi içindeki dağıtımların](trim-self-contained.md)davranışını etkiler. Bir kısmı `ILLink` , kırpmayı uygulayan temel aracın adı olan bahsetme seçenekleridir. Komut satırı aracı hakkında daha fazla bilgi için `ILLink` [ıllink seçenekleri](https://github.com/mono/linker/blob/master/docs/illink-options.md)adresinde bulabilirsiniz.
+Aşağıdaki MSBuild özellikleri ve öğeleri, [kırpılan kendi içindeki dağıtımların](trim-self-contained.md)davranışını etkiler. Bir kısmı `ILLink` , kırpmayı uygulayan temel aracın adı olan bahsetme seçenekleridir. Temel alınan araç hakkında daha fazla bilgi [bağlayıcı belgelerinde](https://github.com/mono/linker/tree/master/docs)bulunabilir.
 
 ## <a name="enable-trimming"></a>Kırpmayı etkinleştir
 
@@ -129,3 +129,37 @@ Simgeler normalde kırpılan Derlemelerle eşleşecek şekilde kırpılacak. Tü
     Katıştırılmış pdb 'leri ve ayrı PDB dosyaları dahil olmak üzere kırpılan uygulamadan sembolleri kaldırın. Bu hem uygulama kodu hem de simgelerle gelen bağımlılıklar için geçerlidir.
 
 SDK, özelliği kullanarak hata ayıklayıcı desteğini devre dışı bırakmayı da mümkün kılar `DebuggerSupport` . Hata ayıklayıcı desteği devre dışı bırakıldığında, kırpma sembolleri otomatik olarak kaldırır ( `TrimmerRemoveSymbols` Varsayılan olarak true olur).
+
+## <a name="trimming-framework-library-features"></a>Çerçeve kitaplığı özelliklerini kırpma
+
+Çerçeve kitaplıklarının birçok özellik alanı, devre dışı özellikler için kodu kaldırmayı olanaklı kılan bağlayıcı yönergeleri ile birlikte gelir.
+
+- `<DebuggerSupport>false</DebuggerSupport>`
+
+    Daha iyi hata ayıklama deneyimlerini sağlayan kodu kaldırın. Bu, [sembolleri de kaldırır](#removing-symbols).
+
+- `<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>`
+
+    BinaryFormatter serileştirme desteğini kaldırın. Daha fazla bilgi için bkz. [BinaryFormatter serileştirme yöntemleri artık kullanılmıyor](../compatibility/corefx.md#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps).
+
+- `<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>`
+
+    Güvenli olmayan UTF-7 kodlama kodunu kaldır. Daha fazla bilgi için bkz. [UTF-7 kod yolları artık kullanılmıyor](../compatibility/corefx.md#utf-7-code-paths-are-obsolete).
+
+- `<EventSourceSupport>false</EventSourceSupport>`
+
+    EventSource ile ilgili kodu veya mantığı kaldırın.
+
+- `<HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>`
+
+    System .net. http için tanılama desteğiyle ilgili kodu kaldırın.
+
+- `<InvariantGlobalization>true</InvariantGlobalization>`
+
+    Genelleştirme 'ye özgü kodu ve verileri kaldırın. Daha fazla bilgi için bkz. [sabit mod](../run-time-config/globalization.md#invariant-mode).
+
+- `<UseSystemResourceKeys>true</UseSystemResourceKeys>`
+
+    Derlemeler için özel durum iletilerini şerit `System.*` . Bir derlemeden bir özel durum oluştuğunda `System.*` , ileti tam ileti yerine basitleştirilmiş kaynak kimliği olur.
+
+ Bu özellikler ilgili kodun kırpılmasına neden olur ve ayrıca [runtimeconfig](../run-time-config/index.md) dosyası aracılığıyla özellikleri devre dışı bırakır. İlgili runtimeconfig seçenekleri de dahil olmak üzere bu özellikler hakkında daha fazla bilgi için bkz. [özellik anahtarları](https://github.com/dotnet/runtime/blob/master/docs/workflow/trimming/feature-switches.md). Bazı SDK 'lar bu özellikler için varsayılan değerlere sahip olabilir.

@@ -5,16 +5,16 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: c9ac93c152d39bd06875f82ee5f34c1540236038
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 5e8ed371173ff8b81909ceb071ed93c6b0e1eea5
+ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495232"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89515845"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 'un .NET 5 sürümüne evrimi
 
-Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te nelerin dahil olduğu açıklanır. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
+Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te nelerin dahil olduğu açıklanır. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. ASP.NET Core, ASP.NET MVC 5 ile karıştırmamak için "Core" adını korur. Ayrıca, Entity Framework Core "çekirdek" adını Entity Framework 5 ve 6 ile karıştırmamak için korur. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
 
 .NET Core 'un bir bütün olarak .NET ekosistemini etkileyici yollarla geliştirmiştir. GitHub 'da açık kaynaklı bir proje olarak, topluluk katkılarını kutluyor ve zaman içinde gelişerek daha fazla iyileştiriliyor.
 
@@ -78,7 +78,7 @@ Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere
 
 - İşlev işaretçileri: aşağıdaki ara dil (IL) OpCodes 'ı kullanıma sunan dil yapıları: `ldftn` ve `calli` .
 
-<!-- For more information on the available C# 9 features, see [What's new in C# 9](csharp/whats-new/csharp-9.md). -->
+Kullanılabilir C# 9 özellikleri hakkında daha fazla bilgi için bkz. [C# 9 ' daki](../csharp/whats-new/csharp-9.md)yenilikler.
 
 #### <a name="source-generators"></a>Kaynak oluşturucuları
 
@@ -114,7 +114,7 @@ Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-
 
 .NET 5 ' teki Visual Basic için yeni dil özellikleri yoktur. Bununla birlikte, .NET 5 ile Visual Basic desteği şu şekilde genişletilir:
 
-| Açıklama                            | `dotnet new` parametresinin |
+| Description                            | `dotnet new` parametresinin |
 |----------------------------------------|------------------------|
 | Konsol Uygulaması                    | `console`              |
 | Sınıf kitaplığı                          | `classlib`             |
