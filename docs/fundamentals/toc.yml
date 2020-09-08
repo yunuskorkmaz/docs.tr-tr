@@ -136,6 +136,8 @@ items:
             href: ../core/tutorials/index.md
   - name: Yenilikler
     items:
+      - name: .NET Core’un .NET 5’e gelişimi
+        href: ../core/dotnet-five.md
       - name: ​.NET Core 3.1’deki yenilikler
         href: ../core/whats-new/dotnet-core-3-1.md
       - name: ​.NET Core 3.0’daki yenilikler
@@ -407,6 +409,8 @@ items:
             href: ../core/deploying/creating-nuget-packages.md
           - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
             href: ../core/deploying/runtime-patch-selection.md
+          - name: Tek dosya dağıtımı ve yürütülebilir dosya
+            href: ../core/deploying/single-file.md
           - name: Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
             href: ../core/deploying/trim-self-contained.md
           - name: Çalışma zamanı paket deposu
