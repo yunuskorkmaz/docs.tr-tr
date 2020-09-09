@@ -703,7 +703,7 @@ items:
   - name: Veri erişimi
     items:
       - name: LINQ
-        href: ../standard/using-linq.md
+        href: ../standard/linq/
       - name: XML belgeleri ve verileri
         href: ../standard/data/xml/
       - name: Microsoft.Data.Sqlite
