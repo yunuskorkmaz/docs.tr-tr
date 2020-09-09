@@ -3,12 +3,12 @@ title: Tanılama araçlarına genel bakış-.NET Core
 description: .NET Core uygulamalarını tanılamak için kullanılabilen araçlara ve tekniklere genel bakış.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: ae3b9a1961f331c9cdea786bd5fe06b7bfa10927
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 568f237e131cde18dad7c87ddff2fdd3d4bc5b8b
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558120"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89597979"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 'da hangi tanılama araçları kullanılabilir?
 
@@ -28,7 +28,11 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 
 [Birim testi](../testing/index.md) , yüksek kaliteli yazılımların sürekli tümleştirilmesine ve dağıtımına yönelik temel bir bileşendir. Birim testleri, bir şeyi kesen bir erken uyarı sağlayacak şekilde tasarlanmıştır.
 
-## <a name="net-core-dotnet-diagnostic-global-tools"></a>.NET Core DotNet tanılama küresel araçları
+## <a name="debug-linux-dumps"></a>Linux dökümlerinde hata ayıkla
+
+[Linux dökümlerinde hata ayıklama](debug-linux-dumps.md) , Linux üzerinde dökümleri nasıl toplayacağınızı ve analiz edeceğinizi açıklar.
+
+## <a name="net-core-diagnostic-global-tools"></a>.NET Core tanılama küresel Araçlar
 
 ### <a name="dotnet-counters"></a>dotnet-counters
 
@@ -38,13 +42,21 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 
 [DotNet-dump](dotnet-dump.md) Aracı, yerel bir hata ayıklayıcı olmadan Windows ve Linux temel dökümlerinin toplanması ve çözümlenmesi için bir yoldur.
 
-### <a name="dotnet-gcdump"></a>DotNet-gcdump
+### <a name="dotnet-gcdump"></a>dotnet-gcdump
 
 [DotNet-gcdump](dotnet-gcdump.md) Aracı, canlı .net işlemlerinin GC (çöp toplayıcısı) dökümlerini toplamanın bir yoludur.
 
 ### <a name="dotnet-trace"></a>dotnet-trace
 
 .NET Core, `EventPipe` Tanılama verilerinin sunulmasına ilişkin ne DENlerin dahil olduğunu içerir. [DotNet-Trace](dotnet-trace.md) Aracı, uygulamanızın yavaş çalışan uygulamaların yavaşlamasına neden olması gereken senaryolarda yardımcı olabilecek, uygulamanızda ilgi çekici profil oluşturma verilerini kullanmanıza olanak tanır.
+
+### <a name="dotnet-symbol"></a>DotNet-symbol
+
+[DotNet-symbol](dotnet-symbol.md) dosyaları indirir (semboller, dac/DBI, ana bilgisayar dosyaları vb.) temel döküm veya mini döküm açmak için gereklidir. Farklı bir makinede yakalanan bir döküm dosyasında hata ayıklaması yapmak için semboller ve modüller gerekiyorsa bu aracı kullanın.
+
+### <a name="dotnet-sos"></a>DotNet-sos
+
+[DotNet-sos](dotnet-sos.md) , Linux veya MacOS 'a (veya daha eski hata ayıklama araçları kullanılıyorsa Windows 'A) [sos hata ayıklama uzantısını](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension) yüklemek için kullanılır.
 
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core tanılama öğreticileri
 

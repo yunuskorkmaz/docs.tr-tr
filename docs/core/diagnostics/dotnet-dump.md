@@ -2,12 +2,12 @@
 title: DotNet-dump-.NET Core
 description: DotNet-dump komut satırı aracını yükleme ve kullanma.
 ms.date: 10/14/2019
-ms.openlocfilehash: 5489011538a4a11d60b333f0230a718c88722c97
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: e008dcfc734a8742c495ea32a7a149c9a55c54c6
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89140938"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598104"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Döküm toplama ve çözümleme yardımcı programı (DotNet-dump)
 
@@ -71,14 +71,15 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Kaynağından bir bellek dökümü toplanacak işlem KIMLIĞI sayısını belirtir.
 
-- **`--type <Heap|Mini>`**
+- **`--type <Full|Heap|Mini>`**
 
-  İşlemden toplanan bilgi türlerini belirleyen döküm türünü belirtir. İki tür vardır:
+  İşlemden toplanan bilgi türlerini belirleyen döküm türünü belirtir. Üç tür vardır:
 
+  - `Full` -Modül görüntüleri dahil olmak üzere tüm belleği içeren en büyük döküm.
   - `Heap` -Modül listelerini, iş parçacığı listelerini, tüm yığınları, özel durum bilgilerini, tanıtıcı bilgilerini ve eşlenmiş görüntüler hariç tüm belleği içeren büyük ve görece kapsamlı bir döküm.
   - `Mini` -Modül listelerini, iş parçacığı listelerini, özel durum bilgilerini ve tüm yığınları içeren küçük bir döküm.
 
-  Belirtilmemişse, `Heap` varsayılandır.
+  Belirtilmemişse, `Full` varsayılandır.
 
 - **`-o|--output <output_dump_path>`**
 

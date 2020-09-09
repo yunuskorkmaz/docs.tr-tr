@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 87f9cc03f334233ef286abd11e6f5ff82d7988c2
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 4e937f56f6315ce2abf76dd56989f4d2c4059f22
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811359"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598083"
 ---
-### <a name="ca1831-use-asspan-or-asmemory-instead-of-range-based-indexer"></a>CA1831 Aralık tabanlı dizin oluşturucu yerine AsSpan veya AsMemory kullanın
+### <a name="ca1831-use-asspan-instead-of-range-based-indexers-for-string"></a>CA1831: dize için Aralık tabanlı dizin oluşturucular yerine AsSpan kullanın
 
 .Net Code Analyzer Rule [CA1831](/visualstudio/code-quality/ca1831) , varsayılan olarak .NET 5,0 ' den başlayarak etkindir. Bir <xref:System.Range> dizede kullanılan bir dizin oluşturucunun kullanıldığı, ancak herhangi bir kopyanın istendiği herhangi bir kod için derleme uyarısı üretir.
 
@@ -14,13 +14,13 @@ ms.locfileid: "88811359"
 
 .NET SDK, .NET 5,0 'den başlayarak [.net kaynak kodu Çözümleyicileri](../../../../docs/fundamentals/productivity/code-analysis.md)içerir. Bu kuralların bazıları varsayılan olarak [CA1831](/visualstudio/code-quality/ca1831)dahil olmak üzere etkindir. Projeniz bu kuralı ihlal eden ve uyarıları hata olarak işleyecek şekilde yapılandırılan kodu içeriyorsa, bu değişiklik yapınızı bozabilir.
 
-Rule CA1831 <xref:System.Range> , bir dize üzerinde bir-tabanlı dizin oluşturucunun kullanıldığı, ancak hiçbir kopyanın istendiği örnekleri bulur. <xref:System.Range>-Tabanlı dizin oluşturucu örtük bir tür oluşturmak için doğrudan bir dize üzerinde kullanılıyorsa, dizenin istenen bölümünün gereksiz bir kopyası oluşturulur. Örnek:
+Rule CA1831 <xref:System.Range> , bir dize üzerinde bir-tabanlı dizin oluşturucunun kullanıldığı, ancak hiçbir kopyanın istendiği örnekleri bulur. <xref:System.Range>-Tabanlı dizin oluşturucu örtük bir tür oluşturmak için doğrudan bir dize üzerinde kullanılıyorsa, dizenin istenen bölümünün gereksiz bir kopyası oluşturulur. Örneğin:
 
 ```csharp
 ReadOnlySpan<char> slice = str[1..3];
 ```
 
-CA1831 <xref:System.Range> , bunun yerine dizenin bir *aralığında* tabanlı dizin oluşturucuyu kullanmayı önerir. Örnek:
+CA1831 <xref:System.Range> , bunun yerine dizenin bir *aralığında* tabanlı dizin oluşturucuyu kullanmayı önerir. Örneğin:
 
 ```csharp
 ReadOnlySpan<char> slice = str.AsSpan()[1..3];
@@ -32,7 +32,7 @@ ReadOnlySpan<char> slice = str.AsSpan()[1..3];
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-- Kodunuzu düzeltmek ve gereksiz ayırmaları önlemek için <xref:System.MemoryExtensions.AsSpan(System.String)> <xref:System.MemoryExtensions.AsMemory(System.String)> tabanlı dizin oluşturucuyu kullanmadan önce veya ' i çağırın <xref:System.Range> . Örnek:
+- Kodunuzu düzeltmek ve gereksiz ayırmaları önlemek için <xref:System.MemoryExtensions.AsSpan(System.String)> <xref:System.MemoryExtensions.AsMemory(System.String)> tabanlı dizin oluşturucuyu kullanmadan önce veya ' i çağırın <xref:System.Range> . Örneğin:
 
   ```csharp
   ReadOnlySpan<char> slice = str.AsSpan()[1..3];

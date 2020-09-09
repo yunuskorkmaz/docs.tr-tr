@@ -1,15 +1,15 @@
 ---
 title: SDK stilindeki projelerde hedef çerçeveler-.NET
-description: .NET Core Uygulamaları ve kitaplıkları için hedef çerçeveler hakkında bilgi edinin.
-ms.date: 12/03/2019
+description: .NET uygulamaları ve kitaplıkları için hedef çerçeveler hakkında bilgi edinin.
+ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: c1fd3a6fe07526d9f6828851c591ed0155c79a19
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 9c5d3605f893072b2a5e84751e3657152ac0213e
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87164307"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598156"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -17,30 +17,30 @@ Bir uygulamayı veya kitaplığı içinde bir çerçeveyi hedeflediğinizde, uyg
 
 Bir uygulama veya kitaplık [.NET Standard](net-standard.md)bir sürümünü hedefleyebilir. .NET Standard sürümler tüm .NET uygulamalarında standartlaştırılmış API kümelerini temsil eder. Örneğin, bir kitaplık .NET Standard 1,6 ' i hedefleyebilir ve aynı kod tabanını kullanarak .NET Core ve .NET Framework üzerinde çalışır olan API 'lere erişim elde edebilir.
 
-Uygulama veya kitaplık, uygulamaya özel API 'lere erişim kazanmak için belirli bir .NET uygulamasını da hedefleyebilir. Örneğin, Xamarin. iOS 'u hedefleyen bir uygulama (örneğin, `Xamarin.iOS10` ) iOS 10 Için Xamarin tarafından sağlanmış IOS API sarmalayıcılarını veya Evrensel Windows platformu (UWP,) hedefleyen bir uygulamanın `uap10.0` Windows 10 çalıştıran cihazlar Için derlenen API 'lere erişimi vardır.
+Uygulama veya kitaplık, uygulamaya özel API 'lere erişim kazanmak için belirli bir .NET uygulamasını da hedefleyebilir. Örneğin, Xamarin. iOS 'u hedefleyen bir uygulama (örneğin, `Xamarin.iOS10` ), iOS 10 Için Xamarin tarafından sağlanmış IOS API sarmalayıcılarını veya Evrensel Windows platformu (UWP,) hedefleyen bir uygulamanın `uap10.0` Windows 10 çalıştıran cihazlar için derleme yapan API 'lere erişimi vardır.
 
 Bazı hedef çerçeveler için (örneğin, .NET Framework), API 'Ler Framework 'ün bir sisteme yüklediği derlemeler tarafından tanımlanır ve uygulama çerçevesi API 'Lerini (örneğin, ASP.NET) içerebilir.
 
 Paket tabanlı hedef çerçeveler için (örneğin, .NET Standard ve .NET Core), API 'Ler uygulamaya veya kitaplığa dahil edilen paketler tarafından tanımlanır. *Metapackage* , kendi içeriğine sahip olmayan ancak bağımlılıklar (diğer paketler) listesi olan bir NuGet paketidir. NuGet paket tabanlı bir hedef çerçeve, bir arada çerçeveyi oluşturan tüm paketlere başvuran bir metapackage öğesini örtülü olarak belirler.
 
-## <a name="latest-target-framework-versions"></a>En son hedef Framework sürümleri
+## <a name="latest-versions"></a>En son sürümler
 
 Aşağıdaki tablo, en yaygın hedef çerçeveleri, nasıl başvurulduğunu ve [.NET Standard](net-standard.md) hangi sürümünün uygulandığını tanımlar. Bu hedef Framework sürümleri, en son kararlı sürümleridir. Yayın öncesi sürümler gösterilmez. Hedef çerçeve bilinen adı (tfd), bir .NET uygulaması veya kitaplığının hedef çerçevesini belirtmek için standartlaştırılmış bir belirteç biçimidir.
 
-| Hedef Çerçeve      | En son <br/> Kararlı sürüm | Hedef çerçeve bilinen adı (tfd) | Uygulanan <br/> .NET Standard sürümü |
-| :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
+| Hedef çerçeve      | En son <br/> kararlı sürüm | Hedef çerçeve bilinen adı (tfd) | Uygulanan <br/> .NET Standard sürümü |
+| :-: | :-: | :-: | :-: |
 | .NET Standard         | 2.1                         | Netstandard 2.1                 | Yok                                     |
 | .NET Core             | 3,1                         | netcoreapp 3.1                  | 2.1                                     |
-| .NET Framework        | 4,8                         | net48                          | 2,0                                     |
+| .NET Framework        | 4,8                         | net48                          | 2.0                                     |
 
-## <a name="supported-target-framework-versions"></a>Desteklenen hedef Framework sürümleri
+## <a name="supported-target-frameworks"></a>Desteklenen hedef çerçeveler
 
-Bir hedef çerçeveye genellikle tfd tarafından başvurulur. Aşağıdaki tabloda .NET Core SDK ve NuGet istemcisi tarafından desteklenen hedef çerçeveler gösterilmektedir. Eşdeğerleri köşeli ayraç içinde gösterilir. Örneğin, `win81` ile eşdeğer BIR TFı vardır `netcore451` .
+Bir hedef çerçeveye genellikle tfd tarafından başvurulur. Aşağıdaki tabloda .NET SDK ve NuGet istemcisi tarafından desteklenen hedef çerçeveler gösterilmektedir. Eşdeğerleri köşeli ayraç içinde gösterilir. Örneğin, `win81` ile eşdeğer BIR TFı vardır `netcore451` .
 
 | Hedef Çerçeve           | TFM |
 | -------------------------- | --- |
+| .NET 5 (ve .NET Core)     | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0<br>netcoreapp 3.1<br>NET 5.0 * |
 | .NET Standard              | Netstandard 1.0<br>Netstandard 1.1<br>Netstandard 1.2<br>Netstandard 1.3<br>Netstandard 1.4<br>Netstandard 1.5<br>Netstandard 1.6<br>Netstandard 2.0<br>Netstandard 2.1 |
-| .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows Mağazası              | netcore [netcore45]<br>netcore45 [Win] [Win8]<br>netcore451 [win81] |
 | .NET mikro Framework       | netmf |
@@ -48,16 +48,35 @@ Bir hedef çerçeveye genellikle tfd tarafından başvurulur. Aşağıdaki tablo
 | Windows Phone              | WP [WP7]<br>wp7<br>wp75<br>WP8<br>wp81<br>wpa81 |
 | Evrensel Windows Platformu | UAP [UAP 10.0]<br>UAP 10.0 [win10] [netcore50] |
 
-## <a name="how-to-specify-target-frameworks"></a>Hedef çerçeveleri belirtme
+\* .NET 5,0 ve üzeri TFMs, işletim sistemine özgü Çeşitlemeler içerir. Daha fazla bilgi için, bkz. [.NET 5 OS 'e özgü TFMs](#net-5-os-specific-tfms).
 
-Hedef çerçeveler, proje dosyanızda belirtilir. Tek bir hedef çerçeve belirtildiğinde, **TargetFramework** öğesini kullanın. Aşağıdaki konsol uygulaması proje dosyası, .NET Core 3,0 ' nin nasıl hedefleyeceğinizi göstermektedir:
+### <a name="net-5-os-specific-tfms"></a>.NET 5 işletim sistemine özgü TFMs
+
+Her .NET 5,0 ve üzeri TFı için, örneğin, `net5.0` işletim sistemine özgü bağlamaları IÇEREN TFI çeşitlemeleri vardır. Bu çeşitlemeler aşağıdaki tabloda gösterilmiştir.
+
+| İşletim sistemine özgü biçim | Örnek        |
+|--------------------|----------------|
+| \<base-tfm>-Android | NET 5.0-Android |
+| \<base-tfm>-iOS     | NET 5.0-iOS     |
+| \<base-tfm>-MacOS   | NET 5.0-MacOS   |
+| \<base-tfm>-tvOS    | NET 5.0-tvOS    |
+| \<base-tfm>-watchOS | NET 5.0-watchOS |
+| \<base-tfm>-Windows | NET 5.0-Windows |
+
+Ayrıca, örneğin, isteğe bağlı bir işletim sistemi sürümü belirtebilirsiniz `net5.0-ios12.0` .
+
+.NET 5 TFMs hakkında daha fazla bilgi için bkz. [.NET 5 ' te hedef çerçeve adları](https://github.com/dotnet/designs/blob/master/accepted/2020/net5/net5.md).
+
+## <a name="how-to-specify-a-target-framework"></a>Hedef çerçeve belirtme
+
+Hedef çerçeveler bir proje dosyasında belirtilir. Tek bir hedef çerçeve belirtildiğinde, **TargetFramework** öğesini kullanın. Aşağıdaki konsol uygulaması proje dosyası, .NET 5,0 'in nasıl hedefleyeceğinizi göstermektedir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -65,7 +84,7 @@ Hedef çerçeveler, proje dosyanızda belirtilir. Tek bir hedef çerçeve belirt
 
 Birden çok hedef çerçeve belirttiğinizde, her bir hedef çerçeve için derlemelere koşullu başvuru yapabilirsiniz. Kodunuzda, *if-then-else* mantığıyla önişlemci sembolleri kullanarak bu derlemelerde koşullu olarak derleyebilirsiniz.
 
-Aşağıdaki kitaplık proje dosyası, `netstandard1.4` .NET Framework (ve) .NET Standard () API 'lerini ve API 'leri `net40` hedefler `net45` . Birden çok hedef çerçeve ile çoğul **Targetçerçeveler** öğesini kullanın. `Condition`Kitaplık iki .NET Framework TFMs için derlendikten sonra, özniteliklere uygulamaya özgü paketleri nasıl dahil edileceğini aklınızda edin:
+Aşağıdaki kitaplık projesi .NET Standard ( `netstandard1.4` ) ve .NET Framework (ve) API 'lerini `net40` hedefler `net45` . Birden çok hedef çerçeve ile çoğul **Targetçerçeveler** öğesini kullanın. Bu `Condition` öznitelikler, kitaplık iki .NET Framework TFMs için derlendiğinde uygulamaya özgü paketleri içerir:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -88,7 +107,7 @@ Aşağıdaki kitaplık proje dosyası, `netstandard1.4` .NET Framework (ve) .NET
 </Project>
 ```
 
-Kitaplığınızın veya uygulamanızın içinde her bir hedef çerçeve için derlemek üzere koşullu kod yazarsınız:
+Kitaplığınızda veya uygulamanızda, her bir hedef çerçeve için derlemek üzere [önişlemci yönergelerini](../csharp/language-reference/preprocessor-directives/preprocessor-if.md) kullanarak koşullu kod yazarsınız:
 
 ```csharp
 public class MyClass
@@ -106,7 +125,7 @@ public class MyClass
 }
 ```
 
-Yapı sistemi, SDK stili projeler kullanırken [desteklenen hedef Framework sürümleri](#supported-target-framework-versions) tablosunda gösterilen hedef çerçeveleri temsil eden Önişlemci sembollerinin farkındadır. .NET Standard veya .NET Core tfd 'yi temsil eden bir sembol kullanırken, noktayı alt çizgiyle değiştirin ve küçük harfleri büyük harfe değiştirin (örneğin, sembolü `netstandard1.4` `NETSTANDARD1_4` ).
+Yapı sistemi, SDK stili projeler kullanırken [desteklenen hedef Framework sürümleri](#supported-target-frameworks) tablosunda gösterilen hedef çerçeveleri temsil eden Önişlemci sembollerinin farkındadır. .NET Standard veya .NET Core tfd 'yi temsil eden bir sembol kullanırken, noktayı alt çizgiyle değiştirin ve küçük harfleri büyük harfe değiştirin (örneğin, sembolü `netstandard1.4` `NETSTANDARD1_4` ).
 
 .NET Core hedef çerçeveleri için Önişlemci simgelerinin tüm listesi şunlardır:
 

@@ -4,12 +4,12 @@ description: MSBuild özellikleri ve .NET Core SDK anlayan öğeler için başvu
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 39cbd18121d2b8659b2f5270f39624798f4ebbdc
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 866253a0526741f5554971a5202c179106503951
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810540"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598017"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild başvurusu
 
@@ -26,7 +26,7 @@ Bu sayfa, .NET Core projelerini yapılandırmak için kullanabileceğiniz MSBuil
 
 ### <a name="targetframework"></a>TargetFramework
 
-`TargetFramework`Özelliği, uygulamanın hedef Framework sürümünü belirtir. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).
+`TargetFramework`Özelliği, uygulamanın hedef Framework sürümünü belirtir. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-frameworks).
 
 ```xml
 <PropertyGroup>
@@ -38,7 +38,7 @@ Daha fazla bilgi için bkz. [SDK stili projelerde hedef çerçeveler](../../stan
 
 ### <a name="targetframeworks"></a>Targetçerçeveler
 
-`TargetFrameworks`Uygulamanızın birden çok platformu hedeflemesini istediğinizde özelliğini kullanın. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-framework-versions).
+`TargetFrameworks`Uygulamanızın birden çok platformu hedeflemesini istediğinizde özelliğini kullanın. Geçerli hedef çerçeve takma adların listesi için bkz. [SDK stili projelerde hedef çerçeveler](../../standard/frameworks.md#supported-target-frameworks).
 
 > [!NOTE]
 > `TargetFramework`(Tekil) belirtilmişse bu özellik yoksayılır.
@@ -327,7 +327,7 @@ Uygulamanın proje dosyasında MSBuild özelliklerini belirterek bazı çalışm
 
 `AssetTargetFallback`Özelliği, proje başvuruları ve NuGet paketleri için ek uyumlu çerçeve sürümlerini belirtmenizi sağlar. Örneğin, kullanarak bir paket bağımlılığı belirtirseniz `PackageReference` ancak bu paket, projelerinizle uyumlu olan varlıkları içermiyorsa `TargetFramework` , `AssetTargetFallback` özelliği yürütmeye gelir. Başvurulan paketin uyumluluğu, içinde belirtilen her bir hedef çerçeve kullanılarak yeniden denetlenir `AssetTargetFallback` .
 
-`AssetTargetFallback`Özelliğini bir veya daha fazla [hedef çerçeve sürümüne](../../standard/frameworks.md#supported-target-framework-versions)ayarlayabilirsiniz.
+`AssetTargetFallback`Özelliğini bir veya daha fazla [hedef çerçeve sürümüne](../../standard/frameworks.md#supported-target-frameworks)ayarlayabilirsiniz.
 
 ```xml
 <PropertyGroup>

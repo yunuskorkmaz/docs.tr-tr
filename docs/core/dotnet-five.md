@@ -5,16 +5,16 @@ ms.date: 09/02/2020
 ms.topic: overview
 ms.author: dapine
 author: IEvangelist
-ms.openlocfilehash: 5e8ed371173ff8b81909ceb071ed93c6b0e1eea5
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 9318b1afbe22c97f056bd38732306c6a6b60ad00
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515845"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598120"
 ---
 # <a name="the-evolution-of-net-core-to-net-5"></a>.NET Core 'un .NET 5 sürümüne evrimi
 
-Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te nelerin dahil olduğu açıklanır. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. ASP.NET Core, ASP.NET MVC 5 ile karıştırmamak için "Core" adını korur. Ayrıca, Entity Framework Core "çekirdek" adını Entity Framework 5 ve 6 ile karıştırmamak için korur. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
+Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te yer alan ayrıntılar ayrıntılı olarak verilmiştir. Sürüm numarası, .NET Framework 4. x ile karışıklık oluşmasını önlemek için 5,0. Ve "çekirdek", .NET ' in ana uygulama olduğu için adından bırakılır. ASP.NET Core, ASP.NET MVC 5 ile karıştırmamak için "Core" adını korur. Ayrıca, Entity Framework Core "çekirdek" adını Entity Framework 5 ve 6 ile karıştırmamak için korur. .NET 5, .NET Core veya .NET Framework daha fazla sayıda uygulamayı ve daha fazlasını destekler.
 
 .NET Core 'un bir bütün olarak .NET ekosistemini etkileyici yollarla geliştirmiştir. GitHub 'da açık kaynaklı bir proje olarak, topluluk katkılarını kutluyor ve zaman içinde gelişerek daha fazla iyileştiriliyor.
 
@@ -58,7 +58,7 @@ Bu makalede, .NET Core 'un sonraki sürümü olan 3,1 ' de bulunan .NET 5 ' te n
 
 Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere tüm proje türleri için hedef çerçeve bilinen adını (tfd) belirtebilir. .NET 5 iş yükleri arasında kod paylaşımı, tüm ihtiyacınız olan tfd ' de basitleştirilmiştir `net5.0` .
 
-`net5.0`Tfd, ve adlarını birleştirir ve değiştirir `netcoreapp` `netstandard` . Bu TFM genellikle, .NET Standard gibi, platformlar arası çalışan teknolojileri dahil eder. Ancak, .NET Framework, .NET Core ve .NET 5 iş yükleri arasında kod paylaşmayı planlıyorsanız, `netstandard2.0` TFI olarak belirterek bunu yapabilirsiniz. Daha fazla bilgi için bkz. [hedef çerçeveleri belirtme](../standard/frameworks.md#how-to-specify-target-frameworks).
+`net5.0`Tfd, ve adlarını birleştirir ve `netcoreapp` değiştirir `netstandard` . Bu TFM genellikle, .NET Standard gibi, platformlar arası çalışan teknolojileri dahil eder. Ancak, .NET Framework, .NET Core ve .NET 5 iş yükleri arasında kod paylaşmayı planlıyorsanız, `netstandard2.0` TFI olarak belirterek bunu yapabilirsiniz. Daha fazla bilgi için bkz. [hedef çerçeveleri belirtme](../standard/frameworks.md#how-to-specify-a-target-framework).
 
 ## <a name="language-updates"></a>Dil güncelleştirmeleri
 
@@ -66,7 +66,7 @@ Yeni uygulama geliştirme, `net5.0` sınıf kitaplıkları da dahil olmak üzere
 
 ### <a name="c-updates"></a>C# güncelleştirmeleri
 
-.NET 5 uygulamaları yazan geliştiricilerin en son C# sürümüne ve özelliklerine erişimi olur. .NET 5, C# 9 ile eşleştirilmiş. C# 9, dile birçok yeni özellik getirir, bazı önemli noktalar şunlardır:
+.NET 5 uygulamaları yazan geliştiricilerin en son C# sürümüne ve özelliklerine erişimi olur. .NET 5, dile birçok yeni özellik getiren C# 9 ile eşleştirilmiş. Aşağıda bazı önemli noktalar verilmiştir:
 
 - Kayıtlar: değer türleri gibi davranan ve yeni anahtar sözcüğünü dile tanıtan değişmez başvuru türleri `with` .
 - İlişkisel desen eşleştirme: desen eşleştirme yeteneklerini, karşılaştırma değerlendirmeleri ve ifadeleri için, mantıksal desenler ve yeni anahtar sözcükler `and` ,, ve dahil olmak üzere ilişkisel Işleçlere genişletir `or` `not` .
@@ -92,7 +92,7 @@ F # .NET fonksiyonel programlama dilidir ve .NET 5 ile geliştiricilerin F # 5 '
 
 #### <a name="interpolated-strings"></a>Ara değerli dizeler
 
-C# ' de enterpolasyonlu dizeye benzer ve hatta JavaScript-F #, temel dize ilişkilendirmeyi destekler.
+C# ' de enterpolasyonlu dizeye benzer ve hatta JavaScript, F # temel dize ilişkilendirmeyi destekler.
 
 ```fsharp
 let name = "David"
@@ -114,7 +114,7 @@ Bu, [`sprintf`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-
 
 .NET 5 ' teki Visual Basic için yeni dil özellikleri yoktur. Bununla birlikte, .NET 5 ile Visual Basic desteği şu şekilde genişletilir:
 
-| Description                            | `dotnet new` parametresinin |
+| Açıklama                            | `dotnet new` parametresinin |
 |----------------------------------------|------------------------|
 | Konsol Uygulaması                    | `console`              |
 | Sınıf kitaplığı                          | `classlib`             |

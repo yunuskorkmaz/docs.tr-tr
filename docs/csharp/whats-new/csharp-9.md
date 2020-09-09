@@ -2,14 +2,14 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: a863e544c0fcc8682994f49a464acccafc5ce92f
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: ddffe4aaaed6c9079999b2ab29ca61ab5753f15a
+ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495828"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89598148"
 ---
-# <a name="whats-new-in-c-90"></a>C# 9,0 ' deki yenilikler
+# <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
 C# 9,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 
@@ -24,6 +24,7 @@ C# 9,0, C# diline aşağıdaki özellikleri ve geliştirmeleri ekler:
 - statik anonim işlevler
 - Hedef türü belirlenmiş Koşullu ifadeler
 - Birlikte değişken dönüş türleri
+- `GetEnumerator`Döngüler için uzantı desteği `foreach`
 - Lambda atma parametreleri
 - Yerel işlevlerlerde öznitelikler
 - Modül başlatıcılar
@@ -217,7 +218,7 @@ Bunu şu şekilde çağırabilirsiniz:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="TargetTypeNewArgument":::
 
-Bu özellik için daha iyi bir kullanım, yeni bir nesne başlatmak üzere yalnızca init özellikleriyle birleştirilyöneliktir. Parantez `new` isteğe bağlıdır:
+Bu özellik için bir diğer iyi kullanım, yeni bir nesneyi başlatmak için yalnızca init özellikleriyle birlikte birleştirilmenize yöneliktir:
 
 :::code language="csharp" source="snippets/whats-new-csharp9/FitAndFinish.cs" ID="InitWeatherStation":::
 
@@ -228,6 +229,8 @@ Benzer bir özellik, koşullu ifadelerin hedef tür çözümlemesini geliştirir
 C# 9,0 ' den başlayarak `static` lambda ifadelerine veya anonim yöntemlere değiştiricisini ekleyebilirsiniz. Statik lambda ifadeleri `static` Yerel işlevlere benzerdir: statik bir lambda veya anonim işlev yerel değişkenleri veya örnek durumunu yakalayabilir. `static`Değiştirici yanlışlıkla diğer değişkenleri yakalamaya engel olur.
 
 Covaryant dönüş türleri, geçersiz kılınan işlevlerin dönüş türleri için esneklik sağlar. Geçersiz kılınan bir sanal işlev, temel sınıf yönteminde belirtilen dönüş türünden türetilmiş bir tür döndürebilir. Bu, kayıtlar için ve sanal kopya ya da fabrika yöntemlerini destekleyen diğer türler için yararlı olabilir.
+
+Buna ek olarak, `foreach` döngü, başka bir şekilde onu karşılayan bir genişletme yöntemi tanır ve kullanır `GetEnumerator` `foreach` . Bu değişiklik, `foreach` zaman uyumsuz model ve model tabanlı ayrıştırma gibi diğer model tabanlı kurulumlarını ile tutarlıdır. Uygulamada, bu değişiklik `foreach` herhangi bir türe destek ekleyebileceğiniz anlamına gelir. Bir nesne Numaralandırırken tasarımınızda anlamlı hale geldiğinde kullanımını sınırlamanız gerekir.
 
 Sonra, Lambda ifadelerinde parametre olarak atar ' i kullanabilirsiniz. Bu kolaylık, bağımsız değişkeni adlandırmayı önlemenize olanak sağlar ve derleyici bunu kullanmaktan kaçınabilir. `_`Herhangi bir bağımsız değişken için öğesini kullanırsınız.
 
