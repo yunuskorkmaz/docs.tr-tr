@@ -4,12 +4,12 @@ description: C# ' deki yerel işlevler, başka bir üyede iç içe yerleştirilm
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 854ec7ab4a4cc637c0a5ad03e0344d2f1f7679d2
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: c1c6c6becb3894b05cb9ed89f7f33dcf249b20eb
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063308"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656191"
 ---
 # <a name="local-functions-c-programming-guide"></a>Yerel işlevler (C# Programlama Kılavuzu)
 
@@ -46,7 +46,7 @@ Kendi Yöntem parametreleri de dahil olmak üzere, kapsayan üyede tanımlanan t
 Bir yöntem tanımının aksine, yerel bir işlev tanımı üye erişim değiştiricisini içeremez. Tüm yerel işlevler özel olduğundan, anahtar sözcüğü gibi bir erişim değiştiricisi de dahil olmak üzere, `private` "özel ' değiştiricisi Bu öğe için geçerli değil."
 
 > [!NOTE]
-> C# 8,0 ' den önce yerel işlevler `static` değiştirici içeremez. `static`"Static ' değiştiricisi Bu öğe için geçerli değil, anahtar SÖZCÜĞÜNÜ CS0106 derleyici hatası oluşturuyor."
+> C# 8,0 ' den önce yerel işlevler `static` değiştirici içeremez. `static`Anahtar sözcüğü, "static ' değiştiricisi Bu öğe için geçerli değil." ya da C# 8,0 veya üstünü kullanmanız gerektiğini belirten bir derleyici hatası oluşturur.
 
 Ayrıca, öznitelikler yerel işleve veya parametrelerine ve parametre türüne uygulanamaz.
 
@@ -68,7 +68,7 @@ Bunun yerine, aşağıdaki örnekte gösterildiği gibi, bir yerel işlevden Yin
 
 Yerel işlevler, zaman uyumsuz işlem dışındaki özel durumları işlemek için benzer bir şekilde kullanılabilir. Genellikle, zaman uyumsuz yöntemde oluşturulan özel durumlar, öğesinin iç özel durumlarını incelemenizi gerektirir <xref:System.AggregateException> . Yerel işlevler, kodunuzun hızlı bir şekilde başarısız olmasına olanak tanır ve özel durumun hem zaman uyumlu olarak hem de aynı şekilde gözlemlenip
 
-Aşağıdaki örnek, belirtilen saniye sayısını duraklatmak için adlı zaman uyumsuz bir yöntem kullanır `GetMultipleAsync` ve bu sayıda saniyeden oluşan rastgele bir değer döndürür. En fazla gecikme 5 saniyedir; <xref:System.ArgumentOutOfRangeException>değer 5 ' ten büyükse bir sonuç elde edilir. Aşağıdaki örnekte gösterildiği gibi, yöntemine 6 değeri geçirildiğinde oluşturulan özel durum, `GetMultipleAsync` <xref:System.AggregateException> Yöntem yürütmeye başladıktan sonra bir öğesine kaydırılır `GetMultipleAsync` .
+Aşağıdaki örnek, belirtilen saniye sayısını duraklatmak için adlı zaman uyumsuz bir yöntem kullanır `GetMultipleAsync` ve bu sayıda saniyeden oluşan rastgele bir değer döndürür. En fazla gecikme 5 saniyedir; <xref:System.ArgumentOutOfRangeException> değer 5 ' ten büyükse bir sonuç elde edilir. Aşağıdaki örnekte gösterildiği gibi, yöntemine 6 değeri geçirildiğinde oluşturulan özel durum, `GetMultipleAsync` <xref:System.AggregateException> Yöntem yürütmeye başladıktan sonra bir öğesine kaydırılır `GetMultipleAsync` .
 
 [!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)]
 
@@ -94,7 +94,7 @@ Yerel işlevler, lambda ifadelerinden kesin atama için farklı kurallara sahipt
 
 Belirli atama kuralları, yerel işlev veya lambda ifadesi tarafından yakalanan tüm değişkenleri de etkiler. Yerel işlev veya lambda ifadesi bir temsilciye dönüştürüldüğünde, her iki yerel işlev ve lambda ifadesi kuralı, yakalanan değişkenlerin herhangi bir noktaya kesinlikle atandığını talep edilir. Fark, lambda ifadelerinin bildirildiği zaman temsilcilere dönüştürülmesidir. Yerel işlevler yalnızca temsilci olarak kullanıldığında temsilcilere dönüştürülür. Yerel bir işlev bildirirseniz ve yalnızca bir yöntem gibi çağırarak buna başvurmanız durumunda, bir temsilciye dönüştürülmez. Bu kural, kapsayan kapsamındaki herhangi bir uygun konumda yerel bir işlev bildirmenize olanak sağlar. Herhangi bir dönüş deyiminden sonra, üst yöntemin sonunda yerel işlevleri bildirmek yaygın bir yöntemdir.
 
-Üçüncü olarak derleyici, yerel işlevlerin kapsayan kapsamda kesin olarak yakalanan değişkenleri atamasını sağlayan statik analiz gerçekleştirebilir. Şu örneği göz önünde bulundurun:
+Üçüncü olarak derleyici, yerel işlevlerin kapsayan kapsamda kesin olarak yakalanan değişkenleri atamasını sağlayan statik analiz gerçekleştirebilir. Bu örneği ele alalım:
 
 ```csharp
 int M()

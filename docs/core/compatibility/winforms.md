@@ -1,41 +1,51 @@
 ---
 title: Windows Forms son değişiklikler
-description: .NET Core için Windows Forms 'deki son değişiklikleri listeler.
-ms.date: 01/08/2020
-ms.openlocfilehash: beb9a42e4b5007f03480cd74f57bbfbbfc3f48b1
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+description: .NET Core ve .NET 5 için Windows Forms 'deki son değişiklikleri listeler.
+ms.date: 09/08/2020
+ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87556252"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656357"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 'deki değişiklikler kesiliyor
 
-Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir. Bu makalede, sunulan .NET Core sürümü tarafından Windows Forms yönelik son değişiklikler listelenir. Bir Windows Forms uygulamasını .NET Framework veya .NET Core 'un önceki bir sürümünden (3,0 veya üzeri) yükseltiyorsanız, bu makale sizin için geçerlidir.
+Sürüm 3,0 ' de .NET Core 'a Windows Forms desteği eklenmiştir. Bu makalede, sunulan .NET sürümüne göre Windows Forms yönelik son değişiklikler listelenir. Bir Windows Forms uygulamasını .NET Framework veya .NET Core 'un önceki bir sürümünden (3,0 veya üzeri) yükseltiyorsanız, bu makale sizin için geçerlidir.
 
 Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [DataGridView ile ilgili API 'Ler artık InvalidOperationException 'yi oluşturur](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
+| [WinForms ve WPF uygulamaları Microsoft. NET. SDK kullanır](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [Durum çubuğu denetimleri kaldırıldı](#removed-status-bar-controls) | 5.0 |
 | [WinForms yöntemleri artık ArgumentException oluşturur](#winforms-methods-now-throw-argumentexception) | 5.0 |
 | [WinForms yöntemleri şimdi ArgumentNullException oluşturur](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
 | [WinForms özellikleri artık ArgumentOutOfRangeException oluşturur](#winforms-properties-now-throw-argumentoutofrangeexception) | 5.0 |
 | [Kaldırılan denetimler](#removed-controls) | 3,1 |
 | [Araç ipucu gösterildiğinde CellFormatting olayı oluşturulmaz](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3,1 |
-| [Control. DefaultFont Segoe UI 9 nk olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt) | 3,0 |
-| [FolderBrowserDialog 'u modernleştirme](#modernization-of-the-folderbrowserdialog) | 3,0 |
-| [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types) | 3,0 |
-| [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3,0 |
-| [DomainUpDown. UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3,0 |
-| [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3,0 |
-| [Donotsupportselectallshortcutınmultilinetextbox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3,0 |
-| [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3,0 |
-| [EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3,0 |
-| [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3,0 |
-| [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3,0 |
+| [Control. DefaultFont Segoe UI 9 nk olarak değiştirildi](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
+| [FolderBrowserDialog 'u modernleştirme](#modernization-of-the-folderbrowserdialog) | 3.0 |
+| [SerializableAttribute bazı Windows Forms türlerinden kaldırıldı](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
+| [AllowUpdateChildControlIndexForTabControls uyumluluk anahtarı desteklenmiyor](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3.0 |
+| [DomainUpDown. UseLegacyScrolling uyumluluk anahtarı desteklenmiyor](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
+| [DoNotLoadLatestRichEditControl uyumluluk anahtarı desteklenmiyor](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3.0 |
+| [Donotsupportselectallshortcutınmultilinetextbox uyumluluk anahtarı desteklenmiyor](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
+| [DontSupportReentrantFilterMessage uyumluluk anahtarı desteklenmiyor](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
+| [EnableVisualStyleValidation uyumluluk anahtarı desteklenmiyor](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
+| [UseLegacyContextMenuStripSourceControlValue uyumluluk anahtarı desteklenmiyor](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
+| [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
+
+***
+
+[!INCLUDE [sdk-and-target-framework-change](../../../includes/core-changes/windowsforms/5.0/sdk-and-target-framework-change.md)]
+
+***
 
 [!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
 

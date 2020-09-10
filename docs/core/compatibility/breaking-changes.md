@@ -2,12 +2,12 @@
 title: Yeni değişiklikler
 description: .NET Core 'un her sürümündeki son değişiklikler hakkında bilgi edinin.
 ms.date: 11/27/2019
-ms.openlocfilehash: 73c1576aa92f0e236ead0ca1a12ac26efcbf3cbe
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: eea6542acb9fa659af764bfd3a2af00fd9740191
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810904"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656281"
 ---
 # <a name="breaking-change-selectors"></a>Son değişiklik seçicileri
 
@@ -43,6 +43,7 @@ Aşağıdaki sürüm ve alan seçicileri, .NET Core 'un farklı sürümleri, ASP
 > - [Serileştirme](serialization.md)
 > - [Visual Basic](visualbasic.md)
 > - [Windows Forms](winforms.md)
+> - [WPF](wpf.md)
 
 ## <a name="github-issues-and-announcements"></a>GitHub sorunları ve duyuruları
 

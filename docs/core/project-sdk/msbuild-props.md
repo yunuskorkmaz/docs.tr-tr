@@ -4,12 +4,12 @@ description: MSBuild özellikleri ve .NET Core SDK anlayan öğeler için başvu
 ms.date: 02/14/2020
 ms.topic: reference
 ms.custom: updateeachrelease
-ms.openlocfilehash: 866253a0526741f5554971a5202c179106503951
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: c1093a0acd5b75ae6478767d690966a30fe84a31
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598017"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656268"
 ---
 # <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK projeleri için MSBuild başvurusu
 
@@ -188,9 +188,27 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 | `5.0` | .NET 5,0 sürümü için etkinleştirilen kurallar kümesi, daha yeni kurallar kullanılabilir olsa bile kullanılır. |
 | `5` | .NET 5,0 sürümü için etkinleştirilen kurallar kümesi, daha yeni kurallar kullanılabilir olsa bile kullanılır. |
 
+### <a name="analysismode"></a>AnalysisMode
+
+.NET SDK, .NET 5,0 RC2 'den başlayarak ["CA" kod kalitesi kurallarıyla](/visualstudio/code-quality/code-analysis-for-managed-code-warnings)birlikte gönderilir. Varsayılan olarak, yalnızca [bazı kurallar](../../fundamentals/productivity/code-analysis.md#enabled-rules) derleme uyarıları olarak etkinleştirilir. `AnalysisMode`Özelliği, varsayılan olarak etkinleştirilen kuralların kümesini özelleştirmenizi sağlar. Daha Agresif (geri çevirme) çözümleme moduna veya daha koruyucu (katılım) analiz moduna geçebilirsiniz. Örneğin, varsayılan olarak tüm kuralları derleme uyarıları olarak etkinleştirmek istiyorsanız, değerini olarak ayarlayın `AllEnabledByDefault` .
+
+```xml
+<PropertyGroup>
+  <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+</PropertyGroup>
+```
+
+Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
+
+| Değer | Anlamı |
+|-|-|
+| `Default` | Belirli kuralların derleme uyarıları olarak etkinleştirildiği varsayılan mod, Visual Studio IDE önerisi olarak bazı kurallar etkinleştirilir ve geri kalanı devre dışı bırakılır. |
+| `AllEnabledByDefault` | Tüm kuralların, derleme uyarıları olarak varsayılan olarak etkinleştirildiği agresif veya kabul etme modu. Bağımsız kuralların devre dışı [bırakılacağını seçerek devre dışı bırakabilirsiniz](../../fundamentals/productivity/configure-code-analysis-rules.md) . |
+| `AllDisabledByDefault` | Klasik veya kabul etme modu, tüm kurallar varsayılan olarak devre dışıdır. Bunları etkinleştirmek için tek tek kuralların seçmeli olarak [tercih](../../fundamentals/productivity/configure-code-analysis-rules.md) edebilirsiniz. |
+
 ### <a name="codeanalysistreatwarningsaserrors"></a>CodeAnalysisTreatWarningsAsErrors
 
-`CodeAnalysisTreatWarningsAsErrors`Özelliği, kod analizi uyarılarının uyarı olarak kabul edilip edilmeyeceğini yapılandırmanıza ve derlemeyi kesmesine izin verir. Projelerinizi oluştururken bayrağını kullanırsanız `-warnaserror` , [.NET kod analizi](../../fundamentals/productivity/code-analysis.md) uyarıları da hata olarak kabul edilir. Yalnızca derleyici uyarılarının hata olarak değerlendirilmesini istiyorsanız, `CodeAnalysisTreatWarningsAsErrors` MSBuild özelliğini `false` proje dosyanızda olarak ayarlayabilirsiniz.
+`CodeAnalysisTreatWarningsAsErrors`Özelliği, kod kalitesi analizi uyarılarının (CAxxxx) uyarı olarak değerlendirilip derlenmeyeceğini yapılandırmanıza olanak tanır. Projelerinizi oluştururken bayrağını kullanırsanız `-warnaserror` , [.net Code Quality Analysis](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) uyarıları da hata olarak kabul edilir. Kod kalitesi analiz uyarılarını hata olarak kabul etmek istemiyorsanız, `CodeAnalysisTreatWarningsAsErrors` MSBuild özelliğini `false` proje dosyanızda olarak ayarlayabilirsiniz.
 
 ```xml
 <PropertyGroup>
@@ -200,7 +218,7 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 
 ### <a name="enablenetanalyzers"></a>Enablenetçözümleyiciler
 
-.Net [Code Analysis](../../fundamentals/productivity/code-analysis.md) , .NET 5,0 veya üstünü hedefleyen projeler için varsayılan olarak etkinleştirilmiştir. Özelliği true olarak ayarlayarak .NET 'in önceki sürümlerini hedefleyen projeler için .NET kod analizini etkinleştirebilirsiniz `EnableNETAnalyzers` . Herhangi bir projede kod analizini devre dışı bırakmak için bu özelliği olarak ayarlayın `false` .
+.Net [Code Quality Analysis](../../fundamentals/productivity/code-analysis.md#code-quality-analysis) , .NET 5,0 veya üstünü hedefleyen projeler için varsayılan olarak etkinleştirilmiştir. Özelliğini olarak ayarlayarak .NET 'in önceki sürümlerini hedefleyen projeler için .NET kod analizini etkinleştirebilirsiniz `EnableNETAnalyzers` `true` . Herhangi bir projede kod analizini devre dışı bırakmak için bu özelliği olarak ayarlayın `false` .
 
 ```xml
 <PropertyGroup>
@@ -210,6 +228,18 @@ Aşağıdaki tabloda kullanılabilir seçenekler gösterilmektedir.
 
 > [!TIP]
 > .NET 5,0 ' den önceki .NET sürümlerini hedefleyen projelerde .NET kod analizini etkinleştirmenin bir diğer yolu, [Analysislevel](#analysislevel) özelliğini olarak ayarlamadır `latest` .
+
+### <a name="enforcecodestyleinbuild"></a>Enforcecodestyleınbuild
+
+[.NET kod stili Analizi](../../fundamentals/productivity/code-analysis.md#code-style-analysis) , varsayılan olarak tüm .NET projeleri için derleme üzerinde devre dışıdır. Özelliğini olarak ayarlayarak .NET projeleri için kod stili analizini etkinleştirebilirsiniz `EnforceCodeStyleInBuild` `true` .
+
+```xml
+<PropertyGroup>
+  <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+</PropertyGroup>
+```
+
+Uyarı veya hata olarak [yapılandırılan](../../fundamentals/productivity/code-analysis.md#code-style-analysis) tüm kod stili kuralları, derleme ve rapor ihlalleri üzerinde yürütülür.
 
 ## <a name="run-time-configuration-properties"></a>Çalışma zamanı yapılandırma özellikleri
 

@@ -1,0 +1,350 @@
+- name: LINQ
+  items:
+    - name: LINQ'e genel bakış
+      href: index.md
+    - name: LINQ - XML
+      items:
+        - name: başlarken
+          items:
+            - name: LINQ to XML'e genel bakış
+              href: linq-xml-overview.md
+            - name: LINQ to XML ile DOM Karşılaştırması
+              href: linq-xml-vs-dom.md
+            - name: LINQ to XML ile diğer XML teknolojileri karşılaştırması
+              href: linq-xml-vs-xml-technologies.md
+        - name: Programlama kılavuzu
+          items:
+            - name: LINQ to XML programlamaya genel bakış
+              items:
+                - name: İşlevsel ve yordamsal programlama
+                  href: functional-vs-procedural-programming.md
+                - name: LINQ to XML sınıflarına genel bakış
+                  href: linq-xml-classes-overview.md
+                - name: XElement sınıfına genel bakış
+                  href: xelement-class-overview.md
+                - name: XAttribute sınıfına genel bakış
+                  href: xattribute-class-overview.md
+                - name: XDocument sınıfına genel bakış
+                  href: xdocument-class-overview.md
+                - name: LINQ to XML örnekleri derleme
+                  href: build-linq-xml-examples.md
+            - name: XML ağaçları
+              items:
+                - name: İşlevsel oluşturma
+                  href: functional-construction.md
+                - name: C# içinde XML ağacı oluşturma
+                  href: create-xml-trees.md
+                - name: Visual Basic'teki XML değişmez değerleri
+                  href: xml-literals.md
+                - name: XML ayrıştırma
+                  items:
+                    - name: Dizeyi ayrıştırma
+                      href: parse-string.md
+                    - name: Dosyadan XML yükleme
+                      href: load-xml-file.md
+                    - name: XML yükleme veya ayrıştırma sırasında boşluk koruma
+                      href: preserve-white-space-loading-parsing-xml.md
+                    - name: Ayrıştırma hatalarını yakalama
+                      href: catch-parsing-errors.md
+                    - name: XmlReader’dan ağaç oluşturma
+                      href: create-tree-xmlreader.md
+                    - name: XmlReader’dan XML parçalarının akışını yapma
+                      href: stream-xml-fragments-xmlreader.md
+                - name: XML ağacını XmlWriter ile doldurma
+                  href: populate-xml-tree-xmlwriter.md
+                - name: XSD kullanarak doğrulama
+                  href: validate-xsd.md
+                - name: XElement ve XDocument nesnelerinin geçerli içeriği
+                  href: valid-content-xelement-xdocument-objects.md
+            - name: XML ad alanlarıyla çalışma
+              items:
+                - name: Ad alanlarına genel bakış
+                  href: namespaces-overview.md
+                - name: C# içinde ad alanlarıyla belge oluşturma
+                  href: create-document-namespaces-csharp.md
+                - name: Visual Basic'te ad alanlarıyla belge oluşturma
+                  href: create-document-namespaces-visual-basic.md
+                - name: Ad alanı ön eklerini denetleme
+                  href: control-namespace-prefixes.md
+                - name: Varsayılan ad alanlarının kapsamı
+                  href: scope-default-namespaces.md
+                - name: Visual Basic'te genel ad alanlarıyla çalışma
+                  href: work-global-namespaces.md
+                - name: Ad alanlarında XML üzerinde sorgu yazma
+                  href: write-queries-xml-namespaces.md
+            - name: XML ağaçlarını seri hale getirme
+              items:
+                - name: Seri hale getirme sırasında boşluk koruma
+                  href: preserve-white-space-serializing.md
+                - name: XML bildirimiyle seri hale getirme
+                  href: serialize-xml-declaration.md
+                - name: 'Dosya, TextWriters ve XmlWriters için seri hale getirme'
+                  href: serialize-files-textwriters-xmlwriters.md
+                - name: XmlReader için seri hale getirme (XSLT çağırma)
+                  href: serialize-xmlreader-invoke-xslt.md
+            - name: LINQ to XML eksenleri
+              items:
+                - name: LINQ to XML eksenlerine genel bakış
+                  href: linq-xml-axes-overview.md
+                - name: Öğe koleksiyonunu alma
+                  href: retrieve-collection-elements.md
+                - name: Öğe değerini alma
+                  href: retrieve-value-element.md
+                - name: Öğe adlarını filtreleme
+                  href: filter-element-names.md
+                - name: Zincir eksen yöntem çağrıları
+                  href: chain-axis-method-calls.md
+                - name: Tek bir alt öğeyi alma
+                  href: retrieve-single-child-element.md
+                - name: Öznitelik koleksiyonunu alma
+                  href: retrieve-collection-attributes.md
+                - name: Tek bir özniteliği alma
+                  href: retrieve-single-attribute.md
+                - name: Öznitelik değerini alma
+                  href: retrieve-value-attribute.md
+                - name: Öğenin yüzeysel değerini alma
+                  href: retrieve-shallow-value-element.md
+                - name: Visual Basic'te dille tümleşik eksenler
+                  href: language-integrated-axes.md
+            - name: XML ağaçlarını sorgulama
+              items:
+                - name: XML ağaçlarını sorgulamaya genel bakış
+                  href: query-xml-trees-overview.md
+                - name: Temel sorgular
+                  items:
+                    - name: Belirli bir özniteliğe sahip öğeyi bulma
+                      href: find-element-specific-attribute.md
+                    - name: Belirli bir alt öğeye sahip öğeyi bulma
+                      href: find-element-specific-child-element.md
+                    - name: XDocument ile XElement sorgusu karşılaştırması
+                      href: query-xdocument-vs-query-xelement.md
+                    - name: Belirli bir öğe adına sahip alt öğeleri bulma
+                      href: find-descendants-specific-element-name.md
+                    - name: Descendants metodunu kullanarak tek bir alt öğeyi bulma
+                      href: find-single-descendant-descendants-method.md
+                    - name: Karmaşık filtreleme ile sorgu yazma
+                      href: write-queries-complex-filtering.md
+                    - name: İsteğe bağlı öğeyi filtreleme
+                      href: filter-optional-element.md
+                    - name: Ad alanındaki tüm düğümleri bulma
+                      href: find-all-nodes-namespace.md
+                    - name: Öğeleri sıralama
+                      href: sort-elements.md
+                    - name: Öğeleri birden çok anahtara göre sıralama
+                      href: sort-elements-multiple-keys.md
+                    - name: Ara değerleri hesaplama
+                      href: calculate-intermediate-values.md
+                    - name: Öğeleri bağlama göre bulan bir sorgu yazma
+                      href: write-query-finds-elements-based-context.md
+                    - name: Boş sorgu sonucu kümelerinin hatalarını ayıklama
+                      href: debug-empty-query-results-sets.md
+                - name: Projeksiyonlar ve dönüşümler
+                  items:
+                    - name: LINQ to XML kullanarak sözlüklerle çalışma
+                      href: work-dictionaries-linq-xml.md
+                    - name: XML ağacının şeklini dönüştürme
+                      href: transform-shape-xml-tree.md
+                    - name: Projeksiyon türünü denetleme
+                      href: control-type-projection.md
+                    - name: Yeni bir türü yansıtma
+                      href: project-new-type.md
+                    - name: Nesne grafını yansıtma
+                      href: project-object-graph.md
+                    - name: Anonim tipi yansıtma
+                      href: project-anonymous-type.md
+                    - name: XML’den metin dosyaları oluşturma
+                      href: generate-text-files-xml.md
+                    - name: CSV dosyalarından XML oluşturma
+                      href: generate-xml-csv-files.md
+                - name: Gelişmiş sorgu teknikleri
+                  items:
+                    - name: İki koleksiyonu birleştirme
+                      href: join-two-collections.md
+                    - name: Gruplandırma kullanarak hiyerarşi oluşturma
+                      href: create-hierarchy-grouping.md
+                    - name: XPath kullanarak LINQ to XML sorgulama
+                      href: query-linq-xml-xpath.md
+                    - name: LINQ to XML eksen metodu yazma
+                      href: write-linq-xml-axis-method.md
+                    - name: C# içinde metinden XML’e akış dönüşümleri gerçekleştirme
+                      href: perform-streaming-transformations-text-xml.md
+                    - name: Bir ağaçtaki tüm düğümleri listeleme
+                      href: list-all-nodes-tree.md
+                    - name: Bir Office Open XML belgesinden paragrafları alma
+                      href: retrieve-paragraphs-office-open-xml-document.md
+                    - name: Bir Office Open XML belgesini değiştirme
+                      href: modify-office-open-xml-document.md
+                    - name: Dosya sisteminden bir XML ağacını doldurma
+                      href: populate-xml-tree-file-system.md
+                - name: XPath kullanıcıları için LINQ to XML
+                  items:
+                    - name: XPath ile LINQ to XML Karşılaştırması
+                      href: comparison-xpath-linq-xml.md
+                    - name: Alt öğe bulma
+                      href: find-child-element.md
+                    - name: Alt öğe listesini bulma
+                      href: find-list-child-elements.md
+                    - name: Kök öğeyi bulma
+                      href: find-root-element.md
+                    - name: Bağımlı öğeleri bulma
+                      href: find-descendant-elements.md
+                    - name: Öznitelik filtreleme
+                      href: filter-attribute.md
+                    - name: İlgili öğeleri bulma
+                      href: find-related-elements.md
+                    - name: Ad alanındaki öğeleri bulma
+                      href: find-elements-namespace.md
+                    - name: Önceki eşdüzeyleri bulma
+                      href: find-preceding-siblings.md
+                    - name: Bir alt öğenin alt öğelerini bulma
+                      href: find-descendants-child-element.md
+                    - name: İki konum yolunun birleşimini bulma
+                      href: find-union-two-location-paths.md
+                    - name: Eşdüzey düğümleri bulma
+                      href: find-sibling-nodes.md
+                    - name: Üst öğenin özniteliğini bulma
+                      href: find-attribute-parent.md
+                    - name: Belirli bir ada sahip eşdüzeylerin özniteliklerini bulma
+                      href: find-attributes-siblings-specific-name.md
+                    - name: Belirli bir özniteliğe sahip öğeleri bulma
+                      href: find-elements-specific-attribute.md
+                    - name: Konuma göre alt öğeleri bulma
+                      href: find-child-elements-based-position.md
+                    - name: Bir önceki eşdüzeyi bulma
+                      href: find-immediate-preceding-sibling.md
+                - name: Saf işlevsel XML dönüşümleri
+                  items:
+                    - name: Saf işlevsel dönüşümlere giriş
+                      href: introduction-pure-functional-transformations.md
+                    - name: Kavramlar ve terimler (işlevsel dönüşüm)
+                      href: concepts-terminology-functional-transformation.md
+                    - name: Fonksiyonel programlama ile kesin programlama karşılaştırması
+                      href: functional-vs-imperative-programming.md
+                    - name: Saf işlevler halinde yeniden düzenleme
+                      href: refactor-pure-functions.md
+                    - name: İşlev dönüşümün uygulanabilirliği
+                      href: applicability-functional-transformation.md
+                    - name: XML işlevsel dönüşümü
+                      href: functional-transformation-xml.md
+                    - name: Ertelenmiş yürütme ve geç değerlendirme
+                      href: deferred-execution-lazy-evaluation.md
+                    - name: Ertelenmiş yürütme örneği
+                      href: deferred-execution-example.md
+                    - name: 'Öğretici: Sorguları birbirine zincirleme (C#)'
+                      items:
+                        - name: Sorguları zincirleme örneği (C#)
+                          href: chain-queries-example.md
+                        - name: Ara gerçekleştirme (C#)
+                          href: intermediate-materialization.md
+                        - name: Standart sorgu işleçlerini birbirine zincirleme (C#)
+                          href: chain-standard-query-operators-together.md
+                    - name: 'Öğretici: WordprocessingML belgesindeki içeriği düzenleme'
+                      items:
+                        - name: WordprocessingML belgelerinin XML şekli
+                          href: xml-shape-wordprocessingml-documents.md
+                        - name: Kaynak Office Open XML belgesi oluşturma
+                          href: create-source-office-open-xml-document.md
+                        - name: Varsayılan paragraf stilini bulma
+                          href: find-default-paragraph-style.md
+                        - name: Paragrafları ve stillerini alma
+                          href: retrieve-paragraphs-styles.md
+                        - name: Paragrafların metnini alma
+                          href: retrieve-text-paragraphs.md
+                        - name: Genişletme yöntemi kullanarak yeniden düzenleme
+                          href: refactor-extension-method.md
+                        - name: Saf işlev kullanarak yeniden düzenleme
+                          href: refactor-pure-function.md
+                        - name: XML’i farklı şekilde yansıtma
+                          href: project-xml-different-shape.md
+                        - name: Word belgelerinde metin bulma
+                          href: find-text-word-documents.md
+                        - name: Office Open XML WordprocessingML belgelerinin ayrıntıları
+                          items:
+                            - name: Stillerle WordprocessingML belgesi
+                              href: wordprocessingml-document-styles.md
+                            - name: WordprocessingML belgesinin stil kısmı
+                              href: style-part-wordprocessingml-document.md
+                            - name: Office Open XML belge kısımları çıkaran örnek
+                              href: example-outputs-office-open-xml-document-parts.md
+            - name: XML ağaçlarını değiştirme
+              items:
+                - name: Bellek içi XML ağacı değişikliği ile işlevsel oluşturma karşılaştırması
+                  href: in-memory-xml-tree-modification-vs-functional-construction.md
+                - name: 'XML ağacına öğe, öznitelik ve düğümler ekleme'
+                  href: add-elements-attributes-nodes-xml-tree.md
+                - name: 'XML ağacındaki öğe, öznitelik ve düğümleri değiştirme'
+                  href: modify-elements-attributes-nodes-xml-tree.md
+                - name: 'XML ağacından öğe, öznitelik ve düğümleri kaldırma'
+                  href: remove-elements-attributes-nodes-xml-tree.md
+                - name: Ad-Değer çiftleri sağlama
+                  href: maintain-name-value-pairs.md
+                - name: Tüm XML ağacının ad alanını değiştirme
+                  href: change-namespace-entire-xml-tree.md
+            - name: Performans
+              items:
+                - name: Zincirlenmiş sorguların performansı
+                  href: performance-chained-queries.md
+                - name: Parçalara ayrılmış XName ve XNamespace nesneleri
+                  href: atomized-xname-xnamespace-objects.md
+                - name: Parçalara ayırma öncesi XName nesneleri
+                  href: pre-atomization-xname-objects.md
+                - name: Statik olarak derlenmiş sorgular
+                  href: statically-compiled-queries.md
+            - name: Gelişmiş LINQ to XML programlama
+              items:
+                - name: LINQ to XML ek açıklamaları
+                  href: linq-xml-annotations.md
+                - name: LINQ to XML olayları
+                  href: linq-xml-events.md
+                - name: Düğümlerle programlama
+                  href: program-nodes.md
+                - name: Bildirim temelli/kesinlik temelli kod hataları karışımı
+                  href: mixed-declarative-imperative-code-bugs.md
+                - name: Üst bilgilere erişim ile XML parçalarının akışını yapma
+                  href: stream-xml-fragments-access-header-information.md
+                - name: Büyük XML belgelerinin akış dönüşümünü gerçekleştirme
+                  href: perform-streaming-transform-large-xml-documents.md
+                - name: Kodlanmış belgeyi okuma ve yazma
+                  href: read-write-encoded-document.md
+                - name: XML ağacı dönüştürmek için XSLT kullanma
+                  href: use-xslt-transform-xml-tree.md
+                - name: XSLT stilindeki LINQ to XML ağaçlarını dönüştürmek için ek açıklamaları kullanma
+                  href: use-annotations-transform-linq-xml-trees-xslt-style.md
+                - name: XElement nesneleri içeren nesne graflarını serileştirme
+                  items:
+                    - name: XmlSerializer kullanarak serileştirme
+                      href: serialize-xmlserializer.md
+                    - name: DataContractSerializer kullanarak serileştirme
+                      href: serialize-datacontractserializer.md
+            - name: LINQ to XML güvenliği
+              href: linq-xml-security.md
+            - name: Örnek XML belgeleri
+              items:
+                - name: 'Örnek XML dosyası: Tipik satın alma siparişi'
+                  href: sample-xml-file-typical-purchase-order.md
+                - name: 'Örnek XML dosyası: Bir ad alanında tipik satın alma siparişi'
+                  href: sample-xml-file-typical-purchase-order-namespace.md
+                - name: 'Örnek XML dosyası: Birden fazla satın alma siparişi'
+                  href: sample-xml-file-multiple-purchase-orders.md
+                - name: 'Örnek XML dosyası: Bir ad alanında birden fazla satın alma siparişi'
+                  href: sample-xml-file-multiple-purchase-orders-namespace.md
+                - name: 'Örnek XML dosyası: Test yapılandırması'
+                  href: sample-xml-file-test-configuration.md
+                - name: 'Örnek XML dosyası: Bir ad alanında test yapılandırması'
+                  href: sample-xml-file-test-configuration-namespace.md
+                - name: 'Örnek XML dosyası: Müşteriler ve siparişler'
+                  href: sample-xml-file-customers-orders.md
+                - name: 'Örnek XSD dosyası: Müşteriler ve siparişler'
+                  href: sample-xsd-file-customers-orders.md
+                - name: 'Örnek XML dosyası: Bir ad alanında müşteriler ve siparişler'
+                  href: sample-xml-file-customers-orders-namespace.md
+                - name: 'Örnek XML dosyası: Sayısal veriler'
+                  href: sample-xml-file-numerical-data.md
+                - name: 'Örnek XML dosyası: Bir ad alanında sayısal veriler'
+                  href: sample-xml-file-numerical-data-namespace.md
+                - name: 'Örnek XML dosyası: Kitaplar'
+                  href: sample-xml-file-books.md
+                - name: 'Örnek XML dosyası: Birleştirilmiş satın alma siparişleri'
+                  href: sample-xml-file-consolidated-purchase-orders.md
+        - name: Başvuru
+          href: reference.md

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 8ee5243258ea1b853b4690b79ec032c46d1b3777
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
+ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803514"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89656151"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
 Bu makalede <xref:System.InvalidCastException> ,, ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yolları anlatılmaktadır <xref:System.MissingMethodException> . Makalede aşağıdaki öneriler ele alınmaktadır:  
@@ -63,7 +63,7 @@ Bu makalede <xref:System.InvalidCastException> ,, ve diğer hatalara yol açabil
   
  <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>Metodu veya yol tarafından yüklenen diğer yöntemlerden birini kullanarak derlemeleri yüklemek aşağıdaki dezavantajlara sahiptir:  
   
-- Aynı kimliğe sahip bir derleme zaten yüklüyse, <xref:System.Reflection.Assembly.LoadFrom%2A> farklı bir yol belirtilmiş olsa bile yüklenen derlemeyi döndürür.  
+- Aynı kimliğe sahip bir derleme yük-from bağlamına zaten yüklenmişse, <xref:System.Reflection.Assembly.LoadFrom%2A> farklı bir yol belirtilmiş olsa bile yüklenen derlemeyi döndürür.  
   
 - Bir derleme ile yüklenmişse <xref:System.Reflection.Assembly.LoadFrom%2A> ve daha sonra varsayılan yükleme bağlamındaki bir derleme, görünen ad ile aynı derlemeyi yüklemeye çalışırsa, yükleme girişimi başarısız olur. Bu, bir derlemenin serisi kaldırıldığında ortaya çıkar.  
   
