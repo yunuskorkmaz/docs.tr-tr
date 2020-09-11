@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 421b1aaf3965bd3aa80c6e09da963404d2a46c09
-ms.sourcegitcommit: ae2e8a61a93c5cf3f0035c59e6b064fa2f812d14
+ms.openlocfilehash: 98dc931e10d5e1a3265ebd6f4e1919a6416e9b27
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89359081"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022941"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -252,7 +252,7 @@ Böylece, her hizmet için yalnızca aynı olacak, tüm çözümü kopyalayacak 
 
 1. Kopyalama işlemi yalnızca ilk kez yürütülür (bir dosya değiştirildiğinde ve yeniden oluşturulduğunda) ve diğer tüm hizmetler için önbelleği kullanacaksanız
 
-2. Büyük görüntü bir ara aşamada gerçekleştiği için, son görüntü boyutunu etkilemez.
+2. Bir ara aşamada daha büyük görüntü bulunduğundan, son görüntü boyutunu etkilemez.
 
 Sonraki önemli iyileştirme, `restore` her eShopOnContainers hizmeti için de farklı olan 17. satırda yürütülen komutu içerir. Bu satırı yalnızca öğesine değiştirirseniz:
 

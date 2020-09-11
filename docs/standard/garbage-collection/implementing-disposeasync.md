@@ -3,19 +3,19 @@ title: DisposeAsync metodu uygulama
 description: Zaman uyumsuz kaynak Temizleme işlemini gerçekleştirmek için DisposeAsync ve Dispomevsimsynccore yöntemlerini nasıl uygulayacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 08/25/2020
+ms.date: 09/10/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 268cea7584040ad92e2da75e5e03112480cda93c
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
+ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053184"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90022915"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
@@ -70,6 +70,18 @@ Tüm korumalı olmayan sınıflar, devralınabileceğinden olası bir temel sın
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/disposeasync.cs":::
 
 Önceki örnekte, kullanılır <xref:System.Text.Json.Utf8JsonWriter> . Hakkında daha fazla bilgi için `System.Text.Json` bkz. [Newtonsoft.Jsüzerinde System.Text.Jsüzerine geçiş](../serialization/system-text-json-migrate-from-newtonsoft-how-to.md).
+
+## <a name="implement-both-dispose-and-async-dispose-patterns"></a>Dispose ve Async Dispose desenleri uygulama
+
+<xref:System.IDisposable> <xref:System.IAsyncDisposable> Özellikle sınıf kapsamınız bu uygulamaların örneklerini içerdiğinde hem hem de arabirimlerini uygulamanız gerekebilir. Bunun yapılması, temizleme çağrılarını doğru bir şekilde basamaklı olarak belirleyebilmenizi sağlar. Her iki arabirimi de uygulayan ve temizleme için uygun Kılavuzu gösteren örnek bir sınıf aşağıda verilmiştir.
+
+:::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
+
+<xref:System.IDisposable.Dispose?displayProperty=nameWithType>Ve <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> uygulamaları hem basit ortak koddur. `Dispose(bool)`Ve `DisposeAsyncCore()` yöntemleri olup olmadığını denetleyerek başlar `_disposed` `true` ve yalnızca olduğunda çalışır `false` .
+
+`Dispose(bool)`Aşırı yükleme yönteminde, <xref:System.IDisposable> örnek koşullu olarak atıldı `null` . <xref:System.IAsyncDisposable>Örnek olarak <xref:System.IDisposable> , ve de `null` aktiften çıkarılmaz. Her iki örnek de öğesine atanır `null` .
+
+`DisposeAsyncCore()`Yöntemiyle aynı mantıksal yaklaşım izlenir. <xref:System.IAsyncDisposable>Örnek değilse `null` , öğesine çağrısı `DisposeAsync().ConfigureAwait(false)` beklenir. <xref:System.IDisposable>Örnek aynı zamanda bir uygulama ise <xref:System.IAsyncDisposable> , zaman uyumsuz olarak da atılmış olur. Her iki örnek de öğesine atanır `null` .
 
 ## <a name="using-async-disposable"></a>Async atılabilir kullanma
 
