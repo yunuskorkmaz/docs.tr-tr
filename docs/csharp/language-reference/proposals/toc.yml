@@ -104,6 +104,8 @@
           href: ../../../../_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md
         - name: Birlikte değişken dönüş türleri
           href: ../../../../_csharplang/proposals/csharp-9.0/covariant-returns.md
+        - name: Foreach döngülerinde GetEnumerator uzantısı
+          href: ../../../../_csharplang/proposals/csharp-9.0/extension-getenumerator.md
         - name: Lambda atma parametreleri
           href: ../../../../_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md
         - name: Yerel işlevlerlerde öznitelikler
