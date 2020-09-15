@@ -1,13 +1,13 @@
 ---
 title: DotNet-sos-.NET Core
-description: DotNet-sos komut satırı aracını yükleme ve kullanma.
+description: DotNet-sos komut satırı aracını yüklemeyi ve kullanmayı öğrenin.
 ms.date: 08/26/2020
-ms.openlocfilehash: 3ce7ca79bbc2c72958d395e9d312e3001ec9fbf8
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: ba83105718909038ca56129ed8a5063aeff12e89
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598353"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065090"
 ---
 # <a name="sos-installer-dotnet-sos"></a>SOS yükleyicisi (DotNet-sos)
 
@@ -27,9 +27,9 @@ dotnet tool install -g dotnet-sos
 dotnet-sos [-h|--help] [options] [command]]
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
-`dotnet-sos`Küresel araç, Windows üzerinde WinDbg/CDB ve Linux ve MacOS 'ta lldb gibi yerel hata ayıklayıcılarından [yönetilen .NET Core durumunun incelemesinin](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) yapılmasına izin veren [sos hata ayıklayıcı uzantısını](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension) da yüklüyor. Windows hata ayıklayıcı 'nın (>= sürüm 10.0.18317.1001) (WinDbg veya CDB) son sürümlerinin SOS 'yi Microsoft uzantı galerisinden otomatik olarak yükleytiğine, bu nedenle aracı aracılığıyla SOS 'in yüklenmesi `dotnet-sos` yalnızca Linux ve MacOS 'ta veya daha eski hata ayıklama araçları kullanılıyorsa Windows 'da gereklidir.
+`dotnet-sos`Küresel araç, Windows üzerinde WinDbg/CDB ve Linux ve macOS 'ta lldb gibi yerel hata ayıklayıcılarından [yönetilen .NET Core durumunun incelemesinin](https://github.com/dotnet/diagnostics/blob/master/documentation/sos-debugging-extension.md) yapılmasına izin veren [sos hata ayıklayıcı uzantısını](../../framework/tools/sos-dll-sos-debugging-extension.md) da yüklüyor. Windows hata ayıklayıcının son sürümleri (>= WinDbg veya CDB 'nin 10.0.18317.1001 sürümü), SOS 'yi Microsoft uzantı Galerisi 'nden otomatik olarak yükler, bu nedenle aracı aracılığıyla SOS yüklemek `dotnet-sos` yalnızca Linux ve macOS 'ta veya daha eski hata ayıklama araçları kullanılıyorsa Windows 'ta gereklidir.
 
 ## <a name="options"></a>Seçenekler
 
@@ -43,7 +43,7 @@ dotnet-sos [-h|--help] [options] [command]]
 
 ## <a name="dotnet-sos-install"></a>DotNet-sos yüklemesi
 
-.NET Core işlemlerinde hata ayıklama kullanımı için [SOS uzantısını yerel olarak](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension) kurar. MacOS ve Linux 'ta, uzantısının lldb başlatması sırasında otomatik olarak yüklenmesi için. lldbinit dosyası güncelleştirilecektir. Daha eski hata ayıklama araçları (< Version 10.0.18317.1001) ile Windows 'a SOS yüklüyorsanız, hata ayıklayıcıda çalıştırarak, uzantıyı WinDbg veya CDB 'de el ile yüklemeniz gerekir `.load %USERPROFILE%\.dotnet\sos\sos.dll` .
+.NET Core işlemlerinde hata ayıklamak için [SOS uzantısını](../../framework/tools/sos-dll-sos-debugging-extension.md) yerel olarak kurar. MacOS ve Linux 'ta, uzantısının lldb başlatması sırasında otomatik olarak yüklenmesi için. lldbinit dosyası güncelleştirilecektir. Daha eski hata ayıklama araçları (< Version 10.0.18317.1001) ile Windows 'a SOS yüklüyorsanız, hata ayıklayıcıda çalıştırarak, uzantıyı WinDbg veya CDB 'de el ile yüklemeniz gerekir `.load %USERPROFILE%\.dotnet\sos\sos.dll` .
 
 ### <a name="synopsis"></a>Özeti
 
@@ -53,7 +53,7 @@ dotnet-sos install
 
 ## <a name="dotnet-sos-uninstall"></a>DotNet-sos kaldır
 
-[SOS uzantısını](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension) kaldırır ve Linux veya MacOS 'ta ise lldb yapılandırmasından kaldırır.
+[SOS uzantısını](../../framework/tools/sos-dll-sos-debugging-extension.md) kaldırır ve Linux veya MacOS 'ta ise lldb yapılandırmasından kaldırır.
 
 ### <a name="synopsis"></a>Özeti
 

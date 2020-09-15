@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: ddffe4aaaed6c9079999b2ab29ca61ab5753f15a
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598148"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065038"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -108,7 +108,7 @@ Yukarıdaki satır, `Person` `LastName` özelliğin bir kopyası olduğu `person
 
 ## <a name="init-only-setters"></a>Yalnızca init ayarlayıcılar
 
-***Init Only Setter*** bir nesnenin üyelerini başlatmak için tutarlı sözdizimi sağlar. Özellik başlatıcıları, hangi değerin hangi özelliği belirleyen üzerinde değişiklik yapmasını sağlar. Downsıde, bu özelliklerin ayarlanabilir olması gerekir. C# 9,0 ' den başlayarak, `init` `set` Özellikler ve Dizin oluşturucular için erişimciler yerine erişimciler oluşturabilirsiniz. Çağıranlar, oluşturma ifadelerinde bu değerleri ayarlamak için özellik başlatıcısı sözdizimini kullanabilir, ancak oluşturma işlemi tamamlandıktan sonra bu özellikler salt okunur yapılır. Init Only ayarlayıcıları, durumu değiştirecek bir pencere sağlar. Bu pencere, oluşturma aşaması sona erdiğinde kapanır. Özellik başlatıcıları ve WITH ifadeleri dahil olmak üzere, oluşturma aşaması, tüm başlatma sonrasında etkili bir şekilde sona erer.
+***Init Only Setter*** bir nesnenin üyelerini başlatmak için tutarlı sözdizimi sağlar. Özellik başlatıcıları, hangi değerin hangi özelliğin ayarlanmasını temizlesin. Downsıde, bu özelliklerin ayarlanabilir olması gerekir. C# 9,0 ' den başlayarak, `init` `set` Özellikler ve Dizin oluşturucular için erişimciler yerine erişimciler oluşturabilirsiniz. Çağıranlar, oluşturma ifadelerinde bu değerleri ayarlamak için özellik başlatıcısı sözdizimini kullanabilir, ancak oluşturma işlemi tamamlandıktan sonra bu özellikler salt okunur yapılır. Init Only ayarlayıcıları, durumu değiştirecek bir pencere sağlar. Bu pencere, oluşturma aşaması sona erdiğinde kapanır. Özellik başlatıcıları ve WITH ifadeleri dahil olmak üzere, oluşturma aşaması, tüm başlatma sonrasında etkili bir şekilde sona erer.
 
 Konumsal kayıtlar için yukarıdaki örnek, WITH ifadesi kullanarak bir özelliği ayarlamak için bir init ayarlayıcı kullanmayı gösterir. Yazdığınız herhangi bir tür için yalnızca init ayarlayıcıları bildirebilirsiniz. Örneğin, aşağıdaki yapı bir hava durumu izleme yapısını tanımlar:
 
@@ -122,7 +122,7 @@ Ancak başlatma sonrasında bir gözlemyi değiştirmek, başlatma dışında ya
 
 ```csharp
 // Error! CS8852.
-now.TempetureInCelsius = 18;
+now.TemperatureInCelsius = 18;
 ```
 
 Yalnızca Init ayarlayıcıları, türetilmiş sınıflardan temel sınıf özellikleri ayarlamak için yararlı olabilir. Ayrıca, bir temel sınıftaki yardımcılar aracılığıyla türetilmiş özellikleri de ayarlayabilir. Konumsal kayıtlar yalnızca init ayarlayıcıları kullanarak özellikleri bildirir. Bu ayarlayıcılar,-ifadelerinde kullanılır. Her türlü veya tanımladığınız için init Only ayarlayıcıları bildirebilirsiniz `class` `struct` .

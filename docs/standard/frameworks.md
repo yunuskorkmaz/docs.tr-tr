@@ -4,12 +4,12 @@ description: .NET uygulamaları ve kitaplıkları için hedef çerçeveler hakk�
 ms.date: 09/08/2020
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9c5d3605f893072b2a5e84751e3657152ac0213e
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: 22689f6c1f161a67978dc0f41c6bc9a6b5acfad7
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89598156"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065259"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK stilindeki projelerde hedef çerçeveler
 
@@ -125,9 +125,9 @@ public class MyClass
 }
 ```
 
-Yapı sistemi, SDK stili projeler kullanırken [desteklenen hedef Framework sürümleri](#supported-target-frameworks) tablosunda gösterilen hedef çerçeveleri temsil eden Önişlemci sembollerinin farkındadır. .NET Standard veya .NET Core tfd 'yi temsil eden bir sembol kullanırken, noktayı alt çizgiyle değiştirin ve küçük harfleri büyük harfe değiştirin (örneğin, sembolü `netstandard1.4` `NETSTANDARD1_4` ).
+Yapı sistemi, SDK stili projeler kullanırken [desteklenen hedef Framework sürümleri](#supported-target-frameworks) tablosunda gösterilen hedef çerçeveleri temsil eden Önişlemci sembollerinin farkındadır. .NET Standard, .NET Core veya .NET 5 tfd 'yi temsil eden bir sembol kullanırken, nokta ve kısa çizgileri alt çizgiyle değiştirin ve küçük harfleri büyük harfe değiştirin (örneğin, sembolü `netstandard1.4` `NETSTANDARD1_4` ).
 
-.NET Core hedef çerçeveleri için Önişlemci simgelerinin tüm listesi şunlardır:
+.NET hedef çerçeveleri için Önişlemci simgelerinin tüm listesi şunlardır:
 
 [!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 

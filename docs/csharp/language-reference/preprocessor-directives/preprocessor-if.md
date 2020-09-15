@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: f01db9d7801d4b6f4c273a9cf82806acbb4828bb
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: dc3e235db49279691203a0db4d124239fb972c69
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89138143"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065246"
 ---
 # <a name="if-c-reference"></a>#if (C# Başvurusu)
 
@@ -40,12 +40,12 @@ Veya ile tanımladığınız bir sembol `-define` `#define` aynı ada sahip bir 
 
 İle oluşturulan sembolün kapsamı, `#define` tanımlandığı dosyadır.
 
-Yapı sistemi, SDK stili projelerde farklı [hedef çerçeveleri](../../../standard/frameworks.md) temsil eden önceden tanımlanmış ön işlemci sembolleri de farkındadır. Birden fazla .NET uygulaması veya sürümü hedefleyebilir uygulamalar oluştururken faydalıdır.
+Yapı sistemi, SDK stili projelerde farklı [hedef çerçeveleri](../../../standard/frameworks.md) temsil eden önceden tanımlanmış ön işlemci sembolleri de farkındadır. Birden fazla .NET sürümü hedefleyebilir uygulamalar oluştururken faydalıdır.
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 > [!NOTE]
-> Geleneksel .NET Framework projelerinde, Visual Studio 'daki farklı hedef çerçeveler için koşullu derleme sembollerini projenin Özellikler sayfaları aracılığıyla el ile yapılandırmanız gerekir.
+> Geleneksel, SDK olmayan projeler için, Visual Studio 'daki farklı hedef çerçeveler için koşullu derleme sembollerini projenin Özellikler sayfaları aracılığıyla el ile yapılandırmanız gerekir.
 
 Önceden tanımlanmış diğer semboller, hata ayıklama ve Izleme sabitlerini içerir. Kullanarak proje için ayarlanan değerleri geçersiz kılabilirsiniz `#define` . Örneğin, hata ayıklama sembolü, derleme yapılandırma özelliklerine ("hata ayıklama" veya "yayın" modu) göre otomatik olarak ayarlanır.
 

@@ -2,12 +2,12 @@
 title: Şifreleme son değişiklikleri
 description: .NET Core ile ilgili şifrelemeye ilişkin önemli değişiklikleri listeler.
 ms.date: 04/22/2020
-ms.openlocfilehash: f7d580938fb7620728b8ff7f67412c9f5bbbb6c3
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 621a3dad28b67ee33056dce3df0379efaeb90776
+ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558015"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90065116"
 ---
 # <a name="cryptography-breaking-changes"></a>Şifreleme son değişiklikleri
 
@@ -16,10 +16,11 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
 | [System. Security. Cryptography. OID yalnızca işlev olarak init](#systemsecuritycryptographyoid-is-functionally-init-only) | 5.0 |
-| [Linux 'ta artık desteklenmeyen GÜVENILEN SERTIFIKA sözdizimini Başlat](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3,0 |
-| [EnvelopedCms varsayılan değer AES-256 şifrelemesi](#envelopedcms-defaults-to-aes-256-encryption) | 3,0 |
-| [RSAOpenSsl anahtar üretimi için en düşük boyut arttı](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3,0 |
-| [.NET Core 3,0 OpenSSL 1.1. x ile OpenSSL 1.0. x tercih eder](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3,0 |
+| [Linux 'ta artık desteklenmeyen GÜVENILEN SERTIFIKA sözdizimini Başlat](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
+| [EnvelopedCms varsayılan değer AES-256 şifrelemesi](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
+| [RSAOpenSsl anahtar üretimi için en düşük boyut arttı](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
+| [.NET Core 3,0 OpenSSL 1.1. x ile OpenSSL 1.0. x tercih eder](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [CryptoStream. Dispose, son bloğu yalnızca yazma sırasında dönüştürür](#cryptostreamdispose-transforms-final-block-only-when-writing) | 3.0 |
 | [SignedCms. ComputeSignature Boolean parametresi dikkate alındı](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-50"></a>.NET 5,0
@@ -43,6 +44,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 ***
 
 [!INCLUDE[.NET Core 3.0 prefers OpenSSL 1.1.x to OpenSSL 1.0.x](~/includes/core-changes/cryptography/3.0/net-core-3-0-prefers-openssl-1-1-x.md)]
+
+***
+
+[!INCLUDE [CryptoStream.Dispose transforms final block only when writing](~/includes/core-changes/cryptography/3.0/cryptography-cryptostream-dispose-final-block-write.md)]
 
 ***
 
