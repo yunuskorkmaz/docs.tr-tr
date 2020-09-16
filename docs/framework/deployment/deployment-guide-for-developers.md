@@ -6,19 +6,19 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 47946121334fe45132a7469894f30081045e3a68
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 5b9d22062d273404c7451beb44e56d3fa5c4aa1d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558835"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558751"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Geliştiriciler için .NET Framework dağıtım kılavuzu
 Bu konu, .NET Framework .NET Framework 4,5 ' den uygulamalarına herhangi bir sürümünü yüklemek isteyen geliştiriciler için bilgi sağlamaktadır [!INCLUDE[net_current](../../../includes/net-current-version.md)] .
 
 İndirme sayfalarından .NET Framework için yeniden dağıtılabilir paketleri ve dil paketlerini indirebilirsiniz:
 
-- [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -43,9 +43,9 @@ Bu konu, .NET Framework .NET Framework 4,5 ' den uygulamalarına herhangi bir s�
 
 - Kullanıcılarınız .NET Framework 4,5 ' den başlayarak, kurulum sırasında çalışan .NET Framework uygulamalarının bir listesini görüntüleyebilir ve kolayca kapatabilir. Bu, .NET Framework yüklemelerinin neden olduğu sistem yeniden başlatmalarının önlenmesine yardımcı olabilir. Bkz. [sistem yeniden başlatmaları azaltma](reducing-system-restarts.md).
 
-- .NET Framework 4,5 veya sonraki sürümlerin kaldırılması, önceden var olan .NET Framework 4 dosyalarını da kaldırır. .NET Framework 4 ' e geri dönmek istiyorsanız, bu dosyayı ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir. Bkz. [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))' ü yükleme.
+- .NET Framework 4,5 veya sonraki sürümlerin kaldırılması, önceden var olan .NET Framework 4 dosyalarını da kaldırır. .NET Framework 4 ' e geri dönmek istiyorsanız, bu dosyayı ve tüm güncelleştirmeleri yeniden yüklemeniz gerekir. Bkz. [.NET Framework 4](/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))' ü yükleme.
 
-- .NET Framework 4,5 yeniden dağıtılabilir, dijital bir sertifikada yanlış bir zaman damgasıyla ilgili bir sorunu düzeltmek için 9 Ekim 2012 tarihinde güncelleştirildi. Bu, Microsoft tarafından oluşturulan ve imzalanan dosyalardaki dijital imzanın erken süre sonu dolmasına neden olur. Daha önce 16 Ağustos 2012 tarihli .NET Framework 4,5 yeniden dağıtılabilir paketini yüklediyseniz, [.NET Framework indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-framework/net45)kopyanızı en son yeniden dağıtılabilir ile güncelleştirmenizi öneririz. Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Güvenlik Danışmanlığı 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
+- .NET Framework 4,5 yeniden dağıtılabilir, dijital bir sertifikada yanlış bir zaman damgasıyla ilgili bir sorunu düzeltmek için 9 Ekim 2012 tarihinde güncelleştirildi. Bu, Microsoft tarafından oluşturulan ve imzalanan dosyalardaki dijital imzanın erken süre sonu dolmasına neden olur. Daha önce 16 Ağustos 2012 tarihli .NET Framework 4,5 yeniden dağıtılabilir paketini yüklediyseniz, [.NET Framework indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-framework/net45)kopyanızı en son yeniden dağıtılabilir ile güncelleştirmenizi öneririz. Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Güvenlik Danışmanlığı 2749655](/security-updates/SecurityAdvisories/2012/2749655).
 
 Bir sistem yöneticisinin .NET Framework ve sistem bağımlılıklarını bir ağ üzerinden nasıl dağıtabilirim hakkında bilgi için bkz. [Yöneticiler Için dağıtım kılavuzu](guide-for-administrators.md).
 
@@ -176,7 +176,7 @@ Her iki yöntem de web yükleyicisini veya çevrimdışı yükleyiciyi kullanman
 
 `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso`
 
-Yüklemeyi özelleştirmek için ek komut satırı seçeneklerini kullanabilirsiniz. Örneğin:
+Yüklemeyi özelleştirmek için ek komut satırı seçeneklerini kullanabilirsiniz. Örnek:
 
 - Kullanıcıların, sistem yeniden başlatmaları en aza indirmek için .NET Framework uygulamaları kapatmalarının bir yolunu sağlamak için Pasif modu ayarlayın ve `/showrmui` seçeneği aşağıdaki gibi kullanın:
 
@@ -261,7 +261,7 @@ Yükleme başarılı olduğunda .NET Framework yükleyicisi kayıt defteri anaht
 | | |
 |-|-|
 | Anahtar | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Adı | Yayınla |
+| Name | Yayınla |
 | Tür | DWORD |
 
 4,5 ile 4.7.2 arasında .NET Framework belirli bir sürümü için dil paketinin son sürümünün yüklenip yüklenmediğini saptamak için, önceki bölümde açıklanan yayın anahtarı DWORD değerinin değerini denetleyin ve [.NET Framework](#detect_net)tespit edin.
@@ -272,7 +272,7 @@ Yükleme başarılı olduğunda .NET Framework yükleyicisi kayıt defteri anaht
 
 .NET Framework belirli kültürler için yerelleştirilmiş kaynakları içeren tek başına dil paketi yürütülebilir dosyaları kümesi sağlar. Dil paketleri Indir .NET Framework sayfalarından edinilebilir:
 
-- [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -345,11 +345,11 @@ Aşağıdaki tabloda, .NET Framework 4,5 yeniden dağıtılabilir öğesini uygu
 |Seçenek|Açıklama|
 |------------|-----------------|
 |**/Ceiponayı**|Varsayılan davranışın üzerine yazar ve gelecekteki dağıtım deneyimlerini geliştirmek üzere Microsoft 'a anonim geri bildirim gönderir. Bu seçenek, yalnızca kurulum programı onay isterse ve Kullanıcı Microsoft 'a anonim geri bildirim gönderme izni veriyorsa kullanılabilir.|
-|**/ChainingPackage**`packageName`|Zincirlemeyi yapan yürütülebilir dosyanın adını belirtir. Bu bilgiler, gelecekteki dağıtım deneyimlerini iyileştirmenize yardımcı olmak için anonim geri bildirim olarak Microsoft 'a gönderilir.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "Lucerne Publishing"**. Bir zincir paketi örneği için bkz. [bir yükleme paketinden Ilerleme bilgisi alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).|
+|**/ChainingPackage**`packageName`|Zincirlemeyi yapan yürütülebilir dosyanın adını belirtir. Bu bilgiler, gelecekteki dağıtım deneyimlerini iyileştirmenize yardımcı olmak için anonim geri bildirim olarak Microsoft 'a gönderilir.<br /><br /> Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "Lucerne Publishing"**. Bir zincir paketi örneği için bkz. [bir yükleme paketinden Ilerleme bilgisi alma](/previous-versions/cc825975(v=vs.100)).|
 |**/LCıD**  `LCID`<br /><br /> Burada `LCID` bir yerel ayar tanımlayıcı (bkz. [desteklenen diller](#supported-languages))|Tarafından belirtilen dil paketini yüklenir `LCID` ve sessiz mod ayarlanmadığı takdirde görüntülenen kullanıcı arabirimini o dilde gösterilecek şekilde zorlar.<br /><br /> Web Yükleyicisi için bu seçenek zinciri, dil paketini Web 'den kurar. **Note:**  Bu seçeneği yalnızca Web yükleyicisiyle kullanın.|
 |**/log** `file` &#124; `folder`|Günlük dosyasının konumunu belirtir. Varsayılan, işlemin geçici klasörüdür ve varsayılan dosya adı pakete dayalıdır. Dosya uzantısı. txt ise, bir metin günlüğü üretilir. Başka bir uzantıyı veya uzantıyı belirtirseniz, bir HTML günlüğü oluşturulur.|
 |**/msioptions**|. Msi ve. msp öğeleri için geçirilecek seçenekleri belirtir; Örneğin: `/msioptions "PROPERTY1='Value'"` .|
-|**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulamanın dönüş kodunu yakalaması ve yeniden başlatma işlemini işlemesi gerekir (bkz. [bir yükleme paketinden Ilerleme bilgilerini alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))).|
+|**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, zincirleme uygulamanın dönüş kodunu yakalaması ve yeniden başlatma işlemini işlemesi gerekir (bkz. [bir yükleme paketinden Ilerleme bilgilerini alma](/previous-versions/cc825975(v=vs.100))).|
 |**/passive**|Pasif modu ayarlar. Yüklemenin devam ettiğini belirten, ancak kullanıcıya hiçbir istem veya hata iletisi görüntülemediğini belirten ilerleme çubuğunu görüntüler. Bu modda, bir kurulum programı tarafından zincirleme yaparken, zincirleme paketi [dönüş kodlarını](#return-codes)işlemelidir.|
 |**/Pipe**|Bir zincir oluşturma paketinin ilerlemesini sağlamak için bir iletişim kanalı oluşturur.|
 |**/promptrestart**|Yalnızca Pasif mod, Kurulum programı yeniden başlatma gerektiriyorsa, kullanıcıya sorar. Yeniden başlatma gerekirse bu seçenek kullanıcı etkileşimini gerektirir.|
@@ -364,7 +364,7 @@ Aşağıdaki tabloda, .NET Framework 4,5 yeniden dağıtılabilir öğesini uygu
 
 Aşağıdaki tabloda, .NET Framework 4,5 ve sonraki sürümleri için kullanılabilen dil paketleri listelenmektedir .NET Framework.
 
-|LCID|Dil – ülke/bölge|Culture (Kültür)|
+|LCID|Dil – ülke/bölge|Kültür|
 |----------|--------------------------------|-------------|
 |1025|Arapça-Suudi Arabistan|Ar|
 |1028|Çince – Geleneksel|zh-Hant|

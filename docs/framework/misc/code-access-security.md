@@ -16,12 +16,12 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-ms.openlocfilehash: 49d55ffde3dcb88720f47af6f9702013d8a7f1ee
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: b5c32afb26c7b4bf7f8585c43ac11e57ebb5d015
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855874"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554872"
 ---
 # <a name="code-access-security"></a>Kod Erişimi Güvenliği
 
@@ -34,7 +34,7 @@ ms.locfileid: "87855874"
  .NET Framework, bilgisayar sistemlerinin kötü amaçlı mobil koddan korunmasına yardımcı olmak için kod erişim güvenliği adlı bir güvenlik mekanizması sağlar, bilinmeyen kaynaklardan gelen kodun koruma ile çalışmasına izin vermek ve güvenilen kodun kasıtlı veya yanlışlıkla güvenliği tehlikeye atmasını önlemeye yardımcı olur. Kod erişim güvenliği, kodun kaynaklandığı ve kodun kimliğinin diğer yönlerine bağlı olarak kodun farklı derecelerde güvenilir olmasını sağlar. Kod erişimi güvenliği, kod üzerinde farklı güven düzeyleri de uygular ve bu da çalışması için tam güvenilir olması gereken kod miktarını en aza indirir. Kod erişim güvenliğini kullanmak, kodunuzun kötü amaçlı veya hata doldurulmuş kod ile kötüye kullanılması olasılığını azaltabilir. Kodunuzun gerçekleştirmesine izin verilmesi gereken işlem kümesini belirtebileceğiniz için yükümlülük azalmasına olanak sağlayabilir. Kod erişimi güvenliği, kodunuzda güvenlik açıklarına neden olabilecek hasarı en aza indirmenize de yardımcı olabilir.  
   
 > [!NOTE]
-> Kod erişim güvenliği için .NET Framework 4 ' te önemli değişiklikler yapılmıştır. En önemli değişiklik [güvenlik saydamlığına](security-transparent-code.md)sahiptir, ancak kod erişim güvenliğini etkileyen diğer önemli değişiklikler de vardır. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+> Kod erişim güvenliği için .NET Framework 4 ' te önemli değişiklikler yapılmıştır. En önemli değişiklik [güvenlik saydamlığına](security-transparent-code.md)sahiptir, ancak kod erişim güvenliğini etkileyen diğer önemli değişiklikler de vardır. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).  
   
  Kod erişimi güvenliği birincil olarak kitaplık kodunu ve kısmen güvenilen uygulamaları etkiler. Kitaplık geliştiricileri, kısmen güvenilen uygulamalardan kendi kodlarını yetkisiz erişimlerden korumalıdır. Kısmen güvenilen uygulamalar, Internet gibi dış kaynaklardan yüklenen uygulamalardır. Masaüstünüzde veya yerel intranette yüklü olan uygulamalar tam güvende çalışır. Tam güven uygulamaları, tamamen güvenilir olduklarından, [güvenlik açısından saydam](security-transparent-code.md)olarak işaretlenmedikçe, kod erişim güvenliği tarafından etkilenmez. Tam güvenle uygulamalara yönelik tek sınırlama, özniteliğiyle işaretlenen uygulamaların <xref:System.Security.SecurityTransparentAttribute> özniteliğiyle işaretlenen kodu çağıramasıdır <xref:System.Security.SecurityCriticalAttribute> . Kısmen güvenilen uygulamalar, kod erişimi güvenliğinin uygulanabilmesi için bir korumalı alanda (örneğin, Internet Explorer 'da) çalıştırılmalıdır. Bir uygulamayı Internet 'ten indirip masaüstünüzden çalıştırmayı denerseniz, şu <xref:System.NotSupportedException> iletiyle birlikte bir ileti alırsınız: "bir derlemeyi bir ağ konumundan yükleme girişiminde bulunuldu. bu durum, derlemenin önceki .NET Framework korumalı olmasını sağlar. .NET Framework bu sürümü, varsayılan olarak CAS ilkesini etkinleştirmez, bu nedenle bu yük tehlikeli olabilir. " Uygulamanın güvenilir olduğundan eminseniz, [ \<loadFromRemoteSources> öğesini](../configure-apps/file-schema/runtime/loadfromremotesources-element.md)kullanarak tam güven olarak çalışmasını sağlayabilirsiniz. Bir uygulamayı bir korumalı alanda çalıştırma hakkında bilgi için bkz. [nasıl yapılır: bir korumalı olarak kısmen güvenilen kodu çalıştırma](how-to-run-partially-trusted-code-in-a-sandbox.md).  
   

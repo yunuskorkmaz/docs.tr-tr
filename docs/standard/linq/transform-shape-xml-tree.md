@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
-ms.openlocfilehash: 6b4127571d5a6a9fa8e92079424dd19eaf5a2f29
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 7f78cb2542357be674d771f93825b7f4a56abea0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553141"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554508"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-linq-to-xml"></a>XML ağacının şeklini dönüştürme (LINQ to XML)
 
@@ -201,4 +201,4 @@ Bu örnek aşağıdaki çıktıyı üretir:
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)](./work-dictionaries-linq-xml.md)

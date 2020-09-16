@@ -7,12 +7,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 9b08a07e9b446c2998150a327dccdc8d0481722a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 72cf7113b3fc15abd116d3a20b55f4593b172428
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309774"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553837"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework Uygulamalarında Önbelleğe Alma
 Önbelleğe alma, verileri hızlı erişim için bellekte depolamanıza olanak sağlar. Verilere yeniden erişildiğinde, uygulamalar verileri özgün kaynaktan almak yerine önbellekten alabilir. Bu, performansı ve ölçeklenebilirliği iyileştirebilir. Ayrıca, veri kaynağı geçici olarak kullanılamadığında önbelleğe alma verilerin kullanılabilir olmasını sağlar.  
@@ -42,19 +42,19 @@ ms.locfileid: "86309774"
 > [!NOTE]
 > <xref:System.Runtime.Caching.MemoryCache>Sınıfı, ad alanında tanımlanan ASP.net Cache nesnesi üzerinde modellenir <xref:System.Web.Caching> . Bu nedenle, ASP.NET 'in önceki sürümlerinde sağlanmış mantığa benzer iç önbelleğe alma mantığı.  
   
- WPF uygulamasında önbelleğe alma için kullanmanın bir örneği için bkz. [Izlenecek yol: BIR WPF uygulamasında uygulama verilerini önbelleğe alma](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).  
+ WPF uygulamasında önbelleğe alma için kullanmanın bir örneği için bkz. [Izlenecek yol: BIR WPF uygulamasında uygulama verilerini önbelleğe alma](/dotnet/desktop/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application).  
   
 ## <a name="caching-in-aspnet-applications"></a>ASP.NET uygulamalarında önbelleğe alma  
  Ad alanındaki önbelleğe alma sınıfları, <xref:System.Runtime.Caching> ASP.NET içinde verileri önbelleğe alma işlevselliği sağlar.  
   
 > [!NOTE]
-> Uygulamanız .NET Framework 3,5 veya önceki bir sürümü hedefliyorsa, ad alanında tanımlanan önbelleğe alma sınıflarını kullanmanız gerekir <xref:System.Web.Caching> . Daha fazla bilgi için bkz. [ASP.net Caching Overview](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
+> Uygulamanız .NET Framework 3,5 veya önceki bir sürümü hedefliyorsa, ad alanında tanımlanan önbelleğe alma sınıflarını kullanmanız gerekir <xref:System.Web.Caching> . Daha fazla bilgi için bkz. [ASP.net Caching Overview](/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 > [!NOTE]
-> Yeni uygulamalar geliştirirken sınıfını kullanmanızı öneririz <xref:System.Runtime.Caching.MemoryCache> . Ad alanında belirtilen API, <xref:System.Runtime.Caching> ad alanında sağlanmış olan API 'ye benzer <xref:System.Web.Caching.Cache> . Bu nedenle, ASP.NET 'in önceki sürümlerinde önbelleğe alma kullandıysanız API tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe alma özelliğinin nasıl kullanılacağına ilişkin bir örnek için bkz. [Izlenecek yol: ASP.net Içindeki uygulama verilerini önbelleğe alma](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100)).  
+> Yeni uygulamalar geliştirirken sınıfını kullanmanızı öneririz <xref:System.Runtime.Caching.MemoryCache> . Ad alanında belirtilen API, <xref:System.Runtime.Caching> ad alanında sağlanmış olan API 'ye benzer <xref:System.Web.Caching.Cache> . Bu nedenle, ASP.NET 'in önceki sürümlerinde önbelleğe alma kullandıysanız API tanıdık gelecektir. ASP.NET uygulamalarında önbelleğe alma özelliğinin nasıl kullanılacağına ilişkin bir örnek için bkz. [Izlenecek yol: ASP.net Içindeki uygulama verilerini önbelleğe alma](/previous-versions/ff477235(v=vs.100)).  
   
 ### <a name="output-caching"></a>Çıktı Önbelleği  
- Uygulama verilerini el ile önbelleğe almak için, <xref:System.Runtime.Caching.MemoryCache> ASP.NET içinde sınıfını kullanabilirsiniz. ASP.NET ayrıca, bellek içinde sayfaların, denetimlerin ve HTTP yanıtlarının üretilen çıkışını depolayan çıkış önbelleğe almayı destekler. Çıktıyı önbelleğe alma işlemini bildirimli olarak bir ASP.NET Web sayfasında veya Web.config dosyadaki ayarları kullanarak yapılandırabilirsiniz. Daha fazla bilgi için bkz. [önbelleğe alma Için OutputCache öğesi (ASP.NET Settings şeması)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).  
+ Uygulama verilerini el ile önbelleğe almak için, <xref:System.Runtime.Caching.MemoryCache> ASP.NET içinde sınıfını kullanabilirsiniz. ASP.NET ayrıca, bellek içinde sayfaların, denetimlerin ve HTTP yanıtlarının üretilen çıkışını depolayan çıkış önbelleğe almayı destekler. Çıktıyı önbelleğe alma işlemini bildirimli olarak bir ASP.NET Web sayfasında veya Web.config dosyadaki ayarları kullanarak yapılandırabilirsiniz. Daha fazla bilgi için bkz. [önbelleğe alma Için OutputCache öğesi (ASP.NET Settings şeması)](/previous-versions/dotnet/netframework-4.0/ms228124(v=vs.100)).  
   
  ASP.NET, özel çıkış önbelleği sağlayıcıları oluşturarak çıktı önbelleğe almayı genişletmenizi sağlar. Özel sağlayıcılar kullanarak, önbelleğe alınmış içeriği diskler, bulut depolaması ve dağıtılmış önbellek motorları gibi diğer depolama cihazlarını kullanarak saklayabilirsiniz. Özel bir çıktı önbelleği sağlayıcısı oluşturmak için, sınıfından türeten bir sınıf oluşturur <xref:System.Web.Caching.OutputCacheProvider> ve uygulamayı özel çıkış önbelleği sağlayıcısını kullanacak şekilde yapılandırırsınız.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "86309774"
   
 - Sınıfından türeten özel bir sınıf oluşturun <xref:System.Runtime.Caching.ObjectCache> ve ardından türetilmiş sınıfta özel bir önbellek uygulamasını sağlayın.  
   
-- Sınıfından türeten bir sınıf oluşturun <xref:System.Runtime.Caching.MemoryCache> ve türetilmiş sınıfı özelleştirin veya genişletin. Bunun nasıl yapılacağı hakkında bir örnek için bkz. [bir ASP.NET uygulamasında birden çok Cache nesnesi kullanarak uygulama verilerini önbelleğe alma](https://docs.microsoft.com/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application).  
+- Sınıfından türeten bir sınıf oluşturun <xref:System.Runtime.Caching.MemoryCache> ve türetilmiş sınıfı özelleştirin veya genişletin. Bunun nasıl yapılacağı hakkında bir örnek için bkz. [bir ASP.NET uygulamasında birden çok Cache nesnesi kullanarak uygulama verilerini önbelleğe alma](/archive/blogs/aspnetue/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application).  
   
 - Sınıfından türeten bir sınıf oluşturun <xref:System.Web.Caching.OutputCacheProvider> ve uygulamayı özel çıkış önbelleği sağlayıcısını kullanacak şekilde yapılandırın.  
   
@@ -80,5 +80,5 @@ ms.locfileid: "86309774"
 
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](../wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
-- [İzlenecek yol: ASP.NET içinde uygulama verilerini önbelleğe alma](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))
+- [İzlenecek yol: WPF Uygulamasında Uygulama Verilerini Önbelleğe Alma](/dotnet/desktop/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application)
+- [İzlenecek yol: ASP.NET içinde uygulama verilerini önbelleğe alma](/previous-versions/ff477235(v=vs.100))

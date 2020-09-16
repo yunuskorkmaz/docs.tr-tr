@@ -8,7 +8,7 @@ ms.locfileid: "88024711"
 ---
 ### <a name="intptr-and-uintptr-implement-iformattable"></a>IntPtr ve UIntPtr IFormattable 'ı uygular
 
-<xref:System.IntPtr>ve <xref:System.UIntPtr> Şimdi uygulamasını uygulayın <xref:System.IFormattable> . Desteği denetleyen işlevler <xref:System.IFormattable> artık bu türler için farklı sonuçlar döndürebilir, çünkü bir biçim belirticisi ve bir kültür de geçirebilir.
+<xref:System.IntPtr> ve <xref:System.UIntPtr> Şimdi uygulamasını uygulayın <xref:System.IFormattable> . Desteği denetleyen işlevler <xref:System.IFormattable> artık bu türler için farklı sonuçlar döndürebilir, çünkü bir biçim belirticisi ve bir kültür de geçirebilir.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
@@ -20,7 +20,7 @@ Bu değişiklik, enterpolasyonlu dizeler ve <xref:System.Console.WriteLine%2A?di
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-<xref:System.IntPtr>ve <xref:System.UIntPtr> artık C# ' de `nint` ve anahtar kelimeleri aracılığıyla dil desteğine sahiptir `nuint` . Yedekleme türleri, gibi diğer temel türler tarafından sunulan işlevlerle neredeyse eşlik (mümkün olduğunda) sağlayacak şekilde güncelleştirildi <xref:System.Int32?displayProperty=nameWithType> .
+<xref:System.IntPtr> ve <xref:System.UIntPtr> artık C# ' de `nint` ve anahtar kelimeleri aracılığıyla dil desteğine sahiptir `nuint` . Yedekleme türleri, gibi diğer temel türler tarafından sunulan işlevlerle neredeyse eşlik (mümkün olduğunda) sağlayacak şekilde güncelleştirildi <xref:System.Int32?displayProperty=nameWithType> .
 
 #### <a name="version-introduced"></a>Sunulan sürüm
 

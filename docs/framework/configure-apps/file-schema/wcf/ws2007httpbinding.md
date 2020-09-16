@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 379552f461a79415e3140a8084901e0c1d6b2c32
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 102e220ad01410568a18ce4ea6fac06ca8c15230
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74140482"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558738"
 ---
 # \<ws2007HttpBinding>
 <xref:System.ServiceModel.WSHttpBinding.Security%2A>,, <xref:System.ServiceModel.ReliableSession> Ve bağlama öğelerinin doğru sürümleri için destek sağlayan bir birlikte çalışabilen bağlama tanımlar <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> .  
@@ -17,7 +17,7 @@ ms.locfileid: "74140482"
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<ws2007HttpBinding>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <ws2007HttpBinding>
@@ -86,8 +86,8 @@ ms.locfileid: "74140482"
 |Öğe|Açıklama|  
 |-------------|-----------------|  
 |[\<security>](security-of-wshttpbinding.md)|Bağlama için güvenlik ayarlarını tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.WSHttpSecurityElement> .|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan bitiş noktaları tarafından kullanılabilen SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
-|[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Kanal uç noktaları arasında güvenilir oturumların yapılıp yapılmayacağını belirtir.|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan bitiş noktaları tarafından kullanılabilen SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
+|[\<reliableSession>](/previous-versions/ms731375(v=vs.90))|Kanal uç noktaları arasında güvenilir oturumların yapılıp yapılmayacağını belirtir.|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   

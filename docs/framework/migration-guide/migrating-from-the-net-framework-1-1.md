@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-ms.openlocfilehash: f2b0e21ff5dbeab3395335f52799629859fb2d90
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7312de7d812aa714447a60f5aa04cb48890e40e8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475274"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553733"
 ---
 # <a name="migrate-from-the-net-framework-11"></a>.NET Framework 1,1 ' den geçirin
 
@@ -57,9 +57,9 @@ Ancak, bazı durumlarda, kaynak kodunuzu değiştirmeniz ve uygulamanızı yenid
 
 Uygulamanızdaki olası son değişikliklerin etkisini değerlendirmek için aşağıdaki değişiklik listelerini gözden geçirmeniz gerekir:
 
-- [.NET Framework 2,0 ' deki önemli değişiklikler](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)) , .NET Framework 1,1 ' i hedefleyen bir uygulamayı etkileyebilecek .NET Framework 2,0 SP1 'deki değişiklikleri belgelemektedir.
+- [.NET Framework 2,0 ' deki önemli değişiklikler](/previous-versions/aa570326(v=msdn.10)) , .NET Framework 1,1 ' i hedefleyen bir uygulamayı etkileyebilecek .NET Framework 2,0 SP1 'deki değişiklikleri belgelemektedir.
 
-- [.NET Framework 3,5 SP1 'Deki değişiklikler](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)) , .NET Framework 3,5 ve .NET Framework 3,5 SP1 arasındaki değişiklikleri belgelemektedir.
+- [.NET Framework 3,5 SP1 'Deki değişiklikler](/previous-versions/dotnet/articles/dd310284(v=msdn.10)) , .NET Framework 3,5 ve .NET Framework 3,5 SP1 arasındaki değişiklikleri belgelemektedir.
 
 - [.NET Framework 4 geçiş sorunları](net-framework-4-migration-issues.md) .NET Framework 3,5 SP1 ile .NET Framework 4 arasındaki değişiklikleri belgeler.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 6844cf2aa589f7516a9e40bc604c5f907ec6d311
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: af08938b6b8f169ded2180529c2b4aadebefef55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104023"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558816"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ ile Veri Dönüştürmeler (C#)
 Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca, verileri dönüştürmek için güçlü bir araçtır. Bir LINQ sorgusu kullanarak, giriş olarak bir kaynak sırası kullanabilir ve yeni bir çıkış sırası oluşturmak için bunu birçok şekilde değiştirebilirsiniz. Sıralamayı sıralama ve gruplama yoluyla öğeleri değiştirmeden değiştirebilirsiniz. Ancak, LINQ sorgularının en güçlü özelliği de yeni türler oluşturma olanağıdır. Bu, [Select](../../../language-reference/keywords/select-clause.md) yan tümcesinde gerçekleştirilir. Örneğin, aşağıdaki görevleri gerçekleştirebilirsiniz:  
@@ -88,7 +88,7 @@ Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca
 </Root>  
 ```  
   
- Daha fazla bilgi için bkz. [C# ' de xml ağaçları oluşturma (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md).  
+ Daha fazla bilgi için bkz. [C# ' de xml ağaçları oluşturma (LINQ to XML)](../../../../standard/linq/create-xml-trees.md).  
   
 ## <a name="performing-operations-on-source-elements"></a>Kaynak Öğeler Üzerinde İşlemler Gerçekleştirme  
  Çıkış sırası, kaynak dizisinden herhangi bir öğe veya öğe özelliği içermeyebilir. Çıktı bunun yerine, kaynak öğeleri giriş bağımsız değişkenleri olarak kullanılarak hesaplanan bir değer dizisi olabilir.
@@ -107,6 +107,6 @@ Dil ile tümleşik sorgu (LINQ) yalnızca veri alma hakkında değildir. Ayrıca
 - [Dil ile tümleşik sorgu (LINQ) (C#)](./index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ - DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
-- [LINQ to XML (C#)](./linq-to-xml-overview.md)
+- [LINQ to XML (C#)](../../../../standard/linq/linq-xml-overview.md)
 - [LINQ sorgu Ifadeleri](../../../linq/index.md)
-- [select tümcesi](../../../language-reference/keywords/select-clause.md)
+- [Select yan tümcesi](../../../language-reference/keywords/select-clause.md)
