@@ -114,9 +114,9 @@
 - name: Başvuru
   items:
     - name: ML.NET API Başvurusu
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+      href: ../../api/index.md?view=ml-dotnet
     - name: ML.NET API Önizlemesi API Başvurusu
-      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+      href: ../../api/index.md?view=ml-dotnet-preview
     - name: CLI başvurusu
       href: reference/ml-net-cli-reference.md
 - name: Kaynaklar
