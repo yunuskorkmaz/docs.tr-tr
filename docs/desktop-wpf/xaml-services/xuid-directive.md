@@ -7,16 +7,16 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: b5b480016d2183268422dea861510c6a169ac27b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 3de02702e6fd2be63bc2d099dad11f896b281ad1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071341"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543504"
 ---
 # <a name="xuid-directive"></a>x:Uid Yönergesi
 
-Biçimlendirme öğeleri için benzersiz bir tanımlayıcı sağlar. Birçok senaryoda, bu benzersiz tanımlayıcı XAML yerelleştirme işlemleri ve araçları tarafından kullanılır.
+Biçimlendirme öğeleri için benzersiz bir tanımlayıcı sağlar. Birçok senaryoda, bu benzersiz tanımlayıcı XAML yerelleştirme işlemi ve araçları tarafından kullanılır.
 
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı
 
@@ -28,24 +28,24 @@ Biçimlendirme öğeleri için benzersiz bir tanımlayıcı sağlar. Birçok sen
 
 |||
 |-|-|
-|`identifier`|Bir `x:Uid` tüketici tarafından yorumlandığında bir dosyada benzersiz olması gereken el ile oluşturulmuş veya otomatik olarak oluşturulmuş dize.|
+|`identifier`|Bir tüketici tarafından yorumlanırken bir dosyada benzersiz olması gereken el ile oluşturulmuş veya otomatik oluşturulan dize `x:Uid` .|
 
 ## <a name="remarks"></a>Açıklamalar
 
-[MS-XAML], `x:Uid` bir yönerge olarak tanımlanır. Daha fazla bilgi için [ \[MS-XAML\] Bölüm 5.3.6'ya](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))bakın.
+[MS-XAML] içinde `x:Uid` bir yönerge olarak tanımlanmıştır. Daha fazla bilgi için bkz. [ \[ MS-xaml \] Section 5.3.6](/previous-versions/msp-n-p/ff650760(v=pandp.10)).
 
-`x:Uid`belirtilen XAML `x:Name` yerelleştirme senaryosu nedeniyle her ikisinden de ayrıktır ve böylece yerelleştirme için kullanılan tanımlayıcıların programlama modelinin `x:Name`etkilerine herhangi bir bağımlılığı yoktur. Ayrıca, `x:Name` XAML isim skop tarafından yönetilir; ancak, `x:Uid` benzersizlik uygulama herhangi bir XAML dil tanımlı kavramı tarafından yönetilmez. Geniş anlamda XAML işlemcilerin (yerelleştirme işleminin bir parçası olmayan işlemcilerin) `x:Uid` değerlerin benzersizliğini zorlaması beklenmez. Bu sorumluluk kavramsal olarak değerlerin yaratıcısı üzerindedir. Tek bir XAML kaynağındaki `x:Uid` değerlerin benzersizliği beklentisi, özel küreselleşme süreçleri veya araçları gibi değerlerin tüketicileri için makuldür. Tipik teklik modeli, `x:Uid` değerlerin XAML'yi temsil eden XML kodlanmış bir dosya içinde benzersiz olmasıdır.
+`x:Uid` , `x:Name` BELIRTILEN xaml yerelleştirme senaryosu nedeniyle her ikisi de ayrı değildir ve bu nedenle Yerelleştirmede kullanılan tanımlayıcıların, programlama modeli etkilerine ilişkin hiçbir bağımlılığı yoktur `x:Name` . Ayrıca `x:Name` xaml namescope tarafından yönetilir; ancak, `x:Uid` hiçbir xaml dili tarafından tanımlanan benzersizlik zorlaması kavramı tarafından yönetilmez. XAML işlemcileri, büyük bir anlamda (yerelleştirme işleminin parçası olmayan işlemciler) değerlerin benzersizlik zorlaması beklenmez `x:Uid` . Bu sorumluluk, değerleri oluşturan kavramsal olarak belirlenir. `x:Uid`Tek BIR xaml kaynağı içindeki değerlerin benzersizliği, adanmış genelleştirme süreçler veya araçlar gibi değer tüketicileri için uygun değildir. Tipik benzersizlik modeli, `x:Uid` DEĞERLERIN xaml 'yi temsil eden XML kodlu bir dosya içinde benzersiz olduğu değerlerdir.
 
-Belirli bir XAML şeması hakkında önemli bilgiye sahip `x:Uid` araçlar, biçimlendirmede metin dizesi değerinin karşılaştığı tüm durumlar yerine yalnızca gerçek yerelleştirilebilir dizeler için uygulamayı seçebilir.
+Belirli bir XAML şeması hakkında önemli bilgiler içeren Araçlar `x:Uid` , İşaretlemede bir metin dizesi değerine rastlandı tüm durumlar yerine yalnızca doğru yerelleştirilebilir dizeler için geçerli olabilir.
 
-Çerçeveler, tanımlama türüne öznitelik `x:Uid` <xref:System.Windows.Markup.UidPropertyAttribute> uygulayarak nesne modelinde belirli bir özelliğin diğer ad olduğunu belirtebilir. Bir çerçeve belirli bir özelliği belirtirse, hem `x:Uid` de diğer üyeyi aynı nesne üzerinde belirtmek geçerli değildir. Her `x:Uid` ikisi ve diğer ad üye belirtilirse, .NET XAML <xref:System.Xaml.XamlDuplicateMemberException> Services API genellikle bu servis talebi için atar.
+Çerçeveler, nesne modelindeki belirli bir özelliği, `x:Uid` özniteliği tanımlayan türe uygulayarak bir diğer ad olacak şekilde belirtebilir <xref:System.Windows.Markup.UidPropertyAttribute> . Bir çerçeve belirli bir özelliği belirtiyorsa, `x:Uid` aynı nesne üzerinde hem hem de diğer ad üyesini belirtmek geçerli değildir. Hem hem de `x:Uid` diğer ad üyesi belirtilirse, .net xaml Hizmetleri API 'si genellikle <xref:System.Xaml.XamlDuplicateMemberException> Bu durum için oluşturulur.
 
-## <a name="wpf-usage-notes"></a>WPF Kullanım Notları
+## <a name="wpf-usage-notes"></a>WPF kullanım notları
 
-WPF yerelleştirme işleminin `x:Uid` rolü ve XAML'nin BAML formunda daha fazla bilgi için [WPF için Küreselleşme](../../framework/wpf/advanced/globalization-for-wpf.md) veya<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+`x:Uid`WPF yerelleştirme işleminde ve xaml 'nın BAML formundaki rolü hakkında daha fazla bilgi için bkz. [WPF için Genelleştirme](/dotnet/desktop/wpf/advanced/globalization-for-wpf) veya<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
-- [WPF için Genelleştirme](../../framework/wpf/advanced/globalization-for-wpf.md)
+- [WPF için Genelleştirme](/dotnet/desktop/wpf/advanced/globalization-for-wpf)

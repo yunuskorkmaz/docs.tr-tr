@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 487a974af2280a02b83fe685324c9464df705585
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 04f27729b5713c325a73cbdeb1c6c673fe749c00
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925637"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544212"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Öğretici: Windows hizmeti uygulaması oluşturma
 
@@ -295,9 +295,9 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-6. Seçim <xref:System.ServiceProcess.ServiceBase.OnStop%2A>Uzun süre çalışan bir yöntem ise, yöntemi içinde bu yordamı tekrarlayın `OnStop` . SERVICE_STOP_PENDING durumunu uygulayın ve yöntemin uygulamadan önce SERVICE_STOPPED durumunu döndürün `OnStop` .
+6. Seçim <xref:System.ServiceProcess.ServiceBase.OnStop%2A> Uzun süre çalışan bir yöntem ise, yöntemi içinde bu yordamı tekrarlayın `OnStop` . SERVICE_STOP_PENDING durumunu uygulayın ve yöntemin uygulamadan önce SERVICE_STOPPED durumunu döndürün `OnStop` .
 
-   Örneğin:
+   Örnek:
 
     ```csharp
     // Update the service state to Stop Pending.
@@ -471,7 +471,7 @@ Her bir Windows hizmetinin **HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Servic
 
 Windows hizmetini oluşturduğunuza göre, artık yükleyebilirsiniz. Bir Windows hizmetini yüklemek için, yüklendiği bilgisayarda yönetici kimlik bilgilerine sahip olmanız gerekir.
 
-1. Yönetim kimlik bilgileriyle [Visual Studio için geliştirici komut istemi](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) açın. Windows **Başlat** menüsünde, Visual Studio klasöründeki **vs 2017 için geliştirici komut istemi** ' **yi seçin ve**ardından  >  kısayol menüsünde**yönetici olarak çalıştır** ' ı seçin.
+1. Yönetim kimlik bilgileriyle [Visual Studio için geliştirici komut istemi](../tools/developer-command-prompt-for-vs.md) açın. Windows **Başlat** menüsünde, Visual Studio klasöründeki **vs 2017 için geliştirici komut istemi** ' **yi seçin ve**ardından  >  kısayol menüsünde**yönetici olarak çalıştır** ' ı seçin.
 
 2. **Visual Studio için geliştirici komut istemi** penceresinde, projenizin çıkışını içeren klasöre gidin (varsayılan olarak, projenizin *\Bin\Debug* alt dizininde).
 

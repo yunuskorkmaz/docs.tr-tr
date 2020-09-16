@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 4f187d772d2f2e4375fbe3cfdc8c48af691f1c7c
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 019b36a328d4e9fb01b112ec79d8d8e0548142f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86863883"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541883"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Statik Sınıflar ve Statik Sınıf Üyeleri (C# Programlama Kılavuzu)
 
@@ -41,7 +41,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Tüm sınıf türlerinde olduğu gibi, bir statik sınıf için tür bilgisi, sınıfa başvuran program yüklendiğinde .NET çalışma zamanı tarafından yüklenir. Program, sınıf yüklendiğinde tam olarak belirtemez. Ancak, yüklenmesi ve alanları başlatılmış olması garantidir ve bu sınıfın, sınıf ilk kez bir kez başvurulmadan önce çağrılan statik Oluşturucusu çağırılır. Statik bir Oluşturucu yalnızca bir kez çağrılır ve programınızın bulunduğu uygulama etki alanının ömrü boyunca statik bir sınıf bellekte kalır.  
   
 > [!NOTE]
-> Yalnızca tek bir örneğinin oluşturulmasına izin veren statik olmayan bir sınıf oluşturmak için, bkz. [C# ' de](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29)tek bir örnek uygulama.  
+> Yalnızca tek bir örneğinin oluşturulmasına izin veren statik olmayan bir sınıf oluşturmak için, bkz. [C# ' de](/previous-versions/msp-n-p/ff650316(v=pandp.10))tek bir örnek uygulama.  
   
  Aşağıdaki liste, bir statik sınıfın ana özelliklerini sağlar:  
   

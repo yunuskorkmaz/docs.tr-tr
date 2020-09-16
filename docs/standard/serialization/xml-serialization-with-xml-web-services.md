@@ -18,18 +18,18 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: b03c25f745df9aa4afe44075506983cb14ed3da7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8464122d4849271ba76edd6b3400ed09d7429821
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84288959"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542013"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web Hizmetleri ile XML Serileştirme
-XML serileştirme, sınıf tarafından gerçekleştirilen XML Web Hizmetleri mimarisinde kullanılan temel taşıma mekanizmasıdır <xref:System.Xml.Serialization.XmlSerializer> . Bir XML Web hizmeti tarafından oluşturulan XML 'yi denetlemek için, XML serileştirme ve XML Web hizmeti (. asmx) oluşturmak için kullanılan bir dosyanın sınıflarına, dönüş değerlerine, parametrelere ve alanlara [KODLANMıŞ SOAP serileştirmesini](attributes-that-control-encoded-soap-serialization.md) denetleyen öznitelikleri, her iki [özniteliğe](attributes-that-control-xml-serialization.md) de uygulayabilirsiniz. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz. [ASP.net using XML Web Services](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
+XML serileştirme, sınıf tarafından gerçekleştirilen XML Web Hizmetleri mimarisinde kullanılan temel taşıma mekanizmasıdır <xref:System.Xml.Serialization.XmlSerializer> . Bir XML Web hizmeti tarafından oluşturulan XML 'yi denetlemek için, XML serileştirme ve XML Web hizmeti (. asmx) oluşturmak için kullanılan bir dosyanın sınıflarına, dönüş değerlerine, parametrelere ve alanlara [KODLANMıŞ SOAP serileştirmesini](attributes-that-control-encoded-soap-serialization.md) denetleyen öznitelikleri, her iki [özniteliğe](attributes-that-control-xml-serialization.md) de uygulayabilirsiniz. XML Web hizmeti oluşturma hakkında daha fazla bilgi için bkz. [ASP.net using XML Web Services](/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
   
 ## <a name="literal-and-encoded-styles"></a>Değişmez değer ve kodlanmış stilleri  
- Bir XML Web hizmeti tarafından oluşturulan XML, [SOAP Ileti biçimlendirmesini özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))bölümünde açıklandığı gibi, değişmez değer veya kodlanmış iki şekilde biçimlendirilebilir. Bu nedenle, XML serileştirmesini denetleyen iki öznitelik kümesi vardır. [XML serileştirmesini denetleyen özniteliklerde](attributes-that-control-xml-serialization.md) listelenen öznitelikler, DEĞIŞMEZ stil XML 'i denetlemek için tasarlanmıştır. [KODLANMıŞ SOAP serileştirmesini denetleyen özniteliklerde](attributes-that-control-encoded-soap-serialization.md) listelenen öznitelikler kodlanmış stili. Bu öznitelikleri seçmeli olarak uygulayarak bir uygulamayı ya da her iki stili de döndürecek şekilde uyarlayabilirsiniz. Ayrıca, bu öznitelikler (uygun şekilde) değerleri ve parametreleri döndürmek için uygulanabilir.  
+ Bir XML Web hizmeti tarafından oluşturulan XML, [SOAP Ileti biçimlendirmesini özelleştirme](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))bölümünde açıklandığı gibi, değişmez değer veya kodlanmış iki şekilde biçimlendirilebilir. Bu nedenle, XML serileştirmesini denetleyen iki öznitelik kümesi vardır. [XML serileştirmesini denetleyen özniteliklerde](attributes-that-control-xml-serialization.md) listelenen öznitelikler, DEĞIŞMEZ stil XML 'i denetlemek için tasarlanmıştır. [KODLANMıŞ SOAP serileştirmesini denetleyen özniteliklerde](attributes-that-control-encoded-soap-serialization.md) listelenen öznitelikler kodlanmış stili. Bu öznitelikleri seçmeli olarak uygulayarak bir uygulamayı ya da her iki stili de döndürecek şekilde uyarlayabilirsiniz. Ayrıca, bu öznitelikler (uygun şekilde) değerleri ve parametreleri döndürmek için uygulanabilir.  
   
 ### <a name="example-of-using-both-styles"></a>Her iki stil kullanarak örneği  
  Bir XML Web hizmeti oluştururken, yöntemler üzerinde her iki öznitelik kümesini de kullanabilirsiniz. Aşağıdaki kod örneğinde adlı sınıfı `MyService` iki XML Web hizmeti yöntemlerini içeren `MyLiteralMethod` ve `MyEncodedMethod`. Her iki yöntem aynı işlevi gerçekleştirmek: örneği döndüren `Order` sınıfı. Sınıfında, `Order` <xref:System.Xml.Serialization.XmlTypeAttribute> ve <xref:System.Xml.Serialization.SoapTypeAttribute> özniteliklerinin her ikisi de `OrderID` alana uygulanır ve her iki özniteliğin `ElementName` özelliği farklı değerler olarak ayarlanır.  

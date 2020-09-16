@@ -18,19 +18,19 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 7802e4bc27195d1c8ecaccbd64121fb24328a4d8
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 244bd9c25040b39c9349d28f57981f29d7a32d0a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288543"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542040"
 ---
 # <a name="types-of-isolation"></a>Yalıtım Türleri
 Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kısıtlanır. Bu tür yalıtımın uygulanması için ortak dil çalışma zamanı, işletim sisteminin tanıdığı aynı kullanıcı kimliği kavramını kullanır. Bu, mağaza açıldığında kodun çalıştırıldığı işlemle ilişkili kimliktir. Bu kimlik kimliği doğrulanmış bir kullanıcı kimliğidir, ancak kimliğe bürünme geçerli kullanıcının kimliğinin dinamik olarak değişmesine neden olabilir.  
   
  Yalıtılmış depolamaya erişim, uygulamanın etki alanı ve derlemesi ile ilişkili kimliğe veya tek başına derlemeye göre de kısıtlanır. Çalışma zamanı bu kimlikleri aşağıdaki yollarla edinir:  
   
-- Etki alanı kimliği, uygulamanın kanıtını temsil eder. Bu, bir Web uygulaması durumunda tam URL olabilir. Kabukta barındırılan kod için etki alanı kimliği, uygulama dizini yolunu temel alabilir. Örneğin, yürütülebilir C:\Office\MyApp.exe yolundan çalışırsa, etki alanı kimliği C:\Office\MyApp.exeolur.  
+- Etki alanı kimliği, uygulamanın kanıtını temsil eder. Bu, bir Web uygulaması durumunda tam URL olabilir. Kabukta barındırılan kod için etki alanı kimliği, uygulama dizini yolunu temel alabilir. Örneğin, çalıştırılabilir yol C:\Office\MyApp.exe çalıştırıyorsa, etki alanı kimliği C:\Office\MyApp.exe olur.  
   
 - Bütünleştirilmiş kod kimliği derleme kanıtdır. Bu, derlemenin [tanımlayıcı adı](../assembly/strong-named.md), derlemenin yazılım YAYıMCıSı veya URL kimliği olabilen bir şifrelenmiş dijital imzadan gelebilir. Bir derlemede hem tanımlayıcı adı hem de yazılım yayımcısı kimliği varsa, yazılım yayımcısı kimliği kullanılır. Derleme Internet 'ten geliyorsa ve imzasız ise, URL kimliği kullanılır. Derlemeler ve tanımlayıcı adlar hakkında daha fazla bilgi için bkz. [Derlemelerle programlama](../assembly/index.md).  
   
@@ -51,7 +51,7 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
  Dolaşım depoları hariç, yalıtılmış depolama her zaman bilgisayar tarafından örtük olarak yalıtılmıştır çünkü belirli bir bilgisayarda yerel olan depolama olanaklarını kullanır.  
   
 > [!IMPORTANT]
-> Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, `Windows.Storage` yerel verileri ve dosyaları depolamak için WINDOWS çalışma zamanı API 'sinde bulunan ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .  
+> Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, `Windows.Storage` yerel verileri ve dosyaları depolamak için WINDOWS çalışma zamanı API 'sinde bulunan ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](/previous-versions/windows/apps/hh464917(v=win.10)) .  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>Kullanıcı ve Derlemeye Göre Yalıtım  
@@ -65,7 +65,7 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
   
  Kanıt parametrelerini kullanan bir örnek için bkz <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%28System.IO.IsolatedStorage.IsolatedStorageScope%2CSystem.Security.Policy.Evidence%2CSystem.Type%2CSystem.Security.Policy.Evidence%2CSystem.Type%29> ..  
   
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>Yöntemi, aşağıdaki kod örneğinde gösterildiği gibi bir kısayol olarak kullanılabilir. Bu kısayol, dolaşım yeteneğine sahip olan mağazaları açmak için kullanılamaz; <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>Bu gibi durumlarda kullanın.  
+ <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>Yöntemi, aşağıdaki kod örneğinde gösterildiği gibi bir kısayol olarak kullanılabilir. Bu kısayol, dolaşım yeteneğine sahip olan mağazaları açmak için kullanılamaz; <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> Bu gibi durumlarda kullanın.  
   
  [!code-cpp[Conceptual.IsolatedStorage#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source11.cpp#18)]
  [!code-csharp[Conceptual.IsolatedStorage#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source11.cs#18)]
@@ -81,7 +81,7 @@ Yalıtılmış depolamaya erişim, her zaman onu oluşturan kullanıcıyla kıs�
  [!code-csharp[Conceptual.IsolatedStorage#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#14)]
  [!code-vb[Conceptual.IsolatedStorage#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source10.vb#14)]  
   
- Aşağıdaki kod örneğinde gösterildiği gibi başka bir yöntem kısayol olarak kullanılabilir. Bu kısayol, dolaşım yeteneğine sahip olan mağazaları açmak için kullanılamaz; <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A>Bu gibi durumlarda kullanın.  
+ Aşağıdaki kod örneğinde gösterildiği gibi başka bir yöntem kısayol olarak kullanılabilir. Bu kısayol, dolaşım yeteneğine sahip olan mağazaları açmak için kullanılamaz; <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> Bu gibi durumlarda kullanın.  
   
  [!code-cpp[Conceptual.IsolatedStorage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source10.cpp#15)]
  [!code-csharp[Conceptual.IsolatedStorage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source10.cs#15)]

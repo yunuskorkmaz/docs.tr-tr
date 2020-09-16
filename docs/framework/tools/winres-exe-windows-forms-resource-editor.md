@@ -12,12 +12,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-ms.openlocfilehash: 8393eb44246ed1bbc0e4e6acc84ad7bd57041ec0
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 35d1324d5ea7a72ffd5ea594530d1312e717cd7c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87516911"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543231"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows kaynak yerelleştirme Düzenleyicisi)
 
@@ -34,7 +34,7 @@ winres /?
 
 ## <a name="arguments"></a>Bağımsız değişkenler
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |--------------|-----------------|
 |`resourceFile`|Yerelleştirilecek kaynak dosyası. Bu dosya, Visual Studio tasarımcısı tarafından oluşturulan Windows Forms formu .resx veya .resources dosyası olmalıdır. Winres.exe genel .resx veya .resources dosyalarını açamaz.|
 
@@ -52,7 +52,7 @@ Bir Windows Forms projesindeki formda bulunan arabirim öğelerinin durumu genel
 
 - Bir kültür kaynak dosyası başka bir kültür kaynak dosyası olarak kaydedilebilir. Örneğin, İngilizce (ABD) kaynak dosyası Lehçe kaynak dosyası olarak kaydedilebilir. Genellikle yeni dosya daha sonra yeni kültür ile uyumlu olacak şekilde düzenlenir.
 
-Ayrıca, yerelleştirme için kaynakların [hiyerarşik organizasyonu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) veya [Yerelleştirme Için hiyerarşik kaynak organizasyonu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))bölümüne bakın.
+Ayrıca, yerelleştirme için kaynakların [hiyerarşik organizasyonu](/previous-versions/visualstudio/visual-studio-2012/756hydy4(v=vs.110)) veya [Yerelleştirme Için hiyerarşik kaynak organizasyonu](/previous-versions/visualstudio/visual-studio-2013/756hydy4(v=vs.120))bölümüne bakın.
 
 Winres.exe, bir .resx dosyasını karşılık gelen .resources dosyasına dönüştüremez; bunun yerine Resgen.exe aracını kullanmalısınız. Resgen.exe hakkında daha fazla bilgi için bkz. [Resgen.exe (kaynak dosya Oluşturucu)](resgen-exe-resource-file-generator.md).
 
@@ -91,12 +91,12 @@ Kullanmakta olduğunuz .NET Framework birlikte yayınlanan Winres.exe sürümün
 
 |Visual Studio|.NET Framework|Winres.exe|
 |-------------------|--------------------|----------------|
-|Visual Studio .NET 2002|1,0|1,0|
+|Visual Studio .NET 2002|1.0|1.0|
 |Visual Studio .NET 2003|1.1|1.1|
-|Visual Studio 2005|2,0|2,0|
+|Visual Studio 2005|2.0|2.0|
 |Visual Studio 2008|3.0 ve 3.5|3.0 ve 3.5|
 |Visual Studio 2010|4.0|4.0|
-|Visual Studio 2017|4,6|4,6|
+|Visual Studio 2017|4.6|4.6|
 
 > [!NOTE]
 > VSFM'de, Visual Studio ile uyumluluk avantajı bulunuyor olsa da, kaynak dosyaya yalnızca değiştirilmiş değerleri depoladığından, Winres.exe geçerli kaynak dosyanın üst öğelerinin aynı dizinde bulunmasını gerektirir. Örneğin, `TestApp.de-DE.resources` Almanya kaynak dosyasındaki bir Almanca, varsayılan kaynak dosyası, `TestApp.resx` ve muhtemelen kültür bağımsız kaynak dosyası olması gerekir `TestApp.de.resources` .

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-ms.openlocfilehash: c2ba4a7244b7849e28eac38fb34a2cdd0d1f1048
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 11592b055641c0fa2d2b968547dcc5aa40c94600
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81645352"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541790"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence> Öğesi
 Çalışma zamanının <xref:System.Security.Policy.Publisher> kod erişim güvenliği (CAS) için kanıt oluşturup oluşturmadığını belirtir.  
@@ -19,7 +19,7 @@ ms.locfileid: "81645352"
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<generatePublisherEvidence>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <generatePublisherEvidence
@@ -40,7 +40,7 @@ ms.locfileid: "81645352"
 |Değer|Açıklama|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Policy.Publisher>Kanıt oluşturmaz.|  
-|`true`|<xref:System.Security.Policy.Publisher>Kanıt oluşturur. Bu varsayılandır.|  
+|`true`|<xref:System.Security.Policy.Publisher>Kanıt oluşturur. Bu varsayılan seçenektir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
  Yok.  
@@ -55,7 +55,7 @@ ms.locfileid: "81645352"
 ## <a name="remarks"></a>Açıklamalar  
   
 > [!NOTE]
-> .NET Framework 4 ve sonrasında, bu öğenin derleme yükleme süreleri üzerinde hiçbir etkisi yoktur. Daha fazla bilgi için [güvenlik değişikliklerinin](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)"güvenlik ilkesi basitleştirmesi" bölümüne bakın.  
+> .NET Framework 4 ve sonrasında, bu öğenin derleme yükleme süreleri üzerinde hiçbir etkisi yoktur. Daha fazla bilgi için [güvenlik değişikliklerinin](/previous-versions/dotnet/framework/security/security-changes)"güvenlik ilkesi basitleştirmesi" bölümüne bakın.  
   
  Ortak dil çalışma zamanı (CLR), derleme için kanıt oluşturmak üzere yükleme zamanında Authenticode imzasını doğrulamaya çalışır <xref:System.Security.Policy.Publisher> . Ancak, varsayılan olarak çoğu uygulama <xref:System.Security.Policy.Publisher> kanıt gerektirmez. Standart CAS ilkesi öğesine bağlı değildir <xref:System.Security.Policy.PublisherMembershipCondition> . Uygulamanız özel CAS ilkesi olan bir bilgisayarda yürütülmediği veya kısmi güven ortamındaki taleplerini karşılamak üzere bir sorun olduğu müddetçe, yayımcı imzasını doğrulama ile ilişkili gereksiz başlangıç maliyetinden kaçının <xref:System.Security.Permissions.PublisherIdentityPermission> . (Kimlik izinlerinin istekleri her zaman tam güven ortamında başarılı olur.)  
   

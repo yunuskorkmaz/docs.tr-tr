@@ -1,144 +1,144 @@
 ---
-title: Entity SQL Başvurusu
+title: Entity SQL başvurusu
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 987aa5c05b88d684e050721077d704b29e546aab
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034274"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542130"
 ---
-# <a name="entity-sql-reference"></a>Entity SQL Başvurusu
+# <a name="entity-sql-reference"></a>Entity SQL başvurusu
 
-Bu bölüm, Entity SQL Başvurusu makaleler içerir. Bu makalede özetler ve varlık SQL işleçleri kategorilere göre gruplandırır.
+Bu bölüm Entity SQL başvuru makaleleri içerir. Bu makale, Entity SQL işleçlerini kategoriye göre özetler ve gruplandırır.
 
 ## <a name="arithmetic-operators"></a>Aritmetik İşleçler
 
-Aritmetik işleçler iki deyim bir veya daha fazla sayısal veri türleri üzerinde matematik işlemleri gerçekleştirir. Entity SQL aritmetik işleçleri aşağıdaki tabloda listelenmektedir:
+Aritmetik işleçler bir veya daha fazla sayısal veri türünün iki ifadesi üzerinde matematik işlemleri gerçekleştirir. Aşağıdaki tabloda Entity SQL aritmetik işleçler listelenmektedir:
 
-|İşleç|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|Operatör|Kullanın|
 |--------------|---------|
-|[+ (Ekle)](add.md)|Ayrıca.|
-|[/ (Böl)](divide-entity-sql.md)|Bölme.|
+|[+ (Ekle)](add.md)|Ek olarak.|
+|[(Böl)](divide-entity-sql.md)|Bölmenin.|
 |[% (Mod)](modulo-entity-sql.md)|Bir bölme işleminden kalanı döndürür.|
-|[* (Çarp)](multiply-entity-sql.md)|Çarpma.|
-|[- (Negatif)](negative-entity-sql.md)|Değilleme.|
-|[- (Çıkar)](subtract-entity-sql.md)|Çıkarma.|
+|[* (Çarp)](multiply-entity-sql.md)|Anda.|
+|[- (Negatif)](negative-entity-sql.md)|Anlaşma.|
+|[- (Çıkar)](subtract-entity-sql.md)|StrA.|
 
-## <a name="canonical-functions"></a>Kurallı İşlevler
+## <a name="canonical-functions"></a>Kurallı işlevler
 
-Kurallı işlevler ve tüm sorgulanırken teknolojiler tarafından kullanılan tüm veri sağlayıcıları tarafından desteklenir. Aşağıdaki tablo kurallı işlevler listeler:
+Kurallı işlevler tüm veri sağlayıcıları tarafından desteklenir ve tüm sorgulama teknolojileri tarafından kullanılabilir. Aşağıdaki tabloda kurallı işlevler listelenmektedir:
 
 |İşlev|Tür|
 |--------------|----------|
-|[Toplam varlık SQL kurallı İşlevler](aggregate-canonical-functions.md)|Entity SQL toplu kurallı işlevler açıklanmaktadır.|
-|[Kurallı Matematik İşlevleri](math-canonical-functions.md)|Kurallı matematik varlık SQL işlevleri açıklanır.|
-|[Kurallı Dize İşlevleri](string-canonical-functions.md)|Kurallı dize varlık SQL işlevleri açıklanır.|
-|[Kurallı Tarih ve Saat İşlevleri](date-and-time-canonical-functions.md)|Tarih ve saat varlık SQL kurallı işlevler açıklanmaktadır.|
-|[Bit Düzeyinde Kurallı İşlevler](bitwise-canonical-functions.md)|Entity SQL bit düzeyinde kurallı işlevler açıklanmaktadır.|
-|[Diğer Kurallı İşlevler](other-canonical-functions.md)|Bit düzeyinde, tarih, dize, matematik veya toplama sınıflandırılan değil işlevleri açıklanır.|
+|[Entity SQL kurallı Işlevleri toplama](aggregate-canonical-functions.md)|Kurallı Entity SQL işlevlerini açıklar.|
+|[Kurallı Matematik İşlevleri](math-canonical-functions.md)|Matematik Entity SQL kurallı işlevleri ele alır.|
+|[Kurallı Dize İşlevleri](string-canonical-functions.md)|Kurallı Entity SQL dize ve kurallı işlevleri açıklar.|
+|[Kurallı Tarih ve Saat İşlevleri](date-and-time-canonical-functions.md)|Kurallı işlevleri Entity SQL tarih ve saat açıklanmaktadır.|
+|[Bit Düzeyinde Kurallı İşlevler](bitwise-canonical-functions.md)|Bit düzeyinde Entity SQL kurallı işlevleri açıklar.|
+|[Diğer Kurallı İşlevler](other-canonical-functions.md)|Bit düzeyinde, tarih/saat, dize, matematik veya toplama olarak sınıflandırılmayan işlevleri açıklar.|
 
 ## <a name="comparison-operators"></a>Karşılaştırma işleçleri
 
-Karşılaştırma işleçleri aşağıdaki türleri için tanımlanır: `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time` , `DateTimeOffset`. Karşılaştırma işleci uygulanmadan önce örtük tür promosyonu işlenenler için gerçekleşir. Karşılaştırma işleçleri, her zaman Boolean değerleri yield. En az bir işlenen olduğunda `null`, sonuç `null`.
+Karşılaştırma işleçleri aşağıdaki türler için tanımlanmıştır: `Byte` ,,, `Int16` , `Int32` `Int64` `Double` , `Single` , `Decimal` , `String` , `DateTime` , `Date` , `Time` , `DateTimeOffset` . Karşılaştırma işleci uygulanmadan önce işlenenler için örtük tür yükseltme oluşur. Karşılaştırma işleçleri her zaman Boole değerleri verir. İşlenenlerinden en az biri olduğunda `null` , sonuç olur `null` .
 
-Eşitlik ve eşitsizlik kimliği gibi sahip herhangi bir nesne türü için tanımlanmış `Boolean` türü. Kimlik basit olmayan nesnelerle aynı kimliğini paylaştıkları, eşit olarak kabul edilir. Aşağıdaki tabloda, varlık SQL Karşılaştırma işleçleri listelenir:
-
-|İşleç|Açıklama|
-|--------------|-----------------|
-|[= (Eşittir)](equals-entity-sql.md)|İki ifadenin eşitlik karşılaştırır.|
-|[> (Büyüktür)](greater-than-entity-sql.md)|Sol ifade sağ ifade daha büyük bir değere sahip olup olmadığını belirlemek için iki deyim karşılaştırır.|
-|[>= (Büyüktür veya Eşittir)](greater-than-or-equal-to-entity-sql.md)|Sol ifade sağ ifade eşit veya büyük bir değer olup olmadığını belirlemek için iki deyim karşılaştırır.|
-|[OLAN \[DEĞİL\] NULL](isnull-entity-sql.md)|Sorgu ifadesi null olup olmadığını belirler.|
-|[< (Küçüktür)](less-than-entity-sql.md)|Sol ifade sağ ifade'den küçük bir değere sahip olup olmadığını belirlemek için iki deyim karşılaştırır.|
-|[<= (Küçüktür veya Eşittir)](less-than-or-equal-to-entity-sql.md)|Sol ifade düşük bir değere eşit veya ondan sağ ifade olup olmadığını belirlemek için iki deyim karşılaştırır.|
-|[\[DEĞİL\] BETWEEN](between-entity-sql.md)|Bir ifadenin belirtilen bir aralıktaki bir değer sonuçlanıp sonuçlanmayacağını belirler.|
-|[\!= (Eşit değildir)](not-equal-to-entity-sql.md)|Sol ifade doğru ifade eşit değilse olup olmadığını belirlemek için iki deyim karşılaştırır.|
-|[\[DEĞİL\] GİBİ](like-entity-sql.md)|Belirli bir karakter dizesi belirtilen desenle eşleşip eşleşmediğini belirler.|
-
-## <a name="logical-and-case-expression-operators"></a>Mantıksal ve büyük/küçük harf ifade işleçleri
-
-Mantıksal işleçler, basit bir koşul için test edin. CASE ifadesi sonucu belirlemek için Boolean ifadeler bir dizi olarak değerlendirilir. Aşağıdaki tabloda, mantıksal ve büyük/küçük harf ifade işleçleri listelenmektedir:
+Eşitlik ve eşitsizlik, türü gibi kimliği olan herhangi bir nesne türü için tanımlanır `Boolean` . Kimliği olan temel olmayan nesneler aynı kimliği paylaşıyorsa eşit kabul edilir. Aşağıdaki tabloda Entity SQL karşılaştırma işleçleri listelenmektedir:
 
 |İşleç|Açıklama|
 |--------------|-----------------|
-|[& & (Mantıksal ve)](and-entity-sql.md)|Mantıksal and|
-|[\! (Mantıksal değil)](not-entity-sql.md)|Mantıksal değil.|
-|[&#124;&#124;(Mantıksal veya)](or-entity-sql.md)|Mantıksal OR.|
-|[CASE](case-entity-sql.md)|Boolean ifadeleri sonucu belirlemek için bir dizi olarak değerlendirilir.|
-|[THEN](then-entity-sql.md)|Sonucu bir [OLDUĞUNDA](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387119(v=vs.100)) doğru olarak değerlendirildiğinde yan tümcesi.|
+|[= (Eşittir)](equals-entity-sql.md)|İki ifadenin eşitliğini karşılaştırır.|
+|[> (Büyüktür)](greater-than-entity-sql.md)|Sol ifadenin sağ ifadeden daha büyük bir değere sahip olup olmadığını anlamak için iki ifadeyi karşılaştırır.|
+|[>= (büyüktür veya eşittir)](greater-than-or-equal-to-entity-sql.md)|Sol ifadenin sağ ifadeden büyük veya ona eşit bir değere sahip olup olmadığını anlamak için iki ifadeyi karşılaştırır.|
+|[\[null değil \]](isnull-entity-sql.md)|Sorgu ifadesinin null olup olmadığını belirler.|
+|[< (Küçüktür)](less-than-entity-sql.md)|Sol ifadenin doğru ifadeden daha küçük bir değere sahip olup olmadığını anlamak için iki ifadeyi karşılaştırır.|
+|[<= (Küçüktür veya Eşittir)](less-than-or-equal-to-entity-sql.md)|Sol ifadenin doğru ifadeye eşit veya ondan küçük bir değere sahip olup olmadığını anlamak için iki ifadeyi karşılaştırır.|
+|[\[\]ARALARıNDA değil](between-entity-sql.md)|Bir ifadenin belirtilen aralıktaki bir değer ile sonuçlanıp sonuçlanmadığını belirler.|
+|[\!= (Eşit değildir)](not-equal-to-entity-sql.md)|Sol ifadenin sağ ifadeye eşit olup olmadığını anlamak için iki ifadeyi karşılaştırır.|
+|[\[\]BEĞENMIYOR](like-entity-sql.md)|Belirli bir karakter dizesinin belirtilen bir Düzenle eşleşip eşleşmediğini belirler.|
+
+## <a name="logical-and-case-expression-operators"></a>Mantıksal ve Case ifade işleçleri
+
+Mantıksal işleçler bir koşulun gerçeği için test. CASE ifadesi sonucu belirleyecek bir dizi Boole ifadesi değerlendirir. Aşağıdaki tabloda mantıksal ve CASE ifade işleçleri listelenmektedir:
+
+|İşleç|Açıklama|
+|--------------|-----------------|
+|[&&  (mantıksal AND)](and-entity-sql.md)|Mantıksal AND.|
+|[\! (Mantıksal DEĞIL)](not-entity-sql.md)|Mantıksal DEĞIL.|
+|[&#124;&#124;  (mantıksal veya)](or-entity-sql.md)|Mantıksal OR.|
+|[HARFLERINI](case-entity-sql.md)|Sonucu tespit etmek için bir dizi Boole ifadesi değerlendirir.|
+|[NI](then-entity-sql.md)|True olarak [değerlendirildiğinde bir WHERE](/previous-versions/dotnet/netframework-4.0/bb387119(v=vs.100)) yan tümcesinin sonucu.|
 
 ## <a name="query-operators"></a>Sorgu işleçleri
 
-Sorgu işleçleri, varlık veri döndüren sorgu ifadeleri tanımlamak için kullanılır. Aşağıdaki tabloda, sorgu işleçleri listelenir:
+Sorgu işleçleri, varlık verileri döndüren sorgu ifadelerini tanımlamak için kullanılır. Aşağıdaki tabloda sorgu işleçleri listelenmektedir:
 
-|İşleç|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|Operatör|Kullanın|
 |--------------|---------|
-|[FROM](from-entity-sql.md)|Kullanılan toplama belirtir [seçin](select-entity-sql.md) deyimleri.|
-|[GROUP BY](group-by-entity-sql.md)|Hangi nesnelerin, bir sorgu tarafından döndürülür grupları belirtir ([seçin](select-entity-sql.md)) ifade olan yerleştirilecek.|
-|[Grouppartıtıon](grouppartition-entity-sql.md)|Bağımsız değişken değerleri toplama ilgili olduğu grubu bölümü öngörülen koleksiyonunu döndürür.|
-|[HAVING](having-entity-sql.md)|Bir toplama veya bir grup için bir arama koşulu belirtir.|
-|[LIMIT](limit-entity-sql.md)|İle kullanılan [ORDER BY](order-by-entity-sql.md) gerçekleştirilen fiziksel disk belleği yan tümcesi.|
-|[ORDER BY](order-by-entity-sql.md)|Döndürülen nesneler üzerinde kullanılan sıralama düzeni belirtir. bir [seçin](select-entity-sql.md) deyimi.|
-|[SELECT](select-entity-sql.md)|Bir sorgu tarafından döndürülen projeksiyon öğeleri belirtir.|
-|[SKIP](skip-entity-sql.md)|İle kullanılan [ORDER BY](order-by-entity-sql.md) gerçekleştirilen fiziksel disk belleği yan tümcesi.|
-|[TOP](top-entity-sql.md)|Yalnızca ilk satır kümesini sorgu sonuç döndüren belirtir.|
-|[WHERE](where-entity-sql.md)|Koşullu olarak bir sorgu tarafından döndürülen veri filtreler.|
+|[FROM](from-entity-sql.md)|[Select](select-entity-sql.md) deyimlerinde kullanılan koleksiyonu belirtir.|
+|[GROUP BY](group-by-entity-sql.md)|Bir sorgu ([Select](select-entity-sql.md)) ifadesi tarafından döndürülen nesnelerin yerleştirileceği grupları belirtir.|
+|[GROUPPARTITION](grouppartition-entity-sql.md)|Toplamanın ilişkili olduğu grup bölümünü tahmin eden bağımsız değişken değerlerinin bir koleksiyonunu döndürür.|
+|[HAVING](having-entity-sql.md)|Grup veya toplama için bir arama koşulu belirtir.|
+|[SıNıRLı](limit-entity-sql.md)|Fiziksel disk belleği gerçekleştirmeyen [order by](order-by-entity-sql.md) yan tümcesi ile kullanılır.|
+|[SİPARİŞ VEREN](order-by-entity-sql.md)|Bir [Select](select-entity-sql.md) ifadesinde döndürülen nesnelerde kullanılan sıralama düzenini belirtir.|
+|[SEÇIN](select-entity-sql.md)|Bir sorgu tarafından döndürülen projeksiyondaki öğeleri belirtir.|
+|[ŞIMDILIK](skip-entity-sql.md)|Fiziksel disk belleği gerçekleştirmeyen [order by](order-by-entity-sql.md) yan tümcesi ile kullanılır.|
+|[Sayfanın Üstü](top-entity-sql.md)|Sorgu sonucundan yalnızca ilk satır kümesinin döndürüleceğini belirtir.|
+|[WHERE](where-entity-sql.md)|Bir sorgu tarafından döndürülen verileri koşullu olarak filtreler.|
 
 ## <a name="reference-operators"></a>Başvuru işleçleri
 
-Bir mantıksal bir işaretçi (yabancı anahtar) özel varlık kümesinde belirli bir varlığa başvurudur. Entity SQL oluşturmak, ayrıştırma ve başvuruları arasında gezinmek için aşağıdaki işleçleri destekler:
+Başvuru, belirli bir varlık kümesindeki belirli bir varlığa yönelik mantıksal bir işaretçisidir (yabancı anahtardır). Entity SQL, başvuruları oluşturmak, oluşturmak ve bunlar arasında gezinmek için aşağıdaki işleçleri destekler:
 
-|İşleç|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|Operatör|Kullanın|
 |--------------|---------|
-|[CREATEREF](createref-entity-sql.md)|Bir varlık başvuruları içinde bir varlık kümesini oluşturur.|
-|[DEREF](deref-entity-sql.md)|Bir başvuru değeri ve bu sonucu başvuru oluşturur başvurusunu kaldırır.|
-|[KEY](key-entity-sql.md)|Bir başvuru veya varlık ifade anahtarını ayıklar.|
-|[NAVIGATE](navigate-entity-sql.md)|Bir varlık türü arasında ilişki üzerinden gitmenizi sağlar|
-|[REF](ref-entity-sql.md)|Bir varlık örneği için bir başvuru döndürür.|
+|[CREATEREF](createref-entity-sql.md)|Bir varlık kümesindeki bir varlığa başvurular oluşturur.|
+|[DEREF](deref-entity-sql.md)|Başvuru değerine başvurur ve başvurunun sonucunu üretir.|
+|[ANAHTAR](key-entity-sql.md)|Başvurunun veya bir varlık ifadesinin anahtarını ayıklar.|
+|[GEÇMEK](navigate-entity-sql.md)|Bir varlık türünden diğerine ilişki üzerinde gezinmeniz sağlar|
+|[REF](ref-entity-sql.md)|Bir varlık örneğine bir başvuru döndürür.|
 
-## <a name="set-operators"></a>Küme işleci
+## <a name="set-operators"></a>İşleç ayarla
 
-Entity SQL çeşitli güçlü işlemler sağlar. Bu küme işleci Transact-SQL işleçleri UNION, INTERSECT veya EXCEPT, gibi benzer içerir ve mevcut. Entity SQL yinelenen eleme (SET), üyelik (gelen) test etme ve birleşimler (birleştirme) işleçleri de destekler. Entity SQL kümesi işleçleri aşağıdaki tabloda listelenmektedir:
+Entity SQL, çeşitli güçlü ayarlama işlemleri sağlar. Bu, UNıON, ıNTERSECT, EXCEPT ve var gibi Transact-SQL işleçleriyle benzerlik olarak ayarlanan işleçleri içerir. Entity SQL Ayrıca, yinelenen eleme (SET), üyelik testi (IÇINDE) ve birleşimler (JOIN) için işleçleri de destekler. Aşağıdaki tablo Entity SQL set işleçlerini listeler:
 
-|İşleç|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|Operatör|Kullanın|
 |--------------|---------|
-|[ANYELEMENT](anyelement-entity-sql.md)|Birden çok değerli bir koleksiyondan bir öğe ayıklar.|
-|[EXCEPT](except-entity-sql.md)|Ayrıca sorgu ifadesinden EXCEPT işlecinin sağ için döndürülen olmayan EXCEPT işlecinin sol sorgu ifadesinden farklı değerleri koleksiyonunu döndürür.|
-|[\[DEĞİL\] EXISTS](exists-entity-sql.md)|Bir koleksiyonu boş olup olmadığını belirler.|
-|[FLATTEN](flatten-entity-sql.md)|Değişkeninin bir koleksiyonlar koleksiyonu düzleştirilmiş bir koleksiyonuna dönüştürür.|
-|[\[DEĞİL\] GİRİŞ](in-entity-sql.md)|Değer bir koleksiyondaki herhangi bir değer ile eşleşip eşleşmediğini belirler.|
-|[INTERSECT](intersect-entity-sql.md)|INTERSECT işlecinin sol tarafında soldaki iki sorgu ifadeleri tarafından döndürülen herhangi ayrı değerlerin bir koleksiyonunu döndürür.|
-|[OVERLAPS](overlaps-entity-sql.md)|İki koleksiyon ortak öğeler sahip olup olmadığını belirler.|
-|[SET](set-entity-sql.md)|Kaldırılan tüm yinelenen öğeleri ile yeni bir koleksiyon sonuçlanmıyor tarafından bir küme içine nesneler koleksiyonunu dönüştürmek için kullanılır.|
-|[UNION](union-entity-sql.md)|İki veya daha fazla sorguların sonuçlarını tek bir koleksiyon birleştirir.|
+|[ANYELEMENT](anyelement-entity-sql.md)|Çok değerli bir koleksiyondan bir öğe ayıklar.|
+|[EXCEPT](except-entity-sql.md)|Sorgu ifadesinden, EXCEPT işlecinin sağına doğru bir şekilde döndürülmeyen EXCEPT işlecinin soluna ait farklı değerlerin bir koleksiyonunu döndürür.|
+|[\[YOK \]](exists-entity-sql.md)|Bir koleksiyonun boş olup olmadığını belirler.|
+|[LEŞTIREBILIR](flatten-entity-sql.md)|Bir koleksiyon koleksiyonunu düzleştirilmiş bir koleksiyona dönüştürür.|
+|[\[NOT \] ın](in-entity-sql.md)|Bir değerin bir koleksiyondaki herhangi bir değerle eşleşip eşleşmediğini belirler.|
+|[INTERSECT](intersect-entity-sql.md)|INTERSECT işleneninin sol ve sağ taraflarındaki sorgu ifadeleri tarafından döndürülen ayrı değerlerin bir koleksiyonunu döndürür.|
+|[OVERLAPS](overlaps-entity-sql.md)|İki koleksiyonun ortak öğelere sahip olup olmadığını belirler.|
+|[KURMAK](set-entity-sql.md)|Yinelenen öğeleri kaldırılmış şekilde yeni bir koleksiyon oluşturarak bir nesne koleksiyonunu bir kümesine dönüştürmek için kullanılır.|
+|[BIRLEŞIM](union-entity-sql.md)|İki veya daha fazla sorgunun sonuçlarını tek bir koleksiyonda birleştirir.|
 
 ## <a name="type-operators"></a>Tür işleçleri
 
-Varlık SQL türü oluşturulan, sorgulanan ve yönetilebilir ifadesinin (değer) izin işlemleri sağlar. Aşağıdaki tabloda türleriyle çalışmak için kullanılan işleçleri listelenir:
+Entity SQL, bir ifade türünün (değer) oluşturulmasını, sorgulanmasını ve yerine işleneceğini sağlayan işlemler sağlar. Aşağıdaki tabloda, türleriyle çalışmak için kullanılan işleçler listelenmektedir:
 
-|İşleç|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|Operatör|Kullanın|
 |--------------|---------|
-|[CAST](cast-entity-sql.md)|Bir veri türündeki bir ifade diğerine dönüştürür.|
-|[COLLECTION](collection-entity-sql.md)|Kullanılan bir [işlevi](function-entity-sql.md) varlık türleri veya karmaşık türler koleksiyonu bildirmek için işlemi.|
-|[OLAN \[DEĞİL\] SONU](isof-entity-sql.md)|Belirtilen tür veya onun alt türlerinden birini bir ifadenin türü olup olmadığını belirler.|
-|[OFTYPE](oftype-entity-sql.md)|Belirli bir tür bir sorgu ifadesinden nesnelerinin bir koleksiyonunu döndürür.|
-|[Adlandırılmış Tür Oluşturucu](named-type-constructor-entity-sql.md)|Varlık türleri veya karmaşık türler örneklerini oluşturmak için kullanılır.|
-|[MULTISET](multiset-entity-sql.md)|Değerler listesinden bir çoklu küme örneği oluşturur.|
-|[ROW](row-entity-sql.md)|Bir veya daha fazla değer anonim, yapısal olarak belirlenmiş kayıtları oluşturur.|
-|[TREAT](treat-entity-sql.md)|Belirli bir temel türü bir nesneyi belirtilen türetilmiş bir türde bir nesne olarak değerlendirir.|
+|[CAST](cast-entity-sql.md)|Bir veri türündeki bir ifadeyi bir diğerine dönüştürür.|
+|[KOLEKSIYON](collection-entity-sql.md)|Bir [işlev](function-entity-sql.md) işleminde varlık türleri veya karmaşık türler koleksiyonunu bildirmek için kullanılır.|
+|[Şu \[ değil \]](isof-entity-sql.md)|Bir ifadenin türünün belirtilen türde mi yoksa alt türlerinden biri mi olduğunu belirler.|
+|[OFTYPE](oftype-entity-sql.md)|Belirli türde olan bir sorgu ifadesinden bir nesne koleksiyonu döndürür.|
+|[Adlandırılmış Tür Oluşturucu](named-type-constructor-entity-sql.md)|Varlık türlerinin veya karmaşık türlerin örneklerini oluşturmak için kullanılır.|
+|[MULTISET](multiset-entity-sql.md)|Bir değer listesinden bir çoklu küme örneği oluşturur.|
+|[ROW](row-entity-sql.md)|Bir veya daha fazla değerden anonim, yapısal olarak yazılmış kayıtlar oluşturur.|
+|[TREAT](treat-entity-sql.md)|Belirli bir temel türdeki bir nesneyi belirtilen türetilmiş türün bir nesnesi olarak değerlendirir.|
 
 ## <a name="other-operators"></a>Diğer işleçler
 
-Aşağıdaki tabloda diğer varlık SQL işleçleri listelenir:
+Aşağıdaki tablo diğer Entity SQL işleçlerini listeler:
 
-|İşleç|Bir yönetim grubuna bağlanmak veya bağlı bir yönetim grubunun özelliklerini düzenlemek için Yönetim çalışma alanında|
+|Operatör|Kullanın|
 |--------------|---------|
-|[+ (Dize Birleştirme)](string-concatenation-entity-sql.md)|Entity SQL dizeyi birleştirmek için kullanılır.|
-|[. (Üye Erişimi)](member-access-entity-sql.md)|Bir özellik veya alan yapısal kavramsal model türünün bir örneği, değere erişmek için kullanılır.|
-|[-- (Yorum)](comment-entity-sql.md)|Entity SQL açıklamaları içerir.|
-|[FUNCTION](function-entity-sql.md)|Bir varlık SQL sorgusu yürütülebilecek bir satır içi işlevi tanımlar.|
+|[+ (Dize Birleştirme)](string-concatenation-entity-sql.md)|Entity SQL dizeleri birleştirmek için kullanılır.|
+|[. (Üye erişimi)](member-access-entity-sql.md)|Yapısal kavramsal model türü örneğinin bir özelliğinin veya alanının değerine erişmek için kullanılır.|
+|[-- (Yorum)](comment-entity-sql.md)|Entity SQL açıklamalarını dahil edin.|
+|[ÇALıŞMAYACAKTıR](function-entity-sql.md)|Bir Entity SQL sorgusunda yürütülebilecek bir satır içi işlevi tanımlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

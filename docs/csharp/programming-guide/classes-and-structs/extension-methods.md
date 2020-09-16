@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 116087ac1aab57f2869b05f436801c7861c56eca
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 88d6cfd1b5262d4a4fae96cf53271467b5042319
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063711"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541948"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Uzantı Metotları (C# Programlama Kılavuzu)
 
@@ -123,7 +123,7 @@ Uygulanan bir sınıf kitaplığı için derleme sürüm numarasının artıyor 
 - [Paralel programlama örnekleri (bunlar birçok örnek genişletme yöntemi içerir)](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)
 - [Lambda Ifadeleri](../../language-reference/operators/lambda-expressions.md)
 - [Standart Sorgu İşleçlerine Genel Bakış](../concepts/linq/standard-query-operators-overview.md)
-- [Örnek parametreleri ve bunların etkileri için dönüştürme kuralları](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
-- [Diller arasında uzantı yöntemleri birlikte çalışabilirliği](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
-- [Uzantı yöntemleri ve curried temsilciler](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-and-curried-delegates)
-- [Uzantı yöntemi bağlama ve hata raporlama](https://docs.microsoft.com/archive/blogs/sreekarc/extension-method-binding-and-error-reporting)
+- [Örnek parametreleri ve bunların etkileri için dönüştürme kuralları](/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact)
+- [Diller arasında uzantı yöntemleri birlikte çalışabilirliği](/archive/blogs/sreekarc/extension-methods-interoperability-between-languages)
+- [Uzantı yöntemleri ve curried temsilciler](/archive/blogs/sreekarc/extension-methods-and-curried-delegates)
+- [Uzantı yöntemi bağlama ve hata raporlama](/archive/blogs/sreekarc/extension-method-binding-and-error-reporting)

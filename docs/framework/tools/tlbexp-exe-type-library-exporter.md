@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: 3cfaa83590fefe31c437d2ff607fb579aec1da61
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: e675b0addc9051a0b3c877e9b029e113c17ba5f0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517041"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543393"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Tür Kitaplığı Dışarı Aktarıcı)
 Tür Kitaplığı Verme Programı, bir ortak dil çalışma zamanı derlemesinde tanımlanan türleri açıklayan bir tür kitaplığı üretir.  
@@ -31,7 +31,7 @@ tlbexp assemblyName [options]
   
 ## <a name="parameters"></a>Parametreler  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |*assemblyName*|Bir tür kitaplığının kendisi için dışarı aktarılacağı derleme.|  
   
@@ -89,7 +89,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Tlbexp.exe alanı yok saymadığını unutmayın <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> .  
   
- Tür kitaplıkları derlemelerde bulunan tüm bilgileri barındıramayacağından, dışarı aktarma işlemi sırasında Tlbexp.exe bazı verileri atabilir. Dönüştürme işleminin açıklaması ve bir tür kitaplığına yayılan her bir bilgi parçasının kaynağının tanımlanması için bkz. [tür kitaplığı dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
+ Tür kitaplıkları derlemelerde bulunan tüm bilgileri barındıramayacağından, dışarı aktarma işlemi sırasında Tlbexp.exe bazı verileri atabilir. Dönüştürme işleminin açıklaması ve bir tür kitaplığına yayılan her bir bilgi parçasının kaynağının tanımlanması için bkz. [tür kitaplığı dönüştürme Özeti](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
  Tür kitaplığı verme programı, <xref:System.TypedReference> `VARIANT` nesne yönetilmeyen kodda anlamı olmasa bile, parametreleri olan yöntemleri dışarı <xref:System.TypedReference> aktardığından emin olmak için. Parametreleri olan yöntemleri dışarı aktardığınızda <xref:System.TypedReference> tür kitaplığı verme programı bir uyarı veya hata oluşturmaz ve elde edilen tür kitaplığını kullanan yönetilmeyen kod düzgün çalışmaz.  
   
@@ -133,6 +133,6 @@ tlbexp Sample.dll
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [Araçlar](index.md)
 - [Regasm.exe (derleme kayıt aracı)](regasm-exe-assembly-registration-tool.md)
-- [Derlemeden tür kitaplığına dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
+- [Derlemeden tür kitaplığına dönüştürme Özeti](/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100))
 - [Tlbimp.exe (tür kitaplığı Içeri Aktarıcı)](tlbimp-exe-type-library-importer.md)
 - [Komut Istemleri](developer-command-prompt-for-vs.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e81e131933e0997756ed4185a3ceb12ad19b78de
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a32a5d075b5b1d02632c80216e7c2c12920bf4a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544147"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Nesne Ömrü: Nesneleri Oluşturma ve Yok Etme (Visual Basic)
 
@@ -53,7 +53,7 @@ Oluşturucular, aşağıdaki kodda olduğu gibi sıklıkla aşırı yüklenmişt
 
 Başka bir sınıftan türetilmiş bir sınıf tanımladığınızda, temel sınıfın hiçbir parametre alan erişilebilir bir Oluşturucusu yoksa, oluşturucunun ilk satırı temel sınıfın oluşturucusuna bir çağrı olmalıdır. Yukarıdaki oluşturucuyu içeren temel sınıfa yapılan bir çağrı (örneğin,) `MyBase.New(s)` . Aksi takdirde, `MyBase.New` isteğe bağlıdır ve Visual Basic çalışma zamanı onu örtülü olarak çağırır.
 
-Üst nesnenin oluşturucusunu çağırmak için kodu yazdıktan sonra, yordama ek başlatma kodu ekleyebilirsiniz `Sub New` . `Sub New`Parametreli bir Oluşturucu olarak çağrıldığında bağımsız değişkenleri kabul edebilir. Bu parametreler, Oluşturucu çağıran yordamdan geçirilir, örneğin, `Dim AnObject As New ThisClass(X)` .
+Üst nesnenin oluşturucusunu çağırmak için kodu yazdıktan sonra, yordama ek başlatma kodu ekleyebilirsiniz `Sub New` . `Sub New` Parametreli bir Oluşturucu olarak çağrıldığında bağımsız değişkenleri kabul edebilir. Bu parametreler, Oluşturucu çağıran yordamdan geçirilir, örneğin, `Dim AnObject As New ThisClass(X)` .
 
 ### <a name="sub-finalize"></a>Sub Finalize
 
@@ -71,7 +71,7 @@ Nesneleri serbest bırakmadan önce CLR, `Finalize` bir yordamı tanımlayan nes
 
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Yeni ve sonlandırma yöntemlerinin bir sınıf hiyerarşisinde çalışması
 
-Bir sınıf örneği oluşturulduğunda, ortak dil çalışma zamanı (CLR), bu nesnede varsa adlı bir yordamı yürütmeye çalışır `New` . `New`, bir `constructor` nesne içindeki diğer herhangi bir kod yürütülmeden önce yeni nesneleri başlatmak için kullanılan adlı bir yordam türüdür. Bir `New` Oluşturucu, dosyaları açmak, veritabanlarına bağlanmak, değişkenleri başlatmak ve bir nesne kullanılmadan önce gerçekleştirilmesi gereken diğer görevlerden yararlanmak için kullanılabilir.
+Bir sınıf örneği oluşturulduğunda, ortak dil çalışma zamanı (CLR), bu nesnede varsa adlı bir yordamı yürütmeye çalışır `New` . `New` , bir `constructor` nesne içindeki diğer herhangi bir kod yürütülmeden önce yeni nesneleri başlatmak için kullanılan adlı bir yordam türüdür. Bir `New` Oluşturucu, dosyaları açmak, veritabanlarına bağlanmak, değişkenleri başlatmak ve bir nesne kullanılmadan önce gerçekleştirilmesi gereken diğer görevlerden yararlanmak için kullanılabilir.
 
 Türetilmiş bir sınıfın bir örneği oluşturulduğunda, `Sub New` önce temel sınıfın Oluşturucusu yürütülür ve ardından türetilmiş sınıflardaki oluşturucular tarafından yürütülür. Bu durum, bir oluşturucudaki ilk kod satırı, sınıf `Sub New` `MyBase.New()` hiyerarşisinde kendisinin hemen üzerinde bulunan sınıfının oluşturucusunu çağırmak için sözdizimini kullandığından oluşur. `Sub New`Daha sonra Oluşturucu, temel sınıfa yönelik oluşturucuya ulaşılana kadar sınıf hiyerarşisindeki her sınıf için çağrılır. Bu noktada, temel sınıf için oluşturucudaki kod yürütülür ve ardından tüm türetilmiş sınıflarda bulunan kod ve en son türetilen sınıflardaki kod son olarak yürütülür.
 
@@ -85,7 +85,7 @@ Bir nesne artık gerekli olmadığında, CLR <xref:System.Object.Finalize%2A> be
 
 Sınıf örnekleri genellikle Windows işleyicileri ve veritabanı bağlantıları gibi CLR tarafından yönetilmeyen kaynakları denetler. Bu kaynaklar, `Finalize` nesne çöp toplayıcı tarafından yok edildiğinde yayımlanabilmeleri için sınıfının yönteminde atılmalıdır. Ancak çöp toplayıcı yalnızca CLR daha fazla boş bellek gerektirdiğinde nesneleri yok eder. Bu, nesnenin kapsam dışına çıkana kadar uzun sürebileceği anlamına gelir.
 
-Atık toplamayı tamamlamak için sınıflarınız, arabirimi uygularsa sistem kaynaklarını etkin bir şekilde yönetmeye yönelik bir mekanizma sağlayabilir <xref:System.IDisposable> . <xref:System.IDisposable>, <xref:System.IDisposable.Dispose%2A> istemcileri bir nesne kullanmayı tamamlarsa çağrı gereken tek bir yöntemine sahiptir. <xref:System.IDisposable.Dispose%2A>Yöntemi, kaynakları hemen serbest bırakmak ve dosya ve veritabanı bağlantıları kapatma gibi görevleri gerçekleştirmek için kullanabilirsiniz. `Finalize`Yok edicinin aksine, <xref:System.IDisposable.Dispose%2A> yöntemi otomatik olarak çağrılmaz. Bir sınıfın istemcileri <xref:System.IDisposable.Dispose%2A> , kaynakları hemen serbest bırakmak istediğinizde açıkça çağırmalıdır.
+Atık toplamayı tamamlamak için sınıflarınız, arabirimi uygularsa sistem kaynaklarını etkin bir şekilde yönetmeye yönelik bir mekanizma sağlayabilir <xref:System.IDisposable> . <xref:System.IDisposable> , <xref:System.IDisposable.Dispose%2A> istemcileri bir nesne kullanmayı tamamlarsa çağrı gereken tek bir yöntemine sahiptir. <xref:System.IDisposable.Dispose%2A>Yöntemi, kaynakları hemen serbest bırakmak ve dosya ve veritabanı bağlantıları kapatma gibi görevleri gerçekleştirmek için kullanabilirsiniz. `Finalize`Yok edicinin aksine, <xref:System.IDisposable.Dispose%2A> yöntemi otomatik olarak çağrılmaz. Bir sınıfın istemcileri <xref:System.IDisposable.Dispose%2A> , kaynakları hemen serbest bırakmak istediğinizde açıkça çağırmalıdır.
 
 ### <a name="implementing-idisposable"></a>IDisposable uygulama
 
@@ -158,7 +158,7 @@ Sistem bu nesne nesnelerinin artık gerekli olmadığını belirlediğinde CLR n
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.IDisposable.Dispose%2A>
-- [Bileşenlerin başlatılması ve sonlandırılması](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
+- [Bileşenlerin başlatılması ve sonlandırılması](/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [New Işleci](../../../language-reference/operators/new-operator.md)
 - [Yönetilmeyen Kaynakları Temizleme](../../../../standard/garbage-collection/unmanaged.md)
-- [Nothing](../../../language-reference/nothing.md)
+- [Yapma](../../../language-reference/nothing.md)

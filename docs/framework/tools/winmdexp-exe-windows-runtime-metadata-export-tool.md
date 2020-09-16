@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool
 - Winmdexp.exe
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
-ms.openlocfilehash: 10626e00eb340d84653419da18a0b219ef1d197e
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: dc36533a4f0c48e8e8a5930540746a46ba596751
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517028"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543244"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows Çalışma Zamanı Meta Veri Dışarı Aktarma Aracı)
 Windows Çalışma Zamanı meta veri verme aracı (Winmdexp.exe), .NET Framework modülünü Windows Çalışma Zamanı meta verileri içeren bir dosyaya dönüştürür. .NET Framework derlemeleri ve Windows Çalışma Zamanı meta veri dosyaları aynı fiziksel biçimi kullanmasına karşın, meta veri tablolarının içeriğinde farklılıklar vardır. Bu, .NET Framework derlemelerin Windows Çalışma Zamanı bileşenleri olarak otomatik olarak kullanılamayacağı anlamına gelir. .NET Framework modülünü Windows Çalışma Zamanı bir bileşene açma işlemi, *dışarı aktarma*olarak adlandırılır. .NET Framework 4,5 ve .NET Framework 4.5.1, elde edilen Windows meta verileri (. winmd) dosyası hem meta verileri hem de uygulamayı içerir.  
@@ -30,7 +30,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="parameters"></a>Parametreler  
   
-|Bağımsız değişken veya seçenek|Açıklama|  
+|Bağımsız değişken veya seçenek|Description|  
 |------------------------|-----------------|  
 |`winmdmodule`|Dışarı aktarılacak modülü (.winmdobj) belirtir. Yalnızca tek bir modüle izin verilir. Bu modülü oluşturmak için, `/target` hedefle birlikte derleyici seçeneğini kullanın `winmdobj` . Bkz: [-target: winmdobj (C# derleyici seçenekleri)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) veya [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe'nin üreteceği çıktı XML belgesi dosyasını belirtir. .NET Framework 4,5 ' de, çıkış dosyası aslında giriş XML belge dosyası ile aynıdır.|  
@@ -45,13 +45,13 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Seçenekleri (ve isteğe bağlı olarak) içeren bir yanıt (. rsp) dosyasını belirtir `winmdmodule` . İçindeki her satır `responsefile` tek bir bağımsız değişken veya seçenek içermelidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Winmdexp.exe, rasgele bir .NET Framework derlemesini .winmd dosyasına dönüştürmek için tasarlanmamıştır. Seçeneğiyle derlenen bir modül gerektirir `/target:winmdobj` ve ek kısıtlamalar uygulanır. Bu kısıtlamaların en önemlileri, derlemenin API yüzeyi içinde gösterilen tüm türlerin Windows Çalışma Zamanı türde olması gerekir. Daha fazla bilgi için [C# ve Visual Basic Windows çalışma zamanı bileşenleri oluşturma](https://docs.microsoft.com/previous-versions/br230301(v=vs.110))makalesinin "Windows Çalışma Zamanı bileşenlerinde tür bildirme" bölümüne bakın.
+ Winmdexp.exe, rasgele bir .NET Framework derlemesini .winmd dosyasına dönüştürmek için tasarlanmamıştır. Seçeneğiyle derlenen bir modül gerektirir `/target:winmdobj` ve ek kısıtlamalar uygulanır. Bu kısıtlamaların en önemlileri, derlemenin API yüzeyi içinde gösterilen tüm türlerin Windows Çalışma Zamanı türde olması gerekir. Daha fazla bilgi için [C# ve Visual Basic Windows çalışma zamanı bileşenleri oluşturma](/previous-versions/br230301(v=vs.110))makalesinin "Windows Çalışma Zamanı bileşenlerinde tür bildirme" bölümüne bakın.
   
  C# veya Visual Basic sahip bir Windows 8. x mağaza uygulaması veya Windows Çalışma Zamanı bileşeni yazdığınızda .NET Framework, Windows Çalışma Zamanı daha doğal programlama yapmak için destek sağlar. Bu, [Windows Mağazası uygulamaları için .NET Framework desteği ve Windows çalışma zamanı](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)makalesinde açıklanmaktadır. İşlemde, bazı yaygın olarak kullanılan Windows Çalışma Zamanı türleri .NET Framework türlerine eşlenir. Winmdexp.exe bu işlemi tersine çevirir ve karşılık gelen Windows Çalışma Zamanı türlerini kullanan bir API yüzeyi üretir. Örneğin, arabiriminden oluşturulan türler <xref:System.Collections.Generic.IList%601> Windows çalışma zamanı arabiriminden oluşturulan türlere eşlenir <xref:Windows.Foundation.Collections.IVector%601> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
-- [C# ve Visual Basic Windows Çalışma Zamanı bileşenleri oluşturma](https://docs.microsoft.com/previous-versions/br230301(v=vs.110))
+- [C# ve Visual Basic Windows Çalışma Zamanı bileşenleri oluşturma](/previous-versions/br230301(v=vs.110))
 - [Winmdexp.exe hata Iletileri](winmdexp-exe-error-messages.md)
-- [Derleme, dağıtım ve Yapılandırma Araçları (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
+- [Derleme, dağıtım ve Yapılandırma Araçları (.NET Framework)](/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

@@ -3,12 +3,12 @@ title: SQL Server'da Sorgu Bildirimleri
 description: SQL Server veritabanında veri değiştirildiğinde uygulamalara bildirim almak için sorgu bildirimlerini nasıl kullanacağınızı öğrenin, örneğin, uygulama ekranları yenilemek için.
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 1351c83b6cc5837115321d53e8779c0f364c3099
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b496db74f7e6fc9bc9f17d946bf34398b32312
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286229"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543991"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server'da Sorgu Bildirimleri
 Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler değiştiğinde uygulamalara bildirim gönderilmesini sağlar. Bu özellik özellikle bir Web uygulaması gibi bir veritabanından bilgi önbelleği sağlayan ve kaynak veriler değiştirildiğinde bildirilmesi gereken uygulamalar için yararlıdır.  
@@ -25,19 +25,19 @@ Hizmet Aracısı altyapısına inşa edildiğinde sorgu bildirimleri, veriler de
   
  SELECT ve EXECUTE deyimlerine yönelik bildirimler ayarlayabilirsiniz. EXECUTE ifadesini kullanırken, SQL Server EXECUTE ifadesinin kendisi yerine yürütülen komut için bir bildirim kaydeder. Komutun, SELECT ifadesiyle ilgili gereksinimleri ve sınırlamaları karşılaması gerekir. Bildirimi kaydeden bir komut birden fazla ifade içeriyorsa, veritabanı altyapısı toplu işteki her bir bildirim için bir bildirim oluşturur.  
   
- Veriler değiştiğinde güvenilir alt-ikinci bildirimlere ihtiyacınız olan bir uygulama geliştiriyorsanız, **etkili bir sorgu bildirimleri stratejisi planlama** ve [bildirim planlaması](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) makalesinde **sorgu bildirimlerinin alternatiflerini** planlama başlıklı bölümleri gözden geçirin. Sorgu bildirimleri ve SQL Server Hizmet Aracısı hakkında daha fazla bilgi için, SQL Server belgelerindeki makalelere yönelik aşağıdaki bağlantılara bakın.  
+ Veriler değiştiğinde güvenilir alt-ikinci bildirimlere ihtiyacınız olan bir uygulama geliştiriyorsanız, **etkili bir sorgu bildirimleri stratejisi planlama** ve [bildirim planlaması](/previous-versions/sql/sql-server-2008-r2/ms187528(v=sql.105)) makalesinde **sorgu bildirimlerinin alternatiflerini** planlama başlıklı bölümleri gözden geçirin. Sorgu bildirimleri ve SQL Server Hizmet Aracısı hakkında daha fazla bilgi için, SQL Server belgelerindeki makalelere yönelik aşağıdaki bağlantılara bakın.  
   
  **SQL Server belgeleri**  
   
-- [Sorgu bildirimlerini kullanma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
+- [Sorgu bildirimlerini kullanma](/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
-- [Bildirim için sorgu oluşturma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Bildirim için sorgu oluşturma](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Geliştirme (Hizmet Aracısı)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
+- [Geliştirme (Hizmet Aracısı)](/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
-- [Hizmet Aracısı geliştirici bilgi merkezi](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Hizmet Aracısı geliştirici bilgi merkezi](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Geliştirici Kılavuzu (Hizmet Aracısı)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Geliştirici Kılavuzu (Hizmet Aracısı)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Sorgu Bildirimlerini Etkinleştirme](enabling-query-notifications.md)  

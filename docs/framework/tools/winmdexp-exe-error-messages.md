@@ -158,22 +158,22 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: 1b44273bd5a8868ba426d9ac0eabbefcb725e70f
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2c0b4a6f1f10f0c575b3f5a1aeb9baffa74dba17
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325609"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543257"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe hata iletileri
 
 Visual Studio 2012 ' de **Windows çalışma zamanı bileşen** şablonunu kullandığınızda yapı işlemi [Winmdexp.exe (Windows çalışma zamanı meta verileri dışarı aktarma aracı)](winmdexp-exe-windows-runtime-metadata-export-tool.md) çağırır, bu nedenle Winmdexp.exe hata iletileri **hata listesi**görünür. Winmdexp.exe, seçeneğiyle derlenen bir modül üzerinde çalışır `/target:winmdobj` . Giriş olarak derlenmiş bir modül gerektirdiğinden, derleme başarılı olmadığı sürece hata iletileri görünmez.  
   
- Hata iletileri, raportıkları hata koşullarına yönelik olarak gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletiye sığmayacak kadar daha fazla bilgi gerektirir. [Windows çalışma zamanı bileşeni hata koşullarını tanılamak](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))için ek bilgiler bulabilirsiniz.  
+ Hata iletileri, raportıkları hata koşullarına yönelik olarak gereken tüm bilgileri içerecek şekilde tasarlanmıştır. Ancak, bazı sorunlar iletiye sığmayacak kadar daha fazla bilgi gerektirir. [Windows çalışma zamanı bileşeni hata koşullarını tanılamak](/previous-versions/hh977010(v=vs.110))için ek bilgiler bulabilirsiniz.  
   
  Sorununuz bu makalede ele alınmazsa ve iletinin sorunu gidermek için yeterli bilgi içermediğini düşünüyorsanız, bu makaledeki geri bildirim bağlantısını kullanın ve hata iletisini ekleyin. Alternatif olarak, [Geliştirici topluluğu Web sitesinde](https://developercommunity.visualstudio.com/)bir hata dosyalayamazsınız. [Microsoft forumları](https://social.msdn.microsoft.com/Forums/)hakkında daha fazla bilgi için de arama yapabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Winmdexp.exe (Windows Çalışma Zamanı meta verileri dışarı aktarma aracı)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Windows Çalışma Zamanı bileşeni hata koşullarını tanılama](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))
+- [Windows Çalışma Zamanı bileşeni hata koşullarını tanılama](/previous-versions/hh977010(v=vs.110))

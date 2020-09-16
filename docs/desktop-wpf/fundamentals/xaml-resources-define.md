@@ -4,12 +4,12 @@ description: .NET Core için WPF 'de XAML Kaynakları hakkında bilgi edinin. XA
 author: adegeo
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: f8eaf3fd931aa6804b0b9a9c19c6bcc042678ebf
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 2393b3b2fabd0e900a99bf950d30e1744c754da5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325712"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541831"
 ---
 # <a name="overview-of-xaml-resources"></a>XAML kaynaklarına genel bakış
 
@@ -40,9 +40,9 @@ Yukarıdaki örnekte, XAML yükleyicisi `{StaticResource MyBrush}` <xref:System.
 
 ## <a name="static-and-dynamic-resources"></a>Statik ve dinamik kaynaklar
 
-Kaynağa statik veya dinamik olarak başvurulabilirler. Başvurular, [StaticResource Işaretleme uzantısı](../../framework/wpf/advanced/staticresource-markup-extension.md) ya da [DynamicResource işaretleme uzantısı](../../framework/wpf/advanced/dynamicresource-markup-extension.md)kullanılarak oluşturulur. Biçimlendirme uzantısı, biçimlendirme uzantısının öznitelik dizesini işlemesini ve nesneyi XAML yükleyicisine döndürmesini sağlayarak bir nesne başvurusu belirtmenize imkan tanıyan bir XAML özelliğidir. Biçimlendirme Uzantısı davranışı hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).
+Kaynağa statik veya dinamik olarak başvurulabilirler. Başvurular, [StaticResource Işaretleme uzantısı](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) ya da [DynamicResource işaretleme uzantısı](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)kullanılarak oluşturulur. Biçimlendirme uzantısı, biçimlendirme uzantısının öznitelik dizesini işlemesini ve nesneyi XAML yükleyicisine döndürmesini sağlayarak bir nesne başvurusu belirtmenize imkan tanıyan bir XAML özelliğidir. Biçimlendirme Uzantısı davranışı hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
-Biçimlendirme uzantısı kullandığınızda, genellikle bu belirli biçimlendirme uzantısı tarafından işlenen dize biçiminde bir veya daha fazla parametre sağlarsınız. [StaticResource Işaretleme uzantısı](../../framework/wpf/advanced/staticresource-markup-extension.md) , tüm kullanılabilir kaynak sözlüklerinde bu anahtarın değerine bakarak bir anahtarı işler. İşlem yükleme sırasında gerçekleşir, yükleme işleminin özellik değerini ataması gerekir. Bunun yerine [DynamicResource Işaretleme uzantısı](../../framework/wpf/advanced/dynamicresource-markup-extension.md) bir ifade oluşturarak bir anahtarı işler ve bu ifade, uygulamanın çalıştırılıncaya kadar değerlendirilmeden kalır ve bir değer sağlar.
+Biçimlendirme uzantısı kullandığınızda, genellikle bu belirli biçimlendirme uzantısı tarafından işlenen dize biçiminde bir veya daha fazla parametre sağlarsınız. [StaticResource Işaretleme uzantısı](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) , tüm kullanılabilir kaynak sözlüklerinde bu anahtarın değerine bakarak bir anahtarı işler. İşlem yükleme sırasında gerçekleşir, yükleme işleminin özellik değerini ataması gerekir. Bunun yerine [DynamicResource Işaretleme uzantısı](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) bir ifade oluşturarak bir anahtarı işler ve bu ifade, uygulamanın çalıştırılıncaya kadar değerlendirilmeden kalır ve bir değer sağlar.
 
 Bir kaynağa başvurduğunuzda, bir statik kaynak başvurusu veya dinamik kaynak başvurusu kullanıp kullanmayacağınızı aşağıdaki önemli noktalar etkileyebilir:
 
@@ -138,7 +138,7 @@ Dinamik kaynak başvurularının bazı önemli kısıtlamaları vardır. Aşağ�
 
 - Ayarlanan özellik, bir veya özelliğinin değeri ya da bir <xref:System.Windows.Freezable> değer olarak sağlanmış bir üzerinde özelliği olmalıdır <xref:System.Windows.FrameworkElement> <xref:System.Windows.FrameworkContentElement> <xref:System.Windows.Setter> .
 
-Ayarlanan özellik bir <xref:System.Windows.DependencyProperty> veya özelliği olmalıdır, çünkü özellik <xref:System.Windows.Freezable> değişikliği (değiştirilen dinamik kaynak değeri) özellik sistemi tarafından onaylandığından, çoğu özellik değişikliği Kullanıcı arabirimine yayabilir. Çoğu denetim, bir değişiklik olduğunda bir denetimin başka bir yerleşimini zorlayan mantığı içerir <xref:System.Windows.DependencyProperty> ve bu özellik düzeni etkileyebilir. Ancak, bir [DynamicResource biçimlendirme uzantısına](../../framework/wpf/advanced/dynamicresource-markup-extension.md) sahip olan tüm özelliklerin, Kullanıcı arabiriminde gerçek zamanlı güncelleştirmeler sağlama garantisi garanti edilir. Bu işlevsellik, özelliğe ve hatta uygulamanızın mantıksal yapısına bağlı olarak farklılık gösterebilir ve bu özellik de değişir.
+Ayarlanan özellik bir <xref:System.Windows.DependencyProperty> veya özelliği olmalıdır, çünkü özellik <xref:System.Windows.Freezable> değişikliği (değiştirilen dinamik kaynak değeri) özellik sistemi tarafından onaylandığından, çoğu özellik değişikliği Kullanıcı arabirimine yayabilir. Çoğu denetim, bir değişiklik olduğunda bir denetimin başka bir yerleşimini zorlayan mantığı içerir <xref:System.Windows.DependencyProperty> ve bu özellik düzeni etkileyebilir. Ancak, bir [DynamicResource biçimlendirme uzantısına](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) sahip olan tüm özelliklerin, Kullanıcı arabiriminde gerçek zamanlı güncelleştirmeler sağlama garantisi garanti edilir. Bu işlevsellik, özelliğe ve hatta uygulamanızın mantıksal yapısına bağlı olarak farklılık gösterebilir ve bu özellik de değişir.
 
 ## <a name="styles-datatemplates-and-implicit-keys"></a>Stiller, veri şablonları ve örtük anahtarlar
 
@@ -154,17 +154,17 @@ Bu stilin gerçekten bir anahtarı vardır: örtük anahtar `typeof(System.Windo
 
 WPF tarafından kullanılan varsayılan tema stili mekanizmaları aracılığıyla, bu stil, kendi <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Button> <xref:System.Windows.FrameworkElement.Style%2A> özelliğini veya stile belirli bir kaynak başvurusunu belirtmeyi denemese de, sayfanın çalışma zamanı stili olarak uygulanır. Sayfada tanımlanan stiliniz, tema sözlüğü stilinin sahip olduğu aynı anahtar kullanılarak, arama dizisinde, tema sözlüğü stilinden daha önce bulunur. `<Button>Hello</Button>`Sayfada herhangi bir yeri belirtebilirsiniz ve ile tanımladığınız stil <xref:System.Windows.Style.TargetType%2A> `Button` Bu düğme için geçerlidir. İsterseniz, biçimlendirmedeki açıklık için aynı tür değeri ile stili açıkça anahtar olarak girebilirsiniz <xref:System.Windows.Style.TargetType%2A> , ancak bu isteğe bağlıdır.
 
-Varsa, stiller için örtülü anahtarlar bir denetim üzerinde uygulanmaz <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> `true` . (Ayrıca, denetimin <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> bir örneğine açıkça değil, denetim sınıfı için yerel davranışın bir parçası olarak ayarlanmış olabileceğini unutmayın.) Ayrıca, türetilmiş sınıf senaryolarında örtük anahtarları desteklemek için, denetimin geçersiz kılması gerekir <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (WPF kapsamında sunulan tüm mevcut denetimler bu geçersiz kılmayı içerir). Stiller, Temalar ve denetim tasarımı hakkında daha fazla bilgi için bkz. [Stillenebilir denetimler tasarlamak Için yönergeler](../../framework/wpf/controls/guidelines-for-designing-stylable-controls.md).
+Varsa, stiller için örtülü anahtarlar bir denetim üzerinde uygulanmaz <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> `true` . (Ayrıca, denetimin <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> bir örneğine açıkça değil, denetim sınıfı için yerel davranışın bir parçası olarak ayarlanmış olabileceğini unutmayın.) Ayrıca, türetilmiş sınıf senaryolarında örtük anahtarları desteklemek için, denetimin geçersiz kılması gerekir <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (WPF kapsamında sunulan tüm mevcut denetimler bu geçersiz kılmayı içerir). Stiller, Temalar ve denetim tasarımı hakkında daha fazla bilgi için bkz. [Stillenebilir denetimler tasarlamak Için yönergeler](/dotnet/desktop/wpf/controls/guidelines-for-designing-stylable-controls).
 
-<xref:System.Windows.DataTemplate>Ayrıca örtülü bir anahtara sahiptir. Bir için örtük anahtar, <xref:System.Windows.DataTemplate> <xref:System.Windows.DataTemplate.DataType%2A> özellik değeridir. <xref:System.Windows.DataTemplate.DataType%2A>Ayrıca, açıkça [{X:Type...exe}](../xaml-services/xtype-markup-extension.md)kullanmak yerine türün adı olarak belirtilebilir. Ayrıntılar için bkz. [veri şablonu oluşturmaya genel bakış](../../framework/wpf/data/data-templating-overview.md).
+<xref:System.Windows.DataTemplate> Ayrıca örtülü bir anahtara sahiptir. Bir için örtük anahtar, <xref:System.Windows.DataTemplate> <xref:System.Windows.DataTemplate.DataType%2A> özellik değeridir. <xref:System.Windows.DataTemplate.DataType%2A> Ayrıca, açıkça [{X:Type...exe}](../xaml-services/xtype-markup-extension.md)kullanmak yerine türün adı olarak belirtilebilir. Ayrıntılar için bkz. [veri şablonu oluşturmaya genel bakış](/dotnet/desktop/wpf/data/data-templating-overview).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.ResourceDictionary>
-- [Uygulama kaynakları](../../framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Kaynaklar ve kod](../../framework/wpf/advanced/resources-and-code.md)
-- [Kaynak tanımlama ve başvuru](../../framework/wpf/advanced/how-to-define-and-reference-a-resource.md)
-- [Uygulama yönetimine genel bakış](../../framework/wpf/app-development/application-management-overview.md)
+- [Uygulama kaynakları](/dotnet/desktop/wpf/advanced/optimizing-performance-application-resources)
+- [Kaynaklar ve kod](/dotnet/desktop/wpf/advanced/resources-and-code)
+- [Kaynak tanımlama ve başvuru](/dotnet/desktop/wpf/advanced/how-to-define-and-reference-a-resource)
+- [Uygulama yönetimine genel bakış](/dotnet/desktop/wpf/app-development/application-management-overview)
 - [x:Type işaretleme uzantısı](../xaml-services/xtype-markup-extension.md)
-- [StaticResource biçimlendirme uzantısı](../../framework/wpf/advanced/staticresource-markup-extension.md)
-- [DynamicResource biçimlendirme uzantısı](../../framework/wpf/advanced/dynamicresource-markup-extension.md)
+- [StaticResource biçimlendirme uzantısı](/dotnet/desktop/wpf/advanced/staticresource-markup-extension)
+- [DynamicResource biçimlendirme uzantısı](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension)

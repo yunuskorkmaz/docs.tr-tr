@@ -16,19 +16,19 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 48e1b40ddd4bc7fae7d65660adf216756d7c83f7
-ms.sourcegitcommit: 2987e241e2f76c9248d2146bf2761a33e2c7a882
+ms.openlocfilehash: b6197acf9ceee5862cf13eceab178df513eb91d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88228750"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541675"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Özel tarih ve saat biçim dizeleri
 
 Tarih ve saat biçimi dizesi, bir <xref:System.DateTime> <xref:System.DateTimeOffset> biçimlendirme işleminin sonucu olan bir veya değerinin metin temsilini tanımlar. Ayrıca, dizeyi tarih ve saate başarılı bir şekilde dönüştürmek için bir ayrıştırma işleminde gerekli olan tarih ve saat değerinin bildirimini tanımlayabilir. Özel biçim dizesi, bir veya daha fazla özel tarih ve saat biçimi belirleyicisinden oluşur. [Standart Tarih ve saat biçimi dizesi](standard-date-and-time-format-strings.md) olmayan herhangi bir dize, özel bir tarih ve saat biçim dizesi olarak yorumlanır.
 
 > [!TIP]
-> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
+> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
 
 Özel tarih ve saat biçim dizeleri, ve değerleri ile birlikte <xref:System.DateTime> kullanılabilir <xref:System.DateTimeOffset> .
 
@@ -46,7 +46,7 @@ Ayrıştırma işlemlerinde, özel tarih ve saat biçim dizeleri,,, <xref:System
 
 Aşağıdaki tabloda özel tarih ve saat biçimi belirteçleri açıklanır ve her biçim belirticisi tarafından üretilen bir sonuç dizesini görüntülenir. Varsayılan olarak, sonuç dizeleri en-US kültürünün, biçimlendirme kurallarını yansıtır. Belirli bir biçim belirticisi yerelleştirilmiş bir sonuç dizesi üretirse örnek aynı zamanda sonuç dizesinin uygulanacağı kültürü de not alır. Özel tarih ve saat biçimi dizelerini kullanma hakkında daha fazla bilgi için [Notlar](#notes) bölümüne bakın.
 
-| Biçim belirteci | Açıklama | Örnekler |
+| Biçim belirteci | Description | Örnekler |
 |--|--|--|
 | "d" | 1 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["d" Özel Biçim belirleyicisi](#dSpecifier). | 2009-06-01T13:45:30-> 1<br /><br /> 2009-06-15T13:45:30-> 15 |
 | "dd" | 01 İle 31 arasında ayın günü.<br /><br /> Daha fazla bilgi: ["gg" Özel Biçim belirleyicisi](#ddSpecifier). | 2009-06-01T13:45:30-> 01<br /><br /> 2009-06-15T13:45:30-> 15 |
@@ -728,5 +728,5 @@ Biçimlendirme, geçerli <xref:System.Globalization.DateTimeFormatInfo> iş par�
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Biçimlendirme türleri](formatting-types.md)
 - [Standart Tarih ve saat biçim dizeleri](standard-date-and-time-format-strings.md)
-- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)
