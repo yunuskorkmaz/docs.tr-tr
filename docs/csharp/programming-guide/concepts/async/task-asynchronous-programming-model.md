@@ -3,12 +3,12 @@ title: Async ve await (C#) ile görev zaman uyumsuz programlama (TAP) modeli
 description: Görev tabanlı zaman uyumsuz programlamayı ne zaman ve nasıl kullanacağınızı, C# ' de zaman uyumsuz programlamaya basitleştirilmiş bir yaklaşım olduğunu öğrenin.
 ms.date: 08/19/2020
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 5e85b99025b31e205c66468d4bd886701cbaea17
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 1014e38dcb3e2c4f56c8b3f3dade9bdbff3abd27
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812100"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556043"
 ---
 # <a name="task-asynchronous-programming-model"></a>Zaman uyumsuz görev programlama modeli
 
@@ -43,7 +43,7 @@ Async [ve](../../../language-reference/keywords/async.md) [await](../../../langu
 
 Aşağıdaki örnekte zaman uyumsuz bir yöntem gösterilmektedir. Koddaki neredeyse her şey size tanıdık gelmelidir.
 
-Zaman [uyumsuz programlamayı, C# ' de zaman uyumsuz ve await ile](https://docs.microsoft.com/samples/dotnet/samples/async-and-await-cs)karşıdan yüklenebilecek bir bütün WINDOWS PRESENTATION FOUNDATION (WPF) örneği bulabilirsiniz.
+Zaman [uyumsuz programlamayı, C# ' de zaman uyumsuz ve await ile](/samples/dotnet/samples/async-and-await-cs)karşıdan yüklenebilecek bir bütün WINDOWS PRESENTATION FOUNDATION (WPF) örneği bulabilirsiniz.
 
 :::code language="csharp" source="snippets/access-web/Program.cs" id="ControlFlow":::
 
@@ -121,7 +121,7 @@ Zaman uyumsuz programlama konusunda yeniyseniz, zaman uyumlu ve zaman uyumsuz da
 
 Zaman uyumsuz programlamayı destekleyen gibi yöntemlerin nerede bulunacağını merak ediyor olabilirsiniz `GetStringAsync` . .NET Framework 4,5 veya üzeri ve .NET Core, ve ile çalışan birçok üye `async` içerir `await` . Bunları, üye adına eklenen "Async" sonekine ve ya da dönüş türlerine göre tanıyabilirsiniz <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601> . Örneğin, sınıfı,, ve gibi `System.IO.Stream` yöntemleri, <xref:System.IO.Stream.CopyToAsync%2A> ve <xref:System.IO.Stream.ReadAsync%2A> <xref:System.IO.Stream.WriteAsync%2A> ile zaman uyumlu yöntemleri içerir <xref:System.IO.Stream.CopyTo%2A> <xref:System.IO.Stream.Read%2A> <xref:System.IO.Stream.Write%2A> .
 
-Windows Çalışma Zamanı ayrıca `async` Windows uygulamalarında ve ile kullanabileceğiniz birçok yöntem içerir `await` . Daha fazla bilgi için bkz. UWP geliştirme için [Iş parçacığı ve zaman uyumsuz programlama](/windows/uwp/threading-async/) ve [zaman uyumsuz programlama (Windows Mağazası uygulamaları)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)) ve hızlı başlangıç: Windows çalışma zamanı önceki sürümlerini kullanıyorsanız, [C# veya Visual Basic zaman uyumsuz API 'leri çağırma](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)) .
+Windows Çalışma Zamanı ayrıca `async` Windows uygulamalarında ve ile kullanabileceğiniz birçok yöntem içerir `await` . Daha fazla bilgi için bkz. UWP geliştirme için [Iş parçacığı ve zaman uyumsuz programlama](/windows/uwp/threading-async/) ve [zaman uyumsuz programlama (Windows Mağazası uygulamaları)](/previous-versions/windows/apps/hh464924(v=win.10)) ve hızlı başlangıç: Windows çalışma zamanı önceki sürümlerini kullanıyorsanız, [C# veya Visual Basic zaman uyumsuz API 'leri çağırma](/previous-versions/windows/apps/hh452713(v=win.10)) .
 
 ## <a name="threads"></a><a name="BKMK_Threads"></a> Akışları
 
@@ -214,7 +214,7 @@ Bir olay, taban sınıf veya arabirim sözleşmesi farklı bir ad öneriyorsa ku
 
 | Başlık | Açıklama | Örnek |
 |--|--|--|
-| [Async ve await kullanarak birden çok web isteğini paralel hale getirme (C#)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) | Nasıl aynı anda birkaç görevi başlatacağınızı gösterir. | [Zaman uyumsuz örnek: birden çok Web Isteğini paralel hale getirme](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
+| [Async ve await kullanarak birden çok web isteğini paralel hale getirme (C#)](./index.md) | Nasıl aynı anda birkaç görevi başlatacağınızı gösterir. | [Zaman uyumsuz örnek: birden çok Web Isteğini paralel hale getirme](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e) |
 | [Zaman uyumsuz dönüş türleri (C#)](async-return-types.md) | Zaman uyumsuz yöntemlerin döndürebileceği türleri gösterir ve her türün ne zaman uygun olduğunu açıklar. |  |
 | Bir iptal belirteci olan görevleri sinyal mekanizması olarak iptal edin. | Zaman uyumsuz çözümünüze aşağıdaki işlevin nasıl ekleneceğini gösterir:<br><br> - [Görev listesini iptal etme (C#)](cancel-an-async-task-or-a-list-of-tasks.md)<br>- [Bir süre sonra görevleri iptal et (C#)](cancel-async-tasks-after-a-period-of-time.md)<br>- [Zaman uyumsuz görevi tamamlandıklarında işle (C#)](start-multiple-async-tasks-and-process-them-as-they-complete.md) |  |
 | [Dosya erişimi için Async Kullanma (C#)](using-async-for-file-access.md) | Dosyalara erişmek için zaman uyumsuz yöntemin ve await işlecinin kullanılmasına ilişkin avantajları listeler ve gösterir. |  |

@@ -24,7 +24,7 @@ Daha önce <xref:System.Numerics.Vector2.Lerp(System.Numerics.Vector2,System.Num
 
 Herhangi bir işlem gerekli değildir. Ancak, eski davranışı sürdürmek istiyorsanız, `Lerp` önceki algoritmasını kullanan kendi işlevinizi uygulayabilirsiniz `value1 + (value2 - value1) * amount` .
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Kategori
 
 Core .NET kitaplıkları
 

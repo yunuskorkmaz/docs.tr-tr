@@ -11,12 +11,12 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-ms.openlocfilehash: 3cdd89ac9745f6af133ca683afff64283f2727d1
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 7871c27400cf5a7604e509274d5ef3f866070576
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86475105"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555219"
 ---
 # <a name="compile-and-generate-dynamic-source-code"></a>Derleme ve dinamik kaynak kodu oluşturma
 
@@ -60,4 +60,4 @@ Dilden bağımsız kaynak kodu modelleme, bir programın birden çok dilde veya 
   
 ## <a name="related-sections"></a>İlgili bölümler  
 
-- [CodeDOM hızlı başvurusu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) , geliştiricilerin kaynak kodu öğelerini temsil eden CodeDOM öğelerini bulmasını sağlayan hızlı bir yol sağlar.
+- [CodeDOM hızlı başvurusu](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100)) , geliştiricilerin kaynak kodu öğelerini temsil eden CodeDOM öğelerini bulmasını sağlayan hızlı bir yol sağlar.

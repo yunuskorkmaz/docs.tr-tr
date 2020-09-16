@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 214a368ba269103093a90431cdf9e77ab5989c07
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 51041f5a9076ad360a84cc39704aedb50b77d40a
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557222"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679396"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
@@ -149,7 +149,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
     [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L31)]
 
-1. Veri kümesi iki yıl değer içerir. Eğitim için yalnızca ilk yılın verileri kullanılır, ikinci yıl, gerçek değerleri model tarafından üretilen tahmine göre karşılaştırmak için tutulur. Dönüştürme kullanarak verileri filtreleyin [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn*) .
+1. Veri kümesi iki yıl değer içerir. Eğitim için yalnızca ilk yılın verileri kullanılır, ikinci yıl, gerçek değerleri model tarafından üretilen tahmine göre karşılaştırmak için tutulur. Dönüştürme kullanarak verileri filtreleyin [`FilterRowsByColumn`](xref:Microsoft.ML.DataOperationsCatalog.FilterRowsByColumn%2A) .
 
     [!code-csharp [SplitData](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L33-L34)]
 
@@ -163,7 +163,7 @@ Aşağıda, verilerin bir örneği verilmiştir:
 
     , `forecastingPipeline` İlk yıl ve örnekler için 365 veri noktası alır ya da zaman serisi veri kümesini parametre tarafından belirtilen 30 günlük (aylık) aralıklarına böler `seriesLength` . Bu örneklerin her biri haftalık veya 7 günlük bir pencere ile çözümlenir. Sonraki periyotalar için tahmin edilen değerin ne olduğu belirlenirken, önceki yedi günün değerleri bir tahmin yapmak için kullanılır. Model, daha sonra parametresi tarafından tanımlanan şekilde yedi dönemi tahmin etmek üzere ayarlanır `horizon` . Tahmin bilinçli bir tahmin olduğundan, her zaman %100 doğru değildir. Bu nedenle, üst ve alt sınırlar tarafından tanımlanan en iyi ve en kötü durum senaryolarında değer aralığını bilmemiz yararlı olur. Bu durumda, alt ve üst sınırlara yönelik güven düzeyi %95 olarak ayarlanmıştır. Güvenirlik düzeyi, uygun şekilde artırılabilir veya azaltılabilir. Değerin ne kadar yüksekse, istenen güven düzeyini elde etmek için Aralık üst ve alt sınır arasındadır.
 
-1. [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit*)Modeli eğitme ve verileri daha önce tanımlanan öğesine sığdırmak için yöntemini kullanın `forecastingPipeline` .
+1. [`Fit`](xref:Microsoft.ML.Transforms.TimeSeries.SsaForecastingEstimator.Fit%2A)Modeli eğitme ve verileri daha önce tanımlanan öğesine sığdırmak için yöntemini kullanın `forecastingPipeline` .
 
     [!code-csharp [TrainModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L47)]
 
@@ -180,15 +180,15 @@ Sonraki yılın verilerini tahmin ederek ve gerçek değerlerle karşılaştıra
     }
     ```
 
-1. Yöntemi içinde `Evaluate` , eğitim modeliyle yöntemi kullanarak ikinci yılın verilerini tahmin edin [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) .
+1. Yöntemi içinde `Evaluate` , eğitim modeliyle yöntemi kullanarak ikinci yılın verilerini tahmin edin [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) .
 
     [!code-csharp [EvaluateForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L62)]
 
-1. Yöntemini kullanarak verilerden gerçek değerleri alın [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) .
+1. Yöntemini kullanarak verilerden gerçek değerleri alın [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) .
 
     [!code-csharp [GetActualRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L65-L67)]
 
-1. Yöntemini kullanarak tahmin değerlerini alın [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) .
+1. Yöntemini kullanarak tahmin değerlerini alın [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) .
 
     [!code-csharp [GetForecastRentals](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L70-L72)]
 
@@ -221,7 +221,7 @@ Modelinize memnun kaldıysanız, daha sonra diğer uygulamalarda kullanmak üzer
 
     [!code-csharp [CreateTimeSeriesEngine](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L51)]
 
-1. Modeli, `MLModel.zip` daha önce tanımlanan değişken tarafından belirtilen şekilde adlandırılan bir dosyaya kaydedin `modelPath` . [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint*)Modeli kaydetmek için yöntemini kullanın.
+1. Modeli, `MLModel.zip` daha önce tanımlanan değişken tarafından belirtilen şekilde adlandırılan bir dosyaya kaydedin `modelPath` . [`Checkpoint`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.CheckPoint%2A)Modeli kaydetmek için yöntemini kullanın.
 
     [!code-csharp [SaveModel](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L52)]
 
@@ -236,7 +236,7 @@ Modelinize memnun kaldıysanız, daha sonra diğer uygulamalarda kullanmak üzer
     }
     ```
 
-1. Yöntemi içinde `Forecast` , [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict*) sonraki yedi güne ait bir süre için bu yöntemi kullanın.
+1. Yöntemi içinde `Forecast` , [`Predict`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602.Predict%2A) sonraki yedi güne ait bir süre için bu yöntemi kullanın.
 
     [!code-csharp [SingleForecast](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L91)]
 

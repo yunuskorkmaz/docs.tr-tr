@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: b130ed57ba086535122c8c8795c42863348870d0
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5ab10bcc58166d5a38768f988fb18f23088256cc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597663"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558296"
 ---
 # <a name="auditing-security-events"></a>Güvenlik Etkinliklerini Denetleme
 Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim özelliğiyle güvenlik olaylarını (başarı, hata veya her ikisi de) günlüğe kaydedebilir. Olaylar Windows sistem olay günlüğüne yazılır ve Olay Görüntüleyicisi kullanılarak incelenebilir.  
@@ -87,13 +87,13 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
   
 |Sistem|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
-|Windows XP SP2 veya üzeri|Destekleniyor|Desteklenmiyor|  
-|Windows Server 2003 SP1 ve Windows Vista|Destekleniyor|İş parçacığı bağlamı sahip olmalıdır`SeAuditPrivilege`|  
+|Windows XP SP2 veya üzeri|Desteklenir|Desteklenmez|  
+|Windows Server 2003 SP1 ve Windows Vista|Desteklenir|İş parçacığı bağlamı sahip olmalıdır `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Diğer faktörler  
  İşletim sistemine ek olarak, aşağıdaki tabloda günlüğe kaydetme işleminin etkinleştirilmesi kontrol eden diğer ayarlar açıklanmaktadır.  
   
-|Çarpan|Uygulama günlüğü|Güvenlik günlüğü|  
+|Faktör|Uygulama günlüğü|Güvenlik günlüğü|  
 |------------|---------------------|------------------|  
 |Denetim İlkesi Yönetimi|Geçerli değildir.|Yapılandırma ile birlikte güvenlik günlüğü de yerel güvenlik yetkilisi (LSA) ilkesi tarafından denetlenir. "Nesne erişimini denetle" kategorisinin de etkinleştirilmesi gerekir.|  
 |Varsayılan Kullanıcı deneyimi|Tüm kimliği doğrulanmış kullanıcılar uygulama günlüğüne yazabilir, bu nedenle uygulama işlemlerine yönelik ek izin adımı gerekmez.|Uygulama işlemi (bağlam) olmalıdır `SeAuditPrivilege` .|  
@@ -107,4 +107,4 @@ Windows Communication Foundation (WCF) ile oluşturulan uygulamalar, denetim öz
 - [Nasıl yapılır: Güvenlik Olaylarını Denetleme](how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

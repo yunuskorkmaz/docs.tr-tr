@@ -4,12 +4,12 @@ description: Azure HDInsight 'ın Jupyıter not defterlerine Apache Spark için 
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 14babf7a551192b286f309393e3bbff25d4745d5
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8110b87991e2f0253257faf19f383dec6cbd3853
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617749"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557209"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark kümelerinde Jupyıter not defterlerine Apache Spark .NET 'i yükler
 
@@ -17,16 +17,16 @@ Bu makalede, Azure HDInsight Spark kümelerinde Jupyıter not defterlerine Apach
 
 Azure HDInsight kümeleri zaten Jupyıter not defteriyle birlikte geliyor, bu nedenle tüm yapmanız gerekir jupi not defterlerini Apache Spark için .NET çalıştıracak şekilde yapılandırmaktır. Jupyıter Not defterlerinizde Apache Spark için .NET kullanmak istiyorsanız, C# kod satırlarınızın satırını yürütmek için bir C# REPL gerekir ve gerektiğinde yürütme durumunu koruyabilirsiniz. [.Net TRY](https://github.com/dotnet/try) , RESMI .net REPL olarak tümleştirildi.
 
-Jupi Not defterleri deneyimi aracılığıyla Apache Spark için .NET etkinleştirmek istiyorsanız, [ambarı](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-manage-ambari) aracılığıyla birkaç el ile adımları Izlemeniz ve HDInsight Spark kümesinde [betik eylemleri](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux) göndermeniz gerekir.
+Jupi Not defterleri deneyimi aracılığıyla Apache Spark için .NET etkinleştirmek istiyorsanız, [ambarı](/azure/hdinsight/hdinsight-hadoop-manage-ambari) aracılığıyla birkaç el ile adımları Izlemeniz ve HDInsight Spark kümesinde [betik eylemleri](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux) göndermeniz gerekir.
 
 > [!NOTE]
 > Bu özellik *deneysel* ve HDInsight Spark ekibi tarafından desteklenmiyor.
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
-Henüz bir tane yoksa [Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) kümesi oluşturun.
+Henüz bir tane yoksa [Azure HDInsight Spark](/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) kümesi oluşturun.
 
 1. [Azure Portal](https://portal.azure.com) ziyaret edin ve **+ kaynak oluştur**' u seçin.
 
@@ -63,9 +63,9 @@ Azure portal, önceki adımda oluşturduğunuz **HDInsight Spark kümesini** se�
 
    Yerel bilgisayarınızda **install-interactive-Notebook.sh** adlı yeni bir dosya oluşturun ve [install-interactive-Notebook.sh içeriğinin](https://raw.githubusercontent.com/dotnet/spark/master/deployment/HDI-Spark/Notebooks/install-interactive-notebook.sh)içeriğini yapıştırın.
 
-   Betiği, HDInsight kümesinden erişilebilen bir [URI](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) 'ye yükleyin. Örneğin, `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`.
+   Betiği, HDInsight kümesinden erişilebilen bir [URI](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux#understand-script-actions) 'ye yükleyin. Örneğin, `https://<my storage account>.blob.core.windows.net/<my container>/<some dir>/install-interactive-notebook.sh`.
 
-2. `install-interactive-notebook.sh` [HDInsight betik eylemlerini](https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)kullanarak kümede çalıştırın.
+2. `install-interactive-notebook.sh` [HDInsight betik eylemlerini](/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux)kullanarak kümede çalıştırın.
 
    Azure portal HDI kümenize dönün ve soldaki seçeneklerden **betik eylemleri** ' ni seçin. HDInsight Spark kümenize Apache Spark REPL için .NET dağıtmak üzere bir betik eylemi gönderilir. Aşağıdaki ayarları kullanın:
 
@@ -99,15 +99,15 @@ Konaklar **hn0** ve **Hn1**Için Spark2 Server Için [Livy](#stop-the-livy-serve
 
    * **Özellik 1**
        * Anahtar&ensp;&ensp;`spark.dotnet.shell.command`
-       * Değer:`/usr/share/dotnet-tools/dotnet-try,kernel-server,--default-kernel,csharp`
+       * Değer: `/usr/share/dotnet-tools/dotnet-try,kernel-server,--default-kernel,csharp`
 
    * **Özellik 2** Önceki betik eyleminde bulunan Apache Spark için .NET sürümünü kullanın.
        * Anahtar&ensp;&ensp;`spark.dotnet.packages`
-       * Değer:`["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
+       * Değer: `["nuget: Microsoft.Spark, 0.6.0", "nuget: Microsoft.Spark.Extensions.Delta, 0.6.0"]`
 
    * **Özellik 3**
        * Anahtar&ensp;&ensp;`spark.dotnet.interpreter`
-       * Değer:`try`
+       * Değer: `try`
 
    Örneğin, aşağıdaki görüntü, özellik 1 ' i ekleme ayarını yakalar:
 
@@ -158,4 +158,4 @@ Konaklar **hn0** ve **Hn1**Için Spark2 Server Için [Livy](#stop-the-livy-serve
 ## <a name="next-steps"></a>Sonraki adımlar
 
 * [Azure HDInsight 'a bir .NET Apache Spark uygulaması dağıtma](../tutorials/hdinsight-deployment.md)
-* [HDInsight belgeleri](https://docs.microsoft.com/azure/hdinsight/)
+* [HDInsight belgeleri](/azure/hdinsight/)

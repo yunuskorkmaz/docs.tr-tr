@@ -69,15 +69,15 @@ services.AddSignalR()
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Bu değişiklik, [ASPNET/Duyurular # 404](https://github.com/aspnet/Announcements/issues/404)' de duyurulan ileti paketi v2. x ' e taşınmasına yönelik bir parçasıdır. V2. x kitaplığı, kullanımı daha kolay olan bir seçenekler API 'SI ekledi ve daha önce sunulan listesinden `MessagePack.IFormatterResolver` daha fazla özellik sağlar.
+Bu değişiklik, [ASPNET/Duyurular # 404](https://github.com/aspnet/Announcements/issues/404)' de duyurulan ileti paketi v2. x ' e taşınmasına yönelik bir parçasıdır. V2. x kitaplığı, kullanımı daha kolay olan bir seçenekler API 'SI ekledi ve daha önce sunulan listesinden daha fazla özellik sağlar `MessagePack.IFormatterResolver` .
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bu son değişiklik, üzerinde <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions>değer yapılandıran herkesi etkiler. ASP.NET Core SignalR MessagePack hub protokolünü kullanıyorsanız ve seçenekleri değiştiriyorsanız, kullanımınızı yukarıda gösterildiği gibi yeni seçenekler API 'sini kullanacak şekilde güncelleştirin.
+Bu son değişiklik, üzerinde değer yapılandıran herkesi etkiler <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions> . ASP.NET Core SignalR MessagePack hub protokolünü kullanıyorsanız ve seçenekleri değiştiriyorsanız, kullanımınızı yukarıda gösterildiği gibi yeni seçenekler API 'sini kullanacak şekilde güncelleştirin.
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

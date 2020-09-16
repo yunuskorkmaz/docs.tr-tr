@@ -1,74 +1,74 @@
 ---
-title: ML.NET algoritması nasıl seçilir?
-description: Makine öğrenimi modeliniz için ML.NET algoritması seçme yi öğrenin
+title: ML.NET algoritması seçme
+description: Machine Learning modeliniz için bir ML.NET algoritması seçme hakkında bilgi edinin
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8af89800485f8f8ac35ee17df10a5e3c039da42d
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75740001"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679644"
 ---
-# <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET algoritması nasıl seçilir?
+# <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET algoritması seçme
 
-Her [ML.NET görev için,](resources/tasks.md)seçim için birden çok eğitim algoritması vardır. Hangisini seçeceğiniz, çözmeye çalıştığınız soruna, verilerinizin özelliklerine ve mevcut bilgi işlem ve depolama kaynaklarına bağlıdır. Bir makine öğrenme modeli nin eğitiminin yinelemeli bir süreç olduğunu unutmayın. En iyi çalışan algoritmayı bulmak için birden çok algoritma denemeniz gerekebilir.
+Her [ml.net görevi](resources/tasks.md)için, aralarından seçim yapabileceğiniz birden çok eğitim algoritması vardır. Hangi birini seçeceğiniz, çözmeye çalıştığınız soruna, verilerinizin özelliklerine ve kullanılabilir işlem ve depolama kaynaklarına bağlıdır. Bir makine öğrenimi modeline yönelik eğitim, yinelemeli bir işlem olduğunu unutmamak önemlidir. En iyi şekilde çalışacak olanı bulmak için birden çok algoritma denemeniz gerekebilir.
 
-Algoritmalar **özellikleri**üzerinde çalışır. Özellikler, giriş verilerinizden hesaplanan sayısal değerlerdir. Bunlar makine öğrenimi algoritmaları için en uygun girdilerdir. Bir veya daha fazla veri dönüşümlerini kullanarak ham giriş verilerinizi özelliklere [dönüştürürsunuz.](resources/transforms.md) Örneğin, metin verileri sözcük sayımları kümesine ve sözcük birleşimi sayımlarına dönüştürülür. Özellikler, veri dönüşümleri kullanılarak ham bir veri türünden çıkarıldıktan **sonra, bunlara featurized**olarak adlandırılırlar. Örneğin, featurized metin veya featurized görüntü verileri.
+Algoritmalar **Özellikler**üzerinde çalışır. Özellikler, giriş verilerinizde hesaplanan sayısal değerlerdir. Makine öğrenimi algoritmaları için en iyi girişlerdir. Ham giriş verilerinizi bir veya daha fazla [veri dönüştürme](resources/transforms.md)kullanarak özelliklere dönüştürürler. Örneğin, metin verileri bir sözcük sayısı ve sözcük birleşimi sayısı kümesine dönüştürülür. Özellikler veri dönüştürmeleri kullanılarak ham bir veri türünden ayıklandıktan sonra, bunlar **korkaldırılmış**olarak adlandırılır. Örneğin, korleştirilmiş metin veya daha fazla görüntü verisi.
 
-## <a name="trainer--algorithm--task"></a>Eğitmen = Algoritma + Görev
+## <a name="trainer--algorithm--task"></a>Trainer = algoritması + görev
 
-Algoritma, bir **model**üretmek için yürüten matematiktir. Farklı algoritmalar farklı özelliklere sahip modeller üretir.
+Algoritma, bir **model**oluşturmak için yürütülen matematik. Farklı algoritmalar farklı özelliklerle modeller üretir.
 
-ML.NET ile aynı algoritma farklı görevlere uygulanabilir. Örneğin, Stokhastik Çift Eşgüdümlü Tırmanış İkili Sınıflandırma, Çok Sınıflı Sınıflandırma ve Regresyon için kullanılabilir. Fark, algoritmanın çıktısının görevle eşleşecek şekilde nasıl yorumlanacağıdır.
+ML.NET ile aynı algoritma farklı görevlere de uygulanabilir. Örneğin, Stochastic Dual ınent, Ikili sınıflandırma, birden çok Lass sınıflandırması ve gerileme için kullanılabilir. Fark, algoritmanın çıktısının görevle eşleşecek şekilde nasıl yorumlanacağına ilişkin farktır.
 
-Her algoritma/görev birleşimi için ML.NET, eğitim algoritmasını yürüten ve yorumlama yapan bir bileşen sağlar. Bu bileşenlere eğitmen denir. Örneğin, <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> **Regresyon** görevine uygulanan **StochasticDualCoordinatedAscent** algoritmasını kullanır.
+Her algoritma/görev birleşimi için, ML.NET eğitim algoritmasını yürüten ve yorumu yapan bir bileşen sağlar. Bu bileşenlere, traers adı verilir. Örneğin, <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> **regresyon** görevine uygulanan **Stochasticdualkoordinatör tedadscent** algoritmasını kullanır.
 
 ## <a name="linear-algorithms"></a>Doğrusal algoritmalar
 
-Doğrusal algoritmalar, giriş verilerinin ve **ağırlık**kümesinin doğrusal bir birleşiminden **gelen puanları** hesaplayan bir model üretir. Ağırlıklar, eğitim sırasında tahmin edilen modelin parametreleridir.
+Doğrusal algoritmalar, giriş verilerinin doğrusal bir bileşiminden ve bir **Ağırlık**kümesinden **puanları** hesaplayan bir model üretir. Ağırlıklar eğitim sırasında tahmini model parametreleridir.
 
-Doğrusal algoritmalar [doğrusal ayrı kıvanaközellikleri](https://en.wikipedia.org/wiki/Linear_separability)için iyi çalışır.
+Doğrusal algoritmalar, daha [önce ayrılabilir](https://en.wikipedia.org/wiki/Linear_separability)özellikler için iyi çalışır.
 
-Doğrusal bir algoritma ile eğitimden önce, özellikler normalleştirilmelidir. Bu, bir özelliğin sonuç üzerinde diğerlerinden daha fazla etkiye sahip olmasını önler.
+Doğrusal algoritmayla eğitiminden önce Özellikler normalleştirilmelidir. Bu, bir özelliğin sonuç üzerinde daha fazla etkisi olmasına engel olur.
 
-Genel olarak doğrusal algoritmalar ölçeklenebilir ve hızlı, eğitmek için ucuz, tahmin etmek için ucuz. Bunlar, özelliklerin sayısına ve yaklaşık olarak eğitim veri kümesinin boyutuna göre ölçeklendirilir.
+Genel doğrusal algoritmalarda ölçeklenebilir ve hızlı, ucuz, eğitime, tek EAP ise tahmin edilecek. Bunlar, özellik sayısına ve yaklaşık olarak eğitim verileri kümesinin boyutuna göre ölçeklendirebilir.
 
-Doğrusal algoritmalar, eğitim verilerinin üzerinden birden çok geçiş yapar. Veri kümeniz belleğe uyuyorsa, eğitmeni eklemeden önce ML.NET ardışık kurulumunuza bir [önbellek denetim noktası](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint*) eklemek, eğitimin daha hızlı çalışmasını sağlar.
+Doğrusal algoritmalar eğitim verileri üzerinde birden çok geçiş yapar. Veri kümeniz belleğe sığıyorsa ve sonra da ML.NET işlem hattınızı eklemeden önce bir [önbellek kontrol noktası](xref:Microsoft.ML.LearningPipelineExtensions.AppendCacheCheckpoint%2A) ekleyerek eğitimin daha hızlı çalışmasını sağlayabilirsiniz.
 
-**Lineer Eğitmenler**
+**Doğrusal Traıners**
 
 |Algoritma|Özellikler|Eğitmenler|
 |---------|----------|--------|
-|Ortalama perceptron|Metin sınıflandırması için en iyisi|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|Stokstik çift eşgüdümlü tırmanış|İyi varsayılan performans için gerekli olmayan tuning|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
-|L-BFGS|Özellik sayısı büyükolduğunda kullanın. Lojistik regresyon eğitim istatistikleri üretir, ancak AveragedPerceptronTrainer kadar ölçeklendirmez|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
-|Sembolik stokaştik gradyan iniş|En hızlı ve en doğrusal ikili sınıflandırma eğitmeni. İşlemci sayısıyla iyi ölçeklendirin|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
+|Ortalama Perceptron|Metin sınıflandırması için en iyisi|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
+|Stochastik çift Eşgüdümlü yoksı|Daha iyi varsayılan performans için ayarlama gerekmiyor|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|L-BFGS|Özellik sayısı büyük olduğunda kullanın. Lojistik regresyon eğitimi istatistikleri üretir, ancak ölçeklendirmez ve AveragedPerceptronTrainer|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
+|Sembolik Stokastik gradyan|En hızlı ve en doğru doğrusal ikili sınıflandırma Trainer. İşlemci sayısıyla iyi ölçeklendirir|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 
 ## <a name="decision-tree-algorithms"></a>Karar ağacı algoritmaları
 
-Karar ağacı algoritmaları bir dizi karar içeren bir model oluşturur: veri değerleri arasında etkili bir akış grafiği.
+Karar ağacı algoritmaları, bir dizi kararı içeren bir model oluşturur: veri değerleriyle etkin bir akış grafiği.
 
-Bu tür algoritmaları kullanmak için özelliklerin doğrusal olarak ayrılmaz olması gerekmez. Özellik vektöründeki tek tek değerler karar sürecinde bağımsız olarak kullanıldığından, özelliklerin normalleştirilmesi gerekmez.
+Özelliklerin bu tür bir algoritma kullanması için doğrusal olarak ayrılabilir olması gerekmez. Özellik Vektördeki tekil değerler karar sürecinde bağımsız olarak kullanıldığından, ve özelliklerinin normalleştirilmesine gerek yoktur.
 
-Karar ağacı algoritmaları genellikle çok doğrudur.
+Karar ağacı algoritmaları genellikle çok doğru.
 
-Genelleştirilmiş Katkı Modelleri (GAM) dışında, ağaç modelleri özellik sayısı büyük olduğunda açıklanabilirlik eksikliği olabilir.
+Genelleştirilmiş ek modeller (GAMs) dışında, özellik sayısı büyük olduğunda ağaç modellerinin explainability eksik olabilir.
 
-Karar ağacı algoritmaları daha fazla kaynak alır ve doğrusal olanlar gibi ölçeklendirmez. Belleğe sığabilen veri kümelerinde iyi performans gösterirler.
+Karar ağacı algoritmaları daha fazla kaynak alır ve doğrusal olanları da ölçeklendirmez. Bunlar, belleğe sığan veri kümelerinde iyi bir şekilde gerçekleştirilir.
 
-Artırılmış karar ağaçları, her ağacın giriş verilerini aldığı ve daha iyi bir skor elde etmek için skoru bir sonraki ağaca aktardığı ve böylece topluluktaki her ağacın bir öncekinde geliştiği küçük ağaçlardan oluşan bir topluluktür.
+Artırılmış karar ağaçları, her bir ağacın giriş verilerini puanlarını ve daha iyi bir puan üretmek için puanı bir sonraki ağaca geçirir ve bu şekilde, her bir ağacın bir öncekini geliştirdiği her bir ağaçta daha fazla gelişmesine neden olan küçük ağaçların bir alt kümesini oluşturur.
 
-**Karar ağacı eğitmenleri**
+**Karar ağacı tracılar**
 
 |Algoritma|Özellikler|Eğitmenler|
 |---------|----------|--------|
-|Hafif degrade artırılmış makine|En hızlı ve en doğru ikili sınıflandırma ağaç eğitmenler. Yüksek derecede tedmümkün|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
-|Hızlı ağaç|Featurized görüntü verileri için kullanın. Dengesiz verilere karşı dayanıklıdır. Yüksek derecede tedmümkün | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
-|Hızlı orman|Gürültülü verilerle iyi çalışır|<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>|
-|Jeneralize katkı modeli (GAM)|Ağaç algoritmaları ile iyi performans ama açıklanabilirlik bir öncelik olduğu sorunlar için en iyi|<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>|
+|Hafif gradyan tarafından artırılmış makine|İkili sınıflandırma ağacı izleyenilerinin en hızlı ve en doğru. Yüksek düzeyde ayarlanabilir|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
+|Hızlı ağaç|Korleştirilmiş görüntü verileri için kullanın. Dengesiz verilere dayanıklı. Yüksek düzeyde ayarlanabilir | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
+|Hızlı orman|Gürültülü verilerle iyi çalışma|<xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastForestRegressionTrainer>|
+|Genelleştirilmiş eklenebilir model (GAM)|Ağaç algoritmalarıyla iyi bir şekilde gerçekleştiren, ancak explainability bir öncelik olduğu sorunlar için idealdir|<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.GamRegressionTrainer>|
 
-## <a name="matrix-factorization"></a>Matris faktörizasyonu
+## <a name="matrix-factorization"></a>Matris ayırma
 
 |Özellikler|Eğitmenler|
 |----------|--------|
@@ -76,33 +76,33 @@ Artırılmış karar ağaçları, her ağacın giriş verilerini aldığı ve da
 
 ## <a name="meta-algorithms"></a>Meta algoritmalar
 
-Bu eğitmenler ikili bir eğitmen çok sınıf eğitmen oluşturun. , <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>, <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>, , , ile kullanın.
+Bu traçler, ikili bir eğitimci tarafından çok sınıf bir adım oluşturur. ,,,,,, İle kullanın <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer> <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer> .
 
 |Algoritma|Özellikler|Eğitmenler|
 |---------|----------|--------|
-|Bir herkese karşı|Bu çok sınıflı sınıflandırıcı, her sınıf için bir ikili sınıflandırıcıyı eğiterek bu sınıfı diğer tüm sınıflardan ayırır. Sınıfların sayısı ile ölçek olarak sınırlıdır|[OneVersusAllTrainer\<İkili SınıflandırmaEğitmen>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Çift wise bağlantı|Bu çok sınıflı sınıflandırıcı, her sınıf çiftinde bir ikili sınıflandırma algoritması çalışır. İki sınıfın her bir kombinasyonu eğitilmesi gerektiğinden, sınıf sayısıyla ölçek olarak sınırlıdır.|[PairwiseCouplingTrainer\<İkili SınıflandırmaEğitmen>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|Tek ve tüm|Bu çok sınıf Sınıflandırıcısı her sınıf için bir ikili sınıflandırıcının yanı da bu sınıfı diğer tüm sınıflardan ayırt eder. Sınıflandırılacak sınıf sayısına göre ölçeğe göre sınırlandırılmıştır|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|İkili eşlenme|Bu çok sınıf Sınıflandırıcısı, her sınıf çiftinde ikili bir sınıflandırma algoritması oluşturur. , İki sınıfın birleşiminin eğitililmesi gerektiği için sınıfların sayısına göre ölçeklendirilmesine sınırlıdır.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
-## <a name="k-means"></a>K-Anlamı
+## <a name="k-means"></a>K-anlamı
 
 |Özellikler|Eğitmenler|
 |----------|--------|
 |Kümeleme için kullanın|<xref:Microsoft.ML.Trainers.KMeansTrainer>|
 
-## <a name="principal-component-analysis"></a>Ana bileşen analizi
+## <a name="principal-component-analysis"></a>Sorumlu bileşen analizi
 
 |Özellikler|Eğitmenler|
 |----------|--------|
-|Anomali tespiti için kullanın|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
+|Anomali algılama için kullanma|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
 ## <a name="naive-bayes"></a>Sade Bayes
 
 |Özellikler|Eğitmenler|
 |----------|--------|
-|Özellikler bağımsız olduğunda ve eğitim veri kümesi küçükolduğunda bu çok sınıflı sınıflandırma eğitmenini kullanın.|<xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>|
+|Özellikler bağımsız olduğunda ve eğitim veri kümesi küçük olduğunda bu çok sınıflı sınıflandırma eğitmen kullanın.|<xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>|
 
-## <a name="prior-trainer"></a>Önceki Eğitmen
+## <a name="prior-trainer"></a>Önceki seyahat
 
 |Özellikler|Eğitmenler|
 |----------|--------|
-|Diğer eğitmenlerin performansını temel emzetmek için bu ikili sınıflandırma eğitmenini kullanın. Etkili olmak için, diğer eğitmenlerin ölçümleri önceki eğitmen daha iyi olmalıdır. |<xref:Microsoft.ML.Trainers.PriorTrainer>|
+|Diğer eğitimci performansını temel alarak bu ikili sınıflandırma eğitmen ' i kullanın. Etkili olması için, diğer traçilerin ölçümleri önceki eğitime göre daha iyi olmalıdır. |<xref:Microsoft.ML.Trainers.PriorTrainer>|

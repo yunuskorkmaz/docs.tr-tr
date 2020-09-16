@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: f2c1335795ffd3cb395a7006bfaeb3cf7b39636b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 987dcad5e239b35f5ff367ab668d40526593f970
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77448627"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556466"
 ---
 # \<tcpTransport>
 Özel bir bağlama için iletileri aktarmak amacıyla bir kanal tarafından kullanılabilen bir TCP taşıması tanımlar.  
@@ -19,7 +19,7 @@ ms.locfileid: "77448627"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<tcpTransport>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tcpTransport channelInitializationTimeout="TimeSpan"
@@ -62,7 +62,7 @@ ms.locfileid: "77448627"
 |maxPendingConnections|Hizmette gönderimi bekleyen en fazla bağlantı sayısını alır veya ayarlar.|  
 |Değerini|Alınabilecek izin verilen en fazla ileti boyutunu alır ve ayarlar.|  
 |portSharingEnabled|Bu bağlantı için TCP bağlantı noktası paylaşımının etkin olup olmadığını belirten bir Boole değeri. Bu ise `false` , her bağlama kendi özel bağlantı noktasını kullanır. Varsayılan değer: `false`.<br /><br /> Bu ayar yalnızca hizmetler için geçerlidir. İstemciler etkilenmez.<br /><br /> Bu ayarın kullanılması için, başlangıç türünü el Ile veya otomatik olarak değiştirerek Windows Communication Foundation (WCF) TCP bağlantı noktası paylaşım hizmeti 'nin etkinleştirilmesi gerekir|  
-|teredoEnabled|Teredo 'Nun (güvenlik duvarlarının arkasındaki istemcileri adresleme teknolojisinin) etkin olup olmadığını belirten bir Boole değeri. Varsayılan değer: `false`.<br /><br /> Bu özellik, temel alınan TCP yuvası için Teredo 'Yu sunar. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).<br /><br /> Bu özellik yalnızca Windows XP SP2 ve Windows Server 2003 ' de geçerlidir. Windows Vista Teredo için makine genelinde bir yapılandırma seçeneğine sahiptir, bu nedenle Vista çalıştırılırken bu özellik yok sayılır. Teredo, istemci ve hizmet makinelerinin hem Microsoft IPv6 yığınının yüklü olmasını hem de Teredo kullanımı için doğru şekilde yapılandırılmasını gerektirir.|  
+|teredoEnabled|Teredo 'Nun (güvenlik duvarlarının arkasındaki istemcileri adresleme teknolojisinin) etkin olup olmadığını belirten bir Boole değeri. Varsayılan değer: `false`.<br /><br /> Bu özellik, temel alınan TCP yuvası için Teredo 'Yu sunar. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).<br /><br /> Bu özellik yalnızca Windows XP SP2 ve Windows Server 2003 ' de geçerlidir. Windows Vista Teredo için makine genelinde bir yapılandırma seçeneğine sahiptir, bu nedenle Vista çalıştırılırken bu özellik yok sayılır. Teredo, istemci ve hizmet makinelerinin hem Microsoft IPv6 yığınının yüklü olmasını hem de Teredo kullanımı için doğru şekilde yapılandırılmasını gerektirir.|  
 |transferMode|İletilerin arabelleğe alınıp alınmayacağını veya bağlantı yönelimli aktarımla akışını gösteren bir değer alır veya ayarlar.|  
 |connectionPoolSettings|Adlandırılmış kanal bağlama için ek bağlantı havuzu ayarlarını belirtir.|  
   

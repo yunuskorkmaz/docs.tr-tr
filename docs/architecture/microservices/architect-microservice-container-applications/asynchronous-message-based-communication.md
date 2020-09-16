@@ -2,12 +2,12 @@
 title: Zaman uyumsuz ileti tabanlı iletişim
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Zaman uyumsuz ileti tabanlı iletişimler mikro hizmetler mimarisinde önemli bir kavramdır, çünkü mikro hizmetleri bir diğerinden bağımsız tutmanın en iyi yolu, Ayrıca, sonunda da eşzamanlı olarak eşitlenmektir.
 ms.date: 09/20/2018
-ms.openlocfilehash: a8af94540a7906c474b9b784c28aa60ebae0a6e3
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 2bd79935cad3d62e488a57da6b40a0c87349960b
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306974"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679181"
 ---
 # <a name="asynchronous-message-based-communication"></a>Zaman uyumsuz ileti tabanlı iletişim
 
@@ -84,7 +84,7 @@ Zaman uyumsuz iletişimin kullanılması sırasında göz önünde bulundurmanı
 ## <a name="additional-resources"></a>Ek kaynaklar
 
 - **Olay odaklı mesajlaşma** \
-  <https://soapatterns.org/design_patterns/event_driven_messaging>
+  <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
 - **Yayımla/abone ol kanalı** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04c4fb4c8e9da8c58a5e26f78a7b13aa6a0df4a0
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7c4b9faf25853c1c7a546f06c329f6f153eef904
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614690"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606938"
 ---
 ### <a name="changes-in-path-normalization"></a>Yol normalleştirmede değişiklikler
 
@@ -17,7 +17,7 @@ ms.locfileid: "85614690"
 - Göreli dizin (.) veya üst dizin (..) bir yolda değerlendiriliyor.
 - Belirtilen karakterler kırpılırken.
 .NET Framework 4.6.2 hedefleyen uygulamalarla başlayarak, yol normalleştirmede aşağıdaki değişiklikler varsayılan olarak etkindir:
-  - Çalışma zamanı, yolları normalleştirmek için işletim sisteminin [GetFullPathName](https://docs.microsoft.com/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) işlevine erteler.
+  - Çalışma zamanı, yolları normalleştirmek için işletim sisteminin [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamew) işlevine erteler.
 - Normalleştirme artık Dizin segmentlerinin bitmesini (Dizin adının sonundaki bir boşluk gibi) kırpmasını kapsar.
 - `\\.\`mscorlib.dll ' deki dosya g/ç API 'leri için ve dahil olmak üzere tam güvende cihaz yolu söz dizimi desteği `\\?\` .
 - Çalışma zamanı, cihaz sözdizimi yollarını doğrulamaz.

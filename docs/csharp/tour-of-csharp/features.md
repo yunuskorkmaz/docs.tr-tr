@@ -2,12 +2,12 @@
 title: C#-ana dil alanlarının turu
 description: C# ' ta yeni misiniz? Dilin temel bilgilerini öğrenin.
 ms.date: 08/06/2020
-ms.openlocfilehash: e1e533982757c10085f0444197ff97ee7487391f
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 9069bb194169a7743f12d998b2842186ed0ef404
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414909"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558181"
 ---
 # <a name="major-language-areas"></a>Ana dil alanları
 
@@ -86,7 +86,7 @@ Temsilci, başvurduğu yöntemin sınıfını bilmez veya buna uymuyor. Her öne
 
 ## <a name="async--await"></a>zaman uyumsuz/await
 
-C# iki anahtar sözcükle zaman uyumsuz programları destekler: `async` ve `await` . `async`Yöntemin zaman uyumsuz olduğunu bildirmek için bir yöntem bildirimine değiştiricisini eklersiniz. `await`İşleci, derleyicinin bir sonucun bitmesini zaman uyumsuz olarak beklemesini söyler. Denetim çağırana döndürülür ve yöntemi zaman uyumsuz çalışmanın durumunu yöneten bir yapı döndürür. Yapı genellikle bir olur <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> , ancak awaiter modelini destekleyen herhangi bir tür olabilir. Bu özellikler, zaman uyumlu olarak okuyan ve zaman uyumsuz olarak yürüten kodu yazmanızı sağlar. Örneğin, aşağıdaki kod [Microsoft docs](https://docs.microsoft.com)için giriş sayfasını indirir:
+C# iki anahtar sözcükle zaman uyumsuz programları destekler: `async` ve `await` . `async`Yöntemin zaman uyumsuz olduğunu bildirmek için bir yöntem bildirimine değiştiricisini eklersiniz. `await`İşleci, derleyicinin bir sonucun bitmesini zaman uyumsuz olarak beklemesini söyler. Denetim çağırana döndürülür ve yöntemi zaman uyumsuz çalışmanın durumunu yöneten bir yapı döndürür. Yapı genellikle bir olur <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> , ancak awaiter modelini destekleyen herhangi bir tür olabilir. Bu özellikler, zaman uyumlu olarak okuyan ve zaman uyumsuz olarak yürüten kodu yazmanızı sağlar. Örneğin, aşağıdaki kod [Microsoft docs](/)için giriş sayfasını indirir:
 
 :::code language="csharp" source="./snippets/shared/Features.cs" ID="AsyncExample":::
 

@@ -35,7 +35,7 @@ Paketler, temeldeki kitaplıkların geliştirmelerinden faydalanmak için günce
 
 Paket güncelleştirmeleri ASP.NET Core için ortak API değişiklikleri sunmaz. Ancak, paketlerin kendileri üzerinde önemli değişiklikler olabilir.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Kategori
 
 ASP.NET Core
 

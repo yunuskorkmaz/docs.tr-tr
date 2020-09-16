@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-ms.openlocfilehash: d99d63dc766f37e7cc30888d2e77657595f909af
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 6cf7153250d2574783515ea53cf99709499d36f9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557040"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556212"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Nasıl yapılır: WindowsPrincipal Nesnesi Oluşturma
 
@@ -84,4 +84,4 @@ Kodun sürekli olarak rol tabanlı doğrulama yapması gerekiyorsa, aşağıdaki
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Asıl ve Kimlik Nesneleri](principal-and-identity-objects.md)
-- [ASP.NET Core güvenliği](https://docs.microsoft.com/aspnet/core/security/)
+- [ASP.NET Core güvenliği](/aspnet/core/security/)

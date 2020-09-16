@@ -6,31 +6,31 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/30/2020
 ms.locfileid: "80391188"
 ---
-### <a name="static-files-csv-content-type-changed-to-standards-compliant"></a>Statik dosyalar: CSV içerik türü standartlara uygun olarak değiştirildi
+### <a name="static-files-csv-content-type-changed-to-standards-compliant"></a>Statik dosyalar: CSV içerik türü, standartlara uyumlu olarak değiştirildi
 
-Core 5.0ASP.NETde, `Content-Type` Statik Dosya Ara `text/csv` *ware'inin .csv* dosyaları için kullandığı varsayılan yanıt üstbilgi değeri standartlara uygun değere değiştirildi. [Static File Middleware](/aspnet/core/fundamentals/static-files)
+ASP.NET Core 5,0 ' de, `Content-Type` [statik dosya ara yazılım](/aspnet/core/fundamentals/static-files) 'nin *. csv* dosyaları için kullandığı varsayılan yanıt üst bilgisi değeri, standartlara uyumlu değere değiştirilmiştir `text/csv` .
 
-Bu konuda tartışma için [dotnet/aspnetcore#17385'e](https://github.com/dotnet/AspNetCore/issues/17385)bakın.
+Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 17385](https://github.com/dotnet/AspNetCore/issues/17385).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-5.0 Önizleme 1
+5,0 Preview 1
 
 #### <a name="old-behavior"></a>Eski davranış
 
-Üstbilgi `Content-Type` değeri `application/octet-stream` kullanıldı.
+`Content-Type`Üst bilgi değeri `application/octet-stream` kullanıldı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Üstbilgi `Content-Type` değeri `text/csv` kullanılır.
+`Content-Type`Üst bilgi değeri `text/csv` kullanılır.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-[RFC 7111](https://tools.ietf.org/html/rfc7111#section-5.1) standardına uygunluk.
+[RFC 7111](https://tools.ietf.org/html/rfc7111#section-5.1) standardına uyum.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bu değişiklik uygulamanızı etkilerse, dosya uzantısından MIME türüne eşlemesini özelleştirebilirsiniz. MIME türüne `application/octet-stream` dönmek için, 'deki yöntem çağrısını <xref:Microsoft.AspNetCore.Builder.StaticFileExtensions.UseStaticFiles%2A> değiştirin. `Startup.Configure` Örnek:
+Bu değişiklik uygulamanızı etkile etkileirse, dosya uzantısı-MIME tür eşlemesini özelleştirebilirsiniz. MIME türüne dönmek için `application/octet-stream` <xref:Microsoft.AspNetCore.Builder.StaticFileExtensions.UseStaticFiles%2A> içindeki yöntem çağrısını değiştirin `Startup.Configure` . Örnek:
 
 ```csharp
 var provider = new FileExtensionContentTypeProvider();
@@ -42,7 +42,7 @@ app.UseStaticFiles(new StaticFileOptions
 });
 ```
 
-Eşlemenin özelleştirilmesi hakkında daha fazla bilgi için [FileExtensionContentTypeProvider'a](/aspnet/core/fundamentals/static-files#fileextensioncontenttypeprovider)bakın.
+Eşlemeyi özelleştirme hakkında daha fazla bilgi için bkz. [Fileextensioncontenttypeprovider](/aspnet/core/fundamentals/static-files#fileextensioncontenttypeprovider).
 
 #### <a name="category"></a>Kategori
 

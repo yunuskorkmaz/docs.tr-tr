@@ -3,12 +3,12 @@ title: Kavramlar ve terminoloji (işlevsel dönüşüm)-LINQ to XML
 description: Saf işlevsel dönüştürmelerin kavramlarını ve terminolojisini öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: a1c9c582235ac63fe50dd585ef5f046e9be8170e
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 0ecdbdf88ee9f868143f466222fa06f0ccf641d8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553541"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558113"
 ---
 # <a name="concepts-and-terminology-functional-transformation-linq-to-xml"></a>Kavramlar ve terminoloji (işlevsel dönüşüm) (LINQ to XML)
 
@@ -54,7 +54,7 @@ Daha fazla bilgi için bkz. [Standart sorgu Işleçlerine genel bakış (C#)](..
 Lambda ifadesi \
 Temelde, bir temsilci türünün beklendiği her yerde kullanılabilecek bir satır içi anonim işlev. Bu, lambda ifadelerinin basitleştirilmiş bir tanımıdır, ancak Bu öğreticinin amaçları doğrultusunda yeterlidir.
 
-Daha fazla bilgi için bkz. [lambda ifadeleri (C# Programlama Kılavuzu)](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) ve [lambda ifadeleri (Visual Basic))](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+Daha fazla bilgi için bkz. [lambda ifadeleri (C# Programlama Kılavuzu)](../../csharp/language-reference/operators/lambda-expressions.md) ve [lambda ifadeleri (Visual Basic))](../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
 koleksiyon
 Genellikle tek biçimli bir tür için yapılandırılmış bir veri kümesi. LINQ ile uyumlu olmak için bir koleksiyonun <xref:System.Collections.IEnumerable> arabirimini veya <xref:System.Linq.IQueryable> arabirimini (ya da kendi genel karşılıklarından birini veya) uygulaması gerekir <xref:System.Collections.Generic.IEnumerator%601> <xref:System.Linq.IQueryable%601> .
@@ -72,13 +72,13 @@ Daha fazla bilgi için bkz. [örtülü olarak yazılan yerel değişkenler (C# P
 ertelenmiş yürütme ve geç değerlendirme \
 Çözümlenmiş değeri gerçekten gerekli olana kadar bir ifadenin değerlendirilme ertelenmesi. Ertelenmiş yürütme, koleksiyonlarda desteklenir.
 
-Daha fazla C# bilgisi için bkz. [LINQ to XML (C#) ' de](../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) [LINQ Sorgularına Giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) ve ertelenmiş yürütme ve yavaş değerlendirme.
+Daha fazla C# bilgisi için bkz. [LINQ to XML (C#) ' de](./deferred-execution-lazy-evaluation.md) [LINQ Sorgularına Giriş (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) ve ertelenmiş yürütme ve yavaş değerlendirme.
 
-Daha fazla bilgi Visual Basic için bkz. [temel sorgu işlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) ve [ertelenmiş yürütme ve LINQ to XML (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Daha fazla bilgi Visual Basic için bkz. [temel sorgu işlemleri (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) ve [ertelenmiş yürütme ve LINQ to XML (Visual Basic)](./deferred-execution-lazy-evaluation.md).
 
 Bu dil özellikleri, bu bölümün tamamında kod örneklerinde kullanılacaktır.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Saf işlevsel dönüşümlere giriş](introduction-pure-functional-transformations.md)
-- [Fonksiyonel programlama ve kesinlik temelli programlama karşılaştırması](functional-vs-imperative-programming.md)
+- [Fonksiyonel programlama ile kesin programlama karşılaştırması](functional-vs-imperative-programming.md)

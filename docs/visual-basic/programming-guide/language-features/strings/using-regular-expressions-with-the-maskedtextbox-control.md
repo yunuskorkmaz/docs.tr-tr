@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: efda70be0ccdbc1f4b59d548e50f743f6c493b19
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363725"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555750"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
 Bu örnek, denetimin ile nasıl çalıştığını basit normal ifadelerin nasıl dönüştürüleceğini gösterir <xref:System.Windows.Forms.MaskedTextBox> .  
@@ -60,4 +60,4 @@ Bu örnek, denetimin ile nasıl çalıştığını basit normal ifadelerin nası
 - <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>
 - <xref:System.Windows.Forms.MaskedTextBox>
 - [Visual Basic'de Dizeleri Doğrulama](validating-strings.md)
-- [MaskedTextBox Denetimi](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+- [MaskedTextBox Denetimi](/dotnet/desktop/winforms/controls/maskedtextbox-control-windows-forms)

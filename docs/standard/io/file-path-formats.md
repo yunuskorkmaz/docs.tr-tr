@@ -10,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 8cbb687b0c7cfb69d3f3807c083f1c25e9d39594
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: 36ecbe763ed47e95d9339d1d748b3faab100c15e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271795"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679605"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows sistemlerinde dosya yolu biçimleri
 
@@ -31,7 +31,7 @@ Standart bir DOS yolu üç bileşenden oluşabilir:
 
 Üç bileşen varsa, yol mutlak olur. Birim veya sürücü harfi belirtilmemişse ve dizin adı [dizin ayırıcı karakteriyle](<xref:System.IO.Path.DirectorySeparatorChar>)başlıyorsa, yol geçerli sürücünün kökünden görelidir. Aksi takdirde, yol geçerli dizine göre değişir. Aşağıdaki tabloda bazı olası dizin ve dosya yolları gösterilmektedir.
 
-|Yol  |Açıklama  |
+|Yol  |Description  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | Sürücü kökünden mutlak bir dosya yolu `C:` . |
 | `\Program Files\Custom Utilities\StringFinder.exe` | Geçerli sürücünün kökünden mutlak bir yol. |
@@ -43,7 +43,7 @@ Standart bir DOS yolu üç bileşenden oluşabilir:
 > [!IMPORTANT]
 > Son iki yol arasındaki farkı dikkate alın. Her ikisi de isteğe bağlı birim tanımlayıcısını ( `C:` her iki durumda) belirtir, ancak ilki belirtilen birimin köküyle başlar, ikincisi ise. Sonuç olarak, ilki sürücünün kök dizinindeki mutlak bir yoldur `C:` , ikincisi ise geçerli sürücü dizininden göreli bir yoldur `C:` . İlki Windows dosya yollarını içeren yaygın bir hata kaynağı olduğunda ikinci formun kullanılması.
 
-Yöntemi çağırarak bir dosya yolunun tam nitelikli olup olmadığını (yani yol geçerli dizinden bağımsız olduğunu ve geçerli dizin değiştiğinde değiştirmediğini) belirleyebilirsiniz <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> . Bu tür bir yolun göreli Dizin kesimleri ( `.` ve) içerebildiğini `..` ve çözümlenen yol her zaman aynı konuma işaret ediyorsa tam nitelikli olduğunu unutmayın.
+Yöntemi çağırarak bir dosya yolunun tam nitelikli olup olmadığını (yani yol geçerli dizinden bağımsız olduğunu ve geçerli dizin değiştiğinde değiştirmediğini) belirleyebilirsiniz <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWithType> . Bu tür bir yolun göreli Dizin kesimleri ( `.` ve) içerebildiğini `..` ve çözümlenen yol her zaman aynı konuma işaret ediyorsa tam nitelikli olduğunu unutmayın.
 
 Aşağıdaki örnek mutlak ve göreli yollar arasındaki farkı gösterir. Dizinin `D:\FY2018\` var olduğunu ve `D:\` örneği çalıştırmadan önce komut isteminden geçerli bir dizin belirlemediğinizi varsayar.
 
@@ -63,7 +63,7 @@ Ağ kaynaklarına erişmek için kullanılan evrensel adlandırma kuralı (UNC) 
 
 Aşağıda, UNC yollarının bazı örnekleri verilmiştir:
 
-|Yol  |Açıklama  |
+|Yol  |Description  |
 | -- | -- |
 | `\\system07\C$\` | `C:`Üzerindeki sürücünün kök dizini `system07` . |
 | `\\Server2\Share\Test\Foo.txt` | `Foo.txt`Birimin test dizinindeki dosya `\\Server2\Share` .|
@@ -96,7 +96,7 @@ DOS cihaz yolu aşağıdaki bileşenlerden oluşur:
 
    Cihaz yolu belirticisinden sonra DOS cihaz yolunun ilk segmenti birimi veya sürücüyü tanımlar. (Örneğin, `\\?\C:\` ve `\\.\BootPartition\` .)
 
-   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örneğin:
+   Bilinen UNCs 'Ler için belirli bir bağlantı vardır, ancak bu alınmaz `UNC` . Örnek:
 
   `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`

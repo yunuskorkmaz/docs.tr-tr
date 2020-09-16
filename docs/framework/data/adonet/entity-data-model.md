@@ -3,12 +3,12 @@ title: Varlık Veri Modeli
 description: Varlık Veri Modeli, depolanan formdan bağımsız olarak verilerin yapısını açıklar ve bu da verileri birçok biçimde depolamaktan kaynaklanan sorunları giderir.
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: c98b1f4559ef297f8b11051940fd91f5f6fa06fd
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: d32207e3a9dd35d2d8f8990bcbbd35e38d21d8bb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286746"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557625"
 ---
 # <a name="entity-data-model"></a>Varlık Veri Modeli
 Varlık Veri Modeli (EDM), depolanan formdan bağımsız olarak verilerin yapısını tanımlayan bir kavram kümesidir. Varlık ilişkisi modelinden 1976 ' de Peter Chen tarafından tanımlanan EDM bulunamadığında, ancak aynı zamanda varlık ilişkisi modelinde oluşturulup geleneksel kullanımları genişletiyor.  
@@ -64,6 +64,6 @@ Varlık Veri Modeli (EDM), depolanan formdan bağımsız olarak verilerin yapıs
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ADO.NET Varlık Veri Modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
-- [. edmx dosyasına genel bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [ADO.NET Varlık Veri Modeli araçları](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [. edmx dosyasına genel bakış](/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL belirtimi](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

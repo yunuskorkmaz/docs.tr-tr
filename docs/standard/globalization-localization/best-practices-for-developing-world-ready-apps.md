@@ -8,12 +8,12 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-ms.openlocfilehash: f0e5ccf999b6aa96b6317b88e25f3cd9d9fbc899
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d9f6b3540bb04dd4af154fce2f91a3a7b6395ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279886"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555542"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Dünya çapında kullanmaya yönelik uygulamalar geliştirmek için en iyi uygulamalar
 
@@ -69,7 +69,7 @@ Bu bölümde, dünya çapında kullanılabilecek uygulamalar geliştirirken izle
 
 8. Kültür temelinde <xref:System.Resources.ResourceManager?displayProperty=nameWithType> kaynakları almak için sınıfını kullanın.
 
-9. [Windows Forms Kaynak Düzenleyicisi (Winres. exe)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)kullanılarak yerelleştirilebilecek Windows Forms iletişim kutusu oluşturmak Için [Visual Studio 'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kullanın. Windows Forms iletişim kutularını el ile kodlayın.
+9. [Windows Forms Kaynak Düzenleyicisi (Winres.exe)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)kullanılarak yerelleştirilebilecek Windows Forms iletişim kutuları oluşturmak Için [Visual Studio 'yu](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) kullanın. Windows Forms iletişim kutularını el ile kodlayın.
 
 10. Profesyonel yerelleştirme için düzenleyin (çeviri).
 
@@ -91,7 +91,7 @@ Bu bölümde, dünya çapında kullanılabilecek uygulamalar geliştirirken izle
 
 4. Bir ASP.NET uygulamasında aşağıdaki üç yerde requestEncoding, responseEncoding, fileEncoding, Culture ve UICulture özniteliklerinin değerlerini belirtin:
 
-    - Bir Web. config dosyasının Genelleştirme bölümünde. Bu dosya ASP.NET uygulamasının dışında. Daha fazla bilgi için bkz. [ \<globalization> öğesi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
+    - Web.config bir dosyanın Genelleştirme bölümünde. Bu dosya ASP.NET uygulamasının dışında. Daha fazla bilgi için bkz. [ \<globalization> öğesi](/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
 
     - Bir sayfa yönergesinde. Bir uygulama bir sayfada olduğunda, dosyanın zaten okunup okunmadığını unutmayın. Bu nedenle, fileEncoding ve requestEncoding belirtmek için çok geç. Bir sayfa yönergesinde yalnızca UICulture, Culture ve responseEncoding belirtilebilir.
 

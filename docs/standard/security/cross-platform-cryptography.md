@@ -6,12 +6,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - cryptography, cross-platform
 - encryption, cross-platform
-ms.openlocfilehash: 61fd49e53761deac278b770003eb97241b6c2be9
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 7269b32e509039fdd767446bd6e10202b089c094
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557157"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550025"
 ---
 # <a name="cross-platform-cryptography-in-net-core-and-net-5"></a>.NET Core ve .NET 5 ' te platformlar arası şifreleme
 
@@ -109,7 +109,7 @@ RSA anahtar işlemleri işletim sistemi kitaplıkları tarafından gerçekleşti
 | PKCS1 Imzası (SHA-2)               | ✔️           | ✔️              | ✔️   | ⚠️\*           |
 | 'Nın                                   | ✔️           | ✔️              | ✔️   | ❌             |
 
-\*Windows Cryptoapı (CAPı), SHA-2 algoritması ile PKCS1 imzasına sahip değil. Ancak ayrı bir RSA nesnesi onu desteklemeyen bir şifreleme hizmeti sağlayıcısına (CSP) yüklenebilir.
+\* Windows Cryptoapı (CAPı), SHA-2 algoritması ile PKCS1 imzasına sahip değil. Ancak ayrı bir RSA nesnesi onu desteklemeyen bir şifreleme hizmeti sağlayıcısına (CSP) yüklenebilir.
 
 #### <a name="rsa-on-windows"></a>Windows üzerinde RSA
 
@@ -151,7 +151,7 @@ ECDSA anahtar eğrileri, işletim sistemi kitaplıkları tarafından tanımlanı
 
 <sup>1</sup> Linux dağıtımları, aynı adlandırılmış eğrileri desteklemez.
 
-Windows 10 ' da Windows CNG 'ye adlandırılmış eğriler için <sup>2</sup> destek eklenmiştir. Daha fazla bilgi için bkz: [CNG adlandırılmış eliptik eğrileri](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx). Windows 7 ' de üç eğri dışında, adlandırılmış eğriler Windows 'un önceki sürümlerinde kullanılamaz.
+Windows 10 ' da Windows CNG 'ye adlandırılmış eğriler için <sup>2</sup> destek eklenmiştir. Daha fazla bilgi için bkz: [CNG adlandırılmış eliptik eğrileri](/windows/win32/seccng/cng-named-elliptic-curves). Windows 7 ' de üç eğri dışında, adlandırılmış eğriler Windows 'un önceki sürümlerinde kullanılamaz.
 
 <sup>3</sup> açık eğri parametreleriyle dışarı aktarma, MacOS veya Windows 'un önceki sürümlerinde kullanılamayan işletim sistemi kitaplığı desteği gerektirir.
 
@@ -164,7 +164,7 @@ Windows 10 ' da Windows CNG 'ye adlandırılmış eğriler için <sup>2</sup> de
 | <xref:System.Security.Cryptography.ECDsaCng>     | ✔️     | ❌    | ❌    |
 | <xref:System.Security.Cryptography.ECDsaOpenSsl> | ❌     | ✔️    | ⚠️\*  |
 
-\*MacOS 'ta, <xref:System.Security.Cryptography.ECDsaOpenSsl> sistemde OpenSSL yüklüyse ve uygun bir libşifre dylib dinamik kitaplık yüklemesi aracılığıyla bulunamıyorsa, bu işe yarar. Uygun bir kitaplık bulunamazsa özel durumlar atılır.
+\* MacOS 'ta, <xref:System.Security.Cryptography.ECDsaOpenSsl> sistemde OpenSSL yüklüyse ve uygun bir libşifre dylib dinamik kitaplık yüklemesi aracılığıyla bulunamıyorsa, bu işe yarar. Uygun bir kitaplık bulunamazsa özel durumlar atılır.
 
 ### <a name="ecdh"></a>ECDH
 
@@ -194,7 +194,7 @@ ECDH anahtar eğrileri, işletim sistemi kitaplıkları tarafından tanımlanır
 
 <sup>1</sup> Linux dağıtımları, aynı adlandırılmış eğrileri desteklemez.
 
-Windows 10 ' da Windows CNG 'ye adlandırılmış eğriler için <sup>2</sup> destek eklenmiştir. Daha fazla bilgi için bkz: [CNG adlandırılmış eliptik eğrileri](https://msdn.microsoft.com/library/windows/desktop/mt632245(v=vs.85).aspx). Windows 7 ' de üç eğri dışında, adlandırılmış eğriler Windows 'un önceki sürümlerinde kullanılamaz.
+Windows 10 ' da Windows CNG 'ye adlandırılmış eğriler için <sup>2</sup> destek eklenmiştir. Daha fazla bilgi için bkz: [CNG adlandırılmış eliptik eğrileri](/windows/win32/seccng/cng-named-elliptic-curves). Windows 7 ' de üç eğri dışında, adlandırılmış eğriler Windows 'un önceki sürümlerinde kullanılamaz.
 
 <sup>3</sup> açık eğri parametreleriyle dışarı aktarma, MacOS veya Windows 'un önceki sürümlerinde kullanılamayan işletim sistemi kitaplığı desteği gerektirir.
 
@@ -207,7 +207,7 @@ Windows 10 ' da Windows CNG 'ye adlandırılmış eğriler için <sup>2</sup> de
 | <xref:System.Security.Cryptography.ECDiffieHellmanCng>     | ✔️     | ❌    | ❌   |
 | <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> | ❌     | ✔️    | ⚠️\* |
 
-\*MacOS 'ta, <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> OpenSSL yüklüyse ve dinamik kitaplık yüklemesi aracılığıyla uygun bir libşifre dylib bulunamazsa, bu işe yarar. Uygun bir kitaplık bulunamazsa özel durumlar atılır.
+\* MacOS 'ta, <xref:System.Security.Cryptography.ECDiffieHellmanOpenSsl> OpenSSL yüklüyse ve dinamik kitaplık yüklemesi aracılığıyla uygun bir libşifre dylib bulunamazsa, bu işe yarar. Uygun bir kitaplık bulunamazsa özel durumlar atılır.
 
 ### <a name="dsa"></a>'DA
 
@@ -222,7 +222,7 @@ DSA (dijital Imza algoritması) anahtar üretimi sistem kitaplıkları tarafınd
 | FıPS 186-2                    | ✔️         | ✔️    | ✔️            | ✔️           |
 | FIPS 186-3 (SHA-2 imzaları) | ✔️         | ✔️    | ❌            | ❌            |
 
-\*macOS, 1024 bitten büyük olan DSA anahtarlarını yükler, ancak bu anahtarların davranışı tanımsız olur. FIPS 186-3 'e göre davranmazlar.
+\* macOS, 1024 bitten büyük olan DSA anahtarlarını yükler, ancak bu anahtarların davranışı tanımsız olur. FIPS 186-3 'e göre davranmazlar.
 
 #### <a name="dsa-on-windows"></a>Windows üzerinde DSA
 
@@ -261,7 +261,7 @@ DSA (dijital Imza algoritması) anahtar üretimi sistem kitaplıkları tarafınd
 | Birden çok sertifika, bir özel anahtar       | ✔️     | ✔️    | ✔️   |
 | Birden çok sertifika, birden çok özel anahtar | ✔️     | ⚠️\*  | ✔️   |
 
-\*.NET 5 önizleme sürümleriyle kullanılabilir.
+\* .NET 5 önizleme sürümleriyle kullanılabilir.
 
 ### <a name="write-a-pkcs12pfx"></a>Bir PKCS12/PFX yazın
 
@@ -275,7 +275,7 @@ DSA (dijital Imza algoritması) anahtar üretimi sistem kitaplıkları tarafınd
 | Birden çok sertifika, birden çok özel anahtar | ✔️     | ⚠️\*  | ✔️   |
 | Kısa ömürlü yükleme                            | ✔️     | ✔️    | ⚠️\* |
 
-\*.NET 5 önizleme sürümleriyle kullanılabilir.
+\* .NET 5 önizleme sürümleriyle kullanılabilir.
 
 macOS, diske yazmayı gerektiren Anahtarlık nesne olmadan sertifika özel anahtarlarını yükleyemez. Anahtar zincirleri PFX yüklemesi için otomatik olarak oluşturulur ve artık kullanımda olmadığında silinir. Seçeneği, <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> özel anahtarın diske yazılmayacağı anlamına gelir. Bu, macOS üzerinde bu bayrağın bir ile sonuçlenmesini sağlar <xref:System.PlatformNotSupportedException> .
 

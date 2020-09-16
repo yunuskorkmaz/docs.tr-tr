@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 1c891ad1d5b4c1160ca41c43eff6eea444f7224f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 50f35e3511acc344339b1e150b47d7ce6de94254
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545005"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679566"
 ---
 # <a name="re-train-a-model"></a>Modeli yeniden eğitme
 
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>Önceden eğitilen model parametrelerini Ayıkla
 
-Model yüklendikten sonra, [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) önceden eğitilen modelin özelliğine erişerek öğrenilen model parametrelerini ayıklayın. Önceden eğitilen model, [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) Bu çıktıları oluşturan doğrusal regresyon modeli kullanılarak eğitildi [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) . Bu doğrusal regresyon modeli parametreleri, modelin öğrenilen sapma ve ağırlıklarını veya katsayılarını içerir. Bu değerler, yeni yeniden eğitilen model için bir başlangıç noktası olarak kullanılacaktır.
+Model yüklendikten sonra, [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase%601.Model%2A) önceden eğitilen modelin özelliğine erişerek öğrenilen model parametrelerini ayıklayın. Önceden eğitilen model, [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) Bu çıktıları oluşturan doğrusal regresyon modeli kullanılarak eğitildi [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) . Bu doğrusal regresyon modeli parametreleri, modelin öğrenilen sapma ve ağırlıklarını veya katsayılarını içerir. Bu değerler, yeni yeniden eğitilen model için bir başlangıç noktası olarak kullanılacaktır.
 
 ```csharp
 // Extract trained model parameters
@@ -61,7 +61,7 @@ LinearRegressionModelParameters originalModelParameters =
 
 ## <a name="re-train-model"></a>Modeli yeniden eğitme
 
-Modeli yeniden eğitime işlemi, bir modelin eğitiminden farklı değildir. Tek fark, [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer`2.Fit*) verilerin yanı sıra özgün öğrenilen model parametrelerini giriş olarak da alır ve bunları yeniden eğitim sürecinde bir başlangıç noktası olarak kullanır.
+Modeli yeniden eğitime işlemi, bir modelin eğitiminden farklı değildir. Tek fark, [`Fit`](xref:Microsoft.ML.Trainers.OnlineLinearTrainer%602.Fit%2A) verilerin yanı sıra özgün öğrenilen model parametrelerini giriş olarak da alır ve bunları yeniden eğitim sürecinde bir başlangıç noktası olarak kullanır.
 
 ```csharp
 // New Data

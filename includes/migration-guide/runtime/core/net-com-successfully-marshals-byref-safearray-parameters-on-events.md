@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 1907c9b82c9685899d328f67da8001c0fa4fb697
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: aadf5eb85c8736c29639d49bc8baf21545d2467c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89496810"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606789"
 ---
 ### <a name="net-com-successfully-marshals-byref-safearray-parameters-on-events"></a>.NET COM, olaylardaki ByRef SafeArray parametrelerini başarıyla sıralar
 
 #### <a name="details"></a>Ayrıntılar
 
-.NET Framework 4.7.2 ve önceki sürümlerde, bir COM olayında bir ByRef [SAFEARRAY](https://docs.microsoft.com/windows/desktop/api/oaidl/ns-oaidl-safearray) parametresi yerel koda geri hazırlanmayabilir.  Bu değişiklik ile [SAFEARRAY](https://docs.microsoft.com/windows/desktop/api/oaidl/ns-oaidl-safearray) artık başarıyla sıraya sokulur.<ul><li>[x] süslenmiş</li></ul>
+.NET Framework 4.7.2 ve önceki sürümlerde, bir COM olayında bir ByRef [SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-safearray) parametresi yerel koda geri hazırlanmayabilir.  Bu değişiklik ile [SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-safearray) artık başarıyla sıraya sokulur.<ul><li>[x] süslenmiş</li></ul>
 
 #### <a name="suggestion"></a>Öneri
 

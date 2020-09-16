@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 9dde2d7305a1176dadba3802fc5335c0c95bfbbb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286682"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557911"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 'de performans sayaçları
 ADO.NET 2,0, ve için desteği içeren performans sayaçları için genişletilmiş destek sunmuştur <xref:System.Data.SqlClient> <xref:System.Data.OracleClient> . <xref:System.Data.SqlClient>Önceki ADO.net sürümlerinde bulunan performans sayaçları kullanımdan kaldırılmıştır ve bu konuda ele alınan yeni performans sayaçlarıyla değiştirilmiştir. Uygulamanızın durumunu ve kullandığı bağlantı kaynaklarını izlemek için ADO.NET performans sayaçlarını kullanabilirsiniz. Performans sayaçları, Windows performans Izleyicisi kullanılarak izlenebilir veya <xref:System.Diagnostics.PerformanceCounter> ad alanındaki sınıfı kullanılarak programlı bir şekilde erişilebilir <xref:System.Diagnostics> .  
@@ -399,7 +399,7 @@ class Program
 
 - [Bir veri kaynağına bağlanma](connecting-to-a-data-source.md)
 - [OLE DB, ODBC ve Oracle Bağlantı Havuzu](ole-db-odbc-and-oracle-connection-pooling.md)
-- [ASP.NET için performans sayaçları](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))
+- [ASP.NET için performans sayaçları](/previous-versions/aspnet/fxk122b4(v=vs.100))
 - [Çalışma Zamanı Profili Oluşturma](../../debug-trace-profile/runtime-profiling.md)
-- [Performans eşiklerini Izlemeye giriş](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
+- [Performans eşiklerini Izlemeye giriş](/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

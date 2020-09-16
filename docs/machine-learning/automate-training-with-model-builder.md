@@ -3,12 +3,12 @@ title: Model Oluşturucu nedir ve nasıl çalışır?
 description: Makine öğrenimi modelini otomatik olarak eğiteiçin ML.NET model Oluşturucu 'Yu kullanma
 ms.date: 06/01/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: 2ed4a0c3c94ae9f46bb1cf6ddb1e9774baf82367
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 80f5f5d064c4e0c4097dacc6022d4624c1516ab9
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289505"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679683"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>Model Oluşturucu nedir ve nasıl çalışır?
 
@@ -27,7 +27,7 @@ Model Oluşturucuyu kullanmak için Machine Learning uzmanlığına ihtiyacını
 
 Uygulamanız için bir makine öğrenimi modeli oluşturmak için model Oluşturucu 'ya birçok farklı senaryo getirebilirsiniz.
 
-Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açıklamasıdır. Örneğin:
+Senaryo, verilerinizi kullanarak yapmak istediğiniz tahmin türünün bir açıklamasıdır. Örnek:
 
 - geçmiş satış verilerine göre gelecek ürün satış hacmini tahmin edin
 - müşterilerin gözden geçirmeleri temelinde olumlu veya olumsuz şekilde sınıflandırın
@@ -111,7 +111,7 @@ Henüz kendi verileriniz yoksa, bu veri kümelerinden birini deneyin:
 |-|-|-|-|-|
 |Sınıflandırma|Satış anormalilerini tahmin edin|[ürün satış verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ürün satışları|Ay|
 ||Web sitesi açıklamalarının yaklaşımını tahmin etme|[Web sitesi açıklama verileri](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiket (negatif yaklaşım olduğunda 0, pozitif olduğunda 1)|Açıklama, yıl|
-||Sahte kredi kartı işlemlerini tahmin etme|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
+||Sahte kredi kartı işlemlerini tahmin etme|[kredi kartı verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CCFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Sınıf (sahte olduğunda 1, aksi durumda 0)|Miktar, v1-V28 (anonimleştirilmiş Özellikler)|
 ||GitHub deposundaki sorun türünü tahmin etme|[GitHub sorun verileri](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Alan|Başlık, açıklama|
 |Değer tahmini|Taxı tarifeli havayolu fiyatını tahmin etme|[taxı tarifeli havayolu verileri](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifeli havayolu|Seyahat süresi, uzaklık|
 |Resimleri sınıflandırma|Çiçek kategorisini tahmin etme |[çiçek görüntüleri](http://download.tensorflow.org/example_images/flower_photos.tgz)|Çiçek türü: da, Dandelion, Roses, sunçiçekler, TULIP 'ler|Görüntü verilerinin kendisi|

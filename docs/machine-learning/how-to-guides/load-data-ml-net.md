@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 5097632ca777403e6073d28b707bdbe653cda8ac
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: edcb1c4d00a09ba8404b08ddc3ca3447a52a81b6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90545031"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679592"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Dosyalardan ve diğer kaynaklardan veri yükleme
 
@@ -66,7 +66,7 @@ ML.NET, sütun adlarıyla çalışır. Bir sütunun adını özellik adı dış�
 
 ## <a name="load-data-from-a-single-file"></a>Tek bir dosyadaki verileri yükleme
 
-Bir dosyadan veri yüklemek için [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) yöntemini, yüklenecek verilerin veri modeliyle birlikte kullanın. `separatorChar`Parametre varsayılan olarak sekmeyle ayrılmış olduğundan, bunu veri dosyanız için gereken şekilde değiştirin. Dosyanızın bir üstbilgisi varsa, `hasHeader` parametresini `true` dosyadaki ilk satırı yoksayacak şekilde ayarlayın ve ikinci satırdan verileri yüklemeye başlayın.
+Bir dosyadan veri yüklemek için [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) yöntemini, yüklenecek verilerin veri modeliyle birlikte kullanın. `separatorChar`Parametre varsayılan olarak sekmeyle ayrılmış olduğundan, bunu veri dosyanız için gereken şekilde değiştirin. Dosyanızın bir üstbilgisi varsa, `hasHeader` parametresini `true` dosyadaki ilk satırı yoksayacak şekilde ayarlayın ve ikinci satırdan verileri yüklemeye başlayın.
 
 ```csharp
 //Create MLContext
@@ -82,7 +82,7 @@ Verilerinizin birden çok dosyada depolandığından, veri şeması aynı olduğ
 
 ### <a name="load-from-files-in-a-single-directory"></a>Tek bir dizindeki dosyalardan yükleme
 
-Tüm veri dosyalarınız aynı dizinde olduğunda, yönteminde joker karakterler kullanın [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) .
+Tüm veri dosyalarınız aynı dizinde olduğunda, yönteminde joker karakterler kullanın [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A) .
 
 ```csharp
 //Create MLContext
@@ -94,7 +94,7 @@ IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("Data/*", separato
 
 ### <a name="load-from-files-in-multiple-directories"></a>Birden çok dizindeki dosyalardan yükleme
 
-Birden çok dizindeki verileri yüklemek için [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) yöntemini kullanarak bir oluşturun [`TextLoader`](xref:Microsoft.ML.Data.TextLoader) . Ardından, yöntemini kullanın [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) ve tek dosya yollarını belirtin (joker karakterler kullanılamaz).
+Birden çok dizindeki verileri yüklemek için [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader%2A) yöntemini kullanarak bir oluşturun [`TextLoader`](xref:Microsoft.ML.Data.TextLoader) . Ardından, yöntemini kullanın [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load%2A) ve tek dosya yollarını belirtin (joker karakterler kullanılamaz).
 
 ```csharp
 //Create MLContext
@@ -200,10 +200,10 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-Bellek içi toplamayı, yöntemiyle bir öğesine yükleyin [`IDataView`](xref:Microsoft.ML.IDataView) [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) :
+Bellek içi toplamayı, yöntemiyle bir öğesine yükleyin [`IDataView`](xref:Microsoft.ML.IDataView) [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) :
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) , ' [`IEnumerable`](xref:System.Collections.IEnumerable) den yüklendiği varsayılmaktadır, iş parçacığı güvenlidir.
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable%2A) , ' [`IEnumerable`](xref:System.Collections.IEnumerable) den yüklendiği varsayılmaktadır, iş parçacığı güvenlidir.
 
 ```csharp
 // Create MLContext

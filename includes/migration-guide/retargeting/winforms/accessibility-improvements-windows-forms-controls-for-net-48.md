@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e528a41748d9353c96d443f68e15e7a98ee7f4ae
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 882c4c0455b7df538079ffe1b7d1d7ca8af1904a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85616304"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606629"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-48"></a>.NET 4,8 için Windows Forms Denetimlerinde erişilebilirlik geliştirmeleri
 
@@ -21,7 +21,7 @@ Windows Forms Framework, Windows Forms müşterileri daha iyi destekleyecek şek
 **Bu değişiklikleri kabul etme veya devre dışı bırakma** Uygulamanın bu değişikliklerden faydalanabilir olması için .NET Framework 4,8 üzerinde çalışması gerekir. Uygulama, aşağıdaki yollarla bu değişiklikleri kabul edebilir:
 
 - .NET Framework 4,8 ' i hedeflemek için yeniden derlenir. Bu erişilebilirlik değişiklikleri, .NET Framework 4,8 ' i hedefleyen Windows Forms uygulamalarda varsayılan olarak etkinleştirilmiştir.
-- [AppContext switch](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) `<runtime>` Aşağıdaki örnekte gösterildiği gibi, uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContext anahtarını ekleyerek ve ' ı ' a ayarlayarak, .NET Framework 4.7.2 veya önceki bir sürümü, eski erişilebilirlik davranışlarından daha fazla bilgi sağlar `false` .
+- [AppContext switch](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `<runtime>` Aşağıdaki örnekte gösterildiği gibi, uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContext anahtarını ekleyerek ve ' ı ' a ayarlayarak, .NET Framework 4.7.2 veya önceki bir sürümü, eski erişilebilirlik davranışlarından daha fazla bilgi sağlar `false` .
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,7 +72,7 @@ Bu özelliğin etkinleştirilmesinde, .NET Framework 4.7.1-4,8 ' nin belirtilen 
 **Geliştirilmiş ProgressBar erişilebilirlik desteği**
 
 - <xref:System.Windows.Forms.ProgressBar>UI Otomasyonu bildirimleri ve DIĞER UI Otomasyon özelliklerini kullanma özelliği ile denetim IÇIN UI Otomasyonu desteği etkinleştirildi. Geliştiriciler artık, ekran okuyucusu 'Nun ilerlemeyi göstermek için duyurabileceği Kullanıcı Arabirimi Otomasyonu bildirimlerini kullanabiliyor.
-UI Otomasyonu olaylarına genel bakış için Kullanıcı Arabirimi Otomasyonu bildirim olayları dahil bir genel bakış için bkz. [UI Otomasyonu olaylarına genel](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-eventsoverview)bakış.
+UI Otomasyonu olaylarına genel bakış için Kullanıcı Arabirimi Otomasyonu bildirim olayları dahil bir genel bakış için bkz. [UI Otomasyonu olaylarına genel](/windows/desktop/WinAuto/uiauto-eventsoverview)bakış.
 
 **Geliştirilmiş PropertyGrid erişilebilirlik desteği**
 
@@ -89,7 +89,7 @@ UI Otomasyonu olaylarına genel bakış için Kullanıcı Arabirimi Otomasyonu b
 **Geliştirilmiş görsel ipuçları**
 
 - Boş bir <xref:System.Windows.Forms.CheckedListBox> Denetim artık odak aldığında odak göstergesi görüntülüyor.
-Not: UI Otomasyon desteği çalışma zamanında denetimler için etkinleştirilmiştir ancak tasarım zamanında kullanılmaz. UI Otomasyonu 'na genel bakış için bkz. [UI Otomasyonu genel bakış](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview).
+Not: UI Otomasyon desteği çalışma zamanında denetimler için etkinleştirilmiştir ancak tasarım zamanında kullanılmaz. UI Otomasyonu 'na genel bakış için bkz. [UI Otomasyonu genel bakış](../../../../docs/framework/ui-automation/ui-automation-overview.md).
 
 **Denetimlerin klavye ile araç Ipuçlarını çağırma**
 

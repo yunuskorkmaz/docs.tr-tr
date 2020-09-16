@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 70718b5dfbd54693d2734a58c3da17806137ad2f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599158"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557547"
 ---
 # <a name="distributed-application-security"></a>Dağıtılan Uygulama Güvenliği
 Windows Communication Foundation (WCF) güvenliği üç önemli işlevsel alana bölünmüştür: aktarım güvenliği, erişim denetimi ve denetim. Aktarım güvenliği bütünlük, gizlilik ve kimlik doğrulama sağlar. Aktarım güvenliği, aşağıdakilerden biri tarafından sağlanır: aktarım güvenliği, ileti güvenliği veya `TransportWithMessageCredential` .  
@@ -38,13 +38,13 @@ Windows Communication Foundation (WCF) güvenliği üç önemli işlevsel alana 
 ## <a name="security-modes"></a>Güvenlik modları  
  WCF, aşağıdaki tabloda açıklanan çeşitli aktarım güvenliği modlarına sahiptir.  
   
-|Mod|Açıklama|  
+|Mod|Description|  
 |----------|-----------------|  
 |Yok|Aktarım katmanında veya ileti katmanında güvenlik sağlanmaz. Önceden tanımlı bağlamalardan hiçbiri, bu modu öğesi hariç, varsayılan olarak, [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) kod kullanırken <xref:System.ServiceModel.BasicHttpBinding> sınıfı kullanır.|  
 |Aktarım|Bütünlük, gizlilik ve karşılıklı kimlik doğrulama için HTTPS gibi güvenli bir aktarım kullanır.|  
 |İleti|Bütünlük, gizlilik ve karşılıklı kimlik doğrulama için SOAP iletisi güvenliği kullanır. SOAP iletileri WS-Security standartlarına göre güvenli hale getirilir.|  
 |Karma mod|Bütünlük, gizlilik ve sunucu kimlik doğrulaması için Transport Security 'yi kullanır. İstemci kimlik doğrulaması için ileti güvenliğini (WS-Security ve diğer standartları) kullanır.<br /><br /> (Bu mod için bu sabit listesi `TransportWithMessageCredential` .)|  
-|Her ikisi de|Her iki düzeyde koruma ve kimlik doğrulaması gerçekleştirir. Bu mod yalnızca [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) öğesinde kullanılabilir.|  
+|Her ikisi|Her iki düzeyde koruma ve kimlik doğrulaması gerçekleştirir. Bu mod yalnızca [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) öğesinde kullanılabilir.|  
   
 ## <a name="credentials-and-transfer-security"></a>Kimlik bilgileri ve aktarım güvenliği  
  Bir *kimlik bilgisi* , istenen bir kimlik veya özellik kurmak için sunulan bir veri olabilir. Bir kimlik bilgisi sunmak, verilerin hem verilerin hem de sahip olma kanıtını içerir. WCF, hem aktarım hem de ileti güvenlik düzeylerinde çeşitli kimlik bilgileri türlerini destekler. WCF bağlaması için bir kimlik bilgisi türü belirtebilirsiniz.  
@@ -97,6 +97,6 @@ Windows Communication Foundation (WCF) güvenliği üç önemli işlevsel alana 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Uç Noktası Oluşturma Genel Bakış](../endpoint-creation-overview.md)
-- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../system-provided-bindings.md)
 - [Güvenliğe genel bakış](security-overview.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

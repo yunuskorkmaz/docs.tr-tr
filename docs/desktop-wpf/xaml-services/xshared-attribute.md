@@ -6,16 +6,16 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: e1cd1d9db5c19decd840b433f986e0ba53557a8b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: d5000b51d83066ec2d529db2033d8ac54f7ad329
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071376"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557794"
 ---
 # <a name="xshared-attribute"></a>x:Shared Özniteliği
 
-`false`Ayarlandığında, wpf kaynak alma davranışını değiştirir, böylece atfedilen kaynak istekleri tüm istekler için aynı örneği paylaşmak yerine her istek için yeni bir örnek oluşturur.
+Olarak ayarlandığında `false` , öznitelikli kaynağa yönelik isteklerin tüm istekler için aynı örneği paylaşmak yerine her istek için yeni bir örnek oluşturması IÇIN WPF kaynak alımı davranışını değiştirir.
 
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı
 
@@ -27,32 +27,32 @@ ms.locfileid: "82071376"
 
 ## <a name="remarks"></a>Açıklamalar
 
-`x:Shared`XAML dili XAML ad alanına eşlenir ve .NET XAML Hizmetleri ve XAML okuyucuları tarafından geçerli bir XAML dil öğesi olarak kabul edilir. Ancak, belirtilen yetenekleri `x:Shared` yalnızca WPF uygulamaları ve WPF XAML araparıcısı için geçerlidir. WPF'de, `x:Shared` yalnızca WPF <xref:System.Windows.ResourceDictionary>içinde bulunan bir nesneye uygulandığında öznitelik olarak kullanışlıdır. Diğer kullanımlar ayrıştırma özel durumları veya diğer hatalar atmayın, ancak hiçbir etkisi yoktur.
+`x:Shared` , XAML Language XAML ad alanı ile eşlenir ve .NET XAML Hizmetleri ve XAML okuyucuları tarafından geçerli bir XAML dili öğesi olarak tanınır. Bununla birlikte, belirtilen özellikleri `x:Shared` yalnızca WPF uygulamaları ve WPF XAML ayrıştırıcısı için geçerlidir. WPF içinde `x:Shared` yalnızca BIR WPF içinde bulunan bir nesneye uygulandığında öznitelik olarak faydalıdır <xref:System.Windows.ResourceDictionary> . Diğer kullanımlar ayrıştırma özel durumları veya diğer hataları oluşturmaz, ancak hiçbir etkisi yoktur.
 
-Anlamı XAML dil belirtiminde `x:Shared` belirtilmemiştir. .NET XAML Hizmetleri'ni temel alanlar gibi diğer XAML uygulamaları mutlaka kaynak paylaşımı desteği sağlamaz. Bu tür XAML uygulamaları, değerleri de kullanan `x:Shared` destekleyici çerçevede benzer davranışlar sağlayabilir.
+Öğesinin anlamı `x:Shared` xaml dil belirtiminde belirtilmemiş. .NET XAML Hizmetleri üzerinde derlenenler gibi diğer XAML uygulamaları, kaynak paylaşım desteği sunmamalıdır. Bu tür XAML uygulamaları destekleyici çerçevede değerleri de kullanan benzer davranışlar sağlayabilir `x:Shared` .
 
-WPF'de, `x:Shared` kaynakların varsayılan `true`koşulu . Bu durum, verilen herhangi bir kaynak isteğinin her zaman aynı örneği döndürdeğini anlamına gelir.
+WPF 'de, `x:Shared` kaynaklar için varsayılan koşul `true` . Bu koşul, belirli bir kaynak isteğinin her zaman aynı örneği döndürdüğü anlamına gelir.
 
-Kaynak API'si aracılığıyla döndürülen bir <xref:System.Windows.FrameworkElement.FindResource%2A>nesneyi değiştirme (örneğin, <xref:System.Windows.ResourceDictionary>bir nesneyi doğrudan içinde değiştirmek), özgün kaynağı değiştirir. Bu kaynağa yapılan başvurular dinamik kaynak başvurularıysa, bu kaynağın tüketicileri değiştirilen kaynağı alır.
+Bir kaynak API 'SI aracılığıyla döndürülen <xref:System.Windows.FrameworkElement.FindResource%2A> veya bir nesneyi doğrudan bir içinde değiştiren bir nesneyi değiştirme <xref:System.Windows.ResourceDictionary> , özgün kaynağı değiştirir. Bu kaynağa yapılan başvurular dinamik kaynak başvurularıyla, bu kaynağın tüketicileri değiştirilen kaynağı alır.
 
-Kaynağa yapılan başvurular statik kaynak başvurularıysa, [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] işlem süresinden sonra kaynakta yapılan değişiklikler önemsizdir. Statik ve dinamik kaynak başvuruları hakkında daha fazla bilgi için Bkz. [XAML Kaynakları.](../fundamentals/xaml-resources-define.md)
+Kaynağa yapılan başvurular statik kaynak başvurularıyla, işlem zamanından sonra kaynakta yapılan değişiklikler [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] ilgisizdir. Statik ve dinamik kaynak başvuruları hakkında daha fazla bilgi için bkz. [xaml kaynakları](../fundamentals/xaml-resources-define.md).
 
-Açıkça belirtme `x:Shared="true"` nadiren yapılır, çünkü bu zaten varsayılandır. WPF nesne `x:Shared` modelinde doğrudan kod eşdeğeri yoktur; yalnızca bir XAML kullanımında belirtilebilir ve .NET XAML Hizmetleri ve XAML okuyucuları kullanılarak işlenirse, varsayılan WPF davranışı veya yük yolundaki bir ara XAML düğüm akışı ile işlenmesi gerekir.
+Açıkça belirtilmesi `x:Shared="true"` nadiren yapılır, çünkü zaten varsayılan değer. WPF nesne modelinde doğrudan kod eşdeğeri yoktur `x:Shared` ; yalnızca BIR xaml kullanımında belirtilebilir ve .net xaml Hizmetleri ve xaml okuyucuları kullanılarak işlenirse, yükleme yolundaki bir ara xaml düğüm akışında işlenmelidir.
 
-Bir veya `x:Shared="false"` <xref:System.Windows.FrameworkContentElement> türemiş <xref:System.Windows.FrameworkElement> sınıfı kaynak olarak tanımlar ve ardından öğe kaynağını bir içerik modeline tanıtırsanız, bunun için bir senaryodur. `x:Shared="false"`bir öğe kaynağının aynı koleksiyona birden çok kez tanıtılmasını sağlar <xref:System.Windows.Controls.UIElementCollection>(örneğin. Bu `x:Shared="false"` olmadan geçersizdir, çünkü koleksiyon içeriğinin benzersizliğini zorlar. Ancak, `x:Shared="false"` davranış, aynı örneği döndürmek yerine kaynağın başka bir aynı örneğini oluşturur.
+Bir senaryosu `x:Shared="false"` , bir <xref:System.Windows.FrameworkElement> veya türetilmiş bir <xref:System.Windows.FrameworkContentElement> sınıfı kaynak olarak tanımlarsanız ve sonra öğe kaynağını bir içerik modeline tanıtdıysanız. `x:Shared="false"` bir öğe kaynağının aynı koleksiyonda birden çok kez tanıtılmalarını sağlar (örneğin, <xref:System.Windows.Controls.UIElementCollection> ). `x:Shared="false"`Bu geçersizdir çünkü koleksiyon içeriklerinin benzersizlik düzeyini zorluyor. Ancak, bu `x:Shared="false"` davranış aynı örneği döndürmek yerine kaynağın bir özdeş örneğini oluşturur.
 
-Animasyon değerleri `x:Shared="false"` için bir <xref:System.Windows.Freezable> kaynak kullanmak ancak kaynağı animasyon bazında değiştirmek istiyorsanız, başka bir senaryo.
+İçin başka bir senaryo `x:Shared="false"` da <xref:System.Windows.Freezable> animasyon değerleri için bir kaynak kullanıyorsanız ancak kaynağı animasyon temelinde değiştirmek istiyordur.
 
-Dize kullanımı `false` büyük/küçük harf duyarlı değildir.
+Dize işleme, `false` büyük/küçük harfe duyarlı değildir.
 
-WPF'de, `x:Shared` yalnızca aşağıdaki koşullar altında geçerlidir:
+WPF 'de `x:Shared` yalnızca aşağıdaki koşullarda geçerlidir:
 
-- Bu <xref:System.Windows.ResourceDictionary> öğeleri `x:Shared` içeren derlenmiş olmalıdır. Gevşek <xref:System.Windows.ResourceDictionary> XAML içinde olamaz veya temalar için kullanılamaz.
+- <xref:System.Windows.ResourceDictionary>Öğesini içeren öğeleri içeren öğesi `x:Shared` derlenmesi gerekir. <xref:System.Windows.ResourceDictionary>Gevşek XAML içinde olamaz veya temalar için kullanılamaz.
 
-- Öğeleri <xref:System.Windows.ResourceDictionary> içeren başka bir iç <xref:System.Windows.ResourceDictionary>içe olmamalıdır. Örneğin, zaten bir `x:Shared` <xref:System.Windows.ResourceDictionary> öğe olan <xref:System.Windows.ResourceDictionary> bir <xref:System.Windows.Style> içindeki maddeler için kullanamazsınız.
+- <xref:System.Windows.ResourceDictionary>Öğeleri içeren öğesi başka bir içinde iç içe olmamalıdır <xref:System.Windows.ResourceDictionary> . Örneğin, bir `x:Shared` öğesi zaten bir öğe olan içindeki öğeleri için kullanamazsınız <xref:System.Windows.ResourceDictionary> <xref:System.Windows.Style> <xref:System.Windows.ResourceDictionary> .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.ResourceDictionary>
 - [XAML Kaynakları](../fundamentals/xaml-resources-define.md)
-- [Temel Öğeler](../../framework/wpf/advanced/base-elements.md)
+- [Temel Öğeler](/dotnet/desktop/wpf/advanced/base-elements)

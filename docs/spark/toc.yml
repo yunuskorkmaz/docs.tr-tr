@@ -9,7 +9,7 @@
       href: what-is-apache-spark-dotnet.md
 - name: Öğreticiler
   items:
-    - name: başlarken
+    - name: Kullanmaya başlayın
       href: tutorials/get-started.md
     - name: Azure HDInsight’a dağıtma
       href: tutorials/hdinsight-deployment.md
@@ -46,7 +46,7 @@
 - name: Başvuru
   items:
     - name: API Başvurusu
-      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+      href: ../../api/index.md?view=spark-dotnet
 - name: Kaynaklar
   items:
     - name: Kaynaklara genel bakış

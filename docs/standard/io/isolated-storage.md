@@ -19,19 +19,19 @@ helpviewer_keywords:
 - data storage using isolated storage, options
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
-ms.openlocfilehash: 0de0c7e9843ca8a97392733a68367b1dae8de232
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 4ad7779b9810954d110af576dd834daf61888d59
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86416376"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555926"
 ---
 # <a name="isolated-storage"></a>Yalıtılmış depolama
 
 Masaüstü uygulamaları için yalıtılmış depolama, kodu kaydedilen verilerle ilişkilendirmenin standartlaştırılmış yollarını tanımlayarak yalıtım ve güvenlik sağlayan bir veri depolama mekanizmasıdır. Standart hale getirme başka yararlar da sağlar. Yöneticiler yalıtılmış depolamayı değiştirecek araçları kullanarak dosya depolama alanını yapılandırabilir, güvenlik ilkelerini ayarlayabilir ve kullanılmayan verileri silebilir. Yalıtılmış depolama ile kodunuz dosya sistemindeki güvenli konumları belirtmek için benzersiz yollara ihtiyaç duymaz ve veriniz yalnızca yalıtılmış depolama erişimi olan diğer uygulamalardan korunur. Bir uygulamanın depo alanının nerede olduğunu belirten sabit kodlu bilgi gerekli değildir.
 
 > [!IMPORTANT]
-> Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, `Windows.Storage` yerel verileri ve dosyaları depolamak için WINDOWS çalışma zamanı API 'sinde bulunan ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) .
+> Yalıtılmış depolama, Windows 8. x Mağazası uygulamaları için kullanılamaz. Bunun yerine, `Windows.Storage` yerel verileri ve dosyaları depolamak için WINDOWS çalışma zamanı API 'sinde bulunan ad alanlarında uygulama veri sınıflarını kullanın. Daha fazla bilgi için bkz. Windows Geliştirme Merkezi 'nde [uygulama verileri](/previous-versions/windows/apps/hh464917(v=win.10)) .
 
 <a name="data_compartments_and_stores"></a>
 
@@ -146,7 +146,7 @@ __Note:__ Bu tür bir saldırının gerçekleşmesi için Mallory şunları gere
 
 Bunlar, ev bilgisayarları veya tek çalışan kurumsal iş istasyonları gibi standart tek kullanıcılı masaüstü ortamları için uygulanan tehdit vektörleri değildir.
 
-#### <a name="elevation-of-privilege"></a>Ayrıcalık yükselmesi
+#### <a name="elevation-of-privilege"></a>Ayrıcalık yükseltme
 
 Can 'ın uygulaması malın dosyasını okuduğunda __ayrıcalık yükseltme__ saldırısı oluşur ve bu yükün içeriğine göre otomatik olarak bir işlem gerçekleştirmeye çalışır. Bir başlangıç komut dosyasının içeriğini makineye özel depodan okuyan ve bu içeriği ' ye ileten bir uygulamayı düşünün `Process.Start` . Mallory, Bob 'un uygulamayı başlattığında makine genelindeki depo içine kötü amaçlı bir betik yerleştirebilir:
 
@@ -199,9 +199,9 @@ Bazen yalıtılmış depolamaya yapılan bir değişikliği işletim sisteminin 
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, öğesinden türetilir <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> ve depolanan derleme ve uygulama dosyalarının temel yönetimini sağlar. Sınıfının bir örneği <xref:System.IO.IsolatedStorage.IsolatedStorageFile> dosya sisteminde bulunan tek bir depoyu temsil eder.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>' dan türetilir <xref:System.IO.FileStream?displayProperty=nameWithType> ve bir depodaki dosyalara erişim sağlar.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> ' dan türetilir <xref:System.IO.FileStream?displayProperty=nameWithType> ve bir depodaki dosyalara erişim sağlar.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope>, uygun yalıtım türüyle bir mağaza oluşturmanıza ve seçmenize olanak tanıyan bir numaralandırmadır.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> , uygun yalıtım türüyle bir mağaza oluşturmanıza ve seçmenize olanak tanıyan bir numaralandırmadır.
 
 Yalıtılmış depolama sınıfları, yalıtılmış depoları oluşturmanızı, numaralandırmanızı ve silmenizi sağlar. Bu görevleri gerçekleştirmeye yönelik yöntemler nesnesi aracılığıyla kullanılabilir <xref:System.IO.IsolatedStorage.IsolatedStorageFile> . Bazı işlemler <xref:System.Security.Permissions.IsolatedStorageFilePermission> yalıtılmış depolamayı yönetme hakkını temsil eden izne sahip olmanızı gerektirir; Ayrıca, dosya veya dizine erişmek için işletim sistemi haklarına sahip olmanız gerekebilir.
 

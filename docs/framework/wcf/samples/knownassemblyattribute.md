@@ -2,18 +2,18 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 12f28f44b408dde1ea04d6b84e663206cb4437df
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345244"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555412"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
-Bu örnek, serileştirme ve deserialization işlemlerinin <xref:System.Runtime.Serialization.DataContractResolver> sınıf kullanılarak nasıl özelleştirilebildiğini gösterir. Bu örnek, serileştirme ve deserialization sırasında bilinen türlerin dinamik olarak nasıl ekleyeceğini gösterir.  
+Bu örnek, serileştirme ve seri kaldırma işlemlerinin sınıfı kullanılarak nasıl özelleştirilebileceğini gösterir <xref:System.Runtime.Serialization.DataContractResolver> . Bu örnek, serileştirme ve seri durumundan çıkarma sırasında bilinen türlerin dinamik olarak nasıl ekleneceğini gösterir.  
   
 ## <a name="sample-details"></a>Örnek Ayrıntılar  
- Bu örnek dört projeden oluşmaktadır. Bunlardan biri, aşağıdaki hizmet sözleşmesini tanımlayan IIS tarafından barındırılacak hizmete karşılık gelir.  
+ Bu örnek dört projeden oluşur. Bunlardan biri, aşağıdaki hizmet sözleşmesini tanımlayan IIS tarafından barındırılmak üzere hizmete karşılık gelir.  
   
 ```csharp
 // Definition of a service contract.  
@@ -84,7 +84,7 @@ public interface IDataContractCalculator
 }  
 ```  
   
- Başka bir proje, sunucuyla iletişim kuranve açığa çıkardığı yöntemleri çağıran istemciye karşılık gelir. İstemcinin tanımı aşağıdaki örnekte gösterilmiştir.  
+ Başka bir proje, sunucusuyla iletişim kuran ve sunduğu yöntemleri çağıran istemciye karşılık gelir. İstemcinin tanımı aşağıdaki örnekte gösterilmiştir.  
   
 ```csharp  
  // Client implementation code.  
@@ -187,11 +187,11 @@ public interface IDataContractCalculator
 }  
 ```  
   
- Hizmet sözleşmesinin tanımı öznitelik `KnownAssembly` ile işaretlenir. Bu öznitelik, tüm hizmet ve istemci tarafından çalışma zamanında bilinen türleri, bir kitaplık adını içerir.  
+ Hizmet sözleşmesinin tanımı `KnownAssembly` özniteliğiyle işaretlenir. Bu öznitelik, her ikisi de hem hizmet hem de istemci tarafından çalışma zamanında bilinecek bir tür kitaplığının adını içerir.  
   
- `KnownAssembly` Öznitelik, işlem `IContractBehavior` davranışlarının her `DataContractSerializer` biri `DataContractResolver` için tanımlanmış bir a tanımlamak için uygular. Oluşturulduğunda `DataContractResolver` derleme üzerinde yansıtır ve farklı türleri serileştirip deserializing zaman kullanılacak türleri ve adları arasında eşleme ile sözlük oluşturur. Bu şekilde, `ResolveType` ve `ResolveName` türleri sözlükte gerekli verileri aramak gerekir.  
+ `KnownAssembly`Özniteliği, `IContractBehavior` `DataContractSerializer` `DataContractResolver` işlem davranışlarının her biri için tanımlanmış bir ile tanımlamak için uygular. , `DataContractResolver` Oluşturulduğunda derleme üzerinde yansıtıyor ve farklı türleri serileştirilirken ve serisini kaldırırken kullanılacak türler ve adlar arasındaki eşlemeyle birlikte sözlük oluşturur. Bu şekilde, `ResolveType` ve `ResolveName` türleri sözlükte gereken verileri aramak zorundadır.  
   
- Bu `DataContractResolver` örnek için tanımlanan aşağıdaki örnekte gösterilmiştir.  
+ `DataContractResolver`Bu örnek için tanımlanan, aşağıdaki örnekte gösterilmiştir.  
   
 ```csharp
 public class MyDataContractResolver : DataContractResolver  
@@ -275,7 +275,7 @@ public class MyDataContractResolver : DataContractResolver
    }  
 ```  
   
- Bu örnekte kullanılan türlerin kitaplığı aşağıdaki örnekte gösterilmiştir.  
+ Bu örnekte kullanılan türlerin kitaplığı, aşağıdaki örnekte gösterilmiştir.  
   
 ```csharp
  [DataContract]  
@@ -320,9 +320,9 @@ public class ComplexNumberWithMagnitude : ComplexNumber
 }  
 ```  
   
- `ComplexNumber` Çalışma zamanında bilinmeye dönüştüğünden, `ComplexNumberWithMagnitude` türü statik olarak bilmesi gerekmediğini unutmayın.  
+ `ComplexNumber` `ComplexNumberWithMagnitude` Çalışma zamanında bilineceğinden, türü statik olarak bilmesinin gerekli olmadığını unutmayın.  
   
- Örnek oluşturulup yürütüldüğünde, istemcide elde edilen beklenen çıktı budur:  
+ Örnek oluşturulup yürütüldüğünde, bu, istemcisinde elde edilen beklenen çıktıdır:  
   
 ```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
@@ -344,29 +344,29 @@ Lists combined:
 4 + 4i  
 ```  
   
-#### <a name="to-set-up-run-and-build-the-sample"></a>Örneği ayarlamak, çalıştırmak ve oluşturmak için  
+#### <a name="to-set-up-run-and-build-the-sample"></a>Örneği kurmak, çalıştırmak ve derlemek için  
   
-1. Çözüm **KnownAssemblyAttribute** sağ tıklayın ve **Özellikleri**seçin.  
+1. Çözüme sağ tıklayın **KnownAssemblyAttribute** ve **Özellikler**' i seçin.  
   
-2. **Ortak**Özellikler'de, **Başlangıç Projesi'ni**seçin ve ardından **Birden Çok Başlangıç projesi'ni**tıklatın.  
+2. **Ortak özellikler**' de **Başlangıç projesi**' ni seçin ve ardından **birden fazla başlangıç**projesi ' ne tıklayın.  
   
-3. **Hizmet** ve **İstemci** projelerine **Başlat** eylemini ekleyin.  
+3. **Hizmet** ve **istemci** projelerine **başlatma** eylemi ekleyin.  
   
-4. **Tamam'ı**tıklatın ve örneği çalıştırmak için **F5** tuşuna basın.  
+4. **Tamam**' a tıklayın ve örneği çalıştırmak için **F5** ' e basın.  
   
-5. Uygulama düzgün çalışmıyorsa, ortamınızın düzgün ayarlandıkdan emin olmak için aşağıdaki adımları izleyin:  
+5. Uygulama düzgün çalışmıyorsa, ortamınızın düzgün kurulduğundan emin olmak için aşağıdaki adımları izleyin:  
   
-6. Windows Communication Foundation [Samples için Tek Seferlik Kurulum Yordamı'nı](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)gerçekleştirdiğinizi emin olun.  
+6. [Windows Communication Foundation Örnekleri Için tek seferlik ayarlama yordamını](./one-time-setup-procedure-for-the-wcf-samples.md)gerçekleştirdiğinizden emin olun.  
   
-7. Çözümü oluşturmak için, Windows [Communication Foundation Sample'ı oluştururken](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)yönergeleri izleyin.  
+7. Çözümü derlemek için [Windows Communication Foundation örneğini oluşturma](./building-the-samples.md)konusundaki yönergeleri izleyin.  
   
-8. Örneği tek veya çapraz makine yapılandırmasında çalıştırmak için, [Windows Communication Foundation Samples'ı çalıştıran](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)yönergeleri izleyin.  
+8. Örneği tek veya bir çapraz makine yapılandırmasında çalıştırmak için [Windows Communication Foundation Örnekleri çalıştırma](./running-the-samples.md)bölümündeki yönergeleri izleyin.  
   
 > [!IMPORTANT]
-> Numuneler makinenize zaten yüklenmiş olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
+> Örnekler makinenizde zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örneklerini indirmek için .NET Framework 4 için Windows Communication [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Foundation [(WCF) ve Windows İş Akışı Temeli (WF) Örneklerine](https://www.microsoft.com/download/details.aspx?id=21459) gidin. Bu örnek aşağıdaki dizinde yer almaktadır.  
+> Bu dizin yoksa, tüm Windows Communication Foundation (WCF) ve örnekleri indirmek için [Windows Communication Foundation (WCF) ve Windows Workflow Foundation (WF) örneklerine .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) ' e gidin [!INCLUDE[wf1](../../../../includes/wf1-md.md)] . Bu örnek, aşağıdaki dizinde bulunur.  
 >
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`

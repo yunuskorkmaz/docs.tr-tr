@@ -30,7 +30,7 @@ Bu değişiklik, istek yerelleştirme ara yazılımı 'nın her zaman bir günl�
 
 Bir örneğini el ile oluştururken `RequestLocalizationMiddleware` oluşturucuda bir örnek geçirin `ILoggerFactory` . `ILoggerFactory`Bu bağlamda geçerli bir örnek yoksa, ara yazılım oluşturucusunu bir örnek olarak geçirmeyi düşünün <xref:Microsoft.Extensions.Logging.Abstractions.NullLoggerFactory> .
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Kategori
 
 ASP.NET Core
 

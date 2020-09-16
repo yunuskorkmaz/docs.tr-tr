@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9m
-ms.openlocfilehash: d463aed02a9293ca85e77f262ccfb8fdce5976b1
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: db1eb39bd5e91a1f3f096743884533e979d96077
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552865"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545683"
 ---
 # <a name="how-to-find-elements-in-a-namespace-linq-to-xml"></a>Bir ad alanında öğeleri bulma (LINQ to XML)
 
@@ -106,4 +106,4 @@ Results are identical
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](./comparison-xpath-linq-xml.md)

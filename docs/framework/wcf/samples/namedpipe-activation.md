@@ -2,12 +2,12 @@
 title: NamedPipe Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 8d9a10b94c52514db611144352653b911d109056
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 56775842a742d0c6b07c6870bfce524ed1d275fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602472"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556108"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Etkinleştirme
 
@@ -73,7 +73,7 @@ public class CalculatorService : ICalculator
 
 Örnek, bir `netNamedPipeBinding` güvenlik olmadan değiştirilmiş bağlamayı kullanır. Bağlama, istemci ve hizmet için yapılandırma dosyalarında belirtilir. Hizmetin bağlama türü, `binding` Aşağıdaki örnek yapılandırmada gösterildiği gibi Endpoint öğesinin özniteliğinde belirtilir.
 
-Güvenli adlandırılmış kanal bağlamayı kullanmak istiyorsanız, sunucunun güvenlik modunu istediğiniz güvenlik ayarıyla değiştirin ve güncelleştirilmiş bir istemci yapılandırma dosyası almak için istemci üzerinde Svcutil. exe dosyasını yeniden çalıştırın.
+Güvenli adlandırılmış kanal bağlamayı kullanmak istiyorsanız, sunucunun güvenlik modunu istediğiniz güvenlik ayarıyla değiştirin ve güncelleştirilmiş bir istemci yapılandırma dosyası almak için istemcide svcutil.exe yeniden çalıştırın.
 
 ```xml
 <system.serviceModel>
@@ -177,7 +177,7 @@ Press <ENTER> to terminate client.
 
     Kolaylık olması halinde, örnek dizinde bulunan AddNetPipeSiteBinding. cmd adlı bir toplu iş dosyasında aşağıdaki iki adım uygulanır.
 
-    1. Net. pipe etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin net. pipe protokolüne bağlanması gerekir. Bu, IIS 7,0 yönetim araç takımı ile yüklenen appcmd. exe kullanılarak yapılabilir. Yükseltilmiş (yönetici) komut isteminden aşağıdaki komutu çalıştırın.
+    1. Net. pipe etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin net. pipe protokolüne bağlanması gerekir. Bu, IIS 7,0 yönetim araç takımı ile yüklenen appcmd.exe kullanılarak yapılabilir. Yükseltilmiş (yönetici) komut isteminden aşağıdaki komutu çalıştırın.
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
@@ -226,4 +226,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric barındırma ve kalıcılık örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric barındırma ve kalıcılık örnekleri](/previous-versions/appfabric/ff383418(v=azure.10))

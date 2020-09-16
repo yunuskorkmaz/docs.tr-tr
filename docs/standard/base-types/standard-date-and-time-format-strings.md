@@ -15,12 +15,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5db9088a6b0d75ae5293b9be35346c4c2ddf81c6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 95f655ace1b2fb38100e3cc1089c4a3f61c5b264
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447231"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557365"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standart tarih ve saat biçim dizeleri
 
@@ -31,15 +31,15 @@ Standart tarih ve saat biçimi dizesi tek biçim belirleyici bir tarih ve saat d
 - Bir tarih ve saat değerinin <xref:System.DateTime> ayrıştırma işlemi tarafından bir veya değere dönüştürülebileceği metin temsilini tanımlamak için <xref:System.DateTimeOffset> .
 
 > [!TIP]
-> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
+> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
 
 Standart Tarih ve saat biçim dizeleri, ve değerleriyle birlikte kullanılabilir <xref:System.DateTime> <xref:System.DateTimeOffset> .
 
 [!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
-<a name="table"></a>Aşağıdaki tabloda standart tarih ve saat biçimi belirticileri açıklanmaktadır. Aksi belirtilmedikçe, belirli bir standart tarih ve saat biçim belirticisi, bir veya değeriyle kullanılıp kullanılmadığına bakılmaksızın özdeş bir dize temsili üretir <xref:System.DateTime> <xref:System.DateTimeOffset> . Standart Tarih ve saat biçimi dizelerini kullanma hakkında ek bilgi için [Notlar](#Notes) bölümüne bakın.
+<a name="table"></a> Aşağıdaki tabloda standart tarih ve saat biçimi belirticileri açıklanmaktadır. Aksi belirtilmedikçe, belirli bir standart tarih ve saat biçim belirticisi, bir veya değeriyle kullanılıp kullanılmadığına bakılmaksızın özdeş bir dize temsili üretir <xref:System.DateTime> <xref:System.DateTimeOffset> . Standart Tarih ve saat biçimi dizelerini kullanma hakkında ek bilgi için [Notlar](#Notes) bölümüne bakın.
 
-|Biçim belirteci|Açıklama|Örnekler|
+|Biçim belirteci|Description|Örnekler|
 |----------------------|-----------------|--------------|
 |"d"|Kısa Tarih Modeli<br /><br /> Daha fazla bilgi:[kısa tarih ("d") Biçim belirleyicisi](#ShortDate).|2009-06-15T13:45:30-> 6/15/2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 (fr-FR)<br /><br /> 2009-06-15T13:45:30-> 2009/06/15 (ja-JP)|
 |"D"|Uzun tarih deseni.<br /><br /> Daha fazla bilgi:[uzun tarih ("D") Biçim belirleyicisi](#LongDate).|2009-06-15T13:45:30-> Pazartesi, 15 Haziran 2009 (en-US)<br /><br /> 2009-06-15T13:45:30-> 15 июня 2009 г. (ru-RU)<br /><br /> 2009-06-15T13:45:30-> Montag, 15. Juni 2009 (de-DE)|
@@ -48,7 +48,7 @@ Standart Tarih ve saat biçim dizeleri, ve değerleriyle birlikte kullanılabili
 |"g"|Genel tarih veya saat deseni (süre).<br /><br /> Daha fazla bilgi: [Genel Tarih kısa saat ("g") Biçim belirleyicisi](#GeneralDateShortTime).|2009-06-15T13:45:30-> 6/15/2009 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45 (ES-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45 (zh-CN)|
 |"G"|Genel tarih veya saat deseni (uzun süre).<br /><br /> Daha fazla bilgi: [Genel Tarih uzun saat ("G") Biçim belirleyicisi](#GeneralDateLongTime).|2009-06-15T13:45:30-> 6/15/2009 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 15/06/2009 13:45:30 (ES-ES)<br /><br /> 2009-06-15T13:45:30-> 2009/6/15 13:45:30 (zh-CN)|
 |"M", "m"|Ay/gün deseni.<br /><br /> Daha fazla bilgi: [ay ("ı", "d") Biçim belirleyicisi](#MonthDay).|2009-06-15T13:45:30-> 15 Haziran (en-US)<br /><br /> 2009-06-15T13:45:30-> 15. junı (da-DK)<br /><br /> 2009-06-15T13:45:30-> 15 Junı (kimlik KIMLIĞI)|
-|"O", "o"|Gidiş tarihi/saati desen.<br /><br /> Daha fazla bilgi: [gidiş dönüş ("o", "o") Biçim belirleyicisi](#Roundtrip).|<xref:System.DateTime>deðerler<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)--> 2009-06-15T13:45:30.0000000 Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>deðerler<br /><br /> 2009-06-15T13:45:30-07:00--> 2009-06-15T13:45:30.0000000-07:00|
+|"O", "o"|Gidiş tarihi/saati desen.<br /><br /> Daha fazla bilgi: [gidiş dönüş ("o", "o") Biçim belirleyicisi](#Roundtrip).|<xref:System.DateTime> deðerler<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)--> 2009-06-15T13:45:30.0000000 Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> deðerler<br /><br /> 2009-06-15T13:45:30-07:00--> 2009-06-15T13:45:30.0000000-07:00|
 |"R", "r"|Desen: RFC1123<br /><br /> Daha fazla bilgi: [RFC1123 ("r", "r") Biçim belirleyicisi](#RFC1123).|2009-06-15T13:45:30-> Mon, 15 Haz 2009 20:45:30 GMT|
 |"s"|Sıralanabilir tarih veya saat deseni.<br /><br /> Daha fazla bilgi: [sıralanabilir ("s") Biçim belirleyicisi](#Sortable).|2009-06-15T13:45:30 (DateTimeKind. Local)-> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind. UTC)-> 2009-06-15T13:45:30|
 |"t"|Kısa bir süre deseni.<br /><br /> Daha fazla bilgi: [kısa saat ("t") Biçim belirleyicisi](#ShortTime).|2009-06-15T13:45:30-> 1:45 PM (en-US)<br /><br /> 2009-06-15T13:45:30-> 13:45 (HR-HR)<br /><br /> 2009-06-15T13:45:30-> 01:45 م (ar-EG)|
@@ -270,7 +270,7 @@ Aşağıdaki örnek bir tarih ve saat değerini görüntülemek için "m" biçim
 
 - <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>Tarih ve saat değerlerinin saat dilimi BILEŞENI UTC 'yi göstermek için "Z" (sıfır sapmasını temsil eder) kullanır.
 
-- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>Tarih ve saat değerlerinde saat dilimi bilgisi yok.
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> Tarih ve saat değerlerinde saat dilimi bilgisi yok.
 
 "O" veya "o" standart biçim belirticisi uluslararası bir standarda uygun olduğundan, belirtici kullanan biçimlendirme veya ayrıştırma işlemi her zaman sabit kültür ve Gregoryen takvimi kullanır.
 
@@ -453,5 +453,5 @@ Biçimlendirme, geçerli <xref:System.Globalization.DateTimeFormatInfo> iş par�
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [Biçimlendirme Türleri](formatting-types.md)
 - [Özel tarih ve saat biçim dizeleri](custom-date-and-time-format-strings.md)
-- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

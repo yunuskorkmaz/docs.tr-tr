@@ -24,7 +24,7 @@ Daha önce, belirli Windows Forms Yöntemler, <xref:System.NullReferenceExceptio
 
 Bu yöntemlerin herhangi birini çağırırsanız ve kodunuz Şu anda bir <xref:System.NullReferenceException> boş bağımsız değişken için yakalar, <xref:System.ArgumentNullException> bunun yerine bir kullanın. Ayrıca, belirtilen yöntemlere null bağımsız değişkenlerin geçirilmesini engellemek için kodu güncellemeyi göz önünde bulundurun.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Kategori
 
 Windows Forms
 

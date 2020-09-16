@@ -2,54 +2,54 @@
 title: .NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: fb9536d5ee7a31039d77deffc3c0b0c7a6263b66
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 02f7a4d9cdda0a6c4f23574c5a20ac78eb783ef2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802576"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556082"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>.NET Framework 4’te Birlikte Çalışma Etkinliği ile .NET Framework 3.0 WF Etkinlikleri Kullanma
-<xref:System.Activities.Statements.Interop> etkinliği, [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] bir iş akışı içinde .NET Framework 3,5 (WF 3,5) etkinliğini sarmalayan bir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5) etkinliğidir. WF 3 etkinliği tek bir yaprak etkinlik veya bir etkinlik ağacının tamamına ait olabilir. Yürütme (iptal ve özel durum işleme dahil) ve .NET Framework 3,5 etkinliğinin kalıcılığı, yürüten [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı örneği bağlamında oluşur.  
+Etkinlik, bir <xref:System.Activities.Statements.Interop> [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] iş akışı içinde .NET Framework 3,5 (WF 3,5) etkinliğini sarmalayan bir (WF 4,5) etkinliğidir [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] . WF 3 etkinliği tek bir yaprak etkinlik veya bir etkinlik ağacının tamamına ait olabilir. Yürütme (iptal ve özel durum işleme dahil) ve .NET Framework 3,5 etkinliğinin kalıcılığı, [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yürütülmekte olan iş akışı örneği bağlamında oluşur.  
   
 > [!NOTE]
-> İş akışının projesi **hedef Framework** ayarı **.NET Framework 4,5**olarak ayarlanmadığı takdirde, <xref:System.Activities.Statements.Interop> etkinliği iş akışı Tasarımcısı araç kutusunda görünmez.  
+> <xref:System.Activities.Statements.Interop>İş akışı projesinin **hedef Framework** ayarı **.NET Framework 4,5**olarak ayarlanmadığı takdirde etkinlik iş akışı Tasarımcısı araç kutusunda görünmez.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Birlikte çalışabilirlik etkinliğiyle WF 3 etkinliğinin kullanımı için ölçütler  
- Bir WF 3 etkinliğinin <xref:System.Activities.Statements.Interop> etkinliği içinde başarıyla yürütülmesi için aşağıdaki ölçütlerin karşılanması gerekir:  
+ Bir etkinlik içinde başarılı bir şekilde yürütülecek bir WF 3 etkinliğinin <xref:System.Activities.Statements.Interop> sağlanması için aşağıdaki ölçütlerin karşılanması gerekir:  
   
-- WF 3 etkinliğinin <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType>türetmeniz gerekir.  
+- WF 3 etkinliğinin türevi olması gerekir <xref:System.Workflow.ComponentModel.Activity?displayProperty=nameWithType> .  
   
-- WF 3 etkinliğinin `public` olarak bildirilmelidir ve `abstract`olamaz.  
+- WF 3 etkinliğinin olarak tanımlanmış olması gerekir `public` `abstract` .  
   
 - WF 3 etkinliğinin ortak parametresiz bir oluşturucusu olmalıdır.  
   
-- <xref:System.Activities.Statements.Interop> etkinliğinin destekleyebileceği arabirim türlerindeki sınırlamalar nedeniyle, <xref:System.Workflow.Activities.HandleExternalEventActivity> ve <xref:System.Workflow.Activities.CallExternalMethodActivity> doğrudan kullanılamaz, ancak Iş akışı Iletişimi etkinlik aracı (WCA. exe) kullanılarak oluşturulan türev etkinlikler kullanılabilir. Ayrıntılar için bkz. [Windows Workflow Foundation araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90)) .  
+- Etkinliğin destekleyebileceği arabirim türlerindeki sınırlamalar nedeniyle <xref:System.Activities.Statements.Interop> <xref:System.Workflow.Activities.HandleExternalEventActivity> <xref:System.Workflow.Activities.CallExternalMethodActivity> doğrudan kullanılamaz, ancak Iş akışı iletişim etkinlik aracı (WCA.exe) kullanılarak oluşturulan türev etkinlikler kullanılabilir. Ayrıntılar için bkz. [Windows Workflow Foundation araçları](/previous-versions/dotnet/netframework-3.5/ms734408(v=vs.90)) .  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Birlikte çalışabilirlik etkinliğinde WF 3 etkinliğini yapılandırma  
- Bir WF 3 etkinliğinin içine ve dışına veri yapılandırmak ve bu etkinliği kapatmak için, WF 3 etkinliğinin özellikleri ve meta verileri özellikleri <xref:System.Activities.Statements.Interop> etkinliği tarafından gösterilir. WF 3 etkinliğinin meta veri özellikleri (örneğin, <xref:System.Workflow.ComponentModel.Activity.Name%2A>) <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> koleksiyonu aracılığıyla gösterilir. Bu, WF 3 etkinliğinin meta veri özelliklerine ilişkin değerleri tanımlamak için kullanılan ad-değer çiftleri koleksiyonudur. Meta veri özelliği, <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> bayrağının ayarlandığı Dependency özelliği tarafından desteklenen bir özelliktir.  
+ Bir WF 3 etkinliğinin içine ve dışına verileri yapılandırmak ve kapatmak için, birlikte çalışma sınırı boyunca, WF 3 etkinliğinin özellikleri ve meta verileri özellikleri etkinlik tarafından gösterilir <xref:System.Activities.Statements.Interop> . WF 3 etkinliğinin meta veri özellikleri (gibi), <xref:System.Workflow.ComponentModel.Activity.Name%2A> koleksiyon aracılığıyla sunulur <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A> . Bu, WF 3 etkinliğinin meta veri özelliklerine ilişkin değerleri tanımlamak için kullanılan ad-değer çiftleri koleksiyonudur. Meta veri özelliği, bayrağın ayarlandığı bağımlılık özelliği tarafından desteklenen bir özelliktir <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata> .  
   
- WF 3 etkinliğinin özellikleri <xref:System.Activities.Statements.Interop.ActivityProperties%2A> koleksiyonu aracılığıyla sunulur. Bu, her değerin bir <xref:System.Activities.Argument> nesnesi olduğu, WF 3 etkinliğinin özelliklerinin bağımsız değişkenlerini tanımlamak için kullanılan bir ad-değer çiftleri kümesidir. Bir WF 3 etkinlik özelliğinin yönü çıkarsanamıyor, her özellik <xref:System.Activities.InArgument>/<xref:System.Activities.OutArgument> çifti olarak ortaya çıkmış olur. Etkinliğin özelliğinin kullanımına bağlı olarak, bir <xref:System.Activities.InArgument> girişi, <xref:System.Activities.OutArgument> girişi veya her ikisini de sağlamak isteyebilirsiniz. Koleksiyonda <xref:System.Activities.InArgument> girdinin beklenen adı, WF 3 etkinliğinde tanımlanan özelliğin adıdır. Koleksiyonda <xref:System.Activities.OutArgument> girdinin beklenen adı, özelliğin adının ve "Out" dizesinin bir bitiştirilmesi.  
+ WF 3 etkinliğinin özellikleri koleksiyon aracılığıyla sunulur <xref:System.Activities.Statements.Interop.ActivityProperties%2A> . Bu, her değerin bir nesne olduğu, <xref:System.Activities.Argument> WF 3 etkinliğinin özelliklerinin bağımsız değişkenlerini tanımlamak için kullanılan bir ad-değer çiftleri kümesidir. Bir WF 3 etkinlik özelliğinin yönü çıkarsanamıyor, her özellik bir çift olarak ortaya çıkmış olur <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument> . Etkinliğin özelliğinin kullanımına bağlı olarak, bir <xref:System.Activities.InArgument> giriş, <xref:System.Activities.OutArgument> giriş veya her ikisini de sağlamak isteyebilirsiniz. Koleksiyondaki girdinin beklenen adı, <xref:System.Activities.InArgument> WF 3 etkinliğinde tanımlanan özelliğin adıdır. Koleksiyondaki girdinin beklenen adı, <xref:System.Activities.OutArgument> özelliğin adının ve "Out" dizesinin bir bitiştirilmesi olur.  
   
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Birlikte çalışabilirlik etkinliğinde WF 3 etkinliğinin kullanım sınırlamaları  
- WF 3 sistem tarafından belirtilen etkinlikler bir <xref:System.Activities.Statements.Interop> etkinliğine doğrudan sarmalanamaz. <xref:System.Workflow.Activities.DelayActivity>gibi bazı WF 3 etkinlikleri için, bunun nedeni, benzer bir WF 4,5 etkinliğidir. Bunun nedeni, etkinliğin işlevselliğinin desteklenmediği içindir. Birçok WF 3 sistem tarafından sunulan etkinlik, <xref:System.Activities.Statements.Interop> etkinliği tarafından Sarmalanan iş akışları içinde aşağıdaki kısıtlamalara tabi olarak kullanılabilir:  
+ WF 3 sistem tarafından belirtilen etkinlikler bir etkinlikte doğrudan sarmalanamaz <xref:System.Activities.Statements.Interop> . Gibi bazı WF 3 etkinlikleri için, bunun nedeni, <xref:System.Workflow.Activities.DelayActivity> benzer BIR wf 4,5 etkinliğidir. Bunun nedeni, etkinliğin işlevselliğinin desteklenmediği içindir. Birçok WF 3 sistem tarafından sunulan etkinlik, etkinlik tarafından Sarmalanan iş akışları dahilinde <xref:System.Activities.Statements.Interop> aşağıdaki kısıtlamalara tabi olarak kullanılabilir:  
   
-1. <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> <xref:System.Activities.Statements.Interop> etkinliğinde kullanılamaz.  
+1. <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.Receive> bir <xref:System.Activities.Statements.Interop> etkinlikte kullanılamaz.  
   
-2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>ve <xref:System.Workflow.Activities.WebServiceFaultActivity> <xref:System.Activities.Statements.Interop> etkinliği içinde kullanılamaz.  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity> , ve <xref:System.Workflow.Activities.WebServiceFaultActivity> bir etkinlik içinde kullanılamaz <xref:System.Activities.Statements.Interop> .  
   
-3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> bir <xref:System.Activities.Statements.Interop> etkinliği içinde kullanılamaz.  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> etkinlik içinde kullanılamaz <xref:System.Activities.Statements.Interop> .  
   
-4. <xref:System.Workflow.ComponentModel.SuspendActivity> bir <xref:System.Activities.Statements.Interop> etkinliği içinde kullanılamaz.  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> etkinlik içinde kullanılamaz <xref:System.Activities.Statements.Interop> .  
   
-5. Tazminat ilgili etkinlikler bir <xref:System.Activities.Statements.Interop> etkinliği içinde kullanılamaz.  
+5. Tazminat ilgili etkinlikler bir etkinlik içinde kullanılamaz <xref:System.Activities.Statements.Interop> .  
   
- <xref:System.Activities.Statements.Interop> etkinliğinde WF 3 etkinliklerinin kullanımıyla ilgili bilgi edinmek için de bazı davranış özellikleri vardır:  
+ Etkinliğin içinde WF 3 etkinliklerinin kullanımıyla ilgili bilgi almak için bazı davranış özellikleri de mevcuttur <xref:System.Activities.Statements.Interop> :  
   
-1. <xref:System.Activities.Statements.Interop> etkinliğin içinde yer alan WF 3 etkinlikleri, <xref:System.Activities.Statements.Interop> etkinliği yürütüldüğünde başlatılır. WF 4,5 ' de yürütmeden önce bir iş akışı örneği için başlatma aşaması yoktur.  
+1. Etkinlik yürütüldüğünde bir etkinliğin içinde yer alan WF 3 etkinlikleri <xref:System.Activities.Statements.Interop> başlatılır <xref:System.Activities.Statements.Interop> . WF 4,5 ' de yürütmeden önce bir iş akışı örneği için başlatma aşaması yoktur.  
   
-2. WF 4,5 çalışma zamanı, işlemin başladığı (<xref:System.Activities.Statements.Interop> etkinliğinin içinde veya dışında) bağımsız olarak bir işlem başladığında iş akışı örneği durumunu kontrol etmez.  
+2. WF 4,5 çalışma zamanı, işlemin başladığı yere (bir etkinliğin içinde veya dışında) bakılmaksızın bir işlem başladığında iş akışı örneği durumunu kontrol etmez <xref:System.Activities.Statements.Interop> .  
   
-3. WF 3 <xref:System.Activities.Statements.Interop> etkinliği içindeki etkinliklerin izleme kayıtları, WF 4,5 izleme katılımcılarına <xref:System.Activities.Tracking.InteropTrackingRecord> nesneleri olarak sunulmaktadır. <xref:System.Activities.Tracking.InteropTrackingRecord>, <xref:System.Activities.Tracking.CustomTrackingRecord>bir türevi.  
+3. WF 3 bir etkinlik içindeki etkinliklerin izleme kayıtları <xref:System.Activities.Statements.Interop> , wf 4,5 izleme katılımcılarına nesne olarak sunulmaktadır <xref:System.Activities.Tracking.InteropTrackingRecord> . <xref:System.Activities.Tracking.InteropTrackingRecord> , ' ın bir türevi <xref:System.Activities.Tracking.CustomTrackingRecord> .  
   
-4. WF 3 özel etkinliği, birlikte çalışabilirlik ortamında iş akışı kuyruklarını, WF 3 iş akışı çalışma zamanı ile tamamen aynı şekilde kullanarak verilere erişebilir. Özel etkinlik kodu değişikliği gerekli değildir. Konakta, veriler bir <xref:System.Activities.Bookmark>sürdürülerek WF 3 iş akışı kuyruğuna sıraya konur. Yer işaretinin adı, <xref:System.IComparable> iş akışı sırasının adının dize biçimidir.
+4. WF 3 özel etkinliği, birlikte çalışabilirlik ortamında iş akışı kuyruklarını, WF 3 iş akışı çalışma zamanı ile tamamen aynı şekilde kullanarak verilere erişebilir. Özel etkinlik kodu değişikliği gerekli değildir. Konakta veriler bir WF 3 iş akışı kuyruğuna sıraya alınır <xref:System.Activities.Bookmark> . Yer işaretinin adı, <xref:System.IComparable> iş akışı sırasının adının dize biçimidir.

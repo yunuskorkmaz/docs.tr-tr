@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-ms.openlocfilehash: 5639f4bdb83906273b60ed20494c288286f32560
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b14191d798baf458bd860c00913683f53d0a1fd8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288205"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555659"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Nasıl yapılır: Paralel Sınıfla Dosya Dizinlerini Yineleme
 Çoğu durumda, dosya yinelemesi kolayca paralelleştirilmiş bir işlemdir. [Nasıl yapılır: dosya dizinlerini PLINQ Ile yineleme](how-to-iterate-file-directories-with-plinq.md) , bu görevi birçok senaryo için yapmanın en kolay yolunu gösterir. Ancak, kodunuzun dosya sistemine erişirken ortaya çıkabilecek çok sayıda özel durum türüyle uğraşmak gerektiğinde karmaşıklıklar ortaya çıkabilir. Aşağıdaki örnek, soruna yönelik bir yaklaşımı gösterir. Belirtilen bir dizin altındaki tüm dosya ve klasörleri çapraz bir şekilde geçirmek için yığın tabanlı yineleme kullanır ve kodunuzun çeşitli özel durumları yakalayıp işlemesini sağlar. Kuşkusuz, özel durumları işlemenin yolu size ait olur.  
@@ -28,7 +28,7 @@ ms.locfileid: "84288205"
   
  Örnek, `fileCount` işlenen toplam dosya sayısının sayısını korumak için yerel değişkenini kullanır. Birden çok görev tarafından aynı anda erişilebilir olabileceğinden, yöntemi çağırarak bu değişkene erişim eşitlenir <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> .  
   
- Ana iş parçacığında bir özel durum oluşturulursa, yöntemi tarafından başlatılan iş parçacıklarının çalışmaya <xref:System.Threading.Tasks.Parallel.ForEach%2A> devam edebileceğini unutmayın. Bu iş parçacıklarını durdurmak için özel durum İşleyicileriniz içinde bir Boole değişkeni ayarlayabilir ve paralel döngünün her yinelemesinde değerini kontrol edebilirsiniz. Değer bir özel durumun yapıldığını gösteriyorsa, <xref:System.Threading.Tasks.ParallelLoopState> döngüyü durdurmak ya da kesmek için değişkeni kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: bir Parallel. for döngüsü durdurma veya kesme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
+ Ana iş parçacığında bir özel durum oluşturulursa, yöntemi tarafından başlatılan iş parçacıklarının çalışmaya <xref:System.Threading.Tasks.Parallel.ForEach%2A> devam edebileceğini unutmayın. Bu iş parçacıklarını durdurmak için özel durum İşleyicileriniz içinde bir Boole değişkeni ayarlayabilir ve paralel döngünün her yinelemesinde değerini kontrol edebilirsiniz. Değer bir özel durumun yapıldığını gösteriyorsa, <xref:System.Threading.Tasks.ParallelLoopState> döngüyü durdurmak ya da kesmek için değişkeni kullanın. Daha fazla bilgi için bkz. [nasıl yapılır: bir Parallel. for döngüsü durdurma veya kesme](/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100)).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 842f560df5229fc8a2249e1317cb348b7ed3361a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346193"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556895"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Uygulama senaryoları (WCF Veri Hizmetleri)
 
@@ -18,7 +18,7 @@ WCF Veri Hizmetleri, verileri açık veri Protokolü (OData) akışları olarak 
 
 İlişkisel verileri bir veritabanından OData akışı olarak kullanıma sunun.
 
-- [Hızlı başlangıç](quickstart-wcf-data-services.md)
+- [Hızlı Başlangıç](quickstart-wcf-data-services.md)
 
 - [Verilerinizi Hizmet Olarak Kullanıma Sunma](exposing-your-data-as-a-service-wcf-data-services.md)
 
@@ -34,7 +34,7 @@ Bir OData akışı olarak rastgele CLR veri sınıfları kullanıma sunun.
 
 .NET Framework tabanlı bir istemci uygulamasında OData akışını kullanın.
 
-- [Hızlı başlangıç](quickstart-wcf-data-services.md)
+- [Hızlı Başlangıç](quickstart-wcf-data-services.md)
 
 - [İstemci Uygulamasında Veri Hizmeti Kullanma](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -42,11 +42,11 @@ Bir OData akışı olarak rastgele CLR veri sınıfları kullanıma sunun.
 
 Silverlight tabanlı bir istemci uygulamasında bir OData akışını kullanın.
 
-- [WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Veri Hizmetleri (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 - [Zaman Uyumsuz İşlemler](asynchronous-operations-wcf-data-services.md)
 
-- [Nasıl yapılır: veri hizmeti verilerini denetimlere bağlama (Silverlight Istemcisi)](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
+- [Nasıl yapılır: veri hizmeti verilerini denetimlere bağlama (Silverlight Istemcisi)](/previous-versions/dotnet/wcf-data-services/ee681614(v=vs.103))
 
 AJAX tabanlı bir istemci uygulamasında bir OData akışını kullanın.
 
@@ -58,7 +58,7 @@ AJAX tabanlı bir istemci uygulamasında bir OData akışını kullanın.
 
 İstemci ve sunucu arasında veri aktarmak için OData kullanan uçtan uca bir veri çözümü oluşturun.
 
-- [Hızlı başlangıç](quickstart-wcf-data-services.md)
+- [Hızlı Başlangıç](quickstart-wcf-data-services.md)
 
 - [İstemci Uygulamasında Veri Hizmeti Kullanma](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
@@ -70,7 +70,7 @@ AJAX tabanlı bir istemci uygulamasında bir OData akışını kullanın.
 
 - [Zaman Uyumsuz İşlemler](asynchronous-operations-wcf-data-services.md)
 
-- [WCF Veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
+- [WCF Veri Hizmetleri (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))
 
 Bir akış olarak erişilen ve değiştirilen ikili büyük nesneyle bir OData akışını kullanıma sunma ve kullanma.
 
@@ -100,5 +100,5 @@ Veri doğrulama ve sorgu için rol tabanlı filtreleme gerçekleştirmek üzere 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Hızlı başlangıç](quickstart-wcf-data-services.md)
+- [Hızlı Başlangıç](quickstart-wcf-data-services.md)
 - [Kaynaklar](wcf-data-services-resources.md)

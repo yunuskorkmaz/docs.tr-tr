@@ -7,12 +7,12 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 4589d7a070a477dcb229fbaea686f6c6ff7d7e08
-ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
+ms.openlocfilehash: 49feb664531db4955a99324851aef5b49032be71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84989988"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555516"
 ---
 # <a name="64-bit-applications"></a>64 bitlik Uygulamalar
 Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel uygulama olarak ya da WOW64 (Windows 64-bit üzerinde Windows-32-bit) altında çalışmasını belirtebilirsiniz. WOW64, 32 bitlik bir uygulamanın 64 bitlik bir sistemde çalışmasını sağlayan bir uyumluluk ortamıdır. WOW64, Windows işletim sisteminin tüm 64 bitlik sürümlerinde bulunur.  
@@ -37,7 +37,7 @@ Bir uygulamayı derlediğinizde, 64 bitlik bir Windows işletim sisteminde yerel
   
 - `IntPtr` öğesini `Int32`'e yayınlayan kod.  
   
- 32 bitlik bir uygulamanın 64 bit CLR üzerinde çalışması için bağlantı noktası oluşturma hakkında daha fazla bilgi için bkz. [32 bit yönetimli kodu 64-bit ' e geçirme](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
+ 32 bitlik bir uygulamanın 64 bit CLR üzerinde çalışması için bağlantı noktası oluşturma hakkında daha fazla bilgi için bkz. [32 bit yönetimli kodu 64-bit ' e geçirme](/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Genel 64-Bit Programlama Bilgileri  
  64 bit programlama hakkında genel bilgi için, aşağıdaki belgelere bakın:  

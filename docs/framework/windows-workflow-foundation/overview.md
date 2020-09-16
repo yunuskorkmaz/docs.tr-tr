@@ -3,12 +3,12 @@ title: Windows Workflow’a Genel Bakış
 description: Bu makalede, gerçek dünya süreçlerini tanımlayan modeller olan Workflow Foundation iş akışları açıklanmaktadır.
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: ec1a00b37abe2cb842735fb98e1c113a97943758
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c54e405c5fff013f994f98cbf84fcce4d17d9d4e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421481"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558106"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow’a Genel Bakış
 İş akışı, gerçek dünyada bir işlemi açıklayan bir model olarak depolanan *Etkinlikler* adlı bir dizi eleme birimi kümesidir. İş akışları, kısa veya uzun süreli iş parçaları arasında yürütme sırasını ve bağımlı ilişkileri açıklayan bir yol sağlar. Bu iş, başlangıçtan sona kadar modelden geçer ve Etkinlikler kişiler veya sistem işlevleri tarafından yürütülebilir.  
@@ -34,7 +34,7 @@ Konak işlemindeki iş akışı bileşenleri
   
  ![İş akışı bileşenlerinin nasıl etkileşime gireceğini gösteren diyagram.](./media/overview/workflow-component-interatction.gif)  
   
- Önceki diyagramda, <xref:System.Activities.WorkflowInvoker.Invoke%2A> <xref:System.Activities.WorkflowInvoker> sınıfının yöntemi birkaç iş akışı örneğini çağırmak için kullanılır. <xref:System.Activities.WorkflowInvoker>, konaktan yönetim gerektirmeyen hafif iş akışları için kullanılır; ana bilgisayardan (örneğin, sürdürme) yönetilmesi gereken iş akışlarının <xref:System.Activities.Bookmark> yerine kullanılarak yürütülmesi gerekir <xref:System.Activities.WorkflowApplication.Run%2A> . Bir iş akışı örneğinin başka bir çağırmadan önce tamamlanmasını beklemek gerekmez; çalışma zamanı altyapısı birden çok iş akışı örneğinin aynı anda çalıştırılmasını destekler.  Çağrılan iş akışları aşağıdaki gibidir:  
+ Önceki diyagramda, <xref:System.Activities.WorkflowInvoker.Invoke%2A> <xref:System.Activities.WorkflowInvoker> sınıfının yöntemi birkaç iş akışı örneğini çağırmak için kullanılır. <xref:System.Activities.WorkflowInvoker> , konaktan yönetim gerektirmeyen hafif iş akışları için kullanılır; ana bilgisayardan (örneğin, sürdürme) yönetilmesi gereken iş akışlarının <xref:System.Activities.Bookmark> yerine kullanılarak yürütülmesi gerekir <xref:System.Activities.WorkflowApplication.Run%2A> . Bir iş akışı örneğinin başka bir çağırmadan önce tamamlanmasını beklemek gerekmez; çalışma zamanı altyapısı birden çok iş akışı örneğinin aynı anda çalıştırılmasını destekler.  Çağrılan iş akışları aşağıdaki gibidir:  
   
 - <xref:System.Activities.Statements.Sequence>Alt etkinlik içeren bir etkinlik <xref:System.Activities.Statements.WriteLine> . <xref:System.Activities.Variable>Üst etkinliğin bir öğesi alt etkinliğin bir öğesine bağlanır <xref:System.Activities.InArgument> . Değişkenler, bağımsız değişkenler ve bağlama hakkında daha fazla bilgi için bkz. [değişkenler ve bağımsız değişkenler](variables-and-arguments.md).  
   
@@ -44,4 +44,4 @@ Konak işlemindeki iş akışı bileşenleri
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [2006 veya WF BizTalk Server? Projeniz için doğru Iş akışı aracını seçme](https://docs.microsoft.com/previous-versions/dotnet/articles/cc303238(v=msdn.10))
+- [2006 veya WF BizTalk Server? Projeniz için doğru Iş akışı aracını seçme](/previous-versions/dotnet/articles/cc303238(v=msdn.10))

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 7b1f0a6c416f660f06cea099197ba136f84407f9
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0d62c8d3c4669673d26f2d5535d7940fce702f66
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286203"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547453"
 ---
 # <a name="table-valued-parameters"></a>Tablo Değerli Parametreler
 Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satırını, verilerin işlenmesine yönelik birden çok gidiş dönüş veya özel sunucu tarafı mantığı gerekmeden SQL Server için kolay bir yol sağlar. Bir istemci uygulamasındaki veri satırlarını kapsüllemek ve verileri sunucuya tek parametreli bir komutta göndermek için tablo değerli parametreleri kullanabilirsiniz. Gelen veri satırları, daha sonra Transact-SQL kullanılarak üzerinde çalışabilecek bir tablo değişkeninde depolanır.  
@@ -23,10 +23,10 @@ Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satır
   
  Tablo değerli parametreler hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
-|Kaynak|Description|  
+|Kaynak|Açıklama|  
 |--------------|-----------------|  
 |[Tablo değerli parametreleri kullanın (veritabanı altyapısı)](/sql/relational-databases/tables/use-table-valued-parameters-database-engine)|Tablo değerli parametrelerin nasıl oluşturulduğunu ve kullanıldığını açıklar.|  
-|[Kullanıcı tanımlı tablo türleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Tablo değerli parametreleri bildirmek için kullanılan Kullanıcı tanımlı tablo türlerini açıklar.|  
+|[Kullanıcı tanımlı tablo türleri](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100))|Tablo değerli parametreleri bildirmek için kullanılan Kullanıcı tanımlı tablo türlerini açıklar.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>SQL Server önceki sürümlerinde birden çok satır geçirme  
  Tablo değerli parametreler SQL Server 2008 ' e sunulmadan önce, bir saklı yordama veya parametreli bir SQL komutuna birden fazla veri satırı geçirme seçenekleri sınırlandı. Bir geliştirici, sunucuya birden çok satır geçirmek için aşağıdaki seçeneklerden birini seçebilir:  
@@ -40,7 +40,7 @@ Tablo değerli parametreler, bir istemci uygulamasından birden çok veri satır
 - `bcp` <xref:System.Data.SqlClient.SqlBulkCopy> Bir tabloya birçok veri satırı yüklemek için yardımcı program programını veya nesnesini kullanın. Bu teknik çok verimli olsa da, veriler geçici bir tabloya veya tablo değişkenine yüklenmedikleri takdirde sunucu tarafı işlemeyi desteklemez.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Tablo değerli parametre türleri oluşturma  
- Tablo değerli parametreler, Transact-SQL CREATE TYPE deyimleri kullanılarak tanımlanan, türü kesin belirlenmiş tablo yapılarını temel alır. İstemci uygulamalarınızda tablo değerli parametreleri kullanabilmeniz için bir tablo türü oluşturmanız ve yapıyı SQL Server tanımlamanız gerekir. Tablo türleri oluşturma hakkında daha fazla bilgi için bkz. [Kullanıcı tanımlı tablo türleri](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
+ Tablo değerli parametreler, Transact-SQL CREATE TYPE deyimleri kullanılarak tanımlanan, türü kesin belirlenmiş tablo yapılarını temel alır. İstemci uygulamalarınızda tablo değerli parametreleri kullanabilmeniz için bir tablo türü oluşturmanız ve yapıyı SQL Server tanımlamanız gerekir. Tablo türleri oluşturma hakkında daha fazla bilgi için bkz. [Kullanıcı tanımlı tablo türleri](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)).  
   
  Aşağıdaki ifade CategoryID ve CategoryName sütunlarından oluşan CategoryTableType adlı bir tablo türü oluşturur:  
   
@@ -129,7 +129,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a>Bir saklı yordama tablo değerli parametre geçirme  
+## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a><a name="passing"></a> Bir saklı yordama tablo değerli parametre geçirme  
  Bu örnek, bir saklı yordama tablo değerli parametre verilerinin nasıl geçirileceğini gösterir. Kod, yöntemi kullanılarak eklenen satırları yeni içine ayıklar <xref:System.Data.DataTable> <xref:System.Data.DataTable.GetChanges%2A> . Kodu daha sonra bir tanımlar <xref:System.Data.SqlClient.SqlCommand> , <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> özelliği olarak ayarlar <xref:System.Data.CommandType.StoredProcedure> . , <xref:System.Data.SqlClient.SqlParameter> Yöntemi kullanılarak doldurulur <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> ve, <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> olarak ayarlanır `Structured` . <xref:System.Data.SqlClient.SqlCommand>Daha sonra yöntemi kullanılarak yürütülür <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> .  
   
 ```csharp  

@@ -11,18 +11,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9aadf9701444d215291b6fc19cc8cd61ca832837
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a276ecfe65ed9752f39ed68a36e8e17a24255508
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452246"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558322"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences yöntemi
 
 Bir ObjectID, callback ve clientData verildiğinde, her nesne başvurusunu (varsa) numaralandırır.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
@@ -42,22 +42,22 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 - `clientData`
 
-  \[Profiler-`callback` işlevine geçirilecek verileri sağladı.
+  \[içinde] profil oluşturucu-işleve geçirilecek veriler `callback` .
 
 ## <a name="remarks"></a>Açıklamalar
 
-`EnumerateObjectReferences` yöntemi [nesne başvurularına](icorprofilercallback-objectreferences-method.md)benzerdir, ancak başvuruları depolamak için bir diziyi önceden ayırmak yerine, Profil Oluşturucu için isteğe bağlı başvuruları açıklar.
+`EnumerateObjectReferences`Yöntemi, başvuruları depolamak için bir diziyi önceden ayırmak yerine profil Oluşturucu için isteğe bağlı başvuruları göstermesi dışında, [ObjectReferences](icorprofilercallback-objectreferences-method.md)'a benzerdir.
 
 ## <a name="requirements"></a>Gereksinimler
 
-**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?pivots=os-windows).
+**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/windows.md?pivots=os-windows).
 
 **Üst bilgi:** CorProf. IDL, CorProf. h
 
 **Kitaplık:** Corguid. lib
 
-**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ICorProfilerInfo10 arabirimi](icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Arabirimi](icorprofilerinfo10-interface.md)

@@ -7,12 +7,12 @@ ms.date: 08/12/2020
 no-loc:
 - Blazor
 - WebAssembly
-ms.openlocfilehash: f2f2a4706ea4deba39465d8697f78be58506a09c
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 826f9003852e47c093193bbbb717fd9e1f2e61c6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89515883"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678946"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>ASP.NET Core uygulamalarında verilerle çalışma
 
@@ -373,7 +373,7 @@ Azure Cosmos DB sorgu dili, JSON belgelerini sorgulamak için basit ancak güçl
 
 **Başvurular – Azure Storage**
 
-- Azure depolama giriş <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure depolama giriş <https://docs.microsoft.com/azure/storage/common/storage-introduction>
 
 ## <a name="caching"></a>Önbelleğe Alma
 

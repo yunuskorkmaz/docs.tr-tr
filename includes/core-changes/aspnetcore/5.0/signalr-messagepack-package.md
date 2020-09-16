@@ -6,36 +6,36 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 03/27/2020
 ms.locfileid: "80345210"
 ---
-### <a name="signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package"></a>SignalR: MessagePack Hub Protokolü MessagePack 2.x paketine taşındı
+### <a name="signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package"></a>SignalR: MessagePack 2. x paketine taşınan MessagePack hub Protokolü
 
-Core SignalR [MessagePack Hub Protokolü](/aspnet/core/signalr/messagepackhubprotocol) ASP.NET MessagePack Serileştirme için [MessagePack NuGet paketini](https://www.nuget.org/packages/MessagePack) kullanır. ASP.NET Core 5.0 paketi 1.x'ten en son 2.x paket sürümüne yükseltiyor.
+ASP.NET Core SignalR [MessagePack hub Protokolü](/aspnet/core/signalr/messagepackhubprotocol) MessagePack serileştirme Için [MessagePack NuGet paketini](https://www.nuget.org/packages/MessagePack) kullanır. ASP.NET Core 5,0 paketi 1. x sürümünden en son 2. x paketi sürümüne yükseltir.
 
-Bu konuda tartışma için [dotnet/aspnetcore#18692'ye](https://github.com/dotnet/aspnetcore/issues/18692)bakın.
+Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 18692](https://github.com/dotnet/aspnetcore/issues/18692).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-5.0 Önizleme 1
+5,0 Preview 1
 
 #### <a name="old-behavior"></a>Eski davranış
 
-ASP.NET Core SignalR MessagePack mesajlarını seri hale getirmek ve deserialize etmek için MessagePack 1.x paketini kullandı.
+ASP.NET Core SignalR, MessagePack iletilerini seri hale getirmek ve seri durumdan çıkarmak için MessagePack 1. x paketini kullandı.
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-ASP.NET Core SignalR MessagePack mesajlarını seri hale getirmek ve deserialize etmek için MessagePack 2.x paketini kullanır.
+ASP.NET Core SignalR, MessagePack iletilerinin serileştirilmek ve serisini kaldırmak için MessagePack 2. x paketini kullanır.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-MessagePack 2.x paketindeki en son geliştirmeler yararlı işlevsellik ekler.
+MessagePack 2. x paketindeki en son geliştirmeler yararlı işlevsellik ekler.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Bu kesme değişikliği aşağıdaki anda geçerlidir:
+Bu son değişiklik şu durumlarda geçerlidir:
 
-* <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions>Değerleri ayarlama veya yapılandırma.
-* MessagePack API'lerini doğrudan ve aynı projede ASP.NET Core SignalR MessagePack Hub Protokolü'nü kullanmak. Önceki sürüm yerine yeni sürüm yüklenir.
+* Değerleri ayarlama veya yapılandırma <xref:Microsoft.AspNetCore.SignalR.MessagePackHubProtocolOptions> .
+* MessagePack API 'Lerini doğrudan kullanarak ve aynı projede ASP.NET Core SignalR MessagePack hub protokolünü kullanarak. Önceki sürüm yerine daha yeni bir sürüm yüklenecektir.
 
-Paket yazarlarının geçiş kılavuzu için [messagepack v1.x'ten MessagePack v2.x'e geçiş](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md)e bakın. İleti serileştirme ve deserialization bazı yönleri etkilenir. Özellikle, [DateTime değerlerinin serihale nasıl verildiğine dair davranış değişiklikleri](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md#behavioral-changes)vardır.
+Paket yazarlarından geçiş kılavuzu için bkz. [MessagePack v1. x 'Ten MessagePack v2. x 'e](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md)geçiş. İleti serileştirme ve seri durumdan çıkarma özelliklerinin bazı yönleri etkilenir. Özellikle, [DateTime değerlerinin serileştirilme şekli için davranış değişiklikleri](https://github.com/neuecc/MessagePack-CSharp/blob/master/doc/migration.md#behavioral-changes)vardır.
 
 #### <a name="category"></a>Kategori
 

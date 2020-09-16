@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 39dd6636f80b107ced1caac29869c6c66e67e21e
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 97371f8572d5d0db633ab8dd1ca82067d9d55c3f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052045"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550195"
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Nasıl yapılır: Güvenilir Bir Oturumda İleti Alma ve Gönderme
 
 Bu konu, bu tür bir oturumu destekleyen ancak varsayılan olarak değil, sistem tarafından belirtilen bağlamalardan birini kullanarak güvenilir bir oturumu etkinleştirmek için gereken adımları açıklar. Yapılandırma dosyanızda kod kullanarak veya bildirimli olarak güvenilir bir oturum imperatively etkinleştirirsiniz. Bu yordam, güvenilir oturumu etkinleştirmek ve iletilerin gönderildikleri sırada gelmesi için istemci ve hizmet yapılandırma dosyalarını kullanır.
 
-Bu yordamın anahtar bölümü, uç nokta yapılandırma öğesinin `bindingConfiguration` adlı bir bağlama yapılandırmasına başvuran bir özniteliği içermesi olur `Binding1` . [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)Yapılandırma öğesi, `enabled` öğesinin özniteliğini olarak ayarlayarak güvenilir oturumları etkinleştirmek için bu ada başvurur [**\<reliableSession>**](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) `true` . Özniteliğini olarak ayarlayarak güvenilir oturum için sıralı teslim bildirimlerini belirtirsiniz `ordered` `true` .
+Bu yordamın anahtar bölümü, uç nokta yapılandırma öğesinin `bindingConfiguration` adlı bir bağlama yapılandırmasına başvuran bir özniteliği içermesi olur `Binding1` . [**\<binding>**](../../configure-apps/file-schema/wcf/bindings.md)Yapılandırma öğesi, `enabled` öğesinin özniteliğini olarak ayarlayarak güvenilir oturumları etkinleştirmek için bu ada başvurur [**\<reliableSession>**](/previous-versions/dotnet/netframework-4.0/ms731302(v=vs.100)) `true` . Özniteliğini olarak ayarlayarak güvenilir oturum için sıralı teslim bildirimlerini belirtirsiniz `ordered` `true` .
 
 Bu örneğin kaynak kopyası için bkz. [WS güvenilir oturumu](../samples/ws-reliable-session.md).
 
@@ -67,7 +67,7 @@ Bu örneğin kaynak kopyası için bkz. [WS güvenilir oturumu](../samples/ws-re
 
 ## <a name="example"></a>Örnek
 
-Sistem tarafından sunulan bağlamalardan bazıları varsayılan olarak güvenilir oturumları destekler. Bu modüller şunlardır:
+Sistem tarafından sunulan bağlamalardan bazıları varsayılan olarak güvenilir oturumları destekler. Bu güncelleştirmeler şunlardır:
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
 
@@ -79,4 +79,4 @@ Güvenilir oturumları destekleyen özel bir bağlamanın nasıl oluşturulacağ
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenilir Oturumlar](reliable-sessions.md)
+- [Güvenilir oturumlar](reliable-sessions.md)

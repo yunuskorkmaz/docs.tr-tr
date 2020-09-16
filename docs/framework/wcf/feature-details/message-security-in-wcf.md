@@ -3,12 +3,12 @@ title: WCF'de İleti Güvenliği
 description: Aktarım ve ileti güvenliği modlarının birleşimini kullanan bir WCF ileti güvenliği türü TransportWithMessageCredential hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 315a12c73929bfe71340e42f122ae542d4fddc07
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ea10a87a7c8f9e545c320af30c5cf9958317c2f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245030"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551138"
 ---
 # <a name="message-security-in-wcf"></a>WCF'de İleti Güvenliği
 
@@ -67,6 +67,6 @@ Taşıma güvenliği aşağıdaki avantajları içerir:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](securing-services-and-clients.md)
-- [Aktarım Güvenliği](transport-security.md)
+- [Taşıma Güvenliği](transport-security.md)
 - [Nasıl yapılır: Taşıma Güveniği ve İleti Kimlik Bilgilerini Kullanma](how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft desenleri ve uygulamaları, Bölüm 3: taşıma ve Ileti Katmanı Güvenliği uygulama](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [Microsoft desenleri ve uygulamaları, Bölüm 3: taşıma ve Ileti Katmanı Güvenliği uygulama](/previous-versions/msp-n-p/ff647370(v=pandp.10))

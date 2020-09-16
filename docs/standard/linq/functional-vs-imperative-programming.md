@@ -3,18 +3,18 @@ title: Fonksiyonel programlama ve kesinlik temelli programlama-LINQ to XML
 description: Fonksiyonel programlama hakkında bilgi edinin ve bunun geleneksel olarak kesinlik (yordamsal) programlamadan farklı olduğunu öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: d6dddab9b288cfa820aa4ed9d800c29136edf772
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: c7d16d61f9865cda7c625f91c2c822be1a327fd6
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553010"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679370"
 ---
 # <a name="functional-programming-vs-imperative-programming-linq-to-xml"></a>Fonksiyonel programlama ile kesinlik temelli programlama (LINQ to XML)
 
 Bu makalede, daha geleneksel kesinlik (yordamsal) programlamaya yönelik fonksiyonel programlama karşılaştırılır ve karşıtlıkları gösterilmiştir.
 
-## <a name="functional-programming-vs-imperative-programming"></a>Fonksiyonel programlama ve kesinlik temelli programlama karşılaştırması
+## <a name="functional-programming-vs-imperative-programming"></a>Fonksiyonel programlama ile kesin programlama karşılaştırması
 
 *İşlevsel programlama* paradigması, sorun çözmeye yönelik saf işlevsel bir yaklaşımı desteklemek üzere açıkça oluşturulmuştur. Fonksiyonel programlama bir *bildirim temelli programlama*biçimidir. Buna karşılık, C#, Visual Basic, C++ ve Java gibi nesne odaklı programlama (OOP) dilleri de dahil olmak üzere çoğu temel dil, öncelikle *kesinlik* (yordamsal) programlamayı destekleyecek şekilde tasarlanmıştır.
 
@@ -32,7 +32,7 @@ Bir geliştirici, bir zorunlu yaklaşımla birlikte, bilgisayarın hedefi başar
 
 ## <a name="functional-programming-using-xslt"></a>XSLT kullanarak işlevsel programlama
 
-Birçok XSLT geliştiricisi, saf işlevsel yaklaşımla tanıdık gelecektir. XSLT stil sayfası geliştirmenin en etkili yolu, her bir şablonu yalıtılmış, birleştirilebilir bir dönüşüm olarak değerlendirmektir. Yürütmenin sırası tamamen vurgulandı. XSLT yan etkilere izin vermez (yordamsal kodu yürütmeye yönelik kaçış mekanizmalarının hariç olması, işlevsel bir sorun oluşmasına neden olan yan etkileri ortaya çıkarabilir). Ancak XSLT etkin bir araç olsa da bazı özellikleri en uygun değildir. Örneğin, XML 'de programlama yapılarını ifade etmek, kod görece ayrıntılıdır ve bu nedenle devam etmek zordur. Ayrıca, akış denetimi için özyineleme açısından ağır güvenilme, okunması zor olan koda neden olabilir. XSLT hakkında daha fazla bilgi için bkz. [XSLT dönüştürmeleri](../../standard/data/xml/xslt-transformations.md).
+Birçok XSLT geliştiricisi, saf işlevsel yaklaşımla tanıdık gelecektir. XSLT stil sayfası geliştirmenin en etkili yolu, her bir şablonu yalıtılmış, birleştirilebilir bir dönüşüm olarak değerlendirmektir. Yürütmenin sırası tamamen vurgulandı. XSLT yan etkilere izin vermez (yordamsal kodu yürütmeye yönelik kaçış mekanizmalarının hariç olması, işlevsel bir sorun oluşmasına neden olan yan etkileri ortaya çıkarabilir). Ancak XSLT etkin bir araç olsa da bazı özellikleri en uygun değildir. Örneğin, XML 'de programlama yapılarını ifade etmek, kod görece ayrıntılıdır ve bu nedenle devam etmek zordur. Ayrıca, akış denetimi için özyineleme açısından ağır güvenilme, okunması zor olan koda neden olabilir. XSLT hakkında daha fazla bilgi için bkz. [XSLT dönüştürmeleri](../data/xml/xslt-transformations.md).
 
 Ancak XSLT, XML 'yi bir şekilden diğerine dönüştürmek için saf işlevsel bir yaklaşım kullanma değerini uzamıştır. LINQ to XML ile saf işlevsel programlama, XSLT 'nin birçok yolu ile benzerdir. Ancak, LINQ to XML, C# ve Visual Basic tarafından tanıtılan programlama yapıları, XSLT 'den daha okunaklı ve sürdürülebilir saf işlevsel dönüşümler yazmanızı sağlar.
 
@@ -58,4 +58,4 @@ Neyse ki, C# ve Visual Basic, hem zorunlu hem de işlevsel programlama yaklaşı
 
 - [Saf işlevsel dönüşümlere giriş](introduction-pure-functional-transformations.md)
 - [XSLT Dönüşümleri](/../../standard/data/xml/xslt-transformations.md)
-- [Saf işlevlerde yeniden düzenleme](refactor-pure-functions.md)
+- [Saf işlevler halinde yeniden düzenleme](refactor-pure-functions.md)

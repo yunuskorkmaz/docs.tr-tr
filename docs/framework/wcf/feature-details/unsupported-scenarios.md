@@ -2,12 +2,12 @@
 title: Desteklenmeyen Senaryolar
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: a3ee91e5232926b4ea7db80db35d9a309ca8105b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921166"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557820"
 ---
 # <a name="unsupported-scenarios"></a>Desteklenmeyen senaryolar
 
@@ -20,33 +20,33 @@ ms.locfileid: "76921166"
 
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP ve güvenli bağlam belirteci tanımlama bilgisi etkin
 
-WCF, kimliğe bürünme özelliğini desteklemez ve aşağıdaki koşullar mevcut olduğunda bir <xref:System.InvalidOperationException> oluşur:
+WCF, kimliğe bürünme özelliğini desteklemez ve <xref:System.InvalidOperationException> aşağıdaki koşullar mevcut olduğunda oluşturulur:
 
 - İşletim sistemi Windows XP 'dir.
 
 - Kimlik doğrulama modu bir Windows kimliği ile sonuçlanır.
 
-- <xref:System.ServiceModel.OperationBehaviorAttribute> <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği <xref:System.ServiceModel.ImpersonationOption.Required>olarak ayarlanmıştır.
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>Öğesinin özelliği <xref:System.ServiceModel.OperationBehaviorAttribute> olarak ayarlanır <xref:System.ServiceModel.ImpersonationOption.Required> .
 
 - Durum tabanlı bir güvenlik bağlamı belirteci (SCT) oluşturulur (varsayılan olarak, oluşturma devre dışıdır).
 
- Durum tabanlı SCT yalnızca özel bir bağlama kullanılarak oluşturulabilir. Daha fazla bilgi için bkz. [nasıl yapılır: güvenli bir oturum Için güvenlik bağlamı belirteci oluşturma](how-to-create-a-security-context-token-for-a-secure-session.md).) Kod içinde, belirteç, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> veya <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> yöntemini kullanarak bir güvenlik bağlama öğesi (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ya da <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) oluşturularak etkinleştirilir ve `requireCancellation` parametresini `false`olarak ayarlar. Parametresi, SCT 'nin önbelleğe alınmasını ifade eder. Değerin `false` olarak ayarlanması durum tabanlı SCT özelliğini sağlar.
+ Durum tabanlı SCT yalnızca özel bir bağlama kullanılarak oluşturulabilir. Daha fazla bilgi için bkz. [nasıl yapılır: güvenli bir oturum Için güvenlik bağlamı belirteci oluşturma](how-to-create-a-security-context-token-for-a-secure-session.md).) Kodda, belirteç, veya yöntemini kullanarak bir güvenlik bağlama öğesi (ya da <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ) oluşturarak <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> ve `requireCancellation` parametresi olarak ayarlanarak etkinleştirilir `false` . Parametresi, SCT 'nin önbelleğe alınmasını ifade eder. Değeri, `false` durum tabanlı SCT özelliğini sağlar.
 
- Alternatif olarak, yapılandırma ' da, belirteç bir <`customBinding`oluşturarak >, sonra bir <`security`> öğesi eklenerek ve `authenticationMode` özniteliği SecureConversation ve `requireSecurityContextCancellation` özniteliği `true`olarak ayarlanarak etkinleştirilir.
+ Alternatif olarak, yapılandırmada, belirteç bir <`customBinding`> oluşturarak ve sonra bir <`security`> öğesi eklenerek ve `authenticationMode` özniteliği SecureConversation ve özniteliği olarak ayarlanarak etkinleştirilir `requireSecurityContextCancellation` `true` .
 
 > [!NOTE]
-> Önceki gereksinimler özeldir. Örneğin <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>, Windows kimliği ile sonuçlanan ancak bir SCT oluşturmayan bir bağlama öğesi oluşturur. Bu nedenle, Windows XP 'de `Required` seçeneğiyle kullanabilirsiniz.
+> Önceki gereksinimler özeldir. Örneğin, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> bir Windows kimliği ile sonuçlanan, ancak BIR SCT oluşturmayan bir bağlama öğesi oluşturur. Bu nedenle, `Required` WINDOWS XP 'yi seçeneğiyle kullanabilirsiniz.
 
 ### <a name="possible-aspnet-conflict"></a>Olası ASP.NET çakışması
 
-WCF ve ASP.NET, kimliğe bürünme özelliğini etkinleştirebilir veya devre dışı bırakabilir. ASP.NET bir WCF uygulaması barındırıyorsa, WCF ve ASP.NET yapılandırma ayarları arasında bir çakışma var olabilir. Çakışma durumunda, <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> özelliği <xref:System.ServiceModel.ImpersonationOption.NotAllowed>olarak ayarlanmadıkça WCF ayarı önceliklidir, bu durumda ASP.NET Kimliğe bürünme ayarı öncelikli olur.
+WCF ve ASP.NET, kimliğe bürünme özelliğini etkinleştirebilir veya devre dışı bırakabilir. ASP.NET bir WCF uygulaması barındırıyorsa, WCF ve ASP.NET yapılandırma ayarları arasında bir çakışma var olabilir. Çakışma durumunda, <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> <xref:System.ServiceModel.ImpersonationOption.NotAllowed> bu, ASP.NET Kimliğe bürünme ayarı öncelikli olarak AYARLANMADıĞı takdirde WCF ayarı önceliklidir.
 
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Derleme yüklemeleri, kimliğe bürünme altında başarısız olabilir
 
 Kimliğe bürünülmüş bağlamın bir derlemeyi yüklemek için erişim hakları yoksa ve ilk kez ortak dil çalışma zamanı (CLR) bu AppDomain için derlemeyi yüklemeye çalışıyorsa, <xref:System.AppDomain> hatayı önbelleğe alır. Daha sonra bu derlemeyi (veya derlemeleri) yükleme girişimleri, kimliğe bürünme geri alındıktan sonra bile başarısız olur ve geri döndürülmüş bağlam derlemeyi yüklemek için erişim haklarına sahip olsa bile. Bunun nedeni, CLR 'nin Kullanıcı bağlamı değiştirildikten sonra yükü yeniden oluşturmaz. Hatadan kurtarmak için uygulama etki alanını yeniden başlatmanız gerekir.
 
 > [!NOTE]
-> <xref:System.ServiceModel.Security.WindowsClientCredential> sınıfının <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> özelliği için varsayılan değer <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Çoğu durumda, kimlik düzeyi kimliğe bürünme bağlamının herhangi bir ek derlemeyi yükleme izni yoktur. Bu varsayılan değerdir, bu nedenle farkında olmak üzere çok yaygın bir durumdur. Kimliğe bürünme işlemi `SeImpersonate` ayrıcalığına sahip olmadığında, kimlik düzeyi kimliğe bürünme da oluşur. Daha fazla bilgi için bkz. [temsil ve kimliğe bürünme](delegation-and-impersonation-with-wcf.md).
+> Sınıfının özelliği için varsayılan değer <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> <xref:System.ServiceModel.Security.WindowsClientCredential> <xref:System.Security.Principal.TokenImpersonationLevel.Identification> . Çoğu durumda, kimlik düzeyi kimliğe bürünme bağlamının herhangi bir ek derlemeyi yükleme izni yoktur. Bu varsayılan değerdir, bu nedenle farkında olmak üzere çok yaygın bir durumdur. Kimliğe bürünme işlemi ayrıcalığına sahip olmadığında, kimlik düzeyi kimliğe bürünme da oluşur `SeImpersonate` . Daha fazla bilgi için bkz. [temsil ve kimliğe bürünme](delegation-and-impersonation-with-wcf.md).
 
 ### <a name="delegation-requires-credential-negotiation"></a>Temsili kimlik bilgisi anlaşması gerektirir
 
@@ -78,17 +78,17 @@ FIPS uyumlu AES şifrelemesi, kimlik düzeyi kimliğe bürünme altında çift y
 
  Bir sertifikanın KSP kullanıp kullanmadığını söylemek için iki olası yol vardır:
 
-- `CertGetCertificateContextProperty``p/invoke` yapın ve döndürülen `CertGetCertificateContextProperty``dwProvType` inceleyin.
+- `p/invoke` `CertGetCertificateContextProperty` ' İ yapın ve döndürülen ' ı inceleyin `dwProvType` `CertGetCertificateContextProperty` .
 
-- Sertifikaları sorgulamak için komut satırından `certutil` komutunu kullanın. Daha fazla bilgi için bkz. [sertifika sorunlarını giderme Için Certutil görevleri](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10)).
+- `certutil`Sertifikaları sorgulamak için komut satırından komutunu kullanın. Daha fazla bilgi için bkz. [sertifika sorunlarını giderme Için Certutil görevleri](/previous-versions/orphan-topics/ws.10/cc772619(v=ws.10)).
 
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET Kimliğe bürünme ve ASP.NET uyumluluğu kullanılması gerekiyorsa ileti güvenliği başarısız olur
 
 WCF, istemci kimlik doğrulamasının oluşmasını engelleyebileceğinden aşağıdaki ayar birleşimini desteklemez:
 
-- ASP.NET Kimliğe bürünme etkindir. Bu, <`identity`> öğesinin `impersonate` özniteliği `true`olarak ayarlanarak Web. config dosyasında yapılır.
+- ASP.NET Kimliğe bürünme etkindir. Bu, `impersonate` <> öğesinin özniteliğini olarak ayarlayarak Web.config dosyasında yapılır `identity` `true` .
 
-- ASP.NET uyumluluk modu, [\<serviceHostingEnvironment >](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) `aspNetCompatibilityEnabled` özniteliği `true`olarak ayarlanarak etkinleştirilir.
+- Öğesinin özniteliği olarak ayarlanarak ASP.NET uyumluluk modu etkinleştirilir `aspNetCompatibilityEnabled` [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md) `true` .
 
 - İleti modu güvenliği kullanılır.
 
@@ -114,19 +114,19 @@ WCF, Federasyon güven zincirindeki her düğüm için tam olarak bir WSDL belge
 
  Bu bir özel durum oluşturur.
 
- `issue_ticket` uç noktasını başka bir yere yerleştirerek bu senaryonun çalışmasını sağlayabilirsiniz.
+ `issue_ticket`Uç noktayı başka bir yere yerleştirerek bu senaryonun çalışmasını sağlayabilirsiniz.
 
 ## <a name="wsdl-import-attributes-can-be-lost"></a>WSDL içeri aktarma öznitelikleri kaybolabilir
 
-Bir WSDL içeri aktarma işlemi sırasında WCF, bir `RST` şablonundaki `<wst:Claims>` öğesindeki özniteliklerin izlenmesini kaybeder. Bu, doğrudan talep türü koleksiyonları kullanmak yerine doğrudan `WSFederationHttpBinding.Security.Message.TokenRequestParameters` veya `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` `<Claims>` belirtirseniz, WSDL içeri aktarma sırasında gerçekleşir.  İçeri aktarma öznitelikleri kaybederse, bağlama WSDL aracılığıyla doğru şekilde geri dönmez ve bu nedenle istemci tarafında yanlış.
+`<wst:Claims>` `RST` Bir wsdl içeri aktarma IŞLEMI yaparken WCF, bir şablondaki öğe üzerindeki öznitelikleri izlemeyi kaybeder. Bu durum doğrudan `<Claims>` `WSFederationHttpBinding.Security.Message.TokenRequestParameters` `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` talep türü koleksiyonları kullanmak yerine veya ' de belirttiğinizde bir wsdl içeri aktarma işlemi sırasında gerçekleşir.  İçeri aktarma öznitelikleri kaybederse, bağlama WSDL aracılığıyla doğru şekilde geri dönmez ve bu nedenle istemci tarafında yanlış.
 
  Bu, içeri aktarma işlemi yapıldıktan sonra bağlamayı doğrudan istemci üzerinde değiştirmektir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenlik Konuları](security-considerations-in-wcf.md)
+- [Güvenlik konuları](security-considerations-in-wcf.md)
 - [Bilgilerin Açığa Çıkması](information-disclosure.md)
-- [Ayrıcalıkların Yükseltilmesi](elevation-of-privilege.md)
+- [Ayrıcalık Yükseltme](elevation-of-privilege.md)
 - [Hizmet Reddi](denial-of-service.md)
-- [İzinsiz Değişiklik](tampering.md)
+- [Kurcalama](tampering.md)
 - [Yeniden Yürütme Saldırıları](replay-attacks.md)

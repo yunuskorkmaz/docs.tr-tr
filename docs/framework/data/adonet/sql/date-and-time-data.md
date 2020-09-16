@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 9345e995dcb1179e7d0a86f62737f9fda5889f42
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 43b3349b2a35385dcc49d0866e0695b08eac2d2e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286500"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551497"
 ---
 # <a name="date-and-time-data"></a>Tarih ve Saat Verileri
 SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türlerini tanıtır. Yeni veri türleri tarih ve saat için ayrı türler, daha fazla Aralık, duyarlık ve saat dilimi tanıma ile genişletilmiş veri türleri içerir. .NET Framework sürüm 3,5 hizmet paketi (SP) 1 ' den başlayarak, SQL Server () için .NET Framework Veri Sağlayıcısı, <xref:System.Data.SqlClient> SQL Server 2008 veritabanı altyapısının tüm yeni özellikleri için tam destek sağlar. Bu yeni özellikleri SqlClient kullanmak için .NET Framework 3,5 SP1 (veya sonraki bir sürümü) yüklemelisiniz.  
@@ -22,7 +22,7 @@ SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türleri
   
  **SQL Server belgeleri**  
   
-1. [Tarih ve saat verilerini kullanma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
+1. [Tarih ve saat verilerini kullanma](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 ' de tanıtılan tarih/saat veri türleri  
  Aşağıdaki tabloda yeni tarih ve saat veri türleri açıklanmaktadır.  
@@ -47,7 +47,7 @@ SQL Server 2008, tarih ve saat bilgilerini işlemeye yönelik yeni veri türleri
 > [!NOTE]
 > Bir dize biçiminden,, veya olarak dönüştürülürken, yıdm tarih biçimi desteklenmez `date` `time` `datetime2` `datetimeoffset` .  
   
- SQL Server Tarih ve saat verilerini yorumlama hakkında daha fazla bilgi için bkz. [Tarih ve saat verilerini kullanma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
+ SQL Server Tarih ve saat verilerini yorumlama hakkında daha fazla bilgi için bkz. [Tarih ve saat verilerini kullanma](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100)).  
   
 ## <a name="datetime-data-types-and-parameters"></a>Tarih/saat veri türleri ve parametreleri  
  <xref:System.Data.SqlDbType>Yeni tarih ve saat veri türlerini desteklemek için aşağıdaki numaralandırmalar eklenmiştir.  
@@ -77,8 +77,8 @@ Bir öğesinin veri türünü, <xref:System.Data.SqlClient.SqlParameter> önceki
   
 |SQL Server veri türü|.NET Framework türü|System. Data. SqlDbType|System. Data. DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
-|date|System. DateTime|Tarih|Tarih|  
-|time|System. TimeSpan|Saat|Saat|  
+|tarih|System. DateTime|Tarih|Tarih|  
+|time|System. TimeSpan|Süre|Süre|  
 |datetime2|System. DateTime|DateTime2|DateTime2|  
 |türünde|System. DateTimeOffset|DateTimeOffset|DateTimeOffset|  
 |datetime|System. DateTime|DateTime|DateTime|  
@@ -234,10 +234,10 @@ command.Parameters.AddWithValue( _
 ## <a name="resources-in-sql-server-books-online"></a>SQL Server Books Online 'daki kaynaklar  
  SQL Server Tarih ve saat değerleriyle çalışma hakkında daha fazla bilgi için SQL Server Books Online 'da aşağıdaki kaynaklara bakın.  
   
-|Konu başlığı|Description|  
+|Konu|Description|  
 |-----------|-----------------|  
 |[Tarih ve saat veri türleri ve Işlevleri (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|Tüm Transact-SQL tarih ve saat veri türleri ve işlevlerine genel bir bakış sağlar.|  
-|[Tarih ve saat verilerini kullanma](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Tarih ve saat veri türleri ve işlevleri hakkında bilgi ve bunları kullanma örnekleri sağlar.|  
+|[Tarih ve saat verilerini kullanma](/previous-versions/sql/sql-server-2008/ms180878(v=sql.100))|Tarih ve saat veri türleri ve işlevleri hakkında bilgi ve bunları kullanma örnekleri sağlar.|  
 |[Veri türleri (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql)|SQL Server içindeki sistem veri türlerini açıklar.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.

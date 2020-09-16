@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 8622b580b7925adfd7895317815021f57960e9ee
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1321967cacdd373acc19923f992d30c5453ea869
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924584"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556225"
 ---
 # <a name="model-builder-azure-training-resources"></a>Model Oluşturucu Azure eğitim kaynakları
 
@@ -48,7 +48,7 @@ Bir Azure Machine Learning çalışma alanı oluşturmak için aşağıdakiler g
     | Standard_NC12   | 12 | 112 | 680  | 2 | 24 | 48 | 2 |
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
-    GPU iyileştirilmiş işlem türleri hakkında daha fazla bilgi için [NC serisi LINUX VM belgelerini](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json) ziyaret edin.
+    GPU iyileştirilmiş işlem türleri hakkında daha fazla bilgi için [NC serisi LINUX VM belgelerini](/azure/virtual-machines/nc-series?bc=%252fazure%252fvirtual-machines%252flinux%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fvirtual-machines%252flinux%252ftoc.json) ziyaret edin.
 - İşlem önceliği
 
   - Düşük öncelikli: daha kısa yürütme sürelerine sahip görevlere uygundur. Kesintiler ve kullanılabilirlik olmaması olabilir. Azure 'daki daha fazla kapasitenin avantajlarından yararlandığından genellikle maliyetler daha düşüktür.
@@ -76,7 +76,7 @@ Eğitim tamamlandıktan sonra, aşağıdaki son eklerle çözümünüze iki proj
 Bir resim sınıflandırması senaryosunda, `ModelInput` iki sütun içerir:
 
 - `ImageSource`: Görüntü konumunun dize yolu.
-- `Label`: Görüntünün ait olduğu gerçek kategori. `Label`yalnızca eğitim sırasında giriş olarak kullanılır ve tahmine dayalı hale geldiğinde sağlanması gerekmez.
+- `Label`: Görüntünün ait olduğu gerçek kategori. `Label` yalnızca eğitim sırasında giriş olarak kullanılır ve tahmine dayalı hale geldiğinde sağlanması gerekmez.
 
 `ModelOutput`İki sütun içerir:
 

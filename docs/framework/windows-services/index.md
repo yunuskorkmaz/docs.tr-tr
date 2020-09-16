@@ -12,12 +12,12 @@ helpviewer_keywords:
 - .NET applications, Windows applications
 ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
-ms.openlocfilehash: ed02d523c21c51df2ed886843fdb71c075c93c30
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 1f02b8229c0d62fa6c0e74ae1e670831b0becb0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925702"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557807"
 ---
 # <a name="develop-windows-service-apps"></a>Windows hizmeti uygulamaları geliştirme
 
@@ -46,10 +46,10 @@ Windows hizmeti proje şablonunu kullanarak Windows hizmetlerini oluşturma ve y
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-<xref:System.ServiceProcess.ServiceBase>- <xref:System.ServiceProcess.ServiceBase> Sınıfının hizmetleri oluşturmak için kullanılan ana özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceBase> - <xref:System.ServiceProcess.ServiceBase> Sınıfının hizmetleri oluşturmak için kullanılan ana özelliklerini açıklar.
 
-<xref:System.ServiceProcess.ServiceProcessInstaller>- <xref:System.ServiceProcess.ServiceProcessInstaller> <xref:System.ServiceProcess.ServiceInstaller> Hizmetlerinizi yüklemek ve kaldırmak için sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceProcessInstaller> - <xref:System.ServiceProcess.ServiceProcessInstaller> <xref:System.ServiceProcess.ServiceInstaller> Hizmetlerinizi yüklemek ve kaldırmak için sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
 
-<xref:System.ServiceProcess.ServiceInstaller>- <xref:System.ServiceProcess.ServiceInstaller> <xref:System.ServiceProcess.ServiceProcessInstaller> Hizmetinizi yüklemek ve kaldırmak için sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
+<xref:System.ServiceProcess.ServiceInstaller> - <xref:System.ServiceProcess.ServiceInstaller> <xref:System.ServiceProcess.ServiceProcessInstaller> Hizmetinizi yüklemek ve kaldırmak için sınıfıyla birlikte kullanılan sınıfının özelliklerini açıklar.
 
-[Şablonlardan proje oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) -bu bölümde kullanılan proje türlerini ve bunların arasından nasıl seçim yapılacağını açıklar.
+[Şablonlardan proje oluşturma](/previous-versions/visualstudio/visual-studio-2013/0fyc0azh(v=vs.120)) -bu bölümde kullanılan proje türlerini ve bunların arasından nasıl seçim yapılacağını açıklar.
