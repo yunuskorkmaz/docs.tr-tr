@@ -1,21 +1,21 @@
 ---
-title: 'Nasıl yapılır: Iş akışları ve Iş akışı hizmetleri için SQL kalıcılığını etkinleştirme'
+title: 'Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için SQL Kalıcılığını Etkinleştirme'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5bcd37a654db35ba6e8af1b15d6c132a090b0579
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837694"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547759"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: Iş akışları ve Iş akışı hizmetleri için SQL kalıcılığını etkinleştirme
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Nasıl yapılır: İş Akışları ve İş Akışı Hizmetleri için SQL Kalıcılığını Etkinleştirme
 
 Bu konuda, hem programlama yoluyla hem de bir yapılandırma dosyası kullanarak, iş akışlarınız ve iş akışı hizmetlerinize yönelik kalıcılığı etkinleştirmek için SQL Iş akışı örnek deposu özelliğinin nasıl yapılandırılacağı açıklanmaktadır.
 
-Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [App Fabric Kalıcılık Yapılandırması](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
+Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [App Fabric Kalıcılık Yapılandırması](/previous-versions/appfabric/ee790848(v=azure.10)).
 
-SQL Iş akışı örneği deposu özelliğini kullanmadan önce, özelliğin iş akışı örneklerini kalıcı hale getirmek için kullandığı bir veritabanı oluşturun. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Kurulum programı SQL Iş akışı örneği deposu özelliğiyle ilişkili SQL komut dosyalarını%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN klasörüne kopyalar. Bu betik dosyalarını, SQL Workflow örnek deposunun iş akışı örneklerini kalıcı hale getirmek için kullanmasını istediğiniz bir SQL Server 2005 veya SQL Server 2008 veritabanında çalıştırın. Önce SqlWorkflowInstanceStoreSchema. SQL dosyasını çalıştırın ve ardından Sqlworkflowcestorelogic. SQL dosyasını çalıştırın.
+SQL Iş akışı örneği deposu özelliğini kullanmadan önce, özelliğin iş akışı örneklerini kalıcı hale getirmek için kullandığı bir veritabanı oluşturun. Kurulum [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] programı SQL Iş akışı örneği deposu özelliğiyle ILIŞKILI SQL komut dosyalarını%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN klasörüne kopyalar. Bu betik dosyalarını, SQL Workflow örnek deposunun iş akışı örneklerini kalıcı hale getirmek için kullanmasını istediğiniz bir SQL Server 2005 veya SQL Server 2008 veritabanında çalıştırın. Önce SqlWorkflowInstanceStoreSchema. SQL dosyasını çalıştırın ve ardından Sqlworkflowcestorelogic. SQL dosyasını çalıştırın.
 
 > [!NOTE]
 > Kalıcı veritabanını yeni bir veritabanına sahip olacak şekilde temizlemek için,%WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN içindeki betikleri aşağıdaki sırayla çalıştırın.
@@ -32,11 +32,11 @@ Aşağıdaki bölümlerde, SQL Iş akışı örnek deposu kullanılarak iş akı
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication kullanan kendi kendine barındırılan Iş akışları için kalıcılığı etkinleştirme
 
-<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> nesne modelini kullanarak program aracılığıyla <xref:System.Activities.WorkflowApplication> kullanan, kendi kendine barındırılan iş akışları için kalıcılığı etkinleştirebilirsiniz. Aşağıdaki yordam bunu yapmak için gereken adımları içerir.
+<xref:System.Activities.WorkflowApplication>Nesne modelini kullanarak programlı olarak kullanan kendi kendine barındırılan iş akışları için kalıcılığı etkinleştirebilirsiniz <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> . Aşağıdaki yordam bunu yapmak için gereken adımları içerir.
 
 #### <a name="to-enable-persistence-for-self-hosted-workflows"></a>Şirket içinde barındırılan iş akışlarıyla kalıcılığı etkinleştirmek için
 
-1. System. Activities. Durableörnekbir. dll dosyasına bir başvuru ekleyin.
+1. System.Activities.DurableInstancing.dll bir başvuru ekleyin.
 
 2. Mevcut "Using" deyimlerinin ardından kaynak dosyanın en üstüne aşağıdaki deyimi ekleyin.
 
@@ -44,7 +44,7 @@ Aşağıdaki bölümlerde, SQL Iş akışı örnek deposu kullanılarak iş akı
     using System.Activities.DurableInstancing;
     ```
 
-3. Aşağıdaki kod örneğinde gösterildiği gibi bir <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> oluşturun ve bunu <xref:System.Activities.WorkflowApplication> <xref:System.Activities.WorkflowApplication.InstanceStore%2A> atayın.
+3. Oluşturun <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> ve <xref:System.Activities.WorkflowApplication.InstanceStore%2A> <xref:System.Activities.WorkflowApplication> Aşağıdaki kod örneğinde gösterildiği gibi öğesine atayın.
 
     ```csharp
     SqlWorkflowInstanceStore store =
@@ -59,7 +59,7 @@ Aşağıdaki bölümlerde, SQL Iş akışı örnek deposu kullanılarak iş akı
    > [!NOTE]
    > SQL Server sürümüne bağlı olarak, bağlantı dizesi sunucu adı farklı olabilir.
 
-4. Bir iş akışını sürdürmek için <xref:System.Activities.WorkflowApplication> nesnesi üzerinde <xref:System.Activities.WorkflowApplication.Persist%2A> yöntemi çağırın veya bir iş akışını kalıcı hale getirmek ve kaldırmak için <xref:System.Activities.WorkflowApplication.Unload%2A> yöntemi çağırın. Ayrıca, <xref:System.Activities.WorkflowApplication> nesnesi tarafından oluşturulan <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> olayını işleyebilir ve <xref:System.Activities.PersistableIdleAction>uygun (<xref:System.Activities.PersistableIdleAction.Persist> ya da <xref:System.Activities.PersistableIdleAction.Unload>) üyesini döndürebilirsiniz.
+4. Bir iş akışını kalıcı hale getirmek <xref:System.Activities.WorkflowApplication.Persist%2A> için nesne üzerinde yöntemi çağırın <xref:System.Activities.WorkflowApplication> veya <xref:System.Activities.WorkflowApplication.Unload%2A> bir iş akışını kalıcı hale getirme ve kaldırma yöntemi. Ayrıca, <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> nesne tarafından oluşturulan olayı işleyebilir <xref:System.Activities.WorkflowApplication> ve öğesinin uygun ( <xref:System.Activities.PersistableIdleAction.Persist> veya <xref:System.Activities.PersistableIdleAction.Unload> ) üyesini döndürebilirsiniz <xref:System.Activities.PersistableIdleAction> .
 
    ```csharp
    wfApp.PersistableIdle = delegate(WorkflowApplicationIdleEventArgs e)
@@ -73,15 +73,15 @@ Aşağıdaki bölümlerde, SQL Iş akışı örnek deposu kullanılarak iş akı
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>WorkflowServiceHost kullanan kendi kendine barındırılan Iş akışı hizmetleri için kalıcılığı etkinleştirme
 
-<xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> sınıfını veya <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> sınıfını kullanarak program aracılığıyla <xref:System.ServiceModel.WorkflowServiceHost> kullanan şirket içinde barındırılan iş akışı hizmetleri için kalıcılığı etkinleştirebilirsiniz.
+<xref:System.ServiceModel.WorkflowServiceHost>Sınıfını veya sınıfını kullanarak programlı olarak kullanan şirket içinde barındırılan iş akışı hizmetleri için kalıcılığın etkin olmasını sağlayabilirsiniz <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> .
 
 ### <a name="using-the-sqlworkflowinstancestorebehavior-class"></a>Sqlworkflowcestorebehavior sınıfını kullanma
 
-Aşağıdaki yordam, kendi kendine barındırılan iş akışı hizmetleri için kalıcılığı etkinleştirmek üzere <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> sınıfını kullanma adımları içerir.
+Aşağıdaki yordam, <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> kendi kendine barındırılan iş akışı hizmetleri için kalıcılığı etkinleştirmek üzere sınıfını kullanma adımları içerir.
 
 #### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>Sqlworkflowcestorebehavior kullanarak kalıcılığı etkinleştirmek için
 
-1. System. ServiceModel. dll dosyasına bir başvuru ekleyin.
+1. System.ServiceModel.dll bir başvuru ekleyin.
 
 2. Mevcut "Using" deyimlerinin ardından kaynak dosyanın en üstüne aşağıdaki deyimi ekleyin.
 
@@ -89,14 +89,14 @@ Aşağıdaki yordam, kendi kendine barındırılan iş akışı hizmetleri için
     using System.ServiceModel.Activities.Description;
     ```
 
-3. `WorkflowServiceHost` bir örneğini oluşturun ve iş akışı hizmeti için uç noktalar ekleyin.
+3. Bir örneği oluşturun `WorkflowServiceHost` ve iş akışı hizmeti için uç noktalar ekleyin.
 
     ```csharp
     WorkflowServiceHost host = new WorkflowServiceHost(new CountingWorkflow(), new Uri(hostBaseAddress));
     host.AddServiceEndpoint("ICountingWorkflow", new BasicHttpBinding(), "");
     ```
 
-4. `SqlWorkflowInstanceStoreBehavior` nesnesi oluşturun ve davranış nesnesinin özelliklerini ayarlayın.
+4. Bir `SqlWorkflowInstanceStoreBehavior` nesne oluşturun ve davranış nesnesinin özelliklerini ayarlayın.
 
     ```csharp
     SqlWorkflowInstanceStoreBehavior instanceStoreBehavior = new SqlWorkflowInstanceStoreBehavior(connectionString);
@@ -116,7 +116,7 @@ Aşağıdaki yordam, kendi kendine barındırılan iş akışı hizmetleri için
 
 ### <a name="using-the-durableinstancingoptions-property"></a>DurableInstancingOptions özelliğini kullanma
 
-`SqlWorkflowInstanceStoreBehavior` uygulandığında, `WorkflowServiceHost` `DurableInstancingOptions.InstanceStore` yapılandırma değerleri kullanılarak oluşturulan `SqlWorkflowInstanceStore` nesnesine ayarlanır. Aşağıdaki kod örneğinde gösterildiği gibi `SqlWorkflowInstanceStoreBehavior` sınıfını kullanmadan `WorkflowServiceHost` <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> özelliğini ayarlamak için programlama yoluyla aynı şekilde yapabilirsiniz.
+Uygulandığında, `SqlWorkflowInstanceStoreBehavior` `DurableInstancingOptions.InstanceStore` üzerinde, `WorkflowServiceHost` `SqlWorkflowInstanceStore` yapılandırma değerleri kullanılarak oluşturulan nesnesine ayarlanır. <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> `WorkflowServiceHost` `SqlWorkflowInstanceStoreBehavior` Aşağıdaki kod örneğinde gösterildiği gibi sınıfını kullanmadan özelliğini ayarlamak için programlama yoluyla aynı şekilde yapabilirsiniz.
 
 ```csharp
 workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObject;
@@ -126,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 Kendi kendine barındırılan veya Windows Işlem etkinleştirme hizmeti (WAS) tarafından barındırılan iş akışı hizmetleri için bir yapılandırma dosyası kullanarak kalıcılığı etkinleştirebilirsiniz. Bir barındırılan iş akışı hizmeti, otomatik olarak barındırılan iş akışı hizmetleri olarak WorkflowServiceHost kullanır.
 
-`SqlWorkflowInstanceStoreBehavior`, [SQL Iş akışı örnek deposu](sql-workflow-instance-store.md) özelliklerini XML yapılandırması aracılığıyla kolayca değiştirmenize olanak tanıyan bir hizmet davranışı. WAS tarafından barındırılan iş akışı hizmetleri için Web. config dosyasını kullanın. Aşağıdaki yapılandırma örneği, bir yapılandırma dosyasında `sqlWorkflowInstanceStore` Behavior öğesi kullanılarak SQL Iş akışı örnek deposunun nasıl yapılandırılacağını gösterir.
+`SqlWorkflowInstanceStoreBehavior`, [SQL Iş akışı örnek deposu](sql-workflow-instance-store.md) özelliklerini XML yapılandırması aracılığıyla kolayca değiştirmenize olanak tanıyan bir hizmet davranışı. WAS tarafından barındırılan iş akışı hizmetleri için Web.config dosyasını kullanın. Aşağıdaki yapılandırma örneği, `sqlWorkflowInstanceStore` bir yapılandırma dosyasındaki davranış öğesi KULLANıLARAK SQL Iş akışı örnek deposunun nasıl yapılandırılacağını gösterir.
 
 ```xml
 <serviceBehaviors>
@@ -143,22 +143,22 @@ Kendi kendine barındırılan veya Windows Işlem etkinleştirme hizmeti (WAS) t
 </serviceBehaviors>
 ```
 
-`connectionString` veya `connectionStringName` özelliği için değer ayarlanmamışsa SQL Iş akışı örneği deposu, varsayılan olarak adlandırılan `DefaultSqlWorkflowInstanceStoreConnectionString`bağlantı dizesini kullanır.
+Veya özelliği için değer ayarlanmamışsa `connectionString` `connectionStringName` , SQL Iş akışı örneği deposu varsayılan adlı bağlantı dizesini kullanır `DefaultSqlWorkflowInstanceStoreConnectionString` .
 
-`SqlWorkflowInstanceStoreBehavior` uygulandığında, `WorkflowServiceHost` `DurableInstancingOptions.InstanceStore` yapılandırma değerleri kullanılarak oluşturulan `SqlWorkflowInstanceStore` nesnesine ayarlanır. Hizmet davranışı öğesini kullanmadan `WorkflowServiceHost` ile `SqlWorkflowInstanceStore` kullanmak için aynı programlama yoluyla aynı şekilde yapabilirsiniz.
+Uygulandığında, `SqlWorkflowInstanceStoreBehavior` `DurableInstancingOptions.InstanceStore` üzerinde, `WorkflowServiceHost` `SqlWorkflowInstanceStore` yapılandırma değerleri kullanılarak oluşturulan nesnesine ayarlanır. `SqlWorkflowInstanceStore`Hizmet davranışı öğesini kullanmadan ile kullanmak için aynısını kullanabilirsiniz `WorkflowServiceHost` .
 
 ```csharp
 workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObject;
 ```
 
 > [!IMPORTANT]
-> Web. config dosyasında kullanıcı adları ve parolalar gibi hassas bilgileri saklamayın olmanız önerilir. Gizli bilgileri Web. config dosyasında depolarsanız, dosya sistemi Access Control listeleri (ACL 'Ler) kullanarak Web. config dosyasına erişimi güvenli hale getirin. Ayrıca, bir yapılandırma dosyası içindeki yapılandırma değerlerini, [korunan yapılandırma kullanarak yapılandırma bilgilerini şifreleme](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))bölümünde belirtildiği gibi da güvenli hale getirebilirsiniz.
+> Web.config dosyasında kullanıcı adları ve parolalar gibi hassas bilgileri saklamayın olmanız önerilir. Web.config dosyasında hassas bilgileri depolarsanız dosya sistemi Access Control listeleri (ACL 'Ler) kullanarak Web.config dosyasına erişmeniz gerekir. Ayrıca, bir yapılandırma dosyası içindeki yapılandırma değerlerini, [korunan yapılandırma kullanarak yapılandırma bilgilerini şifreleme](/previous-versions/aspnet/53tyfkaw(v=vs.100))bölümünde belirtildiği gibi da güvenli hale getirebilirsiniz.
 
-### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL Iş akışı örnek deposu özelliğiyle Ilgili Machine. config öğeleri
+### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>SQL Iş akışı örneği deposu özelliğiyle Ilgili öğeleri Machine.config
 
-[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] yükleme SQL Iş akışı örneği deposu özelliğiyle ilgili aşağıdaki öğeleri Machine. config dosyasına ekler:
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]Yükleme, Machine.config DOSYASıNA SQL Workflow örnek deposu özelliğiyle ilgili aşağıdaki öğeleri ekler:
 
-- Hizmetlerinizin kalıcılığını yapılandırmak için yapılandırma dosyasında \<SqlWorkflowInstanceStore > hizmet davranışı öğesini kullanabilmeniz için, aşağıdaki davranış uzantısı öğesini Machine. config dosyasına ekler.
+- \<sqlWorkflowInstanceStore>Hizmetlerinizin kalıcılığını yapılandırmak için yapılandırma dosyasındaki hizmet davranışı öğesini kullanabilmeniz için, aşağıdaki davranış uzantısı öğesini Machine.config dosyasına ekler.
 
     ```xml
     <configuration>

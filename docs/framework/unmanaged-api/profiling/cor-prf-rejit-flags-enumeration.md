@@ -15,17 +15,17 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 8fc5f1a488826d8adc6aecb8ef122609bebbe813
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b1d6ad5d465d746f4c1a9400c43613591373322
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177095"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546952"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS Sabit Listesi
-[ICorProfilerInfo10::RequestReJITWithLiners](icorprofilerinfo10-requestrejitwithinliners-method.md) API'nin nasıl olması gerektiğini gösteren değerler içerir.  
+[ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API 'sinin nasıl davrandığını belirten değerleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 typedef enum  
@@ -37,20 +37,20 @@ typedef enum
   
 ## <a name="members"></a>Üyeler  
   
-|Üye|Açıklama|  
+|Üye|Description|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted yöntemleri diğer yöntemlerde inlined olması engellenir. |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| Yeniden `GetFunctionParameters` canlandırılmak istenen yöntemlerin satır satırını gösteren yöntemler için geri arama alın. |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| Yeniden derlenen yöntemlerin diğer metotlarda satır içine alınmış olması engellenir. |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| `GetFunctionParameters`Yeniden derleme yapmak istenen yöntemlerin satır içi yöntemler için geri çağrılar alın. |  
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri.](../../../core/install/dependencies.md?pivots=os-windows)  
+ **Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/windows.md?pivots=os-windows).  
   
- **Üstbilgi:** CorProf.idl, CorProf.h  
+ **Üst bilgi:** CorProf. IDL, CorProf. h  
   
- **Kütüphane:** CorGuids.lib  
+ **Kitaplık:** Corguid. lib  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Profil Oluşturma Sabit Listeleri](profiling-enumerations.md)
+- [Profil Oluşturma Numaralandırmaları](profiling-enumerations.md)

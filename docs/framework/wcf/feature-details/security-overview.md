@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 517d80395e09598fcbd067034223dc6ba58cbe2e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e7dd73b755c7aed91a1fd59baaf9d5e090a36768
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600444"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541467"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation güvenliğe genel bakış
 Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış programlama platformudur ve istemciler ve hizmetler arasındaki iletilerin güvenliğini korumak için gereklidir. WCF, hem mevcut güvenlik altyapısına hem de SOAP iletileri için tanınan güvenlik standartlarına dayalı olarak güvenli iletiler değiş tokuş eden, çok yönlü ve birlikte çalışabilen bir platform sağlar.  
@@ -110,7 +110,7 @@ Windows Communication Foundation (WCF), bir SOAP ileti tabanlı dağıtılmış 
 - [Denetim](auditing-security-events.md)
 - [Güvenlik Kılavuzu ve En İyi Uygulamalar](security-guidance-and-best-practices.md)
 - [Yapılandırma Dosyalarını Kullanarak Hizmetleri Yapılandırma](../configuring-services-using-configuration-files.md)
-- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../system-provided-bindings.md)
 - [Uç Noktası Oluşturma Genel Bakış](../endpoint-creation-overview.md)
 - [Güvenliği Genişletme](../extending/extending-security.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

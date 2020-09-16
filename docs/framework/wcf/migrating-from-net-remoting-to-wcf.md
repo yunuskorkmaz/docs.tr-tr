@@ -3,12 +3,12 @@ title: .NET Uzaktan İletişimden WCF'ye Taşınma
 description: WCF kullanmak için .NET Remoting kullanan bir uygulamayı geçirmeyi öğrenin. WCF 'de birkaç genel uzaktan iletişim senaryosu gerçekleştirebilirsiniz.
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: f6f526db09806008314980b71233b208d25359fc
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 73bdac5d8f4d39694f038bb600828c79e527efb0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246161"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542856"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET Uzaktan İletişimden WCF'ye Taşınma
 Bu makalede, .NET Remoting kullanan bir uygulamanın Windows Communication Foundation (WCF) kullanmak üzere nasıl geçirileceği açıklanır. Bu ürünler arasındaki benzer kavramları karşılaştırır ve daha sonra WCF 'de birkaç genel uzaktan Iletişim senaryosu gerçekleştirmeyi açıklar.  
@@ -285,7 +285,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Neden uzaktan Iletişim 'ten WCF 'ye geçirilir?  
   
-- **.NET uzaktan Iletişim, eski bir üründür.** [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)' de açıklandığı gibi, eski bir ürün olarak kabul edilir ve yeni geliştirme için önerilmez. WCF veya ASP.NET Web API 'SI, yeni ve mevcut uygulamalar için önerilir.  
+- **.NET uzaktan Iletişim, eski bir üründür.** [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))' de açıklandığı gibi, eski bir ürün olarak kabul edilir ve yeni geliştirme için önerilmez. WCF veya ASP.NET Web API 'SI, yeni ve mevcut uygulamalar için önerilir.  
   
 - **WCF platformlar arası standartları kullanır.** WCF, platformlar arası birlikte çalışabilirlik ile tasarlanmıştı ve birçok sektör standardını (SOAP, WS-Security, WS-Trust, vb.) destekler. Bir WCF hizmeti, Windows dışındaki işletim sistemlerinde çalışan istemcilerle birlikte çalışabilir. Uzaktan iletişim, birincil olarak hem sunucu hem de istemci uygulamaların bir Windows işletim sisteminde .NET Framework kullanarak çalıştığı ortamlar için tasarlanmıştır.
   

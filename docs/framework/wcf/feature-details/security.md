@@ -6,23 +6,23 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 327fb509a5186a0b3f428efc2ddd7f983bcfa978
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9498358dd480487afcd3b746d14266e486c62d71
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595157"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546321"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation Güvenliği
 Bu bölümdeki konularda, iletilerin güvenli hale getirilmesine yardımcı olmak için Windows Communication Foundation (WCF) güvenlik özellikleri ve bunların nasıl kullanılacağı açıklanır.  
   
- Windows Server AppFabric ve Security hakkında daha fazla bilgi için bkz. [Windows Server Için güvenlik modeli AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))  
+ Windows Server AppFabric ve Security hakkında daha fazla bilgi için bkz. [Windows Server Için güvenlik modeli AppFabric](/previous-versions/appfabric/ee677202(v=azure.10))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Güvenliğe genel bakış](security-overview.md)  
  WCF 'deki güvenlik özelliklerini açıklar.  
   
- [Güvenlik kavramları](security-concepts.md)  
+ [Güvenlik Kavramları](security-concepts.md)  
  WCF güvenliği içinde kullanılan temel terminolojiyi ve kavramları açıklar.  
   
  [Ortak Güvenlik Senaryoları](common-security-scenarios.md)  
@@ -67,7 +67,7 @@ Bu bölümdeki konularda, iletilerin güvenli hale getirilmesine yardımcı olma
   
  [Başlangıç Öğreticisi](../getting-started-tutorial.md)  
   
- [Kavramsal genel bakış](../conceptual-overview.md)  
+ [Kavramsal Genel Bakış](../conceptual-overview.md)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

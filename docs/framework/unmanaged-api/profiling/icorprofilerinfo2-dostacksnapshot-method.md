@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: b9a7142de01d818390b740a795f70a4606952780
-ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
+ms.openlocfilehash: ff0ff35f42e20725cab49afd971523aabda866c3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84497380"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547830"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot Yöntemi
 Belirtilen iş parçacığı için yığındaki yönetilen çerçevelere kılavuzluk eder ve geri çağırma yoluyla profil oluşturucuya bilgi gönderir.  
@@ -55,14 +55,14 @@ HRESULT DoStackSnapshot(
  'ndaki İstemci verilerine yönelik bir işaretçi, `StackSnapshotCallback` geri çağırma işlevine doğrudan geçirilir.  
   
  `context`  
- 'ndaki `CONTEXT`Yığın ilerlemesini temel almak için kullanılan Win32 yapısına yönelik bir işaretçi. Win32 `CONTEXT` yapısı, CPU yazmaçlarının değerlerini içerir ve zaman içinde belirli bir anda CPU 'nun durumunu temsil eder.  
+ 'ndaki `CONTEXT` Yığın ilerlemesini temel almak için kullanılan Win32 yapısına yönelik bir işaretçi. Win32 `CONTEXT` yapısı, CPU yazmaçlarının değerlerini içerir ve zaman içinde belirli bir anda CPU 'nun durumunu temsil eder.  
   
  Çekirdek, yığının en üstünde yönetilmeyen yardımcı kod olması halinde CLR 'nin yığın ilerleme durumunu belirlemesine yardımcı olur. Aksi takdirde, çekirdek yok sayılır. Zaman uyumsuz bir ilerleme için çekirdek sağlanmalıdır. Zaman uyumlu bir adım yapıyorsanız, hiçbir çekirdek gerekmez.  
   
  `context`Parametresi yalnızca COR_PRF_SNAPSHOT_CONTEXT bayrağı parametreye geçirilmemişse geçerlidir `infoFlags` .  
   
  `contextSize`  
- 'ndaki `CONTEXT`Parametrenin başvurduğu yapının boyutu `context` .  
+ 'ndaki `CONTEXT` Parametrenin başvurduğu yapının boyutu `context` .  
   
 ## <a name="remarks"></a>Açıklamalar  
  İçin null geçirme `thread` , geçerli iş parçacığının bir anlık görüntüsünü verir. Yalnızca hedef iş parçacığı zaman askıya alınırsa, anlık görüntüler diğer iş parçacıklarından alınabilir.  
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  Yığının hangi sıraya gönderildiği sırası, çerçevelerin yığına nasıl itileceği, ana (ilk itilmiş) çerçevenin en sonda yer aldığı sıra.  
   
- Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bkz. [.NET Framework 2,0: temel bilgiler ve daha fazlası Için Profiler Stack](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
+ Profil oluşturucunun yönetilen yığınları izlenecek şekilde programlamanın nasıl yapılacağı hakkında daha fazla bilgi için, bkz. [.NET Framework 2,0: temel bilgiler ve daha fazlası Için Profiler Stack](/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
   
  Aşağıdaki bölümlerde açıklandığı gibi bir yığın adım zaman uyumlu veya zaman uyumsuz olabilir.  
   
@@ -85,7 +85,7 @@ HRESULT DoStackSnapshot(
   
  Hedef iş parçacığını doğrudan askıya alarak ve en üstteki yönetilen çerçeveyi bulana kadar kendi yığınını yürüyerek bir çekirdek elde edersiniz. Hedef iş parçacığı askıya alındıktan sonra, hedef iş parçacığının geçerli kayıt bağlamını alın. Sonra, YAZMAÇ bağlamının [ICorProfilerInfo:: GetFunctionFromIP](icorprofilerinfo-getfunctionfromip-method.md) öğesini çağırarak yönetilmeyen koda işaret ettiğini ve `FunctionID` sıfıra eşit bir değere döndürürse, çerçevenin yönetilmeyen kod olduğunu saptayın. Şimdi, ilk yönetilen çerçeveye ulaşana kadar yığına ilerleme uygulayın ve ardından bu çerçeveye ait yazmaç bağlamına göre çekirdek bağlamını hesaplayın.  
   
- `DoStackSnapshot`Zaman uyumsuz yığın Yürüme başlamak için çekirdek bağlamınıza çağrı yapın. Bir çekirdek sağlamadıysanız, `DoStackSnapshot` yığının en üstünde yönetilen çerçeveleri atlayabilir ve sonuç olarak size tamamlanmamış bir yığın yürüme olanağı verecektir. Çekirdek sağlarsanız, JıT ile derlenen veya yerel görüntü Oluşturucu (Ngen. exe) tarafından oluşturulan kodu işaret etmelidir; Aksi takdirde, `DoStackSnapshot` CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX hata kodunu döndürür.  
+ `DoStackSnapshot`Zaman uyumsuz yığın Yürüme başlamak için çekirdek bağlamınıza çağrı yapın. Bir çekirdek sağlamadıysanız, `DoStackSnapshot` yığının en üstünde yönetilen çerçeveleri atlayabilir ve sonuç olarak size tamamlanmamış bir yığın yürüme olanağı verecektir. Çekirdek sağlarsanız, JıT ile derlenen veya yerel görüntü Oluşturucu (Ngen.exe) tarafından oluşturulan kodu işaret etmelidir; Aksi takdirde, `DoStackSnapshot` CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX hata kodunu döndürür.  
   
  Bu yönergeleri izlemeden zaman uyumsuz yığın, kilitlenmeleri veya erişim ihlallerine kolayca yol açabilir:  
   

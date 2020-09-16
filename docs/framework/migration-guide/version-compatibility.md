@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 92cfdc1a2a530f9790a693d0aa1ca5f65ff1af9f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 824765e1f3ecfd1381f9c5f8b144b7b11aee8f0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558770"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550390"
 ---
 # <a name="version-compatibility"></a>Sürüm uyumluluğu
 
@@ -53,9 +53,9 @@ Uygulamanız veya bileşeniniz .NET Framework 4,5 ' de beklendiği gibi çalış
 
 - .NET Framework 3,5 uygulamanız varsa Ayrıca bkz. [.NET Framework 4 geçiş sorunları](net-framework-4-migration-issues.md).
 
-- .NET Framework 2,0 uygulamanız varsa, [.NET Framework 3,5 SP1 'Deki değişikliklere](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))de bakın.
+- .NET Framework 2,0 uygulamanız varsa, [.NET Framework 3,5 SP1 'Deki değişikliklere](/previous-versions/dotnet/articles/dd310284(v=msdn.10))de bakın.
 
-- .NET Framework 1,1 uygulamanız varsa, [.NET Framework 2,0 ' deki değişikliklere](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10))de bakın.
+- .NET Framework 1,1 uygulamanız varsa, [.NET Framework 2,0 ' deki değişikliklere](/previous-versions/aa570326(v=msdn.10))de bakın.
 
 - Var olan kaynak kodu .NET Framework 4,5 ' de veya onun noktası sürümlerinde çalışacak şekilde yeniden derliyorsanız veya mevcut bir kaynak kod tabanından .NET Framework 4,5 ya da noktası sürümlerini hedefleyen bir uygulamanın veya bileşenin yeni bir sürümünü geliştiriyorsanız, artık kullanılmayan türler ve Üyeler için [sınıf kitaplığında nelerin eski olduğunu](../whats-new/whats-obsolete.md) denetleyin ve açıklanan geçici çözümü uygulayın. (Önceden derlenen kod, eski olarak işaretlenen türlere ve üyelere karşı çalışmaya devam edecektir.)
 

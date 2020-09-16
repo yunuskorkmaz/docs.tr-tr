@@ -10,12 +10,12 @@ api_type:
 ms.assetid: b22717b9-ead5-4eea-887e-789b52d613dc
 topic_type:
 - apiref
-ms.openlocfilehash: 71aa482cc2268da17f1376d8c305dd6a818d92d0
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8c9c507f00780d5ef5c5aeb28a1b10493351f37e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213172"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546978"
 ---
 # <a name="icordebugfunction3-interface"></a>ICorDebugFunction3 Arabirimi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
@@ -43,4 +43,4 @@ ms.locfileid: "83213172"
 
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
 - [Hata Ayıklama](index.md)
-- [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: nasıl yapılır Kılavuzu](/archive/blogs/davbr/rejit-a-how-to-guide)

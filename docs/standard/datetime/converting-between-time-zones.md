@@ -13,12 +13,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: 7d1984866c5eacdfe21834389b8f0be4caf78fb7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 156c3d8b360d62ba72f9a4447646fafe170ea658
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446847"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547336"
 ---
 # <a name="converting-times-between-time-zones"></a>Saatleri saat dilimleri arasında dönüştürme
 
@@ -26,7 +26,7 @@ Zaman dilimleri arasındaki farkları işlemek için tarih ve saatlerle birlikte
 
 ## <a name="converting-to-coordinated-universal-time"></a>Eşgüdümlü Evrensel saate dönüştürme
 
-Eşgüdümlü Evrensel Saat (UTC), yüksek duyarlıklı, atomik bir süre standardıdır. Dünyanın saat dilimleri UTC 'den pozitif veya negatif uzaklık olarak ifade edilir. Bu nedenle UTC, bir tür saat dilimi boş veya saat dilimi nötr saati sağlar. Tarih ve saatin bilgisayarlar arasında taşınabilirliği önemli olduğunda UTC zamanının kullanılması önerilir. (Ayrıntılar ve Tarih ve saatleri kullanan diğer en iyi uygulamalar için bkz. [.NET Framework tarih saat kullanarak en iyi yöntemleri kodlama](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Bağımsız bir saat dilimini UTC 'ye dönüştürmek, zaman karşılaştırmaları kolaylaştırır.
+Eşgüdümlü Evrensel Saat (UTC), yüksek duyarlıklı, atomik bir süre standardıdır. Dünyanın saat dilimleri UTC 'den pozitif veya negatif uzaklık olarak ifade edilir. Bu nedenle UTC, bir tür saat dilimi boş veya saat dilimi nötr saati sağlar. Tarih ve saatin bilgisayarlar arasında taşınabilirliği önemli olduğunda UTC zamanının kullanılması önerilir. (Ayrıntılar ve Tarih ve saatleri kullanan diğer en iyi uygulamalar için bkz. [.NET Framework tarih saat kullanarak en iyi yöntemleri kodlama](/previous-versions/dotnet/articles/ms973825(v=msdn.10)).) Bağımsız bir saat dilimini UTC 'ye dönüştürmek, zaman karşılaştırmaları kolaylaştırır.
 
 > [!NOTE]
 > Ayrıca, bir <xref:System.DateTimeOffset> yapının zaman içinde tek bir noktayı göstermek için bir yapıyı seri hale getirebilirsiniz. <xref:System.DateTimeOffset>Nesneler bir tarih ve saat DEĞERINI UTC 'deki uzaklığa göre depolarsa, UTC ile ilişki içinde her zaman belirli bir noktayı temsil eder.

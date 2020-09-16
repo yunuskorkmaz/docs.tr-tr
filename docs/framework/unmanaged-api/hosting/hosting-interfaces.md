@@ -6,12 +6,12 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], hosting
 ms.assetid: cc64cb05-38da-418e-815a-daac8e8e26e5
-ms.openlocfilehash: d1668f52ff305ec36fb520c7828c822537da0d02
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b1459bf78276abe0daefd7a7ee814841f3c65dfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616105"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550670"
 ---
 # <a name="hosting-interfaces"></a>Barındırma Arabirimleri
 Bu bölümde, yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını (CLR) uygulamalarıyla tümleştirmeleri için kullanabileceği arabirimler açıklanmaktadır.  
@@ -37,10 +37,10 @@ Bu bölümde, yönetilmeyen ana bilgisayarların ortak dil çalışma zamanını
   
  [Kullanım Dışı CLR Barındırma İşlevleri](deprecated-clr-hosting-functions.md)  
   
- [Barındırma Sabit Listeleri](hosting-enumerations.md)  
+ [Barındırma Numaralandırmaları](hosting-enumerations.md)  
   
  [Barındırma Yapıları](hosting-structures.md)  
   
- [Barındırma](index.md)  
+ [Hosting](index.md)  
   
- [Çalışma zamanı Konakları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
+ [Çalışma zamanı Konakları](/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))

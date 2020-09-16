@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-ms.openlocfilehash: fa0af1461ba568583127316934b9d55577dd4c5a
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 8d5c37bf2ed80e9b6ea071fcd2080c43be8f6247
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662829"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546373"
 ---
 # <a name="managed-threading-best-practices"></a>Yönetilen iş parçacığı en iyi uygulamaları
 Çoklu iş parçacığı dikkatli bir programlama gerektirir. Çoğu görev için, iş parçacığı havuzu iş parçacıklarının yürütülmesi için istekleri sıraya alarak karmaşıklığı azaltabilirsiniz. Bu konu, birden çok iş parçacığının çalışmasını koordine etme ya da engelleyen iş parçacıklarını işleme gibi daha zor durumları ele almaktadır.  
@@ -78,7 +78,7 @@ else {
 
 ## <a name="number-of-processors"></a>İşlemci sayısı
 
-Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin kullanılabilir olması çok iş parçacıklı mimariyi etkileyebilir. Daha fazla bilgi için bkz. [Işlemci sayısı](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/1c9txz50(v%3dvs.71)#number-of-processors).
+Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin kullanılabilir olması çok iş parçacıklı mimariyi etkileyebilir. Daha fazla bilgi için bkz. [Işlemci sayısı](/previous-versions/dotnet/netframework-1.1/1c9txz50(v=vs.71)#number-of-processors).
 
 <xref:System.Environment.ProcessorCount?displayProperty=nameWithType>Çalışma zamanında kullanılabilir işlemcilerin sayısını öğrenmek için özelliğini kullanın.
   
@@ -89,7 +89,7 @@ Birden çok işlemci olup olmadığı veya sistemde yalnızca bir işlemcinin ku
   
 - <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> Birden çok iş parçacığının etkinliklerini eşitlememe ve kullanma. ,, <xref:System.Threading.Mutex> <xref:System.Threading.ManualResetEvent> Ve kullanın <xref:System.Threading.AutoResetEvent> <xref:System.Threading.Monitor> .  
   
-- Ana programınızdaki çalışan iş parçacıklarının yürütülmesini denetleme (örneğin, olayları kullanarak). Bunun yerine, programınızı, çalışan iş parçacıklarının iş için kullanılabilir olana kadar beklemekten sorumlu olması, yürütülmesi ve işiniz bittiğinde programınızın diğer bölümlerine bildirimde bulunmak için tasarlayın. Çalışan iş parçacılarınız engellenmiyor ise, iş parçacığı havuzu iş parçacıklarını kullanmayı göz önünde bulundurun. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>, çalışan iş parçacıklarının engel olduğu durumlarda faydalıdır.  
+- Ana programınızdaki çalışan iş parçacıklarının yürütülmesini denetleme (örneğin, olayları kullanarak). Bunun yerine, programınızı, çalışan iş parçacıklarının iş için kullanılabilir olana kadar beklemekten sorumlu olması, yürütülmesi ve işiniz bittiğinde programınızın diğer bölümlerine bildirimde bulunmak için tasarlayın. Çalışan iş parçacılarınız engellenmiyor ise, iş parçacığı havuzu iş parçacıklarını kullanmayı göz önünde bulundurun. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> , çalışan iş parçacıklarının engel olduğu durumlarda faydalıdır.  
   
 - Türleri kilit nesneleri olarak kullanmayın. Diğer bir deyişle, `lock(typeof(X))` C# veya Visual Basic gibi koddan `SyncLock(GetType(X))` ya da <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> nesneleri ile kullanımını önleyin <xref:System.Type> . Belirli bir tür için, <xref:System.Type?displayProperty=nameWithType> uygulama etki alanı başına yalnızca bir örnek vardır. Bir kilidi aldığınız tür herkese açık ise, kendi dışında bir kod, kilitlenmeleri için bir kilit alabilir. Ek sorunlar için bkz. [Güvenilirlik En Iyi uygulamaları](../../framework/performance/reliability-best-practices.md).  
   

@@ -1,23 +1,23 @@
 ---
-title: dotnet nuget kaynak komutu eklemek
-description: Dotnet nuget add kaynak komutu NuGet yapılandırma dosyalarınıza yeni bir paket kaynağı ekler.
+title: DotNet NuGet Kaynak Ekle komutu
+description: DotNet NuGet Kaynak Ekle komutu, NuGet yapılandırma dosyalarınıza yeni bir paket kaynağı ekler.
 ms.date: 03/20/2020
-ms.openlocfilehash: 319501e026f1c3102006b0be5357f127b8e366a7
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b847d987de2d88cb3452d32d1bc84232a1e20b6e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463595"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537979"
 ---
 # <a name="dotnet-nuget-add-source"></a>dotnet nuget add source
 
-**Bu makale şu şekildedir:** ✔️ .NET Core 3.1.200 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 3.1.200 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
-`dotnet nuget add source`- NuGet kaynağı ekleyin.
+`dotnet nuget add source` -Bir NuGet kaynağı ekleyin.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
 dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name <SOURCE_NAME>] [--username <USER>]
@@ -27,21 +27,21 @@ dotnet nuget add source <PACKAGE_SOURCE_PATH> [--name <SOURCE_NAME>] [--username
 dotnet nuget add source -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
-Komut, `dotnet nuget add source` NuGet yapılandırma dosyalarınıza yeni bir paket kaynağı ekler.
+`dotnet nuget add source`Komut, NuGet yapılandırma dosyalarınıza yeni bir paket kaynağı ekler.
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`PACKAGE_SOURCE_PATH`**
 
-  Paket kaynağına giden yol.
+  Paket kaynağının yolu.
 
 ## <a name="options"></a>Seçenekler
 
 - **`--configfile <FILE>`**
 
-  NuGet yapılandırma dosyası. Belirtilirse, yalnızca bu dosyadaki ayarlar kullanılır. Belirtilmemişse, geçerli dizindeki yapılandırma dosyaları hiyerarşisi kullanılır. Daha fazla bilgi için [Ortak NuGet Yapılandırmaları'na](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)bakın.
+  NuGet yapılandırma dosyası. Belirtilmişse, yalnızca bu dosyadaki ayarlar kullanılacaktır. Belirtilmemişse, geçerli dizinden yapılandırma dosyalarının hiyerarşisi kullanılacaktır. Daha fazla bilgi için bkz. [ortak NuGet yapılandırması](/nuget/consume-packages/configuring-nuget-behavior).
 
 - **`-n|--name <SOURCE_NAME>`**
 
@@ -49,41 +49,41 @@ Komut, `dotnet nuget add source` NuGet yapılandırma dosyalarınıza yeni bir p
 
 - **`-p|--password <PASSWORD>`**
 
-  Kimlik doğrulaması yapılan bir kaynağa bağlanırken kullanılacak parola.
+  Kimliği doğrulanmış bir kaynağa bağlanırken kullanılacak parola.
 
 - **`--store-password-in-clear-text`**
 
-  Parola şifrelemesini devre dışı bırakarak taşınabilir paket kaynağı kimlik bilgilerini depolamayı sağlar.
+  Parola şifrelemesini devre dışı bırakarak taşınabilir paket kaynak kimlik bilgilerinin depolanmasını mümkün.
 
 - **`-u|--username <USER>`**
 
-  Kimlik doğrulaması yapılan bir kaynağa bağlanırken kullanılacak kullanıcı adı.
+  Kimliği doğrulanmış bir kaynağa bağlanılırken kullanılacak Kullanıcı adı.
 
 - **`--valid-authentication-types <TYPES>`**
 
-  Bu kaynak için geçerli kimlik doğrulama türlerinin virgülle ayrılmış listesi. Sunucu ntlm veya Negotiate'in reklamını yaparsa ve kimlik bilgilerinizin temel mekanizma kullanılarak gönderilmesi gerekiyorsa, örneğin şirket içi Azure DevOps Server'a sahip bir PAT kullanırken bunu `basic` ayarlayın. Diğer geçerli `negotiate`değerler `kerberos` `ntlm`, `digest`, , ve , içerir, ancak bu değerlerin yararlı olması olası değildir.
+  Bu kaynak için geçerli kimlik doğrulama türlerinin virgülle ayrılmış listesi. `basic`Sunucu ntlm veya anlaşma duyurur ise ve şirket içi Azure DevOps Server BIR Pat kullanırken, kimlik bilgilerinizin temel mekanizma kullanılarak gönderilmesi gerekiyorsa, bunu olarak ayarlayın. Diğer geçerli değerler,,, ve içerir, `negotiate` `kerberos` `ntlm` `digest` ancak bu değerlerin yararlı olması çok düşüktür.
 
 ## <a name="examples"></a>Örnekler
 
-- Kaynak `nuget.org` olarak ekleyin:
+- `nuget.org`Kaynak olarak ekle:
 
   ```dotnetcli
   dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
   ```
 
-- Yerel `c:\packages` kaynak olarak ekleyin:
+- `c:\packages`Yerel kaynak olarak ekle:
 
   ```dotnetcli
   dotnet nuget add source c:\packages
   ```
 
-- Kimlik doğrulaması gereken bir kaynak ekleyin:
+- Kimlik doğrulaması gerektiren bir kaynak ekleyin:
 
   ```dotnetcli
   dotnet nuget add source https://someServer/myTeam -n myTeam -u myUsername -p myPassword --store-password-in-clear-text
   ```
 
-- Kimlik doğrulaması gereken bir kaynak ekleyin (ardından kimlik bilgisi sağlayıcısını yükleyin:
+- Kimlik doğrulaması gerektiren bir kaynak ekleyin (ardından kimlik bilgisi sağlayıcısı 'nı yüklemeye git):
 
   ```dotnetcli
   dotnet nuget add source https://azureartifacts.microsoft.com/myTeam -n myTeam
@@ -91,6 +91,6 @@ Komut, `dotnet nuget add source` NuGet yapılandırma dosyalarınıza yeni bir p
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [NuGet.config dosyalarındaki paket kaynak bölümleri](/nuget/reference/nuget-config-file#package-source-sections)
+- [NuGet.config dosyalardaki paket kaynak bölümleri](/nuget/reference/nuget-config-file#package-source-sections)
 
-- [kaynaklar komutu (nuget.exe)](/nuget/reference/cli-reference/cli-ref-sources)
+- [Sources komutu (nuget.exe)](/nuget/reference/cli-reference/cli-ref-sources)

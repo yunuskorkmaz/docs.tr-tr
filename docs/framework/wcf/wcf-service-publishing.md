@@ -3,12 +3,12 @@ title: WCF Hizmet Yayımlama
 description: WCF hizmeti yayımlama, uygulamanızı test amacıyla bir üretim ortamına dağıtmanıza yardımcı olur.
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 99798b75e1dc01c8db361f4d8d1f162c7f7617b1
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: ccd3fe80e51ef28f7a037d624e9099c42d867d95
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245680"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544576"
 ---
 # <a name="wcf-service-publishing"></a>WCF Hizmet Yayımlama
 
@@ -22,7 +22,7 @@ WCF hizmeti yayımlama, WCF hizmet kitaplığı şablonları kümesinden oluştu
 
 - Dağıtım Hizmeti kitaplığı.
 
-Bu hizmet şablonlarını, **Dosya**  >  **Yeni proje** > [**Visual Basic** veya **Visual C#**] **WCF**> ' i seçerek bulabilirsiniz. Bu konumdaki diğer WCF şablonları için (WCF Iş akışı hizmeti uygulaması ve WCF hizmeti uygulaması dahil), [Web uygulamaları Için tek tıklamayla yayımlama](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))kullanarak yayımlayabilirsiniz.
+Bu hizmet şablonlarını, **Dosya**  >  **Yeni proje** > [**Visual Basic** veya **Visual C#**] **WCF**> ' i seçerek bulabilirsiniz. Bu konumdaki diğer WCF şablonları için (WCF Iş akışı hizmeti uygulaması ve WCF hizmeti uygulaması dahil), [Web uygulamaları Için tek tıklamayla yayımlama](/previous-versions/aspnet/dd465337(v=vs.110))kullanarak yayımlayabilirsiniz.
 
 Hizmet aşağıdaki hedef konumlara yayımlanabilir.
 
@@ -69,7 +69,7 @@ Uygulamanızı yerel IIS 'e dağıtmayı seçerseniz, IIS kurulumuyla ilgili hat
 - Öğesindeki ayarlar, `<diagnostics>` hedef platformun izleme ayarlarını korumak için dışlanır.
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>HTTP olmayan bağlamalarla WCF hizmetlerini IIS 'ye yayımlama
- IIS 7.0 veya üzerini kullanıyorsanız, HTTP olmayan bağlamalarla WCF hizmetlerini IIS 'e yayımlayabilirsiniz. Bazı ön yapılandırmalarda yapmanız gerekir. Daha fazla bilgi için lütfen [Windows Işlem etkinleştirme hizmeti 'Nde barındırma](./feature-details/hosting-in-windows-process-activation-service.md)konusunun konularına bakın.
+ IIS 7.0 veya üzerini kullanıyorsanız, HTTP olmayan bağlamalarla WCF hizmetlerini IIS 'e yayımlayabilirsiniz. Bazı ön yapılandırmalarda yapmanız gerekir. Daha fazla bilgi için lütfen  [Windows Işlem etkinleştirme hizmeti 'Nde barındırma](./feature-details/hosting-in-windows-process-activation-service.md)konusunun konularına bakın.
 
 ## <a name="security"></a>Güvenlik
  IIS 'in yönetici hesabında çalışıyor olması gerektiğinden, yerel IIS 'de yayımlama için yönetici ayrıcalığı gerekir. Yönetici ayrıcalıkları olmayan bir Kullanıcı WCF hizmeti yayımlamayı açarsa, IIS hedef konum olarak kullanılamaz. Dosya sistemine yayımlama veya FTP sitesi, yönetici ayrıcalıkları olmadan çalışmaktadır.
@@ -77,5 +77,5 @@ Uygulamanızı yerel IIS 'e dağıtmayı seçerseniz, IIS kurulumuyla ilgili hat
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF Visual Studio Şablonları](wcf-vs-templates.md)
-- [WCF Hizmet Konağı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
 - [WCF Test İstemcisi (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

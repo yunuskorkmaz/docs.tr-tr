@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-ms.openlocfilehash: 0a3363b35a6fc8bd27753eb034f8a1e95feb5292
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a67689bd9757f7586881fd910ef6103b1dffeab8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "77215423"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550455"
 ---
 # <a name="app-settings-schema"></a>Uygulama ayarları şeması
 
@@ -49,7 +49,7 @@ Devralınan özel uygulama ayarının başvurusunu uygulama ayarları koleksiyon
 
 ## <a name="example"></a>Örnek
 
-Aşağıdaki örnek, bir özel uygulama ayarı tanımlayan bir dış uygulama ayarları dosyasını (*Custom. config*) gösterir:
+Aşağıdaki örnek, bir özel uygulama ayarı tanımlayan bir dış uygulama ayarları dosyası (*custom.config*) göstermektedir:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -70,5 +70,5 @@ Aşağıdaki örnek, dış ayarlar dosyasında ayarı tüketen ve kendi uygulama
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Ayarlarına Genel Bakış](../../../winforms/advanced/application-settings-overview.md)
-- [Uygulama Ayarları Mimarisi](../../../winforms/advanced/application-settings-architecture.md)
+- [Uygulama Ayarlarına Genel Bakış](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [Uygulama Ayarları Mimarisi](/dotnet/desktop/winforms/advanced/application-settings-architecture)

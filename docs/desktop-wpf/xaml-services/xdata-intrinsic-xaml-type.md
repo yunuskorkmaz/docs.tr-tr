@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: b7f0954158988db107feb4a6c51ba81d5db11dcb
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: d78c2fd63192dc499b119e5b038b92555511a695
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071544"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544810"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData İç XAML Türü
-XML veri adalarının XAML üretimi içinde yerleştirilmesine olanak sağlar. İçerdeki `x:XData` XML öğeleri XAML işlemciler tarafından varsayılan XAML ad alanının veya başka bir XAML ad alanının bir parçasıymuş gibi ele alınmamalıdır. `x:XData`rasgele iyi biçimlendirilmiş XML içerebilir.
+Bir XAML üretimi içinde XML veri Adaları yerleştirmesini mümkün bir şekilde sunar. İçindeki XML öğeleri, `x:XData` işlem gören varsayılan xaml ad alanının veya DIĞER xaml ad alanının bir parçası gıbı XAML işlemcileri tarafından değerlendirilmemelidir. `x:XData` Rastgele düzgün biçimlendirilmiş XML içerebilir.
 
 ## <a name="xaml-object-element-usage"></a>XAML Nesne Öğesi Kullanımı
 
@@ -34,25 +34,25 @@ XML veri adalarının XAML üretimi içinde yerleştirilmesine olanak sağlar. �
 
 |||
 |-|-|
-|`elementDataRoot`|Kapalı veri adasının tek kök öğesi. Çoğu nihai tüketici için, tek bir köke sahip olmayan XML geçersiz kabul edilir. Özellikle, WPF veya veri `x:XData` bağlama için XML kaynaklarını kullanan diğer birçok teknoloji için XML veri kaynağı olarak tasarlanmıştırsa, tek bir kök gereklidir.|
-|`[elementData]`|İsteğe bağlı. XML verilerini temsil eden XML. Eleman verileri ve iç içe öğeler diğer öğelerde bulunabilir gibi elemanların herhangi bir sayı bulunabilir; ancak, XML genel kuralları geçerlidir.|
+|`elementDataRoot`|İliştirilmiş veri Adası 'nin tek kök öğesi. En son tüketiciler için, tek bir köküne sahip olmayan XML geçersiz olarak kabul edilir. Özellikle, `x:XData` WPF için BIR XML veri kaynağı veya veri bağlama IÇIN XML kaynakları kullanan diğer teknolojiler için tasarlanan tek bir kök gereklidir.|
+|`[elementData]`|İsteğe bağlı. XML verilerini temsil eden XML. Herhangi bir sayıda öğe öğe verisi, iç içe yerleştirilmiş öğeler ise diğer öğelerde bulunabilir; Ancak, XML 'nin genel kuralları geçerlidir.|
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bir `x:XData` nesneiçindeki XML öğeleri, veriler içinde xmldom içeren tüm olası ad alanlarını ve öneklerini yeniden bildirebilir.
+Bir nesne içindeki XML öğeleri, `x:XData` veri içinde bulunan XMLDOM 'ın tüm olası ad alanlarını ve öneklerini yeniden bildirebilir.
 
-XML verilerine ve `x:XData` içsel XAML türüne programlı erişim .NET XAML Services'da <xref:System.Windows.Markup.XData> sınıf aracılığıyla mümkündür.
+XML verilerine ve `x:XData` IÇSEL xaml türüne programlı erişim, sınıfı aracılığıyla .NET XAML hizmetlerinde mümkündür <xref:System.Windows.Markup.XData> .
 
-## <a name="wpf-usage-notes"></a>WPF Kullanım Notları
+## <a name="wpf-usage-notes"></a>WPF kullanım notları
 
-Nesne `x:XData` öncelikle bir <xref:System.Windows.Data.XmlDataProvider>alt nesne olarak kullanılır , veya alternatif olarak, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> özelliğin alt nesnesi olarak (XAML, bu genellikle özellik öğesi sözdizimi ifade edilir).
+`x:XData`Nesne öncelikle bir alt nesne olarak <xref:System.Windows.Data.XmlDataProvider> veya alternatif olarak özelliğin alt nesnesi olarak KULLANıLıR <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> (XAML 'de, bu genellikle özellik öğesi söz diziminde ifade edilir).
 
-Veriler genellikle veri adasındaki temel XML ad alanını yeni bir varsayılan XML ad alanı (boş bir dize olarak ayarlanmış) olarak yeniden tanımlamalıdır. Bu basit veri adaları için <xref:System.Windows.Data.Binding.XPath%2A> en kolayıdır, çünkü verilere başvurmak ve bağlamak için kullanılan ifadeler öneklerin eklenmesini önleyebilir. Daha karmaşık veri adaları veriler için birden çok önek tanımlayabilir ve kökteki XML ad alanı için belirli bir önek kullanabilir. Bu durumda, <xref:System.Windows.Data.Binding.XPath%2A> tüm ifade başvuruları uygun ad alanı eşlenen öneki içermelidir. Daha fazla bilgi için bkz: [Veri Bağlama Genel Bakışı.](../data/data-binding-overview.md)
+Veriler genellikle veri Adası içindeki temel XML ad alanını yeni bir varsayılan XML ad alanı olacak şekilde (boş bir dizeye ayarlanır) yeniden tanımlamalıdır. Bu, basit veri Adaları için en kolay yoldur çünkü <xref:System.Windows.Data.Binding.XPath%2A> verilere başvurmak ve bağlanmak için kullanılan ifadeler ön eklerin dahil edilmesini önleyebilir. Daha karmaşık veri Adaları, veriler için birden çok önek tanımlayabilir ve kökte XML ad alanı için belirli bir önek kullanabilir. Bu durumda, tüm <xref:System.Windows.Data.Binding.XPath%2A> ifade başvuruları uygun ad alanı eşlemeli öneki içermelidir. Daha fazla bilgi için bkz. [veri bağlamaya genel bakış](../data/data-binding-overview.md).
 
-Teknik olarak, `x:XData` türü <xref:System.Xml.Serialization.IXmlSerializable>herhangi bir özelliğin içeriği olarak kullanılabilir. Ancak, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> tek önemli uygulamadır.
+Teknik `x:XData` olarak, türünde herhangi bir özelliğin içeriği olarak kullanılabilir <xref:System.Xml.Serialization.IXmlSerializable> . Ancak, <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType> tek belirgin uygulama.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Data.XmlDataProvider>
-- [Veri Bağlama Genel Bakış](../data/data-binding-overview.md)
-- [Biçimlendirme Uzantısı Bağlama](../../framework/wpf/advanced/binding-markup-extension.md)
+- [Veri Bağlamaya Genel Bakış](../data/data-binding-overview.md)
+- [Biçimlendirme Uzantısı Bağlama](/dotnet/desktop/wpf/advanced/binding-markup-extension)

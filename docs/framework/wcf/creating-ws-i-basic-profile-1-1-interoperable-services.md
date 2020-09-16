@@ -7,34 +7,34 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: fd7828cccb1a19a17e899525d863021d3670fbdd
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5fc29432bdd55daff2d60d641a4cea4925278032
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389756"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543023"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>WS-I Temel Profil 1.1 Birlikte Çalışabilir Hizmetler Oluşturma
-WCF hizmet bitiş noktasını ASP.NET Web hizmeti istemcileriyle birlikte çalışabilir şekilde yapılandırmak için:  
+WCF hizmet uç noktasını ASP.NET Web hizmeti istemcileriyle birlikte çalışabilen şekilde yapılandırmak için:  
   
-- Hizmet <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> bitiş noktanız için bağlama türü olarak türü kullanın.  
+- <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>Hizmet uç noktanız için bağlama türü olarak türü kullanın.  
   
-- Hizmet bitiş noktanızda geri arama ve oturum sözleşmesi özelliklerini veya işlem davranışlarını kullanmayın  
+- Hizmet uç noktanıza geri çağırma ve oturum sözleşmesi özellikleri ya da işlem davranışları kullanmayın  
   
-Bağlamada HTTPS ve aktarım düzeyinde istemci kimlik doğrulaması için isteğe bağlı olarak destek etkinleştirebilirsiniz.  
+İsteğe bağlı olarak, bağlamada HTTPS ve aktarım düzeyi istemci kimlik doğrulaması desteğini etkinleştirebilirsiniz.  
   
-<xref:System.ServiceModel.BasicHttpBinding> Sınıfın aşağıdaki özellikleri WS-I Temel Profil 1.1'in ötesinde işlevsellik gerektirir:  
+Sınıfının aşağıdaki özellikleri <xref:System.ServiceModel.BasicHttpBinding> WS-ı temel profil 1,1 ' nin ötesinde işlevsellik gerektirir:  
   
-- İleti Aktarım Optimizasyonu Mekanizması (MTOM) ileti <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> kodlama özelliği tarafından denetlendi. MTOM'u kullanmamak için <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> bu özelliği varsayılan değerine bırakın.  
+- İleti Iletimi Iyileştirme mekanizması (MTOM) özelliği tarafından denetlenen ileti kodlaması <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> . Bu özelliği varsayılan değerinde bırakın ve bu, MTOM 'yi <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> kullanmaz.  
   
-- <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> Değer tarafından denetlenen ileti güvenliği, WS-I Temel Güvenlik Profili 1.0 ile uyumlu WS-Security desteği sağlar. WS-Security'yi kullanmamak için <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> bu özelliği varsayılan değerine bırakın.  
+- Değere göre denetlenen ileti güvenliği, WS <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> -ı temel güvenlik profili 1,0 ile uyumlu WS-güvenlik desteği sağlar. Bu özelliği, WS-Security ' i kullanmayan varsayılan değerinde bırakın <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> .  
   
-Bir WCF hizmetinin meta verilerini ASP.NET kullanılabilir hale getirmek için Web hizmeti istemci oluşturma araçlarını kullanın: [Web Hizmetleri Açıklama Dil Aracı (Wsdl.exe),](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29)Web Hizmetleri Bulma Aracı [(Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)ve Visual Studio'da **Web Başvuru Ekle** özelliği. Meta veri yayımı etkinleştirin. Daha fazla bilgi için meta [veri uçlarını yayımlama](publishing-metadata-endpoints.md)bölümüne bakın.  
+Bir WCF hizmetinin meta verilerini ASP.NET için kullanılabilir hale getirmek için Web hizmeti istemci oluşturma araçları: [Web Hizmetleri Açıklama Dil Aracı (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100)), [Web Hizmetleri bulma aracı (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))ve Visual Studio 'daki **Web başvurusu Ekle** özelliğini kullanın. Meta veri yayımlamayı etkinleştirin. Daha fazla bilgi için bkz. [meta veri uç noktalarını yayımlama](publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
- Aşağıdaki örnek kod, kod halinde ASP.NET Web hizmeti istemcisiyle ve alternatif olarak bir yapılandırma dosyasında uyumlu bir WCF bitiş noktasının nasıl ekleyeceğini gösterir.  
+### <a name="description"></a>Description  
+ Aşağıdaki örnek kod, bir yapılandırma dosyasında, koddaki ASP.NET Web hizmeti istemcileriyle uyumlu bir WCF uç noktasının nasıl ekleneceğini gösterir.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]

@@ -2,12 +2,12 @@
 title: DotNet paketi komutu
 description: DotNet Pack komutu, .NET Core projeniz için NuGet paketleri oluşturur.
 ms.date: 04/28/2020
-ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 409b946d93cf73fec38941740a446c3ee3402490
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442234"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537841"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -15,7 +15,7 @@ ms.locfileid: "83442234"
 
 ## <a name="name"></a>Name
 
-`dotnet pack`-Kodu bir NuGet paketine paketler.
+`dotnet pack` -Kodu bir NuGet paketine paketler.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -30,14 +30,14 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet pack -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet pack`Komut projeyi oluşturur ve NuGet paketleri oluşturur. Bu komutun sonucu bir NuGet paketidir (yani, bir *. nupkg* dosyası).
 
 Hata ayıklama sembollerini içeren bir paket oluşturmak istiyorsanız iki seçeneğiniz vardır:
 
-- `--include-symbols`-Bu, semboller paketini oluşturur.
-- `--include-source`-Bu, `src` kaynak dosyaları içeren içindeki bir klasörü içeren semboller paketini oluşturur.
+- `--include-symbols` -Bu, semboller paketini oluşturur.
+- `--include-source` -Bu, `src` kaynak dosyaları içeren içindeki bir klasörü içeren semboller paketini oluşturur.
 
 Paketlenmiş projenin NuGet bağımlılıkları *. nuspec* dosyasına eklenir, bu nedenle paket yüklenirken düzgün şekilde çözülür. Projeden projeye başvurular proje içinde paketlenmemiş. Şu anda, projeden projeye bağımlılıklar varsa proje başına bir pakete sahip olmanız gerekir.
 
@@ -74,7 +74,7 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
 - **`--force`**
 
-  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, *Project. varlıklar. JSON* dosyasını silme ile aynıdır.
+  Son geri yükleme başarılı olsa bile tüm bağımlılıkların çözülmesini zorlar. Bu bayrağın belirtilmesi, dosyadaki *project.assets.js* silme ile aynıdır.
 
 - **`-h|--help`**
 
@@ -186,6 +186,6 @@ Web projeleri varsayılan olarak packable değildir. Varsayılan davranışı ge
 
   , Ve kullanma hakkında daha fazla bilgi için `NuspecFile` `NuspecBasePath` `NuspecProperties` aşağıdaki kaynaklara bakın:
   
-  - [. Nuspec kullanarak paketleme](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
-  - [Özelleştirilmiş paket oluşturmak için gelişmiş uzantı noktaları](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
-  - [Genel Özellikler](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)
+  - [. Nuspec kullanarak paketleme](/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [Özelleştirilmiş paket oluşturmak için gelişmiş uzantı noktaları](/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [Genel Özellikler](/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

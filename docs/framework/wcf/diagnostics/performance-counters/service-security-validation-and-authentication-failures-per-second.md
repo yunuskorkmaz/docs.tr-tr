@@ -2,17 +2,17 @@
 title: 'Hizmet: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası'
 ms.date: 03/30/2017
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-ms.openlocfilehash: f3f27100afb7390a68d99421cad6f43d9abaccd5
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: f6dbf7f6da208bde3a9a380d50fd6caf68576f25
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163871"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535917"
 ---
 # <a name="service-security-validation-and-authentication-failures-per-second"></a>Hizmet: Saniyede Güvenlik Doğrulama ve Kimlik Doğrulama Hatası
 Sayaç adı: saniye başına güvenlik doğrulaması ve kimlik doğrulama başarısızlığı.  
   
-## <a name="description"></a>Açıklama  
+## <a name="description"></a>Description  
  Bu sayaç, "güvenlik çağrıları yetkilendirilmemiş" sayacı kapsamında olmayan bir güvenlik sorunu nedeniyle her ileti reddedildiğinde artırılır. Bu tür sorunlar şunlardır:  
   
 - İstemci belirteci iletiden okunamıyor.  
@@ -29,6 +29,6 @@ Sayaç adı: saniye başına güvenlik doğrulaması ve kimlik doğrulama başar
   
 - TLSNEGO/SPNEGO Handshake sırasında hatalar oluştu.  
   
- Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanmış olan [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))performans sayacı türüdür.  
+ Bu sayaç, değeri aşağıdaki formül kullanılarak hesaplanmış olan [PERF_COUNTER_COUNTER](/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))performans sayacı türüdür.  
   
  (N 1-N 0)/((D 1-D 0)/F)

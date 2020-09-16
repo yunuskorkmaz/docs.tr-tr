@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text boxes, adding content
 - UI Automation, adding content to text boxes
 ms.assetid: 8bdd1a73-1ecb-4a05-a891-a7827ebb767f
-ms.openlocfilehash: 4136d460de7091a515580cade16f06e54699727a
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 5e7ab77f1dcc2198e69255013eeb30cc703a235f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166919"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543140"
 ---
 # <a name="add-content-to-a-text-box-using-ui-automation"></a>UI Otomasyonu Kullanarak Metin Kutusuna İçerik Ekleme
 > [!NOTE]
@@ -31,4 +31,4 @@ ms.locfileid: "87166919"
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [TextModel metin ekleme örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771478(v=vs.90))
+- [TextModel metin ekleme örneği](/previous-versions/dotnet/netframework-3.5/ms771478(v=vs.90))

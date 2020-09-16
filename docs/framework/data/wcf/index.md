@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: ca6b196e8c910f97ead6d1df5b6c0dd6c49c68a4
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: c36967236c40efbf432d554c3f551aea22cfb148
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247758"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549685"
 ---
 # <a name="wcf-data-services-45"></a>WCF Veri Hizmetleri 4.5
 
@@ -62,7 +62,7 @@ Visual Studio ile nasıl tümleştirilir?
 
 Bununla ne yapabilirim?
 
-- [Genel Bakış](wcf-data-services-overview.md)
+- [Genel bakış](wcf-data-services-overview.md)
 
 - [Uygulama senaryoları](application-scenarios-wcf-data-services.md)
 
@@ -76,17 +76,17 @@ LINQ kullanmak istiyorum...
 
 Hala daha fazla bilgi gerekiyor...
 
-- [Ekip Blogu WCF Veri Hizmetleri](https://docs.microsoft.com/archive/blogs/astoriateam/)
+- [Ekip Blogu WCF Veri Hizmetleri](/archive/blogs/astoriateam/)
 
 - [Kaynaklar](wcf-data-services-resources.md)
 
 ## <a name="in-this-section"></a>Bu Bölümde
 
-[Genel Bakış](wcf-data-services-overview.md)
+[Genel bakış](wcf-data-services-overview.md)
 
 WCF Veri Hizmetleri ' de kullanılabilen özellikler ve işlevlere genel bir bakış sağlar.
 
-[WCF Veri Hizmetleri 5,0 ' deki yenilikler](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+[WCF Veri Hizmetleri 5,0 ' deki yenilikler](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
 
 WCF Veri Hizmetleri yeni işlevleri ve yeni OData özellikleri desteğini açıklar.
 

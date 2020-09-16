@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: d2bb964c3d034ea6913c91922fcff1e62130e0dc
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4ea1954841696ef28cceca2968e750d9771be038
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558471"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543717"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Geliştiriciler için .NET Framework yüklemesi
 
@@ -35,13 +35,13 @@ Hızlı bağlantılar için aşağıdaki tabloyu kullanın veya Ayrıntılar iç
 
 | .NET Framework sürümü | Yükleyici (Geliştirici paketi ve çalışma zamanı) | Platform desteği |
 | ---------------------- | -------------------------------------- | ---------------- |
-|**4,8**   | [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **Dahil edilen:**<br/><br/>Windows 10 Mayıs 2019 güncelleştirmesi<br/>[Visual Studio 2019 (16,3 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2019<br/>Windows Server, sürüm 1809<br/>Windows Server, sürüm 1803<br /><br/> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
+|**4,8**   | [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)    | **Dahil edilen:**<br/><br/>Windows 10 Mayıs 2019 güncelleştirmesi<br/>[Visual Studio 2019 (16,3 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2019<br/>Windows Server, sürüm 1809<br/>Windows Server, sürüm 1803<br /><br/> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
 |**4.7.2** | [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) | **Dahil edilen:** <br/><br/>Windows 10 Ekim 2018 güncelleştirmesi<br/>Windows 10 Nisan 2018 güncelleştirmesi<br/>Windows Server 2019<br/>Windows Server, sürüm 1809<br/>Windows Server, sürüm 1803<br/>[Visual Studio 2017 (15,8 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server, sürüm 1709 ve öncesi<br /><br/> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
 |**4.7.1** | [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471) | **Dahil edilen:** <br/><br/>Windows 10 Fall Creators Update<br/>Windows Server, sürüm 1709<br/>[Visual Studio 2017 (15,5 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br/><br/> Windows 10 Creators Update <br /> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2016 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
 |**4,7**   | [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)    | **Dahil edilen:** <br/><br/>Windows 10 Creators Update<br/>[Visual Studio 2017 (15,3 güncelleştirme)](https://my.visualstudio.com/Downloads?q=visual%20studio%202017)<br/><br/> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 Yıldönümü Güncelleştirmesi<br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2016 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))||
 |**4.6.2** | [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) | **Dahil edilen:** <br/><br/>Windows 10 Yıldönümü Güncelleştirmesi<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 Kasım güncelleştirmesi <br/> Windows 10 <br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.6.1** | [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461) | **Dahil edilen:** <br/><br/>[Visual Studio 2015 güncelleştirme 2](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br/><br/>**Şunları yükleyebilirsiniz:**<br /><br/> Windows 10 <br /> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
-|**4,6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **Dahil edilen:** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
+|**4.6**   | [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)    | **Dahil edilen:** <br/><br/> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.5.2** | [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452) | **Şunları yükleyebilirsiniz:**<br/><br/> Windows 8.1 ve önceki sürümler<br /> Windows Server 2012 R2 ve öncesi<br /> (tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4.5.1** | [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451) | **Dahil edilen:**<br/><br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Şunları yükleyebilirsiniz:**<br /><br/> Windows 8 ve önceki sürümler<br /> Windows Server 2012 ve öncesi<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
 |**4,5**   | [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)    | **Dahil edilen:** <br/><br/>Windows 8<br /> Windows Server 2012<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Şunları yükleyebilirsiniz:**<br/><br /> Windows 7 ve öncesi<br /> Windows Server 2008 SP2 ve öncesi<br />(tam liste için bkz. [sistem gereksinimleri](../get-started/system-requirements.md))|
@@ -68,7 +68,7 @@ Visual Studio veya başka bir geliştirme ortamında .NET Framework en güncel s
 
 .NET Framework 4.5.1 veya 4.5.2 için geliştirici paketi, .NET Framework 4,6 için hedefleme paketi ve .NET Framework 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 veya 4,8 için geliştirici paketi, Visual Studio gibi tümleşik bir geliştirme ortamında kullanılmak üzere başvuru derlemelerinin, dil paketlerinin ve IntelliSense dosyalarının belirli bir .NET Framework sürümünü sağlar.  Visual Studio kullanıyorsanız, geliştirici paketi veya hedefleme paketi ayrıca yeni bir proje oluştururken hedef seçeneklere .NET Framework yüklü sürümünü de ekler.  Aşağıdakilerden birini seçin:
 
-- [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
 - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
 - [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -102,7 +102,7 @@ Hem Web hem de çevrimdışı yükleyiciler x86 tabanlı ve x64 tabanlı bilgisa
 
 1. Yüklemek istediğiniz .NET Framework sürümünün karşıdan yükleme sayfasını açın:
 
-   - [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
    - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
    - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
    - [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -138,7 +138,7 @@ Hem Web hem de çevrimdışı yükleyiciler x86 tabanlı ve x64 tabanlı bilgisa
 
 - .NET Framework 4,5 veya sonraki sürümleri yüklemek için yönetici kimlik bilgilerine sahip olmanız gerekir.
 
-- .NET Framework 4,5 yeniden dağıtılabilir, dijital bir sertifikada yanlış bir zaman damgasıyla ilgili bir sorunu düzeltmek için 9 Ekim 2012 tarihinde güncelleştirildi. Bu, Microsoft tarafından oluşturulan ve imzalanan dosyalardaki dijital imzanın erken süre sonu dolmasına neden olur. Daha önce 16 Ağustos 2012 tarihli .NET Framework 4,5 yeniden dağıtılabilir paketini yüklediyseniz, [.NET Framework indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-framework/net45)kopyanızı en son yeniden dağıtılabilir ile güncelleştirmenizi öneririz. Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Güvenlik Danışmanlığı 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) ve [bilgi Bankası makalesi 2770445](https://support.microsoft.com/kb/2770445).
+- .NET Framework 4,5 yeniden dağıtılabilir, dijital bir sertifikada yanlış bir zaman damgasıyla ilgili bir sorunu düzeltmek için 9 Ekim 2012 tarihinde güncelleştirildi. Bu, Microsoft tarafından oluşturulan ve imzalanan dosyalardaki dijital imzanın erken süre sonu dolmasına neden olur. Daha önce 16 Ağustos 2012 tarihli .NET Framework 4,5 yeniden dağıtılabilir paketini yüklediyseniz, [.NET Framework indirme sayfasından](https://dotnet.microsoft.com/download/dotnet-framework/net45)kopyanızı en son yeniden dağıtılabilir ile güncelleştirmenizi öneririz. Bu sorun hakkında daha fazla bilgi için bkz. [Microsoft Güvenlik Danışmanlığı 2749655](/security-updates/SecurityAdvisories/2012/2749655) ve [bilgi Bankası makalesi 2770445](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Dil paketlerini yüklemek için
 
@@ -149,7 +149,7 @@ Dil paketleri, desteklenen diller için yerelleştirilmiş kaynakları (örneği
 
 1. Yüklediğiniz .NET Framework sürümü için dil paketi indirme sayfasını açın:
 
-   - [.NET Framework 4,8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+   - [ .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
    - [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
    - [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
    - [.NET Framework 4,7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
@@ -166,7 +166,7 @@ Dil paketleri, desteklenen diller için yerelleştirilmiş kaynakları (örneği
 
 Aşağıdaki tabloda desteklenen diller listelenmiştir.
 
-| Dil              | Culture (Kültür) |
+| Dil              | Kültür |
 | --------------------- | :-----: |
 | Arapça                | Ar      |
 | Çekçe                 | 'ye      |
@@ -188,7 +188,7 @@ Aşağıdaki tabloda desteklenen diller listelenmiştir.
 | Portekizce (Portekiz) | pt-PT   |
 | Rusça               | ru      |
 | Basitleştirilmiş Çince    | zh-CHS  |
-| İspanyolca               | es      |
+| Spanish               | es      |
 | İsveççe               | v      |
 | Geleneksel Çince   | zh-CHT  |
 | Türkçe               | tr      |

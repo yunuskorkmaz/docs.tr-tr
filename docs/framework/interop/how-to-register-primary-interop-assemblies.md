@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-ms.openlocfilehash: a15bda7b40f160b31028c62cf7c73bdedd9541fa
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 09b283712a66805669154c720dff5c2c5f910bf4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622750"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547186"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Nasıl yapılır: Birincil Birlikte Çalışma Derlemelerini Kaydetme
 
@@ -50,6 +50,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Birincil birlikte çalışma Derlemeleriyle programlama](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
-- [Birincil birlikte çalışma derlemelerini bulma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
-- [Birincil birlikte çalışma derlemelerini yeniden dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))
+- [Birincil birlikte çalışma Derlemeleriyle programlama](/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [Birincil birlikte çalışma derlemelerini bulma](/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
+- [Birincil birlikte çalışma derlemelerini yeniden dağıtma](/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

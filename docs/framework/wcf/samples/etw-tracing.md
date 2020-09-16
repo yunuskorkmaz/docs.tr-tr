@@ -3,12 +3,12 @@ title: ETW İzleme
 description: Bu örnek, Windows için olay Izleme (ETW) ve ETWTraceListener kullanarak uçtan uca (E2E) izlemenin nasıl uygulanacağını gösterir.
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 210186285ed749a5d1567becd6738939b0bd9d03
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 6e7526ef05d672b550599e3b12a4b083e9130b96
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244432"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547147"
 ---
 # <a name="etw-tracing"></a>ETW İzleme
 Bu örnek, Windows için olay Izleme (ETW) ve `ETWTraceListener` Bu örnekle birlikte sunulan uçtan uca (e2e) izlemenin nasıl uygulanacağını gösterir. Örnek, [Başlarken](getting-started-sample.md) ' i temel alır ve ETW izleme içerir.  
@@ -51,7 +51,7 @@ Bu örnek, Windows için olay Izleme (ETW) ve `ETWTraceListener` Bu örnekle bir
  Bu dinleyiciyi kullanmadan önce, bir ETW Izleme oturumunun başlatılmış olması gerekir. Bu oturum, Logman.exe veya Tracelog.exe kullanılarak başlatılabilir. Bu örneğe eklenen bir SetupETW.bat dosyası, oturumu kapatmak ve günlük dosyasını tamamlamak üzere bir CleanupETW.bat dosyası ile birlikte ETW Izleme oturumu ayarlayabilmeniz için eklenmiştir.  
   
 > [!NOTE]
-> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur. Bu araçlar hakkında daha fazla bilgi için bkz.<https://go.microsoft.com/fwlink/?LinkId=56580>  
+> Bu örneğe ilişkin Kurulum yordamı ve derleme yönergeleri bu konunun sonunda bulunur. Bu araçlar hakkında daha fazla bilgi için bkz. <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  ETWTraceListener kullanılırken izlemeler ikili. etl dosyalarında günlüğe kaydedilir. ServiceModel izleme açık olduğunda, oluşturulan tüm izlemeler aynı dosyada görünür. . Etl ve. svclog dosyalarını görüntülemek için [hizmet Izleme Görüntüleyicisi aracı 'nı (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) kullanın. Görüntüleyici, bir iletiyi kaynağından hedefine ve tüketim noktasına izlemeyi olanaklı kılan sistemin uçtan uca bir görünümünü oluşturur.  
   
@@ -109,4 +109,4 @@ logman stop Wcf
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric Izleme örnekleri](/previous-versions/appfabric/ff383407(v=azure.10))

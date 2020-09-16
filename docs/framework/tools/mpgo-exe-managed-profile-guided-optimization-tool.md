@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: 18a379447e1d5ba97090eca299c59cc161c7be71
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 714715968388325713a12027fb0ab89415e1d60c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517288"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544290"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Yönetilen Profil Temelli İyileştirme Aracı)
 
@@ -46,7 +46,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 > [!NOTE]
 > `–Scenario`Ya da `–Import` gerekli bir komut olarak kullanabilirsiniz, ancak ikisini birden kullanamazsınız. Seçeneğini belirtirseniz gerekli parametrelerin hiçbiri kullanılmaz `–Reset` .
 
-|Gerekli parametre|Açıklama|
+|Gerekli parametre|Description|
 |------------------------|-----------------|
 |`-Scenario` \<*command*><br /><br /> —veya—<br /><br /> `-Scenario` \<*packageName*><br /><br /> -veya-<br /><br /> `-Import` \<*directory*>|Masaüstü uygulamaları için, `–Scenario` komut satırı bağımsız değişkenleri dahil olmak üzere iyileştirmek istediğiniz uygulamayı çalıştırmak için komutunu belirtmek üzere kullanın. Boşluklar içeren bir yol belirtiyorsa *komut* etrafında üç çift tırnak işareti kümesini kullanın; Örneğin: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"` . Çift tırnak işareti kullanmayın; *komut* boşluk içeriyorsa, bunlar düzgün çalışmayacaktır.<br /><br /> -veya-<br /><br /> Windows 8. x Mağazası uygulamaları için `–Scenario` profil bilgilerini oluşturmak istediğiniz paketi belirtmek üzere kullanın. Tam paket adı yerine, paketin görünen adını veya paket aile adını belirtirseniz ve yalnızca tek bir eşleşme varsa Mpgo.exe sağladığınız adla eşleşen paketi seçer. Belirtilen adla eşleşen birden çok paket varsa, Mpgo.exe sizden bir paket seçmenizi ister.<br /><br /> —veya—<br /><br /> `-Import`' Deki derlemeleri iyileştirmek için önceden iyileştirilmiş derlemelerin en iyi duruma getirme verilerinin kullanılması gerektiğini belirtmek için kullanın `-AssemblyList` . *Dizin* , önceden iyileştirilmiş dosyaları içeren dizini belirtir. Veya içinde belirtilen derlemeler `–AssemblyList` , `–AssemblyListFile` içeri aktarılan dosyalardaki veriler kullanılarak en iyi duruma getirilecek derlemelerin yeni sürümleridir. Derlemelerin eski sürümlerine ait en iyi duruma getirme verilerini kullanmak, senaryoyu yeniden çalıştırmadan derlemelerin yeni sürümlerini en iyi duruma getirmenizi sağlar.  Ancak, içe aktarılan ve hedef derlemeler önemli ölçüde farklı kodlar içeriyorsa, en iyi duruma getirme verileri etkisiz olur. Veya içinde belirtilen derleme adları `–AssemblyList` , `–AssemblyListFile` Dizin tarafından belirtilen dizinde bulunmalıdır `–Import` *directory*. Boşluk içeren bir yol belirtiyorsa *Dizin* etrafında üç çift tırnak işareti kümesini kullanın.<br /><br /> Ya da parametresini belirtmeniz `–Scenario` gerekir `–Import` .|
 |`-OutDir` \<*directory*>|En iyi duruma getirilmiş derlemelerin yerleştirileceği dizin. Çıkış dizini klasöründe bir derleme zaten varsa, yeni bir kopya oluşturulur ve adına bir dizin numarası eklenir; Örneğin: *assemblyname*-1.exe. Boşluk içeren bir yol belirtiyorsa *Dizin* etrafında çift tırnak işareti kullanın.|
@@ -54,7 +54,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-AppID` \<*appId*>|Belirtilen paketteki uygulamanın kimliği. Joker karakteri ( \* ) kullanırsanız, Mpgo.exe paketteki Appıds değerlerini numaralandırmaya çalışır ve geri dönecektir \<*package_family_name*> ! Uygulama başarısız olursa. Başında önek olarak ünlem işareti (!) konmuş bir dize belirtirseniz, Mpgo.exe paket aile adını sağlanan bağımsız değişkenle birleştirir.|
 |`-Timeout` \<*seconds*>|Uygulama gelmeden önce Windows 8. x Mağazası uygulamasının çalışmasına izin verme süresi.|
 
-|İsteğe bağlı parametre|Açıklama|
+|İsteğe bağlı parametre|Description|
 |------------------------|-----------------|
 |`-64bit`|64-bit sistemler için derlemeleri kullanır.  Derlemeniz kendisini 64-bit olarak bildiriyor olsa da 64-bit derlemeler için bu parametreyi belirtmelisiniz.|
 |`-ExeConfig` \<*filename*>|Senaryonuzun sürüm ve yükleyici bilgilerini sağlamak üzere kullandığı yapılandırma dosyasını belirtir.|
@@ -103,7 +103,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 - Visual Studio makroları aynı zamanda varsayılan olarak sonlarında eğik çizgiler içerdiğinden, sonda eğik çizgileri olan tırnak işaretli yollar kullanamazsınız. (Örneğin, `–OutDir "C:\Output Folder\"` geçersiz.) Bu kısıtlamayı geçici olarak çözmek için sondaki eğik çizgiden çıkma yapabilirsiniz. (Örneğin, `-OutDir "$(OutDir)\"` bunun yerine kullanın.)  
   
-- Varsayılan olarak, Mpgo.exe Visual Studio yapı yolu üzerinde değildir. Yolu Visual Studio'ya eklemeli ya da Mpgo komut satırında tam yolu belirtmelisiniz. `–Scenario` `–Import` Visual Studio 'da derleme sonrası olayında ya da parametresini kullanabilirsiniz. Ancak, tipik işlem, `–Scenario` Visual Studio için geliştirici komut istemi bir kez kullanılır ve ardından `–Import` her derlemeden sonra iyileştirilmiş derlemeleri güncelleştirmek için kullanılır; Örneğin: `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"` .  
+- Varsayılan olarak, Mpgo.exe Visual Studio yapı yolu üzerinde değildir. Yolu Visual Studio'ya eklemeli ya da Mpgo komut satırında tam yolu belirtmelisiniz. `–Scenario` `–Import` Visual Studio 'da derleme sonrası olayında ya da parametresini kullanabilirsiniz. Ancak, tipik işlem, `–Scenario` Visual Studio için geliştirici komut istemi bir kez kullanılır ve ardından `–Import` her derlemeden sonra iyileştirilmiş derlemeleri güncelleştirmek için kullanılır; Örneğin:  `"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"` .  
   
 <a name="samples"></a>
 ## <a name="examples"></a>Örnekler  
@@ -130,4 +130,4 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 - [Ngen.exe (yerel görüntü Oluşturucu)](ngen-exe-native-image-generator.md)
 - [Komut Istemleri](developer-command-prompt-for-vs.md)
 - [Masaüstü uygulamalarınız için başlatma performansını artırma](https://devblogs.microsoft.com/dotnet/improving-launch-performance-for-your-desktop-applications/)
-- [.NET 4,5 performans Iyileştirmelerine genel bakış](https://docs.microsoft.com/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)
+- [.NET 4,5 performans Iyileştirmelerine genel bakış](/archive/msdn-magazine/2012/april/clr-an-overview-of-performance-improvements-in-net-4-5)

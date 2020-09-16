@@ -2,18 +2,18 @@
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
 ms.date: 04/30/2020
-ms.openlocfilehash: c3aa6549a0b521db7fc19c6ff44665e3c4ba0c5f
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88024660"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538048"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
-`dotnet-install.ps1` | `dotnet-install.sh`-.NET Core SDK ve paylaşılan çalışma zamanını yüklemek için kullanılan betik.
+`dotnet-install.ps1` | `dotnet-install.sh` -.NET Core SDK ve paylaşılan çalışma zamanını yüklemek için kullanılan betik.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -46,7 +46,7 @@ dotnet-install.sh --help
 
 Bash betiği Ayrıca PowerShell anahtarlarını okur, bu sayede PowerShell anahtarlarını Linux/macOS sistemlerinde betiği ile birlikte kullanabilirsiniz.
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet-install`Betikler, .NET Core CLI ve paylaşılan çalışma zamanını içeren .NET Core SDK yönetici olmayan bir yüklemesini gerçekleştirir. İki komut dosyası vardır:
 
@@ -71,8 +71,8 @@ Geliştirme ortamı ayarlamak veya uygulamaları çalıştırmak için, bu betik
 
 Betiklerin kararlı sürümünü kullanmanızı öneririz:
 
-- Bash (Linux/macOS):<https://dot.net/v1/dotnet-install.sh>
-- PowerShell (Windows):<https://dot.net/v1/dotnet-install.ps1>
+- Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh>
+- PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
 ### <a name="script-behavior"></a>Betik davranışı
 
@@ -102,8 +102,8 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
   Yükleme için kaynak kanalını belirtir. Olası değerler şunlardır:
 
-  - `Current`-En güncel sürüm.
-  - `LTS`-Uzun süreli destek kanalı (desteklenen en güncel sürüm).
+  - `Current` -En güncel sürüm.
+  - `LTS` -Uzun süreli destek kanalı (desteklenen en güncel sürüm).
   - Belirli bir yayını temsil eden X. Y biçimindeki iki bölümlü sürüm (örneğin, `2.1` veya `3.0` ).
   - Dal adı: Örneğin, `release/3.1.1xx` veya `master` (gecelik yayınlar için). Bir önizleme kanalından sürüm yüklemek için bu seçeneği kullanın. Bir kanalın adını [yükleyiciler ve Ikili dosyalar](https://github.com/dotnet/core-sdk#installers-and-binaries)bölümünde listelendiği şekilde kullanın.
 
@@ -131,7 +131,7 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
 - **`-NoCdn|--no-cdn`**
 
-  [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) ile indirmeyi devre dışı bırakır ve önbelleğe alınmamış akışı doğrudan kullanır.
+  [Azure Content Delivery Network (CDN)](/azure/cdn/cdn-overview) ile indirmeyi devre dışı bırakır ve önbelleğe alınmamış akışı doğrudan kullanır.
 
 - **`-NoPath|--no-path`**
 
@@ -153,9 +153,9 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
   Tüm SDK 'Yı değil yalnızca paylaşılan çalışma zamanını kurar. Olası değerler şunlardır:
 
-  - `dotnet`- `Microsoft.NETCore.App` paylaşılan çalışma zamanı.
-  - `aspnetcore`- `Microsoft.AspNetCore.App` paylaşılan çalışma zamanı.
-  - `windowsdesktop`- `Microsoft.WindowsDesktop.App` paylaşılan çalışma zamanı.
+  - `dotnet` - `Microsoft.NETCore.App` paylaşılan çalışma zamanı.
+  - `aspnetcore` - `Microsoft.AspNetCore.App` paylaşılan çalışma zamanı.
+  - `windowsdesktop` - `Microsoft.WindowsDesktop.App` paylaşılan çalışma zamanı.
 
 - **`--runtime-id <RID>`**
 
@@ -184,8 +184,8 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
 
   Belirli bir derleme sürümünü temsil eder. Olası değerler şunlardır:
 
-  - `latest`-Kanalda en son derleme ( `-Channel` seçeneğiyle kullanılır).
-  - `coherent`-Kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı seçenekleriyle kullanılır `-Channel` ).
+  - `latest` -Kanalda en son derleme ( `-Channel` seçeneğiyle kullanılır).
+  - `coherent` -Kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı seçenekleriyle kullanılır `-Channel` ).
   - Belirli bir derleme sürümünü temsil eden X. Y. Z biçimindeki üç bölümden oluşan sürüm; seçeneğinin yerini alır `-Channel` . Örneğin: `2.0.0-preview2-006120`.
 
   Belirtilmemişse, `-Version` Varsayılan olarak olur `latest` .

@@ -2,22 +2,22 @@
 title: LINQ ve Dizeler
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 73ce4bf5586f1f9ff4995ea6f425b90744b7e333
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353278"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549855"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ ve dizeler (Visual Basic)
-LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için kullanılabilir. Bu, özellikle metin dosyalarındaki yarı yapılandırılmış verilerle yararlı olabilir. LINQ sorguları, geleneksel dize işlevleri ve normal ifadelerle birleştirilebilir. Örneğin, LINQ kullanarak sorgulayabilmeniz veya değiştiremeyeceğiniz bir dize dizisi oluşturmak için <xref:System.String.Split%2A> veya <xref:System.Text.RegularExpressions.Regex.Split%2A> yöntemini kullanabilirsiniz. Bir LINQ sorgusunun `where` yan tümcesinde <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> yöntemini kullanabilirsiniz. Aynı şekilde, bir normal ifade tarafından döndürülen <xref:System.Text.RegularExpressions.MatchCollection> sonuçlarını sorgulamak veya değiştirmek için LINQ kullanabilirsiniz.  
+LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için kullanılabilir. Bu, özellikle metin dosyalarındaki yarı yapılandırılmış verilerle yararlı olabilir. LINQ sorguları, geleneksel dize işlevleri ve normal ifadelerle birleştirilebilir. Örneğin, <xref:System.String.Split%2A> <xref:System.Text.RegularExpressions.Regex.Split%2A> daha sonra LINQ kullanarak sorgulayabilmeniz veya değiştiremeyeceğiniz bir dize dizisi oluşturmak için veya yöntemini kullanabilirsiniz. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> `where` Bir LINQ sorgusunun yan tümcesindeki yöntemini kullanabilirsiniz. Aynı şekilde, <xref:System.Text.RegularExpressions.MatchCollection> bir normal ifade tarafından döndürülen sonuçları sorgulamak veya değiştirmek IÇIN LINQ kullanabilirsiniz.  
   
- Yarı yapılandırılmış metin verilerini XML 'e dönüştürmek için bu bölümde açıklanan teknikleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: CSV DOSYALARıNDAN XML oluşturma](how-to-generate-xml-from-csv-files.md).  
+ Yarı yapılandırılmış metin verilerini XML 'e dönüştürmek için bu bölümde açıklanan teknikleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: CSV DOSYALARıNDAN XML oluşturma](../../../../standard/linq/generate-xml-csv-files.md).  
   
  Bu bölümdeki örnekler iki kategoriye ayrılır:  
   
 ## <a name="querying-a-block-of-text"></a>Metin bloğunu sorgulama  
- <xref:System.String.Split%2A> yöntemini veya <xref:System.Text.RegularExpressions.Regex.Split%2A> yöntemini kullanarak bunları bir daha küçük dizeler dizisine bölerek metin bloklarını sorgulayabilir, çözümleyebilir ve değiştirebilirsiniz. Kaynak metni sözcükler, cümleler, paragraflar, sayfalar veya diğer ölçütlere bölebilir ve ardından sorgunuzda gerekliyse ek bölmeler gerçekleştirebilirsiniz.  
+ Yöntemini veya yöntemini kullanarak bunları bir daha küçük dizeler dizisine bölerek metin bloklarını sorgulayabilir, çözümleyebilir ve değiştirebilirsiniz <xref:System.String.Split%2A> <xref:System.Text.RegularExpressions.Regex.Split%2A> . Kaynak metni sözcükler, cümleler, paragraflar, sayfalar veya diğer ölçütlere bölebilir ve ardından sorgunuzda gerekliyse ek bölmeler gerçekleştirebilirsiniz.  
   
  [Nasıl yapılır: dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
  Metin üzerinde basit sorgulama için LINQ 'ın nasıl kullanılacağını gösterir.  
@@ -62,4 +62,4 @@ LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için ku
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](index.md)
-- [Nasıl yapılır: CSV Dosyalarından XML Oluşturma](how-to-generate-xml-from-csv-files.md)
+- [Nasıl yapılır: CSV dosyalarından XML oluşturma](../../../../standard/linq/generate-xml-csv-files.md)

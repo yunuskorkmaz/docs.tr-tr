@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-ms.openlocfilehash: 918c90f6741047f7d3cdf89a9b182700ecb2ed93
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: dc808f3e8d6bd89ba979d43e5b4ec9d787bd09b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617464"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545265"
 ---
 # <a name="exposing-net-components-to-com"></a>.NET bileşenlerini COM 'a gösterme
 
@@ -42,11 +42,11 @@ ms.locfileid: "85617464"
 
      COM geliştiricileri, günümüzde kullandıkları aynı araçları ve teknikleri kullanarak bir derlemedeki türlere başvurabilir.
 
-3. [.Net nesnesi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).
+3. [.Net nesnesi çağırma](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).
 
      COM geliştiricileri, hiçbir yönetilmeyen türdeki yöntemleri çağırdıkları şekilde .NET nesnesi üzerinde Yöntemler çağırabilirler. Örneğin, COM **Cocreateınstance** API 'si .net nesnelerini etkinleştirir.
 
-4. [Com erişimi için bir uygulamayı dağıtın](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).
+4. [Com erişimi için bir uygulamayı dağıtın](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).
 
      Tanımlayıcı adlı bir derleme, genel derleme önbelleğine yüklenebilir ve yayımcısından imza gerektirir. Tanımlayıcı olarak adlandırılmış olmayan derlemeler istemcinin uygulama dizininde yüklü olmalıdır.
 

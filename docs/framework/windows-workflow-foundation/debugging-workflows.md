@@ -2,16 +2,16 @@
 title: İş Akışlarında Hata Ayıklama
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 31c688f5f45b41f337176108486ec2074e1915a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802641"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543842"
 ---
 # <a name="debugging-workflows"></a>İş Akışlarında Hata Ayıklama
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], geliştirme ortamından çalışan iş akışlarının hatalarını ayıklamak için çeşitli seçenekler sunar. İş akışlarının tasarımcıda, XAML 'de ve kodda hata ayıklaması yapılabilir.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] , geliştirme ortamından çalışan iş akışlarını hata ayıklama için çeşitli seçenekler sunar. İş akışlarının tasarımcıda, XAML 'de ve kodda hata ayıklaması yapılabilir.
 
 ## <a name="debugging-in-the-workflow-designer"></a>İş Akışı Tasarımcısı hata ayıklama
 
@@ -31,7 +31,7 @@ Bir kesme noktası ayarlamak için, kod bölmesinin sol kenar boşluğuna tıkla
 
 ## <a name="remote-debugging"></a>Uzaktan Hata Ayıklama
 
-Windows Workflow Foundation (WF) uzaktan hata ayıklama işlevleri, diğer Visual Studio bileşenleri için uzaktan hata ayıklama ile aynı şekilde çalışır. Uzaktan hata ayıklamayı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzaktan hata ayıklamayı etkinleştirme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
+Windows Workflow Foundation (WF) uzaktan hata ayıklama işlevleri, diğer Visual Studio bileşenleri için uzaktan hata ayıklama ile aynı şekilde çalışır. Uzaktan hata ayıklamayı kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: uzaktan hata ayıklamayı etkinleştirme](/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > İş akışı uygulaması x86 mimarisini hedefliyorsa ve 64 bitlik bir işletim sistemi çalıştıran bir bilgisayarda barındırılıyorsa, uzak bilgisayarda Visual Studio yüklü değilse veya iş akışı uygulamasının hedefi **herhangi BIR CPU**olarak değiştirilmediği takdirde uzaktan hata ayıklama çalışmaz.

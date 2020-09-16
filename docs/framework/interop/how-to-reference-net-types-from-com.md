@@ -13,12 +13,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
-ms.openlocfilehash: f8d052c7b9bac9c4bab61ab1950e9e89a7c73912
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: fad0a8163bd3d023911fd8554a77f740ac010ee6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618967"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547251"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Nasıl yapılır: COM'dan .NET Türlerine Başvurma
 İstemci ve sunucu kodunun bakış noktasından, COM ile .NET Framework arasındaki farklar büyük ölçüde görünmez değildir. Microsoft Visual Basic istemcileri, nesne yöntemleri ve söz dizimi, Özellikler ve alanları tamamen başka bir COM nesnesi gibi sunan nesne tarayıcısında bir .NET nesnesini görüntüleyebilir.  
@@ -27,7 +27,7 @@ ms.locfileid: "85618967"
   
 ### <a name="to-import-a-library"></a>Bir kitaplığı içeri aktarmak için  
   
-- **#İmport** yönergesinde **raw_interfaces_only** seçeneğini belirtin. Örneğin:  
+- **#İmport** yönergesinde **raw_interfaces_only** seçeneğini belirtin. Örnek:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -35,7 +35,7 @@ ms.locfileid: "85618967"
   
      -veya-  
   
-- Mscorlib. tlb için bir #import yönergesi ekleyin. Örneğin:  
+- Mscorlib. tlb için bir #import yönergesi ekleyin. Örnek:  
   
     ```cpp  
     #import "mscorlib.tlb"  
@@ -46,5 +46,5 @@ ms.locfileid: "85618967"
 
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
 - [Derlemeleri COM ile Kaydetme](registering-assemblies-with-com.md)
-- [.NET nesnesi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [COM erişimi için uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [.NET nesnesi çağırma](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM erişimi için uygulama dağıtma](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

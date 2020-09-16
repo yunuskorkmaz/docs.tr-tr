@@ -3,12 +3,12 @@ title: Ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (C#)
 description: C# ' de LINQ içindeki bir. csv dosyasındaki alanları yeniden düzenleme hakkında bilgi edinin. Örnek sütun ve sütunları bir sütun değerine göre sıralar.
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 3ebc56b418d2732a296896a19d770136a56e2fbb
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: a3bbc2690ded24629b313b24ee7a604bcacce850
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87103411"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547303"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (C#)
 Virgülle ayrılmış değer (CSV) dosyası, elektronik tablo verilerini veya satırlar ve sütunlar tarafından temsil edilen diğer tablo verilerini depolamak için genellikle kullanılan bir metin dosyasıdır. <xref:System.String.Split%2A>Alanları ayırmak için yöntemini kullanarak, LINQ kullanarak CSV dosyalarını sorgulamak ve işlemek çok kolaydır. Aslında, yapılandırılmış herhangi bir metin satırının parçalarını yeniden sıralamak için aynı teknik de kullanılabilir; CSV dosyalarıyla sınırlı değildir.  
@@ -83,4 +83,4 @@ class CSVFiles
 
 - [LINQ ve dizeler (C#)](./linq-and-strings.md)
 - [LINQ ve dosya dizinleri (C#)](./linq-and-file-directories.md)
-- [CSV dosyalarından XML oluşturma (C#)](./how-to-generate-xml-from-csv-files.md)
+- [CSV dosyalarından XML oluşturma (C#)](../../../../standard/linq/generate-xml-csv-files.md)

@@ -2,12 +2,12 @@
 title: Çalışma zamanı yapılandırma seçenekleri
 description: Çalışma zamanı yapılandırma ayarlarını kullanarak .NET Core uygulamalarını nasıl yapılandıracağınızı öğrenin.
 ms.date: 01/21/2020
-ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 21673a221d0f21202febf4730b955da66132d5f7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761960"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538204"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core çalışma zamanı yapılandırma ayarları
 
@@ -18,31 +18,31 @@ ms.locfileid: "83761960"
 - Uygulamanızın birden çok örneği tek bir sistemde aynı anda çalışır ve her birini en iyi performans için yapılandırmak istiyorsunuz.
 
 > [!NOTE]
-> Bu belge devam eden bir çalışmadır. Burada sunulan bilgilerin eksik veya yanlış olduğunu fark ederseniz, bunun hakkında bilgi sahibi olmak için [bir sorun açın](https://github.com/dotnet/docs/issues) veya sorunu çözmek için [bir çekme isteği gönderin](https://github.com/dotnet/docs/pulls) . DotNet/docs deposu için çekme istekleri gönderme hakkında daha fazla bilgi için bkz. [katkıda bulunan Kılavuzu](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute).
+> Bu belge devam eden bir çalışmadır. Burada sunulan bilgilerin eksik veya yanlış olduğunu fark ederseniz, bunun hakkında bilgi sahibi olmak için [bir sorun açın](https://github.com/dotnet/docs/issues) veya sorunu çözmek için [bir çekme isteği gönderin](https://github.com/dotnet/docs/pulls) . DotNet/docs deposu için çekme istekleri gönderme hakkında daha fazla bilgi için bkz. [katkıda bulunan Kılavuzu](/contribute/dotnet/dotnet-contribute).
 
 .NET Core, çalışma zamanında uygulama davranışını yapılandırmak için aşağıdaki mekanizmaları sağlar:
 
-- [Runtimeconfig. JSON dosyası](#runtimeconfigjson)
+- [Dosyadakiruntimeconfig.js](#runtimeconfigjson)
 
 - [MSBuild özellikleri](#msbuild-properties)
 
 - [Ortam değişkenleri](#environment-variables)
 
 > [!TIP]
-> Bir ortam değişkeni kullanarak bir çalışma zamanı seçeneğinin yapılandırılması, ayarı tüm .NET Core uygulamalarına uygular. *Runtimeconfig. JSON* veya proje dosyasında bir çalışma zamanı seçeneğinin yapılandırılması, ayarı yalnızca bu uygulamaya uygular.
+> Bir ortam değişkeni kullanarak bir çalışma zamanı seçeneğinin yapılandırılması, ayarı tüm .NET Core uygulamalarına uygular. *runtimeconfig.js* veya proje dosyasındaki bir çalışma zamanı seçeneğinin yapılandırılması, ayarı yalnızca bu uygulamaya uygular.
 
 Bazı yapılandırma değerleri, yöntemi çağırarak programlı bir şekilde ayarlanabilir <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> .
 
-Belgelerin bu bölümündeki makaleler, bir kategoriye göre düzenlenir, örneğin [hata ayıklama](debugging-profiling.md) ve [çöp toplama](garbage-collector.md). Uygun olduğunda, yapılandırma seçenekleri için *runtimeconfig. JSON* dosyaları, MSBuild özellikleri, ortam değişkenleri ve .NET Framework projeler için çapraz başvuru, *app. config* dosyaları için gösterilir.
+Belgelerin bu bölümündeki makaleler, bir kategoriye göre düzenlenir, örneğin [hata ayıklama](debugging-profiling.md) ve [çöp toplama](garbage-collector.md). Uygun olduğunda, yapılandırma seçenekleri *runtimeconfig.js* dosya, MSBuild özellikleri, ortam değişkenleri ve .NET Framework projelerine yönelik çapraz başvuru *app.config* dosyaları için gösterilir.
 
-## <a name="runtimeconfigjson"></a>runtimeconfig. JSON
+## <a name="runtimeconfigjson"></a>Üzerinde runtimeconfig.js
 
-Bir proje [oluşturulduğunda, çıkış](../tools/dotnet-build.md)dizininde *[AppName]. runtimeconfig. JSON* dosyası oluşturulur. Proje dosyasıyla aynı klasörde bir *runtimeconfig. Template. JSON* dosyası varsa, içerdiği tüm yapılandırma seçenekleri *[AppName]. runtimeconfig. JSON* dosyasında birleştirilir. Uygulamayı kendiniz oluşturuyorsanız, tüm yapılandırma seçeneklerini *runtimeconfig. Template. JSON* dosyasına koyun. Uygulamayı yalnızca çalıştırıyorsanız doğrudan *[AppName]. runtimeconfig. JSON* dosyasına ekleyin.
+Bir proje [oluşturulduğunda, çıkış](../tools/dotnet-build.md)dizininde bir *[AppName] .runtimeconfig.js* dosyası oluşturulur. Dosyadaki bir *runtimeconfig.template.js* proje dosyası ile aynı klasörde mevcutsa, içerdiği tüm yapılandırma seçenekleri dosyada *[AppName] .runtimeconfig.js* birleştirilir. Uygulamayı kendiniz oluşturuyorsanız, dosyadaki *runtimeconfig.template.js* yapılandırma seçeneklerini yerleştirin. Uygulamayı yalnızca çalıştırıyorsanız, dosyayı doğrudan *[AppName] .runtimeconfig.js* dosyasına ekleyin.
 
 > [!NOTE]
-> *[AppName]. runtimeconfig. JSON* dosyasının sonraki yapılarda üzerine yazılır.
+> Dosyadaki *[AppName] .runtimeconfig.js* , sonraki derlemelerde üzerine yazılır.
 
-*Runtimeconfig. JSON* dosyalarının **ConfigProperties** bölümünde çalışma zamanı yapılandırma seçeneklerini belirtin. Bu bölüm şu biçimdedir:
+Dosyalardaki *runtimeconfig.js* **ConfigProperties** bölümünde çalışma zamanı yapılandırma seçeneklerini belirtin. Bu bölüm şu biçimdedir:
 
 ```json
 "configProperties": {
@@ -51,7 +51,7 @@ Bir proje [oluşturulduğunda, çıkış](../tools/dotnet-build.md)dizininde *[A
 }
 ```
 
-### <a name="example-appnameruntimeconfigjson-file"></a>Örnek [AppName]. runtimeconfig. JSON dosyası
+### <a name="example-appnameruntimeconfigjson-file"></a>Örnek [AppName] dosya üzerinde .runtimeconfig.js
 
 Seçenekleri çıkış JSON dosyasına yerleştiriyorsanız, özelliğin altına yerleştirin `runtimeOptions` .
 
@@ -72,7 +72,7 @@ Seçenekleri çıkış JSON dosyasına yerleştiriyorsanız, özelliğin altına
 }
 ```
 
-### <a name="example-runtimeconfigtemplatejson-file"></a>Örnek runtimeconfig. Template. JSON dosyası
+### <a name="example-runtimeconfigtemplatejson-file"></a>Dosyada örnek runtimeconfig.template.js
 
 Seçenekleri şablon JSON dosyasına yerleştiriyorsanız, `runtimeOptions` özelliği atlayın.
 
@@ -88,7 +88,7 @@ Seçenekleri şablon JSON dosyasına yerleştiriyorsanız, `runtimeOptions` öze
 
 ## <a name="msbuild-properties"></a>MSBuild özellikleri
 
-Bazı çalışma zamanı yapılandırma seçenekleri, SDK stili .NET Core projelerinin *. csproj* veya *. vbproj* dosyasındaki MSBuild özellikleri kullanılarak ayarlanabilir. MSBuild özellikleri, *runtimeconfig. Template. JSON* dosyasında ayarlanan seçeneklere göre önceliklidir. Ayrıca derleme zamanında *[AppName]. runtimeconfig. JSON* dosyasında ayarladığınız seçeneklerin üzerine yazar.
+Bazı çalışma zamanı yapılandırma seçenekleri, SDK stili .NET Core projelerinin *. csproj* veya *. vbproj* dosyasındaki MSBuild özellikleri kullanılarak ayarlanabilir. MSBuild özellikleri dosyadaki *runtimeconfig.template.js* ayarlanan seçeneklere göre önceliklidir. Ayrıca, derleme zamanında dosyadaki *[AppName] .runtimeconfig.js* ayarladığınız seçeneklerin üzerine yazar.
 
 Aşağıda, çalışma zamanı davranışını yapılandırmak için MSBuild özelliklerine sahip örnek bir SDK stili proje dosyası verilmiştir:
 

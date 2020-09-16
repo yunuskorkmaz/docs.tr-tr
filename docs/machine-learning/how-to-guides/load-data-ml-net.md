@@ -1,26 +1,26 @@
 ---
 title: Dosyalardan ve diğer kaynaklardan veri yükleme
-description: API'yi kullanarak ML.NET işlemek ve işlemek için verileri nasıl yükleyeceğimiz öğrenin. Veriler dosyalarda, veritabanlarında, JSON'da, XML'de veya bellek içi koleksiyonlarda depolanır.
+description: API kullanarak ML.NET 'ye işleme ve eğitimle ilgili verileri yüklemeyi öğrenin. Veriler dosyalar, veritabanları, JSON, XML veya bellek içi koleksiyonlar halinde depolanır.
 ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5097632ca777403e6073d28b707bdbe653cda8ac
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74344749"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545031"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Dosyalardan ve diğer kaynaklardan veri yükleme
 
-API'yi kullanarak ML.NET işlemek ve işlemek için verileri nasıl yükleyeceğimiz öğrenin. Veriler başlangıçta dosyalarda veya veritabanları, JSON, XML veya bellek içi koleksiyonlar gibi diğer veri kaynaklarında depolanır.
+API kullanarak ML.NET 'ye işleme ve eğitimle ilgili verileri yüklemeyi öğrenin. Veriler başlangıçta dosyalar veya veritabanları, JSON, XML veya bellek içi Koleksiyonlar gibi diğer veri kaynaklarında depolanır.
 
-Model Oluşturucu kullanıyorsanız, [Model Oluşturucu'ya Yük eğitim verilerine](load-data-model-builder.md)bakın.
+Model Oluşturucu kullanıyorsanız bkz. [model Oluşturucu 'da eğitim verilerini yükleme](load-data-model-builder.md).
 
 ## <a name="create-the-data-model"></a>Veri modelini oluşturma
 
-ML.NET, sınıflar aracılığıyla veri modellerini tanımlamanızı sağlar. Örneğin, aşağıdaki giriş verileri göz önüne alındığında:
+ML.NET, sınıflar aracılığıyla veri modelleri tanımlamanıza olanak sağlar. Örneğin, aşağıdaki giriş verileri verildiğinde:
 
 ```text
 Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($), Current Price ($)
@@ -28,7 +28,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1000, 600000, 400000, 650000, 700000
 ```
 
-Aşağıdaki parçacığı temsil eden bir veri modeli oluşturun:
+Aşağıdaki kod parçacığını temsil eden bir veri modeli oluşturun:
 
 ```csharp
 public class HousingData
@@ -46,27 +46,27 @@ public class HousingData
 }
 ```
 
-### <a name="annotating-the-data-model-with-column-attributes"></a>Veri modelini sütun öznitelikleriyle açıklama
+### <a name="annotating-the-data-model-with-column-attributes"></a>Sütun öznitelikleriyle veri modeline açıklama ekleme
 
-Öznitelikler ML.NET veri modeli ve veri kaynağı hakkında daha fazla bilgi verir.
+Öznitelikler, veri modeli ve veri kaynağı hakkında ML.NET daha fazla bilgi verir.
 
-Öznitelik, [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) özelliklerinizin sütun dizinlerini belirtir.
+[`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute)Öznitelik, özelliklerinin sütun dizinlerini belirtir.
 
 > [!IMPORTANT]
-> [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute)yalnızca bir dosyadan veri yüklerken gereklidir.
+> [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) yalnızca bir dosyadan veri yüklenirken gereklidir.
 
-Sütunları şu şekilde yükleyin:
+Sütunları şu şekilde yükle:
 
-- Sınıf gibi `Size` `CurrentPrices` ve sınıfta ki tek tek sütunlar. `HousingData`
-- `HousingData` Sınıftaki gibi `HistoricalPrices` bir vektör şeklinde bir seferde birden çok sütun.
+- Sınıfında ve gibi ayrı sütunlar `Size` `CurrentPrices` `HousingData` .
+- Sınıf gibi bir vektör biçiminde tek seferde birden çok sütun `HistoricalPrices` `HousingData` .
 
-Bir vektör özelliğiniz varsa, [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) özniteliği veri modelinizdeki özelliğe uygulayın. Vektördeki tüm elementlerin aynı türde olması gerektiğini unutmayın. Sütunları ayrı tutmak özellik mühendisliğinin kolaylığı ve esnekliğini sağlar, ancak çok sayıda sütun için, tek tek sütunlar üzerinde çalışma eğitim hızı üzerinde bir etkiye neden olur.
+Vektör özelliği varsa, [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) özniteliğini veri modelinizdeki özelliğe uygulayın. Vektördeki tüm öğelerin aynı türde olması gerektiğini unutmayın. Sütunların ayrılmış tutulması, özellik mühendisliğinin kolaylığını ve esnekliğini sağlar, ancak çok fazla sayıda sütun için, bireysel sütunlarda çalışan eğitim hızında bir etkiye neden olur.
 
-ML.NET Sütun adları aracılığıyla çalışır. Bir sütunun adını özellik adından başka bir şeyle değiştirmek [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) istiyorsanız, özniteliği kullanın. Bellek içi nesneler oluştururken, özellik adını kullanarak nesneler oluşturmaya devam edebebilirsiniz. Ancak, veri işleme ve makine öğrenme modelleri oluşturmak için, ML.NET geçersiz [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) kılar ve öznitelik sağlanan değeri ile özelliği başvurur.
+ML.NET, sütun adlarıyla çalışır. Bir sütunun adını özellik adı dışında bir şekilde değiştirmek istiyorsanız, [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) özniteliğini kullanın. Bellek içi nesneler oluştururken, hala özellik adını kullanarak nesneler oluşturursunuz. Ancak, veri işleme ve makine öğrenimi modelleri oluşturma için, ML.NET geçersiz kılar ve özelliği özniteliğinde belirtilen değerle başvurur [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) .
 
-## <a name="load-data-from-a-single-file"></a>Tek bir dosyadan veri yükleme
+## <a name="load-data-from-a-single-file"></a>Tek bir dosyadaki verileri yükleme
 
-Bir dosyadan veri yüklemek [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) için yüklenecek veriler için veri modeli ile birlikte yöntemi kullanın. `separatorChar` Parametre varsayılan olarak sekme delimited olduğundan, gerektiğinde veri dosyanız için değiştirin. Dosyanızın üstbilgisi varsa, parametreyi `hasHeader` `true` dosyadaki ilk satırı yoksayacak şekilde ayarlayın ve ikinci satırdan veri yüklemeye başlayın.
+Bir dosyadan veri yüklemek için [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) yöntemini, yüklenecek verilerin veri modeliyle birlikte kullanın. `separatorChar`Parametre varsayılan olarak sekmeyle ayrılmış olduğundan, bunu veri dosyanız için gereken şekilde değiştirin. Dosyanızın bir üstbilgisi varsa, `hasHeader` parametresini `true` dosyadaki ilk satırı yoksayacak şekilde ayarlayın ve ikinci satırdan verileri yüklemeye başlayın.
 
 ```csharp
 //Create MLContext
@@ -78,11 +78,11 @@ IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("my-data-file.csv"
 
 ## <a name="load-data-from-multiple-files"></a>Birden çok dosyadan veri yükleme
 
-Verilerinizin birden çok dosyada depolandığı durumlarda, veri şeması aynı olduğu sürece, ML.NET aynı dizinde veya birden çok dizindeki birden çok dosyadan veri yüklemenize olanak tanır.
+Verilerinizin birden çok dosyada depolandığından, veri şeması aynı olduğu sürece, ML.NET aynı dizinde veya birden çok dizinde bulunan birden çok dosyadan veri yüklemenize izin verir.
 
-### <a name="load-from-files-in-a-single-directory"></a>Dosyalardan tek bir dizindeki yükleme
+### <a name="load-from-files-in-a-single-directory"></a>Tek bir dizindeki dosyalardan yükleme
 
-Tüm veri dosyalarınız aynı dizinde olduğunda, [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) yöntemde joker karakterleri kullanın.
+Tüm veri dosyalarınız aynı dizinde olduğunda, yönteminde joker karakterler kullanın [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) .
 
 ```csharp
 //Create MLContext
@@ -94,7 +94,7 @@ IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("Data/*", separato
 
 ### <a name="load-from-files-in-multiple-directories"></a>Birden çok dizindeki dosyalardan yükleme
 
-Birden çok dizinden veri [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) yüklemek için, [`TextLoader`](xref:Microsoft.ML.Data.TextLoader)bir . Ardından, [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) yöntemi kullanın ve tek tek dosya yollarını belirtin (joker karakterler kullanılamaz).
+Birden çok dizindeki verileri yüklemek için [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) yöntemini kullanarak bir oluşturun [`TextLoader`](xref:Microsoft.ML.Data.TextLoader) . Ardından, yöntemini kullanın [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) ve tek dosya yollarını belirtin (joker karakterler kullanılamaz).
 
 ```csharp
 //Create MLContext
@@ -107,16 +107,16 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-relational-database"></a>İlişkisel bir veritabanından veri yükleme
+## <a name="load-data-from-a-relational-database"></a>İlişkisel veritabanından veri yükleme
 
-ML.NET, SQL Server, Azure SQL Database, [`System.Data`](xref:System.Data) Oracle, SQLite, PostgreSQL, Progress, IBM DB2 ve daha birçok kişi tarafından desteklenen çeşitli ilişkisel veritabanlarından veri yüklemeyi destekler.
+ML.NET [`System.Data`](xref:System.Data) , SQL Server, Azure SQL veritabanı, Oracle, SQLite, PostgreSQL, Progress, IBM DB2 ve çok daha fazlasını içeren, tarafından desteklenen çeşitli ilişkisel veritabanlarından veri yüklenmesini destekler.
 
 > [!NOTE]
-> `DatabaseLoader` [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet paketini kullanmak için başvuru.
+> Kullanmak için `DatabaseLoader` [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet paketine başvurun.
 
-Adlı `House` bir tablo ve aşağıdaki şema ile bir veritabanı verilmiştir:
+Adlı bir tablo ve aşağıdaki şemaya sahip bir veritabanı verildi `House` :
 
-```SQL
+```sql
 CREATE TABLE [House] (
     [HouseId] INT NOT NULL IDENTITY,
     [Size] INT NOT NULL,
@@ -126,7 +126,7 @@ CREATE TABLE [House] (
 );
 ```
 
-Veriler gibi `HouseData`bir sınıf tarafından modellenebilir.
+Veriler, gibi bir sınıfa göre modellenebilir `HouseData` .
 
 ```csharp
 public class HouseData
@@ -139,7 +139,7 @@ public class HouseData
 }
 ```
 
-Daha sonra, uygulamanızın içinde, bir `DatabaseLoader`.
+Ardından, uygulamanızın içinde bir oluşturun `DatabaseLoader` .
 
 ```csharp
 MLContext mlContext = new MLContext();
@@ -147,7 +147,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-Bağlantı dizenizi ve veritabanında yürütülecek SQL komutunu `DatabaseSource` tanımlayın ve bir örnek oluşturun. Bu örnek, dosya yolu olan bir LocalDB SQL Server veritabanı kullanır. Ancak, DatabaseLoader veritabanları için şirket içinde ve bulutta başka geçerli bağlantı dizesini destekler.
+Bağlantı dizenizi ve veritabanında yürütülecek SQL komutunu ve bir örnek oluşturmayı tanımlayın `DatabaseSource` . Bu örnek, bir LocalDB SQL Server veritabanını bir dosya yolu ile kullanır. Ancak DatabaseLoader, şirket içi ve buluttaki veritabanları için geçerli olan diğer bağlantı dizelerini destekler.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
@@ -157,24 +157,24 @@ string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM Hou
 DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-Türü [`Real`](xref:System.Data.SqlDbType) olmayan sayısal verilerin [`Real`](xref:System.Data.SqlDbType). Tür, [`Real`](xref:System.Data.SqlDbType) tek duyarlıklı kayan nokta değeri [`Single`](xref:System.Single)veya ML.NET algoritmaları tarafından beklenen giriş türü olarak temsil edilir. Bu örnekte, `NumBed` sütun veritabanında bir tamsayıdır. `CAST` Yerleşik işlevi kullanılarak, [`Real`](xref:System.Data.SqlDbType)'ye dönüştürülür. `Price` Özellik zaten tür [`Real`](xref:System.Data.SqlDbType) olduğundan olduğu gibi yüklenir.
+Türünde olmayan sayısal verilerin [`Real`](xref:System.Data.SqlDbType) dönüştürülecek olması gerekiyor [`Real`](xref:System.Data.SqlDbType) . [`Real`](xref:System.Data.SqlDbType)Tür tek duyarlıklı kayan nokta değeri veya [`Single`](xref:System.Single) ml.net algoritmaları tarafından beklenen giriş türü olarak temsil edilir. Bu örnekte, `NumBed` sütunu veritabanındaki bir tamsayıdır. `CAST`Yerleşik işlevi kullanılarak, öğesine dönüştürülür [`Real`](xref:System.Data.SqlDbType) . Özelliği zaten olduğu için, `Price` özelliği [`Real`](xref:System.Data.SqlDbType) olduğu gibi yüklenmiş.
 
-Verileri `Load` bir [`IDataView`](xref:Microsoft.ML.IDataView)'e yüklemek için yöntemi kullanın.
+' `Load` A veri yüklemek için yöntemini kullanın [`IDataView`](xref:Microsoft.ML.IDataView) .
 
 ```csharp
 IDataView data = loader.Load(dbSource);
 ```
 
-## <a name="load-data-from-other-sources"></a>Diğer kaynaklardan gelen verileri yükleme
+## <a name="load-data-from-other-sources"></a>Diğer kaynaklardan veri yükleme
 
-Dosyalarda depolanan verileri yüklemenin yanı sıra, ML.NET aşağıdakileri içeren ancak bunlarla sınırlı olmayan kaynaklardan veri yüklemeyi destekler:
+ML.NET, dosyalarda depolanan verileri yüklemeye ek olarak, dahil edilen ancak bunlarla sınırlı olmayan kaynaklardan veri yüklemeyi destekler:
 
-- Bellek içi koleksiyonlar
+- Bellek içi Koleksiyonlar
 - JSON/XML
 
-Akış kaynaklarıyla çalışırken, ML.NET girişin bellek içi bir koleksiyon biçiminde olmasını beklediğini unutmayın. Bu nedenle, JSON/XML gibi kaynaklarla çalışırken, verileri bellek içi bir koleksiyona biçimlendirdiğinizden emin olun.
+Akış kaynaklarıyla çalışırken ML.NET, girişin bellek içi koleksiyon biçiminde olmasını bekler. Bu nedenle, JSON/XML gibi kaynaklarla çalışırken, verileri bellek içi bir koleksiyonda biçimlediğinizden emin olun.
 
-Aşağıdaki bellek içi koleksiyon göz önüne alındığında:
+Aşağıdaki bellek içi koleksiyon verildiğinde:
 
 ```csharp
 HousingData[] inMemoryCollection = new HousingData[]
@@ -200,10 +200,10 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-Bellek içi koleksiyonu yöntemle [`IDataView`](xref:Microsoft.ML.IDataView) bir [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) yönteme yükleyin:
+Bellek içi toplamayı, yöntemiyle bir öğesine yükleyin [`IDataView`](xref:Microsoft.ML.IDataView) [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) :
 
 > [!IMPORTANT]
-> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*)yüklerinin [`IEnumerable`](xref:System.Collections.IEnumerable) iş parçacığı için güvenli olduğunu varsayar.
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) , ' [`IEnumerable`](xref:System.Collections.IEnumerable) den yüklendiği varsayılmaktadır, iş parçacığı güvenlidir.
 
 ```csharp
 // Create MLContext
@@ -215,5 +215,5 @@ IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollecti
 
 ## <a name="next-steps"></a>Sonraki adımlar
 
-- Verileri temizlemek veya başka bir şekilde işlemek [için](prepare-data-ml-net.md)bkz.
-- Bir model oluşturmaya hazır olduğunuzda, [Train'e bakın ve bir modeli değerlendirin.](train-machine-learning-model-ml-net.md)
+- Verileri temizlemek veya başka bir şekilde işlemek için bkz. [model oluşturmak için veri hazırlama](prepare-data-ml-net.md).
+- Model oluşturmaya hazırsanız, bkz. [modeli eğitme ve değerlendirme](train-machine-learning-model-ml-net.md).

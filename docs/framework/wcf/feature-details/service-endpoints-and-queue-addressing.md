@@ -2,12 +2,12 @@
 title: Hizmet Uç Noktaları ve Kuyruk İşleme
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: fb74ba52c0f08d9e9976ddc8dd6d59037ec32e4b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600393"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546295"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Hizmet Uç Noktaları ve Kuyruk İşleme
 Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve hizmet uç noktalarının kuyrukların nasıl eşlenme açıklanmaktadır. Bir anımsatıcı olarak, aşağıdaki çizimde, klasik Windows Communication Foundation (WCF) sıraya alınmış uygulama dağıtımı gösterilmektedir.  
@@ -21,7 +21,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  Yol adları, Yönlendirme ve kuyruk yöneticisi Aktarım Protokolü dahil olmak üzere adresin ek yönlerini belirleyebilmek için "FormatNames" ile eşleştirilir. Kuyruk Yöneticisi iki aktarım protokolünü destekler: yerel MSMQ Protokolü ve SOAP Güvenilir Mesajlaşma Protokolü (SRMP).  
   
- MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz. [about Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
+ MSMQ yolu ve biçim adları hakkında daha fazla bilgi için bkz. [about Message Queuing](/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding ve hizmet adresleme  
  Bir hizmete bir ileti adreslenirken, URI 'deki şema, iletişim için kullanılan ulaşım 'e göre seçilir. WCF 'deki her bir taşımanın benzersiz bir şeması vardır. Düzenin, iletişim için kullanılan taşımanın yapısını yansıtması gerekir. Örneğin, net. TCP, net. pipe, HTTP ve benzeri.  
@@ -30,15 +30,15 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  WCF 'deki bir sıranın adreslenmesi aşağıdaki düzene dayanır:  
   
- net. MSMQ:// \<*host-name*> /[private/]\<*queue-name*>  
+ net. MSMQ:// \<*host-name*> /[private/] \<*queue-name*>  
   
  burada:  
   
-- \<*host-name*>, hedef kuyruğu barındıran makinenin adıdır.  
+- \<*host-name*> , hedef kuyruğu barındıran makinenin adıdır.  
   
 - [private] isteğe bağlıdır. Özel bir kuyruk olan hedef kuyruğu adreslemek için kullanılır. Genel bir kuyruğu ele almak için özel ' i belirtmemelidir. MSMQ yollarından farklı olarak, WCF URI formunda "$" olmadığını unutmayın.  
   
-- \<*queue-name*>Kuyruğun adıdır. Sıra adı ayrıca bir alt sıraya de başvurabilir. Bu nedenle, \<*queue-name*>  =  \<*name-of-queue*> [;* alt kuyruk-adı*].  
+- \<*queue-name*> Kuyruğun adıdır. Sıra adı ayrıca bir alt sıraya de başvurabilir. Bu nedenle, \<*queue-name*>  =  \<*name-of-queue*> [;* alt kuyruk-adı*].  
   
  Example1: PurchaseOrders, abc atadatum.com bilgisayarında barındırılan özel bir sıra Için adreslenebilir, URI net. MSMQ://abc.adatum.com/private/PurchaseOrders.  
   
@@ -73,8 +73,8 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
 |WCF URI tabanlı sıra adresi|Active Directory özelliğini kullan|Sıra Aktarım Protokolü özelliği|Sonuçta elde edilen MSMQ biçim adları|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |`Net.msmq://<machine-name>/private/abc`|False (varsayılan)|Yerel (varsayılan)|`DIRECT=OS:machine-name\private$\abc`|  
-|`Net.msmq://<machine-name>/private/abc`|False|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
-|`Net.msmq://<machine-name>/private/abc`|True|Yerel|`PUBLIC=some-guid`(kuyruğun GUID 'SI)|  
+|`Net.msmq://<machine-name>/private/abc`|Yanlış|SRMP|`DIRECT=http://machine/msmq/private$/abc`|  
+|`Net.msmq://<machine-name>/private/abc`|Doğru|Yerel|`PUBLIC=some-guid` (kuyruğun GUID 'SI)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Iletileri atılacak ileti sırasından veya Poison-Message sırasından okuma  
  Hedef sıranın alt sırası olan bir zarar iletisi kuyruğundan iletileri okumak için, alt `ServiceHost` sıranın adresiyle birlikte öğesini açın.  
@@ -87,7 +87,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  Özel bir atılacak mektup sırası kullanırken, atılacak ileti sırasının yerel bilgisayarda bulunması gerektiğini unutmayın. Bu nedenle, atılacak ileti sırası için URI şu formla kısıtlıdır:  
   
- net. MSMQ://localhost/[private/] \<*custom-dead-letter-queue-name*> .  
+ net. MSMQ://localhost/[private/]  \<*custom-dead-letter-queue-name*> .  
   
  Bir WCF hizmeti, aldığı tüm iletilerin dinlediği belirli bir kuyruğa geldiğini doğrular. İletinin hedef kuyruğu içinde bulunduğu kuyrukla eşleşmiyorsa, hizmet iletiyi işlemez. Bu, atılacak ileti sırasındaki herhangi bir iletinin başka bir yere teslim edileceği için, atılacak bir sırayı dinleyen hizmetlerin adreslenmesi gereken bir sorundur. İletileri bir atılacak ileti sırasından veya bir zarar sırasından okumak için `ServiceBehavior` parametresi ile birlikte <xref:System.ServiceModel.AddressFilterMode.Any> kullanılması gerekir. Bir örnek için bkz. [atılacak Ileti sıraları](../samples/dead-letter-queues.md).  
   
@@ -96,7 +96,7 @@ Bu konuda, istemcilerin kuyruklardan okuyan hizmetleri nasıl ele aldığı ve h
   
  MSMQ. FormatName:\<*MSMQ-format-name*>>  
   
- MSMQ biçimindeki adı, hakkında MSMQ tarafından belirtilen biçimde belirtilir [Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
+ MSMQ biçimindeki adı, hakkında MSMQ tarafından belirtilen biçimde belirtilir [Message Queuing](/previous-versions/windows/desktop/legacy/ms706032(v=vs.85)).  
   
  Kullanarak bir kuyruktan ileti alırken doğrudan biçim adlarını ve ortak ve özel biçim adlarını (Active Directory tümleştirme gerektirir) kullanabileceğinizi unutmayın `MsmqIntegrationBinding` . Ancak, doğrudan biçim adları kullanmanız önerilir. Örneğin, Windows Vista 'da, başka bir biçim adı kullanılması, sistem bir alt sıra açmaya çalıştığı ve yalnızca doğrudan biçim adlarıyla açılabilen bir hataya neden olur.  
   

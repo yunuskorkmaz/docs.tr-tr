@@ -2,12 +2,12 @@
 title: DotNet paket Ekle komutu
 description: "' DotNet Add Package ' komutu, bir projeye NuGet paket başvurusu eklemek için uygun bir seçenek sağlar."
 ms.date: 02/14/2020
-ms.openlocfilehash: bc79fe8adf5f775ddce62f3877a8de945c6a18ab
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1bdda241c1301b926ba2fd322f969407038b7b62
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840903"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538074"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -15,7 +15,7 @@ ms.locfileid: "83840903"
 
 ## <a name="name"></a>Name
 
-`dotnet add package`-Proje dosyasına bir paket başvurusu ekler.
+`dotnet add package` -Proje dosyasına bir paket başvurusu ekler.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -28,7 +28,7 @@ dotnet add [<PROJECT>] package <PACKAGE_NAME>
 dotnet add package -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet add package`Komut, bir proje dosyasına paket başvurusu eklemek için uygun bir seçenek sağlar. Komutu çalıştırdıktan sonra, paketin projedeki çerçeveler ile uyumlu olduğundan emin olmak için bir uyumluluk denetimi vardır. Denetim başarılı olursa, `<PackageReference>` proje dosyasına bir öğe eklenir ve [DotNet restore](dotnet-restore.md) çalıştırılır.
 
@@ -57,7 +57,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
-## <a name="arguments"></a>Bağımsız değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`PROJECT`**
 
@@ -87,7 +87,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Paketlerin geri yükleneceği dizin. Varsayılan paket geri yükleme konumu `%userprofile%\.nuget\packages` Windows ve `~/.nuget/packages` MacOS ve Linux üzerinde bulunur. Daha fazla bilgi için bkz. [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
+  Paketlerin geri yükleneceği dizin. Varsayılan paket geri yükleme konumu `%userprofile%\.nuget\packages` Windows ve `~/.nuget/packages` MacOS ve Linux üzerinde bulunur. Daha fazla bilgi için bkz. [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 - **`-s|--source <SOURCE>`**
 
@@ -95,7 +95,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`-v|--version <VERSION>`**
 
-  Paketin sürümü. Bkz. [NuGet paketi sürümü oluşturma](https://docs.microsoft.com/nuget/reference/package-versioning).
+  Paketin sürümü. Bkz. [NuGet paketi sürümü oluşturma](/nuget/reference/package-versioning).
 
 ## <a name="examples"></a>Örnekler
 
@@ -119,5 +119,5 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
-- [NuGet paketi sürümü oluşturma](https://docs.microsoft.com/nuget/reference/package-versioning)
+- [NuGet 'de Genel paketleri, önbelleği ve temp klasörlerini yönetme](/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [NuGet paketi sürümü oluşturma](/nuget/reference/package-versioning)

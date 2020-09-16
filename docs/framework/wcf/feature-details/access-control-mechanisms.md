@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 27f2b7d3146199f1c3e9a228202618c992e2a1ea
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: bd3156e0fa8ea976d2297ffc0767cd948c9c96b4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84601367"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550488"
 ---
 # <a name="access-control-mechanisms"></a>Erişim Denetimi Mekanizmaları
 Windows Communication Foundation (WCF) ile erişimi çeşitli şekilde denetleyebilirsiniz. Bu konu, çeşitli mekanizmaları kısaca ele alır ve her birinin ne zaman kullanılacağı konusunda öneriler sağlar; kullanılacak doğru mekanizmayı seçmenize yardımcı olmak için tasarlanmıştır. Erişim teknolojileri karmaşıklık sırasına göre listelenmiştir. En basit, <xref:System.Security.Permissions.PrincipalPermissionAttribute> kimlik modelidir.  
@@ -46,7 +46,7 @@ Windows Communication Foundation (WCF) ile erişimi çeşitli şekilde denetleye
   
  Zaten var olan bir AzMan yüklemesine erişiminiz varsa ve AzMan/rol sağlayıcısı birleşiminin özelliklerini kullanarak hizmet kullanıcılarınıza yetki vermek istiyorsanız AzMan ve ASP.NET rol sağlayıcısını da kullanabilirsiniz.  
   
- AzMan ve ASP.NET rol sağlayıcısı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Yetkilendirme Yöneticisi 'ni (AzMan) ASP.NET 2,0 Ile kullanma](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10)). AzMan 'yı ve WCF Hizmetleri rol sağlayıcısını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: ASP.net Authorization Manager rol sağlayıcısını bir hizmetle kullanma](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
+ AzMan ve ASP.NET rol sağlayıcısı hakkında daha fazla bilgi için bkz. [nasıl yapılır: Yetkilendirme Yöneticisi 'ni (AzMan) ASP.NET 2,0 Ile kullanma](/previous-versions/msp-n-p/ff649313(v=pandp.10)). AzMan 'yı ve WCF Hizmetleri rol sağlayıcısını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: ASP.net Authorization Manager rol sağlayıcısını bir hizmetle kullanma](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Kimlik modeli  
  Kimlik modeli, istemcileri yetkilendirmek için talepleri ve ilkeleri yönetmenizi sağlayan bir API kümesidir. Kimlik modeliyle, arayanın hizmette kimliğini doğrulamak için kullandığı kimlik bilgilerinde bulunan her talebi inceleyebilir, talepleri hizmet için ilke kümesiyle karşılaştırabilir ve karşılaştırmaya göre erişim izni verebilir veya vermeyebilirsiniz.  
@@ -63,5 +63,5 @@ Windows Communication Foundation (WCF) ile erişimi çeşitli şekilde denetleye
 - [Nasıl yapılır: PrincipalPermissionAttribute Sınıfı ile Erişimi Kısıtlama](../how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [Nasıl yapılır: ASP.NET Rol Sağlayıcısını Bir Hizmetle Kullanma](how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol Sağlayıcısını Bir Hizmetle Kullanma](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
-- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)
+- [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)
 - [Temsilcilik ve Kimliğe Bürünme](delegation-and-impersonation-with-wcf.md)

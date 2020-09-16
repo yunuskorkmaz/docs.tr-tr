@@ -2,12 +2,12 @@
 title: WAS Etkinleştirme Mimarisi
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: cfbfd91f9e7bc2e1b4f8485d5ae22c1fb2b5228b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 77cebede5827016c5c9660663c0491614ba0ef19
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600678"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545988"
 ---
 # <a name="was-activation-architecture"></a>WAS Etkinleştirme Mimarisi
 Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS olarak da bilinir) bileşenleri ele alınmaktadır ve açıklanmaktadır.  
@@ -19,7 +19,7 @@ Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS ol
   
 - Bulunamadı. Çalışan işlemlerinin oluşturulmasını ve yaşam süresini yöneten Windows hizmeti.  
   
-- Genel çalışan işlemi yürütülebilir dosya (W3wp. exe).  
+- Genel çalışan işlemi yürütülebilir (w3wp.exe).  
   
 - Uygulama Yöneticisi. Çalışan işlemi içinde uygulamaları barındıran uygulama etki alanlarının oluşturulmasını ve ömrünü yönetir.  
   
@@ -40,7 +40,7 @@ Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS ol
 |Netmsmqetkinleştirici|net. MSMQ|WCF tabanlı Message Queuing uygulamalarıyla kullanım için.|  
 |Netmsmqetkinleştirici|MSMQ. formatname|Mevcut Message Queuing uygulamalarla geriye dönük uyumluluk sağlar.|  
   
- Belirli protokoller için dinleyici bağdaştırıcıları, aşağıdaki XML örneğinde gösterildiği gibi applicationHost. config dosyasına yükleme sırasında kaydedilir.  
+ Belirli protokoller için dinleyici bağdaştırıcıları, aşağıdaki XML örneğinde gösterildiği gibi applicationHost.config dosyasına yükleme sırasında kaydedilir.  
   
 ```xml  
 <system.applicationHost>  
@@ -59,7 +59,7 @@ Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS ol
 ```  
   
 ### <a name="protocol-handlers"></a>Protokol Işleyicileri  
- Belirli protokoller için işlem ve AppDomain protokol işleyicileri makine düzeyinde Web. config dosyasına kaydedilir.  
+ Belirli protokoller için işlem ve AppDomain protokol işleyicileri makine düzeyinde Web.config dosyasına kaydedilir.  
   
 ```xml  
 <system.web>  
@@ -88,4 +88,4 @@ Bu konu başlığı altında, Windows Işlem etkinleştirme hizmeti 'nin (WAS ol
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WAS'ı WCF ile Kullanmak için Yapılandırma](configuring-the-wpa--service-for-use-with-wcf.md)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

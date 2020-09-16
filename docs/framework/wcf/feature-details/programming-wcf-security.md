@@ -8,18 +8,18 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 8e77c667dd8904c10bbab88e1413690677cef53b
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: a473a2bb3582274baddf7595ac396a0f833f8daf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244991"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535904"
 ---
 # <a name="programming-wcf-security"></a>WCF Güvenliğini Programlama
 Bu konuda, güvenli bir Windows Communication Foundation (WCF) uygulaması oluşturmak için kullanılan temel programlama görevleri açıklanmaktadır. Bu konu, toplu olarak *Aktarım güvenliği*olarak bilinen kimlik doğrulama, gizlilik ve bütünlüğü içerir. Bu konu, yetkilendirmeyi kapsamaz (kaynaklara veya hizmetlere erişimin denetimi); Yetkilendirme hakkında bilgi için bkz. [Yetkilendirme](authorization-in-wcf.md).  
   
 > [!NOTE]
-> Özellikle WCF ile ilgili olarak güvenlik kavramlarına değerli bir giriş için, [Web Hizmetleri geliştirmeleri (WVAS) 3,0 Için senaryolar, desenler ve uygulama KıLAVUZLARıNDAKI](https://docs.microsoft.com/previous-versions/msp-n-p/ff648183(v=pandp.10))MSDN 'de bulunan desenler ve uygulamalar öğreticilerine bakın.  
+> Özellikle WCF ile ilgili olarak güvenlik kavramlarına değerli bir giriş için, [Web Hizmetleri geliştirmeleri (WVAS) 3,0 Için senaryolar, desenler ve uygulama KıLAVUZLARıNDAKI](/previous-versions/msp-n-p/ff648183(v=pandp.10))MSDN 'de bulunan desenler ve uygulamalar öğreticilerine bakın.  
   
  WCF güvenliğini programlama, aşağıdaki üç adımı temel alır: güvenlik modu, istemci kimlik bilgileri türü ve kimlik bilgisi değerleri. Bu adımları kod veya yapılandırma aracılığıyla yapabilirsiniz.  
   

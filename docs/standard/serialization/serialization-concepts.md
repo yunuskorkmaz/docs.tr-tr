@@ -3,12 +3,12 @@ title: Serileştirme kavramları
 description: Serileştirme bir nesnenin durumunu yakalamak veya bir uygulama etki alanından diğerine bir nesne değere göre göndermek için kullanılabilir.
 ms.date: 08/07/2017
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-ms.openlocfilehash: 35addd2dd2bed8ce878f2f159f1caefe89922d88
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: a185855f4b6913c8e1d57bf36fc5c37411123e68
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84291324"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541206"
 ---
 # <a name="serialization-concepts"></a>Serileştirme kavramları
 Neden serileştirme kullanmak istiyor? İki en önemli bir tam kopya daha sonraki bir aşamada yeniden oluşturulabilir için bir depolama ortamına bir nesne durumunu sürdürülmesi için ve nesne değerine göre bir uygulama etki alanından diğerine gönderilecek nedenleridir. Örneğin, serileştirme ASP.NET oturum durumu Kaydet ve Pano'ya Windows Forms nesneleri kopyalamak için kullanılır. Bu aynı zamanda nesneleri değerine göre bir uygulama etki alanından diğerine geçmesine uzaktan iletişim tarafından kullanılır.
@@ -31,7 +31,7 @@ Bir nesne öğesinden `MarshalByRefObject` türetilirse, nesne başvurusu nesnen
  [İkili serileştirme](binary-serialization.md)  
  Ortak dil çalışma zamanı ile içerdiği ikili serileştirme mekanizması açıklanmaktadır.  
   
- [.NET uzaktan Iletişim](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [.NET uzaktan Iletişim](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  Çeşitli iletişimleri .NET Framework için kullanılabilecek yöntemleri Uzaktan iletişimler açıklar.  
   
  [XML ve SOAP serileştirme](xml-and-soap-serialization.md)  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: f90906b4c3fc1d1d76977451abfb238bb33fb581
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29ac26616313ec8bd7661cb92c42f726ec051cd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595121"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90542893"
 ---
 # <a name="trusted-subsystem"></a>Güvenilir Alt Sistem
 İstemci bir ağ üzerinde dağıtılan bir veya daha fazla Web hizmetine erişir. Web Hizmetleri, ek kaynaklara erişimin (veritabanları veya diğer Web Hizmetleri gibi) Web hizmetinin iş mantığıyla kapsüllenmesi için tasarlanmıştır. Bu kaynakların yetkisiz erişime karşı korunması gerekir. Aşağıdaki çizimde, güvenilir bir alt sistem işlemi gösterilmektedir.  
@@ -29,16 +29,16 @@ ms.locfileid: "84595121"
   
 5. Güvenilen alt sistem yanıtı işler ve istemciye kendi yanıtını verir.  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte çalışabilirlik|Yalnızca Windows Communication Foundation (WCF).|  
+|Birlikte Çalışabilirlik|Yalnızca Windows Communication Foundation (WCF).|  
 |Kimlik doğrulaması (hizmet)|Güvenlik belirteci hizmeti, istemcilerin kimliğini doğrular ve yetkilendirir.|  
 |Kimlik doğrulaması (istemci)|Güvenilen alt sistem istemcinin kimliğini doğrular ve kaynak, güvenilen alt sistem hizmetinin kimliğini doğrular.|  
 |Bütünlük|Yes|  
 |Gizlilik|Yes|  
 |Aktarım|İstemci ile güvenilen alt sistem hizmeti arasında HTTP.<br /><br /> NET. Güvenilen alt sistem hizmeti ve kaynak (arka uç hizmeti) arasında TCP.|  
-|Bağlama|<xref:System.ServiceModel.WSHttpBinding>'<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Bağlama|<xref:System.ServiceModel.WSHttpBinding> ' <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Kaynak (arka uç hizmeti)  
   
@@ -213,4 +213,4 @@ ms.locfileid: "84595121"
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenliğe genel bakış](security-overview.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

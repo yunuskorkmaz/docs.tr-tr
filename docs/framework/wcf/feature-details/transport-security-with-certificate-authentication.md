@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 3da1202a5ad3b953470b50dd5924b2ab45f301eb
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 38f7d310be41455dd12460fdfa93d7e624d10c2a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85244784"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545226"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sertifika Kimlik Doğrulama ile Taşıma Güvenliği
 
@@ -25,7 +25,7 @@ Bu makalede, aktarım güvenliği kullanılırken sunucu ve istemci kimlik doğr
 |Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|Aktarım|  
-|Birlikte çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle.|  
+|Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle.|  
 |Kimlik doğrulaması (sunucu)<br /><br /> Kimlik doğrulaması (Istemci)|Evet (bir SSL sertifikası kullanarak)<br /><br /> Evet (bir X. 509.440 sertifikası kullanarak)|  
 |Veri bütünlüğü|Yes|  
 |Veri gizliliği|Yes|  
@@ -142,4 +142,4 @@ cc.Close();
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenliğe genel bakış](security-overview.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

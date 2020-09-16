@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: a00448f1c521d468db4cdaa957f92772194c8b43
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: ef212b31e9a7eda5adb037ff2b91f298ae6e948e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854872"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546763"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Nasıl yapılır: PrimitiveType Sonuçları Döndüren Bir Sorgu Yürütme
-Bu konu <xref:System.Data.EntityClient.EntityCommand>, kullanarak bir kavramsal modele karşı bir komutun nasıl yürütüleceğini ve bir <xref:System.Data.EntityClient.EntityDataReader>kullanarak <xref:System.Data.Metadata.Edm.PrimitiveType> sonuçların nasıl alınacağını gösterir.  
+Bu konu, kullanarak bir kavramsal modele karşı bir komutun nasıl yürütüleceğini <xref:System.Data.EntityClient.EntityCommand> ve <xref:System.Data.Metadata.Edm.PrimitiveType> bir kullanarak sonuçların nasıl alınacağını gösterir <xref:System.Data.EntityClient.EntityDataReader> .  
   
 ### <a name="to-run-the-code-in-this-example"></a>Bu örnekteki kodu çalıştırmak için  
   
-1. Projenize [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) ekleyin ve projenizi Entity Framework kullanacak şekilde yapılandırın. Daha fazla bilgi için [nasıl yapılır: Varlık Veri Modeli Sihirbazı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))'nı kullanın.  
+1. Projenize [AdventureWorks Sales modelini](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) ekleyin ve projenizi Entity Framework kullanacak şekilde yapılandırın. Daha fazla bilgi için bkz. [nasıl yapılır: varlık veri modeli Sihirbazı 'Nı kullanma](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
-2. Uygulamanızın kod sayfasında, aşağıdaki `using` deyimleri ekleyin (`Imports` Visual Basic):  
+2. Uygulamanızın kod sayfasında, aşağıdaki `using` deyimleri ekleyin ( `Imports` Visual Basic):  
   
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
 ## <a name="example"></a>Örnek  
- Bu örnek, <xref:System.Data.Metadata.Edm.PrimitiveType> sonuç döndüren bir sorgu yürütür. Aşağıdaki sorguyu `ExecutePrimitiveTypeQuery` işleve bağımsız değişken olarak geçirirseniz, işlev, tümünün `Products`ortalama liste fiyatını görüntüler:  
+ Bu örnek, sonuç döndüren bir sorgu yürütür <xref:System.Data.Metadata.Edm.PrimitiveType> . Aşağıdaki sorguyu işleve bağımsız değişken olarak geçirirseniz `ExecutePrimitiveTypeQuery` , işlev, tümünün ortalama liste fiyatını görüntüler `Products` :  
   
  [!code-csharp[DP EntityServices Concepts 2#EDM_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#edm_avg)]  
   
- Aşağıdaki <xref:System.Data.EntityClient.EntityParameter> gibiparametreli<xref:System.Data.EntityClient.EntityCommand> bir sorgu geçirirseniz, nesne üzerindeki özelliği.<xref:System.Data.EntityClient.EntityCommand.Parameters%2A>  
+ Aşağıdaki gibi parametreli bir sorgu geçirirseniz, <xref:System.Data.EntityClient.EntityParameter> <xref:System.Data.EntityClient.EntityCommand.Parameters%2A> nesne üzerindeki özelliği <xref:System.Data.EntityClient.EntityCommand> .  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   

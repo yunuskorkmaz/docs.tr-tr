@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 7601a6d5e7f49b6d8fc434ef772e2e69740f02cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73128382"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90543939"
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET Yerel ile Uygulama Derleme
 
@@ -38,7 +38,7 @@ Uygulamalarınızın kullanıcıları için .NET Native şu avantajları sunar:
 - En iyileştirilmiş uygulama bellek kullanımı.
 
 > [!IMPORTANT]
-> Uygulamalar ve senaryoların büyük çoğunluğu için .NET Native, Il 'ye veya NGEN görüntüsüne derlenen bir uygulamayla karşılaştırıldığında önemli ölçüde daha hızlı başlangıç süreleri ve üstün performans sunar. Ancak, sonuçlarınız farklılık gösterebilir. Uygulamanızın .NET Native performans geliştirmelerinden benefited sahip olduğundan emin olmak için, performansını uygulamanızın non-.NET Native sürümüyle karşılaştırmalısınız. Daha fazla bilgi için bkz. [performans oturumuna genel bakış](https://docs.microsoft.com/visualstudio/profiling/performance-session-overview).
+> Uygulamalar ve senaryoların büyük çoğunluğu için .NET Native, Il 'ye veya NGEN görüntüsüne derlenen bir uygulamayla karşılaştırıldığında önemli ölçüde daha hızlı başlangıç süreleri ve üstün performans sunar. Ancak, sonuçlarınız farklılık gösterebilir. Uygulamanızın .NET Native performans geliştirmelerinden benefited sahip olduğundan emin olmak için, performansını uygulamanızın non-.NET Native sürümüyle karşılaştırmalısınız. Daha fazla bilgi için bkz. [performans oturumuna genel bakış](/visualstudio/profiling/performance-session-overview).
 
 Ancak .NET Native yerel koda bir derlemeden daha fazlasını içerir. .NET Framework uygulamalarının oluşturulması ve yürütülmesi şeklini dönüştürür. Özellikle:
 
@@ -55,7 +55,7 @@ Ancak .NET Native yerel koda bir derlemeden daha fazlasını içerir. .NET Frame
 |Kitaplıklar|.NET Framework + Windows Çalışma Zamanı|Win32 + Windows Çalışma Zamanı|
 |Derleyici|UTC iyileştirmeli derleyici|UTC iyileştirmeli derleyici|
 |Dağıtılan|Çalıştırılmaya hazırlama ikilileri|Çalıştırılmaya hazırlama ikilileri (ASM)|
-|Çalışma Zamanı|MRT. dll (minimum CLR Runtime)|CRT. dll (C çalışma zamanı)|
+|Çalışma Zamanı|MRT.dll (en düşük CLR çalışma zamanı)|CRT.dll (C çalışma zamanı)|
 
 Windows 10 için Windows uygulamaları için, uygulama paketlerinde (. appx dosyaları) .NET Native kod derleme ikililerini Windows Mağazası 'na yüklersiniz.
 

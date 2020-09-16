@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: b4594932b6ed21de98faab57d80404a7b763067d
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: f3270147f0cf38a646efac603f058173daa78547
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83207912"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90541141"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Derlenen sorgular (LINQ to Entities)
 
@@ -18,7 +18,7 @@ Entity Framework birden çok kez yapısal olarak benzer sorgular yürüten bir u
   
  .NET Framework 4,5 ' den başlayarak LINQ sorguları otomatik olarak önbelleğe alınır. Ancak, daha sonra yürütmelerin ve derlenmiş sorguların bu maliyeti azaltmak için derlenen LINQ sorgularını kullanmaya devam edebilirsiniz. bu da, otomatik olarak önbelleğe alınan LINQ sorgularından daha verimli olabilir. Bu `Enumerable.Contains` işleci, bellek içi koleksiyonlara uygulayan LINQ to Entities sorguları otomatik olarak önbelleğe alınmaz. Ayrıca, derlenen LINQ sorgularında bellek içi koleksiyonlara parametrize izin verilmez.  
   
- <xref:System.Data.Objects.CompiledQuery>Sınıfı, yeniden kullanım için sorguları derleme ve önbelleğe alma sağlar. Kavramsal olarak, bu sınıf <xref:System.Data.Objects.CompiledQuery> `Compile` birkaç aşırı yükleme içeren bir yöntemi içerir. `Compile`Derlenen sorguyu temsil etmek üzere yeni bir temsilci oluşturmak için yöntemini çağırın. `Compile`Ve parametre değerleriyle birlikte sunulan yöntemler, <xref:System.Data.Objects.ObjectContext> bazı sonuçlar üreten bir temsilci döndürür (örneğin, bir <xref:System.Linq.IQueryable%601> örnek). Sorgu yalnızca ilk yürütme sırasında bir kez derlenir. Derleme sırasında sorgu için ayarlanan birleştirme seçenekleri daha sonra değiştirilemez. Sorgu derlendikten sonra yalnızca temel tür parametreleri sağlayabilirsiniz, ancak oluşturulan SQL 'yi değiştirecek sorgunun parçalarını değiştiremezsiniz. Daha fazla bilgi için bkz. [EF birleştirme seçenekleri ve derlenmiş sorgular](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
+ <xref:System.Data.Objects.CompiledQuery>Sınıfı, yeniden kullanım için sorguları derleme ve önbelleğe alma sağlar. Kavramsal olarak, bu sınıf <xref:System.Data.Objects.CompiledQuery> `Compile` birkaç aşırı yükleme içeren bir yöntemi içerir. `Compile`Derlenen sorguyu temsil etmek üzere yeni bir temsilci oluşturmak için yöntemini çağırın. `Compile`Ve parametre değerleriyle birlikte sunulan yöntemler, <xref:System.Data.Objects.ObjectContext> bazı sonuçlar üreten bir temsilci döndürür (örneğin, bir <xref:System.Linq.IQueryable%601> örnek). Sorgu yalnızca ilk yürütme sırasında bir kez derlenir. Derleme sırasında sorgu için ayarlanan birleştirme seçenekleri daha sonra değiştirilemez. Sorgu derlendikten sonra yalnızca temel tür parametreleri sağlayabilirsiniz, ancak oluşturulan SQL 'yi değiştirecek sorgunun parçalarını değiştiremezsiniz. Daha fazla bilgi için bkz. [EF birleştirme seçenekleri ve derlenmiş sorgular](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries).
   
  Yöntemi derleyen LINQ to Entities sorgu ifadesi <xref:System.Data.Objects.CompiledQuery> , `Compile` genel temsilcilerden biri (gibi) ile temsil edilir `Func` <xref:System.Func%605> . En çok, sorgu ifadesi bir `ObjectContext` parametreyi, dönüş parametresini ve 16 sorgu parametresini kapsülleyebilirsiniz. 16 ' dan fazla sorgu parametresi gerekliyse, özellikleri sorgu parametrelerini temsil eden bir yapı oluşturabilirsiniz. Daha sonra özellikleri ayarladıktan sonra sorgu ifadesindeki yapıda özellikleri kullanabilirsiniz.  
   
@@ -73,4 +73,4 @@ Entity Framework birden çok kez yapısal olarak benzer sorgular yürüten bir u
 
 - [ADO.NET Entity Framework](../index.md)
 - [LINQ - Varlıklar](linq-to-entities.md)
-- [EF birleştirme seçenekleri ve derlenmiş sorgular](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [EF birleştirme seçenekleri ve derlenmiş sorgular](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

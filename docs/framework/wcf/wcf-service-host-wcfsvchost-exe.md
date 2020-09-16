@@ -3,12 +3,12 @@ title: WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 description: Uygulanan bir hizmeti barındırmak ve test etmek için WCF hizmeti ana bilgisayarı kullanın. WCF test Istemcisi veya kendi istemcinizi kullanarak hizmeti test edebilirsiniz.
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: efc9512766d2a9cc814083ab632226d98917bf4e
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 2ac1d6318d8a82a82c08f38305ee6f92ad3f52a2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245732"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90544602"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF Hizmet Ana Bilgisayarı (WcfSvcHost.exe)
 
@@ -46,13 +46,13 @@ Aşağıdaki tabloda, Visual Studio 'daki **Çözüm Gezgini** ' nde projenize s
 
 Yeni bir WCF hizmeti projesi oluşturduktan ve hata ayıklayıcıyı başlatmak için F5 'e bastıktan sonra, WCF hizmet ana bilgisayarı projenizde bulduğu tüm hizmetleri barındırmaya başlar. WCF test Istemcisi otomatik olarak açılır ve yapılandırma dosyasında tanımlanan hizmet uç noktalarının listesini görüntüler. Ana pencereden, parametreleri test edebilir ve hizmetinizi çağırabilirsiniz.
 
-WCF test Istemcisinin kullanıldığından emin olmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenleri** iletişim kutusunda aşağıdakilerin göründüğünden emin olun.
+WCF test Istemcisinin kullanıldığından emin olmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **Projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenleri** iletişim kutusunda aşağıdakilerin göründüğünden emin olun.
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>Özel Istemci kullanma
 
-Özel bir istemci kullanmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve `/client` Aşağıdaki örnekte gösterildiği gibi özel istemcinizi işaret etmek için **komut satırı bağımsız değişkenleri** iletişim kutusunda parametreyi düzenleyin.
+Özel bir istemci kullanmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **Projeyi Başlat** ' a tıklayın ve `/client` Aşağıdaki örnekte gösterildiği gibi özel istemcinizi Işaret etmek için **komut satırı bağımsız değişkenleri** iletişim kutusunda parametreyi düzenleyin.
 
 `/client:"path/CustomClient.exe"`
 
@@ -68,11 +68,11 @@ Hizmeti yeniden başlatmak için F5 tuşuna bastığınızda, hata ayıklayıcı
 
 #### <a name="specifying-no-client"></a>Istemci belirtme
 
-WCF hizmeti barındırma sonrasında hiçbir istemci kullanılmayacağını belirtmek için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenleri** iletişim kutusunu boş bırakın.
+WCF hizmeti barındırma sonrasında hiçbir istemci kullanılmayacağını belirtmek için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **Projeyi Başlat** ' a tıklayın ve **komut satırı bağımsız değişkenleri** iletişim kutusunu boş bırakın.
 
 #### <a name="using-a-custom-host"></a>Özel ana bilgisayar kullanma
 
-Özel bir konak kullanmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **dış program Başlat** ' a tıklayın ve özel konağın tam yolunu girin. Ayrıca, konağa geçirilecek bağımsız değişkenleri belirtmek için **komut satırı bağımsız değişkenleri** iletişim kutusunu da kullanabilirsiniz.
+Özel bir konak kullanmak için, Visual Studio 'da **Çözüm Gezgini** ' nde projenize sağ tıklayın, **Özellikler**' i seçin ve ardından **Hata Ayıkla** sekmesini seçin. **Dış programı Başlat** ' a tıklayın ve özel konağın tam yolunu girin. Ayrıca, konağa geçirilecek bağımsız değişkenleri belirtmek için **komut satırı bağımsız değişkenleri** iletişim kutusunu da kullanabilirsiniz.
 
 ## <a name="wcf-service-host-user-interface"></a>WCF hizmet Konağı Kullanıcı arabirimi
 
@@ -120,7 +120,7 @@ Erişimi, yükseltilmiş yönetici hesabı altında Windows Vista 'daki netsh.ex
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-netsh.exe hakkında daha fazla bilgi için, "[Netsh.exe araç ve komut satırı anahtarlarını kullanma](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))" konusuna bakın.
+netsh.exe hakkında daha fazla bilgi için, "[Netsh.exe araç ve komut satırı anahtarlarını kullanma](/previous-versions/tn-archive/bb490939(v=technet.10))" konusuna bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

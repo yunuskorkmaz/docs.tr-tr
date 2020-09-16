@@ -2,18 +2,18 @@
 title: Windows'ta Olay İzleme ile Olayları İzleme
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fa5d86e327bc9c6eca85ed2908775de5f647f410
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 4350287aedae73a7ca9556de7ae3f597950e32ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144896"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549630"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Windows'ta Olay İzleme ile Olayları İzleme
 
 Bu örnek, bir iş akışı hizmetinde Windows Workflow Foundation (WF) izlemenin nasıl etkinleştirileceğini ve izleme olaylarının Windows için olay Izleme 'ye (ETW) nasıl görüntüleneceğini gösterir. İş akışı izleme kayıtlarını ETW 'ye yaymak için örnek ETW izleme katılımcısını () kullanır <xref:System.Activities.Tracking.EtwTrackingParticipant> .
 
-Örnekteki iş akışı bir istek alır, girdi verilerinin tersini giriş değişkenine atar ve istemciye geri dönüş döndürür. Giriş verileri 0 olduğunda, bu, iş akışının iptal edilmesine neden olan işlenmemiş bir sıfıra bölme özel durumu oluşur. İzleme etkinken, hata izleme kaydı ETW 'ye yayılır ve bu, daha sonra hatanın giderilmesine yardımcı olabilir. ETW izleme katılımcısı, kayıtları izlemeye abone olmak için bir izleme profili ile yapılandırılır. İzleme profili, Web. config dosyasında tanımlanır ve ETW izleme katılımcısı için bir yapılandırma parametresi olarak sağlanır. ETW izleme katılımcısı, iş akışı hizmetinin Web. config dosyasında yapılandırılır ve hizmet olarak hizmet davranışı olarak uygulanır. Bu örnekte, Olay Görüntüleyicisi kullanarak olay günlüğündeki izleme olaylarını görüntüleyebilirsiniz.
+Örnekteki iş akışı bir istek alır, girdi verilerinin tersini giriş değişkenine atar ve istemciye geri dönüş döndürür. Giriş verileri 0 olduğunda, bu, iş akışının iptal edilmesine neden olan işlenmemiş bir sıfıra bölme özel durumu oluşur. İzleme etkinken, hata izleme kaydı ETW 'ye yayılır ve bu, daha sonra hatanın giderilmesine yardımcı olabilir. ETW izleme katılımcısı, kayıtları izlemeye abone olmak için bir izleme profili ile yapılandırılır. İzleme profili Web.config dosyasında tanımlanır ve ETW izleme katılımcısına bir yapılandırma parametresi olarak sağlanır. ETW izleme katılımcısı, iş akışı hizmetinin Web.config dosyasında yapılandırılır ve hizmet olarak hizmet davranışı olarak uygulanır. Bu örnekte, Olay Görüntüleyicisi kullanarak olay günlüğündeki izleme olaylarını görüntüleyebilirsiniz.
 
 ## <a name="workflow-tracking-details"></a>İş akışı Izleme ayrıntıları
 
@@ -22,12 +22,12 @@ Windows Workflow Foundation, bir iş akışı örneğinin yürütülmesini izlem
 |Bileşen|Açıklama|
 |---------------|-----------------|
 |Çalışma zamanını izleme|İzleme kayıtlarını yaymakta olan altyapıyı sağlar.|
-|Katılımcıları izleme|İzleme kayıtlarına erişir. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]izleme kayıtlarını Windows için olay Izleme (ETW) olayları olarak yazan bir izleme katılımcısına sahip olarak gelir.|
+|Katılımcıları izleme|İzleme kayıtlarına erişir. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] izleme kayıtlarını Windows için olay Izleme (ETW) olayları olarak yazan bir izleme katılımcısına sahip olarak gelir.|
 |İzleme profili|Bir iş akışı örneğinden yayılan izleme kayıtlarının bir alt kümesi için bir izleme katılımcısının abone olmasına izin veren bir filtreleme mekanizması.|
 
 Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayıtlarının ayrıntıları verilmiştir.
 
-|İzleme kaydı|Açıklama|
+|İzleme kaydı|Description|
 |---------------------|-----------------|
 |İş akışı örneği izleme kayıtları.|İş akışı örneğinin yaşam döngüsünü açıklar. Örneğin, iş akışı başladığında veya tamamlandığında bir örnek kayıt yayınlanır.|
 |Etkinlik durumu izleme kayıtları.|Ayrıntıları etkinlik yürütmesi. Bu kayıtlar, bir etkinliğin zamanlandığı veya etkinliğin ne zaman tamamlandığı ya da bir hata oluşturulduğu zaman gibi bir iş akışı etkinliğinin durumunu gösterir.|
@@ -51,7 +51,7 @@ Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayı
 
 4. Dosya Gezgini 'ni kullanarak WCF test istemcisini açın.
 
-    WCF Test istemcisi (WcfTestClient. exe) \<Visual Studio 2010 installation folder> \Common7\IDE\ klasöründe bulunur.
+    WCF Test istemcisi (WcfTestClient.exe) \<Visual Studio 2010 installation folder> \Common7\IDE\ klasöründe bulunur.
 
     Varsayılan Visual Studio 2010 yükleme klasörü C:\Program Files\Microsoft Visual Studio 10,0 ' dir.
 
@@ -83,9 +83,9 @@ Aşağıdaki tabloda iş akışı çalışma zamanının yaydığı izleme kayı
 
 11. 9 ve 10 arasındaki adımları 0 dışında bir veri girişi ile tekrarlayın, böylece herhangi bir hata oluşturulmaz.
 
-İzleme profilleri, iş akışı örneği durumu değiştiğinde çalışma zamanı tarafından yayılan olaylara abone olmanızı sağlar. İzleme gereksinimlerinize bağlı olarak, bir iş akışında küçük bir üst düzey durum değişikliği kümesine abone olan çok kaba bir profil oluşturabilirsiniz. Öte yandan, çıkış daha sonra yürütmeyi yeniden oluşturmak için yeterince zengin olan çok kesin bir profil oluşturabilirsiniz. Örnek, iş akışı çalışma zamanından, `HealthMonitoring Tracking Profile` küçük bir olay kümesi sunan KULLANıLARAK ETW 'ye yayılan olayları gösterir. Adlı Web. config dosyasında daha fazla iş akışı izleme olayı sağlayan farklı bir profil de sağlanır `Troubleshooting Tracking Profile` . [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]Yüklendiğinde, Machine. config dosyasında boş ada sahip bir varsayılan profil yapılandırılır. Bu profil, hiçbir profil adı veya boş profil adı belirtilmediğinde ETW izleme davranışı yapılandırması tarafından kullanılır.
+İzleme profilleri, iş akışı örneği durumu değiştiğinde çalışma zamanı tarafından yayılan olaylara abone olmanızı sağlar. İzleme gereksinimlerinize bağlı olarak, bir iş akışında küçük bir üst düzey durum değişikliği kümesine abone olan çok kaba bir profil oluşturabilirsiniz. Öte yandan, çıkış daha sonra yürütmeyi yeniden oluşturmak için yeterince zengin olan çok kesin bir profil oluşturabilirsiniz. Örnek, iş akışı çalışma zamanından, `HealthMonitoring Tracking Profile` küçük bir olay kümesi sunan KULLANıLARAK ETW 'ye yayılan olayları gösterir. Adlı Web.config daha fazla iş akışı izleme olayı sağlayan farklı bir profil de sağlanır `Troubleshooting Tracking Profile` . [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]Yüklendiğinde, Machine.config dosyasında boş bir ada sahip bir varsayılan profil yapılandırılır. Bu profil, hiçbir profil adı veya boş profil adı belirtilmediğinde ETW izleme davranışı yapılandırması tarafından kullanılır.
 
-Sistem durumu izleme izleme profili, iş akışı örneği kayıtları ve etkinlik hatası yayma kayıtlarını yayar. Bu profil, bir Web. config yapılandırma dosyasına aşağıdaki izleme profili eklenerek oluşturulur.
+Sistem durumu izleme izleme profili, iş akışı örneği kayıtları ve etkinlik hatası yayma kayıtlarını yayar. Bu profil, bir Web.config yapılandırma dosyasına aşağıdaki izleme profili eklenerek oluşturulur.
 
 ```xml
 <tracking>
@@ -133,7 +133,7 @@ Sistem durumu izleme izleme profili, iş akışı örneği kayıtları ve etkinl
 
 4. Olayları temizlemek için **Temizle** seçeneğini belirleyin.
 
-## <a name="known-issue"></a>Bilinen Sorun
+## <a name="known-issue"></a>Bilinen sorun
 
 > [!NOTE]
 > Olay Görüntüleyicisi içinde, ETW olaylarının kodunu çözemediği bilinen bir sorun vardır. Aşağıdakine benzer bir hata iletisi görebilirsiniz.
@@ -153,4 +153,4 @@ Sistem durumu izleme izleme profili, iş akışı örneği kayıtları ve etkinl
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric Izleme örnekleri](/previous-versions/appfabric/ff383407(v=azure.10))

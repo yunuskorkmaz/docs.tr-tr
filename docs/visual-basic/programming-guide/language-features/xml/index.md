@@ -5,12 +5,12 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - LINQ to XML [Visual Basic]
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: bd9a08fca0159a24cb3faba2470dc43ee1178523
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ade7a3a285484c309611656ce1afc9deb269ce7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374790"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546184"
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic'de XML
 
@@ -20,7 +20,7 @@ Visual Basic, ile etkileşime geçmesini sağlayan tümleşik dil desteği sağl
 
  Bu bölümdeki konular Visual Basic ile kullanmayı tanıtmaktadır [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .  
   
-|Konu başlığı|Description|  
+|Konu|Description|  
 |-----------|-----------------|  
 |[Visual Basic'de LINQ - XML Dönüşümüne Genel Bakış](overview-of-linq-to-xml.md)|Visual Basic nasıl desteklediğini açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .|  
 |[Visual Basic'de XML Oluşturma](creating-xml.md)|Kullanılarak XML değişmez nesneleri oluşturmayı açıklar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] .|  
@@ -32,4 +32,4 @@ Visual Basic, ile etkileşime geçmesini sağlayan tümleşik dil desteği sağl
 - <xref:System.Xml.Linq>
 - [XML Değişmez Değerleri](../../../language-reference/xml-literals/index.md)
 - [XML Eksen Özellikleri](../../../language-reference/xml-axis/index.md)
-- [LINQ - XML](../../concepts/linq/linq-to-xml.md)
+- [LINQ - XML](../../../../standard/linq/linq-xml-overview.md)

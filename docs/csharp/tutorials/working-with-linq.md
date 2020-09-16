@@ -4,12 +4,12 @@ description: Bu öğreticide LINQ, LINQ sorgularında kullanılmak üzere yazma 
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 9bc17700e22ea29b1861945a220e397a90b9a7c1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 59e86d6412e16728fb03d05f7f4e221a26ec1bb1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88657002"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536242"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>Dil ile tümleşik sorgu (LINQ) ile çalışma
 
@@ -259,7 +259,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 Programı yeniden çalıştırın ve deste 'nın kendisini yeniden sıralamak için 52 yineleme aldığını görürsünüz. Program çalışmaya devam ettiğinden bazı önemli performans düşüşlerinden de karşılaşırsınız.
 
-Bunun birçok nedeni vardır. Bu performans durmasının önemli nedenlerine bir tane ekleyebilirsiniz: verimsiz [*yavaş değerlendirme*](../programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)kullanımı.
+Bunun birçok nedeni vardır. Bu performans durmasının önemli nedenlerine bir tane ekleyebilirsiniz: verimsiz [*yavaş değerlendirme*](../../standard/linq/deferred-execution-lazy-evaluation.md)kullanımı.
 
 Kısaca, yavaş değerlendirme bir deyimin değerlendirmesinin değeri gerekli olana kadar gerçekleştirilmediğini belirtir. LINQ sorguları, geç değerlendirilen ifadelerdir. Sıralar yalnızca öğeler istendiğinde oluşturulur. Genellikle bu, LINQ 'ın önemli bir avantajıdır. Bununla birlikte, bu program gibi bir kullanımda, yürütme zamanında üstel büyümeye neden olur.
 
