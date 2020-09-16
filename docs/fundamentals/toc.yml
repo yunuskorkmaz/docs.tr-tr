@@ -147,127 +147,125 @@ items:
         href: ../core/whats-new/dotnet-core-2-0.md
       - name: .NET Standard’daki yenilikler
         href: ../standard/whats-new/whats-new-in-dotnet-standard.md
-  - name: Ortam ve çalışma zamanı bileşenleri
+  - name: Araçlar ve tanılamalar
     items:
-      - name: Araçlar ve üretkenlik
+      - name: .NET Core SDK’sına genel bakış
+        href: ../core/sdk.md
+      - name: .NET Core CLI
         items:
-          - name: .NET Core SDK’sına genel bakış
-            href: ../core/sdk.md
-          - name: .NET Core CLI
+          - name: Genel Bakış
+            href: ../core/tools/index.md
+          - name: Başvuru
             items:
-              - name: Genel Bakış
-                href: ../core/tools/index.md
-              - name: Başvuru
+              - name: dotnet
+                href: ../core/tools/dotnet.md
+              - name: dotnet build
+                href: ../core/tools/dotnet-build.md
+              - name: dotnet build-server
+                href: ../core/tools/dotnet-build-server.md
+              - name: dotnet clean
+                href: ../core/tools/dotnet-clean.md
+              - name: dotnet help
+                href: ../core/tools/dotnet-help.md
+              - name: dotnet migrate
+                href: ../core/tools/dotnet-migrate.md
+              - name: dotnet msbuild
+                href: ../core/tools/dotnet-msbuild.md
+              - name: dotnet new
+                href: ../core/tools/dotnet-new.md
+              - name: dotnet nuget
                 items:
-                  - name: dotnet
-                    href: ../core/tools/dotnet.md
-                  - name: dotnet build
-                    href: ../core/tools/dotnet-build.md
-                  - name: dotnet build-server
-                    href: ../core/tools/dotnet-build-server.md
-                  - name: dotnet clean
-                    href: ../core/tools/dotnet-clean.md
-                  - name: dotnet help
-                    href: ../core/tools/dotnet-help.md
-                  - name: dotnet migrate
-                    href: ../core/tools/dotnet-migrate.md
-                  - name: dotnet msbuild
-                    href: ../core/tools/dotnet-msbuild.md
-                  - name: dotnet new
-                    href: ../core/tools/dotnet-new.md
-                  - name: dotnet nuget
-                    items:
-                      - name: dotnet nuget delete
-                        href: ../core/tools/dotnet-nuget-delete.md
-                      - name: dotnet nuget locals
-                        href: ../core/tools/dotnet-nuget-locals.md
-                      - name: dotnet nuget push
-                        href: ../core/tools/dotnet-nuget-push.md
-                      - name: dotnet nuget add source
-                        href: ../core/tools/dotnet-nuget-add-source.md
-                      - name: dotnet nuget disable source
-                        href: ../core/tools/dotnet-nuget-disable-source.md
-                      - name: dotnet nuget enable source
-                        href: ../core/tools/dotnet-nuget-enable-source.md
-                      - name: dotnet nuget list source
-                        href: ../core/tools/dotnet-nuget-list-source.md
-                      - name: dotnet nuget remove source
-                        href: ../core/tools/dotnet-nuget-remove-source.md
-                      - name: dotnet nuget update source
-                        href: ../core/tools/dotnet-nuget-update-source.md
-                  - name: dotnet pack
-                    href: ../core/tools/dotnet-pack.md
-                  - name: dotnet publish
-                    href: ../core/tools/dotnet-publish.md
-                  - name: dotnet restore
-                    href: ../core/tools/dotnet-restore.md
-                  - name: dotnet run
-                    href: ../core/tools/dotnet-run.md
-                  - name: dotnet sln
-                    href: ../core/tools/dotnet-sln.md
-                  - name: dotnet store
-                    href: ../core/tools/dotnet-store.md
-                  - name: dotnet test
-                    href: ../core/tools/dotnet-test.md
-                  - name: dotnet tool
-                    items:
-                      - name: dotnet tool install
-                        href: ../core/tools/dotnet-tool-install.md
-                      - name: dotnet tool list
-                        href: ../core/tools/dotnet-tool-list.md
-                      - name: dotnet tool restore
-                        href: ../core/tools/dotnet-tool-restore.md
-                      - name: dotnet tool run
-                        href: ../core/tools/dotnet-tool-run.md
-                      - name: dotnet tool uninstall
-                        href: ../core/tools/dotnet-tool-uninstall.md
-                      - name: dotnet tool update
-                        href: ../core/tools/dotnet-tool-update.md
-                  - name: dotnet vstest
-                    href: ../core/tools/dotnet-vstest.md
-                  - name: dotnet-install scripts
-                    href: ../core/tools/dotnet-install-script.md
-                  - name: Proje başvurusu komutları
-                    items:
-                      - name: dotnet add reference
-                        href: ../core/tools/dotnet-add-reference.md
-                      - name: dotnet list reference
-                        href: ../core/tools/dotnet-list-reference.md
-                      - name: dotnet remove reference
-                        href: ../core/tools/dotnet-remove-reference.md
-                  - name: Proje paketi komutları
-                    items:
-                      - name: dotnet add package
-                        href: ../core/tools/dotnet-add-package.md
-                      - name: dotnet list package
-                        href: ../core/tools/dotnet-list-package.md
-                      - name: dotnet remove package
-                        href: ../core/tools/dotnet-remove-package.md
-              - name: Genel ve yerel araçlar
+                  - name: dotnet nuget delete
+                    href: ../core/tools/dotnet-nuget-delete.md
+                  - name: dotnet nuget locals
+                    href: ../core/tools/dotnet-nuget-locals.md
+                  - name: dotnet nuget push
+                    href: ../core/tools/dotnet-nuget-push.md
+                  - name: dotnet nuget add source
+                    href: ../core/tools/dotnet-nuget-add-source.md
+                  - name: dotnet nuget disable source
+                    href: ../core/tools/dotnet-nuget-disable-source.md
+                  - name: dotnet nuget enable source
+                    href: ../core/tools/dotnet-nuget-enable-source.md
+                  - name: dotnet nuget list source
+                    href: ../core/tools/dotnet-nuget-list-source.md
+                  - name: dotnet nuget remove source
+                    href: ../core/tools/dotnet-nuget-remove-source.md
+                  - name: dotnet nuget update source
+                    href: ../core/tools/dotnet-nuget-update-source.md
+              - name: dotnet pack
+                href: ../core/tools/dotnet-pack.md
+              - name: dotnet publish
+                href: ../core/tools/dotnet-publish.md
+              - name: dotnet restore
+                href: ../core/tools/dotnet-restore.md
+              - name: dotnet run
+                href: ../core/tools/dotnet-run.md
+              - name: dotnet sln
+                href: ../core/tools/dotnet-sln.md
+              - name: dotnet store
+                href: ../core/tools/dotnet-store.md
+              - name: dotnet test
+                href: ../core/tools/dotnet-test.md
+              - name: dotnet tool
                 items:
-                  - name: Araçları yönetme
-                    href: ../core/tools/global-tools.md
-                  - name: Sorun giderme araçları
-                    href: ../core/tools/troubleshoot-usage-issues.md
-                  - name: CLI için araçlar oluşturma
-                    items:
-                      - name: 1 - Araç oluşturma
-                        displayName: 'tools, tutorials, cli'
-                        href: ../core/tools/global-tools-how-to-create.md
-                      - name: 2 - Genel araç kullanma
-                        displayName: 'tools, tutorials, cli'
-                        href: ../core/tools/global-tools-how-to-use.md
-                      - name: 3 - Yerel araç kullanma
-                        href: ../core/tools/local-tools-how-to-use.md
-                        displayName: 'tools, tutorials, cli'
-              - name: global.json’a genel bakış
-                href: ../core/tools/global-json.md
-              - name: Telemetri
-                href: ../core/tools/telemetry.md
-              - name: Yükseltilmiş erişim
-                href: ../core/tools/elevated-access.md
-              - name: Sekme tamamlamayı etkinleştirme
-                href: ../core/tools/enable-tab-autocomplete.md
+                  - name: dotnet tool install
+                    href: ../core/tools/dotnet-tool-install.md
+                  - name: dotnet tool list
+                    href: ../core/tools/dotnet-tool-list.md
+                  - name: dotnet tool restore
+                    href: ../core/tools/dotnet-tool-restore.md
+                  - name: dotnet tool run
+                    href: ../core/tools/dotnet-tool-run.md
+                  - name: dotnet tool uninstall
+                    href: ../core/tools/dotnet-tool-uninstall.md
+                  - name: dotnet tool update
+                    href: ../core/tools/dotnet-tool-update.md
+              - name: dotnet vstest
+                href: ../core/tools/dotnet-vstest.md
+              - name: dotnet-install scripts
+                href: ../core/tools/dotnet-install-script.md
+              - name: Proje başvurusu komutları
+                items:
+                  - name: dotnet add reference
+                    href: ../core/tools/dotnet-add-reference.md
+                  - name: dotnet list reference
+                    href: ../core/tools/dotnet-list-reference.md
+                  - name: dotnet remove reference
+                    href: ../core/tools/dotnet-remove-reference.md
+              - name: Proje paketi komutları
+                items:
+                  - name: dotnet add package
+                    href: ../core/tools/dotnet-add-package.md
+                  - name: dotnet list package
+                    href: ../core/tools/dotnet-list-package.md
+                  - name: dotnet remove package
+                    href: ../core/tools/dotnet-remove-package.md
+          - name: Genel ve yerel araçlar
+            items:
+              - name: Araçları yönetme
+                href: ../core/tools/global-tools.md
+              - name: Sorun giderme araçları
+                href: ../core/tools/troubleshoot-usage-issues.md
+              - name: CLI için araçlar oluşturma
+                items:
+                  - name: 1 - Araç oluşturma
+                    displayName: 'tools, tutorials, cli'
+                    href: ../core/tools/global-tools-how-to-create.md
+                  - name: 2 - Genel araç kullanma
+                    displayName: 'tools, tutorials, cli'
+                    href: ../core/tools/global-tools-how-to-use.md
+                  - name: 3 - Yerel araç kullanma
+                    href: ../core/tools/local-tools-how-to-use.md
+                    displayName: 'tools, tutorials, cli'
+          - name: global.json’a genel bakış
+            href: ../core/tools/global-json.md
+          - name: Telemetri
+            href: ../core/tools/telemetry.md
+          - name: Yükseltilmiş erişim
+            href: ../core/tools/elevated-access.md
+          - name: Sekme tamamlamayı etkinleştirme
+            href: ../core/tools/enable-tab-autocomplete.md
           - name: CLI ile sürekli tümleştirme
             href: ../core/tools/using-ci-with-cli.md
           - name: CLI ile kitaplıklar geliştirme
@@ -285,151 +283,6 @@ items:
               - name: 3 - Şablon paketi oluşturma
                 href: ../core/tutorials/cli-templates-create-template-pack.md
                 displayName: 'tutorials, cli'
-          - name: .NET Core ek araçlar
-            items:
-              - name: Genel Bakış
-                href: ../core/additional-tools/index.md
-              - name: .NET Core Kaldırma Aracı
-                href: ../core/additional-tools/uninstall-tool.md
-              - name: WCF Web Service Reference Provider
-                href: ../core/additional-tools/wcf-web-service-reference-guide.md
-              - name: dotnet-svcutil
-                href: ../core/additional-tools/dotnet-svcutil-guide.md
-              - name: dotnet-svcutil.xmlserializer
-                href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
-              - name: XML Serileştirici Oluşturucusu
-                href: ../core/additional-tools/xml-serializer-generator.md
-          - name: Tanılama araçları
-            items:
-              - name: Genel Bakış
-                href: ../core/diagnostics/index.md
-              - name: Yönetilen hata ayıklayıcıları
-                href: ../core/diagnostics/managed-debuggers.md
-              - name: Linux dökümlerinin hatasını ayıklama
-                href: ../core/diagnostics/debug-linux-dumps.md
-              - name: EventCounters
-                href: ../core/diagnostics/event-counters.md
-              - name: Günlüğe kaydetme ve izleme
-                href: ../core/diagnostics/logging-tracing.md
-              - name: .NET Core CLI genel araçları
-                items:
-                  - name: dotnet-counters
-                    href: ../core/diagnostics/dotnet-counters.md
-                  - name: dotnet-dump
-                    href: ../core/diagnostics/dotnet-dump.md
-                  - name: dotnet-gcdump
-                    href: ../core/diagnostics/dotnet-gcdump.md
-                  - name: dotnet-trace
-                    href: ../core/diagnostics/dotnet-trace.md
-                  - name: dotnet-symbol
-                    href: ../core/diagnostics/dotnet-symbol.md
-                  - name: dotnet-sos
-                    href: ../core/diagnostics/dotnet-sos.md
-              - name: .NET Core tanılama öğreticileri
-                items:
-                  - name: EventCounters ile performans ölçümlerini alma
-                    href: ../core/diagnostics/event-counter-perf.md
-                  - name: Bellek sızıntısında hata ayıklama
-                    href: ../core/diagnostics/debug-memory-leak.md
-                  - name: Yüksek CPU kullanımı hatasını ayıklama
-                    href: ../core/diagnostics/debug-highcpu.md
-                  - name: Çıkmaz hatasını ayıklama
-                    href: ../core/diagnostics/debug-deadlock.md
-          - name: Kod analizi
-            items:
-              - name: Genel Bakış
-                href: productivity/code-analysis.md
-                displayName: 'code analysis, analyzers'
-              - name: Kuralları yapılandırma
-                href: productivity/configure-code-analysis-rules.md
-              - name: API çözümleyicisi
-                href: ../standard/analyzers/api-analyzer.md
-              - name: Taşınabilirlik çözümleyicisi
-                href: ../standard/analyzers/portability-analyzer.md
-      - name: Yürütme modeli
-        items:
-          - name: Ortak Dil Çalışma Zamanı (CLR)
-            href: ../standard/clr.md
-          - name: Yönetilen yürütme işlemi
-            href: ../standard/managed-execution-process.md
-          - name: .NET’te bütünleştirilmiş kodlar
-            href: ../standard/assembly/
-          - name: Meta veriler ve kendiliğinden açıklayıcı bileşenler
-            href: ../standard/metadata-and-self-describing-components.md
-          - name: Bağımlılık yüklemesi
-            items:
-              - name: Bağımlılık yüklemesi
-                href: ../core/dependency-loading/overview.md
-              - name: AssemblyLoadContext’i anlama
-                href: ../core/dependency-loading/understanding-assemblyloadcontext.md
-              - name: Bağımlılık yüklemesi ayrıntıları
-                items:
-                  - name: Varsayılan bağımlılık araştırması
-                    href: ../core/dependency-loading/default-probing.md
-                  - name: Yönetilen derlemeleri yükleme
-                    href: ../core/dependency-loading/loading-managed.md
-                  - name: Uydu derlemeleri yükleme
-                    href: ../core/dependency-loading/loading-resources.md
-                  - name: Yönetilmeyen kitaplıkları yükleme
-                    href: ../core/dependency-loading/loading-unmanaged.md
-              - name: Öğreticiler
-                items:
-                  - name: Eklentilerle .NET Core uygulaması oluşturma
-                    href: ../core/tutorials/creating-app-with-plugin-support.md
-                  - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
-                    href: ../core/../standard/assembly/unloadability.md
-          - name: Sürüm Oluşturma
-            items:
-              - name: Genel Bakış
-                href: ../core/versions/index.md
-              - name: .NET Core sürüm seçimi
-                href: ../core/versions/selection.md
-          - name: Çalışma zamanı yapılandırması
-            items:
-              - name: Ayarlar
-                href: ../core/run-time-config/index.md
-              - name: Derleme ayarları
-                href: ../core/run-time-config/compilation.md
-              - name: Hata ayıklama ve profil oluşturma ayarları
-                href: ../core/run-time-config/debugging-profiling.md
-              - name: Atık toplayıcı ayarları
-                href: ../core/run-time-config/garbage-collector.md
-              - name: Genelleştirme ayarları
-                href: ../core/run-time-config/globalization.md
-              - name: Ağ ayarları
-                href: ../core/run-time-config/networking.md
-              - name: İş parçacığı oluşturma ayarları
-                href: ../core/run-time-config/threading.md
-      - name: Dağıtım modelleri
-        items:
-          - name: Genel Bakış
-            href: ../core/deploying/index.md
-          - name: Visual Studio ile uygulama dağıtma
-            href: ../core/deploying/deploy-with-vs.md
-          - name: CLI ile uygulama yayımlama
-            href: ../core/deploying/deploy-with-cli.md
-          - name: CLI ile NuGet paketi oluşturma
-            href: ../core/deploying/creating-nuget-packages.md
-          - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
-            href: ../core/deploying/runtime-patch-selection.md
-          - name: Tek dosya dağıtımı ve yürütülebilir dosya
-            href: ../core/deploying/single-file.md
-          - name: Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
-            href: ../core/deploying/trim-self-contained.md
-          - name: Çalışma zamanı paket deposu
-            href: ../core/deploying/runtime-store.md
-          - name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu
-            href: ../core/rid-catalog.md
-          - name: Kaynak bildirim adları
-            href: ../core/resources/manifest-file-names.md
-          - name: Docker
-            items:
-              - name: .NET ve Docker’a Giriş
-                href: ../core/docker/introduction.md
-              - name: .NET Core uygulamasını kapsayıcılı hale getirme
-                href: ../core/docker/build-container.md
-              - name: Visual Studio’da kapsayıcı araçları
-                href: /visualstudio/containers/overview
       - name: MSBuild ve proje dosyaları
         items:
           - name: Proje SDK’leri
@@ -450,6 +303,151 @@ items:
             href: ../core/tools/csproj.md
           - name: Bağımlılık yönetimi
             href: ../core/tools/dependencies.md
+      - name: .NET Core ek araçlar
+        items:
+          - name: Genel Bakış
+            href: ../core/additional-tools/index.md
+          - name: .NET Core Kaldırma Aracı
+            href: ../core/additional-tools/uninstall-tool.md
+          - name: WCF Web Service Reference Provider
+            href: ../core/additional-tools/wcf-web-service-reference-guide.md
+          - name: dotnet-svcutil
+            href: ../core/additional-tools/dotnet-svcutil-guide.md
+          - name: dotnet-svcutil.xmlserializer
+            href: ../core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+          - name: XML Serileştirici Oluşturucusu
+            href: ../core/additional-tools/xml-serializer-generator.md
+      - name: Tanılama araçları
+        items:
+          - name: Genel Bakış
+            href: ../core/diagnostics/index.md
+          - name: Yönetilen hata ayıklayıcıları
+            href: ../core/diagnostics/managed-debuggers.md
+          - name: Linux dökümlerinin hatasını ayıklama
+            href: ../core/diagnostics/debug-linux-dumps.md
+          - name: EventCounters
+            href: ../core/diagnostics/event-counters.md
+          - name: Günlüğe kaydetme ve izleme
+            href: ../core/diagnostics/logging-tracing.md
+          - name: .NET Core CLI genel araçları
+            items:
+              - name: dotnet-counters
+                href: ../core/diagnostics/dotnet-counters.md
+              - name: dotnet-dump
+                href: ../core/diagnostics/dotnet-dump.md
+              - name: dotnet-gcdump
+                href: ../core/diagnostics/dotnet-gcdump.md
+              - name: dotnet-trace
+                href: ../core/diagnostics/dotnet-trace.md
+              - name: dotnet-symbol
+                href: ../core/diagnostics/dotnet-symbol.md
+              - name: dotnet-sos
+                href: ../core/diagnostics/dotnet-sos.md
+          - name: .NET Core tanılama öğreticileri
+            items:
+              - name: EventCounters ile performans ölçümlerini alma
+                href: ../core/diagnostics/event-counter-perf.md
+              - name: Bellek sızıntısında hata ayıklama
+                href: ../core/diagnostics/debug-memory-leak.md
+              - name: Yüksek CPU kullanımı hatasını ayıklama
+                href: ../core/diagnostics/debug-highcpu.md
+              - name: Çıkmaz hatasını ayıklama
+                href: ../core/diagnostics/debug-deadlock.md
+      - name: Kod analizi
+        items:
+          - name: Genel Bakış
+            href: productivity/code-analysis.md
+            displayName: 'code analysis, analyzers'
+          - name: Kuralları yapılandırma
+            href: productivity/configure-code-analysis-rules.md
+          - name: API çözümleyicisi
+            href: ../standard/analyzers/api-analyzer.md
+          - name: Taşınabilirlik çözümleyicisi
+            href: ../standard/analyzers/portability-analyzer.md
+  - name: Yürütme modeli
+    items:
+      - name: Ortak Dil Çalışma Zamanı (CLR)
+        href: ../standard/clr.md
+      - name: Yönetilen yürütme işlemi
+        href: ../standard/managed-execution-process.md
+      - name: .NET’te bütünleştirilmiş kodlar
+        href: ../standard/assembly/
+      - name: Meta veriler ve kendiliğinden açıklayıcı bileşenler
+        href: ../standard/metadata-and-self-describing-components.md
+      - name: Bağımlılık yüklemesi
+        items:
+          - name: Bağımlılık yüklemesi
+            href: ../core/dependency-loading/overview.md
+          - name: AssemblyLoadContext’i anlama
+            href: ../core/dependency-loading/understanding-assemblyloadcontext.md
+          - name: Bağımlılık yüklemesi ayrıntıları
+            items:
+              - name: Varsayılan bağımlılık araştırması
+                href: ../core/dependency-loading/default-probing.md
+              - name: Yönetilen derlemeleri yükleme
+                href: ../core/dependency-loading/loading-managed.md
+              - name: Uydu derlemeleri yükleme
+                href: ../core/dependency-loading/loading-resources.md
+              - name: Yönetilmeyen kitaplıkları yükleme
+                href: ../core/dependency-loading/loading-unmanaged.md
+          - name: Öğreticiler
+            items:
+              - name: Eklentilerle .NET Core uygulaması oluşturma
+                href: ../core/tutorials/creating-app-with-plugin-support.md
+              - name: .NET Core’da kaldırabilme özelliğini kullanma ve hatalarını ayıklama
+                href: ../core/../standard/assembly/unloadability.md
+      - name: Sürüm Oluşturma
+        items:
+          - name: Genel Bakış
+            href: ../core/versions/index.md
+          - name: .NET Core sürüm seçimi
+            href: ../core/versions/selection.md
+      - name: Çalışma zamanı yapılandırması
+        items:
+          - name: Ayarlar
+            href: ../core/run-time-config/index.md
+          - name: Derleme ayarları
+            href: ../core/run-time-config/compilation.md
+          - name: Hata ayıklama ve profil oluşturma ayarları
+            href: ../core/run-time-config/debugging-profiling.md
+          - name: Atık toplayıcı ayarları
+            href: ../core/run-time-config/garbage-collector.md
+          - name: Genelleştirme ayarları
+            href: ../core/run-time-config/globalization.md
+          - name: Ağ ayarları
+            href: ../core/run-time-config/networking.md
+          - name: İş parçacığı oluşturma ayarları
+            href: ../core/run-time-config/threading.md
+  - name: Dağıtım modelleri
+    items:
+      - name: Genel Bakış
+        href: ../core/deploying/index.md
+      - name: Visual Studio ile uygulama dağıtma
+        href: ../core/deploying/deploy-with-vs.md
+      - name: CLI ile uygulama yayımlama
+        href: ../core/deploying/deploy-with-cli.md
+      - name: CLI ile NuGet paketi oluşturma
+        href: ../core/deploying/creating-nuget-packages.md
+      - name: Kendi içinde dağıtım çalışma zamanını ileri sarma
+        href: ../core/deploying/runtime-patch-selection.md
+      - name: Tek dosya dağıtımı ve yürütülebilir dosya
+        href: ../core/deploying/single-file.md
+      - name: Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
+        href: ../core/deploying/trim-self-contained.md
+      - name: Çalışma zamanı paket deposu
+        href: ../core/deploying/runtime-store.md
+      - name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu
+        href: ../core/rid-catalog.md
+      - name: Kaynak bildirim adları
+        href: ../core/resources/manifest-file-names.md
+      - name: Docker
+        items:
+          - name: .NET ve Docker’a Giriş
+            href: ../core/docker/introduction.md
+          - name: .NET Core uygulamasını kapsayıcılı hale getirme
+            href: ../core/docker/build-container.md
+          - name: Visual Studio’da kapsayıcı araçları
+            href: /visualstudio/containers/overview
   - name: Temel kodlama bileşenleri
     items:
       - name: Temel türlere genel bakış
