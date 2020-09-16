@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4837d398-16a1-4e32-902c-022cd1aad3ca
 topic_type:
 - apiref
-ms.openlocfilehash: d328afcba9761f686dd38bdb2dd651994faaac2a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: ea352b189d65e0be6a2bbc81c19a03d1edd8143d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841873"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554807"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime Yöntemi
 Denetimin ortak dil çalışma zamanını (CLR) terk eden ve sırasıyla yönetilen koddan çağrılan yönetilmeyen bir işlev girerek konağa bildirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 HRESULT ReverseLeaveRuntime ();  
@@ -33,9 +33,9 @@ HRESULT ReverseLeaveRuntime ();
   
 ## <a name="return-value"></a>Dönüş Değeri  
   
-|HRESULT|Açıklama|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`ReverseLeaveRuntime`başarıyla döndürüldü.|  
+|S_OK|`ReverseLeaveRuntime` başarıyla döndürüldü.|  
 |HOST_E_CLRNOTAVAILABLE|CLR bir işleme yüklenmemiş veya CLR yönetilen kodu çalıştıramadığından veya çağrıyı başarıyla işleyemediği bir durumda.|  
 |HOST_E_TIMEOUT|Çağrı zaman aşımına uğradı.|  
 |HOST_E_NOT_OWNER|Çağıranın kilidi yoktur.|  
@@ -51,7 +51,7 @@ HRESULT ReverseLeaveRuntime ();
   
  **Üst bilgi:** MSCorEE. h  
   
- **Kitaplık:** MSCorEE. dll dosyasına bir kaynak olarak dahildir  
+ **Kitaplık:** MSCorEE.dll bir kaynak olarak eklendi  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
@@ -64,4 +64,4 @@ HRESULT ReverseLeaveRuntime ();
 - [IHostTask Arabirimi](ihosttask-interface.md)
 - [IHostTaskManager Arabirimi](ihosttaskmanager-interface.md)
 - [LeaveRuntime Yöntemi](ihosttaskmanager-leaveruntime-method.md)
-- [Platform çağırma ' ye daha yakından bakış](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))
+- [Platform çağırma ' ye daha yakından bakış](/previous-versions/dotnet/netframework-4.0/0h9e9t7d(v=vs.100))

@@ -2,12 +2,12 @@
 title: SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: bf46d43f5ac9b0a385e9bc6da1546af1d67a282d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62b0bffd5e77cccdb49913428005c4f0036abd46
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040239"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554911"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>SQL Server'da Veritabanları Arası Erişimi Etkinleştirme
 Veritabanları arası sahiplik zinciri, bir veritabanındaki bir yordam başka bir veritabanındaki nesnelere bağımlıysa oluşur. Veritabanları arası sahiplik zinciri, tek bir veritabanı içindeki sahiplik zinciriyle aynı şekilde çalışarak, bozuk bir sahiplik zinciri, tüm nesne sahiplerinin aynı oturum açma hesabıyla eşlenmesini gerektirmesidir. Kaynak veritabanındaki kaynak nesne ve hedef veritabanlarındaki hedef nesneler aynı oturum açma hesabına aitse, SQL Server hedef nesnelerdeki izinleri denetlemez.  
@@ -15,14 +15,14 @@ Veritabanları arası sahiplik zinciri, bir veritabanındaki bir yordam başka b
 ## <a name="off-by-default"></a>Varsayılan olarak kapalı  
  Veritabanları arasında sahiplik zinciri varsayılan olarak kapalıdır. Microsoft, aşağıdaki güvenlik risklerini size gösterdiğinden, veritabanları arası sahiplik zincirlemeyi devre dışı bırakmanızı önerir:  
   
-- Veritabanı sahipleri ve `db_ddladmin` veya `db_owners` veritabanı rollerinin üyeleri, diğer kullanıcılara ait nesneleri oluşturabilir. Bu nesneler, diğer veritabanlarındaki nesneleri hedefleyebilir. Bu, veritabanları arası sahiplik zincirlemeyi etkinleştirirseniz bu kullanıcılara tüm veritabanlarındaki verilerle tam olarak güvenmeniz gerektiğini gösterir.  
+- Veritabanı sahipleri ve `db_ddladmin` veya veritabanı rollerinin üyeleri, `db_owners` diğer kullanıcılara ait nesneler oluşturabilir. Bu nesneler, diğer veritabanlarındaki nesneleri hedefleyebilir. Bu, veritabanları arası sahiplik zincirlemeyi etkinleştirirseniz bu kullanıcılara tüm veritabanlarındaki verilerle tam olarak güvenmeniz gerektiğini gösterir.  
   
 - VERITABANı oluştur iznine sahip kullanıcılar yeni veritabanları oluşturabilir ve var olan veritabanlarını ekleyebilir. Veritabanları arası sahiplik zinciri etkinse, bu kullanıcılar, oluşturdukları yeni oluşturulan veya eklenen veritabanlarından ayrıcalıklarına sahip olmadıkları diğer veritabanlarındaki nesnelere erişebilir.  
   
 ## <a name="enabling-cross-database-ownership-chaining"></a>Veritabanları arası sahiplik zincirlemeyi etkinleştirme  
- Veritabanları arası sahiplik zinciri yalnızca yüksek ayrıcalıklı kullanıcılara tam güvenebileceğiniz ortamlarda etkinleştirilmelidir. Tüm veritabanları için kurulum sırasında ya da Transact-SQL komutları `sp_configure` ve `ALTER DATABASE`kullanılarak belirli veritabanlarına seçmeli olarak yapılandırılabilir.  
+ Veritabanları arası sahiplik zinciri yalnızca yüksek ayrıcalıklı kullanıcılara tam güvenebileceğiniz ortamlarda etkinleştirilmelidir. Tüm veritabanları için kurulum sırasında veya Transact-SQL komutları kullanılarak belirli veritabanlarına seçmeli olarak yapılandırılabilir `sp_configure` `ALTER DATABASE` .  
   
- Veritabanları arası sahiplik zincirlemeyi seçmeli olarak yapılandırmak için `sp_configure` kullanarak sunucu için devre dışı bırakın. Ardından, tek yapmanız gereken veritabanları için veritabanları arası sahiplik zincirlemesini yapılandırmak üzere SET DB_CHAINING ON ile ALTER DATABASE komutunu kullanın.  
+ Veritabanları arası sahiplik zincirlemeyi seçmeli olarak yapılandırmak için, ' yi kullanarak `sp_configure` sunucu için devre dışı bırakın. Ardından, tek yapmanız gereken veritabanları için veritabanları arası sahiplik zincirlemesini yapılandırmak üzere DB_CHAINING SET ile ALTER DATABASE komutunu kullanın.  
   
  Aşağıdaki örnek, tüm veritabanları için çapraz veritabanı sahiplik zincirlemesini etkinleştirir:  
   
@@ -48,7 +48,7 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
   
 |Kaynak|Açıklama|  
 |--------------|-----------------|  
-|FARKLı ÇALıŞTıR ve [çapraz veritabanı sahiplik zinciri seçeneğini](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option) [kullanarak veritabanı kimliğe bürünme özelliğini genişletme](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) .|Makaleler, bir SQL Server örneği için veritabanları arası sahiplik zincirinin nasıl yapılandırılacağını açıklamaktadır.|  
+|FARKLı ÇALıŞTıR ve [çapraz veritabanı sahiplik zinciri seçeneğini](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option) [kullanarak veritabanı kimliğe bürünme özelliğini genişletme](/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105)) .|Makaleler, bir SQL Server örneği için veritabanları arası sahiplik zincirinin nasıl yapılandırılacağını açıklamaktadır.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

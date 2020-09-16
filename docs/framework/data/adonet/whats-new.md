@@ -3,12 +3,12 @@ title: Yenilikler
 description: .NET Framework 4,5 ' deki yeni özellikler hakkında bilgi edinin, SqlClient veri sağlayıcısı ve ADO.NET Entity Framework için yeni özellikler de dahildir.
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b34a27574b6aab75539f9ab30e2978e45b4ad9e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286177"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553863"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET’teki Yenilikler
 
@@ -44,19 +44,19 @@ Aşağıdaki özellikler .NET Framework 4,5 ' de SQL Server için .NET Framework
 
 - SqlClient, LocalDB veritabanlarına bağlantıları destekler. Daha fazla bilgi için bkz. [LocalDB Için SqlClient desteği](./sql/sqlclient-support-for-localdb.md).
 
-- `Type System Version=SQL Server 2012;`, bağlantı özelliğine geçirilecek yeni bir değerdir `Type System Version` . `Type System Version=Latest;`Değer artık kullanılmıyor ve ile eşdeğer hale getirilir `Type System Version=SQL Server 2008;` . Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- `Type System Version=SQL Server 2012;` , bağlantı özelliğine geçirilecek yeni bir değerdir `Type System Version` . `Type System Version=Latest;`Değer artık kullanılmıyor ve ile eşdeğer hale getirilir `Type System Version=SQL Server 2008;` . Daha fazla bilgi için bkz. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- SqlClient, SQL Server 2008 ' de eklenen bir özellik olan seyrek sütunlar için ek destek sağlar. Uygulamanız seyrek sütun kullanan bir tablodaki verilere zaten eriştiğinde performansta bir artış görmeniz gerekir. Icolumnset sütunu, <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> bir sütunun bir sütun kümesinin üyesi olan seyrek sütun olup olmadığını gösterir. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>bir sütunun seyrek sütun olup olmadığını gösterir (daha fazla bilgi için bkz. [SQL Server şeması koleksiyonları](sql-server-schema-collections.md) ). Seyrek sütunlar hakkında daha fazla bilgi için bkz. [seyrek sütun kullanma](/sql/relational-databases/tables/use-sparse-columns).
+- SqlClient, SQL Server 2008 ' de eklenen bir özellik olan seyrek sütunlar için ek destek sağlar. Uygulamanız seyrek sütun kullanan bir tablodaki verilere zaten eriştiğinde performansta bir artış görmeniz gerekir. Icolumnset sütunu, <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> bir sütunun bir sütun kümesinin üyesi olan seyrek sütun olup olmadığını gösterir. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> bir sütunun seyrek sütun olup olmadığını gösterir (daha fazla bilgi için bkz. [SQL Server şeması koleksiyonları](sql-server-schema-collections.md) ). Seyrek sütunlar hakkında daha fazla bilgi için bkz. [seyrek sütun kullanma](/sql/relational-databases/tables/use-sparse-columns).
 
-- Uzamsal veri türlerini içeren Microsoft. SqlServer. Types. dll derlemesi sürüm 10,0 ' den sürüm 11,0 ' den yükseltildi. Bu derlemeye başvuran uygulamalar başarısız olabilir. Daha fazla bilgi için bkz. [veritabanı altyapısı özelliklerine yönelik son değişiklikler](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
+- Uzamsal veri türlerini içeren derleme Microsoft.SqlServer.Types.dll sürüm 10,0 ' den sürüm 11,0 ' den yükseltildi. Bu derlemeye başvuran uygulamalar başarısız olabilir. Daha fazla bilgi için bkz. [veritabanı altyapısı özelliklerine yönelik son değişiklikler](/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-.NET Framework 4,5, Entity Framework 5,0 ile çalışırken yeni senaryolar sağlayan API 'Ler ekler. 5,0 Entity Framework eklenen geliştirmeler ve özellikler hakkında daha fazla bilgi için, şu konulara [bakın: yenilikler](https://docs.microsoft.com/previous-versions/gg696190(v=vs.103)) ve [Entity Framework sürümleri ve sürüm oluşturma](/ef/ef6/what-is-new/past-releases).
+.NET Framework 4,5, Entity Framework 5,0 ile çalışırken yeni senaryolar sağlayan API 'Ler ekler. 5,0 Entity Framework eklenen geliştirmeler ve özellikler hakkında daha fazla bilgi için, şu konulara [bakın: yenilikler](/previous-versions/gg696190(v=vs.103)) ve [Entity Framework sürümleri ve sürüm oluşturma](/ef/ef6/what-is-new/past-releases).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET](index.md)
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)
 - [SQL Server ve ADO.NET](./sql/index.md)
-- [WCF Veri Hizmetleri 5,0 ' deki yenilikler](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
+- [WCF Veri Hizmetleri 5,0 ' deki yenilikler](/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))

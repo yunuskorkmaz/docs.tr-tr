@@ -9,18 +9,18 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-ms.openlocfilehash: 7ca5a1259f970f2db5400837eb7d20998dd824cb
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2d1b35181f508a616ab264c859119da7512e5f23
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288868"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547577"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği
 
 .NET Framework 4,5 Windows Çalışma Zamanı bir dizi yazılım geliştirme senaryosunu destekler. Bu senaryolar üç kategoriye ayrılır:
 
-- [C# veya Visual Basic kullanarak Windows Mağazası uygulamaları Için yol haritası](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))bölümünde AÇıKLANDıĞı gibi XAML denetimleriyle Windows 8. x Mağazası uygulamaları geliştirme, [Windows Mağazası uygulamalarına YÖNELIK](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) [TOS (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))ve .net hakkında genel bakış.
+- [C# veya Visual Basic kullanarak Windows Mağazası uygulamaları Için yol haritası](/previous-versions/windows/apps/br229583(v=win.10))bölümünde AÇıKLANDıĞı gibi XAML denetimleriyle Windows 8. x Mağazası uygulamaları geliştirme, [Windows Mağazası uygulamalarına YÖNELIK](/previous-versions/windows/apps/br230302(v=vs.140)) [TOS (XAML)](/previous-versions/windows/apps/br229566(v=win.10))ve .net hakkında genel bakış.
 
 - .NET Framework ile oluşturduğunuz Windows 8. x Mağaza uygulamalarında kullanılmak üzere sınıf kitaplıkları geliştirme.
 
@@ -32,7 +32,7 @@ Bu konuda, .NET Framework üç kategori için sağladığı destek özetlenmekte
 
 .NET Framework, Windows 8. x Mağazası uygulamaları için .NET sağlayarak ve Windows Çalışma Zamanı kendisini destekleyerek daha önce listelenen üç geliştirme senaryosunu destekler.
 
-- [.NET Framework ve Windows çalışma zamanı ad alanları](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) , .NET Framework sınıf kitaplıklarının kolaylaştırılmış bir görünümünü sağlar ve yalnızca Windows 8. x Mağaza uygulamaları ve Windows çalışma zamanı bileşenleri oluşturmak için kullanabileceğiniz türleri ve üyeleri içerir.
+- [.NET Framework ve Windows çalışma zamanı ad alanları](/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) , .NET Framework sınıf kitaplıklarının kolaylaştırılmış bir görünümünü sağlar ve yalnızca Windows 8. x Mağaza uygulamaları ve Windows çalışma zamanı bileşenleri oluşturmak için kullanabileceğiniz türleri ve üyeleri içerir.
 
   - Bir Windows 8. x mağaza uygulaması veya Windows Çalışma Zamanı bileşeni geliştirmek için Visual Studio 'Yu (Visual Studio 2012 veya üzeri) kullandığınızda, bir başvuru derlemeleri kümesi yalnızca ilgili türleri ve üyeleri görmenizi sağlar.
 
@@ -40,7 +40,7 @@ Bu konuda, .NET Framework üç kategori için sağladığı destek özetlenmekte
 
   - Yalnızca işletim sistemi API 'sini sardığı özellikler de kaldırılır, çünkü Windows Çalışma Zamanı yönetilen koddan kolayca çağrı yapılır.
 
-  Windows 8. x Mağazası uygulamaları için .NET hakkında daha fazla bilgi edinmek için bkz. [Windows Mağazası uygulamalarına genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi edinmek için .NET blogdaki [Metro stili uygulamalar için .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) başlığına bakın.
+  Windows 8. x Mağazası uygulamaları için .NET hakkında daha fazla bilgi edinmek için bkz. [Windows Mağazası uygulamalarına genel bakış](/previous-versions/windows/apps/br230302(v=vs.140)). API seçim işlemi hakkında bilgi edinmek için .NET blogdaki [Metro stili uygulamalar için .net](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) başlığına bakın.
 
 - [Windows çalışma zamanı](/uwp/api/) , Windows 8. x Mağazası uygulamaları oluşturmaya yönelik kullanıcı arabirimi öğelerini sağlar ve işletim sistemi özelliklerine erişim sağlar. .NET Framework benzer şekilde, Windows Çalışma Zamanı, C# ve Visual Basic derleyicilerinin .NET Framework sınıf kitaplıklarını kullandıklarında Windows Çalışma Zamanı kullanmasını sağlayan meta verilere sahiptir. .NET Framework, bazı farkları gizleyerek Windows Çalışma Zamanı kullanmayı kolaylaştırır:
 
@@ -110,7 +110,7 @@ Yönetilen kodda .NET Framework eşdeğerleri olarak görünen diğer temel, yay
 
 ### <a name="other-differences"></a>Diğer Farklar
 
-Birkaç durumda, .NET Framework türlerin kodunuzda Windows Çalışma Zamanı türler yerine görünmesini, sizin de eylemde bulunması gerekir. Örneğin, <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı .NET Framework kodunda olduğu gibi görünür <xref:System.Uri?displayProperty=nameWithType> . <xref:System.Uri?displayProperty=nameWithType>göreli bir URI 'ye izin verir, ancak <xref:Windows.Foundation.Uri?displayProperty=nameWithType> mutlak BIR URI gerektirir. Bu nedenle, bir Windows Çalışma Zamanı yöntemine bir URI geçirdiğinizde mutlak olduğundan emin olmanız gerekir. Bkz. [WINDOWS çalışma zamanı URI 'Yi geçirme](passing-a-uri-to-the-windows-runtime.md).
+Birkaç durumda, .NET Framework türlerin kodunuzda Windows Çalışma Zamanı türler yerine görünmesini, sizin de eylemde bulunması gerekir. Örneğin, <xref:Windows.Foundation.Uri?displayProperty=nameWithType> sınıfı .NET Framework kodunda olduğu gibi görünür <xref:System.Uri?displayProperty=nameWithType> . <xref:System.Uri?displayProperty=nameWithType> göreli bir URI 'ye izin verir, ancak <xref:Windows.Foundation.Uri?displayProperty=nameWithType> mutlak BIR URI gerektirir. Bu nedenle, bir Windows Çalışma Zamanı yöntemine bir URI geçirdiğinizde mutlak olduğundan emin olmanız gerekir. Bkz. [WINDOWS çalışma zamanı URI 'Yi geçirme](passing-a-uri-to-the-windows-runtime.md).
 
 <a name="WindowsRuntimeComponents"></a>
 
@@ -157,9 +157,9 @@ Yönetilen kodu, mevcut masaüstü uygulamalarınızdan tek başına Windows Ça
 
 |Başlık|Açıklama|
 |-----------|-----------------|
-|[Windows Mağazası uygulamalarına yönelik .NET genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Windows 8. x Mağazası uygulamaları ve Windows RuntimeComponents oluşturmak için kullanabileceğiniz .NET Framework türlerini ve üyelerini açıklar. (Windows Geliştirme Merkezi'nde.)|
-|[C# veya Visual Basic kullanarak Windows Mağazası uygulamaları için yol haritası](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Birçok hızlı başlangıç konusu, kılavuz ve en iyi yöntem dahil olmak üzere C# veya Visual Basic kullanarak Windows 8. x Mağazası uygulamaları geliştirmeye başlamanıza yardımcı olacak temel kaynakları sağlar. (Windows Geliştirme Merkezi'nde.)|
-|[Nasıl yapılır (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Birçok hızlı başlangıç konusu, kılavuz ve en iyi yöntem dahil olmak üzere C# veya Visual Basic kullanarak Windows 8. x Mağazası uygulamaları geliştirmeye başlamanıza yardımcı olacak temel kaynakları sağlar. (Windows Geliştirme Merkezi'nde.)|
+|[Windows Mağazası uygulamalarına yönelik .NET genel bakış](/previous-versions/windows/apps/br230302(v=vs.140))|Windows 8. x Mağazası uygulamaları ve Windows RuntimeComponents oluşturmak için kullanabileceğiniz .NET Framework türlerini ve üyelerini açıklar. (Windows Geliştirme Merkezi'nde.)|
+|[C# veya Visual Basic kullanarak Windows Mağazası uygulamaları için yol haritası](/previous-versions/windows/apps/br229583(v=win.10))|Birçok hızlı başlangıç konusu, kılavuz ve en iyi yöntem dahil olmak üzere C# veya Visual Basic kullanarak Windows 8. x Mağazası uygulamaları geliştirmeye başlamanıza yardımcı olacak temel kaynakları sağlar. (Windows Geliştirme Merkezi'nde.)|
+|[Nasıl yapılır (XAML)](/previous-versions/windows/apps/br229566(v=win.10))|Birçok hızlı başlangıç konusu, kılavuz ve en iyi yöntem dahil olmak üzere C# veya Visual Basic kullanarak Windows 8. x Mağazası uygulamaları geliştirmeye başlamanıza yardımcı olacak temel kaynakları sağlar. (Windows Geliştirme Merkezi'nde.)|
 |[C# ve Visual Basic Windows Çalışma Zamanı bileşenleri oluşturma](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|.NET Framework kullanarak bir Windows Çalışma Zamanı bileşeni oluşturmayı açıklar, JavaScript kullanarak Windows için oluşturulmuş bir Windows 8. x mağaza uygulamasının parçası olarak nasıl kullanılacağını açıklar ve Visual Studio ile birlikte nasıl hata ayıklaması yapılacağını açıklar. (Windows Geliştirme Merkezi'nde.)|
 |[Windows Çalışma Zamanı başvurusu](/uwp/api/)|Windows Çalışma Zamanı için başvuru belgeleri. (Windows Geliştirme Merkezi'nde.)|
 |[URI'yı Windows Çalışma Zamanı'na Geçirme](passing-a-uri-to-the-windows-runtime.md)|Yönetilen koddan Windows Çalışma Zamanı bir URI geçirdiğinizde ortaya çıkabilecek bir sorunu ve bunu nasıl önleyebileceğinizi açıklar.|

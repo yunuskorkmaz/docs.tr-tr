@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 040ecc1473a4674ab0bb26ad0081563f55a726ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854231"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553876"
 ---
 # <a name="working-with-data-definition-language"></a>Veri Tanımlama Dili ile Çalışma
 .NET Framework sürüm 4 ' te başlayarak, Entity Framework veri tanımlama dili 'ni (DDL) destekler. Bu, bağlantı dizesini ve depolama (SSDL) modelinin meta verilerini temel alarak bir veritabanı örneği oluşturmanıza veya silmesine izin verir.  
@@ -40,13 +40,13 @@ ms.locfileid: "70854231"
   
 2. Uygulamanıza var olan bir modeli ekleyin.  
   
-    1. Adlı `SchoolModel`boş bir model ekleyin. Boş bir model oluşturmak için bkz [. nasıl yapılır: Yeni bir. edmx dosyası](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) oluşturma konusu.  
+    1. Adlı boş bir model ekleyin `SchoolModel` . Boş bir model oluşturmak için bkz. [nasıl yapılır: yeni bir. edmx dosyası oluşturma](/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) konusu.  
   
      SchoolModel. edmx dosyası projenize eklenir.  
   
-    1. Okul modeline ait kavramsal, depolama ve eşleme içeriğini [okul modeli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) konusundan kopyalayın.  
+    1. Okul modeline ait kavramsal, depolama ve eşleme içeriğini [okul modeli](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) konusundan kopyalayın.  
   
-    2. SchoolModel. edmx dosyasını açın ve içeriği `edmx:Runtime` Etiketler içine yapıştırın.  
+    2. SchoolModel. edmx dosyasını açın ve içeriği Etiketler içine yapıştırın `edmx:Runtime` .  
   
 3. Ana işlevinizde aşağıdaki kodu ekleyin. Kod, bağlantı dizesini veritabanı sunucunuza başlatır, DDL betiğini görüntüler, veritabanını oluşturur, içeriğe yeni bir varlık ekler ve değişiklikleri veritabanına kaydeder.  
   

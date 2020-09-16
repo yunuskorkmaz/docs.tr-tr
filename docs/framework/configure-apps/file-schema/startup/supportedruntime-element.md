@@ -8,12 +8,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc221c71b68c21b61b5fa27e0972b9e9156dbc3b
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 4517aab98235ec2172da355ad0e05d95ebee46c5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558679"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554045"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime> öğesi
 
@@ -47,7 +47,7 @@ Uygulamanın desteklediği ortak dil çalışma zamanı sürümünü ve isteğe 
   
 1,1 ile 3,5 arasında .NET Framework çalışma zamanının sürümlerini destekleyen uygulamalar için, çalışma zamanının birden çok sürümü desteklenbir şekilde ilk öğe, çalışma zamanının en çok tercih edilen sürümünü belirtmeli ve son öğe, en az tercih edilen sürümü belirtmelidir. .NET Framework 4,0 veya sonraki sürümleri destekleyen uygulamalar için, `version` öznitelik, .NET Framework 4 ve sonraki sürümlerde ortak olan CLR sürümünü belirtir ve `sku` öznitelik, uygulamanın hedeflediği tek .NET Framework sürümünü belirtir.
 
-**\<supportedRuntime>** Özniteliği olan öğesi `sku` yapılandırma dosyasında varsa ve yüklü .NET Framework sürümü belirtilen desteklenen sürümden düşükse, uygulama çalıştırılamaz ve bunun yerine desteklenen sürümü yüklemeyi isteyen bir ileti görüntüler. Aksi takdirde, uygulama yüklü herhangi bir sürümde çalışmaya çalışır, ancak bu sürümle tam olarak uyumlu değilse beklenmedik şekilde davranabilir. (.NET Framework sürümleri arasındaki uyumluluk farklılıkları için, .NET Framework bkz. [uygulama uyumluluğu](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) Bu nedenle, daha kolay hata tanılama için bu öğeyi uygulama yapılandırma dosyasına eklemeniz önerilir. (Yeni bir proje oluştururken, Visual Studio tarafından otomatik olarak oluşturulan yapılandırma dosyası zaten içerir.)
+**\<supportedRuntime>** Özniteliği olan öğesi `sku` yapılandırma dosyasında varsa ve yüklü .NET Framework sürümü belirtilen desteklenen sürümden düşükse, uygulama çalıştırılamaz ve bunun yerine desteklenen sürümü yüklemeyi isteyen bir ileti görüntüler. Aksi takdirde, uygulama yüklü herhangi bir sürümde çalışmaya çalışır, ancak bu sürümle tam olarak uyumlu değilse beklenmedik şekilde davranabilir. (.NET Framework sürümleri arasındaki uyumluluk farklılıkları için, .NET Framework bkz. [uygulama uyumluluğu](../../../migration-guide/application-compatibility.md).) Bu nedenle, daha kolay hata tanılama için bu öğeyi uygulama yapılandırma dosyasına eklemeniz önerilir. (Yeni bir proje oluştururken, Visual Studio tarafından otomatik olarak oluşturulan yapılandırma dosyası zaten içerir.)
   
 > [!NOTE]
 > Uygulamanız eski etkinleştirme yollarını kullanıyorsa, [CorBindToRuntimeEx işlevi](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)gibi, bu yolların daha önceki bir sürüm yerine CLR sürüm 4 ' ü etkinleştirmesini ister veya uygulamanız .NET Framework 4 ile oluşturulmuştur, ancak .NET Framework daha önceki bir sürümüyle oluşturulmuş karma mod derlemesine bağımlılığı varsa, desteklenen çalışma zamanları listesinde .NET Framework 4 ' ü belirtmek yeterli değildir. Ayrıca, yapılandırma dosyanızdaki [ \<startup> öğesinde](startup-element.md) `useLegacyV2RuntimeActivationPolicy` özniteliğini olarak ayarlamanız gerekir `true` . Ancak, bu özniteliği olarak ayarlamak, `true` .NET Framework önceki sürümleriyle derlenen tüm bileşenlerin, yerleşik oldukları çalışma zamanları yerine .NET Framework 4 kullanılarak çalıştırıldığı anlamına gelir.
@@ -60,10 +60,10 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 
 |.NET Framework sürümü|`version` özniteliği|
 |----------------------------|-------------------------|
-|1,0|"v 1.0.3705"|
+|1.0|"v 1.0.3705"|
 |1.1|"v 1.1.4322"|
-|2,0|"v 2.0.50727"|
-|3,0|"v 2.0.50727"|
+|2.0|"v 2.0.50727"|
+|3.0|"v 2.0.50727"|
 |3,5|"v 2.0.50727"|
 |4.0-4.8|"v 4.0"|
 
@@ -84,7 +84,7 @@ Uygulamaları üzerinde çalıştırabilecekleri tüm .NET Framework sürümleri
 |4,5|". NETFramework, sürüm = v 4.5 "|
 |4.5.1|". NETFramework, sürüm = v 4.5.1 "|
 |4.5.2|". NETFramework, sürüm = v 4.5.2 "|
-|4,6|". NETFramework, sürüm = v 4.6 "|
+|4.6|". NETFramework, sürüm = v 4.6 "|
 |4.6.1|". NETFramework, sürüm = v 4.6.1 "|
 |4.6.2|". NETFramework, sürüm = v 4.6.2 "|
 |4,7|". NETFramework, sürüm = v 4.7 "|
@@ -110,6 +110,6 @@ Bu öğe, uygulama yapılandırma dosyasında kullanılabilir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Başlangıç Ayarları Şeması](index.md)
-- [Yapılandırma Dosyası Şeması](../index.md)
+- [Başlangıç ayarları şeması](index.md)
+- [Yapılandırma dosyası şeması](../index.md)
 - [Devam Eden Yan Yana Yürütme](../../../deployment/in-process-side-by-side-execution.md)

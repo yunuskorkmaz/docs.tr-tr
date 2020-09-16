@@ -6,23 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 8c81e6e29678fe2e30af7c15d8d6e90f23dd0762
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 77715913c24423c1dc95478977f4e3821e4c247b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545317"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML’den DataSet Yükleme
 Bir ADO.NET içeriği <xref:System.Data.DataSet> BIR XML akışından veya belgesinden oluşturulabilir. Ayrıca .NET Framework, XML 'den hangi bilgilerin yüklendiği ve şema ya da ilişkisel yapısının nasıl oluşturulduğuna ilişkin büyük bir esnekliğe sahip olursunuz <xref:System.Data.DataSet> .  
   
- <xref:System.Data.DataSet>XML 'deki verileri bir ile doldurmanız için nesnenin **ReadXml** yöntemini kullanın <xref:System.Data.DataSet> . **ReadXml** yöntemi bir dosyadan, akıştan veya bir **XmlReader**'dan yararlanır ve XML kaynağı Ile Isteğe bağlı bir **XmlReadMode** bağımsız değişkeni olarak bağımsız değişken alır. **XmlReader**hakkında daha fazla bilgi için bkz. [XML verilerini XmlTextReader ile okuma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). **ReadXml** YÖNTEMI, XML akışı veya belgesinin içeriğini okur ve <xref:System.Data.DataSet> ile verileri yükler. Ayrıca, <xref:System.Data.DataSet> belirtilen **XmlReadMode** öğesine ve ilişkisel bir şemanın zaten mevcut olup olmadığına bağlı olarak ilişkisel şeması da oluşturur.  
+ <xref:System.Data.DataSet>XML 'deki verileri bir ile doldurmanız için nesnenin **ReadXml** yöntemini kullanın <xref:System.Data.DataSet> . **ReadXml** yöntemi bir dosyadan, akıştan veya bir **XmlReader**'dan yararlanır ve XML kaynağı Ile Isteğe bağlı bir **XmlReadMode** bağımsız değişkeni olarak bağımsız değişken alır. **XmlReader**hakkında daha fazla bilgi için bkz. [XML verilerini XmlTextReader ile okuma](/previous-versions/dotnet/netframework-4.0/tfz3cz6w(v=vs.100)). **ReadXml** YÖNTEMI, XML akışı veya belgesinin içeriğini okur ve <xref:System.Data.DataSet> ile verileri yükler. Ayrıca, <xref:System.Data.DataSet> belirtilen **XmlReadMode** öğesine ve ilişkisel bir şemanın zaten mevcut olup olmadığına bağlı olarak ilişkisel şeması da oluşturur.  
   
  Aşağıdaki tabloda **XmlReadMode** bağımsız değişkeninin seçenekleri açıklanmaktadır.  
   
-|Seçenek|Description|  
+|Seçenek|Açıklama|  
 |------------|-----------------|  
-|**Otomatik**|Bu varsayılandır. XML 'i inceler ve aşağıdaki sırada en uygun seçeneği seçer:<br /><br /> -XML bir DiffGram ise, **DiffGram** kullanılır.<br />- <xref:System.Data.DataSet> Bir şema içeriyorsa veya XML bir satır içi şema Içeriyorsa **ReadSchema** kullanılır.<br />- <xref:System.Data.DataSet> Bir şema içermiyorsa ve XML bir satır içi şema içermiyorsa, **ınseschema** kullanılır.<br /><br /> Okunan XML 'nin biçimini biliyorsanız, en iyi performans için **Otomatik** varsayılanı kabul etmek yerine açık bir **XmlReadMode**ayarlamanız önerilir.|  
+|**Otomatik**|Bu varsayılan seçenektir. XML 'i inceler ve aşağıdaki sırada en uygun seçeneği seçer:<br /><br /> -XML bir DiffGram ise, **DiffGram** kullanılır.<br />- <xref:System.Data.DataSet> Bir şema içeriyorsa veya XML bir satır içi şema Içeriyorsa **ReadSchema** kullanılır.<br />- <xref:System.Data.DataSet> Bir şema içermiyorsa ve XML bir satır içi şema içermiyorsa, **ınseschema** kullanılır.<br /><br /> Okunan XML 'nin biçimini biliyorsanız, en iyi performans için **Otomatik** varsayılanı kabul etmek yerine açık bir **XmlReadMode**ayarlamanız önerilir.|  
 |**ReadSchema**|Herhangi bir satır içi şemayı okur ve verileri ve şemayı yükler.<br /><br /> <xref:System.Data.DataSet>Zaten bir şema içeriyorsa, yeni tablolar satır içi şemadan içindeki mevcut şemaya eklenir <xref:System.Data.DataSet> . Satır içi şemadaki herhangi bir tablo ' de zaten mevcutsa <xref:System.Data.DataSet> , bir özel durum oluşturulur. **XmlReadMode. ReadSchema**kullanarak var olan bir tablonun şemasını değiştiremeyeceksiniz.<br /><br /> <xref:System.Data.DataSet>Bir şema içermiyorsa ve satır içi şema yoksa, hiçbir veri okunamaz.<br /><br /> Satır içi şema, XML şeması tanım dili (XSD) şeması kullanılarak tanımlanabilir. Satır içi şemayı XML şeması olarak yazma hakkında daha fazla bilgi için bkz. [xml şemasından (xsd) DataSet Ilişkisel yapısını türetme](deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Herhangi bir satır içi şemayı yoksayar ve verileri var olan <xref:System.Data.DataSet> şemaya yükler. Varolan şemayla eşleşmeyen tüm veriler atılır. İçinde hiçbir şema yoksa <xref:System.Data.DataSet> , hiçbir veri yüklenmez.<br /><br /> Veriler bir DiffGram ise, **ıgnoreschema** **DiffGram** ile aynı işlevselliğe sahiptir *.*|  
 |**Inseschema**|Satır içi şemayı yoksayar ve XML verilerinin yapısına göre şemayı algılar, ardından verileri yükler.<br /><br /> <xref:System.Data.DataSet>Zaten bir şema içeriyorsa, geçerli şema varolan tablolara sütun eklenerek genişletilir. Mevcut tablolar yoksa ek tablolar eklenmez. Başka bir ad alanı olan çıkartılan bir tablo zaten varsa veya herhangi bir çıkarılan sütun varolan sütunlarla çakışıyorsa, bir özel durum oluşturulur.<br /><br /> **ReadXmlSchema** 'ın bir XML belgesinden bir şemayı nasıl kullandığını öğrenmek için bkz. [XML 'Den veri kümesi ilişkisel yapısını](inferring-dataset-relational-structure-from-xml.md)anlamak.|  
@@ -101,7 +101,7 @@ foreach (DataTable dataTable in dataSet.Tables)
 ```  
   
 > [!NOTE]
-> İçin XSD şeması <xref:System.Data.DataSet> bir **targetNamespace**içeriyorsa, veriler okunmayabilir ve uygun bir **ReadXml** <xref:System.Data.DataSet> ad alanı olmayan öğeleri içeren XML ile yüklemek için ReadXml çağrılırken özel durumlarla karşılaşabilirsiniz. Bu durumda nitelenmemiş öğeleri okumak için, XSD şemanızda **elementFormDefault** eşittir "Qualified" olarak ayarlayın. Örneğin:  
+> İçin XSD şeması <xref:System.Data.DataSet> bir **targetNamespace**içeriyorsa, veriler okunmayabilir ve uygun bir **ReadXml** <xref:System.Data.DataSet> ad alanı olmayan öğeleri içeren XML ile yüklemek için ReadXml çağrılırken özel durumlarla karşılaşabilirsiniz. Bu durumda nitelenmemiş öğeleri okumak için, XSD şemanızda **elementFormDefault** eşittir "Qualified" olarak ayarlayın. Örnek:  
   
 ```xml  
 <xsd:schema id="customDataSet"

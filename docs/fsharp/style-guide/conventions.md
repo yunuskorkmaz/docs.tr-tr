@@ -2,12 +2,12 @@
 title: F# kodlama kuralları
 description: 'F # kodu yazarken genel kılavuzları ve deyimleri öğrenin.'
 ms.date: 01/15/2020
-ms.openlocfilehash: 748a9c26794f46dcc67fdcfcf21f41847a462a19
-ms.sourcegitcommit: 2560a355c76b0a04cba0d34da870df9ad94ceca3
+ms.openlocfilehash: 8c7fedf429ecba6e01b26f37972ffa4eeba6d8af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053017"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554032"
 ---
 # <a name="f-coding-conventions"></a>F# kodlama kuralları
 
@@ -174,7 +174,7 @@ Büyük sistemlerde hata yönetimi karmaşık ve anormal bir Endeavor ve sisteml
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Etki alanınız için iç türlerde hata durumlarını ve geçersiz durumu temsil eder
 
-[Ayrılmış birleşimler](../language-reference/discriminated-unions.md)ile, F #, tür sisteminizde hatalı program durumunu temsil etme olanağı sunar. Örneğin:
+[Ayrılmış birleşimler](../language-reference/discriminated-unions.md)ile, F #, tür sisteminizde hatalı program durumunu temsil etme olanağı sunar. Örnek:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -703,7 +703,7 @@ Visual Studio Code API ile etkileşim kurarken bir sınıfa gerek olmadığında
 
 ## <a name="consider-type-abbreviations-to-shorten-signatures"></a>İmzaları kısaltmak için kısaltmalar türlerini göz önünde bulundurun
 
-[Tür kısaltmaları](../language-reference/type-abbreviations.md) , bir etiketi bir işlev imzası veya daha karmaşık bir tür gibi başka bir türe atamak için kullanışlı bir yoldur. Örneğin, aşağıdaki diğer ad, derin bir öğrenme kitaplığı olan [Cntk](https://docs.microsoft.com/cognitive-toolkit/)ile bir hesaplama tanımlamak için gereken bir etiketi atar:
+[Tür kısaltmaları](../language-reference/type-abbreviations.md) , bir etiketi bir işlev imzası veya daha karmaşık bir tür gibi başka bir türe atamak için kullanışlı bir yoldur. Örneğin, aşağıdaki diğer ad, derin bir öğrenme kitaplığı olan [Cntk](/cognitive-toolkit/)ile bir hesaplama tanımlamak için gereken bir etiketi atar:
 
 ```fsharp
 open CNTK

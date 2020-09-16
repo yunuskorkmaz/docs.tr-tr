@@ -21,12 +21,12 @@ helpviewer_keywords:
 - configuration settings [.NET Framework], applications
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
-ms.openlocfilehash: 35ed53fc480e218df595794f80af2458f3ecec38
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ab6f12be01899f5b7e54a7ec2d9675d502d88bc3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73039155"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555139"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework için yapılandırma dosyası şeması
 
@@ -76,7 +76,7 @@ Windows Forms veya ASP.NET uygulamasının uygulama kapsamlı ve kullanıcı kap
 Dosya yolları, XML Web hizmeti URL 'Leri veya bir uygulama için başka özel yapılandırma bilgileri gibi özel uygulama ayarlarını içerir.
 
 [Web ayarları şeması](./web/index.md)\
-ASP.NET 'ın IIS gibi bir konak uygulamasıyla nasıl çalıştığını yapılandırmaya yönelik öğeler. *Aspnet. config* dosyalarında kullanılır.
+ASP.NET 'ın IIS gibi bir konak uygulamasıyla nasıl çalıştığını yapılandırmaya yönelik öğeler. *Aspnet.config* dosyalarında kullanılır.
 
 [Windows Forms yapılandırma şeması](winforms/index.md)\
 Çoklu izleyici ve yüksek DPı desteği gibi özelleştirmeler içeren Windows Forms uygulama yapılandırması bölümündeki tüm öğeler.
@@ -92,14 +92,14 @@ Windows Identity Foundation (WıF) yapılandırma şemasının tüm öğeleri.
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-[Uzaktan iletişim ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
+[Uzaktan iletişim ayarları şeması](/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100))\
 Uzaktan iletişim uygulayan istemci ve sunucu uygulamalarını yapılandıran öğeleri açıklar.
 
-[ASP.NET ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
+[ASP.NET ayarları şeması](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))\
 ASP.NET Web uygulamalarının davranışını denetleyen öğeleri açıklar.
 
-[Web Hizmetleri ayarları şeması](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
+[Web Hizmetleri ayarları şeması](/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100))\
 ASP.NET Web Hizmetleri ve istemcilerinin davranışını denetleyen öğeleri açıklar.
 
-[.NET Framework uygulamalarını yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
+[.NET Framework uygulamalarını yapılandırma](/previous-versions/dotnet/netframework-4.0/kza1yk3a(v=vs.100))\
 .NET Framework güvenlik, derleme bağlama ve uzaktan iletişimin nasıl yapılandırılacağını açıklar.

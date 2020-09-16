@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 4aa87acaf9080959ba8b53e3ec3216314dc745b6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 1cdce48f51b25732c256d3c867f1bba801ec4d8c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73732587"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545460"
 ---
 # \<webMessageEncoding>
 Düz metin XML, JavaScript Nesne Gösterimi (JSON) ileti kodlamaları ve "ham" ikili içeriğin Windows Communication Foundation (WCF) bağlamasında kullanıldığı zaman okunmalarını ve yazılmasını sağlar.  
@@ -19,7 +19,7 @@ Düz metin XML, JavaScript Nesne Gösterimi (JSON) ileti kodlamaları ve "ham" i
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<webMessageEncoding>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <webMessageEncoding maxReadPoolSize="Integer"
@@ -42,7 +42,7 @@ Düz metin XML, JavaScript Nesne Gösterimi (JSON) ileti kodlamaları ve "ham" i
   
 |Öğe|Açıklama|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
+|[\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Bu bağlama ile yapılandırılan uç noktalar tarafından işlenebileceğini SOAP iletilerinin karmaşıklığı üzerindeki kısıtlamaları tanımlar. Bu öğe türündedir <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> .|  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -61,7 +61,7 @@ Düz metin XML, JavaScript Nesne Gösterimi (JSON) ileti kodlamaları ve "ham" i
   
  `maxReadPoolSize``maxWritePoolSize`Ayrıca, sırasıyla ayrılacak en fazla okuyucu ve yazıcı sayısını ayarlamak için de kullanılabilir. Varsayılan olarak 64 okuyucular ve 16 yazıcı ayrılır.  
   
- Varsayılan Karmaşıklık kısıtlamaları Ayrıca, [\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) uç nokta işleme kaynaklarını bağlamak üzere ileti karmaşıklığını kullanmayı deneyen bir hizmet reddi (DOS) saldırısı sınıfına karşı korumak için öğesi kullanılarak ayarlanır.  
+ Varsayılan Karmaşıklık kısıtlamaları Ayrıca, [\<readerQuotas>](/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) uç nokta işleme kaynaklarını bağlamak üzere ileti karmaşıklığını kullanmayı deneyen bir hizmet reddi (DOS) saldırısı sınıfına karşı korumak için öğesi kullanılarak ayarlanır.  
   
 ## <a name="example"></a>Örnek  
   

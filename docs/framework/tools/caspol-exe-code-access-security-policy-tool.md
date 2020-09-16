@@ -16,18 +16,18 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 4d29c22c09e42be5596d860d90b182e512ad3b45
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 06639ee5c9dee26e6357402847b6c56f33b5a0b9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87167325"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553993"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Kod Erişimi Güvenliği İlke Aracı)
 Kod Erişim Güvenliği (CAS) İlkesi aracı (Caspol.exe) kullanıcıların ve yöneticilerin güvenlik ilkesini makine ilkesi düzeyinde, kullanıcı ilkesi düzeyinde ve kuruluş ilkesi düzeyinde değiştirmelerini sağlar.  
   
 > [!IMPORTANT]
-> .NET Framework 4 ' te başlayarak, [ \<legacyCasPolicy> öğe](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) olarak AYARLANMADıĞı takdirde Caspol.exe CAS ilkesini etkilemez `true` . CasPol.exe tarafından gösterilen veya değiştirilen ayarlar yalnızca CAS ilkesini kullanmayı seçen uygulamaları etkiler. Daha fazla bilgi için bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+> .NET Framework 4 ' te başlayarak, [ \<legacyCasPolicy> öğe](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) olarak AYARLANMADıĞı takdirde Caspol.exe CAS ilkesini etkilemez `true` . CasPol.exe tarafından gösterilen veya değiştirilen ayarlar yalnızca CAS ilkesini kullanmayı seçen uygulamaları etkiler. Daha fazla bilgi için bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).  
   
 > [!NOTE]
 > 64 bit bilgisayarlarda güvenlik ilkesi 64-bit ve 32-bit sürümleri içerir. İlkenizdeki değişikliklerin 32-bit ve 64-bit sürümlerine uygulandığından emin olmak için Caspol.exe'nin 32-bit ve 64-bit sürümlerinin ikisini de çalıştırın.  
@@ -55,7 +55,7 @@ caspol [options]
 |**-customall**  *yolu*<br /><br /> veya<br /><br /> **-CA**  *yolu*|Bunu izleyen tüm seçeneklerin makineye, kuruluşa ve belirtilen özel kullanıcı ilkelerine uygulanacağını belirtir. Özel kullanıcının güvenlik yapılandırma dosyasının konumunu *yol* bağımsız değişkeniyle belirtmeniz gerekir.|  
 |**-cu**[**stomuser**] *yolu*|Adına Caspol.exe çalışmakta olan bir kullanıcıya ait olmayan özel bir kullanıcı ilkesinin yönetilmesine olanak verir. Özel kullanıcının güvenlik yapılandırma dosyasının konumunu *yol* bağımsız değişkeniyle belirtmeniz gerekir.|  
 |**-kuruluş**<br /><br /> veya<br /><br /> **-En**|Bunu izleyen tüm seçeneklerin kuruluş düzeyinde ilkeye uygulanacağını belirtir. Kurumsal yönetici olmayan kullanıcılar kuruluş ilkesini görüntüleyebilirler ancak onu değiştirmek için yeterli hakları yoktur. Kuruluş dışı senaryolarda bu ilke varsayılan olarak makine ve kullanıcı ilkesini engellemez.|  
-|**-e**[**xecution****] {&#124;** **off**}|Kod yürütülmeye başlamadan önce çalıştırmak için izni denetleyen mekanizmayı etkinleştirir veya devre dışı bırakır. **Note:**  Bu anahtar .NET Framework 4 ve sonraki sürümlerinde kaldırılır. Daha fazla bilgi için bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).|  
+|**-e**[**xecution****] {&#124;** **off**}|Kod yürütülmeye başlamadan önce çalıştırmak için izni denetleyen mekanizmayı etkinleştirir veya devre dışı bırakır. **Note:**  Bu anahtar .NET Framework 4 ve sonraki sürümlerinde kaldırılır. Daha fazla bilgi için bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).|  
 |**-f**[**Orce**]|Aracın kendini kaldırma testini engeller ve ilkeyi kullanıcı tarafından belirtilen şekilde değiştirir. Normal olarak Caspol.exe, ilke değişikliklerinin Caspol.exe'nin düzgün çalışmasını önleyip önlemeyeceğini denetler; önleyecekse Caspol.exe ilke değişikliğini kaydetmez ve bir hata iletisi yazdırır. Caspol.exe, Caspol.exe kendisinin çalışmasını engelliyorsa, ilke değişikliğine zorlamak için **– zorlama** seçeneğini kullanın.|  
 |**-h**[**ELP**]|Caspol.exe için komut sözdizimini ve seçenekleri görüntüler.|  
 |**-l**[**ist**]|Belirtilen makine, kullanıcı, kuruluş veya tüm ilke düzeyleri için kod grubu hiyerarşisini ve izin kümelerini listeler. Caspol.exe önce kod grubunun ilk etiket düzeyini, ardından adı (null değilse) görüntüler.|  
@@ -74,13 +74,13 @@ caspol [options]
 |**-resetlockdown**<br /><br /> veya<br /><br /> **-rsld**|İlkeyi varsayılan durumun daha kısıtlayıcı bir sürümüne döndürür ve diski diske devam ettirir; önceki makine ilkesinin bir yedeğini oluşturur ve bunu adlı bir dosyaya devam ettirir `security.config.bac` .  İlke,, ve bölgelerinden hiçbir izin vermediği `Local Intranet` `Trusted Sites` `Internet` ve ilgili kod gruplarının hiçbir alt kod grubuna sahip olmadığı dışında, kilitli ilke varsayılan ilkeye benzer.|  
 |**-resolvegroup** *Assembly_file*<br /><br /> veya<br /><br /> **-RSG**  *Assembly_file*|Belirli bir derlemenin (*Assembly_file*) ait olduğu kod gruplarını gösterir. Varsayılan olarak bu seçenek, derlemenin ait olduğu makine, kullanıcı ve kuruluş ilkesi düzeylerini gösterir. Yalnızca bir ilke düzeyini görüntülemek için, bu seçeneği **-Machine**, **-User**veya **-Enterprise** seçeneğiyle kullanın.|  
 |**-resolveizin** *Assembly_file*<br /><br /> veya<br /><br /> **-rsp** *Assembly_file*|Derlemenin çalışmasına izin verilmişse, güvenlik ilkesinin belirtilen (veya varsayılan) düzeyinin derlemeye verdiği tüm izinleri görüntüler. *Assembly_file* bağımsız değişkeni derlemeyi belirtir. **-All** seçeneğini belirtirseniz, Caspol.exe Kullanıcı, makine ve kurumsal ilkeye göre derlemenin izinlerini hesaplar; Aksi takdirde, varsayılan davranış kuralları uygulanır.|  
-|**-s**[**ecurity & lt**] {**&#124;** **off**}|Kod erişim güvenliğini açar veya kapatır. **-S kapalı** seçeneğinin belirtilmesi rol tabanlı güvenliği devre dışı bırakır. **Note:**  Bu anahtar .NET Framework 4 ve sonraki sürümlerinde kaldırılır. Daha fazla bilgi için bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes). **Dikkat:**  Kod erişimi güvenliği devre dışı bırakıldığında, tüm kod erişimi istekleri başarılı olur. Kod erişimi güvenliğini devre dışı bırakmak sistemi virüsler ve solucanlar gibi zararlı kodların saldırılarına açık hale getirir. Güvenliğin devre dışı bırakılması belli oranda performans artışı sağlayabilir ancak bu işlem yalnızca genel sistem güvenliğinin ihlal edilmemesine yardımcı olacak diğer güvenlik önlemleri alındığı zaman yapılmalıdır. Diğer güvenlik önlemlerine ilişkin örnekler arasında ortak ağ bağlantılarını kesme, bilgisayarları fiziksel olarak güvenlik altına alma vb. sayılabilir.|  
+|**-s**[**ecurity & lt**] {**&#124;** **off**}|Kod erişim güvenliğini açar veya kapatır. **-S kapalı** seçeneğinin belirtilmesi rol tabanlı güvenliği devre dışı bırakır. **Note:**  Bu anahtar .NET Framework 4 ve sonraki sürümlerinde kaldırılır. Daha fazla bilgi için bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes). **Dikkat:**  Kod erişimi güvenliği devre dışı bırakıldığında, tüm kod erişimi istekleri başarılı olur. Kod erişimi güvenliğini devre dışı bırakmak sistemi virüsler ve solucanlar gibi zararlı kodların saldırılarına açık hale getirir. Güvenliğin devre dışı bırakılması belli oranda performans artışı sağlayabilir ancak bu işlem yalnızca genel sistem güvenliğinin ihlal edilmemesine yardımcı olacak diğer güvenlik önlemleri alındığı zaman yapılmalıdır. Diğer güvenlik önlemlerine ilişkin örnekler arasında ortak ağ bağlantılarını kesme, bilgisayarları fiziksel olarak güvenlik altına alma vb. sayılabilir.|  
 |**-u**[**ser**]|Bunu izleyen tüm seçeneklerin, adına Caspol.exe çalıştıran kullanıcı için kullanıcı düzeyi ilkesine uygulanacağını belirtir. Yönetici olmayan kullanıcılar için **-Kullanıcı** varsayılandır.|  
 |**-?**|Caspol.exe için komut sözdizimini ve seçenekleri görüntüler.|  
   
  Bir kod grubu için üyelik koşulunu belirten *msevk* bağımsız değişkeni **-addgroup** ve **-chggroup** seçenekleriyle kullanılabilir. Her *msevkıyat* bağımsız değişkeni bir .NET Framework sınıfı olarak uygulanır. *Msevkiyat* belirtmek için aşağıdakilerden birini kullanın.  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |**-allcode**|Tüm kodu belirtir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType> ..|  
 |**-Appdir**|Uygulama dizini belirtir. Üyelik koşulu olarak **– Appdir** belirtirseniz, kodun URL kanıtı bu kodun uygulama dizini kanıtını ile karşılaştırılır. Her iki kanıt değeri de aynıysa, bu üyelik koşulu gerçekleşmiş demektir. Bu üyelik koşulu hakkında daha fazla bilgi için bkz <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType> ..|  
@@ -94,7 +94,7 @@ caspol [options]
   
  **– Addgroup** ve **– chggroup** seçenekleriyle kullanılabilecek *Flags* bağımsız değişkeni, aşağıdakilerden biri kullanılarak belirtilir.  
   
-|Bağımsız Değişken|Açıklama|  
+|Bağımsız Değişken|Description|  
 |--------------|-----------------|  
 |**-Açıklama** "*Açıklama*"|**– Addgroup** seçeneğiyle birlikte kullanılırsa, eklenecek bir kod grubunun açıklamasını belirtir. **– Chggroup** seçeneğiyle birlikte kullanılırsa, düzenlenecek bir kod grubunun açıklamasını belirtir. *Açıklama* bağımsız değişkeni çift tırnak içine alınmalıdır.|  
 |**-dışlamalı** {**on**&#124;**off**}|**Açık**olarak ayarlandığında, yalnızca eklediğiniz veya değiştirdiğiniz kod grubuyla ilişkili izin kümesinin, kod grubunun üyelik koşuluna uygun olduğu durumlarda dikkate alındığını gösterir. Bu seçenek **kapalı**olarak ayarlandığında Caspol.exe, ilke düzeyindeki tüm eşleşen kod gruplarının izin kümelerini dikkate alır.|  
@@ -104,7 +104,7 @@ caspol [options]
 ## <a name="remarks"></a>Açıklamalar  
  Güvenlik ilkesi üç ilke düzeyi kullanılarak ifade edilir: Makine ilkesi, kullanıcı ilkesi ve kuruluş ilkesi. Bir derlemenin aldığı izin kümesi, bu üç ilke düzeyi tarafından izin verilen izin kümelerinin kesişimi ile belirlenir. Her ilke düzey kod gruplarının hiyerarşik bir yapısı ile temsil edilir. Her kod grubunun bir üyelik koşulu vardır ve bu koşul hangi kodun o grubun üyesi olduğunu belirler. Adlandırılmış bir izin kümesi aynı zamanda her kod grubu ile ilişkilidir. Bu izin kümesi, çalışma zamanı tarafından, üyelik koşulunu karşılayan kodun sahip olmasına izin verilen izinleri belirtir. Bir kod grubu hiyerarşisi, ilişkili adlandırılmış izin kümeleriyle birlikte, güvenlik ilkesinin her düzeyini tanımlar ve korur. Güvenlik ilkesi düzeyini ayarlamak için **– User**, **-customuser**, **– Machine** ve **-Enterprise** seçeneklerini kullanabilirsiniz.  
   
- Güvenlik ilkesi ve çalışma zamanının hangi izinlerin koda verileceğini belirleme hakkında daha fazla bilgi için bkz. [Güvenlik Ilkesi yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
+ Güvenlik ilkesi ve çalışma zamanının hangi izinlerin koda verileceğini belirleme hakkında daha fazla bilgi için bkz. [Güvenlik Ilkesi yönetimi](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Kod Grupları ve İzin Kümelerine Başvurma  
  Bir hiyerarşideki kod gruplarının başvurularını kolaylaştırmak için, **-list** seçeneği, sayısal etiketleriyle birlikte (1, 1,1, 1.1.1, vb.) bir dizi kod grubunun girintili listesini görüntüler. Kod gruplarını hedefleyen diğer komut satırı işlemleri belirli kod gruplarına başvuru yapmak için de sayısal etiketleri kullanır.  

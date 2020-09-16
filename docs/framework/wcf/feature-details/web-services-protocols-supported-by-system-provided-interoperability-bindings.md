@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: 0b901be2d90a70b4a44fdafb5005f9dc7fb9d556
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c468dc3992b61ce09485ed19da1f2edb3c761525
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594913"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547427"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Sistem Tarafından Sağlanan Birlikte Kullanılabilirlik Bağlamaları ile Desteklenen Web Hizmeti Protokolleri
 Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilinen bir belirtim kümesini destekleyen Web Hizmetleri ile birlikte çalışmak için oluşturulmuştur. WCF, birlikte çalışabilirlik en iyi uygulamaları için hizmet yapılandırmasını basitleştirmek amacıyla, birlikte çalışabilen üç sistem tarafından sunulan bağlama sağlar: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> , <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> ve <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> . Yapılandırılmış bilgi standartları (OASU) standartlarına karşı bir kuruluşla birlikte çalışabilirlik için, WCF, birlikte çalışabilen bir sistem tarafından sağlanmış bağlama içerir: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType> . WCF, meta veri yayını için iki birlikte çalışabilen ve sistem tarafından belirtilen bağlamaları içerir: [\<mexHttpBinding>](../../configure-apps/file-schema/wcf/mexhttpbinding.md) ve [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) . Bu konuda, sistem tarafından sunulan birlikte çalışabilen bağlamaların desteklediği özellikler listelenmiştir.  
@@ -58,12 +58,12 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 |Güvenlik|WS-Trust|[WS-Trust](http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf)<br /><br /> WS-SecureConversation tarafından kullanılır (yukarıya bakın).|  
 |Güvenilir Mesajlaşma|WS-ReliableMessaging|[WS-ReliableMessaging](http://specs.xmlsoap.org/ws/2005/02/rm/ws-reliablemessaging.pdf)<br /><br /> Bağlama kullanılmak üzere yapılandırıldığında kullanın `reliableSession` .<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
 |İşlemler|WS-AtomicTransaction|[WS-AtomicTransaction](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)<br /><br /> İşlem yöneticileri arasındaki iletişim için kullanın. WCF istemcileri ve hizmetleri her zaman yerel işlem yöneticilerini kullanır.|  
-|İşlemler|WS koordinasyonu|[WS koordinasyonu](https://docs.microsoft.com/previous-versions/ms951231(v=msdn.10))<br /><br /> `flowTransactions`Öznitelik "Allowed" veya "Required" olarak ayarlandığında işlem bağlamını akışa almak için kullanın.<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|İşlemler|WS koordinasyonu|[WS koordinasyonu](/previous-versions/ms951231(v=msdn.10))<br /><br /> `flowTransactions`Öznitelik "Allowed" veya "Required" olarak ayarlandığında işlem bağlamını akışa almak için kullanın.<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding ve ws2007FederationHttpBinding  
  [\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)Ve [\<ws2007FederationHttpBinding>](../../configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) öğeleri, üçüncü bir tarafın bir istemcinin kimliğini doğrulamak için kullanılan bir belirteç verdiği federe senaryolar için destek sağlamak üzere sunulmuştur. Tarafından kullanılan protokollerin yanı sıra, şunları `wsHttpBinding` `wsFederationHttpBinding` kullanır:  
   
-- `WS-Trust`belirteç verme için.  
+- `WS-Trust` belirteç verme için.  
   
 - En yaygın olarak verilen belirteç biçimi için WSS güvenlik onayları biçimlendirme dili (SAML) belirteç profili 1,0 ve 1,1.  
   
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
 |Meta Veriler|WS-MetadataExchange|[WS-MetadataExchange](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)<br /><br /> WCF, XML şeması, WSDL ve WS-Policy almak için WS-MetadataExchange uygular.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md)aşağıdaki protokolleri destekler. Bu bağlamayı kullanma hakkında daha fazla bilgi için bkz. [meta verileri yayımlama](publishing-metadata.md).  
+ [\<mexHttpsBinding>](../../configure-apps/file-schema/wcf/mexhttpsbinding.md) aşağıdaki protokolleri destekler. Bu bağlamayı kullanma hakkında daha fazla bilgi için bkz. [meta verileri yayımlama](publishing-metadata.md).  
   
 |Kategori|Protokol|Belirtim ve kullanım|  
 |--------------|--------------|-----------------------------|  
@@ -110,7 +110,7 @@ Windows Communication Foundation (WCF), Web Hizmetleri belirtimleri olarak bilin
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Sistem tarafından sağlanmış bağlamalar](../system-provided-bindings.md)
+- [Sistem Tarafından Sağlanan Bağlamalar](../system-provided-bindings.md)
 - [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md)
 - [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)
 - [\<wsDualHttpBinding>](../../configure-apps/file-schema/wcf/wsdualhttpbinding.md)

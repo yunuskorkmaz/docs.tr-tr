@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-ms.openlocfilehash: 22a2f027462d67d5a933972a7420c5f0e38353e5
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 4184b2b34c4503eaf4e9513a85e6c018f6de7366
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309839"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553824"
 ---
 # <a name="clr-etw-events"></a>CLR ETW Olayları
 Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktadır. Her olayın ilişkili bir anahtar sözcüğü ve düzeyi vardır ve bu, [CLR ETW anahtar sözcükleri ve düzeyleri](clr-etw-keywords-and-levels.md) konusunda açıklanmıştır. CLR, olaylar için iki sağlayıcıya sahiptir:  
@@ -54,7 +54,7 @@ Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktad
  [ARM Olayları](application-domain-resource-monitoring-arm-etw-events.md)  
  Bir uygulama etki alanının durumu hakkında ayrıntılı tanılama bilgilerini yakalar.  
   
- [Güvenlik olayları](security-etw-events.md)  
+ [Güvenlik Olayları](security-etw-events.md)  
  Tanımlayıcı ad ve Authenticode doğrulama hakkındaki bilgileri yakalar.  
   
  [Yığın Olayı](stack-etw-event.md)  
@@ -62,7 +62,7 @@ Bu bölümdeki konular, Windows için olay izleme (ETW) olaylarını anlatmaktad
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ETW Ile hata ayıklama ve performans ayarlamayı geliştirme](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [ETW Ile hata ayıklama ve performans ayarlamayı geliştirme](/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [.NET Framework Günlük Kaydını Denetleme](controlling-logging.md)
 - [CLR ETW Sağlayıcılar](clr-etw-providers.md)
 - [CLR ETW Anahtar Sözcükleri ve Düzeyler](clr-etw-keywords-and-levels.md)

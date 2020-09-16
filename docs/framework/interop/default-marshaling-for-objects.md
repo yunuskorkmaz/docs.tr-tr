@@ -9,12 +9,12 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-ms.openlocfilehash: 7b8f94f4dfd8e8b9e8e04df8de5f8266a8581a92
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 3e07ceef62d97db4206f530aa0859b101fe41a11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618460"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555100"
 ---
 # <a name="default-marshaling-for-objects"></a>Nesneler için Varsayılan Hazırlama
 
@@ -236,12 +236,12 @@ Aşağıdaki tabloda, her bir değer için **TypeCode** numaralandırması ve KA
 |**TypeCode. Decimal**|**VT_DECIMAL**|
 |**TypeCode. DateTime**|**VT_DATE**|
 |**TypeCode. String**|**VT_BSTR**|
-|Desteklenmiyor.|**VT_INT**|
-|Desteklenmiyor.|**VT_UINT**|
-|Desteklenmiyor.|**VT_ARRAY**|
-|Desteklenmiyor.|**VT_RECORD**|
-|Desteklenmiyor.|**VT_CY**|
-|Desteklenmiyor.|**VT_VARIANT**|
+|Desteklenmez.|**VT_INT**|
+|Desteklenmez.|**VT_UINT**|
+|Desteklenmez.|**VT_ARRAY**|
+|Desteklenmez.|**VT_RECORD**|
+|Desteklenmez.|**VT_CY**|
+|Desteklenmez.|**VT_VARIANT**|
 
 COM çeşidinin değeri, **IConvertible.to** *tür* arabirimi çağırarak belirlenir **; burada** *tür* , **ıtypbleble. GetTypeCode**'dan döndürülen türe karşılık gelen dönüştürme yordamdır. Örneğin, **ıtypbleble. GetTypeCode** 'dan **TypeCode. Double** döndüren bir nesne **VT_R8**türünde bir com değişkeni olarak sıralanır. **Iverbleface** arabirimine atama yaparak ve metodunu çağırarak, değişkenin DEĞERINI (com çeşidinin **dblVal** alanında depolanır) elde edebilirsiniz <xref:System.IConvertible.ToDouble%2A> .
 
@@ -275,7 +275,7 @@ Bir değişkeni bir nesneye, türü ve bazen değeri, oluşturulan değişkenin 
 |**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|Karşılık gelen paketlenmiş değer türü.|
-|**VT_VARIANT**|Desteklenmiyor.|
+|**VT_VARIANT**|Desteklenmez.|
 
 COM 'dan yönetilen koda geçirilen ve sonra COM 'a geri dönüş değişken türleri, çağrının süresi boyunca aynı varyant türünü korumayabilir. **VT_DISPATCH** türünde BIR değişken COM 'tan .NET Framework geçirildiğinde ne olacağını düşünün. Sıralama sırasında, değişken öğesine dönüştürülür <xref:System.Object?displayProperty=nameWithType> . **Nesne** daha sonra com 'a geri geçirilirse, **VT_UNKNOWN**türünde bir varyanta geri getirilir. Bir nesne yönetilen koddan COM 'a sıralandığınızda üretilen varyantın, başlangıçta nesneyi oluşturmak için kullanılan değişkenle aynı türde olacağını garanti etmez.
 
@@ -311,7 +311,7 @@ Değişiklikleri çağırana geri yaymak için, parametrelerin başvuruya göre 
 
 Aşağıdaki tabloda, çeşitler ve nesneler için yayma kuralları özetlenmektedir.
 
-|Başlangıç|Alıcı|Geri yayılan değişiklikler|
+|Kaynak|Amaç|Geri yayılan değişiklikler|
 |----------|--------|-----------------------------|
 |**Değişken**  *v*|**Nesne**  *o*|Asla|
 |**Nesne**  *o*|**Değişken**  *v*|Asla|
@@ -324,5 +324,5 @@ Aşağıdaki tabloda, çeşitler ve nesneler için yayma kuralları özetlenmekt
 
 - [Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)
-- [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [Yönlü öznitelikler](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopyalama ve Sabitleme](copying-and-pinning.md)

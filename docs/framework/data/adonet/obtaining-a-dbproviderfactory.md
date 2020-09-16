@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: b790c87cc3ec293c18bf730567f92b490c7c6594
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 0c7c89a9104ac72bf03f2900e7ca474b709be40c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286721"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554468"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory Alma
 Alma işlemi, <xref:System.Data.Common.DbProviderFactory> sınıfına bir veri sağlayıcısı hakkında bilgi geçirmeyi içerir <xref:System.Data.Common.DbProviderFactories> . Bu bilgilere bağlı olarak, <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> yöntemi türü kesin belirlenmiş bir sağlayıcı fabrikası oluşturur. Örneğin, oluşturmak için <xref:System.Data.SqlClient.SqlClientFactory> , `GetFactory` sağlayıcı adı "System. Data. SqlClient" olarak belirtilen bir dize geçirebilirsiniz. Diğer aşırı yüklemesi `GetFactory` bir alır <xref:System.Data.DataRow> . Sağlayıcı fabrikasını oluşturduktan sonra ek nesneler oluşturmak için yöntemlerini kullanabilirsiniz. Uygulamasının bazı yöntemleri `SqlClientFactory` <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A> , <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> ve içerir <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A> .  
@@ -20,7 +20,7 @@ Alma işlemi, <xref:System.Data.Common.DbProviderFactory> sınıfına bir veri s
 > .NET Framework <xref:System.Data.OracleClient.OracleClientFactory> , <xref:System.Data.Odbc.OdbcFactory> ve <xref:System.Data.OleDb.OleDbFactory> sınıfları benzer işlevleri de sağlar.  
   
 ## <a name="registering-dbproviderfactories"></a>DbProviderFactory kaydı yapılıyor  
- Fabrika tabanlı bir sınıfı destekleyen her bir .NET Framework veri sağlayıcısı, yapılandırma bilgilerini yerel bilgisayardaki **Machine. config** dosyasının **DbProviderFactory** bölümünde kaydeder. Aşağıdaki yapılandırma dosyası parçasında için sözdizimi ve biçimi gösterilmektedir <xref:System.Data.SqlClient> .  
+ Fabrika tabanlı bir sınıfı destekleyen her bir .NET Framework veri sağlayıcısı, yapılandırma bilgilerini yerel bilgisayardaki **machine.config** dosyasının **DbProviderFactory** bölümüne kaydeder. Aşağıdaki yapılandırma dosyası parçasında için sözdizimi ve biçimi gösterilmektedir <xref:System.Data.SqlClient> .  
   
 ```xml  
 <system.data>  
@@ -40,9 +40,9 @@ Alma işlemi, <xref:System.Data.Common.DbProviderFactory> sınıfına bir veri s
 ## <a name="retrieving-provider-information"></a>Sağlayıcı bilgileri alınıyor  
  Yöntemini kullanarak, yerel bilgisayarda yüklü olan tüm veri sağlayıcıları hakkında bilgi alabilirsiniz <xref:System.Data.Common.DbProviderFactories.GetFactoryClasses%2A> . <xref:System.Data.DataTable>Aşağıdaki tabloda açıklanan sütunları içeren adlandırılmış bir **DbProviderFactory** döndürür.  
   
-|Sütun sırası|Sütun adı|Örnek çıkış|Description|  
+|Sütun sırası|Sütun adı|Örnek çıkış|Açıklama|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**Adı**|SqlClient Veri Sağlayıcısı|Veri sağlayıcısı için okunabilir ad|  
+|0|**Ad**|SqlClient Veri Sağlayıcısı|Veri sağlayıcısı için okunabilir ad|  
 |1|**Açıklama**|SqlServer için .NET Framework Veri Sağlayıcısı|Veri sağlayıcısının okunabilir açıklaması|  
 |2|**InvariantName**|System.Data.SqlClient|Veri sağlayıcısına başvurmak için programlı olarak kullanılabilecek ad|  
 |3|**AssemblyQualifiedName**|System. Data. SqlClient. SqlClientFactory, System. Data, Version = 2.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089|Nesneyi başlatmak için yeterli bilgi içeren fabrika sınıfının tam adı|  
@@ -56,7 +56,7 @@ Alma işlemi, <xref:System.Data.Common.DbProviderFactory> sınıfına bir veri s
  [!code-vb[DataWorks DbProviderFactories#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories/VB/source.vb#1)]  
   
 ## <a name="using-application-configuration-files-to-store-factory-information"></a>Fabrika bilgilerini depolamak için uygulama yapılandırma dosyalarını kullanma  
- Fabrikalarla birlikte çalışmak için kullanılan tasarım deseninin, sağlayıcı ve bağlantı dizesi bilgilerinin bir Windows uygulaması için **app. config** ve bir ASP.NET uygulaması için **Web. config** gibi bir uygulama yapılandırma dosyasında depolanması gerekir.  
+ Fabrikalarla birlikte çalışmak için kullanılan tasarım deseninin, sağlayıcı ve bağlantı dizesi bilgilerinin bir Windows uygulaması için **app.config** gibi bir uygulama yapılandırma dosyasında depolanması ve bir ASP.NET uygulaması için **web.config** .  
   
  Aşağıdaki yapılandırma dosyası parçası, "NorthwindSQL" adlı iki bağlantı dizesinin, SQL Server ' deki Northwind veritabanına bağlantı için nasıl kaydedileceğini ve Access/Jet 'teki Northwind veritabanına bağlantı için "NorthwindAccess" olduğunu gösterir. **Sabit** adı **ProviderName** özniteliği için kullanılır.  
   
@@ -100,5 +100,5 @@ Alma işlemi, <xref:System.Data.Common.DbProviderFactory> sınıfına bir veri s
 
 - [DbProviderFactories](dbproviderfactories.md)
 - [Bağlantı dizeleri](connection-strings.md)
-- [Yapılandırma sınıflarını kullanma](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))
+- [Yapılandırma sınıflarını kullanma](/previous-versions/aspnet/ms228063(v=vs.100))
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

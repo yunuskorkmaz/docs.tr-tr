@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-ms.openlocfilehash: ff34b295ba443088115d470d8ade0c986ac1d856
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2baa2aaa32c4138eee0932e5c46c2b52482007cd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288855"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547564"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-Görünüm-Görünüm Model ile Taşınabilir Sınıf Kitaplığı Kullanma
 Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri birden çok platformda paylaşmak için .NET Framework [taşınabilir sınıf kitaplığını](cross-platform-development-with-the-portable-class-library.md) kullanabilirsiniz.
@@ -25,7 +25,7 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
 
  ![Platformlar arasında MVVM Sharing derlemelerinin bulunduğu taşınabilir sınıf kitaplığını gösterir.](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
- Bu konu, MVVM düzeniyle ilgili genel bilgileri sağlamaz. Yalnızca taşınabilir sınıf kitaplığının, MVVM uygulamak için nasıl kullanılacağına ilişkin bilgiler sağlar. MVVM hakkında daha fazla bilgi için bkz. [WPF Için Prronizm kitaplığı 5,0 kullanılarak MVVM hızlı](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))başlangıcı.
+ Bu konu, MVVM düzeniyle ilgili genel bilgileri sağlamaz. Yalnızca taşınabilir sınıf kitaplığının, MVVM uygulamak için nasıl kullanılacağına ilişkin bilgiler sağlar. MVVM hakkında daha fazla bilgi için bkz. [WPF Için Prronizm kitaplığı 5,0 kullanılarak MVVM hızlı](/previous-versions/msp-n-p/gg430857(v=pandp.40))başlangıcı.
 
 ## <a name="classes-that-support-mvvm"></a>MVVM 'YI destekleyen sınıflar
  .NET Framework 4,5, Windows 8. x Mağazası uygulamaları, Silverlight veya Windows Phone 7,5 için, taşınabilir sınıf kitaplığı projeniz için .NET ' i hedeflediğinizde, MVVM deseninin uygulanması için aşağıdaki sınıflar mevcuttur:
@@ -57,7 +57,7 @@ Model-görünüm-görünüm modeli (MVVM) modelini uygulamak ve derlemeleri bird
 
  Modeli derleyip, model projelerini görüntülediğinizde, görünümü içeren uygulamadaki bu derlemelere başvurduktan sonra. Görünüm yalnızca görünüm modeliyle etkileşime geçtiğinde, yalnızca görünüm modelini içeren derlemeye başvurmanız gerekir.
 
-### <a name="model"></a>Model
+### <a name="model"></a>Modelleme
  Aşağıdaki örnek, taşınabilir bir sınıf kitaplığı projesinde bulunabilecek basitleştirilmiş bir model sınıfını göstermektedir.
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]

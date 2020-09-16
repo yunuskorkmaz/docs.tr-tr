@@ -9,12 +9,12 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-ms.openlocfilehash: 440a49730f351b820cd68a741e79f94434f585c8
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 81df2dcc132c8ce057fa3e0e7d0ad04832f7a48b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904123"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555061"
 ---
 # <a name="default-marshaling-for-strings"></a>Dizeler için Varsayılan Hazırlama
 
@@ -28,7 +28,7 @@ Aşağıdaki tabloda, yönetilmeyen koda bir yöntem bağımsız değişkeni ola
 
 |Sabit listesi türü|Yönetilmeyen biçimin açıklaması|
 |----------------------|-------------------------------------|
-|`UnmanagedType.BStr`varsayılanını|`BSTR`Ön ek uzunluğu ve Unicode karakterleri olan BIR com stili.|
+|`UnmanagedType.BStr` varsayılanını|`BSTR`Ön ek uzunluğu ve Unicode karakterleri olan BIR com stili.|
 |`UnmanagedType.LPStr`|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 |`UnmanagedType.LPWStr`|Unicode karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 
@@ -89,7 +89,7 @@ Aşağıdaki tabloda, bir platform çağırma çağrısının Yöntem bağımsı
 |----------------------|-------------------------------------|
 |`UnmanagedType.AnsiBStr`|`BSTR`Ön ek uzunluğu ve ANSI karakterleri olan BIR com stili.|
 |`UnmanagedType.BStr`|`BSTR`Ön ek uzunluğu ve Unicode karakterleri olan BIR com stili.|
-|`UnmanagedType.LPStr`varsayılanını|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPStr` varsayılanını|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 |`UnmanagedType.LPTStr`|Platforma bağlı karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 |`UnmanagedType.LPUTF8Str`|UTF-8 kodlu karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 |`UnmanagedType.LPWStr`|Unicode karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
@@ -146,7 +146,7 @@ Dizeler yapıların geçerli üyeleridir; Ancak, <xref:System.Text.StringBuilder
 |Sabit listesi türü|Yönetilmeyen biçimin açıklaması|
 |----------------------|-------------------------------------|
 |`UnmanagedType.BStr`|`BSTR`Ön ek uzunluğu ve Unicode karakterleri olan BIR com stili.|
-|`UnmanagedType.LPStr`varsayılanını|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
+|`UnmanagedType.LPStr` varsayılanını|ANSI karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 |`UnmanagedType.LPTStr`|Platforma bağlı karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 |`UnmanagedType.LPUTF8Str`|UTF-8 kodlu karakterlerin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
 |`UnmanagedType.LPWStr`|Unicode karakterlerinin null ile sonlandırılmış dizisine yönelik bir işaretçi.|
@@ -233,7 +233,7 @@ Bazı durumlarda, sabit uzunluklu bir karakter arabelleğinin, kullanılacak yö
 
 Çözüm, <xref:System.Text.StringBuilder> bir arabelleği bir yerine bağımsız değişken olarak geçirmektir <xref:System.String> . Bir öğesine başvuru `StringBuilder` yapılabilir ve bu, öğesinin kapasitesini aşmadığı belirtilen aranan tarafından değiştirilebilir `StringBuilder` . Ayrıca, sabit bir uzunluğa de başlatılabilir. Örneğin, bir kapasiteye bir arabellek başladıysanız `StringBuilder` `N` , Sıralayıcı boyut ( `N` + 1) karakter arabelleği sağlar. Yönetilmeyen dizenin null sonlandırıcısına sahip olmadığı için + 1 hesapları `StringBuilder` .
 
-Örneğin, Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API işlevi ( *Winuser. h*içinde tanımlanmıştır) çağıranın, işlevin pencerenin metnini yazdığı sabit uzunlukta bir karakter arabelleği geçmesini gerektirir. `LpString`çağıran, ayrılmış bir arabellek boyutunu gösterir `nMaxCount` . Çağıranın arabelleği ayırması ve `nMaxCount` bağımsız değişkeni ayrılan arabelleğin boyutuna ayarlaması beklenmektedir. Aşağıdaki örnek, `GetWindowText` işlev bildirimini *Winuser. h*içinde tanımlanan şekilde gösterir.
+Örneğin, Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API işlevi ( *Winuser. h*içinde tanımlanmıştır) çağıranın, işlevin pencerenin metnini yazdığı sabit uzunlukta bir karakter arabelleği geçmesini gerektirir. `LpString` çağıran, ayrılmış bir arabellek boyutunu gösterir `nMaxCount` . Çağıranın arabelleği ayırması ve `nMaxCount` bağımsız değişkeni ayrılan arabelleğin boyutuna ayarlaması beklenmektedir. Aşağıdaki örnek, `GetWindowText` işlev bildirimini *Winuser. h*içinde tanımlanan şekilde gösterir.
 
 ```cpp
 int GetWindowText(
@@ -291,5 +291,5 @@ End Class
 - [Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)
 - [Dizeleri Hazırlama](marshaling-strings.md)
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)
-- [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [Yönlü öznitelikler](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopyalama ve Sabitleme](copying-and-pinning.md)

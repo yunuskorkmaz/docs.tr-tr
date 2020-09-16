@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-ms.openlocfilehash: 4f05eb2e6ef31cf1993a623c38bb177f7e3c297e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 4c630f5f7e3dc66ce44f10cd69fcd108226b0250
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935646"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554338"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo İşlevi
 [Tlibattr](/windows/win32/api/oaidl/ns-oaidl-tlibattr) yapısını inceleyerek belirtilen tür kitaplığıyla ilgili bilgileri döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT GetTypeLibInfo(  
@@ -57,9 +57,9 @@ HRESULT GetTypeLibInfo(
  dışı Tür kitaplığının ikincil sürüm numarası. Örneğin, *x. y*sürümü için, ikincil sürüm numarası *y*' dir.  
   
 ## <a name="remarks"></a>Açıklamalar  
- `GetTypeLibInfo` işlevi [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md)tarafından çağırılır. Bu araç, ortak dil çalışma zamanı (CLR) derlemesindeki türleri açıklayan bir tür kitaplığı oluşturur.  
+ `GetTypeLibInfo`İşlev, [Tlbexp.exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md)tarafından çağrılır. Bu araç, ortak dil çalışma zamanı (CLR) derlemesindeki türleri açıklayan bir tür kitaplığı oluşturur.  
   
- Herhangi bir parametre null ise, işlev `E_POINTER``HRESULT` döndürür. Aksi takdirde, `S_OK`döndürür.  
+ Herhangi bir parametre null ise, işlev ' ı döndürür `HRESULT` `E_POINTER` . Aksi takdirde, döndürür `S_OK` .  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
@@ -68,9 +68,9 @@ HRESULT GetTypeLibInfo(
   
  **Kitaplık:** TlbRef. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tlbexp Yardımcı İşlevleri](index.md)
-- [LoadTypeLibEx Işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx Işlevi](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

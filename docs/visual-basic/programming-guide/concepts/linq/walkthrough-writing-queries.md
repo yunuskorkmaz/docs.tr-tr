@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 25905d7ac3ca4bb66a22ad1df421b400eaa6b08f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c2abca183f1241cff314a4367c7bd9f1b9f239ea
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413277"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554599"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>İzlenecek Yol: Visual Basic'de Sorgu Yazma
 
@@ -32,7 +32,7 @@ Bu yönergeyi tamamladıktan sonra, ilgilendiğiniz belirli bir LINQ sağlayıc�
 
 4. Proje türleri listesinde **konsol uygulaması**' na tıklayın. **Ad** kutusuna proje için bir ad yazın ve ardından **Tamam**' a tıklayın.
 
-    Bir proje oluşturulur. Varsayılan olarak, System. Core. dll öğesine bir başvuru içerir. Ayrıca, başvurular sayfasında **Içeri aktarılan ad alanları** listesi [, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) <xref:System.Linq?displayProperty=nameWithType> ad alanını içerir.
+    Bir proje oluşturulur. Varsayılan olarak, System.Core.dll bir başvuru içerir. Ayrıca, başvurular sayfasında **Içeri aktarılan ad alanları** listesi [, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) <xref:System.Linq?displayProperty=nameWithType> ad alanını içerir.
 
 5. [Derleme sayfasında, proje Tasarımcısı (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), **seçenek çıkarımı seçeneğinin** **Açık**olarak ayarlandığından emin olun.
 
@@ -145,9 +145,9 @@ Sorgularla çalışmanın temel kavramlarıyla ilgili bilgi sahibi olduktan sonr
 
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 
-- [LINQ - XML](linq-to-xml.md)
+- [LINQ - XML](../../../../standard/linq/linq-xml-overview.md)
 
-- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
+- [LINQ - DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

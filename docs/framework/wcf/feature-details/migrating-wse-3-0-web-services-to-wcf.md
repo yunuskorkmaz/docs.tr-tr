@@ -2,12 +2,12 @@
 title: WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: ecf27c227b3e39d0c449a1d2ff32dc5bd59c750b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c7feac0a44883e8019acfeaa288752fb051c667f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598794"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554097"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>WSE 3.0 Web Hizmetlerini WCF'ye Taşıma
 WSE 3,0 Web hizmetlerini Windows Communication Foundation (WCF) geçişinin avantajları, gelişmiş performans ve ek aktarımlar, ek güvenlik senaryoları ve WS-* belirtimleri desteği içerir. WVA3,0 'den WCF 'ye geçirilen bir Web hizmeti, %400 200 ' e varan performans geliştirmesine kadar. WCF tarafından desteklenen aktarımlar hakkında daha fazla bilgi için bkz. [bir taşıma seçme](choosing-a-transport.md). WCF tarafından desteklenen senaryoların listesi için bkz. [ortak güvenlik senaryoları](common-security-scenarios.md). WCF tarafından desteklenen belirtimlerin listesi için bkz. [Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu](web-services-protocols-interoperability-guide.md).  
@@ -20,7 +20,7 @@ WSE 3,0 Web hizmetlerini Windows Communication Foundation (WCF) geçişinin avan
  WCF ve ASP.NET ya da WSE 3,0 programlama modelleri arasında birçok benzer yönü olsa da, bunlar farklıdır. WCF programlama modeli hakkında daha fazla bilgi için bkz. [temel programlama yaşam döngüsü](../basic-programming-lifecycle.md).  
   
 > [!NOTE]
-> Bir Wo Web hizmetini WCF 'ye geçirmek için, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aracı bir istemci oluşturmak için kullanılabilir. Bununla birlikte, bu istemci, WCF hizmeti için bir başlangıç noktası olarak kullanılabilecek arabirimler ve sınıflar içerir. Oluşturulan arabirimlerin <xref:System.ServiceModel.OperationContractAttribute> özelliği olarak ayarlanmış olan sözleşmenin üyelerine uygulanmış özniteliği vardır <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> `*` . Bir Wo istemcisi bu ayarla bir Web hizmetini çağırdığında, şu özel durum atılır: **Web. Services3. ResponseProcessingException: WSE910: yanıt iletisi işlenirken bir hata oluştu ve hatayı iç özel durumda bulabilirsiniz**. Bunu azaltmak için, <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> <xref:System.ServiceModel.OperationContractAttribute> özniteliğinin özelliğini `null` gibi değeri olmayan bir değere ayarlayın `http://Microsoft.WCF.Documentation/ResponseToOCAMethod` .  
+> Bir Wo Web hizmetini WCF 'ye geçirmek için, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) aracı bir istemci oluşturmak için kullanılabilir. Bununla birlikte, bu istemci, WCF hizmeti için bir başlangıç noktası olarak kullanılabilecek arabirimler ve sınıflar içerir. Oluşturulan arabirimlerin <xref:System.ServiceModel.OperationContractAttribute> özelliği olarak ayarlanmış olan sözleşmenin üyelerine uygulanmış özniteliği vardır <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> `*` . Bir Wo istemcisi bu ayarla bir Web hizmetini çağırdığında, şu özel durum atılır: **Web. Services3. ResponseProcessingException: WSE910: yanıt iletisi işlenirken bir hata oluştu ve hatayı iç özel durumda bulabilirsiniz**. Bunu azaltmak için, <xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> <xref:System.ServiceModel.OperationContractAttribute> özniteliğinin özelliğini `null` gibi değeri olmayan bir değere ayarlayın `http://Microsoft.WCF.Documentation/ResponseToOCAMethod` .  
   
 ## <a name="security"></a>Güvenlik  
   
@@ -66,7 +66,7 @@ WSE 3,0 Web hizmetlerini Windows Communication Foundation (WCF) geçişinin avan
  WCF 'de özel bağlamalar oluşturma hakkında daha fazla bilgi için bkz. [Özel Bağlamalar](../extending/custom-bindings.md).  
   
 ### <a name="wse-30-web-services-that-are-secured-using-application-code"></a>Uygulama kodu kullanılarak güvenliği sağlanan WVA3,0 Web Hizmetleri  
- WVA3,0 veya WCF 'nin kullanılıp kullanılmadığını, güvenlik gereksinimlerinin yapılandırma yerine uygulama kodunda belirlenebilir. WVA3,0 'de, bu, sınıfından türetilen bir sınıf oluşturularak `Policy` ve sonra yöntemi çağırarak gereksinimleri ekleyerek gerçekleştirilir `Add` . Kodda güvenlik gereksinimlerini belirtme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir Web hizmetini bir Ilke dosyası kullanmadan güvenli hale getirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10)). WCF 'de, kodda güvenlik gereksinimlerini belirtmek için, sınıfının bir örneğini oluşturun <xref:System.ServiceModel.Channels.BindingElementCollection> ve ' a bir örneğini ekleyin <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Channels.BindingElementCollection> . Güvenlik onaylama gereksinimleri, sınıfının statik kimlik doğrulama modu yardımcı yöntemleri kullanılarak ayarlanır <xref:System.ServiceModel.Channels.SecurityBindingElement> . WCF kullanarak kodda güvenlik gereksinimlerini belirtme hakkında daha fazla bilgi için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md) ve [nasıl yapılır: belirtilen bir kimlik doğrulama modu Için bir SecurityBindingElement oluşturma](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ WVA3,0 veya WCF 'nin kullanılıp kullanılmadığını, güvenlik gereksinimlerinin yapılandırma yerine uygulama kodunda belirlenebilir. WVA3,0 'de, bu, sınıfından türetilen bir sınıf oluşturularak `Policy` ve sonra yöntemi çağırarak gereksinimleri ekleyerek gerçekleştirilir `Add` . Kodda güvenlik gereksinimlerini belirtme hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir Web hizmetini bir Ilke dosyası kullanmadan güvenli hale getirme](/previous-versions/dotnet/netframework-2.0/aa528763(v=msdn.10)). WCF 'de, kodda güvenlik gereksinimlerini belirtmek için, sınıfının bir örneğini oluşturun <xref:System.ServiceModel.Channels.BindingElementCollection> ve ' a bir örneğini ekleyin <xref:System.ServiceModel.Channels.SecurityBindingElement> <xref:System.ServiceModel.Channels.BindingElementCollection> . Güvenlik onaylama gereksinimleri, sınıfının statik kimlik doğrulama modu yardımcı yöntemleri kullanılarak ayarlanır <xref:System.ServiceModel.Channels.SecurityBindingElement> . WCF kullanarak kodda güvenlik gereksinimlerini belirtme hakkında daha fazla bilgi için bkz. [nasıl yapılır: SecurityBindingElement kullanarak özel bağlama oluşturma](how-to-create-a-custom-binding-using-the-securitybindingelement.md) ve [nasıl yapılır: belirtilen bir kimlik doğrulama modu Için bir SecurityBindingElement oluşturma](how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ### <a name="wse-30-custom-policy-assertion"></a>WVA3,0 özel Ilke onaylama  
  WVA3,0 'de, iki tür özel ilke onaylamaları vardır: bir SOAP iletisini güvenli hale getirme ve bir SOAP iletisini güvenli hale getirme. SOAP iletilerinin güvenliğini sağlayan ilke onayları, WVA3,0 `SecurityPolicyAssertion` sınıfından türetilir ve WCF 'de kavramsal eşdeğer bir <xref:System.ServiceModel.Channels.SecurityBindingElement> sınıftır.  
@@ -78,7 +78,7 @@ WSE 3,0 Web hizmetlerini Windows Communication Foundation (WCF) geçişinin avan
  Bir SOAP iletisini güvenli hale getirmeye yönelik özel bir ilke onayını dönüştürmek için, bkz. [filtreleme](filtering.md) ve örnek [özel ileti yakalayıcısı](../samples/custom-message-interceptor.md).  
   
 ### <a name="wse-30-custom-security-token"></a>WVA3,0 özel güvenlik belirteci  
- Özel belirteç oluşturmak için WCF programlama modeli WVA3,0 'den farklıdır. Wo 'da özel belirteç oluşturma hakkında ayrıntılı bilgi için bkz. [özel güvenlik belirteçleri oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10)). WCF 'de özel belirteç oluşturma hakkında ayrıntılı bilgi için bkz. [nasıl yapılır: özel belirteç oluşturma](../extending/how-to-create-a-custom-token.md).  
+ Özel belirteç oluşturmak için WCF programlama modeli WVA3,0 'den farklıdır. Wo 'da özel belirteç oluşturma hakkında ayrıntılı bilgi için bkz. [özel güvenlik belirteçleri oluşturma](/previous-versions/dotnet/netframework-2.0/aa529304(v=msdn.10)). WCF 'de özel belirteç oluşturma hakkında ayrıntılı bilgi için bkz. [nasıl yapılır: özel belirteç oluşturma](../extending/how-to-create-a-custom-token.md).  
   
 ### <a name="wse-30-custom-token-manager"></a>WVA3,0 özel belirteç Yöneticisi  
  Özel belirteç Yöneticisi oluşturmaya yönelik programlama modeli, WCF 'de WVA3,0 'den farklıdır. Özel bir belirteç Yöneticisi ve özel bir güvenlik belirteci için gereken diğer bileşenleri oluşturma hakkında ayrıntılı bilgi için bkz. [nasıl yapılır: özel belirteç oluşturma](../extending/how-to-create-a-custom-token.md).  
@@ -111,7 +111,7 @@ WSE 3,0 Web hizmetlerini Windows Communication Foundation (WCF) geçişinin avan
   
 ### <a name="wse-30-applications-that-use-the-wse-messaging-api"></a>WVAW Ileti API 'sini kullanan wva3,0 uygulamaları  
 
- WVAW mesajlaşma API 'SI, istemci ve Web hizmeti arasında iletilen XML 'e doğrudan erişim elde etmek için kullanıldığında, uygulama "düz eski XML" (POX) kullanacak şekilde dönüştürülebilirler. POX hakkında daha fazla bilgi için bkz. [POX Uygulamaları Ile birlikte çalışabilirlik](interoperability-with-pox-applications.md). WVAW mesajlaşma API 'SI hakkında daha fazla bilgi için bkz. [WVAMESAJLAŞMA API kullanarak soap Iletileri gönderme ve alma](https://docs.microsoft.com/previous-versions/dotnet/netframework-2.0/aa529293(v=msdn.10)).  
+ WVAW mesajlaşma API 'SI, istemci ve Web hizmeti arasında iletilen XML 'e doğrudan erişim elde etmek için kullanıldığında, uygulama "düz eski XML" (POX) kullanacak şekilde dönüştürülebilirler. POX hakkında daha fazla bilgi için bkz. [POX Uygulamaları Ile birlikte çalışabilirlik](interoperability-with-pox-applications.md). WVAW mesajlaşma API 'SI hakkında daha fazla bilgi için bkz. [WVAMESAJLAŞMA API kullanarak soap Iletileri gönderme ve alma](/previous-versions/dotnet/netframework-2.0/aa529293(v=msdn.10)).  
   
 ## <a name="transports"></a>Taşımalar  
   

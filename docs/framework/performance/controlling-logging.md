@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 45d9244eb11b914fd203f24057e1b65c6bef18c2
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bce5ea41149dc3b19106031fae202872dd8a8fb5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309592"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553811"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework Günlük Kaydını Denetleme
 
@@ -18,7 +18,7 @@ Ortak dil çalışma zamanı (CLR) olaylarını izlemek için Windows olay izlem
 
 - Windows işletim sistemine dahil olan [Logman](/windows-server/administration/windows-commands/logman) ve [tracerpt](/windows-server/administration/windows-commands/tracerpt_1) komut satırı araçları.
 
-- [Windows performans araç seti](/windows-hardware/test/wpt/)'Nde [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) araçları. XPerf hakkında daha fazla bilgi için [Windows performans blogu](https://docs.microsoft.com/archive/blogs/pigscanfly/)' na bakın.
+- [Windows performans araç seti](/windows-hardware/test/wpt/)'Nde [XPerf](/windows-hardware/test/wpt/xperf-command-line-reference) araçları. XPerf hakkında daha fazla bilgi için [Windows performans blogu](/archive/blogs/pigscanfly/)' na bakın.
 
 CLR olay bilgilerini yakalamak için, CLR sağlayıcısı bilgisayarınıza yüklenmelidir. Sağlayıcının yüklendiğini doğrulamak için `logman query providers` komut istemine yazın. Sağlayıcı listesi görüntülenir. Bu liste, sağlayıcılar gibi CLR sağlayıcısı için bir girdi içermelidir.
 
@@ -54,9 +54,9 @@ Bir kullanıcının, günlüğü etkinleştirmek için üç şeyi belirtmesi ger
 
     - `-p`Parametresi, sağlayıcı GUID 'ini tanımlar.
 
-    - `0x1CCBD`oluşturulacak olay kategorilerini belirtir.
+    - `0x1CCBD` oluşturulacak olay kategorilerini belirtir.
 
-    - `0x5`günlüğe kaydetme düzeyini (Bu durumda verbose (5)) ayarlar.
+    - `0x5` günlüğe kaydetme düzeyini (Bu durumda verbose (5)) ayarlar.
 
     - `-ets`Parametresi, Logman 'yi olay izleme oturumlarına komut gönderecek şekilde bildirir.
 

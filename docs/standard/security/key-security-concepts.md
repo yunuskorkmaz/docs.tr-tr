@@ -11,19 +11,19 @@ helpviewer_keywords:
 - permissions [.NET]
 - security [.NET], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-ms.openlocfilehash: 259723b903377f7e79731e1ff79b3d512581102f
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 5dedf6df8e6cf2cf886e68cc132a44abfb201c49
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87555273"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554403"
 ---
 # <a name="key-security-concepts"></a>Temel Güvenlik Kavramları
 
 > [!NOTE]
 > Bu makale Windows için geçerlidir.
 >
-> ASP.NET Core hakkında bilgi için bkz. [ASP.NET Core güvenliğine genel bakış](https://docs.microsoft.com/aspnet/core/security/).
+> ASP.NET Core hakkında bilgi için bkz. [ASP.NET Core güvenliğine genel bakış](/aspnet/core/security/).
 
 .NET, mobil kod ile ilgili güvenlik kaygılarını ele almak ve bileşenlerin hangi kullanıcılara izin verildiğini belirlemesini sağlayan destek sağlamak için rol tabanlı güvenlik sunar.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 30d4a8f6ddc4ae1f83f5c0802e872661cbe6c6f1
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 03eda8a419dc60c75576e15da9b3595274894c75
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85802937"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554586"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 'teki normal ifadeler için en iyi uygulamalar
 
@@ -64,7 +64,7 @@ Bu sorunu çözmek için, şunları yapabilirsiniz:
 . NET ' in normal ifade nesne modeli <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> , normal ifade altyapısını temsil eden sınıftır. Genellikle, normal ifade performansını etkileyen tek en büyük faktör, <xref:System.Text.RegularExpressions.Regex> altyapının kullanıldığı yoldur. Normal bir ifadeyi tanımlama, normal ifade motorunu bir normal ifade deseni ile sıkı şekilde eşlemeyi içerir. Bu, <xref:System.Text.RegularExpressions.Regex> oluşturucusunu bir normal ifade deseninin geçişine veya bir statik yöntemi çağırarak bir nesnenin örneğini oluşturma işleminin, analiz edilecek dizeyle birlikte normal ifade deseninin birlikte zorunludur, pahalı bir bir yöntem olması gerekip gerekmediğini belirtir.
 
 > [!NOTE]
-> Yorumlanan ve derlenmiş normal ifadelerin kullanılmasıyla ilgili performans etkilerine ilişkin daha ayrıntılı bir tartışma için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) .
+> Yorumlanan ve derlenmiş normal ifadelerin kullanılmasıyla ilgili performans etkilerine ilişkin daha ayrıntılı bir tartışma için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) .
 
 Normal ifade altyapısını belirli bir normal ifade deseniyle birleştirebilir, sonra altyapıyı birkaç şekilde metin eşlemesi yapmak üzere kullanabilirsiniz:
 
@@ -104,7 +104,7 @@ Varsayılan olarak, en son kullanılan 15 statik normal ifade deseni önbelleğe
 
 `\p{Sc}+\s*\d+`Bu örnekte kullanılan normal ifade, giriş dizesinin bir para birimi simgesinden ve en az bir ondalık basamağından oluştuğunu doğrular. Desen aşağıdaki tabloda gösterildiği gibi tanımlanır.
 
-|Desen|Açıklama|
+|Desen|Description|
 |-------------|-----------------|
 |`\p{Sc}+`|Unicode Sembolü, Para Birimi kategorisinde bir ya da daha fazla karakter eşleyin.|
 |`\s*`|Sıfır veya daha fazla boşluk karakteriyle eşleş.|
@@ -125,7 +125,7 @@ Aşağıdaki örnek, ilk on cümleleri okurken ve Theodore Dreiser 'ın *Mali*me
 
 Örnekte kullanılan normal ifade deseninin, `\b(\w+((\r?\n)|,?\s))*\w+[.?:;!]` Aşağıdaki tabloda gösterildiği gibi tanımlanmıştır.
 
-|Desen|Açıklama|
+|Desen|Description|
 |-------------|-----------------|
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|
@@ -163,13 +163,13 @@ Aşağıdaki örnek, derlenmiş bir normal ifade içeren bir derlemenin nasıl o
 Sıradan şekilde, normal ifade motoru bir giriş dizsi içinde ilerlemek ve bunu bir normal ifade deseni ile karşılaştırmak için doğrusal ilerlemeyi kullanır. Ancak,, ve gibi belirsiz nicelik belirteçleri `*` `+` `?` normal ifade düzeninde kullanıldığında, normal ifade motoru başarılı kısmi eşleşmelerin bir kısmını verebilir ve tüm düzen için başarılı bir eşleşme aramak amacıyla önceden kaydedilmiş bir duruma geri dönebilir. Bu işlem geri dönüş olarak bilinir.
 
 > [!NOTE]
-> Geri izleme hakkında daha fazla bilgi için bkz. [normal Ifade davranışı](details-of-regular-expression-behavior.md) ve [geri izleme](backtracking-in-regular-expressions.md)ayrıntıları. Geri izlemenin ayrıntılı bir açıklaması için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) .
+> Geri izleme hakkında daha fazla bilgi için bkz. [normal Ifade davranışı](details-of-regular-expression-behavior.md) ve [geri izleme](backtracking-in-regular-expressions.md)ayrıntıları. Geri izlemenin ayrıntılı bir açıklaması için bkz. BCL ekibi blogundan [normal Ifade performansını En Iyi duruma getirme, Bölüm II: geri Izlemenin ücretlendirmesi](/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) .
 
 Geri dönüş için destek, normal ifadelere güç ve esneklik kazandırır. Ayrıca normal ifade motorunun çalışmasının denetlenmesini sorumluluğunu normal ifade geliştiricisine teslim eder. Geliştiriciler genelde bu sorumluluğun farkında olmadığından, geri dönüşü yanlış kullanmaları ya da aşırı geri dönüşe bağımlılıkları genelde normal ifade performansının düşmesinde önemli bir rol oynar. En kötü senaryoda yürütme süresi girdi dizesinde her ek karakter ile iki katına çıkar. Aslında geri izlemeyi aşırı şekilde kullanarak, girişin normal ifade desenini yakın eşlemesi halinde sonsuz bir döngünün program eşdeğerini oluşturmak kolaydır; normal ifade motorunun görece kısa bir giriş dizesini işlemesi saatler ve hatta günler alabilir.
 
 Genelde, geri izlemenin bir eşleme için gerekli olmadığı gerçeğine rağmen uygulamalar geri izleme kullandıkları için bir ceza öder. Örneğin, normal ifade, `\b\p{Lu}\w*\b` Aşağıdaki tabloda gösterildiği gibi, büyük bir karakterle başlayan tüm sözcüklerle eşleşir.
 
-|Desen|Açıklama|
+|Desen|Description|
 |-|-|
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|
 |`\p{Lu}`|Bir büyük harfli karakter eşleyin.|
@@ -192,7 +192,7 @@ Birçok durumda, geri izleme bir normal ifade desenini giriş metnine eşlemek i
 
 Bu durumlarda, yuvalanan miktar niceleyicileri kaldırarak ve dış alt ifadeyi sıfır genişliğinde bir ileriye dönük ya da geriye dönük onay ile değiştirerek normal ifade performansını en iyi hale getireceksiniz. İleriye dönük ve geriye dönük onaylar tutturuculardır; bunlar giriş dizesindeki işaretçiyi kaydırmaz, bunun yerine belirtilen koşulun sağlanıp sağlanmadığını kontrol etmek için ileriye ya da geriye bakar. Örneğin, bölüm numarası normal ifadesi olarak yeniden yazılabilir `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$` . Bu normal ifade deseni aşağıdaki tabloda gösterildiği gibi tanımlanmaktadır.
 
-|Desen|Açıklama|
+|Desen|Description|
 |-------------|-----------------|
 |`^`|Giriş dizesinin başında eşleşmeye başla.|
 |`[0-9A-Z]`|Alfasayısal bir karakterle eşleştirin Parça numarası en azından bu karakteri içermelidir.|
@@ -208,7 +208,7 @@ Aşağıdaki örnek, bu normal ifadenin parça numaraları içeriyor olabilecek 
 
 .NET 'teki normal ifade dili, iç içe nicelik belirteçleri ortadan kaldırmak için kullanabileceğiniz aşağıdaki dil öğelerini içerir. Daha fazla bilgi için bkz. [yapıları gruplandırma](grouping-constructs-in-regular-expressions.md).
 
-|Dil öğesi|Açıklama|
+|Dil öğesi|Description|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|Sıfır genişlikli pozitif ileriye yönelik onay. Giriş dizesiyle eşleşip eşleşmediğini öğrenmek için geçerli konumun önüne bakın `subexpression` .|
 |`(?!` `subexpression` `)`|Sıfır genişlikli negatif ileriye yönelik onay. Giriş dizesiyle eşleşip engellenmeyeceğini öğrenmek için geçerli konumun önüne bakın `subexpression` .|
@@ -242,7 +242,7 @@ Ancak bu dil öğelerinin kullanılmasının bir maliyeti vardır. Bu, <xref:Sys
 
 Genelde oluşturma birimlerini gruplama, miktar niceleyicilerin yalnızca bunlara uygulanacağı şekilde bir normal ifadede kullanılır ve bu alt ifadeler tarafından yakalanan gruplar daha sonra kullanılmaz. Örneğin, normal ifade `\b(\w+[;,]?\s?)+[.?!]` bir tümcenin tamamını yakalamak için tasarlanmıştır. Aşağıdaki tabloda, bu normal ifade deseninin dil öğeleri ve bunların <xref:System.Text.RegularExpressions.Match> nesne ve koleksiyonları üzerindeki etkileri açıklanmaktadır <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .
 
-|Desen|Açıklama|
+|Desen|Description|
 |-------------|-----------------|
 |`\b`|Bir sözcük sınırında eşleşmeye başla.|
 |`\w+`|Bir veya daha fazla sözcük karakteri eşleştir.|

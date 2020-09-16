@@ -2,12 +2,12 @@
 title: X.509 Sertifika Doğrulayıcı
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 2d117dda8e6748407b6d58677ec55e4e8e4e4740
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594835"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554247"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Sertifika Doğrulayıcı
 
@@ -23,7 +23,7 @@ Note: herkes kendi kendine verilen bir sertifika yapılandırabileceğinden, hiz
 
 - Sunucunun sunucu X. 509.440 sertifikası kullanılarak kimlik doğrulaması yapılır.
 
-Hizmet, App. config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, `wsHttpBinding` Varsayılan olarak `WSSecurity` ve istemci sertifikası kimlik doğrulamasını kullanan bir standart ile yapılandırılır. Hizmet davranışı, istemci X. 509.440 sertifikalarını doğrulama sınıfının türüyle birlikte doğrulamak için özel modu belirtir. Davranış, serviceCertificate öğesini kullanarak sunucu sertifikasını da belirtir. Sunucu sertifikasının, içindeki ile için aynı değeri içermesi vardır `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
+Hizmet, App.config yapılandırma dosyası kullanılarak tanımlanan hizmetle iletişim kurmak için tek bir uç nokta sunar. Uç nokta bir adres, bağlama ve bir anlaşmada oluşur. Bağlama, `wsHttpBinding` Varsayılan olarak `WSSecurity` ve istemci sertifikası kimlik doğrulamasını kullanan bir standart ile yapılandırılır. Hizmet davranışı, istemci X. 509.440 sertifikalarını doğrulama sınıfının türüyle birlikte doğrulamak için özel modu belirtir. Davranış, serviceCertificate öğesini kullanarak sunucu sertifikasını da belirtir. Sunucu sertifikasının, içindeki ile için aynı değeri içermesi vardır `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) .
 
 ```xml
   <system.serviceModel>
@@ -253,13 +253,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 ## <a name="setup-batch-file"></a>Toplu Iş dosyası kurulumu
 
-Bu örneğe eklenen Setup. bat toplu iş dosyası, sunucu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır. Bu toplu iş dosyasının bilgisayarlarda çalışmak veya barındırılmayan bir durumda çalışması için değiştirilmesi gerekir.
+Bu örneğe eklenen Setup.bat Batch dosyası, sunucu sertifika tabanlı güvenlik gerektiren şirket içinde barındırılan bir uygulamayı çalıştırmak için sunucuyu ilgili sertifikalarla yapılandırmanıza olanak tanır. Bu toplu iş dosyasının bilgisayarlarda çalışmak veya barındırılmayan bir durumda çalışması için değiştirilmesi gerekir.
 
 Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilecek şekilde, toplu iş dosyalarının farklı bölümlerine kısa bir genel bakış sunar:
 
 - Sunucu sertifikası oluşturuluyor:
 
-     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. % SERVER_NAME% değişkeni sunucu adını belirtiyor. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Varsayılan değer localhost 'tur.
+     Setup.bat Batch dosyasından aşağıdaki satırlar kullanılacak sunucu sertifikasını oluşturur. % SERVER_NAME% değişkeni sunucu adını belirtiyor. Kendi sunucu adınızı belirtmek için bu değişkeni değiştirin. Varsayılan değer localhost 'tur.
 
     ```bash
     echo ************
@@ -273,7 +273,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 - Sunucu sertifikasını istemcinin güvenilen sertifika deposuna yükleme:
 
-     Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. MakeCert. exe tarafından oluşturulan sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından bu adım gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
+     Setup.bat Batch dosyasındaki aşağıdaki satırlar, sunucu sertifikasını istemci güvenilir kişiler deposuna kopyalar. Makecert.exe tarafından üretilen sertifikaların istemci sistemi tarafından örtük olarak güvenilir olmadığından bu adım gereklidir. İstemci tarafından güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), istemci sertifikası deposunu sunucu sertifikasıyla doldurmanın bu adımı gerektirmez.
 
     ```bash
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
@@ -281,7 +281,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 - İstemci sertifikası oluşturuluyor:
 
-     Setup. bat toplu iş dosyasından aşağıdaki satırlar kullanılacak istemci sertifikasını oluşturur. % USER_NAME% değişkeni istemci adını belirtiyor. Bu değer "test1" olarak ayarlanır çünkü bu, istemci kodunun aradığı addır. % USER_NAME değerini değiştirirseniz, Client.cs kaynak dosyasında karşılık gelen değeri değiştirmeniz ve istemciyi yeniden oluşturmanız gerekir.
+     Setup.bat Batch dosyasından aşağıdaki satırlar kullanılacak istemci sertifikasını oluşturur. % USER_NAME% değişkeni istemci adını belirtiyor. Bu değer "test1" olarak ayarlanır çünkü bu, istemci kodunun aradığı addır. % USER_NAME değerini değiştirirseniz, Client.cs kaynak dosyasında karşılık gelen değeri değiştirmeniz ve istemciyi yeniden oluşturmanız gerekir.
 
      Sertifika, CurrentUser Store konumu altında (kişisel) deposunda depolanır.
 
@@ -297,7 +297,7 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 - İstemci sertifikasını sunucunun Güvenilen sertifika deposuna yükleme:
 
-     Setup. bat toplu iş dosyası 'ndaki aşağıdaki satırlar, istemci sertifikasını güvenilir kişiler deposuna kopyalar. Bu adım, MakeCert. exe tarafından oluşturulan sertifikaların sunucu sistemi tarafından örtük olarak güvenilir olmadığından gereklidir. Güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), sunucu sertifika deposunu istemci sertifikası ile doldurmak için bu adım gerekli değildir.
+     Setup.bat Batch dosyasındaki aşağıdaki satırlar, istemci sertifikasını güvenilir kişiler deposuna kopyalar. Makecert.exe tarafından oluşturulan sertifikalara sunucu sistemi tarafından örtük olarak güvenilmediğinden Bu adım gereklidir. Güvenilen kök sertifikada kök sertifikaya sahip bir sertifikanız zaten varsa (örneğin, Microsoft tarafından verilen bir sertifika), sunucu sertifika deposunu istemci sertifikası ile doldurmak için bu adım gerekli değildir.
 
     ```bash
     certmgr.exe -add -r CurrentUser -s My -c -n %USER_NAME% -r LocalMachine -s TrustedPeople
@@ -311,50 +311,50 @@ Aşağıdakiler, uygun yapılandırmada çalışacak şekilde değiştirilebilec
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Örneği aynı bilgisayarda çalıştırmak için
 
-1. Bir Visual Studio 2012 komut istemi içindeki örnek yükleme klasöründen, yönetici ayrıcalıklarıyla açılmış Setup. bat dosyasını çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
+1. Bir Visual Studio 2012 komut istemi içindeki örnek install klasöründen yönetici ayrıcalıklarıyla açılan Setup.bat çalıştırın. Bu, örneği çalıştırmak için gereken tüm sertifikaları kurar.
 
     > [!IMPORTANT]
-    > Setup. bat toplu iş dosyası bir Visual Studio 2012 komut Isteminden çalıştırılmak üzere tasarlanmıştır. Visual Studio 2012 komut Isteminde ayarlanan PATH ortam değişkeni Setup. bat betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder.
+    > Setup.bat Batch dosyası bir Visual Studio 2012 komut Isteminden çalıştırılmak üzere tasarlanmıştır. Visual Studio 2012 komut Isteminde ayarlanan PATH ortam değişkeni, Setup.bat betiği için gereken yürütülebilir dosyaları içeren dizine işaret eder.
 
-2. Service\bin. adresinden Service. exe ' yi Başlat
+2. Service\bin. 'den başlatma Service.exe
 
-3. \Client\bin. adresinden Client. exe ' yi Başlat İstemci etkinliği istemci konsol uygulamasında görüntülenir.
+3. \Client\bin. 'den başlatma Client.exe İstemci etkinliği istemci konsol uygulamasında görüntülenir.
 
-4. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+4. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 #### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için
 
 1. Hizmet bilgisayarında bir dizin oluşturun.
 
-2. Hizmet programı dosyalarını \service\bin konumundan hizmet bilgisayarındaki sanal dizine kopyalayın. Ayrıca Setup. bat, Cleanup. bat, GetComputerName. vbs ve ImportClientCert. bat dosyalarını hizmet bilgisayarına kopyalayın.
+2. Hizmet programı dosyalarını \service\bin konumundan hizmet bilgisayarındaki sanal dizine kopyalayın. Ayrıca, Setup.bat, Cleanup.bat, GetComputerName. vbs ve ImportClientCert.bat dosyalarını da hizmet bilgisayarına kopyalayın.
 
 3. İstemci bilgisayarda istemci ikilileri için bir dizin oluşturun.
 
-4. İstemci programı dosyalarını istemci bilgisayardaki istemci dizinine kopyalayın. Ayrıca Setup. bat, Cleanup. bat ve ImportServiceCert. bat dosyalarını istemciye kopyalayın.
+4. İstemci programı dosyalarını istemci bilgisayardaki istemci dizinine kopyalayın. Ayrıca Setup.bat, Cleanup.bat ve ImportServiceCert.bat dosyalarını istemciye kopyalayın.
 
 5. Sunucusunda, `setup.bat service` yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut istemi çalıştırın. `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `service` bilgisayarın tam etki alanı adına sahip bir hizmet sertifikası oluşturur ve hizmet sertifikasını Service. cer adlı bir dosyaya aktarır.
 
-6. Service. exe. config dosyasını `findValue` , [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) bilgisayarın tam etki alanı adıyla aynı olan yeni sertifika adını (içindeki özniteliğinde) yansıtacak şekilde düzenleyin. Ayrıca, \<service> / \<baseAddresses> öğesindeki öğe adını localhost 'dan, hizmet bilgisayarınızın tam adına değiştirin.
+6. Service.exe.config `findValue` , [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) bilgisayarın tam etki alanı adıyla aynı olan yeni sertifika adını (içindeki özniteliğinde) yansıtacak şekilde düzenleyin. Ayrıca, \<service> / \<baseAddresses> öğesindeki öğe adını localhost 'dan, hizmet bilgisayarınızın tam adına değiştirin.
 
 7. Service. cer dosyasını hizmet dizininden istemci bilgisayarındaki istemci dizinine kopyalayın.
 
 8. İstemcisinde, `setup.bat client` yönetici ayrıcalıklarıyla açılan bir Visual Studio için geliştirici komut istemi çalıştırın. `setup.bat`Bağımsız değişkeniyle birlikte çalıştırmak, `client` Client.com adlı bir istemci sertifikası oluşturur ve Istemci sertifikasını Client. cer adlı bir dosyaya aktarır.
 
-9. İstemci bilgisayardaki Client. exe. config dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. Localhost 'u sunucunun tam etki alanı adıyla değiştirerek bunu yapın.
+9. İstemci bilgisayardaki Client.exe.config dosyasında, uç noktanın adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. Localhost 'u sunucunun tam etki alanı adıyla değiştirerek bunu yapın.
 
 10. Client. cer dosyasını istemci dizininden sunucusundaki hizmet dizinine kopyalayın.
 
-11. İstemcide, yönetici ayrıcalıklarıyla açılan bir Geliştirici Komut İstemi Visual Studio için ImportServiceCert. bat dosyasını çalıştırın. Bu, hizmet sertifikasını Service. cer dosyasından CurrentUser-Trustedkişiler deposuna aktarır.
+11. İstemcisinde ImportServiceCert.bat, yönetici ayrıcalıklarıyla açılmış bir Visual Studio Geliştirici Komut İstemi çalıştırın. Bu, hizmet sertifikasını Service. cer dosyasından CurrentUser-Trustedkişiler deposuna aktarır.
 
-12. Sunucusunda, yönetici ayrıcalıklarıyla açılmış bir Visual Studio için Geliştirici Komut İstemi ImportClientCert. bat dosyasını çalıştırın. Bu, istemci sertifikasını Client. cer dosyasından LocalMachine-Trustedkişiler deposuna aktarır.
+12. Sunucusunda, yönetici ayrıcalıklarıyla açılmış bir Visual Studio Geliştirici Komut İstemi ImportClientCert.bat çalıştırın. Bu, istemci sertifikasını Client. cer dosyasından LocalMachine-Trustedkişiler deposuna aktarır.
 
-13. Sunucu bilgisayarda, komut istemi penceresinden Service. exe ' yi başlatın.
+13. Sunucu bilgisayarda, komut istemi penceresinden Service.exe başlatın.
 
-14. İstemci bilgisayarda, bir komut istemi penceresinden Client. exe ' yi başlatın. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+14. İstemci bilgisayarda, bir komut istemi penceresinden Client.exe başlatın. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
 
 #### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için
 
-1. Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup. bat dosyasını çalıştırın. Bu, sunucu ve istemci sertifikalarını sertifika deposundan kaldırır.
+1. Örneği çalıştırmayı bitirdikten sonra Samples klasöründe Cleanup.bat çalıştırın. Bu, sunucu ve istemci sertifikalarını sertifika deposundan kaldırır.
 
 > [!NOTE]
 > Bu betik, bilgisayarlar arasında bu örneği çalıştırırken bir istemcideki hizmet sertifikalarını kaldırmaz. Bilgisayarlar arasında sertifika kullanan Windows Communication Foundation (WCF) örneklerini çalıştırırsanız, CurrentUser-Trustedkişiler deposuna yüklenmiş olan hizmet sertifikalarını temizlediğinizden emin olun. Bunu yapmak için şu komutu kullanın: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Örneğin: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` .

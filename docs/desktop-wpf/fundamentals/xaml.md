@@ -21,12 +21,12 @@ helpviewer_keywords:
 - content models [XAML]
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
-ms.openlocfilehash: 4ccf107bd56be33d9b195d97ae5edf1a6b85117f
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: d9634b5638b84222c0e08aaf4bbaace99ff107d7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325705"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545975"
 ---
 # <a name="xaml-overview-in-wpf"></a>WPF 'de XAML 'ye Genel Bakış
 
@@ -46,7 +46,7 @@ Aşağıdaki örnek, bir kullanıcı arabiriminin parçası olarak nasıl bir d�
 
 ## <a name="xaml-syntax-in-brief"></a>Kısaca XAML sözdizimi
 
-Aşağıdaki bölümlerde, XAML sözdiziminin temel biçimleri açıklanacaktır ve kısa bir biçimlendirme örneği verilmiştir. Bu bölümler, her bir sözdizimi biçimi hakkında, bunların yedekleme türü sisteminde nasıl temsil edildiği gibi tüm bilgileri sağlamaya yönelik değildir. XAML sözdiziminin özellikleri hakkında daha fazla bilgi için bkz. [XAML sözdizimi ayrıntılı](../../framework/wpf/advanced/xaml-syntax-in-detail.md).
+Aşağıdaki bölümlerde, XAML sözdiziminin temel biçimleri açıklanacaktır ve kısa bir biçimlendirme örneği verilmiştir. Bu bölümler, her bir sözdizimi biçimi hakkında, bunların yedekleme türü sisteminde nasıl temsil edildiği gibi tüm bilgileri sağlamaya yönelik değildir. XAML sözdiziminin özellikleri hakkında daha fazla bilgi için bkz. [XAML sözdizimi ayrıntılı](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail).
 
 Sonraki birkaç bölümde bulunan malzemenin çoğu, XML diline daha önceden alışkın olmanız durumunda sizin için büyük olacaktır. Bu, XAML 'in temel tasarım ilkelerine bir sonucudur. XAML dili kendi kavramlarını tanımlar, ancak bu kavramlar XML dili ve biçimlendirme formu içinde çalışır.
 
@@ -120,7 +120,7 @@ XAML dilinin bir kuralı olarak, XAML içerik özelliğinin değeri, nesne öğe
   blue button</Button>
 ```
 
-XAML sözdiziminin özellikleri hakkında daha fazla bilgi için bkz. [XAML sözdizimi ayrıntılı](../../framework/wpf/advanced/xaml-syntax-in-detail.md).
+XAML sözdiziminin özellikleri hakkında daha fazla bilgi için bkz. [XAML sözdizimi ayrıntılı](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail).
 
 ### <a name="text-content"></a>Metin içeriği
 
@@ -147,7 +147,7 @@ Burada her biri <xref:System.Windows.Controls.Button> bir alt öğesidir <xref:S
 
 - **Atlanan StackPanel. Children Özellik öğesi:** <xref:System.Windows.Controls.StackPanel> türetiliyor <xref:System.Windows.Controls.Panel> . <xref:System.Windows.Controls.Panel><xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>xaml içerik özelliği olarak tanımlar.
 
-- **Atlanan UIElementCollection nesne öğesi:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>Özelliği <xref:System.Windows.Controls.UIElementCollection> , öğesini uygulayan türünü alır <xref:System.Collections.IList> . Koleksiyonun element etiketi, gibi koleksiyonları işlemek için XAML kurallarına göre atlanabilir <xref:System.Collections.IList> . (Bu durumda, <xref:System.Windows.Controls.UIElementCollection> parametresiz bir Oluşturucu sunmadığından ve nesne öğesi açıklama olarak gösterilmekte olduğundan, aslında örnek oluşturulamıyor <xref:System.Windows.Controls.UIElementCollection> ).
+- **Atlanan UIElementCollection nesne öğesi:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType> Özelliği <xref:System.Windows.Controls.UIElementCollection> , öğesini uygulayan türünü alır <xref:System.Collections.IList> . Koleksiyonun element etiketi, gibi koleksiyonları işlemek için XAML kurallarına göre atlanabilir <xref:System.Collections.IList> . (Bu durumda, <xref:System.Windows.Controls.UIElementCollection> parametresiz bir Oluşturucu sunmadığından ve nesne öğesi açıklama olarak gösterilmekte olduğundan, aslında örnek oluşturulamıyor <xref:System.Windows.Controls.UIElementCollection> ).
 
 ```xaml
 <StackPanel>
@@ -178,7 +178,7 @@ WPF XAML işlemcileri ve serileştiriciler, tüm önemli olmayan boşlukları yo
 
 Biçimlendirme uzantıları bir XAML dil kavramıdır. Bir öznitelik sözdizimi değeri sağlamak için kullanıldığında, küme ayraçları ( `{` ve `}` ) biçimlendirme uzantısı kullanımını gösterir. Bu kullanım, XAML işlemesini, bir sabit dize veya dize dönüştürülebilir bir değer olarak öznitelik değerlerinin genel işlemeden çıkmak için yönlendirir.
 
-WPF uygulama programlamasında kullanılan en yaygın biçimlendirme uzantıları, [`Binding`](../../framework/wpf/advanced/binding-markup-extension.md) veri bağlama ifadeleri ve kaynak başvuruları için kullanılır [`StaticResource`](../../framework/wpf/advanced/staticresource-markup-extension.md) [`DynamicResource`](../../framework/wpf/advanced/dynamicresource-markup-extension.md) . Biçimlendirme uzantıları ' nı kullanarak, bu özellik genel olarak bir öznitelik sözdizimini desteklemeseler bile özellikler için değerler sağlamak üzere öznitelik sözdizimini kullanabilirsiniz. Biçimlendirme uzantıları genellikle değerleri erteleme veya çalışma zamanında bulunan diğer nesnelere başvurma gibi özellikleri etkinleştirmek için ara ifade türlerini kullanır.
+WPF uygulama programlamasında kullanılan en yaygın biçimlendirme uzantıları, [`Binding`](/dotnet/desktop/wpf/advanced/binding-markup-extension) veri bağlama ifadeleri ve kaynak başvuruları için kullanılır [`StaticResource`](/dotnet/desktop/wpf/advanced/staticresource-markup-extension) [`DynamicResource`](/dotnet/desktop/wpf/advanced/dynamicresource-markup-extension) . Biçimlendirme uzantıları ' nı kullanarak, bu özellik genel olarak bir öznitelik sözdizimini desteklemeseler bile özellikler için değerler sağlamak üzere öznitelik sözdizimini kullanabilirsiniz. Biçimlendirme uzantıları genellikle değerleri erteleme veya çalışma zamanında bulunan diğer nesnelere başvurma gibi özellikleri etkinleştirmek için ara ifade türlerini kullanır.
 
 Örneğin, aşağıdaki biçimlendirme <xref:System.Windows.FrameworkElement.Style%2A> öznitelik söz dizimini kullanarak özelliğin değerini ayarlar. <xref:System.Windows.FrameworkElement.Style%2A>Özelliği, sınıfının bir örneğini alır <xref:System.Windows.Style> ve bu, varsayılan olarak bir öznitelik sözdizimi dizesi tarafından örneklenemez. Ancak bu durumda öznitelik belirli bir biçimlendirme uzantısına başvurur `StaticResource` . Biçimlendirme Uzantısı işlendiğinde, daha önce kaynak sözlüğünde anahtarlı kaynak olarak örneklenen bir stile başvuru döndürür.
 
@@ -186,13 +186,13 @@ WPF uygulama programlamasında kullanılan en yaygın biçimlendirme uzantılar�
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources2](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources2)]
 [!code-xaml[FEResourceSH_snip#XAMLOvwShortResources3](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page1.xaml#xamlovwshortresources3)]
 
-Özellikle WPF 'de uygulanan XAML için tüm biçimlendirme uzantılarının başvuru listesi için bkz. [WPF XAML uzantıları](../../framework/wpf/advanced/wpf-xaml-extensions.md). System. xaml tarafından tanımlanan ve .NET Core XAML uygulamalarında daha yaygın olarak kullanılabilen biçimlendirme uzantılarının başvuru listesi için bkz. [xaml ad alanı (x:) Dil özellikleri](../xaml-services/namespace-language-features.md). Biçimlendirme Uzantısı kavramları hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).
+Özellikle WPF 'de uygulanan XAML için tüm biçimlendirme uzantılarının başvuru listesi için bkz. [WPF XAML uzantıları](/dotnet/desktop/wpf/advanced/wpf-xaml-extensions). System. xaml tarafından tanımlanan ve .NET Core XAML uygulamalarında daha yaygın olarak kullanılabilen biçimlendirme uzantılarının başvuru listesi için bkz. [xaml ad alanı (x:) Dil özellikleri](../xaml-services/namespace-language-features.md). Biçimlendirme Uzantısı kavramları hakkında daha fazla bilgi için bkz. [Biçimlendirme uzantıları ve WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml).
 
 ## <a name="type-converters"></a>Tür dönüştürücüler
 
 [Kısaca xaml sözdiziminde](#xaml-syntax-in-brief) , öznitelik değeri bir dize tarafından ayarlanamayacak şekilde belirtilmiştir. Dizelerin diğer nesne türlerine nasıl dönüştürüldüğüne ilişkin temel, yerel işleme, <xref:System.String> veya gibi belirli türler için yerel işlemeye ek olarak türün kendisini temel alır <xref:System.DateTime> <xref:System.Uri> . Ancak bu türlerin birçok WPF türü veya üyesi, temel dize özniteliği işleme davranışını daha karmaşık nesne türleri örneklerinin dizeler ve öznitelikler olarak belirtilebilmesi için genişletir.
 
-<xref:System.Windows.Thickness>Yapı, XAML kullanımları için etkinleştirilmiş tür dönüştürmesi olan bir türün örneğidir. <xref:System.Windows.Thickness>iç içe yerleştirilmiş bir dikdörtgen içindeki ölçüleri gösterir ve gibi özellikler için değer olarak kullanılır <xref:System.Windows.FrameworkElement.Margin%2A> . Üzerine bir tür dönüştürücüsü yerleştirerek <xref:System.Windows.Thickness> , ' ı kullanan tüm ÖZELLIKLERIN <xref:System.Windows.Thickness> xaml 'de belirtilmesi daha kolaydır çünkü bunlar öznitelik olarak belirtibilirler. Aşağıdaki örnek, bir için değer sağlamak üzere bir tür dönüştürme ve öznitelik söz dizimini kullanır <xref:System.Windows.FrameworkElement.Margin%2A> :
+<xref:System.Windows.Thickness>Yapı, XAML kullanımları için etkinleştirilmiş tür dönüştürmesi olan bir türün örneğidir. <xref:System.Windows.Thickness> iç içe yerleştirilmiş bir dikdörtgen içindeki ölçüleri gösterir ve gibi özellikler için değer olarak kullanılır <xref:System.Windows.FrameworkElement.Margin%2A> . Üzerine bir tür dönüştürücüsü yerleştirerek <xref:System.Windows.Thickness> , ' ı kullanan tüm ÖZELLIKLERIN <xref:System.Windows.Thickness> xaml 'de belirtilmesi daha kolaydır çünkü bunlar öznitelik olarak belirtibilirler. Aşağıdaki örnek, bir için değer sağlamak üzere bir tür dönüştürme ve öznitelik söz dizimini kullanır <xref:System.Windows.FrameworkElement.Margin%2A> :
 
 [!code-xaml[XAMLOvwSupport#MarginTCE](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]
 
@@ -203,7 +203,7 @@ WPF uygulama programlamasında kullanılan en yaygın biçimlendirme uzantılar�
 > [!NOTE]
 > Ayrıca, türün kendisi parametresiz bir oluşturucuya sahip olmadığı için, tür dönüştürmenin bir alt sınıf eklemeden bu türe bir özelliği ayarlamaya yönelik tek ortak yol olduğu sınırlı sayıda nesne vardır. <xref:System.Windows.Input.Cursor> bunun bir örneğidir.
 
-Tür dönüştürmesi hakkında daha fazla bilgi için bkz. [TypeConverters ve xaml](../../framework/wpf/advanced/typeconverters-and-xaml.md).
+Tür dönüştürmesi hakkında daha fazla bilgi için bkz. [TypeConverters ve xaml](/dotnet/desktop/wpf/advanced/typeconverters-and-xaml).
 
 ## <a name="xaml-root-elements-and-xaml-namespaces"></a>XAML kök öğeleri ve XAML ad alanları
 
@@ -216,7 +216,7 @@ Kök öğe ayrıca özniteliklerini `xmlns` ve içerir `xmlns:x` . Bu öznitelik
 
 Bir `xmlns` NameScope 'un kullanım ve eşleme kapsamını tanımlamak için bu kullanımı, XML 1,0 belirtimiyle tutarlıdır. Xaml ad kapsamları yalnızca XML ad kapsamları 'den farklıdır, ancak xaml namescope yalnızca, ad çözümleme ve xaml ayrıştırmaya geldiğinde NameScope öğelerinin türler tarafından nasıl desteklendiği hakkında bir şeyi de gösterir.
 
-`xmlns`Öznitelikler, her xaml dosyasının kök öğesinde yalnızca kesinlikle gereklidir. `xmlns`tanımlar, kök öğenin tüm alt öğelerine uygulanır (Bu davranış, için XML 1,0 belirtimi ile tutarlıdır `xmlns` .) `xmlns` öznitelikleri kök altındaki diğer öğelerde de izin verilir ve tanımlayan öğenin tüm alt öğelerine uygulanır. Ancak XAML ad alanlarının sık tanım veya yeniden tanımlanması, okunması zor olan XAML biçimlendirme stiline neden olabilir.
+`xmlns`Öznitelikler, her xaml dosyasının kök öğesinde yalnızca kesinlikle gereklidir. `xmlns` tanımlar, kök öğenin tüm alt öğelerine uygulanır (Bu davranış, için XML 1,0 belirtimi ile tutarlıdır `xmlns` .) `xmlns` öznitelikleri kök altındaki diğer öğelerde de izin verilir ve tanımlayan öğenin tüm alt öğelerine uygulanır. Ancak XAML ad alanlarının sık tanım veya yeniden tanımlanması, okunması zor olan XAML biçimlendirme stiline neden olabilir.
 
 XAML işlemcisinin WPF uygulamasında WPF çekirdek derlemelerinin farkında olan bir altyapı bulunur. WPF çekirdek derlemelerinin, varsayılan XAML ad alanı için WPF eşlemelerini destekleyen türleri içermesi bilinmektedir. Bu, proje derleme dosyanızın ve WPF yapı ve proje sistemlerinin bir parçası olan yapılandırma aracılığıyla etkinleştirilir. Bu nedenle, varsayılan XAML ad alanını varsayılan olarak bildirmek, `xmlns` WPF derlemelerinden gelen xaml öğelerine başvurmak için gereklidir.
 
@@ -255,9 +255,9 @@ Kendi özel derlemeleriniz veya **PresentationCore**, **PresentationFramework** 
 </Page>
 ```
 
-XAML 'deki özel türler hakkında daha fazla bilgi için bkz. [WPF Için XAML ve özel sınıflar](../../framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).
+XAML 'deki özel türler hakkında daha fazla bilgi için bkz. [WPF Için XAML ve özel sınıflar](/dotnet/desktop/wpf/advanced/xaml-and-custom-classes-for-wpf).
 
-Derlemelerdeki XML ad alanları ve kod ad alanları hakkında daha fazla bilgi için bkz. [WPF XAML Için xaml ad alanları ve ad alanı eşlemesi](../../framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).
+Derlemelerdeki XML ad alanları ve kod ad alanları hakkında daha fazla bilgi için bkz. [WPF XAML Için xaml ad alanları ve ad alanı eşlemesi](/dotnet/desktop/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml).
 
 ## <a name="events-and-xaml-code-behind"></a>Olaylar ve XAML arka plan kodu
 
@@ -272,13 +272,13 @@ Derlemelerdeki XML ad alanları ve kod ad alanları hakkında daha fazla bilgi i
 
 Arka plan kod dosyasının CLR ad alanını kullandığını `ExampleNamespace` ve `ExamplePage` Bu ad alanı içinde kısmi bir sınıf olarak bildirdiğine dikkat edin. Bu, `x:Class` öğesinin öznitelik değerini paraleldir `ExampleNamespace` .`ExamplePage` Bu, biçimlendirme kökünde verilmiştir. WPF biçimlendirme derleyicisi, kök öğe türünden bir sınıf türeterek, derlenmiş XAML dosyaları için kısmi bir sınıf oluşturur. Aynı kısmi sınıfı da tanımlayan arka plan kodu sağladığınızda, elde edilen kod derlenen uygulamanın aynı ad alanı ve sınıfı içinde birleştirilir.
 
-WPF 'deki arka plan kod programlamaya yönelik gereksinimler hakkında daha fazla bilgi için bkz. [WPF 'de kod arkasındaki, olay işleyicisi ve kısmi sınıf gereksinimleri](../../framework/wpf/advanced/code-behind-and-xaml-in-wpf.md#code-behind-event-handler-and-partial-class-requirements-in-wpf).
+WPF 'deki arka plan kod programlamaya yönelik gereksinimler hakkında daha fazla bilgi için bkz. [WPF 'de kod arkasındaki, olay işleyicisi ve kısmi sınıf gereksinimleri](/dotnet/desktop/wpf/advanced/code-behind-and-xaml-in-wpf#code-behind-event-handler-and-partial-class-requirements-in-wpf).
 
-Ayrı bir arka plan kod dosyası oluşturmak istemiyorsanız, kodunuzu bir XAML dosyasında da satır içinde oluşturabilirsiniz. Ancak, satır içi kod önemli sınırlamalara sahip daha az yönlü bir tekniktir. Daha fazla bilgi için bkz. [WPF Içinde arka plan kodu ve xaml](../../framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).
+Ayrı bir arka plan kod dosyası oluşturmak istemiyorsanız, kodunuzu bir XAML dosyasında da satır içinde oluşturabilirsiniz. Ancak, satır içi kod önemli sınırlamalara sahip daha az yönlü bir tekniktir. Daha fazla bilgi için bkz. [WPF Içinde arka plan kodu ve xaml](/dotnet/desktop/wpf/advanced/code-behind-and-xaml-in-wpf).
 
 ### <a name="routed-events"></a>Yönlendirilmiş olaylar
 
-WPF için temel olan belirli bir olay özelliği, yönlendirilmiş bir olaydır. Yönlendirilmiş olaylar, öğe bir ağaç ilişkisiyle bağlandığı sürece, farklı bir öğe tarafından oluşturulan bir olayı işlemesini sağlar. Bir XAML özniteliğiyle olay işleme belirtirken, yönlendirilmiş olay, sınıf üyeleri tablosunda söz konusu olayı listelemeyen öğeler de dahil olmak üzere herhangi bir öğede listenilir ve işlenebilir. Bu, sahip sınıf adıyla olay adı özniteliği niteleyerek gerçekleştirilir. Örneğin, devam eden örnekteki üst öğe, öznitelik `StackPanel` `StackPanel`  /  `Button` <xref:System.Windows.Controls.Primitives.ButtonBase.Click> `Button.Click` `StackPanel` değeri olarak işleyici adınızla nesne öğesinde özniteliğini belirterek alt öğe düğmesinin olayı için bir işleyici kaydedebilir. Daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](../../framework/wpf/advanced/routed-events-overview.md).
+WPF için temel olan belirli bir olay özelliği, yönlendirilmiş bir olaydır. Yönlendirilmiş olaylar, öğe bir ağaç ilişkisiyle bağlandığı sürece, farklı bir öğe tarafından oluşturulan bir olayı işlemesini sağlar. Bir XAML özniteliğiyle olay işleme belirtirken, yönlendirilmiş olay, sınıf üyeleri tablosunda söz konusu olayı listelemeyen öğeler de dahil olmak üzere herhangi bir öğede listenilir ve işlenebilir. Bu, sahip sınıf adıyla olay adı özniteliği niteleyerek gerçekleştirilir. Örneğin, devam eden örnekteki üst öğe, öznitelik `StackPanel` `StackPanel`  /  `Button` <xref:System.Windows.Controls.Primitives.ButtonBase.Click> `Button.Click` `StackPanel` değeri olarak işleyici adınızla nesne öğesinde özniteliğini belirterek alt öğe düğmesinin olayı için bir işleyici kaydedebilir. Daha fazla bilgi için bkz. [yönlendirilmiş olaylara genel bakış](/dotnet/desktop/wpf/advanced/routed-events-overview).
 
 ## <a name="xaml-named-elements"></a>XAML adlandırılmış öğeleri
 
@@ -294,7 +294,7 @@ Aşağıdaki örnek <xref:System.Windows.FrameworkElement.Name%2A> bir öğesi �
 [!code-csharp[XAMLOvwSupport#NameCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml.cs#namecode)]
 [!code-vb[XAMLOvwSupport#NameCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#namecode)]
 
-Bir değişken gibi, bir örnek için XAML adı bir kapsam kavramıyla yönetilir, böylece adların öngörülebilir olan belirli bir kapsam içinde benzersiz olmasını zorunlu hale getirebilirsiniz. Bir sayfayı tanımlayan birincil biçimlendirme, XAML namescope sınırının bu sayfanın kök öğesi olduğu benzersiz bir XAML namescope olduğunu gösterir. Bununla birlikte, diğer biçimlendirme kaynakları, çalışma zamanında bir sayfayla etkileşime geçebilir (Stiller ve stiller içindeki şablonlar gibi) ve bu biçimlendirme kaynakları genellikle sayfanın XAML namescope 'a bağlanmayan kendi XAML nameslerini kullanır. `x:Name`Ve xaml namescopes hakkında daha fazla bilgi için bkz <xref:System.Windows.FrameworkElement.Name%2A> ., [X:Name YÖNERGESI](../xaml-services/xname-directive.md)veya [WPF xaml namescopes](../../framework/wpf/advanced/wpf-xaml-namescopes.md).
+Bir değişken gibi, bir örnek için XAML adı bir kapsam kavramıyla yönetilir, böylece adların öngörülebilir olan belirli bir kapsam içinde benzersiz olmasını zorunlu hale getirebilirsiniz. Bir sayfayı tanımlayan birincil biçimlendirme, XAML namescope sınırının bu sayfanın kök öğesi olduğu benzersiz bir XAML namescope olduğunu gösterir. Bununla birlikte, diğer biçimlendirme kaynakları, çalışma zamanında bir sayfayla etkileşime geçebilir (Stiller ve stiller içindeki şablonlar gibi) ve bu biçimlendirme kaynakları genellikle sayfanın XAML namescope 'a bağlanmayan kendi XAML nameslerini kullanır. `x:Name`Ve xaml namescopes hakkında daha fazla bilgi için bkz <xref:System.Windows.FrameworkElement.Name%2A> ., [X:Name YÖNERGESI](../xaml-services/xname-directive.md)veya [WPF xaml namescopes](/dotnet/desktop/wpf/advanced/wpf-xaml-namescopes).
 
 ## <a name="attached-properties-and-attached-events"></a>Ekli Özellikler ve ekli olaylar
 
@@ -302,7 +302,7 @@ XAML, özelliğin veya olayın, üzerinde ayarlandığı öğe için tür tanım
 
 XAML 'deki Ekli özellikler genellikle öznitelik söz dizimi aracılığıyla kullanılır. Öznitelik sözdiziminde, formda iliştirilmiş bir özellik belirtirsiniz `ownerType.propertyName` .
 
-Bu, bir özellik öğesi kullanımına benzer, ancak bu durumda `ownerType` belirttiğiniz her zaman, iliştirilmiş özelliğin ayarlandığı nesne öğesinden farklı bir tür. `ownerType`, iliştirilmiş özellik değerini almak veya ayarlamak için XAML işlemcisi tarafından gerekli olan erişimci yöntemlerini sağlayan türdür.
+Bu, bir özellik öğesi kullanımına benzer, ancak bu durumda `ownerType` belirttiğiniz her zaman, iliştirilmiş özelliğin ayarlandığı nesne öğesinden farklı bir tür. `ownerType` , iliştirilmiş özellik değerini almak veya ayarlamak için XAML işlemcisi tarafından gerekli olan erişimci yöntemlerini sağlayan türdür.
 
 Ekli Özellikler için en yaygın senaryo, alt öğelerin bir özellik değerini üst öğelerine raporlamalarını olanaklı hale etkinleştirmektir.
 
@@ -310,13 +310,13 @@ Aşağıdaki örnek, <xref:System.Windows.Controls.DockPanel.Dock%2A?displayProp
 
 [!code-xaml[XAMLOvwSupport#DockAP](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#dockap)]
 
-WPF 'de, eklenen özelliklerin çoğu veya tümü bağımlılık özellikleri olarak da uygulanır. Daha fazla bilgi için bkz. [ekli özelliklere genel bakış](../../framework/wpf/advanced/attached-properties-overview.md).
+WPF 'de, eklenen özelliklerin çoğu veya tümü bağımlılık özellikleri olarak da uygulanır. Daha fazla bilgi için bkz. [ekli özelliklere genel bakış](/dotnet/desktop/wpf/advanced/attached-properties-overview).
 
-Ekli olaylar `ownerType.eventName` , öznitelik söz dizimini benzer bir biçimde kullanır. Eklenmemiş olaylara benzer şekilde, XAML 'de ekli bir olayın öznitelik değeri, olay öğesinde işlendiği zaman çağrılan işleyici yönteminin adını belirtir. WPF XAML 'de ekli olay kullanımları daha az yaygındır. Daha fazla bilgi için bkz. [ekli olaylara genel bakış](../../framework/wpf/advanced/attached-events-overview.md).
+Ekli olaylar `ownerType.eventName` , öznitelik söz dizimini benzer bir biçimde kullanır. Eklenmemiş olaylara benzer şekilde, XAML 'de ekli bir olayın öznitelik değeri, olay öğesinde işlendiği zaman çağrılan işleyici yönteminin adını belirtir. WPF XAML 'de ekli olay kullanımları daha az yaygındır. Daha fazla bilgi için bkz. [ekli olaylara genel bakış](/dotnet/desktop/wpf/advanced/attached-events-overview).
 
 ## <a name="base-types-and-xaml"></a>Temel türler ve XAML
 
-Temel alınan WPF XAML ve XAML ad alanı, XAML için biçimlendirme öğelerine ek olarak CLR nesnelerine karşılık gelen türlerin bir koleksiyonudur. Ancak, tüm sınıflar öğelerle eşleştirilemez. <xref:System.Windows.Controls.Primitives.ButtonBase>, Ve gibi soyut olmayan taban sınıflar, CLR nesneleri modelinde devralma için kullanılır. Soyut olanlar dahil temel sınıflar, XAML geliştirmesi için hala önemlidir çünkü somut XAML öğelerinin her biri hiyerarşideki bazı temel sınıflardan üyeleri devralır. Genellikle bu Üyeler öğe üzerinde öznitelik olarak ayarlanabilir özellikleri veya işlenebilen olayları içerir. <xref:System.Windows.FrameworkElement>WPF 'in, WPF çerçeve düzeyindeki somut temel kullanıcı arabirimi sınıfıdır. Kullanıcı arabirimi tasarlarken, hepsi ' den türetilen çeşitli şekil, panel, dekoratörü veya denetim sınıflarını kullanırsınız <xref:System.Windows.FrameworkElement> . İle ilgili temel sınıf, <xref:System.Windows.FrameworkContentElement> Içindeki API 'leri kasıtlı olarak yansıtan API 'leri kullanarak bir akış düzeni sunumunda iyi çalışan belge yönelimli öğeleri destekler <xref:System.Windows.FrameworkElement> . Öğe düzeyinde özniteliklerin birleşimi ve bir CLR nesne modeli, belirli XAML öğesi ve temel alınan türü ne olursa olsun, en somut XAML öğelerine ayarlanabilir ortak özellikler kümesi sağlar.
+Temel alınan WPF XAML ve XAML ad alanı, XAML için biçimlendirme öğelerine ek olarak CLR nesnelerine karşılık gelen türlerin bir koleksiyonudur. Ancak, tüm sınıflar öğelerle eşleştirilemez. <xref:System.Windows.Controls.Primitives.ButtonBase>, Ve gibi soyut olmayan taban sınıflar, CLR nesneleri modelinde devralma için kullanılır. Soyut olanlar dahil temel sınıflar, XAML geliştirmesi için hala önemlidir çünkü somut XAML öğelerinin her biri hiyerarşideki bazı temel sınıflardan üyeleri devralır. Genellikle bu Üyeler öğe üzerinde öznitelik olarak ayarlanabilir özellikleri veya işlenebilen olayları içerir. <xref:System.Windows.FrameworkElement> WPF 'in, WPF çerçeve düzeyindeki somut temel kullanıcı arabirimi sınıfıdır. Kullanıcı arabirimi tasarlarken, hepsi ' den türetilen çeşitli şekil, panel, dekoratörü veya denetim sınıflarını kullanırsınız <xref:System.Windows.FrameworkElement> . İle ilgili temel sınıf, <xref:System.Windows.FrameworkContentElement> Içindeki API 'leri kasıtlı olarak yansıtan API 'leri kullanarak bir akış düzeni sunumunda iyi çalışan belge yönelimli öğeleri destekler <xref:System.Windows.FrameworkElement> . Öğe düzeyinde özniteliklerin birleşimi ve bir CLR nesne modeli, belirli XAML öğesi ve temel alınan türü ne olursa olsun, en somut XAML öğelerine ayarlanabilir ortak özellikler kümesi sağlar.
 
 ## <a name="xaml-security"></a>XAML güvenliği
 
@@ -326,7 +326,7 @@ XAML doğrudan nesne örneğini oluşturma ve yürütmeyi temsil eden bir biçim
 
 **Bu bölüm yalnızca .NET Framework için geçerlidir. .NET Core için WPF, CA 'ları desteklemez. Daha fazla bilgi için bkz. [kod erişimi güvenlik farklılıkları](../migration/differences-from-net-framework.md#code-access-security).**
 
-.NET Framework için WPF, kod erişim güvenliğini (CAS) destekler. Bu, Internet bölgesinde çalışan WPF içeriğinin yürütme izinlerinin azaldığı anlamına gelir. "Gevşek XAML" (bir XAML Görüntüleyicisi tarafından yükleme sırasında yorumlanan derlenmiş XAML sayfaları) ve XBAP genellikle bu Internet bölgesinde çalışır ve aynı izin kümesini kullanır. Ancak, tam güvenilir bir uygulamaya yüklenen XAML, barındırma uygulaması tarafından sistem kaynaklarına aynı erişime sahiptir. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](../../framework/wpf/wpf-partial-trust-security.md).
+.NET Framework için WPF, kod erişim güvenliğini (CAS) destekler. Bu, Internet bölgesinde çalışan WPF içeriğinin yürütme izinlerinin azaldığı anlamına gelir. "Gevşek XAML" (bir XAML Görüntüleyicisi tarafından yükleme sırasında yorumlanan derlenmiş XAML sayfaları) ve XBAP genellikle bu Internet bölgesinde çalışır ve aynı izin kümesini kullanır. Ancak, tam güvenilir bir uygulamaya yüklenen XAML, barındırma uygulaması tarafından sistem kaynaklarına aynı erişime sahiptir. Daha fazla bilgi için bkz. [WPF Kısmi güven güvenliği](/dotnet/desktop/wpf/wpf-partial-trust-security).
 
 ## <a name="loading-xaml-from-code"></a>Koddan XAML yükleme
 
@@ -334,9 +334,9 @@ XAML, tüm Kullanıcı arabirimini tanımlamak için kullanılabilir, ancak baze
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Ayrıntılı XAML Sözdizimi](../../framework/wpf/advanced/xaml-syntax-in-detail.md)
-- [WPF için XAML ve Özel Sınıflar](../../framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Ayrıntılı XAML Sözdizimi](/dotnet/desktop/wpf/advanced/xaml-syntax-in-detail)
+- [WPF için XAML ve Özel Sınıflar](/dotnet/desktop/wpf/advanced/xaml-and-custom-classes-for-wpf)
 - [XAML Ad Alanı (x:) Dil Özellikleri](../xaml-services/namespace-language-features.md)
-- [WPF XAML Uzantıları](../../framework/wpf/advanced/wpf-xaml-extensions.md)
-- [Temel Öğelere Genel Bakış](../../framework/wpf/advanced/base-elements-overview.md)
-- [WPF İçinde Ağaçlar](../../framework/wpf/advanced/trees-in-wpf.md)
+- [WPF XAML Uzantıları](/dotnet/desktop/wpf/advanced/wpf-xaml-extensions)
+- [Temel Öğelere Genel Bakış](/dotnet/desktop/wpf/advanced/base-elements-overview)
+- [WPF İçinde Ağaçlar](/dotnet/desktop/wpf/advanced/trees-in-wpf)

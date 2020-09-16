@@ -15,20 +15,20 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 8cf0ff323e9bf7305e3d9cbb6dabd8f685059e97
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 83799b0f4c6d6503825ce271fed4bffa7a9775b9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447114"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545709"
 ---
 # <a name="handling-and-raising-events"></a>Olayları işleme ve oluşturma
 
 .NET 'teki olaylar, temsilci modelini temel alır. Temsilci modeli, bir abonenin ile kaydolmalarını ve sağlayıcıya bildirim almasını sağlayan [gözlemci tasarım modelini](observer-design-pattern.md)izler. Olay gönderici bir olayın gerçekleştiğini belirten bir bildirim gönderir ve olay alıcısı bu bildirimi alır ve ona bir yanıt tanımlar. Bu makalede temsilci modelinin önemli bileşenleri, uygulamalardaki olayların nasıl kullanılacağı ve kodunuzda olayların nasıl uygulanacağı açıklanmaktadır.  
   
- Windows 8. x Mağaza uygulamalarında olayları işleme hakkında daha fazla bilgi için bkz. [Olaylar ve yönlendirilmiş olaylara genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10)).  
+ Windows 8. x Mağaza uygulamalarında olayları işleme hakkında daha fazla bilgi için bkz. [Olaylar ve yönlendirilmiş olaylara genel bakış](/previous-versions/windows/apps/hh758286(v=win.10)).  
   
-## <a name="events"></a>Olaylar
+## <a name="events"></a>Ekinlikler
 
 Bir olay, bir eylem oluşumuna işaret etmek için bir nesne tarafından gönderilen iletidir. Eyleme, düğme tıklamasıyla veya bir özelliğin değerini değiştirme gibi başka bir program mantığının neden olabilir. Olayı oluşturan nesneye *olay gönderici*denir. Olay gönderici, hangi nesne veya yöntemin, oluşturduğu olayları alacağını (işleyeceğimizi) bilmez. Olay, genellikle olay göndericisinin bir üyesidir; Örneğin, <xref:System.Web.UI.WebControls.Button.Click> olayı sınıfının bir üyesidir <xref:System.Web.UI.WebControls.Button> ve <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> olay, arabirimi uygulayan sınıfın bir üyesidir <xref:System.ComponentModel.INotifyPropertyChanged> .  
   
@@ -60,7 +60,7 @@ Temsilciler [çok noktaya yayın](xref:System.MulticastDelegate), yani birden ç
 
 Bir olayla ilişkili veriler bir olay veri sınıfı aracılığıyla sağlanalabilir. .NET, uygulamalarınızda kullanabileceğiniz pek çok olay veri sınıfı sağlar. Örneğin, sınıfı, <xref:System.IO.Ports.SerialDataReceivedEventArgs> olay için olay veri sınıfıdır <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> . .NET, tüm olay veri sınıflarının ile sonundaki bir adlandırma düzeniyle uyar `EventArgs` . Olayın temsilcisine bakarak bir olayla hangi olay verileri sınıfının ilişkilendirildiğini belirlersiniz. Örneğin, <xref:System.IO.Ports.SerialDataReceivedEventHandler> temsilci <xref:System.IO.Ports.SerialDataReceivedEventArgs> sınıfını parametrelerinden biri olarak içerir.  
   
-<xref:System.EventArgs>Sınıfı, tüm olay veri sınıflarının temel türüdür. <xref:System.EventArgs>Ayrıca, bir olay kendisiyle ilişkilendirilmiş herhangi bir veri içermiyorsa kullandığınız sınıftır. Yalnızca bir şeyin meydana geldiğini ve herhangi bir veri geçmesini gerektirmeyen diğer sınıflara bildirimde bulunan bir olay oluşturduğunuzda, <xref:System.EventArgs> temsilciyi temsilciye ikinci parametre olarak ekleyin. <xref:System.EventArgs.Empty?displayProperty=nameWithType>Veri sağlanmadıysa değeri geçirebilirsiniz. <xref:System.EventHandler>Temsilci, <xref:System.EventArgs> sınıfını bir parametre olarak içerir.  
+<xref:System.EventArgs>Sınıfı, tüm olay veri sınıflarının temel türüdür. <xref:System.EventArgs> Ayrıca, bir olay kendisiyle ilişkilendirilmiş herhangi bir veri içermiyorsa kullandığınız sınıftır. Yalnızca bir şeyin meydana geldiğini ve herhangi bir veri geçmesini gerektirmeyen diğer sınıflara bildirimde bulunan bir olay oluşturduğunuzda, <xref:System.EventArgs> temsilciyi temsilciye ikinci parametre olarak ekleyin. <xref:System.EventArgs.Empty?displayProperty=nameWithType>Veri sağlanmadıysa değeri geçirebilirsiniz. <xref:System.EventHandler>Temsilci, <xref:System.EventArgs> sınıfını bir parametre olarak içerir.  
   
 Özelleştirilmiş bir olay veri sınıfı oluşturmak istediğinizde, öğesinden türetilen bir sınıf oluşturun <xref:System.EventArgs> ve ardından olayla ilgili verileri geçirmek için gereken tüm üyeleri sağlayın. Genellikle, .NET ile aynı adlandırma modelini kullanmanız ve olay veri sınıfı adınızı ile sonlandırmalısınız `EventArgs` .  
   

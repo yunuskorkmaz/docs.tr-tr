@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 5263e042bafdb886b313f05751c29de0f5715211
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ad25a79add84e43ba0a8e71a0f48c5ddf65108bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622204"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554846"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Nasıl yapılır: Kayıtsız Etkinleştirme için .NET Framework Tabanlı COM Bileşenlerini Yapılandırma
 .NET Framework tabanlı bileşenlere yönelik kayıt için ücretsiz etkinleştirme, COM bileşenleri için olduğundan biraz daha karmaşıktır. Kurulum için iki bildirim gerekir:  
@@ -176,6 +176,6 @@ Uygulama bildirimini COM uygulamasıyla aynı dizine yükleyebilirsiniz. Alterna
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Kayıtsız COM Birlikte Çalışma](registration-free-com-interop.md)
-- [Kayıtsız COM birlikte çalışma gereksinimleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
-- [Kayıt-ücretsiz etkinleştirme için COM bileşenlerini yapılandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
-- [Kayıt-ücretsiz etkinleştirmesi. NET tabanlı bileşenler: Izlenecek yol](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))
+- [Kayıtsız COM birlikte çalışma gereksinimleri](/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Kayıt-ücretsiz etkinleştirme için COM bileşenlerini yapılandırma](/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
+- [Kayıt-ücretsiz etkinleştirmesi. NET tabanlı bileşenler: Izlenecek yol](/previous-versions/dotnet/articles/ms973915(v=msdn.10))

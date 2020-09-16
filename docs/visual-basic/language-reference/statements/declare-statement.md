@@ -27,18 +27,18 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 021805508a8a053ccc8fab6f1013109bece4b6f2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8a5802583db53bfd0444ec9df0de9a0b9346d424
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404777"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90545525"
 ---
 # <a name="declare-statement"></a>Declare Deyimi
 
 Dış dosyada uygulanan bir yordama başvuru bildirir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```vb
 [ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _
@@ -52,7 +52,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 
 ## <a name="parts"></a>Bölümler
 
-|Terim|Tanım|
+|Süre|Tanım|
 |---|---|
 |`attributelist`|İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).|
 |`accessmodifier`|İsteğe bağlı. Aşağıdakilerden biri olabilir:<br /><br /> -   [Geneldir](../modifiers/public.md)<br />-   [Korunamadı](../modifiers/protected.md)<br />-   [Dost](../modifiers/friend.md)<br />-   [Özelleştirme](../modifiers/private.md)<br />- [Korumalı arkadaş](../modifiers/protected-friend.md)<br />- [Özel korumalı](../modifiers/private-protected.md)<br /><br /> [Visual Basic erişim düzeylerine](../../programming-guide/language-features/declared-elements/access-levels.md)bakın.|
@@ -120,7 +120,7 @@ Dış başvurular varsayılan olarak [genel](../modifiers/public.md) erişime sa
 
 - **Karakter kümeleri.** `charsetmodifier`Dış yordamı çağırdığında Visual Basic dizelerin nasıl sıralaması gerektiğini belirtebilirsiniz. `Ansi`Değiştirici, tüm DIZELERI ANSI değerlerine göre sıralamak için Visual Basic yönlendirir ve `Unicode` değiştirici onu tüm dizeleri Unicode değerlerine göre sıralamak için yönlendirir. `Auto`Değiştirici, dış başvuruya göre .NET Framework kurallarına göre veya belirtilmişse dizeleri sıralama Visual Basic yönlendirir `name` `aliasname` . Varsayılan değer: `Ansi`.
 
-  `charsetmodifier`Ayrıca, Visual Basic dış yordamın dış dosyası içinde nasıl araması gerektiğini de belirtir. `Ansi``Unicode`Ayrıca, arama sırasında adını değiştirmeden bunu aramak için doğrudan Visual Basic. `Auto`çalışma zamanı platformunun temel karakter kümesini belirlemede Visual Basic yönlendirir ve büyük olasılıkla dış yordam adını şu şekilde değiştirebilir:
+  `charsetmodifier` Ayrıca, Visual Basic dış yordamın dış dosyası içinde nasıl araması gerektiğini de belirtir. `Ansi``Unicode`Ayrıca, arama sırasında adını değiştirmeden bunu aramak için doğrudan Visual Basic. `Auto` çalışma zamanı platformunun temel karakter kümesini belirlemede Visual Basic yönlendirir ve büyük olasılıkla dış yordam adını şu şekilde değiştirebilir:
 
   - Windows 95, Windows 98 veya Windows Millennium Edition gibi bir ANSI platformunda, önce ad değişikliğine sahip olmayan dış yordama bakmanız gerekir. Başarısız olursa, dış yordam adının sonuna "A" ekleyin ve tekrar arama yapın.
 
@@ -129,7 +129,7 @@ Dış başvurular varsayılan olarak [genel](../modifiers/public.md) erişime sa
 - **Mekanizmadır.** Visual Basic, dış yordamları çözümlemek ve erişmek için .NET Framework *Platform çağırma* (PInvoke) mekanizmasını kullanır. `Declare`Ve <xref:System.Runtime.InteropServices.DllImportAttribute> sınıfı bu mekanizmayı otomatik olarak kullanır ve herhangi bir PInvoke bilgisine ihtiyacınız yoktur. Daha fazla bilgi için bkz. [Izlenecek yol: Windows API 'Leri çağırma](../../programming-guide/com-interop/walkthrough-calling-windows-apis.md).
 
 > [!IMPORTANT]
-> Dış yordam ortak dil çalışma zamanının (CLR) dışında çalışırsa, bu, yönetilmeyen bir *koddur*. Örneğin, bir Windows API işlevi veya bir COM yöntemi gibi bir yordamı çağırdığınızda, uygulamanızı güvenlik risklerine maruz kalabilirsiniz. Daha fazla bilgi için bkz. [yönetilmeyen kod Için güvenli kodlama yönergeleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code).
+> Dış yordam ortak dil çalışma zamanının (CLR) dışında çalışırsa, bu, yönetilmeyen bir *koddur*. Örneğin, bir Windows API işlevi veya bir COM yöntemi gibi bir yordamı çağırdığınızda, uygulamanızı güvenlik risklerine maruz kalabilirsiniz. Daha fazla bilgi için bkz. [yönetilmeyen kod Için güvenli kodlama yönergeleri](/previous-versions/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code).
 
 ## <a name="example"></a>Örnek
 

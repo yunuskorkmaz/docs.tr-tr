@@ -2,12 +2,12 @@
 title: Eş Çözücüler
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: a1f5bcfb721ccbc98856e81198a3f7e0b45abe93
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ef72f44a7dd7f3e8f3108e4f77dcdbdf8ef1b1b7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600782"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554638"
 ---
 # <a name="peer-resolvers"></a>Eş Çözücüler
 Bir ağ bağlantısı için bir eş düğüm, diğer düğümlerin IP adreslerini gerektirir. IP adresleri bir çözümleyici hizmetiyle iletişim kurarak elde edilir ve bu da ağ KIMLIĞINI alır ve bu ağ KIMLIĞIYLE kaydedilen düğümlere karşılık gelen adreslerin bir listesini döndürür. Çözümleyici, bir kayıtlı adres listesini tutar ve bu, her bir düğümün hizmet ile kaydolmasına sahip tarafından oluşturduğu bir kayıt oluşturur.  
@@ -32,7 +32,7 @@ Bir ağ bağlantısı için bir eş düğüm, diğer düğümlerin IP adreslerin
 > [!NOTE]
 > Özel bir çözümleyici ile yerel ve ımprompnetworks ağlarını kullanırken, bağlantı yerel veya impromptu ağlarını kullanan veya destekleyen uygulamaların, bağlanırken kullanılacak tek bir bağlantı yerel adresi seçen mantığı içermesi önemle tavsiye edilir. Bu, birden çok bağlantı yerel adresi olan bilgisayarlardan kaynaklanan karışıklıklara engel olur. Buna uygun olarak, eş kanal her seferinde yalnızca tek bir bağlantı yerel adresi kullanılmasını destekler. Bu adresi `ListenIpAddress` üzerinde özelliği ile belirtebilirsiniz <xref:System.ServiceModel.NetPeerTcpBinding> .  
   
- Özel bir çözümleyici 'nin nasıl uygulanacağını gösteren bir gösterim için bkz. [eş kanal özel eş çözümleyici](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
+ Özel bir çözümleyici 'nin nasıl uygulanacağını gösteren bir gösterim için bkz. [eş kanal özel eş çözümleyici](/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [CustomPeerResolverService İçinde: İstemci Kayıtları](inside-the-custompeerresolverservice-client-registrations.md)  

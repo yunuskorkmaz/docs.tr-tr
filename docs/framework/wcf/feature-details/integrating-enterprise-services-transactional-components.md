@@ -2,16 +2,16 @@
 title: Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 1c4fabfadb113c79b216fa10ff80b551ba0f9716
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3fd8876de53be30f18e4fa9d7f4a1cc07ab5e220
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596857"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554110"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Kurumsal Hizmetler İşlemsel Bileşenlerini Tümleştirme
 
-Windows Communication Foundation (WCF), Enterprise Services ile tümleştirme için otomatik bir mekanizma sağlar (bkz. [com+ uygulamalarıyla tümleştirme](integrating-with-com-plus-applications.md)). Ancak, kurumsal hizmetlerde barındırılan işlemsel bileşenleri dahili olarak kullanan hizmetler geliştirme esnekliği de isteyebilirsiniz. WCF Işlemler özelliği altyapıda oluşturulduğu için, Enterprise Services 'ı <xref:System.Transactions> WCF ile tümleştirme işlemi, Kurumsal Hizmetler <xref:System.Transactions> [ve com+ Işlemleri ile birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))bölümünde açıklandığı gibi, ve Enterprise Services arasında birlikte çalışabilirlik belirtme ile aynıdır.  
+Windows Communication Foundation (WCF), Enterprise Services ile tümleştirme için otomatik bir mekanizma sağlar (bkz. [com+ uygulamalarıyla tümleştirme](integrating-with-com-plus-applications.md)). Ancak, kurumsal hizmetlerde barındırılan işlemsel bileşenleri dahili olarak kullanan hizmetler geliştirme esnekliği de isteyebilirsiniz. WCF Işlemler özelliği altyapıda oluşturulduğu için, Enterprise Services 'ı <xref:System.Transactions> WCF ile tümleştirme işlemi, Kurumsal Hizmetler <xref:System.Transactions> [ve com+ Işlemleri ile birlikte çalışabilirlik](/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))bölümünde açıklandığı gibi, ve Enterprise Services arasında birlikte çalışabilirlik belirtme ile aynıdır.  
   
  Gelen akışlı işlem ve COM+ bağlam işlemi arasında istediğiniz birlikte çalışabilirlik düzeyini sağlamak için, hizmet uygulamasının bir <xref:System.Transactions.TransactionScope> örnek oluşturması ve Numaralandırmadaki uygun değeri kullanması gerekir <xref:System.Transactions.EnterpriseServicesInteropOption> .  
   

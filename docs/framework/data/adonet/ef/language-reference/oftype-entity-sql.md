@@ -2,36 +2,36 @@
 title: OFTYPE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: f1dd5ba92c7b1eaf7117c9732a78e04e5d5a317a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 375fe9ce52ae290c175e42276b6b526766f6699c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319450"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90547518"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE (Entity SQL)
 Belirli türde olan bir sorgu ifadesinden bir nesne koleksiyonu döndürür.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```sql  
 OFTYPE ( expression, [ONLY] test_type )  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `expression`  
  Bir nesne koleksiyonu döndüren geçerli bir sorgu ifadesi.  
   
  `test_type`  
- @No__t-0 tarafından döndürülen her bir nesneyi test etmek için tür. Tür bir ad alanı tarafından nitelenmelidir.  
+ Tarafından döndürülen her nesnenin test edilecek tür `expression` . Tür bir ad alanı tarafından nitelenmelidir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- @No__t-0 türünde bir nesne koleksiyonu veya bir temel tür ya da `test_type` türetilmiş türü. YALNıZCA belirtilmişse, yalnızca `test_type` veya boş bir koleksiyonun örnekleri döndürülür.  
+ Türünde bir nesne koleksiyonu `test_type` veya temel tür ya da türetilmiş tür `test_type` . YALNıZCA belirtilmişse, yalnızca `test_type` veya boş bir koleksiyonun örnekleri döndürülür.  
   
 ## <a name="remarks"></a>Açıklamalar  
- @No__t-0 ifadesi, bir koleksiyonun her öğesine karşı bir tür testi gerçekleştirmek için verilen bir tür ifadesini belirtir.  @No__t-0 ifadesi, yalnızca bu tür veya alt türü ile eşdeğer olan öğeleri içeren belirtilen türde yeni bir koleksiyon oluşturur.  
+ Bir `OFTYPE` ifade, bir koleksiyonun her öğesine karşı bir tür testi gerçekleştirmek için verilen bir tür ifadesini belirtir.  `OFTYPE`İfade, yalnızca bu tür veya alt türü ile eşdeğer olan öğeleri içeren belirtilen türde yeni bir koleksiyon oluşturur.  
   
- @No__t-0 ifadesi aşağıdaki sorgu ifadesinin kısaltmasıdır:  
+ `OFTYPE`İfade aşağıdaki sorgu ifadesinin kısaltmasıdır:  
   
 ```sql  
 select value treat(t as T) from ts as t where t is of (T)  
@@ -51,7 +51,7 @@ OfType(executives, NamespaceName.Manager)
   
  Tüm Yöneticiler yöneticilerden dolayı, sonuçta elde edilen koleksiyon tüm özgün yöneticileri içerir, ancak koleksiyon artık bir Yöneticiler koleksiyonu olarak türdedir.  
   
- Aşağıdaki tabloda bazı desenler üzerinde `OFTYPE` işlecinin davranışı gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
+ Aşağıdaki tablo, `OFTYPE` bazı desenlerdeki işlecin davranışını gösterir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
   
 |Desen|Davranış|  
 |-------------|--------------|  
@@ -60,7 +60,7 @@ OfType(executives, NamespaceName.Manager)
 |OFTYPE (koleksiyon (RowType), RowType)|Oluşturur|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgusu, bir kurs nesneleri koleksiyonundan Onsitekurs nesnelerinin bir koleksiyonunu döndürmek için OFTYPE işlecini kullanır. Sorgu, [okul modelini](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir kurs nesneleri koleksiyonundan Onsitekurs nesnelerinin bir koleksiyonunu döndürmek IÇIN OFTYPE işlecini kullanır. Sorgu, [okul modelini](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
   
  [!code-sql[DP EntityServices Concepts#OFTYPE](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#oftype)]  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 058163c96bba036c3183695bf986b4d0424271ac
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: aed56be359f094db483ab1d012bd77a1096433b6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595225"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553772"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Anonim İstemci ile İleti Güvenliği
 
@@ -20,10 +20,10 @@ Aşağıdaki senaryoda, Windows Communication Foundation (WCF) ileti güvenliği
 
 ![Anonim bir istemciyle ileti güvenliği](media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
-|Özellik|Açıklama|
+|Özellik|Description|
 |--------------------|-----------------|
 |Güvenlik modu|İleti|
-|Birlikte çalışabilirlik|Yalnızca WCF|
+|Birlikte Çalışabilirlik|Yalnızca WCF|
 |Kimlik doğrulaması (sunucu)|İlk anlaşma sunucu kimlik doğrulaması gerektirir, ancak istemci kimlik doğrulaması gerektirmez|
 |Kimlik doğrulaması (Istemci)|Yok|
 |Bütünlük|Evet, paylaşılan güvenlik bağlamını kullanma|
@@ -32,7 +32,7 @@ Aşağıdaki senaryoda, Windows Communication Foundation (WCF) ileti güvenliği
 
 ## <a name="service"></a>Hizmet
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
 
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.
 
@@ -90,7 +90,7 @@ Aşağıdaki yapılandırma kod yerine kullanılabilir. Hizmet davranışı öğ
 
 ## <a name="client"></a>İstemci
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
 
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).
 
@@ -144,4 +144,4 @@ Aşağıdaki kod istemcisini yapılandırır.
 - [Dağıtılan Uygulama Güvenliği](distributed-application-security.md)
 - [İleti Güvenliği Anonim](../samples/message-security-anonymous.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](service-identity-and-authentication.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

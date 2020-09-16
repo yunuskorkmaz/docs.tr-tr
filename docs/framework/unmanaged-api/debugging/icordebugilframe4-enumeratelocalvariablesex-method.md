@@ -12,19 +12,19 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: aef28af3eff6aba03003f156b9226b61a8e72d5b
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3149318a1dc20c96bccc9b81347192bfa2e4bfdf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83213757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554833"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx Yöntemi
 [.NET Framework 4.5.2 ve sonraki sürümlerde desteklenir]  
   
  Çerçevede yerel değişken için bir Numaralandırıcı alır ve isteğe bağlı olarak profil oluşturucu yeniden JIT araçlarına eklenen değişkenleri içerir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp
 HRESULT EnumerateLocalVariablesEx(  
@@ -58,4 +58,4 @@ HRESULT EnumerateLocalVariablesEx(
 
 - [ICorDebugILFrame4 Arabirimi](icordebugilframe4-interface.md)
 - [Hata Ayıklama Arabirimleri](debugging-interfaces.md)
-- [ReJIT: nasıl yapılır Kılavuzu](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT: nasıl yapılır Kılavuzu](/archive/blogs/davbr/rejit-a-how-to-guide)

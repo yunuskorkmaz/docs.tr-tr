@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 06/03/2020
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: fcd325d518b276ccb042f3702db978e9189715b8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 89fc5169eee539aa857a9be03c82bf084fe4b60d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85326032"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554442"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI kullanarak yaklaşımı çözümleme
 
@@ -52,7 +52,7 @@ Oluşturulan C# kod projelerini Visual Studio 'dan veya `dotnet run` (.NET Core 
 
 2. `yelp_labelled.txt`Dosyayı daha önce oluşturduğunuz herhangi bir klasöre (örneğin,) kopyalayın `/cli-test` .
 
-3. Tercih ettiğiniz komut istemi ' ni açın ve veri kümesi dosyasını kopyaladığınız klasöre gidin. Örneğin:
+3. Tercih ettiğiniz komut istemi ' ni açın ve veri kümesi dosyasını kopyaladığınız klasöre gidin. Örnek:
 
     ```console
     cd /cli-test
@@ -199,7 +199,7 @@ Nesne iş parçacığı açısından güvenli olmadığından, ikinci nesne içi
 
 Ancak, bu blog gönderisinden açıklanamayan şeyler sizin için çok daha kolay. Sizin için daha basit bir yaklaşımda çalıştık ve uygulamayı uygulama ve hizmetASP.NET Core lerinize uygulama dı Hizmetleri 'ne (bağımlılık ekleme Hizmetleri) kaydederek ve sonra doğrudan kodunuzda kullanarak kolayca kullanabileceğiniz iyi bir **' .NET Core Integration Package '** oluşturdunuz. Şunları yapmak için aşağıdaki öğreticiyi ve örneğe bakın:
 
-- [Öğretici: ML.NET modellerini ölçeklenebilir ASP.NET Core Web Apps ve WebAPIs üzerinde çalıştırma](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Öğretici: ML.NET modellerini ölçeklenebilir ASP.NET Core Web Apps ve WebAPIs üzerinde çalıştırma](../how-to-guides/serve-model-web-api-ml-net.md)
 - [Örnek: ASP.NET Core WebAPI üzerinde ölçeklenebilir ML.NET modeli](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
 ## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>"En iyi kalite" modelini eğitmek için kullanılan oluşturulan C# kodunu keşfet
@@ -226,7 +226,7 @@ Bu öğreticide, şunların nasıl yapıldığını öğrendiniz:
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ML.NET CLı ile model eğitimi otomatikleştirin](../automate-training-with-cli.md)
-- [Öğretici: ML.NET modellerini ölçeklenebilir ASP.NET Core Web Apps ve WebAPIs üzerinde çalıştırma](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [Öğretici: ML.NET modellerini ölçeklenebilir ASP.NET Core Web Apps ve WebAPIs üzerinde çalıştırma](../how-to-guides/serve-model-web-api-ml-net.md)
 - [Örnek: ASP.NET Core WebAPI üzerinde ölçeklenebilir ML.NET modeli](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 - [ML.NET CLı otomatik eğitme komut başvuru kılavuzu](../reference/ml-net-cli-reference.md)
 - [ML.NET CLı 'de telemetri](../resources/ml-net-cli-telemetry.md)

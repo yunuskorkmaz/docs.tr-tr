@@ -2,12 +2,12 @@
 title: <certificate> Öğesi
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: e28e7d16073a56f3b6126439644bfff86c9af18b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c5fd156904ed30035991a8391c8f975da2a97ea7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400548"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554377"
 ---
 # <a name="certificate-element"></a>\<certificate> Öğesi
 Eşler arası istemciler için ileti imzalama ve şifreleme için kullanılacak bir X. 509.952 sertifikası belirtir.  
@@ -21,7 +21,7 @@ Eşler arası istemciler için ileti imzalama ve şifreleme için kullanılacak 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<peer>**](peer-of-clientcredentials-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificate>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <certificate findValue="String"
@@ -83,6 +83,6 @@ Eşler arası istemciler için ileti imzalama ve şifreleme için kullanılacak 
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
 - [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
 - [Eşler Arası Ağ](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Eş kanal Iletisi kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Eş kanal özel kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Eş kanal Iletisi kimlik doğrulaması](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Eş kanal özel kimlik doğrulaması](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../wcf/feature-details/securing-peer-channel-applications.md)

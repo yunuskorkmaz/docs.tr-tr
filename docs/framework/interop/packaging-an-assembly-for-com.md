@@ -17,12 +17,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-ms.openlocfilehash: 4963892419fd1caec4483123f820d62967a87dd6
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5fde7f7f00aadf4d941d4ffe522453970b67e9e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85620839"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554136"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>COM için bir .NET Framework derlemesi paketleme
 
@@ -60,7 +60,7 @@ COM geliştiricileri, uygulamasında dahil etmek üzere plantıkları yönetilen
 
   Seçtiğiniz mekanizmaya bakılmaksızın, yalnızca sağladığınız derlemede tanımlanan ortak türler oluşturulan tür kitaplığına dahil edilir.
 
-Yönergeler için bkz [. nasıl yapılır: tür kitaplıklarını Win32 kaynakları olarak ekleme. NET tabanlı uygulamalar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
+Yönergeler için bkz [. nasıl yapılır: tür kitaplıklarını Win32 kaynakları olarak ekleme. NET tabanlı uygulamalar](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -98,4 +98,4 @@ Yönergeler için bkz [. nasıl yapılır: tür kitaplıklarını Win32 kaynakla
 - [Bütünleştirilmiş kod güvenliği konuları](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (tür kitaplığı verme programı)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Derlemeleri COM ile Kaydetme](registering-assemblies-with-com.md)
-- [Nasıl yapılır: uygulamalarda tür kitaplıklarını Win32 kaynakları olarak katıştırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [Nasıl yapılır: uygulamalarda tür kitaplıklarını Win32 kaynakları olarak katıştırma](/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

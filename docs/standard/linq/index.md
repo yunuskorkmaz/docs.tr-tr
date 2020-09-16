@@ -8,14 +8,14 @@ ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 2e8abef547d8cc06d80b8cbf865ec984eb91d330
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 65370a2bd21e2474af4cb070bb8d82a167f10070
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552968"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555002"
 ---
-# <a name="linq-overview"></a>LINQ genel bakış
+# <a name="linq-overview"></a>LINQ'e genel bakış
 
 Dil ile tümleşik sorgu (LINQ), dil düzeyinde sorgulama özellikleri ve C# ve Visual Basic için [daha yüksek sıralı bir işlev](https://en.wikipedia.org/wiki/Higher-order_function) API 'si sağlar. bu sayede, açıklayıcı bildirime dayalı bir kod yazmanıza olanak tanınır.
 
@@ -111,7 +111,7 @@ End Function
 
 Bu görevi yapmak için XML belgesine el ile çapraz geçiş yapmak üzere kod yazma çok daha zor olabilir.
 
-XML ile etkileşim kurmak, LINQ sağlayıcılarıyla yapabileceğiniz tek şey değildir. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) , bir MSSQL sunucu veritabanı için oldukça basit bir nesne Ilişkisel eşleyicisidir (ORM). [JSON.net](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) KITAPLıĞı, LINQ aracılığıyla verimli JSON belge geçişi sağlar. Ayrıca, gerek duyduğunuz şeyi yapan bir kitaplık yoksa [kendı LINQ sağlayıcınızı de yazabilirsiniz](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
+XML ile etkileşim kurmak, LINQ sağlayıcılarıyla yapabileceğiniz tek şey değildir. [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) , bir MSSQL sunucu veritabanı için oldukça basit bir nesne Ilişkisel eşleyicisidir (ORM). [JSON.net](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) KITAPLıĞı, LINQ aracılığıyla verimli JSON belge geçişi sağlar. Ayrıca, gerek duyduğunuz şeyi yapan bir kitaplık yoksa [kendı LINQ sağlayıcınızı de yazabilirsiniz](/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))!
 
 ## <a name="reasons-to-use-the-query-syntax"></a>Sorgu söz dizimini kullanma nedenleri
 
@@ -159,7 +159,7 @@ Bu sorunun **yanıtı şu şekilde değildir.** ..
 
 ## <a name="essential-linq"></a>Temel LINQ
 
-LINQ örneklerinin gerçekten kapsamlı bir listesi için, [101 LINQ örnekleri](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)' ni ziyaret edin.
+LINQ örneklerinin gerçekten kapsamlı bir listesi için, [101 LINQ örnekleri](/samples/dotnet/try-samples/101-linq-samples/)' ni ziyaret edin.
 
 Aşağıdaki örnekler, bazı temel LINQ parçalarından oluşan hızlı bir örnektir. Bu, LINQ 'in burada gösterilen miktardan daha fazla işlevsellik sağladığından, kapsamlı bir şekilde değildir.
 
@@ -394,6 +394,6 @@ LINQ aracılığıyla kolayca ifade edebileceğiniz paralelleştirilmiş CPU ba�
 
 ## <a name="more-resources"></a>Diğer kaynaklar
 
-* [101 LINQ örnekleri](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* [101 LINQ örnekleri](/samples/dotnet/try-samples/101-linq-samples/)
 * C#/F için bir playzemin ortamı ve veritabanı sorgulama altyapısı olan [Linqpad](https://www.linqpad.net/), #/Visual Basic
 * [Uıulinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ nesnelerinin nasıl uygulandığını öğrenmek için bir e-kitap

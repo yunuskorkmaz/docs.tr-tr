@@ -3,12 +3,12 @@ title: WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 description: WCF kullanarak tipik bir hizmeti ve istemciyi uygulamayı ve yapılandırmayı öğrenin. Hizmet, bir yapılandırma dosyasında belirtilen bir uç nokta kullanarak iletişim kurar.
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 46a0c878b29de34219413a508799ddaddf507dd8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: dd05754dcfe36cb2e9c28ce20a5927585f85478f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246226"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554273"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF Hizmetleri için Basitleştirilmiş Yapılandırma
 Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin ve istemcinin nasıl uygulanacağını ve yapılandırılacağını gösterir. Bu örnek, diğer tüm temel teknoloji örnekleri için temeldir.  
@@ -81,5 +81,5 @@ Bu örnek, Windows Communication Foundation (WCF) kullanarak tipik bir hizmetin 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric yönetim örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383405(v=azure.10))
+- [AppFabric yönetim örnekleri](/previous-versions/appfabric/ff383405(v=azure.10))
 - [Basitleştirilmiş Yapılandırma](../simplified-configuration.md)

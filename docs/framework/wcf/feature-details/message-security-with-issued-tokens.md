@@ -2,12 +2,12 @@
 title: Verilen Belirteçlerle İleti Güvenliği
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-ms.openlocfilehash: 4742af43c2f4965b0a1f0458a35638e220c1a59f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1bf55cf6f964db891a428c84c4c7786d42897997
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84576466"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553980"
 ---
 # <a name="message-security-with-issued-tokens"></a>Verilen Belirteçlerle İleti Güvenliği
 Verilen belirteç istemcisi Windows Communication Foundation (WCF) içinde Federe güvenlik senaryosunu mümkün.  
@@ -19,4 +19,4 @@ Verilen belirteç istemcisi Windows Communication Foundation (WCF) içinde Feder
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Federasyon ve Verilen Belirteçler](federation-and-issued-tokens.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

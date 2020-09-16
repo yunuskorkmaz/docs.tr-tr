@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2b3be8b42b5046e52074236de01ca312a0a9a361
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: c5e3f692c2bf754ccd35324019246ee905e8c591
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474273"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554651"
 ---
 # <a name="net-performance-tips"></a>.NET Performans İpuçları
 *Performans* terimi genellikle programın yürütme hızına başvurur. Kaynak kodunuzda belirli temel kuralları izleyerek, bazen yürütme hızını artırabilirsiniz. Bazı programlarda, kodu yakından incelemek ve profil oluşturucular kullanarak olabildiğince hızlı çalıştığından emin olmak önemlidir. Diğer programlarda, bu tür iyileştirme gerçekleştirmek zorunda değilsiniz çünkü kod yazıldığı kadar hızlı şekilde çalışıyor. Bu makalede, performansın önyüklenebileceği bazı yaygın bölgeler ve ek performans konularına yönelik bağlantılar yer almaktadır. Performansı planlama ve ölçme hakkında daha fazla bilgi için bkz. [performans](index.md)  
@@ -31,17 +31,17 @@ ms.locfileid: "86474273"
   
 ## <a name="other-resources"></a>Diğer Kaynaklar  
   
-- [Daha hızlı yönetilen kod yazma: Işlerin maliyetini öğrenin](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
+- [Daha hızlı yönetilen kod yazma: Işlerin maliyetini öğrenin](/previous-versions/dotnet/articles/ms973852(v=msdn.10))  
   
-- [Yüksek performanslı yönetilen uygulamalar yazma: bir öncü](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
+- [Yüksek performanslı yönetilen uygulamalar yazma: bir öncü](/previous-versions/dotnet/articles/ms973858(v=msdn.10))  
   
-- [Çöp toplayıcı temelleri ve performans Ipuçları](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
+- [Çöp toplayıcı temelleri ve performans Ipuçları](/previous-versions/dotnet/articles/ms973837(v=msdn.10))  
   
-- [.NET uygulamalarındaki performans Ipuçları ve püf noktaları](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
+- [.NET uygulamalarındaki performans Ipuçları ve püf noktaları](/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Riko Mariani performansı tidbits](https://docs.microsoft.com/archive/blogs/ricom/)  
+- [Riko Mariani performansı tidbits](/archive/blogs/ricom/)  
 
-- [Vance Morrison blogu](https://docs.microsoft.com/archive/blogs/vancem/)
+- [Vance Morrison blogu](/archive/blogs/vancem/)
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

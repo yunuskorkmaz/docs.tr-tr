@@ -16,16 +16,16 @@ helpviewer_keywords:
 - encryption [.NET], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-ms.openlocfilehash: 9c04d1ea4d7e7ee46d875b3fa791f3eee2059e52
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: c0e0904089c4b7054aa3ef7510c20e40c57dc733
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87854730"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554416"
 ---
 # <a name="store-asymmetric-keys-in-a-key-container"></a>Asimetrik anahtarları bir anahtar kapsayıcısında depola
 
-Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel bir anahtar depolamanız gerekiyorsa, anahtar kapsayıcısı kullanın. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [makine düzeyi ve Kullanıcı DÜZEYI RSA anahtar kapsayıcılarını anlama](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).
+Asimetrik özel anahtarlar yerel bilgisayarda asla oldukları gibi veya düz metin olarak tutulmamalıdır. Özel bir anahtar depolamanız gerekiyorsa, anahtar kapsayıcısı kullanın. Anahtar kapsayıcıları hakkında daha fazla bilgi için bkz. [makine düzeyi ve Kullanıcı DÜZEYI RSA anahtar kapsayıcılarını anlama](/previous-versions/aspnet/f5cs0acs(v=vs.100)).
 
 > [!NOTE]
 > Bu makaledeki kod Windows için geçerlidir ve .NET Core 2,2 ve önceki sürümlerinde kullanılamayan özellikleri kullanır. Daha fazla bilgi için bkz. [DotNet/Runtime # 23391](https://github.com/dotnet/runtime/issues/23391).

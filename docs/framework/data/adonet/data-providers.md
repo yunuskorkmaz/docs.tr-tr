@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 2be58251c767c937e817edf1ba19309f0c62ac33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287005"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554742"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework Veri Sağlayıcıları
 Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutları yürütmek ve sonuçları almak için kullanılır. Bu sonuçlar doğrudan işlenirler, <xref:System.Data.DataSet> gerektiğinde kullanıcıya sunulmak üzere, birden fazla kaynaktaki verilerle birlikte veya katmanlar arasında uzaktan bir şekilde yerleştirilir. .NET Framework veri sağlayıcıları hafif, veri kaynağı ve kod arasında en az bir katman oluşturarak, işlevselliği ödün vermeden performansı artırır.  
@@ -25,7 +25,7 @@ Bir .NET Framework veri sağlayıcısı, bir veritabanına bağlanmak, komutlar�
 |ODBC için .NET Framework Veri Sağlayıcısı|ODBC kullanılarak sunulan veri kaynakları için. <xref:System.Data.Odbc>Ad alanını kullanır.|  
 |Oracle için .NET Framework Veri Sağlayıcısı|Oracle veri kaynakları için. Oracle için .NET Framework Veri Sağlayıcısı Oracle istemci yazılımı sürümü 8.1.7 ve üstünü destekler ve <xref:System.Data.OracleClient> ad alanını kullanır.|  
 |EntityClient sağlayıcı|Varlık Veri Modeli (EDM) uygulamaları için veri erişimi sağlar. <xref:System.Data.EntityClient>Ad alanını kullanır.|  
-|SQL Server Compact 4,0 için Veri Sağlayıcısı .NET Framework.|Microsoft SQL Server Compact 4,0 için veri erişimi sağlar. [System. Data. SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) ad alanını kullanır.|  
+|SQL Server Compact 4,0 için Veri Sağlayıcısı .NET Framework.|Microsoft SQL Server Compact 4,0 için veri erişimi sağlar. [System. Data. SqlServerCe](/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) ad alanını kullanır.|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework veri sağlayıcılarının temel nesneleri  
  Aşağıdaki tabloda .NET Framework veri sağlayıcısı oluşturan dört çekirdekli nesne özetlenmektedir.  
