@@ -6,24 +6,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 242bc179be86e14daab4acb66596207f3272bfea
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 889e3dbac3acf229fd49422285d650fc13792521
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553942"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557123"
 ---
-# <a name="how-to-find-child-elements-based-on-position-linq-to-xml"></a><span data-ttu-id="e5b04-104">Konuma göre alt öğeleri bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e5b04-104">How to find child elements based on position (LINQ to XML)</span></span>
+# <a name="how-to-find-child-elements-based-on-position-linq-to-xml"></a><span data-ttu-id="9e58f-104">Konuma göre alt öğeleri bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="9e58f-104">How to find child elements based on position (LINQ to XML)</span></span>
 
-<span data-ttu-id="e5b04-105">Bu makalede, <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> öğe konumuna göre öğeleri bulmak için ' nin nasıl kullanılacağı gösterilir. Örneğin, ikinci öğeyi veya beşinci olarak üçüncü öğeyi bulmak için.</span><span class="sxs-lookup"><span data-stu-id="e5b04-105">This article shows how to use <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to find elements based on element position – for example, to find the second element, or the third through the fifth.</span></span> <span data-ttu-id="e5b04-106">Ayrıca aynı şeyi yapmak için LINQ to XML sorgu kullanmanın iki yolunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="e5b04-106">It also shows two ways to use LINQ to XML query to do the same thing.</span></span>
+<span data-ttu-id="9e58f-105">Bu makalede, <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> öğe konumuna göre öğeleri bulmak için ' nin nasıl kullanılacağı gösterilir. Örneğin, ikinci öğeyi veya beşinci olarak üçüncü öğeyi bulmak için.</span><span class="sxs-lookup"><span data-stu-id="9e58f-105">This article shows how to use <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to find elements based on element position – for example, to find the second element, or the third through the fifth.</span></span> <span data-ttu-id="9e58f-106">Ayrıca aynı şeyi yapmak için LINQ to XML sorgu kullanmanın iki yolunu gösterir.</span><span class="sxs-lookup"><span data-stu-id="9e58f-106">It also shows two ways to use LINQ to XML query to do the same thing.</span></span>
 
-<span data-ttu-id="e5b04-107">Bu LINQ to XML sorgusunu geç bir şekilde yazmak için iki yaklaşım vardır.</span><span class="sxs-lookup"><span data-stu-id="e5b04-107">There are two approaches to writing this LINQ to XML query in a lazy way.</span></span> <span data-ttu-id="e5b04-108"><xref:System.Linq.Enumerable.Skip%2A>Ve <xref:System.Linq.Enumerable.Take%2A> işleçlerini kullanabilir veya <xref:System.Linq.Enumerable.Where%2A> bir dizini alan aşırı yüklemeyi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="e5b04-108">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="e5b04-109"><xref:System.Linq.Enumerable.Where%2A>Aşırı yüklemeyi kullandığınızda, iki bağımsız değişken alan bir lambda ifadesi kullanırsınız.</span><span class="sxs-lookup"><span data-stu-id="e5b04-109">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="e5b04-110">Aşağıdaki örnek, konum temelinde seçim yapmak için her iki yöntemi gösterir.</span><span class="sxs-lookup"><span data-stu-id="e5b04-110">The following example shows both methods of selecting based on position.</span></span>
+<span data-ttu-id="9e58f-107">Bu LINQ to XML sorgusunu geç bir şekilde yazmak için iki yaklaşım vardır.</span><span class="sxs-lookup"><span data-stu-id="9e58f-107">There are two approaches to writing this LINQ to XML query in a lazy way.</span></span> <span data-ttu-id="9e58f-108"><xref:System.Linq.Enumerable.Skip%2A>Ve <xref:System.Linq.Enumerable.Take%2A> işleçlerini kullanabilir veya <xref:System.Linq.Enumerable.Where%2A> bir dizini alan aşırı yüklemeyi kullanabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="9e58f-108">You can use the <xref:System.Linq.Enumerable.Skip%2A> and <xref:System.Linq.Enumerable.Take%2A> operators, or you can use the <xref:System.Linq.Enumerable.Where%2A> overload that takes an index.</span></span> <span data-ttu-id="9e58f-109"><xref:System.Linq.Enumerable.Where%2A>Aşırı yüklemeyi kullandığınızda, iki bağımsız değişken alan bir lambda ifadesi kullanırsınız.</span><span class="sxs-lookup"><span data-stu-id="9e58f-109">When you use the <xref:System.Linq.Enumerable.Where%2A> overload, you use a lambda expression that takes two arguments.</span></span> <span data-ttu-id="9e58f-110">Aşağıdaki örnek, konum temelinde seçim yapmak için her iki yöntemi gösterir.</span><span class="sxs-lookup"><span data-stu-id="9e58f-110">The following example shows both methods of selecting based on position.</span></span>
 
-## <a name="example-find-the-second-through-the-fourth-test-elements"></a><span data-ttu-id="e5b04-111">Örnek: dördüncü öğeler aracılığıyla ikincisini bulun `Test`</span><span class="sxs-lookup"><span data-stu-id="e5b04-111">Example: Find the second through the fourth `Test` elements</span></span>
+## <a name="example-find-the-second-through-the-fourth-test-elements"></a><span data-ttu-id="9e58f-111">Örnek: dördüncü öğeler aracılığıyla ikincisini bulun `Test`</span><span class="sxs-lookup"><span data-stu-id="9e58f-111">Example: Find the second through the fourth `Test` elements</span></span>
 
-<span data-ttu-id="e5b04-112">Bu örnek `Test` örnek XML dosyasındaki dördüncü öğe aracılığıyla ikincisini bulur [: test yapılandırması](sample-xml-file-test-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="e5b04-112">This example finds the second through the fourth `Test` element in the [Sample XML file: Test configuration](sample-xml-file-test-configuration.md).</span></span> <span data-ttu-id="e5b04-113">Sonuç, öğelerin bir koleksiyonudur.</span><span class="sxs-lookup"><span data-stu-id="e5b04-113">The result is a collection of elements.</span></span>
+<span data-ttu-id="9e58f-112">Bu örnek `Test` örnek XML dosyasındaki dördüncü öğe aracılığıyla ikincisini bulur [: test yapılandırması](sample-xml-file-test-configuration.md).</span><span class="sxs-lookup"><span data-stu-id="9e58f-112">This example finds the second through the fourth `Test` element in the [Sample XML file: Test configuration](sample-xml-file-test-configuration.md).</span></span> <span data-ttu-id="9e58f-113">Sonuç, öğelerin bir koleksiyonudur.</span><span class="sxs-lookup"><span data-stu-id="9e58f-113">The result is a collection of elements.</span></span>
 
-<span data-ttu-id="e5b04-114">XPath ifadesi `Test[position() >= 2 and position() <= 4]` .</span><span class="sxs-lookup"><span data-stu-id="e5b04-114">The XPath expression is `Test[position() >= 2 and position() <= 4]`.</span></span>
+<span data-ttu-id="9e58f-114">XPath ifadesi `Test[position() >= 2 and position() <= 4]` .</span><span class="sxs-lookup"><span data-stu-id="9e58f-114">The XPath expression is `Test[position() >= 2 and position() <= 4]`.</span></span>
 
 ```csharp
 XElement testCfg = XElement.Load("TestConfig.xml");
@@ -87,7 +87,7 @@ For Each el As XElement In list1
 Next
 ```
 
-<span data-ttu-id="e5b04-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="e5b04-115">This example produces the following output:</span></span>
+<span data-ttu-id="9e58f-115">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="9e58f-115">This example produces the following output:</span></span>
 
 ```output
 Results are identical
@@ -111,6 +111,6 @@ Results are identical
 </Test>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="e5b04-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="e5b04-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e58f-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="9e58f-116">See also</span></span>
 
-- [<span data-ttu-id="e5b04-117">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5b04-117">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="9e58f-117">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9e58f-117">LINQ to XML for XPath Users (Visual Basic)</span></span>](./comparison-xpath-linq-xml.md)

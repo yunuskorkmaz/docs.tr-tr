@@ -6,23 +6,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
-ms.openlocfilehash: ba2a1eef73a586074c75a7fec84c912acb8b25e9
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 13d1a22d933d789f28efa2d196fc0106986caa90
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553100"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555009"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-linq-to-xml"></a><span data-ttu-id="88a86-104">İki konum yolunun birleşimini bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="88a86-104">How to find a union of two location paths (LINQ to XML)</span></span>
+# <a name="how-to-find-a-union-of-two-location-paths-linq-to-xml"></a><span data-ttu-id="6c48b-104">İki konum yolunun birleşimini bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6c48b-104">How to find a union of two location paths (LINQ to XML)</span></span>
 
-<span data-ttu-id="88a86-105">Bu makalede <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> , Iki XPath konum yolunun sonuçlarının birleşimini bulmak ve <xref:System.Linq.Enumerable.Concat%2A> Standart sorgu işlecinin aynı şeyi yapmak için nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="88a86-105">This article shows how to use <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to find the union of the results of two XPath location paths, and how to use the <xref:System.Linq.Enumerable.Concat%2A> standard query operator to do the same thing.</span></span>
+<span data-ttu-id="6c48b-105">Bu makalede <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> , Iki XPath konum yolunun sonuçlarının birleşimini bulmak ve <xref:System.Linq.Enumerable.Concat%2A> Standart sorgu işlecinin aynı şeyi yapmak için nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="6c48b-105">This article shows how to use <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to find the union of the results of two XPath location paths, and how to use the <xref:System.Linq.Enumerable.Concat%2A> standard query operator to do the same thing.</span></span>
 
-## <a name="example-find-all-category-and-price-elements-and-concatenate-them"></a><span data-ttu-id="88a86-106">Örnek: tümünü `Category` ve `Price` öğeleri bul ve bunları Birleştir</span><span class="sxs-lookup"><span data-stu-id="88a86-106">Example: Find all `Category` and `Price` elements and concatenate them</span></span>
+## <a name="example-find-all-category-and-price-elements-and-concatenate-them"></a><span data-ttu-id="6c48b-106">Örnek: tümünü `Category` ve `Price` öğeleri bul ve bunları Birleştir</span><span class="sxs-lookup"><span data-stu-id="6c48b-106">Example: Find all `Category` and `Price` elements and concatenate them</span></span>
 
-<span data-ttu-id="88a86-107">Bu örnek, `Category` `Price` XML BELGESI örnek XML dosyasındaki tüm öğeleri ve tüm öğeleri bulur [: sayısal veriler](sample-xml-file-numerical-data.md)ve bunları tek bir koleksiyona ekler.</span><span class="sxs-lookup"><span data-stu-id="88a86-107">This example finds all of the `Category` elements and all of the `Price` elements in XML document [Sample XML file: Numerical data](sample-xml-file-numerical-data.md), and concatenates them into a single collection.</span></span> <span data-ttu-id="88a86-108">XPath ifadesi `//Category|//Price` .</span><span class="sxs-lookup"><span data-stu-id="88a86-108">The XPath expression is `//Category|//Price`.</span></span>
+<span data-ttu-id="6c48b-107">Bu örnek, `Category` `Price` XML BELGESI örnek XML dosyasındaki tüm öğeleri ve tüm öğeleri bulur [: sayısal veriler](sample-xml-file-numerical-data.md)ve bunları tek bir koleksiyona ekler.</span><span class="sxs-lookup"><span data-stu-id="6c48b-107">This example finds all of the `Category` elements and all of the `Price` elements in XML document [Sample XML file: Numerical data](sample-xml-file-numerical-data.md), and concatenates them into a single collection.</span></span> <span data-ttu-id="6c48b-108">XPath ifadesi `//Category|//Price` .</span><span class="sxs-lookup"><span data-stu-id="6c48b-108">The XPath expression is `//Category|//Price`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="88a86-109">LINQ to XML sorgu <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> sonuçları belge sırasına koymak için çağırır.</span><span class="sxs-lookup"><span data-stu-id="88a86-109">The LINQ to XML query calls <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> to put the results in document order.</span></span> <span data-ttu-id="88a86-110">XPath ifadesi sonuçları da belge sırasına göre yapılır.</span><span class="sxs-lookup"><span data-stu-id="88a86-110">The XPath expression results are also in document order.</span></span>
+> <span data-ttu-id="6c48b-109">LINQ to XML sorgu <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> sonuçları belge sırasına koymak için çağırır.</span><span class="sxs-lookup"><span data-stu-id="6c48b-109">The LINQ to XML query calls <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A> to put the results in document order.</span></span> <span data-ttu-id="6c48b-110">XPath ifadesi sonuçları da belge sırasına göre yapılır.</span><span class="sxs-lookup"><span data-stu-id="6c48b-110">The XPath expression results are also in document order.</span></span>
 
 ```csharp
 XDocument data = XDocument.Load("Data.xml");
@@ -71,7 +71,7 @@ For Each el As XElement In list1
 Next
 ```
 
-<span data-ttu-id="88a86-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="88a86-111">This example produces the following output:</span></span>
+<span data-ttu-id="6c48b-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="6c48b-111">This example produces the following output:</span></span>
 
 ```output
 Results are identical
@@ -91,6 +91,6 @@ Results are identical
 <Price>6.99</Price>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="88a86-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="88a86-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c48b-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="6c48b-112">See also</span></span>
 
-- [<span data-ttu-id="88a86-113">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88a86-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="6c48b-113">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c48b-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](./comparison-xpath-linq-xml.md)
