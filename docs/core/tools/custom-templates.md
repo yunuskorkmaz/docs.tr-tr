@@ -3,12 +3,12 @@ title: DotNet New için özel şablonlar
 description: Herhangi bir .NET projesi veya dosya türü için özel şablonlar hakkında bilgi edinin.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: cabe220917e7ff688a2c2d2df56d9bc7f8afdf56
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85324501"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538101"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>DotNet New için özel şablonlar
 
@@ -96,7 +96,7 @@ Dosyadaki *template.js* tam şeması [JSON Şema deposunda](http://json.schemast
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>Bir NuGet paketine (nupkg dosyası) şablon paketleme
 
-Özel bir şablon [DotNet Pack](dotnet-pack.md) komutu ve bir *. csproj* dosyası ile paketlenmiştir. Alternatif olarak, [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) , [NuGet Pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) komutuyla birlikte bir *. nuspec* dosyası ile birlikte kullanılabilir. Ancak NuGet, Linux ve macOS 'ta Windows ve [mono](https://www.mono-project.com/) üzerinde .NET Framework gerektirir.
+Özel bir şablon [DotNet Pack](dotnet-pack.md) komutu ve bir *. csproj* dosyası ile paketlenmiştir. Alternatif olarak, [NuGet](/nuget/tools/nuget-exe-cli-reference) , [NuGet Pack](/nuget/tools/cli-ref-pack) komutuyla birlikte bir *. nuspec* dosyası ile birlikte kullanılabilir. Ancak NuGet, Linux ve macOS 'ta Windows ve [mono](https://www.mono-project.com/) üzerinde .NET Framework gerektirir.
 
 *. Csproj* dosyası geleneksel bir Code-Project *. csproj* dosyasından biraz farklıdır. Aşağıdaki ayarlara dikkat edin:
 

@@ -2,12 +2,12 @@
 title: .NET Core’a genel bakış
 description: .NET Core 'un özellikleri ve kompozisyonu hakkında bilgi edinin ve diğer .NET uygulamalarıyla karşılaştırın.
 ms.date: 03/26/2020
-ms.openlocfilehash: d5ef79fe5a8fbb56beae77edd01830fe6561fa51
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: e99939cf85cc441fd473e4d033e22b1a5d053638
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100736"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539014"
 ---
 # <a name="net-core-overview"></a>.NET Core’a genel bakış
 
@@ -39,7 +39,7 @@ Düzenleyici tümleştirmesi, kapsamında, [Omnisharp](https://www.omnisharp.net
 
 * [ASP.NET Core](/aspnet/core/) ile bulut uygulamaları
 * [Xamarin](/xamarin) ile mobil uygulamalar
-* [System. Device. GıO](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0) ile IoT uygulamaları
+* [System. Device. GıO](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0) ile IoT uygulamaları
 * [WPF](../desktop-wpf/overview/index.md) ve Windows Forms Windows istemci uygulamaları
 * Machine Learning [ml.net](../machine-learning/index.yml)
 
@@ -64,7 +64,7 @@ Ortak ihtiyaçları karşılayan birçok API dahildir:
 
 ### <a name="open-source"></a>Açık kaynak
 
-[.NET Core](about.md) , [Açık kaynaklı](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformudur. X64, x86, ARM32 ve ARM64 işlemciler için Windows, macOS ve Linux için .NET Core uygulamaları oluşturabilirsiniz. Çerçeveler ve API 'Ler [bulut](/aspnet/core/), [IoT](https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [istemci kullanıcı arabirimi](../desktop-wpf/overview/index.md)ve [makine öğrenimi](../machine-learning/index.yml)için sağlanır.
+[.NET Core](about.md) , [Açık kaynaklı](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformudur. X64, x86, ARM32 ve ARM64 işlemciler için Windows, macOS ve Linux için .NET Core uygulamaları oluşturabilirsiniz. Çerçeveler ve API 'Ler [bulut](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [istemci kullanıcı arabirimi](../desktop-wpf/overview/index.md)ve [makine öğrenimi](../machine-learning/index.yml)için sağlanır.
 
 ## <a name="support"></a>Destek
 

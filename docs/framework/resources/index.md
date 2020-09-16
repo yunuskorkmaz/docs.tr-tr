@@ -12,12 +12,12 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-ms.openlocfilehash: 105325170389917bfb2022314791aa1ed5923db3
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 3941c912348a652ddcbaea517cf7626c2a8f88e3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865170"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535579"
 ---
 # <a name="resources-in-net-apps"></a>.NET uygulamalarındaki kaynaklar
 
@@ -25,7 +25,7 @@ ms.locfileid: "86865170"
 
 .NET Framework ve .NET Core, kaynakların oluşturulması ve yerelleştirilmesi için kapsamlı destek sağlar. Ayrıca, .NET, yerelleştirilmiş kaynakları paketleme ve dağıtmaya yönelik basit bir modeli destekler.
 
-ASP.NET içindeki kaynaklar hakkında daha fazla bilgi için bkz. [ASP.NET Web sayfası kaynaklarına genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).
+ASP.NET içindeki kaynaklar hakkında daha fazla bilgi için bkz. [ASP.NET Web sayfası kaynaklarına genel bakış](/previous-versions/aspnet/ms227427(v=vs.100)).
 
 ## <a name="create-and-localize-resources"></a>Kaynakları oluşturma ve yerelleştirme
 
@@ -53,7 +53,7 @@ Daha fazla bilgi için [kaynakları paketleme ve dağıtma](packaging-and-deploy
 
 Geçerli UI kültürünün nasıl ayarlandığı hakkında daha fazla bilgi için <xref:System.Globalization.CultureInfo> ve <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> başvuru sayfalarına bakın.
 
-Ardından, <xref:System.Resources.ResourceManager?displayProperty=nameWithType> sınıfını kullanarak geçerli UI kültürünün veya belirli bir kültürün kaynaklarını alabilirsiniz. Sınıfı, <xref:System.Resources.ResourceManager> kaynakları almak için en yaygın olarak kullanılan <xref:System.Resources?displayProperty=nameWithType> ad alanı, kaynakları almak için kullanabileceğiniz ek türler içerir. Bunlara
+Ardından, <xref:System.Resources.ResourceManager?displayProperty=nameWithType> sınıfını kullanarak geçerli UI kültürünün veya belirli bir kültürün kaynaklarını alabilirsiniz. Sınıfı, <xref:System.Resources.ResourceManager> kaynakları almak için en yaygın olarak kullanılan <xref:System.Resources?displayProperty=nameWithType> ad alanı, kaynakları almak için kullanabileceğiniz ek türler içerir. Bu güncelleştirmeler şunlardır:
 
 - Bir derlemede gömülü olan veya bir tek başına ikili .resources dosyasında depolanan kaynakları numaralandırmanızı sağlayan <xref:System.Resources.ResourceReader> sınıfı. Çalışma zamanında kullanılabilir olan kaynakların tam adını bilmediğinizde bu yararlı olur.
 

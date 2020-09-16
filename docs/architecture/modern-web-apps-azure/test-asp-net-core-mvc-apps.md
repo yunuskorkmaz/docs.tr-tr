@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın MVC 
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 1883662f736361a947cbad440aeefda839265251
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 8497892b88c313cde0a604ad3967507300e5154a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465643"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539249"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>MVC uygulamalarını test ASP.NET Core
 
@@ -257,7 +257,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
 
 Testler, bu özel WebApplicationFactory 'yi kullanarak bir istemci oluşturup bu istemci örneğini kullanarak uygulamaya istekler yapmasını sağlar. Uygulamanın, test onaylamaları kapsamında kullanılabilecek verileri, çalıştırılabilir. Aşağıdaki test, eShopOnWeb uygulamasının giriş sayfasının doğru şekilde yüklendiğini doğrular ve tohum verilerinin bir parçası olarak uygulamaya eklenen bir ürün listesini içerir.
 
-```cs
+```csharp
 using Microsoft.eShopWeb.FunctionalTests.Web;
 using System.Net.Http;
 using System.Threading.Tasks;

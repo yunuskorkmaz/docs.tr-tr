@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Sınırlandırılmış bir Dosyanın Alanlarını Yeniden Sıralama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 6f87374978425e0d51542c6eceda23697d7a3a67
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 62c21dfb67ef35591a8ffe214bc132e63a2433bd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397901"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535390"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Nasıl yapılır: ayrılmış bir dosyanın alanlarını yeniden sıralama (LINQ) (Visual Basic)
 
@@ -17,7 +17,7 @@ Aşağıdaki örnekte, üç sütunun öğrencileri ' "soyadı," "First Name" ve 
 
 ### <a name="to-create-the-data-file"></a>Veri dosyası oluşturmak için
 
-1. Aşağıdaki satırları spreadsheet1. csv adlı bir düz metin dosyasına kopyalayın. Dosyayı proje klasörünüze kaydedin.
+1. Aşağıdaki satırları spreadsheet1.csv adında bir düz metin dosyasına kopyalayın. Dosyayı proje klasörünüze kaydedin.
 
     ```csv
     Adams,Terry,120
@@ -79,4 +79,4 @@ End Class
 
 - [LINQ ve dizeler (Visual Basic)](linq-and-strings.md)
 - [LINQ ve dosya dizinleri (Visual Basic)](linq-and-file-directories.md)
-- [Nasıl yapılır: CSV dosyalarından XML oluşturma](how-to-generate-xml-from-csv-files.md)
+- [Nasıl yapılır: CSV dosyalarından XML oluşturma](../../../../standard/linq/generate-xml-csv-files.md)

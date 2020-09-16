@@ -2,12 +2,12 @@
 title: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
 description: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturmayı öğrenin.
 ms.date: 06/02/2020
-ms.openlocfilehash: 8ffcb05ad85f53180ca1aaefbd2dfc7496946142
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ca933bc9322109ba7d1f808fcc44696a9766a6d4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867665"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537606"
 ---
 # <a name="tutorial-create-a-net-core-console-application-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak bir .NET Core konsol uygulaması oluşturma
 
@@ -24,7 +24,7 @@ Bu öğreticide Mac için Visual Studio kullanarak bir .NET Core konsol uygulama
 * [Sürüm 8,6 veya üzeri Mac için Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core ' u yüklemek için seçeneği belirleyin. .NET Core geliştirmesi için Xamarin 'in yüklenmesi isteğe bağlıdır. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   * [Öğretici: Mac için Visual Studio yüklemesi](/visualstudio/mac/installation).
-  * [Desteklenen macOS sürümleri](../install/dependencies.md?pivots=os-macos).
+  * [Desteklenen macOS sürümleri](../install/windows.md).
   * [Mac için Visual Studio tarafından desteklenen .NET Core sürümleri](/visualstudio/mac/net-core-support).
 
 ## <a name="create-the-app"></a>Uygulama oluşturma

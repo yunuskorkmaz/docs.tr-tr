@@ -7,12 +7,12 @@ ms.date: 09/09/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: faa54e0a3c827717114ca6ca4f033c1c4c3acfa8
-ms.sourcegitcommit: dc2feef0794cf41dbac1451a13b8183258566c0e
+ms.openlocfilehash: 61cddfeb0d881ad2f2006db50ebb33f6a0c870ba
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85325782"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535442"
 ---
 # <a name="styles-and-templates-in-wpf"></a>WPF 'deki stiller ve şablonlar
 
@@ -103,7 +103,7 @@ Bir örnek için bkz. [bir denetim için şablon oluşturma](../themes/how-to-cr
 
 ### <a name="templatebinding"></a>TemplateBinding
 
-Önceki bölümde tanımlanan şablon kaynağının [TemplateBinding biçimlendirme uzantısını](../../framework/wpf/advanced/templatebinding-markup-extension.md)kullandığını fark etmiş olabilirsiniz. `TemplateBinding`, İle oluşturulmuş bir bağlamaya benzer şekilde, şablon senaryoları için bir bağlamanın en iyi duruma getirilmiş bir biçimidir `{Binding RelativeSource={RelativeSource TemplatedParent}}` . `TemplateBinding`, şablonun parçalarını denetimin özelliklerine bağlamak için yararlıdır. Örneğin, her denetimin bir özelliği vardır <xref:System.Windows.Controls.Control.BorderThickness> . `TemplateBinding`Şablondaki hangi öğenin bu denetim ayarından etkilendiğini yönetmek için kullanın.
+Önceki bölümde tanımlanan şablon kaynağının [TemplateBinding biçimlendirme uzantısını](/dotnet/desktop/wpf/advanced/templatebinding-markup-extension)kullandığını fark etmiş olabilirsiniz. `TemplateBinding`, İle oluşturulmuş bir bağlamaya benzer şekilde, şablon senaryoları için bir bağlamanın en iyi duruma getirilmiş bir biçimidir `{Binding RelativeSource={RelativeSource TemplatedParent}}` . `TemplateBinding` , şablonun parçalarını denetimin özelliklerine bağlamak için yararlıdır. Örneğin, her denetimin bir özelliği vardır <xref:System.Windows.Controls.Control.BorderThickness> . `TemplateBinding`Şablondaki hangi öğenin bu denetim ayarından etkilendiğini yönetmek için kullanın.
 
 ### <a name="contentcontrol-and-itemscontrol"></a>ContentControl ve ItemsControl
 
@@ -136,7 +136,7 @@ Temel olarak, <xref:System.Windows.DataTemplate> Yukarıdaki örnekteki bir nesn
 
 ![Fotoğraf resmi](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
 
-Veri şablonu oluşturma modeli, diğer özellikleri sağlar. Örneğin, veya gibi bir tür kullanarak diğer koleksiyonları içeren koleksiyon verileri görüntülüyorsanız, <xref:System.Windows.Controls.HeaderedItemsControl> <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.TreeView> <xref:System.Windows.HierarchicalDataTemplate> . Başka bir veri şablonu oluşturma özelliği, <xref:System.Windows.Controls.DataTemplateSelector> <xref:System.Windows.DataTemplate> özel mantığa göre kullanmak üzere seçeneğini seçmenize olanak sağlar. Daha fazla bilgi için, farklı veri şablonu oluşturma özellikleri hakkında daha ayrıntılı bir tartışma sağlayan [veri şablonu oluşturmaya genel bakış](../../framework/wpf/data/data-templating-overview.md)bölümüne bakın.
+Veri şablonu oluşturma modeli, diğer özellikleri sağlar. Örneğin, veya gibi bir tür kullanarak diğer koleksiyonları içeren koleksiyon verileri görüntülüyorsanız, <xref:System.Windows.Controls.HeaderedItemsControl> <xref:System.Windows.Controls.Menu> <xref:System.Windows.Controls.TreeView> <xref:System.Windows.HierarchicalDataTemplate> . Başka bir veri şablonu oluşturma özelliği, <xref:System.Windows.Controls.DataTemplateSelector> <xref:System.Windows.DataTemplate> özel mantığa göre kullanmak üzere seçeneğini seçmenize olanak sağlar. Daha fazla bilgi için, farklı veri şablonu oluşturma özellikleri hakkında daha ayrıntılı bir tartışma sağlayan [veri şablonu oluşturmaya genel bakış](/dotnet/desktop/wpf/data/data-templating-overview)bölümüne bakın.
 
 ## <a name="triggers"></a>Tetikleyiciler
 
@@ -162,7 +162,7 @@ Bir <xref:System.Windows.EventTrigger> olay oluşumuna göre bir dizi eylem baş
 
 [!code-xaml[StyleEventTriggers](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window6.xaml#SnippetStyleEventTriggers)]
 
-Daha fazla bilgi için görsel taslaklara [genel bakış](../../framework/wpf/graphics-multimedia/storyboards-overview.md)bölümüne bakın.
+Daha fazla bilgi için görsel taslaklara [genel bakış](/dotnet/desktop/wpf/graphics-multimedia/storyboards-overview)bölümüne bakın.
 
 Aşağıdaki çizimde, fare üçüncü öğeyi işaret ediyor.
 
@@ -170,7 +170,7 @@ Aşağıdaki çizimde, fare üçüncü öğeyi işaret ediyor.
 
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>Çoklu Tetikleyiciler, veri Tetikleyicileri ve MultiDataTriggers
 
-Ve ' ye ek olarak <xref:System.Windows.Trigger> <xref:System.Windows.EventTrigger> , başka tetikleyici türleri de vardır. <xref:System.Windows.MultiTrigger>özellik değerlerini birden çok koşula göre ayarlamanıza olanak sağlar. <xref:System.Windows.DataTrigger> <xref:System.Windows.MultiDataTrigger> Koşulunuz özelliği veri ile bağlantılı olduğunda ve kullanın.
+Ve ' ye ek olarak <xref:System.Windows.Trigger> <xref:System.Windows.EventTrigger> , başka tetikleyici türleri de vardır. <xref:System.Windows.MultiTrigger> özellik değerlerini birden çok koşula göre ayarlamanıza olanak sağlar. <xref:System.Windows.DataTrigger> <xref:System.Windows.MultiDataTrigger> Koşulunuz özelliği veri ile bağlantılı olduğunda ve kullanın.
 
 ## <a name="visual-states"></a>Görsel durumlar
 
@@ -212,7 +212,7 @@ Bir <xref:System.Windows.VisualStateManager?displayProperty=fullName> denetim ş
         ...
 ```
 
-Görsel Taslaklar hakkında daha fazla bilgi için bkz. [görsel taslakları genel bakış](../../framework/wpf/graphics-multimedia/storyboards-overview.md).
+Görsel Taslaklar hakkında daha fazla bilgi için bkz. [görsel taslakları genel bakış](/dotnet/desktop/wpf/graphics-multimedia/storyboards-overview).
 
 ## <a name="shared-resources-and-themes"></a>Paylaşılan kaynaklar ve Temalar
 
@@ -236,12 +236,12 @@ Stiller ve şablonlar dahil olmak üzere bir kaynak kümesini, uygulamalar aras�
 
 Bu, bir `shared.xaml` <xref:System.Windows.ResourceDictionary> uygulama içindeki denetimlerin tutarlı bir görünüme sahip olmasını sağlayan bir stil ve fırça kaynakları kümesi içeren öğesini tanımlayan, öğesinin paylaşımdır.
 
-Daha fazla bilgi için bkz. [birleştirilmiş kaynak sözlükleri](../../framework/wpf/advanced/merged-resource-dictionaries.md).
+Daha fazla bilgi için bkz. [birleştirilmiş kaynak sözlükleri](/dotnet/desktop/wpf/advanced/merged-resource-dictionaries).
 
-Özel denetiminiz için bir tema oluşturuyorsanız, [Denetim yazma genel bakış](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level)konusunun **Tema düzeyinde kaynakları tanımlama** bölümüne bakın.
+Özel denetiminiz için bir tema oluşturuyorsanız, [Denetim yazma genel bakış](/dotnet/desktop/wpf/controls/control-authoring-overview#defining-resources-at-the-theme-level)konusunun **Tema düzeyinde kaynakları tanımlama** bölümüne bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WPF İçinde URI'leri Paketleme](../../framework/wpf/app-development/pack-uris-in-wpf.md)
-- [Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma](../../framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
-- [DataTemplate tarafından oluşturulan öğeleri bulma](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+- [WPF İçinde URI'leri Paketleme](/dotnet/desktop/wpf/app-development/pack-uris-in-wpf)
+- [Nasıl yapılır: ControlTemplate ile Oluşturulan Öğeleri Bulma](/dotnet/desktop/wpf/controls/how-to-find-controltemplate-generated-elements)
+- [DataTemplate tarafından oluşturulan öğeleri bulma](/dotnet/desktop/wpf/data/how-to-find-datatemplate-generated-elements)

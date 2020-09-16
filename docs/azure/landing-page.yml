@@ -10,12 +10,12 @@ metadata:
   ms.technology: azure
   ms.service: multiple
   ms.prod: azure-dotnet
-  ms.openlocfilehash: a7b9b909e500979750d57cc6047153123cd192e5
-  ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+  ms.openlocfilehash: 8d1fb12e3edeb75db7e11316db1063c0bcd63a8e
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: MT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 07/09/2020
-  ms.locfileid: "86174960"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90539105"
 landingContent:
 - title: Azure 'da .NET ile çalışmaya başlama
   linkLists:
@@ -29,7 +29,7 @@ landingContent:
       url: tools.md
     - text: Uygulamanızın kimliğini doğrulama
       url: authentication.md
-    - text: Günlüğe kaydetme
+    - text: Günlüğe Kaydetme
       url: logging.md
     - text: SDK örneği
       url: /samples/dotnet/samples/azure-identity-resource-management-storage/
@@ -75,7 +75,7 @@ landingContent:
       url: /azure/app-service/app-service-web-tutorial-connect-msi
     - text: Azure App Service’de CORS ile Web API’si
       url: /azure/app-service/app-service-web-tutorial-rest-api
-- title: Bulutta yerel uygulamalar oluşturun
+- title: Buluta özel uygulamalar oluşturun
   linkLists:
   - linkListType: quickstart
     links:
@@ -214,10 +214,10 @@ landingContent:
   - linkListType: architecture
     links:
     - text: '.NET Mikro Hizmetleri: Kapsayıcılı .NET uygulamalarına yönelik mimari'
-      url: /dotnet/architecture/microservices/
+      url: ../architecture/microservices/index.md
     - text: ASP.NET Core ve Azure ile modern web uygulamaları tasarlama
-      url: /dotnet/architecture/modern-web-apps-azure/
+      url: ../architecture/modern-web-apps-azure/index.md
     - text: Microsoft platformu ve araçları ile kapsayıcılı Docker uygulaması yaşam döngüsü
-      url: /dotnet/architecture/containerized-lifecycle/
+      url: ../architecture/containerized-lifecycle/index.md
     - text: Azure bulutu ve Windows kapsayıcıları ile mevcut .NET uygulamalarını modernleştirme
       url: /dotnet/architecture/modernize-with-azure-containers/

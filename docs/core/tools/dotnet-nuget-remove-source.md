@@ -1,23 +1,23 @@
 ---
-title: dotnet nuget kaldırmak kaynak komutu
-description: Kaynak komutunu kaldır komutu dotnet nuget'i NuGet yapılandırma dosyalarınızdan varolan bir kaynağı kaldırır.
+title: DotNet NuGet kaynağı Kaldır komutu
+description: DotNet NuGet Remove Source komutu, var olan bir kaynağı NuGet yapılandırma dosyalarınızda kaldırır.
 ms.date: 03/20/2020
-ms.openlocfilehash: b259873e1885644b272136fa31414410bdfd9f27
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b5575c31c0008d6e3e5a2e52906a076614217dd0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463498"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537904"
 ---
 # <a name="dotnet-nuget-remove-source"></a>dotnet nuget remove source
 
-**Bu makale şu şekildedir:** ✔️ .NET Core 3.1.200 SDK ve sonraki sürümler
+**Bu makale şu şekilde geçerlidir:** ✔️ .NET Core 3.1.200 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Adı
+## <a name="name"></a>Name
 
-`dotnet nuget remove source`- NuGet kaynağını kaldırın.
+`dotnet nuget remove source` -Bir NuGet kaynağını kaldırın.
 
-## <a name="synopsis"></a>Özet
+## <a name="synopsis"></a>Özeti
 
 ```dotnetcli
 dotnet nuget remove source <NAME> [--configfile <FILE>]
@@ -25,11 +25,11 @@ dotnet nuget remove source <NAME> [--configfile <FILE>]
 dotnet nuget remove source -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
-Komut, `dotnet nuget remove source` Varolan bir kaynağı NuGet yapılandırma dosyalarınızdan kaldırır.
+`dotnet nuget remove source`Komut varolan bir kaynağı NuGet yapılandırma dosyalarından kaldırır.
 
-## <a name="arguments"></a>Bağımsız Değişkenler
+## <a name="arguments"></a>Arguments
 
 - **`NAME`**
 
@@ -39,11 +39,11 @@ Komut, `dotnet nuget remove source` Varolan bir kaynağı NuGet yapılandırma d
 
 - **`--configfile`**
 
-  NuGet yapılandırma dosyası. Belirtilirse, yalnızca bu dosyadaki ayarlar kullanılır. Belirtilmemişse, geçerli dizindeki yapılandırma dosyaları hiyerarşisi kullanılır. Daha fazla bilgi için [Ortak NuGet Yapılandırmaları'na](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)bakın.
+  NuGet yapılandırma dosyası. Belirtilmişse, yalnızca bu dosyadaki ayarlar kullanılacaktır. Belirtilmemişse, geçerli dizinden yapılandırma dosyalarının hiyerarşisi kullanılacaktır. Daha fazla bilgi için bkz. [ortak NuGet yapılandırması](/nuget/consume-packages/configuring-nuget-behavior).
 
 ## <a name="examples"></a>Örnekler
 
-- Adı olan bir `mySource`kaynağı kaldırın:
+- Şu ada sahip bir kaynağı Kaldır `mySource` :
 
   ```dotnetcli
   dotnet nuget remove source mySource
@@ -51,6 +51,6 @@ Komut, `dotnet nuget remove source` Varolan bir kaynağı NuGet yapılandırma d
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [NuGet.config dosyalarındaki paket kaynak bölümleri](/nuget/reference/nuget-config-file#package-source-sections)
+- [NuGet.config dosyalardaki paket kaynak bölümleri](/nuget/reference/nuget-config-file#package-source-sections)
 
-- [kaynaklar komutu (nuget.exe)](/nuget/reference/cli-reference/cli-ref-sources)
+- [Sources komutu (nuget.exe)](/nuget/reference/cli-reference/cli-ref-sources)

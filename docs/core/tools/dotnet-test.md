@@ -2,18 +2,18 @@
 title: DotNet test komutu
 description: DotNet test komutu, belirli bir projedeki birim testlerini yürütmek için kullanılır.
 ms.date: 04/29/2020
-ms.openlocfilehash: d67521084330b206afca89baf59228b99ca799a1
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 5ecfa24905537a663cd967142b765c258495fb22
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656761"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537749"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
 **Bu makale şu şekilde geçerlidir:** ✔️ .net Core 2,1 SDK ve sonraki sürümleri
 
-## <a name="name"></a>Ad
+## <a name="name"></a>Name
 
 `dotnet test` -Birim testlerini yürütmek için kullanılan .NET test sürücüsü.
 
@@ -38,7 +38,7 @@ dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
 dotnet test -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet test`Komut, belirli bir çözümde birim testlerini yürütmek için kullanılır. `dotnet test`Komut çözümü oluşturur ve çözümdeki her test projesi için bir test ana bilgisayarı uygulaması çalıştırır. Test ana bilgisayarı, test çerçevesini (örneğin, MSTest, NUnit veya xUnit) kullanarak belirtilen projedeki testleri yürütür ve her testin başarısını veya başarısızlığını bildirir. Tüm testler başarılı olursa, Test Çalıştırıcısı çıkış kodu olarak 0 döndürür; Aksi takdirde, herhangi bir test başarısız olursa, 1 döndürür.
 
@@ -77,7 +77,7 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 - **`--blame-crash`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
-  Testleri sorumluyu modunda çalıştırır ve test ana bilgisayarı beklenmedik bir şekilde çıktığında kilitlenme dökümünü toplar. Bu seçenek yalnızca Windows 'ta desteklenir. *procdump.exe* ve *procdump64.exe* IÇEREN bir dizin, yol veya PROCDUMP_PATH ortam değişkeninde olmalıdır. [Araçları indirin](https://docs.microsoft.com/sysinternals/downloads/procdump). Şunu gösterir `--blame` .
+  Testleri sorumluyu modunda çalıştırır ve test ana bilgisayarı beklenmedik bir şekilde çıktığında kilitlenme dökümünü toplar. Bu seçenek yalnızca Windows 'ta desteklenir. *procdump.exe* ve *procdump64.exe* IÇEREN bir dizin, yol veya PROCDUMP_PATH ortam değişkeninde olmalıdır. [Araçları indirin](/sysinternals/downloads/procdump). Şunu gösterir `--blame` .
 
 - **`--blame-crash-dump-type <DUMP_TYPE>`** (.NET 5,0 Preview SDK sürümünden itibaren kullanılabilir)
 
@@ -243,13 +243,13 @@ Test projeleri, `<PackageReference>` Aşağıdaki örnek proje dosyasında gör�
 
 | Test çerçevesi | Desteklenen özellikler                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>FullyQualifiedName</li><li>Ad</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Name</li><li>Sınıf</li><li>Öncelik</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Lerdir</li></ul>                                   |
-| NUnit          | <ul><li>FullyQualifiedName</li><li>Ad</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>Name</li><li>TestCategory</li><li>Öncelik</li></ul>                                   |
 
 , `<operator>` Özelliği ve değeri arasındaki ilişkiyi açıklar:
 
-| İşleç | İşlev        |
+| Operatör | İşlev        |
 | :------: | --------------- |
 | `=`      | Tam eşleşme     |
 | `!=`     | Tam eşleşme yok |
@@ -262,7 +262,7 @@ Bir ifadesi `<operator>` , otomatik olarak on özelliği olarak kabul `contains`
 
 İfadeler koşullu işleçlerle birleştirilebilecek:
 
-| İşleç            | İşlev |
+| Operatör            | İşlev |
 | ------------------- | -------- |
 | <code>&#124;</code> | VEYA       |
 | `&`                 | AND      |

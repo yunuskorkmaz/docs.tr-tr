@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanının nasıl çalıştığını denetlem
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 3b24ade694e25040d77e411bead3f454e9d5cdef
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 9f45a75d7ec836c14a2285a1707649cc32c2a25c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656182"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537554"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>.NET çalışma zamanını yerel kodunuzda denetlemek için özel bir .NET Core ana bilgisayarı yazma
 
@@ -144,7 +144,7 @@ Bu örnekte, ana bilgisayar artık `managedDelegate` yöntemi çalıştırmak i�
 
 Alternatif olarak, `coreclr_execute_assembly` işlev yönetilen bir yürütülebilir dosyayı başlatmak için kullanılabilir. Bu API, giriş parametreleri olarak bir derleme yolu ve bağımsız değişken dizisi alır. Derlemeyi o yolda yükler ve Main metodunu çağırır.
 
-```C++
+```c++
 int hr = executeAssembly(
         hostHandle,
         domainId,
@@ -197,7 +197,7 @@ Bir `ICLRRuntimeHost4` arada, artık çalışma zamanı genelinde başlangıç b
 
 Çalışma zamanı, işleve bir çağrı ile başlatılır `Start` .
 
-```C++
+```c++
 hr = runtimeHost->Start();
 ```
 
@@ -234,7 +234,7 @@ AppDomain çalışıyor ve çalışır durumda olduğunda, ana bilgisayar artık
 
 Diğer bir seçenek, `ExecuteAssembly` ana bilgisayarınızın ihtiyaçlarını karşılamıyorsa, `CreateDelegate` statik yönetilen bir yönteme bir işlev işaretçisi oluşturmak için kullanılır. Bu, konağın çağrı yaptığı yöntemin imzasını bilmesini gerektirir (işlev işaretçisi türünü oluşturmak için), ancak bir derlemenin giriş noktası dışında kodu çağırma esnekliğine izin verir. İkinci parametrede belirtilen derleme adı, yüklenecek kitaplığın [tam yönetilen derleme adıdır](../../standard/assembly/names.md) .
 
-```C++
+```c++
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
     domainId,

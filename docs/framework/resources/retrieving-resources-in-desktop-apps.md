@@ -19,16 +19,16 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: db1156106690f8321b7fd5a2890c2aa44cfe17e3
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: cefdfef32928783b23ac0d51be596e48c27bde9a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166194"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535514"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Masaüstü Uygulamalarında Kaynakları Alma
 
-.NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklarla çalışırken, ana bütünleştirilmiş kod ile varsayılan veya nötr kültür için kaynakları en iyi şekilde paketleyip uygulamanızın desteklediği her dil ya da kültür için ayrı bir uydu derlemesi oluşturmanız gerekir. Daha sonra, <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıfını kullanabilirsiniz. Kaynaklarınızı ana derleme ve uydu Derlemeleriyle katıştırmamayı seçerseniz, bu makalenin ilerleyen kısımlarında [kaynakları. resources dosyalarından alma](#from_file) bölümünde açıklandığı gibi doğrudan ikili. resources dosyalarına da erişebilirsiniz.  Windows 8. x Mağaza uygulamalarında kaynakları almak için, bkz. [Windows Mağazası uygulamalarında kaynakları oluşturma ve alma](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
+.NET Framework masaüstü uygulamalarında yerelleştirilmiş kaynaklarla çalışırken, ana bütünleştirilmiş kod ile varsayılan veya nötr kültür için kaynakları en iyi şekilde paketleyip uygulamanızın desteklediği her dil ya da kültür için ayrı bir uydu derlemesi oluşturmanız gerekir. Daha sonra, <xref:System.Resources.ResourceManager> adlandırılmış kaynaklara erişmek için sonraki bölümde açıklandığı gibi sınıfını kullanabilirsiniz. Kaynaklarınızı ana derleme ve uydu Derlemeleriyle katıştırmamayı seçerseniz, bu makalenin ilerleyen kısımlarında [kaynakları. resources dosyalarından alma](#from_file) bölümünde açıklandığı gibi doğrudan ikili. resources dosyalarına da erişebilirsiniz.  Windows 8. x Mağaza uygulamalarında kaynakları almak için, bkz. [Windows Mağazası uygulamalarında kaynakları oluşturma ve alma](/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>Derlemelerden kaynakları alma  
@@ -159,7 +159,7 @@ GetObject.exe
  Kaynaklarınızı oluşturup uygun dizine yerleştirdikten sonra, <xref:System.Resources.ResourceManager> yöntemini çağırarak kaynakları kullanmak için bir nesne oluşturun <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> . İlk parametre, uygulamanın varsayılan. resources dosyasının kök adını belirtir (Bu, önceki bölümdeki örnek için "dizeler" olacaktır). İkinci parametre, kaynakların konumunu belirtir (önceki örnek için "kaynaklar"). Üçüncü parametre <xref:System.Resources.ResourceSet> kullanılacak uygulamayı belirtir. Üçüncü parametre ise `null` , varsayılan çalışma zamanı <xref:System.Resources.ResourceSet> kullanılır.  
   
 > [!NOTE]
-> Tek başına. resources dosyalarını kullanarak ASP.NET uygulamalarını dağıtmayın. Bu, kilitlenme sorunlarına neden olabilir ve XCOPY dağıtımını keser. ASP.NET kaynaklarını uydu Derlemeleriyle dağıtmanızı öneririz. Daha fazla bilgi için bkz. [ASP.NET Web sayfası kaynaklarına genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
+> Tek başına. resources dosyalarını kullanarak ASP.NET uygulamalarını dağıtmayın. Bu, kilitlenme sorunlarına neden olabilir ve XCOPY dağıtımını keser. ASP.NET kaynaklarını uydu Derlemeleriyle dağıtmanızı öneririz. Daha fazla bilgi için bkz. [ASP.NET Web sayfası kaynaklarına genel bakış](/previous-versions/aspnet/ms227427(v=vs.100)).  
   
  Nesneyi örnekledikten sonra, <xref:System.Resources.ResourceManager> <xref:System.Resources.ResourceManager.GetString%2A> <xref:System.Resources.ResourceManager.GetObject%2A> <xref:System.Resources.ResourceManager.GetStream%2A> kaynakları almak için daha önce anlatıldığı gibi,, ve yöntemlerini kullanırsınız. Ancak, kaynakların doğrudan. resources dosyalarından alınması, gömülü kaynakların derlemelerden alıntığından farklıdır. Kaynakları. resources dosyalarından aldığınızda,, <xref:System.Resources.ResourceManager.GetString%28System.String%29> <xref:System.Resources.ResourceManager.GetObject%28System.String%29> ve <xref:System.Resources.ResourceManager.GetStream%28System.String%29> yöntemleri her zaman geçerli kültürden bağımsız olarak varsayılan kültürün kaynaklarını alır. Uygulamanın geçerli kültürünün veya belirli bir kültürün kaynaklarını almak için,, <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29> <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29> veya <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> yöntemini çağırmanız ve kaynakları alınacak olan kültürü belirtmeniz gerekir. Geçerli kültürün kaynaklarını almak için, <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> özelliğinin değerini `culture` bağımsız değişken olarak belirtin. Resource Manager kaynakları alamıyorsa `culture` , uygun kaynakları almak için standart kaynak geri dönüş kurallarını kullanır.  
   
@@ -207,4 +207,4 @@ csc Example.cs
 - [Masaüstü uygulamalarındaki kaynaklar](index.md)
 - [Kaynakları Paketleme ve Dağıtma](packaging-and-deploying-resources-in-desktop-apps.md)
 - [Çalışma Zamanının Derlemelerin Konumunu Bulması](../deployment/how-the-runtime-locates-assemblies.md)
-- [Windows Mağazası uygulamalarında kaynak oluşturma ve alma](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))
+- [Windows Mağazası uygulamalarında kaynak oluşturma ve alma](/previous-versions/windows/apps/hh694557(v=vs.140))

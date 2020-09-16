@@ -4,12 +4,12 @@ description: .NET Core 'u hangi macOS sürümlerinin yükleyebileceğinizi öğr
 author: adegeo
 ms.author: adegeo
 ms.date: 06/25/2020
-ms.openlocfilehash: 19d5ca77b0308533c8f228be70c61daf1b7f82d9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: f946759a57bf2eedd296ecbd55fd3a5a7560638d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132761"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538372"
 ---
 # <a name="install-net-core-on-macos"></a>MacOS 'ta .NET Core 'u yükler
 
@@ -77,7 +77,7 @@ SDK, .NET Core Uygulamaları ve kitaplıkları derlemek ve yayımlamak için kul
 > [!NOTE]
 > Bir `+` sembol en düşük sürümü temsil eder.
 
-| .NET Core sürümü | Mac OS                 | Mimariler |     |
+| .NET Core sürümü | macOS                 | Mimariler |     |
 | ----------------- | --------------------- | --------------| --- |
 | 3,1               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md) |
 | 3.0               | High Sierra (10.13 +)  | x64 | [Daha fazla bilgi](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
@@ -145,7 +145,7 @@ export PATH=$PATH:$HOME/dotnet
 > [!TIP]
 > Yukarıdaki `export` Komutlar yalnızca .NET Core CLI komutlarını çalıştırıldığı terminal oturumu için kullanılabilir hale getirir.
 >
-> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örneğin:
+> Komutları kalıcı olarak eklemek için kabuk profilinizi düzenleyebilirsiniz. Linux için kullanılabilen birçok farklı kabuk vardır ve her birinin farklı bir profili vardır. Örnek:
 >
 > - **Bash kabuğu**: *~/. bash_profile*, *~/,bashrc*
 > - **Korn kabuğu**: *~/,KSHRC* veya *. Profile*
@@ -177,7 +177,7 @@ Visual Studio Code, Visual Studio gibi otomatikleştirilmiş bir .NET Core yükl
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , çalışma zamanının Otomasyon ve yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `current` . `runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası [SDK 'yı](sdk.md)yüklüyor.
+Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `current` . `runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası [SDK 'yı](./windows.md)yüklüyor.
 
 ```bash
 ./dotnet-install.sh --channel 3.1 --runtime aspnetcore

@@ -2,12 +2,12 @@
 title: dotnet publish komutu
 description: Dotnet publish komutu bir dizine .NET Core projesi veya çözümü yayımlar.
 ms.date: 02/24/2020
-ms.openlocfilehash: f171baaa0dbc070b6389ec0fa9895b2c5dcfafff
-ms.sourcegitcommit: f279a4488c48236793c04bf825ae6f9128790849
+ms.openlocfilehash: 53dc6010352d92489017c3aa776bcb6a3601ec2d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/06/2020
-ms.locfileid: "89501915"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537775"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -32,7 +32,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
 dotnet publish -h|--help
 ```
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet publish` uygulamayı derler, proje dosyasında belirtilen bağımlılıklarını okur ve elde edilen dosya kümesini bir dizine yayınlar. Çıktı aşağıdaki varlıkları içerir:
 
@@ -53,7 +53,7 @@ dotnet publish -h|--help
 
 `dotnet publish`Komut, `-p` özellikleri ayarlama ve bir günlükçü tanımlama gibi MSBuild seçeneklerini kabul eder `-l` . Örneğin, şu biçimi kullanarak bir MSBuild özelliği ayarlayabilirsiniz: `-p:<NAME>=<VALUE>` .
 
-Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örneğin:
+Ayrıca, bir *. pubxml* dosyasına (.net Core 3,1 SDK sürümünden itibaren kullanılabilir) başvurarak, yayınla ilgili özellikleri de ayarlayabilirsiniz. Örnek:
 
 ```dotnetcli
 dotnet publish -p:PublishProfile=FolderProfile
@@ -240,4 +240,4 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 - [MSBuild komut satırı başvurusu](/visualstudio/msbuild/msbuild-command-line-reference)
 - [ASP.NET Core uygulama dağıtımı için Visual Studio yayımlama profilleri (. pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
-- [Illınk. Tasks](https://aka.ms/dotnet-illink)
+- [Illınk. Tasks](../deploying/trim-self-contained.md)

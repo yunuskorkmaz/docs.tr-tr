@@ -4,12 +4,12 @@ description: Bu öğreticide, Docker ile bir .NET Core uygulamasını kapsayıya
 ms.date: 04/27/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 99bbc67096d98622ca5c0dc83d8b1be44a9995e5
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: b6775c760ef3f5bf1c9519430b038f149c9cf30f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810553"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538507"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Öğretici: bir .NET Core uygulamasını Kapsayıize edin
 
@@ -29,7 +29,7 @@ Docker kapsayıcısının bir .NET Core uygulaması için görevleri oluşturup 
 > [!NOTE]
 > Bu öğretici ASP.NET Core uygulamalar için **değildir** . ASP.NET Core kullanıyorsanız, [bir ASP.NET Core uygulama](/aspnet/core/host-and-deploy/docker/building-net-docker-images) öğreticisini nasıl Kapsayıyoruz hakkında bilgi edinin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Aşağıdaki önkoşulları yükler:
 
@@ -213,13 +213,13 @@ docker-working
 
 Terminalinizden aşağıdaki komutu çalıştırın:
 
-```Docker
+```console
 docker build -t counter-image -f Dockerfile .
 ```
 
 Docker, *Dockerfile*dosyasındaki her satırı işleyecek. `.` `docker build` Komutunda Docker 'ın bir *dockerfile dosyasını*bulmak için geçerli klasörü kullanmasını söyler. Bu komut, görüntüyü oluşturur ve bu görüntüye işaret eden **Counter-Image** adlı bir yerel depo oluşturur. Bu komut tamamlandıktan sonra, `docker images` yüklenen görüntülerin listesini görmek için komutunu çalıştırın:
 
-```Docker
+```console
 docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE
 counter-image                           latest              e6780479db63        4 days ago          190MB
@@ -242,7 +242,7 @@ Sonraki komut, `ENTRYPOINT` Docker öğesine kapsayıcıyı yürütülebilir ola
 
 Terminalinizden `docker build -t counter-image -f Dockerfile .` komutunu çalıştırın ve komut tamamlandığında komutunu çalıştırın `docker images` .
 
-```Docker
+```console
 docker build -t counter-image -f Dockerfile .
 Sending build context to Docker daemon  1.117MB
 Step 1/4 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
@@ -272,14 +272,14 @@ mcr.microsoft.com/dotnet/core/aspnet    3.1                 e6780479db63        
 
 Artık uygulamanızı içeren bir görüntünüz olduğuna göre, bir kapsayıcı oluşturabilirsiniz. Bir kapsayıcıyı iki şekilde oluşturabilirsiniz. İlk olarak, durdurulan yeni bir kapsayıcı oluşturun.
 
-```Docker
+```console
 docker create --name core-counter counter-image
 0f281cb3af994fba5d962cc7d482828484ea14ead6bfe386a35e5088c0058851
 ```
 
 `docker create`Yukarıdaki komutu **sayaç görüntüsü** görüntüsünü temel alan bir kapsayıcı oluşturur. Bu komutun çıktısı, oluşturulan kapsayıcının **KAPSAYıCı kimliğini** (sizinki farklı olacak) gösterir. *Tüm* kapsayıcıların listesini görmek için `docker ps -a` komutunu kullanın:
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE            COMMAND                   CREATED           STATUS     PORTS    NAMES
 0f281cb3af99    counter-image    "dotnet NetCore.Dock…"    40 seconds ago    Created             core-counter
@@ -289,7 +289,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED           STA
 
 Kapsayıcı belirli bir adla oluşturulmuştur `core-counter` , bu ad kapsayıcıyı yönetmek için kullanılır. Aşağıdaki örnek, `docker start` kapsayıcıyı başlatmak için komutunu kullanır ve sonra `docker ps` yalnızca çalıştıran kapsayıcıları göstermek için komutunu kullanır:
 
-```Docker
+```console
 docker start core-counter
 core-counter
 
@@ -300,7 +300,7 @@ CONTAINER ID    IMAGE            COMMAND                   CREATED          STAT
 
 Benzer şekilde, `docker stop` komut kapsayıcıyı durdurur. Aşağıdaki örnek, `docker stop` kapsayıcıyı durdurmak için komutunu kullanır ve ardından `docker ps` hiçbir kapsayıcının çalışmadığını göstermek için komutunu kullanır:
 
-```Docker
+```console
 docker stop core-counter
 core-counter
 
@@ -314,7 +314,7 @@ Bir kapsayıcı çalışmaya başladıktan sonra çıktıyı görmek için bu su
 
 Kapsayıcıdan ayrıldıktan sonra, hala çalıştığını ve saymakta olduğunu doğrulamak için yeniden bağlayın.
 
-```Docker
+```console
 docker start core-counter
 core-counter
 
@@ -335,13 +335,13 @@ Counter: 19
 
 Bu makalenin amaçları doğrultusunda, kapsayıcıların hiçbir şey yapmadan asılı istememeniz gerekmez. Daha önce oluşturduğunuz kapsayıcıyı silin. Kapsayıcı çalışıyorsa durdurun.
 
-```Docker
+```console
 docker stop core-counter
 ```
 
 Aşağıdaki örnekte tüm kapsayıcılar listelenmektedir. Ardından, `docker rm` kapsayıcıyı silmek için komutunu kullanır ve ardından çalışan kapsayıcılar için ikinci bir kez kontrol eder.
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE            COMMAND                   CREATED          STATUS                        PORTS    NAMES
 2f6424a7ddce    counter-image    "dotnet NetCore.Dock…"    7 minutes ago    Exited (143) 20 seconds ago            core-counter
@@ -357,7 +357,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 Docker, `docker run` kapsayıcıyı tek bir komut olarak oluşturup çalıştırmak için komutunu sağlar. Bu komut, ve daha sonra çalıştırma gereksinimini ortadan kaldırır `docker create` `docker start` . Kapsayıcı durdurulduğunda kapsayıcıyı otomatik olarak silmek için de bu komutu ayarlayabilirsiniz. Örneğin, `docker run -it --rm` ilk olarak iki şey yapmak için kullanın, kapsayıcıya bağlanmak için otomatik olarak geçerli terminali kullanın ve ardından kapsayıcı tamamlandığında onu kaldırın:
 
-```Docker
+```console
 docker run -it --rm counter-image
 Counter: 1
 Counter: 2
@@ -369,7 +369,7 @@ Counter: 5
 
 Kapsayıcı Ayrıca parametreleri .NET Core uygulamasının yürütülmesine geçirir. .NET Core uygulamasının 3 ' te yalnızca 3 geçişine kadar saymasını bildirmek için.
 
-```Docker
+```console
 docker run -it --rm counter-image 3
 Counter: 1
 Counter: 2
@@ -378,7 +378,7 @@ Counter: 3
 
 İle `docker run -it` , <kbd>CTRL + C</kbd> komutu kapsayıcıda çalışan işlemi durdurur, bu da kapsayıcıyı durdurur. `--rm`Parametre sağlandığı için, işlem durdurulduğunda kapsayıcı otomatik olarak silinir. Mevcut olmadığını doğrulayın:
 
-```Docker
+```console
 docker ps -a
 CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 ```
@@ -391,7 +391,7 @@ CONTAINER ID    IMAGE    COMMAND    CREATED    STATUS    PORTS    NAMES
 
 Bu örnekte, `ENTRYPOINT` olarak değiştirilir `cmd.exe` . İşlemi sonlandırmak ve kapsayıcıyı durdurmak için <kbd>CTRL + C</kbd> tuşlarına basıldığında.
 
-```Docker
+```console
 docker run -it --rm --entrypoint "cmd.exe" counter-image
 
 Microsoft Windows [Version 10.0.17763.379]
@@ -450,25 +450,25 @@ Bu öğreticide kapsayıcılar ve görüntüler oluşturdunuz. İsterseniz, bu k
 
 01. Tüm kapsayıcıları Listele
 
-    ```Docker
+    ```console
     docker ps -a
     ```
 
 02. Adına göre çalışan kapsayıcıları durdurun.
 
-    ```Docker
+    ```console
     docker stop counter-image
     ```
 
 03. Kapsayıcıyı silme
 
-    ```Docker
+    ```console
     docker rm counter-image
     ```
 
 Sonra, makinenizde artık istemediğiniz görüntüleri silin. *Dockerfile* dosyanız tarafından oluşturulan görüntüyü silin ve ardından *dockerfile* ' ın dayandığı .NET Core görüntüsünü silin. **Görüntü kimliğini** veya **Depo: etiketli dize etiketini** kullanabilirsiniz.
 
-```Docker
+```console
 docker rmi counter-image:latest
 docker rmi mcr.microsoft.com/dotnet/core/aspnet:3.1
 ```

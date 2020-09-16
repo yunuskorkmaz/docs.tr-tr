@@ -3,12 +3,12 @@ title: Tanılama araçlarına genel bakış-.NET Core
 description: .NET Core uygulamalarını tanılamak için kullanılabilen araçlara ve tekniklere genel bakış.
 ms.date: 07/16/2020
 ms.topic: overview
-ms.openlocfilehash: 568f237e131cde18dad7c87ddff2fdd3d4bc5b8b
-ms.sourcegitcommit: 43d5aca3fda42bad8843f6c4e72f6bd52daa55f1
+ms.openlocfilehash: e97acccbe3bdd577ee600cefb9f1f0528d3c1ac0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89597979"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538533"
 ---
 # <a name="what-diagnostic-tools-are-available-in-net-core"></a>.NET Core 'da hangi tanılama araçları kullanılabilir?
 
@@ -28,7 +28,7 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 
 [Birim testi](../testing/index.md) , yüksek kaliteli yazılımların sürekli tümleştirilmesine ve dağıtımına yönelik temel bir bileşendir. Birim testleri, bir şeyi kesen bir erken uyarı sağlayacak şekilde tasarlanmıştır.
 
-## <a name="debug-linux-dumps"></a>Linux dökümlerinde hata ayıkla
+## <a name="debug-linux-dumps"></a>Linux dökümlerinin hatasını ayıklama
 
 [Linux dökümlerinde hata ayıklama](debug-linux-dumps.md) , Linux üzerinde dökümleri nasıl toplayacağınızı ve analiz edeceğinizi açıklar.
 
@@ -50,13 +50,13 @@ Bu makale, ihtiyacınız olan çeşitli araçları bulmanıza yardımcı olur.
 
 .NET Core, `EventPipe` Tanılama verilerinin sunulmasına ilişkin ne DENlerin dahil olduğunu içerir. [DotNet-Trace](dotnet-trace.md) Aracı, uygulamanızın yavaş çalışan uygulamaların yavaşlamasına neden olması gereken senaryolarda yardımcı olabilecek, uygulamanızda ilgi çekici profil oluşturma verilerini kullanmanıza olanak tanır.
 
-### <a name="dotnet-symbol"></a>DotNet-symbol
+### <a name="dotnet-symbol"></a>dotnet-symbol
 
 [DotNet-symbol](dotnet-symbol.md) dosyaları indirir (semboller, dac/DBI, ana bilgisayar dosyaları vb.) temel döküm veya mini döküm açmak için gereklidir. Farklı bir makinede yakalanan bir döküm dosyasında hata ayıklaması yapmak için semboller ve modüller gerekiyorsa bu aracı kullanın.
 
-### <a name="dotnet-sos"></a>DotNet-sos
+### <a name="dotnet-sos"></a>dotnet-sos
 
-[DotNet-sos](dotnet-sos.md) , Linux veya MacOS 'a (veya daha eski hata ayıklama araçları kullanılıyorsa Windows 'A) [sos hata ayıklama uzantısını](https://docs.microsoft.com/dotnet/framework/tools/sos-dll-sos-debugging-extension) yüklemek için kullanılır.
+[DotNet-sos](dotnet-sos.md) , Linux veya MacOS 'a (veya daha eski hata ayıklama araçları kullanılıyorsa Windows 'A) [sos hata ayıklama uzantısını](../../framework/tools/sos-dll-sos-debugging-extension.md) yüklemek için kullanılır.
 
 ## <a name="net-core-diagnostics-tutorials"></a>.NET Core tanılama öğreticileri
 

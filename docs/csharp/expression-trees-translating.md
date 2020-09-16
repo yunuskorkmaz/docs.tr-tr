@@ -1,30 +1,30 @@
 ---
-title: İfade Ağaçlarını Çevirme
-description: Bu ifade ağacının değiştirilmiş bir kopyasını yaparken bir ifade ağacındaki her düğümü nasıl ziyaret edin.
+title: Ifade ağaçları çevriliyor
+description: Bu ifade ağacının değiştirilmiş bir kopyasını oluştururken bir ifade ağacındaki her bir düğümü ziyaret etmeyi öğrenin.
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb64e79d915a5c5567d5a3d25f1d747df9687c87
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76115784"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537469"
 ---
 # <a name="translate-expression-trees"></a>İfade ağaçlarını çevir
 
-[Önceki -- Yapı İfadeleri](expression-trees-building.md)
+[Previous--Ifadeleri derleme](expression-trees-building.md)
 
-Bu son bölümde, bu ifade ağacının değiştirilmiş bir kopyasını yaparken bir ifade ağacındaki her düğümü nasıl ziyaret edeceğinizi öğreneceksiniz. Bunlar, iki önemli senaryoda kullanacağınız tekniklerdir. Birincisi, bir ifade ağacı tarafından ifade edilen algoritmaları anlamak, böylece başka bir ortama çevrilebilir. İkincisi, oluşturulan algoritmayı değiştirmek istediğiniz dedir. Bu, günlüğe kaydetme, yöntem aramalarını engellemek ve bunları izlemek veya başka amaçlar eklemek olabilir.
+Bu son bölümde, bu ifade ağacının değiştirilmiş bir kopyasını oluştururken bir ifade ağacındaki her bir düğümü ziyaret etmeyi öğreneceksiniz. Bunlar, iki önemli senaryoda kullanacağınız tekniklerdir. Birincisi, başka bir ortama çevrilebilmesi için bir ifade ağacı tarafından ifade edilen algoritmaları anlamaktır. İkincisi, oluşturulan algoritmayı değiştirmek istediğinizde olur. Bu, günlük kaydı eklemek, Yöntem çağrılarını ele almak ve izlemek ya da başka amaçlar olabilir.
 
-## <a name="translating-is-visiting"></a>Tercüme Etmek Ziyaret Etmektir
+## <a name="translating-is-visiting"></a>Çeviri ziyaret ediyor
 
-İfade ağacını çevirmek için oluşturduğunuz kod, ağaçtaki tüm düğümleri ziyaret etmek için gördüğünüz şeyin bir uzantısıdır. Bir ifade ağacını çevirdiğinizde, tüm düğümleri ziyaret edeyim ve onları ziyaret ederken yeni ağaç oluşturursunuz. Yeni ağaç, özgün düğümlere veya ağaca yerleştirdiğiniz yeni düğümlere başvurular içerebilir.
+Bir ifade ağacını çevirmek için oluşturduğunuz kod, bir ağaçtaki tüm düğümleri ziyaret etmek için zaten gördüğünüze ait bir uzantıdır. Bir ifade ağacını çevirirken, tüm düğümleri ziyaret edersiniz ve ziyaret edilirken yeni ağacı derleyebilirsiniz. Yeni ağaç orijinal düğümlere veya ağaca yerleştirdiğiniz yeni düğümlere başvuru içerebilir.
 
-Bir ifade ağacını ziyaret ederek ve bazı değiştirme düğümleri ile yeni bir ağaç oluşturarak bunu iş başında görelim. Bu örnekte, herhangi bir sabiti on kat daha büyük bir sabitle değiştirelim.
-Aksi takdirde, ifade ağacını sağlam bırakırız. Sabitin değerini okumak ve yeni bir sabitle değiştirmek yerine, sabit düğümü çarpma işlemini gerçekleştiren yeni bir düğümle değiştirerek bu değişikliği yapacağız.
+Bu işlemi, bir ifade ağacını ziyaret ederek ve değişiklik düğümleri içeren yeni bir ağaç oluşturarak görelim. Bu örnekte, her sabiti on kat daha büyük olan bir sabit ile değiştirin.
+Aksi takdirde, ifade ağacını bozulmadan bırakıyoruz. Sabitin değerini okumak ve yeni bir sabitle değiştirmek yerine, sabit düğümü çarpma işlemini gerçekleştiren yeni bir düğümle değiştirerek bu değişikliği yapacağız.
 
-Burada, sabit bir düğüm bulduğunuzda, çocukları orijinal sabit olan yeni bir çarpma `10`düğümü oluşturursunuz ve sabit:
+Burada, sabit bir düğüm bulduktan sonra, alt öğeleri orijinal sabitine ve sabitine sahip yeni bir çarpma düğümü oluşturursunuz `10` :
 
 ```csharp
 private static Expression ReplaceNodes(Expression original)
@@ -44,7 +44,7 @@ private static Expression ReplaceNodes(Expression original)
 }
 ```
 
-Orijinal düğümü yedekle değiştirerek, modifikasyonlarımızı içeren yeni bir ağaç oluşturulur. Değiştirilen ağacı derleyip çalıştırarak bunu doğrulayabiliriz.
+Özgün düğümü yenisiyle değiştirerek, değişikliklerinizi içeren yeni bir ağaç oluşturulur. Değiştirilmiş ağacı derleyip yürüterek bunu doğrulayabiliriz.
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -58,14 +58,14 @@ var answer = func();
 Console.WriteLine(answer);
 ```
 
-Yeni bir ağaç oluşturmak, varolan ağaçtaki düğümleri ziyaret etmenin ve yeni düğümler oluşturmanın ve bunları ağaca eklemenin bir kombinasyonudur.
+Yeni bir ağaç oluşturmak, var olan ağaçtaki düğümleri ziyaret etme ve yeni düğümler oluşturma ve bunları ağaca ekleme birleşimidir.
 
-Bu örnek, ifade ağaçlarının değişmez olmasının önemini göstermektedir. Yukarıda oluşturulan yeni ağacın yeni oluşturulan düğümlerin ve varolan ağaçtan düğümlerin bir karışımını içerdiğine dikkat edin. Bu güvenlidir, çünkü varolan ağaçtaki düğümler değiştirilemez. Bu önemli bellek verimliliği neden olabilir.
-Aynı düğümler bir ağaç boyunca veya birden çok ifade ağacında kullanılabilir. Düğümler değiştirilemediğinden, aynı düğüm gerektiğinde yeniden kullanılabilir.
+Bu örnek, ifade ağaçlarının sabit olmasının önemini gösterir. Yukarıda oluşturulan yeni ağacın yeni oluşturulan düğümlerin bir karışımını ve var olan ağaçtaki düğümleri içerdiğini unutmayın. Bu, var olan ağaçtaki düğümler değiştirilemediği için güvenlidir. Bu, önemli ölçüde bellek verimliliklerini sağlayabilir.
+Aynı düğümler bir ağacın tamamında veya birden çok ifade ağacında kullanılabilir. Düğümler değiştirilemediğinden, her gerektiğinde aynı düğüm yeniden kullanılabilir.
 
-## <a name="traversing-and-executing-an-addition"></a>Bir Eklemeyi Geçiş ve Yürütme
+## <a name="traversing-and-executing-an-addition"></a>Çapraz geçiş ve yürütme
 
-Bunu, ek düğümler ağacında yürüyen ve sonucu hesaplayan ikinci bir ziyaretçi oluşturarak doğrulayalım. Bunu, şimdiye kadar gördüğünüz ziyaretçiiçin birkaç değişiklik yaparak yapabilirsiniz. Bu yeni sürümde, ziyaretçi ekleme işleminin kısmi toplamını bu noktaya kadar döndürecektir. Sabit bir ifade için, bu sadece sabit ifadenin değeridir. Ek bir ifade için, sonuç, bu ağaçlar geçildikten sonra, sol ve sağ operands toplamıdır.
+Ayrıca, ek düğüm ağacını gösteren ve sonucu hesaplayan ikinci bir ziyaretçi oluşturarak bunu doğrulayalım. Şimdiye kadar gördüğünüz ziyaretçi üzerinde birkaç değişiklik yaparak bunu yapabilirsiniz. Bu yeni sürümde ziyaretçi, toplama işleminin kısmi toplamını bu noktaya kadar döndürür. Sabit bir ifade için yalnızca sabit ifadenin değeridir. Bir toplama ifadesi için, bu ağaçlar alındıktan sonra, sonuç sol ve sağ işlenenlerinin toplamıdır.
 
 ```csharp
 var one = Expression.Constant(1, typeof(int));
@@ -90,11 +90,11 @@ var theSum = aggregate(sum);
 Console.WriteLine(theSum);
 ```
 
-Burada biraz kod var, ama kavramlar çok yaklaşılabilir.
-Bu kod, derinlemesine ilk aramada çocukları ziyaret eder. Sabit bir düğümle karşılaştığında, ziyaretçi sabitin değerini döndürür. Ziyaretçi her iki çocuğu da ziyaret ettikten sonra, bu çocuklar bu alt ağaç için hesaplanan toplamı hesaplamış olacaklar. Ek düğüm artık toplamını hesaplayabilir.
-İfade ağacındaki tüm düğümler ziyaret edildikten sonra, toplam hesaplanmış olur. Örneği hata ayıklamada çalıştırarak ve yürütmeyi izleyerek yürütmeyi izleyebilirsiniz.
+Burada bir kod biraz daha vardır ancak kavramlar çok ulaşılabilir.
+Bu kod, alt öğeleri derinlemesine bir ilk aramada ziyaret ediyor. Sabit bir düğümle karşılaştığında, ziyaretçi sabit değeri döndürür. Ziyaretçi iki alt öğeyi ziyaret ettikten sonra bu alt ağaç için hesaplanan toplamı hesaplamıştır. Toplama düğümü artık toplamını hesaplaedebilir.
+İfade ağacındaki tüm düğümler ziyaret edildikten sonra toplam hesaplanır. Örneği hata ayıklayıcıda çalıştırıp yürütmeyi izleyerek yürütmeyi izleyebilirsiniz.
 
-Düğümlerin nasıl analiz edildiğini ve ağacın geçişiyle toplamın nasıl hesaplandırılanını izlemeyi kolaylaştıralım. Aşağıda, agrega yönteminin oldukça fazla izleme bilgisi içeren güncelleştirilmiş bir sürümü verem:
+Düğümlerin nasıl çözümlenmekte olduğunu ve ağacın çapraz geçiş yaparak nasıl hesaplantığını izlemeyi daha kolay hale getirir. Toplam yönteminin, tam olarak bir izleme bilgisi içeren güncelleştirilmiş bir sürümü aşağıda verilmiştir:
 
 ```csharp
 private static int Aggregate(Expression exp)
@@ -123,7 +123,7 @@ private static int Aggregate(Expression exp)
 }
 ```
 
-Aynı ifade üzerinde çalıştırmak aşağıdaki çıktıyı verir:
+Aynı ifadede çalıştırmak aşağıdaki çıktıyı verir:
 
 ```output
 10
@@ -152,15 +152,15 @@ Computed sum: 10
 10
 ```
 
-Çıktıyı izleyin ve yukarıdaki kodda izleyin. Kodun her düğümü nasıl ziyaret ettiğinizi ve ağaçtan geçerken toplamı nasıl hesaplayabilmelisinizi ve toplamı nasıl bulduğunu öğrenebilirsiniz.
+Çıktıyı izleyin ve yukarıdaki kodda izleyin. Kodun her bir düğümü nasıl ziyaret edebilmeli ve toplam ağaçta gezinilerek toplamı nasıl hesapladığını ve toplamı bulabileceksiniz.
 
-Şimdi, farklı bir çalışma bakalım, ifade ile: `sum1`
+Şimdi, tarafından verilen ifadeyle farklı bir çalıştırmaya bakalım `sum1` :
 
 ```csharp
 Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 ```
 
-Bu ifadeyi incelemenin çıktısı aşağıda verebisi aşağıda veda edebilirsiniz:
+Bu ifadeyi inceleyerek çıkış şu şekildedir:
 
 ```output
 Found Addition Expression
@@ -188,13 +188,13 @@ Computed sum: 10
 10
 ```
 
-Son yanıt aynı olsa da, ağaç geçişi tamamen farklıdır. Ağaç ilk meydana gelen farklı işlemler ile inşa edildi, çünkü düğümleri farklı bir sırada seyahat edilir.
+Nihai yanıt aynı olsa da, ağaç geçişi tamamen farklıdır. Ağaç, ilk olarak oluşan farklı işlemlerle oluşturulduğundan, bu düğümler farklı bir sıraya göre yapılır.
 
 ## <a name="learning-more"></a>Daha Fazla Bilgi
 
-Bu örnek, bir ifade ağacı tarafından temsil edilen algoritmaları geçiş ve yorumlamak için oluşturacağınız kodun küçük bir alt kümesini gösterir. İfade ağaçlarını başka bir dile çeviren genel amaçlı bir kütüphane oluşturmak için gereken tüm çalışmaların tam bir tartışması için lütfen Matt Warren'ın [bu dizisini](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) okuyun. Bir ifade ağacında bulabileceğiniz kodlardan herhangi birinin nasıl çevrilebileceği hakkında ayrıntılı bilgi edinilir.
+Bu örnek, bir ifade ağacı tarafından temsil edilen algoritmaları çapraz olarak geçirmek ve yorumlamak için derleyerek kodun küçük bir alt kümesini gösterir. İfade ağaçlarını başka bir dile çeviren genel amaçlı bir kitaplık oluşturmak için gereken tüm çalışmalar hakkında ayrıntılı bir açıklama için lütfen [Bu seriyi](/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series) Matt Warren ile okuyun. Bir ifade ağacında bulabileceğiniz herhangi bir kodun nasıl çevrilebileceğini gösteren harika bir ayrıntıya gider.
 
-Umarım ifade ağaçlarının gerçek gücünü görmüşsunuzdur.
-Bir kod kümesini inceleyebilir, bu kodda istediğiniz değişiklikleri yapabilir ve değiştirilen sürümü çalıştırabilirsiniz. İfade ağaçları değişmez olduğundan, varolan ağaçların bileşenlerini kullanarak yeni ağaçlar oluşturabilirsiniz. Bu, değiştirilmiş ifade ağaçları oluşturmak için gereken bellek miktarını en aza indirir.
+Artık ifade ağaçlarının gerçek gücünü gördük.
+Bir kod kümesini inceleyebilir, bu koda istediğiniz değişiklikleri yapabilir ve değiştirilen sürümü yürütebilirsiniz. İfade ağaçları sabit olduğundan, varolan ağaçların bileşenlerini kullanarak yeni ağaçlar oluşturabilirsiniz. Bu, değiştirilen ifade ağaçları oluşturmak için gereken bellek miktarını en aza indirir.
 
-[Sonraki -- Özetleme](expression-trees-summary.md)
+[İleri--toplam](expression-trees-summary.md)

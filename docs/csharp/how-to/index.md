@@ -2,12 +2,12 @@
 title: Nasıl yapılır makaleleri (C# Kılavuzu)
 description: Hızlı ipuçları ve kısa, odaklanmış kod örnekleri koleksiyonu
 ms.date: 12/20/2017
-ms.openlocfilehash: 9dd069ff767d65002b78c18b398b700a1f26ebfa
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 26d3931ff3b4ecfcc052c3ace25a09801f84c505
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465162"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537411"
 ---
 # <a name="how-to-c"></a>Nasıl yapılır (C#)
 
@@ -106,23 +106,23 @@ LINQ, LINQ sorgu ifadesi modelini destekleyen herhangi bir veri kaynağını sor
 - [Bir sorguda lambda Ifadeleri kullanın](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md).
 - [ `var` Sorgu ifadelerinde kullanın](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 - [Bir sorgudan öğe özelliklerinin alt kümelerini döndürün](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md).
-- [Karmaşık filtrelemeye sahip sorgular yazın](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md).
-- [Bir veri kaynağının öğelerini sıralayın](../programming-guide/concepts/linq/how-to-sort-elements.md).
-- [Öğeleri birden çok anahtar üzerinde sıralayın](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
-- [Projeksiyon türünü denetleyin](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
+- [Karmaşık filtrelemeye sahip sorgular yazın](../../standard/linq/write-queries-complex-filtering.md).
+- [Bir veri kaynağının öğelerini sıralayın](../../standard/linq/sort-elements.md).
+- [Öğeleri birden çok anahtar üzerinde sıralayın](../../standard/linq/sort-elements-multiple-keys.md).
+- [Projeksiyon türünü denetleyin](../../standard/linq/control-type-projection.md).
 - [Kaynak dizisindeki bir değerin tekrarlamalarını say](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
-- [Ara değerleri hesaplayın](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
+- [Ara değerleri hesaplayın](../../standard/linq/calculate-intermediate-values.md).
 - [Birden çok kaynaktaki verileri birleştirin](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [İki sıra arasında ayarlanan farkı bulur](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).
-- [Boş sorgu sonuçlarında hata ayıklayın](../programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md).
+- [Boş sorgu sonuçlarında hata ayıklayın](../../standard/linq/debug-empty-query-results-sets.md).
 - [LINQ Sorgularına özel yöntemler ekleyin](../programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md).
 
 ## <a name="multiple-threads-and-async-processing"></a>Birden çok iş parçacığı ve zaman uyumsuz işleme
 
 Modern programlar genellikle zaman uyumsuz işlemler kullanır. Bu makaleler, bu teknikleri kullanmayı öğrenmenize yardımcı olur.
 
-- [Kullanarak `System.Threading.Tasks.Task.WhenAll` zaman uyumsuz performansı geliştirir ](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
-- [ `async` Ve `await` kullanarak birden çok Web Isteğini paralel hale getirin ](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
+- [Kullanarak `System.Threading.Tasks.Task.WhenAll` zaman uyumsuz performansı geliştirir ](../programming-guide/concepts/async/index.md).
+- [ `async` Ve `await` kullanarak birden çok Web Isteğini paralel hale getirin ](../programming-guide/concepts/async/index.md).
 - [Bir iş parçacığı havuzu kullanın](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Programınızın komut satırı bağımsız değişkenleri

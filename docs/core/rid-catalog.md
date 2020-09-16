@@ -2,12 +2,12 @@
 title: .NET Core çalışma zamanı tanımlayıcısı (RID) kataloğu
 description: .NET Core 'da çalışma zamanı tanımlayıcısı (RID) ve RID 'Lerin nasıl kullanıldığı hakkında bilgi edinin.
 ms.date: 02/22/2019
-ms.openlocfilehash: 719c84248b955ec05d7cd9b361c7e5ebea6aa37b
-ms.sourcegitcommit: b1f4756120deaecb8b554477bb040620f69a4209
+ms.openlocfilehash: 096ce8e33a82df3b9de682ed16e10fbe9f07fd03
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89414571"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538230"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID kataloğu
 
@@ -108,7 +108,7 @@ Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [run
   - `win10-arm`
   - `win10-arm64`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?pivots=os-windows).
+Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install/windows.md#dependencies).
 
 ## <a name="linux-rids"></a>Linux RID 'leri
 
@@ -127,7 +127,7 @@ Yalnızca ortak değerler listelenir. En son ve tüm sürüm için depodaki [run
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?pivots=os-linux).
+Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install/linux.md).
 
 ## <a name="macos-rids"></a>macOS RIDs
 
@@ -146,7 +146,7 @@ macOS 'Ler eski "OSX" markasını kullanır. Yalnızca ortak değerler listeleni
 - macOS 10,14 Mojave (.NET Core 1,1 veya sonraki sürümler)
   - `osx.10.14-x64`
 
-Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](install/dependencies.md?pivots=os-macos).
+Daha fazla bilgi için bkz. [.NET Core Dependencies ve gereksinimleri](./install/macos.md#dependencies).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

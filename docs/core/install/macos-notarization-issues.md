@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanı, SDK ve .NET Core ile oluşturulan uyg
 author: adegeo
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: a7741727ad46216ebd9936515d8af29b6d7049c2
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 616f163856cca48ccc6d1a14e0c6e68d56379c0c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656533"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538308"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina Notaror .NET Core indirmeleri ve projeleri üzerindeki etki
 
@@ -17,7 +17,7 @@ MacOS Catalina (sürüm 10,15) ile başlayarak, 1 Haziran 2019 ' den sonra oluş
 
 ## <a name="installing-net-core"></a>.NET Core yükleniyor
 
-.NET Core (çalışma zamanı ve SDK) yükleyicileri 3,1, 3,0 ve 2,1 sürümleri, 18 Şubat 2020 tarihinden itibaren giderilmiş. Önceki yayınlanmış sürümler yok. Önce yükleyiciyi indirerek ve sonra komutunu kullanarak .NET Core 'un bilinmeyen bir sürümünü el ile yükleyebilirsiniz `sudo installer` . Daha fazla bilgi için bkz. [macOS Için indirme ve el ile yükleme](sdk.md?pivots=os-macos#download-and-manually-install).
+.NET Core (çalışma zamanı ve SDK) yükleyicileri 3,1, 3,0 ve 2,1 sürümleri, 18 Şubat 2020 tarihinden itibaren giderilmiş. Önceki yayınlanmış sürümler yok. Önce yükleyiciyi indirerek ve sonra komutunu kullanarak .NET Core 'un bilinmeyen bir sürümünü el ile yükleyebilirsiniz `sudo installer` . Daha fazla bilgi için bkz. [macOS Için indirme ve el ile yükleme](./macos.md#download-and-manually-install).
 
 Aşağıdaki sürümlerle başlayarak, .NET Core yükleyicileri dikkate alınır:
 

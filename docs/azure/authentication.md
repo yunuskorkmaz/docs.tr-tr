@@ -3,12 +3,12 @@ title: .NET için Azure kitaplıklarında kimlik doğrulamasını anlama
 description: .NET için Azure SDK ile kimlik doğrulamanın farklı yollarını açıklar.
 ms.date: 06/19/2020
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: bc2fce919d88a528f21df9f561cbe33e1119762a
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: dbae72eb9e80801d7338b210f9664f1c4e318ae0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811385"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539183"
 ---
 # <a name="authenticate-with-the-azure-sdk-for-net"></a>.NET için Azure SDK ile kimlik doğrulama
 
@@ -25,7 +25,7 @@ Azure. Identity ' ı desteklemeyen kitaplıklarda kimlik doğrulaması yapmak i�
 
 ## <a name="access-azure-resources"></a>Azure kaynaklarına erişin
 
-Key Vault bir gizli dizi alma veya depolama alanında BLOB depolama gibi Azure kaynaklarıyla etkileşim kurmak için, birçok Azure hizmet kitaplığı, kimlik doğrulaması için bir bağlantı dizesi veya anahtar gerektirir. Örneğin, SQL veritabanı [Standart BIR SQL bağlantı dizesi](https://docs.microsoft.com/azure/azure-sql/database/connect-query-dotnet-core)kullanır. Hizmet bağlantı dizeleri [Cosmosdb](/azure/cosmos-db/), [redin için Azure Cache](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)ve [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)gibi diğer Azure hizmetlerinde kullanılır. Bu dizeleri Azure portal, CLı veya PowerShell kullanarak edinebilirsiniz. Kodunuzda bağlantı dizeleri oluşturmak üzere kaynakları sorgulamak için .NET için Azure Yönetim kitaplıklarını da kullanabilirsiniz.
+Key Vault bir gizli dizi alma veya depolama alanında BLOB depolama gibi Azure kaynaklarıyla etkileşim kurmak için, birçok Azure hizmet kitaplığı, kimlik doğrulaması için bir bağlantı dizesi veya anahtar gerektirir. Örneğin, SQL veritabanı [Standart BIR SQL bağlantı dizesi](/azure/azure-sql/database/connect-query-dotnet-core)kullanır. Hizmet bağlantı dizeleri [Cosmosdb](/azure/cosmos-db/), [redin için Azure Cache](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)ve [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)gibi diğer Azure hizmetlerinde kullanılır. Bu dizeleri Azure portal, CLı veya PowerShell kullanarak edinebilirsiniz. Kodunuzda bağlantı dizeleri oluşturmak üzere kaynakları sorgulamak için .NET için Azure Yönetim kitaplıklarını da kullanabilirsiniz.
 
 Bir bağlantı dizesi kullanma yöntemleri ürüne göre farklılık gösterir. [Azure ürününüzün belgelerine bakın](/azure/?product=featured).
 

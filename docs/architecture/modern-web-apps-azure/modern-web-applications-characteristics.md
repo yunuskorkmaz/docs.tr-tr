@@ -7,17 +7,17 @@ no-loc:
 - Blazor
 - WebAssembly
 ms.date: 12/04/2019
-ms.openlocfilehash: fd6658a6143e132d488660d1aa4a35e427ba2d84
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a4d7558039d64b21a2744f74d037369ea8c6c923
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174802"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539274"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Modern Web uygulamalarının özellikleri
 
 > "… uygun tasarımla, özellikler de birlikte gelir. Bu yaklaşım, bir dizi değildir ancak başarılı olmaya devam eder. "  
-> _\-Dennıs Ritchie_
+> _\- Dennıs Ritchie_
 
 Modern Web uygulamalarının daha fazla Kullanıcı beklentileri ve daha önce her zamankinden daha fazla olması gerekir. Bugünün Web uygulamalarının dünyanın herhangi bir yerinden 24/7 kullanılabilir olması ve neredeyse tüm cihazlardan veya ekran boyutundan kullanılabilir olması beklenmektedir. Web uygulamaları, istek üzerine ani artışları karşılamak için güvenli, esnek ve ölçeklenebilir olmalıdır. Giderek karmaşık senaryolar, JavaScript kullanılarak istemci üzerinde oluşturulmuş zengin kullanıcı deneyimleri tarafından işlenmeli ve Web API 'Leri aracılığıyla etkin bir şekilde iletişim edilmelidir.
 
@@ -38,7 +38,7 @@ Bu kılavuz, bazı ilkeleri ve önerileri gösteren bir başvuru uygulaması ola
 
 ## <a name="cloud-hosted-and-scalable"></a>Bulutta barındırılan ve ölçeklenebilir
 
-ASP.NET Core, düşük bellek ve yüksek aktarım hızı olduğundan bulut (genel bulut, özel bulut, tüm bulut) için iyileştirilmiştir. ASP.NET Core uygulamaların daha küçük bir şekilde kapladığı alanı, bunları aynı donanımda barındırabilmeniz ve kullandıkça öde bulut barındırma hizmetleri 'ni kullanırken daha az kaynak ödemenize yol açabilir. Daha yüksek aktarım hızı, aynı donanıma verilen bir uygulamadan daha fazla müşteriye, sunuculara ve barındırma altyapısına yatırım ihtiyacını azaltmaya daha fazla bilgi verebileceğiniz anlamına gelir.
+ASP.NET Core, düşük bellek ve yüksek aktarım hızı olduğundan bulut (genel bulut, özel bulut, tüm bulut) için iyileştirilmiştir. ASP.NET Core uygulamaların daha küçük bir şekilde kapladığı alanı, bunları aynı donanımda barındırabilmeniz ve kullandıkça öde bulut barındırma hizmetlerini kullanırken daha az kaynak ödemenize yol açabilir. Daha yüksek aktarım hızı, aynı donanıma verilen bir uygulamadan daha fazla müşteriye, sunuculara ve barındırma altyapısına yatırım ihtiyacını azaltmaya daha fazla bilgi verebileceğiniz anlamına gelir.
 
 ## <a name="cross-platform"></a>Platformlar arası
 
@@ -72,11 +72,11 @@ ASP.NET Core buna ek olarak, geleneksel ASP.NET 4. x Web uygulamaları oluşturm
 
 ## Blazor
 
-BlazorASP.NET Core 3,0 ve üzeri sürümlerde bulunur. Razor, C# ve ASP.NET Core kullanarak zengin etkileşimli Web istemci uygulamaları oluşturmak için yeni bir mekanizma sağlar. Modern Web uygulamaları geliştirirken göz önünde bulundurmanız gereken başka bir çözüm sunar. BlazorGöz önünde bulundurmanız gereken iki sürümü vardır: sunucu tarafı ve istemci tarafı.
+Blazor ASP.NET Core 3,0 ve üzeri sürümlerde bulunur. Razor, C# ve ASP.NET Core kullanarak zengin etkileşimli Web istemci uygulamaları oluşturmak için yeni bir mekanizma sağlar. Modern Web uygulamaları geliştirirken göz önünde bulundurmanız gereken başka bir çözüm sunar. BlazorGöz önünde bulundurmanız gereken iki sürümü vardır: sunucu tarafı ve istemci tarafı.
 
 Sunucu tarafı Blazor 2019 ' de ASP.NET Core 3,0 ile yayımlanmıştır. Adından da anlaşılacağı gibi, sunucu üzerinde çalışır ve değişiklikler istemci belgesinde ağ üzerinden tarayıcıya geri getirilir. Sunucu tarafı, Blazor istemci tarafı JavaScript gerekmeden ve her istemci sayfa etkileşimi için ayrı sayfa yükleri gerektirmeden zengin bir istemci deneyimi sağlar. Yüklenen sayfadaki değişiklikler sunucu tarafından istenir ve işlenir ve ardından SignalR kullanılarak istemciye geri gönderilir.
 
-İstemci tarafı Blazor 2020 ' de yayımlanacak ve sunucuda değişiklikleri işleme gereksinimini ortadan kaldıracak. Bunun yerine, WebAssembly istemci içinde .NET kodu çalıştırmak için kullanılır. İstemci, veri istemek için gerekliyse sunucuya API çağrıları yapmaya devam edebilir, ancak tüm istemci tarafı davranışı istemci içinde çalışır WebAssembly ve tüm büyük tarayıcılarda zaten desteklenir ve yalnızca bir JavaScript kitaplığı olur.
+BlazorMayıs 2020 ' de yayınlanan istemci tarafı, değişiklikleri sunucuda işleme gereksinimini ortadan kaldırır. Bunun yerine, WebAssembly istemci içinde .NET kodu çalıştırmayı kullanır. İstemci, veri istemek için gerekliyse sunucuya API çağrıları yapmaya devam edebilir, ancak tüm istemci tarafı davranışı istemci içinde çalışır WebAssembly ve tüm büyük tarayıcılarda zaten desteklenir ve yalnızca bir JavaScript kitaplığı olur.
 
 > ### <a name="references--modern-web-applications"></a>Başvurular – Modern Web uygulamaları
 >
@@ -84,7 +84,7 @@ Sunucu tarafı Blazor 2019 ' de ASP.NET Core 3,0 ile yayımlanmıştır. Adında
 >   <https://docs.microsoft.com/aspnet/core/>
 > - **ASP.NET Core 'de test etme**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Blazor-Kullanmaya başlayın**  
+> - **Blazor -Kullanmaya başlayın**  
 >   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]

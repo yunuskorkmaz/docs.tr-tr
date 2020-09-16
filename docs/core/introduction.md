@@ -4,16 +4,16 @@ description: .NET Core, Windows, Linux ve macOS uygulamaları oluşturmaya yöne
 author: richlander
 ms.date: 03/26/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: b28ad965e54680e2e1134c389266741ade28084f
-ms.sourcegitcommit: 67cf756b033c6173a1bbd1cbd5aef1fccac99e34
+ms.openlocfilehash: 350fd50bee3403a05d1c19c9a692535613b17498
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86226588"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538282"
 ---
 # <a name="introduction-to-net-core"></a>NET Core’a giriş
 
-[.NET Core](about.md) , [Açık kaynaklı](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformudur. Windows, macOS ve Linux için, birden çok programlama dilini kullanarak x64, x, ARM32 ve ARM64 işlemcileri için .NET Core uygulamaları oluşturabilirsiniz. Çerçeveler ve API 'Ler [bulut](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [istemci kullanıcı arabirimi](../desktop-wpf/overview/index.md)ve [makine öğrenimi](/dotnet/machine-learning/)için sağlanır.
+[.NET Core](about.md) , [Açık kaynaklı](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT), genel amaçlı bir geliştirme platformudur. Windows, macOS ve Linux için, birden çok programlama dilini kullanarak x64, x, ARM32 ve ARM64 işlemcileri için .NET Core uygulamaları oluşturabilirsiniz. Çerçeveler ve API 'Ler [bulut](/aspnet/core/), [IoT](/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0), [istemci kullanıcı arabirimi](../desktop-wpf/overview/index.md)ve [makine öğrenimi](../machine-learning/index.yml)için sağlanır.
 
 Makinenizde .NET Core 'u denemek için [.NET Core SDK indirin](https://dotnet.microsoft.com/download) . En son sürüm [.NET Core 3,1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)' dir.
 
@@ -22,7 +22,7 @@ Makinenizde .NET Core 'u denemek için [.NET Core SDK indirin](https://dotnet.mi
 Aşağıdaki yollarla .NET Core edinebilirsiniz:
 
 * [Windows ve macOS yükleyicileri](https://dotnet.microsoft.com/download)
-* [Linux paketleri](https://docs.microsoft.com/dotnet/core/install/linux-package-managers)
+* [Linux paketleri](./install/linux.md)
 * [Docker kapsayıcıları](https://hub.docker.com/_/microsoft-dotnet-core/)
 * [ZIP 'ler ve tartopları](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 * [Betikleri yükler](https://dotnet.microsoft.com/download/dotnet-core/scripts)
@@ -43,7 +43,7 @@ Aşağıdaki çıkışı görmeniz gerekir:
 Hello World!
 ```
 
-## <a name="contribute"></a>Katkıda Bulun
+## <a name="contribute"></a>Katkıda Bulunun
 
 .NET Core, açık bir platformdur. Herkese katılmak için hoş geldiniz.
 

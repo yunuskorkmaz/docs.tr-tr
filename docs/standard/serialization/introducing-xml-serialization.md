@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 334cb3fe40c310189018d924aef552ecd87e9a65
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84277966"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535416"
 ---
 # <a name="xml-serialization"></a>XML serileştirme
 
@@ -29,7 +29,7 @@ Serileştirme, bir nesneyi, kolayca taşınacak bir forma dönüştürme işlemi
 > [!NOTE]
 > XML serileştirme yöntemleri, Dizinleyicileri, özel alanları veya salt okunur özelliklerini (dışında salt okunur koleksiyonlar) dönüştürmez. Bir nesnenin tüm alanları ve özellikleri serileştirmek için ve ortak ve özel, kullanın <xref:System.Runtime.Serialization.DataContractSerializer> XML serileştirme yerine.
 
- XML serileştirme içindeki merkezi sınıf sınıftır <xref:System.Xml.Serialization.XmlSerializer> ve bu sınıftaki en önemli Yöntemler **serileştirme** ve **seri durumdan çıkarma** yöntemleridir. <xref:System.Xml.Serialization.XmlSerializer> C# dosyaları oluşturur ve bunları bu serileştirme gerçekleştirmek için .dll dosyalarıyla derler. .NET Framework 2,0 ' de, [XML serileştiricisi oluşturma aracı (SGen. exe)](xml-serializer-generator-tool-sgen-exe.md) , uygulamanızla birlikte dağıtılacak ve başlangıç performansını iyileştirecek şekilde bu serileştirme derlemelerini oluşturmak için tasarlanmıştır. **XmlSerializer** tarafından oluşturulan xml akışı, world WIDE Web KONSORSIYUMU (W3C) [XML şeması tanım dili (xsd) 1,0 önerisi](https://www.w3.org/TR/xslt)ile uyumludur. Ayrıca, oluşturulan veri türleri başlıklı belge ile uyumludur "XML şema bölüm 2: veri türleri."
+ XML serileştirme içindeki merkezi sınıf sınıftır <xref:System.Xml.Serialization.XmlSerializer> ve bu sınıftaki en önemli Yöntemler **serileştirme** ve **seri durumdan çıkarma** yöntemleridir. <xref:System.Xml.Serialization.XmlSerializer> C# dosyaları oluşturur ve bunları bu serileştirme gerçekleştirmek için .dll dosyalarıyla derler. .NET Framework 2,0 ' de, [XML serileştiricisi oluşturma aracı (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) , uygulamanızla birlikte dağıtılacak ve başlangıç performansını iyileştirecek şekilde bu serileştirme derlemelerini oluşturmak için tasarlanmıştır. **XmlSerializer** tarafından oluşturulan xml akışı, world WIDE Web KONSORSIYUMU (W3C) [XML şeması tanım dili (xsd) 1,0 önerisi](https://www.w3.org/TR/xslt)ile uyumludur. Ayrıca, oluşturulan veri türleri başlıklı belge ile uyumludur "XML şema bölüm 2: veri türleri."
 
  Nesnelerinizin verileri, diziler, alanlar, özellikler, ilkel türler, diziler ve hatta katıştırılmış XML gibi programlama dili yapılarını **XmlElement** veya **XmlAttribute** nesneleri biçiminde kullanarak açıklanır. Kendi sınıflarınızı oluşturma, özniteliklerle açıklama eklenmiş veya XML şema tanımı aracını kullanarak mevcut bir XML şemasına göre sınıfları oluşturma seçeneğiniz vardır.
 
@@ -39,7 +39,7 @@ Serileştirme, bir nesneyi, kolayca taşınacak bir forma dönüştürme işlemi
 
  **XmlSerializer** sınıfı bir nesneyi daha sonra serileştirmez ve KODLANMıŞ BIR SOAP XML akışı oluşturabilir. Oluşturulan XML "Basit Nesne Erişim Protokolü (SOAP) 1.1." başlıklı bölümüne World Wide Web Consortium belgesinin 5 uyar Bu işlem hakkında daha fazla bilgi için bkz. [nasıl yapılır: bir NESNEYI SOAP kodlu XML akışı olarak serileştirme](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md). Oluşturulan XML 'yi denetleyen özniteliklerin bir tablosu için bkz. [KODLANMıŞ SOAP serileştirmesini denetleyen öznitelikler](attributes-that-control-encoded-soap-serialization.md).
 
- **XmlSerializer** sınıfı, tarafından oluşturulan ve XML Web Hizmetleri 'NE geçirilen SOAP iletilerini oluşturur. SOAP iletilerini denetlemek için sınıflar, dönüş değerleri, parametreler ve bir XML Web hizmeti dosyasında (. asmx) bulunan alanlara öznitelikler uygulayabilirsiniz. XML Web hizmeti değişmez değer veya kodlanmış SOAP stilini kullanabilmesi için, "XML serileştirmesini denetleyen öznitelikler" ve "kodlanmış SOAP serileştirmesini denetleyen öznitelikler" bölümünde listelenen öznitelikleri kullanabilirsiniz. XML Web hizmeti tarafından oluşturulan XML 'yi denetlemek için öznitelikleri kullanma hakkında daha fazla bilgi için bkz. xml [Web Hizmetleri Ile XML serileştirme](xml-serialization-with-xml-web-services.md). SOAP ve XML Web Hizmetleri hakkında daha fazla bilgi için bkz. [SOAP Ileti biçimlendirmesini özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
+ **XmlSerializer** sınıfı, tarafından oluşturulan ve XML Web Hizmetleri 'NE geçirilen SOAP iletilerini oluşturur. SOAP iletilerini denetlemek için sınıflar, dönüş değerleri, parametreler ve bir XML Web hizmeti dosyasında (. asmx) bulunan alanlara öznitelikler uygulayabilirsiniz. XML Web hizmeti değişmez değer veya kodlanmış SOAP stilini kullanabilmesi için, "XML serileştirmesini denetleyen öznitelikler" ve "kodlanmış SOAP serileştirmesini denetleyen öznitelikler" bölümünde listelenen öznitelikleri kullanabilirsiniz. XML Web hizmeti tarafından oluşturulan XML 'yi denetlemek için öznitelikleri kullanma hakkında daha fazla bilgi için bkz. xml [Web Hizmetleri Ile XML serileştirme](xml-serialization-with-xml-web-services.md). SOAP ve XML Web Hizmetleri hakkında daha fazla bilgi için bkz. [SOAP Ileti biçimlendirmesini özelleştirme](/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)).
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer uygulamalar için güvenlik hususları
 
@@ -148,7 +148,7 @@ XML serileştirmenin bir diğer avantajı, oluşturulan uygulamalar üzerinde he
 
 ## <a name="xsd-data-type-mapping"></a>XSD veri türü eşlemesi
 
-[XML şeması Bölüm 2: veri türleri](https://www.w3.org/TR/xmlschema-2/) başlıklı W3C belgesi, bir XML şeması tanım DILI (xsd) şemasında izin verilen basit veri türlerini belirtir. Bunlardan birçoğu (örneğin, **int** ve **decimal**) için .NET Framework karşılık gelen bir veri türü vardır. Ancak, bazı XML veri türleri .NET Framework karşılık gelen bir veri türüne sahip değildir (örneğin, **NMTOKEN** veri türü). Bu gibi durumlarda, bir şemadan sınıflar oluşturmak için XML şema tanımı aracını ([XML şema tanımı Aracı (xsd. exe)](xml-schema-definition-tool-xsd-exe.md)) kullanırsanız, tür dizesinin bir üyesine uygun bir öznitelik uygulanır ve **DataType** özelliği XML veri türü adına ayarlanır. Örneğin, bir şema XML veri türü **NMTOKEN**olan "mytoken" adlı bir öğe içeriyorsa, oluşturulan sınıf aşağıdaki örnekte gösterildiği gibi bir üye içerebilir.
+[XML şeması Bölüm 2: veri türleri](https://www.w3.org/TR/xmlschema-2/) başlıklı W3C belgesi, bir XML şeması tanım DILI (xsd) şemasında izin verilen basit veri türlerini belirtir. Bunlardan birçoğu (örneğin, **int** ve **decimal**) için .NET Framework karşılık gelen bir veri türü vardır. Ancak, bazı XML veri türleri .NET Framework karşılık gelen bir veri türüne sahip değildir (örneğin, **NMTOKEN** veri türü). Bu gibi durumlarda, bir şemadan sınıflar oluşturmak için XML şema tanımı aracını ([XML şema tanımı Aracı (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) kullanırsanız, String türünde bir üyeye uygun bir öznitelik uygulanır ve **DataType** özelliği XML veri türü adına ayarlanır. Örneğin, bir şema XML veri türü **NMTOKEN**olan "mytoken" adlı bir öğe içeriyorsa, oluşturulan sınıf aşağıdaki örnekte gösterildiği gibi bir üye içerebilir.
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _

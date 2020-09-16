@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 017744d692d6fd4183fde3c21e71fcee2f35844e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598885"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535364"
 ---
 # <a name="internet-unsecured-client-and-service"></a>İnternet Güvenli Olmayan Hizmet ve İstemci
 Aşağıdaki çizimde, genel, güvenli olmayan Windows Communication Foundation (WCF) istemci ve hizmeti örneği gösterilmektedir:  
   
  ![Güvenli olmayan bir Internet senaryosunu gösteren ekran görüntüsü](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|Yok|  
 |Aktarım|HTTP|  
-|Bağlama|<xref:System.ServiceModel.BasicHttpBinding>kodda veya [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) yapılandırmadaki öğesi.|  
-|Birlikte çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle|  
+|Bağlama|<xref:System.ServiceModel.BasicHttpBinding> kodda veya [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) yapılandırmadaki öğesi.|  
+|Birlikte Çalışabilirlik|Mevcut Web hizmeti istemcileri ve hizmetleriyle|  
 |Kimlik Doğrulaması|Yok|  
 |Bütünlük|Yok|  
 |Gizlilik|Yok|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
   
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
@@ -68,7 +68,7 @@ Aşağıdaki çizimde, genel, güvenli olmayan Windows Communication Foundation 
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
   
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
   
@@ -113,4 +113,4 @@ Aşağıdaki çizimde, genel, güvenli olmayan Windows Communication Foundation 
 
 - [Ortak Güvenlik Senaryoları](common-security-scenarios.md)
 - [Güvenliğe genel bakış](security-overview.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

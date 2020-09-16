@@ -3,12 +3,12 @@ title: .NET Core 'da EventCounters kullanarak performansı ölçme
 description: Bu öğreticide, EventCounters kullanarak performansı ölçme hakkında bilgi edineceksiniz.
 ms.date: 08/07/2020
 ms.topic: tutorial
-ms.openlocfilehash: 7b4940e17d01e7ec5a50d11e3c818ecdec2d48cf
-ms.sourcegitcommit: 1e6439ec4d5889fc08cf3bfb4dac2b91931eb827
+ms.openlocfilehash: db9a0889d46cc4db02baac60cbed6f6e0ba6856b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/08/2020
-ms.locfileid: "88025025"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538572"
 ---
 # <a name="tutorial-measure-performance-using-eventcounters-in-net-core"></a>Öğretici: .NET Core 'da EventCounters kullanarak performansı ölçme
 
@@ -29,11 +29,11 @@ Bu öğreticide şunları yapacaksınız:
 
 - [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü.
 - olay sayaçlarını izlemek için [DotNet sayaçları](dotnet-counters.md) .
-- Tanılama için bir [örnek hata ayıklama hedef](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) uygulaması.
+- Tanılama için bir [örnek hata ayıklama hedef](/samples/dotnet/samples/diagnostic-scenarios) uygulaması.
 
 ## <a name="get-the-source"></a>Kaynağı al
 
-Örnek uygulama, izlemenin temeli olarak kullanılacaktır. [Örnek ASP.NET Core deposu](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) , örnekler tarayıcısından kullanılabilir. ZIP dosyasını indirir, indirdikten sonra ayıklayın ve en sevdiğiniz IDE 'niz içinde açın. Doğru çalıştığından emin olmak için uygulamayı derleyin ve çalıştırın, sonra uygulamayı durdurun.
+Örnek uygulama, izlemenin temeli olarak kullanılacaktır. [Örnek ASP.NET Core deposu](/samples/dotnet/samples/diagnostic-scenarios) , örnekler tarayıcısından kullanılabilir. ZIP dosyasını indirir, indirdikten sonra ayıklayın ve en sevdiğiniz IDE 'niz içinde açın. Doğru çalıştığından emin olmak için uygulamayı derleyin ve çalıştırın, sonra uygulamayı durdurun.
 
 ## <a name="implement-an-eventsource"></a>EventSource uygulama
 

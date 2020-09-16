@@ -12,12 +12,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: a0eb11d55ad9e9cccde1704ba4c5ae8acb609989
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ab977408ed891bd7c996ce3644b22ea984425664
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916637"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90536385"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>Kullanıcı tanımlı dönüştürme işleçleri (C# Başvurusu)
 
@@ -52,4 +52,4 @@ Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md)
 - [Tür testi ve atama işleçleri](type-testing-and-cast.md)
 - [Atama ve tür dönüştürme](../../programming-guide/types/casting-and-type-conversions.md)
 - [Tasarım yönergeleri-dönüştürme işleçleri](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
-- [C 'de Kullanıcı tanımlı açık dönüştürmeler zincirleme #](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)
+- [C 'de Kullanıcı tanımlı açık dönüştürmeler zincirleme #](/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)

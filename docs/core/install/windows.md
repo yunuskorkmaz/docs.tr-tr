@@ -4,12 +4,12 @@ description: .NET Core 'u hangi Windows sürümleriyle yükleyebileceğinizi ö�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/22/2020
-ms.openlocfilehash: 97f67d00b3eb4dafc55256aea51f4295bb0ef06a
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: 12cffb78de803845a4b18adc70289993e67f64f1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308955"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538295"
 ---
 # <a name="install-net-core-on-windows"></a>Windows 'a .NET Core 'u yükler
 
@@ -36,26 +36,26 @@ Windows 10 sürümleri hizmet son tarihleri sürüme göre bölündü. Aşağıd
 - Bir ❌ Windows veya .NET Core sürümünün bu Windows sürümünde desteklenmediğini belirtir.
 - Hem bir Windows sürümü hem de bir .NET Core sürümü ✔️ olduğunda, bu işletim sistemi ve .NET birleşimi desteklenir.
 
-| Operating System                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
+| İşletim Sistemi                      | .NET Core 2.1 | .NET Core 3,1 | .NET 5 Preview |
 |-----------------------------|---------------|---------------|----------------|
 | ✔️ Windows 10, sürüm 2004 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ✔️ Windows 10, sürüm 1909 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ✔️ Windows 10, sürüm 1903 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ✔️ Windows 10, sürüm 1809 | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
-| ❌Windows 10, sürüm 1803 | ✔️ 2,1        | ❌3,1        | ❌5,0 Önizleme |
-| ❌Windows 10, sürüm 1709 | ❌2,1        | ❌3,1        | ❌5,0 Önizleme |
-| ❌Windows 10, sürüm 1703 | ❌2,1        | ❌3,1        | ❌5,0 Önizleme |
-| ❌Windows 10, sürüm 1607 | ❌2,1        | ❌3,1        | ❌5,0 Önizleme |
-| ❌Windows 10, sürüm 1511 | ❌2,1        | ❌3,1        | ❌5,0 Önizleme |
-| ❌Windows 10, sürüm 1507 | ❌2,1        | ❌3,1        | ❌5,0 Önizleme |
+| ❌ Windows 10, sürüm 1803 | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
+| ❌ Windows 10, sürüm 1709 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
+| ❌ Windows 10, sürüm 1703 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
+| ❌ Windows 10, sürüm 1607 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
+| ❌ Windows 10, sürüm 1511 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
+| ❌ Windows 10, sürüm 1507 | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
 
 ## <a name="unsupported-releases"></a>Desteklenmeyen yayınlar
 
 Aşağıdaki .NET Core sürümleri ❌ artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
-- 3,0
-- 2,2
-- 2,0
+- 3.0
+- 2.2
+- 2.0
 
 ## <a name="runtime-information"></a>Çalışma zamanı bilgileri
 
@@ -96,7 +96,7 @@ Aşağıdaki Windows sürümleri .NET Core 3,1 ile desteklenir:
 
 | İşletim Sistemi                            | Sürüm                        | Mimariler   |
 | ----------------------------- | ------------------------------ | --------------- |
-| Windows İstemcisi                | 8.1                            | x64, x86        |
+| Windows İstemcisi                | 7 SP1 +, 8,1                    | x64, x86        |
 | Windows 10 Istemcisi             | Sürüm 1609 +                  | x64, x86        |
 | Windows Server                | 2012 R2 +                       | x64, x86        |
 | Nano Sunucu                   | Sürüm 1803 +                  | x64, ARM32      |
@@ -121,7 +121,7 @@ Aşağıdaki Windows sürümleri .NET Core 3,0 ile desteklenir:
 
 .NET Core 3,0 desteklenen işletim sistemleri, dağıtımlar ve yaşam döngüsü ilkesi hakkında daha fazla bilgi için bkz. [.net core 3,0 desteklenen işletim sistemi sürümleri](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md).
 
-# <a name="net-core-22"></a>[.NET Core 2,2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 *.NET Core 2,2 Şu anda destek dışı. Daha fazla bilgi için bkz. [.NET Core destek ilkesi](https://dotnet.microsoft.com/platform/support/policy/dotnet-core).*
 
@@ -159,12 +159,12 @@ Aşağıdaki Windows sürümleri .NET Core 2,1 ile desteklenir:
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a>Windows 7/Vista/8,1/Server 2008 R2/Server 2012 R2
+### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7/Vista/8,1/Server 2008 R2/Server 2012 R2
 
 Aşağıdaki Windows sürümlerine .NET SDK veya çalışma zamanı yüklüyorsanız ek bağımlılıklar gereklidir:
 
-- ❌Windows 7 SP1
-- ❌Windows Vista SP 2
+- ❌ Windows 7 SP1
+- ❌ Windows Vista SP 2
 - ✔️ Windows 8.1
 - ✔️ Windows Server 2008 R2
 - ✔️ Windows Server 2012 R2
@@ -178,11 +178,11 @@ Aşağıdaki hatalardan biriyle karşılaşırsanız yukarıdaki gereksinimler d
 
 > Bilgisayarınızda *api-ms-win-crt-runtime-l1-1-0.dll* olmadığından program başlatılamıyor. Bu sorunu gidermek için programı yeniden yüklemeyi deneyin.
 >
-> \-veya
+> \- veya
 >
 > Bilgisayarınızda *api-ms-win-cor-timezone-l1-1-0.dll* olmadığından program başlatılamıyor. Bu sorunu gidermek için programı yeniden yüklemeyi deneyin.
 >
-> \-veya
+> \- veya
 >
 > Kitaplık *hostfxr.dll* bulundu, ancak *C: \\ \<path_to_app> \\hostfxr.dll* öğesinden yüklenemedi.
 
@@ -190,7 +190,7 @@ Aşağıdaki hatalardan biriyle karşılaşırsanız yukarıdaki gereksinimler d
 
 [DotNet yükleme betikleri](../tools/dotnet-install-script.md) , CI otomasyonu ve çalışma zamanının yönetici olmayan yüklemeleri için kullanılır. Betiği, [DotNet yükleme betiği başvuru sayfasından](../tools/dotnet-install-script.md)indirebilirsiniz.
 
-Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `Channel` . `Runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası [SDK 'yı](sdk.md)yüklüyor.
+Komut dosyası, .NET Core 3,1 olan en son [uzun süreli destek (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) sürümünü yüklemek için varsayılan değerdir. Anahtarı belirterek belirli bir sürümü seçebilirsiniz `Channel` . `Runtime`Çalışma zamanı yüklemek için anahtarı ekleyin. Aksi halde, komut dosyası SDK 'Yı yüklüyor.
 
 ```powershell
 dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
@@ -209,8 +209,8 @@ dotnet-install.ps1 -Channel Current
 | .NET Core SDK sürümü | Visual Studio sürüm                      |
 | --------------------- | ------------------------------------------ |
 | 3,1                   | Visual Studio 2019 sürüm 16,4 veya üzeri. |
-| 3,0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
-| 2,2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
+| 3.0                   | Visual Studio 2019 sürüm 16,3 veya üzeri. |
+| 2.2                   | Visual Studio 2017 sürüm 15,9 veya üzeri. |
 | 2.1                   | Visual Studio 2017 sürüm 15,7 veya üzeri. |
 
 Visual Studio zaten yüklüyse, aşağıdaki adımlarla sürümünüzü kontrol edebilirsiniz.

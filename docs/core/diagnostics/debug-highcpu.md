@@ -3,18 +3,18 @@ title: Yüksek CPU kullanımı hata ayıkla-.NET Core
 description: .NET Core 'da yüksek CPU kullanımında hata ayıklama konusunda size yol gösteren bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 93076bbce3baf3a219b25c927d2aba3d2d57456f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 71e0b98f7ad38836c6a20c3e0e75a878fb6525c7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557808"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538715"
 ---
 # <a name="debug-high-cpu-usage-in-net-core"></a>.NET Core 'da yüksek CPU kullanımını hata ayıkla
 
 **Bu makale şu şekilde geçerlidir: ✔️** .net Core 3,1 SDK ve sonraki sürümleri
 
-Bu öğreticide, aşırı CPU kullanımı senaryosunda hata ayıklamayı öğreneceksiniz. [Web uygulaması](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) kaynak kodu deposu ASP.NET Core sunulan örneği kullanarak, kasıtlı olarak bir kilitlenmeye neden olabilirsiniz. Uç nokta, askıda kalma ve iş parçacığı birikmesi ile karşılaşacaktır. Çeşitli araçları kullanarak bu senaryoyu tanılama verilerinin çeşitli önemli parçalarından nasıl tanınbileceğinizi öğreneceksiniz.
+Bu öğreticide, aşırı CPU kullanımı senaryosunda hata ayıklamayı öğreneceksiniz. [Web uygulaması](/samples/dotnet/samples/diagnostic-scenarios) kaynak kodu deposu ASP.NET Core sunulan örneği kullanarak, kasıtlı olarak bir kilitlenmeye neden olabilirsiniz. Uç nokta, askıda kalma ve iş parçacığı birikmesi ile karşılaşacaktır. Çeşitli araçları kullanarak bu senaryoyu tanılama verilerinin çeşitli önemli parçalarından nasıl tanınbileceğinizi öğreneceksiniz.
 
 Bu öğreticide şunları yapacaksınız:
 
@@ -26,18 +26,18 @@ Bu öğreticide şunları yapacaksınız:
 > - PerfView 'da profil performansı
 > - Aşırı CPU kullanımını Tanıla ve çöz
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Öğretici şunları kullanır:
 
 - [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü.
-- Senaryonun tetiklenmesi için [örnek hata ayıklama hedefi](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) .
+- Senaryonun tetiklenmesi için [örnek hata ayıklama hedefi](/samples/dotnet/samples/diagnostic-scenarios) .
 - [DotNet-](dotnet-trace.md) işlem listelemek ve bir profil oluşturmak için izleyin.
 - [DotNet sayaçları](dotnet-counters.md) , CPU kullanımını izlemeye yönelik sayaçlardır.
 
 ## <a name="cpu-counters"></a>CPU sayaçları
 
-Tanılama verilerini toplamayı denemeden önce, yüksek bir CPU koşulu gözlemleyebilirsiniz. Proje kök dizininde aşağıdaki komutu kullanarak [Örnek uygulamayı](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) çalıştırın.
+Tanılama verilerini toplamayı denemeden önce, yüksek bir CPU koşulu gözlemleyebilirsiniz. Proje kök dizininde aşağıdaki komutu kullanarak [Örnek uygulamayı](/samples/dotnet/samples/diagnostic-scenarios) çalıştırın.
 
 ```dotnetcli
 dotnet run
@@ -116,11 +116,11 @@ Yavaş bir istek analiz edilirken, kodun yaptığına ilişkin Öngörüler sağ
 
 ### <a name="linux"></a>[Linux](#tab/linux)
 
-`perf`Araç .NET Core uygulama profilleri oluşturmak için kullanılabilir. [Örnek hata ayıklama hedefinin](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)önceki örneğinden çıkın.
+`perf`Araç .NET Core uygulama profilleri oluşturmak için kullanılabilir. [Örnek hata ayıklama hedefinin](/samples/dotnet/samples/diagnostic-scenarios)önceki örneğinden çıkın.
 
 `COMPlus_PerfMapEnabled`.NET Core uygulamasının dizinde bir dosya oluşturmasını sağlamak için ortam değişkenini ayarlayın `map` `/tmp` . Bu `map` dosya tarafından, `perf` CPU adresini JIT tarafından oluşturulan işlevlere ada göre eşlemek için kullanılır. Daha fazla bilgi için bkz. [yazma perf Map](../run-time-config/debugging-profiling.md#write-perf-map).
 
-[Örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) aynı Terminal oturumunda çalıştırın.
+[Örnek hata ayıklama hedefini](/samples/dotnet/samples/diagnostic-scenarios) aynı Terminal oturumunda çalıştırın.
 
 ```dotnetcli
 export COMPlus_PerfMapEnabled=1
@@ -152,7 +152,7 @@ Bu komut `flamegraph.svg` , tarayıcıda görüntüleyebilmeniz için performans
 
 ### <a name="windows"></a>[Windows](#tab/windows)
 
-Windows 'da, [DotNet-Trace](dotnet-trace.md) aracını bir profil oluşturucu olarak kullanabilirsiniz. Önceki [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios)kullanarak, yüksek CPU uç noktasını ( `https://localhost:5001/api/diagscenario/highcpu/60000` ) yeniden deneyin. 1 dakikalık istek içinde çalışırken `collect` komutunu aşağıdaki gibi kullanın:
+Windows 'da, [DotNet-Trace](dotnet-trace.md) aracını bir profil oluşturucu olarak kullanabilirsiniz. Önceki [örnek hata ayıklama hedefini](/samples/dotnet/samples/diagnostic-scenarios)kullanarak, yüksek CPU uç noktasını ( `https://localhost:5001/api/diagscenario/highcpu/60000` ) yeniden deneyin. 1 dakikalık istek içinde çalışırken `collect` komutunu aşağıdaki gibi kullanın:
 
 ```dotnetcli
 dotnet-trace collect -p 22884 --providers Microsoft-DotNETCore-SampleProfiler

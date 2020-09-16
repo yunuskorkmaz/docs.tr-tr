@@ -1,91 +1,91 @@
 ---
-title: .PROJECT.json'dan NET Çekirdek geçişi
-description: Project.json'u kullanarak eski bir .NET Core projesini nasıl geçirebilirsiniz öğrenin
+title: project.js'den .NET Core geçişi
+description: project.jskullanarak eski bir .NET Core projesini nasıl geçirebileceğinizi öğrenin
 ms.date: 07/19/2017
-ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d4190a02389089a888d8b52dd8e7c412636b575
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77450693"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538256"
 ---
-# <a name="migrating-net-core-projects-from-projectjson"></a>Project.json'dan .NET Çekirdek projelerini geçirmek
+# <a name="migrating-net-core-projects-from-projectjson"></a>.NET Core projelerini project.js'tan geçirme
 
-Bu belge,.NET Core projeleri için aşağıdaki üç geçiş senaryosunu kapsar:
+Bu belgede .NET Core projeleri için aşağıdaki üç geçiş senaryosu ele alınmaktadır:
 
-1. [*Project.json'un* geçerli bir son şemasından *csproj'a* geçiş](#migration-from-projectjson-to-csproj)
-2. [DNX'ten csproj'a geçiş](#migration-from-dnx-to-csproj)
-3. [RC3 ve önceki .NET Core csproj projelerinden son formata geçiş](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
+1. [*project.js* geçerli bir en son şemadan *csproj* 'ya geçiş](#migration-from-projectjson-to-csproj)
+2. [DNX 'ten csproj 'a geçiş](#migration-from-dnx-to-csproj)
+3. [RC3 ve önceki .NET Core csproj projelerinden son biçime geçiş](#migration-from-earlier-net-core-csproj-formats-to-rtm-csproj)
 
-Bu belge yalnızca project.json kullanan eski .NET Core projeleri için geçerlidir. .NET Framework'den .NET Core'a geçiş için geçerli değildir.
+Bu belge yalnızca project.jskullanan eski .NET Core projelerine uygulanabilir. .NET Framework .NET Core 'a geçiş için geçerlidir.
 
-## <a name="migration-from-projectjson-to-csproj"></a>project.json'dan csproj'a geçiş
+## <a name="migration-from-projectjson-to-csproj"></a>project.json csproj 'e geçiş
 
-*Project.json'dan* *.csproj'a* geçiş aşağıdaki yöntemlerden biri kullanılarak yapılabilir:
+Aşağıdaki yöntemlerden biri kullanılarak *. csproj* 'a *project.js* geçişi yapılabilir:
 
 - [Visual Studio](#visual-studio)
-- [dotnet geçiş komut satırı aracı](#dotnet-migrate)
+- [DotNet geçiş komut satırı aracı](#dotnet-migrate)
 
-Her iki yöntem de projeleri geçirmek için aynı altta yatan altyapıyı kullanır, bu nedenle sonuçlar her ikisi için de aynı olacaktır. Çoğu durumda, *csproj* *için project.json* geçirmek için bu iki yoldan birini kullanarak gerekli olan tek şey, ve proje dosyasının daha fazla el ile düzenleme gereklidir. Elde edilen *.csproj* dosyası, içeren dizin adı ile aynı adlandırılacaktır.
+Her iki yöntem de projeleri geçirmek için aynı temel altyapıyı kullanır, bu nedenle sonuçlar her ikisi için de aynı olacaktır. Çoğu durumda, *project.jsüzerinde açık* olan tek şey gereken tek şeydir ve proje dosyasının el *csproj* ile düzenlenmesine gerek kalmaz. Elde edilen *. csproj* dosyası, kapsayan dizin adı ile aynı ada sahip olacaktır.
 
 ### <a name="visual-studio"></a>Visual Studio
 
-*.xproj* dosyasını veya Visual Studio 2017 veya Visual Studio 2019 sürüm 16.2 ve daha önceki sürümlerinde *.xproj* dosyalarına başvuruyapan bir çözüm dosyasını açtığınızda, **Tek yönlü yükseltme** iletişim kutusu görüntülenir. İletişim, geçirilecek projeleri görüntüler. Bir çözüm dosyası açarsanız, çözüm dosyasında belirtilen tüm projeler listelenir. Geçirilecek projelerin listesini gözden geçirin ve **Tamam'ı**seçin.
+Visual Studio 2017 veya Visual Studio 2019 sürüm 16,2 ve önceki sürümlerde *.* xproj dosyalarına başvuran bir *. xproj* dosyası veya çözüm dosyası açtığınızda **tek yönlü yükseltme** iletişim kutusu görüntülenir. İletişim kutusunda geçirilecek projeler görüntülenir. Bir çözüm dosyası açarsanız, çözüm dosyasında belirtilen tüm projeler listelenir. Geçirilecek projelerin listesini gözden geçirin ve **Tamam ' ı**seçin.
 
 ![Geçirilecek projelerin listesini gösteren tek yönlü yükseltme iletişim kutusu](media/one-way-upgrade.jpg)
 
-Visual Studio seçili projeleri otomatik olarak geçirmektedir. Bir çözümü geçirterken, tüm projeleri seçmezseniz, aynı iletişim kutusu bu çözümden kalan projeleri yükseltmenizi ister. Proje geçirildikten sonra, **Çözüm Gezgini** penceresinde projeyi sağ tıklayarak ve **proje adını>.csproj'u edin'i \<** seçerek içeriğini görebilir ve değiştirebilirsiniz.
+Visual Studio seçilen projeleri otomatik olarak geçirir. Bir çözümü geçirirken, tüm projeler ' i seçmezseniz, bu çözümden kalan projeleri yükseltmenizi isteyen iletişim kutusu görüntülenir. Proje geçirildikten sonra, **Çözüm Gezgini** penceresinde projeye sağ tıklayıp, ** \<project name> . csproj Düzenle**' yi seçerek içeriğini görebilir ve değiştirebilirsiniz.
 
-Geçirilen dosyalar *(project.json*, *global.json*, *.xproj*ve çözüm dosyası) *Yedek* klasörüne taşınır. Geçirilen çözüm dosyası Visual Studio 2017 veya Visual Studio 2019'a yükseltilir ve bu çözüm dosyasını Visual Studio 2015 veya önceki sürümlerde açamazsınız. Geçiş raporu içeren *UpgradeLog.htm* adlı bir dosya da kaydedilir ve otomatik olarak açılır.
+Geçirilen dosyalar (*project.json*, *global.json*, *. xproj*ve çözüm dosyası) bir *yedekleme* klasörüne taşınır. Geçirilen çözüm dosyası Visual Studio 2017 veya Visual Studio 2019 sürümüne yükseltilir ve bu çözüm dosyasını Visual Studio 2015 veya önceki sürümlerde açamazsınız. Geçiş raporu içeren *UpgradeLog.htm* adlı bir dosya de otomatik olarak kaydedilir ve açılır.
 
 > [!IMPORTANT]
-> Visual Studio 2019 sürüm 16.3 ve sonraki sürümlerde bir *.xproj* dosyayı yükleyemez veya geçiremezsiniz. Ayrıca Visual Studio 2015, *bir .xproj* dosyasını geçirme olanağı sağlamaz. Bu Visual Studio sürümlerinden birini kullanıyorsanız, Visual Studio'nun uygun bir sürümünü yükleyin veya daha sonra açıklanan komut satırı geçiş aracını kullanın.
+> Visual Studio 2019 sürüm 16,3 ve sonrasında, bir *. xproj* dosyasını yükleyemez veya geçiremezsiniz. Ayrıca, Visual Studio 2015 bir *. xproj* dosyasını geçirebilme olanağı sağlamaz. Bu Visual Studio sürümlerinden birini kullanıyorsanız, Visual Studio 'nun uygun bir sürümünü yükledikten sonra veya bir sonraki adımda açıklanan komut satırı geçiş aracını kullanın.
 
 ### <a name="dotnet-migrate"></a>dotnet migrate
 
-Komut satırı senaryosunda, komutu [`dotnet migrate`](../tools/dotnet-migrate.md) kullanabilirsiniz. Hangilerinin bulunduğuna bağlı olarak, bir projeyi, bir çözümü veya bu sırayla bir klasör kümesini geçirin. Bir projeyi geçirdiğinizde, proje ve tüm bağımlılıkları geçirilir.
+Komut satırı senaryosunda [`dotnet migrate`](../tools/dotnet-migrate.md) komutunu kullanabilirsiniz. Nerede bulunanlara bağlı olarak bir projeyi, çözümü veya bir klasör kümesini o sırada geçirir. Bir projeyi geçirdiğinizde, proje ve tüm bağımlılıkları geçirilir.
 
-Geçirilen dosyalar *(project.json*, *global.json*, ve *.xproj)* *yedek* klasörüne taşınır.
+Geçirilen dosyalar (*project.json*, *global.json*ve *. xproj*) bir *yedekleme* klasörüne taşınır.
 
 > [!NOTE]
-> Visual Studio Code kullanıyorsanız, `dotnet migrate` komut visual studio koduna özel *görevleri değiştirmez.json*. Bu dosyaların el ile değiştirilmesi gerekir.
-> Visual Studio dışında bir editör veya Entegre Geliştirme Ortamı (IDE) kullanıyorsanız bu da geçerlidir.
+> Visual Studio Code kullanıyorsanız, `dotnet migrate` komut *tasks.js*gibi Visual Studio Code özel dosyaları değiştirmez. Bu dosyaların el ile değiştirilmesi gerekir.
+> Bu, Visual Studio dışında bir düzenleyici veya tümleşik geliştirme ortamı (IDE) kullanıyorsanız de geçerlidir.
 
-Project.json ve *.csproj* biçimlerinin karşılaştırılması *project.json* için [project.json ve csproj özellikleri arasında](../tools/project-json-to-csproj.md) bir eşleme bakın.
+*project.json* ve *. csproj* biçimlerinin bir karşılaştırması için [project.json ve csproj özellikleri arasında bir eşlemeye](../tools/project-json-to-csproj.md) bakın.
 
 Bir hata alırsanız:
 
-> Yürütülebilir bulunan komut dotnet-migrate bulunamadı
+> DotNet komutuyla eşleşen çalıştırılabilir bulunamadı-geçiş
 
-Hangi `dotnet --version` sürümü kullandığınızı görmek için çalıştırın. [`dotnet migrate`](../tools/dotnet-migrate.md).NET Core SDK 1.0.0 olarak tanıtıldı ve 3.0.100 sürümünde kaldırıldı.
-Geçerli veya üst dizinde *global.json* dosyanız varsa ve belirttiği sürüm `sdk` bu aralığın dışındaysa bu hatayı alırsınız.
+`dotnet --version`Hangi sürümü kullandığınızı görmek için ' i çalıştırın. [`dotnet migrate`](../tools/dotnet-migrate.md) .NET Core SDK 1.0.0 ' de tanıtılmıştı ve sürüm 3.0.100 ' de kaldırılmıştır.
+Geçerli veya üst dizinde bir *global.js* dosyanız varsa ve `sdk` belirttiği sürüm bu aralığın dışındaysa bu hatayı alırsınız.
 
-## <a name="migration-from-dnx-to-csproj"></a>DNX'ten csproj'a geçiş
+## <a name="migration-from-dnx-to-csproj"></a>DNX 'ten csproj 'a geçiş
 
-.NET Core geliştirme için Hala DNX kullanıyorsanız, geçiş işleminiz iki aşamada yapılmalıdır:
+.NET Core geliştirme için DNX kullanmaya devam ediyorsanız, geçiş işleminiz iki aşamada yapılmalıdır:
 
-1. DNX'ten project-json etkin CLI'ye geçiş yapmak için [varolan DNX geçiş kılavuzunu](from-dnx.md) kullanın.
-2. *Project.json'dan* *.csproj'a*geçiş yapmak için önceki bölümden adımları izleyin.
+1. DNX 'ten Project-JSON etkin CLı 'ye geçiş yapmak için [mevcut DNX geçiş kılavuzunu](from-dnx.md) kullanın.
+2. Yukarıdaki *project.js'* den *. csproj*' a geçiş yapmak için önceki bölümde yer alan adımları izleyin.
 
 > [!NOTE]
-> DNX, .NET Core CLI'nin Önizleme 1 sürümü sırasında resmen amortismana ulaşmış olur.
+> DNX, .NET Core CLI Preview 1 sürümü sırasında resmi kullanım dışı duruma geldi.
 
-## <a name="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj"></a>Önceki .NET Core csproj formatlarından RTM csproj'a geçiş
+## <a name="migration-from-earlier-net-core-csproj-formats-to-rtm-csproj"></a>Önceki .NET Core csproj biçimlerinden RTM csproj 'e geçiş
 
-.NET Core csproj formatı, aracın her yeni ön sürüm sürümüyle birlikte değişiyor ve gelişiyor. Proje dosyanızı csproj'un önceki sürümlerinden en son sürümüne geçirebilecek bir araç yoktur, bu nedenle proje dosyasını el ile düzenlemeniz gerekir. Gerçek adımlar, geçiş yaptığınız proje dosyasının sürümüne bağlıdır. Sürümler arasında gerçekleşen değişikliklere göre göz önünde bulundurulması gereken bazı kılavuzlar şunlardır:
+.NET Core csproj biçimi, her yeni alet yayın öncesi sürümü ile değiştirilmiştir ve gelişiyor. Proje dosyanızı csproj 'ın önceki sürümlerinden en son sürümüne geçiren bir araç yoktur, bu nedenle proje dosyasını el ile düzenlemeniz gerekir. Asıl adımlar, geçirdiğiniz proje dosyasının sürümüne bağlıdır. Sürümler arasında gerçekleşen değişikliklere göre göz önünde bulundurmanız gereken bazı yönergeler aşağıda verilmiştir:
 
-- Varsa, araçlar sürüm `<Project>` özelliğini öğeden kaldırın.
-- XML ad alanını`xmlns`( ) `<Project>` öğeden kaldırın.
-- `Sdk` Yoksa, `<Project>` öğeye öznitelik ekleyin ve onu ayarlayın `Microsoft.NET.Sdk` veya `Microsoft.NET.Sdk.Web`. Bu öznitelik, projenin kullanılmak üzere SDK'yı kullandığını belirtir. `Microsoft.NET.Sdk.Web`web uygulamaları için kullanılır.
-- `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` Ve `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` ifadeleri projenin üst ve alt kısmından kaldırın. Bu ithalat beyanları SDK tarafından ima edilmektedir, bu nedenle projede yer almalarına gerek yoktur.
-- Projenizde `Microsoft.NETCore.App` öğeler `NETStandard.Library` `<PackageReference>` varsa, bunları kaldırmanız gerekir. Bu paket referansları [SDK tarafından ima](https://aka.ms/sdkimplicitrefs)edilmektedir.
-- Varsa `Microsoft.NET.Sdk` `<PackageReference>` öğeyi kaldırın. SDK `Sdk` `<Project>` başvurusu, öğedeki öznitelik üzerinden gelir.
-- [SDK tarafından ima](../project-sdk/overview.md#default-compilation-includes)edilen [globs](https://en.wikipedia.org/wiki/Glob_(programming)) kaldırın. Bu kümesleri projenizde bırakmak, derleme öğeleri çoğaltılacağı için yapıda bir hataya neden olur.
+- Varsa, Araçlar sürümü özelliğini öğesinden kaldırın `<Project>` .
+- XML ad alanını ( `xmlns` ) `<Project>` öğeden kaldırın.
+- Yoksa, `Sdk` özniteliğini `<Project>` öğesine ekleyin ve veya olarak ayarlayın `Microsoft.NET.Sdk` `Microsoft.NET.Sdk.Web` . Bu öznitelik, projenin kullanılacak SDK 'Yı kullandığını belirtir. `Microsoft.NET.Sdk.Web` Web uygulamaları için kullanılır.
+- `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />`Ve `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` deyimlerini projenin üst ve alt kısmından kaldırın. Bu içeri aktarma deyimleri SDK tarafından kapsanıyor, bu nedenle projenin projede olması gerekmez.
+- `Microsoft.NETCore.App`Projenizde veya öğeleriniz varsa `NETStandard.Library` `<PackageReference>` , bunları kaldırmanız gerekir. Bu paket başvuruları [SDK tarafından kapsanıyor](../tools/csproj.md).
+- Varsa `Microsoft.NET.Sdk` `<PackageReference>` , öğeyi kaldırın. SDK başvurusu, `Sdk` öğesindeki özniteliği aracılığıyla gelir `<Project>` .
+- [SDK tarafından kapsanan](../project-sdk/overview.md#default-compilation-includes) [genelleştirmeler](https://en.wikipedia.org/wiki/Glob_(programming)) kaldırın. Derleme öğeleri yineleneceği için bu genelleştirmeler, projenizde bir hata oluşmasına neden olur.
 
-Bu adımlardan sonra projeniz RTM .NET Core csproj formatı ile tam uyumlu olmalıdır.
+Bu adımların ardından projenizin RTM .NET Core csproj biçimiyle tamamen uyumlu olması gerekir.
 
-Eski csproj formatından yenisine geçiş öncesi ve sonrası örnekleri için ,.NET blogundaki [Visual Studio 2017 RC – .NET Core Tooling geliştirmeleri](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) makalesine bakın.
+Eski csproj biçiminden yenisine geçişten önceki ve sonraki örneklere örnek olarak, .NET bloguna yönelik [Visual Studio 2017 RC – .NET Core Araçları ' nı güncelleştirme geliştirmeleri](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) makalesine bakın.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Port, Geçiş ve Görsel Stüdyo Projelerini Yükseltme](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
+- [Visual Studio projelerini bağlantı noktası, geçirme ve yükseltme](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

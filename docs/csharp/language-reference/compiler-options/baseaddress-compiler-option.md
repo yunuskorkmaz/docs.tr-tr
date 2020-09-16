@@ -9,15 +9,15 @@ helpviewer_keywords:
 - -baseaddress compiler option [C#]
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
-ms.openlocfilehash: f79ee449eafd04906dab49700a1af6441d54cece
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 17bca4f03c75f7d617e4e99ebab4d1602bb3214e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89464889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537255"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-BaseAddress (C# derleyici seçenekleri)
-**-BaseAddress** SEÇENEĞI, dll 'nin yükleneceği tercih edilen temel adresi belirtmenizi sağlar. Bu seçeneğin ne zaman ve neden kullanıldığı hakkında daha fazla bilgi için bkz. [Larry Osterman 'ın Web günlüğü](https://docs.microsoft.com/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).  
+**-BaseAddress** SEÇENEĞI, dll 'nin yükleneceği tercih edilen temel adresi belirtmenizi sağlar. Bu seçeneğin ne zaman ve neden kullanıldığı hakkında daha fazla bilgi için bkz. [Larry Osterman 'ın Web günlüğü](/archive/blogs/larryosterman/why-should-i-even-bother-to-use-dlls-in-my-system).  
   
 ## <a name="syntax"></a>Söz dizimi  
   

@@ -6,12 +6,12 @@ dev_langs:
 author: adegeo
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: bf712e88d96a5c2c80c3ff50283d44e9c7717abb
-ms.sourcegitcommit: cbb19e56d48cf88375d35d0c27554d4722761e0d
+ms.openlocfilehash: ac2b4193849c56002c5bba35932f2882b987a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88608215"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537502"
 ---
 # <a name="whats-new-in-net-core-30"></a>​.NET Core 3.0’daki yenilikler
 
@@ -136,7 +136,7 @@ Yansıma veya ilgili dinamik özellikleri kullanan uygulamaların veya çerçeve
 
 Tüm diğerleri üzerinde, kırpdıktan sonra uygulamanızı test ettiğinizden emin olun.
 
-Il bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](https://aka.ms/dotnet-illink) bakın veya [mono/bağlayıcı]( https://github.com/mono/linker) deposunu ziyaret edin.
+Il bağlayıcı aracı hakkında daha fazla bilgi için [belgelere](../deploying/trim-self-contained.md) bakın veya [mono/bağlayıcı]( https://github.com/mono/linker) deposunu ziyaret edin.
 
 ### <a name="tiered-compilation"></a>Katmanlı derleme
 
@@ -329,9 +329,9 @@ Windows, düz C API 'Leri, COM ve WinRT biçiminde zengin bir yerel API sunar. .
 
 ### <a name="msix-deployment"></a>MSIX dağıtımı
 
-[Msix](https://docs.microsoft.com/windows/msix/) yeni bir Windows uygulama paketi biçimidir. .NET Core 3,0 masaüstü uygulamalarını Windows 10 ' a dağıtmak için kullanılabilir.
+[Msix](/windows/msix/) yeni bir Windows uygulama paketi biçimidir. .NET Core 3,0 masaüstü uygulamalarını Windows 10 ' a dağıtmak için kullanılabilir.
 
-Visual Studio 2019 ' de bulunan [Windows uygulama paketleme projesi](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), [kendi kendine içerilen](../deploying/index.md#publish-self-contained) .NET Core uygulamalarıyla msix paketi oluşturmanıza olanak sağlar.
+Visual Studio 2019 ' de bulunan [Windows uygulama paketleme projesi](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), [kendi kendine içerilen](../deploying/index.md#publish-self-contained) .NET Core uygulamalarıyla msix paketi oluşturmanıza olanak sağlar.
 
 .NET Core proje dosyası, özelliğindeki desteklenen çalışma zamanlarını belirtmelidir `<RuntimeIdentifiers>` :
 
@@ -512,7 +512,7 @@ Daha fazla bilgi için bkz. [.net platforma bağımlı iç](https://github.com/d
 
 ### <a name="improved-net-core-version-apis"></a>Geliştirilmiş .NET Core sürümü API 'Leri
 
-.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örneğin:
+.NET Core 3,0 ile başlayarak, .NET Core ile birlikte sunulan sürüm API 'Leri artık istediğiniz bilgileri döndürür. Örnek:
 
 ```csharp
 System.Console.WriteLine($"Environment.Version: {System.Environment.Version}");

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 6868c79791d960dd1ae55ab09d4ac3b40ce52655
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 9c218fe7a08bd7181d66aa849bcca4cac00dc6fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420493"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90535865"
 ---
 # <a name="runtime-callable-wrapper"></a>Çalışma Zamanı Aranabilir Sarmalayıcısı
 Ortak dil çalışma zamanı, COM nesnelerini, çalışma zamanı çağrılabilir sarmalayıcı (RCW) adlı bir ara sunucu üzerinden kullanıma sunar. RCW, .NET istemcilerine sıradan bir nesne gibi görünse de, birincil işlevi bir .NET istemcisiyle COM nesnesi arasındaki çağrıları sıralayamaz.  
@@ -42,7 +42,7 @@ Aşağıdaki görüntüde, çalışma zamanında çağrılabilir sarmalayıcı a
   
  RCW, sarmaladığı nesne tarafından açığa çıkarılan aşağıdaki tabloda listelenen arabirimleri kullanır.  
   
-|Arabirim|Açıklama|  
+|Arabirim|Description|  
 |---------------|-----------------|  
 |**IDispatch**|Yansıma aracılığıyla COM nesnelerine geç bağlama için.|  
 |**IErrorInfo**|Hatanın metinsel bir açıklamasını, kaynağını, bir yardım dosyasını, yardım bağlamını ve hatayı tanımlayan arabirimin GUID 'sini (her zaman .NET sınıfları için **GUID_NULL** ) sağlar.|  
@@ -51,7 +51,7 @@ Aşağıdaki görüntüde, çalışma zamanında çağrılabilir sarmalayıcı a
   
  RCW isteğe bağlı olarak, sarmaladığı nesne tarafından açığa çıkarılan aşağıdaki tabloda listelenen arabirimleri kullanır.  
   
-|Arabirim|Açıklama|  
+|Arabirim|Description|  
 |---------------|-----------------|  
 |**Inewctionpoint** ve **IConnectionPointContainer**|RCW, bağlantı noktası olay stilini kullanıma sunan nesneleri temsilci tabanlı olaylara dönüştürür.|  
 |**IDispatchEx** (yalnızca .NET Framework) |Sınıf **IDispatchEx**uygularsa, RCW, **Ida**uygular. **IDispatchEx** **arabirimi IDispatch arabiriminin bir** uzantısıdır. Bu, **IDispatch**'in aksine numaralandırma, ekleme, silme ve büyük/küçük harf duyarlı üyelerin çağrılmasını mümkün değildir.|  
@@ -61,5 +61,5 @@ Aşağıdaki görüntüde, çalışma zamanında çağrılabilir sarmalayıcı a
 
 - [COM sarmalayıcıları](com-wrappers.md)
 - [COM Aranabilir Sarmalayıcısı](com-callable-wrapper.md)
-- [Tür kitaplığını derlemeye dönüştürme Özeti](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tür kitaplığını derlemeye dönüştürme Özeti](/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tür Kitaplığını Derleme Olarak İçeri Aktarma](../../framework/interop/importing-a-type-library-as-an-assembly.md)

@@ -4,12 +4,12 @@ description: .NET Core SDK ve .NET Core çalışma zamanının CentOS 'a yüklen
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 6b1bad3a6c967483bb683866de84c9e5077a336f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 7937502067e1717fd7f5c973c64ad33ae2a443a0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619513"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538624"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-centos"></a>CentOS 'a .NET Core SDK veya .NET Core çalışma zamanı 'nı yükler
 
@@ -35,7 +35,7 @@ Aşağıdaki tabloda, hem CentOS 7 hem de CentOS 8 ' de şu anda desteklenen .NE
 Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
 - 3.0
-- 2,2
+- 2.2
 - 2.0
 
 [!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
@@ -63,6 +63,10 @@ sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-
 ## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
 
 Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
+
+### <a name="unable-to-find-package"></a>Paket bulunamadı
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>Getirilemedi
 

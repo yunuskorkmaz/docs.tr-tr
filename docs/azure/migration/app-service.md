@@ -3,12 +3,12 @@ title: .NET Web uygulamanızı veya hizmetinizi Azure App Service geçirin
 description: Bir .NET Web uygulamasını veya hizmetini Şirket içinden Azure App Service geçirme hakkında bilgi edinin.
 ms.topic: conceptual
 ms.date: 07/08/2020
-ms.openlocfilehash: d208865942b49ae2d5437b8f2fcff294933af21b
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: a5e193b2dbaedb86ff0e24bc8b70043896bbeea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174315"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539092"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET Web uygulamanızı veya hizmetinizi Azure App Service geçirin
 
@@ -37,14 +37,14 @@ WCF için aşağıdaki bağlamalar desteklenir:
 |--|--|
 | `BasicHttp` |  |
 | `WSHttp` |  |
-| `WSDualHttpBinding` | [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
-| `NetHttpBinding` | Çift yönlü sözleşmeler için [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
-| `NetHttpsBinding` | Çift yönlü sözleşmeler için [Web yuvası desteğinin](https://docs.microsoft.com/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
+| `WSDualHttpBinding` | [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
+| `NetHttpBinding` | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
+| `NetHttpsBinding` | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. | Çift yönlü sözleşmeler için [Web yuvası desteğinin](/azure/app-service/web-sites-configure) etkinleştirilmesi gerekir. |
 | `BasicHttpContextBinding` |  |
 | `WebHttpBinding` |  |
 | `WSHttpContextBinding` |  |
 
-### <a name="authentication"></a>Kimlik doğrulaması
+### <a name="authentication"></a>Kimlik Doğrulaması
 
 Azure App Service, varsayılan olarak anonim kimlik doğrulamasını ve hedeflenen durumlarda form kimlik doğrulamasını destekler. Windows kimlik doğrulaması yalnızca Azure Active Directory ve ADFS ile tümleştirilirken kullanılabilir. [Şirket içi dizinlerinizi Azure Active Directory tümleştirme hakkında daha fazla bilgi edinin](/azure/active-directory/connect/active-directory-aadconnect).
 
@@ -62,7 +62,7 @@ IıS5 uyumluluk modu desteklenmez. Azure App Service, her bir Web uygulaması ve
 
 #### <a name="iis7-schema-compliance"></a>IıS7 + şema uyumluluğu
 
-Bazı öğeler ve öznitelikler Azure App Service IIS şemasında tanımlı değildir. Sorunlarla karşılaşırsanız [xdt dönüştürmeleri](https://azure.microsoft.com/documentation/articles/web-sites-transform-extend/)kullanmayı düşünün.
+Bazı öğeler ve öznitelikler Azure App Service IIS şemasında tanımlı değildir. Sorunlarla karşılaşırsanız [xdt dönüştürmeleri](/azure/app-service/configure-common)kullanmayı düşünün.
 
 #### <a name="single-application-pool-per-site"></a>Site başına tek uygulama havuzu
 

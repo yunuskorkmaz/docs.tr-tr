@@ -2,12 +2,12 @@
 title: Mac için Visual Studio kullanarak .NET Standard sınıf kitaplığı oluşturma
 description: Mac için Visual Studio kullanarak .NET Standard sınıf kitaplığı oluşturmayı öğrenin.
 ms.date: 06/08/2020
-ms.openlocfilehash: 8e1e4ca3bc1b12d889b847d80318f3d6cd1bbe46
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 433f6e0e2d784878c9a1616139b39ec56d695bcf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415999"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537645"
 ---
 # <a name="tutorial-create-a-net-standard-library-using-visual-studio-for-mac"></a>Öğretici: Mac için Visual Studio kullanarak .NET Standard kitaplığı oluşturma
 
@@ -21,12 +21,12 @@ Bir *sınıf kitaplığı* , bir uygulama tarafından çağrılan türleri ve y�
 > - Mac için Visual Studio, **Help**  >  menüden**sorun bildir** veya hoş geldiniz ekranından **sorun** bildir ' i seçerek bir hata raporu dosyalamayı sağlayan bir pencere açar. Geri bildiriminizi [Geliştirici Topluluğu](https://developercommunity.visualstudio.com/spaces/41/index.html) portalında izleyebilirsiniz.
 > - Öneride bulunmak için, **Help**  >  menüden**öneriler sağlama** veya hoş geldiniz ekranından [Mac için Visual Studio Geliştirici topluluğu Web sayfasına](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)götüren **bir öneri** sağlama ' yı seçin.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Mac için Visual Studio sürüm 8,6 veya üstünü yükler](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). .NET Core ' u yüklemek için seçeneği belirleyin. .NET Core geliştirmesi için Xamarin 'in yüklenmesi isteğe bağlıdır. Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
   * [Öğretici: Mac için Visual Studio yüklemesi](/visualstudio/mac/installation).
-  * [Desteklenen macOS sürümleri](../install/dependencies.md?pivots=os-macos).
+  * [Desteklenen macOS sürümleri](../install/macos.md).
   * [Mac için Visual Studio tarafından desteklenen .NET Core sürümleri](/visualstudio/mac/net-core-support).
 
 ## <a name="create-a-solution-with-a-class-library-project"></a>Sınıf kitaplığı projesiyle çözüm oluşturma

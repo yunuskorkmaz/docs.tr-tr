@@ -2,12 +2,12 @@
 title: .NET Core SDK ve araçlarla sürekli tümleştirme (CI)
 description: .NET Core SDK ve araçlarını sürekli tümleştirme ile yapı sunucusunda nasıl kullanacağınızı öğrenin.
 ms.date: 05/18/2017
-ms.openlocfilehash: ddccb477bc112157a155e2217e04c329e7ab51c5
-ms.sourcegitcommit: 3492dafceb5d4183b6b0d2f3bdf4a1abc4d5ed8c
+ms.openlocfilehash: 724cc639a2588b085b31ff4590acce34d2380655
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86415997"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537723"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Sürekli tümleştirme (CI) içinde .NET Core SDK ve araçları kullanma
 
@@ -36,7 +36,7 @@ Yükleyici betiği, SDK 'nın istenen sürümünü getirmek ve yüklemek üzere 
 
 ## <a name="ci-setup-examples"></a>CI kurulum örnekleri
 
-Bu bölümde, bir PowerShell veya bash betiği kullanılarak el ile yapılan bir kurulum ve hizmet olarak yazılım (SaaS) CI çözümlerinin bir açıklaması açıklanmaktadır. Kapsanan SaaS CI çözümleri, [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/)ve [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index).
+Bu bölümde, bir PowerShell veya bash betiği kullanılarak el ile yapılan bir kurulum ve hizmet olarak yazılım (SaaS) CI çözümlerinin bir açıklaması açıklanmaktadır. Kapsanan SaaS CI çözümleri, [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/)ve [Azure Pipelines](/azure/devops/pipelines/index).
 
 ### <a name="manual-setup"></a>El ile kurulum
 
@@ -147,7 +147,7 @@ Aşağıdaki yaklaşımlardan birini kullanarak .NET Core projeleri oluşturmak 
 1. Komutlarınızı kullanarak [el ile kurulum adımından](#manual-setup) betiği çalıştırın.
 1. .NET Core araçları kullanmak üzere yapılandırılmış çeşitli Azure DevOps Services yerleşik oluşturma görevlerinden oluşan bir yapı oluşturun.
 
-Her iki çözüm de geçerlidir. El ile kurulum betiği kullanarak, bunları yapılandırmanın bir parçası olarak indirdiklerinden, aldığınız araçların sürümünü kontrol edersiniz. Derleme, oluşturmanız gereken bir betikten çalıştırılır. Bu makale yalnızca el ile seçeneği içerir. Azure DevOps Services yapı görevleriyle derleme oluşturma hakkında daha fazla bilgi için [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) belgelerine bakın.
+Her iki çözüm de geçerlidir. El ile kurulum betiği kullanarak, bunları yapılandırmanın bir parçası olarak indirdiklerinden, aldığınız araçların sürümünü kontrol edersiniz. Derleme, oluşturmanız gereken bir betikten çalıştırılır. Bu makale yalnızca el ile seçeneği içerir. Azure DevOps Services yapı görevleriyle derleme oluşturma hakkında daha fazla bilgi için [Azure Pipelines](/azure/devops/pipelines/index) belgelerine bakın.
 
 Azure DevOps Services içinde el ile kurulum betiği kullanmak için yeni bir derleme tanımı oluşturun ve derleme adımı için çalıştırılacak betiği belirtin. Bu, Azure DevOps Services kullanıcı arabirimi kullanılarak gerçekleştirilir:
 
@@ -169,7 +169,7 @@ Azure DevOps Services içinde el ile kurulum betiği kullanmak için yeni bir de
 
 ## <a name="orchestrating-the-build"></a>Derlemeyi düzenleme
 
-Bu belgenin çoğunda, .NET Core ile kodunuzu *düzenleme veya yapılandırma*hakkında bilgi sağlamadan .NET Core araçlarının nasıl elde edileceğini ve çeşitli CI hizmetlerinin nasıl yapılandırılacağı açıklanmaktadır. Yapı işlemini nasıl yapılandıracağınıza ilişkin seçimler burada genel bir şekilde ele alınmayan birçok etkene bağlıdır. Her teknolojiyle derlemelerinizi düzenleme hakkında daha fazla bilgi için, [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/)ve [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)belge kümelerinde sağlanan kaynakları ve örnekleri inceleyin.
+Bu belgenin çoğunda, .NET Core ile kodunuzu *düzenleme veya yapılandırma*hakkında bilgi sağlamadan .NET Core araçlarının nasıl elde edileceğini ve çeşitli CI hizmetlerinin nasıl yapılandırılacağı açıklanmaktadır. Yapı işlemini nasıl yapılandıracağınıza ilişkin seçimler burada genel bir şekilde ele alınmayan birçok etkene bağlıdır. Her teknolojiyle derlemelerinizi düzenleme hakkında daha fazla bilgi için, [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/)ve [Azure Pipelines](/azure/devops/pipelines/index)belge kümelerinde sağlanan kaynakları ve örnekleri inceleyin.
 
 .NET Core araçları kullanılarak .NET Core kodu için derleme işlemini yapılandırırken uygulamanız gereken iki genel yaklaşım doğrudan MSBuild 'i veya .NET Core komut satırı komutlarını kullanmaktır. Uygulamanız gereken yaklaşım, yaklaşımlar ve yüksek düzeyde karmaşıklığa sahip olan rahatlık düzeyinize göre belirlenir. MSBuild, derleme işleminizi görev ve hedef olarak ifade etme olanağı sağlar, ancak öğrenme MSBuild proje dosyası sözdiziminin ek karmaşıklığı ile birlikte gelir. .NET Core komut satırı araçlarının kullanılması belki de basittir, ancak düzenleme mantığını veya PowerShell gibi bir komut dosyası dilinde yazmanızı gerektirir `bash` .
 

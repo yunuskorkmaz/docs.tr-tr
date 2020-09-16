@@ -5,12 +5,12 @@ author: adegeo
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 56eebc0fc5bad6f57d93358cbbef389d6355d66b
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 6106f66dfbbe382ee9f61eb8b7bda70ab9b72d0b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656696"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538557"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core ile çalışmaya başlama
 
@@ -54,7 +54,7 @@ Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulamaları g
 | ![video için film kamerası simgesi](./media/video-icon.png "Nasıl yapılacağını görmek için") | [Visual Studio Code ve .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/) videosunu Kanal 9 ' da nasıl yükleyip kullanacağınızı izleyin. |
 | ![video için film kamerası simgesi](./media/video-icon.png "Nasıl yapılacağını görmek için") | YouTube 'daki [.NET Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80) videolarını izleyin. |
 
-Desteklenen Windows sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve Requirements](install/dependencies.md?pivots=os-windows) makalesi.
+Desteklenen Windows sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve Requirements](./install/windows.md) makalesi.
 
 # <a name="linux"></a>[Linux](#tab/linux)
 
@@ -66,7 +66,7 @@ Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulamaları g
 |---|---|
 | ![video için film kamerası simgesi](./media/video-icon.png "Nasıl yapılacağını görmek için") | [Ubuntu 'Da C# ve .NET Core kullanarak Visual Studio Code kullanmaya başlama](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)hakkında bir video izleyin. |
 
-Desteklenen Linux desteklerinin ve sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve gereksinimler](install/dependencies.md?pivots=os-linux) makalesi.
+Desteklenen Linux desteklerinin ve sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve gereksinimler](./install/linux.md) makalesi.
 
 # <a name="macos"></a>[macOS](#tab/macos)
 
@@ -80,6 +80,6 @@ Aşağıdaki adım adım öğreticilerden yararlanarak .NET Core uygulamaları g
 |---|---|
 | ![video için film kamerası simgesi](media/video-icon.png "Nasıl yapılacağını görmek için") | [MacOS 'Ta C# ve .NET Core kullanarak Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)kullanmaya başlama hakkında bir video izleyin. |
 
-Desteklenen OS X/macOS sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve Requirements](install/dependencies.md?pivots=os-macos) makalesi.
+Desteklenen OS X/macOS sürümlerinin bir listesi için bkz. [.NET Core Dependencies ve Requirements](./install/macos.md) makalesi.
 
 ---

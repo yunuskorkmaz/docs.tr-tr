@@ -4,12 +4,12 @@ description: Ubuntu üzerinde .NET Core SDK ve .NET Core çalışma zamanı yük
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 9694dac719024264edee849044f048970b63b7b7
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5c07de20110a1aecf2ec5cb9de88f204625e548d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89132955"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538471"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-ubuntu"></a>Ubuntu üzerinde .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 
@@ -36,7 +36,7 @@ Aşağıdaki tabloda, şu anda desteklenen .NET Core sürümlerinin ve üzerinde
 | ✔️ [18,04 (LTS)](#1804-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 | ❌[17,10](#1710-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
 | ❌[17,04](#1704-)       | ✔️ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
-| ❌ [16.10](#1610-)       | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
+| ❌[16,10](#1610-)       | ❌ 2,1        | ❌ 3,1        | ❌ 5,0 Önizleme |
 | ✔️ [16,04 (LTS)](#1604-) | ✔️ 2,1        | ✔️ 3,1        | ✔️ 5,0 Preview |
 
 Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
@@ -172,6 +172,10 @@ sudo apt-get upgrade
 ## <a name="apt-troubleshooting"></a>APT sorunlarını giderme
 
 Bu bölümde, .NET Core 'u yüklemek için APT kullanırken karşılaşabileceğiniz yaygın hatalar hakkında bilgi verilmektedir.
+
+### <a name="unable-to-find-package"></a>Paket bulunamadı
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="unable-to-locate--some-packages-could-not-be-installed"></a>\\Bazı paketlerin yüklenmesi bulunamıyor
 

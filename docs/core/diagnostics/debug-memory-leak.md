@@ -3,12 +3,12 @@ title: Bellek sızıntısı öğreticisinde hata ayıklama
 description: .NET Core 'da Bellek sızıntısını nasıl ayıklayacağınızı öğrenin.
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: ff684f9b9402cb8b7b648e792a1d37ddcc96b399
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 7fa87a411606e81ffe91348c3cbce5f258a6e4e2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924896"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538598"
 ---
 # <a name="debug-a-memory-leak-in-net-core"></a>.NET Core 'da bellek sızıntısı hatalarını ayıklama
 
@@ -34,7 +34,7 @@ Bu öğreticide şunları yapacaksınız:
 - [DotNet-](dotnet-trace.md) liste süreçlerini izleme.
 - [DotNet-](dotnet-counters.md) yönetilen bellek kullanımını denetlemek için sayaçlar.
 - [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm.
-- Tanılama için bir [örnek hata ayıklama hedef](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) uygulaması.
+- Tanılama için bir [örnek hata ayıklama hedef](/samples/dotnet/samples/diagnostic-scenarios/) uygulaması.
 
 Öğretici, örnek ve araçların yüklendiğini ve kullanıma hazırlandığını varsayar.
 
@@ -42,7 +42,7 @@ Bu öğreticide şunları yapacaksınız:
 
 Bu senaryonun köke neden olması için tanılama verileri toplamaya başlamadan önce, aslında bir bellek sızıntısı (bellek büyümesi) gördüğünüzü unutmayın. Doğrulamak için [DotNet-Counters](dotnet-counters.md) aracını kullanabilirsiniz.
 
-Bir konsol penceresi açın ve [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/)indirdiğiniz ve sıkıştırmadan indirdiğiniz dizine gidin. Hedefi Çalıştır:
+Bir konsol penceresi açın ve [örnek hata ayıklama hedefini](/samples/dotnet/samples/diagnostic-scenarios/)indirdiğiniz ve sıkıştırmadan indirdiğiniz dizine gidin. Hedefi Çalıştır:
 
 ```dotnetcli
 dotnet run
@@ -116,7 +116,7 @@ Bellek kullanımını izleyerek belleğin büyüdüğünü veya sızmasını gü
 
 Olası bellek sızıntılarını analiz edilirken uygulamanın bellek yığınına erişmeniz gerekir. Daha sonra bellek içeriğini çözümleyebilirsiniz. Nesneler arasındaki ilişkilere bakarak belleğin neden serbest bırakılmadığına ilişkin bir kayıt oluşturursunuz. Ortak bir tanılama veri kaynağı, Windows 'da bellek dökümleridir veya Linux üzerinde eşdeğer çekirdek dökümleridir. .NET Core uygulamasının bir dökümünü oluşturmak için [DotNet-dump)](dotnet-dump.md) aracını kullanabilirsiniz.
 
-Önceden başlatılan [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) kullanarak bir Linux core dökümü oluşturmak için aşağıdaki komutu çalıştırın:
+Önceden başlatılan [örnek hata ayıklama hedefini](/samples/dotnet/samples/diagnostic-scenarios/) kullanarak bir Linux core dökümü oluşturmak için aşağıdaki komutu çalıştırın:
 
 ```dotnetcli
 dotnet-dump collect -p 4807
@@ -133,7 +133,7 @@ Complete
 
 Döküm toplandıktan sonra, başarısız olan işlemi tanılamak için yeterli bilgiye sahip olmanız gerekir. Başarısız işlem bir üretim sunucusunda çalışıyorsa, artık işlemi yeniden başlatarak kısa süreli düzeltmeye yönelik ideal bir süredir.
 
-Bu öğreticide, şimdi [örnek hata ayıklama hedefini](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios/) tamamladınız ve kapatabilirsiniz. Sunucuyu başlatan terminale gidin ve <kbd>CTRL + C</kbd>tuşlarına basın.
+Bu öğreticide, şimdi [örnek hata ayıklama hedefini](/samples/dotnet/samples/diagnostic-scenarios/) tamamladınız ve kapatabilirsiniz. Sunucuyu başlatan terminale gidin ve <kbd>CTRL + C</kbd>tuşlarına basın.
 
 ### <a name="analyze-the-core-dump"></a>Çekirdek dökümünü analiz etme
 
@@ -146,7 +146,7 @@ dotnet-dump analyze core_20190430_185145
 `core_20190430_185145`, Analiz etmek istediğiniz temel döküm adıdır.
 
 > [!NOTE]
-> *Libdl.so* bulunamadığını belirten bir hata görürseniz, *libc6-dev* paketini yüklemek zorunda kalabilirsiniz. Daha fazla bilgi için bkz. [Linux üzerinde .NET Core önkoşulları](../install/dependencies.md?pivots=os-linux).
+> *Libdl.so* bulunamadığını belirten bir hata görürseniz, *libc6-dev* paketini yüklemek zorunda kalabilirsiniz. Daha fazla bilgi için bkz. [Linux üzerinde .NET Core önkoşulları](../install/linux.md).
 
 SOS komutları girebileceğiniz bir istem sunulur. Genellikle, bakmak istediğiniz ilk şey, yönetilen yığının genel durumudur:
 

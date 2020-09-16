@@ -4,12 +4,12 @@ description: .NET birim testleri için kod kapsamı özelliklerini nasıl kullan
 author: IEvangelist
 ms.author: dapine
 ms.date: 07/01/2020
-ms.openlocfilehash: af64116e86c3f46f37c8d5d079b9c86084095485
-ms.sourcegitcommit: b6a1869f97a37f11a68c90afde1a520a6887dcbc
+ms.openlocfilehash: 4d2c8f3db26eaabcb973378a349ef57912e92bfa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85853899"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538153"
 ---
 # <a name="use-code-coverage-for-unit-testing"></a>Birim testi için kod kapsamını kullanma
 
@@ -19,7 +19,7 @@ Bu makalede, ReportGenerator kullanarak kapak ve rapor oluşturma ile birim test
 
 Ayrıca, bu makalede bir rapor oluşturmak için bir kapak Let testi çalıştırmasında toplanan kod kapsamı bilgilerinin nasıl kullanılacağı açıklanır. Rapor oluşturma, [GitHub-ReportGenerator üzerinde başka bir açık kaynak proje](https://github.com/danielpalme/ReportGenerator)kullanılarak mümkündür. ReportGenerator, Cobertura tarafından üretilen kapsam raporlarını birçok farklı biçimdeki insanlar tarafından okunabilen raporlar halinde dönüştürür.
 
-Bu makale, örnekler tarayıcısında kullanılabilen [örnek kaynak kodu projesini](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)temel alır.
+Bu makale, örnekler tarayıcısında kullanılabilen [örnek kaynak kodu projesini](/samples/dotnet/samples/unit-testing-code-coverage-cs)temel alır.
 
 ## <a name="system-under-test"></a>Test altındaki sistem
 
@@ -161,7 +161,7 @@ dotnet sln XUnit.Coverage.sln add (ls **/*.csproj) --in-root
 dotnet build
 ```
 
-Yapı başarılı olursa, bu üç projeyi, uygun şekilde Başvurulmuş proje ve paketleri oluşturmuş ve kaynak kodu doğru bir şekilde güncelleştirdiniz. Bravo!
+Yapı başarılı olursa, bu üç projeyi, uygun şekilde Başvurulmuş proje ve paketleri oluşturmuş ve kaynak kodu doğru bir şekilde güncelleştirdiniz. Tebrikler!
 
 ## <a name="tooling"></a>Araçlar
 
@@ -302,7 +302,7 @@ Bu komutu çalıştırdıktan sonra, bir HTML dosyası oluşturulan raporu temsi
 - [GitHub-ReportGenerator deposu](https://github.com/danielpalme/ReportGenerator)
 - [ReportGenerator proje sitesi](https://danielpalme.github.io/ReportGenerator)
 - [Test komutunu .NET Core CLI](../tools/dotnet-test.md)
-- [Örnek kaynak kodu](https://docs.microsoft.com/samples/dotnet/samples/unit-testing-code-coverage-cs)
+- [Örnek kaynak kodu](/samples/dotnet/samples/unit-testing-code-coverage-cs)
 
 ## <a name="next-steps"></a>Sonraki Adımlar
 

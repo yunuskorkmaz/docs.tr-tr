@@ -4,12 +4,12 @@ description: OpenSUSE üzerinde .NET Core SDK ve .NET Core çalışma zamanı y�
 author: adegeo
 ms.author: adegeo
 ms.date: 06/04/2020
-ms.openlocfilehash: 24f0a5b5278d038c2f941b0984efcacd91dcbe31
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: ccdb23ca1838d2c15c9a95b45c8505efe7a6df0e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85619474"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539236"
 ---
 # <a name="install-net-core-sdk-or-net-core-runtime-on-opensuse"></a>OpenSUSE 'e .NET Core SDK veya .NET Core çalışma zamanı yüklemesi
 
@@ -34,7 +34,7 @@ Aşağıdaki tabloda, openSUSE 15 üzerinde şu anda desteklenen .NET Core sür�
 Aşağıdaki .NET Core sürümleri artık desteklenmemektedir. Bunlara yönelik İndirilenler hala yayımlandı olarak kalmaya devam eder:
 
 - 3.0
-- 2,2
+- 2.2
 - 2.0
 
 ## <a name="how-to-install-other-versions"></a>Diğer sürümleri nasıl yüklenir
@@ -58,6 +58,10 @@ sudo chown root:root /etc/zypp/repos.d/microsoft-prod.repo
 ## <a name="troubleshoot-the-package-manager"></a>Paket yöneticisinin sorunlarını giderme
 
 Bu bölüm, .NET Core 'u yüklemek için Paket Yöneticisi 'ni kullanırken karşılaşabileceğiniz yaygın hatalarla ilgili bilgiler sağlar.
+
+### <a name="unable-to-find-package"></a>Paket bulunamadı
+
+[!INCLUDE [linux-install-package-manager-x64-vs-arm](includes/linux-install-package-manager-x64-vs-arm.md)]
 
 ### <a name="failed-to-fetch"></a>Getirilemedi
 

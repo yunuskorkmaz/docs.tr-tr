@@ -3,18 +3,18 @@ title: Hata ayıklama kilitlenmesi-.NET Core
 description: .NET Core 'da kilitleme sorununu ayıklamada size kılavuzluk eden bir öğretici.
 ms.topic: tutorial
 ms.date: 07/20/2020
-ms.openlocfilehash: 6f060e1ae801eb4eacbbd1fb67110f827c37f597
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d9a9328b376de5886d22ca7315f6d7d9d73fd2c2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557886"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90538702"
 ---
 # <a name="debug-a-deadlock-in-net-core"></a>.NET Core 'da kilitlenmeyle hata ayıklama
 
 **Bu makale şu şekilde geçerlidir: ✔️** .net Core 3,1 SDK ve sonraki sürümleri
 
-Bu öğreticide, bir kilitlenme senaryosunda hata ayıklamayı öğreneceksiniz. [Web uygulaması](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) kaynak kodu deposu ASP.NET Core sunulan örneği kullanarak, kasıtlı olarak bir kilitlenmeye neden olabilirsiniz. Uç nokta, askıda kalma ve iş parçacığı birikmesi ile karşılaşacaktır. Temel dökümler, temel döküm Analizi ve işlem izleme gibi sorunları çözümlemek için çeşitli araçları nasıl kullanabileceğinizi öğreneceksiniz.
+Bu öğreticide, bir kilitlenme senaryosunda hata ayıklamayı öğreneceksiniz. [Web uygulaması](/samples/dotnet/samples/diagnostic-scenarios) kaynak kodu deposu ASP.NET Core sunulan örneği kullanarak, kasıtlı olarak bir kilitlenmeye neden olabilirsiniz. Uç nokta, askıda kalma ve iş parçacığı birikmesi ile karşılaşacaktır. Temel dökümler, temel döküm Analizi ve işlem izleme gibi sorunları çözümlemek için çeşitli araçları nasıl kullanabileceğinizi öğreneceksiniz.
 
 Bu öğreticide şunları yapacaksınız:
 
@@ -26,18 +26,18 @@ Bu öğreticide şunları yapacaksınız:
 > - Çağrı yığınlarını ve eşitleme bloklarını çözümle
 > - Bir kilitlenmesi tanılayın ve çözün
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Öğretici şunları kullanır:
 
 - [.NET Core 3,1 SDK](https://dotnet.microsoft.com/download/dotnet-core) veya sonraki bir sürümü
-- [Örnek hata ayıklama hedefi-](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) senaryoyu tetiklemek için Web uygulaması
+- [Örnek hata ayıklama hedefi-](/samples/dotnet/samples/diagnostic-scenarios) senaryoyu tetiklemek için Web uygulaması
 - [DotNet-](dotnet-trace.md) liste işlemlerine izleme
 - [DotNet-](dotnet-dump.md) döküm dosyasını toplamak ve analiz etmek için döküm
 
 ## <a name="core-dump-generation"></a>Temel döküm oluşturma
 
-Uygulamanın yanıt verme hızını araştırmak için, temel döküm veya bellek dökümü, iş parçacıklarının durumunu ve çekişme sorunları olabilecek olası kilitleri incelemenizi sağlar. Örnek kök dizininden aşağıdaki komutu kullanarak [örnek hata ayıklama](https://docs.microsoft.com/samples/dotnet/samples/diagnostic-scenarios) uygulamasını çalıştırın:
+Uygulamanın yanıt verme hızını araştırmak için, temel döküm veya bellek dökümü, iş parçacıklarının durumunu ve çekişme sorunları olabilecek olası kilitleri incelemenizi sağlar. Örnek kök dizininden aşağıdaki komutu kullanarak [örnek hata ayıklama](/samples/dotnet/samples/diagnostic-scenarios) uygulamasını çalıştırın:
 
 ```dotnetcli
 dotnet run

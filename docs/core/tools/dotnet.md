@@ -2,12 +2,12 @@
 title: DotNet komutu
 description: DotNet komutu (.NET Core CLI için genel sürücü) ve kullanımı hakkında bilgi edinin.
 ms.date: 02/13/2020
-ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 4476dcf36455e0dc1b89712409818cf7e0352f2c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378835"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90537671"
 ---
 # <a name="dotnet-command"></a>DotNet komutu
 
@@ -15,7 +15,7 @@ ms.locfileid: "83378835"
 
 ## <a name="name"></a>Name
 
-`dotnet`-.NET Core CLI için genel sürücü.
+`dotnet` -.NET Core CLI için genel sürücü.
 
 ## <a name="synopsis"></a>Özeti
 
@@ -46,9 +46,9 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
     <PATH_TO_APPLICATION> [arguments]
 ```
 
-`--roll-forward`, .NET Core 3. x sürümünden bu yana kullanılabilir. `--roll-forward-on-no-candidate-fx`.NET Core 2. x için kullanın.
+`--roll-forward` , .NET Core 3. x sürümünden bu yana kullanılabilir. `--roll-forward-on-no-candidate-fx`.NET Core 2. x için kullanın.
 
-## <a name="description"></a>Açıklama
+## <a name="description"></a>Description
 
 `dotnet`Komutun iki işlevi vardır:
 
@@ -118,26 +118,26 @@ Bir uygulama çalıştırıldığında aşağıdaki seçenekler mevcuttur `dotne
 
 - **`--additional-deps <PATH>`**
 
-  Ek *. Deps. JSON* dosyasının yolu. Bir *Deps. JSON* dosyası, derleme çakışmalarını çözmek için kullanılan bağımlılıklar, derleme bağımlılıkları ve sürüm bilgilerinin bir listesini içerir. Daha fazla bilgi için bkz. GitHub 'da [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
+  Dosyadaki ek *.deps.js* yolu. Dosyadaki bir *deps.js* , derleme çakışmalarını çözmek için kullanılan bağımlılıklar, derleme bağımlılıkları ve sürüm bilgilerinin bir listesini içerir. Daha fazla bilgi için bkz. GitHub 'da [çalışma zamanı yapılandırma dosyaları](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) .
 
 - **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  *Deps. JSON* dosyasının yolu. *Deps. JSON* dosyası, uygulamayı çalıştırmak için gerekli bağımlılıklar hakkında bilgi içeren bir yapılandırma dosyasıdır. Bu dosya .NET Core SDK tarafından oluşturulur.
+  Dosyadaki *deps.js* yolu. *deps.js* dosyadaki bir yapılandırma, uygulamayı çalıştırmak için gerekli bağımlılıklar hakkında bilgiler içeren bir yapılandırma dosyasıdır. Bu dosya .NET Core SDK tarafından oluşturulur.
 
 - **`--runtimeconfig`**
 
-  *Runtimeconfig. JSON* dosyasının yolu. *Runtimeconfig. JSON* dosyası, çalışma zamanı ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
+  Dosyadaki bir *runtimeconfig.js* yolu. Dosya *runtimeconfig.js* , çalışma zamanı ayarlarını içeren bir yapılandırma dosyasıdır. Daha fazla bilgi için bkz. [.NET Core çalışma zamanı yapılandırma ayarları](../run-time-config/index.md#runtimeconfigjson).
 
 - **`--roll-forward <SETTING>`****.NET Core SDK 3,0 ' den başlayarak kullanılabilir.**
 
   Uygulamaya nasıl iletme uygulanacağını denetler. `SETTING`Aşağıdaki değerlerden biri olabilir. Belirtilmemişse, `Minor` varsayılandır.
 
-  - `LatestPatch`-En yüksek düzeltme eki sürümüne ilet. Bu, ikincil sürüm iletmeyi devre dışı bırakır.
-  - `Minor`-İstenen alt sürüm eksikse, en düşük düzeydeki sürüme ilet. İstenen ikincil sürüm varsa, LatestPatch ilkesi kullanılır.
-  - `Major`-İstenen ana sürüm eksikse, en düşük ana sürüme ve en düşük alt sürüme ilet. İstenen ana sürüm varsa, Ikincil ilke kullanılır.
-  - `LatestMinor`-İstenen alt sürüm mevcut olsa bile en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
-  - `LatestMajor`-İstenen ana mevcut olsa bile en yüksek ve en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
-  - `Disable`-İleri geri alma. Yalnızca belirtilen sürüme bağlayın. Bu ilke, en son düzeltme eklerine iletme özelliğini devre dışı bıraktığından genel kullanım için önerilmez. Bu değer yalnızca test için önerilir.
+  - `LatestPatch` -En yüksek düzeltme eki sürümüne ilet. Bu, ikincil sürüm iletmeyi devre dışı bırakır.
+  - `Minor` -İstenen alt sürüm eksikse, en düşük düzeydeki sürüme ilet. İstenen ikincil sürüm varsa, LatestPatch ilkesi kullanılır.
+  - `Major` -İstenen ana sürüm eksikse, en düşük ana sürüme ve en düşük alt sürüme ilet. İstenen ana sürüm varsa, Ikincil ilke kullanılır.
+  - `LatestMinor` -İstenen alt sürüm mevcut olsa bile en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
+  - `LatestMajor` -İstenen ana mevcut olsa bile en yüksek ve en yüksek düzeyde alt sürüme ilet. Bileşen barındırma senaryolarına yöneliktir.
+  - `Disable` -İleri geri alma. Yalnızca belirtilen sürüme bağlayın. Bu ilke, en son düzeltme eklerine iletme özelliğini devre dışı bıraktığından genel kullanım için önerilmez. Bu değer yalnızca test için önerilir.
 
   Hariç `Disable` olmak üzere, tüm ayarlar kullanılabilir en yüksek düzeltme eki sürümünü kullanacaktır.
 
@@ -145,11 +145,11 @@ Bir uygulama çalıştırıldığında aşağıdaki seçenekler mevcuttur `dotne
 
 - **`--roll-forward-on-no-candidate-fx <N>`****.NET Core 2. x SDK ' da kullanılabilir.**
 
-  Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını tanımlar. `N`şunları yapabilirsiniz:
+  Gerekli paylaşılan çerçeve kullanılabilir olmadığında davranışını tanımlar. `N` şunları yapabilirsiniz:
 
-  - `0`-Hatta ikincil sürüm iletmeyi devre dışı bırakın.
-  - `1`-Önemli sürümde değil, küçük sürümde ilet. Bu, varsayılan davranıştır.
-  - `2`-Küçük ve büyük sürümlerde ilet.
+  - `0` -Hatta ikincil sürüm iletmeyi devre dışı bırakın.
+  - `1` -Önemli sürümde değil, küçük sürümde ilet. Bu, varsayılan davranıştır.
+  - `2` -Küçük ve büyük sürümlerde ilet.
 
   Daha fazla bilgi için bkz. [Ileri alma](../whats-new/dotnet-core-2-1.md#roll-forward).
 
@@ -260,7 +260,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  Varsayılan konumda yüklü değilse, .NET Core çalışma zamanlarının konumunu belirtir. Windows üzerinde varsayılan konum `C:\Program Files\dotnet` . Linux ve macOS 'ta varsayılan konum `/usr/share/dotnet` . Bu ortam değişkeni yalnızca oluşturulan yürütülebilir dosyalar (apphosts) aracılığıyla uygulamalar çalıştırılırken kullanılır. `DOTNET_ROOT(x86)`, 64 bit IŞLETIM sisteminde 32 bitlik bir yürütülebilir dosya çalıştırılırken kullanılır.
+  Varsayılan konumda yüklü değilse, .NET Core çalışma zamanlarının konumunu belirtir. Windows üzerinde varsayılan konum `C:\Program Files\dotnet` . Linux ve macOS 'ta varsayılan konum `/usr/share/dotnet` . Bu ortam değişkeni yalnızca oluşturulan yürütülebilir dosyalar (apphosts) aracılığıyla uygulamalar çalıştırılırken kullanılır. `DOTNET_ROOT(x86)` , 64 bit IŞLETIM sisteminde 32 bitlik bir yürütülebilir dosya çalıştırılırken kullanılır.
 
 - `DOTNET_PACKAGES`
 
@@ -300,7 +300,7 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  CLı Kullanıcı arabiriminin dilini, gibi bir yerel ayar değeri kullanarak ayarlar `en-us` . Desteklenen değerler, Visual Studio ile aynıdır. Daha fazla bilgi için [Visual Studio yükleme belgelerindeki](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)yükleyici dilini değiştirme bölümüne bakın. .NET Resource Manager kuralları uygulanır, bu sayede tam bir eşleşme seçmeniz gerekmez, ağaçta alt &mdash; öğeleri de seçebilirsiniz `CultureInfo` . Örneğin, olarak ayarlarsanız `fr-CA` , CLI çevirileri bulur ve kullanır `fr` . Bunu desteklenmeyen bir dile ayarlarsanız, CLı Ingilizce 'ye geri döner.
+  CLı Kullanıcı arabiriminin dilini, gibi bir yerel ayar değeri kullanarak ayarlar `en-us` . Desteklenen değerler, Visual Studio ile aynıdır. Daha fazla bilgi için [Visual Studio yükleme belgelerindeki](/visualstudio/install/install-visual-studio?view=vs-2019)yükleyici dilini değiştirme bölümüne bakın. .NET Resource Manager kuralları uygulanır, bu sayede tam bir eşleşme seçmeniz gerekmez, ağaçta alt &mdash; öğeleri de seçebilirsiniz `CultureInfo` . Örneğin, olarak ayarlarsanız `fr-CA` , CLI çevirileri bulur ve kullanır `fr` . Bunu desteklenmeyen bir dile ayarlarsanız, CLı Ingilizce 'ye geri döner.
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
@@ -332,13 +332,13 @@ dotnet myapp.dll
 
   , Ve gibi barındırma bileşenlerinden tanılama izlemeyi denetler `dotnet.exe` `hostfxr` `hostpolicy` .
 
-  * `COREHOST_TRACE=[0/1]`-Varsayılan, `0` -izleme devre dışı. Olarak ayarlanırsa `1` , tanılama izlemesi etkinleştirilir.
-  * `COREHOST_TRACEFILE=<file path>`-yalnızca izleme etkinse etkilidir `COREHOST_TRACE=1` . Ayarlandığında, izleme bilgileri belirtilen dosyaya yazılır, aksi takdirde izleme bilgileri üzerine yazılır `stderr` . **.NET Core 3. x ile başlayarak kullanılabilir.**
-  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]`-Varsayılan değer `4` . Ayar yalnızca, ile izleme etkinleştirildiğinde kullanılır `COREHOST_TRACE=1` . **.NET Core 3. x ile başlayarak kullanılabilir.**
-    * `4`-Tüm izleme bilgileri yazılır
-    * `3`-yalnızca bilgilendirme, uyarı ve hata iletileri yazılır
-    * `2`-yalnızca uyarı ve hata iletileri yazılır
-    * `1`-yalnızca hata iletileri yazılır
+  * `COREHOST_TRACE=[0/1]` -Varsayılan, `0` -izleme devre dışı. Olarak ayarlanırsa `1` , tanılama izlemesi etkinleştirilir.
+  * `COREHOST_TRACEFILE=<file path>` -yalnızca izleme etkinse etkilidir `COREHOST_TRACE=1` . Ayarlandığında, izleme bilgileri belirtilen dosyaya yazılır, aksi takdirde izleme bilgileri üzerine yazılır `stderr` . **.NET Core 3. x ile başlayarak kullanılabilir.**
+  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]` -Varsayılan değer `4` . Ayar yalnızca, ile izleme etkinleştirildiğinde kullanılır `COREHOST_TRACE=1` . **.NET Core 3. x ile başlayarak kullanılabilir.**
+    * `4` -Tüm izleme bilgileri yazılır
+    * `3` -yalnızca bilgilendirme, uyarı ve hata iletileri yazılır
+    * `2` -yalnızca uyarı ve hata iletileri yazılır
+    * `1` -yalnızca hata iletileri yazılır
 
   Uygulama başlatma hakkında ayrıntılı izleme bilgileri almanın tipik yolu, `COREHOST_TRACE=1` uygulamayı ayarlamak ve çalıştırmak için kullanılır `COREHOST_TRACEFILE=host_trace.txt` . `host_trace.txt`Geçerli dizinde ayrıntılı bilgiler içeren yeni bir dosya oluşturulur.
 
