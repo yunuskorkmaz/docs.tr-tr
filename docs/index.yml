@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 07/10/2020
-  ms.openlocfilehash: d324cfe43f5558f255746421ebd4d143e7343e81
-  ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+  ms.openlocfilehash: 98de6da2ffd990c5ec99f1a4043b089af712dd6b
+  ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
   ms.translationtype: HT
   ms.contentlocale: tr-TR
-  ms.lasthandoff: 09/05/2020
-  ms.locfileid: "89495557"
+  ms.lasthandoff: 09/15/2020
+  ms.locfileid: "90556056"
 highlightedContent:
   items:
   - title: .NET İndir
@@ -168,11 +168,11 @@ additionalContent:
         text: 'Blazor: .NET ile etkileşimli istemci tarafı web kullanıcı arabirimi'
     - title: Buluta özel ve mikro hizmetler
       links:
-      - url: /dotnet/azure/
+      - url: ./azure/index.yml
         text: .NET için Azure belgeleri
       - url: /azure/storage
         text: Depolama
-      - url: /dotnet/fsharp/using-fsharp-on-azure/
+      - url: ./fsharp/using-fsharp-on-azure/index.md
         text: Azure’da F# Kullanma
       - url: architecture/serverless/index.md
         text: 'Sunucusuz uygulamalar: Mimari, desenler ve Azure’ı uygulama'
@@ -224,7 +224,7 @@ additionalContent:
       links:
       - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
         text: '.NET’te: .NET Core’da sunulan IoT desteği hakkında bilgi edinin'
-      - url: https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
+      - url: /archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
         text: .NET Core 3.0 ile Çoklu Platform IoT Programlama
       - url: https://github.com/dotnet/iot
         text: .NET Core IoT kitaplıkları
@@ -235,19 +235,19 @@ additionalContent:
     items:
     - title: .NET Core API başvurusu
       summary: .NET Core için API başvurusu belgeleri
-      url: https://docs.microsoft.com/dotnet/api/?view=netcore-3.1
+      url: ../api/index.md?view=netcore-3.1
     - title: .NET Framework API başvurusu
       summary: .NET Framework için API başvurusu belgeleri
-      url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+      url: ../api/index.md?view=netframework-4.8
     - title: ASP.NET Core API başvurusu
       summary: ASP.NET Core için API başvurusu belgeleri
-      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
+      url: ../api/index.md?view=aspnetcore-3.1
     - title: ML.NET API başvurusu
       summary: ML.NET için API başvurusu belgeleri
-      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+      url: ../api/index.md?view=ml-dotnet
     - title: Apache Spark API başvurusu için .NET
       summary: Apache Spark için .NET için API başvurusu belgeleri
-      url: https://docs.microsoft.com/dotnet/api/?view=spark-dotnet
+      url: ../api/index.md?view=spark-dotnet
     - title: C# dili başvurusu
       summary: C# dili başvurusu ve belirtimi
       url: csharp/language-reference/index.md
@@ -257,4 +257,4 @@ additionalContent:
     - title: Visual Basic dili başvurusu
       summary: Visual Basic dili başvurusu ve belirtimi
       url: visual-basic/language-reference/index.md
-  footer: .NET belgelerine katkıda bulunun. [Katkıda bulunan kılavuzunu](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) okuyun.
+  footer: .NET belgelerine katkıda bulunun. [Katkıda bulunan kılavuzunu](/contribute/dotnet/dotnet-contribute) okuyun.
