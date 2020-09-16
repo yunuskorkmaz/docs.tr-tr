@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: 36cd3a927d2fdf197e6b496d9308fc43a555d59b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346163"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551047"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic Kodlama Kuralları
 Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. Aynı kodlama kurallarını izlerseniz, aşağıdaki avantajları elde edebilirsiniz:  
@@ -28,7 +28,7 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
 - Adlandırma yönergeleri hakkında daha fazla bilgi için bkz. [Adlandırma yönergeleri](../../../standard/design-guidelines/naming-guidelines.md) konusu.  
   
-- Değişken adının bir parçası olarak "My" veya "My" kullanmayın. Bu uygulama `My` nesneleriyle karışıklık oluşturur.  
+- Değişken adının bir parçası olarak "My" veya "My" kullanmayın. Bu uygulama, nesneleriyle karışıklık oluşturur `My` .  
   
 - Otomatik olarak oluşturulan koddaki nesnelerin adlarını, kurallara uyacak şekilde değiştirmeniz gerekmez.  
   
@@ -67,7 +67,7 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
 ## <a name="program-structure"></a>Program Yapısı  
   
-- `Main` yöntemini kullandığınızda, yeni konsol uygulamaları için varsayılan yapıyı kullanın ve komut satırı bağımsız değişkenleri için `My` kullanın.  
+- `Main`Yöntemini kullandığınızda, yeni konsol uygulamaları için varsayılan yapıyı kullanın ve `My` komut satırı bağımsız değişkenleri için kullanın.  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -75,7 +75,7 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
 ### <a name="string-data-type"></a>Dize Veri Türü  
   
-- Aşağıdaki kodda gösterildiği gibi, kısa dizeleri birleştirmek için [dize ilişkilendirmeyi](https://docs.microsoft.com/dotnet/visual-basic/programming-guide/language-features/strings/interpolated-strings) kullanın.
+- Aşağıdaki kodda gösterildiği gibi, kısa dizeleri birleştirmek için [dize ilişkilendirmeyi](../language-features/strings/interpolated-strings.md) kullanın.
   
      ```vb
      MsgBox($"hello{vbCrLf}goodbye")
@@ -92,7 +92,7 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
 ### <a name="unsigned-data-type"></a>İmzasız Veri Türü  
   
-- Gerekli olduğu durumlar dışında, imzasız türler yerine `Integer` kullanın.  
+- `Integer`Gerekli olduğu durumlar dışında, imzasız türler yerine kullanın.  
   
 ### <a name="arrays"></a>Diziler  
   
@@ -121,15 +121,15 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>WITH anahtar sözcüğünü kullanma  
- Bir nesneye bir dizi çağrı yaptığınızda, `With` anahtar sözcüğünü kullanmayı göz önünde bulundurun:  
+ Bir nesneye bir dizi çağrı yaptığınızda, `With` anahtar sözcüğünü kullanmayı düşünün:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>TRY... öğesini kullanın Özel durum Işleme kullandığınızda deyimleri yakalama ve kullanma  
- `On Error Goto`kullanmayın.  
+ Kullanmayın `On Error Goto` .  
   
 ### <a name="use-the-isnot-keyword"></a>Inot anahtar sözcüğünü kullanma  
- `Not...Is Nothing`yerine `IsNot` anahtar sözcüğünü kullanın.  
+ `IsNot`Yerine anahtar sözcüğünü kullanın `Not...Is Nothing` .  
   
 ### <a name="new-keyword"></a>Yeni anahtar sözcük  
   
@@ -147,11 +147,11 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
 ### <a name="event-handling"></a>Olay İşleme  
   
-- `AddHandler`yerine `Handles` kullanın:  
+- `Handles`Yerine kullanın `AddHandler` :  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
-- `AddressOf`kullanın ve temsilciyi açıkça örneğini oluşturun:  
+- `AddressOf`Öğesini kullanın ve temsilciyi açıkça örneğini oluşturun:  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
@@ -159,10 +159,10 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
-- `RaiseEvent` yöntemini çağırmadan önce bir olayın `Nothing` (null) olup olmadığını doğrulama. `RaiseEvent`, olayı oluşturmadan önce `Nothing` olup olmadığını denetler.  
+- `Nothing`Yöntemi çağırmadan önce bir olayın (null) olup olmadığını doğrulama `RaiseEvent` . `RaiseEvent``Nothing`olayı oluşturmadan önce olup olmadığını denetler.  
   
 ### <a name="using-shared-members"></a>Paylaşılan üyeleri kullanma  
- Örnek değişkeninden değil, sınıf adını kullanarak `Shared` üyelerini çağırın.  
+ `Shared`Bir örnek değişkeninden değil sınıf adını kullanarak üyeleri çağırın.  
   
 ### <a name="use-xml-literals"></a>XML değişmez değerlerini kullan  
  XML sabit değerleri, XML ile çalışırken karşılaşabileceğiniz en yaygın görevleri basitleştirir (örneğin, Load, Query ve Transform). XML ile geliştirme yaparken şu yönergeleri izleyin:  
@@ -173,7 +173,7 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
 - XML belgesindeki öğelere ve özniteliklere erişmek için XML eksen özelliklerini kullanın.  
   
-- `Add` yöntemi gibi API çağrılarını kullanmak yerine, değerleri dahil etmek ve mevcut değerlerden XML oluşturmak için katıştırılmış ifadeleri kullanın:  
+- Yöntem gibi API çağrılarını kullanmak yerine mevcut değerlerden XML oluşturmak ve değerleri dahil etmek için gömülü ifadeleri kullanın `Add` :  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
@@ -187,7 +187,7 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
-- Sonuç içindeki Özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Örneğin, sorgunuz bir müşteri adı ve sipariş KIMLIĞI döndürürse, `Name` olarak bırakmak yerine onları yeniden adlandırın ve sonuç olarak `ID`:  
+- Sonuç içindeki Özellik adları belirsiz olduğunda özellikleri yeniden adlandırın. Örneğin, sorgunuz bir müşteri adı ve bir sipariş KIMLIĞI döndürürse, bunları ve sonuç olarak bırakmak yerine yeniden adlandırın `Name` `ID` :  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
@@ -195,15 +195,15 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
-- Sorgu yan tümcelerini `From` deyimin altında hizalayın:  
+- Sorgu yan tümcelerini deyimin altına Hizala `From` :  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
-- Daha sonra sorgu yan tümcelerinin filtrelenmiş veri kümesinde çalışması için diğer sorgu yan tümcelerinden önce `Where` yan tümceleri kullanın:  
+- `Where`Daha sonra sorgu yan tümcelerinin filtrelenmiş veri kümesinde çalışması için diğer sorgu yan tümcelerinden önce yan tümceleri kullanın:  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
-- Bir JOIN işlemini örtük olarak tanımlamak için `Where` yan tümcesini kullanmak yerine bir JOIN işlemini açıkça tanımlamak için `Join` yan tümcesini kullanın:  
+- `Join` `Where` Bir JOIN işlemini örtük olarak tanımlamak için yan tümcesini kullanmak yerine bir JOIN işlemini açıkça tanımlamak için yan tümcesini kullanın:  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

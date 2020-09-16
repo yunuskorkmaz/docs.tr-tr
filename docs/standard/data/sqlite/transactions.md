@@ -1,13 +1,13 @@
 ---
 title: İşlemler
-ms.date: 12/13/2019
+ms.date: 09/08/2020
 description: İşlemleri nasıl kullanacağınızı öğrenin.
-ms.openlocfilehash: 4b72a1573a560ffd1bfd0f54d46ab3b135280976
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 50c4cd1023eac892cafc3ae4395e9168bd8e9f36
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447141"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678868"
 ---
 # <a name="transactions"></a>İşlemler
 
@@ -15,7 +15,7 @@ ms.locfileid: "75447141"
 
 ## <a name="concurrency"></a>Eşzamanlılık
 
-SQLite 'ta, tek seferde veritabanında bekleyen değişikliklere yalnızca bir işlem izin verilir. Bu nedenle, başka bir işlemin <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> tamamlanamayacak `Execute` kadar uzun <xref:Microsoft.Data.Sqlite.SqliteCommand> sürme durumunda ve üzerinde yapılan çağrılar zaman aşımına uğrar.
+SQLite 'ta, tek seferde veritabanında bekleyen değişikliklere yalnızca bir işlem izin verilir. Bu nedenle, <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> `Execute` <xref:Microsoft.Data.Sqlite.SqliteCommand> başka bir işlemin tamamlanamayacak kadar uzun sürme durumunda ve üzerinde yapılan çağrılar zaman aşımına uğrar.
 
 Kilitleme, yeniden denemeler ve zaman aşımları hakkında daha fazla bilgi için bkz. [veritabanı hataları](database-errors.md).
 
@@ -31,8 +31,17 @@ SQLite, paylaşılan bir önbellek kullanılırken **read UNCOMMITTED** öğesin
 
 - *Hayali* nesnelerin, bir işlem sırasında bir sorgunun where yan tümcesini karşılamak için değiştirilen veya eklenen satırlardır. İzin veriliyorsa aynı sorgu aynı işlemde iki kez yürütüldüğünde aynı sorgu farklı satırlar döndürebilir.
 
-Microsoft. Data. SQLite, geçirilen IsolationLevel 'ı <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> en düşük düzey olarak değerlendirir. Gerçek yalıtım düzeyi READ UNCOMMITTED veya Serializable olarak yükseltilir.
+Microsoft. Data. SQLite, geçirilen IsolationLevel 'ı <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> En düşük düzey olarak değerlendirir. Gerçek yalıtım düzeyi READ UNCOMMITTED veya Serializable olarak yükseltilir.
 
-Aşağıdaki kod, bir kirli okumayı benzetir. Bağlantı dizesinin içermesi gerektiğini göz önünde bulundurun `Cache=Shared`.
+Aşağıdaki kod, bir kirli okumayı benzetir. Bağlantı dizesinin içermesi gerektiğini göz önünde bulundurun `Cache=Shared` .
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]
+
+## <a name="deferred-transactions"></a>Ertelenmiş işlemler
+
+Microsoft. Data. SQLite sürüm 5,0 ' den başlayarak, işlemler ertelenebilir. Bu, ilk komut yürütülene kadar veritabanındaki gerçek işlemin oluşturulmasını erteler. Ayrıca, bu işlem, bir okuma işleminden, komutlarının gerektiğinde bir yazma işlemine aşamalı olarak yükseltilmesine neden olur. Bu işlem sırasında veritabanına eş zamanlı erişimi etkinleştirmek için yararlı olabilir.
+
+[!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DeferredTransactionSample/Program.cs?name=snippet_DeferredTransaction)]
+
+> [!WARNING]
+> Ertelenmiş bir işlem içindeki komutlar, veritabanı kilitliyken işlemin bir okuma işleminden bir yazma işlemine yükseltilmesine neden olursa başarısız olabilir. Bu durumda, uygulamanın tüm işlemi yeniden denemesi gerekir.

@@ -8,7 +8,7 @@ ms.locfileid: "82507110"
 ---
 ### <a name="http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced"></a>HTTP: Kestrel ve IIS BadHttpRequestException türleri artık kullanılmıyor ve değiştirilmiş olarak işaretlendi
 
-`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException`ve `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` artık kullanılmıyor olarak işaretlendi ve öğesinden `Microsoft.AspNetCore.Http.BadHttpRequestException`türetilme değiştirildi. Kestrel ve IIS sunucuları geriye dönük uyumluluk için eski özel durum türlerini hala oluşturur. Eski türler gelecek sürümde kaldırılacak.
+`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` ve `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` artık kullanılmıyor olarak işaretlendi ve öğesinden türetilme değiştirildi `Microsoft.AspNetCore.Http.BadHttpRequestException` . Kestrel ve IIS sunucuları geriye dönük uyumluluk için eski özel durum türlerini hala oluşturur. Eski türler gelecek sürümde kaldırılacak.
 
 Tartışma için bkz. [DotNet/aspnetcore # 20614](https://github.com/dotnet/aspnetcore/issues/20614).
 
@@ -18,11 +18,11 @@ Tartışma için bkz. [DotNet/aspnetcore # 20614](https://github.com/dotnet/aspn
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException`ve `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` öğesinden <xref:System.IO.IOException?displayProperty=nameWithType>türetilir.
+`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` ve `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` öğesinden türetilir <xref:System.IO.IOException?displayProperty=nameWithType> .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException`ve `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` artık kullanılmıyor. Türler Ayrıca `Microsoft.AspNetCore.Http.BadHttpRequestException`öğesinden türetilir `System.IO.IOException`.
+`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` ve `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` artık kullanılmıyor. Türler Ayrıca öğesinden türetilir `Microsoft.AspNetCore.Http.BadHttpRequestException` `System.IO.IOException` .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -31,15 +31,15 @@ Değişikliğin yapıldığı yer:
 * Yinelenen türleri birleştirin.
 * Sunucu uygulamalarında davranışı bütünleştirme.
 
-Uygulama artık Kestrel veya IIS kullanırken temel özel `Microsoft.AspNetCore.Http.BadHttpRequestException` durumu yakalayabilir.
+Uygulama artık `Microsoft.AspNetCore.Http.BadHttpRequestException` Kestrel veya IIS kullanırken temel özel durumu yakalayabilir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-`Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` Ve `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` kullanımlarının kullanımlarını ile `Microsoft.AspNetCore.Http.BadHttpRequestException`değiştirin.
+Ve kullanımlarının `Microsoft.AspNetCore.Server.Kestrel.BadHttpRequestException` kullanımlarını `Microsoft.AspNetCore.Server.IIS.BadHttpRequestException` ile değiştirin `Microsoft.AspNetCore.Http.BadHttpRequestException` .
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

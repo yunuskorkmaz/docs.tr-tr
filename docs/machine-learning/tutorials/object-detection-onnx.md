@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4759a661646b08ea6a93cab030a19af2cfeaca16
-ms.sourcegitcommit: c23d9666ec75b91741da43ee3d91c317d68c7327
+ms.openlocfilehash: 49817f9ad712e50669bab958296946c06d5c19eb
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85803410"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679422"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Öğretici: ML.NET 'de ONNX kullanarak nesneleri algılama
 
@@ -149,10 +149,10 @@ Yeni oluşturulan *Datayapýlarý* dizininde giriş veri sınıfınızı oluştu
 
     [!code-csharp [ImageNetDataClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetData.cs#L8-L23)]
 
-    `ImageNetData`, giriş resmi veri sınıfıdır ve aşağıdaki <xref:System.String> alanlara sahiptir:
+    `ImageNetData` , giriş resmi veri sınıfıdır ve aşağıdaki <xref:System.String> alanlara sahiptir:
 
-    - `ImagePath`görüntünün depolandığı yolu içerir.
-    - `Label`dosyanın adını içerir.
+    - `ImagePath` görüntünün depolandığı yolu içerir.
+    - `Label` dosyanın adını içerir.
 
     Ayrıca, `ImageNetData` `ReadFromFile` belirtilen yolda depolanan birden çok resim dosyasını yükleyen `imageFolder` ve bunları bir nesne koleksiyonu olarak döndüren bir yöntemi içerir `ImageNetData` .
 
@@ -169,9 +169,9 @@ Yeni oluşturulan *Datayapýlarý* dizininde giriş veri sınıfınızı oluştu
 
     [!code-csharp [ImageNetPredictionClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetPrediction.cs#L5-L9)]
 
-    `ImageNetPrediction`, tahmin verileri sınıfıdır ve şu `float[]` alana sahiptir:
+    `ImageNetPrediction` , tahmin verileri sınıfıdır ve şu `float[]` alana sahiptir:
 
-    - `PredictedLabel`görüntüde algılanan her bir sınırlayıcı kutu için boyutları, objectlik Puanını ve sınıf olasılıkları içerir.
+    - `PredictedLabel` görüntüde algılanan her bir sınırlayıcı kutu için boyutları, objectlik Puanını ve sınıf olasılıkları içerir.
 
 ### <a name="initialize-variables-in-main"></a>Değişkenleri ana olarak Başlat
 
@@ -187,12 +187,12 @@ Model, `13 x 13` her kılavuz hücresinin bulunduğu bir görüntüyü kılavuza
 
 ![Sol taraftaki kılavuz örneği ve sağ taraftaki sınırlayıcı kutu örneği](./media/object-detection-onnx/model-output-description.png)
 
-- `x`sınırlama kutusu merkezinin ilişkilendirildiği kılavuz hücresine göre x konumu.
-- `y`sınırlama kutusu merkezinin ilişkilendirildiği kılavuz hücresine göre y konumu.
-- `w`sınırlayıcı kutunun genişliği.
-- `h`sınırlayıcı kutunun yüksekliği.
-- `o`bir nesnenin, sınırlayıcı kutusunda bulunduğu güven değeri, aynı zamanda objectlik puanı olarak da bilinir.
-- `p1-p20`model tarafından tahmin edilen 20 sınıfın her biri için sınıf olasılıkların.
+- `x` sınırlama kutusu merkezinin ilişkilendirildiği kılavuz hücresine göre x konumu.
+- `y` sınırlama kutusu merkezinin ilişkilendirildiği kılavuz hücresine göre y konumu.
+- `w` sınırlayıcı kutunun genişliği.
+- `h` sınırlayıcı kutunun yüksekliği.
+- `o` bir nesnenin, sınırlayıcı kutusunda bulunduğu güven değeri, aynı zamanda objectlik puanı olarak da bilinir.
+- `p1-p20` model tarafından tahmin edilen 20 sınıfın her biri için sınıf olasılıkların.
 
 Toplamda, 5 sınırlayıcı kutulardan her birini tanımlayan 25 öğe, her kılavuz hücresinde bulunan 125 öğelerini yapar.
 
@@ -215,12 +215,12 @@ Modelin veri çıktısı, görüntü içindeki nesnelerin sınırlayıcı kutula
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase`aşağıdaki özelliklere sahiptir `float` :
+    `DimensionsBase` aşağıdaki özelliklere sahiptir `float` :
 
-    - `X`nesnenin x ekseni üzerindeki konumunu içerir.
-    - `Y`nesnenin y ekseni üzerinde konumunu içerir.
-    - `Height`nesnenin yüksekliğini içerir.
-    - `Width`nesnenin genişliğini içerir.
+    - `X` nesnenin x ekseni üzerindeki konumunu içerir.
+    - `Y` nesnenin y ekseni üzerinde konumunu içerir.
+    - `Height` nesnenin yüksekliğini içerir.
+    - `Width` nesnenin genişliğini içerir.
 
 Ardından, sınırlayıcı kutularınız için bir sınıf oluşturun.
 
@@ -239,13 +239,13 @@ Ardından, sınırlayıcı kutularınız için bir sınıf oluşturun.
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox`aşağıdaki özelliklere sahiptir:
+    `YoloBoundingBox` aşağıdaki özelliklere sahiptir:
 
-    - `Dimensions`sınırlayıcı kutunun boyutlarını içerir.
-    - `Label`sınırlayıcı kutusunda algılanan nesne sınıfını içerir.
-    - `Confidence`sınıfının güvenini içerir.
-    - `Rect`sınırlayıcı kutunun boyutlarının dikdörtgen gösterimini içerir.
-    - `BoxColor`görüntüde çizim yapmak için kullanılan ilgili sınıfla ilişkili rengi içerir.
+    - `Dimensions` sınırlayıcı kutunun boyutlarını içerir.
+    - `Label` sınırlayıcı kutusunda algılanan nesne sınıfını içerir.
+    - `Confidence` sınıfının güvenini içerir.
+    - `Rect` sınırlayıcı kutunun boyutlarının dikdörtgen gösterimini içerir.
+    - `BoxColor` görüntüde çizim yapmak için kullanılan ilgili sınıfla ilişkili rengi içerir.
 
 ### <a name="create-the-parser"></a>Ayrıştırıcı oluşturma
 
@@ -266,15 +266,15 @@ Artık boyut ve sınırlama kutuları için sınıflar oluşturuldığına göre
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
-    - `ROW_COUNT`, görüntüdeki görüntünün bölüneceğini, ızgaradaki satır sayısıdır.
-    - `COL_COUNT`, görüntüde bölünen, kılavuzdaki sütun sayısıdır.
-    - `CHANNEL_COUNT`kılavuzun tek bir hücresinde bulunan toplam değer sayısıdır.
-    - `BOXES_PER_CELL`, bir hücredeki sınırlayıcı kutuların sayısıdır,
-    - `BOX_INFO_FEATURE_COUNT`, bir kutu içinde (x, y, Height, Width, güvenirlik) bulunan özelliklerin sayısıdır.
-    - `CLASS_COUNT`, her bir sınırlayıcı kutusunda bulunan sınıf tahminleri sayısıdır.
-    - `CELL_WIDTH`, görüntü kılavuzundaki bir hücrenin genişliğidir.
-    - `CELL_HEIGHT`, görüntü kılavuzundaki bir hücrenin yüksekliğidir.
-    - `channelStride`Kılavuzdaki geçerli hücrenin başlangıç konumudur.
+    - `ROW_COUNT` , görüntüdeki görüntünün bölüneceğini, ızgaradaki satır sayısıdır.
+    - `COL_COUNT` , görüntüde bölünen, kılavuzdaki sütun sayısıdır.
+    - `CHANNEL_COUNT` kılavuzun tek bir hücresinde bulunan toplam değer sayısıdır.
+    - `BOXES_PER_CELL` , bir hücredeki sınırlayıcı kutuların sayısıdır,
+    - `BOX_INFO_FEATURE_COUNT` , bir kutu içinde (x, y, Height, Width, güvenirlik) bulunan özelliklerin sayısıdır.
+    - `CLASS_COUNT` , her bir sınırlayıcı kutusunda bulunan sınıf tahminleri sayısıdır.
+    - `CELL_WIDTH` , görüntü kılavuzundaki bir hücrenin genişliğidir.
+    - `CELL_HEIGHT` , görüntü kılavuzundaki bir hücrenin yüksekliğidir.
+    - `channelStride` Kılavuzdaki geçerli hücrenin başlangıç konumudur.
 
     Model, Puanlama olarak da bilinen bir tahmin yaptığında, `416px x 416px` giriş görüntüsünü boyutunun bir hücre kılavuzuna böler `13 x 13` . Her hücre içerir `32px x 32px` . Her hücrede, 5 Özellik (x, y, Width, Height, güvenirlik) içeren 5 sınırlayıcı kutu vardır. Bunlara ek olarak, her bir sınırlayıcı kutu her bir sınıfın olasılığını içerir, bu durumda 20 olur. Bu nedenle, her hücre 125 bilgi parçasını içerir (5 özellik + 20 sınıf olasılıkların).
 
@@ -300,15 +300,15 @@ Sınıfların her biriyle ilişkili renkler vardır. Sınıf renklerinizi aşağ
 
 Ayrıştırıcı tarafından kullanılan yardımcı yöntemler şunlardır:
 
-- `Sigmoid`0 ile 1 arasında bir sayı çıkışı yapan sigmoıd işlevini uygular.
-- `Softmax`bir giriş vektörünü bir olasılık dağıtımına normalleştirir.
-- `GetOffset`tek boyutlu model çıkışındaki öğeleri bir tencursor içindeki ilgili konuma eşler `125 x 13 x 13` .
-- `ExtractBoundingBoxes`Model çıktısından yöntemi kullanarak sınırlama kutusu boyutlarını ayıklar `GetOffset` .
-- `GetConfidence`modelin bir nesne algıladığı ve `Sigmoid` bunu bir yüzdeye dönüştürmek için işlevini kullandığı emin olan güvenirlik değerini ayıklar.
-- `MapBoundingBoxToCell`, sınırlayıcı kutu boyutlarını kullanır ve bunları görüntünün içindeki ilgili hücresiyle eşler.
-- `ExtractClasses`yöntemi kullanarak model çıktısından sınırlama kutusu için sınıf tahminlerini ayıklar `GetOffset` ve yöntemi kullanarak bunları bir olasılık dağıtımına dönüştürür `Softmax` .
-- `GetTopResult`en yüksek olasılığa sahip tahmin edilen sınıflar listesinden sınıfı seçer.
-- `IntersectionOverUnion`daha düşük olasılıklara sahip sınırlayıcı kutuları filtreler.
+- `Sigmoid` 0 ile 1 arasında bir sayı çıkışı yapan sigmoıd işlevini uygular.
+- `Softmax` bir giriş vektörünü bir olasılık dağıtımına normalleştirir.
+- `GetOffset` tek boyutlu model çıkışındaki öğeleri bir tencursor içindeki ilgili konuma eşler `125 x 13 x 13` .
+- `ExtractBoundingBoxes` Model çıktısından yöntemi kullanarak sınırlama kutusu boyutlarını ayıklar `GetOffset` .
+- `GetConfidence` modelin bir nesne algıladığı ve `Sigmoid` bunu bir yüzdeye dönüştürmek için işlevini kullandığı emin olan güvenirlik değerini ayıklar.
+- `MapBoundingBoxToCell` , sınırlayıcı kutu boyutlarını kullanır ve bunları görüntünün içindeki ilgili hücresiyle eşler.
+- `ExtractClasses` yöntemi kullanarak model çıktısından sınırlama kutusu için sınıf tahminlerini ayıklar `GetOffset` ve yöntemi kullanarak bunları bir olasılık dağıtımına dönüştürür `Softmax` .
+- `GetTopResult` en yüksek olasılığa sahip tahmin edilen sınıflar listesinden sınıfı seçer.
+- `IntersectionOverUnion` daha düşük olasılıklara sahip sınırlayıcı kutuları filtreler.
 
 Listenizin altındaki tüm yardımcı yöntemleri için kodu ekleyin `classColors` .
 
@@ -492,22 +492,22 @@ Harika! Artık bu kodu Puanlama modeliyle birlikte kullanmanın zamanı.
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET işlem hatları, yöntemi çağrıldığında üzerinde çalışılacak veri şemasını bilmelidir [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) . Bu durumda, eğitimle benzer bir süreç kullanılacaktır. Ancak, hiçbir gerçek eğitim gerçekleşmediğinden boş kullanılması kabul edilebilir [`IDataView`](xref:Microsoft.ML.IDataView) . [`IDataView`](xref:Microsoft.ML.IDataView)Boş bir listeden işlem hattı için yeni bir oluştur.
+    ML.NET işlem hatları, yöntemi çağrıldığında üzerinde çalışılacak veri şemasını bilmelidir [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) . Bu durumda, eğitimle benzer bir süreç kullanılacaktır. Ancak, hiçbir gerçek eğitim gerçekleşmediğinden boş kullanılması kabul edilebilir [`IDataView`](xref:Microsoft.ML.IDataView) . [`IDataView`](xref:Microsoft.ML.IDataView)Boş bir listeden işlem hattı için yeni bir oluştur.
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     Bunun altında, işlem hattını tanımlayın. İşlem hattı dört dönüşümden oluşur.
 
-    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*)görüntüyü bir bit eşlem olarak yükler.
-    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*)görüntüyü belirtilen boyuta ölçeklendirin (Bu durumda, `416 x 416` ).
-    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*)görüntünün piksel temsilini bir bit eşlemden sayısal bir Vector öğesine değiştirir.
-    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*)ONNX modelini yükler ve belirtilen verileri öğrenmek için onu kullanır.
+    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages%2A) görüntüyü bir bit eşlem olarak yükler.
+    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages%2A) görüntüyü belirtilen boyuta ölçeklendirin (Bu durumda, `416 x 416` ).
+    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels%2A) görüntünün piksel temsilini bir bit eşlemden sayısal bir Vector öğesine değiştirir.
+    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A) ONNX modelini yükler ve belirtilen verileri öğrenmek için onu kullanır.
 
     İşlem hattınızı `LoadModel` değişkenin altındaki yöntemde tanımlayın `data` .
 
     [!code-csharp [ScoringPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L55-L58)]
 
-    Şimdi Puanlama için model oluşturma zamanı. İşlem hattında [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) yöntemi çağırın ve daha fazla işleme için döndürün.
+    Şimdi Puanlama için model oluşturma zamanı. İşlem hattında [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit%2A) yöntemi çağırın ve daha fazla işleme için döndürün.
 
     [!code-csharp [FitReturnModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L61-L63)]
 
@@ -524,7 +524,7 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 [!code-csharp [PredictDataLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L68-L71)]
 
-Ardından, [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) verileri öğrenmek için yöntemini kullanın.
+Ardından, [`Transform`](xref:Microsoft.ML.ITransformer.Transform%2A) verileri öğrenmek için yöntemini kullanın.
 
 [!code-csharp [ScoreImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L73)]
 
@@ -626,11 +626,11 @@ Bunun altında metin ve sınırlayıcı kutusu için yazı tipi ve renk seçenek
 
 [!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
 
-Yöntemi kullanarak metni içermesi için sınırlayıcı kutunun üzerindeki bir dikdörtgeni oluşturun ve girin [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) . Bu, metnin karşıtlığına ve okunabilirliği iyileştirmenize yardımcı olur.
+Yöntemi kullanarak metni içermesi için sınırlayıcı kutunun üzerindeki bir dikdörtgeni oluşturun ve girin [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle%2A) . Bu, metnin karşıtlığına ve okunabilirliği iyileştirmenize yardımcı olur.
 
 [!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
 
-Ardından, ve yöntemlerini kullanarak görüntüye metin ve sınırlayıcı kutusunu çizin [`DrawString`](xref:System.Drawing.Graphics.DrawString*) [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) .
+Ardından, ve yöntemlerini kullanarak görüntüye metin ve sınırlayıcı kutusunu çizin [`DrawString`](xref:System.Drawing.Graphics.DrawString%2A) [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle%2A) .
 
 [!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
 

@@ -8,29 +8,29 @@ ms.locfileid: "80291668"
 ---
 ### <a name="signalr-usesignalr-and-useconnections-methods-removed"></a>SignalR: UseSignalR ve UseConnections yöntemleri kaldırıldı
 
-ASP.NET Core 3.0'da SignalR uç nokta yönlendirmeyi benimsedi. Bu değişikliğin bir parçası <xref:Microsoft.AspNetCore.Builder.SignalRAppBuilderExtensions.UseSignalR%2A> <xref:Microsoft.AspNetCore.Builder.ConnectionsAppBuilderExtensions.UseConnections%2A>olarak, , , ve bazı ilgili yöntemler eski olarak işaretlenmiştir. Core 5.0ASP.NET, bu eski yöntemler kaldırıldı. Yöntemlerin tam listesi için [Etkilenen API'ler'e](#affected-apis)bakın.
+ASP.NET Core 3,0 ' de, SignalR bir uç nokta yönlendirme benimsemiştir. Bu değişikliğin bir parçası olarak,, <xref:Microsoft.AspNetCore.Builder.SignalRAppBuilderExtensions.UseSignalR%2A> <xref:Microsoft.AspNetCore.Builder.ConnectionsAppBuilderExtensions.UseConnections%2A> ve bazı ilgili yöntemler artık kullanılmıyor olarak işaretlendi. ASP.NET Core 5,0 ' de, eski yöntemler kaldırılmıştır. Yöntemlerin tam listesi için bkz. [etkilenen API 'ler](#affected-apis).
 
-Bu konuda tartışma için [dotnet/aspnetcore#20082'ye](https://github.com/dotnet/aspnetcore/issues/20082)bakın.
+Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 20082](https://github.com/dotnet/aspnetcore/issues/20082).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-5.0 Önizleme 3
+5,0 Preview 3
 
 #### <a name="old-behavior"></a>Eski davranış
 
-SignalR hub'ları ve bağlantı işleyicileri, ara yazılım `UseSignalR` `UseConnections` ardışık hatlarına veya yöntemleri kullanılarak kaydedilebilir.
+SignalR hub 'ları ve bağlantı işleyicileri, veya yöntemlerini kullanarak ara yazılım ardışık düzenine `UseSignalR` kaydedilebilir `UseConnections` .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-SignalR hub'ları ve bağlantı işleyicileri <xref:Microsoft.AspNetCore.SignalR.HubRouteBuilder.MapHub%2A> içinde <xref:Microsoft.AspNetCore.Http.Connections.ConnectionsRouteBuilder.MapConnectionHandler%2A> 'deki <xref:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder>uzantı yöntemleri <xref:Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints%2A> kullanılarak kaydedilmelidir.
+SignalR hub 'ları ve bağlantı işleyicileri <xref:Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints%2A> , <xref:Microsoft.AspNetCore.SignalR.HubRouteBuilder.MapHub%2A> <xref:Microsoft.AspNetCore.Http.Connections.ConnectionsRouteBuilder.MapConnectionHandler%2A> üzerinde ve genişletme yöntemleri kullanılarak kaydedilmelidir <xref:Microsoft.AspNetCore.Routing.IEndpointRouteBuilder> .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Eski yöntemler, ASP.NET Core'daki diğer yönlendirme bileşenleriyle etkileşime girmemiş özel yönlendirme mantığına sahipti. Core 3.0ASP.NETde, uç nokta yönlendirme adı verilen yeni bir genel amaçlı yönlendirme sistemi tanıtıldı. Uç nokta yönlendirme, SignalR'ın diğer yönlendirme bileşenleriyle etkileşimkurmasını sağladı. Bu modele geçiş, kullanıcıların uç nokta yönlendirmenin tüm avantajlarını fark etmesini sağlar. Sonuç olarak, eski yöntemler kaldırıldı.
+Eski yöntemlerde, ASP.NET Core diğer yönlendirme bileşenleriyle etkileşime girmediğiniz özel yönlendirme mantığı vardı. ASP.NET Core 3,0 ' de, uç nokta yönlendirme olarak adlandırılan yeni bir genel amaçlı yönlendirme sistemi tanıtılmıştı. Uç nokta yönlendirme özelliği, diğer yönlendirme bileşenleriyle etkileşim kurmak için SignalR. Bu modele geçiş yapmak, kullanıcıların Endpoint Routing 'in tüm avantajlarını belirlemesine olanak sağlar. Sonuç olarak, eski yöntemler kaldırılmıştır.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Çağıran `UseSignalR` kodu veya `UseConnections` projenizin `Startup.Configure` yönteminden kaldırın. Veya, sırasıyla, bir çağrının gövdesi içinde yapılan `UseEndpoints`çağrılarla `MapHub` değiştirin. `MapConnectionHandler` Örnek:
+`UseSignalR`Projenizin yönteminden veya öğesini çağıran kodu kaldırın `UseConnections` `Startup.Configure` . Bunu `MapHub` `MapConnectionHandler` , bir çağrısının gövdesinde, sırasıyla veya olan çağrılarıyla değiştirin `UseEndpoints` . Örnek:
 
 **Eski kod:**
 
@@ -50,7 +50,7 @@ app.UseEndpoints(endpoints =>
 });
 ```
 
-Genel olarak, `MapHub` önceki `MapConnectionHandler` ve aramalarınız doğrudan gövdeden `UseConnections` `UseEndpoints` `UseSignalR` ve çok az değişiklik gerekli olan transfer edilebilir.
+Genel olarak, önceki `MapHub` ve `MapConnectionHandler` çağrılarınız, ' ın gövdesinden `UseSignalR` ve en az bir `UseConnections` değişikliğe gerek kalmadan doğrudan aktarılabilir `UseEndpoints` .
 
 #### <a name="category"></a>Kategori
 

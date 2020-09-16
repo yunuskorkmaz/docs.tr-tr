@@ -7,12 +7,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: d7e367f3b4e9a6d88d2a13ca8727d2e2884bb97c
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 5d181f5bc9f7e16051f16ca68490744e9c0d3abd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810605"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557924"
 ---
 # <a name="c-walkthroughs"></a>C# İzlenecek yolları
 
@@ -34,19 +34,19 @@ ms.locfileid: "88810605"
 - [Dinamik nesneler oluşturma ve kullanma (C# ve Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)\
   Bir metin dosyasının içeriğini dinamik olarak sunan ve kitaplığı kullanan bir projenin nasıl oluşturulduğu özel bir nesnenin nasıl oluşturulacağını gösterir `IronPython` .
 
-- [Visual C ile bileşik denetim yazma #](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)\
+- [Visual C ile bileşik denetim yazma #](/dotnet/desktop/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp)\
   Basit bir bileşik denetim oluşturmayı ve kendi işlevlerini devralma yoluyla genişletmeyi gösterir.
 
-- [Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](../framework/winforms/controls/creating-a-wf-control-design-time-features.md)\
+- [Visual Studio tasarım zamanı özelliklerinden faydalanan bir Windows Forms denetimi oluşturma](/dotnet/desktop/winforms/controls/creating-a-wf-control-design-time-features)\
   Özel bir denetim için özel tasarımcı oluşturmayı gösterir.
 
-- [Visual C ile Windows Forms denetiminden devralma #](../framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
+- [Visual C ile Windows Forms denetiminden devralma #](/dotnet/desktop/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp)\
   Basit bir devralınmış düğme denetimi oluşturmayı gösterir. Bu düğme, standart Windows Forms düğmesinden işlevselliği devralır ve özel bir üye kullanıma sunar.
 
-- [Tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](../framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)\
+- [Tasarım zamanında özel Windows Forms Denetimlerinde hata ayıklama](/dotnet/desktop/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)\
   Özel denetiminizin tasarım zamanı davranışının nasıl ayıklanacağını açıklar.
 
-- [İzlenecek yol: tasarımcı eylemlerini kullanarak ortak görevleri gerçekleştirme](../framework/winforms/controls/perform-common-tasks-design-actions.md)\
+- [İzlenecek yol: tasarımcı eylemlerini kullanarak ortak görevleri gerçekleştirme](/dotnet/desktop/winforms/controls/perform-common-tasks-design-actions)\
   Bir sekme ekleme veya kaldırma `TabControl` , üst öğesine bir denetim yerleştirme ve bir denetimin yönünü değiştirme gibi yaygın olarak gerçekleştirilen görevlerden bazılarını gösterir `SplitContainer` .
 
 - [C# dilinde sorgu yazma (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)\

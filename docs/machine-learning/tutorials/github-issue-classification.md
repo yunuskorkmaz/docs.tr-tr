@@ -4,18 +4,18 @@ description: Birden çok Lass sınıflandırma senaryosunda ML.NET kullanarak bu
 ms.date: 06/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 48f5f213802b09168cbc21da1b22e84ec53756fe
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: fa00306e80046097c1269533d3a3ca1e85f10288
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86282082"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679501"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>Öğretici: ML.NET ile birden çok Lass sınıflandırması kullanarak destek sorunlarını kategorilere ayırma
 
 Bu örnek öğreticide, Visual Studio 'Da C# kullanarak bir GitHub sorununun alan etiketini sınıflandırdığı ve tahmin eden bir modeli eğiten bir GitHub sorunu Sınıflandırıcısı oluşturmak için ML.NET kullanımı gösterilmektedir.
 
-Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
+Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 > [!div class="checklist"]
 >
 > * Verilerinizi hazırlama
@@ -27,7 +27,7 @@ Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 Bu öğreticinin kaynak kodunu [DotNet/Samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) deposunda bulabilirsiniz.
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 * [Visual studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) veya üzeri ya da visual Studio 2017 sürüm 15,6 veya üzeri, ".NET Core platformlar arası geliştirme" iş yükü yüklendi.
 * [GitHub sorunları sekmeyle ayrılmış dosya (issues_train. TSV)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
@@ -67,12 +67,12 @@ Aşağıdaki ek `using` deyimlerini *program.cs* dosyasının en üstüne ekleyi
 
 Son indirilen dosyaları ve,, ve için genel değişkenleri tutmak üzere üç genel alan oluşturun `MLContext` `DataView` `PredictionEngine` :
 
-* `_trainDataPath`, modeli eğitmek için kullanılan veri kümesinin yolunu içerir.
-* `_testDataPath`, modeli değerlendirmek için kullanılan veri kümesinin yoluna sahiptir.
-* `_modelPath`Eğitim modelinin kaydedildiği yolu içerir.
-* `_mlContext`, <xref:Microsoft.ML.MLContext> işleme bağlamı sağlar.
-* `_trainingDataView`, <xref:Microsoft.ML.IDataView> eğitim veri kümesini işlemek için kullanılır.
-* `_predEngine`, <xref:Microsoft.ML.PredictionEngine%602> tek tahminlerde kullanılır.
+* `_trainDataPath` , modeli eğitmek için kullanılan veri kümesinin yolunu içerir.
+* `_testDataPath` , modeli değerlendirmek için kullanılan veri kümesinin yoluna sahiptir.
+* `_modelPath` Eğitim modelinin kaydedildiği yolu içerir.
+* `_mlContext` , <xref:Microsoft.ML.MLContext> işleme bağlamı sağlar.
+* `_trainingDataView` , <xref:Microsoft.ML.IDataView> eğitim veri kümesini işlemek için kullanılır.
+* `_predEngine` , <xref:Microsoft.ML.PredictionEngine%602> tek tahminlerde kullanılır.
 
 Aşağıdaki kodu, `Main` Bu yolları ve diğer değişkenleri belirtmek için yönteminin hemen üzerindeki satıra ekleyin:
 
@@ -96,14 +96,14 @@ Mevcut sınıf tanımını kaldırın ve iki sınıfa `GitHubIssue` ve `IssuePre
 
 Veri kümesindeki kaynak sütunlarının dizinlerini belirtmek için [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute) kullanın.
 
-`GitHubIssue`, giriş veri kümesi sınıfıdır ve aşağıdaki alanlara sahiptir <xref:System.String> :
+`GitHubIssue` , giriş veri kümesi sınıfıdır ve aşağıdaki alanlara sahiptir <xref:System.String> :
 
 * ilk sütun `ID` (GitHub sorun kimliği)
 * ikinci sütun `Area` (eğitim tahmini)
-* üçüncü sütun `Title` (GitHub sorun başlığı), şunları tahmin etmek `feature` için kullanılır`Area`
-* dördüncü sütun `Description` , şunu tahmin etmek `feature` için kullanılan ikincinin`Area`
+* üçüncü sütun `Title` (GitHub sorun başlığı), şunları tahmin etmek `feature` için kullanılır `Area`
+* dördüncü sütun  `Description` , şunu tahmin etmek `feature` için kullanılan ikincinin `Area`
 
-`IssuePrediction`, model eğitilen bir tahmin için kullanılan sınıftır. Tek bir `string` ( `Area` ) ve `PredictedLabel` `ColumnName` özniteliği vardır.  , `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme için eğitim verileri olan bir giriş, tahmin edilen değerler ve model kullanılır.
+`IssuePrediction` , model eğitilen bir tahmin için kullanılan sınıftır. Tek bir `string` ( `Area` ) ve `PredictedLabel` `ColumnName` özniteliği vardır.  , `PredictedLabel` Tahmin ve değerlendirme sırasında kullanılır. Değerlendirme için eğitim verileri olan bir giriş, tahmin edilen değerler ve model kullanılır.
 
 Tüm ML.NET işlemleri [Mlcontext](xref:Microsoft.ML.MLContext) sınıfında başlar. Başlatma `mlContext` , model oluşturma iş akışı nesneleri genelinde paylaşılabilecek yeni bir ml.net ortamı oluşturur. Kavramsal olarak, ' de ' ye `DBContext` benzer `Entity Framework` .
 
@@ -115,7 +115,7 @@ Tüm ML.NET işlemleri [Mlcontext](xref:Microsoft.ML.MLContext) sınıfında ba�
 
 ## <a name="load-the-data"></a>Verileri yükleme
 
-ML.NET, sayısal veya metin tablolu verileri tanımlamaya yönelik esnek ve verimli bir yöntem olarak [ıdataview sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView`metin dosyalarını veya gerçek zamanlı olarak yükleyebilirsiniz (örneğin, SQL veritabanı veya günlük dosyaları).
+ML.NET, sayısal veya metin tablolu verileri tanımlamaya yönelik esnek ve verimli bir yöntem olarak [ıdataview sınıfını](xref:Microsoft.ML.IDataView) kullanır. `IDataView` metin dosyalarını veya gerçek zamanlı olarak yükleyebilirsiniz (örneğin, SQL veritabanı veya günlük dosyaları).
 
 `_trainingDataView`Genel değişkeni, işlem hattı için kullanmak üzere başlatmak ve yüklemek için, başlangıçtan sonra aşağıdaki kodu ekleyin `mlContext` :
 
@@ -302,7 +302,7 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-Yöntemine aşağıdaki kodu ekleyin `SaveModelAsFile` . Bu kod, [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) eğitilen modeli seri hale getirmek ve bir ZIP dosyası olarak depolamak için yöntemini kullanır.
+Yöntemine aşağıdaki kodu ekleyin `SaveModelAsFile` . Bu kod, [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save%2A) eğitilen modeli seri hale getirmek ve bir ZIP dosyası olarak depolamak için yöntemini kullanır.
 
 [!code-csharp[SnippetSaveModel](./snippets/github-issue-classification/csharp/Program.cs#SnippetSaveModel)]
 
@@ -341,10 +341,10 @@ Daha önce yaptığınız gibi, `PredictionEngine` aşağıdaki kodla bir örnek
 
 [!code-csharp[CreatePredictionEngine](./snippets/github-issue-classification/csharp/Program.cs#CreatePredictionEngine)]
 
-[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602), iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
+[PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) , tek bir veri örneğinde tahmin gerçekleştirmenize olanak tanıyan, KULLANıŞLı bir API 'dir. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) , iş parçacığı açısından güvenli değildir. Tek iş parçacıklı veya prototip ortamlarında kullanılması kabul edilebilir. Üretim ortamlarında geliştirilmiş performans ve iş parçacığı güvenliği için, `PredictionEnginePool` [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) uygulamanız genelinde kullanılacak nesneleri oluşturan hizmetini kullanın. [ `PredictionEnginePool` ASP.NET Core Web API 'sinde kullanma](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)hakkında bu kılavuza bakın.
 
 > [!NOTE]
-> `PredictionEnginePool`Hizmet Uzantısı Şu anda önizleme aşamasındadır.
+> `PredictionEnginePool` Hizmet Uzantısı Şu anda önizleme aşamasındadır.
 
 Tahmine `PredictionEngine` yönelik yöntemine aşağıdaki kodu ekleyerek, alanı GitHub etiketini tahmin etmek için öğesini kullanın `PredictIssue` :
 

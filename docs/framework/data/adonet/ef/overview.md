@@ -3,12 +3,12 @@ title: Entity Framework’e Genel Bakış
 description: ADO.NET ' deki Entity Framework, geleneksel uygulamalardan daha yüksek bir soyutlama düzeyinde çalışan veri odaklı uygulamaların geliştirilmesini destekler.
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 1f1ab5d44c2d6c7e1f54a761dbc706d537664ef6
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: e6b7a605f88aecc76cb182473d9dd9f925a4d5a9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286811"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557989"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework genel bakış
 
@@ -48,7 +48,7 @@ Diğer bir nesne ilişkisel eşleme çözümünden daha fazlasına sahip Entity 
 
 - LINQ to Entities. Kavramsal modelde tanımlanan varlık türlerini sorgulamak için dil ile tümleşik sorgu (LINQ) desteği sağlar. Daha fazla bilgi için bkz. [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Kavramsal modeldeki varlıklarla doğrudan çalıştırılan ve Varlık Veri Modeli kavramları destekleyen, depolama bağımsız bir SQL diyalekti. [!INCLUDE[esql](../../../../../includes/esql-md.md)], EntityClient sağlayıcısı kullanılarak yürütülen nesne sorguları ve sorgularıyla birlikte kullanılır. Daha fazla bilgi için bkz. [Entity SQL genel bakış](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Kavramsal modeldeki varlıklarla doğrudan çalıştırılan ve Varlık Veri Modeli kavramları destekleyen, depolama bağımsız bir SQL diyalekti. [!INCLUDE[esql](../../../../../includes/esql-md.md)] , EntityClient sağlayıcısı kullanılarak yürütülen nesne sorguları ve sorgularıyla birlikte kullanılır. Daha fazla bilgi için bkz. [Entity SQL genel bakış](./language-reference/entity-sql-overview.md).
 
 Entity Framework EntityClient veri sağlayıcısını içerir. Bu sağlayıcı bağlantıları yönetir, varlık sorgularını veri kaynağına özgü sorgulara çevirir ve Entity Framework varlık verilerini nesnelere getirmek için kullandığı bir veri okuyucusu döndürür. Nesne gerçekleştirmesi gerekli olmadığında, EntityClient sağlayıcısı, uygulamaların [!INCLUDE[esql](../../../../../includes/esql-md.md)] sorguları yürütmesine ve döndürülen salt okunurdur veri okuyucuyu kullanmasına olanak tanıyarak standart bir ADO.NET veri sağlayıcısı gibi de kullanılabilir. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).
 
@@ -60,7 +60,7 @@ Varlık Veri Modeli araçları, `System.Data.Objects.ObjectContext` `System.Data
 
 ## <a name="data-providers"></a>Veri sağlayıcılar
 
-`EntityClient`Sağlayıcı, kavramsal varlıklar ve ilişkiler açısından verilere erişerek ADO.NET sağlayıcı modelini genişletir. Kullanan sorguları yürütür [!INCLUDE[esql](../../../../../includes/esql-md.md)] . [!INCLUDE[esql](../../../../../includes/esql-md.md)]veritabanıyla iletişim kurmayı sağlayan temel sorgu dili sağlar `EntityClient` . Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).
+`EntityClient`Sağlayıcı, kavramsal varlıklar ve ilişkiler açısından verilere erişerek ADO.NET sağlayıcı modelini genişletir. Kullanan sorguları yürütür [!INCLUDE[esql](../../../../../includes/esql-md.md)] . [!INCLUDE[esql](../../../../../includes/esql-md.md)] veritabanıyla iletişim kurmayı sağlayan temel sorgu dili sağlar `EntityClient` . Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](entityclient-provider-for-the-entity-framework.md).
 
 Entity Framework, kurallı komut ağaçlarını destekleyen güncelleştirilmiş bir SqlClient Veri Sağlayıcısı içerir. Daha fazla bilgi için bkz. [Entity Framework Için SqlClient](sqlclient-for-the-entity-framework.md).
 
@@ -72,7 +72,7 @@ Entity Framework çalışma zamanıyla birlikte, Visual Studio eşleme ve modell
 
 Entity Framework hakkında daha fazla bilgi edinmek için bkz.:
 
-[Başlarken](getting-started.md) -basit bir Entity Framework uygulamasının nasıl oluşturulacağını gösteren hızlı [Başlangıç](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))kullanarak hızlı bir şekilde çalışmaya başlamak ve bunların nasıl çalıştırılacağı hakkında bilgiler sağlar.
+[Başlarken](getting-started.md) -basit bir Entity Framework uygulamasının nasıl oluşturulacağını gösteren hızlı [Başlangıç](/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100))kullanarak hızlı bir şekilde çalışmaya başlamak ve bunların nasıl çalıştırılacağı hakkında bilgiler sağlar.
 
 [Entity Framework terimleri](terminology.md) -Varlık Veri Modeli ve Entity Framework tarafından tanıtılan ve Entity Framework belgelerinde kullanılan koşulların çoğunu tanımlar.
 

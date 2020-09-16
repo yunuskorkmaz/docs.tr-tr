@@ -6,12 +6,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 0a21548386639a9f6a8c8572e5d7928ffdb270d6
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 0907f7f8a3767db9d83e5deaae1d86141fbee7b0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247045"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557417"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Nasıl yapılır: Geliştirme Sırasında Kullanmak için Geçici Sertifikalar Oluşturma
 
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) kullanarak güvenli bir hizmet veya istem
 >
 > Varsayılan olarak, [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet 'i, kendinden imzalı sertifikalar oluşturur ve bu sertifikalar güvenli değildir. Otomatik olarak imzalanan sertifikaların güvenilen kök sertifika yetkilileri deposuna yerleştirilmesi, dağıtım ortamınızı daha yakından taklit eden bir geliştirme ortamı oluşturmanızı sağlar.
 
- Sertifika oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md). Kimlik bilgisi olarak sertifika kullanma hakkında daha fazla bilgi için bkz. [Hizmetleri ve Istemcileri güvenli hale getirme](securing-services-and-clients.md). Microsoft Authenticode teknolojisini kullanma hakkında bir öğretici için bkz. [Authenticode genel bakış ve öğreticiler](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
+ Sertifika oluşturma ve kullanma hakkında daha fazla bilgi için bkz. [sertifikalarla çalışma](working-with-certificates.md). Kimlik bilgisi olarak sertifika kullanma hakkında daha fazla bilgi için bkz. [Hizmetleri ve Istemcileri güvenli hale getirme](securing-services-and-clients.md). Microsoft Authenticode teknolojisini kullanma hakkında bir öğretici için bkz. [Authenticode genel bakış ve öğreticiler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Otomatik olarak imzalanan bir kök yetkili sertifikası oluşturmak ve özel anahtarı dışarı aktarmak için
 

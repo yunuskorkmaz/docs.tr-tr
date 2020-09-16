@@ -2,12 +2,12 @@
 title: Windows Forms son değişiklikler
 description: .NET Core ve .NET 5 için Windows Forms 'deki son değişiklikleri listeler.
 ms.date: 09/08/2020
-ms.openlocfilehash: c3d2d23601d6a2d9d44761c4371fe34d3d5ed1f3
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 3e7d077d07203d9c231ae4a7805e593c5432c135
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656357"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679012"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 'deki değişiklikler kesiliyor
 
@@ -17,6 +17,7 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 | Son değişiklik | Sunulan sürüm |
 | - | :-: |
+| [OutputType WPF ve WinForms uygulamaları için WinExe olarak ayarlandı](#outputtype-set-to-winexe-for-wpf-and-winforms-apps) | 5.0 |
 | [DataGridView ile ilgili API 'Ler artık InvalidOperationException 'yi oluşturur](#datagridview-related-apis-now-throw-invalidoperationexception) | 5.0 |
 | [WinForms ve WPF uygulamaları Microsoft. NET. SDK kullanır](#winforms-and-wpf-apps-use-microsoftnetsdk) | 5.0 |
 | [Durum çubuğu denetimleri kaldırıldı](#removed-status-bar-controls) | 5.0 |
@@ -38,6 +39,10 @@ Aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 | [UseLegacyImages uyumluluk anahtarı desteklenmiyor](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5,0
+
+[!INCLUDE [automatically-infer-winexe-output-type](../../../includes/core-changes/windowsforms/5.0/automatically-infer-winexe-output-type.md)]
+
+***
 
 [!INCLUDE [null-owner-causes-invalidoperationexception](../../../includes/core-changes/windowsforms/5.0/null-owner-causes-invalidoperationexception.md)]
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-ms.openlocfilehash: 85654fe961f01ad7b8fb886d59a3de9ab0efe7aa
-ms.sourcegitcommit: cf5a800a33de64d0aad6d115ffcc935f32375164
+ms.openlocfilehash: 3aad7b2ff047a2d9ad12c23d16773e482a395c10
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86474052"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551203"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM Grafiğinden Kaynak Kodu Oluşturma ve Derleme
 <xref:System.CodeDom.Compiler>Ad alanı, CodeDOM nesne grafiklerinden kaynak kodu oluşturmak ve desteklenen derleyicilerle derlemeyi yönetmek için arabirimler sağlar. Bir kod sağlayıcısı, CodeDOM grafiğine göre belirli bir programlama dilinde kaynak kodu üretebilir. Öğesinden türetilen bir sınıf <xref:System.CodeDom.Compiler.CodeDomProvider> genellikle sağlayıcının desteklediği dil için kod oluşturmak ve derlemek için yöntemler sağlar.  
@@ -97,4 +97,4 @@ ms.locfileid: "86474052"
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [Dinamik kaynak kodu oluşturma ve derleme](dynamic-source-code-generation-and-compilation.md)
-- [CodeDOM hızlı başvurusu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))
+- [CodeDOM hızlı başvurusu](/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))

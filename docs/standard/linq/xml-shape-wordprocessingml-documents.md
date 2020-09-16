@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 0c6ed589556eb35a5741739c1f87e1e175476c89
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 1f5b8098923a56b638598516ed9640a28a90198a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553213"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551887"
 ---
 # <a name="the-xml-shape-of-wordprocessingml-documents-linq-to-xml"></a>WordprocessingML belgelerinin XML şekli (LINQ to XML)
 
@@ -126,7 +126,7 @@ End Module
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Office (2007) Open XML dosya biçimlerine giriş](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205(v=office.12))
-- [WordprocessingML 'ye Genel Bakış](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))
+- [Office (2007) Open XML dosya biçimlerine giriş](/previous-versions/office/developer/office-2007/aa338205(v=office.12))
+- [WordprocessingML 'ye Genel Bakış](/previous-versions/office/developer/office-2003/aa212812(v=office.11))
 - [WordProcessingML dosyasının anatomi](http://officeopenxml.com/anatomyofOOXML.php)
 - [WordprocessingML 'ye giriş](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)

@@ -25,7 +25,7 @@ Daha önce, beklenmeyen veya yanlış bir türün bağımsız değişkenlerini b
 - Geçersiz bağımsız değişkenlerin geçirilmesini engellemek için kodu güncelleştirin.
 - Gerekirse, <xref:System.ArgumentException> yöntemini çağırırken bir işleyin.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Kategori
 
 Windows Forms
 

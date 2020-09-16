@@ -2,12 +2,12 @@
 title: Ocelot ile API Ağ Geçitlerini uygulama
 description: Ocelot ile API ağ geçitleri uygulamayı ve kapsayıcı tabanlı bir ortamda Ocelot 'yi kullanmayı öğrenin.
 ms.date: 03/02/2020
-ms.openlocfilehash: cd776b2fa31a630d9b58530605966ed2431912a2
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5cee56e6b68bc08f9e1de41605951989a55dc0df
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539560"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679233"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot ile API ağ geçitleri uygulama
 
@@ -373,7 +373,7 @@ Test veya hata ayıklama nedenlerinden dolayı, API Gateway 'e geçmeden doğrud
 
 **Şekil 6-36**. Sınama amacıyla bir mikro hizmete doğrudan erişim
 
-Ancak uygulama, doğrudan bağlantı noktasında "kısayollar" değil, tüm mikro hizmetlere API ağ geçitleri üzerinden erişmesi için yapılandırılmıştır.
+Ancak uygulama, doğrudan bağlantı noktası "kısayollar" aracılığıyla değil, API ağ geçitleri aracılığıyla tüm mikro hizmetlere erişmesi için yapılandırılır.
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>EShopOnContainers 'daki ağ geçidi toplama deseninin
 

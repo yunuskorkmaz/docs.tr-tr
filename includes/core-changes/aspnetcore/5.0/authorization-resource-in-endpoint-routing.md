@@ -30,7 +30,7 @@ Uç noktasına öğesinden ulaşabilirsiniz `HttpContext` . Ancak, uç noktadan 
 
 Uygulamanız uç nokta kaynağını kullanıyorsa, <xref:Microsoft.AspNetCore.Http.EndpointHttpContextExtensions.GetEndpoint%2A> `HttpContext` uç noktaya erişmeye devam etmek için üzerinde öğesini çağırın.
 
-ASP.NET Core 5,0 Preview 8 ve üzeri sürümlerde, ile eski davranışa dönüştürebilirsiniz <xref:System.AppContext.SetSwitch%2A> . Örneğin:
+ASP.NET Core 5,0 Preview 8 ve üzeri sürümlerde, ile eski davranışa dönüştürebilirsiniz <xref:System.AppContext.SetSwitch%2A> . Örnek:
 
 ```csharp
 AppContext.SetSwitch(
@@ -44,7 +44,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Hiçbiri
+Yok
 
 <!--
 

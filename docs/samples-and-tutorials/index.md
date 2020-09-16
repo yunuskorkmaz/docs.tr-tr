@@ -4,12 +4,12 @@ description: .NET Core, ASP.NET Core ve .NET hakkında bilgi edinmenize yardımc
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/19/2020
-ms.openlocfilehash: 587365aae1c2069c3e94ad0452da9c31dc6e89f0
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 7e477683834b46439626e03e6ff411fabc52672d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656963"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557196"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET örnekleri ve öğreticiler
 
@@ -33,7 +33,7 @@ Bu öğreticide, Visual Studio Code ve .NET Core CLI kullanılarak .NET Core kon
 
 Bu örnek, .NET Core CLI kullanarak .NET için kitaplıkların nasıl yazılacağını ele alır. Bu araçlar, desteklenen herhangi bir işletim sisteminde çalışan etkili ve düşük düzeyli bir deneyim sağlar. [Tamamlanmış örnek](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) , GitHub 'daki DotNet/Samples deposunda bulunur.
 
-## <a name="aspnet-core"></a>ASP.NET Çekirdeği
+## <a name="aspnet-core"></a>ASP.NET Core
 
 [ASP.NET Core öğreticilerine](/aspnet/core/tutorials/)bakın. ASP.NET Core belgelerindeki birçok makale, bunlar için yazılan örneklere bağlantılar sağlar.
 
@@ -107,7 +107,7 @@ Birçok konuda, GitHub 'dan görüntülenmek veya indirmek için kullanılabilen
 
 1. Aşağıdaki yordamlardan birini gerçekleştirerek örnek kodu içeren depoyu indirin:
    * Deponun bir ZIP kopyasını yerel sisteminize indirin. Sıkıştırılmış Arşivi ZIP olarak kaldırın.
-   * Depoyu [çatalla](https://help.github.com/articles/fork-a-repo/) ve çatalınızı yerel sisteminize [klonlayın](https://help.github.com/articles/cloning-a-repository/) . Dallama ve kopyalama, Çatalınıza değişiklikler gerçekleştirerek ve sonra resmi docs deposu için bir çekme isteği oluşturarak belgelere katkı sağlar. Daha fazla bilgi için [.net belgelerine katkıda bulunan Kılavuzu](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute) ve [ASP.NET Core docs katkıda bulunan Kılavuzu](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)' na bakın.
+   * Depoyu [çatalla](https://help.github.com/articles/fork-a-repo/) ve çatalınızı yerel sisteminize [klonlayın](https://help.github.com/articles/cloning-a-repository/) . Dallama ve kopyalama, Çatalınıza değişiklikler gerçekleştirerek ve sonra resmi docs deposu için bir çekme isteği oluşturarak belgelere katkı sağlar. Daha fazla bilgi için [.net belgelerine katkıda bulunan Kılavuzu](/contribute/dotnet/dotnet-contribute) ve [ASP.NET Core docs katkıda bulunan Kılavuzu](https://github.com/dotnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)' na bakın.
    * Depoyu yerel olarak kopyalayın. Bir docs deposunu doğrudan yerel sisteminize klonladığınızda, işleme doğrudan resmi depoya karşı, belge katkılarını daha sonra yapamayabilmeniz mümkün olmayacaktır. Daha sonra belgelere katkıda bulunmak için fırsatı korumak istiyorsanız, daha önce açıklanan çatal ve kopyalama yordamını kullanın.
 1. Deponun klasörlerinde örnek konumuna gidin. Örnek konumunun göreli yolu, örneğin bağlantısını izlediğinizde tarayıcınızın adres çubuğunda görüntülenir.
 1. Örnek çalıştırmak için birkaç seçeneğiniz vardır:

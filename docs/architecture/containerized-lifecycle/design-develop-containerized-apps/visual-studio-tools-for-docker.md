@@ -3,12 +3,12 @@ title: Windows üzerinde Docker için Visual Studio Araçları
 description: Visual Studio 2017 sürüm 15,7 ve sonraki sürümlerde bulunan Docker araçlarını öğrenin.
 ms.date: 08/06/2020
 ms.custom: vs-dotnet
-ms.openlocfilehash: 74cffaae5885a7079ec774b1e8c68241cddda99a
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: ae20ebf7c3c27d7f2ebe51c33719b82048f86241
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915325"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678933"
 ---
 # <a name="use-docker-tools-in-visual-studio-on-windows"></a>Windows üzerinde Visual Studio 'da Docker Araçları kullanma
 
@@ -65,7 +65,7 @@ Ana menüden **araçlar > seçenekler**' i seçin ve **kapsayıcı araçları > 
 
 Aşağıdaki tablo, bu seçeneklerin nasıl ayarlanacağına karar vermenize yardımcı olur.
 
-| Sayfa/ayar                                |  Varsayılan ayar   | Açıklama                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Sayfa/ayar                                |  Varsayılan ayar   | Description                                                                                                                                                                                                                                                                                                                                                                                                           |
 | ------------------------------------------- | :----------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Genel sayfa**                            |
 | Gerekirse Docker Desktop 'ı yükler            |     Bana sor      |
@@ -84,9 +84,9 @@ Aşağıdaki tablo, bu seçeneklerin nasıl ayarlanacağına karar vermenize yar
 > [!TIP]
 > Hizmet uygulamasıyla ilgili daha fazla ayrıntı ve Docker için Visual Studio Araçları kullanımı için aşağıdaki makaleleri okuyun:
 >
-> Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama:<https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
+> Yerel bir Docker kapsayıcısında uygulamalarda hata ayıklama: <https://docs.microsoft.com/visualstudio/containers/edit-and-refresh>
 >
-> Visual Studio 'Yu kullanarak bir kapsayıcı kayıt defterine ASP.NET kapsayıcısını dağıtma:<https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
+> Visual Studio 'Yu kullanarak bir kapsayıcı kayıt defterine ASP.NET kapsayıcısını dağıtma: <https://docs.microsoft.com/visualstudio/containers/hosting-web-apps-in-docker>
 
 > [!div class="step-by-step"]
 > [Önceki](docker-apps-inner-loop-workflow.md) 

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: b0b0a16a1fd165e437fc79ccacb20d406f5cff63
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 5456639052310cc64854e32caa1df9b391c042cb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302106"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558028"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>Türetilmiş sınıflarda temel sınıf olayları nasıl tetiklemeli (C# Programlama Kılavuzu)
 Aşağıdaki basit örnek, bir temel sınıfta olayları bildirmenin standart yolunu gösterir ve bu sayede türetilmiş sınıflardan da oluşturulabilir. Bu model, .NET sınıf kitaplıklarındaki Windows Forms sınıflarında yaygın olarak kullanılır.  
@@ -29,4 +29,4 @@ Aşağıdaki basit örnek, bir temel sınıfta olayları bildirmenin standart yo
 - [Ekinlikler](./index.md)
 - [Temsilciler](../delegates/index.md)
 - [Erişim Değiştiricileri](../classes-and-structs/access-modifiers.md)
-- [Windows Forms'ta Olay İşleyicileri Oluşturma](../../../framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [Windows Forms'ta Olay İşleyicileri Oluşturma](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)

@@ -2,12 +2,12 @@
 title: Dayanıklı HTTP isteklerini uygulamak için IHttpClientFactory kullanma
 description: .NET Core 2,1 ' den bu yana sunulan ıhttpclientfactory kullanarak, örnek oluşturmak için, `HttpClient` bunu uygulamalarınızda kullanmanızı kolaylaştırmayı öğrenin.
 ms.date: 08/31/2020
-ms.openlocfilehash: 1df5432f215371b60722212cf706c28a4a5bb5f6
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271834"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90678822"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Dayanıklı HTTP isteklerini uygulamak için IHttpClientFactory kullanma
 
@@ -65,9 +65,9 @@ Aşağıdaki diyagramda, yazılan Istemcilerin ile nasıl kullanıldığı göst
 
 **Şekil 8-4**. `IHttpClientFactory`Türü belirtilmiş istemci sınıflarıyla kullanma.
 
-Yukarıdaki görüntüde, bir `ClientService` (denetleyici veya istemci kodu tarafından kullanılan), `HttpClient` kayıtlı tarafından oluşturulan bir tarafından kullanılır `IHttpClientFactory` . Bu fabrika, ' `HttpMessageHandler` a bir havuzdan bir atar `HttpClient` . , `HttpClient` `IHttpClientFactory` Dı kapsayıcısına uzantı yöntemiyle kaydedilirken Polly 'in ilkeleriyle yapılandırılabilir <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> .
+Yukarıdaki görüntüde, bir `ClientService` (denetleyici veya istemci kodu tarafından kullanılan), `HttpClient` kayıtlı tarafından oluşturulan bir tarafından kullanılır `IHttpClientFactory` . Bu fabrika, ' `HttpMessageHandler` a bir havuzdan bir atar `HttpClient` . , `HttpClient` `IHttpClientFactory` Dı kapsayıcısına uzantı yöntemiyle kaydedilirken Polly 'in ilkeleriyle yapılandırılabilir <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> .
 
-Yukarıdaki yapıyı yapılandırmak için, <xref:System.Net.Http.IHttpClientFactory> `Microsoft.Extensions.Http` için genişletme yöntemini içeren NuGet paketini yükleyerek uygulamanıza ekleyin <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient*> <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> . Bu genişletme yöntemi, `DefaultHttpClientFactory` arabirim için tek tek kullanılacak iç sınıfı kaydeder `IHttpClientFactory` . İçin geçici bir yapılandırma tanımlar <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> . Bir havuzdan alınan bu ileti işleyici ( <xref:System.Net.Http.HttpMessageHandler> nesne), `HttpClient` fabrikada döndürülen tarafından kullanılır.
+Yukarıdaki yapıyı yapılandırmak için, <xref:System.Net.Http.IHttpClientFactory> `Microsoft.Extensions.Http` için genişletme yöntemini içeren NuGet paketini yükleyerek uygulamanıza ekleyin <xref:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient%2A> <xref:Microsoft.Extensions.DependencyInjection.IServiceCollection> . Bu genişletme yöntemi, `DefaultHttpClientFactory` arabirim için tek tek kullanılacak iç sınıfı kaydeder `IHttpClientFactory` . İçin geçici bir yapılandırma tanımlar <xref:Microsoft.Extensions.Http.HttpMessageHandlerBuilder> . Bir havuzdan alınan bu ileti işleyici ( <xref:System.Net.Http.HttpMessageHandler> nesne), `HttpClient` fabrikada döndürülen tarafından kullanılır.
 
 Sonraki kodda, `AddHttpClient()` kullanması gereken yazılmış istemcileri (hizmet aracıları) kaydetmek için nasıl kullanılabileceğini görebilirsiniz `HttpClient` .
 
@@ -124,7 +124,7 @@ Her tür Istemcinin kendi yapılandırılmış işleyici yaşam süresi değeri 
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Eklenen ve yapılandırılmış HttpClient kullanan, yazılan Istemci sınıflarınızı uygulama
 
-Önceki bir adım olarak, örnek kodda bulunan, örneğin ' BasketService ', ' CatalogService ', ' OrderingService ' vb. gibi belirlenmiş Istemci sınıflarının tanımlanmış olması gerekir. – türü belirtilmiş bir Istemci, bir nesneyi kabul eden `HttpClient` (Oluşturucusu aracılığıyla eklenen) ve bir uzak HTTP hizmetini çağırmak için onu kullanan bir sınıftır. Örneğin:
+Önceki bir adım olarak, örnek kodda bulunan, örneğin ' BasketService ', ' CatalogService ', ' OrderingService ' vb. gibi belirlenmiş Istemci sınıflarının tanımlanmış olması gerekir. – türü belirtilmiş bir Istemci, bir nesneyi kabul eden `HttpClient` (Oluşturucusu aracılığıyla eklenen) ve bir uzak HTTP hizmetini çağırmak için onu kullanan bir sınıftır. Örnek:
 
 ```csharp
 public class CatalogService : ICatalogService

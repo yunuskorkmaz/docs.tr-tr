@@ -3,12 +3,12 @@ title: Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti
 description: IIS 'de barındırılan bir WCF hizmetini geliştirmek ve dağıtmak için gereken görevler hakkında bilgi edinin ve bileşen yüklemesinin doğrulanması ile başlar
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 886fd9b8d8cf3059b1fd8679c5dd89ee015f2adf
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 5d9a0b80cc75baec2325b778cee7daa68531f2d5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245101"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557573"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Internet Information Services Tarafından Barındırılan Bir WCF Hizmeti Dağıtma
 
@@ -38,13 +38,13 @@ Diğer işletim sistemlerine IIS yükleme yönergeleri [Windows Vista ve Windows
 
 - Windows 7 ve Windows Server 2003: WCF 'yi IIS ile kaydetmek için [ServiceModel Kayıt Aracı (ServiceModelReg.exe)](../servicemodelreg-exe.md) aracını kullanın. Bu aracı kullanmak için, [Visual Studio Geliştirici Komut İstemi](../../tools/developer-command-prompt-for-vs.md) **ServiceModelReg.exe/i/x** yazın.
 
-- Windows 7: son olarak, ASP.NET 'in .NET Framework sürüm 4 veya üstünü kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bunu, ASPNET_Regiis aracını seçeneğiyle çalıştırarak yapabilirsiniz `–i` . Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
+- Windows 7: son olarak, ASP.NET 'in .NET Framework sürüm 4 veya üstünü kullanacak şekilde yapılandırıldığını doğrulamanız gerekir. Bunu, ASPNET_Regiis aracını seçeneğiyle çalıştırarak yapabilirsiniz `–i` . Daha fazla bilgi için bkz. [ASP.NET IIS kayıt aracı](/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Yeni bir IIS uygulaması oluşturun veya var olan bir ASP.NET uygulamasını yeniden kullanın
 
 IIS tarafından barındırılan WCF Hizmetleri bir IIS uygulamasının içinde bulunmalıdır. WCF hizmetlerini özel olarak barındırmak için yeni bir IIS uygulaması oluşturabilirsiniz. Alternatif olarak, zaten ASP.NET 2,0 içeriğini barındıran mevcut bir uygulamaya (örneğin. aspx sayfaları ve ASP.NET Web Hizmetleri [ASMX]) bir WCF Hizmeti dağıtabilirsiniz. Bu seçenekler hakkında daha fazla bilgi için, [WCF Hizmetleri ve ASP.net](wcf-services-and-aspnet.md)' deki "wcf 'yi ASP.net Ile yan yana barındırma" ve "wcf hizmetleri ASP.NET uyumluluk modunda barındırma" bölümlerine bakın.
 
-IIS 6,0 ve sonraki sürümlerin, yalıtılmış nesne odaklı bir programlama uygulamasını düzenli aralıklarla yeniden başlatdığına göz önünde unutmayın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71.582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz. [PeriodicRestartTime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90)).
+IIS 6,0 ve sonraki sürümlerin, yalıtılmış nesne odaklı bir programlama uygulamasını düzenli aralıklarla yeniden başlatdığına göz önünde unutmayın. Varsayılan değer 1740 dakikadır. Desteklenen en yüksek değer 71.582 dakikadır. Bu yeniden başlatma devre dışı bırakılabilir. Bu özellik hakkında daha fazla bilgi için bkz. [PeriodicRestartTime](/previous-versions/iis/6.0-sdk/ms525914(v=vs.90)).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF hizmeti için bir. svc dosyası oluşturma
 
@@ -72,7 +72,7 @@ IIS 'de barındırılan WCF Hizmetleri, ASP.NET 2,0 ile aynı dinamik derleme mo
 
 - Derlenmemiş kod olarak doğrudan. svc dosyasına yerleştirilmiş. Uygulama kodu Ayrıca, Service 'in. svc dosyasında, ServiceHost yönergesinden sonra satır içi olarak da bulunabilir \@ . Satır içi kodda yapılan değişiklikler, bir sonraki istek alındığında uygulamanın geri dönüştürülüp yeniden derlenmesine neden olur.
 
-ASP.NET 2,0 derleme modeli hakkında daha fazla bilgi için bkz. [ASP.net derlemesine genel bakış](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100)).
+ASP.NET 2,0 derleme modeli hakkında daha fazla bilgi için bkz. [ASP.net derlemesine genel bakış](/previous-versions/aspnet/ms178466(v=vs.100)).
 
 ## <a name="configure-the-wcf-service"></a>WCF hizmetini yapılandırma
 
@@ -114,4 +114,4 @@ IIS tarafından barındırılan WCF Hizmetleri, hizmeti içeren IIS sanal dizini
 
 - [Internet Information Services'te Barındırma](hosting-in-internet-information-services.md)
 - [Internet Information Services Barındırma En İyi Uygulamaları](internet-information-services-hosting-best-practices.md)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

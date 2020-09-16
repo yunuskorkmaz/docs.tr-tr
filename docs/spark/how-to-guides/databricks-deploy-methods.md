@@ -4,12 +4,12 @@ description: Spark-gönder ve ayarla jar kullanarak Databricks 'e yönelik bir .
 ms.date: 06/25/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: bebd170a689d8ae56aa6c55486d70354da2437ea
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 88dc321a08f805ef8c3bf8d4d01d32dd890548d2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617775"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557183"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>Databricks 'e Apache Spark iş için .NET gönderme
 
@@ -19,7 +19,7 @@ ms.locfileid: "85617775"
 
 ## <a name="deploy-using-spark-submit"></a>Spark-gönder kullanarak dağıtma
 
-Apache Spark işleri için .NET 'i Databricks 'e göndermek için [Spark-gönder](https://spark.apache.org/docs/latest/submitting-applications.html) komutunu kullanabilirsiniz. `spark-submit`yalnızca isteğe bağlı olarak oluşturulan bir kümeye gönderim yapılmasına izin verir.
+Apache Spark işleri için .NET 'i Databricks 'e göndermek için [Spark-gönder](https://spark.apache.org/docs/latest/submitting-applications.html) komutunu kullanabilirsiniz. `spark-submit` yalnızca isteğe bağlı olarak oluşturulan bir kümeye gönderim yapılmasına izin verir.
 
 1. Databricks çalışma alanınıza gidin ve bir iş oluşturun. İşiniz için bir başlık seçin ve ardından **Spark-gönder**' i seçin. Aşağıdaki parametreleri iş yapılandırmasına yapıştırın ve **Onayla**' yı seçin.
 
@@ -36,7 +36,7 @@ Apache Spark işleri için .NET 'i Databricks 'e göndermek için [Spark-gönder
 
 ## <a name="deploy-using-set-jar"></a>Set jar kullanarak dağıtma
 
-Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üzere Databricks çalışma alanınızda [set jar](https://docs.microsoft.com/azure/databricks/jobs#--create-a-job) öğesini kullanabilirsiniz. *Set jar* , mevcut bir etkin kümeye iş gönderilmesini sağlar.
+Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üzere Databricks çalışma alanınızda [set jar](/azure/databricks/jobs#--create-a-job) öğesini kullanabilirsiniz. *Set jar* , mevcut bir etkin kümeye iş gönderilmesini sağlar.
 
 ### <a name="one-time-setup"></a>Tek seferlik kurulum
 
@@ -57,7 +57,7 @@ Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üze
 
 1. Uygulamanızı yayımladığınızdan ve uygulama kodunuzun kullanmadığından emin olun `SparkSession.Stop()` .
 
-2. Uygulamanızı Databricks kümenize yüklemek için [DATABRICKS CLI](https://docs.microsoft.com/azure/databricks/dev-tools/databricks-cli) kullanın. Örneğin, yayımlanmış uygulamanızı kümenize yüklemek için aşağıdaki komutu kullanın:
+2. Uygulamanızı Databricks kümenize yüklemek için [DATABRICKS CLI](/azure/databricks/dev-tools/databricks-cli) kullanın. Örneğin, yayımlanmış uygulamanızı kümenize yüklemek için aşağıdaki komutu kullanın:
 
     ```console
     cd <path-to-your-app-publish-directory>
@@ -86,4 +86,4 @@ Alternatif olarak, databricks 'e Apache Spark işleri için .NET göndermek üze
 
 * [Apache Spark için .NET ile çalışmaya başlama](../tutorials/get-started.md)
 * [Databricks 'e Apache Spark uygulamasına yönelik bir .NET dağıtımı](../tutorials/databricks-deployment.md)
-* [Azure Databricks Belgeleri](https://docs.microsoft.com/azure/azure-databricks/)
+* [Azure Databricks Belgeleri](/azure/azure-databricks/)

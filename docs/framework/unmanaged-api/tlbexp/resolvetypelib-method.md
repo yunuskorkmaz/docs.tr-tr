@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: f0f6fe321f4d38129b6d70ce94a7ea8de8fff6c8
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 65bbae614c8872ab5d78b3855b56ceaf2aad50da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935663"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558192"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib Yöntemi
 Tam nitelikli yolunu döndürerek bir tür kitaplığının basit adını çözer.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT ResolveTypeLib(  
@@ -38,7 +38,7 @@ HRESULT ResolveTypeLib(
   
 ## <a name="parameters"></a>Parametreler  
  `bstrSimpleName`  
- 'ndaki Tür kitaplığının basit adını içeren bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) .  
+ 'ndaki Tür kitaplığının basit adını içeren bir [BSTR](/previous-versions/windows/desktop/automat/bstr) .  
   
  `tlbid`  
  'ndaki Kayıt defterindeki tür kitaplığına atanan GUID.  
@@ -56,12 +56,12 @@ HRESULT ResolveTypeLib(
  'ndaki İşletim ortamını tanımlayan bir [Syskind](/windows/win32/api/oaidl/ne-oaidl-syskind) bayrağı. Ortak değerler SYS_WIN32 ve SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- dışı `bstrSimpleName` parametresinde adlı tür kitaplığının tam yolunu içeren [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) 'ye yönelik bir işaretçi.  
+ dışı Parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](/previous-versions/windows/desktop/automat/bstr) için bir işaretçi `bstrSimpleName` .  
   
 ## <a name="remarks"></a>Açıklamalar  
- `ResolveTypeLib` yöntemi, [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) Işleme sırasında [LoadTypeLibWithResolver işlevi](loadtypelibwithresolver-function.md) tarafından çağırılır.  
+ `ResolveTypeLib`Yöntemi, [Tlbexp.exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) Işlemi sırasında [LoadTypeLibWithResolver işlevi](loadtypelibwithresolver-function.md) tarafından çağrılır.  
   
- Bu arabirimin özel uygulamaları, `bstrSimpleName` parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) döndürmelidir.  
+ Bu arabirimin özel uygulamaları, parametresinde adlı tür kitaplığının tam yolunu içeren bir [BSTR](/previous-versions/windows/desktop/automat/bstr) döndürmelidir `bstrSimpleName` .  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
@@ -70,9 +70,9 @@ HRESULT ResolveTypeLib(
   
  **Kitaplık:** TlbRef. lib  
   
- **.NET Framework sürümleri:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tlbexp Yardımcı İşlevleri](index.md)
-- [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: d93bdee8d5a057be0f405fe4334d7edbdc0649ec
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 214a368ba269103093a90431cdf9e77ab5989c07
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174412"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557222"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Öğretici: zaman serisi analizi ve ML.NET ile tahmin Bisiklet kiralama hizmeti talebi
 
@@ -73,7 +73,7 @@ Bu öğreticide kullanılan algoritma tekil bir [Spekme analizidir (SSA)](http:/
 
 Özgün veri kümesi, bir SQL Server veritabanında aşağıdaki şemaya sahip bir veritabanı tablosuyla eşlenir.
 
-```SQL
+```sql
 CREATE TABLE [Rentals] (
     [RentalDate] DATE NOT NULL,
     [Year] INT NOT NULL,
@@ -217,7 +217,7 @@ Sonraki yılın verilerini tahmin ederek ve gerçek değerlerle karşılaştıra
 
 Modelinize memnun kaldıysanız, daha sonra diğer uygulamalarda kullanmak üzere kaydedin.
 
-1. `Main`Yönteminde, oluşturun [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) . [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602), tek tahminleri yapmak için kullanışlı bir yöntemdir.
+1. `Main`Yönteminde, oluşturun [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) . [`TimeSeriesPredictionEngine`](xref:Microsoft.ML.Transforms.TimeSeries.TimeSeriesPredictionEngine%602) , tek tahminleri yapmak için kullanışlı bir yöntemdir.
 
     [!code-csharp [CreateTimeSeriesEngine](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L51)]
 

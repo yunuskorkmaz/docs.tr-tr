@@ -78,7 +78,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Hiçbiri
+Yok
 
 <!--
 

@@ -4,12 +4,12 @@ description: Windows Presentation Foundation (WPF) uygulamasını .NET Core 3,0 
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: fda4f618ddb4a3edbe6f2dd9fba0b10bc618e88d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: d8abcde4a941ac6e8f9f438cfe7e30f8d1e8a0bc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201567"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551952"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>WPF uygulamalarını .NET Core 'a geçirme
 
@@ -35,7 +35,7 @@ Bu makalede, .NET Framework bir Windows Presentation Foundation (WPF) uygulamas�
 
     01. [Microsoft. Windows. uyumluluk](https://www.nuget.org/packages/Microsoft.Windows.Compatibility/) paketine bir başvuru ekleyin.
     01. API düzeyi farklılıkları bulun ve onarın.
-    01. Veya dışındaki *app. config* bölümlerini kaldırın `appSettings` `connectionStrings` .
+    01. Veya dışındaki *app.config* bölümlerini kaldırın `appSettings` `connectionStrings` .
     01. Gerekirse oluşturulan kodu yeniden oluşturun.
 
 01. Çalışma zamanı testi:
@@ -55,20 +55,20 @@ Bu örnek uygulamanın .NET Core 'a yönelik güçlükleri ve çözümleri göst
 
 ### <a name="upgrade-to-packagereference-nuget-references"></a>`<PackageReference>`NuGet başvurularına yükselt
 
-Daha eski .NET Framework projeleri, genellikle bir *Packages. config* dosyasında NuGet bağımlılıklarını listeler. Yeni SDK stili proje dosyası biçimi, NuGet paketlerine [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) ayrı bir yapılandırma dosyası yerine csproj dosyasındaki öğeler olarak başvurur.
+Daha eski .NET Framework projeler, genellikle NuGet bağımlılıklarını bir *packages.config* dosyasına listeler. Yeni SDK stili proje dosyası biçimi, NuGet paketlerine [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) ayrı bir yapılandırma dosyası yerine csproj dosyasındaki öğeler olarak başvurur.
 
 Geçiş yaparken, stili başvuruların kullanılmasıyla iki avantajı vardır `<PackageReference>` :
 
 - Bu, yeni .NET Core proje dosyası için gerekli olan NuGet başvurusunun stilidir. Zaten kullanıyorsanız `<PackageReference>` , bu proje dosyası öğeleri kopyalanabilir ve doğrudan yeni projeye yapıştırılabilir.
-- Packages. config dosyasından farklı olarak, `<PackageReference>` öğeler yalnızca projenizin doğrudan bağlı olduğu en üst düzey bağımlılıklara başvurur. Diğer tüm geçişli NuGet paketleri geri yükleme sırasında belirlenir ve otomatik olarak oluşturulan obj\project.assets.JSON dosyasına kaydedilir. Bu, projenizin hangi bağımlılıklara sahip olduğunu belirlemeyi çok daha kolay hale getirir. Bu, gerekli bağımlılıkların .NET Core 'da çalışıp çalışmadığını belirlemede yararlı olur.
+- packages.config bir dosyanın aksine, `<PackageReference>` öğeler yalnızca projenizin doğrudan bağlı olduğu en üst düzey bağımlılıklara başvurur. Diğer tüm geçişli NuGet paketleri geri yükleme sırasında belirlenir ve dosyadaki otomatik olarak obj\project.assets.jskaydedilir. Bu, projenizin hangi bağımlılıklara sahip olduğunu belirlemeyi çok daha kolay hale getirir. Bu, gerekli bağımlılıkların .NET Core 'da çalışıp çalışmadığını belirlemede yararlı olur.
 
-.NET Framework uygulamayı .NET Core 'a geçirmeye yönelik ilk adım, NuGet başvurularını kullanacak şekilde günceldir `<PackageReference>` . Visual Studio bu basit hale getirir. Visual Studio 'nun **Çözüm Gezgini**projenin *Packages. config* dosyasına sağ tıklayıp, **Packages. config 'i packagereference öğesine geçir**' i seçmeniz yeterlidir.
+.NET Framework uygulamayı .NET Core 'a geçirmeye yönelik ilk adım, NuGet başvurularını kullanacak şekilde günceldir `<PackageReference>` . Visual Studio bu basit hale getirir. Visual Studio 'nun **Çözüm Gezgini**projenin *packages.config* dosyasına sağ tıklayıp, ardından packages.config geçir ' i seçerek **packagereference**.
 
 ![PackageReference 'a yükseltme](./media/convert-project-from-net-framework/package-reference-migration.png)
 
-Hesaplanan en üst düzey NuGet bağımlılıklarını gösteren bir iletişim kutusu görünür ve diğer NuGet paketlerinin en üst düzeye yükseltilmesi gerektiğini sorar. Bu diğer paketlerin hiçbirinin, çekirdeklere Trader örneği için en üst düzey olması gerekmez, bu nedenle bu kutuların tümünün işaretini kaldırabilirsiniz. Ardından **Tamam** ' a tıklayın ve *Packages. config* dosyası kaldırılır ve `<PackageReference>` öğeler proje dosyasına eklenir.
+Hesaplanan en üst düzey NuGet bağımlılıklarını gösteren bir iletişim kutusu görünür ve diğer NuGet paketlerinin en üst düzeye yükseltilmesi gerektiğini sorar. Bu diğer paketlerin hiçbirinin, çekirdeklere Trader örneği için en üst düzey olması gerekmez, bu nedenle bu kutuların tümünün işaretini kaldırabilirsiniz. Ardından **Tamam** ' a tıklayın ve *packages.config* dosya kaldırılır ve `<PackageReference>` öğeler proje dosyasına eklenir.
 
-`<PackageReference>`-Style başvuruları, NuGet paketlerini bir paketler klasöründe yerel olarak depolamaz. Bunun yerine, genel bir iyileştirme olarak depolanır. Geçiş tamamlandıktan sonra, csproj dosyasını düzenleyin ve ' `<Analyzer>` den daha önce gelen çözümleyiciler ile ilgili tüm öğeleri *kaldırın. \packages* dizini. Endişelenmeyin; NuGet paketi başvurularını hala içerdiğinden, çözümleyiciler projeye dahil edilir. Yalnızca eski paketler. config stilindeki öğeleri temizlemeniz yeterlidir `<Analyzer>` .
+`<PackageReference>`-Style başvuruları, NuGet paketlerini bir paketler klasöründe yerel olarak depolamaz. Bunun yerine, genel bir iyileştirme olarak depolanır. Geçiş tamamlandıktan sonra, csproj dosyasını düzenleyin ve ' `<Analyzer>` den daha önce gelen çözümleyiciler ile ilgili tüm öğeleri *kaldırın. \packages* dizini. Endişelenmeyin; NuGet paketi başvurularını hala içerdiğinden, çözümleyiciler projeye dahil edilir. Yalnızca eski packages.config stili öğeleri temizlemeniz gerekir `<Analyzer>` .
 
 ### <a name="review-nuget-packages"></a>NuGet paketlerini gözden geçir
 
@@ -148,7 +148,7 @@ Araç, bir [Visual Studio eklentisi](https://marketplace.visualstudio.com/items?
 
 HTML raporu açtığınızda, ilk bölüm çözümlenmiş ikililerin tümünü ve kullandıkları .NET API 'lerinin yüzdesini listeler ve hedeflenen platformda bulunur. Yüzde, kendi kendine anlamlı değildir. Daha fazla yararlı olan API 'Ler, eksik olan API 'Leri görşeydir. Bunu yapmak için, bir derleme adı seçin ya da ayrı derlemeler için raporlara gidin.
 
-Kaynak koduna sahip olduğunuz derlemelere odaklanın. Çekirdeklere Trader ApiPort raporunda, örneğin, listelenen çok sayıda ikili dosya vardır, ancak çoğu NuGet paketlerine aittir. `Castle.Windsor`.NET Core 'da eksik olan System. Web API 'Lerine bağlı olduğunu gösterir. Bu sorun, daha önce .NET Core ' u desteklediğini doğruladığınıza ilişkin bir sorun değildir `Castle.Windsor` . NuGet paketleri farklı .NET platformlarıyla kullanılmak üzere farklı ikililerin olması yaygındır. bu nedenle, ' nin .NET Framework sürümünün `Castle.Windsor` System. Web API 'lerini kullanması veya aynı zamanda paket .NET Standard veya .NET Core 'u (bunun yaptığı) hedeflediğinden, ilgisiz olup olmadığı.
+Kaynak koduna sahip olduğunuz derlemelere odaklanın. Çekirdeklere Trader ApiPort raporunda, örneğin, listelenen çok sayıda ikili dosya vardır, ancak çoğu NuGet paketlerine aittir. `Castle.Windsor` .NET Core 'da eksik olan System. Web API 'Lerine bağlı olduğunu gösterir. Bu sorun, daha önce .NET Core ' u desteklediğini doğruladığınıza ilişkin bir sorun değildir `Castle.Windsor` . NuGet paketleri farklı .NET platformlarıyla kullanılmak üzere farklı ikililerin olması yaygındır. bu nedenle, ' nin .NET Framework sürümünün `Castle.Windsor` System. Web API 'lerini kullanması veya aynı zamanda paket .NET Standard veya .NET Core 'u (bunun yaptığı) hedeflediğinden, ilgisiz olup olmadığı.
 
 Çekirdeklere Trader örneğinde, dikkate almanız gereken tek ikili bir **Beantraderclient** örneğidir ve rapor yalnızca Iki .NET API 'nin eksik olduğunu gösterir: `System.ServiceModel.ClientBase<T>.Close` ve `System.ServiceModel.ClientBase<T>.Open` .
 
@@ -162,7 +162,7 @@ Bu rapor ve önceki NuGet bağımlılığı analizine dayalı olarak, çekirdekl
 
 Uygulamanız yeni [SDK stili proje dosyası biçimini](../../core/tools/csproj.md)kullanmıyor ise, .NET Core 'u hedeflemek için yeni bir proje dosyası gerekir. Var olan csproj dosyasını değiştirebilir veya mevcut projenin geçerli durumunda kalmasını tercih ediyorsanız, .NET Core 'u hedefleyen yeni bir csproj dosyası ekleyebilirsiniz. Çoklu [hedefleme](../../standard/library-guidance/cross-platform-targeting.md) (birden çok hedef belirterek) ile tek bir SDK stili proje dosyası ile .NET Framework ve .NET Core için uygulamanın sürümlerini oluşturabilirsiniz `<TargetFrameworks>` .
 
-Yeni proje dosyasını oluşturmak için, Visual Studio 'da yeni bir WPF projesi oluşturabilir veya bir `dotnet new wpf` geçici dizinde komutunu kullanarak proje dosyasını oluşturabilir ve ardından doğru konuma kopyalayabilir/yeniden adlandırabilirsiniz. Ayrıca, bazı proje dosyası geçişini otomatikleştirebilen, topluluk tarafından oluşturulan bir araç olan [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017). Araç yararlı olmakla kalmaz, geçişin tüm ayrıntılarının doğru olduğundan emin olmak için sonuçları gözden geçirmesi gerekir. Aracın en iyi şekilde işlemediğini belirli bir alan, *Packages. config* dosyalarından NuGet paketlerini geçirmektedir. Araç, NuGet paketlerine başvurmak için bir *Packages. config* dosyası kullanan bir proje dosyasında çalışıyorsa, `<PackageReference>` öğeleri otomatik olarak öğelere geçirilir, ancak `<PackageReference>` yalnızca en üst düzey olanlar yerine *Tüm* paketlere yönelik öğeler ekler. `<PackageReference>`Visual Studio ile öğelere zaten geçiş yaptıysanız (Bu örnekte yaptığınız gibi), araç geri kalanında dönüştürmeye yardımcı olabilir. Scott Hanselman, [csproj dosyalarını geçirirken blog gönderisine](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), el ile geçiş yaparak eğitim verme ve bağlantı noktası için yalnızca birkaç projeniz varsa daha iyi sonuçlar verecektir. Ancak onlarca veya yüzlerce proje dosyası aktarıyorsanız, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) gibi bir araç bir yardım olabilir.
+Yeni proje dosyasını oluşturmak için, Visual Studio 'da yeni bir WPF projesi oluşturabilir veya bir `dotnet new wpf` geçici dizinde komutunu kullanarak proje dosyasını oluşturabilir ve ardından doğru konuma kopyalayabilir/yeniden adlandırabilirsiniz. Ayrıca, bazı proje dosyası geçişini otomatikleştirebilen, topluluk tarafından oluşturulan bir araç olan [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017). Araç yararlı olmakla kalmaz, geçişin tüm ayrıntılarının doğru olduğundan emin olmak için sonuçları gözden geçirmesi gerekir. Aracın en iyi şekilde işlemeyen belirli bir alan, NuGet paketlerini *packages.config* dosyalarından geçirmektedir. Araç, NuGet paketlerine başvurmak için bir *packages.config* dosyası kullanan bir proje dosyasında çalışıyorsa, `<PackageReference>` öğeleri otomatik olarak öğelere geçirilir, ancak `<PackageReference>` yalnızca en üst düzey olanlar yerine *Tüm* paketlere yönelik öğeler ekler. `<PackageReference>`Visual Studio ile öğelere zaten geçiş yaptıysanız (Bu örnekte yaptığınız gibi), araç geri kalanında dönüştürmeye yardımcı olabilir. Scott Hanselman, [csproj dosyalarını geçirirken blog gönderisine](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx), el ile geçiş yaparak eğitim verme ve bağlantı noktası için yalnızca birkaç projeniz varsa daha iyi sonuçlar verecektir. Ancak onlarca veya yüzlerce proje dosyası aktarıyorsanız, [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) gibi bir araç bir yardım olabilir.
 
 Çekirdeklere Trader örneği için yeni bir proje dosyası oluşturmak için `dotnet new wpf` geçici bir dizinde çalıştırın ve oluşturulan *. csproj* dosyasını *beantraderclient* klasörüne taşıyın ve bu dosyayı **Beantraderclient. Core. csproj**olarak yeniden adlandırın.
 
@@ -218,10 +218,10 @@ Bu şekilde dışlanmanız gereken çok sayıda kaynak dosyanız varsa, `<Enable
 
 ### <a name="a-brief-aside-on-multi-pass-compilers"></a>Çok geçişli derleyicilere kısa bir açıklama
 
-Soruna neden olan dosyayı çekirdeklere Trader örneğinden kaldırdıktan sonra, yeniden derleyebilir ve dört hata alırsınız. Daha önce hiç kimse yok mu? Neden hata sayısı? C# derleyicisi, [çok taramalı bir derleyicidir](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes). Bu, her kaynak dosyanın iki kez gittiği anlamına gelir. İlk olarak, derleyici her kaynak dosyasındaki meta verileri ve bildirimlere bakar ve bildirim düzeyindeki sorunları tanımlar. Bu hatalar düzeltildi. Ardından, C# kaynağını Il 'de oluşturmak için koddan yeniden gider; Bunlar, şu anda gördüğünüz ikinci hata kümesidir.
+Soruna neden olan dosyayı çekirdeklere Trader örneğinden kaldırdıktan sonra, yeniden derleyebilir ve dört hata alırsınız. Daha önce hiç kimse yok mu? Neden hata sayısı? C# derleyicisi, [çok taramalı bir derleyicidir](/archive/blogs/ericlippert/how-many-passes). Bu, her kaynak dosyanın iki kez gittiği anlamına gelir. İlk olarak, derleyici her kaynak dosyasındaki meta verileri ve bildirimlere bakar ve bildirim düzeyindeki sorunları tanımlar. Bu hatalar düzeltildi. Ardından, C# kaynağını Il 'de oluşturmak için koddan yeniden gider; Bunlar, şu anda gördüğünüz ikinci hata kümesidir.
 
 > [!NOTE]
-> C# derleyicisi [yalnızca iki geçişte daha fazlasını](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes)yapar, ancak nihai sonuç, bu gibi büyük kod değişiklikleri için derleyici hatalarının iki dalgada elde edilmesine neden olur.
+> C# derleyicisi [yalnızca iki geçişte daha fazlasını](/archive/blogs/ericlippert/how-many-passes)yapar, ancak nihai sonuç, bu gibi büyük kod değişiklikleri için derleyici hatalarının iki dalgada elde edilmesine neden olur.
 
 ### <a name="third-party-dependency-fixes-castlewindsor"></a>Üçüncü taraf bağımlılık düzeltmeleri (Role. Wınsma)
 
@@ -231,18 +231,18 @@ Bazı geçiş senaryolarında yer alan başka bir sorun sınıfı, bağımlılı
 
 Bu durumda, düzeltilmesi gereken aşağıdaki sorunları görürsünüz:
 
-1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly`.NET Core 'da kullanılamaz. Bununla birlikte, benzer `Classes.FromAssemblyContaining` BIR API mevcuttur. bu nedenle, çağrısı ile her iki kullanımını `Classes.FromThisAssembly()` ' a `Classes.FromAssemblyContaining(t)` , ' ın `t` çağrısını yapan türdür.
+1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly` .NET Core 'da kullanılamaz. Bununla birlikte, benzer `Classes.FromAssemblyContaining` BIR API mevcuttur. bu nedenle, çağrısı ile her iki kullanımını `Classes.FromThisAssembly()` ' a `Classes.FromAssemblyContaining(t)` , ' ın `t` çağrısını yapan türdür.
 1. Benzer şekilde, *Bootstrapper.cs*içinde `Castle.Windsor.Installer.FromAssembly` . Bu, .NET Core 'da kullanılamaz. Bunun yerine, bu çağrı ile değiştirilebilir `FromAssembly.Containing(typeof(Bootstrapper))` .
 
 ### <a name="updating-wcf-client-usage"></a>WCF istemci kullanımı güncelleştiriliyor
 
-`Castle.Windsor`Farklılıkları düzelttikten sonra, .NET Core çekirdeklere Trader projesinde kalan son derleme hatası, `BeanTraderServiceClient` (öğesinden türetilmeyen `DuplexClientBase` ) bir yönteme sahip değildir `Open` . Bu, bu geçiş sürecinin başlangıcında .NET taşınabilirlik Çözümleyicisi tarafından vurgulanan bir API olduğundan bu değildir. `BeanTraderServiceClient`Daha büyük bir sorunla ilgilenmenizi sağlar, ancak. Bu WCF istemcisi [Svcutil. exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı tarafından otomatik olarak oluşturuldu.
+`Castle.Windsor`Farklılıkları düzelttikten sonra, .NET Core çekirdeklere Trader projesinde kalan son derleme hatası, `BeanTraderServiceClient` (öğesinden türetilmeyen `DuplexClientBase` ) bir yönteme sahip değildir `Open` . Bu, bu geçiş sürecinin başlangıcında .NET taşınabilirlik Çözümleyicisi tarafından vurgulanan bir API olduğundan bu değildir. `BeanTraderServiceClient`Daha büyük bir sorunla ilgilenmenizi sağlar, ancak. Bu WCF istemcisi [Svcutil.exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) aracı tarafından otomatik olarak oluşturuldu.
 
 **Svcutil tarafından oluşturulan WCF istemcileri .NET Framework kullanımı için tasarlanmıştır.**
 
-Svcutil tarafından oluşturulan WCF istemcilerinin kullanıldığı çözümlerin, .NET Core ile kullanmak üzere .NET Standard uyumlu istemcileri yeniden oluşturması gerekir. Eski istemcilerin çalışmayabileceği başlıca nedenlerden biri, WCF bağlamaları ve uç noktaları tanımlamak için uygulama yapılandırmasına bağımlıdır. .NET Standard WCF API 'Leri platformlar arası (System. Configuration API 'Lerinin kullanılamadığı) çalışabileceğinden, .NET Core ve .NET Standard senaryoları için WCF istemcileri, yapılandırma yerine program aracılığıyla bağlamaları ve uç noktaları tanımlamalıdır.
+Svcutil tarafından oluşturulan WCF istemcilerinin kullanıldığı çözümlerin, .NET Core ile kullanmak üzere .NET Standard uyumlu istemcileri yeniden oluşturması gerekir. Eski istemcilerin çalışmayabileceği başlıca nedenlerden biri, WCF bağlamaları ve uç noktaları tanımlamak için uygulama yapılandırmasına bağımlıdır. .NET Standard WCF API 'Leri platformlar arası çalışabildiğinden (System.Configmerkezi API 'Lerinin kullanılamadığı durumlarda), .NET Core ve .NET Standard senaryoları için WCF istemcilerinin, yapılandırma yerine, program aracılığıyla bağlamaları ve uç noktaları tanımlamalıdır.
 
-Aslında, `<system.serviceModel>` app. config bölümüne (Svcutil veya el ile oluşturulan) bağlı olan tüm WCF istemci kullanımları .NET Core 'da çalışacak şekilde değiştirilmelidir.
+Aslında `<system.serviceModel>` app.config bölümüne (Svcutil veya el ile oluşturulan) bağlı olan tüm WCF istemci kullanımları .NET Core üzerinde çalışacak şekilde değiştirilmelidir.
 
 .NET Standard uyumlu WCF istemcilerini otomatik olarak oluşturmak için iki yol vardır:
 
@@ -294,9 +294,9 @@ Inner Exception
 ConfigurationErrorsException: Unrecognized configuration section system.serviceModel.
 ```
 
-Bu, kuşkusuz bir fikir sunar. WCF 'nin artık uygulama yapılandırması kullanmadığını unutmayın. bu nedenle, App. config dosyasının eski System. serviceModel bölümünün kaldırılması gerekir. Güncelleştirilmiş WCF istemcisi, kodunda aynı bilgilerin tümünü içerir, bu nedenle yapılandırma bölümü artık gerekli değildir. WCF uç noktasının App. config içinde yapılandırılabilmesine isterseniz, bunu bir uygulama ayarı olarak ekleyebilir ve WCF hizmet uç noktasını yapılandırmadan almak için WCF istemci kodunu güncelleştirebilirsiniz.
+Bu, kuşkusuz bir fikir sunar. WCF 'nin artık uygulama yapılandırması kullanmadığını unutmayın, bu nedenle app.config dosyanın eski System. serviceModel bölümünün kaldırılması gerekir. Güncelleştirilmiş WCF istemcisi, kodunda aynı bilgilerin tümünü içerir, bu nedenle yapılandırma bölümü artık gerekli değildir. WCF uç noktasının app.config yapılandırılabilmesine isterseniz, bunu bir uygulama ayarı olarak ekleyebilir ve WCF hizmet uç noktasını yapılandırmadan almak için WCF istemci kodunu güncelleştirebilirsiniz.
 
-*App. config*dosyasının System. ServiceModel bölümünü kaldırdıktan sonra, uygulama başlatılır ancak kullanıcı oturum açtığında başka bir özel durumla başarısız olur.
+*app.config*System. ServiceModel bölümünü kaldırdıktan sonra, uygulama başlatılır ancak kullanıcı oturum açtığında başka bir özel durumla başarısız olur.
 
 ```output
 System.PlatformNotSupportedException: 'Operation is not supported on this platform.'

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6a8fd644e6f9132bf93277ae9928788f236a7bd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84287499"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558205"
 ---
 # <a name="serialization-guidelines"></a>Serileştirme yönergeleri
 Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri listeler.  
@@ -99,7 +99,7 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
   
 1. Oluşturulan XML şeklini denetlemek için çok güçlü bir nedeniniz yoksa, özel olarak XML serileştirme için türlerinizi tasarlamaktan KAÇıNıN. Bu serileştirme teknolojisinin yerini, önceki bölümde ele alınan veri sözleşmesi serileştirmesi almıştır.  
   
-     Diğer bir deyişle, <xref:System.Xml.Serialization> TÜRÜN XML serileştirme ile kullanılacağını bilmiyorsanız, ad alanından yeni türlere öznitelikler uygulamayın. Aşağıdaki örnek, **System. xml. Serialization** öğesinin xml tarafından üretilen şekli denetlemek için nasıl kullanılabileceğini gösterir.  
+     Diğer bir deyişle, <xref:System.Xml.Serialization> TÜRÜN XML serileştirme ile kullanılacağını bilmiyorsanız, ad alanından yeni türlere öznitelikler uygulamayın. Aşağıdaki örnekte **System.Xml gösterilmektedir. Serileştirme** , xml tarafından üretilen şekli denetlemek için kullanılabilir.  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
@@ -140,10 +140,10 @@ Bu belgenin bir API tasarlama serileştirilecek göz önünde için yönergeleri
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Veri Anlaşmalarını Kullanma](../../framework/wcf/feature-details/using-data-contracts.md)
+- [Veri Sözleşmelerini Kullanma](../../framework/wcf/feature-details/using-data-contracts.md)
 - [Veri Sözleşmesi Seri Hale Getirici](../../framework/wcf/feature-details/data-contract-serializer.md)
 - [Veri Sözleşmesi Seri Hale Getirici Tarafından Desteklenen Türler](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [İkili serileştirme](binary-serialization.md)
-- [.NET uzaktan iletişim](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
+- [.NET uzaktan iletişim](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML ve SOAP serileştirme](xml-and-soap-serialization.md)
-- [Güvenlik ve Serileştirme](../../framework/misc/security-and-serialization.md)
+- [Güvenlik ve serileştirme](../../framework/misc/security-and-serialization.md)

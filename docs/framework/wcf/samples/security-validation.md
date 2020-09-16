@@ -2,12 +2,12 @@
 title: Güvenlik Doğrulaması
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 70408976469b1cbcf9c4679bd91d81872ec74ae1
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: ec7b7f96c1f6489f677970164f74c176b301f55b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599977"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557391"
 ---
 # <a name="security-validation"></a>Güvenlik doğrulaması
 Bu örnek, belirli ölçütlere uyması için bir bilgisayardaki hizmetleri doğrulamak üzere özel bir davranışın nasıl kullanılacağını gösterir. Bu örnekte, hizmetler, hizmet üzerindeki her bir uç nokta arasında tarama yaparak ve güvenli bağlama öğeleri içerip içermediğini kontrol ederek özel davranış tarafından onaylanır. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır.  
@@ -47,7 +47,7 @@ public void Validate(ServiceDescription serviceDescription,
 }  
 ```  
   
- Aşağıdaki kodu Web. config dosyasına eklemek `serviceValidate` , hizmetinin tanınması için davranış uzantısını ekler.  
+ Aşağıdaki kodu Web.config dosyasına eklemek `serviceValidate` , hizmetin, tanıması için davranış uzantısını ekler.  
   
 ```xml  
 <system.serviceModel>  
@@ -60,7 +60,7 @@ public void Validate(ServiceDescription serviceDescription,
 </system.serviceModel>
 ```  
   
- Davranış uzantısı hizmete eklendikten sonra, bu `endpointValidate` davranış, Web. config dosyasındaki davranış listesine ve dolayısıyla hizmete eklenebilir.  
+ Davranış uzantısı hizmete eklendikten sonra, bu `endpointValidate` davranış, Web.config dosyadaki davranışlar listesine ve bu nedenle hizmete eklenebilir.  
   
 ```xml  
 <behaviors>  
@@ -73,10 +73,10 @@ public void Validate(ServiceDescription serviceDescription,
 </behaviors>  
 ```  
   
- Web. config dosyasına eklenen davranışlar ve uzantıları, her bir hizmete davranış uygular, ancak Machine. config dosyasına eklendiğinde, bilgisayarda etkin olan her hizmete davranış uygular.  
+ Web.config dosyasına eklenen davranışlar ve uzantıları, her bir hizmete davranış uygular, Machine.config dosyasına eklendiğinde, bilgisayarda etkin olan her hizmete davranış uygular.  
   
 > [!NOTE]
-> Tüm hizmetlere davranış eklerken, herhangi bir değişiklik yapmadan önce Machine. config dosyasını yedeklemeniz önerilir.  
+> Tüm hizmetlere davranış eklerken, herhangi bir değişiklik yapmadan önce Machine.config dosyasını yedeklemeniz önerilir.  
   
  Şimdi bu örneğin client\bin dizininde belirtilen istemciyi çalıştırın. Şu iletiyle bir özel durum oluşturuldu: "istenen hizmet, ' http://localhost/servicemodelsamples/service.svc ' etkinleştirilemedi." Uç nokta doğrulama davranışının güvenli olmadığı kabul edildiği ve hizmetin başlatılmasını önleyen için bu durum beklenmektedir. Davranış ayrıca, hangi uç noktanın güvenli olmayan olduğunu ve "System. ServiceModel 4.0.0.0" kaynağı ve "WebHost" kategorisinin altına bir Olay Görüntüleyicisi ileti yazdığını belirten bir iç özel durum oluşturur. Bu örnekteki hizmette izlemeyi açmak de mümkündür. Bu, kullanıcının Endpoint doğrulama davranışı tarafından oluşturulan özel durumları, hizmet Izleme Görüntüleyicisi aracını kullanarak elde edilen hizmet izlemelerini açarak görüntülemesine olanak tanır.  
   
@@ -109,4 +109,4 @@ public void Validate(ServiceDescription serviceDescription,
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric Izleme örnekleri](/previous-versions/appfabric/ff383407(v=azure.10))

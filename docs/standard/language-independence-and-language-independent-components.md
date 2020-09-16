@@ -13,16 +13,16 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: aa569c0da5b963243596ef440ef37c08b4fae37f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b440bce7ad73cfd526b1589e7f19b4cc06be238c
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288244"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679618"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Dil Bağımsızlığı ve Dilden Bağımsız Bileşenler
 
-.NET Framework dilden bağımsızdır. Yani, geliştirici olarak C#, C++/CLı, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell gibi .NET Framework hedefleyen birçok dilden birinde geliştirme yapabilirsiniz. .NET Framework için geliştirilen sınıf kitaplıklarının türlerine ve üyelerine, başlangıçta yazıldığı dili ve özgün dilin kurallarından herhangi birini izlemeniz gerekmeden erişebilirsiniz. Bileşen geliştiricisiyseniz, kendi dilinden bağımsız olarak herhangi bir .NET Framework uygulaması tarafından erişilebilir.
+Dilden bağımsız .NET Framework. Yani, geliştirici olarak C#, C++/CLı, Eiffel, F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL ve Windows PowerShell gibi .NET Framework hedef olan birçok dilden birinde geliştirme yapabilirsiniz. .NET Framework için geliştirilen sınıf kitaplıklarının türlerine ve üyelerine, başlangıçta yazıldığı dili ve özgün dilin kurallarından herhangi birini izlemeniz gerekmeden erişebilirsiniz. Bileşen geliştiricisiyseniz, kendi dilinden bağımsız olarak herhangi bir .NET Framework uygulaması tarafından erişilebilir.
 
 > [!NOTE]
 > Bu makalenin ilk bölümü, dilden bağımsız bileşenler (yani, herhangi bir dilde yazılmış uygulamalar tarafından tüketilen bileşenler) oluşturmayı tartışır. Ayrıca, birden çok dilde yazılmış kaynak kodundan tek bir bileşen veya uygulama oluşturabilirsiniz; Bu makalenin ikinci bölümünde [Diller arası birlikte çalışabilirlik](#CrossLang) bölümüne bakın.
@@ -113,9 +113,9 @@ CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların met
 |Öznitelikler|[Öznitelikler](#attributes)|CLS, herkese açık bir şekilde görünür gerekli değiştiricilere izin vermez (bkz. `modreq` Bölüm II), ancak isteğe bağlı değiştiricilere izin veriyor ( `modopt` , bkz. Bölüm II).|35|
 |Oluşturucular|[Oluşturucular](#ctors)|Bir nesne Oluşturucusu, devralınan örnek verilerine herhangi bir erişim gerçekleşmeden önce temel sınıfının bazı örnek oluşturucusunu çağırmalıdır. (Bu, oluşturucuların olmaması gereken değer türleri için de geçerlidir.)|21|
 |Oluşturucular|[Oluşturucular](#ctors)|Bir nesne Oluşturucusu, bir nesne oluşturmanın parçası hariç çağrılmamalıdır ve bir nesne iki kez başlatılamaz.|22|
-|Numaralandırmalar|[Numaralandırmalar](#enums)|Bir numaralandırmanın temel alınan türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" ve bu alan işaretlenir `RTSpecialName` .|7|
-|Numaralandırmalar|[Numaralandırmalar](#enums)|<xref:System.FlagsAttribute?displayProperty=nameWithType>(Bkz. PARTITION IV Library) özel özniteliğinin varlığı veya yokluğu ile belirtilen iki farklı tür numaralandırmalar vardır. Biri adlandırılmış tamsayı değerlerini temsil eder; diğeri adlandırılmamış bir değer oluşturmak için birleştirilebilen adlandırılmış bit bayraklarını temsil eder. Öğesinin değeri `enum` belirtilen değerlerle sınırlı değil.|8|
-|Numaralandırmalar|[Numaralandırmalar](#enums)|Sabit listesinin değişmez statik alanları, sabit listesinin kendi türüne sahip olacaktır.|9|
+|Listelemeler|[Numaralandırmalar](#enums)|Bir numaralandırmanın temel alınan türü yerleşik bir CLS tamsayı türü olacaktır, alanın adı "value__" ve bu alan işaretlenir `RTSpecialName` .|7|
+|Listelemeler|[Numaralandırmalar](#enums)|<xref:System.FlagsAttribute?displayProperty=nameWithType>(Bkz. PARTITION IV Library) özel özniteliğinin varlığı veya yokluğu ile belirtilen iki farklı tür numaralandırmalar vardır. Biri adlandırılmış tamsayı değerlerini temsil eder; diğeri adlandırılmamış bir değer oluşturmak için birleştirilebilen adlandırılmış bit bayraklarını temsil eder. Öğesinin değeri `enum` belirtilen değerlerle sınırlı değil.|8|
+|Listelemeler|[Numaralandırmalar](#enums)|Sabit listesinin değişmez statik alanları, sabit listesinin kendi türüne sahip olacaktır.|9|
 |Ekinlikler|[Ekinlikler](#events)|Bir olayı uygulayan yöntemler `SpecialName` meta verilerde işaretlenir.|29|
 |Ekinlikler|[Ekinlikler](#events)|Bir olayın ve erişimcilerinin erişilebilirliği aynı olacaktır.|30|
 |Ekinlikler|[Ekinlikler](#events)|`add` `remove` Bir olay için ve yöntemlerinin her ikisi de mevcut ya da yok olacaktır.|31|
@@ -135,13 +135,13 @@ CLS uyumluluğu kuralları aşağıdaki tabloda listelenmiştir. Kuralların met
 |Üyeler|[Genel olarak tür üyeleri](#members)|Genel statik alanlar ve yöntemler CLS uyumlu değildir.|36|
 |Üyeler|--|Bir sabit değer statik değeri, alan başlatma meta verilerinin kullanımı aracılığıyla belirtilir. CLS uyumlu bir sabit değeri, alan başlatma meta verilerinde tam olarak aynı türde (ya da değişmez değer ise) bir değere sahip olmalıdır `enum` .|13|
 |Üyeler|[Genel olarak tür üyeleri](#members)|Vararg kısıtlaması CLS kapsamında değildir ve CLS tarafından desteklenen tek çağırma kuralı Standart yönetilen çağırma kuralıdır.|15|
-|Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeler, ' de çevrimiçi olarak kullanılabilir olan ve tanımlayıcılara dahil edilip edilmelerine izin verilen karakter kümesini yöneten Unicode standart 3.0 'ın ek 7 Technical Report 15 ' i izler <https://www.unicode.org/unicode/reports/tr15/tr15-18.html> . Tanımlayıcılar Unicode normalleştirme biçimi C tarafından tanımlanan kurallı biçimde olacaktır. CLS amacıyla, küçük harfli eşlemelerde (Unicode yerel ayarı duyarsız, bire bir küçük harf eşleştirmelerde belirtildiği gibi) iki tanımlayıcı aynıdır. Diğer bir deyişle, iki tanımlayıcı CLS kapsamında farklı olarak kabul edilmelidir, ancak büyük küçük harf bakımından farklılık gösterir. Ancak, devralınan bir tanımı geçersiz kılmak için CLı, özgün bildirimin kesin kodlamasının kullanılmasını gerektirir.|4|
+|Adlandırma kuralları|[Adlandırma kuralları](#naming)|Derlemeler, ' de çevrimiçi olarak kullanılabilir olan ve tanımlayıcılara dahil edilip edilmelerine izin verilen karakter kümesini yöneten Unicode standart 3.0 'ın ek 7 Technical Report 15 ' i izler <https://www.unicode.org/reports/tr15/tr15-18.html> . Tanımlayıcılar Unicode normalleştirme biçimi C tarafından tanımlanan kurallı biçimde olacaktır. CLS amacıyla, küçük harfli eşlemelerde (Unicode yerel ayarı duyarsız, bire bir küçük harf eşleştirmelerde belirtildiği gibi) iki tanımlayıcı aynıdır. Diğer bir deyişle, iki tanımlayıcı CLS kapsamında farklı olarak kabul edilmelidir, ancak büyük küçük harf bakımından farklılık gösterir. Ancak, devralınan bir tanımı geçersiz kılmak için CLı, özgün bildirimin kesin kodlamasının kullanılmasını gerektirir.|4|
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|CLS uyumlu bir kapsamda sunulan tüm adlar, adların özdeş ve aşırı yükleme yoluyla çözümlenme dışında, türden bağımsız olacaktır. Diğer bir deyişle, Cts, tek bir türün bir yöntem ve bir alan için aynı adı kullanmasına izin veriyorsa, CLS değildir.|5|
 |Aşırı Yükleme|[Adlandırma kuralları](#naming)|CTS ayrı imzaların ayırt etmesine izin verdiğinden bağımsız olarak, alanlar ve iç içe türler tanımlayıcı karşılaştırmaya göre birbirinden ayrı olacaktır. Aynı ada (tanımlayıcı karşılaştırmaya göre) sahip Yöntemler, Özellikler ve olaylar, yalnızca dönüş türünden daha fazla farklı olacaktır, bu da CLS kuralı 39 ' de belirtilmeleridir.|6|
 |Aşırı Yükleme|[Aşırı Yüklemeler](#overloads)|Yalnızca özellikler ve yöntemler aşırı yüklenebilir.|37|
 |Aşırı Yükleme|[Aşırı Yüklemeler](#overloads)|Özellikler ve yöntemler yalnızca parametrelerinin sayısı ve türleri temel alınarak aşırı yüklenebilir, ve adlı dönüştürme işleçleri, `op_Implicit` `op_Explicit` dönüş türlerine göre de aşırı yüklenebilir.|38|
 |Aşırı Yükleme|--|Bir tür içinde belirtilen iki veya daha fazla CLS uyumlu Yöntem aynı ada sahiptir ve belirli bir tür örneklemesiyse, aynı parametre ve dönüş türlerine sahiptirler, tüm bu yöntemler bu tür örneklemelerinden anlam açısından eşdeğerdir.|48|
-|Türler|[Tür ve tür üye imzaları](#Types)|<xref:System.Object?displayProperty=nameWithType>CLS uyumludur. Diğer CLS uyumlu sınıflar, CLS uyumlu bir sınıftan devralınır.|23|
+|Türler|[Tür ve tür üye imzaları](#Types)|<xref:System.Object?displayProperty=nameWithType> CLS uyumludur. Diğer CLS uyumlu sınıflar, CLS uyumlu bir sınıftan devralınır.|23|
 |Özellikler|[Özellikler](#properties)|Bir özelliğin alıcı ve ayarlayıcı yöntemlerini uygulayan yöntemler `SpecialName` meta verilerde işaretlenir.|24|
 |Özellikler|[Özellikler](#properties)|Bir özelliğin erişimcileri statik, hepsi sanal veya hepsi örnek olmalıdır.|26|
 |Özellikler|[Özellikler](#properties)|Bir özelliğin türü, alıcının dönüş türü ve ayarlayıcının son bağımsız değişkeninin türü olacaktır. Özelliğin parametre türleri, alıcı parametrelerinin türleri ve ayarlayıcının son parametresi hariç tüm türleri olacaktır. Bu türlerin hepsi CLS uyumlu olur ve yönetilen işaretçiler olmaz (yani, başvuruya göre geçirilmemelidir).|27|
@@ -180,7 +180,7 @@ Bir yöntemin dönüş türü veya özellik türü de dahil olmak üzere üye im
 |<xref:System.Int64>|64-bit işaretli tamsayı|
 |<xref:System.Single>|Tek duyarlıklı kayan nokta değeri|
 |<xref:System.Double>|Çift duyarlıklı kayan nokta değeri|
-|<xref:System.Boolean>|`true`veya `false` değer türü|
+|<xref:System.Boolean>|`true` veya `false` değer türü|
 |<xref:System.Char>|UTF-16 kodlu kod birimi|
 |<xref:System.Decimal>|Kayan nokta olmayan ondalık sayı|
 |<xref:System.IntPtr>|Platform tanımlı boyutun işaretçisi veya işleyicisi|
@@ -194,7 +194,7 @@ Aşağıdaki tabloda listelenen iç türler CLS uyumlu değildir.
 |<xref:System.TypedReference>|Bir nesne ve onun çalışma zamanı türü işaretçisi|Yok|
 |<xref:System.UInt16>|16 bit işaretsiz tamsayı|<xref:System.Int32>|
 |<xref:System.UInt32>|32-bit işaretsiz tamsayı|<xref:System.Int64>|
-|<xref:System.UInt64>|64-bit işaretsiz tamsayı|<xref:System.Int64>(taşma olabilir), <xref:System.Numerics.BigInteger> veya<xref:System.Double>|
+|<xref:System.UInt64>|64-bit işaretsiz tamsayı|<xref:System.Int64> (taşma olabilir), <xref:System.Numerics.BigInteger> veya <xref:System.Double>|
 |<xref:System.UIntPtr>|İşaretsiz işaretçi veya tanıtıcı|<xref:System.IntPtr>|
 
 .NET Framework sınıf kitaplığı veya başka bir sınıf kitaplığı CLS uyumlu olmayan diğer türleri içerebilir; Örneğin:
@@ -323,7 +323,7 @@ CLS uyumlu dil derleyicileri Ayrıca, bir sınıfın birden fazla arabirimde ayn
 
 <a name="enums"></a>
 
-### <a name="enumerations"></a>Numaralandırmalar
+### <a name="enumerations"></a>Listelemeler
 
 CLS uyumlu numaralandırmalar aşağıdaki kurallara uymalıdır:
 
@@ -400,7 +400,7 @@ Kısıtlama sınıfa eklenirse, örnek başarıyla derlenir `FloatingPoint<T>` .
 
 Ortak dil belirtimi, iç içe türler ve korumalı üyeler için bir örnek oluşturma modeli uygular. Açık genel türler, iç içe geçmiş, korunan genel bir türün belirli bir örneğini içeren imzalara sahip alanları veya üyeleri gösteremez. Genel bir temel sınıfın veya arabirimin belirli bir örneğini genişleten genel olmayan türler, iç içe geçmiş, korunan genel bir türün farklı bir örneğini içeren imzalara sahip alanları veya üyeleri gösteremez.
 
-Aşağıdaki örnek, bir genel türü `C1<T>` (veya `C1(Of T)` Visual Basic) ve korumalı bir sınıfı `C1<T>.N` (veya `C1(Of T).N` Visual Basic) tanımlar. `C1<T>`iki yönteme sahiptir `M1` ve `M2` . Ancak, `M1` `C1<int>.N` `C1(Of Integer).N` C1 \<T> (veya) nesnesinden bir (veya) nesne döndürmeye çalıştığı için CLS uyumlu değildir `C1(Of T)` . İkinci bir sınıf, `C2` `C1<long>` (veya) öğesinden türetilir `C1(Of Long)` . İki yöntemi vardır `M3` ve `M4` . `M3`, bir `C1<int>.N` alt sınıfından (veya) bir nesne döndürmeye çalıştığı IÇIN CLS uyumlu değildir `C1(Of Integer).N` `C1<long>` . Dil derleyicilerinin daha da kısıtlayıcı olabileceğini unutmayın. Bu örnekte, derlemeyi denediğinde Visual Basic bir hata görüntüler `M4` .
+Aşağıdaki örnek, bir genel türü `C1<T>` (veya `C1(Of T)` Visual Basic) ve korumalı bir sınıfı `C1<T>.N` (veya `C1(Of T).N` Visual Basic) tanımlar. `C1<T>` iki yönteme sahiptir `M1` ve `M2` . Ancak, `M1` `C1<int>.N` `C1(Of Integer).N` C1 \<T> (veya) nesnesinden bir (veya) nesne döndürmeye çalıştığı için CLS uyumlu değildir `C1(Of T)` . İkinci bir sınıf, `C2` `C1<long>` (veya) öğesinden türetilir `C1(Of Long)` . İki yöntemi vardır `M3` ve `M4` . `M3` , bir `C1<int>.N` alt sınıfından (veya) bir nesne döndürmeye çalıştığı IÇIN CLS uyumlu değildir `C1(Of Integer).N` `C1<long>` . Dil derleyicilerinin daha da kısıtlayıcı olabileceğini unutmayın. Bu örnekte, derlemeyi denediğinde Visual Basic bir hata görüntüler `M4` .
 
 [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
 [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]
@@ -573,7 +573,7 @@ Bir kitaplık yerine bir uygulama geliştiriyorsanız (yani, diğer uygulama gel
 
 Dil bağımsızlığının birkaç olası anlamı vardır. Bu makalede, [Dil bağımsızlığı ve dilden bağımsız bileşenlerde](language-independence-and-language-independent-components.md)ele alınan bir anlamı, başka bir dilde yazılmış bir uygulamadan tek bir dilde yazılmış türleri sorunsuzca kullanmayı içerir. Bu makalenin konusu olan ikinci anlamı ise, birden çok dilde yazılmış kodu tek bir .NET Framework derlemesi olarak birleştirmeyi içerir.
 
-Aşağıdaki örnek, iki sınıf içeren Utilities. dll adlı bir sınıf kitaplığı oluşturarak platformlar arası birlikte çalışabilirliği gösterir `NumericLib` ve `StringLib` . `NumericLib`Sınıfı C# dilinde yazılır ve `StringLib` sınıf Visual Basic yazılır. Aşağıda `ToTitleCase` sınıfında tek bir üye, `StringLib`, içeren StringUtil.vb için kaynak kodu verilmiştir.
+Aşağıdaki örnekte, iki sınıf içeren Utilities.dll adlı bir sınıf kitaplığı oluşturarak ve platformlar arası birlikte çalışabilirlik gösterilmektedir `NumericLib` `StringLib` . `NumericLib`Sınıfı C# dilinde yazılır ve `StringLib` sınıf Visual Basic yazılır. Aşağıda `ToTitleCase` sınıfında tek bir üye, `StringLib`, içeren StringUtil.vb için kaynak kodu verilmiştir.
 
 [!code-vb[Conceptual.CrossLanguage#1](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.crosslanguage/vb/stringutil.vb#1)]
 
@@ -595,7 +595,7 @@ C# kaynak kodunu bir modül olarak derlemek için bu komutu kullanın:
 csc /t:module NumberUtil.cs
 ```
 
-C# derleyicisinin komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [CSC. exe Ile komut satırı oluşturma](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).
+C# derleyicisinin komut satırı sözdizimi hakkında daha fazla bilgi için bkz. [csc.exeIle komut satırı oluşturma ](../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).
 
 Daha sonra, iki modülü bir derlemede derlemek için [bağlayıcı seçeneklerini](/cpp/build/reference/linker-options) kullanabilirsiniz:
 

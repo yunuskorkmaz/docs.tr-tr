@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 51867cefcdfc42812d4003fb669c11751fb3ca34
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 7d90e047983db1f024884168490e202ed42a85c8
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552908"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679475"
 ---
 # <a name="how-to-filter-on-an-attribute-linq-to-xml"></a>Bir özniteliğe filtre uygulama (LINQ to XML)
 
@@ -98,4 +98,4 @@ Results are identical
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](/../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath ile LINQ to XML Karşılaştırması](comparison-xpath-linq-xml.md)

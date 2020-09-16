@@ -3,17 +3,17 @@ title: XPath Ad Alanı Gezintisi
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 06cc7abb-7416-415c-9dd6-67751b8cabd5
-ms.openlocfilehash: dce7d81d4249cb40c3be6dee4b8bd25951ccb10a
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: bad5e1245c7f48c114bd2a1809822cc131dad75a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84283214"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551965"
 ---
 # <a name="xpath-namespace-navigation"></a>XPath Ad Alanı Gezintisi
 XML belgeleriyle XPath sorguları kullanmak için, XML ad alanlarını ve ad alanları tarafından içerilen öğeleri doğru bir şekilde ele almanız gerekir. Ad alanları, adlar birden fazla bağlamda kullanıldığında oluşabilecek belirsizlikleri önler; Örneğin, ad `ID` BIR XML belgesinin farklı öğeleriyle ilişkili birden fazla tanımlayıcıya başvurabilir. Ad alanı sözdizimi, bir XML belgesinin öğelerini ayırt eden URI 'Leri, adları ve önekleri belirtir.  
   
- Bu konudaki örnekte, ile bir XML belgesinde gezinme içindeki ön eklerin kullanımı gösterilmektedir <xref:System.Xml.XPath.XPathNavigator> . Ad alanları ve sözdizimi hakkında daha fazla bilgi için bkz. [XML Files: XML ad alanlarını anlama](https://docs.microsoft.com/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
+ Bu konudaki örnekte, ile bir XML belgesinde gezinme içindeki ön eklerin kullanımı gösterilmektedir <xref:System.Xml.XPath.XPathNavigator> . Ad alanları ve sözdizimi hakkında daha fazla bilgi için bkz. [XML Files: XML ad alanlarını anlama](/previous-versions/dotnet/articles/bb986013(v=msdn.10)).  
   
 ## <a name="namespace-declarations"></a>Ad alanı bildirimleri  
  Ad alanı bildirimleri, bir örneği kullanılırken bir XML belgesinin öğelerini ayırt edilemez ve adreslenebilir hale getirir <xref:System.Xml.XPath.XPathNavigator> . Ad alanı önekleri ad alanlarını adresleme için kısa bir sözdizimi sağlar.  

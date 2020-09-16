@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 92cc95f80d18251314db8d953520732841b0274c
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 6c14c94c0a2f88f28ec327a3463a6b525ef80ff6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557340"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557755"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework sistem gereksinimleri
 
@@ -99,7 +99,7 @@ Bu makaledeki tablolar, aşağıdaki .NET Framework sürümleri için donanım, 
 
 - Windows Server 2012 .NET Framework 4,5 içerir, bu yüzden ayrı olarak yüklemek zorunda kalmazsınız. Benzer şekilde, Windows Server 2012 R2 .NET Framework 4.5.1 içerir.
 
-- .NET Framework, Windows Server 2008 R2 SP1 veya sonraki sürümleri ile sunucu çekirdeği rolü için sınırlı desteğe sahiptir. Desteklenmeyen API 'lerin listesi için bkz. [sunucu çekirdeği .net işlevleri](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) .
+- .NET Framework, Windows Server 2008 R2 SP1 veya sonraki sürümleri ile sunucu çekirdeği rolü için sınırlı desteğe sahiptir. Desteklenmeyen API 'lerin listesi için bkz. [sunucu çekirdeği .net işlevleri](/previous-versions//dd745015(v=vs.85)) .
 
 - .NET Framework, Itanium tabanlı sistemler için Windows Server 2008 R2 'de desteklenmez.
 

@@ -2,12 +2,12 @@
 title: İleti Bağıntısı
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 84b10b507f9fdaa7c53cf937bb132c8cc0aac33f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c6c68ec36ecee294aa217f77f462dcea31f1e211
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591650"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557976"
 ---
 # <a name="message-correlation"></a>İleti Bağıntısı
 
@@ -66,7 +66,7 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- Hizmet, `OrderResponseClient` MSMQ iletisini sıraya göndermek için özel bir istemci kullanır. İletiyi alan ve işleyen uygulama bir WCF uygulaması değil bir MSMQ uygulaması olduğundan, iki uygulama arasında örtük bir hizmet sözleşmesi yoktur. Bu senaryoda, Bu senaryodaki Svcutil. exe aracını kullanarak bir ara sunucu oluşturmuyoruz.
+ Hizmet, `OrderResponseClient` MSMQ iletisini sıraya göndermek için özel bir istemci kullanır. İletiyi alan ve işleyen uygulama bir WCF uygulaması değil bir MSMQ uygulaması olduğundan, iki uygulama arasında örtük bir hizmet sözleşmesi yoktur. Bu nedenle, Bu senaryodaki Svcutil.exe aracını kullanarak bir ara sunucu oluşturmuyoruz.
 
  Özel proxy temelde, `msmqIntegrationBinding` ileti göndermek için bağlamayı kullanan tüm WCF uygulamaları için aynıdır. Diğer proxy 'lerin aksine, bir dizi hizmet işlemi içermez. Yalnızca bir ileti gönder işlemidir.
 
@@ -296,13 +296,13 @@ static void DisplayOrderStatus()
 
 2. İstemci program dosyalarını dile özgü klasörün altındaki \client\bin\ klasöründen istemci bilgisayara kopyalayın.
 
-3. Client. exe. config dosyasında, Ordersıraadı ' nı "." yerine hizmet bilgisayar adını belirtecek şekilde değiştirin.
+3. Client.exe.config dosyasında, Ordersıraadı ' nı "." yerine hizmet bilgisayar adını belirtecek şekilde değiştirin.
 
-4. Service. exe. config dosyasında, istemci uç noktası adresini "." yerine istemci bilgisayar adını belirtecek şekilde değiştirin.
+4. Service.exe.config dosyasında, istemci uç noktası adresini "." yerine istemci bilgisayar adını belirtecek şekilde değiştirin.
 
-5. Hizmet bilgisayarında, bir komut isteminden Service. exe ' yi başlatın.
+5. Hizmet bilgisayarında, bir komut isteminden Service.exe başlatın.
 
-6. İstemci bilgisayarda, bir komut isteminden Client. exe ' yi başlatın.
+6. İstemci bilgisayarda, bir komut isteminden Client.exe başlatın.
 
 > [!IMPORTANT]
 > Örnekler bilgisayarınızda zaten yüklü olabilir. Devam etmeden önce aşağıdaki (varsayılan) dizini denetleyin.
@@ -316,4 +316,4 @@ static void DisplayOrderStatus()
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [WCF'de Kuyruğa Alma](../feature-details/queuing-in-wcf.md)
-- [Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
+- [Message Queuing](/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

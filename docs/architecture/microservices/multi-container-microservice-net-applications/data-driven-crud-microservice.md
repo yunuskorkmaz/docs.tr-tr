@@ -2,12 +2,12 @@
 title: Basit bir veri temelli CRUD mikro hizmeti oluşturma
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Bir mikro Hizmetler uygulaması bağlamında basit bir CRUD (veri odaklı) mikro hizmeti oluşturmayı anlayın.
 ms.date: 08/14/2020
-ms.openlocfilehash: 4d475ba42cb0f86b57b2467549635556cab1136d
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 46654b9e6283d913910b62621d056e034c18870e
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88267964"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679155"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Basit bir veri temelli CRUD mikro hizmeti oluşturma
 
@@ -288,7 +288,7 @@ Sürüm oluşturma, Web API 'sinin sunduğu özellikleri ve kaynakları belirtec
 
 - Üst bilgi sürümü oluşturma
 
-Sorgu dizesi ve URI sürümü oluşturma en basit uygulama kullanmaktır. Üst bilgi sürümü oluşturma iyi bir yaklaşımdır. Ancak, üstbilgi sürümü oluşturma, URI sürümü oluşturma kadar açık ve kolay değildir. URL sürümü oluşturma en basit ve en açık olduğundan, eShopOnContainers örnek uygulaması URI sürümü oluşturmayı kullanır.
+Sorgu dizesi ve URI sürümü oluşturma en basit uygulama kullanmaktır. Üst bilgi sürümü oluşturma iyi bir yaklaşımdır. Ancak, üst bilgi sürümü oluşturma, URI sürümü oluşturma kadar açık ve dolaysız değildir. URL sürümü oluşturma en basit ve en açık olduğundan, eShopOnContainers örnek uygulaması URI sürümü oluşturmayı kullanır.
 
 URI sürümü oluşturma ile, eShopOnContainers örnek uygulamasında olduğu gibi, Web API 'sini her değiştirdiğinizde veya kaynak şemasını değiştirdiğinizde her kaynak için URI 'ye bir sürüm numarası eklersiniz. Mevcut URI 'Ler, istenen sürümle eşleşen şemaya uyan kaynakları döndürerek daha önce çalışmaya devam etmelidir.
 

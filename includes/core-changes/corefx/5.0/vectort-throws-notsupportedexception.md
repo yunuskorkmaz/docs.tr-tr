@@ -8,7 +8,7 @@ ms.locfileid: "87302730"
 ---
 ### <a name="vectort-always-throws-notsupportedexception-for-unsupported-types"></a>Vektör, \<T> Desteklenmeyen türler için her zaman NotSupportedException oluşturur
 
-<xref:System.Numerics.Vector%601?displayProperty=nameWithType>Artık, <xref:System.NotSupportedException> desteklenmeyen tür parametreleri için her zaman bir oluşturur.
+<xref:System.Numerics.Vector%601?displayProperty=nameWithType> Artık, <xref:System.NotSupportedException> desteklenmeyen tür parametreleri için her zaman bir oluşturur.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
@@ -47,7 +47,7 @@ Core .NET kitaplıkları
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-- <xref:System.Numerics.Vector%601?displayProperty=fullName>ve tüm üyelerini
+- <xref:System.Numerics.Vector%601?displayProperty=fullName> ve tüm üyelerini
 
 <!--
 

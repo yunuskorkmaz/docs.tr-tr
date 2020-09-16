@@ -2,12 +2,12 @@
 title: Makine öğrenimi görevleri
 description: ML.NET sürümünde desteklenen farklı makine öğrenimi görevlerini ve ilişkili görevleri keşfedebilirsiniz.
 ms.date: 12/23/2019
-ms.openlocfilehash: e6e36bd65dbadb8cb7b8edbf9e2e82071c208378
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 56cdb5f3162614d0bf2fb1e5bd9e774b5548b238
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144454"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679488"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 'de makine öğrenimi görevleri
 
@@ -56,7 +56,7 @@ Giriş özellikleri sütun verileri sabit boyutlu bir vektör olmalıdır <xref:
 
 Bu traçler aşağıdaki sütunları çıktı:
 
-| Çıkış sütunu adı | Sütun türü | Açıklama|
+| Çıkış sütunu adı | Sütun türü | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Model tarafından hesaplanan ham puan|
 | `PredictedLabel` | <xref:System.Boolean> | Puanınızın işaretine göre öngörülen etiket. Negatif puan ile eşlenir `false` ve bir pozitif puan ile eşlenir `true` .|
@@ -94,9 +94,9 @@ Giriş etiketi sütun verileri, [anahtar](xref:Microsoft.ML.Data.KeyDataViewType
 
 Bu, aşağıdaki çıkışları verir:
 
-| Çıkış adı | Tür | Açıklama|
+| Çıkış adı | Tür | Description|
 | -- | -- | -- |
-| `Score` | Vektör<xref:System.Single> | Tüm sınıfların puanları. Daha yüksek değer, ilişkili sınıfa düşecek daha büyük olasılık anlamına gelir. İ-th öğesi en büyük değere sahipse, tahmin edilen etiket dizini i olur. Sıfır tabanlı dizin olduğunu unutmayın. |
+| `Score` | Vektör <xref:System.Single> | Tüm sınıfların puanları. Daha yüksek değer, ilişkili sınıfa düşecek daha büyük olasılık anlamına gelir. İ-th öğesi en büyük değere sahipse, tahmin edilen etiket dizini i olur. Sıfır tabanlı dizin olduğunu unutmayın. |
 | `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Tahmin edilen etiketin dizini. Değeri i ise, gerçek etiket anahtar değerli giriş etiketi türündeki ı-TH kategorisi olacaktır. |
 
 ## <a name="regression"></a>Regresyon
@@ -127,7 +127,7 @@ Giriş etiketi sütun verileri olmalıdır <xref:System.Single> .
 
 Bu görev için şu kadar traipler aşağıda verilmiştir:
 
-| Çıkış adı | Tür | Açıklama|
+| Çıkış adı | Tür | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Model tarafından tahmin edilen ham puan |
 
@@ -151,9 +151,9 @@ Giriş özellikleri verileri olmalıdır <xref:System.Single> . Etiket gerekli d
 
 Bu, aşağıdaki çıkışları verir:
 
-| Çıkış adı | Tür | Açıklama|
+| Çıkış adı | Tür | Description|
 | -- | -- | -- |
-| `Score` | vektör<xref:System.Single> | Verilen veri noktasının tüm kümelerdeki mesafeler ' centriods |
+| `Score` | vektör <xref:System.Single> | Verilen veri noktasının tüm kümelerdeki mesafeler ' centriods |
 | `PredictedLabel` | [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) türü | Model tarafından tahmin edilen en yakın küme dizini. |
 
 ## <a name="anomaly-detection"></a>Anormallik algılama
@@ -183,7 +183,7 @@ Giriş özellikleri sabit boyutlu bir vektör olmalıdır <xref:System.Single> .
 
 Bu, aşağıdaki çıkışları verir:
 
-| Çıkış adı | Tür | Açıklama|
+| Çıkış adı | Tür | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Anomali algılama modeli tarafından hesaplanan negatif olmayan, sınırlandırılmamış puan |
 | `PredictedLabel` | <xref:System.Boolean> | Girişin bir anomali (PredictedLabel = true) olup olmadığını temsil eden doğru/yanlış değeri (PredictedLabel = false) |
@@ -207,7 +207,7 @@ Giriş etiketi veri türü, [anahtar](xref:Microsoft.ML.Data.KeyDataViewType) t�
 
 Bu, aşağıdaki çıkışları verir:
 
-| Çıkış adı | Tür | Açıklama|
+| Çıkış adı | Tür | Description|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Tahmin belirlenmesi için model tarafından hesaplanan, sınırlandırılmamış puan |
 
@@ -229,4 +229,4 @@ Tahmin görevi, gelecekteki davranışları hakkında tahminler yapmak için ge�
 
 Aşağıdaki algoritmayla bir tahmin modeli eğitebilirsiniz:
 
-<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa%2A>

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4b5c886ad35afbbf0a68e03b3174ab9ea1f5524f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 12ba3bd3c9e9e00b88cab0e568a1ce0f4f8bbb05
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614763"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606800"
 ---
 ### <a name="cspparametersparentwindowhandle-now-expects-hwnd-value"></a>CspParameters. ParentWindowHandle artık HWND değerini bekliyor
 
@@ -16,7 +16,7 @@ ms.locfileid: "85614763"
 cspParameters.ParentWindowHandle = form.Handle;
 ```
 
-.NET Framework önceki sürümlerinde, değerin <xref:System.IntPtr?displayProperty=fullName> [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types#HWND) değerinin bulunduğu bellekteki bir konumu temsil eden bir konum olması bekleniyordu. Özelliği form olarak ayarlanıyor. Windows 7 ve önceki sürümlerde tanıtıcı hiçbir etkiye sahip değildir, ancak Windows 8 ve sonraki sürümlerde, bir ile sonuçlanır &quot; <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> : parametre yanlış.&quot;
+.NET Framework önceki sürümlerinde, değerin <xref:System.IntPtr?displayProperty=fullName> [HWND](/windows/desktop/WinProg/windows-data-types#HWND) değerinin bulunduğu bellekteki bir konumu temsil eden bir konum olması bekleniyordu. Özelliği form olarak ayarlanıyor. Windows 7 ve önceki sürümlerde tanıtıcı hiçbir etkiye sahip değildir, ancak Windows 8 ve sonraki sürümlerde, bir ile sonuçlanır &quot; <xref:System.Security.Cryptography.CryptographicException?displayProperty=fullName> : parametre yanlış.&quot;
 
 #### <a name="suggestion"></a>Öneri
 

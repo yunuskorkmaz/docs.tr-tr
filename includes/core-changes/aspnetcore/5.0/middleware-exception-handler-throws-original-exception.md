@@ -42,11 +42,11 @@ API değişikliği yok. Tüm mevcut uygulamalar derlenmeye ve çalıştırmaya d
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-Hiçbiri
+Yok
 
 <!--
 

@@ -2,21 +2,21 @@
 title: 'Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: c28815d1d208d3e91785a13d95e03c09c0f02ed9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c1b92568d90734a33a7b36af987fdb7cbbbe5149
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597000"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557833"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Nasıl yapılır: Bir WCF Hizmeti ve İstemcisine Programlı Bir Şekilde Keşfedilebilirlik Ekleme
-Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale getirme açıklanmaktadır. Bu, [kendi kendine konak](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) örneğine dayalıdır.  
+Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale getirme açıklanmaktadır. Bu, [kendi kendine konak](../samples/self-host.md) örneğine dayalıdır.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Mevcut Self-Host hizmet örneğini bulma için yapılandırmak için  
   
 1. Visual Studio 2012 ' de Self-Host çözümünü açın. Örnek, TechnologySamples\Basic\Service\Hosting\SelfHost dizininde bulunur.  
   
-2. Hizmet projesine bir başvuru ekleyin `System.ServiceModel.Discovery.dll` . "Sistem" iletisini bildiren bir hata iletisi görebilirsiniz. ServiceModel. Discovery. dll veya bağımlılıklarından biri, .NET Framework projede belirtiden daha yeni bir sürümünü gerektiriyor... " Bu iletiyi görürseniz, Çözüm Gezgini projeye sağ tıklayın ve **Özellikler**' i seçin. **Proje özellikleri** penceresinde, **hedef Framework 'ün** olduğundan emin olun [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
+2. Hizmet projesine bir başvuru ekleyin `System.ServiceModel.Discovery.dll` . "Sistem" iletisini bildiren bir hata iletisi görebilirsiniz. ServiceModel.Discovery.dll veya bağımlılıklarından biri, .NET Framework projede belirtilenden daha sonraki bir sürümü gerektiriyor... " Bu iletiyi görürseniz, Çözüm Gezgini projeye sağ tıklayın ve **Özellikler**' i seçin. **Proje özellikleri** penceresinde, **hedef Framework 'ün** olduğundan emin olun [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] .  
   
 3. Service.cs dosyasını açın ve aşağıdaki `using` ifadeyi ekleyin.  
   
@@ -60,7 +60,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
   
 2. Ve için bir başvuru ekleyin `System.ServiceModel.dll``System.ServiceModel.Discovery.dll`  
   
-3. GeneratedClient.cs ve App. config dosyalarını var olan istemci projesinden yeni DiscoveryClientApp projesine kopyalayın. Bunu yapmak için **Çözüm Gezgini**dosyalara sağ tıklayın, **Kopyala**' yı seçin ve ardından **DiscoveryClientApp** projesini seçin, sağ tıklayıp **Yapıştır**' ı seçin.  
+3. GeneratedClient.cs ve App.config dosyalarını var olan istemci projesinden yeni DiscoveryClientApp projesine kopyalayın. Bunu yapmak için **Çözüm Gezgini**dosyalara sağ tıklayın, **Kopyala**' yı seçin ve ardından **DiscoveryClientApp** projesini seçin, sağ tıklayıp **Yapıştır**' ı seçin.  
   
 4. Program.cs 'i açın.  
   
@@ -124,7 +124,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
   
      Bu yöntem `FindCalculatorServiceAddress` , hesap makinesi hizmetini çağırmak için öğesinden döndürülen uç nokta adresini kullanır.  
   
-11. Yöntemi içinde `InvokeCalculatorService` , sınıfının bir örneğini oluşturun `CalculatorServiceClient` . Bu sınıf, [self-Host](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) örneği tarafından tanımlanır. Svcutil. exe kullanılarak oluşturulmuştur.  
+11. Yöntemi içinde `InvokeCalculatorService` , sınıfının bir örneğini oluşturun `CalculatorServiceClient` . Bu sınıf, [self-Host](../samples/self-host.md) örneği tarafından tanımlanır. Svcutil.exe kullanılarak oluşturulmuştur.  
   
     ```csharp  
     // Create a client  
@@ -190,11 +190,11 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
   
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
   
-1. Yükseltilmiş bir komut istemi açın ve Service. exe ' yi çalıştırın.  
+1. Yükseltilmiş bir komut istemi açın ve Service.exe çalıştırın.  
   
-2. Bir komut istemi açın ve DiscoveryClientApp. exe ' yi çalıştırın.  
+2. Bir komut istemi açın ve Discoveryclientapp.exe çalıştırın.  
   
-3. Service. exe ' den alınan çıktı aşağıdaki çıktı gibi görünmelidir.  
+3. service.exe çıkışı aşağıdaki çıktı gibi görünmelidir.  
   
     ```output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     Return: 6.25390869293308  
     ```  
   
-4. Discoveryclientapp. exe ' den alınan çıktı aşağıdaki çıktı gibi görünmelidir.  
+4. Discoveryclientapp.exe çıkışı aşağıdaki çıktı gibi görünmelidir.  
   
     ```output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  
@@ -220,7 +220,7 @@ Bu konuda Windows Communication Foundation (WCF) hizmetinin bulunabilir hale get
     ```  
   
 ## <a name="example"></a>Örnek  
- Bu örnek için kodun bir listesi aşağıda verilmiştir. Bu kod, [kendi kendine konak](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host) örneğine bağlı olduğundan, yalnızca değiştirilen dosyalar listelenir. Self-Host örneği hakkında daha fazla bilgi için bkz. [Kurulum yönergeleri](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions).  
+ Bu örnek için kodun bir listesi aşağıda verilmiştir. Bu kod, [kendi kendine konak](../samples/self-host.md) örneğine bağlı olduğundan, yalnızca değiştirilen dosyalar listelenir. Self-Host örneği hakkında daha fazla bilgi için bkz. [Kurulum yönergeleri](../samples/set-up-instructions.md).  
   
 ```csharp  
 // Service.cs  

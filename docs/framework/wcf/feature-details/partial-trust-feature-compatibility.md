@@ -2,12 +2,12 @@
 title: Kısmi Güven Özelliği Uyumluluğu
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 85e34e365d125fe4f00756549ba5bda4311b78f8
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6d009482037efac8e0f90d255e198f10a1234187
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579169"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551978"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Kısmi Güven Özelliği Uyumluluğu
 Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışırken sınırlı bir işlev alt kümesini destekler. Kısmi güvende desteklenen özellikler, [Desteklenen Dağıtım senaryoları](supported-deployment-scenarios.md) konusunda açıklandığı gibi belirli bir senaryo kümesi etrafında tasarlanmıştır.  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
   
 - `[ServiceKnownType]`Özniteliği kullanılırken, belirtilen yöntemin olması gerekir `public` .  
   
-- `[MessageContract]`sınıflar ve üyeleri olabilir `public` . `[MessageContract]`Sınıf uygulama derlemesinde tanımlıysa, `internal` ve `internal` üyeleri olabilir.  
+- `[MessageContract]` sınıflar ve üyeleri olabilir `public` . `[MessageContract]`Sınıf uygulama derlemesinde tanımlıysa, `internal` ve `internal` üyeleri olabilir.  
   
 ## <a name="system-provided-bindings"></a>Sistem Tarafından Sağlanan Bağlamalar  
  <xref:System.ServiceModel.BasicHttpBinding>Ve <xref:System.ServiceModel.WebHttpBinding> kısmi güven ortamında tamamen desteklenir. <xref:System.ServiceModel.WSHttpBinding>Yalnızca Aktarım güvenliği modu için desteklenir.  
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
   
 - `[Serializable]`/ISerializable programlama modeli kısmi güven ortamında desteklenmez.  
   
-- Bilinen türler kod veya makine düzeyinde yapılandırma (Machine. config) içinde belirtilmelidir. Bilinen türler güvenlik nedeniyle uygulama düzeyi yapılandırmasında belirtilemez.  
+- Bilinen türler kod veya makine düzeyinde yapılandırma (machine.config) içinde belirtilmelidir. Bilinen türler güvenlik nedeniyle uygulama düzeyi yapılandırmasında belirtilemez.  
   
 - Uygulayan türler <xref:System.Runtime.Serialization.IObjectReference> kısmen güvenilen bir ortamda özel durum oluşturur.  
   
@@ -90,12 +90,12 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
   
 - <xref:System.Security.AllowPartiallyTrustedCallersAttribute>Kısmi güven uygulaması olarak dağıtıldığında çalışabilmesi için ortak davranışınızı özniteliğiyle işaretleyin. APTCA tarafından işaretlenmiş derlemelerin çalıştırılmasını engellemek için bilgisayarda bir kayıt defteri girişi ayarlanmayacağınızı unutmayın. .  
   
-- Uygulamanın, uygulamayı kısmi güven ortamında çalıştırmak için kod erişimi güvenlik ayarlarını değiştiremediği tam güvenilir bir uygulama olarak dağıtıldığından emin olun. Bunu yapabilirse, davranış çalışmaz ve hiçbir özel durum oluşturulmaz. Bunu sağlamak için, [Caspol. exe (kod erişimi güvenlik Ilkesi aracı)](../../tools/caspol-exe-code-access-security-policy-tool.md)kullanılarak **LevelFinal** seçeneğine bakın.  
+- Uygulamanın, uygulamayı kısmi güven ortamında çalıştırmak için kod erişimi güvenlik ayarlarını değiştiremediği tam güvenilir bir uygulama olarak dağıtıldığından emin olun. Bunu yapabilirse, davranış çalışmaz ve hiçbir özel durum oluşturulmaz. Bunu sağlamak için, [Caspol.exe (kod erişimi güvenlik Ilkesi aracı)](../../tools/caspol-exe-code-access-security-policy-tool.md)kullanarak **LevelFinal** seçeneğine bakın.  
   
  Yaygın bir davranış örneği için bkz. [nasıl yapılır: kuruluştaki uç noktaları kilitleme](../extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Yapılandırma  
- Tek bir özel durum ile, kısmen güvenilen kod yalnızca yerel dosyadaki WCF yapılandırma bölümlerini yükleyebilir `app.config` . Machine. config dosyasındaki WCF bölümlerine veya bir kök Web. config dosyasına başvuruda bulunan WCF yapılandırma bölümlerinin yüklenmesi için ConfigurationPermission (Kısıtlamasız) gerekir. Bu izin olmadan, yerel yapılandırma dosyası dışındaki WCF yapılandırma bölümlerine (davranışlar, bağlamalar) başvurular, yapılandırma yüklendiğinde bir özel durumla sonuçlanır.  
+ Tek bir özel durum ile, kısmen güvenilen kod yalnızca yerel dosyadaki WCF yapılandırma bölümlerini yükleyebilir `app.config` . machine.config veya bir kök web.config dosyasında WCF bölümlerine başvuruda bulunan WCF yapılandırma bölümlerinin yüklenmesi için ConfigurationPermission (Kısıtlamasız) gerekir. Bu izin olmadan, yerel yapılandırma dosyası dışındaki WCF yapılandırma bölümlerine (davranışlar, bağlamalar) başvurular, yapılandırma yüklendiğinde bir özel durumla sonuçlanır.  
   
  Bu konunun serileştirme bölümünde açıklandığı gibi, bir özel durum serileştirme için bilinen tür yapılandırmadır.  
   
@@ -127,7 +127,7 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
   
 - <xref:System.IO.Log>  
 
-- [System. ServiceModel. Internal. TransactionBridge](https://docs.microsoft.com/previous-versions/aa346556(v=vs.110))]
+- [System. ServiceModel. Internal. TransactionBridge](/previous-versions/aa346556(v=vs.110))]
   
  Numaralandırmanın aşağıdaki üyeleri <xref:System.Diagnostics.TraceOptions> belirtilmemelidir:  
   
@@ -145,7 +145,7 @@ Windows Communication Foundation (WCF) kısmen güvenilen bir ortamda çalışı
   
 ## <a name="other-limitations"></a>Diğer sınırlamalar  
 
-  WCF, genel olarak, barındırma uygulaması tarafından bu uygulamaya getirilen güvenlik hususları ile sınırlıdır. Örneğin, WCF bir XAML tarayıcı uygulamasında (XBAP) barındırılıyorsa, [Windows Presentation Foundation kısmi güven güvenliği](../../wpf/wpf-partial-trust-security.md)' nde açıklandığı gıbı, XBAP kısıtlamalarına tabidir.  
+  WCF, genel olarak, barındırma uygulaması tarafından bu uygulamaya getirilen güvenlik hususları ile sınırlıdır. Örneğin, WCF bir XAML tarayıcı uygulamasında (XBAP) barındırılıyorsa, [Windows Presentation Foundation kısmi güven güvenliği](/dotnet/desktop/wpf/wpf-partial-trust-security)' nde açıklandığı gıbı, XBAP kısıtlamalarına tabidir.  
   
  Kısmi güven ortamında İndigo2 çalıştırılırken aşağıdaki ek özellikler etkinleştirilmemiştir:  
   

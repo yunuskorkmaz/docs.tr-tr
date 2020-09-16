@@ -50,7 +50,7 @@ Mevcut sistemlerle birlikte çalışabilirliğe gerek duyuyorsanız veya geçerl
 
   `DOTNET_SYSTEM_DIAGNOSTICS_DEFAULTACTIVITYIDFORMATISHIERARCHIAL` `true` Veya 1 olarak ayarlayın.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>Kategori
 
 Core .NET kitaplıkları
 

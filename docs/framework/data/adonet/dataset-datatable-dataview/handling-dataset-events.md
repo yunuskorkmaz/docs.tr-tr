@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-ms.openlocfilehash: b2b71dac58838a826933af570934bf4bbb35e025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0f79b97b486bbc3e1150cd6aff8162d37134f62e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784601"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558002"
 ---
 # <a name="handling-dataset-events"></a>DataSet Olaylarını İşleme
-Nesnesi üç olay sağlar: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, ve <xref:System.Data.DataSet.MergeFailed>. <xref:System.Data.DataSet>  
+<xref:System.Data.DataSet>Nesnesi üç olay sağlar: <xref:System.ComponentModel.MarshalByValueComponent.Disposed> , <xref:System.Data.DataSet.Initialized> , ve <xref:System.Data.DataSet.MergeFailed> .  
   
 ## <a name="the-mergefailed-event"></a>MergeFailed olayı  
- Nesnenin en yaygın olarak kullanılan olayı `DataSet` , birleştirilmekte olan nesnelerin şeması çakıştığında olduğunda tetiklenir. `MergeFailed` `DataSet` Bu, bir hedef ve kaynak <xref:System.Data.DataRow> aynı birincil anahtar değerine sahip olduğunda <xref:System.Data.DataSet.EnforceConstraints%2A> ve özelliği olarak `true`ayarlandığında oluşur. Örneğin, birleştirilebilen bir tablonun birincil anahtar sütunları iki `DataSet` nesne içindeki tablolar arasında aynıysa, bir özel durum oluşturulur `MergeFailed` ve olay tetiklenir. Olayageçirilen`MergeFailed` <xref:System.Data.MergeFailedEventArgs.Conflict%2A> <xref:System.Data.MergeFailedEventArgs.Table%2A> nesne, iki`DataSet` nesne arasındaki şemada çakışmayı tanımlayan bir özelliğe sahiptir ve çakışan tablonun adını tanımlayan bir özellik vardır. <xref:System.Data.MergeFailedEventArgs>  
+ Nesnenin en yaygın olarak kullanılan olayı, `DataSet` `MergeFailed` `DataSet` birleştirilmekte olan nesnelerin şeması çakıştığında olduğunda tetiklenir. Bu, bir hedef ve kaynak <xref:System.Data.DataRow> aynı birincil anahtar değerine sahip olduğunda ve <xref:System.Data.DataSet.EnforceConstraints%2A> özelliği olarak ayarlandığında oluşur `true` . Örneğin, birleştirilebilen bir tablonun birincil anahtar sütunları iki nesne içindeki tablolar arasında aynıysa `DataSet` , bir özel durum oluşturulur ve `MergeFailed` olay tetiklenir. <xref:System.Data.MergeFailedEventArgs>Olaya geçirilen nesne `MergeFailed` <xref:System.Data.MergeFailedEventArgs.Conflict%2A> , iki nesne arasındaki şemada çakışmayı tanımlayan bir özelliğe sahiptir `DataSet` ve <xref:System.Data.MergeFailedEventArgs.Table%2A> Çakışan tablonun adını tanımlayan bir özellik vardır.  
   
- Aşağıdaki kod parçası, `MergeFailed` olay için bir olay işleyicisinin nasıl ekleneceğini gösterir.  
+ Aşağıdaki kod parçası, olay için bir olay işleyicisinin nasıl ekleneceğini gösterir `MergeFailed` .  
   
 ```vb  
 AddHandler workDS.MergeFailed, New MergeFailedEventHandler( _  
@@ -43,21 +43,21 @@ private static void DataSetMergeFailed(
 ```  
   
 ## <a name="the-initialized-event"></a>Başlatılmış olay  
- Olay, `DataSet` Oluşturucu Yeni`DataSet`bir örneğini başlattıktan sonra oluşur. <xref:System.Data.DataSet.Initialized>  
+ <xref:System.Data.DataSet.Initialized>Olay, `DataSet` Oluşturucu yeni bir örneğini başlattıktan sonra oluşur `DataSet` .  
   
- Özelliği başlatmayı tamamladıysa, `DataSet` öğesini döndürür; Aksi takdirde döndürür `false`. <xref:System.Data.DataSet.IsInitialized%2A> `true` , ' <xref:System.Data.DataSet.IsInitialized%2A> `false`Nin başlatılmasına başlayan yöntemi olarak ayarlanır. <xref:System.Data.DataSet.BeginInit%2A> `DataSet` Öğesinin başlatılmasını sonlandıran `true`yöntemi, olarak ayarlar. <xref:System.Data.DataSet.EndInit%2A> `DataSet` Bu yöntemler, başka bir bileşen tarafından kullanılmakta olan bir `DataSet` başlatmak için Visual Studio tasarım ortamı tarafından kullanılır. Bunları kodunuzda yaygın olarak kullanmayacak.  
+ <xref:System.Data.DataSet.IsInitialized%2A>Özelliği `true` `DataSet` başlatmayı tamamladıysa, öğesini döndürür; Aksi takdirde döndürür `false` . <xref:System.Data.DataSet.BeginInit%2A>, ' Nin başlatılmasına başlayan yöntemi olarak `DataSet` ayarlanır <xref:System.Data.DataSet.IsInitialized%2A> `false` . <xref:System.Data.DataSet.EndInit%2A>Öğesinin başlatılmasını sonlandıran yöntemi, `DataSet` olarak ayarlar `true` . Bu yöntemler, `DataSet` başka bir bileşen tarafından kullanılmakta olan bir başlatmak Için Visual Studio tasarım ortamı tarafından kullanılır. Bunları kodunuzda yaygın olarak kullanmayacak.  
   
 ## <a name="the-disposed-event"></a>Atılmış olay  
- `DataSet`, <xref:System.ComponentModel.MarshalByValueComponent> hemyöntemi<xref:System.ComponentModel.MarshalByValueComponent.Disposed>hem de olayını sunan sınıfından türetilir. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Olay, bileşen üzerinde atılmış olayı dinlemek için bir olay işleyicisi ekler. Yöntemi çağrıldığında kodu <xref:System.ComponentModel.MarshalByValueComponent.Disposed> `DataSet` yürütmek istiyorsanız, bir olayını kullanabilirsiniz. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>tarafından kullanılan kaynakları serbest bırakır <xref:System.ComponentModel.MarshalByValueComponent>.  
+ `DataSet` , <xref:System.ComponentModel.MarshalByValueComponent> hem yöntemi hem de olayını sunan sınıfından türetilir <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> <xref:System.ComponentModel.MarshalByValueComponent.Disposed> . <xref:System.ComponentModel.MarshalByValueComponent.Disposed>Olay, bileşen üzerinde atılmış olayı dinlemek için bir olay işleyicisi ekler. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> `DataSet` Yöntemi çağrıldığında kodu yürütmek istiyorsanız, bir olayını kullanabilirsiniz <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> . <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> tarafından kullanılan kaynakları serbest bırakır <xref:System.ComponentModel.MarshalByValueComponent> .  
   
 > [!NOTE]
-> Ve `DataSet` nesneleri `DataTable` , ' dan <xref:System.ComponentModel.MarshalByValueComponent> devralınır<xref:System.Runtime.Serialization.ISerializable> ve uzaktan iletişim için arabirimi destekler. Bunlar uzaktan kullanılabilecek tek ADO.NET nesneleridir. Daha fazla bilgi için bkz. [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)).  
+> `DataSet`Ve nesneleri, ' `DataTable` dan devralınır <xref:System.ComponentModel.MarshalByValueComponent> ve <xref:System.Runtime.Serialization.ISerializable> Uzaktan iletişim için arabirimi destekler. Bunlar uzaktan kullanılabilecek tek ADO.NET nesneleridir. Daha fazla bilgi için bkz. [.NET Remoting](/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)).  
   
- İle `DataSet`çalışırken kullanılabilir diğer olaylar hakkında daha fazla bilgi için, bkz. [DataTable olaylarını işleme](handling-datatable-events.md) ve [DataAdapter olaylarını işleme](../handling-dataadapter-events.md).  
+ İle çalışırken kullanılabilir diğer olaylar hakkında daha fazla bilgi için `DataSet` , bkz. [DataTable olaylarını Işleme](handling-datatable-events.md) ve [DataAdapter olaylarını işleme](../handling-dataadapter-events.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [DataSets, DataTables ve DataViews](index.md)
-- [Veriler doğrulanıyor](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
+- [Veriler doğrulanıyor](/previous-versions/visualstudio/visual-studio-2013/t3b36awf(v=vs.120))
 - [ADO.NET’te Veri Alma ve Değiştirme](../retrieving-and-modifying-data.md)
 - [ADO.NET’e Genel Bakış](../ado-net-overview.md)

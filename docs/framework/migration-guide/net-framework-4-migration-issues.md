@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: b2924a49816b2c7d097cc12ddd5b30ad8aed5a14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 50355fd5a502771ce88e1f329ec7effdaf380d48
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555451"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679435"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 geçiş sorunları
 
@@ -224,7 +224,7 @@ Derlemeler: PresentationFramework (PresentationFramework.dll)
 | **Kaynak sözlükleri** | Tema düzeyi kaynak sözlüklerini geliştirmek ve bunların değiştirilmesini engellemek için, bir kaynak sözlüğünde tanımlanmış ve tema düzeyinde bir sözlükte birleştirilmiş Freezable kaynakları, her zaman dondurulmuş olarak işaretlenir ve sabittir. Bu, Freezable kaynakları için beklenen davranıştır. | Tema düzeyinde birleştirilmiş bir sözlükte tanımlanan bir kaynağı değiştiren uygulamalar, kaynağı klonlanmış ve kopyalanan kopyayı değiştirecek olmalıdır. Alternatif olarak, kaynak, `x:Shared="false"` <xref:System.Windows.ResourceDictionary> kaynak her sorgulandığında yeni bir kopya oluşturacak şekilde işaretlenebilir. |
 | **Windows 7** | WPF uygulamalarının Windows 7 ' de daha iyi çalışmasını sağlamak için, bir pencerenin davranışını düzeltmek üzere aşağıdaki iyileştirmeler yapılmıştır:<br><br>\* Yerleştirme ve hareket durumları artık kullanıcı etkileşimlerine bağlı olarak beklendiği gibi çalışır.<br>\* Görev çubuğu komutları pencereleri **basamakla, pencereleri yığın olarak göster**ve **Windows yan yana** artık doğru davranışa sahiptir ve uygun özellikleri güncelleştirir.<br>\*`Top` `Left` `Width` `Height` Büyütülmüş veya küçültülmüş bir pencerenin,,, ve özellikleri, izlemeye bağlı olarak, diğer değerler yerine pencerenin doğru geri yükleme konumunu içerir. | Yok. |
 | **Windows stili ve saydamlığı** | <xref:System.InvalidOperationException> <xref:System.Windows.Window.WindowStyle> <xref:System.Windows.WindowStyle> <xref:System.Windows.Window.AllowsTransparency> , `true` Ve olduğu durumlar dışında <xref:System.Windows.WindowState> bir değere ayarlamaya çalışırsanız oluşturulur <xref:System.Windows.WindowState> . | <xref:System.Windows.Window.WindowStyle>Ne zaman olduğunu değiştirmeniz gerekiyorsa <xref:System.Windows.Window.AllowsTransparency> `true` , Win32 `SetWindowLongPtr` işlevini çağırabilirsiniz. |
-| **XPS Görüntüleyicisi** | WPF, Microsoft XML Kağıt Belirtimi Essentials paketi 'ni (XPSEP) içermez. XPSEP, Windows 7 ve Windows Vista 'da bulunur.<br><br>.NET Framework 3,5 SP1 yüklü olmayan Windows XP çalıştıran bir bilgisayarda, ' den başka bir WPF API kullanarak yazdırma işlemi <xref:System.Windows.Controls.PrintDialog> WINSPOOL 'a bağımlıdır. Bazı yazıcı özellikleri bildirilmeyecektir ve yazdırma sırasında bazı yazıcı ayarları uygulanmaz. | Gerekirse, [MICROSOFT XML Kağıt Belirtimi Essentials paketini](https://www.microsoft.com/en-us/download/details.aspx?id=11816)indirin. |
+| **XPS Görüntüleyicisi** | WPF, Microsoft XML Kağıt Belirtimi Essentials paketi 'ni (XPSEP) içermez. XPSEP, Windows 7 ve Windows Vista 'da bulunur.<br><br>.NET Framework 3,5 SP1 yüklü olmayan Windows XP çalıştıran bir bilgisayarda, ' den başka bir WPF API kullanarak yazdırma işlemi <xref:System.Windows.Controls.PrintDialog> WINSPOOL 'a bağımlıdır. Bazı yazıcı özellikleri bildirilmeyecektir ve yazdırma sırasında bazı yazıcı ayarları uygulanmaz. | Gerekirse, Microsoft XML Kağıt Belirtimi Essentials paketini indirin. |
 
 ### <a name="controls"></a>Denetimler
 

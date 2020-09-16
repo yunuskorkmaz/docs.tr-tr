@@ -4,18 +4,18 @@ description: Genel türlerin, gerçek bir veri türüne uygulamadan tür kullan�
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 99e3b589cd67c9d7026966d3d48d0e06a91fcc86
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5f6e84e23b5bcdcb3dcd742823d83728fb43d195
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287551"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557950"
 ---
 # <a name="generic-types-overview"></a>Genel türlere genel bakış
 
 Geliştiriciler, örtük olarak veya açık olsun, .NET 'te her zaman genel türler kullanır. .NET ' te LINQ kullandığınızda, ile çalıştığınızı fark muydunuz <xref:System.Collections.Generic.IEnumerable%601> ? Ya da Entity Framework kullanarak veritabanlarıyla iletişim için "genel deponun" çevrimiçi bir örneğini görüyorsanız, çoğu yöntemin geri döndüğünüzü gördünüz `IQueryable<T>` mi? **T** 'nin Bu örneklerde ne olduğunu ve neden orada olduğunu merak etmiş olabilirsiniz.
 
-İlk olarak .NET Framework 2,0 ' de tanıtılan genel türler temelde, geliştiricilerin gerçek bir veri türüne işlemeden [tür açısından güvenli](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) veri yapıları tanımlamasına olanak sağlayan bir "kod şablonu" dir. Örneğin,, <xref:System.Collections.Generic.List%601> veya gibi herhangi bir tür ile bildirilebilecek ve kullanılabilen [genel bir koleksiyondur](xref:System.Collections.Generic) `List<int>` `List<string>` `List<Person>` .
+İlk olarak .NET Framework 2,0 ' de tanıtılan genel türler temelde, geliştiricilerin gerçek bir veri türüne işlemeden [tür açısından güvenli](/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) veri yapıları tanımlamasına olanak sağlayan bir "kod şablonu" dir. Örneğin,, <xref:System.Collections.Generic.List%601> veya gibi herhangi bir tür ile bildirilebilecek ve kullanılabilen [genel bir koleksiyondur](xref:System.Collections.Generic) `List<int>` `List<string>` `List<Person>` .
 
 Genel türlerin neden yararlı olduğunu anlamak için, genel türleri eklemeden önce ve sonra belirli bir sınıfa göz atalım: <xref:System.Collections.ArrayList> . .NET Framework 1,0 ' de `ArrayList` öğeler türündedir <xref:System.Object> . Koleksiyona eklenen herhangi bir öğe sessizce bir öğesine dönüştürüldü `Object` . Aynı durum, listedeki öğeleri okurken de gerçekleşir. Bu işlem [kutulama ve kutudan](../csharp/programming-guide/types/boxing-and-unboxing.md)çıkarma olarak bilinir ve performansı etkiler. Ancak, performans dışında, derleme zamanında listedeki verilerin türünü belirlemenin bir yolu yoktur ve bu da bazı kırılacak kod oluşturur. Genel türler, her liste örneğinin içereceği veri türünü tanımlayarak bu sorunu çözmez. Örneğin, yalnızca öğesine tamsayılar ekleyebilir `List<int>` ve yalnızca kişileri ekleyebilirsiniz `List<Person>` .
 
