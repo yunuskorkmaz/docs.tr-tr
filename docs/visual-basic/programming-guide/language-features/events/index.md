@@ -1,16 +1,16 @@
 ---
-title: Olaylar
+title: Ekinlikler
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: c61e960078557282de39bdc30f1d614ce8a77f29
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 264c639656b592c0cc660d3745528df7cc89c851
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405124"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559343"
 ---
 # <a name="events-visual-basic"></a>Olaylar (Visual Basic)
 Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görselleştirirken, gerçekte çoğu program olay odaklı olur, yani yürütme akışı *Olaylar*olarak adlandırılan dış oluşumlara göre belirlenir.  
@@ -59,7 +59,7 @@ Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görs
   
 - Değişken dizileri oluşturamazsınız `WithEvents` .  
   
- `WithEvents`değişkenler, tek bir olay işleyicisinin bir veya daha fazla olay türünü işlemesini sağlar veya aynı olay türünü işlemek için bir veya daha fazla olay işleyicisidir.  
+ `WithEvents` değişkenler, tek bir olay işleyicisinin bir veya daha fazla olay türünü işlemesini sağlar veya aynı olay türünü işlemek için bir veya daha fazla olay işleyicisidir.  
   
  `Handles`Yan tümcesi bir olayı bir olay işleyicisiyle ilişkilendirmenin standart yoludur, ancak derleme zamanında olayları olay işleyicilerle ilişkilendirme sınırlıdır.  
   
@@ -70,7 +70,7 @@ Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görs
 ### <a name="addhandler-and-removehandler"></a>AddHandler ve RemoveHandler  
  `AddHandler`Deyimi, `Handles` ' de bir olay işleyicisi belirtmenize izin veren yan tümcesine benzerdir. Ancak, `AddHandler` ile birlikte kullanıldığında, `RemoveHandler` `Handles` bir olayla ilişkili olay işleyicisini dinamik olarak eklemenize, kaldırmanıza ve değiştirmenize olanak sağlayan yan tümcesinden daha fazla esneklik sağlar. Bir yapıdaki paylaşılan olayları veya olayları işlemek istiyorsanız, kullanmanız gerekir `AddHandler` .  
   
- `AddHandler`iki bağımsız değişken alır: bir olay göndericisinden bir olayın adı ve bir temsilci olarak değerlendirilen bir ifade. `AddHandler` `AddressOf` Bildirim her zaman temsilciye bir başvuru döndürdüğünden, kullanırken temsilci sınıfını açık bir şekilde belirtmeniz gerekmez. Aşağıdaki örnek bir olay işleyicisini bir nesne tarafından oluşturulan bir olayla ilişkilendirir:  
+ `AddHandler` iki bağımsız değişken alır: bir olay göndericisinden bir olayın adı ve bir temsilci olarak değerlendirilen bir ifade. `AddHandler` `AddressOf` Bildirim her zaman temsilciye bir başvuru döndürdüğünden, kullanırken temsilci sınıfını açık bir şekilde belirtmeniz gerekmez. Aşağıdaki örnek bir olay işleyicisini bir nesne tarafından oluşturulan bir olayla ilişkilendirir:  
   
  [!code-vb[VbVbalrEvents#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#28)]  
   
@@ -104,6 +104,6 @@ Bir Visual Studio projesini bir dizide yürütülen bir dizi yordam olarak görs
 |[Nasıl yapılır: Engellemekten Kaçınacak Şekilde Özel Olayları Bildirme](how-to-declare-custom-events-to-avoid-blocking.md)|Olay işleyicilerinin zaman uyumsuz olarak çağrılmasına izin veren özel bir olayın nasıl tanımlanacağını gösterir.|  
 |[Nasıl yapılır: Bellekten Kazanacak Şekilde Özel Olayları Bildirme](how-to-declare-custom-events-to-conserve-memory.md)|Yalnızca olay işlendiği zaman belleği kullanan özel bir olayın nasıl tanımlanacağını gösterir.|  
 |[Visual Basic'de Devralınmış Olay İşleyicileri İle İlgili Sorun Giderme](troubleshooting-inherited-event-handlers.md)|Devralınan bileşenlerde olay işleyicileriyle ortaya çıkan yaygın sorunları listeler.|  
-|[Olaylar](../../../../standard/events/index.md)|.NET Framework içindeki olay modeli için genel bir bakış sağlar.|  
-|[Windows Forms'ta Olay İşleyicileri Oluşturma](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows Forms nesneleriyle ilişkili olaylarla nasıl çalışabileceğinizi açıklar.|  
+|[Ekinlikler](../../../../standard/events/index.md)|.NET Framework içindeki olay modeli için genel bir bakış sağlar.|  
+|[Windows Forms'ta Olay İşleyicileri Oluşturma](/dotnet/desktop/winforms/creating-event-handlers-in-windows-forms)|Windows Forms nesneleriyle ilişkili olaylarla nasıl çalışabileceğinizi açıklar.|  
 |[Temsilciler](../delegates/index.md)|Visual Basic temsilcileri için bir genel bakış sağlar.|

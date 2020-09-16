@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 55d701ee6769099698d2fd869a1502d94237b5a8
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 7b0cc58975ee145e5234adf51e24109898853e1c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245355"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558907"
 ---
 # <a name="configuring-tracing"></a>İzlemeyi Yapılandırma
 Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izlemeleri yaymak ve izleme düzeylerini ayarlamayı, Etkinlik izlemeyi ve yaymayı, uçtan uca izleme bağıntısını destekleyecek şekilde ayarlamayı ve izleme dinleyicilerini izlemelere erişim için ayarlamayı açıklar.  
@@ -143,7 +143,7 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
   
  Örneğin, uzak bir veritabanına izleme izlemek için özel bir izleme dinleyicisi yapılandırabilirsiniz. Bir uygulama dağıtıcı olarak, uzak makinedeki izleme günlüklerinde doğru erişim denetimini zorunlu kılabilirsiniz.  
   
- Ayrıca, bir izleme dinleyicisini programlı bir şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Izleme dinleyicileri oluşturma ve başlatma](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) ve [özel bir TraceListener oluşturma](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
+ Ayrıca, bir izleme dinleyicisini programlı bir şekilde yapılandırabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: Izleme dinleyicileri oluşturma ve başlatma](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md) ve [özel bir TraceListener oluşturma](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics).  
   
 > [!CAUTION]
 > , `System.Diagnostics.XmlWriterTraceListener` İş parçacığı açısından güvenli olmadığından izleme kaynağı, izlemeleri çıktıları sırasında kaynakları özel olarak kilitleyebilir. Birçok iş parçacığı çıkışı, bu dinleyiciyi kullanmak üzere yapılandırılmış bir izleme kaynağına izlenirse, kaynak çakışması oluşabilir ve bu durum önemli bir performans sorununa neden olur. Bu sorunu çözmek için, iş parçacığı açısından güvenli olan özel bir dinleyici uygulamalısınız.  
@@ -185,5 +185,5 @@ Bu konu, izlemeyi nasıl etkinleştirebileceğinizi, izleme kaynaklarını, izle
 
 - [İzleme](index.md)
 - [Yönetim ve tanılama](../index.md)
-- [Nasıl yapılır: İzleme Dinleyicileri Oluşturma ve Başlatma](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
-- [Özel bir TraceListener oluşturma](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
+- [Nasıl yapılır: İz Dinleyicileri Oluşturma ve Başlatma](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
+- [Özel bir TraceListener oluşturma](/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)

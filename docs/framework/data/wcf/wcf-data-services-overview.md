@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: e4c5bc03038a3df9df2b7629da762caee175b6e8
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c75e26ea083f8144bfaf2f67872004ef33365377
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202143"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558764"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Veri Hizmetleri genel bakış
 WCF Veri Hizmetleri, açık veri Protokolü (OData) kullanarak Web veya intranet için veri hizmetlerinin oluşturulmasını ve kullanımını mümkün bir şekilde sunar. OData, verilerinizi URI 'Ler tarafından adreslenebilir kaynaklar olarak kullanıma sunmanızı sağlar. Bu, özellikle Al, koy, POST ve DELETE için standart HTTP fiilleri olan temsili durum aktarımı (REST) semantiğini kullanarak verilere erişmenizi ve bunları değiştirmenize olanak sağlar. Bu konuda, hem OData tarafından tanımlanan desenler hem de uygulamalar ve ayrıca .NET Framework tabanlı uygulamalardaki OData 'ten yararlanmak için WCF Veri Hizmetleri tarafından sağlanan tesislerin bir özeti verilmektedir.  
@@ -60,6 +60,6 @@ OData, Atom yayımlama Protokolü (AtomPub) için bir uzantılar kümesi tanıml
 - [WCF Veri Hizmetleri 4.5](index.md)
 - [Başlarken](getting-started-with-wcf-data-services.md)
 - [WCF Veri Hizmetlerini Tanımlama](defining-wcf-data-services.md)
-- [Veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
+- [Veri hizmeti kaynaklarına erişme (WCF Veri Hizmetleri)](/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Veri Hizmetleri İstemci Kitaplığı](wcf-data-services-client-library.md)
 - [Temsili durum aktarımı (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)

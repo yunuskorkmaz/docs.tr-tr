@@ -6,12 +6,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-ms.openlocfilehash: a8596bcac4efb0aea07efcfde6726d8bbf148c24
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: ea2b735b2c98b588903c4393f21c6b743910854a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105093"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552381"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>Derleme Bağlama Yönlendirmesi Güvenlik İzni
 Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlendirmesi için bir güvenlik izni gerekir. Bu, .NET Framework derlemelerinin ve üçüncü tarafların derlemelerinin yeniden yönlendirilmesi için geçerlidir. <xref:System.Security.Permissions.SecurityPermissionFlag>' De bayrak ayarlanarak izin verilir <xref:System.Security.Permissions.SecurityPermission> . Yönetilen derlemelerin varsayılan olarak izinleri yoktur.  
@@ -33,6 +33,6 @@ Bir uygulama yapılandırma dosyasında açık derleme bağlama yeniden yönlend
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Yayımcı Ilke dosyaları ve yan yana yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
+- [Yayımcı Ilke dosyaları ve yan yana yürütme](/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
 - [Nasıl yapılır: Otomatik Bağlama Yönlendirmesini Etkinleştirme veya Devre Dışı Bırakma](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [Yan yana yürütme](../deployment/side-by-side-execution.md)
+- [Yan Yana Yürütme](../deployment/side-by-side-execution.md)

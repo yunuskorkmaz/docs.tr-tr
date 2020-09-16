@@ -3,12 +3,12 @@ title: C# geliştiricileri için sürüm ve güncelleştirme konuları
 description: Kitaplığınızdaki yeni dil özelliklerine giriş, onu kullanan kodu etkileyebilir.
 ms.topic: reference
 ms.date: 09/19/2018
-ms.openlocfilehash: f7db7c79792d04bcf592bc1858e1f0f05cb34402
-ms.sourcegitcommit: 0100be20fcf23f61dab672deced70059ed71bb2e
+ms.openlocfilehash: 6de0e3ba33af34edba73819dcb9268f40f8a5ea4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88268133"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552433"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>C# geliştiricileri için sürüm ve güncelleştirme konuları
 
@@ -63,4 +63,4 @@ Yeni kod:
 public double CalculateSquare(in double value) => value * value;
 ```
 
-Genel bildirimleri etkileyen bir özelliğin tanıtımı, kaynak ile uyumlu veya ikili uyumlu olduğunu gösteren [Yeni](index.md) makalelerdir.
+Genel bildirimleri etkileyen bir özelliğin tanıtımı, kaynak ile uyumlu veya ikili uyumlu olduğunu gösteren [Yeni](./csharp-9.md) makalelerdir.

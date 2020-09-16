@@ -1,6 +1,6 @@
 ---
-title: GetErrorInfo işlevi (Yönetilmeyen API Başvurusu)
-description: GetErrorInfo işlevi önceki işlev çağrısından hata bilgilerini alır.
+title: GetErrorInfo işlevi (yönetilmeyen API Başvurusu)
+description: GetErrorInfo işlevi, önceki işlev çağrısından hata bilgilerini alır.
 ms.date: 11/06/2017
 api_name:
 - GetErrorInfo
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - GetErrorInfo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 802ee66a5be213ac7a599b193ec6de589773ea17
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9a80c0b5522113e704336cda29362a0406077931
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176818"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553681"
 ---
-# <a name="geterrorinfo-function"></a>GetErrorInfo fonksiyonu
+# <a name="geterrorinfo-function"></a>GetErrorInfo işlevi
 Önceki işlev çağrısından hata bilgilerini alır.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 IErrorInfo* GetErrorInfo();
@@ -34,19 +34,19 @@ IErrorInfo* GetErrorInfo();
 
 ## <a name="return-value"></a>Döndürülen değer
 
-İşlev çağrısı başarılı olursa veya `null` başarısız olursa [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) nesnesine işaretçi.
+İşlev çağrısı başarılı olursa veya başarısız olursa bir [IErrorInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) nesnesine yönelik bir işaretçi `null` .
   
 ## <a name="remarks"></a>Açıklamalar
 
-Bu [işlev, IComThreadingInfo::GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemine bir çağrı yıkıyor.
+Bu işlev, [ICommandText Threadingınfo:: GetErrorInfo](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) yöntemine bir çağrı kaydırır.
 
 ## <a name="requirements"></a>Gereksinimler  
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).  
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
   
- **Üstbilgi:** WMINet_Utils.def  
+ **Üst bilgi:** WMINet_Utils. def  
   
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

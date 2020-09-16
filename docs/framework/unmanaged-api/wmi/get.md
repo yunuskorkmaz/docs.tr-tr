@@ -1,6 +1,6 @@
 ---
-title: İşlev alın (Yönetilmeyen API Başvurusu)
-description: Get işlevi belirtilen özellik değerini alır.
+title: GET işlevi (yönetilmeyen API Başvurusu)
+description: GET işlevi belirtilen özellik değerini alır.
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 67fcfb301eebfcf4ed4fdcaa5c9ddf85c47a6073
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7cc0c285f79b2791863fce251e4683aa7b55341b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79174985"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553694"
 ---
 # <a name="get-function"></a>Get işlevi
 
@@ -27,7 +27,7 @@ Varsa belirtilen özellik değerini alır.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Söz dizimi
 
 ```cpp
 HRESULT Get (
@@ -44,60 +44,60 @@ HRESULT Get (
 ## <a name="parameters"></a>Parametreler
 
 `vFunc`\
-[içinde] Bu parametre kullanılmaz.
+'ndaki Bu parametre kullanılmıyor.
 
 `ptr`\
-[içinde] [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine işaretçi.
+'ndaki [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) örneğine yönelik bir işaretçi.
 
 `wszName`\
-[içinde] Mülkün adı.
+'ndaki Özelliğin adı.
 
 `lFlags`\
-[içinde] Saklı -dır. Bu parametre 0 olmalıdır.
+'ndaki Ayrılamadı. Bu parametre 0 olmalıdır.
 
 `pVal`\
-[çıkış] İşlev başarılı bir şekilde dönerse, `wszName` özelliğin değerini içerir. Bağımsız `pval` değişken, niteleyici için doğru tür ve değer atanır.
+dışı İşlev başarıyla döndürürse, özelliğinin değerini içerir `wszName` . `pval`Bağımsız değişkenine, niteleyicisi için doğru tür ve değer atanır.
 
 `pvtType`\
-[çıkış] İşlev başarıyla dönerse, özellik türünü gösteren bir [CIM tipi sabit](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) içerir. Değeri de olabilir. `null`
+dışı İşlev başarıyla döndürürse, özellik türünü gösteren bir [CIM türü sabiti](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) içerir. Değeri de olabilir `null` .
 
 `plFlavor`\
-[çıkış] İşlev başarıyla dönerse, özelliğin kaynağı hakkında bilgi alır. Değeri, `null` *WbemCli.h* üstbilgi dosyasında tanımlanan aşağıdaki WBEM_FLAVOR_TYPE sabitlerden biri olabilir:
+dışı İşlev başarıyla döndürürse, özelliğin kaynağı hakkında bilgi alır. Bunun değeri `null` , *Wbemcli. h* üstbilgi dosyasında tanımlanan aşağıdaki WBEM_FLAVOR_TYPE sabitlerinden biri olabilir:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Özellik standart bir sistem özelliğidir. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: Özellik üst sınıftan devralır. <br> Örneğin: Özellik, üst sınıftan devralınmış olsa da, örnek tarafından değiştirilmedi.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: Özellik türemiş sınıfa aittir. <br> Örneğin: Özellik örnek tarafından değiştirilir; diğer bir şekilde, bir değer sağlandı veya bir niteleyici eklendi veya değiştirildi. |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Özelliği, standart bir sistem özelliğidir. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Bir sınıf için: özellik üst sınıftan devralınır. <br> Bir örnek için: üst sınıftan Devralındığı sürece özelliği, örnek tarafından değiştirilmez.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Bir sınıf için: özellik türetilmiş sınıfa aittir. <br> Bir örnek için: özelliği örnek tarafından değiştirilir; diğer bir deyişle, bir değer sağlanmış veya bir niteleyici eklenmiş ya da değiştirilmiş. |
 
 ## <a name="return-value"></a>Döndürülen değer
 
-Bu işlev tarafından döndürülen aşağıdaki değerler *WbemCli.h* üstbilgi dosyasında tanımlanır veya bunları kodunuzdaki sabitler olarak tanımlayabilirsiniz:
+Bu işlev tarafından döndürülen aşağıdaki değerler, *Wbemcli. h* üstbilgi dosyasında tanımlanır veya bunları kodunuzda sabitler olarak tanımlayabilirsiniz:
 
 |Sabit  |Değer  |Açıklama  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Genel bir başarısızlık oldu. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değildir. |
+|`WBEM_E_FAILED` | 0x80041001 | Genel bir hata oluştu. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Bir veya daha fazla parametre geçerli değil. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Belirtilen özellik bulunamadı. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi tamamlamak için yeterli bellek yok. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | İşlemi gerçekleştirmek için yeterli bellek yok. |
 |`WBEM_S_NO_ERROR` | 0 | İşlev çağrısı başarılı oldu.  |
 
 ## <a name="remarks"></a>Açıklamalar
 
-Bu işlev [IWbemClassObject](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) bir çağrı sarar::Get yöntemi.
+Bu işlev, [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) yöntemine bir çağrı kaydırır.
 
-İşlev `Get` sistem özelliklerini de döndürebilir.
+`Get`İşlev sistem özelliklerini de döndürebilir.
 
-Bağımsız `pVal` değişken, niteleyici ve COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) işlevi için doğru tür ve değer atanır
+`pVal`Bağımsız değişkenine, niteleyicinin ve com [Variantinit](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) işlevinin doğru türü ve değeri atanır
 
 ## <a name="requirements"></a>Gereksinimler
 
- **Platformlar:** [Bkz. Sistem Gereksinimleri](../../get-started/system-requirements.md).
+ **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).
 
- **Üstbilgi:** WMINet_Utils.idl
+ **Üst bilgi:** WMINet_Utils. IDL
 
- **.NET Çerçeve Sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework sürümleri:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [WMI ve Performans Sayaçları (Yönetilmeyen API Başvurusu)](index.md)
+- [WMI ve performans sayaçları (yönetilmeyen API Başvurusu)](index.md)

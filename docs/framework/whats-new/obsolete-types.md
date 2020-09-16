@@ -7,16 +7,16 @@ helpviewer_keywords:
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-ms.openlocfilehash: 29df80fcefc2565850b026bebd30802dc77e1896
-ms.sourcegitcommit: 40de8df14289e1e05b40d6e5c1daabd3c286d70c
+ms.openlocfilehash: 795735b66c7568dada0196a6426a0a9aaf52398a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86925819"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558543"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework eski türler
 
-<a name="introduction"></a>Bu makaledeki tablolarda, derleme tarafından düzenlenen .NET Framework 4,5 ve .NET Framework 4,6 ' de kullanılmayan türler listelenmektedir. Eski türlerin bir listesini ve her derlemede önerilen alternatifleri görmek için aşağıdaki bağlantıları kullanın. Bu türler artık kullanılmıyor olduğundan, tüm üyeleri de artık kullanılmıyor. .NET Framework sınıf kitaplığındaki eski ek üyelerin listesi için, bkz. [Eski Üyeler](obsolete-members.md).
+<a name="introduction"></a> Bu makaledeki tablolarda, derleme tarafından düzenlenen .NET Framework 4,5 ve .NET Framework 4,6 ' de kullanılmayan türler listelenmektedir. Eski türlerin bir listesini ve her derlemede önerilen alternatifleri görmek için aşağıdaki bağlantıları kullanın. Bu türler artık kullanılmıyor olduğundan, tüm üyeleri de artık kullanılmıyor. .NET Framework sınıf kitaplığındaki eski ek üyelerin listesi için, bkz. [Eski Üyeler](obsolete-members.md).
 
 - [Sistem derlemelerinde eski türler](#obsolete_types_in_system_assemblies)
 
@@ -134,8 +134,8 @@ Aşağıdaki tablolarda sistem derlemelerinde Kullanımdan kaldırılmış olara
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType> kullanın.|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType> kullanın.|
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Bunun yerine <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> kullanın.|
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope>yalnızca .NET 2,0 saydamlık uyumluluğu için kullanılır.|
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute>yalnızca .NET 2,0 saydamlık uyumluluğu için kullanılır. Lütfen <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> bunun yerine kullanın.|
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> yalnızca .NET 2,0 saydamlık uyumluluğu için kullanılır.|
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> yalnızca .NET 2,0 saydamlık uyumluluğu için kullanılır. Lütfen <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> bunun yerine kullanın.|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Bu tür kullanımdan kalkmıştır ve .NET Framework gelecek bir sürümünde kaldırılacaktır.|
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Derleme düzeyinde bildirime dayalı güvenlik artık kullanılmıyor ve varsayılan olarak CLR tarafından uygulanmıyor.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Bu tür kullanımdan kalkmıştır ve .NET Framework gelecek bir sürümünde kaldırılacaktır.|
@@ -158,8 +158,8 @@ Aşağıdaki tablolarda sistem derlemelerinde Kullanımdan kaldırılmış olara
 
 |Tür|İleti|
 |----------|-------------|
-|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute>kullanım dışı bırakıldı.|
-|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes>kullanım dışı bırakıldı.|
+|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> kullanım dışı bırakıldı.|
+|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> kullanım dışı bırakıldı.|
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|<xref:System.Data.TypedDataSetGenerator>Bu sınıf gelecek bir sürümde kaldırılacak. Lütfen <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> System.Design.dll kullanın.|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|<xref:System.Xml.XmlDataDocument>Bu sınıf gelecek bir sürümde kaldırılacak.|
 
@@ -171,14 +171,14 @@ Aşağıdaki tablolarda sistem derlemelerinde Kullanımdan kaldırılmış olara
 
 |Tür|İleti|
 |----------|-------------|
-|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory>kullanım dışı bırakıldı.|
-|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand>kullanım dışı bırakıldı.|
-|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder>kullanım dışı bırakıldı.|
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection>kullanım dışı bırakıldı.|
-|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder>kullanım dışı bırakıldı.|
-|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter>kullanım dışı bırakıldı.|
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission>kullanım dışı bırakıldı.|
-|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> kullanım dışı bırakıldı.|
+|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> kullanım dışı bırakıldı.|
 
 [Başa dön](#introduction)
 
@@ -598,7 +598,7 @@ Aşağıdaki tablolarda sistem derlemelerinde Kullanımdan kaldırılmış olara
 
 |Tür|İleti|
 |----------|-------------|
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>kullanım dışı bırakıldı. Bu arabirim artık kullanımda değil.|
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> kullanım dışı bırakıldı. Bu arabirim artık kullanımda değil.|
 
 [Başa dön](#introduction)
 
@@ -658,7 +658,7 @@ IEHost.dll ve IEExec.exe derlemeleri .NET Framework kaldırılmıştır. Tüm t�
 
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Bütünleştirilmiş kod: Microsoft.VisualBasic.Compatibility.dll
 
-Visual Basic 6 ' dan geçirme hakkında daha fazla bilgi için, bkz. [Visual Basic 6,0 Kaynak Merkezi](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
+Visual Basic 6 ' dan geçirme hakkında daha fazla bilgi için, bkz. [Visual Basic 6,0 Kaynak Merkezi](/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
 
 |Tür|İleti|
 |----------|-------------|

@@ -2,12 +2,12 @@
 title: Bağıntı Genel Bakış
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 65f87195fde0c3dbda610804260f0ebfbf599073
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 8d33022524a4619a57b04e7774918fd73d0bdef3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586981"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552563"
 ---
 # <a name="correlation-overview"></a>Bağıntı Genel Bakış
 Bağıntı, iş akışı hizmeti iletilerini birbirleriyle veya bir başlangıç isteği yanıtı gibi uygulama örneği durumuyla veya bir sıra işleme iş akışının kalıcı durumuna bir sıra KIMLIĞIYLE ilişkilendirmek için bir mekanizmadır. Bu konuda bağıntılı bir genel bakış sunulmaktadır. Bu bölümdeki diğer konular her bir bağıntı türü için ek bilgi sağlar.  
@@ -19,9 +19,9 @@ Bağıntı, iş akışı hizmeti iletilerini birbirleriyle veya bir başlangıç
   
 ## <a name="protocol-based-correlation"></a>Protokol tabanlı bağıntı
 
-Protokol tabanlı bağıntı, iletileri birbirleriyle ve uygun örnekle ilişkilendirmek için taşıma mekanizmasını kullanır. Sistem tarafından sunulan bazı protokol bağıntıları, istek-yanıt bağıntısını ve bağlam tabanlı bağıntıyı içerir. İstek-Yanıt Bağıntısı, tek bir adet ileti etkinliklerini ilişkilendirmek için, veya ile eşleştirilmiş gibi iki yönlü bir işlem oluşturmak için kullanılır <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> . Visual Studio İş Akışı Tasarımcısı Ayrıca bu düzenin hızlı bir şekilde uygulanması için bir dizi etkinlik şablonu sağlar. Bağlam tabanlı bir bağıntı, [.net bağlam değişimi protokol belirtiminde](https://docs.microsoft.com/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4)açıklanan bağlam değişim mekanizmasına dayalıdır. Bağlam tabanlı bağıntı kullanmak için, veya gibi bir bağlam tabanlı bağlama ve <xref:System.ServiceModel.BasicHttpContextBinding> <xref:System.ServiceModel.WSHttpContextBinding> <xref:System.ServiceModel.NetTcpContextBinding> uç noktada kullanılması gerekir.  
+Protokol tabanlı bağıntı, iletileri birbirleriyle ve uygun örnekle ilişkilendirmek için taşıma mekanizmasını kullanır. Sistem tarafından sunulan bazı protokol bağıntıları, istek-yanıt bağıntısını ve bağlam tabanlı bağıntıyı içerir. İstek-Yanıt Bağıntısı, tek bir adet ileti etkinliklerini ilişkilendirmek için, veya ile eşleştirilmiş gibi iki yönlü bir işlem oluşturmak için kullanılır <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.ReceiveReply> <xref:System.ServiceModel.Activities.Receive> <xref:System.ServiceModel.Activities.SendReply> . Visual Studio İş Akışı Tasarımcısı Ayrıca bu düzenin hızlı bir şekilde uygulanması için bir dizi etkinlik şablonu sağlar. Bağlam tabanlı bir bağıntı, [.net bağlam değişimi protokol belirtiminde](/openspecs/windows_protocols/mc-netcex/a7f26280-491f-465b-9914-c5eb5322dbb4)açıklanan bağlam değişim mekanizmasına dayalıdır. Bağlam tabanlı bağıntı kullanmak için, veya gibi bir bağlam tabanlı bağlama ve <xref:System.ServiceModel.BasicHttpContextBinding> <xref:System.ServiceModel.WSHttpContextBinding> <xref:System.ServiceModel.NetTcpContextBinding> uç noktada kullanılması gerekir.  
   
-Protokol bağıntısı hakkında daha fazla bilgi için bkz. [dayanıklı çift yönlü](durable-duplex-correlation.md) ve [istek-yanıt](request-reply-correlation.md). Visual Studio İş Akışı Tasarımcısı etkinlik şablonlarını kullanma hakkında daha fazla bilgi için bkz. [mesajlaşma etkinlikleri](messaging-activities.md). Örnek kod için bkz. [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) örneği.  
+Protokol bağıntısı hakkında daha fazla bilgi için bkz. [dayanıklı çift yönlü](durable-duplex-correlation.md) ve [istek-yanıt](request-reply-correlation.md). Visual Studio İş Akışı Tasarımcısı etkinlik şablonlarını kullanma hakkında daha fazla bilgi için bkz. [mesajlaşma etkinlikleri](messaging-activities.md). Örnek kod için bkz. [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100)) örneği.  
   
 ## <a name="content-based-correlation"></a>İçerik Temelli Bağıntı
 
@@ -29,4 +29,4 @@ Protokol bağıntısı hakkında daha fazla bilgi için bkz. [dayanıklı çift 
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963(v=vs.100))

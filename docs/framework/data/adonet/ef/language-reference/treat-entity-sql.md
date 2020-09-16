@@ -1,43 +1,43 @@
 ---
-title: TREAT (Varlık SQL)
+title: IŞLE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 06c4200434f443446e8981dcefe2baf43b1af4b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 566ac875aec17e4d0aa22ec1962053aeb6ae2a2e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149901"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558855"
 ---
-# <a name="treat-entity-sql"></a>TREAT (Varlık SQL)
-Belirli bir taban türünden bir nesneyi, belirtilen türemiş türdeki bir nesne olarak davranır.  
+# <a name="treat-entity-sql"></a>IŞLE (Entity SQL)
+Belirli bir temel türdeki bir nesneyi belirtilen türetilmiş türün bir nesnesi olarak değerlendirir.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```sql  
 TREAT ( expression as type)  
 ```  
   
-## <a name="arguments"></a>Bağımsız Değişkenler  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `expression`  
- Varlığı döndüren geçerli bir sorgu ifadesi.  
+ Bir varlık döndüren geçerli bir sorgu ifadesi.  
   
 > [!NOTE]
-> Belirtilen ifadenin türü, belirtilen veri türünün bir alt türü veya veri türü ifade türünün bir alt türü olmalıdır.  
+> Belirtilen ifadenin türü, belirtilen veri türünün bir alt türü olmalıdır veya veri türü, ifadenin türünün bir alt türü olmalıdır.  
   
  `type`  
- Varlık türü. Tür bir ad alanı tarafından nitelikli olmalıdır.  
+ Bir varlık türü. Tür bir ad alanı tarafından nitelenmelidir.  
   
 > [!NOTE]
-> Belirtilen ifade, belirtilen veri türünün bir alt türü veya veri türü ifadenin bir alt türü olmalıdır.  
+> Belirtilen ifade, belirtilen veri türünün bir alt türü olmalıdır veya veri türü ifadenin bir alt türü olmalıdır.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
- Belirtilen veri türünün değeri.  
+ Belirtilen veri türünde bir değer.  
   
 ## <a name="remarks"></a>Açıklamalar  
- TREAT ilgili sınıflar arasında upcasting gerçekleştirmek için kullanılır. Örneğin, `Employee` türetilir `Person` ve p türünde `Person` `TREAT(p AS NamespaceName.Employee)` ise, genel `Person` bir `Employee`örnek upcasts; yani, p olarak `Employee`tedavi etmenizi sağlar.  
+ IŞLE ilgili sınıflar arasında yukarı atama gerçekleştirmek için kullanılır. Örneğin, `Employee` ve p türünden türetürse `Person` `Person` , `TREAT(p AS NamespaceName.Employee)` genel bir örneği ' a aktarır `Person` `Employee` ; Yani, p 'yi kabul etmenizi sağlar `Employee` .  
   
- TREAT, aşağıdaki gibi bir sorgu yapabileceğiniz devralma senaryolarında kullanılır:  
+ DEĞERLENDIR, aşağıdaki gibi bir sorgu yapabileceğiniz devralma senaryolarında kullanılır:  
   
 ```sql  
 SELECT TREAT(p AS NamespaceName.Employee)  
@@ -45,24 +45,24 @@ FROM ContainerName.Person AS p
 WHERE p IS OF (NamespaceName.Employee)
 ```  
   
- Bu sorgu, `Person` varlıkları `Employee` türe doğru yükselter. p değeri aslında tür `Employee`değilse, ifade değeri `null`verir.  
+ Bu sorgu `Person` , varlıkları `Employee` türüne aktarır. P değeri gerçekten tür değilse `Employee` , ifade değeri verir `null` .  
   
 > [!NOTE]
-> Belirtilen ifade, `Employee` belirtilen veri türünün `Person`bir alt türü veya veri türü ifadenin bir alt türü olmalıdır. Aksi takdirde, ifade derleme zamanı hatasına neden olur.  
+> Belirtilen ifade, `Employee` belirtilen veri türünün bir alt türü olmalıdır `Person` veya veri türü ifadenin bir alt türü olmalıdır. Aksi takdirde, ifade derleme zamanı hatasına neden olur.  
   
- Aşağıdaki tablo, bazı tipik desenler ve bazı daha az yaygın desenler üzerinde tedavi davranışını gösterir. Sağlayıcı çağrılmadan önce tüm özel durumlar istemci tarafından atılır:  
+ Aşağıdaki tabloda, bazı tipik desenler ve bazı daha az ortak desenler üzerinde işleme davranışı gösterilmektedir. Sağlayıcı çağrılmadan önce istemci tarafında tüm özel durumlar atılır:  
   
 |Desen|Davranış|  
 |-------------|--------------|  
 |`TREAT (null AS EntityType)`|`DbNull` döndürür.|  
-|`TREAT (null AS ComplexType)`|Bir istisna atar.|  
-|`TREAT (null AS RowType)`|Bir özel durum atar/|  
-|`TREAT (EntityType AS EntityType)`|İade `EntityType` `null`veya .|  
-|`TREAT (ComplexType AS ComplexType)`|Bir istisna atar.|  
-|`TREAT (RowType AS RowType)`|Bir istisna atar.|  
+|`TREAT (null AS ComplexType)`|Bir özel durum oluşturur.|  
+|`TREAT (null AS RowType)`|Bir özel durum oluşturur/|  
+|`TREAT (EntityType AS EntityType)`|`EntityType`Veya döndürür `null` .|  
+|`TREAT (ComplexType AS ComplexType)`|Bir özel durum oluşturur.|  
+|`TREAT (RowType AS RowType)`|Bir özel durum oluşturur.|  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, Kurs türündeki bir nesneyi Yerinde Kurs türündeki nesneler koleksiyonuna dönüştürmek için TREAT işleci kullanır. Sorgu [Okul Modeli'ni](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alın.  
+ Aşağıdaki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] sorgu, bir nesne türünü Onsitekurs türünde bir nesne koleksiyonuna dönüştürmek IÇIN değerlendir işlecini kullanır. Sorgu, [okul modelini](/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))temel alır.  
   
  [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   

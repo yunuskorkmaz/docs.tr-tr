@@ -3,12 +3,12 @@ title: Zaman Uyumsuz Programlama
 description: .NET Framework 4,5 ' de tanıtılan geliştirmeler de dahil olmak üzere SQL Server için .NET Framework Veri Sağlayıcısı zaman uyumsuz programlama hakkında bilgi edinin.
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b8f718e0def2ab0b6953ed121eb916f282562d32
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287109"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558478"
 ---
 # <a name="asynchronous-programming"></a>Zaman Uyumsuz Programlama
 
@@ -39,9 +39,9 @@ Yeni zaman uyumsuz programlama özelliği, kodu zaman uyumsuz hale getirmek içi
 
 - [Async ve await ile zaman uyumsuz programlama (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [.NET 4,5 ' de SqlDataReader 'ın yeni zaman uyumsuz yöntemlerini kullanma (1. bölüm)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
+- [.NET 4,5 ' de SqlDataReader 'ın yeni zaman uyumsuz yöntemlerini kullanma (1. bölüm)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [.NET 4,5 ' de SqlDataReader 'ın yeni zaman uyumsuz yöntemlerini kullanma (2. bölüm)](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
+- [.NET 4,5 ' de SqlDataReader 'ın yeni zaman uyumsuz yöntemlerini kullanma (2. bölüm)](/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 Kullanıcı arabiriminiz yanıt vermiyorsa veya sunucunuz ölçeklenmezse, kodunuzun daha fazla zaman uyumsuz olması gerekebilir. Zaman uyumsuz kod yazmak, genellikle zaman uyumsuz işlem tamamlandıktan sonra oluşan mantığı ifade etmek için bir geri çağırma (devamlılık olarak da adlandırılır) yüklemeyi içerir. Bu, zaman uyumsuz kod yapısını zaman uyumlu kodla karşılaştırarak karmaşıklaştırır.
 
@@ -182,7 +182,7 @@ class A {
 
 Farklı veritabanlarına bağlanabilecek ve sorguları yürütebilecek bir araç oluşturmanız gerekebilir. Temel sağlayıcı modelini ve yeni zaman uyumsuz özelliğini kullanabilirsiniz.
 
-Dağıtılmış işlemleri kullanmak için, Microsoft Dağıtılmış Işlem denetleyicisi 'nin (MSDTC) sunucuda etkinleştirilmiş olması gerekir. MSDTC 'yi etkinleştirme hakkında daha fazla bilgi için bkz. [Web sunucusunda MSDTC 'Yi etkinleştirme](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90)).
+Dağıtılmış işlemleri kullanmak için, Microsoft Dağıtılmış Işlem denetleyicisi 'nin (MSDTC) sunucuda etkinleştirilmiş olması gerekir. MSDTC 'yi etkinleştirme hakkında daha fazla bilgi için bkz. [Web sunucusunda MSDTC 'Yi etkinleştirme](/previous-versions/commerce-server/dd327979(v=cs.90)).
 
 ```csharp
 using System;

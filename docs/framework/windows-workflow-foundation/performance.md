@@ -3,12 +3,12 @@ title: Windows Workflow Foundation 4 Performansı
 description: Bu makalede, .NET Framework 4 ' ün bir parçası olan Windows Workflow Foundation ana düzeltmesinin performans özellikleri açıklanmaktadır.
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9b1b9e7c4fd7cdd122d425b2746859dde30ec209
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1ad12d9fd69205bde726fe650a2ec28ba6c750ef
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421572"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558348"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 Performansı
 
@@ -18,11 +18,11 @@ ms.locfileid: "83421572"
 
 ## <a name="terminology"></a>Terminoloji
 
- [!INCLUDE[wf1](../../../includes/wf1-md.md)].NET Framework 4 ' te tanıtılan sürümü, bu konunun geri kalanı IÇIN WF4 olarak adlandırılacaktır. [!INCLUDE[wf1](../../../includes/wf1-md.md)].NET Framework 3,0 ' de kullanıma sunulmuştur ve .NET Framework 3,5 SP1 aracılığıyla birkaç küçük düzeltme vardı. Workflow Foundation 'ın .NET Framework 3,5 sürümü, bu konunun geri kalanı için WF3 olarak adlandırılacaktır. WF3, WF4 ile yan yana .NET Framework 4 ' te gönderilir. WF3 yapıtları WF4 'e geçirme hakkında daha fazla bilgi için bkz. [Windows Workflow Foundation 4 geçiş kılavuzu](migration-guidance.md).
+ [!INCLUDE[wf1](../../../includes/wf1-md.md)].NET Framework 4 ' te tanıtılan sürümü, bu konunun geri kalanı IÇIN WF4 olarak adlandırılacaktır. [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET Framework 3,0 ' de kullanıma sunulmuştur ve .NET Framework 3,5 SP1 aracılığıyla birkaç küçük düzeltme vardı. Workflow Foundation 'ın .NET Framework 3,5 sürümü, bu konunun geri kalanı için WF3 olarak adlandırılacaktır. WF3, WF4 ile yan yana .NET Framework 4 ' te gönderilir. WF3 yapıtları WF4 'e geçirme hakkında daha fazla bilgi için bkz. [Windows Workflow Foundation 4 geçiş kılavuzu](migration-guidance.md).
 
  Windows Communication Foundation (WCF), Microsoft 'un hizmet odaklı uygulamalar oluşturmaya yönelik Birleşik programlama modelidir. İlk olarak, WF3 ile birlikte .NET 3,0 'nin bir parçası olarak sunulmuştur ve artık .NET Framework temel bileşenlerinden biridir.
 
- Windows Server AppFabric, IIS üzerinde çalışan Web uygulamaları ve bileşik uygulamalar oluşturmayı, ölçeklendirmenizi ve yönetmeyi kolaylaştıran bir tümleşik teknolojiler kümesidir. Hizmetleri ve iş akışlarını izlemek ve yönetmek için araçlar sağlar. Daha fazla bilgi için bkz. [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ Windows Server AppFabric, IIS üzerinde çalışan Web uygulamaları ve bileşik uygulamalar oluşturmayı, ölçeklendirmenizi ve yönetmeyi kolaylaştıran bir tümleşik teknolojiler kümesidir. Hizmetleri ve iş akışlarını izlemek ve yönetmek için araçlar sağlar. Daha fazla bilgi için bkz. [Windows Server AppFabric 1,0](/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Hedefler
  Bu konunun amacı, farklı senaryolar için ölçülen verilerle WF4 'in performans özelliklerini gösterir. Ayrıca, WF4 ve WF3 arasında ayrıntılı karşılaştırmalar sağlar ve bu yeni düzeltmede yapılan harika iyileştirmeleri gösterir. Bu makalede sunulan senaryolar ve veriler, WF4 ve WF3 ' nin farklı yönlerinin temel maliyetini hisize ediyor. Bu veriler, WF4 'in performans özelliklerini anlamak için yararlıdır ve WF3 'e geçiş planlaması veya uygulama geliştirmede WF4 kullanma konusunda yardımcı olabilir. Bununla birlikte, bu makalede sunulan verilerden ekibinizle bir şekilde ele alınması gerekir. Birleşik iş akışı uygulamasının performansı, iş akışının nasıl uygulandüğüne ve farklı bileşenlerin nasıl tümleştirilebilme konusunda oldukça bağımlıdır. Uygulamanın performans özelliklerini öğrenmek için her bir uygulamayı ölçmelidir.
@@ -56,7 +56,7 @@ ms.locfileid: "83421572"
  .NET 4 ' te WCF 'de sunulan Birleşik ileti işleme işlem hattı, WF4 Services 'ın WF3 'den önemli ölçüde daha iyi performans ve ölçeklenebilirlik sağlanmasına yardımcı olur. WF4, karmaşık Ileti değişim düzenlerini (MEPs) modelleyebilir daha zengin mesajlaşma programlama desteği de sağlar. Geliştiriciler, serileştirme maliyetlerini ödemeksizin daha iyi performans elde etmek için kolayca programlama veya türsüz hizmet sözleşmeleri elde etmek üzere türü belirlenmiş hizmet sözleşmelerini kullanabilir. WF4 içindeki sınıfı aracılığıyla istemci tarafı kanal önbelleğe alma desteği, <xref:System.ServiceModel.Activities.SendMessageChannelCache> geliştiricilerin en düşük çabayla hızlı uygulamalar oluşturmasına yardımcı olur. Daha fazla bilgi için bkz. [gönderme etkinlikleri Için önbellek paylaşımı düzeylerini değiştirme](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).
 
 ### <a name="declarative-programming"></a>Bildirim temelli programlama
- WF4, iş süreçlerini ve hizmetlerini modellemek için temiz ve basit bir bildirim temelli programlama çerçevesi sağlar. Programlama modeli, kod olmadan, iş akışı yazmayı büyük ölçüde basitleştirecek şekilde etkinliklerin tam bildirime dayalı olarak birleşimini destekler. .NET Framework 4 ' te, XAML tabanlı bildirim temelli programlama çerçevesi, hem WPF hem de WF 'yi desteklemek için tek derleme System. xaml. dll ' ye birleştirilmiştir.
+ WF4, iş süreçlerini ve hizmetlerini modellemek için temiz ve basit bir bildirim temelli programlama çerçevesi sağlar. Programlama modeli, kod olmadan, iş akışı yazmayı büyük ölçüde basitleştirecek şekilde etkinliklerin tam bildirime dayalı olarak birleşimini destekler. .NET Framework 4 ' te, XAML tabanlı bildirim temelli programlama çerçevesi hem WPF hem de WF 'yi desteklemek için System.Xaml.dll tek derleme ile birleştirilmiştir.
 
  WF4 ' de, XAML gerçekten bildirime dayalı bir deneyim sağlar ve iş akışının tamamının tanımının, .NET kullanılarak oluşturulan etkinliklere ve türlere başvuran XML biçimlendirmesinde tanımlanmasını sağlar. Bu, WF3 ' de özel arka plan kod mantığı olmadan XOML biçimiyle yapılması zordur. .NET 4 ' teki yeni XAML yığını, iş akışı yapıtlarını serileştirmek/seri durumdan çıkarmak ve bildirim temelli programlamayı daha çekici ve düz hale getirir.
 
@@ -106,7 +106,7 @@ ms.locfileid: "83421572"
  Sıralı iş akışı <xref:System.Activities.Statements.While> , döngüde hiçbir iş gerçekleştirmediğinden bir alt etkinliği olan bir etkinlik içeriyor.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>Çoğaltıcı ParallelForEach ile karşılaştırılır
- <xref:System.Workflow.Activities.ReplicatorActivity>WF3 ' de sıralı ve paralel yürütme modları vardır.  Sıralı modda, etkinliğin performansı ile benzerdir <xref:System.Workflow.Activities.WhileActivity> .  , <xref:System.Workflow.Activities.ReplicatorActivity> Paralel yürütme için en yararlı seçenektir.  Bunun için WF4 analog bu <xref:System.Activities.Statements.ParallelForEach%601> etkinliktir.
+ <xref:System.Workflow.Activities.ReplicatorActivity> WF3 ' de sıralı ve paralel yürütme modları vardır.  Sıralı modda, etkinliğin performansı ile benzerdir <xref:System.Workflow.Activities.WhileActivity> .  , <xref:System.Workflow.Activities.ReplicatorActivity> Paralel yürütme için en yararlı seçenektir.  Bunun için WF4 analog bu <xref:System.Activities.Statements.ParallelForEach%601> etkinliktir.
 
  Aşağıdaki diyagramda, bu test için kullanılan iş akışları gösterilmektedir. WF3 iş akışı solda ve WF4 iş akışı sağda.
 
@@ -304,7 +304,7 @@ Aşağıdaki diyagramda temel Dengeleme iş akışı gösterilmektedir. WF3 iş 
 ### <a name="multiple-workflow-definitions-test"></a>Birden çok Iş akışı tanımı testi
  WF3 ve WF4 ' de iş akışlarını barındırmak için kullanılabilir seçenekler nedeniyle, iş akışı tanımı başına bellek ölçme, iki farklı teste bölünmüştür.  Testler, belirli bir iş akışının ınstanmiş ve her tanım için yalnızca bir kez yürütüldüğü iş akışı karmaşıklığı testinin farklı bir şekilde çalıştırılır.  Bunun nedeni, iş akışı tanımının ve ana bilgisayarının, AppDomain 'in ömrü boyunca bellekte kalması nedeniyle oluşur.  Belirli bir iş akışı örneği çalıştırılarak kullanılan bellek çöp toplama sırasında temizlenmelidir.  WF4 için geçiş kılavuzu, barındırma seçenekleri hakkında daha ayrıntılı bilgiler içerir. Daha fazla bilgi için bkz. [WF geçişi kılavuz kitabı: Iş akışı barındırma](migration-guidance.md).
 
- Bir iş akışı tanımı testi için birçok iş akışı tanımı oluşturmak çeşitli yollarla yapılabilir.  Örneğin, biri ad dışında özdeş olan 1000 iş akışı kümesi oluşturmak ve bu iş akışlarının her birini ayrı dosyalara kaydetmek için kod oluşturmayı kullanabilir.  Bu yaklaşım, konsolu tarafından barındırılan test için alınmıştır.  WF3 içinde sınıf, <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tanımlarını çalıştırmak için kullanılmıştır.  WF4, <xref:System.Activities.WorkflowApplication> tek bir iş akışı örneği oluşturmak için ya da <xref:System.Activities.WorkflowInvoker> bir yöntem çağrısı gibi etkinliği çalıştırmak için doğrudan kullanabilirsiniz.  <xref:System.Activities.WorkflowApplication>, tek bir iş akışı örneğinin bir ana bilgisayarı ve <xref:System.Workflow.Runtime.WorkflowRuntime> Bu testte kullanılan bu şekilde daha yakın özellik eşliği olur.
+ Bir iş akışı tanımı testi için birçok iş akışı tanımı oluşturmak çeşitli yollarla yapılabilir.  Örneğin, biri ad dışında özdeş olan 1000 iş akışı kümesi oluşturmak ve bu iş akışlarının her birini ayrı dosyalara kaydetmek için kod oluşturmayı kullanabilir.  Bu yaklaşım, konsolu tarafından barındırılan test için alınmıştır.  WF3 içinde sınıf, <xref:System.Workflow.Runtime.WorkflowRuntime> iş akışı tanımlarını çalıştırmak için kullanılmıştır.  WF4, <xref:System.Activities.WorkflowApplication> tek bir iş akışı örneği oluşturmak için ya da <xref:System.Activities.WorkflowInvoker> bir yöntem çağrısı gibi etkinliği çalıştırmak için doğrudan kullanabilirsiniz.  <xref:System.Activities.WorkflowApplication> , tek bir iş akışı örneğinin bir ana bilgisayarı ve <xref:System.Workflow.Runtime.WorkflowRuntime> Bu testte kullanılan bu şekilde daha yakın özellik eşliği olur.
 
  IIS 'de iş akışlarını barındırırken <xref:System.Web.Hosting.VirtualPathProvider> <xref:System.ServiceModel.WorkflowServiceHost> , tüm xamlx veya xoml dosyalarını oluşturmak yerine yeni bir oluşturmak için kullanmak mümkündür.  , <xref:System.Web.Hosting.VirtualPathProvider> Gelen isteği işler ve bir veritabanından yüklenebilen veya bu durumda anında oluşturulan bir "sanal dosya" ile yanıt verir.  Bu nedenle 1000 fiziksel dosya oluşturmak gereksizdir.
 
@@ -444,7 +444,7 @@ public class Workflow1 : Activity
 
 Aşağıdaki tabloda, çeşitli yapılandırmalarda bir dizide beş etkinlik içeren bir iş akışını çalıştırmanın sonuçları gösterilmektedir.
 
-|Test et|Aktarım hızı (iş akışı/sn)|
+|Test etme|Aktarım hızı (iş akışı/sn)|
 |----------|-----------------------------------|
 |WF3 çalışma zamanında WF3 sırası|1.576|
 |WF4 çalışma zamanında Interop kullanarak WF3 sırası|2.745|

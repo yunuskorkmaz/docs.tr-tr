@@ -25,12 +25,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 444d3700f36a2928b79f40dd5265d6166de762da
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 92ecc4a430aa3c238a7cd8705dc0cec5a9d0cb11
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85105361"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559297"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Yapılandırma Dosyalarını Kullanarak Uygulamaları Yapılandırma
 Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve yöneticilerin uygulamalar çalışma yöntemi üzerinden denetim ve esneklik sağlar. Yapılandırma dosyaları gerektikçe değiştirilebilen XML dosyalarıdır. Yönetici, bir uygulamanın hangi korumalı kaynaklara erişebileceğini, bir uygulamanın hangi derlemelerin hangi sürümlerini kullanacağı ve uzak uygulamaların ve nesnelerin nerede bulunduğu denetleyebilir. Geliştiriciler ayarları yapılandırma dosyalarına yerleştirebilir, bir ayar her değiştiğinde bir uygulamayı yeniden derleme gereksinimini ortadan kaldırır. Bu bölümde nelerin yapılandırılabilecekleri ve bir uygulamanın nasıl yapılandırılması yararlı olabilir.  
@@ -53,7 +53,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
 ```  
   
 ## <a name="machine-configuration-files"></a>Makine Yapılandırma Dosyaları  
- Makine yapılandırma dosyası, Machine.config, tüm bilgisayara uygulanan ayarları içerir. Bu dosya%*Runtime Install Path*% \ config dizininde bulunur. Machine.config, makine genelinde derleme bağlama, yerleşik [Uzaktan iletişim kanalları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))ve ASP.NET yapılandırma ayarlarını içerir.  
+ Makine yapılandırma dosyası, Machine.config, tüm bilgisayara uygulanan ayarları içerir. Bu dosya%*Runtime Install Path*% \ config dizininde bulunur. Machine.config, makine genelinde derleme bağlama, yerleşik [Uzaktan iletişim kanalları](/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))ve ASP.NET yapılandırma ayarlarını içerir.  
   
  Yapılandırma sistemi, bir geliştiricinin tanımlayabileceğini [ **\<appSettings>** öğe](./file-schema/appsettings/index.md) ve diğer yapılandırma bölümlerinin makine yapılandırma dosyasını ilk olarak arar. Ardından uygulama yapılandırma dosyasına bakar. Makine yapılandırma dosyasını yönetilebilir tutmak için, bu ayarları uygulama yapılandırma dosyasında tutmak en iyisidir. Ancak, ayarları makine yapılandırma dosyasına koymak sisteminizi daha sürdürülebilir yapabilir. Örneğin, eğer hem istemci hem de sunucu uygulamanızın kullandığı bir üçüncü parti bileşeniniz varsa, o bileşen için ayarları tek bir yere koymak daha kolaydır. Bu durumda, aynı ayarları iki farklı dosyada tutmak yerine makine yapılandırma dosyasında tutmak daha uygundur.  
   
@@ -77,7 +77,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
   
 - ASP.NET tarafından barındırılan uygulama  
   
-     ASP.NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [ASP.net Configuration Settings](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
+     ASP.NET yapılandırma dosyaları hakkında daha fazla bilgi için bkz. [ASP.net Configuration Settings](/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 - Internet Explorer tarafından barındırılan uygulama  
   
@@ -125,7 +125,7 @@ Yapılandırma dosyaları aracılığıyla .NET Framework, geliştiricilerin ve 
 - [Yapılandırma dosyası şeması](./file-schema/index.md)
 - [Derlemenin Konumunu Belirtme](specify-assembly-location.md)
 - [Derleme Sürümlerini Yönlendirme](redirect-assembly-versions.md)
-- [ASP.NET Web sitesi yönetimi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
-- [Güvenlik Ilkesi yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [ASP.NET Web sitesi yönetimi](/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [Güvenlik Ilkesi yönetimi](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (kod erişimi güvenlik Ilkesi aracı)](../tools/caspol-exe-code-access-security-policy-tool.md)
 - [.NET’te bütünleştirilmiş kodlar](../../standard/assembly/index.md)

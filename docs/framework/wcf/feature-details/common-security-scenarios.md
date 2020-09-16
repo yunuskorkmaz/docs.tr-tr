@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: f36ebdb5ea248ec8134c688f89eb5d0be38dfe38
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cfd29f8cae8ac362a5fa1709864dce4ae11b5af6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579743"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558894"
 ---
 # <a name="common-security-scenarios"></a>Ortak Güvenlik Senaryoları
 Bu bölümdeki konularda, bir dizi olası istemci ve hizmet güvenlik yapılandırması kataloglayın. Konfigürasyonlar bir dizi etkene göre farklılık gösterir. Örneğin, bir hizmet veya istemcinin intranette olup olmadığı ya da güvenliğin Windows ya da taşıma (HTTPS gibi) tarafından sağlandığını belirtir.  
@@ -24,7 +24,7 @@ Bu bölümdeki konularda, bir dizi olası istemci ve hizmet güvenlik yapıland�
  [Temel Kimlik Doğrulama ile Taşıma Güvenliği](transport-security-with-basic-authentication.md)  
  Uygulama, istemcilerin özel kimlik doğrulaması kullanarak oturum açmasına olanak tanır.  
   
- [Windows Kimlik Doğrulaması ile Aktarım Güvenliği](transport-security-with-windows-authentication.md)  
+ [Windows Kimlik Doğrulama ile Taşıma Güvenliği](transport-security-with-windows-authentication.md)  
  Windows güvenliği tarafından güvenliği sağlanmış bir istemciyi ve hizmeti gösterir.  
   
  [Anonim İstemci ile Aktarım Güvenliği](transport-security-with-an-anonymous-client.md)  
@@ -36,7 +36,7 @@ Bu bölümdeki konularda, bir dizi olası istemci ve hizmet güvenlik yapıland�
  [Anonim İstemci ile İleti Güvenliği](message-security-with-an-anonymous-client.md)  
  WCF ileti güvenliği tarafından güvenli hale getirilmiş bir istemciyi ve hizmeti gösterir.  
   
- [Kullanıcı Adı İstemcisi ile İleti Güvenliği](message-security-with-a-user-name-client.md)  
+ [Kullaıcı Adı İstemcisi ile İleti Güvenliği](message-security-with-a-user-name-client.md)  
  İstemci, istemcilerin bir etki alanı Kullanıcı adı ve parola kullanarak oturum açmasına izin veren bir Windows Forms uygulamasıdır.  
   
  [Sertifika İstemcisi ile İleti Güvenliği](message-security-with-a-certificate-client.md)  
@@ -82,4 +82,4 @@ Bu bölümdeki konularda, bir dizi olası istemci ve hizmet güvenlik yapıland�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenlik Kılavuzu ve En İyi Uygulamalar](security-guidance-and-best-practices.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

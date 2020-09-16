@@ -12,12 +12,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-ms.openlocfilehash: 4d775efc073f3aad745eff7a7707efdec06172c2
-ms.sourcegitcommit: 1c37a894c923bea021a3cc38ce7cba946357bbe1
+ms.openlocfilehash: 8b81f78f4ea28b3b9fca374029fe49f809826d8e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85104694"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558569"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Nasıl yapılır: genel derleme önbelleğinin içeriğini görüntüleme
 
@@ -38,7 +38,7 @@ gacutil /l
 ```
 
 > [!NOTE]
-> .NET Framework önceki sürümlerinde, [Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows kabuğu uzantısı, dosya Gezgini 'nde genel derleme önbelleğini görüntülemenize olanak sağlar. .NET Framework 4 ' ten başlayarak Shfusion.dll artık kullanılmıyor.
+> .NET Framework önceki sürümlerinde, [Shfusion.dll](/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows kabuğu uzantısı, dosya Gezgini 'nde genel derleme önbelleğini görüntülemenize olanak sağlar. .NET Framework 4 ' ten başlayarak Shfusion.dll artık kullanılmıyor.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

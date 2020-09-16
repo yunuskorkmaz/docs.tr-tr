@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 4edcd2645b28095f4bd18f4918b9afa5c893bd39
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: 80dac36199dd13abeab295d4b53a52615e7ae625
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662738"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559167"
 ---
 # <a name="observer-design-pattern"></a>Gözlemci Tasarım Deseni
 
@@ -47,7 +47,7 @@ Düzenin uygulanması için şunları sağlamanız gerekir:
 - Sağlayıcının observers 'a gönderdiği verileri içeren bir nesne. Bu nesnenin türü, ve arabirimlerinin genel tür parametresine karşılık gelir <xref:System.IObservable%601> <xref:System.IObserver%601> . Bu nesne uygulamayla aynı olsa da <xref:System.IObservable%601> , genellikle ayrı bir tür olur.
 
 > [!NOTE]
-> Gözlemci tasarım deseninin yanı sıra, ve arabirimleri kullanılarak oluşturulan kitaplıkları keşfetmek isteyebilirsiniz <xref:System.IObservable%601> <xref:System.IObserver%601> . Örneğin, [.net Için reaktif uzantıları (RX)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) , zaman uyumsuz programlamayı desteklemek için bir dizi genişletme YÖNTEMINDEN ve LINQ standart dizisi işleçlerinden oluşur.
+> Gözlemci tasarım deseninin yanı sıra, ve arabirimleri kullanılarak oluşturulan kitaplıkları keşfetmek isteyebilirsiniz <xref:System.IObservable%601> <xref:System.IObserver%601> . Örneğin, [.net Için reaktif uzantıları (RX)](/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) , zaman uyumsuz programlamayı desteklemek için bir dizi genişletme YÖNTEMINDEN ve LINQ standart dizisi işleçlerinden oluşur.
 
 ## <a name="implementing-the-pattern"></a>Kalıbı uygulama
 
@@ -58,9 +58,9 @@ Aşağıdaki örnekte, bir Havaalanı Bagaj talep bilgileri sistemi uygulamak i�
 
 Bir `BaggageHandler` sınıf, gelen fışıkları ve Bagaj talebi Carousels hakkında bilgi almaktan sorumludur. Dahili olarak, iki koleksiyon tutar:
 
-- `observers`-Güncelleştirilmiş bilgileri alacak istemciler koleksiyonu.
+- `observers` -Güncelleştirilmiş bilgileri alacak istemciler koleksiyonu.
 
-- `flights`-Bir fışıkları ve atanan Carousels koleksiyonu.
+- `flights` -Bir fışıkları ve atanan Carousels koleksiyonu.
 
 Her iki koleksiyon <xref:System.Collections.Generic.List%601> da sınıf oluşturucusunda oluşturulan genel nesneler tarafından temsil edilir `BaggageHandler` . Sınıfının kaynak kodu `BaggageHandler` Aşağıdaki örnekte gösterilmiştir.
 
@@ -83,7 +83,7 @@ Aşağıdaki örnek <xref:System.IObserver%601> adlı `ArrivalsMonitor` , Bagaj 
 [!code-csharp[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/observer.cs#4)]
 [!code-vb[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/observer.vb#4)]
 
-`ArrivalsMonitor`Sınıfı `Subscribe` ve `Unsubscribe` yöntemlerini içerir. `Subscribe`Yöntemi, sınıfının <xref:System.IDisposable> çağrısı tarafından döndürülen uygulamayı <xref:System.IObservable%601.Subscribe%2A> özel bir değişkene kaydetmesine olanak sağlar. `Unsubscribe`Yöntemi, sağlayıcının uygulamasını çağırarak, sınıfının bildirimlerden aboneliklerini kaldırma yapmasına olanak sağlar <xref:System.IDisposable.Dispose%2A> . `ArrivalsMonitor`,, ve yöntemlerinin uygulamalarını da sağlar <xref:System.IObserver%601.OnNext%2A> <xref:System.IObserver%601.OnError%2A> <xref:System.IObserver%601.OnCompleted%2A> . Yalnızca <xref:System.IObserver%601.OnNext%2A> uygulama önemli miktarda kod içerir. Yöntemi, <xref:System.Collections.Generic.List%601> gelen fışıklara ait kaynak havaalanları ve Bagaj 'nin kullanılabildiği Carousels hakkındaki bilgileri tutan özel, sıralanmış, genel bir nesne ile birlikte çalışıyor. `BaggageHandler`Sınıf yeni bir uçuş gelişini bildirirse, <xref:System.IObserver%601.OnNext%2A> Yöntem uygulama bu uçuş hakkındaki bilgileri listeye ekler. Sınıf, `BaggageHandler` uçuşın Bagaj 'nin kaldırılmış olduğunu bildirirse, <xref:System.IObserver%601.OnNext%2A> yöntemi listeden bu uçuşı kaldırır. Her değişiklik yapıldığında liste sıralanır ve konsola görüntülenir.
+`ArrivalsMonitor`Sınıfı `Subscribe` ve `Unsubscribe` yöntemlerini içerir. `Subscribe`Yöntemi, sınıfının <xref:System.IDisposable> çağrısı tarafından döndürülen uygulamayı <xref:System.IObservable%601.Subscribe%2A> özel bir değişkene kaydetmesine olanak sağlar. `Unsubscribe`Yöntemi, sağlayıcının uygulamasını çağırarak, sınıfının bildirimlerden aboneliklerini kaldırma yapmasına olanak sağlar <xref:System.IDisposable.Dispose%2A> . `ArrivalsMonitor` ,, ve yöntemlerinin uygulamalarını da sağlar <xref:System.IObserver%601.OnNext%2A> <xref:System.IObserver%601.OnError%2A> <xref:System.IObserver%601.OnCompleted%2A> . Yalnızca <xref:System.IObserver%601.OnNext%2A> uygulama önemli miktarda kod içerir. Yöntemi, <xref:System.Collections.Generic.List%601> gelen fışıklara ait kaynak havaalanları ve Bagaj 'nin kullanılabildiği Carousels hakkındaki bilgileri tutan özel, sıralanmış, genel bir nesne ile birlikte çalışıyor. `BaggageHandler`Sınıf yeni bir uçuş gelişini bildirirse, <xref:System.IObserver%601.OnNext%2A> Yöntem uygulama bu uçuş hakkındaki bilgileri listeye ekler. Sınıf, `BaggageHandler` uçuşın Bagaj 'nin kaldırılmış olduğunu bildirirse, <xref:System.IObserver%601.OnNext%2A> yöntemi listeden bu uçuşı kaldırır. Her değişiklik yapıldığında liste sıralanır ve konsola görüntülenir.
 
 Aşağıdaki örnek, sınıfının ve sınıfının iki örneğinin örneğini oluşturan uygulama giriş noktasını içerir `BaggageHandler` `ArrivalsMonitor` ve `BaggageHandler.BaggageStatus` gelen fışıklarla ilgili bilgileri eklemek ve kaldırmak için yöntemini kullanır. Her durumda, gözlemcilerin güncelleştirmeleri alır ve Bagaj talep bilgilerini doğru şekilde görüntüler.
 

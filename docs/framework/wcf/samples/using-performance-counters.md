@@ -2,12 +2,12 @@
 title: Performans Sayaçlarını Kullanma
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 0b63cdc145ff8806c26b255500bcb2a132e9ef9f
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b0f39303d000e2e9aab8fc5280f75ab9309c4d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596506"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553050"
 ---
 # <a name="using-performance-counters"></a>Performans Sayaçlarını Kullanma
 Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nasıl erişileceğini ve Kullanıcı tanımlı performans sayaçlarının nasıl oluşturulacağını gösterir. Bu örnek, [Başlarken](getting-started-sample.md)' i temel alır.  
@@ -17,7 +17,7 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nası
   
  Bu örnekte istemci, hizmetin dört yöntemini çağırır `ICalculator` . İstemci, Kullanıcı tarafından kesintiye gelinceye kadar bunu yapmaya devam eder. Hizmet değişmeden kalır.  
   
- Aşağıdaki örnek yapılandırmada gösterildiği gibi, hizmetinin Web. config dosyasının Tanılama bölümünde performans sayaçları etkinleştirilir.  
+ Performans sayaçları, aşağıdaki örnek yapılandırmada gösterildiği gibi, hizmet için Web.config dosyasının Tanılama bölümünde etkinleştirilir.  
   
 ```xml  
 <configuration>  
@@ -27,7 +27,7 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nası
 </configuration>  
 ```  
   
- Bu görev, [yapılandırma Düzenleyicisi aracı (SvcConfigEditor. exe)](../configuration-editor-tool-svcconfigeditor-exe.md)kullanılarak da yapılabilir.  
+ Bu görev, [yapılandırma Düzenleyicisi aracı (SvcConfigEditor.exe)](../configuration-editor-tool-svcconfigeditor-exe.md)kullanılarak da yapılabilir.  
   
  Performans sayaçları etkinleştirildiğinde, hizmet için tüm WCF performans sayacı paketi etkinleştirilir. .NET Framework, performans verilerini otomatik olarak üç düzeyde tutar: `ServiceModelService` , `ServiceModelEndpoint` ve `ServiceModelOperation` . Bu düzeylerin her biri, "çağrı", "saniyedeki çağrı" ve "güvenlik çağrıları yetkilendirilmemiş" gibi performans sayaçlarına sahiptir.  
   
@@ -55,11 +55,11 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nası
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Sayaçları etkinleştirmek üzere yapılandırma düzenleyicisini kullanmak için  
   
-1. SvcConfigEditor. exe ' nin bir örneğini açın.  
+1. SvcConfigEditor.exe bir örneğini açın.  
   
 2. Dosya menüsünde **Aç** ' a ve ardından **yapılandırma dosyası...** öğesine tıklayın.  
   
-3. Örnek uygulamanın hizmet klasörüne gidin ve Web. config dosyasını açın.  
+3. Örnek uygulamanın hizmet klasörüne gidin ve Web.config dosyasını açın.  
   
 4. Yapılandırma ağacında **Tanılamalar** ' a tıklayın.  
   
@@ -78,4 +78,4 @@ Bu örnek, Windows Communication Foundation (WCF) performans sayaçlarına nası
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric Izleme örnekleri](/previous-versions/appfabric/ff383407(v=azure.10))

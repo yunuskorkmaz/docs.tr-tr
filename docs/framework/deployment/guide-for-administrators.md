@@ -6,12 +6,12 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-ms.openlocfilehash: d58eac4f21e4f1069ac392aacb4e9818831e914c
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: b358f0909147e52293fd802bc98caa31b284d7b1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622659"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558725"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Yöneticiler için .NET Framework Dağıtım Kılavuzu
 
@@ -39,22 +39,22 @@ Bu konu aşağıdaki bölümleri içermektedir:
 
 Destekleyici altyapıyı kullanıyorsanız, .NET Framework yeniden dağıtılabilir paketini ağdaki bilgisayarlara dağıtmak için Configuration Manager kullanırsınız. Altyapının oluşturulması, beş birincil alanın oluşturulmasını ve tanımlanmasını gerektirir: koleksiyonlar, yazılım için bir paket ve program, dağıtım noktaları ve dağıtımlar.
 
-- **Koleksiyonlar** , .NET Framework dağıtıldığı kullanıcılar, Kullanıcı grupları veya bilgisayarlar gibi Configuration Manager kaynak gruplarıdır. Daha fazla bilgi için, Configuration Manager belge kitaplığındaki [Configuration Manager koleksiyonlara giriş](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
+- **Koleksiyonlar** , .NET Framework dağıtıldığı kullanıcılar, Kullanıcı grupları veya bilgisayarlar gibi Configuration Manager kaynak gruplarıdır. Daha fazla bilgi için, Configuration Manager belge kitaplığındaki [Configuration Manager koleksiyonlara giriş](/configmgr/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
 
-- **Paketler ve programlar** , genellikle bir istemci bilgisayara yüklenecek yazılım uygulamalarını temsil eder, ancak tek tek dosyalar, güncelleştirmeler ve hatta ayrı komutlar da içerebilir. Daha fazla bilgi için Configuration Manager belge kitaplığındaki [Configuration Manager Içindeki paketler ve programlar](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs) bölümüne bakın.
+- **Paketler ve programlar** , genellikle bir istemci bilgisayara yüklenecek yazılım uygulamalarını temsil eder, ancak tek tek dosyalar, güncelleştirmeler ve hatta ayrı komutlar da içerebilir. Daha fazla bilgi için Configuration Manager belge kitaplığındaki [Configuration Manager Içindeki paketler ve programlar](/configmgr/apps/deploy-use/packages-and-programs) bölümüne bakın.
 
-- **Dağıtım noktaları** , yazılımın istemci bilgisayarlarda çalışması için gereken dosyaları depolayan site sistem rolleridir Configuration Manager. Yapılandırma Yöneticisi istemcisi bir yazılım dağıtımı alıp işlediğinde, yazılımla ilişkili içeriği indirmek ve kurulum işlemini başlatmak için bir dağıtım noktasıyla temasa geçer. Daha fazla bilgi için bkz. Configuration Manager belge kitaplığındaki [Configuration Manager içerik yönetimi Için temel kavramlar](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) .
+- **Dağıtım noktaları** , yazılımın istemci bilgisayarlarda çalışması için gereken dosyaları depolayan site sistem rolleridir Configuration Manager. Yapılandırma Yöneticisi istemcisi bir yazılım dağıtımı alıp işlediğinde, yazılımla ilişkili içeriği indirmek ve kurulum işlemini başlatmak için bir dağıtım noktasıyla temasa geçer. Daha fazla bilgi için bkz. Configuration Manager belge kitaplığındaki [Configuration Manager içerik yönetimi Için temel kavramlar](/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management) .
 
 - **Dağıtımlar** , yazılım paketini yüklemek için belirtilen hedef koleksiyonun geçerli üyelerine yönlendirir.
 
 > [!IMPORTANT]
-> Bu konudaki yordamlar, bir paket ve program oluşturmak ve dağıtmak için normal ayarları içerir ve tüm olası ayarları kapsamayabilir. Diğer Configuration Manager dağıtım seçenekleri için, [Configuration Manager belge kitaplığı](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29)' na bakın.
+> Bu konudaki yordamlar, bir paket ve program oluşturmak ve dağıtmak için normal ayarları içerir ve tüm olası ayarları kapsamayabilir. Diğer Configuration Manager dağıtım seçenekleri için, [Configuration Manager belge kitaplığı](/previous-versions/system-center/system-center-2012-R2/gg682041(v=technet.10))' na bakın.
 
 <a name="deploying_in_a_test_environment"></a>
 
 ## <a name="deploying-the-net-framework"></a>.NET Framework'ü dağıtma
 
-Configuration Manager, kullanıcıların yükleme işlemiyle etkileşimde bulunmayan .NET Framework 4,5 sessiz yüklemesini dağıtmak için kullanabilirsiniz. Şu adımları uygulayın:
+Configuration Manager, kullanıcıların yükleme işlemiyle etkileşimde bulunmayan .NET Framework 4,5 sessiz yüklemesini dağıtmak için kullanabilirsiniz. Şu adımları izleyin:
 
 1. [Koleksiyon oluşturun](#creating_a_collection).
 
@@ -68,7 +68,7 @@ Configuration Manager, kullanıcıların yükleme işlemiyle etkileşimde bulunm
 
 ### <a name="create-a-collection"></a>Koleksiyon oluşturma
 
-Bu adımda, paket ve program dağıtacağınız bilgisayarları seçersiniz ve onları bir aygıt koleksiyonunda gruplandırırsınız. Yapılandırma Yöneticisi'nde bir koleksiyon oluşturmak için, doğrudan üyelik kurallarını (koleksiyon üyelerini el ile belirtirsiniz) veya sorgu kurallarını (koleksiyon üyelerini sizin belirttiğiniz ölçütlere göre Yapılandırma Yöneticisi belirler) kullanabilirsiniz. Sorgular ve doğrudan kurallar dahil Üyelik kuralları hakkında daha fazla bilgi için, Configuration Manager belge kitaplığındaki [Configuration Manager koleksiyonlara giriş](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
+Bu adımda, paket ve program dağıtacağınız bilgisayarları seçersiniz ve onları bir aygıt koleksiyonunda gruplandırırsınız. Yapılandırma Yöneticisi'nde bir koleksiyon oluşturmak için, doğrudan üyelik kurallarını (koleksiyon üyelerini el ile belirtirsiniz) veya sorgu kurallarını (koleksiyon üyelerini sizin belirttiğiniz ölçütlere göre Yapılandırma Yöneticisi belirler) kullanabilirsiniz. Sorgular ve doğrudan kurallar dahil Üyelik kuralları hakkında daha fazla bilgi için, Configuration Manager belge kitaplığındaki [Configuration Manager koleksiyonlara giriş](/configmgr/core/clients/manage/collections/introduction-to-collections) bölümüne bakın.
 
 Bir koleksiyon oluşturmak için:
 
@@ -106,9 +106,9 @@ Bir paket oluşturmak için:
 
 4. **Paket ve program oluşturma Sihirbazı**' nın **paket** sayfasında, aşağıdaki bilgileri girin:
 
-    - Ada`.NET Framework 4.5`
+    - Ad: `.NET Framework 4.5`
 
-    - Üreticisini`Microsoft`
+    - Üreticisini `Microsoft`
 
     - Dil. `English (US)`
 
@@ -136,7 +136,7 @@ Aşağıdaki tablo, 7. adımda belirtilen komut satırı seçeneklerini açıkla
 |**/norestart**|Kurulum programının otomatik olarak yeniden başlatılmasını önler. Bu seçeneği kullanırsanız, Yapılandırma Yöneticisi'nin bilgisayarı yeniden başlatmayı üstlenmesi gerekir.|
 |**/ChainingPackage** *PackageName*|Zincirlemeyi yapan paketin adını belirtir. Bu bilgiler, Microsoft Müşteri Deneyimini Geliştirme Programı (CEIP) için kaydolup diğer yükleme oturum bilgileriyle birlikte raporlanır. Paket adı boşluk içeriyorsa, çift tırnak işaretlerini sınırlayıcılar olarak kullanın; Örneğin: **/chainingpackage "zincirleme ürün"**.|
 
-Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşime girmez ve zincirleme uygulama, dönüş kodunu yakalayıp yeniden başlatmayı işleymelidir; bkz. [bir yükleme paketinden Ilerleme bilgileri alma](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
+Bu adımlar, .NET Framework 4.5 adlı bir paket oluşturur. Program, .NET Framework 4.5'in sessiz bir kurulumunu dağıtır. Sessiz yüklemede, kullanıcılar yükleme işlemiyle etkileşime girmez ve zincirleme uygulama, dönüş kodunu yakalayıp yeniden başlatmayı işleymelidir; bkz. [bir yükleme paketinden Ilerleme bilgileri alma](/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 
@@ -162,7 +162,7 @@ Bir önceki bölümde oluşturulan .NET Framework 4.5 paketi için bir dağıtı
 
 8. Sihirbazı tamamlayın.
 
-Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paketi ve programı dağıtmadan önce, dağıtım noktasında yüklü olduğunu doğrulayın; Configuration Manager belge kitaplığındaki [Configuration Manager ile dağıttığınız Içeriği izlemek](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) Için "içerik durumu izleme" bölümüne bakın.
+Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz tüm bilgileri içerir. Paketi ve programı dağıtmadan önce, dağıtım noktasında yüklü olduğunu doğrulayın; Configuration Manager belge kitaplığındaki [Configuration Manager ile dağıttığınız Içeriği izlemek](/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed) Için "içerik durumu izleme" bölümüne bakın.
 
 <a name="deploying_package"></a>
 
@@ -189,7 +189,7 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 9. Sihirbazın **Kullanıcı deneyimi** sayfasında varsayılan değerleri kullanın ve **İleri**' yi seçin.
 
     > [!WARNING]
-    > Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz. [tanıtım adı özellikleri: Zamanlama sekmesi](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+    > Üretim ortamınızın, dağıtım çizelgesi için farklı seçimler olmasını gerektiren ilkeleri olabilir. Bu seçenekler hakkında daha fazla bilgi için bkz. [tanıtım adı özellikleri: Zamanlama sekmesi](/previous-versions/system-center/configuration-manager-2007/bb694016(v=technet.10)).
 
 10. Sihirbazın **dağıtım noktaları** sayfasında, varsayılan değerleri kullanın ve **İleri**' yi seçin.
 
@@ -213,19 +213,19 @@ Paket şimdi, .NET Framework 4.5'i sessizce dağıtmak gereksinim duyduğunuz t�
 
 **SQL Server 2008:**
 
-- [SQL Server 2008 (SQL Server video) yükleniyor](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))
+- [SQL Server 2008 (SQL Server video) yükleniyor](/previous-versions/sql/sql-server-2008/dd299415(v=sql.100))
 
 - [SQL Server 2008 güvenliğe genel bakış veritabanı yöneticileri](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)
 
 **System Center 2012 Configuration Manager (yönetim noktası, dağıtım noktası):**
 
-- [System Center 2012 Configuration Manager için Site Yönetimi](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)
+- [System Center 2012 Configuration Manager için Site Yönetimi](/previous-versions/system-center/system-center-2012-R2/gg681983(v=technet.10))
 
-- [Tek site planlama ve dağıtım Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)
+- [Tek site planlama ve dağıtım Configuration Manager](/previous-versions/system-center/configuration-manager-2007/bb680961(v=technet.10))
 
 **Windows bilgisayarlar için System Center 2012 Configuration Manager istemcisi:**
 
-- [System Center 2012 Configuration Manager için İstemci Dağıtma](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)
+- [System Center 2012 Configuration Manager için İstemci Dağıtma](/previous-versions/system-center/system-center-2012-R2/gg699391(v=technet.10))
 
 <a name="troubleshooting"></a>
 
@@ -267,7 +267,7 @@ Ayrıntılı bilgilerin bağlantıları için bkz. sonraki bölüm, [indirme hat
 
 - [Arka Plan Akıllı Aktarım Hizmeti (BITS) hata kodları](/windows/desktop/Bits/bits-return-values)
 
-- [URL bilinen adı hata kodları](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)
+- [URL bilinen adı hata kodları](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145(v=vs.85))
 
 - [WinHttp hata kodları](/windows/desktop/WinHttp/error-messages)
 
@@ -275,7 +275,7 @@ Diğer hata kodları:
 
 - [Windows Installer hata kodları](/windows/desktop/msi/error-codes)
 
-- [Windows Update Aracısı sonuç kodları](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
+- [Windows Update Aracısı sonuç kodları](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc720442(v=ws.10))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

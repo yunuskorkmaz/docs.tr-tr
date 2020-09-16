@@ -19,12 +19,12 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: ae86aed773a9a13f102b1ad111cac5a3ee563508
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 12ef6724a76ec59bd412427a0a353565b1be2c8e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517275"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558423"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Yerel Görüntü Oluşturucu)
 
@@ -56,7 +56,7 @@ Windows 8 ' de, [yerel görüntü görevi](#native-image-task)' ne bakın.
 Ngen.exe ve yerel görüntü hizmetini kullanma hakkında daha fazla bilgi için bkz. [Native Image Service](#native-image-service).
 
 > [!NOTE]
-> .NET Framework 1,0 ve 1,1 sürümleri için Ngen.exe sözdizimi, [Yerel Görüntü Oluşturucu (Ngen.exe) eski sözdiziminde](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))bulunabilir.
+> .NET Framework 1,0 ve 1,1 sürümleri için Ngen.exe sözdizimi, [Yerel Görüntü Oluşturucu (Ngen.exe) eski sözdiziminde](/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))bulunabilir.
 
 Bu araç, Visual Studio ile birlikte otomatik olarak yüklenir. Aracı çalıştırmak için, Visual Studio için Geliştirici Komut İstemi (veya Windows 7 ' de Visual Studio komut Istemi) kullanın. Daha fazla bilgi için bkz. [komut istemleri](developer-command-prompt-for-vs.md).
 
@@ -78,18 +78,18 @@ Aşağıdaki tabloda, her birinin sözdizimi gösterilmektedir `action` . Tek te
 
 |Eylem|Açıklama|
 |------------|-----------------|
-|`install`[ `assemblyName` &#124; `assemblyPath` ] [ `scenarios` ] [ `config` ] [ `/queue` [ `:` { `1`&#124;`2`&#124;`3` }]]|Bir derleme ve bağımlılıkları için yerel görüntüler oluştur ve görüntüleri yerel görüntü önbelleğine yükle.<br /><br /> `/queue`Belirtilmişse, eylem yerel görüntü hizmeti için sıraya alınır. Varsayılan öncelik 3'tür. [Öncelik düzeyleri](#PriorityTable) tablosuna bakın.|
-|`uninstall`[ `assemblyName` &#124; `assemblyPath` ] [ `scenarios` ] [ `config` ]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Note:**  .NET Framework 4 ' te başlayarak, eylem `uninstall` * artık desteklenmez.|
+|`install` [ `assemblyName` &#124; `assemblyPath` ] [ `scenarios` ] [ `config` ] [ `/queue` [ `:` { `1`&#124;`2`&#124;`3` }]]|Bir derleme ve bağımlılıkları için yerel görüntüler oluştur ve görüntüleri yerel görüntü önbelleğine yükle.<br /><br /> `/queue`Belirtilmişse, eylem yerel görüntü hizmeti için sıraya alınır. Varsayılan öncelik 3'tür. [Öncelik düzeyleri](#PriorityTable) tablosuna bakın.|
+|`uninstall` [ `assemblyName` &#124; `assemblyPath` ] [ `scenarios` ] [ `config` ]|Bir derleme ve bağımlılıklarının yerel görüntülerini yerel görüntü önbelleğinden sil.<br /><br /> Tek bir görüntüyü ve bağımlılıklarını kaldırmak için, görüntüyü yüklemek için kullanılan aynı komut satırı bağımsız değişkenlerini kullanın. **Note:**  .NET Framework 4 ' te başlayarak, eylem `uninstall` * artık desteklenmez.|
 |`update` [`/queue`]|Geçersiz olan yerel görüntüleri güncelleştir.<br /><br /> `/queue`Belirtilmişse, güncelleştirmeler yerel görüntü hizmeti için sıraya alınır. Güncelleştirmeler her zaman 3 önceliğindedir ve bilgisayar boşta olduğunda çalışır.|
-|`display`[ `assemblyName` &#124; `assemblyPath` ]|Bir derleme ve bağımlılıkları için yerel görüntülerin durumunu görüntüle.<br /><br /> Eğer bağımsız değişken sağlanmazsa, yerel görüntü önbelleğindeki her şey görüntülenir.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -veya-<br /><br /> `eqi`[1&#124;2&#124;3]|Sıraya alınan derleme işlerini yürüt.<br /><br /> Eğer bir öncelik belirtilirse, ona eşit veya daha büyük önceliğe sahip derleme işleri yürütülür. Eğer öncelik belirtilmezse, sıraya alınan tüm derleme işleri yürütülür.|
-|`queue`{ `pause` &#124; `continue` &#124; `status` }|Yerel görüntü hizmetini duraklat, duraklatılan hizmetin devam etmesine izin ver veya hizmetin durumunu sorgula.|
+|`display` [ `assemblyName` &#124; `assemblyPath` ]|Bir derleme ve bağımlılıkları için yerel görüntülerin durumunu görüntüle.<br /><br /> Eğer bağımsız değişken sağlanmazsa, yerel görüntü önbelleğindeki her şey görüntülenir.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -veya-<br /><br /> `eqi` [1&#124;2&#124;3]|Sıraya alınan derleme işlerini yürüt.<br /><br /> Eğer bir öncelik belirtilirse, ona eşit veya daha büyük önceliğe sahip derleme işleri yürütülür. Eğer öncelik belirtilmezse, sıraya alınan tüm derleme işleri yürütülür.|
+|`queue` { `pause` &#124; `continue` &#124; `status` }|Yerel görüntü hizmetini duraklat, duraklatılan hizmetin devam etmesine izin ver veya hizmetin durumunu sorgula.|
 
 <a name="ArgumentTable"></a>
 
 ## <a name="arguments"></a>Arguments
 
-|Bağımsız Değişken|Açıklama|
+|Bağımsız Değişken|Description|
 |--------------|-----------------|
 |`assemblyName`|Derlemenin tam görünen adı. Örneğin, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Note:**  `myAssembly`Ve eylemleri için gibi kısmi bir derleme adı sağlayabilirsiniz `display` `uninstall` . <br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
 |`assemblyPath`|Derlemenin açık yolu. Tam veya göreli bir yol belirtebilirsiniz.<br /><br /> Eğer bir yol belirtmeden dosya adı belirtilseniz, derleme geçerli dizinde bulunmalıdır.<br /><br /> Her Ngen.exe komut satırında yalnızca bir derleme belirtilebilir.|
@@ -98,7 +98,7 @@ Aşağıdaki tabloda, her birinin sözdizimi gösterilmektedir `action` . Tek te
 
 ## <a name="priority-levels"></a>Öncelik Düzeyleri
 
-|Öncelik|Açıklama|
+|Öncelik|Description|
 |--------------|-----------------|
 |`1`|Yerel görüntüler, boşta kalma süresi beklenmeden hemen oluşturulur ve yüklenir.|
 |`2`|Yerel görüntüler boşta kalma süresi beklenmeden, ancak tüm 1 öncelikli eylemler (ve bağımlılıkları) tamamlandıktan sonra yüklenir.|
@@ -118,7 +118,7 @@ Aşağıdaki tabloda, her birinin sözdizimi gösterilmektedir `action` . Tek te
 
 ## <a name="config"></a>Config
 
-|Yapılandırma|Açıklama|
+|Yapılandırma|Description|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Belirtilen çalıştırılabilir derlemesinin yapılandırmasını kullan.<br /><br /> Ngen.exe, bağımlılıklara bağlarken yükleyici ile aynı kararları almalıdır. Çalışma zamanında paylaşılan bir bileşen yüklendiğinde, yöntemi kullanılarak, <xref:System.Reflection.Assembly.Load%2A> uygulamanın yapılandırma dosyası paylaşılan bileşen için yüklenen bağımlılıkları belirler — örneğin, yüklenen bir bağımlılığın sürümü. `/ExeConfig`Anahtar, çalışma zamanında hangi bağımlılıkların yüklenebileceğine ilişkin Ngen.exe rehberlik sağlar.|
 |`/AppBase:` `directoryPath`|Bağımlılıkları bulurken, uygulama tabanı olarak belirtilen dizini kullan.|
@@ -304,7 +304,7 @@ Sıkı bağlama, uygulamanızın performansının kritik olduğu senaryolarda y�
 
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>Bağımlılık için bağlama ipucu belirtme
 
-<xref:System.Runtime.CompilerServices.DependencyAttribute>Belirtilen bağımlılığın yükleneolasılığını belirtmek için bir derlemeye uygulayın. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>Sabit bağlamanın uygun olduğunu gösterir, <xref:System.Runtime.CompilerServices.LoadHint.Default> bağımlılığın varsayılan olarak kullanılması gerektiğini belirtir ve <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> sabit bağlamanın uygun olmadığını gösterir.
+<xref:System.Runtime.CompilerServices.DependencyAttribute>Belirtilen bağımlılığın yükleneolasılığını belirtmek için bir derlemeye uygulayın. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> Sabit bağlamanın uygun olduğunu gösterir, <xref:System.Runtime.CompilerServices.LoadHint.Default> bağımlılığın varsayılan olarak kullanılması gerektiğini belirtir ve <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> sabit bağlamanın uygun olmadığını gösterir.
 
 Aşağıdaki kod, iki bağlılığı olan bir derlemenin özniteliklerini gösterir. İlk bağımlılık (Assembly1) sıkı bağlama için uygun bir adaydır ve ikinci bağımlılık (Assembly2) değildir.
 
@@ -462,7 +462,7 @@ Bir bağımlılık kaldırmak için yüklemek için kullanılan aynı komut sat�
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-Genel bütünleştirilmiş kod önbelleğindeki bir derleme için yerel görüntü oluşturmak için, derlemenin görünen adını kullanın. Örneğin:
+Genel bütünleştirilmiş kod önbelleğindeki bir derleme için yerel görüntü oluşturmak için, derlemenin görünen adını kullanın. Örnek:
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -568,7 +568,7 @@ Yerel görüntü görevi, her bir mimariyi hedefleyen uygulamalar için derlemey
 |Görev adı|32 bit bilgisayar|64 bit bilgisayar|
 |---------------|----------------------|----------------------|
 |NET Framework NGEN v 4.0.30319|Yes|Yes|
-|NET Framework NGEN v 4.0.30319 64|Hayır|Evet|
+|NET Framework NGEN v 4.0.30319 64|Hayır|Yes|
 
 Yerel görüntü görevi, Windows 8 veya sonraki sürümlerde çalışırken .NET Framework 4,5 ve sonraki sürümlerinde kullanılabilir. Windows 'un önceki sürümlerinde, .NET Framework [yerel görüntü hizmetini](#native-image-service)kullanır.
 
@@ -612,7 +612,7 @@ ngen update /queue
 
 `update`Eylem, yalnızca kullananlarla değil, geçersiz kılınan tüm yerel görüntüleri yeniden oluşturur `MyComponent` .
 
-Uygulamanız birçok kökten oluşuyorsa, ertelenmiş eylemlerin önceliğini kontrol edebilirsiniz. Aşağıdaki komutlar, üç kök yüklemeyi sıraya alma. `Assembly1`, boşta kalma süresi beklememeden önce yüklenir. `Assembly2`, boşta kalma süresi beklememeden da yüklenir, ancak tüm öncelik 1 eylemleri tamamlandıktan sonra. `Assembly3`, hizmet bilgisayarın boşta olduğunu algıladığında yüklenir.
+Uygulamanız birçok kökten oluşuyorsa, ertelenmiş eylemlerin önceliğini kontrol edebilirsiniz. Aşağıdaki komutlar, üç kök yüklemeyi sıraya alma. `Assembly1` , boşta kalma süresi beklememeden önce yüklenir. `Assembly2` , boşta kalma süresi beklememeden da yüklenir, ancak tüm öncelik 1 eylemleri tamamlandıktan sonra. `Assembly3` , hizmet bilgisayarın boşta olduğunu algıladığında yüklenir.
 
 ```console
 ngen install Assembly1 /queue:1

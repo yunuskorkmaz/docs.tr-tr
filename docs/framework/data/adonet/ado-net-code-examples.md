@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 54df0e253716c970cf23446434d96b104b8e9b03
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d12c7c7dcbc3a24cf51ade5481f59715c4c4d88
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287174"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555113"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET kod örnekleri
 
@@ -59,7 +59,7 @@ Bu örnekteki kod, Microsoft Access Northwind örnek veritabanına bağlanabildi
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)]
 
 ### <a name="oracleclient"></a>OracleClient
-Bu örnekteki kod, TANıTıMA bir bağlantı olduğunu varsayar. Bir Oracle sunucusunda MÜŞTERI. System. Data. OracleClient. dll ' ye de bir başvuru eklemeniz gerekir. Kod, içindeki verileri döndürür <xref:System.Data.OracleClient.OracleDataReader> .
+Bu örnekteki kod, TANıTıMA bir bağlantı olduğunu varsayar. Bir Oracle sunucusunda MÜŞTERI. Ayrıca System.Data.OracleClient.dll bir başvuru eklemeniz gerekir. Kod, içindeki verileri döndürür <xref:System.Data.OracleClient.OracleDataReader> .
 
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
@@ -138,7 +138,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>Tür ObjectQuery
-Bu örnekteki kod, <xref:System.Data.Objects.ObjectQuery%601> verileri kategori nesneleri olarak döndürmek için bir kullanır. Daha fazla bilgi için bkz. [nesne sorguları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
+Bu örnekteki kod, <xref:System.Data.Objects.ObjectQuery%601> verileri kategori nesneleri olarak döndürmek için bir kullanır. Daha fazla bilgi için bkz. [nesne sorguları](/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100)).
 
 ```csharp
 using System;
@@ -345,6 +345,6 @@ End Class
 
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)
 - [ADO.NET’te Veri Alma ve Değiştirme](retrieving-and-modifying-data.md)
-- [Veri uygulamaları oluşturma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
-- [Varlık Veri Modeli sorgulama (Entity Framework görevler)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
-- [Nasıl yapılır: anonim tür nesneleri döndüren bir sorgu yürütme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
+- [Veri uygulamaları oluşturma](/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Varlık Veri Modeli sorgulama (Entity Framework görevler)](/previous-versions/bb738455(v=vs.90))
+- [Nasıl yapılır: anonim tür nesneleri döndüren bir sorgu yürütme](/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))

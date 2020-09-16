@@ -2,12 +2,12 @@
 title: İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
-ms.openlocfilehash: 0a09e387a4f964441f11d07a84bd492345d5b691
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 91a1b4bab3ac47f41821ad69228310c3993cf037
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84578883"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555048"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>İzleme için Güvenlikle İlgili Noktalar ve Faydalı İpuçları
 Bu konu başlığı altında, gizli bilgilerin sunulanlarından nasıl koruyabileceğiniz ve WebHost kullanırken yararlı olan ipuçları açıklanmaktadır.  
@@ -28,7 +28,7 @@ Bu konu başlığı altında, gizli bilgilerin sunulanlarından nasıl koruyabil
   
 - Bir Web tarayıcısı kullanarak bir dış tarafın erişmesini engellemek için, WebHost vroot ortak dizininin dışında olması gereken günlük dosyası konumu için mutlak bir yol belirtin.  
   
- Varsayılan olarak, Kullanıcı adı ve parola gibi anahtarlar ve kişisel bilgiler (PII), izlemelerde ve günlüğe kaydedilen iletilerde günlüğe kaydedilmez. Ancak Makine Yöneticisi, makinede `enableLoggingKnownPII` `machineSettings` çalışan uygulamaların bilinen kişisel olarak tanımlanabilen BILGILERI (PII) şu şekilde günlüğe kaydetmek için Machine. config dosyasının öğesindeki özniteliğini kullanabilir:  
+ Varsayılan olarak, Kullanıcı adı ve parola gibi anahtarlar ve kişisel bilgiler (PII), izlemelerde ve günlüğe kaydedilen iletilerde günlüğe kaydedilmez. Ancak Makine Yöneticisi, `enableLoggingKnownPII` `machineSettings` makinede çalışan uygulamaların bilinen kişisel olarak tanımlanabilen BILGILERI (PII) şu şekilde günlüğe kaydetmek için Machine.config dosyasının öğesindeki özniteliğini kullanabilir:  
   
 ```xml  
 <configuration>  
@@ -38,7 +38,7 @@ Bu konu başlığı altında, gizli bilgilerin sunulanlarından nasıl koruyabil
 </configuration>
 ```  
   
- Daha sonra bir uygulama dağıtıcı, bu `logKnownPii` özniteliği App. config veya Web. config dosyasında kullanarak PII günlüğünü aşağıdaki şekilde etkinleştirebilir:  
+ Daha sonra bir uygulama dağıtıcısı, `logKnownPii` aşağıdaki gıbı PII günlüğünü etkinleştirmek için App.config ya da Web.config dosyasında özniteliğini kullanabilir:  
   
 ```xml  
 <system.diagnostics>  
@@ -57,7 +57,7 @@ Bu konu başlığı altında, gizli bilgilerin sunulanlarından nasıl koruyabil
   
  Yalnızca her iki ayar de `true` PII günlüğü etkin olduğunda. İki anahtar birleşimi, her bir uygulama için bilinen PII 'yi günlüğe kaydetme esnekliğini sağlar.  
   
- Bir yapılandırma dosyasında iki veya daha fazla özel kaynak belirtirseniz, yalnızca ilk kaynağın özniteliklerinin okunup okunduğuna dikkat edin. Diğerleri yok sayılır. Bu, aşağıdaki App. config, File, PII için her iki kaynak için de PII günlüğü, ikinci kaynak için açık olarak etkinleştirilmiş olsa da bu şekilde günlüğe kaydedilmez.  
+ Bir yapılandırma dosyasında iki veya daha fazla özel kaynak belirtirseniz, yalnızca ilk kaynağın özniteliklerinin okunup okunduğuna dikkat edin. Diğerleri yok sayılır. Diğer bir deyişle, aşağıdaki App.config, dosya, PII her iki kaynak için de PII günlüğü, ikinci kaynak için açık olarak etkinleştirilmiş olsa da bu şekilde günlüğe kaydedilmez.  
   
 ```xml  
 <system.diagnostics>  
@@ -80,13 +80,13 @@ Bu konu başlığı altında, gizli bilgilerin sunulanlarından nasıl koruyabil
 </system.diagnostics>  
 ```  
   
- `<machineSettings enableLoggingKnownPii="Boolean"/>`Öğesi Machine. config dosyasının dışında varsa, sistem bir oluşturur <xref:System.Configuration.ConfigurationErrorsException> .  
+ `<machineSettings enableLoggingKnownPii="Boolean"/>`Öğe Machine.config dosyanın dışında varsa, sistem bir oluşturur <xref:System.Configuration.ConfigurationErrorsException> .  
   
  Değişiklikler yalnızca uygulama başlatıldığında veya yeniden başlatıldığında geçerli olur. Her iki öznitelik olarak ayarlandığında bir olay başlangıçta günlüğe kaydedilir `true` . Bir olay, `logKnownPii` olarak ayarlanmışsa günlüğe kaydedilir `true` `enableLoggingKnownPii` `false` .  
   
  PII günlüğü hakkında daha fazla bilgi için bkz. [PII güvenlik kilitleme](../../samples/pii-security-lockdown.md) örneği.  
   
- Makine Yöneticisi ve uygulama dağıtıcı, bu iki anahtarı kullanırken çok dikkatli olmalıdır. PII günlüğü etkinse, güvenlik anahtarları ve PII günlüğe kaydedilir. Devre dışıysa, hassas ve uygulamaya özgü veriler hala ileti üstbilgilerinde ve gövdede günlüğe kaydedilir. Gizlilikle ilgili daha kapsamlı bir tartışma ve PII 'nin gösterilmesini sağlama hakkında daha fazla bilgi için bkz. [Kullanıcı gizliliği](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
+ Makine Yöneticisi ve uygulama dağıtıcı, bu iki anahtarı kullanırken çok dikkatli olmalıdır. PII günlüğü etkinse, güvenlik anahtarları ve PII günlüğe kaydedilir. Devre dışıysa, hassas ve uygulamaya özgü veriler hala ileti üstbilgilerinde ve gövdede günlüğe kaydedilir. Gizlilikle ilgili daha kapsamlı bir tartışma ve PII 'nin gösterilmesini sağlama hakkında daha fazla bilgi için bkz. [Kullanıcı gizliliği](/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
  Buna ek olarak, ileti göndericisinin IP adresi bağlantı yönelimli aktarımlar için bağlantı başına bir kez günlüğe kaydedilir ve aksi takdirde ileti başına bir kez gönderilir. Bu, gönderen onay olmadan yapılır. Ancak, bu günlük yalnızca, canlı hata ayıklama haricinde, üretim ortamında varsayılan veya önerilen izleme düzeyleri olmayan bilgi veya ayrıntılı izleme düzeylerinde oluşur.  
   

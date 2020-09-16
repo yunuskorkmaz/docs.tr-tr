@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: fc9cd8ac3819c6a02019c871e7bd45ceb4c2cef7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "81242835"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552316"
 ---
 # <a name="application-settings-schema"></a>Uygulama ayarları şeması
 
 Uygulama ayarları bir Windows Forms veya ASP.NET uygulamasının uygulama kapsamlı ve kullanıcı kapsamlı ayarları depolamasına ve almasına izin verir. Bu bağlamda, bir *ayar* , uygulamaya özgü veya geçerli kullanıcıya özgü olabilecek herhangi bir bilgi olan bir veritabanı bağlantı dizesinden kullanıcının tercih edilen varsayılan pencere boyutuna kadar her şey olabilir.
 
-Varsayılan olarak, bir Windows Forms uygulamasındaki uygulama ayarları, <xref:System.Configuration.LocalFileSettingsProvider> ayarları BIR XML yapılandırma dosyasında depolamak için .NET yapılandırma sistemini kullanan sınıfını kullanır. Uygulama ayarları tarafından kullanılan dosyalar hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](../../winforms/advanced/application-settings-architecture.md).
+Varsayılan olarak, bir Windows Forms uygulamasındaki uygulama ayarları, <xref:System.Configuration.LocalFileSettingsProvider> ayarları BIR XML yapılandırma dosyasında depolamak için .NET yapılandırma sistemini kullanan sınıfını kullanır. Uygulama ayarları tarafından kullanılan dosyalar hakkında daha fazla bilgi için bkz. [uygulama ayarları mimarisi](/dotnet/desktop/winforms/advanced/application-settings-architecture).
 
 Uygulama ayarları, kullandığı yapılandırma dosyalarının bir parçası olarak aşağıdaki öğeleri tanımlar.
 
@@ -90,5 +90,5 @@ Aşağıdaki örnek, uygulama kapsamlı iki ayarı ve kullanıcı kapsamlı iki 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Uygulama Ayarlarına Genel Bakış](../../winforms/advanced/application-settings-overview.md)
-- [Uygulama Ayarları Mimarisi](../../winforms/advanced/application-settings-architecture.md)
+- [Uygulama Ayarlarına Genel Bakış](/dotnet/desktop/winforms/advanced/application-settings-overview)
+- [Uygulama Ayarları Mimarisi](/dotnet/desktop/winforms/advanced/application-settings-architecture)

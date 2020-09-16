@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-ms.openlocfilehash: f1cf84b8f15de1e3bd19a391767f5573f01ff806
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: cde574be6d4fadb78805548cff1b42ee354bf36f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420519"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558959"
 ---
 # <a name="com-wrappers"></a>COM Sarmalayıcıları
 COM, .NET çalışma zamanı nesne modelinden çeşitli önemli yollarla farklılık gösterir:  
@@ -34,8 +34,8 @@ COM, .NET çalışma zamanı nesne modelinden çeşitli önemli yollarla farklı
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [.NET Framework 'de gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
+- [.NET Framework 'de gelişmiş COM birlikte çalışabilirlik](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Çalışma Zamanı Aranabilir Sarmalayıcısı](runtime-callable-wrapper.md)
 - [COM Aranabilir Sarmalayıcısı](com-callable-wrapper.md)
-- [.NET Framework 'de standart sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
-- [Nasıl yapılır: .NET Framework içindeki çalışma zamanı çağrılabilir sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))
+- [.NET Framework 'de standart sarmalayıcıları özelleştirme](/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
+- [Nasıl yapılır: .NET Framework içindeki çalışma zamanı çağrılabilir sarmalayıcıları özelleştirme](/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

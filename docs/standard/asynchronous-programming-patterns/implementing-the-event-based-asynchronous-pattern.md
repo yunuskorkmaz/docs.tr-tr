@@ -18,12 +18,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: e36ae21e1e03c8c5c688b7446f660ab1bb666a94
-ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
+ms.openlocfilehash: 466a0dd8a827cd869894106a0901bdab89601e25
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84904383"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559102"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Olay Tabanlı Zaman Uyumsuz Deseni Uygulama
 
@@ -33,7 +33,7 @@ Olay tabanlı zaman uyumsuz model, zaman uyumsuz özellikleri olan bir sınıfı
 
 Olay tabanlı zaman uyumsuz model uygulayan bir örnek için bkz. [nasıl yapılır: olay tabanlı zaman uyumsuz kalıbı destekleyen bir bileşen uygulama](component-that-supports-the-event-based-asynchronous-pattern.md).
 
-Basit zaman uyumsuz işlemler için <xref:System.ComponentModel.BackgroundWorker> uygun bileşeni bulabilirsiniz. Hakkında daha fazla bilgi için <xref:System.ComponentModel.BackgroundWorker> bkz. [nasıl yapılır: arka planda işlem çalıştırma](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md).
+Basit zaman uyumsuz işlemler için <xref:System.ComponentModel.BackgroundWorker> uygun bileşeni bulabilirsiniz. Hakkında daha fazla bilgi için <xref:System.ComponentModel.BackgroundWorker> bkz. [nasıl yapılır: arka planda işlem çalıştırma](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background).
 
 Aşağıdaki listede, bu konuda açıklanan olay tabanlı zaman uyumsuz düzenin özellikleri açıklanmaktadır.
 
@@ -167,7 +167,7 @@ Zaman uyumsuz bir işlemin işlem sırasında ilerleme durumunu raporlamak için
 
 - Bu olayı aşağıdaki şekilde adlandırın:
 
-  - `ProgressChanged`sınıfta birden çok zaman uyumsuz işlem varsa (veya gelecekteki sürümlerde birden çok zaman uyumsuz işlem içermesi için büyüme bekleniyorsa);
+  - `ProgressChanged` sınıfta birden çok zaman uyumsuz işlem varsa (veya gelecekteki sürümlerde birden çok zaman uyumsuz işlem içermesi için büyüme bekleniyorsa);
 
   - _MethodName_**ProgressChanged & lt** sınıfında tek bir zaman uyumsuz işlem varsa MethodName.
 
@@ -263,8 +263,8 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bir Bileşeni Uygulama](component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka Planda İşlem Çalıştırma](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
+- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](/dotnet/desktop/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation)
 - [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](event-based-asynchronous-pattern-eap.md)

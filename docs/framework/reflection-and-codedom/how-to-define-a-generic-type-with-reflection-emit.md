@@ -11,12 +11,12 @@ helpviewer_keywords:
 - generics [.NET Framework], dynamic types
 - reflection emit, generic types
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
-ms.openlocfilehash: fe8fb731fd160ab87e5c65debf367a96bc0dea2a
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: bf308b07bf4b2a863b9825e7c8d9f412bdb6d1b8
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865131"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559219"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Nasıl yapılır: Yansıma Yayma ile Genel Tür Tanımlama
 Bu konu, iki tür parametresiyle basit genel bir tür oluşturmayı, sınıf kısıtlamalarını, arabirim kısıtlamalarını ve özel kısıtlamaları tür parametrelerine uygulamayı ve sınıfın tür parametrelerini parametre türleri ve dönüş türleri olarak kullanan üyelerin nasıl oluşturulacağını gösterir.  
@@ -64,7 +64,7 @@ Bu konu, iki tür parametresiyle basit genel bir tür oluşturmayı, sınıf kı
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7. Bir alan tanımlayın. Bu örnekte, alanın türü tür parametresiyle belirtilir `TFirst` . <xref:System.Reflection.Emit.GenericTypeParameterBuilder>' dan türetilir <xref:System.Type> , bu nedenle, genel tür parametrelerini bir tür kullanılabilir her yerde kullanabilirsiniz.  
+7. Bir alan tanımlayın. Bu örnekte, alanın türü tür parametresiyle belirtilir `TFirst` . <xref:System.Reflection.Emit.GenericTypeParameterBuilder> ' dan türetilir <xref:System.Type> , bu nedenle, genel tür parametrelerini bir tür kullanılabilir her yerde kullanabilirsiniz.  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
@@ -97,7 +97,7 @@ Bu konu, iki tür parametresiyle basit genel bir tür oluşturmayı, sınıf kı
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. Yöntemi çağırın. `ExampleMethod`Genel değildir, ancak onun ait olduğu tür geneldir, bu nedenle çağrılabilir bir tür <xref:System.Reflection.MethodInfo> oluşturmak için tür tanımından oluşturulmuş bir tür oluşturulması gerekir `Sample` . Oluşturulan tür, `Example` `TFirst` bir başvuru türü olduğu ve varsayılan parametresiz oluşturucusu ve `ExampleDerived` üzerindeki kısıtlamaları karşılayan sınıf olduğundan, kısıtlamalarını karşılayan sınıfını kullanır `TSecond` . (İçin kod, `ExampleDerived` örnek kod bölümünde bulunabilir.) Oluşturulan türü oluşturmak için bu iki tür öğesine geçirilir <xref:System.Type.MakeGenericType%2A> . <xref:System.Reflection.MethodInfo>Daha sonra yöntemi kullanılarak elde edilir <xref:System.Type.GetMethod%2A> .  
+11. Yöntemi çağırın. `ExampleMethod` Genel değildir, ancak onun ait olduğu tür geneldir, bu nedenle çağrılabilir bir tür <xref:System.Reflection.MethodInfo> oluşturmak için tür tanımından oluşturulmuş bir tür oluşturulması gerekir `Sample` . Oluşturulan tür, `Example` `TFirst` bir başvuru türü olduğu ve varsayılan parametresiz oluşturucusu ve `ExampleDerived` üzerindeki kısıtlamaları karşılayan sınıf olduğundan, kısıtlamalarını karşılayan sınıfını kullanır `TSecond` . (İçin kod, `ExampleDerived` örnek kod bölümünde bulunabilir.) Oluşturulan türü oluşturmak için bu iki tür öğesine geçirilir <xref:System.Type.MakeGenericType%2A> . <xref:System.Reflection.MethodInfo>Daha sonra yöntemi kullanılarak elde edilir <xref:System.Type.GetMethod%2A> .  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]
@@ -129,5 +129,5 @@ Bu konu, iki tür parametresiyle basit genel bir tür oluşturmayı, sınıf kı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
-- [Yansıma yayma kullanma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
-- [Yansıma yayma dinamik derleme senaryoları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))
+- [Yansıma yayma kullanma](/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
+- [Yansıma yayma dinamik derleme senaryoları](/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

@@ -3,12 +3,12 @@ title: SQL Server Özellikleri ve ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 30eb7d7f3f98d3cd3999c74f660986bef887c05d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 743e0eb9761cdc58018aab8aaed50a99b197116c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451830"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552628"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server Özellikleri ve ADO.NET
 Bu bölümdeki konularda, ADO.NET kullanarak veritabanı uygulamaları geliştirmeye hedeflenmiş SQL Server özellikler ele alınmaktadır.  
@@ -17,7 +17,7 @@ Bu bölümdeki konularda, ADO.NET kullanarak veritabanı uygulamaları geliştir
   
  **SQL Server belgeleri**  
   
-1. [Geliştirme (veritabanı altyapısı)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
+1. [Geliştirme (veritabanı altyapısı)](/previous-versions/sql/sql-server-2008/bb500155(v=sql.100))  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [SQL Server (ADO.NET) Numaralandırma Örnekleri](enumerating-instances-of-sql-server.md)  

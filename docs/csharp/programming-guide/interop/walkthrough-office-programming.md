@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 76f0e2eccb5d1a59d9aaa3eed11b25dd2dd9cac3
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: eff414411c47ec83177ae6a09de4a96f47af6313
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063009"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558595"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>İzlenecek yol: Office Programlama (C# ve Visual Basic)
 
@@ -117,7 +117,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
      Bu eklemeler, C# ' deki başka bir özelliği gösterir: `Object` Office gıbı com konaklarından döndürülen değerleri [dinamik](../../language-reference/builtin-types/reference-types.md)tür olarak kabul ediyor. Bu otomatik olarak, **ekleme birlikte çalışma türleri** varsayılan değerine ayarlandığında, `True` veya derlemeye [-Link](../../language-reference/compiler-options/link-compiler-option.md) derleyici seçeneği tarafından başvuruluyorsa, equivalently. Tür, `dynamic` geç bağlamaya izin verir, Visual Basic ' de zaten kullanılabilir ve C# 3,0 ve önceki dil sürümlerinde gerekli olan açık dönüştürmeyi önler.
 
-     Örneğin, `excelApp.Columns[1]` bir `Object` , ve bir `AutoFit` Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemi döndürür. Olmadan `dynamic` , `excelApp.Columns[1]` yöntemi çağrılmadan önce bir örneği olarak döndürülen nesneyi atamalısınız `Range` `AutoFit` .
+     Örneğin, `excelApp.Columns[1]` bir `Object` , ve bir `AutoFit` Excel  [Range](<xref:Microsoft.Office.Interop.Excel.Range>) yöntemi döndürür. Olmadan `dynamic` , `excelApp.Columns[1]` yöntemi çağrılmadan önce bir örneği olarak döndürülen nesneyi atamalısınız `Range` `AutoFit` .
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
@@ -163,7 +163,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 
      Daha fazla bilgi için bkz. [nasıl yapılır: derleme Içeriğini görüntüleme](../../../standard/assembly/view-contents.md).
 
-5. **Bildirim** simgesine çift tıklayın. Proje tarafından başvurulan öğeleri içeren derlemelerin listesini içeren bir pencere görüntülenir. `Microsoft.Office.Interop.Excel`ve `Microsoft.Office.Interop.Word` listeye dahil değildir. Projenizin gerektirdiği türler derlemenizin içine aktarıldığından, bir PIA başvuruları gerekli değildir. Bu, dağıtımı kolaylaştırır. PIA 'Lerin kullanıcının bilgisayarında mevcut olması gerekmez ve bir uygulama bir PIA 'ın belirli bir sürümünün dağıtımını gerektirmediğinden, uygulamalar, gerekli API 'Lerin tüm sürümlerde bulunması şartıyla birden fazla Office sürümüyle çalışacak şekilde tasarlanabilir.
+5. **Bildirim** simgesine çift tıklayın. Proje tarafından başvurulan öğeleri içeren derlemelerin listesini içeren bir pencere görüntülenir. `Microsoft.Office.Interop.Excel` ve `Microsoft.Office.Interop.Word` listeye dahil değildir. Projenizin gerektirdiği türler derlemenizin içine aktarıldığından, bir PIA başvuruları gerekli değildir. Bu, dağıtımı kolaylaştırır. PIA 'Lerin kullanıcının bilgisayarında mevcut olması gerekmez ve bir uygulama bir PIA 'ın belirli bir sürümünün dağıtımını gerektirmediğinden, uygulamalar, gerekli API 'Lerin tüm sürümlerde bulunması şartıyla birden fazla Office sürümüyle çalışacak şekilde tasarlanabilir.
 
      PIA dağıtımı artık gerekli olmadığından, önceki sürümler dahil olmak üzere birden fazla Office sürümüyle birlikte çalışarak Gelişmiş senaryolarda bir uygulama oluşturabilirsiniz. Ancak, bu yalnızca kodunuz, çalıştığınız Office sürümünde kullanılamayan API 'Leri kullanmıyorsa çalışır. Belirli bir API 'nin önceki bir sürümde kullanılabilir olup olmadığını her zaman temizlemez ve bu nedenle Office 'in önceki sürümleriyle çalışma için önerilmez.
 
@@ -205,7 +205,7 @@ Bu yönergeyi tamamlamak için bilgisayarınızda Microsoft Office Excel ve Micr
 - [Lambda İfadeleri (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambda Ifadeleri (C#)](../../language-reference/operators/lambda-expressions.md)
 - [COM birlikte çalışma programlamada dizin oluşturulmuş özellikleri kullanma](./how-to-use-indexed-properties-in-com-interop-rogramming.md)
-- [İzlenecek yol: Visual Studio’da Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
+- [İzlenecek yol: Visual Studio’da Microsoft Office Bütünleştirilmiş Kodlarından Tür Bilgilerini Katıştırma](/previous-versions/visualstudio/visual-studio-2013/ee317478(v=vs.120))
 - [İzlenecek yol: Yönetilen Bütünleştirilmiş Kodlardan Türler Katıştırma](../../../standard/assembly/embed-types-visual-studio.md)
 - [İnceleme: Excel için İlk VSTO Eklentinizi Oluşturma](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM birlikte çalışma](../../../visual-basic/programming-guide/com-interop/index.md)

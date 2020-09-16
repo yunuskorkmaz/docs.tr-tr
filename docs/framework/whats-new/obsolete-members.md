@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: c3418675bf69ffaf60d6b16202fc6cb8a112ebab
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: d5981a2ec1e8152e891a4480ea548200be45ecd1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558939"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558530"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework eski Üyeler
 
@@ -421,8 +421,8 @@ Bu makale, eski türlerin üyelerini listeetmez. Eski türlerin listesi için bk
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateCompiler%2A>|Çağıranlar <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> arabirimini kullanmamalıdır ve bunun yerine yöntemleri doğrudan <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfında kullanmalıdır. Devralma <xref:System.CodeDom.Compiler.CodeDomProvider> işleminin hala bu arabirimi uygulaması gerekir ve bu uyarıyı hariç tutmalı ya da bu yöntem artık kullanılmıyor olmalıdır.|
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateGenerator%2A>|Çağıranlar <xref:System.CodeDom.Compiler.ICodeGenerator?displayProperty=nameWithType> arabirimini kullanmamalıdır ve bunun yerine yöntemleri doğrudan <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfında kullanmalıdır. Devralma <xref:System.CodeDom.Compiler.CodeDomProvider> işleminin hala bu arabirimi uygulaması gerekir ve bu uyarıyı hariç tutmalı ya da bu yöntem artık kullanılmıyor olmalıdır.|
 > |<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CodeDomProvider.CreateParser%2A>|Çağıranlar <xref:System.CodeDom.Compiler.ICodeParser?displayProperty=nameWithType> arabirimini kullanmamalıdır ve bunun yerine yöntemleri doğrudan <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> sınıfında kullanmalıdır. Devralma <xref:System.CodeDom.Compiler.CodeDomProvider> işleminin hala bu arabirimi uygulaması gerekir ve bu uyarıyı hariç tutmalı ya da bu yöntem artık kullanılmıyor olmalıdır.|
-> |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS ilkesi artık kullanılmıyor ve .NET Framework gelecek bir sürümünde kaldırılacak. Daha fazla bilgi için [.NET Framework 4 ' teki güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)bölümüne bakın.|
-> |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS ilkesi artık kullanılmıyor ve .NET Framework gelecek bir sürümünde kaldırılacak. Daha fazla bilgi için [.NET Framework 4 ' teki güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee191568%28v=vs.100%29)bölümüne bakın.|
+> |<xref:System.CodeDom.Compiler.CompilerParameters?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerParameters.Evidence%2A>|CAS ilkesi artık kullanılmıyor ve .NET Framework gelecek bir sürümünde kaldırılacak. Daha fazla bilgi için [.NET Framework 4 ' teki güvenlik değişiklikleri](/previous-versions/dotnet/netframework-4.0/ee191568(v=vs.100))bölümüne bakın.|
+> |<xref:System.CodeDom.Compiler.CompilerResults?displayProperty=nameWithType>|<xref:System.CodeDom.Compiler.CompilerResults.Evidence%2A>|CAS ilkesi artık kullanılmıyor ve .NET Framework gelecek bir sürümünde kaldırılacak. Daha fazla bilgi için [.NET Framework 4 ' teki güvenlik değişiklikleri](/previous-versions/dotnet/netframework-4.0/ee191568(v=vs.100))bölümüne bakın.|
 > |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Bunun yerine <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Collections.IEqualityComparer%29> kullanın.|
 > |<xref:System.Collections.Specialized.NameObjectCollectionBase?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Bunun yerine <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor%28System.Int32%2CSystem.Collections.IEqualityComparer%29> kullanın.|
 > |<xref:System.Collections.Specialized.NameValueCollection?displayProperty=nameWithType>|<xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IHashCodeProvider%2CSystem.Collections.IComparer%29>|Bunun yerine <xref:System.Collections.Specialized.NameValueCollection.%23ctor%28System.Collections.IEqualityComparer%29> kullanın.|

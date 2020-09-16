@@ -2,12 +2,12 @@
 title: WCF Bilinen Adını COM İstemcileri ile Kullanma
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 76b7697f431575e7bde83204739cb23f96d27064
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b36b646f650c2a2974c7b0689a9367961075ea14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84596493"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553037"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF Bilinen Adını COM İstemcileri ile Kullanma
 Bu örnek, Web hizmetlerini Microsoft Office Visual Basic for Applications (Office VBA) veya Visual Basic 6,0 gibi COM tabanlı geliştirme ortamlarında bütünleştirmek için Windows Communication Foundation (WCF) hizmet bilinen adının nasıl kullanılacağını gösterir. Bu örnek, bir Windows betik ana istemcisi (. vbs), destekleyici istemci kitaplığı (. dll) ve Internet Information Services (IIS) tarafından barındırılan bir hizmet kitaplığı (. dll) içerir. Hizmet bir Hesaplayıcı hizmetidir ve COM istemcisi, hizmet üzerinde matematik işlemlerini (ekleme, çıkarma, çarpma ve bölme) çağırır. İstemci etkinliği ileti kutusu penceresinde görünür.  
@@ -50,7 +50,7 @@ public interface ICalculator
 - Meta veri değişimi sözleşmesi – sözleşme, meta veri değişimi (MEX) uç noktasından çalışma zamanında alınır.  
   
 ## <a name="typed-contract"></a>Yazılı sözleşme  
- Bilinen bir sözleşme kullanımıyla bilinen adı kullanmak için, hizmet sözleşmesi için uygun şekilde öznitelikli türler COM ile kaydedilmelidir. İlk olarak, bir istemcinin [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak oluşturulması gerekir. Yazılan proxy 'yi oluşturmak için istemci dizinindeki bir komut isteminden aşağıdaki komutu çalıştırın.  
+ Bilinen bir sözleşme kullanımıyla bilinen adı kullanmak için, hizmet sözleşmesi için uygun şekilde öznitelikli türler COM ile kaydedilmelidir. İlk olarak, bir istemcinin [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)kullanılarak oluşturulması gerekir. Yazılan proxy 'yi oluşturmak için istemci dizinindeki bir komut isteminden aşağıdaki komutu çalıştırın.  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
@@ -89,9 +89,9 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
 - Hizmet uç noktasının adresi.  
   
-- İstemcinin bu uç noktayla bağlanmak için kullanması gereken bağlama. Bu durumda, sistem tarafından tanımlanan wsHttpBinding, istemci yapılandırma dosyalarında özel bağlamalar tanımlanbilse de kullanılır. Windows komut dosyası ana bilgisayarı ile kullanmak için özel bağlama, cscript. exe ile aynı dizindeki bir cscript. exe. config dosyasında tanımlanır.  
+- İstemcinin bu uç noktayla bağlanmak için kullanması gereken bağlama. Bu durumda, sistem tarafından tanımlanan wsHttpBinding, istemci yapılandırma dosyalarında özel bağlamalar tanımlanbilse de kullanılır. Windows komut dosyası ana bilgisayarıyla birlikte kullanmak için, özel bağlama Cscript.exe aynı dizindeki bir Cscript.exe.config dosyasında tanımlanır.  
   
-- Uç noktada desteklenen sözleşmenin türü. Bu, yukarıda oluşturulup kaydedilen türdür. Visual Basic betiği türü kesin belirlenmiş bir COM ortamı sağlamadığından, sözleşmeye yönelik bir tanımlayıcı belirtilmelidir. Bu GUID, `interfaceID` OLE/COM Nesne Görüntüleyicisi (OleView. exe) gıbı com araçları kullanılarak görüntülenebilen CalcProxy. tlb ' dir. Office VBA veya Visual Basic 6,0 gibi türü kesin belirlenmiş ortamlar için, tür kitaplığına açık bir başvuru eklemek ve ardından Proxy nesnesinin türünü bildirmek, sözleşme parametresinin yerine kullanılabilir. Bu Ayrıca, istemci uygulama geliştirme sırasında IntelliSense desteği sağlar.  
+- Uç noktada desteklenen sözleşmenin türü. Bu, yukarıda oluşturulup kaydedilen türdür. Visual Basic betiği türü kesin belirlenmiş bir COM ortamı sağlamadığından, sözleşmeye yönelik bir tanımlayıcı belirtilmelidir. Bu GUID, `interfaceID` OLE/COM Nesne Görüntüleyicisi (OleView.exe) gıbı com araçları kullanılarak görüntülenebilen CalcProxy. tlb ' dir. Office VBA veya Visual Basic 6,0 gibi türü kesin belirlenmiş ortamlar için, tür kitaplığına açık bir başvuru eklemek ve ardından Proxy nesnesinin türünü bildirmek, sözleşme parametresinin yerine kullanılabilir. Bu Ayrıca, istemci uygulama geliştirme sırasında IntelliSense desteği sağlar.  
   
  Proxy örneğinin hizmet bilinen adıyla oluşturulması, istemci uygulama proxy üzerinde Yöntemler çağırabilir ve bu da hizmet bilinen hizmet işlemlerini çağıran hizmet adı altyapısına neden olur.  
   
@@ -131,7 +131,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
 - İstemcinin bu uç nokta ile bağlanmak için kullanması gereken bağlama ve bu bağlamanın tanımlandığı ad alanı. Bu durumda, `wsHttpBinding_ICalculator` kullanılır.  
   
-- Sözleşmeyi tanımlayan WSDL. Bu durumda, serviceWsdl. xml dosyasından okunan dizedir.  
+- Sözleşmeyi tanımlayan WSDL. Bu durumda, serviceWsdl.xml dosyasından okunan dizedir.  
   
 - Sözleşmenin adı ve ad alanı. WSDL birden fazla sözleşme içerebileceğinden bu kimlik gereklidir.  
   
@@ -205,11 +205,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2. Dile özgü klasörün altındaki \Client öğesinden ComCalcClient. vbs ' yi çalıştırın. İstemci etkinliği ileti kutusu pencereleri ' nde görüntülenir.  
   
-3. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. İstemci ve hizmet iletişim kuramadıysanız, bkz. [WCF örnekleri Için sorun giderme ipuçları](/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Örneği bilgisayarlar arasında çalıştırmak için  
   
-1. Hizmet bilgisayarında, ServiceModelSamples adlı bir sanal dizin oluşturun. Örneğe eklenen Setupvroot. bat betiği disk dizinini ve sanal dizini oluşturmak için kullanılabilir.  
+1. Hizmet bilgisayarında, ServiceModelSamples adlı bir sanal dizin oluşturun. Örneğe eklenen Setupvroot.bat betiği disk dizini ve sanal dizin oluşturmak için kullanılabilir.  
   
 2. Hizmet programı dosyalarını%SystemDrive%\Inetpub\wwwroot\servicemodelsamples adresinden hizmet bilgisayarında ServiceModelSamples sanal dizinine kopyalayın. Dosyaları \Bin dizinine dahil ettiğinizden emin olun.  
   
@@ -217,9 +217,9 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 4. Betik dosyasında, uç nokta tanımının adres değerini hizmetinizin yeni adresiyle eşleşecek şekilde değiştirin. "Localhost" başvurularını, adreste tam etki alanı adıyla değiştirin.  
   
-5. WSDL dosyasını istemci bilgisayara kopyalayın. ServiceWsdl. xml WSDL dosyasında, "localhost" ile ilgili tüm başvuruları adresteki tam etki alanı adıyla değiştirin.  
+5. WSDL dosyasını istemci bilgisayara kopyalayın. WSDL dosyasında serviceWsdl.xml, "localhost" ile ilgili tüm başvuruları adresteki tam etki alanı adıyla değiştirin.  
   
-6. Client. dll kitaplığını dile özgü klasörün altındaki \client\bin klasöründen istemci bilgisayardaki bir dizine kopyalayın.  
+6. Client.dll kitaplığını, dile özgü klasör altındaki \client\bin klasöründen istemci bilgisayardaki bir dizine kopyalayın.  
   
 7. Bir komut isteminden, istemci bilgisayardaki bu hedef dizine gidin. Windows Vista veya Windows Server 2008 kullanıyorsanız, komut istemi ' ni yönetici olarak çalıştırdığınızdan emin olun.  
   
@@ -235,4 +235,4 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-clean-up-after-the-sample"></a>Örnekten sonra temizlemek için  
   
-- Güvenlik nedenleriyle, örnekleri ile işiniz bittiğinde kurulum adımlarında verilen sanal dizin tanımını ve izinleri kaldırın.  
+- Güvenlik nedenleriyle, örnekleri ile işiniz bittiğinde kurulum adımlarında verilen sanal dizin tanımını ve izinleri kaldırın.

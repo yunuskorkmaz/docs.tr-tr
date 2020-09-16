@@ -7,12 +7,12 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 188d9184476e58fb679421467cd68e2ea8a8a101
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 93c2015c873b9de7b6c1b94224fa4033863aecfd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558874"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558504"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework sınıfı kitaplığındaki kullanım dışı Özellikler
 
@@ -65,9 +65,9 @@ Mevcut kodu .NET Framework sonraki bir sürümüne karşı yeniden derleyemeyebi
 |4,5 (4.5.1 ve 4.5.2 dahil)|v4.0|
 |4|v4.0|
 |3,5|v 2.0.50727|
-|2,0|v 2.0.50727|
+|2.0|v 2.0.50727|
 |1.1|v 1.1.4322|
-|1,0|v 1.0.3705|
+|1.0|v 1.0.3705|
 
 ## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>.NET Framework 4,5 ve üzeri sürümler için kullanılmayan API 'Ler
 
@@ -76,10 +76,10 @@ Mevcut kodu .NET Framework sonraki bir sürümüne karşı yeniden derleyemeyebi
 
 ## <a name="obsolete-apis-for-previous-versions"></a>Önceki sürümler için kullanımdan kaldırılmış API 'Ler
 
-- [.NET Framework 4 ' te kullanılmıyor türler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
-- [.NET Framework 4 ' te kullanılmayan Üyeler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
-- [.NET Framework 3,5 listesi artık kullanılmıyor](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
-- [.NET Framework 2,0 listesi artık kullanılmıyor](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
+- [.NET Framework 4 ' te kullanılmıyor türler](/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
+- [.NET Framework 4 ' te kullanılmayan Üyeler](/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
+- [.NET Framework 3,5 listesi artık kullanılmıyor](/previous-versions/cc835481(v=msdn.10))
+- [.NET Framework 2,0 listesi artık kullanılmıyor](/previous-versions/aa497286(v=msdn.10))
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

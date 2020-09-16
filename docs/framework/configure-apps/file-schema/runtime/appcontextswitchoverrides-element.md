@@ -7,12 +7,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 394523e81da96d596a00010a393b9a034c0d552f
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 0ead35559a17eb06304e6c251d2fe388ca178a30
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88558757"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552290"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides> öğesi
 
@@ -60,7 +60,7 @@ ms.locfileid: "88558757"
 
 .NET Framework aşağıdaki anahtarları destekler:
 
-|Anahtar adı|Açıklama|Dağıtıla|
+|Anahtar adı|Description|Dağıtıla|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Windows Presentation Foundation denetim düzeni için eski bir algoritmayı kullanıp kullanmadığını denetler. Daha fazla bilgi için bkz. [azaltma: WPF düzeni](../../../migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager tarafından bir paketin parçalarını imzalamak için kullanılan varsayılan algoritmanın SHA1 veya SHA256 olup olmadığını denetler.<br>SHA1 ile ilgili çakışma sorunları nedeniyle Microsoft SHA256 önerir.|.NET Framework 4.7.1|
@@ -70,7 +70,7 @@ ms.locfileid: "88558757"
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|Taşınabilir pdb 'leri kullanırken yığın izlemelerinin elde edilip edilmeyeceğini denetler ve kaynak dosya ve satır bilgileri içerebilir. `false` Kaynak dosya ve satır bilgilerini dahil etmek için; Aksi takdirde, `true` .| .NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>Bir <xref:System.Drawing.Icon> nesne png çerçevelerindeyken yöntemin bir özel durum oluşturulup oluşturulmayacağını denetler. Daha fazla bilgi için bkz. [azaltma: simge NESNELERINDE png çerçeveleri](../../../migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>Yöntem tarafından koleksiyona eklendiğinde nesnelerin düzgün şekilde atılıp atılmayacağını belirler <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType> . `true` eski davranışı korumak için; `false` tüm özel yazı tipi nesnelerini atmak için. | .NET Framework 4.7.2|
-|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Performansının, <xref:System.Windows.Forms.PrintPreviewDialog> ağ yazıcıları için en iyi duruma getirilip getirilmediğini denetler. Daha fazla bilgi için bkz. [Printönizleme Iletişim kutusu denetimine genel bakış](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
+|`Switch.System.Drawing.Printing.`<br>`OptimizePrintPreview`|Performansının, <xref:System.Windows.Forms.PrintPreviewDialog> ağ yazıcıları için en iyi duruma getirilip getirilmediğini denetler. Daha fazla bilgi için bkz. [Printönizleme Iletişim kutusu denetimine genel bakış](/dotnet/desktop/winforms/controls/printpreviewdialog-control-overview-windows-forms).|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceJapaneseEraYearRanges`|Yıl aralığının Japonca takvim için olup olmadığını denetler. `true` yıl aralığı denetimlerini zorlamak ve `false` devre dışı bırakmak için (varsayılan davranış). Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.EnforceLegacyJapaneseDateParsing`|Yalnızca "1" öğesinin ayrıştırma işlemlerinde bir Japonca takvim dönemi için ilk yıl olarak tanınıp tanınmadığını denetler. `true` yalnızca "1" öğesini tanımak için `false` "1" veya gannen (varsayılan davranış) öğesini tanımak için. Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.FormatJapaneseFirstYearAsANumber`|Japonca takvim çağının ilk yılının, biçimlendirme işlemlerinde "1" veya gannen olarak temsil edilip edilmeyeceğini denetler. `true` çağın ilk yılını "1" olarak biçimlendirmek için `false` bunu gannen olarak biçimlendirmek için (varsayılan davranış). Daha fazla bilgi için bkz. [takvimler Ile çalışma](../../../../standard/datetime/working-with-calendars.md).|.NET Framework 4.6|

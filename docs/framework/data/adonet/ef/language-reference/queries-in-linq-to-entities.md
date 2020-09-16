@@ -3,12 +3,12 @@ title: LINQ to Entities Sorguları
 description: LINQ 'ın, programlama nesnelerini kullanarak çeşitli veri kaynakları ve biçimler genelinde verilerle çalışmaya yönelik basit, tutarlı bir model nasıl sunduğunu öğrenin.
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
-ms.openlocfilehash: 908a4a601c075e0845ba6d1eeeaa0f4dbaa3b53d
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5a10aadd3f21086b2b04dc5e77e40f35655f905b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89129147"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554260"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities Sorguları
 Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkisel veritabanları için SQL gibi özel bir sorgu dilinde ifade edilir ve XML için XQuery. Bu nedenle, geliştiricilerin sorgutıkları her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmeleri gerekiyordu. Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik daha basit ve tutarlı bir model sunar. Bir LINQ sorgusunda, her zaman programlama nesneleriyle çalışırsınız.  
@@ -71,4 +71,4 @@ Sorgu, veri kaynağından veri alan bir ifadedir. Sorgular, genellikle ilişkise
 - [LINQ - Varlıklar](linq-to-entities.md)
 - [C#'de LINQ'e Başlarken](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Visual Basic'te LINQ'e Başlarken](../../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [EF birleştirme seçenekleri ve derlenmiş sorgular](https://docs.microsoft.com/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)
+- [EF birleştirme seçenekleri ve derlenmiş sorgular](/archive/blogs/dsimmons/ef-merge-options-and-compiled-queries)

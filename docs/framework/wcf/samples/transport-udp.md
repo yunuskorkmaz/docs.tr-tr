@@ -2,12 +2,12 @@
 title: 'Taşıma: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 44e47dd2d291ffc27d1777a04b645d57984919cd
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dcf2d9896ab7c95101e224521174b54c88ca3fc2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84591442"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559011"
 ---
 # <a name="transport-udp"></a>Taşıma: UDP
 UDP taşıma örneği, UDP tek noktaya yayın ve çok noktaya yayının özel bir Windows Communication Foundation (WCF) taşıması olarak nasıl uygulanacağını gösterir. Örnek, kanal çerçevesini ve aşağıdaki WCF en iyi yöntemlerini kullanarak WCF 'de özel bir aktarım oluşturmak için önerilen yordamı açıklar. Özel bir aktarım oluşturma adımları aşağıdaki gibidir:  
@@ -141,7 +141,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Ayrıca, `BindingElement` klonımızın (SOAP. UDP) kopyalanması ve döndürülmesi için Üyeler de bulunur.  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Bir taşıma bağlama öğesi için meta veri desteği ekleme  
- Aktarımımızı meta veri sistemine tümleştirmek için, hem ilkenin içeri ve dışarı aktarılmasını desteklememiz gerekir. Bu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)aracılığıyla bağlamamız için istemci oluşturmamızı sağlar.  
+ Aktarımımızı meta veri sistemine tümleştirmek için, hem ilkenin içeri ve dışarı aktarılmasını desteklememiz gerekir. Bu, [ServiceModel meta veri yardımcı programı Aracı (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)aracılığıyla bağlamamız için istemci oluşturmamızı sağlar.  
   
 ### <a name="adding-wsdl-support"></a>WSDL desteği ekleme  
  Bir bağlamadaki aktarım bağlama öğesi, meta verilerde adres bilgilerinin dışarı ve içeri aktarılmasından sorumludur. SOAP bağlama kullanılırken, aktarım bağlama öğesi meta verilerde doğru bir taşıma URI 'sini de dışarı aktarmalıdır.  
@@ -167,7 +167,7 @@ if (soapBinding != null)
 ```  
   
 #### <a name="wsdl-import"></a>WSDL Içeri aktarma  
- WSDL içeri aktarma sistemini, adresleri içeri aktarmayı işleyecek şekilde genişletmek için, Svcutil. exe. config dosyasında gösterildiği gibi Svcutil. exe için yapılandırma dosyasına aşağıdaki yapılandırmayı eklememiz gerekir.  
+ WSDL içeri aktarma sistemini, adresleri içeri aktarmayı işleyecek şekilde genişletmek için, aşağıdaki yapılandırmayı Svcutil.exe.config dosyasında gösterildiği gibi Svcutil.exe yapılandırma dosyasına eklememiz gerekir.  
   
 ```xml
 <configuration>  
@@ -183,11 +183,11 @@ if (soapBinding != null)
 </configuration>  
 ```  
   
- Svcutil. exe dosyasını çalıştırırken, Svcutil. exe ' nin WSDL içeri aktarma uzantılarını yüklemesi için iki seçenek vardır:  
+ Svcutil.exe çalıştırılırken, WSDL içeri aktarma uzantılarını yüklemeye Svcutil.exe almak için iki seçenek vardır:  
   
-1. /Svcutılconfig: komutunu kullanarak Svcutil. exe ' yi yapılandırma dosyanıza yazın \<file> .  
+1. /SvcutilConfig: ile yapılandırma dosyası Svcutil.exe noktası \<file> .  
   
-2. Svcutil. exe. config dosyasına, Svcutil. exe ile aynı dizinde yapılandırma bölümünü ekleyin.  
+2. Yapılandırma bölümünü Svcutil.exe aynı dizindeki Svcutil.exe.config ekleyin.  
   
  `UdpBindingElementImporter`Türü, arabirimini uygular `IWsdlImportExtension` . `ImportEndpoint`YÖNTEMI wsdl bağlantı noktasından adresi içeri aktarır.  
   
@@ -229,7 +229,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ```  
   
 #### <a name="policy-import"></a>İlke Içeri aktarma  
- Ilke Içeri aktarma sistemini genişletmek için, Svcutil. exe. config dosyasında gösterildiği gibi Svcutil. exe için yapılandırma dosyasına aşağıdaki yapılandırmayı eklememiz gerekir.  
+ Ilke Içeri aktarma sistemini genişletmek için, Svcutil.exe.config dosyasında gösterildiği gibi Svcutil.exe yapılandırma dosyasına aşağıdaki yapılandırmayı eklememiz gerekir.  
   
 ```xml
 <configuration>  
@@ -245,11 +245,11 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 </configuration>  
 ```  
   
- Ardından, `IPolicyImporterExtension` kayıtlı sınıfımızdan () uyguladık `UdpBindingElementImporter` . ' De `ImportPolicy()` , ad boşluğumuzdaki onaylamaları inceleyerek, nakliyenizi oluşturmak ve çok noktaya yayın olup olmadığını denetlemek için bunları işletireceğiz. Ayrıca, idare ettiğimiz onayları, bağlama onayları listesinden kaldırdık. Yine, Svcutil. exe dosyasını çalıştırırken, tümleştirme için iki seçenek vardır:  
+ Ardından, `IPolicyImporterExtension` kayıtlı sınıfımızdan () uyguladık `UdpBindingElementImporter` . ' De `ImportPolicy()` , ad boşluğumuzdaki onaylamaları inceleyerek, nakliyenizi oluşturmak ve çok noktaya yayın olup olmadığını denetlemek için bunları işletireceğiz. Ayrıca, idare ettiğimiz onayları, bağlama onayları listesinden kaldırdık. Svcutil.exe çalıştırılırken, tümleştirme için iki seçenek vardır:  
   
-1. /Svcutılconfig: komutunu kullanarak Svcutil. exe ' yi yapılandırma dosyanıza yazın \<file> .  
+1. /SvcutilConfig: ile yapılandırma dosyası Svcutil.exe noktası \<file> .  
   
-2. Svcutil. exe. config dosyasına, Svcutil. exe ile aynı dizinde yapılandırma bölümünü ekleyin.  
+2. Yapılandırma bölümünü Svcutil.exe aynı dizindeki Svcutil.exe.config ekleyin.  
   
 <a name="AddingAStandardBinding"></a>
 ## <a name="adding-a-standard-binding"></a>Standart bağlama ekleme  
@@ -277,7 +277,7 @@ public override BindingElementCollection CreateBindingElements()
 ```  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Özel standart bağlama Içeri aktarıcı ekleme  
- Svcutil. exe ve `WsdlImporter` türü varsayılan olarak sistem tarafından tanımlanan bağlamaları tanır ve içeri aktarır. Aksi takdirde, bağlama bir örnek olarak içeri aktarılır `CustomBinding` . Svcutil. exe ' yi etkinleştirmek ve `WsdlImporter` içeri aktarmak için `SampleProfileUdpBinding` `UdpBindingElementImporter` özel bir standart bağlama İçeri Aktarıcı işlevi de çalışır.  
+ Svcutil.exe ve `WsdlImporter` türü, varsayılan olarak sistem tarafından tanımlanan bağlamaları tanır ve içeri aktarır. Aksi takdirde, bağlama bir örnek olarak içeri aktarılır `CustomBinding` . Svcutil.exe etkinleştirmek ve `WsdlImporter` içeri aktarmak için `SampleProfileUdpBinding` `UdpBindingElementImporter` özel bir standart bağlama İçeri Aktarıcı işlevi de çalışır.  
   
  Özel standart bağlama İçeri Aktarıcı, `ImportEndpoint` `IWsdlImportExtension` `CustomBinding` belirli bir standart bağlama tarafından oluşturulup oluşturulmayacağını görmek için meta verilerden içeri aktarılan örneği incelemek üzere arabirimindeki yöntemi uygular.  
   
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>UDP test hizmeti ve Istemcisi  
- Bu örnek taşımanın kullanılması için test kodu, UdpTestService ve UdpTestClient dizinlerinde bulunabilir. Hizmet kodu iki testten oluşur; bir test koddan bağlamaları ve uç noktaları ayarlar ve diğeri de yapılandırma yoluyla yapılır. Her iki test iki uç nokta kullanır. Bir uç nokta `SampleUdpProfileBinding` ile [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) olarak ayarlanmış öğesini kullanır `true` . Diğer uç nokta ile özel bir bağlama kullanır `UdpTransportBindingElement` . Bu, `SampleUdpProfileBinding` olarak ayarlandığı ile eşdeğerdir [\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90)) `false` . Her iki test de bir hizmet oluşturur, her bağlama için bir uç nokta ekler, hizmeti açar ve ardından hizmeti kapatmadan önce kullanıcının ENTER tuşuna basmasını bekler.  
+ Bu örnek taşımanın kullanılması için test kodu, UdpTestService ve UdpTestClient dizinlerinde bulunabilir. Hizmet kodu iki testten oluşur; bir test koddan bağlamaları ve uç noktaları ayarlar ve diğeri de yapılandırma yoluyla yapılır. Her iki test iki uç nokta kullanır. Bir uç nokta `SampleUdpProfileBinding` ile [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) olarak ayarlanmış öğesini kullanır `true` . Diğer uç nokta ile özel bir bağlama kullanır `UdpTransportBindingElement` . Bu, `SampleUdpProfileBinding` olarak ayarlandığı ile eşdeğerdir [\<reliableSession>](/previous-versions/ms731375(v=vs.90)) `false` . Her iki test de bir hizmet oluşturur, her bağlama için bir uç nokta ekler, hizmeti açar ve ardından hizmeti kapatmadan önce kullanıcının ENTER tuşuna basmasını bekler.  
   
  Hizmet testi uygulamasını başlattığınızda, aşağıdaki çıktıyı görmeniz gerekir.  
   
@@ -443,13 +443,13 @@ Press <ENTER> to terminate the service and exit...
   
  İstemciyi yeniden çalıştırmak, önceki sonuçlarla aynı sonucu verir.  
   
- Svcutil. exe kullanarak istemci kodunu ve yapılandırmayı yeniden oluşturmak için, hizmet uygulamasını başlatın ve ardından örnek kök dizininden aşağıdaki Svcutil. exe dosyasını çalıştırın.  
+ Svcutil.exe kullanarak istemci kodunu ve yapılandırmayı yeniden oluşturmak için, hizmet uygulamasını başlatın ve ardından örnek kök dizininden aşağıdaki Svcutil.exe çalıştırın.  
   
 ```console
 svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
 ```  
   
- Svcutil. exe ' nin için bağlama uzantısı yapılandırması oluşturmadığına `SampleProfileUdpBinding` , bu nedenle el ile eklemeniz gerekir.  
+ Svcutil.exe için bağlama uzantısı yapılandırması oluşturmadığına `SampleProfileUdpBinding` , bu nedenle el ile eklemeniz gerekir.  
   
 ```xml
 <configuration>  

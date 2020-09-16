@@ -12,12 +12,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: d0ca26a1d0964c935137b0a30a5d7c78f93c597b
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 62bce7435887855f799d320736e6bce8f39e5999
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865248"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558803"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Yansıma Yaymadaki Güvenlik Sorunları
 .NET Framework, her biri kendi güvenlik sorunlarıyla birlikte Microsoft ara dili 'ni (MSIL) yaymanın üç yolunu sunar:  
@@ -35,7 +35,7 @@ ms.locfileid: "86865248"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>Dinamik derlemeler  
- Dinamik derlemeler, yönteminin aşırı yüklemeleri kullanılarak oluşturulur <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> . Bu yöntemin en fazla aşırı yüklemesi, makine genelinde güvenlik ilkesinin eliminasyon nedeniyle .NET Framework 4 ' te kullanım dışıdır. (Bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).) Kalan aşırı yüklemeler, güven düzeyinden bağımsız olarak herhangi bir kod tarafından yürütülebilir. Bu aşırı yüklemeler iki gruba ayrılır: oluşturulduğu sırada dinamik derlemeye uygulanacak özniteliklerin bir listesini ve bunları belirtenler. Derleme için saydamlık modelini belirtmezseniz, <xref:System.Security.SecurityRulesAttribute> Bu özniteliği oluşturduğunuzda uyguladığınızda, saydam model, yayma derlemesinden devralınır.  
+ Dinamik derlemeler, yönteminin aşırı yüklemeleri kullanılarak oluşturulur <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> . Bu yöntemin en fazla aşırı yüklemesi, makine genelinde güvenlik ilkesinin eliminasyon nedeniyle .NET Framework 4 ' te kullanım dışıdır. (Bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).) Kalan aşırı yüklemeler, güven düzeyinden bağımsız olarak herhangi bir kod tarafından yürütülebilir. Bu aşırı yüklemeler iki gruba ayrılır: oluşturulduğu sırada dinamik derlemeye uygulanacak özniteliklerin bir listesini ve bunları belirtenler. Derleme için saydamlık modelini belirtmezseniz, <xref:System.Security.SecurityRulesAttribute> Bu özniteliği oluşturduğunuzda uyguladığınızda, saydam model, yayma derlemesinden devralınır.  
   
 > [!NOTE]
 > Oluşturulduktan sonra dinamik derleme için uyguladığınız öznitelikler yöntemi kullanılarak, <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> derleme diske kaydedilinceye ve yeniden belleğe yükleninceye kadar etkili olmaz.  
@@ -138,12 +138,12 @@ ms.locfileid: "86865248"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>Sürüm Bilgileri  
- .NET Framework 4 ' te başlayarak, makine genelinde güvenlik ilkesi ortadan kalkar ve güvenlik saydamlığı varsayılan zorlama mekanizması haline gelir. Bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).  
+ .NET Framework 4 ' te başlayarak, makine genelinde güvenlik ilkesi ortadan kalkar ve güvenlik saydamlığı varsayılan zorlama mekanizması haline gelir. Bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).  
   
  .NET Framework 2,0 Service Pack 1 ' den başlayarak, <xref:System.Security.Permissions.ReflectionPermission> <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> Dinamik derlemeler ve dinamik yöntemler yayırken bayrağı artık gerekli değildir. Bu bayrak, .NET Framework önceki tüm sürümlerinde gereklidir.  
   
 > [!NOTE]
-> <xref:System.Security.Permissions.ReflectionPermission>bayrağı ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> , `FullTrust` ve adlandırılmış izin kümelerinde varsayılan olarak dahil edilir `LocalIntranet` , ancak `Internet` izin kümesinde yoktur. Bu nedenle, .NET Framework önceki sürümlerinde, bir kitaplık yalnızca bir için yürütüldüğünde Internet izinleriyle birlikte kullanılabilir <xref:System.Security.PermissionSet.Assert%2A> <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> . Bu tür Kitaplıklar, kodlama hataları güvenlik delikleri ile sonuçlanabileceğinden dikkatli bir güvenlik incelemesi gerektirir. .NET Framework 2,0 SP1, kod oluşturma doğal olarak ayrıcalıklı bir işlem olmadığından kodun herhangi bir güvenlik talebi vermeden kısmi güven senaryolarında oluşturulmasına olanak sağlar. Diğer bir deyişle, oluşturulan kodun onu yayan derlemeden daha fazla izni yoktur. Bu, kod veren kitaplıkların güvenlik açısından saydam olmasını sağlar ve <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> güvenli bir kitaplık yazma görevini kolaylaştıran onay gereksinimini ortadan kaldırır.  
+> <xref:System.Security.Permissions.ReflectionPermission> bayrağı ile <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> , `FullTrust` ve adlandırılmış izin kümelerinde varsayılan olarak dahil edilir `LocalIntranet` , ancak `Internet` izin kümesinde yoktur. Bu nedenle, .NET Framework önceki sürümlerinde, bir kitaplık yalnızca bir için yürütüldüğünde Internet izinleriyle birlikte kullanılabilir <xref:System.Security.PermissionSet.Assert%2A> <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> . Bu tür Kitaplıklar, kodlama hataları güvenlik delikleri ile sonuçlanabileceğinden dikkatli bir güvenlik incelemesi gerektirir. .NET Framework 2,0 SP1, kod oluşturma doğal olarak ayrıcalıklı bir işlem olmadığından kodun herhangi bir güvenlik talebi vermeden kısmi güven senaryolarında oluşturulmasına olanak sağlar. Diğer bir deyişle, oluşturulan kodun onu yayan derlemeden daha fazla izni yoktur. Bu, kod veren kitaplıkların güvenlik açısından saydam olmasını sağlar ve <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> güvenli bir kitaplık yazma görevini kolaylaştıran onay gereksinimini ortadan kaldırır.  
   
  Ayrıca, .NET Framework 2,0 SP1, <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> kısmen güvenilen dinamik metotlardan ortak türlere ve üyelere erişim bayrağını tanıtır. .NET Framework önceki sürümleri, <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> ortak olmayan türlere ve üyelere erişen dinamik yöntemler için bayrak gerektirir; Bu, kısmen güvenilen kod için asla verilmemesi gereken bir izindir.  
   

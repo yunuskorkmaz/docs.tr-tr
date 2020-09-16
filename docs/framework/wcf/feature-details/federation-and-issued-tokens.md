@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: aeffc1e2a7b61dfd9406b9f06678064533ea61ec
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: dffba51c1bf1aaffbed8725aafc96fd747cb31c6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595511"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559258"
 ---
 # <a name="federation-and-issued-tokens"></a>Federasyon ve Verilen Belirteçler
 Windows Communication Foundation (WCF) ile, WS-Federation ve WS-Trust belirtimlerini uygulayan hizmetlerle güvenli bir şekilde iletişim kuran istemciler oluşturabilirsiniz. Belirtimler, farklı güven bölgelerinde kimlik doğrulaması ve yetkilendirmeyi etkinleştiren mekanizmalar sağlamak üzere XML, SOAP ve Web Hizmetleri Açıklama Dili (WSDL) kullanır.  
@@ -35,13 +35,13 @@ Windows Communication Foundation (WCF) ile, WS-Federation ve WS-Trust belirtimle
  [Nasıl yapılır: Güvenlik Belirteci Hizmeti Oluşturma](how-to-create-a-security-token-service.md)  
  Güvenlik belirteci hizmeti oluşturma adımlarını açıklar.  
   
- [Güvenlik Onaylama İşlemi Biçimlendirme Dili (SAML) Belirteçleri ve Talepleri](saml-tokens-and-claims.md)  
+ [Güvenlik Onaylama İşlemi İşaretleme Dili (SAML) Belirteçleri ve Talepleri](saml-tokens-and-claims.md)  
  Genişletilebilir olan ve zengin talep türleri oluşturmanızı sağlayan güvenlik onayları biçimlendirme dili (SAML) belirteçlerini açıklar.  
   
  [Nasıl yapılır: Yerel Yayımlayan Yapılandırma](how-to-configure-a-local-issuer.md)  
  Güvenlik belirteçlerinin yerel olarak vereni oluşturmayı açıklar.  
   
- [Nasıl yapılır: WSFederationHttpBinding Güvenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Nasıl yapılır: WSFederationHttpBinding Gücenli Oturumlarını Devre Dışı Bırakma](how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Bir üzerinde güvenli oturumların nasıl devre dışı bırakılacağını açıklar `WSFederationHttpBinding` . Her istemci için bir oturum gerektiren bir Web grubu oluşturulurken güvenli oturumların devre dışı bırakılması gerekir.  
   
 ## <a name="reference"></a>Başvuru  
@@ -65,4 +65,4 @@ Windows Communication Foundation (WCF) ile, WS-Federation ve WS-Trust belirtimle
 
 - [Yetkilendirme](authorization-in-wcf.md)
 - [Özel Belirteçler](../extending/custom-tokens.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

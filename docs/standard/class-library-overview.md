@@ -38,12 +38,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 7eb9aa9714dcb920118a6422b9f6c78775bf1a5c
-ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
+ms.openlocfilehash: cf2137c2ebd2f4901401ed25746febaa440a08f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84662933"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554768"
 ---
 # <a name="net-class-library-overview"></a>.NET sınıf kitaplığına genel bakış
 
@@ -90,10 +90,10 @@ ms.locfileid: "84662933"
 |Tamsayı|<xref:System.Byte>|8 bit işaretsiz tamsayı.|**Bayt**|**bayt**|**unsigned char**|**bayt**|  
 ||<xref:System.SByte>|8 bit işaretli tamsayı.<br /><br /> CLS uyumlu değildir.|**SByte**|**SByte**|**char**<br /> -veya-<br /> **işaretli** **karakter**|**SByte**|  
 ||<xref:System.Int16>|16 bit işaretli tamsayı.|**Kısadır**|**short**|**short**|**Int16**|  
-||<xref:System.Int32>|32 bitlik işaretli tamsayı.|**Tamsayı**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 bitlik işaretli tamsayı.|**Gir**|**int**|**int**<br /><br /> -veya-<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 bitlik işaretli tamsayı.|**Kalacağını**|**long**|**__int64**|**tutulamaz**|  
 ||<xref:System.UInt16>|16 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UShort**|**ushort**|**imzasız short**|**Int16**|  
-||<xref:System.UInt32>|32 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UInteger**|**u**|**unsigned int**<br /> -veya-<br /> **imzasız long**|**Int32**|  
+||<xref:System.UInt32>|32 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**UInteger**|**uint**|**unsigned int**<br /> -veya-<br /> **imzasız long**|**Int32**|  
 ||<xref:System.UInt64>|64 bitlik işaretsiz tamsayı.<br /><br /> CLS uyumlu değildir.|**'Tur**|**ulong**|**imzasız __int64**|**Int64**|  
 |Kayan nokta|<xref:System.Single>|Tek duyarlıklı (32-bit) kayan noktalı sayı.|**Tek**|**float**|**float**|**float32**<br> veya<br>**sunuculu**|  
 ||<xref:System.Double>|Çift duyarlıklı (64-bit) kayan noktalı sayı.|**Çift**|**double**|**double**|**float**<br> veya <br> **double**|  
@@ -102,12 +102,12 @@ ms.locfileid: "84662933"
 ||<xref:System.Decimal>|Ondalık (128-bit) bir değer.|**Kategori**|**decimal**|**Kategori**|**decimal**|  
 ||<xref:System.IntPtr>|Boyutu temel platforma bağlı olan işaretli bir tamsayı (32 bit platformda 32 bitlik bir değer ve bir 64-bit platformunda 64 bit değeri).|**Serisi**<br /><br /> Yerleşik tür yok.|**Serisi**<br /><br /> Yerleşik tür yok.|**Serisi**<br /><br /> Yerleşik tür yok.|**unativeint**|  
 ||<xref:System.UIntPtr>|Boyutu temeldeki platforma bağlı işaretsiz bir tamsayı (32 bitlik bir platformda 32 bitlik bir değer ve bir 64-bit platformunda 64 bit değeri).<br /><br /> CLS uyumlu değildir.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**UIntPtr**<br /><br /> Yerleşik tür yok.|**unativeint**|  
-||<xref:System.Object>|Nesne hiyerarşisinin kökü.|**Nesne**|**nesne**|**Nesne ^**|**obj**|  
+||<xref:System.Object>|Nesne hiyerarşisinin kökü.|**Nesne**|**object**|**Nesne ^**|**obj**|  
 ||<xref:System.String>|Unicode karakterlerinden oluşan sabit ve sabit uzunlukta bir dize.|**Dize**|**string**|**Dize ^**|**string**|  
   
  Temel veri türlerine ek olarak, <xref:System> ad alanı, uygulama etki alanları ve çöp toplayıcı gibi çekirdek çalışma zamanı kavramlarıyla ilgilenen sınıflarda özel durumları işleyen sınıflardan farklı olarak 100 ' den fazla sınıf içerir. <xref:System>Ad alanı da birçok ikinci düzey ad alanı içerir.  
   
- Ad alanları hakkında daha fazla bilgi için .net [API tarayıcısı](https://docs.microsoft.com/dotnet/api) ' nı kullanarak .NET sınıf kitaplığı 'na gidin. API başvuru belgeleri, her bir ad alanı, türleri ve üyelerinin her biri için belgeler sağlar.  
+ Ad alanları hakkında daha fazla bilgi için .net [API tarayıcısı](../../api/index.md) ' nı kullanarak .NET sınıf kitaplığı 'na gidin. API başvuru belgeleri, her bir ad alanı, türleri ve üyelerinin her biri için belgeler sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

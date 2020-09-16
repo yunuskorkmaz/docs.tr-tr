@@ -2,26 +2,26 @@
 title: Değişken ve Bağımsız Değişken İzleme
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: c5d3fe6626c22184edd83de6aedad8589ab2ef35
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: af5c21b75f3238546acac0755ec4e6149ee50d95
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837551"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552498"
 ---
 # <a name="variable-and-argument-tracking"></a>Değişken ve Bağımsız Değişken İzleme
-Bir iş akışının yürütülmesi izlenirken, verileri ayıklamak genellikle yararlı olur. Bu, bir izleme kaydına erişirken yürütme sonrası ek bağlam sağlar. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]' de, izleme kullanarak bir iş akışındaki herhangi bir etkinliğin kapsamındaki görünür herhangi bir değişkeni veya bağımsız değişkeni ayıklayabilirsiniz. İzleme profilleri, verileri ayıklamayı kolaylaştırır.  
+Bir iş akışının yürütülmesi izlenirken, verileri ayıklamak genellikle yararlı olur. Bu, bir izleme kaydına erişirken yürütme sonrası ek bağlam sağlar. ' De [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] , izleme kullanarak bir iş akışındaki herhangi bir etkinliğin kapsamındaki görünür herhangi bir değişkeni veya bağımsız değişkeni ayıklayabilirsiniz. İzleme profilleri, verileri ayıklamayı kolaylaştırır.  
   
 ## <a name="variables-and-arguments"></a>Değişkenler ve Bağımsız Değişkenler  
  Bir etkinlik bir ActivityStateRecord yayar olduğunda değişkenler ve bağımsız değişkenler ayıklanır.  Değişken, yalnızca etkinliğin kapsamı içindeyse, ayıklama için kullanılabilir. Bir etkinlik içinde Ayıklanacak bir değişken aşağıdaki şekilde belirtilir:  
   
 - Değişken adıyla bir değişken belirtilmişse, izleme geçerli etkinliğin içinde ve üst etkinliklerdeki değişkeni arar. Değişken geçerli etkinlik kapsamında ve üst kapsamda aranır.  
   
-- Ayıklanacak değişkenler Name = "\*" kullanılarak belirtilmişse, izlenen geçerli etkinliğin içindeki tüm değişkenler ayıklanır. Bu durumda, kapsamdaki ancak üst etkinliklerde tanımlanan değişkenler ayıklanmaz.  
+- Ayıklanacak değişkenler Name = "" kullanılarak belirtilmişse \* , izlenen geçerli etkinliğin içindeki tüm değişkenler ayıklanır. Bu durumda, kapsamdaki ancak üst etkinliklerde tanımlanan değişkenler ayıklanmaz.  
   
- Bağımsız değişkenler ayıklanırken, ayıklanan bağımsız değişkenler etkinliğin durumuna bağlıdır. Bir etkinliğin durumu yürütüldüğü zaman, ayıklama için yalnızca `InArguments` kullanılabilir. Diğer etkinlik durumları (kapalı, hatalı, Iptal edildi) için, tüm bağımsız değişkenler, hem InArguments hem de OutArguments, ayıklama için kullanılabilir.  
+ Bağımsız değişkenler ayıklanırken, ayıklanan bağımsız değişkenler etkinliğin durumuna bağlıdır. Etkinliğin durumu yürütürken yalnızca, `InArguments` ayıklama için kullanılabilir. Diğer etkinlik durumları (kapalı, hatalı, Iptal edildi) için, tüm bağımsız değişkenler, hem InArguments hem de OutArguments, ayıklama için kullanılabilir.  
   
- Aşağıdaki örnek, etkinliğin `Closed` izleme kaydı yayıldığınızda değişkenleri ve bağımsız değişkenleri çıkaran bir etkinlik durumu sorgusu gösterir. Değişkenler ve bağımsız değişkenler yalnızca bir <xref:System.Activities.Tracking.ActivityStateRecord> ayıklanıp <xref:System.Activities.Tracking.ActivityStateQuery>kullanılarak bir izleme profili içinde abone olunmuş olabilir.  
+ Aşağıdaki örnekte, etkinliğin `Closed` izleme kaydı yayıldığınızda değişkenleri ve bağımsız değişkenleri çıkaran bir etkinlik durumu sorgusu gösterilmektedir. Değişkenler ve bağımsız değişkenler yalnızca ile ayıklanabilir <xref:System.Activities.Tracking.ActivityStateRecord> ve bu nedenle kullanılarak bir izleme profili içinde abone olunmuş olur <xref:System.Activities.Tracking.ActivityStateQuery> .  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -48,5 +48,5 @@ Bir iş akışının yürütülmesi izlenirken, verileri ayıklamak genellikle y
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Server App Fabric Izleme](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [App Fabric ile uygulamaları izleme](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [Windows Server App Fabric Izleme](/previous-versions/appfabric/ee677251(v=azure.10))
+- [App Fabric ile uygulamaları izleme](/previous-versions/appfabric/ee677276(v=azure.10))

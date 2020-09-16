@@ -1,24 +1,24 @@
 ---
-title: Sistem olay günlüğünü silinemiyor
+title: Sistem olay günlüğü silinemiyor
 ms.date: 07/20/2015
 ms.assetid: 26ca8819-4ce5-49c6-98f3-27fe9e2e8e3d
-ms.openlocfilehash: 72f648751107db90449a085e1a49892927fcd29b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e00527300a77f6bc006555ee688e055e1a351056
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620487"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554963"
 ---
-# <a name="system-event-log-cannot-be-deleted"></a>Sistem olay günlüğünü silinemiyor
-Nelze odstranit sistem olay günlüğünü silmek girişiminde bulunuldu. Sistem başlatma ve donanım hataları gibi sistem olaylarını sistem günlüğünü izler.  
+# <a name="system-event-log-cannot-be-deleted"></a>Sistem olay günlüğü silinemiyor
+Silinen sistem olay günlüğü 'nü silme girişiminde bulunuldu. Sistem günlüğü, sistem başlatma ve donanım arızaları gibi sistem olaylarını izler.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Uygulamanızı bir uygulama veya özel günlük yerine sistem olay günlüğüne yazma düşünün.  
+- Uygulamanızın, sistem olay günlüğü yerine bir uygulamaya veya özel bir günlüğe yazmasını düşünün.  
   
-- Sistem olay günlüğünü silmek çalışmayın.  
+- Sistem olay günlüğünü silmeyi denemeyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Olay günlüklerini yönetme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
-- [Nasıl yapılır: Oluşturma ve özel olay günlükleri kaldırma](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/49dwckkz(v=vs.90))
+- [Olay günlüklerini yönetme](/previous-versions/visualstudio/visual-studio-2008/4f69axw4(v=vs.90))
+- [Nasıl yapılır: özel olay günlükleri oluşturma ve kaldırma](/previous-versions/visualstudio/visual-studio-2008/49dwckkz(v=vs.90))

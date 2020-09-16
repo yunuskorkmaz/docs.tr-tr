@@ -3,12 +3,12 @@ title: Windows Workflow Foundation Özellik Ayrıntıları
 description: Bu makalede, özelliklerin yararlı olabilecek Windows Workflow Foundation ve senaryolara .NET Framework 4 ' ün eklediği yeni özellikler açıklanmaktadır.
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: fb490b3dd368710bf2ed98f7c53b7b184fa15b0b
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: ae15f3ed536967cb15d1a5913f9ca1eab8a510d9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419960"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554612"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation Özellik Ayrıntıları
 
@@ -16,7 +16,7 @@ ms.locfileid: "83419960"
 
 ## <a name="messaging-activities"></a>Mesajlaşma Etkinlikleri
 
-İleti etkinlikleri ( <xref:System.ServiceModel.Activities.Receive> ,, <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> ) iş akışınızdan WCF iletileri göndermek ve almak için kullanılır. <xref:System.ServiceModel.Activities.Receive>ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri, yalnızca standart WCF Web Hizmetleri gıbı WSDL aracılığıyla sunulan bir Windows Communication Foundation (WCF) hizmet işlemi oluşturmak için kullanılır. <xref:System.ServiceModel.Activities.Send>ve <xref:System.ServiceModel.Activities.ReceiveReply> WCF 'ye benzer bir Web hizmetini tüketmek için kullanılır <xref:System.ServiceModel.ChannelFactory> ; önceden yapılandırılmış etkinlikler üreten Workflow Foundation için de bir **hizmet başvurusu Ekle** deneyimi vardır.
+İleti etkinlikleri ( <xref:System.ServiceModel.Activities.Receive> ,, <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.Send> , <xref:System.ServiceModel.Activities.ReceiveReply> ) iş akışınızdan WCF iletileri göndermek ve almak için kullanılır. <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> etkinlikleri, yalnızca standart WCF Web Hizmetleri gıbı WSDL aracılığıyla sunulan bir Windows Communication Foundation (WCF) hizmet işlemi oluşturmak için kullanılır. <xref:System.ServiceModel.Activities.Send> ve <xref:System.ServiceModel.Activities.ReceiveReply> WCF 'ye benzer bir Web hizmetini tüketmek için kullanılır <xref:System.ServiceModel.ChannelFactory> ; önceden yapılandırılmış etkinlikler üreten Workflow Foundation için de bir **hizmet başvurusu Ekle** deneyimi vardır.
 
 ### <a name="getting-started-with-messaging-activities"></a>Mesajlaşma etkinliklerine Başlarken
 
@@ -62,7 +62,7 @@ Bağıntı iki işlemlerden biridir:
 
 - Bir veri parçasını bir hizmet örneğine eşlemenin bir yolu
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - Bağıntı ile çalışmaya başlamak için, Visual Studio 'da yeni bir proje oluşturun. Türünde bir değişken oluşturun <xref:System.ServiceModel.Activities.CorrelationHandle> .
 
@@ -86,7 +86,7 @@ Yeni sipariş oluşturma ve işlemdeki mevcut siparişlerin güncelleştirilmesi
 
 WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik bulmak için çok zor olan özellikler sağlar. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]' De, WCF kullanıcılarının hizmetlerini aşağıdaki özelliklerle yapılandırmasına yardımcı olmaya odaklandık:
 
-- Açık hizmet başına yapılandırma gereksinimi kaldırılıyor. Hizmetiniz için herhangi bir \< hizmet> öğesi yapılandırmazsanız ve hizmetiniz program aracılığıyla herhangi bir uç nokta tanımlamıyorsa, hizmetinize, hizmet temel adresi başına ve hizmetiniz tarafından uygulanan sözleşmeye göre otomatik olarak bir uç nokta kümesi eklenir.
+- Açık hizmet başına yapılandırma gereksinimi kaldırılıyor. Hizmetiniz için herhangi bir öğe yapılandırmazsanız \<service> ve hizmetiniz program aracılığıyla herhangi bir uç nokta tanımlamıyorsa, hizmetinize, hizmet temel adresi başına ve hizmetiniz tarafından uygulanan sözleşmeye göre otomatik olarak bir uç nokta kümesi eklenir.
 
 - Kullanıcının WCF bağlamaları ve davranışları için, açık yapılandırma olmayan hizmetlere uygulanacak varsayılan değerleri tanımlamasını sağlar.
 
@@ -94,17 +94,17 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik b
 
 - Son olarak, <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> WCF istemci yapılandırmasının merkezi yönetimini yapmanıza olanak sağlar ve uygulamanın etki alanı yükleme zamanından sonra yapılandırmanın seçildiği veya değiştirildiği senaryolarda faydalıdır.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
-- [Bir geliştiricinin WCF 4,0 Kılavuzu](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
+- [Bir geliştiricinin WCF 4,0 Kılavuzu](/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
 - [Yapılandırma Kanal Fabrikası](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
 - [Standart uç nokta öğesi](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4 ' te hizmet yapılandırması geliştirmeleri](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
+- [.NET Framework 4 ' te hizmet yapılandırması geliştirmeleri](/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [.NET 4 ' te yaygın kullanıcı hatası: WF/WCF hizmeti yapılandırma adını yanlış yazma](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
+- [.NET 4 ' te yaygın kullanıcı hatası: WF/WCF hizmeti yapılandırma adını yanlış yazma](/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>Basitleştirilmiş yapılandırma senaryoları
 
@@ -124,11 +124,11 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik b
 
 [DataContractResolver](../wcf/samples/datacontractresolver.md) , .NET 4,5 'deki bu sorunları çözer.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - [Veri sözleşme Çözümleyicisi API 'SI belgeleri](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Veri sözleşmesi çözümleyicisine giriş](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
+- [Veri sözleşmesi çözümleyicisine giriş](/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - Lerinizi
 
@@ -146,7 +146,7 @@ WCF yapılandırma şeması karmaşıktır ve kullanıcılara birçok özellik b
 
 Akış çizelgesi, etki alanı sorunlarını görsel olarak temsil eden iyi bilinen bir paradigdır. .NET 4 ' te sunduğumuz yeni bir denetim akışı stilidir. Akış çizelgesinin çekirdek özelliği, belirli bir zamanda yalnızca bir etkinliğin yürütülmesi olur. Akış çizelgeleri döngüler ve alternatif sonuçlar ifade edebilir, ancak çoklu düğümlerin eşzamanlı olarak yürütülmesini yerel olarak ifade edemez.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - Visual Studio 2012 ' de bir iş akışı konsol uygulaması oluşturun. İş akışı tasarımcısında bir akış çizelgesi ekleyin.
 
@@ -192,7 +192,7 @@ Bir akış çizelgesi etkinliği tahmin eden bir oyun uygulamak için kullanıla
 
 Yordamsal etkinlikler, programcılara tanıdık olan kavramları kullanarak sıralı denetim akışını modellemek için bir mekanizma sağlar. Bu etkinlikler geleneksel olarak yapılandırılmış programlama dili yapılarını etkinleştirir ve uygun olduğunda C# ve Visual Basic gibi ortak yordamsal dillerle dil eşliği sağlar.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - Visual Studio 2012 ' de bir iş akışı konsol uygulaması oluşturun. İş akışı tasarımcısında yordamsal etkinlikleri ekleyin.
 
@@ -206,7 +206,7 @@ Yordamsal etkinlikler, programcılara tanıdık olan kavramları kullanarak sır
 
   - [Parallel Etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallel-activity-designer)
 
-  - [ParallelForEach \< T> etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [ParallelForEach\<T> Etkinlik Tasarımcısı](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>Yordamsal etkinlik senaryoları
 
@@ -218,7 +218,7 @@ Yordamsal etkinlikler, programcılara tanıdık olan kavramları kullanarak sır
 
 <xref:System.Activities.Statements.InvokeMethod>Etkinlik, kapsamdaki nesnelerde veya türlerde ortak yöntemlerin yüklenmesine izin verir. Parametreleri (parametre dizileri dahil) ve genel yöntemleri olmayan ya da olmadan örnek ve statik yöntemlerin çağrılması desteklenir. Ayrıca, yöntemi eşzamanlı ve zaman uyumsuz olarak yürütmeye de olanak tanır.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - Visual Studio 2012 ' de bir iş akışı konsol uygulaması oluşturun. <xref:System.Activities.Statements.InvokeMethod>İş akışı tasarımcısında bir etkinlik ekleyin ve üzerinde statik ve örnek yöntemlerini yapılandırın.
 
@@ -232,9 +232,9 @@ Yordamsal etkinlikler, programcılara tanıdık olan kavramları kullanarak sır
 
 ## <a name="error-handling-activities"></a>Etkinlikler işlenirken hata oluştu
 
-<xref:System.Activities.Statements.TryCatch>Etkinlik, İçerilen etkinliklerin bir kümesini yürütme sırasında oluşan özel durumları yakalamak için bir mekanizma sağlar (C# ve Visual Basic Içindeki try/catch yapısına benzer). <xref:System.Activities.Statements.TryCatch>iş akışı düzeyinde özel durum işleme sağlar. İşlenmeyen bir özel durum oluştuğunda, iş akışı iptal edilir ve finally bloğu yürütülmez. Bu davranış C# ile tutarlıdır.
+<xref:System.Activities.Statements.TryCatch>Etkinlik, İçerilen etkinliklerin bir kümesini yürütme sırasında oluşan özel durumları yakalamak için bir mekanizma sağlar (C# ve Visual Basic Içindeki try/catch yapısına benzer). <xref:System.Activities.Statements.TryCatch> iş akışı düzeyinde özel durum işleme sağlar. İşlenmeyen bir özel durum oluştuğunda, iş akışı iptal edilir ve finally bloğu yürütülmez. Bu davranış C# ile tutarlıdır.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - Visual Studio 2012 ' de bir iş akışı konsol uygulaması oluşturun. <xref:System.Activities.Statements.TryCatch>İş akışı tasarımcısında bir etkinlik ekleyin.
 
@@ -248,9 +248,9 @@ Bir dizi etkinliğin yürütülmesi gerekir ve bir hata oluştuğunda belirli bi
 
 ## <a name="pick-activity"></a>Çekme etkinliği
 
-<xref:System.Activities.Statements.Pick>Etkinlik, WF 'de olay tabanlı denetim akışı modelleme sağlar. <xref:System.Activities.Statements.Pick>Her dalın çalıştırılmadan önce belirli bir olayın gerçekleşmesini beklediği birçok dalı içerir. Bu kurulumda, <xref:System.Activities.Statements.Pick> <xref:System.Activities.Statements.Switch%601> etkinliğin dinlediği olay kümesinden yalnızca birini yürütebileceği bir ile aynı şekilde davranır. Her dal olay odaklı ve oluşan olay, önce karşılık gelen dalı çalıştırır. Diğer tüm dallar olayları dinlemeyi iptal eder ve durdurur.
+<xref:System.Activities.Statements.Pick>Etkinlik, WF 'de olay tabanlı denetim akışı modelleme sağlar. <xref:System.Activities.Statements.Pick> Her dalın çalıştırılmadan önce belirli bir olayın gerçekleşmesini beklediği birçok dalı içerir. Bu kurulumda, <xref:System.Activities.Statements.Pick> <xref:System.Activities.Statements.Switch%601> etkinliğin dinlediği olay kümesinden yalnızca birini yürütebileceği bir ile aynı şekilde davranır. Her dal olay odaklı ve oluşan olay, önce karşılık gelen dalı çalıştırır. Diğer tüm dallar olayları dinlemeyi iptal eder ve durdurur.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - Visual Studio 2012 ' de bir iş akışı konsol uygulaması oluşturun. <xref:System.Activities.Statements.Pick>İş akışı tasarımcısında bir etkinlik ekleyin.
 
@@ -282,13 +282,13 @@ Yönlendirme hizmeti, WCF iletilerinin istemcileriniz ve hizmetleriniz arasında
 
 4. Dinamik (bellekte) güncelleştirme <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> ve Yönlendirme yapılandırması.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 1. Belgeler: [yönlendirme](../wcf/feature-details/routing.md)
 
 2. Örnekler: [yönlendirme hizmetleri &#91;WCF örnekleri&#93;](../wcf/samples/routing-services.md)
 
-3. Blog: [yönlendirme kuralları!](https://docs.microsoft.com/archive/blogs/RoutingRules/)
+3. Blog: [yönlendirme kuralları!](/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Yönlendirme Senaryoları
 
@@ -316,7 +316,7 @@ WCF bulma, uygulama altyapınıza bir bulma mekanizması eklemenize olanak tanı
 
 Ayrıca, bulma iletileri ağ protokolstik; Bunları, mod gereksinimlerini destekleyen herhangi bir protokolde kullanabilirsiniz. Örneğin, bulma çok noktaya yayın iletileri UDP kanalı veya çok noktaya yayın mesajlaşma 'yı destekleyen başka herhangi bir ağ üzerinden gönderilebilir. Özellik esnekliği ile birleştirilmiş bu tasarım noktaları, bulmayı özel olarak çözümünüze uyarlamanızı sağlar.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 - Belgeler: [WCF bulma](../wcf/feature-details/wcf-discovery.md)
 
@@ -328,13 +328,13 @@ Bir geliştirici, hizmetim kullanılabilir olduğunda bilinmediği için uç nok
 
 ## <a name="tracking"></a>İzleme
 
-İş akışı izleme, bir iş akışı örneğinin yürütülmesi hakkında öngörüler sağlar. İzleme olayları iş akışı örneği düzeyindeki bir iş akışından ve iş akışı içindeki etkinliklerin yürütülmesi sırasında yayınlanır. Kayıt iş akışı izleme katılımcısının kayıtları izlemeye abone olmak için iş akışı ana bilgisayarına eklenmesi gerekir. İzleme kayıtları, bir izleme profili kullanılarak filtrelenmiştir. .NET Framework, ETW (Windows için olay Izleme) izleme katılımcısı sağlar ve Machine. config dosyasına temel bir profil yüklenir.
+İş akışı izleme, bir iş akışı örneğinin yürütülmesi hakkında öngörüler sağlar. İzleme olayları iş akışı örneği düzeyindeki bir iş akışından ve iş akışı içindeki etkinliklerin yürütülmesi sırasında yayınlanır. Kayıt iş akışı izleme katılımcısının kayıtları izlemeye abone olmak için iş akışı ana bilgisayarına eklenmesi gerekir. İzleme kayıtları, bir izleme profili kullanılarak filtrelenmiştir. .NET Framework, ETW (Windows için olay Izleme) izleme katılımcısı sağlar ve machine.config dosyasına temel bir profil yüklenir.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 1. Visual Studio 2010 ' de bir WCF Iş akışı hizmeti uygulama projesi oluşturun. Bir <xref:System.ServiceModel.Activities.Receive> ve <xref:System.ServiceModel.Activities.SendReply> çifti, Tuvalinize başlamak için yerleştirilecek.
 
-2. Web. config dosyasını açın ve profil olmadan bir ETW izleme davranışı ekleyin.
+2. web.config açın ve profil olmadan bir ETW izleme davranışı ekleyin.
 
     1. Varsayılan profil kullanılır.
 
@@ -352,7 +352,7 @@ Bir geliştirici, hizmetim kullanılabilir olduğunda bilinmediği için uç nok
 
 , <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> Bir örnek deposunun SQL Server tabanlı uygulamasıdır. Örnek deposu, çalışan bir örneğin durumunu, bu örneği yüklemek ve sürdürülmesi için gereken tüm verilerle birlikte depolar. Hizmet ana bilgisayarı, örnek deposuna iş akışı devam ederse örnek durumunu kaydetmesini söyler ve bu örneğe bir ileti geldiğinde ya da bir gecikme etkinliğinin süresinin dolacağını örnek deposuna yükler.
 
-### <a name="getting-started"></a>Başlarken
+### <a name="getting-started"></a>Kullanmaya Başlama
 
 1. Visual Studio 2012 ' de örtük veya açık bir etkinlik içeren bir Iş akışı oluşturun <xref:System.Activities.Statements.Persist> . Çalışma <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> akışı hizmet ana bilgisayarınıza davranışı ekleyin. Bu, kod veya uygulama yapılandırma dosyasında yapılabilir.
 

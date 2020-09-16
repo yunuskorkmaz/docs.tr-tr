@@ -8,19 +8,19 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-ms.openlocfilehash: 1b73a79b8167e7f75b8c68f708179e88c575d66a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 0adae4db393c4c01620ea896c4451c3279272fca
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621905"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559284"
 ---
 # <a name="registering-assemblies-with-com"></a>Derlemeleri COM ile Kaydetme
 Bir derlemeyi COM ile kullanmak üzere kaydetmek veya kaydını silmek için [Derleme Kayıt Aracı (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) adlı bir komut satırı aracı çalıştırabilirsiniz. Regasm.exe, COM istemcilerinin .NET Framework sınıfını saydam bir şekilde kullanabilmesi için sistem kayıt defterine sınıfla ilgili bilgiler ekler. <xref:System.Runtime.InteropServices.RegistrationServices>Sınıfı eşdeğer işlevselliği sağlar.  
   
  Yönetilen bir bileşen, bir COM istemcisinden etkinleştirilmeden önce Windows kayıt defteri 'nde kayıtlı olmalıdır. Aşağıdaki tabloda Regasm.exe tipik olarak Windows kayıt defterine eklediği anahtarlar gösterilmektedir. (000000 yazın, gerçek GUID değerini gösterir.)  
   
-|GUID|Açıklama|Kayıt defteri anahtarı|  
+|GUID|Description|Kayıt defteri anahtarı|  
 |----------|-----------------|------------------|  
 |IN|Sınıf tanımlayıcısı|HKEY_CLASSES_ROOT \CLSıD \\ {000... 000|  
 |'SI|Arabirim tanımlayıcısı|HKEY_CLASSES_ROOT \Interface \\ {000... 000|  
@@ -46,5 +46,5 @@ Bir derlemeyi COM ile kullanmak üzere kaydetmek veya kaydını silmek için [De
 
 - [.NET Framework Bileşenlerini COM'da Gösterme](exposing-dotnet-components-to-com.md)
 - [Nasıl yapılır: COM'dan .NET Türlerine Başvurma](how-to-reference-net-types-from-com.md)
-- [.NET nesnesi çağırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [COM erişimi için uygulama dağıtma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [.NET nesnesi çağırma](/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM erişimi için uygulama dağıtma](/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

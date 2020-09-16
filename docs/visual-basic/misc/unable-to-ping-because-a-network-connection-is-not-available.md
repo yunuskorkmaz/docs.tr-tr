@@ -1,26 +1,26 @@
 ---
-title: Bir ağ bağlantısı kullanılamadığından ping yapılamıyor
+title: Ağ bağlantısı kullanılamadığından ping yapılamıyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
-ms.openlocfilehash: 4c5790349c9262481a96490a7880a22378169317
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82a2acf8c496e93b99daa266794d55edff7d4fc2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913268"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90553460"
 ---
-# <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>Bir ağ bağlantısı kullanılamadığından ping yapılamıyor
-Ağ bağlantısı kullanılamadığından işlem gerçekleştirilemiyor.  
+# <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>Ağ bağlantısı kullanılamadığından ping yapılamıyor
+Kullanılabilir ağ bağlantısı olmadığından işlem gerçekleştirilemiyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Ağa bağlayın ve işlemi yeniden çalıştırmayı deneyin.  
+- Ağa bağlanın ve işlemi yeniden deneyin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [My.Computer.Network.Ping](xref:Microsoft.VisualBasic.Devices.Network.Ping%2A)
-- [My.Computer.Network.IsAvailable](xref:Microsoft.VisualBasic.Devices.Network.IsAvailable)
-- [Visual Basic ile .NET Framework'te ağ işlemleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms172756(v=vs.100))
-- [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)
+- [My. Computer. Network. PING](xref:Microsoft.VisualBasic.Devices.Network.Ping%2A)
+- [My. Computer. Network. IsAvailable](xref:Microsoft.VisualBasic.Devices.Network.IsAvailable)
+- [Visual Basic ile .NET Framework ağ Işlemleri](/previous-versions/visualstudio/visual-studio-2010/ms172756(v=vs.100))
+- [My. Computer. Network](xref:Microsoft.VisualBasic.Devices.Network)

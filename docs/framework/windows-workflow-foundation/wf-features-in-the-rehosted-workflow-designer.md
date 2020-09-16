@@ -2,12 +2,12 @@
 title: Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b561e580f0d7f2d77847d91612e8b06bc57a2a45
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937734"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558439"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Yeniden Barındırılan İş Akışı Tasarımcısında Yeni Workflow Foundation 4.5 Özellikleri Desteği
 .NET Framework 4,5 ' de Windows Workflow Foundation (WF), iş akışı Tasarımcısı deneyimine yönelik çeşitli geliştirmeler de dahil olmak üzere birçok yeni özellik sunmuştur. Bu konu başlığı altında, yeniden barındırılan Tasarımcıda Bu özelliklerden hangilerinin desteklendiği ve hangilerinin Şu anda desteklenmeyen ayrıntıları verilmektedir.
@@ -19,15 +19,15 @@ ms.locfileid: "75937734"
  Yerleşik etkinlik kitaplığı, yeni etkinlikler ve mevcut etkinliklere yönelik yeni özellikler içerir. Bu yeni etkinliklerin hepsi yeniden barındırılan tasarımcıda desteklenir. Bu yeni etkinlikler hakkında daha fazla bilgi için, [.net 4,5 'deki Windows Workflow Foundation](whats-new-in-wf-in-dotnet.md) [yenilikleri bölümüne bakın](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) .
 
 ## <a name="c-expressions"></a>C# İfadeleri
- .NET Framework 4,5 ' dan önce, iş akışlarındaki tüm ifadeler yalnızca Visual Basic yazdırılabilir. .NET Framework 4,5 ' de Visual Basic ifadeler yalnızca Visual Basic kullanılarak oluşturulan projeler için kullanılır. Artık C# Visual projeleri ifadeler C# için kullanılır. Visual Studio 2012 ' de iş akışları yazarken, tam işlevli C# bir ifade düzenleyicisine, dilbilgisi vurgulama ve IntelliSense gibi yetenekler sağlanır. C#önceki sürümlerde oluşturulan Visual Basic ifadeleri kullanan iş akışı projeleri çalışmaya devam edecektir.
+ .NET Framework 4,5 ' dan önce, iş akışlarındaki tüm ifadeler yalnızca Visual Basic yazdırılabilir. .NET Framework 4,5 ' de Visual Basic ifadeler yalnızca Visual Basic kullanılarak oluşturulan projeler için kullanılır. Visual C# projeleri artık ifadeler Için C# kullanır. Visual Studio 2012 ' de iş akışları yazarken, tam işlevli bir C# ifade düzenleyicisine, dilbilgisi vurgulama ve IntelliSense gibi yetenekler sağlanır. Önceki sürümlerde oluşturulan ve Visual Basic ifadelerini kullanan C# iş akışı projeleri çalışmaya devam edecektir.
 
 > [!WARNING]
-> C#yeniden barındırılan tasarımcıda ifadeler desteklenmez.
+> Yeniden barındırılan tasarımcıda C# ifadeleri desteklenmez.
 
 ## <a name="new-designer-capabilities"></a>Yeni tasarımcı özellikleri
 
 ### <a name="designer-search"></a>Tasarımcı arama
- .NET Framework 4,5 ile tanıtılan [dosyalardaki](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) [hızlı bul](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) ve bul özellikleri yeniden barındırılan tasarımcıda desteklenmez. `Toolbox` arama yeniden barındırılan tasarımcıda desteklenir. Bu özellikler hakkında daha fazla bilgi için bkz. [Tasarımcı arama](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
+ .NET Framework 4,5 ile tanıtılan [dosyalardaki](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) [hızlı bul](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) ve bul özellikleri yeniden barındırılan tasarımcıda desteklenmez. `Toolbox`Arama, yeniden barındırılan tasarımcıda desteklenir. Bu özellikler hakkında daha fazla bilgi için bkz. [Tasarımcı arama](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch).
 
 > [!WARNING]
 > Yeniden barındırılan tasarımcıda [dosyalarda](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) [hızlı bulma](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) ve bulma desteklenmez.
@@ -40,13 +40,13 @@ ms.locfileid: "75937734"
  ![Değişken ve bağımsız değişken Tasarımcısı bağlam menüsü](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Sırayla Otomatik sarma
- Bir iş akışı veya bazı kapsayıcı Etkinlikleri (örneğin, <xref:System.Activities.Statements.NoPersistScope>) yalnızca tek bir gövde etkinliği içerebildiği için, ikinci bir etkinlik eklemek geliştiricinin ilk etkinliği silmesi, bir <xref:System.Activities.Statements.Sequence> etkinliği eklemesi ve ardından her iki etkinliği de sıralı etkinliğe eklemesi gerekir. .NET Framework 4,5 ' den başlayarak, tasarımcı yüzeyine ikinci bir etkinlik eklenirken, her iki etkinliği de kaydırmak için `Sequence` bir etkinlik otomatik olarak oluşturulur. Bu özellik, yeniden barındırılan tasarımcıda desteklenir.
+ Bir iş akışı veya bazı kapsayıcı Etkinlikleri (gibi <xref:System.Activities.Statements.NoPersistScope> ) yalnızca tek bir gövde etkinliği içerebileceğinden, ikinci bir etkinlik eklemek geliştiricinin ilk etkinliği silmesi, bir <xref:System.Activities.Statements.Sequence> etkinlik eklemesi ve ardından her iki etkinliği de sıralı etkinliğe eklemesi gerekir. .NET Framework 4,5 ' den başlayarak, tasarımcı yüzeyine ikinci bir etkinlik eklenirken `Sequence` her iki etkinliği de kaydırmak için bir etkinlik otomatik olarak oluşturulur. Bu özellik, yeniden barındırılan tasarımcıda desteklenir.
 
- Aşağıdaki ekran görüntüsünde bir `NoPersistScope``Body` `WriteLine` etkinlik gösterilmektedir.
+ Aşağıdaki ekran görüntüsünde `WriteLine` içindeki bir etkinlik gösterilmektedir `Body` `NoPersistScope` .
 
  ![NoPersistScope etkinliğinin gövdesinde bir WriteLine etkinliği.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
- Aşağıdaki ekran görüntüsünde ikinci bir `WriteLine` ilk altına bırakıldığında `Body` otomatik olarak oluşturulan `Sequence` etkinliği gösterilmektedir.
+ Aşağıdaki ekran görüntüsünde `Sequence` , `Body` birincinin altına ikinci kez bırakıldığında otomatik olarak oluşturulan etkinlik gösterilmektedir `WriteLine` .
 
  ![NoPersistScope gövdesinde otomatik olarak oluşturulan bir sıra.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
@@ -72,7 +72,7 @@ ms.locfileid: "75937734"
  ![Visual Studio 'da sıralı iş akışı ile ana hat görünümünün ekran görüntüsü](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Kabuk çubuğu ve üst bilgi öğelerinin görünürlüğü hakkında daha fazla denetim
- Yeniden barındırılan bir tasarımcıda, bazı standart Kullanıcı arabirimi denetimlerinin belirli bir iş akışı için anlamı olmayabilir ve kapatılabilir. .NET Framework 4 ' te bu özelleştirme yalnızca tasarımcının alt kısmındaki kabuk çubuğu tarafından desteklenir. .NET Framework 4,5 ' de, tasarımcı 'nın en üstündeki kabuk üst bilgi öğelerinin görünürlüğü, uygun <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> değeri ile <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> ayarlanarak ayarlanabilir.
+ Yeniden barındırılan bir tasarımcıda, bazı standart Kullanıcı arabirimi denetimlerinin belirli bir iş akışı için anlamı olmayabilir ve kapatılabilir. .NET Framework 4 ' te bu özelleştirme yalnızca tasarımcının alt kısmındaki kabuk çubuğu tarafından desteklenir. .NET Framework 4,5 ' de, tasarımcı 'nın en üstündeki kabuk üst bilgi öğelerinin görünürlüğü <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> uygun değerle ayarlanarak ayarlanabilir <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> .
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Akış Çizelgesine ve durum makinesi iş akışlarına otomatik bağlan ve otomatik ekle
  .NET Framework 4 ' te, bir akış çizelgesi iş akışında düğümler arasındaki bağlantıların el ile eklenmesi gerekiyordu. .NET Framework 4,5 ' de, akış çizelgesi ve durum makinesi düğümlerinde, bir etkinlik araç kutusundan tasarımcı yüzeyine sürüklendiğinde görünür hale gelen otomatik bağlantı noktaları bulunur. Bu noktaların birine bir etkinliğin atılması, etkinliği gereken bağlantıyla birlikte otomatik olarak ekler.
@@ -95,7 +95,7 @@ ms.locfileid: "75937734"
  Tasarımcı ek açıklamaları yeniden barındırılan tasarımcıda desteklenir.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Tasarımcıda ActivityDelegate nesnelerini tanımlama ve kullanma
- .NET Framework 4 ' teki etkinlikler, iş akışının diğer bölümlerinin bir iş akışının yürütmesi ile etkileşime girebildiği yürütme noktalarını ortaya çıkarmak için nesneleri <xref:System.Activities.ActivityDelegate> kullandı, ancak bu yürütme noktalarının kullanılması genellikle bir kod miktarına ihtiyaç duyulmalıdır. Bu sürümde, geliştiriciler iş akışı tasarımcısını kullanarak etkinlik temsilcileri tanımlayabilir ve kullanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: iş akışı Tasarımcısı etkinlik temsilcilerini tanımlama ve kullanma](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+ .NET Framework 4 ' teki etkinlikler, <xref:System.Activities.ActivityDelegate> iş akışının diğer bölümlerinin bir iş akışının yürütmesi ile etkileşime girebildiği yürütme noktalarını ortaya çıkarmak için kullanılan nesne. Bu sürümde, geliştiriciler iş akışı tasarımcısını kullanarak etkinlik temsilcileri tanımlayabilir ve kullanabilir. Daha fazla bilgi için bkz. [nasıl yapılır: iş akışı Tasarımcısı etkinlik temsilcilerini tanımlama ve kullanma](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
 
  Etkinlik temsilcileri yeniden barındırılan tasarımcıda desteklenir.
 
@@ -116,13 +116,13 @@ ms.locfileid: "75937734"
  Bu özellik, yeniden barındırılan iş akışı tasarımcısında desteklenir.  
   
 ### <a name="opt-in-for-workflow-45-features-in-rehosted-designer"></a>Yeniden barındırılan tasarımcıda Iş akışı 4,5 özellikleri için katılım  
- Geriye dönük uyumluluğu korumak için .NET Framework 4,5 ' de yer alan bazı yeni özellikler yeniden barındırılan tasarımcıda varsayılan olarak etkinleştirilmez. Bu, yeniden barındırılan tasarımcı kullanan mevcut uygulamaların en son sürüme güncelleştirme yaparak kesilmemesini sağlamaktır. Yeniden barındırılan tasarımcıda yeni özellikleri etkinleştirmek için, <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> ".NET Framework 4,5" olarak ayarlayın veya tek tek özellikleri etkinleştirmek için <xref:System.Activities.Presentation.DesignerConfigurationService> tek tek üyelerini ayarlayın.  
+ Geriye dönük uyumluluğu korumak için .NET Framework 4,5 ' de yer alan bazı yeni özellikler yeniden barındırılan tasarımcıda varsayılan olarak etkinleştirilmez. Bu, yeniden barındırılan tasarımcı kullanan mevcut uygulamaların en son sürüme güncelleştirme yaparak kesilmemesini sağlamaktır. Yeniden barındırılan tasarımcıda yeni özellikleri etkinleştirmek için, <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> ".NET Framework 4,5" olarak ayarlayın veya ayrı ayrı <xref:System.Activities.Presentation.DesignerConfigurationService> özellikleri etkinleştirmek için ayrı ayrı üyeleri ayarlayın.  
   
 ## <a name="new-workflow-development-models"></a>Yeni Iş akışı geliştirme modelleri  
  Akış çizelgesi ve sıralı iş akışı geliştirme modellerine ek olarak, bu sürüm durum makinesi iş akışlarını ve sözleşme ilk iş akışı hizmetlerini içerir.  
   
 ### <a name="state-machine-workflows"></a>Durum makinesi iş akışları  
- Durum makinesi iş akışları, [Microsoft .NET Framework 4 Platform Güncelleştirme 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)' de .NET Framework 4.0.1 bir parçası olarak sunulmuştur. Bu güncelleştirme, geliştiricilerin durum makinesi iş akışları oluşturmalarına izin veren birkaç yeni sınıf ve etkinlik içeriyordu. Bu sınıflar ve Etkinlikler 4,5 .NET Framework güncelleştirilmiştir. Güncelleştirmeler şunları içerir:  
+ Durum makinesi iş akışları, [Microsoft .NET Framework 4 Platform Güncelleştirme 1](/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)' de .NET Framework 4.0.1 bir parçası olarak sunulmuştur. Bu güncelleştirme, geliştiricilerin durum makinesi iş akışları oluşturmalarına izin veren birkaç yeni sınıf ve etkinlik içeriyordu. Bu sınıflar ve Etkinlikler 4,5 .NET Framework güncelleştirilmiştir. Güncelleştirmeler şunları içerir:  
   
 1. Durumlar üzerinde kesme noktaları ayarlama yeteneği  
   
@@ -130,7 +130,7 @@ ms.locfileid: "75937734"
   
 3. Paylaşılan tetikleyici geçişi oluşturma için tasarımcı desteği  
   
-4. : <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>ve <xref:System.Activities.Statements.Transition> dahil olmak üzere durum makinesi iş akışları oluşturmak için kullanılan etkinlikler  
+4. Aşağıdakiler dahil olmak üzere durum makine iş akışları oluşturmak için kullanılan etkinlikler: <xref:System.Activities.Statements.StateMachine> , <xref:System.Activities.Statements.State> ve <xref:System.Activities.Statements.Transition>  
   
  Aşağıdaki ekran görüntüsünde, Başlangıç [öğreticisindeki](getting-started-tutorial.md) tamamlanan durum makinesi iş akışı gösterilmektedir. [nasıl yapılır: durum makinesi iş akışı oluşturma](how-to-create-a-state-machine-workflow.md).  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: e012ec9ad340c74f5bc776cfc6d8b88326210fec
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 86b9a1d7b0c772a308b9f059bb31c1f489635300
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245342"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559408"
 ---
 # <a name="bindings-and-security"></a>Bağlamalar ve Güvenlik
 
@@ -195,9 +195,9 @@ Aşağıdaki tabloda güvenlik modu ayarında sunulan özellikler özetlenmekted
 
 |Ayar|Özellikler|
 |-------------|--------------|
-|Aktarım|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Noktadan noktaya güvenlik<br /><br /> Birlikte çalışabilirlik<br /><br /> Donanım hızlandırma<br /><br /> Yüksek verimlilik<br /><br /> Güvenli güvenlik duvarı<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> Birden çok atlama genelinde yeniden şifreleme|
-|İleti|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Uçtan uca güvenlik<br /><br /> Birlikte çalışabilirlik<br /><br /> Zengin talepler<br /><br /> Federasyon<br /><br /> Çok faktörlü kimlik doğrulaması<br /><br /> Özel belirteçler<br /><br /> Önemli/zaman damgası hizmeti<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> İleti imzalarının kalıcılığı|
-|TransportWithMessageCredential|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Noktadan noktaya güvenlik<br /><br /> Birlikte çalışabilirlik<br /><br /> Donanım hızlandırma<br /><br /> Yüksek verimlilik<br /><br /> Zengin istemci talepleri<br /><br /> Federasyon<br /><br /> Çok faktörlü kimlik doğrulaması<br /><br /> Özel belirteçler<br /><br /> Güvenli güvenlik duvarı<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> Birden çok atlama genelinde yeniden şifreleme|
+|Aktarım|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Noktadan noktaya güvenlik<br /><br /> Birlikte Çalışabilirlik<br /><br /> Donanım hızlandırma<br /><br /> Yüksek aktarım hızı<br /><br /> Güvenli güvenlik duvarı<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> Birden çok atlama genelinde yeniden şifreleme|
+|İleti|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Uçtan uca güvenlik<br /><br /> Birlikte Çalışabilirlik<br /><br /> Zengin talepler<br /><br /> Federasyon<br /><br /> Çok faktörlü kimlik doğrulaması<br /><br /> Özel belirteçler<br /><br /> Önemli/zaman damgası hizmeti<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> İleti imzalarının kalıcılığı|
+|TransportWithMessageCredential|Sunucu kimlik doğrulaması<br /><br /> İstemci kimlik doğrulaması<br /><br /> Noktadan noktaya güvenlik<br /><br /> Birlikte Çalışabilirlik<br /><br /> Donanım hızlandırma<br /><br /> Yüksek aktarım hızı<br /><br /> Zengin istemci talepleri<br /><br /> Federasyon<br /><br /> Çok faktörlü kimlik doğrulaması<br /><br /> Özel belirteçler<br /><br /> Güvenli güvenlik duvarı<br /><br /> Yüksek gecikmeli uygulamalar<br /><br /> Birden çok atlama genelinde yeniden şifreleme|
 
 Aşağıdaki tabloda, çeşitli mod ayarlarını destekleyen bağlamalar listelenmektedir. Hizmet uç noktanızı oluşturmak için kullanılacak tablodan bir bağlama seçin.
 
@@ -205,11 +205,11 @@ Aşağıdaki tabloda, çeşitli mod ayarlarını destekleyen bağlamalar listele
 |-------------|----------------------------|--------------------------|--------------------------------------------|
 |`BasicHttpBinding`|Yes|Yes|Yes|
 |`WSHttpBinding`|Yes|Yes|Yes|
-|`WSDualHttpBinding`|No|Evet|No|
+|`WSDualHttpBinding`|Hayır|Yes|Hayır|
 |`NetTcpBinding`|Yes|Yes|Yes|
 |`NetNamedPipeBinding`|Yes|Hayır|Hayır|
-|`NetMsmqBinding`|Yes|Yes|No|
-|`MsmqIntegrationBinding`|Evet|Hayır|Hayır|
+|`NetMsmqBinding`|Yes|Yes|Hayır|
+|`MsmqIntegrationBinding`|Yes|Hayır|Hayır|
 |`wsFederationHttpBinding`|Hayır|Yes|Yes|
 
 ## <a name="transport-credentials-in-bindings"></a>Bağlamalarda aktarım kimlik bilgileri
@@ -245,4 +245,4 @@ Aşağıdaki tabloda, Ileti güvenliği modunda bir bağlama kullanılırken kul
 - [Kimlik Bilgisi Türü Seçme](selecting-a-credential-type.md)
 - [Özel Bağlamalarla Güvenlik Özellikleri](security-capabilities-with-custom-bindings.md)
 - [Güvenlik Davranışları](security-behaviors-in-wcf.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

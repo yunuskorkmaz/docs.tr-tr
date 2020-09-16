@@ -2,12 +2,12 @@
 title: Visual Studio’da Bir Nesneyi Kalıcı Kılma
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: e4eaf87c99ea1577d7f3ca40e628c00cc2700511
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3febd3f74510d11a7103edbd52bcae8043a5edc0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413135"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558608"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>İzlenecek yol: Visual Studio 'da bir nesneyi kalıcı hale getirme (Visual Basic)
 Tasarım zamanında bir nesnenin özelliklerini varsayılan değerlere ayarlayabilseniz de, nesne yok edildiğinde çalışma zamanında girilen tüm değerler kaybedilir. Nesneleri, değerleri depolamanızı ve nesnenin bir sonraki açılışında bunları almanızı sağlayan örnekler arasında bir nesnenin verilerini kalıcı hale getirmek için serileştirme kullanabilirsiniz.  
@@ -31,7 +31,7 @@ Tasarım zamanında bir nesnenin özelliklerini varsayılan değerlere ayarlayab
   
 ### <a name="to-create-the-loan-class"></a>Kredi sınıfı oluşturmak için  
   
-1. Yeni bir sınıf kitaplığı projesi oluşturun ve "Kreclass" olarak adlandırın. Daha fazla bilgi için bkz. [çözüm ve proje oluşturma](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects).  
+1. Yeni bir sınıf kitaplığı projesi oluşturun ve "Kreclass" olarak adlandırın. Daha fazla bilgi için bkz. [çözüm ve proje oluşturma](/visualstudio/ide/creating-solutions-and-projects).  
   
 2. **Çözüm Gezgini**, Class1 dosyası için kısayol menüsünü açın ve **Yeniden Adlandır**' ı seçin. Dosyayı olarak yeniden adlandırın `Loan` ve ENTER 'a basın. Dosyanın yeniden adlandırılması de sınıfı olarak yeniden adlandırılacaktır `Loan` .  
   

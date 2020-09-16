@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-ms.openlocfilehash: ca733d59abc4ca3d9d470b054ee9e34b5084ae38
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: bd618714a9bd27bc309b7933b656de6bd139cfe7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618980"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554898"
 ---
 # <a name="interop-marshaling"></a>Birlikte Çalışma Hazırlama
 
@@ -47,8 +47,8 @@ COM Ayrıca, verileri COM apartmanları veya farklı COM işlemleri arasında s�
 
 |COM istemcisi|.NET Server|Hazırlama gereksinimleri|
 |----------------|-----------------|-----------------------------|
-|A|`Both`STA olur.|Aynı apartman sıralaması.|
-|MTA|`Both`MTA olur.|Aynı apartman sıralaması.|
+|A|`Both` STA olur.|Aynı apartman sıralaması.|
+|MTA|`Both` MTA olur.|Aynı apartman sıralaması.|
 
 İstemci ve sunucu aynı grupta olduğundan, birlikte çalışma hazırlama hizmeti tüm veri sıralamasını otomatik olarak işler. Aşağıdaki çizimde, aynı COM stili apartman içinde yönetilen ve yönetilmeyen Heap 'ler arasında çalışan birlikte çalışma sıralama hizmeti gösterilmektedir.
 
@@ -79,11 +79,11 @@ Yönetilen bir istemci ve yönetilmeyen sunucu aynı Apartment ise, birlikte ça
     > [!NOTE]
     > Bir C# istemcisinin iş parçacığı STA olarak ayarlandığında, MTA COM bileşenlerine yapılan çağrılar, çapraz grup sıralaması gerektirir.
 
-Bir grup modelini açıkça seçme yönergeleri için bkz. [yönetilen ve yönetilmeyen Iş parçacığı](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).
+Bir grup modelini açıkça seçme yönergeleri için bkz. [yönetilen ve yönetilmeyen Iş parçacığı](/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).
 
 ## <a name="marshaling-remote-calls"></a>Uzak çağrıları sıralama
 
-Çapraz grup sıralaması gibi, nesneler ayrı işlemlerde olduğunda yönetilen ve yönetilmeyen kod arasındaki her çağrıya COM sıralaması dahil edilir. Örneğin:
+Çapraz grup sıralaması gibi, nesneler ayrı işlemlerde olduğunda yönetilen ve yönetilmeyen kod arasındaki her çağrıya COM sıralaması dahil edilir. Örnek:
 
 - Uzak bir konakta yönetilen bir sunucuyu çağıran bir COM istemcisi Dağıtılmış COM (DCOM) kullanır.
 - Uzak bir konakta bir COM sunucusu çağıran yönetilen istemci DCOM kullanır.
@@ -125,10 +125,10 @@ Bazı yönetilmeyen çağrılar, hizmet verilen bileşenler ve COM arasındaki �
 |[COM Birlikte Çalışma ile Verileri Sıralama](marshaling-data-with-com-interop.md)|Sıralama davranışının değiştirmek için COM sarmalayıcılarının nasıl özelleştirileceğini açıklar.|
 |[Nasıl yapılır: Yönetilen Kodu DCOM’dan WCF’ye Geçirme](how-to-migrate-managed-code-dcom-to-wcf.md)|DCOM 'dan WCF 'ye geçiş işlemini açıklar.|
 |[Nasıl yapılır: HRESULTs ve Özel Durumları Eşleme](how-to-map-hresults-and-exceptions.md)|Özel özel durumların HRESULTs ile nasıl eşlenmesinin ve .NET Framework her HRESULT 'den karşılaştırılabilen özel durum sınıfına tüm eşlemeyi nasıl sağladığını açıklar.|
-|[Genel türler kullanılarak birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM birlikte çalışabilirlik için genel türler kullanılırken hangi eylemlerin desteklendiğini açıklar.|
+|[Genel türler kullanılarak birlikte çalışma](/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|COM birlikte çalışabilirlik için genel türler kullanılırken hangi eylemlerin desteklendiğini açıklar.|
 |[Yönetilmeyen Kod ile Birlikte Çalışma](index.md)|Ortak dil çalışma zamanı tarafından sunulan birlikte çalışabilirlik hizmetlerini açıklar.|
-|[Gelişmiş COM birlikte çalışabilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|.NET Framework uygulamanıza COM bileşenlerini ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|
-|[Birlikte çalışabilirlik için tasarım konuları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Tümleşik COM bileşenleri yazmak için ipuçları sağlar.|
+|[Gelişmiş COM birlikte çalışabilirlik](/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|.NET Framework uygulamanıza COM bileşenlerini ekleme hakkında daha fazla bilgi için bağlantılar sağlar.|
+|[Birlikte çalışabilirlik için tasarım konuları](/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|Tümleşik COM bileşenleri yazmak için ipuçları sağlar.|
 
 ## <a name="reference"></a>Başvuru
 

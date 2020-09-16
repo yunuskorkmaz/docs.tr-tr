@@ -7,19 +7,19 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 58d038d5c2ac4973c2b41f4d49c1746f48f2a2fb
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 2ff3f63d406a260f83eaba4f2e7a8419046e1931
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247746"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90559037"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Veri Hizmetleri İstemci Kitaplığı
 Bir HTTP isteği gönderebileceği ve bir veri hizmetinin döndürdüğü OData akışını işlebiliyorsanız, herhangi bir uygulama açık veri Protokolü (OData) tabanlı bir veri hizmeti ile etkileşime geçebilir. Bu birlikte çalışabilirlik, çok çeşitli web özellikli uygulamalardan OData tabanlı hizmetlere erişmenizi sağlar. WCF Veri Hizmetleri, .NET Framework veya Silverlight tabanlı uygulamalardan OData akışlarını kullanırken daha zengin bir programlama deneyimi sağlayan istemci kitaplıklarını içerir.  
   
  İstemci kitaplığının iki ana sınıfı <xref:System.Data.Services.Client.DataServiceContext> sınıfı ve <xref:System.Data.Services.Client.DataServiceQuery%601> sınıfıdır. <xref:System.Data.Services.Client.DataServiceContext>Sınıfı, belirtilen bir veri hizmetine göre desteklenen işlemleri kapsüller. OData Hizmetleri durum bilgisiz olmasına karşın bağlam değildir. Bu nedenle, <xref:System.Data.Services.Client.DataServiceContext> değişiklik yönetimi gibi özellikleri desteklemek için veri hizmeti ile etkileşimler arasında istemcideki durumu korumak için sınıfını kullanabilirsiniz. Bu sınıf Ayrıca kimlikleri yönetir ve değişiklikleri izler. <xref:System.Data.Services.Client.DataServiceQuery%601>Sınıfı, belirli bir varlık kümesine karşı bir sorguyu temsil eder.  
   
- Bu bölümde, istemci kitaplıklarının bir .NET Framework istemci uygulamasına erişmek ve verileri değiştirmek için nasıl kullanılacağı açıklanmaktadır. WCF Veri Hizmetleri istemci kitaplığını Silverlight tabanlı bir uygulamayla kullanma hakkında daha fazla bilgi için, bkz. [WCF veri Hizmetleri (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v%3dvs.95)). Diğer istemci kitaplıkları, bir OData akışını diğer türlerde uygulamalarda kullanmanıza olanak sağlayan kullanılabilir. OData SDK hakkında daha fazla bilgi için bkz. [OData SDK-örnek kodu](https://www.odata.org/ecosystem/#sdk).
+ Bu bölümde, istemci kitaplıklarının bir .NET Framework istemci uygulamasına erişmek ve verileri değiştirmek için nasıl kullanılacağı açıklanmaktadır. WCF Veri Hizmetleri istemci kitaplığını Silverlight tabanlı bir uygulamayla kullanma hakkında daha fazla bilgi için, bkz. [WCF veri Hizmetleri (Silverlight)](/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)). Diğer istemci kitaplıkları, bir OData akışını diğer türlerde uygulamalarda kullanmanıza olanak sağlayan kullanılabilir. OData SDK hakkında daha fazla bilgi için bkz. [OData SDK-örnek kodu](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="in-this-section"></a>Bu Bölümde  
  [Veri Hizmeti İstemci Kitaplığı Oluşturma](generating-the-data-service-client-library-wcf-data-services.md)  
@@ -34,7 +34,7 @@ Bir HTTP isteği gönderebileceği ve bir veri hizmetinin döndürdüğü OData 
  [Veri Hizmetini Güncelleştirme](updating-the-data-service-wcf-data-services.md)  
  İstemci kitaplıklarını kullanarak varlıkları ve ilişkileri oluşturma, değiştirme ve silme işlemlerinin nasıl yapılacağını açıklar.  
   
- [Zaman uyumsuz Işlemler](asynchronous-operations-wcf-data-services.md)  
+ [Zaman Uyumsuz İşlemler](asynchronous-operations-wcf-data-services.md)  
  Zaman uyumsuz bir şekilde veri hizmetiyle çalışmak için istemci kitaplıkları tarafından sunulan tesislerin açıklar.  
   
  [Toplu İşlemler](batching-operations-wcf-data-services.md)  

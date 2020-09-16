@@ -3,12 +3,12 @@ title: SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
 description: Kullanıcı şeması ayrımı SQL Server veritabanı nesne izinlerini yönetirken esnekliğe nasıl izin verdiğini öğrenin. Şemalar nesneleri ayrı ad alanlarına gruplar.
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 97e742979785fedd922dc887295b63e2d93bd147
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 27c37816353ca47c3f96867adc6186b0162feb20
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286268"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558842"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server'da Sahiplik ve Kullanıcı Şeması Ayrımı
 SQL Server güvenliği temel bir kavramı, nesne sahiplerinin bunları yönetmek için geri alınamaz izinlere sahip olmalarından oluşur. Bir nesne sahibinden ayrıcalıkları kaldıramazsınız ve içindeki nesneler varsa kullanıcıları bir veritabanından bırakamazsınız.  
@@ -54,9 +54,9 @@ Server.Database.DatabaseSchema.DatabaseObject
 ## <a name="external-resources"></a>Dış Kaynaklar  
  Nesne sahipliği ve şemaları hakkında daha fazla bilgi için aşağıdaki kaynaklara bakın.  
   
-|Kaynak|Description|  
+|Kaynak|Açıklama|  
 |--------------|-----------------|  
-|[Kullanıcı şeması ayrımı](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Kullanıcı şeması ayrımı tarafından tanıtılan değişiklikleri açıklar. Yeni davranış, sahiplik üzerindeki etkisi, katalog görünümleri ve izinleri içerir.|  
+|[Kullanıcı şeması ayrımı](/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Kullanıcı şeması ayrımı tarafından tanıtılan değişiklikleri açıklar. Yeni davranış, sahiplik üzerindeki etkisi, katalog görünümleri ve izinleri içerir.|  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

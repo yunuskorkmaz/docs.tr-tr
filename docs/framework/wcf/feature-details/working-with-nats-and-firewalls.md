@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 28360b8b5b07c7c532dd2406ca98604870b8335f
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bab29d738c7562753a826b47c03867eeebac4372
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921072"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558985"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT ve Güvenlik Duvarlarıyla Çalışma
 Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğrudan ve açık bir yolu yoktur. Paketler, hem uç nokta makinelerinde hem de ağdaki ara makinelerde filtrelenir, yönlendirilir, çözümlenir ve dönüştürülür. Ağ adresi çevirileri (NAT) ve güvenlik duvarları, ağ iletişimine katılabileceğiniz ara uygulamaların yaygın örnekleridir.  
@@ -33,7 +33,7 @@ Bir ağ bağlantısının istemci ve sunucusunun genellikle iletişim için doğ
   
 ## <a name="using-teredo"></a>Teredo 'Yu kullanma  
 
- Teredo, bir NAT arkasındaki makinelerin doğrudan adreslenebilirliğini sağlayan bir IPv6 geçiş teknolojisidir. Teredo, olası bağlantıları tanıtmak için herkese açık ve genel olarak yönlendirilemeyen bir sunucu kullanımına dayanır. Teredo sunucusu, uygulama istemcisine ve sunucusuna, bağlantı bilgilerini değiş tokuş ettikleri ortak bir toplantı noktası sağlar. Daha sonra makineler geçici bir Teredo adresi ister ve paketler mevcut ağ üzerinden tünellenmiş. WCF 'de Teredo desteği, işletim sisteminde IPv6 ve Teredo desteğinin etkinleştirilmesini gerektirir. Windows XP ve üzeri işletim sistemleri Teredo 'Yu destekler. Windows Vista ve sonraki işletim sistemleri IPv6 'Yı varsayılan olarak destekler ve yalnızca kullanıcının Teredo 'Yu etkinleştirmesini gerektirir. Windows XP SP2 ve Windows Server 2003, kullanıcının hem IPv6 hem de Teredo 'Yu etkinleştirmesini gerektirir. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-xp/bb457011(v%3dtechnet.10)).  
+ Teredo, bir NAT arkasındaki makinelerin doğrudan adreslenebilirliğini sağlayan bir IPv6 geçiş teknolojisidir. Teredo, olası bağlantıları tanıtmak için herkese açık ve genel olarak yönlendirilemeyen bir sunucu kullanımına dayanır. Teredo sunucusu, uygulama istemcisine ve sunucusuna, bağlantı bilgilerini değiş tokuş ettikleri ortak bir toplantı noktası sağlar. Daha sonra makineler geçici bir Teredo adresi ister ve paketler mevcut ağ üzerinden tünellenmiş. WCF 'de Teredo desteği, işletim sisteminde IPv6 ve Teredo desteğinin etkinleştirilmesini gerektirir. Windows XP ve üzeri işletim sistemleri Teredo 'Yu destekler. Windows Vista ve sonraki işletim sistemleri IPv6 'Yı varsayılan olarak destekler ve yalnızca kullanıcının Teredo 'Yu etkinleştirmesini gerektirir. Windows XP SP2 ve Windows Server 2003, kullanıcının hem IPv6 hem de Teredo 'Yu etkinleştirmesini gerektirir. Daha fazla bilgi için bkz. [Teredo 'Ya genel bakış](/previous-versions/windows/it-pro/windows-xp/bb457011(v=technet.10)).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Aktarım ve Ileti değişim modelini seçme  
  Bir taşımanın ve MEP 'nin seçilmesi üç adımlı bir işlemdir:  

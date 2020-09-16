@@ -2,23 +2,23 @@
 title: Entity Framework için SqlClient
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: f7077cf9c9b8eb8a86b01e8b38431d1b9a87a80c
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: e9bf1014bdbc14b854d3b37d488d75878d1a3473
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248371"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90552251"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>Entity Framework için SqlClient
 Bu bölümde, Entity Framework Microsoft SQL Server üzerinde çalışmasını sağlayan SQL Server (SqlClient) için .NET Framework Veri Sağlayıcısı açıklanmaktadır.  
   
 ## <a name="provider-schema-attribute"></a>Sağlayıcı şeması özniteliği  
- `Provider`, depo şeması tanım dili `Schema` (ssdl) içindeki bir öğenin özniteliğidir.  
+ `Provider` , `Schema` depo şeması tanım dili (ssdl) içindeki bir öğenin özniteliğidir.  
   
- SqlClient kullanmak için, "System. Data. SqlClient" `Provider` dizesini `Schema` öğesinin özniteliğine atayın.  
+ SqlClient kullanmak için, "System. Data. SqlClient" dizesini `Provider` öğesinin özniteliğine atayın `Schema` .  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>ProviderManifestToken şema özniteliği  
- `ProviderManifestToken`, SSDL içindeki `Schema` öğesinin gerekli bir özniteliğidir. Bu belirteç, çevrimdışı senaryolar için sağlayıcı bildirimini yüklemek üzere kullanılır. Özniteliği hakkında `ProviderManifestToken` daha fazla bilgi için bkz. [şema öğesi (ssdl)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
+ `ProviderManifestToken` , `Schema` SSDL içindeki öğesinin gerekli bir özniteliğidir. Bu belirteç, çevrimdışı senaryolar için sağlayıcı bildirimini yüklemek üzere kullanılır. Özniteliği hakkında daha fazla bilgi için `ProviderManifestToken` bkz. [şema Öğesı (ssdl)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl).  
   
  SqlClient, farklı SQL Server sürümleri için veri sağlayıcısı olarak kullanılabilir. Bu sürümlerin farklı özellikleri vardır. Örneğin, SQL Server 2000 desteklemez `varchar(max)` ve `nvarchar(max)` SQL Server 2005 ile tanıtılan türler desteklenmez.  
   
@@ -29,10 +29,10 @@ Bu bölümde, Entity Framework Microsoft SQL Server üzerinde çalışmasını s
 |2000|2005|2008|  
   
 > [!NOTE]
-> Visual Studio 2010 ' den itibaren, [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) SQL Server 2000 ' yi desteklemez.  
+> Visual Studio 2010 ' den itibaren, [ADO.NET varlık veri modeli araçları](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) SQL Server 2000 ' yi desteklemez.  
   
 ## <a name="provider-namespace-name"></a>Sağlayıcı ad alanı adı  
- Tüm sağlayıcıların bir ad alanı belirtmesi gerekir. Bu özellik, sağlayıcı tarafından türler ve işlevler gibi belirli yapılar için kullanılan önek Entity Framework söyler. SqlClient sağlayıcı bildirimleri `SqlServer`için ad alanı. Ad alanları hakkında daha fazla bilgi için bkz. [ad alanları](./language-reference/namespaces-entity-sql.md).  
+ Tüm sağlayıcıların bir ad alanı belirtmesi gerekir. Bu özellik, sağlayıcı tarafından türler ve işlevler gibi belirli yapılar için kullanılan önek Entity Framework söyler. SqlClient sağlayıcı bildirimleri için ad alanı `SqlServer` . Ad alanları hakkında daha fazla bilgi için bkz. [ad alanları](./language-reference/namespaces-entity-sql.md).  
   
 ## <a name="types"></a>Türler  
  Entity Framework için SqlClient sağlayıcısı, kavramsal model türleri ve SQL Server türleri arasında eşleme bilgileri sağlar. Daha fazla bilgi için bkz. [Entity FrameworkTypes Için SqlClient](sqlclient-for-ef-types.md).  
@@ -50,5 +50,5 @@ Bu bölümde, Entity Framework Microsoft SQL Server üzerinde çalışmasını s
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Entity SQL Dili](./language-reference/entity-sql-language.md)
-- [Dil Başvurusu](./language-reference/index.md)
+- [Dil başvurusu](./language-reference/index.md)
 - [Entity Framework için SqlClient sağlayıcısında bilinen sorunlar](sqlclient-for-the-entity-framework.md)
