@@ -1,44 +1,44 @@
 ---
 title: XML Belgeleri
-description: Açıklamalardan belge oluşturmak F# için içindeki destek hakkında bilgi edinin.
+description: "Açıklamalardan belge oluşturmak için F # ' da destek hakkında bilgi edinin."
 ms.date: 05/16/2016
-ms.openlocfilehash: 0a87915c361fc88f0c05264e1c17278fd656a167
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 03d14cef910d149f0c7a2f3a49c8cf4606ac5305
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344686"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556583"
 ---
 # <a name="xml-documentation"></a>XML Belgeleri
 
-İçindeki F#Üçlü eğik çizgi (///) kod açıklamalarından belge oluşturabilirsiniz. XML açıklamaları, kod dosyaları (. FS) veya imza (. fsi) dosyalarındaki bildirimlerden önce olabilir.
+F # ' da Üçlü eğik çizgi (///) kod açıklamalarından belgeler oluşturabilirsiniz. XML açıklamaları, kod dosyaları (. FS) veya imza (. fsi) dosyalarındaki bildirimlerden önce olabilir.
 
 ## <a name="generating-documentation-from-comments"></a>Açıklamalardan belge oluşturma
 
-Açıklamalardan belge F# oluşturmak için içindeki destek, diğer .NET Framework dilleridir. Diğer .NET Framework dillerde olduğu gibi, [-doc derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) , [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanarak belgelere dönüştürebileceğiniz bilgiler içeren bir XML dosyası üretmenizi sağlar. Diğer .NET Framework dillerde yazılmış derlemelerle birlikte kullanılmak üzere tasarlanan araçlar kullanılarak oluşturulan belgeler, genellikle derlenen F# yapı biçimine dayalı API 'lerin bir görünümünü oluşturur. Araçların özellikle desteği F#yoksa, bu araçlar tarafından oluşturulan belgeler bir API F# görünümüyle eşleşmez.
+Açıklamalardan belge oluşturmak için F # desteği diğer .NET Framework dilleridir. Diğer .NET Framework dillerde olduğu gibi, [-doc derleyici seçeneği](./compiler-options.md) , [Docfx](https://dotnet.github.io/docfx/) veya [sandrole](https://github.com/EWSoftware/SHFB)gibi bir araç kullanarak belgelere dönüştürebileceğiniz bilgiler içeren bir XML dosyası üretmenizi sağlar. Diğer .NET Framework dillerde yazılmış derlemelerle birlikte kullanılmak üzere tasarlanan araçlar kullanılarak oluşturulan belgeler, genellikle F # yapıları derlenmiş biçimini temel alan API 'lerin bir görünümünü oluşturur. Araçlar F # ' ı özellikle desteklemediği takdirde, bu araçlar tarafından oluşturulan belgeler bir API 'nin F # görünümüyle eşleşmez.
 
-XML 'den belge oluşturma hakkında daha fazla bilgi için bkz. [XML belge açıklamaları &#40;&#35; C Programlama Kılavuzu&#41;](https://msdn.microsoft.com/library/b2s063f7).
+XML 'den belge oluşturma hakkında daha fazla bilgi için bkz. [XML belge açıklamaları &#40;C&#35; programlama kılavuzu&#41;](../../csharp/programming-guide/xmldoc/index.md).
 
 ## <a name="recommended-tags"></a>Önerilen Etiketler
 
-XML belgesi açıklamalarını yazmanın iki yolu vardır. Bunlardan biri, XML etiketleri kullanmadan doğrudan Üçlü eğik çizgi açıklamasında belge yazmak olacaktır. Bunu yaparsanız, tüm açıklama metni hemen izleyen kod yapısına ait Özet belgeler olarak alınır. Her yapı için yalnızca kısa bir özet yazmak istediğinizde bu yöntemi kullanın. Diğer yöntem, daha fazla yapılandırılmış belge sağlamak için XML etiketlerini kullanmaktır. İkinci yöntem, kısa bir Özet, ek açıklamalar, her bir parametre ve tür parametresi ve oluşturulan özel durumlar için belgeler ve dönüş değerinin bir açıklaması için ayrı notlar belirlemenizi sağlar. Aşağıdaki tabloda F# XML kodu açıklamalarında tanınan XML etiketleri açıklanmaktadır.
+XML belgesi açıklamalarını yazmanın iki yolu vardır. Bunlardan biri, XML etiketleri kullanmadan doğrudan Üçlü eğik çizgi açıklamasında belge yazmak olacaktır. Bunu yaparsanız, tüm açıklama metni hemen izleyen kod yapısına ait Özet belgeler olarak alınır. Her yapı için yalnızca kısa bir özet yazmak istediğinizde bu yöntemi kullanın. Diğer yöntem, daha fazla yapılandırılmış belge sağlamak için XML etiketlerini kullanmaktır. İkinci yöntem, kısa bir Özet, ek açıklamalar, her bir parametre ve tür parametresi ve oluşturulan özel durumlar için belgeler ve dönüş değerinin bir açıklaması için ayrı notlar belirlemenizi sağlar. Aşağıdaki tabloda, F # XML kod açıklamalarında tanınan XML etiketleri açıklanmaktadır.
 
-|Etiket sözdizimi|Açıklama|
+|Etiket sözdizimi|Description|
 |----------|-----------|
-|**\<c\>** _text_ **\</c\>**|*Metnin* kod olduğunu belirtir. Bu etiket, kod için uygun bir yazı tipinde metin göstermek üzere belge üreticileri tarafından kullanılabilir.|
-|**\<özet\>** _metin_ **\</Summary\>**|*Metnin* program öğesinin kısa bir açıklaması olduğunu belirtir. Açıklama genellikle bir veya iki cümle olur.|
-|**\<açıklamalar\>** _metin_ **\</açıklamalar\>**|*Metnin* program öğesiyle ilgili ek bilgileri içerdiğini belirtir.|
-|**\<param Name = "** _ad_ **"\>** _Description_ **\</param\>**|Bir işlev veya yöntem parametresi için ad ve açıklama belirtir.|
-|**\<typeparam Name = "** _ad_ **"\>** _Description_ **\</typeparam\>**|Bir tür parametresi için ad ve açıklama belirtir.|
-|**\<\>** _metin_ döndürür **\</dönüşler\>**|*Metnin* bir işlevin veya yöntemin dönüş değerini açıklamakta olduğunu belirtir.|
-|**\<Exception cref = "** _tür_ **"\>** _Description_ **\</Exception\>**|Üretilene özel durum türünü ve bunun altında oluşturulduğu koşulları belirtir.|
-|**\<bkz. cref = "** _Reference_ **"\>** _metin_ **\</See\>**|Başka bir program öğesinin satır içi bağlantısını belirtir. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. *Metin* , bağlantıda gösterilen metindir.|
-|**\<seede cref = "** _başvuru_ **"/\>**|Ayrıca bkz. başka bir tür için belgelere bağlantı bağlantısı. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. Ayrıca bkz. bağlantılar genellikle belge sayfasının alt kısmında görünür.|
-|**\<paragraf\>** _metin_ **\</para\>**|Metnin paragrafını belirtir. Bu, **açıklamalar** etiketinin içindeki metni ayırmak için kullanılır.|
+|**\<c\>**_metinleri_**\</c\>**|*Metnin* kod olduğunu belirtir. Bu etiket, kod için uygun bir yazı tipinde metin göstermek üzere belge üreticileri tarafından kullanılabilir.|
+|**\<summary\>**_metinleri_**\</summary\>**|*Metnin* program öğesinin kısa bir açıklaması olduğunu belirtir. Açıklama genellikle bir veya iki cümle olur.|
+|**\<remarks\>**_metinleri_**\</remarks\>**|*Metnin* program öğesiyle ilgili ek bilgileri içerdiğini belirtir.|
+|**\<param name="**_name_**"\>**_açıklaması_**\</param\>**|Bir işlev veya yöntem parametresi için ad ve açıklama belirtir.|
+|**\<typeparam name="**_name_**"\>**_açıklaması_**\</typeparam\>**|Bir tür parametresi için ad ve açıklama belirtir.|
+|**\<returns\>**_metinleri_**\</returns\>**|*Metnin* bir işlevin veya yöntemin dönüş değerini açıklamakta olduğunu belirtir.|
+|**\<exception cref="**_type_**"\>**_açıklaması_**\</exception\>**|Üretilene özel durum türünü ve bunun altında oluşturulduğu koşulları belirtir.|
+|**\<see cref="**_reference_**"\>**_metinleri_**\</see\>**|Başka bir program öğesinin satır içi bağlantısını belirtir. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. *Metin* , bağlantıda gösterilen metindir.|
+|**\<seealso cref="**_reference_**"/\>**|Ayrıca bkz. başka bir tür için belgelere bağlantı bağlantısı. *Başvuru* , XML belge dosyasında göründüğü şekliyle addır. Ayrıca bkz. bağlantılar genellikle belge sayfasının alt kısmında görünür.|
+|**\<para\>**_metinleri_**\</para\>**|Metnin paragrafını belirtir. Bu, **açıklamalar** etiketinin içindeki metni ayırmak için kullanılır.|
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Aşağıda, bir imza dosyasındaki tipik bir XML belgesi yorumu verilmiştir.
 
@@ -48,7 +48,7 @@ Aşağıda, bir imza dosyasındaki tipik bir XML belgesi yorumu verilmiştir.
 
 ## <a name="example"></a>Örnek
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Aşağıdaki örnek, XML etiketleri olmadan alternatif yöntemi gösterir. Bu örnekte, açıklama içindeki metnin tamamı bir Özet olarak değerlendirilir. Açıkça bir Özet etiketi belirtmemelisiniz **param** veya etiket **döndüren** Etiketler gibi başka Etiketler belirtmemelisiniz.
 
@@ -58,5 +58,5 @@ Aşağıdaki örnek, XML etiketleri olmadan alternatif yöntemi gösterir. Bu ö
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [F# Dili Başvurusu](index.md)
-- [Derleyici Seçenekleri](compiler-options.md)
+- [F # dil başvurusu](index.md)
+- [Derleyici seçenekleri](compiler-options.md)

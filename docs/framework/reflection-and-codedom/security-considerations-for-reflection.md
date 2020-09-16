@@ -11,12 +11,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 0465cbd5ceb7d4f44bb6d10865fcbd17b8ed7af6
-ms.sourcegitcommit: 3d84eac0818099c9949035feb96bbe0346358504
+ms.openlocfilehash: 9ef2ac4897b3f8c48a0b0f402ab06eb073a5c1fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86865261"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556342"
 ---
 # <a name="security-considerations-for-reflection"></a>Yansımayla İlgili Güvenlik Konuları
 
@@ -60,7 +60,7 @@ Bu kurallar, bir güvenlik açısından kritik üyeye doğrudan derlenen kodla e
 
 Komut satırından çalıştırılan uygulama kodu tam güvenle çalışır. Saydam olarak işaretlenmediği sürece, güvenlik açısından kritik üyelere erişmek için yansıma kullanabilir. Aynı kod kısmi güvenle çalıştırıldığında (örneğin, bir korumalı uygulama etki alanında), derlemenin güven düzeyi, güvenlik açısından kritik koda erişip erişemeyeceğini belirler: derlemenin tanımlayıcı bir adı varsa ve genel derleme önbelleğinde yüklüyse, bu güvenilir bir derlemedir ve güvenlik açısından kritik üyeleri çağırabilir. Güvenilmiyorsa, saydam olarak işaretlenmese bile saydam hale gelir ve güvenlik açısından kritik üyelere erişemez.
 
-.NET Framework 4 ' teki güvenlik modeli hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+.NET Framework 4 ' teki güvenlik modeli hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).
 
 ## <a name="reflection-and-transparency"></a>Yansıma ve saydamlık
 
@@ -93,7 +93,7 @@ Ortak dil çalışma zamanının erişilebilirlik kurallarına göre erişilemey
 
 - Derleme A, derleme b 'nin izin kümesi, bir izin verilmeyen hiçbir izinleri içermediğinden, derleme B 'nin özel üyelerine erişmek için yansımayı kullanabilir.
 
-- Derleme A, mscorlib.dll gibi .NET Framework derlemelerin özel üyelerine erişmek için yansıma kullanamaz, çünkü mscorlib.dll tamamen güvenilirdir ve bu nedenle A derlemesine verilmemiş izinlere sahiptir. <xref:System.MemberAccessException>Kod erişim güvenliği yığına çalışma zamanında yol gösterecektir bir oluşturulur.
+- Derleme A, mscorlib.dll gibi .NET Framework derlemelerin özel üyelerine erişmek için yansıma kullanamaz, çünkü mscorlib.dll tamamen güvenilirdir ve bu nedenle A derlemesine verilmemiş izinlere sahiptir. <xref:System.MemberAccessException> Kod erişim güvenliği yığına çalışma zamanında yol gösterecektir bir oluşturulur.
 
 ## <a name="serialization"></a>Serileştirme
 
@@ -116,8 +116,8 @@ Serileştirme için, <xref:System.Security.Permissions.SecurityPermission> bayra
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [Güvenlik Değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
-- [Kod Erişimi Güvenliği](../misc/code-access-security.md)
+- [Güvenlik Değişiklikleri](/previous-versions/dotnet/framework/security/security-changes)
+- [Kod erişim güvenliği](../misc/code-access-security.md)
 - [Yansıma Yaymadaki Güvenlik Sorunları](security-issues-in-reflection-emit.md)
 - [Tür Bilgilerini Görüntüleme](viewing-type-information.md)
 - [Öznitelikleri Uygulama](../../standard/attributes/applying-attributes.md)

@@ -2,12 +2,12 @@
 title: İzlemeyi Genişletme
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 59bdfeea41bac812840ffe166895050a6cd1ad2d
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f2b9deb346077609193ec08c2c01b10a3ad9357b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84600522"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556518"
 ---
 # <a name="extend-tracing"></a>İzlemeyi Genişlet
 
@@ -31,7 +31,7 @@ Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri y
  Kullanıcı tanımlı etkinlik izleme, kullanıcının izlemeleri mantıksal iş birimlerine göre gruplamak, aktarımlar ve yayma aracılığıyla etkinlikleri ilişkilendirmek ve WCF izlemenin (örneğin, bir günlük dosyasının disk alanı maliyeti) performans maliyetini azaltmak için kendi izleme etkinliklerini oluşturmalarına olanak tanır.  
   
 ### <a name="add-custom-sources"></a>Özel Kaynak Ekle  
- Kullanıcı tanımlı izlemeler, hem istemci hem de hizmet koduna eklenebilir. İstemci veya hizmet yapılandırma dosyalarına izleme kaynakları eklemek, bu özel izlemelerin [hizmet Izleme Görüntüleyicisi aracında (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)kaydedilmesini ve görüntülenmesini sağlar. Aşağıdaki kod, yapılandırma dosyasına adlı Kullanıcı tanımlı izleme kaynağının nasıl ekleneceğini gösterir `ServerCalculatorTraceSource` .  
+ Kullanıcı tanımlı izlemeler, hem istemci hem de hizmet koduna eklenebilir. İstemci veya hizmet yapılandırma dosyalarına izleme kaynakları eklemek, bu özel izlemelerin [Service Trace Viewer aracında (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)kaydedilip görüntülenmesini sağlar. Aşağıdaki kod, yapılandırma dosyasına adlı Kullanıcı tanımlı izleme kaynağının nasıl ekleneceğini gösterir `ServerCalculatorTraceSource` .  
   
 ```xml  
 <system.diagnostics>  
@@ -99,4 +99,4 @@ Bu örnek, istemci ve hizmet kodunda Kullanıcı tanımlı etkinlik izlemeleri y
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric Izleme örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric Izleme örnekleri](/previous-versions/appfabric/ff383407(v=azure.10))

@@ -3,12 +3,12 @@ title: Azure’da F# Kullanma
 description: 'F ile Azure hizmetlerini kullanma kılavuzu #'
 author: sylvanc
 ms.date: 07/29/2020
-ms.openlocfilehash: 24ef3fd14a4d0173935fac3e67aadf86110fa6d8
-ms.sourcegitcommit: b4f8849c47c1a7145eb26ce68bc9f9976e0dbec3
+ms.openlocfilehash: 0f516b8a3b4fd60eea8facad83a440e33ffd521c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87517379"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548429"
 ---
 # <a name="using-f-on-azure"></a>Azure’da F# Kullanma
 
@@ -57,7 +57,7 @@ Azure depolama Ayrıca, açık API çağrıları yerine bildirim temelli yapıla
 
 ## <a name="using-apache-spark-with-f-on-azure-hdinsight-or-azure-databricks"></a>Azure HDInsight veya Azure Databricks 'de F # ile Apache Spark kullanma
 
-[Azure HDInsight için Apache Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-overview) , büyük ölçekli veri analizi uygulamalarını çalıştıran bir açık kaynak işleme çerçevesidir. [Azure Databricks](https://docs.microsoft.com/azure/databricks/scenarios/what-is-azure-databricks), Microsoft Azure bulut hizmetleri platformu için iyileştirilen Apache Spark tabanlı bir analiz platformudur. Azure, dağıtıma Apache Spark kolaylaştırır ve ekonomik hale gelir. Apache Spark için bir dizi .NET bağlaması olan [Apache Spark için .net](../../spark/what-is-apache-spark-dotnet.md)kullanarak Spark uygulamanızı geliştirin.
+[Azure HDInsight için Apache Spark](/azure/hdinsight/spark/apache-spark-overview) , büyük ölçekli veri analizi uygulamalarını çalıştıran bir açık kaynak işleme çerçevesidir. [Azure Databricks](/azure/databricks/scenarios/what-is-azure-databricks), Microsoft Azure bulut hizmetleri platformu için iyileştirilen Apache Spark tabanlı bir analiz platformudur. Azure, dağıtıma Apache Spark kolaylaştırır ve ekonomik hale gelir. Apache Spark için bir dizi .NET bağlaması olan [Apache Spark için .net](../../spark/what-is-apache-spark-dotnet.md)kullanarak Spark uygulamanızı geliştirin.
 
 * [Apache Spark F # örnekleri için .NET](https://github.com/dotnet/spark/tree/master/examples/Microsoft.Spark.FSharp.Examples)
 * [Azure HDInsight 'a .NET etkileşimli Jupyıter not defterlerini yükler](../../spark/how-to-guides/hdinsight-notebook-installation.md)
@@ -89,7 +89,7 @@ Azure Event Hubs, F # ile iki şekilde kullanılabilir:
 Azure Notification Hubs, F # ile iki şekilde kullanılabilir:
 
 1. Bir Bildirim Hub 'ına sonuçları gönderen F # Azure Işlevlerinin oluşturulması aracılığıyla. [Notification Hubs Için Azure işlev çıkış tetikleyicilerine](/azure/azure-functions/functions-bindings-notification-hubs)bakın veya
-2. [Azure için .NET SDK 'yı](https://docs.microsoft.com/archive/blogs/azuremobile/push-notifications-using-notification-hub-and-net-backend)kullanarak. Bu örneklerin C# dilinde olduğunu aklınızda edin.
+2. [Azure için .NET SDK 'yı](/archive/blogs/azuremobile/push-notifications-using-notification-hub-and-net-backend)kullanarak. Bu örneklerin C# dilinde olduğunu aklınızda edin.
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>F ile Azure 'da Web kancaları uygulama\#
 
@@ -111,7 +111,7 @@ Süreölçerler, F # ' da uygulanabilir ve [bir Zamanlayıcı tetikleyicisi Ile 
 
 ## <a name="deploying-and-managing-azure-resources-with-f-scripts"></a>F # betiklerle Azure kaynaklarını dağıtma ve yönetme
 
-Azure VM 'leri, Microsoft. Azure. Yönetim paketleri ve API 'Leri kullanılarak, F # betiklerinden programlı bir şekilde dağıtılabilir ve yönetilebilir. Örneğin, bkz. [.net Için yönetim kitaplıklarını kullanmaya başlama](https://msdn.microsoft.com/library/dn722415.aspx) ve [Azure Resource Manager kullanma](/azure/azure-resource-manager/resource-manager-deployment-model).
+Azure VM 'leri, Microsoft. Azure. Yönetim paketleri ve API 'Leri kullanılarak, F # betiklerinden programlı bir şekilde dağıtılabilir ve yönetilebilir. Örneğin, bkz. [.net Için yönetim kitaplıklarını kullanmaya başlama](/previous-versions/azure/dn722415(v=azure.100)) ve [Azure Resource Manager kullanma](/azure/azure-resource-manager/resource-manager-deployment-model).
 
 Benzer şekilde, diğer Azure kaynakları da aynı bileşenleri kullanarak F # betiklerinden dağıtılabilir ve yönetilebilir. Örneğin, bir depolama hesabı oluşturabilir, Azure Cloud Services dağıtabilir, Azure Cosmos DB örnekleri oluşturabilir ve Azure Notification Hubs F # betiklerinden programlı bir şekilde yönetebilirsiniz.
 

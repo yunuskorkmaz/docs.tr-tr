@@ -2,12 +2,12 @@
 title: Windows Hizmet Uygulamasında Barındırma
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: ba49d123508ceb8da677d1e9c67721e4f86aa7c3
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: cb952cfcd670a790033fbec70de00a4db2541237
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597338"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555854"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows Hizmet Uygulamasında Barındırma
 Windows Hizmetleri (eski adıyla Windows NT Hizmetleri), uzun süre çalışan bir çalıştırılabilirte canlı olması gereken uygulamalara özellikle uygun bir işlem modeli sağlar ve herhangi bir kullanıcı arabirimi formu görüntülemez. Bir Windows hizmet uygulamasının işlem ömrü, Windows hizmeti uygulamalarını başlatabilmenizi, durdurmanızı ve duraklatmanızı sağlayan hizmet Denetim Yöneticisi (SCM) tarafından yönetilir. Bir Windows hizmeti işlemini bilgisayar başlatıldığında otomatik olarak başlayacak şekilde yapılandırabilirsiniz. Bu, "Always On" uygulamaları için uygun bir barındırma ortamı yapar. Windows hizmeti uygulamaları hakkında daha fazla bilgi için bkz. [Windows hizmeti uygulamaları](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -43,4 +43,4 @@ Windows Hizmetleri (eski adıyla Windows NT Hizmetleri), uzun süre çalışan b
 - [Nasıl yapılır: Yönetilen Bir Windows Hizmetinde Bir WCF Hizmeti Barındırma](how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows Hizmet Konağı](../samples/windows-service-host.md)
 - [Hizmet Uygulaması Programlama Mimarisi](https://go.microsoft.com/fwlink/?LinkId=94876)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

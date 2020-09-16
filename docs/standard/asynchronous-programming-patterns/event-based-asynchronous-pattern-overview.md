@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 18fbdb29e5a1fb02601dea00964538144c07122c
-ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
+ms.openlocfilehash: f0d3e2e8f1d1f58c9df8026b38fc0264812b092a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84768865"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555685"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Olay Tabanlı Zaman Uyumsuz Desene Genel Bakış
 Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt veren uygulamalar, genellikle birden çok iş parçacığı kullanan bir tasarım gerektirir. <xref:System.Threading>Ad alanı, yüksek performanslı çok iş parçacıklı uygulamalar oluşturmak için gereken tüm araçları sağlar, ancak bu araçların kullanılması çok iş parçacıklı yazılım mühendisliğinde önemli bir deneyim gerektirir. Oldukça basit çok iş parçacıklı uygulamalar için, <xref:System.ComponentModel.BackgroundWorker> bileşen basit bir çözüm sağlar. Daha karmaşık zaman uyumsuz uygulamalarda, olay tabanlı zaman uyumsuz düzene uygun bir sınıf uygulamayı düşünün.  
@@ -39,7 +39,7 @@ Aynı anda pek çok görevi gerçekleştiren ve kullanıcı etkileşimine yanıt
   
  Olay tabanlı zaman uyumsuz deseninin desteklendiği bir sınıf, _MethodName_**zaman uyumsuz**adlı bir veya daha fazla yöntemlere sahip olur. Bu yöntemler, geçerli iş parçacığında aynı işlemi gerçekleştiren zaman uyumlu sürümleri yansıtabilir. Sınıfta bir _MethodName_**tamamlandı** olayı olabilir ve bir _MethodName_**Asynccancel** (veya yalnızca bir algıladığında **lasync**) yöntemi olabilir.  
   
- <xref:System.Windows.Forms.PictureBox>, olay tabanlı zaman uyumsuz stili destekleyen tipik bir bileşendir. Yöntemini çağırarak bir görüntüyü zaman uyumlu olarak indirebilirsiniz <xref:System.Windows.Forms.PictureBox.Load%2A> , ancak görüntü büyükse veya ağ bağlantısı yavaşsa, yükleme işlemi tamamlanana ve çağrısı geri alınana kadar uygulamanız yanıt vermeyi durdurur <xref:System.Windows.Forms.PictureBox.Load%2A> .  
+ <xref:System.Windows.Forms.PictureBox> , olay tabanlı zaman uyumsuz stili destekleyen tipik bir bileşendir. Yöntemini çağırarak bir görüntüyü zaman uyumlu olarak indirebilirsiniz <xref:System.Windows.Forms.PictureBox.Load%2A> , ancak görüntü büyükse veya ağ bağlantısı yavaşsa, yükleme işlemi tamamlanana ve çağrısı geri alınana kadar uygulamanız yanıt vermeyi durdurur <xref:System.Windows.Forms.PictureBox.Load%2A> .  
   
  Görüntü yüklenirken uygulamanızın çalışmaya devam etmesini istiyorsanız, <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> <xref:System.Windows.Forms.PictureBox.LoadCompleted> diğer herhangi bir olayı işlerken olduğu gibi, yöntemi çağırabilir ve olayı işleyebilirsiniz. <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>Yöntemini çağırdığınızda, yükleme işlemi ayrı bir iş parçacığına ("arka planda") devam ederken uygulamanız çalışmaya devam edecektir. Olay işleyiciniz, görüntü yükleme işlemi tamamlandığında çağrılır ve olay işleyiciniz, <xref:System.ComponentModel.AsyncCompletedEventArgs> indirmenin başarıyla tamamlanıp tamamlanmadığını belirleme parametresini inceleyebilir.  
   
@@ -138,8 +138,8 @@ public class AsyncExample
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [Nasıl yapılır: Olay Tabanlı Zaman Uyumsuz Deseni Destekleyen Bileşenleri Kullanma](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [Nasıl Yapılır: Arka Planda İşlem Çalıştırma](../../framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](../../framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Nasıl yapılır: Arka Planda İşlem Çalıştırma](/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background)
+- [Nasıl yapılır: Arka Plan İşlemi Kullanan Bir Form Uygulama](/dotnet/desktop/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation)
 - [Olay Tabanlı Zaman Uyumsuz Desen (EAP)](event-based-asynchronous-pattern-eap.md)
 - [Olay Tabanlı Zaman Uyumsuz Desen Uygulamak için En İyi Yöntemler](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Olay Tabanlı Zaman Uyumsuz Desenin Ne Zaman Uygulanacağını Belirleme](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)

@@ -7,12 +7,12 @@ ms.author: adegeo
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 3c9615d7d79b5da1c180bb505f5f37b99aeae775
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: b187b8a274ab770c28d2c2bc2a9be621b501e842
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89272003"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555776"
 ---
 # <a name="data-binding-overview-in-wpf"></a>WPF 'de veri bağlamaya genel bakış
 
@@ -75,7 +75,7 @@ Bağladığınız öğeden ve veri kaynağınızın doğası ne olursa olsun, he
 
 - Target özelliği bir Dependency özelliği olmalıdır. Çoğu <xref:System.Windows.UIElement> Özellik bağımlılık özellikleridir ve salt okuma dışındaki çoğu bağımlılık özellikleri varsayılan olarak veri bağlamayı destekler. (Yalnızca öğesinden türetilmiş türler <xref:System.Windows.DependencyObject> , bağımlılık özelliklerini tanımlayabilir ve tüm <xref:System.Windows.UIElement> türler öğesinden türetilir `DependencyObject` .)
 
-- Şekilde gösterilmese de, bağlama kaynak nesnesinin özel bir .NET nesnesi olmasına sınırlı olmadığından not edilmelidir. WPF veri bağlama, verileri .NET nesneleri ve XML biçiminde destekler. Bazı örnekler sağlamak için bağlama kaynağınız bir <xref:System.Windows.UIElement> , herhangi bir liste nesnesi, ADO.NET veya Web Hizmetleri nesnesi veya XML verilerinizi içeren bir XmlNode olabilir. Daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](../../framework/wpf/data/binding-sources-overview.md).
+- Şekilde gösterilmese de, bağlama kaynak nesnesinin özel bir .NET nesnesi olmasına sınırlı olmadığından not edilmelidir. WPF veri bağlama, verileri .NET nesneleri ve XML biçiminde destekler. Bazı örnekler sağlamak için bağlama kaynağınız bir <xref:System.Windows.UIElement> , herhangi bir liste nesnesi, ADO.NET veya Web Hizmetleri nesnesi veya XML verilerinizi içeren bir XmlNode olabilir. Daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](/dotnet/desktop/wpf/data/binding-sources-overview).
 
 Bir bağlama oluştururken bağlama hedefini bağlama kaynağı *olarak* bağladığınızda dikkat etmeniz önemlidir. Örneğin, bir veri bağlama kullanarak bazı temel XML verilerini görüntülüyorsanız <xref:System.Windows.Controls.ListBox> , bunu `ListBox` XML verilerine bağlamanız gerekir.
 
@@ -99,7 +99,7 @@ Bu şekilde farklı veri akışı türleri gösterilmektedir:
 
 - Şekil, <xref:System.Windows.Data.BindingMode.OneTime> kaynak özelliğin hedef özelliği başlatmasına, ancak sonraki değişiklikleri yaymasına neden olan bağlamadır. Veri bağlamı değişirse veya veri bağlamındaki nesne değişirse değişiklik, hedef *özellikte yansıtılmaz.* Geçerli durumun bir anlık görüntüsü uygunsa veya veriler gerçekten statikse, bu tür bir bağlama uygundur. Hedef özelliği bir kaynak özelliğinden bir değer ile başlatmak istiyorsanız ve veri bağlamı önceden bilinmiyorsa, bu tür bağlama de kullanışlıdır. Bu mod aslında <xref:System.Windows.Data.BindingMode.OneWay> kaynak değerin değişmemesi durumunda daha iyi performans sağlayan daha basit bir bağlama biçimidir.
 
-Kaynak değişiklikleri (ve bağlamaları için geçerlidir <xref:System.Windows.Data.BindingMode.OneWay> ) algılamak için <xref:System.Windows.Data.BindingMode.TwoWay> , kaynak gibi uygun bir özellik değişikliği bildirim mekanizması gerçekleştirmelidir <xref:System.ComponentModel.INotifyPropertyChanged> . Bkz. [nasıl yapılır: uygulama örneği için özellik değişikliği bildirimi uygulama](../../framework/wpf/data/how-to-implement-property-change-notification.md) <xref:System.ComponentModel.INotifyPropertyChanged> .
+Kaynak değişiklikleri (ve bağlamaları için geçerlidir <xref:System.Windows.Data.BindingMode.OneWay> ) algılamak için <xref:System.Windows.Data.BindingMode.TwoWay> , kaynak gibi uygun bir özellik değişikliği bildirim mekanizması gerçekleştirmelidir <xref:System.ComponentModel.INotifyPropertyChanged> . Bkz. [nasıl yapılır: uygulama örneği için özellik değişikliği bildirimi uygulama](/dotnet/desktop/wpf/data/how-to-implement-property-change-notification) <xref:System.ComponentModel.INotifyPropertyChanged> .
 
 <xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>Özelliği bağlama modları hakkında daha fazla bilgi ve bir bağlamanın yönlerinin nasıl belirtilbir örneğini sağlar.
 
@@ -125,7 +125,7 @@ Aşağıdaki tabloda <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> ,
 | `PropertyChanged` | Öğesine yazarken <xref:System.Windows.Controls.TextBox> . | Bir sohbet odası penceresinde TextBox denetimleri. |
 | `Explicit` | Uygulama çağırdığında <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> . | Düzenlenebilir bir formda metin kutusu denetimleri (kaynak değerlerini yalnızca Kullanıcı Gönder düğmesine tıkladığında güncelleştirir). |
 
-Bir örnek için bkz. [nasıl yapılır: denetim kutusu metninde kaynağı ne zaman güncelleştirin](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md).
+Bir örnek için bkz. [nasıl yapılır: denetim kutusu metninde kaynağı ne zaman güncelleştirin](/dotnet/desktop/wpf/data/how-to-control-when-the-textbox-text-updates-the-source).
 
 ## <a name="creating-a-binding"></a>Bağlama oluşturma
 
@@ -135,7 +135,7 @@ Bağlama kaynak nesnesinin, *SDKSample* ad alanında tanımlanan *MyData* adlı 
 
 [!code-xaml[BindNonTextProperty](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColor)]
 
-Bağlama bildirimi sözdizimi hakkında daha fazla bilgi ve kod içinde bağlama ayarlama örnekleri için bkz. [bağlama bildirimlerine genel bakış](../../framework/wpf/data/binding-declarations-overview.md).
+Bağlama bildirimi sözdizimi hakkında daha fazla bilgi ve kod içinde bağlama ayarlama örnekleri için bkz. [bağlama bildirimlerine genel bakış](/dotnet/desktop/wpf/data/binding-declarations-overview).
 
 Bu örneği temel diyagramımızı uygulıyoruz, sonuçta elde edilen şekil aşağıdaki gibi görünür. Bu şekilde <xref:System.Windows.Data.BindingMode.OneWay> , arka plan özelliği varsayılan olarak bağlamayı desteklediğinden bu şekilde bir bağlama açıklanmaktadır <xref:System.Windows.Data.BindingMode.OneWay> .
 
@@ -151,7 +151,7 @@ Bağlama kaynak nesnesini belirtmek için çeşitli yollar vardır. <xref:System
 
 [!code-xaml[BindNonTextPropertyCompactBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColorCompactBinding)]
 
-<xref:System.Windows.FrameworkElement.DataContext%2A>Bir öğedeki özelliği doğrudan ayarlama, <xref:System.Windows.FrameworkElement.DataContext%2A> değeri bir üst öğeden devralma (örneğin, birinci örnekteki düğme gibi) ve bağlama üzerindeki özelliği ayarlayarak bağlama kaynağını açıkça belirtme (örneğin, <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> son örnek düğme gibi), <xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType> <xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType> bağlama kaynağını belirtmek için özelliğini veya özelliğini de kullanabilirsiniz. Özelliği, bir <xref:System.Windows.Data.Binding.ElementName%2A> düğmenin genişliğini ayarlamak için kaydırıcı kullanırken olduğu gibi, uygulamanızdaki diğer öğelere bağlarken faydalıdır. <xref:System.Windows.Data.Binding.RelativeSource%2A>Özelliği, veya içinde bağlama belirtildiğinde faydalıdır <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Style> . Daha fazla bilgi için bkz. [nasıl yapılır: bağlama kaynağını belirtme](../../framework/wpf/data/how-to-specify-the-binding-source.md).
+<xref:System.Windows.FrameworkElement.DataContext%2A>Bir öğedeki özelliği doğrudan ayarlama, <xref:System.Windows.FrameworkElement.DataContext%2A> değeri bir üst öğeden devralma (örneğin, birinci örnekteki düğme gibi) ve bağlama üzerindeki özelliği ayarlayarak bağlama kaynağını açıkça belirtme (örneğin, <xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType> son örnek düğme gibi), <xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType> <xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType> bağlama kaynağını belirtmek için özelliğini veya özelliğini de kullanabilirsiniz. Özelliği, bir <xref:System.Windows.Data.Binding.ElementName%2A> düğmenin genişliğini ayarlamak için kaydırıcı kullanırken olduğu gibi, uygulamanızdaki diğer öğelere bağlarken faydalıdır. <xref:System.Windows.Data.Binding.RelativeSource%2A>Özelliği, veya içinde bağlama belirtildiğinde faydalıdır <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Style> . Daha fazla bilgi için bkz. [nasıl yapılır: bağlama kaynağını belirtme](/dotnet/desktop/wpf/data/how-to-specify-the-binding-source).
 
 ### <a name="specifying-the-path-to-the-value"></a>Değerin yolunu belirtme
 
@@ -182,9 +182,9 @@ Diğer bağlamaları oluşturmak için aynı *myBinding* nesnesi kullanabilirsin
 
 Bir <xref:System.Windows.Data.BindingExpression> nesne, <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> veriye bağlı bir nesne çağırarak döndürülür. Aşağıdaki makalelerde, sınıfının kullanımları gösterilmektedir <xref:System.Windows.Data.BindingExpression> :
 
-- [Bağımlı hedef özelliğinden bağlama nesnesi alma](../../framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)
+- [Bağımlı hedef özelliğinden bağlama nesnesi alma](/dotnet/desktop/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property)
 
-- [TextBox metni kaynağı güncelleştirdiğinde denetleme](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)
+- [TextBox metni kaynağı güncelleştirdiğinde denetleme](/dotnet/desktop/wpf/data/how-to-control-when-the-textbox-text-updates-the-source)
 
 ## <a name="data-conversion"></a>Veri dönüştürme
 
@@ -231,7 +231,7 @@ Bu diyagramda gösterildiği gibi, bir <xref:System.Windows.Controls.ItemsContro
 
 Arabirimini uygulayan herhangi bir koleksiyonun üzerinde listeleme yapabilirsiniz <xref:System.Collections.IEnumerable> . Bununla birlikte, koleksiyondaki eklemelerin veya silinmelerin Kullanıcı arabirimini otomatik olarak güncelleştirmeleri için dinamik bağlamaları ayarlamak için koleksiyonun arabirimini uygulaması gerekir <xref:System.Collections.Specialized.INotifyCollectionChanged> . Bu arabirim, temeldeki koleksiyon değiştiğinde oluşturulması gereken bir olay gösterir.
 
-WPF, <xref:System.Collections.ObjectModel.ObservableCollection%601> arabirimi kullanıma sunan bir veri koleksiyonunun yerleşik bir uygulama olan sınıfını sağlar <xref:System.Collections.Specialized.INotifyCollectionChanged> . Veri değerlerinin Kaynak nesnelerden hedeflere aktarılmasını tam olarak desteklemek için, koleksiyonunuzdaki bağlanabilir özellikleri destekleyen her nesnenin de arabirimini uygulaması gerekir <xref:System.ComponentModel.INotifyPropertyChanged> . Daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](../../framework/wpf/data/binding-sources-overview.md).
+WPF, <xref:System.Collections.ObjectModel.ObservableCollection%601> arabirimi kullanıma sunan bir veri koleksiyonunun yerleşik bir uygulama olan sınıfını sağlar <xref:System.Collections.Specialized.INotifyCollectionChanged> . Veri değerlerinin Kaynak nesnelerden hedeflere aktarılmasını tam olarak desteklemek için, koleksiyonunuzdaki bağlanabilir özellikleri destekleyen her nesnenin de arabirimini uygulaması gerekir <xref:System.ComponentModel.INotifyPropertyChanged> . Daha fazla bilgi için bkz. [bağlama kaynaklarına genel bakış](/dotnet/desktop/wpf/data/binding-sources-overview).
 
 Kendi koleksiyonunuzu uygulamadan önce,, ve gibi <xref:System.Collections.ObjectModel.ObservableCollection%601> var olan koleksiyon sınıflarından birini ya da <xref:System.Collections.Generic.List%601> <xref:System.Collections.ObjectModel.Collection%601> birçok başka konuda kullanmayı düşünün <xref:System.ComponentModel.BindingList%601> . Gelişmiş bir senaryonuz varsa ve kendi koleksiyonunuzu uygulamak istiyorsanız <xref:System.Collections.IList> , dizin tarafından ayrı ayrı erişilebilen nesnelerin genel olmayan bir koleksiyonunu sağlayan öğesini kullanmayı düşünün ve bu sayede en iyi performansı elde edebilirsiniz.
 
@@ -269,7 +269,7 @@ Aşağıdaki tabloda, varsayılan koleksiyon görünümü olarak veya <xref:Syst
 
 Bir koleksiyon görünümünü bağlama kaynağı olarak belirtme, koleksiyon görünümü oluşturmanın ve kullanmanın bir yoludur. WPF ayrıca, bağlama kaynağı olarak kullanılan her koleksiyon için varsayılan bir koleksiyon görünümü oluşturur. Doğrudan bir koleksiyona bağlarsanız, WPF varsayılan görünümüne bağlanır. Bu varsayılan görünüm, aynı koleksiyondaki tüm bağlamalar tarafından paylaşılır. bu nedenle, bir bağlantılı denetim veya kodla (sıralama ya da geçerli öğe işaretçisine yapılan bir değişiklik gibi) bir varsayılan görünümde yapılan değişiklik, aynı koleksiyona yapılan diğer tüm bağlamalara yansıtılır.
 
-Varsayılan görünümü almak için <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> yöntemini kullanırsınız. Bir örnek için bkz. [veri koleksiyonunun varsayılan görünümünü edinme](../../framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md).
+Varsayılan görünümü almak için <xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A> yöntemini kullanırsınız. Bir örnek için bkz. [veri koleksiyonunun varsayılan görünümünü edinme](/dotnet/desktop/wpf/data/how-to-get-the-default-view-of-a-data-collection).
 
 #### <a name="collection-views-with-adonet-datatables"></a>ADO.NET DataTable ile koleksiyon görünümleri
 
@@ -277,7 +277,7 @@ Performansı artırmak için, ADO.NET veya nesneleri için koleksiyon görünüm
 
 #### <a name="sorting"></a>Sıralama
 
-Daha önce bahsedildiği gibi, görünümler bir koleksiyona sıralama düzeni uygulayabilir. Temel koleksiyonda olduğu gibi, verileriniz ilgili ve kendine özgü bir sıraya sahip olabilir veya olmayabilir. Koleksiyon üzerindeki görünüm, sağladığınız karşılaştırma ölçütlerine göre bir sipariş veya varsayılan sırayı değiştirmenize olanak sağlar. Verilerin istemci tabanlı bir görünümü olduğundan, yaygın olarak kullanılan bir senaryo, kullanıcının sütun için karşılık gelen tablo verilerinin sütunlarını sütuna karşılık geldiği bir değere göre sıralamak isteyebilir. Görünümleri kullanarak, bu kullanıcı odaklı sıralama, temel koleksiyonda herhangi bir değişiklik yapılmadan veya koleksiyon içeriğini yeniden sorgulamak zorunda kalmadan uygulanabilir. Bir örnek için bkz. [bir başlık tıklandığında GridView sütununu sıralama](../../framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md).
+Daha önce bahsedildiği gibi, görünümler bir koleksiyona sıralama düzeni uygulayabilir. Temel koleksiyonda olduğu gibi, verileriniz ilgili ve kendine özgü bir sıraya sahip olabilir veya olmayabilir. Koleksiyon üzerindeki görünüm, sağladığınız karşılaştırma ölçütlerine göre bir sipariş veya varsayılan sırayı değiştirmenize olanak sağlar. Verilerin istemci tabanlı bir görünümü olduğundan, yaygın olarak kullanılan bir senaryo, kullanıcının sütun için karşılık gelen tablo verilerinin sütunlarını sütuna karşılık geldiği bir değere göre sıralamak isteyebilir. Görünümleri kullanarak, bu kullanıcı odaklı sıralama, temel koleksiyonda herhangi bir değişiklik yapılmadan veya koleksiyon içeriğini yeniden sorgulamak zorunda kalmadan uygulanabilir. Bir örnek için bkz. [bir başlık tıklandığında GridView sütununu sıralama](/dotnet/desktop/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked).
 
 Aşağıdaki örnek, <xref:System.Windows.Controls.CheckBox> [veri bağlama nedir](#what-is-data-binding) bölümünde uygulama kullanıcı arabirimindeki "kategoriye göre sıralama ve tarihe göre sırala" öğesinin sıralama mantığını gösterir.
 
@@ -296,7 +296,7 @@ Görünümler bir koleksiyona bir filtre de uygulayabilir, böylece görünüm t
 [!code-csharp[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#FilterEvent)]
 [!code-vb[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#FilterEvent)]
 
-<xref:System.Windows.Data.CollectionView>Yerine doğrudan sınıflardan birini kullanıyorsanız <xref:System.Windows.Data.CollectionViewSource> , <xref:System.Windows.Data.CollectionView.Filter%2A> bir geri çağırma belirtmek için özelliğini kullanın. Bir örnek için bkz. [bir görünümdeki verileri filtreleme](../../framework/wpf/data/how-to-filter-data-in-a-view.md).
+<xref:System.Windows.Data.CollectionView>Yerine doğrudan sınıflardan birini kullanıyorsanız <xref:System.Windows.Data.CollectionViewSource> , <xref:System.Windows.Data.CollectionView.Filter%2A> bir geri çağırma belirtmek için özelliğini kullanın. Bir örnek için bkz. [bir görünümdeki verileri filtreleme](/dotnet/desktop/wpf/data/how-to-filter-data-in-a-view).
 
 #### <a name="grouping"></a>Gruplandırma
 
@@ -307,11 +307,11 @@ Aşağıdaki örnekte, "kategoriye göre gruplandırma" mantığı gösterilmekt
 [!code-csharp[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#ListingGroupCheck)]
 [!code-vb[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#ListingGroupCheck)]
 
-Başka bir gruplandırma örneği için bkz. [GridView uygulayan bir ListView Içindeki öğeleri gruplandırma](../../framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md).
+Başka bir gruplandırma örneği için bkz. [GridView uygulayan bir ListView Içindeki öğeleri gruplandırma](/dotnet/desktop/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview).
 
 #### <a name="current-item-pointers"></a>Geçerli öğe işaretçileri
 
-Görünümler, geçerli bir öğe kavramını da destekler. Bir koleksiyon görünümündeki nesneler arasında gezinebilirsiniz. Gezindiğinizde, koleksiyonda belirli bir konumda bulunan nesneyi almanıza izin veren bir öğe işaretçisini taşıyor olursunuz. Bir örnek için bkz. [Data CollectionView içindeki nesneler arasında gezinme](../../framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md).
+Görünümler, geçerli bir öğe kavramını da destekler. Bir koleksiyon görünümündeki nesneler arasında gezinebilirsiniz. Gezindiğinizde, koleksiyonda belirli bir konumda bulunan nesneyi almanıza izin veren bir öğe işaretçisini taşıyor olursunuz. Bir örnek için bkz. [Data CollectionView içindeki nesneler arasında gezinme](/dotnet/desktop/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview).
 
 WPF bir koleksiyona yalnızca bir görünüm (belirttiğiniz bir görünüm veya koleksiyonun varsayılan görünümü) kullanarak bağlandığından, koleksiyonlara yönelik tüm bağlamaların geçerli öğe işaretçisi vardır. Bir görünüme bağlanırken, bir değer içindeki eğik çizgi ("/") karakteri `Path` görünümün geçerli öğesini belirler. Aşağıdaki örnekte, veri bağlamı bir koleksiyon görünümüdür. İlk satır koleksiyona bağlanır. İkinci satır koleksiyondaki geçerli öğeye bağlanır. Üçüncü satır `Description` koleksiyondaki geçerli öğenin özelliğine bağlar.
 
@@ -339,7 +339,7 @@ Aynı görünüme iki veya daha fazla denetim bağlayarak, ana ayrıntı senaryo
 
 Denetimlerin her ikisinin de aynı kaynağa, *listingDataView* statik kaynağına ( [bir görünüm oluşturma bölümünde](#how-to-create-a-view)bu kaynağın tanımına bakın) bağlandığını unutmayın. Bu bağlama, tek bir nesne ( <xref:System.Windows.Controls.ContentControl> Bu durumda) bir koleksiyon görünümüne bağlı olduğunda otomatik olarak görünümün öğesine bağlandığı için geçerlidir <xref:System.Windows.Data.CollectionView.CurrentItem%2A> . <xref:System.Windows.Data.CollectionViewSource>Nesneler, para birimini ve seçimi otomatik olarak eşitler. Liste denetiminiz bir <xref:System.Windows.Data.CollectionViewSource> nesneye bu örnekte olduğu gibi bağlanmazsa, <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> bunun çalışması için özelliğini olarak ayarlamanız gerekir `true` .
 
-Diğer örnekler için bkz. [bir koleksiyona bağlama ve seçime göre bilgi görüntüleme](../../framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md) ve [hiyerarşik verilerle ana ayrıntı modelini kullanma](../../framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
+Diğer örnekler için bkz. [bir koleksiyona bağlama ve seçime göre bilgi görüntüleme](/dotnet/desktop/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection) ve [hiyerarşik verilerle ana ayrıntı modelini kullanma](/dotnet/desktop/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data).
 
 Yukarıdaki örneğin bir şablon kullandığını fark etmiş olabilirsiniz. Aslında, veriler şablonlar kullanılmadan (tarafından açıkça kullanılan ve tarafından örtülü olarak kullanılan), istediğimiz şekilde gösterilmez <xref:System.Windows.Controls.ContentControl> <xref:System.Windows.Controls.ListBox> . Şimdi, sonraki bölümde veri şablonu oluşturma özelliğini kullanacağız.
 
@@ -357,7 +357,7 @@ Bu sorunu çözmek için uygulama tanımlar <xref:System.Windows.DataTemplate?te
 
 Bu iki DataTemplate kullanımı ile elde edilen kullanıcı arabirimi, [veri bağlama nedir](#what-is-data-binding) bölümünde gösterilen şeydir. Söz konusu ekran görüntüsünden görebileceğiniz gibi, denetimlerinizde veri yerleştirmenize izin vermenin yanı sıra DataTemplates verileriniz için etkileyici görseller tanımlamanızı sağlar. Örneğin, <xref:System.Windows.DataTrigger> yukarıda ' de, <xref:System.Windows.DataTemplate> *özelleştirilmiş özellikler* içeren *AuctionItem*s 'in, turuncu bir kenarlık ve yıldız *HighLight* ile görüntülenebilmesi için, yukarıda ' de kullanılır.
 
-Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](../../framework/wpf/data/data-templating-overview.md).
+Veri şablonları hakkında daha fazla bilgi için bkz. [veri şablonu oluşturmaya genel bakış](/dotnet/desktop/wpf/data/data-templating-overview).
 
 ## <a name="data-validation"></a>Veri doğrulama
 
@@ -406,7 +406,7 @@ Eğer hesabınız, <xref:System.Windows.Data.Binding> doğrulama kurallarına sa
 
 ![Veri bağlama doğrulama hatası](./media/data-binding-overview/demo-validation-price.png "DataBindingDemo_ValidationDefault")
 
-Bir iletişim kutusundaki tüm denetimleri doğrulamaya yönelik mantık sağlama hakkında bir örnek için [iletişim kutularında](../../framework/wpf/app-development/dialog-boxes-overview.md)özel iletişim kutuları bölümüne bakın.
+Bir iletişim kutusundaki tüm denetimleri doğrulamaya yönelik mantık sağlama hakkında bir örnek için [iletişim kutularında](/dotnet/desktop/wpf/app-development/dialog-boxes-overview)özel iletişim kutuları bölümüne bakın.
 
 ### <a name="validation-process"></a>Doğrulama işlemi
 
@@ -441,10 +441,10 @@ Bağlama onunla ilişkili bir varsa <xref:System.Windows.Controls.ExceptionValid
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [LINQ sorgusunun sonuçlarına bağlama](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
-- [Veri bağlama](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
+- [LINQ sorgusunun sonuçlarına bağlama](/dotnet/desktop/wpf/data/how-to-bind-to-the-results-of-a-linq-query)
+- [Veri bağlama](/dotnet/desktop/wpf/advanced/optimizing-performance-data-binding)
 - [Veri bağlama tanıtımı][data-binding-demo]
-- [Nasıl yapılır makaleleri](../../framework/wpf/data/data-binding-how-to-topics.md)
-- [ADO.NET veri kaynağına bağlama](../../framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+- [Nasıl yapılır makaleleri](/dotnet/desktop/wpf/data/data-binding-how-to-topics)
+- [ADO.NET veri kaynağına bağlama](/dotnet/desktop/wpf/data/how-to-bind-to-an-ado-net-data-source)
 
 [data-binding-demo]: https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/DataBindingDemo "veri bağlama tanıtım uygulaması"

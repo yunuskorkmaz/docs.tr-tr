@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: d396ccdaca81eab74de5e20d7ba7a9a00acbf7a6
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 9c0e75d58fbcf61137ceae3fba9d8acfe3902171
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597481"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556596"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS Atomik Işlem desteğini yapılandırma
 
@@ -17,19 +17,19 @@ Bu konu, WS-AT yapılandırma yardımcı programını kullanarak WS-AtomicTransa
 
 ## <a name="use-the-ws-at-configuration-utility"></a>WS-AT yapılandırma yardımcı programını kullanma
 
-Ws-at yapılandırma yardımcı programı (wsatConfig. exe), WS-AT ayarlarını yapılandırmak için kullanılır. WS-AT protokol hizmetini etkinleştirmek için, yapılandırma yardımcı programını kullanarak WS-AT için HTTPS bağlantı noktasını yapılandırın, bir X. 509.440 sertifikasını HTTPS bağlantı noktasına bağlayın ve sertifika konu adlarını veya parmak izlerini belirterek yetkili iş ortağı sertifikaları yapılandırın. Yapılandırma yardımcı programı, izleme modunu seçmenize ve varsayılan giden ve en fazla gelen işlem zaman aşımlarını ayarlamanıza olanak tanır.
+Ws-at yapılandırma yardımcı programı (wsatConfig.exe), WS-AT ayarlarını yapılandırmak için kullanılır. WS-AT protokol hizmetini etkinleştirmek için, yapılandırma yardımcı programını kullanarak WS-AT için HTTPS bağlantı noktasını yapılandırın, bir X. 509.440 sertifikasını HTTPS bağlantı noktasına bağlayın ve sertifika konu adlarını veya parmak izlerini belirterek yetkili iş ortağı sertifikaları yapılandırın. Yapılandırma yardımcı programı, izleme modunu seçmenize ve varsayılan giden ve en fazla gelen işlem zaman aşımlarını ayarlamanıza olanak tanır.
 
 Bu aracın işlevselliğine Bileşen Hizmetleri yönetim konsolundaki bir Microsoft Yönetim Konsolu (MMC) özellik sayfası ek bileşenini kullanarak veya bir komut satırı penceresinden erişebilirsiniz. Yerel makinede WS-AT desteğini komut satırı penceresi aracılığıyla yapılandırın; MMC ek bileşenini kullanarak hem yerel hem de uzak makinelerde ayarları yapılandırın.
 
 Komut satırı penceresine, "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation" Windows SDK yükleme konumundan erişilebilir.
 
-Komut satırı aracı hakkında daha fazla bilgi için bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig. exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
+Komut satırı aracı hakkında daha fazla bilgi için bkz. [WS-AtomicTransaction Yapılandırma yardımcı programı (wsatConfig.exe)](../ws-atomictransaction-configuration-utility-wsatconfig-exe.md).
 
 Windows XP veya Windows Server 2003 çalıştırıyorsanız, **Denetim Masası/Yönetim Araçları/Bileşen Hizmetleri**' ne giderek MMC ek bileşenine erişebilir, Bilgisayarıma sağ tıklayıp **Özellikler** **' i seçebilirsiniz**. Bu, Microsoft Dağıtılmış İşlem Düzenleyicisi (MSDTC) yapılandırabileceğiniz konumdur. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır. Windows Vista veya Windows Server 2008 çalıştırıyorsanız, MMC ek bileşeni **Başlat** düğmesine tıklayıp `dcomcnfg.exe` **arama** kutusuna girerek bulunabilir. MMC açıldığında, **bilgisayar \ dağıtılmış işlem Koordinatlıklasör** düğümü ' ne gidin, sağ tıklayın ve **Özellikler**' i seçin. Yapılandırma için kullanılabilen seçenekler **ws-at** sekmesi altında gruplandırılır.
 
 Ek bileşen hakkında daha fazla bilgi için bkz. [WS-AtomicTransaction YAPıLANDıRMASı MMC ek bileşeni](../ws-atomictransaction-configuration-mmc-snap-in.md).
 
-Aracın Kullanıcı arabirimini etkinleştirmek için, önce aşağıdaki yolda bulunan WsatUI. dll dosyasını kaydetmeniz gerekir
+Aracın Kullanıcı arabirimini etkinleştirmek için, önce aşağıdaki yolda bulunan WsatUI.dll dosyasını kaydetmeniz gerekir
 
 %PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin
 
@@ -39,19 +39,19 @@ Aracın Kullanıcı arabirimini etkinleştirmek için, önce aşağıdaki yolda 
 
 ## <a name="enable-ws-at"></a>WS-AT 'ı etkinleştir
 
-443 numaralı bağlantı noktasını ve yerel makine deposuna yüklenmiş bir özel anahtara sahip bir X. 509.440 sertifikasını kullanarak MSDTC içindeki WS-AT protokol hizmetini etkinleştirmek için aşağıdaki komutla wsatConfig. exe aracını kullanın.
+443 numaralı bağlantı noktasını ve yerel makine deposuna yüklenmiş bir özel anahtarla bir X. 509.440 sertifikasını kullanarak MSDTC içindeki WS-AT protokol hizmetini etkinleştirmek için aşağıdaki komutla birlikte wsatConfig.exe aracını kullanın.
 
 `WsatConfig.exe –network:enable –port:8443 –endpointCert:<machine|"Issuer\SubjectName"> -accountsCerts:<thumbprint|"Issuer\SubjectName"> -restart`
 
 İlgili parametreleri ortamınıza uygun değerlerle değiştirin.
 
-MSDTC içindeki WS-AT protokol hizmetini devre dışı bırakmak için aşağıdaki komutla wsatConfig. exe aracını kullanın.
+MSDTC içindeki WS-AT protokol hizmetini devre dışı bırakmak için aşağıdaki komutla birlikte wsatConfig.exe aracını kullanın.
 
 `WsatConfig.exe –network:disable -restart`
 
 ## <a name="configure-trust-between-two-machines"></a>İki makine arasında güveni yapılandırma
 
-WS-AT protokol hizmeti, yöneticinin dağıtılan işlemlere katılmak için bireysel hesaplara açık olarak yetki vermiş olmasını gerektirir. İki makine için yöneticiyseniz, makineler arasında doğru sertifika kümesini değiştirerek, onları uygun sertifika depolarına yükleyerek ve wsatConfig. exe aracını kullanarak her makinenin sertifikasını diğer yetkili katılımcı sertifikaları listesine eklemek için her iki makineyi de bir karşılıklı güven ilişkisi kuracak şekilde yapılandırabilirsiniz. Bu adım WS-AT kullanan iki makine arasında dağıtılmış işlemler gerçekleştirmek için gereklidir.
+WS-AT protokol hizmeti, yöneticinin dağıtılan işlemlere katılmak için bireysel hesaplara açık olarak yetki vermiş olmasını gerektirir. İki makine için yöneticiyseniz, makineler arasında doğru sertifika kümesini değiştirerek, bunları uygun sertifika depolarına yükleyerek ve her makinenin sertifikasını diğer yetkili katılımcı sertifikaları listesine eklemek için wsatConfig.exe aracını kullanarak karşılıklı güven ilişkisi kurmak için her iki makineyi de yapılandırabilirsiniz. Bu adım WS-AT kullanan iki makine arasında dağıtılmış işlemler gerçekleştirmek için gereklidir.
 
 Aşağıdaki örnekte, A ve B olmak üzere iki makine arasında güven oluşturma adımları özetlenmektedir.
 
@@ -59,7 +59,7 @@ Aşağıdaki örnekte, A ve B olmak üzere iki makine arasında güven oluşturm
 
 Bu yordam MMC sertifikaları ek bileşenini gerektirir. Ek bileşene, Başlat/Çalıştır menüsü açılarak giriş kutusuna "MMC" yazarak ve Tamam ' a basılarak erişilebilir. Ardından, **Konsol1** penceresinde, **Dosya/Ekle/Kaldır** ek bileşenine gidin, Ekle ' ye tıklayın ve **kullanılabilir tek başına ek bileşen** listesinden **Sertifikalar** ' ı seçin. Son olarak, yönetilecek **bilgisayar hesabı** ' nı seçin ve **Tamam**' a tıklayın. **Sertifikalar** düğümü ek bileşen konsolunda görünür.
 
-Güven sağlamak için gerekli sertifikalara sahip olmanız gerekir. Aşağıdaki adımlardan önce yeni sertifikalar oluşturma ve yüklemeyi öğrenmek için bkz. [nasıl yapılır: geliştirme SıRASıNDA WCF 'de geçici Istemci sertifikaları oluşturma ve yüklemeyi](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10))öğrenme.
+Güven sağlamak için gerekli sertifikalara sahip olmanız gerekir. Aşağıdaki adımlardan önce yeni sertifikalar oluşturma ve yüklemeyi öğrenmek için bkz. [nasıl yapılır: geliştirme SıRASıNDA WCF 'de geçici Istemci sertifikaları oluşturma ve yüklemeyi](/previous-versions/msp-n-p/ff650751(v=pandp.10))öğrenme.
 
 1. A makinesi ' nde, MMC sertifikaları ek bileşenini kullanarak mevcut sertifikayı (certA) Localmachine\(Personal node) ve localmachıneroot deposuna (güvenilen kök sertifika yetkilisi düğümü) içeri aktarın. Belirli bir düğüme bir sertifikayı içeri aktarmak için düğüme sağ tıklayın ve **Tüm görevler/Içeri aktar**' ı seçin.
 
@@ -102,7 +102,7 @@ MSDTC dağıtıldığında, yönetici tüm MSDTC veri değişim güvenliğinin g
 
 ## <a name="tracing"></a>İzleme
 
-WS-AT protokol hizmeti, [WS-AtomicTransaction Yapılandırma MMC ek bileşeni](../ws-atomictransaction-configuration-mmc-snap-in.md) Aracı kullanılarak etkinleştirilebilecek ve yönetilebilen, tümleşik, işleme özgü izlemeyi destekler. İzlemeler, belirli bir işlem için bir kayıt yapıldığı saati, bir işlemin Terminal durumuna ulaştığı süreyi, her işlem kaydı alındığını belirten verileri içerebilir. Tüm izlemeler, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer. exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) Aracı kullanılarak görüntülenebilir.
+WS-AT protokol hizmeti, [WS-AtomicTransaction Yapılandırma MMC ek bileşeni](../ws-atomictransaction-configuration-mmc-snap-in.md) Aracı kullanılarak etkinleştirilebilecek ve yönetilebilen, tümleşik, işleme özgü izlemeyi destekler. İzlemeler, belirli bir işlem için bir kayıt yapıldığı saati, bir işlemin Terminal durumuna ulaştığı süreyi, her işlem kaydı alındığını belirten verileri içerebilir. Tüm izlemeler, [hizmet Izleme Görüntüleyicisi Aracı (SvcTraceViewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md) Aracı kullanılarak görüntülenebilir.
 
 WS-AT protokol hizmeti Ayrıca ETW izleme oturumu aracılığıyla tümleşik ServiceModel izlemeyi destekler. Bu, mevcut işlem izlemelerinin yanı sıra daha ayrıntılı, iletişime özgü izlemeler sağlar.  Bu ek izlemeleri etkinleştirmek için şu adımları izleyin
 

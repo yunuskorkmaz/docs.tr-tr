@@ -3,33 +3,33 @@ title: F# kullanarak Azure Kuyruk depolama kullanmaya başlama
 description: Azure Queues, uygulama bileşenleri arasında güvenilir ve zaman uyumsuz mesajlaşma sağlar. Bulut mesajlaşma özelliği uygulama bileşenlerinizin bağımsız olarak ölçeklendirilmesini sağlar.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 841068ac91aecc53811359e27d984907569a2c6d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0b360348ce6966ce49a2ac0abd839844bdbe55f2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935490"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548370"
 ---
-# <a name="get-started-with-azure-queue-storage-using-f"></a>F\# kullanarak Azure kuyruk depolama ile çalışmaya başlama
+# <a name="get-started-with-azure-queue-storage-using-f"></a>F kullanarak Azure kuyruk depolama ile çalışmaya başlama\#
 
 Azure Queue depolama birimi, uygulama bileşenleri arasında bulut mesajlaşma özelliği sağlar. Ölçeklendirmek üzere uygulama tasarlarken, uygulama bileşenleri birbirinden bağımsız şekilde ölçeklenebilmek için genellikle birbirinden ayrılır. Kuyruk depolama bulutta, masaüstünde, şirket içi sunucuda veya mobil bir cihazda çalışan uygulama bileşenleri arasındaki iletişim için zaman uyumsuz mesajlaşma sunar. Kuyruk depolama ayrıca zaman uyumsuz görevlerin yönetilmesini ve süreç iş akışlarının oluşturulmasını destekler.
 
 ### <a name="about-this-tutorial"></a>Bu öğretici hakkında
 
-Bu öğreticide, Azure kuyruk F# depolama kullanarak bazı yaygın görevler için nasıl kod yazacağınız gösterilmektedir. Kapsanan görevler kuyruk oluşturma ve silme ve sıra iletilerini ekleme, okuma ve silme işlemleri içerir.
+Bu öğreticide, Azure kuyruk depolama kullanan bazı yaygın görevler için F # kodu yazma işlemi gösterilmektedir. Kapsanan görevler kuyruk oluşturma ve silme ve sıra iletilerini ekleme, okuma ve silme işlemleri içerir.
 
 Kuyruk depolamaya kavramsal bir genel bakış için lütfen [kuyruk depolaması için .net kılavuzuna](/azure/storage/storage-dotnet-how-to-use-queues)bakın.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Önkoşullar
 
 Bu kılavuzu kullanmak için önce [bir Azure depolama hesabı oluşturmanız](/azure/storage/storage-create-storage-account)gerekir.
 Ayrıca, bu hesap için depolama erişim anahtarınız gerekecektir.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>F# Betik oluşturma ve etkileşimli başlatma F#
+## <a name="create-an-f-script-and-start-f-interactive"></a>F # betiği oluşturun ve F# Etkileşimli başlatın
 
-Bu makaledeki örnekler, bir F# uygulama ya da bir F# komut dosyasında kullanılabilir. F# Betik oluşturmak için, F# geliştirme ortamınızda `.fsx` uzantılı bir dosya oluşturun (örneğin `queues.fsx`).
+Bu makaledeki örnekler bir F # uygulamasında veya F # betiğinde kullanılabilir. F # betiği oluşturmak için, `.fsx` Örneğin `queues.fsx` f # geliştirme ortamınızda uzantılı bir dosya oluşturun.
 
-Ardından, bir `#r` yönergesi kullanarak betiğe `WindowsAzure.Storage` paketini ve başvuru `WindowsAzure.Storage.dll` yüklemek için paket veya [NuGet](https://www.nuget.org/) [gibi bir](https://fsprojects.github.io/Paket/) [Paket Yöneticisi](package-management.md) kullanın.
+Daha sonra, [NuGet](https://www.nuget.org/) [Paket](https://fsprojects.github.io/Paket/) paketi [package manager](package-management.md) `WindowsAzure.Storage` ve `WindowsAzure.Storage.dll` bir yönerge kullanarak betiğe paket ve başvuru yüklemek için, paket veya NuGet gibi bir paket Yöneticisi kullanın `#r` .
 
 ### <a name="add-namespace-declarations"></a>Ad alanı bildirimleri ekleme
 
@@ -51,7 +51,7 @@ Gerçek uygulamalar için, depolama Bağlantı dizenizi korumak için en iyi yol
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L11-L13)]
 
-Azure Yapılandırma Yöneticisi'ni kullanmak isteğe bağlıdır. .NET Framework `ConfigurationManager` türü gibi bir API de kullanabilirsiniz.
+Azure Yapılandırma Yöneticisi'ni kullanmak isteğe bağlıdır. .NET Framework türü gibi bir API de kullanabilirsiniz `ConfigurationManager` .
 
 ### <a name="parse-the-connection-string"></a>Bağlantı dizesini ayrıştırma
 
@@ -59,17 +59,17 @@ Bağlantı dizesini ayrıştırmak için şunu kullanın:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L19-L20)]
 
-Bu, bir `CloudStorageAccount`döndürür.
+Bu, döndürür `CloudStorageAccount` .
 
 ### <a name="create-the-queue-service-client"></a>Kuyruk hizmeti istemcisi oluşturma
 
-`CloudQueueClient` sınıfı, kuyruk depolamada depolanan kuyrukları almanızı sağlar. Hizmet istemcisini oluşturma yöntemlerinden biri aşağıda verilmiştir:
+`CloudQueueClient`Sınıfı, kuyruk depolamada depolanan kuyrukları almanızı sağlar. Hizmet istemcisini oluşturma yöntemlerinden biri aşağıda verilmiştir:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L26-L26)]
 
 Artık Kuyruk depolamadan veri okuyan ve bu depolamaya veri yazan kodu yazmaya hazırsınız.
 
-## <a name="create-a-queue"></a>Kuyruk oluştur
+## <a name="create-a-queue"></a>Bir kuyruk oluşturma
 
 Bu örnek, zaten yoksa bir sıranın nasıl oluşturulacağını gösterir:
 
@@ -77,23 +77,23 @@ Bu örnek, zaten yoksa bir sıranın nasıl oluşturulacağını gösterir:
 
 ## <a name="insert-a-message-into-a-queue"></a>Kuyruğa bir ileti yerleştirme
 
-Mevcut bir sıraya bir ileti eklemek için, önce yeni bir `CloudQueueMessage`oluşturun. Sonra `AddMessage` yöntemini çağırın. Bir `CloudQueueMessage`, bir dizeden (UTF-8 biçiminde) ya da bir `byte` dizisinden oluşturulabilir, örneğin:
+Mevcut bir kuyruğa ileti eklemek için ilk olarak yeni bir oluştur `CloudQueueMessage` . Sonra, yöntemini çağırın `AddMessage` . Bir `CloudQueueMessage` dizeden (UTF-8 biçiminde) ya da bir dizide oluşturulabilir ve `byte` şöyle olabilir:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
 ## <a name="peek-at-the-next-message"></a>Sonraki iletiye gözatın
 
-`PeekMessage` yöntemini çağırarak bir kuyruğun önündeki iletiye göz atırsınız ve bunu kuyruktan kaldırabilirsiniz.
+Bir kuyruğun önünde, yöntemini çağırarak sıradan kaldırmadan iletiye göz atmayı sağlayabilirsiniz `PeekMessage` .
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L50-L52)]
 
 ## <a name="get-the-next-message-for-processing"></a>İşleme için bir sonraki iletiyi alın
 
-`GetMessage` yöntemini çağırarak, işlenmek üzere kuyruğun önündeki iletiyi alabilirsiniz.
+Yöntemi çağırarak, işlenmek üzere bir kuyruğun önündeki iletiyi alabilirsiniz `GetMessage` .
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L58-L59)]
 
-Daha sonra `DeleteMessage`kullanarak iletinin başarıyla işlenmesini belirtirsiniz.
+Daha sonra, kullanarak iletinin başarıyla işlenmesini belirteceksiniz `DeleteMessage` .
 
 ## <a name="change-the-contents-of-a-queued-message"></a>Kuyruğa alınan iletinin içeriğini değiştirme
 
@@ -103,7 +103,7 @@ Alınan bir iletinin içeriğini kuyrukta yerinde değiştirebilirsiniz. Eğer i
 
 ## <a name="de-queue-the-next-message"></a>Sonraki iletiyi sıradan çıkarmak
 
-Kodunuz, bir iletiyi bir kuyruktan iki adımda çıkarır. `GetMessage`çağırdığınızda sıradaki bir sonraki iletiyi alırsınız. `GetMessage` döndürülen bir ileti, bu kuyruktan gelen diğer kod okuma iletileri için görünmez hale gelir. Varsayılan olarak bu ileti 30 saniye görünmez kalır. İletiyi kuyruktan kaldırma işleminin tamamlanabilmesi için, `DeleteMessage`de çağırmanız gerekir. Bir iletinin iki adımlı kaldırılma süreci, donanım veya yazılım arızasından dolayı kodunuzun bir iletiyi işleyememesi durumunda kodunuzun başka bir örneğinin aynı iletiyi alıp yeniden denemesini sağlar. İleti işlendikten sonra kodunuz `DeleteMessage` çağırır.
+Kodunuz, bir iletiyi bir kuyruktan iki adımda çıkarır. `GetMessage`' İ çağırdığınızda bir kuyruktaki sonraki iletiyi alırsınız. Öğesinden döndürülen bir ileti, `GetMessage` Bu kuyruktan gelen diğer kod okuma iletileri için görünmez hale gelir. Varsayılan olarak bu ileti 30 saniye görünmez kalır. İletiyi kuyruktan kaldırma işleminin tamamlanabilmesi için, öğesini de çağırmanız gerekir `DeleteMessage` . Bir iletinin iki adımlı kaldırılma süreci, donanım veya yazılım arızasından dolayı kodunuzun bir iletiyi işleyememesi durumunda kodunuzun başka bir örneğinin aynı iletiyi alıp yeniden denemesini sağlar. `DeleteMessage`İleti işlendikten sonra kodunuz doğru şekilde çağırır.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
@@ -116,19 +116,19 @@ Bu örnek, genel sıra depolama API 'Leri ile zaman uyumsuz bir iş akışının
 ## <a name="additional-options-for-de-queuing-messages"></a>İletileri serbest bırakma için ek seçenekler
 
 İletilerin bir kuyruktan alınma şeklini iki yöntemle özelleştirebilirsiniz.
-İlk olarak toplu iletiler alabilirsiniz (en fazla 32). İkinci olarak daha uzun veya daha kısa bir görünmezlik süresi ayarlayarak kodunuzun her iletiyi tamamen işlemesi için daha az veya daha fazla zaman tanıyabilirsiniz. Aşağıdaki kod örneği, tek bir çağrıda 20 ileti almak için `GetMessages` kullanır ve ardından her iletiyi işler. Ayrıca her ileti için görünmezlik zaman aşımı beş dakika olarak ayarlanır. 5 dakikalık tüm iletiler için aynı anda başlayacağını unutmayın. bu nedenle, `GetMessages`çağrısından bu yana 5 dakika geçtikten sonra, silinmemiş olan tüm iletiler yeniden görünür hale gelir.
+İlk olarak toplu iletiler alabilirsiniz (en fazla 32). İkinci olarak daha uzun veya daha kısa bir görünmezlik süresi ayarlayarak kodunuzun her iletiyi tamamen işlemesi için daha az veya daha fazla zaman tanıyabilirsiniz. Aşağıdaki kod örneği, `GetMessages` bir çağrıda 20 ileti almak için kullanır ve ardından her iletiyi işler. Ayrıca her ileti için görünmezlik zaman aşımı beş dakika olarak ayarlanır. 5 dakikalık tüm iletiler için aynı anda başlayacağını unutmayın. bu nedenle, çağrısından bu yana 5 dakika geçtikten sonra `GetMessages` , silinmemiş olan tüm iletiler yeniden görünür hale gelir.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 
 ## <a name="get-the-queue-length"></a>Kuyruk uzunluğu alma
 
-Bir kuyruktaki ileti sayısı ile ilgili bir tahmin alabilirsiniz. `FetchAttributes` yöntemi, ileti sayısı dahil olmak üzere Kuyruk hizmeti kuyruk özniteliklerini almayı ister. `ApproximateMessageCount` özelliği, Kuyruk hizmeti çağrılmadan `FetchAttributes` yöntemi tarafından alınan son değeri döndürür.
+Bir kuyruktaki ileti sayısı ile ilgili bir tahmin alabilirsiniz. `FetchAttributes`Yöntemi, ileti sayısı dahil olmak üzere kuyruk hizmeti kuyruk özniteliklerini almayı ister. `ApproximateMessageCount`Özelliği, kuyruk hizmeti çağrılmadan yöntemi tarafından alınan son değeri döndürür `FetchAttributes` .
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L105-L106)]
 
 ## <a name="delete-a-queue"></a>Bir kuyruk silme
 
-Bir kuyruğu ve içerdiği tüm iletileri silmek için, kuyruk nesnesi üzerinde `Delete` yöntemi çağırın.
+Bir kuyruğu ve içerdiği tüm iletileri silmek için, `Delete` kuyruk nesnesi üzerinde yöntemini çağırın.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L112-L113)]
 
@@ -138,6 +138,6 @@ Kuyruk depolamanın temellerini öğrendiğinize göre, daha karmaşık depolama
 
 - [.NET için Azure Depolama API'leri](/dotnet/api/overview/azure/storage)
 - [Azure depolama türü sağlayıcısı](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Azure Depolama Ekibi Blog’u](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
-- [Azure Depolama bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
+- [Azure Depolama Ekibi Blogu](/archive/blogs/windowsazurestorage/)
+- [Azure depolama bağlantı dizelerini yapılandırma](/azure/storage/common/storage-configure-connection-string)
 - [Azure Depolama Hizmeti REST API Başvurusu](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

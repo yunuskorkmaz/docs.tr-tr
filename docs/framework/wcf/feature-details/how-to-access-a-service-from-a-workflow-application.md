@@ -2,12 +2,12 @@
 title: 'Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 2ce79b726b623c2a25bf14065682e685455ca575
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7375dc4f9af2eb0209b83724cd2ac9b9619b56dd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597247"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556882"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Nasıl yapılır: Bir İş Akışı Uygulamasından Bir Hizmete Erişme
 Bu konu, bir iş akışı konsol uygulamasından bir iş akışı hizmetinin nasıl çağrılacağını açıklar. Bu, [nasıl yapılır: mesajlaşma etkinlikleriyle Iş akışı hizmeti oluşturma](how-to-create-a-workflow-service-with-messaging-activities.md) konusunun tamamlanmasına bağlıdır. Bu konu, bir iş akışı hizmetinin iş akışı uygulamasından nasıl çağrılacağını açıklar, ancak aynı yöntemler bir iş akışı uygulamasından herhangi bir Windows Communication Foundation (WCF) hizmetini çağırmak için de kullanılabilir.
@@ -66,4 +66,4 @@ Bu konu, bir iş akışı konsol uygulamasından bir iş akışı hizmetinin nas
 
 - [İş Akışı Hizmetleri](workflow-services.md)
 - [Nasıl yapılır: Mesajlaşma Etkinlikleriyle İş Akışı Hizmeti Oluşturma](how-to-create-a-workflow-service-with-messaging-activities.md)
-- [Bir Web projesindeki Iş akışından bir WCF hizmetini kullanma](https://docs.microsoft.com/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)
+- [Bir Web projesindeki Iş akışından bir WCF hizmetini kullanma](/archive/blogs/endpoint/how-to-consume-a-wcf-service-from-a-wf4-workflow)

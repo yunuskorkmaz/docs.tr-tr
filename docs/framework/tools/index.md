@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 0a5cbcd4fa60b819d3ab07a4f221e77ca106c321
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 96df5a0c8487d3ba344b3aa13ca74b92e428d5aa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166843"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556687"
 ---
 # <a name="net-framework-tools"></a>.NET Framework Araçları
 
@@ -37,7 +37,7 @@ Modüller ya da kaynak dosyalarından derleme bildirimi içeren bir dosya oluşt
 Bir ActiveX denetimi için bir COM tür kitaplığındaki tür tanımlarını bir Windows Forms denetimine dönüştürür.
 
 - [Caspol.exe (kod erişimi güvenlik Ilkesi aracı)](caspol-exe-code-access-security-policy-tool.md)  
-Makine ilke düzeyi, kullanıcı ilke düzeyi ve kurumsal ilke düzeyi için güvenlik ilkesi görüntülemenize ve yapılandırmanıza olanak tanır. .NET Framework 4 ve sonrasında, bu araç, [ \<legacyCasPolicy> öğe](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) olarak ayarlanmadığı takdirde kod ERIŞIM güvenliği (CAS) ilkesini etkilemez `true` . Daha fazla bilgi için bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+Makine ilke düzeyi, kullanıcı ilke düzeyi ve kurumsal ilke düzeyi için güvenlik ilkesi görüntülemenize ve yapılandırmanıza olanak tanır. .NET Framework 4 ve sonrasında, bu araç, [ \<legacyCasPolicy> öğe](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) olarak ayarlanmadığı takdirde kod ERIŞIM güvenliği (CAS) ilkesini etkilemez `true` . Daha fazla bilgi için bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).
 
 - [Cert2spc.exe (yazılım yayımcısı sertifika test aracı)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 Bir veya daha fazla X.509 sertifikasından bir Yazılım Yayımcıları Sertifikası (SPC) oluşturur. Bu araç yalnızca test içindir.
@@ -134,7 +134,7 @@ Windows Forms tarafından kullanılan Kullanıcı arabirimi (UI) kaynaklarını 
 
 ## <a name="related-sections"></a>İlgili bölümler
 
-- [WPF araçları](https://docs.microsoft.com/previous-versions/ms742404(v=vs.110))  
+- [WPF araçları](/previous-versions/ms742404(v=vs.110))  
 İsXPS uyumluluk aracı (isXPS.exe) ve performans profil oluşturma araçları gibi araçları içerir.
 
 - [Windows Communication Foundation Araçları](../wcf/tools.md)  

@@ -2,16 +2,16 @@
 title: Windows Mağazası Uygulamanızı .NET Yerel'e Taşıma
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 5e5c655d0e8d6f1730f27d35525692e110b3c80c
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: cef985200efaf2ed7488d5e99394a5f01cc38594
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309202"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556934"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows mağazası uygulamanızı .NET Native geçirin
 
-.NET Native, Windows Mağazası 'nda veya geliştiricinin bilgisayarındaki uygulamaların statik derlemesini sağlar. Bu, tam zamanında (JıT) derleyici veya cihazdaki [Yerel Görüntü Oluşturucu (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) tarafından Windows Mağazası uygulamaları için gerçekleştirilen dinamik derlemeden farklıdır. Farklılıklara rağmen .NET Native, [Windows Mağazası uygulamaları için .net](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)ile uyumluluğu sürdürmenize çalışır. Çoğu bölümde, Windows Mağazası uygulamaları için .NET üzerinde çalışan şeyler .NET Native de çalışır.  Ancak bazı durumlarda, davranış değişiklikleriyle karşılaşabilirsiniz. Bu belgede, Windows Mağazası uygulamaları için standart .NET ve aşağıdaki alanlardaki .NET Native arasındaki farklar ele alınmaktadır:
+.NET Native, Windows Mağazası 'nda veya geliştiricinin bilgisayarındaki uygulamaların statik derlemesini sağlar. Bu, tam zamanında (JıT) derleyici veya cihazdaki [Yerel Görüntü Oluşturucu (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) tarafından Windows Mağazası uygulamaları için gerçekleştirilen dinamik derlemeden farklıdır. Farklılıklara rağmen .NET Native, [Windows Mağazası uygulamaları için .net](/previous-versions/windows/apps/br230302(v=vs.140))ile uyumluluğu sürdürmenize çalışır. Çoğu bölümde, Windows Mağazası uygulamaları için .NET üzerinde çalışan şeyler .NET Native de çalışır.  Ancak bazı durumlarda, davranış değişiklikleriyle karşılaşabilirsiniz. Bu belgede, Windows Mağazası uygulamaları için standart .NET ve aşağıdaki alanlardaki .NET Native arasındaki farklar ele alınmaktadır:
 
 - [Genel çalışma zamanı farklılıkları](#Runtime)
 
@@ -83,9 +83,9 @@ Windows Mağazası uygulamaları ve .NET Native için .NET arasındaki davranı�
 
 - Ve yapılarında ortak Üyeler <xref:System.RuntimeFieldHandle> <xref:System.RuntimeMethodHandle> desteklenmez. Bu türler yalnızca LINQ, ifade ağaçları ve statik dizi başlatma için desteklenir.
 
-- <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType>ve, <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> gizli üyeleri temel sınıflara dahil eder ve bu nedenle açık geçersiz kılmalar olmadan geçersiz kılınabilir. Bu aynı zamanda diğer [Runtimereftactionextensions. GetRuntime * metotlarından](xref:System.Reflection.RuntimeReflectionExtensions) de geçerlidir.
+- <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> ve, <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> gizli üyeleri temel sınıflara dahil eder ve bu nedenle açık geçersiz kılmalar olmadan geçersiz kılınabilir. Bu aynı zamanda diğer [Runtimereftactionextensions. GetRuntime * metotlarından](xref:System.Reflection.RuntimeReflectionExtensions) de geçerlidir.
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>ve <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> belirli birleşimler oluşturmaya çalıştığınızda başarısız olmaz (örneğin, bir `byref` nesne dizisi).
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> ve <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> belirli birleşimler oluşturmaya çalıştığınızda başarısız olmaz (örneğin, bir `byref` nesne dizisi).
 
 - İşaretçi parametrelerine sahip üyeleri çağırmak için yansıma kullanamazsınız.
 
@@ -153,7 +153,7 @@ Sınıf ile yerelleştirilmiş kaynakların kullanımı <xref:System.Diagnostics
 
 **Temsilciler**
 
-`Delegate.BeginInvoke`ve `Delegate.EndInvoke` desteklenmez.
+`Delegate.BeginInvoke` ve `Delegate.EndInvoke` desteklenmez.
 
 **Çeşitli API'ler**
 
@@ -225,9 +225,9 @@ Windows Mağazası uygulamaları için .NET ' te, <xref:System.Net.Http.HttpClie
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>desteklenir, ancak, [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) veya varyantlar ile kullanıldığı durumlar gibi bazı senaryolarda bir özel durum oluşturur `byref` .
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> desteklenir, ancak, [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) veya varyantlar ile kullanıldığı durumlar gibi bazı senaryolarda bir özel durum oluşturur `byref` .
 
- [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) desteği için kullanım dışı API 'ler şunlardır:
+ [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) desteği için kullanım dışı API 'ler şunlardır:
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDispatch?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.ClassInterfaceType.AutoDual?displayProperty=fullName>
@@ -240,15 +240,15 @@ Klasik COM olayları için kullanım dışı API 'Ler şunlardır:
 
 Arabirimde kullanılmayan API 'Ler <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> , .NET Native desteklenmez, şunları içerir:
 
-- <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>(tüm Üyeler)
-- <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType>(tüm Üyeler)
-- <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType>(tüm Üyeler)
+- <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> (tüm Üyeler)
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceMode?displayProperty=nameWithType> (tüm Üyeler)
+- <xref:System.Runtime.InteropServices.CustomQueryInterfaceResult?displayProperty=nameWithType> (tüm Üyeler)
 - <xref:System.Runtime.InteropServices.Marshal.GetComInterfaceForObject%28System.Object%2CSystem.Type%2CSystem.Runtime.InteropServices.CustomQueryInterfaceMode%29?displayProperty=fullName>
 
 Desteklenmeyen diğer birlikte çalışma özellikleri şunlardır:
 
-- <xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType>(tüm Üyeler)
-- <xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType>(tüm Üyeler)
+- <xref:System.Runtime.InteropServices.ICustomAdapter?displayProperty=nameWithType> (tüm Üyeler)
+- <xref:System.Runtime.InteropServices.SafeBuffer?displayProperty=nameWithType> (tüm Üyeler)
 - <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.UnmanagedType.VBByRefStr?displayProperty=fullName>
 - <xref:System.Runtime.InteropServices.UnmanagedType.AnsiBStr?displayProperty=fullName>
@@ -324,7 +324,7 @@ Ancak, .NET Native aşağıdakileri desteklemez:
 
 - <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>Arabirimi yönetilen bir tür üzerinde uygulama
 
-- Öznitelik aracılığıyla bir yönetilen tür üzerinde [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) arabirimini uygulama <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> . Ancak, COM nesnelerini aracılığıyla çağıramaz `IDispatch` ve Yönetilen nesneniz uygulayamaz `IDispatch` .
+- Öznitelik aracılığıyla bir yönetilen tür üzerinde [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) arabirimini uygulama <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> . Ancak, COM nesnelerini aracılığıyla çağıramaz `IDispatch` ve Yönetilen nesneniz uygulayamaz `IDispatch` .
 
 Bir platform çağırma yöntemi çağırmak için yansıma kullanılması desteklenmez. Yöntem çağrısını başka bir yöntemde sarmalayarak ve bunun yerine sarmalayıcı çağırmak için yansıma kullanarak bu sınırlamaya geçici bir çözüm bulabilirsiniz.
 
@@ -587,11 +587,11 @@ Aşağıdaki farklılıklar,, ve sınıflarıyla serileştirme ve seri durumdan 
 
   Seri hale `InnerType` getirici, taban sınıfının üyeleri serileştirme sırasında çapraz olmadığından tür serileştirici tarafından tanınmıyor.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer>ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> arabirimi uygulayan bir sınıf veya yapıyı seri hale getirme başarısız olur <xref:System.Collections.Generic.IEnumerable%601> . Örneğin, aşağıdaki türler seri hale getirilemez veya seri durumdan çıkarılamıyor:
+- <xref:System.Runtime.Serialization.DataContractSerializer> ve <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> arabirimi uygulayan bir sınıf veya yapıyı seri hale getirme başarısız olur <xref:System.Collections.Generic.IEnumerable%601> . Örneğin, aşağıdaki türler seri hale getirilemez veya seri durumdan çıkarılamıyor:
 
-- <xref:System.Xml.Serialization.XmlSerializer>Aşağıdaki nesne değeri seri hale getirilebilmesi için nesnenin tam türünü bilmez çünkü serileştirme:
+- <xref:System.Xml.Serialization.XmlSerializer> Aşağıdaki nesne değeri seri hale getirilebilmesi için nesnenin tam türünü bilmez çünkü serileştirme:
 
-- <xref:System.Xml.Serialization.XmlSerializer>serileştirilmiş nesne türü ise seri hale getirilemez veya seri durumdan çıkarılamıyor <xref:System.Xml.XmlQualifiedName> .
+- <xref:System.Xml.Serialization.XmlSerializer> serileştirilmiş nesne türü ise seri hale getirilemez veya seri durumdan çıkarılamıyor <xref:System.Xml.XmlQualifiedName> .
 
 - Tüm serileştiriciler ( <xref:System.Runtime.Serialization.DataContractSerializer> , <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ve <xref:System.Xml.Serialization.XmlSerializer> ), türü için <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> veya içeren bir tür için serileştirme kodu üretemiyor <xref:System.Xml.Linq.XElement> . Bunun yerine derleme zamanı hatalarını görüntüler.
 
@@ -619,7 +619,7 @@ Aşağıdaki farklılıklar,, ve sınıflarıyla serileştirme ve seri durumdan 
 
   - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29>
 
-- <xref:System.Xml.Serialization.XmlSerializer>Aşağıdaki özniteliklerden herhangi birine sahip olan yöntemlere sahip bir tür için kod üretemiyor:
+- <xref:System.Xml.Serialization.XmlSerializer> Aşağıdaki özniteliklerden herhangi birine sahip olan yöntemlere sahip bir tür için kod üretemiyor:
 
   - <xref:System.Runtime.Serialization.OnSerializingAttribute>
 
@@ -665,5 +665,5 @@ Windows Mağazası uygulamaları projesi için bir birim testi kitaplığı üze
 
 - [Başlarken](getting-started-with-net-native.md)
 - [Çalışma Zamanı Yönergeleri (rd.xml) Yapılandırma Dosyası Başvurusu](runtime-directives-rd-xml-configuration-file-reference.md)
-- [Windows Mağazası uygulamalarına yönelik .NET genel bakış](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
+- [Windows Mağazası uygulamalarına yönelik .NET genel bakış](/previous-versions/windows/apps/br230302(v=vs.140))
 - [Windows Mağazası Uygulamaları ve Windows Çalışma Zamanı için .NET Framework Desteği](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
+title: 'Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma'
 description: Bir bağlantı noktasını, bir X. 509.952 sertifikası ile birlikte kullanarak, bir şirket içinde barındırılan WCF hizmeti için, taşıma güvenliği kullanan WSHttpBinding sınıfına sahip bir bağlantı noktasını nasıl yapılandıracağınızı öğrenin.
 ms.date: 03/30/2017
 dev_langs:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 0eccdf916dae7b886cbc4e6563e6dfe17039c321
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 619a893e0973f6691e32446d75f101201a0b6799
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247188"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556388"
 ---
-# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl Yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
+# <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Nasıl yapılır: SSL Sertifikası ile Bir Bağlantı Noktasını Yapılandırma
 
 Aktarım güvenliği kullanan sınıfla şirket içinde barındırılan bir Windows Communication Foundation (WCF) hizmeti oluştururken <xref:System.ServiceModel.WSHttpBinding> , bir X. 509.440 sertifikası ile bir bağlantı noktası da yapılandırmanız gerekir. Kendi kendine barındırılan bir hizmet oluşturmadıysanız, hizmetinizi Internet Information Services (IIS) üzerinde barındırabilirsiniz. Daha fazla bilgi için bkz. [http aktarım güvenliği](http-transport-security.md).  
   
  Bir bağlantı noktasını yapılandırmak için, kullandığınız araç makinenizde çalışan işletim sistemine bağlıdır.  
   
- Windows Server 2003 çalıştırıyorsanız HttpCfg.exe aracını kullanın. Windows Server 2003 ' de bu araç yüklüdür. Daha fazla bilgi için bkz. [Httpcfg Overview](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). [Windows Destek Araçları belgeleri](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) Httpcfg.exe aracının sözdizimini açıklar.  
+ Windows Server 2003 çalıştırıyorsanız HttpCfg.exe aracını kullanın. Windows Server 2003 ' de bu araç yüklüdür. Daha fazla bilgi için bkz. [Httpcfg Overview](/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). [Windows Destek Araçları belgeleri](/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) Httpcfg.exe aracının sözdizimini açıklar.  
   
  Windows Vista çalıştırıyorsanız, zaten yüklü olan Netsh.exe aracını kullanın.
   
@@ -123,4 +123,4 @@ Aktarım güvenliği kullanan sınıfla şirket içinde barındırılan bir Wind
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [HTTP Aktarım Güvenliği](http-transport-security.md)
+- [HTTP Taşıma Güvenliği](http-transport-security.md)

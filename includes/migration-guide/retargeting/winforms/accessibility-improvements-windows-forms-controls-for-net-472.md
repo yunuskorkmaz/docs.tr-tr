@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cc3c2c2be179842f87be8892d057a6c4138086cb
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: a21824862d6cad046b5d6186f9d6db9c20438304
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85614871"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606412"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>.NET 4.7.2 için Windows Forms Denetimlerinde erişilebilirlik geliştirmeleri
 
@@ -21,7 +21,7 @@ Windows Forms Framework, Windows Forms müşterileri daha iyi desteklemek için 
 **Bu değişiklikleri kabul etme veya devre dışı bırakma** Uygulamanın bu değişikliklerden faydalanabilir olması için .NET Framework 4.7.2 veya sonraki bir sürümde çalışmalıdır. Uygulama, aşağıdaki yollarla bu değişikliklerden faydalanabilir:
 
 - .NET Framework 4.7.2 hedeflemek için yeniden derlenir. Bu erişilebilirlik değişiklikleri, .NET Framework 4.7.2 veya üstünü hedefleyen Windows Forms uygulamalarda varsayılan olarak etkinleştirilmiştir.
-- [AppContext Switch](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) `<runtime>` Aşağıdaki örnekte gösterildiği gibi, uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContext anahtarını ekleyerek ve ' ı ' a ayarlayarak, .NET Framework 4.7.1 veya önceki bir sürümü, eski erişilebilirlik davranışlarından daha fazla bilgi sağlar `false` .
+- [AppContext Switch](../../../../docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `<runtime>` Aşağıdaki örnekte gösterildiği gibi, uygulama yapılandırma dosyasının bölümüne aşağıdaki AppContext anahtarını ekleyerek ve ' ı ' a ayarlayarak, .NET Framework 4.7.1 veya önceki bir sürümü, eski erişilebilirlik davranışlarından daha fazla bilgi sağlar `false` .
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,7 +44,7 @@ Windows Forms Framework, Windows Forms müşterileri daha iyi desteklemek için 
 - <xref:System.Windows.Forms.Button><xref:System.Windows.Forms.RadioButton>ve, <xref:System.Windows.Forms.CheckBox> <xref:System.Windows.Forms.ButtonBase.FlatStyle> <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> Seçili olduğunda yüksek karşıtlık teması içinde işletim sistemi tanımlı renkler olarak ayarlanan veya artık kullanan denetimler. Daha önce, metin ve arka plan renkleri karşıt değildi ve okunması zor.
 - Öğesinin <xref:System.Windows.Forms.GroupBox> özelliği olarak ayarlanmış olan içindeki denetimler <xref:System.Windows.Forms.Control.Enabled> `false` artık yüksek karşıtlık teması içinde işletim sistemi tanımlı renkleri kullanacaktır.
 - <xref:System.Windows.Forms.ToolStripButton>, <xref:System.Windows.Forms.ToolStripComboBox> Ve <xref:System.Windows.Forms.ToolStripDropDownButton> denetimleri yüksek karşıtlık modunda daha fazla parlaklık kontrast oranına sahiptir.
-- <xref:System.Windows.Forms.DataGridViewLinkCell>Varsayılan olarak, özelliği için Yüksek Karşıtlık modunda işletim sistemi tanımlı renkler kullanır <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor?displayProperty=nameWithType> .
+- <xref:System.Windows.Forms.DataGridViewLinkCell> Varsayılan olarak, özelliği için Yüksek Karşıtlık modunda işletim sistemi tanımlı renkler kullanır <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor?displayProperty=nameWithType> .
 NOTE: Windows 10, bazı yüksek karşıtlıklı sistem renklerinin değerlerini değiştirdi. Windows Forms Framework, Win32 çerçevesini temel alır. En iyi deneyim için, Windows 'un en son sürümünde çalıştırın ve bir test uygulamasına bir App. manifest dosyası ekleyerek ve aşağıdaki kodu açıklama atamasını yaparak en son işletim sistemi değişikliklerini kabul edin:
 
 ```xml
@@ -73,9 +73,9 @@ NOTE: Windows 10, bazı yüksek karşıtlıklı sistem renklerinin değerlerini 
 
 - <xref:System.Windows.Forms.PropertyGrid>Denetim alt öğeleri artık `true` <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> yalnızca bir PropertyGrid öğesi etkinleştirildiğinde özelliği için bir döndürür.
 - <xref:System.Windows.Forms.PropertyGrid>Denetim alt öğeleri artık `false` <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> yalnızca bir PropertyGrid öğesi Kullanıcı tarafından değiştirilebiliyorsa özelliği için bir döndürür.
-UI Otomasyonu 'na genel bakış için bkz. [UI Otomasyonu genel bakış](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-overview).</p>**Geliştirilmiş Klavye gezintisi**
+UI Otomasyonu 'na genel bakış için bkz. [UI Otomasyonu genel bakış](../../../../docs/framework/ui-automation/ui-automation-overview.md).</p>**Geliştirilmiş Klavye gezintisi**
 
-- <xref:System.Windows.Forms.ToolStripButton>Artık, <xref:System.Windows.Forms.ToolStripPanel> özelliği olarak ayarlanmış olan bir içinde yer alan odağa izin verir <xref:System.Windows.Forms.ToolStripPanel.TabStop> `true` .
+- <xref:System.Windows.Forms.ToolStripButton> Artık, <xref:System.Windows.Forms.ToolStripPanel> özelliği olarak ayarlanmış olan bir içinde yer alan odağa izin verir <xref:System.Windows.Forms.ToolStripPanel.TabStop> `true` .
 
 | Name    | Değer       |
 |:--------|:------------|

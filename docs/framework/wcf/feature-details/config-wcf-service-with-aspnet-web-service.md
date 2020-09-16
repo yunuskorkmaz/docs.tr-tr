@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 52f7857a2dc7108eb308fde942bf153d85d8e8ed
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 696e6a08f3f040fcc6f27d101cd6b7c8cc89a0d6
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593613"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556648"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Nasıl yapılır: WCF Hizmetini ASP.NET Web Hizmeti İstemcileriyle Birlikte Çalışmak için Yapılandırma
 
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) hizmet uç noktasını ASP.NET Web hizmet
   
  İsteğe bağlı olarak, bağlamada HTTPS ve aktarım düzeyi istemci kimlik doğrulaması desteğini etkinleştirebilirsiniz. ASP.NET Web hizmeti istemcileri, MTOM ileti kodlamasını desteklemez, <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> Bu nedenle özelliğin varsayılan değeri olarak bırakılması gerekir <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> . ASP.NET Web hizmeti istemcileri WS-Security ' yi desteklemediğinden, <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> olarak ayarlanmalıdır <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> .  
   
- Bir WCF hizmetinin meta verilerini ASP.NET Web hizmeti proxy oluşturma araçları (yani, [Web Hizmetleri Açıklama Dili Aracı (wsdl. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)), [Web Hizmetleri bulma aracı (Disco. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))ve Visual Studio 'da **Web başvurusu Ekle** özelliği için KULLANILABILIR hale getırmek için, bir http/get meta veri uç noktası kullanıma sunmalısınız.  
+ Bir WCF hizmetinin meta verilerini ASP.NET Web hizmeti proxy oluşturma araçları (yani, [Web Hizmetleri Açıklama Dili Aracı (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100)), [Web Hizmetleri bulma aracı (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))ve Visual Studio 'da **Web başvurusu Ekle** özelliği) IÇIN kullanılabilir hale getirmek için bir http/get meta veri uç noktası kullanıma sunmalısınız.  
   
 ## <a name="add-an-endpoint-in-code"></a>Kodda bir uç nokta ekleme  
   
@@ -54,5 +54,5 @@ Windows Communication Foundation (WCF) hizmet uç noktasını ASP.NET Web hizmet
 - [Nasıl yapılır: Yapılandırmada Hizmet Bağlama Belirtme](../how-to-specify-a-service-binding-in-configuration.md)
 - [Nasıl yapılır: Yapılandırma İçinde Hizmet Uç Noktası Oluşturma](how-to-create-a-service-endpoint-in-configuration.md)
 - [Nasıl yapılır: Yapılandırma Dosyası Kullanarak Bir Hizmet için Meta Verileri Yayımlama](how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Aktarım Güvenliği](transport-security.md)
+- [Taşıma Güvenliği](transport-security.md)
 - [Meta Verileri Kullanma](using-metadata.md)

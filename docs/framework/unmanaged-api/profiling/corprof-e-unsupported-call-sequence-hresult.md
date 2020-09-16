@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: b4ab5c8f7cdca1303cb4fbbc4fa39db3c5977c15
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d6cba2ec3e82c07ce60f0f2b2199cc97e31a000b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867015"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555555"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 
@@ -31,9 +31,9 @@ Bu iki senaryo aşağıdaki bölümlerde ele alınmıştır.
   
  Profil oluşturma API 'sinin birçok kimliği, CLR 'deki veri yapılarına işaret verir. Birçok `ICorProfilerInfo` çağrı yalnızca bu veri yapılarındaki bilgileri okur ve geri geçirebilir. Ancak, CLR bu yapıların çalıştığı gibi herhangi bir şeyi değiştirebilir ve bunu yapmak için kilitleri kullanabilir. CLR 'nin iş parçacığını ele aldığı sırada bir kilidi zaten tutan (veya edinmeye çalışırken) bir kilit olduğunu varsayalım. İş parçacığı CLR 'ye yeniden girerse ve değiştirme sürecinde daha fazla kilit almaya veya yapıları incelemeye çalışırsa, bu yapılar tutarsız bir durumda olabilir. Kilitlenmeler ve erişim ihlalleri bu gibi durumlarda kolayca gerçekleşebilir.  
   
- Genel olarak, ele alınmayan bir profil oluşturucu kodu bir [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemi içinde yürütür ve geçerli parametrelerle bir `ICorProfilerInfo` yöntemi çağırıyorsa, kilitlenmemelidir veya bir erişim ihlali almamalıdır. Örneğin, [ICorProfilerCallback:: ClassLoadFinished](icorprofilercallback-classloadfinished-method.md) yöntemi içinde çalışan profil oluşturucu kodu, [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) yöntemini çağırarak sınıf hakkında bilgi isteyebilir. Kod, bilgilerin kullanılamadığını göstermek için bir HRESULT CORPROF_E_DATAINCOMPLETE alabilir. Ancak, kilitlenmez veya bir erişim ihlali almaz. Bu `ICorProfilerInfo` çağrısı, `ICorProfilerCallback` yönteminden yapıldığından zaman uyumlu olarak değerlendirilir.  
+ Genel olarak, ele alınmayan bir profil oluşturucu kodu bir [ICorProfilerCallback](icorprofilercallback-interface.md) yöntemi içinde yürütür ve `ICorProfilerInfo` geçerli parametrelerle bir yönteme çağırıyorsa, kilitlenmemelidir veya bir erişim ihlali almamalıdır. Örneğin, [ICorProfilerCallback:: ClassLoadFinished](icorprofilercallback-classloadfinished-method.md) yöntemi içinde çalışan profil oluşturucu kodu, [ICorProfilerInfo2:: GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md) yöntemini çağırarak sınıf hakkında bilgi isteyebilir. Kod, bilgilerin kullanılamadığını göstermek için bir HRESULT CORPROF_E_DATAINCOMPLETE alabilir. Ancak, kilitlenmez veya bir erişim ihlali almaz. Bu çağrılar `ICorProfilerInfo` bir yöntemden yapıldığından zaman uyumlu olarak değerlendirilir `ICorProfilerCallback` .  
   
- Ancak, bir `ICorProfilerCallback` yöntemi içinde olmayan kodu yürüten yönetilen bir iş parçacığı, zaman uyumsuz bir çağrı yapmakta olduğu kabul edilir. .NET Framework sürüm 1 ' de, zaman uyumsuz bir çağrıda ne olabileceğini belirlemek zordur. Çağrı kilitlenme, kilitlenme veya geçersiz yanıt verebilir. .NET Framework sürüm 2,0, bu sorundan kaçınmanıza yardımcı olacak bazı basit denetimler sunmuştur. .NET Framework 2,0 ' de, güvenli olmayan bir `ICorProfilerInfo` işlevini zaman uyumsuz olarak çağırırsanız, bir CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT ile başarısız olur.  
+ Ancak, bir yöntem içinde olmayan kodu yürüten yönetilen bir iş parçacığı, `ICorProfilerCallback` zaman uyumsuz bir çağrı yapılıyor olarak kabul edilir. .NET Framework sürüm 1 ' de, zaman uyumsuz bir çağrıda ne olabileceğini belirlemek zordur. Çağrı kilitlenme, kilitlenme veya geçersiz yanıt verebilir. .NET Framework sürüm 2,0, bu sorundan kaçınmanıza yardımcı olacak bazı basit denetimler sunmuştur. .NET Framework 2,0 ' de, güvenli olmayan bir `ICorProfilerInfo` işlevi zaman uyumsuz olarak çağırırsanız, bu, HRESULT corprof_e_unsupported_call_sequence başarısız olur.  
   
  Genel olarak, zaman uyumsuz çağrılar güvenli değildir. Ancak, aşağıdaki yöntemler güvenlidir ve özellikle zaman uyumsuz çağrıları destekler:  
   
@@ -69,10 +69,10 @@ Bu iki senaryo aşağıdaki bölümlerde ele alınmıştır.
   
 - [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)  
   
- Daha fazla bilgi için bkz. CLR profil oluşturma API 'SI blogda [neden corprof_e_unsupported_call_sequence sahip olduğumuz](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) girişi.  
+ Daha fazla bilgi için bkz. CLR profil oluşturma API 'SI blogda [neden corprof_e_unsupported_call_sequence sahip olduğumuz](/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) girişi.  
   
 ## <a name="triggering-garbage-collections"></a>Çöp koleksiyonları tetikleniyor  
- Bu senaryo, bir geri çağırma yöntemi içinde çalışan bir profil Oluşturucu içerir (örneğin, `ICorProfilerCallback` yöntemlerinden biri) yasaklıyor çöp toplama. Profil Oluşturucu çöp toplama tetikleyebilen bir bilgilendirici yöntemi (örneğin, `ICorProfilerInfo` arabirimindeki bir yöntemi) çağırmaya çalışırsa, bilgilendirici yöntemi bir HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE başarısız olur.  
+ Bu senaryo, bir geri çağırma yöntemi içinde çalışan bir profil Oluşturucu içerir (örneğin, `ICorProfilerCallback` metotlardan biri) yasaklıyor çöp toplama. Profiler bir çöp toplama tetikleyebilen bir bilgilendirici yöntemi (örneğin, arabirimdeki bir yöntemi) çağırmaya çalışırsa `ICorProfilerInfo` , bilgilendirici yöntem corprof_e_unsupported_call_sequence hresult ile başarısız olur.  
   
  Aşağıdaki tabloda çöp koleksiyonları sağlayan geri çağırma yöntemleri ve çöp koleksiyonlarının tetikleyebileceğini bilgilendirici Yöntemler gösterilmektedir. Profil Oluşturucu listelenmiş geri çağırma yöntemlerinden birinin içinde yürütülüyorsa ve listelenen bilgilendirici yöntemlerden birini çağırırsa, bu bilgi yöntemi HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE başarısız olur.  
   
@@ -87,6 +87,6 @@ Bu iki senaryo aşağıdaki bölümlerde ele alınmıştır.
 - [ICorProfilerCallback3 Arabirimi](icorprofilercallback3-interface.md)
 - [ICorProfilerInfo Arabirimi](icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 Arabirimi](icorprofilerinfo2-interface.md)
-- [ICorProfilerInfo3 Yöntemi](icorprofilerinfo3-interface.md)
+- [ICorProfilerInfo3 Arabirimi](icorprofilerinfo3-interface.md)
 - [Profil Oluşturma Arabirimleri](profiling-interfaces.md)
 - [Profil Oluşturma](index.md)

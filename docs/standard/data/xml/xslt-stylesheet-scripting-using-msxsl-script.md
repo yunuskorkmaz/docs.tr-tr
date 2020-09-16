@@ -6,14 +6,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: b2fd5ac6f03c0c66c05117a882d53af37e3f8665
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291974"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555939"
 ---
-# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Kullanarak XSLT stil sayfası betiği oluşturma\<msxsl:script>
+# <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Kullanarak XSLT stil sayfası betiği oluşturma \<msxsl:script>
 <xref:System.Xml.Xsl.XslTransform>Sınıfı, öğesini kullanarak gömülü komut dosyalarını destekler `script` .  
   
 > [!NOTE]
@@ -43,7 +43,7 @@ ms.locfileid: "84291974"
   
  Derlemeinizden kanıt almak için kullanın `this.GetType().Assembly.Evidence` . Bir Tekdüzen Kaynak tanımlayıcısından (URI) kanıt almak için kullanın `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)` .  
   
- <xref:System.Xml.Xsl.XslTransform.Load%2A>Ancak Hayır alan yöntemler kullanıyorsanız <xref:System.Xml.XmlResolver> `Evidence` , derleme için güvenlik bölgesi varsayılan olarak tam güven olur. Daha fazla bilgi için bkz <xref:System.Security.SecurityZone> . ve [adlandırılmış izin kümeleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
+ <xref:System.Xml.Xsl.XslTransform.Load%2A>Ancak Hayır alan yöntemler kullanıyorsanız <xref:System.Xml.XmlResolver> `Evidence` , derleme için güvenlik bölgesi varsayılan olarak tam güven olur. Daha fazla bilgi için bkz <xref:System.Security.SecurityZone> . ve [adlandırılmış izin kümeleri](/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).  
   
  İşlevler, öğesi içinde bildirilebilecek `msxsl:script` . Aşağıdaki tabloda, varsayılan olarak desteklenen ad alanları gösterilmektedir. Sınıfları listelenen ad alanları dışında kullanabilirsiniz. Ancak, bu sınıfların tam nitelikli olması gerekir.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "84291974"
 |System.Text|Metin sınıfları.|  
 |System.Text.RegularExpressions|Normal ifade sınıfları.|  
 |System.Xml|Çekirdek XML sınıfları.|  
-|System. xml. Xsl|XSLT sınıfları.|  
+|System.Xml. Xls|XSLT sınıfları.|  
 |System.Xml.XPath|XML Path Language (XPath) sınıfları.|  
 |Microsoft. VisualBasic|Microsoft Visual Basic betikleri için sınıflar.|  
   
@@ -67,8 +67,8 @@ ms.locfileid: "84291974"
 |Dize|System. String|XPath|  
 |Boole|System. Boolean|XPath|  
 |Sayı|System. Double|XPath|  
-|Sonuç ağacı parçası|System. xml. XPath. XPathNavigator|XSLT|  
-|Düğüm kümesi|System. xml. XPath. XPathNodeIterator|XPath|  
+|Sonuç ağacı parçası|System.Xml. XPath. XPathNavigator|XSLT|  
+|Düğüm kümesi|System.Xml. XPath. XPathNodeIterator|XPath|  
   
  Betik işlevi şu sayısal türlerden birini kullanıyorsa: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single veya Decimal, W3C XPath tür numarasıyla eşlenen Double olarak zorlanır. Tüm diğer türler, yöntemi çağırarak bir dizeye zorlanır `ToString` .  
   
@@ -166,7 +166,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>Giriş  
- Number. xml  
+ number.xml  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -214,7 +214,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b1fb9647091cecb80b9c2f04ec9b6bb156eb39ba
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 224cd3c7897c64ef05baba7d3d31dbe5ac0dd610
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84466865"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90606264"
 ---
 ### <a name="pubternal-apis-removed"></a>"Pubternal" API 'Leri kaldırıldı
 
@@ -22,7 +22,7 @@ Etkilenen API 'Ler `public` erişim değiştiricisiyle işaretlenir ve `*.Intern
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Etkilenen API 'Ler [iç](/dotnet/csharp/language-reference/keywords/internal) erişim değiştiricisiyle işaretlenir ve artık bu derleme dışındaki kod tarafından kullanılamaz.
+Etkilenen API 'Ler [iç](../../../../docs/csharp/language-reference/keywords/internal.md) erişim değiştiricisiyle işaretlenir ve artık bu derleme dışındaki kod tarafından kullanılamaz.
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -43,7 +43,7 @@ Bu :::no-loc text="\"pubternal\""::: API 'leri kullanmayı durdurun. Alternatif 
 HttpContext.Request.EnableRewind();
 ```
 
-ASP.NET Core 3,0 projesinde, `EnableRewind` çağrısını uzantı yöntemine yönelik bir çağrı ile değiştirin `EnableBuffering` . İstek arabelleğe alma özelliği geçmişte olduğu gibi çalışmaktadır. `EnableBuffering`Şimdi `internal` API 'yi çağırır.
+ASP.NET Core 3,0 projesinde, `EnableRewind` çağrısını uzantı yöntemine yönelik bir çağrı ile değiştirin `EnableBuffering` . İstek arabelleğe alma özelliği geçmişte olduğu gibi çalışmaktadır. `EnableBuffering` Şimdi `internal` API 'yi çağırır.
 
 ```csharp
 HttpContext.Request.EnableBuffering();
@@ -51,11 +51,11 @@ HttpContext.Request.EnableBuffering();
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 
-`Microsoft.AspNetCore.*` `Microsoft.Extensions.*` Ad alanı adında bir kesimi olan ve ad alanındaki tüm API 'ler `Internal` . Örneğin:
+`Microsoft.AspNetCore.*` `Microsoft.Extensions.*` Ad alanı adında bir kesimi olan ve ad alanındaki tüm API 'ler `Internal` . Örnek:
 
 - `Microsoft.AspNetCore.Authentication.Internal`
 - `Microsoft.AspNetCore.Builder.Internal`

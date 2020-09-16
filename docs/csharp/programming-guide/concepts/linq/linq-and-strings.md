@@ -3,18 +3,18 @@ title: LINQ ve dizeler (C#)
 description: LINQ, dizeleri ve dize koleksiyonlarını sorgulayabilir ve dönüştürebilir. LINQ sorgularını C# dize işlevleri ve normal ifadeler ile birleştirebilirsiniz.
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c515a0c56ad6473f93c6339540e4ed0245bb5bd2
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 0500d821335659fa29dd4809513f38dac0a8b193
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87165611"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556726"
 ---
 # <a name="linq-and-strings-c"></a>LINQ ve dizeler (C#)
 
 LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için kullanılabilir. Bu, özellikle metin dosyalarındaki yarı yapılandırılmış verilerle yararlı olabilir. LINQ sorguları, geleneksel dize işlevleri ve normal ifadelerle birleştirilebilir. Örneğin, <xref:System.String.Split%2A?displayProperty=nameWithType> <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> daha sonra LINQ kullanarak sorgulayabilmeniz veya değiştiremeyeceğiniz bir dize dizisi oluşturmak için veya yöntemini kullanabilirsiniz. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> `where` Bir LINQ sorgusunun yan tümcesindeki yöntemini kullanabilirsiniz. Aynı şekilde, <xref:System.Text.RegularExpressions.MatchCollection> bir normal ifade tarafından döndürülen sonuçları sorgulamak veya değiştirmek IÇIN LINQ kullanabilirsiniz.
 
-Yarı yapılandırılmış metin verilerini XML 'e dönüştürmek için bu bölümde açıklanan teknikleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [CSV DOSYALARıNDAN XML oluşturma](how-to-generate-xml-from-csv-files.md).
+Yarı yapılandırılmış metin verilerini XML 'e dönüştürmek için bu bölümde açıklanan teknikleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [CSV DOSYALARıNDAN XML oluşturma](../../../../standard/linq/generate-xml-csv-files.md).
 
 Bu bölümdeki örnekler iki kategoriye ayrılır:
 
@@ -76,4 +76,4 @@ Birçok farklı metin dosyası türü, genellikle sekme veya virgülle ayrılmı
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Dil ile tümleşik sorgu (LINQ) (C#)](index.md)
-- [CSV dosyalarından XML oluşturma](how-to-generate-xml-from-csv-files.md)
+- [CSV dosyalarından XML oluşturma](../../../../standard/linq/generate-xml-csv-files.md)

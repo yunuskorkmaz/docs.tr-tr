@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 6b0b23c21762009341fd62c029431824dd26d6c3
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 860806fb6406b8ada075b449616f84a360e9ef3a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85247266"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555828"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows İşlem Etkinleştirme Hizmetinde Barındırma
 Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (WCF) hizmetlerini barındıran uygulamalar içeren çalışan işlemlerinin etkinleştirilmesini ve ömrünü yönetir. WAS işlem modeli http sunucusu için IIS 6,0 işlem modelini genelleştirir ve HTTP 'nin bağımlılığını ortadan kaldırır. Bu, WCF hizmetlerinin, ileti tabanlı etkinleştirmeyi destekleyen bir barındırma ortamında ve belirli bir makinede çok sayıda uygulamayı barındırma olanağı sunan, hem HTTP hem de HTTP olmayan protokolleri (net. TCP gibi) kullanmasına izin verir.  
@@ -26,7 +26,7 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (W
 - Merkezi uygulama yapılandırması ve yönetimi.  
   
 - Uygulamaların, tam bir IIS yüklemesinin dağıtım ayak izine gerek kalmadan IIS işlem modelinden yararlanmasını sağlar.  
-[Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) ve [AppFabric barındırma kavramları](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).  
+[Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10)) ve [AppFabric barındırma kavramları](/previous-versions/appfabric/ee677371(v=azure.10)).  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS adresleme modelinin öğeleri  
  Uygulamalar, yaşam süresi ve yürütme ortamı sunucu tarafından yönetilen kod birimleri olan Tekdüzen Kaynak tanımlayıcısı (URI) adresleridir. Tek bir WAS sunucu örneği, birçok farklı uygulamaya giriş yapabilir. Sunucular uygulamaları *siteler*adlı gruplar halinde düzenler. Bir site içinde uygulamalar, dış adresleri olarak görev yapan URI 'lerin yapısını yansıtan hiyerarşik bir şekilde düzenlenir.  
@@ -54,5 +54,5 @@ Windows Işlem etkinleştirme hizmeti (WAS), Windows Communication Foundation (W
 - [WAS Etkinleştirme Mimarisi](was-activation-architecture.md)
 - [WAS'ı WCF ile Kullanmak için Yapılandırma](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma](how-to-install-and-configure-wcf-activation-components.md)
-- [Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma](how-to-host-a-wcf-service-in-was.md)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Nasıl yapılır: WAS'de WCF Hizmeti Barındırma](how-to-host-a-wcf-service-in-was.md)
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

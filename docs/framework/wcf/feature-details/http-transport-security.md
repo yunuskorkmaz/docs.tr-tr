@@ -2,12 +2,12 @@
 title: HTTP Taşıma Güvenliği
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 046b57787357623a19ff6d012eb71c179fcffe51
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84592729"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556303"
 ---
 # <a name="http-transport-security"></a>HTTP Taşıma Güvenliği
 Aktarım olarak HTTP kullanırken güvenlik, bir Güvenli Yuva Katmanı (SSL) uygulamasıyla sağlanır. SSL, bir istemcide bir hizmetin kimliğini doğrulamak ve ardından kanala Gizlilik (şifreleme) sağlamak için Internet 'te yaygın olarak kullanılır. Bu konuda, SSL 'nin nasıl çalıştığı ve Windows Communication Foundation (WCF) ' de nasıl uygulandığı açıklanmaktadır.  
@@ -33,27 +33,27 @@ Aktarım olarak HTTP kullanırken güvenlik, bir Güvenli Yuva Katmanı (SSL) uy
   
 - WCF ana bilgisayarınız olarak Internet Information Services (IIS) kullanıyorsanız, bir SSL hizmeti ayarlamak için IIS altyapısını kullanın.  
   
-- Şirket içinde barındırılan bir WCF uygulaması oluşturuyorsanız, HttpCfg. exe aracını kullanarak adrese bir SSL sertifikası bağlayabilirsiniz.  
+- Şirket içinde barındırılan bir WCF uygulaması oluşturuyorsanız, HttpCfg.exe aracını kullanarak adrese bir SSL sertifikası bağlayabilirsiniz.  
   
 ### <a name="using-iis-for-transport-security"></a>Taşıma güvenliği için IIS kullanma  
   
 #### <a name="iis-70"></a>IIS 7.0  
- IIS 7,0 ' ü güvenli bir ana bilgisayar (SSL kullanarak) olarak ayarlamak için bkz. [ııs 7,0 ' de güvenli yuva katmanı yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
+ IIS 7,0 ' ü güvenli bir ana bilgisayar (SSL kullanarak) olarak ayarlamak için bkz. [ııs 7,0 ' de güvenli yuva katmanı yapılandırma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
-Sertifikaları IIS 7,0 ile kullanmak üzere yapılandırmak için bkz. [ııs 7,0 ' de sunucu sertifikalarını yapılandırma](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
+Sertifikaları IIS 7,0 ile kullanmak üzere yapılandırmak için bkz. [ııs 7,0 ' de sunucu sertifikalarını yapılandırma](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6.0  
- IIS 6,0 ' ü güvenli bir ana bilgisayar (SSL kullanarak) olarak ayarlamak için bkz. [yapılandırma güvenli yuva katmanı](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736992(v=ws.10)).  
+ IIS 6,0 ' ü güvenli bir ana bilgisayar (SSL kullanarak) olarak ayarlamak için bkz. [yapılandırma güvenli yuva katmanı](/previous-versions/windows/it-pro/windows-server-2003/cc736992(v=ws.10)).  
   
- Sertifikaları IIS 6,0 ile kullanmak üzere yapılandırmak için, bkz. [Certificates_IIS_SP1_Ops](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757474(v=ws.10)).  
+ Sertifikaları IIS 6,0 ile kullanmak üzere yapılandırmak için, bkz. [Certificates_IIS_SP1_Ops](/previous-versions/windows/it-pro/windows-server-2003/cc757474(v=ws.10)).  
   
 ### <a name="using-httpcfg-for-ssl"></a>SSL için HttpCfg kullanma  
 
- Kendi kendine barındırılan bir WCF uygulaması oluşturuyorsanız, [Httpcfg. exe](/windows/win32/http/httpcfg-exe) aracını kullanın.
+ Şirket içinde barındırılan bir WCF uygulaması oluşturuyorsanız [HttpCfg.exe](/windows/win32/http/httpcfg-exe) aracını kullanın.
   
- X. 509.952 sertifikasıyla bir bağlantı noktası ayarlamak için HttpCfg. exe aracını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).  
+ X. 509.952 sertifikasıyla bir bağlantı noktası ayarlamak için HttpCfg.exe aracını kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: SSL sertifikası Ile bağlantı noktası yapılandırma](how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Aktarım Güvenliği](transport-security.md)
+- [Taşıma Güvenliği](transport-security.md)
 - [İleti Güvenliği](message-security-in-wcf.md)

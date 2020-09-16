@@ -11,12 +11,12 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-ms.openlocfilehash: 88868ab29fc37854959a044b9c0fed5bd8c82d77
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: f9b9bc00058aefc8f58facff43509e717967c2a7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855770"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555724"
 ---
 # <a name="securing-method-access"></a>Yöntem Erişiminin Güvenliğini Sağlama
 
@@ -30,7 +30,7 @@ ms.locfileid: "87855770"
   
 - Güveniliyorsa, erişilebilirlik kapsamını sınıf, derleme veya türetilmiş sınıflarla sınırlayın. Bu yöntem erişimini sınırlamanın en kolay yoludur. Genel olarak, türetilmiş sınıflar, türedikleri sınıftan daha az güvenilir olabilir, ancak bazı durumlarda üst sınıfın kimliğini paylaşırlar. Özellikle, `protected` güvenlik bağlamında kullanılması gerekmeyen anahtar sözcükten güven çıkarmayın.  
   
-- Belirli bir kimliğin çağıranlarını [(aslýnda](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) , The The Strong Name, Publisher, Zone vb.) ve seçtiğiniz bir kimliğe ait çağıranlara erişimi sınırlayın.  
+- Belirli bir kimliğin çağıranlarını [(aslýnda](/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)) , The The Strong Name, Publisher, Zone vb.) ve seçtiğiniz bir kimliğe ait çağıranlara erişimi sınırlayın.  
   
 - Seçtiğiniz izinlere sahip çağıranlara erişim yöntemini sınırlayın.  
   

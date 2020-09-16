@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 7dd50fcc07c6c090042cf87acb4aa5d2b5321a68
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 1ebc4e145528c3025b0299ea7e421c248c28cdc0
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84579585"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556375"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Nasıl yapılır: WCF İstemcisini WSE3.0 Hizmetleriyle Çalışacak Şekilde Yapılandırma
 Windows Communication Foundation (WCF) istemcileri, WCF istemcileri WS-Addressing belirtiminin 2004 Ağustos sürümünü kullanacak şekilde yapılandırıldığında, Microsoft .NET (WVACE) Hizmetleri için Web Hizmetleri geliştirmeleri 3,0 ile kablo düzeyinde uyumludur.  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>Bir WCF istemcisini bir WVA3,0 Web hizmeti ile birlikte çalışmak üzere yapılandırmak için  
   
-1. WVA3,0 Web hizmeti için bir WCF istemcisi oluşturmak üzere [ServiceModel meta veri yardımcı programı aracını (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
+1. WVA3,0 Web hizmeti için bir WCF istemcisi oluşturmak üzere [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) çalıştırın.  
   
      Bir Wo Web hizmeti için bir WCF istemci sınıfı oluşturulur.  
   
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) istemcileri, WCF istemcileri WS-Addressin
   
 2. WVA3,0 Web hizmetleriyle iletişim kurabilen bir bağlamayı temsil eden bir sınıf oluşturun.  
   
-     Aşağıdaki sınıf, [Wo örneği ile birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) 'nin bir parçasıdır.  
+     Aşağıdaki sınıf, [Wo örneği ile birlikte çalışma](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90)) 'nin bir parçasıdır.  
   
     1. Sınıfından türeten bir sınıf oluşturun <xref:System.ServiceModel.Channels.Binding> .  
   
@@ -64,4 +64,4 @@ Windows Communication Foundation (WCF) istemcileri, WCF istemcileri WS-Addressin
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:System.ServiceModel.Channels.Binding>
-- [Wo ile birlikte çalışma](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
+- [Wo ile birlikte çalışma](/previous-versions/dotnet/netframework-3.5/ms752257(v=vs.90))

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-ms.openlocfilehash: 68f4197a2710b6825c83bbc51daaf8f6b5a2c81f
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 8bbf9c72143033cec22b38cc26cbe8ceb44f790b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85621541"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556277"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler
 Çoğu veri türü hem yönetilen hem de yönetilmeyen bellekte ortak bir gösterimine sahiptir ve birlikte çalışma sıralayıcısı tarafından özel işleme gerektirmez. Bu türler, yönetilen ve yönetilmeyen kod arasında geçirildiklerinde dönüştürme gerektirmediğinden *blittable türler* olarak adlandırılır.  
@@ -58,16 +58,16 @@ ms.locfileid: "85621541"
   
  Aşağıdaki tabloda, ad alanından blittable olmayan türler listelenmektedir <xref:System> . Statik bir yönteme veya bir sınıf örneğine başvuran veri yapıları olan [Temsilciler](default-marshaling-behavior.md#default-marshaling-for-delegates)de blittable değildir.  
   
-|Blittable olmayan tür|Açıklama|  
+|Blittable olmayan tür|Description|  
 |-------------------------|-----------------|  
 |[System. Array](default-marshaling-for-arrays.md)|C stili bir diziye veya öğesine dönüştürür `SAFEARRAY` .|  
-|[System. Boolean](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1, 2 veya 4 baytlık bir değere `true` 1 veya-1 ile dönüştürür.|  
-|[System. Char](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Unicode veya ANSI karaktere dönüştürür.|  
-|[System. Class](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Sınıf arabirimine dönüştürür.|  
+|[System. Boolean](/previous-versions/dotnet/netframework-4.0/t2t3725f(v=vs.100))|1, 2 veya 4 baytlık bir değere `true` 1 veya-1 ile dönüştürür.|  
+|[System. Char](/previous-versions/dotnet/netframework-4.0/6tyybbf2(v=vs.100))|Unicode veya ANSI karaktere dönüştürür.|  
+|[System. Class](/previous-versions/dotnet/netframework-4.0/s0968xy8(v=vs.100))|Sınıf arabirimine dönüştürür.|  
 |[System.Object](default-marshaling-for-objects.md)|Bir varyanta veya arabirime dönüştürür.|  
 |[System. Mdarray](default-marshaling-for-arrays.md)|C stili bir diziye veya öğesine dönüştürür `SAFEARRAY` .|  
 |[System. String](default-marshaling-for-strings.md)|Null bir başvuruya veya BSTR 'ye bir dizeye dönüştürür.|  
-|[System. ValueType](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Sabit bellek düzenine sahip bir yapıya dönüştürür.|  
+|[System. ValueType](/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Sabit bellek düzenine sahip bir yapıya dönüştürür.|  
 |[System. Szarray](default-marshaling-for-arrays.md)|C stili bir diziye veya öğesine dönüştürür `SAFEARRAY` .|  
   
  Sınıf ve nesne türleri yalnızca COM birlikte çalışma tarafından desteklenir. Visual Basic, C# ve C++ ' daki ilgili türler için bkz. [sınıf kitaplığına genel bakış](../../standard/class-library-overview.md).  

@@ -2,12 +2,12 @@
 title: Teknoloji seçenekleri ve yönergeleri
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: e4016511920904ea14eac844a2564d6a77d9a817
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 24417907ab4d1d8eaa8d943f2d409a977563b89c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202284"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556570"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET Teknoloji Seçenekleri ve Yönergeleri
 
@@ -20,7 +20,7 @@ ADO.NET veri platformu, geliştiriciler için gereken kodlama ve bakım miktarı
  Varlık Veri Modeli (EDM), uygulama verilerini varlık ve ilişki kümeleri olarak tanımlayan bir tasarım belirtimidir. Bu modeldeki veriler, nesne ilişkisel eşlemeyi ve uygulama sınırları genelinde veri programlamasına olanak destekler.  
   
 ### <a name="object-services"></a>Nesne Hizmetleri  
- Nesne Hizmetleri, programcıların ortak dil çalışma zamanı (CLR) sınıfları kümesi aracılığıyla kavramsal modelle etkileşime geçmesini sağlar. Bu sınıflar kavramsal modelden otomatik olarak oluşturulabilir veya kavramsal modelin yapısını yansıtmak için bağımsız olarak geliştirilebilir. Ayrıca, nesne Hizmetleri, durum yönetimi, değişiklik izleme, kimlik çözümlemesi, ilişkileri yükleme ve gezinme, nesne değişikliklerini veritabanı değişikliklerine yayma ve Entity SQL için sorgu oluşturma desteği gibi hizmetler de dahil olmak üzere Entity Framework için altyapı desteği sağlar. Daha fazla bilgi için bkz. [nesne hizmetlerine genel bakış (Entity Framework)](https://docs.microsoft.com/previous-versions/bb386871(v=vs.100)).  
+ Nesne Hizmetleri, programcıların ortak dil çalışma zamanı (CLR) sınıfları kümesi aracılığıyla kavramsal modelle etkileşime geçmesini sağlar. Bu sınıflar kavramsal modelden otomatik olarak oluşturulabilir veya kavramsal modelin yapısını yansıtmak için bağımsız olarak geliştirilebilir. Ayrıca, nesne Hizmetleri, durum yönetimi, değişiklik izleme, kimlik çözümlemesi, ilişkileri yükleme ve gezinme, nesne değişikliklerini veritabanı değişikliklerine yayma ve Entity SQL için sorgu oluşturma desteği gibi hizmetler de dahil olmak üzere Entity Framework için altyapı desteği sağlar. Daha fazla bilgi için bkz. [nesne hizmetlerine genel bakış (Entity Framework)](/previous-versions/bb386871(v=vs.100)).  
   
 ### <a name="linq-to-entities"></a>LINQ - Varlıklar  
  LINQ to Entities, geliştiricilerin LINQ ifadelerini ve LINQ standart sorgu işleçlerini kullanarak Entity Framework nesne bağlamına karşı kesin olarak belirlenmiş sorgular oluşturmalarına olanak tanıyan, dil ile tümleşik bir sorgu (LINQ) uygulamasıdır. LINQ to Entities, geliştiricilerin Microsoft SQL Server ve üçüncü taraf veritabanları arasında esnek bir nesne ilişkisel eşleme ile kavramsal bir modele karşı çalışmasını sağlar. Daha fazla bilgi için bkz. [LINQ to Entities](./ef/language-reference/linq-to-entities.md).  
@@ -32,7 +32,7 @@ ADO.NET veri platformu, geliştiriciler için gereken kodlama ve bakım miktarı
  EntityClient, bir Varlık Veri Modeli etkileşim kurmak için kullanılan yeni bir .NET Framework veri sağlayıcısıdır. EntityClient, ortaya çıkaran .NET Framework veri sağlayıcısı modelini <xref:System.Data.EntityClient.EntityConnection> ve <xref:System.Data.EntityClient.EntityCommand> döndüren nesneleri izler <xref:System.Data.EntityClient.EntityDataReader> . EntityClient, Entity SQL diliyle çalışarak, depolamaya özgü veri sağlayıcılarına esnek eşleme sağlar. Daha fazla bilgi için bkz. [Entity Framework Için EntityClient sağlayıcısı](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ### <a name="entity-data-model-tools"></a>Varlık Veri Modeli araçları  
- Entity Framework, EDM uygulamaları oluşturmayı kolaylaştırmak için komut satırı araçları, sihirbazlar ve tasarımcılar sağlar. EntityDataSource denetimi, EDM tabanlı veri bağlama senaryolarını destekler. EntityDataSource denetiminin programlama yüzeyi, Visual Studio 'daki diğer veri kaynağı denetimlerine benzer. Daha fazla bilgi için bkz. [ADO.NET varlık veri modeli araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
+ Entity Framework, EDM uygulamaları oluşturmayı kolaylaştırmak için komut satırı araçları, sihirbazlar ve tasarımcılar sağlar. EntityDataSource denetimi, EDM tabanlı veri bağlama senaryolarını destekler. EntityDataSource denetiminin programlama yüzeyi, Visual Studio 'daki diğer veri kaynağı denetimlerine benzer. Daha fazla bilgi için bkz. [ADO.NET varlık veri modeli araçları](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  LINQ to SQL, .NET Framework sınıfları kullanarak SQL Server veritabanını modelleyerek bir nesne ilişkisel eşleme (veya/e) uygulamasıdır. LINQ to SQL, LINQ kullanarak veritabanınızı sorgulamanızı ve verileri güncelleştirme, ekleme ve silme işleminden de olanak tanır. LINQ to SQL, veri doğrulama ve iş mantığı kurallarını veri modelinize tümleştirmenin kolay bir yolunu sağlayan işlemler, görünümler ve saklı yordamları destekler. Bir veritabanındaki nesneleri temel alan varlık sınıflarını ve ilişkilendirmelerini modellemek için Nesne İlişkisel Tasarımcısı (O/R Designer) kullanabilirsiniz. Daha fazla bilgi için bkz. [Visual Studio 'da LINQ to SQL araçları](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  

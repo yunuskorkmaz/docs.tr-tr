@@ -2,23 +2,23 @@
 title: SıNıR (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
-ms.openlocfilehash: 275b22686c6c932b2a9e4b20973ac07e99d47e14
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 98e44110e604c6d893734869871d72f1d021775d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319624"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556290"
 ---
 # <a name="limit-entity-sql"></a>SıNıR (Entity SQL)
 Fiziksel sayfalama, ORDER BY yan tümcesinde LIMIT alt yan tümcesi kullanılarak gerçekleştirilebilir. SıNıR, ORDER BY yan tümcesinde ayrı olarak kullanılamaz.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```sql  
 [ LIMIT n ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Bağımsız değişkenler  
  `n`  
  Seçilecek öğe sayısı.  
   
@@ -32,13 +32,13 @@ Fiziksel sayfalama, ORDER BY yan tümcesinde LIMIT alt yan tümcesi kullanılara
   
 1. [Nasıl yapılır: StructuralType sonuçları döndüren bir sorgu yürütme](../how-to-execute-a-query-that-returns-structuraltype-results.md)bölümündeki yordamı izleyin.  
   
-2. Aşağıdaki sorguyu `ExecuteStructuralTypeQuery` yöntemine bir bağımsız değişken olarak geçirin:  
+2. Aşağıdaki sorguyu yöntemine bir bağımsız değişken olarak geçirin `ExecuteStructuralTypeQuery` :  
   
  [!code-sql[DP EntityServices Concepts#LIMIT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#limit)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [ORDER BY](order-by-entity-sql.md)
-- [Nasıl yapılır: sorgu sonuçları aracılığıyla sayfa oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
-- [Disk Belleği](paging-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [SİPARİŞ VEREN](order-by-entity-sql.md)
+- [Nasıl yapılır: sorgu sonuçları aracılığıyla sayfa oluşturma](/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
+- [Sayfalama](paging-entity-sql.md)
+- [Sayfanın Üstü](top-entity-sql.md)

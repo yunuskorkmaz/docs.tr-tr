@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 32fac1b5ab339dd4c71d761cf07fcde99ce1f2fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282395"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550169"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform Sınıfından Geçirme
 
@@ -26,7 +26,7 @@ Aşağıdaki bölümlerde, ve sınıfları arasındaki bazı önemli farklılık
 <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfı, sınıfından çok daha hızlı hale gelen diğer iyileştirmeler da içerir <xref:System.Xml.Xsl.XslTransform> .
 
 > [!NOTE]
-> Sınıfının genel performansı <xref:System.Xml.Xsl.XslCompiledTransform> sınıfından daha iyidir <xref:System.Xml.Xsl.XslTransform> , ancak <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> sınıfın yöntemi, <xref:System.Xml.Xsl.XslCompiledTransform> <xref:System.Xml.Xsl.XslTransform.Load%2A> <xref:System.Xml.Xsl.XslTransform> bir dönüşümde ilk kez çağrıldığında sınıfının yönteminden daha yavaş çalışabilir. Bunun nedeni XSLT dosyasının yüklenmeden önce derlenmesi gerekir. Daha fazla bilgi için şu blog gönderisine bakın: [XslCompiledTransform, XslTransform 'Dan daha yavaş?](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
+> Sınıfının genel performansı <xref:System.Xml.Xsl.XslCompiledTransform> sınıfından daha iyidir <xref:System.Xml.Xsl.XslTransform> , ancak <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> sınıfın yöntemi, <xref:System.Xml.Xsl.XslCompiledTransform> <xref:System.Xml.Xsl.XslTransform.Load%2A> <xref:System.Xml.Xsl.XslTransform> bir dönüşümde ilk kez çağrıldığında sınıfının yönteminden daha yavaş çalışabilir. Bunun nedeni XSLT dosyasının yüklenmeden önce derlenmesi gerekir. Daha fazla bilgi için şu blog gönderisine bakın: [XslCompiledTransform, XslTransform 'Dan daha yavaş?](/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform)
 
 ## <a name="security"></a>Güvenlik
 
@@ -101,7 +101,7 @@ W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi, uygulama sağlayıcısı
 
 ### <a name="extension-objects-and-script-functions"></a>Uzantı nesneleri ve betik Işlevleri
 
-<xref:System.Xml.Xsl.XslCompiledTransform>betik işlevlerinin kullanımıyla ilgili iki yeni kısıtlama sunar:
+<xref:System.Xml.Xsl.XslCompiledTransform> betik işlevlerinin kullanımıyla ilgili iki yeni kısıtlama sunar:
 
 - XPath ifadelerinden yalnızca ortak Yöntemler çağrılabilir.
 
@@ -111,17 +111,17 @@ W3C XSL dönüştürmeleri (XSLT) sürüm 1,0 önerisi, uygulama sağlayıcısı
 
 <xref:System.Xml.Xsl.XslCompiledTransform>`msxsl:using` `msxsl:assembly` öğesi içinde ve alt öğelerini destekler `msxsl:script` . `msxsl:using`Ve `msxsl:assembly` öğeleri, komut dosyası bloğunda kullanılmak üzere ek ad alanları ve derlemeler bildirmek için kullanılır. Daha fazla bilgi için bkz. [msxsl: script kullanarak betik blokları](script-blocks-using-msxsl-script.md) .
 
-<xref:System.Xml.Xsl.XslCompiledTransform>aynı sayıda bağımsız değişkene sahip birden fazla aşırı yüklemesi olan uzantı nesnelerini yasaklar.
+<xref:System.Xml.Xsl.XslCompiledTransform> aynı sayıda bağımsız değişkene sahip birden fazla aşırı yüklemesi olan uzantı nesnelerini yasaklar.
 
 ### <a name="msxml-functions"></a>MSXML Işlevleri
 
 Sınıfa ek MSXML işlevleri desteği eklenmiştir <xref:System.Xml.Xsl.XslCompiledTransform> . Aşağıdaki listede yeni veya geliştirilmiş işlevler açıklanmaktadır:
 
-- msxsl: node-set: <xref:System.Xml.Xsl.XslTransform> [düğüm kümesi işlev](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) işlevinin bağımsız değişkeni bir sonuç ağacı parçası olacak şekilde gereklidir. <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfta bu gereksinim yoktur.
+- msxsl: node-set: <xref:System.Xml.Xsl.XslTransform> [düğüm kümesi işlev](/previous-versions/dotnet/netframework-4.0/ms256197(v=vs.100)) işlevinin bağımsız değişkeni bir sonuç ağacı parçası olacak şekilde gereklidir. <xref:System.Xml.Xsl.XslCompiledTransform>Sınıfta bu gereksinim yoktur.
 
 - msxsl: Version: Bu işlev ' de desteklenir <xref:System.Xml.Xsl.XslCompiledTransform> .
 
-- XPath uzantı işlevleri: [MS: String-Compare işlevi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [MS: UTC işlevi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [MS: namespace-uri işlevi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [MS: yerel-adı işlevi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [MS: Number işlevi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), MS: [Format-Date](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100))işlevi ve [MS: biçim-zamanı işlev](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) işlevleri artık desteklenmektedir.
+- XPath uzantı işlevleri: [MS: String-Compare işlevi](/previous-versions/dotnet/netframework-4.0/ms256114(v=vs.100)), [MS: UTC işlevi](/previous-versions/dotnet/netframework-4.0/ms256474(v=vs.100)), [MS: namespace-uri işlevi](/previous-versions/dotnet/netframework-4.0/ms256231(v=vs.100)), [MS: yerel-adı işlevi](/previous-versions/dotnet/netframework-4.0/ms256055(v=vs.100)), [MS: Number işlevi](/previous-versions/dotnet/netframework-4.0/ms256155(v=vs.100)), MS: [Format-Date](/previous-versions/dotnet/netframework-4.0/ms256099(v=vs.100))işlevi ve [MS: biçim-zamanı işlev](/previous-versions/dotnet/netframework-4.0/ms256467(v=vs.100)) işlevleri artık desteklenmektedir.
 
 - Şemaya ilişkin XPath uzantı işlevleri: Bu işlevler tarafından yerel olarak desteklenmez <xref:System.Xml.Xsl.XslCompiledTransform> . Ancak, uzantı işlevleri olarak uygulanabilir.
 
