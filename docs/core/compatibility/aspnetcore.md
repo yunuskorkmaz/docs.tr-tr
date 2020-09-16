@@ -2,15 +2,15 @@
 title: ASP.NET Core son değişiklikler
 titleSuffix: ''
 description: ASP.NET Core 'deki son değişiklikleri listeler.
-ms.date: 09/09/2020
+ms.date: 09/11/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2af0cc6721b66b1d07b196e4ba330f8425c14752
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 4c3167e9cad193b6a5a11be399e8be529df3be55
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022993"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539610"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core son değişiklikler
 
@@ -25,6 +25,7 @@ Belirli bir sürümdeki son değişiklikler için aşağıdaki bağlantılardan 
 ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada belgelenmiştir:
 
 - [Kullanılmayan Antiforgery, CORS, tanılama, MVC ve yönlendirme API 'Leri kaldırıldı](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [Kimlik doğrulaması: AzureAD. UI ve AzureADB2C. UI API 'Leri ve kullanım dışı olarak işaretlenen paketler](#authentication-azureadui-and-azureadb2cui-apis-and-packages-marked-obsolete)
 - [Kimlik doğrulaması: Google + kullanımdan kaldırma](#authentication-google-deprecated-and-replaced)
 - [Kimlik doğrulaması: HttpContext. Authentication özelliği kaldırıldı](#authentication-httpcontextauthentication-property-removed)
 - [Kimlik doğrulaması: değiştirilmekte olan türler üzerinde Newtonsoft.Js](#authentication-newtonsoftjson-types-replaced)
@@ -36,6 +37,7 @@ ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada 
 - [Azure: Microsoft 'un ön eki olan Azure tümleştirme paketleri kaldırıldı](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [BinaryFormatter serileştirme yöntemleri artık kullanılmıyor ve ASP.NET uygulamalarında yasaklanmış](#binaryformatter-serialization-methods-are-obsolete-and-prohibited-in-aspnet-apps)
 - [Blazor: derleme zamanında bileşenlerden çok önemli olan boşluk](#blazor-insignificant-whitespace-trimmed-from-components-at-compile-time)
+- [Blazor: RenderTreeFrame ReadOnly ortak alanları özellikler haline geldi](#blazor-rendertreeframe-readonly-public-fields-have-become-properties)
 - [Blazor: NuGet paketlerinin hedef çerçevesi değiştirildi](#blazor-target-framework-of-nuget-packages-changed)
 - [Önbelleğe alma: CompactOnMemoryPressure özelliği kaldırıldı](#caching-compactonmemorypressure-property-removed)
 - [Önbelleğe alma: Microsoft. Extensions. Caching. SqlServer yeni SqlClient paketini kullanır](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
@@ -104,6 +106,10 @@ ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada 
 
 ## <a name="aspnet-core-50"></a>ASP.NET Core 5,0
 
+[!INCLUDE[Authentication: AzureAD.UI and AzureADB2C.UI APIs and packages marked obsolete](~/includes/core-changes/aspnetcore/5.0/authentication-aad-packages-obsolete.md)]
+
+***
+
 [!INCLUDE[Authorization: Resource in endpoint routing is HttpContext](~/includes/core-changes/aspnetcore/5.0/authorization-resource-in-endpoint-routing.md)]
 
 ***
@@ -117,6 +123,10 @@ ASP.NET Core 3,0, 3,1 ve 5,0 ' deki aşağıdaki son değişiklikler bu sayfada 
 ***
 
 [!INCLUDE[Blazor: Insignificant whitespace trimmed from components at compile time](~/includes/core-changes/aspnetcore/5.0/blazor-components-trim-insignificant-whitespace.md)]
+
+***
+
+[!INCLUDE[Blazor: RenderTreeFrame readonly public fields have become properties](~/includes/core-changes/aspnetcore/5.0/blazor-rendertreeframe-fields-become-properties.md)]
 
 ***
 

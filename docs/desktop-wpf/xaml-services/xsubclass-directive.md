@@ -10,16 +10,16 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: e85e0fb5a0e1a865ed84a93767f8152a115bbe5f
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: b888ef73d1678fd37c984e4bb223f24e5b65d2cc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071369"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540725"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass Yönergesi
 
-XAML biçimlendirmesi de sağlandığında davranışı `x:Class` derle'i değiştirir. Buna dayalı kısmi bir sınıf `x:Class`oluşturmak yerine, sağlanan `x:Class` bir ara sınıf olarak oluşturulur ve daha sonra `x:Class`sağlanan türemiş sınıfın temel alınması beklenir.
+Ayrıca sağlandığında XAML biçimlendirme derleme davranışını değiştirir `x:Class` . ' I temel alan kısmi bir sınıf oluşturmak yerine, `x:Class` belirtilen `x:Class` bir ara sınıf olarak oluşturulur ve ardından, sağlanmış türetilmiş sınıfınızın temel olması beklenir `x:Class` .
 
 ## <a name="xaml-attribute-usage"></a>XAML Öznitelik Kullanımı
 
@@ -33,34 +33,34 @@ XAML biçimlendirmesi de sağlandığında davranışı `x:Class` derle'i deği�
 
 |||
 |-|-|
-|`namespace`|İsteğe bağlı. Bir CLR ad alanı içerir. `classname` `namespace` Belirtilirse, nokta (.) ayrılır `namespace` `classname`ve .|
-|`classname`|Gereklidir. Yüklenen XAML'yi ve bu XAML için kod arkanızı bağlayan kısmi sınıfın CLR adını belirtir. Bkz. Açıklamalar.|
-|`subclassNamespace`|İsteğe bağlı. Her ad `namespace` alanı diğerini çözebilirse farklı olabilir. Bir CLR ad alanı içerir. `subclassName` `subclassName` Belirtilirse, nokta (.) ayrılır `subclassNamespace` `subclassName`ve .|
+|`namespace`|İsteğe bağlı. İçeren bir CLR ad alanı belirtir `classname` . `namespace`Belirtilmişse, nokta (.) `namespace` ve ayırır `classname` .|
+|`classname`|Gereklidir. Yüklenen XAML 'yi ve bu XAML için arka plan kodunuzu bağlayan kısmi sınıfın CLR adını belirtir. Bkz. açıklamalar.|
+|`subclassNamespace`|İsteğe bağlı. , `namespace` Her bir ad alanı diğerini çözümleyebiliyorsanız, öğesinden farklı olabilir. İçeren bir CLR ad alanı belirtir `subclassName` . `subclassName`Belirtilmişse, nokta (.) `subclassNamespace` ve ayırır `subclassName` .|
 |`subclassName`|Gereklidir. Alt sınıfın CLR adını belirtir.|
 
 ## <a name="dependencies"></a>Bağımlılıklar
 
-[x:Sınıf Yönergesi](xclass-directive.md) de aynı nesne üzerinde sağlanmalıdır ve bu nesne XAML üretiminin kök öğesi olmalıdır.
+[X:Class yönergesi](xclass-directive.md) aynı nesne üzerinde de sağlanmalıdır ve bu nesnenin xaml üretiminin kök öğesi olması gerekir.
 
 ## <a name="remarks"></a>Açıklamalar
 
-`x:Subclass`kullanımı öncelikle kısmi sınıf bildirimlerini desteklemeyen diller için tasarlanmıştır.
+`x:Subclass` Kullanım öncelikle kısmi sınıf bildirimlerini desteklemeyen diller için tasarlanmıştır.
 
-İç içe sınıf `x:Subclass` olarak kullanılan sınıf, `x:Subclass` "Bağımlılıklar" bölümünde açıklandığı gibi kök nesneye başvurmalıdır.
+Olarak kullanılan sınıfı, `x:Subclass` iç içe geçmiş bir sınıf olamaz ve `x:Subclass` "bağımlılıklar" bölümünde açıklandığı gibi kök nesnesine başvurmalıdır.
 
-Aksi takdirde, kavramsal `x:Subclass` anlamı .NET XAML Hizmetleri uygulaması ile tanımlanmaz. Bunun nedeni, .NET XAML Hizmetleri davranışının XAML biçimlendirme ve destek kodunun bağlı olduğu genel programlama modelini belirtmesidir. XAML `x:Class` biçimlendirmesi, derlenmiş biçimlendirme ve CLR tabanlı kod arkası bağlamayı tanımlamak için programlama modellerini veya uygulama modellerini kullanan belirli çerçevelerle ilgili ve `x:Subclass` diğer kavramların uygulamaları gerçekleştirilir. Her çerçevenin, bazı davranışları veya yapı ortamına dahil edilmesi gereken belirli bileşenleri etkinleştiren kendi yapı eylemleri olabilir. Bir çerçeve içinde, yapı eylemleri de kod arkası için kullanılan belirli CLR dile bağlı olarak değişebilir.
+Aksi takdirde, kavramsal anlamı `x:Subclass` .net xaml Hizmetleri uygulamasıyla tanımlanmamıştır. Bunun nedeni, .NET XAML Hizmetleri davranışının XAML biçimlendirme ve yedekleme kodunun bağlı olduğu genel programlama modelini belirtmemesi nedeniyle oluşur. Ve ile ilgili başka kavramların `x:Class` Uygulamaları `x:Subclass` , XAML biçimlendirme, derlenmiş BIÇIMLENDIRME ve clr tabanlı arka plan kod bağlamayı tanımlamak için programlama modellerini veya uygulama modellerini kullanan belirli çerçeveler tarafından gerçekleştirilir. Her çerçeve, bazı davranışlarının veya yapı ortamına dahil olması gereken belirli bileşenlerin bir kısmını etkinleştiren kendi derleme eylemlerine sahip olabilir. Bir çerçeve içinde, derleme eylemleri de arka plan kodu için kullanılan belirli CLR diline göre farklılık gösterebilir.
 
-## <a name="wpf-usage-notes"></a>WPF Kullanım Notları
+## <a name="wpf-usage-notes"></a>WPF kullanım notları
 
-`x:Subclass`bir sayfa kökünde veya <xref:System.Windows.Application> zaten var `x:Class`uygulama tanımında kök üzerinde olabilir. Bir `x:Subclass` sayfa veya uygulama kökü dışındaki herhangi bir öğeüzerinde `x:Class` bildirimde bulunmak veya varsa belirtme, derleme zamanı hatasına neden olur.
+`x:Subclass` , zaten sahip olan uygulama tanımındaki bir sayfa kökü veya kök üzerinde olabilir <xref:System.Windows.Application> `x:Class` . `x:Subclass`Bir sayfa veya uygulama kökü dışında herhangi bir öğe üzerinde bildirme ya da bunu yok olarak belirleme `x:Class` , derleme zamanı hatasına neden olur.
 
-`x:Subclass` Senaryo için doğru çalışan türemiş sınıflar oluşturmak oldukça karmaşıktır. Ara dosyaları (.xaml dosya adlarını içeren adlarla birlikte biçimlendirme derlemesi ile projenizin obj klasöründe üretilen .g dosyalarını) incelemeniz gerekebilir. Bu ara dosyalar, derlenen uygulamada birleştirilmiş kısmi sınıflardaki belirli programlama yapılarının kaynağını belirlemenize yardımcı olabilir.
+Senaryo için doğru şekilde çalışan türetilmiş sınıfların oluşturulması `x:Subclass` oldukça karmaşıktır. Ara dosyaları (. xaml dosya adlarını içeren adlarla biçimlendirme derlemesi tarafından, projenizin obj klasöründe oluşturulan. g dosyaları) incelemeniz gerekebilir. Bu ara dosyalar, derlenmiş uygulamadaki birleştirilmiş kısmi sınıflarda belirli programlama yapılarının kaynağını belirlemenize yardımcı olabilir.
 
-Türemiş sınıftaki olay işleyicileri, derleme sırasında ara sınıfta oluşturulan işleyicilerin saplamalarını geçersiz kılmak için (Microsoft `internal override` `Friend Overrides` Visual Basic'te) olmalıdır. Aksi takdirde, türemiş sınıf uygulamaları ara sınıf uygulamasını gizle (gölge) ve ara sınıf işleyicileri çağrılmaz.
+Türetilmiş sınıftaki olay işleyicileri `internal override` `Friend Overrides` , derleme sırasında ara sınıfta oluşturulan işleyicilerle ilgili saplamaları geçersiz kılmak Için (Microsoft Visual Basic) olmalıdır. Aksi halde, türetilmiş sınıf uygulamaları gizle (gölge) ara sınıf uygulaması ve ara sınıf işleyicileri çağrılmaz.
 
-Her ikisini `x:Class` ve `x:Subclass`, tarafından başvurulan sınıf için herhangi bir uygulama `x:Class`sağlamanız gerekmez. Derleyicinin ara dosyalarda oluşturduğu `x:Class` sınıf için bazı yönergelere sahip olması için öznitelik üzerinden bir ad vermeniz gerekir (derleyici bu durumda varsayılan bir ad seçmez). Sınıfa `x:Class` bir uygulama verebilirsiniz; ancak, bu hem `x:Class` ve `x:Subclass`kullanmak için tipik bir senaryo değildir.
+Hem hem de tanımladığınızda `x:Class` `x:Subclass` , tarafından başvurulan sınıf için herhangi bir uygulama sağlamanız gerekmez `x:Class` . `x:Class`Derleyicinin ara dosyalarda oluşturduğu sınıfa yönelik bir kılavuza sahip olması için yalnızca özniteliği aracılığıyla bir ad vermeniz gerekir (derleyici bu durumda varsayılan bir ad seçmez). `x:Class`Sınıfına bir uygulama verebilirsiniz; ancak, bu, hem hem de kullanımı için tipik bir senaryo değildir `x:Class` `x:Subclass` .
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [x:Class Yönergesi](xclass-directive.md)
-- [WPF için XAML ve Özel Sınıflar](../../framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [WPF için XAML ve Özel Sınıflar](/dotnet/desktop/wpf/advanced/xaml-and-custom-classes-for-wpf)

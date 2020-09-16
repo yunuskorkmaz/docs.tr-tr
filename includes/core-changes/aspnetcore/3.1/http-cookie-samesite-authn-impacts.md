@@ -1,84 +1,84 @@
 ---
-ms.openlocfilehash: 3cc07eef109b9096bc5a5fbcd1ea098a23b2155f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8b6d334677991382d235fd53cd3c98e3a77d650d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78968193"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539624"
 ---
-### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Tarayıcı SameSite değişiklikleri kimlik doğrulamayı etkiler
+### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: Browser SameSite değişikliklerinin etkisi kimlik doğrulaması
 
-Chrome ve Firefox gibi bazı tarayıcılar, çerezler `SameSite` için kendi uygulamalarında kırma değişiklikler yaptı. Değişiklikler, OpenID Connect ve WS-Federation gibi uzaktan kimlik doğrulama senaryolarını `SameSite=None`etkiler ve bu senaryoyu göndererek devre dışı bırakmaları gerekir. Ancak, `SameSite=None` iOS 12 ve diğer tarayıcıların bazı eski sürümlerinde molalar. Uygulama bu sürümleri koklamak ve `SameSite`atlamak gerekir.
+Chrome ve Firefox gibi bazı tarayıcılar, tanımlama bilgileri için uygulamalarında önemli değişiklikler yaptı `SameSite` . Değişiklikler OpenID Connect ve WS-Federation gibi uzak kimlik doğrulama senaryolarını etkiler ve bu, göndermesi tarafından kabul etmelidir `SameSite=None` . Ancak, `SameSite=None` iOS 12 ve diğer tarayıcıların bazı eski sürümlerinde kesilir. Uygulamanın bu sürümleri algılaması ve atlama yapması gerekir `SameSite` .
 
-Bu konuda tartışma için [dotnet/aspnetcore#14996'ya](https://github.com/dotnet/aspnetcore/issues/14996)bakın.
+Bu sorunla ilgili tartışmak için bkz. [DotNet/aspnetcore # 14996](https://github.com/dotnet/aspnetcore/issues/14996).
 
-#### <a name="version-introduced"></a>Sürüm tanıtıldı
+#### <a name="version-introduced"></a>Sunulan sürüm
 
-3.1 Önizleme 1
+3,1 Preview 1
 
 #### <a name="old-behavior"></a>Eski davranış
 
-`SameSite`HTTP çerezleri için 2016 taslak standart uzantısıdır. Bu Çapraz Site İstek Sahtesini (CSRF) azaltmak için tasarlanmıştır. Bu, başlangıçta sunucuların yeni parametreleri ekleyerek tercih edeceği bir özellik olarak tasarlanmıştır. ASP.NET Core 2.0 için `SameSite`ilk destek ekledi.
+`SameSite` , HTTP tanımlama bilgilerine yönelik 2016 taslak standart uzantısıdır. Siteler arası Istek sahteciliği 'nin (CSRF) azaltılmasına yöneliktir. Bu, başlangıçta yeni parametreler ekleyerek sunucuların kabul etmesinin tercih edildiği bir özellik olarak tasarlanmıştır. ASP.NET Core 2,0 için başlangıç desteği eklendi `SameSite` .
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Google, geriye dönük uyumlu olmayan yeni bir taslak standart önerdi. Standart varsayılan modu değiştirir `Lax` ve devre `None` dışı bırakmak için yeni bir giriş ekler. `Lax` çoğu uygulama çerezleri için yeterlidir; ancak, OpenID Connect ve WS-Federation girişi gibi siteleri arası senaryoları kırar. OAuth girişlerinin çoğu, isteğin akışındaki farklılıklar nedeniyle etkilenmez. Yeni `None` parametre, önceki taslak standardı (örneğin, iOS 12) uygulayan istemcilerle uyumluluk sorunlarına neden olur. Chrome 80 değişiklikleri içerecektir. Bkz. Chrome ürün lansman zaman çizelgesi için [Aynı Site Güncelleştirmeleri.](https://www.chromium.org/updates/same-site)
+Google, geriye doğru uyumlu olmayan yeni bir taslak standardı önerdi. Standart varsayılan modu olarak değiştirir ve geri `Lax` çevirmek için yeni bir giriş ekler `None` . `Lax` çoğu uygulama tanımlama bilgisi için yeterli olacaktır; ancak, OpenID Connect ve WS-Federation oturum açma gibi siteler arası senaryoları keser. İsteğin akışlarına yönelik farklılıklar nedeniyle çoğu OAuth oturum açma işlemleri etkilenmez. Yeni `None` parametre, önceki taslak standardını uygulayan istemcilerle uyumluluk sorunlarına neden olur (örneğin, iOS 12). Chrome 80, değişiklikleri içerir. Chrome ürün başlatma zaman çizelgesi için bkz. [SameSite Updates](https://www.chromium.org/updates/same-site) .
 
-ASP.NET Core 3.1 yeni `SameSite` davranışı uygulamak için güncelleştirildi. `SameSiteMode.None` Güncelleştirme, yarama `SameSite=None` davranışını yeniden tanımlar ve özniteliği `SameSiteMode.Unspecified` atlamak `SameSite` için yeni bir değer ekler. Tanımlama bilgileri kullanan bazı `Unspecified`bileşenler, OpenID Connect korelasyon ve nonce tanımlama bilgileri gibi senaryolarına daha spesifik değerler ayarlasa da, tüm çerez API'leri artık varsayılan olarak varsayılan olarak kullanılır.
+ASP.NET Core 3,1, yeni davranışı uygulamak için güncelleştirilmiştir `SameSite` . Güncelleştirme, öğesinin davranışını yeniden tanımlar `SameSiteMode.None` `SameSite=None` ve `SameSiteMode.Unspecified` özniteliği atlamak için yeni bir değer ekler `SameSite` . `Unspecified`Tanımlama bilgilerini kullanan bazı bileşenler, OpenID Connect bağıntı ve nonce tanımlama bilgileri gibi senaryolarına daha belirgin bir şekilde değer ayarlamış olsa da, tüm tanımlama bilgisi API 'leri için varsayılan olarak ' i
 
-Bu alandaki diğer son değişiklikler için [bkz: HTTP: Bazı çerez SameSite varsayılanları Hiçbiri olarak değiştirildi.](/dotnet/core/compatibility/2.2-3.0#http-some-cookie-samesite-defaults-changed-to-none) Core 3.0ASP.NET, çoğu varsayılan değer <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> (ancak yine de önceki standardı kullanarak) değiştirildi.
+Bu alandaki diğer son değişiklikler için bkz. [http: bazı tanımlama bilgisi SameSite Varsayılanları None olarak değiştirildi](../../../../docs/core/compatibility/2.2-3.0.md#http-some-cookie-samesite-defaults-changed-to-none). ASP.NET Core 3,0 ' de, çoğu varsayılan <xref:Microsoft.AspNetCore.Http.SameSiteMode.Lax?displayProperty=nameWithType> olarak olarak değiştirilmiştir <xref:Microsoft.AspNetCore.Http.SameSiteMode.None?displayProperty=nameWithType> (ancak yine de önceki standart kullanılarak).
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
-Tarayıcı ve belirtim, önceki metinde belirtildiği gibi değişir.
+Tarayıcı ve belirtim, önceki metinde özetlenen şekilde değişir.
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Üçüncü taraf oturum açma gibi uzak sitelerle etkileşimde bulunan uygulamaların şunları
+Üçüncü taraf oturum açma gibi uzak sitelerle etkileşim kuran uygulamalar şunlar gerekir:
 
 * Bu senaryoları birden çok tarayıcıda test edin.
-* [Destek eski tarayıcılarda](#support-older-browsers)tartışılan çerez ilkesi tarayıcısını sniffing azaltma uygulayın.
+* [Daha eski tarayıcıları desteklemek](#support-older-browsers)için açıklanan tanımlama bilgisi İlkesi tarayıcı algılaması risk azaltma ' yı uygulayın.
 
-Test ve tarayıcı koklama yönergeleri için aşağıdaki bölüme bakın.
+Test ve tarayıcı algılama yönergeleri için aşağıdaki bölüme bakın.
 
-##### <a name="determine-if-youre-affected"></a>Etkilenip etkilenmediğinizi belirleyin
+##### <a name="determine-if-youre-affected"></a>Etkilenip etkilenmediğini belirleme
 
-Web uygulamanızı yeni davranışı seçebilen bir istemci sürümünü kullanarak test edin. Chrome, Firefox ve Microsoft Edge Chromium'un tümü test etmek için kullanılabilecek yeni opt-in özellik bayraklarına sahiptir. Özellikle Safari'yi uyguladıktan sonra uygulamanızın eski istemci sürümleriyle uyumlu olduğunu doğrulayın. Daha fazla bilgi için [bkz.](#support-older-browsers)
+Yeni davranışı kabul eden bir istemci sürümünü kullanarak Web uygulamanızı test edin. Chrome, Firefox ve Microsoft Edge Bermium tümünde test için kullanılabilecek yeni bir katılım özelliği bayrakları vardır. Düzeltme eklerini uyguladıktan sonra uygulamanızın eski istemci sürümleriyle uyumlu olduğunu doğrulayın, özellikle Safari. Daha fazla bilgi için bkz. [eski tarayıcıları destekleme](#support-older-browsers).
 
 ##### <a name="chrome"></a>Chrome
 
-Chrome 78 ve daha sonra yanıltıcı test sonuçları verir. Bu sürümler geçici bir azaltma vardır ve çerezlerin iki dakikadan daha eski izin verir. Uygun test bayrakları etkinleştirildiğinde, Chrome 76 ve 77 daha doğru sonuçlar verir. Yeni davranışı sınamak için `chrome://flags/#same-site-by-default-cookies` etkine geçiş yapın. Chrome 75 ve daha önceki yeni `None` ayarı ile başarısız olduğu bildirilmiştir. Daha fazla bilgi için [bkz.](#support-older-browsers)
+Chrome 78 ve üzeri, yanıltıcı test sonuçları elde. Bu sürümlerin yerinde geçici bir risk azaltma ve iki dakikadan daha eski tanımlama bilgilerine izin verme. Uygun test bayrakları etkinken, Chrome 76 ve 77 daha doğru sonuçlar elde edin. Yeni davranışı test etmek için, etkin ' e geçiş yapın `chrome://flags/#same-site-by-default-cookies` . Chrome 75 ve öncesi, yeni ayar ile başarısız olarak bildirilir `None` . Daha fazla bilgi için bkz. [eski tarayıcıları destekleme](#support-older-browsers).
 
-Google, eski Chrome sürümlerini kullanıma sunmaz. Ancak, test etmek için yeterli olacak Krom, eski sürümlerini indirebilirsiniz. [İndirkrom'daki](https://www.chromium.org/getting-involved/download-chromium)talimatları izleyin.
+Google, eski Chrome sürümlerini kullanılabilir hale getirir. Ancak, test için yeterli olacak şekilde, Kmıum 'un eski sürümlerini indirebilirsiniz. [Kmıum indirme](https://www.chromium.org/getting-involved/download-chromium)bölümündeki yönergeleri izleyin.
 
-* [Krom 76 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/664998/)
-* [Krom 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
+* [Kmıum 76 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/664998/)
+* [Kmıum 74 Win64](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/638880/)
 
 ##### <a name="safari"></a>Safari
 
-Safari 12, önceki taslağı kesinlikle uyguladı ve `None` tanımlama bilgilerindeki yeni değeri görürse başarısız oldu. Bu destek [eski tarayıcılarda](#support-older-browsers)gösterilen tarayıcı koklama kodu üzerinden kaçınılmalıdır. Safari 12 ve 13'ün yanı sıra WebKit tabanlı, Işletim Sistemi tarzı girişleri Microsoft Kimlik Doğrulama Kitaplığı (MSAL), Active Directory Authentication Library (ADAL) veya hangi kitaplığı kullanıyorsanız kullanarak test ettiğinizden emin olun. Sorun, temel işletim sistemi sürümüne bağlıdır. OSX Mojave 10.14 ve iOS 12'nin yeni davranışla uyumluluk sorunları olduğu bilinmektedir. OSX Catalina 10.15 veya iOS 13'e yükseltme sorunu giderir. Safari'nin şu anda yeni belirtim davranışını sınaması için bir kabul bayrağı yok.
+Safari 12, önceki taslağı kesin olarak uyguladık ve tanımlama bilgilerinde yeni değeri görütüyse başarısız olur `None` . Bu, [eski tarayıcıları destekleme](#support-older-browsers)bölümünde gösterilen tarayıcı algılama kodu aracılığıyla kaçınılmalıdır. Safari 12 ve 13 ' ün yanı sıra, Microsoft kimlik doğrulama kitaplığı (MSAL), Active Directory Authentication Library (ADAL) veya kullandığınız kitaplığı kullanarak WebKit tabanlı, işletim sistemi stili oturum açma işlemlerini de test edin. Sorun, temel alınan işletim sistemi sürümüne bağımlıdır. OSX Mojave 10,14 ve iOS 12 ' nin yeni davranışla uyumluluk sorunlarına sahip olduğu bilinmektedir. OSX Catalina 10,15 veya iOS 13 ' e yükseltmek sorunu düzeltir. Safari 'nin şu anda yeni belirtim davranışını test etmek için bir katılım bayrağı yoktur.
 
 ##### <a name="firefox"></a>Firefox
 
-Yeni standart için Firefox desteği sürüm 68 üzerinde test edilebilir `about:config` ve daha sonra `network.cookie.sameSite.laxByDefault`özellik bayrağı ile sayfada seçerek . Firefox'un eski sürümlerinde uyumluluk sorunları bildirilmemiştir.
+Yeni standart için Firefox desteği, sürüm 68 ve üzeri sürümlerde, özellik bayrağıyla sayfada yeniden çalıştırılarak test edilebilir `about:config` `network.cookie.sameSite.laxByDefault` . Firefox 'un eski sürümlerinde uyumluluk sorunları bildirilmemiştir.
 
 ##### <a name="microsoft-edge"></a>Microsoft Edge
 
-Microsoft Edge eski `SameSite` standardı desteklerken, sürüm 44 itibariyle yeni standartla uyumluluk sorunları yoktu.
+Microsoft Edge, `SameSite` sürüm 44 itibariyle eski standardı desteklese de, yeni standart ile herhangi bir uyumluluk sorununa sahip değildir.
 
-##### <a name="microsoft-edge-chromium"></a>Microsoft Edge Krom
+##### <a name="microsoft-edge-chromium"></a>Microsoft Edge Kmuum
 
-Özellik bayrağı `edge://flags/#same-site-by-default-cookies`. Microsoft Edge Chromium 78 ile test edilerken uyumluluk sorunları gözlenmedi.
+Özellik bayrağı `edge://flags/#same-site-by-default-cookies` . Microsoft Edge Kmıum 78 ile test edilirken hiçbir uyumluluk sorunu gözlemlenmedi.
 
-##### <a name="electron"></a>Elektron
+##### <a name="electron"></a>Tron
 
-Electron sürümleri Krom eski sürümleri içerir. Örneğin, Microsoft Teams tarafından kullanılan Electron sürümü, eski davranışı sergileyen Krom 66'dır. Ürününüzün kullandığı Electron sürümüyle kendi uyumluluk testinizi gerçekleştirin. Daha fazla bilgi için [bkz.](#support-older-browsers)
+Elektron sürümleri, daha eski bir Kmıum sürümlerini içerir. Örneğin, Microsoft ekipleri tarafından kullanılan elektron sürümü, eski davranışı gösteren Kmıum 66 ' dir. Ürününüzün kullandığı elektron sürümüyle kendi uyumluluk testinizi gerçekleştirin. Daha fazla bilgi için bkz. [eski tarayıcıları destekleme](#support-older-browsers).
 
-##### <a name="support-older-browsers"></a>Eski tarayıcıları destekleyin
+##### <a name="support-older-browsers"></a>Eski tarayıcıları destekleme
 
-2016 `SameSite` standardı, bilinmeyen değerlerin değer `SameSite=Strict` olarak ele alınmasını zorunlu kılmalıdır. Sonuç olarak, orijinal standardı destekleyen eski tarayıcılar, değeri `SameSite` .'ye `None`sahip bir özellik gördüklerinde kırılabilir. Web uygulamaları, bu eski tarayıcıları desteklemek istiyorlarsa tarayıcı koklama uygulaması gerekir. ASP.NET Core, `User-Agent` istek üstbilgi değerleri son derece kararsız olduğundan ve haftalık olarak değiştiğinden tarayıcı koklama uygulamaz. Bunun yerine, çerez ilkesindeki bir uzantı noktası belirli bir mantık eklemenize `User-Agent`olanak tanır.
+2016 `SameSite` Standart uygulanan, bilinmeyen değerler değer olarak değerlendirilir `SameSite=Strict` . Sonuç olarak, özgün standardı destekleyen eski tarayıcılar, değeri olan bir özellik görtiklerinde kesintiye uğramayabilir `SameSite` `None` . Web uygulamaları, bu eski tarayıcıları desteklemeyi amaçlarsa tarayıcı algılaması gerçekleştirmelidir. ASP.NET Core, `User-Agent` istek üst bilgisi değerleri son derece kararsız olduğundan ve haftalık olarak değişeceğinden sizin için tarayıcı algılaması uygulamaz. Bunun yerine, tanımlama bilgisi ilkesindeki bir uzantı noktası, özel bir mantığı eklemenize olanak tanır `User-Agent` .
 
-*Startup.cs*olarak, aşağıdaki kodu ekleyin:
+*Startup.cs*içinde aşağıdaki kodu ekleyin:
 
 ```csharp
 private void CheckSameSite(HttpContext httpContext, CookieOptions options)
@@ -116,9 +116,9 @@ public void Configure(IApplicationBuilder app)
 }
 ```
 
-##### <a name="opt-out-switches"></a>Devre dışı bırakma anahtarları
+##### <a name="opt-out-switches"></a>Kabul etme anahtarları
 
-Uyumluluk `Microsoft.AspNetCore.SuppressSameSiteNone` anahtarı, yeni ASP.NET Core çerez davranışını geçici olarak devre dışı bırakmanızı sağlar. Projenizdeki *runtimeconfig.template.json* dosyasına aşağıdaki JSON'u ekleyin:
+`Microsoft.AspNetCore.SuppressSameSiteNone`Uyumluluk anahtarı, yeni ASP.NET Core tanımlama bilgisi davranışının geçici olarak devre dışı kalmanızı sağlar. Aşağıdaki JSON öğesini projenizdeki bir dosyaya *runtimeconfig.template.js* ekleyin:
 
 ```json
 {
@@ -128,13 +128,13 @@ Uyumluluk `Microsoft.AspNetCore.SuppressSameSiteNone` anahtarı, yeni ASP.NET Co
 }
 ```
 
-##### <a name="other-versions"></a>Diğer Sürümler
+##### <a name="other-versions"></a>Diğer sürümler
 
-İlgili `SameSite` düzeltme emaları için önümüzdeki düzeltme emareleri:
+İlgili `SameSite` düzeltme eklerine şu şekilde katılın:
 
-* ASP.NET Core 2.1, 2.2 ve 3.0
-* `Microsoft.Owin`4.1
-* `System.Web`(.NET Framework 4.7.2 ve sonrası için)
+* ASP.NET Core 2,1, 2,2 ve 3,0
+* `Microsoft.Owin` 4,1
+* `System.Web` (.NET Framework 4.7.2 ve üzeri)
 
 #### <a name="category"></a>Kategori
 

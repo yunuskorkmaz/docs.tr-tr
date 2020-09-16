@@ -2,12 +2,12 @@
 title: Docker uygulamaları için geliştirme iş akışı
 description: Docker tabanlı uygulamalar geliştirmeye yönelik iş akışının ayrıntılarını anlayın. Adım adım ilerleyin ve Dockerfiles 'ı iyileştirmek ve Visual Studio 'Yu kullanırken kullanılabilecek Basitleştirilmiş iş akışıyla sona erdirmek için bazı ayrıntılara ulaşın.
 ms.date: 01/30/2020
-ms.openlocfilehash: 98dc931e10d5e1a3265ebd6f4e1919a6416e9b27
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 489f44a2742900d6ce5f77e24dd3d719ec9cda2b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022941"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539733"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker uygulamaları için geliştirme iş akışı
 
@@ -103,7 +103,7 @@ Docker Hub 'dan sürüm numarası olan resmi bir .NET görüntü deposu kullanma
 
 Aşağıdaki örnekte, bir ASP.NET Core kapsayıcısı için örnek bir Dockerfile gösterilmektedir.
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 ARG source
 WORKDIR /app
@@ -173,7 +173,7 @@ Kısaca, çok aşamalı derlemeler, oluşturma işleminin farklı "aşamalarda" 
 
 İlk Dockerfile şuna benzer görünebilir:
 
-```Dockerfile
+```dockerfile
  1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
@@ -244,7 +244,7 @@ Oldukça basit olan Docker 'ın katman önbelleği özelliğinden faydalanabilir
 
 Bu nedenle, **oluşturma** aşamasına odaklanalım, satırlar 5-6, genellikle aynıdır, ancak her iki satır 7-17, eShopOnContainers 'dan her bir hizmet için farklıdır, ancak satırları 7-16, her zaman yürütülmesi gerekir, ancak satırları:
 
-```Dockerfile
+```dockerfile
 COPY . .
 ```
 
@@ -256,7 +256,7 @@ Böylece, her hizmet için yalnızca aynı olacak, tüm çözümü kopyalayacak 
 
 Sonraki önemli iyileştirme, `restore` her eShopOnContainers hizmeti için de farklı olan 17. satırda yürütülen komutu içerir. Bu satırı yalnızca öğesine değiştirirseniz:
 
-```Dockerfile
+```dockerfile
 RUN dotnet restore
 ```
 
@@ -276,7 +276,7 @@ Son iyileştirme için, satır 23 ' ün aynı zamanda uygulama oluşturup 20 ' d
 
 Elde edilen dosya bundan sonra:
 
-```Dockerfile
+```dockerfile
  1  FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
  2  WORKDIR /app
  3  EXPOSE 80
@@ -559,7 +559,7 @@ Ayrıca, adım 2 ' yi (projelerinize Docker desteği ekleme) yalnızca bir kez g
 
 [Windows kapsayıcıları](https://docs.microsoft.com/virtualization/windowscontainers/about/index) , mevcut Windows uygulamalarınızı Docker görüntülerine dönüştürmenize ve bunları Docker ekosisteminin geri kalanıyla aynı araçlarla dağıtmanıza imkan tanır. Windows kapsayıcılarını kullanmak için aşağıdaki örnekte gösterildiği gibi, Dockerfile içinde PowerShell komutlarını çalıştırın:
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/windows/servercore
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
 RUN powershell -Command Add-WindowsFeature Web-Server
@@ -568,7 +568,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 Bu durumda, bir Windows Server çekirdek temel görüntüsü (başlangıç ayarı) kullanıyorsunuz ve IIS 'yi bir PowerShell komutuyla (çalıştırma ayarı) kullanıyoruz. Benzer bir şekilde, ASP.NET 4. x, .NET 4,6 veya başka herhangi bir Windows yazılımı gibi ek bileşenler ayarlamak için de PowerShell komutlarını kullanabilirsiniz. Örneğin, bir Dockerfile dosyasında aşağıdaki komut ASP.NET 4,5 ' u ayarlar:
 
-```Dockerfile
+```dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 70b71fc55f76514dd17e5b9ba0e76151a966eebb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702264"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539484"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo ve TextElementEnumerator artık UAX29 uyumlu
 
@@ -16,8 +16,8 @@ Ayrıca, <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullN
 
 [Grafem](https://www.unicode.org/glossary/#grapheme) veya [genişletilmiş grafem kümesi](https://www.unicode.org/glossary/#extended_grapheme_cluster) , birden çok Unicode kod noktasından oluşan tek bir kullanıcı tarafından algılanan karakterdir. Örneğin, "kaI" () Tayland karakterini içeren dize :::no-loc text="กำ"::: aşağıdaki iki karakterden oluşur:
 
-- :::no-loc text="ก":::(= ' \u0e01 ') TAY DILI KO KAI KARAKTERI
-- :::no-loc text=" ำ":::(= ' \u0e33 ') TAY DILI SARA HAR KARAKTERI
+- :::no-loc text="ก"::: (= ' \u0e01 ') TAY DILI KO KAI KARAKTERI
+- :::no-loc text=" ำ"::: (= ' \u0e33 ') TAY DILI SARA HAR KARAKTERI
 
 Kullanıcıya görüntülendiğinde, işletim sistemi iki karakteri birleştirerek tek bir görüntüleme karakteri (veya grapheme) "kam" ya da oluşturur :::no-loc text="กำ"::: . Emoji Ayrıca, benzer bir şekilde görüntülenmek üzere birleştirilmiş birden fazla karakterden oluşabilir.
 
@@ -30,7 +30,7 @@ Kullanıcıya görüntülendiğinde, işletim sistemi iki karakteri birleştirer
 
 Aşağıdaki C# kodunu göz önünde bulundurun:
 
-```cs
+```csharp
 using System.Globalization;
 
 static void Main(string[] args)

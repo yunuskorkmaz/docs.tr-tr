@@ -1,24 +1,24 @@
 ---
 title: Azure İzleyici
 description: Sisteminizin üzerinde görünürlük elde etmek için Azure Izleyici 'yi kullanma.
-ms.date: 05/13/2020
-ms.openlocfilehash: e3ff673c63ecbc380cb8b74ae54065a091882d7b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 07/05/2020
+ms.openlocfilehash: 342d54292736622f6546768e039ca244a69b020e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614272"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540219"
 ---
 # <a name="azure-monitor"></a>Azure İzleyici
 
-Azure 'da bulunan bir bulut uygulaması izleme çözümünün dışında başka bir bulut sağlayıcısı yoktur. Azure Izleyici, sisteminizin durumunun görünürlüğünü, herhangi bir sorun hakkında öngörüleri ve uygulamanızın iyileştirmesini sağlamak için tasarlanan bir araç koleksiyonu için şemsiye bir addır.
+Başka bir bulut sağlayıcısı, Azure 'da bulunan bir bulut uygulaması izleme çözümünün bir üyesi değildir. Azure Izleyici, sisteminizin durumuna ilişkin görünürlük sağlamak için tasarlanan bir araç koleksiyonu için şemsiye bir addır. Bulut Yerel hizmetlerinizin nasıl çalıştığını anlamanıza yardımcı olur ve bunları etkileyen sorunları önceden belirler. Şekil 7-12, Azure Izleyici 'nin yüksek düzeyde bir görünümünü sunar.
 
-![Azure Izleyici, bulut Yerel uygulamasının nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon. ](./media/azure-monitor.png)
- **Şekil 7-12**. Azure Izleyici, bulut Yerel uygulamasının nasıl çalıştığını kavramak için araçlara yönelik bir koleksiyon.
+![Azure Izleyici 'nin üst düzey görünümü. ](./media/azure-monitor.png)
+ **Şekil 7-12**. Azure Izleyici 'nin üst düzey görünümü.
 
 ## <a name="gathering-logs-and-metrics"></a>Günlükleri ve ölçümleri toplama
 
-Herhangi bir izleme çözümünde ilk adım mümkün olduğunca çok veri toplamaktır. Daha fazla veri toplandıktan sonra, elde edilen öngörülere daha derin erişebilirsiniz. Aletsiz sistemler, geleneksel olarak güçleşir. Basit Ağ Yönetim Protokolü (SNMP), makine düzeyinde bilgi toplamak için kullanılan altın standart protokoldür, ancak çok fazla bilgi ve yapılandırma gerektirdi. Neyse ki, en yaygın ölçümler Azure Izleyici tarafından otomatik olarak toplandığından, bu sabit çalışmanın çoğu ortadan kaldırılmıştır.
+Herhangi bir izleme çözümünde ilk adım mümkün olduğunca çok veri toplamaktır. Daha fazla veri toplandıktan sonra Öngörüler daha derin. Aletsiz sistemler, geleneksel olarak güçleşir. Basit Ağ Yönetim Protokolü (SNMP), makine düzeyinde bilgi toplamak için kullanılan altın standart protokoldür, ancak bilgi ve yapılandırma için harika bir işlem gerektirdi. Neyse ki, en yaygın ölçümler Azure Izleyici tarafından otomatik olarak toplandığından, bu sabit çalışmanın çoğu ortadan kaldırılmıştır.
 
 Dağıtılan uygulamaya özgü olduklarından, uygulama düzeyi ölçümleri ve olayları otomatik olarak işaretleme yapılamaz. Bu ölçümleri toplamak için, bir müşterinin bir siparişi kaydolduğunda veya tamamladığı durumlarda olduğu gibi, bu bilgileri doğrudan raporlamak için [kullanılabilir SDK 'lar ve API 'ler](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) vardır. Ayrıca, özel durumlar Application Insights aracılığıyla Azure Izleyici 'ye geri yakalanıp rapor edilebilir. SDK 'lar, Go, Python, JavaScript ve .NET dillerini de içeren bulut Yerel uygulamalarında bulunan her dilin çoğunu destekler.
 
@@ -30,7 +30,7 @@ Veriler toplandıktan sonra, kullanıcıların sorun olduğunda anında görmesi
 
 Yapay zeka veya Machine Learning olmadan modern uygulama tamamlanmaz. Bu uçta, veriler başka bir şekilde gizlenebileceği eğilimleri ve bilgileri ayıklamanızı sağlamak için Azure 'daki çeşitli makine öğrenimi araçlarına veri [geçirilebilir](https://www.youtube.com/watch?v=Cuza-I1g9tw) .
 
-Application Insights, kayıtları bulmak, özetlemek ve hatta grafikleri çizmek için kullanılabilecek kusto adlı güçlü bir sorgu dili sağlar. Örneğin, bu sorgu, 2007 Kasım ayının tüm kayıtlarını bulur, bunları durumlarına göre gruplayın ve bir pasta grafiği olarak ilk 10 ' u çizmez.
+Application Insights, kayıtları sorgulayabilir, özetleyebilir ve hatta grafik *ÇizKusto* adlı güçlü (SQL benzeri) bir sorgu dili sağlar. Örneğin, aşağıdaki sorgu, 2007 Kasım ayının tüm kayıtlarını bulur, bunları durumlarına göre gruplayın ve bir pasta grafiği olarak ilk 10 ' u çizmez.
 
 ```kusto
 StormEvents
@@ -40,22 +40,25 @@ StormEvents
 | render piechart
 ```
 
-![](./media/azure-monitor.png)
-**Şekil 7-13**Application Insights sorgu sonucu. Application Insights sorgusunun sonucu.
+Şekil 7-13 bu Application Insights sorgusunun sonuçlarını gösterir.
 
-[Kusto sorguları denemek için bir oyun](https://dataexplorer.azure.com/clusters/help/databases/Samples) vardır. Bu, bir saat veya iki harcayabileceğiniz harika bir yerdir. [Örnek sorguları](https://docs.microsoft.com/azure/kusto/query/samples) okuma da çalıştırılabilir.
+![Sorgu sonuçları ](./media/application_insights_example.png)
+ **şekil 7-13**Application Insights. Sorgu sonuçlarını Application Insights.
+
+[Kusto sorgularını denemek için bir oyun](https://dataexplorer.azure.com/clusters/help/databases/Samples) vardır. [Örnek sorguları](https://docs.microsoft.com/azure/kusto/query/samples) okuma da çalıştırılabilir.
 
 ## <a name="dashboards"></a>Panolar
 
 Azure Izleyici 'den bilgileri yüzeye almak için kullanılabilecek çeşitli farklı Pano teknolojileri vardır. Belki de en basit, Application Insights sorguları çalıştırmak ve [verileri bir grafiğe çizmeniz](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)olabilir.
 
-![Ana Azure panosu ](./media/azure-monitor.png)
+![Ana Azure panosu ](./media/azure_dashboard.png)
  **Şekil 7-14**' de gömülü Application Insights grafiklerin bir örneği. Ana Azure panosuna katıştırılmış Application Insights grafik örneği.
 
 Bu grafikler daha sonra Pano özelliğinin kullanımıyla Azure portal uygun şekilde gömülebilir. Çeşitli veri katmanlarında ayrıntıya gidebilmek gibi daha fazla exacting gereksinimi olan kullanıcılar için Azure Izleyici verileri [Power BI](https://powerbi.microsoft.com/)kullanılabilir. Power BI, birçok farklı veri kaynağından veri toplayabilen sektör lideri, kurumsal sınıf, iş zekası aracıdır.
 
-![Dashboard ](./media/azure-monitor.png)
- **şekil 7-15**Power BI bir örnektir. Pano Power BI bir örnek.
+![Örnek Power BI panosu](./media/powerbidashboard.png)
+
+**Şekil 7-15**. Pano Power BI bir örnek.
 
 ## <a name="alerts"></a>Uyarılar
 

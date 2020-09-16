@@ -6,49 +6,49 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: c3c69aebacd140a14e74545d601c0207cb8de681
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 6e78210178fda65bb3baad0d24eb3a20cd6f2a3e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "82071635"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540119"
 ---
-# <a name="overview-of-type-converters-for-xaml"></a>XAML için tür dönüştürücüler genel bakış
+# <a name="overview-of-type-converters-for-xaml"></a>XAML için tür Dönüştürücülerine genel bakış
 
-XAML biçimlendirmesindeki bir dizeden nesne grafiğindeki belirli nesnelere dönüştüren bir nesne yazarı için tür dönüştürücüler mantığı kaynağı. .NET XAML Hizmetleri'nde, tür <xref:System.ComponentModel.TypeConverter>dönüştürücü. Bazı dönüştürücüler ayrıca XAML kaydet yolunu destekler ve bir nesneyi serileştirme biçimlendirmesinde dize formuna seri hale getirmek için kullanılabilir. Bu konu, XAML'deki tür dönüştürücülerin nasıl ve ne zaman çağrıldığını <xref:System.ComponentModel.TypeConverter>açıklar ve yöntem geçersiz kılmaları için uygulama önerileri sağlar.
+Tür dönüştürücüler, XAML biçimlendirme içindeki bir dizeden bir nesne grafiğinde belirli nesnelere dönüştüren bir nesne yazıcı için arz mantığı sağlar. .NET XAML hizmetlerinde tür dönüştürücüsü öğesinden türetilen bir sınıf olmalıdır <xref:System.ComponentModel.TypeConverter> . Bazı dönüştürücüler XAML kayıt yolunu da destekler ve serileştirme biçimlendirmesinde bir nesneyi dize biçiminde seri hale getirmek için kullanılabilir. Bu konu, XAML 'deki tür dönüştürücülerinin nasıl ve ne zaman çağrılacağını açıklar ve metot geçersiz kılmaları için uygulama önerisi sağlar <xref:System.ComponentModel.TypeConverter> .
 
-## <a name="type-conversion-concepts"></a>Tür Dönüştürme Kavramları
+## <a name="type-conversion-concepts"></a>Tür dönüştürme kavramları
 
-Aşağıdaki bölümlerde XAML'nin dizeleri nasıl kullandığı ve .NET XAML Services'daki nesne yazarlarının xaml kaynağında karşılaşılan dize değerlerinden bazılarını işlemek için tür dönüştürücülerini nasıl kullandıkları hakkındaki temel kavramları açıklanır.
+Aşağıdaki bölümlerde, XAML 'nin dizeleri nasıl kullandığı hakkında temel kavramlar ve .NET XAML Hizmetleri 'ndeki nesne yazıcılarının bir XAML kaynağında karşılaşılan bazı dize değerlerini işlemek için tür dönüştürücülerinin nasıl kullanıldığı açıklanmaktadır.
 
-### <a name="xaml-and-string-values"></a>XAML ve Dize Değerleri
+### <a name="xaml-and-string-values"></a>XAML ve dize değerleri
 
-Bir XAML dosyasında öznitelik değeri ayarladığınızda, bu değerin ilk türü genel anlamda bir dize ve XML anlamında bir dize özniteliği değeridir. XAML işlemcinin <xref:System.Double> başlangıçta dizeleri gibi diğer ilkel ler bile vardır.
+XAML dosyasında bir öznitelik değeri ayarladığınızda, bu değerin başlangıç türü genel anlamda bir dize ve bir XML anlamda dize özniteliği değeri olur. Gibi diğer temel öğeler de <xref:System.Double> BIR XAML işlemcisine ilk olarak dizelerdir.
 
-Çoğu durumda, bir XAML işlemci bir öznitelik değerini işlemek için iki parça bilgiye ihtiyaç duyar. İlk bilgi parçası, ayarlanan özelliğin değer türüdür. Bir öznitelik değeri tanımlayan ve XAML'de işlenen herhangi bir dize sonuçta dönüştürülmelidir veya bu tür bir değere çözülmelidir. Değer XAML parlayıcı (sayısal değer gibi) tarafından anlaşılan ilkel bir ise, dize doğrudan dönüştürme denenir. Öznitelik değeri bir numaralandırmaya başvuruyorsa, sağlanan dize, bu numaralandırmada adlandırılmış bir sabitle eşleşen bir ad için işaretlenir. Değer, ayrıştırıcı tarafından anlaşılmış bir ilkel veya numaralandırmadan sabit bir ad değilse, ilgili tür dönüştürülmüş bir dizeyi temel alan bir değer veya başvuru sağlayabilmelidir.
+Çoğu durumda, bir XAML işlemcisinin bir öznitelik değerini işlemek için iki bilgi parçasına ihtiyacı vardır. İlk bilgi parçası, ayarlanmakta olan özelliğin değer türüdür. Bir öznitelik değerini tanımlayan ve XAML 'de işlenen herhangi bir dize, sonunda, son olarak o türdeki bir değere dönüştürülmelidir veya çözümlenmelidir. Değer, XAML ayrıştırıcısı (sayısal değer gibi) tarafından anlaşılan bir temel ise, dizenin doğrudan dönüştürülmesine denenir. Özniteliğin değeri bir numaralandırmaya başvuruyorsa, sağlanan dize, bu Numaralandırmadaki adlandırılmış bir sabit ile bir ad eşleşmesi için denetlenir. Değer, ayrıştırıcının anlamış bir temel veya sabit bir ad numaralandırmasından değilse, uygulanabilir tür, dönüştürülmüş bir dizeye dayalı bir değer veya başvuru sağlayabilmelidir.
 
 > [!NOTE]
-> XAML dil yönergeleri tür dönüştürücüleri kullanmaz.
+> XAML dil yönergeleri tür dönüştürücülerini kullanmaz.
 
-### <a name="type-converters-and-markup-extensions"></a>Tür Dönüştürücüler ve Biçimlendirme Uzantıları
+### <a name="type-converters-and-markup-extensions"></a>Tür dönüştürücüler ve biçimlendirme uzantıları
 
-Biçimlendirme uzantısı kullanımları, özellik türünü ve diğer hususları kontrol etmeden önce bir XAML işlemci tarafından işlenmelidir. Örneğin, öznitelik olarak ayarlanan bir özelliğin normalde bir tür dönüştürmesi varsa, ancak belirli bir durumda biçimlendirme uzantısı kullanımı tarafından ayarlanırsa, önce biçimlendirme uzantısı davranışı işler. Biçimlendirme uzantısı gerekli olan yaygın bir durum, zaten var olan bir nesneye başvuruda bulunmaktır. Bu senaryo için, durum verişsiz bir tür dönüştürücü yalnızca istenmeyen yeni bir örnek oluşturabilir. Biçimlendirme uzantıları hakkında daha fazla bilgi için [XAML Genel Bakış için Biçimlendirme Uzantıları'na](markup-extensions-overview.md)bakın.
+Biçimlendirme uzantısı kullanımları, özellik türünü ve diğer konuları kontrol etmeden önce bir XAML işlemcisi tarafından işlenmelidir. Örneğin, normalde bir öznitelik olarak ayarlanan bir özelliğin tür dönüştürmesi varsa, ancak belirli bir durumda biçimlendirme uzantısı kullanımı ile ayarlanırsa, biçimlendirme uzantısı davranışı önce işlenir. Biçimlendirme uzantısının gerekli olduğu yaygın bir durum, zaten var olan bir nesneye başvuru yapmak. Bu senaryo için, durum bilgisi olmayan bir tür dönüştürücüsü yalnızca yeni bir örnek oluşturabilir ve bu, istenmeyebilir. Biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [xaml Için biçimlendirme uzantıları genel bakış](markup-extensions-overview.md).
 
-### <a name="native-type-converters"></a>Yerli Tip Dönüştürücüler
+### <a name="native-type-converters"></a>Yerel tür dönüştürücüler
 
-Windows Sunu Temeli (WPF) ve .NET XAML hizmet uygulamalarında, yerel tür dönüştürme işleme sada sahip belirli CLR türleri vardır. Ancak, bu CLR türleri geleneksel olarak ilkel olarak düşünülmez. Böyle bir tür bir <xref:System.DateTime>örnek . Bunun bir nedeni .NET Framework mimarisinin nasıl <xref:System.DateTime> çalıştığıdır: türü .NET'teki en temel kitaplık olan mscorlib'de tanımlanır. <xref:System.DateTime>bağımlılık<xref:System.ComponentModel.TypeConverterAttribute> (Sistem'den) tanıtan başka bir derlemeden gelen bir öznitelik ile atfedilmesine izin verilmez. Bu nedenle, atfederek olağan tür dönüştürücü bulma mekanizması desteklenemez. Bunun yerine, XAML ayrıştırıcısı yerel işleme gerektiren türlerin bir listesi vardır ve bu tür gerçek ilkel işlenme şekline benzer işler. Durumunda <xref:System.DateTime>, Bu işleme için bir <xref:System.DateTime.Parse%2A>çağrı içerir .
+Windows Presentation Foundation (WPF) ve .NET XAML Hizmetleri uygulamalarında, yerel tür dönüştürme işlemesi olan belirli CLR türleri vardır. Ancak, bu CLR türleri temel öğeler olarak genel olarak düşünülmez. Bu tür bir örnek vardır <xref:System.DateTime> . Bunun bir nedeni .NET Framework mimarinin nasıl çalıştığına yöneliktir: tür, <xref:System.DateTime> .net 'teki en temel kitaplık olan mscorlib 'de tanımlanmıştır. <xref:System.DateTime> bağımlılık tanıtan başka bir derlemeden gelen bir öznitelikle ilişkilendirilememesine izin verilmez ( <xref:System.ComponentModel.TypeConverterAttribute> sistem). Bu nedenle, Attributing tarafından her zamanki tür dönüştürücüsü bulma mekanizması desteklenemez. Bunun yerine, XAML ayrıştırıcısı yerel işleme ihtiyacı olan türlerin bir listesini içerir ve bu türleri gerçek temel elemanların işlenme biçimine benzer şekilde işler. <xref:System.DateTime>Bu durumda, bu işlem öğesine bir çağrı içerir <xref:System.DateTime.Parse%2A> .
 
-## <a name="implementing-a-type-converter"></a>Tür Dönüştürücü Uygulama
+## <a name="implementing-a-type-converter"></a>Tür Dönüştürücüsü uygulama
 
-Aşağıdaki bölümlerde sınıfın API'si <xref:System.ComponentModel.TypeConverter> tartışılır.
+Aşağıdaki bölümlerde sınıfının API 'SI ele alınmaktadır <xref:System.ComponentModel.TypeConverter> .
 
 ### <a name="typeconverter"></a>TypeConverter
 
-.NET XAML Hizmetleri altında, XAML amaçları için kullanılan tüm tür dönüştürücüler <xref:System.ComponentModel.TypeConverter>taban sınıftan türeyen sınıflardır. Sınıf <xref:System.ComponentModel.TypeConverter> XAML var önce .NET Framework sürümlerinde vardı; orijinal <xref:System.ComponentModel.TypeConverter> senaryolardan biri görsel tasarımcılar özellik düzenleyicileri için dize dönüştürme sağlamak oldu.
+.NET XAML Hizmetleri ' nin altında, XAML için kullanılan tüm tür dönüştürücüler taban sınıftan türetilen sınıflardır <xref:System.ComponentModel.TypeConverter> . <xref:System.ComponentModel.TypeConverter>Sınıf, XAML silinmeden önce .NET Framework sürümlerinde vardı; özgün senaryolardan biri, <xref:System.ComponentModel.TypeConverter> Visual Designer 'daki Özellik düzenleyicileri için dize dönüştürmesi sağlamaktır.
 
-XAML için rolü <xref:System.ComponentModel.TypeConverter> genişletilir. XAML amaçları <xref:System.ComponentModel.TypeConverter> için, belirli dize ve dize dönüşümleri için destek sağlamak için temel sınıftır. From-string, XAML'den bir dize özniteliği değerini ayrıştamayı sağlar. To-string, belirli bir nesne özelliğinin çalışma zamanı değerinin serileştirme için XAML'deki bir özniteliğe yeniden işlenmesine olanak sağlayabilir.
+XAML için, rolü <xref:System.ComponentModel.TypeConverter> genişletilir. XAML amaçları için, <xref:System.ComponentModel.TypeConverter> belirli-dize ve dize dönüştürmelerinde destek sağlamak için temel sınıftır. From-String, XAML 'den bir dize özniteliği değeri ayrıştırmayı mümkün. -String, belirli bir nesne özelliğinin çalışma zamanı değerini seri hale getirme için XAML içindeki bir özniteliğe geri işlemeye olanak sağlayabilir.
 
-<xref:System.ComponentModel.TypeConverter>XAML işleme amaçları için dize ve ipten dönüştürme yle ilgili dört üye tanımlar:
+<xref:System.ComponentModel.TypeConverter> XAML işleme amaçları için-String ve from-String ' i dönüştürmeye uygun dört üyeyi tanımlar:
 
 - <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>
 
@@ -58,64 +58,64 @@ XAML için rolü <xref:System.ComponentModel.TypeConverter> genişletilir. XAML 
 
 - <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>
 
-Bu üyelerden en önemli <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>yöntem, giriş dizesini gerekli nesne türüne dönüştüren yöntemdir. Yöntem, <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> daha geniş bir tür aralığını dönüştürücünün hedeflenen hedef türüne dönüştürmek için uygulanabilir. Bu nedenle, çalışma zamanı dönüşümlerini desteklemek gibi XAML'nin ötesine uzanan amaçlara hizmet edebilir. Ancak, XAML kullanımı için, yalnızca bir <xref:System.String> girişi işleyebilir kod yolu önemlidir.
+Bu üyelerin en önemli yöntemi, <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> giriş dizesini gereken nesne türüne dönüştüren ' dir. <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>Yöntemi, dönüştürücünün amaçlanan hedef türüne daha geniş bir tür dönüştürmek için uygulanabilir. Bu nedenle, çalışma zamanı dönüştürmelerini destekleme gibi XAML 'in ötesine genişleyen amaçlar sunabilir. Ancak, XAML kullanımı için yalnızca bir girişi işleyecede kod yolu <xref:System.String> önemlidir.
 
-İkinci en önemli yöntem <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Bir uygulama biçimlendirme gösterimine dönüştürülürse (örneğin, dosya olarak XAML'ye kaydediliyorsa), <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> biçimlendirme gösterimi oluşturmak için xaml metin yazarının daha büyük senaryosunda yer almaktadır. Bu durumda, XAML için önemli kod yolu, `destinationType` arayanın bir ' den ' in ''yi <xref:System.String>geçirmesidir.
+İkinci en önemli Yöntem <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> . Bir uygulama, biçimlendirme gösterimine dönüştürülürse (örneğin, XAML 'ye bir dosya olarak kaydedilirse), bir <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> xaml metin yazıcısının bir biçimlendirme temsili oluşturmak için daha büyük senaryoya dahil edilir. Bu durumda, XAML için önemli kod yolu çağıranın bir ' ı geçirme yoludur `destinationType` <xref:System.String> .
 
-<xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>ve <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> bir hizmet <xref:System.ComponentModel.TypeConverter> uygulamanın yeteneklerini sorguladığında kullanılan destek yöntemleridir. Dönüştürücünüzdesteğinin eşdeğer `true` dönüştürme yöntemlerinin türüne özgü durumlar için döndürmek için bu yöntemleri uygulamanız gerekir. XAML amaçları için, bu <xref:System.String> genellikle türü anlamına gelir.
+<xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> ve, <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> bir hizmet uygulamanın yeteneklerini sorguladığında kullanılan destek yöntemleridir <xref:System.ComponentModel.TypeConverter> . Bu yöntemleri, `true` dönüştürücünün eşit dönüştürme yöntemlerinin desteklediği türe özgü durumlar için döndürmek üzere uygulamalısınız. XAML amaçları için bu genellikle tür anlamına gelir <xref:System.String> .
 
-### <a name="culture-information-and-type-converters-for-xaml"></a>XAML için Kültür Bilgileri ve Tip Dönüştürücüler
+### <a name="culture-information-and-type-converters-for-xaml"></a>XAML için kültür bilgileri ve tür dönüştürücüler
 
-Her <xref:System.ComponentModel.TypeConverter> uygulama, bir dönüşüm için geçerli bir dize yi benzersiz bir şekilde yorumlayabilir ve parametre olarak geçirilen tür açıklamasını da kullanabilir veya yok sayabilir. Kültür ve XAML türü dönüştürme için önemli bir husus şunlardır: öznitelik değerleri olarak yerelleştirilebilir dizeleri kullanarak XAML tarafından desteklenen olsa da, belirli kültür gereksinimleri ile tür dönüştürücü girişi olarak bu yerelleştirilebilir dizeleri kullanamazsınız. Bu sınırlama, XAML öznitelik değerleri için tür dönüştürücüler kültür kullanan `en-US` mutlaka sabit dil XAML işleme davranışı içermesidir. Bu kısıtlamanın tasarım nedenleri hakkında daha fazla bilgi için XAML dil belirtimi[\[(MS-XAML)\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))veya [WPF Genellaştırma ve Yerelleştirme Genel Bakış'a](../../framework/wpf/advanced/wpf-globalization-and-localization-overview.md)bakın.
+Her <xref:System.ComponentModel.TypeConverter> uygulama, dönüştürme için geçerli bir dize olduğunu benzersiz bir şekilde yorumlayabilir ve ayrıca parametre olarak geçirilen tür açıklamasını kullanabilir veya yoksayabilir. Kültür ve XAML türü dönüştürme için önemli bir göz önünde bulundurmanız gerekenler şunlardır: öznitelik değerleri olarak yerelleştirilebilir dizeler kullanılması XAML tarafından desteklenmekle birlikte, bu yerelleştirilebilir dizeleri belirli kültür gereksinimlerine sahip tür dönüştürücüsü girişi olarak kullanamazsınız. Bu sınırlama, XAML öznitelik değerleri için tür dönüştürücülerinin kültür kullanan sabit dil XAML işleme davranışına sahip olması gerektiğini içerir `en-US` . Bu kısıtlamanın tasarım nedenleri hakkında daha fazla bilgi için bkz. XAML dil belirtimi ([ \[ MS-xaml \] ](/previous-versions/msp-n-p/ff650760(v=pandp.10))) veya [WPF Genelleştirme ve yerelleştirme genel bakış](/dotnet/desktop/wpf/advanced/wpf-globalization-and-localization-overview).
 
-Kültürün bir sorun olabileceği bir örnek olarak, bazı kültürler dize şeklindeki sayılar için ondalık nokta delimiter olarak bir dönem yerine virgül kullanır. Bu kullanım, varolan birçok tür dönüştürücünün sahip olduğu davranışla çarpışır, bu da virgülü sınırlayıcı olarak kullanmaktır. Çevredeki XAML'de bir kültürün geçmesi `xml:lang` sorunu çözmez.
+Kültüre bir sorun olabilecek bir örnek olarak, bazı kültürler dize biçimindeki sayılar için ondalık nokta sınırlayıcısı olarak bir nokta yerine virgül kullanır. Bu kullanım, çok sayıda mevcut tür dönüştürücülerinin sahip olduğu ve sınırlayıcı olarak virgül kullanmanın olduğu davranış ile çakışıyor. Bir kültürü `xml:lang` çevreleyen XAML içinde geçirme sorunu çözmez.
 
-### <a name="implementing-convertfrom"></a>ConvertFrom'ı Uygulama
+### <a name="implementing-convertfrom"></a>ConvertFrom uygulama
 
-XAML destekleyen <xref:System.ComponentModel.TypeConverter> bir uygulama olarak kullanılabilir <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> olması için, bu dönüştürücü için `value` yöntem parametre olarak bir dize kabul etmelidir. Dize geçerli bir biçimdeyse ve <xref:System.ComponentModel.TypeConverter> uygulama tarafından dönüştürülebiliyorsa, döndürülen nesnenin bir dökümü özellik tarafından beklenen türe desteklemesi gerekir. Aksi takdirde, <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> uygulama `null`döndürmelidir.
+<xref:System.ComponentModel.TypeConverter>Xaml 'yi destekleyen bir uygulama olarak kullanılabilmesi için, <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> Bu dönüştürücünün yöntemi parametre olarak bir dize kabul etmelidir `value` . Dize geçerli bir biçimeyse ve uygulama tarafından dönüştürülemiyorsa <xref:System.ComponentModel.TypeConverter> , döndürülen nesne, özellik tarafından beklenen türe bir tür dönüştürmeyi desteklemelidir. Aksi takdirde, <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> uygulamanın dönmesi gerekir `null` .
 
-Her <xref:System.ComponentModel.TypeConverter> uygulama, bir dönüşüm için geçerli bir dize oluşturan şeyi benzersiz bir şekilde yorumlayabilir ve parametre olarak geçirilen tür açıklamasını veya kültür bağlamlarını da kullanabilir veya yok sayabilir. Ancak, WPF XAML işleme değerleri tüm durumlarda tür açıklaması bağlamına geçiremeyebilir `xml:lang`ve ayrıca kültüre dayalı olarak geçemeyebilir.
+Her <xref:System.ComponentModel.TypeConverter> uygulama, dönüştürme için geçerli bir dize oluşturduğunu benzersiz bir şekilde yorumlayabilir ve ayrıca parametre olarak geçirilen tür açıklaması veya kültür bağlamlarını kullanabilir veya yoksayabilir. Ancak, WPF XAML işleme değerleri her durumda tür açıklaması bağlamına geçirmeyebilir ve ayrıca, temelinde kültürü geçirmeyebilir `xml:lang` .
 
 > [!NOTE]
-> Ayraçları ( ),{}özellikle açılış ayracını ({), dize biçiminizin bir öğesi olarak kullanmayın. Bu karakterler, biçimlendirme uzantısı dizisi için giriş ve çıkış olarak ayrılmıştır.
+> Parantez ( {} ), özellikle de açma küme ayracı ({) dize biçiminizdeki bir öğe olarak kullanmayın. Bu karakterler bir işaretleme uzantısı sırası için giriş ve çıkış olarak ayrılmıştır.
 
-Türü dönüştürücünüz .NET XAML Services nesne yazarından bir XAML hizmetine erişebiliyorsa, ancak içeriğe karşı yapılan <xref:System.IServiceProvider.GetService%2A> çağrı bu hizmeti döndürmezse, bir özel durum atmak uygundur.
+Tür dönüştürücüsünün .NET XAML Hizmetleri nesne yazıcısından bir XAML hizmetine erişimi olması gerektiğinde bir özel durum oluşturmak için uygundur, ancak <xref:System.IServiceProvider.GetService%2A> bağlamda gerçekleştirilen çağrının bu hizmeti döndürmez.
 
-### <a name="implementing-convertto"></a>ConvertTo'nun Uygulanması
+### <a name="implementing-convertto"></a>ConvertTo uygulama
 
-<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>serileştirme desteği için kullanılabilir. Özel türüve <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> türü dönüştürücü için serileştirme desteği mutlak bir gereklilik değildir. Ancak, bir denetim uyguluyorsanız veya sınıfınızın özelliklerinin veya tasarımının bir parçası olarak <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>serileştirme kullanıyorsanız, uygulamanız gerekir.
+<xref:System.ComponentModel.TypeConverter.ConvertTo%2A> , serileştirme desteği için büyük olasılıkla kullanılıyor. <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>Özel tür ve tür Dönüştürücüsü için serileştirme desteği, mutlak bir gereksinim değildir. Ancak, bir denetim uyguladıysanız veya sınıfınızın özelliklerinin veya tasarımının bir parçası olarak serileştirilmesi kullanıyorsanız, uygulamanız gerekir <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> .
 
-XAML destekleyen <xref:System.ComponentModel.TypeConverter> bir uygulama olarak kullanılabilir <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> olması için, bu dönüştürücü için yöntem `value` parametre olarak desteklenen tür (veya değer) bir örnek kabul etmelidir. `destinationType` Parametre türünde <xref:System.String>olduğunda, döndürülen nesne '' olarak <xref:System.String>atılabilir. Döndürülen dize, `value`'nin serileştirilmiş değerini temsil etmelidir. İdeal olarak, seçtiğiniz serileştirme biçimi, önemli miktarda bilgi kaybı olmadan, bu <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> dize aynı dönüştürücünün uygulamasına geçmiş gibi aynı değeri oluşturabilmelidir.
+<xref:System.ComponentModel.TypeConverter>Xaml 'yi destekleyen bir uygulama olarak kullanılabilmesi için, <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> Bu dönüştürücünün yöntemi parametre olarak desteklenen türün (veya bir değerin) bir örneğini kabul etmelidir `value` . `destinationType`Parametre türü olduğunda <xref:System.String> , döndürülen nesnenin olarak yayınlanamayacak olması gerekir <xref:System.String> . Döndürülen dize, seri hale getirilmiş bir değeri temsil etmelidir `value` . İdeal olarak, seçtiğiniz serileştirme biçimi, bu dizenin aynı dönüştürücünün uygulamasına geçirilmesiyle aynı değeri <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> , önemli ölçüde bilgi kaybı olmadan oluşturabilebilmelidir.
 
-Değer serileştirilemiyorsa veya dönüştürücü serileştirmeyi <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> desteklemiyorsa, uygulama döndürülmeli `null` ve bir özel durum atabilir. Ancak, özel durumlar atarsanız, özel durumları önlemek için <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> önce kontrol etme en iyi uygulamanın desteklenmesi için bu dönüşümü uygulamanızın bir parçası olarak kullanamamayı bildirmeniz gerekir.
+Değer seri hale getirilemez veya dönüştürücü Serileştirmeyi desteklemiyorsa, <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> uygulama döndürmelidir `null` ve bir özel durum oluşturabilir. Ancak, özel durumlar oluşturuyorsanız, bu dönüştürmeyi uygulamanızın bir parçası olarak kullanmayı, <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> özel durumların önüne geçmek için en iyi şekilde denetim altına almanız gerektiğini bildirmelisiniz <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> .
 
-`destinationType` Parametre türünde <xref:System.String>değilse, kendi dönüştürücü işleme seçebilirsiniz. Genellikle, temel uygulama işleme, temel <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> olarak belirli bir özel durum yükseltir geri dönersiniz.
+`destinationType`Parametre türü değilse <xref:System.String> , kendi dönüştürücü işleme seçeneğini belirleyebilirsiniz. Genellikle temel uygulama işlemeye döndürürseniz, temel içinde <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> belirli bir özel durum yükseltilir.
 
-Türü dönüştürücünüz .NET XAML Services nesne yazarından bir XAML hizmetine erişebiliyorsa, ancak içeriğe karşı yapılan <xref:System.IServiceProvider.GetService%2A> çağrı bu hizmeti döndürmezse, bir özel durum atmak uygundur.
+Tür dönüştürücüsünün .NET XAML Hizmetleri nesne yazıcısından bir XAML hizmetine erişimi olması gerektiğinde bir özel durum oluşturmak için uygundur, ancak <xref:System.IServiceProvider.GetService%2A> bağlamda gerçekleştirilen çağrının bu hizmeti döndürmez.
 
-### <a name="implementing-canconvertfrom"></a>CanConvertFrom uygulama
+### <a name="implementing-canconvertfrom"></a>Canconvertuygulama
 
-Uygulamanız <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> türü `true` <xref:System.String> `sourceType` için geri dönmeli ve aksi takdirde temel uygulamaya ertelenmelidir. 'den <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>istisnalar atmayın.
+<xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>Uygulamanız `true` türü için döndürmelidir `sourceType` <xref:System.String> , aksi takdirde temel uygulamaya ertelemelidir. ' Den özel durumlar atamayın <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> .
 
-### <a name="implementing-canconvertto"></a>CanConvertTo'nun Uygulanması
+### <a name="implementing-canconvertto"></a>Canconvertuygulama
 
-Uygulamanız <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> türü `true` <xref:System.String> `destinationType` için geri dönmeli ve aksi takdirde temel uygulamaya ertelenmelidir. 'den <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>istisnalar atmayın.
+<xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>Uygulamanız `true` türü için döndürmelidir `destinationType` <xref:System.String> , aksi takdirde temel uygulamaya ertelemelidir. ' Den özel durumlar atamayın <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> .
 
-## <a name="applying-the-typeconverterattribute"></a>TypeConverterAttribute uygulama
+## <a name="applying-the-typeconverterattribute"></a>TypeConverterAttribute uygulanıyor
 
-.NET XAML Services tarafından özel bir sınıf için etki leyici türü dönüştürücü olarak kullanılabilmesi için sınıf <xref:System.ComponentModel.TypeConverterAttribute> tanımına uygulamanız gerekir. Öznitelik aracılığıyla belirttiğiniz şey, <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A> özel tür dönüştürücünüzün tür adı olmalıdır. Bu özniteliği uygularsanız, bir XAML işlemci özellik türünün özel sınıf türünüzü kullandığı değerleri işlerse, dizeleri giriş yapabilir ve nesne örneklerini döndürebilir.
+Özel tür dönüştürücüsünün .NET XAML Hizmetleri tarafından özel bir sınıf için davranan tür dönüştürücüsü olarak kullanılması için, ' yi <xref:System.ComponentModel.TypeConverterAttribute> sınıf tanımınıza uygulamanız gerekir. <xref:System.ComponentModel.TypeConverterAttribute.ConverterTypeName%2A>Özniteliği aracılığıyla belirttiğiniz, özel tür dönüştürücünün tür adı olmalıdır. Bu özniteliği uygularsanız, bir XAML işlemcisi, özellik türünün özel sınıf türünü kullandığı değerleri işlediğinde, dizeleri belirtebilir ve nesne örnekleri döndürebilir.
 
-Ayrıca, özellik başına bazda bir tür dönüştürücü de sağlayabilirsiniz. Sınıf tanımına <xref:System.ComponentModel.TypeConverterAttribute> a uygulamak yerine, bunu bir özellik tanımına (içindeki `get` / `set` uygulamalar değil, ana tanım) uygulayın. Özelliğin türü, özel tür dönüştürücünüz tarafından işlenen türle eşleşmelidir. Bu öznitelik uygulandığında, bir XAML işlemci bu özelliğin değerlerini işlerse, giriş dizeleri işleyebilir ve nesne örneklerini döndürebilir. Özellik başına tür dönüştürücü tekniği, Microsoft .NET Framework'den veya sınıf tanımını denetleyemediğiniz ve orada uygulayamadığınız başka bir <xref:System.ComponentModel.TypeConverterAttribute> kitaplıktan bir özellik türü kullanmayı seçerseniz yararlıdır.
+Ayrıca özellik başına bir tür dönüştürücüsü sağlayabilirsiniz. Sınıf tanımına bir uygulamak yerine <xref:System.ComponentModel.TypeConverterAttribute> , bunu bir özellik tanımına (Ana tanım, `get` / `set` içindeki uygulamaları değil) uygulayın. Özelliğin türü, özel tür dönüştürücülü tarafından işlenen türle eşleşmelidir. Bu öznitelik uygulandığında, bir XAML işlemcisi bu özelliğin değerlerini işlediğinde, giriş dizelerini işleyebilir ve nesne örnekleri döndürebilir. Özellik başına tür dönüştürücüsü tekniği, Microsoft .NET çerçevesinden veya sınıf tanımını denetleyemeyip bir başka kitaplıktan bir özellik türü kullanmayı tercih ediyorsanız yararlıdır <xref:System.ComponentModel.TypeConverterAttribute> .
 
-Özel bağlı bir üye için tür dönüştürme <xref:System.ComponentModel.TypeConverterAttribute> davranışı `Get` sağlamak için, bağlı üye için uygulama deseninin erişimyöntemine uygulayın.
+Özel bir ekli üye için tür dönüştürme davranışı sağlamak için, <xref:System.ComponentModel.TypeConverterAttribute> `Get` ekli üye için uygulama deseninin erişimci metoduna uygulayın.
 
-## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Biçimlendirme Uzantısı Uygulamasından Hizmet Sağlayıcı Bağlamına Erişim
+## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Biçimlendirme Uzantısı uygulamasından hizmet sağlayıcı bağlamına erişme
 
-Kullanılabilir hizmetler herhangi bir değer dönüştürücü için aynıdır. Fark, her değer dönüştürücüsü hizmet bağlamını nasıl aldığıdır. Hizmetlere ve mevcut hizmetlere erişim, [XAML için Type Converters ve Markup Uzantıları](type-converters-and-markup-extensions.md)konusunda belgelenmiştir.
+Kullanılabilir hizmetler herhangi bir değer Dönüştürücüsü için aynıdır. Fark, her bir değer dönüştürücünün hizmet bağlamını nasıl aldığına ilişkin farktır. Hizmetlere ve kullanılabilir hizmetlere erişme, [xaml Için biçimlendirme uzantıları ve biçimlendirme uzantıları](type-converters-and-markup-extensions.md)konu başlığı altında belgelenmiştir.
 
-## <a name="type-converters-in-the-xaml-node-stream"></a>XAML Düğüm Akışında Tür Dönüştürücüler
+## <a name="type-converters-in-the-xaml-node-stream"></a>XAML düğüm akışında tür dönüştürücüler
 
-Bir XAML düğüm akışıyla çalışıyorsanız, bir tür dönüştürücünün eylem veya sonuç sonucu henüz yürütülmez. Bir yük yolunda, yüklemek için sonunda türe dönüştürülmesi gereken öznitelik dizesi, başlangıç üyesi ve bitiş üyesi içinde metin değeri olarak kalır. Sonunda bu işlem için gerekli olan tür dönüştürücü <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> özelliği kullanılarak belirlenebilir. Ancak, geçerli bir değer <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> elde etmek, bu tür bilgilere temel üye aracılığıyla erişebilen bir XAML şeması bağlamına veya üyenin kullandığı nesne değerinin türüne dayanır. Tür dönüştürme davranışının çağırılması, tür eşleme ve dönüştürücü örneği oluşturma gerektirdiğinden XAML şema bağlamını da gerektirir.
+XAML düğüm akışıyla çalışıyorsanız, bir tür dönüştürücüsünün eylemi veya nihai sonucu henüz yürütülmemiştir. Yükleme yolunda, son olarak, yüklenecek öznitelik dizesinin bir başlangıç üyesi ve bitiş üyesi içinde metin değeri olarak kalması gerekir. Bu işlem için sonunda gereken tür dönüştürücüsü, özelliği kullanılarak belirlenebilir <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> . Ancak, öğesinden geçerli bir değer elde etmek, <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> Bu tür bilgilere temel üye aracılığıyla erişebilen veya üyenin kullandığı nesne değerinin türü olan xaml şema bağlamına sahip olur. Tür dönüştürme davranışının çağrılması, tür eşlemesi gerektirdiğinden ve bir dönüştürücü örneği oluştururken XAML şeması bağlamını de gerektirir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

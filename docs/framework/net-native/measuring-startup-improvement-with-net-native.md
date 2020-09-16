@@ -2,12 +2,12 @@
 title: .NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 5d20fa77ee299065ced406bf8cd531b8c54b6c33
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79180992"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540894"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET Yerel ile Başlangıç İyileştirmesini Hesaplama
 .NET Native uygulamaların başlatma süresini önemli ölçüde geliştirir. Bu geliştirme, özellikle taşınabilir, düşük güç destekli cihazlarda ve karmaşık uygulamalarla görülür. Bu konu, bu başlangıç geliştirmesini ölçmek için gereken temel araçları kullanmaya başlamanıza yardımcı olur.  
@@ -21,7 +21,7 @@ ms.locfileid: "79180992"
 - Bu olayları görüntülemek için PerfView kullanın.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Olayları yayma için EventSource kullanma  
- <xref:System.Diagnostics.Tracing.EventSource>Özel olay sağlayıcısı oluşturmak için temel bir sınıf sağlar. Genellikle, bir alt sınıfı oluşturur <xref:System.Diagnostics.Tracing.EventSource> ve `Write*` yöntemleri kendi olay yöntemleriyle sarırsınız. Tek bir model genellikle her biri için kullanılır <xref:System.Diagnostics.Tracing.EventSource> .  
+ <xref:System.Diagnostics.Tracing.EventSource> Özel olay sağlayıcısı oluşturmak için temel bir sınıf sağlar. Genellikle, bir alt sınıfı oluşturur <xref:System.Diagnostics.Tracing.EventSource> ve `Write*` yöntemleri kendi olay yöntemleriyle sarırsınız. Tek bir model genellikle her biri için kullanılır <xref:System.Diagnostics.Tracing.EventSource> .  
   
  Örneğin, aşağıdaki örnekteki sınıf iki performans özelliğini ölçmek için kullanılabilir:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "79180992"
  PerfView, uygulamanızdaki tüm performans araştırmaları türlerini yapmanıza yardımcı olması için ETW olaylarını kullanır. Ayrıca, farklı olay türleri için günlüğe kaydetmeyi açmanıza veya kapatmaya olanak sağlayan bir yapılandırma GUI 'si de içerir. PerfView ücretsiz bir araçtır ve [Microsoft Indirme merkezi](https://www.microsoft.com/download/details.aspx?id=28567)' nden indirilebilir. Daha fazla bilgi için [PerfView öğretici videolarını](https://channel9.msdn.com/Series/PerfView-Tutorial)izleyin.  
   
 > [!NOTE]
-> , ARM sistemlerinde olayları toplamak için PerfView kullanılamaz. ARM sistemlerinde olayları toplamak için Windows performans Kaydedicisi 'Ni (WPR) kullanın. Daha fazla bilgi için bkz. [Vance Morrison 'un blog gönderisi](https://docs.microsoft.com/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device).  
+> , ARM sistemlerinde olayları toplamak için PerfView kullanılamaz. ARM sistemlerinde olayları toplamak için Windows performans Kaydedicisi 'Ni (WPR) kullanın. Daha fazla bilgi için bkz. [Vance Morrison 'un blog gönderisi](/archive/blogs/vancem/collecting-etwperfview-data-on-an-windows-rt-winrt-arm-surface-device).  
   
  Ayrıca, komut satırından PerfView öğesini çağırabilirsiniz. Yalnızca sağlayıcınızdaki olayları günlüğe kaydetmek için komut Istemi penceresini açın ve şu komutu girin:  
   
@@ -72,7 +72,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  PerfView 'ın varsayılan olarak açtığı diğer sağlayıcıları kapatır ve MyCompany-MyApp sağlayıcısını açar.  (Yıldız işareti bir olduğunu gösterir <xref:System.Diagnostics.Tracing.EventSource> .)  
   
  `collect outputFile`  
- Koleksiyonu başlatmak ve verileri ÇıktıDosyası. etl. zip ' e kaydetmek istediğinizi belirtir.  
+ Koleksiyonu başlatmak ve verileri outputFile.etl.zip kaydetmek istediğinizi belirtir.  
   
  PerfView 'ı başlattıktan sonra uygulamanızı çalıştırın. Uygulamanızı çalıştırırken dikkat etmeniz gereken birkaç nokta vardır:  
   
@@ -85,7 +85,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
  PerfView 'un yayınlanan olayları toplayabilmesi için uygulamanızı çalıştırdığınızda, **toplamayı durdur** düğmesini seçin. Genellikle, gereksiz olayları almadan uygulamanızı kapatmadan önce toplamayı durdurmanız gerekir. Ancak, kapalı veya askıya alma performansını ölçyorsanız, koleksiyona devam etmek isteyeceksiniz.  
   
 ## <a name="displaying-the-events"></a>Olayları görüntüleme  
- Zaten toplanmış olan olayları görüntülemek için PerfView komutunu kullanarak oluşturduğunuz. etl veya. etl. zip dosyasını açın ve **Olaylar**' ı seçin. ETW, diğer süreçlerdeki olaylar da dahil olmak üzere çok sayıda olay hakkında bilgi toplamıştır. Araştırmanızı odaklamak için Olaylar görünümünde aşağıdaki metin kutularını doldurun:  
+ Zaten toplanmış olan olayları görüntülemek için PerfView komutunu kullanarak oluşturduğunuz. etl veya .etl.zip dosyasını açın ve **Olaylar**' ı seçin. ETW, diğer süreçlerdeki olaylar da dahil olmak üzere çok sayıda olay hakkında bilgi toplamıştır. Araştırmanızı odaklamak için Olaylar görünümünde aşağıdaki metin kutularını doldurun:  
   
 - **Işlem filtresi** kutusunda uygulamanızın adını (". exe" olmadan) belirtin.  
   
@@ -93,7 +93,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Sol bölmede listelenen tüm olayları seçin (CTRL-A) ve **ENTER** tuşunu seçin. Şimdi, her bir olaydan gelen zaman damgalarını görebilmeniz gerekir. Bu zaman damgaları izlemenin başlangıcına göre yapılır, bu nedenle başlangıçtan itibaren geçen süreyi belirlemek için her bir olayın süresini işlemin başlangıç zamanından çıkarabilirsiniz. İki zaman damgasını seçmek için CTRL + tıklama kullanırsanız, sayfanın altındaki durum çubuğunda görüntülenmeleri arasındaki farkı görürsünüz. Bu, ekranda iki olay arasında geçen süreyi görmeyi kolaylaştırır (işlem başlangıcı dahil). Görünümün kısayol menüsünü açabilir ve verileri kaydetmek veya işlemek üzere CSV dosyalarına dışarı aktarma veya Microsoft Excel 'i açma gibi faydalı seçeneklerden seçim yapabilirsiniz.  
   
- Hem özgün uygulamanız hem de .NET Native araç zinciri kullanarak oluşturduğunuz sürüm için yordamı tekrarlayarak, performans farkını karşılaştırabilirsiniz.   .NET Native uygulamalar genellikle non-.NET Native uygulamalardan daha hızlı başlar. Daha ayrıntılı bir şekilde ilgileniyorsanız, PerfView kodunuzun en çok geçen kısmını da tanımlayabilir. Daha fazla bilgi için [PerfView öğreticileri](https://channel9.msdn.com/Series/PerfView-Tutorial) Izleyin veya [Vance Morrison 'un blog girişini](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)okuyun.  
+ Hem özgün uygulamanız hem de .NET Native araç zinciri kullanarak oluşturduğunuz sürüm için yordamı tekrarlayarak, performans farkını karşılaştırabilirsiniz.   .NET Native uygulamalar genellikle non-.NET Native uygulamalardan daha hızlı başlar. Daha ayrıntılı bir şekilde ilgileniyorsanız, PerfView kodunuzun en çok geçen kısmını da tanımlayabilir. Daha fazla bilgi için [PerfView öğreticileri](https://channel9.msdn.com/Series/PerfView-Tutorial) Izleyin veya [Vance Morrison 'un blog girişini](/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)okuyun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

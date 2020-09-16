@@ -4,12 +4,12 @@ description: ASP.NET Core ve Azure ile modern web uygulamalarını mimarın Orta
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: de90db9061d0b7bd15141b277ae4272b5208f76b
-ms.sourcegitcommit: b78018c850590dfc0348301e1748b779c28604cc
+ms.openlocfilehash: dc907e57adba0dd81e5cf27c2798759cee12bed2
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379167"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539365"
 ---
 # <a name="common-web-application-architectures"></a>Ortak web uygulaması mimarileri
 
@@ -267,7 +267,7 @@ networks:
 
 `docker-compose.yml`Dosya, projedeki öğesine başvurur `Dockerfile` `Web` . `Dockerfile`Kullanılacak temel kapsayıcıyı ve uygulamanın nasıl yapılandırılacağını belirtmek için kullanılır. `Web`' `Dockerfile` :
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 

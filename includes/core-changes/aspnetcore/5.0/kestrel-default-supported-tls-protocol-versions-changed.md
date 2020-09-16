@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3244a36808fb687663241e704d08775ea5c96720
-ms.sourcegitcommit: 1eae045421d9ea2bfc82aaccfa5b1ff1b8c9e0e4
+ms.openlocfilehash: 97870553d4ec66a569ba63cd945639b03bbbd6df
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84803231"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539499"
 ---
 ### <a name="kestrel-default-supported-tls-protocol-versions-changed"></a>Kestrel: desteklenen varsayılan TLS protokol sürümleri değiştirildi
 
@@ -27,7 +27,7 @@ Kestrel, bağlantıların varsayılan olarak TLS 1,1 veya TLS 1,2 kullanması ge
 
 #### <a name="new-behavior"></a>Yeni davranış
 
-Kestrel, işletim sisteminin kullanılacak en iyi Protokolü seçmesini ve güvenli olmayan protokolleri engellemesini sağlar. <xref:Microsoft.AspNetCore.Server.Kestrel.Https.HttpsConnectionAdapterOptions.SslProtocols%2A?displayProperty=nameWithType>Artık yerine varsayılan olarak olur `SslProtocols.None` `SslProtocols.Tls12 | SslProtocols.Tls11` .
+Kestrel, işletim sisteminin kullanılacak en iyi Protokolü seçmesini ve güvenli olmayan protokolleri engellemesini sağlar. <xref:Microsoft.AspNetCore.Server.Kestrel.Https.HttpsConnectionAdapterOptions.SslProtocols%2A?displayProperty=nameWithType> Artık yerine varsayılan olarak olur `SslProtocols.None` `SslProtocols.Tls12 | SslProtocols.Tls11` .
 
 #### <a name="reason-for-change"></a>Değişiklik nedeni
 
@@ -39,7 +39,7 @@ Uygulamanıza özgü bir neden olmadığı takdirde, yeni varsayılan değerleri
 
 Eski protokolleri devre dışı bırakmak için aşağıdaki eylemlerden birini gerçekleştirin:
 
-* [Windows yönergeleriyle](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)TLS 1,0, sistem genelinde gibi eski protokolleri devre dışı bırakın. Bu, şu anda tüm Windows sürümlerinde varsayılan olarak etkinleştirilmiştir.
+* [Windows yönergeleriyle](../../../../docs/framework/network-programming/tls.md#configuring-schannel-protocols-in-the-windows-registry)TLS 1,0, sistem genelinde gibi eski protokolleri devre dışı bırakın. Bu, şu anda tüm Windows sürümlerinde varsayılan olarak etkinleştirilmiştir.
 * Kodda hangi protokolleri desteklemek istediğinizi el ile aşağıdaki gibi seçin:
 
     ```csharp

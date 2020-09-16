@@ -2,12 +2,12 @@
 title: Kapsayıcılardan ve düzenleyicilerden yararlanma
 description: Azure 'da Docker kapsayıcılarını ve Kubernetes düzenleyicilerinden yararlanın
 ms.date: 05/31/2020
-ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f9e8672b742217388bd719262ffdfee63618fd14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446873"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540549"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Kapsayıcılardan ve düzenleyicilerden yararlanma
 
@@ -183,7 +183,7 @@ Visual Studio, Web tabanlı uygulamalar için Docker geliştirmeyi destekler. Ye
 
 Bu seçenek belirlendiğinde proje, bir `Dockerfile` Docker kapsayıcısında uygulamayı derlemek ve barındırmak için kullanılabilen bir kökünde oluşturulur. Şekil 3 -6. git 'de örnek bir Dockerfile gösterilmektedir
 
-```docker
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80

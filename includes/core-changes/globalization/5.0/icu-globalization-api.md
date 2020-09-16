@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 74c3d3247912dcd638a9379d54e682967c5e400b
-ms.sourcegitcommit: 6f58a5f75ceeb936f8ee5b786e9adb81a9a3bee9
+ms.openlocfilehash: 18718ebc934e0175c20411055b8c0a90ef6b175f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87302729"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539485"
 ---
 ### <a name="globalization-apis-use-icu-libraries-on-windows"></a>Genelleştirme API 'Leri Windows üzerinde ıCU kitaplıklarını kullanır
 
@@ -27,7 +27,7 @@ Bu değişiklik iki nedenden dolayı sunulmuştur:
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Geliştiricinin bölümünde herhangi bir eylem gerekmez. Ancak, NLS genelleştirme API 'Lerini kullanmaya devam etmek istiyorsanız, bu davranışa dönmek için bir [çalışma zamanı anahtarı](../../../../docs/core/run-time-config/globalization.md#nls) ayarlayabilirsiniz. Kullanılabilir anahtarlar hakkında daha fazla bilgi için bkz. [.NET Genelleştirme ve ıCU](/dotnet/standard/globalization-localization/globalization-icu) makalesi.
+Geliştiricinin bölümünde herhangi bir eylem gerekmez. Ancak, NLS genelleştirme API 'Lerini kullanmaya devam etmek istiyorsanız, bu davranışa dönmek için bir [çalışma zamanı anahtarı](../../../../docs/core/run-time-config/globalization.md#nls) ayarlayabilirsiniz. Kullanılabilir anahtarlar hakkında daha fazla bilgi için bkz. [.NET Genelleştirme ve ıCU](../../../../docs/standard/globalization-localization/globalization-icu.md) makalesi.
 
 #### <a name="category"></a>Kategori
 

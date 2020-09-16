@@ -1,13 +1,13 @@
 ---
 title: Gözlemlenebilirlik desenleri
 description: Bulutta yerel uygulamalar için Observability desenleri
-ms.date: 05/13/2020
-ms.openlocfilehash: db6a56358923025cbcca9478908474227e5da96d
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.date: 08/10/2020
+ms.openlocfilehash: 2a6ef0e58f1e20667167042614768b099f640858
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613817"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539859"
 ---
 # <a name="observability-patterns"></a>Gözlemlenebilirlik desenleri
 
@@ -15,7 +15,7 @@ Aynı şekilde, uygulamalarda kod düzeninde yardımcı olacak desenler gelişti
 
 ## <a name="when-to-use-logging"></a>Günlüğe kaydetme ne zaman kullanılır?
 
-Ne kadar dikkatli oluruz, uygulamalar üretimde beklenmedik yollarla neredeyse her zaman davranır. Kullanıcılar bir uygulamayla ilgili sorunları raporlayabilir, sorun oluştuğunda uygulamayla neler olduğunu görmeniz son derece yararlıdır. Uygulamanın çalışırken ne yaptığını öğrenmek için en az denek ve gerçek yol, uygulamanın ne yaptığını yazalım. Bu işlem günlüğe kaydetme olarak bilinir. Üretimde herhangi bir zaman veya sorun oluştuğunda, amaç, üretim dışı bir ortamda, hataların oluştuğu koşulları yeniden oluşturmak olmalıdır. İyi bir şekilde oturum açmak, geliştiricilerin test edilmesi ve denedik bir ortamda sorunları yinelemek için izlenmesi için bir yol haritası sağlar.
+Ne kadar dikkatli oluruz, uygulamalar üretimde beklenmedik yollarla neredeyse her zaman davranır. Kullanıcılar bir uygulamayla ilgili sorunları raporlayabilir, sorun oluştuğunda uygulamayla neler olduğunu görmeniz yararlı olur. Uygulamanın çalışırken ne yaptığını öğrenmek için en az denek ve gerçek yol, uygulamanın ne yaptığını yazalım. Bu işlem günlüğe kaydetme olarak bilinir. Üretimde her zaman veya sorun oluştuğunda, amaç, üretim dışı bir ortamda, hataların oluştuğu koşulları yeniden oluşturmak olmalıdır. İyi bir şekilde oturum açmak, geliştiricilerin test edilmesi ve denedik bir ortamda sorunları yinelemek için izlenmesi için bir yol haritası sağlar.
 
 ### <a name="challenges-when-logging-with-cloud-native-applications"></a>Bulutta yerel uygulamalarla günlüğe kaydetme sorunları
 

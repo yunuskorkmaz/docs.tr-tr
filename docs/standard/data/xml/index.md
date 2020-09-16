@@ -3,12 +3,12 @@ title: XML Belgeleri ve Verileri
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-ms.openlocfilehash: a752d634141a56df1caa61eb5d375dd2a402832f
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 6d2a52567a1fc8bdbbb1d039ac583c889d77d4af
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287694"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540140"
 ---
 # <a name="xml-documents-and-data"></a>XML Belgeleri ve Verileri
 
@@ -24,9 +24,9 @@ ms.locfileid: "84287694"
 
 - <xref:System.Xml.Linq>
 
-Tam liste için [.NET API tarayıcısı](https://docs.microsoft.com/dotnet/api/?term=system.xml)üzerinde "System. xml" araması yapın.
+Tam liste için [.NET API tarayıcısında](../../../../api/index.md?term=system.xml)"System.Xml" araması yapın.
 
-Bu ad alanındaki sınıflar World Wide Web Konsorsiyumu (W3C) önerilerini destekler. Örneğin:
+Bu ad alanındaki sınıflar World Wide Web Konsorsiyumu (W3C) önerilerini destekler. Örnek:
 
 - <xref:System.Xml.XmlDocument?displayProperty=nameWithType>Sınıfı, [W3C belge nesne MODELI (DOM) düzey 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) ve [DOM düzey 2 temel](https://www.w3.org/TR/DOM-Level-2-Core/) önerilerini uygular.
 
@@ -38,7 +38,7 @@ Bu ad alanındaki sınıflar World Wide Web Konsorsiyumu (W3C) önerilerini dest
 
 .NET Framework XML sınıfları şu avantajları sağlar:
 
-- **Kişilere.** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ve [LINQ to XML (VISUAL BASIC)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) , XML ile PROGRAMLANMASıNı kolaylaştırır ve SQL 'e benzer bir sorgu deneyimi sağlar.
+- **Kişilere.** [LINQ to XML (C#)](../../linq/linq-xml-overview.md) ve [LINQ to XML (VISUAL BASIC)](../../linq/linq-xml-overview.md) , XML ile PROGRAMLANMASıNı kolaylaştırır ve SQL 'e benzer bir sorgu deneyimi sağlar.
 
 - **Genişletme.** .NET Framework XML sınıfları soyut temel sınıfların ve Sanal yöntemlerin kullanımı ile genişletilebilir. Örneğin, <xref:System.Xml.XmlUrlResolver> önbellek akışını yerel diske depolayan sınıfın türetilmiş bir sınıfını oluşturabilirsiniz.
 
@@ -60,7 +60,7 @@ Bu ad alanındaki sınıflar World Wide Web Konsorsiyumu (W3C) önerilerini dest
 
 [XML Işleme seçenekleri](xml-processing-options.md) XML verilerini işlemeye yönelik seçenekleri açıklar.
 
-[XML verilerini bellek Içinde işleme](processing-xml-data-in-memory.md) XML verilerini bellek içinde işlemeye yönelik üç modeli açıklar: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ve [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), <xref:System.Xml.XmlDocument> sınıfı (W3C belge nesne modeli göre) ve <xref:System.Xml.XPath.XPathDocument> sınıfı (XPath veri modeline göre).
+[XML verilerini bellek Içinde işleme](processing-xml-data-in-memory.md) XML verilerini bellek içinde işlemeye yönelik üç modeli açıklar: [LINQ to XML (C#)](../../linq/linq-xml-overview.md) ve [LINQ to XML (Visual Basic)](../../linq/linq-xml-overview.md), <xref:System.Xml.XmlDocument> sınıfı (W3C belge nesne modeli göre) ve <xref:System.Xml.XPath.XPathDocument> sınıfı (XPath veri modeline göre).
 
 [XSLT dönüşümleri](xslt-transformations.md)\
 XSLT işlemcisinin nasıl kullanılacağını açıklar.
@@ -74,7 +74,7 @@ XSLT işlemcisinin nasıl kullanılacağını açıklar.
 [XML belgesinde ad alanlarını yönetme](managing-namespaces-in-an-xml-document.md)\
 <xref:System.Xml.XmlNamespaceManager>Sınıfının ad alanı bilgilerini depolamak ve korumak için nasıl kullanıldığını açıklar.
 
-[System. xml sınıflarında destek yazın](type-support-in-the-system-xml-classes.md)\
+[System.Xml sınıflarında destek yazın](type-support-in-the-system-xml-classes.md)\
 XML veri türlerinin CLR türleriyle nasıl eşlendikleri, XML veri türlerinin nasıl dönüştürüleceği ve sınıflardaki diğer tür desteğinin nasıl değiştirileceği açıklanmaktadır <xref:System.Xml> .
 
 ## <a name="related-sections"></a>İlgili Bölümler

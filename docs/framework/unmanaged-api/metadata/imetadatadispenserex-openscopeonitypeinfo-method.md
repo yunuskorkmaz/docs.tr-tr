@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-ms.openlocfilehash: 91ef9eaa855ed841bc75bfaeead462f045eb1d8b
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 8e119093800ea0a0119ba25ba38cf2eaf9afe96b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007461"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540868"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo Yöntemi
 Bu yöntem uygulanmadı. Çağrılırsa, E_NOTIMPL döndürür.  
@@ -38,7 +38,7 @@ HRESULT OpenScopeOnITypeInfo (
   
 ## <a name="parameters"></a>Parametreler  
  `pITI`  
- 'ndaki Kapsamın açılacağı tür bilgilerini sağlayan bir [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) arabirimine yönelik işaretçi.  
+ 'ndaki Kapsamın açılacağı tür bilgilerini sağlayan bir [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) arabirimine yönelik işaretçi.  
   
  `dwOpenFlags`  
  'ndaki Açık mod bayrakları.  
@@ -54,11 +54,11 @@ HRESULT OpenScopeOnITypeInfo (
   
  **Üst bilgi:** Cor. h  
   
- **Kitaplık:** MsCorEE. dll içinde kaynak olarak kullanılır  
+ **Kitaplık:** MsCorEE.dll kaynak olarak kullanılır  
   
  **.NET Framework sürümleri:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [IMetaDataDispenserEx Arabirimi](imetadatadispenserex-interface.md)
-- [IMetaDataDispenser Yöntemi](imetadatadispenser-interface.md)
+- [IMetaDataDispenser Arabirimi](imetadatadispenser-interface.md)

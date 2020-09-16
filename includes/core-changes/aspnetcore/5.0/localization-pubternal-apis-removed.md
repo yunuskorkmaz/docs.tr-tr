@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 2094da7ec94028c112d6683620ac1146a1544dab
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 62a5f56bb7fffc453623a2c3202f288a19110158
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84446984"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539513"
 ---
 ### <a name="localization-pubternal-apis-removed"></a>Yerelleştirme: "Pubternal" API 'Leri kaldırıldı
 
-ASP.NET Core ortak API yüzeyini daha iyi korumak için bazı :::no-loc text="\"pubternal\""::: Yerelleştirme API 'leri kaldırılmıştır. Bir :::no-loc text="\"pubternal\""::: API 'nin `public` erişim değiştiricisi vardır ve bir [iç](/dotnet/csharp/language-reference/keywords/internal) amacı gösteren bir ad alanında tanımlanır.
+ASP.NET Core ortak API yüzeyini daha iyi korumak için bazı :::no-loc text="\"pubternal\""::: Yerelleştirme API 'leri kaldırılmıştır. Bir :::no-loc text="\"pubternal\""::: API 'nin `public` erişim değiştiricisi vardır ve bir [iç](../../../../docs/csharp/language-reference/keywords/internal.md) amacı gösteren bir ad alanında tanımlanır.
 
 Tartışma için bkz. [DotNet/aspnetcore # 22291](https://github.com/dotnet/aspnetcore/issues/22291).
 
@@ -22,7 +22,7 @@ Aşağıdaki API 'Ler `public` :
 
 - `Microsoft.Extensions.Localization.Internal.AssemblyWrapper`
 - `Microsoft.Extensions.Localization.Internal.IResourceStringProvider`
-- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer`aşağıdaki parametre türlerinden birini kabul eden Oluşturucu aşırı yüklemeleri:
+- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer` aşağıdaki parametre türlerinden birini kabul eden Oluşturucu aşırı yüklemeleri:
   - `AssemblyWrapper`
   - `IResourceStringProvider`
 
@@ -32,7 +32,7 @@ Aşağıdaki listede değişiklikler özetlenmektedir:
 
 - `Microsoft.Extensions.Localization.Internal.AssemblyWrapper``Microsoft.Extensions.Localization.AssemblyWrapper`Şimdi geldi `internal` .
 - `Microsoft.Extensions.Localization.Internal.IResourceStringProvider``Microsoft.Extensions.Localization.Internal.IResourceStringProvider`Şimdi geldi `internal` .
-- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer`aşağıdaki parametre türlerinden birini kabul eden Oluşturucu aşırı yüklemeleri artık şunlardır `internal` :
+- `Microsoft.Extensions.Localization.ResourceManagerStringLocalizer` aşağıdaki parametre türlerinden birini kabul eden Oluşturucu aşırı yüklemeleri artık şunlardır `internal` :
   - `AssemblyWrapper`
   - `IResourceStringProvider`
 
@@ -48,7 +48,7 @@ Ortak API 'nin bu değişiklikten önce izin verilen ancak şimdi olmayan bir se
 
 #### <a name="category"></a>Kategori
 
-ASP.NET Çekirdeği
+ASP.NET Core
 
 #### <a name="affected-apis"></a>Etkilenen API’ler
 

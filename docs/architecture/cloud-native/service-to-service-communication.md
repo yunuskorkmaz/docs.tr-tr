@@ -3,12 +3,12 @@ title: Hizmetten hizmete iletişim
 description: Arka uç bulutu yerel mikro hizmetlerinin diğer arka uç mikro hizmetleriyle nasıl iletişim kuracağını öğrenin.
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: dec06cc28ac177381b882f9e441e19e5c51bd5ad
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 88d7dfabee14419978889f5d9ea30b12f36837de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613713"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539819"
 ---
 # <a name="service-to-service-communication"></a>Hizmetten hizmete iletişim
 
@@ -164,7 +164,7 @@ Olay ile, sıraya alma teknolojisinden *konulara*geçiş yaptık. Bir [Konu](htt
 
 **Şekil 4-16**. Konu mimarisi
 
-Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi *kurala*göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada, abonelik \# 1 ve abonelik 3 ' e (abonelik \# 2 ' ye değil) bir "CreateOrder" olayı gönderilebilir \# . Abonelik \# 2 ve abonelik 3 ' e bir "OrderCompleted" olayı gönderilebilir \# .
+Önceki şekilde, yayımcılar konuya iletiler gönderir. Son sırada aboneler aboneliklerden ileti alır. Ortasında, konu, koyu mavi kutular halinde gösterilen bir dizi kurala göre iletileri aboneliklere iletir. Kurallar, belirli iletileri bir aboneliğe ileten bir filtre işlevi görür. Burada, günlük aboneliği tüm iletileri almaya seçtiği için fiyat ve günlüğe kaydetme aboneliklerine bir "GetPrice" olayı gönderilebilir.  Bilgi ve günlük aboneliklerine bir "GetInformation" olayı gönderilir.
 
 Azure bulutu iki farklı konu hizmetini destekler: Azure Service Bus konuları ve Azure EventGrid.
 

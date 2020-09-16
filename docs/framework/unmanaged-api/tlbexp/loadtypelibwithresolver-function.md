@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 395d5f63eef12570c07f1f601de7f9e480d62905
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935557"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540511"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver İşlevi
 Bir tür kitaplığını yükler ve dahili olarak başvurulan tüm tür kitaplıklarını çözümlemek için sağlanan [ıtypeelibresolver arabirimini](itypelibresolver-interface.md) kullanır.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Söz dizimi  
   
 ```cpp  
 HRESULT LoadTypeLibWithResolver(  
@@ -41,7 +41,7 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  'ndaki Tür kitaplığının nasıl kaydedildiğini denetleyen bir [regkind numaralandırma](/windows/win32/api/oleauto/ne-oleauto-regkind) bayrağı. Olası değerleri şunlardır:  
   
-- `REGKIND_DEFAULT`: varsayılan kayıt davranışını kullanın.  
+- `REGKIND_DEFAULT`: Varsayılan kayıt davranışını kullanın.  
   
 - `REGKIND_REGISTER`: Bu tür kitaplığını kaydedin.  
   
@@ -56,7 +56,7 @@ HRESULT LoadTypeLibWithResolver(
 ## <a name="return-value"></a>Dönüş Değeri  
  Aşağıdaki tabloda listelenen HRESULT değerlerinden biri.  
   
-|Dönüş değeri|Açıklama|  
+|Döndürülen değer|Anlamı|  
 |------------------|-------------|  
 |`S_OK`|Başarılı.|  
 |`E_OUTOFMEMORY`|Bellek yetersiz.|  
@@ -68,19 +68,19 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|Tür kitaplığı veya DLL yüklenemedi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) , derlemeden tür kitaplığı dönüştürme işlemi sırasında `LoadTypeLibWithResolver` işlevini çağırır.  
+ [Tlbexp.exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md) , `LoadTypeLibWithResolver` derlemeyi tür kitaplığı dönüştürme işlemi sırasında işlevini çağırır.  
   
  Bu işlev, kayıt defterine en az erişimli olan belirtilen tür kitaplığını yükler. Bu işlev daha sonra, her birinin yüklenmesi ve üst tür kitaplığına eklenmesi gereken dahili olarak Başvurulmuş tür kitaplıkları için tür kitaplığını inceler.  
   
- Başvurulan bir tür kitaplığının yüklenebilmesi için, başvuru dosyası yolunun tam dosya yoluna çözülmesi gerekir. Bu, `pTlbResolver` parametresine geçirilen [ıtypeelibresolver arabirimi](itypelibresolver-interface.md)tarafından verilen [resolvettypeınfo yöntemi](resolvetypelib-method.md) aracılığıyla gerçekleştirilir.  
+ Başvurulan bir tür kitaplığının yüklenebilmesi için, başvuru dosyası yolunun tam dosya yoluna çözülmesi gerekir. Bu, parametreye geçilen [ITypeLibResolver arabirimi](itypelibresolver-interface.md)tarafından verilen [resolvettypeınfo yöntemi](resolvetypelib-method.md) aracılığıyla gerçekleştirilir `pTlbResolver` .  
   
- Başvurulan tür kitaplığının tam dosya yolu bilindiğinde `LoadTypeLibWithResolver` işlevi yüklenir ve başvurulan tür kitaplığını üst tür kitaplığına ekler ve birleştirilmiş bir ana tür kitaplığı oluşturur.  
+ Başvurulan tür kitaplığının tam dosya yolu bilindiğinde, `LoadTypeLibWithResolver` işlev yüklenir ve başvurulan tür kitaplığını üst tür kitaplığına ekler ve birleştirilmiş bir ana tür kitaplığı oluşturur.  
   
- İşlev, iç başvurulan tüm tür kitaplıklarını çözümleyip yükledikten sonra, `pptlib` parametresinde ana çözümlenen tür kitaplığına bir başvuru döndürür.  
+ İşlev, iç başvurulan tüm tür kitaplıklarını çözümleyip yükledikten sonra, parametresindeki ana çözümlenen tür kitaplığına bir başvuru döndürür `pptlib` .  
   
- `LoadTypeLibWithResolver` işlevi genellikle [Tlbexp. exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md)tarafından çağrılır ve bu, `pTlbResolver` parametresinde kendi Iç [ITypeLibResolver arabirimi](itypelibresolver-interface.md) uygulamasını sağlar.  
+ `LoadTypeLibWithResolver`İşlev genellikle parametresinde kendi Iç [ITypeLibResolver arabirimi](itypelibresolver-interface.md) uygulamasını sağlayan [Tlbexp.exe (tür kitaplığı verme programı)](../../tools/tlbexp-exe-type-library-exporter.md)tarafından çağrılır `pTlbResolver` .  
   
- `LoadTypeLibWithResolver` doğrudan çağırırsanız, kendi [ITypeLibResolver arabirimi](itypelibresolver-interface.md) uygulamanızı sağlamanız gerekir.  
+ Doğrudan çağrı yaparsanız `LoadTypeLibWithResolver` kendi [ITypeLibResolver arabirimi](itypelibresolver-interface.md) uygulamanızı sağlamanız gerekir.  
   
 ## <a name="requirements"></a>Gereksinimler  
  **Platformlar:** Bkz. [sistem gereksinimleri](../../get-started/system-requirements.md).  
@@ -94,4 +94,4 @@ HRESULT LoadTypeLibWithResolver(
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Tlbexp Yardımcı İşlevleri](index.md)
-- [LoadTypeLibEx Işlevi](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)
+- [LoadTypeLibEx Işlevi](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

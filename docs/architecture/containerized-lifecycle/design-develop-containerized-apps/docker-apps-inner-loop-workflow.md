@@ -2,12 +2,12 @@
 title: Docker uygulamaları için iç döngü geliştirme iş akışı
 description: Docker uygulamaları için "Inner-loop" geliştirme iş akışı hakkında bilgi edinin.
 ms.date: 08/06/2020
-ms.openlocfilehash: bf837ab53fff2b53cf141b2e621d484cff9b6889
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: 071e16afede91f4cfd6cbe8662fa68814ffdcdd7
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87916154"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539768"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker uygulamaları için iç döngü geliştirme iş akışı
 
@@ -118,7 +118,7 @@ Sürüm numarasına sahip bir dil yığınının resmi deposunu kullanmak, tüm 
 
 Aşağıda .NET Core kapsayıcısı için örnek bir DockerFile verilmiştir:
 
-```Dockerfile
+```dockerfile
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
@@ -284,7 +284,7 @@ Docker konağında bir tarayıcı açın ve bu siteye gidin; Şekil 4-29 ' de g�
 
 Bunu, Şekil 4-30 ' de gösterildiği gibi terminalden KıVARAK tarayıcıyı kullanarak test edebilirsiniz.
 
-![Şu kaynaktan alınan kıvır sonucuhttp://localhost:51080/WeatherForecast](media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
+![Şu kaynaktan alınan kıvır sonucu http://localhost:51080/WeatherForecast](media/docker-apps-inner-loop-workflow/test-docker-app-locally-curl.png)
 
 **Şekil 4-30**. KıVRıMLı kullanarak Docker uygulamasını yerel olarak test etme
 

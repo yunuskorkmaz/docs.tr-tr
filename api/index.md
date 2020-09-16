@@ -8,13 +8,13 @@ quickFilterColumn3: azure-dotnet,ml-dotnet,spark-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
 ms.date: 01/24/2020
-ms.openlocfilehash: b1781d0dddbcb368e0e26bd41f51eeaeeba809e0
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: cf15aaacc853cba386f99205cfe5bf625e8dda21
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86308864"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90539924"
 ---
 # <a name="net-api-browser"></a>.NET API tarayıcısı
 
-.NET API Browser 'a hoş geldiniz: tümü için tek durdurulmalı mağaza. Microsoft 'un ağ tabanlı API 'Leri. Aşağıdaki kutuya yazarak yönetilen API 'Ler için arama başlatın. [Web günlüğü gönderimizde](https://aka.ms/apibrowser)API tarayıcısı hakkında daha fazla bilgi edinebilirsiniz. Geri bildiriminiz varsa, [GitHub 'Daki Microsoftdocs/feedback deposunda](https://github.com/MicrosoftDocs/feedback/issues)yeni bir sorun oluşturun.
+.NET API Browser 'a hoş geldiniz: tümü için tek durdurulmalı mağaza. Microsoft 'un ağ tabanlı API 'Leri. Aşağıdaki kutuya yazarak yönetilen API 'Ler için arama başlatın. [Web günlüğü gönderimizde](/teamblog/announcing-unified-dotnet-experience-on-docs)API tarayıcısı hakkında daha fazla bilgi edinebilirsiniz. Geri bildiriminiz varsa, [GitHub 'Daki Microsoftdocs/feedback deposunda](https://github.com/MicrosoftDocs/feedback/issues)yeni bir sorun oluşturun.

@@ -3,16 +3,16 @@ title: Özellik bayrakları
 description: Azure uygulama yapılandırma özelliğinden yararlanarak bulutta yerel uygulamalarda Özellik bayraklarını uygulama
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: be4ab307069065975dc22d6bd984e12a2ea1457d
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614077"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90540471"
 ---
 # <a name="feature-flags"></a>Özellik bayrakları
 
-Bölüm 1 ' de, bulut yerelin hız ve çeviklik hakkında çok daha fazla olduğunu belirledik. Kullanıcılar hızlı yanıt verme, yenilikçi özellikler ve sıfır kapalı kalma süresi bekler. `Feature flags`, bulutta yerel uygulamalar için çevikliği artırmaya yardımcı olan modern bir dağıtım tekniğidir. Bunlar bir üretim ortamına yeni özellikler dağıtmanızı sağlar, ancak bunların kullanılabilirliğini kısıtlayabilir. Bir anahtarın hareketiyle, uygulamayı yeniden başlatmadan veya yeni kod dağıtmaya gerek kalmadan, belirli kullanıcılar için yeni bir özelliği etkinleştirebilirsiniz. Yeni özelliklerin serbest bırakılması, kod dağıtımlarından ayrıdır.
+Bölüm 1 ' de, bulut yerelin hız ve çeviklik hakkında çok daha fazla olduğunu belirledik. Kullanıcılar hızlı yanıt verme, yenilikçi özellikler ve sıfır kapalı kalma süresi bekler. `Feature flags` , bulutta yerel uygulamalar için çevikliği artırmaya yardımcı olan modern bir dağıtım tekniğidir. Bunlar bir üretim ortamına yeni özellikler dağıtmanızı sağlar, ancak bunların kullanılabilirliğini kısıtlayabilir. Bir anahtarın hareketiyle, uygulamayı yeniden başlatmadan veya yeni kod dağıtmaya gerek kalmadan, belirli kullanıcılar için yeni bir özelliği etkinleştirebilirsiniz. Yeni özelliklerin serbest bırakılması, kod dağıtımlarından ayrıdır.
 
 Özellik bayrakları, çalışma zamanında kullanıcılar için işlevselliğin görünürlüğünü denetleyen koşullu mantığa göre oluşturulmuştur. Modern bulutta yerel sistemlerde, yeni özellikleri üretime erken dağıtmak, ancak bunları sınırlı bir hedef kitle ile test etmek yaygındır. Güvenirlik arttıkça, özelliği daha geniş kitlelere artımlı olarak alınabilir.
 
@@ -29,7 +29,7 @@ Bölüm 1 ' de, bulut yerelin hız ve çeviklik hakkında çok daha fazla olduğ
 
 Temel tarafında, özellik bayrağı basit bir başvurudur `decision object` . Veya Boole durumunu döndürür `on` `off` . Bayrak, genellikle bir özellik özelliğini kapsülleyen bir kod bloğunu sarmalar. Bayrak durumu, kod bloğunun belirli bir kullanıcı için yürütülüp yürütülmeyeceğini belirler. Şekil 10-11, uygulamayı gösterir.
 
-```c#
+```csharp
 if (featureFlag) {
     // Run this code block if the featureFlag value is true
 } else {
@@ -49,7 +49,7 @@ Bölüm 1 ' de, tartıştık `Twelve-Factor App` . Uygulama yürütülebilir kod
 
 Başlangıç sınıfınıza yapılandırıldıktan sonra, denetleyiciye, eyleme veya ara yazılım düzeyine Özellik bayrağı işlevi ekleyebilirsiniz. Şekil 10-12, denetleyici ve eylem uygulamasını gösterir:
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public class ProductController : Controller
 {
@@ -57,7 +57,7 @@ public class ProductController : Controller
 }
 ```
 
-```c#
+```csharp
 [FeatureGate(MyFeatureFlags.FeatureA)]
 public IActionResult UpdateProductStatus()
 {
@@ -71,7 +71,7 @@ public IActionResult UpdateProductStatus()
 
 Özellik bayrakları, doğrudan C# sınıflarına eklenebilir. Şekil 10-13, özellik bayrağı ekleme işlemini gösterir:
 
-```c#
+```csharp
 public class ProductController : Controller
 {
     private readonly IFeatureManager _featureManager;
