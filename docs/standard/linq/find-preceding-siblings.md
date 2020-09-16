@@ -6,25 +6,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 788101eee6cdbce89626d1b46a5011a897c64704
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 0cfd516f274eaf2940a7b944d34c6ea494e7eaa1
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553189"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546191"
 ---
-# <a name="how-to-find-preceding-siblings-linq-to-xml"></a><span data-ttu-id="28dd8-104">Önceki eşdüzey öğeleri bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="28dd8-104">How to find preceding siblings (LINQ to XML)</span></span>
+# <a name="how-to-find-preceding-siblings-linq-to-xml"></a><span data-ttu-id="5a1ef-104">Önceki eşdüzey öğeleri bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="5a1ef-104">How to find preceding siblings (LINQ to XML)</span></span>
 
-<span data-ttu-id="28dd8-105">Bu makalede <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> , belirli bir öğeden önce gelen eşdüzey öğeleri bulmak ve <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> aynı öğeleri bulmak için kullanmak üzere önceki eşdüzey eksen üzerinde nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="28dd8-105">This article shows how to use <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> along the preceding-sibling axis to find sibling elements that precede a given element, and how to use <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> to find the same elements.</span></span>
+<span data-ttu-id="5a1ef-105">Bu makalede <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> , belirli bir öğeden önce gelen eşdüzey öğeleri bulmak ve <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> aynı öğeleri bulmak için kullanmak üzere önceki eşdüzey eksen üzerinde nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="5a1ef-105">This article shows how to use <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> along the preceding-sibling axis to find sibling elements that precede a given element, and how to use <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> to find the same elements.</span></span>
 
-## <a name="example-use-two-methods-to-find-sibling-elements-that-precede-an-element"></a><span data-ttu-id="28dd8-106">Örnek: bir öğeden önce gelen eşdüzey öğeleri bulmak için iki yöntem kullanın</span><span class="sxs-lookup"><span data-stu-id="28dd8-106">Example: Use two methods to find sibling elements that precede an element</span></span>
+## <a name="example-use-two-methods-to-find-sibling-elements-that-precede-an-element"></a><span data-ttu-id="5a1ef-106">Örnek: bir öğeden önce gelen eşdüzey öğeleri bulmak için iki yöntem kullanın</span><span class="sxs-lookup"><span data-stu-id="5a1ef-106">Example: Use two methods to find sibling elements that precede an element</span></span>
 
-<span data-ttu-id="28dd8-107">Aşağıdaki örnek, `FullAddress` XML belgesi [örnek xml dosyasında öğesini bulur: müşteriler ve siparişler](sample-xml-file-customers-orders.md)ve önceki eşdüzey öğeleri iki farklı şekilde alır.</span><span class="sxs-lookup"><span data-stu-id="28dd8-107">The following example finds the `FullAddress` element in XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md), and retrieves the preceding sibling elements in two different ways.</span></span> <span data-ttu-id="28dd8-108">Ardından sonuçları karşılaştırır ve özdeş olarak bulur.</span><span class="sxs-lookup"><span data-stu-id="28dd8-108">It then compares the results and finds them identical.</span></span>
+<span data-ttu-id="5a1ef-107">Aşağıdaki örnek, `FullAddress` XML belgesi [örnek xml dosyasında öğesini bulur: müşteriler ve siparişler](sample-xml-file-customers-orders.md)ve önceki eşdüzey öğeleri iki farklı şekilde alır.</span><span class="sxs-lookup"><span data-stu-id="5a1ef-107">The following example finds the `FullAddress` element in XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md), and retrieves the preceding sibling elements in two different ways.</span></span> <span data-ttu-id="5a1ef-108">Ardından sonuçları karşılaştırır ve özdeş olarak bulur.</span><span class="sxs-lookup"><span data-stu-id="5a1ef-108">It then compares the results and finds them identical.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="28dd8-109">Her iki yöntem de belge düzeninde olan sonuçlar sağlar.</span><span class="sxs-lookup"><span data-stu-id="28dd8-109">Both methods provide results that are in document order.</span></span>
+> <span data-ttu-id="5a1ef-109">Her iki yöntem de belge düzeninde olan sonuçlar sağlar.</span><span class="sxs-lookup"><span data-stu-id="5a1ef-109">Both methods provide results that are in document order.</span></span>
 
-<span data-ttu-id="28dd8-110">Kullanılan XPath ifadesi `preceding-sibling::*` .</span><span class="sxs-lookup"><span data-stu-id="28dd8-110">The XPath expression used is `preceding-sibling::*`.</span></span>
+<span data-ttu-id="5a1ef-110">Kullanılan XPath ifadesi `preceding-sibling::*` .</span><span class="sxs-lookup"><span data-stu-id="5a1ef-110">The XPath expression used is `preceding-sibling::*`.</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -68,7 +68,7 @@ For Each el As XElement In list2
 Next
 ```
 
-<span data-ttu-id="28dd8-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="28dd8-111">This example produces the following output:</span></span>
+<span data-ttu-id="5a1ef-111">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="5a1ef-111">This example produces the following output:</span></span>
 
 ```output
 Results are identical
@@ -78,6 +78,6 @@ Results are identical
 <Phone>(503) 555-7555</Phone>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="28dd8-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="28dd8-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a1ef-112">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="5a1ef-112">See also</span></span>
 
-- [<span data-ttu-id="28dd8-113">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28dd8-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="5a1ef-113">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5a1ef-113">LINQ to XML for XPath Users (Visual Basic)</span></span>](./comparison-xpath-linq-xml.md)

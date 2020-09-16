@@ -6,22 +6,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 84b820f3192a173130c485f3e7cdadf9499932f1
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: c575df2e8caa2125091265c00557b91a24601e48
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553190"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549600"
 ---
-# <a name="how-to-find-a-list-of-child-elements-linq-to-xml"></a><span data-ttu-id="d5e09-103">Alt öğelerin bir listesini bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d5e09-103">How to find a list of child elements (LINQ to XML)</span></span>
+# <a name="how-to-find-a-list-of-child-elements-linq-to-xml"></a><span data-ttu-id="f917e-103">Alt öğelerin bir listesini bulma (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f917e-103">How to find a list of child elements (LINQ to XML)</span></span>
 
-<span data-ttu-id="d5e09-104">Bu makalede XPath alt öğeleri ekseni LINQ to XML <xref:System.Xml.Linq.XContainer.Elements%2A> ekseniyle karşılaştırılır.</span><span class="sxs-lookup"><span data-stu-id="d5e09-104">This article compares the XPath child elements axis to the LINQ to XML <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>
+<span data-ttu-id="f917e-104">Bu makalede XPath alt öğeleri ekseni LINQ to XML <xref:System.Xml.Linq.XContainer.Elements%2A> ekseniyle karşılaştırılır.</span><span class="sxs-lookup"><span data-stu-id="f917e-104">This article compares the XPath child elements axis to the LINQ to XML <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>
 
-## <a name="example-find-all-child-elements-of-an-element"></a><span data-ttu-id="d5e09-105">Örnek: bir öğenin tüm alt öğelerini bul</span><span class="sxs-lookup"><span data-stu-id="d5e09-105">Example: Find all child elements of an element</span></span>
+## <a name="example-find-all-child-elements-of-an-element"></a><span data-ttu-id="f917e-105">Örnek: bir öğenin tüm alt öğelerini bul</span><span class="sxs-lookup"><span data-stu-id="f917e-105">Example: Find all child elements of an element</span></span>
 
-<span data-ttu-id="d5e09-106">Bu örnek XML `Address` belgesi örnek XML dosyasındaki öğesinin tüm alt öğelerini bulur [: birden fazla satın alma siparişi](sample-xml-file-multiple-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="d5e09-106">This example finds all of the child elements of the `Address` element in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md).</span></span>
+<span data-ttu-id="f917e-106">Bu örnek XML `Address` belgesi örnek XML dosyasındaki öğesinin tüm alt öğelerini bulur [: birden fazla satın alma siparişi](sample-xml-file-multiple-purchase-orders.md).</span><span class="sxs-lookup"><span data-stu-id="f917e-106">This example finds all of the child elements of the `Address` element in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md).</span></span>
 
-<span data-ttu-id="d5e09-107">XPath ifadesi: `./*`</span><span class="sxs-lookup"><span data-stu-id="d5e09-107">The XPath expression is: `./*`</span></span>
+<span data-ttu-id="f917e-107">XPath ifadesi: `./*`</span><span class="sxs-lookup"><span data-stu-id="f917e-107">The XPath expression is: `./*`</span></span>
 
 ```csharp
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");
@@ -63,7 +63,7 @@ For Each el As XElement In list1
 Next
 ```
 
-<span data-ttu-id="d5e09-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="d5e09-108">This example produces the following output:</span></span>
+<span data-ttu-id="f917e-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="f917e-108">This example produces the following output:</span></span>
 
 ```output
 Results are identical
@@ -75,6 +75,6 @@ Results are identical
 <Country>USA</Country>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d5e09-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="d5e09-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f917e-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="f917e-109">See also</span></span>
 
-- [<span data-ttu-id="d5e09-110">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d5e09-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="f917e-110">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f917e-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](./comparison-xpath-linq-xml.md)

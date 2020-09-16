@@ -2,38 +2,38 @@
 title: 'Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
-ms.openlocfilehash: ee8297c0833378b2b44800355b47db9caa2dc7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b41ce971f14938c7bb04a174dbf6029c564c788
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150525"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90546582"
 ---
-# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="29ccd-102">Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="29ccd-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
-<span data-ttu-id="29ccd-103">Bu konu, Okul veritabanına dayalı aşağıdaki dosyaları oluşturmak için EDM Generator (EdmGen.exe) aracının nasıl kullanılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="29ccd-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
+# <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a><span data-ttu-id="12a18-102">Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyaları Oluşturma</span><span class="sxs-lookup"><span data-stu-id="12a18-102">How to: Use EdmGen.exe to Generate the Model and Mapping Files</span></span>
+<span data-ttu-id="12a18-103">Bu konu, okul veritabanına bağlı olarak aşağıdaki dosyaları oluşturmak için EDM Oluşturucu (EdmGen.exe) aracının nasıl kullanılacağını gösterir:</span><span class="sxs-lookup"><span data-stu-id="12a18-103">This topic shows how to use the EDM Generator (EdmGen.exe) tool to generate the following files based on the School database:</span></span>  
   
-- <span data-ttu-id="29ccd-104">Kavramsal bir model (.csdl dosyası).</span><span class="sxs-lookup"><span data-stu-id="29ccd-104">A conceptual model (a .csdl file).</span></span>  
+- <span data-ttu-id="12a18-104">Kavramsal bir model (. csdl dosyası).</span><span class="sxs-lookup"><span data-stu-id="12a18-104">A conceptual model (a .csdl file).</span></span>  
   
-- <span data-ttu-id="29ccd-105">Depolama modeli (.ssdl dosyası).</span><span class="sxs-lookup"><span data-stu-id="29ccd-105">A storage model (a .ssdl file).</span></span>  
+- <span data-ttu-id="12a18-105">Depolama modeli (. ssdl dosyası).</span><span class="sxs-lookup"><span data-stu-id="12a18-105">A storage model (a .ssdl file).</span></span>  
   
-- <span data-ttu-id="29ccd-106">Kavramsal ve depolama modelleri (.msl dosyası) arasında eşleme.</span><span class="sxs-lookup"><span data-stu-id="29ccd-106">Mapping between the conceptual and storage models (a .msl file).</span></span>  
+- <span data-ttu-id="12a18-106">Kavramsal ve depolama modelleri (bir. msl dosyası) arasında eşleme.</span><span class="sxs-lookup"><span data-stu-id="12a18-106">Mapping between the conceptual and storage models (a .msl file).</span></span>  
   
-- <span data-ttu-id="29ccd-107">Visual Basic veya C#'da nesne katmanı kodu.</span><span class="sxs-lookup"><span data-stu-id="29ccd-107">Object-layer code in Visual Basic or C#.</span></span>  
+- <span data-ttu-id="12a18-107">Visual Basic veya C# ' deki nesne katmanı kodu.</span><span class="sxs-lookup"><span data-stu-id="12a18-107">Object-layer code in Visual Basic or C#.</span></span>  
   
-- <span data-ttu-id="29ccd-108">Dosyaları görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="29ccd-108">View files.</span></span>  
+- <span data-ttu-id="12a18-108">Dosyaları görüntüleyin.</span><span class="sxs-lookup"><span data-stu-id="12a18-108">View files.</span></span>  
   
- <span data-ttu-id="29ccd-109">EdmGen.exe aracı, yukarıda listelenen dosyaları oluşturmak için /mode:FullGeneration kullanır.</span><span class="sxs-lookup"><span data-stu-id="29ccd-109">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="29ccd-110">EdmGen.exe komutları hakkında daha fazla bilgi için [EDM Generator (EdmGen.exe)](edm-generator-edmgen-exe.md)bakın.</span><span class="sxs-lookup"><span data-stu-id="29ccd-110">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](edm-generator-edmgen-exe.md).</span></span>  
+ <span data-ttu-id="12a18-109">EdmGen.exe Aracı, yukarıda listelenen dosyaları oluşturmak için/Mode: FullGeneration kullanır.</span><span class="sxs-lookup"><span data-stu-id="12a18-109">The EdmGen.exe tool uses /mode:FullGeneration to generate the files listed above.</span></span> <span data-ttu-id="12a18-110">EdmGen.exe komutları hakkında daha fazla bilgi için bkz. [EDM Oluşturucu (EdmGen.exe)](edm-generator-edmgen-exe.md).</span><span class="sxs-lookup"><span data-stu-id="12a18-110">For more information about EdmGen.exe commands, see [EDM Generator (EdmGen.exe)](edm-generator-edmgen-exe.md).</span></span>  
   
- <span data-ttu-id="29ccd-111">Modeli ve eşleme dosyalarını oluşturmak için EdmGen.exe kullanıyorsanız, Yine de Entity Framework'i kullanmak için Visual Studio projenizi yapılandırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="29ccd-111">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the Entity Framework.</span></span> <span data-ttu-id="29ccd-112">Daha fazla bilgi için [bkz: Varlık Çerçeve Projesi'ni el ile yapılandırın.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="29ccd-112">For more information, see [How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
+ <span data-ttu-id="12a18-111">Model ve eşleme dosyalarını oluşturmak için EdmGen.exe kullanıyorsanız, yine de Visual Studio projenizi Entity Framework kullanacak şekilde yapılandırmanız gerekir.</span><span class="sxs-lookup"><span data-stu-id="12a18-111">If you use EdmGen.exe to generate the model and mapping files, you still need to configure your Visual Studio project to use the Entity Framework.</span></span> <span data-ttu-id="12a18-112">Daha fazla bilgi için bkz. [nasıl yapılır: el ile Entity Framework projesi yapılandırma](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="12a18-112">For more information, see [How to: Manually Configure an Entity Framework Project](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="29ccd-113">EdmGen.exe tarafından oluşturulan kavramsal bir model veritabanındaki tüm nesneleri içerir.</span><span class="sxs-lookup"><span data-stu-id="29ccd-113">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="29ccd-114">Yalnızca belirli nesneleri içeren kavramsal bir model oluşturmak istiyorsanız, Varlık Veri Modeli Sihirbazı'nı kullanın.</span><span class="sxs-lookup"><span data-stu-id="29ccd-114">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="29ccd-115">Daha fazla bilgi için [bkz: Varlık Veri Modeli Sihirbazı'nı kullanın.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="29ccd-115">For more information, see [How to: Use the Entity Data Model Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
+> <span data-ttu-id="12a18-113">EdmGen.exe tarafından oluşturulan kavramsal bir model, veritabanındaki tüm nesneleri içerir.</span><span class="sxs-lookup"><span data-stu-id="12a18-113">A conceptual model generated by EdmGen.exe includes all the objects in the database.</span></span> <span data-ttu-id="12a18-114">Yalnızca belirli nesneleri içeren kavramsal bir model oluşturmak istiyorsanız Varlık Veri Modeli Sihirbazı ' nı kullanın.</span><span class="sxs-lookup"><span data-stu-id="12a18-114">If you want to generate a conceptual model that includes only specific objects, use the Entity Data Model Wizard.</span></span> <span data-ttu-id="12a18-115">Daha fazla bilgi için bkz. [nasıl yapılır: varlık veri modeli Sihirbazı 'Nı kullanma](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="12a18-115">For more information, see [How to: Use the Entity Data Model Wizard](/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
   
-### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="29ccd-116">EdmGen.exe kullanarak Visual Basic projesi için Okul modelini oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="29ccd-116">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-visual-basic-project-using-edmgenexe"></a><span data-ttu-id="12a18-116">EdmGen.exe kullanarak bir Visual Basic projesi için okul modeli oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="12a18-116">To generate the School model for a Visual Basic project using EdmGen.exe</span></span>  
   
-1. <span data-ttu-id="29ccd-117">Okul veritabanını oluşturun.</span><span class="sxs-lookup"><span data-stu-id="29ccd-117">Create the School database.</span></span> <span data-ttu-id="29ccd-118">Daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="29ccd-118">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1. <span data-ttu-id="12a18-117">Okul veritabanını oluşturun.</span><span class="sxs-lookup"><span data-stu-id="12a18-117">Create the School database.</span></span> <span data-ttu-id="12a18-118">Daha fazla bilgi için bkz. [okul örnek veritabanı oluşturma](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="12a18-118">For more information, see [Creating the School Sample Database](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2. <span data-ttu-id="29ccd-119">Komut isteminde, satır sonları olmadan aşağıdaki komutu uygulayın:</span><span class="sxs-lookup"><span data-stu-id="29ccd-119">At the command prompt, execute the following command without line breaks:</span></span>  
+2. <span data-ttu-id="12a18-119">Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="12a18-119">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration
@@ -41,11 +41,11 @@ ms.locfileid: "79150525"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:VB  
     ```  
   
-### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="29ccd-120">EdmGen.exe kullanarak bir C# projesi için Okul modelini oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="29ccd-120">To generate the School model for a C# project using EdmGen.exe</span></span>  
+### <a name="to-generate-the-school-model-for-a-c-project-using-edmgenexe"></a><span data-ttu-id="12a18-120">EdmGen.exe kullanarak bir C# projesi için okul modeli oluşturmak için</span><span class="sxs-lookup"><span data-stu-id="12a18-120">To generate the School model for a C# project using EdmGen.exe</span></span>  
   
-1. <span data-ttu-id="29ccd-121">Okul veritabanını oluşturun.</span><span class="sxs-lookup"><span data-stu-id="29ccd-121">Create the School database.</span></span> <span data-ttu-id="29ccd-122">Daha fazla bilgi için [bkz.](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="29ccd-122">For more information, see [Creating the School Sample Database](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
+1. <span data-ttu-id="12a18-121">Okul veritabanını oluşturun.</span><span class="sxs-lookup"><span data-stu-id="12a18-121">Create the School database.</span></span> <span data-ttu-id="12a18-122">Daha fazla bilgi için bkz. [okul örnek veritabanı oluşturma](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="12a18-122">For more information, see [Creating the School Sample Database](/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)).</span></span>  
   
-2. <span data-ttu-id="29ccd-123">Komut isteminde, satır sonları olmadan aşağıdaki komutu uygulayın:</span><span class="sxs-lookup"><span data-stu-id="29ccd-123">At the command prompt, execute the following command without line breaks:</span></span>  
+2. <span data-ttu-id="12a18-123">Komut isteminde, satır sonları olmadan aşağıdaki komutu yürütün:</span><span class="sxs-lookup"><span data-stu-id="12a18-123">At the command prompt, execute the following command without line breaks:</span></span>  
   
     ```console  
     "%windir%\Microsoft.NET\Framework\v4.0.30319\edmgen.exe" /mode:fullgeneration
@@ -53,10 +53,10 @@ ms.locfileid: "79150525"
     /project:School /entitycontainer:SchoolEntities /namespace:SchoolModel /language:CSharp  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="29ccd-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="29ccd-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="12a18-124">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="12a18-124">See also</span></span>
 
-- [<span data-ttu-id="29ccd-125">Modelleme ve Eşleme</span><span class="sxs-lookup"><span data-stu-id="29ccd-125">Modeling and Mapping</span></span>](modeling-and-mapping.md)
-- <span data-ttu-id="29ccd-126">[Nasıl?](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="29ccd-126">[How to: Manually Configure an Entity Framework Project](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span></span>
-- <span data-ttu-id="29ccd-127">[Nasıl yapilir: Sorgu Performansını Artırmak için Görünümleri Önceden Oluşturma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="29ccd-127">[How to: Pre-Generate Views to Improve Query Performance](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span></span>
-- <span data-ttu-id="29ccd-128">[ADO.NET Varlık Veri Modeli Araçları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="29ccd-128">[ADO.NET Entity Data Model Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
-- [<span data-ttu-id="29ccd-129">Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama</span><span class="sxs-lookup"><span data-stu-id="29ccd-129">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+- [<span data-ttu-id="12a18-125">Modelleme ve Eşleme</span><span class="sxs-lookup"><span data-stu-id="12a18-125">Modeling and Mapping</span></span>](modeling-and-mapping.md)
+- <span data-ttu-id="12a18-126">[Nasıl yapılır: Entity Framework projesi El Ile yapılandırma](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="12a18-126">[How to: Manually Configure an Entity Framework Project](/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))</span></span>
+- <span data-ttu-id="12a18-127">[Nasıl yapılır: sorgu performansını artırmak için görünümleri önceden oluşturma](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="12a18-127">[How to: Pre-Generate Views to Improve Query Performance](/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))</span></span>
+- <span data-ttu-id="12a18-128">[ADO.NET Varlık Veri Modeli araçları](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="12a18-128">[ADO.NET Entity Data Model Tools](/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))</span></span>
+- [<span data-ttu-id="12a18-129">Nasıl yapılır: EdmGen.exe kullanarak Model ve Eşleme Dosyalarını Doğrulama</span><span class="sxs-lookup"><span data-stu-id="12a18-129">How to: Use EdmGen.exe to Validate Model and Mapping Files</span></span>](how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
