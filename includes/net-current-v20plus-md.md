@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65629886"
 ---
-<span data-ttu-id="77f41-101">2.0 sürümünden itibaren kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="77f41-101">Available since 2.0</span></span>
+<span data-ttu-id="b5302-101">2.0 sürümünden itibaren kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="b5302-101">Available since 2.0</span></span>

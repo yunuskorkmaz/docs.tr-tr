@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: c4be649a5f35f7e9cbe65332a60b1c8aeb2a66ea
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: c92258fa9501aeeee46fe664cc4436f9349ff232
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553533"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558127"
 ---
-# <a name="how-to-control-the-type-of-a-projection-linq-to-xml"></a><span data-ttu-id="a793f-103">Projeksiyon türünü denetleme (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a793f-103">How to control the type of a projection (LINQ to XML)</span></span>
+# <a name="how-to-control-the-type-of-a-projection-linq-to-xml"></a><span data-ttu-id="dae3d-103">Projeksiyon türünü denetleme (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="dae3d-103">How to control the type of a projection (LINQ to XML)</span></span>
 
-<span data-ttu-id="a793f-104">*Projeksiyon* , bir veri kümesini filtreleme, şeklini ve belki de türünü değiştirme işlemidir.</span><span class="sxs-lookup"><span data-stu-id="a793f-104">*Projection* is the process of filtering a set of data, changing its shape and perhaps its type.</span></span> <span data-ttu-id="a793f-105">Çoğu sorgu ifadesi projeksiyonlardır.</span><span class="sxs-lookup"><span data-stu-id="a793f-105">Most query expressions do projections.</span></span> <span data-ttu-id="a793f-106">Bu bölümdeki sorgu ifadelerinin çoğu olarak değerlendirilir <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> , ancak başka türlerde koleksiyonlar oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="a793f-106">Most of the query expressions in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can create collections of other types.</span></span> <span data-ttu-id="a793f-107">Bu makalede bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="a793f-107">This article shows how to do this.</span></span>
+<span data-ttu-id="dae3d-104">*Projeksiyon* , bir veri kümesini filtreleme, şeklini ve belki de türünü değiştirme işlemidir.</span><span class="sxs-lookup"><span data-stu-id="dae3d-104">*Projection* is the process of filtering a set of data, changing its shape and perhaps its type.</span></span> <span data-ttu-id="dae3d-105">Çoğu sorgu ifadesi projeksiyonlardır.</span><span class="sxs-lookup"><span data-stu-id="dae3d-105">Most query expressions do projections.</span></span> <span data-ttu-id="dae3d-106">Bu bölümdeki sorgu ifadelerinin çoğu olarak değerlendirilir <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement> , ancak başka türlerde koleksiyonlar oluşturabilirsiniz.</span><span class="sxs-lookup"><span data-stu-id="dae3d-106">Most of the query expressions in this section evaluate to <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, but you can create collections of other types.</span></span> <span data-ttu-id="dae3d-107">Bu makalede bunun nasıl yapılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="dae3d-107">This article shows how to do this.</span></span>
 
-## <a name="example-define-a-new-type-and-create-a-query-that-creates-an-ienumerable-of-that-type"></a><span data-ttu-id="a793f-108">Örnek: yeni bir tür tanımlayın ve bu türden bir IEnumerable oluşturan bir sorgu oluşturun</span><span class="sxs-lookup"><span data-stu-id="a793f-108">Example: Define a new type and create a query that creates an IEnumerable of that type</span></span>
+## <a name="example-define-a-new-type-and-create-a-query-that-creates-an-ienumerable-of-that-type"></a><span data-ttu-id="dae3d-108">Örnek: yeni bir tür tanımlayın ve bu türden bir IEnumerable oluşturan bir sorgu oluşturun</span><span class="sxs-lookup"><span data-stu-id="dae3d-108">Example: Define a new type and create a query that creates an IEnumerable of that type</span></span>
 
-<span data-ttu-id="a793f-109">Aşağıdaki örnek yeni bir türü tanımlar, `Customer` ve sorgu ifadesi `Customer` yan tümcesindeki yeni nesneleri örnekleyen `Select` .</span><span class="sxs-lookup"><span data-stu-id="a793f-109">The following example defines a new type, `Customer`, and the query expression instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="a793f-110">Bu, sorgu ifadesinin türünün olmasına neden olur <xref:System.Collections.Generic.IEnumerable%601> `Customer` .</span><span class="sxs-lookup"><span data-stu-id="a793f-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span> <span data-ttu-id="a793f-111">Örnek, XML belgesi [örnek xml dosyasını kullanır: müşteriler ve siparişler](sample-xml-file-customers-orders.md).</span><span class="sxs-lookup"><span data-stu-id="a793f-111">The example uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
+<span data-ttu-id="dae3d-109">Aşağıdaki örnek yeni bir türü tanımlar, `Customer` ve sorgu ifadesi `Customer` yan tümcesindeki yeni nesneleri örnekleyen `Select` .</span><span class="sxs-lookup"><span data-stu-id="dae3d-109">The following example defines a new type, `Customer`, and the query expression instantiates new `Customer` objects in the `Select` clause.</span></span> <span data-ttu-id="dae3d-110">Bu, sorgu ifadesinin türünün olmasına neden olur <xref:System.Collections.Generic.IEnumerable%601> `Customer` .</span><span class="sxs-lookup"><span data-stu-id="dae3d-110">This causes the type of the query expression to be <xref:System.Collections.Generic.IEnumerable%601> of `Customer`.</span></span> <span data-ttu-id="dae3d-111">Örnek, XML belgesi [örnek xml dosyasını kullanır: müşteriler ve siparişler](sample-xml-file-customers-orders.md).</span><span class="sxs-lookup"><span data-stu-id="dae3d-111">The example uses XML document [Sample XML file: Customers and orders](sample-xml-file-customers-orders.md).</span></span>
 
 ```csharp
 public class Customer
@@ -126,7 +126,7 @@ Sub Main()
 End Sub
 ```
 
-<span data-ttu-id="a793f-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="a793f-112">This example produces the following output:</span></span>
+<span data-ttu-id="dae3d-112">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="dae3d-112">This example produces the following output:</span></span>
 
 ```output
 GREAL:Great Lakes Food Market:Howard Snyder
@@ -135,7 +135,7 @@ LAZYK:Lazy K Kountry Store:John Steel
 LETSS:Let's Stop N Shop:Jaime Yorres
 ```
 
-## <a name="see-also"></a><span data-ttu-id="a793f-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a793f-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dae3d-113">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="dae3d-113">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [<span data-ttu-id="a793f-114">Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a793f-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="dae3d-114">Tahminler ve dönüşümler (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dae3d-114">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](./work-dictionaries-linq-xml.md)

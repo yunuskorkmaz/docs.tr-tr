@@ -11,18 +11,18 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9aadf9701444d215291b6fc19cc8cd61ca832837
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a276ecfe65ed9752f39ed68a36e8e17a24255508
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452246"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90558322"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a><span data-ttu-id="1da28-102">ICorProfilerInfo10:: EnumerateObjectReferences yöntemi</span><span class="sxs-lookup"><span data-stu-id="1da28-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span></span>
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a><span data-ttu-id="abca9-102">ICorProfilerInfo10:: EnumerateObjectReferences yöntemi</span><span class="sxs-lookup"><span data-stu-id="abca9-102">ICorProfilerInfo10::EnumerateObjectReferences Method</span></span>
 
-<span data-ttu-id="1da28-103">Bir ObjectID, callback ve clientData verildiğinde, her nesne başvurusunu (varsa) numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="1da28-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span></span>
+<span data-ttu-id="abca9-103">Bir ObjectID, callback ve clientData verildiğinde, her nesne başvurusunu (varsa) numaralandırır.</span><span class="sxs-lookup"><span data-stu-id="abca9-103">Given an ObjectID, callback and clientData, enumerates each object reference (if any).</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="1da28-104">Sözdizimi</span><span class="sxs-lookup"><span data-stu-id="1da28-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="abca9-104">Söz dizimi</span><span class="sxs-lookup"><span data-stu-id="abca9-104">Syntax</span></span>
 
 ```cpp
 HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
@@ -30,34 +30,34 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-## <a name="parameters"></a><span data-ttu-id="1da28-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="1da28-105">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="abca9-105">Parametreler</span><span class="sxs-lookup"><span data-stu-id="abca9-105">Parameters</span></span>
 
 - `objectId`
 
-  <span data-ttu-id="1da28-106">\[içinde] başvuruların numaralandırılacağı nesne.</span><span class="sxs-lookup"><span data-stu-id="1da28-106">\[in] The object to enumerate references on.</span></span>
+  <span data-ttu-id="abca9-106">\[içinde] başvuruların numaralandırılacağı nesne.</span><span class="sxs-lookup"><span data-stu-id="abca9-106">\[in] The object to enumerate references on.</span></span>
 
 - `callback`
 
-  <span data-ttu-id="1da28-107">\[içinde] nesnenin başvuruları ile çağrılacak işlev.</span><span class="sxs-lookup"><span data-stu-id="1da28-107">\[in] The function that will be called with the references for the object.</span></span>
+  <span data-ttu-id="abca9-107">\[içinde] nesnenin başvuruları ile çağrılacak işlev.</span><span class="sxs-lookup"><span data-stu-id="abca9-107">\[in] The function that will be called with the references for the object.</span></span>
 
 - `clientData`
 
-  <span data-ttu-id="1da28-108">\[Profiler-`callback` işlevine geçirilecek verileri sağladı.</span><span class="sxs-lookup"><span data-stu-id="1da28-108">\[in] Profiler-provided data to pass to the `callback` function.</span></span>
+  <span data-ttu-id="abca9-108">\[içinde] profil oluşturucu-işleve geçirilecek veriler `callback` .</span><span class="sxs-lookup"><span data-stu-id="abca9-108">\[in] Profiler-provided data to pass to the `callback` function.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="1da28-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="1da28-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="abca9-109">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="abca9-109">Remarks</span></span>
 
-<span data-ttu-id="1da28-110">`EnumerateObjectReferences` yöntemi [nesne başvurularına](icorprofilercallback-objectreferences-method.md)benzerdir, ancak başvuruları depolamak için bir diziyi önceden ayırmak yerine, Profil Oluşturucu için isteğe bağlı başvuruları açıklar.</span><span class="sxs-lookup"><span data-stu-id="1da28-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span></span>
+<span data-ttu-id="abca9-110">`EnumerateObjectReferences`Yöntemi, başvuruları depolamak için bir diziyi önceden ayırmak yerine profil Oluşturucu için isteğe bağlı başvuruları göstermesi dışında, [ObjectReferences](icorprofilercallback-objectreferences-method.md)'a benzerdir.</span><span class="sxs-lookup"><span data-stu-id="abca9-110">The `EnumerateObjectReferences` method is similar to [ObjectReferences](icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="1da28-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="1da28-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="abca9-111">Gereksinimler</span><span class="sxs-lookup"><span data-stu-id="abca9-111">Requirements</span></span>
 
-<span data-ttu-id="1da28-112">**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/dependencies.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="1da28-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?pivots=os-windows).</span></span>
+<span data-ttu-id="abca9-112">**Platformlar:** Bkz. [.NET Core desteklenen işletim sistemleri](../../../core/install/windows.md?pivots=os-windows).</span><span class="sxs-lookup"><span data-stu-id="abca9-112">**Platforms:** See [.NET Core supported operating systems](../../../core/install/windows.md?pivots=os-windows).</span></span>
 
-<span data-ttu-id="1da28-113">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="1da28-113">**Header:** CorProf.idl, CorProf.h</span></span>
+<span data-ttu-id="abca9-113">**Üst bilgi:** CorProf. IDL, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="abca9-113">**Header:** CorProf.idl, CorProf.h</span></span>
 
-<span data-ttu-id="1da28-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="1da28-114">**Library:** CorGuids.lib</span></span>
+<span data-ttu-id="abca9-114">**Kitaplık:** Corguid. lib</span><span class="sxs-lookup"><span data-stu-id="abca9-114">**Library:** CorGuids.lib</span></span>
 
-<span data-ttu-id="1da28-115">**.NET sürümleri:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1da28-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
+<span data-ttu-id="abca9-115">**.NET sürümleri:**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abca9-115">**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1da28-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="1da28-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="abca9-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="abca9-116">See also</span></span>
 
-- [<span data-ttu-id="1da28-117">ICorProfilerInfo10 arabirimi</span><span class="sxs-lookup"><span data-stu-id="1da28-117">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
+- [<span data-ttu-id="abca9-117">ICorProfilerInfo10 Arabirimi</span><span class="sxs-lookup"><span data-stu-id="abca9-117">ICorProfilerInfo10 Interface</span></span>](icorprofilerinfo10-interface.md)
