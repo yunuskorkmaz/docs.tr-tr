@@ -6,20 +6,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 51867cefcdfc42812d4003fb669c11751fb3ca34
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 7d90e047983db1f024884168490e202ed42a85c8
+ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89552908"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90679475"
 ---
-# <a name="how-to-filter-on-an-attribute-linq-to-xml"></a><span data-ttu-id="8219e-103">Bir özniteliğe filtre uygulama (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="8219e-103">How to filter on an attribute (LINQ to XML)</span></span>
+# <a name="how-to-filter-on-an-attribute-linq-to-xml"></a><span data-ttu-id="ad4d4-103">Bir özniteliğe filtre uygulama (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ad4d4-103">How to filter on an attribute (LINQ to XML)</span></span>
 
-<span data-ttu-id="8219e-104">Bu makalede, belirtilen bir ad ve öznitelik değerine sahip olan alt öğeleri bulmak için C# ve Visual Basic ' de LINQ to XML sorgusunun ve XPath 'in nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="8219e-104">This article shows how to use LINQ to XML query and XPath, in C# and Visual Basic, to find descendant elements that have a specified name and attribute value.</span></span>
+<span data-ttu-id="ad4d4-104">Bu makalede, belirtilen bir ad ve öznitelik değerine sahip olan alt öğeleri bulmak için C# ve Visual Basic ' de LINQ to XML sorgusunun ve XPath 'in nasıl kullanılacağı gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="ad4d4-104">This article shows how to use LINQ to XML query and XPath, in C# and Visual Basic, to find descendant elements that have a specified name and attribute value.</span></span>
 
-## <a name="example-find-all-descendant-elements-that-have-a-specified-name-and-attribute-value"></a><span data-ttu-id="8219e-105">Örnek: belirtilen bir ad ve öznitelik değerine sahip tüm alt öğeleri bul</span><span class="sxs-lookup"><span data-stu-id="8219e-105">Example: Find all descendant elements that have a specified name and attribute value</span></span>
+## <a name="example-find-all-descendant-elements-that-have-a-specified-name-and-attribute-value"></a><span data-ttu-id="ad4d4-105">Örnek: belirtilen bir ad ve öznitelik değerine sahip tüm alt öğeleri bul</span><span class="sxs-lookup"><span data-stu-id="ad4d4-105">Example: Find all descendant elements that have a specified name and attribute value</span></span>
 
-<span data-ttu-id="8219e-106">Bu örnek, XML belgesi örnek XML dosyasında bulunacak LINQ to XML sorgu ve XPath kullanır [: birden fazla satın alma siparişi](sample-xml-file-multiple-purchase-orders.md), adı olan tüm alt öğeler `Address` ve `Type` değeri "Shipping" olan bir özniteliği.</span><span class="sxs-lookup"><span data-stu-id="8219e-106">This example uses LINQ to XML query and XPath to find, in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md), all descendant elements that have the name `Address`, and a `Type` attribute whose value is "Shipping".</span></span> <span data-ttu-id="8219e-107">XPath ifadesi `.//Address[@Type='Shipping']`</span><span class="sxs-lookup"><span data-stu-id="8219e-107">The XPath expression is `.//Address[@Type='Shipping']`</span></span>
+<span data-ttu-id="ad4d4-106">Bu örnek, XML belgesi örnek XML dosyasında bulunacak LINQ to XML sorgu ve XPath kullanır [: birden fazla satın alma siparişi](sample-xml-file-multiple-purchase-orders.md), adı olan tüm alt öğeler `Address` ve `Type` değeri "Shipping" olan bir özniteliği.</span><span class="sxs-lookup"><span data-stu-id="ad4d4-106">This example uses LINQ to XML query and XPath to find, in XML document [Sample XML file: Multiple purchase orders](sample-xml-file-multiple-purchase-orders.md), all descendant elements that have the name `Address`, and a `Type` attribute whose value is "Shipping".</span></span> <span data-ttu-id="ad4d4-107">XPath ifadesi `.//Address[@Type='Shipping']`</span><span class="sxs-lookup"><span data-stu-id="ad4d4-107">The XPath expression is `.//Address[@Type='Shipping']`</span></span>
 
 ```csharp
 XDocument po = XDocument.Load("PurchaseOrders.xml");
@@ -66,7 +66,7 @@ For Each el As XElement In list1
 Next
 ```
 
-<span data-ttu-id="8219e-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="8219e-108">This example produces the following output:</span></span>
+<span data-ttu-id="ad4d4-108">Bu örnek aşağıdaki çıktıyı üretir:</span><span class="sxs-lookup"><span data-stu-id="ad4d4-108">This example produces the following output:</span></span>
 
 ```output
 Results are identical
@@ -96,6 +96,6 @@ Results are identical
 </Address>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="8219e-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="8219e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad4d4-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="ad4d4-109">See also</span></span>
 
-- [<span data-ttu-id="8219e-110">XPath kullanıcıları için LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8219e-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](/../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="ad4d4-110">XPath ile LINQ to XML Karşılaştırması</span><span class="sxs-lookup"><span data-stu-id="ad4d4-110">Comparison of XPath and LINQ to XML</span></span>](comparison-xpath-linq-xml.md)

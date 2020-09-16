@@ -6,4 +6,4 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/21/2019
 ms.locfileid: "69661206"
 ---
-<span data-ttu-id="57f3e-101">.NET Core 3,0 sürümünden itibaren kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="57f3e-101">Available since .NET Core 3.0</span></span>
+<span data-ttu-id="aa508-101">.NET Core 3,0 sürümünden itibaren kullanılabilir</span><span class="sxs-lookup"><span data-stu-id="aa508-101">Available since .NET Core 3.0</span></span>

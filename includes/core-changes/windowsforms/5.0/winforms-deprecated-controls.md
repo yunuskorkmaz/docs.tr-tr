@@ -6,15 +6,15 @@ ms.contentlocale: tr-TR
 ms.lasthandoff: 08/04/2020
 ms.locfileid: "87556259"
 ---
-### <a name="removed-status-bar-controls"></a><span data-ttu-id="95dcc-101">Durum çubuğu denetimleri kaldırıldı</span><span class="sxs-lookup"><span data-stu-id="95dcc-101">Removed status bar controls</span></span>
+### <a name="removed-status-bar-controls"></a><span data-ttu-id="7b4de-101">Durum çubuğu denetimleri kaldırıldı</span><span class="sxs-lookup"><span data-stu-id="7b4de-101">Removed status bar controls</span></span>
 
-<span data-ttu-id="95dcc-102">.NET 5,0 ' den başlayarak bazı Windows Forms denetimleri artık kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="95dcc-102">Starting in .NET 5.0, some Windows Forms controls are no longer available.</span></span>
+<span data-ttu-id="7b4de-102">.NET 5,0 ' den başlayarak bazı Windows Forms denetimleri artık kullanılamaz.</span><span class="sxs-lookup"><span data-stu-id="7b4de-102">Starting in .NET 5.0, some Windows Forms controls are no longer available.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="95dcc-103">Açıklamayı Değiştir</span><span class="sxs-lookup"><span data-stu-id="95dcc-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="7b4de-103">Açıklamayı Değiştir</span><span class="sxs-lookup"><span data-stu-id="7b4de-103">Change description</span></span>
 
-<span data-ttu-id="95dcc-104">.NET 5,0 ile başlayarak, durum çubuğu ile ilgili Windows Forms denetimlerinin bazıları artık kullanılamıyor.</span><span class="sxs-lookup"><span data-stu-id="95dcc-104">Starting with .NET 5.0, some of the status bar-related Windows Forms controls are no longer available.</span></span> <span data-ttu-id="95dcc-105">Daha iyi tasarım ve destek içeren değiştirme denetimleri .NET Framework 2,0 ' de sunulmuştur.</span><span class="sxs-lookup"><span data-stu-id="95dcc-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="95dcc-106">Kullanım dışı bırakılan denetimler daha önce Tasarımcı araç kutularından kaldırılmıştır ancak yine de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="95dcc-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span> <span data-ttu-id="95dcc-107">Şimdi tamamen kaldırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="95dcc-107">Now, they have been completely removed.</span></span>
+<span data-ttu-id="7b4de-104">.NET 5,0 ile başlayarak, durum çubuğu ile ilgili Windows Forms denetimlerinin bazıları artık kullanılamıyor.</span><span class="sxs-lookup"><span data-stu-id="7b4de-104">Starting with .NET 5.0, some of the status bar-related Windows Forms controls are no longer available.</span></span> <span data-ttu-id="7b4de-105">Daha iyi tasarım ve destek içeren değiştirme denetimleri .NET Framework 2,0 ' de sunulmuştur.</span><span class="sxs-lookup"><span data-stu-id="7b4de-105">Replacement controls that have better design and support were introduced in .NET Framework 2.0.</span></span> <span data-ttu-id="7b4de-106">Kullanım dışı bırakılan denetimler daha önce Tasarımcı araç kutularından kaldırılmıştır ancak yine de kullanılabilir.</span><span class="sxs-lookup"><span data-stu-id="7b4de-106">The deprecated controls were previously removed from designer toolboxes but were still available to be used.</span></span> <span data-ttu-id="7b4de-107">Şimdi tamamen kaldırılmıştır.</span><span class="sxs-lookup"><span data-stu-id="7b4de-107">Now, they have been completely removed.</span></span>
 
-<span data-ttu-id="95dcc-108">Aşağıdaki türler artık kullanılamaz:</span><span class="sxs-lookup"><span data-stu-id="95dcc-108">The following types are no longer available:</span></span>
+<span data-ttu-id="7b4de-108">Aşağıdaki türler artık kullanılamaz:</span><span class="sxs-lookup"><span data-stu-id="7b4de-108">The following types are no longer available:</span></span>
 
 * `StatusBar`
 * `StatusBarDrawItemEventArgs`
@@ -26,24 +26,24 @@ ms.locfileid: "87556259"
 * `StatusBarPanelClickEventHandler`
 * `StatusBarPanelStyle`
 
-#### <a name="version-introduced"></a><span data-ttu-id="95dcc-109">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="95dcc-109">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="7b4de-109">Sunulan sürüm</span><span class="sxs-lookup"><span data-stu-id="7b4de-109">Version introduced</span></span>
 
-<span data-ttu-id="95dcc-110">5,0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="95dcc-110">5.0 Preview 1</span></span>
+<span data-ttu-id="7b4de-110">5,0 Preview 1</span><span class="sxs-lookup"><span data-stu-id="7b4de-110">5.0 Preview 1</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="95dcc-111">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="95dcc-111">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="7b4de-111">Önerilen eylem</span><span class="sxs-lookup"><span data-stu-id="7b4de-111">Recommended action</span></span>
 
-<span data-ttu-id="95dcc-112">Bu denetimler ve bunların senaryoları için değiştirme API 'Lerine geçin:</span><span class="sxs-lookup"><span data-stu-id="95dcc-112">Move to the replacement APIs for these controls and their scenarios:</span></span>
+<span data-ttu-id="7b4de-112">Bu denetimler ve bunların senaryoları için değiştirme API 'Lerine geçin:</span><span class="sxs-lookup"><span data-stu-id="7b4de-112">Move to the replacement APIs for these controls and their scenarios:</span></span>
 
-| <span data-ttu-id="95dcc-113">Eski denetim (API)</span><span class="sxs-lookup"><span data-stu-id="95dcc-113">Old Control (API)</span></span> | <span data-ttu-id="95dcc-114">Önerilen değiştirme</span><span class="sxs-lookup"><span data-stu-id="95dcc-114">Recommended Replacement</span></span>                          |
+| <span data-ttu-id="7b4de-113">Eski denetim (API)</span><span class="sxs-lookup"><span data-stu-id="7b4de-113">Old Control (API)</span></span> | <span data-ttu-id="7b4de-114">Önerilen değiştirme</span><span class="sxs-lookup"><span data-stu-id="7b4de-114">Recommended Replacement</span></span>                          |
 |-------------------|--------------------------------------------------|
-| <span data-ttu-id="95dcc-115">StatusBar</span><span class="sxs-lookup"><span data-stu-id="95dcc-115">StatusBar</span></span>         | <xref:System.Windows.Forms.StatusStrip>          |
-| <span data-ttu-id="95dcc-116">StatusBarPanel</span><span class="sxs-lookup"><span data-stu-id="95dcc-116">StatusBarPanel</span></span>    | <xref:System.Windows.Forms.ToolStripStatusLabel> |
+| <span data-ttu-id="7b4de-115">StatusBar</span><span class="sxs-lookup"><span data-stu-id="7b4de-115">StatusBar</span></span>         | <xref:System.Windows.Forms.StatusStrip>          |
+| <span data-ttu-id="7b4de-116">StatusBarPanel</span><span class="sxs-lookup"><span data-stu-id="7b4de-116">StatusBarPanel</span></span>    | <xref:System.Windows.Forms.ToolStripStatusLabel> |
 
-#### <a name="category"></a><span data-ttu-id="95dcc-117">Kategori</span><span class="sxs-lookup"><span data-stu-id="95dcc-117">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="7b4de-117">Kategori</span><span class="sxs-lookup"><span data-stu-id="7b4de-117">Category</span></span>
 
-<span data-ttu-id="95dcc-118">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="95dcc-118">Windows Forms</span></span>
+<span data-ttu-id="7b4de-118">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="7b4de-118">Windows Forms</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="95dcc-119">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="95dcc-119">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="7b4de-119">Etkilenen API’ler</span><span class="sxs-lookup"><span data-stu-id="7b4de-119">Affected APIs</span></span>
 
 - <xref:System.Windows.Forms.StatusBar?displayProperty=fullName>
 - <xref:System.Windows.Forms.StatusBarDrawItemEventArgs?displayProperty=fullName>
