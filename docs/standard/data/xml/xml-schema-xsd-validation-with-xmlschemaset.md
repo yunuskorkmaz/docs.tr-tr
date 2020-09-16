@@ -8,12 +8,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 995323d1882da13d45cdac516518d5b67845715a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 5963ba1b382740b1774c944b74c6a54b13db4f76
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84594510"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554521"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet ile XML şeması (XSD) doğrulaması
 
@@ -23,7 +23,7 @@ XML belgeleri, bir XML şeması tanım dili (XSD) şemasına göre doğrulanabil
  XML belgeleri, <xref:System.Xml.XmlReader.Create%2A> sınıfının yöntemi tarafından onaylanır <xref:System.Xml.XmlReader> . XML belgesini doğrulamak için, XML <xref:System.Xml.XmlReaderSettings> belgesi doğrulanacak BIR XML şeması tanım dili (xsd) şeması içeren bir nesne oluşturun.  
   
 > [!NOTE]
-> <xref:System.Xml.Schema>Ad alanı, [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) ve [LINQ to XML (VISUAL BASIC)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)kullanırken bir xml ağacının xsd dosyasına karşı doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. LINQ to XML ile XML belgelerinin doğrulanması hakkında daha fazla bilgi için bkz. [xsd (LINQ to XML) (C#)](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) ve [nasıl yapılır: XSD kullanarak doğrulama (LINQ to XML) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md).
+> <xref:System.Xml.Schema>Ad alanı, [LINQ to XML (C#)](../../linq/linq-xml-overview.md) ve [LINQ to XML (VISUAL BASIC)](../../linq/linq-xml-overview.md)kullanırken bir xml ağacının xsd dosyasına karşı doğrulanmasını kolaylaştıran uzantı yöntemleri içerir. LINQ to XML ile XML belgelerinin doğrulanması hakkında daha fazla bilgi için bkz. [xsd (LINQ to XML) (C#)](../../linq/validate-xsd.md) ve [nasıl yapılır: XSD kullanarak doğrulama (LINQ to XML) (Visual Basic)](../../linq/validate-xsd.md).
   
  Tek bir şema veya bir şema kümesi (olarak <xref:System.Xml.Schema.XmlSchemaSet> ) öğesine bir <xref:System.Xml.Schema.XmlSchemaSet> parametre olarak bir parametresi geçirerek öğesine eklenebilir <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> <xref:System.Xml.Schema.XmlSchemaSet> . Bir belge doğrulanırken, belgenin hedef ad alanı, şema kümesindeki şemanın hedef ad alanıyla aynı olmalıdır.  
   

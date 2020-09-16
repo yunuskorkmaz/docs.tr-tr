@@ -13,12 +13,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: 03d2cacea4d2c0e7452240df30350d93ce79282d
-ms.sourcegitcommit: 1e8382d0ce8b5515864f8fbb178b9fd692a7503f
+ms.openlocfilehash: 11ac4277081392b1e7ac79147f621ff67d699fe5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89656151"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555308"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Derleme Yükleme için En İyi Yöntemler
 Bu makalede <xref:System.InvalidCastException> ,, ve diğer hatalara yol açabilecek kimlik tür sorunlarından kaçınmanın yolları anlatılmaktadır <xref:System.MissingMethodException> . Makalede aşağıdaki öneriler ele alınmaktadır:  
@@ -153,7 +153,7 @@ Bu makalede <xref:System.InvalidCastException> ,, ve diğer hatalara yol açabil
  Tüm derlemelerinizi yoklama yoluna koymak mümkün değilse, .NET Framework eklenti modelini kullanma, derlemeleri genel derleme önbelleğine yerleştirme veya uygulama etki alanları oluşturma gibi alternatifleri göz önünde bulundurun.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>.NET Framework eklentisi modelini kullanmayı düşünün  
- Genellikle uygulama tabanında yüklenmeyen eklentileri uygulamak için Load-from bağlamını kullanıyorsanız, .NET Framework eklenti modelini kullanın. Bu model uygulama etki alanı veya işlem düzeyinde yalıtım sağlar, böylece uygulama etki alanlarını kendiniz yönetmenizi zorunlu değildir. Eklenti modeli hakkında daha fazla bilgi için bkz. eklentiler [ve genişletilebilirlik](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
+ Genellikle uygulama tabanında yüklenmeyen eklentileri uygulamak için Load-from bağlamını kullanıyorsanız, .NET Framework eklenti modelini kullanın. Bu model uygulama etki alanı veya işlem düzeyinde yalıtım sağlar, böylece uygulama etki alanlarını kendiniz yönetmenizi zorunlu değildir. Eklenti modeli hakkında daha fazla bilgi için bkz. eklentiler [ve genişletilebilirlik](/previous-versions/dotnet/netframework-4.0/bb384200(v=vs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Genel derleme önbelleğini kullanmayı düşünün  
  Varsayılan Yük bağlamının avantajlarını kaybetmeden veya diğer bağlamların dezavantajlarını kaybetmeksizin, uygulama tabanının dışında paylaşılan bir derleme yolunun avantajlarından yararlanmak için bütünleştirilmiş kodları genel derleme önbelleğine yerleştirin.  

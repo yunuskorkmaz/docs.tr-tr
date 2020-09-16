@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 273c688d7e9d3fb86d4baece75193ce6d112b62f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 97602b7341636219382b6a405c678bc458ef146a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404920"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556752"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic'de LINQ'e Giriş
 Dil ile tümleşik sorgu (LINQ) Visual Basic 'e sorgu özellikleri ekler ve tüm veri türleriyle çalışırken basit ve güçlü yetenekler sağlar. İşlenecek bir veritabanına sorgu göndermek veya arama yaptığınız her veri türü için farklı sorgu söz dizimiyle çalışmak yerine, LINQ sorguları Visual Basic dilinin bir parçası olarak tanıtır. Veri türünden bağımsız olarak Birleşik bir sözdizimi kullanır.  
@@ -180,7 +180,7 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
  Adım adım yönergelere sahip örnekler için bkz. [nasıl yapılır: sorgu sorgulama](how-to-query-a-database-by-using-linq.md) ve [nasıl yapılır: saklı yordam çağırma](how-to-call-a-stored-procedure-by-using-linq.md).  
   
 ## <a name="visual-basic-features-that-support-linq"></a>LINQ 'i destekleyen Visual Basic özellikleri  
- Visual Basic, LINQ Simple kullanımını yapan ve LINQ sorguları gerçekleştirmek için yazmanız gereken kod miktarını azaltan diğer önemli özellikleri içerir. Bunlar aşağıdakileri içerir:  
+ Visual Basic, LINQ Simple kullanımını yapan ve LINQ sorguları gerçekleştirmek için yazmanız gereken kod miktarını azaltan diğer önemli özellikleri içerir. Bu araçlar şunlardır:  
   
 - Bir sorgu sonucuna dayalı yeni bir tür oluşturmanıza olanak sağlayan **anonim türler**.  
   
@@ -213,7 +213,7 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
   
 ## <a name="related-resources"></a>İlgili kaynaklar  
   
-|Konu başlığı|Description|  
+|Konu|Description|  
 |---|---|  
 |[XML](../xml/index.md)|Visual Basic ' deki ve Visual Basic kodunuzda birinci sınıf veri nesneleri olarak XML bulundurmasını sağlayan XML özelliklerini açıklar.|  
 |[Sorgular](../../../language-reference/queries/index.md)|Visual Basic ' de kullanılabilen sorgu yan tümceleri hakkında başvuru bilgileri sağlar.|  
@@ -221,7 +221,7 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
 |[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to SQL yönelik örnekleri içerir.|  
 |[Nesnelere LINQ](../../concepts/linq/linq-to-objects.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to Objects yönelik örnekleri içerir.|  
 |[ADO.NET'e LINQ (Portal Sayfası)](../../concepts/linq/linq-to-adonet-portal-page.md)|Genel bilgiler, Programlama Kılavuzu ve LINQ to ADO.NET için örneklere bağlantılar içerir.|  
-|[LINQ - XML](../../concepts/linq/linq-to-xml.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to XML yönelik örnekleri içerir.|  
+|[LINQ - XML](../../../../standard/linq/linq-xml-overview.md)|Genel bilgileri, programlama kılavuzunu ve LINQ to XML yönelik örnekleri içerir.|  
   
 ## <a name="how-to-and-walkthrough-topics"></a>Nasıl yapılır ve İzlenecek yol konuları
  [Nasıl yapılır: bir veritabanını sorgulama](how-to-query-a-database-by-using-linq.md)  
@@ -243,7 +243,7 @@ LINQ tarafından sunulan sıralanabilir ve sorgulanabilir türlerin üyelerini �
  [Nasıl yapılır: Güncelleştirme, ekleme ve silme işlemleri gerçekleştirmek için saklı yordamlar atama (O/R Tasarımcısı)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)  
   
 ## <a name="featured-book-chapters"></a>Öne çıkan kitap bölümleri  
- [Bölüm 17:](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) programlamada lınq [Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
+ [Bölüm 17:](/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) programlamada lınq [Visual Basic 2008](/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

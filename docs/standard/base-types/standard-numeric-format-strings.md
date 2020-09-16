@@ -17,18 +17,18 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: 605438a5f0e4b5bd9ade96c9db0416ee8611f311
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 857e8803d27ae634dec6e19c6d183943e1c4cc41
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84447127"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557378"
 ---
 # <a name="standard-numeric-format-strings"></a>Standart sayısal biçim dizeleri
 
 Standart sayısal biçim dizeleri, genel sayısal türleri biçimlendirmek için kullanılır. Standart bir sayısal biçim dizesi formu alır `Axx` , burada:
 
-- `A`, *Biçim belirleyicisi*olarak adlandırılan tek bir alfabetik karakterdir. Beyaz boşluk da dahil olmak üzere birden fazla alfabetik karakter içeren herhangi bir sayısal biçim dizesi, özel bir sayısal biçim dizesi olarak yorumlanır. Daha fazla bilgi için bkz. [özel sayısal biçim dizeleri](custom-numeric-format-strings.md).
+- `A` , *Biçim belirleyicisi*olarak adlandırılan tek bir alfabetik karakterdir. Beyaz boşluk da dahil olmak üzere birden fazla alfabetik karakter içeren herhangi bir sayısal biçim dizesi, özel bir sayısal biçim dizesi olarak yorumlanır. Daha fazla bilgi için bkz. [özel sayısal biçim dizeleri](custom-numeric-format-strings.md).
 
 - `xx`*duyarlık belirleyicisi*olarak adlandırılan isteğe bağlı bir tamsayıdır. Precision belirleyici 0'dan 99'a kadar uzanır ve sonuç basamak sayısını etkiler. Duyarlık belirticisinin bir sayının dize temsilindeki basamak sayısını denetlediğine unutmayın. Sayının kendisini yuvarlamaz. Bir yuvarlama işlemi gerçekleştirmek için, <xref:System.Math.Ceiling%2A?displayProperty=nameWithType> <xref:System.Math.Floor%2A?displayProperty=nameWithType> veya <xref:System.Math.Round%2A?displayProperty=nameWithType> yöntemini kullanın.
 
@@ -48,11 +48,11 @@ Standart sayısal biçim dizeleri şunları destekler:
 - C# ve Visual Basic ile Birleşik biçim dizelerine kıyasla basitleştirilmiş bir sözdizimi sağlayan [dizeleri Enterpolaştır](../../csharp/language-reference/tokens/interpolated.md) .
 
 > [!TIP]
-> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
+> Sayısal veya tarih ve saat değerlerine biçim dizeleri uygulamanızı sağlayan ve sonuç dizesini görüntüleyen bir .NET Core Windows Forms uygulaması olan **biçimlendirme yardımcı programını**indirebilirsiniz. Kaynak kodu [C#](/samples/dotnet/samples/windowsforms-formatting-utility-cs) ve [Visual Basic](/samples/dotnet/samples/windowsforms-formatting-utility-vb)için kullanılabilir.
 
-<a name="table"></a>Aşağıdaki tabloda standart sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Standart sayısal biçim dizeleri kullanma hakkında ek bilgi için [Notlar](#NotesStandardFormatting) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [örnek](#example) bölümüne bakın.
+<a name="table"></a> Aşağıdaki tabloda standart sayısal biçim belirticileri açıklanmakta ve her biçim belirticisi tarafından üretilen örnek çıktı görüntülenir. Standart sayısal biçim dizeleri kullanma hakkında ek bilgi için [Notlar](#NotesStandardFormatting) bölümüne ve kullanımlarının kapsamlı bir gösterimi için [örnek](#example) bölümüne bakın.
 
-|Biçim belirteci|Adı|Açıklama|Örnekler|
+|Biçim belirteci|Ad|Açıklama|Örnekler|
 |----------------------|----------|-----------------|--------------|
 |"C" ya da "c"|Para birimi|Sonuç: Bir para birimi değeri.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirticisi: tarafından tanımlanır <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> .<br /><br /> Daha fazla bilgi: [para birimi ("C") Biçim belirleyicisi](#CFormatString).|123,456 ("C", en-US)-> \\ $123,46<br /><br /> 123,456 ("C", fr-FR)-> 123, 46 €<br /><br /> 123,456 ("C", ja-JP)-> ¥123<br /><br /> -123,456 ("C3", en-US)-> ( \\ $123,456)<br /><br /> -123,456 ("C3", fr-FR)->-€123.456<br /><br /> -123,456 ("C3", ja-JP)->-¥123,456|
 |"D" veya "d"|Ondalık|Sonuç: İsteğe bağlı eksi işaretli tamsayı basamaklar.<br /><br /> Desteklenen: sadece integral türleri.<br /><br /> Duyarlık belirtici: Minimum basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: En az gereken basamak sayısı.<br /><br /> Daha fazla bilgi: [ondalık ("D") Biçim belirleyicisi](#DFormatString).|1234 ("D")-> 1234<br /><br /> -1234 ("D6")->-001234|
@@ -60,7 +60,7 @@ Standart sayısal biçim dizeleri şunları destekler:
 |"F" ya da "f"|Sabit nokta|Sonuç: İsteğe bağlı eksi işaretli tamsayı ve ondalık basamaklar.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirticisi: tarafından tanımlanır <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> .<br /><br /> Daha fazla bilgi: [sabit nokta ("F") Biçim belirleyicisi](#FFormatString).|1234,567 ("F", en-US)-> 1234,57<br /><br /> 1234,567 ("F", de-DE)-> 1234, 57<br /><br /> 1234 ("F1", en-US)-> 1234,0<br /><br /> 1234 ("F1", de-DE)-> 1234, 0<br /><br /> -1234,56 ("F4", en-US)->-1234,5600<br /><br /> -1234,56 ("F4", de-DE)->-1234, 1234,5600|
 |"G" ya da "g"|Genel|Sonuç: sabit noktalı veya bilimsel gösterimin daha küçük olması.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: Anlamlı basamak sayısı.<br /><br /> Varsayılan duyarlık belirtici: Sayısal türe bağlıdır.<br /><br /> Daha fazla bilgi: [Genel ("G") Biçim belirleyicisi](#GFormatString).|-123,456 ("G", en-US)->-123,456<br /><br /> -123,456 ("G", SV-i)->-123.456<br /><br /> 123,4546 ("G4", en-US)-> 123,5<br /><br /> 123,4546 ("G4", SV-i)-> 123, 5<br /><br /> - -1 234567890e e-25 ("G", en-US)->- -1 23456789e E-25<br /><br /> - -1 234567890e e-25 ("G", SV-o)->-1, 23456789E-25|
 |"N" ya da "n"|Sayı|Sonuç: Integral ve ondalık basamaklar, grup ayırıcılar ve isteğe bağlı eksi işaretli ondalık ayırıcı.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirticisi: tarafından tanımlanır <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> .<br /><br /> Daha fazla bilgi: [sayısal ("N") Biçim belirleyicisi](#NFormatString).|1234,567 ("N", en-US)-> 1.234,57<br /><br /> 1234,567 ("N", ru-RU)-> 1 234, 57<br /><br /> 1234 ("N1", en-US)-> 1.234,0<br /><br /> 1234 ("N1", ru-RU)-> 1 234, 0<br /><br /> -1234,56 ("N3", en-US)->-1.234,560<br /><br /> -1234,56 ("N3", ru-RU)->-1 234.560|
-|"P" ya da "p"|Yüzde|Sonuç: Sayı 100 ile çarpılır ve yüzde simgesi ile görüntülenir.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirticisi: tarafından tanımlanır <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> .<br /><br /> Daha fazla bilgi: [yüzde ("P") Biçim belirleyicisi](#PFormatString).|1 ("P", en-US)->% 100,00<br /><br /> 1 ("P", fr-FR)-> 100, 00%<br /><br /> -0,39678 ("P1", en-US)->-39,7%<br /><br /> -0,39678 ("P1", fr-FR)->-39, %7|
+|"P" ya da "p"|Yüzde|Sonuç: Sayı 100 ile çarpılır ve yüzde simgesi ile görüntülenir.<br /><br /> Destekleyen: Tüm sayısal türler.<br /><br /> Duyarlık belirtici: İstenen ondalık basamak sayısı.<br /><br /> Varsayılan duyarlık belirticisi: tarafından tanımlanır  <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType> .<br /><br /> Daha fazla bilgi: [yüzde ("P") Biçim belirleyicisi](#PFormatString).|1 ("P", en-US)->% 100,00<br /><br /> 1 ("P", fr-FR)-> 100, 00%<br /><br /> -0,39678 ("P1", en-US)->-39,7%<br /><br /> -0,39678 ("P1", fr-FR)->-39, %7|
 |"R" ya da "r"|Gidiş|Sonuç: Aynı numaraya gidiş dönüş yapabilen bir dize.<br /><br /> Destekleyen: <xref:System.Single> , <xref:System.Double> , ve <xref:System.Numerics.BigInteger> .<br /><br /> Note: <xref:System.Numerics.BigInteger> yalnızca tür Için önerilir. <xref:System.Double>Türler için "G17" kullanın; türler için <xref:System.Single> "G9" kullanın. <br> Duyarlık belirtici: Yoksayıldı.<br /><br /> Daha fazla bilgi: [gidiş dönüş ("R") Biçim belirleyicisi](#RFormatString).|123456789,12345678 ("R")-> 123456789,12345678<br /><br /> -1234567890,12345678 ("R")->-1234567890,1234567|
 |"X" ya da "x"|Onaltılık|Sonuç: Bir onaltılık dize.<br /><br /> Desteklenen: sadece integral türleri.<br /><br /> Duyarlık belirtici: Sonuç dizesindeki basamak sayısı.<br /><br /> Daha fazla bilgi: [onaltılı ("X") Biçim belirleyicisi](#XFormatString).|255 ("X")-> FF<br /><br /> -1 ("x")-> FF<br /><br /> 255 ("x4")-> 00FF<br /><br /> -1 ("X4")-> 00FF|
 |Başka bir tek karakter|Bilinmeyen tanımlayıcı|Sonuç: çalışma zamanında bir oluşturur <xref:System.FormatException> .||
@@ -105,7 +105,7 @@ Biçimlendirilecek değer, belirtilen veya varsayılan ondalık basamak sayısı
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda <xref:System.Globalization.NumberFormatInfo> döndürülen dizenin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyPositivePattern%2A>|Pozitif değerler için para birimi sembolünün yerleşimini tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyNegativePattern%2A>|Negatif değerler için para birimi sembolünün yerleşimini tanımlar ve eksi işaretinin parantezle mi yoksa özelliği ile mi temsil edileceğini belirtir <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> .|
@@ -134,7 +134,7 @@ Duyarlık belirtici, sonuç dizesindeki istenen minimum basamak sayısını gös
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda gösterildiği gibi tek bir özellik, sonuç dizesinin biçimlendirmesini etkiler.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 
@@ -158,7 +158,7 @@ Biçim belirticisinin durumu üsse "E" veya "e" önekinin getirilip getirilmeyec
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda <xref:System.Globalization.NumberFormatInfo> döndürülen dizenin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının hem katsayı hem de üs için negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamağını, katsayıdaki ondalık basamaklardan ayıran dizeyi tanımlar.|
@@ -182,7 +182,7 @@ Duyarlık belirtici, istenen ondalık basamak sayısını gösterir. Duyarlık b
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen nesnenin özellikleri listelenmektedir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|
@@ -229,7 +229,7 @@ Bir <xref:System.Single> değerle kullanıldığında, "G9" Biçim belirleyicisi
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|
@@ -251,7 +251,7 @@ Sayısal ("N") biçim belirteci bir sayıyı "-d,ddd,ddd.ddd…" biçiminde bir 
 
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberNegativePattern%2A>|Negatif değerlerin biçimini tanımlar ve eksi işaretinin parantezle mi yoksa özelliği ile mi temsil edileceğini belirtir <xref:System.Globalization.NumberFormatInfo.NegativeSign%2A> .|
@@ -276,7 +276,7 @@ Yüzde ("P") biçim belirticisi sayıyı 100 ile çarpar ve yüzde temsil eden b
 
 Aşağıdaki tabloda <xref:System.Globalization.NumberFormatInfo> döndürülen dizenin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.PercentPositivePattern%2A>|Pozitif değerler için yüzde sembolünün yerleşimini tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.PercentNegativePattern%2A>|Negatif değerler için yüzde sembolünün ve eksi sembolünün yerleşimini tanımlar.|
@@ -308,7 +308,7 @@ Bir <xref:System.Numerics.BigInteger> değer bu tanımlayıcı kullanılarak bi�
 Bir duyarlık belirtici ekleyebilirsiniz, ancak bu yoksayılır. Bu belirleyici kullanırken gidiş dönüşlere duyarlılık üzerinde öncelik verilir.
 Sonuç dizesi geçerli nesnenin biçimlendirme bilgileri tarafından etkilenir <xref:System.Globalization.NumberFormatInfo> . Aşağıdaki tabloda, <xref:System.Globalization.NumberFormatInfo> sonuç dizesinin biçimlendirmesini denetleyen özellikler listelenmiştir.
 
-|NumberFormatInfo özellikleri|Açıklama|
+|NumberFormatInfo özellikleri|Description|
 |-------------------------------|-----------------|
 |<xref:System.Globalization.NumberFormatInfo.NegativeSign%2A>|Bir sayının negatif olduğunu belirten dizeyi tanımlar.|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|Tamsayı basamaklarını ondalık basamaklardan ayıran dizeyi tanımlar.|
@@ -389,5 +389,5 @@ Aşağıdaki örnek, bir tamsayı ve kayan nokta sayısal değerini ing-ABD kül
 - [Biçimlendirme Türleri](formatting-types.md)
 - [Nasıl yapılır: Bir Sayıyı Baştaki Sıfırlarla Doldurma](how-to-pad-a-number-with-leading-zeros.md)
 - [Bileşik biçimlendirme](composite-formatting.md)
-- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
-- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (C#)](/samples/dotnet/samples/windowsforms-formatting-utility-cs)
+- [Örnek: .NET Core WinForms biçimlendirme yardımcı programı (Visual Basic)](/samples/dotnet/samples/windowsforms-formatting-utility-vb)

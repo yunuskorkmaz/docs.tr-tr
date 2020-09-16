@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: fe652e4cc3a996586d01cdfc4c5749decb51e9db
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 74a1e244fa47cf7c6ea36454013b46b6e44f62c9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557353"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557677"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework sürümleri ve bağımlılıklar
 
@@ -36,7 +36,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 | | |
 | - | - |
-| [.NET Framework 4,8](#net-framework-48) | [.NET Framework 4.7.2](#net-framework-472) | [.NET Framework 4.7.1](#net-framework-471) | [.NET Framework 4,7](#net-framework-47) |
+| [ .NET Framework 4.8](#net-framework-48) | [.NET Framework 4.7.2](#net-framework-472) | [.NET Framework 4.7.1](#net-framework-471) | [.NET Framework 4,7](#net-framework-47) |
 | [.NET Framework 4.6.2](#net-framework-462) | [.NET Framework 4.6.1](#net-framework-461) | [.NET Framework 4.6](#net-framework-46) | [.NET Framework 4.5.2](#net-framework-452) |
 | [.NET Framework 4.5.1](#net-framework-451) | [.NET Framework 4.5](#net-framework-45) | [.NET Framework 4](#net-framework-4) | [.NET Framework 3.5](#net-framework-35) |
 | [.NET Framework 3.0](#net-framework-30) | [.NET Framework 2.0](#net-framework-20) | [.NET Framework 1.1](#net-framework-11) | [.NET Framework 1.0](#net-framework-10) |
@@ -175,7 +175,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 ### <a name="net-framework-4"></a>.NET Framework 4
 
-[Yeni özellikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))
+[Yeni özellikler](/previous-versions/dotnet/netframework-4.0/ms171868(v=vs.100))
 
 |||
 |-|-|
@@ -187,7 +187,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 ### <a name="net-framework-35"></a>.NET Framework 3.5
 
-[Yeni özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\)):
+[Yeni özellikler](/previous-versions/visualstudio/visual-studio-2008/ms171868\(v=vs.90\)):
 
 - LINQ
 - İfade ağaçları
@@ -200,7 +200,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 |||
 |-|-|
-|**CLR sürümü**|2,0|
+|**CLR sürümü**|2.0|
 |**Visual Studio sürümüne dahil edilmiştir**|2008|
 |**Windows sürümleri**|✔️ 10\*<br/>✔️ 8,1\*<br />✔️ 8\*<br />✔️ 7<br /><br />➕ Vista|
 |**Windows Server sürümleri**|➕ Windows Server, sürüm 1803\*<br/>➕ Windows Server, sürüm 1709\*<br/>➕ 2016\*<br/>➕ 2012 R2\*<br />➕ 2012\*<br /><br />✔️ 2008 R2 SP1\*<br /><br/>➕ 2008 SP2<br />➕ 2003|
@@ -208,7 +208,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 ### <a name="net-framework-30"></a>.NET Framework 3.0
 
-[Yeni özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb822048(v=vs.90)):
+[Yeni özellikler](/previous-versions/visualstudio/visual-studio-2008/bb822048(v=vs.90)):
 
 - Windows Presentation Foundation
 - Windows Communication Foundation
@@ -217,14 +217,14 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 |||
 |-|-|
-|**CLR sürümü**|2,0|
+|**CLR sürümü**|2.0|
 |**Windows sürümleri**|✔️ Vista|
 |**Windows Server sürümleri**|✔️ 2008 R2 SP1 *<br />✔️ 2008 SP2\*<br /><br />➕ 2003|
 |**Yüklü .NET sürümünü belirleme**|[Yönergelere](how-to-determine-which-versions-are-installed.md)bakın.|
 
 ### <a name="net-framework-20"></a>.NET Framework 2.0
 
-[Yeni özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/t357fb32%28v%3dvs.90%29):
+[Yeni özellikler](/previous-versions/visualstudio/visual-studio-2008/t357fb32(v=vs.90)):
 
 - Genel Türler
 - Hata ayıklayıcı Düzenle ve devam et
@@ -235,7 +235,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 |||
 |-|-|
-|**CLR sürümü**|2,0|
+|**CLR sürümü**|2.0|
 |**Visual Studio sürümüne dahil edilmiştir**|2005|
 |**Windows sürümleri**|Yok|
 |**Windows Server sürümleri**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️ 2003|
@@ -243,7 +243,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1
 
-[Yeni özellikler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/h88tthh0%28v%3dvs.90%29):
+[Yeni özellikler](/previous-versions/visualstudio/visual-studio-2008/h88tthh0(v=vs.90)):
 
 - ASP.NET Mobile denetimleri
 - Yan yana yürütme
@@ -261,7 +261,7 @@ Aşağıdaki tablolarda, sürüm geçmişi .NET Framework ve her sürümü Visua
 
 |||
 |-|-|
-|**CLR sürümü**|1,0|
+|**CLR sürümü**|1.0|
 |**Visual Studio sürümüne dahil edilmiştir**|Visual Studio .NET|
 |**Windows sürümleri**|Yok|
 |**Windows Server sürümleri**|Yok|

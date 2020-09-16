@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0479b966abd0cfa3c570355e62e4b42264a3114f
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79153925"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554560"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly> Öğesi
 Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin tam adını belirtir.  
@@ -24,7 +24,7 @@ Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin 
 &nbsp;&nbsp;&nbsp;&nbsp;[**\<assemblyBinding>**](assemblybinding-element-for-runtime.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<qualifyAssembly>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
       <qualifyAssembly partialName=  
@@ -77,4 +77,4 @@ Kısmi bir ad kullanıldığında dinamik olarak yüklenmesi gereken derlemenin 
 
 - [Çalışma zamanı ayarları şeması](index.md)
 - [Çalışma Zamanının Derlemelerin Konumunu Bulması](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [Kısmi derleme başvuruları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [Kısmi derleme başvuruları](/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

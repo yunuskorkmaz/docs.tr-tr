@@ -2,12 +2,12 @@
 title: IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 5e1672f4dd67950178c95d3e043e16072fcd0ef4
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: f947a64acdf602d12fcd2319a1b994912ecb331e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84593587"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556635"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS ve WAS'ta Yapılandırma Temelli Etkinleştirme
 
@@ -15,7 +15,7 @@ Normal olarak, Internet Information Services (IIS) veya Windows Işlem etkinleş
 
 ## <a name="configuration-based-activation"></a>Yapılandırma Temelli Etkinleştirme
 
-Yapılandırma tabanlı etkinleştirme,. svc dosyasına yerleştirilmesi için kullanılan meta verileri alır ve Web. config dosyasına koyar. <`serviceHostingEnvironment`> öğesi içinde <bir `serviceActivations`> öğesi vardır. <`serviceActivations`> öğesi içinde, bir veya daha fazla <`add`> öğesi, her barındırılan hizmet için bir öğedir. <`add`> öğesi, hizmet ve hizmet türü ya da hizmet ana bilgisayar fabrikası için göreli adresi ayarlamanıza olanak sağlayan öznitelikleri içerir. Aşağıdaki yapılandırma örnek kodu, bu bölümün nasıl kullanıldığını gösterir.
+Yapılandırma tabanlı etkinleştirme,. svc dosyasına yerleştirilmesi için kullanılan meta verileri alır ve Web.config dosyasına koyar. <`serviceHostingEnvironment`> öğesi içinde <bir `serviceActivations`> öğesi vardır. <`serviceActivations`> öğesi içinde, bir veya daha fazla <`add`> öğesi, her barındırılan hizmet için bir öğedir. <`add`> öğesi, hizmet ve hizmet türü ya da hizmet ana bilgisayar fabrikası için göreli adresi ayarlamanıza olanak sağlayan öznitelikleri içerir. Aşağıdaki yapılandırma örnek kodu, bu bölümün nasıl kullanıldığını gösterir.
 
 > [!NOTE]
 > Her <`add`> öğesi bir hizmet veya bir fabrika özniteliği belirtmelidir. Hem Service hem de Factory özniteliklerinin belirtilmesine izin verilir.
@@ -28,7 +28,7 @@ Yapılandırma tabanlı etkinleştirme,. svc dosyasına yerleştirilmesi için k
 </serviceHostingEnvironment>
 ```
 
- Web. config dosyasında, hizmet kaynak kodunu uygulamanın App_Code dizinine veya uygulamanın bin dizinine karmaşık bir derlemeye yerleştirebilirsiniz.
+ Bu Web.config dosyasında, hizmet kaynak kodunu uygulamanın App_Code dizinine veya uygulamanın bin dizinine karmaşık bir derlemeye yerleştirebilirsiniz.
 
 > [!NOTE]
 >
@@ -44,6 +44,6 @@ Yapılandırma tabanlı etkinleştirme,. svc dosyasına yerleştirilmesi için k
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>
 - [Barındırma Hizmetleri](../hosting-services.md)
-- [İş Akışı Hizmetlerini Barındırmaya Genel Bakış](hosting-workflow-services-overview.md)
+- [İş Akışı Hizmetlerini Barındırma Genel Bakış](hosting-workflow-services-overview.md)
 - [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

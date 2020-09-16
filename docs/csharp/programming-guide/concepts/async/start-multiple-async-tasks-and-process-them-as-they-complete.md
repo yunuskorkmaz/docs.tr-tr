@@ -1,14 +1,14 @@
 ---
-title: Zaman uyumsuz görevleri tamamlarlar işleme
+title: Zaman uyumsuz görevleri tamamlandıkları anda işleme
 description: Bu örnek, birden çok görevi başlatmak ve sonuçlarını tamamlandığında işlem sırasında işlemek yerine sonuçları işlemek Için C# ' de Task. WhenAny 'ın nasıl kullanılacağını gösterir.
 ms.date: 08/19/2020
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: c2fe66e865a2c88f4cae50b816f9326614fcbb89
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 520953eaf851dc82440e39b348aa4b246255e126
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88812035"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557313"
 ---
 # <a name="process-asynchronous-tasks-as-they-complete-c"></a>Zaman uyumsuz görevleri tamamlarlar işleme (C#)
 
@@ -117,7 +117,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
     select ProcessUrlAsync(url, s_client);
 ```
 
-LINQ ile [ertelenmiş yürütme](../linq/deferred-execution-example.md) nedeniyle <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> her bir görevi başlatmak için öğesini çağırın.
+LINQ ile [ertelenmiş yürütme](../../../../standard/linq/deferred-execution-example.md) nedeniyle <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> her bir görevi başlatmak için öğesini çağırın.
 
 ```csharp
 List<Task<int>> downloadTasks = downloadTasksQuery.ToList();

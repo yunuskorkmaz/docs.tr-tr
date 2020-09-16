@@ -2,12 +2,12 @@
 title: Koleksiyonlar
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: f264a0f9ee15707daf4bece5651b9f5f07ebbc39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 91c6048caf622f21a02032bac31cb2ba5565c54c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400661"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551073"
 ---
 # <a name="collections-visual-basic"></a>Koleksiyonlar (Visual Basic)
 
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-Aşağıdaki örnek, genel bir listeden öğeleri kaldırır. Bir `For Each` , için, bir [... ](../../language-reference/statements/for-next-statement.md)Azalan sırada yinelenen bir sonraki ifade kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemin kaldırılan bir öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olur.
+Aşağıdaki örnek, genel bir listeden öğeleri kaldırır. Bir `For Each` , için, bir [... ](../../language-reference/statements/for-next-statement.md) Azalan sırada yinelenen bir sonraki ifade kullanılır. Bunun nedeni, <xref:System.Collections.Generic.List%601.RemoveAt%2A> yöntemin kaldırılan bir öğeden sonra öğelerin daha düşük bir dizin değerine sahip olmasına neden olur.
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -173,7 +173,7 @@ Ad alanındaki sınıflardan birini kullanarak genel bir koleksiyon oluşturabil
 
 Aşağıdaki tabloda, ad alanının sık kullanılan sınıflarının bazıları listelenmektedir <xref:System.Collections.Generic?displayProperty=nameWithType> :
 
-|Sınıf|Description|
+|Sınıf|Açıklama|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|Anahtara göre düzenlenen anahtar/değer çiftleri koleksiyonunu temsil eder.|
 |<xref:System.Collections.Generic.List%601>|Dizin tarafından erişilebilen nesnelerin listesini temsil eder. Listeleri aramak, sıralamak ve değiştirmek için yöntemler sağlar.|
@@ -203,7 +203,7 @@ Mümkün olduğunda, ad alanındaki <xref:System.Collections.Generic?displayProp
 
 Aşağıdaki tabloda, ad alanında sık kullanılan sınıfların bazıları listelenmektedir `System.Collections` :
 
-|Sınıf|Description|
+|Sınıf|Açıklama|
 |---|---|
 |<xref:System.Collections.ArrayList>|Boyutu dinamik olarak gerektiği şekilde arttığı bir nesne dizisini temsil eder.|
 |<xref:System.Collections.Hashtable>|Anahtarın karma koduna göre düzenlenmiş anahtar/değer çiftleri koleksiyonunu temsil eder.|
@@ -458,7 +458,7 @@ End Class
 
 ## <a name="defining-a-custom-collection"></a>Özel bir koleksiyon tanımlama
 
-Veya arabirimini uygulayarak bir koleksiyon tanımlayabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerable> . Daha fazla bilgi için bkz. [bir koleksiyonu numaralandırma](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
+Veya arabirimini uygulayarak bir koleksiyon tanımlayabilirsiniz <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.IEnumerable> . Daha fazla bilgi için bkz. [bir koleksiyonu numaralandırma](/previous-versions/dotnet/netframework-4.0/hwyysy67(v=vs.100)).
 
 Özel bir koleksiyon tanımlamanızı mümkün olsa da, bu konunun önceki kısımlarında yer alan [koleksiyonlar türlerinde](#kinds-of-collections) açıklanan .NET Framework dahil edilen koleksiyonları kullanmak genellikle daha iyidir.
 

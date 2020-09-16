@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-ms.openlocfilehash: 1178bd3800fce95be96e601a17bfeff2c05cfceb
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: c609ec5e67ce3bb0605f543806085f893acba37c
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419310"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557534"
 ---
 # <a name="workflow-persistence"></a>İş Akışı Kalıcılığı
 İş akışı kalıcılığı, işlem veya bilgisayar bilgilerini bağımsız bir iş akışı örneğinin durumunun dayanıklı yakalamasıdır. Bu işlem, sistem hatası durumunda iş akışı örneği için iyi bilinen bir kurtarma noktası sağlamak ya da etkin bir şekilde iş yapmakta olmayan iş akışı örneklerini kaldırarak belleği korumak veya iş akışı örneğinin durumunu bir düğümden bir sunucu grubundaki başka bir düğüme taşımak için yapılır.  
@@ -23,7 +23,7 @@ ms.locfileid: "83419310"
   
  İş akışı örneğiyle ilgili bilgilerle birlikte, uygulamaya özgü verilerinizi depolamak ve yüklemek için, sınıfı genişleten Kalıcılık katılımcıları oluşturabilirsiniz <xref:System.Activities.Persistence.PersistenceParticipant> . Kalıcılık Katılımcısı, özel seri hale getirilebilir verileri kalıcılık deposuna kaydetmek, örnek deposundan verileri belleğe yüklemek ve bir kalıcılık işlemi altında ek mantık gerçekleştirmek için kalıcılık sürecine katılıyorsa. Daha fazla bilgi için bkz. [Kalıcılık katılımcıları](persistence-participants.md).  
   
- Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [Windows Server App Fabric Ile Kalıcılık kavramları](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))  
+ Windows Server App Fabric, kalıcılığı yapılandırma sürecini basitleştirir. Daha fazla bilgi için bkz. [Windows Server App Fabric Ile Kalıcılık kavramları](/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="implicit-persistence-points"></a>Örtük Kalıcılık noktaları  
  Aşağıdaki liste, bir örnek depo bir iş akışıyla ilişkilendirildiğinde bir iş akışının kalıcı hale geçtiği koşulların örneklerini içerir.  

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: b332c43d7f9ffe2117c9afe1ed625c3e3c869813
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: b812939cbaa74576361de534c0d39ba45536cbcf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "82072048"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555178"
 ---
 # <a name="xarray-markup-extension"></a>x:Array İşaretleme Uzantısı
 
-Biçimlendirme uzantısı aracılığıyla XAML'deki nesne dizileri için genel destek sağlar. Bu , [MS-XAML] xaml `x:ArrayExtension` türüne karşılık gelir.
+Bir işaretleme uzantısı aracılığıyla XAML içindeki nesne dizileri için genel destek sağlar. Bu, `x:ArrayExtension` [ms-xaml] içindeki xaml türüne karşılık gelir.
 
 ## <a name="xaml-object-element-usage"></a>XAML Nesne Öğesi Kullanımı
 
@@ -31,32 +31,32 @@ Biçimlendirme uzantısı aracılığıyla XAML'deki nesne dizileri için genel 
 
 |||
 |-|-|
-|`typeName`|İçereceğiniz `x:Array` türün adı. `typeName`XAML türü tanımlarını içeren bir XAML ad alanı için önceden belirlenmiş olabilir (ve genellikle de vardır).|
-|`arrayContents`|İçsel `ArrayExtension.Items` özelliğe atanan öğeler içeriği. Genellikle, bu öğeler açılış ve kapanış etiketleri `x:Array` içinde bulunan bir veya daha fazla nesne öğeleri olarak belirtilir. Burada belirtilen nesnelerin `typeName`XAML türüne atayabilmeleri beklenir.|
+|`typeName`|`x:Array`Sahip olacağı türün adı. `typeName` XAML türü tanımlarını içeren bir XAML ad alanı için ön eki olan (ve genellikle) olabilir.|
+|`arrayContents`|İç özelliğe atanan öğe içeriği `ArrayExtension.Items` . Genellikle, bu öğeler `x:Array` açılış ve kapanış etiketlerinin içinde bulunan bir veya daha fazla nesne öğesi olarak belirtilir. Burada belirtilen nesnelerin içinde belirtilen XAML türüne atanabilir olması beklenir `typeName` .|
 
 ## <a name="remarks"></a>Açıklamalar
 
-`Type`tüm `x:Array` nesne öğeleri için gerekli bir özniteliktir. Bir `Type` parametre değerinin `x:Type` biçimlendirme uzantısı kullanması gerekmez; türün kısa adı, dize olarak belirtilebilen bir XAML türüdür.
+`Type` Tüm nesne öğeleri için gerekli bir özniteliktir `x:Array` . Bir `Type` parametre değerinin `x:Type` Biçimlendirme Uzantısı kullanması gerekmez; türün kısa adı bir dize olarak BELIRTIBILEN bir xaml türüdür.
 
-.NET XAML Hizmetleri uygulamasında, giriş XAML türü ile oluşturulan <xref:System.Type> dizinin çıktı CLR'si arasındaki ilişki, biçimlendirme uzantıları için hizmet bağlamından etkilenir. Çıktı, <xref:System.Type> XAML şeması bağlamına ve bağlamın <xref:System.Xaml.XamlType> sağladığı hizmete göre gerekli olana <xref:System.Windows.Markup.IXamlTypeResolver> baktıktan sonra, giriş XAML tipinin çıktısi. <xref:System.Xaml.XamlType.UnderlyingType%2A>
+.NET XAML Hizmetleri uygulamasında, giriş XAML türü ve oluşturulan dizinin çıkış CLR arasındaki ilişki, <xref:System.Type> Biçimlendirme uzantıları için hizmet bağlamına göre etkilenir. Çıktı, <xref:System.Type> <xref:System.Xaml.XamlType.UnderlyingType%2A> <xref:System.Xaml.XamlType> xaml şema bağlamına ve bağlamın sağladığı hizmete bağlı olarak gerekli olan arama sonrasında giriş xaml türünden oluşur <xref:System.Windows.Markup.IXamlTypeResolver> .
 
-İşlendiğinde, dizi içeriği içsel `ArrayExtension.Items` özelliğe atanır. <xref:System.Windows.Markup.ArrayExtension> Uygulamada, <xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=nameWithType>bu.
+İşlendiğinde, dizi içeriği `ArrayExtension.Items` iç özelliğe atanır. <xref:System.Windows.Markup.ArrayExtension>Uygulamada, bu tarafından temsil edilir <xref:System.Windows.Markup.ArrayExtension.Items%2A?displayProperty=nameWithType> .
 
-.NET XAML Hizmetleri uygulamasında, bu biçimlendirme uzantısı için <xref:System.Windows.Markup.ArrayExtension> işleme sınıf tarafından tanımlanır. <xref:System.Windows.Markup.ArrayExtension>mühürlü değildir ve özel bir dizi türü için biçimlendirme uzantısı uygulaması için temel olarak kullanılabilir.
+.NET XAML Hizmetleri uygulamasında, bu biçimlendirme uzantısının işlenmesi sınıfı tarafından tanımlanır <xref:System.Windows.Markup.ArrayExtension> . <xref:System.Windows.Markup.ArrayExtension> Sealed değildir ve özel bir dizi türü için biçimlendirme uzantısı uygulamasının temeli olarak kullanılabilir.
 
-`x:Array`daha çok XAML'de genel dil genişletilebilirliği için tasarlanmıştır. Ancak, `x:Array` XAML destekli koleksiyonları yapılandırılmış özellik içeriği olarak alan belirli özelliklerin XAML değerlerini belirtmek için de yararlı olabilir. Örneğin, `x:Array` bir kullanım ile bir <xref:System.Collections.IEnumerable> özelliğin içeriğini belirtebilirsiniz.
+`x:Array` , XAML 'de Genel dil genişletilebilirliği için daha yöneliktir. Ancak `x:Array` XAML tarafından desteklenen koleksiyonları yapılandırılmış Özellik içerikleri olarak alan belirli ÖZELLIKLERIN xaml değerlerini belirtmek için de kullanışlı olabilir. Örneğin, bir <xref:System.Collections.IEnumerable> özelliğin içeriğini kullanım ile belirtebilirsiniz `x:Array` .
 
-`x:Array`biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. `x:Array`alternatif öznitelik değer işleme sağlamak yerine, `x:Array` kendi iç metin içeriğinin alternatif işleme sağlar, çünkü kısmen bu kuralın bir istisnadır. Bu davranış, varolan bir içerik modeli tarafından desteklenmeyen türlerin bir dizi halinde gruplandırılmasını ve daha sonra adlandırılmış diziye erişerek kod arkasında başvurulmasını sağlar; tek tek <xref:System.Array> dizi öğeleri almak için yöntemleri arayabilirsiniz.
+`x:Array` bir biçimlendirme uzantısıdır. Biçimlendirme uzantıları, genellikle öznitelik değerlerinin değişmez değerler veya işleyici isimleri dışına çıkma gereksinimi olduğunda ve bu gereksinim, belirli türler veya özellikler üzerine tür dönüştürücülerini koymaktan daha genel olduğunda uygulanır. `x:Array` , alternatif öznitelik değeri işleme sağlamak yerine, `x:Array` iç metin içeriğinin alternatif işlemesini sağlayan bu kural için kısmen bir özel durumdur. Bu davranış, varolan bir içerik modeli tarafından bir dizide gruplanmak ve daha sonra adlandırılmış diziye erişerek kod arkasında başvurulmak üzere desteklenmeyen türleri sağlar; <xref:System.Array> tek tek dizi öğelerini almak için yöntemler çağırabilirsiniz.
 
-XAML'deki tüm biçimlendirme uzantıları ayraçları kullanır (bir{,} `)` XAML işlemcisinin bir biçimlendirme uzantısıöz değeri işlemesi gerektiğini kabul ettiği kuraldır) öznitelik sözdiziminde. Genel olarak biçimlendirme uzantıları hakkında daha fazla bilgi için [XAML için Tür Dönüştürücüler ve Biçimlendirme Uzantıları'na](type-converters-and-markup-extensions.md)bakın.
+XAML 'deki tüm biçimlendirme uzantıları, bir {,} `)` XAML işlemcisinin bir biçimlendirme uzantısının öznitelik değerini işlemesi gerektiğini tanıdığı kural olan küme ayraçlarını (öznitelik sözdiziminde) kullanır. Genel olarak biçimlendirme uzantıları hakkında daha fazla bilgi için bkz. [xaml Için tür dönüştürücüleri ve biçimlendirme uzantıları](type-converters-and-markup-extensions.md).
 
-XAML 2009 `x:Array` yılında, bir biçimlendirme uzantısı yerine ilkel bir dil olarak tanımlanır. Daha fazla bilgi [için, Ortak XAML Dil İlkelleri için Yerleşik Türleri'ne](types-for-primitives.md)bakın.
+XAML 2009 ' de, `x:Array` biçimlendirme uzantısı yerine bir dil temel olarak tanımlanmıştır. Daha fazla bilgi için bkz. [genel xaml dil temelleri Için yerleşik türler](types-for-primitives.md).
 
-## <a name="wpf-usage-notes"></a>WPF Kullanım Notları
+## <a name="wpf-usage-notes"></a>WPF kullanım notları
 
-Genellikle, bir `x:Array` doldurma nesne öğeleri [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML ad alanında var olan öğeler değildir ve varsayılan olmayan bir XAML ad alanı için bir önek eşlemesi gerektirir.
+Genellikle, öğesini dolduran nesne öğeleri `x:Array` xaml ad alanında var olan öğeler değildir [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] ve varsayılan olmayan xaml ad alanı için bir önek eşlemesi gerektirir.
 
-Örneğin, aşağıdaki iki dize basit bir dizi, `sys` önek (ve aynı zamanda) `x`dizi düzeyinde tanımlanır.
+Örneğin, aşağıdaki `sys` önek (ve ayrıca `x` ) dizi düzeyinde tanımlanmış olan iki dizenin basit bir dizisidir.
 
 ```xaml
 <x:Array Type="sys:String"
@@ -67,9 +67,9 @@ Genellikle, bir `x:Array` doldurma nesne öğeleri [!INCLUDE[TLA2#tla_winclient]
 </x:Array>
 ```
 
-Dizi öğeleri olarak kullanılan özel türler için, sınıfın XAML'de nesne öğesi olarak anlık olarak kullanıma alınması gereksinimlerini de desteklemesi gerekir. Daha fazla bilgi için [WPF için XAML ve Özel Sınıflar'a](../../framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)bakın.
+Dizi öğeleri olarak kullanılan özel türler için, sınıfı XAML 'de nesne öğeleri olarak örneği oluşturulması gereken gereksinimleri de desteklemelidir. Daha fazla bilgi için bkz. [WPF Için XAML ve özel sınıflar](/dotnet/desktop/wpf/advanced/xaml-and-custom-classes-for-wpf).
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Biçimlendirme Uzantıları ve WPF XAML](../../framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [WPF'den System.Xaml'e Geçirilen Türler](../../framework/wpf/advanced/types-migrated-from-wpf-to-system.md)
+- [Biçimlendirme Uzantıları ve WPF XAML](/dotnet/desktop/wpf/advanced/markup-extensions-and-wpf-xaml)
+- [WPF'den System.Xaml'e Geçirilen Türler](/dotnet/desktop/wpf/advanced/types-migrated-from-wpf-to-system)

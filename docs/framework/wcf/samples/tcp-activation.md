@@ -2,12 +2,12 @@
 title: TCP Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 0fa737adbdc7acc51511557877799c89849149bc
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e6f40b31656746d3db37545709c4e4813a7422cf
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84598664"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555191"
 ---
 # <a name="tcp-activation"></a>TCP Etkinleştirme
 
@@ -69,7 +69,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-Örnek, TCP bağlantı noktası Paylaşımı etkin ve güvenlik kapatılmış olan net. TCP bağlamasının bir türevini kullanır. Güvenli bir TCP bağlaması kullanmak istiyorsanız, sunucunun güvenlik modunu istenen ayarla değiştirin ve istemci üzerinde bir güncelleştirme istemci yapılandırma dosyası oluşturmak için Svcutil. exe dosyasını yeniden çalıştırın.
+Örnek, TCP bağlantı noktası Paylaşımı etkin ve güvenlik kapatılmış olan net. TCP bağlamasının bir türevini kullanır. Güvenli bir TCP bağlaması kullanmak istiyorsanız, sunucunun güvenlik modunu istenen ayarla değiştirin ve istemci üzerinde Svcutil.exe bir güncelleştirme istemci yapılandırma dosyası oluşturmak için yeniden çalıştırın.
 
 Aşağıdaki örnekte hizmetin yapılandırması gösterilmektedir:
 
@@ -159,7 +159,7 @@ Press <ENTER> to terminate client.
 
     Kolaylık olması halinde, örnek dizinde bulunan AddNetTcpSiteBinding. cmd adlı bir toplu iş dosyasında aşağıdaki iki adım uygulanır.
 
-    1. Net. TCP etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin bir net. TCP bağlantı noktasına bağlanması gerekir. Bu işlem, Internet Information Services 7,0 (IIS) yönetim araç takımı ile yüklenen appcmd. exe kullanılarak yapılabilir. Yönetici düzeyindeki bir komut isteminden aşağıdaki komutu çalıştırın:
+    1. Net. TCP etkinleştirmesini desteklemek için, önce varsayılan Web sitesinin bir net. TCP bağlantı noktasına bağlanması gerekir. Bu, Internet Information Services 7,0 (IIS) yönetim araç takımı ile yüklenen Appcmd.exe kullanılarak yapılabilir. Yönetici düzeyindeki bir komut isteminden aşağıdaki komutu çalıştırın:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
@@ -208,4 +208,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric barındırma ve kalıcılık örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric barındırma ve kalıcılık örnekleri](/previous-versions/appfabric/ff383418(v=azure.10))

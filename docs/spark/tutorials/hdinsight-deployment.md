@@ -4,12 +4,12 @@ description: HDInsight için bir .NET Apache Spark uygulamasının nasıl dağı
 ms.date: 06/25/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e6b2fdd1818250c47ce6cb64439ecab58ae99ad8
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 9a4ca80463de41a50d103c696b2108d0cef023fc
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85617645"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90548383"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>Öğretici: Azure HDInsight 'a Apache Spark uygulaması için .NET dağıtma
 
@@ -27,11 +27,11 @@ Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
 
 [!INCLUDE [spark-preview-note](../../../includes/spark-preview-note.md)]
 
-## <a name="prerequisites"></a>Ön koşullar
+## <a name="prerequisites"></a>Önkoşullar
 
 Başlamadan önce, aşağıdaki görevleri yapın:
 
-* Azure aboneliğiniz yoksa [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/)oluşturun.
+* Azure aboneliğiniz yoksa [ücretsiz bir hesap](https://azure.microsoft.com/free/dotnet/) oluşturun.
 * [Azure Portal](https://portal.azure.com/) oturum açın.
 * [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409), [Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)veya [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) bilgisayarınıza Azure Depolama Gezgini ' yi yükler.
 * [Apache Spark için .net ' i doldurun-10 dakikalık öğreticide kullanmaya başlayın](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
@@ -189,4 +189,4 @@ Kaynak grubu adını seçerek de kaynak grubu sayfasını açabilir ve sonra **K
 Bu öğreticide, .NET Apache Spark uygulamanızı Azure HDInsight 'a dağıttınız. HDInsight hakkında daha fazla bilgi edinmek için Azure HDInsight belgelerine geçin.
 
 > [!div class="nextstepaction"]
-> [Azure HDInsight Belgeleri](https://docs.microsoft.com/azure/hdinsight/)
+> [Azure HDInsight belgeleri](/azure/hdinsight/)

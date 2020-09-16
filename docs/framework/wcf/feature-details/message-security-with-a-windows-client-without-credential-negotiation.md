@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 7845bc45d0baecb07e4c03531f21d900c4e23bf7
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 3e5838c474a4f13136ed29baab440dc1559b95f5
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84595251"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551099"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Windows İstemcisi ile Kimlik Bilgileri Görüşmesi Olmadan İleti Güvenliği
 
@@ -23,10 +23,10 @@ Hem hizmet hem de istemci aynı etki alanında veya güvenilen etki alanlarında
 
 ![Kimlik bilgisi anlaşması olmadan ileti güvenliği](media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")
 
-|Özellik|Açıklama|
+|Özellik|Description|
 |--------------------|-----------------|
 |Güvenlik modu|İleti|
-|Birlikte çalışabilirlik|Evet, WS-Kerberos belirteci ile profil uyumlu istemcilerle güvenlik|
+|Birlikte Çalışabilirlik|Evet, WS-Kerberos belirteci ile profil uyumlu istemcilerle güvenlik|
 |Kimlik doğrulaması (sunucu)|Sunucu ve istemcinin karşılıklı kimlik doğrulaması|
 |Kimlik doğrulaması (Istemci)|Sunucu ve istemcinin karşılıklı kimlik doğrulaması|
 |Bütünlük|Yes|
@@ -36,7 +36,7 @@ Hem hizmet hem de istemci aynı etki alanında veya güvenilen etki alanlarında
 
 ## <a name="service"></a>Hizmet
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
 
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.
 
@@ -51,9 +51,9 @@ Aşağıdaki kod, ileti güvenliği kullanan bir hizmet uç noktası oluşturur.
 
 1. `NetworkService` `LocalSystem` Hizmetini çalıştırmak için veya hesabını kullanın. Makine Active Directory etki alanına katıldığında, bu hesapların kurulduğu makine SPN 'sine erişimi olduğundan, WCF otomatik olarak hizmetin meta verilerinde (Web Hizmetleri Açıklama Dili veya WSDL) uygun SPN öğesini otomatik olarak oluşturur.
 
-2. Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, bu etki alanı hesabı için bir SPN oluşturmanız gerekir. Bunu yapmanın bir yolu, Setspn. exe yardımcı programı aracını kullanmaktır. Hizmet hesabı için SPN oluşturulduktan sonra, bu SPN 'YI, meta verileri (WSDL) aracılığıyla hizmetin istemcilerine yayımlamak üzere WCF 'yi yapılandırın. Bu, bir uygulama yapılandırma dosyası veya kodu gibi, gösterilen uç nokta için uç nokta kimliği ayarlanarak yapılır. Aşağıdaki örnek, kimliği programlı olarak yayımlar.
+2. Hizmetinizi çalıştırmak için rastgele bir Active Directory etki alanı hesabı kullanın. Bu durumda, bu etki alanı hesabı için bir SPN oluşturmanız gerekir. Bunu yapmanın bir yolu Setspn.exe yardımcı program aracını kullanmaktır. Hizmet hesabı için SPN oluşturulduktan sonra, bu SPN 'YI, meta verileri (WSDL) aracılığıyla hizmetin istemcilerine yayımlamak üzere WCF 'yi yapılandırın. Bu, bir uygulama yapılandırma dosyası veya kodu gibi, gösterilen uç nokta için uç nokta kimliği ayarlanarak yapılır. Aşağıdaki örnek, kimliği programlı olarak yayımlar.
 
-SPN 'Ler, Kerberos protokolü ve Active Directory hakkında daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement Kimlik doğrulama modları](securitybindingelement-authentication-modes.md).
+SPN 'Ler, Kerberos protokolü ve Active Directory hakkında daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](/previous-versions/msp-n-p/ff649429(v=pandp.10)). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement Kimlik doğrulama modları](securitybindingelement-authentication-modes.md).
 
 [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
 [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]
@@ -98,7 +98,7 @@ Aşağıdaki yapılandırma kod yerine kullanılabilir.
 
 ## <a name="client"></a>İstemci
 
-Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:
+Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:
 
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).
 
@@ -112,9 +112,9 @@ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasa
 Aşağıdaki kod istemcisini yapılandırır. Güvenlik modu Ileti olarak ayarlanır ve istemci kimlik bilgisi türü Windows olarak ayarlanır. <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A>Ve <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> özelliklerinin olarak ayarlandığını unutmayın `false` .
 
 > [!NOTE]
-> Windows kimlik bilgisi türünü anlaşma olmadan kullanmak için, hizmet ile iletişim kurmadan önce istemcinin hizmetin hesap SPN 'si ile yapılandırılması gerekir. İstemci, kimlik doğrulaması yapmak ve hizmetle iletişimin güvenliğini sağlamak için Kerberos belirtecini almak üzere SPN 'YI kullanır. Aşağıdaki örnek, istemcisinin hizmetin SPN 'si ile nasıl yapılandırılacağını gösterir. İstemcisini oluşturmak için [ServiceModel meta veri yardımcı programı aracı 'nı (Svcutil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanıyorsanız, hizmetin meta verileri bu bilgileri IÇERIYORSA hizmetin SPN 'si otomatik olarak hizmetin meta VERILERI (wsdl) üzerinden istemciye yayılır. Hizmetin meta verilerine SPN 'yi dahil etmek için hizmeti yapılandırma hakkında daha fazla bilgi için, bu konunun devamındaki "hizmet" bölümüne bakın.
+> Windows kimlik bilgisi türünü anlaşma olmadan kullanmak için, hizmet ile iletişim kurmadan önce istemcinin hizmetin hesap SPN 'si ile yapılandırılması gerekir. İstemci, kimlik doğrulaması yapmak ve hizmetle iletişimin güvenliğini sağlamak için Kerberos belirtecini almak üzere SPN 'YI kullanır. Aşağıdaki örnek, istemcisinin hizmetin SPN 'si ile nasıl yapılandırılacağını gösterir. İstemciyi oluşturmak için [ServiceModel meta veri yardımcı programı aracını (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) kullanıyorsanız, hizmetin meta verileri bu bilgileri IÇERIYORSA hizmetin SPN 'si otomatik olarak hizmetin meta VERILERINDEN (wsdl) istemciye yayılır. Hizmetin meta verilerine SPN 'yi dahil etmek için hizmeti yapılandırma hakkında daha fazla bilgi için, bu konunun devamındaki "hizmet" bölümüne bakın.
 >
-> SPN 'Ler, Kerberos ve Active Directory hakkında daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10)). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement Kimlik doğrulama modları](securitybindingelement-authentication-modes.md) konusu.
+> SPN 'Ler, Kerberos ve Active Directory hakkında daha fazla bilgi için bkz. [Windows Için Kerberos teknik eki](/previous-versions/msp-n-p/ff649429(v=pandp.10)). Uç nokta kimlikleri hakkında daha fazla bilgi için bkz. [SecurityBindingElement Kimlik doğrulama modları](securitybindingelement-authentication-modes.md) konusu.
 
 [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
 [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]
@@ -157,4 +157,4 @@ Aşağıdaki kod istemcisini yapılandırır. [\<servicePrincipalName>](../../co
 
 - [Güvenliğe genel bakış](security-overview.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](service-identity-and-authentication.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

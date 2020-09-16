@@ -10,28 +10,28 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-ms.openlocfilehash: bf9ef3b9d48c0869dcc96820c3a2fb6fb608479e
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 5e63dc9b7142934c56fb70bce7b878a37a540faa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85618954"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556030"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Geri Çağırma Yöntemi Olarak Bir Temsilci Hazırlama
 Bu örnek, işlev işaretçileri bekleyen yönetilmeyen bir işleve temsilcilerin nasıl geçirileceğini gösterir. Bir temsilci, bir yönteme başvuru tutan ve tür kullanımı uyumlu işlev işaretçisine veya geri çağırma işlevine eşdeğer olan bir sınıftır.
 
 > [!NOTE]
-> Bir çağrı içinde bir temsilci kullandığınızda, ortak dil çalışma zamanı, bu çağrının süresi boyunca temsilciyi atık olarak toplanmaya karşı korur. Ancak, yönetilmeyen işlev çağrı tamamlandıktan sonra kullanmak üzere temsilciyi depoluyorsa, yönetilmeyen işlev temsilciyle bitene kadar çöp toplamayı el ile engellemeniz gerekir. Daha fazla bilgi için, bkz. [HandleRef örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hc662t8k(v=vs.100)) ve [GCHandle örneği](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/44ey4b32(v=vs.100)).
+> Bir çağrı içinde bir temsilci kullandığınızda, ortak dil çalışma zamanı, bu çağrının süresi boyunca temsilciyi atık olarak toplanmaya karşı korur. Ancak, yönetilmeyen işlev çağrı tamamlandıktan sonra kullanmak üzere temsilciyi depoluyorsa, yönetilmeyen işlev temsilciyle bitene kadar çöp toplamayı el ile engellemeniz gerekir. Daha fazla bilgi için, bkz. [HandleRef örneği](/previous-versions/dotnet/netframework-4.0/hc662t8k(v=vs.100)) ve [GCHandle örneği](/previous-versions/dotnet/netframework-4.0/44ey4b32(v=vs.100)).
 
 Geri çağırma örneği, özgün işlev bildirimiyle gösterilen aşağıdaki yönetilmeyen işlevleri kullanır:
 
-- `TestCallBack`PinvokeLib.dll dışarıya verildi.
+- `TestCallBack` PinvokeLib.dll dışarıya verildi.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
-- `TestCallBack2`PinvokeLib.dll dışarıya verildi.
+- `TestCallBack2` PinvokeLib.dll dışarıya verildi.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);
@@ -53,6 +53,6 @@ Bu örnekte, `NativeMethods` sınıfı ve yöntemleri için yönetilen prototür
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Çeşitli sıralama örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
+- [Çeşitli sıralama örnekleri](/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Platform çağırma veri türleri](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Yönetilen Kodda Prototipler Oluşturma](creating-prototypes-in-managed-code.md)

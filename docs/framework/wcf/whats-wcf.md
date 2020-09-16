@@ -7,12 +7,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 84cb45d62409769a79fa6a401fdb1aa6934c4099
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 898211ec4504225413769f2f0dbf2f2c70110c14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245615"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556069"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation nedir?
 Windows Communication Foundation (WCF), hizmet yönelimli uygulamalar oluşturmaya yönelik bir çerçevedir. WCF kullanarak, verileri bir hizmet uç noktasından diğerine zaman uyumsuz iletiler olarak gönderebilirsiniz. Hizmet uç noktası, IIS tarafından barındırılan bir sürekli kullanılabilir hizmetin parçası olabilir veya bir uygulamada barındırılan bir hizmet olabilir. Uç nokta, hizmet uç noktasından veri isteyen bir hizmetin istemcisi olabilir. İletiler, tek bir karakter veya bir kelime olarak bir XML olarak gönderilebilir ya da ikili veri akışı gibi karmaşık olabilir. Birkaç örnek senaryo şunlardır:
@@ -104,4 +104,4 @@ Windows Server AppFabric uygulama sunucusunun barındırma özellikleri, iletiş
 - [Başlangıç Öğreticisi](getting-started-tutorial.md)
 - [Belgeler için Kılavuz](guide-to-the-documentation.md)
 - [Temel WCF Programlama](basic-wcf-programming.md)
-- [Windows Communication Foundation Örnekleri](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)
+- [Windows Communication Foundation Örnekleri](/previous-versions/dotnet/netframework-3.5/ms751514(v=vs.90))

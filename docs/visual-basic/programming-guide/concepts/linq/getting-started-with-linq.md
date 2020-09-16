@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: 97db059c33e8c5603c2bf54bbcf128612a0d028f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398402"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554390"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic'te LINQ'e Başlarken
 Bu bölümde, Visual Basic ve dil ile tümleşik sorgu (LINQ) anlamanıza ve kullanmanıza yardımcı olacak genel bilgiler, örnekler ve arka plan bilgileri yer almaktadır.  
@@ -53,7 +53,7 @@ Bu bölümde, Visual Basic ve dil ile tümleşik sorgu (LINQ) anlamanıza ve kul
  [LINQ to Objects (Visual Basic)](linq-to-objects.md)  
  , Bellek içi koleksiyonlarla LINQ kullanmaya yönelik nasıl yapılır konularının bir seçimini içerir.  
   
- [LINQ to XML (Visual Basic)](linq-to-xml.md)  
+ [LINQ to XML (Visual Basic)](../../../../standard/linq/linq-xml-overview.md)  
  Belge Nesne Modeli (DOM) için bellek içi belge değiştirme yeteneklerini sağlayan ve LINQ sorgu ifadelerini destekleyen LINQ to XML nasıl kullanacağınızı açıklayan konuların bağlantılarını içerir.  
   
  [Dil ile tümleşik sorgu (LINQ) (Visual Basic)](index.md)  

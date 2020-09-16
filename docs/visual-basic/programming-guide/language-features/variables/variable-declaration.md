@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: 587cb84faa09b686361c255c413ad852780b8971
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e3e2b6173a36490328801afd7fe711f1a003e2ae
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410302"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557482"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic'de Değişken Bildirimi
 Adını ve özelliklerini belirtmek için bir değişken bildirirsiniz. Değişkenler için bildirim bildirimi, [Dim deyimidir](../../../language-reference/statements/dim-statement.md). Konumu ve içeriği, değişkenin özelliklerini tespit.  
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- Veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../data-types/index.md). Nesneler hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../objects-and-classes/index.md) ve [bileşenlerle programlama](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Veri türleri hakkında daha fazla bilgi için bkz. [veri türleri](../data-types/index.md). Nesneler hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../objects-and-classes/index.md) ve [bileşenlerle programlama](/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Yerel Tür Arabirimi  
  *Tür çıkarımı* , yan tümce olmadan belirtilen yerel değişkenlerin veri türlerini belirlemede kullanılır `As` . Derleyici, değişkenin türünü başlatma ifadesinin türünden algılar. Bu, açıkça bir tür belirtmeden değişkenleri bildirmenize olanak sağlar. Aşağıdaki örnekte, her ikisi de `num1` `num2` kesin olarak tam sayı olarak türdedir.  
@@ -83,8 +83,8 @@ Dim l, m As Long, x, y As Single
 - [Nasıl yapılır: Bir Değişkende Veri Ekleme Çıkarma](how-to-move-data-into-and-out-of-a-variable.md)
 - [Veri türleri](../../../language-reference/data-types/index.md)
 - [Korunamadı](../../../language-reference/modifiers/protected.md)
-- [Dost](../../../language-reference/modifiers/friend.md)
-- [Se](../../../language-reference/modifiers/static.md)
+- [Arkadaş](../../../language-reference/modifiers/friend.md)
+- [Static](../../../language-reference/modifiers/static.md)
 - [Bildirilen Öğe Özellikleri](../declared-elements/declared-element-characteristics.md)
 - [Yerel Tür Arabirimi](local-type-inference.md)
 - [Option Infer Deyimi](../../../language-reference/statements/option-infer-statement.md)

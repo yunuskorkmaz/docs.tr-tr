@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a9f5d50ad78b2b0bef0ece3c4fce47d2925aca5
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: d74c7b8d80f02283cd681ed0118257ed926bdc83
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88063763"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555256"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Büyük, Yanıt Veren .NET Framework Uygulamaları Yazma
 
@@ -86,7 +86,7 @@ public class BoxingExample
 var s = id.ToString() + ':' + size.ToString();  
 ```  
   
- Ancak, bu kod satırı, ' a derlendiğinden bir kutulama ayırmayı tanıtır <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29> . .NET Framework çağrılacak karakter sabit değerini Box olmalıdır`Concat`  
+ Ancak, bu kod satırı, ' a derlendiğinden bir kutulama ayırmayı tanıtır <xref:System.String.Concat%28System.Object%2CSystem.Object%2CSystem.Object%29> . .NET Framework çağrılacak karakter sabit değerini Box olmalıdır `Concat`  
   
  **Örnek 1 için çözüm**  
   
@@ -167,7 +167,7 @@ public void WriteFormattedDocComment(string text)
   
  İçindeki ilk satırda `WriteFormattedDocComment` , `text.Split` çağrı her çağrıldığında bağımsız değişken olarak yeni bir üç öğeli dizi ayırır. Derleyicinin her seferinde bu diziyi ayırmak için kod yaymalıdır. Bunun nedeni, derleyicinin diziyi dizinin bir <xref:System.String.Split%2A> yere depoladığını, daha sonra öğesine yapılan çağrıları etkileyecek şekilde depolayabileceğini bilmez `WriteFormattedDocComment` . Ayrıca çağrısı, <xref:System.String.Split%2A> içindeki her satır için bir dize ayırır `text` ve işlemi gerçekleştirmek için diğer belleği ayırır.
   
- `WriteFormattedDocComment`yöntemine üç çağrı içerir <xref:System.String.TrimStart%2A> . İkisi de yinelenen iş ve ayırmaları yineleyen iç Döngülerde bulunur. Önemli hale getirmek için <xref:System.String.TrimStart%2A> bir bağımsız değişken olmadan yöntemi çağırmak, dize sonucuna ek olarak boş bir dizi ( `params` parametresi için) ayırır.
+ `WriteFormattedDocComment` yöntemine üç çağrı içerir <xref:System.String.TrimStart%2A> . İkisi de yinelenen iş ve ayırmaları yineleyen iç Döngülerde bulunur. Önemli hale getirmek için <xref:System.String.TrimStart%2A> bir bağımsız değişken olmadan yöntemi çağırmak, dize sonucuna ek olarak boş bir dizi ( `params` parametresi için) ayırır.
   
  Son olarak, <xref:System.String.Substring%2A> genellikle yeni bir dize ayıran yöntemine bir çağrı vardır.
   
@@ -282,7 +282,7 @@ Lambda ifadeleriyle birlikte, dil ile tümleşik sorgu (LINQ), üretkenlik özel
   
  **Örnek 5: Lambdalar, List \<T> ve IEnumerable\<T>**  
   
- Bu örnek, bir ad dizesi verildiğinde derleyicinin modelinde bir sembol bulmak için [LINQ ve işlevsel stil kodu](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) kullanır:  
+ Bu örnek, bir ad dizesi verildiğinde derleyicinin modelinde bir sembol bulmak için [LINQ ve işlevsel stil kodu](/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) kullanır:  
   
 ```csharp  
 class Symbol {  
@@ -306,7 +306,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- İlk satırda, [lambda ifadesi](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` yerel değişken [üzerinde kapanır](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) `name` . Diğer bir deyişle, tutan [temsilci](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) için bir nesne ayırmanın yanı sıra `predicate` , kod, değerini yakalayan ortamı tutmak için bir statik sınıf ayırır `name` . Derleyici, aşağıdaki gibi bir kod üretir:  
+ İlk satırda, [lambda ifadesi](../../csharp/language-reference/operators/lambda-expressions.md) `s => s.Name == name` yerel değişken [üzerinde kapanır](/archive/blogs/ericlippert/what-are-closures) `name` . Diğer bir deyişle, tutan [temsilci](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) için bir nesne ayırmanın yanı sıra `predicate` , kod, değerini yakalayan ortamı tutmak için bir statik sınıf ayırır `name` . Derleyici, aşağıdaki gibi bir kod üretir:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -410,7 +410,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Önbelleğe alma ile yeni kodun adlı bir alan olduğunu görürsünüz `SyntaxTree` `cachedResult` . Bu alan null olduğunda, `GetSyntaxTreeAsync()` işi yapar ve sonucu önbelleğe kaydeder. `GetSyntaxTreeAsync()`nesneyi döndürür `SyntaxTree` . Bu sorun `async` , türünde bir işleviniz olduğunda `Task<SyntaxTree>` ve türünde bir değer döndürdüğünüzde `SyntaxTree` , derleyicinin sonucu tutmak için bir görev ayırmak üzere kod yayar (kullanarak `Task<SyntaxTree>.FromResult()` ). Görev tamamlandı olarak işaretlenir ve sonuç hemen kullanılabilir. Yeni derleyicilerin kodunda, <xref:System.Threading.Tasks.Task> zaten tamamlanmış olan nesneler, bu ayırmaları düzeltme hızını önemli ölçüde düzeltmeye yönelik olarak oluşmuştur.
+ Önbelleğe alma ile yeni kodun adlı bir alan olduğunu görürsünüz `SyntaxTree` `cachedResult` . Bu alan null olduğunda, `GetSyntaxTreeAsync()` işi yapar ve sonucu önbelleğe kaydeder. `GetSyntaxTreeAsync()` nesneyi döndürür `SyntaxTree` . Bu sorun `async` , türünde bir işleviniz olduğunda `Task<SyntaxTree>` ve türünde bir değer döndürdüğünüzde `SyntaxTree` , derleyicinin sonucu tutmak için bir görev ayırmak üzere kod yayar (kullanarak `Task<SyntaxTree>.FromResult()` ). Görev tamamlandı olarak işaretlenir ve sonuç hemen kullanılabilir. Yeni derleyicilerin kodunda, <xref:System.Threading.Tasks.Task> zaten tamamlanmış olan nesneler, bu ayırmaları düzeltme hızını önemli ölçüde düzeltmeye yönelik olarak oluşmuştur.
   
  **Örnek 6**  
   
@@ -436,7 +436,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- Bu kod, ' nin türünü `cachedResult` olarak değiştirir `Task<SyntaxTree>` ve `async` özgün kodu ' den tutan bir yardımcı işlevi kullanır `GetSyntaxTreeAsync()` . `GetSyntaxTreeAsync()`Şimdi null [birleştirme işlecini](../../csharp/language-reference/operators/null-coalescing-operator.md) kullanarak `cachedResult` null değilse döndürün. `cachedResult`Null ise, `GetSyntaxTreeAsync()` `GetSyntaxTreeUncachedAsync()` sonuçları çağırır ve önbelleğe alır. `GetSyntaxTreeAsync()` `GetSyntaxTreeUncachedAsync()` Genellikle kod olarak yapılan çağrıyı beklemez. Await kullanılması `GetSyntaxTreeUncachedAsync()` <xref:System.Threading.Tasks.Task> , nesnesini döndürdüğünde, hemen öğesini döndüren anlamına gelir `GetSyntaxTreeAsync()` <xref:System.Threading.Tasks.Task> . Şimdi önbelleğe alınmış sonuç bir olduğundan, <xref:System.Threading.Tasks.Task> önbelleğe alınmış sonucu döndürecek bir ayırma yoktur.
+ Bu kod, ' nin türünü `cachedResult` olarak değiştirir `Task<SyntaxTree>` ve `async` özgün kodu ' den tutan bir yardımcı işlevi kullanır `GetSyntaxTreeAsync()` . `GetSyntaxTreeAsync()` Şimdi null [birleştirme işlecini](../../csharp/language-reference/operators/null-coalescing-operator.md) kullanarak `cachedResult` null değilse döndürün. `cachedResult`Null ise, `GetSyntaxTreeAsync()` `GetSyntaxTreeUncachedAsync()` sonuçları çağırır ve önbelleğe alır. `GetSyntaxTreeAsync()` `GetSyntaxTreeUncachedAsync()` Genellikle kod olarak yapılan çağrıyı beklemez. Await kullanılması `GetSyntaxTreeUncachedAsync()` <xref:System.Threading.Tasks.Task> , nesnesini döndürdüğünde, hemen öğesini döndüren anlamına gelir `GetSyntaxTreeAsync()` <xref:System.Threading.Tasks.Task> . Şimdi önbelleğe alınmış sonuç bir olduğundan, <xref:System.Threading.Tasks.Task> önbelleğe alınmış sonucu döndürecek bir ayırma yoktur.
   
 ### <a name="additional-considerations"></a>Diğer konular  
  Büyük uygulamalarda veya çok sayıda veriyi işleyen uygulamalarda olası sorunlar hakkında daha fazla noktaya yer verilmiştir.
@@ -449,7 +449,7 @@ class Compilation { /*...*/
   
  Bir şekilde, sınıflar ve yapılar, uygulamalarınızı ayarlamak için klasik bir alan/saat zorunluluğunu getirir sağlar. Sınıflar bir x86 makinesinde alan olmasa bile 12 baytlık ek yük sağlar, ancak yalnızca bir sınıf örneğine başvurmak için bir işaretçi kullandığından, bunlara geçiş yapmak pahalı değildir. Yapılar, kutulamadıklarında yığın ayırmaları oluşturmaz, ancak büyük yapıları işlev bağımsız değişkenleri veya dönüş değerleri olarak geçirdiğinizde, yapıların tüm veri üyelerini otomatik olarak kopyalamak için CPU süresi sürer. Yapıları döndüren özelliklere yapılan yinelenen çağrılar için izleyin ve aşırı veri kopyalamayı önlemek için özelliğin değerini yerel bir değişkende önbelleğe koyun.
   
- **Caches**  
+ **Önbellekler**  
   
  Yaygın bir performans eli, sonuçları önbelleğe almak için kullanılır. Ancak, boyut Cap veya çıkarma ilkesi olmayan bir önbellek bellek sızıntısı olabilir. Büyük miktarlarda verileri işlerken önbellekler üzerinde çok fazla bellek tutarsanız, çöp toplamanın önbelleğe alınmış aramalarınızın avantajlarını geçersiz kılmasına neden olabilirsiniz.
   
@@ -468,7 +468,7 @@ class Compilation { /*...*/
 - [Bu konunun sunumunun videosu](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Performans profili oluşturma için yeni başlayanlar kılavuzu](/visualstudio/profiling/beginners-guide-to-performance-profiling)
 - [Performans](index.md)
-- [.NET Performans İpuçları](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v%3dmsdn.10))
+- [.NET Performans İpuçları](/previous-versions/dotnet/articles/ms973839(v=msdn.10))
 - [Channel 9 PerfView öğreticileri](https://channel9.msdn.com/Series/PerfView-Tutorial)
 - [.NET Compiler Platform SDK 'Sı](../../csharp/roslyn-sdk/index.md)
 - [GitHub 'da DotNet/Roslyn deposu](https://github.com/dotnet/roslyn)

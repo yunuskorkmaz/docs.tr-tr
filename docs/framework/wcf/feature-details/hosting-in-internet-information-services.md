@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: baf13af39fe575a75f1304b21f3b4ad70dd370ab
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 7bfdf2b057c791da7e15619d69c0314557944093
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597325"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555841"
 ---
 # <a name="host-in-internet-information-services"></a>Internet Information Services 'de barındırma
 
@@ -25,7 +25,7 @@ WCF aşağıdaki işletim sistemlerinde IIS 'nin aşağıdaki sürümlerinde bar
 
 - Windows Vista ve Windows Server 2008 üzerinde IIS 7,0. IIS 7,0, IIS 6,0 ile aynı gelişmiş işlem modelini sağlar, ancak Windows Işlem etkinleştirme hizmeti 'ni (WAS) HTTP dışındaki protokollerde etkinleştirme ve ağ iletişimine olanak tanımak için kullanır. Bu ortam, WCF tarafından desteklenen herhangi bir ağ protokolü üzerinden iletişim kuran WCF Hizmetleri geliştirmesi için uygundur (HTTP, net. TCP, net. pipe ve net. MSMQ dahil). WAS hakkında daha fazla bilgi için bkz. [Windows Işlem etkinleştirme hizmetinde barındırma](hosting-in-windows-process-activation-service.md).
 
-- [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) ve [AppFabric barındırma kavramları](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).
+- [Windows Server AppFabric](/previous-versions/appfabric/ff384253(v=azure.10)) , NET4 WCF ve WF hizmetleri için zengin bir uygulama barındırma ortamı sağlamak üzere IIS 7,0 ve Windows Işlem etkinleştirme HIZMETI (was) ile birlikte çalışarak. Bu avantajlar arasında işlem yaşam döngüsü yönetimi, işlem geri dönüşümü, paylaşılan barındırma, hızlı hata koruması, işlem orphaning, isteğe bağlı etkinleştirme ve sistem durumu izleme sayılabilir. Ayrıntılı bilgi için bkz. [AppFabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10)) ve [AppFabric barındırma kavramları](/previous-versions/appfabric/ee677371(v=azure.10)).
 
 ## <a name="benefits-of-iis-hosting"></a>IIS barındırma 'nın avantajları
 
@@ -68,4 +68,4 @@ WCF Hizmetleri, ASP.NET ile yan yana veya ASP.NET uyumluluk modunda, hizmetlerin
 - [WCF Hizmetleri ve ASP.NET](wcf-services-and-aspnet.md)
 - [Internet Information Services Barındırma En İyi Uygulamaları](internet-information-services-hosting-best-practices.md)
 - [Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma](configuring-iis-for-wcf.md)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

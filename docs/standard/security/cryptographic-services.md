@@ -25,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 4cd4e493e0e7d159b2749dac78b9a560e20fd75c
-ms.sourcegitcommit: b7a8b09828bab4e90f66af8d495ecd7024c45042
+ms.openlocfilehash: 651231dcc41926307e3a46b67c80ba3df1fb25e9
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87557027"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90549986"
 ---
 # <a name="cryptographic-services"></a>Şifreleme Hizmetleri
 
@@ -150,7 +150,7 @@ Karma algoritmalar rastgele uzunluktaki ikili değerleri, karma değerler olarak
 
 - Çiğdem, can 'a düz metin iletisi ve karma ileti (dijital imza) gönderir. Bob iletiyi alır ve karma hale getirir ve karma değerini gamze 'den aldığı karma değerle karşılaştırır. Karma değerleri aynıysa ileti değiştirilmez. Değerler özdeş değilse, ileti çiğdem tarafından yazıldıktan sonra değiştirilir.
 
-  Ne yazık ki bu yöntem, gönderenin orijinalliğini oluşturmaz. Birisi gamze 'yi taklit edebilir ve emre 'ye bir ileti gönderebilir. İletileri imzalamak için aynı karma algoritmayı kullanabilir ve tüm Bob, iletinin imzasıyla eşleşip eşleşmediğini tespit edebilir. Bu, ortadaki adam saldırısının bir biçimidir. Daha fazla bilgi için bkz. [Yeni nesil şifreleme (CNG) güvenli Iletişim örneği](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Ne yazık ki bu yöntem, gönderenin orijinalliğini oluşturmaz. Birisi gamze 'yi taklit edebilir ve emre 'ye bir ileti gönderebilir. İletileri imzalamak için aynı karma algoritmayı kullanabilir ve tüm Bob, iletinin imzasıyla eşleşip eşleşmediğini tespit edebilir. Bu, ortadaki adam saldırısının bir biçimidir. Daha fazla bilgi için bkz. [Yeni nesil şifreleme (CNG) güvenli Iletişim örneği](/previous-versions/cc488018(v=vs.100)).
 
 - Çiğdem, güvenli olmayan bir genel kanal üzerinden emre 'ye düz metin iletisi gönderir. Karma iletiyi güvenli bir özel kanal üzerinden emre 'ye gönderir. Bob, düz metin iletisini alır, onu karma hale getirir ve karmayı özel olarak değiştirilen karmayla karşılaştırır. Karmalar eşleşiyorsa, Bob iki şeyi bilir:
 
@@ -194,13 +194,13 @@ Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin,
 
  Ayrıca, aşağıdaki sınıflar belirli imza bilgilerini sağlar:
 
-- <xref:System.Security.Cryptography.StrongNameSignatureInformation>bir bildirimin tanımlayıcı ad imzası bilgilerini tutar.
+- <xref:System.Security.Cryptography.StrongNameSignatureInformation> bir bildirimin tanımlayıcı ad imzası bilgilerini tutar.
 
-- <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation>bir bildirimin Authenticode imza bilgilerini temsil eder.
+- <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation> bir bildirimin Authenticode imza bilgilerini temsil eder.
 
-- <xref:System.Security.Cryptography.X509Certificates.TimestampInformation>bir Authenticode imzasında zaman damgasıyla ilgili bilgileri içerir.
+- <xref:System.Security.Cryptography.X509Certificates.TimestampInformation> bir Authenticode imzasında zaman damgasıyla ilgili bilgileri içerir.
 
-- <xref:System.Security.Cryptography.X509Certificates.TrustStatus>Authenticode imzasının güvenilir olup olmadığını denetlemek için basit bir yol sağlar.
+- <xref:System.Security.Cryptography.X509Certificates.TrustStatus> Authenticode imzasının güvenilir olup olmadığını denetlemek için basit bir yol sağlar.
 
 ## <a name="cryptography-next-generation-cng-classes"></a>Yeni nesil şifreleme (CNG) sınıfları
 
@@ -210,11 +210,11 @@ Rastgele sayı oluşturma çok sayıda şifreleme işlemine integral. Örneğin,
 
 .NET Framework 3,5 ayrıca aşağıdakiler gibi çeşitli destek CNG sınıfları içerir:
 
-- <xref:System.Security.Cryptography.CngProvider>anahtar depolama sağlayıcısını korur.
+- <xref:System.Security.Cryptography.CngProvider> anahtar depolama sağlayıcısını korur.
 
-- <xref:System.Security.Cryptography.CngAlgorithm>CNG algoritmasını korur.
+- <xref:System.Security.Cryptography.CngAlgorithm> CNG algoritmasını korur.
 
-- <xref:System.Security.Cryptography.CngProperty>sık kullanılan anahtar özelliklerini korur.
+- <xref:System.Security.Cryptography.CngProperty> sık kullanılan anahtar özelliklerini korur.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

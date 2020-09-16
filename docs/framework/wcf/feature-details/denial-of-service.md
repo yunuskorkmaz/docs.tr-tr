@@ -1,17 +1,17 @@
 ---
-title: Hizmet Reddi
+title: Denial of Service (Hizmet Reddi)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 1c1778ace6abc332517786f910d0442eeed577c9
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 29798a73ec69b7f695068343d9c7b5593eeba4fa
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84599275"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557586"
 ---
-# <a name="denial-of-service"></a>Hizmet Reddi
+# <a name="denial-of-service"></a>Denial of Service (Hizmet Reddi)
 Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hizmet reddi oluşur.  
   
 ## <a name="excess-memory-consumption"></a>Aşırı bellek tüketimi  
@@ -44,7 +44,7 @@ Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hi
 ## <a name="auditing-event-log-can-be-filled"></a>Denetim olayı günlüğü doldurulabilir  
  Kötü amaçlı bir kullanıcı denetimin etkinleştirildiğini anladıysa, bu saldırgan denetim girişlerinin yazılmasına neden olan geçersiz iletiler gönderebilir. Denetim günlüğü bu şekilde doldurulmuşsa, denetim sistemi başarısız olur.  
   
- Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini olarak ayarlayın `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın. Olay günlüklerini görüntülemek ve yönetmek için Olay Görüntüleyicisi kullanma hakkında daha fazla bilgi için bkz. [Olay Görüntüleyicisi](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Daha fazla bilgi için bkz. [Denetim](auditing-security-events.md).  
+ Bunu azaltmak için <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> özelliğini olarak ayarlayın `true` ve Denetim davranışını denetlemek için Olay Görüntüleyicisi özelliklerini kullanın. Olay günlüklerini görüntülemek ve yönetmek için Olay Görüntüleyicisi kullanma hakkında daha fazla bilgi için bkz. [Olay Görüntüleyicisi](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11)). Daha fazla bilgi için bkz. [Denetim](auditing-security-events.md).  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>Geçersiz IAuthorizationPolicy uygulamaları hizmetin yanıt vermemesine neden olabilir  
  Yöntemi, <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> arabirimin hatalı bir uygulamasında çağırmak <xref:System.IdentityModel.Policy.IAuthorizationPolicy> hizmetin yanıt vermemesine neden olabilir.  
@@ -61,7 +61,7 @@ Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hi
   
  Bunu azaltmak için, üzerinde daha kesin bir arama ölçütü kullanarak kullanmak üzere tam sertifikaya başvurun [\<serviceCredentials>](../../configure-apps/file-schema/wcf/servicecredentials.md) . Örneğin, <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> seçeneğini kullanın ve sertifikayı benzersiz parmak izine (karma) göre belirtin.  
   
- Otomatik kayıt özelliği hakkında daha fazla bilgi için bkz. [Windows Server 'Da sertifika otomatik kaydı 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10)).  
+ Otomatik kayıt özelliği hakkında daha fazla bilgi için bkz. [Windows Server 'Da sertifika otomatik kaydı 2003](/previous-versions/windows/it-pro/windows-server-2003/cc778954(v=ws.10)).  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>Yetkilendirme için kullanılan birden çok alternatif konu adının son sayısı  
  Bir X. 509.440 sertifikası birden çok alternatif konu adı içerdiğinde ve alternatif konu adını kullanarak yetkilendirdiğiniz durumlarda, yetkilendirme başarısız olabilir.  
@@ -82,9 +82,9 @@ Bir sistem, iletilerin işlenemediği veya çok yavaş işlendiği durumlarda hi
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenlik konuları](security-considerations-in-wcf.md)
-- [Bilgileri Açıklama](information-disclosure.md)
-- [Ayrıcalıkların Yükseltilmesi](elevation-of-privilege.md)
+- [Bilgilerin Açığa Çıkması](information-disclosure.md)
+- [Ayrıcalık Yükseltme](elevation-of-privilege.md)
 - [Hizmet Reddi](denial-of-service.md)
 - [Yeniden Yürütme Saldırıları](replay-attacks.md)
-- [İzinsiz Değişiklik](tampering.md)
+- [Kurcalama](tampering.md)
 - [Desteklenmeyen Senaryolar](unsupported-scenarios.md)

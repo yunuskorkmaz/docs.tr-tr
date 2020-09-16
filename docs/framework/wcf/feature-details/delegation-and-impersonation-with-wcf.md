@@ -9,12 +9,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: 7f8d3695a36a43ca6bf796b141c07f6d2d088354
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 91e7ea8df5c32329f0eb8d12943ce5f816ff0e5a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85245082"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557599"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF ile Temsilcilik ve Kimliğe Bürünme
 *Kimliğe bürünme* , hizmetlerin, istemci erişimini bir hizmet etki alanı kaynaklarına kısıtlamak için kullandığı yaygın bir tekniktir. Hizmet etki alanı kaynakları, yerel dosyalar (kimliğe bürünme) gibi makine kaynakları ya da başka bir makinedeki bir dosya paylaşma (temsili) gibi bir kaynak olabilir. Örnek bir uygulama için bkz. [Istemcinin kimliğine bürünme](../samples/impersonating-the-client.md). Kimliğe bürünme özelliğinin nasıl kullanılacağına ilişkin bir örnek için bkz. [nasıl yapılır: bir hizmette Istemcinin kimliğine bürünme](../how-to-impersonate-a-client-on-a-service.md).  
@@ -112,7 +112,7 @@ ms.locfileid: "85245082"
   
  Aşağıdaki tablo, önbelleğe alınmış bir belirteçle kimliğe bürünme sırasında hizmetin aldığı kimliğe bürünme düzeyini belirtir.  
   
-|`AllowedImpersonationLevel`deeri|Hizmet,`SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç`ImpersonationLevel`|  
+|`AllowedImpersonationLevel` deeri|Hizmet, `SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonim|Yes|yok|Kimliğe bürünme|  
 |Anonim|No|yok|Kimlik|  
@@ -120,24 +120,24 @@ ms.locfileid: "85245082"
 |Kimliğe bürünme|Yes|yok|Kimliğe bürünme|  
 |Kimliğe bürünme|No|yok|Kimlik|  
 |Temsilci|Yes|Yes|Temsilci|  
-|Temsilci|Evet|No|Kimliğe bürünme|  
+|Temsilci|Yes|Hayır|Kimliğe bürünme|  
 |Temsilci|No|yok|Kimlik|  
   
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>Kullanıcı adı kimlik bilgilerinden alınan kimliğe bürünme düzeyi ve önbelleğe alınmış belirteç kimliğe bürünme  
  Bir istemci, hizmetin Kullanıcı adı ve parolasını geçirerek, özelliğin özelliği olarak ayarlanmasına eşdeğer olan kullanıcının bu kullanıcı olarak oturum açmasına olanak sağlar `AllowedImpersonationLevel` <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> . ( `AllowedImpersonationLevel` <xref:System.ServiceModel.Security.WindowsClientCredential> Ve <xref:System.ServiceModel.Security.HttpDigestClientCredential> sınıflarında kullanılabilir.) Aşağıdaki tablo, hizmet Kullanıcı adı kimlik bilgilerini aldığında elde edilen kimliğe bürünme düzeyini sağlar.  
   
-|`AllowedImpersonationLevel`|Hizmet,`SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç`ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|Hizmet, `SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |yok|Yes|Yes|Temsilci|  
-|yok|Evet|No|Kimliğe bürünme|  
+|yok|Yes|Hayır|Kimliğe bürünme|  
 |yok|No|yok|Kimlik|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U tabanlı kimliğe bürünme 'den edinilen kimliğe bürünme düzeyi  
   
-|Hizmet,`SeTcbPrivilege`|Hizmet,`SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç`ImpersonationLevel`|  
+|Hizmet, `SeTcbPrivilege`|Hizmet, `SeImpersonatePrivilege`|Hizmet ve istemci, temsilciliğini alabilir|Önbelleğe alınmış belirteç `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Yes|Yes|yok|Kimliğe bürünme|  
-|Evet|No|yok|Kimlik|  
+|Yes|Hayır|yok|Kimlik|  
 |No|yok|yok|Kimlik|  
   
 ## <a name="mapping-a-client-certificate-to-a-windows-account"></a>Bir Istemci sertifikasını bir Windows hesabıyla eşleme  
@@ -171,7 +171,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ```  
   
 ## <a name="delegation"></a>Temsilci  
- Bir arka uç hizmetine temsilci seçmek için, bir hizmet, istemcinin Windows kimliğini kullanarak Kerberos Multi-BAI (NTLM geri dönüşü olmadan SSPI) veya arka uç hizmetine Kerberos doğrudan kimlik doğrulaması gerçekleştirmelidir. Bir arka uç hizmetine temsilci seçmek için bir <xref:System.ServiceModel.ChannelFactory%601> ve bir kanal oluşturun ve sonra istemciyi taklit ederken kanal üzerinden iletişim kurun. Bu tür bir temsilciyle, arka uç hizmetinin ön uç hizmetinden konumlandırıldığı mesafe ön uç hizmeti tarafından elde edilen kimliğe bürünme düzeyine bağlıdır. Kimliğe bürünme düzeyi olduğunda <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> , ön uç ve arka uç hizmetlerinin aynı makinede çalışıyor olması gerekir. Kimliğe bürünme düzeyi olduğunda <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> , ön uç ve arka uç hizmetleri ayrı makinelerde veya aynı makinede olabilir. Temsili düzeyi kimliğe bürünme özelliğinin etkinleştirilmesi için Windows etki alanı ilkesinin temsilciliğe izin verecek şekilde yapılandırılması gerekir. Temsilci desteği için Active Directory yapılandırma hakkında daha fazla bilgi için bkz. [temsilci kimlik doğrulamasını etkinleştirme](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
+ Bir arka uç hizmetine temsilci seçmek için, bir hizmet, istemcinin Windows kimliğini kullanarak Kerberos Multi-BAI (NTLM geri dönüşü olmadan SSPI) veya arka uç hizmetine Kerberos doğrudan kimlik doğrulaması gerçekleştirmelidir. Bir arka uç hizmetine temsilci seçmek için bir <xref:System.ServiceModel.ChannelFactory%601> ve bir kanal oluşturun ve sonra istemciyi taklit ederken kanal üzerinden iletişim kurun. Bu tür bir temsilciyle, arka uç hizmetinin ön uç hizmetinden konumlandırıldığı mesafe ön uç hizmeti tarafından elde edilen kimliğe bürünme düzeyine bağlıdır. Kimliğe bürünme düzeyi olduğunda <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> , ön uç ve arka uç hizmetlerinin aynı makinede çalışıyor olması gerekir. Kimliğe bürünme düzeyi olduğunda <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> , ön uç ve arka uç hizmetleri ayrı makinelerde veya aynı makinede olabilir. Temsili düzeyi kimliğe bürünme özelliğinin etkinleştirilmesi için Windows etki alanı ilkesinin temsilciliğe izin verecek şekilde yapılandırılması gerekir. Temsilci desteği için Active Directory yapılandırma hakkında daha fazla bilgi için bkz. [temsilci kimlik doğrulamasını etkinleştirme](/previous-versions/windows/it-pro/windows-server-2003/cc780217(v=ws.10)).  
   
 > [!NOTE]
 > İstemci, arka uç hizmetindeki bir Windows hesabına karşılık gelen bir Kullanıcı adı ve parola kullanarak ön uç hizmetinde kimlik doğrulaması gerçekleştiriyorsa, ön uç hizmeti istemcinin kullanıcı adını ve parolasını yeniden kullanarak arka uç hizmetinde kimlik doğrulaması yapabilir. Bu özellikle güçlü bir kimlik akışı biçimidir, çünkü arka uç hizmetine Kullanıcı adı ve parola geçirme, arka uç hizmetinin kimliğe bürünme işlemini gerçekleştirmesini sağlar ancak Kerberos kullanılmadığından, temsilciyi oluşturmaz. Active Directory denetimleri, Kullanıcı adı ve parola kimlik doğrulaması için geçerlidir.  
@@ -181,7 +181,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 |Kimliğe bürünme düzeyi|Hizmet, işlemler arası temsili gerçekleştirebilir|Hizmet, makineler arası temsili gerçekleştirebilir|  
 |-------------------------|---------------------------------------------------|---------------------------------------------------|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Identification>|Hayır|Hayır|  
-|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Evet|No|  
+|<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>|Yes|Hayır|  
 |<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>|Yes|Yes|  
   
  Aşağıdaki kod örneği, temsilciyi nasıl kullanacağınızı gösterir.  
@@ -190,7 +190,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
  [!code-vb[c_delegation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_delegation/vb/source.vb#1)]  
   
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Bir uygulamayı kısıtlanmış temsilciyi kullanacak şekilde yapılandırma  
- Kısıtlanmış temsilciyi kullanabilmeniz için, gönderenin, alıcının ve etki alanı denetleyicisinin bu şekilde yapılandırılması gerekir. Aşağıdaki yordamda, kısıtlanmış temsilciyi etkinleştiren adımlar listelenmektedir. Yetkilendirme ve kısıtlanmış yetkilendirme arasındaki farklılıklar hakkında daha fazla bilgi için, kısıtlanmış tartışmayı ele alan [Windows Server 2003 Kerberos uzantılarının](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) bölümüne bakın.  
+ Kısıtlanmış temsilciyi kullanabilmeniz için, gönderenin, alıcının ve etki alanı denetleyicisinin bu şekilde yapılandırılması gerekir. Aşağıdaki yordamda, kısıtlanmış temsilciyi etkinleştiren adımlar listelenmektedir. Yetkilendirme ve kısıtlanmış yetkilendirme arasındaki farklılıklar hakkında daha fazla bilgi için, kısıtlanmış tartışmayı ele alan [Windows Server 2003 Kerberos uzantılarının](/previous-versions/windows/it-pro/windows-server-2003/cc738207(v=ws.10)) bölümüne bakın.  
   
 1. Etki alanı denetleyicisinde, **Hesap duyarlıdır ve** istemci uygulamasının çalıştığı hesap için temsilci seçilemez onay kutusunu temizleyin.  
   
@@ -200,7 +200,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 4. Etki alanı denetleyicisinde, **Bu bilgisayara yalnızca belirtilen hizmetlere yetkilendirme Için güven** seçeneğini tıklayarak orta katman bilgisayarı Kısıtlı temsilciyi kullanacak şekilde yapılandırın.  
   
- Kısıtlanmış temsilciyi yapılandırma hakkında daha ayrıntılı yönergeler için bkz. [Kerberos protokol geçişi ve kısıtlanmış temsili](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
+ Kısıtlanmış temsilciyi yapılandırma hakkında daha ayrıntılı yönergeler için bkz. [Kerberos protokol geçişi ve kısıtlanmış temsili](/previous-versions/windows/it-pro/windows-server-2003/cc739587(v=ws.10)).
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: d67d64dcf0003de28775ac947f8b5f72d7c2ba2a
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: c86a07b96b15963af9f078b52bc0d28e9a38187a
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597637"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556264"
 ---
 # <a name="authorization-in-wcf"></a>WCF'de Yetkilendirme
 Yetkilendirme, hizmetler veya dosyalar gibi kaynaklara erişimi ve hakları denetleme işlemidir. Bu bölümdeki konularda, bu temel görevin çeşitli yollarla Windows Communication Foundation (WCF) üzerinde nasıl gerçekleştirileceği gösterilmektedir.  
@@ -28,7 +28,7 @@ Yetkilendirme, hizmetler veya dosyalar gibi kaynaklara erişimi ve hakları dene
  [Nasıl yapılır: ASP.NET Yetkilendirme Yöneticisi Rol Sağlayıcısını Bir Hizmetle Kullanma](how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  ASP.NET, bir Web sitesi için yetkilendirmeyi yönetmek üzere Yetkilendirme Yöneticisi 'ni kullanabilir. WCF, istemci yetkilendirmesi için ASP.NET/Authorization Manager bileşiminden benzer şekilde yararlanabilir.  
   
- [Kimlik Modeliyle Talep ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)  
+ [Kimlik Modeliyle Beyanlar ve Yetkilendirmeyi Yönetme](managing-claims-and-authorization-with-the-identity-model.md)  
  Talep tabanlı yetkilendirme için kimlik modeli altyapısını kullanmanın temellerini açıklar.  
   
  [Temsilcilik ve Kimliğe Bürünme](delegation-and-impersonation-with-wcf.md)  
@@ -49,4 +49,4 @@ Yetkilendirme, hizmetler veya dosyalar gibi kaynaklara erişimi ve hakları dene
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Güvenliğe genel bakış](security-overview.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

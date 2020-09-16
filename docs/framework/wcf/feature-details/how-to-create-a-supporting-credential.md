@@ -2,18 +2,18 @@
 title: 'Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: b8e7ddcd6118c77e14e090a0b1fa8d65aeb8e3df
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: b181ac72c9f197e9e404f7aa0f04e254abac10da
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597156"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557404"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Nasıl yapılır: Destekleyici Kimlik Bilgileri Oluşturma
 Birden fazla kimlik bilgisi gerektiren özel bir güvenlik şeması olması mümkündür. Örneğin, bir hizmet istemciden yalnızca bir Kullanıcı adı ve parola değil, aynı zamanda istemciyi karşılayan bir kimlik bilgisinin 18 yaşına göre talep edebilir. İkinci kimlik bilgisi destekleyici bir *kimlik bilgileridir*. Bu konuda Windows Communication Foundation (WCF) istemcisinde bu kimlik bilgilerinin nasıl uygulanacağı açıklanmaktadır.  
   
 > [!NOTE]
-> Destekleyici kimlik bilgilerini destekleme belirtimi, WS-SecurityPolicy belirtiminin bir parçasıdır. Daha fazla bilgi için bkz. [Web Hizmetleri güvenliği belirtimleri](https://docs.microsoft.com/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
+> Destekleyici kimlik bilgilerini destekleme belirtimi, WS-SecurityPolicy belirtiminin bir parçasıdır. Daha fazla bilgi için bkz. [Web Hizmetleri güvenliği belirtimleri](/previous-versions/dotnet/articles/ms951273(v=msdn.10)).  
   
 ## <a name="supporting-tokens"></a>Destek Belirteçleri  
  Kısaca ileti güvenliği kullandığınızda, ileti güvenliğini sağlamak için her zaman *birincil bir kimlik bilgisi* kullanılır (örneğin, bir X. 509.952 sertifikası veya bir Kerberos bileti).  
@@ -27,7 +27,7 @@ Birden fazla kimlik bilgisi gerektiren özel bir güvenlik şeması olması müm
 ## <a name="endorsing-signing-and-encrypting"></a>Onaylama, Imzalama ve şifreleme  
  Destekleyici kimlik bilgileri, ileti içinde aktarılan *destekleyici belirteçle* sonuçlanır. WS-SecurityPolicy belirtimi, aşağıdaki tabloda açıklandığı gibi, iletiye bir destekleme belirteci eklemenin dört yolunu tanımlar.  
   
-|Amaç|Açıklama|  
+|Amaç|Description|  
 |-------------|-----------------|  
 |İmza|Destekleyici belirteç güvenlik başlığına dahildir ve ileti imzası tarafından imzalanır.|  
 |Onaylanan|*Onaylama belirteci* , ileti imzasını imzalar.|  
@@ -74,7 +74,7 @@ Birden fazla kimlik bilgisi gerektiren özel bir güvenlik şeması olması müm
   
 ## <a name="example"></a>Örnek  
   
-### <a name="description"></a>Açıklama  
+### <a name="description"></a>Description  
  Aşağıdaki örnek öğesinin bir örneğini oluşturur ve bir <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> sınıfının bir örneğini, tarafından <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> verilen onaylama özelliği olan koleksiyona ekler.  
   
 ### <a name="code"></a>Kod  

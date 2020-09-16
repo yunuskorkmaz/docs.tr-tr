@@ -1,15 +1,15 @@
 ---
-title: "Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma"
+title: "Nasıl yapılır: WAS'de WCF Hizmeti Barındırma"
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 40460baeb136345f2532ec6ad5035bd5d3a40254
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 8049b7961169c6ec7a8d80fb0e8747e99992247b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051993"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555978"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'ta WCF Hizmeti Barındırma
+# <a name="how-to-host-a-wcf-service-in-was"></a>Nasıl yapılır: WAS'de WCF Hizmeti Barındırma
 Bu konuda, Windows Işlem etkinleştirme Hizmetleri (WAS olarak da bilinir) barındırılan Windows Communication Foundation (WCF) hizmeti oluşturmak için gereken temel adımlar özetlenmektedir. , HTTP olmayan taşıma protokolleriyle çalışan Internet Information Services (IIS) özelliklerinin genelleştirilmesi olan yeni işlem etkinleştirme hizmetidir. WCF, TCP, adlandırılmış kanallar ve Message Queuing gibi WCF tarafından desteklenen HTTP olmayan protokoller üzerinden alınan etkinleştirme isteklerini iletmek için dinleyici bağdaştırıcısı arabirimini kullanır.  
   
  Bu barındırma seçeneği, etkinleştirme bileşenlerinin doğru şekilde yüklenip yapılandırılmasını gerektirir, ancak uygulamanın bir parçası olarak herhangi bir barındırma kodunun yazılmasını gerektirmez. WAS yükleme ve yapılandırma hakkında daha fazla bilgi için bkz. [nasıl yapılır: WCF etkinleştirme bileşenlerini yükleme ve yapılandırma](how-to-install-and-configure-wcf-activation-components.md).  
@@ -101,4 +101,4 @@ Bu konuda, Windows Işlem etkinleştirme Hizmetleri (WAS olarak da bilinir) bar�
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [TCP Etkinleştirme](../samples/tcp-activation.md)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

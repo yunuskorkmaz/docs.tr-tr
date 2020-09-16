@@ -2,12 +2,12 @@
 title: SQL Server’da Satır Düzeyinde İzinler Verme
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: df5fcb4a6c73e12bec2ab17501fdfb02cf672324
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0b34eaee4b66a2be82049816f0a98b9f53012303
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782358"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554859"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server’da Satır Düzeyinde İzinler Verme
 
@@ -23,7 +23,7 @@ Aşağıdaki örnek, bir kullanıcı veya oturum açma adına göre satır düze
 
 - Satır düzeyinde filtrelemeyi etkinleştir:
 
-  - SQL Server 2016 veya üzeri ya da [Azure SQL veritabanı](https://docs.microsoft.com/azure/sql-database/)kullanıyorsanız, geçerli veritabanı kullanıcısı ile eşleşen satırları kısıtlayan tabloya bir koşul ekleyen bir güvenlik ilkesi oluşturun (CURRENT_USER () yerleşik işlevini kullanarak) veya geçerli oturum açma adı (SUSER_SNAME () yerleşik işlevini kullanarak):
+  - SQL Server 2016 veya üzeri ya da [Azure SQL veritabanı](/azure/sql-database/)kullanıyorsanız, geçerli veritabanı kullanıcısı ile eşleşen satırları kısıtlayan bir güvenlik ilkesi oluşturun (CURRENT_USER () yerleşik işlevini kullanarak) ya da geçerli oturum açma adını (suser_sname () yerleşik işlevini kullanarak).
 
       ```sql
       CREATE SCHEMA Security
@@ -53,11 +53,11 @@ Aşağıdaki örnek, bir kullanıcı veya oturum açma adına göre satır düze
       GO
       ```
 
-- Verileri seçmek, eklemek, güncelleştirmek ve silmek için saklı yordamlar oluşturun. Filtreleme bir güvenlik ilkesiyle çalışıyorsa, saklı yordamlar bu işlemleri doğrudan temel tabloda gerçekleştirmelidir; Aksi takdirde, filtreleme bir görünüm tarafından işlem halinde kullanılıyorsa, saklı yordamlar bu görünümde bunun yerine çalışır. Güvenlik ilkesi veya görünümü, Kullanıcı sorguları tarafından döndürülen veya değiştirilen satırları otomatik olarak filtreleyecek ve saklı yordam, kullanıcıların bir şekilde, filtrelenmiş verilerin varlığı.
+- Verileri seçmek, eklemek, güncelleştirmek ve silmek için saklı yordamlar oluşturun. Filtreleme bir güvenlik ilkesiyle çalışıyorsa, saklı yordamlar bu işlemleri doğrudan temel tabloda gerçekleştirmelidir; Aksi takdirde, filtreleme bir görünüm tarafından işlem halinde kullanılıyorsa, saklı yordamlar bu görünümde bunun yerine çalışır. Güvenlik ilkesi veya görünümü, Kullanıcı sorguları tarafından döndürülen veya değiştirilen satırları otomatik olarak filtreleyecek ve saklı yordam, kullanıcıların, filtrelenmiş verilerin varlığını çıkarmayan sorguları başarıyla çalıştırmasından doğrudan sorgu erişimi yapılmasını engellemek için daha zor bir güvenlik sınırı sağlar.
 
 - Veri ekleyen saklı yordamlar için, güvenlik ilkesinde veya görünümünde belirtilen işlevi kullanarak Kullanıcı adını yakalayın ve bu değeri Kullanıcı adı sütununa ekleyin.
 
-- `public` Roldeki tablolardaki (ve varsa görünümler) tüm izinleri reddedin. Filtre koşulu, rollere değil Kullanıcı veya oturum açma adlarını temel aldığı için kullanıcılar diğer veritabanı rollerinden izinleri devralmasını mümkün olmayacaktır.
+- Roldeki tablolardaki (ve varsa görünümler) tüm izinleri reddedin `public` . Filtre koşulu, rollere değil Kullanıcı veya oturum açma adlarını temel aldığı için kullanıcılar diğer veritabanı rollerinden izinleri devralmasını mümkün olmayacaktır.
 
 - Saklı yordamlarda veritabanı rollerine yürütme izni verin. Kullanıcılar verilere yalnızca belirtilen saklı yordamlar aracılığıyla erişebilir.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: 2b2717bc68da9f07cd38e10a5d75b2a7df9add45
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6221f253746ac304115fe844966e2cf552263d04
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602641"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90551151"
 ---
 # <a name="message-security-with-a-certificate-client"></a>Sertifika İstemcisi ile İleti Güvenliği
 Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanmış bir Windows Communication Foundation (WCF) istemcisi ve hizmeti gösterilmektedir. İstemci ve hizmetin her ikisi de sertifikalarla doğrulanır. Daha fazla bilgi için bkz. [Dağıtılmış uygulama güvenliği](distributed-application-security.md).
@@ -19,10 +19,10 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
   
  Örnek bir uygulama için bkz. [Ileti güvenliği sertifikası](../samples/message-security-certificate.md).  
 
-|Özellik|Açıklama|  
+|Özellik|Description|  
 |--------------------|-----------------|  
 |Güvenlik modu|İleti|  
-|Birlikte çalışabilirlik|Yalnızca WCF|  
+|Birlikte Çalışabilirlik|Yalnızca WCF|  
 |Kimlik doğrulaması (sunucu)|Hizmet sertifikası kullanma|  
 |Kimlik doğrulaması (Istemci)|İstemci sertifikası kullanma|  
 |Bütünlük|Yes|  
@@ -31,7 +31,7 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
 |Bağlama|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Hizmet  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
   
 - Yapılandırma olmadan kodu kullanarak tek başına bir hizmet oluşturun.  
   
@@ -85,7 +85,7 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
 ```  
   
 ## <a name="client"></a>İstemci  
- Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Aşağıdakilerden birini yapın:  
+ Aşağıdaki kod ve yapılandırma bağımsız olarak çalışacak şekilde tasarlanmıştır. Şunlardan birini yapın:  
   
 - Kodu kullanarak tek başına istemci oluşturun (ve istemci kodu).  
   
@@ -148,4 +148,4 @@ Aşağıdaki senaryoda ileti güvenliği modu kullanılarak güvenliği sağlanm
 - [Güvenliğe genel bakış](security-overview.md)
 - [Kimlik Doğrulama ile Hizmet Kimliği](service-identity-and-authentication.md)
 - [Sertifikalarla Çalışma](working-with-certificates.md)
-- [Windows Server App Fabric için güvenlik modeli](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server App Fabric için güvenlik modeli](/previous-versions/appfabric/ee677202(v=azure.10))

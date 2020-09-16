@@ -4,12 +4,12 @@ description: 'F # dil Önişlemci yönergeleri, koşullu derleme yönergeleri, h
 ms.date: 12/10/2018
 f1_keywords:
 - '#endif_FS'
-ms.openlocfilehash: aee307eb7bccc8d91b5162f3f43db3b806b761d0
-ms.sourcegitcommit: c37e8d4642fef647ebab0e1c618ecc29ddfe2a0f
+ms.openlocfilehash: c3e1a07e0e09b5ae090c550368f8a9f8ee575bfb
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87855380"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557326"
 ---
 # <a name="compiler-directives"></a>Derleyici Yönergeleri
 
@@ -21,7 +21,7 @@ Bu konu, işlemci yönergelerini ve derleyici yönergelerini açıklamaktadır.
 
 Aşağıdaki tabloda, F # ' da kullanılabilen Önişlemci yönergeleri listelenmiştir.
 
-|Deki|Açıklama|
+|Deki|Description|
 |---------|-----------|
 |`#if` * simgesi*|Koşullu derlemeyi destekler. `#if` *Sembol* tanımlanmışsa, öğesinden sonra gelen kod. Sembol Ayrıca ile de olabilir `!` .|
 |`#else`|Koşullu derlemeyi destekler. Öncekiyle birlikte kullanılan sembol tanımlanmazsa, kodun bir bölümünü içerecek şekilde işaretler `#if` .|
@@ -40,7 +40,7 @@ Bu yönergelerden biri tarafından devre dışı bırakılan kod Visual Studio C
 > [!NOTE]
 > Koşullu derleme yönergelerinin davranışı, diğer dillerdeki gibi değildir. Örneğin, sembolleri içeren Boole deyimlerini kullanamaz ve `true` `false` özel bir anlamı yoktur. Yönergede kullandığınız semboller `if` komut satırı veya proje ayarlarında tanımlanmalıdır; hiçbir `define` Önişlemci yönergesi yoktur.
 
-Aşağıdaki kod,, ve yönergelerinin kullanımını gösterir `#if` `#else` `#endif` . Bu örnekte, kod, tanımının iki sürümünü içerir `function1` . `VERSION1` [-Define derleyici seçeneği](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)kullanılarak tanımlandığında, `#if` yönergesi ve yönergesi arasındaki kod `#else` etkinleştirilir. Aksi halde, ve arasındaki `#else` kod `#endif` etkinleştirilir.
+Aşağıdaki kod,, ve yönergelerinin kullanımını gösterir `#if` `#else` `#endif` . Bu örnekte, kod, tanımının iki sürümünü içerir `function1` . `VERSION1` [-Define derleyici seçeneği](./compiler-options.md)kullanılarak tanımlandığında, `#if` yönergesi ve yönergesi arasındaki kod `#else` etkinleştirilir. Aksi halde, ve arasındaki `#else` kod `#endif` etkinleştirilir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
@@ -74,9 +74,9 @@ Derleyici yönergeleri, bir # işaretiyle ön eki olduklarından, ancak Önişle
 
 Aşağıdaki tabloda, F # ' da kullanılabilen derleyici yönergesi listelenmektedir.
 
-|Deki|Açıklama|
+|Deki|Description|
 |---------|-----------|
-|`#light`["on" &#124; "kapalı"]|Diğer ML sürümleriyle uyumluluk için hafif söz dizimini etkinleştirilir veya devre dışı bırakır. Varsayılan olarak, hafif sözdizimi etkindir. Verbose sözdizimi her zaman etkindir. Bu nedenle, hem basit söz dizimi hem de ayrıntılı sözdizimini kullanabilirsiniz. `#light`Tek başına yönerge öğesine eşdeğerdir `#light "on"` . Belirtirseniz `#light "off"` , tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. F # belgelerinde sözdizimi, hafif sözdizimi kullandığınızı varsayımıyla sunulur. Daha fazla bilgi için bkz. [ayrıntılı sözdizimi](verbose-syntax.md).|
+|`#light` ["on" &#124; "kapalı"]|Diğer ML sürümleriyle uyumluluk için hafif söz dizimini etkinleştirilir veya devre dışı bırakır. Varsayılan olarak, hafif sözdizimi etkindir. Verbose sözdizimi her zaman etkindir. Bu nedenle, hem basit söz dizimi hem de ayrıntılı sözdizimini kullanabilirsiniz. `#light`Tek başına yönerge öğesine eşdeğerdir `#light "on"` . Belirtirseniz `#light "off"` , tüm dil yapıları için ayrıntılı sözdizimi kullanmanız gerekir. F # belgelerinde sözdizimi, hafif sözdizimi kullandığınızı varsayımıyla sunulur. Daha fazla bilgi için bkz. [ayrıntılı sözdizimi](verbose-syntax.md).|
 
 Yorumlayıcı (fsi.exe) yönergeleri için bkz. [F # Ile etkileşimli programlama](../tutorials/fsharp-interactive/index.md).
 

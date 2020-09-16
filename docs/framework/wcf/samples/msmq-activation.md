@@ -2,12 +2,12 @@
 title: MSMQ Etkinleştirme
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0dbd24a612d56c0fe88066f625be2a8369b7df5b
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 349eadb8f517993c343e81656204ad25e62ed931
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84602550"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555243"
 ---
 # <a name="msmq-activation"></a>MSMQ Etkinleştirme
 
@@ -25,7 +25,7 @@ Bu örnek, Windows Işlem etkinleştirme hizmeti 'nde (WAS) bir ileti sırasınd
 >
 > \<InstallDrive>: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-Windows Server 2008 için yeni işlem etkinleştirme mekanizması olan Windows Işlem etkinleştirme hizmeti (WAS), daha önce yalnızca HTTP tabanlı uygulamalar tarafından HTTP tabanlı olmayan protokolleri kullanan uygulamalara sunulan IIS benzeri özellikler sağlar. Windows Communication Foundation (WCF), TCP, adlandırılmış kanallar ve MSMQ gibi WCF tarafından desteklenen HTTP olmayan protokoller üzerinden alınan etkinleştirme isteklerini iletmek için dinleyici bağdaştırıcısı arabirimini kullanır. HTTP olmayan protokoller üzerinden istek alma işlevselliği, SMSvcHost. exe ' de çalışan yönetilen Windows Hizmetleri tarafından barındırılır.
+Windows Server 2008 için yeni işlem etkinleştirme mekanizması olan Windows Işlem etkinleştirme hizmeti (WAS), daha önce yalnızca HTTP tabanlı uygulamalar tarafından HTTP tabanlı olmayan protokolleri kullanan uygulamalara sunulan IIS benzeri özellikler sağlar. Windows Communication Foundation (WCF), TCP, adlandırılmış kanallar ve MSMQ gibi WCF tarafından desteklenen HTTP olmayan protokoller üzerinden alınan etkinleştirme isteklerini iletmek için dinleyici bağdaştırıcısı arabirimini kullanır. HTTP olmayan protokoller üzerinden istek alma işlevselliği, SMSvcHost.exe çalıştıran yönetilen Windows Hizmetleri tarafından barındırılır.
 
 Net. MSMQ dinleyicisi bağdaştırıcısı hizmeti (Netmsmqetkinleştirici) kuyruktaki iletileri temel alarak sıraya alınmış uygulamaları etkinleştirir.
 
@@ -94,7 +94,7 @@ Service. svc dosyasının kendisi oluşturmak için bir yönerge içerir `OrderP
 
 `<%@ServiceHost language="c#" Debug="true" Service="Microsoft.ServiceModel.Samples.OrderProcessorService"%>`
 
-Service. svc dosyası, System. Transactions. dll ' nin yüklü olduğundan emin olmak için bir derleme yönergesi de içerir.
+Service. svc dosyası, System.Transactions.dll yüklendiğinden emin olmak için bir derleme yönergesi de içerir.
 
 `<%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>`
 
@@ -228,7 +228,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
 3. Çözümün C# veya Visual Basic .NET sürümünü oluşturmak için [Windows Communication Foundation örnekleri oluşturma](building-the-samples.md)konusundaki yönergeleri izleyin.
 
-4. Bir komut penceresinden Client. exe ' yi yürüterek istemciyi çalıştırın. Bu, kuyruğu oluşturur ve ona bir ileti gönderir. İletiyi okurken hizmetin sonucunu görmek için istemciyi çalışır durumda bırakın
+4. Bir komut penceresinden client.exe yürüterek istemciyi çalıştırın. Bu, kuyruğu oluşturur ve ona bir ileti gönderir. İletiyi okurken hizmetin sonucunu görmek için istemciyi çalışır durumda bırakın
 
 5. MSMQ etkinleştirme hizmeti varsayılan olarak ağ hizmeti olarak çalışır. Bu nedenle, uygulamayı etkinleştirmek için kullanılan sıranın ağ hizmeti için alma ve göz atma izinlerine sahip olması gerekir. Bu, Message Queuing MMC kullanılarak eklenebilir:
 
@@ -246,7 +246,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
     Kolaylık olması halinde, örnek dizinde bulunan AddMsmqSiteBinding. cmd adlı bir toplu iş dosyasında aşağıdaki adımlar uygulanır.
 
-    1. Net. MSMQ etkinleştirmesini desteklemek için, önce varsayılan Web sitesi önce net. MSMQ protokolüne bağlanmalıdır. Bu, IIS 7,0 yönetim araç takımı ile yüklenen appcmd. exe kullanılarak yapılabilir. Yükseltilmiş (yönetici) komut isteminden aşağıdaki komutu çalıştırın.
+    1. Net. MSMQ etkinleştirmesini desteklemek için, önce varsayılan Web sitesi önce net. MSMQ protokolüne bağlanmalıdır. Bu, IIS 7,0 yönetim araç takımı ile yüklenen appcmd.exe kullanılarak yapılabilir. Yükseltilmiş (yönetici) komut isteminden aşağıdaki komutu çalıştırın.
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
@@ -327,7 +327,7 @@ Varsayılan olarak `netMsmqBinding` , bağlama aktarımında güvenlik etkindir.
 
      Çalışan işleminin çalıştırıldığı kimliği değiştirmek için:
 
-    1. Inetmgr. exe ' yi çalıştırın.
+    1. Inetmgr.exe çalıştırın.
 
     2. **Uygulama havuzları**altında, **AppPool** öğesine sağ tıklayın (genellikle **DefaultAppPool**) ve **uygulama havuzu varsayılanlarını ayarla..**. seçeneğini belirleyin.
 
@@ -349,4 +349,4 @@ Varsayılan olarak `netMsmqBinding` , bağlama aktarımında güvenlik etkindir.
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [AppFabric barındırma ve kalıcılık örnekleri](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))
+- [AppFabric barındırma ve kalıcılık örnekleri](/previous-versions/appfabric/ff383418(v=azure.10))

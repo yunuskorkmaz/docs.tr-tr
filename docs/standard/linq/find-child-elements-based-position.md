@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35bb269-ec86-4c96-8321-12491a0eb2c3
-ms.openlocfilehash: 242bc179be86e14daab4acb66596207f3272bfea
-ms.sourcegitcommit: 0c3ce6d2e7586d925a30f231f32046b7b3934acb
+ms.openlocfilehash: 889e3dbac3acf229fd49422285d650fc13792521
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89553942"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557123"
 ---
 # <a name="how-to-find-child-elements-based-on-position-linq-to-xml"></a>Konuma göre alt öğeleri bulma (LINQ to XML)
 
@@ -113,4 +113,4 @@ Results are identical
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [XPath kullanıcıları için LINQ to XML (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [XPath kullanıcıları için LINQ to XML (Visual Basic)](./comparison-xpath-linq-xml.md)

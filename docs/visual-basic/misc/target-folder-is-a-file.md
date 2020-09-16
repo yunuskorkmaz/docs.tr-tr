@@ -2,12 +2,12 @@
 title: Hedef klasör bir dosya
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: ff4c25ab4ffdd9b15a91c2b96cf9acb94cab93dd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a834f4e91ceeb36cbffcc25ec358adcc9456f3e4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396889"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554950"
 ---
 # <a name="target-folder-is-a-file"></a>Hedef klasör bir dosya
 Klasör ile ilgili bir eylem gerçekleştirmeye çalışırken bir dosya belirtiyorsunuz.  
@@ -21,5 +21,5 @@ Klasör ile ilgili bir eylem gerçekleştirmeye çalışırken bir dosya belirti
 - [Nasıl yapılır: Dosya Yollarını Ayrıştırma](../developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
 - [My. Computer. FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Dosya ve Dizin Oluşturma, Silme ve Taşıma](../developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
-- [Visual Basic dosya, dizin ve sürücü özellikleri](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/as4xcs58(v=vs.100))
-- [Nasıl yapılır: Visual Basic bir dosyanın mutlak yolunu belirleme](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/e00wt2d8(v=vs.100))
+- [Visual Basic dosya, dizin ve sürücü özellikleri](/previous-versions/visualstudio/visual-studio-2010/as4xcs58(v=vs.100))
+- [Nasıl yapılır: Visual Basic bir dosyanın mutlak yolunu belirleme](/previous-versions/visualstudio/visual-studio-2010/e00wt2d8(v=vs.100))

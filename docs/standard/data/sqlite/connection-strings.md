@@ -2,12 +2,12 @@
 title: Bağlantı dizeleri
 ms.date: 12/13/2019
 description: Desteklenen anahtar sözcükler ve bağlantı dizelerinin değerleri.
-ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c50b31689abf6d47aa8f83a6f6f755bcfec0ea3
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400451"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555399"
 ---
 # <a name="connection-strings"></a>Bağlantı dizeleri
 
@@ -25,9 +25,9 @@ SQLite, yolları geçerli çalışma dizinine göre değerlendirir. Mutlak yolla
 
 **Boşsa**, SQLite bağlantı kapalıyken silinen geçici bir disk üzerinde veritabanı oluşturur.
 
-İse `:memory:`, bellek içi bir veritabanı kullanılır. Daha fazla bilgi için bkz. [bellek içi veritabanları](in-memory-databases.md).
+İse `:memory:` , bellek içi bir veritabanı kullanılır. Daha fazla bilgi için bkz. [bellek içi veritabanları](in-memory-databases.md).
 
-`|DataDirectory|` Değiştirme dizesiyle başlayan yollar göreli yollarla aynı şekilde değerlendirilir. Ayarlanırsa, yollar DataDirectory uygulama etki alanı özellik değerine göre yapılır.
+`|DataDirectory|`Değiştirme dizesiyle başlayan yollar göreli yollarla aynı şekilde değerlendirilir. Ayarlanırsa, yollar DataDirectory uygulama etki alanı özellik değerine göre yapılır.
 
 Bu anahtar sözcük ayrıca [URI dosya adlarını](https://www.sqlite.org/uri.html)destekler.
 
@@ -37,7 +37,7 @@ Bağlantı modu.
 
 | Değer           | Açıklama                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| ReadWriteCreate | Veritabanını okumak ve yazmak için açar ve yoksa oluşturur. Bu varsayılandır. |
+| ReadWriteCreate | Veritabanını okumak ve yazmak için açar ve yoksa oluşturur. Bu varsayılan seçenektir. |
 | ReadWrite       | Veritabanını okumak ve yazmak için açar.                                                        |
 | ReadOnly        | Veritabanını salt okuma modunda açar.                                                              |
 | Bellek          | Bellek içi veritabanı açar.                                                                       |
@@ -48,9 +48,9 @@ Bağlantı tarafından kullanılan önbelleğe alma modu.
 
 | Değer   | Açıklama                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------- |
-| Varsayılan | Temel alınan SQLite kitaplığının varsayılan modunu kullanır. Bu varsayılandır.                   |
+| Varsayılan | Temel alınan SQLite kitaplığının varsayılan modunu kullanır. Bu varsayılan seçenektir.                   |
 | Özel | Her bağlantı özel bir önbellek kullanır.                                                          |
-| Paylaşımlı  | Bağlantılar bir önbelleği paylaşır. Bu mod işlem ve tablo kilitleme davranışını değiştirebilir. |
+| Shared  | Bağlantılar bir önbelleği paylaşır. Bu mod işlem ve tablo kilitleme davranışını değiştirebilir. |
 
 ### <a name="password"></a>Parola
 
@@ -65,9 +65,9 @@ Yabancı anahtar kısıtlamalarının etkinleştirilip etkinleştirilmeyeceğini
 
 | Değer   | Açıklama
 | ------- | --- |
-| True    | Bağlantıyı `PRAGMA foreign_keys = 1` açtıktan hemen sonra gönderir.
-| False   | Bağlantıyı `PRAGMA foreign_keys = 0` açtıktan hemen sonra gönderir.
-| olmamalıdır | Göndermez `PRAGMA foreign_keys`. Bu varsayılandır. |
+| Doğru    | `PRAGMA foreign_keys = 1`Bağlantıyı açtıktan hemen sonra gönderir.
+| Yanlış   | `PRAGMA foreign_keys = 0`Bağlantıyı açtıktan hemen sonra gönderir.
+| olmamalıdır | Göndermez `PRAGMA foreign_keys` . Bu varsayılan seçenektir. |
 
 E_sqlite3 gibi, yerel SQLite kitaplığı derlemek için SQLITE_DEFAULT_FOREIGN_KEYS kullanıldığında yabancı anahtarların etkinleştirilmesi gerekmez.
 
@@ -77,12 +77,12 @@ E_sqlite3 gibi, yerel SQLite kitaplığı derlemek için SQLITE_DEFAULT_FOREIGN_
 
 | Değer | Açıklama                                                                 |
 | ----- | --------------------------------------------------------------------------- |
-| True  | Bağlantıyı `PRAGMA recursive_triggers` açtıktan hemen sonra gönderir. |
-| False | Göndermez `PRAGMA recursive_triggers`. Bu varsayılandır.              |
+| Doğru  | `PRAGMA recursive_triggers`Bağlantıyı açtıktan hemen sonra gönderir. |
+| Yanlış | Göndermez `PRAGMA recursive_triggers` . Bu varsayılan seçenektir.              |
 
 ## <a name="connection-string-builder"></a>Bağlantı dizesi Oluşturucu
 
-Bağlantı dizelerini oluşturmak <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> için türü kesin belirlenmiş bir yöntem olarak kullanabilirsiniz. Bağlantı dizesi ekleme saldırılarını engellemek için de kullanılabilir.
+<xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder>Bağlantı dizelerini oluşturmak için türü kesin belirlenmiş bir yöntem olarak kullanabilirsiniz. Bağlantı dizesi ekleme saldırılarını engellemek için de kullanılabilir.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
@@ -92,7 +92,7 @@ Bağlantı dizelerini oluşturmak <xref:Microsoft.Data.Sqlite.SqliteConnectionSt
 
 İyileştirilmiş eşzamanlılık için paylaşılan önbelleği olan temel bir bağlantı dizesi.
 
-```ConnectionString
+```connectionstring
 Data Source=Application.db;Cache=Shared
 ```
 
@@ -100,7 +100,7 @@ Data Source=Application.db;Cache=Shared
 
 Şifrelenmiş bir veritabanı.
 
-```ConnectionString
+```connectionstring
 Data Source=Encrypted.db;Password=MyEncryptionKey
 ```
 
@@ -108,7 +108,7 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 Uygulama tarafından değiştirilemeyen salt biçimli bir veritabanı.
 
-```ConnectionString
+```connectionstring
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
@@ -116,7 +116,7 @@ Data Source=Reference.db;Mode=ReadOnly
 
 Özel, bellek içi veritabanı.
 
-```ConnectionString
+```connectionstring
 Data Source=:memory:
 ```
 
@@ -124,7 +124,7 @@ Data Source=:memory:
 
 *Paylaşılabilir*adıyla tanımlanan paylaşılabilir, bellek içi veritabanı.
 
-```ConnectionString
+```connectionstring
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 

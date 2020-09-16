@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: eafed0e0a0150923aae0fa68a1b96e6d9d66b07a
-ms.sourcegitcommit: e02d17b2cf9c1258dadda4810a5e6072a0089aee
+ms.openlocfilehash: 6bfe95576a6460efac75fd392e24acf42e36f2de
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85622568"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555269"
 ---
 # <a name="default-marshaling-for-arrays"></a>Diziler için Varsayılan Sıralama
 Tamamen yönetilen koddan oluşan bir uygulamada, ortak dil çalışma zamanı dizi türlerini ın/out parametreleri olarak geçirir. Buna karşılık, birlikte çalışma sıralayıcısı varsayılan olarak parametre olarak bir diziyi geçirir.  
@@ -79,7 +79,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Tlbimp.exe tarafından üretilen Yöntem imzası **element_type_szarray**yerine **element_type_array** bir öğe türü belirtmek için değiştirilirse, çok boyutlu veya sıfır dışında bağlantılı güvenli diziler yönetilen koda sıralanabilir. Alternatif olarak, tüm dizileri nesne olarak içeri aktarmak için, **/sysarray** anahtarını Tlbimp.exe ile birlikte kullanabilirsiniz <xref:System.Array?displayProperty=nameWithType> . Geçirilen dizinin çok boyutlu olduğu bilindiğinde, Tlbimp.exe tarafından üretilen Microsoft ara dili (MSIL) kodunu düzenleyebilir ve sonra yeniden derleyebilirsiniz. MSIL kodunu değiştirme hakkında daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)).  
+ Tlbimp.exe tarafından üretilen Yöntem imzası **element_type_szarray**yerine **element_type_array** bir öğe türü belirtmek için değiştirilirse, çok boyutlu veya sıfır dışında bağlantılı güvenli diziler yönetilen koda sıralanabilir. Alternatif olarak, tüm dizileri nesne olarak içeri aktarmak için, **/sysarray** anahtarını Tlbimp.exe ile birlikte kullanabilirsiniz <xref:System.Array?displayProperty=nameWithType> . Geçirilen dizinin çok boyutlu olduğu bilindiğinde, Tlbimp.exe tarafından üretilen Microsoft ara dili (MSIL) kodunu düzenleyebilir ve sonra yeniden derleyebilirsiniz. MSIL kodunu değiştirme hakkında daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcıları özelleştirme](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)).  
   
 ### <a name="c-style-arrays"></a>C stili diziler  
  Bir C stili dizi bir tür kitaplığından .NET derlemesine aktarıldığında, dizi **element_type_szarray**dönüştürülür.  
@@ -119,7 +119,7 @@ void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- Boyutu bir istemciye iletmek için arabirim tanım dili (IDL) kaynağındaki bir diziye **size_is** veya **length_is** özniteliklerini uygulayabilseniz de, Microsoft arabirim tanımlama dili (MIDL) derleyicisi bu bilgileri tür kitaplığına yaymaz. Boyut bilinmeden, birlikte çalışma sıralama hizmeti dizi öğelerini sıralayamaz. Sonuç olarak, değişken uzunluklu diziler başvuru bağımsız değişkenleri olarak içeri aktarılır. Örneğin:  
+ Boyutu bir istemciye iletmek için arabirim tanım dili (IDL) kaynağındaki bir diziye **size_is** veya **length_is** özniteliklerini uygulayabilseniz de, Microsoft arabirim tanımlama dili (MIDL) derleyicisi bu bilgileri tür kitaplığına yaymaz. Boyut bilinmeden, birlikte çalışma sıralama hizmeti dizi öğelerini sıralayamaz. Sonuç olarak, değişken uzunluklu diziler başvuru bağımsız değişkenleri olarak içeri aktarılır. Örnek:  
   
  **Yönetilmeyen imza**  
   
@@ -143,7 +143,7 @@ void New2(ref double ar);
 void New3(ref String ar);
 ```  
   
- Tlbimp.exe tarafından üretilen Microsoft ara dili (MSIL) kodunu düzenleyerek ve sonra yeniden derleyerek dizi boyutu ile Sıralayıcı sağlayabilirsiniz. MSIL kodunu değiştirme hakkında daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcıları özelleştirme](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Dizideki öğe sayısını göstermek için, <xref:System.Runtime.InteropServices.MarshalAsAttribute> türü yönetilen yöntem tanımının dizi parametresine aşağıdaki yöntemlerden biriyle uygulayın:  
+ Tlbimp.exe tarafından üretilen Microsoft ara dili (MSIL) kodunu düzenleyerek ve sonra yeniden derleyerek dizi boyutu ile Sıralayıcı sağlayabilirsiniz. MSIL kodunu değiştirme hakkında daha fazla bilgi için bkz. [çalışma zamanında çağrılabilir sarmalayıcıları özelleştirme](/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Dizideki öğe sayısını göstermek için, <xref:System.Runtime.InteropServices.MarshalAsAttribute> türü yönetilen yöntem tanımının dizi parametresine aşağıdaki yöntemlerden biriyle uygulayın:  
   
 - Dizideki öğe sayısını içeren başka bir parametre tanımla. Parametreler, 0 numaralı ilk parametre ile başlayarak konuma göre tanımlanır.
   
@@ -159,7 +159,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
-- Dizinin boyutunu bir sabit olarak tanımlayın. Örneğin:  
+- Dizinin boyutunu bir sabit olarak tanımlayın. Örnek:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -190,7 +190,7 @@ void New3(ref String ar);
  OLE Otomasyonunda LPSTR veya LPWSTR içeren yapıların dizileri ile ilgili bir sınırlama vardır.  Bu nedenle, **dize** alanlarının **UnmanagedType. BSTR**olarak sıralanması gerekir. Aksi takdirde, bir özel durum oluşturulur.  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
- Bir **element_type_szarray** parametresi (tek boyutlu dizi) içeren bir yöntem bir .net derlemesinden bir tür kitaplığına aktarıldığında, dizi parametresi belirli bir türün **SAFEARRAY** değerine dönüştürülür. Aynı dönüştürme kuralları dizi öğesi türleri için de geçerlidir. Yönetilen dizinin içeriği yönetilen bellekten **SAFEARRAY**'e otomatik olarak kopyalanır. Örneğin:  
+ Bir **element_type_szarray** parametresi (tek boyutlu dizi) içeren bir yöntem bir .net derlemesinden bir tür kitaplığına aktarıldığında, dizi parametresi belirli bir türün **SAFEARRAY** değerine dönüştürülür. Aynı dönüştürme kuralları dizi öğesi türleri için de geçerlidir. Yönetilen dizinin içeriği yönetilen bellekten **SAFEARRAY**'e otomatik olarak kopyalanır. Örnek:  
   
 #### <a name="managed-signature"></a>Yönetilen imza  
   
@@ -213,7 +213,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  Güvenli dizilerin sıralaması her zaman 1 ' dir ve alt sınır her zaman 0 ' dır. Boyut, çalışma zamanında geçirilmekte olan yönetilen dizinin boyutuna göre belirlenir.  
   
- Dizi, özniteliği kullanılarak C stili bir dizi olarak da sıralanabilir <xref:System.Runtime.InteropServices.MarshalAsAttribute> . Örneğin:  
+ Dizi, özniteliği kullanılarak C stili bir dizi olarak da sıralanabilir <xref:System.Runtime.InteropServices.MarshalAsAttribute> . Örnek:  
   
 #### <a name="managed-signature"></a>Yönetilen imza  
   
@@ -248,7 +248,7 @@ HRESULT New(LPStr ar[]);
  Sıralayıcı, diziyi sıralamak için gereken uzunluk bilgilerine sahip olsa da, dizi uzunluğu genellikle ayrı bir bağımsız değişken olarak geçirilir ve bu da uzunluğu aranan olarak iletmiştir.  
   
 ### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
- Bir **element_type_array** parametresi içeren bir yöntem bir .net derlemesinden bir tür kitaplığına aktarıldığında, dizi parametresi belirli bir türün **SAFEARRAY** değerine dönüştürülür. Yönetilen dizinin içeriği yönetilen bellekten **SAFEARRAY**'e otomatik olarak kopyalanır. Örneğin:  
+ Bir **element_type_array** parametresi içeren bir yöntem bir .net derlemesinden bir tür kitaplığına aktarıldığında, dizi parametresi belirli bir türün **SAFEARRAY** değerine dönüştürülür. Yönetilen dizinin içeriği yönetilen bellekten **SAFEARRAY**'e otomatik olarak kopyalanır. Örnek:  
   
 #### <a name="managed-signature"></a>Yönetilen imza  
   
@@ -271,7 +271,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  Güvenli dizilerin derece, boyut ve sınırları, çalışma zamanında yönetilen dizinin özelliklerine göre belirlenir.  
   
- Dizi, özniteliği uygulanarak C stili bir dizi olarak da sıralanabilir <xref:System.Runtime.InteropServices.MarshalAsAttribute> . Örneğin:  
+ Dizi, özniteliği uygulanarak C stili bir dizi olarak da sıralanabilir <xref:System.Runtime.InteropServices.MarshalAsAttribute> . Örnek:  
   
 #### <a name="managed-signature"></a>Yönetilen imza  
   
@@ -310,8 +310,8 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS\<System.Array>  
- Bir parametre içeren bir yöntem bir <xref:System.Array?displayProperty=nameWithType> .net derlemesinden bir tür kitaplığına aktarıldığında, dizi parametresi bir **_array** arabirimine dönüştürülür. Yönetilen dizinin içeriğine yalnızca **_array** arabiriminin yöntemleri ve özellikleri aracılığıyla erişilebilir. **System. Array** , özniteliği kullanılarak bir **SAFEARRAY** olarak da sıralanabilir <xref:System.Runtime.InteropServices.MarshalAsAttribute> . Güvenli bir dizi olarak sıralandığınızda, dizi öğeleri de çeşitler olarak sıralanır. Örneğin:  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+ Bir parametre içeren bir yöntem bir <xref:System.Array?displayProperty=nameWithType> .net derlemesinden bir tür kitaplığına aktarıldığında, dizi parametresi bir **_array** arabirimine dönüştürülür. Yönetilen dizinin içeriğine yalnızca **_array** arabiriminin yöntemleri ve özellikleri aracılığıyla erişilebilir. **System. Array** , özniteliği kullanılarak bir **SAFEARRAY** olarak da sıralanabilir <xref:System.Runtime.InteropServices.MarshalAsAttribute> . Güvenli bir dizi olarak sıralandığınızda, dizi öğeleri de çeşitler olarak sıralanır. Örnek:  
   
 #### <a name="managed-signature"></a>Yönetilen imza  
   
@@ -363,5 +363,5 @@ public struct MyStruct {
 
 - [Varsayılan Sıralama Davranışı](default-marshaling-behavior.md)
 - [Blok Halinde Kopyalanabilir ve Kopyalanamaz Türler](blittable-and-non-blittable-types.md)
-- [Yönlü öznitelikler](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
+- [Yönlü öznitelikler](/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopyalama ve Sabitleme](copying-and-pinning.md)

@@ -2,12 +2,12 @@
 title: Güvenliğe genel bakış
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 8a036a40d2b1728f39037018c3672551b8b67bd9
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 4222dd36fe2f693bb16216e01d5e06a8176a7801
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545028"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90550696"
 ---
 # <a name="security-overview"></a>Güvenliğe genel bakış
 
@@ -18,7 +18,7 @@ Uygulamanın güvenliğini sağlamak, devam eden bir işlemdir. Bir geliştirici
 
  Son dakikalık güvenlik uygulamaları, yeni kısıtlamalar kapsamında yazılım kesildiği veya beklenmeyen işlevlere uyum sağlamak için yeniden yazılması gerektiği için daha fazla hataya yol açar. Düzeltilen kodun her satırı, yeni bir hata tanıtma olasılığını içerir. Bu nedenle, yeni özelliklerin geliştirilmesinde ilerlemeniz için geliştirme sürecinin başlarında güvenliği göz önünde bulundurmanız gerekir.
 
-### <a name="threat-modeling"></a>Tehdit Modelleme
+### <a name="threat-modeling"></a>Tehdit modelleme
  Kullanıma sunulan tüm olası saldırıları anlamadığınız takdirde bir sistemi saldırılara karşı koruyamazsınız. *Tehdit modelleme*olarak adlandırılan güvenlik tehditlerini değerlendirme işlemi, ADO.net uygulamanızda güvenlik ihlallerinin oluşma olasılığını ve kollerini belirlemede gereklidir.
 
  Tehdit modelleme üç üst düzey adımdan oluşur: duyuru görünümünü anlama, sistemin güvenliğini belirleme ve tehditleri belirleme.
@@ -71,7 +71,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 |[Kod Erişimi Güvenliği ve ADO.NET](code-access-security.md)|Bir ADO.NET uygulamasının perspektifinden kod erişimi güvenliği, rol tabanlı güvenlik ve kısmen güvenilen ortamlar arasındaki etkileşimleri açıklar.|
 |[Kod erişim güvenliği](../../misc/code-access-security.md)|.NET Framework CA 'ları açıklayan ek konuların bağlantılarını içerir.|
 
-## <a name="database-security"></a>Veritabanı Güvenliği
+## <a name="database-security"></a>Veritabanı güvenliği
 
 En az ayrıcalık ilkesi de veri kaynağınız için geçerlidir. Veritabanı güvenliği için bazı genel yönergeler şunları içerir:
 
@@ -92,7 +92,7 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 |Kaynak|Açıklama|
 |--------------|-----------------|
 |[SQL Server Güvenliği](./sql/sql-server-security.md)|SQL Server hedef alan güvenli ADO.NET uygulamaları oluşturmaya yönelik rehberlik sağlayan uygulama senaryolarında SQL Server güvenliğe genel bir bakış sağlar.|
-|[Veri erişimi stratejileri için öneriler](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Verilere erişmek ve veritabanı işlemlerini gerçekleştirmek için öneriler sağlar.|
+|[Veri erişimi stratejileri için öneriler](/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Verilere erişmek ve veritabanı işlemlerini gerçekleştirmek için öneriler sağlar.|
 
 ## <a name="security-policy-and-administration"></a>Güvenlik Ilkesi ve yönetimi
 
@@ -102,12 +102,12 @@ Daha fazla bilgi için aşağıdaki kaynaklara bakın:
 
 |Kaynak|Açıklama|
 |--------------|-----------------|
-|[Güvenlik Ilkesi yönetimi](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Güvenlik ilkesi oluşturma ve yönetme hakkında bilgi sağlar.|
-|[En Iyi Güvenlik Ilkesi uygulamaları](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Güvenlik ilkesini yönetmeyi açıklayan bağlantılar sağlar.|
+|[Güvenlik Ilkesi yönetimi](/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))|Güvenlik ilkesi oluşturma ve yönetme hakkında bilgi sağlar.|
+|[En Iyi Güvenlik Ilkesi uygulamaları](/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Güvenlik ilkesini yönetmeyi açıklayan bağlantılar sağlar.|
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [ADO.NET Uygulamalarının Güvenliğini Sağlama](securing-ado-net-applications.md)
-- [.NET 'te güvenlik](../../../standard/security/index.md)
+- [.NET içinde güvenlik](../../../standard/security/index.md)
 - [SQL Server Güvenliği](./sql/sql-server-security.md)
 - [ADO.NET’e Genel Bakış](ado-net-overview.md)

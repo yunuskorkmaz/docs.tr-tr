@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-ms.openlocfilehash: 3b87a48ac3f9925fd868be9e58d5904014ca6c09
-ms.sourcegitcommit: 0fa2b7b658bf137e813a7f4d09589d64c148ebf5
+ms.openlocfilehash: bbff7b53bacd50746de56c8dba85cdc9e4b1ad9b
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86309215"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556414"
 ---
 # <a name="security-transparent-code-level-2"></a>Güvenliği Saydam Kod, 2. Düzey
 
@@ -67,7 +67,7 @@ Aşağıdaki kurallar, derleme düzeyinde özniteliklerin kullanımı için geç
 
 - `SecurityCritical`: Bu derlemedeki türler tarafından tanıtılan tüm kodlar kritiktir; diğer tüm kodlar saydamdır. Bu senaryo herhangi bir öznitelik Belirtmemeye benzer; Ancak, ortak dil çalışma zamanı, saydamlık kurallarını otomatik olarak belirleyemez. Örneğin, bir sanal veya soyut yöntemi geçersiz kılarsınız veya bir arabirim yöntemi uygularsanız, varsayılan olarak bu yöntem saydamdır. Yöntemine açıkça açıklama eklemek zorundasınız `SecurityCritical` `SecuritySafeCritical` ; Aksi takdirde, <xref:System.TypeLoadException> yükleme zamanında bir oluşturulur. Bu kural, hem temel sınıf hem de türetilmiş sınıf aynı derlemede olduğunda da geçerlidir.
 
-- `AllowPartiallyTrustedCallers`(yalnızca düzey 2): tüm kod varsayılan olarak saydam olur. Ancak, ayrı türler ve üyelerin diğer öznitelikleri olabilir.
+- `AllowPartiallyTrustedCallers` (yalnızca düzey 2): tüm kod varsayılan olarak saydam olur. Ancak, ayrı türler ve üyelerin diğer öznitelikleri olabilir.
 
 Aşağıdaki tabloda düzey 1 düzeyi 2 için derleme düzeyi davranışı karşılaştırılmaktadır.
 
@@ -180,5 +180,5 @@ Dinamik yöntemler, eklendiği modüllerin saydamlığını miras alır; Bunlar,
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Güvenliği saydam kod, düzey 1](security-transparent-code-level-1.md)
-- [Güvenlik Değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [Güvenliği Saydam Kod, 1. Düzey](security-transparent-code-level-1.md)
+- [Güvenlik Değişiklikleri](/previous-versions/dotnet/framework/security/security-changes)

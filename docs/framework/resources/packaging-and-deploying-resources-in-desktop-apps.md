@@ -27,12 +27,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 7b06ca4444b75f0a7002323b32732dd4f855f692
-ms.sourcegitcommit: 87cfeb69226fef01acb17c56c86f978f4f4a13db
+ms.openlocfilehash: 056569f86afcbdf124f9e617e4ad07b09a194681
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87166191"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90554006"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET uygulamalarında kaynakları paketleme ve dağıtma
 
@@ -51,7 +51,7 @@ Bu modelin çeşitli avantajları vardır:
 
 ## <a name="resource-naming-conventions"></a>Kaynak adlandırma kuralları
 
-Uygulamanızın kaynaklarını paketlemeyi seçtiğinizde, ortak dil çalışma zamanının beklediği kaynak adlandırma kurallarını kullanarak bunları adlandırmalısınız. Çalışma zamanı bir kaynağı kültür adına göre tanımlar. Her kültüre, genellikle bir dille ilişkili iki harfli, küçük harfli bir kültür adının birleşimi ve gerekirse, bir ülke veya bölgeyle ilişkili iki harfli, büyük harfli bir alt kültür adı olan benzersiz bir ad verilir. Alt kültür adı, bir tire (-) ile ayrılmış olarak kültür adını izler. Japonca, Japonya 'da konuşulan Japonca için ja-JP, Birleşik Devletler Ingilizce için en-US, Almanya 'da konuşulan olarak Almanca için de, Almanya için de ve [Windows tarafından desteklenen dil/bölge adları listesindeki](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) **Dil etiketi** sütununa bakın. Kültür adları [BCP 47](https://tools.ietf.org/html/bcp47)tarafından tanımlanan standardı izler.
+Uygulamanızın kaynaklarını paketlemeyi seçtiğinizde, ortak dil çalışma zamanının beklediği kaynak adlandırma kurallarını kullanarak bunları adlandırmalısınız. Çalışma zamanı bir kaynağı kültür adına göre tanımlar. Her kültüre, genellikle bir dille ilişkili iki harfli, küçük harfli bir kültür adının birleşimi ve gerekirse, bir ülke veya bölgeyle ilişkili iki harfli, büyük harfli bir alt kültür adı olan benzersiz bir ad verilir. Alt kültür adı, bir tire (-) ile ayrılmış olarak kültür adını izler. Japonca, Japonya 'da konuşulan Japonca için ja-JP, Birleşik Devletler Ingilizce için en-US, Almanya 'da konuşulan olarak Almanca için de, Almanya için de ve [Windows tarafından desteklenen dil/bölge adları listesindeki](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) **Dil etiketi** sütununa bakın. Kültür adları [BCP 47](https://tools.ietf.org/html/bcp47)tarafından tanımlanan standardı izler.
 
 > [!NOTE]
 > Çince (Basitleştirilmiş) gibi iki harfli kültür adları için bazı özel durumlar vardır `zh-Hans` .
@@ -146,7 +146,7 @@ Uydu derlemeleri için iyileştirilmiş araştırma bir katılım özelliğidir.
        > Büyük/küçük harfe duyarlı dosya sistemlerine (Linux ve macOS) sahip işletim sistemlerinde, kültür adı alt dizin araması büyük/küçük harfe duyarlıdır. Alt dizin adı, <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (örneğin, `es` veya) durumuyla tam olarak eşleşmelidir `es-MX` .
 
        > [!NOTE]
-       > Programcı, ' den özel bir derleme yük bağlamını türediyse <xref:System.Runtime.Loader.AssemblyLoadContext> , durum karmaşıktır. Yürütülen derleme özel içeriğe yüklenmişse, çalışma zamanı uydu derlemesini özel bağlama yükler. Bu belge için Ayrıntılar kapsam dışında. Bkz <xref:System.Runtime.Loader.AssemblyLoadContext> ..
+       > Programcı, ' den özel bir derleme yük bağlamını türediyse <xref:System.Runtime.Loader.AssemblyLoadContext> , durum karmaşıktır. Yürütülen derleme özel içeriğe yüklenmişse, çalışma zamanı uydu derlemesini özel bağlama yükler. Bu belge için Ayrıntılar kapsam dışında. Bkz  <xref:System.Runtime.Loader.AssemblyLoadContext> ..
 
      - Bir uydu montajı bulunmazsa, bu <xref:System.Runtime.Loader.AssemblyLoadContext> <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> olayı uydu derlemesini bulamadığını belirtecek şekilde oluşturur. Olayı tanıtıcıyı seçerseniz, olay işleyiciniz uydu derlemesine bir başvuru yükleyebilir ve döndürebilir.
      - Bir uydu derlemesi yine de bulunmazsa AssemblyLoadContext, uygulama etki alanının <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> uydu derlemesini bulamadığını göstermek için bir olay tetiklemesine neden olur. Olayı tanıtıcıyı seçerseniz, olay işleyiciniz uydu derlemesine bir başvuru yükleyebilir ve döndürebilir.

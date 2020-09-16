@@ -3,12 +3,12 @@ title: Büyük Veriler ve Akış Yapma
 description: İkili verilerin aktarımı dahil olmak üzere WCF XML tabanlı iletişim, kodlayıcılar ve akış verileri hakkında konular hakkında bilgi edinin.
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 2eb57e2f57bebb2e765ea798b3dff27e0187e8c7
-ms.sourcegitcommit: 358a28048f36a8dca39a9fe6e6ac1f1913acadd5
+ms.openlocfilehash: 58ef2ea1fd4f9aa800a91edbaabeb80f989b38f4
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85246590"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555035"
 ---
 # <a name="large-data-and-streaming"></a>Büyük Veriler ve Akış Yapma
 
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF), XML tabanlı bir iletişim altyapısıd�
   
  Bu kısıtlamalara sahip olmayan veriler için, bir oturumun kapsamındaki ileti dizilerini bir büyük ileti olarak göndermek genellikle daha iyidir. Daha fazla bilgi için bu konunun ilerleyen bölümlerindeki "veri akışı" bölümüne bakın.  
   
- Büyük miktarlarda veri gönderirken `maxAllowedContentLength` IIS ayarını ayarlamanız gerekir (daha fazla bilgi için bkz. [IIS Istek sınırlarını yapılandırma](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) ve `maxReceivedMessageSize` bağlama ayarı (örneğin, [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) veya <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> ). `maxAllowedContentLength`Özelliğin varsayılan değeri 28,6 MB, özelliği ise `maxReceivedMessageSize` Varsayılan olarak 64 KB 'dir.  
+ Büyük miktarlarda veri gönderirken `maxAllowedContentLength` IIS ayarını ayarlamanız gerekir (daha fazla bilgi için bkz. [IIS Istek sınırlarını yapılandırma](/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)) ve `maxReceivedMessageSize` bağlama ayarı (örneğin, [System. ServiceModel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) veya <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A> ). `maxAllowedContentLength`Özelliğin varsayılan değeri 28,6 MB, özelliği ise `maxReceivedMessageSize` Varsayılan olarak 64 KB 'dir.  
   
 ## <a name="encodings"></a>Kodlamalar  
  Bir *kodlama* , iletileri tel sunma hakkında bir kural kümesi tanımlar. *Kodlayıcı* böyle bir kodlama uygular ve gönderici tarafında, bir belleği bir <xref:System.ServiceModel.Channels.Message> bayt akışına veya bayt arabelleğine, ağ üzerinden gönderilebilecek bir bayt arabelleğine dönüştürmek için sorumludur. Alıcı tarafında, kodlayıcı bir bayt dizisini bellekteki bir iletiye dönüştürür.  
@@ -187,7 +187,7 @@ class MyData
  İşlevselliği etkilemeden, istek ve yanıtlar için akışı veya iletişim tarafların her iki tarafında bağımsız olarak her iki yönü de etkinleştirebilirsiniz. Bununla birlikte, aktarılan veri boyutunun her zaman bir iletişim bağlantısının her iki uç noktasında akış kullanılmasına olanak tanıyan önemli olduğunu varsaymalısınız. Uç noktalardan birinin WCF ile uygulanmadığı platformlar arası iletişim için, akış kullanma özelliği platformun akış özelliklerine bağlıdır. Başka bir nadir özel durum, bir istemci veya hizmetin çalışma kümesini en aza indirecek ve yalnızca küçük arabellek boyutlarına uygun olması gereken bellek tüketimi temelli bir senaryo olabilir.  
   
 ### <a name="enabling-asynchronous-streaming"></a>Zaman uyumsuz akışı etkinleştirme  
- Zaman uyumsuz akışı etkinleştirmek için, <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> uç nokta davranışını hizmet konağına ekleyin ve <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini olarak ayarlayın `true` . Ayrıca gönderme tarafına doğru zaman uyumsuz akış özelliği ekledik. Bu, hizmetin, büyük olasılıkla ağ tıkanıklığı nedeniyle veya hiç okunmayan çok sayıda istemciye ileti akışı yaptığı senaryolarda hizmetin ölçeklenebilirliğini geliştirir. Bu senaryolarda, artık istemci başına hizmette tek tek iş parçacıklarını engelliyoruz. Bu, hizmetin daha fazla istemciyi işleyebilmesini sağlar ve bu sayede hizmetin ölçeklenebilirliğini geliştirir.  
+ Zaman uyumsuz akışı etkinleştirmek için,  <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior> uç nokta davranışını hizmet konağına ekleyin ve <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.AsynchronousSendEnabled%2A> özelliğini olarak ayarlayın `true` . Ayrıca gönderme tarafına doğru zaman uyumsuz akış özelliği ekledik. Bu, hizmetin, büyük olasılıkla ağ tıkanıklığı nedeniyle veya hiç okunmayan çok sayıda istemciye ileti akışı yaptığı senaryolarda hizmetin ölçeklenebilirliğini geliştirir. Bu senaryolarda, artık istemci başına hizmette tek tek iş parçacıklarını engelliyoruz. Bu, hizmetin daha fazla istemciyi işleyebilmesini sağlar ve bu sayede hizmetin ölçeklenebilirliğini geliştirir.  
   
 ### <a name="programming-model-for-streamed-transfers"></a>Akışlı aktarımlar için programlama modeli  
  Akışa yönelik programlama modeli basittir. Akış verileri almak için, tek bir <xref:System.IO.Stream> türü belirtilmiş giriş parametresine sahip olan bir işlem sözleşmesi belirtin. Akan verileri döndürmek için bir başvuru döndürün <xref:System.IO.Stream> .  

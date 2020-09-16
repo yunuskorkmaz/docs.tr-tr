@@ -2,12 +2,12 @@
 title: İleti Dağıtımını Sınırlandırma
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: e736aba60d7d2b39d1b8eb958a8c72e6e8d55e13
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84586318"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555022"
 ---
 # <a name="limiting-message-distribution"></a>İleti Dağıtımını Sınırlandırma
 
@@ -19,15 +19,15 @@ Kavramı, `PeerHopCount` IP protokolünde kullanılan TTL (yaşam süresi) ile b
 
 `PeerHopCount`İleti sınıfı uygulamasındaki uygulanabilir özelliğe veya alana bir öznitelik olarak eklenerek atlama sayısı bir iletiye eklenebilir. İletiyi ağ üzerinden göndermeden önce belirli bir değere ayarlayabilirsiniz. Bu şekilde, gerekli olduğunda, ağ genelinde iletilerin dağıtımını sınırlandırmak için atlama sayısı ' nı kullanabilir, böylece gereksiz ileti yinelemeyi önleyebilirsiniz. Bu, kafesin yüksek miktarda yedekli veri içerdiği ya da anında komşular veya birkaç atlamanın içindeki komşular için bir ileti göndermede yararlı olur.
 
-- Kod parçacıkları ve ilgili bilgiler için bkz. [PeerHopCount özniteliği:](https://docs.microsoft.com/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) eş kanal blogundan ileti dağıtımı gönderisini denetleme.
+- Kod parçacıkları ve ilgili bilgiler için bkz. [PeerHopCount özniteliği:](/archive/blogs/peerchan/the-peerhopcount-attribute-controlling-message-distribution) eş kanal blogundan ileti dağıtımı gönderisini denetleme.
 
 ## <a name="message-propagation-filter"></a>İleti yayma filtresi
 
-`MessagePropagationFilter`Özellikle iletinin içeriği veya diğer belirli senaryolar yayılmayı tespit edildiğinde ileti taşmasını özelleştirilmiş denetim için kullanılabilir. Filtre, düğüm üzerinden geçen her ileti için yayma kararları verir. Bu, bir yerde, düğümünüz ve uygulamanız tarafından oluşturulan iletilerin başka bir yerinde oluşan iletiler için geçerlidir. Filtrenin hem iletiye hem de kaynağına erişimi vardır; bu nedenle iletiyi iletme veya bırakma hakkında kararlar, kullanılabilir olan tüm bilgileri temel alabilir.
+`MessagePropagationFilter` Özellikle iletinin içeriği veya diğer belirli senaryolar yayılmayı tespit edildiğinde ileti taşmasını özelleştirilmiş denetim için kullanılabilir. Filtre, düğüm üzerinden geçen her ileti için yayma kararları verir. Bu, bir yerde, düğümünüz ve uygulamanız tarafından oluşturulan iletilerin başka bir yerinde oluşan iletiler için geçerlidir. Filtrenin hem iletiye hem de kaynağına erişimi vardır; bu nedenle iletiyi iletme veya bırakma hakkında kararlar, kullanılabilir olan tüm bilgileri temel alabilir.
 
-<xref:System.ServiceModel.PeerMessagePropagationFilter>, tek bir işlevi olan temel soyut bir sınıftır <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> . Yöntem çağrısının ilk bağımsız değişkeni iletinin tam bir kopyasında geçirilir. İletide yapılan tüm değişiklikler gerçek iletiyi etkilemez. Yöntem çağrısının son bağımsız değişkeni iletinin kaynağını tanımlar ( `PeerMessageOrigination.Local` veya `PeerMessageOrigination.Remote` ). Bu yöntemin somut uygulamaları, iletinin yerel uygulamaya () iletileceği, uzak istemcilere () () () (), <xref:System.ServiceModel.PeerMessagePropagation> `Local` ya da `Remote` `LocalAndRemote` ne () iletildiğini belirten `None` sabit listesinden bir sabit döndürmelidir. Bu filtre, ilgili `PeerNode` nesneye erişerek ve özelliğindeki türetilmiş yayma filtresi sınıfının bir örneğini belirterek uygulanabilir `PeerNode.MessagePropagationFilter` . Eş kanalını açmadan önce yayma filtresinin eklendiğinden emin olun.
+<xref:System.ServiceModel.PeerMessagePropagationFilter> , tek bir işlevi olan temel soyut bir sınıftır <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> . Yöntem çağrısının ilk bağımsız değişkeni iletinin tam bir kopyasında geçirilir. İletide yapılan tüm değişiklikler gerçek iletiyi etkilemez. Yöntem çağrısının son bağımsız değişkeni iletinin kaynağını tanımlar ( `PeerMessageOrigination.Local` veya `PeerMessageOrigination.Remote` ). Bu yöntemin somut uygulamaları, iletinin yerel uygulamaya () iletileceği, uzak istemcilere () () () (), <xref:System.ServiceModel.PeerMessagePropagation> `Local` ya da `Remote` `LocalAndRemote` ne () iletildiğini belirten `None` sabit listesinden bir sabit döndürmelidir. Bu filtre, ilgili `PeerNode` nesneye erişerek ve özelliğindeki türetilmiş yayma filtresi sınıfının bir örneğini belirterek uygulanabilir `PeerNode.MessagePropagationFilter` . Eş kanalını açmadan önce yayma filtresinin eklendiğinden emin olun.
 
-- Kod parçacıkları ve ilgili bilgiler için, eş kanal bloguna [eş kanal ve MessagePropagationFilter](https://docs.microsoft.com/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) gönderisine bakın.
+- Kod parçacıkları ve ilgili bilgiler için, eş kanal bloguna [eş kanal ve MessagePropagationFilter](/archive/blogs/peerchan/peer-channel-and-messagepropagationfilter) gönderisine bakın.
 
 ## <a name="contacting-an-individual-node-in-the-mesh"></a>Kafesteki tek bir düğümle iletişim kurma
 

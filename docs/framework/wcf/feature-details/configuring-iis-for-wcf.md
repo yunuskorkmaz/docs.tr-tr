@@ -2,12 +2,12 @@
 title: Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
 ms.date: 03/30/2017
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
-ms.openlocfilehash: 6343049e2a21b06965a8c7851d891303a49c82b5
-ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
+ms.openlocfilehash: 6b0cc48c7a817f71339fb6d7eea35baf1d97b245
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84597572"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90556661"
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Windows Communication Foundation için Internet Information Services 7.0'ı Yapılandırma
 
@@ -54,7 +54,7 @@ Internet Information Services (IIS) 7,0, gereken bileşenleri seçmeli olarak y�
  Bu yüklemeyle, Web 'de bulunan IIS 7,0, ASP.NET ve WCF özelliklerini ve örneklerini kullanmak için gereken her şey vardır.
 
 ## <a name="request-limits"></a>İstek sınırları
- IIS 7 ile Windows Vista 'da, ve ayarlarının varsayılan değeri `maxUri` `maxQueryStringSize` değiştirilmiştir. Varsayılan olarak, IIS 7,0 ' de istek filtreleme, 4096 karakterlik bir URL uzunluğu ve bir sorgu dizesi uzunluğu olan 2048 karakter olarak izin verir. Bu Varsayılanları değiştirmek için aşağıdaki XML 'i App. config dosyanıza ekleyin.
+ IIS 7 ile Windows Vista 'da, ve ayarlarının varsayılan değeri `maxUri` `maxQueryStringSize` değiştirilmiştir. Varsayılan olarak, IIS 7,0 ' de istek filtreleme, 4096 karakterlik bir URL uzunluğu ve bir sorgu dizesi uzunluğu olan 2048 karakter olarak izin verir. Bu Varsayılanları değiştirmek için aşağıdaki XML 'i App.config dosyanıza ekleyin.
 
 ```xml
  <system.webServer>
@@ -71,4 +71,4 @@ Internet Information Services (IIS) 7,0, gereken bileşenleri seçmeli olarak y�
 - [WAS Etkinleştirme Mimarisi](was-activation-architecture.md)
 - [WAS'ı WCF ile Kullanmak için Yapılandırma](configuring-the-wpa--service-for-use-with-wcf.md)
 - [Nasıl yapılır: WCF Etkinleştirme Bileşenlerini Yükleme ve Yapılandırma](how-to-install-and-configure-wcf-activation-components.md)
-- [Windows Server App Fabric barındırma özellikleri](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
+- [Windows Server App Fabric barındırma özellikleri](/previous-versions/appfabric/ee677189(v=azure.10))

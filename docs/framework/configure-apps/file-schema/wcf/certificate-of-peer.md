@@ -2,12 +2,12 @@
 title: <certificate> / <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
-ms.openlocfilehash: 2044dc6fb4ae688a0a3c7e29b3b7696df0d0d218
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: ed24e9061f57798197ad41c1f556ce612a357e9e
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398195"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90555321"
 ---
 # <a name="certificate-of-peer"></a>\<certificate> / \<peer>
 Bir eş tarafından kullanılan bir sertifikayı belirtir.  
@@ -21,7 +21,7 @@ Bir eş tarafından kullanılan bir sertifikayı belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<peer>**](peer-of-servicecredentials.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<certificate>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <certificate findValue = "String"
@@ -65,7 +65,7 @@ Bir eş tarafından kullanılan bir sertifikayı belirtir.
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [Sertifikalarla Çalışma](../../../wcf/feature-details/working-with-certificates.md)
 - [Eşler Arası Ağ](../../../wcf/feature-details/peer-to-peer-networking.md)
-- [Eş kanal Iletisi kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Eş kanal özel kimlik doğrulaması](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Eş kanal Iletisi kimlik doğrulaması](/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
+- [Eş kanal özel kimlik doğrulaması](/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Eş Kanalı Uygulamalarını Güvenli Hale Getirme](../../../wcf/feature-details/securing-peer-channel-applications.md)
 - [Hizmet ve İstemcileri Güvenli Hale Getirme](../../../wcf/feature-details/securing-services-and-clients.md)

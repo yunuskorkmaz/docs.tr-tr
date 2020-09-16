@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - security [.NET Framework], code access security
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
-ms.openlocfilehash: 9d1f2e35c79ca32595711316885991717c4c1696
-ms.sourcegitcommit: 97ce5363efa88179dd76e09de0103a500ca9b659
+ms.openlocfilehash: 9f6049913a2e8cf3e3f220b0148598a236b60bef
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86281759"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557077"
 ---
 # <a name="code-access-security-basics"></a>Kod Erişim Güvenliği Temelleri
 
@@ -54,7 +54,7 @@ Kod erişimi güvenliği, kod yazarken insan hatası olasılığını ortadan ka
 Bildirime dayalı güvenlik sözdizimi, güvenlik bilgilerini kodunuzun [meta verilerine](../../standard/metadata-and-self-describing-components.md) yerleştirmek için [özniteliklerini](../../standard/attributes/index.md) kullanır. Öznitelikleri, kullanmak istediğiniz istek, talep veya geçersiz kılma türünü belirtmek için derleme, sınıf veya üye düzeyinde yerleştirilebilir. İstekler, çalışma zamanı güvenlik sistemini, uygulamanızın ihtiyacı olan veya istemediğiniz izinlerle ilgili bilgilendirmek için ortak dil çalışma zamanını hedefleyen uygulamalarda kullanılır. Talepler ve geçersiz kılmalar, kaynakların çağıranlara karşı korunmasına yardımcı olmak veya varsayılan güvenlik davranışını geçersiz kılmak için kitaplıklarda kullanılır.
 
 > [!NOTE]
-> .NET Framework 4 ' te, .NET Framework güvenlik modelinde ve terminolojisinde önemli değişiklikler yapıldı. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes).
+> .NET Framework 4 ' te, .NET Framework güvenlik modelinde ve terminolojisinde önemli değişiklikler yapıldı. Bu değişiklikler hakkında daha fazla bilgi için bkz. [güvenlik değişiklikleri](/previous-versions/dotnet/framework/security/security-changes).
 
 Bildirim temelli güvenlik çağrıları kullanmak için, izin nesnesinin durum verilerini, ihtiyacınız olan belirli bir izin biçimini temsil etmek üzere başlatmalısınız. Her yerleşik izin, <xref:System.Security.Permissions.SecurityAction> gerçekleştirmek istediğiniz güvenlik işleminin türünü tanımlayan bir sabit listesi geçen bir özniteliğe sahiptir. Ancak izinler, kendilerine özel olan kendi parametrelerini de kabul eder.
 
@@ -164,7 +164,7 @@ Uygulamanızın yönetilmeyen koda erişmesi gereken bir işlem gerçekleştirme
 - <xref:System.Security.NamedPermissionSet>
 - <xref:System.Security.Permissions.SecurityAction>
 - [Vermediğini](using-the-assert-method.md)
-- [Kod Erişimi Güvenliği](code-access-security.md)
+- [Kod erişim güvenliği](code-access-security.md)
 - [Kod Erişim Güvenliği Temelleri](code-access-security-basics.md)
 - [Öznitelikler](../../standard/attributes/index.md)
 - [Meta veriler ve kendi kendine açıklama bileşenleri](../../standard/metadata-and-self-describing-components.md)

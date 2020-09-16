@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Forms Add configuration element
 - configuring Windows Forms applications
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
-ms.openlocfilehash: 26b806f84c3e1bc44e0437a8f8806316b14897b8
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: dc1786f1f2dcc7bd01488dd24c6ef454f7e1cfbd
+ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73109655"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90557638"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms yapılandırma öğesi Ekle
 
 `<add>`Öğesi, Windows form uygulamanızın .NET Framework 4,7 veya sonraki sürümlerde Windows Forms uygulamalara eklenen özellikleri destekleyip desteklemediğini belirten önceden tanımlanmış bir anahtar ekler.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -35,9 +35,9 @@ ms.locfileid: "73109655"
 | `key`     | Gerekli öznitelik. Belirli bir Windows Forms özelleştirilebilir özelliğe karşılık gelen önceden tanımlanmış anahtar adı. |
 | `value`   | Gerekli öznitelik. Atanacak değer `key` . |
 
-### <a name="key-attribute-names-and-associated-values"></a>`key`öznitelik adları ve ilişkili değerler
+### <a name="key-attribute-names-and-associated-values"></a>`key` öznitelik adları ve ilişkili değerler
 
-| `key`ada | Değerler | Açıklama |
+| `key` ada | Değerler | Açıklama |
 | ---------- | ------ | ----------- |
 | "AnchorLayout. Disablesinglepasscontrolölçeklendirmesi" | "true" &#124; "false" | Bağlantılı denetimlerin tek bir geçişte ölçeklendirip ölçeklendirilmeyeceğini belirtir. Tek geçişli ölçeklendirmeyi devre dışı bırakmak için "true"; Aksi takdirde, false. Daha fazla bilgi için, bkz. [açıklamalar](#remarks) 'Daki "Tekli geçiş Ölçeklendirmesi" bölümü. |
 | "Dpitanıma" | "PerMonitorV2" &#124; "false" | Bir uygulamanın DPı duyarlı olup olmadığını gösterir. DPI tanımayı desteklemek için anahtarı "PerMonitorV2" olarak ayarlayın; Aksi takdirde, bunu "false" olarak ayarlayın. DPı tanıma, bir katılım özelliğidir; Windows Forms ' yüksek DPı desteğinin avantajlarından yararlanmak için değerini "PerMonitorV2" olarak ayarlamanız gerekir. Daha fazla bilgi için [açıklamalar](#remarks) bölümüne bakın. |
@@ -65,17 +65,17 @@ Yok.
 
 `<System.Windows.Forms.ApplicationConfigurationSection>`Öğesi `<add>` , her biri belirli bir yapılandırma ayarını tanımlayan bir veya daha fazla alt öğe eklemenize olanak tanır.
 
-Windows Forms yüksek DPı desteğine genel bakış için bkz. [Windows Forms yüksek DPI desteği](../../../winforms/high-dpi-support-in-windows-forms.md).
+Windows Forms yüksek DPı desteğine genel bakış için bkz. [Windows Forms yüksek DPI desteği](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 ### <a name="dpiawareness"></a>Dpitanıma
 
-Windows 10 Creators Edition ve .NET Framework 4,7 ile başlayan .NET Framework hedef sürümleriyle başlayan Windows Forms uygulamalar, .NET Framework 4,7 ' de sunulan yüksek DPı geliştirmelerinden faydalanmak için yapılandırılabilir. Bu modüller şunlardır:
+Windows 10 Creators Edition ve .NET Framework 4,7 ile başlayan .NET Framework hedef sürümleriyle başlayan Windows Forms uygulamalar, .NET Framework 4,7 ' de sunulan yüksek DPı geliştirmelerinden faydalanmak için yapılandırılabilir. Bu güncelleştirmeler şunlardır:
 
 - Windows Forms bir uygulama başlatıldıktan sonra kullanıcının DPı veya ölçek faktörünü değiştirdiği dinamik DPı senaryoları için destek.
 
 - Denetim ve denetim gibi bir dizi Windows Forms denetiminin ölçeklendirilmesine ve düzenine yönelik iyileştirmeler <xref:System.Windows.Forms.MonthCalendar> <xref:System.Windows.Forms.CheckedListBox> .
 
-Yüksek DPı tanıma, bir katılım özelliğidir; Varsayılan olarak, değeri `DpiAwareness` `false` . Bu anahtarın değerini uygulama yapılandırma dosyasında olarak ayarlayarak DPı tanıma desteğini Windows Forms tercih edebilirsiniz `PerMonitorV2` . DPı tanıma etkinse, tüm tek DPı özellikleri de etkinleştirilir. Bu modüller şunlardır:
+Yüksek DPı tanıma, bir katılım özelliğidir; Varsayılan olarak, değeri `DpiAwareness` `false` . Bu anahtarın değerini uygulama yapılandırma dosyasında olarak ayarlayarak DPı tanıma desteğini Windows Forms tercih edebilirsiniz `PerMonitorV2` . DPı tanıma etkinse, tüm tek DPı özellikleri de etkinleştirilir. Bu güncelleştirmeler şunlardır:
 
 - Anahtar tarafından denetlenen DPı değiştirilmiş iletileri `DisableDpiChangedMessageHandling` .
 
@@ -97,7 +97,7 @@ Ayarıyla belirtilen tek varsayılan kabul etme ayarı, `DpiAwareness` `PerMonit
 
 Genellikle, belirli bir özelliği, uygulamayı programlama yoluyla işlemeye seçtiğiniz için devre dışı bırakmış olursunuz.
 
-Windows Forms uygulamalarında yüksek DPı desteğinin avantajlarından yararlanma hakkında daha fazla bilgi için, bkz. [Windows Forms yüksek DPI desteği](../../../winforms/high-dpi-support-in-windows-forms.md).
+Windows Forms uygulamalarında yüksek DPı desteğinin avantajlarından yararlanma hakkında daha fazla bilgi için, bkz. [Windows Forms yüksek DPI desteği](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms).
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 
@@ -109,5 +109,5 @@ Tek veya çok taramalı ölçekleme, Kullanıcı arabiriminin algılanan yanıt 
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Windows Forms Yapılandırma Bölümü](index.md)
-- [Windows Forms yüksek DPı desteği](../../../winforms/high-dpi-support-in-windows-forms.md)
+- [Windows Forms yapılandırma bölümü](index.md)
+- [Windows Forms yüksek DPı desteği](/dotnet/desktop/winforms/high-dpi-support-in-windows-forms)
