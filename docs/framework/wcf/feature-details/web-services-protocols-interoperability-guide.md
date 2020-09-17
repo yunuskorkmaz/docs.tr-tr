@@ -2,16 +2,16 @@
 title: Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 4169a796311c402a97358de5d52c52562b6ed357
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: f35ca629da65af749897d28d28808d06eced7aa8
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90553180"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720120"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web Hizmetleri protokolleri birlikte çalışabilirlik Kılavuzu
 
-Windows Communication Foundation (WCF), bir dizi Web hizmeti protokolünü uygular. Bu protokollerin birçoğu, uygulayıcının kararına kadar bir dizi seçenek ve genişletilebilirlik noktası içerir. Bu konu, WCF 'nin uyguladığı Web Hizmetleri protokollerinin bir listesini sağlar. Bu bölümdeki diğer konular desteklenen her protokol için uygulama ayrıntıları sağlar.
+Windows Communication Foundation (WCF), bir dizi Web hizmeti protokolünü uygular. Bu protokollerin birçoğu, uygulayıcının kararına kadar bir dizi seçenek ve genişletilebilirlik noktası içerir. Bu makale, WCF 'nin uyguladığı Web Hizmetleri protokollerinin bir listesini sağlar. Bu bölümdeki diğer makaleler, desteklenen her protokol için uygulama ayrıntıları sağlar.
 
 ## <a name="web-services-protocols-implemented-by-wcf"></a>WCF tarafından uygulanan Web Hizmetleri protokolleri
 
@@ -64,9 +64,9 @@ Altyapı protokolleri birlikte çalışabilirliği WS-* belirtimleri tarafından
 |WSS: x509 belirteç profili 1,1|[Web Hizmetleri Güvenliği X. 509.440 sertifika belirteci profili 1,1](https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf)|
 |WSS: Kerberos belirteç profili 1,1|[Web Hizmetleri Güvenliği Kerberos belirteç profili 1,1](https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf)|
 |WSS: SAML 1,1 belirteç profili 1,1|[Web Hizmetleri Güvenliği SAML belirteci profili 1,1](https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf)|
-|WS-Secure konuşması|[Web hizmetleri güvenli konuşma dili](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
+|WS-Secure konuşması|[Web hizmetleri güvenli konuşma dili](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)|
 |WS-Trust 1,4|[Web Hizmetleri güven dili](https://docs.oasis-open.org/ws-sx/ws-trust/200802)|
-|WS-SecurityPolicy 2005/07|[Web hizmetleri güvenli konuşma dili](https://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Errata tarafından değiştirilmiş olarak OASTO WS-SX Technical komite 'a gönderildi.<br /><br /> [WS-SX iletisi](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
+|WS-SecurityPolicy 2005/07|[Web hizmetleri güvenli konuşma dili](http://specs.xmlsoap.org/ws/2005/02/sc/ws-secureconversation.pdf)<br /><br /> Errata tarafından değiştirilmiş olarak OASTO WS-SX Technical komite 'a gönderildi.<br /><br /> [WS-SX iletisi](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html)|
 |WS-ReliableMessaging 1,1|[Güvenilir Mesajlaşma Protokolü sürüm 1.1](reliable-messaging-protocol-version-1-1.md)|
 
 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> , aşağıdaki tablodaki belirtimleri destekler.
@@ -74,7 +74,7 @@ Altyapı protokolleri birlikte çalışabilirliği WS-* belirtimleri tarafından
 |Belirtim/belge|Bağlantı|
 |-----------------------------|----------|
 |WS koordinasyonu|[Web Hizmetleri düzenlemesi](/previous-versions/ms951231(v=msdn.10))|
-|WS-AtomicTransaction|[Web Hizmetleri atomik Işlem](https://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
+|WS-AtomicTransaction|[Web Hizmetleri atomik Işlem](http://specs.xmlsoap.org/ws/2004/10/wsat/wsat.pdf)|
 
 <xref:System.ServiceModel.Description.MetadataExporter>,, <xref:System.ServiceModel.Description.MetadataImporter> , <xref:System.ServiceModel.Description.WsdlExporter> <xref:System.ServiceModel.Description.WsdlImporter> Ve <xref:System.ServiceModel.Description.MetadataResolver> sınıfları aşağıdaki meta veri belirtimleri için destek sağlar:
 
@@ -90,7 +90,7 @@ Altyapı protokolleri birlikte çalışabilirliği WS-* belirtimleri tarafından
 
 - [WS-PolicyAttachment 1,2](https://www.w3.org/Submission/2006/SUBM-WS-PolicyAttachment-20060425/)
 
-- [WS-MetadataExchange 1,1](https://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
+- [WS-MetadataExchange 1,1](http://specs.xmlsoap.org/ws/2004/09/mex/WS-MetadataExchange.pdf)
 
 - [WS-aktarım meta verileri alma için al](https://www.w3.org/Submission/2006/SUBM-WS-Transfer-20060315/)
 

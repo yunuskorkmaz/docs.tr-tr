@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: e3c9f23ca73ed9b85d09680ec15251ebe02c7f8e
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: cd7860a5dfff1eb595625665382689733cffc94a
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065214"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90721264"
 ---
 ### <a name="ca1416-platform-compatibility"></a>CA1416: platform uyumluluğu
 
-.Net Code Analyzer Rule CA1416, varsayılan olarak .NET 5,0 ' den başlayarak etkindir. İşletim sistemini doğrulamaktan gelen çağrı sitelerinden platforma özel API 'lere çağrılar için bir derleme uyarısı oluşturur.
+.Net Code Analyzer Rule [CA1416](/visualstudio/code-quality/ca1416) , varsayılan olarak .NET 5,0 ' den başlayarak etkindir. İşletim sistemini doğrulamaktan gelen çağrı sitelerinden platforma özel API 'lere çağrılar için bir derleme uyarısı oluşturur.
 
 #### <a name="change-description"></a>Açıklamayı Değiştir
 
-.NET SDK, .NET 5,0 'den başlayarak [.net kaynak kodu Çözümleyicileri](../../../../docs/fundamentals/productivity/code-analysis.md)içerir. Bu kuralların bazıları varsayılan olarak CA1416 dahil olmak üzere etkindir. Projeniz bu kuralı ihlal eden ve uyarıları hata olarak işleyecek şekilde yapılandırılan kodu içeriyorsa, bu değişiklik yapınızı bozabilir. Rule CA1416, platform bağlamının doğrulanmadığı yerlerden platforma özel API 'Ler kullandığınızda size bildirir.
+.NET SDK, .NET 5,0 'den başlayarak [.net kaynak kodu Çözümleyicileri](../../../../docs/fundamentals/productivity/code-analysis.md)içerir. Bu kuralların bazıları varsayılan olarak [CA1416](/visualstudio/code-quality/ca1416)dahil olmak üzere etkindir. Projeniz bu kuralı ihlal eden ve uyarıları hata olarak işleyecek şekilde yapılandırılan kodu içeriyorsa, bu değişiklik yapınızı bozabilir. Rule CA1416, platform bağlamının doğrulanmadığı yerlerden platforma özel API 'Ler kullandığınızda size bildirir.
 
-CA1416 kuralı, platform uyumluluğu Çözümleyicisi, .NET 5,0 ' de yeni olan diğer özelliklerle birlikte çalışmaktadır. .NET 5,0 `SupportedOSPlatformAttribute` `UnsupportedOSPlatformAttribute` <xref:System.Runtime.Versioning.MinimumOSPlatformAttribute> <xref:System.Runtime.Versioning.RemovedInOSPlatformAttribute> , bir API *'nin* üzerinde veya desteklenmeyen platformları belirtmenize olanak tanıyan ve öznitelikleri (önceki bir önizleme sürümünde ve olarak adlandırılır). *isn't* Bu özniteliklerin yokluğunda, tüm platformlarda desteklenen bir API 'nin olduğu varsayılır. Bu öznitelikler, çekirdek .NET kitaplıklarında platforma özel API 'lere uygulandı.
+[CA1416](/visualstudio/code-quality/ca1416)kuralı, platform uyumluluğu Çözümleyicisi, .NET 5,0 ' de yeni olan diğer özelliklerle birlikte çalışmaktadır. .NET 5,0, <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> ve <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> ' de desteklenmeyen platformları belirtmenize olanak sağlayan ve öğesini tanıtır. *is* *isn't* Bu özniteliklerin yokluğunda, tüm platformlarda desteklenen bir API 'nin olduğu varsayılır. Bu öznitelikler, çekirdek .NET kitaplıklarında platforma özel API 'lere uygulandı.
 
-Kullandıkları API 'Leri hedefleyen projelerde, kural CA1416 platform bağlamının doğrulanmadığı herhangi bir platforma özgü API çağrısını işaretler. Artık ve öznitelikleri ile donatılmış API 'lerin çoğu, `SupportedOSPlatformAttribute` `UnsupportedOSPlatformAttribute` <xref:System.PlatformNotSupportedException> Desteklenmeyen bir işletim sisteminde çağrıldığında özel durumlar oluşturur. Artık bu API 'Lerin platforma özel olarak işaretlendiğinden, kural CA1416, <xref:System.PlatformNotSupportedException> çağrı sitelerinize işletim sistemi denetimleri ekleyerek çalışma zamanı özel durumlarını engellemenize yardımcı olur.
+Kullandıkları API 'Leri hedefleyen projelerde, kural [CA1416](/visualstudio/code-quality/ca1416) platform bağlamının doğrulanmadığı herhangi bir platforma özgü API çağrısını işaretler. Artık ve öznitelikleri ile donatılmış API 'lerin çoğu, <xref:System.Runtime.Versioning.SupportedOSPlatformAttribute> <xref:System.Runtime.Versioning.UnsupportedOSPlatformAttribute> <xref:System.PlatformNotSupportedException> Desteklenmeyen bir işletim sisteminde çağrıldığında özel durumlar oluşturur. Artık bu API 'Lerin platforma özel olarak işaretlendiğinden, kural [CA1416](/visualstudio/code-quality/ca1416) , <xref:System.PlatformNotSupportedException> çağrı sitelerinize işletim sistemi denetimleri ekleyerek çalışma zamanı özel durumlarını engellemenize yardımcı olur.
 
 #### <a name="examples"></a>Örnekler
 
@@ -44,7 +44,7 @@ Kullandıkları API 'Leri hedefleyen projelerde, kural CA1416 platform bağlamı
 
 #### <a name="recommended-action"></a>Önerilen eylem
 
-Platforma özgü API 'Lerin yalnızca kod uygun bir platformda çalışırken çağrıldığından emin olun. Geçerli işletim sistemini, sınıfındaki yöntemlerden birini kullanarak (örneğin, `Is<Platform>` <xref:System.OperatingSystem?displayProperty=nameWithType> `System.OperatingSystem.IsWindows()` platforma özgü bir API çağrılmadan önce) kontrol edebilirsiniz.
+Platforma özgü API 'Lerin yalnızca kod uygun bir platformda çalışırken çağrıldığından emin olun. Geçerli işletim sistemini, sınıfındaki yöntemlerden birini kullanarak (örneğin, `Is<Platform>` <xref:System.OperatingSystem?displayProperty=nameWithType> <xref:System.OperatingSystem.IsWindows?displayProperty=nameWithType> platforma özgü bir API çağrılmadan önce) kontrol edebilirsiniz.
 
 `Is<Platform>`Bir deyimin koşulunda yöntemlerden birini kullanabilirsiniz `if` :
 
@@ -122,4 +122,5 @@ Blazor WebAssembly platformu için:
 
 #### <a name="see-also"></a>Ayrıca bkz.
 
+- [CA1416: Platform uyumluluğunu doğrula](/visualstudio/code-quality/ca1416)
 - [.NET API Çözümleyicisi](../../../../docs/standard/analyzers/api-analyzer.md)

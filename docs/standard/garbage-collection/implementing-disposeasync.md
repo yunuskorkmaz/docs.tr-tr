@@ -3,25 +3,25 @@ title: DisposeAsync metodu uygulama
 description: Zaman uyumsuz kaynak Temizleme işlemini gerçekleştirmek için DisposeAsync ve Dispomevsimsynccore yöntemlerini nasıl uygulayacağınızı öğrenin.
 author: IEvangelist
 ms.author: dapine
-ms.date: 09/10/2020
+ms.date: 09/16/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 helpviewer_keywords:
 - DisposeAsync method
 - garbage collection, DisposeAsync method
-ms.openlocfilehash: 88adf9e484baa0e65e2ff093b4649cf35b8c86dc
-ms.sourcegitcommit: 6d4ee46871deb9ea1e45bb5f3784474e240bbc26
+ms.openlocfilehash: 6ddfd860571d883e20fdb18985fe2bc2d9477dec
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90022915"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720289"
 ---
 # <a name="implement-a-disposeasync-method"></a>DisposeAsync metodu uygulama
 
 <xref:System.IAsyncDisposable?displayProperty=nameWithType>Arabirim, C# 8,0 'nin bir parçası olarak sunulmuştur. <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> [Bir Dispose yöntemi uygularken](implementing-dispose.md)yaptığınız gibi, kaynak temizlik gerçekleştirmeniz gerektiğinde yöntemini uygulayabilirsiniz. Ancak, bu uygulamanın zaman uyumsuz temizleme işlemlerine izin verdiği önemli farklılıklardan biridir. , <xref:System.IAsyncDisposable.DisposeAsync> <xref:System.Threading.Tasks.ValueTask> Zaman uyumsuz Dispose işlemini temsil eden bir döndürür.
 
-Sınıfların de arabirimini uyguladığı arabirim, tipik olarak kullanılır <xref:System.IAsyncDisposable> <xref:System.IDisposable> . Arabirimin iyi bir uygulama deseninin, <xref:System.IAsyncDisposable> zaman uyumlu ya da zaman uyumsuz Dispose için hazırlanması gerekir. Dispose deseninin uygulanması için tüm rehberlik, zaman uyumsuz uygulama için de geçerlidir. Bu makalede, [bir Dispose yönteminin nasıl uygulanacağını](implementing-dispose.md)bildiğiniz varsayılmaktadır.
+Sınıfların de arabirimini uyguladığı arabirim, tipik olarak kullanılır <xref:System.IAsyncDisposable> <xref:System.IDisposable> . Arabirimin iyi bir uygulama deseninin, <xref:System.IAsyncDisposable> zaman uyumlu ya da zaman uyumsuz Dispose için hazırlanmasıdır. Dispose deseninin uygulanması için tüm rehberlik, zaman uyumsuz uygulama için de geçerlidir. Bu makalede, [bir Dispose yönteminin nasıl uygulanacağını](implementing-dispose.md)bildiğiniz varsayılmaktadır.
 
 ## <a name="disposeasync-and-disposeasynccore"></a>DisposeAsync () ve Dispodeniz synccore ()
 
@@ -54,7 +54,7 @@ public async ValueTask DisposeAsync()
 ```
 
 > [!NOTE]
-> Zaman uyumsuz Dispose deseninin, Dispose düzenine kıyasla bir birincil farkı, <xref:System.IAsyncDisposable.DisposeAsync> `Dispose(bool)` aşırı yükleme yöntemine yapılan çağrının `false` bir bağımsız değişken olarak verilme yöntemidir. <xref:System.IDisposable.Dispose?displayProperty=nameWithType>Yöntemi uygularken, `true` bunun yerine geçirilir. Bu, zaman uyumlu Dispose düzeniyle işlevsel denklik sağlanmasına yardımcı olur ve Sonlandırıcı kod yollarının hala çağrılmasını sağlar. Diğer bir deyişle, `DisposeAsyncCore()` Yöntem yönetilen kaynakları zaman uyumsuz olarak elden atıyor, bu nedenle bunları zaman uyumlu olarak atmak istemezsiniz. Bu nedenle, `Dispose(false)` yerine çağırın `Dispose(true)` .
+> Zaman uyumsuz Dispose deseninin, Dispose düzenine kıyasla bir birincil farkı, <xref:System.IAsyncDisposable.DisposeAsync> `Dispose(bool)` aşırı yükleme yöntemine yapılan çağrının `false` bir bağımsız değişken olarak verilme yöntemidir. <xref:System.IDisposable.Dispose?displayProperty=nameWithType>Ancak, yöntemi uygularken `true` bunun yerine geçirilir. Bu, zaman uyumlu Dispose düzeniyle işlevsel denklik sağlanmasına yardımcı olur ve Sonlandırıcı kod yollarının hala çağrılmasını sağlar. Diğer bir deyişle, `DisposeAsyncCore()` Yöntem yönetilen kaynakları zaman uyumsuz olarak elden atıyor, bu nedenle bunları zaman uyumlu olarak atmak istemezsiniz. Bu nedenle, `Dispose(false)` yerine çağırın `Dispose(true)` .
 
 ### <a name="the-disposeasynccore-method"></a>Dispomevsimsynccore () yöntemi
 
@@ -77,15 +77,15 @@ Tüm korumalı olmayan sınıflar, devralınabileceğinden olası bir temel sın
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/dispose-and-disposeasync.cs":::
 
-<xref:System.IDisposable.Dispose?displayProperty=nameWithType>Ve <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> uygulamaları hem basit ortak koddur. `Dispose(bool)`Ve `DisposeAsyncCore()` yöntemleri olup olmadığını denetleyerek başlar `_disposed` `true` ve yalnızca olduğunda çalışır `false` .
+<xref:System.IDisposable.Dispose?displayProperty=nameWithType>Ve <xref:System.IAsyncDisposable.DisposeAsync?displayProperty=nameWithType> uygulamaları hem basit ortak koddur.
 
-`Dispose(bool)`Aşırı yükleme yönteminde, <xref:System.IDisposable> örnek koşullu olarak atıldı `null` . <xref:System.IAsyncDisposable>Örnek olarak <xref:System.IDisposable> , ve de `null` aktiften çıkarılmaz. Her iki örnek de öğesine atanır `null` .
+`Dispose(bool)`Aşırı yükleme yönteminde, <xref:System.IDisposable> örnek koşullu olarak atıldı `null` . <xref:System.IAsyncDisposable>Örnek olarak atama yapılır <xref:System.IDisposable> ve aynı zamanda atılkdır `null` . Her iki örnek de öğesine atanır `null` .
 
 `DisposeAsyncCore()`Yöntemiyle aynı mantıksal yaklaşım izlenir. <xref:System.IAsyncDisposable>Örnek değilse `null` , öğesine çağrısı `DisposeAsync().ConfigureAwait(false)` beklenir. <xref:System.IDisposable>Örnek aynı zamanda bir uygulama ise <xref:System.IAsyncDisposable> , zaman uyumsuz olarak da atılmış olur. Her iki örnek de öğesine atanır `null` .
 
 ## <a name="using-async-disposable"></a>Async atılabilir kullanma
 
-Arabirimi uygulayan bir nesneyi düzgün bir şekilde kullanmak için <xref:System.IAsyncDisposable> [await](../../csharp/language-reference/operators/await.md)kullanın ve anahtar sözcükleri birlikte kullanabilirsiniz [using](../../csharp/language-reference/keywords/using-statement.md) . Aşağıdaki örneği, `ExampleAsyncDisposable` sınıfın örneklendiği ve sonra bir deyime sarmalanmış olduğunu göz önünde bulundurun `await using` .
+Arabirimi uygulayan bir nesneyi düzgün bir şekilde kullanmak için <xref:System.IAsyncDisposable> [await](../../csharp/language-reference/operators/await.md) kullanır ve anahtar sözcükleri birlikte [using](../../csharp/language-reference/keywords/using-statement.md) kullanabilirsiniz. Aşağıdaki örneği, `ExampleAsyncDisposable` sınıfın örneklendiği ve sonra bir deyime sarmalanmış olduğunu göz önünde bulundurun `await using` .
 
 :::code language="csharp" source="../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.asyncdisposable/proper-await-using.cs":::
 
