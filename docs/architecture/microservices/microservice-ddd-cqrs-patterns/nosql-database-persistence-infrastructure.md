@@ -2,12 +2,12 @@
 title: NoSQL veritabanlarını bir kalıcılık altyapısı olarak kullanma
 description: NoSql veritabanlarının genel olarak kullanımını ve özel olarak Azure Cosmos DB, kalıcılığı uygulama seçeneği olarak anlayın.
 ms.date: 01/30/2020
-ms.openlocfilehash: a478809895b0c20824f08f20558f2d47e10223d0
-ms.sourcegitcommit: 4ad2f8920251f3744240c3b42a443ffbe0a46577
+ms.openlocfilehash: c4f9199b9e88a39581437eca340e92f4fd450003
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86100814"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738807"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Kalıcı altyapı olarak NoSQL veritabanlarını kullanma
 
@@ -156,7 +156,7 @@ Yalnızca MongoDB ile bulutta Cosmos DB karşılaştırması arasında daha fazl
 
 EShopOnContainers 'da, MongoDB API 'sini kullandık. önceliklerimiz, Azure Cosmos DB ile de çalışan bir NoSQL veritabanı kullanarak tutarlı bir geliştirme/test ortamına sahip olacak.
 
-Ancak, Azure 'da üretim uygulamaları için Azure Cosmos DB erişmek üzere MongoDB API 'sini kullanmayı planlıyorsanız, yerel Azure Cosmos DB API 'si kullanmaya kıyasla Azure Cosmos DB veritabanlarına erişmek üzere MongoDB API 'sini kullanırken yetenekler ve performans farklarını çözümlemeniz gerekir. Benzer bir şekilde, MongoDB API 'sini kullanabilir ve aynı anda iki NoSQL veritabanı altyapısını destekleme avantajına sahip olursunuz.
+Ancak, Azure 'da üretim uygulamaları için Azure Cosmos DB erişmek üzere MongoDB API 'sini kullanmayı planlıyorsanız, yerel Azure Cosmos DB API 'sini kullanmaya kıyasla Azure Cosmos DB veritabanlarına erişmek için MongoDB API 'sini kullanırken yetenekler ve performans farklılıklarını çözümlemeniz gerekir. Benzer bir şekilde, MongoDB API 'sini kullanabilir ve aynı anda iki NoSQL veritabanı altyapısını destekleme avantajına sahip olursunuz.
 
 Ayrıca MongoDB kümelerini, [MongoDB Azure hizmeti](https://www.mongodb.com/scale/mongodb-azure-service)ile Azure bulutu 'nda bulunan üretim veritabanı olarak da kullanabilirsiniz. Ancak Microsoft tarafından sağlanmış bir PaaS hizmeti değildir. Bu durumda, Azure yalnızca bu çözümün MongoDB 'den geldiğini barındırıyor.
 

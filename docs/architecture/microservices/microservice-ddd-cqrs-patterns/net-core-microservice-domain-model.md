@@ -2,12 +2,12 @@
 title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı bir etki alanı modelinin uygulama ayrıntılarına ulaşın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0b42ecc2440faf5870b2d99e31d03cda00b21ce0
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306921"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738755"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile bir mikro hizmet etki alanı modeli uygulama
 
@@ -166,7 +166,7 @@ EF Core 1,0 veya sonraki bir sürümü kullandığınızda, DbContext içinde, y
 
 Sütunları alanlarla eşlemek için EF Core 1,1 veya sonraki bir sürüme sahip bir özellik ile, özellikler de kullanılamaz. Bunun yerine, sütunları yalnızca bir tablodan alanlarla eşleyebilirsiniz. Bunun için ortak kullanım örneği, varlığın dışından erişilmesi gerekmeyen iç durum için özel alanlardır.
 
-Örneğin, önceki OrderAggregate kod örneğinde, `_paymentMethodId` bir ayarlayıcı veya alıcı için ilgili özelliği olmayan, alanı gibi birkaç özel alan vardır. Bu alan Ayrıca, siparişin iş mantığı dahilinde hesaplanabilecek ve siparişin yöntemlerinden, ancak veritabanında kalıcı olması gerekir. Bu nedenle EF Core (v 1.1 ' den itibaren), ilgili bir özellik olmadan bir alanı veritabanındaki bir sütuna eşlemek için bir yol vardır. Bu, bu kılavuzun [altyapı katmanı](ddd-oriented-microservice.md#the-infrastructure-layer) bölümünde de açıklanmaktadır.
+Örneğin, önceki OrderAggregate kod örneğinde,  `_paymentMethodId` bir ayarlayıcı veya alıcı için ilgili özelliği olmayan, alanı gibi birkaç özel alan vardır. Bu alan Ayrıca, siparişin iş mantığı dahilinde hesaplanabilecek ve siparişin yöntemlerinden, ancak veritabanında kalıcı olması gerekir. Bu nedenle EF Core (v 1.1 ' den itibaren), ilgili bir özellik olmadan bir alanı veritabanındaki bir sütuna eşlemek için bir yol vardır. Bu, bu kılavuzun [altyapı katmanı](ddd-oriented-microservice.md#the-infrastructure-layer) bölümünde de açıklanmaktadır.
 
 ### <a name="additional-resources"></a>Ek kaynaklar
 

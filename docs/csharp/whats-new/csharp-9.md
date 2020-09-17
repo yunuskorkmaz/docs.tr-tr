@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: 80d636db04655650c7448590cd1042cdb1b17de1
-ms.sourcegitcommit: a69d548f90a03e105ee6701236c38390ecd9ccd1
+ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90065038"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738729"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -224,7 +224,7 @@ Bu özellik için bir diğer iyi kullanım, yeni bir nesneyi başlatmak için ya
 
 Bir ifade kullanarak varsayılan Oluşturucu tarafından oluşturulan bir örnek döndürebilirsiniz `return new();` .
 
-Benzer bir özellik, koşullu ifadelerin hedef tür çözümlemesini geliştirir. Bu değişiklik ile, iki ifadenin bir öğesinden diğerine örtük dönüştürmesi gerekmez, ancak her ikisi de ortak bir tür için örtük Dönüştürmelere sahip olabilir. Büyük olasılıkla bu değişikliği fark edeceksiniz. Ne fark edeceksiniz, daha önce gerekli olan veya derlenmeyen bazı Koşullu ifadeler artık çalışır.
+Benzer bir özellik, koşullu ifadelerin hedef tür çözümlemesini geliştirir. Bu değişiklik ile, iki ifadenin bir öğesinden diğerine örtük dönüştürmesi gerekmez, ancak her ikisi de hedef tür için örtük Dönüştürmelere sahip olabilir. Büyük olasılıkla bu değişikliği fark edeceksiniz. Ne fark edeceksiniz, daha önce gerekli olan veya derlenmeyen bazı Koşullu ifadeler artık çalışır.
 
 C# 9,0 ' den başlayarak `static` lambda ifadelerine veya anonim yöntemlere değiştiricisini ekleyebilirsiniz. Statik lambda ifadeleri `static` Yerel işlevlere benzerdir: statik bir lambda veya anonim işlev yerel değişkenleri veya örnek durumunu yakalayabilir. `static`Değiştirici yanlışlıkla diğer değişkenleri yakalamaya engel olur.
 

@@ -1,38 +1,38 @@
 ---
-title: Endeksleri ve aralıkları kullanarak veri aralıklarını keşfedin
-description: Bu gelişmiş öğretici, sıralı veri kümesinin dilimlerini incelemek için endeksleri ve aralıkları kullanarak verileri keşfetmenizi öğretir.
-ms.date: 03/11/2020
+title: Dizinler ve aralıklar kullanarak veri aralıklarını keşfet
+description: Bu gelişmiş öğreticide, sıralı veri kümesinin sürekli bir aralığını incelemek üzere dizinler ve aralıklar kullanarak verileri araştırmanızı öğretilir.
+ms.date: 09/11/2020
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 82aad968e2efc437c82a7c8250bcd108b60b09e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cf6c83484332ed517b2326b3fd9d7458f191227e
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156500"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738872"
 ---
-# <a name="indices-and-ranges"></a>Endeksler ve aralıklar
+# <a name="indices-and-ranges"></a>Dizinler ve aralıklar
 
-Aralıklar ve endeksler, bir dizideki tek öğelere veya aralıklara erişmek için kısa bir sözdizimi sağlar.
+Aralıklar ve dizinler, bir dizideki tek öğe veya aralıklara erişmek için bir kısa sözdizimi sağlar.
 
-Bu öğreticide şunların nasıl yapıldığını öğreneceksiniz:
+Bu öğreticide aşağıdakilerin nasıl yapılacağını öğreneceksiniz:
 
 > [!div class="checklist"]
 >
-> - Aralıklar için sıralı sözdizimini kullanın.
-> - Her dizinin başlangıç ve bitişi için tasarım kararlarını anlayın.
-> - Senaryoları <xref:System.Index> ve <xref:System.Range> türleri öğrenin.
+> - Bir dizideki aralıklar için söz dizimini kullanın.
+> - Her bir sıranın başlangıcı ve bitişi için tasarım kararlarını anlayın.
+> - Ve türleri için senaryolar <xref:System.Index> öğrenin <xref:System.Range> .
 
-## <a name="language-support-for-indices-and-ranges"></a>Endeksler ve aralıklar için dil desteği
+## <a name="language-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için dil desteği
 
-Bu dil desteği iki yeni türe ve iki yeni işleçe dayanır:
+Bu dil desteği iki yeni türe ve iki yeni işleçlere dayanır:
 
-- <xref:System.Index?displayProperty=nameWithType>diziye bir dizi içine bir dizi temsil eder.
-- Bir dizinin dizinin `^`sonuna göreolduğunu belirten son işleçten gelen dizin.
-- <xref:System.Range?displayProperty=nameWithType>bir dizinin alt aralığını temsil eder.
-- Aralık işleci, `..`bir aralığın başlangıcını ve sonunu operands olarak belirtir.
+- <xref:System.Index?displayProperty=nameWithType> bir dizinin dizisini temsil eder.
+- `^`Bir dizinin bir sıranın sonuna göreli olduğunu belirten bitiş işlecinden dizin.
+- <xref:System.Range?displayProperty=nameWithType> bir dizinin alt aralığını temsil eder.
+- `..`Aralık işleci, bir aralığın işlenenlerinin başlangıcını ve sonunu belirtir.
 
-Endekskurallarıyla başlayalım. Bir dizi `sequence`düşünün. Dizin `0` `sequence[0]`aynıdır. Dizin `^0` `sequence[sequence.Length]`aynıdır. İfade, `sequence[^0]` tıpkı olduğu gibi `sequence[sequence.Length]` bir özel durum oluşturur. Herhangi bir `n`sayı `^n` için dizin `sequence[sequence.Length - n]`.
+Dizin kurallarıyla başlayalım. Bir dizi düşünün `sequence` . `0`Dizin, ile aynıdır `sequence[0]` . `^0`Dizin, ile aynıdır `sequence[sequence.Length]` . İfadesi olduğu `sequence[^0]` gibi bir özel durum oluşturur `sequence[sequence.Length]` . Herhangi bir sayı için `n` Dizin `^n` aynı olur `sequence[sequence.Length - n]` .
 
 ```csharp
 string[] words = new string[]
@@ -50,48 +50,57 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-`^1` Dizinle son sözcüğü alabilirsiniz. Başlatmanın altına aşağıdaki kodu ekleyin:
+Dizinle son sözcüğü alabilirsiniz `^1` . Başlatmanın altına aşağıdaki kodu ekleyin:
 
 [!code-csharp[LastIndex](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
 
-Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralıklar özeldir, yani *sonu* aralıkta dahil değildir. Aralık, `[0..^0]` tüm aralığı `[0..sequence.Length]` temsil eder gibi tüm aralığı temsil eder.
+Aralık, bir aralığın *başlangıcını* ve *sonunu* belirtir. Aralıklar dışlamalı, yani *bitiş* aralığa dahil değildir. Aralık, tüm aralığı temsil eden `[0..^0]` tüm aralığı temsil eder `[0..sequence.Length]` .
 
-Aşağıdaki kod ,"hızlı", "kahverengi" ve "tilki" sözcükleri içeren bir alt aralık oluşturur. Bu `words[1]` aracılığıyla `words[3]`içerir. Öğe `words[4]` aralıkta değil. Aynı yönteme aşağıdaki kodu ekleyin. Etkileşimli pencerenin altına kopyalayıp yapıştırın.
+Aşağıdaki kod, "hızlı", "kahverengi" ve "Fox" sözcüklerinin bulunduğu bir alt Aralık oluşturur. İle içerir `words[1]` `words[3]` . Öğe `words[4]` Aralık içinde değil. Aşağıdaki kodu aynı yönteme ekleyin. Etkileşimli pencerenin alt kısmına kopyalayıp yapıştırın.
 
 [!code-csharp[Range](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-Aşağıdaki kod "tembel" ve "köpek" ile bir alt aralığı oluşturur. Bu `words[^2]` içerir `words[^1]`ve . Bitiş dizini `words[^0]` dahil değil. Aşağıdaki kodu da ekleyin:
+Aşağıdaki kod, "Lazy" ve "köpek" ile aralığı döndürür. Ve içerir `words[^2]` `words[^1]` . Son dizin `words[^0]` dahil değildir. Aşağıdaki kodu da ekleyin:
 
 [!code-csharp[LastRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
-Aşağıdaki örnekler, başlangıç, bitiş veya her ikisi için açık uçlu aralıklar oluşturur:
+Aşağıdaki örnekler, başlangıç, bitiş veya her ikisi için açık olarak biten aralıklar oluşturur:
 
 [!code-csharp[PartialRange](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
 
-Aralıkları veya endeksleri değişken olarak da bildirebilirsiniz. Değişken daha sonra `[` ve `]` karakterler içinde kullanılabilir:
+Ayrıca, aralıkları veya dizinleri değişken olarak da bildirebilirsiniz. Değişken daha sonra `[` ve karakterleri içinde kullanılabilir `]` :
 
 [!code-csharp[IndexRangeTypes](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
 
-Aşağıdaki örnek, bu seçimlerin birçok nedeni gösterir. `x`Değiştirin `y`ve `z` farklı kombinasyonları denemek için. Deneme yaptığınızda, geçerli `x` kombinasyonlardan `y`daha `y` az `z` ve daha az olan değerleri kullanın. Yeni bir yöntemde aşağıdaki kodu ekleyin. Farklı kombinasyonları deneyin:
+Aşağıdaki örnekte, bu seçimlerin pek çok nedeni gösterilmektedir. `x` `y` `z` Farklı birleşimler denemek için, ve değiştirin. Denemeler yaptığınızda, `x` ' den küçük olan değerleri kullanın `y` ve `y` `z` geçerli kombinasyonlardan daha küçüktür. Aşağıdaki kodu yeni bir yöntemine ekleyin. Farklı birleşimler deneyin:
 
 [!code-csharp[SemanticsExamples](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
 
-## <a name="type-support-for-indices-and-ranges"></a>Endeksler ve aralıklar için tip desteği
+## <a name="type-support-for-indices-and-ranges"></a>Dizinler ve aralıklar için tür desteği
 
-Dizinler ve aralıklar, tek bir öğeye veya bir dizideki öğelerin bir alt aralığına erişmek için net, kısa sözdizimini sağlar. Dizin ifadesi genellikle bir dizinin öğelerinin türünü döndürür. Aralık ifadesi genellikle kaynak sırası ile aynı sıra türünü döndürür.
+Dizinler ve aralıklar, tek bir öğeye veya dizideki bir dizi öğeye erişmek için net, kısa sözdizimi sağlar. Bir dizin ifadesi genellikle bir dizinin öğelerinin türünü döndürür. Bir Aralık ifadesi genellikle kaynak dizisiyle aynı sıra türünü döndürür.
 
-Bir [dizin leyiciye](../programming-guide/indexers/index.md) bir <xref:System.Index> <xref:System.Range> veya parametre içeren herhangi bir tür, sırasıyla endeksleri veya aralıkları açıkça destekler. Tek <xref:System.Range> bir parametre alan bir dizinleyici, <xref:System.Span%601?displayProperty=nameWithType>', .
+Or parametresi olan bir [Dizin Oluşturucu](../programming-guide/indexers/index.md) sağlayan herhangi bir tür, <xref:System.Index> <xref:System.Range> sırasıyla dizin veya aralıkları açıkça destekler. Tek bir parametre alan bir Dizin Oluşturucu <xref:System.Range> , gibi farklı bir dizi türü döndürebilir <xref:System.Span%601?displayProperty=nameWithType> .
 
-Bir tür, adı verilen `Length` bir özelliği `Count` varsa veya erişilebilir bir getter ve bir dönüş türü ne varsa `int` **sayılabilir.** Endeksleri veya aralıkları açıkça desteklemeyen sayılabilir bir tür, bunlar için örtülü bir destek sağlayabilir. Daha fazla bilgi için, [özellik teklifi notunun](~/_csharplang/proposals/csharp-8.0/ranges.md) [Örtük Dizini desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) ve [Örtük Aralık destek](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) bölümlerine bakın. Örtük aralık desteği kullanan aralıklar, kaynak sırası ile aynı sıra türünü döndürer.
+> [!IMPORTANT]
+> Aralık işleci kullanılarak kodun performansı, dizi işleneninin türüne bağlıdır.
+>
+> Aralık işlecinin zaman karmaşıklığı, dizi türüne bağlıdır. Örneğin, dizi bir `string` veya bir diziyse, sonuç girişin belirtilen bölümünün bir kopyasıdır, bu nedenle zaman karmaşıklığı O kadar ( *n)* olur (burada n aralığın uzunluğudur). Diğer taraftan, bir veya ise, <xref:System.Span%601?displayProperty=nameWithType> <xref:System.Memory%601?displayProperty=nameWithType> sonuç aynı yedekleme deposuna başvurur. Bu, kopya olmadığı ve işlemin *O (1)* olduğu anlamına gelir.
+>
+> Zaman karmaşıklığına ek olarak, bu, ek ayırmaya ve kopyalara neden olur ve performansı etkiler. Performans duyarlı kodda, `Span<T>` `Memory<T>` Aralık operatörü kendileri için ayrılmadığından, dizi türü olarak veya kullanmayı düşünün.
 
-Örneğin, aşağıdaki .NET türleri hem endeksleri hem <xref:System.String>de <xref:System.Span%601>aralıkları destekler: , ve <xref:System.ReadOnlySpan%601>. Endeksleri <xref:System.Collections.Generic.List%601> destekler, ancak aralıkları desteklemez.
+Bir **tür,** erişilebilir bir `Length` alıcı veya bir `Count` dönüş türü olan veya adında bir özelliğe sahipse bir tür `int` . Dizinleri veya aralıkları açıkça desteklemeyen bir sayılabilir türü, bunlar için örtülü bir destek sağlayabilir. Daha fazla bilgi için, [özellik teklifi notunun](~/_csharplang/proposals/csharp-8.0/ranges.md) [örtük Dizin desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) ve [örtük Aralık desteği](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) bölümlerine bakın. Örtük Aralık desteği kullanan aralıklar, kaynak dizisiyle aynı sıra türünü döndürür.
 
-<xref:System.Array>daha nüanslı bir davranış almıştır. Tek boyutlu diziler hem endeksleri hem de aralıkları destekler. Çok boyutlu diziler yapmaz. Çok boyutlu bir dizi için dizinleyici, tek bir parametre değil, birden çok parametre vardır. Bir dizi dizi dizi olarak da adlandırılan pürüzlü diziler, hem aralıkları hem de dizinleyicileri destekler. Aşağıdaki örnek, pürüzlü bir dizinin dikdörtgen alt kısmını nasıl yinelergösterilir. İlk ve son üç satır hariç, merkezdeki bölümü ve seçilen her satırdan ilk ve son iki sütunu yineler:
+Örneğin, aşağıdaki .NET türleri hem dizinleri hem de aralıkları destekler: <xref:System.String> , <xref:System.Span%601> ve <xref:System.ReadOnlySpan%601> . <xref:System.Collections.Generic.List%601>Dizinleri destekler ancak aralıkları desteklemez.
+
+<xref:System.Array> daha fazla anormal davranışa sahiptir. Tek boyutlu diziler hem dizinleri hem de aralıkları destekler. Çok boyutlu diziler değildir. Çok boyutlu bir dizinin dizin oluşturucusunun tek bir parametre değil birden çok parametresi vardır. Dizi dizileri olarak da adlandırılan pürüzlü Diziler, hem aralıkları hem de dizin oluşturucuyu destekler. Aşağıdaki örnek, pürüzlü bir dizinin dikdörtgen alt bölümünün nasıl yineyükleneceğini gösterir. İlk ve son üç satırı ve seçili her satırdaki ilk ve son iki sütunu dışlayarak ortadaki bölümü yineler:
 
 [!code-csharp[JaggedArrays](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_JaggedArrays)]
 
-## <a name="scenarios-for-indices-and-ranges"></a>Endeksler ve aralıklar için senaryolar
+Her durumda, için Aralık işleci <xref:System.Array> döndürülen öğeleri depolamak için bir dizi ayırır.
 
-Daha büyük bir dizinin bir alt aralığını çözümlemek istediğinizde genellikle aralıkları ve endeksleri kullanırsınız. Yeni sözdizimi tam olarak hangi alt aralığın dahil olduğunu okumada daha açıktır. Yerel işlev `MovingAverage` bir <xref:System.Range> bağımsız değişken olarak alır. Yöntem daha sonra min, max ve ortalama hesaplanırken sadece bu aralığı sıralar. Projenizde aşağıdaki kodu deneyin:
+## <a name="scenarios-for-indices-and-ranges"></a>Dizinler ve aralıklar için senaryolar
+
+Daha büyük bir dizinin bir bölümünü çözümlemek istediğinizde genellikle aralıklar ve dizinler kullanırsınız. Yeni söz dizimi, sıranın tam olarak hangi kısmının dahil olduğunu okumaktan daha net bir şeydir. Yerel işlev, `MovingAverage` <xref:System.Range> bağımsız değişkeni olarak bir kullanır. Bu yöntem daha sonra Min, Max ve Average hesaplama yaparken yalnızca o aralığı numaralandırır. Projenizde aşağıdaki kodu deneyin:
 
 [!code-csharp[MovingAverages](~/samples/snippets/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]

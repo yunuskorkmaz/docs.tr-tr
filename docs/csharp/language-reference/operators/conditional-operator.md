@@ -1,7 +1,7 @@
 ---
 description: '?: operator-C# başvurusu'
 title: '?: operator-C# başvurusu'
-ms.date: 03/06/2020
+ms.date: 09/17/2020
 f1_keywords:
 - ?:_CSharpKeyword
 - ?_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 0efa6de2b537fd3af76807938ac2b50a2716561f
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: b6add045983619169bed0cd9f32eb27dba0a0338
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122361"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738885"
 ---
 # <a name="-operator-c-reference"></a>?: işleci (C# Başvurusu)
 
@@ -29,7 +29,13 @@ condition ? consequent : alternative
 
 `condition`İfade veya olarak değerlendirilmelidir `true` `false` . `condition`, Olarak değerlendirilirse `true` , `consequent` ifade değerlendirilir ve sonucu işlemin sonucu olur. `condition`, Olarak değerlendirilirse `false` , `alternative` ifade değerlendirilir ve sonucu işlemin sonucu olur. Yalnızca `consequent` veya `alternative` değerlendirilir.
 
-`consequent`Ve türü aynı olmalıdır `alternative` veya bir türden diğerine örtük bir dönüştürme olmalıdır.
+C# 9,0 ' den başlayarak Koşullu ifadeler Target türünde bulunur. Diğer bir deyişle, koşullu bir ifadenin hedef türü biliniyorsa, `consequent` `alternative` Aşağıdaki örnekte gösterildiği gibi, ve türlerinin hedef türüne örtülü olarak dönüştürülebilir olması gerekir:
+
+[!code-csharp[target-typed conditional](snippets/shared/ConditionalOperator.cs#TargetTyped)]
+
+Koşullu ifadenin hedef türü bilinmiyorsa (örneğin, [`var`](../keywords/var.md) anahtar sözcüğünü kullandığınızda) veya C# 8,0 ve önceki sürümlerde, türü `consequent` ve `alternative` aynı olmalıdır veya bir türden diğerine örtük bir dönüştürme olması gerekir:
+
+[!code-csharp[not target-typed conditional](snippets/shared/ConditionalOperator.cs#NotTargetTyped)]
 
 Koşullu operatör doğru ilişkilendirilebilir, diğer bir deyişle, formun bir ifadesi
 
@@ -56,7 +62,7 @@ Aşağıdaki örnek, koşullu işlecin kullanımını gösterir:
 
 ## <a name="conditional-ref-expression"></a>Koşullu başvuru ifadesi
 
-C# 7,2 ile başlayarak, bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkeni koşullu başvuru ifadesiyle koşullu olarak atanabilir. Koşullu başvuru ifadesini [Başvuru dönüş değeri](../keywords/ref.md#reference-return-values) veya [ `ref` Yöntem bağımsız değişkeni](../keywords/ref.md#passing-an-argument-by-reference)olarak da kullanabilirsiniz.
+C# 7,2 ile başlayarak, bir [ref yerel](../keywords/ref.md#ref-locals) veya [ref ReadOnly yerel](../keywords/ref.md#ref-readonly-locals) değişkeni koşullu bir başvuru ifadesiyle koşullu olarak atanabilir. Ayrıca, bir [Başvuru dönüş değeri](../keywords/ref.md#reference-return-values) veya [ `ref` Yöntem bağımsız değişkeni](../keywords/ref.md#passing-an-argument-by-reference)olarak bir koşullu başvuru ifadesi de kullanabilirsiniz.
 
 Koşullu başvuru ifadesi için sözdizimi aşağıdaki gibidir:
 
@@ -64,11 +70,11 @@ Koşullu başvuru ifadesi için sözdizimi aşağıdaki gibidir:
 condition ? ref consequent : ref alternative
 ```
 
-Özgün Koşul operatörü gibi, koşullu başvuru ifadesi iki ifadeden yalnızca birini değerlendirir: `consequent` ya da `alternative` .
+Özgün koşullu operatör gibi, koşullu bir başvuru ifadesi iki ifadeden yalnızca birini değerlendirir: `consequent` ya da `alternative` .
 
-Koşullu başvuru ifadesi söz konusu olduğunda, `consequent` ve türü `alternative` aynı olmalıdır.
+Koşullu başvuru ifadesi durumunda, `consequent` ve türü `alternative` aynı olmalıdır. Koşullu başvuru ifadeleri Target türünde değil.
 
-Aşağıdaki örnek, koşullu başvuru ifadesinin kullanımını gösterir:
+Aşağıdaki örnek, bir koşullu başvuru ifadesinin kullanımını gösterir:
 
 [!code-csharp-interactive[conditional ref](snippets/shared/ConditionalOperator.cs#ConditionalRef)]
 
@@ -86,7 +92,10 @@ Kullanıcı tanımlı bir tür, koşullu işleci aşırı yükleyemez.
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [koşullu işleç](~/_csharplang/spec/expressions.md#conditional-operator) bölümüne bakın.
 
-Koşullu başvuru ifadesi hakkında daha fazla bilgi için bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-7.2/conditional-ref.md).
+C# 7,2 ve üzeri sürümlerde eklenen özellikler hakkında daha fazla bilgi için aşağıdaki özellik teklifi notlarına bakın:
+
+- [Koşullu başvuru ifadeleri (C# 7,2)](~/_csharplang/proposals/csharp-7.2/conditional-ref.md)
+- [Target türü belirtilmiş koşullu ifade (C# 9,0)](~/_csharplang/proposals/csharp-9.0/target-typed-conditional-expression.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 

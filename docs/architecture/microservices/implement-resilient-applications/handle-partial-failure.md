@@ -1,42 +1,42 @@
 ---
 title: Kısmi hata işleme
-description: Kısmi hataları niçin incelikle işleyeceğinizi öğrenin. Bir microservice tam olarak işlevsel olmayabilir ama yine de bazı yararlı işler yapmak mümkün olabilir.
+description: Kısmi hataların sorunsuz bir şekilde nasıl işleneceğini öğrenin. Mikro hizmet tamamen işlevsel olmayabilir, ancak yine de yararlı bir iş yapabiliyor olabilir.
 ms.date: 10/16/2018
-ms.openlocfilehash: 0300719360e1a2500db0af8454c91fdfe2e5b09b
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3345fffe3a38b8336d71ebb9c88e76d3315fd2e2
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988876"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738768"
 ---
-# <a name="handle-partial-failure"></a>Kısmi hata işleme
+# <a name="handle-partial-failure"></a>Tanıtıcı kısmen hatası
 
-Mikro hizmetler tabanlı uygulamalar gibi dağıtılmış sistemlerde, kısmi arıza riski her zaman vardır. Örneğin, tek bir microservice/container başarısız olabilir veya kısa bir süre için yanıt vermek için kullanılabilir olmayabilir veya tek bir VM veya sunucu çökebilir. İstemciler ve hizmetler ayrı işlemler olduğundan, bir hizmet istemcinin isteğine zamanında yanıt veremeyebilir. Hizmet aşırı yüklenmiş ve isteklere çok yavaş yanıt verebilir veya ağ sorunları nedeniyle kısa bir süre için erişilemeyebilir.
+Mikro hizmet tabanlı uygulamalar gibi dağıtılmış sistemlerde, kısmi hata riski vardır. Örneğin, tek bir mikro hizmet/kapsayıcı başarısız olabilir veya kısa bir süre için yanıt veremeyebilir ya da tek bir VM veya sunucu kilitlenebilir. İstemciler ve hizmetler ayrı süreçler olduğundan, bir hizmet istemcinin isteğine zamanında yanıt veremeyebilir. Hizmet aşırı yüklenmiş ve isteklere çok yavaş yanıt veriyor olabilir veya ağ sorunları nedeniyle kısa bir süre boyunca yalnızca erişilebilir olmayabilir.
 
-Örneğin, eShopOnContainers örnek uygulamasından Sipariş ayrıntıları sayfasını göz önünde bulundurun. Kullanıcı bir sipariş göndermeye çalıştığında sipariş mikrohizmeti yanıt vermiyorsa, istemci işleminin kötü bir uygulaması (MVC web uygulaması)-örneğin, istemci kodu zaman olmadan eşzamanlı RPC'ler kullanıyorsa, iş parçacıklarının yanıt bekleyen kısmını süresiz olarak engeller. Kötü bir kullanıcı deneyimi oluşturmanın yanı sıra, yanıt vermeyen her bekleme bir iş parçacığı tüketir veya engeller ve iş parçacıkları yüksek ölçeklenebilir uygulamalarda son derece değerlidir. Engellenen çok sayıda iş parçacığı varsa, sonunda uygulamanın çalışma zamanı iş parçacıkları tükenebilir. Bu durumda, uygulama Şekil 8-1'de gösterildiği gibi kısmen yanıt vermemek yerine genel olarak yanıt sızabilir.
+Örneğin, eShopOnContainers örnek uygulamasından Order details sayfasını göz önünde bulundurun. Kullanıcı bir siparişi göndermeyi denediğinde sıralama mikro hizmeti yanıt vermezse (örneğin, istemci kodu zaman aşımı olmadan zaman uyumlu RPC 'ler kullanıyorsa), yanıt için süresiz olarak yanıt bekleyen iş parçacıklarını engeller. Kötü bir kullanıcı deneyimi oluşturmanın yanı sıra, yanıt vermeyen her bekleme, bir iş parçacığını kullanır veya engeller ve iş parçacıkları son derece ölçeklenebilir uygulamalarda oldukça değerlidir. Engellenen çok sayıda iş parçacığı varsa, sonuçta uygulamanın çalışma zamanının iş parçacığı tükenmesine devam edebilir. Bu durumda, Şekil 8-1 ' de gösterildiği gibi uygulama yalnızca kısmen yanıt vermemeye karşı genel olarak yanıt vermeyebilir.
 
-![Kısmi hataları gösteren diyagram.](./media/handle-partial-failure/partial-failures-diagram.png)
+![Kısmi hataların gösterildiği diyagram.](./media/handle-partial-failure/partial-failures-diagram.png)
 
-**Şekil 8-1**. Hizmet iş parçacığı kullanılabilirliğini etkileyen bağımlılıklar nedeniyle kısmi hatalar
+**Şekil 8-1**. Hizmet iş parçacığı kullanılabilirliğini etkileyen bağımlılıklardan dolayı kısmi arızalar
 
-Büyük bir mikrohizmet tabanlı uygulamada, herhangi bir kısmi hata, özellikle dahili microservices etkileşimin çoğu senkron HTTP çağrıları (bir anti-desen olarak kabul edilir) dayanmaktadır yükseltilebilir. Günde milyonlarca gelen çağrı alan bir sistem düşünün. Sisteminizin uzun eşzamanlı HTTP çağrıları zincirlerine dayanan kötü bir tasarımı varsa, bu gelen aramalar milyonlarca giden çağrıya (1:4'lük bir oranın 1:4 oranında olduğunu varsayalım) ve eşzamanlı bağımlılıklar olarak düzinelerce dahili mikro hizmete neden olabilir. Bu durum Şekil 8-2'de, \#özellikle bağımlılık 3'te gösterilmiştir, bu zincir başlatılır ve bağımlılık #4. hangi aramalar #5.
+Büyük bir mikro hizmet tabanlı uygulamada, özellikle de iç mikro hizmet etkileşiminin büyük bir kısmı zaman uyumlu HTTP çağrılarını temel alıyorsa (bir anti-model olarak kabul edilir), kısmi bir hata oluşabilir. Gün başına milyonlarca gelen çağrı alan bir sistem hakkında düşünün. Sisteminizde zaman uyumlu HTTP çağrılarının uzun zincirlerini temel alan hatalı bir tasarım varsa, bu gelen çağrılar birçok milyonlarca giden çağrıya (1:4 oranını varsayalım) zaman uyumlu bağımlılıklar olarak onlarca iç mikro hizmet ile sonuçlanabilir. Bu durum Şekil 8-2, özellikle bağımlılık \# #4 çağıran ve sonra da #5 çağıran bağımlılık 3 ' te gösterilmiştir.
 
-![Birden çok dağıtılmış bağımlılıkları gösteren diyagram.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
+![Birden çok dağıtılmış bağımlılığı gösteren diyagram.](./media/handle-partial-failure/multiple-distributed-dependencies.png)
 
-**Şekil 8-2**. UZUN HTTP istekleri zincirlerini içeren yanlış bir tasarıma sahip olmanın etkisi
+**Şekil 8-2**. Yanlış bir tasarıma sahip olmanın etkisi, HTTP isteklerinin uzun zincirlerine sahiptir
 
-Her bağımlılığın kendisi mükemmel kullanılabilirlik olsa bile, dağıtılmış ve bulut tabanlı bir sistemde aralıklı hata garanti edilir. Bu göz önünde bulundurman gereken bir gerçek.
+Her bağımlılığın mükemmel bir kullanılabilirliği olsa bile, dağıtılmış ve bulut tabanlı bir sistemde aralıklı hata garanti edilir. Göz önünde bulundurmanız gereken bir olgu vardır.
 
-Hata toleransı sağlamak için teknikler tasarlamaz ve uygulamazsanız, küçük arıza süreleri bile yükseltilebilir. Örnek olarak, kullanılabilirliğin %99,99'una sahip 50 bağımlılık, bu dalgalanma etkisi nedeniyle her ay birkaç saatlik kapalı kalma süresine neden olur. Bir mikrohizmet bağımlılığı, yüksek sayıda isteği işlerken başarısız olduğunda, bu hata her hizmetteki tüm kullanılabilir istek iş parçacığına hızla doyabilir ve tüm uygulamayı kilitleyebilir.
+Hata toleransını güvence altına almak için tasarlayamazsınız ve daha küçük bir küçüklükte olabilir. Örnek olarak, her biri kullanılabilirliği% 99,99 olan 50 bağımlılık, bu Ripple etkisi nedeniyle her ay birkaç saatlik kapalı kalma süresine neden olur. Yüksek bir istek hacmi işlenirken bir mikro hizmet bağımlılığı başarısız olduğunda, bu hata her bir hizmette bulunan tüm kullanılabilir istek iş parçacıklarını hızla doygunluğu ve tüm uygulamayı kilitlebilirler.
 
-![Mikro hizmetlerde artırılmış kısmi arızayı gösteren diyagram.](./media/handle-partial-failure/partial-failure-amplified-microservices.png)
+![Mikro hizmetlerde oluşan kısmen hatalı hata gösteren diyagram.](./media/handle-partial-failure/partial-failure-amplified-microservices.png)
 
-**Şekil 8-3**. Senkron UZUN zincirleri ile mikrohizmetler tarafından güçlendirilmiş kısmi başarısızlık HTTP aramaları
+**Şekil 8-3**. Zaman uyumlu HTTP çağrılarının uzun zincirleriyle mikro hizmetlerden oluşan kısmi hata
 
-Bu sorunu en aza indirmek için, bölümünde [Asynchronous microservice entegrasyonu microservice özerkliğini zorlamak](../architect-microservice-container-applications/communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy), bu kılavuz da dahili mikro hizmetler arasında asynchronous iletişim kullanmaya teşvik eder.
+Bu sorunu en aza indirmek için, [zaman uyumsuz mikro hizmet tümleştirmesi mikro hizmetin bağımsız çalışma sınırı 'i zorlayacağı](../architect-microservice-container-applications/communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy)için bu kılavuz, iç mikro hizmetlerde zaman uyumsuz iletişim kullanmanızı önerir.
 
-Buna ek olarak, mikro hizmetlerinizi ve istemci uygulamalarınızı kısmi hataları işlemek için tasarlamanız, yani esnek mikro hizmetler ve istemci uygulamaları oluşturmanız esastır.
+Ayrıca, mikro hizmetlerinizi ve istemci uygulamalarınızı kısmi hataların (yani dayanıklı mikro hizmetler ve istemci uygulamaları oluşturmak için) tasarlamanızı da öneririz.
 
 >[!div class="step-by-step"]
->[Önceki](index.md)
->[Sonraki](partial-failure-strategies.md)
+>[Önceki](index.md) 
+> [Sonraki](partial-failure-strategies.md)

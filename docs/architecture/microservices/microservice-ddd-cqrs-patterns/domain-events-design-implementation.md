@@ -2,12 +2,12 @@
 title: Etki alanı olayları. Tasarım ve uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Toplamalar arasında iletişim kurmak için önemli bir kavram olan etki alanı olaylarının derinlemesine bir görünümünü alın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 0cc2072408e110d94b47bd47a9c337a604d4c1a3
-ms.sourcegitcommit: e0803b8975d3eb12e735a5d07637020dd6dac5ef
+ms.openlocfilehash: e786af9b5cd005573dcc9d08a3ccd19f25f13813
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89271782"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738781"
 ---
 # <a name="domain-events-design-and-implementation"></a>Etki alanı olayları: tasarım ve uygulama
 
@@ -132,7 +132,7 @@ Sonraki soru, bir etki alanı olayının ilgili olay işleyicilerine ulaşmasın
 
 UDI Dahan başlangıçta önerilir (örneğin, [etki alanı olayları](https://udidahan.com/2008/08/25/domain-events-take-2/)gibi bazı ilgili gönderilerde) olayları yönetmek ve yükseltmek için statik bir sınıf kullanın. Bu, DomainEvents adlı statik bir sınıfı içerebilir ve bu, etki alanı olaylarını, çağrıldığında, gibi bir sözdizimi kullanarak bir şekilde doğrudan tetikleyebilir `DomainEvents.Raise(Event myEvent)` . Jimmy Bogard, benzer bir yaklaşım öneren bir blog gönderisi ([etki alanınızı güçleyebilirsiniz: etki alanı olayları](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) yazdı.
 
-Ancak, etki alanı olayları sınıfı statikse, Ayrıca, işleyiciler için hemen de dağıtım yapılır. Bu, test ve hata ayıklamayı daha zor hale getirir, çünkü yan etkileri olan olay işleyicileri olay oluşturulduktan hemen sonra yürütülür. Test ve hata ayıklama yaparken, üzerine odaklanmak ve yalnızca geçerli toplama sınıflarında neler olduğunu yapmak istersiniz; başka toplamalar veya uygulama mantığı ile ilgili yan etkileri için aniden başka olay işleyicilerine yeniden yönlendirilmek istemezsiniz. Sonraki bölümde açıklandığı gibi diğer yaklaşımların gelişmesinin nedeni budur.
+Ancak, etki alanı olayları sınıfı statikse, Ayrıca, işleyiciler için hemen de dağıtım yapılır. Bu, test ve hata ayıklamayı daha zor hale getirir, çünkü yan etkileri olan olay işleyicileri olay oluşturulduktan hemen sonra yürütülür. Test ve hata ayıklama yaparken, yalnızca geçerli toplama sınıflarında neler olduğunu odaklanmak istersiniz; başka toplamalar veya uygulama mantığı ile ilgili yan etkileri için aniden başka olay işleyicilerine yeniden yönlendirilmek istemezsiniz. Sonraki bölümde açıklandığı gibi diğer yaklaşımların gelişmesinin nedeni budur.
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>Olayları yükseltme ve gönderme için ertelenmiş yaklaşım
 
