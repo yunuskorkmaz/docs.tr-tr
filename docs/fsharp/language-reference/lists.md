@@ -2,12 +2,12 @@
 title: Listeler
 description: 'Aynı türdeki sıralı, sabit bir öğe serisi olan F # listeleri hakkında bilgi edinin.'
 ms.date: 08/13/2020
-ms.openlocfilehash: 16d7195039d25cf63630f5cc3be6563b1bf45c44
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 567731eb57b77d60d3dd847630d5676e8d047d09
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559173"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720354"
 ---
 # <a name="lists"></a>Listeler
 
@@ -59,9 +59,9 @@ F # içindeki listeler, listedir bağlantılı listeler olarak uygulanır. Bu, y
 
 Liste türü aşağıdaki özellikleri destekler:
 
-|Özellik|Tür|Açıklama|
+|Özellik|Tür|Description|
 |--------|----|-----------|
-|[Başlı](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head)|`'T`|İlk öğesi.|
+|[Head](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Head)|`'T`|İlk öğesi.|
 |[Olmamalıdır](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Empty)|`'T list`|Uygun türdeki boş bir liste döndüren statik özellik.|
 |[IsEmpty](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#IsEmpty)|`bool`|`true` listede öğe yoksa.|
 |[Öğe](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-list-1.html#Item)|`'T`|Belirtilen dizindeki öğe (sıfır tabanlı).|
@@ -233,13 +233,13 @@ Aşağıdaki kod,, ve kullanımını gösterir `List.sum` `List.sumBy` `List.ave
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet11.fs)]
 
-Çıktı `1.000000` .
+Çıktı `1.000000` olur.
 
 Aşağıdaki kod öğesinin kullanımını gösterir `List.averageBy` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet12.fs)]
 
-Çıktı `5.5` .
+Çıktı `5.5` olur.
 
 ### <a name="lists-and-tuples"></a>Listeler ve tanımlama grupları
 
@@ -265,7 +265,7 @@ Aşağıdaki kod örneği öğesinin kullanımını gösterir `List.zip3` .
 
 Karşılık gelen unzip sürümleri, [List. unzip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip) ve [List. unzip3](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3), tanımlama grubu ve dönüş listelerinin listesini alır, burada ilk liste her bir tanımlama grubunda ilk olan tüm öğeleri içerir ve ikinci liste her bir tanımlama grubunun ikinci öğesini içerir ve bu şekilde devam eder.
 
-Aşağıdaki kod örneği [List. unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21)öğesinin kullanımını gösterir.
+Aşağıdaki kod örneği [List. unzip](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip)öğesinin kullanımını gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet15.fs)]
 
@@ -276,7 +276,7 @@ Aşağıdaki kod örneği [List. unzip](https://msdn.microsoft.com/library/639db
 [1; 3] [2; 4]
 ```
 
-Aşağıdaki kod örneği [List. unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4)kullanımını gösterir.
+Aşağıdaki kod örneği [List. unzip3](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html#unzip3)kullanımını gösterir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lists/snippet16.fs)]
 

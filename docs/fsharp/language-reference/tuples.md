@@ -2,18 +2,18 @@
 title: Demetler
 description: 'Farklı türlerde olabilecek adlandırılmamış ancak sıralı değerler gruplandırması olan F # Tuple hakkında bilgi edinin.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 5d26fd5d7ec5b4939a895a6d2a6a0d7fc6c6c733
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 6f4adf7e10e22d8b7a8cf697baee15962adf3630
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86173295"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720367"
 ---
 # <a name="tuples"></a>Demetler
 
 *Kayıt düzeni* , farklı türlerde olabilecek adlandırılmamış ancak sıralanmış değerlerin bir gruplandırmasıdır.  Tanımlama grupları başvuru türleri ya da yapılar olabilir.
 
-## <a name="syntax"></a>Sözdizimi
+## <a name="syntax"></a>Syntax
 
 ```fsharp
 (element, ... , element)
@@ -36,7 +36,7 @@ Aşağıdaki kodda gösterildiği gibi, kayıt düzeni öğelerine erişmek ve a
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L27-L29)]
 
-Ayrıca bağlama yoluyla bir ifadenin dışındaki bir düzeni kullanarak bir tanımlama grubu oluşturabilirsiniz `match` `let` .
+Ayrıca bağlama yoluyla bir ifadenin dışındaki bir düzeni kullanarak bir tanımlama grubu oluşturabilirsiniz `match`  `let` .
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/basic-examples.fsx#L34-L37)]
 
@@ -118,7 +118,7 @@ Başvuru başlıkları ve yapı tanımlama gruplarının tamamen farklı bir tem
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L5-L12)]
 
-Tek bir kayıt düzeninde kalıp eşleşmesi gerekir ve diğer bileşenleri oluşturan parçalar ile oluşturun.  Örnek:
+Tek bir kayıt düzeninde kalıp eşleşmesi gerekir ve diğer bileşenleri oluşturan parçalar ile oluşturun.  Örneğin:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/tuples/interop.fsx#L18-L22)]
 
@@ -126,7 +126,7 @@ Tek bir kayıt düzeninde kalıp eşleşmesi gerekir ve diğer bileşenleri olu�
 
 Bu bölüm, derlendikleri zaman başlıkların biçimini açıklar.  .NET Framework 3,5 veya daha düşük bir sürüm hedeflenmediğiniz müddetçe buradaki bilgiler okunmanıza gerek yoktur.
 
-Tanımlama grupları, birden fazla genel türden biri olan, `System.Tuple` parametre sayısı üzerinde aşırı yüklenmiş olan tüm adlandırılmış nesneler veya tür parametrelerinin sayısıyla derlenir. Bu formda, C# veya Visual Basic gibi başka bir dilde görüntülediğinizde ya da F # yapıları farkında olmayan bir araç kullanırken demet türleri görüntülenir. `Tuple`Türler .NET Framework 4 ' te tanıtılmıştı. .NET Framework önceki bir sürümünü hedefliyorsanız, derleyici F # Çekirdek kitaplığının 2,0 sürümündeki [System. Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) sürümlerini kullanır. Bu kitaplıktaki türler yalnızca .NET Framework 2,0, 3,0 ve 3,5 sürümlerini hedefleyen uygulamalar için kullanılır. Tür iletme, .NET Framework 2,0 ve .NET Framework 4 F # bileşenleri arasında ikili uyumluluk sağlamak için kullanılır.
+Tanımlama grupları, birden fazla genel türden biri olan, `System.Tuple` parametre sayısı üzerinde aşırı yüklenmiş olan tüm adlandırılmış nesneler veya tür parametrelerinin sayısıyla derlenir. Bu formda, C# veya Visual Basic gibi başka bir dilde görüntülediğinizde ya da F # yapıları farkında olmayan bir araç kullanırken demet türleri görüntülenir. `Tuple`Türler .NET Framework 4 ' te tanıtılmıştı. .NET Framework önceki bir sürümünü hedefliyorsanız, derleyici `System.Tuple` F # Çekirdek kitaplığının 2,0 sürümündeki sürümlerini kullanır. Bu kitaplıktaki türler yalnızca .NET Framework 2,0, 3,0 ve 3,5 sürümlerini hedefleyen uygulamalar için kullanılır. Tür iletme, .NET Framework 2,0 ve .NET Framework 4 F # bileşenleri arasında ikili uyumluluk sağlamak için kullanılır.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Yapı tanımlama gruplarının derlenmiş formu
 

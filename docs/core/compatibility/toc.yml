@@ -30,6 +30,8 @@
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
+    - name: Kod analizi
+      href: code-analysis.md
     - name: Core .NET kitaplıkları
       href: corefx.md
     - name: Şifreleme

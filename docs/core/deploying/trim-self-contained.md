@@ -4,12 +4,12 @@ description: Kendi boyutlarını azaltmak için kendi içindeki uygulamaları na
 author: jamshedd
 ms.author: jamshedd
 ms.date: 04/03/2020
-ms.openlocfilehash: 9c2994c98a2ebe6f45b056256c2bda28db017fbf
-ms.sourcegitcommit: e7acba36517134238065e4d50bb4a1cfe47ebd06
+ms.openlocfilehash: 1ebcac51331407069e26b49e40bb6e071cefb752
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89465487"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770461"
 ---
 # <a name="trim-self-contained-deployments-and-executables"></a>Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
 
@@ -24,7 +24,7 @@ Derleme zamanı Çözümleme altyapısı, hangi diğer kodun gerekli olduğunu t
 Uygulamalar için kırpma modu ayarı ile yapılandırılır `TrimMode` . Varsayılan değer ve, `copyused` uygulamayla birlikte başvurulan derlemelerdir. `link`Değer, Blazor WebAssembly uygulamalarıyla kullanılır ve derlemeler içinde kullanılmayan kodu kırpar. Kırpma Analizi uyarıları, tam bağımlılık analizinin mümkün olmadığı kod desenleri hakkında bilgi verir. Bu uyarılar varsayılan olarak bastırılır ve bayrağı olarak ayarlanarak açılabilir `SuppressTrimAnalysisWarnings` `false` . Kullanılabilir kırpma seçenekleri hakkında daha fazla bilgi için bkz. [kırpma seçenekleri](trimming-options.md).
 
 > [!NOTE]
-> Kırpma, .NET Core 3,1, 5,0 ' deki deneysel bir özelliktir ve _yalnızca_ kendi içinde yayımlanan uygulamalar tarafından kullanılabilir.
+> Kırpma, .NET Core 3,1 ve .NET 5,0 ' de deneysel bir özelliktir. Kırpma _yalnızca_ kendi içinde yayımlanan uygulamalar için kullanılabilir.
 
 ## <a name="prevent-assemblies-from-being-trimmed"></a>Derlemelerin kırpılmasına engel
 

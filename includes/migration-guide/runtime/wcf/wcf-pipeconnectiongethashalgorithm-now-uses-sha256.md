@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d32725b0d3063d3320b73e02039ff567090da932
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 3cf1740565343558a85fdfa68957773468c28231
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497931"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770957"
 ---
 ### <a name="wcf-pipeconnectiongethashalgorithm-now-uses-sha256"></a>WCF PipeConnection. GetHashAlgorithm artık SHA256 kullanıyor
 
@@ -14,17 +14,24 @@ Windows Communication Foundation .NET Framework başlayarak, adlandırılmış k
 
 #### <a name="suggestion"></a>Öneri
 
-Bu değişiklik ile .NET Framework 4.7.1 veya sonraki bir sürümde uyumluluk sorunuyla karşılaşırsanız, app.config dosyanızın bölümüne aşağıdaki satırı ekleyerek geri alabilirsiniz <code>&lt;runtime&gt;</code> :<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.UseSha1InPipeConnectionGetHashAlgorithm=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+Bu değişiklik ile .NET Framework 4.7.1 veya sonraki bir sürümde uyumluluk sorunuyla karşılaşırsanız, app.config dosyanızın bölümüne aşağıdaki satırı ekleyerek geri alabilirsiniz `<runtime>` :
 
-| Name    | Değer       |
-|:--------|:------------|
-| Kapsam   |İkincil|
-|Sürüm|4.7.1|
-|Tür|Çalışma Zamanı|
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.ServiceModel.UseSha1InPipeConnectionGetHashAlgorithm=true" />
+  </runtime>
+</configuration>
 
-#### <a name="affected-apis"></a>Etkilenen API’ler
+| Name    | Value   |
+|:--------|:--------|
+| Scope   | Minor   |
+| Version | 4.7.1   |
+| Type    | Runtime |
 
-API analizi aracılığıyla algılanamaz.
+#### Affected APIs
+
+Not detectable via API analysis.
 
 <!--
 

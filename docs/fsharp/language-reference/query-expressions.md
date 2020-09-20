@@ -2,12 +2,12 @@
 title: Sorgu İfadeleri
 description: 'F # programlama dilinde LINQ için sorgu ifadesi desteği hakkında bilgi edinin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: afcc6e92818b1648a210ad9cfc3f1dcfa46037b5
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: b2380bbc448aca06a40896582f3d4e7f701c6184
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88559069"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720484"
 ---
 # <a name="query-expressions"></a>Sorgu ifadeleri
 
@@ -45,7 +45,7 @@ query1
 
 Önceki kod örneğinde sorgu ifadesi küme ayraçları içinde bulunur. İfadedeki kodun anlamı, sorgu sonuçlarındaki veritabanındaki Müşteriler tablosuna her müşteriyi döndürür. Sorgu ifadeleri <xref:System.Linq.IQueryable%601> , ve ' i uygulayan bir tür döndürür <xref:System.Collections.Generic.IEnumerable%601> ve bu nedenle örnek gösterildiği gibi [Seq modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-seqmodule.html) kullanılarak yinelenebilir.
 
-Her hesaplama ifadesi türü bir Oluşturucu sınıfından oluşturulur. Sorgu hesaplama ifadesi için Oluşturucu sınıfı `QueryBuilder` . Daha fazla bilgi için bkz. [Hesaplama ifadeleri](computation-expressions.md) ve [QueryBuilder Sınıfı](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).
+Her hesaplama ifadesi türü bir Oluşturucu sınıfından oluşturulur. Sorgu hesaplama ifadesi için Oluşturucu sınıfı `QueryBuilder` . Daha fazla bilgi için bkz. [Hesaplama ifadeleri](computation-expressions.md) ve [QueryBuilder Sınıfı](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-linq-querybuilder.html).
 
 ## <a name="query-operators"></a>Sorgu Işleçleri
 
@@ -703,7 +703,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> ve <code>TOP</code>.<br/>
+<code>LIKE</code> ve <code>TOP</code> .<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student

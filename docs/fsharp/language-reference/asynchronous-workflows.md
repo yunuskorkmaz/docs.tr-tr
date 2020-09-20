@@ -2,12 +2,12 @@
 title: Zaman Uyumsuz İş Akışları
 description: 'Diğer çalışmanın yürütülmesi engellenmeden yürütülen hesaplamaları zaman uyumsuz olarak gerçekleştirmek için F # programlama dilinde destek hakkında bilgi edinin.'
 ms.date: 08/15/2020
-ms.openlocfilehash: ac727fc630f13db01da964131ab39dc242a12cd1
-ms.sourcegitcommit: 8bfeb5930ca48b2ee6053f16082dcaf24d46d221
+ms.openlocfilehash: 14146cc8a643f31831475075212cc06da5f8d6ff
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88557717"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720276"
 ---
 # <a name="asynchronous-workflows"></a>Zaman uyumsuz iş akışları
 
@@ -44,7 +44,7 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 Tek bir zaman uyumsuz görev gerçekleştiren ve sonucu döndüren bir yöntem, *zaman uyumsuz temel*değer olarak adlandırılır ve bunlar özellikle ile kullanılmak üzere tasarlanmıştır `let!` . Çeşitli zaman uyumsuz temel türler, F # Çekirdek Kitaplığı 'nda tanımlanmıştır. Web uygulamaları için iki tür yöntemi, modülünde tanımlanmıştır [`FSharp.Control.WebExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html) : [`WebRequest.AsyncGetResponse`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncGetResponse) ve [`WebClient.AsyncDownloadString`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-webextensions.html#AsyncDownloadString) . Her iki temel bir Web sayfasından veri indirir. `AsyncGetResponse` bir `System.Net.WebResponse` nesnesi üretir ve bir `AsyncDownloadString` Web sayfası için HTML 'i temsil eden bir dize oluşturur.
 
-Zaman uyumsuz g/ç işlemlerine yönelik çeşitli temel türler modüle dahildir [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) . Sınıfının bu genişletme yöntemleri `System.IO.Stream` [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) ve ' dir [`Stream.AsyncWrite`](hhttps://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) .
+Zaman uyumsuz g/ç işlemlerine yönelik çeşitli temel türler modüle dahildir [`FSharp.Control.CommonExtensions`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html) . Sınıfının bu genişletme yöntemleri `System.IO.Stream` [`Stream.AsyncRead`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncRead) ve ' dir [`Stream.AsyncWrite`](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-commonextensions.html#AsyncWrite) .
 
 Ayrıca, tamamlanmış gövdesi zaman uyumsuz bir blok içinde olan bir işlev tanımlayarak kendi zaman uyumsuz temel temellerinizi de yazabilirsiniz.
 
@@ -66,4 +66,4 @@ Aşağıdaki kod örneğinde, bir işlev `fetchAsync` bir Web isteğinden dönd�
 
 - [F # dil başvurusu](index.md)
 - [Hesaplama İfadeleri](computation-expressions.md)
-- [Control. Async sınıfı](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [Control. Async sınıfı](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-control-fsharpasync.html)

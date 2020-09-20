@@ -2,24 +2,24 @@
 title: Koleksiyon türleri
 description: 'F # koleksiyon türleri ve bunların koleksiyon türlerinden nasıl farklı olduğunu öğrenin.'
 ms.date: 08/14/2020
-ms.openlocfilehash: 394f6bbaf58e7e8607abc3a0c20bbc2b1c9c3c8d
-ms.sourcegitcommit: c4a15c6c4ecbb8a46ad4e67d9b3ab9b8b031d849
+ms.openlocfilehash: 0b5be8f656d6728fe382b1944bda0a410a94d226
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88656911"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720341"
 ---
-# <a name="f-collection-types"></a>F# Koleksiyon Türleri
+# <a name="f-collection-types"></a>F # koleksiyon türleri
 
 Bu konuyu inceleyerek, hangi F # koleksiyon türünün belirli bir ihtiyacı karşılayacak en iyi şekilde olduğunu belirleyebilirsiniz. Bu koleksiyon türleri, .NET 'teki koleksiyon türlerinden farklıdır, örneğin, ad alanındaki gibi, `System.Collections.Generic` F # koleksiyon türleri nesne odaklı bir perspektifin yerine işlevsel programlama perspektifinden tasarlanmalıdır. Daha belirgin olarak, yalnızca dizi koleksiyonunda kesilebilir öğeler vardır. Bu nedenle, bir koleksiyonu değiştirdiğinizde orijinal koleksiyonu değiştirmek yerine değiştirilmiş koleksiyonun bir örneğini oluşturursunuz.
 
 Koleksiyon türleri, nesnelerin depolandığı veri yapısı türüne de göre farklılık gösterir. Karma tablolar, bağlantılı listeler ve diziler gibi veri yapıları farklı performans özelliklerine ve farklı bir kullanılabilir işlemler kümesine sahiptir.
 
-## <a name="f-collection-types"></a>F# Koleksiyon Türleri
+## <a name="table-of-collection-types"></a>Koleksiyon türleri tablosu
 
 Aşağıdaki tabloda, F # koleksiyon türleri gösterilmektedir.
 
-|Tür|Açıklama|İlişkili Bağlantılar|
+|Tür|Description|İlişkili Bağlantılar|
 |----|-----------|-------------|
 |[Liste](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharplist-1.html)|Aynı türdeki sıralı, sabit bir öğe dizisi. Bağlantılı liste olarak uygulanır.|[Listeler](lists.md)<br /><br />[Modül Listele](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-listmodule.html)|
 |[Dizide](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-array-1.html)|Aynı türde olan ardışık veri öğelerinin sabit boyutlu, sıfır tabanlı, kesilebilir bir koleksiyonu.|[Diziler](arrays.md)<br /><br />[Dizi modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-arraymodule.html)<br /><br />[Array2D modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array2dmodule.html)<br /><br />[Array3D modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-array3dmodule.html)|
@@ -27,11 +27,11 @@ Aşağıdaki tabloda, F # koleksiyon türleri gösterilmektedir.
 |[Harita](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpmap-2.html)|Öğelerin sabit bir sözlüğü. Öğelere anahtar tarafından erişilir.|[Eşleme Modülü](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-mapmodule.html)|
 |[Ayarla](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-fsharpset-1.html)|İkili ağaçlara dayalı, karşılaştırma F # yapısal karşılaştırma işlevidir ve bu da anahtar değerlerinde arabirimin uygulamalarını kullanan bir sabit kümesidir `System.IComparable` .|[Modül ayarla](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-collections-setmodule.html)|
 
-### <a name="table-of-functions"></a>Işlev tablosu
+### <a name="table-of-functions"></a>İşlev tablosu
 
-Bu bölüm, F # koleksiyon türlerinde kullanılabilir olan işlevleri karşılaştırır. İşlevin hesaplama karmaşıklığı verilir, burada N ilk koleksiyonun boyutudur ve d ise ikinci koleksiyonun boyutudur. Kısa çizgi (-) bu işlevin koleksiyonda kullanılabilir olmadığını gösterir. Diziler geç olarak değerlendirildiğinden, Seq. Distinct gibi bir işlev hemen döndürdüğü için O (1) olabilir, ancak numaralandırıldıktan sonra sıranın performansını etkilese de
+Bu bölüm, F # koleksiyon türlerinde kullanılabilir olan işlevleri karşılaştırır. İşlevin hesaplama karmaşıklığı verilir, burada N ilk koleksiyonun boyutudur ve d ise ikinci koleksiyonun boyutudur. Kısa çizgi (-) bu işlevin koleksiyonda kullanılabilir olmadığını gösterir. Diziler geç olarak değerlendirildiğinden, `Seq.distinct` (1) gibi bir işlev hemen döndürdüğünden, ancak numaralandırılmakta olduğu sırada sıranın performansını etkilese de o gibi bir işlev.
 
-|İşlev|Dizi|Liste|Sequence|Harita|Ayarla|Açıklama|
+|İşlev|Dizi|Liste|Sequence|Harita|Ayarla|Description|
 |--------|-----|----|--------|---|---|-----------|
 |ýna|O (N)|O (N)|O (N)|-|-|İkinci koleksiyonun öğeleri tarafından izlenen ilk koleksiyonun öğelerini içeren yeni bir koleksiyon döndürür.|
 |add|-|-|-|O (günlük (N))|O (günlük (N))|Eklenen öğe ile yeni bir koleksiyon döndürür.|
@@ -90,11 +90,11 @@ Bu bölüm, F # koleksiyon türlerinde kullanılabilir olan işlevleri karşıla
 |map3|-|O (N)|-|-|-|Öğeleri verilen işlevi üç koleksiyonun karşılık gelen öğelerine aynı anda uygulama sonuçları olan bir koleksiyon oluşturur.|
 |hatası|O (N)|O (N)|O (N)|-|-|Öğeleri verilen işlevin dizinin her öğesine uygulanması sonucu olan bir dizi oluşturur. İşleve geçirilen tamsayı dizin, dönüştürülmekte olan öğenin dizinini gösterir.|
 |mapi2|O (N)|O (N)|-|-|-|Öğeleri, bu iki koleksiyonun karşılık gelen öğelerine, öğelerin dizinini geçirerek verilen işlevi uygulamanın sonuçları olan bir koleksiyon oluşturur. İki giriş dizisi aynı uzunlukta olmalıdır.|
-|max|O (N)|O (N)|O (N)|-|-|[En büyük](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) işleç kullanılarak karşılaştırılan koleksiyondaki en büyük öğeyi döndürür.|
-|maxBy|O (N)|O (N)|O (N)|-|-|İşlev sonucu üzerinde [Max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) kullanılarak karşılaştırıldığında koleksiyondaki en büyük öğeyi döndürür.|
+|max|O (N)|O (N)|O (N)|-|-|[En büyük](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) işleç kullanılarak karşılaştırılan koleksiyondaki en büyük öğeyi döndürür.|
+|maxBy|O (N)|O (N)|O (N)|-|-|İşlev sonucu üzerinde [Max](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#max) kullanılarak karşılaştırıldığında koleksiyondaki en büyük öğeyi döndürür.|
 |maxElement|-|-|-|-|O (günlük (N))|Küme için kullanılan sıralamaya göre küme içindeki en büyük öğeyi döndürür.|
-|min|O (N)|O (N)|O (N)|-|-|[Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci kullanılarak karşılaştırılan koleksiyonda en az öğeyi döndürür.|
-|minBy|O (N)|O (N)|O (N)|-|-|İşlev sonucunda [Min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed) işleci kullanılarak karşılaştırılan koleksiyondaki en az öğeyi döndürür.|
+|dk|O (N)|O (N)|O (N)|-|-|[Min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) işleci kullanılarak karşılaştırılan koleksiyonda en az öğeyi döndürür.|
+|minBy|O (N)|O (N)|O (N)|-|-|İşlev sonucunda [Min](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#min) işleci kullanılarak karşılaştırılan koleksiyondaki en az öğeyi döndürür.|
 |minElement|-|-|-|-|O (günlük (N))|Küme için kullanılan sıralamaya göre küme içindeki en düşük öğeyi döndürür.|
 |ofArray|-|O (N)|O (1)|O (N)|O (N)|Verilen dizi ile aynı öğeleri içeren bir koleksiyon oluşturur.|
 |ofList|O (N)|-|O (1)|O (N)|O (N)|Verilen liste ile aynı öğeleri içeren bir koleksiyon oluşturur.|
@@ -115,10 +115,10 @@ Bu bölüm, F # koleksiyon türlerinde kullanılabilir olan işlevleri karşıla
 |set|O (1)|-|-|-|-|Bir dizinin bir öğesini belirtilen değere ayarlar.|
 |Atla|-|-|O (N)|-|-|Temel alınan sıranın N öğelerini atlayan bir sıra döndürür ve sonra sıranın kalan öğelerini verir.|
 |skipWhile|-|-|O (N)|-|-|Yinelendiğinde, belirtilen koşulun döndürdüğü sırada temeldeki sıranın öğelerini atlayan `true` ve sonra dizinin kalan öğelerini verdiği bir diziyi döndürür.|
-|sort|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N \* günlük (n))|O (N \* günlük (n))|-|-|Koleksiyonu öğe değerine göre sıralar. Öğeler [karşılaştırma](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
-|sortBy|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N \* günlük (n))|O (N \* günlük (n))|-|-|Verilen projeksiyonun sağladığı anahtarları kullanarak verilen listeyi sıralar. Anahtarlar [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
-|sortInPlace|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve verilen karşılaştırma işlevini kullanarak sıralar. Öğeler [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
-|sortInPlaceBy|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve anahtarlar için verilen projeksiyonları kullanarak sıralar. Öğeler [Compare](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)kullanılarak karşılaştırılır.|
+|sort|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N \* günlük (n))|O (N \* günlük (n))|-|-|Koleksiyonu öğe değerine göre sıralar. Öğeler [karşılaştırma](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)kullanılarak karşılaştırılır.|
+|sortBy|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N \* günlük (n))|O (N \* günlük (n))|-|-|Verilen projeksiyonun sağladığı anahtarları kullanarak verilen listeyi sıralar. Anahtarlar [Compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)kullanılarak karşılaştırılır.|
+|sortInPlace|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve verilen karşılaştırma işlevini kullanarak sıralar. Öğeler [Compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)kullanılarak karşılaştırılır.|
+|sortInPlaceBy|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve anahtarlar için verilen projeksiyonları kullanarak sıralar. Öğeler [Compare](https://fsharp.github.io/fsharp-core-docs/reference/fsharp-core-operators.html#compare)kullanılarak karşılaştırılır.|
 |sortInPlaceWith|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|-|-|-|-|Bir dizinin öğelerini yerinde değiştirerek ve sıralama olarak verilen karşılaştırma işlevini kullanarak sıralar.|
 |sortWith|O (N \* günlük (n)) Ortalama<br /><br />O (N ^ 2) en kötü durum|O (N \* günlük (n))|-|-|-|Sıralama olarak verilen karşılaştırma işlevini kullanarak bir koleksiyonun öğelerini sıralar ve yeni bir koleksiyon döndürür.|
 |alt|O (N)|-|-|-|-|Dizin ve uzunluk başlangıcı tarafından belirtilen verilen alt aralığı içeren bir dizi oluşturur.|

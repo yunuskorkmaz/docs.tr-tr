@@ -696,11 +696,24 @@ items:
   - name: Microsoft Uzantıları
     items:
       - name: Yapılandırma
-        href: /aspnet/core/fundamentals/configuration/
+        items:
+          - name: Genel Bakış
+            href: ../core/extensions/configuration.md
+            displayName: 'configuration,config,configuration sources,config sources'
+          - name: Yapılandırma sağlayıcıları
+            href: ../core/extensions/configuration-providers.md
+            displayName: 'configuration providers,config providers'
+          - name: Özel yapılandırma sağlayıcısı uygulama
+            href: ../core/extensions/custom-configuration-provider.md
+            displayName: 'custom configuration,custom config,custom configuration provider,custom config provider'
       - name: Bağımlılık ekleme
-        href: /aspnet/core/fundamentals/dependency-injection/
-      - name: Günlüğe kaydetme
-        href: /aspnet/core/fundamentals/logging/
+        href: /aspnet/core/fundamentals/dependency-injection
+      - name: Genel konak
+        href: /aspnet/core/fundamentals/host/generic-host
+      - name: Günlüğe Kaydetme
+        href: /aspnet/core/fundamentals/logging
+      - name: Seçenekler deseni
+        href: /aspnet/core/fundamentals/configuration/options
   - name: Veri erişimi
     items:
       - name: LINQ

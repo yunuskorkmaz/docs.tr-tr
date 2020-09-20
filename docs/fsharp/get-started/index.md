@@ -1,33 +1,33 @@
 ---
-title: Kullanmaya başlayınF#
-description: F# Programlama diliyle çalışmaya başlama hakkında bilgi edinin.
-ms.date: 12/08/2018
-ms.openlocfilehash: 2b4baa5c948800389c171a5d9f9cd157a903063e
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+title: 'F ile çalışmaya başlama #'
+description: 'F # programlama diliyle çalışmaya başlama hakkında bilgi edinin.'
+ms.date: 09/12/2020
+ms.openlocfilehash: aeaa655e2af52a134dc70298375903c24d251079
+ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204897"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738794"
 ---
-# <a name="get-started-with-f"></a>F\# kullanmaya başlama
+# <a name="get-started-with-f"></a>F ile çalışmaya başlama\#
 
-Makinenize veya çevrimiçi çalışmaya F# başlamanızı sağlayabilirsiniz.
+Makinenizde veya çevrimiçi olarak F # kullanmaya başlamanızı sağlayabilirsiniz.
 
 ## <a name="get-started-on-your-machine"></a>Makinenizde çalışmaya başlama
 
-Makinenizde ilk kez yüklenip kullanılması F# için birden çok kılavuz vardır.  Bir karar verme konusunda yardımcı olması için aşağıdaki tabloyu kullanabilirsiniz:
+Makinenizde ilk kez F # yüklemek ve kullanmak için birden çok kılavuz vardır.  Bir karar verme konusunda yardımcı olması için aşağıdaki tabloyu kullanabilirsiniz:
 
 | İşletim Sistemi | Visual Studio 'Yu tercih et | Visual Studio Code tercih et | Komut satırını tercih et |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Visual Studio 'Yu kullanmaya başlayın](get-started-visual-studio.md) | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
-| Mac OS | [Mac için VS 'yi kullanmaya başlama](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
+| Windows | [Visual Studio ile çalışmaya başlama](get-started-visual-studio.md) | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
+| macOS | [Mac için VS 'yi kullanmaya başlama](get-started-with-visual-studio-for-mac.md) | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
 | Linux | Yok | [Visual Studio Code kullanmaya başlayın](get-started-vscode.md) | [.NET Core CLI kullanmaya başlayın](get-started-command-line.md) |
 
-Genel olarak, geri kalanından daha iyi bir özel yoktur. En iyi şekilde neleri görmek için makinenizde F# kullanmak üzere tüm yolları denemeyi öneririz!
+Genel olarak, geri kalanından daha iyi bir özel yoktur. En iyi şekilde neleri görmek için makinenizde F # kullanmanın tüm yollarını denemeyi öneririz!
 
 ## <a name="get-started-online"></a>Çevrimiçi çalışmaya başlayın
 
-Makinenize yüklemeden ve .NET ' i F# yüklemeden sonra tarayıcıda da kullanmaya F# başlayın:
+Makinenizde F # ve .NET yüklememeyi yoksa, tarayıcıda F # ile çalışmaya de ulaşabilirsiniz:
 
-* [Cilde F# giriş](https://mybinder.org/v2/gh/dotnet/try/master?urlpath=lab) , ücretsiz [Ciltçi](https://mybinder.org/) hizmeti aracılığıyla barındırılan bir [Jupyter Not Defterinizdir](https://jupyter.org/) . Kaydolma gerekmez!
-* [FABLE REPL](https://fable.io/repl/) , kodu JavaScript 'e çevirmek F# için [Fable](https://fable.io/) kullanan etkileşimli, tarayıcı içi bir REPL ' dır. Tüm tarayıcılarda yürütülen ve tamamen güvenilir video oyunlarından F# oluşan çok sayıda örnek için göz atın!
+* [Ciltçide F #](https://mybinder.org/v2/gh/dotnet/interactive/main?urlpath=lab) ' a giriş, serbest [Ciltçi](https://mybinder.org/) hizmeti aracılığıyla barındırılan bir [Jupyter Not Defterinizdir](https://jupyter.org/) . Kaydolma gerekmez!
+* [FABLE REPL](https://fable.io/repl/) , F # kodunu JavaScript 'e çevirmek Için [Fable](https://fable.io/) kullanan etkileşimli, tarayıcı içi bir REPL ' dır. F # esaslarından oluşan çok sayıda örneği, tarayıcınızda yürütülen tamamen güçlü bir video oyunsuna göz atın!

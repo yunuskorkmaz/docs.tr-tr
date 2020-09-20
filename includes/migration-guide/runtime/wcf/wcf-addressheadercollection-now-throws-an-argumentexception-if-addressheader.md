@@ -1,28 +1,35 @@
 ---
-ms.openlocfilehash: 200c22a1b83149d833a083365ebb65d0e80bc31a
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: e8b98e465228afd07432e737bb16aefb1b979973
+ms.sourcegitcommit: 261e0c98a111357692b3b63c596edf0cacf72991
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89497031"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90770890"
 ---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>Bir addressHeader öğesi null ise, WCF AddressHeaderCollection şimdi bir ArgumentException oluşturur
 
 #### <a name="details"></a>Ayrıntılar
 
-.NET Framework 4.7.1 ' den başlayarak, <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Oluşturucu <xref:System.ArgumentException> öğelerinden biri ise bir tane oluşturur <code>null</code> . .NET Framework 4,7 ve önceki sürümlerde, hiçbir özel durum oluşturulmaz.
+.NET Framework 4.7.1 ' den başlayarak, <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Oluşturucu <xref:System.ArgumentException> öğelerinden biri ise bir tane oluşturur `null` . .NET Framework 4,7 ve önceki sürümlerde, hiçbir özel durum oluşturulmaz.
 
 #### <a name="suggestion"></a>Öneri
 
-Bu değişiklik ile .NET Framework 4.7.1 veya sonraki bir sürümde uyumluluk sorunlarıyla karşılaşırsanız, app.config dosyasının bölümüne aşağıdaki satırı ekleyerek devre dışı bırakabilirsiniz <code>&lt;runtime&gt;</code> ::<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.ServiceModel.DisableAddressHeaderCollectionValidation=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>
+Bu değişiklik ile .NET Framework 4.7.1 veya sonraki bir sürümde uyumluluk sorunlarıyla karşılaşırsanız, app.config dosyasının bölümüne aşağıdaki satırı ekleyerek devre dışı bırakabilirsiniz `<runtime>` :
 
-| Name    | Değer       |
-|:--------|:------------|
-| Kapsam   |İkincil|
-|Sürüm|4.7.1|
-|Tür|Çalışma Zamanı|
+```xml
+<configuration>
+  <runtime>
+    <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableAddressHeaderCollectionValidation=true" />
+  </runtime>
+</configuration>
 
-#### <a name="affected-apis"></a>Etkilenen API’ler
+| Name    | Value   |
+|:--------|:--------|
+| Scope   | Minor   |
+| Version | 4.7.1   |
+| Type    | Runtime |
+
+#### Affected APIs
 
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>
 

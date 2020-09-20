@@ -4,12 +4,12 @@ description: 'F # kodunu konsolda etkileşimli olarak çalıştırmak veya F # b
 ms.date: 08/20/2020
 f1_keywords:
 - VS.ToolsOptionsPages.F#_Tools.F#_Interactive
-ms.openlocfilehash: 760b096c8a3ee0d495b893ab66fa6f9007cdbbf9
-ms.sourcegitcommit: b9122d1af21898eaba81e990c70fef46fef74a8d
+ms.openlocfilehash: ae8d68140ddec8e18ee23e9a43b548907e1ab5c4
+ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88867626"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90720328"
 ---
 # <a name="interactive-programming-with-f"></a>F ile etkileşimli programlama\#
 
@@ -43,7 +43,7 @@ Etkileşimli olarak çalıştırdığınız veya bir betiği çalıştıran F# E
 
 Derleyici yürütürken kullanılamayan F# Etkileşimli betikler çalıştırırken bazı yönergeler kullanılabilir... Aşağıdaki tabloda F# Etkileşimli kullanırken kullanılabilir olan yönergeler özetlenmektedir.
 
-|Deki|Açıklama|
+|Deki|Description|
 |---------|-----------|
 |**#help**|Kullanılabilir yönergeler hakkındaki bilgileri görüntüler.|
 |**#I**|Bir derleme arama yolunu tırnak işaretleri halinde belirtir.|
@@ -120,4 +120,3 @@ daha açık bir biçimde:
 |Başlık|Açıklama|
 |-----|-----------|
 |[F# Etkileşimli Seçenekleri](../../language-reference/fsharp-interactive-options.md)|F# Etkileşimli fsi.exe için komut satırı sözdizimini ve seçeneklerini açıklar.|
-|[F# Etkileşimli kitaplığı başvurusu](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|F # Interactive 'de kod yürütürken kullanılabilen kitaplık işlevlerini açıklar.|

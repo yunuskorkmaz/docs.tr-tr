@@ -383,8 +383,6 @@ items:
         href: interop/
       - name: Yönetilmeyen API başvurusu
         href: unmanaged-api/
-      - name: XAML Hizmetleri
-        href: ../desktop-wpf/xaml-services/
   - name: Araçlar
     items:
       - name: Genel Bakış
