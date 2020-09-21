@@ -1,7 +1,7 @@
 ---
 description: foreach, in (C# Başvurusu)
 title: C# foreach ifadesi
-ms.date: 07/22/2020
+ms.date: 09/18/2020
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 2ed89fa52b2d3d369d668bf79ab32eaf7be18a8a
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: ea8a6f86595348a32b707caf9782f84147fefc87
+ms.sourcegitcommit: 43ed174f085840ca18a791dc89fe833174da766d
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89142082"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90828896"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (C# Başvurusu)
 
@@ -25,8 +25,8 @@ ms.locfileid: "89142082"
 
 `foreach`İfade bu türlerle sınırlı değildir. Bunu, aşağıdaki koşullara uyan herhangi bir türde bir örnekle kullanabilirsiniz:
 
-- bir tür `GetEnumerator` , dönüş türü Class, struct veya Interface türünde olan public parametresiz metoda sahiptir,
-- metodun dönüş türü, `GetEnumerator` ortak `Current` özelliğine ve dönüş türü olan public parametresiz metoda sahiptir `MoveNext` <xref:System.Boolean> .
+- Bir tür, `GetEnumerator` dönüş türü Class, struct veya Interface türünde olan public parametresiz metoda sahiptir. C# 9,0 ' den başlayarak `GetEnumerator` Yöntem bir türün [genişletme yöntemi](../../programming-guide/classes-and-structs/extension-methods.md)olabilir.
+- Metodun dönüş türü, `GetEnumerator` ortak `Current` özelliğine ve dönüş türü olan public parametresiz metoda sahiptir `MoveNext` <xref:System.Boolean> .
 
 Aşağıdaki örnek, `foreach` <xref:System.Span%601?displayProperty=nameWithType> hiçbir arabirim uygulamayan tür örneği ile ifadesini kullanır:
 
@@ -66,6 +66,11 @@ foreach (V item in collection) { }
 ## <a name="c-language-specification"></a>C# dili belirtimi
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [foreach ifadesi](~/_csharplang/spec/statements.md#the-foreach-statement) bölümüne bakın.
+
+C# 8,0 ve üzeri sürümlerde eklenen özellikler hakkında daha fazla bilgi için aşağıdaki özellik teklifi notlarına bakın:
+
+- [Zaman uyumsuz akışlar (C# 8,0)](~/_csharplang/proposals/csharp-8.0/async-streams.md)
+- [`GetEnumerator`Döngüler için uzantı desteği `foreach` (C# 9,0)](~/_csharplang/proposals/csharp-9.0/extension-getenumerator.md)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
