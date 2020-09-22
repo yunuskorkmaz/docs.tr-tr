@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c05a7d9b021192d53a30e49f52abc08d9b153156
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409536"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874248"
 ---
-# <a name="expression-recursively-calls-the-containing-property-propertyname"></a><span data-ttu-id="0de2f-102">İfade, içeren '\<propertyname>' özelliğini tekrar tekrar çağırır</span><span class="sxs-lookup"><span data-stu-id="0de2f-102">Expression recursively calls the containing property '\<propertyname>'</span></span>
-<span data-ttu-id="0de2f-103">`Set`Özellik tanımı yordamındaki bir ifade, özelliğin adına bir değer depolar.</span><span class="sxs-lookup"><span data-stu-id="0de2f-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  
+# <a name="expression-recursively-calls-the-containing-property-propertyname"></a><span data-ttu-id="b1899-102">İfade, içeren '\<propertyname>' özelliğini tekrar tekrar çağırır</span><span class="sxs-lookup"><span data-stu-id="b1899-102">Expression recursively calls the containing property '\<propertyname>'</span></span>
+
+<span data-ttu-id="b1899-103">`Set`Özellik tanımı yordamındaki bir ifade, özelliğin adına bir değer depolar.</span><span class="sxs-lookup"><span data-stu-id="b1899-103">A statement in the `Set` procedure of a property definition stores a value into the name of the property.</span></span>  
   
- <span data-ttu-id="0de2f-104">Bir özelliğin değerini tutmak için önerilen yaklaşım, `Private` özelliğin kapsayıcısında bir değişken tanımlamak ve hem hem de `Get` `Set` yordamlarında kullanmaktır.</span><span class="sxs-lookup"><span data-stu-id="0de2f-104">The recommended approach to holding the value of a property is to define a `Private` variable in the property's container and use it in both the `Get` and `Set` procedures.</span></span> <span data-ttu-id="0de2f-105">`Set`Yordamın bu değişkende gelen değeri depolaması gerekir `Private` .</span><span class="sxs-lookup"><span data-stu-id="0de2f-105">The `Set` procedure should then store the incoming value in this `Private` variable.</span></span>  
+ <span data-ttu-id="b1899-104">Bir özelliğin değerini tutmak için önerilen yaklaşım, `Private` özelliğin kapsayıcısında bir değişken tanımlamak ve hem hem de `Get` `Set` yordamlarında kullanmaktır.</span><span class="sxs-lookup"><span data-stu-id="b1899-104">The recommended approach to holding the value of a property is to define a `Private` variable in the property's container and use it in both the `Get` and `Set` procedures.</span></span> <span data-ttu-id="b1899-105">`Set`Yordamın bu değişkende gelen değeri depolaması gerekir `Private` .</span><span class="sxs-lookup"><span data-stu-id="b1899-105">The `Set` procedure should then store the incoming value in this `Private` variable.</span></span>  
   
- <span data-ttu-id="0de2f-106">`Get`Yordam, bir yordam gibi davranır `Function` , bu nedenle özellik adına bir değer atayabilir ve deyimden yararlanarak denetim getirebilirsiniz `End Get` .</span><span class="sxs-lookup"><span data-stu-id="0de2f-106">The `Get` procedure behaves like a `Function` procedure, so it can assign a value to the property name and return control by encountering the `End Get` statement.</span></span> <span data-ttu-id="0de2f-107">Ancak önerilen yaklaşım, `Private` değişkeni bir [Return ifadesine](../statements/return-statement.md)değer olarak dahil etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="0de2f-107">The recommended approach, however, is to include the `Private` variable as the value in a [Return Statement](../statements/return-statement.md).</span></span>  
+ <span data-ttu-id="b1899-106">`Get`Yordam, bir yordam gibi davranır `Function` , bu nedenle özellik adına bir değer atayabilir ve deyimden yararlanarak denetim getirebilirsiniz `End Get` .</span><span class="sxs-lookup"><span data-stu-id="b1899-106">The `Get` procedure behaves like a `Function` procedure, so it can assign a value to the property name and return control by encountering the `End Get` statement.</span></span> <span data-ttu-id="b1899-107">Ancak önerilen yaklaşım, `Private` değişkeni bir [Return ifadesine](../statements/return-statement.md)değer olarak dahil etmek için kullanılır.</span><span class="sxs-lookup"><span data-stu-id="b1899-107">The recommended approach, however, is to include the `Private` variable as the value in a [Return Statement](../statements/return-statement.md).</span></span>  
   
- <span data-ttu-id="0de2f-108">`Set`Yordam `Sub` , bir değer döndürmeyen bir yordam gibi davranır.</span><span class="sxs-lookup"><span data-stu-id="0de2f-108">The `Set` procedure behaves like a `Sub` procedure, which does not return a value.</span></span> <span data-ttu-id="0de2f-109">Bu nedenle, yordam veya özellik adının bir yordam içinde özel bir anlamı yoktur `Set` ve buna bir değer depolayamezsiniz.</span><span class="sxs-lookup"><span data-stu-id="0de2f-109">Therefore, the procedure or property name has no special meaning within a `Set` procedure, and you cannot store a value into it.</span></span>  
+ <span data-ttu-id="b1899-108">`Set`Yordam `Sub` , bir değer döndürmeyen bir yordam gibi davranır.</span><span class="sxs-lookup"><span data-stu-id="b1899-108">The `Set` procedure behaves like a `Sub` procedure, which does not return a value.</span></span> <span data-ttu-id="b1899-109">Bu nedenle, yordam veya özellik adının bir yordam içinde özel bir anlamı yoktur `Set` ve buna bir değer depolayamezsiniz.</span><span class="sxs-lookup"><span data-stu-id="b1899-109">Therefore, the procedure or property name has no special meaning within a `Set` procedure, and you cannot store a value into it.</span></span>  
   
- <span data-ttu-id="0de2f-110">Aşağıdaki örnekte, bu hataya neden olabilecek yaklaşım ve önerilen yaklaşım gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="0de2f-110">The following example illustrates the approach that can cause this error, followed by the recommended approach.</span></span>  
+ <span data-ttu-id="b1899-110">Aşağıdaki örnekte, bu hataya neden olabilecek yaklaşım ve önerilen yaklaşım gösterilmektedir.</span><span class="sxs-lookup"><span data-stu-id="b1899-110">The following example illustrates the approach that can cause this error, followed by the recommended approach.</span></span>  
   
 ```vb  
 Public Class illustrateProperties  
@@ -55,16 +56,16 @@ Public Class illustrateProperties
 End Class  
 ```  
   
- <span data-ttu-id="0de2f-111">Bu ileti, varsayılan olarak bir uyarıdır.</span><span class="sxs-lookup"><span data-stu-id="0de2f-111">By default, this message is a warning.</span></span> <span data-ttu-id="0de2f-112">Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için lütfen bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="0de2f-112">For more information about hiding warnings or treating warnings as errors, please see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="b1899-111">Bu ileti, varsayılan olarak bir uyarıdır.</span><span class="sxs-lookup"><span data-stu-id="b1899-111">By default, this message is a warning.</span></span> <span data-ttu-id="b1899-112">Uyarıları gizleme veya uyarıları hata olarak değerlendirme hakkında daha fazla bilgi için lütfen bkz. [Visual Basic uyarıları yapılandırma](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="b1899-112">For more information about hiding warnings or treating warnings as errors, please see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="0de2f-113">**Hata kimliği:** BC42026</span><span class="sxs-lookup"><span data-stu-id="0de2f-113">**Error ID:** BC42026</span></span>  
+ <span data-ttu-id="b1899-113">**Hata kimliği:** BC42026</span><span class="sxs-lookup"><span data-stu-id="b1899-113">**Error ID:** BC42026</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0de2f-114">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="0de2f-114">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b1899-114">Bu hatayı düzeltmek için</span><span class="sxs-lookup"><span data-stu-id="b1899-114">To correct this error</span></span>  
   
-- <span data-ttu-id="0de2f-115">Önceki örnekte gösterildiği gibi önerilen yaklaşımı kullanmak için özellik tanımını yeniden yazın.</span><span class="sxs-lookup"><span data-stu-id="0de2f-115">Rewrite the property definition to use the recommended approach as illustrated in the preceding example.</span></span>  
+- <span data-ttu-id="b1899-115">Önceki örnekte gösterildiği gibi önerilen yaklaşımı kullanmak için özellik tanımını yeniden yazın.</span><span class="sxs-lookup"><span data-stu-id="b1899-115">Rewrite the property definition to use the recommended approach as illustrated in the preceding example.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0de2f-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="0de2f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b1899-116">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="b1899-116">See also</span></span>
 
-- [<span data-ttu-id="0de2f-117">Özellik Yordamları</span><span class="sxs-lookup"><span data-stu-id="0de2f-117">Property Procedures</span></span>](../../programming-guide/language-features/procedures/property-procedures.md)
-- [<span data-ttu-id="0de2f-118">Property Deyimi</span><span class="sxs-lookup"><span data-stu-id="0de2f-118">Property Statement</span></span>](../statements/property-statement.md)
-- [<span data-ttu-id="0de2f-119">Set deyimleri</span><span class="sxs-lookup"><span data-stu-id="0de2f-119">Set Statement</span></span>](../statements/set-statement.md)
+- [<span data-ttu-id="b1899-117">Özellik Yordamları</span><span class="sxs-lookup"><span data-stu-id="b1899-117">Property Procedures</span></span>](../../programming-guide/language-features/procedures/property-procedures.md)
+- [<span data-ttu-id="b1899-118">Property Deyimi</span><span class="sxs-lookup"><span data-stu-id="b1899-118">Property Statement</span></span>](../statements/property-statement.md)
+- [<span data-ttu-id="b1899-119">Set deyimleri</span><span class="sxs-lookup"><span data-stu-id="b1899-119">Set Statement</span></span>](../statements/set-statement.md)
