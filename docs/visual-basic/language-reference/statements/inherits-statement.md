@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 5d88a01f90bc91a88229d19aa2368f8c71075b2f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: dd8fbc71fdc859bb127764951464278267c0984c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404505"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875224"
 ---
 # <a name="inherits-statement"></a>Inherits Deyimi
+
 Geçerli sınıfın ya da arabirimin öznitelikleri, değişkenleri, özellikleri, yordamları ve olayları başka bir sınıf veya arabirim kümesinden devralmasını sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -31,6 +32,7 @@ Inherits basetypenames
 |`basetypenames`|Gereklidir. Bu sınıfın türetildiği sınıfın adı.<br /><br /> -veya-<br /><br /> Bu arabirimin türettiği arabirimlerin adları. Birden çok adı ayırmak için virgül kullanın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Kullanıldıysa, `Inherits` bir sınıf veya arabirim tanımında deyimin ilk boş olmayan, yorum olmayan satırı olması gerekir. Hemen `Class` veya `Interface` ifadesini izlemelidir.  
   
  `Inherits`Yalnızca bir sınıf veya arabirim için kullanabilirsiniz. Bu, devralma için bildirim bağlamının kaynak dosya, ad alanı, yapı, modül, yordam veya blok olamayacağı anlamına gelir.  
@@ -52,11 +54,13 @@ Inherits basetypenames
  .NET Framework arabirim devralım örneği <xref:System.Collections.ICollection> arabiriminden devralan arabirimdir <xref:System.Collections.IEnumerable> . Bu, <xref:System.Collections.ICollection> bir koleksiyonun çapraz geçişini yapmak için gereken Numaralandırıcı tanımını devralmasını sağlar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, adlı `Inherits` bir sınıfın `thisClass` adlı bir temel sınıfın tüm üyelerini nasıl devralmasını göstermek için ifadesini kullanır `anotherClass` .  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, birden çok arabirimin devralınmasını gösterir.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  

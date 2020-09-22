@@ -2,17 +2,19 @@
 title: Değiştiriciler
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 80adc4521dcb1bb0c65981dae6f842168194eae7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6ee477e8d09ea7c8ea559ff8245784b2d0123141
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372900"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875452"
 ---
 # <a name="modifiers-visual-basic"></a>Değiştiriciler (Visual Basic)
+
 Bu bölüm belgesindeki konular çalışma zamanı değiştiricilerini Visual Basic.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Ansi](ansi.md)  
   
  [Bütünleştirilmiş Kod](assembly.md)  
@@ -27,15 +29,15 @@ Bu bölüm belgesindeki konular çalışma zamanı değiştiricilerini Visual Ba
   
  [Varsayılanını](default.md)  
   
- [Dost](friend.md)  
+ [Arkadaş](friend.md)  
   
  [İçinde](in-generic-modifier.md)  
   
  [Iterator](iterator.md)  
   
- [Anahtar](key.md)  
+ [Key](key.md)  
   
- [Birimi\<keyword>](module-keyword.md)  
+ [Birimi \<keyword>](module-keyword.md)  
   
  [MustInherit](mustinherit.md)  
   
@@ -47,7 +49,7 @@ Bu bölüm belgesindeki konular çalışma zamanı değiştiricilerini Visual Ba
   
  [NotOverridable](notoverridable.md)  
   
- [İsteğe Bağlı](optional.md)  
+ [İsteğe bağlı](optional.md)  
   
  [Dışı](out-generic-modifier.md)  
   
@@ -77,9 +79,9 @@ Bu bölüm belgesindeki konular çalışma zamanı değiştiricilerini Visual Ba
   
  [Shared](shared.md)  
   
- [Se](static.md)  
+ [Static](static.md)  
   
- [Unicode](unicode.md)  
+ [Kodlamaları](unicode.md)  
   
  [Genişletme](widening.md)  
   
@@ -88,4 +90,5 @@ Bu bölüm belgesindeki konular çalışma zamanı değiştiricilerini Visual Ba
  [WriteOnly](writeonly.md)  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Visual Basic dil başvurusu](../index.md)  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 35ba1f19654d1d23ac1ec73564bc36b0af4f6777
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3f9f5ecb96686fe525e98cf64672d81a3145796
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404751"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873271"
 ---
 # <a name="error-statement"></a>Error Deyimi
+
 Bir hata oluşumunun benzetimini yapar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -27,10 +28,12 @@ Error errornumber
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `errornumber`  
  Gereklidir. Herhangi bir geçerli hata numarası olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Error`Bildirim, geriye dönük uyumluluk için desteklenir. Yeni kodda, özellikle nesne oluştururken, `Err` `Raise` çalışma zamanı hataları oluşturmak için nesnenin metodunu kullanın.  
   
  `errornumber`Tanımlanmışsa, `Error` `Err` nesne özellikleri aşağıdaki varsayılan değerlere atandıktan sonra ifade hata işleyicisini çağırır:  
@@ -50,6 +53,7 @@ Error errornumber
 > Bazı Visual Basic ana bilgisayar uygulamaları nesne oluşturamaz. Sınıf ve nesne oluşturup oluşturamayacağını öğrenmek için ana bilgisayar uygulamanızın belgelerine bakın.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, `Error` 11 hata numarasını oluşturmak için ifadesini kullanır.  
   
 ```vb  
@@ -58,9 +62,10 @@ Error 11   ' Simulate the "Division by zero" error.
 ```  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Ad alanı:** [Microsoft. VisualBasic](../runtime-library-members.md)  
   
- **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

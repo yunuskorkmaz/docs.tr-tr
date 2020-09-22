@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: a909b1d79b10f82ece03bab788ae889c64b27124
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d96423efbee075a7ad257df72471c71e38e09b63
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359700"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875743"
 ---
 # <a name="select-clause-visual-basic"></a>Select Tümcesi (Visual Basic)
+
 Bir sorgunun sonucunu tanımlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -25,6 +26,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `var1`  
  İsteğe bağlı. Sütun ifadesinin sonuçlarına başvurmak için kullanılabilecek bir diğer ad.  
   
@@ -32,6 +34,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  Gereklidir. Sorgu sonucuna döndürülecek alanın adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Select`Bir sorgudan döndürülecek sonuçları tanımlamak için yan tümcesini kullanabilirsiniz. Bu, bir sorgu tarafından oluşturulan yeni bir anonim türün üyelerini tanımlamanızı ya da bir sorgu tarafından döndürülen adlandırılmış türün üyelerini hedeflemenize olanak sağlar. `Select`Bir sorgu için yan tümce gerekli değildir. Hiçbir `Select` yan tümce belirtilmemişse, sorgu geçerli kapsam için tanımlanan Aralık değişkenlerinin tüm üyelerini temel alan bir tür döndürür. Daha fazla bilgi için bkz. [anonim türler](../../programming-guide/language-features/objects-and-classes/anonymous-types.md). Bir sorgu adlandırılmış bir tür oluşturduğunda, oluşturulduğu tür bir sonuç döndürür <xref:System.Collections.Generic.IEnumerable%601> `T` .  
   
  `Select`Yan tümce geçerli kapsamdaki değişkenlere başvurabilir. Bu, `From` yan tümcesinde (veya `From` yan tümcelerde) tanımlanan Aralık değişkenlerini içerir. Ayrıca,,, veya yan tümceleri tarafından oluşturulan yeni değişkenler `Aggregate` `Let` `Group By` `Group Join` veya `Select` sorgu ifadesinde Previous yan tümcesinin değişkenleri de içerir. `Select`Yan tümce statik değerler de içerebilir. Örneğin, aşağıdaki kod örneği, `Select` yan tümcesinin sorgu sonucunu dört üyeli yeni bir anonim tür olarak tanımladığı bir sorgu ifadesi gösterir: `ProductName` , `Price` , `Discount` ve `DiscountedPrice` . `ProductName`Ve `Price` üye değerleri, yan tümcesinde tanımlanan ürün aralığı değişkeninden alınır `From` . `DiscountedPrice`Üye değeri `Let` yan tümcesinde hesaplanır. `Discount`Üye statik bir değerdir.  
@@ -47,6 +50,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  [!code-vb[VbSimpleQuerySamples#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#29)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki sorgu ifadesi, `From` koleksiyon için bir Aralık değişkeni bildirmek üzere bir yan tümce kullanır `cust` `customers` . `Select`Yan tümce, müşteri adı ve kimlik değerini seçer ve `CompanyName` `CustomerID` Yeni Aralık değişkeninin ve sütunlarını doldurur. `For Each`İfade döndürülen her nesnenin üzerinde döngü alır ve her bir `CompanyName` `CustomerID` kayıt için ve sütunlarını görüntüler.  
   
  [!code-vb[VbSimpleQuerySamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#30)]  
@@ -57,5 +61,5 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
 - [Sorgular](index.md)
 - [From yan tümcesi](from-clause.md)
 - [WHERE yan tümcesi](where-clause.md)
-- [Order By Yan Tümcesi](order-by-clause.md)
+- [Order by yan tümcesi](order-by-clause.md)
 - [Anonim Türler](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 48261e27de302c1809c9725e6e2fc0705a803930
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c2dcb044d04099c51f57d82a8bc08f0932bf3542
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386782"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875420"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
+
 Bir veya daha fazla tanımlanmış üye değişkeninin, olayları tetiklebilecek bir sınıfın örneğine başvurmayacağını belirtir.
 
 ## <a name="remarks"></a>Açıklamalar
@@ -43,4 +44,4 @@ Dim WithEvents app As Application
 
 - [Handles](../statements/handles-clause.md)
 - [Anahtar sözcükler](../keywords/index.md)
-- [Olaylar](../../programming-guide/language-features/events/index.md)
+- [Ekinlikler](../../programming-guide/language-features/events/index.md)

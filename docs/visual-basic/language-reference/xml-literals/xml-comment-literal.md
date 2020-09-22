@@ -9,14 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 93c1346e54106b93f3932a494dea85d082ec994d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3272cc0f976d6e8819e51bb5d5fce73066007963
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400221"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875194"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML Açıklama Değişmez Değeri (Visual Basic)
+
 Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XComment> .  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,9 +35,11 @@ Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XComment> .
 |`-->`|Gereklidir. XML açıklamasının sonunu gösterir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bir <xref:System.Xml.Linq.XComment> nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  XML açıklama değişmez değerleri belge içeriği içermez; Bunlar belge hakkında bilgiler içerir. XML açıklama bölümü "-->" sırasıyla biter. Bu, aşağıdaki noktaları gösterir:  
   
 - Gömülü ifade sınırlayıcıları geçerli XML açıklama içeriği olduğundan, bir XML açıklama değişmez değerinde katıştırılmış ifade kullanamazsınız.  
@@ -51,6 +54,7 @@ Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XComment> .
  Visual Basic derleyici, XML açıklama değişmez değerini oluşturucuya bir çağrıya dönüştürür <xref:System.Xml.Linq.XComment.%23ctor%2A> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek "This bir açıklamadır" metnini içeren bir XML açıklaması oluşturur.  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  

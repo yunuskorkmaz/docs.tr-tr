@@ -7,14 +7,15 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-ms.openlocfilehash: ab7e3576d946928d51557e14567025da0838bf7c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a1e4df718eeac3f547fa29c148d5fc81880e3336
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402752"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875649"
 ---
 # <a name="conversion-summary-visual-basic"></a>Dönüştürme Özeti (Visual Basic)
+
 Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
 |Eylem|Dil öğesi|  

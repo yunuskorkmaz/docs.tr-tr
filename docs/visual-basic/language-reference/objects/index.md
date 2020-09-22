@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: 651c73e4-dca8-402b-9c6b-e3902b3a3f4b
-ms.openlocfilehash: e927f69b7606866a0a9e8eadd59270f51ffc5e2b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 86852b8335c05f496ea7325ae3defd35c7532b38
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414225"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875408"
 ---
 # <a name="objects-visual-basic"></a>Nesneler (Visual Basic)
+
 Bu konu, Visual Basic çalışma zamanı nesnelerini belgelemek ve üye yordamlarının, özelliklerinin ve olaylarının tablolarını içeren diğer konulara bağlantılar sağlar.  
   
 ## <a name="visual-basic-run-time-objects"></a>Çalışma zamanı nesneleri Visual Basic  
@@ -20,7 +21,7 @@ Bu konu, Visual Basic çalışma zamanı nesnelerini belgelemek ve üye yordamla
 |---|---|  
 |<xref:Microsoft.VisualBasic.Collection>|İlgili öğe grubunu tek bir nesne olarak görmek için kullanışlı bir yol sağlar.|  
 |<xref:Microsoft.VisualBasic.Information.Err%2A>|Çalışma zamanı hatalarıyla ilgili bilgileri içerir.|  
-|`My.Application`Nesnesi aşağıdaki sınıflardan oluşur:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>Windows Forms uygulamalarında kullanılabilir üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>Konsol uygulamalarında kullanılabilir üyeleri sağlar.|Yalnızca geçerli uygulama veya DLL ile ilişkili olan verileri sağlar. İle hiçbir sistem düzeyi bilgisi değiştirilemez `My.Application` .<br /><br /> Bazı üyeler yalnızca Windows Forms veya konsol uygulamaları için kullanılabilir.|  
+|`My.Application`Nesnesi aşağıdaki sınıflardan oluşur:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows Forms uygulamalarında kullanılabilir üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> Konsol uygulamalarında kullanılabilir üyeleri sağlar.|Yalnızca geçerli uygulama veya DLL ile ilişkili olan verileri sağlar. İle hiçbir sistem düzeyi bilgisi değiştirilemez `My.Application` .<br /><br /> Bazı üyeler yalnızca Windows Forms veya konsol uygulamaları için kullanılabilir.|  
 |`My.Application.Info` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Info%2A>)|Sürüm numarası, açıklama, yüklenen derlemeler vb. gibi bir uygulamayla ilgili bilgilerin alınması için özellikler sağlar.|  
 |`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|Uygulamanın günlük dinleyicilerine olay ve özel durum bilgilerini yazmak için bir özellik ve yöntemler sağlar.|  
 |`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|Ses, saat, klavye, dosya sistemi vb. gibi bilgisayar bileşenlerinin işlenmesine yönelik özellikler sağlar.|  

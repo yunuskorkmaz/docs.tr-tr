@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: 02d258084aaaa53dcc559cfaa0dec27556351037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3025adfe8c881a08df3b5f03253510c263c624d1
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404492"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873222"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface Deyimi (Visual Basic)
+
 Bir arabirimin adını bildirir ve arabirimin içerdiği üyelerin tanımlarını tanıtır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -57,6 +58,7 @@ End Interface
 |`End Interface`|Tanımı sonlandırır `Interface` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  *Arabirim* , Özellikler ve yordamlar gibi bir üye kümesini tanımlar, bu sınıfların ve yapıların uygulayabilirler. Arabirim, iç çalışmalarını değil yalnızca üyelerin imzalarını tanımlar.  
   
  Bir sınıf veya yapı, arabirim tarafından tanımlanan her üye için kod sağlayarak arabirimini uygular. Son olarak, uygulama bu sınıf veya yapıdan bir örnek oluşturduğunda, bir nesne var ve bellekte çalışır. Daha fazla bilgi için bkz. [nesneler ve sınıflar](../../programming-guide/language-features/objects-and-classes/index.md) ve [arabirimler](../../programming-guide/language-features/interfaces/index.md).  
@@ -106,6 +108,7 @@ End Interface
 - **Süre.** Bir arabirimin yaşam süresi yoktur ve üyeleri bunu yapmaz. Bir sınıf bir arabirim uygulamışsa ve bu sınıfın bir örneği olarak bir nesne oluşturulduğunda, nesnenin çalıştığı uygulama içinde yaşam süresi vardır. Daha fazla bilgi için bkz. [Class deyimindeki](class-statement.md)"Lifetime".  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Interface` `thisInterface` bir `Property` ifadesiyle ve ifadesiyle uygulanması gereken adlı bir arabirimi tanımlamak için ifadesini kullanır `Function` .  
   
  [!code-vb[VbVbalrStatements#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#40)]  

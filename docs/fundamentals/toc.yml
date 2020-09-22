@@ -55,8 +55,10 @@ items:
         href: ../standard/components.md
       - name: .NET sınıf kitaplıkları
         href: ../standard/class-libraries.md
-      - name: .NET Core’a genel bakış
+      - name: NET Core’a giriş
         href: ../core/introduction.md
+      - name: .NET Core’a genel bakış
+        href: ../core/about.md
       - name: .NET Standard’a genel bakış
         href: ../standard/net-standard.md
       - name: .NET sözlüğü
@@ -432,8 +434,12 @@ items:
         href: ../core/deploying/runtime-patch-selection.md
       - name: Tek dosya dağıtımı ve yürütülebilir dosya
         href: ../core/deploying/single-file.md
-      - name: Kendi içinde bulunan dağıtımları ve yürütülebilir dosyaları kırp
-        href: ../core/deploying/trim-self-contained.md
+      - name: Kendi içinde bulunan dağıtımları kırpma
+        items:
+          - name: Genel bakış ve nasıl yapılır
+            href: ../core/deploying/trim-self-contained.md
+          - name: Seçenekler
+            href: ../core/deploying/trimming-options.md
       - name: Çalışma zamanı paket deposu
         href: ../core/deploying/runtime-store.md
       - name: Çalışma Zamanı Tanımlayıcısı (RID) kataloğu

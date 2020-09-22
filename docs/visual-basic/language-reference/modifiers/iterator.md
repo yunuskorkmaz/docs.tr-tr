@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
-ms.openlocfilehash: bb19289c69f4c523363e88e91a58f37d232b07df
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b459a16317b8ba55886e52ecadb227ddf2fee83
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396239"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875435"
 ---
 # <a name="iterator-visual-basic"></a>Yineleyici (Visual Basic)
+
 Bir işlevin veya `Get` erişimcinin bir yineleyici olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  *Yineleyici* bir koleksiyon üzerinde özel bir yineleme gerçekleştirir. Bir yineleyici, koleksiyondaki her öğeyi tek seferde döndürmek için [yield](../statements/yield-statement.md) ifadesini kullanır. Bir `Yield` ifadeye ulaşıldığında, koddaki geçerli konum korunur. Yürütme, yineleyici işlevinin bir sonraki çağrılmasında bu konumdan başlar.  
   
  Yineleyici, bir işlev olarak veya bir `Get` özellik tanımının erişimcisi olarak uygulanabilir. `Iterator`Değiştirici, Yineleyici işlevinin veya `Get` erişimcinin bildiriminde görüntülenir.  
@@ -32,6 +34,7 @@ Bir işlevin veya `Get` erişimcinin bir yineleyici olduğunu belirtir.
  Yineleyici bir anonim işlev olabilir. Daha fazla bilgi için bkz. [yineleyiciler](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="usage"></a>Kullanım  
+
  `Iterator`Değiştirici şu bağlamlarda kullanılabilir:  
   
 - [Function Deyimi](../statements/function-statement.md)  
@@ -39,11 +42,13 @@ Bir işlevin veya `Get` erişimcinin bir yineleyici olduğunu belirtir.
 - [Property Deyimi](../statements/property-statement.md)  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte bir yineleyici işlevi gösterilmektedir. Yineleyici işlevinin, `Yield` için içindeki bir ifade vardır [... Sonraki](../statements/for-next-statement.md) döngü. İçindeki [her bir for](../statements/for-each-next-statement.md) Ifadesinin gövdesi için her yineleme, `Main` Yineleyici işlevine bir çağrı oluşturur `Power` . Yineleyici işlevine yapılan her çağrı, `Yield` döngüsünün bir sonraki yinelemesi sırasında ortaya çıkan deyimin bir sonraki yürütmeye ilerler `For…Next` .  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Get` Yineleyici olan bir erişimciyi gösterir. `Iterator`Değiştirici, özellik bildirimidir.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  

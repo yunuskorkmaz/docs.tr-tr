@@ -5,19 +5,20 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: f54ecf4f60a620818ea57093d8c2325cf2ed0d04
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60dadc2918d4926c2b8bf1004a09d9b3a1ec56ab
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373349"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875575"
 ---
 # <a name="my-reference-visual-basic"></a>Başvurum (Visual Basic)
+
 `My`Özelliği, yaygın olarak kullanılan yöntemlere, özelliklere ve olaylara sezgisel erişim vererek programlama işlemini daha hızlı ve kolay hale getirir. Bu tabloda, içindeki nesneler `My` ve her biriyle gerçekleştirilebilecek eylemler listelenmektedir.  
   
 |**Eylem**|**Nesne**|  
 |----------------|----------------|  
-|Uygulama bilgilerine ve hizmetlerine erişme.|`My.Application`Nesnesi aşağıdaki sınıflardan oluşur:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>Windows Forms uygulamalarında kullanılabilir üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>Konsol uygulamalarında kullanılabilir üyeleri sağlar.|  
+|Uygulama bilgilerine ve hizmetlerine erişme.|`My.Application`Nesnesi aşağıdaki sınıflardan oluşur:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> tüm projelerde kullanılabilen üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows Forms uygulamalarında kullanılabilir üyeleri sağlar.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> Konsol uygulamalarında kullanılabilir üyeleri sağlar.|  
 |Ana bilgisayara ve kaynaklarına, hizmetlerine ve verilerine erişme.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
 |Geçerli projedeki formlara erişme.|[My.Forms Nesnesi](../objects/my-forms-object.md)|  
 |Uygulama günlüğüne erişme.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  

@@ -10,22 +10,24 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 4ac8e5942cf6097642ec111992ebfcdb91e8d7c1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d37a93343822d069295477958780c2b9c72043fa
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392177"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875462"
 ---
 # <a name="friend-visual-basic"></a>Arkadaş (Visual Basic)
+
 Bir veya daha fazla tanımlanmış programlama öğesine, yalnızca bildirimini içeren derlemenin içinden erişilebilir olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Çoğu durumda, sınıflar ve yapılar gibi programlama öğelerinin, yalnızca bunları bildiren bileşen tarafından değil, tüm derleme tarafından kullanılmasını istersiniz. Ancak, bunların derleme dışındaki kod tarafından erişilebilmesini istemeyebilirsiniz (örneğin, uygulama özel ise). Bu şekilde bir öğeye erişimi sınırlandırmak istiyorsanız, değiştiricisini kullanarak bunu bildirebilirsiniz `Friend` .  
   
  Aynı derlemeye derlenen diğer sınıf, yapı ve modüllerindeki kod, `Friend` Bu derlemedeki tüm öğelere erişebilir.  
   
- `Friend`erişim genellikle bir uygulamanın programlama öğeleri için tercih edilen düzeydir ve `Friend` bir arabirimin, modülün, sınıfın veya yapının varsayılan erişim düzeyidir.  
+ `Friend` erişim genellikle bir uygulamanın programlama öğeleri için tercih edilen düzeydir ve `Friend` bir arabirimin, modülün, sınıfın veya yapının varsayılan erişim düzeyidir.  
   
  `Friend`Yalnızca modül, arabirim veya ad alanı düzeyinde kullanabilirsiniz. Bu nedenle, bir öğe için bildirim bağlamı `Friend` bir kaynak dosyası, bir ad alanı, arabirim, bir modül, sınıf veya yapı olmalıdır; bir yordam olamaz.  
 
@@ -38,11 +40,13 @@ Bir veya daha fazla tanımlanmış programlama öğesine, yalnızca bildirimini 
 > Başka bir derlemenin, olarak işaretlenen tüm türlere ve üyelere erişmesine izin veren bir Friend derlemesi olduğunu belirtebilirsiniz `Friend` . Daha fazla bilgi için bkz. [arkadaş derlemeler](../../../standard/assembly/friend.md).
 
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki sınıf, `Friend` aynı derleme içindeki diğer programlama öğelerinin belirli üyelere erişmesine izin vermek için değiştiricisini kullanır.  
   
  [!code-vb[VbVbalrAccessModifiers#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalraccessmodifiers/vb/class1.vb#1)]  
   
 ## <a name="usage"></a>Kullanım  
+
  `Friend`Değiştiricisini şu bağlamlarda kullanabilirsiniz:  
   
  [Class Deyimi](../statements/class-statement.md)  
