@@ -6,14 +6,15 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: c4429d58d2f089b86f5c32c1f3ce8353b02880c4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 84e5ac5276eeddf399003f72ef72e7117feb011b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373904"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90868931"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Dizinler ve Dosyalar Özeti (Visual Basic)
+
 Visual Basic dil anahtar sözcükleri ve çalışma zamanı kitaplığı üyeleri amaca ve kullanıma göre düzenlenir.  
   
  Özelliği kullanmak, `My` Bu üyelerin kullanılmasıyla dosya g/ç işlemlerinde daha fazla üretkenlik ve performans sağlar. Daha fazla bilgi için bkz. <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  

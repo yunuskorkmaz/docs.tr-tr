@@ -10,14 +10,15 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 10b07da22b8b43d6a966fa7c334ac6a0ef4b430d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 00f43bc9bae6d550ed175906777ac273fc8e9a23
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406383"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873344"
 ---
 # <a name="-operator-visual-basic"></a>>> Işleci (Visual Basic)
+
 Bit bir düzende aritmetik sağa kaydırma gerçekleştirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -27,6 +28,7 @@ result = pattern >> amount
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `result`  
  Gereklidir. Integral sayısal değeri. Bit deseninin kaydırinme sonucu. Veri türü, ile aynıdır `pattern` .  
   
@@ -37,13 +39,14 @@ result = pattern >> amount
  Gereklidir. Sayısal ifade. Bit deseninin kaydırılacak bit sayısı. Veri türü `Integer` veya olarak ayarlanmalıdır `Integer` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Aritmetik vardiyalar dairesel değildir, bu da sonucun bir sonunun dışına sürüklenen bitlerin diğer uçta yeniden tanıtılmadığını gösterir. Aritmetik sağa kaydırma ' de, en sağdaki bit konumlarından daha fazla kaydırılan bitler atılır ve en soldaki (oturum açma) biti, sol taraftaki bit konumlarına yayılır. Yani `pattern` negatif bir değer varsa, karıştırılmış konumlar bir olarak ayarlanır; Aksi takdirde sıfır olarak ayarlanır.  
   
  ,, Ve veri türlerinin `Byte` `UShort` imzasız olduğunu `UInteger` ve bu `ULong` nedenle, yaymaya yönelik bir işaret biti olmadığını unutmayın. `pattern`Herhangi bir işaretsiz türde ise, karıştırılmış konumlar her zaman sıfır olarak ayarlanır.  
   
  Sonucun tutabileceğinden daha fazla bite göre kaydırmasını engellemek için, ' ın ' ın `amount` veri türüne karşılık gelen bir boyut maskesiyle değerini Visual Basic `pattern` . Bu değerlerin ikili dosyası ve kaydırma miktarı için kullanılır. Boyut maskeleri aşağıdaki gibidir:  
   
-|Veri türü`pattern`|Boyut maskesi (ondalık)|Boyut maskesi (onaltılık)|  
+|Veri türü `pattern`|Boyut maskesi (ondalık)|Boyut maskesi (onaltılık)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&H00000007|  
 |`Short`, `UShort`|15|&H0000000F|  
@@ -55,24 +58,26 @@ result = pattern >> amount
  Aritmetik vardiyalar hiçbir şekilde taşma özel durumu oluşturmaz.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
+
  `>>`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `>>` tam sayı değerlerinde aritmetik sağa kaymalar gerçekleştirmek için işlecini kullanır. Sonuç, kaydırılan deyimden her zaman aynı veri türüne sahiptir.  
   
  [!code-vb[VbVbalrOperators#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#14)]  
   
  Önceki örneğin sonuçları aşağıdaki gibidir:  
   
-- `result1`2560 ' dir (0000 1010 0000 0000).  
+- `result1` 2560 ' dir (0000 1010 0000 0000).  
   
-- `result2`160 ' dir (0000 0000 1010 0000).  
+- `result2` 160 ' dir (0000 0000 1010 0000).  
   
-- `result3`2 ' dir (0000 0000 0000 0010).  
+- `result3` 2 ' dir (0000 0000 0000 0010).  
   
-- `result4`640 ' dir (0000 0010 1000 0000).  
+- `result4` 640 ' dir (0000 0010 1000 0000).  
   
-- `result5`0 ' dır (sağa kaydırılan 15 konum).  
+- `result5` 0 ' dır (sağa kaydırılan 15 konum).  
   
  İçin kaydırma miktarı `result4` 18 ve 15 olarak hesaplanır, bu da 2 ' ye eşittir.  
   
@@ -82,9 +87,9 @@ result = pattern >> amount
   
  Önceki örneğin sonuçları aşağıdaki gibidir:  
   
-- `negresult1`-512 (1111 1110 0000 0000).  
+- `negresult1` -512 (1111 1110 0000 0000).  
   
-- `negresult2`-1 ' dir (işaret biti yayılır).  
+- `negresult2` -1 ' dir (işaret biti yayılır).  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

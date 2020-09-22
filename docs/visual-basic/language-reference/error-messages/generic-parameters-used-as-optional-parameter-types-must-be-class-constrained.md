@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 273ea592e73be5d76a4ffef077e691014a108347
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e3f50d08fdf78b5ca9bf9e3399b00ed0328320f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402933"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874025"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>İsteğe bağlı parametre türleri olarak kullanılan genel parametreler üzerinde sınıf kısıtlaması olmalıdır
+
 Bir yordam, bir başvuru türü olarak kısıtlanmış olmayan bir tür parametresi kullanan isteğe bağlı bir parametreyle bildirilmiştir.  
   
  Her isteğe bağlı parametre için her zaman bir varsayılan değer sağlamanız gerekir. Parametresi bir başvuru türü ise, isteğe bağlı değer `Nothing` , herhangi bir başvuru türü için geçerli bir değer olan olmalıdır. Ancak, parametre bir değer türünde ise, bu tür Visual Basic tarafından önceden tanımlanan bir elemensel veri türü olmalıdır. Bunun nedeni, Kullanıcı tanımlı yapı gibi bir bileşik değer türünün geçerli bir varsayılan değer içermez.  
@@ -34,4 +35,4 @@ Bir yordam, bir başvuru türü olarak kısıtlanmış olmayan bir tür parametr
 - [Class Deyimi](../statements/class-statement.md)
 - [İsteğe Bağlı Parametreler](../../programming-guide/language-features/procedures/optional-parameters.md)
 - [Yapılar](../../programming-guide/language-features/data-types/structures.md)
-- [Nothing](../nothing.md)
+- [Yapma](../nothing.md)

@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: fd2e425f2dd3f4127cd777d4a1f7ab9809de9d45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 35733fe2e20d46207f6cfdaee32f6559fceed6eb
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409639"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874377"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>DLL yüklenirken hata (Visual Basic)
+
 Dinamik bağlantı kitaplığı (DLL), `Lib` bir deyimin yan tümcesinde belirtilen bir kitaplıktır `Declare` . Bu hatanın olası nedenleri şunlardır:  
   
 - Dosya DLL yürütülebilir dosyası değil.  

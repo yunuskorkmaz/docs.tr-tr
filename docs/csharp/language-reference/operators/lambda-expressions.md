@@ -1,7 +1,7 @@
 ---
 title: Lambda ifadeleri-C# başvurusu
 description: Lambda ifadeleri hakkında bilgi edinin. Gövdesi olarak bir ifadesi olan ifade lambdaları veya gövdesi olarak deyim bloğu olan deyim Lambdalar vardır.
-ms.date: 07/29/2019
+ms.date: 09/22/2020
 helpviewer_keywords:
 - lambda expressions [C#]
 - outer variables [C#]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 7f80c1a5d9136609935b25b5cce3792e80b9ac94
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: afabca0b4ba4d5f7c6f4a7ba8aa97301456b0941
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90536450"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871718"
 ---
 # <a name="lambda-expressions-c-reference"></a>Lambda ifadeleri (C# Başvurusu)
 
@@ -50,33 +50,17 @@ Sınıfında yöntemi çağırmak için yöntem tabanlı sözdizimi kullandığ�
   
 ## <a name="expression-lambdas"></a>İfade lambdaları
 
-İşlecinin sağ tarafında bir ifade olan bir lambda ifadesine bir `=>` *ifade lambda*adı verilir. İfade lambdaları ifade [ağaçlarının](../../programming-guide/concepts/expression-trees/index.md)yapımını yaygın olarak kullanır. Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
+İşlecinin sağ tarafında bir ifade olan bir lambda ifadesine bir `=>` *ifade lambda*adı verilir. Bir lambda ifadesi, ifadenin sonucunu verir ve aşağıdaki temel biçimi alır:
 
 ```csharp
 (input-parameters) => expression
 ```
 
-Parantezler yalnızca lambdanın bir çıktı parametresi varsa isteğe bağlıdır; aksi takdirde bunlar gereklidir.
-
-Boş ayraçlarla sıfır giriş parametrelerini belirtin:  
-
-[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
-
-İki veya daha fazla giriş parametresi, ayraç içinde virgülle ayrılır:
-
-[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
-
-Bazen derleyicinin giriş türlerini çıkarması olanaksızdır. Aşağıdaki örnekte gösterildiği gibi türleri açıkça belirtebilirsiniz:
-
-[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
-
-Giriş parametresi türleri tamamen açık veya tümü örtük olmalıdır; Aksi halde, bir [CS0748](../../misc/cs0748.md) derleyici hatası oluşur.
-
-Lambda ifadesinin gövdesi bir yöntem çağrısından oluşabilir. Ancak, SQL Server gibi .NET ortak dil çalışma zamanının bağlamı dışında değerlendirilen ifade ağaçları oluşturuyorsanız, Lambda ifadelerinde Yöntem çağrılarını kullanmamalısınız. Yöntemler .NET ortak dil çalışma zamanı bağlamının dışında anlamlı olmayacaktır.
+Lambda ifadesinin gövdesi bir yöntem çağrısından oluşabilir. Ancak, SQL Server gibi .NET ortak dil çalışma zamanının bağlamı dışında değerlendirilen [ifade ağaçları](../../programming-guide/concepts/expression-trees/index.md) oluşturuyorsanız, Lambda ifadelerinde Yöntem çağrılarını kullanmamalısınız. Yöntemler .NET ortak dil çalışma zamanı bağlamının dışında anlamlı olmayacaktır.
 
 ## <a name="statement-lambdas"></a>İfade lambdaları
 
-Ayraçlar arasındaki deyimler hariç statement lambda, expression lambda'ya benzer:
+Deyimler, deyimlerinin ayraç içine alınması dışında bir ifade lambda öğesine benzer:
 
 ```csharp  
 (input-parameters) => { <sequence-of-statements> }
@@ -84,10 +68,39 @@ Ayraçlar arasındaki deyimler hariç statement lambda, expression lambda'ya ben
 
 Bir lambda deyiminin gövdesi herhangi bir sayıda deyimden oluşabilir; ancak, uygulamada genellikle iki veya üçten fazla değildir.
 
-[!code-csharp-interactive[statement lambda](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
+:::code interactive="try-dotnet" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetStatementLambda":::
 
-Deyim lambdaları ifade ağaçları oluşturmak için kullanılamaz.
-  
+İfade ağaçları oluşturmak için deyim lambdaları kullanamazsınız.
+
+## <a name="input-parameters-of-a-lambda-expression"></a>Lambda ifadesinin giriş parametreleri
+
+Lambda ifadesinin giriş parametrelerini parantez içine alın. Boş ayraçlarla sıfır giriş parametrelerini belirtin:  
+
+[!code-csharp[zero parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ZeroParameters)]
+
+Lambda ifadesinde yalnızca bir giriş parametresi varsa, parantezler isteğe bağlıdır:
+
+[!code-csharp[one parameter](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#OneParameter)]
+
+İki veya daha fazla giriş parametresi virgülle ayrılır:
+
+[!code-csharp[two parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#TwoParameters)]
+
+Bazen derleyici giriş parametrelerinin türlerini çıkarsamaz. Aşağıdaki örnekte gösterildiği gibi türleri açıkça belirtebilirsiniz:
+
+[!code-csharp[explicitly typed parameters](snippets/lambda-expressions/ExpressionAndStatementLambdas.cs#ExplicitlyTypedParameters)]
+
+Giriş parametresi türleri tamamen açık veya tümü örtük olmalıdır; Aksi halde, bir [CS0748](../../misc/cs0748.md) derleyici hatası oluşur.
+
+C# 9,0 ' den başlayarak, ifadede kullanılmayan bir lambda ifadesinin iki veya daha fazla giriş parametresini belirtmek için [atarsa](../../discards.md) ' ı kullanabilirsiniz:
+
+:::code language="csharp" source="snippets/lambda-expressions/ExpressionAndStatementLambdas.cs" id="SnippetDiscards":::
+
+Lambda atma parametreleri, bir [olay işleyicisi sağlamak](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)için bir lambda ifadesi kullandığınızda yararlı olabilir.
+
+> [!NOTE]
+> Geriye dönük uyumluluk için, yalnızca tek bir giriş parametresi adlandırılmışsa, `_` bir lambda ifadesi içinde `_` Bu parametrenin adı olarak değerlendirilir.
+
 ## <a name="async-lambdas"></a>Zaman uyumsuz Lambdalar
 
 [Async](../keywords/async.md) ve [await](await.md) anahtar sözcüklerini kullanarak zaman uyumsuz işleme içeren lambda ifadeleri ve deyimlerini kolayca oluşturabilirsiniz. Örneğin, aşağıdaki Windows Forms örnek, zaman uyumsuz bir yöntemi çağıran ve bekleden bir olay işleyicisi içerir `ExampleMethodAsync` .
@@ -222,10 +235,8 @@ Lambda ifadelerindeki değişken kapsam için aşağıdaki kurallar geçerlidir:
 
 Daha fazla bilgi için [C# dil belirtiminin](~/_csharplang/spec/introduction.md) [anonim işlev ifadeleri](~/_csharplang/spec/expressions.md#anonymous-function-expressions) bölümüne bakın.
 
-## <a name="featured-book-chapter"></a>Öne çıkan kitap bölümü
+Lambda atma parametreleri hakkında daha fazla bilgi için bkz. [özellik teklifi Note](~/_csharplang/proposals/csharp-9.0/lambda-discard-parameters.md)
 
-C# 3,0 tanımlama kitabı, üçüncü sürüm 'de [Temsilciler, olaylar ve lambda ifadeleri](/previous-versions/visualstudio/visual-studio-2008/ff518994(v=orm.10)) [: c# 3,0 programcıları için 250 ' den fazla çözüm](/previous-versions/visualstudio/visual-studio-2008/ff518995(v=orm.10))  
-  
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [C# başvurusu](../index.md)

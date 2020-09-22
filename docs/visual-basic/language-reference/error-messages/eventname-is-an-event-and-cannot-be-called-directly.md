@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: 510fff5370e63a31ee271421c0ab6f154518899f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3366bc215a45cd7de9dc2de285758a78144df509
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409601"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874314"
 ---
 # <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<eventname>' bir olaydır ve doğrudan çağrılamaz
+
 ' <`eventname`> ' bir olaydır, bu nedenle doğrudan çağrılamaz. Bir `RaiseEvent` olayı yükseltmek için bir ifade kullanın.  
   
  Yordam çağrısı, yordam adı için bir olay belirtir. Olay işleyicisi bir yordamdır, ancak olayın kendisi, oluşturulması ve işlenmesi gereken bir sinyal aygıtıdır.  

@@ -4,12 +4,12 @@ description: .NET Core CLI komutlarını çalıştırırken .NET Core SDK sürü
 ms.topic: how-to
 ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: a9558090b1ef48f376334fbc826f6265a58908da
-ms.sourcegitcommit: 7476c20d2f911a834a00b8a7f5e8926bae6804d9
+ms.openlocfilehash: 7e372c75812e79f85bb8965895d5fef694d9af1a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88062801"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872390"
 ---
 # <a name="globaljson-overview"></a>global.json’a genel bakış
 
@@ -17,7 +17,7 @@ ms.locfileid: "88062801"
 
 *global.jsdosyadaki* , .NET Core CLI komutlarını çalıştırdığınızda hangi .NET Core SDK sürümünün kullanıldığını tanımlamanızı sağlar. .NET Core SDK seçilmesi, projenizin hedeflediği çalışma zamanını belirtmekten bağımsızdır. .NET Core SDK sürümü .NET Core CLI hangi sürümlerinin kullanıldığını gösterir.
 
-Genel olarak, SDK araçlarının en son sürümünü kullanmak istiyorsunuz, bu nedenle dosya *üzerindeglobal.js* gerekmez. Bazı Gelişmiş senaryolarda, SDK araçlarının sürümünü denetlemek isteyebilirsiniz ve bu makalede bunun nasıl yapılacağı açıklanır.
+Genel olarak, SDK araçlarının en son sürümünü kullanmak istiyorsunuz, bu nedenle dosya * üzerindeglobal.js* gerekmez. Bazı Gelişmiş senaryolarda, SDK araçlarının sürümünü denetlemek isteyebilirsiniz ve bu makalede bunun nasıl yapılacağı açıklanır.
 
 Bunun yerine çalışma zamanının belirtilmesi hakkında daha fazla bilgi için bkz. [hedef çerçeveler](../../standard/frameworks.md).
 
@@ -27,13 +27,13 @@ Bunun yerine çalışma zamanının belirtilmesi hakkında daha fazla bilgi içi
 
 ### <a name="sdk"></a>sdk
 
-Türüyle`object`
+Türüyle `object`
 
 Seçilecek .NET Core SDK hakkındaki bilgileri belirtir.
 
 #### <a name="version"></a>sürüm
 
-- Türüyle`string`
+- Türüyle `string`
 
 - Şu tarihten itibaren kullanılabilir: .NET Core 1,0 SDK.
 
@@ -46,7 +46,7 @@ Bu alan:
 
 #### <a name="allowprerelease"></a>Allowönsürümü
 
-- Türüyle`boolean`
+- Türüyle `boolean`
 
 - Şu tarihten itibaren kullanılabilir: .NET Core 3,0 SDK.
 
@@ -59,7 +59,7 @@ Bu değeri açıkça ayarlamazsanız, varsayılan değer Visual Studio 'dan çal
 
 #### <a name="rollforward"></a>Ileri alınmaya
 
-- Türüyle`string`
+- Türüyle `string`
 
 - Şu tarihten itibaren kullanılabilir: .NET Core 3,0 SDK.
 
@@ -67,10 +67,10 @@ Bir SDK sürümü seçerken kullanılacak geri alma ilkesi, belirli bir SDK sür
 
 Kullanılabilir ilkeleri ve bunların davranışlarını anlamak için şu biçimdeki SDK sürümü için aşağıdaki tanımları göz önünde bulundurun `x.y.znn` :
 
-- `x`ana sürümdür.
-- `y`, ikincil sürümdür.
-- `z`, özellik bantdır.
-- `nn`Düzeltme Eki sürümüdür.
+- `x` ana sürümdür.
+- `y` , ikincil sürümdür.
+- `z` , özellik bantdır.
+- `nn` Düzeltme Eki sürümüdür.
 
 Aşağıdaki tabloda anahtar için olası değerler gösterilmektedir `rollForward` :
 
@@ -81,14 +81,14 @@ Aşağıdaki tabloda anahtar için olası değerler gösterilmektedir `rollForwa
 | `minor`       | Belirtilen ana, ikincil ve özellik bandı için en son düzeltme eki düzeyini kullanır. <br> Bulunamazsa, aynı birincil/alt sürüm içindeki bir sonraki daha yüksek Özellik bandına kaydolur ve bu özellik bandı için en son düzeltme eki düzeyini kullanır. <br> Bulunamazsa, aynı ana sırada bir sonraki yüksek ve daha düşük Özellik bandına doğru kaydolur ve bu özellik bandı için en son düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
 | `major`       | Belirtilen ana, ikincil ve özellik bandı için en son düzeltme eki düzeyini kullanır. <br> Bulunamazsa, aynı birincil/alt sürüm içindeki bir sonraki daha yüksek Özellik bandına kaydolur ve bu özellik bandı için en son düzeltme eki düzeyini kullanır. <br> Bulunamazsa, aynı ana sırada bir sonraki yüksek ve daha düşük Özellik bandına doğru kaydolur ve bu özellik bandı için en son düzeltme eki düzeyini kullanır. <br> Bulunamazsa, daha yüksek büyük, küçük ve özellik bandına ileri doğru kaydeder ve bu özellik bandı için en son düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
 | `latestPatch` | , İstenen ana, alt ve özellik bandı ile bir düzeltme eki düzeyi ve belirtilen değerden daha büyük veya eşit olan en son yüklenen düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
-| `latestFeature` | , Belirtilen değerden daha büyük veya eşit olan bir özellik bandı ile istenen büyük ve küçük ile eşleşen en yüksek yüklü Özellik bandı ve düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
-| `latestMinor` | , Belirtilen değerden daha büyük veya ona eşit olan, istenen ana ile eşleşen en yüksek alt, özellik bandı ve düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
-| `latestMajor` | , Belirtilen değerden büyük veya eşit olan en yüksek yüklü .NET Core SDK kullanır. <br> Bulunamazsa başarısız olur. |
+| `latestFeature` | , Belirtilen değerden daha büyük veya eşit olan bir özellik bandı ve düzeltme eki düzeyiyle istenen büyük ve küçük ile eşleşen en yüksek yüklü Özellik bandı ve düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
+| `latestMinor` | , Belirtilen değerden daha büyük veya eşit olan bir ikincil, özellik bandı ve yama düzeyiyle istenen ana, özellik bandı ve düzeltme eki düzeyini kullanır. <br> Bulunamazsa, başarısız olur. |
+| `latestMajor` | En yüksek yüklü .NET Core SDK, belirtilen değerden daha büyük veya eşit olan bir sürümle kullanır. <br> Bulunamazsa başarısız olur. |
 | `disable`     | İleri doğru değil. Tam eşleşme gereklidir. |
 
 ### <a name="msbuild-sdks"></a>MSBuild-SDK 'lar
 
-Türüyle`object`
+Türüyle `object`
 
 Proje SDK sürümünü her bir proje yerine tek bir yerde denetlemenize olanak tanır. Daha fazla bilgi için bkz. [Proje SDK 'Ları nasıl çözümlenir](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved).
 
@@ -169,20 +169,20 @@ dotnet new globaljson --sdk-version 3.0.100
 
 .NET Core 3,0 ile başlayarak, hangi SDK sürümünün kullanılacağını belirlerken aşağıdaki kurallar geçerlidir:
 
-- Dosya *üzerindeglobal.js* bulunamazsa veya *global.js* bir SDK sürümü ya da bir değer belirtmezse `allowPrerelease` , en yüksek yüklü SDK sürümü kullanılır (ayarına eşdeğerdir `rollForward` `latestMajor` ). Ön sürüm SDK sürümlerinin kabul edilip edilmediği, nasıl `dotnet` çağrıldığına bağlıdır.
+- Dosya * üzerindeglobal.js* bulunamazsa veya *global.js* bir SDK sürümü ya da bir değer belirtmezse `allowPrerelease` , en yüksek yüklü SDK sürümü kullanılır (ayarına eşdeğerdir `rollForward` `latestMajor` ). Ön sürüm SDK sürümlerinin kabul edilip edilmediği, nasıl `dotnet` çağrıldığına bağlıdır.
   - Visual Studio 'da **değilseniz** , ön sürüm sürümleri göz önünde bulundurulmaz.
   - Visual Studio 'da çalışıyorsanız, istenen ön sürüm durumunu kullanır. Diğer bir deyişle, Visual Studio 'nun önizleme sürümünü kullanıyorsanız veya .NET Core SDK seçeneğinin ( **Araçlar** **Use previews of the .NET Core SDK**  >  **Seçenekler**  >  **ortamı**  >  **Önizleme özellikleri**altında) kullanım önizlemelerini ayarlarsanız, ön sürüm sürümlerinin kabul edilmesi gerekir; Aksi takdirde yalnızca yayın sürümleri kabul edilir.
-- Bir SDK sürümü belirtmeyen, ancak bir değeri belirten bir *global.js* dosya bulunursa `allowPrerelease` , en yüksek yüklü SDK sürümü kullanılır (ayarına eşdeğerdir `rollForward` `latestMajor` ). En son SDK sürümünün yayınlanıp yayınlanamayacağını veya ön sürümün değerine bağlı olup olmadığı `allowPrerelease` . `true`ön sürüm sürümlerinin kabul edileceğini belirtir; `false`yalnızca yayın sürümlerinin kabul edileceğini gösterir.
+- Bir SDK sürümü belirtmeyen, ancak bir değeri belirten bir *global.js* dosya bulunursa `allowPrerelease` , en yüksek yüklü SDK sürümü kullanılır (ayarına eşdeğerdir `rollForward` `latestMajor` ). En son SDK sürümünün yayınlanıp yayınlanamayacağını veya ön sürümün değerine bağlı olup olmadığı `allowPrerelease` . `true` ön sürüm sürümlerinin kabul edileceğini belirtir; `false` yalnızca yayın sürümlerinin kabul edileceğini gösterir.
 - Dosyadaki bir *global.js* bulunursa ve bir SDK sürümü belirtiyorsa:
 
-  - `rollFoward`Değer ayarlanmamışsa, `latestPatch` varsayılan ilke olarak kullanır `rollForward` . Aksi takdirde, her bir değeri ve bunların davranışını [rollforward](#rollforward) bölümünde denetleyin.
+  - `rollForward`Değer ayarlanmamışsa, `latestPatch` varsayılan ilke olarak kullanır `rollForward` . Aksi takdirde, her bir değeri ve bunların davranışını [rollforward](#rollforward) bölümünde denetleyin.
   - Ön sürüm sürümlerinin göz önünde bulundurulmayacağı ve `allowPrerelease` ayarlanmadı ayarı, [Allowbir ön sürümü](#allowprerelease) bölümünde açıklanmıştır.
 
 ## <a name="net-core-2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 .NET Core 2. x SDK 'da, hangi SDK sürümünün kullanılacağını belirlerken aşağıdaki kurallar geçerlidir:
 
-- Dosya *üzerindeglobal.js* bulunamazsa veya *global.jsüzerinde* bir SDK sürümü belirtilmemişse, en son yüklenen SDK sürümü kullanılır. En son SDK sürümü yayın veya ön sürüm olabilir; en yüksek sürüm numarası kazanır.
+- Dosya * üzerindeglobal.js* bulunamazsa veya *global.jsüzerinde* bir SDK sürümü belirtilmemişse, en son yüklenen SDK sürümü kullanılır. En son SDK sürümü yayın veya ön sürüm olabilir; en yüksek sürüm numarası kazanır.
 - *global.json* bir SDK sürümü belirtirseniz:
   - Makinede belirtilen SDK sürümü bulunursa, bu tam sürüm kullanılır.
   - Makinede belirtilen SDK sürümü bulunamazsa, bu sürümün en son yüklenen SDK **düzeltme eki sürümü** kullanılır. En son yüklenen SDK **düzeltme eki sürümü** sürüm veya ön sürüm olabilir; en yüksek sürüm numarası kazanır. .NET Core 2,1 ve üzeri sürümlerde, belirtilen **Düzeltme Eki sürümünden** düşük olan **yama sürümleri** SDK seçiminde yok sayılır.
@@ -206,7 +206,7 @@ Aracılığıyla .NET Core SDK `2.1.100` sürümler `2.1.201` sürüm numarası 
 
   > .NET Core SDK bir önizleme sürümü ile çalışıyorsunuz. SDK sürümünü geçerli projedeki bir global.jsile tanımlayabilirsiniz. Daha fazlası <https://go.microsoft.com/fwlink/?linkid=869452> :
 
-  .NET Core SDK sürümlerde yüksek kaliteli bir geçmiş ve taahhüt vardır. Ancak, bir ön sürüm sürümü kullanmak istemiyorsanız, .NET Core 3,0 SDK ile kullanabileceğiniz farklı stratejileri veya [allowbir ön](#allowprerelease) sürümü bölümünde daha sonraki bir sürümü kontrol edin. .NET Core 3,0 veya daha yüksek bir çalışma zamanı veya SDK yüklü olmayan makinelerde, dosya *üzerinde birglobal.js* oluşturmanız ve kullanmak istediğiniz tam sürümü belirtmeniz gerekir.
+  .NET Core SDK sürümlerde yüksek kaliteli bir geçmiş ve taahhüt vardır. Ancak, bir ön sürüm sürümü kullanmak istemiyorsanız, .NET Core 3,0 SDK ile kullanabileceğiniz farklı stratejileri veya [allowbir ön](#allowprerelease) sürümü bölümünde daha sonraki bir sürümü kontrol edin. .NET Core 3,0 veya daha yüksek bir çalışma zamanı veya SDK yüklü olmayan makinelerde, dosya * üzerinde birglobal.js* oluşturmanız ve kullanmak istediğiniz tam sürümü belirtmeniz gerekir.
 
 * Aşağıdaki uyarı, projenizin .NET Core 2,1 SDK ve sonraki sürümlerle uyumlu olmayan 1,0 veya 1,1 EF Core hedeflediği anlamına gelir:
 

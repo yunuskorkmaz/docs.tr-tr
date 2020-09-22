@@ -10,14 +10,15 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: f1a7653fb3006ab3c9736ec168a8c5ea028f4763
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7038fef4258d190b726a851b26f2a2840ff3c0ea
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409334"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873373"
 ---
 # <a name="-operator-visual-basic"></a>* İşleci (Visual Basic)
+
 İki sayıyı çarpar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -34,12 +35,15 @@ number1 * number2
 |`number2`|Gereklidir. Herhangi bir sayısal ifade.|  
   
 ## <a name="result"></a>Sonuç  
+
  Sonuç, `number1` ve ürünüdür `number2` .  
   
 ## <a name="supported-types"></a>Desteklenen türler  
+
  İmzasız ve kayan nokta türleri de dahil olmak üzere tüm sayısal türler `Decimal` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sonucun veri türü, işlenenlerinin türlerine bağlıdır. Aşağıdaki tabloda, sonucun veri türünün nasıl belirlendiği gösterilmektedir.  
   
 |İşlenen veri türleri|Sonuç veri türü|  
@@ -52,9 +56,11 @@ number1 * number2
  Bir ifade [hiçbir şey](../nothing.md)olarak değerlendirilirse, sıfır olarak değerlendirilir.  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
+
  `*`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, `*` iki sayıyı çarpmak için işlecini kullanır. Sonuç iki işlenenin ürünüdür.  
   
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
@@ -62,7 +68,7 @@ number1 * number2
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [* = İşleci](multiplication-assignment-operator.md)
-- [Aritmetik İşleçler](arithmetic-operators.md)
+- [Aritmetik Işleçler](arithmetic-operators.md)
 - [Visual Basic'de İşleç Önceliği](operator-precedence.md)
 - [İşlevselliğe Göre Listelenmiş İşleçler](operators-listed-by-functionality.md)
 - [Visual Basic'de Aritmetik İşleçler](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

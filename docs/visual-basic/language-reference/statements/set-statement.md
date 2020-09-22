@@ -10,14 +10,15 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: 49d4c36805b64d7232a94e818256723a0437b6ef
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b3524769567a56a87184bf916a3e5ccb1fd4fa1c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404193"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871753"
 ---
 # <a name="set-statement-visual-basic"></a>Set Deyimi (Visual Basic)
+
 `Set`Bir özelliğe değer atamak için kullanılan bir özellik yordamı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -29,6 +30,7 @@ End Set
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `attributelist`  
  İsteğe bağlı. Bkz. [öznitelik listesi](attribute-list.md).  
   
@@ -37,7 +39,7 @@ End Set
   
 - [Korunamadı](../modifiers/protected.md)  
   
-- [Dost](../modifiers/friend.md)  
+- [Arkadaş](../modifiers/friend.md)  
   
 - [Özelleştirme](../modifiers/private.md)  
   
@@ -58,6 +60,7 @@ End Set
  Gereklidir. `Set`Özellik yordamının tanımını sonlandırır.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Özellik işaretlenmedikçe her özelliğin bir özellik yordamına sahip olması gerekir `Set` `ReadOnly` . `Set`Yordamı, özelliğinin değerini ayarlamak için kullanılır.  
   
  `Set`Bir atama ekstresi özellikte depolanacak bir değer sağlıyorsa, bir özelliğin yordamını otomatik olarak çağırır Visual Basic.  
@@ -78,11 +81,12 @@ End Set
   
 - **Bir özellik yordamından döndürülüyor.** `Set`Yordam çağıran koda döndüğünde, yürütme, depolanacak değeri sağlayan deyimden sonra devam eder.  
   
-     `Set`özellik yordamları, [Return](return-statement.md) ya da [Exit deyimlerini](exit-statement.md)kullanarak dönebilir.  
+     `Set` özellik yordamları, [Return](return-statement.md) ya da [Exit deyimlerini](exit-statement.md)kullanarak dönebilir.  
   
      `Exit Property`Ve `Return` deyimleri, bir özellik yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Property` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Property` ve deyimlerini karıştırabilirsiniz `Return` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Set` bir özelliğin değerini ayarlamak için ifadesini kullanır.  
   
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  

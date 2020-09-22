@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-ms.openlocfilehash: 98aeb5699fdd5e5e538a205acd37436019c3fc03
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1ad7b9d0a610842dd6c50ee198f5bb5fa3eb68cf
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363052"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870480"
 ---
 # <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>'\<variablename>' değişkeninin türü sarmalayan bir kapsamda bir alana bağlı olduğundan çıkarılmayacak
 
@@ -64,6 +64,7 @@ Bu ileti, varsayılan olarak bir uyarıdır. Uyarıların nasıl gizleneceği ve
   ```
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki kod, önceki örnekte yer aldığı ilk düzeltmeyi göstermektedir.
 
 ```vb

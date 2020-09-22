@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: 4ffe18e11c388a8c69ef0592bde1b78f5b219680
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7b74ee3a05000f5d6cd94176b48dea116b647a2a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386860"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872167"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1>'\<typename>', '\<interfacename>' arabirimi için '\<membername>' uygulamalıdır
+
 ' ', ' ' \<typename> \<membername> arabirimi için ' ' uygulamalıdır \<interfacename> . Uygulama özelliğinin eşleşen ' ReadOnly '/' WriteOnly ' belirticileri olmalıdır.  
   
  Bir sınıf veya yapı, arabirim uygulamak için talepler, ancak arabirim tarafından tanımlanan bir yordam, özellik veya olay uygulamaz. Arabirimin her üyesinin uygulanması gerekir.  

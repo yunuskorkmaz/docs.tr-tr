@@ -6,14 +6,15 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: f862730220d0595faecaa915b1eaad2a3cdc0053
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e564fa3f717fc1a9f4e9961d9b3e961912a4d56b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406325"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873326"
 ---
 # <a name="sub-expression-visual-basic"></a>Alt İfade (Visual Basic)
+
 Bir altyordam lambda ifadesi tanımlayan parametreleri ve kodu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,9 +36,11 @@ End Sub
 |`statements`|Gereklidir. Deyimler listesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  *Lambda ifadesi* , bir ada sahip olmayan ve bir veya daha fazla deyimi yürüten bir altyordam. Bir lambda ifadesini, için bağımsız değişken dışında bir temsilci türü kullanabileceğiniz her yerde kullanabilirsiniz `RemoveHandler` . Temsilciler ve temsilcilerle lambda ifadelerinin kullanımı hakkında daha fazla bilgi için bkz. [Delegate deyimi](../statements/delegate-statement.md) ve [gevşek temsilci dönüştürme](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
+
  Bir lambda ifadesinin sözdizimi, standart bir alt yordamın sözdizimine benzer. Farklar şunlardır:  
   
 - Lambda ifadesinin adı yoktur.  
@@ -53,6 +56,7 @@ End Sub
 - Lambda ifadelerinde genel parametrelere izin verilmez.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, konsola bir değer yazan bir lambda ifadesinin örneği verilmiştir. Örnek, bir altyordam için hem tek satırlı hem çok satırlı lambda ifadesi sözdizimini gösterir. Daha fazla örnek için bkz. [lambda ifadeleri](../../programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: a9b621ff03f833fcf0f07f876fd864ee963bef75
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 719969be23a6d94f22a1d86cb4ad3f37e4c3b254
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371187"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873424"
 ---
 # <a name="function-expression-visual-basic"></a>İşlev İfadesi (Visual Basic)
+
 Bir işlev lambda ifadesi tanımlayan parametreleri ve kodu bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,9 +36,11 @@ End Function
 |`statements`|Gereklidir. Deyimini kullanarak bir değer döndüren deyimlerin listesi `Return` . ( [Return ifadesine](../statements/return-statement.md)bakın.) Döndürülen değerin türü, işlevin dönüş türüdür.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  *Lambda ifadesi* , bir değeri hesaplayan ve döndüren bir ad olmayan bir işlevdir. Bir lambda ifadesini, için bağımsız değişken dışında bir temsilci türü kullanabileceğiniz her yerde kullanabilirsiniz `RemoveHandler` . Temsilciler ve temsilcilerle lambda ifadelerinin kullanımı hakkında daha fazla bilgi için bkz. [Delegate deyimi](../statements/delegate-statement.md) ve [gevşek temsilci dönüştürme](../../programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Lambda İfadesi Sözdizimi  
+
  Bir lambda ifadesinin sözdizimi, standart bir işleve benzer. Farklar şunlardır:  
   
 - Lambda ifadesinin adı yoktur.  
@@ -55,6 +58,7 @@ End Function
 - Genel parametrelere izin verilmiyor.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örneklerde basit lambda ifadeleri oluşturmanın iki yolu gösterilmektedir. İlki, `Dim` işlev için bir ad sağlamak üzere bir kullanır. İşlevini çağırmak için, parametresi için bir değer gönderin.  
   
  [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
@@ -62,16 +66,19 @@ End Function
  [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
 ## <a name="example"></a>Örnek  
+
  Alternatif olarak, işlevini aynı anda bildirebilir ve çalıştırabilirsiniz.  
   
  [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıda, bağımsız değişkenini artıran ve değeri döndüren bir lambda ifadesinin örneği verilmiştir. Örnek, bir işlev için hem tek satırlı hem çok satırlı lambda ifadesi sözdizimini gösterir. Daha fazla örnek için bkz. [lambda ifadeleri](../../programming-guide/language-features/procedures/lambda-expressions.md).  
   
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Örnek  
+
  Lambda ifadeleri, dil ile tümleşik sorgu (LINQ) içinde sorgu işleçlerinin birçoğunu daha fazla kullanır ve Yöntem tabanlı sorgularda açık bir şekilde kullanılabilir. Aşağıdaki örnek tipik bir LINQ sorgusunu ve ardından sorgunun yöntem biçimine çevirisini gösterir.  
   
 ```vb  

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-ms.openlocfilehash: e3a9f4cf2f4105d2c449813bf0c593860df7d1f0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c05a7d9b021192d53a30e49f52abc08d9b153156
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409536"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874248"
 ---
 # <a name="expression-recursively-calls-the-containing-property-propertyname"></a>İfade, içeren '\<propertyname>' özelliğini tekrar tekrar çağırır
+
 `Set`Özellik tanımı yordamındaki bir ifade, özelliğin adına bir değer depolar.  
   
  Bir özelliğin değerini tutmak için önerilen yaklaşım, `Private` özelliğin kapsayıcısında bir değişken tanımlamak ve hem hem de `Get` `Set` yordamlarında kullanmaktır. `Set`Yordamın bu değişkende gelen değeri depolaması gerekir `Private` .  

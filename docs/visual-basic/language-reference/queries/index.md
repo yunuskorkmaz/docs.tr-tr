@@ -5,17 +5,19 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 8fb245309170d4b9adf7458bb3bcfde3e28c0538
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 006a4b67094b258d440c2046fe3ae02274e1c337
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359843"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869892"
 ---
 # <a name="queries-visual-basic"></a>Sorgular (Visual Basic)
+
 Visual Basic kodunuzda dil ile tümleşik sorgu (LINQ) ifadeleri oluşturmanızı sağlar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Aggregate Yan Tümcesi](aggregate-clause.md)  
  `Aggregate`Bir koleksiyona bir veya daha fazla toplama işlevi uygulayan yan tümcesini açıklar.  
   
@@ -37,7 +39,7 @@ Visual Basic kodunuzda dil ile tümleşik sorgu (LINQ) ifadeleri oluşturmanız�
  [Let yan tümcesi](let-clause.md)  
  `Let`Bir değeri hesaplayan ve onu sorgudaki yeni bir değişkene atayan yan tümceyi açıklar.  
   
- [Order By Yan Tümcesi](order-by-clause.md)  
+ [Order by yan tümcesi](order-by-clause.md)  
  `Order By`Bir sorgudaki sütunlar için sıralama düzenini belirten yan tümcesini açıklar.  
   
  [Select yan tümcesi](select-clause.md)  

@@ -18,14 +18,15 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: a136a517c7ce865b4e1d349270696e2704d61592
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0575a67f89f734c79259036fe48d6e2671c2d1ed
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404673"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873259"
 ---
 # <a name="event-statement"></a>Event Deyimi
+
 Kullanıcı tanımlı bir olay bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -56,7 +57,7 @@ End Event
   
 ## <a name="parts"></a>Bölümler  
   
-|Bölüm|Description|  
+|Bölüm|Açıklama|  
 |---|---|  
 |`attrlist`|İsteğe bağlı. Bu olay için uygulanan özniteliklerin listesi. Birden çok öznitelik virgülle ayrılır. [Öznitelik listesini](attribute-list.md) açılı ayraçlar (" `<` " ve " `>` ") içine almalısınız.|  
 |`accessmodifier`|İsteğe bağlı. Olaya hangi kodun erişebileceğini belirtir. Aşağıdakilerden biri olabilir:<br /><br /> -   [Public](../modifiers/public.md)— onu bildiren öğeye erişebilen herhangi bir kod, buna erişebilir.<br />-   [Korumalı](../modifiers/protected.md)— yalnızca kendi sınıfı veya türetilmiş bir sınıf içindeki kodlar buna erişebilir.<br />-   [Friend](../modifiers/friend.md)— yalnızca aynı derlemede bulunan kod erişebilir.<br />-   [Özel](../modifiers/private.md)— yalnızca bu öğeyi bildiren kod, ona erişebilir.<br /> -   Yalnızca olayın sınıfında, türetilmiş bir sınıfta veya aynı derlemede bulunan yalnızca [arkadaş](../modifiers/protected-friend.md)kod, buna erişebilir. <br />- Yalnızca olayın sınıfında veya aynı derlemede bulunan türetilmiş bir sınıfta bulunan [özel korumalı](../modifiers/private-protected.md)kod, buna erişebilir.|  
@@ -65,7 +66,7 @@ End Event
 |`eventname`|Gereklidir. Olayın adı; Standart değişken adlandırma kurallarını izler.|  
 |`parameterlist`|İsteğe bağlı. Bu olayın parametrelerini temsil eden yerel değişkenlerin listesi. [Parametre listesini](parameter-list.md) parantez içine almalısınız.|  
 |`Implements`|İsteğe bağlı. Bu olayın bir arabirimin olayını uyguladığını gösterir.|  
-|`implementslist`|Sağlanırsa gereklidir `Implements` . `Sub`Uygulanan yordamların listesi. Birden çok yordam virgüllerle ayrılır:<br /><br /> *ımplementedprocedure* [, *ımplementedprocedure* ...]<br /><br /> Her birinin `implementedprocedure` aşağıdaki söz dizimi ve parçaları vardır:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`İstenir. Bu yordamın kendisini içeren sınıf veya yapının uyguladığı arabirimin adı.<br />-   `Definedname`İstenir. Yordamın tanımlandığı ad `interface` . Bu `name` , tanımlanan yordamı uygulamak için bu yordamın kullandığı ad ile aynı olmak zorunda değildir.|  
+|`implementslist`|Sağlanırsa gereklidir `Implements` . `Sub`Uygulanan yordamların listesi. Birden çok yordam virgüllerle ayrılır:<br /><br /> *ımplementedprocedure* [, *ımplementedprocedure* ...]<br /><br /> Her birinin `implementedprocedure` aşağıdaki söz dizimi ve parçaları vardır:<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` İstenir. Bu yordamın kendisini içeren sınıf veya yapının uyguladığı arabirimin adı.<br />-   `Definedname` İstenir. Yordamın tanımlandığı ad `interface` . Bu `name` , tanımlanan yordamı uygulamak için bu yordamın kullandığı ad ile aynı olmak zorunda değildir.|  
 |`Custom`|Gereklidir. Olarak belirtilen olaylar `Custom` özel `AddHandler` , `RemoveHandler` ve `RaiseEvent` erişimcileri tanımlamalıdır.|  
 |`delegatename`|İsteğe bağlı. Olay işleyicisi imzasını belirten bir temsilcinin adı.|  
 |`AddHandler`|Gereklidir. `AddHandler`Bir olay işleyicisi eklendiğinde, açıkça `AddHandler` deyimi kullanarak veya yan tümcesini kullanarak örtülü olarak yürütülecek deyimleri belirten bir erişimci bildirir `Handles` .|  
@@ -80,6 +81,7 @@ End Event
 |`End Event`|Gereklidir. Bloğu sonlandırır `Event` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Olay bildirildiğinde `RaiseEvent` olayı yükseltmek için ifadesini kullanın. Tipik bir olay, aşağıdaki parçalar gösterildiği gibi bildirilebilecek ve ortaya çıkabilir:  
   
  [!code-vb[VbVbalrEvents#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#13)]  
@@ -94,6 +96,7 @@ End Event
  Çoğu durumda, olayları bildirmek için bu konunun söz dizimi bölümünde ilk sözdizimini kullanabilirsiniz. Ancak, bazı senaryolar etkinliğin ayrıntılı davranışı üzerinde daha fazla denetime sahip olmanızı gerektirir. Anahtar sözcüğünü kullanan bu konunun sözdizimi bölümündeki son sözdizimi `Custom` , özel olayları tanımlamanızı sağlayarak bu denetimi sağlar. Özel bir olayda, kod bir olay işleyicisini olaya eklendiğinde veya olaya kaldırdığında ya da kod olayı harekete geçirirse tam olarak ne olduğunu belirtirsiniz. Örnekler için bkz. [nasıl yapılır: belleği korumak Için özel olaylar bildirme](../../programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md) ve [nasıl yapılır: engellemeyi önlemek Için özel olaylar bildirme](../../programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, 10 ile 0 arasındaki saniye sayısını saymak için olayları kullanır. Kod, olayla ilgili yöntemlerin, özelliklerin ve deyimlerden birkaçını gösterir. Bu, `RaiseEvent` ifadesini içerir.  
   
  Olayı oluşturan sınıf olay kaynağıdır ve olayı işleyen yöntemler olay işleyicileridir. Bir olay kaynağı, oluşturduğu olaylar için birden çok işleyicilere sahip olabilir. Sınıf olayı harekete geçirirse, bu olay nesnenin bu örneğine yönelik olayları işlemek için seçilmiş olan her sınıfta oluşturulur.  
@@ -121,7 +124,7 @@ End Event
 
 - [RaiseEvent Deyimi](raiseevent-statement.md)
 - [Implements Deyimi](implements-statement.md)
-- [Olaylar](../../programming-guide/language-features/events/index.md)
+- [Ekinlikler](../../programming-guide/language-features/events/index.md)
 - [AddHandler Deyimi](addhandler-statement.md)
 - [RemoveHandler Deyimi](removehandler-statement.md)
 - [Handles](handles-clause.md)

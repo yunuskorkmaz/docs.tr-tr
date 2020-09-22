@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30024
 ms.assetid: 758e7a8f-429b-42c1-9a78-778e5b480e04
-ms.openlocfilehash: f3c43d640259d5e1af545e2610088aab5d70453d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d5d756f1772b9519613e163119b88a3057d36cf3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396252"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870625"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>Deyim yöntem/çok satırlı lambda içinde geçerli değil
+
 İfade `Sub` ,, `Function` özellik `Get` veya özellik yordamı içinde geçerli değil `Set` . Bazı deyimler modüle veya sınıf düzeyine yerleştirilebilir. Diğer bir deyişle, gibi `Option Strict` diğer tüm bildirimlerin önünde olmalıdır.  
   
  **Hata kimliği:** BC30024  

@@ -22,14 +22,15 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 0297f7af29faf5a08472fd1d18ca52e9b2fda1af
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7e007d59292fc577c0c8927766423ba6f7896a71
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404414"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873181"
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error Deyimi (Visual Basic)
+
 Bir hata işleme yordamını sunar ve yordamın içindeki konumunu belirtir; , hata işleme yordamını devre dışı bırakmak için de kullanılabilir. `On Error`İfade yapılandırılmamış hata işlemede kullanılır ve yapılandırılmış özel durum işleme yerine kullanılabilir. [Yapılandırılmış özel durum işleme](../../../standard/exceptions/index.md) .NET içinde yerleşiktir, genellikle daha etkilidir, bu nedenle uygulamanızda çalışma zamanı hatalarını işlerken önerilir.
 
  Hata işleme veya özel durum işleme olmadan, oluşan tüm çalışma zamanı hataları önemli: bir hata iletisi görüntülenir ve yürütme durdu.
@@ -69,9 +70,11 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 > Hata işleme yordamı bir `Sub` yordam veya `Function` yordam değildir. Bir satır etiketi veya satır numarası tarafından işaretlenen kodun bir bölümüdür.
   
 ## <a name="number-property"></a>Number özelliği
+
  Hata işleme yordamları, `Number` `Err` hatanın nedenini öğrenmek için nesnesinin özelliğindeki değeri kullanır. Yordam, `Err` diğer herhangi bir hata gerçekleşebilmesi veya bir hataya neden olabilecek bir yordam çağrılmadan önce, nesne içindeki ilgili özellik değerlerini test etmelidir veya kaydeder. Nesnedeki özellik değerleri `Err` yalnızca en son hatayı yansıtır. İle ilişkili hata iletisi `Err.Number` içinde bulunur `Err.Description` .  
   
 ## <a name="throw-statement"></a>Throw Deyimi  
+
  Yöntemiyle oluşturulan bir hata, `Err.Raise` `Exception` özelliği, sınıfının yeni oluşturulmuş bir örneğine ayarlar <xref:System.Exception> . Türetilmiş özel durum türleri için özel durumların çıkarılmasını desteklemek amacıyla, `Throw` dilde bir ifade desteklenir. Bu, oluşturulacak özel durum örneği olan tek bir parametre alır. Aşağıdaki örnek, bu özelliklerin mevcut özel durum işleme desteğiyle nasıl kullanılabileceğini göstermektedir:
 
  [!code-vb[VbVbalrErrorHandling#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#17)]  
@@ -79,16 +82,19 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error GoTo`Deyimin, özel durum sınıfından bağımsız olarak tüm hataları yakaladığı konusunda dikkat edin.
   
 ## <a name="on-error-resume-next"></a>Hata durumunda devamında
- `On Error Resume Next`yürütmeye, çalışma zamanı hatasına neden olan deyimin hemen ardından gelen deyimle devam etmesine neden olur ya da deyimin bulunduğu yordamın en son çağrısından hemen sonra gelen deyimle devam eder `On Error Resume Next` . Bu ifade, yürütmenin çalışma zamanı hatasına rağmen devam etmesine izin verir. Hatanın gerçekleştiği hata işleme yordamını, yordamı yordamın içindeki başka bir konuma aktarmak yerine yerleştirebilirsiniz. `On Error Resume Next`Başka bir yordam çağrıldığında bir ifade devre dışı bırakılır, `On Error Resume Next` Bu nedenle bu yordamda satır içi hata işleme istiyorsanız, çağrılan her yordamda bir ifade yürütmelisiniz.
+
+ `On Error Resume Next` yürütmeye, çalışma zamanı hatasına neden olan deyimin hemen ardından gelen deyimle devam etmesine neden olur ya da deyimin bulunduğu yordamın en son çağrısından hemen sonra gelen deyimle devam eder `On Error Resume Next` . Bu ifade, yürütmenin çalışma zamanı hatasına rağmen devam etmesine izin verir. Hatanın gerçekleştiği hata işleme yordamını, yordamı yordamın içindeki başka bir konuma aktarmak yerine yerleştirebilirsiniz. `On Error Resume Next`Başka bir yordam çağrıldığında bir ifade devre dışı bırakılır, `On Error Resume Next` Bu nedenle bu yordamda satır içi hata işleme istiyorsanız, çağrılan her yordamda bir ifade yürütmelisiniz.
   
 > [!NOTE]
 > `On Error Resume Next` `On Error GoTo` Diğer nesnelere erişim sırasında oluşturulan hatalar işlenirken yapı tercih edilebilir. `Err`Bir nesneyle her bir etkileşime geçtikten sonra Denetim, kod tarafından hangi nesneye erişildiğine ilişkin belirsizliği ortadan kaldırır. Hangi nesnenin içinde hata kodu yerleştirdiğini `Err.Number` ve hangi nesnenin ilk olarak hatayı (içinde belirtilen nesne) üretdiğini de unutmayın `Err.Source` .
 
 ## <a name="on-error-goto-0"></a>Hatada git 0
- `On Error GoTo 0`geçerli yordamda hata işlemeyi devre dışı bırakır. Yordam 0 sayılı bir satır içerse bile, hata işleme kodunun başlangıcı olarak line 0 belirtmez. Bir `On Error GoTo 0` ifade olmadan, bir yordam çıkıldığında bir hata işleyicisi otomatik olarak devre dışı bırakılır.
+
+ `On Error GoTo 0` geçerli yordamda hata işlemeyi devre dışı bırakır. Yordam 0 sayılı bir satır içerse bile, hata işleme kodunun başlangıcı olarak line 0 belirtmez. Bir `On Error GoTo 0` ifade olmadan, bir yordam çıkıldığında bir hata işleyicisi otomatik olarak devre dışı bırakılır.
 
 ## <a name="on-error-goto--1"></a>Hatada GoTo-1
- `On Error GoTo -1`geçerli yordamda özel durumu devre dışı bırakır. Yordam numaralandırılmış bir satır içerse de, hata işleme kodunun başlangıcı olarak Line-1 ' i belirtmez. Bir `On Error GoTo -1` ifade olmadan, bir yordama çıkıldığında bir özel durum otomatik olarak devre dışı bırakılır.
+
+ `On Error GoTo -1` geçerli yordamda özel durumu devre dışı bırakır. Yordam numaralandırılmış bir satır içerse de, hata işleme kodunun başlangıcı olarak Line-1 ' i belirtmez. Bir `On Error GoTo -1` ifade olmadan, bir yordama çıkıldığında bir özel durum otomatik olarak devre dışı bırakılır.
 
  Hata oluştuğunda hata işleme kodunun çalıştırılmasını engellemek için, `Exit Sub` `Exit Function` `Exit Property` aşağıdaki parçada olduğu gibi, hata işleme yordamının hemen öncesine bir, veya ifadesini yerleştirin:
 
@@ -97,6 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Burada, hata işleme kodu `Exit Sub` ifadeyi izler ve `End Sub` yordam akışından ayırmak için deyimden önce gelir. Hata işleme kodunu bir yordamda herhangi bir yere yerleştirebilirsiniz.
 
 ## <a name="untrapped-errors"></a>Yakalangeri al hataları
+
  Nesneler yürütülebilir bir dosya olarak çalıştırıldığında denetim uygulamasına nesneler üzerinde yakalangeri dönüş hataları döndürülür. Geliştirme ortamında, yalnızca uygun seçenekler ayarlandıysa denetim uygulamasına geri dönüş hataları döndürülür. Hata ayıklama sırasında ayarlanması gereken seçeneklerin açıklaması, nasıl ayarlanacağı ve konağın sınıf oluşturup oluşturamayacağını gösteren bir açıklama için ana bilgisayar uygulamanızın belgelerine bakın.
 
  Diğer nesnelere erişen bir nesne oluşturursanız, geri aktardıkları işlenmemiş hataları işlemeye çalışırsınız. Bu durumda, içindeki hata kodlarını `Err.Number` kendi hatalardan biriyle eşleyin ve sonra bunları nesnenizin çağıranına geri geçirin. Hata kodunuzu sabite ekleyerek hatayı belirtmeniz gerekir `VbObjectError` . Örneğin, hata kodunuz 1052 ise, aşağıdaki gibi atayın:
@@ -107,14 +114,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 > Windows dinamik bağlantı kitaplıkları (dll 'Ler) çağrıları sırasında sistem hataları özel durum oluşturmaz ve Visual Basic hata yakalama ile yakalanamaz. DLL işlevlerini çağırırken, her dönüş değerini başarılı veya başarısız (API belirtimlerine göre) olarak denetlemeniz gerekir ve hata durumunda nesnenin özelliğindeki değeri kontrol edin `Err` `LastDLLError` .
 
 ## <a name="example"></a>Örnek
+
  Bu örnek öncelikle `On Error GoTo` bir yordam içindeki bir hata işleme yordamının konumunu belirtmek için ifadesini kullanır. Örnekte, sıfıra bölme girişimi 6 hata numarasını üretir. Hata, hata işleme yordamında işlenir ve denetim daha sonra hataya neden olan ifadeye döndürülür. `On Error GoTo 0`İfade hata yakalamayı kapatır. Daha sonra, `On Error Resume Next` Next ifadesinin oluşturduğu hatanın bağlamı belirli bir şekilde tanınabilmesi için hata yakalamayı erteleme için bu ifade kullanılır. `Err.Clear` `Err` Hata işlendikten sonra nesnenin özelliklerini temizlemek için kullanıldığını unutmayın.
 
  [!code-vb[VbVbalrErrorHandling#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#20)]
 
 ## <a name="requirements"></a>Gereksinimler
+
  **Ad alanı:** [Microsoft. VisualBasic](../runtime-library-members.md)
 
- **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll)
 
 ## <a name="see-also"></a>Ayrıca bkz.
 
