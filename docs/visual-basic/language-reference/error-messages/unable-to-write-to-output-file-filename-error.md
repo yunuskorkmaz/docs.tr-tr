@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 087735722fcd4dd789e25aacf6eeefffb490dac5
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 73fce70c0740992e2e9159946d428d214576e163
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198195"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870288"
 ---
-# <a name="unable-to-write-to-output-file-filename-error"></a>'\<filename > ' çıkış dosyasına yazılamıyor: \<hatası >
+# <a name="unable-to-write-to-output-file-filename-error"></a>'\<filename>' çıkış dosyasına yazılamıyor: \<error>
+
 Dosya oluşturulurken bir sorun oluştu.  
   
  Çıkış dosyası yazma için açılamıyor. Dosya (veya dosyayı içeren klasör), başka bir işlem tarafından özel kullanım için açılabilir veya salt okunurdur özniteliği ayarlanmış olabilir.  
@@ -59,4 +60,4 @@ Dosya oluşturulurken bir sorun oluştu.
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Bizimle İletişime Geçin](/visualstudio/ide/feedback-options)
+- [Bizimle iletişime geçin](/visualstudio/ide/feedback-options)

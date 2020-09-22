@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: 6fa4639b97e4314d8752ae520e94a58a189b7cbb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 76c1ab4fb5f1f8e4c76a06110f4b0f9026cca201
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397174"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871541"
 ---
 # <a name="name-name-is-not-declared"></a>'\<name>' adı bildirilmemiş
+
 Bir ifade bir programlama öğesine başvurur, ancak derleyici bu tam adı taşıyan bir öğe bulamaz.  
   
  **Hata kimliği:** BC30451  
@@ -31,7 +32,7 @@ Bir ifade bir programlama öğesine başvurur, ancak derleyici bu tam adı taş�
 
 5. Tam nitelikli bir tür veya tür ve üye adı kullanmıyorsanız (örneğin, kodunuz yerine bir özelliğe başvurur `MethodInfo.Name` `System.Reflection.MethodInfo.Name` ), bir [içeri aktarmalar ekstresi](../statements/imports-statement-net-namespace-and-type.md)ekleyin.
 
-6. Bir SDK stili proje ( \* satırla başlayan bir. vbproj dosyası olan bir proje) derlemeye çalışıyorsanız `<Project Sdk="Microsoft.NET.Sdk">` ve hata iletisi Microsoft. VisualBasic. dll derlemesinde bir tür veya üyeye başvuruyorsa, uygulamanızı Visual Basic çalışma zamanı kitaplığı başvurusuyla derlemek üzere yapılandırın. Varsayılan olarak, kitaplığın bir alt kümesi, bir SDK stili projesinde derlemeize katıştırılır.
+6. Bir SDK stili proje ( \* satırla başlayan bir. vbproj dosyası olan bir proje) derlemeye çalışıyorsanız `<Project Sdk="Microsoft.NET.Sdk">` ve hata iletisi Microsoft.VisualBasic.dll derlemesinde bir tür veya üyeye başvuruyorsa, uygulamanızı Visual Basic çalışma zamanı kitaplığı başvurusuyla derlemek üzere yapılandırın. Varsayılan olarak, kitaplığın bir alt kümesi, bir SDK stili projesinde derlemeize katıştırılır.
 
    Örneğin, yöntem bulunamadığı için aşağıdaki örnek derlenemiyor <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ChangeType%2A?displayProperty=fullName> . Uygulamanıza dahil olan Visual Basic çalışma zamanının alt kümesine Katıştırılamaz.  
 

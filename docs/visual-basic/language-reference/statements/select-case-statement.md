@@ -21,14 +21,15 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-ms.openlocfilehash: 3dedd43f920b493a0aca9ce48460b00815e1af5c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 750e765390ad223976b000fe64e656fa2d62a34b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404245"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871781"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case Deyimi (Visual Basic)
+
 Bir ifadenin değerine bağlı olarak çeşitli deyim gruplarından birini çalıştırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -53,6 +54,7 @@ End Select
 |`End Select`|`Select`... Oluşturma tanımını sonlandırır `Case` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `testexpression`Any `Case` `expressionlist` yan tümcesiyle eşleşirse, bu `Case` deyimden sonraki deyimler Next `Case` , `Case Else` , veya deyimi ile çalışır `End Select` . Sonra Denetim aşağıdaki ifadeye geçer `End Select` . Birden `testexpression` `expressionlist` fazla yan tümcedeki bir yan tümcesiyle eşleşiyorsa `Case` , yalnızca ilk eşleşmeyi izleyen deyimler çalıştırılır.  
   
  `Case Else`Deyimi, `elsestatements` `testexpression` `expressionlist` diğer deyimlerden herhangi birinde ve yan tümcesi arasında eşleşme bulunmazsa çalıştırmak için öğesini tanıtmak için kullanılır `Case` . Gerekli olmasa da, `Case Else` `Select Case` öngörülenmeyen değerleri işlemek için oluşturma konusunda bir ifadeye sahip olmak iyi bir fikirdir `testexpression` . Hiçbir `Case` `expressionlist` yan tümce eşleşmez `testexpression` ve hiçbir deyimi yoksa `Case Else` , Denetim aşağıdaki deyime geçer `End Select` .  
@@ -75,9 +77,10 @@ End Select
   
  Bir `Case` veya `Case Else` deyim bloğundaki kodun bloğunda daha fazla deyim çalıştırması gerekmiyorsa, deyimi kullanılarak bloğundan çıkabilir `Exit Select` . Bu, denetimi izleyen deyime hemen aktarır `End Select` .  
   
- `Select Case`kurulumlarını iç içe olabilir. İç içe yerleştirilmiş her `Select Case` oluşturma bir eşleşen `End Select` deyime sahip olmalı ve `Case` `Case Else` `Select Case` içinde iç içe olduğu dış oluşturma işleminin tek veya ifade bloğunda tamamen yer almalıdır.  
+ `Select Case` kurulumlarını iç içe olabilir. İç içe yerleştirilmiş her `Select Case` oluşturma bir eşleşen `End Select` deyime sahip olmalı ve `Case` `Case Else` `Select Case` içinde iç içe olduğu dış oluşturma işleminin tek veya ifade bloğunda tamamen yer almalıdır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Select Case` değişkeninin değerine karşılık gelen bir satırı yazmak için bir oluşturma kullanır `number` . İkinci `Case` ifade, geçerli değeri ile eşleşen değeri içerir `number` , bu nedenle "6 Ile 8 arasında", dahil "yazan bir ifade çalışır.  
   
  [!code-vb[VbVbalrStatements#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#54)]  
@@ -85,7 +88,7 @@ End Select
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Interaction.Choose%2A>
-- [End Deyimi](end-statement.md)
+- [End ekstresi](end-statement.md)
 - [If...Then...Else Deyimi](if-then-else-statement.md)
 - [Option Compare Deyimi](option-compare-statement.md)
 - [Exit Deyimi](exit-statement.md)

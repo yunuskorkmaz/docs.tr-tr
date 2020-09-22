@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 5606ae8188c12142800adef46819791b732ff73c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e287d6c24eca75d8bf20181a201056f467d6fc4e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387276"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871216"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Taşma (Visual Basic Çalışma Süresi Hatası)
+
 Atama hedefinin sınırlarını aşan bir atamaya çalıştığınızda bir taşma oluşur.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

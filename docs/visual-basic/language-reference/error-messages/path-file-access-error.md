@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: dfe96cd6eaa673438849fe8f799d46fa2617bfdd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 70de8f9cb33ab3d889f4916ae3d5de48cd218092
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387263"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871191"
 ---
 # <a name="pathfile-access-error"></a>Yol/Dosya erişim hatası
+
 Dosya erişimi veya disk erişimi işlemi sırasında, işletim sistemi yol ve dosya adı arasında bir bağlantı kuramadı.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

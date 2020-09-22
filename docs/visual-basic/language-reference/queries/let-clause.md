@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 4bf832651d9753c41ee5a02defec4adc55af1ff1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a6ff3fc80a2b6752c61a8b8f7d4ce62b5a46baad
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359767"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869880"
 ---
 # <a name="let-clause-visual-basic"></a>Let Tümcesi (Visual Basic)
+
 Bir değeri hesaplar ve sorgu içindeki yeni bir değişkene atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -32,11 +33,13 @@ Let variable = expression [, ...]
 |`expression`|Gereklidir. Değerlendirilecek ve belirtilen değişkene atanacak bir ifade.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Let`Yan tümcesi her sorgu sonucu için değerleri hesaplamanızı ve bir diğer ad kullanarak bunları başvurmanızı sağlar. Diğer ad yan tümce gibi diğer yan tümcelerde kullanılabilir `Where` . `Let`Yan tümcesi, sorguda yer alan bir ifade yan tümcesi için bir diğer ad belirtebileceğiniz ve ifade yan tümcesinin her kullanıldığı her seferinde diğer adı yerine geçecek bir sorgu deyimi oluşturmanıza olanak sağlar.  
   
  Yan tümcesine herhangi bir sayıda `variable` ve `expression` atama ekleyebilirsiniz `Let` . Her atamayı virgülle ayırın (,).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, `Let` ürünlerde yüzde 10 indirimli iskontoyu hesaplamak için yan tümcesini kullanır.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  

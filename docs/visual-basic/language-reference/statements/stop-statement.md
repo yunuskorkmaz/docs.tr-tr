@@ -12,14 +12,15 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 2ef1e2f9045e5509e11557c9fdaf3edd2786b72c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c9226ccaea9a0709a9d6a49900f69cb9ac9e1dbe
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404232"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871739"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop Deyimi (Visual Basic)
+
 Yürütmeyi askıya alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -29,6 +30,7 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Stop`Çalışmayı askıya almak için deyimleri yordamların herhangi bir yerinde yerleştirebilirsiniz. İfadesinin kullanılması `Stop` kodda bir kesme noktası ayarlamaya benzerdir.  
   
  `Stop`İfade yürütmeyi askıya alır, ancak farklı olarak, `End` derlenmiş bir çalıştırılabilir (. exe) dosyasında karşılaşılmadığı takdirde herhangi bir dosyayı kapatmaz veya hiçbir değişkeni temizlemez.  
@@ -37,6 +39,7 @@ Stop
 > `Stop`Tümleşik geliştirme ortamı (IDE) dışında çalışan kodda deyime karşılaşılırsa, hata ayıklayıcı çağrılır. Bu, kodun hata ayıklama veya perakende modunda derlenmesinden bağımsız olarak geçerlidir.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, `Stop` döngüsü aracılığıyla her yineleme için yürütmeyi askıya almak üzere ifadesini kullanır `For...Next` .  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
