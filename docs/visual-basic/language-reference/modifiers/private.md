@@ -7,17 +7,19 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 524f03e77e075bef08a1b41b563985de41baacb6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 59f1c1666ce38923a2861244fb377007cd0fa992
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404816"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874983"
 ---
 # <a name="private-visual-basic"></a>Özel (Visual Basic)
+
 Bir ya da daha fazla bildirilmemiş programlama öğesine, içerilen türlerin dahil olduğu gibi yalnızca kendi bildirim bağlamlarından erişilebilir olduğunu belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir programlama öğesi özel işlevselliği gösteriyorsa veya gizli veriler içeriyorsa, genellikle erişimi mümkün olduğunca kesin bir şekilde sınırlandırmak istersiniz. Yalnızca ona erişmek için onu tanımlayan modüle, sınıfa veya yapıya izin vererek en yüksek kısıtlamayı elde edersiniz. Bu şekilde bir öğeye erişimi sınırlandırmak için, ile bildirimini yapabilirsiniz `Private` .  
 
 > [!NOTE]
@@ -63,7 +65,7 @@ Bir ya da daha fazla bildirilmemiş programlama öğesine, içerilen türlerin d
 
 - [Geneldir](public.md)
 - [Korunamadı](protected.md)
-- [Dost](friend.md)
+- [Arkadaş](friend.md)
 - [Özel korumalı](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
 - [Visual Basic erişim düzeyleri](../../programming-guide/language-features/declared-elements/access-levels.md)

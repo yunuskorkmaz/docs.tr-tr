@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
-ms.openlocfilehash: e2ba411a5f0db21539a9cf99c7645b8c9309caab
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4f1db6bdbe6f25d0362b55acd95e716fbc2417ed
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409562"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874282"
 ---
 # <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<expression>' tür kısıtlaması olarak kullanılamaz
+
 Kısıtlama listesi, bir tür parametresinde geçerli bir kısıtlamayı temsil eden bir ifade içerir.  
   
  Bir kısıtlama listesi, tür parametresine geçirilen tür bağımsız değişkenine gereksinimleri uygular. Aşağıdaki gereksinimleri herhangi bir kombinasyonda belirtebilirsiniz:  

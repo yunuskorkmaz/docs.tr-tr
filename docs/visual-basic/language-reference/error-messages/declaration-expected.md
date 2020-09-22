@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee8f1f9ec26dc6c938f0b412dfe30832e3cfe165
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409744"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874519"
 ---
 # <a name="declaration-expected"></a>Bildirim bekleniyor
+
 Atama veya döngü deyimi gibi bildirime dayalı olmayan bir ifade, herhangi bir yordamın dışında meydana gelir. Yordamların dışında yalnızca bildirimlere izin verilir.  
   
  Alternatif olarak, bir programlama öğesi veya gibi bir bildirim anahtar sözcüğü olmadan `Dim` bildirilmiştir `Const` .  

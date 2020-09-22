@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: cb953671e624d5b9170aa0b3a9dd80c7ba8337e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 08986cde7151cac5e70083705f38a83837bedb93
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402920"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874040"
 ---
 # <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>'\<propertyname>' özelliğinin 'Get' erişimcisine erişilemiyor
+
 Bir ifade, özelliğin yordamına erişimi olmayan bir özelliğin değerini almaya çalışır `Get` .  
   
  [Get deyiminden](../statements/get-statement.md) daha kısıtlayıcı bir erişim düzeyiyle [işaretlenmişse, özellik](../statements/property-statement.md)değerini okuma girişimi aşağıdaki durumlarda başarısız olabilir:  

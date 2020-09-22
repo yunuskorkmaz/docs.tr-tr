@@ -6,17 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: f843955cc637ccdae091e207ed5d0aad24867e61
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cdd693270747125cf55d7484981e05df5afaf29f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404336"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874929"
 ---
 # <a name="option-keyword-statement"></a>Option \<keyword> Deyimi
+
 Kaynak dosyanın tamamına uygulanan bir derleyici seçeneğini belirten bir ifade tanıtır.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Derleyici seçenekleri, tüm değişkenlerin açıkça bildirilmesini, daraltma türü dönüştürmelerin açık olması gerekip gerekmediğini ya da dizelerin metin veya ikili miktarlar olarak karşılaştırılacağını denetleyebilir.  
   
  `Option`Anahtar sözcüğü şu bağlamlarda kullanılabilir:  

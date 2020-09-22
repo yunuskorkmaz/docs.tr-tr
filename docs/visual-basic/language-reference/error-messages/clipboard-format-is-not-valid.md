@@ -4,26 +4,27 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID460
 ms.assetid: 71a4a045-65bb-417d-b3bd-99a9fa3c53f6
-ms.openlocfilehash: 15bc530d1030a8c4d720321ea249fdd7fb6cd8b6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429d1e120a0044152a358a87663eb09989f45b0e
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623091"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874592"
 ---
 # <a name="clipboard-format-is-not-valid"></a>Pano biçimi geçerli değil
-Belirtilen Pano biçimi yürütülen yöntemi ile uyumlu değil. Bu hata için olası nedenler arasındadır:  
+
+Belirtilen Pano biçimi yürütülmekte olan yöntemle uyumsuz. Bu hatanın olası nedenleri arasında aşağıdakiler bulunur:  
   
-- Pano kullanarak `GetText` veya `SetText` yöntemi ile bir pano biçimi dışında `vbCFText` veya `vbCFLink`.  
+- `GetText` `SetText` Veya dışında bir pano biçimiyle pano veya yöntemini kullanma `vbCFText` `vbCFLink` .  
   
-- Pano kullanarak `GetData` veya `SetData` yöntemi ile bir pano biçimi dışında `vbCFBitmap`, `vbCFDIB`, veya `vbCFMetafile`.  
+- Panonun `GetData` veya `SetData` yönteminin, veya dışında bir pano biçimiyle kullanılması `vbCFBitmap` `vbCFDIB` `vbCFMetafile` .  
   
-- Kullanarak `GetData` veya `SetData` yöntemlerinin bir `DataObject` kayıtlı biçimleri (HC000 - & HFFFF için), Microsoft Windows tarafından ayrılmış aralıktaki bir Pano biçimine sahip olduğunda bu pano biçimi değil kaydedilmedi Microsoft Windows ile .  
+- , `GetData` `SetData` `DataObject` Pano biçimi Microsoft Windows 'a kaydedilmediği zaman, kayıtlı BIÇIMLER (&HC000-&hffff) için Microsoft Windows tarafından ayrılmış aralıktaki bir pano biçimiyle veya yöntemlerini kullanma.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-- Geçersiz biçim kaldırın ve geçerli bir tane belirtin.  
+- Geçersiz biçimi kaldırın ve geçerli bir tane belirtin.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Pano: Diğer Biçimleri Ekleme](/cpp/mfc/clipboard-adding-other-formats)
+- [Pano: diğer biçimleri ekleme](/cpp/mfc/clipboard-adding-other-formats)

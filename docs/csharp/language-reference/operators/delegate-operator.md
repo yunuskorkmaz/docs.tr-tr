@@ -1,16 +1,16 @@
 ---
 description: temsilci işleci-C# başvurusu
 title: temsilci işleci-C# başvurusu
-ms.date: 07/18/2019
+ms.date: 09/22/2020
 helpviewer_keywords:
 - delegate [C#]
 - anonymous method [C#]
-ms.openlocfilehash: 1dfaaf40c0f5a19534adef3be7e3c917bc95c4a8
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 6c087d9bdb2f526cf7d94c3a0f2c1a929b0343ef
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89122257"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874917"
 ---
 # <a name="delegate-operator-c-reference"></a>Delegate işleci (C# Başvurusu)
 
@@ -30,6 +30,12 @@ ms.locfileid: "89122257"
 [!code-csharp-interactive[no parameter list](snippets/shared/DelegateOperator.cs#WithoutParameterList)]
 
 Bu, lambda ifadeleri tarafından desteklenmeyen anonim yöntemlerin tek işlevsellikleridir. Diğer tüm durumlarda, bir lambda ifadesi satır içi kod yazmak için tercih edilen bir yoldur.
+
+C# 9,0 ile başlayarak, yöntemi tarafından kullanılmayan anonim bir yöntemin iki veya daha fazla giriş parametresini belirtmek için [atarsa](../../discards.md) ' u kullanabilirsiniz:
+
+:::code language="csharp" source="snippets/shared/DelegateOperator.cs" id="SnippetDiscards" :::
+
+Geriye dönük uyumluluk için, yalnızca tek bir parametre adlandırılmışsa `_` , `_` anonim bir yöntemde bu parametrenin adı olarak değerlendirilir.
 
 `delegate`Bir [temsilci türü](../builtin-types/reference-types.md#the-delegate-type)bildirmek için anahtar sözcüğünü de kullanabilirsiniz.
 

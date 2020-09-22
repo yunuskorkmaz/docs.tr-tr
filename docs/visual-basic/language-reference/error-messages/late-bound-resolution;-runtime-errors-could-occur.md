@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
-ms.openlocfilehash: f1dc656a09eee05080356892b280a79505f3b9cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1c7b352c7bd61216ecce9901585945e740428ee3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397356"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873861"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>Sonradan bağlanma çözümlemesi; çalışma zamanı hataları oluşabilir
+
 Nesne [veri türü](../data-types/object-data-type.md)olarak belirtilen bir değişkene bir nesne atanır.  
   
  Olarak bir değişken bildirdiğinizde `Object` , derleyicinin *geç bağlama*gerçekleştirmesi gerekir ve bu, çalışma zamanında ek işlemlere neden olur. Ayrıca, uygulamanızı olası çalışma zamanı hatalarına da sunar. Örneğin, değişkenine bir atar <xref:System.Windows.Forms.Form> `Object` ve sonra özelliğe erişmeyi denerseniz <xref:System.Xml.XmlDocument.NameTable%2A?displayProperty=nameWithType> , <xref:System.MemberAccessException> sınıf bir <xref:System.Windows.Forms.Form> özelliği kullanıma sunmadığından çalışma zamanı bir oluşturur `NameTable` .  

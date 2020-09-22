@@ -5,14 +5,15 @@ helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-ms.openlocfilehash: f2400334182d373ea49c130fd17bc4f9943248d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e566239c56efa8ca8e83bff92486fec4c434e92b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408451"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874736"
 ---
 # <a name="attribute-list-visual-basic"></a>Öznitelik Listesi (Visual Basic)
+
 Belirtilen bir programlama öğesine uygulanacak öznitelikleri belirtir. Birden çok öznitelik virgülle ayrılır. Bir özniteliğin sözdizimi aşağıda verilmiştir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -22,6 +23,7 @@ Belirtilen bir programlama öğesine uygulanacak öznitelikleri belirtir. Birden
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
 |||
 |---|---|
 |`attributemodifier`|Kaynak dosyanın başlangıcında uygulanan öznitelikler için gereklidir. [Bütünleştirilmiş kod](../modifiers/assembly.md) veya [Modül](../modifiers/module-keyword.md)olabilir.|
@@ -30,6 +32,7 @@ Belirtilen bir programlama öğesine uygulanacak öznitelikleri belirtir. Birden
 |`attributeinitializer`|İsteğe bağlı. Bu öznitelik için değişken veya özellik başlatıcıları listesi. Birden çok Başlatıcı virgülle ayrılır.|
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Neredeyse tüm programlama öğeleri (türler, yordamlar, özellikler vb.) için bir veya daha fazla öznitelik uygulayabilirsiniz. Öznitelikler, derlemenizin meta verilerinde görünür ve kodunuza açıklama eklemek veya belirli bir programlama öğesinin nasıl kullanılacağını belirtmek için yardımcı olabilirler. Visual Basic ve .NET Framework tarafından tanımlanan öznitelikleri uygulayabilir ve kendi öznitelerinizi tanımlayabilirsiniz.  
 
  Özniteliklerin ne zaman kullanılacağı hakkında daha fazla bilgi için bkz. [özniteliklere genel bakış](../../programming-guide/concepts/attributes/index.md). Öznitelik adları hakkında daha fazla bilgi için bkz. [bildirilmemiş öğe adları](../../programming-guide/language-features/declared-elements/declared-element-names.md).  
@@ -47,15 +50,16 @@ Belirtilen bir programlama öğesine uygulanacak öznitelikleri belirtir. Birden
 - **Değişkenlerinden.** Bir özniteliğin tüm Konumsal bağımsız değişkenleri herhangi bir değişken veya özellik başlatıcıdan önce gelmelidir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, <xref:System.Runtime.InteropServices.DllImportAttribute> bir yordamın iskelet tanımına özniteliğini uygular `Function` .  
   
  [!code-vb[VbVbalrStatements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#1)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>Öznitelikli yordamın yönetilmeyen bir dinamik bağlantı kitaplığındaki (DLL) bir giriş noktasını temsil ettiğini belirtir. Özniteliği bir konum bağımsız değişkeni olarak DLL adını ve değişken başlatıcıları olarak diğer bilgileri sağlar.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> Öznitelikli yordamın yönetilmeyen bir dinamik bağlantı kitaplığındaki (DLL) bir giriş noktasını temsil ettiğini belirtir. Özniteliği bir konum bağımsız değişkeni olarak DLL adını ve değişken başlatıcıları olarak diğer bilgileri sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Bütünleştirilmiş Kod](../modifiers/assembly.md)
-- [Birimi\<keyword>](../modifiers/module-keyword.md)
+- [Birimi \<keyword>](../modifiers/module-keyword.md)
 - [Özniteliklere genel bakış](../../programming-guide/concepts/attributes/index.md)
 - [Nasıl yapılır: Kodda Deyimleri Bölme ve Birleştirme](../../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)

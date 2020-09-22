@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
-ms.openlocfilehash: 290ca81dea500558ed73956c91bdf7bfec312014
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d7399e7f51dc7c00ed903fa74647038009433ac0
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400402"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870921"
 ---
 # <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>\<variable> aralık değişkeni kapsayan bir blok içinde bir değişken, önceden tanımlanmış bir aralık değişkeni veya bir sorgu ifadesinde örtük olarak bildirilmiş bir değişken gizliyor
+
 ,, Veya yan tümcesinde belirtilen bir Aralık değişkeni adı, `Select` `From` `Aggregate` `Let` önceden sorguda belirtilen bir aralık değişkeninin adını veya bir alan adı ya da bir toplama işlevinin adı gibi, sorgu tarafından örtük olarak tanımlanan bir değişkenin adını çoğaltır.  
   
  **Hata kimliği:** BC36633  

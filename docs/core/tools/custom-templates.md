@@ -3,12 +3,12 @@ title: DotNet New için özel şablonlar
 description: Herhangi bir .NET projesi veya dosya türü için özel şablonlar hakkında bilgi edinin.
 author: adegeo
 ms.date: 05/20/2020
-ms.openlocfilehash: 1d2e5ffcb0b279f1686855834c2357827a4dc7d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 55091ef9bb9f7a2aa24f585c94aa2a47960b1829
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538101"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874719"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>DotNet New için özel şablonlar
 
@@ -55,7 +55,7 @@ Kaynak dosya ve klasörler, şablon altyapısının komut çalıştırıldığı
 
 Dosyadaki *template.js* , şablonun kök dizinindeki bir *.template.config* klasörüne yerleştirilir. Dosya, şablon altyapısına yapılandırma bilgileri sağlar. En düşük yapılandırma, aşağıdaki tabloda gösterilen üyeleri gerektirir ve bu, işlevsel bir şablon oluşturmak için yeterlidir.
 
-| Üye            | Tür          | Description |
+| Üye            | Tür          | Açıklama |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Dosyadaki *template.js* JSON şeması. JSON şemalarını destekleyen düzenleyiciler, şema belirtildiğinde JSON düzenlemesi özelliklerini etkinleştirir. Örneğin, [Visual Studio Code](https://code.visualstudio.com/) IntelliSense 'i etkinleştirmek için bu üyeyi gerektirir. Değerini kullanın `http://json.schemastore.org/template` . |
 | `author`          | string        | Şablonun yazarı. |
@@ -63,6 +63,8 @@ Dosyadaki *template.js* , şablonun kök dizinindeki bir *.template.config* klas
 | `identity`        | string        | Bu şablon için benzersiz bir ad. |
 | `name`            | string        | Kullanıcıların göreceği şablonun adı. |
 | `shortName`       | string        | Şablon adının Kullanıcı tarafından belirtildiği, GUI aracılığıyla seçilmemiş ortamlar için geçerli olan şablonu seçmek üzere varsayılan bir Özet adı. Örneğin, CLı komutlarıyla bir komut isteminden Şablonlar kullanılırken kısa ad yararlı olur. |
+| `sourceName`       | string        | Değiştirilecek kaynak ağaçtaki ad, kullanıcının belirttiği adla değiştirin. Şablon altyapısı, yapılandırma dosyasında bahsedilen ' ın herhangi bir oluşumunu arayacaktır `sourceName` ve dosya adlarında ve dosya içeriğinde yerini alır. İle değiştirilmelidir değeri, `-n` `--name` bir şablon çalıştırılırken veya seçenekleri kullanılarak verilebilir. Ad belirtilmemişse, geçerli dizin kullanılır.|
+| `preferNameDirectory`       | boolean        | Ad belirtilmişse şablon için bir dizin oluşturulup oluşturulmayacağını belirtir, ancak bir çıkış dizini ayarlanmamışsa (içeriği doğrudan geçerli dizinde oluşturmak yerine). Varsayılan değer false'tur.|
 
 Dosyadaki *template.js* tam şeması [JSON Şema deposunda](http://json.schemastore.org/template)bulunur. Dosyadaki *template.js* hakkında daha fazla bilgi için bkz. [DotNet şablon oluşturma wiki](https://github.com/dotnet/templating/wiki).
 

@@ -16,17 +16,19 @@ helpviewer_keywords:
 - Overridable keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-ms.openlocfilehash: dcbabde8464dd8a0ce5fad24d7d72b1e780270d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8506aba7e64f2dbd975cc275cefb7b5bb1aefda5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392125"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875010"
 ---
 # <a name="overridable-visual-basic"></a>Geçersiz Kılınabilir (Visual Basic)
+
 Bir özellik veya yordamın, türetilmiş bir sınıftaki aynı adlı bir özellik veya yordam tarafından geçersiz kılınabileceğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Değiştirici, bir `Overridable` sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. [NotOverridable](notoverridable.md) değiştiricisi bir özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasını önler.  Daha fazla bilgi için bkz. [Devralma Temelleri](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
  `Overridable`Veya `NotOverridable` değiştiricisi belirtilmemişse, varsayılan ayar, özelliğin veya metodun bir temel sınıf özelliğini veya yöntemini geçersiz kıldığına bağlıdır. Özellik veya yöntem bir temel sınıf özelliğini veya yöntemini geçersiz kılıyorsa, varsayılan ayar olur `Overridable` ; Aksi takdirde, olur `NotOverridable` .  
@@ -38,6 +40,7 @@ Bir özellik veya yordamın, türetilmiş bir sınıftaki aynı adlı bir özell
  `Overridable`Yalnızca bir özellik veya yordam bildirimi ifadesinde kullanabilirsiniz.  
   
 ## <a name="combined-modifiers"></a>Birleşik değiştiriciler  
+
  `Overridable` `NotOverridable` Bir yöntem için veya belirtemezsiniz `Private` .  
   
  `Overridable` `MustOverride` Aynı bildirimde, veya ile birlikte belirtemezsiniz `NotOverridable` `Shared` .  
@@ -45,6 +48,7 @@ Bir özellik veya yordamın, türetilmiş bir sınıftaki aynı adlı bir özell
  Geçersiz kılan bir öğe örtük olarak geçersiz kılınabilir olduğundan, `Overridable` ile birleştiremezsiniz `Overrides` .  
   
 ## <a name="usage"></a>Kullanım  
+
  `Overridable`Değiştirici şu bağlamlarda kullanılabilir:  
   
  [Function Deyimi](../statements/function-statement.md)  

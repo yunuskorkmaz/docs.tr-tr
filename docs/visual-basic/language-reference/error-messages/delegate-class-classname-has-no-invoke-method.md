@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
-ms.openlocfilehash: 27be97ba2930791bcb9012c824bc418a0089b037
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6ad06262806088347c94b3040b743618a3b3695
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409718"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874497"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>'\<classname>' temsilci sınıfında Invoke yöntemi yok, bu nedenle bu türdeki bir ifade bir yöntem çağrısının hedefi olamaz
+
 Temsilci `Invoke` sınıfında uygulanmadığı için bir temsilci aracılığıyla yapılan çağrı başarısız oldu `Invoke` .  
   
  **Hata kimliği:** BC30220  

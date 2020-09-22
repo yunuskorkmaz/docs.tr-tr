@@ -10,14 +10,15 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: 46b93c060a12d82b34dafdf3aa4ea677df6f54cd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 13d86aad8b68391f7effe2f6637adc68d8a3b59a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404297"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872011"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent Deyimi
+
 Sınıf, form veya belge içinde modül düzeyinde belirtilen bir olayı tetikler.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -27,6 +28,7 @@ RaiseEvent eventname[( argumentlist )]
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `eventname`  
  Gereklidir. Tetiklenecek etkinliğin adı.  
   
@@ -34,6 +36,7 @@ RaiseEvent eventname[( argumentlist )]
  İsteğe bağlı. Değişkenlerin, dizilerin veya ifadelerin virgülle ayrılmış listesi. `argumentlist`Bağımsız değişkenin parantez içine alınması gerekir. Bağımsız değişken yoksa, parantezler atlanmalıdır.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Gerekli, `eventname` modül içinde belirtilen bir olayın adıdır. Visual Basic değişken adlandırma kuralları ' nı izler.  
   
  Olayın oluşturulduğu modül içinde bildirilmemiş bir hata oluşur. Aşağıdaki kod parçası bir olay bildirimini ve olayın oluşturulduğu yordamı gösterir.  
@@ -51,6 +54,7 @@ RaiseEvent eventname[( argumentlist )]
 > Özel bir olay tanımlayarak olayların varsayılan davranışını değiştirebilirsiniz. Özel olaylar için, `RaiseEvent` ifade olayın `RaiseEvent` erişimcisini çağırır. Özel olaylar hakkında daha fazla bilgi için bkz. [Event deyimi](event-statement.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, 10 ile 0 arasındaki saniye sayısını saymak için olayları kullanır. Kod, deyimi dahil olmak üzere olayla ilgili yöntemlerin, özelliklerin ve deyimlerden birkaçını gösterir `RaiseEvent` .  
   
  Olayı oluşturan sınıf olay kaynağıdır ve olayı işleyen yöntemler olay işleyicileridir. Bir olay kaynağı, oluşturduğu olaylar için birden çok işleyicilere sahip olabilir. Sınıf olayı harekete geçirirse, bu olay nesnenin bu örneğine yönelik olayları işlemek için seçilmiş olan her sınıfta oluşturulur.  
@@ -66,6 +70,7 @@ RaiseEvent eventname[( argumentlist )]
  [!code-vb[VbVbalrEvents#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Örnek  
+
  Koduna aşağıdaki kodu ekleyin `Form1` . Veya gibi mevcut olabilecek yinelenen yordamları değiştirin `Form_Load` `Button_Click` .  
   
  [!code-vb[VbVbalrEvents#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#15)]  
@@ -77,7 +82,7 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Olaylar](../../programming-guide/language-features/events/index.md)
+- [Ekinlikler](../../programming-guide/language-features/events/index.md)
 - [Event Deyimi](event-statement.md)
 - [AddHandler Deyimi](addhandler-statement.md)
 - [RemoveHandler Deyimi](removehandler-statement.md)

@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 030cb31b8f1ba0e8eaa82eeb8e37153411a53404
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12155062f04b7619cae581540abfc4ce1a8ae34f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400311"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875135"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>'\<membername>' üyesinin türü CLS uyumlu değil
+
 Bu üye için belirtilen veri türü, [Dil bağımsızlığı ve dilden bağımsız bileşenlerin](../../../standard/language-independence-and-language-independent-components.md) (CLS) bir parçası değil. .NET Framework ve Visual Basic bu veri türünü desteklediği için bu, bileşeninizdeki bir hata değildir. Ancak, tamamen CLS uyumlu kodda yazılmış başka bir bileşen bu veri türünü desteklemeyebilir. Bu tür bir bileşen, bileşeniniz ile başarılı bir şekilde etkileşim kurabilmeyebilir.  
   
  Aşağıdaki Visual Basic veri türleri CLS uyumlu değildir:  

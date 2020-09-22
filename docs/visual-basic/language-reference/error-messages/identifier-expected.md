@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: e33450e921f1859c97edf1fbf123a0a95267767f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a2f86704c0734ef462a92883e2368cba57349058
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402894"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874020"
 ---
 # <a name="identifier-expected"></a>Tanımlayıcı bekleniyor
+
 Tanınabilir bir şekilde bildirilmeyen öğe adı olmayan bir programlama öğesi, bağlamı bir öğe adı gerektirdiğinde oluşur. Olası nedenlerden biri, bir özniteliğin deyimin başlangıcında dışında bir yerde belirtilmiş olması olabilir.  
   
  **Hata kimliği:** BC30203  

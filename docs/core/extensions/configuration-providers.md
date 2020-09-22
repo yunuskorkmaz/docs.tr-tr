@@ -4,12 +4,12 @@ description: .NET uygulamalarını yapılandırmak için yapılandırma sağlay�
 author: IEvangelist
 ms.author: dapine
 ms.date: 09/16/2020
-ms.openlocfilehash: fe90ba9aee08ec9c1316335a5b3fd8dd6e90a811
-ms.sourcegitcommit: fe8877e564deb68d77fa4b79f55584ac8d7e8997
+ms.openlocfilehash: d5333e8e52feb7d28e2149a988dc7ce53a926a50
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90720856"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874748"
 ---
 # <a name="configuration-providers-in-net"></a>.NET 'teki yapılandırma sağlayıcıları
 
@@ -203,8 +203,9 @@ set CustomPrefix_TransientFaultHandlingOptions__AutoRetryDelay=00:00:21
 dotnet run
 ```
 
-Varsayılan yapılandırma, ön eki olan ortam değişkenlerini ve komut satırı bağımsız değişkenlerini yükler `DOTNET_` . `DOTNET_`Ön ek, .NET tarafından konak ve uygulama yapılandırması için kullanılır, ancak kullanıcı yapılandırması için kullanılmaz.
-<!-- For more information on host and app configuration, see .NET Generic Host. -->
+Varsayılan yapılandırma, ön eki olan ortam değişkenlerini ve komut satırı bağımsız değişkenlerini yükler `DOTNET_` . `DOTNET_`Ön ek, .NET tarafından [konak](generic-host.md#host-configuration) ve [uygulama yapılandırması](generic-host.md#app-configuration)için kullanılır, ancak kullanıcı yapılandırması için kullanılmaz.
+
+Konak ve uygulama yapılandırması hakkında daha fazla bilgi için bkz. [.NET genel ana bilgisayar](generic-host.md).
 
 [Azure App Service](https://azure.microsoft.com/services/app-service), **Ayarlar > yapılandırma** sayfasında **Yeni uygulama ayarı** ' nı seçin. Azure App Service uygulama ayarları şunlardır:
 
@@ -313,4 +314,5 @@ Yukarıdaki kodda, <xref:Microsoft.Extensions.Configuration.MemoryConfigurationB
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [.NET 'teki yapılandırma](configuration.md)
-- [Özel bir yapılandırma sağlayıcısı uygulama](custom-configuration-provider.md)
+- [.NET genel ana bilgisayar](generic-host.md)
+- [Özel yapılandırma sağlayıcısı uygulama](custom-configuration-provider.md)

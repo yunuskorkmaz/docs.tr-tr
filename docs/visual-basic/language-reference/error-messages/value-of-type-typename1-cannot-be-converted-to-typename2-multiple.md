@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 25008f05979638e050b74fc659fdc0a6d13b3c31
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4b74fdc5584fd296d4bbe36034920d4b467dbb7a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406592"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90875074"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>'\<typename1>' türünün değeri '\<typename2>' olarak dönüştürülemez (Birden fazla dosya başvurusu)
+
 ' ' Türünün değeri \<typename1> ' ' olarak dönüştürülemez \<typename2> . ' ' Projesindeki ' ' \<filepath1> \<projectname1> öğesine bir dosya başvurusu olan ' ' projesindeki ' ' öğesine bir dosya başvurusu karıştırılması nedeniyle tür uyumsuzluğu olabilir \<filepath2> \<projectname2> . Her iki derleme de aynıysa, bu başvuruları her iki başvuruyu da aynı konumdan değiştirmeyi deneyin.  
   
  Bir projenin bir derlemeye birden fazla dosya başvurusu yaptığı durumlarda, derleyici bir türün diğerine dönüştürülebileceğini garanti edemez.  

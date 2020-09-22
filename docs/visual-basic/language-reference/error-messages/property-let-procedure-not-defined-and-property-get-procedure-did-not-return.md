@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID451
 ms.assetid: 8542382a-689f-4e1b-abc0-c1e2dadb92f4
-ms.openlocfilehash: 7da1de98132f47740e805ed34ff3890f0ba0f889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbeaa224ea9e095f86c37e571492d83bc98b4397
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920759"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871090"
 ---
 # <a name="property-let-procedure-not-defined-and-property-get-procedure-did-not-return-an-object"></a>Özelliğin Let yordamı tanımlı değil ve Get yordamı bir nesne döndürmedi
-Belirli özellikleri, yöntemleri ve işlemleri yalnızca uygulayabilirsiniz `Collection` nesneleri. Bir işlem veya koleksiyonlar için özel özelliği belirtildi, ancak nesnesi koleksiyonu değil.  
+
+Belirli özellikler, Yöntemler ve işlemler yalnızca nesneler için geçerlidir `Collection` . Koleksiyonlar için özel bir işlem veya özellik belirttiniz, ancak nesne bir koleksiyon değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Nesneye veya özelliğe adının yazımını denetleyin veya bir nesne olduğunu doğrulayın. bir `Collection` nesne.  
+1. Nesnenin veya özellik adının yazımını denetleyin ya da nesnenin bir nesne olduğunu doğrulayın `Collection` .  
   
-2. Bakmak `Add` nesne sözdizimi emin olmasını koleksiyona eklemek için kullanılan yöntem doğru olduğundan ve tüm tanımlayıcılar doğru yazıldığından.  
+2. `Add`Sözdiziminin doğru olduğundan ve tanımlayıcıların doğru yazıldığından emin olmak için nesneyi koleksiyona eklemek için kullanılan yöntemine bakın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID62
 ms.assetid: 65292704-6e7d-4622-9f50-eb655a59b016
-ms.openlocfilehash: 5da14c7a28ecdcd023fc6439cb6ed64444c1183b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cb0373fb0652e9600ac8651661708414561aca
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013796"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873959"
 ---
 # <a name="input-past-end-of-file"></a>Dosya sonunun ötesinde giriş
-Ya da bir `Input` ifadesi boş olan bir dosyayı veya tüm veriler kullanılır veya kullandığınız okuma `EOF` işlevi bir dosyayla ikili erişimi için açılır.  
+
+Bir `Input` ifade, boş olan bir dosyadan veya tüm verilerin kullanıldığı bir dosyadan okunuyor ya da `EOF` işlevi ikili erişim için açılmış bir dosya ile kullandınız.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Kullanım `EOF` hemen önce işlev `Input` deyimini dosyanın sonuna algılayın.  
+1. `EOF` `Input` Dosya sonunu algılamak için deyimden hemen önce işlevini kullanın.  
   
-2. Dosya ikili erişimi için açılıp açılmadığını kullanın `Seek` ve `Loc`.  
+2. Dosya ikili erişim için açılırsa, `Seek` ve kullanın `Loc` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

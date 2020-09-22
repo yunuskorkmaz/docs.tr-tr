@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
-ms.openlocfilehash: 537689405ea30bdd7c075320eba58a8723a93cdb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af436b8fd57ff0d2747c766a64af175760931009
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397408"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873896"
 ---
 # <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' yalnızca bir örnek yöntemi içinde geçerlidir
+
 `Me`, `MyClass` Ve `MyBase` anahtar sözcükleri belirli sınıf örneklerine başvurur. Onları paylaşılan bir veya yordam içinde kullanamazsınız `Function` `Sub` .  
   
  **Hata kimliği:** BC30043  

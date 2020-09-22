@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 919c6873ba63addb776d756a58c44a3fe3f0ec3d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17c31301e28c757954e72ba103254f038905671f
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409640"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874359"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Projedeki XML şemaları derlenirken hataları oluştu
+
 Projedeki XML şemaları derlenirken hatalar oluştu. Bu nedenle, XML IntelliSense kullanılamıyor.  
   
  Projeye dahil edilen bir XML şema tanımı (XSD) şemasında bir hata var. Bu hata, proje için mevcut XSD şema kümesiyle çakışan bir XSD şeması (. xsd) dosyası eklediğinizde oluşur.  

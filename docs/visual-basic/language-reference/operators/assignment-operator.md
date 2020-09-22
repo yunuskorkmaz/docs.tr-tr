@@ -8,14 +8,15 @@ helpviewer_keywords:
 - = operator [Visual Basic]
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
-ms.openlocfilehash: 516cb21e02d9fb2cd4b8d72282bb74163e1fb14b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eccea0b43564a4980778c9d1a5b8f9a8c2a9207d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371771"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874829"
 ---
 # <a name="-operator-visual-basic"></a>= İşleci (Visual Basic)
+
 Bir değişkene veya özelliğe bir değer atar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -25,6 +26,7 @@ variableorproperty = value
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `variableorproperty`  
  Herhangi bir yazılabilir değişken veya herhangi bir özellik.  
   
@@ -32,15 +34,18 @@ variableorproperty = value
  Herhangi bir sabit değer, sabit veya ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Eşittir işaretinin () sol tarafındaki öğesi `=` basit bir skaler değişken, bir özellik veya bir dizi öğesi olabilir. Değişken veya özellik [ReadOnly](../modifiers/readonly.md)olamaz. `=`İşleci değeri, sol tarafında bulunan değişkene veya özelliğe doğru değerini atar.  
   
 > [!NOTE]
 > `=`İşleci bir karşılaştırma işleci olarak da kullanılır. Ayrıntılar için bkz. [karşılaştırma işleçleri](comparison-operators.md).  
   
 ## <a name="overloading"></a>Aşırı Yükleme  
+
  `=`İşleci, atama işleci olarak değil yalnızca ilişkisel karşılaştırma işleci olarak aşırı yüklenebilir. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, atama işlecini gösterir. Sağdaki değer soldaki değişkene atanır.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  

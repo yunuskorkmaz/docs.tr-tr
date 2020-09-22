@@ -26,14 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 82f19762865fdf3c3f32a0349e21e3b97bebd567
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 17bc806f2e92c61f1dd7425de40b1a68f926a583
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404284"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90872028"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim Deyimi (Visual Basic)
+
 , Bir dizi değişkeni için depolama alanını yeniden konumlandırır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -51,6 +52,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 |`boundlist`|Gereklidir. Yeniden tanımlanmış dizinin her boyutunun sınırları listesi.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `ReDim`Önceden tanımlanmış bir dizinin bir veya daha fazla boyutunun boyutunu değiştirmek için ifadesini kullanabilirsiniz. Büyük bir diziniz varsa ve bazı öğeleri artık gerekmiyorsa, `ReDim` dizi boyutunu azaltarak belleği serbest bırakabilirsiniz. Öte yandan, dizide daha fazla öğe gerekiyorsa, `ReDim` bunları ekleyebilir.  
   
  `ReDim`İfade yalnızca diziler için tasarlanmıştır. Yapı değerleri (yalnızca tek bir değer içeren değişkenler), koleksiyonlar veya yapılar üzerinde geçerli değildir. Türünde bir değişken bildirirseniz `Array` , `ReDim` deyimin yeni diziyi oluşturmak için yeterli tür bilgilerine sahip olmadığını unutmayın.  
@@ -79,20 +81,21 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>Davranış  
   
-- **Dizi değiştirme.** `ReDim`Mevcut diziyi serbest bırakır ve aynı dereceye sahip yeni bir dizi oluşturur. Yeni dizi, dizi değişkeninde yayınlanan dizinin yerini alır.  
+- **Dizi değiştirme.** `ReDim` Mevcut diziyi serbest bırakır ve aynı dereceye sahip yeni bir dizi oluşturur. Yeni dizi, dizi değişkeninde yayınlanan dizinin yerini alır.  
   
 - **Preserve olmadan başlatma.** Belirtmezseniz `Preserve` , `ReDim` Yeni dizinin öğelerini, veri türleri için varsayılan değeri kullanarak başlatır.  
   
 - **Preserve ile başlatma.** Belirtirseniz `Preserve` , Visual Basic öğeleri varolan diziden yeni diziye kopyalar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, dizideki mevcut verileri kaybetmeden dinamik bir dizinin en son boyutunun boyutunu artırır ve sonra boyutu kısmi veri kaybıyla azaltır. Son olarak, boyutu özgün değerine geri düşürür ve tüm dizi öğelerini yeniden başlatır.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
  `Dim`İfade üç boyutlu yeni bir dizi oluşturur. Her boyut 10 ' un bir bağı ile bildirildiği için her boyutun dizi dizini 0 ile 10 arasında değişebilir. Aşağıdaki tartışmada, üç boyut katman, satır ve sütun olarak adlandırılır.  
   
- İlki, `ReDim` değişkende var olan dizinin yerini alan yeni bir dizi oluşturur `intArray` . `ReDim`Varolan dizideki tüm öğeleri yeni diziye kopyalar. Ayrıca, her katmandaki her satırın sonuna 10 daha fazla sütun ekler ve bu yeni sütunlardaki öğeleri 0 ' a ( `Integer` dizinin öğe türü olan varsayılan değeri) başlatır.  
+ İlki, `ReDim` değişkende var olan dizinin yerini alan yeni bir dizi oluşturur `intArray` . `ReDim` Varolan dizideki tüm öğeleri yeni diziye kopyalar. Ayrıca, her katmandaki her satırın sonuna 10 daha fazla sütun ekler ve bu yeni sütunlardaki öğeleri 0 ' a ( `Integer` dizinin öğe türü olan varsayılan değeri) başlatır.  
   
  İkincisi `ReDim` başka bir yeni dizi oluşturur ve uygun olan tüm öğeleri kopyalar. Ancak, her katmandaki her satırın sonundan beş sütun kaybolur. Bu sütunları kullanmayı bitirdiğinizde bu bir sorun değildir. Büyük bir dizinin boyutunu azaltmak artık ihtiyaç duymayacak belleği serbest bırakabilirsiniz.  
   
@@ -106,5 +109,5 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 - [Const Deyimi](const-statement.md)
 - [Dim Deyimi](dim-statement.md)
 - [Erase Deyimi](erase-statement.md)
-- [Nothing](../nothing.md)
+- [Yapma](../nothing.md)
 - [Diziler](../../programming-guide/language-features/arrays/index.md)

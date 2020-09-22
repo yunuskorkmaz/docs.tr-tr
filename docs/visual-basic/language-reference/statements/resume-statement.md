@@ -15,14 +15,15 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: 3f49f05f1deb2027b03bbf3443ca44f30c44344e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: db9d47798d087d60f4318b06fe3291fb895e6618
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404219"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90871876"
 ---
 # <a name="resume-statement"></a>Resume Deyimi
+
 Bir hata işleme yordamı tamamlandıktan sonra yürütmeyi sürdürür.  
   
  Yapılandırılmamış özel durum işleme ve ve deyimlerini kullanmak yerine kodunuzda yapılandırılmış özel durum işlemeyi kullanmanızı öneririz `On Error` `Resume` . Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](try-catch-finally-statement.md).  
@@ -34,6 +35,7 @@ Resume [ Next | line ]
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `Resume`  
  Gereklidir. Hata işleyicisiyle aynı yordamda hata oluştuysa, yürütme hataya neden olan deyimle devam eder. Çağrılan yordamda hata oluştuysa, yürütme son çağrılan ve hata işleme yordamını içeren yordamın dışında devam eden ifadede sürdürülür.  
   
@@ -53,14 +55,16 @@ Resume [ Next | line ]
  `Resume`İfade, bir ifade içeren herhangi bir yordamda kullanılamaz `Try...Catch...Finally` .  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, `Resume` bir yordamda hata işlemeyi sonlandırmak için ifadesini kullanır ve ardından hataya neden olan deyimle yürütmeyi sürdürür. Deyimin kullanımını göstermek için 55 hata numarası oluşturulur `Resume` .  
   
  [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Ad alanı:** [Microsoft. VisualBasic](../runtime-library-members.md)  
   
- **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

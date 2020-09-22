@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: aa3e1d6281af22b301a4697b265ed3fbf23e3de4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7975dc767ae652359c904271d6610be34e4cb80
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84373920"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90870246"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>Lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden olabilir
+
 Lambda ifadesinde yineleme değişkeni kullanılması beklenmeyen sonuçlara neden olabilir. Bunun yerine, döngü içinde bir yerel değişken oluşturun ve bunu yineleme değişkeninin değerine atayın.  
   
  Bu uyarı, döngü içinde belirtilen bir lambda ifadesinde bir döngü yineleme değişkeni kullandığınızda görüntülenir. Örneğin, aşağıdaki örnek uyarının görünmesine neden olur.  

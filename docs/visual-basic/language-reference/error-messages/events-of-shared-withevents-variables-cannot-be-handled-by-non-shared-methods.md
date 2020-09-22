@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30594
 ms.assetid: 5b9fceb4-ab11-41bb-ad3b-6f1a9da8ae7e
-ms.openlocfilehash: fc163c1069aa6f41766664e0fa5f5a9c34a1f73d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d519463e036de215143efad5be3745484ac17d82
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84409575"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874285"
 ---
 # <a name="events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods"></a>Paylaşılan WithEvents değişkenlerinin olayları paylaşılmayan yöntemler tarafından işlenemez
+
 Değiştiriciyle belirtilen bir değişken `Shared` paylaşılan bir değişkendir. Paylaşılan değişken tam olarak bir depolama konumunu tanımlar. Değiştirici ile belirtilen bir değişken, `WithEvents` değişkenin ait olduğu türün, değişkenin oluşturulduğu olay kümesini işlediğini onaylar. Değişkene bir değer atandığında, bildirim tarafından oluşturulan özellik `WithEvents` mevcut olay işleyicisinin kancalarını kaldırır ve yöntemi aracılığıyla yeni olay işleyicisini takar `Add` .  
   
  **Hata kimliği:** BC30594  

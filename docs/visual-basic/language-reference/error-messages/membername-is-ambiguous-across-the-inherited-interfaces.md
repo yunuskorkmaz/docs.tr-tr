@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: f242db9e02a1983e731dce280be0e8f8a8b12712
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8fb8f84b07c488c817fd85fdd256d9aca7558a77
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397278"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873791"
 ---
 # <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<membername>', devralınmış '\<interfacename1>' ve '\<interfacename2>' arabirimleri arasında belirsiz
+
 Arabirim, birden çok arabirimden aynı ada sahip iki veya daha fazla üyeyi devralır.  
   
  **Hata kimliği:** BC30685  

@@ -9,14 +9,15 @@ helpviewer_keywords:
 - While statement [Visual Basic]
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
-ms.openlocfilehash: d9eb8cb95d46e860aa127954d7b44e37991d4a13
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e3ab95f43e101a9ad8abe6fa61b94ae7542e409c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84391592"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869478"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While Deyimi (Visual Basic)
+
 Belirli bir koşul olduğu sürece bir dizi deyim çalıştırır `True` .  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,13 +36,14 @@ End While
   
 |Terim|Tanım|  
 |---|---|  
-|`condition`|Gereklidir. `Boolean`ifadesini. İse `condition` `Nothing` , Visual Basic olduğu gibi davranır `False` .|  
+|`condition`|Gereklidir. `Boolean` ifadesini. İse `condition` `Nothing` , Visual Basic olduğu gibi davranır `False` .|  
 |`statements`|İsteğe bağlı. Aşağıdaki her seferinde çalıştırılan bir veya daha fazla deyim `While` `condition` `True` .|  
 |`Continue While`|İsteğe bağlı. Denetimi bloğun bir sonraki yinelemesine aktarır `While` .|  
 |`Exit While`|İsteğe bağlı. Denetimi bloğunun dışına aktarır `While` .|  
 |`End While`|Gereklidir. Bloğunun tanımını sonlandırır `While` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir `While...End While` koşul, bir koşulun kaldığı sürece belirsiz sayıda deyim yinelemek istediğinizde bir yapı kullanın `True` . Koşulu test ettiğiniz veya ne sonuçla test ettiğiniz hakkında daha fazla esneklik istiyorsanız [Do... seçeneğini tercih edebilirsiniz. Loop deyimleri](do-loop-statement.md). Deyimlerini bir dizi defa yinelemek istiyorsanız, [için... Sonraki Ifade](for-next-statement.md) genellikle daha iyi bir seçimdir.  
   
 > [!NOTE]
@@ -56,7 +58,8 @@ End While
  Bir `While` döngüyü diğerinin içine yerleştirerek iç içe geçirebilirsiniz. Ayrıca, farklı türlerde denetim yapılarını bir diğeri içinde iç içe geçirebilirsiniz. Daha fazla bilgi için bkz. [Iç Içe denetim yapıları](../../programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 ## <a name="exit-while"></a>Çıkış sırasında çıkış  
- [Exit While](exit-statement.md) deyimleri, bir döngüden çıkmak için başka bir yol sağlayabilir `While` . `Exit While`, denetimi hemen takip eden deyime aktarır `End While` .  
+
+ [Exit While](exit-statement.md) deyimleri, bir döngüden çıkmak için başka bir yol sağlayabilir `While` . `Exit While` , denetimi hemen takip eden deyime aktarır `End While` .  
   
  Genellikle `Exit While` bir koşul hesaplandıktan sonra (örneğin, bir `If...Then...Else` yapıda) kullanırsınız. Hatalı bir değer veya sonlandırma isteği gibi yineleme işleminin devam etmesi için gereksiz veya imkansız hale getiren bir koşul tespit ederseniz bir döngüden çıkmak isteyebilirsiniz. Sonsuz `Exit While` *döngüye*neden olabilecek bir koşul için test ettiğinizde kullanabilirsiniz. Bu, son derece büyük veya hatta sonsuz bir sayı çalışabilen bir döngüdür. Ardından, `Exit While` döngüyü atlamak için kullanabilirsiniz.  
   
@@ -67,16 +70,19 @@ End While
  `Continue While`Ekstre, denetimi hemen döngüsünün bir sonraki yinelemesine aktarır. Daha fazla bilgi için bkz. [Continue bildirisi](continue-statement.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte, döngü içindeki deyimler, değişken 10 ' dan büyük olana kadar çalışmaya devam eder `index` .  
   
  [!code-vb[VbVbalrStatements#171](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#171)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Continue While` ve deyimlerinin kullanımını gösterir `Exit While` .  
   
  [!code-vb[VbVbalrStatements#172](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#172)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek bir metin dosyasındaki tüm satırları okur. <xref:System.IO.File.OpenText%2A>Yöntemi dosyayı açar ve karakterleri okuyan bir döndürür <xref:System.IO.StreamReader> . Koşulunda, `While` <xref:System.IO.StreamReader.Peek%2A> öğesinin yöntemi `StreamReader` dosyanın ek karakterler içerip içermediğini belirler.  
   
  [!code-vb[VbVbalrStatements#173](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class14.vb#173)]  
@@ -89,4 +95,4 @@ End While
 - [Boolean Veri Türü](../data-types/boolean-data-type.md)
 - [İç İçe Geçmiş Denetim Yapıları](../../programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Exit Deyimi](exit-statement.md)
-- [Continue bildirisi](continue-statement.md)
+- [Continue Deyimi](continue-statement.md)

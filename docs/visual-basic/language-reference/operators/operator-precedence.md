@@ -14,17 +14,19 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-ms.openlocfilehash: eef6314f5fc1f5a7fffa7997559f697130f6f755
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b5649cd2a58fd8d300df58c563aebeed8976c4f5
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401452"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874783"
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic'de İşleç Önceliği
+
 Bir ifadede birkaç işlem gerçekleştiğinde, her parça, *işleç önceliği*olarak adlandırılan önceden belirlenmiş bir sırada değerlendirilir ve çözümlenir.
 
 ## <a name="precedence-rules"></a>Öncelik kuralları
+
  İfadeler birden fazla kategoriden işleçler içerdiğinde, bunlar aşağıdaki kurallara göre değerlendirilir:
 
 - Aritmetik ve birleştirme işleçleri aşağıdaki bölümde açıklanan öncelik sırasına sahiptir ve tümü karşılaştırma, mantıksal ve bit düzeyinde operatörlerden daha önceliklidir.
@@ -36,12 +38,15 @@ Bir ifadede birkaç işlem gerçekleştiğinde, her parça, *işleç önceliği*
 - Eşit önceliğe sahip işleçler, ifadede göründükleri sırada soldan sağa değerlendirilir.
 
 ## <a name="precedence-order"></a>Öncelik sırası
+
  İşleçler aşağıdaki öncelik sırasına göre değerlendirilir:
 
 ### <a name="await-operator"></a>Await İşleci
+
  Await
 
 ### <a name="arithmetic-and-concatenation-operators"></a>Aritmetik ve birleştirme Işleçleri
+
  Üs ( `^` )
 
  Birli kimlik ve olumsuzlama ( `+` , `–` )
@@ -59,9 +64,11 @@ Bir ifadede birkaç işlem gerçekleştiğinde, her parça, *işleç önceliği*
  Aritmetik bit kaydırma ( `<<` , `>>` )
 
 ### <a name="comparison-operators"></a>Karşılaştırma İşleçleri
+
  Tüm karşılaştırma işleçleri ( `=` , `<>` , `<` , `<=` , `>` , `>=` , `Is` , `IsNot` , `Like` , `TypeOf` ... `Is` )
 
 ### <a name="logical-and-bitwise-operators"></a>Mantıksal ve Bit Düzeyinde İşleçler
+
  Değilleme ( `Not` )
 
  Birlikte ( `And` , `AndAlso` )
@@ -71,6 +78,7 @@ Bir ifadede birkaç işlem gerçekleştiğinde, her parça, *işleç önceliği*
  Dışlamalı ayırıcı ( `Xor` )
 
 ### <a name="comments"></a>Yorumlar
+
  `=`İşleci atama işleci değil yalnızca eşitlik karşılaştırma işleçtir.
 
  Dize birleştirme işleci ( `&` ) bir aritmetik işleç değil, ancak önceliğe göre Aritmetik işleçlerle gruplandırılır.
@@ -78,6 +86,7 @@ Bir ifadede birkaç işlem gerçekleştiğinde, her parça, *işleç önceliği*
  `Is`Ve `IsNot` işleçleri nesne başvurusu karşılaştırma işleçleridir. İki nesnenin değerlerini karşılaştırmazlar; yalnızca iki nesne değişkeninin aynı nesne örneğine başvurmadığını belirlemesini denetler.
 
 ## <a name="associativity"></a>İlişkilendirilebilirlik
+
  Eşit önceliğe sahip işleçler bir ifadede birlikte görüntülendiğinde, örneğin çarpma ve bölme gibi, derleyici, her işlemi soldan sağa karşılaştığı şekilde değerlendirir. Aşağıdaki örnek bunu göstermektedir.
 
 ```vb
@@ -91,6 +100,7 @@ Dim n3 As Integer = 96 / (8 / 4)
  Bu davranış nedeniyle, operatörlerin Visual Basic olarak *sola ilişkilendirilebilir* olduğu söylenir.
 
 ## <a name="overriding-precedence-and-associativity"></a>Öncelik ve birleşim özelliklerini geçersiz kılma
+
  Bir ifadenin bazı bölümlerinin diğerlerinden önce değerlendirilmesini zorlamak için parantezleri kullanabilirsiniz. Bu, hem öncelik sırasını hem de sola ilişkilendirilebilirliği geçersiz kılabilir. Visual Basic, dış öğelerden önce parantez içine alınmış işlemleri her zaman gerçekleştirir. Bununla birlikte, parantez içinde parantez kullanmadığınız müddetçe, parantez içinde normal öncelik ve ilişkilendirilebilirlik sağlar. Aşağıdaki örnek bunu göstermektedir.
 
 ```vb

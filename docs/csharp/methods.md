@@ -4,12 +4,12 @@ description: Yöntemlere, yöntem parametrelerine ve yöntem dönüş değerleri
 ms.technology: csharp-fundamentals
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 879c553f8df560a3e2f3dccdbbf0d7e8a05c50cd
-ms.sourcegitcommit: cbacb5d2cebbf044547f6af6e74a9de866800985
+ms.openlocfilehash: 520aeed85ee00127c2bd3eee681b980d05f46d05
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89495544"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874711"
 ---
 # <a name="methods-in-c"></a>İçindeki Yöntemler (C#)
 
@@ -121,13 +121,14 @@ Bir başvuru türü parametresinin geçirilmesi, tek öğelerinin veya alanları
 
 Bazen, yönteminiz için bağımsız değişkenlerin tam sayısını belirttiğiniz gereksinim kısıtlayıcıdır. `params`Bir parametrenin parametre dizisi olduğunu göstermek için anahtar sözcüğünü kullanarak, yönteminizin değişken sayıda bağımsız değişkenle çağrılmasına izin verebilirsiniz. `params`Anahtar kelimesiyle etiketlenmiş parametre bir dizi türü olmalıdır ve yöntemin parametre listesindeki son parametre olmalıdır.
 
-Bir çağıran daha sonra yöntemi üç yöntemden birini çağırabilir:
+Bir çağıran daha sonra yöntemi dört şekilde çağırabilir:
 
 - İstenen sayıda öğe içeren uygun türdeki bir diziyi geçirerek.
 - Uygun türdeki bağımsız değişkenlerin virgülle ayrılmış bir listesini yöntemine geçirerek.
+- Geçirerek `null` .
 - Parametre dizisine bir bağımsız değişken sağlamıyor.
 
-Aşağıdaki örnek, `GetVowels` bir parametre dizisinin tüm sesli harfleri döndüren adlı bir yöntemi tanımlar. `Main`Yöntemi, yöntemi çağırmanın üç yolunu gösterir. Değiştirici içeren parametrelere ilişkin bağımsız değişkenler sağlamak için çağıranlar gerekli değildir `params` . Bu durumda, parametresi olur `null` .
+Aşağıdaki örnek, `GetVowels` bir parametre dizisinin tüm sesli harfleri döndüren adlı bir yöntemi tanımlar. `Main`Yöntemi, yöntemini çağırmanın dört yolunu gösterir. Değiştirici içeren parametrelere ilişkin bağımsız değişkenler sağlamak için çağıranlar gerekli değildir `params` . Bu durumda, parametresi boş bir dizidir.
 
 [!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
@@ -292,4 +293,4 @@ Daha fazla bilgi için bkz. [yineleyiciler](programming-guide/concepts/iterators
 - [dışı](language-reference/keywords/out-parameter-modifier.md)
 - [ref](language-reference/keywords/ref.md)
 - ['ndaki](language-reference/keywords/in-parameter-modifier.md)
-- [Parametreleri Geçirme](programming-guide/classes-and-structs/passing-parameters.md)
+- [Parametreleri geçirme](programming-guide/classes-and-structs/passing-parameters.md)

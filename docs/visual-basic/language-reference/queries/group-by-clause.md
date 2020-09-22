@@ -12,14 +12,15 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 5fce4f818e22373de7f1b37b941fd88155f3a33f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b60f6759ada845d8eab048bceb1e47f9546ee7d0
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359896"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869952"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By Tümcesi (Visual Basic)
+
 Bir sorgu sonucunun öğelerini gruplandırır. , Her gruba toplam işlevleri uygulamak için de kullanılabilir. Gruplandırma işlemi bir veya daha fazla anahtara göre belirlenir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -60,11 +61,13 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
      Gruba uygulanacak toplama işlevlerini de ekleyebilirsiniz.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Group By`Bir sorgunun sonuçlarını gruplara bölmek için yan tümcesini kullanabilirsiniz. Gruplandırma bir anahtara veya birden çok anahtardan oluşan bileşik anahtara göre belirlenir. Eşleşen anahtar değerleriyle ilişkili öğeler aynı gruba dahil edilir.  
   
  `aggregateList` `Into` `Group` Gruba başvurmak için kullanılan üye adını tanımlamak için yan tümcesinin ve anahtar sözcüğünün parametresini kullanırsınız. `Into`Gruplanmış öğeler için değerleri hesaplamak üzere yan tümcesine toplama işlevleri de ekleyebilirsiniz. Standart toplama işlevlerinin bir listesi için bkz. [Aggregate yan tümcesi](aggregate-clause.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, konumlarına (ülke/bölge) göre müşterilerin bir listesini gruplandırır ve her bir gruptaki müşterilerin sayısını sağlar. Sonuçlar ülke/bölge adına göre sıralanır. Gruplanmış sonuçlar şehir adına göre sıralanır.  
   
  [!code-vb[VbSimpleQuerySamples#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#11)]  
@@ -75,6 +78,6 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
 - [Sorgular](index.md)
 - [Select yan tümcesi](select-clause.md)
 - [From yan tümcesi](from-clause.md)
-- [Order By Yan Tümcesi](order-by-clause.md)
+- [Order by yan tümcesi](order-by-clause.md)
 - [Aggregate Yan Tümcesi](aggregate-clause.md)
 - [Group Join Yan Tümcesi](group-join-clause.md)

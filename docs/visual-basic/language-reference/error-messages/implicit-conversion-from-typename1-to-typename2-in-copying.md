@@ -7,14 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: 4d0f9aac795f683cf58210ea38b3783e451ccfc3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fced95fe24d42d4af2118706bcaf3337429fea91
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402868"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90873997"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>'\<typename1>' 'ByRef' parametresinin değerini eşleşen bağımsız değişkene geri kopyalarken '\<typename2>' türünden '\<parametername>' türüne örtük dönüştürme
+
 Bir yordam, karşılık gelen parametresinden farklı bir türün [ByRef](../modifiers/byref.md) bağımsız değişkeniyle çağırılır.  
   
  Bir bağımsız değişken geçirirseniz `ByRef` Visual Basic bazen bağımsız değişken değerini bir başvuruyu geçirmek yerine yordamda yerel bir değişkene kopyalar. Böyle bir durumda, yordam döndürüldüğünde Visual Basic, ardından yerel değişken değerini çağıran koddaki bağımsız değişkene geri kopyalamanız gerekir.  

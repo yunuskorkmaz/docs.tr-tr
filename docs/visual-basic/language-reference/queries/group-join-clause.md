@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 7916e51293c06016b2581b7109df3f0a599404ca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8d5f3ec80cb39825a3a283907d614b9be28e6e91
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359844"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90869911"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join Tümcesi (Visual Basic)
+
 İki koleksiyonu tek bir hiyerarşik koleksiyonda birleştirir. JOIN işlemi, eşleşen anahtarları temel alır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -40,6 +41,7 @@ Group Join element [As type] In collection _
 |`expressionList`|Gereklidir. Koleksiyondan öğe gruplarının nasıl toplanacağına ilişkin bir veya daha fazla ifade. Gruplanmış sonuçların üye adını belirlemek için `Group` () anahtar sözcüğünü kullanın `<alias> = Group` . Gruba uygulanacak toplama işlevlerini de ekleyebilirsiniz.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Group Join`Yan tümcesi, katılmakta olan koleksiyonlardan eşleşen anahtar değerlerini temel alarak iki koleksiyonu birleştirir. Elde edilen koleksiyon, ikinci koleksiyondaki bir öğe koleksiyonuna başvuran ve ilk koleksiyondaki anahtar değeriyle eşleşen bir üye içerebilir. İkinci koleksiyondaki gruplanmış öğelere uygulanacak toplama işlevlerini de belirtebilirsiniz. Toplama işlevleri hakkında bilgi için bkz. [Aggregate yan tümcesi](aggregate-clause.md).  
   
  Örneğin, bir grup yönetici ve bir çalışan koleksiyonu gibi düşünün. Her iki koleksiyonun öğesi, belirli bir yöneticiye rapor veren çalışanları tanımlayan bir ManagerID özelliğine sahiptir. Bir JOIN işleminin sonuçları, eşleşen bir ManagerID değeri olan her yönetici ve çalışan için sonuç içerir. Bir işlemin sonuçları, `Group Join` yöneticilerin tüm listesini içerir. Her yöneticinin sonucu, belirli bir yönetici için eşleşme olan çalışanların listesine başvuran bir üyeye sahip olur.  
@@ -51,6 +53,7 @@ Group Join element [As type] In collection _
  `Join`Yan tümcesini kullanarak koleksiyonları tek bir koleksiyon içinde birleştirebilirsiniz. Bu, bir SQL ile eşdeğerdir `INNER JOIN` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, yan tümcesini kullanarak iki koleksiyonu birleştirir `Group Join` .  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  

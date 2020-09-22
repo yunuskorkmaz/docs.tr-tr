@@ -13,14 +13,15 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: c2b135d27e14816c011a4f70793543aa835d960a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b4d6d08cca2907befeab2e31c6804b69849c9e38
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371953"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90874866"
 ---
 # <a name="and-operator-visual-basic"></a>And İşleci (Visual Basic)
+
 İki ifadeye bir mantıksal birlikte `Boolean` veya iki sayısal ifadeye bit tabanlı bir birlikte uygular.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -30,6 +31,7 @@ result = expression1 And expression2
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `result`  
  Gereklidir. Herhangi bir `Boolean` veya sayısal ifade. Boolean karşılaştırma için `result` iki değerden oluşan mantıksal bir değer `Boolean` . Bit düzeyinde işlemler için, `result` iki sayısal bit deseninin bit düzeyinde birlikte temsil eden sayısal bir değerdir.  
   
@@ -40,6 +42,7 @@ result = expression1 And expression2
  Gereklidir. Herhangi bir `Boolean` veya sayısal ifade.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Boolean karşılaştırma için `result` `True` ve yalnızca her ikisi de `expression1` `expression2` olarak değerlendirilir `True` . Aşağıdaki tabloda nasıl belirlendiği gösterilmektedir `result` .  
   
 |İse `expression1`|Ve `expression2`|`result`Öğesinin değeri|  
@@ -65,6 +68,7 @@ result = expression1 And expression2
 > Mantıksal ve bit düzeyinde işleçler diğer aritmetik ve ilişkisel işleçlerden daha düşük önceliğe sahip olduğundan, doğru sonuçları sağlamak için herhangi bir bit düzeyinde işlemin parantez içine alınması gerekir.  
   
 ## <a name="data-types"></a>Veri Türleri  
+
  İşlenenler bir `Boolean` ifadeden ve bir sayısal ifadeden oluşur Visual Basic, `Boolean` ifadeyi sayısal bir değere dönüştürür (– 1 `True` ve için 0 `False` ) ve bit düzeyinde bir işlem gerçekleştirir.  
   
  Boolean karşılaştırma için sonucun veri türü olur `Boolean` . Bit düzeyinde karşılaştırma için, sonuç veri türü ve veri türleri için uygun sayısal bir türdür `expression1` `expression2` . [Işleç sonuçlarının veri türlerinde](data-types-of-operator-results.md)"Ilişkisel ve bit düzeyinde karşılaştırmalar" tablosuna bakın.  
@@ -73,6 +77,7 @@ result = expression1 And expression2
 > `And`İşleç *aşırı*yüklenebilir, yani bir işlenen bu sınıf veya yapının türüne sahip olduğunda bir sınıf veya yapının davranışını yeniden tanımlayabileceği anlamına gelir. Kodunuz böyle bir sınıf veya yapıda bu işleci kullanıyorsa, yeniden tanımlanmış davranışını anladığınızdan emin olun. Daha fazla bilgi için bkz. [operatör yordamları](../../programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `And` iki ifadeye mantıksal bir birlikte gerçekleştirmek için işlecini kullanır. Sonuç, `Boolean` ifadelerin her ikisinin de olup olmadığını temsil eden bir değerdir `True` .  
   
  [!code-vb[VbVbalrOperators#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#22)]  
@@ -80,6 +85,7 @@ result = expression1 And expression2
  Yukarıdaki örnek `True` sırasıyla ve, sonuçları üretir `False` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `And` iki sayısal ifadenin ayrı bitleri üzerinde mantıksal bir işlem gerçekleştirmek için işlecini kullanır. Sonuç düzenindeki bit, işlenenlerde karşılık gelen bitlerin her ikisi de 1 olarak ayarlandıysa ayarlanır.  
   
  [!code-vb[VbVbalrOperators#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#23)]  
