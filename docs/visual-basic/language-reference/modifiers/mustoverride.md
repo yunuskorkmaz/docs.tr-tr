@@ -15,17 +15,19 @@ helpviewer_keywords:
 - MustOverride keyword [Visual Basic]
 - properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-ms.openlocfilehash: 1b20108a2d42e82c0af7598fde8d60a08fea28ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cf73f07b6e13d524281129e3c5d8dceceb90764c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396200"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867946"
 ---
 # <a name="mustoverride-visual-basic"></a>MustOverride (Visual Basic)
+
 Bir özellik veya yordamın bu sınıfta uygulanmadığını ve kullanılmadan önce türetilmiş bir sınıfta geçersiz kılınmasının gerektiğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `MustOverride`Yalnızca bir özellik veya yordam bildirimi ifadesinde kullanabilirsiniz. Belirten özellik veya yordam `MustOverride` bir sınıfın üyesi olmalıdır ve sınıfı [MustInherit](mustinherit.md)olarak işaretlenmiş olmalıdır.  
   
 ## <a name="rules"></a>Kurallar  

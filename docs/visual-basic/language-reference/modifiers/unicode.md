@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-ms.openlocfilehash: 9b1bc40bb52244deefc0486d3a40c4b961ad1ee5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2f415e70e6ffb5295d49c919383462b9f726f88a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402687"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867663"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
+
 Visual Basic, belirtilen dış yordamın adından bağımsız olarak, tüm dizeleri Unicode değerlerine göre sıralayamaz.  
   
  Projenizin dışında tanımlanan bir yordamı çağırdığınızda, Visual Basic derleyicisinin yordamı doğru bir şekilde çağırmak için sahip olması gereken bilgilere erişimi yoktur. Bu bilgiler yordamın nerede bulunduğuna, nasıl tanımlandığınıza, arama sırasının ve dönüş türünün ve kullandığı dize karakter kümesinin nerede olduğunu içerir. [Declare bildirimi](../statements/declare-statement.md) , bir dış yordama bir başvuru oluşturur ve bu gerekli bilgileri sağlar.  
@@ -26,11 +27,13 @@ Visual Basic, belirtilen dış yordamın adından bağımsız olarak, tüm dizel
  Hiçbir karakter kümesi değiştiricisi belirtilmemişse, `Ansi` varsayılandır.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Unicode`Değiştirici Bu bağlamda kullanılabilir:  
   
  [Declare Deyimi](../statements/declare-statement.md)  
   
 ## <a name="smart-device-developer-notes"></a>Akıllı Cihaz Geliştirici Notları  
+
  Bu anahtar sözcük desteklenmiyor.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

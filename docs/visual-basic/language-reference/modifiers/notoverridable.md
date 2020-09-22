@@ -16,17 +16,19 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 463dd2454aafebf11554fb7bacdb73724c3130d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8eec54a12c7fb748df46e8c48a8b07eab983cc72
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84392164"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867867"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
+
 Bir özelliğin veya yordamın türetilmiş bir sınıfta geçersiz kılınamayacağını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `NotOverridable`Değiştirici bir özelliğin veya metodun türetilmiş bir sınıfta geçersiz kılınmasını önler.  [Geçersiz kılınabilir](overridable.md) değiştirici, bir sınıftaki özelliğin veya yöntemin türetilmiş bir sınıfta geçersiz kılınmasına izin verir. Daha fazla bilgi için bkz. [Devralma Temelleri](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
  `Overridable`Veya `NotOverridable` değiştiricisi belirtilmemişse, varsayılan ayar, özelliğin veya metodun bir temel sınıf özelliğini veya yöntemini geçersiz kıldığına bağlıdır. Özellik veya yöntem bir temel sınıf özelliğini veya yöntemini geçersiz kılıyorsa, varsayılan ayar olur `Overridable` ; Aksi takdirde, olur `NotOverridable` .  
@@ -36,11 +38,13 @@ Bir özelliğin veya yordamın türetilmiş bir sınıfta geçersiz kılınamaya
  `NotOverridable`Yalnızca bir özellik veya yordam bildirimi ifadesinde kullanabilirsiniz. Yalnızca bir özellik veya `NotOverridable` yordamı geçersiz kılan bir özellik ya da yordam üzerinde yalnızca ile birlikte bir özelliği belirtebilirsiniz `Overrides` .  
   
 ## <a name="combined-modifiers"></a>Birleşik değiştiriciler  
+
  `Overridable` `NotOverridable` Bir yöntem için veya belirtemezsiniz `Private` .  
   
  `NotOverridable` `MustOverride` Aynı bildirimde, veya ile birlikte belirtemezsiniz `Overridable` `Shared` .  
   
 ## <a name="usage"></a>Kullanım  
+
  `NotOverridable`Değiştirici şu bağlamlarda kullanılabilir:  
   
  [Function Deyimi](../statements/function-statement.md)  

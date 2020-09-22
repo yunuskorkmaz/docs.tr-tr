@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-ms.openlocfilehash: 31936fb2c8f658203a43702a2b5fa4ee2481beb5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3da6c099b3f43a144484eaddf58605609eb0bbfe
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404608"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866206"
 ---
 # <a name="get-statement"></a>Get Deyimi
+
 `Get`Bir özelliğin değerini almak için kullanılan bir özellik yordamı bildirir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,6 +40,7 @@ End Get
 |`End Get`|Gereklidir. `Get`Özellik yordamının tanımını sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Özellik işaretlenmedikçe her özelliğin bir özellik yordamına sahip olması gerekir `Get` `WriteOnly` . `Get`Yordamı, özelliğin geçerli değerini döndürmek için kullanılır.  
   
  Visual Basic, `Get` bir ifade özelliğin değerini istediğinde bir özelliğin yordamını otomatik olarak çağırır.  
@@ -61,7 +63,7 @@ End Get
   
 - **Bir yordamdan dönme.** `Get`Yordam çağıran koda döndüğünde, yürütme özelliği değeri istenen deyimin içinde devam eder.  
   
-     `Get`özellik yordamları, [dönüş ifadesini](return-statement.md) kullanarak veya dönüş değerini özellik adına atayarak bir değer döndürebilir. Daha fazla bilgi için [Işlev deyimindeki](function-statement.md)"dönüş değeri" başlığına bakın.  
+     `Get` özellik yordamları, [dönüş ifadesini](return-statement.md) kullanarak veya dönüş değerini özellik adına atayarak bir değer döndürebilir. Daha fazla bilgi için [Işlev deyimindeki](function-statement.md)"dönüş değeri" başlığına bakın.  
   
      `Exit Property`Ve `Return` deyimleri, bir özellik yordamından anında çıkış oluşmasına neden olur. Herhangi bir sayıda `Exit Property` ve `Return` deyimi yordamda herhangi bir yerde görünebilir ve `Exit Property` ve deyimlerini karıştırabilirsiniz `Return` .  
   
@@ -78,6 +80,7 @@ End Get
      [!code-vb[VbVbalrStatements#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#29)]  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Get` bir özelliğin değerini döndürmek için ifadesini kullanır.  
   
  [!code-vb[VbVbalrStatements#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#30)]  

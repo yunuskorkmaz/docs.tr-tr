@@ -4,25 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: 25fd9d2fc52b27f34164b7ed95ed1ebce9919a33
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4e9019773c74aa570f52eb573677f687f2600419
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372667"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867410"
 ---
 # <a name="mycomputer-object"></a>My.Computer Nesnesi
+
 Ses, saat, klavye, dosya sistemi vb. gibi bilgisayar bileşenlerinin işlenmesine yönelik özellikler sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Nesnesinin yöntemleri ve özellikleri hakkında daha fazla bilgi için `My.Computer` bkz <xref:Microsoft.VisualBasic.Devices.Computer> .. Temel sınıf, <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilir olan üyeleri sağlar.  
   
 ## <a name="requirements"></a>Gereksinimler  
+
  **Ad alanı:**<xref:Microsoft.VisualBasic.Devices>  
   
  **Sınıf:** <xref:Microsoft.VisualBasic.Devices.Computer> (temel sınıf, <xref:Microsoft.VisualBasic.Devices.ServerComputer> tüm projelerde kullanılabilir olan üyeleri sağlar).  
   
- **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft. VisualBasic. dll içinde)  
+ **Bütünleştirilmiş kod:** Visual Basic çalışma zamanı kitaplığı (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

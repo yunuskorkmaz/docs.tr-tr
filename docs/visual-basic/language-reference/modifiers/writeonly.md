@@ -11,24 +11,27 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: a9fa0a3a23561215d6ff122bc8e609b68ca6fc30
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 12a1030a423359a3e4122eea98e223a1a02f680c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84386640"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867621"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
+
 Bir özelliğin yazılabileceğini ancak okunlamayacağını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
   
 ## <a name="rules"></a>Kurallar  
+
  **Bildirim bağlamı.** `WriteOnly`Yalnızca modül düzeyinde kullanabilirsiniz. Yani, bir özelliğin bildirim bağlamı `WriteOnly` bir sınıf, yapı veya modül olmalıdır ve kaynak dosya, ad alanı veya yordam olamaz.  
   
  Bir özelliği `WriteOnly` bir değişken değil, olarak bildirebilirsiniz.  
   
 ## <a name="when-to-use-writeonly"></a>WriteOnly ne zaman kullanılır?  
+
  Bazen, tüketen kodun bir değer ayarlayabilmesini, ancak ne olduğunu bulamayacağını isteyebilirsiniz. Örneğin, sosyal kayıt numarası veya parola gibi hassas verilerin, onu ayarlanmamış herhangi bir bileşene erişiminin korunması gerekir. Bu durumlarda, `WriteOnly` değeri ayarlamak için bir özelliği kullanabilirsiniz.  
   
 > [!IMPORTANT]

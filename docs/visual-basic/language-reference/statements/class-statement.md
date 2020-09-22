@@ -13,14 +13,15 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: bdb73772dfe0e6d49d89a4ef006b1bceac14c8ee
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b64597fcd7453c20ed295fe263eeaa8783b20ae
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397161"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866037"
 ---
 # <a name="class-statement-visual-basic"></a>Class Deyimi (Visual Basic)
+
 Bir sınıfın adını bildirir ve sınıfın içerdiği değişkenlerin, özelliklerin, olayların ve yordamların tanımını tanıtır.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -55,6 +56,7 @@ End Class
 |`End Class`|Gereklidir. Tanımı sonlandırır `Class` .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir `Class` ifade yeni bir veri türünü tanımlar. *Sınıf* , nesne odaklı programlama (OOP) temel yapı taşıdır. Daha fazla bilgi için bkz. [nesneler ve sınıflar](../../programming-guide/language-features/objects-and-classes/index.md).  
   
  `Class`Yalnızca ad alanı veya modül düzeyinde kullanabilirsiniz. Diğer bir deyişle, bir sınıf için *Bildirim bağlamı* bir kaynak dosya, ad alanı, sınıf, yapı, modül veya arabirim olmalıdır ve bir yordam veya blok olamaz. Daha fazla bilgi için bkz. [bildirim bağlamları ve varsayılan erişim düzeyleri](declaration-contexts-and-default-access-levels.md).  
@@ -94,15 +96,17 @@ End Class
      İç içe yerleştirilmiş bir sınıf içindeki kod, bir programlama öğesine nitelenmemiş bir başvuru yaparsa, Visual Basic iç içe geçmiş sınıfta, ardından kapsayan sınıfında ve bu öğeyi en dıştaki içeren en dıştaki öğe için bir kez arar.  
   
 ## <a name="classes-and-modules"></a>Sınıflar ve modüller  
+
  Bu öğelerin birçok benzerlikleri vardır ancak bazı önemli farklılıklar da vardır.  
   
-- **Terminolojiyi.** Önceki Visual Basic sürümleri iki tür modül tanır: *sınıf modülleri* (. CLS dosyaları) ve *Standart modüller* (. bas dosyaları). Geçerli sürüm, sırasıyla bu *sınıfları* ve *modülleri*çağırır.  
+- **Terimler.** Önceki Visual Basic sürümleri iki tür modül tanır: *sınıf modülleri* (. CLS dosyaları) ve *Standart modüller* (. bas dosyaları). Geçerli sürüm, sırasıyla bu *sınıfları* ve *modülleri*çağırır.  
   
 - **Paylaşılan Üyeler.** Bir sınıfın bir üyesinin paylaşılan bir veya örnek üye olup olmadığını kontrol edebilirsiniz.  
   
 - **Nesne yönü.** Sınıflar nesne yönelimlidir, ancak modüller değildir. Bir sınıfın bir veya daha fazla örneğini oluşturabilirsiniz. Daha fazla bilgi için bkz. [nesneler ve sınıflar](../../programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek bir `Class` sınıfı ve birkaç üyeyi tanımlamak için bir ifade kullanır.  
   
  [!code-vb[VbVbalrStatements#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#62)]  

@@ -2,12 +2,12 @@
 title: C# 9,0 ' deki yenilikler-C# Kılavuzu
 description: C# 9,0 ' de bulunan yeni özelliklere genel bakış alın.
 ms.date: 09/04/2020
-ms.openlocfilehash: a8b66d21514b57d8bee3ff54b2a707af391fe7a9
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: 13da712e9421bbfe593e5945b80bb3636ebe05f3
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738729"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866434"
 ---
 # <a name="whats-new-in-c-90"></a>C# 9.0 sürümündeki yenilikler
 
@@ -224,15 +224,15 @@ Bu özellik için bir diğer iyi kullanım, yeni bir nesneyi başlatmak için ya
 
 Bir ifade kullanarak varsayılan Oluşturucu tarafından oluşturulan bir örnek döndürebilirsiniz `return new();` .
 
-Benzer bir özellik, koşullu ifadelerin hedef tür çözümlemesini geliştirir. Bu değişiklik ile, iki ifadenin bir öğesinden diğerine örtük dönüştürmesi gerekmez, ancak her ikisi de hedef tür için örtük Dönüştürmelere sahip olabilir. Büyük olasılıkla bu değişikliği fark edeceksiniz. Ne fark edeceksiniz, daha önce gerekli olan veya derlenmeyen bazı Koşullu ifadeler artık çalışır.
+Benzer bir özellik, [koşullu ifadelerin](../language-reference/operators/conditional-operator.md)hedef tür çözümlemesini geliştirir. Bu değişiklik ile, iki ifadenin bir öğesinden diğerine örtük dönüştürmesi gerekmez, ancak her ikisi de hedef tür için örtük Dönüştürmelere sahip olabilir. Büyük olasılıkla bu değişikliği fark edeceksiniz. Ne fark edeceksiniz, daha önce gerekli olan veya derlenmeyen bazı Koşullu ifadeler artık çalışır.
 
 C# 9,0 ' den başlayarak `static` lambda ifadelerine veya anonim yöntemlere değiştiricisini ekleyebilirsiniz. Statik lambda ifadeleri `static` Yerel işlevlere benzerdir: statik bir lambda veya anonim işlev yerel değişkenleri veya örnek durumunu yakalayabilir. `static`Değiştirici yanlışlıkla diğer değişkenleri yakalamaya engel olur.
 
 Covaryant dönüş türleri, geçersiz kılınan işlevlerin dönüş türleri için esneklik sağlar. Geçersiz kılınan bir sanal işlev, temel sınıf yönteminde belirtilen dönüş türünden türetilmiş bir tür döndürebilir. Bu, kayıtlar için ve sanal kopya ya da fabrika yöntemlerini destekleyen diğer türler için yararlı olabilir.
 
-Buna ek olarak, `foreach` döngü, başka bir şekilde onu karşılayan bir genişletme yöntemi tanır ve kullanır `GetEnumerator` `foreach` . Bu değişiklik, `foreach` zaman uyumsuz model ve model tabanlı ayrıştırma gibi diğer model tabanlı kurulumlarını ile tutarlıdır. Uygulamada, bu değişiklik `foreach` herhangi bir türe destek ekleyebileceğiniz anlamına gelir. Bir nesne Numaralandırırken tasarımınızda anlamlı hale geldiğinde kullanımını sınırlamanız gerekir.
+Buna ek olarak, [ `foreach` döngü](../language-reference/keywords/foreach-in.md) , başka bir şekilde onu karşılayan bir genişletme yöntemi tanır ve kullanır `GetEnumerator` `foreach` . Bu değişiklik, `foreach` zaman uyumsuz model ve model tabanlı ayrıştırma gibi diğer model tabanlı kurulumlarını ile tutarlıdır. Uygulamada, bu değişiklik `foreach` herhangi bir türe destek ekleyebileceğiniz anlamına gelir. Bir nesne Numaralandırırken tasarımınızda anlamlı hale geldiğinde kullanımını sınırlamanız gerekir.
 
-Sonra, Lambda ifadelerinde parametre olarak atar ' i kullanabilirsiniz. Bu kolaylık, bağımsız değişkeni adlandırmayı önlemenize olanak sağlar ve derleyici bunu kullanmaktan kaçınabilir. `_`Herhangi bir bağımsız değişken için öğesini kullanırsınız.
+Sonra, Lambda ifadelerinde parametre olarak atar ' i kullanabilirsiniz. Bu kolaylık, bağımsız değişkeni adlandırmayı önlemenize olanak sağlar ve derleyici bunu kullanmaktan kaçınabilir. `_`Herhangi bir bağımsız değişken için öğesini kullanırsınız. Daha fazla bilgi için [lambda ifadeleri](../language-reference/operators/lambda-expressions.md) makalesinin [lambda ifadesinin giriş parametreleri](../language-reference/operators/lambda-expressions.md#input-parameters-of-a-lambda-expression) bölümüne bakın.
 
 Son olarak, artık yerel işlevlere öznitelikler uygulayabilirsiniz. Örneğin, yerel işlevlere null yapılabilir öznitelik ek açıklamaları uygulayabilirsiniz.
 

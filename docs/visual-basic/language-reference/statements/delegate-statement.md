@@ -7,14 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 8dec28620b0409f05007b2c0b1c1fd4494c2d7c8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 29de4c174273c3c6c0d4f0cea1ee6dc254a1339b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404764"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866654"
 ---
 # <a name="delegate-statement"></a>Delegate Deyimi
+
 Bir temsilciyi bildirmek için kullanılır. Temsilci, `Shared` bir türün yöntemine veya bir nesnenin örnek metoduna başvuran bir başvuru türüdür. Bu temsilci sınıfının bir örneğini oluşturmak için eşleşen parametre ve dönüş türleri olan herhangi bir yordam kullanılabilir. Yordam daha sonra temsilci örneği aracılığıyla çağrılabilir.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -39,6 +40,7 @@ Bir temsilciyi bildirmek için kullanılır. Temsilci, `Shared` bir türün yön
 |`type`|Bir yordam belirtirseniz gereklidir `Function` . Dönüş değerinin veri türü.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `Delegate`İfade, bir temsilci sınıfının parametresini ve dönüş türlerini tanımlar. Bu temsilci sınıfının bir örneğini oluşturmak için, eşleşen parametreleri ve dönüş türlerini içeren herhangi bir yordam kullanılabilir. Daha sonra yordam, temsilcinin yöntemi çağırarak temsilci örneği aracılığıyla çağrılabilir `Invoke` .  
   
  Temsilciler ad alanı, modül, sınıf veya yapı düzeyinde bildirilebilecek, ancak bir yordam içinde bildirilemez.  
@@ -53,13 +55,14 @@ Bir temsilciyi bildirmek için kullanılır. Temsilci, `Shared` bir türün yön
   
  Bir lambda ifadesi belirtmek için aşağıdaki sözdizimini kullanın:  
   
- `Function`([ `parm` As `type` , `parm2` as `type2` ,...])`expression`  
+ `Function` ([ `parm` As `type` , `parm2` as `type2` ,...]) `expression`  
   
  İşlevin imzası, temsilci türü ile aynı olmalıdır. Lambda ifadeleri hakkında daha fazla bilgi için bkz. [lambda ifadeleri](../../programming-guide/language-features/procedures/lambda-expressions.md).  
   
  Temsilciler hakkında daha fazla bilgi için bkz. [Temsilciler](../../programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Delegate` iki sayı üzerinde çalışan ve bir sayı döndüren bir temsilciyi bildirmek için bildirimini kullanır. `DelegateTest`Yöntemi bu tür bir temsilcinin örneğini alır ve sayı çiftleri üzerinde çalışmak için onu kullanır.  
   
  [!code-vb[VbVbalrDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#14)]  

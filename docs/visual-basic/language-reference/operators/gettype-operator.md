@@ -7,17 +7,18 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 37644a9c37ffde084120c5f1e1ee8c87a04ffc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ff207ea4f2b89ea30eb8f46a3e640ccf3789974
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84371161"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867008"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType İşleci (Visual Basic)
+
 <xref:System.Type>Belirtilen tür için bir nesne döndürür. <xref:System.Type>Nesnesi, bu tür hakkında özellikler, Yöntemler ve olaylar gibi bilgiler sağlar.  
   
-## <a name="syntax"></a>Söz dizimi  
+## <a name="syntax"></a>Sözdizimi  
   
 ```vb  
 GetType(typename)  
@@ -30,6 +31,7 @@ GetType(typename)
 |`typename`|Bilgilerini istediğiniz türün adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `GetType`İşleci, <xref:System.Type> belirtilen için nesnesini döndürür `typename` . ' De tanımlı herhangi bir türün adını geçirebilirsiniz `typename` . Bu, aşağıdakileri içerir:  
   
 - Ya da gibi Visual Basic veri türü `Boolean` `Date` .  
@@ -53,6 +55,7 @@ GetType(typename)
 - Aynı türdeki örneklere başvurduklarında, iki nesne başvurularını karşılaştırmak istiyorsunuz. Varsa, `GetType` aynı nesneye başvuruları döndürür <xref:System.Type> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örneklerde `GetType` kullanılan operatör gösterilmektedir.  
   
  [!code-vb[VbVbalrOperators#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#26)]  

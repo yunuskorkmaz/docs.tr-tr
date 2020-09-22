@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: f7724053e3732c909523e4e2d3b65bb1918c29d3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77515357ac9dc972992df09c471695aad13985c4
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362365"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867937"
 ---
 # <a name="narrowing-visual-basic"></a>Daraltma (Visual Basic)
+
 Bir dönüştürme işlecinin () bir `CType` sınıfı ya da yapıyı özgün sınıf veya yapının olası bazı değerlerini tutabilecek bir türe dönüştürdüğü anlamına gelir.  
   
 ## <a name="converting-with-the-narrowing-keyword"></a>Daraltma anahtar sözcüğüyle dönüştürme  
+
  Dönüştürme yordamının öğesine ek olarak belirtmeniz gerekir `Public Shared` `Narrowing` .  
   
  Daraltma dönüştürmeleri her zaman çalışma zamanında başarılı olmaz ve veri kaybına neden olabilir. Örnekler `Long` `Integer` , `String` `Date` türetilmiş bir türe ve temel türe örnektir. Temel tür türetilmiş türün tüm üyelerini içermediğinden ve bu nedenle türetilmiş türün bir örneği olmadığından, bu son dönüştürme daraltma yapılır.  

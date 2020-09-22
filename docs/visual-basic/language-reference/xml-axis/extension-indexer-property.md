@@ -9,14 +9,15 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: c91061d49e22e648b7bf75a812071b352793abcb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 23417cd982c2ddf06afce69d9b120ae0737fb87d
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401348"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866113"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>Extension Indexer Özelliği (Visual Basic)
+
 Bir koleksiyondaki tek tek öğelere erişim sağlar.  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -35,9 +36,11 @@ object(index)
 |)|Gereklidir. Dizin Oluşturucu özelliğinin sonunu belirtir.|  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Koleksiyonda belirtilen konumdan nesne veya `Nothing` Dizin aralık dışında.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir koleksiyondaki tek tek öğelere erişmek için uzantı Indexer özelliğini kullanabilirsiniz. Bu Indexer özelliği genellikle XML ekseni özelliklerinin çıkışında kullanılır. XML alt ve XML alt öğe ekseni özellikleri, nesne koleksiyonlarını <xref:System.Xml.Linq.XElement> veya bir öznitelik değerini döndürür.  
   
  Visual Basic derleyici, uzantı Dizin Oluşturucu özelliklerini yöntemine yapılan çağrılara dönüştürür `ElementAtOrDefault` . Dizi Indexer 'ın aksine, `ElementAtOrDefault` Yöntem `Nothing` Dizin aralık dışında olduğunda döndürür. Bu davranış, bir koleksiyondaki öğe sayısını kolayca belirleyene zaman yararlı olur.  
@@ -47,6 +50,7 @@ object(index)
  Bir veya nesneleri koleksiyonundaki ilk öğenin değerine erişmek için <xref:System.Xml.Linq.XElement> <xref:System.Xml.Linq.XAttribute> XML `Value` özelliğini kullanabilirsiniz. Daha fazla bilgi için bkz. [XML Value özelliği](xml-value-property.md).  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir nesne koleksiyonundaki ikinci alt düğüme erişmek için uzantı dizin oluşturucunun nasıl kullanılacağını gösterir <xref:System.Xml.Linq.XElement> . Koleksiyonda, nesne içinde adlı tüm alt öğeleri alan alt eksen özelliği kullanılarak erişilir `phone` `contact` .  
   
  [!code-vb[VbXMLSamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#24)]  

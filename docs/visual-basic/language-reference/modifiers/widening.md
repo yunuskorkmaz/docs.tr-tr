@@ -10,17 +10,19 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 69040bf48b44a54f7a231738b88db1cbc716ebb3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 14e0b026f4fc3b0bf202ea643a28d6f1a7df2b7c
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84359909"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867649"
 ---
 # <a name="widening-visual-basic"></a>Genişletme (Visual Basic)
+
 Bir dönüştürme işlecinin () bir `CType` sınıfı ya da yapıyı özgün sınıf veya yapının tüm olası değerlerini tutabilecek bir türe dönüştürdüğü anlamına gelir.  
   
 ## <a name="converting-with-the-widening-keyword"></a>Genişletme anahtar sözcüğüyle dönüştürme  
+
  Dönüştürme yordamının öğesine ek olarak belirtmeniz gerekir `Public Shared` `Widening` .  
   
  Genişletme dönüştürmeleri her zaman çalışma zamanında başarılı olur ve veri kaybına neden olmaz. Örnekler `Single` `Double` , `Char` `String` temel türüne ve türetilmiş bir türe örnektir. Türetilmiş tür temel türün tüm üyelerini içerdiğinden ve bu nedenle temel türün bir örneği olduğundan, bu son dönüştürme işlemi genişletme.  

@@ -7,17 +7,19 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: 3b323d5fb1c4f1357b9f476213793c69d29b7208
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2b7113424969b0b18c981b0c8932aeef3795ca4a
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402700"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867678"
 ---
 # <a name="static-visual-basic"></a>Statik (Visual Basic)
+
 Bir veya daha fazla tanımlanmış yerel değişkenin mevcut olmaya devam etmesi ve bildirildiği yordamın sonlandırmasından sonra en son değerlerini korumasının gerektiğini belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Normalde, yordamda bir yerel değişken, yordam durdurulduğunda hemen sona erer. Statik bir değişken var olmaya devam eder ve en son değerini korur. Kodunuzun yordamı çağırması bir sonraki sefer, değişken yeniden başlatılır ve kendisine atadığınız en son değeri barındırır. Statik bir değişken, içinde tanımlanan sınıf veya modülün kullanım ömrü için mevcut olmaya devam eder.  
   
 ## <a name="rules"></a>Kurallar  
@@ -31,11 +33,13 @@ Bir veya daha fazla tanımlanmış yerel değişkenin mevcut olmaya devam etmesi
 - **Birleşik değiştiriciler.** `Static` `ReadOnly` Aynı bildirimde, veya ile birlikte belirtemezsiniz `Shadows` `Shared` .  
   
 ## <a name="behavior"></a>Davranış  
+
  Bir yordamda statik bir değişken bildirdiğinizde `Shared` , tüm uygulama için statik değişkenin yalnızca bir kopyası kullanılabilir. Sınıf `Shared` adını kullanarak bir yordamı çağırın, sınıfın bir örneğine işaret eden bir değişken değildir.  
   
  Olmayan bir yordamda statik bir değişken bildirdiğinizde `Shared` , sınıfın her örneği için değişkenin yalnızca bir kopyası kullanılabilir. Sınıfın belirli bir örneğine işaret eden bir değişken kullanarak paylaşılmayan bir yordam çağırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek öğesinin kullanımını gösterir `Static` .  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  

@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: 35332e50227cdef6386362df17c10b5b2cdaa689
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f2b6a126435b111ef56ee2a9870ea6fbddf87901
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84415355"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867685"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
+
 Bir veya daha fazla tanımlanmış programlama öğesinin erişim kısıtlaması olmadığını belirtir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sınıf kitaplığı gibi bir bileşeni veya bileşen kümesini yayınlıyorsanız, genellikle programlama öğelerine derlemele birlikte çalışan herhangi bir kod tarafından erişilebilmesini istersiniz. Bir öğe üzerinde sınırsız erişim sağlamak için, ile bildirimini yapabilirsiniz `Public` .  
   
  Genel erişim, bir programlama öğesi için erişimi sınırlandırmanıza gerek olmadığında normal düzeydir. Bir arabirim, modül, sınıf veya yapı içinde belirtilen bir öğenin erişim düzeyinin, aksi belirtilmedikçe, varsayılan olarak olduğunu unutmayın `Public` .  
@@ -68,7 +70,7 @@ Bir veya daha fazla tanımlanmış programlama öğesinin erişim kısıtlaması
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [Korunamadı](protected.md)
-- [Dost](friend.md)
+- [Arkadaş](friend.md)
 - [Özelleştirme](private.md)
 - [Özel korumalı](private-protected.md)
 - [Protected Friend](protected-friend.md)

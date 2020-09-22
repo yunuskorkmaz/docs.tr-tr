@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 9bd1781e01bc4cbf1ce5da8c454ab2f5a679aead
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3d18e58cb643fa075f6eb08eb6fe909d27a6737b
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400182"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90866408"
 ---
 # <a name="xml-processing-instruction-literal-visual-basic"></a>XML İşleme Talimatı Değişmez Değeri (Visual Basic)
+
 Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XProcessingInstruction> .  
   
 ## <a name="syntax"></a>Sözdizimi  
@@ -25,6 +26,7 @@ Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XProcessingInstructio
 ```  
   
 ## <a name="parts"></a>Bölümler  
+
  `<?`  
  Gereklidir. XML işleme yönergesi sabit değerinin başlangıcını gösterir.  
   
@@ -38,9 +40,11 @@ Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XProcessingInstructio
  Gereklidir. İşleme yönergesinin sonunu belirtir.  
   
 ## <a name="return-value"></a>Dönüş Değeri  
+
  Bir <xref:System.Xml.Linq.XProcessingInstruction> nesnesi.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  XML işleme yönergesi sabit değerleri, uygulamaların bir XML belgesini nasıl işleyeceğini gösterir. Bir uygulama bir XML belgesi yüklediğinde, uygulama, belgeyi nasıl işleyeceğini belirleyebilmek için XML işleme talimatlarını denetleyebilir. Uygulama, ve anlamını Yorumlar `piName` `piData` .  
   
  XML belgesi değişmez değeri, XML işleme yönergesinden benzer bir sözdizimi kullanır. Daha fazla bilgi için bkz. [XML belgesi değişmez değeri](xml-document-literal.md).  
@@ -56,6 +60,7 @@ Bir nesneyi temsil eden sabit değer <xref:System.Xml.Linq.XProcessingInstructio
  Visual Basic Derleyicisi, XML işleme yönerge hazır değerini oluşturucuya bir çağrıya dönüştürür <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir XML belgesi için stil sayfası tanımlayan bir işleme yönergesi oluşturur.  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  

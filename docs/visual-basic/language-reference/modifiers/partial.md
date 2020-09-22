@@ -14,14 +14,15 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: 650ead2f0deb9813b26241a6a4676907de3f263d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2482facadd0e0528ed1b71df6edb4a447947a902
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362248"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867772"
 ---
 # <a name="partial-visual-basic"></a>Kısmi (Visual Basic)
+
 Tür bildiriminin türün kısmi bir tanımı olduğunu gösterir.  
   
  Anahtar sözcüğünü kullanarak, bir türün tanımını birkaç bildirim arasında bölebilirsiniz `Partial` . İstediğiniz kadar çok sayıda kısmi bildirim, istediğiniz kadar farklı kaynak dosyasında kullanabilirsiniz. Ancak, tüm bildirimlerin aynı derlemede ve aynı ad alanında olması gerekir.  
@@ -62,6 +63,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 |`End Class` veya `End Structure`|Bu kısmı `Class` veya `Structure` tanımı sonlandırır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Visual Basic, oluşturulan kodu ayrı kaynak dosyalardaki Kullanıcı tarafından yazılan koddan ayırmak için kısmi sınıf tanımları kullanır. Örneğin, **Windows Form Tasarımcısı** gibi denetimler için kısmi sınıfları tanımlar <xref:System.Windows.Forms.Form> . Bu denetimlerde oluşturulan kodu değiştirmemelisiniz.  
   
  Değiştirici kullanımı ve devralmayla ilgili olanlar gibi sınıf, yapı, arabirim ve modül oluşturma kuralları kısmi bir tür oluştururken geçerlidir.  
@@ -87,6 +89,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  [Structure Yapısı](../statements/structure-statement.md)  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, sınıfının tanımını `sampleClass` , her biri farklı bir yordam tanımlayan iki bildirime ayırır `Sub` .  
   
  [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  

@@ -7,20 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: c905ff85c8e9729dd4d6068f0d34f729962bbb57
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f3348e9eea5bdd7f4fd911150877c9aefdd66bcc
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84372407"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867291"
 ---
 # <a name="mysettings-object"></a>My.Settings Nesnesi
+
 Uygulamanın ayarlarına erişmek için özellikleri ve yöntemleri sağlar.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `My.Settings`Nesnesi, uygulama ayarlarına erişim sağlar ve uygulamanızın özellik ayarlarını ve diğer bilgilerini dinamik olarak depolamanızı ve almanızı sağlar. Daha fazla bilgi için bkz. [uygulama ayarlarını yönetme (.net)](/visualstudio/ide/managing-application-settings-dotnet).  
   
 ## <a name="properties"></a>Özellikler  
+
  `My.Settings`Nesnesinin özellikleri uygulamanızın ayarlarına erişim sağlar. Ayarları eklemek veya kaldırmak için, **Ayarlar tasarımcısını**kullanın.  
   
  Her ayarın bir **adı**, **türü**, **kapsamı**ve **değeri**vardır ve bu ayarlar, her bir ayara erişme özelliğinin nesnede nasıl göründüğünü belirlenir `My.Settings` :  
@@ -35,7 +38,7 @@ Uygulamanın ayarlarına erişmek için özellikleri ve yöntemleri sağlar.
   
 ## <a name="methods"></a>Yöntemler  
   
-|Yöntem|Description|  
+|Yöntem|Açıklama|  
 |---|---|  
 |`Reload`|Son kaydedilen değerlerden Kullanıcı ayarlarını yeniden yükler.|  
 |`Save`|Geçerli Kullanıcı ayarlarını kaydeder.|  
@@ -43,9 +46,10 @@ Uygulamanın ayarlarına erişmek için özellikleri ve yöntemleri sağlar.
  `My.Settings`Nesnesi ayrıca sınıfından devralınan gelişmiş özellikler ve yöntemler de sağlar <xref:System.Configuration.ApplicationSettingsBase> .  
   
 ## <a name="tasks"></a>Görevler  
+
  Aşağıdaki tabloda, nesnesiyle ilgili görevlerin örnekleri listelenmektedir `My.Settings` .  
   
-|Alıcı|Bkz.|  
+|Amaç|Bkz.|  
 |---|---|  
 |Uygulama ayarını oku|[Nasıl Yapılır: Visual Basic'te Uygulama Ayarlarını Okuma](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |Kullanıcı ayarını değiştirme|[Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarlarını Değiştirme](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
@@ -53,6 +57,7 @@ Uygulamanın ayarlarına erişmek için özellikleri ve yöntemleri sağlar.
 |Kullanıcı ayarları için özellik Kılavuzu oluşturma|[Nasıl Yapılır: Visual Basic'te Kullanıcı Ayarları için Özellik Kılavuzu Oluşturma](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, ayarın değerini gösterir `Nickname` .  
   
  [!code-vb[VbVbalrMyResources#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#14)]  
