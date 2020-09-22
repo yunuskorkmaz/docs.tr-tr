@@ -15,25 +15,27 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: a5b571591a2ec62915c2a112f9a088a12837c9cf
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a204303a9695a157f598f83e182709a458a62be7
+ms.sourcegitcommit: d2db216e46323f73b32ae312c9e4135258e5d68e
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84362352"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90867888"
 ---
-# <a name="notinheritable-visual-basic"></a><span data-ttu-id="a073a-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a073a-102">NotInheritable (Visual Basic)</span></span>
-<span data-ttu-id="a073a-103">Bir sınıfın temel sınıf olarak kullanılamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="a073a-103">Specifies that a class cannot be used as a base class.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="a073a-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="a073a-104">Remarks</span></span>  
- <span data-ttu-id="a073a-105">**Alternatif terimler**.</span><span class="sxs-lookup"><span data-stu-id="a073a-105">**Alternate Terms**.</span></span> <span data-ttu-id="a073a-106">Devralınmayan bir sınıf bazen *Sealed* sınıf olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="a073a-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
-  
- <span data-ttu-id="a073a-107">`NotInheritable`Değiştirici Bu bağlamda kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="a073a-107">The `NotInheritable` modifier can be used in this context:</span></span>  
-  
- [<span data-ttu-id="a073a-108">Class Deyimi</span><span class="sxs-lookup"><span data-stu-id="a073a-108">Class Statement</span></span>](../statements/class-statement.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="a073a-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="a073a-109">See also</span></span>
+# <a name="notinheritable-visual-basic"></a><span data-ttu-id="fc0c6-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc0c6-102">NotInheritable (Visual Basic)</span></span>
 
-- [<span data-ttu-id="a073a-110">Inherits Deyimi</span><span class="sxs-lookup"><span data-stu-id="a073a-110">Inherits Statement</span></span>](../statements/inherits-statement.md)
-- [<span data-ttu-id="a073a-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="a073a-111">MustInherit</span></span>](mustinherit.md)
-- [<span data-ttu-id="a073a-112">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="a073a-112">Keywords</span></span>](../keywords/index.md)
+<span data-ttu-id="fc0c6-103">Bir sınıfın temel sınıf olarak kullanılamayacağını belirtir.</span><span class="sxs-lookup"><span data-stu-id="fc0c6-103">Specifies that a class cannot be used as a base class.</span></span>  
+  
+## <a name="remarks"></a><span data-ttu-id="fc0c6-104">Açıklamalar</span><span class="sxs-lookup"><span data-stu-id="fc0c6-104">Remarks</span></span>  
+
+ <span data-ttu-id="fc0c6-105">**Alternatif terimler**.</span><span class="sxs-lookup"><span data-stu-id="fc0c6-105">**Alternate Terms**.</span></span> <span data-ttu-id="fc0c6-106">Devralınmayan bir sınıf bazen *Sealed* sınıf olarak adlandırılır.</span><span class="sxs-lookup"><span data-stu-id="fc0c6-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
+  
+ <span data-ttu-id="fc0c6-107">`NotInheritable`Değiştirici Bu bağlamda kullanılabilir:</span><span class="sxs-lookup"><span data-stu-id="fc0c6-107">The `NotInheritable` modifier can be used in this context:</span></span>  
+  
+ [<span data-ttu-id="fc0c6-108">Class Deyimi</span><span class="sxs-lookup"><span data-stu-id="fc0c6-108">Class Statement</span></span>](../statements/class-statement.md)  
+  
+## <a name="see-also"></a><span data-ttu-id="fc0c6-109">Ayrıca bkz.</span><span class="sxs-lookup"><span data-stu-id="fc0c6-109">See also</span></span>
+
+- [<span data-ttu-id="fc0c6-110">Inherits Deyimi</span><span class="sxs-lookup"><span data-stu-id="fc0c6-110">Inherits Statement</span></span>](../statements/inherits-statement.md)
+- [<span data-ttu-id="fc0c6-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="fc0c6-111">MustInherit</span></span>](mustinherit.md)
+- [<span data-ttu-id="fc0c6-112">Anahtar sözcükler</span><span class="sxs-lookup"><span data-stu-id="fc0c6-112">Keywords</span></span>](../keywords/index.md)
