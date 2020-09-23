@@ -7,14 +7,15 @@ helpviewer_keywords:
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-ms.openlocfilehash: 7feaf71fa1c59c24aa751f2b9e28328d47ba357c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1add054a6cb6468f4581f92ca3a258c5b0cdc77d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413072"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058865"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Nasıl yapılır: Visual Basic'te Dizi Değişkeni Başlatma
+
 Bir yan tümcesine dizi değişmez değeri ekleyerek `New` ve dizinin başlangıç değerlerini belirterek bir dizi değişkenini başlatırsınız. Türü belirtebilir veya dizi sabit değerindeki değerlerden çıkarsanamıyor izin verebilirsiniz. Türün nasıl çıkarsandığına ilişkin daha fazla bilgi için, [diziler](index.md)Içindeki "başlangıç değerleriyle bir diziyi doldurma" konusuna bakın.  
   
 ### <a name="to-initialize-an-array-variable-by-using-an-array-literal"></a>Dizi değişmezi kullanarak bir dizi değişkeni başlatmak için  
@@ -33,7 +34,7 @@ Bir yan tümcesine dizi değişmez değeri ekleyerek `New` ve dizinin başlangı
   
      [!code-vb[VbVbalrArrays#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#17)]  
   
-- Dizi sınırlarını açıkça belirtebilir veya dışarı bırakabilir ve derleyicinin dizi sınırlarını, dizi değişmez değerindeki değerlere göre çıkarmasını sağlayabilirsiniz. Hem üst sınırı hem de değerleri sağlarsanız, her boyuttaki üst sınır aracılığıyla 0 dizininden her öğe için bir değer eklemelisiniz. Aşağıdaki örnek, türünde öğeleri olan iki boyutlu bir dizi içeren bir değişkeni bildirmek, oluşturmak ve başlatmak için çeşitli yollar gösterir`Short`  
+- Dizi sınırlarını açıkça belirtebilir veya dışarı bırakabilir ve derleyicinin dizi sınırlarını, dizi değişmez değerindeki değerlere göre çıkarmasını sağlayabilirsiniz. Hem üst sınırı hem de değerleri sağlarsanız, her boyuttaki üst sınır aracılığıyla 0 dizininden her öğe için bir değer eklemelisiniz. Aşağıdaki örnek, türünde öğeleri olan iki boyutlu bir dizi içeren bir değişkeni bildirmek, oluşturmak ve başlatmak için çeşitli yollar gösterir `Short`  
   
      [!code-vb[VbVbalrArrays#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrArrays/VB/Class1.vb#18)]  
   

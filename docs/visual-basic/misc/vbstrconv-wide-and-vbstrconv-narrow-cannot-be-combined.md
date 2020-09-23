@@ -4,19 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IllegalWideNarrow
 ms.assetid: a53b4e6a-36b1-4e36-b2c5-8196313ec599
-ms.openlocfilehash: e90af8ba91872a04be11524753d9df0d168315ca
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7193d1f635ff877ab5d07f03584f19f5ce18138a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198249"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059374"
 ---
 # <a name="vbstrconvwide-and-vbstrconvnarrow-cannot-be-combined"></a>VbStrConv. Wide ve VbStrConv. dar birleştirilemez
-Uygulamanız, birbirini dışlayan `VbStrConv` numaralandırma üyelerini `Wide` ve `Narrow`birleştirmeye çalışıyor.  
+
+Uygulamanız, `VbStrConv` sabit listesi üyelerini birleştirmeye çalışıyor `Wide` ve `Narrow` birbirini dışlıyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. `VbStrConv.Wide` ya da `VbStrConv.Narrow`kaldırın.  
+1. Ya da ' i kaldırın `VbStrConv.Wide` `VbStrConv.Narrow` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

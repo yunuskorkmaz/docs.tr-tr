@@ -9,17 +9,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: 3dd4be6ea6de9dfe8eb165e5d4ba9a990fc40585
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b7430b209f53a0a924ec587a0097178baf0075e3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363960"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059229"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Bağımsız Değişkenleri Değere ve Başvuruya Göre Geçirme (Visual Basic)
+
 Visual Basic, bir yordama *değere* veya *başvuruya*göre bir bağımsız değişken geçirebilirsiniz. Bu, *geçirme mekanizması*olarak bilinir ve yordamın çağıran koddaki bağımsız değişkenin temelindeki programlama öğesini değiştirip değiştiremeyeceğini belirler. Yordam bildirimi, [ByVal](../../../language-reference/modifiers/byval.md) veya [ByRef](../../../language-reference/modifiers/byref.md) anahtar sözcüğü belirtilerek her bir parametre için geçen geçiş mekanizmasını belirler.  
   
 ## <a name="distinctions"></a>Farklar  
+
  Bir yordama bir bağımsız değişken geçirirken, birbirleriyle etkileşime geçen birkaç farklı ayrımın farkında olun:  
   
 - Temeldeki programlama öğesinin değiştirilebilir mi yoksa değiştirilemez mi olduğunu belirtir  
@@ -33,6 +35,7 @@ Visual Basic, bir yordama *değere* veya *başvuruya*göre bir bağımsız deği
  Daha fazla bilgi için bkz. [değiştirilebilir ve değiştirilemeyen bağımsız değişkenler](./differences-between-modifiable-and-nonmodifiable-arguments.md) Ile [bir bağımsız değişkeni değere ve başvuruya göre geçirme arasındaki](./differences-between-passing-an-argument-by-value-and-by-reference.md)farklılıklar.  
   
 ## <a name="choice-of-passing-mechanism"></a>Geçirme mekanizması seçimi  
+
  Geçirilen mekanizmayı her bağımsız değişken için dikkatle seçmeniz gerekir.  
   
 - **Koruma**. İki geçiş mekanizması arasında seçim yaparken en önemli ölçüt, değiştirilecek çağrı değişkenlerinin açıklanmesidir. Bağımsız değişken geçirmenin avantajı, `ByRef` yordamın bu bağımsız değişken aracılığıyla çağırma koduna bir değer döndüremesidir. Bağımsız değişken geçirmenin avantajı, `ByVal` bir değişkenin yordam tarafından değiştirilmesini koruabilmesidir.  
@@ -42,6 +45,7 @@ Visual Basic, bir yordama *değere* veya *başvuruya*göre bir bağımsız deği
      Başvuru türleri için, yalnızca verilerin işaretçisi kopyalanır (32-bit platformlarda dört bayt, 64 bit platformlarda sekiz bayt). Bu nedenle, bu tür bağımsız değişkenleri, `String` performansı çok fazla `Object` performans olmadan veya değere göre geçirebilirsiniz.  
   
 ## <a name="determination-of-the-passing-mechanism"></a>Geçen mekanizmanın belirlenmesi  
+
  Yordam bildirimi her parametre için geçen mekanizmayı belirtir. Çağıran kod bir `ByVal` mekanizmayı geçersiz kılamaz.  
   
  Bir parametre ile bildirilirse `ByRef` , çağıran kod, `ByVal` bağımsız değişken adını çağrıda parantez içine alarak mekanizmayı zorlayabilir. Daha fazla bilgi için bkz. [nasıl yapılır: bağımsız değişkeni değere göre geçirilmesine zorlama](./how-to-force-an-argument-to-be-passed-by-value.md).  
@@ -63,9 +67,11 @@ Visual Basic, bir yordama *değere* veya *başvuruya*göre bir bağımsız deği
 ## <a name="example"></a>Örnek  
   
 ### <a name="description"></a>Description  
+
  Aşağıdaki örnek, bağımsız değişkenlerin değere göre ne zaman geçirileceğini ve başvuruya göre ne zaman geçirileceğini gösterir. Yordamda `Calculate` hem a `ByVal` hem de `ByRef` parametresi vardır. Bir faiz oranı, `rate` ve toplam para miktarı verildiğinde, `debt` yordamın görevi, `debt` Bu değerin özgün değerine uygulanan faiz oranını uygulamanın sonucu olan yeni bir değer hesaplayacaktır `debt` . `debt`Bir parametre olduğundan `ByRef` , yeni toplam, öğesine karşılık gelen çağıran koddaki bağımsız değişkenin değerine yansıtılır `debt` . Parametresi `rate` , `ByVal` `Calculate` değerini değiştirmemelidir.  
   
 ### <a name="code"></a>Kod  
+
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>Ayrıca bkz.

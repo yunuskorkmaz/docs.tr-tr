@@ -6,14 +6,15 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 752b425ba32efe41a1ab1aa75de20039d36f5e50
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414459"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058904"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Nasıl yapılır: Numaralandırmaları Bildirme (Visual Basic)
+
 `Enum`Bir sınıfın veya modülün Bildirimler bölümünde ifadesiyle bir numaralandırma oluşturursunuz. Bir yöntem içinde bir numaralandırma bildiremezsiniz. Uygun erişim düzeyini belirtmek için,, veya kullanın `Private` `Protected` `Friend` `Public` .  
   
  Bir `Enum` tür, her biri bir sabiti temsil eden bir ad, temel tür ve bir alan kümesi içerir. Ad geçerli bir .NET niteleyicisi olmalıdır Visual Basic. Temel alınan tür tamsayı türlerinden biri olmalıdır — `Byte` , `Short` , `Long` veya `Integer` . `Integer` varsayılan değerdir. Numaralandırmalar her zaman kesin olarak türlidir ve tamsayı sayı türleriyle birlikte değiştirilebilir değildir.  

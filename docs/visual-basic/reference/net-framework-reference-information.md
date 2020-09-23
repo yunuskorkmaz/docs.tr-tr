@@ -6,17 +6,19 @@ helpviewer_keywords:
 - .NET Framework [Visual Basic], reference
 - .NET Framework class library [Visual Basic], reference information
 ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
-ms.openlocfilehash: ebf9040fc16666d7e40e95981d5ceee97e716acb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a3ce3780818a6a07de1c594b9da3f4a5f9e03f37
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352847"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058410"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Framework Başvuru Bilgisi (Visual Basic)
+
 Bu konu, .NET Framework sınıf kitaplığıyla nasıl çalışılacağı hakkındaki bilgilerin bağlantılarını sağlar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Başlarken](../../framework/get-started/index.md)  
  .NET Framework'e kapsamlı bir genel bakış ve ek kaynaklara bağlantılar sağlar.  
   

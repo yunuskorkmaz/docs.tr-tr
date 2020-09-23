@@ -1,22 +1,23 @@
 ---
-title: "'Before' ve 'After' bağımsız değişkenleri birleştirilemez"
+title: "' Before ' ve ' After ' bağımsız değişkenleri birleştirilemez"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrCollection_BeforeAfterExclusive
 ms.assetid: f55fb8d2-746d-45de-b350-5a47f83e5ab4
-ms.openlocfilehash: 6508178c7415de041d2e886f19e30b81feb095b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a0a565987cb72507cde1a763942430ce57d8e6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008143"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059892"
 ---
-# <a name="before-and-after-arguments-cannot-be-combined"></a>'Before' ve 'After' bağımsız değişkenleri birleştirilemez
-Bir bağımsız değişken listesi hem de içeren `Before` ve `After` karşılıklı olarak birbirini dışlar bağımsız değişkenler.  
+# <a name="before-and-after-arguments-cannot-be-combined"></a>' Before ' ve ' After ' bağımsız değişkenleri birleştirilemez
+
+Bağımsız değişken listesi `Before` `After` birlikte birbirini dışlayan ve bağımsız değişkenleri içerir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Ya da kaldırma `Before` veya `After` bağımsız değişken.  
+1. `Before`Ya da `After` bağımsız değişkenini kaldırın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

@@ -11,14 +11,15 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], constants
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
-ms.openlocfilehash: 7d15c46c0f6bb00c23dd98e464f61a5f94b0773a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aad4f8b24a43ecc51c372916b438daee72adc405
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414407"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058696"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic'de Sabitler ve Numaralandırmalar
+
 Sabitler, değişmez bir değer yerine anlamlı adlar kullanmanın bir yoludur. Adın gösterdiği gibi sabitler depolama değerleri, bir uygulamanın yürütülmesi boyunca sabit kalır. Sabitleri, sayılar yerine anlamlı adlar sağlamak için kullanabilirsiniz, böylece kodunuzun daha okunabilir olmasını sağlayabilirsiniz.  
   
  Numaralandırmalar ilgili sabitler kümesiyle çalışmanın kolay bir yolunu sağlar ve sabit değerleri adlarla ilişkilendirir. Örneğin, haftanın günleriyle ilişkili bir tamsayı sabitleri kümesi için bir sabit listesi belirtebilir ve ardından kodunuzda tamsayı değerleri yerine günlerin adlarını kullanabilirsiniz.  

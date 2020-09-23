@@ -6,14 +6,15 @@ helpviewer_keywords:
 - strings [Visual Basic], enumeration values
 - values [Visual Basic], enumeration members
 ms.assetid: 9253e7c8-579c-49a2-8f26-392b20ea99eb
-ms.openlocfilehash: 525da9206472afefa9f85b49ceee0775cbd168c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4138759bfbb049b77406fc536219b40d3ed9e2a5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414472"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058775"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Nasıl yapılır: Bir Numaralandırma Değeriyle İlişkili Dizeyi Belirleme (Visual Basic)
+
 <xref:System.Enum.GetValues%2A>Ve <xref:System.Enum.GetNames%2A> yöntemleri, numaralandırma üyeleriyle ilişkili dizeleri ve değerleri belirlemenizi sağlar.  
   
 ### <a name="to-determine-the-string-associated-with-an-enumeration"></a>Bir sabit listesi ile ilişkili dizeyi belirleme  

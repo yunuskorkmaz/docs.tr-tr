@@ -6,14 +6,15 @@ helpviewer_keywords:
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-ms.openlocfilehash: b71c1eeaa136d01c701191f1bb145674efccbc56
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: eae283c757ddeb1290c15d82a41c8028a8941e63
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90551047"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059164"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic Kodlama Kuralları
+
 Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. Aynı kodlama kurallarını izlerseniz, aşağıdaki avantajları elde edebilirsiniz:  
   
 - Kodunuzun tutarlı bir görünümü olur, böylece okuyucular düzene göre değil içeriğe daha iyi odaklanabilir.  
@@ -86,6 +87,7 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
 ### <a name="relaxed-delegates-in-event-handlers"></a>Olay Işleyicilerinde gevşek temsilciler  
+
  Bağımsız değişkenleri (Object ve EventArgs) olay işleyicileriyle açıkça nitelemeyin. Bir olaya iletilen olay bağımsız değişkenlerini kullanmıyorsanız (örneğin, gönderen nesne, EventArgs olarak e), gevşek temsilciler kullanın ve kodunuzda olay bağımsız değişkenlerini bırakın:  
   
  [!code-vb[VbVbalrGuidelines#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#7)]  
@@ -121,14 +123,17 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
      [!code-vb[VbVbalrGuidelines#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#13)]  
   
 ### <a name="use-the-with-keyword"></a>WITH anahtar sözcüğünü kullanma  
+
  Bir nesneye bir dizi çağrı yaptığınızda, `With` anahtar sözcüğünü kullanmayı düşünün:  
   
  [!code-vb[VbVbalrGuidelines#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#15)]  
   
 ### <a name="use-the-trycatch-and-using-statements-when-you-use-exception-handling"></a>TRY... öğesini kullanın Özel durum Işleme kullandığınızda deyimleri yakalama ve kullanma  
+
  Kullanmayın `On Error Goto` .  
   
 ### <a name="use-the-isnot-keyword"></a>Inot anahtar sözcüğünü kullanma  
+
  `IsNot`Yerine anahtar sözcüğünü kullanın `Not...Is Nothing` .  
   
 ### <a name="new-keyword"></a>Yeni anahtar sözcük  
@@ -162,9 +167,11 @@ Microsoft, bu konudaki yönergeleri izleyen örnekler ve belgeler geliştirir. A
 - `Nothing`Yöntemi çağırmadan önce bir olayın (null) olup olmadığını doğrulama `RaiseEvent` . `RaiseEvent``Nothing`olayı oluşturmadan önce olup olmadığını denetler.  
   
 ### <a name="using-shared-members"></a>Paylaşılan üyeleri kullanma  
+
  `Shared`Bir örnek değişkeninden değil sınıf adını kullanarak üyeleri çağırın.  
   
 ### <a name="use-xml-literals"></a>XML değişmez değerlerini kullan  
+
  XML sabit değerleri, XML ile çalışırken karşılaşabileceğiniz en yaygın görevleri basitleştirir (örneğin, Load, Query ve Transform). XML ile geliştirme yaparken şu yönergeleri izleyin:  
   
 - XML API 'Lerini doğrudan çağırmak yerine XML belgelerini ve parçalarını oluşturmak için XML değişmez değerlerini kullanın.  

@@ -23,14 +23,15 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 138dd58dac9d1983e35e61f8b98a77810fc6e38b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414485"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058852"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Nasıl yapılır: Bir Sabit Bildirme (Visual Basic)
+
 `Const`Bir sabiti bildirmek ve değerini ayarlamak için ifadesini kullanın. Bir sabiti bildirerek, bir değere anlamlı bir ad atarsınız. Sabit bir kez bildirildiğinde, değiştirilemez veya yeni bir değer atanamaz.  
   
  Bir yordamın içinde veya bir modülün, sınıfın veya yapının Bildirimler bölümünde bir sabit değer bildirirsiniz. Sınıf veya yapı düzeyi sabitleri varsayılan olarak olur `Private` , ancak `Public` `Friend` `Protected` `Protected Friend` uygun kod erişimi düzeyi için,, veya olarak da belirtilebilir.  

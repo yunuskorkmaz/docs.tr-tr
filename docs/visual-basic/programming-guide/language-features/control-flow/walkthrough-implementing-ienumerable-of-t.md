@@ -7,14 +7,15 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 582957c91eac63cf7f72dd2f6c0cf40e627be686
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f1f0036c38299f2392f8c8705e67b7bb6b7db068
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402037"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058644"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>İzlenecek yol: Visual Basic'de IEnumerable(Of T) Uygulama
+
 <xref:System.Collections.Generic.IEnumerable%601>Arabirim, tek seferde bir öğe bir dizi değer döndürebilen sınıflar tarafından uygulanır. Verileri bir kerede bir öğe döndürmesinin avantajı, verilerle çalışmak için tüm veri kümesini belleğe yüklemeniz gerekmez. Verilerden tek bir öğe yüklemek için yeterli bellek kullanmanız gerekir. Arabirimi uygulayan sınıflar, `IEnumerable(T)` `For Each` döngüler veya LINQ sorguları ile kullanılabilir.  
   
  Örneğin, büyük bir metin dosyasını okuması ve her satırı belirli arama ölçütleriyle eşleşen dosyadan döndürmesi gereken bir uygulamayı düşünün. Uygulama, dosyadan belirtilen ölçütlerle eşleşen satırları döndürmek için bir LINQ sorgusu kullanır. Bir LINQ sorgusu kullanarak dosyanın içeriğini sorgulamak için, uygulama dosyanın içeriğini bir diziye veya koleksiyona yükleyebilir. Ancak, tüm dosyanın bir diziye veya koleksiyona yüklenmesi gerekenden çok daha fazla bellek tüketir. LINQ sorgusu bunun yerine, yalnızca arama ölçütleriyle eşleşen değerleri döndürerek sıralanabilir bir sınıf kullanarak dosya içeriğini sorgulayabilir. Yalnızca birkaç eşleşen değeri döndüren sorgular çok daha az bellek tüketir.  

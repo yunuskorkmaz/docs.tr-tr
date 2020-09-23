@@ -1,19 +1,20 @@
 ---
-title: Resim, geçerli değil.
+title: Resim geçerli değil
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID481
 ms.assetid: 6ac18c39-042b-423a-9d95-25a7745c84dd
-ms.openlocfilehash: 3413aaecb332b711cb93c86156ab2c6f48110213
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a95e3f6d5b89f398e2e282308ecea426e826f2e7
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944760"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059710"
 ---
-# <a name="picture-is-not-valid"></a>Resim, geçerli değil.
-Bir bit eşlem, simge ya da için Windows Meta dosyası dışındaki bir grafik biçimi atamak çalıştığınız `Picture` bir form veya denetim özelliği.  
+# <a name="picture-is-not-valid"></a>Resim geçerli değil
+
+Bir form veya denetim özelliğine bit eşlem, simge veya Windows meta dosyası dışında bir grafik biçimi atamaya çalıştınız `Picture` .  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. İçine yüklemeye çalıştığınız dosya emin `Picture` Visual Basic tarafından desteklenen geçerli grafik dosyasının bir özelliktir.  
+1. Özelliğe yüklemeye çalıştığınız dosyanın `Picture` Visual Basic tarafından desteklenen geçerli bir grafik dosyası olduğundan emin olun.  

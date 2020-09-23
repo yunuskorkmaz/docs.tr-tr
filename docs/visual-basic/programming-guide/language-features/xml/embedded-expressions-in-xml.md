@@ -8,14 +8,15 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: d4ff9442aa82a3eb46d56500159562174646ea58
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44a6c3408b57fa7f89e2834aa677fe8801ef21f3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410263"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058319"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML'de Katıştırılmış İfadeler (Visual Basic)
+
 Katıştırılmış ifadeler çalışma zamanında değerlendirilen ifadeler içeren XML sabit değerleri oluşturmanızı sağlar. Gömülü ifade için sözdizimi `<%=` `expression` `%>` , ASP.NET içinde kullanılan söz dizimi ile aynıdır.  
   
  Örneğin, katıştırılmış ifadeleri sabit metin içeriğiyle birleştiren bir XML öğesi değişmez değeri oluşturabilirsiniz.  
@@ -31,16 +32,17 @@ Katıştırılmış ifadeler çalışma zamanında değerlendirilen ifadeler iç
 ```  
   
 ## <a name="embedded-expression-location-and-validation"></a>Katıştırılmış Ifade konumu ve doğrulama  
+
  Katıştırılmış ifadeler yalnızca XML sabit ifadeleri içindeki belirli konumlarda görünebilir. İfade konumu, ifadenin hangi türleri döndürebileceğini ve nasıl işlendiğini denetler `Nothing` . Aşağıdaki tabloda, eklenmiş ifadelerin izin verilen konumları ve türleri açıklanmaktadır.  
   
-|Değişmez değer içindeki konum|İfade türü|İşleme`Nothing`|  
+|Değişmez değer içindeki konum|İfade türü|İşleme `Nothing`|  
 |---|---|---|  
 |XML öğesi adı|<xref:System.Xml.Linq.XName>|Hata|  
-|XML öğesi içeriği|`Object`veya dizisi`Object`|Yoksayıldı|  
-|XML öğesi öznitelik adı|<xref:System.Xml.Linq.XName>|Öznitelik değeri de yoksa, hata`Nothing`|  
+|XML öğesi içeriği|`Object` veya dizisi `Object`|Yoksayıldı|  
+|XML öğesi öznitelik adı|<xref:System.Xml.Linq.XName>|Öznitelik değeri de yoksa, hata `Nothing`|  
 |XML öğesi öznitelik değeri|`Object`|Öznitelik bildirimi yoksayıldı|  
-|XML öğesi özniteliği|<xref:System.Xml.Linq.XAttribute>veya bir koleksiyonu<xref:System.Xml.Linq.XAttribute>|Yoksayıldı|  
-|XML belgesi kök öğesi|<xref:System.Xml.Linq.XElement>ya da bir <xref:System.Xml.Linq.XElement> nesne ve rastgele sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesne koleksiyonu|Yoksayıldı|  
+|XML öğesi özniteliği|<xref:System.Xml.Linq.XAttribute> veya bir koleksiyonu <xref:System.Xml.Linq.XAttribute>|Yoksayıldı|  
+|XML belgesi kök öğesi|<xref:System.Xml.Linq.XElement> ya da bir <xref:System.Xml.Linq.XElement> nesne ve rastgele sayıda <xref:System.Xml.Linq.XProcessingInstruction> ve <xref:System.Xml.Linq.XComment> nesne koleksiyonu|Yoksayıldı|  
   
 - Bir XML öğe adında katıştırılmış ifade örneği:  
   
@@ -73,6 +75,7 @@ Katıştırılmış ifadeler çalışma zamanında değerlendirilen ifadeler iç
  Belirli bir sabit değer türünde gömülü bir ifade kullanma hakkında daha fazla bilgi için bkz. [XML Document Literal](../../../language-reference/xml-literals/xml-document-literal.md), [XML öğesi değişmez değeri](../../../language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="scoping-rules"></a>Kapsam oluşturma kuralları  
+
  Derleyici, her XML sabit değerini uygun değişmez değer türü için bir Oluşturucu çağrısına dönüştürür. Bir XML sabit değerinde değişmez içerik ve katıştırılmış ifadeler, oluşturucuya bağımsız değişken olarak geçirilir. Bu, bir XML sabit değeri için kullanılabilen tüm Visual Basic programlama öğelerinin katıştırılmış ifadeler tarafından da kullanılabildiği anlamına gelir.  
   
  Bir XML sabit değeri içinde, ifadesiyle belirtilen XML ad alanı öneklerine erişebilirsiniz `Imports` . Özniteliğini kullanarak bir öğesinde yeni bir XML ad alanı ön eki veya var olan bir XML ad alanı ön ekini gölgelendirebilmeniz gerekir `xmlns` . Yeni ad alanı, bu öğenin alt düğümleri için kullanılabilir ancak gömülü ifadelerde XML değişmez değerleri için kullanılamaz.  

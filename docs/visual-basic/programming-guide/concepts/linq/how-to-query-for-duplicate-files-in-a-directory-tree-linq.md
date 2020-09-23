@@ -2,15 +2,16 @@
 title: 'Nasıl yapılır: Bir Dizin Ağacında Yineleyen Dosyalar için Sorgu (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: b37da0a26c8bb4abc885faa7bb0c467e2d7d2347
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 71c656fba3962f08733e27279ac9bfa94d957aa8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396434"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058917"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Nasıl yapılır: bir dizin ağacında (LINQ) yinelenen dosyalar için sorgu (Visual Basic)
-Bazen aynı ada sahip dosyalar birden fazla klasörde bulunabilir. Örneğin, Visual Studio yükleme klasörü altında, birkaç klasör Readme. htm dosyasına sahiptir. Bu örnek, belirtilen bir kök klasör altında bu tür yinelenen dosya adlarının nasıl sorgulanalınacağını gösterir. İkinci örnek boyut ve oluşturma süreleri de eşleşen dosyaların nasıl sorgulanalınacağını gösterir.  
+
+Bazen aynı ada sahip dosyalar birden fazla klasörde bulunabilir. Örneğin, Visual Studio yükleme klasörü altında birkaç klasör readme.htm dosyasına sahiptir. Bu örnek, belirtilen bir kök klasör altında bu tür yinelenen dosya adlarının nasıl sorgulanalınacağını gösterir. İkinci örnek boyut ve oluşturma süreleri de eşleşen dosyaların nasıl sorgulanalınacağını gösterir.  
   
 ## <a name="example"></a>Örnek  
   
@@ -101,6 +102,7 @@ End Module
  İlk sorgu, bir eşleşmeyi tespit etmek için basit bir anahtar kullanır; Bu, aynı ada sahip ancak içeriği farklı olabilecek olan dosyaları bulur. İkinci sorgu, nesnenin üç özellikleriyle eşleşmesi için bir bileşik anahtar kullanır <xref:System.IO.FileInfo> . Bu sorgu, aynı ada ve benzer veya özdeş içeriğe sahip dosyaları bulmak çok daha olasıdır.  
   
 ## <a name="compile-the-code"></a>Kodu derle  
+
 `Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.

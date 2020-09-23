@@ -9,14 +9,15 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 29d878afbe3669fc88e62b1fec98b306918c303d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 4489f75e50a783a9b1acfb9c30568fdec6614488
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405086"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057916"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>İzlenecek yol: Olayları İşleme (Visual Basic)
+
 Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konudır. [Izlenecek yol: Izlenecek yol: olayları bildirme ve](walkthrough-declaring-and-raising-events.md)oluşturma, olayların nasıl bildirilemeyeceğini ve tetikleyeceğinizi gösterir. Bu bölüm, bu kılavuzda yer alan formu ve sınıfı kullanır.  
   
  `Widget`Sınıf örneği geleneksel olay işleme deyimlerini kullanır. Visual Basic olaylarla çalışmaya yönelik başka teknikler de sağlar. Bir alıştırma olarak, ve deyimlerini kullanmak için bu örneği değiştirebilirsiniz `AddHandler` `Handles` .  
@@ -34,6 +35,7 @@ Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konud
      Değişkeni, `mblnCancel` yöntemi iptal etmek için kullanılır `LongTask` .  
   
 ## <a name="writing-code-to-handle-an-event"></a>Bir olayı Işlemek için kod yazma  
+
  Kullanarak bir değişken bildirdikten hemen sonra `WithEvents` , sınıfın **kod düzenleyicisinin**sol açılır listesinde değişken adı belirir. Seçtiğinizde `mWidget` , `Widget` sınıfın olayları sağ açılan listede görüntülenir. Bir olay seçilmesi, ilgili olay yordamını önek `mWidget` ve alt çizgi ile görüntüler. Bir değişkenle ilişkili tüm olay yordamlarına `WithEvents` önek olarak değişken adı verilir.  
   
 #### <a name="to-handle-an-event"></a>Bir olayı işlemek için  
@@ -58,7 +60,8 @@ Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konud
  Kullanıcı çalışırken **iptal** düğmesine tıkladığında `LongTask` , etkinlik `Button2_Click` `DoEvents` olay işlemenin oluşmasına izin verdiği anda olay yürütülür. Sınıf düzeyi değişkeni `mblnCancel` olarak ayarlanır `True` ve `mWidget_PercentDone` olay bundan sonra test eder ve `ByRef Cancel` bağımsız değişkenini olarak ayarlar `True` .  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Bir WithEvents değişkenini bir nesneye bağlama  
- `Form1`Artık bir nesnenin olaylarını işleyecek şekilde ayarlanır `Widget` . Her şey bir yerde bulunmaya devam etmektedir `Widget` .  
+
+ `Form1` Artık bir nesnenin olaylarını işleyecek şekilde ayarlanır `Widget` . Her şey bir yerde bulunmaya devam etmektedir `Widget` .  
   
  Tasarım zamanında bir değişken bildirdiğinizde `WithEvents` , onunla ilişkili bir nesne yoktur. `WithEvents`Değişken, tıpkı diğer nesne değişkenleri gibi. Bir nesnesi oluşturmanız ve değişkenine bir başvuru atamanız gerekir `WithEvents` .  
   
@@ -82,7 +85,7 @@ Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konud
   
  `LongTask`Yöntemi çağrılmadan önce, tamamlanma yüzdesini gösteren etiketin başlatılması ve `Boolean` yöntemin iptal edilmesi için sınıf düzeyi bayrağının olarak ayarlanması gerekir `False` .  
   
- `LongTask`, 12,2 saniyelik bir görev süresiyle çağrılır. `PercentDone`Olay, saniyenin her biri üçte bir kez tetiklenir. Olay her oluşturulduğunda `mWidget_PercentDone` olay yordamı yürütülür.  
+ `LongTask` , 12,2 saniyelik bir görev süresiyle çağrılır. `PercentDone`Olay, saniyenin her biri üçte bir kez tetiklenir. Olay her oluşturulduğunda `mWidget_PercentDone` olay yordamı yürütülür.  
   
  İşiniz `LongTask` bittiğinde, `mblnCancel` `LongTask` normal olarak mı sonlandırıldığı, yoksa durdurulmuş mi olduğunu görmek için test edilmiştir `mblnCancel` `True` . Tamamlanma yüzdesi yalnızca önceki durumda güncelleştirilir.  
   
@@ -119,4 +122,4 @@ Bu, etkinliklerle nasıl çalışabileceğini gösteren iki konunun ikinci konud
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek yol: Olay Bildirme ve Oluşturma](walkthrough-declaring-and-raising-events.md)
-- [Olaylar](index.md)
+- [Ekinlikler](index.md)

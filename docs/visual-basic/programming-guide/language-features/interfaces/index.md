@@ -7,14 +7,15 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 90f8e5d4eb7bb6b367ee5ffd4a4323097c6bde9c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ac5db62fec3548bfd4a99477958f4f29463267c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405048"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057838"
 ---
 # <a name="interfaces-visual-basic"></a>Arabirimler (Visual Basic)
+
 *Arabirimler* , sınıfların uygulayamayacağı özellikleri, yöntemleri ve olayları tanımlar. Arabirimler, özellikleri, daha yakından ilgili özellikler, Yöntemler ve olaylar gibi küçük gruplar olarak tanımlamanızı sağlar. Bu, mevcut kodu tehlikeye atamadan arabirimlerinizde gelişmiş uygulamalar geliştirebileceğiniz için uyumluluk sorunlarını azaltır. Ek arabirimler ve uygulamalar geliştirirken dilediğiniz zaman yeni özellikler ekleyebilirsiniz.  
   
  Sınıf devralma yerine arabirimleri kullanmak isteyebileceğiniz birkaç başka neden vardır:  
@@ -28,6 +29,7 @@ ms.locfileid: "84405048"
 - Sınıf devralmayı kullanabilmeniz için arabirimler faydalıdır. Örneğin, yapılar sınıflardan kalýtýmla bağlanamaz, ancak arabirimleri uygulayabilirler.  
   
 ## <a name="declaring-interfaces"></a>Arabirimleri bildirme  
+
  Arabirim tanımları ve deyimleri içine alınır `Interface` `End Interface` . `Interface`Deyimden sonra, `Inherits` bir veya daha fazla devralınmış arabirimi listeleyen isteğe bağlı bir ifade ekleyebilirsiniz. `Inherits`Deyimler, açıklama haricinde bildirimde bulunan tüm diğer deyimlerden önce gelmelidir. Arabirim tanımındaki kalan deyimler,,,,, `Event` , `Sub` `Function` `Property` `Interface` `Class` `Structure` ve `Enum` deyimleri olmalıdır. Arabirimler, veya gibi uygulama kodu ile ilişkili herhangi bir uygulama kodu veya deyim içeremez `End Sub` `End Property` .  
   
  Bir ad alanında, arabirim deyimleri `Friend` Varsayılan olarak, ancak veya olarak açıkça bildirilebilecek `Public` `Friend` . Sınıflar, modüller, arabirimler ve yapılar içinde tanımlanan arabirimler varsayılan olarak,,, `Public` veya olarak açıkça bildirilemez `Public` `Friend` `Protected` `Private` .  
@@ -40,12 +42,15 @@ ms.locfileid: "84405048"
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Arabirimleri uygulama  
+
  Visual Basic ayrılmış sözcük `Implements` iki şekilde kullanılır. `Implements`İfade bir sınıfın veya yapının bir arabirim uyguladığını belirtir. `Implements`Anahtar sözcüğü, bir sınıf üyesi veya yapı üyesinin belirli bir arabirim üyesini uyguladığını belirtir.  
   
 ### <a name="implements-statement"></a>Implements Deyimi  
+
  Bir sınıf veya yapı bir veya daha fazla arabirim uygularsa, `Implements` `Class` veya deyimden hemen sonra ifadesini içermesi gerekir `Structure` . `Implements`İfade, bir sınıf tarafından uygulanacak arabirimlerin virgülle ayrılmış bir listesini gerektirir. Sınıf veya yapı, anahtar sözcüğünü kullanarak tüm arabirim üyelerini uygulamalıdır `Implements` .  
   
 ### <a name="implements-keyword"></a>Implements anahtar sözcüğü  
+
  `Implements`Anahtar sözcüğü, uygulanacak arabirim üyeleri için virgülle ayrılmış bir liste gerektirir. Genellikle yalnızca tek bir arabirim üyesi belirtilir, ancak birden çok üye belirtebilirsiniz. Bir arabirim üyesinin belirtimi, sınıf içindeki bir Implements ifadesinde belirtilmesi gereken arabirim adından oluşur; nokta; ve uygulanacak üye işlevin, özelliğin veya etkinliğin adı. Bir arabirim üyesini uygulayan üyenin adı herhangi bir yasal tanımlayıcıyı kullanabilir ve `InterfaceName_MethodName` Visual Basic önceki sürümlerinde kullanılan kurala sınırlı değildir.  
   
  Örneğin, aşağıdaki kod, bir arabirimin yöntemini uygulayan adlı bir alt yordamın nasıl bildirilemeyeceğini göstermektedir `Sub1` :  
@@ -63,6 +68,7 @@ ms.locfileid: "84405048"
  Bir arabirim üyesini uygulamak için özel üye kullanabilirsiniz. Bir özel üye bir arabirimin üyesini uygularsa, bu üye, sınıfın nesne değişkenlerinde doğrudan kullanılamaz olmasına rağmen arabirim tarafından kullanılabilir hale gelir.  
   
 ### <a name="interface-implementation-examples"></a>Arabirim uygulama örnekleri  
+
  Arabirim uygulayan sınıfların tüm özelliklerini, yöntemlerini ve olaylarını uygulaması gerekir.  
   
  Aşağıdaki örnek iki arabirimi tanımlar. İkinci arabirim, `Interface2` `Interface1` bir ek özellik ve yöntemi devralır ve tanımlar.  

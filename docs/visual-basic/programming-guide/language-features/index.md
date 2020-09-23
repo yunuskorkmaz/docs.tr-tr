@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 2a2e8d0a08fda5783fa20e7403ea215133d0514e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ae226520ecd7dff09023bcc88e610ff400c4019d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405060"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057864"
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic Dil Özellikleri
+
 Aşağıdaki konularda, nesne odaklı bir programlama dili olan Visual Basic temel bileşenleri tanıtılmaktadır ve ele alınmaktadır. Form ve denetimleri kullanarak uygulamanız için Kullanıcı arabirimini oluşturduktan sonra, uygulamanın davranışını tanımlayan kodu yazmanız gerekir. Tüm modern programlama dillerinde olduğu gibi Visual Basic, yaygın olarak kullanılan birçok programlama yapısını ve dil öğelerini destekler.  
   
  Diğer dillerde programladıysanız, bu bölümde ele alınan malzemenin çoğu tanıdık görünebilir. Yapıların büyük bölümü diğer dillerdeki olanlarla benzerdir ancak olay odaklı Visual Basic, bazı hafif farklılıklar sunar.  
@@ -20,6 +21,7 @@ Aşağıdaki konularda, nesne odaklı bir programlama dili olan Visual Basic tem
  Programlamaya yeni bir giriş yapıyorsanız, bu bölümdeki malzeme kod yazmak için temel yapı taşlarına giriş görevi görür. Temel bilgileri anladıktan sonra, Visual Basic kullanarak güçlü uygulamalar oluşturabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Diziler](arrays/index.md)  
  Birden çok ilişkili değeri tutan dizileri bildirerek ve kullanarak kodunuzun daha kompakt ve güçlü olmasını açıklar.  
   
@@ -47,7 +49,7 @@ Aşağıdaki konularda, nesne odaklı bir programlama dili olan Visual Basic tem
  [Hata Türleri](error-types.md)  
  Söz dizimi hatalarına, çalışma zamanı hatalarına ve mantık hatalarına genel bir bakış sağlar.  
   
- [Olaylar](events/index.md)  
+ [Ekinlikler](events/index.md)  
  Olayların nasıl bildirilemeyeceğini ve kullanılacağı gösterilir.  
   
  [Arabirimler](interfaces/index.md)  

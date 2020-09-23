@@ -670,7 +670,7 @@ items:
                     href: ../standard/base-types/regular-expression-example-scanning-for-hrefs.md
                   - name: Tarih biçimlerini değiştirme
                     href: ../standard/base-types/regular-expression-example-changing-date-formats.md
-                  - name: URL'den protokol ve bağlantı noktası numarasını ayıklama
+                  - name: Bir URL’den protokol ve bağlantı noktası numarası çıkarma
                     href: ../standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
                   - name: Dizeden geçersiz karakterleri çıkartma
                     href: ../standard/base-types/how-to-strip-invalid-characters-from-a-string.md
@@ -715,7 +715,7 @@ items:
       - name: Bağımlılık ekleme
         href: /aspnet/core/fundamentals/dependency-injection
       - name: Genel konak
-        href: /aspnet/core/fundamentals/host/generic-host
+        href: ../core/extensions/generic-host.md
       - name: Günlüğe Kaydetme
         href: /aspnet/core/fundamentals/logging
       - name: Seçenekler deseni

@@ -3044,14 +3044,15 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 12af447d053e84347ddc3a2c1ecad1cde4ff3428
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d96f2512e2fae038853baedfb78fcf2feb84542b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357810"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059646"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Maalesef bu Visual Basic hatasıyla ilgili ayrıntı yok
+
 Ne yazık ki bu hatayla ilgili belirli bilgiler yok. Web 'de bilgi bulmak için hata numarası ve ileti metni araması yapabilirsiniz. Ya da, şu forumlardan birini kullanarak diğer geliştiricilerle sorun da isteyebilirsiniz:  
   
  [Visual Basic dili](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  

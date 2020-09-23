@@ -19,14 +19,15 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 177ff6c6fe15c57563d2f62ed8927f9ee975be48
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c0e10f5593ce5c81002233516444e415571541f3
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393006"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058540"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Genişletme ve Daraltma Dönüşümleri (Visual Basic)
+
 Tür dönüştürmesinin sonucu, dönüştürme sonucunun hedef veri türünün aralığı içinde olup olmadığı konusunda önemli bir noktadır.  
   
  *Genişleyen dönüştürme* bir değeri, özgün verilerin olası bir değeri için izin verebilecek bir veri türüne dönüştürür.  Genişleyen dönüştürmeler kaynak değeri korur, ancak temsilini değiştirebilir. Bu, bir integral türünden `Decimal` veya ' den ' ye dönüştürürseniz oluşur `Char` `String` .  
@@ -34,6 +35,7 @@ Tür dönüştürmesinin sonucu, dönüştürme sonucunun hedef veri türünün 
  *Daraltma dönüştürmesi* bir değeri, olası değerlerden bazılarını tutabilecek bir veri türüne dönüştürür. Örneğin, bir tamsayı türüne dönüştürüldüğünde kesirli değer yuvarlanır ve dönüştürülecek sayısal bir tür `Boolean` ya da değerine düşürülür `True` `False` .  
   
 ## <a name="widening-conversions"></a>Dönüştürmeleri Genişletme  
+
  Aşağıdaki tabloda, standart genişletme dönüştürmeleri gösterilmektedir.  
   
 |Veri türü|Widens-veri türleri <sup>1</sup>|  
@@ -51,11 +53,11 @@ Tür dönüştürmesinin sonucu, dönüştürme sonucunun hedef veri türünün 
 |[Çift](../../../language-reference/data-types/double-data-type.md)|`Double`|  
 |Herhangi bir numaralandırılmış tür ([enum](../../../language-reference/statements/enum-statement.md))|Temel alınan integral türü ve temel alınan tür widens olan herhangi bir tür.|  
 |[Char](../../../language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char`dizide|`Char`dizide`String`|  
+|`Char` dizide|`Char` dizide `String`|  
 |Herhangi bir tür|[Nesne](../../../language-reference/data-types/object-data-type.md)|  
 |Türetilmiş herhangi bir tür|<sup>3</sup>' ün türetildiği temel tür.|  
 |Herhangi bir tür|Uyguladığı herhangi bir arabirim.|  
-|[Nothing](../../../language-reference/nothing.md)|Herhangi bir veri türü veya nesne türü.|  
+|[Yapma](../../../language-reference/nothing.md)|Herhangi bir veri türü veya nesne türü.|  
   
  <sup>1</sup> tanım, her veri türü ise widens.  
   
@@ -66,6 +68,7 @@ Tür dönüştürmesinin sonucu, dönüştürme sonucunun hedef veri türünün 
  Genişletme dönüştürmeleri her zaman çalışma zamanında başarılı olur ve veri kaybına neden olmaz. Bağımsız olarak, [katı deyimin](../../../language-reference/statements/option-strict-statement.md) tür denetleme anahtarını veya olarak ayarlamadığını örtülü olarak yapabilirsiniz `On` `Off` .  
   
 ## <a name="narrowing-conversions"></a>Daraltma dönüştürmeleri  
+
  Standart daraltma dönüştürmeleri şunları içerir:  
   
 - Yukarıdaki tabloda genişleyen dönüştürmelerin ters yönleri (her tür widens kendisi hariç)  
@@ -84,18 +87,21 @@ Tür dönüştürmesinin sonucu, dönüştürme sonucunun hedef veri türünün 
 > Daraltma dönüştürme hatası, bir `For Each…Next` koleksiyondaki öğelerden döngü denetim değişkenine dönüşümler için bastırılır. Daha fazla bilgi ve örnek için, her biri Için içindeki "dönüştürmeleri daraltma" bölümüne bakın [... Sonraki Ifade](../../../language-reference/statements/for-each-next-statement.md).  
   
 ### <a name="when-to-use-narrowing-conversions"></a>Daraltma dönüştürmelerinde ne zaman kullanılır?  
+
  Kaynak değerin hata veya veri kaybı olmadan hedef veri türüne dönüştürülebileceğini bildiğiniz zaman bir daraltma dönüştürmesi kullanırsınız. Örneğin, `String` "true" veya "false" içeren bir bilginiz varsa, `CBool` bunu öğesine dönüştürmek için anahtar sözcüğünü kullanabilirsiniz `Boolean` .  
   
 ## <a name="exceptions-during-conversion"></a>Dönüştürme sırasında özel durumlar  
+
  Genişletme dönüştürmeleri her zaman başarılı olduğundan, özel durum oluşturmaz. Daraltma dönüştürmeleri, başarısız olduğunda, genellikle aşağıdaki özel durumları oluşturur:  
   
-- <xref:System.InvalidCastException>— iki tür arasında dönüştürme tanımlanmazsa  
+- <xref:System.InvalidCastException> — iki tür arasında dönüştürme tanımlanmazsa  
   
-- <xref:System.OverflowException>— (yalnızca integral türleri) dönüştürülen değer hedef türü için çok büyükse  
+- <xref:System.OverflowException> — (yalnızca integral türleri) dönüştürülen değer hedef türü için çok büyükse  
   
  Bir sınıf veya yapı, bu sınıfa veya yapıya dönüştürme işleci olarak kullanılmak üzere bir [CType işlevi](../../../language-reference/functions/ctype-function.md) tanımlıyorsa, `CType` uygun bir özel durum oluşturabilir. Ayrıca, `CType` Visual Basic işlevleri veya .NET Framework yöntemleri çağırabilir ve bu da çeşitli özel durumlar oluşturabilir.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Başvuru türü dönüştürmeleri sırasında yapılan değişiklikler  
+
  *Başvuru türünden* bir dönüştürme yalnızca işaretçiyi değere kopyalar. Değerin kendisi hiçbir şekilde kopyalanmaz veya değiştirilmez. Değişebilir tek şey, işaretçiyi tutan değişkenin veri türüdür. Aşağıdaki örnekte, veri türü türetilmiş sınıftan taban sınıfına dönüştürülür, ancak her iki değişkenin de işaret eden nesnesi değiştirilmez.  
   
 ```vb  

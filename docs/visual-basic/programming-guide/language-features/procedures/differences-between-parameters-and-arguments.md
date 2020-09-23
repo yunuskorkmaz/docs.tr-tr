@@ -11,19 +11,21 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: dd0a62b6567f3e74763b7f2e9b96803c193c7976
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0ad9104f347205cebc6e078aac246a413c0d9b78
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403362"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91057851"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Parametreler ve Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
+
 Çoğu durumda, bir yordamın çağrıldığı koşullara ilişkin bazı bilgileri olması gerekir. Yinelenen veya paylaşılan görevler gerçekleştiren bir yordam, her çağrı için farklı bilgiler kullanır. Bu bilgiler, çağırdığınızda yordama geçirdiğiniz değişkenlerin, sabitlerin ve ifadelerden oluşur.  
   
  Bu bilgileri yordamla iletmek için, yordam bir *parametreyi*tanımlar ve çağıran kod bu parametreye bir *bağımsız değişken* geçirir. Parametresini bir park alanı ve bağımsız değişkeni olarak bir otomobil olarak düşünebilirsiniz. Farklı otomobil bir park alanını farklı zamanlarda park edebilir gibi, çağıran kod, yordamı her çağırdığında aynı parametreye farklı bir bağımsız değişken geçirebilir.  
   
 ## <a name="parameters"></a>Parametreler  
+
  Bir *parametre* , bu işlemi çağırdığınızda yordamın geçirilmesini beklediği bir değeri temsil eder. Yordamın bildirimi, parametrelerini tanımlar.  
   
  Bir `Function` veya `Sub` yordamı tanımladığınızda, yordam adından hemen sonra parantez içinde bir *parametre listesi* belirtirsiniz. Her parametre için bir ad, veri türü ve bir geçirme mekanizması ([ByVal](../../../language-reference/modifiers/byval.md) veya [ByRef](../../../language-reference/modifiers/byref.md)) belirtirsiniz. Ayrıca, bir parametresinin isteğe bağlı olduğunu belirtebilirsiniz. Bu, çağıran kodun bunun için bir değer geçmesi gerekmediği anlamına gelir.  
@@ -31,6 +33,7 @@ ms.locfileid: "84403362"
  Her parametrenin adı, yordamda *yerel bir değişken* işlevi görür. Parametre adını başka herhangi bir değişken kullandığınız şekilde kullanırsınız.  
   
 ## <a name="arguments"></a>Arguments  
+
  Bir *bağımsız değişken* , yordamı çağırdığınızda bir yordam parametresine geçirdiğiniz değeri temsil eder. Çağıran kod, yordamı çağırdığında bağımsız değişkenleri sağlar.  
   
  Bir `Function` veya `Sub` yordamını çağırdığınızda, yordam adının hemen ardından parantez içine bir *bağımsız değişken listesi* dahil edersiniz. Her bağımsız değişken, listedeki aynı konumdaki parametreye karşılık gelir.  

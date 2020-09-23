@@ -2,14 +2,15 @@
 title: 'Nasıl yapılır: Belirli bir Öznitelik veya Ada Sahip Dosyaları Sorgulama'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 4a6a5630f4ac0eb0cb08aed0dc8a390225194675
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: eeacd94fb303a439e8034b84d285ab11b2333581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396421"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91059320"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>Nasıl yapılır: belirtilen bir özniteliğe veya ada sahip dosyaları sorgulama (Visual Basic)
+
 Bu örnek, belirtilen bir dizin ağacında belirtilen dosya adı uzantısına (örneğin ". txt") sahip tüm dosyaların nasıl bulunacağını gösterir. Ayrıca, oluşturma zamanına göre ağaçta en yeni veya en eski dosyanın nasıl dönegösterdiğini gösterir.  
   
 ## <a name="example"></a>Örnek  
@@ -61,6 +62,7 @@ End Module
 ```  
   
 ## <a name="compile-the-code"></a>Kodu derle  
+
 `Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a6b70d0973e92db90e35e61b7fed2279c5b0bac3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bffdc5974eff6b71e0abc4780a61aa300769eed6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393980"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91058553"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Nasıl yapılır: Bir Yapıyı Bildirme (Visual Basic)
+
 Yapı [ifadesiyle](../../../language-reference/statements/structure-statement.md)bir yapı bildirimi başlar ve bunu `End Structure` ifadesiyle sonlandırın. Bu iki deyim arasında en az bir *öğe*bildirmeniz gerekir. Öğeleri herhangi bir veri türünde olabilir, ancak en az bir veya paylaşılmayan olmayan bir değişken ya da paylaşılmayan olmayan bir olay olmalıdır.  
   
  Yapı bildiriminde yapı öğelerinden hiçbirini başlatamıyor. Bir yapı türünde olması için bir değişken bildirdiğinizde, değişkenine değerleri değişken aracılığıyla erişerek atayabilirsiniz.  
