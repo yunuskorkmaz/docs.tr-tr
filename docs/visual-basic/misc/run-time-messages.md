@@ -5,17 +5,18 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: 3b8ca626df76d881e26dae49d48217fa8e81951b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 88c9d341064f5c8d85d4c27b7d9bc79114642610
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357939"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91060711"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic çalışma zamanı Iletileri
+
 Bu bölüm, çalışma zamanında oluşan Visual Basic hata iletilerini içerir.  
   
- [\<address>geçerli bir uzak dosya adresi değil](address-is-not-a-valid-remote-file-address.md)  
+ [\<address> geçerli bir uzak dosya adresi değil](address-is-not-a-valid-remote-file-address.md)  
   
  [Bir sınırlayıcı Nothing veya boş dize olamaz](a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
@@ -269,7 +270,7 @@ Bu bölüm, çalışma zamanında oluşan Visual Basic hata iletilerini içerir.
   
  [İç hata (Visual Basic)](internal-error.md)  
   
- [Şu konumda iç hata oluştu:\<location>](../language-reference/error-messages/internal-error-happened-at-location.md)  
+ [Şu konumda iç hata oluştu: \<location>](../language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Microsoft Visual Basic çalışma zamanında iç hata](internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -315,7 +316,7 @@ Bu bölüm, çalışma zamanında oluşan Visual Basic hata iletilerini içerir.
   
  [\<methodname>Genişleyen dönüştürme olmadan bu bağımsız değişkenlerle hiçbir erişilebilir aşırı yüklü ' ' çağrılamaz:\<list>](no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [Bu bağımsız değişkenlerle hiçbir erişilebilir aşırı yüklü ' \<methodname> ' çağrılamaz:\<list>](no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [Bu bağımsız değişkenlerle hiçbir erişilebilir aşırı yüklü ' \<methodname> ' çağrılamaz: \<list>](no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
  [' ' Türü için varsayılan üye bulunamadı \<typename>](no-default-member-found-for-type-typename.md)  
   
