@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-ms.openlocfilehash: 006961a0f1d4be6b0d52be5bc273dad9733bfe56
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0b35751136937d4cee5b3ca9669b43d3fbdf71a1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388705"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071968"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Nasıl yapılır: Bir Özellik Yordamı Çağırma (Visual Basic)
+
 Özellik yordamını, özelliğinde bir değer depolayarak veya değerini alarak çağırabilirsiniz. Bir özelliğe, bir değişkene erişirken aynı şekilde erişirsiniz.  
   
  Özelliğin `Set` yordamı bir değeri depolar ve `Get` yordamı değerini alır. Ancak, bu yordamları adına göre açıkça çağırmayın. Bir değişkenin değerini depoladığınız veya alacağınız gibi, bir atama deyiminde veya bir ifadede özelliğini kullanın. Visual Basic, özelliğin yordamlarına çağrı yapar.  

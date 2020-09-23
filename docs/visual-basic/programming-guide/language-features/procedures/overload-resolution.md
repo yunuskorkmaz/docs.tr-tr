@@ -10,17 +10,18 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: bcb99ef3845c1ce3998dc9dc8d9f1d335515c0a9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9b83eba8efc8dfe14b6ec1cbab270984977198e5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364376"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071371"
 ---
 # <a name="overload-resolution-visual-basic"></a>Aşırı Yükleme Çözümü (Visual Basic Başvurusu)
+
 Visual Basic derleyici, birkaç aşırı yüklenmiş sürümde tanımlanan bir yordama bir çağrı ile karşılaştığında, derleyicinin hangi aşırı yükleme için çağrılacağını karar vermelidir. Bunu aşağıdaki adımları gerçekleştirerek yapar:  
   
-1. **Larınızdaki.** Çağırma kodunun çağırmasının önlediği bir erişim düzeyine sahip tüm aşırı yüklemeleri ortadan kaldırır.  
+1. **Erişilebilirlik.** Çağırma kodunun çağırmasının önlediği bir erişim düzeyine sahip tüm aşırı yüklemeleri ortadan kaldırır.  
   
 2. **Parametre sayısı.** Çağrıda sağlanenden farklı sayıda parametre tanımlayan aşırı yüklemeleri ortadan kaldırır.  
   
@@ -49,6 +50,7 @@ Visual Basic derleyici, birkaç aşırı yüklenmiş sürümde tanımlanan bir y
  İkinci çağrıda, derleyici daraltma temelinde aşırı yüklemelerin hiçbirini ortadan kaldırmaz. İkinci aşırı yükleme, bağımsız değişken türlerini daha az genişletme ile çağırabildiğinden, birinci çağrıdan itibaren aynı nedenden dolayı üçüncü aşırı yüklemeyi ortadan kaldırır. Ancak, derleyici birinci ve ikinci aşırı yüklemeler arasında çözümlenemez. Her biri, diğer ( `Byte` `Short` , ancak `Single` için) öğesine karşılık gelen türe widens bir tanımlı parametre türüne sahiptir `Double` . Bu nedenle derleyici aşırı yükleme çözümlemesi hatası oluşturur.  
   
 ## <a name="overloaded-optional-and-paramarray-arguments"></a>Aşırı yüklenmiş Isteğe bağlı ve ParamArray bağımsız değişkenleri  
+
  Bir yordamın iki aşırı yüklemesi aynı imzaya sahip ise, son parametrenin diğer bir ve [ParamArray](../../../language-reference/modifiers/paramarray.md) 'de [isteğe bağlı](../../../language-reference/modifiers/optional.md) olarak bildirildiği durumlar dışında, derleyici aşağıdaki gibi bu yordama bir çağrı çözer:  
   
 |Çağrı son bağımsız değişkeni şu şekilde sağlar|Derleyici, son bağımsız değişkeni şu şekilde bildiren aşırı yükleme çağrısını çözer|  
@@ -70,4 +72,4 @@ Visual Basic derleyici, birkaç aşırı yüklenmiş sürümde tanımlanan bir y
 - [Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Yordamları Aşırı Yüklemeye İlişkin Düşünceler](./considerations-in-overloading-procedures.md)
 - [Aşırı Yüklemeler](../../../language-reference/modifiers/overloads.md)
-- [Uzantı yöntemleri](./extension-methods.md)
+- [Uzantı Metotları](./extension-methods.md)

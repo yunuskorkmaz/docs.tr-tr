@@ -13,14 +13,15 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: c8d851afc33e7e898ab16abc941d8680f74145e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee61c676f3ff554267f6659453ec55e45df69aee
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398311"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072125"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>Program Yapısı ve Kod Kuralları (Visual Basic)
+
 Bu bölüm, tipik Visual Basic program yapısını tanıtır, "Hello, World" basit bir Visual Basic programı sağlar ve Visual Basic kod kurallarını açıklar. Kod kuralları, bir programın mantığı üzerinde değil, fiziksel yapısı ve görünümünde odaklanılmış önerilerdir. Bunlar, kodunuzun okunmasını, anlaşılmasını ve bakımını daha kolay hale getirir. Kod kuralları, diğerleri arasında şunlar olabilir:  
   
 - Kodu etiketlemek ve açıklama eklemek için standartlaştırılmış biçimler.  
@@ -32,6 +33,7 @@ Bu bölüm, tipik Visual Basic program yapısını tanıtır, "Hello, World" bas
  Aşağıdaki konular, Visual Basic programlar için, iyi kullanım örnekleri ile birlikte bir dizi Programlama Kılavuzu sunar.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Bir Visual Basic Programının Yapısı](structure-of-a-visual-basic-program.md)  
  Visual Basic programını oluşturan öğelere genel bakış sağlar.  
   
@@ -78,8 +80,9 @@ Bu bölüm, tipik Visual Basic program yapısını tanıtır, "Hello, World" bas
  Visual Basic içinde bilinen kodlama sınırlarının kaldırılmasını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Tipografi ve Kod Kuralları](../../language-reference/typographic-and-code-conventions.md)  
  Visual Basic için standart kodlama kuralları sağlar.  
   
- [Kod Yazma](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
+ [Kod yazma](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
  Kodunuzu yazmanızı ve yönetmenizi kolaylaştıran özellikleri açıklar.

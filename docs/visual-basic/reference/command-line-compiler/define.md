@@ -9,17 +9,18 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: d0d1b03d9ab98f28a0112198f1ecc1e928d6d4a7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cb56e727479fd249cb0d7e5e7c3c50d5b68b3a72
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408718"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072021"
 ---
 # <a name="-define-visual-basic"></a>-tanımla (Visual Basic)
+
 Koşullu derleyici sabitlerini tanımlar.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -define:["]symbol[=value][,symbol[=value]]["]  
@@ -39,11 +40,12 @@ veya
 |`value`|İsteğe bağlı. Atanacak değer `symbol` . `value`Bir dizeyse, tırnak işaretleri yerine ters eğik çizgi/tırnak işareti dizileri ( \\ ") arasına alınmalıdır. Hiçbir değer belirtilmemişse, true olarak alınır.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `-define`Bu seçenek, kaynak dosyanızda ön işlemci yönergesini kullanmayla benzer bir etkiye sahiptir `#Const` , ancak ile tanımlanmış sabitler `-define` ortak olur ve projedeki tüm dosyalar için geçerlidir.  
   
  Bu seçenek tarafından oluşturulan sembolleri `#If` .. `Then` . ile kullanabilirsiniz. ...`#Else` kaynak dosyaları koşullu olarak derlemek için yönerge.  
   
- `-d`, öğesinin kısa biçimidir `-define` .  
+ `-d` , öğesinin kısa biçimidir `-define` .  
   
  `-define`Sembol tanımlarını ayırmak için virgül kullanarak birden çok sembol tanımlayabilirsiniz.  
   
@@ -52,6 +54,7 @@ veya
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **Gelişmiş**'e tıklayın.<br />4. **Özel sabitler** kutusundaki değeri değiştirin.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, iki koşullu derleyici sabiti tanımlar ve kullanır.  
   
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  

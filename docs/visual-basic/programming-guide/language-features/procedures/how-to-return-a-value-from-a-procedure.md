@@ -6,14 +6,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 917e52b711645fbf94a132216a3fa90b0dfc15b3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cbc785a07aa8a7b299508a093e08d5d0510b838a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414330"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071384"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamdan Değer Döndürme (Visual Basic)
+
 `Function`Yordam, çağırma koduna, bir `Return` ifadeyi yürüterek veya bir veya ifadesiyle karşılaşarak bir değer döndürür `Exit Function` `End Function` .  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>Return ifadesini kullanarak bir değer döndürmek için  
@@ -52,6 +53,6 @@ ms.locfileid: "84414330"
 - [İşleç Yordamları](./operator-procedures.md)
 - [Yordam Parametreleri ve Bağımsız Değişkenleri](./procedure-parameters-and-arguments.md)
 - [Function Deyimi](../../../language-reference/statements/function-statement.md)
-- [Return ekstresi](../../../language-reference/statements/return-statement.md)
+- [Return Deyimi](../../../language-reference/statements/return-statement.md)
 - [Nasıl yapılır: Değer Döndüren Bir Yordam Oluşturma](./how-to-create-a-procedure-that-returns-a-value.md)
 - [Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma](./how-to-call-a-procedure-that-returns-a-value.md)

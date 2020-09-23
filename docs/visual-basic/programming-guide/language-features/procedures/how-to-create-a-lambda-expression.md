@@ -5,14 +5,15 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: cc2de38f7375848d104edff6f419656d9caa9cb2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388393"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071932"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Nasıl yapılır: Lambda İfadesi Oluşturma (Visual Basic)
+
 *Lambda ifadesi* , adı olmayan bir işlev veya alt yordam. Bir lambda ifadesi, bir temsilci türünün geçerli olduğu her yerde kullanılabilir.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Tek satırlık lambda ifadesi işlevi oluşturmak için  
@@ -96,6 +97,7 @@ ms.locfileid: "84388393"
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Örnek  
+
  Lambda ifadelerinin yaygın kullanımı, türü olan bir parametre için bağımsız değişken olarak geçirilebilecek bir işlev tanımlamaktır `Delegate` . Aşağıdaki örnekte, <xref:System.Diagnostics.Process.GetProcesses%2A> yöntemi yerel bilgisayarda çalışan işlemlerin dizisini döndürür. <xref:System.Linq.Enumerable.Where%2A>Sınıfından yöntemi, <xref:System.Linq.Enumerable> `Boolean` bağımsız değişkeni olarak bir temsilci gerektirir. Örnekteki lambda ifadesi bu amaçla kullanılır. `True`Yalnızca bir iş parçacığına sahip olan ve ' de seçili olan her işlem için döndürür `filteredList` .  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  

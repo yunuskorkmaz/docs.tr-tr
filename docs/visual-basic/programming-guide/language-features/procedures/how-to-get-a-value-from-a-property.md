@@ -8,14 +8,15 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: 2c92cd4a869acbb7c8c52fbf4117112967386498
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 983e2fd22badf4296004404d885df0a07ab2dc74
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387900"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071566"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Nasıl yapılır: Bir Özellikten Değer Alma (Visual Basic)
+
 Özellik adını bir ifadeye ekleyerek bir özelliğin değerini elde edersiniz.  
   
  Özelliğin `Get` yordamı değeri alır, ancak bunu açıkça adıyla çağırmayın. Özelliğini, bir değişkeni kullandığınız gibi kullanırsınız. Visual Basic, özelliğin yordamlarına çağrı yapar.  

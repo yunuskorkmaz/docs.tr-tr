@@ -2,12 +2,12 @@
 title: Azure ve .NET ile çalışmaya başlama
 description: Azure ve .NET hakkında bilmeniz gereken temel bilgileri öğrenin.
 ms.date: 06/20/2020
-ms.openlocfilehash: c64de800f47035b22cc62b6d08cb7b71246984a7
-ms.sourcegitcommit: cb27c01a8b0b4630148374638aff4e2221f90b22
+ms.openlocfilehash: 9f1766176740ede5aa40dd894497f2aa719efe23
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86174328"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071111"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure ve .NET’e giriş
 
@@ -28,7 +28,7 @@ Azure **hesabı**: Azure hesabınız, Azure [portalı](https://portal.azure.com)
 
 **Yönetilen hizmetler**: Azure, Azure 'a veri veya bilgi sağladığınız bazı hizmetler sağlar ve Azure 'un uygulanması uygun eylemi gerçekleştirir. Örnek olarak Azure Blob depolama, dosyaları sağladığınız ve Azure 'un bunları okuma, yazma ve kalıcı hale getirme.
 
-**.Net Için Azure SDK**: bazen **.NET için Azure kitaplıkları**olarak adlandırılır, bu toplu olarak, Azure hizmetleriyle çeşitli etkileşimler ve işlevler sağlayan, projenize yüklediğiniz [NuGet paketlerine](https://www.nuget.org/profiles/azure-sdk) başvurur. Bu paketler, kaynakları sağlamak ve yönetmek için kullanılan yönetim kitaplıklarını da içerir.
+**.Net Için Azure SDK** toplu olarak, Azure hizmetleriyle çeşitli etkileşimler ve işlevler sağlayan, projenize yüklediğiniz [NuGet paketlerine](packages.md) başvurur. Bu paketler, kaynakları sağlamak ve yönetmek için kullanılan yönetim kitaplıklarını da içerir.
 
 ## <a name="choosing-a-hosting-option"></a>Barındırma seçeneği seçme
 

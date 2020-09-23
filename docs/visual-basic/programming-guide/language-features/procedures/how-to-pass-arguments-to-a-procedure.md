@@ -11,14 +11,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 903e05facccd1f2afdf4bb51b200531feb64aa79
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 816d6388a0dbb7ae346074d258ff651c793c5e0e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387783"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071514"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordama Bağımsız Değişkenler Geçirme (Visual Basic)
+
 Bir yordamı çağırdığınızda, yordam adını parantez içindeki bir bağımsız değişken listesiyle takip edersiniz. Yordamın tanımladığı her gerekli parametreye karşılık gelen bir bağımsız değişken sağlarsınız ve isteğe bağlı olarak parametrelere bağımsız değişkenler sağlayabilirsiniz `Optional` . `Optional`Çağrıda bir parametre belirtmezseniz, sonraki bağımsız değişkenleri sağlarsanız, bağımsız değişken listesindeki yerini işaretlemek için bir virgül dahil etmeniz gerekir.  
   
  Bir veri türünün bağımsız değişkenini, gibi karşılık gelen parametresinden farklı bir şekilde geçirmek istiyorsanız, `Byte` `String` tür denetimi anahtarını ([Option Strict ifadesini](../../../language-reference/statements/option-strict-statement.md)) olarak ayarlayabilirsiniz `Off` . `Option Strict`İse `On` , genişleyen dönüşümler ya da açık dönüştürme anahtar sözcükleri kullanmanız gerekir. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](../data-types/widening-and-narrowing-conversions.md) ve [tür dönüştürme işlevleri](../../../language-reference/functions/type-conversion-functions.md).  

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 870a18dbf3a7e28b7d7b612e853beeec6908cf6f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2661603ba33dd0bc28ac1a192794a4534225b641
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387939"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071644"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Nasıl yapılır: Bir Yordamın Birden Fazla Sürümünü Tanımlama (Visual Basic)
+
 Aynı adı ancak her sürüm için farklı bir parametre listesini kullanarak, onu *aşırı* yükleyerek birden çok sürümde bir yordam tanımlayabilirsiniz. Aşırı yükleme amacı, bir yordamın adına göre ayrım yapmadan daha yakından ilgili birkaç sürümünü tanımlamaktır.  
   
  Daha fazla bilgi için bkz. [yordam aşırı yüklemesi](./procedure-overloading.md).  
@@ -31,6 +32,7 @@ Aynı adı ancak her sürüm için farklı bir parametre listesini kullanarak, o
 4. Yordamın her sürümünü, `End Sub` veya `End Function` ifadesiyle uygun şekilde sonlandırın.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir `Sub` müşterinin bakiyesine karşı bir işlem gönderme yordamını tanımlar. Bu `Overloads` anahtar sözcüğünü kullanarak müşteriyi adı ve diğer hesap numarasına göre kabul eden bir, yordamın iki sürümünü tanımlar.  
   
  [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]  
@@ -40,6 +42,7 @@ Aynı adı ancak her sürüm için farklı bir parametre listesini kullanarak, o
  Yordamın bu sürümlerini çağırma hakkında daha fazla bilgi için `post` bkz. [nasıl yapılır: daha fazla yüklenmiş bir yordamı çağırma](./how-to-call-an-overloaded-procedure.md).  
   
 ## <a name="compile-the-code"></a>Kodu derle  
+
  Aşırı yüklenmiş sürümlerden her birinin aynı yordam adına, ancak farklı bir parametre listesine sahip olduğundan emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

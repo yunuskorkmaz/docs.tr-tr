@@ -8,20 +8,23 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: c0d9921704570c6984b203817aed8f5546b2f936
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 926d2dcc7f29102457d5ed9632e7455f8f0c7b96
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408795"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071332"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic'de Yordamlar
+
 *Yordam* , bir bildirim deyimi ( `Function` ,, `Sub` `Operator` , `Get` , `Set` ) ve eşleşen `End` bildirim tarafından alınan Visual Basic deyimlerinin bir bloğudur. Visual Basic tüm çalıştırılabilir deyimler bazı yordamda olmalıdır.  
   
 ## <a name="calling-a-procedure"></a>Yordam çağırma  
+
  Koddaki başka bir yerden yordam çağırılır. Bu, *yordam çağrısı*olarak bilinir. Yordam çalışmayı bitirdiğinde, *çağıran*kod olarak bilinen, çağrılan koda denetim döndürür. Çağıran kod, bir deyim veya deyim içindeki bir ifadedir ve bu yordam ada göre yordamı belirtir ve denetimi buna aktarır.  
   
 ## <a name="returning-from-a-procedure"></a>Bir yordamdan dönme  
+
  Yordam, çalışmayı tamamladığında çağıran koda denetim döndürür. Bunu yapmak için, yordam için bir [return ifadesini](../../../language-reference/statements/return-statement.md), uygun [Exit bildiri](../../../language-reference/statements/exit-statement.md) ifadesini veya yordamın [End \<keyword> deyimi](../../../language-reference/statements/end-keyword-statement.md) ifadesini kullanabilirsiniz. Daha sonra Denetim, yordam çağrısının noktasını izleyen çağırma koduna geçer.  
   
 - Bir `Return` ifadesiyle denetim, çağırma koduna hemen geri döner. `Return`Deyimden sonraki deyimler çalıştırılmaz. Aynı yordamda birden fazla deyime sahip olabilirsiniz `Return` .  
@@ -31,9 +34,11 @@ ms.locfileid: "84408795"
 - Bir yordamda `Return` veya deyimleri yoksa, `Exit` `End Sub` `End Function` `End Get` `End Set` yordam gövdesinin son deyiminden sonra bir veya, ya da ifadesiyle sonlanır. `End`İfade, çağırma koduna anında denetim döndürür. Yordamda yalnızca bir `End` deyiminiz olabilir.  
   
 ## <a name="parameters-and-arguments"></a>Parametreler ve Bağımsız Değişkenler  
+
  Çoğu durumda, bir yordamın her çağırdığınızda farklı veriler üzerinde çalışması gerekir. Yordam çağrısının bir parçası olarak bu bilgileri yordama geçirebilirsiniz. Yordam sıfır veya daha fazla *parametreyi*tanımlar, her biri, kendisine geçirilmesini bekleyen bir değeri temsil eder. Yordam tanımındaki her parametreye karşılık gelen yordam çağrısındaki bir *bağımsız değişkendir* . Bağımsız değişken, belirli bir yordam çağrısında karşılık gelen parametreye geçirdiğiniz değeri temsil eder.  
   
 ## <a name="types-of-procedures"></a>Yordam türleri  
+
  Visual Basic çeşitli yordam türlerini kullanır:  
   
 - [Alt yordamlar](./sub-procedures.md) eylemleri gerçekleştirir, ancak çağırma koduna bir değer döndürmez.  
@@ -51,6 +56,7 @@ ms.locfileid: "84408795"
 - [Visual Basic genel yordamları](../data-types/generic-procedures.md) normal parametrelerine ek olarak bir veya daha fazla *tür parametresi* tanımlar, bu nedenle çağıran kod her bir çağrı yaptığında belirli veri türlerini geçirebilir.  
   
 ## <a name="procedures-and-structured-code"></a>Yordamlar ve yapılandırılmış kod  
+
  Uygulamanızdaki her çalıştırılabilir kod satırının,, veya gibi bir yordamın içinde olması gerekir `Main` `calculate` `Button1_Click` . Büyük yordamları daha küçük olanlara bölüyorsanız, uygulamanız daha okunabilir olur.  
   
  Yordamlar, sık kullanılan hesaplamalar, metin ve denetim işleme ve veritabanı işlemleri gibi yinelenen veya paylaşılan görevler gerçekleştirmek için yararlıdır. Kodunuzda birçok farklı yerden bir yordam çağırabilirsiniz, böylece yordamları uygulamanızın yapı taşları olarak kullanabilirsiniz.  

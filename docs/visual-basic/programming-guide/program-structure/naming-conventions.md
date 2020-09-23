@@ -10,14 +10,15 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: 20531e379ddf9b93a278795e9b3c0eb91b47e077
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b25d246bd31147b7a9ba2c72214926fdb5ca8895
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398350"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072151"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic Adlandırma Kuralları
+
 Visual Basic uygulamanızda bir öğe belirlediğinizde, bu adın ilk karakteri alfabetik bir karakter veya alt çizgi olmalıdır. Ancak, bir alt çizgiyle başlayan adların, [Dil bağımsızlığı ve dilden bağımsız bileşenler](../../../standard/language-independence-and-language-independent-components.md) (CLS) ile uyumlu olmadığına unutmayın.  
   
  Aşağıdaki öneriler adlandırma için geçerlidir.  

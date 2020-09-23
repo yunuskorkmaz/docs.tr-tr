@@ -11,19 +11,21 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 61a1398ba7de8dab005fa1e9efa13dc2ba18cc3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0e7c1315df50e83c919270f76405e80862bdd03b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364129"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071267"
 ---
 # <a name="partial-methods-visual-basic"></a>Kısmi Yöntemler (Visual Basic)
+
 Kısmi Yöntemler, geliştiricilerin koda özel mantık eklemesini sağlar. Genellikle kod, tasarımcı tarafından üretilen sınıfın bir parçasıdır. Kısmi Yöntemler, bir kod üreticisi tarafından oluşturulan kısmi bir sınıfta tanımlanmıştır ve genellikle bir şeyin değiştirildiğini belirten bildirim sağlamak için kullanılır. Bu, geliştiricinin değişikliğe yanıt olarak özel davranış belirtmesini sağlar.  
   
  Kod oluşturucunun Tasarımcısı yalnızca yöntem imzasını ve metoda bir veya daha fazla çağrı tanımlar. Geliştiriciler daha sonra oluşturulan kodun davranışını özelleştirmek istiyorlarsa yöntemi için uygulamalar sağlayabilir. Hiçbir uygulama sağlanmazsa, metoda yapılan çağrılar derleyici tarafından kaldırılır ve ek performans yükü yoktur.  
   
 ## <a name="declaration"></a>Bildirim  
+
  Oluşturulan kod, imza satırının başına anahtar sözcüğünü yerleştirerek kısmi bir yöntemin tanımını işaretler `Partial` .  
   
 ```vb  
@@ -40,6 +42,7 @@ End Sub
 - Erişim değiştiricisi olmalıdır `Private` .  
   
 ## <a name="implementation"></a>Uygulama  
+
  Uygulama, birincil olarak kısmi yöntemin gövdesini doldurmayla oluşur. Uygulama genellikle tanımdan ayrı bir kısmi sınıfta bulunur ve oluşturulan kodu genişletmek isteyen bir geliştirici tarafından yazılır.  
   
 ```vb  
@@ -50,10 +53,12 @@ End Sub
   
  Önceki örnek, bildirimin imzasını tam olarak yinelemediğinde, ancak Çeşitlemeler olasıdır. Özellikle, veya gibi diğer değiştiriciler eklenebilir `Overloads` `Overrides` . Yalnızca bir `Overrides` değiştiriciye izin verilir. Yöntem değiştiriciler hakkında daha fazla bilgi için bkz. [Sub deyimin](../../../language-reference/statements/sub-statement.md).  
   
-## <a name="use"></a>Kullanım  
+## <a name="use"></a>Kullanın  
+
  Başka bir yordamı çağırırınız gibi kısmi bir yöntemi çağırabilirsiniz `Sub` . Yöntem uygulanmışsa, bağımsız değişkenler değerlendirilir ve yöntemin gövdesi yürütülür. Ancak, kısmi bir yöntemi uygulama yönteminin isteğe bağlı olduğunu unutmayın. Yöntem uygulanmemişse, bir çağrısının bir etkisi olmaz ve yöntemine bağımsız değişken olarak geçirilen ifadeler değerlendirilmez.  
   
 ## <a name="example"></a>Örnek  
+
  Product. Designer. vb adlı bir dosyada, özelliği olan bir `Product` sınıf tanımlayın `Quantity` .  
   
  [!code-vb[VbVbalrPartialMeths#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrPartialMeths/VB/Class1.vb#4)]  

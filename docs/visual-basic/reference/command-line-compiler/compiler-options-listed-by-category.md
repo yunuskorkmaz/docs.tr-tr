@@ -4,14 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 533d3da2f76854d311262ce97b43f240acab5f7d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 77a130b684d26cf7e4b9df9382348a371a60bc5d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408757"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072047"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Kategoriye göre listelenmiş Visual Basic derleyici seçenekleri
+
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamı (IDE) içinden program derlemek için alternatif olarak sağlanır. Aşağıda, işlevsel kategoriye göre sıralanan Visual Basic komut satırı derleyici seçeneklerinin bir listesi verilmiştir.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
@@ -93,7 +94,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
   
 |Seçenek|Amaç|  
 |---|---|  
-|[-define](define.md)|Koşullu derleme için sembolleri tanımlar.|  
+|[-tanımla](define.md)|Koşullu derleme için sembolleri tanımlar.|  
   
 ## <a name="resources"></a>Kaynaklar  
   
@@ -120,7 +121,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-Platform](platform.md)|Derleyicinin çıkış dosyası için hedeflediği işlemci platformunu belirtir.|  
 |[-recurse](recurse.md)|Kaynak dosyaları derlemek için alt dizinleri arar.|  
 |[-rootnamespace](rootnamespace.md)|Tüm tür bildirimleri için bir ad alanı belirtir.|  
-|[-sdkpath](sdkpath.md)|Mscorlib. dll ve Microsoft. VisualBasic. dll dosyasının konumunu belirtir.|  
+|[-sdkpath](sdkpath.md)|Mscorlib.dll ve Microsoft.VisualBasic.dll konumunu belirtir.|  
 |[-vbruntime](vbruntime.md)|Derleyicinin Visual Basic çalışma zamanı kitaplığına bir başvuru olmadan veya belirli bir çalışma zamanı kitaplığı başvurusuyla derlenmesi gerektiğini belirtir.|  
 |[-win32manifest](win32manifest.md)|Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanıcı tanımlı bir Win32 uygulama bildirim dosyası tanımlar.|  
 |`-parallel[+&#124;-]`|Eşzamanlı yapı (+) kullanılıp kullanılmayacağını belirtir.|  

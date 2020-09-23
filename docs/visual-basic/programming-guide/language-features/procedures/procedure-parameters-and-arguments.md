@@ -18,14 +18,15 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: 178206ca2ee103bbdb5a4ac03bca0df903c8c5d8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7f8eb1fa4e1fa3d87474d048d5a60994b0b7fc5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406722"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071280"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Yordam Parametreleri ve Bağımsız Değişkenler (Visual Basic)
+
 Çoğu durumda, bir yordam çağrıldığı koşullara ilişkin bazı bilgilere ihtiyaç duyuyor. Yinelenen veya paylaşılan görevler gerçekleştiren bir yordam, her çağrı için farklı bilgiler kullanır. Bu bilgiler, çağırdığınızda yordama geçirdiğiniz değişkenlerin, sabitlerin ve ifadelerden oluşur.  
   
  Bir *parametre* , yordamı çağırdığınızda belirtmeniz beklenen bir değeri temsil eder. Yordamın bildirimi, parametrelerini tanımlar.  
@@ -41,6 +42,7 @@ ms.locfileid: "84406722"
  Daha fazla bilgi için bkz. [Parametreler ve bağımsız değişkenler arasındaki farklar](./differences-between-parameters-and-arguments.md).  
   
 ## <a name="parameter-data-type"></a>Parametre veri türü  
+
  Bildiriminde yan tümcesini kullanarak bir parametre için veri türü tanımlarsınız `As` . Örneğin, aşağıdaki işlev bir dizeyi ve bir tamsayıyı kabul eder.  
   
  [!code-vb[VbVbcnProcedures#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#32)]  
@@ -56,6 +58,7 @@ ms.locfileid: "84406722"
 - Veri türünü açık bir şekilde dönüştürmek için bir dönüştürme anahtar sözcüğü kullanın.  
   
 ### <a name="type-parameters"></a>Tür Parametreleri  
+
  *Genel yordam* , normal parametrelerine ek olarak bir veya daha fazla *tür parametresi* de tanımlar. Genel yordam, çağıran kodun yordamı her çağırdığında farklı veri türlerini geçmesine izin verir, böylece veri türlerini her bir çağrının gereksinimlerine uyarlayabilirsiniz. Bkz. [Visual Basic genel yordamlar](../data-types/generic-procedures.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

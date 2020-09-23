@@ -9,14 +9,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: c8ed792bf3ffefd903d60522f621958e44546d32
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 249c3eebaeec3d09a297fead07ab056caff1b618
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404958"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071813"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Nasıl yapılır: Bir LINQ Sorgu Sonucunu Belirli Bir Tür Olarak Döndürme (Visual Basic)
+
 Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır. Varsayılan olarak, LINQ sorguları bir nesne listesini anonim bir tür olarak döndürür. Bir sorgunun yan tümcesini kullanarak belirli bir türün listesini döndürmesini de belirtebilirsiniz `Select` .  
   
  Aşağıdaki örnek, SQL Server veritabanına yönelik sorgular gerçekleştiren yeni bir uygulamanın nasıl oluşturulduğunu ve sonuçların belirli bir adlandırılmış tür olarak projede nasıl oluşturulacağını gösterir. Daha fazla bilgi için bkz. [anonim türler](../objects-and-classes/anonymous-types.md) ve [seçim tümcesi](../../../language-reference/queries/select-clause.md).  

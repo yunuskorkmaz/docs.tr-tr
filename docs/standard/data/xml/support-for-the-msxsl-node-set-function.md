@@ -3,12 +3,12 @@ title: msxsl:node-set() İşlevi Desteği
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
-ms.openlocfilehash: 747a0ff8c155f7635d5a6d2ebc76f287cf8646d4
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 30652d8cbaac333cc1cb35954742b16dc7c4764b
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291454"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071995"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>msxsl:node-set() İşlevi Desteği
 `msxsl:node-set`İşlevi, bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
@@ -19,7 +19,7 @@ ms.locfileid: "84291454"
  `msxsl:node-set`İşlevi, bir sonuç ağacı parçasını bir düğüm kümesine dönüştürmenize olanak sağlar. Sonuçta elde edilen düğüm kümesi her zaman tek bir düğüm içerir ve ağacın kök düğümüdür.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnekte, `$var` stil sayfasındaki düğüm ağacı olan bir değişkendir. İşleviyle birlikte bulunan for-each deyimleri, `node-set` kullanıcının bu düğüm ağacı üzerinde bir düğüm kümesi olarak yinemasına olanak tanır.  
+ Aşağıdaki örnekte, `$books` stil sayfasındaki düğüm ağacı olan bir değişkendir. İşleviyle birlikte bulunan for-each deyimleri, `node-set` kullanıcının bu düğüm ağacı üzerinde bir düğüm kümesi olarak yinemasına olanak tanır.  
   
 ## <a name="nodesetxsl"></a>nodeset. Xsl  
   
@@ -43,7 +43,7 @@ ms.locfileid: "84291454"
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Çıktı  
+## <a name="output"></a>Çıkış  
  Dönüşümün çıktısı  
   
 ```xml  

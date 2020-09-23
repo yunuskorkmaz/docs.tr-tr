@@ -10,14 +10,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: ddff8c8cd82593b7d89fb0847e56123c287e364b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 10cd7d11b0efe9fa5eb3ae24269a4cdbe33bc08a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84387887"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071553"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Nasıl yapılır: Belirsiz Sayıda Parametre İsteyen Bir Yordamı Aşırı Yükleme (Visual Basic)
+
 Bir yordamın [ParamArray](../../../language-reference/modifiers/paramarray.md) parametresi varsa, parametre dizisi için tek boyutlu bir dizi alan aşırı yüklenmiş bir sürüm tanımlayamazsınız. Daha fazla bilgi için, [yordamları aşırı yükleme konusunda dikkat edilmesi gereken](./considerations-in-overloading-procedures.md)"ParamArray parametresi Için örtük aşırı yüklemeler" konusuna bakın.  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Değişken sayıda parametre alan bir yordamı aşırı yüklemek için  
@@ -35,6 +36,7 @@ Bir yordamın [ParamArray](../../../language-reference/modifiers/paramarray.md) 
 6. Her yordamı `End Sub` veya `End Function` ifadesiyle uygun şekilde sonlandırın.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir [ParamArray](../../../language-reference/modifiers/paramarray.md) parametresiyle tanımlanan bir yordamı ve daha sonra eşdeğer bir yordam kümesini gösterir.  
   
  [!code-vb[VbVbcnProcedures#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#69)]  
@@ -48,9 +50,11 @@ Bir yordamın [ParamArray](../../../language-reference/modifiers/paramarray.md) 
  Aşırı yüklenmiş sürümlerindeki kodun, çağıran kodun parametre için bir veya daha fazla değer sağlayıp sağlamamasını ya da bu durumda kaç tane olacağını test etmek zorunda değildir `ParamArray` . Visual Basic, denetimi çağıran bağımsız değişken listesiyle eşleşen sürüme geçirir.  
   
 ## <a name="compile-the-code"></a>Kodu derle  
+
  Parametresine sahip bir yordam `ParamArray` aşırı yüklenmiş sürümlerin bir kümesiyle eşdeğer olduğundan, bu tür bir yordamı, bu örtük aşırı yüklemelerin herhangi birine karşılık gelen bir parametre listesiyle birlikte yükleyemezsiniz. Daha fazla bilgi için bkz. [yordamları aşırı yükleme konuları](./considerations-in-overloading-procedures.md).  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
+
  Süresiz olarak büyük olabilecek bir dizi ile uğraşmanız durumunda, uygulamanızın bazı iç kapasitesini çok fazla çalıştırmaya yönelik bir risk vardır. Bir parametre dizisini kabul ediyorsanız, kendisine geçilen çağıran kodun dizinin uzunluğunu test etmeli ve uygulamanız için çok büyükse uygun adımları uygulamanız gerekir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

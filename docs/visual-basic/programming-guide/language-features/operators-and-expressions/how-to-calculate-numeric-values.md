@@ -11,14 +11,15 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 94b02693f308dcfcfa6983f2750a26d9d419f7be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 452a8392b46f0c25b6ad2a8a30c51071f2ae1d93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403465"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071722"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>Nasıl yapılır: Sayısal Değerleri Hesaplama (Visual Basic)
+
 Sayısal değerleri sayısal ifadeler kullanılarak hesaplayabilirsiniz. *Sayısal bir ifade* , sayısal değerleri temsil eden sabit değerler, sabitler ve değişkenleri ve bu değerler üzerinde işlem yapan işleçleri içeren bir ifadedir.  
   
 ## <a name="calculating-numeric-values"></a>Sayısal değerleri hesaplama  
@@ -50,6 +51,7 @@ Sayısal değerleri sayısal ifadeler kullanılarak hesaplayabilirsiniz. *Sayıs
      Daha fazla bilgi için bkz. [deyimler](../../../language-reference/statements/index.md).  
   
 ## <a name="multiple-operators"></a>Birden çok Işleç  
+
  Sayısal ifade birden fazla işleç içeriyorsa, değerlendirildikleri sıra, işleç önceliği kurallarına göre belirlenir. İşleç önceliği kurallarını geçersiz kılmak için, ifadeleri Yukarıdaki örnekte olduğu gibi parantez içine almalısınız; içine alınan ifadeler önce değerlendirilir.  
   
 #### <a name="to-override-normal-operator-precedence"></a>Normal operatör önceliğini geçersiz kılmak için  
@@ -68,5 +70,5 @@ Sayısal değerleri sayısal ifadeler kullanılarak hesaplayabilirsiniz. *Sayıs
 - [Değer Karşılaştırmaları](value-comparisons.md)
 - [Deyimler](../../../language-reference/statements/index.md)
 - [Visual Basic'de İşleç Önceliği](../../../language-reference/operators/operator-precedence.md)
-- [Aritmetik İşleçler](../../../language-reference/operators/arithmetic-operators.md)
+- [Aritmetik Işleçler](../../../language-reference/operators/arithmetic-operators.md)
 - [İşleçlerin Etkili Bileşimi](efficient-combination-of-operators.md)

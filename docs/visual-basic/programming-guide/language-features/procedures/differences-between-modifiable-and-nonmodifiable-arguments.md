@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 733f92cc2cdaa6e923c57649774ceb64de172c18
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 662ad3039bb3fd5c44847d5b2a97a033a18ad063
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403349"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91071969"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Değiştirilebilir ve Değiştirilemez Bağımsız Değişkenler Arasındaki Farklar (Visual Basic)
+
 Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız değişken geçirin. Her bağımsız değişken temeldeki bir programlama öğesine karşılık gelir. Hem temel alınan öğeler hem de bağımsız değişkenler değiştirilebilir ya da değiştirilebilir olabilir.  
   
 ## <a name="modifiable-and-nonmodifiable-elements"></a>Değiştirilebilir ve değiştirilemeyen öğeler  
+
  Bir programlama öğesi, değeri değişmiş olabilen *değiştirilebilir bir öğe*ya da oluşturulduktan sonra sabit bir değere sahip *değiştirilemeyen bir öğe*olabilir.  
   
  Aşağıdaki tabloda değiştirilebilir ve değiştirilemeyen programlama öğeleri listelenmektedir.  
@@ -31,6 +33,7 @@ Bir yordamı çağırdığınızda, genellikle bir veya daha fazla bağımsız d
 |Dizi öğeleri|İfadeler (öğeleri değiştirilebilir olsa bile)|  
   
 ## <a name="modifiable-and-nonmodifiable-arguments"></a>Değiştirilebilir ve değiştirilemeyen bağımsız değişkenler  
+
  *Değiştirilebilir bir bağımsız değişken* değiştirilebilir bir temel öğe. Çağıran kod herhangi bir zamanda yeni bir değer saklayabilir ve [ByRef](../../../language-reference/modifiers/byref.md)bağımsız değişkenini geçirirseniz, yordamdaki kod, çağıran kodda temel alınan öğeyi de değiştirebilir.  
   
  *Değiştirilemeyen bir bağımsız değişken* , değiştirilemeyen temel olmayan bir öğeye sahiptir veya [ByVal](../../../language-reference/modifiers/byval.md)' a geçirilir. Yordam, değiştirilebilir bir öğe olsa bile, çağıran kodda temeldeki öğeyi değiştiremez. Değiştirilemeyen bir öğe ise, çağıran kodun kendisi üzerinde değişiklik yapılamaz.  
