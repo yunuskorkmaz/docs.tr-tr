@@ -5,14 +5,15 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: 11b8eb446395b4d35b9b7b689e30549b2b00f94a
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: d1346d362bf030e794212d74040f1ff0845eb704
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90548045"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083260"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Nasıl yapılır: ActiveX Denetimleriyle Çalışma (Visual Basic)
+
 ActiveX denetimleri, başka birinin programlandığı paketlenmiş işlevselliği yeniden kullanmak üzere bir Web sayfasına veya başka bir uygulamaya ekleyebileceğiniz COM bileşenleri veya nesneleri olabilir. Visual Basic 6,0 ve önceki sürümlerde geliştirilen ActiveX denetimlerini kullanarak Visual Studio 'nun **araç kutusuna** özellikler ekleyebilirsiniz.  
   
 ### <a name="to-add-activex-controls-to-the-toolbox"></a>Araç kutusuna ActiveX denetimleri eklemek için  

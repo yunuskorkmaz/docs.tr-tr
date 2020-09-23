@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 2b70a7fa72b09401e0e78f693e4efc9bf0871771
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 66762d4551e458b36b70fb0831bf17ade70aa8cb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396797"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083234"
 ---
 # <a name="com-interop-visual-basic"></a>COM Birlikte Çalışma (Visual Basic)
+
 Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere sunma ve uygulamaları barındırmasına olanak tanır. Günümüzün yazılımlarının çoğu COM nesnelerini içerir. .NET derlemeleri yeni uygulamalar için en iyi seçenek olsa da, her zaman COM nesneleri kullanmanız gerekebilir. Bu bölümde, Visual Basic ile COM nesneleri oluşturma ve kullanma ile ilgili bazı sorunlar ele alınmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [COM Birlikte Çalışma'ya Giriş](introduction-to-com-interop.md)  
  COM birlikte çalışabilirliğine genel bakış sağlar.  
   
@@ -29,7 +31,7 @@ Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere s
  Windows işletim sisteminin bir parçası olan API 'Leri çağırma sürecinde adım adım adımları uygulayın.  
   
  [Nasıl yapılır: Windows API'lerini Çağırma](how-to-call-windows-apis.md)  
- User32. dll içinde işlevin nasıl tanımlanacağını ve çağrılacağını gösterir `MessageBox` .  
+ User32.dll işlevin nasıl tanımlanacağını ve çağrılacağını gösterir `MessageBox` .  
   
  [Nasıl yapılır: İmzalanmamış Türler İsteyen Bir Windows İşlevi Çağırma](how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  İmzasız bir tür parametresine sahip bir Windows işlevinin nasıl çağrılacağını gösterir.  
@@ -47,6 +49,7 @@ Bileşen nesne modeli (COM), bir nesnenin işlevselliğini diğer bileşenlere s
  Mevcut COM nesnelerinin yeni nesneler için temel olarak kullanılmasını açıklar.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Yönetilmeyen Kod ile Birlikte Çalışma](../../../framework/interop/index.md)  
  Ortak dil çalışma zamanı tarafından sunulan birlikte çalışabilirlik hizmetlerini açıklar.  
   

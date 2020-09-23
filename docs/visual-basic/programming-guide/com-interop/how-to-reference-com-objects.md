@@ -8,14 +8,15 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 2e2cbac6fad5e1686b7383c44619b8c6f5326483
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 43ba068663db9f8c3816a6f731395a6682a130e6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396810"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083299"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Nasıl yapılır: Visual Basic'den COM Nesnelerine Başvuru Yapma
+
 Visual Basic, tür kitaplıklarının bulunduğu COM nesnelerine başvurular eklemek için COM kitaplığı için birlikte çalışma derlemesinin oluşturulması gerekir. COM nesnesinin üyelerine yapılan başvurular birlikte çalışma derlemesine yönlendirilir ve ardından gerçek COM nesnesine iletilir. COM nesnesinden gelen yanıtlar birlikte çalışma derlemesine yönlendirilir ve .NET Framework uygulamanıza iletilir.  
   
  Bir .NET derlemesine COM nesnesinin tür bilgilerini gömerek derleme kullanmadan bir COM nesnesine başvurabilirsiniz. Tür bilgilerini eklemek için `Embed Interop Types` ÖZELLIĞI `True` com nesnesine başvuru için olarak ayarlayın. Komut satırı derleyicisini kullanarak derlerken, `/link` com kitaplığına başvurmak için seçeneğini kullanın. Daha fazla bilgi için bkz. [-Link (Visual Basic)](../../reference/command-line-compiler/link.md).  
@@ -55,8 +56,8 @@ Visual Basic, tür kitaplıklarının bulunduğu COM nesnelerine başvurular ekl
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [COM birlikte çalışma](index.md)
-- [Tlbimp. exe (tür kitaplığı Içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp. exe (tür kitaplığı Dışarı Aktarıcı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe (tür kitaplığı Içeri Aktarıcı)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (tür kitaplığı verme programı)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [İzlenecek yol: COM Nesnelerinde Kalıtım Uygulama](walkthrough-implementing-inheritance-with-com-objects.md)
 - [Birlikte Çalışabilirlik İle İlgili Sorun Giderme](troubleshooting-interoperability.md)
 - [Imports Deyimi (.NET Ad Alanı ve Türü)](../../language-reference/statements/imports-statement-net-namespace-and-type.md)
