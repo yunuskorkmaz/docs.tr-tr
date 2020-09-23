@@ -7,17 +7,19 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: 1dd3e8cd68086fe116daf0678a1a19881f1ae9c3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 800b9754ce27cc6a494dd781d06f4bdca8a10e87
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410354"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91080237"
 ---
 # <a name="object-variable-values-visual-basic"></a>Nesne Değişkeni Değerleri (Visual Basic)
+
 [Nesne veri türü](../../../language-reference/data-types/object-data-type.md) değişkeni herhangi bir türdeki verilere başvurabilir. Bir değişkende depoladığınız değer, bir `Object` yerde, değişkenin kendisi de verilerin bir işaretçisini taşıdığı sürece bellekte tutulur.  
   
 ## <a name="object-classifier-functions"></a>Nesne sınıflandırıcı Işlevleri  
+
  Visual Basic `Object` , aşağıdaki tabloda gösterildiği gibi, bir değişkenin başvurduğu durum hakkında bilgi döndüren işlevler sağlar.  
   
 |İşlev|Nesne değişkeni öğesine başvuruyorsa true döndürür|  
@@ -25,7 +27,7 @@ ms.locfileid: "84410354"
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Tek bir değer yerine bir değer dizisi|  
 |<xref:Microsoft.VisualBasic.Information.IsDate%2A>|[Tarih veri türü](../../../language-reference/data-types/date-data-type.md) değeri veya tarih ve saat değeri olarak yorumlanabilen bir dize|  
 |<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|<xref:System.DBNull>Eksik veya varolmayan verileri temsil eden türünde bir nesne|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Öğesinden türetilen bir özel durum nesnesi<xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Öğesinden türetilen bir özel durum nesnesi <xref:System.Exception>|  
 |<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Hiçbir şey](../../../language-reference/nothing.md)yok, başka bir deyişle, şu anda değişkene atanmış nesne yok|  
 |<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Sayı veya bir sayı olarak yorumlanabilecek dize|  
 |<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Bir başvuru türü (dize, dizi, temsilci veya sınıf türü gibi)|  
@@ -33,6 +35,7 @@ ms.locfileid: "84410354"
  Bir işleme veya yordama geçersiz bir değer gönderilmesini önlemek için bu işlevleri kullanabilirsiniz.  
   
 ## <a name="typeof-operator"></a>TypeOf İşleci  
+
  Bir nesne değişkeninin şu anda belirli bir veri türüne başvuruda bulunup bulunmadığını anlamak için [typeof işlecini](../../../language-reference/operators/typeof-operator.md) de kullanabilirsiniz. `TypeOf`... `Is` İfadesi, `True` işlenenin çalışma zamanı türü belirtilen türden türetildiyse veya uygularsa olarak değerlendirilir.  
   
  Aşağıdaki örnek, `TypeOf` değer ve başvuru türlerine başvuran nesne değişkenlerinde kullanır.  
@@ -64,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  Nesne değişkeni `num` , türündeki verileri ifade eder `Integer` ve `frm` bir sınıfının nesnesine başvurur <xref:System.Windows.Forms.Form> .  
   
 ## <a name="object-arrays"></a>Nesne dizileri  
+
  Bir değişken dizisi bildirebilir ve kullanabilirsiniz `Object` . Bu, çeşitli veri türlerini ve nesne sınıflarını işlemeniz gerektiğinde faydalıdır. Bir dizideki tüm öğeler aynı tanımlanmış veri türüne sahip olmalıdır. Bu veri türünü olarak bildirmek `Object` , nesneleri ve sınıf örneklerini dizideki diğer veri türleriyle birlikte depolamanıza olanak sağlar.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

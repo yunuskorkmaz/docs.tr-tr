@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_MinusOneOrGTZero1
 ms.assetid: 22c6bf5f-5194-43ec-8a8c-88f781801927
-ms.openlocfilehash: 74a1c04cca7a6941600b0bb280d3de7e983a20fc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3e557af8d04a4fae2bf7f056e993f9d4e1f16ed8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84412864"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91079990"
 ---
 # <a name="argument-argumentname-must-be-greater-than-0-or-equal-to--1"></a>' ' Bağımsız değişkeni \<argumentname> 0 ' dan büyük veya-1 ' e eşit olmalıdır
+
 Bağımsız değişkenin değeri 0 ' dan küçük ancak-1 ' e eşit değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

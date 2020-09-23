@@ -8,14 +8,15 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-ms.openlocfilehash: 282b7d91ec7cfe2f587c67bc9a982f0da22ad925
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8ffe6d5ed368aee6d6984ec6ab28c8832921a3f8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410315"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91080185"
 ---
 # <a name="accessing-xml-in-visual-basic"></a>Visual Basic'de XML'e Erişme
+
 Visual Basic, yapılara erişmek ve bunları gezinmek için XML eksen özellikleri sağlar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] . Bu özellikler, XML adlarını belirterek öğelere ve özniteliklere erişmenizi sağlamak için özel bir sözdizimi kullanır.  
   
  Aşağıdaki tabloda, Visual Basic XML öğelerine ve özniteliklerine erişmenize olanak tanıyan dil özellikleri listelenmektedir.  
@@ -31,6 +32,7 @@ Visual Basic, yapılara erişmek ve bunları gezinmek için XML eksen özellikle
 |*deeri*|`contacts...<name>.Value`|Dizideki ilk nesnenin dize gösterimini alır veya `Nothing` dizi boşsa.|  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nasıl yapılır: XML Bağımlı Öğelerine Erişme](how-to-access-xml-descendant-elements.md)  
  Belirtilen bir ada sahip olan ve belirtilen bir XML öğesinin altında bulunan tüm XML öğelerine erişmek için bir alt eksen özelliğinin nasıl kullanılacağını gösterir.  
   
@@ -44,6 +46,7 @@ Visual Basic, yapılara erişmek ve bunları gezinmek için XML eksen özellikle
  XML ad alanı ön ekinin nasıl bildirilemeyeceğini ve XML öğeleri oluşturmak ve ona erişmek için nasıl kullanılacağını gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [XML Eksen Özellikleri](../../../language-reference/xml-axis/index.md)  
  Çeşitli XML erişimi özelliklerini açıklayan bölümlerin bağlantılarını sağlar.  
   
