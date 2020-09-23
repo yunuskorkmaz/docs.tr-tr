@@ -3,12 +3,12 @@ title: WCF Svcutil aracına genel bakış
 description: .NET Framework projelerine yönelik WCF Svcutil aracına benzer şekilde .NET Core ve ASP.NET Core projelerine yönelik işlevler ekleyen Microsoft WCF DotNet-Svcutil aracına genel bakış.
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 403bcf78ccebd983d378cfdd7965c4ca5097ccc9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396216"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078261"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core için WCF DotNet-Svcutil aracı
 
@@ -21,7 +21,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 > [!IMPORTANT]
 > Yalnızca güvenilir bir kaynaktan hizmetlere başvurmanız gerekir. Güvenilmeyen bir kaynaktan başvuruları eklemek güvenliği tehlikeye atabilir.
 
-## <a name="prerequisites"></a>Önkoşullar
+## <a name="prerequisites"></a>Ön koşullar
 
 <!-- markdownlint-disable MD025 -->
 
@@ -37,7 +37,7 @@ Windows Communication Foundation (WCF) **DotNet-Svcutil** Aracı, bir ağ konumu
 
 ---
 
-## <a name="getting-started"></a>Kullanmaya başlama
+## <a name="getting-started"></a>Başlarken
 
 Aşağıdaki örnek, bir .NET Core Web projesine Web hizmeti başvurusu eklemek ve hizmeti çağırmak için gereken adımlarda size yol gösterir. *Merhaba Svcutil* adlı bir .NET Core Web uygulaması oluşturacak ve aşağıdaki sözleşmeyi uygulayan bir Web hizmetine başvuru ekleyeceğiz:
 
@@ -50,7 +50,7 @@ public interface ISayHello
 }
 ```
 
-Bu örnek için, Web hizmeti 'nin şu adreste barındırıldığını varsayalım:`http://contoso.com/SayHello.svc`
+Bu örnek için, Web hizmeti 'nin şu adreste barındırıldığını varsayalım: `http://contoso.com/SayHello.svc`
 
 Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulayın:
 
@@ -75,6 +75,7 @@ Bir Windows, macOS veya Linux komut penceresinde aşağıdaki adımları uygulay
     ```
 
     # <a name="dotnet-svcutil-1x"></a>[DotNet-Svcutil 1. x](#tab/dotnetsvcutil1x)
+
     `HelloSvcutil.csproj`Düzenleyicinizde proje dosyasını açın, `Project` öğesini düzenleyin ve aşağıdaki kodu kullanarak [ `dotnet-svcutil` NuGet paketini](https://nuget.org/packages/dotnet-svcutil) bir CLI araç başvurusu olarak ekleyin:
 
     ```xml
@@ -117,7 +118,7 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
     dotnet restore
     ```
 
-2. Kullanmak istediğiniz istemci sınıfının ve işlemin adını bulun. `Reference.cs``System.ServiceModel.ClientBase`, hizmet üzerindeki işlemleri çağırmak için kullanılabilecek yöntemler ile öğesinden devralan bir sınıf içerir. Bu örnekte, _SayHello_ hizmetinin _Hello_ işlemini çağırmak istiyorsunuz. `ServiceReference.SayHelloClient`, istemci sınıfının adıdır ve `HelloAsync` işlemi çağırmak için kullanılabilecek bir yöntemi vardır.
+2. Kullanmak istediğiniz istemci sınıfının ve işlemin adını bulun. `Reference.cs``System.ServiceModel.ClientBase`, hizmet üzerindeki işlemleri çağırmak için kullanılabilecek yöntemler ile öğesinden devralan bir sınıf içerir. Bu örnekte, _SayHello_ hizmetinin _Hello_ işlemini çağırmak istiyorsunuz. `ServiceReference.SayHelloClient` , istemci sınıfının adıdır ve `HelloAsync` işlemi çağırmak için kullanılabilecek bir yöntemi vardır.
 
 3. `Startup.cs`Dosyayı Düzenleyicinizde açın ve `using` en üstteki hizmet başvurusu ad alanı için bir yönerge ekleyin:
 
@@ -156,6 +157,7 @@ Oluşturulan dosya _Merhaba Svcutil/ServiceReference/Reference. cs_olarak kayded
 Şu çıktıyı görmeniz gerekir: "Hello DotNet-Svcutil!"
 
 Araç parametrelerinin ayrıntılı bir açıklaması için `dotnet-svcutil` , yardım parametresini aşağıdaki gibi geçirerek aracı çağırın:
+
 # <a name="dotnet-svcutil-2x"></a>[DotNet-Svcutil 2. x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli

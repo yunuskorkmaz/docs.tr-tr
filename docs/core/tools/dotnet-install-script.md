@@ -1,13 +1,13 @@
 ---
 title: dotnet-install scripts
 description: .NET Core SDK ve paylaşılan çalışma zamanını yüklemek için DotNet-install betikleri hakkında bilgi edinin.
-ms.date: 04/30/2020
-ms.openlocfilehash: 8f27b8a7794e84e6e2b288d6cc2ec33ffcb7600f
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.date: 09/22/2020
+ms.openlocfilehash: 35161edd2a4862e064373d75f1e19396983f3a64
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90538048"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078209"
 ---
 # <a name="dotnet-install-scripts-reference"></a>DotNet-betiklerin başvurusunu yüklemeyi
 
@@ -185,7 +185,6 @@ Install betikleri, Windows 'da kayıt defterini güncelleştirmez. Yalnızca dar
   Belirli bir derleme sürümünü temsil eder. Olası değerler şunlardır:
 
   - `latest` -Kanalda en son derleme ( `-Channel` seçeneğiyle kullanılır).
-  - `coherent` -Kanalda en son tutarlı derleme; en son kararlı paket birleşimini kullanır (dal adı seçenekleriyle kullanılır `-Channel` ).
   - Belirli bir derleme sürümünü temsil eden X. Y. Z biçimindeki üç bölümden oluşan sürüm; seçeneğinin yerini alır `-Channel` . Örneğin: `2.0.0-preview2-006120`.
 
   Belirtilmemişse, `-Version` Varsayılan olarak olur `latest` .

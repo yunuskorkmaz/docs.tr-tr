@@ -2,14 +2,15 @@
 title: Hedef klasör bir dosya
 ms.date: 07/20/2015
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-ms.openlocfilehash: a834f4e91ceeb36cbffcc25ec358adcc9456f3e4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4885c4c5c6162dc527fcbc643f4770cafe00f17a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554950"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078625"
 ---
 # <a name="target-folder-is-a-file"></a>Hedef klasör bir dosya
+
 Klasör ile ilgili bir eylem gerçekleştirmeye çalışırken bir dosya belirtiyorsunuz.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

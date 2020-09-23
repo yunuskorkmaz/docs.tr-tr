@@ -2,14 +2,15 @@
 title: Giriş yolu bir dosyaya başvuruyor, ancak bir dizin ayırıcı karakteriyle bitiyor
 ms.date: 07/20/2015
 ms.assetid: 319181c1-a015-4038-a23f-f53c0d91d806
-ms.openlocfilehash: e878a621faeb945f327efe188f911654666e2019
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a23bf75dec58dd07c4cc9ebf30a541ea36e153e0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398610"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078469"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>Giriş yolu bir dosyaya başvuruyor, ancak bir dizin ayırıcı karakteriyle bitiyor
+
 Bir dosya adının sağlanması için bir işlem denendi, ancak sağlanan ad bir dizin ayırıcı karakteriyle () sonra bitiyor `\` . Bu, yanlış ayrıştırılmış bir dosya yolunun sonucu olabilir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

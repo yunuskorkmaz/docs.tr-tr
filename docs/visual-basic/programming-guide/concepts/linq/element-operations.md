@@ -2,14 +2,15 @@
 title: Öğe İşlemleri
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: 73d8b5b308b4d1cb8863f38592647a71e62dd15a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c082bf18f19e29485cc80a0c9c86e09c270ecb25
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84375297"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078326"
 ---
 # <a name="element-operations-visual-basic"></a>Öğe Işlemleri (Visual Basic)
+
 Öğe işlemleri bir dizideki tek ve belirli bir öğeyi döndürür.  
   
  Öğe işlemlerini gerçekleştiren standart sorgu işleci yöntemleri aşağıdaki bölümde listelenmiştir.  
@@ -20,7 +21,7 @@ ms.locfileid: "84375297"
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |ElementAt|Koleksiyonda belirtilen dizindeki öğeyi döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
 |ElementAtOrDefault|Dizin aralık dışında olduğunda, bir koleksiyondaki belirtilen dizindeki öğeyi veya varsayılan değeri döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
-|İlk|Bir koleksiyonun ilk öğesini veya bir koşulu karşılayan ilk öğeyi döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=nameWithType>|  
+|Birinci|Bir koleksiyonun ilk öğesini veya bir koşulu karşılayan ilk öğeyi döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=nameWithType>|  
 |FirstOrDefault|Bir koleksiyonun ilk öğesini veya bir koşulu karşılayan ilk öğeyi döndürür. Böyle bir öğe yoksa, varsayılan bir değer döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |Son|Bir koleksiyonun son öğesini veya bir koşulu karşılayan son öğeyi döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|Bir koleksiyonun son öğesini veya bir koşulu karşılayan son öğeyi döndürür. Böyle bir öğe yoksa, varsayılan bir değer döndürür.|Geçerli değildir.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  

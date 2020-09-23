@@ -1,32 +1,33 @@
 ---
-title: Bir akış günlüğü alınamıyor
+title: Günlük için akış alınamıyor
 ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 887356fac3abe5c9d28751f7c4d3b1908ed35acb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922544"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078391"
 ---
-# <a name="unable-to-obtain-a-stream-for-the-log"></a>Bir akış günlüğü alınamıyor
-Bir akış günlüğü için alınamıyor. Olası dosya adlarına göre \<adı > zaten kullanımda.  
+# <a name="unable-to-obtain-a-stream-for-the-log"></a>Günlük için akış alınamıyor
+
+Günlük için akış alınamıyor. Öğesine göre olası dosya adları \<name> zaten kullanılıyor.  
   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Sınıfı olası tüm günlük dosyası adları dayalı olduğundan yeni bir günlük dosyası oluşturamadı \<adı > zaten kullanımda.  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>Temel alınarak tüm olası günlük dosyası adları zaten kullanımda olduğundan, sınıf yeni bir günlük dosyası oluşturamadı \<name> .  
   
- Günlük dosyaları çok fazla olması, uygulamanın mimari bir sorun olduğunu gösteriyor olabilir. Belgelerine bakın <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> daha fazla bilgi için sınıf.  
+ Çok fazla günlük dosyası olması, uygulamayla ilgili bir mimari sorunu gösteriyor olabilir. <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>Daha fazla bilgi için bkz. sınıf belgeleri.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   
-1. Ayarlama <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> özelliğini <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> veya <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> günlük dosya adında tarih damgası eklenecek.  
+1. Özelliğini, <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> günlük dosyası adına bir tarih damgası içerecek şekilde veya olarak ayarlayın.  
   
-2. Mevcut günlüklerini arşivleyin ve bunları izin vermek için bilgisayarınızdan <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> yeni günlükler oluşturulacak nesne.  
+2. Nesnenin yeni Günlükler oluşturmasına izin vermek için mevcut günlükleri Arşivle ve bilgisayardan kaldır <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A>
-- [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My. Application. log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [My. Application. Info. DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

@@ -3,12 +3,12 @@ title: .NET Core için csproj biçimine eklemeler
 description: Mevcut ve .NET Core csproj dosyaları arasındaki farklılıklar hakkında bilgi edinin
 ms.topic: reference
 ms.date: 04/08/2019
-ms.openlocfilehash: 7760dc095fa894b1f356c939eb030e675f58a876
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 3ef6a89a8cd4f811bcdd41b9c9bedbc45da78098
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88810891"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91078222"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core için csproj biçimine eklemeler
 
@@ -73,9 +73,9 @@ Aşağıdaki tabloda, SDK 'nın hangi öğesi ve hangi [genelleştirmeler](https
 
 | Öğe           | Glob 'yi dahil et                              | Glob 'yi hariç tut                                                  | Glob 'yi kaldır              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | YOK                      |
-| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | YOK                      |
-| Yok              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx   |
+| Se           | \*\*/\*. cs (veya diğer dil uzantıları) | \*\*/\*kullanıcısını  \*\*/\*.\* PROJ  \*\*/\*. sln  \*\*/\*. vssscc  | Yok                      |
+| EmbeddedResource  | \*\*/\*. resx                              | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | Yok                      |
+| Hiçbiri              | \*\*/\*                                   | \*\*/\*kullanıcısını \*\*/\*.\* PROJ \*\*/\*. sln \*\*/\*. vssscc     | \*\*/\*.cs \*\*/\*. resx   |
 
 > [!NOTE]
 > **Glob 'Yi hariç tut** , `./bin` `./obj` `$(BaseOutputPath)` sırasıyla ve MSBuild özellikleriyle temsil edilen ve klasörlerini dışlar `$(BaseIntermediateOutputPath)` . Bütün olarak, tüm dışlar tarafından temsil edilir `$(DefaultItemExcludes)` .
@@ -283,7 +283,7 @@ Nuget.org üzerindeki profil adlarıyla eşleşen paket yazarları için noktal�
 
 UI görüntüleme paketinin uzun açıklaması.
 
-### <a name="description"></a>Açıklama
+### <a name="description"></a>Description
 
 Derleme için uzun bir açıklama. `PackageDescription`Belirtilmezse, bu özellik paketin açıklaması olarak da kullanılır.
 
@@ -364,9 +364,11 @@ Paketi atayan etiketlerin noktalı virgülle ayrılmış listesi.
 Paketlenmiş paketin bırakılacak çıkış yolunu belirler. `$(OutputPath)` varsayılan değerdir.
 
 ### <a name="includesymbols"></a>Includesymbols
+
 Bu Boole değeri, paketin proje paketedildiğinde ek bir sembol paketi oluşturup oluşturmayacağını gösterir. Semboller paketinin biçimi, özelliği tarafından denetlenir `SymbolPackageFormat` .
 
 ### <a name="symbolpackageformat"></a>SymbolPackageFormat
+
 Semboller paketinin biçimini belirtir. "Symbols. nupkg" ise, pdb 'leri, dll 'Ler ve diğer çıktı dosyalarını içeren *. Symbols. nupkg* Uzantısı ile eski bir sembol paketi oluşturulur. "Snupkg" ise, taşınabilir pdb 'leri içeren bir snupkg sembol paketi oluşturulur. Varsayılan değer "symbols. nupkg" dır.
 
 ### <a name="includesource"></a>Includesource
@@ -386,9 +388,11 @@ Paketin kaynak kodunun bulunduğu ve/veya oluşturulduğu deponun URL 'sini beli
 Deponun türünü belirtir. Varsayılan değer "git" dir.
 
 ### <a name="repositorybranch"></a>Depodalı
+
 Depodaki kaynak dalın adını belirtir. Proje bir NuGet paketinde paketlenmişse, paket meta verilerine eklenir.
 
 ### <a name="repositorycommit"></a>Kayıt yapma
+
 Paketin hangi kaynağa göre oluşturulduğunu göstermek için isteğe bağlı depo kaydı veya değişiklik kümesi. `RepositoryUrl` Bu özelliğin dahil edilmesini sağlamak için de belirtilmesi gerekir. Proje bir NuGet paketinde paketlenmişse, bu tamamlama veya değişiklik kümesi paket meta verilerine eklenir.
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
