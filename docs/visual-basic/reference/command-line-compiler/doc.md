@@ -6,17 +6,18 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 57a81983278c26090c62995f4da55c5cbfd66047
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8b80629ce9b2cd62f10d9a53279b83ba41bc4ece
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408679"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097715"
 ---
 # <a name="-doc"></a>-doc
+
 Belge açıklamalarını bir XML dosyasına işler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -doc[+ | -]  
@@ -32,10 +33,11 @@ veya
   
 |Terim|Tanım|  
 |---|---|  
-|`+`&#124;`-`|İsteğe bağlı. Yalnızca + veya belirtildiğinde `-doc` , derleyicinin belge bilgilerini oluşturmasına ve BIR XML dosyasına yerleştirmesine neden olur. Belirtildiğinde `-` `-doc` , hiçbir belge bilgisinin oluşturulmamasına neden olmayan bir değer belirtilmiyor.|  
+|`+` &#124; `-`|İsteğe bağlı. Yalnızca + veya belirtildiğinde `-doc` , derleyicinin belge bilgilerini oluşturmasına ve BIR XML dosyasına yerleştirmesine neden olur. Belirtildiğinde `-` `-doc` , hiçbir belge bilgisinin oluşturulmamasına neden olmayan bir değer belirtilmiyor.|  
 |`file`|Kullanılıyorsa gereklidir `-doc:` . Derlemenin kaynak kodu dosyalarındaki yorumlarla doldurulan çıkış XML dosyasını belirtir. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `-doc`Seçeneği, derleyicinin belge açıklamalarını içeren BIR XML dosyası oluşturup üretmediğini denetler. `-doc:file`Söz dizimini kullanırsanız `file` PARAMETRESI, XML dosyasının adını belirtir. `-doc`Veya kullanıyorsanız `-doc+` , derleyici XML dosya adını derleyicinin oluşturmakta olduğu yürütülebilir dosya veya kitaplıktan alır. `-doc-`Seçeneğini kullanırsanız veya belirtmezseniz `-doc` , DERLEYICI bir XML dosyası oluşturmaz.  
   
  Kaynak kodu dosyalarında, belge açıklamaları aşağıdaki tanımlardan önce olabilir:  
@@ -55,6 +57,7 @@ veya
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın. <br />2. **Derle** sekmesine tıklayın.<br />3. **XML belgesi oluştur dosyası** kutusunda değeri ayarlayın.|  
   
 ## <a name="example"></a>Örnek  
+
  Bkz. bir örnek için [kodunuzu XML Ile belgeleme](../../programming-guide/program-structure/documenting-your-code-with-xml.md) .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

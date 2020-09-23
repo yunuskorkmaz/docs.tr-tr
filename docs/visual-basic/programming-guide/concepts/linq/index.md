@@ -2,17 +2,19 @@
 title: Dil ile Tümleşik Sorgu (LINQ)
 ms.date: 07/20/2015
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-ms.openlocfilehash: 53c4033c4626fd34c3cd8752e74af3f8e9b481c3
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: c34145a0b7ff5cf97f5efd6ff7b49381af80bd93
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549948"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098261"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>Dil ile tümleşik sorgu (LINQ) (Visual Basic)
+
 LINQ, güçlü sorgu yeteneklerini Visual Basic dil sözdizimine genişleten bir özellikler kümesidir. LINQ, verileri sorgulamak ve güncelleştirmek için standart ve kolay öğrenilen desenler sunar ve teknoloji potansiyel olarak her türlü veri deposunu desteklemek için genişletilebilir.  .NET Framework, LINQ 'ın .NET Framework koleksiyonları, SQL Server veritabanları, ADO.NET veri kümeleri ve XML belgeleri kullanımını etkinleştiren LINQ sağlayıcı derlemelerini içerir.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [LINQ 'e giriş (Visual Basic)](introduction-to-linq.md)  
  Yazabileceği uygulama türlerine ve LINQ sorgularıyla çözebileceğiniz sorun türlerine genel bir giriş sağlar.  
   

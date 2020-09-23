@@ -9,17 +9,18 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 633b457106203e213f5d30003e576b7e8132f4d2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b489a164e56a5e3bdbf7e3cdf24ec330fadedf38
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400493"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097559"
 ---
 # <a name="-reference-visual-basic"></a>-başvuru (Visual Basic)
+
 Derleyicinin, belirtilen derlemelerde bulunan tür bilgilerini şu anda derlediğiniz projede kullanılabilir hale getirmesine neden olur.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -reference:fileList  
@@ -38,6 +39,7 @@ veya
 |`fileList`|Gereklidir. Bütünleştirilmiş kod dosyası adlarının virgülle ayrılmış listesi. Dosya adı bir boşluk içeriyorsa, adı tırnak işaretleri içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  İçeri aktardığınız dosya (ler) bütünleştirilmiş kod meta verisi içermelidir. Yalnızca ortak türler derleme dışında görünür. [-Addmodule](addmodule.md) seçeneği bir modülden meta verileri içeri aktarır.  
   
  Kendisi başka bir derlemeye (derleme B) başvuran bir derlemeye (derleme A) başvuruyorsa, şu durumlarda derleme B 'ye başvurmanız gerekir:  
@@ -55,6 +57,7 @@ veya
  Öğesinin kısa biçimi `-reference` `-r` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki komut, kaynak dosya `Input.vb` ve başvuru derlemelerini ' den `Metad1.dll` ve `Metad2.dll` üretilecek şekilde derler `Out.exe` .  
   
 ```console

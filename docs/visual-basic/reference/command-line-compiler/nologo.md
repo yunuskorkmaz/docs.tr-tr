@@ -7,29 +7,32 @@ helpviewer_keywords:
 - nologo compiler option [Visual Basic]
 - /nologo compiler option [Visual Basic]
 ms.assetid: 25ef54b6-d676-4639-a2d2-a747a158bc07
-ms.openlocfilehash: d1307603ebc06b4eb4c3786f1cd2fb432c0cf636
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5557d681c5e6901592936efd35b3c552d43e39b0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84360468"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097676"
 ---
 # <a name="-nologo-visual-basic"></a>-nologo (Visual Basic)
+
 Derleme sırasında telif hakkı başlığının ve bilgilendirici mesajların görüntülenmesini önler.  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```console  
 -nologo  
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Belirtirseniz `-nologo` , derleyici bir telif hakkı başlığını görüntülemez. Varsayılan olarak `-nologo` etkin değildir.  
   
 > [!NOTE]
 > `-nologo`Bu seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, `T2.vb` bir telif hakkı başlığını derler ve göstermez.  
   
 ```console

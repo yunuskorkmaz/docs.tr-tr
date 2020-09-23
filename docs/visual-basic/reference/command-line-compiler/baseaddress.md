@@ -9,14 +9,15 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: d241584195da7d6f74b45b191c4f63204c200d45
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c794d1fc1c9d20e22ffa747e3175c846341ad8ad
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357186"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91097767"
 ---
 # <a name="-baseaddress"></a>-baseaddress
+
 DLL oluşturulurken varsayılan bir temel adresi belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,11 +33,12 @@ DLL oluşturulurken varsayılan bir temel adresi belirtir.
 |`address`|Gereklidir. DLL 'nin temel adresi. Bu adres, onaltılık bir sayı olarak belirtilmelidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bir DLL için varsayılan temel adres .NET Framework tarafından ayarlanır.  
   
  Bu adresteki alt sıra sözcüğünün yuvarlanacağını unutmayın. Örneğin, 0x11110001 belirtirseniz, 0x11110000 ' a yuvarlanır.  
   
- DLL imzalama işlemini gerçekleştirmek için, `–R` tanımlayıcı adlandırma aracı (sn. exe) seçeneğini kullanın.  
+ DLL imzalama işlemini gerçekleştirmek için, `–R` tanımlayıcı adlandırma aracının (Sn.exe) seçeneğini kullanın.  
   
  Hedef bir DLL değilse, bu seçenek yoksayılır.  
   
@@ -49,4 +51,4 @@ DLL oluşturulurken varsayılan bir temel adresi belirtir.
 - [Visual Basic komut satırı derleyicisi](index.md)
 - [-target (Visual Basic)](target.md)
 - [Örnek Derleme Komut Satırları](sample-compilation-command-lines.md)
-- [Sn. exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))
+- [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md))
