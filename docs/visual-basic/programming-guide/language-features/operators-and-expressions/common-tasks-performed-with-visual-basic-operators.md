@@ -13,20 +13,22 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: 62ced7f2048ae41c7ea4c9d62c0ff0a903c37856
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: a8a8d7898e52077fef47b91172e34ad50d7f54e7
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388926"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075219"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Visual Basic İşleçleriyle Yapılan Genel Görevler
+
 İşleçler, *işlenenler*adlı bir veya daha fazla ifadeye ilişkin birçok ortak görevi gerçekleştirir.  
   
 ## <a name="arithmetic-and-bit-shift-tasks"></a>Aritmetik ve bit kaydırma görevleri  
+
  Aşağıdaki tablo, kullanılabilir aritmetik ve bit kaydırma işlemlerini özetler.  
   
-|Alıcı|Bkz.|  
+|Amaç|Bkz.|  
 |---|---|  
 |Başka bir sayısal değer ekleme|[+ İşleci](../../../language-reference/operators/addition-operator.md)|  
 |Bir sayısal değeri diğerinden çıkar|[-İşleci (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)|  
@@ -36,36 +38,39 @@ ms.locfileid: "84388926"
 |Bir sayısal değerin başka bir değere bölünmüş bölümünü bul (geri kalanı olmadan)|[\ İşleci (Visual Basic)](../../../language-reference/operators/integer-division-operator.md)|  
 |Bir sayısal değerin geri kalanını başka bir sayı ile ayrılmış olarak bulur (bölüm olmadan)|[Mod İşleci](../../../language-reference/operators/mod-operator.md)|  
 |Bir sayısal değeri diğerinin gücüne yükseltin|[^ İşleci](../../../language-reference/operators/exponentiation-operator.md)|  
-|Sayısal değerin bit stilini sola kaydır|[<\<İşlecinde](../../../language-reference/operators/left-shift-operator.md)|  
+|Sayısal değerin bit stilini sola kaydır|[<\< İşlecinde](../../../language-reference/operators/left-shift-operator.md)|  
 |Sayısal değerin bit stilini sağa kaydır|[>> Işleci](../../../language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>Karşılaştırma görevleri  
+
  Aşağıdaki tabloda kullanılabilir karşılaştırma işlemleri özetlenmektedir.  
   
-|Alıcı|Bkz.|  
+|Amaç|Bkz.|  
 |---|---|  
-|İki değerin eşit olup olmadığını belirleme|`=`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
-|İki değerin eşit olup olmadığını belirleme|`<>`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
-|Bir değerin diğerinden daha küçük olup olmadığını belirleme|`<`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
-|Bir değerin diğerinden daha büyük olup olmadığını belirleme|`>`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
-|Bir değerin diğerine eşit veya ondan küçük olup olmadığını belirleme|`<=`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
-|Bir değerin diğerine eşit veya ondan büyük olup olmadığını belirleme|`>=`İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|İki değerin eşit olup olmadığını belirleme|`=` İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|İki değerin eşit olup olmadığını belirleme|`<>` İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerinden daha küçük olup olmadığını belirleme|`<` İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerinden daha büyük olup olmadığını belirleme|`>` İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerine eşit veya ondan küçük olup olmadığını belirleme|`<=` İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
+|Bir değerin diğerine eşit veya ondan büyük olup olmadığını belirleme|`>=` İşleç ([Visual Basic karşılaştırma işleçleri](comparison-operators.md))|  
 |İki nesne değişkeninin aynı nesne örneğine başvurmadığını belirleme|[Is İşleci](../../../language-reference/operators/is-operator.md)|  
 |İki nesne değişkeninin farklı nesne örneklerine başvurmadığını belirleme|[IsNot İşleci](../../../language-reference/operators/isnot-operator.md)|  
 |Nesnenin belirli bir türde olup olmadığını belirleme|[TypeOf İşleci](../../../language-reference/operators/typeof-operator.md)|  
   
 ## <a name="concatenation-tasks"></a>Birleştirme görevleri  
+
  Aşağıdaki tabloda, kullanılabilir birleştirme işlemleri özetlenmektedir.  
   
-|Alıcı|Bkz.|  
+|Amaç|Bkz.|  
 |---|---|  
-|Birden çok dizeyi tek bir dizeye ekleyin|`&`İşleç ([Visual Basic Içindeki birleştirme işleçleri](concatenation-operators.md))|  
-|Sayısal değerleri dize değerleriyle birleştirin|`+`İşleç ([Visual Basic Içindeki birleştirme işleçleri](concatenation-operators.md))|  
+|Birden çok dizeyi tek bir dizeye ekleyin|`&` İşleç ([Visual Basic Içindeki birleştirme işleçleri](concatenation-operators.md))|  
+|Sayısal değerleri dize değerleriyle birleştirin|`+` İşleç ([Visual Basic Içindeki birleştirme işleçleri](concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>Mantıksal ve bit düzeyinde görevler  
+
  Aşağıdaki tabloda, kullanılabilir mantıksal ve bit düzeyinde işlemler özetlenmektedir.  
   
-|Alıcı|Bkz.|  
+|Amaç|Bkz.|  
 |---|---|  
 |Boole değeri üzerinde mantıksal değilleme gerçekleştir|[Not İşleci](../../../language-reference/operators/not-operator.md)|  
 |İki Boolean değer üzerinde mantıksal bir birlikte gerçekleştir|[And İşleci](../../../language-reference/operators/and-operator.md)|  

@@ -2,14 +2,15 @@
 title: LINQ ve Dizeler
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: ee2a44175e8546f879473a3af6bf1a2de92d2501
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 28c11dcc3c788ea85516e8b3fbafe2677b6d9b54
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90549855"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075349"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ ve dizeler (Visual Basic)
+
 LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için kullanılabilir. Bu, özellikle metin dosyalarındaki yarı yapılandırılmış verilerle yararlı olabilir. LINQ sorguları, geleneksel dize işlevleri ve normal ifadelerle birleştirilebilir. Örneğin, <xref:System.String.Split%2A> <xref:System.Text.RegularExpressions.Regex.Split%2A> daha sonra LINQ kullanarak sorgulayabilmeniz veya değiştiremeyeceğiniz bir dize dizisi oluşturmak için veya yöntemini kullanabilirsiniz. <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> `where` Bir LINQ sorgusunun yan tümcesindeki yöntemini kullanabilirsiniz. Aynı şekilde, <xref:System.Text.RegularExpressions.MatchCollection> bir normal ifade tarafından döndürülen sonuçları sorgulamak veya değiştirmek IÇIN LINQ kullanabilirsiniz.  
   
  Yarı yapılandırılmış metin verilerini XML 'e dönüştürmek için bu bölümde açıklanan teknikleri de kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: CSV DOSYALARıNDAN XML oluşturma](../../../../standard/linq/generate-xml-csv-files.md).  
@@ -17,6 +18,7 @@ LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için ku
  Bu bölümdeki örnekler iki kategoriye ayrılır:  
   
 ## <a name="querying-a-block-of-text"></a>Metin bloğunu sorgulama  
+
  Yöntemini veya yöntemini kullanarak bunları bir daha küçük dizeler dizisine bölerek metin bloklarını sorgulayabilir, çözümleyebilir ve değiştirebilirsiniz <xref:System.String.Split%2A> <xref:System.Text.RegularExpressions.Regex.Split%2A> . Kaynak metni sözcükler, cümleler, paragraflar, sayfalar veya diğer ölçütlere bölebilir ve ardından sorgunuzda gerekliyse ek bölmeler gerçekleştirebilirsiniz.  
   
  [Nasıl yapılır: dizedeki bir sözcüğün tekrarlamalarını sayma (LINQ) (Visual Basic)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
@@ -33,6 +35,7 @@ LINQ, dizeleri ve dize koleksiyonlarını sorgulamak ve dönüştürmek için ku
  Filtrelenmiş sorgu sonuçlarında karmaşık model eşleştirmesi için LINQ sorgularında normal ifadelerin nasıl kullanılacağını gösterir.  
   
 ## <a name="querying-semi-structured-data-in-text-format"></a>Yarı yapılandırılmış verileri metin biçiminde sorgulama  
+
  Birçok farklı metin dosyası türü, genellikle sekme veya virgülle ayrılmış dosyalar ya da sabit uzunluklu çizgiler gibi benzer biçimlendirmeler içeren bir dizi satırdan oluşur. Bu tür bir metin dosyasını belleğe okuduktan sonra, satırları sorgulamak ve/veya değiştirmek için LINQ kullanabilirsiniz. LINQ sorguları Ayrıca birden çok kaynaktan veri birleştirme görevini basitleştirir.  
   
  [Nasıl yapılır: Iki liste arasındaki küme farkını bulma (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)  

@@ -11,14 +11,15 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: fa2bc5417b8b917ff48502a5bd0a4daa21fab67e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0e88ff7b36535a709671a1f9b838f2b4488d1d37
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388575"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075193"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Nasıl yapılır: Bir İşleç Yordamı Çağırma (Visual Basic)
+
 Bir ifadede işleç sembolünü kullanarak bir işleç yordamı çağırın. Bir dönüştürme işleci söz konusu olduğunda, bir değeri bir veri türünden diğerine dönüştürmek için [CType işlevini](../../../language-reference/functions/ctype-function.md) çağırın.  
   
  Operatör yordamlarını açıkça çağırmayın. Yalnızca işlecini veya bir deyimi, bir `CType` atama deyiminde veya bir ifadede, normalde bir işleci kullandığınız şekilde kullanırsınız. Visual Basic işleç yordamına çağrı yapar.  
@@ -39,9 +40,10 @@ Bir ifadede işleç sembolünü kullanarak bir işleç yordamı çağırın. Bir
   
 2. İşlenenlerin veri türlerinin dönüştürme için uygun olduğundan ve doğru sırada olduğundan emin olun.  
   
-3. `CType`dönüştürme işleci yordamını çağırır ve dönüştürülen değeri döndürür.  
+3. `CType` dönüştürme işleci yordamını çağırır ve dönüştürülen değeri döndürür.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek iki yapı oluşturur <xref:System.TimeSpan> , bunları birlikte ekler ve sonucu üçüncü bir <xref:System.TimeSpan> yapıda depolar. <xref:System.TimeSpan>Yapı, birkaç standart işlecin aşırı yüklenmesine yönelik operatör yordamlarını tanımlar.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
@@ -51,6 +53,7 @@ Bir ifadede işleç sembolünü kullanarak bir işleç yordamı çağırın. Bir
  Bir konuşma işleci yordamı çağırma örneği için bkz. [nasıl yapılır: Işleçleri tanımlayan bir sınıf kullanma](./how-to-use-a-class-that-defines-operators.md).  
   
 ## <a name="compile-the-code"></a>Kodu derle  
+
  Kullandığınız sınıf veya yapının kullanmak istediğiniz işleci tanımladığından emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

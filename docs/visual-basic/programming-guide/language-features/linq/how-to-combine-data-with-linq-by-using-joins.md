@@ -9,14 +9,15 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: de8c4ec3ab8a0f2335c034231c661380420fd31b
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ebda8d3b7fa2e712c337ed2c1fadc580bed7fe61
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405010"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075076"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Nasıl yapılır: Birleştirmeleri Kullanarak Verileri LINQ İle Birleştirme (Visual Basic)
+
 Visual Basic, `Join` ve `Group Join` sorgu yan tümcelerini, Koleksiyonlar arasındaki ortak değerlere göre birden çok koleksiyonun içeriğini birleştirmeniz için sağlar. Bu değerler *anahtar* değerleri olarak bilinir. İlişkisel veritabanı kavramlarını bilen geliştiriciler `Join` yan tümceyi BIR Iç birleşim ve `Group Join` yan tümce olarak, ETKIN BIR sol dış birleşim olarak tanır.  
   
  Bu konudaki örneklerde, `Join` ve sorgu yan tümcelerini kullanarak verileri birleştirmenin birkaç yolu gösterilmektedir `Group Join` .  
@@ -33,6 +34,7 @@ Visual Basic, `Join` ve `Group Join` sorgu yan tümcelerini, Koleksiyonlar aras�
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>JOIN yan tümcesini kullanarak bir Iç birleşim gerçekleştirme  
+
  Bir Iç BIRLEŞIM, verileri iki koleksiyondan birleştirir. Belirtilen anahtar değerlerinin eşleştiği öğeler dahil edilir. Diğer koleksiyonda eşleşen bir öğeye sahip olmayan her türlü öğe hariç tutulur.  
   
  Visual Basic, LINQ bir Iç BIRLEŞIM gerçekleştirmeye yönelik iki seçenek sunar: örtük bir birleşim ve açık birleşim.  
@@ -48,6 +50,7 @@ Visual Basic, `Join` ve `Group Join` sorgu yan tümcelerini, Koleksiyonlar aras�
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
 ## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Group JOIN yan tümcesini kullanarak bir sol dış birleşim gerçekleştirme  
+
  SOL dış BIRLEŞIM, birleştirmenin sol taraftaki koleksiyonundan tüm öğeleri ve yalnızca birleştirmenin sağ taraftaki koleksiyonundan eşleşen değerleri içerir. Sol taraftaki koleksiyonda eşleşen bir öğeye sahip olmayan birleştirmenin sağ taraftaki koleksiyonundan herhangi bir öğe sorgu sonucundan çıkarılır.  
   
  `Group Join`Yan tümce, BIR sol dış birleşimi etkili bir şekilde gerçekleştirir. Genellikle bir sol dış BIRLEŞIM olarak bilinen ve yan tümcesinin döndürdüğü farklar arasındaki fark, `Group Join` `Group Join` yan tümcesinin, sol taraftaki koleksiyondaki her öğe için birleştirmenin sağ tarafındaki koleksiyonundan sonuçlar vermesinin ne olduğunu ifade ediyor. İlişkisel bir veritabanında, bir sol dış BIRLEŞIM, sorgu sonucundaki her bir öğenin JOIN içindeki her iki koleksiyondan eşleşen öğeler içerdiği Gruplandırılmamış bir sonuç döndürür. Bu durumda, birleştirmenin sol taraftaki koleksiyonundaki öğeler, her eşleşen öğe için sağ taraftaki koleksiyondan yinelenir. Sonraki yordamı tamamladığınızda bunun nasıl göründüğünü görürsünüz.  
@@ -61,6 +64,7 @@ Visual Basic, `Join` ve `Group Join` sorgu yan tümcelerini, Koleksiyonlar aras�
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>Bileşik anahtar kullanarak bir JOIN gerçekleştirme  
+
  `And` `Join` `Group Join` Katılmakta olan koleksiyonlardan değerleri eşleştirirken kullanılacak birden çok anahtar alanını tanımlamak için bir veya yan tümcesindeki anahtar sözcüğünü kullanabilirsiniz. `And`Anahtar sözcüğü, birleştirilecek öğeler için belirtilen tüm anahtar alanlarının eşleşmesi gerektiğini belirtir.  
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Bileşik anahtar kullanarak bir JOIN gerçekleştirmek için  

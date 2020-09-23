@@ -8,13 +8,15 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6ff23f73af384a1440bcebd4b6bac21714e01756
-ms.sourcegitcommit: 0edbeb66d71b8df10fcb374cfca4d731b58ccdb2
+ms.openlocfilehash: 90a21b70b45902a9f4fd559a97e777f26043fffb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
+ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86051486"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075622"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>İzlenecek yol: Visual Basic ile COM Nesneleri Oluşturma
+
 Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluşturmak en iyisidir. Ancak Visual Basic Ayrıca, bir .NET Framework bileşenini COM 'da kullanıma sunmayı da kolaylaştırır. Bu, COM bileşenleri gerektiren önceki uygulama paketleri için yeni bileşenler sağlamanıza olanak sağlar. Bu izlenecek yol, .NET Framework nesnelerini com nesneleri olarak göstermek için Visual Basic, hem hem de COM sınıf şablonuyla birlikte kullanmak için nasıl kullanılacağını gösterir.  
   
  COM nesnelerini kullanıma almanın en kolay yolu COM sınıf şablonunu kullanmaktır. Bu şablon yeni bir sınıf oluşturur, sonra projenizi bir COM nesnesi olarak birlikte çalışabilirlik katmanıyla oluşturacak şekilde yapılandırır ve işletim sistemine kaydeder.  
@@ -39,6 +41,7 @@ Yeni uygulamalar veya bileşenler oluştururken .NET Framework derlemeleri oluş
 6. **Build** menüsünden **Build ClassLibrary1** öğesini seçin. Visual Basic derlemeyi oluşturur ve COM nesnesini işletim sistemiyle kaydeder.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>Com sınıf şablonu olmadan COM nesneleri oluşturma  
+
  COM sınıfı şablonunu kullanmak yerine el ile bir COM sınıfı da oluşturabilirsiniz. Bu yordam, komut satırından çalışırken veya COM nesnelerinin nasıl tanımlandığı hakkında daha fazla denetim istediğinizde yararlıdır.  
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>Projenizi bir COM nesnesi oluşturacak şekilde ayarlamak için  

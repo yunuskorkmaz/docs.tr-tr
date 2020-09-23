@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-ms.openlocfilehash: a426130b284a7c09004933bca264e4d52be1df3c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 84939a622ab78fd797d27480a3ed612be06d3451
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394602"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91076233"
 ---
 # <a name="drive-drivename-not-found"></a>' \<drivename> ' Sürücüsü bulunamadı
+
 Sürücü bulunamıyor. Ağ bağlantınız kaybedildi veya erişmeye çalıştığınız sürücü çevrimdışı ya da yok.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

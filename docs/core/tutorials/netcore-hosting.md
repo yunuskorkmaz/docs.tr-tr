@@ -4,12 +4,12 @@ description: .NET Core çalışma zamanının nasıl çalıştığını denetlem
 author: mjrousos
 ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 9f45a75d7ec836c14a2285a1707649cc32c2a25c
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 00a60d6aaa83622bc96e11b826fd7d496d765a77
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90537554"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075986"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>.NET çalışma zamanını yerel kodunuzda denetlemek için özel bir .NET Core ana bilgisayarı yazma
 
@@ -26,6 +26,7 @@ Konaklar yerel uygulamalar olduğundan, bu öğretici .NET Core barındırmak i�
 Ayrıca, bir basit .NET Core uygulamasının konak ile test edebilmesi için, [.NET Core SDK](https://dotnet.microsoft.com/download) yüklemeli ve [küçük bir .NET Core test uygulaması](with-visual-studio.md) (' Merhaba Dünya ' uygulaması gibi) oluşturmalısınız. Yeni .NET Core konsol projesi şablonu tarafından oluşturulan ' Merhaba Dünya ' uygulaması yeterlidir.
 
 ## <a name="hosting-apis"></a>Barındırma API 'Leri
+
 .NET Core barındırmak için kullanılabilecek üç farklı API vardır. Bu makale (ve ilişkili [örnekleri](https://github.com/dotnet/samples/tree/master/core/hosting)) tüm seçenekleri içerir.
 
 * .NET Core 3,0 ve üzeri sürümlerde .NET Core çalışma zamanının barındırılması için tercih edilen yöntem, `nethost` ve `hostfxr` kitaplıklarının API 'larıdır. Bu giriş noktaları, başlatma için çalışma zamanını bulma ve ayarlama karmaşıklığını ve hem yönetilen bir uygulamanın başlatılmasına hem de statik yönetilen bir yönteme çağrılmasını sağlar.
@@ -169,14 +170,17 @@ Daha önce bahsedildiği gibi, CoreClrHost. h artık .NET Core çalışma zaman�
 [Corerun Host](https://github.com/dotnet/runtime/tree/master/src/coreclr/src/hosts/corerun) , mscoree. h kullanarak daha karmaşık, gerçek bir barındırma örneğini göstermektedir.
 
 ### <a name="a-note-about-mscoreeh"></a>Mscoree. h hakkında bir Note
+
 `ICLRRuntimeHost4`.NET Core barındırma arabirimi, mscoree içinde tanımlanmıştır [. IDL](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/inc/MSCOREE.IDL). Bu dosyanın (mscoree. h), ana bilgisayarın başvurması gereken üst bilgi sürümü, [.NET Core çalışma zamanı](https://github.com/dotnet/runtime/) oluşturulduğunda MIDL aracılığıyla üretilir. .NET Core çalışma zamanını derlemek istemiyorsanız, DotNet/Runtime deposunda Mscoree. h [önceden oluşturulmuş bir üstbilgi](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/) olarak da kullanılabilir.
 
 ### <a name="step-1---identify-the-managed-entry-point"></a>1. adım-yönetilen giriş noktasını tanımla
+
 Gerekli üstbilgilere (örneğin,[Mscoree. h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) ve stdio. h) başvurulduktan sonra, .NET Core ana bilgisayarının yapması gereken ilk şeylerden biri, kullanacağı yönetilen giriş noktasını bulmalıdır. Bu, örnek ana sistemimizde, yöntemi yürütülecek bir yönetilen ikilinin yolu olarak ana bilgisayar için yalnızca ilk komut satırı bağımsız değişkeni alınarak yapılır `main` .
 
 [!code-cpp[NetCoreHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>2. adım-CoreCLR bulma ve yükleme
+
 .NET Core çalışma zamanı API 'Leri *CoreCLR.dll* (Windows üzerinde). Barındırma arabirimimizi () almak için `ICLRRuntimeHost4` *CoreCLR.dll*bulup yüklemeniz gerekir. *CoreCLR.dll*nasıl bulacağınızı belirlemek için bir kural tanımlamak ana bilgisayara yöneliktir. Bazı konaklar, dosyanın iyi bilinen bir makine genelinde konuma (örneğin, *%ProgramFiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*) sahip olmasını bekler. Diğerleri *CoreCLR.dll* konağın kendisinin ya da barındırılacak uygulamanın yanındaki bir konumdan yükleneceğini bekler. Hala diğerleri kitaplığı bulmak için bir ortam değişkenine danışmayı de gerektirebilir.
 
 Linux veya macOS 'ta, çekirdek çalışma zamanı kitaplığı sırasıyla *libcoreclr.so* veya *libcoreclr. dylib*olur.
@@ -186,11 +190,13 @@ Linux veya macOS 'ta, çekirdek çalışma zamanı kitaplığı sırasıyla *lib
 [!code-cpp[NetCoreHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#2)]
 
 ### <a name="step-3---get-an-iclrruntimehost4-instance"></a>3. adım-bir ICLRRuntimeHost4 örneği edinme
+
 `ICLRRuntimeHost4`Barındırma arabirimi, `GetProcAddress` üzerinde (veya `dlsym` Linux/MacOS) çağrılarak `GetCLRRuntimeHost` ve sonra bu işlevi çağırarak alınır.
 
 [!code-cpp[NetCoreHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#3)]
 
 ### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>4. adım-başlangıç bayraklarını ayarlama ve çalışma zamanını başlatma
+
 Bir `ICLRRuntimeHost4` arada, artık çalışma zamanı genelinde başlangıç bayraklarını belirtebilir ve çalışma zamanını başlatabiliriz. Başlangıç bayrakları, tek bir AppDomain veya birden çok AppDomain kullandığımızda ve hangi yükleyici iyileştirme ilkesinin kullanılacağını (örneğin, derlemelerin etki alanı içi yüklemesi için) hangi çöp toplayıcısının (GC) kullanılacağını (eş zamanlı veya sunucu) belirtir.
 
 [!code-cpp[NetCoreHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#4)]
@@ -202,6 +208,7 @@ hr = runtimeHost->Start();
 ```
 
 ### <a name="step-5---preparing-appdomain-settings"></a>5. adım-AppDomain ayarlarını hazırlama
+
 Çalışma zamanı başlatıldıktan sonra bir AppDomain kurmak istiyoruz. Ancak, bir .NET AppDomain oluştururken belirtilmesi gereken birkaç seçenek vardır; bu nedenle öncelikle bunları hazırlamak gerekir.
 
 AppDomain bayrakları, güvenlik ve birlikte çalışabilirlik ile ilgili AppDomain davranışlarını belirtir. Daha eski Silverlight konakları bu ayarları Sandbox Kullanıcı koduna kullanır, ancak modern .NET Core ana bilgisayarları Kullanıcı kodunu tam güven olarak çalıştırır ve birlikte çalışabilirliği etkinleştirir.
@@ -223,11 +230,13 @@ Ortak AppDomain özellikleri şunları içerir:
 [!code-cpp[NetCoreHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>6. adım-AppDomain oluşturma
+
 Tüm AppDomain bayrakları ve özellikleri hazırlandıktan sonra, `ICLRRuntimeHost4::CreateAppDomainWithManager` AppDomain 'i kurmak için kullanılabilir. Bu işlev, isteğe bağlı olarak tam bir derleme adı ve etki alanının AppDomain Yöneticisi olarak kullanılacak tür adını alır. AppDomain Yöneticisi, bir konağın AppDomain davranışının bazı yönlerini denetlemesine izin verebilir ve konak Kullanıcı kodunu doğrudan çağırmayı düşünmüyorsanız yönetilen kodu başlatmak için giriş noktaları sağlayabilir.
 
 [!code-cpp[NetCoreHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#7)]
 
 ### <a name="step-7---run-managed-code"></a>7. adım-yönetilen kodu çalıştırın!
+
 AppDomain çalışıyor ve çalışır durumda olduğunda, ana bilgisayar artık yönetilen kodu yürütmeye başlayabilir. Bunu yapmanın en kolay yolu, `ICLRRuntimeHost4::ExecuteAssembly` yönetilen bir derlemenin giriş noktası yöntemini çağırmak için kullanmaktır. Bu işlevin yalnızca tek etki alanı senaryolarında çalışıp çalışmadığını unutmayın.
 
 [!code-cpp[NetCoreHost#8](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#8)]
@@ -247,6 +256,7 @@ hr = runtimeHost->CreateDelegate(
 ```
 
 ### <a name="step-8---clean-up"></a>8. adım-temizle
+
 Son olarak, ana bilgisayar etki alanları kaldırılıyor, çalışma zamanını durdurup ve başvuruyu serbest bırakarak, ana bilgisayar kendiliğinden temizlemelidir `ICLRRuntimeHost4` .
 
 [!code-cpp[NetCoreHost#9](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#9)]
@@ -254,6 +264,7 @@ Son olarak, ana bilgisayar etki alanları kaldırılıyor, çalışma zamanını
 CoreCLR, kaldırmayı desteklemiyor. CoreCLR kitaplığını kaldırmayın.
 
 ## <a name="conclusion"></a>Sonuç
+
 Ana bilgisayarınız derlendikten sonra, komut satırından çalıştırılarak ve konağın beklediği bağımsız değişkenler (örneğin, yönetilen uygulama, mscoree örnek ana bilgisayarı için çalışır) geçirerek test edilebilir. Konağın çalıştırılacağı .NET Core uygulamasını belirtirken, tarafından oluşturulan. dll dosyasını kullandığınızdan emin olun `dotnet build` . Kendi içindeki uygulamalar için tarafından oluşturulan yürütülebilir dosyalar (. exe dosyaları) `dotnet publish` aslında varsayılan .NET Core ana bilgisayarı (uygulamanın ana hat senaryolarında doğrudan komut satırından başlatılabilmesi için), Kullanıcı kodu aynı ada sahip bir dll 'de derlenir.
 
 İlk başta çalışmadıysa, *coreclr.dll* konak tarafından beklenen konumda kullanılabilir, tüm gerekli çerçeve kitaplıklarının TPA listesinde ve CoreCLR 'nin bittiği (32-bit veya 64-bit) konağın nasıl derlendiğine göre olduğunu denetleyin.

@@ -7,14 +7,15 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: cf4954059a4b0bf015bed82a74357ecfd5f5987e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 61f520a528c3d40b9d34807d517a9bf27ad40da8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404881"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91075232"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Nasıl yapılır: Nesne Başlatıcı Kullanarak Bir Nesne Bildirme (Visual Basic)
+
 Nesne başlatıcıları, tek bir ifadede bir sınıfın örneğini bildirmenize ve örneklendirimenizi sağlar. Ayrıca, parametreli bir Oluşturucu çağırmadan, örneğin bir veya daha fazla üyesini aynı zamanda başlatabilirsiniz.  
   
  Adlandırılmış bir türün örneğini oluşturmak için bir nesne Başlatıcısı kullandığınızda, sınıfının parametresiz oluşturucusu çağrılır, ardından belirttiğiniz sırada belirtilen üyelerin başlatılması gelir.  
