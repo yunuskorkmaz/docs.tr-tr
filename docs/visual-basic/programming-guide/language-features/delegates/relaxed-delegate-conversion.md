@@ -6,17 +6,19 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: a581ffae77c496908d2e4e38df53491a54ae2ab8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b914d0479f160199744a8f9923c0bebc87321329
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410676"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086081"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>Gevşek Temsilci Dönüşümü (Visual Basic)
+
 Gevşek temsilci dönüştürme, imzaları özdeş olmasa bile temsilcilere veya işleyicilere alt öğeleri ve işlevleri atamanızı sağlar. Bu nedenle, temsilcilere bağlama, yöntem etkinleştirmeleri için zaten izin verilen bağlama ile tutarlı hale gelir.  
   
 ## <a name="parameters-and-return-type"></a>Parametreler ve dönüş türü  
+
  Tam imza eşleşmesi yerine, gevşek dönüştürme aşağıdaki koşulların yerine getirilmesi gerekir `Option Strict` `On` :  
   
 - Her temsilci parametresinin veri türünden, atanan işlevin veya karşılık gelen parametresinin veri türüne genişleyen bir dönüştürme bulunmalıdır `Sub` . Aşağıdaki örnekte, temsilcinin bir `Del1` parametresi vardır `Integer` . `m`Atanan Lambda ifadelerinde parametresi, veya gibi bir üzerinde genişleyen dönüştürme olan bir veri türüne sahip olmalıdır `Integer` `Long` `Double` .  
@@ -38,6 +40,7 @@ Gevşek temsilci dönüştürme, imzaları özdeş olmasa bile temsilcilere veya
  [!code-vb[VbVbalrRelaxedDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#4)]  
   
 ## <a name="omitting-parameter-specifications"></a>Parametre belirtimlerini atlama  
+
  Gevşek Temsilciler, atanan yöntemdeki parametre belirtimlerini tamamen atlamanızı da sağlar:  
   
  [!code-vb[VbVbalrRelaxedDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#5)]  
@@ -61,6 +64,7 @@ End Sub
 ```  
   
 ## <a name="addressof-examples"></a>AddressOf örnekleri  
+
  Lambda ifadeleri, tür ilişkilerinin kolayca görmesini sağlamak için önceki örneklerde kullanılır. Ancak,, veya kullanan temsilci atamaları için aynı relade izin verilir `AddressOf` `Handles` `AddHandler` .  
   
  Aşağıdaki örnekte,,, `f1` ve işlevleri `f2` `f3` `f4` öğesine atanabilir `Del1` .  
@@ -76,6 +80,7 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#14)]  
   
 ## <a name="dropping-function-returns"></a>Işlev dönüşleri bırakılıyor  
+
  Gevşek temsilci dönüştürme, bir temsilciye bir işlevi atamanıza `Sub` ve işlevin dönüş değerini etkin bir şekilde yoksaymanızı sağlar. Ancak, bir `Sub` işlev temsilcisine bir atayamazsınız. Aşağıdaki örnekte, işlevin adresi `doubler` `Sub` temsilciye atanır `Del3` .  
   
  [!code-vb[VbVbalrRelaxedDelegates#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#10)]  

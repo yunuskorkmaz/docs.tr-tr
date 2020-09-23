@@ -9,14 +9,15 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: d252d9216a9b825ad0663a5779d7ce7f81fa9011
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e7ca5b9d55611eafad88517e71f9807fe2aa4416
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393578"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086224"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Yapılar ve Sınıflar (Visual Basic)
+
 Visual Basic yapılar ve sınıfların sözdizimini birleştirir ve her iki varlığın de aynı özelliklerden çoğunu desteklediği sonuçlardır. Ancak, yapılar ve sınıflar arasında önemli farklılıklar da vardır.  
   
  Sınıfların başvuru türleri olmasının avantajı vardır; bir başvuruyu geçirmek, tüm verileriyle bir yapı değişkeni geçirilmekten daha verimlidir. Diğer yandan, yapılar genel yığında bellek ayırmayı gerektirmez.  
@@ -24,6 +25,7 @@ Visual Basic yapılar ve sınıfların sözdizimini birleştirir ve her iki varl
  Bir yapıdan kalıtımla almadığı için yapılar yalnızca genişletilmek zorunda olmayan nesneler için kullanılmalıdır. Oluşturmak istediğiniz nesne küçük bir örnek boyutuna sahip olduğunda yapıları kullanın ve sınıfların ve yapıların performans özelliklerini hesaba alın.  
   
 ## <a name="similarities"></a>Benzerlikler  
+
  Yapılar ve sınıflar aşağıdaki şekilde benzerdir:  
   
 - Her ikisi de *kapsayıcı* türlerdir, yani diğer türleri üye olarak içerirler.  
@@ -41,6 +43,7 @@ Visual Basic yapılar ve sınıfların sözdizimini birleştirir ve her iki varl
 - Her ikisi de olayları bildirebilir ve oluşturabilir ve her ikisi de temsilciler bildirebilir.  
   
 ## <a name="differences"></a>Farklılıklar  
+
  Yapılar ve sınıflar aşağıdaki bununla farklıdır:  
   
 - Yapılar *değer türleridir*; sınıflar *başvuru türleridir*. Yapı türünün bir değişkeni, bir sınıf türü olarak veriye bir başvuru eklemek yerine yapının verilerini içerir.  
@@ -70,6 +73,7 @@ Visual Basic yapılar ve sınıfların sözdizimini birleştirir ve her iki varl
  Her yapının parametresiz bir örtük ortak Oluşturucusu vardır. Bu Oluşturucu, tüm yapının veri öğelerini varsayılan değerlerine başlatır. Bu davranışı yeniden tanımlayamazsınız.  
   
 ## <a name="instances-and-variables"></a>Örnekler ve değişkenler  
+
  Yapılar değer türleri olduğundan, her yapı değişkeni ayrı bir yapı örneğine kalıcı olarak bağlanır. Ancak sınıflar başvuru türleridir ve bir nesne değişkeni farklı zamanlarda çeşitli sınıf örneklerine başvurabilir. Bu ayrım, yapıların ve sınıfların kullanımını aşağıdaki yollarla etkiler:  
   
 - **Başlatılmasında.** Yapı değişkeni, yapının parametresiz oluşturucusunu kullanarak örtük olarak öğelerin başlatılmasını içerir. Bu nedenle, `Dim s As struct1` ile eşdeğerdir `Dim s As struct1 = New struct1()` .  
@@ -84,7 +88,7 @@ Visual Basic yapılar ve sınıfların sözdizimini birleştirir ve her iki varl
   
      Ancak yapı öğeleri kendi örnekleri içinde yalıtılmıştır. Değerlerinde yapılan değişiklikler, aynı bildirimin diğer örneklerinde bile diğer herhangi bir yapı değişkenine yansıtılmaz `Structure` .  
   
-- **Eþit.** İki yapının eşitlik testi, öğe öğesi testi ile gerçekleştirilmelidir. İki nesne değişkeni, yöntemi kullanılarak karşılaştırılabilir <xref:System.Object.Equals%2A> . <xref:System.Object.Equals%2A>iki değişkenin aynı örneğe işaret edip etmediğini gösterir.  
+- **Eþit.** İki yapının eşitlik testi, öğe öğesi testi ile gerçekleştirilmelidir. İki nesne değişkeni, yöntemi kullanılarak karşılaştırılabilir <xref:System.Object.Equals%2A> . <xref:System.Object.Equals%2A> iki değişkenin aynı örneğe işaret edip etmediğini gösterir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

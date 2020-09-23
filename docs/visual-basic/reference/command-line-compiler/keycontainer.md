@@ -6,14 +6,15 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 575b337c262fbb36a9e118aa293916c296cc2db3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 243583e55dcf278f951b813cca8384246d2d6db9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408568"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085236"
 ---
 # <a name="-keycontainer"></a>-keycontainer
+
 Bir derlemeye tanımlayıcı ad vermek için bir anahtar çifti için anahtar kapsayıcısı adı belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -29,7 +30,8 @@ Bir derlemeye tanımlayıcı ad vermek için bir anahtar çifti için anahtar ka
 |`container`|Gereklidir. Anahtarı içeren kapsayıcı dosyası. Ad bir boşluk içeriyorsa, dosya adını tırnak işaretleri ("") içine alın.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Derleyici, derleme bildirimine ortak anahtar ekleyerek ve son derlemeyi özel anahtarla imzalayarak paylaşılabilir bileşeni oluşturur. Anahtar dosyası oluşturmak için `sn -k file` komut satırına yazın. `-i`Seçeneği, anahtar çiftini bir kapsayıcıya kurar. Daha fazla bilgi için bkz. [sn. exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+
+ Derleyici, derleme bildirimine ortak anahtar ekleyerek ve son derlemeyi özel anahtarla imzalayarak paylaşılabilir bileşeni oluşturur. Anahtar dosyası oluşturmak için `sn -k file` komut satırına yazın. `-i`Seçeneği, anahtar çiftini bir kapsayıcıya kurar. Daha fazla bilgi için bkz. [Sn.exe (tanımlayıcı ad aracı)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  İle derlerseniz `-target:module` , anahtar dosyasının adı modülde tutulur ve [-addmodule](addmodule.md)ile bir derlemeyi derlerken oluşturulan derlemeye dahil edilir.  
   
@@ -43,6 +45,7 @@ Bir derlemeye tanımlayıcı ad vermek için bir anahtar çifti için anahtar ka
 > `-keycontainer`Bu seçenek, Visual Studio geliştirme ortamı içinden kullanılamaz; yalnızca komut satırından derlenirken kullanılabilir.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, kaynak dosyayı derler `Input.vb` ve bir anahtar kapsayıcısı belirtir.  
   
 ```console  

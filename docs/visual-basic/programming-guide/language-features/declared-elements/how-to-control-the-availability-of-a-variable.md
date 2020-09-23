@@ -11,14 +11,15 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 0bfa7fa2bdac4746827884c1dad62734c549a48e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e6173a0eaa0bf84abb1979711c6df932533c5ce9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357393"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086120"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkenin Kullanılabilirliğini Denetleme (Visual Basic)
+
 Bir değişkenin kullanılabilirliğini, *erişim düzeyini*belirterek kontrol edersiniz. Erişim düzeyi, hangi kodun değişkene okuma veya yazma izni olduğunu belirler.  
   
 - *Üye değişkenleri* (modül düzeyinde ve herhangi bir yordam dışında tanımlanır) varsayılan olarak genel erişim için, bu, bunlara erişebilen herhangi bir kod anlamına gelir. Bu, bir erişim değiştiricisi belirterek değiştirebilirsiniz.  
@@ -54,6 +55,7 @@ Bir değişkenin kullanılabilirliğini, *erişim düzeyini*belirterek kontrol e
      Değişkeni yordamın içinden herhangi bir yerden okuyabilir veya yazabilirsiniz.  
   
 ## <a name="protected-and-friend-access"></a>Korumalı ve arkadaş erişimi  
+
  Bir değişkenin erişim düzeyini sınıfı ve türetilmiş sınıflar ya da kendi derlemesi ile sınırlayabilirsiniz. Ayrıca, herhangi bir türetilmiş sınıftaki koddan veya aynı derlemede bulunan başka bir yerde erişime izin veren bu kısıtlamaların birleşimini de belirtebilirsiniz. `Protected`Aynı bildirimde ve anahtar sözcüklerini birleştirerek bu birleşimi belirtirsiniz `Friend` .  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Bir değişkeni yalnızca kendi sınıfının ve türetilmiş sınıfların içinden erişilebilir hale getirmek için  
@@ -73,6 +75,7 @@ Bir değişkenin kullanılabilirliğini, *erişim düzeyini*belirterek kontrol e
      Değişkeni modül, sınıf veya yapının içinden herhangi bir yerden okuyabilir veya yazabilirsiniz, ancak derlemenin dışından değil, aynı derlemede bulunan herhangi bir koddan.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek,,,, `Public` `Protected` `Friend` `Protected Friend` ve `Private` erişim düzeylerindeki değişkenlerin bildirimlerini gösterir. `Dim`İfade bir erişim düzeyi belirttiğinde, anahtar sözcüğünü eklemeniz gerekmediğini unutmayın `Dim` .  
   
 ```vb  
@@ -84,6 +87,7 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
+
  Bir değişkenin erişim düzeyi daha kısıtlayıcıysa, kötü amaçlı kodun yanlış kullanımı ihtimaline karşı daha az olabilir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
@@ -92,5 +96,5 @@ Private numberForMeOnly As Integer
 - [Dim Deyimi](../../../language-reference/statements/dim-statement.md)
 - [Geneldir](../../../language-reference/modifiers/public.md)
 - [Korunamadı](../../../language-reference/modifiers/protected.md)
-- [Dost](../../../language-reference/modifiers/friend.md)
+- [Arkadaş](../../../language-reference/modifiers/friend.md)
 - [Özelleştirme](../../../language-reference/modifiers/private.md)

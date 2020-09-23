@@ -9,14 +9,15 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: b94259326b42104db05d9fc5bb09f686075d0759
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 03d693653cd166bbf1096031f1a864b492e2e896
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414537"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086302"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Sabit ve Değişmez Değerli Veri Türleri (Visual Basic)
+
 Değişmez değer, değişkenin değeri veya "Hello" dizesi gibi bir ifadenin sonucu yerine kendisini ifade eden bir değerdir. Sabit, bir sabit değerin yerini alan anlamlı bir addır ve değer değişebilir bir değişkenin aksine, bu değeri program genelinde tutar.  
   
  [Option Infer](../../../language-reference/statements/option-infer-statement.md) `Off` ve [Option Strict](../../../language-reference/statements/option-strict-statement.md) olduğunda `On` , tüm sabitleri açıkça bir veri türüyle bildirmeniz gerekir. Aşağıdaki örnekte, veri türü `MyByte` açıkça veri türü olarak bildirilmiştir `Byte` :  
@@ -26,6 +27,7 @@ Değişmez değer, değişkenin değeri veya "Hello" dizesi gibi bir ifadenin so
  `Option Infer`Veya olduğunda `On` `Option Strict` `Off` , yan tümcesiyle bir veri türü belirtmeden bir sabit bildirebilirsiniz `As` . Derleyici, ifadenin türünden sabit türünü belirler. Sayısal tamsayı sabit değeri varsayılan olarak `Integer` veri türüne ayarlanır. Kayan nokta numaraları için varsayılan veri türü `Double` ve anahtar sözcükler `True` ve `False` bir `Boolean` sabit belirtin.  
   
 ## <a name="literals-and-type-coercion"></a>Değişmez değerler ve tür zorlaması  
+
  Bazı durumlarda, bir sabit değeri belirli bir veri türüne zorlamak isteyebilirsiniz; Örneğin, tür değişkenine özellikle büyük bir integral sabit değer atama yaparken `Decimal` . Aşağıdaki örnek bir hata üretir:  
   
 ```vb  

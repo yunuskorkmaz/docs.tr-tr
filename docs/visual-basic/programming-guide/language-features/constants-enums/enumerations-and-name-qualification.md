@@ -17,19 +17,21 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: 4b09284b8282c481e406050d37cbdb2f3c8686bc
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 6e067d72e557b97f8626b148e173e3d1583f92b8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414511"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086276"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Numaralandırmalar ve Ad Niteliği (Visual Basic)
+
 Normalde, bir numaralandırma üyesine başvuru yaparken, üye adını numaralandırma adıyla nitelemeniz gerekir. Örneğin, `Sunday` numaralandırmanın üyesine başvurmak için `Days` aşağıdaki sözdizimini kullanın:  
   
  [!code-vb[VbEnumsTask#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#18)]  
   
 ## <a name="using-the-imports-statement"></a>Imports Ifadesini kullanma  
+
  `Imports`Aşağıdaki örnekte olduğu gibi, kodunuzun ad alanı bildirimleri bölümüne bir ifade ekleyerek tam nitelikli adlar kullanmaktan kaçınabilirsiniz:  
   
  [!code-vb[VbEnumsTask#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class1.vb#22)]  

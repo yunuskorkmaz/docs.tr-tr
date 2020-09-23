@@ -6,17 +6,19 @@ helpviewer_keywords:
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: fca6c05b4baae4689e9d5e5698cee75f0c5470ec
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 52c8822c34a85af81dde505d36e6e159745a0d12
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84374752"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085704"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Visual Basic'de XML'i Düzenleme
+
 XML *değişmez* değerlerini dize, dosya veya akış gibi bir dış kaynaktan XML yüklemek için kullanabilirsiniz. Ardından, XML 'yi [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] sorgulamak için ve dil Ile tümleşik sorgu (LINQ) kullanabilirsiniz.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nasıl yapılır: Dosya, Dize veya Akıştan XML Yükleme](how-to-load-xml-from-a-file-string-or-stream.md)  
  Bir <xref:System.Xml.Linq.XDocument> <xref:System.Xml.Linq.XElement> metin dosyasından, dizeden veya akışta XML 'nin bir veya nesnesine nasıl yükleneceğini gösterir.  
   
@@ -27,6 +29,7 @@ XML *değişmez* değerlerini dize, dosya veya akış gibi bir dış kaynaktan X
  Bir XML sabit değerinde öğelerin, özniteliklerin ve değerlerin nasıl değiştirileceğini gösterir.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [XML Eksen Özellikleri](../../../language-reference/xml-axis/index.md)  
  Çeşitli XML erişimi özelliklerini tanımlayan bölümlere bağlantılar sağlar.  
   

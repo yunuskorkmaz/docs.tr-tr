@@ -6,14 +6,15 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 23bff2eb098982f67ecb1b709e59096d5259a644
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: af5be47335b6d48bd6c0bccc30b8db15c9912807
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84405189"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085886"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Bildirilmiş Öğelere Başvurular (Visual Basic)
+
 Kodunuz, belirtilen bir öğeye başvurduğunda, Visual Basic derleyici, bu adın uygun bildirimine başvurinizdeki adla eşleşir. Aynı ada sahip birden fazla öğe bildirilirse, adını *niteleyerek* bu öğelerin ne şekilde başvurulduğunu kontrol edebilirsiniz.  
   
  Derleyici, bir ad başvurusunu en *dar kapsamlı*bir ad bildirimine eşleştirmeye çalışır. Bu, başvuru yapan kod ile başladığı ve kapsayan öğelerin birbirini izleyen düzeylerinde dışa doğru çalışacağı anlamına gelir.  
@@ -42,6 +43,7 @@ End Module
 ```  
   
 ## <a name="qualifying-an-element-name"></a>Öğe adını nitelendirme  
+
  Bu arama işlemini geçersiz kılmak ve daha geniş bir kapsamda belirtilen bir ad belirtmek istiyorsanız, adı daha geniş kapsamın kapsayan öğesiyle *nitelemeniz* gerekir. Bazı durumlarda, kapsayan öğesini de nitelemeniz gerekebilir.  
   
  Bir adın nitelemesini, kaynak deyiminizde, hedef öğenin nerede tanımlandığını tanımlayan bilgilerle daha önce anlamına gelir. Bu bilgilere bir *nitelik dizesi*adı verilir. Bir veya daha fazla ad alanı ve bir modül, sınıf ya da yapı içerebilir.  
@@ -68,7 +70,7 @@ End Module
   
 2. Hedef öğenin konumuna göre bir nitelik yolu belirleme. En üst düzey ad alanıyla başlayın, en düşük düzey ad alanına ilerleyin ve hedef öğeyi içeren modül, sınıf ya da yapıyla sonlandırın. Yoldaki her öğe, takip eden öğesi içermelidir.  
   
-     `outerSpace`→ `innerSpace` → `holdsTotals` →`totals`  
+     `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
 3. Hedef öğe için nitelik dizesini hazırlayın. `.`Yoldaki her öğeden sonra bir nokta () koyun. Uygulamanızın, nitelik dizinizdeki her öğeye erişimi olmalıdır.  
   
@@ -105,6 +107,7 @@ Dim winLabel As New win.Label()
 ```  
   
 ## <a name="members-of-other-containing-elements"></a>Diğer öğeleri Içeren Üyeler  
+
  Başka bir sınıfın veya yapının paylaşılmayan bir üyesini kullandığınızda, önce üye adını bir sınıf veya yapının örneğine işaret eden bir değişkenle veya ifadeyle nitelemeniz gerekir. Aşağıdaki örnekte, `demoClass` adlı bir sınıfının örneğidir `class1` .  
   
 ```vb  
@@ -150,6 +153,7 @@ End Module
 ```  
   
 ## <a name="references-to-projects"></a>Projelere başvurular  
+
  Başka bir projede tanımlanmış [ortak](../../../language-reference/modifiers/public.md) öğeleri kullanmak için, önce bu projenin derlemesine veya tür kitaplığına bir *başvuru* ayarlamanız gerekir. Bir başvuru ayarlamak için **Proje** menüsünde **Başvuru Ekle** ' ye tıklayın veya [-Reference (Visual Basic)](../../../reference/command-line-compiler/reference.md) komut satırı derleyici seçeneğini kullanın.  
   
  Örneğin, .NET Framework XML nesne modelini kullanabilirsiniz. Ad alanına bir başvuru ayarlarsanız, <xref:System.Xml> sınıfının herhangi birini (gibi) bildirebilir ve kullanabilirsiniz <xref:System.Xml.XmlDocument> . Aşağıdaki örnek kullanılmıştır <xref:System.Xml.XmlDocument> .  
@@ -161,6 +165,7 @@ Dim xDoc As System.Xml.XmlDocument
 ```  
   
 ## <a name="importing-containing-elements"></a>Içerilen öğeleri içeri aktarma  
+
  Kullanmak istediğiniz modülleri veya sınıfları içeren ad alanlarını *içeri aktarmak* Için [Imports Ifadesini (.net ad alanı ve türü)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md) kullanabilirsiniz. Bu, adlarını tamamen nitelemeden içeri aktarılan bir ad alanında tanımlanan öğelere başvurmanızı sağlar. Aşağıdaki örnek, ad alanını içeri aktarmak için önceki örneği yeniden yazar <xref:System.Xml> .  
   
 ```vb  
@@ -186,11 +191,13 @@ Dim xDoc As xD.XmlDocument
  Ayrıca, `Imports` modülleri, sınıfları, yapıları ve numaralandırmalar içeri aktarmak için ifadesini de kullanabilirsiniz. Daha sonra, bu içeri aktarılan öğelerin üyelerini nitelik olmadan kullanabilirsiniz. Ancak, sınıfların ve yapıların paylaşılmayan üyelerini her zaman, sınıf veya yapının bir örneğini değerlendiren bir değişkenle veya ifadeyle nitelemeniz gerekir.  
   
 ## <a name="naming-guidelines"></a>Adlandırma Kuralları  
+
  Aynı ada sahip iki veya daha fazla programlama öğesi tanımladığınızda, derleyici bu ada bir başvuruyu çözmeyi denediğinde bir *ad belirsizliğe* neden olabilir. Kapsam içinde birden fazla tanım varsa veya kapsam içinde bir tanım yoksa, başvuru ırıolarak çözülebilir. Bir örnek için, bu Yardım sayfasında "nitelikli başvuru örneği" başlığına bakın.  
   
  Tüm öğelerinizi benzersiz adlara vererek ad belirsizliğe engel olabilirsiniz. Daha sonra, adını bir ad alanı, modül veya sınıf ile nitelendirmek zorunda kalmadan herhangi bir öğeye başvuru yapabilirsiniz. Yanlışlıkla yanlış öğeye başvurma olasılığını da azaltabilirsiniz.  
   
 ## <a name="shadowing"></a>Gölge Kullanım  
+
  İki programlama öğesi aynı adı paylaşıyorsa, bunlardan biri diğer birini gizleyebilir veya *gölgelendirebilir*. Gölgelendirilmiş bir öğe başvuru için kullanılamaz; Bunun yerine, kodunuz gölgeli öğe adını kullandığında, Visual Basic derleyici onu gölgeleme öğesine çözer. Örneklerle ilgili daha ayrıntılı bir açıklama için bkz. [gölgeleme Visual Basic](shadowing.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

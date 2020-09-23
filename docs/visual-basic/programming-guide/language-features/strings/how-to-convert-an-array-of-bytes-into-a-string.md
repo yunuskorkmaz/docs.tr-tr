@@ -7,17 +7,19 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 - arrays [Visual Basic], converting to strings
 ms.assetid: d0dc8317-9ab3-4324-99f7-3f5788c0e72a
-ms.openlocfilehash: 6dbbaafedeca4d2cea625a300d764f61bb575750
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 49c1e454b845bd545d7a8dccb3a3d9a39ff2db21
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410625"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085665"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Bir Bayt Dizisini Dizeye Dönüştürme
+
 Bu konu, bayt dizisindeki baytların dizeye nasıl dönüştürüleceğini gösterir.  
   
 ## <a name="example"></a>Örnek  
+
  Bu örnek, <xref:System.Text.Encoding.GetString%2A> <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> bir bayt dizisinden tüm baytları dizeye dönüştürmek için Encoding sınıfının yöntemini kullanır.  
   
  [!code-vb[VbVbalrStrings#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#72)]  

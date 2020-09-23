@@ -5,14 +5,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: 36f623068372614ae034a8a7b31bffb7496f98b1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3a7a653bbf238b50e3c7339da76df0f68ab9b59f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410701"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085795"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>Nasıl yapılır: Visual Basic'de Başka Bir Yordama Yordam Geçirme
+
 Bu örnek, bir yordamın başka bir yordama iletilmesi için temsilcilerin nasıl kullanılacağını gösterir.  
   
  Temsilci, Visual Basic diğer herhangi bir tür gibi kullanabileceğiniz bir türdür. `AddressOf`İşleci bir yordam adına uygulandığında bir temsilci nesnesi döndürür.  

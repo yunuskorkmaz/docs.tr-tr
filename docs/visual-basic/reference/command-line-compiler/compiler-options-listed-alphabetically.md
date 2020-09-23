@@ -4,14 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 19e14953c08f90ea1ab245fa3124a462ccba162f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d0dbe785edf7a9aa029d4be08a9b854cf1fb2b79
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84408744"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91085301"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Alfabetik olarak listelenen Visual Basic derleyici seçenekleri
+
 Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme ortamından (IDE) program derlemek için alternatif olarak sağlanır. Aşağıda alfabetik olarak sıralanan Visual Basic komut satırı derleyici seçeneklerinin bir listesi verilmiştir.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
@@ -28,7 +29,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |`-checksumalgorithm:<alg>`|PDB 'de depolanan kaynak dosyası sağlama toplamını hesaplamak için algoritmayı belirtin.  Desteklenen değerler şunlardır: SHA1 (varsayılan) veya SHA256. <br>Microsoft, SHA1 ile ilgili çakışma sorunları nedeniyle SHA256 veya daha iyi bir performans öneriyor.|  
 |[-codepage](codepage.md)|Derlemedeki tüm kaynak kodu dosyaları için kullanılacak kod sayfasını belirtir.|  
 |[-Hata Ayıkla](debug.md)|Hata ayıklama bilgileri üretir.|  
-|[-define](define.md)|Koşullu derleme için sembolleri tanımlar.|  
+|[-tanımla](define.md)|Koşullu derleme için sembolleri tanımlar.|  
 |[-delaysign](delaysign.md)|Derlemenin tamamen veya kısmen imzalanacağını belirtir.|  
 |[-deterministic](deterministic.md)|Girişlerin özdeş olması halinde, derleyicinin ikili içerik özdeş olan bir derlemeyi çıkış yapmasına neden olur.|
 |[-doc](doc.md)|Belge açıklamalarını bir XML dosyasına işler.|  
@@ -69,7 +70,7 @@ Visual Basic komut satırı derleyicisi, Visual Studio tümleşik geliştirme or
 |[-Kaynak](resource.md)|Bir derlemede yönetilen bir kaynak gömer.|  
 |[-rootnamespace](rootnamespace.md)|Tüm tür bildirimleri için bir ad alanı belirtir.|  
 |`-ruleset:<file>`|Belirli tanılamayı devre dışı bırakan bir RuleSet dosyası belirtin.|  
-|[-sdkpath](sdkpath.md)|Mscorlib. dll ve Microsoft. VisualBasic. dll dosyasının konumunu belirtir.|  
+|[-sdkpath](sdkpath.md)|Mscorlib.dll ve Microsoft.VisualBasic.dll konumunu belirtir.|  
 |[-subsystemversion](subsystemversion.md)|Oluşturulan yürütülebilir dosyanın kullanabileceği alt sistemin en düşük sürümünü belirtir.|  
 |[-target](target.md)|Çıkış dosyasının biçimini belirtir.|  
 |[-utf8output](utf8output.md)|UTF-8 kodlamasını kullanarak derleyici çıkışını görüntüler.|  

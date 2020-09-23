@@ -12,17 +12,19 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: 29072479db36f9f8a81ffd7f3f5b10208ebaa984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9f28548c27545d94dde38cef3e9c56f98a69b259
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410663"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086094"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Bir Dize Adı Kullanarak Bir Özelliği veya Yöntemi Çağırma (Visual Basic)
+
 Çoğu durumda, tasarım zamanında bir nesnenin özelliklerini ve yöntemlerini bulabilir ve bunları işlemek için kod yazabilirsiniz. Ancak, bazı durumlarda bir nesnenin özellikleri ve yöntemleri önceden bilmiyor olabilir ya da bir son kullanıcının çalışma zamanında Özellikler belirtmesini veya yöntem yürütmesini sağlama esnekliğini isteyebilirsiniz.  
   
 ## <a name="callbyname-function"></a>CallByName Işlevi  
+
  Örneğin, bir COM bileşenine işleç geçirerek Kullanıcı tarafından girilen ifadeleri değerlendiren bir istemci uygulaması gibi düşünün. Yeni işleçler gerektiren bileşene sürekli olarak yeni işlevler eklediğinizi varsayalım. Standart nesne erişim tekniklerini kullandığınızda, istemci uygulamasını yeni işleçleri kullanabilmesi için yeniden derlemeniz ve yeniden dağıtmanız gerekir. Bunu önlemek için, `CallByName` uygulamayı değiştirmeden yeni işleçleri dizeler olarak geçirmek için işlevini kullanabilirsiniz.  
   
  `CallByName`İşlevi, çalışma zamanında bir özelliği veya yöntemi belirtmek için bir dize kullanmanıza olanak sağlar. İşlevin imzası şöyle `CallByName` görünür:  
