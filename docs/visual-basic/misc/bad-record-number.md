@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID63
 ms.assetid: 1fcc33f8-822a-4de9-a6e3-228ddb5824a6
-ms.openlocfilehash: 44a11d95d33041de9d637684f41cb003dcc36b97
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cbffc7714211fb10bedc3a73729eac59d98f0bb
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84367548"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91086991"
 ---
 # <a name="bad-record-number"></a>Hatalı kayıt numarası
+
 `a FileGet`,, `FilePut` Veya deyimindeki kayıt numarası `FileGetObject` `FilePutObject` sıfıra eşit veya daha az.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

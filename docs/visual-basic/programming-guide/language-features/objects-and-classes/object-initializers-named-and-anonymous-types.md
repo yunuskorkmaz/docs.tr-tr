@@ -10,17 +10,19 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 5561812a53e2fe45c3ad4d12d0e18a8a1e948559
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 724407fed5bf90ed6e3e470cbabc9e42856cb99a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84411772"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91087485"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Nesne Başlatıcıları: Adlandırılmış ve Anonim Türler (Visual Basic)
+
 Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için özellikler belirtmenize olanak tanır. Bunlar, adlandırılmış türlerin örnekleri ve anonim türler oluşturmak için kullanılabilir.  
   
 ## <a name="declarations"></a>Bildirimler  
+
  Adlandırılmış ve anonim türdeki örneklerin bildirimleri neredeyse özdeş olabilir, ancak etkileri aynı değildir. Her kategori kendi yeteneklerini ve kısıtlamalarını içerir. Aşağıdaki örnek, `Customer` bir nesne Başlatıcısı listesi kullanarak, adlandırılmış bir sınıfın bir örneğini bildirmek ve başlatmak için kullanışlı bir yol gösterir. Sınıfın adının anahtar sözcüğünden sonra belirtildiğine dikkat edin `New` .  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
@@ -32,6 +34,7 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için öz
  İki bildirime ait gereksinimler ve sonuçlar aynı değildir. İçin `namedCust` , özelliği olan bir `Customer` sınıf `Name` zaten var olmalıdır ve bildirim bu sınıfın bir örneğini oluşturur. İçin `anonymousCust` , derleyici bir özelliğine sahip olan ve bir dize adlı yeni bir sınıf tanımlar `Name` ve bu sınıfın yeni bir örneğini oluşturur.  
   
 ## <a name="named-types"></a>Adlandırılmış türler  
+
  Nesne başlatıcıları, bir türün yapıcısını çağırmak için basit bir yol sağlar ve sonra bazı veya tüm özelliklerin değerlerini tek bir deyime göre ayarlar. Derleyici, bir veya daha fazla bağımsız değişken gönderildiyse parametresiz Oluşturucu veya bir veya daha fazla bağımsız değişken gönderilirse parametreli Oluşturucu olarak ifade için uygun oluşturucuyu çağırır. Bundan sonra, belirtilen özellikler Başlatıcı listesinde sunuldukları sırada başlatılır.  
   
  Başlatıcı listesindeki her başlatma, sınıfın bir üyesine ilk değer atamasından oluşur. Üyelerin adları ve veri türleri, sınıf tanımlandığında belirlenir. Aşağıdaki örneklerde, `Customer` sınıfı bulunmalı ve `Name` `City` dize değerlerini kabul edebilecek ve adlı üyelere sahip olmalıdır.  
@@ -57,6 +60,7 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için öz
  Ancak, başlatma listesi boş olamaz. Başlatılmamış özellikler varsayılan değerlerini korurlar.  
   
 ### <a name="type-inference-with-named-types"></a>Adlandırılmış türlerle tür çıkarımı  
+
  `cust1`Nesne başlatıcılarının ve yerel tür çıkarımını birleştirerek bildirimi için kodu kısaltabilirsiniz. Bu, `As` değişken bildiriminde yan tümceyi atlamanızı sağlar. Değişkenin veri türü, atama tarafından oluşturulan nesnenin türünden algılanır. Aşağıdaki örnekte, türü ' `cust6` dir `Customer` .  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
@@ -94,6 +98,7 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için öz
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>Anonim Türler  
+
  Anonim türler, açıkça tanımlamadığınız ve isimsiz olmayan yeni türlerin örneklerini oluşturmak için nesne başlatıcıları kullanır. Bunun yerine, derleyici, nesne başlatıcısı listesinde belirleyeceğiniz özelliklere göre bir tür üretir. Türün adı belirtilmediğinden, *anonim bir tür*olarak adlandırılır. Örneğin, aşağıdaki bildirimi ile için daha önceki bir ile karşılaştırın `cust6` .  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
@@ -133,5 +138,5 @@ Nesne başlatıcıları, tek bir ifade kullanarak karmaşık bir nesne için öz
 - [Anonim Türler](anonymous-types.md)
 - [Visual Basic'de LINQ'e Giriş](../linq/introduction-to-linq.md)
 - [Nasıl yapılır: Anonim Tip Bildirimlerinden Özellik Adları ve Türlerini Çıkarma](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
-- [Anahtar](../../../language-reference/modifiers/key.md)
+- [Key](../../../language-reference/modifiers/key.md)
 - [Nasıl yapılır: Nesne Başlatıcı Kullanarak Nesne Bildirme](how-to-declare-an-object-by-using-an-object-initializer.md)
