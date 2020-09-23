@@ -8,14 +8,15 @@ helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: d991a385e537c43daeb708e96e712acd92110379
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f50b1f40ef9843391c6622561bfd8a8eaae6fc17
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403388"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090060"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Otomatik Uygulanan Özellikler (Visual Basic)
+
 *Otomatik uygulanan özellikler* , kod yazmak zorunda kalmadan bir sınıfın özelliğini hızlı bir şekilde belirtmenizi sağlar `Get` `Set` . Otomatik uygulanan bir özellik için kod yazdığınızda, Visual Basic Derleyicisi otomatik olarak, ilişkili ve yordamları oluşturmaya ek olarak özellik değişkenini depolamak için bir özel alan oluşturur `Get` `Set` .  
   
  Otomatik uygulanan özellikler ile, varsayılan değer de dahil olmak üzere tek bir satırda bildirilebilecek bir özellik. Aşağıdaki örnek, üç özellik bildirimini gösterir.  
@@ -47,6 +48,7 @@ End Class
  Örneğinde gösterildiği gibi başlatma ifadeleriyle özelliğe atayabilirsiniz veya kapsayan türün oluşturucusunda özelliklere atayabilirsiniz.  Herhangi bir zamanda ReadOnly özelliklerinin yedekleme alanlarına atayabilirsiniz.  
   
 ## <a name="backing-field"></a>Destek alanı  
+
  Otomatik olarak uygulanan bir özellik bildirdiğinizde, Visual Basic otomatik olarak, özellik değerini içerecek şekilde, *yedekleme alanı* olarak adlandırılan gizli bir özel alan oluşturur. Yedekleme alanı adı, önce bir alt çizgi (_) tarafından gerçekleştirilen otomatik uygulanan özellik adıdır. Örneğin, adlı otomatik uygulanan bir özellik bildirirseniz `ID` , yedekleme alanı olarak adlandırılır `_ID` . Aynı zamanda adlı sınıfınızın bir üyesini dahil ederseniz `_ID` , bir adlandırma çakışması üretir ve bir derleyici hatası Visual Basic rapor edebilirsiniz.  
   
  Ayrıca, yedekleme alanı aşağıdaki özelliklere sahiptir:  
@@ -60,6 +62,7 @@ End Class
 - Yedekleme alanına, sınıf içindeki koddan ve izleme penceresi gibi hata ayıklama araçlarından erişilebilir. Ancak, yedekleme alanı bir IntelliSense sözcük tamamlama listesinde gösterilmez.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Otomatik uygulanan özellik başlatılıyor  
+
  Bir alanı başlatmak için kullanılabilecek herhangi bir ifade, otomatik olarak uygulanan bir özelliğin başlatılması için geçerlidir. Otomatik uygulanan bir özelliği başlattığınızda, ifade değerlendirilir ve `Set` özellik yordamına geçirilir. Aşağıdaki kod örnekleri, başlangıç değerlerini içeren bazı otomatik uygulanmış özellikleri gösterir.  
   
  [!code-vb[VbVbalrAutoImplementedProperties#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#3)]  
@@ -73,6 +76,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Standart sözdizimi gerektiren özellik tanımları  
+
  Otomatik uygulanan özellikler kullanışlı ve birçok programlama senaryosunu destekler. Ancak, otomatik olarak uygulanan bir özelliği kullanabileceğiniz durumlar vardır ve bunun yerine standart ya da *genişletilmiş*, özellik sözdizimini kullanmanız gerekir.  
   
  Aşağıdakilerden birini yapmak istiyorsanız genişletilmiş özellik tanımı sözdizimini kullanmanız gerekir:  
@@ -90,6 +94,7 @@ End Class
 - Yedekleme alanı için XML açıklamaları sağlayın.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Otomatik uygulanan bir özellik genişletiliyor  
+
  Otomatik olarak uygulanan bir özelliği bir veya yordamı içeren genişletilmiş bir özelliğe dönüştürmeniz gerekiyorsa `Get` `Set` , Visual Basic kod Düzenleyicisi, `Get` özelliği için otomatik olarak ve `Set` yordamlarını ve `End Property` ifadesini oluşturabilir. Bu kod, imleci deyimden sonra boş bir satıra yerleştirirseniz `Property` , bir `G` (için `Get` ) veya bir `S` (IÇIN `Set` ) yazın ve ENTER tuşuna basın. Visual Basic kod Düzenleyicisi, `Get` `Set` bir DEYIMIN sonunda ENTER tuşuna bastığınızda salt okunurdur ve salt yazılır özellikler için otomatik olarak or yordamını üretir `Property` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.

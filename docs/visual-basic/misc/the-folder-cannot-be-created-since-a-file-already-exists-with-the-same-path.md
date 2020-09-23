@@ -2,14 +2,15 @@
 title: Aynı yola sahip bir dosya zaten mevcut olduğundan klasör oluşturulamıyor
 ms.date: 07/20/2015
 ms.assetid: 1085c60d-4d38-4d67-a149-d3923eef0cfd
-ms.openlocfilehash: 3407d7e85cfeb406d17fd05850c293604188fece
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 216b39bbbd4da478ba1dc4796a0b183d4eb1d9d9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398623"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090462"
 ---
 # <a name="the-folder-cannot-be-created-since-a-file-already-exists-with-the-same-path"></a>Aynı yola sahip bir dosya zaten mevcut olduğundan klasör oluşturulamıyor
+
 Dizin oluşturma girişiminde bulunuldu, ancak bu yola sahip bir dosya zaten var. Bu, özellikle göreli yollarla çalışırken yolların yanlış ayrıştırılmasından kaynaklanıyor olabilir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
