@@ -2,17 +2,19 @@
 title: Standart Sorgu İşleçleri için Sorgu İfade Sözdizimi
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 69bb50007c04bf8d1ee1553a37aca542afbffab0
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 57a08f6540cbf3e091ee1b2e202e0e181487e3be
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396291"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090254"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Standart sorgu Işleçleri için sorgu Ifadesi sözdizimi (Visual Basic)
-Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu ifadesinin*parçası olarak çağrılmasına olanak tanıyan Visual Basic Language anahtar sözcüğü sözdizimi vardır. Sorgu ifadesi, sorgu *yöntemi tabanlı* eşinden farklı bir sorgu ifade eden farklı, daha okunabilir bir formdur. Sorgu ifadesi yan tümceleri, derleme zamanında sorgu yöntemlerine yapılan çağrılara çevrilir.  
+
+Daha sık kullanılan standart sorgu işleçlerinden bazılarının, bir *sorgu ifadesinin*parçası olarak çağrılmasına olanak tanıyan Visual Basic Language anahtar sözcüğü sözdizimi vardır. Sorgu ifadesi, sorgu *yöntemi tabanlı*  eşinden farklı bir sorgu ifade eden farklı, daha okunabilir bir formdur. Sorgu ifadesi yan tümceleri, derleme zamanında sorgu yöntemlerine yapılan çağrılara çevrilir.  
   
 ## <a name="query-expression-syntax-table"></a>Sorgu Ifadesi söz dizimi tablosu  
+
  Aşağıdaki tabloda denk sorgu ifadesi yan tümceleri olan standart sorgu işleçleri listelenmektedir.  
   
 |Yöntem|Sorgu Ifadesi söz dizimini Visual Basic|  

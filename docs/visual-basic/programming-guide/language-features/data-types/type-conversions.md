@@ -10,17 +10,19 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: be388998da5e88f99c62128e6ad63d5a476153ba
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: ee8700ea757cee9c20e2598de029f54ae33a7114
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393058"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090163"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Visual Basic'de Tür Dönüştürmeleri
+
 Bir değeri bir veri türünden başka bir türe değiştirme işlemi *dönüştürme*olarak adlandırılır. Dönüşümler, dahil edilen türlerin veri kapasiteye bağlı olarak, *genişletme* veya *daraltma*. Bunlar ayrıca, kaynak kodundaki sözdizimine bağlı olarak *örtük* veya *açıktır*.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Genişletme ve Daraltma Dönüşümleri](widening-and-narrowing-conversions.md)  
  Hedef türün verileri tutabilir olup olmadığı sınıflandırılan dönüştürmeleri açıklar.  
   
@@ -37,6 +39,7 @@ Bir değeri bir veri türünden başka bir türe değiştirme işlemi *dönüşt
  Farklı veri türlerinin dizileri arasında dönüştürme işleminde size adım adım.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Veri türleri](index.md)  
  Visual Basic veri türlerini tanıtır ve bunların nasıl kullanılacağını açıklar.  
   

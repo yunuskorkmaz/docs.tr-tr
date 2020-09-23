@@ -13,17 +13,19 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: d5f79f3e45fc887dcb32c959f04703253ade198c
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 023e479736285aa2d04509e05f49fe930cb4721d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84389042"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090085"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic'de Aritmetik İşleçler
+
 Aritmetik işleçler, değişmez değerler, değişkenler, diğer ifadeler, işlev ve özellik çağrıları ve sabitler tarafından temsil edilen sayısal değerlerin hesaplanmasını içeren tanıdık aritmetik işlemlerin çoğunu gerçekleştirmek için kullanılır. Ayrıca, Aritmetik işleçlerle sınıflandırılan bit kaydırma işleçleridir. Bu, işlenen ayrı bitlerin düzeyine göre hareket ederler ve bit desenlerini sola veya sağa kaydıramalıdır.  
   
 ## <a name="arithmetic-operations"></a>Aritmetik Işlemler  
+
  Aşağıdaki örnekte gösterildiği gibi, bir ifadeye [+ işleciyle](../../../language-reference/operators/addition-operator.md)birlikte iki değer ekleyebilir veya [-işleci (Visual Basic)](../../../language-reference/operators/subtraction-operator.md)ile diğerine çıkarabilirsiniz.  
   
  [!code-vb[VbVbalrOperators#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#57)]  
@@ -51,19 +53,21 @@ Aritmetik işleçler, değişmez değerler, değişkenler, diğer ifadeler, işl
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>Sıfıra bölme denendi  
+
  Sıfıra bölme, dahil edilen veri türlerine bağlı olarak farklı sonuçlara sahiptir. İntegral bölümler (,,,,,,,,,,, `SByte` `Byte` `Short` `UShort` `Integer` `UInteger` `Long` `ULong` .NET Framework bir <xref:System.DivideByZeroException> özel durum oluşturur. `Decimal`Veya `Single` veri türündeki bölüm işlemlerinde, .NET Framework de bir <xref:System.DivideByZeroException> özel durum oluşturur.  
   
  Veri türünü içeren kayan nokta bölümleri içinde `Double` , hiçbir özel durum oluşturulmaz ve sonuç <xref:System.Double.NaN> , bölünme göre,, ya da temsil eden sınıf üyesidir <xref:System.Double.PositiveInfinity> <xref:System.Double.NegativeInfinity> . Aşağıdaki tabloda, bir değeri sıfıra bölme girişiminden oluşan çeşitli sonuçlar özetlenmektedir `Double` .  
   
 |Bölünen veri türü|Bölen veri türü|Bölünen değer|Sonuç|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(matematik olarak tanımlanmış bir sayı değil)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (matematik olarak tanımlanmış bir sayı değil)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
-|`Double`|`Double`|\<0|<xref:System.Double.NegativeInfinity>|  
+|`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
  Bir <xref:System.DivideByZeroException> özel durumu yakalarsanız, bunu işleyebilmeniz için üyelerini kullanabilirsiniz. Örneğin, <xref:System.Exception.Message%2A> özelliği özel durum için ileti metnini tutar. Daha fazla bilgi için bkz [. TRY... Yakala... Finally ekstresi](../../../language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="bit-shift-operations"></a>Bit kaydırma Işlemleri  
+
  Bit kaydırma işlemi bir bit düzeninde aritmetik kaydırma gerçekleştirir. Model, sol taraftaki işlenende bulunur, ancak sağdaki işlenen, kalıbı kaydırmak için konumların sayısını belirtir. [>> işleçle](../../../language-reference/operators/right-shift-operator.md) veya [<< işleci](../../../language-reference/operators/left-shift-operator.md)ile sola doğru bir düzende kaydırma yapabilirsiniz.  
   
  Model işleneninin veri türü,,,, `SByte` `Byte` `Short` `UShort` `Integer` , `UInteger` , `Long` , veya olmalıdır `ULong` . Kaydırma tutarı işleneninin veri türü, olmalıdır veya ' `Integer` ye genişlemelidir `Integer` .  
@@ -85,9 +89,11 @@ Aritmetik işleçler, değişmez değerler, değişkenler, diğer ifadeler, işl
  Aritmetik vardiyalar hiçbir şekilde taşma özel durumu oluşturmaz.  
   
 ## <a name="bitwise-operations"></a>Bit düzeyinde Işlemler  
+
  Mantıksal işleçler olmanın yanı sıra,, `Not` , `Or` `And` ve `Xor` sayısal değerlerde kullanıldığında bit düzeyinde aritmetik de gerçekleştirir. Daha fazla bilgi için, [Visual Basic mantıksal ve bit düzeyinde işleçlerdeki](logical-and-bitwise-operators.md)"bit düzeyinde işlemler" konusuna bakın.  
   
 ## <a name="type-safety"></a>Tür güvenliği  
+
  İşlenenler normalde aynı türde olmalıdır. Örneğin, bir `Integer` değişkenle birlikte ekleme yapıyorsanız, bunu başka bir değişkene eklemeniz gerekir `Integer` ve sonucu da türünde bir değişkene atamanız gerekir `Integer` .  
   
  İyi tür açısından güvenli kodlama uygulaması sağlamanın bir yolu, [Strict deyimin seçeneğini](../../../language-reference/statements/option-strict-statement.md)kullanmaktır. Ayarlarsanız `Option Strict On` , Visual Basic otomatik olarak *tür kullanımı uyumlu* dönüşümler gerçekleştirir. Örneğin, bir değişkene bir değişken eklemeye `Integer` `Double` ve değeri bir değişkene atamaya çalışırsanız `Double` , bir `Integer` değer `Double` veri kaybı olmadan olarak dönüştürülebildiğinden, işlem normal olarak devam eder. Tür-güvenli olmayan dönüşümler, diğer yandan, ile bir derleyici hatasına neden olur `Option Strict On` . Örneğin, bir değişkene bir `Integer` değişken eklemeye `Double` ve değeri bir değişkene atamaya çalışırsanız, bir `Integer` `Double` değişken örtük olarak türüne dönüştürülemediğinden bir derleyici hatası oluşur `Integer` .  
@@ -96,7 +102,7 @@ Aritmetik işleçler, değişmez değerler, değişkenler, diğer ifadeler, işl
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
-- [Aritmetik İşleçler](../../../language-reference/operators/arithmetic-operators.md)
+- [Aritmetik Işleçler](../../../language-reference/operators/arithmetic-operators.md)
 - [Bit Kaydırma İşleçleri](../../../language-reference/operators/bit-shift-operators.md)
 - [Visual Basic'de Karşılaştırma İşleçleri](comparison-operators.md)
 - [Visual Basic'de Birleştirme İşleçleri](concatenation-operators.md)

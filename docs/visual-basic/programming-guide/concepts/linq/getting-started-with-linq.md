@@ -8,17 +8,19 @@ helpviewer_keywords:
 - LINQ [Visual Basic]
 - LINQ, Visual Basic
 ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
-ms.openlocfilehash: cea6a5973104d34c058a51c404c13d26dd1aab14
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 2097eb9caccd65a7983244cd06cbc18759677be1
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90554390"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090319"
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Visual Basic'te LINQ'e Başlarken
+
 Bu bölümde, Visual Basic ve dil ile tümleşik sorgu (LINQ) anlamanıza ve kullanmanıza yardımcı olacak genel bilgiler, örnekler ve arka plan bilgileri yer almaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [İlk LINQ Sorgunuzu Yazma](writing-your-first-linq-query.md)  
  Temel bir LINQ sorgusu yazmanın üç aşamasını açıklar: veri kaynağını alma, sorguyu yazma ve sorguyu yürütme.  
   
@@ -35,6 +37,7 @@ Bu bölümde, Visual Basic ve dil ile tümleşik sorgu (LINQ) anlamanıza ve kul
  Visual Basic LINQ projesi oluşturmaya, basit bir veri kaynağı eklemeye ve bazı temel sorgu işlemlerini gerçekleştirmeye yönelik adım adım yönergeler.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [Visual Basic'de LINQ'e Giriş](../../language-features/linq/introduction-to-linq.md)  
  LINQ içindeki sorgulara genel bir bakış içerir ve ek kaynaklara bağlantılar sağlar.  
   

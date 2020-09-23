@@ -2,25 +2,27 @@
 title: Arayan Bilgileri
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 93fb1e327d65ac19f293a2f77b7d5712fc5e8d2f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 33c7367626d66d1db2705fc2882ca0780d1b867f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400674"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090358"
 ---
 # <a name="caller-information-visual-basic"></a>Arayan bilgileri (Visual Basic)
+
 Arayan Bilgisi özniteliklerini kullanarak bir yöntemin arayanı hakkında bilgi edinebilirsiniz. Kaynak kodunun dosya yolunu, kaynak kodundaki satır numarasını ve arayanın üye adını alabilirsiniz. Bu bilgiler, tanılama araçlarının izlenmesine, oluşturulmasına ve bu araçlarda hata ayıklanmasına yardımcı olur.  
   
  Bu bilgileri elde etmek için her biri varsayılan değere sahip isteğe bağlı parametrelere uygulanan öznitelikler kullanabilirsiniz. Aşağıdaki tabloda, ad alanında tanımlanan arayan bilgileri öznitelikleri listelenmektedir <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> :  
   
-|Öznitelik|Description|Tür|  
+|Öznitelik|Açıklama|Tür|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Kaynak dosyasının arayanı içeren tam yolu. Bu, derleme zamanındaki dosya yoludur.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Yöntemin çağrıldığı kaynak dosyadaki satır numarası.|`Integer`|  
 |<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Arayanın yöntemi veya özellik adı. Bu konunun devamındaki [üye adları](#MEMBERNAMES) bölümüne bakın.|`String`|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnekte, Arayanın Bilgisi özniteliklerinin nasıl kullanılacağı gösterilmiştir. Yöntemine yapılan her çağrıda `TraceMessage` , çağıran bilgileri isteğe bağlı parametrelere bağımsız değişkenler olarak değiştirilir.  
   
 ```vb  
@@ -47,6 +49,7 @@ End Sub
 ```  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Her isteğe bağlı parametre için açık bir varsayılan değer belirtmeniz gerekir. İsteğe bağlı olarak belirtilmeyen parametrelere Arayan Bilgisi özniteliklerini uygulayamazsınız.  
   
  Arayan Bilgisi öznitelikleri, bir parametreyi isteğe bağlı hale getirmez. Bunun yerine, bağımsız değişken atlandığında geçirilen varsayılan değeri etkilerler.  
@@ -55,7 +58,8 @@ End Sub
   
  Arayan bilgisini denetlemek veya gizlemek için isteğe bağlı bağımsız değişkenleri açıkça sağlayabilirsiniz.  
   
-### <a name="member-names"></a><a name="MEMBERNAMES"></a>Üye adları  
+### <a name="member-names"></a><a name="MEMBERNAMES"></a> Üye adları  
+
  `CallerMemberName`Özniteliği, çağrılan yönteme bir bağımsız değişken olarak üye adını belirtmekten kaçınmak için kullanabilirsiniz `String` . Bu tekniği kullanarak **yeniden düzenlemeyi yeniden adlandırma** sorunu, `String` değerleri değiştirmez. Bu, özellikle aşağıdaki görevler için yararlı olur:  
   
 - İzleme ve tanılama yordamlarını kullanma.  

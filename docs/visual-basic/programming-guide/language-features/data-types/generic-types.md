@@ -36,14 +36,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: b14c7a3f1f667e7c13ec0ae46185ed3ece92beb8
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f9b343c664baaf316e5cd6df72da8dcf56222382
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394058"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91090267"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic'de Genel Türler (Visual Basic)
+
 *Genel tür* , çeşitli veri türleri için aynı işlevselliği gerçekleştirmeye uyum sağlayan tek bir programlama öğesidir. Genel bir sınıf veya yordam tanımladığınızda, bu işlevi gerçekleştirmek isteyebileceğiniz her bir veri türü için ayrı bir sürüm tanımlamanız gerekmez.  
   
  Benzerleme vurguladı, çıkarılabilir kafaları olan bir screwdriver kümesidir. Vidalı 'yi inceleyerek, bu vidalı için doğru kafa (slosıya, çapraz, starred) açmanız ve seçmeniz gerekir. Screwdriver işleyicisine doğru bir baş ekledikten sonra, vida ' ı etkinleştirerek, Screwdriver ile tam olarak aynı işlevi gerçekleştirirsiniz.  
@@ -61,6 +62,7 @@ ms.locfileid: "84394058"
  Genel bir tür kullanma hakkında daha fazla bilgi için bkz. [nasıl yapılır: genel bir sınıf kullanma](how-to-use-a-generic-class.md).  
   
 ## <a name="example-of-a-generic-class"></a>Genel sınıf örneği  
+
  Aşağıdaki örnek, bir genel sınıfın iskelet tanımını gösterir.  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
@@ -76,11 +78,13 @@ ms.locfileid: "84394058"
  Daha kapsamlı bir örnek için bkz. [nasıl yapılır: farklı veri türlerinde özdeş Işlevsellik sağlayabilen bir sınıf tanımlama](how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Uygun programlama öğeleri  
+
  Genel sınıfları, yapıları, arabirimleri, yordamları ve temsilcileri tanımlayabilir ve kullanabilirsiniz. .NET Framework, yaygın olarak kullanılan genel öğeleri temsil eden çeşitli genel sınıfları, yapıları ve arabirimleri tanımladığını unutmayın. <xref:System.Collections.Generic?displayProperty=nameWithType>Ad alanı sözlükler, listeleri, kuyrukları ve yığınları sağlar. Kendi genel öğesini tanımlamadan önce, ' de zaten kullanılabilir olup olmadığını görün <xref:System.Collections.Generic?displayProperty=nameWithType> .  
   
  Yordamlar türler değildir, ancak genel yordamları tanımlayabilir ve kullanabilirsiniz. Bkz. [Visual Basic genel yordamlar](generic-procedures.md).  
   
 ## <a name="advantages-of-generic-types"></a>Genel türlerin avantajları  
+
  Genel bir tür, her biri belirli bir veri türü üzerinde çalışan birkaç farklı programlama öğesi bildirmek için temel görevi görür. Genel tür alternatifleri şunlardır:  
   
 1. Veri türünde çalışan tek bir tür `Object` .  
@@ -104,9 +108,11 @@ ms.locfileid: "84394058"
 - **Genel algoritmalar.** Tür bağımsız olan soyut algoritmalar genel türler için iyi adaylardır. Örneğin, arabirimini kullanarak öğeleri sıralayan genel yordam, <xref:System.IComparable> uygulayan herhangi bir veri türü ile kullanılabilir <xref:System.IComparable> .  
   
 ## <a name="constraints"></a>Kısıtlamalar  
+
  Genel tür tanımındaki kodun mümkün olduğunca bağımsız olması gerekir olsa da, genel türündefinizin verilen herhangi bir veri türünün belirli bir özelliğini sağlamanız gerekebilir. Örneğin, iki öğeyi sıralama veya harmanlama amacıyla karşılaştırmak istiyorsanız, veri türlerinin arabirimini uygulaması gerekir <xref:System.IComparable> . Tür parametresine bir *kısıtlama* ekleyerek bu gereksinimi zorunlu kılabilirsiniz.  
   
 ### <a name="example-of-a-constraint"></a>Kısıtlama örneği  
+
  Aşağıdaki örnek, tür bağımsız değişkeninin uygulanmasını gerektiren kısıtlama içeren bir sınıfın iskelet tanımını gösterir <xref:System.IComparable> .  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
@@ -114,6 +120,7 @@ ms.locfileid: "84394058"
  Sonraki kod, uygulamayan bir tür sağlayan bir sınıf oluşturmaya çalışırsa `itemManager` <xref:System.IComparable> , derleyici bir hata bildirir.  
   
 ### <a name="types-of-constraints"></a>Kısıtlama türleri  
+
  Kısıtlamalarınız herhangi bir kombinasyonda aşağıdaki gereksinimleri belirtebilir:  
   
 - Tür bağımsız değişkeni bir veya daha fazla arabirim uygulamalıdır  
@@ -129,11 +136,13 @@ ms.locfileid: "84394058"
  Kısıtlamalar hakkında daha fazla bilgi için bkz. [tür listesi](../../../language-reference/statements/type-list.md).  
   
 ### <a name="example-of-multiple-constraints"></a>Birden çok kısıtlama örneği  
+
  Aşağıdaki örnek, tür parametresinde kısıtlama listesi olan bir genel sınıfın iskelet tanımını gösterir. Bu sınıfın bir örneğini oluşturan kodda, tür bağımsız değişkeni hem hem de <xref:System.IComparable> <xref:System.IDisposable> arabirimlerini uygulamalıdır, bir başvuru türü olmalıdır ve erişilebilir parametresiz bir Oluşturucu kullanıma sunar.  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
 ## <a name="important-terms"></a>Önemli koşullar  
+
  Genel türler aşağıdaki terimleri sunar ve kullanır:  
   
 - *Genel tür*. Bir sınıf, yapı, arabirim, yordam veya temsilci için en az bir veri türü sağladığınız temsilcinin tanımı.  
