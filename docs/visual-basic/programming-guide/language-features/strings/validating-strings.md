@@ -7,17 +7,19 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 585f7acc8ab46ad7f5711fca7805b63b316f1970
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 026f5bd833d857ee1db1b0f10abaabee9360b37e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555737"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072424"
 ---
 # <a name="validating-strings-in-visual-basic"></a>Visual Basic'de Dizeleri Doğrulama
+
 Bu bölümde Visual Basic dizelerin nasıl doğrulanacağı anlatılmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Nasıl Yapılır: Visual Basic'de Dosya Adlarını ve Yollarını Doğrulama](how-to-validate-file-names-and-paths.md)  
  Bir dizenin bir dosya adı veya yolu temsil edip etmediğini belirleme.  
   

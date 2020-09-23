@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: 30e88a21e737aa57513745899577381ed34151a2
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: b33815d58b0ef40f7f75a6a41bb4b1eeef591859
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410470"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072229"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Nasıl yapılır: İki Nesnenin İlgili Olup Olmadığını Belirleme (Visual Basic)
 
@@ -28,6 +28,7 @@ ms.locfileid: "84410470"
     <xref:System.Type.IsInstanceOfType%2A>`True`bağımsız değişken türü nesne türünden devralırsa döndürür <xref:System.Type?displayProperty=nameWithType> .
 
 ## <a name="example"></a>Örnek
+
  Aşağıdaki örnek, bir nesnenin başka bir nesnenin sınıfından türetilmiş bir sınıfı temsil edip etmediğini belirler.
 
 ```vb

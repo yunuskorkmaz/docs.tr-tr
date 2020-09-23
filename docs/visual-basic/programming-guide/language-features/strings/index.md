@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, strings
 - strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
-ms.openlocfilehash: 302805f8b9a83fceeeaa050332140c157a7a786f
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 60755b7aa8911f9c13eba80080b388a812f29475
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410560"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072593"
 ---
 # <a name="strings-in-visual-basic"></a>Visual Basic'de Dizeler
+
 Bu bölümde Visual Basic içindeki dizeler kullanılarak arka planda temel kavramlar açıklanmaktadır.  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [Visual Basic'de Dizelere Giriş](introduction-to-strings.md)  
  Visual Basic içindeki dizeleri kullanarak arka plandaki temel kavramları betimleyen konuları listeler.  
   

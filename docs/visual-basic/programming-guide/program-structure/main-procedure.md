@@ -8,19 +8,21 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: cf6003206566dfe8f70a7f75cd4d7ec7565794a5
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d6708ee13963aaae43a73b159032f64f0fffac10
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403180"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072216"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic'de Ana Yordam
+
 Her Visual Basic uygulamasının adlı bir yordam içermesi gerekir `Main` . Bu yordam, uygulamanız için başlangıç noktası ve genel denetim görevi görür. .NET Framework, `Main` uygulamanızı yüklemiş ve denetimi geçirmeye hazırsa, yordamınız çağrılır. Windows Forms uygulaması oluşturmadığınız takdirde, `Main` kendi üzerinde çalışan uygulamalar için yordamı yazmanız gerekir.
 
- `Main`İlk olarak çalışan kodu içerir. İçinde `Main` , program başlatıldığında önce hangi formun yükleneceğini belirleyebilirsiniz, uygulamanızın bir kopyasının sistemde zaten çalışmakta olup olmadığını bulabilir, uygulamanız için bir dizi değişken oluşturun veya uygulamanın gerektirdiği bir veritabanını açın.
+ `Main` İlk olarak çalışan kodu içerir. İçinde `Main` , program başlatıldığında önce hangi formun yükleneceğini belirleyebilirsiniz, uygulamanızın bir kopyasının sistemde zaten çalışmakta olup olmadığını bulabilir, uygulamanız için bir dizi değişken oluşturun veya uygulamanın gerektirdiği bir veritabanını açın.
 
 ## <a name="requirements-for-the-main-procedure"></a>Ana yordamın gereksinimleri
+
  Kendi üzerinde çalışan bir dosya (genellikle uzantısı. exe) bir `Main` yordam içermelidir. Bir kitaplık (örneğin,. dll uzantılı) kendi üzerinde çalışmaz ve bir `Main` yordam gerektirmez. Oluşturabileceğiniz farklı proje türleri için gereksinimler şunlardır:
 
 - Konsol uygulamaları kendi üzerinde çalışır ve en az bir yordam sağlamanız gerekir `Main` .
@@ -30,6 +32,7 @@ Her Visual Basic uygulamasının adlı bir yordam içermesi gerekir `Main` . Bu 
 - Sınıf kitaplıkları bir `Main` yordam gerektirmez. Bunlar Windows Denetim kitaplıklarını ve Web denetim kitaplıklarını içerir. Web uygulamaları, sınıf kitaplıkları olarak dağıtılır.
 
 ## <a name="declaring-the-main-procedure"></a>Ana yordamı bildirme
+
  Yordamı belirtmenin dört yolu vardır `Main` . Bağımsız değişkenler alabilir veya içermez ve bir değer döndürebilir.
 
 > [!NOTE]
@@ -64,7 +67,7 @@ Her Visual Basic uygulamasının adlı bir yordam içermesi gerekir `Main` . Bu 
     End Module
     ```
 
-- `Main`, bir `String` dizi bağımsız değişken olarak da alabilir. Dizideki her dize, programınızı çağırmak için kullanılan komut satırı bağımsız değişkenlerinden birini içerir. Değerlerine bağlı olarak farklı eylemler gerçekleştirebilirsiniz.
+- `Main` , bir `String` dizi bağımsız değişken olarak da alabilir. Dizideki her dize, programınızı çağırmak için kullanılan komut satırı bağımsız değişkenlerinden birini içerir. Değerlerine bağlı olarak farklı eylemler gerçekleştirebilirsiniz.
 
     ```vb
     Module mainModule

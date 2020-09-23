@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: aba9af9c699cf8d07862c5d2967902bec1623500
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c44f02880858b8a9fc1f0e70c3226623d05baa3a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363765"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072476"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic'de Dize Düzenleme Yöntemlerinin Türleri
+
 Dizelerinizi çözümlemek ve işlemek için çeşitli farklı yollar vardır. Yöntemlerin bazıları Visual Basic dilin bir parçasıdır ve diğerleri sınıfına dahil edilir `String` .  
   
 ## <a name="visual-basic-language-and-the-net-framework"></a>Visual Basic dili ve .NET Framework  
+
  Visual Basic Yöntemler, dilin devralınan işlevleri olarak kullanılır. Kodunuzda nitelendirme olmadan kullanılabilirler. Aşağıdaki örnek Visual Basic dize işleme komutunun tipik kullanımını gösterir:  
   
  [!code-vb[VbVbalrStrings#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#44)]  
@@ -25,17 +27,20 @@ Dizelerinizi çözümlemek ve işlemek için çeşitli farklı yollar vardır. Y
  Visual Basic dize düzenleme yöntemlerinin listesi için bkz. [dize düzenleme Özeti](../../../language-reference/keywords/string-manipulation-summary.md).  
   
 ### <a name="shared-methods-and-instance-methods"></a>Paylaşılan Yöntemler ve örnek yöntemleri  
+
  Dizeleri sınıfının yöntemleriyle de işleyebilirsiniz `String` . İçinde iki tür yöntem vardır `String` : *paylaşılan* Yöntemler ve *örnek* yöntemleri.  
   
 #### <a name="shared-methods"></a>Paylaşılan Yöntemler  
- Paylaşılan bir yöntem, `String` sınıfın kendisinden kaynaklanan ve bu sınıfın bir örneğinin çalışmasını gerektirmeyen bir yöntemdir. Bu yöntemler, `String` sınıfının bir örneğiyle değil, sınıfının () adıyla nitelenebilir `String` . Örnek:  
+
+ Paylaşılan bir yöntem, `String` sınıfın kendisinden kaynaklanan ve bu sınıfın bir örneğinin çalışmasını gerektirmeyen bir yöntemdir. Bu yöntemler, `String` sınıfının bir örneğiyle değil, sınıfının () adıyla nitelenebilir `String` . Örneğin:  
   
  [!code-vb[VbVbalrStrings#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#45)]  
   
  Yukarıdaki örnekte, <xref:System.String.Copy%2A?displayProperty=nameWithType> Yöntemi verilen bir ifadeye davranan ve elde edilen değeri atayan statik bir yöntemdir `bString` .  
   
 #### <a name="instance-methods"></a>Örnek yöntemleri  
- Örneğin, belirli bir örneğinden gövdeli örnek yöntemleri, `String` örnek adıyla nitelenmelidir. Örnek:  
+
+ Örneğin, belirli bir örneğinden gövdeli örnek yöntemleri, `String` örnek adıyla nitelenmelidir. Örneğin:  
   
  [!code-vb[VbVbalrStrings#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#46)]  
   

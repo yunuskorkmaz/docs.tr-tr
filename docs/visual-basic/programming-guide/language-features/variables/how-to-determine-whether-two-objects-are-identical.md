@@ -6,14 +6,15 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 67c3af8b7bdac3ad1c7e4908f1ac2684df7a87aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 1bbc8083fcfb6f5ff0f4328c32b83a2e7218ecd6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410483"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072281"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Nasıl yapılır: İki Nesnenin Aynı Olup Olmadığını Belirleme (Visual Basic)
+
 Visual Basic, işaretçilerin aynısı varsa, iki değişken başvurusu özdeş kabul edilir, yani her iki değişken de bellekteki aynı sınıf örneğini işaret ediyor. Örneğin, Windows Forms bir uygulamada, geçerli örneğin ( `Me` ) belirli bir örnekle aynı olup olmadığını (gibi) belirlemede bir karşılaştırma yapmak isteyebilirsiniz `Form2` .  
   
  Visual Basic işaretçileri karşılaştırmak için iki işleç sağlar. [,](../../../language-reference/operators/is-operator.md) `True` Nesneleri özdeş Ise ve [ınot işleci](../../../language-reference/operators/isnot-operator.md) değilse, işleç döndürür `True` .  
@@ -29,6 +30,7 @@ Visual Basic, işaretçilerin aynısı varsa, iki değişken başvurusu özdeş 
      `Is``True`nesneler aynı sınıf örneğine işaret ettikten sonra döndürür.  
   
 ## <a name="determining-if-two-objects-are-not-identical"></a>Iki nesnenin aynı olup olmadığını belirleme  
+
  Bazen iki nesne özdeş değilse bir eylem gerçekleştirmek istersiniz ve bu, örneğin, birleştirmek için de olabilir `Not` `Is` `If Not obj1 Is obj2` . Böyle bir durumda, `IsNot` işlecini kullanabilirsiniz.  
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>İki nesnenin aynı olup olmadığını belirleme  
@@ -40,6 +42,7 @@ Visual Basic, işaretçilerin aynısı varsa, iki değişken başvurusu özdeş 
      `IsNot``True`nesnelerin aynı sınıf örneğini işaret edip etmez döndürür.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, `Object` aynı sınıf örneğine işaret edip ettikleri anlamak için değişken çiftlerini sınar.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  

@@ -6,18 +6,20 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 935926b8b83afa47c20ea68aecd6bc8c40bd0234
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 44736f4db9977d9f69a0571cc80fa327dcf96581
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84363703"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072515"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic'de Dize Temelleri
+
 `String`Veri türü bir dizi karakteri temsil eder (her biri, veri türünün bir örneğini sırasıyla temsil eder `Char` ). Bu konuda Visual Basic içindeki dizelerin temel kavramları tanıtılmaktadır.  
   
 ## <a name="string-variables"></a>Dize değişkenleri  
- Bir dizenin örneğine, bir dizi karakteri temsil eden bir sabit değer atanabilir. Örnek:  
+
+ Bir dizenin örneğine, bir dizi karakteri temsil eden bir sabit değer atanabilir. Örneğin:  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
@@ -50,17 +52,19 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Dizelerdeki karakterler  
- Bir dize bir dizi değer olarak düşünülebilir `Char` ve `String` tür, diziler tarafından izin verilen düzenlemelere benzer bir dizede birçok oluşturma gerçekleştirmenize olanak tanıyan yerleşik işlevlere sahiptir. .NET Framework tüm diziler gibi, bunlar sıfır tabanlı dizilerdir. Bir dizedeki belirli bir karaktere `Chars` , dizesinde göründüğü konuma göre erişmek için bir yol sağlayan özelliği aracılığıyla başvurabilirsiniz. Örnek:  
+
+ Bir dize bir dizi değer olarak düşünülebilir `Char` ve `String` tür, diziler tarafından izin verilen düzenlemelere benzer bir dizede birçok oluşturma gerçekleştirmenize olanak tanıyan yerleşik işlevlere sahiptir. .NET Framework tüm diziler gibi, bunlar sıfır tabanlı dizilerdir. Bir dizedeki belirli bir karaktere `Chars` , dizesinde göründüğü konuma göre erişmek için bir yol sağlayan özelliği aracılığıyla başvurabilirsiniz. Örneğin:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- Yukarıdaki örnekte, `Chars` dizesinin özelliği dizedeki dördüncü karakteri döndürür `D` ve bunu öğesine atar `myChar` . Ayrıca özelliği aracılığıyla belirli bir dizenin uzunluğunu da alabilirsiniz `Length` . Bir dizede birden çok dizi türü işleyici gerçekleştirmeniz gerekiyorsa, `Char` dizenin işlevini kullanarak bir örnek dizisine dönüştürebilirsiniz `ToCharArray` . Örnek:  
+ Yukarıdaki örnekte, `Chars` dizesinin özelliği dizedeki dördüncü karakteri döndürür `D` ve bunu öğesine atar `myChar` . Ayrıca özelliği aracılığıyla belirli bir dizenin uzunluğunu da alabilirsiniz `Length` . Bir dizede birden çok dizi türü işleyici gerçekleştirmeniz gerekiyorsa, `Char` dizenin işlevini kullanarak bir örnek dizisine dönüştürebilirsiniz `ToCharArray` . Örneğin:  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
  Değişkeni `myArray` artık `Char` , her biri öğesinden bir karakteri temsil eden bir değer dizisi içerir `myString` .  
   
 ## <a name="the-immutability-of-strings"></a>Dizelerin Imlebilirlik kullanılabilirliği  
+
  Bir dize *sabittir*, yani değeri oluşturulduktan sonra değiştirilemez. Ancak, bu, bir dize değişkenine birden fazla değer atanmasını engellemez. Aşağıdaki örneği inceleyin:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  

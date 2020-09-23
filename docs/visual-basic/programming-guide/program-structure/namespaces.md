@@ -16,14 +16,15 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 087c6f02e1fca9cf2664ca76581c08a9b1a5e447
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f4521fa10c3bb9e8e121e3c228a23061becd1741
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398363"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072203"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic'de Ad Alanları
+
 Ad alanları bir derlemede tanımlanan nesneleri düzenler. Derlemeler birden çok ad alanı içerebilir ve bu da diğer ad alanlarını içerebilir. Ad alanları, sınıf kitaplıkları gibi büyük nesne gruplarını kullanırken belirsizlik ve başvuruları basitleştirir.  
   
  Örneğin, .NET Framework <xref:System.Windows.Forms.ListBox> <xref:System.Windows.Forms?displayProperty=nameWithType> ad alanındaki sınıfını tanımlar. Aşağıdaki kod parçası, bu sınıf için tam nitelikli adı kullanarak bir değişkenin nasıl bildirilemeyeceğini göstermektedir:  
@@ -31,6 +32,7 @@ Ad alanları bir derlemede tanımlanan nesneleri düzenler. Derlemeler birden ç
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Ad çakışmalarını önleme  
+
  .NET Framework ad alanları, bazen bir sınıf kitaplığı geliştiricisinin başka bir kitaplıktaki benzer adların kullanımıyla birlikte olduğu *ad alanı kirliliğine*de denilen bir sorunu ele alırlar. Var olan bileşenlerle ilgili bu çakışmalar bazen *ad çarpışmaları*olarak adlandırılır.  
   
  Örneğin, adlı yeni bir sınıf oluşturursanız `ListBox` , bunu proje içinde nitelik olmadan kullanabilirsiniz. Ancak .NET Framework <xref:System.Windows.Forms.ListBox> sınıfını aynı projede kullanmak istiyorsanız, başvuruyu benzersiz hale getirmek için tam olarak nitelenmiş bir başvuru kullanmanız gerekir. Başvuru benzersiz değilse, Visual Basic adın belirsiz olduğunu belirten bir hata üretir. Aşağıdaki kod örneği, bu nesnelerin nasıl bildirileceğini göstermektedir:  
@@ -41,11 +43,12 @@ Ad alanları bir derlemede tanımlanan nesneleri düzenler. Derlemeler birden ç
   
  ![İki ad alanı hiyerarşisi gösteren ekran görüntüsü.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
- Varsayılan olarak, Visual Basic ile oluşturduğunuz her çalıştırılabilir dosya, projenizle aynı ada sahip bir ad alanı içerir. Örneğin, adlı bir proje içinde bir nesne tanımlarsanız `ListBoxProject` , ListBoxProject. exe yürütülebilir dosyası adlı bir ad alanı içerir `ListBoxProject` .  
+ Varsayılan olarak, Visual Basic ile oluşturduğunuz her çalıştırılabilir dosya, projenizle aynı ada sahip bir ad alanı içerir. Örneğin, adlı bir proje içinde bir nesne tanımlarsanız `ListBoxProject` , çalıştırılabilir dosya ListBoxProject.exe adlı bir ad alanı içerir `ListBoxProject` .  
   
  Birden çok derleme aynı ad alanını kullanabilir. Visual Basic, bunları tek bir ad kümesi olarak değerlendirir. Örneğin, adlı bir derlemede adlı bir ad alanı için sınıflar tanımlayabilir `SomeNameSpace` `Assemb1` ve adlı bir derlemeden aynı ad alanı için ek sınıflar tanımlayabilirsiniz `Assemb2` .  
   
 ## <a name="fully-qualified-names"></a>Tam nitelikli adlar  
+
  Tam nitelikli adlar, nesnenin tanımlandığı ad alanının adı önekli nesne başvurulardır. Sınıfa bir başvuru oluşturursanız ( **Proje** menüsünden **Başvuru Ekle** ' yi seçerek) diğer projelerde tanımlı nesneleri kullanabilirsiniz ve sonra kodunuzda nesne için tam adı kullanın. Aşağıdaki kod parçası, başka bir projenin ad alanından bir nesne için tam olarak nitelenmiş adın nasıl kullanılacağını gösterir:  
   
  [!code-vb[VbVbalrApplication#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#8)]  
@@ -63,9 +66,11 @@ Ad alanları bir derlemede tanımlanan nesneleri düzenler. Derlemeler birden ç
  `Class1`Tam nitelikli olmadan kullanmaya çalışırsanız, Visual Basic adın belirsiz olduğunu belirten bir hata üretir `Class1` .  
   
 ## <a name="namespace-level-statements"></a>Ad alanı düzeyi deyimleri  
+
  Bir ad alanı içinde modüller, arabirimler, sınıflar, temsilciler, numaralandırmalar, yapılar ve diğer ad alanları gibi öğeleri tanımlayabilirsiniz. Ad alanı düzeyinde özellikler, yordamlar, değişkenler ve olaylar gibi öğeleri tanımlayamazsınız. Bu öğeler modüller, yapılar veya sınıflar gibi kapsayıcılar içinde bildirilmelidir.  
   
 ## <a name="global-keyword-in-fully-qualified-names"></a>Tam adlarda genel anahtar sözcük  
+
  İç içe geçmiş bir ad alanı hiyerarşisi tanımladıysanız, bu hiyerarşinin içindeki kodun <xref:System?displayProperty=nameWithType> .NET Framework ad alanına erişmesi engellenebilir. Aşağıdaki örnekte, `SpecialSpace.System` ad alanının erişimini engellediği bir hiyerarşi gösterilmektedir <xref:System?displayProperty=nameWithType> .  
   
 ```vb  
@@ -99,6 +104,7 @@ End Namespace
  Gibi `Global` diğer kök düzeyi ad alanlarına <xref:Microsoft.VisualBasic?displayProperty=nameWithType> ve projenizle ilişkili herhangi bir ad alanına erişmek için öğesini kullanabilirsiniz.  
   
 ## <a name="global-keyword-in-namespace-statements"></a>Namespace deyimlerde Global anahtar sözcüğü  
+
  `Global`Bir [Namespace deyimindeki](../../language-reference/statements/namespace-statement.md)anahtar sözcüğünü de kullanabilirsiniz. Bu, projenizin kök ad alanından bir ad alanı tanımlamanızı sağlar.  
   
  Projenizdeki tüm ad alanları, projenin kök ad alanını temel alır.  Visual Studio, projenizdeki tüm kodlar için proje adınızı varsayılan kök ad alanı olarak atar. Örneğin, projeniz adlandırılmışsa `ConsoleApplication1` , programlama öğeleri ad alanına aittir `ConsoleApplication1` . Bildirirseniz `Namespace Magnetosphere` , `Magnetosphere` projedeki başvuruları erişir `ConsoleApplication1.Magnetosphere` .  

@@ -10,14 +10,15 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: f0f7aba25888544dfcc093906850ae7ada621182
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 78363f7b2fb5b251f7409e53b2802baf83b05810
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388251"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072710"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Nasıl yapılır: Bir Özelliği Karışık Erişim Düzeyleriyle Bildirme (Visual Basic)
+
 `Get` `Set` Bir özellik üzerindeki ve yordamlarının farklı erişim düzeylerine sahip olmasını istiyorsanız, deyimdeki daha fazla izin düzeyini `Property` ve ya da ifadesinde daha kısıtlayıcı olan düzeyi kullanabilirsiniz `Get` `Set` . Kodun belirli bölümlerinin özelliğin değerini almasını ve kodun değeri değiştirebilmesini sağlamak için, bir özellik üzerinde karışık erişim düzeyleri kullanırsınız,.  
   
  Erişim düzeyleri hakkında daha fazla bilgi için bkz. [Visual Basic erişim düzeyleri](../declared-elements/access-levels.md).  

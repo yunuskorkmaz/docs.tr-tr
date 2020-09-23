@@ -5,17 +5,19 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-ms.openlocfilehash: 1bb5ac5381dc85f598ef46638fbc8cd1a8643825
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 493da7b8583b5cc73a9832afa81b7b1d84742f2d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555750"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91072437"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Visual Basic'de Normal İfadeleri MaskedTextBox Denetimi ile Kullanma
+
 Bu örnek, denetimin ile nasıl çalıştığını basit normal ifadelerin nasıl dönüştürüleceğini gösterir <xref:System.Windows.Forms.MaskedTextBox> .  
   
 ## <a name="description-of-the-masking-language"></a>Maskeleme dilinin açıklaması  
+
  Standart <xref:System.Windows.Forms.MaskedTextBox> maskeleme dili, `Masked Edit` Visual Basic 6,0 ' deki denetim tarafından kullanılan bir temel alır ve bu platformdan geçiş yapan kullanıcılara tanıdık gelmelidir.  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> <xref:System.Windows.Forms.MaskedTextBox> Denetimin özelliği kullanılacak giriş maskesini belirtir. Maske, aşağıdaki tablodaki bir veya daha fazla maskeleme öğelerinden oluşan bir dize olmalıdır.  
@@ -44,6 +46,7 @@ Bu örnek, denetimin ile nasıl çalıştığını basit normal ifadelerin nası
  Ondalık (.), binde (,), saat (:), Tarih (/) ve para birimi ($) sembolleri, bu sembolleri uygulamanın kültürüyle tanımlandığı şekilde görüntülemek için varsayılandır. Özelliğini kullanarak, başka bir kültür için sembolleri görüntülemeye zorlayabilirsiniz <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> .  
   
 ## <a name="regular-expressions-and-masks"></a>Normal Ifadeler ve maskeler  
+
  Kullanıcı girişini doğrulamak için normal ifadeleri ve maskeleri kullanabilseniz de tamamen eşdeğer değildir. Normal ifadeler maskelerden daha karmaşık desenler ifade edebilir, ancak maskeler aynı bilgileri daha succinctly ve ilgili bir biçimde ifade edebilir.  
   
  Aşağıdaki tabloda dört normal ifade ve her biri için eşdeğer maske karşılaştırılmaktadır.  
