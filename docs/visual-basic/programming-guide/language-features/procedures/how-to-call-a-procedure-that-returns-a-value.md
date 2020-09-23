@@ -7,14 +7,15 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-ms.openlocfilehash: a110cf9f3b42c7244d8d5bf7b49d5e6dac8c2e21
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 53589f84c6675d1e7ae2a593341e5dac747132a9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388770"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91083983"
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>Nasıl yapılır: Değer Döndüren Bir Yordam Çağırma (Visual Basic)
+
 `Function`Yordam, çağırma koduna bir değer döndürür. Bunun adını ve bağımsız değişkenlerini atama deyiminin sağ tarafına veya bir ifadeye ekleyerek çağırabilirsiniz.  
   
 ### <a name="to-call-a-function-procedure-within-an-expression"></a>Bir ifade içindeki bir Işlev yordamını çağırmak için  
@@ -40,7 +41,8 @@ ms.locfileid: "84388770"
 4. Yordamdan döndürülen değer, atama ifadesinin sol tarafındaki değişken veya özellikte saklanır.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, <xref:Microsoft.VisualBasic.Interaction.Environ%2A> bir işletim sistemi ortam değişkeninin değerini almak için Visual Basic çağırır. İlk satır `Environ` bir ifade içinde çağrı ve ikinci satır onu bir atama deyiminde çağırır. `Environ`değişken adını tek bağımsız değişkeni olarak alır. Bu, değişkenin değerini çağıran koda döndürür.  
+
+ Aşağıdaki örnek, <xref:Microsoft.VisualBasic.Interaction.Environ%2A> bir işletim sistemi ortam değişkeninin değerini almak için Visual Basic çağırır. İlk satır `Environ` bir ifade içinde çağrı ve ikinci satır onu bir atama deyiminde çağırır. `Environ` değişken adını tek bağımsız değişkeni olarak alır. Bu, değişkenin değerini çağıran koda döndürür.  
   
  [!code-vb[VbVbcnProcedures#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#7)]  
   

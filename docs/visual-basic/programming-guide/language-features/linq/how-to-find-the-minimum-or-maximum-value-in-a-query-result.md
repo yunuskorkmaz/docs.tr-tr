@@ -14,14 +14,15 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], aggregate queries
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
-ms.openlocfilehash: a148d8b726da78261eda152fcaafdd64ea01bb24
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e397ccd6fe21caaeb9d56ff3b0cc1ce16032639a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84404984"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084014"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Nasıl yapılır: LINQ Kullanarak Bir Sorgu Sonucunda En Düşük ve En Fazla Değeri Bulma (Visual Basic)
+
 Dil ile tümleşik sorgu (LINQ), veritabanı bilgilerine erişmeyi ve sorguları yürütmeyi kolaylaştırır.  
   
  Aşağıdaki örnek, SQL Server veritabanına karşı sorgu gerçekleştiren yeni bir uygulamanın nasıl oluşturulacağını gösterir. Örnek, `Aggregate` ve yan tümceleri kullanılarak sonuçlar için en düşük ve en büyük değerleri belirler `Group By` . Daha fazla bilgi için bkz. [toplama yan tümcesi](../../../language-reference/queries/aggregate-clause.md) ve [Group by yan tümcesi](../../../language-reference/queries/group-by-clause.md).  

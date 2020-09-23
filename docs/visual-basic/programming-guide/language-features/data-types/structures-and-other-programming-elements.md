@@ -8,20 +8,22 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: dbd24065a954e5611663963371d5a9f4bbbaea68
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 26c98adda7305783b0220141db35b08285b21554
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393500"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084092"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Yapılar ve Diğer Programlama Öğeleri (Visual Basic)
+
 Yapıları diziler, nesneler ve yordamlarla birlikte, birbirleriyle de kullanabilirsiniz. Etkileşimler, bu öğeler tek tek kullanıldığı için aynı sözdizimini kullanır.  
   
 > [!NOTE]
 > Yapı bildiriminde yapı öğelerinden hiçbirini başlatamıyor. Yalnızca bir yapı türü olarak tanımlanmış bir değişkenin öğelerine değerler atayabilirsiniz.  
   
 ## <a name="structures-and-arrays"></a>Yapılar ve diziler  
+
  Bir yapı, öğelerinden biri veya daha fazlası olarak bir dizi içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
@@ -56,6 +58,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>Yapılar ve nesneler  
+
  Bir yapı, bir veya daha fazla öğelerinden oluşan bir nesne içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
@@ -69,6 +72,7 @@ End Structure
  Bu tür bir bildirimde, yerine belirli bir nesne sınıfını kullanmanız gerekir `Object` .  
   
 ## <a name="structures-and-procedures"></a>Yapılar ve yordamlar  
+
  Bir yapıyı yordam bağımsız değişkeni olarak geçirebilirsiniz. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
@@ -97,6 +101,7 @@ End Function
 ```  
   
 ## <a name="structures-within-structures"></a>Yapılar Içindeki yapılar  
+
  Yapılar, diğer yapıları içerebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  

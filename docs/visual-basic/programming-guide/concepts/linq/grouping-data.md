@@ -2,14 +2,15 @@
 title: Verileri Gruplandırma
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 8996eee748489c596bc5adc32f53b6b39dbfc6ac
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: aae48543472ee71990d0bc96defa9ad6a6ab4c0d
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84398389"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91084209"
 ---
 # <a name="grouping-data-visual-basic"></a>Verileri gruplandırma (Visual Basic)
+
 Gruplandırma, her bir gruptaki öğelerin ortak bir özniteliği paylaşması için verileri gruplara yerleştirme işlemini ifade eder.  
   
  Aşağıdaki çizimde, bir karakter dizisini gruplandırmanın sonuçları gösterilmektedir. Her grup için anahtar karakterdir.  
@@ -26,6 +27,7 @@ Gruplandırma, her bir gruptaki öğelerin ortak bir özniteliği paylaşması i
 |ToLookup|Bir <xref:System.Linq.Lookup%602> anahtar Seçici işlevine göre öğeleri (bire çok sözlüğüne) ekler.|Geçerli değildir.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Sorgu Ifadesi söz dizimi örneği  
+
  Aşağıdaki kod örneği, `Group By` bir listedeki tamsayıları, hatta veya tek olup olmadığına göre gruplamak için yan tümcesini kullanır.  
   
 ```vb  
