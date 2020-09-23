@@ -2,17 +2,19 @@
 title: 'Nasıl yapılır: Dosyaları Uzantıya Göre Gruplama (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 67c48cd735b51009835cbc8df3101ea3cb212a87
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3b1b02283dc65148b8a44952ce39659cc92b483a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84396551"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077312"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Nasıl yapılır: dosyaları uzantıya göre gruplama (LINQ) (Visual Basic)
+
 Bu örnek, LINQ 'ın dosya veya klasör listelerinde gelişmiş gruplandırma ve sıralama işlemleri gerçekleştirmek için nasıl kullanılabileceğini gösterir. Ayrıca, ve yöntemlerini kullanarak konsol penceresinde çıkışın nasıl yapılacağını gösterir <xref:System.Linq.Enumerable.Skip%2A> <xref:System.Linq.Enumerable.Take%2A> .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki sorguda, belirtilen dizin ağacının içeriğini dosya adı uzantısı tarafından nasıl gruplandırmak gösterilmektedir.  
   
 ```vb  
@@ -94,6 +96,7 @@ End Module
  Bu programın çıktısı, yerel dosya sisteminin ayrıntılarına ve ' nin ne ayarlı olduğuna bağlı olarak uzun olabilir `startFolder` . Tüm sonuçların görüntülenmesini sağlamak için bu örnek, sonuçların nasıl ekleneceğini gösterir. Windows ve Web uygulamalarına aynı teknikler de uygulanabilir. Kod, bir gruptaki öğeler, iç içe geçmiş bir döngü gerekli olduğundan emin olun `For Each` . Ayrıca, listedeki geçerli konumu hesaplamak için bazı ek Logic de vardır ve kullanıcının sayfalamayı durdurmasına ve programdan çıkmasına olanak tanır. Bu durumda, disk belleği sorgusu özgün sorgudaki önbelleğe alınmış sonuçlara karşı çalıştırılır. Diğer bağlamlarda, örneğin LINQ to SQL, önbelleğe alma gerekli değildir.  
   
 ## <a name="compile-the-code"></a>Kodu derle  
+
 `Imports`System. Linq ad alanı için bir deyimle birlikte Visual Basic konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.

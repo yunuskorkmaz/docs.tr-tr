@@ -8,20 +8,22 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character data types
 - data types [Visual Basic], choosing
 ms.assetid: 902479ef-1679-47fc-9911-0c1c5008226c
-ms.openlocfilehash: 33dd4c62776ae8c5ec0ce0a6d0858a7ed0d047fb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 5fde5eff40d83bdd7d90cd611bd6749106db6e16
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84401998"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077182"
 ---
 # <a name="character-data-types-visual-basic"></a>Karakter Veri Türleri (Visual Basic)
+
 Visual Basic, yazdırılabilir ve görüntülenebilen karakterlerle uğraşmak için *karakter veri türleri* sağlar. Her ikisi de Unicode karakterlerle ilgilenir, `Char` ancak `String` sonsuz sayıda karakter içeren tek bir karakter tutar.  
   
  Visual Basic veri türlerinin yan yana karşılaştırmasını görüntüleyen bir tablo için bkz. [veri türleri](../../../language-reference/data-types/index.md).  
   
 ## <a name="char-type"></a>Karakter türü  
- `Char`Veri türü, tek bir iki baytlık (16 bit) Unicode karakterdir. Bir değişken her zaman tam olarak bir karakter depoluyorsa, olarak bildirin `Char` . Örnek:  
+
+ `Char`Veri türü, tek bir iki baytlık (16 bit) Unicode karakterdir. Bir değişken her zaman tam olarak bir karakter depoluyorsa, olarak bildirin `Char` . Örneğin:  
   
  [!code-vb[VbVbalrCharTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#1)]
   
@@ -33,7 +35,8 @@ Visual Basic, yazdırılabilir ve görüntülenebilen karakterlerle uğraşmak i
  Daha fazla bilgi için bkz. [char veri türü](../../../language-reference/data-types/char-data-type.md).  
   
 ## <a name="string-type"></a>Dize türü  
- `String`Veri türü sıfır veya daha fazla iki baytlık (16 bit) Unicode karakterden oluşan bir dizidir. Bir değişken belirsiz sayıda karakter içeriyorsa, olarak bildirin `String` . Örnek:  
+
+ `String`Veri türü sıfır veya daha fazla iki baytlık (16 bit) Unicode karakterden oluşan bir dizidir. Bir değişken belirsiz sayıda karakter içeriyorsa, olarak bildirin `String` . Örneğin:  
   
  [!code-vb[VbVbalrCharTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrchartypes/vb/module1.vb#2)]
   

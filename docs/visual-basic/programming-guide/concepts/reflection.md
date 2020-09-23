@@ -2,14 +2,15 @@
 title: Yansıma
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 43c05a0b3bbfc3dfc304b1aed3f689625a40229a
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 79603e0951732c7d0d0031d4fc44ddd7dbd392c9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413186"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077260"
 ---
 # <a name="reflection-visual-basic"></a>Yansıma (Visual Basic)
+
 Yansıma <xref:System.Type> derlemeleri, modülleri ve türleri tanımlayan nesneler (türü) sağlar. Bir türün örneğini dinamik olarak oluşturmak, türü var olan bir nesneye bağlamak veya var olan bir nesneden türü almak ya da onun yöntemlerini çağırmak ya da alanları ve özelliklerine erişmek için yansıma kullanabilirsiniz. Kodunuzda öznitelikler kullanıyorsanız, yansıma bunlara erişmenizi sağlar. Daha fazla bilgi için bkz. [öznitelikler](../../../standard/attributes/index.md).  
   
  `GetType` `Object` Bir değişkenin türünü almak için temel sınıftan tüm türler tarafından devralınan statik yöntemi kullanan basit bir yansıma örneği aşağıda verilmiştir:  
@@ -38,6 +39,7 @@ System.Console.WriteLine(info)
  `mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
 ## <a name="reflection-overview"></a>Yansımaya genel bakış  
+
  Aşağıdaki durumlarda yansıma yararlı olur:  
   
 - Programınızın meta verilerindeki özniteliklere erişmeniz gerektiğinde. Daha fazla bilgi için bkz. [özniteliklerde depolanan bilgileri alma](../../../standard/attributes/retrieving-information-stored-in-attributes.md).  
@@ -49,6 +51,7 @@ System.Console.WriteLine(info)
 - Geç bağlama gerçekleştirmek için çalışma zamanında oluşturulan türler üzerindeki yöntemlere erişme. [Türleri dinamik olarak yükleme ve kullanma](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)konusuna bakın.  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  Daha fazla bilgi için:  
   
 - [Yansıma](../../../framework/reflection-and-codedom/reflection.md)  

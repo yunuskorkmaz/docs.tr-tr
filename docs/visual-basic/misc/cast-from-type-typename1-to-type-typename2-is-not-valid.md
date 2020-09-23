@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
-ms.openlocfilehash: b1f2465f491ccfb8f8199cc47a9adbd993c9991d
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9533cdadd30044ef79492237e343300555321fca
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84364831"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077559"
 ---
 # <a name="cast-from-type-typename1-to-type-typename2-is-not-valid"></a>' \<typename1> ' Türünden ' ' türüne dönüştürme \<typename2> geçerli değil
+
 Bir değişkeni bir türden diğerine dönüştürme girişimi geçerli değil.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

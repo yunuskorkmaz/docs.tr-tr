@@ -26,14 +26,15 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 3b1f47250453c32735d633b98da0bd0ddb1ed5b9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 268daf333dc5463e5436304cec188a9e6d477166
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393863"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077130"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Nasıl yapılır: Farklı Veri Türlerinde Aynı İşlevselliği Sağlayabilen Bir Sınıf Tanımlama (Visual Basic)
+
 Farklı veri türleri üzerinde özdeş işlevsellik sağlayan nesneler oluşturabileceğiniz bir sınıf tanımlayabilirsiniz. Bunu yapmak için tanımda bir veya daha fazla *tür parametresi* belirtirsiniz. Sınıf daha sonra çeşitli veri türlerini kullanan nesneler için bir şablon işlevi görebilir. Bu şekilde tanımlanan bir sınıfa *Genel sınıf*denir.  
   
  Genel bir sınıf tanımlamanın avantajı bunu yalnızca bir kez tanımlamanız, kodunuzun çok çeşitli veri türlerini kullanan birçok nesne oluşturmak için bunu kullanmasını sağlayabilirsiniz. Bu, sınıfının türüyle tanımlanması gerekenden daha iyi performans elde ediyor `Object` .  

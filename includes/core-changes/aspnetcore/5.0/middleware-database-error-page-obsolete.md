@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f1129500c9b779256b2650fe6fa855152cb3ae80
-ms.sourcegitcommit: 9c45035b781caebc63ec8ecf912dc83fb6723b1f
+ms.openlocfilehash: 10521759d31c3183232cdb1793d78d139f13ce41
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88811293"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077572"
 ---
 ### <a name="middleware-database-error-page-marked-as-obsolete"></a>Ara yazılım: veritabanı hatası sayfası eski olarak işaretlendi
 
@@ -55,6 +55,8 @@ Aşağıdaki adımları tamamlayın:
         }
     }
     ```
+
+1. Proje dosyasına [Microsoft. AspNetCore. Diagnostics. EntityFrameworkCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore) NuGet paketini ekleyin.
 
 1. Veritabanı Geliştirici sayfası özel durum filtresini hizmetler koleksiyonuna ekleyin. Örneğin, `AddDatabaseDeveloperPageExceptionFilter` içinde yöntemini çağırın `Startup.ConfigureServices` :
 

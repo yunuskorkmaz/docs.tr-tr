@@ -11,22 +11,25 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 3e8df5ccfeca4bc0a19237ba6d59e9d0747080ea
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 842b74aa7cc99c8196fdfb1eb6c976d9e72a4fa4
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394304"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077169"
 ---
 # <a name="composite-data-types-visual-basic"></a>Bileşik Veri Türleri (Visual Basic)
+
 Visual Basic tedariklerini temel veri türlerine ek olarak, yapılar, diziler ve sınıflar gibi *bileşik veri türleri* oluşturmak için farklı türlerdeki öğeleri de birleştirebilirsiniz. Birleşik veri türlerini temel türler ve diğer bileşik türlerden oluşturabilirsiniz. Örneğin, bir yapı öğeleri dizisi veya dizi üyeleri olan bir yapı tanımlayabilirsiniz.  
   
 ## <a name="data-types"></a>Veri Türleri  
+
  Bileşik tür, bileşenlerinden herhangi birinin veri türünden farklıdır. Örneğin, bir dizi `Integer` öğe `Integer` veri türünde değil.  
   
  Dizi veri türü, normalde öğe türü, parantezler ve gereken virgüller kullanılarak temsil edilir. Örneğin, tek boyutlu bir `String` öğe dizisi olarak temsil edilir `String()` ve iki boyutlu bir `Boolean` öğe dizisi olarak temsil edilir `Boolean(,)` .  
   
 ## <a name="structure-types"></a>Yapı türleri  
+
  Tüm yapıları kapsayan tek bir veri türü yoktur. Bunun yerine, bir yapının her tanımı, iki yapı aynı sırada aynı öğeleri tanımlasa bile benzersiz bir veri türünü temsil eder. Ancak, aynı yapının iki veya daha fazla örneğini oluşturursanız Visual Basic, bunları aynı veri türünde olacak şekilde değerlendirir.  
   
 ## <a name="tuples"></a>Demetler
@@ -34,6 +37,7 @@ Visual Basic tedariklerini temel veri türlerine ek olarak, yapılar, diziler ve
 Kayıt düzeni, türleri önceden tanımlanmış iki veya daha fazla alan içeren hafif bir yapıdır. Tanımlama grupları Visual Basic 2017 ' den başlayarak desteklenir. Tanımlama alanları, bağımsız değişkenleri başvuruya göre geçirmek veya döndürülen alanları daha ağır bir sınıfta veya yapıda paketlemek zorunda kalmadan, tek bir yöntem çağrısından birden çok değer döndürmek için en yaygın olarak kullanılır. Tanımlama grupları hakkında daha fazla bilgi için [Tanımlama grupları](tuples.md) konusuna bakın.
 
 ## <a name="array-types"></a>Dizi türleri  
+
  Tüm dizileri kapsayan tek veri türü yok. Bir dizinin belirli bir örneğinin veri türü aşağıdaki şekilde belirlenir:  
   
 - Bir dizi olması  
@@ -57,6 +61,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
  Diziler hakkında daha fazla bilgi için bkz. [diziler](../arrays/index.md).  
   
 ## <a name="class-types"></a>Sınıf Türleri  
+
  Tüm sınıflardan oluşan tek bir veri türü yoktur. Bir sınıf başka bir sınıftan devralınabilir olsa da, her biri ayrı bir veri türüdür. Aynı sınıfın birden çok örneği aynı veri türündedir. Bir sınıf örneği değişkenini diğerine atarsanız, yalnızca aynı veri türüne sahip olmaları gerekmez, bellekte aynı sınıf örneğine işaret ederler.  
   
  Sınıflar hakkında daha fazla bilgi için bkz. [nesneler ve sınıflar](../objects-and-classes/index.md).  

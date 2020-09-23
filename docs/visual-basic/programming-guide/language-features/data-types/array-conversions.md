@@ -12,14 +12,15 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 1d20b01200d3f967e3355dc6e9651291003d140e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 375c75c954f3be535272d674d9b786cad46b1a01
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402011"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077195"
 ---
 # <a name="array-conversions-visual-basic"></a>Dizi Dönüştürmeleri (Visual Basic)
+
 Aşağıdaki koşulları karşılamanız kaydıyla, bir dizi türünü farklı bir dizi türüne dönüştürebilirsiniz:  
   
 - **Eşit derece.** İki dizinin dereceleri aynı olmalıdır, diğer bir deyişle, aynı sayıda boyutlara sahip olmaları gerekir. Ancak, ilgili boyutların uzunluklarının aynı olması gerekmez.  
@@ -31,6 +32,7 @@ Aşağıdaki koşulları karşılamanız kaydıyla, bir dizi türünü farklı b
  Bir dizi türünün diğerine dönüştürülmesi, ilgili öğelerin dönüştürülmesine genişleyen veya daraltma olmasına bağlı olarak genişletme veya daraltma. Daha fazla bilgi için bkz. [genişletme ve daraltma dönüştürmeleri](widening-and-narrowing-conversions.md).  
   
 ## <a name="conversion-to-an-object-array"></a>Bir nesne dizisine dönüştürme  
+
  Bir diziyi başlatmadan bildirdiğinizde `Object` , öğe türü `Object` başlatılmamış kaldığı sürece. Belirli bir sınıfın dizisine ayarladığınızda, bu sınıfın türünü alır. Ancak, temel alınan türü hala olur `Object` ve daha sonra ilişkisiz bir sınıfın başka bir dizisine ayarlayabilirsiniz. Tüm sınıflar öğesinden türetildiğinden `Object` , dizinin öğe türünü herhangi bir sınıftan başka bir sınıfa dönüştürebilirsiniz.  
   
  Aşağıdaki örnekte, türler arasında dönüştürme yoktur `student` `String` , ancak her ikisi de öğesinden türetilir, bu `Object` nedenle tüm atamalar geçerlidir.  
@@ -47,6 +49,7 @@ testArray = names
 ```  
   
 ### <a name="underlying-type-of-an-array"></a>Bir dizinin temel alınan türü  
+
  Özgün olarak belirli bir sınıf içeren bir diziyi bildirirseniz, temel alınan öğe türü bu sınıftır. Daha sonra başka bir sınıfın dizisine ayarlarsanız, iki sınıf arasında bir dönüştürme olmalıdır.  
   
  Aşağıdaki örnekte `students` bir `student` dizidir. Ve arasında dönüştürme olmadığından `String` `student` , son ifade başarısız olur.  

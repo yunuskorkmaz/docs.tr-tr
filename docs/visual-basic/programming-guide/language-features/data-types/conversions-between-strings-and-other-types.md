@@ -9,14 +9,15 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: ae8f7c2159191536013fafd8bfd10fb9a93fb785
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 823931f7d6beb8218e8b99d4a8d45716b7214304
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394227"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077156"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Dizeler ve Diğer Türleri Arasında Dönüştürmeler (Visual Basic)
+
 Bir sayısal, `Boolean` veya tarih/saat değerini bir olarak dönüştürebilirsiniz `String` . Ters yönde, bir dize değerinden sayısal, `Boolean` , veya `Date` — dize içeriği belirtilen hedef veri türünün geçerli bir değeri olarak yorumlanabilecek şekilde de dönüştürebilirsiniz. Bu durumda, bir çalışma zamanı hatası oluşur.  
   
  Her iki yönde de tüm bu atamaların dönüştürmeleri daraltma dönüştürmelerinde. Tür dönüştürme anahtar sözcüklerini ( `CBool` , `CByte` ,,,, `CDate` , `CDbl` , `CDec` `CInt` `CLng` `CSByte` , `CShort` , `CSng` , `CStr` ,,,, `CUInt` `CULng` `CUShort` ve `CType` ) kullanmanız gerekir. <xref:Microsoft.VisualBasic.Strings.Format%2A>Ve <xref:Microsoft.VisualBasic.Conversion.Val%2A> işlevleri, dizeler ve sayılar arasındaki dönüştürmeler üzerinde ek denetim sağlar.  
@@ -24,6 +25,7 @@ Bir sayısal, `Boolean` veya tarih/saat değerini bir olarak dönüştürebilirs
  Bir sınıf veya yapı tanımladıysanız, sınıf veya yapınızın türü dönüştürme işleçlerini tanımlayabilirsiniz `String` . Daha fazla bilgi için bkz. [nasıl yapılır: dönüştürme Işleci tanımlama](../procedures/how-to-define-a-conversion-operator.md).  
   
 ## <a name="conversion-of-numbers-to-strings"></a>Sayıları dizelere dönüştürme  
+
  `Format`Bir sayıyı biçimlendirilmiş bir dizeye dönüştürmek için işlevini kullanabilirsiniz. Bu, yalnızca uygun basamakları değil, bir para birimi işareti (örneğin `$` ), binlik ayırıcıları veya *Basamak gruplama sembolleri* (gibi) `,` ve bir ondalık ayırıcısı (gibi) biçimlendirme gibi simgeleri de içerebilir `.` . `Format`, Windows **Denetim Masası**'Nda belirtilen **Bölgesel Seçenekler** ayarlarına göre otomatik olarak uygun sembolleri kullanır.  
   
  `&`Aşağıdaki örnekte gösterildiği gibi, birleştirme () işlecinin bir sayıyı örtük olarak bir dizeye dönüştürebileceğini unutmayın.  
@@ -34,7 +36,8 @@ Str = "The total count is " & count
 ```  
   
 ## <a name="conversion-of-strings-to-numbers"></a>Dizelerin sayılara dönüştürülmesi  
- `Val`Bir dizedeki rakamları bir sayıya açıkça dönüştürmek için işlevini kullanabilirsiniz. `Val`bir rakam, boşluk, sekme, satır akışı veya nokta dışında bir karakterle karşılaşana kadar dizeyi okur. "&O" ve "&H" dizileri, sayı sisteminin temelini değiştirir ve taramayı sonlandırır. Okumayı durdurmadan, `Val` tüm uygun karakterleri sayısal bir değere dönüştürür. Örneğin, aşağıdaki ifade değeri döndürür `141.825` .  
+
+ `Val`Bir dizedeki rakamları bir sayıya açıkça dönüştürmek için işlevini kullanabilirsiniz. `Val` bir rakam, boşluk, sekme, satır akışı veya nokta dışında bir karakterle karşılaşana kadar dizeyi okur. "&O" ve "&H" dizileri, sayı sisteminin temelini değiştirir ve taramayı sonlandırır. Okumayı durdurmadan, `Val` tüm uygun karakterleri sayısal bir değere dönüştürür. Örneğin, aşağıdaki ifade değeri döndürür `141.825` .  
   
  `Val("   14   1.825 miles")`  
   

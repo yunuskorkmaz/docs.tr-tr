@@ -13,14 +13,15 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 46cf9062d01e248b6e90882a923a48210780f7f4
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9960dacc053c5dc8d8cfdfd6eaa0ea3258ed0fea
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84388510"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077078"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Nasıl yapılır: Bir Yordam Bağımsız Değişkeninin Değerini Değiştirme (Visual Basic)
+
 Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken yordamda tanımlanan parametrelerden birine karşılık gelir. Bazı durumlarda, yordam kodu, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirebilir. Diğer durumlarda yordam, bir bağımsız değişkenin yalnızca yerel kopyasını değiştirebilir.  
   
  Yordamı çağırdığınızda Visual Basic, [ByVal](../../../language-reference/modifiers/byval.md)' ı geçen her bağımsız değişkenin yerel bir kopyasını oluşturur. [ByRef](../../../language-reference/modifiers/byref.md)olarak geçen her bir bağımsız değişken için, Visual Basic yordam koduna, çağıran koddaki bağımsız değişkeni temel alan programlama öğesine doğrudan başvuru verir.  
@@ -42,6 +43,7 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
  Tanıtım için örneğe bakın.  
   
 ## <a name="changing-local-copies"></a>Yerel kopyaları değiştirme  
+
  Çağıran koddaki temeldeki öğe değiştirilemeyen bir öğe ise veya bağımsız değişken geçirilmemişse `ByVal` yordam, çağıran koddaki değerini değiştiremez. Ancak yordam, böyle bir bağımsız değişkenin yerel kopyasını değiştirebilir.  
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Yordam kodundaki yordam bağımsız değişkeninin kopyasını değiştirmek için  
@@ -55,6 +57,7 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
 2. Yordam kodunda, bağımsız değişkenin yerel kopyasına bir değer atamak için parametre adını kullanın. Çağıran koddaki temel alınan değer değiştirilmez.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, bir dizi değişkeni alan ve öğelerinde çalışan iki yordamı gösterir. `increase`Yordam her bir öğeye yalnızca bir tane ekler. `replace`Yordam parametreye yeni bir dizi atar `a()` ve sonra her öğeye bir tane ekler.  
   
  [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]  
@@ -70,11 +73,13 @@ Bir yordamı çağırdığınızda, sağladığınız her bağımsız değişken
  Yordamın, çağıran koddaki değişkenin kendisini değiştirmesini engelleyebilirsiniz. Bkz. [nasıl yapılır: bir yordam bağımsız değişkenini değer değişikliklerine karşı koruma](./how-to-protect-a-procedure-argument-against-value-changes.md).  
   
 ## <a name="compile-the-code"></a>Kodu derle  
+
  Bir değişkeni başvuruya göre geçirdiğinizde, `ByRef` Bu mekanizmayı belirtmek için anahtar sözcüğünü kullanmanız gerekir.  
   
  Visual Basic varsayılan değeri, bağımsız değişkenleri değere göre geçirmektir. Ancak, her bir belirtilen parametreye ilişkin [ByVal](../../../language-reference/modifiers/byval.md) veya [ByRef](../../../language-reference/modifiers/byref.md) anahtar sözcüğünü eklemek iyi bir programlama uygulamasıdır. Bu, kodunuzun okunmasını kolaylaştırır.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
+
  Bir yordamın, çağıran koddaki bağımsız değişkenin temelindeki değeri değiştirmesine izin vermek için her zaman potansiyel bir risk vardır. Bu değerin değiştirilmesini beklediğinizden ve kullanılmadan önce geçerliliği göz önünde denetlediğinizden emin olun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

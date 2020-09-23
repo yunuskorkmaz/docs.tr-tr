@@ -6,19 +6,21 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 9d85f9c0390a659e59e372ad949cffdd17715189
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c7d0595b991bdad6ef05b567f95ead8c7fccdbc2
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84413264"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077286"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>İlk LINQ Sorgunuzu Yazma (Visual Basic)
+
 *Sorgu* , veri kaynağından veri alan bir ifadedir. Sorgular adanmış bir sorgu dilinde ifade edilir. Zaman içinde farklı diller, örneğin, ilişkisel veritabanları için SQL ve XML için XQuery gibi farklı türlerde veri kaynakları için geliştirilmiştir. Bu, uygulama geliştiricisinin desteklenen her bir veri kaynağı türü veya veri biçimi için yeni bir sorgu dili öğrenmesini zorunlu kılar.  
   
  Dil ile tümleşik sorgu (LINQ), çeşitli veri kaynakları ve biçimlerdeki verilerle çalışmaya yönelik tutarlı bir model sunarak durumu basitleştirir. LINQ sorgusunda, her zaman nesneleriyle birlikte çalışmanız gerekir. XML belgelerinde, SQL veritabanlarında, ADO.NET veri kümelerinde ve varlıklarda, .NET Framework koleksiyonlarında ve LINQ sağlayıcısının kullanılabildiği diğer tüm kaynak veya biçimdeki verileri sorgulamak ve dönüştürmek için aynı temel kodlama düzenlerini kullanırsınız. Bu belgede temel LINQ sorgularının oluşturulması ve kullanılması için üç aşama açıklanmaktadır.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Bir Sorgu İşleminin Üç Aşaması  
+
  LINQ sorgu işlemleri üç eylemden oluşur:  
   
 1. Veri kaynağını veya kaynaklarını edinin.  
@@ -36,11 +38,12 @@ ms.locfileid: "84413264"
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- Çıktı:  
+ Çıkış:  
   
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>Veri Kaynağı  
+
  Önceki örnekteki veri kaynağı bir dizi olduğundan, genel arabirimi örtülü olarak destekler <xref:System.Collections.Generic.IEnumerable%601> . Bu aslında bir diziyi bir LINQ sorgusu için veri kaynağı olarak kullanmanıza olanak sağlar. Destekleyen türler <xref:System.Collections.Generic.IEnumerable%601> veya genel gibi türetilmiş bir arabirim <xref:System.Linq.IQueryable%601> *sorgulanabilir türler*olarak adlandırılır.  
   
  Örtük olarak sorgulanabilir bir tür olarak, dizi hiçbir değişiklik veya bir LINQ veri kaynağı olarak kullanılacak özel bir işleme gerektirmez. Aynı şekilde, <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Collections.Generic.List%601> <xref:System.Collections.Generic.Dictionary%602> .NET Framework sınıf kitaplığındaki genel, ve diğer sınıflar da dahil olmak üzere, destekleyen tüm koleksiyon türleri için de geçerlidir.  
@@ -63,6 +66,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 > <xref:System.Collections.ArrayList>Genel olmayan arabirimi destekleyen türler <xref:System.Collections.IEnumerable> , LINQ veri kaynakları olarak da kullanılabilir. Kullanan bir örnek için <xref:System.Collections.ArrayList> bkz. [nasıl yapılır: bir ARRAYLIST 'i LINQ ile sorgulama (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>Sorgu  
+
  Sorguda, veri kaynağından veya kaynaklardan hangi bilgileri almak istediğinizi belirtirsiniz. Ayrıca, bu bilgilerin döndürülmeden önce nasıl sıralanacağını, gruplanacağını veya yapılandırıldığını belirtme seçeneğiniz de vardır. Sorgu oluşturmayı etkinleştirmek için Visual Basic dilde yeni sorgu söz dizimi eklendi.  
   
  Yürütüldüğünde, aşağıdaki örnekteki sorgu bir tamsayı dizisinden gelen tüm çift sayıları döndürür `numbers` .  
@@ -74,9 +78,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  Sorgu değişkeninin kendisinin hiçbir eylem aldığını ve veri döndürdüğünü unutmamak önemlidir. Yalnızca sorgu tanımını depolar. Önceki örnekte, `For Each` sorguyu yürüten döngüdür.  
   
 ## <a name="query-execution"></a>Sorgu Yürütme  
+
  Sorgu yürütme sorgu oluşturulduktan farklıdır. Sorgu oluşturma sorguyu tanımlar, ancak yürütme farklı bir mekanizma tarafından tetiklenir. Sorgu, tanımlanır (*anında yürütme*), veya tanım depolanabilir ve sorgu daha sonra yürütülebilir (*ertelenmiş yürütme*).  
   
 ### <a name="deferred-execution"></a>Ertelenmiş Yürütme  
+
  Tipik bir LINQ sorgusu, içinde tanımlanan önceki örnekteki bir örneğe benzer `evensQuery` . Sorguyu oluşturur ancak hemen yürütmez. Bunun yerine sorgu tanımı sorgu değişkeninde depolanır `evensQuery` . Sorguyu daha sonra `For Each` bir değer dizisi döndüren bir döngü kullanarak ya da veya gibi standart bir sorgu işleci uygulayarak yürütün `Count` `Max` . Bu işlem *ertelenmiş yürütme*olarak adlandırılır.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
@@ -87,7 +93,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  [!code-vb[VbLINQFirstQuery#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#3)]  
   
- Çıktı:  
+ Çıkış:  
   
  `Evens in original array:`  
   
@@ -98,6 +104,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  `0  10  2  22  8`  
   
 ### <a name="immediate-execution"></a>Hemen Yürütme  
+
  Sorguları ertelenmiş olarak yürütmek için sorgu tanımı daha sonra yürütülmek üzere bir sorgu değişkeninde depolanır. Anında yürütme sırasında sorgu, tanımı sırasında yürütülür. Sorgu sonucunun ayrı öğelerine erişim gerektiren bir yöntemi uyguladığınızda yürütme tetiklenir. Hemen yürütme genellikle tek değer döndüren standart sorgu işleçlerinden biri kullanılarak zorlanır. Örnekler,,, `Count` `Max` `Average` ve `First` . Bu standart sorgu işleçleri, tek bir sonucu hesaplamak ve döndürmek için uygulandıktan hemen sonra sorguyu yürütür. Tek değerler döndüren standart sorgu işleçleri hakkında daha fazla bilgi için bkz. [toplama işlemleri](aggregation-operations.md), [öğe Işlemleri](element-operations.md)ve [nicelik toplamı işlemleri](quantifier-operations.md).  
   
  Aşağıdaki sorgu, bir tamsayılar dizisindeki Çift sayıların sayımını döndürür. Sorgu tanımı kaydedilmez ve `numEvens` basit bir işlemdir `Integer` .  

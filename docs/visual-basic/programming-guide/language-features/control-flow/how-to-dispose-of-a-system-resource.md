@@ -10,14 +10,15 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: dd15c6746628f45b072d46eea40051ed9afb7921
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: c430bc7744f5aefaa65f2a86f3e5e22743ffed57
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403504"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077208"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Nasıl yapılır: Bir Sistem Kaynağını Atma (Visual Basic)
+
 `Using`Kodunuzun bloğundan çıkış yaparken sistemin bir kaynağı ortadan kaldırabileceğini güvence altına almak için bir bloğu kullanabilirsiniz. Bu, büyük miktarda bellek tüketen bir sistem kaynağı kullanıyorsanız veya diğer bileşenlerin de kullanılmasını istiyorsanız kullanışlıdır.  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>Kodunuz ile işiniz bittiğinde bir veritabanı bağlantısını atmak için  

@@ -2,14 +2,15 @@
 title: Dosya Erişimi için Async Kullanma
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: 2ee1efa69f4b13224be65fe802ebf5f834c941aa
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2e7fa4a78363a08f2ff25e6a961868e85994e200
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400777"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077364"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>Dosya erişimi için Async Kullanma (Visual Basic)
+
 Dosyalara erişmek için zaman uyumsuz özelliği kullanabilirsiniz. Async özelliğini kullanarak, geri çağırmaları kullanmadan veya kodunuzu birden çok yöntemde veya Lambda ifadelerinde bölmeden zaman uyumsuz yöntemlere çağrı yapabilirsiniz. Zaman uyumlu kodu zaman uyumsuz yapmak için, zaman uyumlu bir yöntem yerine zaman uyumsuz bir yöntem çağırır ve koda birkaç anahtar sözcük eklemeniz yeterlidir.  
   
  Dosya erişim çağrılarına zaman uyumsuzluğu eklemek için aşağıdaki nedenleri göz önünde bulundurmanız gerekebilir:  
@@ -25,6 +26,7 @@ Dosyalara erişmek için zaman uyumsuz özelliği kullanabilirsiniz. Async özel
 - Zaman uyumsuz görevler, paralel olarak kolayca çalıştırılabilir.  
   
 ## <a name="running-the-examples"></a>Örnekleri çalıştırma  
+
  Bu konudaki örnekleri çalıştırmak için bir **WPF uygulaması** veya **Windows Forms uygulaması** oluşturabilir ve sonra bir **düğme**ekleyebilirsiniz. Düğmenin `Click` olayında, her örnekteki ilk yönteme bir çağrı ekleyin.  
   
  Aşağıdaki örneklerde aşağıdaki `Imports` deyimlerini ekleyin.  
@@ -39,11 +41,13 @@ Imports System.Threading.Tasks
 ```  
   
 ## <a name="use-of-the-filestream-class"></a>FILESTREAM sınıfının kullanımı  
+
  Bu konudaki örneklerde, <xref:System.IO.FileStream> zaman uyumsuz g/ç 'nin işletim sistemi düzeyinde oluşmasına neden olan bir seçeneğe sahip olan sınıfını kullanın. Bu seçeneği kullanarak, birçok durumda bir ThreadPool iş parçacığını engellemeyi önleyebilirsiniz. Bu seçeneği etkinleştirmek için, `useAsync=true` `options=FileOptions.Asynchronous` Oluşturucu çağrısında veya bağımsız değişkenini belirtirsiniz.  
   
  Bu seçeneği, <xref:System.IO.StreamReader> ve <xref:System.IO.StreamWriter> doğrudan bir dosya yolu belirterek açarsanız kullanabilirsiniz. Ancak, bu seçeneği, <xref:System.IO.Stream> sınıfının açık olduğunu bir şekilde sağlarsanız kullanabilirsiniz <xref:System.IO.FileStream> . Bekleme sırasında UI iş parçacığı engellenmediğinden, zaman uyumsuz çağrıların Kullanıcı arabirimi uygulamalarında daha hızlı olduğunu unutmayın.  
   
 ## <a name="writing-text"></a>Metin yazma  
+
  Aşağıdaki örnek bir dosyaya metin yazar. Her await ifadesinde, yöntemi hemen çıkar. G/ç dosyası tamamlandığında, yöntemi await ifadesini izleyen deyimde devam eder. Zaman uyumsuz değiştiricinin await ifadesini kullanan yöntemlerin tanımında olduğunu unutmayın.  
   
 ```vb  
@@ -73,9 +77,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- İlk ifade bir görev döndürür ve dosya işlemenin başlatılmasına neden olur. Await ile ikinci ifade, yönteminin hemen çıkmasına ve farklı bir görev döndürmesine neden olur. Dosya işleme daha sonra tamamlandığında, yürütme, await ' ı izleyen ifadeye geri döner. Daha fazla bilgi için bkz. [zaman uyumsuz programlarda denetim akışı (Visual Basic)](control-flow-in-async-programs.md).  
+ İlk ifade bir görev döndürür ve dosya işlemenin başlatılmasına neden olur. Await ile ikinci ifade, yönteminin hemen çıkmasına ve farklı bir görev döndürmesine neden olur. Dosya işleme daha sonra tamamlandığında, yürütme, await ' ı izleyen ifadeye geri döner. Daha fazla bilgi için bkz.  [zaman uyumsuz programlarda denetim akışı (Visual Basic)](control-flow-in-async-programs.md).  
   
 ## <a name="reading-text"></a>Metin okuma  
+
  Aşağıdaki örnek bir dosyadaki metni okur. Metin, arabelleğe alınmış ve bu durumda bir öğesine yerleştirildi <xref:System.Text.StringBuilder> . Önceki örnekte aksine, await 'ın değerlendirmesi bir değer oluşturur. <xref:System.IO.Stream.ReadAsync%2A>Yöntemi bir> döndürür <xref:System.Threading.Tasks.Task> \<<xref:System.Int32> , bu nedenle await 'ın değerlendirmesi `Int32` işlem tamamlandıktan sonra bir değer ( `numRead` ) oluşturur. Daha fazla bilgi için bkz. [Async Return Types (Visual Basic)](async-return-types.md).  
   
 ```vb  
@@ -118,6 +123,7 @@ End Function
 ```  
   
 ## <a name="parallel-asynchronous-io"></a>Paralel zaman uyumsuz g/ç  
+
  Aşağıdaki örnek, 10 metin dosyası yazarak paralel işlemeyi gösterir. Her dosya için, <xref:System.IO.Stream.WriteAsync%2A> yöntemi bir görev listesine eklenen bir görevi döndürür. `Await Task.WhenAll(tasks)`Deyimden çıkılıyor ve tüm görevler için dosya işleme tamamlandığında yöntemi içinde devam eder.  
   
  Örnek, <xref:System.IO.FileStream> `Finally` görevler tamamlandıktan sonra bir bloktaki tüm örnekleri kapatır. Her biri `FileStream` bir bildiriminde oluşturulduysa, `Imports` görev tamamlanmadan önce ' `FileStream` nin atımı bırakılmış olabilir.  

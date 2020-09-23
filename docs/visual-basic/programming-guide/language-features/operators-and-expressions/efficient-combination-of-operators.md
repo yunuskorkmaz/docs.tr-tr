@@ -13,14 +13,15 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: 3088072646278dac13e4d483cb4f99297eaad9ca
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9ba6be8e1dd03c0589f712b0e9b39258953cd223
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403478"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077091"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>İşleçlerin Etkili Bileşimi (Visual Basic)
+
 Karmaşık ifadelerde birçok farklı işleç bulunabilir. Aşağıdaki örnek bunu göstermektedir.  
   
  `x = (45 * (y + z)) ^ (2 / 85) * 5 + z`  
@@ -28,6 +29,7 @@ Karmaşık ifadelerde birçok farklı işleç bulunabilir. Aşağıdaki örnek b
  Önceki örnekteki gibi karmaşık ifadelerin oluşturulması, işleç önceliği kurallarının eksiksiz bir şekilde anlaşılmasına gerek duyar. Daha fazla bilgi için [Visual Basic operatör önceliği](../../../language-reference/operators/operator-precedence.md)bölümüne bakın.  
   
 ## <a name="parenthetical-expressions"></a>Parantez içinde Ifadeler  
+
  Genellikle işlemlerin operatör önceliğine göre belirlenen şekilde farklı bir sırada devam etmesini istiyorsunuz. Aşağıdaki örneği inceleyin.  
   
  `x = z * y + 4`  
@@ -39,6 +41,7 @@ Karmaşık ifadelerde birçok farklı işleç bulunabilir. Aşağıdaki örnek b
  Yukarıdaki örnek, `y` ve `4` sonra bu toplamı ile çarpar `z` .  
   
 ### <a name="nested-parenthetical-expressions"></a>İç içe geçmiş parantez Ifadeleri  
+
  Daha da fazla öncelik vermek için ifadeleri birden çok parantez düzeyinde iç içe yerleştirebilirsiniz. Parantez içinde en derin iç içe yerleştirilmiş ifadeler önce değerlendirilir, ardından sonraki en derin iç içe geçmiş ve bu, en az derin iç içe, son olarak da parantez dışında ifadeler. Aşağıdaki örnek bunu göstermektedir.  
   
  `x = (z * 4) ^ (y * (z + 2))`  

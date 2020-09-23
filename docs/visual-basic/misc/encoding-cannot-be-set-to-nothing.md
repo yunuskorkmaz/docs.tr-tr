@@ -2,17 +2,18 @@
 title: Kodlama Nothing olarak ayarlanamaz
 ms.date: 07/20/2015
 ms.assetid: 59f7c731-8291-4a85-bf51-c225e48cdc84
-ms.openlocfilehash: 41565d1aa3b69f6ad92d4bbf2b2f2170014aef87
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 0356098ca3fb41804ea396b0ff792cf2990b3340
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84394485"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077546"
 ---
 # <a name="encoding-cannot-be-set-to-nothing"></a>Kodlama Nothing olarak ayarlanamaz
+
 Parametre `encoding` olarak ayarlandığı `Nothing` ancak geçerli bir değer gerektirdiğinden bir dosyayı okuma veya yazma girişimi başarısız oldu.  
   
- <xref:System.Text.Encoding>bir dosyaya yazarken kullanılacak kodlamayı belirlemek için kullanılır. Varsayılan değer UTF-8’dir.  
+ <xref:System.Text.Encoding> bir dosyaya yazarken kullanılacak kodlamayı belirlemek için kullanılır. Varsayılan değer UTF-8’dir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  
   

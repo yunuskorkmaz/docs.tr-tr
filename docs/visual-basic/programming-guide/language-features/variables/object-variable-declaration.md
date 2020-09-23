@@ -12,14 +12,15 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: b6de52cf738a56a42c82978b54cef31574ab0bcb
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 74b1401df3dbb2d744de74734d10cbcd92e9689e
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84410367"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91077052"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>Nesne Değişken Bildirimi (Visual Basic)
+
 Bir nesne değişkeni bildirmek için normal bir bildirim bildirimi kullanın. Veri türü için, `Object` (yani, [nesne veri türü](../../../language-reference/data-types/object-data-type.md)) ya da nesnenin oluşturulacağı daha belirli bir sınıf belirtirsiniz.  
   
  Bir değişkeni olarak bildirme `Object` ile aynı şekilde bildirme <xref:System.Object?displayProperty=nameWithType> .  
@@ -27,6 +28,7 @@ Bir nesne değişkeni bildirmek için normal bir bildirim bildirimi kullanın. V
  Belirli bir nesne sınıfıyla bir değişken bildirdiğinizde, bu sınıf ve devraldığı sınıflar tarafından sunulan tüm yöntemlere ve özelliklere erişebilir. Değişkenini ile bildirirseniz <xref:System.Object> , <xref:System.Object> `Option Strict Off` geç bağlamaya izin vermeyi yüklemediğiniz müddetçe yalnızca sınıfın üyelerine erişebilir.  
   
 ## <a name="declaration-syntax"></a>Bildirim Sözdizimi  
+
  Bir nesne değişkenini bildirmek için aşağıdaki sözdizimini kullanın:  
   
 ```vb  
@@ -42,11 +44,13 @@ Dim objC As System.OperatingSystem
 ```  
   
 ## <a name="late-binding-and-early-binding"></a>Geç bağlama ve erken bağlama  
+
  Bazen, kodunuz çalışana kadar belirli bir sınıf bilinmez. Bu durumda, nesne değişkenini `Object` veri türüyle bildirmeniz gerekir. Bu, herhangi bir nesne türüne genel bir başvuru oluşturur ve belirli bir sınıf çalışma zamanında atanır. Bu, *geç bağlama*olarak adlandırılır. Geç bağlama ek yürütme süresi gerektirir. Ayrıca, kodunuzu en son atadığınız sınıfın yöntemleriyle ve özellikleriyle da sınırlandırır. Bu, kodunuzun farklı bir sınıfın üyelerine erişmeye çalışırsa çalışma zamanı hatalarına neden olabilir.  
   
  Derleme zamanında belirli bir sınıfı bildiğinizde, nesne değişkenini bu sınıftan olacak şekilde bildirmeniz gerekir. Bu, *erken bağlama*olarak adlandırılır. Erken bağlama performansı iyileştirir ve kodun tüm yöntemlerine ve özelliklerine yönelik kod erişiminizi güvence altına alır. Önceki örnek bildirimlerinde, değişken `objA` yalnızca sınıfının nesnelerini kullanıyorsa <xref:System.Windows.Forms.Label?displayProperty=nameWithType> , bildiriminde belirtmeniz gerekir `As System.Windows.Forms.Label` .  
   
 ### <a name="advantages-of-early-binding"></a>Erken bağlamanın avantajları  
+
  Bir nesne değişkeninin belirli bir sınıf olarak bildirilmesi çeşitli avantajlar sunar:  
   
 - Otomatik tür denetimi  
@@ -64,6 +68,7 @@ Dim objC As System.OperatingSystem
 - Daha hızlı kod yürütme  
   
 ## <a name="access-to-object-variable-members"></a>Nesne değişkeni üyelerine erişim  
+
  `Option Strict`Açık olduğunda `On` , bir nesne değişkeni yalnızca, onu bildirdiğiniz sınıfın yöntemlerine ve özelliklerine erişebilir. Aşağıdaki örnek bunu göstermektedir.  
   
 ```vb  
@@ -87,6 +92,7 @@ End Sub
  Bu örnekte, `p` yalnızca <xref:System.Object> sınıfının kendisini, özelliğini içermeyen üyelerini kullanabilir `Left` . Diğer taraftan, türü olarak `q` bildirildi <xref:System.Windows.Forms.Label> , bu nedenle <xref:System.Windows.Forms.Label> ad alanındaki sınıfının tüm yöntemlerini ve özelliklerini kullanabilir <xref:System.Windows.Forms> .  
   
 ## <a name="flexibility-of-object-variables"></a>Nesne değişkenlerinin esnekliği  
+
  Devralma hiyerarşisinde nesnelerle çalışırken, nesne değişkenlerinizi bildirirken hangi sınıftan kullanacağınızı tercih edersiniz. Bu seçimi yaparken, bir sınıfın üyelerine erişim için nesne atamasının esnekliğini dengeetmeniz gerekir. Örneğin, sınıfına yol gösteren devralma hiyerarşisini göz önünde bulundurun <xref:System.Windows.Forms.Form?displayProperty=nameWithType> :  
   
  <xref:System.Object>  
