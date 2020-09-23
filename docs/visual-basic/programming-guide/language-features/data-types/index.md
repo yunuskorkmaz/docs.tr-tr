@@ -8,17 +8,19 @@ helpviewer_keywords:
 - Visual Basic code, data types
 - data types [Visual Basic], improving speed with
 ms.assetid: 5e1b9aaf-c7ca-4b29-9b22-0e82ed8e85e2
-ms.openlocfilehash: 928d7fb6a40873641ae3e91e057c272b946a0091
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 8cb9642c1d7e6876030efe17f5c09e4888700a24
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84393720"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095596"
 ---
 # <a name="data-types-in-visual-basic"></a>Visual Basic'de Veri Türleri
+
 Bir programlama öğesinin *veri türü* , ne tür verileri tutabileceğini ve bu verileri nasıl depoladığını gösterir. Veri türleri, bilgisayar belleğinde depolanabilecek veya bir ifadenin değerlendirmesine katılan tüm değerlere uygulanır. Her değişken, sabit değer, sabit, numaralandırma, özellik, yordam parametresi, yordam bağımsız değişkeni ve yordam dönüş değeri bir veri türüne sahiptir.  
   
 ## <a name="declared-data-types"></a>Belirtilen veri türleri  
+
  Bir WITH bildirimi deyimi ile bir programlama öğesi tanımlarsınız ve onun veri türünü `As` yan tümcesiyle belirlersiniz. Aşağıdaki tabloda, çeşitli öğeleri bildirmek için kullandığınız deyimler gösterilmektedir.  
   
 |Programlama öğesi|Veri türü bildirimi|  

@@ -9,19 +9,21 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: 14f3de39eb8d8e6820e2b40792a8e8e57217e410
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 351bdb6963e278341c13e53ef19aea0876010aa9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414382"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095648"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Kullanıcı Tanımlı Sabitler (Visual Basic)
+
 Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Adın gösterdiği gibi sabitler depolama değerleri, bir uygulamanın yürütülmesi boyunca sabit kalır. Üzerinde çalıştığınız denetimler veya bileşenler tarafından tanımlanan sabitleri kullanabilir veya kendi kendinize de oluşturabilirsiniz. Kendi oluşturduğunuz sabitler *Kullanıcı tanımlı*olarak açıklanmaktadır.  
   
  `Const`Bir değişken adı oluşturmak için kullandığınız yönergeleri kullanarak ifadesiyle bir sabit değeri bildirirsiniz. `Option Strict`İse `On` , sabit türü açıkça bildirmeniz gerekir.  
   
 ## <a name="const-statement-usage"></a>Const deyimin kullanımı  
+
  Bir `Const` ifade matematiksel veya tarih/saat sayısını temsil edebilir:  
   
  [!code-vb[VbEnumsTask#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#10)]  
@@ -35,6 +37,7 @@ Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Ad
  [!code-vb[VbEnumsTask#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#15)]  
   
 ## <a name="scope-of-user-defined-constants"></a>Kullanıcı tanımlı sabitler kapsamı  
+
  Bir `Const` deyimin kapsamı aynı konumda bildirildiği bir değişkenle aynıdır. Kapsamı aşağıdaki yollarla belirtebilirsiniz:  
   
 - Yalnızca bir yordamda var olan bir sabit oluşturmak için, bu yordamın içinde bildirin.  
@@ -48,6 +51,7 @@ Sabit, değişmez bir sayının veya dizenin yerini alan anlamlı bir addır. Ad
  Daha fazla bilgi için bkz. [nasıl yapılır: bir sabit bildirme](how-to-declare-a-constant.md).  
   
 ### <a name="avoiding-circular-references"></a>Döngüsel başvuruların kaçınma  
+
  Sabitler diğer sabitler açısından tanımlanabileceğinden, iki veya daha fazla sabitler arasında yanlışlıkla bir *döngü*veya döngüsel başvuru oluşturmak mümkündür. İki veya daha fazla ortak sabitiniz olduğunda, her biri diğeri farklı olduğunda, aşağıdaki örnekte olduğu gibi bir döngüden oluşur:  
   
  [!code-vb[VbEnumsTask#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#16)]  

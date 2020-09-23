@@ -5,17 +5,19 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 8262cc2742435abef0a05fefd7a40d5be2ec3e88
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 7d0f28ff8b7f773b8b4ecc68320fbfa34c263136
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414498"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095661"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Numaralandırmalara Genel Bakış (Visual Basic)
+
 Numaralandırmalar ilgili sabitler kümesiyle çalışmak ve sabit değerleri adlarla ilişkilendirmek için kullanışlı bir yol sağlar. Örneğin, haftanın günleriyle ilişkili bir tamsayı sabitleri kümesi için bir sabit listesi belirtebilir ve ardından kodunuzda tamsayı değerleri yerine günlerin adlarını kullanabilirsiniz.  
   
 ## <a name="tasks-involving-enumerations"></a>Numaralandırmalar içeren görevler  
+
  Aşağıdaki tabloda, numaralandırmalar içeren ortak görevler listelenmektedir.  
   
 |Bunu yapmak için|Bkz.|  

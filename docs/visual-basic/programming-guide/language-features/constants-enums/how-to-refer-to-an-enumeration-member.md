@@ -7,14 +7,15 @@ helpviewer_keywords:
 - enumeration members
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
-ms.openlocfilehash: 66c527bd4ba4721065de8fca8534fe652d0139be
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: d1b239e7d6be3ebf1e64d6589a4cc14dce8946f5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414420"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095674"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>Nasıl yapılır: Bir Numaralandırma Üyesine Başvurma (Visual Basic)
+
 Numaralandırmalar ilgili sabitler kümesiyle çalışmak ve sabit değerleri adlarla ilişkilendirmek için kullanışlı bir yol sağlar. Örneğin, haftanın günleriyle ilişkili bir tamsayı sabitleri kümesi için bir sabit listesi belirtebilir ve ardından kodunuzda tamsayı değerleri yerine günlerin adlarını kullanabilirsiniz.  
   
  İfadesiyle tam nitelikli adlar kullanmaktan kaçınabilirsiniz `Imports` . Daha fazla bilgi için bkz. [numaralandırmalar ve ad niteliği](enumerations-and-name-qualification.md).  

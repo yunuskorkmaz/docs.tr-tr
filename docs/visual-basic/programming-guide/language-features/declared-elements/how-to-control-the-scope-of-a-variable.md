@@ -12,14 +12,15 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 8b21f22edea84448e3f2969c3e4b07c08a17a338
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2ce7c1700eec54542719e6e0880466ca136e86f6
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84357354"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91095440"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Nasıl yapılır: Bir Değişkenin Kapsamını Denetleme (Visual Basic)
+
 Normalde, bir değişken *kapsam*içinde veya başvuru için görünür, burada, bildirdiğiniz bölge boyunca olur. Bazı durumlarda, değişkenin *erişim düzeyi* kapsamını etkileyebilir.  
   
  Daha fazla bilgi için [Visual Basic kapsam](scope.md)bölümüne bakın.  
@@ -39,6 +40,7 @@ Normalde, bir değişken *kapsam*içinde veya başvuru için görünür, burada,
      Yordamda yer alan herhangi bir bloğun içinde olduğu gibi yalnızca yordamın içinden değişkene başvurabilirsiniz.  
   
 ## <a name="scope-at-module-or-namespace-level"></a>Modül veya ad alanı düzeyinde kapsam  
+
  Kolaylık olması için, tek vadeli *Modül düzeyi* modüller, sınıflar ve yapılar için eşit oranda geçerlidir. Modül düzeyi değişkeninin erişim düzeyi kapsamını belirler. Modül, sınıf veya yapıyı içeren ad alanı da kapsamı etkiler.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Bir değişkeni bir modül, sınıf veya yapı genelinde görünür hale getirmek için  
@@ -58,6 +60,7 @@ Normalde, bir değişken *kapsam*içinde veya başvuru için görünür, burada,
 3. Değişkeni, modül, sınıf veya yapıyı içeren ad alanı içinde herhangi bir yerden yazabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek modül düzeyinde bir değişken bildirir ve görünürlüğünü modül içindeki kodla sınırlandırır.  
   
 ```vb  
@@ -81,9 +84,11 @@ Public strMsg As String
 ```  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
+
  Bir değişkenin kapsamını daraltmak için, yanlışlıkla aynı ada sahip başka bir değişken yerine buna başvuran daha az fırsat vardır. Ayrıca, başvuru eşleştirmesinin sorunlarını da en aza indirebilirsiniz.  
   
 ## <a name="net-framework-security"></a>.NET Framework Güvenliği  
+
  Bir değişkenin kapsamını daraltmak, kötü amaçlı kodun yanlış kullanımı olasılığını en kısa hale getirir.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
