@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: bd6fc431a4a943a3a0022e8e75c834a49b952a66
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: bd7c372f3cfee3babe4b3fdf190bf8ed87dab6db
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84402141"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100379"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>Satır \<number> , geçerli Fieldgenişlikleri kullanılarak ayrıştırılamıyor
+
 Belirtilen satır, alanları belirtilenden farklı genişlikler içerdiğinden ayrıştırılamıyor.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

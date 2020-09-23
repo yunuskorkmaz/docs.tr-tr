@@ -8,14 +8,15 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 524660fca7c56fa490cc85169898bf2bf6d1a16e
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 3edb1f74ab63497aeda0d72847bce92ad315a1a5
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400584"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098923"
 ---
 # <a name="-optioninfer"></a>-optioninfer
+
 Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -28,12 +29,13 @@ Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.
   
 |Terim|Tanım|  
 |---|---|  
-|`+`&#124;`-`|İsteğe bağlı. `-optioninfer+`Yerel tür çıkarımını etkinleştirmek veya engellemek için belirtin `-optioninfer-` . `-optioninfer`Belirtilen değer olmadan seçeneği, ile aynıdır `-optioninfer+` . Anahtar mevcut olmadığında varsayılan değer `-optioninfer` de vardır `-optioninfer+` . Varsayılan değer Vbc. rsp yanıt dosyasında ayarlanır.|  
+|`+` &#124; `-`|İsteğe bağlı. `-optioninfer+`Yerel tür çıkarımını etkinleştirmek veya engellemek için belirtin `-optioninfer-` . `-optioninfer`Belirtilen değer olmadan seçeneği, ile aynıdır `-optioninfer+` . Anahtar mevcut olmadığında varsayılan değer `-optioninfer` de vardır `-optioninfer+` . Varsayılan değer Vbc. rsp yanıt dosyasında ayarlanır.|  
   
 > [!NOTE]
 > `-noconfig`Söz konusu seçeneği, vbc. rsp ' de belirtilenler yerine derleyicinin iç varsayılan değerlerini koruma için kullanabilirsiniz. Bu seçenek için varsayılan derleyicidir `-optioninfer-` .  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Kaynak kodu dosyası bir [seçenek çıkarımı bildirisi](../../language-reference/statements/option-infer-statement.md)içeriyorsa, ifade `-optioninfer` komut satırı derleyici ayarını geçersiz kılar.  
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Visual Studio IDE 'de set-OptionInfer  
@@ -43,6 +45,7 @@ Değişken bildirimlerinde yerel tür çıkarımı kullanımını mümkün.
 2. **Derle** sekmesinde, **seçenek çıkarımı** kutusunda değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, `test.vb` Yerel tür çıkarımı etkin ile derlenir.  
   
 ```console

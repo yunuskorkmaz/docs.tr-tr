@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 94a8b43a891df9837925869e17fac4536a995264
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 2c243b05b7e819691165ef20996691c0bd38ae4a
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414278"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098871"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
+
 Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -30,6 +31,7 @@ Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.
 |`numberList`|İsteğe bağlı. Seçeneğin uygulandığı uyarı KIMLIĞI numaralarının virgülle ayrılmış listesi `-warnaserror` . Hiçbir uyarı KIMLIĞI belirtilmemişse, bu `-warnaserror` seçenek tüm uyarılar için geçerlidir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `-warnaserror`Seçeneği tüm uyarıları hata olarak değerlendirir. Normalde uyarı olarak bildirilen tüm iletiler, bunun yerine hata olarak bildirilir. Derleyici aynı uyarının sonraki tekrarlamalarını uyarılarla bildirir.  
   
  Varsayılan olarak, `-warnaserror-` uyarıların yalnızca bilgilendirici olmasına neden olan, etkin olur. `-warnaserror`İle aynı olan seçeneği, `-warnaserror+` uyarıların hata olarak işlenmesine neden olur.  
@@ -48,6 +50,7 @@ Derleyicinin bir uyarının ilk oluşumunu hata olarak ele almasına neden olur.
 |1. **Çözüm Gezgini**bir proje seçili olmalıdır. **Proje** menüsünde **Özellikler**' e tıklayın.<br />2. **Derle** sekmesine tıklayın.<br />3. **tüm uyarıları devre dışı bırak** onay kutusunun işaretinin kaldırıldığından emin olun.<br />4. **tüm uyarıları hata olarak işle** onay kutusunun işaretinin kaldırıldığından emin olun.<br />5. hata olarak değerlendirilmesi gereken uyarıya bitişik **bildirim** sütunundan **hata** seçin.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, `In.vb` derleyicisini derler ve bulduğu her uyarının ilk oluşumu için bir hata görüntüleyecek şekilde yönlendirir.  
   
 ```console
@@ -55,6 +58,7 @@ vbc -warnaserror in.vb
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, `T2.vb` bir hata olarak yalnızca kullanılmayan yerel değişkenler (42024) için uyarıyı derler ve değerlendirir.  
   
 ```console

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: c3eb1eb57b3d76e762ed53edb3b168ad96abec39
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e59296882edc018259816c73b6ae861b3b296783
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403271"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098975"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic'de Koşullu Derleme
+
 *Koşullu derlemede*, bir programdaki belirli kod blokları, diğerleri gözardı edilirken seçime bağlı olarak derlenir.  
   
  Örneğin, farklı yaklaşımların hızını aynı programlama göreviyle karşılaştıran hata ayıklama deyimleri yazmak veya bir uygulamayı birden çok dil için yerelleştirmek isteyebilirsiniz. Koşullu derleme deyimleri, çalışma zamanında değil, derleme zamanı sırasında çalışacak şekilde tasarlanmıştır.  
@@ -27,6 +28,7 @@ ms.locfileid: "84403271"
 > Kod düzenlenirken otomatik tamamlama çalışmaz ve kod geçerli dalın bir parçası değilse koşullu derleme yönergeleri kullanılır.  
   
 ## <a name="declaring-conditional-compilation-constants"></a>Koşullu derleme sabitleri bildirme  
+
  Koşullu derleme sabitlerini üç şekilde ayarlayabilirsiniz:  
   
 - **Proje tasarımcısında**  
@@ -41,7 +43,7 @@ ms.locfileid: "84403271"
 |---|---|  
 |**Proje Tasarımcısı**|Projedeki tüm dosyalar için ortak|  
 |Komut satırı|Komut satırı derleyicisine geçirilen tüm dosyalar için ortak|  
-|`#Const`koddaki ifade|Özel olarak bildirildiği dosya|  
+|`#Const` koddaki ifade|Özel olarak bildirildiği dosya|  
   
 |Proje tasarımcısında sabitleri ayarlamak için|  
 |---|  
@@ -62,6 +64,7 @@ ms.locfileid: "84403271"
 |[Program yapısı ve kod kuralları](program-structure-and-code-conventions.md)|Kodunuzun okunmasını ve korunmasını kolaylaştırmak için öneriler sağlar.|  
   
 ## <a name="reference"></a>Başvuru  
+
  [#Const Yönergesi](../../language-reference/directives/const-directive.md)  
   
  [#If... Sonra... #Else yönergeler](../../language-reference/directives/if-then-else-directives.md)  

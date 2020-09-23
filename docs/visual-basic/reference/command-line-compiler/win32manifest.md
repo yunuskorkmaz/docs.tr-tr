@@ -6,14 +6,15 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: 6f77649365f8ca7b163cd55854aa9960d88f2984
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: f8329ce2e7597f802d75ec85a580f1a3bd5cfc97
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84414265"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098884"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
+
 Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanıcı tanımlı bir Win32 uygulama bildirim dosyası tanımlar.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -29,6 +30,7 @@ Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanı
 |`fileName`|Özel bildirim dosyasının yolu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Varsayılan olarak Visual Basic derleyici, istenen bir yürütme düzeyi olan asInvoker belirten bir uygulama bildirimi katıştırır. Bu, bildirim, yürütülebilir dosyanın oluşturulduğu klasörde, genellikle Visual Studio kullandığınızda bin\Debug veya bin\Release klasöründe oluşturulur. Özel bir bildirim sağlamak istiyorsanız, örneğin, bir highestAvailable veya requireAdministrator istenen yürütme düzeyini belirtmek için bu seçeneği, dosyanın adını belirtmek için kullanın.  
   
 > [!NOTE]
@@ -47,6 +49,7 @@ Bir projenin taşınabilir yürütülebilir (PE) dosyasına gömülecek Kullanı
  Uygulama bildirimini özel derleme sonrası bir adım olarak veya seçeneğini kullanarak bir Win32 kaynak dosyasının parçası olarak sağlayabilirsiniz `-nowin32manifest` . Uygulamanızın Windows Vista 'da dosya veya kayıt defteri sanallaştırmaya tabi olmasını istiyorsanız bu seçeneği kullanın. Bu, derleyicinin PE dosyasında varsayılan bir bildirim oluşturmasını ve katıştırmasını engeller.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, Visual Basic derleyicisinin bir PE 'ye eklediği varsayılan bildirimi gösterir.  
   
 > [!NOTE]

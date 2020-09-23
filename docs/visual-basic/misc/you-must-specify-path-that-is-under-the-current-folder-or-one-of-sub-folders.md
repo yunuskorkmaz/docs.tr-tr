@@ -2,14 +2,15 @@
 title: Geçerli klasör altında veya alt klasörlerinden birinde olan bir yol belirtmeniz gerekir
 ms.date: 07/20/2015
 ms.assetid: 8717dabd-a9a7-4d4d-8b21-004b5ce7e652
-ms.openlocfilehash: df97d7f1a919cbb702ce5fdd192d86f268726438
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e88e29960e5b86326a0124e1abaee7098634b0aa
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84406917"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100249"
 ---
 # <a name="you-must-specify-a-path-that-is-under-the-current-folder-or-one-of-its-sub-folders"></a>Geçerli klasör altında veya alt klasörlerinden birinde olan bir yol belirtmeniz gerekir
+
 Belirtilen yol geçerli dizinin altında değil. Bu, göreli bir yol sağlarken dosya yollarının yanlış ayrıştırılmasından kaynaklanıyor olabilir.  
   
 ## <a name="to-correct-this-error"></a>Bu hatayı düzeltmek için  

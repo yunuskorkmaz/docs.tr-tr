@@ -9,14 +9,15 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: b004acb0c1c7d145c59a1e3a88ef7f1d405a91c6
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 65cc3fb1b2fa9daa04013caa2b93a3949d0a15b9
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84400571"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91098946"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
+
 Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata raporlamasına neden olur.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,10 +27,12 @@ Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata rapor
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
- `+`&#124;`-`  
+
+ `+` &#124; `-`  
  İsteğe bağlı. `-optionexplicit+`Değişkenlerin açık bildirimini gerektirmek için belirtin. `-optionexplicit+`Varsayılan seçenektir ve ile aynıdır `-optionexplicit` . `-optionexplicit-`Seçeneği, değişkenlerin örtülü bildirimini sunar.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Kaynak kodu dosyası [açık bir seçenek ifade](../../language-reference/statements/option-explicit-statement.md)içeriyorsa, ifade `-optionexplicit` komut satırı derleyici ayarını geçersiz kılar.  
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE 'de ayarlamak için-OptionExplicit  
@@ -41,6 +44,7 @@ Değişkenler kullanılmadan önce bildirilmemiş olursa derleyicinin hata rapor
 3. **Açık** kutudaki değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, kullanıldığında derlenir `-optionexplicit-` .  
   
  [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  

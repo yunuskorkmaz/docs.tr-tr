@@ -2,14 +2,15 @@
 title: LINQ ve Dosya Dizinleri
 ms.date: 07/20/2015
 ms.assetid: 159fd5c3-3926-4071-ae78-d8e423287eb7
-ms.openlocfilehash: 9738dc2b07b33b2d96f8134e8418c54aae53e6a1
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 670611cd285a1b1f2602e2c700c2bdeb56db943f
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84397525"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91100171"
 ---
 # <a name="linq-and-file-directories-visual-basic"></a>LINQ ve dosya dizinleri (Visual Basic)
+
 Birçok dosya sistemi işlemi aslında sorgular ve bu nedenle LINQ yaklaşımına uygundur.  
   
  Bu bölümdeki sorguların bozucu olmadığına unutmayın. Özgün dosyaların veya klasörlerin içeriğini değiştirmek için kullanılmaz. Bu, sorguların hiçbir yan etkiye neden olmaması gerektiğine yönelik kuralı izler. Genel olarak, kaynak verileri değiştiren tüm kodlar (oluşturma/güncelleştirme/silme işleçleri de dahil olmak üzere) yalnızca verileri sorgulayan koddan ayrı tutulmalıdır.  
@@ -38,6 +39,7 @@ Birçok dosya sistemi işlemi aslında sorgular ve bu nedenle LINQ yaklaşımın
  Bir ağaçtaki klasörlerin nasıl tekrarlanması, her dosyanın nasıl açılacağı ve dosyanın içeriğini sorgulama işlemlerinin nasıl yapılacağını gösterir.  
   
 ## <a name="comments"></a>Yorumlar  
+
  Dosya sisteminin içeriğini doğru bir şekilde temsil eden bir veri kaynağı oluşturma konusunda bazı karmaşıklıklar vardır ve özel durumları düzgün bir şekilde işler. Bu bölümdeki örneklerde, <xref:System.IO.FileInfo> belirtilen bir kök klasörü ve tüm alt klasörleri altındaki tüm dosyaları temsil eden nesnelerin anlık görüntü koleksiyonu oluşturulur. Her birinin gerçek durumu <xref:System.IO.FileInfo> bir sorgu yürütme ve sonlandırma arasındaki sürede değişebilir. Örneğin, <xref:System.IO.FileInfo> bir veri kaynağı olarak kullanmak üzere bir nesne listesi oluşturabilirsiniz. `Length`Bir sorgudaki özelliğe erişmeyi denerseniz, <xref:System.IO.FileInfo> nesne değerini güncelleştirmek için dosya sistemine erişmeye çalışacaktır `Length` . Dosya artık yoksa, <xref:System.IO.FileNotFoundException> dosya sistemini doğrudan sorguladığınız halde, sorgunuzda bir a alacaksınız. Bu bölümdeki bazı sorgular belirli durumlarda bu özel durumları tüketen ayrı bir yöntem kullanır. Diğer bir seçenek, kullanarak veri kaynağınızı dinamik olarak güncel tutkullanmaktır <xref:System.IO.FileSystemWatcher> .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
