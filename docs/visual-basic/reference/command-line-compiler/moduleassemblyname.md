@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: 99f2b9d65f3c2a128e026666c5efb384e22643f9
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: 9fb9287f9472d4b33eff4cb601aff5eed370b2c0
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403154"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065573"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
+
 Bu modülün bir parçası olacağı derlemenin adını belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -29,6 +30,7 @@ Bu modülün bir parçası olacağı derlemenin adını belirtir.
 |`assembly_name`|Bu modülün bir parçası olacağı derlemenin adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Derleyici, `-moduleassemblyname` seçeneği yalnızca `-target:module` seçenek belirtilmişse işler. Bu, derleyicinin bir modül oluşturmasına neden olur. Derleyici tarafından oluşturulan modül yalnızca seçeneğiyle belirtilen derleme için geçerlidir `-moduleassemblyname` . Modülü farklı bir derlemeye yerleştirirseniz, çalışma zamanı hataları oluşur.  
   
  `-moduleassemblyname`Seçeneği yalnızca aşağıdakilerin doğru olması durumunda gereklidir:  

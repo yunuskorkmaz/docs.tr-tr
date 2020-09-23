@@ -6,14 +6,15 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: fb317b3c555d151e132122c476ce19bdeceb1321
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403167"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065625"
 ---
 # <a name="-main"></a>-main
+
 Yordamı içeren sınıfı veya modülü belirtir `Sub Main` .  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -23,10 +24,12 @@ Yordamı içeren sınıfı veya modülü belirtir `Sub Main` .
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `location`  
  Gereklidir. Program başlatıldığında Çağrılacak yordamı içeren sınıfın veya modülün adı `Sub Main` . Bu, **-Main: Module** veya **-Main: Namespace. Module**biçiminde olabilir.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Yürütülebilir bir dosya veya Windows yürütülebilir programı oluştururken bu seçeneği kullanın. **-Main** seçeneği atlanırsa, derleyici `Sub Main` tüm ortak sınıflarda ve modüllerde geçerli bir paylaşılan arar.  
   
  Yordamın çeşitli biçimlerinin tartışılması için [Visual Basic ana yordama](../../programming-guide/program-structure/main-procedure.md) bakın `Main` .  
@@ -46,6 +49,7 @@ Yordamı içeren sınıfı veya modülü belirtir `Sub Main` .
 4. **Başlangıç nesnesi** kutusundaki değeri değiştirin.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod, `T2.vb` ve `T3.vb` yordamının sınıfında bulunduğunu belirtmek için derleme `Sub Main` yapar `Test2` .  
   
 ```console

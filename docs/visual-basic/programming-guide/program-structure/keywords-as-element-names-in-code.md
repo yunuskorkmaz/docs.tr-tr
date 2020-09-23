@@ -7,14 +7,15 @@ helpviewer_keywords:
 - name conflicts [Visual Basic]
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
-ms.openlocfilehash: a98f0b027700717b414d58e1284ddec655eb25f7
-ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
+ms.openlocfilehash: e895db180dbb44cd4cfe4053d4be429f13324fe8
+ms.sourcegitcommit: bf5c5850654187705bc94cc40ebfb62fe346ab02
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84403232"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91065755"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Kodda Öğe Adları Olarak Anahtar Sözcükler (Visual Basic)
+
 Değişken, sınıf veya üye gibi herhangi bir program öğesi, kısıtlanmış bir anahtar sözcükle aynı ada sahip olabilir. Örneğin, adlı bir değişken oluşturabilirsiniz `Loop` . Bununla birlikte, kısıtlanmış anahtar sözcüğüyle aynı ada sahip olan kendi sürümünüze başvurmak için, `Loop` `[ ]` Aşağıdaki örnekte gösterildiği gibi, tam nitelendirme dizesi ile önce veya köşeli ayraç () içine almanız gerekir.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
