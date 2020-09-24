@@ -5,19 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 14e7e1ccb051410c351e49afee9f2d6809264833
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bce90c1d310178e66da7c758c6df2cd357199c8b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151305"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153293"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRows ve DataRowViews
-A, <xref:System.Data.DataView> sayısal bir <xref:System.Data.DataRowView> nesne koleksiyonunu ortaya çıkarır. **DataRowView** nesneleri, alttaki tablodaki sütunun adı veya ordinal başvurusu tarafından dizilen nesne dizileri olarak değerleri ortaya çıkarır. <xref:System.Data.DataRow> **DataRowView'ın**özelliğini <xref:System.Data.DataRowView.Row%2A> kullanarak **DataRowView** tarafından ortaya çıkarılanlara erişebilirsiniz.  
+
+<xref:System.Data.DataView>, Nesnelerin sıralanabilir koleksiyonunu ortaya koyar <xref:System.Data.DataRowView> . **DataRowView** nesneleri değerleri, temel tablodaki sütunun adı ya da Ordinal başvurusu tarafından dizine alınmış nesne dizileri olarak kullanıma sunar. DataRowView <xref:System.Data.DataRow> 'ın özelliğini kullanarak **DataRowView** tarafından açığa çıkarılan öğesine erişebilirsiniz <xref:System.Data.DataRowView.Row%2A> . **DataRowView**  
   
- **Verileri Bir DataRowView**kullanarak görüntülediğinizde, **DataView'ın** <xref:System.Data.DataView.RowStateFilter%2A> özelliği, alttaki **DataRow'un** hangi satır sürümünün açıkta olduğunu belirler. **Bir DataRow**kullanarak farklı satır sürümlerine erişim hakkında bilgi için [bkz.](row-states-and-row-versions.md)  
+ Bir **DataRowView**kullanarak değerleri görüntülediğinizde, <xref:System.Data.DataView.RowStateFilter%2A> **DataView** özelliği temel alınan **DataRow** 'ın hangi satır sürümünün açığa çıkardığını belirler. Bir **DataRow**kullanarak farklı satır sürümlerine erişme hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).  
   
- Aşağıdaki kod örneği, tablodaki tüm geçerli ve özgün değerleri görüntüler.  
+ Aşağıdaki kod örneği, bir tablodaki tüm geçerli ve orijinal değerleri görüntüler.  
   
 ```vb  
 Dim catView As DataView = New DataView(catDS.Tables("Categories"))  

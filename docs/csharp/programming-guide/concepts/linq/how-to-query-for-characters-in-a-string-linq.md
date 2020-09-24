@@ -3,17 +3,19 @@ title: Dizedeki karakterleri sorgulama (LINQ) (C#)
 description: Bir dizeyi LINQ içindeki bir karakter dizisi olarak sorgulayabilirsiniz. Bu C# örneği, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular.
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: 3512be7c30843fcd8e881eab59761706a84a3ac8
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 73288924d057e720a744b853998a52437b9db481
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104550"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153943"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Dizedeki karakterleri sorgulama (LINQ) (C#)
+
 <xref:System.String>Sınıfı genel <xref:System.Collections.Generic.IEnumerable%601> arabirimi uyguladığından, herhangi bir dize bir karakter dizisi olarak sorgulanabilir. Ancak bu, LINQ 'in yaygın bir kullanımı değildir. Karmaşık kalıp eşleştirme işlemleri için <xref:System.Text.RegularExpressions.Regex> sınıfını kullanın.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, içerdiği sayısal basamak sayısını belirlemede bir dizeyi sorgular. Sorgunun ilk kez yürütüldükten sonra "yeniden kullanılır" olduğunu unutmayın. Sorgunun kendisi gerçek sonuçları depolamadığından bu mümkündür.  
   
 ```csharp  
@@ -56,6 +58,7 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

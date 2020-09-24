@@ -2,14 +2,15 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 4eb79cc91ef489501c4c8bb6311f240d855ed053
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 8236e581ee754a39ae32fa97084b8e2bfbaee652
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399628"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153878"
 ---
 # \<serviceDebug>
+
 Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve yardım bilgileri özelliklerini belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve yard�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceDebug>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceDebug httpHelpPageBinding="String"
@@ -34,6 +35,7 @@ Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve yard�
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -51,6 +53,7 @@ Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve yard�
 |IncludeExceptionDetailInFaults|Yönetilen özel durum bilgilerinin, hata ayıklama amacıyla istemciye döndürülen SOAP hatalarının ayrıntısına eklenip eklenmeyeceğini belirten bir değer. Varsayılan değer: `false`.<br /><br /> Bu özniteliği olarak ayarlarsanız `true` , hata ayıklama amacıyla istemciye yönetilen özel durum bilgileri akışını ve Web tarayıcılarında hizmete göz atan KULLANıCıLARıN HTML bilgi dosyalarının yayımlanmasını sağlayabilirsiniz. **Dikkat:**  Yönetilen özel durum bilgilerini istemcilere döndürmek bir güvenlik riski oluşturabilir. Bunun nedeni, özel durum ayrıntılarının yetkisiz istemciler tarafından kullanılabilecek iç hizmet uygulamasıyla ilgili bilgileri kullanıma sunmasıdır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -60,6 +63,7 @@ Bir Windows Communication Foundation (WCF) hizmeti için hata ayıklama ve yard�
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `includeExceptionDetailInFaults`İçin ayarı `true` , özel durum kullanılarak bildirilmemiş olsa bile, hizmetin uygulama kodu tarafından oluşturulan herhangi bir özel durumu döndürmesini sağlar <xref:System.ServiceModel.FaultContractAttribute> . Bu ayar, sunucunun beklenmeyen bir özel durum oluşturan durumlarda hata ayıklaması yaparken faydalıdır. Bu özniteliği kullanarak, bilinmeyen özel durumun serileştirilmiş formu döndürülür ve özel durumun daha fazla ayrıntılarını inceleyebilirsiniz.  
   
 > [!CAUTION]

@@ -5,25 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fdb19e7fa014bf4a7c924b1fbae53fa44de6e3c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151266"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153267"
 ---
 # <a name="datatable-edits"></a>DataTable Düzenlemeleri
-Bir <xref:System.Data.DataRow>sütun değerlerinde değişiklik yaptığınızda, değişiklikler hemen satırın geçerli durumuna yerleştirilir. Daha <xref:System.Data.DataRowState> sonra **Değiştirilmiştir**ve değişiklikler **DataRow'un**veya <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A> yöntemlerkullanılarak kabul edilir veya reddedilir. **DataRow** ayrıca, düzenleme sırasında satırın durumunu askıya almak için kullanabileceğiniz üç yöntem de sağlar. Bu yöntemler <xref:System.Data.DataRow.BeginEdit%2A> <xref:System.Data.DataRow.EndEdit%2A>, <xref:System.Data.DataRow.CancelEdit%2A>, ve .  
+
+İçindeki sütun değerlerinde değişiklik yaptığınızda <xref:System.Data.DataRow> , değişiklikler satırın geçerli durumuna hemen yerleştirilir. <xref:System.Data.DataRowState>Daha sonra **değiştirildi**olarak ayarlanır ve değişiklikler <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow.RejectChanges%2A> **DataRow**'ın veya yöntemleri kullanılarak kabul edilir veya reddedilir. **DataRow** , siz de satırı düzenlediğinizde satırın durumunu askıya almak için kullanabileceğiniz üç yöntem sağlar. Bu yöntemler <xref:System.Data.DataRow.BeginEdit%2A> , <xref:System.Data.DataRow.EndEdit%2A> ve ' dir <xref:System.Data.DataRow.CancelEdit%2A> .  
   
- **DataRow'daki** sütun değerlerini doğrudan değiştirdiğinizde, **DataRow** **Geçerli**, **Varsayılan**ve **Özgün** satır sürümlerini kullanarak sütun değerlerini yönetir. Bu satır sürümlerine ek olarak, **BeginEdit**, **EndEdit**ve **CancelEdit** yöntemleri dördüncü satır sürümünü kullanın: **Önerilen**. Satır sürümleri hakkında daha fazla bilgi için [Bkz. Satır Durumları ve Satır Sürümleri.](row-states-and-row-versions.md)  
+ **DataRow** içindeki sütun değerlerini doğrudan değiştirdiğinizde, **DataRow** **geçerli**, **varsayılan**ve **orijinal** satır sürümlerini kullanarak sütun değerlerini yönetir. Bu satır sürümlerinin yanı sıra, **BeginEdit**, **EndEdit**ve **CancelEdit** yöntemleri Dördüncü satır sürümünü kullanır: **önerilir**. Satır sürümleri hakkında daha fazla bilgi için bkz. [Satır durumları ve satır sürümleri](row-states-and-row-versions.md).  
   
- **Önerilen** satır sürümü **BeginEdit'i** arayarak başlayan ve **EndEdit veya CancelEdit'i** kullanarak veya AcceptChanges veya **CancelEdit,** **RejectChanges'ı** arayarak sona eren bir düzenleme işlemi sırasında bulunur. **RejectChanges**  
+ **Önerilen** satır sürümü, **BeginEdit** çağırarak başlayan ve, **EndEdit** veya **CancelEdit** kullanarak ya da **AcceptChanges** ya da **RejectChanges**çağırarak biten bir düzenleme işlemi sırasında bulunur.  
   
- Düzenleme işlemi sırasında, **DataTable'ın** **Sütun Değiştirilen** olayında **Önerilen Değer'i** değerlendirerek tek tek sütunlara doğrulama mantığı uygulayabilirsiniz. **Sütun Değiştirilen** olay, değişen sütuna ve **Önerilen Değere**başvuruda bulunan **DataColumnChangeEventArgs** tutar. Önerilen değeri değerlendirdikten sonra, değiştirebilir veya yapılantı iptal edebilirsiniz. Edinme sona erdiğinde, satır **Önerilen** durumdan dışarı taşınır.  
+ Düzenleme işlemi sırasında, **DataTable**'ın **ColumnChanged** olayında **ProposedValue** değerlendirerek ayrı sütunlara doğrulama mantığı uygulayabilirsiniz. **ColumnChanged** olayı, **ProposedValue**ve ile değişen sütuna bir başvuru tutan **DataColumnChangeEventArgs** barındırır. Önerilen değeri değerlendirdikten sonra, bunu değiştirebilir veya düzenlemeyi iptal edebilirsiniz. Düzenleme sona erdikten sonra satır **Önerilen** durumdan çıkar.  
   
- **EndEdit'i**arayarak düzenlemeyi onaylayabilir veya **CancelEdit'i**arayarak iptal edebilirsiniz. **EndEdit'in** değişikliklerinizi onaylamasına gerek yoksa da, **AcceptChanges** çağrılana kadar **DataSet'in** değişiklikleri gerçekte kabul etmediğini unutmayın. Ayrıca, Son Edit veya **CancelEdit**ile **EndEdit** yapılan düzeltmeyi sona erdirmeden önce **AcceptChanges'ı** ararsanız, düzeltmenin sona erdiğini ve **Önerilen** satır değerlerinin hem **Geçerli** hem de **Özgün** satır sürümleri için kabul edildiğini unutmayın. Aynı şekilde, **Reddet Değişiklikleri'ni** aramak da ediyi sona erdirir ve **Geçerli** ve **Önerilen** satır sürümlerini atar. AcceptChanges veya **RejectChanges'ı** aradıktan **RejectChanges** sonra EndEdit veya **CancelEdit'i** aramanın hiçbir etkisi yoktur, çünkü düzeltme zaten sona ermiştir. **EndEdit**  
+ **Sorguları**çağırarak veya **CancelEdit**çağırarak bu düzenlemeleri iptal edebilirsiniz. **EndEdit** , düzenlemelerinizi Doğrulamalarken, **veri kümesinin** , **AcceptChanges** çağrısı yapılıncaya kadar değişiklikleri gerçekten kabul etmediğinden emin olun. Ayrıca, Edit öğesini **EndEdit** veya **CancelEdit**Ile sonlandırmadan önce **AcceptChanges** 'ı çağırdığınızda, düzenleme sonlandırılır ve **Önerilen** satır değerleri hem **geçerli** hem de **orijinal** satır sürümleri için kabul edilir. Aynı şekilde, **RejectChanges** öğesini çağırmak düzenlemeyi sonlandırır ve **geçerli** ve **Önerilen** satır sürümlerini atar. **AcceptChanges** veya **RejectChanges** çağrıldıktan sonra **EndEdit** veya **CancelEdit** çağırmak, düzenleme zaten sona erdiğinden hiçbir etkiye sahip değildir.  
   
- Aşağıdaki örnek, **EndEdit ve CancelEdit** ile **CancelEdit** **BeginEdit'in** nasıl kullanılacağını gösterir. Örnek ayrıca **ColumnChanged** etkinliğinde **önerilen değeri** denetler ve düzenleneni iptal edip etmeyeceğine karar verir.  
+ Aşağıdaki örnek, BeginEdit ve **CancelEdit**ile **BeginEdit** 'in **EndEdit** nasıl kullanılacağını gösterir. Örnek ayrıca **ColumnChanged** olaydaki **ProposedValue** denetimini denetler ve düzenlemeyi iptal edip etmeyeceğine karar verir.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  

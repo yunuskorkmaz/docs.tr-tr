@@ -2,14 +2,15 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: aa6bc7f5a94afc8a190d3d9d2d71ea8b38d8c25b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73738598"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153579"
 ---
 # \<sslStreamSecurity>
+
 SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğesini temsil eder.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğe
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sslStreamSecurity>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <sslStreamSecurity requireClientCertificate="Boolean"
@@ -27,6 +28,7 @@ SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğe
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -37,6 +39,7 @@ SSL akışı kullanarak kanal güvenliğini destekleyen bir özel bağlama öğe
 |sslProtocols|Hangi SslProtocols desteklendiğini belirten bir SslProtocols numaralandırma bayrak değeri. Varsayılan, Ssl3&#124;TLS&#124;Tls11&#124;Tls12 'dir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

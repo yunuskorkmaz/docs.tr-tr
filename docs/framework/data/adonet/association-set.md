@@ -2,14 +2,15 @@
 title: association set
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: e279322f9e950cd4359db8c6dce39bfc46d188f6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 58d8794a21cc37ab84386c820b192fb29946095c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732369"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153436"
 ---
 # <a name="association-set"></a>association set
+
 *İlişki kümesi* , aynı türde [ilişki](association-type.md) örnekleri için mantıksal bir kapsayıcıdır. Bir ilişki kümesi, bir veri modelleme yapısı değildir; diğer bir deyişle, verilerin veya ilişkilerin yapısını tanımlamaz. Bunun yerine, bir ilişki kümesi, ilişki örneklerini gruplamak için bir barındırma veya depolama ortamı (ortak dil çalışma zamanı veya bir SQL Server veritabanı gibi) için bir yapı sağlar. böylece bir veri deposuna eşlenebilir.  
   
  Bir ilişki kümesi, [varlık kümelerinin](entity-set.md) ve ilişkilendirme kümelerinin mantıksal bir gruplandırması olan bir [varlık kapsayıcısı](entity-container.md)içinde tanımlanır.  
@@ -23,11 +24,12 @@ ms.locfileid: "73732369"
 - İki [ilişkilendirme kümesi sona erer](association-set-end.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki diyagramda iki ilişkiye sahip bir kavramsal model gösterilmektedir: `PublishedBy`ve `WrittenBy`. İlişki kümeleri hakkındaki bilgiler diyagramda bir şekilde gelse de, sonraki diyagramda bu modele göre ilişki kümelerinin ve varlık kümelerinin bir örneği gösterilmektedir.  
+
+ Aşağıdaki diyagramda iki ilişkiye sahip kavramsal bir model gösterilmektedir: `PublishedBy` ve `WrittenBy` . İlişki kümeleri hakkındaki bilgiler diyagramda bir şekilde gelse de, sonraki diyagramda bu modele göre ilişki kümelerinin ve varlık kümelerinin bir örneği gösterilmektedir.  
   
  ![Üç varlık türüne sahip örnek model](./media/association-set/example-model-three-entity-types.gif)  
   
- Aşağıdaki örnek, yukarıda gösterilen kavramsal modele bağlı olarak bir ilişki kümesini (`PublishedBy`) ve iki varlık kümesini (`Books` ve `Publishers`) gösterir. `Books` varlık kümesindeki bı, çalışma zamanında `Book` varlık türünün bir örneğini temsil eder. Benzer şekilde, PJ, `Publishers` varlık kümesindeki bir `Publisher` örneğini temsil eder. BiPj, `PublishedBy` ilişkilendirme kümesindeki `PublishedBy` ilişkisinin bir örneğini temsil eder.  
+ Aşağıdaki örnek, `PublishedBy` `Books` `Publishers` yukarıda gösterilen kavramsal modele bağlı olarak bir ilişki kümesi () ve iki varlık kümesini (ve) gösterir. `Books`Varlık kümesindeki bı, `Book` çalışma zamanında varlık türünün bir örneğini temsil eder. Benzer şekilde, PJ `Publisher` varlık kümesindeki bir örneği temsil eder `Publishers` . BiPj `PublishedBy` , ilişki kümesindeki ilişkilendirmenin bir örneğini temsil eder `PublishedBy` .  
   
  ![Bir küme örneği gösteren ekran görüntüsü.](./media/association-set/sets-example-association.gif)  
   
@@ -35,7 +37,7 @@ ms.locfileid: "73732369"
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
- İki ilişkilendirme kümesi bir [ilişki kümesi ucu](association-set-end.md)paylaştığından, ilişkilendirme başına birden çok ilişki kümesi tanımlanması mümkündür. Aşağıdaki CSDL `WrittenBy` ilişkilendirmesi için iki ilişkilendirme kümesiyle bir varlık kapsayıcısını tanımlar. `Book` ve `Author` varlık türleri için birden çok varlık kümesi tanımlandığından ve hiçbir ilişkilendirme kümesinin bir ilişki kümesi ucu paylaştığını unutmayın.  
+ İki ilişkilendirme kümesi bir [ilişki kümesi ucu](association-set-end.md)paylaştığından, ilişkilendirme başına birden çok ilişki kümesi tanımlanması mümkündür. Aşağıdaki CSDL ilişki için iki ilişkilendirme kümesiyle bir varlık kapsayıcısını tanımlar `WrittenBy` . Ve varlık türleri için birden çok varlık kümesi tanımlandığından `Book` `Author` ve hiçbir ilişkilendirme kümesinin bir ilişki kümesi ucu paylaştığından emin olun.  
   
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   

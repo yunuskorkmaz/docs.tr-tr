@@ -2,14 +2,15 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: ad87a5876381a7224341babdb076c85edcd1dd87
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 0c6d844ac287037b7a546d3a48e7cd924e8a63d1
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399570"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153618"
 ---
 # \<serviceThrottling>
+
 Bir Windows Communication Foundation (WCF) hizmetinin azaltma mekanizmasını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Bir Windows Communication Foundation (WCF) hizmetinin azaltma mekanizmasını be
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceThrottling>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceThrottling maxConcurrentCalls="Integer"
@@ -28,6 +29,7 @@ Bir Windows Communication Foundation (WCF) hizmetinin azaltma mekanizmasını be
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -39,6 +41,7 @@ Bir Windows Communication Foundation (WCF) hizmetinin azaltma mekanizmasını be
 |maxConcurrentSessions|Bir nesnenin kabul edebileceği oturum sayısını sınırlayan pozitif bir tamsayı <xref:System.ServiceModel.ServiceHost> .<br /><br /> Hizmet sınırı aşan bağlantıları kabul eder, ancak yalnızca sınırın altındaki kanallar etkin olur (iletiler kanaldan okur). Bu değerin 0 olarak ayarlanması, Int32. MaxValue olarak ayarlanmasına eşdeğerdir. Varsayılan değer 100 * işlemci sayısıdır.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -48,11 +51,13 @@ Bir Windows Communication Foundation (WCF) hizmetinin azaltma mekanizmasını be
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Azaltma denetimleri, kaynakların aşırı kullanımını önlemeye yönelik eşzamanlı çağrı, örnek veya oturum sayısına yönelik sınırlar yerleştirir.  
   
  Her öznitelik değeri her ulaşıldığında bir izleme yazılır. İlk izleme uyarı olarak yazılmıştır.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki yapılandırma örneği, hizmetin maksimum eşzamanlı çağrı sayısını 2 ' ye ve en fazla eşzamanlı örnek sayısını 10 ' a sınırlandırdığından emin olarak belirtir. Bu örneği çalıştırmanın ayrıntılı bir örneği için bkz. [azaltma](../../../wcf/samples/throttling.md).  
   
 ```xml  

@@ -2,12 +2,12 @@
 title: API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 description: API Gateway deseninin ve doğrudan istemciden mikro hizmet iletişiminin farklılıklarını ve kullanımlarını anlayın.
 ms.date: 01/07/2019
-ms.openlocfilehash: 089b6302132437e4bb733653b3edb401ff81a164
-ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
+ms.openlocfilehash: 90761605dde197e44658e3ba0b0a3a2c06b5942c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84306961"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152708"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ağ geçidi düzenine ve doğrudan istemciden mikro hizmete iletişime karşı
 
@@ -25,7 +25,7 @@ Bu yaklaşımda her mikro hizmet, bazen her mikro hizmet için farklı bir TCP b
 
 `http://eshoponcontainers.westus.cloudapp.azure.com:88/`
 
-Bir küme temelli bir üretim ortamında, bu URL kümede kullanılan yük dengeleyiciye eşlenir ve bu da istekleri mikro hizmetlere dağıtır. Üretim ortamlarında, mikro hizmetleriniz ve Internet arasında [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) gibi bir uygulama teslim DENETLEYICISI (ADC) olabilir. Bu, yalnızca yük dengeleme gerçekleştirmeyen, ancak SSL sonlandırması sunarak hizmetlerinizin güvenliğini sağlayan saydam bir katman gibi davranır. Bu, CPU kullanımı yoğun SSL sonlandırmasını ve diğer yönlendirme görevlerini Azure Application Gateway yük devrederken konaklarınızın yükünü geliştirir. Herhangi bir durumda, bir yük dengeleyici ve ADC, bir mantıksal uygulama mimarisi görünüm noktasından saydamdır.
+Bir küme temelli bir üretim ortamında, bu URL kümede kullanılan yük dengeleyiciye eşlenir ve bu da istekleri mikro hizmetlere dağıtır. Üretim ortamlarında, mikro hizmetleriniz ve Internet arasında [Azure Application Gateway](/azure/application-gateway/application-gateway-introduction) gibi bir uygulama teslim DENETLEYICISI (ADC) olabilir. Bu, yalnızca yük dengeleme gerçekleştirmeyen, ancak SSL sonlandırması sunarak hizmetlerinizin güvenliğini sağlayan saydam bir katman gibi davranır. Bu, CPU kullanımı yoğun SSL sonlandırmasını ve diğer yönlendirme görevlerini Azure Application Gateway yük devrederken konaklarınızın yükünü geliştirir. Herhangi bir durumda, bir yük dengeleyici ve ADC, bir mantıksal uygulama mimarisi görünüm noktasından saydamdır.
 
 Özellikle, istemci uygulaması ASP.NET MVC uygulaması gibi bir sunucu tarafı Web uygulaması ise, doğrudan istemciden mikro hizmet iletişim mimarisi küçük bir mikro hizmet tabanlı uygulama için yeterince iyi olabilir. Ancak, büyük ve karmaşık mikro hizmet tabanlı uygulamalar oluşturduğunuzda (örneğin, onlarca mikro hizmet türünü işlerken) ve özellikle de istemci uygulamaları uzak mobil uygulamalar veya SPA Web uygulamaları olduğunda, bu yaklaşım birkaç soruna yaklaşımlar.
 
@@ -95,13 +95,13 @@ Bir API ağ geçidi, birden çok özellik sunabilir. Ürüne bağlı olarak, dah
 
 **Ters proxy veya ağ geçidi yönlendirmesi.** API Gateway, istekleri (katman 7 yönlendirme, genellikle HTTP istekleri) iç mikro hizmetlerin uç noktalarına yönlendirmek veya yönlendirmek için ters bir ara sunucu sunar. Ağ Geçidi, istemci uygulamaları için tek bir uç nokta veya URL sağlar ve istekleri dahili bir mikro hizmet grubuyla dahili olarak eşler. Bu yönlendirme özelliği, istemci uygulamalarını mikro hizmetlerden ayırt etmeye yardımcı olur, ancak tek parçalı API ve istemci uygulamaları arasındaki API ağ geçidini oturarak tek parçalı bir API 'YI modernleştirirken, daha sonra eski tek parçalı API 'yi kullanmaya devam ederken yeni mikro hizmetler olarak yeni API 'Ler ekleyebilirsiniz. API ağ geçidi nedeniyle, kullanılan API 'Lerin iç mikro hizmetler veya tek parçalı bir API olarak uygulanıp uygulanmadığı ve daha önemlisi, tek parçalı API 'yi, API ağ geçidi yönlendirmesi sayesinde, istemci uygulamaları da herhangi bir URI değişikliğine etkilemediği zaman fark görmez.
 
-Daha fazla bilgi için bkz. [ağ geçidi yönlendirme model](https://docs.microsoft.com/azure/architecture/patterns/gateway-routing).
+Daha fazla bilgi için bkz. [ağ geçidi yönlendirme model](/azure/architecture/patterns/gateway-routing).
 
 **Toplama istekleri.** Ağ Geçidi deseninin bir parçası olarak, birden çok iç mikro hizmeti tek bir istemci isteğinde hedefleyen birden çok istemci isteğini (genellikle HTTP istekleri) toplayabilirsiniz. Bu model, bir istemci sayfası/ekranının birkaç mikro hizmetten bilgi ihtiyacı olduğunda özellikle kullanışlıdır. Bu yaklaşımda istemci uygulaması, API ağ geçidine, iç mikro hizmetlere birkaç istek gönderen ve sonra sonuçları toplayan ve her şeyi istemci uygulamasına gönderen tek bir istek gönderir. Bu tasarım deseninin başlıca avantajı ve hedefi, istemci uygulamaları ile arka uç API 'SI arasındaki azaltmaya azaltmaktır. Bu, özellikle de mikro hizmetlerin canlı olduğu, istemci uzak tarayıcılarındaki JavaScript 'ten gelen SPA uygulamalarından gelen istekler gibi uzak uygulamalar için önemlidir. Sunucu ortamındaki istekleri gerçekleştiren düzenli Web uygulamaları için (ASP.NET Core MVC web uygulaması gibi), gecikme süresi uzak istemci uygulamalarına göre çok daha küçük olduğu için bu model bu kadar önemli değildir.
 
 Kullandığınız API Gateway ürününe bağlı olarak, bu toplamayı gerçekleştirebilir. Bununla birlikte, çoğu durumda, API ağ geçidinin kapsamı kapsamında toplama mikro hizmetleri oluşturmak daha esnektir, bu yüzden toplama 'yı kodda (yani, C# kodu) tanımlayın:
 
-Daha fazla bilgi için bkz. [ağ geçidi toplama stili](https://docs.microsoft.com/azure/architecture/patterns/gateway-aggregation).
+Daha fazla bilgi için bkz. [ağ geçidi toplama stili](/azure/architecture/patterns/gateway-aggregation).
 
 **Çapraz kesme sorunları veya ağ geçidi boşaltma.** Her bir API ağ geçidi ürünü tarafından sunulan özelliklere bağlı olarak, her bir mikro hizmetten bağımsız olarak tek bir katmanda çapraz kesme sorunlarını birleştirerek her bir mikro hizmetin uygulanmasını kolaylaştıran ağ geçidine işlevsellik devreolursunuz. Bu özellikle, aşağıdaki işlev gibi her iç mikro hizmette düzgün şekilde uygulanması karmaşık olabilecek özelleştirilmiş özellikler için kullanışlıdır:
 
@@ -115,7 +115,7 @@ Daha fazla bilgi için bkz. [ağ geçidi toplama stili](https://docs.microsoft.c
 - Üstbilgiler, sorgu dizeleri ve talep dönüştürme
 - IP beyaz listesi
 
-Daha fazla bilgi için bkz. [ağ geçidi boşaltma model](https://docs.microsoft.com/azure/architecture/patterns/gateway-offloading).
+Daha fazla bilgi için bkz. [ağ geçidi boşaltma model](/azure/architecture/patterns/gateway-offloading).
 
 ## <a name="using-products-with-api-gateway-features"></a>API Gateway özellikleriyle ürünleri kullanma
 

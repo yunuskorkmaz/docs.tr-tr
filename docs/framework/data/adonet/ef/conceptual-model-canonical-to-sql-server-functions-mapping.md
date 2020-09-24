@@ -2,36 +2,38 @@
 title: SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
 ms.date: 03/30/2017
 ms.assetid: 1a2631bc-a426-4c0a-ba8d-26d9c80d39e2
-ms.openlocfilehash: f997fbf39f3dee07cc0d58a39fca779f55236606
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 495a662cbab84c2686e4c31945c30d6f82d117cb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251672"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153124"
 ---
 # <a name="conceptual-model-canonical-to-sql-server-functions-mapping"></a>SQL Server İşlevleri ile Kurallı Kavramsal Model Eşlemesi
+
 Bu konu başlığı altında, kavramsal model kurallı işlevlerinin karşılık gelen SQL Server işlevlerine nasıl eşlendiğini açıklar.  
   
 ## <a name="date-and-time-functions"></a>Tarih ve Saat İşlevleri  
+
  Aşağıdaki tabloda, tarih ve saat işlevleri eşleme açıklanmaktadır:  
   
 |Kurallı işlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
-|[AddDays(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
-|[AddHours(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
-|[AddMicroseconds(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
-|[AddMilliseconds(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
-|[AddMinutes(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
-|[AddMonths(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
-|[AddNanoseconds(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
-|[AddSeconds(expression)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
+|[AddDays (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(day, number, date)`|  
+|[AddHours (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(hour, number, date)`|  
+|[Addmikrosaniye (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(microsecond, number, date)`|  
+|[AddMilliseconds (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(millisecond, number, date)`|  
+|[AddMinutes (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(minute, number, date)`|  
+|[Addaylar (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(month, number, date)`|  
+|[Addnanosaniye (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(nanosecond, number, date)`|  
+|[AddSeconds (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(second, number, date)`|  
 |[Addyıllar (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DATEADD(year, number, date)`|  
-|[CreateDateTime (yıl, ay, gün, saat, dakika, saniye)](./language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 ve SQL Server 2005 için, sunucuda `datetime` biçimlendirilen bir değer oluşturulur. SQL Server 2008 ve sonraki sürümlerinde, sunucuda bir `datetime2` değer oluşturulur.|  
-|[CreateDateTimeOffset (yıl, ay, gün, saat, dakika, saniye, tzfark)](./language-reference/date-and-time-canonical-functions.md)|Sunucuda `datetimeoffset` biçimlendirilen bir değer oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005 ' de desteklenmez.|  
-|[CreateTime (saat, dakika, saniye)](./language-reference/date-and-time-canonical-functions.md)|Sunucuda `time` biçimlendirilen bir değer oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005 ' de desteklenmez.|  
-|[CurrentDateTime()](./language-reference/date-and-time-canonical-functions.md)|`SysDateTime()`SQLServer 2008.<br /><br /> `GetDate()`SQLServer 2000 ve SQLServer 2005 ' de.|  
-|[CurrentDateTimeOffset()](./language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()`SQL Server 2008.<br /><br /> SQL Server 2000 veya SQL Server 2005 ' de desteklenmez.|  
-|[CurrentUtcDateTime()](./language-reference/date-and-time-canonical-functions.md)|`SysUtcDateTime()`SQLServer 2008. `GetUtcDate()`SQL Server 2000 ve SQL Server 2005.|  
+|[CreateDateTime (yıl, ay, gün, saat, dakika, saniye)](./language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 ve SQL Server 2005 için, `datetime` sunucuda biçimlendirilen bir değer oluşturulur. SQL Server 2008 ve sonraki sürümlerinde, sunucuda bir `datetime2` değer oluşturulur.|  
+|[CreateDateTimeOffset (yıl, ay, gün, saat, dakika, saniye, tzfark)](./language-reference/date-and-time-canonical-functions.md)|`datetimeoffset`Sunucuda biçimlendirilen bir değer oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005 ' de desteklenmez.|  
+|[CreateTime (saat, dakika, saniye)](./language-reference/date-and-time-canonical-functions.md)|`time`Sunucuda biçimlendirilen bir değer oluşturulur.<br /><br /> SQL Server 2000 veya SQL Server 2005 ' de desteklenmez.|  
+|[CurrentDateTime ()](./language-reference/date-and-time-canonical-functions.md)|`SysDateTime()` SQLServer 2008.<br /><br /> `GetDate()` SQLServer 2000 ve SQLServer 2005 ' de.|  
+|[CurrentDateTimeOffset ()](./language-reference/date-and-time-canonical-functions.md)|`SysDateTimeOffset()` SQL Server 2008.<br /><br /> SQL Server 2000 veya SQL Server 2005 ' de desteklenmez.|  
+|[CurrentUtcDateTime()](./language-reference/date-and-time-canonical-functions.md)|`SysUtcDateTime()` SQLServer 2008. `GetUtcDate()` SQL Server 2000 ve SQL Server 2005.|  
 |[DayOfYear (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DatePart(dayofyear, expression)`|  
 |[Gün (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DatePart(day, expression)`|  
 |[DiffDays (startExpression, endExpression)](./language-reference/date-and-time-canonical-functions.md)|`DATEDIFF(day, startdate, enddate)`|  
@@ -48,16 +50,17 @@ Bu konu başlığı altında, kavramsal model kurallı işlevlerinin karşılık
 |[Minute (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DatePart(minute, expression)`|  
 |[Month (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DatePart(month, expression)`|  
 |[Second (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DatePart(second, expression)`|  
-|[Kes (ifade)](./language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 ve SQL Server 2005 için sunucuda kesilmiş `datetime` bir biçimlendirilen değer oluşturulur. SQL Server 2008 ve sonraki sürümlerinde, sunucuda kesilmiş `datetime2` veya `datetimeoffset` değer oluşturulur.|  
+|[Kes (ifade)](./language-reference/date-and-time-canonical-functions.md)|SQL Server 2000 ve SQL Server 2005 için sunucuda kesilmiş bir `datetime` biçimlendirilen değer oluşturulur. SQL Server 2008 ve sonraki sürümlerinde, `datetime2` sunucuda kesilmiş veya `datetimeoffset` değer oluşturulur.|  
 |[Yıl (ifade)](./language-reference/date-and-time-canonical-functions.md)|`DatePart(YEAR, expression)`|  
   
 ## <a name="aggregate-functions"></a>Toplama İşlevleri  
+
  Aşağıdaki tabloda, toplam işlevleri eşleştirmesi açıklanmaktadır:  
   
 |Kurallı işlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
 |[Ort (ifade)](./language-reference/aggregate-canonical-functions.md)|`AVG(expression)`|  
-|[BigCount(expression)](./language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
+|[BigCount (ifade)](./language-reference/aggregate-canonical-functions.md)|`BIGCOUNT(expression)`|  
 |[Count (ifade)](./language-reference/aggregate-canonical-functions.md)|`COUNT(expression)`|  
 |[Min (ifade)](./language-reference/aggregate-canonical-functions.md)|`MIN(expression)`|  
 |[Max (ifade)](./language-reference/aggregate-canonical-functions.md)|`MAX(expression)`|  
@@ -68,6 +71,7 @@ Bu konu başlığı altında, kavramsal model kurallı işlevlerinin karşılık
 |[VarP (ifade)](./language-reference/aggregate-canonical-functions.md)|`VARP(expression)`|  
   
 ## <a name="math-functions"></a>Matematik işlevleri  
+
  Aşağıdaki tabloda, matematik işlevleri eşleştirmesi açıklanmaktadır:  
   
 |Kurallı işlevler|SQL Server işlevleri|  
@@ -80,13 +84,14 @@ Bu konu başlığı altında, kavramsal model kurallı işlevlerinin karşılık
 |[Kesilemedi](./language-reference/math-canonical-functions.md)|`ROUND(value , digits, 1)`|  
   
 ## <a name="string-functions"></a>Dize İşlevleri  
+
  Aşağıdaki tabloda, eşleşen dize işlevleri açıklanmaktadır:  
   
 |Kurallı işlevler|SQL Server işlevleri|  
 |-------------------------|--------------------------|  
 |[Contains (dize, hedef)](./language-reference/string-canonical-functions.md)|`CHARINDEX(target, string)`|  
 |[Concat (dize1, dize2)](./language-reference/string-canonical-functions.md)|dize1 + dize2|  
-|[EndsWith (dize, hedef)](./language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **Göz önünde** `false` `target` İşlevi, sabituzunluklubirdizesütunundadepolanıyorsavebirsabitisedöndürür.`string` `CHARINDEX` Bu durumda tüm dize, sondaki boşlukları doldurarak aranır. Olası bir geçici çözüm, aşağıdaki örnekte olduğu gibi, dizeyi `EndsWith` işleve geçirmeden önce sabit uzunluklu dizedeki verileri kırpmektir:`EndsWith(TRIM(string), target)`|  
+|[EndsWith (dize, hedef)](./language-reference/string-canonical-functions.md)|`CHARINDEX(REVERSE(target), REVERSE(string)) = 1`<br /><br /> **Göz önünde** `CHARINDEX` İşlevi `false` , `string` sabit uzunluklu bir dize sütununda depolanıyorsa ve `target` bir sabit ise döndürür. Bu durumda tüm dize, sondaki boşlukları doldurarak aranır. Olası bir geçici çözüm, `EndsWith` Aşağıdaki örnekte olduğu gibi, dizeyi işleve geçirmeden önce sabit uzunluklu dizedeki verileri kırpmektir: `EndsWith(TRIM(string), target)`|  
 |[IndexOf (hedef, dize2)](./language-reference/string-canonical-functions.md)|`CHARINDEX(target, string2)`|  
 |[Sol (dize1, uzunluk)](./language-reference/string-canonical-functions.md)|`LEFT(string1, length)`|  
 |[Uzunluk (dize)](./language-reference/string-canonical-functions.md)|`LEN(string)`|  
@@ -102,6 +107,7 @@ Bu konu başlığı altında, kavramsal model kurallı işlevlerinin karşılık
 |[ToUpper (dize)](./language-reference/string-canonical-functions.md)|`UPPER(string)`|  
   
 ## <a name="bitwise-functions"></a>Bit düzeyinde Işlevler  
+
  Aşağıdaki tabloda bit düzeyinde işlevler eşleme açıklanmaktadır:  
   
 |Kurallı işlevler|SQL Server işlevleri|  

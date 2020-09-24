@@ -7,14 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 57830421eee3c94f9785a2c603eb31b96f99f4d5
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a30a8c2c731e8c5cb2b22c8d7f34ec32d149803c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90552849"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152799"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Veri hizmetini yapılandırma (WCF Veri Hizmetleri)
+
 WCF Veri Hizmetleri, açık veri Protokolü (OData) akışlarını kullanıma sunan veri hizmetleri oluşturabilirsiniz. Bu akışlardaki veriler, çeşitli veri kaynaklarından gelebilir. WCF Veri Hizmetleri, bu verileri OData akışı olarak göstermek için veri sağlayıcılarını kullanır. Bu sağlayıcılar bir Entity Framework sağlayıcısı, bir yansıma sağlayıcısı ve bir dizi özel veri hizmeti sağlayıcısı arabirimlerini içerir. Sağlayıcı uygulama, hizmet için veri modelini tanımlar. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).  
   
  WCF Veri Hizmetleri veri hizmeti, sınıfından devralan bir sınıftır <xref:System.Data.Services.DataService%601> . burada veri hizmetinin türü, veri modelinin varlık kapsayıcısıdır. Bu varlık kapsayıcısının <xref:System.Linq.IQueryable%601> , veri modelindeki varlık kümelerine erişmek için kullanılan bir veya daha fazla özelliği olan bir veya daha fazla özelliği vardır.  
@@ -25,6 +26,7 @@ WCF Veri Hizmetleri, açık veri Protokolü (OData) akışlarını kullanıma su
 [!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
   
 ## <a name="data-service-configuration-settings"></a>Veri hizmeti yapılandırma ayarları  
+
  <xref:System.Data.Services.DataServiceConfiguration>Sınıfı, aşağıdaki veri hizmeti davranışlarını belirtmenizi sağlar:  
   
 |Üye|Davranış|  
@@ -48,7 +50,9 @@ WCF Veri Hizmetleri, açık veri Protokolü (OData) akışlarını kullanıma su
 |<xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A>|Bu yapılandırma özelliği, hata yanıtı iletisinde daha fazla bilgi döndürerek bir veri hizmetini daha kolay bir şekilde gidermenize olanak sağlar. Bu seçenek, bir üretim ortamında kullanılmak üzere tasarlanmamıştır. Daha fazla bilgi için bkz. [WCF veri Hizmetleri geliştirme ve dağıtma](developing-and-deploying-wcf-data-services.md).|  
   
 <a name="accessRequirements"></a>
+
 ## <a name="minimum-resource-access-requirements"></a>En düşük kaynak erişimi gereksinimleri  
+
  Aşağıdaki tabloda, belirli bir işlemi yürütmek için verilmesi gereken en düşük varlık kümesi haklarının ayrıntıları verilmiştir. Yol örnekleri, [hızlı](quickstart-wcf-data-services.md)başlangıcı tamamladığınızda oluşturulan Northwind veri hizmetini temel alır. Hem <xref:System.Data.Services.EntitySetRights> numaralandırma hem de <xref:System.Data.Services.ServiceOperationRights> numaralandırma kullanılarak tanımlandığından <xref:System.FlagsAttribute> , tek bir varlık kümesi veya işlemi için birden çok izin belirtmek üzere bir mantıksal or işleci kullanabilirsiniz. Daha fazla bilgi için bkz. [nasıl yapılır: veri hizmetine erişimi etkinleştirme](how-to-enable-access-to-the-data-service-wcf-data-services.md).  
   
 |Yol/eylem|`GET`|`DELETE`|`MERGE`|`POST`|`PUT`|  
@@ -63,9 +67,9 @@ WCF Veri Hizmetleri, açık veri Protokolü (OData) akışlarını kullanıma su
 |`/Orders(10643)/$links/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> '<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> ve <xref:System.Data.Services.EntitySetRights.WriteMerge> veya <xref:System.Data.Services.EntitySetRights.WriteReplace>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> '<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> ve <xref:System.Data.Services.EntitySetRights.WriteMerge>|Desteklenmez|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle>;<br /><br /> '<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> ve <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers/$count`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|Desteklenmez|Desteklenmez|Desteklenmez|Desteklenmez|  
 |`/Customers('ALFKI')/ContactName`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|Desteklenmez|<xref:System.Data.Services.EntitySetRights.WriteMerge>|Desteklenmez|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Address/StreetAddress/$value` <sup>1</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.WriteDelete>|Desteklenmez|Desteklenmez|Desteklenmez|  
+|`/Customers('ALFKI')/Address/StreetAddress/$value`<sup>1</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.WriteDelete>|Desteklenmez|Desteklenmez|Desteklenmez|  
 |`/Customers('ALFKI')/ContactName/$value`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> ve <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.WriteMerge>|Desteklenmez|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/$value` <sup>2</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|Desteklenmez|Desteklenmez|Desteklenmez|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
+|`/Customers('ALFKI')/$value`<sup>2</sup>|<xref:System.Data.Services.EntitySetRights.ReadSingle>|Desteklenmez|Desteklenmez|Desteklenmez|<xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Customers?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> '<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Desteklenmez|Desteklenmez|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend>|Desteklenmez|  
 |`/Customers('ALFKI')?$select=Orders/*&$expand=Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> '<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Desteklenmez|Desteklenmez|Desteklenmez|Desteklenmez|  
   
@@ -74,7 +78,9 @@ WCF Veri Hizmetleri, açık veri Protokolü (OData) akışlarını kullanıma su
  <sup>2</sup> bu URI, bir ikili büyük nesne (blob) döndüren bir özellik, bu örnekte olduğu gibi bir medya bağlantısı girişi olan bir varlığa ait olan medya kaynağı olarak tanımlandığında desteklenir `Customers` . Daha fazla bilgi için bkz. [Akış sağlayıcısı](streaming-provider-wcf-data-services.md).  
   
 <a name="versioning"></a>
+
 ## <a name="versioning-requirements"></a>Sürüm oluşturma gereksinimleri  
+
  Aşağıdaki veri hizmeti yapılandırma davranışları OData protokolünün 2 veya sonraki sürümlerinin sürümlerini gerektirir:  
   
 - Count istekleri için destek.  

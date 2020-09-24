@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: e53c54dc446d9fea87a9b7a336a38ffaa31704e9
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 9478501ea98ec1b9d3ec2761bc4ebf3f6bef656c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125455"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152448"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# derleyici seçenekleri)
+
 **-Lib** seçeneği, [-Reference (C# derleyici seçenekleri)](./reference-compiler-option.md) seçeneği aracılığıyla başvurulan derlemelerin konumunu belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,6 +27,7 @@ ms.locfileid: "89125455"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `dir1`  
  Başvurulan bir derlemenin geçerli çalışma dizininde (derleyicisini çağırdığınız dizin) veya ortak dil çalışma zamanının sistem dizininde bulunamaması halinde derleyicinin aranacağı bir dizin.  
   
@@ -33,6 +35,7 @@ ms.locfileid: "89125455"
  Derleme başvuruları için arama yapılacak bir veya daha fazla dizin. Ek dizin adlarını virgülle ayırın ve aralarında boşluk olmadan boşluklar koyun.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Derleyici, aşağıdaki sırada tam olarak nitelenen derleme başvurularını arar:  
   
 1. Geçerli çalışma dizini. Bu, derleyicinin çağrıldığı dizindir.  
@@ -62,6 +65,7 @@ ms.locfileid: "89125455"
  Bu derleyici seçeneğini program aracılığıyla ayarlama hakkında daha fazla bilgi için bkz <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A> ..  
   
 ## <a name="example"></a>Örnek  
+
  Bir. exe dosyası oluşturmak için t2.cs derleyin. Derleyici, çalışma dizinine ve derleme başvuruları için C sürücüsünün kök dizinine bakacaktır.  
   
 ```console  

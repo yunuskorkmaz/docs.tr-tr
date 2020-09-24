@@ -7,21 +7,23 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 7315c6d8-f452-4fb2-a0c1-76ab0593c146
-ms.openlocfilehash: cf20c1d27f22c0248217541763eaa617ed9493db
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6bab9d9be484cf90cb85df63a1b237b5cc39a5e0
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569287"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152773"
 ---
 # <a name="how-to-create-a-data-service-using-the-reflection-provider-wcf-data-services"></a>Nasıl yapılır: yansıma sağlayıcısını kullanarak veri hizmeti oluşturma (WCF Veri Hizmetleri)
-WCF Veri Hizmetleri, bu sınıfların <xref:System.Linq.IQueryable%601> arabirimini uygulayan nesneler olarak kullanıma sunulduğunu sürece rastgele sınıflara dayalı bir veri modeli tanımlamanızı sağlar. Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).  
+
+WCF Veri Hizmetleri, bu sınıflar arabirimini uygulayan nesneler olarak sunulduğunu sürece rastgele sınıflara dayalı bir veri modeli tanımlamanızı sağlar <xref:System.Linq.IQueryable%601> . Daha fazla bilgi için bkz. [veri hizmetleri sağlayıcıları](data-services-providers-wcf-data-services.md).  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, `Orders` ve `Items`içeren bir veri modelini tanımlar. `OrderItemData` varlık kapsayıcı sınıfı, <xref:System.Linq.IQueryable%601> arabirimleri döndüren iki ortak yöntem içerir. Bu arabirimler `Orders` ve `Items` varlık türlerinin varlık kümeleridir. `Order` birden çok `Items`içerebilir, bu nedenle `Orders` varlık türünün `Items` nesnelerden oluşan bir koleksiyonu döndüren bir `Items` gezinti özelliği vardır. `OrderItemData` varlık kapsayıcı sınıfı, `OrderItems` veri hizmetinin türetildiği <xref:System.Data.Services.DataService%601> sınıfının genel türüdür.  
+
+ Aşağıdaki örnek, ve içeren bir veri modelini tanımlar `Orders` `Items` . Varlık kapsayıcı sınıfında `OrderItemData` arabirimler döndüren iki ortak yöntem vardır <xref:System.Linq.IQueryable%601> . Bu arabirimler, `Orders` ve `Items` varlık türlerinin varlık kümeleridir. `Order`, Birden çok içerebilir `Items` , bu nedenle `Orders` varlık türünün `Items` bir nesne koleksiyonu döndüren bir gezinti özelliği vardır `Items` . `OrderItemData`Varlık kapsayıcı sınıfı, <xref:System.Data.Services.DataService%601> `OrderItems` veri hizmetinin türetildiği sınıfın genel türüdür.  
   
 > [!NOTE]
-> Bu örnek, bellek içi bir veri sağlayıcısını gösterdiği ve değişiklikler geçerli nesne örnekleri dışında kalıcı olmadığından, <xref:System.Data.Services.IUpdatable> arabirimini uygulamadan elde edilen bir avantaj yoktur. <xref:System.Data.Services.IUpdatable> arabirimini uygulayan bir örnek için bkz. [nasıl yapılır: LINQ to SQL veri kaynağı kullanarak veri hizmeti oluşturma](create-a-data-service-using-linq-to-sql-wcf.md).  
+> Bu örnekte, bellek içi veri sağlayıcısı ve değişiklikler geçerli nesne örneklerinin dışında kalıcı olmadığından, arabirimi uygulamadan türetilmiş bir avantaj yoktur <xref:System.Data.Services.IUpdatable> . Arabirimi uygulayan bir örnek için <xref:System.Data.Services.IUpdatable> bkz. [nasıl yapılır: LINQ to SQL veri kaynağı kullanarak veri hizmeti oluşturma](create-a-data-service-using-linq-to-sql-wcf.md).  
   
  [!code-csharp[Astoria Reflection Provider#CustomIQueryable](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_reflection_provider/cs/orderitems.svc.cs#customiqueryable)]
  [!code-vb[Astoria Reflection Provider#CustomIQueryable](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_reflection_provider/vb/orderitems.svc.vb#customiqueryable)]  

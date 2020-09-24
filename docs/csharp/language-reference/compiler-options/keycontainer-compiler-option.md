@@ -9,14 +9,15 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 8b11380683159b7792149558a5dd432707ba3818
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 93ee5cd755a4fd6918d2a5825b63151a201a8f6a
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152474"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C# derleyici seçenekleri)
+
 Şifreleme anahtarı kapsayıcısının adını belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -26,10 +27,12 @@ ms.locfileid: "89125507"
 ```  
   
 ## <a name="arguments"></a>Bağımsız değişkenler  
+
  `string`  
  Tanımlayıcı ad anahtar kapsayıcısının adı.  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  **-Keycontainer** seçeneği kullanıldığında, derleyici paylaşılabilir bir bileşen oluşturur. Derleyici, belirtilen kapsayıcıdan derleme bildirimine ortak bir anahtar ekler ve son derlemeyi özel anahtarla imzalar. Anahtar dosyası oluşturmak için `sn -k file` komut satırına yazın. `sn -i` anahtar çiftini bir kapsayıcıya kurar. Derleyici CoreCLR üzerinde çalıştırıldığında bu seçenek desteklenmez. CoreCLR üzerinde oluşturma sırasında bir derlemeyi imzalamak için [-keyfile](keyfile-compiler-option.md) seçeneğini kullanın.
   
  [-Target: Module](./target-module-compiler-option.md)ile derleme yaparsanız, anahtar dosyasının adı modülde tutulur ve bu modülü [-addmodule](./addmodule-compiler-option.md)ile bir derlemede derlerken derlemeye dahil edilir.  

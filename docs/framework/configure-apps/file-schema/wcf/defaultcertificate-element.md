@@ -2,14 +2,15 @@
 title: <defaultCertificate> Öğesi
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: cce236bf80fa00f01a3b5f4680d975f83fde0c16
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2eaec4f4296f90579ca32d817f0a20da4ccc9a37
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70400422"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153904"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate> Öğesi
+
 Bir hizmet veya STS bir anlaşma protokolü aracılığıyla bir tane sağlamıyorsa kullanılacak bir X. 509.952 sertifikası belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ Bir hizmet veya STS bir anlaşma protokolü aracılığıyla bir tane sağlamıy
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<serviceCertificate>**](servicecertificate-of-clientcredentials-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<defaultCertificate>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <defaultCertificate findValue="String"
@@ -31,6 +32,7 @@ Bir hizmet veya STS bir anlaşma protokolü aracılığıyla bir tane sağlamıy
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Aşağıdaki bölümlerde öznitelikler, alt öğeler ve üst öğeler açıklanır  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -67,6 +69,7 @@ Bir hizmet veya STS bir anlaşma protokolü aracılığıyla bir tane sağlamıy
 |Sabit Listesi|Değerler şunlardır: AddressBook, AuthRoot, CertificateAuthority, Izin verilmeyen, My, root, Trustedkişilerim ve TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -76,9 +79,11 @@ Bir hizmet veya STS bir anlaşma protokolü aracılığıyla bir tane sağlamıy
 |[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|İstemciye bir hizmetin kimlik doğrulaması yapılırken kullanılacak sertifikayı belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Sertifika tabanlı ileti güvenliği kullanan bağlamalar için, bu yapılandırma öğesi tarafından belirtilen sertifika, iletileri hizmete şifrelemek için kullanılır ve istemciye yanıtları imzalamak için hizmet tarafından kullanılması beklenir. Bir hizmet tarafından hiçbir sertifika belirtilmediğinde kullanılacak tek bir sertifika depolar.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, URI 'SI ile başlayan uç noktalar için kullanılacak bir sertifikayı `http://www.contoso.com` ve sertifika anlaşması gerçekleştirmeyin diğer tüm uç noktalar için kullanılacak bir sertifikayı belirtir.  
   
 ```xml  

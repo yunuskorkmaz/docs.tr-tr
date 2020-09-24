@@ -2,12 +2,12 @@
 title: Dayanıklı HTTP isteklerini uygulamak için IHttpClientFactory kullanma
 description: .NET Core 2,1 ' den bu yana sunulan ıhttpclientfactory kullanarak, örnek oluşturmak için, `HttpClient` bunu uygulamalarınızda kullanmanızı kolaylaştırmayı öğrenin.
 ms.date: 08/31/2020
-ms.openlocfilehash: c54965a9bbb700cfb1f14150773c2df45d109c39
-ms.sourcegitcommit: aa6d8a90a4f5d8fe0f6e967980b8c98433f05a44
+ms.openlocfilehash: ae093ef960b2540bf4916bf72ad3bec51fa33ebe
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90678822"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152578"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>Dayanıklı HTTP isteklerini uygulamak için IHttpClientFactory kullanma
 
@@ -23,7 +23,7 @@ Bu nedenle, `HttpClient` bir kez örneğinin oluşturulması ve bir uygulamanın
 
 Geliştiricilerin üzerinde çalıştığı diğer bir sorun `HttpClient` da uzun süreli işlemlerde paylaşılan bir örnek kullanıyor. HttpClient 'ın tek veya statik bir nesne olarak örneklendiği bir durumda, DotNet/Runtime GitHub deposunun bu [sorunu](https://github.com/dotnet/runtime/issues/18348) konusunda AÇıKLANDıĞı gibi DNS değişikliklerini işleyemez.
 
-Ancak, sorun `HttpClient` büyük bir dönem için değildir, ancak yukarıda bahsedilen yuva tükenmesi ve DNS değişiklik sorunları olan yeni bir somut örnek oluşturduğundan, [HttpClient için varsayılan oluşturucuya](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)sahip değildir <xref:System.Net.Http.HttpMessageHandler> . *sockets exhaustion*
+Ancak, sorun `HttpClient` büyük bir dönem için değildir, ancak yukarıda bahsedilen yuva tükenmesi ve DNS değişiklik sorunları olan yeni bir somut örnek oluşturduğundan, [HttpClient için varsayılan oluşturucuya](/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)sahip değildir <xref:System.Net.Http.HttpMessageHandler> . *sockets exhaustion*
 
 Yukarıda bahsedilen sorunları gidermek ve örnekleri yönetilebilir hale getirmek için `HttpClient` .NET Core 2,1, <xref:System.Net.Http.IHttpClientFactory> `HttpClient` bağımlılık ekleme (dı) aracılığıyla bir uygulamadaki örnekleri yapılandırmak ve oluşturmak için kullanılabilecek arabirimi kullanıma sunmuştur. Ayrıca, HttpClient 'daki işleyiciler için temsilci atama özelliğinden yararlanmak üzere, Polly tabanlı ara yazılım için uzantılar sağlar.
 
@@ -124,7 +124,7 @@ Her tür Istemcinin kendi yapılandırılmış işleyici yaşam süresi değeri 
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Eklenen ve yapılandırılmış HttpClient kullanan, yazılan Istemci sınıflarınızı uygulama
 
-Önceki bir adım olarak, örnek kodda bulunan, örneğin ' BasketService ', ' CatalogService ', ' OrderingService ' vb. gibi belirlenmiş Istemci sınıflarının tanımlanmış olması gerekir. – türü belirtilmiş bir Istemci, bir nesneyi kabul eden `HttpClient` (Oluşturucusu aracılığıyla eklenen) ve bir uzak HTTP hizmetini çağırmak için onu kullanan bir sınıftır. Örnek:
+Önceki bir adım olarak, örnek kodda bulunan, örneğin ' BasketService ', ' CatalogService ', ' OrderingService ' vb. gibi belirlenmiş Istemci sınıflarının tanımlanmış olması gerekir. – türü belirtilmiş bir Istemci, bir nesneyi kabul eden `HttpClient` (Oluşturucusu aracılığıyla eklenen) ve bir uzak HTTP hizmetini çağırmak için onu kullanan bir sınıftır. Örneğin:
 
 ```csharp
 public class CatalogService : ICatalogService

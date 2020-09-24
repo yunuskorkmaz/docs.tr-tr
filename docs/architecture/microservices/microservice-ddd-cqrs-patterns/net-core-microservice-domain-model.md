@@ -2,12 +2,12 @@
 title: .NET Core ile bir mikro hizmet etki alanı modeli uygulama
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | DDD-odaklı bir etki alanı modelinin uygulama ayrıntılarına ulaşın.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4017d9d658ff73fd935507dad79e9ffab7973de1
-ms.sourcegitcommit: a8730298170b8d96b4272e0c3dfc9819c606947b
+ms.openlocfilehash: e24f4e643d258450a2b33ed4dc4aded718bebd82
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738755"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152552"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>.NET Core ile bir mikro hizmet etki alanı modeli uygulama
 
@@ -152,7 +152,7 @@ Bu kod parçacığında, bir OrderItem nesnesinin oluşturulmasıyla ilgili doğ
 
 Ayrıca, yeni OrderItem (params) işlemi de düzen toplama kökünden Addorderıtem yöntemi tarafından denetlenir ve gerçekleştirilir. Bu nedenle, bu işlemle ilgili mantık veya doğrulamaların çoğu (özellikle diğer alt varlıklar arasındaki tutarlılığı etkileyen her şey), toplam kökte tek bir yerde olacaktır. Bu, toplam kök deseninin nihai amacı olur.
 
-Entity Framework Core 1,1 veya sonraki bir sürümü kullandığınızda, özelliklere ek olarak [alanlarla eşleştirmeye](https://docs.microsoft.com/ef/core/modeling/backing-field) ızın verdiğinden ddd varlığı daha iyi ifade edilebilir. Bu, alt varlıkların veya değer nesnelerinin koleksiyonlarını koruurken yararlı olur. Bu geliştirmelerden bazıları özellikler yerine basit özel alanları kullanabilir ve genel yöntemlerde alan koleksiyonuna herhangi bir güncelleştirmeyi uygulayabilir ve AsReadOnly yöntemi aracılığıyla salt okunur erişim sağlayabilirsiniz.
+Entity Framework Core 1,1 veya sonraki bir sürümü kullandığınızda, özelliklere ek olarak [alanlarla eşleştirmeye](/ef/core/modeling/backing-field) ızın verdiğinden ddd varlığı daha iyi ifade edilebilir. Bu, alt varlıkların veya değer nesnelerinin koleksiyonlarını koruurken yararlı olur. Bu geliştirmelerden bazıları özellikler yerine basit özel alanları kullanabilir ve genel yöntemlerde alan koleksiyonuna herhangi bir güncelleştirmeyi uygulayabilir ve AsReadOnly yöntemi aracılığıyla salt okunur erişim sağlayabilirsiniz.
 
 DDD 'da, verilerin herhangi bir kısmını ve tutarlılığını denetlemek için yalnızca varlıktaki yöntemler aracılığıyla varlığı (veya Oluşturucu) güncellemek istersiniz. böylece özellikler yalnızca bir get erişimcisi ile tanımlanmıştır. Özellikler özel alanlarla desteklenir. Özel üyelere yalnızca sınıfının içinden erişilebilir. Ancak, bir özel durum vardır: EF Core bu alanları da ayarlaması gerekir (Bu nedenle, nesneyi doğru değerlerle döndürebilir).
 

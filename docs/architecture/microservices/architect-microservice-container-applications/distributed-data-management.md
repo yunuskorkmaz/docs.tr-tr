@@ -2,12 +2,12 @@
 title: Dağıtılmış veri yönetimi için sorunlar ve çözümler
 description: Mikro hizmetler dünyasında dağıtılmış veri yönetimiyle ilgili zorluk ve çözümlerin ne olduğunu öğrenin.
 ms.date: 09/20/2018
-ms.openlocfilehash: 8b91879e879db293ed61bd5f3c49dc391b9d8f5a
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 1439dd5a04c3991a2b3b2ef12763843f9f339a29
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144324"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152657"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Dağıtılmış veri yönetimi için sorunlar ve çözümler
 
@@ -25,7 +25,7 @@ Her bağlam için farklı bir etki alanı ile birden çok uygulama bağlamı ara
 
 **API ağ geçidi.** Farklı veritabanlarına sahip birden fazla mikro hizmetten basit veri toplama için önerilen yaklaşım, API ağ geçidi olarak adlandırılan bir toplama mikro hizmetidir. Ancak, bu düzenin uygulanması konusunda dikkatli olmanız gerekir, çünkü sisteminizde bir sıkıştırma noktası olabilir ve mikro hizmet bağımsız çalışma sınırı ilkesini ihlal edebilir. Bu olasılığa karşı azaltmak için, her birinin dikey bir "dilim" veya sistemin iş alanına odaklanarak birden çok fined API ağ geçidine sahip olabilirsiniz. API ağ geçidi, daha sonra [API ağ geçidi bölümünde](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md#why-consider-api-gateways-instead-of-direct-client-to-microservice-communication) daha ayrıntılı olarak açıklanmıştır.
 
-**Sorgu/okuma tabloları olan CQRS.** Birden çok mikro hizmetten veri toplamak için başka bir çözüm, [gerçekleştirilmiş görünüm](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)modelidir. Bu yaklaşımda, birden fazla mikro hizmet tarafından sahip olunan verilerin bulunduğu salt okunurdur bir tablo olan, önceden (gerçek sorgular gerçekleşmeden önce diğer verileri hazırlama) oluşturursunuz. Tablonun, istemci uygulamanın ihtiyaçlarına uygun bir biçimi vardır.
+**Sorgu/okuma tabloları olan CQRS.** Birden çok mikro hizmetten veri toplamak için başka bir çözüm, [gerçekleştirilmiş görünüm](/azure/architecture/patterns/materialized-view)modelidir. Bu yaklaşımda, birden fazla mikro hizmet tarafından sahip olunan verilerin bulunduğu salt okunurdur bir tablo olan, önceden (gerçek sorgular gerçekleşmeden önce diğer verileri hazırlama) oluşturursunuz. Tablonun, istemci uygulamanın ihtiyaçlarına uygun bir biçimi vardır.
 
 Mobil uygulama için ekran gibi bir şey düşünün. Tek bir veritabanınız varsa, birden çok tablo içeren karmaşık bir birleştirmeyi gerçekleştiren SQL sorgusunu kullanarak bu ekran için verileri birlikte çekebilirsiniz. Ancak, birden çok veritabanınız varsa ve her bir veritabanı farklı bir mikro hizmete aitse, bu veritabanlarını sorgulayabilir ve bir SQL birleşimi oluşturamazsınız. Karmaşık sorgunuz bir zorluk haline gelir. CQRS yaklaşımını kullanarak gereksinime bir şekilde erişebilirsiniz. yalnızca sorgular için kullanılan farklı bir veritabanında, yoğun bir tablo oluşturursunuz. Tablo, uygulamanızın ekranı ve sorgu tablosundaki sütunlar arasındaki alanlar arasında bire bir ilişki ile karmaşık sorgu için gereken veriler için özel olarak tasarlanabilir. Raporlama amaçları için de hizmet verebilir.
 

@@ -2,12 +2,12 @@
 title: Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 description: Kapsayıcılı .NET uygulamaları için .NET mikro hizmetleri mimarisi | Mikro hizmetler arasında olay tabanlı iletişim uygulamak için tümleştirme olaylarını anlayın.
 ms.date: 10/02/2018
-ms.openlocfilehash: cbc9d28f9fbcaea528eabc4930476545cb919bb4
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: a778acba3e17b084840b77d903533f9180ca01d9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90539352"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152539"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Mikro hizmetler arasında olay tabanlı iletişim uygulama (tümleştirme olayları)
 
@@ -76,7 +76,7 @@ Yukarıdaki diyagramda, mikro hizmet B ve C 'yi abone olarak yayımlayan ve yay�
 
 ### <a name="publishsubscribe-pubsub-pattern"></a>Yayımla/abone ol (yayımlama/alt) kalıbı
 
-[Yayımla/abone ol deseninin](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) amacı gözlemci düzeniyle aynıdır: belirli olaylar gerçekleşirken diğer hizmetlere bildirimde bulunmasını istiyorsunuz. Ancak gözlemci ve Pub/Sub desenleri arasında önemli bir farklılık vardır. Gözlemci modelinde, yayın doğrudan observable 'dan observers 'a yapılır, bu nedenle birbirini "bilir". Ancak, bir yayın/alt model kullanılırken, aracı veya ileti Aracısı ya da yayımcı ve abone tarafından bilinen olay veri yolu adlı üçüncü bir bileşen vardır. Bu nedenle, yayın/alt model kullanılırken yayımcı ve aboneler, belirtilen olay veri yolu veya ileti aracısına tam olarak bir şekilde ayrılır.
+[Yayımla/abone ol deseninin](/previous-versions/msp-n-p/ff649664(v=pandp.10)) amacı gözlemci düzeniyle aynıdır: belirli olaylar gerçekleşirken diğer hizmetlere bildirimde bulunmasını istiyorsunuz. Ancak gözlemci ve Pub/Sub desenleri arasında önemli bir farklılık vardır. Gözlemci modelinde, yayın doğrudan observable 'dan observers 'a yapılır, bu nedenle birbirini "bilir". Ancak, bir yayın/alt model kullanılırken, aracı veya ileti Aracısı ya da yayımcı ve abone tarafından bilinen olay veri yolu adlı üçüncü bir bileşen vardır. Bu nedenle, yayın/alt model kullanılırken yayımcı ve aboneler, belirtilen olay veri yolu veya ileti aracısına tam olarak bir şekilde ayrılır.
 
 ### <a name="the-middleman-or-event-bus"></a>Middleman veya olay veri yolu
 

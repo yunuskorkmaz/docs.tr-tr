@@ -2,14 +2,15 @@
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 10888f26053014ffb1fec49d1dfe87c7fd09ab54
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 6cec3373dae3127f16bb8a418a91a684554f2b0c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70399573"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153670"
 ---
 # \<serviceSecurityAudit>
+
 Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleştiren ayarları belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceSecurityAudit>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceSecurityAudit auditLogLocation="Default/Application/Security"
@@ -29,6 +30,7 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -41,6 +43,7 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
 |messageAuthenticationAuditLevel|Günlüğe kaydedilen ileti kimlik doğrulaması denetim olaylarının türünü belirtir. Geçerli değerler şunlardır:<br /><br /> -None: hiçbir denetim olayı oluşturulmaz.<br />-Success: yalnızca başarılı bir güvenlik (ileti imzası doğrulama, şifre ve belirteç doğrulama dahil tam doğrulama) olayları günlüğe kaydedilir.<br />-Hata: yalnızca hata olayları günlüğe kaydedilir.<br />-Başarılı Sorfailure: hem başarı hem de hata olayları günlüğe kaydedilir.<br /><br /> Varsayılan değer, Yok'tur. Daha fazla bilgi için bkz. <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
@@ -50,6 +53,7 @@ Hizmet işlemleri sırasında güvenlik olaylarının denetlenmesini etkinleşti
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu yapılandırma öğesi Windows Communication Foundation (WCF) kimlik doğrulama olaylarını denetlemek için kullanılır. Denetim etkinleştirildiğinde, başarılı veya başarısız kimlik doğrulama denemeleri (ya da her ikisi) denetlenebilir. Olaylar üç olay günlüğünden birine yazılır: işletim sistemi sürümü için uygulama, güvenlik veya varsayılan günlük. Olay günlüklerinin hepsi Windows Olay Görüntüleyicisi kullanılarak görüntülenebilir.  
   
  Bu yapılandırma öğesinin kullanımına ilişkin ayrıntılı bir örnek için bkz. [hizmet denetimi davranışı](../../../wcf/samples/service-auditing-behavior.md).  

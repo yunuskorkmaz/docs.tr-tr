@@ -2,14 +2,15 @@
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: c421273d1d08db047a51f1f1e4f9d6c908f12986
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 2236361316254d065abd1fb62fd2e509be289a4c
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84201780"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153865"
 ---
 # \<serviceMetadata>
+
 Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -19,7 +20,7 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<behavior>**](behavior-of-servicebehaviors.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<serviceMetadata>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceMetadata externalMetadataLocation="String"
@@ -35,6 +36,7 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -53,7 +55,8 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
 |policyVersion|Kullanılan WS-Policy belirtiminin sürümünü belirten bir dize. Bu öznitelik türü <xref:System.ServiceModel.Description.PolicyVersion> .|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -62,7 +65,8 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
 |[\<behavior>](behavior-of-endpointbehaviors.md)|Bir davranış öğesi belirtir.|  
   
 ## <a name="remarks"></a>Açıklamalar  
- Bu yapılandırma öğesi, bir hizmetin meta veri yayımlama özelliklerini denetlemenize olanak tanır. Potansiyel olarak duyarlı hizmet meta verilerinin istenmeden açıklanmasını engellemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma, meta veri yayımlamayı devre dışı bırakır. Bu davranış, varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracı (Svcutil. exe gibi) kullanamazsınız. Bu yapılandırma öğesini kullanarak hizmetiniz için bu yayımlama davranışını etkinleştirebilirsiniz.  
+
+ Bu yapılandırma öğesi, bir hizmetin meta veri yayımlama özelliklerini denetlemenize olanak tanır. Potansiyel olarak duyarlı hizmet meta verilerinin istenmeden açıklanmasını engellemek için Windows Communication Foundation (WCF) Hizmetleri için varsayılan yapılandırma, meta veri yayımlamayı devre dışı bırakır. Bu davranış, varsayılan olarak güvenlidir, ancak hizmetin meta veri yayımlama davranışı yapılandırmada açıkça etkinleştirilmediği sürece hizmeti çağırmak için gereken istemci kodunu oluşturmak için bir meta veri alma aracı (Svcutil.exe gibi) kullanamazsınız. Bu yapılandırma öğesini kullanarak hizmetiniz için bu yayımlama davranışını etkinleştirebilirsiniz.  
   
  Bu davranışı yapılandırmanın ayrıntılı bir örneği için bkz. [meta veri yayımlama davranışı](../../../wcf/samples/metadata-publishing-behavior.md).  
   
@@ -82,6 +86,7 @@ Hizmet meta verilerinin ve ilgili bilgilerin yayınlanmasını belirtir.
 ```  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örnek, öğesini kullanarak meta verileri açığa çıkarmak için bir hizmet yapılandırır \<serviceMetadata> . Ayrıca, bir uç noktasını bir `IMetadataExchange` WS-MetadataExchange (MEX) protokolünün bir uygulama olarak kullanıma sunmak için yapılandırır. Örnek, `mexHttpBinding` `wsHttpBinding` güvenlik modu olarak ayarlanmış olan öğesine eşdeğer bir standart bağlama olan öğesini kullanır `None` . Uç noktada "mex" göreli adresi kullanılır. bu durum, hizmet tabanı adresine karşı çözümlenirse, bir uç nokta adresinde oluşur `http://localhost/servicemodelsamples/service.svc/mex` .  
   
 ```xml  

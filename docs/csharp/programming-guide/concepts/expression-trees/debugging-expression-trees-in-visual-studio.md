@@ -3,14 +3,15 @@ title: Visual Studio 'da Ifade ağaçlarında hata ayıklama (C#)
 description: Visual Studio 'da DebugView özelliği hakkında bilgi edinin. İfade ağaçlarının yapısını ve içeriğini çözümlemek için bu özelliği nasıl kullanacağınızı öğrenin.
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: fab378149fb14ccf6a66434c933aa24a8c9c6119
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 5dcf56f96ecdbfdc3f4cb171fdb30b96456b59c9
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90555620"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91154138"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio 'da Ifade ağaçlarında hata ayıklama (C#)
+
 Uygulamalarınızda hata ayıklarken ifade ağaçlarının yapısını ve içeriğini çözümleyebilirsiniz. İfade ağacı yapısına hızlı bir genel bakış almak için, `DebugView` [özel bir sözdizimi kullanarak](debugview-syntax.md)ifade ağaçlarını temsil eden özelliğini kullanabilirsiniz. ( `DebugView` Yalnızca hata ayıklama modunda kullanılabilir.)  
 
 ![VS hata ayıklayıcı içindeki bir ifade ağacının DebugView 'ın ekran görüntüsü.](media/debugging-expression-trees-in-visual-studio/debugview-expression-tree.png)

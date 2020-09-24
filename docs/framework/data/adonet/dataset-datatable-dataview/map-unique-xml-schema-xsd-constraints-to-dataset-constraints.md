@@ -2,24 +2,25 @@
 title: Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 8bcf705ce4415929e685be79f813846bbb40bb36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b2dad44176e52adcf32e2e3ccff3d82ba23f6ed
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150850"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91153241"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Benzersiz XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme
-XML Şema tanım dili (XSD) şemasında, **benzersiz** öğe, bir öğe veya öznitelik teki benzersizlik kısıtlamasını belirtir. Bir XML Şemasını ilişkisel şemaya çevirme işleminde, XML Şema'da bir öğe veya öznitelik üzerinde belirtilen benzersiz kısıtlama, oluşturulan <xref:System.Data.DataTable> ilgili <xref:System.Data.DataSet> şemadaki benzersiz bir kısıtlamaya eşlenir.  
+
+Bir XML şeması tanım dili (XSD) şemasında, **Unique** öğesi bir öğe veya öznitelik üzerinde benzersizlik kısıtlamasını belirtir. Bir XML şemasını ilişkisel bir şemaya çevirme işleminde, XML şemasında bir öğe veya öznitelik üzerinde belirtilen benzersiz kısıtlama, karşılık gelen ' de bulunan içinde benzersiz bir kısıtlamaya eşlenir <xref:System.Data.DataTable> <xref:System.Data.DataSet> .  
   
- Aşağıdaki tablo, **benzersiz** öğede belirtebileceğiniz **msdata** özniteliklerini özetleyin.  
+ Aşağıdaki tabloda, **benzersiz** öğesinde belirtebileceğiniz **msdata** öznitelikleri özetlenmektedir.  
   
 |Öznitelik adı|Açıklama|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Bu öznitelik belirtilirse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **ad** özniteliği kısıtlama adının değerini sağlar.|  
-|**msdata:PrimaryKey**|`PrimaryKey="true"` **Benzersiz** öğede varsa, **doğru**ayarlanmış **IsPrimaryKey** özelliği yle benzersiz bir kısıtlama oluşturulur.|  
+|**msdata: ConstraintName**|Bu öznitelik belirtilmişse, değeri kısıtlama adı olarak kullanılır. Aksi takdirde, **Name** özniteliği kısıtlama adının değerini sağlar.|  
+|**msdata: PrimaryKey**|`PrimaryKey="true"` **Unique** öğesinde varsa, **IsPrimaryKey** özelliği **true**olarak ayarlanan bir Unique kısıtlaması oluşturulur.|  
   
- Aşağıdaki örnekte, benzersiz bir kısıtlama belirtmek için **benzersiz** öğeyi kullanan bir XML Şeması gösterilmektedir.  
+ Aşağıdaki örnek, bir benzersizlik kısıtlaması belirtmek için **benzersiz** öğe kullanan bir XML şeması gösterir.  
   
 ```xml  
 <xs:schema id="SampleDataSet"
@@ -48,13 +49,13 @@ XML Şema tanım dili (XSD) şemasında, **benzersiz** öğe, bir öğe veya öz
 </xs:schema>  
 ```  
   
- Şemadaki **benzersiz** öğe, bir belge örneğindeki tüm **Müşteriler** öğeleri için **CustomerID** alt öğesinin değerinin benzersiz olması gerektiğini belirtir. **DataSet**oluştururken, eşleme işlemi bu şema okur ve aşağıdaki tabloyu oluşturur:  
+ Şemadaki **benzersiz** öğe, bir belge örneğindeki tüm **müşteriler** öğeleri için, **MüşteriNo** alt öğesinin değerinin benzersiz olması gerektiğini belirtir. **Veri kümesini**oluştururken, eşleme işlemi bu şemayı okur ve aşağıdaki tabloyu oluşturur:  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- Eşleme işlemi, aşağıdaki **DataSet'te**gösterildiği gibi **CustomerID** sütununda benzersiz bir kısıtlama da oluşturur. (Basitlik için yalnızca ilgili özellikler gösterilir.)  
+ Eşleme işlemi, aşağıdaki **veri kümesinde**gösterildiği gibi **MüşteriNo** sütununda de benzersiz bir kısıtlama oluşturur. (Kolaylık sağlaması için yalnızca ilgili özellikler gösterilir.)  
   
 ```text  
       DataSetName: MyDataSet  
@@ -68,11 +69,11 @@ TableName: Customers
       IsPrimaryKey: False  
 ```  
   
- Oluşturulan **DataSet'te,** Benzersiz kısıtlama için **IsPrimaryKey** özelliği **False** olarak ayarlanır. Sütundaki **benzersiz** **özellik, CustomerID** sütun değerlerinin benzersiz olması gerektiğini gösterir (ancak sütunun **AllowDBNull** özelliğinde belirtildiği gibi null bir başvuru olabilir).  
+ Oluşturulan **veri kümesinde** , **IsPrimaryKey** özelliği, Unique kısıtlaması için **false** olarak ayarlanır. Sütunundaki **UNIQUE** özelliği, **MüşteriNo** sütun değerlerinin benzersiz olması gerektiğini belirtir (ancak sütunun **AllowDBNull** özelliği tarafından belirtilen şekilde null bir başvuru olabilir).  
   
- Şemayı değiştirir ve isteğe bağlı **msdata:PrimaryKey** öznitelik değerini **True**olarak ayarlarsanız, tabloda benzersiz kısıtlama oluşturulur. **AllowDBNull** sütun özelliği **False**olarak ayarlanır ve kısıtlamanın **IsPrimaryKey** özelliği **True**olarak ayarlanır ve böylece **CustomerID** sütunu birincil anahtar sütunu haline getirir.  
+ Şemayı değiştirir ve isteğe bağlı **msdata: PrimaryKey** öznitelik değerini **true**olarak ayarlarsanız, tabloda benzersiz kısıtlama oluşturulur. **AllowDBNull** Column özelliği **false**olarak ayarlanır ve kısıtlamanın **IsPrimaryKey** özelliği **true**olarak ayarlanır ve bu sayede **MüşteriNo** sütununu birincil anahtar sütunu yapar.  
   
- XML Şeması'ndaki öğeler in veya özniteliklerin birleşimi nde benzersiz bir kısıtlama belirtebilirsiniz. Aşağıdaki örnek, şemaya başka bir **xs:alan** öğesi **ekleyerek, customerID** ve **Şirket Adı** değerlerinin bir birleşiminin herhangi bir durumda tüm **Müşteriler** için benzersiz olması gerektiğini nasıl belirteceğiniz gösterilebilir.  
+ XML şemasında öğelerin veya özniteliklerin birleşimi üzerinde benzersiz bir kısıtlama belirtebilirsiniz. Aşağıdaki örnek, bir **CustomerID** ve **CompanyName** değerlerinin birleşiminin, şemaya başka bir **xs: Field** öğesi ekleyerek herhangi bir örnekteki tüm **müşteriler** için benzersiz olması gerektiğini belirtir.  
   
 ```xml  
       <xs:unique
@@ -84,7 +85,7 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- Bu, ortaya çıkan **DataSet'te**oluşturulan kısıtlamadır.  
+ Bu, sonuçta elde edilen **veri kümesinde**oluşturulan kısıtlamadır.  
   
 ```text  
 ConstraintName: SomeName  

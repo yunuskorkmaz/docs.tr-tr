@@ -9,14 +9,15 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: a97fc00201be1cf8043fc353b20ef447468a06bf
-ms.sourcegitcommit: d579fb5e4b46745fd0f1f8874c94c6469ce58604
+ms.openlocfilehash: 5af40da18895d47933cb809d710e31a40f14513b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89125494"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91152435"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# derleyici seçenekleri)
+
 Şifreleme anahtarını içeren dosya adını belirtir.  
   
 ## <a name="syntax"></a>Söz dizimi  
@@ -32,6 +33,7 @@ ms.locfileid: "89125494"
 |`file`|Tanımlayıcı ad anahtarını içeren dosyanın adı.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu seçenek kullanıldığında, derleyici belirtilen dosyadan ortak anahtarı derleme bildirimine ekler ve ardından son derlemeyi özel anahtarla imzalar. Anahtar dosyası oluşturmak için komut satırına sn-k yazın `file` .  
   
  **-Target: Module**ile derleme yaparsanız, anahtar dosyasının adı modülde tutulur ve [-addmodule](./addmodule-compiler-option.md)ile bir derlemeyi derlerken oluşturulan derlemeye dahil edilir.  

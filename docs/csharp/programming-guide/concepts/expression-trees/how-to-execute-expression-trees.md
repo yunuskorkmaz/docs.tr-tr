@@ -3,14 +3,15 @@ title: İfade ağaçlarını yürütme (C#)
 description: Bir değer döndürmek veya bir yöntemi çağırmak gibi bir eylem gerçekleştirmek için bir ifade ağacının nasıl yürütüleceğini öğrenin.
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 9e306da545ba6c6275f36b8f6dd4e98bb91ed54e
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 19c3e639d64a44d180c75964261569dc0d6c2d89
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105614"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91154021"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>İfade ağaçlarını yürütme (C#)
+
 Bu konu başlığı altında, bir ifade ağacının nasıl yürütüleceği gösterilmektedir. Bir ifade ağacının yürütülmesi bir değer döndürebilir veya bir yöntemi çağırmak gibi yalnızca bir eylem gerçekleştirebilir.  
   
  Yalnızca Lambda ifadelerini temsil eden ifade ağaçları yürütülebilir. Lambda ifadelerini temsil eden ifade ağaçları <xref:System.Linq.Expressions.LambdaExpression> veya türündedir <xref:System.Linq.Expressions.Expression%601> . Bu ifade ağaçlarını yürütmek için, <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> yürütülebilir bir temsilci oluşturmak üzere yöntemini çağırın ve ardından temsilciyi çağırın.  
@@ -21,6 +22,7 @@ Bu konu başlığı altında, bir ifade ağacının nasıl yürütüleceği gös
  Bir ifade ağacı bir lambda ifadesini temsil etmez, yöntemini çağırarak, gövdesi olarak özgün ifade ağacını içeren yeni bir lambda ifadesi oluşturabilirsiniz <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> . Ardından, bu bölümde daha önce anlatıldığı gibi lambda ifadesini çalıştırabilirsiniz.  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki kod örneği, bir lambda ifadesi oluşturarak ve yürüterek bir sayıyı bir üsle yükseltmeyi temsil eden bir ifade ağacının nasıl yürütüleceğini göstermektedir. Bu, kuvvet olarak oluşturulan sayıyı temsil eden sonuç görüntülenir.  
   
 ```csharp  
