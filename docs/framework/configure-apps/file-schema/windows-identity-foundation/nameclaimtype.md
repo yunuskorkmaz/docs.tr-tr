@@ -3,14 +3,15 @@ title: <nameClaimType>
 ms.date: 03/30/2017
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
 author: BrucePerlerMS
-ms.openlocfilehash: 4bf8ad2f70499edfc72dd9fcd9a5d8a0aafbbc66
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 4ffc19366d91e4a14ee0f931d7009ede390cc097
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251935"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165032"
 ---
 # \<nameClaimType>
+
 Özelliği belirten talep türünü ayarlar <xref:System.Security.Principal.IIdentity.Name%2A> . Talep türü, <xref:System.Security.Claims.Claim> <xref:System.Security.Claims.ClaimsIdentity> <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Bu belirteç işleyicisinin metodu tarafından döndürülen nesneler koleksiyonunda bir aramak için kullanılır. Daha sonra, eşleşen talebin değeri <xref:System.Security.Principal.IIdentity> Bu belirteç işleyiciden oluşturulan adı olarak ayarlanır.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -21,7 +22,7 @@ ms.locfileid: "70251935"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<samlSecurityTokenRequirement>**](samlsecuritytokenrequirement.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<nameClaimType>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -39,16 +40,18 @@ ms.locfileid: "70251935"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
   
 |Öznitelik|Açıklama|  
 |---------------|-----------------|  
-|value|Özelliği için kullanılacak talebin talep türünü temsil eden URI 'yi belirten bir dize <xref:System.Security.Principal.IIdentity.Name%2A> . Gereklidir.|  
+|değer|Özelliği için kullanılacak talebin talep türünü temsil eden URI 'yi belirten bir dize <xref:System.Security.Principal.IIdentity.Name%2A> . Gereklidir.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
@@ -57,6 +60,7 @@ ms.locfileid: "70251935"
 |[\<samlSecurityTokenRequirement>](samlsecuritytokenrequirement.md)|<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>Sınıf, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> sınıf veya bu sınıfların herhangi birinin türetilmiş bir sınıfı için yapılandırma sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  `<nameClaimType>` <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> Bir nesne yapılandırmadan başlatıldığında öğesi özelliği ayarlar <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> .  
   
 ## <a name="example"></a>Örnek  

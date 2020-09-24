@@ -6,14 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: 94ebc97d5f90b5bb92186ba6f33015633bd01127
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: aac2d90cc57a4af823c42f8c7eb2adcd43c63caf
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286940"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164824"
 ---
 # <a name="adding-data-to-a-datatable"></a>DataTable’a Veri Ekleme
+
 ' <xref:System.Data.DataTable> I oluşturup, sütunları ve kısıtlamalarını kullanarak yapısını tanımladıktan sonra, tabloya yeni veri satırları ekleyebilirsiniz. Yeni bir satır eklemek için yeni bir değişkeni tür olarak bildirin <xref:System.Data.DataRow> . Yöntemini çağırdığınızda yeni bir **DataRow** nesnesi döndürülür <xref:System.Data.DataTable.NewRow%2A> . **DataTable** daha sonra, tarafından tanımlandığı gibi, tablosunun yapısına bağlı olarak **DataRow** nesnesini oluşturur <xref:System.Data.DataColumnCollection> .  
   
  Aşağıdaki örnek, **NewRow** yöntemini çağırarak yeni bir satır oluşturmayı gösterir.  

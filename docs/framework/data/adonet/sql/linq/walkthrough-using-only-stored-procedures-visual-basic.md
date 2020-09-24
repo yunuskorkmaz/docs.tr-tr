@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: a1994d100c4d18d5fa3642e27d0dcb8823800549
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 57ae5dba89a299365e1ce3c2d54d844da0102f31
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780961"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163954"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>İzlenecek yol: Yalnızca Saklı Yordamlar Kullanma (Visual Basic)
-Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] için temel uçtan uca bir senaryo sağlar. Bu yaklaşım genellikle veritabanı yöneticileri tarafından veri deposuna nasıl erişildiğini sınırlamak için kullanılır.  
+
+Bu izlenecek yol, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] yalnızca saklı yordamlar kullanılarak verilere erişmek için temel uçtan uca bir senaryo sağlar. Bu yaklaşım genellikle veritabanı yöneticileri tarafından veri deposuna nasıl erişildiğini sınırlamak için kullanılır.  
   
 > [!NOTE]
-> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Uygulamalarda saklı yordamları, özellikle, `Update`ve `Delete` işlemleri için `Create`varsayılan davranışı geçersiz kılmak için de kullanabilirsiniz. Daha fazla bilgi için bkz. [Insert, Update ve DELETE Işlemlerini özelleştirme](customizing-insert-update-and-delete-operations.md).  
+> Uygulamalarda saklı yordamları, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] özellikle `Create` , `Update` ve işlemleri için varsayılan davranışı geçersiz kılmak için de kullanabilirsiniz `Delete` . Daha fazla bilgi için bkz. [Insert, Update ve DELETE Işlemlerini özelleştirme](customizing-insert-update-and-delete-operations.md).  
   
  Bu izlenecek yolun amaçları doğrultusunda, Northwind örnek veritabanındaki Saklı yordamlarla eşleştirilmiş iki yöntem kullanacaksınız: CustOrdersDetail ve CustOrderHist. Eşleme, bir Visual Basic dosyası oluşturmak için SqlMetal komut satırı aracını çalıştırdığınızda oluşur. Daha fazla bilgi için bu izlenecek yolun ilerleyen kısımlarında yer aldığı Önkoşullar bölümüne bakın.  
   
@@ -25,7 +26,8 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
   
  Bu izlenecek yol Visual Basic geliştirme ayarları kullanılarak yazılmıştır.  
   
-## <a name="prerequisites"></a>Önkoşullar  
+## <a name="prerequisites"></a>Ön koşullar  
+
  Bu izlenecek yol aşağıdakileri gerektirir:  
   
 - Bu izlenecek yol, dosyaları tutmak için adanmış bir klasör ("c:\linqtest3") kullanır. Yönergeye başlamadan önce bu klasörü oluşturun.  
@@ -38,14 +40,15 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
   
      Bu izlenecek yol, aşağıdaki komut satırı ile SqlMetal Aracı kullanılarak yazılmıştır:  
   
-     **sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**  
+     **SqlMetal/Code: "c:\linqtest3\northwind.exe"/Language: vb "c:\linqtest3\kuzeydoğu WND.exe"/sprocs/Functions/plurleştir**  
   
-     Daha fazla bilgi için bkz. [SqlMetal. exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
+     Daha fazla bilgi için bkz. [SqlMetal.exe (kod üretme aracı)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Genel Bakış  
+
  Bu izlenecek yol altı ana görevden oluşur:  
   
-- Visual Studio 'da çözümü kurma. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 'da çözümü kurma.  
   
 - System. Data. LINQ bütünleştirilmiş kodu projeye ekleniyor.  
   
@@ -58,7 +61,8 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
 - Uygulamayı çalıştırma ve test etme.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL çözümü oluşturma  
- Bu ilk görevde, bir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proje derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü oluşturursunuz.  
+
+ Bu ilk görevde, bir proje derlemek ve çalıştırmak için gerekli başvuruları içeren bir Visual Studio çözümü oluşturursunuz [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .  
   
 ### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL çözümü oluşturmak için  
   
@@ -70,14 +74,15 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
   
 4. **Ad** kutusuna **SprocOnlyApp**yazın.  
   
-5. **Tamam**'ı tıklatın.  
+5. **Tamam**'a tıklayın.  
   
      Windows Form Tasarımcısı açılır.  
   
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>LINQ to SQL bütünleştirilmiş kod başvurusu ekleniyor  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Derleme, standart Windows Forms uygulama şablonuna dahil değildir. Aşağıdaki adımlarda açıklandığı gibi derlemeyi kendiniz eklemeniz gerekir:  
+
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Derleme, standart Windows Forms uygulama şablonuna dahil değildir. Aşağıdaki adımlarda açıklandığı gibi derlemeyi kendiniz eklemeniz gerekir:  
   
-### <a name="to-add-systemdatalinqdll"></a>System. Data. LINQ. dll eklemek için  
+### <a name="to-add-systemdatalinqdll"></a>System.Data.Linq.dll eklemek için  
   
 1. **Çözüm Gezgini**, **tüm dosyaları göster**' e tıklayın.  
   
@@ -88,6 +93,7 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
      Derleme projeye eklenir.  
   
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>Northwind kod dosyasını projeye ekleme  
+
  Bu adımda, Northwind örnek veritabanından bir kod dosyası oluşturmak için SqlMetal aracını kullandığınız varsayılır. Daha fazla bilgi için bu kılavuzda daha önce bahsedilen Önkoşullar bölümüne bakın.  
   
 ### <a name="to-add-the-northwind-code-file-to-the-project"></a>Projeye Northwind kod dosyasını eklemek için  
@@ -99,24 +105,26 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
      Northwind. vb dosyası projeye eklenir.  
   
 ## <a name="creating-a-database-connection"></a>Veritabanı bağlantısı oluşturma  
+
  Bu adımda, Northwind örnek veritabanına olan bağlantıyı tanımlarsınız. Bu izlenecek yol, yol olarak "c:\linqtest3\kuzeydoğu WND.exe" kullanır.  
   
 ### <a name="to-create-the-database-connection"></a>Veritabanı bağlantısını oluşturmak için  
   
 1. **Çözüm Gezgini**, **Form1. vb**öğesine sağ tıklayın ve ardından **kodu görüntüle**' ye tıklayın.  
   
-     `Class Form1`Kod düzenleyicisinde görünür.  
+     `Class Form1` Kod düzenleyicisinde görünür.  
   
-2. `Form1` Kod bloğuna aşağıdaki kodu yazın:  
+2. Kod bloğuna aşağıdaki kodu yazın `Form1` :  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
 ## <a name="setting-up-the-user-interface"></a>Kullanıcı arabirimini ayarlama  
+
  Bu görevde, kullanıcıların veritabanındaki verilere erişmek için saklı yordamları yürütebilmesi için bir arabirim oluşturursunuz. Bu kılavuzlarla geliştirdiğiniz uygulamada, kullanıcılar veritabanındaki verilere yalnızca uygulamada gömülü saklı yordamları kullanarak erişebilirler.  
   
 ### <a name="to-set-up-the-user-interface"></a>Kullanıcı arabirimini ayarlamak için  
   
-1. Windows Form Tasarımcısı dön (**Form1. vb [Design]** ).  
+1. Windows Form Tasarımcısı dön (**Form1. vb [Design]**).  
   
 2. **Görünüm** menüsünde **araç kutusu**' na tıklayın.  
   
@@ -133,7 +141,7 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
   
 5. **Text** özelliğini **Label1** olarak değiştirin, **OrderID: yazın**.  
   
-6. **Etiket 2**için aynı şekilde, **Etiket 2** ' deki **Text** özelliğini CustomerID olarak değiştirin **:** .  
+6. **Etiket 2**için aynı şekilde, **Etiket 2** ' deki **Text** özelliğini CustomerID olarak değiştirin **:**.  
   
 7. Aynı şekilde, **button1** için **metin** özelliğini **sipariş ayrıntıları**olarak değiştirin.  
   
@@ -143,24 +151,25 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
   
 ### <a name="to-handle-button-clicks"></a>Düğme tıklamalarını işlemek için  
   
-1. `Button1` Olay işleyicisini oluşturmak ve kod düzenleyicisini açmak için **Form1** üzerindeki **Düzen ayrıntıları** ' na çift tıklayın.  
+1. Olay işleyicisini oluşturmak ve kod düzenleyicisini açmak için **Form1** üzerindeki **Düzen ayrıntıları** ' na çift tıklayın `Button1` .  
   
-2. `Button1` İşleyiciye aşağıdaki kodu yazın:  
+2. İşleyiciye aşağıdaki kodu yazın `Button1` :  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3. Şimdi, `Button2` olay işleyicisini oluşturmak ve kod düzenleyicisini açmak için Form1 üzerinde **button2** 'e çift tıklayın.  
+3. Şimdi, **Button2** `Button2` olay işleyicisini oluşturmak ve kod düzenleyicisini açmak Için Form1 üzerinde Button2 'e çift tıklayın.  
   
-4. `Button2` İşleyiciye aşağıdaki kodu yazın:  
+4. İşleyiciye aşağıdaki kodu yazın `Button2` :  
   
      [!code-vb[DLinqWalk4VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#3)]  
   
 ## <a name="testing-the-application"></a>Uygulamayı Test Etme  
+
  Artık uygulamanızı test etmek zaman alabilir. Veri deposu ile kişinizin, iki saklı yordamın gerçekleştirebileceği eylemlerle sınırlı olduğunu unutmayın. Bu eylemler, girdiğiniz herhangi bir OrderID 'ye dahil edilen ürünleri döndürmek veya girdiğiniz her bir müşteri için sipariş edilen ürünlerin geçmişini döndürmemelidir.  
   
 ### <a name="to-test-the-application"></a>Uygulamayı test etmek için  
   
-1. Hata ayıklamayı başlatmak için F5 'e basın.  
+1. Hata ayıklamaya başlamak için F5'e basın.  
   
      Form1 görüntülenir.  
   
@@ -170,13 +179,13 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
   
      İleti kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-3. **CustomerID girin** kutusuna yazın `ALFKI`ve ardından **Sipariş geçmişi**' ne tıklayın.  
+3. **CustomerID girin** kutusuna yazın `ALFKI` ve ardından **Sipariş geçmişi**' ne tıklayın.  
   
      Bir ileti kutusu, müşteri ALFKI için sipariş geçmişini listeler.  
   
      İleti kutusunu kapatmak için **Tamam** ' ı tıklatın.  
   
-4. **OrderID girin** kutusuna yazın `123`ve ardından **sipariş ayrıntıları**' na tıklayın.  
+4. **OrderID girin** kutusuna yazın `123` ve ardından **sipariş ayrıntıları**' na tıklayın.  
   
      İleti kutusu "sonuç yok" iletisini görüntüler.  
   
@@ -189,9 +198,10 @@ Bu izlenecek yol, yalnızca saklı yordamlar kullanılarak verilere erişmek [!I
 6. Deneme işleminizi tamamladıysanız **Dosya** menüsünde **Projeyi Kapat** ' a tıklayabilir ve istendiğinde projenizi kaydedebilirsiniz.  
   
 ## <a name="next-steps"></a>Sonraki Adımlar  
+
  Bu projeyi, bazı değişiklikler yaparak geliştirebilirsiniz. Örneğin, kullanılabilir saklı yordamları bir liste kutusunda listeleyebilir ve kullanıcının hangi yordamları yürütebileceği seçmesini sağlayabilirsiniz. Ayrıca raporların çıkışını bir metin dosyasına akışla aktarabilirsiniz.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 
 - [İzlenecek Yollarla Öğrenme](learning-by-walkthroughs.md)
-- [Saklı Yordamlar](stored-procedures.md)
+- [Saklı yordamlar](stored-procedures.md)

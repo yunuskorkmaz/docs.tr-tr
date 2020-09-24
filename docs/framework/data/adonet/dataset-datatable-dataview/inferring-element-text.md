@@ -2,15 +2,16 @@
 title: Öğe Metni Çıkarımını Yapma
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 3fdd110a14ddfd6065ed552171a8d76ef64e2fb5
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7389e24f39902edf041c3cd3502303b17fd008ba
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784546"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164694"
 ---
 # <a name="inferring-element-text"></a>Öğe Metni Çıkarımını Yapma
-Bir öğe metin içeriyorsa ve tablo olarak (öznitelikler veya yinelenen öğeler içeren öğeler gibi) çıkarsmayacak alt öğe içermiyorsa, **TableName_Text** adlı yeni bir sütun, öğe için çıkartılan tabloya eklenir. Öğesinde bulunan metin, tablodaki bir satıra eklenir ve yeni sütunda depolanır. Yeni sütunun **ColumnMapping** özelliği **MappingType. simpleContent**olarak ayarlanır.  
+
+Bir öğe metin içeriyorsa ve tablo olarak (öznitelikler veya yinelenen öğeler içeren öğeler gibi) çıkarsmayacak alt öğeleri yoksa, **TableName_Text** adlı yeni bir sütun, öğe için çıkartılan tabloya eklenir. Öğesinde bulunan metin, tablodaki bir satıra eklenir ve yeni sütunda depolanır. Yeni sütunun **ColumnMapping** özelliği **MappingType. simpleContent**olarak ayarlanır.  
   
  Örneğin, aşağıdaki XML 'i göz önünde bulundurun.  
   
@@ -22,9 +23,9 @@ Bir öğe metin içeriyorsa ve tablo olarak (öznitelikler veya yinelenen öğel
   
  Çıkarım işlemi, iki sütunlu **Element1** adlı bir tablo oluşturur: **attr1** ve **Element1_Text**. **Attr1** sütununun **ColumnMapping** özelliği **MappingType. Attribute**olarak ayarlanacak. **Element1_Text** sütununun **ColumnMapping** özelliği **MappingType. simpleContent**olarak ayarlanır.  
   
- **Veri kümesi** DocumentElement  
+ **Veri kümesi:** DocumentElement  
   
- **Tablosundan** Element1  
+ **Tablo:** Element1  
   
 |attr1|Element1_Text|  
 |-----------|--------------------|  
@@ -42,9 +43,9 @@ Bir öğe metin içeriyorsa ve tablo olarak (öznitelikler veya yinelenen öğel
   
  Çıkarım işlemi, **ChildElement1**adlı tek sütunlu **Element1** adlı bir tablo oluşturur. **ChildElement1** öğesinin metni, tablodaki bir satıra dahil edilir. Diğer metin yok sayılacak. **ChildElement1** sütununun **ColumnMapping** özelliği **MappingType. element**olarak ayarlanacak.  
   
- **Veri kümesi** DocumentElement  
+ **Veri kümesi:** DocumentElement  
   
- **Tablosundan** Element1  
+ **Tablo:** Element1  
   
 |ChildElement1|  
 |-------------------|  

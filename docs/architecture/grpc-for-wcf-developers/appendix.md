@@ -2,16 +2,16 @@
 title: WCF geliştiricileri için ek-gRPC
 description: Modern mikro hizmet mimarilerinde dağıtılmış işlemlerin ve bunların uygulamalarının tartışılması.
 ms.date: 09/02/2019
-ms.openlocfilehash: 9931681727f921e007c2f80852ad0e69cd7288de
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f60899463a13e9f740f6ae63150d18eab3069124
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711464"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165864"
 ---
 # <a name="appendix-a---transactions"></a>Ek A-Işlemler
 
-Windows Communication Foundation (WCF) dağıtılmış işlemleri destekler ve birden çok hizmet arasında Atomik işlemler gerçekleştirmenize olanak tanır. Bu işlevsellik, [Microsoft Dağıtılmış işlem Düzenleyicisi](https://docs.microsoft.com/previous-versions/windows/desktop/ms684146(v=vs.85))tabanlıdır.
+Windows Communication Foundation (WCF) dağıtılmış işlemleri destekler ve birden çok hizmet arasında Atomik işlemler gerçekleştirmenize olanak tanır. Bu işlevsellik, [Microsoft Dağıtılmış işlem Düzenleyicisi](/previous-versions/windows/desktop/ms684146(v=vs.85))tabanlıdır.
 
 Daha yeni mikro hizmetler yataysa, bu tür otomatik dağıtılmış işlem işleme mümkün değildir. İlişkisel veritabanları, NoSQL veri depoları ve mesajlaşma sistemleri dahil olmak üzere çok sayıda farklı teknoloji vardır. Tek bir ortamda kullanımda olan işletim sistemleri, programlama dilleri ve çerçevelerin bir karışımı de olabilir.
 
@@ -21,7 +21,7 @@ Mümkünse, dağıtılmış işlemlerden tamamen kaçınmak en iyisidir. İki ve
 
 Bu mümkün değilse, tek bir alternatif, [Saga deseninin](https://microservices.io/patterns/data/saga.html)kullanılması olabilir. Bir Saga 'de güncelleştirmeler sırayla işlenir; Her güncelleştirme başarılı olduğu için, bir sonraki tetiklenir. Bu Tetikleyiciler hizmetten hizmete yayılamaz veya bir Saga Düzenleyicisi veya Orchestrator tarafından yönetilebilir. İşlem sırasında herhangi bir noktada bir güncelleştirme başarısız olursa, güncelleştirmelerini zaten tamamlamış olan hizmetler bunları tersine çevirmek için özel mantık uygular.
 
-Diğer bir seçenek de, [.net mikro hizmetleri e-defterinde](https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/)açıklandığı gibi etki alanı odaklı TASARıM (DDD) ve komut/sorgu sorumluluğu ayrımı (CQRS) kullanmaktır. Özellikle, etki alanı olaylarının veya [olay](https://martinfowler.com/eaaDev/EventSourcing.html) kaynağını kullanmanın kullanılması, güncelleştirmelerin sürekli olarak uygulanmadığından emin olmanıza yardımcı olabilir.
+Diğer bir seçenek de, [.net mikro hizmetleri e-defterinde](../microservices/microservice-ddd-cqrs-patterns/index.md)açıklandığı gibi etki alanı odaklı TASARıM (DDD) ve komut/sorgu sorumluluğu ayrımı (CQRS) kullanmaktır. Özellikle, etki alanı olaylarının veya [olay](https://martinfowler.com/eaaDev/EventSourcing.html) kaynağını kullanmanın kullanılması, güncelleştirmelerin sürekli olarak uygulanmadığından emin olmanıza yardımcı olabilir.
 
 >[!div class="step-by-step"]
->[Öncekini](application-performance-management.md)
+>[Önceki](application-performance-management.md)

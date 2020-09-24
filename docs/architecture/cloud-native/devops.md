@@ -2,12 +2,12 @@
 title: DevOps
 description: Bulutta yerel uygulamalar için DevOps konuları
 ms.date: 05/13/2020
-ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: e6e093a1847d3aec37ac5d4ca56f64e0091a9b6b
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614129"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164005"
 ---
 # <a name="devops"></a>DevOps
 
@@ -154,7 +154,7 @@ Panolardaki aşamalar tek kurumsal araç değildir. Panonun yapılandırmasına 
 
 Açıklama alanı, bekleeceğiniz normal stilleri (kalın, italik alt çizgi ve çizili) ve görüntü ekleyebilme özelliğini destekler. Bu, iş veya hata belirtirken kullanımı güçlü bir araç haline getirir.
 
-Görevler, daha büyük bir iş birimini tanımlayan özelliklerle birleştirilebilir. Özellikler, sırasıyla, [estane](https://docs.microsoft.com/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)eklenebilir. Bu hiyerarşideki görevlerin sınıflandırılması, büyük bir özelliğin nasıl kullanıma sunulduklarını anlamak için çok daha kolay hale gelir.
+Görevler, daha büyük bir iş birimini tanımlayan özelliklerle birleştirilebilir. Özellikler, sırasıyla, [estane](/azure/devops/boards/backlogs/define-features-epics?view=azure-devops)eklenebilir. Bu hiyerarşideki görevlerin sınıflandırılması, büyük bir özelliğin nasıl kullanıma sunulduklarını anlamak için çok daha kolay hale gelir.
 
 ![Şekil 10-6 temel işlem şablonunda varsayılan olarak yapılandırılmış Iş öğesi türleri](./media/board-issue-types.png)
 

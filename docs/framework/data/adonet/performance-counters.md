@@ -6,20 +6,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 4c1da6041b2343565bdaeb53e586c893bd85c922
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 4f645a51996078f8dd80b6c455c420633db36155
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90557911"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164609"
 ---
 # <a name="performance-counters-in-adonet"></a>ADO.NET 'de performans sayaçları
+
 ADO.NET 2,0, ve için desteği içeren performans sayaçları için genişletilmiş destek sunmuştur <xref:System.Data.SqlClient> <xref:System.Data.OracleClient> . <xref:System.Data.SqlClient>Önceki ADO.net sürümlerinde bulunan performans sayaçları kullanımdan kaldırılmıştır ve bu konuda ele alınan yeni performans sayaçlarıyla değiştirilmiştir. Uygulamanızın durumunu ve kullandığı bağlantı kaynaklarını izlemek için ADO.NET performans sayaçlarını kullanabilirsiniz. Performans sayaçları, Windows performans Izleyicisi kullanılarak izlenebilir veya <xref:System.Diagnostics.PerformanceCounter> ad alanındaki sınıfı kullanılarak programlı bir şekilde erişilebilir <xref:System.Diagnostics> .  
   
 ## <a name="available-performance-counters"></a>Kullanılabilir performans sayaçları  
+
  Şu anda, için <xref:System.Data.SqlClient> ve <xref:System.Data.OracleClient> Aşağıdaki tabloda açıklandığı gibi 14 farklı performans sayacı mevcuttur. Bireysel sayaçların adlarının Microsoft .NET çerçevesinin bölgesel sürümlerinde yerelleştirilmemiş olduğunu unutmayın.  
   
-|Performans sayacı|Description|  
+|Performans sayacı|Açıklama|  
 |-------------------------|-----------------|  
 |`HardConnectsPerSecond`|Bir veritabanı sunucusuna yapılan saniye başına bağlantı sayısı.|  
 |`HardDisconnectsPerSecond`|Bir veritabanı sunucusuna yapılan saniye başına bağlantı kesilen bağlantı sayısı.|  
@@ -37,10 +39,13 @@ ADO.NET 2,0, ve için desteği içeren performans sayaçları için genişletilm
 |`SoftDisconnectsPerSecond`|Bağlantı havuzuna döndürülen etkin bağlantı sayısı. **Note:**  Bu performans sayacı varsayılan olarak etkinleştirilmemiştir. Bu performans sayacını etkinleştirmek için bkz. [Varsayılan olarak devre dışı sayaçları etkinleştirme](#ActivatingOffByDefault).|  
   
 ### <a name="connection-pool-groups-and-connection-pools"></a>Bağlantı havuzu grupları ve bağlantı havuzları  
+
  Windows kimlik doğrulaması (tümleşik güvenlik) kullanırken hem hem de `NumberOfActiveConnectionPoolGroups` performans sayaçlarını izlemeniz gerekir `NumberOfActiveConnectionPools` . Bunun nedeni, bağlantı havuzu gruplarının benzersiz bağlantı dizeleriyle eşlenme nedenidir. Tümleşik güvenlik kullanıldığında, bağlantı havuzları bağlantı dizelerine eşlenir ve ayrıca ayrı Windows kimlikleri için ayrı havuzlar oluşturur. Örneğin, her ikisi de aynı AppDomain içinde olan Fred ve Julie ise, bağlantı `"Data Source=MySqlServer;Integrated Security=true"` dizesi için bir bağlantı havuzu grubu oluşturulur ve biri Fred ve Julie için bir tane olmak üzere iki ek havuz oluşturulur. John ve Martha aynı SQL Server oturum açma işlemiyle bir bağlantı dizesi kullanıyorsa, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"` **Lowprıkullanıcı** kimliği için yalnızca tek bir havuz oluşturulur.  
   
 <a name="ActivatingOffByDefault"></a>
+
 ### <a name="activating-off-by-default-counters"></a>Varsayılan olarak devre dışı sayaçları etkinleştirme  
+
  Performans sayaçları,,, `NumberOfFreeConnections` `NumberOfActiveConnections` `SoftDisconnectsPerSecond` ve `SoftConnectsPerSecond` Varsayılan olarak kapalıdır. Aşağıdaki bilgileri etkinleştirmek için uygulamanın yapılandırma dosyasına ekleyin:  
   
 ```xml  
@@ -53,6 +58,7 @@ ADO.NET 2,0, ve için desteği içeren performans sayaçları için genişletilm
 ```  
   
 ## <a name="retrieving-performance-counter-values"></a>Performans sayacı değerlerini alma  
+
  Aşağıdaki konsol uygulaması, uygulamanızda performans sayacı değerlerinin nasıl alınacağını gösterir. Tüm ADO.NET performans sayaçlarıyla ilgili bilgilerin döndürülmesi için bağlantıların açık ve etkin olması gerekir.  
   
 > [!NOTE]

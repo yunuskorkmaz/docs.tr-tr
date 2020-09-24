@@ -3,12 +3,12 @@ title: Dayanıklı iletişim
 description: Azure için Cloud Native .NET uygulamaları tasarlama | Esnek Iletişim
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: 33e4c03c1f3d8c01f72c588326fbb0bdfa512cdd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 18b26223634efc5c05f680d0cbb7c8cbc2490a59
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83613752"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91166046"
 ---
 # <a name="resilient-communications"></a>Dayanıklı iletişimler
 
@@ -30,7 +30,7 @@ Bu sorunları farklı kitaplıklar ve çerçevelerle ele alabilirsiniz, ancak uy
 
 ## <a name="service-mesh"></a>Hizmet ağı
 
-Daha iyi bir yaklaşım, *hizmet ağı*olan gelişen bir teknolojidir. [Hizmet ağı](https://www.nginx.com/blog/what-is-a-service-mesh/) , hizmet iletişimini ve yukarıda bahsedilen diğer zorlukları işlemek için yerleşik yeteneklere sahip yapılandırılabilir bir altyapı katmanıdır. Bu sorun, bir hizmet proxy 'sine taşıyarak bu kaygıları ayırır. Ara sunucu, iş kodu yalıtımı sağlamak için ayrı bir işleme ( [sepet](https://docs.microsoft.com/azure/architecture/patterns/sidecar)olarak adlandırılır) dağıtılır. Ancak, sepet hizmeti ile birlikte oluşturulur ve yaşam döngüsünü paylaşır. Şekil 6-7, bu senaryoyu gösterir.
+Daha iyi bir yaklaşım, *hizmet ağı*olan gelişen bir teknolojidir. [Hizmet ağı](https://www.nginx.com/blog/what-is-a-service-mesh/) , hizmet iletişimini ve yukarıda bahsedilen diğer zorlukları işlemek için yerleşik yeteneklere sahip yapılandırılabilir bir altyapı katmanıdır. Bu sorun, bir hizmet proxy 'sine taşıyarak bu kaygıları ayırır. Ara sunucu, iş kodu yalıtımı sağlamak için ayrı bir işleme ( [sepet](/azure/architecture/patterns/sidecar)olarak adlandırılır) dağıtılır. Ancak, sepet hizmeti ile birlikte oluşturulur ve yaşam döngüsünü paylaşır. Şekil 6-7, bu senaryoyu gösterir.
 
 ![Yan otomobil ile hizmet ağı](./media/service-mesh-with-side-car.png)
 
@@ -74,28 +74,28 @@ Daha önce anlatıldığı gibi, Envoy kümedeki her mikro hizmet için bir sepe
 
 Azure bulut, Azure Kubernetes Hizmetleri içinde bu şekilde çalışan ve doğrudan destek sağlar. Aşağıdaki bağlantılar başlamanıza yardımcı olabilir:
 
-- [AKS 'e Istio 'da yükleme](https://docs.microsoft.com/azure/aks/istio-install)
-- [AKS ve Istio kullanma](https://docs.microsoft.com/azure/aks/istio-scenario-routing)
+- [AKS 'e Istio 'da yükleme](/azure/aks/istio-install)
+- [AKS ve Istio kullanma](/azure/aks/istio-scenario-routing)
 
 ### <a name="references"></a>Başvurular
 
 - [Polly](http://www.thepollyproject.org/)
 
-- [Yeniden deneme biçimi](https://docs.microsoft.com/azure/architecture/patterns/retry)
+- [Yeniden deneme biçimi](/azure/architecture/patterns/retry)
 
-- [Devre kesici stili](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
+- [Devre Kesici düzeni](/azure/architecture/patterns/circuit-breaker)
 
 - [Azure 'da esnekliği teknik incelemesi](https://azure.microsoft.com/mediahandler/files/resourcefiles/resilience-in-azure-whitepaper/Resilience%20in%20Azure.pdf)
 
 - [Ağ gecikmesi](https://www.techopedia.com/definition/8553/network-latency)
 
-- [Yedeklilik](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy)
+- [Yedeklilik](/azure/architecture/guide/design-principles/redundancy)
 
-- [coğrafi çoğaltma](https://docs.microsoft.com/azure/sql-database/sql-database-active-geo-replication)
+- [coğrafi çoğaltma](/azure/sql-database/sql-database-active-geo-replication)
 
-- [Azure Traffic Manager](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)
+- [Azure Traffic Manager](/azure/traffic-manager/traffic-manager-overview)
 
-- [Otomatik ölçeklendirme kılavuzu](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)
+- [Otomatik ölçeklendirme kılavuzu](/azure/architecture/best-practices/auto-scaling)
 
 - [İstio dili](https://istio.io/docs/concepts/what-is-istio/)
 

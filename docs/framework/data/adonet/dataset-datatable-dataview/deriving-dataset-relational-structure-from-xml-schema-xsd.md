@@ -2,19 +2,20 @@
 title: XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: d32b5cb86bc5a138f9a5f438629d8e231be4ba94
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 878e39af575328fb0abba096c327d36203a52231
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151175"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91164811"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>XML Şemasından (XSD) DataSet İlişkisel Yapısını Türetme
-Bu bölümde, bir XML Şema tanım `DataSet` dili (XSD) şema belgesinden bir ilişkin şema nasıl oluşturulmuş bir genel bakış sağlar. Genel olarak, `complexType` şema öğesinin her alt öğesi için, `DataSet`bir tablo oluşturulur. Tablo yapısı karmaşık türün tanımına göre belirlenir. Tablolar şemada `DataSet` üst düzey öğeler için oluşturulur. Ancak, bir tablo yalnızca bir üst `complexType` düzey `complexType` öğe için, öğe `complexType` başka bir öğenin `complexType` içine iç içe geçtiğinde `DataTable` oluşturulur `DataSet`ve bu durumda iç içe olan öğe bir öğenin içinde eşlenir.  
+
+Bu bölüm bir `DataSet` XML şeması tanım dili (xsd) şema belgesinden bir öğesinin ilişkisel şemasının nasıl oluşturulduğunu gösteren bir genel bakış sağlar. Genel olarak, `complexType` bir şema öğesinin her alt öğesi için içinde bir tablo oluşturulur `DataSet` . Tablo yapısı, karmaşık türün tanımına göre belirlenir. Tablolar, `DataSet` şemadaki en üst düzey öğelerde oluşturulur. Ancak, bir tablo, `complexType` öğe başka bir öğenin içinde iç içe olduğunda yalnızca üst düzey öğe için oluşturulur `complexType` `complexType` , bu durumda iç içe `complexType` öğe içinde bir ile eşlenir `DataTable` `DataSet` .  
   
- XSD hakkında daha fazla bilgi için, World Wide Web Konsorsiyumu (W3C) [XML Şema Bölüm 0: Primer Önerisi,](https://www.w3.org/TR/xmlschema-0/) [XML Şema Bölüm 1: Yapılar Önerisi](https://www.w3.org/TR/xmlschema-1/)ve [XML Şema Bölüm 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/)bölümüne bakın.  
+ XSD hakkında daha fazla bilgi için, bkz. World Wide Web Konsorsiyumu (W3C) [XML Şeması bölümü 0: öncü öneri](https://www.w3.org/TR/xmlschema-0/), [XML şeması Bölüm 1: yapılar önerisi](https://www.w3.org/TR/xmlschema-1/)ve [XML şeması Bölüm 2: veri türleri önerisi](https://www.w3.org/TR/xmlschema-2/).  
   
- Aşağıdaki örnek, bir **DataSet** öğesi `customers` olan `MyDataSet` öğenin alt öğesi nin nerede olduğunu bir XML Şeması gösterir.  
+ Aşağıdaki örnek, `customers` `MyDataSet` bir **veri kümesi** öğesi olan öğesinin alt öğesi olan bir XML şemasını gösterir.  
   
 ```xml  
 <xs:schema id="SomeID"
@@ -41,18 +42,18 @@ Bu bölümde, bir XML Şema tanım `DataSet` dili (XSD) şema belgesinden bir il
  </xs:schema>  
 ```  
   
- Önceki örnekte, öğe `customers` karmaşık bir tür öğesidir. Bu nedenle, karmaşık tür tanımı ayrıştırılır ve eşleme işlemi aşağıdaki tabloyu oluşturur.  
+ Önceki örnekte, öğesi `customers` karmaşık bir tür öğesidir. Bu nedenle, karmaşık tür tanımı ayrıştırılır ve eşleme işlemi aşağıdaki tabloyu oluşturur.  
   
 ```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- Tablodaki her sütunun veri türü, belirtilen ilgili öğenin veya özniteliğin XML Şema türünden türetilmiştir.  
+ Tablodaki her sütunun veri türü, karşılık gelen öğenin veya özniteliğin XML şema türünden türetilir.  
   
 > [!NOTE]
-> Eleman `customers` **tamsayı**gibi basit bir XML Şema veri türüne aitse, tablo oluşturulmaz. Tablolar yalnızca karmaşık türleri olan üst düzey öğeler için oluşturulur.  
+> Öğesi tamsayı gibi `customers` Basit BIR XML şeması veri türünde ise hiçbir tablo oluşturulmaz **integer**. Tablolar yalnızca karmaşık türler olan en üst düzey öğeler için oluşturulur.  
   
- Aşağıdaki XML Şeması'nda **Şema** öğesiiki öğe li `InStateCustomers` ve `OutOfStateCustomers`.  
+ Aşağıdaki XML şemasında, **şema** öğesi iki öğe alt öğesine sahiptir `InStateCustomers` ve `OutOfStateCustomers` .  
   
 ```xml  
 <xs:schema id="SomeID"
@@ -75,7 +76,7 @@ Customers (CustomerID, CompanyName, Phone)
  </xs:schema>  
 ```  
   
- Hem `InStateCustomers` alt `OutOfStateCustomers` öğeler hem de alt`customerType`öğeler karmaşık tür elemanlarıdır ( ). Bu nedenle, eşleme işlemi aşağıdaki iki `DataSet`özdeş tablolar oluşturur.  
+ Hem `InStateCustomers` hem de `OutOfStateCustomers` alt öğeleri karmaşık tür öğeleridir ( `customerType` ). Bu nedenle, eşleme işlemi içinde aşağıdaki iki özdeş tabloyu üretir `DataSet` .  
   
 ```text  
 InStateCustomers (CustomerID, CompanyName, Phone)  
@@ -83,18 +84,20 @@ OutOfStateCustomers (CustomerID, CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>Bu Bölümde  
+
  [XML Şeması (XSD) Kısıtlamalarını DataSet Kısıtlamaları ile Eşleme](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Bir 'de benzersiz ve yabancı anahtar kısıtlamaları oluşturmak için `DataSet`kullanılan XML Şema öğelerini açıklar.  
+ Bir içinde benzersiz ve yabancı anahtar kısıtlamaları oluşturmak için kullanılan XML şema öğelerini açıklar `DataSet` .  
   
  [XML Şemasından (XSD) DataSet İlişkileri Oluşturma](generating-dataset-relations-from-xml-schema-xsd.md)  
- Tablo sütunları arasında ilişki oluşturmak için kullanılan XML `DataSet`Şema öğelerini açıklar.  
+ İçindeki tablo sütunları arasında ilişki oluşturmak için kullanılan XML şema öğelerini açıklar `DataSet` .  
   
  [XML Şema Kısıtlamaları ve İlişkileri](xml-schema-constraints-and-relationships.md)  
- Bir 'de kısıtlamalar oluşturmak için XML Şema öğelerini kullanırken ilişkilerin nasıl örtülü olarak oluşturulduğunu `DataSet`açıklar.  
+ Bir içinde kısıtlamalar oluşturmak için XML şema öğeleri kullanıldığında ilişkilerin örtük olarak nasıl oluşturulduğunu açıklar `DataSet` .  
   
 ## <a name="related-sections"></a>İlgili Bölümler  
+
  [DataSet içinde XML kullanma](using-xml-in-a-dataset.md)  
- XML `DataSet` verisi olarak ilişkisel yapının ve verilerin nasıl yüklenir ve devam edin.  
+ Bir as XML verilerinde ilişkisel yapının ve verilerin nasıl yükleneceğini ve kalıcı yapılacağını açıklar `DataSet` .  
   
 ## <a name="see-also"></a>Ayrıca bkz.
 

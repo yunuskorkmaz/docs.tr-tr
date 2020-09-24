@@ -3,14 +3,15 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: 209e702da80f2569f2b6c068f50f1af4489157f6
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9991430f09cb6a63d0a3cdde24a4ff03d3dd746d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70251962"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165058"
 ---
 # \<issuerNameRegistry>
+
 Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan veren adı kayıt defterini yapılandırır.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -20,7 +21,7 @@ Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan veren 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlerConfiguration>**](securitytokenhandlerconfiguration.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<issuerNameRegistry>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <system.identityModel>  
@@ -37,6 +38,7 @@ Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan veren 
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -58,6 +60,7 @@ Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan veren 
 |[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Bir güvenlik belirteci işleyicileri koleksiyonu için yapılandırma sağlar.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Tüm verenin belirteçleri, bir veren adı kayıt defteri kullanılarak onaylanır. Bu, sınıfından türetilen bir nesnedir <xref:System.IdentityModel.Tokens.IssuerNameRegistry> . Veren adı kayıt defteri, bir anımsatıcı adını, ilgili veren tarafından üretilen belirteçlerin imzalarını doğrulamak için gereken şifreleme malzemesiyle ilişkilendirmek için kullanılır. Veren adı kayıt defteri, bağlı olan taraf (RP) uygulaması tarafından güvenilen verenler listesini tutar. Veren adı kayıt defterinin türü, özniteliği kullanılarak belirtilir `type` . `<issuerNameRegistry>`Öğe, belirtilen tür için yapılandırma sağlayan bir veya daha fazla alt öğe içerebilir. Yöntemi geçersiz kılarak bu alt öğeleri işleyen mantığı sağlarsınız <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> .  
   
  WıF, sınıfından tek bir veren adı kayıt defteri türü sağlar <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> . Bu sınıf, yapılandırmada belirtilen bir güvenilen veren sertifikaları kümesi kullanır. Bu, `<trustedIssuers>` altında güvenilir veren sertifikaları koleksiyonunun yapılandırıldığı bir alt yapılandırma öğesi gerektirir. Güvenilen Sertifikalar, sertifika parmak izinin ASN. 1 kodlu formu kullanılarak belirtilir ve `<add>` , veya öğeleri kullanılarak koleksiyona eklenir veya kaldırılır `<clear>` `<remove>` .  
@@ -68,6 +71,7 @@ Belirteç işleyici koleksiyonundaki işleyiciler tarafından kullanılan veren 
 > Öğenin `<issuerNameRegistry>` bir alt öğesi olarak belirtilmesi [\<identityConfiguration>](identityconfiguration.md) kullanım dışı bırakılmıştır, ancak yine de geriye dönük uyumluluk için desteklenir. `<securityTokenHandlerConfiguration>`Öğesindeki ayarlar, öğesinde olanları geçersiz kılar `<identityConfiguration>` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki XML, yapılandırma tabanlı veren adı kayıt defterinin nasıl ekleneceğini gösterir.  
   
 ```xml  

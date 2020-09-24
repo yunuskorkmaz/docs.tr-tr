@@ -2,12 +2,12 @@
 title: Kimlik
 description: Azure için Cloud Native .NET uygulamaları tasarlama | IDENTITY
 ms.date: 05/13/2020
-ms.openlocfilehash: 9fa48977e58e2ca5a5f3e231372a4791640a85fd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 66ff29947093d7c4fe57b11039190836dc37db08
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614025"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91163758"
 ---
 # <a name="identity"></a>Kimlik
 
@@ -27,7 +27,7 @@ Genellikle STS yalnızca Sorumlunun kimliğini doğrulamaktan sorumludur. Kaynak
 
 ## <a name="references"></a>Başvurular
 
-- [Microsoft kimlik platformu](https://docs.microsoft.com/azure/active-directory/develop/)
+- [Microsoft kimlik platformu](/azure/active-directory/develop/)
 
 >[!div class="step-by-step"]
 >[Önceki](azure-monitor.md) 

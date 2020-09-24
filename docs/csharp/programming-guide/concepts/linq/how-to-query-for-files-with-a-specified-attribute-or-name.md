@@ -3,14 +3,15 @@ title: Belirtilen bir özniteliğe veya ada sahip dosyaları sorgulama (C#)
 description: C# ' de LINQ kullanarak bir dizin ağacında belirtilen dosya adı uzantısına sahip dosyaları bulma ve en yeni veya en eski dosyayı döndürme hakkında bilgi edinin.
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 9820b96e19d805b792e18ff242e64dfb6cf4a606
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 01a3482d8ea4c95b60dd9434320f175f0498c3e8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87104499"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165318"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>Belirtilen bir özniteliğe veya ada sahip dosyaları sorgulama (C#)
+
 Bu örnek, belirtilen bir dizin ağacında belirtilen dosya adı uzantısına (örneğin ". txt") sahip tüm dosyaların nasıl bulunacağını gösterir. Ayrıca, oluşturma zamanına göre ağaçta en yeni veya en eski dosyanın nasıl dönegösterdiğini gösterir.  
   
 ## <a name="example"></a>Örnek  
@@ -65,6 +66,7 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
   `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.
   
 ## <a name="see-also"></a>Ayrıca bkz.

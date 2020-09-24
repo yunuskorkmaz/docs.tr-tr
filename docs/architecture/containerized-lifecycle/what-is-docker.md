@@ -2,12 +2,12 @@
 title: Docker nedir?
 description: Docker 'ın anlaşılmasından biraz daha ayrıntılı bir şekilde yararlandığınızda, size yardımcı olabilecek basit bir benzerleme vurguladı.
 ms.date: 08/06/2020
-ms.openlocfilehash: 73b6032465583861169a8ac2bed81585027f42ec
-ms.sourcegitcommit: ef50c99928183a0bba75e07b9f22895cd4c480f8
+ms.openlocfilehash: b23a8719170deca706ee44d10337c340d72605fb
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87915057"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165929"
 ---
 # <a name="what-is-docker"></a>Docker nedir?
 
@@ -29,7 +29,7 @@ Geliştirme ortamlarında kapsayıcıları barındırmak ve ek geliştirici ara�
 
 - **Hyper-V kapsayıcıları** , her kapsayıcıyı yüksek oranda iyileştirilmiş bir sanal makinede çalıştırarak Windows Server kapsayıcıları tarafından sunulan yalıtımın üzerine genişletilir. Bu yapılandırmada, kapsayıcı konağın çekirdeği, daha iyi yalıtım sağlayan Hyper-V kapsayıcılarıyla paylaşılmaz.
 
-Bu kapsayıcıların görüntüleri oluşturulur ve yalnızca aynı şekilde çalışır. Fark, kapsayıcının görüntüden nasıl oluşturulduğuna ilişkin bir Hyper-V kapsayıcısını çalıştırmak ek bir parametre gerektirir. Ayrıntılar için bkz. [Hyper-V kapsayıcıları](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/hyperv-container).
+Bu kapsayıcıların görüntüleri oluşturulur ve yalnızca aynı şekilde çalışır. Fark, kapsayıcının görüntüden nasıl oluşturulduğuna ilişkin bir Hyper-V kapsayıcısını çalıştırmak ek bir parametre gerektirir. Ayrıntılar için bkz. [Hyper-V kapsayıcıları](/virtualization/windowscontainers/manage-containers/hyperv-container).
 
 ## <a name="comparing-docker-containers-with-virtual-machines"></a>Docker kapsayıcılarını sanal makinelerle karşılaştırma
 

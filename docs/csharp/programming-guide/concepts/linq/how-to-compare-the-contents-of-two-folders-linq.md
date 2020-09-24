@@ -3,14 +3,15 @@ title: İki klasörün içeriğini karşılaştırma (LINQ) (C#)
 description: Bu örnek, C# dilinde LINQ sorguları kullanarak dosya listelerini karşılaştırmak için üç yol gösterir. Herhangi bir türdeki nesne dizilerini karşılaştırmak için bu teknikleri uyarlayın.
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: 3cdac57d3d746aa2290c51d1263a7d42dc3463e0
-ms.sourcegitcommit: 04022ca5d00b2074e1b1ffdbd76bec4950697c4c
+ms.openlocfilehash: 840fda1548f36d9b9ad39c2e0d1346dfc727b106
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87105330"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91165266"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>İki klasörün içeriğini karşılaştırma (LINQ) (C#)
+
 Bu örnekte iki dosya listesi karşılaştırmanın üç yolu gösterilmektedir:  
   
 - İki dosya listelerinin aynı olup olmadığını belirten bir Boolean değeri sorgulayarak.  
@@ -127,6 +128,7 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>Kod Derleniyor  
+
  `using`System. LINQ ve System.IO ad alanları için yönergeler içeren bir C# konsol uygulaması projesi oluşturun.  
   
 ## <a name="see-also"></a>Ayrıca bkz.
