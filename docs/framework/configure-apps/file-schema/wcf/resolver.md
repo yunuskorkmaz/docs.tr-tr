@@ -2,14 +2,15 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: c6f5db96ded422493b819d4d75dda6abc9a1676e
-ms.sourcegitcommit: 27a15a55019f6b5f2733961738babe94aec0def3
+ms.openlocfilehash: 6b1fd8e916aef2425377c45a0c85e37773f3ca28
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90558868"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150901"
 ---
 # \<resolver>
+
 Bir eş ağ KIMLIĞINI, kafeslere katılan çeşitli düğümleri temsil eden bir eş düğüm adresleri kümesine çözümlemek için kullanılan bir eş çözümleyici belirtir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -28,6 +29,7 @@ Bir eş ağ KIMLIĞINI, kafeslere katılan çeşitli düğümleri temsil eden bi
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -50,6 +52,7 @@ Bir eş ağ KIMLIĞINI, kafeslere katılan çeşitli düğümleri temsil eden bi
 |[\<binding>](bindings.md)|Öğesinin tüm bağlama yeteneklerini tanımlar [\<netPeerTcpBinding>](netpeertcpbinding.md) .|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Eş adı çözümleyici, eş kanallar tarafından bir eş ağ içinde yer alan eş düğümleri bulmak için kullanılan bir bulma hizmetidir. Eş ağı olan bir düğüm olan bir düğümü "kaydettirmek" için de kullanılır. Bu bir düğüm, Eş ağ üzerinde bilinen ve kullanılabilir hale gelir. Eş çözümleyiciler hakkında daha fazla bilgi için bkz. [eşdüzey çözümleyiciler](../../../wcf/feature-details/peer-resolvers.md).  
   
 ## <a name="see-also"></a>Ayrıca bkz.

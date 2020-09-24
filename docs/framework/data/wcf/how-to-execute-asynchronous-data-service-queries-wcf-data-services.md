@@ -8,23 +8,25 @@ helpviewer_keywords:
 - WCF Data Services, asynchronous operations
 - asynchronous operations [WCF Data Services]
 ms.assetid: 902a2dc1-d0e9-4b00-90a8-becc4cb1f6a7
-ms.openlocfilehash: 68e2035315780b7c6dd60e93ae6eb10d252aabb3
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 84eb88695580598d41615653723c137d3f766a47
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569063"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150615"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>Nasıl yapılır: zaman uyumsuz veri hizmeti sorguları yürütme (WCF Veri Hizmetleri)
+
 WCF Veri Hizmetleri istemci kitaplığını kullanarak, sorguları yürütme ve değişiklikleri kaydetme gibi istemci-sunucu işlemlerini zaman uyumsuz olarak gerçekleştirebilirsiniz. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).  
   
 > [!NOTE]
-> Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yönteminin yürütülmesini açıkça sıramalısınız. Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).  
+> Geri aramanın belirli bir iş parçacığında çağrılması gereken bir uygulamada, yönteminin yürütülmesini açıkça sıramalısınız <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> . Daha fazla bilgi için bkz. [zaman uyumsuz işlemler](asynchronous-operations-wcf-data-services.md).  
   
  Bu konudaki örnek, Northwind örnek veri hizmeti ve otomatik olarak istemci veri hizmeti sınıflarını kullanır. Bu hizmet ve istemci veri sınıfları, [WCF veri hizmetleri hızlı](quickstart-wcf-data-services.md)başlangıcı 'nı tamamladığınızda oluşturulur.  
   
 ## <a name="example"></a>Örnek  
- Aşağıdaki örnek, sorguyu başlatmak için <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> yöntemi çağırarak zaman uyumsuz bir sorgunun nasıl yürütüleceğini gösterir. Satır içi temsilci, sorgu sonuçlarını göstermek için <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> yöntemini çağırır.  
+
+ Aşağıdaki örnek, <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> sorguyu başlatmak için yöntemini çağırarak zaman uyumsuz bir sorgunun nasıl yürütüleceğini gösterir. Satır içi temsilci, <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> sorgu sonuçlarını göstermek için yöntemini çağırır.  
   
  [!code-csharp[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#executequeryasync)]
  [!code-vb[Astoria Northwind Client#ExecuteQueryAsync](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#executequeryasync)]  

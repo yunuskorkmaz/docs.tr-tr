@@ -3,14 +3,15 @@ title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: 1a7c839a5ff8fac9470aea71a4886d9000086e9e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: e759f86e7746eaf3fdd72ed923612b24ef9b0c23
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70398615"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91150823"
 ---
 # \<states>
+
 İzleme kayıtları oluşturulduğunda izlenen iş akışı örneğinden abone olunan durumlar koleksiyonunu temsil eder.  
   
  Profil sorgularını izleme hakkında daha fazla bilgi için bkz. [Izleme profilleri](../../../windows-workflow-foundation/tracking-profiles.md)  
@@ -24,7 +25,7 @@ ms.locfileid: "70398615"
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<workflowInstanceQuery>**](workflowinstancequery.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<states>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <tracking>
@@ -43,9 +44,11 @@ ms.locfileid: "70398615"
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
+
  Yok.  
   
 ### <a name="child-elements"></a>Alt Öğeler  
@@ -61,11 +64,12 @@ ms.locfileid: "70398615"
 |[\<workflowInstanceQuery>](workflowinstancequery.md)|Başlatılmış veya tamamlanmış olay gibi iş akışı örneği yaşam döngüsü değişikliklerini izleyen bir sorgu.|  
   
 ## <a name="remarks"></a>Açıklamalar  
+
  Bu koleksiyondaki durumları tarafından döndürülen kayıtları filTRe uygulanır.  
   
  Olası durum değerleri aşağıdaki tabloda açıklanan.  
   
-|Eyalet|Açıklama|  
+|Durum|Açıklama|  
 |-----------|-----------------|  
 |İptal edildi|İş akışı örneği iptal edildi.|  
 |Tamamlandı|İş akışı örneği tamamlandı.|  
@@ -78,10 +82,11 @@ ms.locfileid: "70398615"
 |Kaldırıldı|İş akışı örneği kaldırılır.|  
 |İptal edildi|İş akışı örneği iptal edildi.|  
 |Askıya alındı|İş akışı örneği askıya alınır.|  
-|Sona erdi|İş akışı örneği sonlandırıldı.|  
+|Sonlandırıldı|İş akışı örneği sonlandırıldı.|  
 |Unsuspended|İş akışı örneği unsuspended.|  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki yapılandırma `Started` Bu sorguyu kullanarak örnek durumu için iş akışı örnek düzeyi izleme kayıtlarına abone olur.  
   
 ```xml  

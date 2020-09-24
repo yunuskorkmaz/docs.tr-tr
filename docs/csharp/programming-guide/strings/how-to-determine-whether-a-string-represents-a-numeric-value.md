@@ -7,14 +7,15 @@ helpviewer_keywords:
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: c248c6c54de493ab06a833fc525252fa812d60da
-ms.sourcegitcommit: 552b4b60c094559db9d8178fa74f5bafaece0caf
+ms.openlocfilehash: cbe0703ca39422ac0a9e7a93bf2cfc4c3f8528f8
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87381755"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151434"
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>Bir dizenin sayısal bir değeri temsil edip etmediğini belirleme (C# Programlama Kılavuzu)
+
 Bir dizenin belirtilen bir sayısal türün geçerli bir gösterimi olup olmadığını anlamak için, `TryParse` tüm ilkel sayısal türler tarafından uygulanan statik yöntemi ve ayrıca ve gibi türleri kullanın <xref:System.DateTime> <xref:System.Net.IPAddress> . Aşağıdaki örnek, "108" nin geçerli bir [int](../../language-reference/builtin-types/integral-numeric-types.md)olup olmadığını nasıl belirleyeceğini gösterir.  
   
 ```csharp  
@@ -29,14 +30,17 @@ bool result = int.TryParse(s, out i); //i now = 108
 > Dize yalnızca sayısal karakterler içerebilir ve bu yöntemi kullandığınız tür için geçerli olmayabilir `TryParse` . Örneğin, "256", için geçerli bir değer değildir `byte` ancak için geçerlidir `int` . "98,6", için geçerli bir değer değil, `int` ancak geçerli bir `decimal` .  
   
 ## <a name="example"></a>Örnek  
+
  Aşağıdaki örneklerde,, `TryParse` ve değerlerinin dize gösterimiyle nasıl kullanılacağı `long` gösterilmektedir `byte` `decimal` .  
   
  [!code-csharp[csProgGuideStrings#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#14)]  
   
 ## <a name="robust-programming"></a>Güçlü Programlama  
- İlkel sayısal türler Ayrıca, `Parse` dize geçerli bir sayı değilse özel bir durum oluşturan statik yöntemini de uygular. `TryParse`Genellikle, sayı geçerli değilse false döndürdüğünden, bu, genellikle daha etkilidir.  
+
+ İlkel sayısal türler Ayrıca, `Parse` dize geçerli bir sayı değilse özel bir durum oluşturan statik yöntemini de uygular. `TryParse` Genellikle, sayı geçerli değilse false döndürdüğünden, bu, genellikle daha etkilidir.  
   
 ## <a name="net-security"></a>.NET güvenliği  
+
  `TryParse` `Parse` Metin kutuları ve Birleşik giriş kutuları gibi denetimlerden Kullanıcı girişini doğrulamak için her zaman veya yöntemlerini kullanın.  
   
 ## <a name="see-also"></a>Ayrıca bkz.

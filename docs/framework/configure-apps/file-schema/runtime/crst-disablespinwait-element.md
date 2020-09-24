@@ -5,12 +5,12 @@ f1_keywords:
 - Crst_DisableSpinWait
 helpviewer_keywords:
 - Crst_DisableSpinWait element
-ms.openlocfilehash: 0683081183081e249b2a9c89e1a6a15f638fb339
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 45052d99bb297ac39d058fa405fe57a7c991f738
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "73117645"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151356"
 ---
 # <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait> öğesi
 
@@ -20,7 +20,7 @@ Contentıon 'ın, önemli bir bölüm için bekleme için beklenip devre dışı
 &nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;**\<Crst_DisableSpinWait>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <Crst_DisableSpinWait enabled="true | false"/>  
@@ -44,6 +44,7 @@ Contentıon 'ın, önemli bir bölüm için bekleme için beklenip devre dışı
 |0|Beklemeyi devre dışı bırakma-kritik bir bölüm alınamadığından bekleniyor. Varsayılan değer budur.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
+
  Yok.  
   
 ### <a name="parent-elements"></a>Üst Öğeler  

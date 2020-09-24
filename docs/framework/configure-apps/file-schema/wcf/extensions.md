@@ -2,14 +2,15 @@
 title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
-ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: c811162c17417144432f97fd9a47b2e02ecafbe2
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "61700780"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151187"
 ---
 # \<extensions>
+
 Bu yapılandırma öğesi, standart bulunabilir meta veriler (EPR, ContractTypeName, BindingName, scope ve ListenURI) ile birlikte yayımlanacak özel meta verileri içeren XML öğelerinin bir koleksiyonunu içerir. Aşağıda bu yapılandırma öğesinin kullanılmasına bir örnek verilmiştir.  
   
 ```xml  

@@ -2,14 +2,15 @@
 title: <add> / <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: 9bef44ed39ee892080342058206f779b38fb460d
+ms.sourcegitcommit: 5b475c1855b32cf78d2d1bbb4295e4c236f39464
 ms.translationtype: MT
 ms.contentlocale: tr-TR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "70850311"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91151161"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<add> / \<transportConfigurationType>
+
 Bu öğe, belirli bir taşımanın türünü tanımlayan bir anahtar/değer çiftidir.  
   
 [**\<configuration>**](../configuration-element.md)\
@@ -18,7 +19,7 @@ Bu öğe, belirli bir taşımanın türünü tanımlayan bir anahtar/değer çif
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<transportConfigurationTypes>**](transportconfigurationtypes.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**  
   
-## <a name="syntax"></a>Sözdizimi  
+## <a name="syntax"></a>Syntax  
   
 ```xml  
 <serviceHostingEnvironment>
@@ -30,6 +31,7 @@ Bu öğe, belirli bir taşımanın türünü tanımlayan bir anahtar/değer çif
 ```  
   
 ## <a name="attributes-and-elements"></a>Öznitelikler ve Öğeler  
+
  Öznitelikler, alt ve üst öğeler aşağıdaki bölümlerde açıklanmaktadır.  
   
 ### <a name="attributes"></a>Öznitelikler  
@@ -40,7 +42,8 @@ Bu öğe, belirli bir taşımanın türünü tanımlayan bir anahtar/değer çif
 |transportConfigurationType|Belirli bir taşımayı uygulayan türü içeren bir dize.|  
   
 ### <a name="child-elements"></a>Alt Öğeler  
- Yok  
+
+ Hiçbiri  
   
 ### <a name="parent-elements"></a>Üst Öğeler  
   
